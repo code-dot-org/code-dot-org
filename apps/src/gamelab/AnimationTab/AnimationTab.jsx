@@ -45,9 +45,9 @@ const AnimationTab = React.createClass({
     return (
       <div>
         <ResizablePanes
-            style={styles.root}
-            columnSizes={this.props.columnSizes}
-            onChange={this.props.onColumnWidthsChange}
+          style={styles.root}
+          columnSizes={this.props.columnSizes}
+          onChange={this.props.onColumnWidthsChange}
         >
           <div style={styles.animationsColumn}>
             <GameLabVisualizationHeader />

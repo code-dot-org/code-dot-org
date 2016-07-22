@@ -130,8 +130,8 @@ var PaneButton = function (props) {
 
   return (
     <div
-        id={props.id}
-        style={divStyle}
+      id={props.id}
+      style={divStyle}
     >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}

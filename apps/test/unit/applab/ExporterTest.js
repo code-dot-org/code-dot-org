@@ -4,7 +4,6 @@ import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 var assetPrefix = require('@cdo/apps/assetManagement/assetPrefix');
 
-testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 
 var Exporter = require('@cdo/apps/applab/Exporter');

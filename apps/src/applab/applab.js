@@ -11,7 +11,7 @@ import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');

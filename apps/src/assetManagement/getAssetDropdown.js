@@ -1,6 +1,6 @@
 /* global dashboard */
 
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var utils = require('../utils');
 
 /**

@@ -12,10 +12,10 @@ describe('CrosshairOverlay', () => {
     let renderer = ReactTestUtils.createRenderer();
     renderer.render(
         <CrosshairOverlay
-            width={TEST_APP_WIDTH}
-            height={TEST_APP_HEIGHT}
-            mouseX={x}
-            mouseY={y}
+          width={TEST_APP_WIDTH}
+          height={TEST_APP_HEIGHT}
+          mouseX={x}
+          mouseY={y}
         />
     );
     return renderer.getRenderOutput();
@@ -25,18 +25,18 @@ describe('CrosshairOverlay', () => {
     expect(renderAtMousePosition(x, y)).to.deep.equal(
         <g className="crosshair-overlay">
           <line
-              x1={x}
-              y1={y - CROSSHAIR_MARGIN}
-              x2={x}
-              y2={0}
-              style={styles.line}
+            x1={x}
+            y1={y - CROSSHAIR_MARGIN}
+            x2={x}
+            y2={0}
+            style={styles.line}
           />
           <line
-              x1={x - CROSSHAIR_MARGIN}
-              y1={y}
-              x2={0}
-              y2={y}
-              style={styles.line}
+            x1={x - CROSSHAIR_MARGIN}
+            y1={y}
+            x2={0}
+            y2={y}
+            style={styles.line}
           />
         </g>
     );

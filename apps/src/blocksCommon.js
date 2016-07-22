@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var commonMsg = require('./locale');
+var commonMsg = require('@cdo/locale');
 
 /**
  * Install extensions to Blockly's language and JavaScript generator

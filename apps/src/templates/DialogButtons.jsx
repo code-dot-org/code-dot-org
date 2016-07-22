@@ -1,6 +1,6 @@
 import Button from './Button';
 var React = require('react');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var Lightbulb = require('./Lightbulb');
 
 var DialogButtons = React.createClass({
@@ -71,11 +71,13 @@ var DialogButtons = React.createClass({
     if (this.props.tryAgain) {
       if (this.props.isK1 && !this.props.freePlay) {
         againButton = (
-          <Button type="cancel"
-                  size="large"
-                  arrow="left"
-                  id="again-button"
-                  className="launch">
+          <Button
+            type="cancel"
+            size="large"
+            arrow="left"
+            id="again-button"
+            className="launch"
+          >
             {this.props.tryAgain}
           </Button>
         );
@@ -99,19 +101,23 @@ var DialogButtons = React.createClass({
     if (this.props.nextLevel) {
       nextButton = (this.props.isK1 && !this.props.freePlay) ?
                    (
-                     <Button type="primary"
-                             size="large"
-                             arrow="right"
-                             id="continue-button"
-                             className="launch"
-                             style={style.nextButton}>
+                     <Button
+                       type="primary"
+                       size="large"
+                       arrow="right"
+                       id="continue-button"
+                       className="launch"
+                       style={style.nextButton}
+                     >
                        {this.props.continueText}
                      </Button>
                    ) : (
-                     <Button type="primary"
-                             id="continue-button"
-                             className="launch"
-                             style={style.nextButton}>
+                     <Button
+                       type="primary"
+                       id="continue-button"
+                       className="launch"
+                       style={style.nextButton}
+                     >
                        {this.props.continueText}
                      </Button>
                    );
@@ -170,23 +176,25 @@ if (BUILD_STYLEGUIDE) {
           description: 'To use k1 customization, you must pass an assetUrl function.',
           story: () => (
             <DialogButtons
-                isK1={true}
-                tryAgain="Custom Try Again"
-                nextLevel={true}
-                continueText="Custom Continue"
-                assetUrl={url => '/blockly/'+url}/>
+              isK1={true}
+              tryAgain="Custom Try Again"
+              nextLevel={true}
+              continueText="Custom Continue"
+              assetUrl={url => '/blockly/'+url}
+            />
           ),
         }, {
           name: 'K1 freePlay',
           description: 'To use k1 customization, you must pass an assetUrl function.',
           story: () => (
             <DialogButtons
-                isK1={true}
-                freePlay={true}
-                tryAgain="Custom Try Again"
-                nextLevel={true}
-                continueText="Custom Continue"
-                assetUrl={url => '/blockly/'+url}/>
+              isK1={true}
+              freePlay={true}
+              tryAgain="Custom Try Again"
+              nextLevel={true}
+              continueText="Custom Continue"
+              assetUrl={url => '/blockly/'+url}
+            />
           ),
         }
       ]);

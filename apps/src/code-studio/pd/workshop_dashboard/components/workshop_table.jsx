@@ -83,13 +83,15 @@ var WorkshopTable = React.createClass({
     }
 
     var tableRows = this.state.workshops.map(function (workshop, i) {
-      return <WorkshopTableRow
-        workshop={workshop}
-        key={workshop.id}
-        onView={this.handleView}
-        onEdit={this.props.canEdit ? this.handleEdit : null}
-        onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
-      />;
+      return (
+        <WorkshopTableRow
+          workshop={workshop}
+          key={workshop.id}
+          onView={this.handleView}
+          onEdit={this.props.canEdit ? this.handleEdit : null}
+          onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
+        />
+      );
     }.bind(this));
     return (
       <Table striped bordered condensed hover>
