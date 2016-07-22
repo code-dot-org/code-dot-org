@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Sådan! Du har skrevet kode som tilføjer Musedroider. Du kan gå til næste øvelse eller prøve en gang til at få 20 Musedroider. Prøv at gøre det lettere ved at tilføje flere af dem! (Tryk og hold nede på piletasterne på dit tastatur (eller skærmen) for at bevæge dig hurtigere:)",
   "failedChangeSettingTimeout": "Nå frem til tre Rebel Pilots for at gå videre.",
   "failedChangeSettingSettings": "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

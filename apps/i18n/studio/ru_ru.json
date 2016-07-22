@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Поздравляем, ты добавил программу для создания Мышей-дроидов. Переходи к следующей головоломке или попробуй еще раз пройти эту, поймав 20 Мышей-дроидов. Попробуй упростить задачу, добавив больше Мышей-дроидов! (Нажимай и удерживай клавиши на клавиатуре (или экране), чтобы перемещаться быстрее.)",
   "failedChangeSettingTimeout": "Поймай три Пилота-повстанца для продолжения.",
   "failedChangeSettingSettings": "Создай свою собственную игру. Чтобы решить эту головоломку, тебе нужно изменить свой дроид и задать скорость его передвижения.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

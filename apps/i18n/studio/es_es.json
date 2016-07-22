@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Felicitaciones, has agregado código para hacer Droides Mouse. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Mouses Droide. ¡Trata de hacerlo más fácil agregando más de ellos! (Mantén pulsadas las teclas de su teclado (o pantalla) para moverte más rápido.)",
   "failedChangeSettingTimeout": "Obtén tres pilotos rebeldes para seguir adelante.",
   "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

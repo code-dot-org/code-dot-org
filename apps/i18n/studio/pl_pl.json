@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulacje, dodałeś kod, by utworzyć Myszodroidów. Możesz przejść do następnej łamigłówki lub ponownie zdobyć 20 Myszodroidów. Ułatwisz to sobie dodając ich więcej! (Naciskaj i przytrzymuj klawisze ze strzałkami na klawiaturze (lub na ekranie), by poruszać się szybciej.)",
   "failedChangeSettingTimeout": "Zdobądź trzech Pilotów Rebeliantów, aby kontynuować.",
   "failedChangeSettingSettings": "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

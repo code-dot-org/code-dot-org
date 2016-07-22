@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Շնորհավորում ենք, դուք ավելացրել է կոդը կատարելու Mouse Droids: Դուք կարող եք գնալ հաջորդ հանելուկ, կամ փորձեք կրկին ստանալ 20 Mouse Droids: Փորձեք դարձնելով այն ավելի հեշտ է, ավելացնելով ավելի նրանց! (Սեղմեք եւ պահեք ստեղները ձեր ստեղնաշարի (կամ էկրանի), տեղափոխել արագ.):",
   "failedChangeSettingTimeout": "Ստացեք երեք Rebel օդաչուները պետք է առաջ շարժվել:",
   "failedChangeSettingSettings": "Դարձրեք խաղը ձեր սեփական. Անցնել այս հանելուկ, դուք պետք է փոխել ձեր Droid եւ սահմանել դրա արագությունը.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }
