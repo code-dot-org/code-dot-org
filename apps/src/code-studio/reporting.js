@@ -45,7 +45,7 @@ reporting.sendReport = function (report) {
   var queryItems = [];
   for (var key in report) {
     if (report.hasOwnProperty(key) && key !== 'onComplete') {
-      queryItems.push(key + '=' + report[key]);
+      queryItems.push(key + '=' + encodeURIComponent(report[key]));
     }
   }
   var queryString = queryItems.join('&');
