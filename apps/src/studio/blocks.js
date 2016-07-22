@@ -2419,6 +2419,42 @@ exports.install = function (blockly, blockInstallOptions) {
     var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
     return 'Studio.isKeyDown(' + keyCode + ');';
   };
+
+  /**
+   * Blocking prompt for user input.
+   */
+  blockly.Blocks.studio_ask = {
+    helpUrl: '',
+    init: function () {
+      var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+      // Must be marked EDITABLE so that cloned blocks share the same var name
+      fieldLabel.EDITABLE = true;
+      this.setHSV(312, 0.32, 0.62);
+      this.appendDummyInput().appendTitle(msg.ask());
+      this.setInputsInline(true);
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldImage(
+          Blockly.assetUrl('media/quote0.png'), 12, 12))
+        .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
+        .appendTitle(new Blockly.FieldImage(
+          Blockly.assetUrl('media/quote1.png'), 12, 12));
+      this.appendDummyInput().appendTitle(msg.toSet());
+      this.appendDummyInput()
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+        .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+          : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator.studio_ask = function () {
+    // Variable setter.
+    var argument0 = `prompt("${this.getTitleValue('TEXT')}")`;
+    var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
+    return varName + ' = ' + argument0 + ';\n';
+  };
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
