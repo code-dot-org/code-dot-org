@@ -1570,11 +1570,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
       imageMode(CENTER);
 
       translate(this.position.x, this.position.y);
-
-      // This line differs from p5.play upstream because GameLab users
-      // should be able to change the width and height of their animations.
       scale(this._getScaleX()*dirX, this._getScaleY()*dirY);
-
       if (pInst._angleMode == pInst.RADIANS) {
         rotate(radians(this.rotation));
       } else {
