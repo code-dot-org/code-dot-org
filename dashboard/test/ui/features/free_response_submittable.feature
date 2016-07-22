@@ -16,14 +16,14 @@ Scenario: Loading the level
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
-  And I type "sample response" into ".free-response > textarea"
+  And I type "sample response &^%$#@!()" into ".free-response > textarea"
   And I press ".submitButton" using jQuery
   And I wait for 5 seconds
 
   # Reload the page to see that unsubmit is the option.
   And I am on "http://learn.code.org/s/allthethings/stage/27/puzzle/1?force_submittable=true"
   And I wait to see ".unsubmitButton"
-  And element ".free-response > textarea" contains text "sample response"
+  And element ".free-response > textarea" contains text "sample response &^%$#@!()"
   And element ".unsubmitButton" is visible
   And element ".submitButton" is not visible
 
