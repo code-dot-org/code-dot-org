@@ -217,7 +217,7 @@ var TopInstructions = React.createClass({
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
-      for (const image of images) {
+      for (let i = 0, image; (image = images[i]); i++) {
         image.onload = image.onload || this.scrollInstructionsToBottom;
       }
     }
