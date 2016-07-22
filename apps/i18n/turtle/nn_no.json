@@ -81,5 +81,13 @@
   "turnTooltip": "Snur artisten mot venstre eller høgre med gitt vinkel.",
   "turtleVisibilityTooltip": "Gjør artisten synleg eller usynleg.",
   "widthTooltip": "Endrer breidda på blyanten.",
-  "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1."
+  "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

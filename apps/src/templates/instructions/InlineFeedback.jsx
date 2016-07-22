@@ -8,9 +8,10 @@ const InlineFeedback = ({ extra, message, styles, isMinecraft, borderColor }) =>
   // styling.
   return (
     <ChatBubble
-        isMinecraft={isMinecraft}
-        borderColor={borderColor}
-        className="uitest-topInstructions-inline-feedback">
+      isMinecraft={isMinecraft}
+      borderColor={borderColor}
+      className="uitest-topInstructions-inline-feedback"
+    >
       <p>{message}</p>
       {extra && <p style={styles.message}>{extra}</p>}
     </ChatBubble>

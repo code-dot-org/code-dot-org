@@ -1,0 +1,246 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2016-07-20T00:15:46.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Finish this kite",
+    "x": "225",
+    "y": "175",
+    "start_direction": "45",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": "0.4",
+    "embed": "false",
+    "markdown_instructions": "Finish this kite\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n\r\n",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This diamond is really just a square on its side\",\r\n  \"hint_id\": \"2-3_Artist_9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Replaces the kite level that required turning in the beginning with one in which the artist is facing the right way.",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">90</title>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">50</title>
+                      <next>
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_random"/>
+                          </value>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">45</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">25</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">120</title>
+                                      <next>
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">25</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE">120</title>
+                                              <next>
+                                                <block type="draw_move_by_constant">
+                                                  <title name="DIR">moveForward</title>
+                                                  <title name="VALUE">50</title>
+                                                  <next>
+                                                    <block type="draw_turn_by_constant">
+                                                      <title name="DIR">turnLeft</title>
+                                                      <title name="VALUE">120</title>
+                                                      <next>
+                                                        <block type="draw_move_by_constant">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">25</title>
+                                                          <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <title name="VALUE">120</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">25</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <title name="VALUE">45</title>
+                                                            <next>
+                                                            <block type="draw_colour" inline="true" id="draw-color">
+                                                            <value name="COLOUR">
+                                                            <block type="colour_picker">
+                                                            <title name="COLOUR">#000000</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">50</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">45</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

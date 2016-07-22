@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Tubli töö! Lisasid hiirte loomiseks koodi. Võid liikuda järgmise mõistatuse juurde või proovida uuesti saada 20 hiirt. Et asi oleks lihtsam, lisa neid juurde! (Kiiremaks liikumiseks vajuta pikalt klaviatuuril (või ekraanil) olevaid klahve.)",
   "failedChangeSettingTimeout": "Edasiliikumiseks hangi kolm pilooti.",
   "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

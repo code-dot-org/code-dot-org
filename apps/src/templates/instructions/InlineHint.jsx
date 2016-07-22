@@ -8,7 +8,7 @@ const InlineHint = ({ isMinecraft, borderColor, block, content }) => {
   return (
     <ChatBubble isMinecraft={isMinecraft} borderColor={borderColor}>
       <div
-          dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: content }}
       />
       {block && <ReadOnlyBlockSpace block={block} />}
     </ChatBubble>

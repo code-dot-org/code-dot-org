@@ -4,32 +4,32 @@ description "Planning Script for CSF 2.0"
 description_audience "Ages 9-99"
 
 stage 'Mixed Review #1 (Ramp Up)'
+#This stage will be addressed after the conclusion of the summer writing cohort. 
+#Please leave it commented out, but do not delete the stage name.
 #Artist
-level 'grade4_intro_vid'
-level 'grade4_review_artist1'
-level 'grade4_review_artist2'
-level 'grade4_review_artist3'
+#level 'grade4_intro_vid'
+#level 'grade4_review_artist1'
+#level 'grade4_review_artist2'
+#level 'grade4_review_artist3'
 #Frozen Loops
-level 'grade4_review_frozen_loopvid'
-level 'grade4_frozen_square_loop1'
-level 'grade4_frozen_square_loop2'
-level 'grade4_frozen_square_loop3'
+#level 'grade4_review_frozen_loopvid'
+#level 'grade4_frozen_square_loop1'
+#level 'grade4_frozen_square_loop2'
+#level 'grade4_frozen_square_loop3'
 #Bee Loops
-level 'grade4_bee_loopsvid'
-level 'grade4_review_bee1'
-level 'grade4_review_bee2'
-level 'grade4_review_bee3'
+#level 'grade4_bee_loopsvid'
+#level 'grade4_review_bee1'
+#level 'grade4_review_bee2'
+#level 'grade4_review_bee3'
 #PlayLab Events
-level 'grade4_playlab_introvid'
-level 'blockly:Studio:c2_5'
-level 'blockly:Studio:c2_4'
-level 'blockly:Studio:c2_6'
+#level 'grade4_playlab_introvid'
+#level 'blockly:Studio:c2_5'
+#level 'blockly:Studio:c2_4'
+#level 'blockly:Studio:c2_6'
 
 stage 'Unplugged: Nested Loops (New)'
 level 'comingSoon'
 
-stage 'Artist Ramp Up (including Nested Loops)'
-stage 'Nested Loops'
 stage 'Artist: Nested Loops'
 #Artist Loops
 level 'grade4_artist_nested_loop_triangles1'
@@ -73,16 +73,14 @@ stage 'Conditionals'
 #If,ElseIf,Else,etc, nested
 level 'comingSoon'
 
-stage 'Decision Trees'
 stage 'Unplugged: Decision Trees (New)'
 level 'comingSoon'
 
-stage 'PlayLab: Conditionals'
 stage 'Choose Your Own Adventure'
 level 'comingSoon'
 
 stage 'Project #1'
-level 'comingSoon'
+level 'Test Play Lab'
 
 
 
@@ -139,3 +137,11 @@ stage 'Digital Citizenship'
 level 'DigitalCitizenship'
 assessment '4-5 Digital Footprint Multi 1'
 
+
+
+#Removed Stages. Please leave empty.
+
+stage 'Artist Ramp Up (including Nested Loops)'
+stage 'Nested Loops'
+stage 'Decision Trees'
+stage 'PlayLab: Conditionals'

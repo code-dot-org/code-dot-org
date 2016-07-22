@@ -41,15 +41,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.valid?
     assert_equal [
       'Name is required',
-      'Email is required',
-      'School is required',
-      'School type is required'
+      'Email is required'
     ], enrollment.errors.full_messages
 
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
-    enrollment.school = 'school'
-    enrollment.school_type = 'school type'
     assert enrollment.valid?
   end
 

@@ -81,5 +81,13 @@
   "turnTooltip": "Στρίβει τον καλλιτέχνη αριστερά ή δεξιά κατά τον καθορισμένο αριθμό μοιρών.",
   "turtleVisibilityTooltip": "Κάνει τον καλλιτέχνη ορατό ή αόρατο.",
   "widthTooltip": "Αλλάζει το πάχος του μολυβιού.",
-  "wrongColour": "Η εικόνα σας έχει λάθος χρώμα. Για αυτό το παζλ, πρέπει να είναι %1."
+  "wrongColour": "Η εικόνα σας έχει λάθος χρώμα. Για αυτό το παζλ, πρέπει να είναι %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

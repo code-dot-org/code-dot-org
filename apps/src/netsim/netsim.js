@@ -259,8 +259,8 @@ NetSim.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <NetSimView
-          generateCodeAppHtml={generateCodeAppHtmlFromEjs}
-          onMount={onMount}
+        generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+        onMount={onMount}
       />
     </Provider>
   , document.getElementById(config.containerId));

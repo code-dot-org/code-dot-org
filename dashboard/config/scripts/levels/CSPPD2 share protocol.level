@@ -6,10 +6,16 @@
   "user_id": 0,
   "properties": {
     "height": "200",
-    "markdown_instructions": "\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"//code.org/curriculum/docs/web/k5online.css\">\n\n<img src=\"https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/FCmh8I2x5GTQ3tu/Screen%20Shot%202015-07-18%20at%2012.53.45%20PM.png\" width=\"40%\" style=\"float:right; margin-left:30px\">\n<br>\n### Chunk 3: Encoding and Sending Text > Creating a Text Message Protocol\n\n\n#### Creating a Text Message Protocol\n\nOn the right you'll find the student-facing worksheet from lesson 10, which builds on students' prior work with protocols and has them develop a text messaging protocol that can handle the letters a-z as well as common punctuation. \n<br><br>\n>Read over the [lesson plan](https://docs.google.com/document/d/1lAHRLpxu05-gSbNF6LX8vUIoDMHEonrmL3bk-Sh1viA/edit) and **work through developing a protocol yourself.** Use the text box below to record your protocol.\n\n<br><br>\n*having trouble viewing the activity? [click here](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/jogZFA5WQK3rYne/text%20protocol.pdf) to open it directly.* \n<br><br><br><br>\n\n\n",
+    "markdown_instructions": "# Chunk 3: Encoding and Sending Text > Creating a Text Message Protocol\r\n\r\n<img src=\"https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/FCmh8I2x5GTQ3tu/Screen%20Shot%202015-07-18%20at%2012.53.45%20PM.png\" class=\"level-image\">\r\n\r\n## Creating a Text Message Protocol\r\n\r\nOn the right you'll find the student-facing worksheet from lesson 10, which builds on students' prior work with protocols and has them develop a text messaging protocol that can handle the letters a-z as well as common punctuation. \r\n\r\n>Read over the [lesson plan](https://docs.google.com/document/d/1lAHRLpxu05-gSbNF6LX8vUIoDMHEonrmL3bk-Sh1viA/edit) and **work through developing a protocol yourself.** Use the text box below to record your protocol.\r\n\r\n*Having trouble viewing the activity? [Click here](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/jogZFA5WQK3rYne/text%20protocol.pdf) to open it directly.* \r\n\r\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

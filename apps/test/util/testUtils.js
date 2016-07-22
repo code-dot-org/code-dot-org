@@ -1,6 +1,7 @@
-require('babel-polyfill');
-var $ = require('jquery');
-var React = require('react');
+import 'babel-polyfill';
+import React from 'react';
+import $ from 'jquery';
+import sinon from 'sinon';
 import {assert} from './configuredChai';
 
 export function setExternalGlobals() {
@@ -17,6 +18,7 @@ export function setExternalGlobals() {
     project: {
       clearHtml: function () {},
       exceedsAbuseThreshold: function () { return false; },
+      hasPrivacyProfanityViolation: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
       useFirebase: function () { return false; }
@@ -40,18 +42,7 @@ export function setExternalGlobals() {
   window.marked = function (str) {
     return str;
   };
-}
-
-export function setupLocale(app) {
-  setupLocales();
-}
-
-export function setupLocales() {
-  // make sure Blockly is loaded
-  require('./frame')();
-  var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
-  context.keys().forEach(context);
-  assert(window.blockly.applab_locale);
+  window.trackEvent = () => {};
 }
 
 /**
@@ -244,4 +235,29 @@ function getBooleanPermutation(n, numberOfBooleans) {
 
 function zeroPadLeft(string, desiredWidth) {
   return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
+}
+
+/**
+ * Call in any mocha scope to make console.error() throw instead
+ * of log.  Useful for making tests fail on a React propTypes validation
+ * failures.
+ *
+ * @example
+ *   describe('my feature', function () {
+ *     throwOnConsoleErrors();
+ *     it('throws on console.error()', function () {
+ *       console.error('foo'); // Test will fail here
+ *     });
+ *   });
+ */
+export function throwOnConsoleErrors() {
+  before(function () {
+    sinon.stub(console, 'error', msg => {
+      throw new Error(msg);
+    });
+  });
+
+  after(function () {
+    console.error.restore();
+  });
 }

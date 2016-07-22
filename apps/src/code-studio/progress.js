@@ -3,14 +3,14 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { createStore } from '@cdo/apps/redux';
 import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
-import { getStore } from './redux';
 
-import {
+import progressReducer, {
   initProgress,
   mergeProgress,
   updateFocusArea,
@@ -21,13 +21,13 @@ var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
     currentLevelId, saveAnswersBeforeNavigation) {
-  const store = initializeStoreWithProgress({
+  const store = createStoreWithProgress({
     name: scriptName,
     stages: [stageData]
   }, currentLevelId, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
-    level => level.submitted ? SUBMITTED_RESULT : level.result)));
+    level => level.submitted && level.result < SUBMITTED_RESULT ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
@@ -43,7 +43,7 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
 };
 
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  const store = initializeStoreWithProgress(scriptData, currentLevelId);
+  const store = createStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
   $.ajax(
@@ -66,7 +66,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.levels) {
       store.dispatch(mergeProgress(
         _.mapValues(data.levels,
-          level => level.submitted ? SUBMITTED_RESULT : level.result),
+          level => level.submitted && level.result < SUBMITTED_RESULT ? SUBMITTED_RESULT : level.result),
         data.peerReviewsPerformed
       ));
     }
@@ -88,9 +88,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * @param saveAnswersBeforeNavigation
  * @returns {object} The created redux store
  */
-function initializeStoreWithProgress(scriptData, currentLevelId,
+function createStoreWithProgress(scriptData, currentLevelId,
     saveAnswersBeforeNavigation = false) {
-  const store = getStore();
+  const store = createStore(progressReducer);
 
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,
@@ -107,7 +107,7 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
 
   // Progress from the server should be written down locally.
   store.subscribe(() => {
-    clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
+    clientState.batchTrackProgress(scriptData.name, store.getState().progress);
   });
 
   return store;

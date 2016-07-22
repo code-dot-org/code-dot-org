@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Честитамо, написали сте програм за прављење Миш-дроида. Можете да пређете на следећу игру или д апокушате поново да дођете до 20 Миш-дроида. Олакшајте себи посао тако што направите што више Миш-дроида! Притисните и држите стрелицу на вашој тастатури да се крећете брже",
   "failedChangeSettingTimeout": "Ухвати три пилота побуњеника како би наставио даље.",
   "failedChangeSettingSettings": "Играј игру другачије. Промени дроида и подеси му брзину.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

@@ -81,5 +81,13 @@
   "turnTooltip": "Pagliko ng artist pakaliwa o pakanan ayon sa itinakdang bilang ng degrees.",
   "turtleVisibilityTooltip": "Ipakita o huwag ipakita ang artist.",
   "widthTooltip": "Pagbabago ng lapad ng lapis.",
-  "wrongColour": "Ang iyong larawan ay mali ang kulay. Para sa puzzle na ito ang kailangan ay %1."
+  "wrongColour": "Ang iyong larawan ay mali ang kulay. Para sa puzzle na ito ang kailangan ay %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

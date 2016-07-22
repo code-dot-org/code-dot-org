@@ -19312,10 +19312,13 @@ goog.require("Blockly.Toolbox");
 goog.require("Blockly.BlockSpace");
 Blockly.Variables.NAME_TYPE = "VARIABLE";
 Blockly.Variables.NAME_TYPE_LOCAL = "LOCALVARIABLE";
-Blockly.Variables.allVariables = function(opt_block) {
+Blockly.Variables.allVariables = function(opt_blocks) {
   var blocks;
-  if(opt_block) {
-    blocks = opt_block.getDescendants()
+  if(opt_blocks) {
+    opt_blocks = Array.isArray(opt_blocks) ? opt_blocks : [opt_blocks];
+    blocks = opt_blocks.reduce(function(blocks, block) {
+      return blocks.concat(block.getDescendants())
+    }, [])
   }else {
     if(Blockly.mainBlockSpace) {
       blocks = Blockly.mainBlockSpace.getAllBlocks()
@@ -25331,7 +25334,7 @@ Blockly.Generator.get = function(name) {
 Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   var code = [];
   var generator = Blockly.Generator.get(name);
-  generator.init();
+  generator.init(blocks);
   for(var x = 0, block;block = blocks[x];x++) {
     var line = generator.blockToCode(block, opt_showHidden);
     if(line instanceof Array) {

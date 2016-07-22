@@ -37,13 +37,15 @@ Blockly.JavaScript.ORDER_ASSIGNMENT = 16;
 Blockly.JavaScript.ORDER_COMMA = 17;
 Blockly.JavaScript.ORDER_NONE = 99;
 Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
-Blockly.JavaScript.init = function() {
+Blockly.JavaScript.init = function(a) {
   Blockly.JavaScript.definitions_ = {};
   if(Blockly.Variables && (Blockly.JavaScript.variableDB_ ? Blockly.JavaScript.variableDB_.reset() : Blockly.JavaScript.variableDB_ = new Blockly.Names(Blockly.JavaScript.RESERVED_WORDS_), !Blockly.varsInGlobals)) {
-    for(var a = [], b = Blockly.Variables.allVariables(), c = 0;c < b.length;c++) {
-      a[c] = "var " + Blockly.JavaScript.variableDB_.getName(b[c], Blockly.Variables.NAME_TYPE) + ";"
+    var b = [];
+    a = Blockly.Variables.allVariables(a);
+    for(var c = 0;c < a.length;c++) {
+      b[c] = "var " + Blockly.JavaScript.variableDB_.getName(a[c], Blockly.Variables.NAME_TYPE) + ";"
     }
-    Blockly.JavaScript.definitions_.variables = a.join("\n")
+    Blockly.JavaScript.definitions_.variables = b.join("\n")
   }
 };
 Blockly.JavaScript.finish = function(a) {

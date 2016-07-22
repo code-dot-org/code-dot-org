@@ -7,7 +7,7 @@
 'use strict';
 
 var msg = require('./locale');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = require('lodash');

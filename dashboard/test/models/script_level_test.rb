@@ -60,14 +60,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, stage: sl.stage, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/1$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal 'puzzle', summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/2$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal 'puzzle', summary[:kind]
@@ -177,6 +177,66 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     assert_equal script_stage_script_level_path(@plc_script, @stage, @evaluation_script_level.position), @script_level1.next_level_or_redirect_path_for_user(@user)
     assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
+  end
+
+  test 'can view my last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can view other user last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    teacher = create :teacher
+    student = create :student
+
+    assert script_level.can_view_last_attempt(teacher, student)
+  end
+
+  test 'can view my last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can not view other user last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+    teacher = create :teacher
+
+    assert_not script_level.can_view_last_attempt(teacher, student)
   end
 
   private

@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Glückwunsch, du hast mit deinem Code Maus-Droiden hinzugefügt. Gehe zur nächsten Aufgabe, oder versuche noch mal, 20 von ihnen zu fangen. Je mehr du hinzufügst, desto einfacher wird es! (Drücke und halte die Pfeiltasten auf deinem Keyboard (oder Bildschirm)gedrückt, um dich schneller zu bewegen.)",
   "failedChangeSettingTimeout": "Erreiche drei Rebellenpiloten, um weiter zu kommen.",
   "failedChangeSettingSettings": "Mache es zu deinem Spiel. Um dieses Level zu schaffen, musst Du dein Droide ändern und seine Geschwindigkeit einstellen.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

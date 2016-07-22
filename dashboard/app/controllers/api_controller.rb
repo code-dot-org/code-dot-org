@@ -182,6 +182,9 @@ class ApiController < ApplicationController
       level_group_script_levels.map do |script_level|
         next unless script_level.long_assessment?
 
+        # Don't allow somebody to peek inside an anonymous survey using this API.
+        next if script_level.anonymous?
+
         last_attempt = student.last_attempt(script_level.level)
         response = last_attempt.try(:level_source).try(:data)
 
@@ -257,6 +260,16 @@ class ApiController < ApplicationController
     end.flatten
 
     render json: data
+  end
+
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  def section_surveys
+    load_section
+    load_script
+
+    render json: LevelGroup.get_survey_results(@script, @section)
   end
 
   private

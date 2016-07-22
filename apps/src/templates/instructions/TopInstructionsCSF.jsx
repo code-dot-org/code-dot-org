@@ -18,7 +18,7 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -141,7 +141,7 @@ var TopInstructions = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
@@ -466,99 +466,103 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            styles={{
-              container: [styles.body, this.props.isMinecraft && craftStyles.body],
-              left: styles.leftCol
-            }}
-            leftColWidth={leftColWidth}
-            rightColWidth={this.state.rightColWidth}
-            height={this.props.height - resizerHeight}
+          styles={{
+            container: [styles.body, this.props.isMinecraft && craftStyles.body],
+            left: styles.leftCol
+          }}
+          leftColWidth={leftColWidth}
+          rightColWidth={this.state.rightColWidth}
+          height={this.props.height - resizerHeight}
         >
           <div
-              style={[
-                commonStyles.bubble,
-                this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
-              ]}
+            style={[
+              commonStyles.bubble,
+              this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
+            ]}
           >
             <ProtectedStatefulDiv
-                id="bubble"
-                className="prompt-icon-cell"
-                onClick={this.handleClickBubble}
+              id="bubble"
+              className="prompt-icon-cell"
+              onClick={this.handleClickBubble}
             >
               {this.props.smallStaticAvatar &&
-                <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+                <PromptIcon src={this.props.smallStaticAvatar} ref="icon"/>
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions"
-              className="csf-top-instructions"
-              style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
+          <div
+            ref="instructions"
+            className="csf-top-instructions"
+            style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
           >
             <ChatBubble isMinecraft={this.props.isMinecraft}>
-              {this.props.hasContainedLevels && <ProtectedStatefulDiv
+              {this.props.hasContainedLevels &&
+                <ProtectedStatefulDiv
                   id="containedLevelContainer"
                   ref="containedLevelContainer"
                   style={styles.containedLevelContainer}
-                />
-              }
-              {!this.props.hasContainedLevels && <Instructions
+                />}
+              {!this.props.hasContainedLevels &&
+                <Instructions
                   ref="instructions"
                   renderedMarkdown={renderedMarkdown}
                   onResize={this.adjustMaxNeededHeight}
                   inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                   aniGifURL={this.props.aniGifURL}
                   inTopPane
-                />
-              }
+                />}
               {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
                 <div
-                    className="secondary-instructions"
-                    dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />
-              }
+                  className="secondary-instructions"
+                  dangerouslySetInnerHTML={{ __html: instructions2 }}
+                />}
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
-                  key={hint.hintId}
-                  isMinecraft={this.props.isMinecraft}
-                  borderColor={color.yellow}
-                  content={hint.content}
-                  block={hint.block}
+                key={hint.hintId}
+                isMinecraft={this.props.isMinecraft}
+                borderColor={color.yellow}
+                content={hint.content}
+                block={hint.block}
               />
             )}
-            {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) && <InlineFeedback
+            {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
+              <InlineFeedback
                 isMinecraft={this.props.isMinecraft}
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
-            />}
-            {this.shouldDisplayHintPrompt() && <HintPrompt
+              />}
+            {this.shouldDisplayHintPrompt() &&
+              <HintPrompt
                 isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
-            />}
+              />}
           </div>
           <div>
             <CollapserButton
-                ref='collapser'
-                style={[styles.collapserButton, !this.shouldDisplayCollapserButton() && commonStyles.hidden]}
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}
+              ref="collapser"
+              style={[styles.collapserButton, !this.shouldDisplayCollapserButton() && commonStyles.hidden]}
+              collapsed={this.props.collapsed}
+              onClick={this.handleClickCollapser}
             />
-            {!this.props.collapsed && <ScrollButtons
+            {!this.props.collapsed &&
+              <ScrollButtons
                 style={styles.scrollButtons}
-                ref='scrollButtons'
+                ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
-            />}
+              />}
           </div>
         </ThreeColumns>
-        {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
-          position={this.props.height}
-          onResize={this.handleHeightResize}/>
-        }
+        {!this.props.collapsed && !this.props.isEmbedView &&
+          <HeightResizer
+            position={this.props.height}
+            onResize={this.handleHeightResize}
+          />}
       </div>
     );
   }
