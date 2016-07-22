@@ -108,7 +108,7 @@ Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
 /**
  * Initialise the database of variable names.
- * @param {Array.<Blockly.Block>} opt_blocks Optional blocks to query for
+ * @param {Array.<Blockly.Block>=} opt_blocks Optional blocks to query for
  *    variable definitions.
  */
 Blockly.JavaScript.init = function(opt_blocks) {
