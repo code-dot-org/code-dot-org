@@ -68,6 +68,10 @@ WebLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
+window.getStartSources = function () {
+  return window.__mostRecentWebLabInstance.startSources;
+};
+
 /**
  * Initialize Blockly and this WebLab instance.  Called on page load.
  */
@@ -128,7 +132,7 @@ WebLab.prototype.init = function (config) {
    //   dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
    // }
     var webEditorIFrame = document.getElementById('web-editor-iframe');
-    var webEditorWindow = webEditorIFrame.contentWindow;
+//    var webEditorWindow = webEditorIFrame.contentWindow;
 //    frameSetStartSource(this.initialSource);
 //    webEditorWindow.setStartSource(this.initialSource);
 //    webEditorWindow.postMessage(this.initialSource, "*");
