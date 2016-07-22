@@ -342,4 +342,29 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   let keyValueMap = JSON.parse(jsonData);
   keysRef.update(keyValueMap).then(onSuccess, onError);
 };
+
+/**
+ * Delete every instance of the specified column name currently in the table.
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {function()} onSuccess
+ * @param {function(string)} onError
+ */
+FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {
+  const recordsRef =
+    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value')
+    .then(snapshot => {
+      let recordsData = snapshot.val();
+      Object.keys(recordsData).forEach(recordId => {
+        const record = JSON.parse(recordsData[recordId]);
+        delete record[columnName];
+        recordsData[recordId] = JSON.stringify(record);
+      });
+      return recordsData;
+    })
+    .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
 export default FirebaseStorage;
