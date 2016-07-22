@@ -42,7 +42,26 @@ export default class BoardController {
 
   connectAndInitialize(codegen, interpreter) {
     return this.ensureBoardConnected()
+        .then(this.ensureAppInstalled())
+        .then(this.ensureComponentsInitialized.bind(this))
         .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
+  }
+
+  connectWithComponents() {
+    return this.ensureBoardConnected()
+        .then(this.ensureComponentsInitialized.bind(this));
+  }
+
+  ensureAppInstalled() {
+    return new Promise((resolve, reject) => {
+      ChromeSerialPort.isInstalled(function (error) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve();
+        }
+      });
+    });
   }
 
   /**
@@ -50,36 +69,33 @@ export default class BoardController {
    */
   ensureBoardConnected() {
     return new Promise(function (resolve, reject) {
-      ChromeSerialPort.isInstalled(function (error) {
-        if (error) {
-          reject(error);
-          return;
-        }
+      if (this.board_) {
+        // Already connected, just use existing board.
+        resolve();
+        return;
+      }
 
-        if (this.board_) {
-          // Already connected, just use existing board.
-          resolve();
-          return;
-        }
-
-        this.connect()
-            .then(function (board) {
-              this.board_ = board;
-              resolve();
-            }.bind(this))
-            .catch(reject);
-      }.bind(this));
+      this.connect()
+          .then(function (board) {
+            this.board_ = board;
+            resolve();
+          }.bind(this))
+          .catch(reject);
     }.bind(this));
   }
 
-  installComponentsOnInterpreter(codegen, jsInterpreter) {
-    if (!this.prewiredComponents) {
-      this.prewiredComponents = _.assign({},
-          initializeCircuitPlaygroundComponents(this.board_.io, five, PlaygroundIO),
-          {board: this.board_},
-          J5_CONSTANTS);
+  ensureComponentsInitialized() {
+    if (this.prewiredComponents) {
+      return;
     }
 
+    this.prewiredComponents = _.assign({},
+        initializeCircuitPlaygroundComponents(this.board_.io, five, PlaygroundIO),
+        {board: this.board_},
+        J5_CONSTANTS);
+  }
+
+  installComponentsOnInterpreter(codegen, jsInterpreter) {
     /**
      * Set of classes used by interpreter to understand the type of instantiated
      * objects, allowing it to make methods and properties of instances available.
