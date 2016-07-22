@@ -14,24 +14,36 @@ const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATI
 const BoardSetupStatus = React.createClass({
   getInitialState() {
     return {
-      "status-is-chrome": WAITING,
-      "status-app-installed": WAITING,
-      "status-windows-drivers": WAITING,
-      "status-board-plug": WAITING,
-      "status-board-connect": WAITING,
-      "status-board-components": WAITING
+      'status-is-chrome': WAITING,
+      'status-app-installed': WAITING,
+      'status-windows-drivers': WAITING,
+      'status-board-plug': WAITING,
+      'status-board-connect': WAITING,
+      'status-board-components': WAITING
     }
   },
 
   render() {
     return (
         <div className="setup-status">
-          <SetupStep stepStatus={this.state['status-is-chrome']} stepId="is-chrome" stepName="Chrome version 33+"/>
-          <SetupStep stepStatus={this.state['status-app-installed']} stepId="app-installed" stepName="Chrome App installed"/>
-          <SetupStep stepStatus={this.state['status-windows-drivers']} stepId="windows-drivers" stepName="Windows drivers installed"/>
-          <SetupStep stepStatus={this.state['status-board-plug']} stepId="board-plug" stepName="Board plugged in"/>
-          <SetupStep stepStatus={this.state['status-board-connect']} stepId="board-connect" stepName="Board connectable"/>
-          <SetupStep stepStatus={this.state['status-board-components']} stepId="board-components" stepName="Board components usable"/>
+          <SetupStep stepStatus={this.state['status-is-chrome']}
+                     stepId="is-chrome"
+                     stepName="Chrome version 33+"/>
+          <SetupStep stepStatus={this.state['status-app-installed']}
+                     stepId="app-installed"
+                     stepName="Chrome App installed"/>
+          <SetupStep stepStatus={this.state['status-windows-drivers']}
+                     stepId="windows-drivers"
+                     stepName="Windows drivers installed"/>
+          <SetupStep stepStatus={this.state['status-board-plug']}
+                     stepId="board-plug"
+                     stepName="Board plugged in"/>
+          <SetupStep stepStatus={this.state['status-board-connect']}
+                     stepId="board-connect"
+                     stepName="Board connectable"/>
+          <SetupStep stepStatus={this.state['status-board-components']}
+                     stepId="board-components"
+                     stepName="Board components usable"/>
         </div>
     );
   },
@@ -63,10 +75,6 @@ const BoardSetupStatus = React.createClass({
     function getChromeVersion() {
       const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
       return raw ? parseInt(raw[2], 10) : false;
-    }
-
-    function isMacintosh() {
-      return navigator.platform.indexOf('Mac') > -1;
     }
 
     function isWindows() {
@@ -134,7 +142,7 @@ const SetupStep = React.createClass({
   propTypes: {
     stepName: React.PropTypes.string.isRequired,
     stepId: React.PropTypes.string.isRequired,
-    stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired,
+    stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired
   },
 
   iconFor(stepStatus) {
@@ -155,7 +163,7 @@ const SetupStep = React.createClass({
   },
 
   classFor(stepStatus) {
-    switch(stepStatus) {
+    switch (stepStatus) {
       case WAITING:
         return 'waiting';
       case SUCCEEDED:
@@ -176,16 +184,19 @@ const SetupStep = React.createClass({
       return null;
     }
     return (
-        <div id={this.props.stepId} className={this.classFor(this.props.stepStatus)}><i className={this.iconFor(this.props.stepStatus)}/><span>{this.props.stepName}</span></div>
+        <div id={this.props.stepId}
+             className={this.classFor(this.props.stepStatus)}>
+          <i className={this.iconFor(this.props.stepStatus)}/>
+          <span>{this.props.stepName}</span>
+        </div>
     );
   }
 });
 
 $(function () {
-  const boardStatus = ReactDOM.render((
-        <BoardSetupStatus/>
+  ReactDOM.render((
+      <BoardSetupStatus/>
   ), document.getElementById('setup-status-mount'));
-
   $('.maker-setup a').attr('target', '_blank');
 });
 
