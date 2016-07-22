@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulálok, készítettél kódot Egér Droidok készítésére. Mehetsz a következő feladványra, vagy megpróbálhatsz ismét 20 Egér Droidot elkapni. Próbáld egyszerűbbé tenni több hozzáadásával! (Tartsd lenyomva a nyilakat a billentyűzeten vagy képernyőn a gyorsabb mozgáshoz)",
   "failedChangeSettingTimeout": "Három Lázadót kell elkapnod a továbbjutáshoz.",
   "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

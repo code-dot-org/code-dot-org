@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Felicitacións, agregaches código para facer Droides Rato. Podes ir ao seguinte crebacabezas ou tentar outra vez conseguir 20 Ratónes Droide. Trata de facelo máis fácil agregando máis de eles! (Presione e sosteña as teclas do teu teclado (ou pantalla) para moverse máis rápido.)",
   "failedChangeSettingTimeout": "Obten tres pilotos rebeldes para seguir adiante.",
   "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

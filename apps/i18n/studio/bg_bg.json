@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Поздравления, добавихте код, за да направите мишка дроид. Можете да отидете на следващия пъзел или да се върнете на този и да заловите още 20 мишки дроиди. Направете го лесно като поставите още от тях. (Натиснете и задръжте стрелките на вашата клавиатура или екран, за да се движите по-бързо.)",
   "failedChangeSettingTimeout": "Стигни до трима Бунтовник пилоти, за да продължиш.",
   "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }
