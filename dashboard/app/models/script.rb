@@ -345,7 +345,7 @@ class Script < ActiveRecord::Base
   end
 
   def show_report_bug_link?
-    beta? || k5_course?
+    beta? || k5_course? || %w(algebra algebraa csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_lesson_plan?
