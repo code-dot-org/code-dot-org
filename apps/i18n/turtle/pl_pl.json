@@ -81,5 +81,13 @@
   "turnTooltip": "Obraca artystę w lewo lub prawo o określoną liczbę stopni.",
   "turtleVisibilityTooltip": "Artysta staje się widoczny lub niewidoczny.",
   "widthTooltip": "Zmienia grubość ołówka.",
-  "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1."
+  "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

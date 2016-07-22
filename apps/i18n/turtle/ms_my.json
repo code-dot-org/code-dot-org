@@ -81,5 +81,13 @@
   "turnTooltip": "Pusing artis kiri atau kanan dengan darjah nombor yang telah ditentukan.",
   "turtleVisibilityTooltip": "Jadikan artis kelihatan atau tidak kelihatan.",
   "widthTooltip": "Tukar lebar pensil.",
-  "wrongColour": "Warna gambar anda salah. Untuk Puzzle ini, ianya perlukan %1."
+  "wrongColour": "Warna gambar anda salah. Untuk Puzzle ini, ianya perlukan %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

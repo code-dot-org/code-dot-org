@@ -211,7 +211,7 @@ export const ProgressDot = React.createClass({
 
     return (
       <a
-        key='link'
+        key="link"
         href={level.locked ? undefined : level.url + location.search}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
         style={[
@@ -257,7 +257,7 @@ export const ProgressDot = React.createClass({
         {
           showLevelName &&
             <span
-              key='named_level'
+              key="named_level"
               style={[styles.levelName, level.locked && {color: color.charcoal}]}
             >
               {level.name}

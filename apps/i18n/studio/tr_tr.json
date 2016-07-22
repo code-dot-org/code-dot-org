@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Tebrikler, fare Droids yapmak için kod eklendi. Bir sonraki bulmaca gitmek ya da 20 Fare Droids almak için tekrar deneyebilirsiniz. Onları daha ekleyerek kolaylaştırıyoruz deneyin! (Basın ve hızlı hareket etmek için klavye (veya ekran) tuşları basılı tutun.)",
   "failedChangeSettingTimeout": "Taşımak için üç Rebel Pilotlar alın.",
   "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

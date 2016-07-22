@@ -1,0 +1,62 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-07-19T19:01:38.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "comment_GameLab": null,
+      "var sprite = createSprite": null,
+      "setAnimation": null,
+      "x": null,
+      "y": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "rotation": null,
+      "velocityX": null,
+      "velocityY": null,
+      "comment_Sprites": null,
+      "console.log": null,
+      "comment_Variables": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"dragonfly\"],\r\n  \"propsByKey\": {\r\n    \"dragonfly\": {\r\n      \"name\": \"dragonfly\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\r\n      \"frameSize\": {\"x\":150, \"y\": 91},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "start_blocks": "var sprite = createSprite(200, 350);\r\nsprite.setAnimation(\"dragonfly\");\r\n// make the dragonfly move here\r\n\r\nfunction draw() {\r\n  background(color(150,50,250));\r\n  drawSprites();\r\n}\r\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "# velocityY\r\n\r\n`velocityY` is like `velocityX`, but it moved things up and down.  Can you use it to make the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to make the sprite go up the screen.",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

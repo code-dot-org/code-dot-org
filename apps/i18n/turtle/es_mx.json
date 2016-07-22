@@ -81,5 +81,13 @@
   "turnTooltip": "Gira el artista a la izquierda o la derecha en la cantidad de grados especificada.",
   "turtleVisibilityTooltip": "Hace que el artista sea visible o invisible.",
   "widthTooltip": "Cambia el ancho del lápiz.",
-  "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1."
+  "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }
