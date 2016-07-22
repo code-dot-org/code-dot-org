@@ -70,14 +70,14 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  return this.studioApp_.reduxStore.getState().authoredHints.unseenHints || [];
+  return this.studioApp_.reduxStore.getState().authoredHints.unseenHints;
 };
 
 /**
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  return this.studioApp_.reduxStore.getState().authoredHints.seenHints || [];
+  return this.studioApp_.reduxStore.getState().authoredHints.seenHints;
 };
 
 /**
