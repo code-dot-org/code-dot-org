@@ -1,6 +1,48 @@
 import BoardController from '@cdo/apps/makerlab/BoardController';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import classNames from 'classnames';
+
+const HIDDEN = 0;
+const WAITING = 1;
+const ATTEMPTING = 2;
+const SUCCEEDED = 3;
+const FAILED = 4;
+const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED];
+
+const BoardSetupStatus = React.createClass({
+  propTypes: {
+    stepName: React.PropTypes.string.isRequired,
+    stepId: React.PropTypes.string.isRequired,
+    stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired,
+  },
+  render() {
+    return (
+        <div className="setup-status">
+          <SetupStep stepStatus={WAITING} stepId="is-chrome" stepName="Chrome version 33+"/>
+          <SetupStep stepStatus={WAITING} stepId="app-installed" stepName="Chrome App installed"/>
+          <SetupStep stepStatus={WAITING} stepId="windows-drivers" stepName="Windows drivers installed"/>
+          <SetupStep stepStatus={WAITING} stepId="board-plug" stepName="Board plugged in"/>
+          <SetupStep stepStatus={WAITING} stepId="board-connect" stepName="Board connectable"/>
+          <SetupStep stepStatus={WAITING} stepId="board-components" stepName="Board components usable"/>
+        </div>
+    );
+  }
+});
+
+const SetupStep = React.createClass({
+  render() {
+    return (
+        <div id={this.props.stepId} className="waiting"><i className="fa fa-fw fa-clock-o"/><span>{this.props.stepName}</span></div>
+    );
+  }
+});
 
 $(function () {
+  ReactDOM.render((
+        <BoardSetupStatus/>
+  ), document.getElementById('setup-status-mount'));
+
   $('.maker-setup a').attr('target', '_blank');
 
   const isChrome = !!window.chrome;
@@ -29,27 +71,23 @@ $(function () {
 
     const bc = new BoardController();
     Promise.resolve().then(() => {
-      return Promise.resolve()
-          .then(() => spin('#app-installed'))
-          .then(bc.ensureAppInstalled.bind(bc))
+      spin('#app-installed');
+      return bc.ensureAppInstalled()
           .then(() => check('#app-installed'))
           .catch((error) => fail('#app-installed'));
     }).then(() => {
-      return Promise.resolve()
-          .then(() => spin('#board-plug'))
-          .then(BoardController.getDevicePort)
+      spin('#board-plug');
+      return BoardController.getDevicePort()
           .then(() => check('#board-plug'))
           .catch((error) => fail('#board-plug'));
     }).then(() => {
-      return Promise.resolve()
-          .then(() => spin('#board-connect'))
-          .then(bc.ensureBoardConnected.bind(bc))
+      spin('#board-connect');
+      return bc.ensureBoardConnected()
           .then(() => check('#board-connect'))
           .catch((error) => fail('#board-connect'));
     }).then(() => {
-      return Promise.resolve()
-          .then(() => spin('#board-components'))
-          .then(bc.connectWithComponents.bind(bc))
+      spin('#board-components');
+      return bc.connectWithComponents()
           .then(() => thumb('#board-components'))
           .then(() => {
             bc.prewiredComponents.buzzer.play({
@@ -60,9 +98,7 @@ $(function () {
             });
             bc.prewiredComponents.colorLeds.forEach(l => l.color('green'));
           })
-          .then(() => new Promise((resolve) => {
-            setTimeout(resolve, 1600)
-          }))
+          .then(() => promiseWaitFor(1600))
           .then(() => {
             bc.prewiredComponents.colorLeds.forEach(l => l.off());
             bc.prewiredComponents.buzzer.play({
@@ -80,8 +116,13 @@ $(function () {
   if (isWindows()) {
     $('#windows-drivers').removeClass('hidden').addClass('incomplete');
   }
-
 });
+
+function promiseWaitFor(ms) {
+  return new Promise(resolve => {
+    setTimeout(resolve, ms)
+  });
+}
 
 function fail(selector, e) {
   $(selector).addClass('incomplete').removeClass('complete waiting');
