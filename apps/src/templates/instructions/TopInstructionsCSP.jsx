@@ -18,7 +18,7 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -168,10 +168,11 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        {!this.props.isEmbedView && <CollapserIcon
+        {!this.props.isEmbedView &&
+          <CollapserIcon
             collapsed={this.props.collapsed}
-            onClick={this.handleClickCollapser}/>
-        }
+            onClick={this.handleClickCollapser}
+          />}
         <div style={styles.header}>
           {msg.puzzleTitle({
             stage_total: this.props.stageTotal,
@@ -180,23 +181,25 @@ var TopInstructions = React.createClass({
         </div>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            {this.props.hasContainedLevels && <ProtectedStatefulDiv
-              id="containedLevelContainer"
-              ref="containedLevelContainer"
-              style={styles.containedLevelContainer}/>
-            }
-            {!this.props.hasContainedLevels && <Instructions
-              ref="instructions"
-              renderedMarkdown={processMarkdown(this.props.markdown)}
-              onResize={this.adjustMaxNeededHeight}
-              inTopPane
-              />
-            }
+            {this.props.hasContainedLevels &&
+              <ProtectedStatefulDiv
+                id="containedLevelContainer"
+                ref="containedLevelContainer"
+                style={styles.containedLevelContainer}
+              />}
+            {!this.props.hasContainedLevels &&
+              <Instructions
+                ref="instructions"
+                renderedMarkdown={processMarkdown(this.props.markdown)}
+                onResize={this.adjustMaxNeededHeight}
+                inTopPane
+              />}
           </div>
-          {!this.props.isEmbedView && <HeightResizer
-            position={this.props.height}
-            onResize={this.handleHeightResize}/>
-          }
+          {!this.props.isEmbedView &&
+            <HeightResizer
+              position={this.props.height}
+              onResize={this.handleHeightResize}
+            />}
         </div>
       </div>
     );

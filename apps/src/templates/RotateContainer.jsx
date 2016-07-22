@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 /**
  * "Rotate your device" overlay.

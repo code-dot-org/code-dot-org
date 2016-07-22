@@ -195,8 +195,7 @@ class Ability
         Script,
         ScriptLevel,
         UserLevel,
-        UserScript,
-        Section
+        UserScript
       ]
     end
   end

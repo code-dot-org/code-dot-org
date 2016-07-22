@@ -20,9 +20,9 @@ const PromptIcon = React.createClass({
   render() {
     return (
       <img
-          src={this.props.src}
-          id="prompt-icon"
-          style={styles.main}
+        src={this.props.src}
+        id="prompt-icon"
+        style={styles.main}
       />
     );
   }

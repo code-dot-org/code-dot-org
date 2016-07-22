@@ -221,7 +221,8 @@ window.dashboard.dialog = (function () {
               <PlayZone
                 stageName={stageName}
                 onContinue={() => { dialog.hide(); }}
-                i18n={window.dashboard.i18n}/>,
+                i18n={window.dashboard.i18n}
+              />,
               body
             );
             const dialog = new Dialog({

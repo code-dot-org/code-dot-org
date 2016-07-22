@@ -73,25 +73,25 @@ const EditTableRow = React.createClass({
           {
             this.state.isEditing ?
             <button
-                className="btn btn-primary"
-                style={dataStyles.editButton}
-                onClick={this.handleSave}
+              className="btn btn-primary"
+              style={dataStyles.editButton}
+              onClick={this.handleSave}
             >
               Save
             </button> :
             <button
-                className="btn"
-                style={dataStyles.editButton}
-                onClick={this.handleEdit}
+              className="btn"
+              style={dataStyles.editButton}
+              onClick={this.handleEdit}
             >
               Edit
             </button>
           }
 
           <button
-              className="btn btn-danger"
-              style={dataStyles.button}
-              onClick={this.handleDelete}
+            className="btn btn-danger"
+            style={dataStyles.button}
+            onClick={this.handleDelete}
           >
             Delete
           </button>

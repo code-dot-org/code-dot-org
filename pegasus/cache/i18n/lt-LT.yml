@@ -1712,12 +1712,17 @@
   playlab_shortcode: "žaisti"
   artist_shortcode: art
   try_now: Try now
+  homepage_banner_emailprivacy: We’re making an important change to how we support
+    student privacy.
+  homepage_banner_emailprivacy_link: Read more
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   speak_another_language: Speak another language?
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_navigation_view_surveys: Surveys
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits

@@ -126,6 +126,22 @@ ArtistAPI.prototype.moveRight = function (distance, id) {
   this.log.push(['MV', distance, 90, id]);
 };
 
+ArtistAPI.prototype.moveUpRight = function (distance, id) {
+  this.log.push(['MD', distance, 45, id]);
+};
+
+ArtistAPI.prototype.moveDownRight = function (distance, id) {
+  this.log.push(['MD', distance, 135, id]);
+};
+
+ArtistAPI.prototype.moveDownLeft = function (distance, id) {
+  this.log.push(['MD', distance, 225, id]);
+};
+
+ArtistAPI.prototype.moveUpLeft = function (distance, id) {
+  this.log.push(['MD', distance, 315, id]);
+};
+
 ArtistAPI.prototype.jumpUp = function (distance, id) {
   this.log.push(['JD', distance, 0, id]);
 };
@@ -140,6 +156,22 @@ ArtistAPI.prototype.jumpLeft = function (distance, id) {
 
 ArtistAPI.prototype.jumpRight = function (distance, id) {
   this.log.push(['JD', distance, 90, id]);
+};
+
+ArtistAPI.prototype.jumpUpRight = function (distance, id) {
+  this.log.push(['JD', distance, 45, id]);
+};
+
+ArtistAPI.prototype.jumpDownRight = function (distance, id) {
+  this.log.push(['JD', distance, 135, id]);
+};
+
+ArtistAPI.prototype.jumpDownLeft = function (distance, id) {
+  this.log.push(['JD', distance, 225, id]);
+};
+
+ArtistAPI.prototype.jumpUpLeft = function (distance, id) {
+  this.log.push(['JD', distance, 315, id]);
 };
 
 ArtistAPI.prototype.jumpForward = function (distance, id) {

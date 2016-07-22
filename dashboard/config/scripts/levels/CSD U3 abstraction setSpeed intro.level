@@ -1,0 +1,63 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-07-21T17:11:01.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "comment_GameLab": null,
+      "var sprite = createSprite": null,
+      "setAnimation": null,
+      "x": null,
+      "y": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "rotation": null,
+      "velocityX": null,
+      "velocityY": null,
+      "rotationToDirection": null,
+      "comment_Sprites": null,
+      "console.log": null,
+      "comment_Variables": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# getSpeed() and getDirection()\r\n\r\nWhen you move around the world, you probably don't normally think about your velocityX and velocityY.  You probably just think about how fast you are going in the direction you are heading.  You can figure out a sprite's speed and direction with math, but it's faster to teach the computer to do those calculations for you.  `getSpeed()` and `getDirection()` are methods that use the information in `velocityX` and `velocityY` to find your speed and direction.\r\n\r\n# Do this\r\n\r\nFor each sprite, look at its `velocityX` and `velocityY` and guess what its speed and direction are.  Then run the code and see the answers in the debog console.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "start_blocks": "var redSprite = createSprite(50, 20);\r\nredSprite.shapeColor = \"red\";\r\nredSprite.velocityX = 1.5;\r\nredSprite.velocityY = 2;\r\nconsole.log(\"red sprite speed and direction:\");\r\nconsole.log(redSprite.getSpeed());\r\nconsole.log(redSprite.getDirection());\r\n\r\nvar blueSprite = createSprite(50, 230);\r\nblueSprite.shapeColor = \"blue\";\r\nblueSprite.velocityX = 1;\r\nblueSprite.velocityY = -0.4;\r\nconsole.log(\"blue sprite speed and direction:\");\r\nconsole.log(blueSprite.getSpeed());\r\nconsole.log(blueSprite.getDirection());\r\n\r\nvar greenSprite = createSprite(50, 380);\r\ngreenSprite.shapeColor = \"green\";\r\ngreenSprite.velocityX = 2;\r\ngreenSprite.velocityY = -2;\r\nconsole.log(\"green sprite speed and direction:\");\r\nconsole.log(greenSprite.getSpeed());\r\nconsole.log(greenSprite.getDirection());\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\r\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

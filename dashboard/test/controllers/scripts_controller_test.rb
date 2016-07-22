@@ -143,7 +143,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should use script name as param where script name is words" do
-    script = create(:script, name: 'Heure de Code')
+    script = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, id: "Heure de Code"
 
     assert_response :success
