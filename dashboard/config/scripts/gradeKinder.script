@@ -10,8 +10,10 @@ level 'MarbleMaze'
 
 stage 'Persistence & Frustration'
 level 'StevieMarbles'
-level 'MarbleMaze2'
 level 'FrustrationSolutions'
+level 'MarbleMaze2'
+level 'gradeK_external_FrustrationWorksheet'
+
 
 stage 'Sequences & Algorithms'
 level 'seqAlg'
