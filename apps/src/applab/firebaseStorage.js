@@ -367,4 +367,33 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
     .then(onSuccess, onError);
 };
 
+/**
+ * Rename every instance of the specified column name currently in the table. This is
+ * unsafe in that we do not check whether data already exists in the new column.
+ * @param {string} tableName
+ * @param {string} oldName
+ * @param {string} newName
+ * @param {function()} onSuccess
+ * @param {function(string)} onError
+ */
+FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {
+  const recordsRef =
+    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value')
+    .then(snapshot => {
+      let recordsData = snapshot.val();
+      Object.keys(recordsData).forEach(recordId => {
+        const record = JSON.parse(recordsData[recordId]);
+        if (record[oldName] !== undefined) {
+          record[newName] = record[oldName];
+          delete record[oldName];
+        }
+        recordsData[recordId] = JSON.stringify(record);
+      });
+      return recordsData;
+    })
+    .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
 export default FirebaseStorage;

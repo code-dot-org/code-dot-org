@@ -67,6 +67,20 @@ const DataTable = React.createClass({
     }
   },
 
+  renameColumn(oldName, newName) {
+    const newColumns = this.state.newColumns.map(
+      curName => (curName === oldName ? newName : curName)
+    );
+    this.setState({newColumns});
+    FirebaseStorage.renameColumn(
+      this.props.tableName,
+      oldName,
+      newName,
+      () => {},
+      error => console.warn(error)
+    );
+  },
+
   getColumnNames() {
     // Make sure 'id' is the first column.
     let columnNames = ['id'];
@@ -119,7 +133,9 @@ const DataTable = React.createClass({
                 <ColumnHeader
                   key={columnName}
                   columnName={columnName}
+                  columnNames={columnNames}
                   deleteColumn={this.deleteColumn}
+                  renameColumn={this.renameColumn}
                 />
               ))
             }
