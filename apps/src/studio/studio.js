@@ -2960,6 +2960,20 @@ Studio.execute = function () {
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
+/**
+ * Pause calling `Studio.onTick`.
+ */
+Studio.pauseExecution = function () {
+  window.clearInterval(Studio.tickIntervalId);
+};
+
+/**
+ * Resume calling `Studio.onTick`.
+ */
+Studio.resumeExecution = function () {
+  Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
+};
+
 Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
