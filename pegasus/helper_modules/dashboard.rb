@@ -14,6 +14,10 @@ module Dashboard
     !!db[:users][id: user_id, admin: true]
   end
 
+  def self.hidden_script_access?(user_id)
+    admin?(user_id) || User.get(user_id).has_permission?('hidden_script_access')
+  end
+
   class User
     # Wrap dashboard user row in this helper object.
     # You can use this, but it's preferred that clients call User.get(user_id).
