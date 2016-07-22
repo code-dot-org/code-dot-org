@@ -1,0 +1,6 @@
+name 'gradeK_external_FrustrationWorksheet'
+title 'Frustration Worksheet'
+
+markdown <<MARKDOWN
+How does it look when you're frustrated?  Draw your best frustration face here:
+MARKDOWN
