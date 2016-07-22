@@ -29,7 +29,7 @@ ko:
   unsubmit: 제출 취소
   previous_page: 이전 페이지
   next_page: 다음 페이지
-  next_resource: Next resource
+  next_resource: 다음 자료
   done_with_module: Done with this Learning Module
   cancel: 취소
   okay: 알겠어
@@ -87,7 +87,7 @@ ko:
     teacher_title: 선생님 가입
     student_pitch: 학생 가입(Code.org)
     student_title: 학생 가입
-    signup_title: Sign up for Code.org
+    signup_title: Code.org 회원가입
     school_name: 학교 이름 (옵션)
     school_address: 학교 주소 (옵션)
     address_placeholder: 주소, 군구, 시도, 우편번호
@@ -106,7 +106,7 @@ ko:
     student_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과  약관</a>에 동의합니다. 13세 미만인 경우에는 부모님 또는 보호자의 허락하에 Code.org의 서비스를 사용합니다. 13세 미만의 이메일 주소는 저장되지 않습니다."
     teacher_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과 약관</a>에 동의합니다."
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
-    user_type_label: Account Type
+    user_type_label: 계좌 타자
     user_type_teacher: 선생님
     user_type_student: student
   signin_form:
@@ -125,6 +125,8 @@ ko:
     picture: 자신의 비밀 그림을 선택하세요.
     words: 자신의 비밀 단어를 입력하세요.
     login: 로그인
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: 비밀번호를 잊으셨나요?
@@ -247,6 +249,10 @@ ko:
       signin: 로그인
       signup: 가입하기
       already_registered: 이미 등록하였나요?
+      pair_programming: 페어 프로그래밍
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name} 의 진도'
       progress: 내 진도
@@ -281,6 +287,7 @@ ko:
       example_with_number: '예시 해법 %{solution_number}'
       submitted_on: '제출:'
       unsubmit: 제출 취소
+      worked_with: Worked With
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'
@@ -341,7 +348,7 @@ ko:
     announcement_title: 공시사항
     announcement_view_all: 모두 보기
     announcement_message: '<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은 언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서 모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요.'
-    announcement_button: Test the feature
+    announcement_learn_more_button: 더 알아보기
     announcement_petition: 교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다.
     announcement_petition_button: 이름을 입력하세요
   move_students:
@@ -406,8 +413,6 @@ ko:
   compatibility:
     upgrade:
       unsupported_message: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
-      ie_message: Code.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드 해주세요.
-      ie_message_csedweek: CSEdWeek.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드 해주세요.
       link: 더 알아보기
   slow_loading: 연결이 느립니다.
   try_reloading: 페이지를 다시 로드 해 보세요.
@@ -559,36 +564,6 @@ ko:
     hour: 1 시간
     day: 일
     week: 주
-  data:
-    script:
-      name:
-        20-hour:
-          title: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
-          description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
-        Hour of Code:
-          title: Hour of Code 2013
-          description: ""
-        edit-code:
-          title: 코드 수정
-          description: ""
-        events:
-          title: 이벤트
-          description: ""
-        builder:
-          title: 코드 생성기
-          description: ""
-        flappy:
-          title: 플래피 코드
-          description: 10분 이내에 나만의 게임을 만들고 싶은가요? 플래피 코드 튜토리얼을 해보세요.
-        jigsaw:
-          title: 직소퍼즐
-          description: ""
-        step:
-          title: 단계
-          description: ""
-        sample_level_builder:
-          title: 샘플 레벨 코드 생성기
-          description: ""
   age_interstitial:
     age: 나이
     header: 계정 정보 업데이트
@@ -621,6 +596,7 @@ ko:
     share_title: 프로젝트 공유
     share_copy_link: 링크 복사
     share_embed_description: 웹 페이지에서 프로젝트를 보여주기 위해 HTML 페이지에 소스 코드를 붙여넣을 수 있습니다.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: 삽입
     advanced_share: 고급 옵션 표시
     close: 닫기
@@ -644,6 +620,7 @@ ko:
     edit_project: 프로젝트 편집
     abuse:
       tos: "이 프로젝트는 Code.org의 <a href='http://code.org/tos'>이용 약관</a>을 위반하였습니다. 이 프로젝트는 다른 사람과 공유할 수 없습니다."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "오류를 발견하면 <a href='https://code.org/contact'> 로 문의해주세요.</a>"
       go_to_code_studio: Code Studio로 가기
       report_abuse_form:
@@ -675,6 +652,14 @@ ko:
     instructor_feedback: 강사 피드백
     peer_feedback: 동료 피드백
     outdated: 이 피드백은 이전에 제출된 버전에 추가되었습니다.
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: 아이콘 검색...
@@ -688,18 +673,20 @@ ko:
       primary_header: '축하합니다! 당신은 %{stageName}! 를 마쳤습니다.'
       projects_description: 기존 프로젝트 중에서 다시 열기
       projects_title: 프로젝트 열기
-      secondary_header: 다음으로 해야 할 일을 선생님께 여쭤보세요.
+      secondary_header: 다음으로 할 일을 선생님께 여쭤보세요.
   flex_category:
     required: 개요
     content: 콘텐츠
     practice: 선생님 연습
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code 다운로드
     capsule_title: 인터넷을 사용할 수 있습니까?
     capsule_desc: '웹 기반의 <a href="%{url}">%{app_name}</a>를 이용하세요.'
-    instructions_headline: 인터넷 연결이 안되요?
+    instructions_headline: 인터넷을 사용할 수 없습니까?
     instructions: '교사용 지침: 인터넷 서비스가 좋지 못하다면 Hour of Code 튜토리얼을 오프라인용으로 다운로드하고 설치하여 사용할 수 있습니다. 언어와 플랫폼을 선택하고, 다운로드 한 후, 여러분 학급의 모든 컴퓨터에 설치하세요. USB 드라이브에 한 번 다운로드 한 후 모든 컴퓨터에 설치하면 됩니다. 참고: 학생들은 Code Studio에 접속하거나 진행 사항을 저장하거나 인증서를 출력할 수 없습니다. 선생님은 <a href="%{url}">여기</a>에서 미리 인증서를 출력할 수 있습니다.'
     minecraft_name: 마인크래프트 코드의 시간
     starwars_blocks_name: '스타워즈: 코드로 은하계를 건설하기 (	블록)'

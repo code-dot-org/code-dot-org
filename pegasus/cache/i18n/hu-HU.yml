@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Informatikai stúdió
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
-  twentyhours_trynow: Próbálja ki most
+  try_now: Próbálja ki most
   california_heading: Kérd a sulidban, hogy tanítsanak számítstechnikát
   california_text: Bármelyik tanár oktathatja az általunk kínált <a href='http://studio.code.org/'>ingyenes
     anyagokat</a>.  Bármelyik általános iskola <a href='http://code.org/educate/k5'>taníthat
@@ -454,15 +454,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Használd a mozgatható blokkokat és JavaScriptet.
   starwars_javascript_specs: Csak angol nyelvű | Modern böngészők | 11 éves kortól
-  starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
   starwars_blocks_specs: Több nyelven | Modern böngészők, okostelefonok, táblagépek
     | 6-tól 106 éves korig
-  starwars_blocks_start_button: Próbálja ki most
-  starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
-  starwars_speak_languages: Beszél egy másik nyelven is?
-  starwars_help_translate: Segítsen a fordításban
   starwars_platform_text: Modern böngészők, okostelefonok, tabletek
   mc_name: Minecraft Kódolás Órája
   mc_longdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait
@@ -473,6 +468,12 @@
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
   mc_specs: Több nyelven | Modern böngészők, táblagépek | 6-tól 106 éves korig
   minecraft_subtitle: Minecraft Kódolás Órája
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "Ösztönözz tanulókat és önkénteseket a Kódolás
     Órájára."
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját
@@ -675,6 +676,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -689,6 +692,7 @@
   dashboard_navigation_view_progress: Előmenetel
   dashboard_navigation_view_text_responses: Szöveges válaszok megtekintése
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: "Óravázlatok és erőforrások"
@@ -878,7 +882,12 @@
     hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá
     tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket
     a "fel nem használt blokk" funkcióról annak bevezetése előtt.
-  dashboard_announce_button_text: Teszteld a funkciót
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Tudj meg többet
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1752,12 +1761,11 @@
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
     gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
     és tudományos képzettségük fejlesztése közben.
-  compatibility_https_header: Kérjük engedélyezd a HTTPS protokollt a Code.org-nak.
-  compatibility_https_message: A biztonság növelése érdekében %{https_date} után áttérünk
-    a HTTPS használatára. Ezután már nem leszel képes elérni a Code.org-ot enélkül.
-    a HTTPS engedélyezésének lépseinek megismeréséhez <a href='%{it_requirements_url}'>kattints
-    ide</a>.
-  compatibility_https_hide_this_warning: Figyelmen kívül hagyom
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1766,22 +1774,3 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

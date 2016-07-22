@@ -57,7 +57,7 @@
   csedweek_map_legend_cs_tech_jam: Bilgisayar Bilimi Teknolojisi Yarışı
   cded_sign_up: Kaydol
   cded_try_it: Deneyin
-  twentyhours_trynow: "Şimdi dene"
+  try_now: "Şimdi dene"
   california_heading: Okulunuzdan bilgisayar bilimleri kurslarını açmalarını isteyin
   california_text: Herhangi bir öğretmen bizim <a href='http://studio.code.org/'>
     ücretsiz kurslarımızı</a> sunabilir.  Herhangi bir İlköğretim Okulu <a href='http://code.org/educate/k5'>
@@ -376,8 +376,8 @@
   homepage_banner_20k_teachers: 20.000 öğretmen eğitildi ve (onlar) şu anda sınıflarda
     bilgisayar bilimleri öğretiyorlar.
   homepage_banner_20k_teachers_link: Daha fazlasını öğren
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
+  homepage_banner_congress: Amerika'nın liderleri Kongreyi, K-12 bilgisayar bilimi
+    finanse etmek için arıyor.
   homepage_banner_congress_link: Yardımlarınızı ekleyiniz
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
@@ -461,15 +461,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Sürükle-bırak blokları ve JavaScript kullan.
   starwars_javascript_specs: Sadece İngilizce | Modern Web Tarayıcıları | 11+ Yaş
-  starwars_javascript_start_button: "Şimdi dene"
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Sürükle-bırak blokları kullan.
   starwars_blocks_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar,
     tabletler | 6-10 yaş
-  starwars_blocks_start_button: "Şimdi dene"
-  starwars_watch_videos: Başlamadan önce bu ilham verici videolardan birini izle
-  starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
-  starwars_help_translate: "Çevirmemize yardım edin"
   starwars_platform_text: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_name: Minecraft Kod Saati
   mc_longdescription: Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak
@@ -480,6 +475,12 @@
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: "Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş"
   minecraft_subtitle: Minecraft Kod Saati
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Hour of Code etkinliği için gönüllü ol ve öğrencilere
     ilham kaynağı ol.
   volunteer_engineer_submission_subtitle_generic: 'Bu sene 7-13 Aralık''ta 100,000
@@ -594,7 +595,7 @@
   dashboard_landing_new_beta: Yeni! K-5 öğrencileri için beta kurslarımızı deneyin.
   dashboard_landing_new_k5courses: Yeni! K-5 öğrenciler için kurslarımızı deneyin.
   dashboard_landing_useful_links: Diğer faydalı linkler (yalnızca İngilizce)
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Sınıf için kaynaklar
   dashboard_landing_office_hours: "Şahsen bir soru sor! aylık video saatlerimizi ziyaret
     edin."
   dashboard_landing_print_certificates: Bu dersi bitiren öğrenciler için sertifika
@@ -615,11 +616,12 @@
     tarafından sunulan</a> daha fazla öğretici bulunmakta. Robotlar ile programlamayı,
     web sayfaları yapmayı, kendinize ait uygulamalar yapmayı öğrenin veya C++, Ruby
     veya Python gibi diğer kodlama dillerini keşfedin!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: "Öğrencilere poster, videolar ve daha fazlası ile ilham
+    ver."
+  dashboard_landing_video_library: Bilgisayar bilimleri kavramları video kütüphanesinden
+    bir video kullan.
+  dashboard_landing_report_bug: Bir özellik isteği veya bir hata raporu.
+  dashboard_landing_teacher_forum: Profesyonel öğrenme topluluğuna katılın.
   dashboard_hoc_courses: Her yaş için Kod Saati
   dashboard_hoc_courses_desc: "Öğrencileriniz ile birlikte 1 saatlik eğitimlerden
     birisini uygulayın!"
@@ -669,13 +671,13 @@
   dashboard_action_required: gerekli
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: Eğer bir ortaokul yada lisede öğretmen iseniz
+    değerlendirme soruları code studyoda mevcut. Bu değerlendirmeleri kullanmak için
+    önce dersi sınıfa ata ve dersi seç. Öğrencinin cevaplarını burada görebilirsin.
+  dashboard_assessments_summaries: "Özetler"
+  dashboard_assessments_answers: Tüm cevaplar
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
   dashboard_filter_all: Tamamı
   dashboard_download_csv: CSV indir
@@ -688,12 +690,13 @@
   dashboard_navigation_section_speakers: Bilgisayar Bilimi<br/>Davetli Konuşmacılar
   dashboard_navigation_all_sections: "Öğrenci hesapları ve ilerleme"
   dashboard_navigation_view_progress: "İlerleme Durumu"
-  dashboard_navigation_view_text_responses: Yanıtları Görüntüle
+  dashboard_navigation_view_text_responses: Metin Yanıtlar
   dashboard_navigation_view_assessments: Değerlendirmeler
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "Öğrenci EKle"
   dashboard_navigation_manage_students: "Öğrencileri Yönet"
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
-  dashboard_navigation_view_stats: "İstatistikleri görüntüle"
+  dashboard_navigation_view_stats: Istatistikler
   dashboard_navigation_section: 'Bölüm: %{section_name}'
   dashboard_navigation_student: "Öğrenci: %{student_name}"
   dashboard_progress_not_started: Başlatılmadı
@@ -706,7 +709,7 @@
   dashboard_progress_view: "İlerlemeyi Görüntüle"
   dashboard_progress_student_in_script: "İlerleme bilgilerini %{script_name} %{student_name}
     için"
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: Eşli Programlama
   dashboard_responses_view: Yanıtları Görüntüle
   dashboard_responses_none: Cevap yok
   dashboard_sections_new_section: Yeni bölüm
@@ -717,7 +720,7 @@
   dashboard_sections_table_secret: Oturum açma türü
   dashboard_sections_table_grade: Sınıf
   dashboard_sections_table_course: Kurs
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Ektralar
   dashboard_sections_table_students: "Öğrenciler"
   dashboard_sections_table_code: Bölge Kodu
   dashboard_sections_name: Bölüm İsmi
@@ -810,8 +813,8 @@
   dashboard_course2: 'Ders 2:'
   dashboard_course3: 'Ders 3:'
   dashboard_course4: 'Ders 4 (beta): '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_unplugged: Bilgisayarlarınız yok ise bu bağımsız dersleri sınıfınızda
+    kullanın.<a href='%{unplugged_url}'>
   dashboard_curriculum: Ders Programı
   dashboard_curriculum_overview: K-5 Eğitim Programına genel bakış
   dashboard_overview: Genel Bakış
@@ -878,7 +881,12 @@
   dashboard_announce_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde
     bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
     öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
-  dashboard_announce_button_text: "Özelliği test et"
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Daha fazlasını öğren
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
     bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
     izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
@@ -1008,18 +1016,18 @@
   course3_name: Kurs 3
   course4_name: Ders 4
   accelerated_name: Hızlandırılmış Kurs
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: "Ünite 1: Sayısal bilgi"
+  cspunit2_name: "Ünite 2: Internet"
   cspunit3_name: Bilgisayar Bilimleri İlkeleri Ünite 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
+  cspunit4_name: "Ünite 4: veri"
+  cspunit5_name: "Ünite 5: Keşfetmek ve PT oluşturmak"
+  cspunit6_name: 'Post-AP: Uygulamalardaki veritabanları'
+  csp1_name: "Ünite 1: Internet"
+  csp2_name: "Ünite 2: Sayısal bilgi"
   csp3_name: 'Unit 3: Algorithms and Programming'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  cspassessment_name: Tam test - 50 soru
+  cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
+  cspexam2-AKwgAh1ac5_name: Test Bölüm 2 / 25 soru
   cspunit3_gradelevel: 9-12. Sınıflar
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1027,20 +1035,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Hızlandırılmış Kurs
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: Bilgisayar biliminde Cebir
+  AlgebraA_name: Bilgisayar biliminde cebir Ders A
+  AlgebraB_name: Bilgisayar biliminde cebir Ders B
   gumball_name: Gumball
   classicmaze_name: Klasik Labirent
   iceage_name: Buz Devri
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Yıldız savaşları (blok)
   math_category_name: Matematik
   hoc_category_name: Saat Kodu
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csf_category_name: Bilgisayar bilimleri temeller
+  csp_category_name: "' 15 - 16' Bilgisayar bilimleri ilkeleri"
+  csp17_category_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
+  cspexams_category_name: Bilgisayar bilimi ilkeleri uygulama testi
   applab_name: Uygulama Laboratuvarı
   applab_gradelevel: 13 + Yaş grubu
   applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir
@@ -1702,12 +1710,10 @@
     öğrenciler için öğrenme sağlar.
   sphero_beyond_longdescription: "Öğretmen veya ebeveyn olun,SPRK dersleri çocukların
     matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir."
-  compatibility_https_header: Lütfen HTTPS'i etkinleştirin.
-  compatibility_https_message: Güvenliği artırmak için biz %{https_date}. tarihinde
-    HTTPS e geçiyoruz. Bu tarihten sonra Code.org erişmek mümkün olmayacaktır. nasıl
-    Code.org için HTTPS in nasıl etkinleştirileceği hakkında bilgiler için <a href='%{it_requirements_url}'>
-    burayı tıklatın</a>.
-  compatibility_https_hide_this_warning: Bu uyarıyı gizle
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı
+    <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
+    birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1716,22 +1722,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

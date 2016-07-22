@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "tar bort mellanslag från början",
   "TEXT_TRIM_OPERATOR_RIGHT": "tar bort mellanslag från slutet",
   "TEXT_TRIM_TOOLTIP": "Ger tillbaka en kopia av texten med mellanslag borttaget från början och/eller slutet.",
-  "UNUSED_CODE": "Unused code",
+  "UNUSED_CODE": "Oanvänd kod",
   "VARIABLES_DEFAULT_NAME": "objekt",
   "VARIABLES_GET_CREATE_SET": "Skapa \"välj %1\"",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

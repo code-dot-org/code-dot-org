@@ -1,75 +1,5 @@
 hy:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Intro համակարգչային գիտության դասընթաց
-          Unplug1: Փուլ 1
-          Maze: Փուլ 2
-          Unplug2: Փուլ 3
-          Unplug3: Բեմական 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Բեմական 10
-          Artist3: Բեմական 11
-          Unplug7: Բեմական 12
-          Farmer2: Բեմական 13
-          Unplug8: Բեմական 14
-          Artist4: Բեմական 15
-          Unplug9: Բեմական 16
-          Farmer3: Բեմական 17
-          Unplug10: Բեմական 18
-          Artist5: Բեմական 19
-          Unplug11: Բեմական 20
-        Hour of Code:
-          desc: Կոդի ժամ
-          Maze: Փուլ 1
-        Edit Code:
-          desc: Խմբագրել օրենսգրքի (բետա)
-          MazeEC: Փուլ 1
-        2014 Levels:
-          desc: Ցատկում (beta)
-          Bounce: Փուլ 1
-        Builder Levels:
-          desc: Օգտվող ստեղծված Պազլեր (բետա)
-          Custom: Փուլ 1
-        Flappy Levels:
-          desc: Flappy թռչուն
-          Flappy: Փուլ 1
-        Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Փուլ 1
-        Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Քայլ
-        edit-code:
-          desc: Խմբագրել օրենսգրքի (բետա)
-          MazeEC: Փուլ 1
-          Applab: Փուլ 2
-          ArtistEC: Փուլ 3
-          StudioEC: Բեմական 4
-        events:
-          desc: Ցատկում (beta)
-          Bounce: Փուլ 1
-          Studio: Փուլ 2
-        builder:
-          desc: Օգտվող ստեղծված Պազլեր (բետա)
-          Custom: Փուլ 1
-        flappy:
-          desc: Flappy թռչուն
-          Flappy: Փուլ 1
-        jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Փուլ 1
-        step:
-          desc: Maze (beta)
-          MazeStep: Stage Քայլ
-        wordsearch:
-          desc: Ուղղագրություն Bee (բետա)
-          WordSearch: Փուլ 1
     game:
       name:
         Unplug1: Ներածություն համակարգչային գիտության
@@ -282,9 +212,9 @@ hy:
         mazestep_3: Maze քայլը նկարագրությունը այստեղ
         mazestep_4: Maze քայլը նկարագրությունը այստեղ
         mazestep_5: Maze քայլը նկարագրությունը այստեղ
-        studio_c2_1: 'Կարող եք կատարել այս շունը ասում եք "Hello World».'
-        studio_c2_2: 'Կարող եք կատարել շունը մի բան ասել, ապա պետք կատուն մի բան ասել դրանից հետո:'
-        studio_c2_3: 'Կարող եք գրել ծրագիր, որպեսզի այս շուն տեղափոխվել կատվի:'
+        studio_c2_1: 'Կարող եք այնպես անել, որ շունն ասի  "hello world"'
+        studio_c2_2: 'Կարո՞ղ եք այնպես անել, որ նախ շունը, հետո կատուն ինչ-որ բան ասեն:'
+        studio_c2_3: Կարող եք այնպիսի ծրագիր գրել,որ շունը հասնի կատվին
         studio_c2_4: 'Կարող եք գրել ծրագիր, որը կազմում է շուն տեղափոխվել կատվի, եւ ունեն կատուն ասում եք "բարեւ", երբ շունը հասնում նրան.'
         studio_c2_5: 'Կարող եք գրել ծրագիր, որպեսզի ութոտնուկ ասում եք "բարեւ", երբ այն կտտացրել.'
         studio_c2_6: Կարող եք գրել ծրագիր, որպեսզի Waddles տեղափոխել շուրջ օգտագործելով մինչեւ / ներքեւ / ձախ եզրի / Right բանալիները հարվածել բոլոր թիրախները.
@@ -293,11 +223,11 @@ hy:
         studio_c2_9: 'Կարող եք ավելացնել բլոկ միավոր կետը, երբ Waddles ասված մեջ ութոտնուկ, ապա տեղափոխել նրան Ռադիո, մինչեւ դուք միավոր:'
         studio_c2_10: 'Կարող եք ավելացնել նյութից փոխել է հետին պլան եւ արագությունը Waddles, ապա տեղափոխել նրան Ռադիո, մինչեւ դուք միավոր:'
         studio_c2_11: Create your own story. When youre done, click Finish to let friends try your story on their phones.
-        studio_c3_story_1: 'Կարող եք կատարել այս շունը ասում եք "Hello World».'
-        studio_c3_story_2: 'Կարող եք կատարել շունը մի բան ասել, ապա պետք կատուն մի բան ասել դրանից հետո:'
-        studio_c3_story_3: 'Կարող եք գրել ծրագիր, որպեսզի այս շուն տեղափոխվել կատվի:'
+        studio_c3_story_1: 'Կարող եք այնպես անել, որ շունն ասի  "hello world"'
+        studio_c3_story_2: 'Կարո՞ղ եք այնպես անել, որ նախ շունը, հետո կատուն ինչ-որ բան ասեն:'
+        studio_c3_story_3: Կարող եք այնպիսի ծրագիր գրել,որ շունը հասնի կատվին
         studio_c3_story_4: 'Կարող եք գրել ծրագիր, որը կազմում է շուն տեղափոխվել կատվի, եւ ունեն կատուն ասում եք "բարեւ", երբ շունը հասնում նրան.'
-        studio_c3_story_5: Կարող եք ավելացնել բլոկ որպեսզի ութոտնուկ երջանիկ.
+        studio_c3_story_5: Ավելացրեք մեկ բլոկ ութոտնուկին երջանիկ դարձնելու համար
         studio_c3_story_6: Create your own story. When youre done, click Finish to let friends try your story on their phones.
         studio_c3_game_1: 'Կարող եք գրել ծրագիր, որպեսզի ութոտնուկ ասում եք "բարեւ", երբ այն կտտացրել.'
         studio_c3_game_2: Կարող եք գրել ծրագիր, որպեսզի Waddles տեղափոխել շուրջ օգտագործելով մինչեւ / ներքեւ / ձախ եզրի / Right բանալիները հարվածել բոլոր թիրախները.
@@ -339,22 +269,22 @@ hy:
         studio_gumball_join_food_fight: 'Գրանցման սննդի պայքարը! Օգտագործեք «դերասան եզրից նյութը ճիշտ» հրաման ունեն Banana Joe (դերասան 1) նետում սնունդ Anton (դերասան 2): Սահմանել Անտոն ի տրամադրություն զայրացած, երբ նա ստանում հարվածել.'
         studio_gumball_free_play: Create your own game or story. When youre done, click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Create your own game. When youre done, click Finish to let friends try your game on their phones.
-        studio_k1_1: 'Կարող եք կատարել այս շունը ասում եք "Hello World».'
-        studio_k1_2: 'Կարող եք կատարել շունը մի բան ասել, ապա պետք կատուն մի բան ասել դրանից հետո:'
-        studio_k1_3: 'Կարող եք գրել ծրագիր, որպեսզի այս շուն տեղափոխվել կատվի:'
-        studio_k1_4: 'Կատարել շունը քայլ է կատվի ու կատուն ասում եք "բարեւ", երբ նա ստանում է այնտեղ:'
-        studio_k1_5: Կարող եք ավելացնել բլոկ որպեսզի ութոտնուկ երջանիկ.
-        studio_k1_6: 'Ստեղծել ձեր սեփական պատմությունը: Տեղափոխել շուրջ կատու եւ շուն, եւ դարձնել դրանք ասում բաներ.'
-        maze_wordsearch_k_1: Տեղափոխեն, հանգեցնել բառը East
-        maze_wordsearch_k_2: Տեղափոխել ինձ հանգեցնել բառը SOUTH
-        maze_wordsearch_k_3: Տեղափոխեն, հանգեցնել խօսքը WEST
-        maze_wordsearch_k_4: Տեղափոխեն, հանգեցնել խօսքը NORTH
-        maze_wordsearch_k_6: Տեղափոխեն, արեւելք, ապա Հարավային հանգեցնել բառը ԱՆՑՈՒՄ
-        maze_wordsearch_k_9: Տեղափոխեն, մեկ ճանապարհ, ապա մյուսը spell բառի ԿՈԴԸ
-        maze_wordsearch_k_13: Տեղափոխել ինձ մի ճանապարհ, ապա մյուսը spell բառի debug
-        maze_wordsearch_k_15: Տեղափոխեն, մեկ ճանապարհ, ապա մյուսը հանգեցնել բառը ՎԵՐԸ
-        maze_wordsearch_k_16: Տեղափոխել ինձ մի ճանապարհ, ապա մյուսը հանգեցնել բառը ՍՏՈՐԵՎ
-        maze_wordsearch_k_20: Սա փորձություն! Տեղափոխեն, մեկ ճանապարհ, ապա մյուսը հանգեցնել բառը պատմությունը
+        studio_k1_1: 'Կարող եք այնպես անել, որ շունն ասի  "hello world"'
+        studio_k1_2: 'Կարո՞ղ եք այնպես անել, որ նախ շունը, հետո կատուն ինչ-որ բան ասեն:'
+        studio_k1_3: Կարող եք այնպիսի ծրագիր գրել,որ շունը հասնի կատվին
+        studio_k1_4: 'Տեղափոխիր շանը կատվի մոտ և այնպես արա, որ հասնելուց հետո կատուն ասի ՙՙhello՚՚:'
+        studio_k1_5: Ավելացրեք մեկ բլոկ ութոտնուկին երջանիկ դարձնելու համար
+        studio_k1_6: 'Ստեղծե՛ք ձեր սեփական պատմությունը: Տեղափոխեք կատվին եւ շանը, եւ այնպես արեք, որ խոսեն:'
+        maze_wordsearch_k_1: Տեղափոխիր ինձ EAST բառը ստանալու համար
+        maze_wordsearch_k_2: Տեղափոխիր ինձ SOUTH բառը ստանալու համար
+        maze_wordsearch_k_3: Տեղափոխիր ինձ WEST բառը ստանալու համար
+        maze_wordsearch_k_4: Տեղափոխիր ինձ NORTH բառը ստանալու համար
+        maze_wordsearch_k_6: 'Տեղափոխիր ինձ  արևելք, հետո հարավ  JUMP բառը ստանալու համար'
+        maze_wordsearch_k_9: 'Տար ինձ մի, հետո մյուս ճանապարհով CODE  բառը ստանալու համար'
+        maze_wordsearch_k_13: 'Տար ինձ մի, հետո մյուս ճանապարհով DEBUG   բառը ստանալու համար'
+        maze_wordsearch_k_15: 'Տար ինձ մի, հետո մյուս ճանապարհով ABOVE  բառը ստանալու համար'
+        maze_wordsearch_k_16: 'Տար ինձ մի, հետո մյուս ճանապարհով  BELOW բառը ստանալու համար'
+        maze_wordsearch_k_20: 'Սա թեստ է : Տար ինձ մի, հետո մյուս ճանապարհով STORY  բառը ստանալու համար'
         applab_ec_simple: Ստեղծել ձեր ծրագիրը օգտագործելով նյութից է Գործիքներ.
         turtle_ec_1_2: 'Հիմա, ոչ ոքի մի հրապարակ: Նշում: «օգտագործել ձեր սիրած գույնը ջոկելը այն նոր« pencolor »բլոկում.'
         turtle_ec_1_10: "Դուք արել այն! Այժմ, ոչ ոքի բան եք ուզում. Որոշ Ժամանց գաղափարներ 'մի փայտիկ գործիչ, snowflake, թե պարույր. Նաեւ փորձելու նոր «penWidth» դաշինքը: Զվարճանալ!"
@@ -386,7 +316,7 @@ hy:
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Փաթեթավորեք-up
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Ուրախ Քարտեզներ
         C1_moveitmoveit_unplugged: Տեղափոխել այն, տեղափոխել այն
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -488,6 +418,7 @@ hy:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

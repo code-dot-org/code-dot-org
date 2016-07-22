@@ -14,6 +14,8 @@ en:
       2-3 Artist 6_instruction: crwdns33930:0crwdne33930:0
       2-3 Artist 7_instruction: crwdns33931:0crwdne33931:0
       2-3 Artist 8_instruction: crwdns33932:0crwdne33932:0
+      2-3 Artist 9 NEW_instruction: crwdns57422:0crwdne57422:0
+      2-3 Artist 9 REPLACEMENT_instruction: crwdns57423:0crwdne57423:0
       2-3 Artist 9_instruction: crwdns30242:0crwdne30242:0
       2-3 Artist Assessment 1_instruction: crwdns33933:0crwdne33933:0
       2-3 Artist Debugging 1_instruction: crwdns33934:0crwdne33934:0
@@ -911,6 +913,258 @@ en:
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
+      grade1_artist_loops1_instruction: crwdns57424:0crwdne57424:0
+      grade1_artist_loops2_instruction: crwdns57425:0crwdne57425:0
+      grade1_artist_loops3_instruction: crwdns57426:0crwdne57426:0
+      grade1_artist_loops4_instruction: crwdns57427:0crwdne57427:0
+      grade1_artist_loops5_instruction: crwdns57428:0crwdne57428:0
+      grade1_artist_loops6_instruction: crwdns57429:0crwdne57429:0
+      grade1_artist_loops7_instruction: crwdns57430:0crwdne57430:0
+      grade1_artist_loops7a_instruction: crwdns57431:0crwdne57431:0
+      grade1_artist_loops7b_instruction: crwdns57432:0crwdne57432:0
+      grade1_artist_loops8_instruction: crwdns57433:0crwdne57433:0
+      grade1_artist_loops9_instruction: crwdns57434:0crwdne57434:0
+      grade1_artist_loopsFP_instruction: crwdns57435:0crwdne57435:0
+      grade1_maze_sequence1_instruction: crwdns57436:0crwdne57436:0
+      grade1_maze_sequence10_instruction: crwdns57437:0crwdne57437:0
+      grade1_maze_sequence2_instruction: crwdns57438:0crwdne57438:0
+      grade1_maze_sequence3_instruction: crwdns57439:0crwdne57439:0
+      grade1_maze_sequence4_instruction: crwdns57440:0crwdne57440:0
+      grade1_maze_sequence5_instruction: crwdns57441:0crwdne57441:0
+      grade1_maze_sequence6_instruction: crwdns57442:0crwdne57442:0
+      grade1_maze_sequence7_instruction: crwdns57443:0crwdne57443:0
+      grade1_maze_sequence8_instruction: crwdns57444:0crwdne57444:0
+      grade1_maze_sequence9_instruction: crwdns57445:0crwdne57445:0
+      grade1_maze_sequenceA_instruction: crwdns57446:0crwdne57446:0
+      grade1_maze_sequenceB_instruction: crwdns57447:0crwdne57447:0
+      grade1_maze_sequenceC_instruction: crwdns57448:0crwdne57448:0
+      grade1_maze_sequenceD_instruction: crwdns57449:0crwdne57449:0
+      grade1_playlab_events1_instruction: crwdns57450:0crwdne57450:0
+      grade1_playlab_events2_instruction: crwdns57451:0crwdne57451:0
+      grade1_playlab_events3_instruction: crwdns57452:0crwdne57452:0
+      grade1_playlab_events4_instruction: crwdns57453:0crwdne57453:0
+      grade1_playlab_events5_instruction: crwdns57454:0crwdne57454:0
+      grade1_playlab_events6_instruction: crwdns57455:0crwdne57455:0
+      grade1_playlab_events7_instruction: crwdns57456:0crwdne57456:0
+      grade1_playlab_events8_instruction: crwdns57457:0crwdne57457:0
+      grade1_playlab_events9 RYAN COPY_instruction: crwdns57458:0crwdne57458:0
+      grade1_playlab_events9_instruction: crwdns57459:0crwdne57459:0
+      grade1_playlab_eventsFP_instruction: crwdns57460:0crwdne57460:0
+      grade1_sequence_pre_instruction: crwdns57461:0crwdne57461:0
+      grade1_video_frustrationRainbow_instruction: crwdns57462:0crwdne57462:0
+      grade2_CaringForNewPet_1_instruction: crwdns57463:0crwdne57463:0
+      grade2_CaringForNewPet_2_instruction: crwdns57464:0crwdne57464:0
+      grade2_CaringForNewPet_3_instruction: crwdns57465:0crwdne57465:0
+      grade2_CaringForNewPet_4_instruction: crwdns57466:0crwdne57466:0
+      grade2_CaringForNewPet_5_instruction: crwdns57467:0crwdne57467:0
+      grade2_CaringForNewPet_6_instruction: crwdns57468:0crwdne57468:0
+      grade2_MakeDogTag_1_instruction: crwdns57469:0crwdne57469:0
+      grade2_MakeDogTag_10_instruction: crwdns57470:0crwdne57470:0
+      grade2_MakeDogTag_2_instruction: crwdns57471:0crwdne57471:0
+      grade2_MakeDogTag_3_instruction: crwdns57472:0crwdne57472:0
+      grade2_MakeDogTag_4_instruction: crwdns57473:0crwdne57473:0
+      grade2_MakeDogTag_5_instruction: crwdns57474:0crwdne57474:0
+      grade2_MakeDogTag_6_instruction: crwdns57475:0crwdne57475:0
+      grade2_MakeDogTag_7_instruction: crwdns57476:0crwdne57476:0
+      grade2_MakeDogTag_8_instruction: crwdns57477:0crwdne57477:0
+      grade2_MakeDogTag_9_instruction: crwdns57478:0crwdne57478:0
+      grade2_PuppyLoops_1_instruction: crwdns57479:0crwdne57479:0
+      grade2_PuppyLoops_10_instruction: crwdns57480:0crwdne57480:0
+      grade2_PuppyLoops_2_instruction: crwdns57481:0crwdne57481:0
+      grade2_PuppyLoops_3_instruction: crwdns57482:0crwdne57482:0
+      grade2_PuppyLoops_4_instruction: crwdns57483:0crwdne57483:0
+      grade2_PuppyLoops_5_instruction: crwdns57484:0crwdne57484:0
+      grade2_PuppyLoops_6_instruction: crwdns57485:0crwdne57485:0
+      grade2_PuppyLoops_7_instruction: crwdns57486:0crwdne57486:0
+      grade2_PuppyLoops_8_instruction: crwdns57487:0crwdne57487:0
+      grade2_PuppyLoops_9_instruction: crwdns57488:0crwdne57488:0
+      grade3_Conditionals_1 BAD_instruction: crwdns57489:0crwdne57489:0
+      grade3_Conditionals_1_instruction: crwdns57490:0crwdne57490:0
+      grade3_Conditionals_10 BAD_instruction: crwdns57491:0crwdne57491:0
+      grade3_Conditionals_10_instruction: crwdns57492:0crwdne57492:0
+      grade3_Conditionals_11 BAD_instruction: crwdns57493:0crwdne57493:0
+      grade3_Conditionals_11_instruction: crwdns57494:0crwdne57494:0
+      grade3_Conditionals_12_instruction: crwdns57495:0crwdne57495:0
+      grade3_Conditionals_13_instruction: crwdns57496:0crwdne57496:0
+      grade3_Conditionals_2_instruction: crwdns57497:0crwdne57497:0
+      grade3_Conditionals_3_instruction: crwdns57498:0crwdne57498:0
+      grade3_Conditionals_4_instruction: crwdns57499:0crwdne57499:0
+      grade3_Conditionals_5_instruction: crwdns57500:0crwdne57500:0
+      grade3_Conditionals_6_instruction: crwdns57501:0crwdne57501:0
+      grade3_Conditionals_7_instruction: crwdns57502:0crwdne57502:0
+      grade3_Conditionals_8_instruction: crwdns57503:0crwdne57503:0
+      grade3_Conditionals_9_instruction: crwdns57504:0crwdne57504:0
+      grade3_Conditionals_TeacherIDo_instruction: crwdns57505:0crwdne57505:0
+      grade3_ConditionalsElse_1_instruction: crwdns57506:0crwdne57506:0
+      grade3_ConditionalsElse_2_instruction: crwdns57507:0crwdne57507:0
+      grade3_ConditionalsElse_3_instruction: crwdns57508:0crwdne57508:0
+      grade3_ConditionalsElse_4_instruction: crwdns57509:0crwdne57509:0
+      grade3_ConditionalsElse_5_instruction: crwdns57510:0crwdne57510:0
+      grade3_ConditionalsElse_6_instruction: crwdns57511:0crwdne57511:0
+      grade3_ConditionalsElse_7_instruction: crwdns57512:0crwdne57512:0
+      grade3_ConditionalsElse_8_instruction: crwdns57513:0crwdne57513:0
+      grade3_ConditionalsElse_9_instruction: crwdns57514:0crwdne57514:0
+      grade3_ConditionalsElse_TeacherIDo_instruction: crwdns57515:0crwdne57515:0
+      grade3_Debugging_1_instruction: crwdns57516:0crwdne57516:0
+      grade3_Debugging_10_instruction: crwdns57517:0crwdne57517:0
+      grade3_Debugging_11_instruction: crwdns57518:0crwdne57518:0
+      grade3_Debugging_2_instruction: crwdns57519:0crwdne57519:0
+      grade3_Debugging_3_instruction: crwdns57520:0crwdne57520:0
+      grade3_Debugging_4_instruction: crwdns57521:0crwdne57521:0
+      grade3_Debugging_5_instruction: crwdns57522:0crwdne57522:0
+      grade3_Debugging_6_instruction: crwdns57523:0crwdne57523:0
+      grade3_Debugging_7_instruction: crwdns57524:0crwdne57524:0
+      grade3_Debugging_8_instruction: crwdns57525:0crwdne57525:0
+      grade3_Debugging_9_instruction: crwdns57526:0crwdne57526:0
+      grade3_Debugging_TeacherIDo_instruction: crwdns57527:0crwdne57527:0
+      grade3_Loops_1_instruction: crwdns57528:0crwdne57528:0
+      grade3_Loops_10_instruction: crwdns57529:0crwdne57529:0
+      grade3_Loops_11_instruction: crwdns57530:0crwdne57530:0
+      grade3_Loops_12_instruction: crwdns57531:0crwdne57531:0
+      grade3_Loops_2_instruction: crwdns57532:0crwdne57532:0
+      grade3_Loops_3_instruction: crwdns57533:0crwdne57533:0
+      grade3_Loops_4_instruction: crwdns57534:0crwdne57534:0
+      grade3_Loops_5_instruction: crwdns57535:0crwdne57535:0
+      grade3_Loops_6_instruction: crwdns57536:0crwdne57536:0
+      grade3_Loops_7_instruction: crwdns57537:0crwdne57537:0
+      grade3_Loops_8_instruction: crwdns57538:0crwdne57538:0
+      grade3_Loops_9_instruction: crwdns57539:0crwdne57539:0
+      grade3_Loops_TeacherIDo_instruction: crwdns57540:0crwdne57540:0
+      grade4_arist_functions_star0_instruction: crwdns57541:0crwdne57541:0
+      grade4_arist_nested_loop_circles1_instruction: crwdns57542:0crwdne57542:0
+      grade4_arist_nested_loop_flags1_instruction: crwdns57543:0crwdne57543:0
+      grade4_arist_nested_loop_polygons1_instruction: crwdns57544:0crwdne57544:0
+      grade4_arist_nested_loop_polygons2_instruction: crwdns57545:0crwdne57545:0
+      grade4_arist_nested_loop_squares1_instruction: crwdns57546:0crwdne57546:0
+      grade4_arist_nested_loop_triangles2_instruction: crwdns57547:0crwdne57547:0
+      grade4_arist_nested_loop_triangles3_instruction: crwdns57548:0crwdne57548:0
+      grade4_arist_nested_loop_triangles4_instruction: crwdns57549:0crwdne57549:0
+      grade4_arist_nested_loop_triangles5_instruction: crwdns57550:0crwdne57550:0
+      grade4_arist_nested_loop_triangles6_instruction: crwdns57551:0crwdne57551:0
+      grade4_artist_functions_stars0_instruction: crwdns57552:0crwdne57552:0
+      grade4_artist_functions_stars1_instruction: crwdns57553:0crwdne57553:0
+      grade4_artist_functions_stars2_instruction: crwdns57554:0crwdne57554:0
+      grade4_artist_functions_stars3_instruction: crwdns57555:0crwdne57555:0
+      grade4_artist_functions_windows0_instruction: crwdns57556:0crwdne57556:0
+      grade4_artist_functions_windows1_instruction: crwdns57557:0crwdne57557:0
+      grade4_artist_functions_windows2_instruction: crwdns57558:0crwdne57558:0
+      grade4_artist_nested_loop_circles1_instruction: crwdns57559:0crwdne57559:0
+      grade4_artist_nested_loop_flags1_instruction: crwdns57560:0crwdne57560:0
+      grade4_artist_nested_loop_polygons1_instruction: crwdns57561:0crwdne57561:0
+      grade4_artist_nested_loop_polygons2_instruction: crwdns57562:0crwdne57562:0
+      grade4_artist_nested_loop_squares1_instruction: crwdns57563:0crwdne57563:0
+      grade4_artist_nested_loop_triangles1_instruction: crwdns57564:0crwdne57564:0
+      grade4_artist_nested_loop_triangles2_instruction: crwdns57565:0crwdne57565:0
+      grade4_artist_nested_loop_triangles3_instruction: crwdns57566:0crwdne57566:0
+      grade4_artist_nested_loop_triangles4_instruction: crwdns57567:0crwdne57567:0
+      grade4_artist_nested_loop_triangles5_instruction: crwdns57568:0crwdne57568:0
+      grade4_artist_nested_loop_triangles6_instruction: crwdns57569:0crwdne57569:0
+      grade4_artist_parameters_squares1_instruction: crwdns57570:0crwdne57570:0
+      grade4_artist_parameters_triangles1_instruction: crwdns57571:0crwdne57571:0
+      grade4_artist_parameters_triangles2_instruction: crwdns57572:0crwdne57572:0
+      grade4_artist_parameters_triangles2b_instruction: crwdns57573:0crwdne57573:0
+      grade4_artist_parameters_triangles3_instruction: crwdns57574:0crwdne57574:0
+      grade4_artist_parameters_triangles4_instruction: crwdns57575:0crwdne57575:0
+      grade4_artist_parameters_trianglesx_instruction: crwdns57576:0crwdne57576:0
+      grade4_bee_conditionals_nested_loops_instruction: crwdns57577:0crwdne57577:0
+      grade4_bee_conditionals_new1_instruction: crwdns57578:0crwdne57578:0
+      grade4_bee_conditionals_new1a_instruction: crwdns57579:0crwdne57579:0
+      grade4_bee_conditionals_new2_instruction: crwdns57580:0crwdne57580:0
+      grade4_bee_conditionals_new2a_instruction: crwdns57581:0crwdne57581:0
+      grade4_bee_conditionals_new3a_instruction: crwdns57582:0crwdne57582:0
+      grade4_bee_conditionals_new3b_instruction: crwdns57583:0crwdne57583:0
+      grade4_bee_conditionals_new3c_instruction: crwdns57584:0crwdne57584:0
+      grade4_bee_conditionals_quantum1_instruction: crwdns57585:0crwdne57585:0
+      grade4_bee_conditionals_quantum2_instruction: crwdns57586:0crwdne57586:0
+      grade4_bee_conditionals_quantum3_instruction: crwdns57587:0crwdne57587:0
+      grade4_bee_conditionals_quantum4_instruction: crwdns57588:0crwdne57588:0
+      grade4_bee_conditionals_quantum5_instruction: crwdns57589:0crwdne57589:0
+      grade4_bee_functions_instruction: crwdns57590:0crwdne57590:0
+      grade4_farmer_functions1_instruction: crwdns57591:0crwdne57591:0
+      grade4_frozen_freeplay_instruction: crwdns57592:0crwdne57592:0
+      grade4_frozen_functions0_instruction: crwdns57593:0crwdne57593:0
+      grade4_frozen_functions1_instruction: crwdns57594:0crwdne57594:0
+      grade4_frozen_functions1a_instruction: crwdns57595:0crwdne57595:0
+      grade4_frozen_functions2_instruction: crwdns57596:0crwdne57596:0
+      grade4_frozen_functions3_instruction: crwdns57597:0crwdne57597:0
+      grade4_frozen_functions4_instruction: crwdns57598:0crwdne57598:0
+      grade4_frozen_nested_loop_diamonds1_instruction: crwdns57599:0crwdne57599:0
+      grade4_frozen_nested_loop_diamonds2_instruction: crwdns57600:0crwdne57600:0
+      grade4_frozen_nested_loop_diamonds3_instruction: crwdns57601:0crwdne57601:0
+      grade4_frozen_square_instruction: crwdns57602:0crwdne57602:0
+      grade4_frozen_square_loop1_instruction: crwdns57603:0crwdne57603:0
+      grade4_frozen_square_loop2_instruction: crwdns57604:0crwdne57604:0
+      grade4_frozen_square_loop3_instruction: crwdns57605:0crwdne57605:0
+      grade4_playlab_test_instruction: crwdns57606:0crwdne57606:0
+      grade4_playlab_test2_instruction: crwdns57607:0crwdne57607:0
+      grade4_prompt_test_instruction: crwdns57608:0crwdne57608:0
+      grade4_review_artist1_instruction: crwdns57609:0crwdne57609:0
+      grade4_review_artist2_instruction: crwdns57610:0crwdne57610:0
+      grade4_review_artist3_instruction: crwdns57611:0crwdne57611:0
+      grade4_review_bee1_instruction: crwdns57612:0crwdne57612:0
+      grade4_review_bee2_instruction: crwdns57613:0crwdne57613:0
+      grade4_review_bee3_instruction: crwdns57614:0crwdne57614:0
+      grade5_artist_for_loops1_instruction: crwdns57615:0crwdne57615:0
+      grade5_artist_for_loops10_instruction: crwdns57616:0crwdne57616:0
+      grade5_artist_for_loops2_instruction: crwdns57617:0crwdne57617:0
+      grade5_artist_for_loops3_instruction: crwdns57618:0crwdne57618:0
+      grade5_artist_for_loops4_instruction: crwdns57619:0crwdne57619:0
+      grade5_artist_for_loops5_instruction: crwdns57620:0crwdne57620:0
+      grade5_artist_for_loops6_instruction: crwdns57621:0crwdne57621:0
+      grade5_artist_for_loops7_instruction: crwdns57622:0crwdne57622:0
+      grade5_artist_for_loops8_instruction: crwdns57623:0crwdne57623:0
+      grade5_artist_for_loops9_instruction: crwdns57624:0crwdne57624:0
+      grade5_artist_for_loopsfreeplay11_instruction: crwdns57625:0crwdne57625:0
+      grade5_artist_for_loopsfreeplay12_instruction: crwdns57626:0crwdne57626:0
+      grade5_artist_parameters_squares1_instruction: crwdns57627:0crwdne57627:0
+      grade5_artist_parameters_squares2_instruction: crwdns57628:0crwdne57628:0
+      grade5_artist_parameters_stars1_instruction: crwdns57629:0crwdne57629:0
+      grade5_artist_parameters_triangles1_instruction: crwdns57630:0crwdne57630:0
+      grade5_artist_parameters_triangles1a_instruction: crwdns57631:0crwdne57631:0
+      grade5_artist_parameters_triangles2_instruction: crwdns57632:0crwdne57632:0
+      grade5_artist_parameters_triangles2a_instruction: crwdns57633:0crwdne57633:0
+      grade5_artist_parameters_triangles3_instruction: crwdns57634:0crwdne57634:0
+      grade5_artist_parameters_triangles4_instruction: crwdns57635:0crwdne57635:0
+      grade5_artist_parameters_trianglesy_instruction: crwdns57636:0crwdne57636:0
+      grade5_artist_variables_freeplay10_instruction: crwdns57637:0crwdne57637:0
+      grade5_artist_variables_freeplay14_instruction: crwdns57638:0crwdne57638:0
+      grade5_artist_variables_freeplay15_instruction: crwdns57639:0crwdne57639:0
+      grade5_artist_variables_freeplay16_instruction: crwdns57640:0crwdne57640:0
+      grade5_artist_variables_hexagons1_instruction: crwdns57641:0crwdne57641:0
+      grade5_artist_variables_letterT11_instruction: crwdns57642:0crwdne57642:0
+      grade5_artist_variables_octagons13_instruction: crwdns57643:0crwdne57643:0
+      grade5_artist_variables_pentagon8_instruction: crwdns57644:0crwdne57644:0
+      grade5_artist_variables_pentagon9_instruction: crwdns57645:0crwdne57645:0
+      grade5_artist_variables_pentagons1_instruction: crwdns57646:0crwdne57646:0
+      grade5_artist_variables_pentagons12_instruction: crwdns57647:0crwdne57647:0
+      grade5_artist_variables_rectangle6_instruction: crwdns57648:0crwdne57648:0
+      grade5_artist_variables_square7_instruction: crwdns57649:0crwdne57649:0
+      grade5_artist_variables_triangles1_instruction: crwdns57650:0crwdne57650:0
+      grade5_artist_variables_triangles2_instruction: crwdns57651:0crwdne57651:0
+      grade5_artist_variables_triangles3_instruction: crwdns57652:0crwdne57652:0
+      grade5_bee_for_loops1_instruction: crwdns57653:0crwdne57653:0
+      grade5_bee_for_loops10_instruction: crwdns57654:0crwdne57654:0
+      grade5_bee_for_loops11_instruction: crwdns57655:0crwdne57655:0
+      grade5_bee_for_loops2_instruction: crwdns57656:0crwdne57656:0
+      grade5_bee_for_loops3_instruction: crwdns57657:0crwdne57657:0
+      grade5_bee_for_loops4_instruction: crwdns57658:0crwdne57658:0
+      grade5_bee_for_loops5_instruction: crwdns57659:0crwdne57659:0
+      grade5_bee_for_loops6_instruction: crwdns57660:0crwdne57660:0
+      grade5_bee_for_loops7_instruction: crwdns57661:0crwdne57661:0
+      grade5_bee_for_loops8_instruction: crwdns57662:0crwdne57662:0
+      grade5_bee_for_loops9_instruction: crwdns57663:0crwdne57663:0
+      grade5_pixelation_instruction: crwdns57664:0crwdne57664:0
+      grade5_playlab_parameters_points1_instruction: crwdns57665:0crwdne57665:0
+      grade5_playlab_variables1_instruction: crwdns57666:0crwdne57666:0
+      grade5_playlab_variables2_instruction: crwdns57667:0crwdne57667:0
+      grade5_playlab_variables3_instruction: crwdns57668:0crwdne57668:0
+      grade5_playlab_variables4_instruction: crwdns57669:0crwdne57669:0
+      grade5_playlab_variables5_instruction: crwdns57670:0crwdne57670:0
+      grade5_playlab_variables6_instruction: crwdns57671:0crwdne57671:0
+      grade5_playlab_variables7_instruction: crwdns57672:0crwdne57672:0
+      grade5_playlab_variables_freeplay_instruction: crwdns57673:0crwdne57673:0
+      grade5_playlab_variables_jump1_instruction: crwdns57674:0crwdne57674:0
+      gradeK_sequence_4_instruction: crwdns57675:0crwdne57675:0
       Infinity_catch_instruction: crwdns35156:0crwdne35156:0
       Infinity_finale_instruction: crwdns34535:0crwdne34535:0
       Infinity_move_collide_instruction: crwdns35157:0crwdne35157:0
@@ -1042,18 +1296,35 @@ en:
       K-1 Maze Sequence Assessment 2_instruction: crwdns38659:0crwdne38659:0
       K2.0 sequence 1_instruction: crwdns57087:0crwdne57087:0
       K2.0 sequence 10_instruction: crwdns57088:0crwdne57088:0
+      K2.0 sequence 12_instruction: crwdns57676:0crwdne57676:0
       K2.0 sequence 2_instruction: crwdns57089:0crwdne57089:0
       K2.0 sequence 3_instruction: crwdns57090:0crwdne57090:0
       K2.0 sequence 4_instruction: crwdns57091:0crwdne57091:0
+      K2.0 sequence 4a_instruction: crwdns57677:0crwdne57677:0
       K2.0 sequence 5_instruction: crwdns57092:0crwdne57092:0
       K2.0 sequence 6_instruction: crwdns57093:0crwdne57093:0
       K2.0 sequence 7_instruction: crwdns57094:0crwdne57094:0
       K2.0 sequence 8_instruction: crwdns57095:0crwdne57095:0
       K2.0 sequence 9_instruction: crwdns57096:0crwdne57096:0
+      K2.0 sequence FP_instruction: crwdns57678:0crwdne57678:0
+      K2.0 sequence pre_instruction: crwdns57679:0crwdne57679:0
       kikiTesta_instruction: crwdns57014:0crwdne57014:0
       kikiTesting_instruction: crwdns54266:0crwdne54266:0
       KTest1_instruction: crwdns57015:0crwdne57015:0
       KTest2_instruction: crwdns57016:0crwdne57016:0
+      level 'grade3_Loops_10_instruction: crwdns57680:0crwdne57680:0
+      level 'grade3_Loops_11_instruction: crwdns57681:0crwdne57681:0
+      level 'grade3_Loops_12_instruction: crwdns57682:0crwdne57682:0
+      level 'grade3_Loops_2_instruction: crwdns57683:0crwdne57683:0
+      level 'grade3_Loops_3_instruction: crwdns57684:0crwdne57684:0
+      level 'grade3_Loops_4_instruction: crwdns57685:0crwdne57685:0
+      level 'grade3_Loops_5_instruction: crwdns57686:0crwdne57686:0
+      level 'grade3_Loops_6_instruction: crwdns57687:0crwdne57687:0
+      level 'grade3_Loops_7_instruction: crwdns57688:0crwdne57688:0
+      level 'grade3_Loops_8_instruction: crwdns57689:0crwdne57689:0
+      level 'grade3_Loops_9_instruction: crwdns57690:0crwdne57690:0
+      level 'grade4_bee_conditionals_new1'_instruction: crwdns57691:0crwdne57691:0
+      level grade3_Loops_2_instruction: crwdns57692:0crwdne57692:0
       Limited Quantity of Blocks Test_instruction: crwdns57017:0crwdne57017:0
       love_spring_1_instruction: crwdns56176:0crwdne56176:0
       love_spring_2_instruction: crwdns56177:0crwdne56177:0
@@ -1067,6 +1338,8 @@ en:
       Middle School Hackathon Pt 1_instruction: crwdns56231:0crwdne56231:0
       Middle School Hackathon Pt 2_instruction: crwdns56232:0crwdne56232:0
       Mike Pair Programming_instruction: crwdns57018:0crwdne57018:0
+      Mike Test Bee Conditionals 1_instruction: crwdns57693:0crwdne57693:0
+      Mike Test Bee Conditionals 2_instruction: crwdns57694:0crwdne57694:0
       MikeAssessment1_instruction: crwdns56885:0crwdne56885:0
       MikeStar_instruction: crwdns57019:0crwdne57019:0
       MikeStarHard_instruction: crwdns57020:0crwdne57020:0
@@ -1245,9 +1518,16 @@ en:
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
       playEventsK1_instruction: crwdns57097:0crwdne57097:0
       playEventsK2_instruction: crwdns57098:0crwdne57098:0
+      playEventsK3_instruction: crwdns57695:0crwdne57695:0
+      playEventsK4_instruction: crwdns57696:0crwdne57696:0
+      playEventsK5_instruction: crwdns57697:0crwdne57697:0
+      playEventsK6_instruction: crwdns57698:0crwdne57698:0
+      playEventsK7_instruction: crwdns57699:0crwdne57699:0
       Poorva copy U3L2 Using Simple Commands_instruction: crwdns56766:0crwdne56766:0
       Poorva-test_instruction: crwdns55888:0crwdne55888:0
+      PS copy 2-3 Bee Conditionals 5_instruction: crwdns57700:0crwdne57700:0
       PS Log test - Define and use turnAround_instruction: crwdns56269:0crwdne56269:0
+      PS predictive Applab level test_instruction: crwdns57701:0crwdne57701:0
       Quantum Bee - Ryan_instruction: crwdns56113:0crwdne56113:0
       Quantum Bee_instruction: crwdns56001:0crwdne56001:0
       Rocket Height Course A_instruction: crwdns56570:0crwdne56570:0

@@ -1,75 +1,5 @@
 el:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Εισαγωγή στην Επιστήμη Υπολογιστών Δημοτικού
-          Unplug1: Στάδιο 1
-          Maze: Στάδιο 2
-          Unplug2: Στάδιο 3
-          Unplug3: Στάδιο 4
-          Artist: Στάδιο 5
-          Unplug4: Στάδιο 6
-          Artist2: Στάδιο 7
-          Unplug5: Στάδιο 8
-          Farmer: Στάδιο 9
-          Unplug6: Στάδιο 10
-          Artist3: Στάδιο 11
-          Unplug7: Στάδιο 12
-          Farmer2: Στάδιο 13
-          Unplug8: Στάδιο 14
-          Artist4: Στάδιο 15
-          Unplug9: Στάδιο 16
-          Farmer3: Στάδιο 17
-          Unplug10: Στάδιο 18
-          Artist5: Στάδιο 19
-          Unplug11: Στάδιο 20
-        Hour of Code:
-          desc: Η Ώρα του Κώδικα
-          Maze: Στάδιο 1
-        Edit Code:
-          desc: Επεξεργασία κώδικα (beta)
-          MazeEC: Στάδιο 1
-        2014 Levels:
-          desc: Αναπήδηση (beta)
-          Bounce: Στάδιο 1
-        Builder Levels:
-          desc: Παζλ από Χρήστες (beta)
-          Custom: Στάδιο 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Στάδιο 1
-        Jigsaw Levels:
-          desc: 'Παζλ  (beta)'
-          Jigsaw: Στάδιο 1
-        Step Levels:
-          desc: Λαβύρινθος (beta)
-          MazeStep: Βήμα Σταδίου
-        edit-code:
-          desc: Επεξεργασία κώδικα (beta)
-          MazeEC: Στάδιο 1
-          Applab: Στάδιο 2
-          ArtistEC: Στάδιο 3
-          StudioEC: Στάδιο 4
-        events:
-          desc: Αναπήδηση (beta)
-          Bounce: Στάδιο 1
-          Studio: Στάδιο 2
-        builder:
-          desc: Παζλ από Χρήστες (beta)
-          Custom: Στάδιο 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Στάδιο 1
-        jigsaw:
-          desc: 'Παζλ  (beta)'
-          Jigsaw: Στάδιο 1
-        step:
-          desc: Λαβύρινθος (beta)
-          MazeStep: Βήμα Σταδίου
-        wordsearch:
-          desc: Η μέλισσα του συλλαβισμού (beta)
-          WordSearch: Στάδιο 1
     game:
       name:
         Unplug1: Εισαγωγή στην Επιστήμη των Υπολογιστών
@@ -486,6 +416,7 @@ el:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

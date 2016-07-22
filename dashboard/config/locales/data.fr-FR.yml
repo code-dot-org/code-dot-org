@@ -1,75 +1,5 @@
 "fr":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introduction au cours d'informatique CM2
-          Unplug1: Processus 1
-          Maze: Processus 2
-          Unplug2: Processus 3
-          Unplug3: Processus 4
-          Artist: Processus 5
-          Unplug4: Processus 6
-          Artist2: "Étape 7"
-          Unplug5: Processus 8
-          Farmer: "Étape 9"
-          Unplug6: "Étape 10"
-          Artist3: "Étape 11 "
-          Unplug7: "Étape 12 "
-          Farmer2: "Étape 13 "
-          Unplug8: "Étape 14"
-          Artist4: "Étape 15 "
-          Unplug9: "Étape 16 "
-          Farmer3: "Étape 17"
-          Unplug10: "Étape 18 "
-          Artist5: "Étape 19 "
-          Unplug11: "Étape 20 "
-        Hour of Code:
-          desc: Heure de Code
-          Maze: Processus 1
-        Edit Code:
-          desc: Modifier le Code (bêta)
-          MazeEC: Processus 1
-        2014 Levels:
-          desc: Casse-briques à rebond (bêta)
-          Bounce: Processus 1
-        Builder Levels:
-          desc: "Énigmes créées par l'utilisateur (bêta)"
-          Custom: Processus 1
-        Flappy Levels:
-          desc: Flappy l’oiseau
-          Flappy: Processus 1
-        Jigsaw Levels:
-          desc: Pièces de puzzle (bêta)
-          Jigsaw: Processus 1
-        Step Levels:
-          desc: Labyrinthe (bêta)
-          MazeStep: Palier de l'étape
-        edit-code:
-          desc: Modifier le Code (bêta)
-          MazeEC: Processus 1
-          Applab: Processus 2
-          ArtistEC: Processus 3
-          StudioEC: Processus 4
-        events:
-          desc: Rebond (bêta)
-          Bounce: Processus 1
-          Studio: Processus 2
-        builder:
-          desc: "Énigmes créées par l'utilisateur (bêta)"
-          Custom: Processus 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Processus 1
-        jigsaw:
-          desc: Pièces de puzzle (bêta)
-          Jigsaw: Processus 1
-        step:
-          desc: Labyrinthe (bêta)
-          MazeStep: Palier de l'étape
-        wordsearch:
-          desc: Concours d'orthographe (bêta)
-          WordSearch: Processus 1
     game:
       name:
         Unplug1: Introduction à l'Informatique
@@ -824,6 +754,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

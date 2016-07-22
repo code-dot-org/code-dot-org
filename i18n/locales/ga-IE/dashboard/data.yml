@@ -1,75 +1,5 @@
 ga:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna
-          Unplug1: Céim 1
-          Maze: Céim 2
-          Unplug2: Céim 3
-          Unplug3: Céim 4
-          Artist: Céim 5
-          Unplug4: Céim 6
-          Artist2: Céim 7
-          Unplug5: Céim 8
-          Farmer: Céim 9
-          Unplug6: Céim 10
-          Artist3: Céim 11
-          Unplug7: Céim 12
-          Farmer2: Céim 13
-          Unplug8: Céim 14
-          Artist4: Céim 15
-          Unplug9: Céim 16
-          Farmer3: Céim 17
-          Unplug10: Céim 18
-          Artist5: Céim 19
-          Unplug11: Céim 20
-        Hour of Code:
-          desc: An Uair Chódála
-          Maze: Céim 1
-        Edit Code:
-          desc: Cuir Cód in Eagar (béite)
-          MazeEC: Céim 1
-        2014 Levels:
-          desc: Preabadh (béite)
-          Bounce: Céim 1
-        Builder Levels:
-          desc: Dúshláin déanta ag úsáideoirí (béite)
-          Custom: Céim 1
-        Flappy Levels:
-          desc: Éan Flapach
-          Flappy: Céim 1
-        Jigsaw Levels:
-          desc: Míreanna Mearaí (béite)
-          Jigsaw: Céim 1
-        Step Levels:
-          desc: Cathair ghríobháin (béite)
-          MazeStep: Céim
-        edit-code:
-          desc: Cuir Cód in Eagar (béite)
-          MazeEC: Céim 1
-          Applab: Céim 2
-          ArtistEC: Céim 3
-          StudioEC: Céim 4
-        events:
-          desc: Preabadh (béite)
-          Bounce: Céim 1
-          Studio: Céim 2
-        builder:
-          desc: Dúshláin déanta ag úsáideoirí (béite)
-          Custom: Céim 1
-        flappy:
-          desc: Éan Flapach
-          Flappy: Céim 1
-        jigsaw:
-          desc: Míreanna Mearaí (béite)
-          Jigsaw: Céim 1
-        step:
-          desc: Cathair ghríobháin (béite)
-          MazeStep: Céim
-        wordsearch:
-          desc: Comórtas Litrithe (béite)
-          WordSearch: Céim 1
     game:
       name:
         Unplug1: Buntús na Ríomheolaíochta
@@ -244,7 +174,7 @@ ga:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Ceangail blocanna le gach bloc "nuair...". Preab an liathróid go dtí go sroichfidh sí an sprioc.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: 'Cruthaigh do chluiche liathróide féin. Is féidir leat an leagan amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde an cluiche a imirt ar a nguthán.'
         Custom_builder: 'Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre chun leibhéal nua a chruthú. Cliceáil "Rith" nuair a bheidh tú réidh.'
@@ -498,6 +428,7 @@ ga:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

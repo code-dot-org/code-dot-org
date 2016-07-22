@@ -45,7 +45,7 @@ hu-HU:
   csedweek_map_legend_cs_tech_jam: Informatikai stúdió
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
-  twentyhours_trynow: Próbálja ki most
+  try_now: Próbálja ki most
   california_heading: Kérd a sulidban, hogy tanítsanak számítstechnikát
   california_text: "Bármelyik tanár oktathatja az általunk kínált <a href='http://studio.code.org/'>ingyenes anyagokat</a>.  Bármelyik általános iskola <a href='http://code.org/educate/k5'>taníthat számítástechnikát</a>. Kérj meg középiskolákat, hogy <a href='http://code.org/educate/districts'>csatlakozzanak hozzánk."
   california_button: Tudj meg többet
@@ -378,14 +378,9 @@ hu-HU:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Használd a mozgatható blokkokat és JavaScriptet.
   starwars_javascript_specs: Csak angol nyelvű | Modern böngészők | 11 éves kortól
-  starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
   starwars_blocks_specs: Több nyelven | Modern böngészők, okostelefonok, táblagépek | 6-tól 106 éves korig
-  starwars_blocks_start_button: Próbálja ki most
-  starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
-  starwars_speak_languages: Beszél egy másik nyelven is?
-  starwars_help_translate: Segítsen a fordításban
   starwars_platform_text: Modern böngészők, okostelefonok, tabletek
   mc_name: Minecraft Kódolás Órája
   mc_longdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
@@ -394,6 +389,11 @@ hu-HU:
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
   mc_specs: Több nyelven | Modern böngészők, táblagépek | 6-tól 106 éves korig
   minecraft_subtitle: Minecraft Kódolás Órája
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Ösztönözz tanulókat és önkénteseket a Kódolás Órájára.
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} tanárnak van szüksége számítástechnikai oktatással lelkesedő önkéntesekre, akik segítenének nekik idén decemberben a Kódolás Órája lebonyolításában.<br>%{num_volunteers} önkéntes már csatlakozott. Csatlakozz hozzájuk.'
@@ -523,6 +523,8 @@ hu-HU:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -537,6 +539,7 @@ hu-HU:
   dashboard_navigation_view_progress: Előmenetel
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: Óravázlatok és erőforrások
@@ -686,7 +689,9 @@ hu-HU:
   dashboard_announcements: Közlemények
   dashboard_announce_view_all: Összes megtekintése
   dashboard_announce_message: 'Segíts egy új funkció tesztelésében. Fontosnak tartjuk, hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket a "fel nem használt blokk" funkcióról annak bevezetése előtt.'
-  dashboard_announce_button_text: Teszteld a funkciót
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Tudj meg többet
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add meg a nevedet
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
@@ -1219,9 +1224,8 @@ hu-HU:
   processing_beyond_longdescription: 'A Processing egy programozási nyelv, fejlesztési környezet és online közösség. 2001 óta a Processing a szoftveres ismereteket promótálja a vizuális művészetek terén és a vizuális művészeteket a technológia szintjén.  Eredetileg egy szoftveres jegyzettömbnek szánták, illetve hogy programozás alapokat tanítsanak egy vizuális környezetben, de a Processing profik fejlesztői eszközévé fejlődött. Napjainkban diákok, művészek, tervezők, kutatók és hobbisták tízezrei használják a Processinget tanulásra, prototípusok készítésére és gyártásra.'
   alice_beyond_longdescription: 'Az Alice projekt megfelelő eszközöket és anyagot biztosít - egy innovatív programozási környezet használatával támogatva a 3D-s animációk létrehozását - a számítástechnikai gondolkodás tanításához és elsajátításához, a probléma megoldáshoz, és a számítógép programozáshoz, széles korcsoport és tudásszint tartományban.'
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai és tudományos képzettségük fejlesztése közben.
-  compatibility_https_header: Kérjük engedélyezd a HTTPS protokollt a Code.org-nak.
-  compatibility_https_message: "A biztonság növelése érdekében %{https_date} után áttérünk a HTTPS használatára. Ezután már nem leszel képes elérni a Code.org-ot enélkül. a HTTPS engedélyezésének lépseinek megismeréséhez <a href='%{it_requirements_url}'>kattints ide</a>."
-  compatibility_https_hide_this_warning: Figyelmen kívül hagyom
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

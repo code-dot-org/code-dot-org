@@ -1,75 +1,5 @@
 "km":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: "ដំណាក់កាល 1"
-          Maze: "ដំណាក់កាល 2"
-          Unplug2: "ដំណាក់កាល 3"
-          Unplug3: "ដំណាក់កាល 4"
-          Artist: "ដំណាក់កាល 5"
-          Unplug4: "ដំណាក់កាល 6"
-          Artist2: "ដំណាក់កាល 7"
-          Unplug5: "ដំណាក់កាល 8"
-          Farmer: "ដំណាក់កាល 9"
-          Unplug6: "ដំណាក់កាល 10"
-          Artist3: "ដំណាក់កាល 11"
-          Unplug7: "ដំណាក់កាល 12"
-          Farmer2: "ដំណាក់កាល 13"
-          Unplug8: "ដំណាក់កាល 14"
-          Artist4: "ដំណាក់កាល 15"
-          Unplug9: "ដំណាក់កាល 16"
-          Farmer3: "ដំណាក់កាល 17"
-          Unplug10: "ដំណាក់កាល 18"
-          Artist5: "ដំណាក់កាល 19"
-          Unplug11: "ដំណាក់កាល 20"
-        Hour of Code:
-          desc: "ពេលវេលា​នៃ​កូដ"
-          Maze: "ដំណាក់កាល 1"
-        Edit Code:
-          desc: "កែសម្រួល​កូដ (បេតា)"
-          MazeEC: "ដំណាក់កាល 1"
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: "ដំណាក់កាល 1"
-        Builder Levels:
-          desc: "ល្បែង​ប្រាជ្ញា​ដែល​បង្កើត​ដោយ​អ្នក​ប្រើ (បេតា)"
-          Custom: "ដំណាក់កាល 1"
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: "ដំណាក់កាល 1"
-        Jigsaw Levels:
-          desc: "ផ្គុំ​រូប (បេតា)"
-          Jigsaw: "ដំណាក់កាល 1"
-        Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        edit-code:
-          desc: "កែសម្រួល​កូដ (បេតា)"
-          MazeEC: "ដំណាក់កាល 1"
-          Applab: "ដំណាក់កាល 2"
-          ArtistEC: "ដំណាក់កាល 3"
-          StudioEC: "ដំណាក់កាល 4"
-        events:
-          desc: Bounce (beta)
-          Bounce: "ដំណាក់កាល 1"
-          Studio: "ដំណាក់កាល 2"
-        builder:
-          desc: "ល្បែង​ប្រាជ្ញា​ដែល​បង្កើត​ដោយ​អ្នក​ប្រើ (បេតា)"
-          Custom: "ដំណាក់កាល 1"
-        flappy:
-          desc: Flappy Bird
-          Flappy: "ដំណាក់កាល 1"
-        jigsaw:
-          desc: "ផ្គុំ​រូប (បេតា)"
-          Jigsaw: "ដំណាក់កាល 1"
-        step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: "ដំណាក់កាល 1"
     game:
       name:
         Unplug1: "សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
@@ -747,6 +677,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

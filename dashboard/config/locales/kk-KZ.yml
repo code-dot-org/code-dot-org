@@ -138,6 +138,8 @@
     picture: "Құпия суретіңізді іздеңіз"
     words: "Құпия сөзіңізді еңгізіңіз"
     login: "Кіру"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "Құпия сөзіңізді ұмыттыңыз ба?"
@@ -283,6 +285,10 @@
       signin: "Кіру"
       signup: "Тіркелу"
       already_registered: "Тіркелгенсіз бе?"
+      pair_programming: "Жұптасып Бағдарламалау"
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: "Сіздің сабақ оқу барысыңыз"
@@ -317,6 +323,7 @@
       example_with_number: "Шешім Мысалы %{solution_number}"
       submitted_on: "%{date} күні жіберілді"
       unsubmit: "Жібермеу"
+      worked_with: Worked With
   user:
     email_confirm_needed: "Электрондық пошта расталмады:"
     email_confirm_needed_required: "Сіздің %{email} электрондық поштаңыз расталмады:"
@@ -396,7 +403,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "толығырақ білу"
+    announcement_learn_more_button: "толығырақ білу"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -499,10 +506,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: "толығырақ білу"
   slow_loading: "Бұл әдеттегіден ұзақ уақыт алады..."
   try_reloading: "Бетті қайта жүктеп көріңіз"
@@ -681,40 +684,6 @@
     hour: 1 сағат
     day: "күн"
     week: "апта"
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Информатика пәніне кіріспе (15-25 сағат)
-          description: "Бұл 20-сағаттық курстың 2-4 сабағы информатика пәні негіздері
-            мен бағдарламау қағидаларын қамтиды. Бұл курс K-8 сыныбында оқитын оқушыларға
-            мектепте қолданулары үшін жасалған, бірақ барлық жастағылар үшін де қызық
-            болады."
-        Hour of Code:
-          title: "Код Жазу Сағаты 2013"
-          description: ''
-        edit-code:
-          title: "Кодты өзгерту"
-          description: ''
-        events:
-          title: "Шаралар"
-          description: ''
-        builder:
-          title: "Құрылысшы"
-          description: ''
-        flappy:
-          title: "Қанат Қағу Коды"
-          description: "Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
-            Қанат Қағу Коды сабағын байқап көріңіз!"
-        jigsaw:
-          title: "Бас қатырғыш"
-          description: ''
-        step:
-          title: "Қадам"
-          description: ''
-        sample_level_builder:
-          title: "Деңгей Жасау Үлгісі"
-          description: ''
   age_interstitial:
     age: "Сіздің жасыңыз"
     header: "Жеке парақша Ақпаратын жаңарту"
@@ -754,6 +723,8 @@
     share_copy_link: "Сілтемені көшіру:"
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: "Жабу"
@@ -781,6 +752,8 @@
     abuse:
       tos: "Бұл жоба Code.org-тың <a href='http://code.org/tos'>Қызмет көрсету шарттарын</a>
         бұзғандығы жайында хабарлануына байланысты, басқалармен бөлісе алмайсыз."
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: "Егер қате бар екеніне сенімді болсаңыз, өтінеміз <a href='https://code.org/contact'>бізбен
         хабарласыңыз.</a>"
       go_to_code_studio: "Код Студиясына кіру"
@@ -822,6 +795,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: "Белгі іздеу..."
@@ -841,13 +823,14 @@
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

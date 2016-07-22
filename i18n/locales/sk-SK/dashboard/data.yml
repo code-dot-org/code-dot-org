@@ -1,75 +1,5 @@
 sk:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Úvod do počítačových kurz informatiky
-          Unplug1: Úroveň 1
-          Maze: Úroveň 2
-          Unplug2: Úroveň 3
-          Unplug3: Úroveň 4
-          Artist: Úroveň 5
-          Unplug4: Úroveň 6
-          Artist2: Úroveň 7
-          Unplug5: Úroveň 8
-          Farmer: Úroveň 9
-          Unplug6: Úroveň 10
-          Artist3: Úroveň 11
-          Unplug7: Úroveň 12
-          Farmer2: Úroveň 13
-          Unplug8: Úroveň 14
-          Artist4: Úroveň 15
-          Unplug9: Úroveň 16
-          Farmer3: Úroveň 17
-          Unplug10: Úroveň 18
-          Artist5: Úroveň 19
-          Unplug11: Úroveň 20
-        Hour of Code:
-          desc: Hodina kódovania
-          Maze: Úroveň 1
-        Edit Code:
-          desc: Upraviť kód (beta)
-          MazeEC: Úroveň 1
-        2014 Levels:
-          desc: odraziť
-          Bounce: Úroveň 1
-        Builder Levels:
-          desc: Užívateľom vytvorené puzzle
-          Custom: Úroveň 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Úroveň 1
-        Jigsaw Levels:
-          desc: Skladačka
-          Jigsaw: Úroveň 1
-        Step Levels:
-          desc: Bludisko
-          MazeStep: Fáza kroku
-        edit-code:
-          desc: Upraviť kód (beta)
-          MazeEC: Úroveň 1
-          Applab: Úroveň 2
-          ArtistEC: Úroveň 3
-          StudioEC: Úroveň 4
-        events:
-          desc: odraziť
-          Bounce: Úroveň 1
-          Studio: Úroveň 2
-        builder:
-          desc: Užívateľom vytvorené puzzle
-          Custom: Úroveň 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Úroveň 1
-        jigsaw:
-          desc: Skladačka
-          Jigsaw: Úroveň 1
-        step:
-          desc: Bludisko
-          MazeStep: Fáza kroku
-        wordsearch:
-          desc: Hláskovanie
-          WordSearch: Úroveň 1
     game:
       name:
         Unplug1: Úvod do vedy o počítačoch (informatiky)
@@ -146,67 +76,56 @@ sk:
         maze_2_18: 'Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?'
         maze_2_19: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak to urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku.
         turtle_1_1: Ahoj, som umelec. Možeš napísať kód aby som nakreslil skoro čokoľvek. Použi pár blokov aby som nakreslil nad šedé čiary v obrázku.
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
+        turtle_1_2: 'Teraz nakresli štvorec. Poznámka: použi svoju obľúbenú farbu výberom z nového bloku "nastavenie farby".'
         turtle_1_3: Urobte štvorec s použitím iba 3 častí.
-        turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
-        turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
-        turtle_4_3: |-
-          Ok, here's the code you wrote to draw a single triangle. Can you add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        turtle_4_8: "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
+        turtle_1_4: 'Nakresli trojuholník, ktorého každá strana je inou farbou, použitím nastavenia "náhodná farba", ktoré vždy vyberie inú farbu. Poznámka: budeš musieť zistiť ako ďaleko otočiť kliknutím na číslo v bloku otoč.'
+        turtle_1_5: Teraz na skúšku, nakresli trojuholník a štvorec na nakreslenie obálky.
+        turtle_1_6: 'Dokážeš zistiť ako nakresliť tento trojuholník a štvorec? Poznámka: Najprv vytvor trojuholník, potom zisti o koľko ho treba otočiť než začneš kresliť štvorec.'
+        turtle_1_7: 'Okej, poďme si to trocha sťažiť - skús či dokážeš nakresliť tieto zelené okuliare. Štvorce majú 100 pixelov na každej strane a sú 50 pixelov od seba. Nezabudni kresliť na zeleno!'
+        turtle_1_8: 'Okej, skús zistiť čo sa stane ak spustíš tento kód (alebo stlač "Spustiť" aby si to skúsil). Potom to opakuj toľko krát aby si dokončil kreslenie. Farby budú vždy iné.'
+        turtle_1_9: Dokážeš zistiť aké číslo doplniť miesto otáznikov aby si nakreslil kruh?
+        turtle_1_10: 'Dokázal si to! Teraz nakresli čokoľvek chceš. Nejaké zábavné nápady: panáčik, snehová vločka alebo špirálu. Taktiež skús nový blok "nastav šírku". Zabav sa!'
+        turtle_4_1: 'Dokážeš nakresliť trojuholník (s hranami 100 pixelov) len pomocou 3 blokov? Poznámka: použi blok "opakuj".'
+        turtle_4_2: 'Pridaj blok "otoč vpravo o 90 stupňov" niekde do stredu programu ale von z pracovného prostredia aby si nakreslil tieto trojuholníky.'
+        turtle_4_3: 'Okej, to je kód, ktorý si napísal aby si nakreslil jeden trojuholník. Dokážeš pridať bloky "opakuj" a "otoč" aby si spravil peknú kvetinu?'
+        turtle_4_4: 'Tu je rovnaký kód z predchádzajúceho rébusu, ale po nakreslení trojuholníku otáča len o 36 stupňov. Koľko krát sa to potrebuje zopakovať? (Poznámka: po otočení kresby o 360 stupňov sa vytvorí kruh)'
+        turtle_4_5: 'Tu je ten istý kód z predchádzajúceho rébusu, ale opakuje otočenia 36 krát. O koľko stupňov bude jedno otočenie? (Poznámka: po otočení kresby o 360 stupňov sa vytvorí kruh)'
+        turtle_4_6: Dokážeš nakresliť štvorec s hranami 20 pixelov s použitím len 3 blokov?
+        turtle_4_7: 'Toto je kód na nakreslenie štvorca z posledného rébusu. Dokážeš to opakovať aby si nakreslil 10 priľahlých štvorcov na vytvorenie rebríka? Poznámka: potrebuješ navyše len 2 bloky.'
+        turtle_4_8: Tu je riešenie predchádzajúceho rébusu. Dokážeš pridať len 2 bloky naviac aby si dokončil kresbu?
         turtle_4_9: Tu je riešenie na predchádzajúce puzzle. O koľko stupňov sa musíte obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
-        turtle_4_10: "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
+        turtle_4_10: Tu je riešenie predchádzajúceho rébusu. Koľko krát by si to mal opakovať aby si dokončil kresbu?
         turtle_4_11: 'Skús zmeniť čísla v "otoč" a "zopakuj" blokoch aby si spravil iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.'
         maze_karel_1_1: 'Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu hliny a použite blok "odstrániť" na jeho odstránenie.'
-        maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: |-
-          Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the "while" block tell me if I'm standing on a pile or a hole.
-        maze_karel_1_7: "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
-        maze_karel_1_11: |-
-          It's still dark outside. Move me along the field. If there is a pile, remove it, and if there is a hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
-        turtle_2_1: "Hello. Me zombie artist. Me love drawing! Help me draw a square in a special color. Important note: you have all the same blocks but they've now been arranged in categories."
-        turtle_2_2: 'Welcome to using functions, which let you define new blocks! Try the new "draw a square" block, found in the "Functions" category, to draw a small 50x50 green square.'
-        turtle_2_3: 'Use the "repeat" block (in the "Loops" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors.'
-        turtle_2_4: "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        turtle_2_5: |-
-          Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the "draw a square" function five times.
-        turtle_2_6: |-
-          Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the "counter" block. Hint: It's in the Variables category.
-        turtle_2_7: |-
-          Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a "count with" block (in the Loops category) and "counter" block (in the Variables category) to draw the same spiral.
-        turtle_2_7_5: |-
-          There's a new "draw a snowman" function (in the Functions category). Draw two snowmen, of height 250 and 100.
-        turtle_2_8: |-
-          This one's a bit tricky. Use the "draw a snowman" function and the new "jump forward" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart.
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: |-
-          We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles.
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
+        maze_karel_1_2: 'Ďalej ma posuň do diery a vyplň ju dvoma plnými lopatami hliny, použitím bloku "vyplň".'
+        maze_karel_1_3: Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba odstrániť s použitím tak málo blokov ako sa len dá.
+        maze_karel_1_4: 'Dokázal by si mi pomôcť odstrániť všetky štyri hromady hliny? Poznámka: použi blok opakuj ak môžeš.'
+        maze_karel_1_5: 'Pomôž mi vyplniť všetky tieto diery 5 plnými lopatami hliny. Poznámka: môžeš vložiť blok "opakuj" do bloku "pokiaľ".'
+        maze_karel_1_6: 'Odstráň všetky hromady hliny pomocou tak málo blokov ako sa len dá. Nové možnosti v rozbaľovacej ponuke v bloku "pokiaľ" mi hovoria či stojím na hromade alebo diere.'
+        maze_karel_1_7: Wow, našiel som vážne hlbokú dieru! Neviem koľko plných lopát hliny je treba. Dokážeš napísať program, ktorý ju vypĺňa dokiaľ je pod zemou?
+        maze_karel_1_8: Pomôž mi vyplniť dieru na konci poľa použitím toľko blokov ako je len možné.
+        maze_karel_1_9: 'Nechaj ma odstrániť všetky hromady hliny. Skús použiť tak málo blokov ako je len možné. Poznámka: skús použiť blok "pokiaľ".'
+        maze_karel_1_10: Keďže už pracujem neskoro, je tma a nedokážem povedať aké sú veľké hromady. Teraz nemám všetky možnosti, ktoré som mával v bloku pokiaľ. Posúvaj ma po poli a ak sú tam hromady, tak ich odstráň.
+        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tu je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "if".'
+        turtle_2_1: 'Ahoj. Ja som zombie, ktorý je zároveň aj umelec. Milujem kreslenie! Pomôž mi nakresliť štvorec v špeciálnej farbe. Dôležitá poznámka: máš všetky rovnaké bloky, ale teraz boli usporiadané do kategórií.'
+        turtle_2_2: 'Vitaj v používaní funkcií, ktoré ti dovolia definovať nové bloky! Vyskúšaj nový blok "kresli štvorec", nájdeš ho v kategórii "Funkcie" a nakresli malý zelený štvorec 50x50.'
+        turtle_2_3: 'Použi blok "opakuj" (je v kategórii "Slučky") aby si nakreslil 3 štvorce o veľkosti 100, každý je 120 stupňov od seba. A sprav to v 3 rôznych, náhodných farbách.'
+        turtle_2_4: 'Teraz sa ideme zabaviť. Zmeň kód tak, aby si nakreslil 36 štvorcov, ktoré sú 100 pixelov široké a sú od seba 10 stupňov. Poznámka: možno budeš chcieť použiť posuvník, aby si šiel rýchlejšie.'
+        turtle_2_5: 'Nakresli štvorce so stranami 50, 60, 70, 80 a 90 pixelov. Budeš potrebovať päť krát funkciu "kresli štvorec".'
+        turtle_2_6: 'Okej, tento program bude používať počítadlo na nakreslenie rovnakých štvorcov ako naposledy. Chceš, aby štvorec bol rovnakej veľkosti ako počítadlo, tak použi blok "počítadlo". Poznámka: je to v kategórii Premenné.'
+        turtle_2_7: 'Toto je program na kreslenie špirály, ale keď bloky sú schované, tak nebudú fungovať. Vytvor nový program pomocou bloku "počítaj s" (v kategórii slučky) a blok "počítadlo" (v kategórii Premenné), aby si nakreslil rovnakú špirálu.'
+        turtle_2_7_5: 'Je tu nová funkcia "nakresli snehuliaka" (v kategórii Funkcie). Nakresli dvoch snehuliakov s výškou 250 a 100.'
+        turtle_2_8: 'Tu je to trocha zložitejšie. Použi funkciu "nakresli snehuliaka" a nový blok "skoč vpred" (v kategórii Akcie). Nakresli 3 snehuliakov rôznych farbách a 100 pixelov od seba.'
+        turtle_2_9: 'Použi slučku "počítaj s" pre nakreslenie celej rodiny snehuliakov s výškami 110, 100, 90, 80 a 70. Snehuliaci by mali byť 60 pixelov od seba.'
+        turtle_2_10: Tu je kód na experimentovanie s rôznymi špirálami. Čo sa stane ak zmeníš hodnotu otoč? Alebo ak nastavíš náhodnú farbu v slučke? Nakresli čokoľvek chceš.
+        maze_karel_2_1: 'Skús použiť bloky na odstránenie hromád a vyplň všetky diery v zemi. Skús použiť slučky miesto použitia množstva blokov. Poznámka: môžeš použiť slučku vo vnútri inej slučky.'
+        maze_karel_2_2: 'Definovali sme si náš vlastný blok nazvaný "vyplň 5", ktorý teraz je v kategórii Funkcie. Použi to, aby si mi pomohol vyplniť tieto diery.'
+        maze_karel_2_3: 'Použi nový blok funkcie "vyplň 5", aby si mi pomohol vyplniť všetky diery. Budeš musieť potiahnuť blok "vyplň 5" z kategórie Funkcie.'
+        maze_karel_2_4: Definuj novú funkciu, ktorá odstraňuje 7 plných lopát. Potom to použi na napísanie programu, ktorý mi pomôže odstrániť všetky hromady.
+        maze_karel_2_5: Vytvor novú funkciu, ktorá odstraňuje 6 plných lopát z hromady a použi ju, aby si mi pomohol zarovnať všetky hromady.
+        maze_karel_2_6: 'Použi 2 nové funkcie "vyplň 8" a "odstráň 8", aby si mi pomohol zarovnať hromadu a vyplniť dieru.'
+        maze_karel_2_7: Je tu krava na mojom poli! Napíš novú funkciu, ktorá mi pomôže sa vyhnúť krave a odstrániť hromadu. Vlož všetky svoje bloky do novej funkcie.
+        maze_karel_2_8: 'Použi túto novú funkciu "vyhni sa krave a odstráň 1", aby si mi pomohol odstrániť všetky hromady.'
         maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
         maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
         turtle_3_1: |-
@@ -247,7 +166,7 @@ sk:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
@@ -501,6 +420,7 @@ sk:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
@@ -626,10 +546,10 @@ sk:
         Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Play a sound when this event occurs.
         Infinity_repeat_callout: Place Move blocks inside here
-        craft_run_button_callout: 'Hit "Run" to try your program'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Stlačte "Spustiť" pre vyskúšanie programu'
+        craft_drag_block_callout: 'Potiahni "Posunúť vpred()" blok a zasuň ho pod iný blok'
+        craft_callout_preplaced: Umiestnili sem nejaké bloky aby si mohol začať
+        craft_inside_repeat: Opakuj akcie umiestnením blokov tu
+        craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?
+        craft_what_is_iron: Vyťaž toto železo!
+        craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?

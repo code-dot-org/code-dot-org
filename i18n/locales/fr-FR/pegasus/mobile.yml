@@ -46,7 +46,7 @@ fr-FR:
   csedweek_map_legend_cs_tech_jam: Événement spécial
   cded_sign_up: Inscription
   cded_try_it: Participez
-  twentyhours_trynow: Essaie dès maintenant
+  try_now: Essaie maintenant
   california_heading: "Demandez à votre école d'enseigner l'Informatique"
   california_text: "Tout enseignant peut offrir nos <a href='http://studio.code.org/'>cours gratuits</a>. Toute école élémentaire peut <a href='http://code.org/educate/k5'>enseigner l'informatique</a>. Demandez aux lycées <a href='http://code.org/educate/districts'>de faire un partenariat avec nous."
   california_button: En savoir plus
@@ -349,14 +349,9 @@ fr-FR:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: 'Utiliser les blocs «&#160;Glisser-Déposer&#160;» et JavaScript.'
   starwars_javascript_specs: En anglais seulement | Navigateurs modernes | 11 ans et +
-  starwars_javascript_start_button: Essaie dès maintenant
   starwars_blocks_title: Blocs
   starwars_blocks_description: Utilise les blocs « Glisser-Déposer ».
   starwars_blocks_specs: Multi-langues | Navigateurs modernes, smartphones, tablettes | de 6 à 106 ans
-  starwars_blocks_start_button: En savoir plus
-  starwars_watch_videos: "Avant de commencer, regarde une de ces vidéos pour t'inspirer."
-  starwars_speak_languages: Vous parlez une autre langue ?
-  starwars_help_translate: Aidez-nous à traduire
   starwars_platform_text: Navigateurs récents, smartphones, tablettes
   mc_name: Heure de Code Minecraft
   mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
@@ -365,6 +360,11 @@ fr-FR:
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
   minecraft_subtitle: Une Heure de Code Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspirer les élèves et les bénévoles
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils ont besoin de votre aide ! '
   volunteer_engineer_submission_subtitle_specific: '% {num_teachers} enseignants ont besoin de bénévoles.<br>% {num_volunteers} bénévoles se sont inscrits. Rejoignez-les.'
@@ -498,6 +498,8 @@ fr-FR:
   dashboard_assessments_none_part2: "Si vous enseignez au collège ou au lycée, nous avons des questions d'évaluation disponibles dans le cadre du Code Studio pour aider vos élèves à se préparer pour le test d'AP. Pour utiliser ces évaluations, assignez d'abord le cours à la classe puis sélectionnez le cours depuis menu déroulant au dessus et vous y verrez les réponses de vos élèves."
   dashboard_assessments_summaries: Résumés
   dashboard_assessments_answers: Toutes les réponses
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtrer par étape :'
   dashboard_filter_all: Tout
   dashboard_download_csv: Télécharger en CSV
@@ -512,6 +514,7 @@ fr-FR:
   dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: 'Root->dashboard_navigation_voir_text_réponses'
   dashboard_navigation_view_assessments: Évaluations
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -664,7 +667,9 @@ fr-FR:
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Tout voir
   dashboard_announce_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Pour en savoir plus
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
   dashboard_announce_petition_button: Ajoutez votre nom
   code_hoc_coming: "L'Heure de Code est là — du 8 au 14 décembre&#160;!"
@@ -1199,9 +1204,8 @@ fr-FR:
   processing_beyond_longdescription: "Processing est un langage de programmation, un environnement de développement et une communauté en ligne. Depuis 2001, Processing a encouragé la maîtrise des logiciels des arts visuels et de la culture visuelle au sein de la technologie. Initialement créé pour servir de carnet de croquis de logiciel et enseigner les fondamentaux de la programmation informatique dans un contexte visuel, Processing s’est transformé en un outil de développement pour les professionnels. Aujourd'hui, il y a des dizaines de milliers d'élèves, d’artistes, de créateurs, de chercheurs et d’amateurs qui utilisent Processing pour l'apprentissage, le prototypage et la production."
   alice_beyond_longdescription: "En utilisant un environnement de programmation innovant pour soutenir la création d'animations 3D, le projet Alice fournit des outils et du matériel pour enseigner et apprendre la pensée computationnelle, la résolution de problèmes et la programmation informatique destinés à un éventail d'âges et de niveaux scolaires."
   sphero_beyond_longdescription: Que vous soyez un éducateur ou un parent, les leçons SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots, tout en affûtant leurs compétences en mathématiques et en sciences.
-  compatibility_https_header: Veuillez activer HTTPS pour Code.org.
-  compatibility_https_message: "Pour augmenter la sécurité, nous passons en HTTPS le % {https_date}. Vous ne serez pas en mesure d'accéder à Code.org après cette date. <a href='%{it_requirements_url}'>Cliquez ici</a> pour savoir comment activer HTTPS pour Code.org."
-  compatibility_https_hide_this_warning: Masquer cet avertissement
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

@@ -56,7 +56,7 @@
   csedweek_map_legend_cs_tech_jam: "Посебан догађај"
   cded_sign_up: "Региструј се"
   cded_try_it: "Пробајте"
-  twentyhours_trynow: "Испробај сада"
+  try_now: "Испробај сада"
   california_heading: "Замолите Вашу школу да се у њој учи информатика"
   california_text: "Било који наставник може да понуди наше <a href='http://studio.code.org/'>бесплатне
     курсеве</a>. Било која основна школа може да<a href='http://code.org/educate/k5'>учи
@@ -463,16 +463,10 @@
   starwars_javascript_description: "Користи повуци-испусти блокове и JavaScript."
   starwars_javascript_specs: Samo na engleskom | Moderni pretraživači | Uzrasta 11
     +
-  starwars_javascript_start_button: "Испробај сада"
   starwars_blocks_title: "блокови"
   starwars_blocks_description: "Искористи повуци-спусти блокове."
   starwars_blocks_specs: "Више језика | Савремени прегледачи, паметни телефони, таблети
     | Узраст 6-10"
-  starwars_blocks_start_button: "Испробај сада"
-  starwars_watch_videos: "Пре него што почнеш, погледај један од ових инспиративних
-    видео снимака"
-  starwars_speak_languages: Govoriš li neki drugi jezik?
-  starwars_help_translate: Pomozi nam da prevedemo
   starwars_platform_text: "Модерни претраживачи, паметни телефони, таблети"
   mc_name: "Мајнкрафт час програмирања"
   mc_longdescription: "Користите блокове кода да поведете Стива или Алекс у авантуру
@@ -483,6 +477,12 @@
   mc_platformtext: "Модерни претраживачи, паметни телефони, таблети"
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: "Мајнкрафт час програмирања"
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -680,6 +680,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -694,6 +696,7 @@
   dashboard_navigation_view_progress: "Напредак"
   dashboard_navigation_view_text_responses: "Види текстуалне одговоре"
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "Додајте ученике"
   dashboard_navigation_manage_students: "Управљање ученицима"
   dashboard_navigation_lesson_plans_resources: "План лекција и ресурса"
@@ -877,7 +880,12 @@
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
     blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "Сазнајте више"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1712,11 +1720,11 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: "Сакриј ова обавештења"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1725,22 +1733,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играј"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

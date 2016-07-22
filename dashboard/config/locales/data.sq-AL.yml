@@ -1,75 +1,5 @@
 "sq":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Ηyrje në Kursin e Informatikës
-          Unplug1: Faza 1
-          Maze: Faza 2
-          Unplug2: Faza 3
-          Unplug3: Faza 4
-          Artist: Faza 5
-          Unplug4: Faza 6
-          Artist2: Faza 7
-          Unplug5: Faza 8
-          Farmer: Faza 9
-          Unplug6: Faza 10
-          Artist3: Faza 11
-          Unplug7: Faza 12
-          Farmer2: Faza 13
-          Unplug8: Faza 14
-          Artist4: Faza 15
-          Unplug9: Faza 16
-          Farmer3: Faza 17
-          Unplug10: Faza 18
-          Artist5: Faza 19
-          Unplug11: Faza 20
-        Hour of Code:
-          desc: Ora e Kodit
-          Maze: Faza 1
-        Edit Code:
-          desc: Redakto Kodin (beta)
-          MazeEC: Faza 1
-        2014 Levels:
-          desc: Hidhu (beta)
-          Bounce: Faza 1
-        Builder Levels:
-          desc: Lojrat formuese të krijuar nga vetë përdoruesi (beta)
-          Custom: Faza 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Faza 1
-        Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Faza 1
-        Step Levels:
-          desc: Maze (beta)
-          MazeStep: Niveli i Fazës
-        edit-code:
-          desc: Redakto Kodin (beta)
-          MazeEC: Faza 1
-          Applab: Faza 2
-          ArtistEC: Faza 3
-          StudioEC: Faza 4
-        events:
-          desc: Hidhu (beta)
-          Bounce: Faza 1
-          Studio: Faza 2
-        builder:
-          desc: Puzzle-at e krijuar nga Vetë-Përdoruesit (beta)
-          Custom: Faza 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Faza 1
-        jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Faza 1
-        step:
-          desc: Maze (beta)
-          MazeStep: Hapi i Fazës
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Faza 1
     game:
       name:
         Unplug1: Hyrje në Informatikë
@@ -794,6 +724,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

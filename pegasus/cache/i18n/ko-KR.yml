@@ -53,7 +53,7 @@
   csedweek_map_legend_cs_tech_jam: "스페셜 이벤트"
   cded_sign_up: "가입 신청"
   cded_try_it: "해보기"
-  twentyhours_trynow: "해보기"
+  try_now: "지금 해보기"
   california_heading: "학교에 컴퓨터과학(정보과학) 수업을 요청하세요."
   california_text: "어떤 선생님이건 우리의 <a href='http://studio.code.org/'>무료 강좌</a>를 사용할
     수 있습니다.  어떤 초등학교라도 <a href='http://code.org/educate/k5'>컴퓨터 과학</a>을 가르칠 수 있습니다.
@@ -403,14 +403,9 @@
   starwars_javascript_title: "자바스크립트"
   starwars_javascript_description: "끌어서 놓기 블록들과 자바스크립트를 사용하세요."
   starwars_javascript_specs: "영어만 가능 | 최신 브라우저 | 11살 이상"
-  starwars_javascript_start_button: "해보기"
   starwars_blocks_title: "블럭"
   starwars_blocks_description: "끌어서 놓기 블록들을 이용하세요."
   starwars_blocks_specs: "여러 언어 | 최신 웹브라우저, 스마트폰, 태블릿 | 6-106 세"
-  starwars_blocks_start_button: "지금 해보기"
-  starwars_watch_videos: "시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요."
-  starwars_speak_languages: "다른 언어를 할 줄 아나요?"
-  starwars_help_translate: "번역하는 것을 도와주세요."
   starwars_platform_text: "최신 웹브라우저, 스마트폰, 태블릿"
   mc_name: "마인크래프트 Hour of Code"
   mc_longdescription: "이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요."
@@ -419,6 +414,12 @@
   mc_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   mc_specs: "여러 언어 | 최신 웹브라우저, 태블릿 | 6-106 세"
   minecraft_subtitle: "마인크래프트 Hour of Code"
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "학생들과 자원봉사자들에게 꿈과 희망을 불어넣어 주세요."
   volunteer_engineer_submission_subtitle_generic: "올 해 12월7일-13일까지 100,000 명의 선생님들이
     수업 중에 Hour of Code 행사를 운영할 예정입니다. 선생님들은 여러분들의 도움이 필요합니다! "
@@ -588,6 +589,8 @@
     드롭다운 메뉴에서 과정을 고르면 됩니다. 그러면 여러분 학생들의 답변을 여기서 볼 수 있습니다."
   dashboard_assessments_summaries: "요약"
   dashboard_assessments_answers: "모든 답변"
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: "단계에 따라 필터링하기:"
   dashboard_filter_all: "모두"
   dashboard_download_csv: CSV 다운로드
@@ -600,12 +603,13 @@
   dashboard_navigation_section_speakers: "컴퓨터과학(정보과학) <br/> 특별 초청 연사들"
   dashboard_navigation_all_sections: "학생 계정 및 진도"
   dashboard_navigation_view_progress: "진행도"
-  dashboard_navigation_view_text_responses: "텍스트 응답 보기"
+  dashboard_navigation_view_text_responses: "텍스트 응답"
   dashboard_navigation_view_assessments: "평가 점수"
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
   dashboard_navigation_lesson_plans_resources: "수업 계획 및 자료"
-  dashboard_navigation_view_stats: "상태보기"
+  dashboard_navigation_view_stats: "통계"
   dashboard_navigation_section: "섹션: %{section_name}"
   dashboard_navigation_student: "학생: %{student_name}"
   dashboard_progress_not_started: "시작 안됨"
@@ -767,7 +771,12 @@
   dashboard_announce_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
     언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
     모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "더 알아보기"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에
     앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
     CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
@@ -1467,11 +1476,10 @@
     solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
   sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을
     통해 수학 과학 능력을 향상시킬 수 있습니다.
-  compatibility_https_header: Code.org가 HTTPS를 사용할 수 있도록 활성화 해주세요
-  compatibility_https_message: "보안을 강화하기 위해서, %{https_date}부터 HTTPS방식으로 변경됩니다. 이 날짜
-    이후로는 Code.org에  들어올 수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a>
-    를 클릭하여 알아볼 수 있습니다."
-  compatibility_https_hide_this_warning: "경고창 숨기기"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}',
+    target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지
+    않을 수 있습니다."
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1480,22 +1488,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

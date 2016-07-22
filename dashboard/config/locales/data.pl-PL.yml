@@ -1,75 +1,5 @@
 "pl":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Wprowadzający kurs informatyki dla uczniów szkoły podstawowej i gimnazjum
-          Unplug1: Etap 1
-          Maze: Etap 2
-          Unplug2: Etap 3
-          Unplug3: Etap 4
-          Artist: Etap 5
-          Unplug4: Etap 6
-          Artist2: Etap 7
-          Unplug5: Etap 8
-          Farmer: Etap 9
-          Unplug6: Etap 10
-          Artist3: Etap 11
-          Unplug7: Etap 12
-          Farmer2: Etap 13
-          Unplug8: Etap 14
-          Artist4: Etap 15
-          Unplug9: Etap 16
-          Farmer3: Etap 17
-          Unplug10: Etap 18
-          Artist5: Etap 19
-          Unplug11: Etap 20
-        Hour of Code:
-          desc: Godzina Kodowania
-          Maze: Etap 1
-        Edit Code:
-          desc: Edytuj kod (beta)
-          MazeEC: Etap 1
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Etap 1
-        Builder Levels:
-          desc: "Łamigłówki utworzone przez użytkowników (beta)"
-          Custom: Etap 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Etap 1
-        Jigsaw Levels:
-          desc: Układanka (beta)
-          Jigsaw: Etap 1
-        Step Levels:
-          desc: Labirynt (beta)
-          MazeStep: Krok Etapu
-        edit-code:
-          desc: Edytuj kod (beta)
-          MazeEC: Etap 1
-          Applab: Etap 2
-          ArtistEC: Etap 3
-          StudioEC: Etap 4
-        events:
-          desc: Bounce (beta)
-          Bounce: Etap 1
-          Studio: Etap 2
-        builder:
-          desc: Puzzle stworzone przez użytkowników (beta)
-          Custom: Etap 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Etap 1
-        jigsaw:
-          desc: Układanka (beta)
-          Jigsaw: Etap 1
-        step:
-          desc: Labirynt (beta)
-          MazeStep: Krok Etapu
-        wordsearch:
-          desc: Wymowa Bee (beta)
-          WordSearch: Etap 1
     game:
       name:
         Unplug1: Wprowadzenie do informatyki
@@ -784,6 +714,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

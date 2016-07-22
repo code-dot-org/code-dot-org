@@ -45,7 +45,7 @@ bs-BA:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Registruj se
   cded_try_it: Isprobaj
-  twentyhours_trynow: Probaj sad
+  try_now: Probaj sad
   california_heading: Pitaj svoju školu da predaje računarske nauke
   california_text: "Svaki učitelj može ponuditi naše <a href='http://studio.code.org/'>besplatne kurseve</a>. Svaka osnovna škola može <a href='http://code.org/educate/k5'>podučavati kompjuterske nauke</a>. Pitaj srednje škole da <a href='http://code.org/educate/districts'>da postanu naš partner."
   california_button: 'Nauči još '
@@ -372,14 +372,9 @@ bs-BA:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Iskoristi povuci-ispusti blokove i JavaScript.
   starwars_javascript_specs: Samo engleski | Moderni preglednici | Uzrast 11+
-  starwars_javascript_start_button: Probaj sada
   starwars_blocks_title: Blokovi
   starwars_blocks_description: Iskoristi povuci-ispusti blokove.
   starwars_blocks_specs: Mnogi jezici | Moderni preglednici, pametni telefoni, tableti | Dob 6-10
-  starwars_blocks_start_button: Probaj sad
-  starwars_watch_videos: Prije nego počneš, pogledaj jedan od ovih inspirativnih klipova
-  starwars_speak_languages: Govoriš li neki drugi jezik?
-  starwars_help_translate: Pomozi nam da prevedemo
   starwars_platform_text: Savremeni browser-i, mobiteli, tableti
   mc_name: Sata Kodiranja Minecraft-a
   mc_longdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
@@ -388,6 +383,11 @@ bs-BA:
   mc_platformtext: Savremeni browser-i, mobiteli, tableti
   mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Sata Kodiranja Minecraft-a
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 nastavnika će ugostiti Sat Kodiranja u njihovoj učionici ove godine, Dec 7-13, 2015. Oni žele tvoju pomoć! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
@@ -517,6 +517,8 @@ bs-BA:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -531,6 +533,7 @@ bs-BA:
   dashboard_navigation_view_progress: Napredak
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Dodaj Učenike
   dashboard_navigation_manage_students: Rukovodi Učenike
   dashboard_navigation_lesson_plans_resources: Nastavni Planovi i Resursi
@@ -679,9 +682,10 @@ bs-BA:
   dashboard_faq_k5: Česta pitanja za mlađi uzrast (do petog razreda)
   dashboard_announcements: Objave
   dashboard_announce_view_all: Pogledaj sve
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Nauči više
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Sat Kodiranja je ovdje - 8. - 14. Decembra!'
@@ -1214,9 +1218,8 @@ bs-BA:
   processing_beyond_longdescription: 'Processing je programski jezik, razvojno okruženje i online zajednica. Od 2001., Processing  je promovirao softversku pismenost u vizualnim umjetnostima i vizualnu pismenost u tehnologiji. Početno zamišljen da služi kao softverska bilježnica i za poučavanje osnova računalnog programiranja u vizualnom kontekstu, Processing je evoluirao u razvojni alat za profesionalce. Danas deseci hiljada učenika, umjetnika, dizajnera, istraživača i hobista koriste Processing za učenje, izradu prototipa i proizvodnju.'
   alice_beyond_longdescription: Korištenjem inovativnog programskog okruženja koje podržava stvaranje 3D animacija, Alice Project nudi alate i materijale za podučavanje i učenje kompjuterskog razmišljanja, rješavanja problema i programiranja kompjutera za širok spektar uzrasta i nivoa znanja.
   sphero_beyond_longdescription: Bilo da ste učitelj ili roditelj, SPRK lekcije daju djeci zabavan brzinski kurs programiranja robota dok usput poboljšavaju matematičke i naučne vještine.
-  compatibility_https_header: Molimo da obezbijediš HTTPS za Code.org.
-  compatibility_https_message: "Da vi se pojačala sigurnost, prebacujemo se na HTTPS na %{https_date}. Nećeš moći pristupiti Code.org nakon ovog datuma. <a href='%{it_requirements_url}'>Klikni ovdje</a> da naučiš kako omogućiti HTTPS za Code.org."
-  compatibility_https_hide_this_warning: Sakrij ovo upozorenje
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

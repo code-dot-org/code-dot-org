@@ -1,75 +1,5 @@
 cs:
   data:
-    script:
-      name:
-        20-hour:
-          desc: 5-13 Kurz úvodu do informatiky
-          Unplug1: Fáze 1
-          Maze: Fáze 2
-          Unplug2: Fáze 3
-          Unplug3: Fáze 4
-          Artist: Fáze 5
-          Unplug4: Fáze 6
-          Artist2: Fáze 7
-          Unplug5: Fáze 8
-          Farmer: Fáze 9
-          Unplug6: Fáze 10
-          Artist3: Fáze 11
-          Unplug7: Fáze 12
-          Farmer2: Fáze 13
-          Unplug8: Fáze 14
-          Artist4: Fáze 15
-          Unplug9: Fáze 16
-          Farmer3: Fáze 17
-          Unplug10: Fáze 18
-          Artist5: Fáze 19
-          Unplug11: Fáze 20
-        Hour of Code:
-          desc: Hodina kódu
-          Maze: Fáze 1
-        Edit Code:
-          desc: Upravit kód (beta)
-          MazeEC: Fáze 1
-        2014 Levels:
-          desc: Odraz (beta)
-          Bounce: Fáze 1
-        Builder Levels:
-          desc: Uživatelem vytvořené puzzle (beta)
-          Custom: Fáze 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Fáze 1
-        Jigsaw Levels:
-          desc: Skládačka (beta)
-          Jigsaw: Fáze 1
-        Step Levels:
-          desc: Bludiště (beta)
-          MazeStep: Fáze kroku
-        edit-code:
-          desc: Upravit kód (beta)
-          MazeEC: Fáze 1
-          Applab: Fáze 2
-          ArtistEC: Fáze 3
-          StudioEC: Fáze 4
-        events:
-          desc: Odraz (beta)
-          Bounce: Fáze 1
-          Studio: Fáze 2
-        builder:
-          desc: Uživatelem vytvořené puzzle (beta)
-          Custom: Fáze 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Fáze 1
-        jigsaw:
-          desc: Skládačka (beta)
-          Jigsaw: Fáze 1
-        step:
-          desc: Bludiště (beta)
-          MazeStep: Fáze kroku
-        wordsearch:
-          desc: Hláskování (beta)
-          WordSearch: Fáze 1
     game:
       name:
         Unplug1: Úvod do počítačové vědy
@@ -486,6 +416,7 @@ cs:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

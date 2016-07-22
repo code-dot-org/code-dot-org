@@ -45,7 +45,7 @@ id-ID:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Daftar
   cded_try_it: Cobalah
-  twentyhours_trynow: Coba sekarang
+  try_now: Coba sekarang
   california_heading: Minta sekolah anda untuk mengajarkan ilmu komputer
   california_text: "Setiap guru dapat menawarkan <a href='http://learn.code.org/'>kursus gratis</a> kami. Setiap sekolah dasar dapat <a href='http://code.org/educate/k5'> mengajar ilmu komputer</a>. Ajak sekolah menengah untuk  <a href='http://code.org/educate/districts'> bermitra dengan kami."
   california_button: Pelajari lebih banyak
@@ -377,14 +377,9 @@ id-ID:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Menggunakan blok drag-drop dan JavaScript.
   starwars_javascript_specs: Hanya dalam bahasa Inggris | Browser modern | Usia 11 +
-  starwars_javascript_start_button: Coba sekarang
   starwars_blocks_title: Blok
   starwars_blocks_description: Gunakan blok drag-drop.
   starwars_blocks_specs: Berbagai bahasa | Situs pencarian modern, ponsel pintar, tablet | Usia 6-106
-  starwars_blocks_start_button: Pelajari lebih banyak
-  starwars_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif ini
-  starwars_speak_languages: Berbicara dengan bahasa lain?
-  starwars_help_translate: Bantuk kami menerjemahkan
   starwars_platform_text: Browser modern, smartphone, tablet
   mc_name: Minecraft Hour of Code
   mc_longdescription: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
@@ -393,6 +388,11 @@ id-ID:
   mc_platformtext: Browser modern, smartphone, tablet
   mc_specs: Berbagai bahasa | Situs pencarian | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspirasi siswa dan relawan untuk Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh bantuan Anda! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} guru-guru memerlukan bantuan sukarela.<br>%{num_volunteers} bantuan sukarela telah terdaftar. Bergabung.'
@@ -522,6 +522,8 @@ id-ID:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -536,6 +538,7 @@ id-ID:
   dashboard_navigation_view_progress: Perkembangan
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Penilaian
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Tambahkan murid
   dashboard_navigation_manage_students: Kelola murid
   dashboard_navigation_lesson_plans_resources: Rencana pelajaran dan sumber daya
@@ -684,11 +687,12 @@ id-ID:
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Pelajari lebih banyak
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Tambahkan nama Anda
   code_hoc_coming: 'Hour of Code hadir disini - 8-14 Desember!'
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -1224,9 +1228,8 @@ id-ID:
   processing_beyond_longdescription: Pengolahan adalah bahasa pemrograman, lingkungan pengembangan, dan komunitas online. Sejak tahun 2001, Pengolahan telah mempromosikan keaksaraan software dalam seni visual dan literasi visual dalam teknologi. Awalnya dibuat untuk melayani sebagai buku sketsa perangkat lunak dan untuk mengajarkan dasar-dasar pemrograman komputer dalam konteks visual, Pengolahan berkembang menjadi alat pengembangan bagi para profesional. Saat ini, ada puluhan ribu siswa, seniman, desainer, peneliti, dan penggemar yang menggunakan Pengolahan untuk belajar, prototyping, dan produksi.
   alice_beyond_longdescription: Menggunakan lingkungan pemrograman yang inovatif untuk mendukung penciptaan 3D animasi, Alice proyek menyediakan alat dan bahan untuk mengajar dan belajar berpikir secara komputasi, pemecahan masalah, dan pemrograman komputer di seluruh spektrum usia dan tingkat kelas.
   sphero_beyond_longdescription: Apakah Anda seorang pendidik atau orangtua, pelajaran SPRK memberikan anak-anak kursus singkat yang menyenangkan dalam memprogram robot ketika mengasah keterampilan mereka dalam matematika dan sains.
-  compatibility_https_header: Silakan aktifkan HTTPS untuk Code.org.
-  compatibility_https_message: "Untuk meningkatkan keamanan, kita beralih ke HTTPS pada %{https_date}. Anda tidak akan dapat mengakses Code.org setelah tanggal ini. <a href='%{it_requirements_url}'> Klik di sini</a> untuk belajar bagaimana untuk mengaktifkan HTTPS untuk Code.org."
-  compatibility_https_hide_this_warning: Sembunyikan peringatan
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

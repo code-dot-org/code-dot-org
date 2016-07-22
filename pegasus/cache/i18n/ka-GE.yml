@@ -56,7 +56,7 @@
   csedweek_map_legend_cs_tech_jam: "სპეცილური ღონისძიება"
   cded_sign_up: "რეგისტრაცია"
   cded_try_it: "სცადეთ"
-  twentyhours_trynow: "სცადეთ ახლა"
+  try_now: "სცადეთ ახლა"
   california_heading: "მოთხოვეთ სკოლას, გასწავლოთ ინფორმატიკა"
   california_text: "ნებისმიერ მასწავლებელს შეუძლია გამოიყენოს ჩვენი <a href='http://studio.code.org/'>
     უფასო კურსები</a>. ნებისმიერ სკოლას შეუძლია <a href='http://code.org/educate/k5'>ასწავლოს
@@ -446,15 +446,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: "გამოიყენეთ ბლოკლი და JavaScript."
   starwars_javascript_specs: "მხოლოდ ინგლისური | თანამედროვე ბრაუზერები | ასაკი 11+"
-  starwars_javascript_start_button: "სცადეთ ახლავე"
   starwars_blocks_title: "ბლოკები"
   starwars_blocks_description: "გამოიყენეთ ბლოკლი."
   starwars_blocks_specs: "ბევრი სხვადასხვა ენა | თანამედროვე ბრაუზერები, სმარტფონები,
     ტაბლეტები | ასაკი 6-106"
-  starwars_blocks_start_button: "სცადეთ ახლავე"
-  starwars_watch_videos: "სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს"
-  starwars_speak_languages: "სხვა ენაზე ლაპარაკობთ?"
-  starwars_help_translate: "დაგვეხმარეთ თარგმნაში"
   starwars_platform_text: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   mc_name: "მაინკრაფტის კოდის ერთი საათი"
   mc_longdescription: "გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს მაინკრაფტის
@@ -465,6 +460,12 @@
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6–106"
   minecraft_subtitle: "მაინკრაფტის კოდის ერთი საათი"
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "შთააგონეთ მოსწავლეებს და გახდით კოდის ერთი
     საათის მოხალისე."
   volunteer_engineer_submission_subtitle_generic: "წელს, 7-13 დეკემბერს, 100,000 მასწავლებელი
@@ -666,6 +667,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -680,6 +683,7 @@
   dashboard_navigation_view_progress: "პროგრესი"
   dashboard_navigation_view_text_responses: "ტექსტური პასუხების ნახვა"
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "მოსწავლეებს დამატება"
   dashboard_navigation_manage_students: "სტუდენტების მართვა"
   dashboard_navigation_lesson_plans_resources: "გაკვეთილების გეგმები და რესურსები"
@@ -873,7 +877,12 @@
     90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის
     გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი
     დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი."
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "გაიგეთ მეტი"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1712,11 +1721,11 @@
   sphero_beyond_longdescription: "არა აქვს მნიშვნელობა, მშობელი ხართ თუ მასწავლებელი:
     SPRK გაკვეთილებით თქვენი ბავშვები სწრაფად და ხალისიანად ისწავლიან რობოტების პროგრამირებას
     და განავითარებენ მათემატიკის უნარებს."
-  compatibility_https_header: "ჩართეთ HTTPS Code.org-ისთვის."
-  compatibility_https_message: "უსაფრთხოების დონის ასამაღლებლად %{https_date} გადავდივართ
-    HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ
-    აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის."
-  compatibility_https_hide_this_warning: "გაფრთხილების გათიშვა"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1725,22 +1734,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "თამაში"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

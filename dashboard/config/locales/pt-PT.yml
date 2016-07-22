@@ -143,6 +143,8 @@
     picture: Agora localize a sua foto secreta
     words: Agora digite as palavras secretas
     login: Iniciar sessão
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Esqueceste-te da palavra-passe?
@@ -295,6 +297,10 @@
       signin: Iniciar sessão
       signup: Criar conta
       already_registered: Já criaste uma conta?
+      pair_programming: Programação em duplas
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso
@@ -329,6 +335,7 @@
       example_with_number: Solução exemplo %{solution_number}
       submitted_on: Enviado em %{date}
       unsubmit: Remover submissão
+      worked_with: Worked With
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -408,7 +415,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Testar funcionalidade
+    announcement_learn_more_button: Saber mais
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -503,10 +510,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Saber mais
   slow_loading: Isto está a demorar mais do que o habitual...
   try_reloading: Tente recarregar a página
@@ -689,40 +692,6 @@
     hour: 1 hora
     day: dia
     week: semana
-  data:
-    script:
-      name:
-        20-hour:
-          title: Introdução ao curso de ciência da computação (15-25 horas) para o
-            3.º ciclo do ensino básico
-          description: Este curso de 20 horas apresenta o informática de núcleo e
-            conceitos de programação. O curso é projetado para uso em salas de aula
-            para os graus K-8, mas é divertido de aprender em todos os tempos.
-        Hour of Code:
-          title: Hora de Código 2013
-          description: ''
-        edit-code:
-          title: Editar código
-          description: ''
-        events:
-          title: Eventos
-          description: ''
-        builder:
-          title: Construtor
-          description: ''
-        flappy:
-          title: Flappy Bird
-          description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
-            nosso tutorial sobre o Código do Flappy bird!
-        jigsaw:
-          title: Quebra-cabeças
-          description: ''
-        step:
-          title: Avançar
-          description: ''
-        sample_level_builder:
-          title: Construtor de nível de exemplo
-          description: ''
   age_interstitial:
     age: Idade
     header: Atualização de informações da conta
@@ -742,7 +711,7 @@
     completed_perfect: concluído, na perfeição
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
-    submitted: submitted
+    submitted: submetido
   studio:
     courses_working_on: Cursos que estás a frequentar
     completed_courses: Cursos concluídos
@@ -762,6 +731,8 @@
     share_copy_link: 'Copia a ligação:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Incorporar
     advanced_share: Show advanced options
     close: Fechar
@@ -791,6 +762,8 @@
     abuse:
       tos: Este projeto foi reportado por violar os <a href='http://code.org/tos'>Termos
         de Serviço</a> do Code.org e não pode ser partilhado.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Se acredita que isto é um erro, <a href='https://code.org/contact'>contacte-nos</a>
         se faz favor.
       go_to_code_studio: Vá para o "Code Studio"
@@ -830,40 +803,50 @@
     escalated:
       name: Reencaminhado
       description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
+    instructor_feedback: Opinião do Instrutor
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Procura por um ícone...
-      no_icons_found: Não foram encontrados ícones
+      search_placeholder_text: Pesquisa ícones
+      no_icons_found: Nenhum ícone encontrado
     playzone:
       artist_description: Faça desenhos e figuras legais com o Artista!
       artist_title: New Drawing
       continue_button: Go on to the next Stage
       playlab_description: Crie uma história ou um jogo no Laboratório!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
+      playlab_title: Nova Aplicação
+      primary_header: Parabéns! Terminou %{stageName}!
       projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
+      projects_title: Abrir um projeto
       secondary_header: Ask your teacher what to do next
   flex_category:
     required: Visão geral
-    content: Content
-    practice: Teacher Practices
+    content: Conteúdo
+    practice: Práticas de Ensino
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    title: Hora das transferências de Código
+    capsule_title: Tem Internet?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
+    instructions_headline: Não tem Internet?
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers

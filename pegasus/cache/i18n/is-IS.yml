@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Sérstakur viðburður
   cded_sign_up: Skráning
   cded_try_it: Prófið hana
-  twentyhours_trynow: Prófa núna
+  try_now: Prófa núna
   california_heading: Biddu skólann þinn að kenna tölvunarfræði
   california_text: Hvaða kennari sem er getur boðið <a href='http://studio.code.org/'>ókeypis
     námskeiðin okkar</a>.  Hvaða grunnskóli sem er getur <a href='http://code.org/educate/k5'>kennt
@@ -456,15 +456,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Notaðu færanlega kubba og JavaScript.
   starwars_javascript_specs: Aðeins á ensku | Nýlegir vafrar | Aldur 11+
-  starwars_javascript_start_button: Prófaðu núna
   starwars_blocks_title: Kubbar
   starwars_blocks_description: Nota færanlega kubba.
   starwars_blocks_specs: Mörg tungumál | Nýlegir vafrar, snjallsímar, spjaldtölvur
     | Aldur 6-106
-  starwars_blocks_start_button: Prófaðu núna
-  starwars_watch_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en þú byrjar
-  starwars_speak_languages: Talarðu annað tungumál?
-  starwars_help_translate: Hjálpaðu að þýða
   starwars_platform_text: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   mc_name: Klukkustund kóðunar með Minecraft
   mc_longdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð
@@ -475,6 +470,12 @@
   mc_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   mc_specs: Mörg tungumál | Nýlegir vafrar og spjaldtölvur | Aldur 6-106
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Vertu nemendum hvatning með liðveislu
   volunteer_engineer_submission_subtitle_generic: '100.000 kennarar ætla að halda
     Klukkustund kóðunar í skólastofunni 7.-13. des. 2015. Þeir þurfa aðstoð þína! '
@@ -676,6 +677,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -692,6 +695,7 @@
   dashboard_navigation_view_progress: Framvinda
   dashboard_navigation_view_text_responses: Skoða textasvör
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
   dashboard_navigation_lesson_plans_resources: Kennsluáætlanir og tilföng
@@ -879,11 +883,17 @@
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_message: Want to help us test a new feature? We know it’s important
-    to encourage students to iterate and experiment, so we'll be adding an "unused
-    code" feature to allow students to run their code even when there are unattached
-    blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: Viltu hjálpa okkur að prófa nýjan eiginleika? Við vitum
+    að það er mikilvægt að hvetja nemendur til að endurtaka og gera tilraunir og þess
+    vegna ætlum við að bæta við eiginleikanum "ónotaður kóði" svo að nemendur geti
+    keyrt kóða þó að það séu ótengdir kubbar. Við viljum gjarnan fá endurgjöf frá
+    þér áður en við setjum þennan eiginleika í almenna notkun.
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Læra meira
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1723,12 +1733,11 @@
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK
     kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir
     þau um leið í raungreinum.
-  compatibility_https_header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
-  compatibility_https_message: Til að auka öryggi erum við að skipta yfir í HTTPS
-    frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með
-    HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja
-    HTTPS fyrir Code.org.
-  compatibility_https_hide_this_warning: Fela þessa aðvörun
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1737,22 +1746,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

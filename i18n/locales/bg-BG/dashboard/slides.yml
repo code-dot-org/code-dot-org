@@ -3,7 +3,7 @@ bg:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Добре дошли в първия си час по програмиране! Нека да се потопим направо в първото си предизвикателство.
+        text: Добре дошли в първия си час на кода! Нека да се потопим в първото си предизвикателство.
       2:
         image: notes/hoc1_2.jpg
         text: 'Ние ще  използваме Blockly. Това е визуален език за програмиране, където трябва само да плъзнете и пуснете блоковете за да напишете код.'
@@ -706,7 +706,7 @@ bg:
         text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!
+        text: От главата до пръстите на краката, пауза, мисли за това. От краката си до носа, спри и мисли онлайн! Така че, помисли с главата си и почувствай със сърцето си, балансирай с ръце, вслушай се в червата, изправи се на крака. От главата до пръстите на краката, пауза, мисли за това. От краката си до носа, спри и помисли онлайн!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
@@ -915,7 +915,7 @@ bg:
         text: Този урок се нарича сазтезание с зарове. Почти всеки обича да играе компютърни игри. Замисляли ли сте се за това как компютърни програмисти превращат стъпките на игра в една програма? Първата стъпка в създаване на компютърни игри и при решаването на всеки проблем изисква мислене и планиране.
       2:
         image: notes/C3_dice_race_2.png
-        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+        text: Когато мислиш за решаването на даден проблем, ти създаваш алгоритъм, който е стъпка по стъпка план за решаване на подобни проблеми или завършване на задача. В този урок вие ще създадете алгоритъм за игра на зарове. Когато сте готови, изпробвайте го с вашите приятели, за да видите дали те могат да следват стъпките, за да играят играта. Когато програмиста е сигурен, че стъпките са правилни, е време да се преведе алгоритъма на програмен език, така че компютърът да може да го разбере.
       3:
         image: notes/C3_dice_race_3.png
         text: Почти всичко, което правим всеки ден изисква алгоритъм, списък от стъпки, който можете да следвате за да завършиет дадена задача. Помислете за оправянето за училище или планиране на забавен ден с вашите приятели или фиксиране на лека закуска. За да изпълните някоя от тези задачи, ще трябва да го раздобите на по-малки стъпки и понякога стъпките трябва да бъдат в определен ред.
@@ -928,14 +928,14 @@ bg:
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: "While loops are pretty similar to what you do in everyday life. Imagine you are washing your car, you'll keep scrubbing until it's clean. While it's not clean, continue to scrub. You're evaluating these things all the time."
+        text: '"Докато" циклите са доста подобни на това, което правиш в ежедневния живот. Представи си че миеш колата, и трябва да я търкаш до пълно почистване. Докато не е чисто, ти трябва да продължиш да търкаш. Ти преценяваш това през цялото време.'
       2:
         image: notes/C3_farmer_while_2.png
         text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: Този урок е за функционални слънцеотразители. Вие ще създавате много такива с помощта на функции. Има няколко стъпки в създаването на един слънцеотразител. Някои от стъпките, които правите, трябва да се повтарят много пъти.
       2:
         image: notes/C3_functional_suncatchers_2.png
         text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
@@ -957,10 +957,10 @@ bg:
         text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
       4:
         image: notes/C3_internet_4.png
-        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+        text: За разлика от пощенските услуги първото нещо, което се случва е, че интернет накъсва съобщението по-малки части, така че то да може да бъде изпратено по-лесно. Тези малки части се наричат пакети. Всеки пакет на съобщението се доставя до местоназначението, един по един. Тези пакети, всички, се събират заедно в правилния ред, така че приемникът може да прочете съобщението правилно. Разбира се има още много неща, свързани с това как работи интернет, но това е едно чудесно начало. Вие сте на път да станете знаещ интернет потребител! Не забравяйте да кажете на семейството и приятелите си какво сте научили!
       5:
         image: notes/C3_internet_5.png
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: Моето име е Аманда Камп и съм софтуерен инженер в Google. Работя в екипа, отговарящ за сървъра, на който съхраняват профили и контакти. В моята работа се налага да се обмислят варианти за прехвърляне на контакти от едно на друго устройство, като телефона. Повечето хора имат много контакти, понякога дори 1000 и ние не искаме да изпратите всички тези контакти наведнъж в телефона си, защото се получава твърде голямо съобщение. Подобно на начина, по който интернет се разпада големи съобщения на пакети, ние използваме концепция, която се нарича страниране където може да изпратите до телефона само 100 контакта наведнъж, а след това телефона ви да поиска следващите 100.
       6:
         image: notes/C3_internet_6.png
         text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."

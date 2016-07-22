@@ -48,7 +48,7 @@ kk-KZ:
   csedweek_map_legend_cs_tech_jam: Арнайы іс-шара
   cded_sign_up: Тіркелу
   cded_try_it: Қолданып көріңіз
-  twentyhours_trynow: Қазір қолданып көріңіз
+  try_now: Қазір қолданып көріңіз
   california_heading: Өзіңіздің мектебіңізді информатика пәнін оқытуды сұрап көріңіз
   california_text: "Кез келген оқытушы біздің <a href='http://studio.code.org/'>тегін курстарымызды</a> ұсына алады.  Кез келген бастауыш мектеп <a href='http://code.org/educate/k5'>информатика пәнін оқыта алады</a>. Мектептерге бізбен <a href='http://code.org/educate/districts'> ынтымақтасуды</a> ұсыныңыз."
   california_button: Толығырақ
@@ -351,14 +351,9 @@ kk-KZ:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Жылжытымды блоктар мен JavaScript-ті қолдан.
   starwars_javascript_specs: Тек ағылшын тілінде | Жаңа браузерлер | 11+ жас аралығы
-  starwars_javascript_start_button: Қазір қолданып көріңіз
   starwars_blocks_title: Блоктар
   starwars_blocks_description: Жылжытымды блоктарды қолдан.
   starwars_blocks_specs: Көптеген тілдерде | Заманауи браузерлерде, планшеттерде, смартфондарда | 6-106 жасына
-  starwars_blocks_start_button: Қазір қолданып көріңіз
-  starwars_watch_videos: Бастар алдында мына шабыттандырушы бейне-роликтерден біреуін қараңыз
-  starwars_speak_languages: Басқа тілде сөйлейсіз бе?
-  starwars_help_translate: Басқа тілге аударуға көмектес
   starwars_platform_text: Заманауи браузерлер, смартфондар, планшеттер
   mc_name: Minecraft Кодтау Сағаты
   mc_longdescription: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына көмектесу үшін код блоктарын қолданыңыз.
@@ -367,6 +362,11 @@ kk-KZ:
   mc_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   mc_specs: Әр түрлі тілдерде| Заманауи браузерлер, смартфондар, планшеттер | 6 жастан және жоғары
   minecraft_subtitle: Minecraft Кодтау Сағаты
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Оқушылар мен еріктілерді шабыттандыру
   volunteer_engineer_submission_subtitle_generic: '2015 жылдың 7-13 желтоқсанында 100000 мұғалім өз сыныптарында Бағдарламалау сағатын өткізбек. Оларға сенің көмегің қажет! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} Мұғалімдерге еріктілер қажет.<br>Осы уақытқа дейін %{num_volunteers} ерікті жазылды. Сенд де қосыл.'
@@ -495,6 +495,8 @@ kk-KZ:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: Барлығы
   dashboard_download_csv: CSV жүктеп алу
@@ -509,6 +511,7 @@ kk-KZ:
   dashboard_navigation_view_progress: Ілгерілеуі
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Бағалаулар
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Оқушыларды қосу
   dashboard_navigation_manage_students: Оқушыларды басқару
   dashboard_navigation_lesson_plans_resources: Сабақ жоспары мен оқу материалдары
@@ -657,9 +660,10 @@ kk-KZ:
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: толығырақ білу
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: '"Код Жазу Сағаты" - 8-14 желтоқсанда басталады!'
@@ -1192,9 +1196,8 @@ kk-KZ:
   processing_beyond_longdescription: 'Processing - бұл программалау тілі, бағдарламала жасау ортасы және онлайн қауымдастық. 2001 жылдан бастап, Processing информатика пәнін оқытуда визуалды өнер мен технология саласына үлесін қосуда. Бастапқыда, ол бағдарламала үлгісін жасау және бағдарламалаудың негіздерін графикалық түрде үйрету үшін жасалған болса, қазіргі таңда Processing бағдарламаушылардың кәсіби құралына айналды. Қазіргі таңда ондаған мың оқушылар, студенттер, суретшілер, дизайнерлер, зерттеушілер, және қызығушылық танытқандар Processing-ті оқу барысында, прототип жасау үшін және жобаларда пайдаланады.'
   alice_beyond_longdescription: Инновациялық бағдарламалау ортасын пайдаланып 3D-анимация құрыңыз. Alice жобасы есептеу қабілетін үйрету үшін, құралдары мен оқу материалдарын әртүрлі жастағылар мен деңгейдегі оқушыларға ұсынады.
   sphero_beyond_longdescription: Сіз мұғалім немесе ата-ана болсаңыз да, SPRK сабақтары бүлдіршіндерге роботтарды бағдарламалаудың жедетілген курсын өтуге мүмкіндік береді және де олардың математика мен нақты ғылым дағдыларын арттырады.
-  compatibility_https_header: Өтінеміз, Code.org үшін HTTPS-ті қосыңыз.
-  compatibility_https_message: "Қауіпсіздікті арттыру үшін біз %{https_date} - ден HTTPS-ке көштік. Сіз Code.org сайтына көрсетілген уақыттан кейін кіре алмайсыз. Code.org сайтында HTTPS-ті қосу туралы білу үшін <a href='%{it_requirements_url}'> осы жерге басыңыз</a>"
-  compatibility_https_hide_this_warning: Бұл ескертуді жасыру
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

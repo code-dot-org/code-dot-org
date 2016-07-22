@@ -1,81 +1,5 @@
 vi:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Khóa giới thiệu Công Nghệ Thông tin của K-8
-          Unplug1: màn 1
-          Maze: |
-            màn 2
-            
-          Unplug2: màn 3
-          Unplug3: màn 4
-          Artist: màn 5
-          Unplug4: màn 6
-          Artist2: màn 7
-          Unplug5: màn 8
-          Farmer: màn 9
-          Unplug6: Màn 10
-          Artist3: Màn 11
-          Unplug7: Màn 12
-          Farmer2: Màn 13
-          Unplug8: Màn 14
-          Artist4: Màn 15
-          Unplug9: Màn 16
-          Farmer3: Màn 17
-          Unplug10: Màn 18
-          Artist5: Màn 19
-          Unplug11: Màn 20
-        Hour of Code:
-          desc: Giờ của mã
-          Maze: màn 1
-        Edit Code:
-          desc: Chỉnh sửa/ hiệu chỉnh mã (code) (thử nghiệm)
-          MazeEC: màn 1
-        2014 Levels:
-          desc: Bounce (thử nghiệm)
-          Bounce: màn 1
-        Builder Levels:
-          desc: 'Người dùng - khởi tạo những câu đố (thử nghiệm)'
-          Custom: màn 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: màn 1
-        Jigsaw Levels:
-          desc: Ghép hình (thử nghiệm)
-          Jigsaw: màn 1
-        Step Levels:
-          desc: Mê cung (thử nghiệm)
-          MazeStep: Các bước thực hiện trên màn chơi
-        edit-code:
-          desc: Chỉnh sửa/ hiệu chỉnh mã (code) (thử nghiệm)
-          MazeEC: màn 1
-          Applab: |
-            màn 2
-            
-          ArtistEC: màn 3
-          StudioEC: màn 4
-        events:
-          desc: Bounce (thử nghiệm)
-          Bounce: màn 1
-          Studio: |
-            màn 2
-            
-        builder:
-          desc: 'Người dùng - khởi tạo những câu đố (thử nghiệm)'
-          Custom: màn 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: màn 1
-        jigsaw:
-          desc: Ghép hình (thử nghiệm)
-          Jigsaw: màn 1
-        step:
-          desc: Mê cung (thử nghiệm)
-          MazeStep: Các bước thực hiện trên màn chơi
-        wordsearch:
-          desc: Con ong phép thuật (thử nghiệm)
-          WordSearch: màn 1
     game:
       name:
         Unplug1: Giới thiệu về khoa học máy tính
@@ -504,6 +428,7 @@ vi:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

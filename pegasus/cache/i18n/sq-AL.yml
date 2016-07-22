@@ -1,5 +1,5 @@
 "sq-AL":
-  hour_of_code: Ora e Kodit
+  hour_of_code: Ora e Kodimit
   hello: Pershendetje Botë
   'yes': Po
   'no': Jo
@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Ngjarje speciale
   cded_sign_up: Rregjistrohu
   cded_try_it: Provoje
-  twentyhours_trynow: Provo tani
+  try_now: Provo tani
   california_heading: Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike
   california_text: "Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
     tona falas</a>. Çdo shkollë fillore mund <a href='http://code.org/educate/k5'>
@@ -454,15 +454,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Përdor blloqe me tërheqje-lëshim dhe JavaScript.
   starwars_javascript_specs: Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+
-  starwars_javascript_start_button: Provo tani
   starwars_blocks_title: Blloqet
   starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
   starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta
     | Moshat 6-106
-  starwars_blocks_start_button: Provo tani
-  starwars_watch_videos: Para se të fillosh, shiko një nga këto video frymëzuese
-  starwars_speak_languages: Flet një gjuhë tjetër?
-  starwars_help_translate: Na ndihmo të përkthejmë
   starwars_platform_text: Shfletuesit modern, telefonat e mençur, tabletat
   mc_name: Ora e Kodimit Minecraft
   mc_longdescription: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë
@@ -473,6 +468,12 @@
   mc_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   mc_specs: Shumë gjuhë | Browserët modern dhe tabletat | Moshat 6-106
   minecraft_subtitle: Ora e Kodimit Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Frymëzo nxënësit dhe vullnetarizo
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë
     një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën
@@ -674,6 +675,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -688,6 +691,7 @@
   dashboard_navigation_view_progress: Ecuri
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Shto Studentë
   dashboard_navigation_manage_students: Menaxho Studentët
   dashboard_navigation_lesson_plans_resources: Planet Mësimore dhe Burimet
@@ -884,7 +888,12 @@
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
     blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Mëso më shumë
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1042,7 +1051,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: Matematikë
-  hoc_category_name: Ora e Kodit
+  hoc_category_name: Ora e Kodimit
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
@@ -1740,11 +1749,11 @@
   sphero_beyond_longdescription: Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve
     një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë
     dhe shkencë.
-  compatibility_https_header: Ju lutem aktivizoni HTTPS per Code.org.
-  compatibility_https_message: Për të rritur sigurinë, në po kalojmë në HTTPS në %{https_date}.
-    Pas kesaj nuk do të arrish te kësh akesë në Code.org. <a href='%{it_requirements_url}'>
-    Kliko ketu </a> për të mësuar si të mundesosh HTTPS per Code.org.
-  compatibility_https_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1753,22 +1762,3 @@
   infinity_shortcode: inf
   playlab_shortcode: luaj
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

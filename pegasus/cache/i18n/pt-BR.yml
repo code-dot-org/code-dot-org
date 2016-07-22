@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Evento especial
   cded_sign_up: Registrar
   cded_try_it: Experimente
-  twentyhours_trynow: Experimente agora
+  try_now: Experimente agora
   california_heading: Peça a sua escola para ensinar ciência da computação
   california_text: Qualquer professor pode oferecer nossos <a href='http://studio.code.org/'>cursos
     gratuitos</a>. Qualquer escola de Ensino Fundamental pode <a href='http://code.org/educate/k5'>ensinar
@@ -469,15 +469,10 @@
   starwars_javascript_description: Use blocos de arrastar-soltar e JavaScript.
   starwars_javascript_specs: Somente Inglês | Navegadores modernos | Maiores de 11
     anos
-  starwars_javascript_start_button: Experimente agora
   starwars_blocks_title: Blocos
   starwars_blocks_description: Use blocos de arrastar-soltar.
   starwars_blocks_specs: Vários idiomas | Navegadores modernos, smartphones, tablets
     | De 6 a 106 anos
-  starwars_blocks_start_button: Experimente agora
-  starwars_watch_videos: Antes de começar, assista um desses vídeos inspiradores
-  starwars_speak_languages: Fala outra língua?
-  starwars_help_translate: Ajude-nos a traduzir
   starwars_platform_text: Navegadores modernos, smartphones, tablets
   mc_name: Hora do Código Minecraft
   mc_longdescription: Use blocos de código para levar Steve ou Alex a uma aventura
@@ -488,6 +483,12 @@
   mc_platformtext: Navegadores modernos, smartphones, tablets
   mc_specs: Muitos idiomas | Navegadores modernos e tablets | De 6 a 106 anos de idade
   minecraft_subtitle: Hora do Código Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspire alunos e voluntários
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores
     vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro
@@ -700,6 +701,8 @@
     selecione o curso no menu acima e você verá as respostas dos seus alunos aqui.
   dashboard_assessments_summaries: Sumários
   dashboard_assessments_answers: Todas as respostas
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtrar por estágio:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Baixar o CSV
@@ -715,6 +718,7 @@
   dashboard_navigation_view_progress: Progresso
   dashboard_navigation_view_text_responses: Respostas de texto
   dashboard_navigation_view_assessments: Avaliações
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
@@ -910,7 +914,12 @@
     encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você
     pode encontrar todos os recursos offline numa página só. Associar as lições com
     qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
-  dashboard_announce_button_text: Teste a funcionalidade
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Saiba mais
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Como professor, você está liderando o caminho em um
     movimento para dar a cada aluno em todas as escolas a oportunidade de aprender
     informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana,
@@ -1804,11 +1813,11 @@
   sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
     às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
     melhoram habilidades de matemática e ciências.
-  compatibility_https_header: Habilite o HTTPS para Code.org.
-  compatibility_https_message: Para aumentar a segurança, vamos mudar para o HTTPS
-    em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique
-    aqui</a> para aprender a habilitar o HTTPS para a Code.org.
-  compatibility_https_hide_this_warning: Ocultar este aviso
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Seu navegador não é suportado. Por favor atualize
+    seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos
+    nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas
+    funcionalidades podem não funcionar.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1817,22 +1826,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

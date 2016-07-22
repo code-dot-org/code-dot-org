@@ -1,75 +1,5 @@
 sl:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Uvodni tečaj v računalništvo za učence ameriških javnih osnovnih šol
-          Unplug1: Stopnja 1
-          Maze: Stopnja 2
-          Unplug2: Stopnja 3
-          Unplug3: Stopnja 4
-          Artist: Stopnja 5
-          Unplug4: Stopnja 6
-          Artist2: Stopnja 7
-          Unplug5: Stopnja 8
-          Farmer: Stopnja 9
-          Unplug6: Stopnja 10
-          Artist3: Stopnja 11
-          Unplug7: Stopnja 12
-          Farmer2: Stopnja 13
-          Unplug8: 'Stopnja  14'
-          Artist4: Stopnja 15
-          Unplug9: Stopnja 16
-          Farmer3: Stopnja 17
-          Unplug10: Stopnja 18
-          Artist5: Stopnja 19
-          Unplug11: Stopnja 20
-        Hour of Code:
-          desc: Ura kode
-          Maze: Stopnja 1
-        Edit Code:
-          desc: Uredite kodo (beta)
-          MazeEC: Stopnja 1
-        2014 Levels:
-          desc: Skokica (beta)
-          Bounce: Stopnja 1
-        Builder Levels:
-          desc: Ustvari uganko (beta)
-          Custom: Stopnja 1
-        Flappy Levels:
-          desc: Plahutač (Flappy)
-          Flappy: Stopnja 1
-        Jigsaw Levels:
-          desc: Sestavljanka (beta)
-          Jigsaw: Stopnja 1
-        Step Levels:
-          desc: Labirint (beta)
-          MazeStep: Nivo
-        edit-code:
-          desc: Uredite kodo (beta)
-          MazeEC: Stopnja 1
-          Applab: Stopnja 2
-          ArtistEC: Stopnja 3
-          StudioEC: Stopnja 4
-        events:
-          desc: Skokica (beta)
-          Bounce: Stopnja 1
-          Studio: Stopnja 2
-        builder:
-          desc: Ustvari uganko (beta)
-          Custom: Stopnja 1
-        flappy:
-          desc: Plahutač (Flappy)
-          Flappy: Stopnja 1
-        jigsaw:
-          desc: Sestavljanka (beta)
-          Jigsaw: Stopnja 1
-        step:
-          desc: Labirint (beta)
-          MazeStep: Nivo
-        wordsearch:
-          desc: Čebelica črkuje besede (beta)
-          WordSearch: Stopnja 1
     game:
       name:
         Unplug1: Uvod v računalništvo
@@ -235,7 +165,7 @@ sl:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: Ustvarite svojo igrico Skokica. Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
@@ -489,6 +419,7 @@ sl:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

@@ -1,75 +1,5 @@
 "nn":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introduksjon til informatikk for barne- og ungdomstrinnet
-          Unplug1: Steg 1
-          Maze: Steg 2
-          Unplug2: Steg 3
-          Unplug3: Steg 4
-          Artist: Steg 5
-          Unplug4: Steg 6
-          Artist2: Steg 7
-          Unplug5: Steg 8
-          Farmer: Steg 9
-          Unplug6: Steg 10
-          Artist3: Steg 11
-          Unplug7: Steg 12
-          Farmer2: Steg 13
-          Unplug8: Steg 14
-          Artist4: Steg 15
-          Unplug9: Steg 16
-          Farmer3: Steg 17
-          Unplug10: Steg 18
-          Artist5: Steg 19
-          Unplug11: Steg 20
-        Hour of Code:
-          desc: Kodetimen
-          Maze: Steg 1
-        Edit Code:
-          desc: Rediger kode (beta)
-          MazeEC: Steg 1
-        2014 Levels:
-          desc: Sprett (beta)
-          Bounce: Steg 1
-        Builder Levels:
-          desc: Brukarane sine oppgåver (beta)
-          Custom: Steg 1
-        Flappy Levels:
-          desc: Flaksefugl
-          Flappy: Steg 1
-        Jigsaw Levels:
-          desc: Puslespel (beta)
-          Jigsaw: Steg 1
-        Step Levels:
-          desc: Labyrint (beta)
-          MazeStep: Scenesteg
-        edit-code:
-          desc: Rediger kode (beta)
-          MazeEC: Steg 1
-          Applab: Steg 2
-          ArtistEC: Steg 3
-          StudioEC: Steg 4
-        events:
-          desc: Sprett (beta)
-          Bounce: Steg 1
-          Studio: Steg 2
-        builder:
-          desc: Brukarane sine oppgåver (beta)
-          Custom: Steg 1
-        flappy:
-          desc: Flaksefugl
-          Flappy: Steg 1
-        jigsaw:
-          desc: Puslespel (beta)
-          Jigsaw: Steg 1
-        step:
-          desc: Labyrint (beta)
-          MazeStep: Scenesteg
-        wordsearch:
-          desc: Stavekonkurranse (beta)
-          WordSearch: Steg 1
     game:
       name:
         Unplug1: Introduksjon til informatikk
@@ -760,6 +690,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

@@ -1,75 +1,5 @@
 zh:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 資訊科學課程簡介
-          Unplug1: 階段 1
-          Maze: 階段 2
-          Unplug2: 階段 3
-          Unplug3: 階段 4
-          Artist: 階段 5
-          Unplug4: 階段 6
-          Artist2: 階段 7
-          Unplug5: 階段 8
-          Farmer: 階段 9
-          Unplug6: 階段 10
-          Artist3: 階段 11
-          Unplug7: 階段 12
-          Farmer2: 階段 13
-          Unplug8: 階段 14
-          Artist4: 階段 15
-          Unplug9: 階段 16
-          Farmer3: 階段 17
-          Unplug10: 階段 18
-          Artist5: 階段 19
-          Unplug11: 階段 20
-        Hour of Code:
-          desc: 一小時的程式設計課程
-          Maze: 階段 1
-        Edit Code:
-          desc: 編輯代碼(測試版)
-          MazeEC: 階段 1
-        2014 Levels:
-          desc: 反彈 (測試版)
-          Bounce: 階段 1
-        Builder Levels:
-          desc: 使用者創建的謎題(測試版)
-          Custom: 階段 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: 階段 1
-        Jigsaw Levels:
-          desc: 拼圖 (測試版)
-          Jigsaw: 階段 1
-        Step Levels:
-          desc: 迷宮(測試版)
-          MazeStep: 階段步驟
-        edit-code:
-          desc: 編輯代碼(測試版)
-          MazeEC: 階段 1
-          Applab: 階段 2
-          ArtistEC: 階段 3
-          StudioEC: 階段 4
-        events:
-          desc: 反彈 (測試版)
-          Bounce: 階段 1
-          Studio: 階段 2
-        builder:
-          desc: 使用者創建的謎題(測試版)
-          Custom: 階段 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: 階段 1
-        jigsaw:
-          desc: 拼圖 (測試版)
-          Jigsaw: 階段 1
-        step:
-          desc: 迷宮(測試版)
-          MazeStep: 階段步驟
-        wordsearch:
-          desc: 拼字比賽 (測試版)
-          WordSearch: 階段 1
     game:
       name:
         Unplug1: 電腦科學導論
@@ -383,7 +313,7 @@ zh:
         Unplug6: 流程類別
         Unplug7: 寫歌
         Unplug8: 抽象
-        Unplug9: Relay programming
+        Unplug9: 接力程式設計
         Unplug10: 互聯網
         Unplug11: 總結
         C1_happy_maps_unplugged: 快樂地圖
@@ -414,7 +344,7 @@ zh:
         C2_playlab_createstory: 'Play Lab : 創造一個故事'
         C2_graph_paper: 圖畫紙程式設計
         C2_conditionals_with_cards: 流程類別
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: 二進位的手環
         C2_relay_programming: 接力式程式設計
         C2_paper_airplanes: 紙飛機
         C2_digital_footprint: 你的數位足跡
@@ -434,8 +364,8 @@ zh:
         C3_computational_thinking: 電腦計算式思維
         C3_dice_race: 骰子比賽
         C3_internet: 互聯網
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_crowdsourcing: 互聯網的資源
+        C3_functional_suncatchers: 實用漸進式的學習
         C3_songwriting_with_parameters: 用參數作曲
         C4_intro: 介紹
         C4_loops_zombie: 迴圈類
@@ -488,6 +418,7 @@ zh:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

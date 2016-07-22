@@ -2,15 +2,6 @@
   data:
     script:
       name:
-        test:
-          'Jigsaw: Learn to drag and drop': "拼圖: 學會拖放"
-          The Maze: "迷宮"
-          Multi: Multi
-          Match: "配對"
-          Math Image: "數學圖像"
-          title: "測試課程"
-          description: "只是一個內部測試的課程。"
-          description_short: "只是一個內部測試的課程。"
         course1:
           'Jigsaw: Learn to drag and drop': "拼圖: 學會拖放"
           'Maze: Sequence': "迷宮: 序列"
@@ -24,7 +15,7 @@
           'Bee 2: Loops': "蜜蜂 2： 迴圈"
           Multi & Match: Https://crowdin. com/translate/codeorg/38/enus-zhtw#5835
           K-1 Flappy: Https://crowdin. com/translate/codeorg/38/enus-zhtw#5836
-          Flappy non blockly: Flappy non blockly
+          Flappy non blockly: "飛翔的笨鳥（Flappy Bird 的遊戲簡稱）"
           title: "課程 1"
           Artist 2: "小畫家 2"
           Happy Maps: "快樂地圖"
@@ -53,7 +44,7 @@
           'Studio: Create a Story': "播放實驗室: 創造一個故事"
           Artist Loops: "畫家：迴圈"
           Bee Conditionals: "蜜蜂：判斷條件"
-          Flappy: Flappy
+          Flappy: "飛翔"
           title: "課程 2"
           Bee Loops: "蜜蜂 迴圈"
           Artist Functions: "角色功能"
@@ -64,9 +55,9 @@
           Graph Paper Programming: "圖畫紙程式設計"
           'Real-life Algorithms: Paper Planes': "真實生活裡的演算法: 紙飛機"
           Getting Loopy: "愈來愈糟"
-          Relay programming: Relay programming
+          Relay programming: "接力程式設計"
           Conditionals: "流程類別"
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: "二進位的手環"
           The Big Event: "大事件"
           Your Digital Footprint: "你的數位足跡"
           description: "課程 2 給已有閱讀能力、但沒有任何寫程式經驗的學生。在這個課程裡，學生將編寫程式來解決問題，並且開發有互動的遊戲或故事分享給任何人。建議給二至五年級的學生參加。"
@@ -101,12 +92,12 @@
           Maze Conditionals: "迷宮： 條件"
           Artist Functions with Parameters: "畫家： 帶參數的函式"
           Computational Thinking: "電腦計算式思維"
-          Functional Suncatchers: Functional Suncatchers
+          Functional Suncatchers: "實用漸進式的學習"
           Songwriting Parameters: "作曲參數"
           Dice Race: "骰子比賽"
           Internet: "互聯網"
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
+          Crowdsourcing: "互聯網的資源"
+          Digital Citizenship: "數位公民(對於信息技術使用有適當且負責任的行為規範與參與）"
           Farmer - While Loops: "農夫 - While 迴圈　"
           description: "課程3是為已經完成課程2的學生設計的。學生將深入前面介紹的程式設計主題到靈活的解法和更複雜的問題。這門課程結束時，學生將創建互動式故事和遊戲並可以與任何人分享。建議
             4-5 年級。"
@@ -173,11 +164,11 @@
           'Artist: For Loops': "小畫家: For 迴圈"
           'Play Lab: For Loops': "播放實驗室: For 迴圈"
           'Artist: Functions': "畫家：函數"
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          'Unplugged: Tangrams': "不用電器設備活動：七巧版"
           Artist: "畫家"
           Bee: "蜜蜂"
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
+          'Unplugged: Envelope Variables': "不用電器設備活動：信封中的變數"
+          'Unplugged: Madlibs': "不用電器設備活動：接字遊戲"
           'Unplugged: For Loop Fun': "真人分享: For 迴圈的樂趣"
           'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
           'Artist: Functions with Parameters': "角色： 帶參數的函式"
@@ -216,17 +207,6 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: "變數類"
           For Loops: For 迴圈
-          Binary: "二進位"
-        potus:
-          title: "特別"
-          description_short: "特別"
-          description: "特別"
-          Special: "特別"
-        special:
-          title: "特別"
-          description_short: "特別"
-          description: "特別"
-          Special: "特別"
           Binary: "二進位"
         algebra:
           title: Computer Science in Algebra
@@ -401,28 +381,8 @@
           description: ''
           description_short: "嘗試計算機科學的基礎知識與許多好玩的人物！"
           Hour of Code 2013: "一小時Code 2013"
-        Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: "挑戰自己 ！"
-          description: "試試這些有趣的編碼拼圖。盡力 ！"
-          Puzzles: Puzzles
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
-          description_short: "挑戰自己 ！"
-          description: "試試這些有趣的編碼拼圖。盡力 ！"
-          Puzzles: Puzzles
-        Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: "挑戰自己 ！"
-          description: "試試這些有趣的編碼拼圖。盡力 ！"
-          Puzzles: Puzzles
-        How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: "挑戰自己 ！"
-          description: "試試這些有趣的編碼拼圖。盡力 ！"
-          Puzzles: Puzzles
-        Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
           description_short: "挑戰自己 ！"
           description: "試試這些有趣的編碼拼圖。盡力 ！"
           Puzzles: Puzzles
@@ -740,25 +700,6 @@
           Strings and Images: "字串和圖像"
           The Design Recipe: "設計程序"
           Next Steps: Next Steps
-        sciPD complex adaptive 2:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: PD 簡介
-          Pre-Workshop Online Component: Pre-Workshop Online Component
-        sciPD complex adaptive forum:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: PD 簡介
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
-            Systems
-        Glenallan Career Day Demo:
-          new stage: new stage
-          title: Glenallan Career Day Demo
-          description_short: Let's make some puzzles!
-          description: "試試這些有趣的編碼拼圖。盡力 ！"
-          Puzzles: Puzzles
         ECSPD-NexTech:
           Introduction to PD: PD 簡介
           What is ECS?: What is ECS?
@@ -847,15 +788,6 @@
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
-        ui_tests:
-          title: UI Tests
-          description: Script for test. Careful, don't change level ordering.
-          description_short: Script for test. Careful, don't change level ordering.
-          All the Tests: All the Tests
-          Free Response: Free Response
-          Multi: Multi
-          Big Game: Big Game
-          new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -870,6 +802,13 @@
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
+          Welcome!: "歡迎！"
+          Review StarLogo Nova: Review StarLogo Nova
+          Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
+          Revisiting Agent Movement: Revisiting Agent Movement
+          Epidemic Model Extensions: Epidemic Model Extensions
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "總結"
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -963,7 +902,7 @@
           Bee: "蜜蜂"
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
+          Flappy: "飛翔"
           Bounce: "彈跳"
           Multi: Multi
           Match: "配對"
@@ -993,6 +932,9 @@
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
           Swapped Levels: Swapped Levels
+          Gamelab: Gamelab
+          Anonymous student survey: Anonymous student survey
+          Anonymous student survey 2: Anonymous student survey 2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1022,17 +964,6 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: "歡迎！"
-        CSPfac intro:
-          title: 'CS Principles Facilitator Workshop '
-          description: Online levels for PD workshop
-          description_short: Online levels for PD workshop
-          Welcome!: "歡迎！"
-          Pixelation Widget: Pixelation Widget
-          Text Compression Widget: Text Compression Widget
-          Internet Simulator: "網路模擬器"
-          App Lab: App Lab
-          Broadcast Lesson: Broadcast Lesson
-          Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -1108,12 +1039,6 @@
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
           Equity PD: Equity PD
-        hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
-          Hour of Code: "一小時的程式設計課程"
-          Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1281,7 +1206,7 @@
           Building a Foundation: "建立基礎"
           Getting Loopy: "愈來愈糟"
           The Big Event: "大事件"
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: "二進位的手環"
           Songwriting: "寫歌"
         afterschool1:
           title: Afterschool 1
@@ -1298,13 +1223,6 @@
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
             messages using a Vigenere Cipher
           Vigenere: Vigenere
-        frequency:
-          title: Frequency Analysis Widget
-          description_short: Frequency Analysis Widget
-          description: Use the Frequency Analysis Widget to analyze letter frequencies
-            in an input text compared to expected frequencies for standard English.
-            Use that comparison to explore cracking Shift and Substitution Ciphers.
-          Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
           description_short: CS in Algebra blended online school year study
@@ -1646,11 +1564,6 @@
           description_short: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           description: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           Hour of Code 2015: Hour of Code 2015
-        minecraft:
-          title: "當個創世神"
-          description_short: Use code to survive in a Minecraft world!
-          description: Use code to survive in a Minecraft world!
-          Craft: Craft
         mc:
           title: Minecraft 程式碼時間
           description_short: "從程式碼的角度探索 Minecraft 的世界"
@@ -1981,6 +1894,9 @@
           Complex Conditionals: Complex Conditionals
           Proposed Sprites and Props: Proposed Sprites and Props
           Conditionals Update: Conditionals Update
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
+          Complex Sprite Movement: Complex Sprite Movement
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2102,14 +2018,6 @@
           description: introduction to the internet simulator and a discussion of
             how we use it to teach the internet
           netsim: netsim
-        Test CPS PD:
-          test Unit 1 required reading: test Unit 1 required reading
-          test Unit 1 content module Alpha: test Unit 1 content module Alpha
-          test Unit 1 content module Bravo: test Unit 1 content module Bravo
-          test Unit 1 content module Charlie: test Unit 1 content module Charlie
-          test Unit 1 practice module Delta: test Unit 1 practice module Delta
-          test Unit 1 practice module Echo: test Unit 1 practice module Echo
-          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
         csp-facilitators:
           title: CSP Tool Overview
           description_short: Introduction to CS Principles for new Facilitators
@@ -2268,6 +2176,11 @@
           Loops Unplugged: Loops Unplugged
           Events Unplugged: Events Unplugged
           Events: "事件類別"
+          Fuzz Fiesta: Fuzz Fiesta
+          title: Kindergarten
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2290,18 +2203,54 @@
           'Project #2': 'Project #2'
           'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
           Internet: "互聯網"
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
+          Crowdsourcing: "互聯網的資源"
+          Digital Citizenship: "數位公民(對於信息技術使用有適當且負責任的行為規範與參與）"
+          'Unplugged: Conditionals with Cards': 'Unplugged: Conditionals with Cards'
+          'Unplugged: Decision Trees (New)': 'Unplugged: Decision Trees (New)'
+          'Unplugged: Nested Loops (New)': 'Unplugged: Nested Loops (New)'
+          Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested
+            Loops)
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration
           Sequences & Algorithms: Sequences & Algorithms
           'Jigsaw: Learn to drag and drop': "拼圖: 學會拖放"
+          Debugging: Debugging
+          Programming Unplugged: Programming Unplugged
+          Programming: Programming
+          Being Safe Online: Being Safe Online
+          Loops Unplugged: Loops Unplugged
+          Loops: "迴圈類"
+          Events Unplugged: Events Unplugged
+          Events: "事件類別"
+          More Computer Science: More Computer Science
+          title: Grade 1
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 10-110
+          Mixed Review (Ramp Up): Mixed Review (Ramp Up)
+          'Unplugged: Envelope Variables': "不用電器設備活動：信封中的變數"
+          'Unplugged: Madlibs': "不用電器設備活動：接字遊戲"
+          'Artist: Variables': "小畫家: 變數"
+          'Play Lab: Variables': "播放實驗室: 變數"
+          'Unplugged: For Loop Fun': "真人分享: For 迴圈的樂趣"
+          'Bee: For Loops': "蜜蜂： For 迴圈"
+          'Artist: For Loops': "小畫家: For 迴圈"
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+          'Artist: Functions with Parameters': "角色： 帶參數的函式"
+          'Play Lab: Functions with Parameters': "播放實驗室: 帶參數的函數"
+          'Bee: Functions with Parameters': "蜜蜂: 帶參數的函數"
+          'Play Lab: Events and Conditionals': 'Play Lab: Events and Conditionals'
+          'Project: Chase/Collect Game': 'Project: Chase/Collect Game'
+          Scratch (Optional Third-Party Stage): Scratch (Optional Third-Party Stage)
+          'Unplugged: Binary Images': 'Unplugged: Binary Images'
+          'Pixelation: Binary Exploration': 'Pixelation: Binary Exploration'
+          Artist Binary: "小畫家 二進位"
         ecs-unit1:
           title: ECS Part 1
           description_short: 'Unit 1: Human-Computer Interaction'
@@ -2351,3 +2300,132 @@
           'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
             Muddy City'
           Day 18-21 Final Project: Day 18-21 Final Project
+        ecs-unit3:
+          title: ECS Unit 3
+          description_short: 'Unit 3: Web Design'
+          description: 'Unit 3: Web Design'
+          Getting Started: Getting Started
+          Intro to Unit 3: Intro to Unit 3
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+        ecs-unit4:
+          title: ECS Unit 4
+          description_short: 'Unit 4: Programming'
+          description: 'Unit 4: Programming'
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+        ecs-unit5:
+          title: ECS Unit 5
+          description_short: 'Unit 5: Computer and Data Analysis'
+          description: 'Unit 5: Computer and Data Analysis'
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Unit 5 lessons: Unit 5 lessons
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ecs-unit6:
+          title: ECS Unit 6
+          description_short: 'Unit 6: Robotics'
+          description: 'Unit 6: Robotics'
+          Getting Started: Getting Started
+          Unit 6 Overview: Unit 6 Overview
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
+        grade3:
+          Farmer Graph Paper Programming: Farmer Graph Paper Programming
+          Robot Games: Robot Games
+          About My Robot: About My Robot
+          Farmer Debug Relay Programming: Farmer Debug Relay Programming
+          Robot Debugging: Robot Debugging
+          Robot Farmer Loops: Robot Farmer Loops
+          Robot Farmer Conditionals Intro: Robot Farmer Conditionals Intro
+          Farmer Conditional with Cards: Farmer Conditional with Cards
+          Farmer Robot Conditionals: Farmer Robot Conditionals
+          Farmer Robot Conditionals with Else: Farmer Robot Conditionals with Else
+          Choose Your Own Adventure: Choose Your Own Adventure
+          Unplugged Conditionals with Loops: Unplugged Conditionals with Loops
+          Robot Farmer Conditionals with Loops: Robot Farmer Conditionals with Loops
+          Robot Running the Farm: Robot Running the Farm
+          Farmer Impacts of Computing: Farmer Impacts of Computing
+          Preview to What is Next: Preview to What is Next
+          title: Grade 3
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        alltheplcthings:
+          title: Sample course for PLC things
+          description_short: This is a sample course that has all of the plc special
+            things
+          description: This is a sample course that has all of the plc special things.
+            Enrollment in this course does nothing. Right now, it's just a copy of
+            TeacherCon
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: Lesson 1,4
+          Lesson 1,6: Lesson 1,6
+          Lesson 1,9: Lesson 1,9
+          Lesson 1,10: Lesson 1,10
+          Lesson 1,11: Lesson 1,11
+          Lesson 2,2: Lesson 2,2
+          Lesson 2,3: Lesson 2,3
+          Lesson 2,10: Lesson 2,10
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+        csd3:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: Programming
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
+          Variables and Animation: Variables and Animation
+          Sprites and Properties: Sprites and Properties
+          Sprites and Images: Sprites and Images
+          Booleans and Conditionals: Booleans and Conditionals
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Complex Conditionals: Complex Conditionals
+          'Project: Interactive Card': 'Project: Interactive Card'
+        grade2:
+          Online My New Pet Jigsaw: Online My New Pet Jigsaw
+          Build A Block: Build A Block
+          Caring for my new pet: Caring for my new pet
+          Pet's New Home: Pet's New Home
+          Exploring the neighborhood: Exploring the neighborhood
+          At The Dog Park: At The Dog Park
+          Build A Puppy Picture: Build A Puppy Picture
+          Have a name needs a do tag: Have a name needs a do tag
+          Getting Loopy: "愈來愈糟"
+          Puppy Introduction: Puppy Introduction
+          Big Event: Big Event
+          Online Internet Safety: Online Internet Safety
+          Free Play with your Pet: Free Play with your Pet
+          Flappy: "飛翔"
+          title: Grade 2
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+          Caring for My New Pet: Caring for My New Pet
+          New Home for My Pet: New Home for My Pet
+          Exploring the Neighborhood: Exploring the Neighborhood
+          Make a Dog Tag: Make a Dog Tag
+          Getting Loopy with Puppy: Getting Loopy with Puppy
+          Puppy Loops: Puppy Loops
+          Puppy Event: Puppy Event

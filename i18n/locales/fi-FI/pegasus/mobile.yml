@@ -45,7 +45,7 @@ fi-FI:
   csedweek_map_legend_cs_tech_jam: Tietojenkäsittelytieteen opetusviikko
   cded_sign_up: Luo käyttäjätunnus
   cded_try_it: Kokeile
-  twentyhours_trynow: Kokeile nyt
+  try_now: Kokeile nyt
   california_heading: Pyydä kouluasi opettamaan tietojenkäsittelytiedettä
   california_text: "Opettajat voivat tarjota <a href='http://studio.code.org/'>ilmaisia kursseja</a>.  Peruskoulut voivat <a href='http://code.org/educate/k5'>opettaa tietojenkäsittelytiedettä</a>. Pyydä lukioita <a href='http://code.org/educate/districts'>tekemään yhteistyötä kanssamme."
   california_button: Lisätietoja
@@ -374,14 +374,9 @@ fi-FI:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
   starwars_javascript_specs: Vain englanti | Modernit selaimet | Yli 11-vuotiaille
-  starwars_javascript_start_button: Kokeile nyt
   starwars_blocks_title: lohkot
   starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
   starwars_blocks_specs: Monia kieliä | Modernit selaimet, älypuhelimet, tabletit | Ikävuodet 6-10
-  starwars_blocks_start_button: Kokeile nyt
-  starwars_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
-  starwars_speak_languages: Puhutko muuta kieltä?
-  starwars_help_translate: Auta meitä kääntämisessä
   starwars_platform_text: Nykyaikaiset selaimet, älypuhelimet, tabletit
   mc_name: Minecraft Koodaustunti
   mc_longdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman.
@@ -390,6 +385,11 @@ fi-FI:
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
   minecraft_subtitle: Minecraft Koodaustunti
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena Koodaustunnille.
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
@@ -519,6 +519,8 @@ fi-FI:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -533,6 +535,7 @@ fi-FI:
   dashboard_navigation_view_progress: Edistyminen
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
@@ -681,9 +684,10 @@ fi-FI:
   dashboard_faq_k5: 'Esi- ja alakoulu, usein kysyttyjä kysymyksiä'
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Lue lisää
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Koodaustunti on täällä - 8.-14. Joulukuuta!'
@@ -1217,9 +1221,8 @@ fi-FI:
   processing_beyond_longdescription: Processing on ohjelmointikieli, kehitysympäristö ja verkkoyhteisö. Vuodesta 2001 lähtien Processing on kannustanut ohjelmointilukutaitoa kuvaamataiteissa ja visuaalista lukutaitoa teknologiassa. Aluksi se luotiin palvelemaan ohjelmoinnin luonnoskirjana ja opettamaan ohjelmoinnin perusteita visuaalisessa ympäristössä, josta Processing on kehittynyt ammattilaisten kehitystyökaluksi. Nykyään kymmenet tuhannet opiskelijat, suunnittelijat, tutkijat ja harrastajat käyttävät Processingia oppimisessa, prototyypeissä ja tuotannossa.
   alice_beyond_longdescription: Käyttäen innovatiivista ohjelmointiympäristöä tukemaan 3D-animaatioiden luomista, Alice-projekti tarjoaa työkaluja ja materiaaleja automatisointiajattelun opettamiseen ja oppimiseen, ongelmanratkaisuun ja ohjelmointiin eri ikäisille ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan. Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.
-  compatibility_https_header: Ota HTTPS käyttöön sivulla Code.org.
-  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-  compatibility_https_hide_this_warning: Piilota varoitus
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

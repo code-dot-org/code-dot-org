@@ -1,79 +1,5 @@
 zh:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 计算机科学课程简介
-          Unplug1: 第一阶段
-          Maze: 第二阶段
-          Unplug2: 第三阶段
-          Unplug3: 第四阶段
-          Artist: 第五阶段
-          Unplug4: 第六阶段
-          Artist2: 第七阶段
-          Unplug5: 第八阶段
-          Farmer: 第九阶段
-          Unplug6: 阶段 10
-          Artist3: 阶段 11
-          Unplug7: 阶段 12
-          Farmer2: 阶段 13
-          Unplug8: 阶段 14
-          Artist4: 阶段 15
-          Unplug9: 阶段 16
-          Farmer3: 阶段 17
-          Unplug10: 阶段 18
-          Artist5: 阶段 19
-          Unplug11: 阶段 20
-        Hour of Code:
-          desc: 编程一小时
-          Maze: 第一阶段
-        Edit Code:
-          desc: |
-            编辑代码 (测试版)
-            
-          MazeEC: 第一阶段
-        2014 Levels:
-          desc: 反弹 (测试版)
-          Bounce: 第一阶段
-        Builder Levels:
-          desc: 用户创建的关卡 （测试版）
-          Custom: 第一阶段
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: 第一阶段
-        Jigsaw Levels:
-          desc: 拼图 (测试版)
-          Jigsaw: 第一阶段
-        Step Levels:
-          desc: 迷宫 (测试版)
-          MazeStep: 阶段步骤
-        edit-code:
-          desc: |
-            编辑代码 (测试版)
-            
-          MazeEC: 第一阶段
-          Applab: 第二阶段
-          ArtistEC: 第三阶段
-          StudioEC: 第四阶段
-        events:
-          desc: 反弹 (测试版)
-          Bounce: 第一阶段
-          Studio: 第二阶段
-        builder:
-          desc: 创建用户的谜题 （测试版）
-          Custom: 第一阶段
-        flappy:
-          desc: Flappy Bird
-          Flappy: 第一阶段
-        jigsaw:
-          desc: 拼图 (测试版)
-          Jigsaw: 第一阶段
-        step:
-          desc: 迷宫 (测试版)
-          MazeStep: 阶段步骤
-        wordsearch:
-          desc: 拼字比赛 (测试版)
-          WordSearch: 第一阶段
     game:
       name:
         Unplug1: 计算机科学导论
@@ -491,6 +417,7 @@ zh:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

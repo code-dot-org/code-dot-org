@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: "Événement spécial"
   cded_sign_up: Inscription
   cded_try_it: Participez
-  twentyhours_trynow: Essaie dès maintenant
+  try_now: Essaie maintenant
   california_heading: Demandez à votre école d'enseigner l'Informatique
   california_text: Tout enseignant peut offrir nos <a href='http://studio.code.org/'>cours
     gratuits</a>. Toute école élémentaire peut <a href='http://code.org/educate/k5'>enseigner
@@ -470,15 +470,10 @@
     et JavaScript.
   starwars_javascript_specs: En anglais seulement | Navigateurs modernes | 11 ans
     et +
-  starwars_javascript_start_button: Essaie dès maintenant
   starwars_blocks_title: Blocs
   starwars_blocks_description: Utilise les blocs « Glisser-Déposer ».
   starwars_blocks_specs: Multi-langues | Navigateurs modernes, smartphones, tablettes
     | de 6 à 106 ans
-  starwars_blocks_start_button: En savoir plus
-  starwars_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer.
-  starwars_speak_languages: Vous parlez une autre langue ?
-  starwars_help_translate: Aidez-nous à traduire
   starwars_platform_text: Navigateurs récents, smartphones, tablettes
   mc_name: Heure de Code Minecraft
   mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex vivre une
@@ -489,6 +484,12 @@
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
   minecraft_subtitle: Une Heure de Code Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspirer les élèves et les bénévoles
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir
     Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils
@@ -709,6 +710,8 @@
     au dessus et vous y verrez les réponses de vos élèves.
   dashboard_assessments_summaries: Résumés
   dashboard_assessments_answers: Toutes les réponses
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtrer par étape :'
   dashboard_filter_all: Tout
   dashboard_download_csv: Télécharger en CSV
@@ -724,6 +727,7 @@
   dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: Root->dashboard_navigation_voir_text_réponses
   dashboard_navigation_view_assessments: "Évaluations"
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -930,7 +934,12 @@
     Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier.
     Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au
     4 janvier."
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Pour en savoir plus
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
     visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
     Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
@@ -1856,12 +1865,11 @@
   sphero_beyond_longdescription: Que vous soyez un éducateur ou un parent, les leçons
     SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots,
     tout en affûtant leurs compétences en mathématiques et en sciences.
-  compatibility_https_header: Veuillez activer HTTPS pour Code.org.
-  compatibility_https_message: Pour augmenter la sécurité, nous passons en HTTPS le
-    % {https_date}. Vous ne serez pas en mesure d'accéder à Code.org après cette date.
-    <a href='%{it_requirements_url}'>Cliquez ici</a> pour savoir comment activer HTTPS
-    pour Code.org.
-  compatibility_https_hide_this_warning: Masquer cet avertissement
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1870,22 +1878,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

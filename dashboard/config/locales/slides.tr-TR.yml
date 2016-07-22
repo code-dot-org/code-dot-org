@@ -613,18 +613,17 @@
           veya oyun kollarından neredeyse daha önemlidir.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: The main event we're watching for is that "Update" tick happening. And
-          then we check the joystick in the tick. So we say, "Oh, has somebody pushed
-          the button this frame? Yes or no?" Without events, the player couldn't move,
-          you couldn't jump, you wouldn't be able to control what's going on. The
-          videogame wouldn't be able to animate anything.
+        text: Ana Karşılaşma için izliyoruz o "Güncelleştirme" için doğrulama oluyor.
+          Ve biz doğrulama için joystick'i denetliyoruz. Yani biz, "Oh, var birisi
+          düğmeye bu çerçeve? Evet ya da Hayır?" Olaylar, olmadan oyuncu hareket ettiremedim,
+          seni atlamak olamaz, ne olup bittiğini kontrol etmek mümkün değil. Video
+          oyunun da bir şey hareketlendirmek mümkün olmaz.
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+        text: Kum heykel bu başarısızlık öğrenmem lazım programın bir parçasıdır.
+          Ama sen devam edersen, hiçbir şey alamayacaksın ama daha iyi ve daha heyecanlı
+          olmalısın. Oyunun adı kalıcıdır. Kalıcılığını seveceksin.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: This lesson is called building a foundation. In this lesson, we'll work

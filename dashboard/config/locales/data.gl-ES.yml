@@ -1,75 +1,5 @@
 "gl":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introdución ao curso de informática até ao 3 ciclo
-          Unplug1: 1.ª ETAPA
-          Maze: 2.ª ETAPA
-          Unplug2: 3.ª ETAPA
-          Unplug3: 4.ª ETAPA
-          Artist: 5.ª ETAPA
-          Unplug4: 6.ª ETAPA
-          Artist2: 7.ª ETAPA
-          Unplug5: 8.ª ETAPA
-          Farmer: 9.ª ETAPA
-          Unplug6: 10.ª ETAPA
-          Artist3: 11.ª ETAPA
-          Unplug7: 12.ª ETAPA
-          Farmer2: 13.ª ETAPA
-          Unplug8: 14.ª ETAPA
-          Artist4: 15.ª ETAPA
-          Unplug9: 16.ª ETAPA
-          Farmer3: 17.ª ETAPA
-          Unplug10: 18.ª ETAPA
-          Artist5: 19.ª ETAPA
-          Unplug11: 20.ª ETAPA
-        Hour of Code:
-          desc: Hora de Código
-          Maze: 1.ª ETAPA
-        Edit Code:
-          desc: Editar Código (beta)
-          MazeEC: 1.ª ETAPA
-        2014 Levels:
-          desc: Rebote (beta)
-          Bounce: 1.ª ETAPA
-        Builder Levels:
-          desc: Xogos creados polos usuarios (beta)
-          Custom: 1.ª ETAPA
-        Flappy Levels:
-          desc: Paxaro Flappy
-          Flappy: 1.ª ETAPA
-        Jigsaw Levels:
-          desc: Crebacabezas (beta)
-          Jigsaw: 1.ª ETAPA
-        Step Levels:
-          desc: Labirinto (beta)
-          MazeStep: Paso da etapa
-        edit-code:
-          desc: Editar Código (beta)
-          MazeEC: 1.ª ETAPA
-          Applab: 2.ª ETAPA
-          ArtistEC: 3.ª ETAPA
-          StudioEC: 4.ª ETAPA
-        events:
-          desc: Rebote (beta)
-          Bounce: 1.ª ETAPA
-          Studio: 2.ª ETAPA
-        builder:
-          desc: Xogos creados polos usuarios (beta)
-          Custom: 1.ª ETAPA
-        flappy:
-          desc: Paxaro Flappy
-          Flappy: 1.ª ETAPA
-        jigsaw:
-          desc: Crebacabezas (beta)
-          Jigsaw: 1.ª ETAPA
-        step:
-          desc: Labirinto (beta)
-          MazeStep: Paso da etapa
-        wordsearch:
-          desc: Abella que Soletrea (beta)
-          WordSearch: 1.ª ETAPA
     game:
       name:
         Unplug1: Introdución á informática
@@ -791,6 +721,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

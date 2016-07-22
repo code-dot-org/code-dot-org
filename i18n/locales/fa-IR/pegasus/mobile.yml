@@ -1,10 +1,10 @@
 fa-IR:
-  hour_of_code: ساعتی با کد
+  hour_of_code: ساعت کد نویسی
   hello: سلام دنیا
   "yes": بله
   "no": نه
   select_language: لطفا زبان خود را انتخاب کنید
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org به زودی پشتیبانی از اینترنت اکسپلورر 8 و 9 و 10 را قطع می نماید. لطفا به یک مرورگر بروز و جدید ارتقا دهید.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: بیشتر بیاموزید
   en: علوم کامپیوتر
@@ -45,7 +45,7 @@ fa-IR:
   csedweek_map_legend_cs_tech_jam: رویدادهای ویژه
   cded_sign_up: ثبت نام
   cded_try_it: آن را امتحان کنید
-  twentyhours_trynow: هم اکنون شروع کنید
+  try_now: هم اکنون شروع کنید
   california_heading: از مدرسه تان بخواهید که علوم کامپیوتر را آموزش بدهد
   california_text: "هر دبیری می‌تواند <a href='http://studio.code.org/'>دوره‌های رایگان</a> ما را آموزش دهد. هر دبستانی می‌تواند <a href='http://code.org/educate/k5'>علوم کامپیوتر را آموزش دهد</a>. از دبیرستان‌ها بخواهید که <a href='http://code.org/educate/districts'>با ما همکاری کنند."
   california_button: بیشتر یاد بگیرید
@@ -71,27 +71,27 @@ fa-IR:
   congrats_next_tutorials_title: این آموزش های بعدی را سعی کنید
   congrats_next_tutorials_desc: 'این کوتاه تر را انجام دهید، ۱ ساعت آموزش یا <a href="%{current_path}/next">شریک آموزش</a> را امتحان کنید.'
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
-  view_course: View course
-  view_unit: View unit
+  view_course: مشاهده ی دوره
+  view_unit: واحد مشاهده
   make_app: یک نرم افزار درست کن
   congrats_guest_speaker_title: برای کلاست یک سخنران مهمان پیدا کن
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: یک سنخنران مهمان پیدا کن
   congrats_third_party_title: مهارتهای جدیدت را با این نرم افزارها و وب سایتها استفاده کن
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_kto8: نمرات K-8
+  third_party_gradelevel_kto2: نمرات K-2
+  third_party_gradelevel_2to8: 'رده ی سنی  2-8'
+  third_party_gradelevel_4to12: رده ی سنی 4-12
+  third_party_gradelevel_5to12: رده ی سنی 5-12
+  third_party_gradelevel_6plus: رده ی سنی 6 +
+  third_party_gradelevel_8plus: رده ی سنی 8+
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
   third_party_price_varies: 'قیمت: برنامه ها متفاوت هستند'
   third_party_price_free: 'قیمت: مجانی'
   third_party_price_299: 'قیمت: 2.99 دلار/دانلود'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_individual: 'قیمت هر فرد : بصورت رایگان و هر ماه 25$'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
@@ -297,7 +297,7 @@ fa-IR:
   homepage_banner_20k_teachers_link: بیشتر بیاموزید
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: Add your support
-  homepage_slot_text_title_hoc: ساعتی با کد
+  homepage_slot_text_title_hoc: ساعت کد نویسی
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
   homepage_slot_text_link_host: میزبان یک ساعت کدزنی باشید
@@ -374,14 +374,9 @@ fa-IR:
   starwars_javascript_title: ویژوال بیسیک
   starwars_javascript_description: استفاده از کشیدن و رها کردن بلوک و جاوا اسکریپت.
   starwars_javascript_specs: فقط انگلیسی | مرورگرهای مدرن | سنین 11 +
-  starwars_javascript_start_button: هم اکنون شروع کنید
   starwars_blocks_title: بلوک ها
   starwars_blocks_description: استفاده از کشیدن و رها کردن بلوک.
   starwars_blocks_specs: بسیاری از زبان | مرورگرهای مدرن, تلفن های هوشمند, تبلت | سنین 6-106
-  starwars_blocks_start_button: هم اکنون شروع کنید
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: به یک زبان دیگر صحبت کنید?
-  starwars_help_translate: کمک به ما در ترجمه
   starwars_platform_text: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -390,6 +385,11 @@ fa-IR:
   mc_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
@@ -519,6 +519,8 @@ fa-IR:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -533,6 +535,7 @@ fa-IR:
   dashboard_navigation_view_progress: پیشرفت
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: افزودن دانش آموز
   dashboard_navigation_manage_students: مدیریت دانش آموزان
   dashboard_navigation_lesson_plans_resources: برنامه‌ها و منابع درس
@@ -681,11 +684,12 @@ fa-IR:
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_announcements: اطلاعیه‌ها
   dashboard_announce_view_all: مشاهده همه
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: میخواهید به ما در بررسی یک ویژگی جدید کمک کنید؟ما میدانیم که تشویق دانش آموزان به تکرار کردن و آزمایش کردن امر مهمی است٫بنابراین ما میخواهیم ویژگی کد های استفاده نشده را اضافه کنیم تا دانش آموزان اجازه داشته باشند تا کد های خودشان را اجرا کنندحتی زمانی که بلوک های آزاد وجود دارند. ماقبل از انتشار عمومی این ویژگی از نظرات شما استقبال می کنیم.
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: بیشتر بیاموزید
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: نام خود را اضافه کنید
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
@@ -819,7 +823,7 @@ fa-IR:
   minecraft_name: ماینکرفت
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: ریاضی
-  hoc_category_name: ساعتی با کد
+  hoc_category_name: ساعت کد نویسی
   csf_category_name: CS Fundamentals
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
@@ -1216,9 +1220,8 @@ fa-IR:
   processing_beyond_longdescription: پردازش کردن یک زبان برنامه نویسی، محیط توسعه، و جامعه ی آنلاین است. از سال 2001، پردازش در تکنولوژی قابلیت نرم افزار را در هنر های تجسمی و شناسایی تصویر ارتقا داده است. پردازش که ابتدا ایجاد شد تا کتاب طراحی نرم افزار باشد و تا اصول برنامه نویسی کامپیوتر را در زمینه تصویری آموزش دهد، به یک ابزار توسعه برای حرفه ای ها ارتقا پیدا کرد. امروزه، ده ها هزار دانش آموز، هنرمند، طراح، محقق، و علاقه مند وجود دارد که از پردازش برای آموختن، نمونه سازی، و تولید استفاده می کند.
   alice_beyond_longdescription: پروژه ی آلیس با استفاده از یک محیط برنامه نویسی جدید برای پشتیبانی تولید انیمیشن های سه بعدی، ابزار ها و مواد برای یاد دادن و یاد گرفتن تفکر حل مساله به روش کامپیوتری، حل مساله، و برنامه نویسی کامپیوتر را برای طیفی از سنین و تحصیلات فراهم میکند.
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی های آن ها در ریاضی و علوم را تقویت می کند.
-  compatibility_https_header: لطفا مرور امن (HTTPS) را برای code.org فعال کنید.
-  compatibility_https_message: "برای افزایش امنیت سایت ما در تاریخ %{https_date} به حالت مرور امن (HTTPS) تغییر می کند. شما بعد از این تاریخ به Code.org دسترسی نخواهید داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>."
-  compatibility_https_hide_this_warning: مخفی کردن هشدار
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

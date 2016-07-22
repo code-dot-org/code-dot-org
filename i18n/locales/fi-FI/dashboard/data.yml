@@ -1,75 +1,5 @@
 fi:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Ala-asteen johdanto tietojenkäsittelyyn
-          Unplug1: Vaihe 1
-          Maze: Vaihe 2
-          Unplug2: Vaihe 3
-          Unplug3: Vaihe 4
-          Artist: Vaihe 5
-          Unplug4: Vaihe 6
-          Artist2: Vaihe 7
-          Unplug5: Vaihe 8
-          Farmer: Vaihe 9
-          Unplug6: Vaihe 10
-          Artist3: Vaihe 11
-          Unplug7: Vaihe 12
-          Farmer2: Vaihe 13
-          Unplug8: Vaihe 14
-          Artist4: Vaihe 15
-          Unplug9: Vaihe 16
-          Farmer3: Vaihe 17
-          Unplug10: Vaihe 18
-          Artist5: Vaihe 19
-          Unplug11: Vaihe 20
-        Hour of Code:
-          desc: Koodaustunti
-          Maze: Vaihe 1
-        Edit Code:
-          desc: Muokkaa koodia (beta)
-          MazeEC: Vaihe 1
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Vaihe 1
-        Builder Levels:
-          desc: Omatekoiset palapelit (beta)
-          Custom: Vaihe 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Vaihe 1
-        Jigsaw Levels:
-          desc: Palapeli (beta)
-          Jigsaw: Vaihe 1
-        Step Levels:
-          desc: Sokkelo (beta)
-          MazeStep: Vaiheen askel
-        edit-code:
-          desc: Muokkaa koodia (beta)
-          MazeEC: Vaihe 1
-          Applab: Vaihe 2
-          ArtistEC: Vaihe 3
-          StudioEC: Vaihe 4
-        events:
-          desc: Bounce (beta)
-          Bounce: Vaihe 1
-          Studio: Vaihe 2
-        builder:
-          desc: Omatekoiset palapelit (beta)
-          Custom: Vaihe 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Vaihe 1
-        jigsaw:
-          desc: Palapeli (beta)
-          Jigsaw: Vaihe 1
-        step:
-          desc: Sokkelo (beta)
-          MazeStep: Vaiheen askel
-        wordsearch:
-          desc: Kirjurimehiläinen (beta)
-          WordSearch: Vaihe 1
     game:
       name:
         Unplug1: Johdanto tietojenkäsittelyyn
@@ -484,6 +414,7 @@ fi:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

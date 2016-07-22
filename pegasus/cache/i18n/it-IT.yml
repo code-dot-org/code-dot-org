@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Eventi speciali
   cded_sign_up: Iscriviti
   cded_try_it: Prova
-  twentyhours_trynow: Prova adesso
+  try_now: Prova adesso
   california_heading: Chiedi alla tua scuola di insegnare informatica
   california_text: Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>corsi
     gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>insegnare
@@ -480,15 +480,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
   starwars_javascript_specs: Solo in inglese | Browser moderni | Da 11 anni in su
-  starwars_javascript_start_button: Prova adesso
   starwars_blocks_title: Blocchi
   starwars_blocks_description: Usa la programmazione a blocchi.
   starwars_blocks_specs: Molte lingue | Browser, smartphone e tablet moderni | Da
     6 anni in su
-  starwars_blocks_start_button: Prova adesso
-  starwars_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
-  starwars_speak_languages: Parli un'altra lingua?
-  starwars_help_translate: Aiutaci a tradurre
   starwars_platform_text: Browser moderni, smartphone, tablet
   mc_name: L'Ora del Codice con Minecraft
   mc_longdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
@@ -499,6 +494,11 @@
   mc_platformtext: Browser moderni, smartphone, Tablet
   mc_specs: Molte lingue | Browser e tablet moderni | Da 6 anni in su
   minecraft_subtitle: L'Ora del Codice con Minecraft
+  watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
+  speak_another_language: Parli un'altra lingua?
+  help_translate: Aiutaci a tradurre.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
     del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
@@ -715,6 +715,8 @@
     corso dal menu a tendina qui sopra per vedere le risposte degli studenti.
   dashboard_assessments_summaries: Riassunti
   dashboard_assessments_answers: Tutte le risposte
+  dashboard_surveys_answers: Sondaggi
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
   dashboard_download_csv: Scarica CSV
@@ -729,6 +731,7 @@
   dashboard_navigation_view_progress: Avanzamento
   dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
+  dashboard_navigation_view_surveys: Sondaggi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -929,7 +932,12 @@
     che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
     Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
     pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-  dashboard_announce_button_text: Testare la funzionalità
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Ulteriori informazioni
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
     ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
     è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -1829,12 +1837,11 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
-  compatibility_https_header: Serve abilitare il protocollo HTTPS per Code.org.
-  compatibility_https_message: Per aumentare la sicurezza, noi stiamo passando a HTTPS
-    su %{https_date}. Non sarete in grado di accedere Code.org dopo questa data. <a
-    href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare
-    HTTPS per accedere a Code.org.
-  compatibility_https_hide_this_warning: Nascondi questo avviso
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Il tuo browser non è supportato. Si prega di
+    aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'>
+    uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina,
+    ma aspettati qualche malfunzionamento.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1843,22 +1850,3 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

@@ -1,75 +1,5 @@
 "ro":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introducerea K-8 la cursul de Informatică
-          Unplug1: Etapa 1
-          Maze: Etapa 2
-          Unplug2: Etapa 3
-          Unplug3: Etapa 4
-          Artist: Etapa 5
-          Unplug4: Etapa 6
-          Artist2: Etapa 7
-          Unplug5: Etapa 8
-          Farmer: Etapa 9
-          Unplug6: Etapa 10
-          Artist3: Etapa 11
-          Unplug7: Etapa 12
-          Farmer2: Etapa 13
-          Unplug8: Etapa 14
-          Artist4: Etapa 15
-          Unplug9: Etapa 16
-          Farmer3: Etapa 17
-          Unplug10: Etapa 18
-          Artist5: Etapa 19
-          Unplug11: Etapa 20
-        Hour of Code:
-          desc: Ora de Programare
-          Maze: Etapa 1
-        Edit Code:
-          desc: Editează codul (beta)
-          MazeEC: Etapa 1
-        2014 Levels:
-          desc: Sări (beta)
-          Bounce: Etapa 1
-        Builder Levels:
-          desc: Puzzle-uri create de utilizator (beta)
-          Custom: Etapa 1
-        Flappy Levels:
-          desc: Pasărea Flappy
-          Flappy: Etapa 1
-        Jigsaw Levels:
-          desc: Puzzle (beta)
-          Jigsaw: Etapa 1
-        Step Levels:
-          desc: Labirint (beta)
-          MazeStep: Pas de Etapă
-        edit-code:
-          desc: Editează codul (beta)
-          MazeEC: Etapa 1
-          Applab: Etapa 2
-          ArtistEC: Etapa 3
-          StudioEC: Etapa 4
-        events:
-          desc: Sări (beta)
-          Bounce: Etapa 1
-          Studio: Etapa 2
-        builder:
-          desc: Puzzle-uri create de utilizator (beta)
-          Custom: Etapa 1
-        flappy:
-          desc: Pasărea Flappy
-          Flappy: Etapa 1
-        jigsaw:
-          desc: Puzzle (beta)
-          Jigsaw: Etapa 1
-        step:
-          desc: Labirint (beta)
-          MazeStep: Pas de Etapă
-        wordsearch:
-          desc: Albina ortografiind (beta)
-          WordSearch: Etapa 1
     game:
       name:
         Unplug1: Introducere în Informatică
@@ -399,9 +329,9 @@
         bounce_7: Atașează blocuri la fiecare din blocurile "când". Fă bila să ricoșeze
           până ajunge la țintă.
         bounce_10: Există un acum un gol în partea de sus. Atașează blocurile "scor"
-          și "scor oponent" la blocurile "când bilă in gaură" și "când bila ratează
+          și "scor oponent" la blocurile "când bila este in gaură" și "când bila ratează
           paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul
-          tău să realizeze scor de două ori.
+          tău să înscrie de două ori.
         bounce_11: Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi
           noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă
           să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte
@@ -804,6 +734,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

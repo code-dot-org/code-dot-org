@@ -140,6 +140,8 @@
     picture: Finn ditt hemmelege bilde
     words: Skriv inn hemmeleg ord
     login: Logg inn
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Har du gløymt passordet ditt?
@@ -286,6 +288,10 @@
       signin: Logg inn
       signup: Meld deg på
       already_registered: Alt registrert?
+      pair_programming: Parprogrammering
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: Framgangen til %{name}
       progress: Framgangen din
@@ -320,6 +326,7 @@
       example_with_number: Løysingsframlegg %{solution_number}
       submitted_on: 'Sendt inn:'
       unsubmit: Trekk tilbake
+      worked_with: Worked With
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'
@@ -394,7 +401,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Lær mer
+    announcement_learn_more_button: Lær meir
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -494,10 +501,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Lær meir
   slow_loading: Dette tar lengre tid enn vanleg...
   try_reloading: Last sida på nytt
@@ -674,39 +677,6 @@
     hour: 1 time
     day: dag
     week: veke
-  data:
-    script:
-      name:
-        20-hour:
-          title: Barneskuleintroduksjon til informatikkurs (15-25 timar)
-          description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
-            og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
-            og oppover, men det er morosamt å lære for alle aldersgruppe.
-        Hour of Code:
-          title: Kodetimen 2013
-          description: ''
-        edit-code:
-          title: Rediger kode
-          description: ''
-        events:
-          title: Hendingar
-          description: ''
-        builder:
-          title: Bygger
-          description: ''
-        flappy:
-          title: Flakse-kode
-          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa
-            i Flaksekode!
-        jigsaw:
-          title: Puslespill
-          description: ''
-        step:
-          title: Steg
-          description: ''
-        sample_level_builder:
-          title: Nivåbygge eksempel
-          description: ''
   age_interstitial:
     age: Din alder
     header: Oppdatering av kontoinformasjon
@@ -745,6 +715,8 @@
     share_copy_link: 'Kopier lenkja:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Lukk
@@ -773,6 +745,8 @@
     abuse:
       tos: Dette prosjektet er blitt rapportert for brot på Code.org sine <a href='http://code.org/tos'>Vilkår
         for bruk</a> og kan ikkje bli delt med andre.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Om du trur dette er ein feil, kan du <a href='https://code.org/contact'>kontakte
         oss.</a>
       go_to_code_studio: Gå til Code Studio
@@ -812,6 +786,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Søk etter et ikon...
@@ -831,13 +814,14 @@
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

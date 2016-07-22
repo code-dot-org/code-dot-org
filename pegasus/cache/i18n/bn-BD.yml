@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: "কম্পিউটার বিজ্ঞান প্রযুক্তি আড্ডা"
   cded_sign_up: "সাইন আপ"
   cded_try_it: "এটা চেষ্টা করুন।"
-  twentyhours_trynow: "এখন চেষ্টা করুন"
+  try_now: "এখন চেষ্টা করুন"
   california_heading: "আপনা্দের স্কুলে কম্পিউটার সায়েন্স শেখানোর ব্যাপারে কথা বলুন"
   california_text: যে কোন শিক্ষক আমাদের <a href='http://studio.code.org/'>এই কোর্স
     বিনামূল্যে</a> দিতে পারবেন। যে কোন সাধারন স্কুলে <a href='http://code.org/educate/k5'>
@@ -449,15 +449,10 @@
   starwars_javascript_title: "জাভাস্ক্রিপ্ট"
   starwars_javascript_description: "ড্র্যাগ-ড্রপ ব্লক এবং জাভাস্ক্রিপ্ট ব্যবহার করুন।"
   starwars_javascript_specs: "কেবল ইংরেজি | আধুনিক ব্রাউজার | বয়সের 11 +"
-  starwars_javascript_start_button: "এখন চেষ্টা করুন"
   starwars_blocks_title: "ব্লকসমূহ"
   starwars_blocks_description: "ড্র্যাগ-ড্রপ ব্লক ব্যবহার করুন।"
   starwars_blocks_specs: "অনেক ভাষা | আধুনিক ব্রাউজার, স্মার্টফোন, ট্যাবলেট | বয়সের
     6-10"
-  starwars_blocks_start_button: "এখন চেষ্টা করুন"
-  starwars_watch_videos: "আপনি শুরু করার আগে, অনুপ্রেরণীয় একটি ভিডিও দেখুন"
-  starwars_speak_languages: "অন্য ভাষায় কথা বলেন?"
-  starwars_help_translate: "আমাদের অনুবাদ সাহায্য করুন"
   starwars_platform_text: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   mc_name: "মাইনক্র্যাফট এক ঘণ্টার কোড"
   mc_longdescription: "স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
@@ -468,6 +463,12 @@
   mc_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   mc_specs: "অনেক ভাষা | আধুনিক ব্রাউজার এবং ট্যাবলেট | বয়সের 6 +"
   minecraft_subtitle: "মাইনক্র্যাফট এক ঘণ্টার কোড"
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "ছাত্র এবং স্বেচ্ছাসেবকদের এক ঘন্টার কোডের
     জন্য অনুপ্রাণিত করুন"
   volunteer_engineer_submission_subtitle_generic: "এই বছর, ডিসেম্বর ৭-১৩, ২০১৫, ১০০০০০
@@ -674,6 +675,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: "স্তর দ্বারা ফিল্টার করুন:"
   dashboard_filter_all: "সব"
   dashboard_download_csv: CSV ডাউনলোড করুন
@@ -688,10 +691,11 @@
   dashboard_navigation_view_progress: "অগ্রগতি"
   dashboard_navigation_view_text_responses: "লিখিত জবাব দেখুন"
   dashboard_navigation_view_assessments: "মূল্যায়ন"
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
   dashboard_navigation_manage_students: " শিক্ষার্থীদের পরিচালনা করন"
   dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
-  dashboard_navigation_view_stats: "পরিসংখ্যান দেখুন"
+  dashboard_navigation_view_stats: "পরিসংখ্যান"
   dashboard_navigation_section: "বিভাগ: %{section_name}"
   dashboard_navigation_student: "শিক্ষার্থী:%{student_name}"
   dashboard_progress_not_started: "শুরু হয়নি"
@@ -873,7 +877,12 @@
     আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি
     সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে
     আবেদন করুন।"
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "আরও জানুন"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1722,11 +1731,11 @@
   sphero_beyond_longdescription: "আপনি চাই একজন শিক্ষাবিদ বা অভিভাবক হন , এসপিআরকে
     পাঠ শিশুদের আনন্দায়ক রোবট প্রোগ্রামিং কোর্স দিয়ে থাকে যা গণিত ও বিজ্ঞানের দক্ষতা
     শাণিত করে।"
-  compatibility_https_header: Code.org, জন্য HTTPS সক্রিয় করুন।
-  compatibility_https_message: "নিরাপত্তা বৃদ্ধি জন্য আমরা HTTPS করতে %{https_date}
-    তে পরিবর্তিত হচ্ছি। আপনি এরপর Code.org প্রবেশ করতে সক্ষম হবেন না। Code.org এর
-    জন্য HTTPS সক্রিয় করা শিখতে এখানে <a href='%{it_requirements_url}'>ক্লিক করুন</a>।"
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1735,22 +1744,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

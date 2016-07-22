@@ -56,7 +56,7 @@
   csedweek_map_legend_cs_tech_jam: "Особливі заходи"
   cded_sign_up: "Реєстрація"
   cded_try_it: "Спробувати"
-  twentyhours_trynow: "Спробувати"
+  try_now: "Спробувати"
   california_heading: "Попросіть свою школу викладати інформатику"
   california_text: "Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний
     вступний курс</a>. Кожна початкова школа може <a href='http://code.org/educate/k5'>навчати
@@ -460,15 +460,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: "На основі рухомих блоків та JavaScript."
   starwars_javascript_specs: "Лише англійська | Сучасні браузери| Вік 11+"
-  starwars_javascript_start_button: "Спробувати зараз"
   starwars_blocks_title: "Блоки"
   starwars_blocks_description: "На основі рухомих блоків."
   starwars_blocks_specs: "Багато мов | Сучасні браузери, смартфони, планшети| Вік
     6-106"
-  starwars_blocks_start_button: "Спробувати зараз"
-  starwars_watch_videos: "Перед початком роботи перегляньте ці відео для натхнення"
-  starwars_speak_languages: "Інша мова?"
-  starwars_help_translate: "Допоможіть нам з перекладом"
   starwars_platform_text: "Сучасні браузери, смартфони, планшети"
   mc_name: "Година коду від Майнкрафт"
   mc_longdescription: "Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
@@ -479,6 +474,12 @@
   mc_platformtext: "Сучасні браузери, смартфони, планшети"
   mc_specs: "Багато мов | Сучасні браузери та планшети| Вік 6-106"
   minecraft_subtitle: "Година коду від Майнкрафт"
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "Надихайте учнів та волонтерів на Годину коду."
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести
     Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
@@ -683,6 +684,8 @@
     учнів."
   dashboard_assessments_summaries: "Резюме"
   dashboard_assessments_answers: "Усі відповіді"
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: "Фільтр за етапами:"
   dashboard_filter_all: "Все"
   dashboard_download_csv: "Завантажити CSV"
@@ -697,6 +700,7 @@
   dashboard_navigation_view_progress: "Прогрес"
   dashboard_navigation_view_text_responses: "Текстові відповіді"
   dashboard_navigation_view_assessments: "Завдання"
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "Додати учнів"
   dashboard_navigation_manage_students: "Керування учнями"
   dashboard_navigation_lesson_plans_resources: "Плани уроків та ресурси"
@@ -884,7 +888,12 @@
     ми додамо функцію "код, який не використовується", щоб дозволити учням запускати
     свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж
     оприлюднити цю функцію.
-  dashboard_announce_button_text: "Випробувати функцію"
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "Дізнайтеся більше"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного
     учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися
     із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори
@@ -1043,7 +1052,7 @@
   minecraft_name: "Майнкрафт"
   starwarsblocks_name: "Зоряні війни (блоки)"
   math_category_name: "Математика"
-  hoc_category_name: "Година Коду"
+  hoc_category_name: "Година коду"
   csf_category_name: "Основи інформатики"
   csp_category_name: "'15-'16 принципи інформатики"
   csp17_category_name: "'16-'17 принципи інформатики"
@@ -1727,11 +1736,10 @@
   sphero_beyond_longdescription: "Чи ви є педагогом чи батьком, уроки SPRK пропонують
     цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
     та природничі знання та навики."
-  compatibility_https_header: "Будь ласка, увімкніть HTTPS для Code.org."
-  compatibility_https_message: "Для підвищення безпеки, ми перейшли до HTTPS %{https_date}.
-    Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
-    натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org."
-  compatibility_https_hide_this_warning: "Сховати попередження"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Ваш браузер не підтримується. Оновіть свій браузер
+    до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>.
+    Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1740,22 +1748,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "грати"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

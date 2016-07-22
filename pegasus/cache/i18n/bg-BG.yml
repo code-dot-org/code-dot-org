@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Cs Tech събитие
   cded_sign_up: "Регистрирайте се"
   cded_try_it: "Опитайте го"
-  twentyhours_trynow: "Опитай сега"
+  try_now: "Опитайте сега"
   california_heading: "Попитайте във Вашето училище дали се изучават компютърни науки"
   california_text: "Всеки учител може да предложи нашия <a href='http://studio.code.org/'>
     безплатен въвеждащ курс</a>.  Всяко основно училище може да<a href='http://code.org/educate/k5'>
@@ -455,15 +455,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: "Използвайте блокове и JavaScript."
   starwars_javascript_specs: "Английски само | Модерни браузъри | Възраст 11 +"
-  starwars_javascript_start_button: "Опитайте сега"
   starwars_blocks_title: "Блокове"
   starwars_blocks_description: "Използвайте drag-drop блокове."
   starwars_blocks_specs: "На много езици | Съвременни браузъри, смартфони, таблетки
     | Възраст 6-10"
-  starwars_blocks_start_button: "Опитайте сега"
-  starwars_watch_videos: "Преди да започнете, гледайте едно от тези вдъхновяващи видеа"
-  starwars_speak_languages: "Говорите друг език?"
-  starwars_help_translate: "Помогнете ни с превода"
   starwars_platform_text: "Съвременни браузъри, смартфони, таблети"
   mc_name: Minecraft Hour of Code
   mc_longdescription: "Използвайте блокове с код, за да въведете Steve или Alex в
@@ -474,6 +469,12 @@
   mc_platformtext: "Съвременни браузъри, смартфони, таблети"
   mc_specs: "На много езици | Съвременни браузъри и таблети | Възраст 6 +"
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "Вдъхнови ученици и доброволци за Hour of Code."
   volunteer_engineer_submission_subtitle_generic: '100 000 учители ще бъдат домакини
     на Hour of Code в техния клас тази година, 7-13 декември 2015. Те искат вашата
@@ -682,6 +683,8 @@
     и вие ще можете да видите отговорите на вашите ученици тук."
   dashboard_assessments_summaries: "Резюмета"
   dashboard_assessments_answers: "Всички отговори"
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: "Филтрирай по етикети:"
   dashboard_filter_all: "Всичи"
   dashboard_download_csv: "Сваляне на CSV"
@@ -696,6 +699,7 @@
   dashboard_navigation_view_progress: "Прогрес"
   dashboard_navigation_view_text_responses: "Текстови отговори"
   dashboard_navigation_view_assessments: "Оценки"
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
@@ -891,7 +895,12 @@
     може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
     всички ресурси без компютър на една целева страница. Свържете уроците с всеки
     Кн клас, или използвайте самостоятелно като независим курс."
-  dashboard_announce_button_text: "Тестване на функцията"
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "Научете повече"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "Като учител, Вие трябва да намерите подход, така че
     да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
     Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -1747,11 +1756,11 @@
   sphero_beyond_longdescription: Независимо дали сте учител или родител,  уроците
     " Училище-Родител-Дете-Робот" ще дадат на децата ви време за забавления.Чрез програмиране
     на роботи, те ще подобряват уменията си по математика и наука.
-  compatibility_https_header: "Моля, активирате HTTPS за Code.org."
-  compatibility_https_message: "За да увеличим сигурността, ние превключите на HTTPS
-    \ %{https_date}. Вие няма да достъпите до Code.org след тази дата. <a href='%{it_requirements_url}'>
-    Щракнете тук</a>, за да научите как да активирате HTTPS за Code.org."
-  compatibility_https_hide_this_warning: "Скрий предупреждението"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Вашият браузър не се поддържа. Моля, надстройте
+    браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите
+    поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е възможно
+    да не функционира както трябва."
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1760,22 +1769,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

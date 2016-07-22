@@ -55,7 +55,7 @@
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Prijava
   cded_try_it: Preizkusite
-  twentyhours_trynow: Poskusite zdaj
+  try_now: Poskusite zdaj
   california_heading: Prosite vašo šolo naj poučuje računalništvo
   california_text: Vsak učitelj lahko ponudi naše <a href='http://studio.code.org/'>brezplačne
     tečaje</a>. Vsaka osnovna šola lahko <a href='http://code.org/educate/k5'>poučuje
@@ -453,16 +453,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Uporabi kocke, ki jih lahko premikaš, ter JavaScript.
   starwars_javascript_specs: Samo v angleščini / Sodobni brskalniki / Starost 11+
-  starwars_javascript_start_button: Poskusite zdaj
   starwars_blocks_title: Bloki
   starwars_blocks_description: Uporabi kocke, ki jih lahko premikaš.
   starwars_blocks_specs: Več jezikov / Sodobni brskalniki, pametni telefoni, tablice
     / Starost 6-106
-  starwars_blocks_start_button: Poskusite zdaj
-  starwars_watch_videos: Preden začneš, si oglej enega izmed teh navdihujočih video
-    posnetkov
-  starwars_speak_languages: Govoriš drug jezik?
-  starwars_help_translate: Pomagaj pri prevodu
   starwars_platform_text: Sodobni brskalniki, pametni telefoni, tablice
   mc_name: Minecraft Ura za kodo
   mc_longdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
@@ -473,6 +467,12 @@
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   mc_specs: Več jezikov / Sodobni brskalniki in tablice / Starost 6-106
   minecraft_subtitle: Minecraft Ura za kodo
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Navdušite učence/ke in prostovoljce/ke
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -673,6 +673,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -687,6 +689,7 @@
   dashboard_navigation_view_progress: Napredek
   dashboard_navigation_view_text_responses: Ogled besedilnih odgovorov
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Dodaj učence
   dashboard_navigation_manage_students: Upravljaj z učenci
   dashboard_navigation_lesson_plans_resources: Učni načrti in viri
@@ -870,7 +873,12 @@
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
     blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Več o tem
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1704,11 +1712,11 @@
   sphero_beyond_longdescription: Ne glede na to ali ste vzgojitelj ali starš, SPRK
     lekcije dajejo otrokom zabaven uvod v programiranje robotov in hkrati ostrijo
     njihove spretnosti v matematiki in znanosti.
-  compatibility_https_header: Prosimo, omogočite HTTPS za Code.org.
-  compatibility_https_message: Da bi povečali varnost, smo prešli na HTTPS, dne %{https_date}.
-    Po tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'>
-    Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org.
-  compatibility_https_hide_this_warning: Skrij to opozorilo
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1717,22 +1725,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

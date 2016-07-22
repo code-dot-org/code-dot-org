@@ -97,7 +97,7 @@
     teacher_title: "Ուսուցիչը ստորագրել է"
     student_pitch: "Ուսանողական գրանցվել է Code.org"
     student_title: "Ուսանողական ստորագրել է"
-    signup_title: Sign up for Code.org
+    signup_title: "Գրանցվել Code.org-ում"
     school_name: School Անուն (ըստ ցանկության)
     school_address: "Դպրոցը հասցեն (ըստ ցանկության)"
     address_placeholder: "հասցեն, քաղաք, պետություն, փոստային"
@@ -142,6 +142,8 @@
     picture: "Այժմ գտնել ձեր գաղտնի պատկերը,"
     words: "Այժմ Մուտքագրեք ձեր գաղտնի բառերը"
     login: "Մուտք գործել"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "Մոռացել եք Ձեր գաղտնաբառը?"
@@ -295,6 +297,10 @@
       signin: "Մուտք գործել"
       signup: "Գրանցվել"
       already_registered: "Արդեն գրանցված եք"
+      pair_programming: "Զույգ Ծրագրավորում"
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: "Ձեր առաջընթացը"
@@ -329,6 +335,7 @@
       example_with_number: "Օրինակ, Solution% {solution_number}"
       submitted_on: "Ներկայացվել է:"
       unsubmit: Unsubmit
+      worked_with: Worked With
   user:
     email_confirm_needed: "Փոստի հասցեն չի հաստատվել:"
     email_confirm_needed_required: "Ձեր էլ. Փոստի հասցեն% {EMAIL} չի հաստատվել:"
@@ -406,7 +413,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "Սովորել ավելին"
+    announcement_learn_more_button: "Սովորել ավելին"
     announcement_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ յուրաքանչյուր
       ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային գիտությունը:
       Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ, կրթության
@@ -511,14 +518,10 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: "Սովորել ավելին"
   slow_loading: "Սա հաշվի առնելով ավելի երկար, քան սովորական ..."
   try_reloading: "Փորձեք վերաբեռնել էջը"
-  next_stage: "Ավարտել է! Շարունակել է հաջորդ փուլ"
+  next_stage: "Ավարտված է! Շարունակել հաջորդ փուլ:"
   download_pdf: "Բաց դաս Plan"
   lesson_plan: "Դաս Plan"
   view_lesson_plan: "Դիտել դասի պլանը"
@@ -693,40 +696,6 @@
     hour: 1 hour
     day: "օր"
     week: "շաբաթ"
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Intro է Համակարգչային գիտություն դասընթաց (15-25 ժամ)
-          description: "Այս 20-ժամյա դասընթացը ներկայացնում է հիմնական համակարգչային
-            գիտության եւ ծրագրավորման հասկացությունները. Դասընթացը նախատեսված է օգտագործման
-            համար դասարանների համար դասարանների K-8, բայց դա հաճելի է իմանալ, թե բոլոր
-            տարիքի."
-        Hour of Code:
-          title: "Ժամ օրենսգրքի 2013-"
-          description: ''
-        edit-code:
-          title: "Խմբագրել Code"
-          description: ''
-        events:
-          title: "Իրադարձություններ"
-          description: ''
-        builder:
-          title: "շինարար"
-          description: ''
-        flappy:
-          title: Flappy-ի կոդը
-          description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք
-            մեր Flappy Code խնամակալական!'
-        jigsaw:
-          title: "ոլորահատ սղոց"
-          description: ''
-        step:
-          title: "քայլ"
-          description: ''
-        sample_level_builder:
-          title: Sample Level Builder
-          description: ''
   age_interstitial:
     age: "Ձեր տարիքը"
     header: "Հաշվի Տեղեկությունների թարմացման"
@@ -767,6 +736,8 @@
     share_copy_link: "Պատճենահանել հղումը:"
     share_embed_description: "Դուք կարող եք տեղադրեք embed կոդը վերածել HTML էջում
       ցուցադրել նախագիծը մի կայքէջում:"
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: "պառկեցնել"
     advanced_share: "Ցույց տալ, առաջադեմ տարբերակները"
     close: "փակել"
@@ -794,6 +765,8 @@
     abuse:
       tos: "Այս ծրագիրն արդեն տեղեկացրել խախտելու համար Code.orgs <a href=http://code.org/tos>
         Ծառայության պայմաններ </a> եւ չի կարող կիսել մյուսների հետ:"
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: "Եթե ​​կարծում եք, որ սա սխալ է, խնդրում ենք <a href=https://code.org/contact>
         կապնվել մեզ հետ: </a>"
       go_to_code_studio: "Գնալ օրենսգրքի Studio"
@@ -838,6 +811,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: "Որոնել համար պատկերակը ..."
@@ -848,7 +830,7 @@
       continue_button: Go on to the next Stage
       playlab_description: Create a story or make a game with Play Lab!
       playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
+      primary_header: "Շնորհավորում եմ:! Դու ավարտեցիր %{stageName}!"
       projects_description: Revisit one of your existing projects.
       projects_title: Open a project
       secondary_header: Ask your teacher what to do next
@@ -857,13 +839,14 @@
     content: "պարունակություն"
     practice: "Ուսուցիչի փորձեր"
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

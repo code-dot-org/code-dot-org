@@ -140,6 +140,8 @@
     picture: Hitta din hemliga bild
     words: Skriv dina hemliga ord
     login: Logga in
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Glömt ditt lösenord?
@@ -281,6 +283,10 @@
       signin: Logga in
       signup: Registrera dig
       already_registered: Redan registrerad?
+      pair_programming: Par-programmering
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
@@ -315,6 +321,7 @@
       example_with_number: Exempel lösning %{solution_number}
       submitted_on: 'Inlämnad den %{date} '
       unsubmit: "Ångra Inlämnad"
+      worked_with: Worked With
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
@@ -392,7 +399,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Lär dig mer
+    announcement_learn_more_button: Lär dig mer
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -481,10 +488,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Lär dig mer
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
@@ -665,40 +668,6 @@
     hour: 1 timme
     day: dag
     week: vecka
-  data:
-    script:
-      name:
-        20-hour:
-          title: Introduktion till grundskolekurs i datavetenskap (15-25 timmar)
-          description: Denna 20-timmars kurs introducerar grundläggande datavetenskap
-            och programmeringsbegrepp. Kursen är utformad för användning i klassrummet
-            från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
-            åldrar.
-        Hour of Code:
-          title: Timme av Kod 2013
-          description: ''
-        edit-code:
-          title: Redigera kod
-          description: ''
-        events:
-          title: Händelser
-          description: ''
-        builder:
-          title: Byggare
-          description: ''
-        flappy:
-          title: Flappy-kod
-          description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
-            vår Flappy Code övning!
-        jigsaw:
-          title: Pussel
-          description: ''
-        step:
-          title: Steg
-          description: ''
-        sample_level_builder:
-          title: Exempel nivå-byggare
-          description: ''
   age_interstitial:
     age: Din ålder
     header: Kontoinformation uppdatering
@@ -737,6 +706,8 @@
     share_copy_link: 'Kopiera länken:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Avsluta
@@ -765,6 +736,8 @@
     abuse:
       tos: Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'>
         Användarvillkor</a> och kan inte delas med andra.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Om du tror att detta är ett fel, vänligen <a href='https://code.org/contact'>
         Kontakta oss.</a>
       go_to_code_studio: Gå till Code Studio
@@ -804,6 +777,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -823,13 +805,14 @@
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

@@ -54,7 +54,7 @@
   csedweek_map_legend_cs_tech_jam: "אירוע מיוחד"
   cded_sign_up: "הירשם"
   cded_try_it: "נסו זאת"
-  twentyhours_trynow: "נסה עכשיו"
+  try_now: "נסה עכשיו"
   california_heading: "בקש מבית הספר שלך ללמד מדעי המחשב"
   california_text: "כל מורה יכול להציע את <a href='http://learn.code.org/'> קורס המבוא
     החינמי שלנו</a>.  כל בית ספר יסודי יכול <a href='http://code.org/educate/k5'>ללמד
@@ -434,15 +434,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
   starwars_javascript_specs: "אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה"
-  starwars_javascript_start_button: "נסה כעת"
   starwars_blocks_title: "בלוקים"
   starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
-  starwars_blocks_start_button: "נסו כעת"
-  starwars_watch_videos: "לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו"
-  starwars_speak_languages: "האם אתם דוברים שפה נוספת?"
-  starwars_help_translate: "עזרו לנו לתרגם"
   starwars_platform_text: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
   mc_name: "שעת הקוד: גרסת מיינקראפט"
   mc_longdescription: "השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
@@ -453,6 +448,12 @@
   mc_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: "שעת הקוד: גרסת מיינקראפט"
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -645,6 +646,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -659,6 +662,7 @@
   dashboard_navigation_view_progress: "התקדמות"
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "הוסף תלמידים"
   dashboard_navigation_manage_students: "נהל תלמידים"
   dashboard_navigation_lesson_plans_resources: "מערכי שיעור ומשאבים"
@@ -837,7 +841,12 @@
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
     blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "למד עוד"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1646,11 +1655,11 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_https_header: "אנא אפשרו שימוש בHTTPS בCode.org."
-  compatibility_https_message: "כדי להגביר את בטיחות הגלישה, אנו עוברים לשימוש בHTTPS
-    בתאריך  %{https_date}. לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
-    כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org."
-  compatibility_https_hide_this_warning: "הסתר את האזהרה הזו"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1659,22 +1668,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "הפעל"
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

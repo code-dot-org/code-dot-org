@@ -1,75 +1,5 @@
 uk:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Вступ до інформатики. 8 клас
-          Unplug1: Етап 1
-          Maze: Етап 2
-          Unplug2: Етап 3
-          Unplug3: Етап 4
-          Artist: Етап 5
-          Unplug4: Етап 6
-          Artist2: Етап 7
-          Unplug5: Етапі 8
-          Farmer: Етап 9
-          Unplug6: Етап 10
-          Artist3: Етап 11
-          Unplug7: Етап 12
-          Farmer2: Етап 13
-          Unplug8: Етап 14
-          Artist4: Етап 15
-          Unplug9: Етап 16
-          Farmer3: Етап 17
-          Unplug10: Етап 18
-          Artist5: Етап 19
-          Unplug11: Етап 20
-        Hour of Code:
-          desc: Година Коду
-          Maze: Етап 1
-        Edit Code:
-          desc: Редагування коду (бета-версія)
-          MazeEC: Етап 1
-        2014 Levels:
-          desc: Арканоід (бета-версія)
-          Bounce: Етап 1
-        Builder Levels:
-          desc: Завдання, створені користувачами (бета-версія)
-          Custom: Етап 1
-        Flappy Levels:
-          desc: Пташок Пурх
-          Flappy: Етап 1
-        Jigsaw Levels:
-          desc: Головоломки (бета-версія)
-          Jigsaw: Етап 1
-        Step Levels:
-          desc: Лабіринт (бета-версія)
-          MazeStep: Крок етапу
-        edit-code:
-          desc: Редагування коду (бета-версія)
-          MazeEC: Етап 1
-          Applab: Етап 2
-          ArtistEC: Етап 3
-          StudioEC: Етап 4
-        events:
-          desc: Арканоід (бета-версія)
-          Bounce: Етап 1
-          Studio: Етап 2
-        builder:
-          desc: Завдання, створені користувачами (бета-версія)
-          Custom: Етап 1
-        flappy:
-          desc: Пташок Пурх
-          Flappy: Етап 1
-        jigsaw:
-          desc: Головоломки (бета-версія)
-          Jigsaw: Етап 1
-        step:
-          desc: Лабіринт (бета-версія)
-          MazeStep: Крок етапу
-        wordsearch:
-          desc: Грамотна Бджілка (бета-версія)
-          WordSearch: Етап 1
     game:
       name:
         Unplug1: Вступ до інформатики
@@ -494,6 +424,7 @@ uk:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

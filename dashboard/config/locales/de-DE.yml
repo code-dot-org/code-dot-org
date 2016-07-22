@@ -30,7 +30,7 @@
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
-  next_resource: Next resource
+  next_resource: Nächste Ressource
   done_with_module: Done with this Learning Module
   cancel: Abbrechen
   okay: Okay
@@ -96,7 +96,7 @@
     teacher_title: Registrierung für Lehrer
     student_pitch: Schüler-Registrierung für Code.org
     student_title: Registrierung für Schüler
-    signup_title: Sign up for Code.org
+    signup_title: Registrieren für Code.org
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
     address_placeholder: Adresse, Ort, Bundesland, PLZ
@@ -122,7 +122,7 @@
       von Code.org einverstanden.
     additional_information: Wir benötigen noch ein paar weitere Informationen, um
       mit deiner Anmeldung fortzufahren.
-    user_type_label: Account Type
+    user_type_label: Kontentyp
     user_type_teacher: Lehrer
     user_type_student: Schüler
   signin_form:
@@ -141,6 +141,8 @@
     picture: Finde nun das versteckte Bild
     words: Gib jetzt deine geheimen Wörter ein
     login: Anmelden
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Passwort vergessen?
@@ -297,6 +299,10 @@
       signin: Anmelden
       signup: Registrieren
       already_registered: Bereits registriert?
+      pair_programming: Paarprogrammierung
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt
@@ -331,6 +337,7 @@
       example_with_number: Lösungsbeispiel %{solution_number}
       submitted_on: 'Eingereicht am:'
       unsubmit: Zurücknehmen
+      worked_with: Worked With
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine E-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -410,7 +417,7 @@
       Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros
       sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4.
       Januar eingesendet werden, werden voraussichtlich verspätet beantwortet."
-    announcement_button: Mehr erfahren
+    announcement_learn_more_button: Mehr erfahren
     announcement_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
       Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es
       an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -511,10 +518,6 @@
         Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'>
         einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite
         zu betrachten, aber es können Fehler auftreten.
-      ie_message: Code.org wird bald aufhören Internet Explorer 8, 9 und 10 zu unterstützen.
-        Bitte installieren Sie einen modernen Browser.
-      ie_message_csedweek: CSEdWeek.org wird bald aufhören Internet Explorer 8, 9
-        und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
       link: Mehr erfahren
   slow_loading: Das benötigt länger als normal...
   try_reloading: Versuche die Seite neu zu laden
@@ -703,40 +706,6 @@
     hour: 1 Stunde
     day: Tag
     week: Woche
-  data:
-    script:
-      name:
-        20-hour:
-          title: Einführung in die Informatik (15-25 Stunden)
-          description: Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der
-            Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch
-            in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß
-            zu lernen.
-        Hour of Code:
-          title: Programmierstunde 2013
-          description: ''
-        edit-code:
-          title: Code bearbeiten
-          description: ''
-        events:
-          title: Ereignisse
-          description: ''
-        builder:
-          title: Generator
-          description: ''
-        flappy:
-          title: Flappy Code
-          description: Willst du dein eigenes Spiel in weniger als 10 Minuten schreiben?
-            Probiere unser Flappy Code-Tutorial!
-        jigsaw:
-          title: Puzzle
-          description: ''
-        step:
-          title: Schritt
-          description: ''
-        sample_level_builder:
-          title: Beispiellevel-Generator
-          description: ''
   age_interstitial:
     age: Dein Alter
     header: Aktualisieren der Kontoinformationen
@@ -775,6 +744,8 @@
     share_copy_link: 'Kopiere den Link:'
     share_embed_description: Sie können den embed code in eine HTML Seite einfügen,
       um das Projekt auf einer anderen Webseite darzustellen.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Einbetten
     advanced_share: Erweiterte Optionen anzeigen
     close: Schließen
@@ -804,6 +775,8 @@
       tos: Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'>
         Nutzungsbedingungen </a> von Code.org gemeldet und kann nicht mit anderen
         geteilt werden.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Wenn Sie glauben, dies ist ein Fehler, dann <a href='https://code.org/contact'>
         kontaktieren Sie uns bitte.</a>
       go_to_code_studio: Gehe zu Code Studio
@@ -847,6 +820,15 @@
     instructor_feedback: Rückmeldung von der Lehrperson
     peer_feedback: Rückmeldung von Mitschülern
     outdated: Dieses Feedback wurde für eine frühere Version hinzugefügt
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Suche für ein Symbol...
@@ -866,15 +848,16 @@
     content: Inhalt
     practice: Lehrer Übungen
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
+    title: '"Hour of Code" Downloads'
     capsule_title: Haben Sie eine Internetverbindung?
     capsule_desc: Verwenden Sie die online, Web-basierte <a href="%{url}">%{app_name}</a>.
     instructions_headline: Keine Internetverbindung?
@@ -885,7 +868,7 @@
       on all computers. Note: students will not be able to log into Code Studio, save
       progress, or print certificates. Teachers may print certificates ahead of time
       <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: Minecraft "Hour of Code"
     starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
     download_message: "%{app_name} zur Offline-Nutzung (136MB) herunterladen"

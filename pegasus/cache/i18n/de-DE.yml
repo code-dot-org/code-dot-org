@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Sonderveranstaltung
   cded_sign_up: Registrieren
   cded_try_it: Versuche es
-  twentyhours_trynow: Jetzt ausprobieren
+  try_now: Probiere es jetzt aus
   california_heading: Bitten Sie Ihre Schule, Informatik zu unterrichten
   california_text: Jeder Lehrer kann unsere <a href='http://studio.code.org/'>kostenlosen
     Kurse</a> anbieten. Jede Grundschule kann <a href='http://code.org/educate/k5'>Informatik</a>
@@ -451,16 +451,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Verwende Drag-und-drop-Bausteine und JavaScript.
   starwars_javascript_specs: 'Nur Englisch | Moderne Browser | Alter: ab 11 Jahre'
-  starwars_javascript_start_button: Jetzt ausprobieren
   starwars_blocks_title: Bausteine
   starwars_blocks_description: Verwende Drag-und-drop-Bausteine.
   starwars_blocks_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets |
     Alter: 6-106'
-  starwars_blocks_start_button: Erfahre mehr
-  starwars_watch_videos: Bevor Sie loslegen, sehen Sie sich eines dieser inspirierenden
-    Videos an
-  starwars_speak_languages: Sie sprechen eine andere Sprache?
-  starwars_help_translate: Helfen Sie uns beim Übersetzen
   starwars_platform_text: Moderne Browser, Smartphones, Tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer
@@ -471,6 +465,12 @@
   mc_platformtext: Moderne Browser, Smartphones, Tablets
   mc_specs: 'Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106'
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspiriere die Schüler und mache mit
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen dieses Jahr
     vom 7. bis 13. Dezember 2015 eine Hour of Code mit ihren Klassen. Sie brauchen
@@ -676,6 +676,8 @@
     see your students' answers here.
   dashboard_assessments_summaries: Zusammenfassungen
   dashboard_assessments_answers: Alle Antworten
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Nach Schwierigkeitsstufen sortieren:'
   dashboard_filter_all: Alle
   dashboard_download_csv: Als CSV herunterladen
@@ -690,6 +692,7 @@
   dashboard_navigation_view_progress: Fortschritt
   dashboard_navigation_view_text_responses: Textantworten anzeigen
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -886,7 +889,12 @@
     nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom
     19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet
     werden, werden voraussichtlich verspätet beantwortet."
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Mehr erfahren
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
     Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an
     der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -1049,7 +1057,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bausteine)
   math_category_name: Mathematik
-  hoc_category_name: Programmierstunde
+  hoc_category_name: Stunde der Code
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
@@ -1758,11 +1766,11 @@
   sphero_beyond_longdescription: SPRK-Lektionen ermöglichen Kindern, einen Schnellkurs
     im Programmieren von Robotern zu absolvieren und dabei ihre Mathematik- und Naturwissenschafts-Kenntnisse
     zu erweitern.
-  compatibility_https_header: Bitte aktivieren Sie HTTPS für Code.org.
-  compatibility_https_message: Zur Erhöhung der Sicherheit wechseln wir am % {Https_date}
-    zu HTTPS. Nach diesem Datum können Sie nicht mehr auf Code.org zugreifen. <a href='%{it_requirements_url}'>Klicken
-    Sie hier</a>, um zu erfahren, wie Sie HTTPS für Code.org aktivieren.
-  compatibility_https_hide_this_warning: Diese Warnung ausblenden
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
+    Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen
+    von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten,
+    aber es können Fehler auftreten.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1771,22 +1779,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  try_now: Try now
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
-  dashboard_navigation_view_surveys: Surveys
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.

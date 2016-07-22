@@ -1,75 +1,5 @@
 hu:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Bevezető számítógép-tudomány tanfolyam általános iskolásoknak
-          Unplug1: 1. szakasz
-          Maze: 2. szakasz
-          Unplug2: 3. szakasz
-          Unplug3: 4. szakasz
-          Artist: 5. szakasz
-          Unplug4: 6. szakasz
-          Artist2: 7. szakasz
-          Unplug5: 8. szakasz
-          Farmer: 9. szakasz
-          Unplug6: 10. szakasz
-          Artist3: 11. szakasz
-          Unplug7: 12. szakasz
-          Farmer2: 13. szakasz
-          Unplug8: 14. szakasz
-          Artist4: 15. szakasz
-          Unplug9: 16. szakasz
-          Farmer3: 17. szakasz
-          Unplug10: 18. szakasz
-          Artist5: 19. szakasz
-          Unplug11: 20. szakasz
-        Hour of Code:
-          desc: A kódolás órája
-          Maze: 1. szakasz
-        Edit Code:
-          desc: Szerkeszd a kódot (béta)
-          MazeEC: 1. szakasz
-        2014 Levels:
-          desc: Visszapattanós játék (béta)
-          Bounce: 1. szakasz
-        Builder Levels:
-          desc: Felhasználó által készített rejtvények (béta)
-          Custom: 1. szakasz
-        Flappy Levels:
-          desc: Flappy madár
-          Flappy: 1. szakasz
-        Jigsaw Levels:
-          desc: Kirakós játék (béta)
-          Jigsaw: 1. szakasz
-        Step Levels:
-          desc: Labirintus (béta)
-          MazeStep: Szakasz lépcső
-        edit-code:
-          desc: Szerkeszd a kódot (béta)
-          MazeEC: 1. szakasz
-          Applab: 2. szakasz
-          ArtistEC: 3. szakasz
-          StudioEC: 4. szakasz
-        events:
-          desc: Bounce (béta)
-          Bounce: 1. szakasz
-          Studio: 2. szakasz
-        builder:
-          desc: Felhasználó által készített rejtvények (béta)
-          Custom: 1. szakasz
-        flappy:
-          desc: Flappy madár
-          Flappy: 1. szakasz
-        jigsaw:
-          desc: Kirakós játék (béta)
-          Jigsaw: 1. szakasz
-        step:
-          desc: Labirintus (béta)
-          MazeStep: Szakasz lépcső
-        wordsearch:
-          desc: Betűző Méhecske (béta)
-          WordSearch: 1. szakasz
     game:
       name:
         Unplug1: Bevezetés a számítástechnikába
@@ -483,6 +413,7 @@ hu:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

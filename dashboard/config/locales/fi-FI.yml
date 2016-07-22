@@ -137,6 +137,8 @@
     picture: Nyt etsi salainen kuvasi
     words: Nyt anna salaiset sanasi
     login: Kirjaudu sisään
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Unohditko salasanasi?
@@ -275,6 +277,10 @@
       signin: Kirjaudu sisään
       signup: Luo käyttäjätunnus
       already_registered: Jo rekisteröitynyt?
+      pair_programming: Pariohjelmointi
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: Käyttäjän %{name} edistyminen
       progress: Sinun edistymisesi
@@ -314,6 +320,7 @@
       example_with_number: Malliratkaisu %{solution_number}
       submitted_on: 'Lähetetty:'
       unsubmit: Peruuta lähetys
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'
@@ -388,7 +395,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Lue lisää
+    announcement_learn_more_button: Lue lisää
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -478,10 +485,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Lue lisää
   slow_loading: Tämä kestää kauemmin kuin tavallisesti...
   try_reloading: Yritä ladata sivu uudelleen
@@ -660,39 +663,6 @@
     hour: 1 tunti
     day: päivä
     week: viikko
-  data:
-    script:
-      name:
-        20-hour:
-          title: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
-          description: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja
-            ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa,
-            mutta siinä on hauskaa opittavaa kaiken ikäisille.
-        Hour of Code:
-          title: Kooditunti 2013
-          description: ''
-        edit-code:
-          title: Muokkaa koodia
-          description: ''
-        events:
-          title: Tapahtumat
-          description: ''
-        builder:
-          title: Rakentaja
-          description: ''
-        flappy:
-          title: Flappy Code
-          description: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile
-            Flappy Code -oppituntia!
-        jigsaw:
-          title: Palapeli
-          description: ''
-        step:
-          title: Askel
-          description: ''
-        sample_level_builder:
-          title: Tasorakentaja esimerkki
-          description: ''
   age_interstitial:
     age: Ikäsi
     header: Käyttäjätilin tietojen päivitys
@@ -731,6 +701,8 @@
     share_copy_link: 'Kopioi linkki:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Sulje
@@ -758,6 +730,8 @@
     abuse:
       tos: Tämän projektin on raportoitu rikkovan Code.org:in <a href='http://code.org/tos'>
         Käyttöehtoja</a>, minkä vuoksi sitä ei voi jakaa muiden kanssa.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Jos uskot tämän olevan virhe, ota <a href='https://code.org/contact'>
         yhteyttä.</a>
       go_to_code_studio: Siirry Code Studio:on
@@ -798,6 +772,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Etsitään kuvaketta...
@@ -817,13 +800,14 @@
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

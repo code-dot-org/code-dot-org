@@ -125,6 +125,8 @@ hu:
     picture: Keress egy titkos képet
     words: Írd be a titkos szavaidat
     login: Bejelentkezés
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Elfelejtette jelszavát?
@@ -243,6 +245,10 @@ hu:
       signin: Bejelentkezés
       signup: Regisztrálás
       already_registered: Már regisztráltál?
+      pair_programming: Páros programozás
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name} fejlődése'
       progress: Fejlődése
@@ -277,6 +283,7 @@ hu:
       example_with_number: 'Példa a megoldásra %{solution_number}'
       submitted_on: 'Benyújtva ekkor: %{date}'
       unsubmit: Visszavon
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -337,7 +344,7 @@ hu:
     announcement_title: Közlemények
     announcement_view_all: Összes megtekintése
     announcement_message: 'Segíts egy új funkció tesztelésében. Fontosnak tartjuk, hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket a "fel nem használt blokk" funkcióról annak bevezetése előtt.'
-    announcement_button: Teszteld a funkciót
+    announcement_learn_more_button: Tudj meg többet
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add meg a nevedet
   move_students:
@@ -402,8 +409,6 @@ hu:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: Tudj meg többet
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
@@ -555,36 +560,6 @@ hu:
     hour: 1 óra
     day: nap
     week: hét
-  data:
-    script:
-      name:
-        20-hour:
-          title: 'K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)'
-          description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
-        Hour of Code:
-          title: Kódolás órája 2013
-          description: ""
-        edit-code:
-          title: Kód szerkesztése
-          description: ""
-        events:
-          title: Események
-          description: ""
-        builder:
-          title: Építő
-          description: ""
-        flappy:
-          title: Flappy kód
-          description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód oktatót.
-        jigsaw:
-          title: Kirakós játék
-          description: ""
-        step:
-          title: Lépés
-          description: ""
-        sample_level_builder:
-          title: Minta szint építő
-          description: ""
   age_interstitial:
     age: Korod
     header: Felhasználói adatok frissítése
@@ -617,6 +592,7 @@ hu:
     share_title: A projekt megosztása
     share_copy_link: 'A hivatkozás másolása:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Beágyaz
     advanced_share: Show advanced options
     close: Bezár
@@ -640,6 +616,7 @@ hu:
     edit_project: Projekt szerkesztése
     abuse:
       tos: "Ezt a projektet jelentették, mint amely nem tesz eleget a Code.org <a href='http://code.org/tos'>Felhasználói Feltételekben előírtaknak,</a> így nem osztható meg másokkal."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Ha úgy gondolod, hogy ez egy hiba, kérünk <a href='https://code.org/contact'>vedd fel velünk a kapcsolatot.</a>"
       go_to_code_studio: Menj a Kód stúdióba
       report_abuse_form:
@@ -671,6 +648,14 @@ hu:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Keress egy ikont...
@@ -690,7 +675,9 @@ hu:
     content: Content
     practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

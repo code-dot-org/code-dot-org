@@ -88,7 +88,7 @@ zh:
         desc: 這個課程將以舞蹈介紹程式設計的迴圈概念 ( 重複的指令 )。學生將學到簡單的編舞，並被要求重複之。
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: 接力程式設計
         desc: '學生將進行一場接力賽，合力撰寫 " 格子紙程式" 的演算法。但他們一次僅能撰寫一道指令，如果某處出現錯誤，便必須要將其後的指令全部清除。'
         video: C2_relay_programming
       Conditionals:
@@ -112,7 +112,7 @@ zh:
         desc: 這個課程列出我們在日常生活中使用演算法的方法，並專注於做紙飛機這件事情上。這堂課也著重於資訊科學的更大的願景以及演算法是如何扮演重要的角色。
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: 二進位的手環
         desc: 學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用多於一種方法來呈現和儲存。
         video: C2_binary_bracelets
       DigitalFootprint:
@@ -124,7 +124,7 @@ zh:
         desc: 學生用計算科學思維的步驟(分解、樣式匹配、抽象化、演算法)來找出要如何玩一個沒有指示的遊戲。
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: 實用漸進式的學習
         desc: 學生創造一個有變數和函式的演算法(一塊你想要一直重複使用的程式碼) 來創造有珠珠和線組成的玻璃飾品。
         video: C3_functional_suncatchers
       SongwritingParameters:
@@ -140,11 +140,11 @@ zh:
         desc: 學生用紙傳送訊息來表示不同的網路傳輸方法。
         video: C3_網際網路
       Crowdsourcing:
-        title: Crowdsourcing
+        title: 互聯網的資源
         desc: 學生利用在資訊科學常見的群眾外包的解題技巧，以一個教室為單位，相較於一個學生獨自完成更有效率的完成一個任務。
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: 數位公民(對於信息技術使用有適當且負責任的行為規範與參與）
         desc: 學生探討私人資訊和個人資訊的差異，辨別哪些東西是在可以在網路上安全的分享，哪些不是。
       TangramAlgorithms:
         title: 七巧板演算法

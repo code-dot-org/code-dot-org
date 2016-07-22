@@ -125,6 +125,8 @@ bg:
     picture: Сега намерете вашата тайна картина
     words: Сега въведете вашите тайни думи
     login: Вход
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Забравена парола?
@@ -245,6 +247,10 @@ bg:
       signin: Вход
       signup: Регистрирайте се
       already_registered: Вече сте регистриран?
+      pair_programming: Програмиране по двойки
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'на %{name} в прогрес'
       progress: Вашият напредък
@@ -279,6 +285,7 @@ bg:
       example_with_number: 'Примерно решение %{solution_number}'
       submitted_on: 'Добавено на %{date}'
       unsubmit: Не е добавено
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -339,7 +346,7 @@ bg:
     announcement_title: Съобщения
     announcement_view_all: Преглед на всички
     announcement_message: '<b>22 април 2016</b> - Дейностите без компютър са важна част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите всички ресурси без компютър на една целева страница. Свържете уроците с всеки Кн клас, или използвайте самостоятелно като независим курс.'
-    announcement_button: Тестване на функцията
+    announcement_learn_more_button: Научете повече
     announcement_petition: Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование.
     announcement_petition_button: Добавете името си
   move_students:
@@ -404,8 +411,6 @@ bg:
   compatibility:
     upgrade:
       unsupported_message: "Вашият браузър не се поддържа. Моля, надстройте браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е възможно да не функционира както трябва."
-      ie_message: Code.org скоро ще спре поддръжката за Internet Explorer 8, 9 и 10. Надстройте до модерен браузър.
-      ie_message_csedweek: CSEdWeek.org скоро ще спре да поддръжа Internet Explorer 8, 9 и 10. Надстройте до модерен браузър.
       link: Научете повече
   slow_loading: Това отнема повече време от обичайното...
   try_reloading: Опитайте да презаредите страницата
@@ -557,36 +562,6 @@ bg:
     hour: 1 час
     day: ден
     week: седмица
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 въведение в компютърните науки (15-25 часа)
-          description: Този 20-часов курс, представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
-        Hour of Code:
-          title: Час на кодирането 2013
-          description: ""
-        edit-code:
-          title: Редактиране на кода
-          description: ""
-        events:
-          title: Събития
-          description: ""
-        builder:
-          title: Строител
-          description: ""
-        flappy:
-          title: Flappy код
-          description: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
-        jigsaw:
-          title: Мозайка
-          description: ""
-        step:
-          title: Стъпка
-          description: ""
-        sample_level_builder:
-          title: Строител на примерно ниво
-          description: ""
   age_interstitial:
     age: Вашата възраст
     header: Актуализиране на информацията за акаунта
@@ -619,6 +594,7 @@ bg:
     share_title: Споделяне на Вашия проект
     share_copy_link: 'Копиране на връзката:'
     share_embed_description: Можете да поставите кода за вграждане в HTML страница за показване на проекта в уеб сайт.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: За вграждане
     advanced_share: Показване на разширените опции
     close: Затваряне
@@ -642,6 +618,7 @@ bg:
     edit_project: Редактиране на проект
     abuse:
       tos: "Този проект нарушава Code.org <a href='http://code.org/tos'> Условията за ползване</a> и не може да бъде споделен с други потребители."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Ако смятате, че това е грешка, моля <a href='https://code.org/contact'> свържете се с нас.</a>"
       go_to_code_studio: Отидете в Code Studio
       report_abuse_form:
@@ -673,6 +650,14 @@ bg:
     instructor_feedback: 'Инструктор: обратна връзка'
     peer_feedback: Изпрати обратна връзка
     outdated: Тази обратна връзка е добавена в по-ранна версия
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Търси икона...
@@ -692,7 +677,9 @@ bg:
     content: Съдържание
     practice: Учителски практики
   external_links:
-    disclaimer_md: "<strong>Отказ от отговорност: Вие сте на път да напуснете Code.org и да преминете към сайт, който не се управлява от Code.org.</strong> Този сайт може да има политика за поверителност, която се различава от тази на Code.org в. <br/> <br/> Ние сме избрали тези партньорски ресурси, защото смятаме, че те ще бъдат полезни за Вас. Но ние не сме пряко отговорни за съдържанието на този сайт, моля, <a href='%{support_url}'>contact support</a>свържете се с поддръжката</a> ако откриете, че съдържанието е нежелателно, или ако свързания сайт вече не е достъпен."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Часът на кода за сваляне
     capsule_title: Имате ли интернет?

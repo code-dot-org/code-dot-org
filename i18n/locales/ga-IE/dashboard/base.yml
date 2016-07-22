@@ -125,6 +125,8 @@ ga:
     picture: Anois, aimsigh do phictiúr rúnda
     words: Anois, cuir isteach na focail rúnda atá agat
     login: Logáil isteach
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Focal faire dearmadta?
@@ -247,6 +249,10 @@ ga:
       signin: Logáil isteach
       signup: Cláraigh
       already_registered: Cláraithe cheana?
+      pair_programming: Códáil Bheirte
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'Dul chun cinn %{name}'
       progress: Do dhul chun cinn
@@ -281,6 +287,7 @@ ga:
       example_with_number: 'Réiteach Samplach a %{solution_number}'
       submitted_on: 'Seolta:'
       unsubmit: Dísheol
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
@@ -341,7 +348,7 @@ ga:
     announcement_title: Fógraí
     announcement_view_all: Féach uile
     announcement_message: 'Ar mhaith leat cabhrú linn chun gné nua a thástáil? Tuigimid go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail, mar sin beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh do chuid aiseolais sula gcraolfaimid an gné go poiblí.'
-    announcement_button: Tástáil an ghné
+    announcement_learn_more_button: Tuilleadh eolais
     announcement_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim. Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo, tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
     announcement_petition_button: "Cuir d'ainm leis"
   move_students:
@@ -407,8 +414,6 @@ ga:
   compatibility:
     upgrade:
       unsupported_message: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
-      ie_message: Stopfaidh Code.org ag tacú le hInternet Explorer 8, 9, agus 10 go luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
-      ie_message_csedweek: Stopfaidh CSEdWeek.org ag tacú le hInternet Explorer 8, 9, agus 10 go luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
       link: Tuilleadh eolais
   slow_loading: Moill as an ngnáth air seo...
   try_reloading: Déan iarracht an leathanach a lódáil arís
@@ -560,36 +565,6 @@ ga:
     hour: Uair an chloig
     day: lá
     week: seachtain
-  data:
-    script:
-      name:
-        20-hour:
-          title: Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)
-          description: Múineann an cúrsa 20 uair an chloig seo bunchoincheapa na ríomheolaíochta agus an ríomhchlárú. Tá an cúrsa dírithe ar dhaltaí bunscoile agus meánscoile, ach bhainfeadh daltaí níos sine nó fiú daoine fásta taitneamh as freisin.
-        Hour of Code:
-          title: An Uair Chódála 2013
-          description: ""
-        edit-code:
-          title: Cuir an Cód in Eagar
-          description: ""
-        events:
-          title: Teagmhais
-          description: ""
-        builder:
-          title: Tógálaí
-          description: ""
-        flappy:
-          title: Cód Flappy
-          description: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad? Bain triail as ár gcúrsa Flappy Code!
-        jigsaw:
-          title: Míreanna Mearaí
-          description: ""
-        step:
-          title: Céim
-          description: ""
-        sample_level_builder:
-          title: Tógálaí Leibhéal Samplach
-          description: ""
   age_interstitial:
     age: Cén aois thú?
     header: Nuashonrú an Chuntais
@@ -623,6 +598,7 @@ ga:
     share_title: Comhroinn do thogra
     share_copy_link: 'Cóipeáil an nasc:'
     share_embed_description: Is féidir an cód leabaithe a ghreamú isteach i leathanach HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Leabaigh
     advanced_share: Taispeáin na hardroghanna
     close: Dún
@@ -646,6 +622,7 @@ ga:
     edit_project: Cuir an Togra in Eagar
     abuse:
       tos: "Tuairiscíodh an togra seo agus dúradh go sáraíonn sé <a href='http://code.org/tos'>Téarmaí Seirbhíse</a> Code.org. Dá bharr sin, ní féidir é a chomhroinnt."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Má chreideann tú gur botún é seo, <a href='https://code.org/contact'>téigh i dteagmháil linn.</a>"
       go_to_code_studio: Téigh go dtí an Stiúideo Códála
       report_abuse_form:
@@ -677,6 +654,14 @@ ga:
     instructor_feedback: Aiseolas ó Mhúinteoir
     peer_feedback: Aiseolas ó Scoláirí Eile
     outdated: Baineann an t-aiseolas seo le seanleagan
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Lorg deilbhín...
@@ -696,7 +681,9 @@ ga:
     content: Ábhar
     practice: Cleachtais Mhúinteoireachta
   external_links:
-    disclaimer_md: "<strong>Séanadh: Tá tú ar tí an fearann seo a fhágáil, chun cuairt a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.</strong> Seans nach ionann na polasaithe príobháideachais ar an suíomh seo agus ar Code.org.<br/><br/>Roghnaigh muid na hacmhainní tríú páirtí seo toisc go gceapaimid go mbainfidh tú tairbhe astu. Cé nach bhfuilimid freagrach as an ábhar atá ar an suíomh, bheadh fáilte romhat <a href='%{support_url}'>dul i dteagmháil linn</a> dá mbeadh ábhar gránna nó maslach air, nó dá mbeadh an nasc leis an suíomh briste."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: 'Íoslódálacha: An Uair Chódála'
     capsule_title: An bhfuil tú ceangailte leis an Idirlíon?
