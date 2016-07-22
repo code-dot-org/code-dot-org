@@ -7,6 +7,7 @@ import AddTableRow from './AddTableRow';
 import { DataView } from '../constants';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
+import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
@@ -50,6 +51,20 @@ const DataTable = React.createClass({
     this.setState({
       newColumns: this.state.newColumns.concat(newColumn)
     });
+  },
+
+  deleteColumn(columnToRemove) {
+    if (confirm('Are you sure you want to delete this entire column? You cannot undo this action.')) {
+      this.setState({
+        newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
+      });
+      FirebaseStorage.deleteColumn(
+        this.props.tableName,
+        columnToRemove,
+        () => {},
+        error => console.warn(error)
+      );
+    }
   },
 
   getColumnNames() {
@@ -101,7 +116,11 @@ const DataTable = React.createClass({
           <tr>
             {
               columnNames.map(columnName => (
-                <ColumnHeader key={columnName} columnName={columnName}/>
+                <ColumnHeader
+                  key={columnName}
+                  columnName={columnName}
+                  deleteColumn={this.deleteColumn}
+                />
               ))
             }
             <th style={dataStyles.headerCell}/>

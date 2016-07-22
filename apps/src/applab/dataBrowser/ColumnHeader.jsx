@@ -19,10 +19,11 @@ const styles = {
 const ColumnHeader = React.createClass({
   propTypes: {
     columnName: React.PropTypes.string.isRequired,
+    deleteColumn: React.PropTypes.func.isRequired
   },
 
   handleDelete() {
-    console.log(`deleting ${this.props.columnName}`);
+    this.props.deleteColumn(this.props.columnName);
   },
 
   toggleMenu() {
