@@ -186,6 +186,13 @@ var TopInstructions = React.createClass({
     const width = this.shouldDisplayCollapserButton() ?
         $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
+      // setting state in componentDidUpdate will trigger another
+      // re-render and is discouraged; unfortunately in this case we
+      // can't do it earlier in the lifecycle as we need to examine the
+      // actual DOM to determine the desired value. We are careful to
+      // only actually update the state when it has changed, which will
+      // prevent the possibility of an infinite loop and should serve to
+      // minimize excess rerenders.
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         rightColWidth: width
@@ -199,6 +206,7 @@ var TopInstructions = React.createClass({
       const contentHeight = contentContainer.scrollHeight;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
+        // see comment above
         // eslint-disable-next-line react/no-did-update-set-state
         this.setState({
           displayScrollButtons: canScroll
@@ -302,7 +310,7 @@ var TopInstructions = React.createClass({
     const resizerHeight = collapsed ? 0 : RESIZER_HEIGHT;
 
     return Math.max(leftColHeight, middleColHeight, rightColHeight) +
-         resizerHeight + margins;
+        resizerHeight + margins;
   },
 
   /**
