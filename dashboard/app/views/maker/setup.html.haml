@@ -11,6 +11,10 @@
     font-size: 26px;
   }
 
+  .setup-status i {
+    margin-right: 6px;
+  }
+
   .setup-status div {
     margin: 15px 0;
   }
@@ -22,6 +26,10 @@
   .setup-status .incomplete {
     color: red;
     font-weight: bold;
+  }
+
+  .setup-status .waiting {
+    color: #949ca2;
   }
 
   .setup-status .hidden {
@@ -57,9 +65,10 @@
     ## Setup Status
 
     <div class="setup-status">
-      <div id="is-chrome" class="complete"><i class="fa fa-times-circle"/> Chrome version 33+</div>
-      <div id="app-installed" class="incomplete"><i class="fa fa-times-circle"/> Chrome App installed</div>
-      <div id="windows-drivers" class="hidden"><i class="fa fa-times-circle"/> Windows drivers installed</div>
-      <div id="board-plug" class="incomplete"><i class="fa fa-times-circle"/> Board plugged in</div>
-      <div id="board-connect" class="incomplete"><i class="fa fa-times-circle"/> Board connect-able</div>
+      <div id="is-chrome" class="waiting"><i class="fa fa-fw fa-clock-o"/><span>Chrome version 33+</span></div>
+      <div id="app-installed" class="waiting"><i class="fa fa-fw fa-clock-o"/><span>Chrome App installed</span></div>
+      <div id="windows-drivers" class="hidden"><i class="fa fa-fw fa-clock-o"/><span>Windows drivers installed</span></div>
+      <div id="board-plug" class="waiting"><i class="fa fa-fw fa-clock-o"/><span>Board plugged in</span></div>
+      <div id="board-connect" class="waiting"><i class="fa fa-fw fa-clock-o"/><span>Board connectable</span></div>
+      <div id="board-components" class="waiting"><i class="fa fa-fw fa-clock-o"/><span>Board components usable</span></div>
     </div>
