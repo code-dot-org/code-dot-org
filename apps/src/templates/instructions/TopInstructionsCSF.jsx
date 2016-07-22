@@ -364,16 +364,6 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Handle an onWheel event inside instructions. Manually scroll it,
-   * since we are overriding default scroll functionality.
-   * @param {WheelEvent} wheelEvent
-   */
-  handleInstructionsWheel(wheelEvent) {
-    const contentContainer = this.refs.instructions.parentElement;
-    scrollBy(contentContainer, wheelEvent.deltaY);
-  },
-
-  /**
    * Handle a click to our "scroll up" button
    */
   handleScrollInstructionsUp() {
@@ -502,7 +492,6 @@ var TopInstructions = React.createClass({
           </div>
           <div ref="instructions"
               className="csf-top-instructions"
-              onWheel={this.handleInstructionsWheel}
               style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
           >
             <ChatBubble isMinecraft={this.props.isMinecraft}>
