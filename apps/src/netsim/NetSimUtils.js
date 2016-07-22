@@ -238,7 +238,7 @@ exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
  * @private
  */
 exports.scrubLevelConfiguration_ = function (levelConfig) {
-  var scrubbedLevel = _.clone(levelConfig, true);
+  var scrubbedLevel = _.cloneDeep(levelConfig);
 
   // Convert old header spec format to new header spec format
   scrubbedLevel.routerExpectsPacketHeader =
