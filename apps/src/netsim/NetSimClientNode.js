@@ -4,7 +4,7 @@
 'use strict';
 
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
