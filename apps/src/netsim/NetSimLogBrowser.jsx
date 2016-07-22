@@ -5,6 +5,9 @@ import moment from 'moment';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import Packet from './Packet';
 
+// We want the table to scroll beyond this height
+const MAX_TABLE_HEIGHT = 500;
+
 const styles = {
   table: {
     width: '100%'
@@ -152,6 +155,7 @@ const LogTable = React.createClass({
   },
 
   render() {
+    console.log(this.props.logRows);
     const headerFields = this.props.headerFields;
 
     const showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
@@ -162,74 +166,65 @@ const LogTable = React.createClass({
         headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
     let columns = [
-      <TableHeaderColumn
-        isKey
-        key="timestamp"
-        dataField="timestamp"
-        dataSort
-        dataFormat={timeFormatter}
-      >
-        Time
+      <TableHeaderColumn isKey hidden dataField="uuid"/>,
+      <TableHeaderColumn dataField="timestamp" dataSort dataFormat={timeFormatter}>
+      Time
       </TableHeaderColumn>,
-      <TableHeaderColumn
-        key="logged-by"
-        dataField="logged-by"
-        dataSort
-      >
-        Logged By
+      <TableHeaderColumn dataField="logged-by" dataSort>
+      Logged By
       </TableHeaderColumn>,
-      <TableHeaderColumn
-        key="status"
-        dataField="status"
-      >
-        Status
+      <TableHeaderColumn dataField="status" dataSort>
+      Status
       </TableHeaderColumn>
     ];
     if (showFromAddress) {
       columns.push(
-        <TableHeaderColumn
-          key="from-address"
-          dataField="from-address"
-        >
-          From
+        <TableHeaderColumn dataField="from-address" dataSort>
+        From
         </TableHeaderColumn>
       );
     }
     if (showToAddress) {
       columns.push(
-        <TableHeaderColumn
-          key="to-address"
-          dataField="to-address"
-        >
-          To
+        <TableHeaderColumn dataField="to-address" dataSort>
+        To
         </TableHeaderColumn>
       );
     }
     if (showPacketInfo) {
       columns.push(
-        <TableHeaderColumn
-          key="packet-info"
-          dataField="packet-info"
-        >
-          Packet
+        <TableHeaderColumn dataField="packet-info" dataSort>
+        Packet
         </TableHeaderColumn>
       );
     }
     columns.push(
-      <TableHeaderColumn
-        key="message"
-        dataField="message"
-      >
-        Message
+      <TableHeaderColumn dataField="message" dataSort>
+      Message
       </TableHeaderColumn>
     );
+
+    // Apply a key field to every column so React doesn't complain
+    columns = columns.map(column => React.cloneElement(column, {key: column.props.dataField}));
 
     return (
       <BootstrapTable
         data={this.props.logRows}
-        striped={true}
-        hover={true}
         children={columns}
+        condensed
+        height={MAX_TABLE_HEIGHT + 'px'}
+        tableStyle={{
+          overflowX: 'hidden',
+          overflowY: 'hidden'
+        }}
+        headerStyle={{
+          overflowX: 'hidden',
+          overflowY: 'hidden'
+        }}
+        bodyStyle={{
+          overflowX: 'hidden',
+          overflowY: 'auto'
+        }}
       />);
   }
 });
