@@ -40,7 +40,7 @@ const TopInstructions = React.createClass({
 });
 
 export default connect(state => ({
-  hidden: state.pageConstants.hideSource,
+  hidden: state.pageConstants.isShareView,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
   hasContainedLevels: state.instructions.hasContainedLevels,
   shortInstructions: state.instructions.shortInstructions,
