@@ -1,5 +1,6 @@
 {
   "actor": "actor",
+  "ask": "ask",
   "addCharacter": "add a",
   "addCharacterTooltip": "Add a character to the scene.",
   "addGoal": "add goal",
@@ -672,6 +673,7 @@
   "throwSprite": "throw",
   "throwSpriteN": "actor {spriteIndex} throw",
   "throwTooltip": "Throws a projectile from the specified actor.",
+  "toSet": "to set",
   "vanish": "vanish",
   "vanishActorN": "vanish actor {spriteIndex}",
   "vanishTooltip": "Vanishes the actor.",
