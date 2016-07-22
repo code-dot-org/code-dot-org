@@ -284,7 +284,7 @@ $(window).load(function () {
       var errorType = result ? null : answerErrors[0];
 
       return {
-        response: formattedResponse,
+        response: encodeURIComponent(formattedResponse),
         result: result,
         errorType: errorType
       };
