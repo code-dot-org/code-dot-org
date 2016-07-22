@@ -11,11 +11,6 @@ const FAILED = 4;
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED];
 
 const BoardSetupStatus = React.createClass({
-  propTypes: {
-    stepName: React.PropTypes.string.isRequired,
-    stepId: React.PropTypes.string.isRequired,
-    stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired,
-  },
   render() {
     return (
         <div className="setup-status">
@@ -31,6 +26,11 @@ const BoardSetupStatus = React.createClass({
 });
 
 const SetupStep = React.createClass({
+  propTypes: {
+    stepName: React.PropTypes.string.isRequired,
+    stepId: React.PropTypes.string.isRequired,
+    stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired,
+  },
   render() {
     return (
         <div id={this.props.stepId} className="waiting"><i className="fa fa-fw fa-clock-o"/><span>{this.props.stepName}</span></div>
