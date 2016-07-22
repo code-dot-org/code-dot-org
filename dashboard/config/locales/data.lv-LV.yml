@@ -1,75 +1,5 @@
 "lv":
   data:
-    script:
-      name:
-        20-hour:
-          desc: 8. klašu ievads datorzinātņu kursā
-          Unplug1: Līmenis 1
-          Maze: Līmenis 2
-          Unplug2: Līmenis 3
-          Unplug3: Līmenis 4
-          Artist: Līmenis 5
-          Unplug4: Līmenis 6
-          Artist2: Līmenis 7
-          Unplug5: Līmenis 8
-          Farmer: Līmenis 9
-          Unplug6: Līmenis 10
-          Artist3: Līmenis 11
-          Unplug7: Līmenis 12
-          Farmer2: Līmenis 13
-          Unplug8: Līmenis 14
-          Artist4: Līmenis 15
-          Unplug9: Līmenis 16
-          Farmer3: Līmenis 17
-          Unplug10: Līmenis 18
-          Artist5: Līmenis 19
-          Unplug11: Līmenis 20
-        Hour of Code:
-          desc: Programmēšanas stunda
-          Maze: Līmenis 1
-        Edit Code:
-          desc: Labot kodu (beta)
-          MazeEC: Līmenis 1
-        2014 Levels:
-          desc: Atlekt (beta)
-          Bounce: Līmenis 1
-        Builder Levels:
-          desc: Lietotāju izveidotas puzles (beta)
-          Custom: Līmenis 1
-        Flappy Levels:
-          desc: Flappy putns
-          Flappy: Līmenis 1
-        Jigsaw Levels:
-          desc: Atjautības puzle (beta)
-          Jigsaw: Līmenis 1
-        Step Levels:
-          desc: Labirints (beta)
-          MazeStep: Posma solis
-        edit-code:
-          desc: Labot kodu (beta)
-          MazeEC: Līmenis 1
-          Applab: Līmenis 2
-          ArtistEC: Līmenis 3
-          StudioEC: Līmenis 4
-        events:
-          desc: Atlekt (beta)
-          Bounce: Līmenis 1
-          Studio: Līmenis 2
-        builder:
-          desc: Lietotāju izveidotas puzles (beta)
-          Custom: Līmenis 1
-        flappy:
-          desc: Flappy putns
-          Flappy: Līmenis 1
-        jigsaw:
-          desc: Atjautības puzle (beta)
-          Jigsaw: Līmenis 1
-        step:
-          desc: Labirints (beta)
-          MazeStep: Posma solis
-        wordsearch:
-          desc: Burtošanas spēle (beta)
-          WordSearch: Līmenis 1
     game:
       name:
         Unplug1: Ievads datorzinātnēs
@@ -764,6 +694,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

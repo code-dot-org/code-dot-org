@@ -1,75 +1,5 @@
 "nl":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Informaticacursus op basisschool-niveau
-          Unplug1: Niveau 1
-          Maze: Niveau 2
-          Unplug2: Niveau 3
-          Unplug3: Niveau 4
-          Artist: Niveau 5
-          Unplug4: Niveau 6
-          Artist2: Niveau 7
-          Unplug5: Niveau 8
-          Farmer: Niveau 9
-          Unplug6: Niveau 10
-          Artist3: Niveau 11
-          Unplug7: Niveau 12
-          Farmer2: Niveau 13
-          Unplug8: Niveau 14
-          Artist4: Niveau 15
-          Unplug9: Niveau 16
-          Farmer3: Niveau 17
-          Unplug10: Niveau 18
-          Artist5: Niveau 19
-          Unplug11: Niveau 20
-        Hour of Code:
-          desc: Een Uur Code
-          Maze: Niveau 1
-        Edit Code:
-          desc: Bewerk Code (bèta)
-          MazeEC: Niveau 1
-        2014 Levels:
-          desc: Bounce (bèta)
-          Bounce: Niveau 1
-        Builder Levels:
-          desc: Door gebruikers gemaakte puzzels (bèta)
-          Custom: Niveau 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Niveau 1
-        Jigsaw Levels:
-          desc: Legpuzzel (bèta)
-          Jigsaw: Niveau 1
-        Step Levels:
-          desc: Doolhof (bèta)
-          MazeStep: Niveau Onderdeel
-        edit-code:
-          desc: Bewerk Code (bèta)
-          MazeEC: Niveau 1
-          Applab: Niveau 2
-          ArtistEC: Niveau 3
-          StudioEC: Niveau 4
-        events:
-          desc: Bounce (bèta)
-          Bounce: Niveau 1
-          Studio: Niveau 2
-        builder:
-          desc: Door gebruikers gemaakte puzzels (bèta)
-          Custom: Niveau 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Niveau 1
-        jigsaw:
-          desc: Legpuzzel (bèta)
-          Jigsaw: Niveau 1
-        step:
-          desc: Doolhof (bèta)
-          MazeStep: Niveau Onderdeel
-        wordsearch:
-          desc: Spellingswedstrijd (beta)
-          WordSearch: Niveau 1
     game:
       name:
         Unplug1: Inleiding Informatica
@@ -789,6 +719,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

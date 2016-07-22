@@ -1,75 +1,5 @@
 pt-BR:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introdução ao curso de ciência da computação para primeira a nona série.
-          Unplug1: Fase 1
-          Maze: Fase 2
-          Unplug2: Fase 3
-          Unplug3: Fase 4
-          Artist: Fase 5
-          Unplug4: Fase 6
-          Artist2: Fase 7
-          Unplug5: Fase 8
-          Farmer: Fase 9
-          Unplug6: Fase 10
-          Artist3: Fase 11
-          Unplug7: Fase 12
-          Farmer2: Fase 13
-          Unplug8: Fase 14
-          Artist4: Fase 15
-          Unplug9: Fase 16
-          Farmer3: Fase 17
-          Unplug10: Fase 18
-          Artist5: Fase 19
-          Unplug11: Fase 20
-        Hour of Code:
-          desc: Hora do Código
-          Maze: Fase 1
-        Edit Code:
-          desc: Editar Código (beta)
-          MazeEC: Fase 1
-        2014 Levels:
-          desc: Pingue-pongue (beta)
-          Bounce: Fase 1
-        Builder Levels:
-          desc: Jogos criados pelos usuários (beta)
-          Custom: Fase 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Fase 1
-        Jigsaw Levels:
-          desc: Quebra-cabeça (beta)
-          Jigsaw: Fase 1
-        Step Levels:
-          desc: Labirinto (beta)
-          MazeStep: Etapa da Fase
-        edit-code:
-          desc: Editar Código (beta)
-          MazeEC: Fase 1
-          Applab: Fase 2
-          ArtistEC: Fase 3
-          StudioEC: Fase 4
-        events:
-          desc: Pingue-pongue (beta)
-          Bounce: Fase 1
-          Studio: Fase 2
-        builder:
-          desc: Jogos criados pelos usuários (beta)
-          Custom: Fase 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Fase 1
-        jigsaw:
-          desc: Quebra-cabeça (beta)
-          Jigsaw: Fase 1
-        step:
-          desc: Labirinto (beta)
-          MazeStep: Etapa da Fase
-        wordsearch:
-          desc: Soletrando (beta)
-          WordSearch: Fase 1
     game:
       name:
         Unplug1: Introdução à Ciência da Computação
@@ -485,6 +415,7 @@ pt-BR:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

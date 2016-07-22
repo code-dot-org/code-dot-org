@@ -20,7 +20,7 @@ da:
       reset_password_instructions:
         subject: Instruktioner til at nulstille adgangskoden til Code.org
       unlock_instructions:
-        subject: Oplåsningsinstruktioner
+        subject: Oplås Instruktioner
     omniauth_callbacks:
       failure: 'Kunne ikke godkende dig fra %{kind}, fordi "%{reason}".'
       success: 'Succesfuldt godkendt fra %{kind} konto.'

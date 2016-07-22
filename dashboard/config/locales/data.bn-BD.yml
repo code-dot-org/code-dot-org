@@ -1,75 +1,5 @@
 "bn":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 সূচনা থেকে কম্পিউটার সায়েন্স কোর্স
-          Unplug1: "ধাপ ১"
-          Maze: "ধাপ ২"
-          Unplug2: "ধাপ ৩"
-          Unplug3: "ধাপ ৪"
-          Artist: "ধাপ ৫"
-          Unplug4: "ধাপ ৬"
-          Artist2: "ধাপ ৭"
-          Unplug5: "৮ম ধাপ"
-          Farmer: "৯ম ধাপ"
-          Unplug6: "১০ম ধাপ"
-          Artist3: "ধাপ ১১"
-          Unplug7: "ধাপ ১২"
-          Farmer2: "স্তর ১৩"
-          Unplug8: "স্তর ১৪"
-          Artist4: "স্তর ১৫"
-          Unplug9: "স্তর ১৬"
-          Farmer3: "স্তর ১৭"
-          Unplug10: "স্তর ১৮"
-          Artist5: "স্তর ১৯"
-          Unplug11: "স্তর ২০"
-        Hour of Code:
-          desc: "এক ঘন্টার কোড"
-          Maze: "ধাপ ১"
-        Edit Code:
-          desc: "কোড বদলাও (বেটা)"
-          MazeEC: "ধাপ ১"
-        2014 Levels:
-          desc: "বাউন্স (বেটা)"
-          Bounce: "ধাপ ১"
-        Builder Levels:
-          desc: "তোমাদের তৈরি ধাঁধা (বেটা)"
-          Custom: "ধাপ ১"
-        Flappy Levels:
-          desc: "ডানা ঝাপটানো পাখি"
-          Flappy: "ধাপ ১"
-        Jigsaw Levels:
-          desc: "জিগ-স (বেটা)"
-          Jigsaw: "ধাপ ১"
-        Step Levels:
-          desc: "গোলকধাঁধা (বেটা)"
-          MazeStep: "স্তরের ধাপ"
-        edit-code:
-          desc: "কোড বদলাও (বেটা)"
-          MazeEC: "ধাপ ১"
-          Applab: "ধাপ ২"
-          ArtistEC: "ধাপ ৩"
-          StudioEC: "ধাপ ৪"
-        events:
-          desc: "বাউন্স (বেটা)"
-          Bounce: "ধাপ ১"
-          Studio: "ধাপ ২"
-        builder:
-          desc: "তোমাদের তৈরি ধাঁধা (বেটা)"
-          Custom: "ধাপ ১"
-        flappy:
-          desc: "ডানা ঝাপটানো পাখি"
-          Flappy: "ধাপ ১"
-        jigsaw:
-          desc: "জিগ-স (বেটা)"
-          Jigsaw: "ধাপ ১"
-        step:
-          desc: "গোলকধাঁধা (বেটা)"
-          MazeStep: "স্তরের ধাপ"
-        wordsearch:
-          desc: "বানান-পটু মৌমাছি (বেটা)"
-          WordSearch: "ধাপ ১"
     game:
       name:
         Unplug1: "কম্পিউটার বিজ্ঞান পরিচিতি"
@@ -748,6 +678,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

@@ -94,7 +94,7 @@
     teacher_title: Rejestracja nauczyciela
     student_pitch: Rejestracja w Code.org dla uczniów
     student_title: Rejestracja ucznia
-    signup_title: Sign up for Code.org
+    signup_title: Zarejestruj się w Code.org
     school_name: Nazwa szkoły (opcjonalnie)
     school_address: Adres szkoły (opcjonalnie)
     address_placeholder: adres, miasto, województwo, kod pocztowy
@@ -119,7 +119,7 @@
     teacher_terms: Zobowiązuję się do przestrzegania <a href='http://code.org/tos'>
       warunków korzystania z serwisu</a> Code.org.
     additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
-    user_type_label: Account Type
+    user_type_label: Typ konta
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
   signin_form:
@@ -138,6 +138,8 @@
     picture: Teraz znajdź swój tajny obrazek
     words: Teraz wpisz swoje tajne słowa
     login: Zaloguj się
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Nie pamiętasz hasła?
@@ -291,6 +293,10 @@
       signin: Zaloguj się
       signup: Zarejestruj się
       already_registered: Czy jesteś Już zarejestrowany?
+      pair_programming: Programowanie w parach
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
@@ -325,6 +331,7 @@
       example_with_number: Przykładowe rozwiązanie %{solution_number}
       submitted_on: Przesłane dnia %{date}
       unsubmit: Nieprzesłane
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -402,19 +409,19 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Ucz się więcej
+    announcement_learn_more_button: Ucz się więcej
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition_button: Dodaj swoje imię
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
+    new_section_dne: Przepraszamy, sekcja %{new_section_code} nie istnieje. Wprowadź
+      inny kod sekcji.
     section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
+    section_code_cant_be_current_section: Bieżąca sekcja nie może być taka sama, jak
+      nowa sekcja.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
     students_not_yours: You cannot move students from a section that does not belong
@@ -504,10 +511,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Ucz się więcej
   slow_loading: To trwa dłużej niż zwykle...
   try_reloading: Spróbuj odświeżyć stronę
@@ -686,40 +689,6 @@
     hour: 1 godzina
     day: dzień
     week: tydzień
-  data:
-    script:
-      name:
-        20-hour:
-          title: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
-          description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia
-            z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku
-            klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach
-            wiekowych.
-        Hour of Code:
-          title: Godzina Kodowania 2013
-          description: ''
-        edit-code:
-          title: Edytuj kod
-          description: ''
-        events:
-          title: Zdarzenia
-          description: ''
-        builder:
-          title: Kreator
-          description: ''
-        flappy:
-          title: Flappy Code
-          description: Chciałbyś napisać własną grę w mniej niż 10 minut? Spróbuj
-            naszego poradnika Flappy Code!
-        jigsaw:
-          title: Układanka
-          description: ''
-        step:
-          title: Krok
-          description: ''
-        sample_level_builder:
-          title: Przykładowy Kreator Poziomu
-          description: ''
   age_interstitial:
     age: Twój wiek
     header: Aktualizacja informacji o koncie
@@ -760,8 +729,10 @@
     share_copy_link: 'Skopiuj odnośnik/link:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
-    advanced_share: Show advanced options
+    advanced_share: Pokaż opcje zaawansowane
     close: Zamknij
     more: Więcej
     name: Imię/Nazwisko
@@ -788,6 +759,8 @@
     abuse:
       tos: Zgłoszono, że ten projekt narusza <a href='http://code.org/tos'> Warunki
         korzystania</a> z Code.org i nie może być udostępniony innym.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Jeśli uważasz to za błąd, to prosimy <a href='https://code.org/contact'>
         skontaktować się z nami.</a>
       go_to_code_studio: Przejdź do Code Studio
@@ -815,11 +788,11 @@
           of Service%{link_end}
   peer_review:
     accepted:
-      name: Accepted
+      name: Zaakceptowane
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
-      name: Rejected
+      name: Odrzucone
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
@@ -828,14 +801,23 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Szukaj ikony...
       no_icons_found: Nie odnaleziono ikon
     playzone:
       artist_description: Rysuj fajne obrazki i wzory z Artystą!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Nowy rysunek
+      continue_button: Przejdź do następnego etapu
       playlab_description: Utwórz historyjkę lub grę z Play Lab!
       playlab_title: Nowa aplikacja
       primary_header: Gratulacje po ukończeniu etapu %{stageName}!
@@ -847,13 +829,14 @@
     content: Treści
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Pobieranie godziny kodowania
     capsule_title: Czy masz połączenie z Internetem?
