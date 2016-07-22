@@ -125,6 +125,8 @@ et:
     picture: Nüüd leia oma salajane pilt
     words: Nüüd sisestage oma salajased sõnad
     login: Logi sisse
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Unustasid oma salasõna?
@@ -240,6 +242,10 @@ et:
       signin: Logi sisse
       signup: Liitu
       already_registered: Oled juba liitunud?
+      pair_programming: Paarisprogrammeerimine
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name} edusammud'
       progress: Sinu progress
@@ -274,6 +280,7 @@ et:
       example_with_number: 'Näidislahend %{solution_number}'
       submitted_on: 'Esitatud:'
       unsubmit: Võta vastus tagasi
+      worked_with: Worked With
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
     email_confirm_needed_required: 'Teie e-posti aadress %{email} ei ole kinnitatud:'
@@ -333,9 +340,8 @@ et:
     print_certificate: Prindi tunnistus
     announcement_title: Teated
     announcement_view_all: Vaata kõiki
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+    announcement_learn_more_button: Lisateave
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -400,8 +406,6 @@ et:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: Lisateave
   slow_loading: See võtab tavapärasest rohkem aega...
   try_reloading: Proovige lehte uuendada
@@ -553,36 +557,6 @@ et:
     hour: 1 tund
     day: päev
     week: nädal
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Sissejuhatus Arvutiteadusesse kursusele (15-25 tundi)
-          description: See 20-tunnine kursus tutvustab arvutiteaduse ja programmeerimise põhilisi aspekte ja mõisteid. Kursus on mõeldud õpilastele kuni 8, klassini, aga sellest on lõbus õppida igas vanuses.
-        Hour of Code:
-          title: KoodiTund 2013
-          description: ""
-        edit-code:
-          title: Muuda koodi
-          description: ""
-        events:
-          title: Sündmused
-          description: ""
-        builder:
-          title: Ehitaja
-          description: ""
-        flappy:
-          title: Flappy kood
-          description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi meie Flappy Code õpetusvideot!
-        jigsaw:
-          title: Pusle
-          description: ""
-        step:
-          title: samm
-          description: ""
-        sample_level_builder:
-          title: Näidis tasandi ehitaja
-          description: ""
   age_interstitial:
     age: Sinu vanus
     header: Konto teabe värskendamine
@@ -615,6 +589,7 @@ et:
     share_title: Jaga oma projekti
     share_copy_link: 'Kopeeri link:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Sulge
@@ -638,6 +613,7 @@ et:
     edit_project: Muuda projekti
     abuse:
       tos: "Selle projekti kohta on teada antud, et see rikub code.org <a href='http://code.org/tos'> kasutajatingimusi</a>ja seda ei saa teistega jagada."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Kui sa arvad, et tegemist on veaga, palun <a href='https://code.org/contact'> kontakteeru meiega </a>"
       go_to_code_studio: Mine koodistuudiosse
       report_abuse_form:
@@ -669,6 +645,14 @@ et:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -688,7 +672,9 @@ et:
     content: Content
     practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

@@ -126,6 +126,8 @@ sq:
     picture: Tani gjej figurën tënde të fshehtë
     words: Tani fut fjalët e tua të fshehta
     login: Futu
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Keni harruar fjalëkalimin?
@@ -250,6 +252,10 @@ sq:
       signin: Futu
       signup: Rregjistrohu
       already_registered: Jeni i rregistruar?
+      pair_programming: Programim në çift
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'Progresi i %{name}'
       progress: Progresi yt
@@ -284,6 +290,7 @@ sq:
       example_with_number: 'Shëmbuj Zgjidhjesh %{solution_number}'
       submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Adresa e email-it nuk është konfirmuar:'
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
@@ -343,9 +350,8 @@ sq:
     print_certificate: Printo Certifikatën
     announcement_title: Announcements
     announcement_view_all: View all
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+    announcement_learn_more_button: Mëso më shumë
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -410,8 +416,6 @@ sq:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: Mëso më shumë
   slow_loading: Kjo po zgjat më shumë seç duhet...
   try_reloading: Provo të rifreskosh faqen
@@ -563,36 +567,6 @@ sq:
     hour: 1 orë
     day: ditë
     week: javë
-  data:
-    script:
-      name:
-        20-hour:
-          title: Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
-          description: Ky kurs që zgjat 20 orë, na njeh me ën e shkences kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
-        Hour of Code:
-          title: Ora e Kodit 2013
-          description: ""
-        edit-code:
-          title: Ndrysho kodin
-          description: ""
-        events:
-          title: Eventet
-          description: ""
-        builder:
-          title: Ndërtuesi
-          description: ""
-        flappy:
-          title: Kodi Flappy
-          description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë të Flappy Code!
-        jigsaw:
-          title: Jigsaw
-          description: ""
-        step:
-          title: Një hap
-          description: ""
-        sample_level_builder:
-          title: Shembull i Ndertuesit të niveleve
-          description: ""
   age_interstitial:
     age: Mosha juaj
     header: Përditësimi i Informacionit të Llogarisë
@@ -625,6 +599,7 @@ sq:
     share_title: Shpërndaje projektin
     share_copy_link: 'Kopjo lidhjen:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Mbyll
@@ -648,6 +623,7 @@ sq:
     edit_project: Ndërhy në Projekt
     abuse:
       tos: "Ky projekt është raportuar si shkelje e <a href='http://code.org/tos'> së Termave të Shërbimit të Code.org</a> dhe nuk mund të behet publik për të tjerët."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Nëse mendoni që kjo nuk është e drejtë, ju lutem n'a kontaktoni në <a href='https://code.org/contact'></a>"
       go_to_code_studio: Shkoni në Studioja e Kodit
       report_abuse_form:
@@ -679,6 +655,14 @@ sq:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Kerko nje ikone...
@@ -698,7 +682,9 @@ sq:
     content: Content
     practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

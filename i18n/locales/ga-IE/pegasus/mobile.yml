@@ -46,7 +46,7 @@ ga-IE:
   csedweek_map_legend_cs_tech_jam: Ócáid Speisialta
   cded_sign_up: Cláraigh
   cded_try_it: Bain triail as
-  twentyhours_trynow: Bain triail as anois
+  try_now: Bain triail as anois
   california_heading: Iarr ar do scoil an ríomheolaíocht a mhúineadh
   california_text: "Is féidir le haon mhúinteoir ár gcuid <a href='http://studio.code.org/'>cúrsaí saor in aisce</a> a mhúineadh. Is féidir le haon bhunscoil <a href='http://code.org/educate/k5'>an ríomheolaíocht a mhúineadh</a>. Iarr ar do scoil dara leibhéal <a href='http://code.org/educate/districts'>dul i gcomhar linn."
   california_button: Tuilleadh Eolais
@@ -388,14 +388,9 @@ ga-IE:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Úsáid blocanna tarraingt-is-scaoileadh agus JavaScript.
   starwars_javascript_specs: Béarla amháin | Brabhsálaithe nua-aimseartha | Aois 11+
-  starwars_javascript_start_button: Bain triail as anois
   starwars_blocks_title: Blocanna
   starwars_blocks_description: Úsáid blocanna tarraingt-is-scaoileadh.
   starwars_blocks_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid | Aois 6-106
-  starwars_blocks_start_button: Bain triail as anois
-  starwars_watch_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla seo
-  starwars_speak_languages: An bhfuil teanga eile agat?
-  starwars_help_translate: Cabhraigh leis an aistriúchán
   starwars_platform_text: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_name: An Uair Chódála Minecraft
   mc_longdescription: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan Minecraft seo.
@@ -404,6 +399,11 @@ ga-IE:
   mc_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois 6-106
   minecraft_subtitle: An Uair Chódála Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Bí i do shaorálaí agus spreag daltaí
   volunteer_engineer_submission_subtitle_generic: 'Beidh 100,000 múinteoir ag óstáil An Uair Chódála ina seomra ranga i mbliana, 7-13 Mí na Nollag, 2015. Cabhraigh leo! '
   volunteer_engineer_submission_subtitle_specific: 'Tá %{num_teachers} múinteoir ag lorg cúnaimh ó shaorálaithe.<br>Tá %{num_volunteers} saorálaí tar éis clárú. Bí leo!'
@@ -533,6 +533,8 @@ ga-IE:
   dashboard_assessments_none_part2: Má tá tú ag múineadh cúrsa ag an dara leibhéal, tá ceisteanna measúnaithe againn mar chuid den Stiúideo Códála mar acmhainn do dhaltaí a dhéanfaidh an scrúdú AP. Chun na measúnuithe seo a úsáid, tabhair an cúrsa do do rang, ansin roghnaigh an cúrsa ón roghchlár anuas agus feicfidh tú freagraí do chuid daltaí anseo.
   dashboard_assessments_summaries: Achoimrí
   dashboard_assessments_answers: Na freagraí go léir
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Scagadh de réir na céime:'
   dashboard_filter_all: Uile
   dashboard_download_csv: Íoslódáil CSV
@@ -547,6 +549,7 @@ ga-IE:
   dashboard_navigation_view_progress: Dul chun cinn
   dashboard_navigation_view_text_responses: Freagraí Téacs
   dashboard_navigation_view_assessments: Measúnuithe
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Cuir Daltaí Leis
   dashboard_navigation_manage_students: Bainistigh Daltaí
   dashboard_navigation_lesson_plans_resources: Pleananna Ceachta agus Acmhainní
@@ -697,7 +700,9 @@ ga-IE:
   dashboard_announcements: Fógraí
   dashboard_announce_view_all: Féach uile
   dashboard_announce_message: 'Ar mhaith leat cabhrú linn chun gné nua a thástáil? Tuigimid go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail, mar sin beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh do chuid aiseolais sula gcraolfaimid an gné go poiblí.'
-  dashboard_announce_button_text: Tástáil an ghné
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Tuilleadh eolais
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim. Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo, tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
   dashboard_announce_petition_button: "Cuir d'ainm leis"
   code_hoc_coming: 'Tá an Uair Chódála anseo - 8-14 Nollaig!'
@@ -1231,9 +1236,8 @@ ga-IE:
   processing_beyond_longdescription: Is éard atá in Processing ná teanga ríomhchlárúcháin, timpeallacht forbartha, agus comhphobal ar líne. Tá litearthacht ar bhogearraí sna hamharcealaíona agus amharclitearthacht sa teicneolaíocht á gcur chun cinn ag an gcomhphobal Processing ó 2001. Cruthaíodh Processing i dtús báire mar shórt leabhar sceitseála leictreonach, agus mar uirlis chun buntús an ríomhchláraithe a mhúineadh i gcomhthéacs radharcach. Sa lá atá inniu, baineann forbróirí gairmiúla úsáid as Processing, chomh maith le go leor daltaí, ealaíontóirí, taighdeoirí, agus amaitéarach a úsáideann é chun fréamhshamhla agus córais táirgthe a dhéanamh.
   alice_beyond_longdescription: Is éard atá san Alice Project ná timpeallacht nuálach ríomhchláraithe a thacaíonn le beochan 3T. Soláthraíonn sé uirlisí agus ábhar múinteoireachta lenar féidir smaointeoireacht ríomhaireachtúil, réiteach fadhbanna, agus ríomhchlárú a mhúineadh do pháistí de gach aois.
   sphero_beyond_longdescription: Is cuma an múinteoir nó tuismitheoir thú, tugann na ceachtanna SPRK dianchúrsa ríomhchláraithe le róbait do pháistí a ghéaraíonn a scileanna sa matamaitic agus san eolaíocht ag an am céanna.
-  compatibility_https_header: Ba chóir duit HTTPS a chumasú le haghaidh code.org.
-  compatibility_https_message: "Le do shlándáil a chosaint, athróidh an suíomh seo ó HTTP go HTTPS ar %{https_date}. Ní bheidh tú in ann cuairt a thabhairt ar http://code.org tar éis an dáta seo. <a href='%{it_requirements_url}'>Cliceáil anseo</a> chun tuilleadh eolais a fháil faoi úsáid HTTPS ar Code.org."
-  compatibility_https_hide_this_warning: Folaigh an rabhadh seo
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

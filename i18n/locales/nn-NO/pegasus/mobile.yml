@@ -45,7 +45,7 @@ nn-NO:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Meld deg på
   cded_try_it: Prøv sjølv
-  twentyhours_trynow: Prøv no
+  try_now: Prøv no
   california_heading: Spør skulen din om å undervise koding
   california_text: "Alle lærarar kan tilby våre <a href='http://studio.code.org/'>gratiskurs</a>. Alle barneskuler kan <a href='http://code.org/educate/k5'>undervise koding</a>. Spør videregåande skular om å <a href='http://code.org/educate/districts'> samarbeide med oss."
   california_button: Lær meir
@@ -366,14 +366,9 @@ nn-NO:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slepp blokker og JavaScript.
   starwars_javascript_specs: Berre engelsk | Moderne nettlesarar | For dei som er 11 år eller eldre
-  starwars_javascript_start_button: Prøv no
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slepp blokker.
   starwars_blocks_specs: Mange språk | Moderne nettlesere, smarttelefoner, nettbrett | Alderen 6-106
-  starwars_blocks_start_button: Prøv no
-  starwars_watch_videos: Før du begynnar kan du sjå ein av desse inspirerande filmane
-  starwars_speak_languages: Snakkar du eit anna språk?
-  starwars_help_translate: Hjelp oss med å oversetja
   starwars_platform_text: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
@@ -382,6 +377,11 @@ nn-NO:
   mc_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   mc_specs: Mange språk | Moderne nettlesere og nettbrett | Alderen 6-106
   minecraft_subtitle: Kodetimen med Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærarar skal ha ein Kodetime i sitt klasserom i år, 7.-13. desember 2015. Dei ønskjer di hjelp! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere trenger frivillige som er lidenskapelig opptatt av informatikk til å hjelpe til med Kodetimen i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med.'
@@ -511,6 +511,8 @@ nn-NO:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -525,6 +527,7 @@ nn-NO:
   dashboard_navigation_view_progress: Framgang
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Legg til elevar
   dashboard_navigation_manage_students: Administrer elevar
   dashboard_navigation_lesson_plans_resources: Leksjonsplanar og ressursar
@@ -673,9 +676,10 @@ nn-NO:
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjeringar
   dashboard_announce_view_all: Sjå alle
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Lær meir
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Legg til navnet ditt
   code_hoc_coming: 'Kodetimen er her - 8.- 14. desember!'
@@ -1208,9 +1212,8 @@ nn-NO:
   processing_beyond_longdescription: Processing er et programmeringsspråk, utviklingsmiljø, og nettsamfunn. Siden 2001 har Processing fremmet programvareferdighet innenfor visuell kunst og visuell kompetanse innen teknologi. Opprinnelig opprettet for å tjene som en skissebok innen programvare og å lære grunnleggende dataprogrammering innenfor en visuell sammenheng, Processing utviklet seg til et utviklingsverktøy for fagfolk. I dag er det titusener av elever, kunstnere, designere, forskere og amatører som bruker Processing for læring, prototyper og produksjon.
   alice_beyond_longdescription: Alice Project bruker et nyskapende programmeringsmiljø som støtte til å lage 3D-animasjoner, og tilbyr verktøy og materialer for undervisning i og læring av beregningsorientert tenkning, problemløsning og programmering over et bredt spekter av aldre og klassetrinn.
   sphero_beyond_longdescription: Enten du er lærer eller foresatt, SPRK-leksjoner gir barna et morsomt intensivkurs i å programmere roboter, samtidig som de skjerper sine ferdigheter i matematikk og naturfag.
-  compatibility_https_header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
-  compatibility_https_message: "For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS. <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer HTTPS for Code.org."
-  compatibility_https_hide_this_warning: Skjul denne advarselen
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

@@ -45,7 +45,7 @@ et-EE:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Liitu
   cded_try_it: Proovi seda
-  twentyhours_trynow: Proovi nüüd
+  try_now: Proovi nüüd
   california_heading: Palu oma koolis õpetada arvutiteadust
   california_text: "Iga õpetaja saab pakkuda meie <a href='http://studio.code.org/'>tasuta kursusi</a>. Iga algkool saab <a href='http://code.org/educate/k5'>õpetada arvutiteadust</a>. Palu gümnaasiumidel <a href='http://code.org/educate/districts'>meiega ühineda."
   california_button: Lisateave
@@ -348,14 +348,9 @@ et-EE:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: 'Kasuta "sikuta ja lase lahti" plokke ja JavaScripti.'
   starwars_javascript_specs: Ainult inglise keeles | Tänapäevased brauserid | Vanusele 11+
-  starwars_javascript_start_button: Proovi nüüd
   starwars_blocks_title: Plokid
   starwars_blocks_description: 'Kasuta "sikuta ja lase lahti" plokke.'
   starwars_blocks_specs: Palju keeli | Kaasaegsed brauserid, nutitelefonid, tahvlid | Vanuses 6-106
-  starwars_blocks_start_button: Proovi nüüd
-  starwars_watch_videos: Enne alustamist vaata ühte nendest inspireerivatest videotest.
-  starwars_speak_languages: Kas räägid mõnda muud keelt?
-  starwars_help_translate: Aita meil tõlkida
   starwars_platform_text: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_name: Minecrafti KoodiTund
   mc_longdescription: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles Minecrafti maailmas.
@@ -364,6 +359,11 @@ et-EE:
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
   minecraft_subtitle: Minecrafti KoodiTund
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspireeri õpilasi ja ole KoodiTunni vabatahtlik
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015. aastal, 7.–13. detsembril, KoodiTunni oma klassis. Nad vajavad Sinu abi! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} õpetajat otsib vabatahtlikke, kes armastavad arvutiteaduse õpetamist, et nad aitaks neid sellel detsembril KoodiTunniga.<br>%{num_volunteers} vabatahtlikku on juba registreerinud. Liitu nendega.'
@@ -493,6 +493,8 @@ et-EE:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -507,6 +509,7 @@ et-EE:
   dashboard_navigation_view_progress: Progress
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Lisa õpilasi
   dashboard_navigation_manage_students: Õpilaste haldamine
   dashboard_navigation_lesson_plans_resources: Tunnikavad ja ressursid
@@ -655,9 +658,10 @@ et-EE:
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
   dashboard_announce_view_all: Vaata kõiki
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Lisateave
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'KoodiTund on siin - 8.-14. detsember!'
@@ -1190,9 +1194,8 @@ et-EE:
   processing_beyond_longdescription: Processing on programmeerimiskeel, arendav keskkond ja online kogukong. Alates 2001 on Processing tutvustanud programmeerimist kunstide valdkonnas. Algselt loodi tarkvara programmeerimise aluste õpetamiseks joonistamise kontekstis, kuid see arenes edasi programmiks, mida kasutavad professionaalid. Tänaseks kasutavad kümned tuhanded õpilased, kunstnikud, kujundajad, uurijad ning teised Processingi abi õppimisel, prototüüpimisel ning teoste loomisel.
   alice_beyond_longdescription: Alice Project kasutab innovaatilist programmeerimise keskkonda 3D animatsioonide loomiseks. Olemas on vajalikud vahendid ja materjalid, kuidas õpetada ja õppida arvutiteadusi, probleemide lahendamist ja programmeerimist sõltumata east ning tasemest.
   sphero_beyond_longdescription: 'Sõltumata sellest, kas oled õpetaja või lapsevanem, SPRK tunnid annavad lastele esimese lõbusa kogemusi robotite programmeerimisel ning samal parandavad nende matemaatika- ja reaalainete oskusi.'
-  compatibility_https_header: Palun luba HTTPS Code.org jaoks.
-  compatibility_https_message: "Turvalisuse tõstmiseks läheme me üle HTTPS peale %{https_date}. Pärast seda kuupäeva ei saa sa Code.org siseneda. <a href='%{it_requirements_url}'>Kliki siia</a>, et õppida, kuidas HTTPSi Code.org lehel kasutada."
-  compatibility_https_hide_this_warning: Peida see hoiatussõnum
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

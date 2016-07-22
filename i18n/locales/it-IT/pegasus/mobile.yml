@@ -47,7 +47,7 @@ it-IT:
   csedweek_map_legend_cs_tech_jam: Eventi speciali
   cded_sign_up: Iscriviti
   cded_try_it: Prova
-  twentyhours_trynow: Prova adesso
+  try_now: Prova adesso
   california_heading: Chiedi alla tua scuola di insegnare informatica
   california_text: "Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>corsi gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>insegnare informatica</a>. Chiedi alle scuole superiori di <a href = 'http://code.org/educate/districts' >collaborare con noi</a>."
   california_button: Ulteriori informazioni
@@ -386,14 +386,9 @@ it-IT:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
   starwars_javascript_specs: Solo in inglese | Browser moderni | Da 11 anni in su
-  starwars_javascript_start_button: Prova adesso
   starwars_blocks_title: Blocchi
   starwars_blocks_description: Usa la programmazione a blocchi.
   starwars_blocks_specs: Molte lingue | Browser, smartphone e tablet moderni | Da 6 anni in su
-  starwars_blocks_start_button: Prova adesso
-  starwars_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
-  starwars_speak_languages: "Parli un'altra lingua?"
-  starwars_help_translate: Aiutaci a tradurre
   starwars_platform_text: Browser moderni, smartphone, tablet
   mc_name: "L'Ora del Codice con Minecraft"
   mc_longdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex.
@@ -402,6 +397,11 @@ it-IT:
   mc_platformtext: Browser moderni, smartphone, Tablet
   mc_specs: Molte lingue | Browser e tablet moderni | Da 6 anni in su
   minecraft_subtitle: "L'Ora del Codice con Minecraft"
+  watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
+  speak_another_language: "Parli un'altra lingua?"
+  help_translate: Aiutaci a tradurre.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: "Invita studenti e volontari a partecipare all'ora del codice."
   volunteer_engineer_submission_subtitle_generic: "100.000 insegnanti ospiteranno un'Ora di Codice nelle loro classi quest'anno: 7-13 Dicembre 2015. Hanno bisogno del tuo aiuto! "
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} insegnanti cercano volontari appassionati di formazione informatica per aiutarli nella loro Ora del Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti a loro.'
@@ -536,6 +536,8 @@ it-IT:
   dashboard_assessments_none_part2: Se state insegnando in un corso al liceo o alle scuole medie, abbiamo domande di valutazione disponibili come parte del Code Studio per aiutare gli studenti a prepararsi per il test di AP. Per utilizzare queste valutazioni, in primo luogo assegnare il corso per la classe e poi scegliere il corso dal menu a tendina qui sopra per vedere le risposte degli studenti.
   dashboard_assessments_summaries: Riassunti
   dashboard_assessments_answers: Tutte le risposte
+  dashboard_surveys_answers: Sondaggi
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
   dashboard_download_csv: Scarica CSV
@@ -550,6 +552,7 @@ it-IT:
   dashboard_navigation_view_progress: Avanzamento
   dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
+  dashboard_navigation_view_surveys: Sondaggi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -700,7 +703,9 @@ it-IT:
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
   dashboard_announce_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-  dashboard_announce_button_text: Testare la funzionalità
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Ulteriori informazioni
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
   dashboard_announce_petition_button: Aggiungi il tuo nome
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
@@ -1247,9 +1252,8 @@ it-IT:
   processing_beyond_longdescription: "Processing è un linguaggio di programmazione, un ambiente di sviluppo e una comunità online. Dal 2001 Processing ha promosso l'alfabetizzazione software nelle arti visive e l'alfabetizzazione visuale nella tecnologia. Creato Inizialmente come un quaderno per bozze digitale e per insegnare i fondamenti della programmazione all'interno di un contesto visivo, Processing si è evoluto in uno strumento di sviluppo per professionisti. Oggi ci sono decine di migliaia di studenti, artisti, progettisti, ricercatori e appassionati che usano Processing per imparare, per creare prototipi e per produrre."
   alice_beyond_longdescription: Utilizzando un innovativo ambiente di programmazione per supportare la creazione di animazioni 3D, il progetto Alice fornisce strumenti e risorse per insegnare ed imparare il pensiero computazionale, il problem solving e la programmazione a studenti di tutte le età e a tutti i livelli.
   sphero_beyond_longdescription: Se sei un educatore o un genitore, le lezioni SPRK permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze e matematica.
-  compatibility_https_header: Serve abilitare il protocollo HTTPS per Code.org.
-  compatibility_https_message: "Per aumentare la sicurezza, noi stiamo passando a HTTPS su %{https_date}. Non sarete in grado di accedere Code.org dopo questa data. <a href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare HTTPS per accedere a Code.org."
-  compatibility_https_hide_this_warning: Nascondi questo avviso
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

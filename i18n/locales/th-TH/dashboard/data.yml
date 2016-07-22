@@ -1,75 +1,5 @@
 th:
   data:
-    script:
-      name:
-        20-hour:
-          desc: บทนำ K 8 หลักสูตรวิทยาศาสตร์คอมพิวเตอร์
-          Unplug1: ขั้นตอนที่ 1
-          Maze: ขั้นตอนที่ 2
-          Unplug2: ขั้นตอนที่ 3
-          Unplug3: ขั้นตอนที่ 4
-          Artist: ขั้นตอนที่ 5
-          Unplug4: ขั้นตอนที่ 6
-          Artist2: ขั้นตอนที่ 7
-          Unplug5: ขั้นตอนที่ 8
-          Farmer: ขั้นตอนที่ 9
-          Unplug6: ขั้นตอนที่ 10
-          Artist3: ขั้นตอนที่ 11
-          Unplug7: ขั้นตอนที่ 12
-          Farmer2: ขั้นตอนที่ 13
-          Unplug8: ขั้นตอนที่ 14
-          Artist4: ขั้นตอนที่ 15
-          Unplug9: ขั้นตอนที่ 16
-          Farmer3: ขั้นตอนที่ 17
-          Unplug10: ขั้นตอนที่ 18
-          Artist5: ขั้นตอนที่ 19
-          Unplug11: ขั้นตอนที่ 20
-        Hour of Code:
-          desc: ช่วงเวลาของ Code
-          Maze: ขั้นตอนที่ 1
-        Edit Code:
-          desc: แก้ไขรหัส (เบต้า)
-          MazeEC: ขั้นตอนที่ 1
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: ขั้นตอนที่ 1
-        Builder Levels:
-          desc: ปริศนาที่ผู้ใช้สร้างขึ้น (เบต้า)
-          Custom: ขั้นตอนที่ 1
-        Flappy Levels:
-          desc: แฟลบปีเบิร์ด
-          Flappy: ขั้นตอนที่ 1
-        Jigsaw Levels:
-          desc: จิ๊กซอว์ (เบต้า)
-          Jigsaw: ขั้นตอนที่ 1
-        Step Levels:
-          desc: เขาวงกต (เบต้า)
-          MazeStep: Stage Step
-        edit-code:
-          desc: แก้ไขรหัส (เบต้า)
-          MazeEC: ขั้นตอนที่ 1
-          Applab: ขั้นตอนที่ 2
-          ArtistEC: ขั้นตอนที่ 3
-          StudioEC: ขั้นตอนที่ 4
-        events:
-          desc: Bounce (beta)
-          Bounce: ขั้นตอนที่ 1
-          Studio: ขั้นตอนที่ 2
-        builder:
-          desc: ปริศนาที่ผู้ใช้สร้างขึ้น (เบต้า)
-          Custom: ขั้นตอนที่ 1
-        flappy:
-          desc: แฟลบปีเบิร์ด
-          Flappy: ขั้นตอนที่ 1
-        jigsaw:
-          desc: จิ๊กซอว์ (เบต้า)
-          Jigsaw: ขั้นตอนที่ 1
-        step:
-          desc: เขาวงกต (เบต้า)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: ขั้นตอนที่ 1
     game:
       name:
         Unplug1: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
@@ -251,7 +181,7 @@ th:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
@@ -505,6 +435,7 @@ th:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

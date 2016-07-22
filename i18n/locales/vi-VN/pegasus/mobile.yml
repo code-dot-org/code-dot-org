@@ -46,7 +46,7 @@ vi-VN:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
-  twentyhours_trynow: Thử ngay bây giờ
+  try_now: Thử ngay bây giờ
   california_heading: Yêu cầu trường học của bạn giảng dạy khoa học máy tính
   california_text: "Bất kỳ giáo viên có thể cung cấp các <a href='http://studio.code.org/'>khóa học miễn phí</a>.  Bất kỳ trường tiểu học có thể <a href='http://code.org/educate/k5'>dạy khoa học máy tính</a>. Yêu cầu trường trung học để <a href = 'http://code.org/educate/districts' >hợp tác với chúng tôi</a>."
   california_button: Tìm hiểu thêm
@@ -365,14 +365,9 @@ vi-VN:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Sử dụng các khối kéo-thả và JavaScript.
   starwars_javascript_specs: Chỉ sử dụng Tiếng Anh | Các trình duyệt hiện đại | Tuổi 11+
-  starwars_javascript_start_button: Thử ngay bây giờ
   starwars_blocks_title: các khối
   starwars_blocks_description: Sử dụng các khối kéo-thả.
   starwars_blocks_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại, điện thoại thông minh, máy tính bảng | Tuổi từ 6-106
-  starwars_blocks_start_button: Thử ngay bây giờ
-  starwars_watch_videos: Trước khi bạn bắt đầu, hãy xem một trong những video truyền cảm hứng này
-  starwars_speak_languages: Bạn nói một ngôn ngữ khác?
-  starwars_help_translate: Giúp chúng tôi phiên dịch
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Sử dụng các khối mã để mang Steve hoặc Alex đến với chuyến phiêu lưu khám phá thế giới Minecraft này.
@@ -381,6 +376,11 @@ vi-VN:
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi 6-106
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Truyền cảm hứng cho sinh viên và tình nguyện viên
   volunteer_engineer_submission_subtitle_generic: '100,000 giáo viên sẽ hướng dẫn một lớp Hour of Code trong lớp học của họ vào năm nay, từ ngày 7 đến 13 tháng 12, 2015. Họ cần sự trợ giúp từ bạn! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} giáo viên cần tình nguyện viên. <br>%{num_volunteers} tình nguyện viên đã đăng ký. Tham gia cùng họ.'
@@ -510,6 +510,8 @@ vi-VN:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -524,6 +526,7 @@ vi-VN:
   dashboard_navigation_view_progress: Sự tiến bộ
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Phương pháp đánh giá
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Thêm sinh viên
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
@@ -672,9 +675,10 @@ vi-VN:
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Tất cả
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Tìm hiểu thêm
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo giáo dục, 28 thống đốc, và CEO của các công ty lớn nhất của Mỹ tham gia cùng nhau trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục khoa học máy tính.
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Giờ lập trình là ở đây - ngày 8-14 tháng 12!'
@@ -1208,9 +1212,8 @@ vi-VN:
   processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
   alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-  compatibility_https_hide_this_warning: Ẩn cảnh báo này
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

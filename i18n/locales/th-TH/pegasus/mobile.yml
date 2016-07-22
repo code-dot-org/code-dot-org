@@ -4,7 +4,7 @@ th-TH:
   "yes": ใช่
   "no": ไม่ใช่
   select_language: กรุณาเลือกภาษาของคุณ
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org จะไม่สนับสนุน Internet Explorer รุ่น 8, 9 และ 10 ในเร็ว ๆ นี้ กรุณาอัพเกรดเบราเซอร์ของคุณให้ทันสมัย
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   en: วิทยาการคอมพิวเตอร์
@@ -45,7 +45,7 @@ th-TH:
   csedweek_map_legend_cs_tech_jam: กิจกรรมพิเศษ
   cded_sign_up: สมัครสมาชิก
   cded_try_it: ลอง
-  twentyhours_trynow: ลองตอนนี้
+  try_now: ลองตอนนี้
   california_heading: ขอโรงเรียนของคุณให้สอนวิทยาศาสตร์คอมพิวเตอร์
   california_text: "ครูทุกคนสามารถรับข้อเสนอ <a href='http://studio.code.org/'>หลักสูตรฟรี</a>  โรงเรียนประถมสามารถ <a href='http://code.org/educate/k5'>สอนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์</a>ได้  เชิญชวนโรงเรียนมัธยม <a href='http://code.org/educate/districts'>มาร่วมเป็นพันธมิตรกับเรา"
   california_button: เรียนรู้เพิ่มเติม
@@ -383,14 +383,9 @@ th-TH:
   starwars_javascript_title: จาวาสคริปต์
   starwars_javascript_description: ใช้การลากวางบล็อคและจาวาสคริปต์
   starwars_javascript_specs: ภาษาอังกฤษเท่านั้น | เบราว์เซอร์ที่ทันสมัย | อายุมากกว่า 11 ปี
-  starwars_javascript_start_button: ลองตอนนี้
   starwars_blocks_title: บล็อก
   starwars_blocks_description: ใช้การลากวางบล็อค
   starwars_blocks_specs: หลายภาษา | เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต | อายุ 6-106 ปี
-  starwars_blocks_start_button: ลองตอนนี้
-  starwars_watch_videos: ก่อนที่จะเริ่ม ดูวิดีโอการสร้างแรงบันดาลใจสักตอน
-  starwars_speak_languages: พูดภาษาอื่นหรือไม่?
-  starwars_help_translate: ช่วยเราแปลภาษา
   starwars_platform_text: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   mc_name: Minecraft ชั่วโมงแห่งการโค้ด
   mc_longdescription: ใช้บล็อคของโค้ดเพื่อพาสตีฟและอเล็กไปยังการผจญภัยในโลกของ Minecraft
@@ -399,6 +394,11 @@ th-TH:
   mc_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   mc_specs: หลายภาษา | เบราว์เซอร์ที่ทันสมัย แท็ปเล็ต | อายุ 6-106 ปี
   minecraft_subtitle: Minecraft ชั่วโมงแห่งการโค้ด
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: แรงบันดาลใจให้นักเรียน และอาสาสมัคร
   volunteer_engineer_submission_subtitle_generic: 'ครู 100,000 ท่าน กำลังดูแลชั่วโมงแห่งการโค้ดอยู่ในชั้นเรียนของพวกเขาปีนี้ระหว่างวันที่ 7-13 ธันวาคม 2558 พวกเขาต้องการความช่วยเหลือของคุณ '
   volunteer_engineer_submission_subtitle_specific: 'ครูจำนวน %{num_teachers} ต้องการอาสาสมัคร<br>จำนวนอาสาสมัคร %{num_volunteers} คนที่ได้ลงทะเบียน เข้าร่วมกับพวกเขา'
@@ -477,8 +477,8 @@ th-TH:
   dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: ถามคำถามแบบตัวต่อตัว! ดูคลิปวิดีโอประจำเดือนของเรา
   dashboard_landing_print_certificates: พิมพ์ใบรับรองสำหรับนักเรียนที่จบหลักสูตรนี้
-  dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
+  dashboard_landing_educator_blog: อ่านข่าวสารและการอัพเดทเกี่ยวกับสื่อต่าง ๆ ได้ที่บล็อกนักการศึกษา
+  dashboard_landing_smart_hints: ช่วยเราเพิ่มคำใบ้ในบทเรียนของ Code.org
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: ความคืบหน้าในการเรียน
   dashboard_landing_progress_biggest: นี่คือความคืบหน้าในส่วนที่ใหญ่ที่สุดของคุณ
@@ -528,6 +528,8 @@ th-TH:
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -542,6 +544,7 @@ th-TH:
   dashboard_navigation_view_progress: ความคืบหน้า
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: เพิ่มนักเรียน
   dashboard_navigation_manage_students: จัดการนักเรียน
   dashboard_navigation_lesson_plans_resources: แผนการเรียนและแหล่งข้อมูล
@@ -690,9 +693,10 @@ th-TH:
   dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
   dashboard_announcements: ประกาศ
   dashboard_announce_view_all: ดูทั้งหมด
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: สิ่งที่น่าเรียนรู้ยังมีอีก
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'นี่คือ Hour of Code - 8-14 ธันวาคม!'
@@ -1225,9 +1229,8 @@ th-TH:
   processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
   alice_beyond_longdescription: ใช้คุณสมบัติของการเขียนโปรแกรมรูปแบบใหม่ๆ เพื่อสนับสนุนการสร้างภาพเคลื่อนไหว 3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย
   sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
-  compatibility_https_header: กรุณาเปิดใช้งาน HTTPS สำหรับ Code.org
-  compatibility_https_message: "เพื่อเพิ่มความปลอดภัย เรากำลังจะสลับไป HTTPS ในวันที่ %{https_date} คุณจะไม่สามารถเข้าถึง Code.org ได้หลังจากวันนี้ <a href='%{it_requirements_url}'>คลิกที่นี่</a>เพื่อเรียนรู้วิธีการเปิดใช้งาน HTTPS สำหรับ Code.org"
-  compatibility_https_hide_this_warning: ซ่อนคำเตือน
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น <a href='%{supported_browsers_url}', target='_blank'> ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a> คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์"
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

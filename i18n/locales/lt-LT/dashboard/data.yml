@@ -1,75 +1,5 @@
 lt:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Įvadas į programavimo kursą 5-8 kl
-          Unplug1: 1 Etapas
-          Maze: 2 Etapas
-          Unplug2: 3 Etapas
-          Unplug3: 4 Etapas
-          Artist: 5 Etapas
-          Unplug4: 6 Etapas
-          Artist2: 7 Etapas
-          Unplug5: 8 Etapas
-          Farmer: 9 Etapas
-          Unplug6: 10 Etapas
-          Artist3: 11 Etapas
-          Unplug7: 12 Etapas
-          Farmer2: 13 Etapas
-          Unplug8: 14 Etapas
-          Artist4: 15 Etapas
-          Unplug9: 16 Etapas
-          Farmer3: 17 Etapas
-          Unplug10: 18 Etapas
-          Artist5: 19 Etapas
-          Unplug11: 20 Etapas
-        Hour of Code:
-          desc: „Programavimo valanda“
-          Maze: 1 Etapas
-        Edit Code:
-          desc: Redaguoti kodą (beta)
-          MazeEC: 1 Etapas
-        2014 Levels:
-          desc: Bounce (beta versija)
-          Bounce: 1 Etapas
-        Builder Levels:
-          desc: Naudotojų sukurti galvosūkiai (beta)
-          Custom: 1 Etapas
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: 1 Etapas
-        Jigsaw Levels:
-          desc: Dėlionės (beta)
-          Jigsaw: 1 Etapas
-        Step Levels:
-          desc: Labirintas (beta)
-          MazeStep: Etapas Žingsnis
-        edit-code:
-          desc: Redaguoti kodą (beta)
-          MazeEC: 1 Etapas
-          Applab: 2 Etapas
-          ArtistEC: 3 Etapas
-          StudioEC: 4 Etapas
-        events:
-          desc: Bounce (beta versija)
-          Bounce: 1 Etapas
-          Studio: 2 Etapas
-        builder:
-          desc: Naudotojų sukurti galvosūkiai (beta)
-          Custom: 1 Etapas
-        flappy:
-          desc: Flappy Bird
-          Flappy: 1 Etapas
-        jigsaw:
-          desc: Dėlionės (beta)
-          Jigsaw: 1 Etapas
-        step:
-          desc: Labirintas (beta)
-          MazeStep: Etapas Žingsnis
-        wordsearch:
-          desc: Rašanti bitė (beta)
-          WordSearch: 1 Etapas
     game:
       name:
         Unplug1: Įvadas į informatiką
@@ -485,6 +415,7 @@ lt:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
