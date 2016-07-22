@@ -21,7 +21,6 @@
             - else
               - unit_enrollment.summarize_progress.each do |module_assignment_details|
                 - category_string = t("flex_category.#{module_assignment_details[:category]}")
-                - puts category_string
                 = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: category_string.downcase.gsub(' ', '-')) do
                   .module_assignment
                     = category_string

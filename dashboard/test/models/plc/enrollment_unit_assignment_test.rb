@@ -3,10 +3,10 @@ require 'test_helper'
 class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
   setup do
     @teacher = create :teacher
-    # It's easier to just use an existing course for this
     @course = create :plc_course
     @course_unit = create(:plc_course_unit, plc_course: @course)
     @script = @course_unit.script
+    @script.update(professional_learning_course: @course.name)
 
     @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
     @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
@@ -42,18 +42,18 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal @practice_learning_module, module_assignments.third.plc_learning_module
 
     assert_equal [
-                    {
-                        category: Plc::LearningModule::REQUIRED_MODULE,
-                        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                    },
-                    {
-                        category: Plc::LearningModule::CONTENT_MODULE,
-                        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                    },
-                    {
-                        category: Plc::LearningModule::PRACTICE_MODULE,
-                        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                    }
-                 ], @unit_enrollment.summarize_progress
+      {
+        category: Plc::LearningModule::REQUIRED_MODULE,
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      },
+      {
+        category: Plc::LearningModule::CONTENT_MODULE,
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      },
+      {
+        category: Plc::LearningModule::PRACTICE_MODULE,
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      }
+    ], @unit_enrollment.summarize_progress
   end
 end
