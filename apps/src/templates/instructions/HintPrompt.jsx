@@ -4,7 +4,7 @@ import color from '../../color';
 import ChatBubble from './ChatBubble';
 import msg from '@cdo/locale';
 
-const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
+const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
   const buttonStyles = {
     common: {
       color: 'white',
@@ -21,7 +21,7 @@ const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
   };
 
   return (
-    <ChatBubble isMinecraft={isMinecraft} borderColor={borderColor}>
+    <ChatBubble borderColor={borderColor}>
       <p>{msg.hintPromptInline()}</p>
       <button onClick={onConfirm} style={[buttonStyles.common, buttonStyles.yes]}>{msg.yes()}</button>
       <button onClick={onDismiss} style={[buttonStyles.common, buttonStyles.no]}>{msg.no()}</button>
@@ -31,7 +31,6 @@ const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
 
 HintPrompt.propTypes = {
   borderColor: React.PropTypes.string,
-  isMinecraft: React.PropTypes.bool,
   onConfirm: React.PropTypes.func.isRequired,
   onDismiss: React.PropTypes.func.isRequired,
 };

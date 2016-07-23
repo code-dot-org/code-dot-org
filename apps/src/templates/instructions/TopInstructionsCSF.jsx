@@ -495,7 +495,7 @@ var TopInstructions = React.createClass({
             className="csf-top-instructions"
             style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
           >
-            <ChatBubble isMinecraft={this.props.isMinecraft}>
+            <ChatBubble>
               {this.props.hasContainedLevels &&
                 <ProtectedStatefulDiv
                   id="containedLevelContainer"
@@ -520,7 +520,6 @@ var TopInstructions = React.createClass({
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
                 key={hint.hintId}
-                isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 content={hint.content}
                 block={hint.block}
@@ -528,7 +527,6 @@ var TopInstructions = React.createClass({
             )}
             {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
               <InlineFeedback
-                isMinecraft={this.props.isMinecraft}
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
               />}
