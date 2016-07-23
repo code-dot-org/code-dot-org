@@ -73,7 +73,8 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
     categories_for_stage = plc_course_unit.script.stages.map(&:flex_category).uniq
 
-    if plc_course_unit.script.professional_learning_course?
+    # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
+    if plc_course_unit.has_evaluation?
       Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
         summary << {
             category: flex_category || Plc::LearningModule::CONTENT_MODULE,
@@ -81,7 +82,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         }
       end
     else
-      # Legacy PD courses don't have learning modules. So determine completeness by looking at stage completion
+      # Otherwise, status is determined by the completion of stages
       categories_for_stage.each do |category|
         summary << {
             category: category || 'content',
