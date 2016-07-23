@@ -19,4 +19,5 @@ class UserPermission < ActiveRecord::Base
   HINT_ACCESS = 'hint_access'
   LEVELBUILDER = 'levelbuilder'
   WORKSHOP_ORGANIZER = 'workshop_organizer'
+  HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'
 end

@@ -185,8 +185,8 @@ class DashboardSection
 
   @@course_cache = {}
   def self.valid_courses(user_id = nil)
-    # admins can see all courses, even those marked hidden
-    course_cache_key = (user_id && Dashboard.admin?(user_id)) ? "all" : "valid"
+    # some users can see all courses, even those marked hidden
+    course_cache_key = (user_id && Dashboard.hidden_script_access?(user_id)) ? "all" : "valid"
 
     # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
@@ -196,7 +196,7 @@ class DashboardSection
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
-    where_clause = Dashboard.admin?(user_id) ? "" : "hidden = 0"
+    where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
 
     # Cache the courses names in English for all users. After the
     # facilitator summit (2016-5-23) we should change the cache to be
