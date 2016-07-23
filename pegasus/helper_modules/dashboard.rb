@@ -15,7 +15,8 @@ module Dashboard
   end
 
   def self.hidden_script_access?(user_id)
-    admin?(user_id) || User.get(user_id).has_permission?('hidden_script_access')
+    user = User.get(user_id)
+    user && (user.admin? || user.has_permission?('hidden_script_access'))
   end
 
   class User
