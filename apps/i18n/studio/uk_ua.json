@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Вітання, додано код створення Дроїдів-Мишей. Можна перейти до наступного рівня, коли збереш 20 Дроїдів-Мишей. Спробуй полегшити задачу, додаючи їх більшу кількість! (Натискай та утримуй клавіші на клавіатурі чи екрані, щоб рухатися швидше.)",
   "failedChangeSettingTimeout": "Дістанься до трьох Пілотів повстанців, щоб рухатися далі.",
   "failedChangeSettingSettings": "Створи власну гру. Щоб пройти цей рівень потрібно змінити дроїда та задати його швидкість.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

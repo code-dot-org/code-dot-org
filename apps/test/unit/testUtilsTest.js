@@ -1,10 +1,10 @@
 /** @file Who watches the watchers? */
+import React from 'react';
 import {expect} from '../util/configuredChai';
 import {
     forEveryBooleanPermutation,
     throwOnConsoleErrors
 } from '../util/testUtils';
-
 
 describe('forEveryBooleanPermutation', function () {
   it('invokes a function with no arguments once', function () {

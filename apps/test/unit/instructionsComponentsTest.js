@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
@@ -55,7 +54,8 @@ describe('NonMarkdownInstructions', function () {
       <div>
         <NonMarkdownInstructions
           puzzleTitle="title"
-          instructions="instructions"/>
+          instructions="instructions"
+        />
       </div>
     );
     var element = dom.children[0];
@@ -71,7 +71,8 @@ describe('NonMarkdownInstructions', function () {
         <NonMarkdownInstructions
           puzzleTitle="title"
           instructions="instructions"
-          instructions2="instructions2"/>
+          instructions2="instructions2"
+        />
       </div>
     );
     var element = dom.children[0];

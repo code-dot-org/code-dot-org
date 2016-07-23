@@ -799,6 +799,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Grattis, du har lagt till kod för att skapa mus-droider. Du kan gå till nästa pussel eller försöka igen för att fånga 20 mus-droider. Försök att göra det lättare genom att lägga till fler av dem! (Tryck och håll ner tangenterna på tangentbordet (eller skärmen) för att gå snabbare.)",
   "failedChangeSettingTimeout": "Få tre rebellpiloter att flytta på sig.",
   "failedChangeSettingSettings": "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet.",
+  "ask": "ask",
   "moveDownLeft": "move down and left",
   "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
   "moveDownRight": "move down and right",
@@ -806,5 +807,6 @@
   "moveUpLeft": "move up and left",
   "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
   "moveUpRight": "move up and right",
-  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right.",
+  "toSet": "to set"
 }

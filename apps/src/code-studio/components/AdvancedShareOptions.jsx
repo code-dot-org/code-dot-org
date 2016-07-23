@@ -89,7 +89,8 @@ var AdvancedShareOptions = Radium(React.createClass({
           onClick={(e) => e.target.select()}
           readOnly="true"
           value={iframeHtml}
-          style={style.embedInput} />
+          style={style.embedInput}
+        />
       </div>
     );
   },
@@ -133,17 +134,25 @@ var AdvancedShareOptions = Radium(React.createClass({
       var exportTab = null;
       if (this.props.onClickExport) {
         exportTab = (
-          <li style={[style.nav.li,
-                      this.state.selectedOption === 'export' && style.nav.selectedLi]}
-              onClick={() => this.setState({selectedOption: 'export'})}>
+          <li
+            style={[
+              style.nav.li,
+              this.state.selectedOption === 'export' && style.nav.selectedLi
+            ]}
+            onClick={() => this.setState({selectedOption: 'export'})}
+          >
             Export
           </li>
         );
       }
       var embedTab = (
-        <li style={[style.nav.li,
-                    this.state.selectedOption === 'embed' && style.nav.selectedLi]}
-            onClick={() => this.setState({selectedOption: 'embed'})}>
+        <li
+          style={[
+            style.nav.li,
+            this.state.selectedOption === 'embed' && style.nav.selectedLi
+          ]}
+          onClick={() => this.setState({selectedOption: 'embed'})}
+        >
           {this.props.i18n.t('project.embed')}
         </li>
       );

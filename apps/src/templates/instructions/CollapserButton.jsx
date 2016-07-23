@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import FontAwesome from '../FontAwesome';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 
 const styles = {
   collapseButton: {
@@ -20,11 +20,12 @@ const styles = {
  */
 const CollapserButton = props => (
   <button
-      style={[styles.collapseButton, props.style]}
-      onClick={props.onClick}>
+    style={[styles.collapseButton, props.style]}
+    onClick={props.onClick}
+  >
     <FontAwesome
-        icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
-        style={styles.collapseIcon}
+      icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
+      style={styles.collapseIcon}
     />
     {props.collapsed ? msg.more() : msg.less()}
   </button>

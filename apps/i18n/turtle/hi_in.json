@@ -81,5 +81,13 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "Changes the width of the pencil.",
-  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
+  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

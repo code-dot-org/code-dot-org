@@ -38,7 +38,7 @@ const StageProgress = React.createClass({
     );
 
     return (
-      <div className='react_stage' style={this.props.courseOverviewPage ? styles.courseOverviewContainer : styles.headerContainer}>
+      <div className="react_stage" style={this.props.courseOverviewPage ? styles.courseOverviewContainer : styles.headerContainer}>
         {progressDots}
       </div>
     );

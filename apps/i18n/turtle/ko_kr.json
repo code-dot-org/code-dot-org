@@ -81,5 +81,13 @@
   "turnTooltip": "예술가를 원하는 각도 만큼, 왼쪽이나 오른쪽으로 회전시킵니다.",
   "turtleVisibilityTooltip": "예술가를 보이거나 보이지 않도록 합니다.",
   "widthTooltip": "펜의 두께를 바꿉니다.",
-  "wrongColour": "색이 다릅니다. %1 색 이어야 합니다."
+  "wrongColour": "색이 다릅니다. %1 색 이어야 합니다.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

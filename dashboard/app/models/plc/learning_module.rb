@@ -31,7 +31,7 @@ class Plc::LearningModule < ActiveRecord::Base
   NONREQUIRED_MODULE_TYPES = MODULE_TYPES - [REQUIRED_MODULE]
 
   validates_presence_of :plc_course_unit_id
-  validates :module_type, inclusion: {in: MODULE_TYPES}
+  validates_inclusion_of :module_type, in: MODULE_TYPES
 
   attr_readonly :plc_course_unit_id
 
