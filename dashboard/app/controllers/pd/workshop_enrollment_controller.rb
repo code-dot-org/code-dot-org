@@ -125,6 +125,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       # Note the supplied email must match the user's hashed_email in order to get here. Otherwise it will fail above.
       current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email) if current_user.email.blank?
 
+      @workshop.section.add_student current_user
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @workshop.section.name)
     else
       render :join_section

@@ -26,6 +26,7 @@ Our Privacy Policy is fueled by our commitment to the following Privacy Principl
 4. We do not sell your Personal Information or exploit it for financial gain; we do not sell ads. We are a charitable 501c3 nonprofit and our revenue comes from donations. We established ourselves as a nonprofit so our mission and your trust will not be in conflict with a for-profit motive.
 5. Any student academic data provided by us or by our school district partners to third party evaluators for the purpose of evaluating our courses in meeting our mission will be anonymous / de-identified (per standard industry practice). 
 6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
+7. When student Personal Information is provided to Code.org by a school or school district, Code.org agrees to retain such information as directed by the school or school district.
 
  
 
@@ -58,7 +59,6 @@ Student Projects -  apps, animations, stories, or code-art | Automatic (for stud
 Student-uploaded images, sounds, or videos (for App Lab and Game Lab Projects) | Automatic (if content is uploaded). Creating apps with these tools is part of our courses for grades 6+.<br>Uploading custom files is optional. | Only students of age 13 and older, or students under 13 who are working in a classroom whose teacher has explicitly accepted the Code.org Privacy Policy and Terms of Service, can choose to upload custom images, sounds, and videos to the Code Studio platform to use within apps or games that they create. Students under 13 will be advised never to upload any media containing personal information.<br><br>These files are not used by Code.org for any purpose other than within these projects. These projects may be shared as described above, subject to those restrictions imposed on students under 13.
 Data collected by student-created apps | Optional | Students may use Code Studio to create their own apps. Depending on the app author’s design, a student-created app may in turn collect data by prompting other Users (anybody who tries using the student-created app) to enter information, such as a favorite movie.<br><br>If a student creates an app that collects and stores data in this fashion, all data entered by users of the app may be accessed and possibly shared publicly by the app author,  the app itself, and potentially anybody with a link to view the app. Code.org does not itself use or share this data outside of the app.<br><br>Before using a student-created app that collects data, Users are shown a clear warning that any data they enter may be  shared publicly and that they should not share anything personal to them or to others.
 Written comments in response to curricular/educational prompts within the Code Studio platform | Optional | Within some of our courses, students in a classroom are prompted to answer a question. Their answers are shared with any teacher with whom the student is affiliated on Code Studio, and are not used by Code.org for any other purpose.<br><br>In some cases, these questions may be attitudinal (to assist the teacher in understanding their classroom’s reaction to learning computer science, and to help Code.org improve our curriculum). Students are informed that answers to these attitudinal questions are shared with the teacher anonymously.
-Messages sent within the “Internet Simulator” | Optional | The [“Internet Simulator”](/internetsimulator) is a tool developed by Code.org for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Contents of messages sent by students using the tool can be accessed by the recipient, and are not accessed or used by Code.org for any purpose other than in this educational tool.
 
 <br>
  
@@ -134,7 +134,7 @@ As part of “App Lab” or “Game Lab” (in-browser programming tools availab
 
 ## Message Sending Between Users
 
-Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool. 
+Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students participating in a teacher-supervised classroom activity can send text-based messages to their teacher and to other students in their specific classroom section. Message contents are visible to the classroom teacher and are not accessed or used by Code.org for any purpose other than in this educational tool.  All messages are deleted after two hours of class inactivity, or upon a manual reset by the teacher. 
 
 In some courses, students are asked to provide written responses or reflections to prompts within the Code Studio platform. These written responses are accessible by any teacher that the student is currently affiliated with on Code Studio.
 
@@ -231,6 +231,8 @@ To protect your privacy and security, we take reasonable steps to verify your id
 
 ### Data we choose not to store
 Although you may provide it to us, we intentionally choose NOT to store email addresses for Code Studio student accounts, or phone numbers used in our send-to-phone feature. The data we do not store cannot be stolen from us. 
+
+We will delete student display names, coding projects, apps, uploaded images and other assets associated with student accounts that have remained unused and inactive for a period of time, in accordance with our data retention policy. 
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 Code.org uses certain physical, managerial, and technical safeguards designed to preserve the integrity and security of your Personal Information and other information we maintain in connection with the Website. We cannot, however, ensure or warrant the security of any or all of the Personal Information and other information you transmit to Code.org, and you do so at your own risk. Once we receive your transmission of information, Code.org makes commercially reasonable efforts to ensure the security of our systems. However, please note that this is not a guarantee that such Personal Information and other information may not be accessed, disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial safeguards.

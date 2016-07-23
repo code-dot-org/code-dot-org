@@ -41,7 +41,8 @@ var OptionsSelectRow = React.createClass({
           <textarea
             onChange={this.handleChangeInternal}
             value={this.state.value}
-            style={textAreaStyle} />
+            style={textAreaStyle}
+          />
         </div>
       </div>
     );
