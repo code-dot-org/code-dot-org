@@ -137,6 +137,7 @@ var TopInstructions = React.createClass({
       content: React.PropTypes.string.isRequired,
       block: React.PropTypes.object, // XML
     })).isRequired,
+    hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
@@ -404,8 +405,8 @@ var TopInstructions = React.createClass({
    * Handle a click to the hint display bubble (lightbulb)
    */
   handleClickBubble() {
-    // If we don't have authored hints, clicking bubble shouldnt do anything
-    if (this.props.hasAuthoredHints) {
+    // If we don't have authored hints to display, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
         promptForHint: true
       });
@@ -568,6 +569,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     hints: state.authoredHints.seenHints,
+    hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
