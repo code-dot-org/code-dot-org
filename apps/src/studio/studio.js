@@ -44,7 +44,7 @@ var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 var experiments = require('../experiments');
-
+var InputPrompt = require('../templates/InputPrompt');
 var studioCell = require('./cell');
 
 // tests don't have svgelement
@@ -4791,6 +4791,31 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
     }
   });
   return foundCmd;
+};
+
+Studio.askForInput = function (question, callback) {
+  const viz = document.getElementById('visualization');
+  const target = document.createElement('div');
+  Object.assign(target.style, {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '400px',
+    height: '400px',
+  });
+  viz.appendChild(target);
+  studioApp.resizeVisualization();
+
+  function onInputReceived(value) {
+    ReactDOM.unmountComponentAtNode(target);
+    viz.removeChild(target);
+    callback(value);
+  }
+
+  ReactDOM.render(
+    <InputPrompt question={question} onInputReceived={onInputReceived} />,
+    target
+  );
 };
 
 Studio.hideSpeechBubble = function (opts) {
