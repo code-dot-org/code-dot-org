@@ -3,7 +3,6 @@
 # Table name: sections
 #
 #  id           :integer          not null, primary key
-#  user_id      :integer          not null
 #  name         :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
@@ -15,17 +14,18 @@
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
 #  section_type :string(255)
+#  user_id      :integer
 #
 # Indexes
 #
-#  index_sections_on_code     (code) UNIQUE
-#  index_sections_on_user_id  (user_id)
+#  index_sections_on_code  (code) UNIQUE
 #
 
 require 'cdo/section_helpers'
 
 class Section < ActiveRecord::Base
-  belongs_to :user
+  has_many :coteachers
+  has_many :users, through: :coteachers
 
   has_many :followers, dependent: :restrict_with_error
   accepts_nested_attributes_for :followers

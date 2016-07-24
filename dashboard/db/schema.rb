@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117185757) do
+ActiveRecord::Schema.define(version: 20161214190338) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -125,33 +125,23 @@ ActiveRecord::Schema.define(version: 20170117185757) do
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
   end
 
-  create_table "contained_level_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.integer  "level_id",                    null: false
-    t.integer  "answer_number",               null: false
-    t.text     "answer_text",   limit: 65535
-    t.boolean  "correct"
-    t.index ["level_id"], name: "index_contained_level_answers_on_level_id", using: :btree
+  add_index "concepts_levels", ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
+  add_index "concepts_levels", ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
+
+  create_table "coteachers", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "section_id", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
-  create_table "contained_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.integer  "level_group_level_id",                   null: false
-    t.integer  "contained_level_id",                     null: false
-    t.string   "contained_level_type",                   null: false
-    t.integer  "contained_level_page",                   null: false
-    t.integer  "contained_level_position",               null: false
-    t.text     "contained_level_text",     limit: 65535
-    t.index ["contained_level_id"], name: "index_contained_levels_on_contained_level_id", using: :btree
-    t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
-  end
+  add_index "coteachers", ["section_id"], name: "index_coteachers_on_section_id", using: :btree
+  add_index "coteachers", ["user_id"], name: "index_coteachers_on_user_id", using: :btree
 
-  create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",       null: false
-    t.string   "location"
-    t.integer  "contact_id"
+  create_table "districts", force: :cascade do |t|
+    t.string   "name",       limit: 255, null: false
+    t.string   "location",   limit: 255
+    t.integer  "contact_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["contact_id"], name: "index_districts_on_contact_id", using: :btree
@@ -255,16 +245,6 @@ ActiveRecord::Schema.define(version: 20170117185757) do
     t.index ["level_id", "md5"], name: "index_level_sources_on_level_id_and_md5", using: :btree
   end
 
-  create_table "level_sources_multi_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "level_source_id",               null: false
-    t.integer "level_id",                      null: false
-    t.text    "data",            limit: 65535
-    t.string  "md5",                           null: false
-    t.boolean "hidden"
-    t.index ["level_id"], name: "index_level_sources_multi_types_on_level_id", using: :btree
-    t.index ["level_source_id"], name: "index_level_sources_multi_types_on_level_source_id", using: :btree
-  end
-
   create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "game_id"
     t.string   "name",                                                   null: false
@@ -300,13 +280,11 @@ ActiveRecord::Schema.define(version: 20170117185757) do
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "pd_session_id",    null: false
-    t.integer  "teacher_id"
+    t.integer  "pd_session_id", null: false
+    t.integer  "teacher_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
-    t.integer  "pd_enrollment_id"
-    t.index ["pd_enrollment_id"], name: "index_pd_attendances_on_pd_enrollment_id", using: :btree
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
 
@@ -362,13 +340,12 @@ ActiveRecord::Schema.define(version: 20170117185757) do
   end
 
   create_table "pd_teacher_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.integer  "user_id",                         null: false
-    t.string   "primary_email",                   null: false
-    t.string   "secondary_email",                 null: false
-    t.text     "application",       limit: 65535, null: false
-    t.string   "accepted_workshop"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "user_id",                       null: false
+    t.string   "primary_email",                 null: false
+    t.string   "secondary_email",               null: false
+    t.text     "application",     limit: 65535, null: false
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
@@ -563,8 +540,6 @@ ActiveRecord::Schema.define(version: 20170117185757) do
   create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "regional_partner_id", null: false
     t.integer "school_district_id",  null: false
-    t.string  "course",                           comment: "Course for a given workshop"
-    t.string  "workshop_days",                    comment: "Days that the workshop will take place"
     t.index ["regional_partner_id"], name: "index_regional_partners_school_districts_on_partner_id", using: :btree
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id", using: :btree
   end
@@ -663,9 +638,14 @@ ActiveRecord::Schema.define(version: 20170117185757) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id", using: :btree
   end
 
+<<<<<<< 08417550d20f008fc0c54c181252540d52ae8fcc
   create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                        null: false
     t.string   "name"
+=======
+  create_table "sections", force: :cascade do |t|
+    t.string   "name",         limit: 255
+>>>>>>> Using has_many_through to support coteachers.
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "code"
@@ -680,9 +660,17 @@ ActiveRecord::Schema.define(version: 20170117185757) do
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
+<<<<<<< 08417550d20f008fc0c54c181252540d52ae8fcc
   create_table "segments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "workshop_id", null: false
     t.datetime "start",       null: false
+=======
+  add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
+
+  create_table "segments", force: :cascade do |t|
+    t.integer  "workshop_id", limit: 4, null: false
+    t.datetime "start",                 null: false
+>>>>>>> Using has_many_through to support coteachers.
     t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"
