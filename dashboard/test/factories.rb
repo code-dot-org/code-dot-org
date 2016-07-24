@@ -4,6 +4,10 @@ FactoryGirl.define do
     section nil
     stage nil
   end
+
+  factory :coteacher do
+  end
+
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}

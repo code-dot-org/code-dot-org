@@ -254,7 +254,9 @@ class User < ActiveRecord::Base
   # student/teacher relationships where I am the teacher
   has_many :followers
   has_many :students, through: :followers, source: :student_user
-  has_many :sections
+
+  has_many :coteachers
+  has_many :sections, through: :coteachers
 
   # student/teacher relationships where I am the student
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
