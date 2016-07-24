@@ -159,6 +159,7 @@
   "hideToolbox": "(Hide)",
   "hintHeader": "Here's a tip:",
   "hintPrompt": "Need help?",
+  "hintPromptInline": "Do you want a hint?",
   "hintRequest": "See hint",
   "hintReviewTitle": "Review Your Hints",
   "hintSelectInstructions": "Instructions and old hints",
@@ -183,6 +184,7 @@
   "nextPuzzle": "Next puzzle",
   "nextStage": "Congratulations! You completed {stageName}.",
   "nextStageTrophies": "Congratulations! You completed {stageName} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
+  "no": "No",
   "noIconsFound": "No icons found",
   "numBlocksNeeded": "Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten": "You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
@@ -250,5 +252,6 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "yes": "Yes"
 }

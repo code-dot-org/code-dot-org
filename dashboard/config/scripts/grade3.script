@@ -127,8 +127,8 @@ level 'grade3_ConditionalsElse_8'
 level 'grade3_ConditionalsElse_9'
 #level 'grade3_ConditionalsElse_10'
 
-stage 'Choose Your Own Adventure'
-level 'comingSoon'
+#stage 'Choose Your Own Adventure'
+#level 'comingSoon'
 #level 'grade3_ChooseYourOwnAdventure_TeacherIDo'
 #level 'grade3_ChooseYourOwnAdventure_1'
 
@@ -202,3 +202,4 @@ level 'comingSoon'
 #level 'grade3_PreviewNextYear_12'
 #level 'grade3_PreviewNextYear_13'
 #level 'grade3_PreviewNextYear_14'
+

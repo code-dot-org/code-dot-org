@@ -2306,17 +2306,31 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-.instructions-markdown {
-  padding-top: 19px;
+.csf-top-instructions {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
     color: $black;
   }
 
+  .secondary-instructions p {
+    font-size: 14px;
+    color: #5b6770;
+  }
+
   strong {
     font-family: $gotham-bold;
   }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
 }
 
 .markdown-level-header-text {
