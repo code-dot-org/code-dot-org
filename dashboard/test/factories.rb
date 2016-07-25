@@ -117,7 +117,7 @@ FactoryGirl.define do
 
   factory :section do
     sequence(:name) { |n| "Section #{n}"}
-    user { create :teacher }
+    users {[create(:teacher)]}
   end
 
   factory :game do

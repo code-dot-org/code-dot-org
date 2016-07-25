@@ -257,6 +257,7 @@ class User < ActiveRecord::Base
 
   has_many :coteachers
   has_many :sections, through: :coteachers
+  validates_associated :coteachers
 
   # student/teacher relationships where I am the student
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
