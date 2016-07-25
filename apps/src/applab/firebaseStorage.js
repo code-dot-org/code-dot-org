@@ -382,13 +382,15 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
   recordsRef.once('value')
     .then(snapshot => {
       let recordsData = snapshot.val() || {};
+      // Preserve column order.
       Object.keys(recordsData).forEach(recordId => {
-        const record = JSON.parse(recordsData[recordId]);
-        if (record[oldName] !== undefined) {
-          record[newName] = record[oldName];
-          delete record[oldName];
-        }
-        recordsData[recordId] = JSON.stringify(record);
+        const oldRecord = JSON.parse(recordsData[recordId]);
+        let newRecord = {};
+        Object.keys(oldRecord).forEach(oldKey => {
+          const newKey = (oldKey === oldName ? newName : oldKey);
+          newRecord[newKey] = oldRecord[oldKey];
+        });
+        recordsData[recordId] = JSON.stringify(newRecord);
       });
       return recordsData;
     })
