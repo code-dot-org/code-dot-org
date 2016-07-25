@@ -1,75 +1,5 @@
 he:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 הקדמה לקורס מדעי המחשב
-          Unplug1: שלב 1
-          Maze: שלב 2
-          Unplug2: שלב 3
-          Unplug3: שלב 4
-          Artist: שלב 5
-          Unplug4: שלב 6
-          Artist2: שלב 7
-          Unplug5: שלב 8
-          Farmer: שלב 9
-          Unplug6: שלב 10
-          Artist3: שלב 11
-          Unplug7: שלב 12
-          Farmer2: שלב 13
-          Unplug8: שלב 14
-          Artist4: שלב 15
-          Unplug9: שלב 16
-          Farmer3: שלב 17
-          Unplug10: שלב 18
-          Artist5: שלב 19
-          Unplug11: שלב 20
-        Hour of Code:
-          desc: שעה של קוד
-          Maze: שלב 1
-        Edit Code:
-          desc: ערוך קוד (בטא)
-          MazeEC: שלב 1
-        2014 Levels:
-          desc: קפיצה (בטא)
-          Bounce: שלב 1
-        Builder Levels:
-          desc: תוצר-המשתמש פאזל (בטא)
-          Custom: שלב 1
-        Flappy Levels:
-          desc: ציפור מתנופפת
-          Flappy: שלב 1
-        Jigsaw Levels:
-          desc: פאזל (בטא)
-          Jigsaw: שלב 1
-        Step Levels:
-          desc: מבוך (בטא)
-          MazeStep: שלב רמה
-        edit-code:
-          desc: ערוך קוד (בטא)
-          MazeEC: שלב 1
-          Applab: שלב 2
-          ArtistEC: שלב 3
-          StudioEC: שלב 4
-        events:
-          desc: קפיצה (בטא)
-          Bounce: שלב 1
-          Studio: שלב 2
-        builder:
-          desc: תוצר-המשתמש פאזל (בטא)
-          Custom: שלב 1
-        flappy:
-          desc: ציפור מתנופפת
-          Flappy: שלב 1
-        jigsaw:
-          desc: פאזל (בטא)
-          Jigsaw: שלב 1
-        step:
-          desc: מבוך (בטא)
-          MazeStep: שלב רמה
-        wordsearch:
-          desc: תחרות איות (בטא)
-          WordSearch: שלב 1
     game:
       name:
         Unplug1: היכרות למדעי המחשב
@@ -235,7 +165,7 @@ he:
         bounce_5: 'אנחנו הולכים לשלוח כדור לכיוון המשוט. הוסף בלוק לבלוק "כאשר כדור פוגע במשוט" כדי לוודע שהכדור מגיע למטרת הסיום.'
         bounce_6: 'עכשיו מטרת הסיום היא למעלה. אתה צריך להוסיף בלוקים לשני הבלוקים "כאשר כדור פוגע" כדי לפתור את החידה הזאת.'
         bounce_7: 'צרפו בלוקים לכל אחד מבלוקים ה-"כאשר...". תקפיצו את הכדור עד שהוא פוגע במטרת הסיום.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'גרור בלוקים מתיבת הכלים אל סביבת העבודה כדי לצייר שלב שאתה רוצה ליצור. לחץ "הרץ" כשאתה מוכן.'
@@ -487,6 +417,7 @@ he:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

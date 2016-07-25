@@ -137,6 +137,8 @@
     picture: "ឥឡូវ ស្វែងរក​រូបភាព​អាថ៌កំបាំង​របស់​អ្នក"
     words: "ឥឡូវ បញ្ចូល​ពាក្យ​អាថ៌កំបាំង​របស់​អ្នក"
     login: "ចូល​គណនី"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?"
@@ -284,6 +286,10 @@
       signin: "ចូល​គណនី"
       signup: "ចុះឈ្មោះ"
       already_registered: "បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?"
+      pair_programming: Pair Programming
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'s progress"
       progress: "ដំណើរការ​របស់​អ្នក"
@@ -319,6 +325,7 @@
       example_with_number: Example Solution %{solution_number}
       submitted_on: Submitted on %{date}
       unsubmit: Unsubmit
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -395,7 +402,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "រៀនបន្ថែមទៀត"
+    announcement_learn_more_button: "រៀនបន្ថែមទៀត"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -485,10 +492,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: "រៀនបន្ថែមទៀត"
   slow_loading: This is taking longer than usual...
   try_reloading: "សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ"
@@ -668,39 +671,6 @@
     hour: 1 hour
     day: day
     week: week
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
-        Hour of Code:
-          title: "ពេលវេលា​នៃ​កូដ"
-          description: ''
-        edit-code:
-          title: Edit Code
-          description: ''
-        events:
-          title: "ព្រឹត្តិការណ៍"
-          description: ''
-        builder:
-          title: Builder
-          description: ''
-        flappy:
-          title: Flappy កូដ
-          description: "តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10
-            នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!"
-        jigsaw:
-          title: Jigsaw
-          description: ''
-        step:
-          title: "ជំហាន"
-          description: ''
-        sample_level_builder:
-          title: Sample Level Builder
-          description: ''
   age_interstitial:
     age: Your age
     header: Account Information Update
@@ -740,6 +710,8 @@
     share_copy_link: 'Copy the link:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Close
@@ -768,6 +740,8 @@
     abuse:
       tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
         of Service</a> and cannot be shared with others.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
       go_to_code_studio: Go to Code Studio
@@ -809,6 +783,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -828,13 +811,14 @@
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

@@ -69,12 +69,12 @@ hy:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: Ուրախ Քարտեզներ
+        desc: 'Սովորողները ստեղծում են պարզ ալգորիթմներ(հրամանների խմբեր), որպեսզի մեկ հրամանով շարժեն առարկան լաբիրինթոսի միջով:'
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: Տեղափոխիր առարկան
+        desc: 'Սովորողները ստեղծում են պարզ ալգորիթմներ(հրամանների խմբեր), որպեսզի մեկ հրամանով շարժեն առարկան լաբիրինթոսի միջով:'
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Real-life Algorithms: Plant a Seed'

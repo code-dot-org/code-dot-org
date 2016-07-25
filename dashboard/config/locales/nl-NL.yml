@@ -141,6 +141,8 @@
     picture: Zoek nu je geheime afbeelding
     words: Vul nu je geheime woorden in
     login: Aanmelden
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Wachtwoord vergeten?
@@ -296,6 +298,10 @@
       signin: Aanmelden
       signup: Meld je aan
       already_registered: Al aangemeld?
+      pair_programming: Programmeren in Tweetallen
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: Jouw voortgang
@@ -330,6 +336,7 @@
       example_with_number: Voorbeeld uitkomst getal %{solution_number}
       submitted_on: Ingeleverd op %{date}
       unsubmit: Intrekken
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -407,7 +414,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Leer meer
+    announcement_learn_more_button: Leer meer
     announcement_petition: Als leerkracht neemt u het voortouw in een beweging die
       elke leerling op elke school de mogelijkheid geeft om informatica te leren.
       Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
@@ -507,10 +514,6 @@
         upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van
         onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar
         verwacht problemen met de functionaliteit.
-      ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8, 9
-        en 10. Probeer te upgraden naar een moderne browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: Leer meer
   slow_loading: Dit duurt langer dan normaal...
   try_reloading: Probeer de pagina opnieuw te laden
@@ -693,39 +696,6 @@
     hour: 1 uur
     day: dag
     week: week
-  data:
-    script:
-      name:
-        20-hour:
-          title: Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
-          description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica
-            en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is
-            voor alle leeftijden leuk om te leren.
-        Hour of Code:
-          title: Uur van Code 2013
-          description: ''
-        edit-code:
-          title: Bewerk de code
-          description: ''
-        events:
-          title: Gebeurtenissen
-          description: ''
-        builder:
-          title: Builder
-          description: ''
-        flappy:
-          title: Flappy Code
-          description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer
-            onze Flappy Code opdracht!
-        jigsaw:
-          title: Legpuzzel
-          description: ''
-        step:
-          title: Stap
-          description: ''
-        sample_level_builder:
-          title: Voorbeeld-levelbuilder
-          description: ''
   age_interstitial:
     age: Je leeftijd
     header: Update Account Informatie
@@ -765,6 +735,8 @@
     share_copy_link: 'Kopieer de link:'
     share_embed_description: Om het project op een webpagina te laten zien, kunt u
       de insluitcode opeen HTML-pagina plakken.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Insluiten
     advanced_share: Geavanceerde opties weergeven
     close: Afsluiten
@@ -793,6 +765,8 @@
     abuse:
       tos: Van dit project is gemeld dat het Code.org's <a href='http://code.org/tos'>voorwaarden</a>
         geschonden heeft en kan daarom niet met anderen gedeeld worden.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Als je denkt dat dat een foutje was, <a href='https://code.org/contact'>neem
         dan contact met ons op</a>
       go_to_code_studio: Ga naar Code Studio
@@ -835,6 +809,15 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Zoek voor een icoon...
@@ -854,13 +837,14 @@
     content: Content
     practice: Leraarpraktijken
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

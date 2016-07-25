@@ -1538,101 +1538,101 @@ sk:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Moje meno je Jens Bergensten ale som lepšie známy ako Jeb. Som vedúci vývojár Minecraftu, tu v Mojangu v Štokholme. Myslím, že mi bolo jedenásť alebo možno dvanásť keď som začal programovať, pretože som chcel vyrábať hry. Jeden z mojich otcových kamarátov mi povedal, že v prvom rade sa treba naučiť programovať. A tak som začal. Mám rád navrhovanie a riešenie architektúry hier. To je to, čo mám naozaj rád na Minecrafte.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: Počas nasledujúcej hodiny sa budeš učiť základy počítačovej vedy programovaním Alex alebo Steva k pohybu cez simulovaný kus sveta Minecraftu.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Tradičné programovanie je zvyčajne v textovej forme ale dnes budeme používať Blockly. Je to systém, ktorý používa vizuálne bloky a možnosť chytiť a pustiť, aby sme napísali programy. V pozadí podstate vytvárame Javascriptový kód.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Koncepty, ktoré sa budeš učiť sú to, čo počítačoví programátori používajú každý deň a sú to základy do počítačovej vedy. Tu na Mojangu používame tieto rovnaké koncepty aby sme sfunkčnili Minecraft.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Predtým než začneš si vyberieš svoju postavu. Ja si vyberiem Alex. Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Tvoja obrazovka je rozdelená do troch hlavných častí. Naľavo je Minecraftový hrací priestor, kde bude bežať tvoj program. Pokyny pre každý level sú napísané nižšie.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Stredná oblasť je panel nástrojov a každý z týchto blokov je príkaz, ktorý riadi Alexine akcie.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: Ak potiahneme do nášho pracovného priestoru blok pohybVpred(); a potom klikneme Spustiť, čo sa stane? Alex sa pohne vpred o jedno pole v mriežke.
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: A čo ak chceme urobiť niečo, potom čo sa pohla o jedno pole? Môžeme pridať ďalší blok do nášho programu. Vyberiem si blok otočVpravo(); a budem ho ťahať pod môj blok pohybVpred(); až sa nezobrazí táto oranžová čiara. Potom ho pustím a oba bloky sa spoja dohromady. Keď znova stlačím Spustiť, Alex bude vykonávať príkazy odhora nadol v našom pracovnom priestore.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Ak chceš odstrániť blok, tak ho len presuň zo zásobníka späť do panela nástrojov.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Keď chceš vrátiť svoje zmeny a vrátiť sa späť tam, kde začal level, použi tlačidlo Začať Znova v pravom hornom rohu pracovného prostredia. Ešte jedna vec: vidíš malý trojuholník na bloku otoč? Kedykoľvek, keď vidíš tieto trojuholníky znamená, že môžeš vybrať inú možnosť. Poďme začať kódovať!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Som Lydia Winters, riaditeľka firmy Mojang, kde vytvárame drobnú hru nazývanú Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvo v jaskyniach a veci, ktoré tam môžem objaviť. Ako niekto, kto nie je programátor som veľmi nadšená prejsť si Minecraft kurz a naučiť sa sama trocha kódovať.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: Predošlý level využíval množstvo blokov pohybVpred();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz pohybVpred(); štyri alebo päť krát. Našťastie pre nás, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích slučiek.
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Pri stavbe Mincraftu používame opakovacie slučky, aby sme umiestnili všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce blokov. Taktiež používame slučky aj v menších príkladoch, ako napríklad hýbanie Alexinho chodidla vpred a vzad počas toho ako kráča. Opakovacie slučky sú mocná časť programovania.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: Aby sme postavili stenu nášho domu, môžeme buď povedať Alex pohybVpred(); a umiestniť dosky štyri krát, alebo jej môžeme povedať pohybVpred(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacero krát. Teraz klikneme na blok opakovania a povieme jej, koľko krát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým než príde noc! Zabav sa.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: Teraz sa ideme učiť o rozhodnutiach ak. Rozhodnutia ak sú základnou časťou učenia sa programovať. Pomáhajú robiť počítaču rozhodnutia.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: Všetky počítače používajú rozhodnutia ak, dokonca aj môj telefón. Napríklad ak odomknem môj telefón, spustí sa kód, ktorý hovorí, že ak vložím správne heslo, tak sa odomkne mobil. Inak sa zjaví chybové hlásenie.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: Vo svojom kóde môžeš použiť rozhodnutia ak, aby si nechal Steva a Alice reagovať na to čo vidia vo svete. Napríklad ak je pre nimi kameň, môžu sa otočiť vľavo. Alebo otočiť vpravo ak narazia do stromu.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: V tomto prípade nechceme padnúť do lávy. Pre lávu je to jednoduché. Môžeme ju vidieť na obrazovke. Ale čo láva, ktorú nemôžeme vidieť pod kameňom?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: Ak vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva predtým než sa pohneme vpred. Ak tam láva je potrebujeme umiestniť kameň pred našu postavu, než sa pohneme vpred. Týmto spôsobom sa môžeme bezpečne pohnúť vpred. Je čas na ťaženie! A nezabudni použiť rozhodnutie ak na sledovanie svojho kroku.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tvorby. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Dostaneš na výber.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L s pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: Ak si dokončil svoj výtvor, vyber akciu zdieľaj, aby si dostal link a ukázal im svoj výtvor. Zabav sa!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tvorby. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Dostaneš na výber.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L s pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Teraz dokážeš vytvoriť čokoľvek chceš. Zabav sa!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1651,7 +1651,7 @@ sk:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program.
       7:
         image: notes/gumball_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
@@ -1704,7 +1704,7 @@ sk:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

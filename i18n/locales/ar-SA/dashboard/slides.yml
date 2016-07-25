@@ -436,88 +436,90 @@ ar:
         text: 'لنبدأ، ستحتاج إلى ربط المربعات الخاصة بك إلى أمر "عند الركض" البرتقالي. يمكنك ربط أوامر متعددة معا عن طريق سحبهم حتى ترى الخط الأصفر, وبعدها سيلتصقون معا.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: |
+          في اللغز الأول, ممثلنا هو البطريق وسوف نجعله يقول "مرحباً" عبر سحب القطعة البرمجية للنطق, و ربطها في قطعة عند التشغيل, و كتابة "مرحباً" بداخلها.
+          يمكننا أيضاً جعل البطريق يتحرك عبر سحب القطعة البرمجية تحرك لليمين و تحرك لليسار.
+          حالما تحصل على قطعك البرمجية في الأمكنة, أضغط على زر التشغيل لترى ما قد قمت ببرمجته.
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: إبدأ وعند النهاية, سوف تكون قادر على إنشاء العابك الخاصة مع جميع أنواع اللاعبين القادرين على التفاعل, تحول لسعيد أو حزين, سجل النقاط, أو ارمي كرة نارية, أو حتى أزيلوا بعضكم البعض. كل شيء عائد لك و للعبة التي تريد إنشائها.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: |
+          الأن, سوف نقوم بتعلم شيئاً يستخدمه جميع مبرمجي الالعاب يومياً.
+          ويسمونه بالأحداث.
+          الحدث يخبر برنامجك بالاستماع عندما يحدث شيئاً معيناً. وعند حدوث ذلك الشيء, سوف يقوم الحدث باتخاذ فعل.
       2:
         image: notes/playlab_events_2.png
         text: بعض الأمثلة من الأحداث الاستماع لنقر الفأرة أو مفتاح السهم، أو النقر على الشاشة.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: |
+          هنا, سوف نقوم بإنشاء روبوت فضائي يقوم بتحية أهل الأرض عندما يقوم اللاعب بالضغط عليه.
+          سوف نستخدم القطعة البرمجية "عند الضغط" و ارفاق القطعة البرمجية "إنطق" لها. عندما يضغط اللاعب على الروبوت الفضائي, كل شيء مرفق بحدث القطعة البرمجية "عند الضغط" سوف يقوم بالتنفيذ. ماذا سيقول المخلوق الفضائي الخاص بك ؟
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'هناك أيضاً قطعة برمجية تسمى "عند التمرير". إذا قمت بإرفاق القطعة البرمجية "تحرك" لها, يمكنك بدء تحريك ممثلك نحو الأعلى, نحو الأسفل, نحو اليمين أو نحو اليسار. خطوة بخطوة, لعبتك تصبح أكثر تفاعلاً.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'هذه هي القصطعة البرمجية "تكرار إلى الأبد". كل شيء داخل هذه القطعة البرمجية سوف يحدث للأبد في هذه اللعبة.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'إذا أردت لممثل أن يقوم بشيء ما بشكل متكرر, بدون الحاجة لجعل اللاعب أن يقوم بأي شيئ, سوف نقوم بوضع هذه القطع البرمجية داخل القطعة البرمجية "تكرار إلى الأبد".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: |
+          في اللغز التالي, هدفنا هو مساعدة دورية حرس الحدود لهذه المملكة, يساراً ويميناً بشكل متكرر.
+          تَعلَّم كيف تعمل الأوامر المتكررة, والتي سوف توفر عليك الكثير من الوقت لاحقاً عندما تريد إنشاء لعبتك الخاصة.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: هذه هي القطع البرمجية الخاصة بالرسم. أختر القطع الصحيحة لجعل الممثل يتحرك بحيث أن يُملأ الخطوط الرمادية.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: هؤلاء هم القطع البرمجية للقفز. عندما تستخدم هذه القطع, سوف يقوم فنانك بالتحرك وكنه لن يرسم, لذلك استخدم هذه القطع للقفز إلى الخط الرمادي التالي.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'أليس النحل بشيء رائع؟ في المجموعة القادمة من الألغاز, هدفك هو مساعدة النحل للوصول للأزهار للحصول على الرحيق من الأزهار و الطيران للمنحلة لصنع العسل. سوف تحتاج للقطع البرمجية "أحصل على الرحيق" و "أصنع العسل" لهذا التمرين.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'كل زهرة لها رقم مختلف من الرحيق: 1,2,3 أو أكثر. نحن نعلم كم من الرحيق يوجد في الزهور الحمراء, من خلال الرقم الصغير في الزاوية. لذلك أحرص على الحصول على كل الرحيق الموجود في الزهرة قبل المضي للزهرة التالية. كذلك, كل منحلة يمكن أن تحتوي على عدد محدد من الرحيق: 1,2,3 أو أكثر. لذلك أحرص على صنع عسل على القدر الذي يمكن أن تحتويه كل منحلة.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: إذا كنت قادر على الحصول على كل الرحيق و صنع كل العسل, بهذه الحالة تكون قد نجحت و انتقلت للمرحلة التالية. وبخلاف ذلك, سوف تحتاج لتجربة هذا اللغز مرة أخرى. استرخي و قم بأخذ استراحة ذهنية و فكر ماهو شعورك بأن تكون مبرمج!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: الحلقة الغير منتهية هي تكرار غير منتهي للنشاط. ولضرب المثال أنا انظر لصورة و لاحقاً أزيح نظري عنها, وبهذا أعيد تكرار الفعل ذاته مرات عديدة. بالتالي هي الدوران في حلقة غير منتهية معيدةً الفعل ذاته مرات عديدة.
       2:
         image: notes/C1_bee_loops_2.png
-        text: |-
-          In this level, we want the bee to collect three nectars from the flower. Instead of using three "get nectar" blocks, you're going to use the repeat block to get nectar three times. Hit "Run" and see if you got it right. Nice!
+        text: 'في هذه المرحلة, نريد للنحلة أن تجمع 3 رحيق من الزهور. وعوضاً عن استخدام القطعة البرمجية "أحصل على الرحيق", سوف نحتاج لتكرار القطعة البرمجية للحصول على الرحيق ثلاث مرات. أضغط "نفذ" و انظر إن أصبت بذلك. رائع!'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: هذا الدرس يسمى الحدث الكبير. وهو يتحدث عن كيفية التحكم و فعلياً تغيير الطريقة التي يعمل بها البرنامج على الفور وذلك باستخدام الأحداث, مثل الضغط على زر أو النقر على الفأرة.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: في هذا الدرس, سوف يتم التحكم بك من خلال جهاز تحكم ورقي. وهي بالظبط مثل لعبة فيديو حقيقية.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: الحدث هو فعل يسبب وقوع شيء ما. وهو مثل عندما تقوم بالنقر على زر الفأرة و تقوم بتحميل صفحة على الانترنت. هذا هو الحدث. عندما تقوم بلمس شاشة الجهاز اللوحي الخاص بك للتمرير, فهذا حدث أيضاَ. الأحداث هي طريقة رائعة للسماح للمستخدم بتوجيه برنامجك بالطريقة و الوقت الذي يريدونه.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: الأشياء تحدث ونحن نستجيب لها. نحن نشعر بالجوع فنذهب للثلاجة. ونحن نسمع ساعي البريد قد أتى ووضع الرسائل في صندوق البريد فنذهب حينها لصندوق بريدنا للحصول على البريد. هذه الأمثلة هي تماماً مثل الأحداث التي تتجسد بنقر زر معين أو تحريك عصا التحكم. هؤلاء هم أشياء تحدث و تحفزنا للقيام بشيء ما.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: 'في ألعاب الفيديو, يوجد حدث يسمى "تحديث" وهو يحدث 30 أو 60 مرة في الثانية الواحدة. ولمبرمجي ألعاب الفيديو هذا يكاد أن يكون أهم بكثير كحدث من الزر أو من عصا التحكم.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: 'الحدث الرئيسي الذي ننظر له هو أن "تحديث" يحفز الوقوع. وعندها نتحقق من عصا التحكم في النقر. لذلك نقول, " ياللهول, هل قام أحدهم بضغط الزر في هذا الإطار؟ نعم أو لا؟" بدون أحداث, اللاعب لا يمكنه اللعب, لا يمكنك القفز, لا يمكنك التحكم بما يجري. لعبة الفيديو لا يمكنها تحريك أي شيء.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: عليك أن تعلم أن الفشل هو جزء من البرنامج. ولكن إن ثابرت, فسوف تصبح أفضل و أكثر متعة لك. المثابرة هو أسم اللعبة. ابقى معها, سوف تحب ذلك.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."

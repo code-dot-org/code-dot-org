@@ -11,6 +11,7 @@ sk:
       2-3 Artist 3.4_instruction: |
         The jump block moves the artist without drawing.
         Draw the dashed line using both the `jump forward` and `move forward` blocks.
+        Each line is 50 pixels long.
       2-3 Artist 3_instruction: |
         This hat is 100 pixels high. Draw a hat that is
         70 pixels less.
@@ -29,7 +30,10 @@ sk:
       2-3 Artist 8_instruction: |
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
+        and 100 pixels tall. There are many different ways to solve this puzzle, so
+        have some fun!
+      2-3 Artist 9 NEW_instruction: Finish this kite
+      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
       2-3 Artist 9_instruction: Finish this kite
       2-3 Artist Assessment 1_instruction: |
         Assessment: Finish drawing the last tooth.
@@ -37,7 +41,7 @@ sk:
       2-3 Artist Debugging 1_instruction: |
         This hat should only be 50 pixels wide.  Can
         you fix it?
-      2-3 Artist Debugging 10_instruction: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?"
+      2-3 Artist Debugging 10_instruction: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?\\r\n\\r\nTry running\nthe code first to see what's wrong."
       2-3 Artist Debugging 11_instruction: "My snowflake is falling apart!\\r\n\\r\nCan\nyou figure out what's going wrong?"
       2-3 Artist Debugging 12_instruction: |
         I'm supposed to add an ocean wave to
@@ -54,12 +58,12 @@ sk:
       2-3 Artist Debugging 9_instruction: "Something is off!\\r\n\\r\nThe code for\nthis stem is wrong. Can you figure out how to get the artist to trace the\nstem the right way?"
       2-3 Artist Debugging Assessment 1_instruction: "Assessment: Why does this square\nend up being 75 pixels too small on each side?  \\r\n\\r\nWhere does the code\ngo wrong?"
       2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
-      2-3 Artist Functions 1_instruction: "\"Me zombie artist. Me love drawing!\"  \\r\n\\r\nHelp\nthe zombie draw square glasses.  \\r\n\\r\nThe bridge between the glasses is\n25 pixels shorter than the width of the squares."
+      2-3 Artist Functions 1_instruction: "\"Me zombie artist. Me love drawing!\"  \\r\n\\r\nHelp\nthe zombie draw square glasses.  \\r\n\\r\nThe bridge between the glasses is\n25 pixels shorter than the width of the squares, which is 100 pixels."
       2-3 Artist Functions 10_instruction: |
         Freeplay: Here are two functions, one
         to draw a big gear and one to draw a small gear. Use them to draw the inside
         of a machine!
-      2-3 Artist Functions 11.5_instruction: "Here's that same `draw a hexagon`\nfunction. \\r\n\\r\nWhat happens if you turn 60 degrees in your main program\neach time you loop?"
+      2-3 Artist Functions 11.5_instruction: "Here's that same `draw a hexagon`\nfunction. \\r\n\\r\nWhat happens if you loop the main program 6 times, turning\n60 degrees each time you loop?"
       2-3 Artist Functions 11_instruction: "We've renamed the `draw a square` function\nto `draw a hexagon`, but it's still giving us squares! Can you modify the\n`draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r\n\\r\nDraw\nthe image using the new function!"
       2-3 Artist Functions 12 Mike_instruction: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
       2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
@@ -115,7 +119,7 @@ sk:
       2-3 Artist Loops New 11_instruction: |
         Rebuild the code from the last puzzle,
         but this time, add a left turn of 30 degrees inside the loop. Now, repeat
-        it 24 times instead of 7.
+        it 24 times instead of 8.
       2-3 Artist Loops New 12_instruction: |
         Nakresli kosoštvorec so stranami dlhými 100 pixelov.
         
@@ -186,7 +190,8 @@ sk:
         to collect nectar from each flower.
       2-3 Bee Functions Assessment 2_instruction: |
         Assessment: Create a function
-        to move forward and make 3 honey, then return the bee to where it started.
+        to turn, move forward and make 3 honey, then return the bee to where it started
+        and turn back.
       2-3 Bee Loops 1_instruction: "Those flowers look tasty!\\r\n\\r\nCollect nectar\nfrom each of the flowers using the fewest blocks possible."
       2-3 Bee Loops 10_instruction: |
         Can you use a while loop inside of two other
@@ -257,7 +262,9 @@ sk:
       2-3 Maze 13 (old)_instruction: |
         Get me to the pig, now with the Repeat until
         block!
-      2-3 Maze 13_instruction: Get me to the pig by adding only one block
+      2-3 Maze 13_instruction: |
+        Get me to the pig! You can only use one move forward
+        block this time
       2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
       2-3 Maze 14_instruction: |
         Get me to the sunflower! (Where is that "repeat
@@ -372,10 +379,11 @@ sk:
         This right triangle has angles of 30, 60, and 90
         degrees. The slanted side's length (length of the hypotenuse) is 200 pixels.
         Complete the drawing.
-      4-5 Artist 8_instruction: "The halfway line on a soccer field is *perpendicular*\nto the sidelines.   \\r\nThis rectangle has a perimeter of 800 pixels total,\nand it is 240 pixels wide. How tall is it?   \\r\n\\r\nDraw the bounds and the\nhalfway line."
+      4-5 Artist 8_instruction: "The halfway line on a soccer field is perpendicular\nto the sidelines.   \\r\nThis rectangle has a perimeter of 800 pixels total,\nand it is 240 pixels long. How tall is it?   \\r\n\\r\nDraw the bounds and the\nhalfway line."
       4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and have sides that are 50 pixels long.
+        Draw the right half of this image so that the design
+        is symmetrical. The triangles are equilateral and have sides that are 50 pixels
+        long.
       4-5 Artist Assessment 1_instruction: |
         Assessment: Use a loop to draw the equilateral
         triangle. Each side is 300 pixels.
@@ -1325,7 +1333,9 @@ sk:
         symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
         may have to run the code several times to figure out all of the blocks that
         need to be added.
-      Course 4 Artist 6_instruction: "Complete the code to draw these triangles.  \\r\n\\r\nEach\nequilateral triangle has sides of 100 pixels. "
+      Course 4 Artist 6_instruction: |
+        Complete the code to draw these three, equilateral
+        triangles.
       Course 4 Artist 7_instruction: |
         Now nest this loop inside another loop to draw
         10 triangles. This is called a nested loop. Hint: All 10 triangles complete
@@ -1737,9 +1747,9 @@ sk:
         collect all of this nectar.
       Course 4 Bee Params 6_instruction: |
         Wouldn't it be nice if we could collect
-        all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectar units" to control the amount of nectar to
-        collect. You'll probably want to rename the function too!
+        all of these nectars with a single function? Try adding a new parameter to
+        your function called "nectar units" to control the amount of nectar to collect.
+        You'll probably want to rename the function too!
       Course 4 Bee Params 7 (copy 1)_instruction: |
         Try using your new function to
         collect all of this nectar.
@@ -2601,6 +2611,677 @@ sk:
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      grade1_artist_loops1_instruction: |
+        The Artist is trying to draw a line six
+        times, but can't get it right.  Can you help?
+      grade1_artist_loops2_instruction: |
+        Help the artist draw a line 7 times to make
+        a garden wall.
+      grade1_artist_loops3_instruction: |
+        Now we need to get the soil ready to plant.
+        Find the bug and help the artist prepare the ground. 
+      grade1_artist_loops4_instruction: |
+        Time to fix the stairs!  Repeat this pattern
+        five times so the artist can reach the top of the bushes.
+      grade1_artist_loops5_instruction: |
+        Behind the bushes there is a beautiful vine
+        full of flowers.  Can you climb the vine and see where it goes?
+      grade1_artist_loops6_instruction: |
+        **Challenge:**  It's a hidden garden! Let's
+        walk around.
+      grade1_artist_loops7_instruction: |
+        The flowers down here are so pretty.  Let's
+        take a closer look.
+      grade1_artist_loops7a_instruction: |
+        **Challenge:**  Lovely! Let's take a walk
+        around the garden.
+      grade1_artist_loops7b_instruction: |
+        Time to head home. Can you fix this ladder
+        to help the artist get down?
+      grade1_artist_loops8_instruction: |
+        Let's take the short way over the pond.
+        Can you help the artist stay on the stones?
+      grade1_artist_loops9_instruction: I still need a story for this puzzle
+      grade1_artist_loopsFP_instruction: |
+        Use what you have learned to draw a picture
+        of what you think the artist saw when he got home.
+      grade1_maze_sequence1_instruction: A bug! Fix the code to get me to the pig.
+      grade1_maze_sequence10_instruction: Move me around the TNT to get to the pig.
+      grade1_maze_sequence2_instruction: Fix the code to get me to the pig!
+      grade1_maze_sequence3_instruction: |
+        Can you add 2 blocks to get the bird to
+        the pig.
+      grade1_maze_sequence4_instruction: Now try this puzzle from the start!
+      grade1_maze_sequence5_instruction: |
+        Move one way, then another to get me to
+        the pig!
+      grade1_maze_sequence6_instruction: |
+        Figure out what is missing and then add
+        blocks to get me to the pig!
+      grade1_maze_sequence7_instruction: |
+        Your turn!  What do you need to do to get
+        the bird to the pig?
+      grade1_maze_sequence8_instruction: |
+        Debug this level by adding blocks to get
+        me to the pig!
+      grade1_maze_sequence9_instruction: |
+        Go around the TNT to get me to the pig!
+        
+      grade1_maze_sequenceA_instruction: Move me around the TNT to get to the pig.
+      grade1_maze_sequenceB_instruction: Fix the bugs to get the bird to the pig.
+      grade1_maze_sequenceC_instruction: "It's all you!  Get the bird to the pig."
+      grade1_maze_sequenceD_instruction: "It's a pig party!  Get those pigs! "
+      grade1_playlab_events1_instruction: |
+        This game is called "Play Lab".  See
+        if you can figure out what each block does.
+      grade1_playlab_events2_instruction: |
+        This program makes Robin fly.  Can you
+        get her to vanish when you click her?
+      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you\nmake the robot jump when you press the up button?\\r\n"
+      grade1_playlab_events4_instruction: |
+        Add a block to make Robin vanish when
+        she collides with the robot.
+      grade1_playlab_events5_instruction: |
+        Add a block to the 'when run' event
+        that starts the dragon flying.
+      grade1_playlab_events6_instruction: |
+        Add a block to the 'when actor 1 clicked'
+        event that makes the dragon return to the middle of the screen.
+      grade1_playlab_events7_instruction: |
+        Add a block so that when you push the
+        left arrow button, the knight surges toward the dragon.
+      grade1_playlab_events8_instruction: |
+        Add a block so that when the knight collides
+        with the dragon, it plays a sound.
+      grade1_playlab_events9 RYAN COPY_instruction: |
+        Now, have Robin wait a second,
+        then come back after she vanishes.
+      grade1_playlab_events9_instruction: |
+        Now, add a block to keep score each time
+        the knight hits the dragon.
+      grade1_playlab_eventsFP_instruction: |
+        Use your imagination. What can you do
+        to make this game more fun?
+      grade1_sequence_pre_instruction: |
+        Play with these blocks to see what they make
+        the bird do!
+      grade1_video_frustrationRainbow_instruction: |
+        This video describes the rainbow
+        of frustration and introduces persistence.
+      grade2_CaringForNewPet_1_instruction: |
+        Can you help me catch the naughty pig?
+        Stack a couple of `move forward` blocks below the `when run` block and press
+        "Run". 
+      grade2_CaringForNewPet_2_instruction: |
+        This pig is ruffling my feathers. Help
+        me get to him!
+      grade2_CaringForNewPet_3_instruction: |
+        Trace the path and lead me to the silly
+        pig. Avoid TNT or feathers will fly!
+      grade2_CaringForNewPet_4_instruction: |
+        Keep calm and help me find the bad pig.
+        Otherwise I might get angry!
+      grade2_CaringForNewPet_5_instruction: Get me to the pig!
+      grade2_CaringForNewPet_6_instruction: |
+        Guide me to the green evilness! (Watch
+        out for TNT)
+      grade2_MakeDogTag_1_instruction: |
+        Hi, I'm an artist. You can write code to
+        make me draw almost anything. Use a few blocks to make me draw over the grey
+        lines in the picture. (Each line is 100 pixels long)
+      grade2_MakeDogTag_10_instruction: Nakresli niečo zábavné.
+      grade2_MakeDogTag_2_instruction: |
+        This house has a half-finished wall. Each
+        side is 100, but the half-finished wall is only 50. Complete the wall. 
+      grade2_MakeDogTag_3_instruction: Help me complete the house for this cat.
+      grade2_MakeDogTag_4_instruction: |
+        This house needs a roof! Draw the triangle.  Hint:
+        all three sides are the same length.
+      grade2_MakeDogTag_5_instruction: |
+        Complete the rooms for each of the animals
+        by splitting the rectangle into 2 equal-sized squares. The rectangle is 200
+        pixels wide and 100 pixels tall. There are many different ways to solve this
+        puzzle, so have some fun!
+      grade2_MakeDogTag_6_instruction: "Free-play! Draw anything you'd like."
+      grade2_MakeDogTag_7_instruction: "Give the stop sign a border by making an\noctagon with 100 pixels sides. \\r\n\\r\n"
+      grade2_MakeDogTag_8_instruction: |
+        Now let's connect a bunch of V's together
+        in a loop.
+      grade2_MakeDogTag_9_instruction: |
+        Rebuild the code from the last puzzle, but
+        this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
+        times instead of 8.
+      grade2_PuppyLoops_1_instruction: |
+        Can you get me to the pig using 5 of the
+        same kind of blocks?
+      grade2_PuppyLoops_10_instruction: "My teacher says that I should finish what\nI start!\\r\n\\r\nHelp me finish my pinwheel. Can you figure out what's wrong?"
+      grade2_PuppyLoops_2_instruction: |
+        Can you get to the pig by creating a loop
+        that uses only one `move forward` block inside of a `repeat`?
+      grade2_PuppyLoops_3_instruction: |
+        Get me to the pig! You can only use one move
+        forward block this time
+      grade2_PuppyLoops_4_instruction: |
+        In this puzzle, two `repeat` loops will help
+        you get to the pig with the fewest number of blocks!
+      grade2_PuppyLoops_5_instruction: |
+        Can you figure out the fastest way to get
+        me to the pig?
+      grade2_PuppyLoops_6_instruction: |
+        Loops even work with more than one block
+        inside!  Can you loop this sequence to get the zombie to the sunflower?
+      grade2_PuppyLoops_7_instruction: Use what you learned to get me to the sunflower!
+      grade2_PuppyLoops_8_instruction: "This code for the cat's whiskers is wrong.\n\\r\n\\r\nFix this code to draw whiskers that are all the same length."
+      grade2_PuppyLoops_9_instruction: "Looks like the C in code is drawn backwards!\\r\n\\r\nCan\nyou make it look like a C again?"
+      grade3_Conditionals_1 BAD_instruction: Use a loop to collect all of the nectar.
+      grade3_Conditionals_1_instruction: Ahoj, ja som včela! Pomôž mi zozbierať všetok nektár z kvetov. Použi slučku.
+      grade3_Conditionals_10 BAD_instruction: |
+        Gather nectar from the rows of flowers!
+        Use a nested loop.
+      grade3_Conditionals_10_instruction: 'Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?'
+      grade3_Conditionals_11 BAD_instruction: |
+        Assessment: Use a `while` loop to
+        collect all of the nectar from these flowers.
+      grade3_Conditionals_11_instruction: Zbieraj nektár a urob med. Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú.
+      grade3_Conditionals_12_instruction: Pozbieraj nektár zo všetkých štyroch kvetov.
+      grade3_Conditionals_13_instruction: |
+        Assessment: Collect all of the nectar.
+        Be careful not to try to collect nectar from a purple flower if it doesn't
+        have any.
+      grade3_Conditionals_2_instruction: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku.
+      grade3_Conditionals_3_instruction: "Be careful not to collect nectar from a\npurple flower if it doesn't have any. \\r\nYou must first check if the nectar\nis equal to 1 using the `if nectar` block."
+      grade3_Conditionals_4_instruction: 'Skontroluj tento kvet s blokom "if" či je dostupný nejaký nektár.'
+      grade3_Conditionals_5_instruction: Zozbieraj nektár z každého kvetu, ak nejaký má.
+      grade3_Conditionals_6_instruction: Toto pole má červené a fialové kvety. Červené kvety majú známe množstvo nektáru ale nektár fialových je neznámy. Zozbieraj všetok nektár.
+      grade3_Conditionals_7_instruction: Zozbieraj všetok nektár z každého kvetu.
+      grade3_Conditionals_8_instruction: Zbieraj nektár, kde kvety majú nektár.
+      grade3_Conditionals_9_instruction: |
+        Help me find all of the nectar using as
+        few blocks as possible!
+      grade3_Conditionals_TeacherIDo_instruction: |
+        Check this flower with an "if"
+        block to see if there is any nectar available.
+      grade3_ConditionalsElse_1_instruction: |
+        This cloud is blocking my view! Check
+        to see if there's a flower under the cloud, and only get nectar if there's
+        a flower. Be careful, it can change!
+      grade3_ConditionalsElse_2_instruction: "More clouds! \\r\n\\r\nCheck underneath\nevery cloud to see if it is hiding a flower before you get nectar.  \\r\n\\r\nRemember:\nNot all clouds hide the same thing!"
+      grade3_ConditionalsElse_3_instruction: |
+        Now I just want to make honey. Some
+        of these clouds might have honeycombs under them. Be sure to check each cloud!
+      grade3_ConditionalsElse_4_instruction: |
+        Sometimes this cloud covers a flower,
+        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
+        if it is a flower, else to make honey (because it is a honeycomb).
+      grade3_ConditionalsElse_5_instruction: "There will be either a flower or a\nhoneycomb under each of those clouds!\\r\n\\r\nUse the `if/else` block to collect\nnectar if there is a flower.\\r\nOtherwise, make honey (because there is a\nhoneycomb)."
+      grade3_ConditionalsElse_6_instruction: "I am not sure how much nectar this\nflower has, but I know it has either 1, 2, or 3 nectar. \\r\n\\r\nCombine the\nconditional blocks (`if` and/or `if/else`) to only get as much nectar as the\nflower has. \\r\n\\r\nRemember, the amount of nectar can change each time you\nrun the puzzle!"
+      grade3_ConditionalsElse_7_instruction: "These flowers can have 3, 2, or 1 nectar.\n\\r\n\\r\nComplete the `check purple flower` function and use it to collect\nall of the nectar at the flowers."
+      grade3_ConditionalsElse_8_instruction: "Write the function for `check flower\nmake honey`. \\r\n\\r\nYour function should check if the purple flower has 3,\n2, or 1 nectar and get all of the nectar. \\r\nThen, move forward and make\nhoney."
+      grade3_ConditionalsElse_9_instruction: "**Assessment:** This cloud is either\nhiding a flower with one nectar or a honeycomb that needs one honey.  \\r\n\\r\nComplete\nthe `get nectar or make honey` function, then call it to collect the nectar\nor honey. \\r\n"
+      grade3_ConditionalsElse_TeacherIDo_instruction: "There will be either a flower\nor a honeycomb under each of those clouds!\\r\n\\r\nUse the `if/else` block\nto collect nectar if there is a flower.\\r\nOtherwise, make honey (because\nthere is a honeycomb)."
+      grade3_Debugging_1_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_10_instruction: "This puzzle is making me loopy! \\r\nFix the\nerror(s) to collect all of the nectar and make all of the honey."
+      grade3_Debugging_11_instruction: "Assessment:  Now it's time to show what\nyou know!\\r\n\\r\nFix the error(s) to collect all of the nectar and make all\nof the honey."
+      grade3_Debugging_2_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_3_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_4_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_5_instruction: "That flower looks tasty! \\r\n\\r\nFix the error(s)\nto collect all of the nectar.  You can now use both run and step."
+      grade3_Debugging_6_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár.
+      grade3_Debugging_7_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_8_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_9_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      grade3_Debugging_TeacherIDo_instruction: |
+        These blocks are really bugging me.
+        Fix the error(s) to collect all of the nectar and make all of the honey.
+      grade3_Loops_1_instruction: |
+        Hi, I'm a bee. Can you help me collect the nectar
+        from these flowers? 
+      grade3_Loops_10_instruction: "Such a busy bee!\\r\n\\r\nHelp bee collect all\nof the nectar and make all of the honey with the fewest blocks possible."
+      grade3_Loops_11_instruction: "The shape of this path is different than the\nothers. \\r\n\\r\nCan you collect all of the nectar using as few blocks as possible?"
+      grade3_Loops_12_instruction: |
+        Can you find the quickest way for the bee to
+        collect all of the nectar and make all of the honey?
+      grade3_Loops_2_instruction: This time, use a loop to gather all of the nectar.
+      grade3_Loops_3_instruction: Use a `repeat` loop to collect all of the nectar.
+      grade3_Loops_4_instruction: |
+        Now use the `repeat` block to collect all of the
+        nectar and make all of the honey.
+      grade3_Loops_5_instruction: |
+        What a beautiful field of flowers!   Help the
+        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      grade3_Loops_6_instruction: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
+      grade3_Loops_7_instruction: "Those flowers look tasty!\\r\n\\r\nCollect nectar\nfrom each of the flowers using the fewest blocks possible."
+      grade3_Loops_8_instruction: |
+        Collect all the nectar and make all of the honey
+        using the fewest blocks possible.
+      grade3_Loops_9_instruction: |
+        Collect nectar from each flower and make honey
+        at each honeycomb using the fewest blocks possible.
+      grade3_Loops_TeacherIDo_instruction: "Those flowers look tasty!\\r\n\\r\nCollect\nnectar from each of the flowers using the fewest blocks possible."
+      grade4_arist_functions_star0_instruction: |
+        Have you drawn something like this
+        star before? Practice making it one more time by adding a turn and a repeat
+        block.
+      grade4_arist_nested_loop_circles1_instruction: |
+        Assessment: Use a nested loop
+        to complete the design.
+      grade4_arist_nested_loop_flags1_instruction: |
+        Loop the given code to create
+        a windmill.
+      grade4_arist_nested_loop_polygons1_instruction: "Loop this design 10 times.\n\\r\n\\r\nHow much do you have to turn each time you loop?"
+      grade4_arist_nested_loop_polygons2_instruction: "Loop this shape 6 times. \\r\n\\r\nHow\nmuch do you have to turn each time you loop? "
+      grade4_arist_nested_loop_squares1_instruction: |
+        Can you draw these 10 squares
+        of this sidewalk using a nested loop? Each square is 30 pixels.
+      grade4_arist_nested_loop_triangles2_instruction: |
+        Now nest this loop inside
+        another loop to draw 10 triangles.  This is called a "nested" loop.  
+      grade4_arist_nested_loop_triangles3_instruction: |
+        Can you draw a hexagon by
+        looping the triangle code?
+      grade4_arist_nested_loop_triangles4_instruction: |
+        Draw the teeth in the alligator's
+        mouth!
+      grade4_arist_nested_loop_triangles5_instruction: "Create a sun by nesting the\nstarter code in another loop.\\r\n\\r\nTo get this cool design with a hollow\ncenter, you'll need to jump forward by the length of the triangle before\nturning."
+      grade4_arist_nested_loop_triangles6_instruction: |
+        Can you draw these 36 triangles
+        using a nested loop?
+      grade4_artist_functions_stars0_instruction: |
+        Have you drawn something like
+        this star before? Practice making it one more time by adding a turn and a
+        repeat block.
+      grade4_artist_functions_stars1_instruction: |
+        Now that you car draw a star,
+        try drawing four stars!
+      grade4_artist_functions_stars2_instruction: |
+        When is drawing three stars harder
+        than drawing four? When you also have to jump over the moon!
+      grade4_artist_functions_stars3_instruction: |
+        That last one is tough if you
+        only use loops. Let's try drawing the same picture using this new 'function'
+        that will help to **draw a star**.
+      grade4_artist_functions_windows0_instruction: |
+        Have you drawn something like
+        this star before? Practice making it one more time by adding a turn and a
+        repeat block.
+      grade4_artist_functions_windows1_instruction: |
+        You just created a nested loop!
+        Let's repeat all of these commands with another repeat block to draw windows
+        on this house. Don't forget the jump block!
+      grade4_artist_functions_windows2_instruction: |
+        Can you figure out how to add
+        these windows? Watch out for the door!
+      grade4_artist_nested_loop_circles1_instruction: |
+        Assessment: Use a nested loop
+        to complete the design.
+      grade4_artist_nested_loop_flags1_instruction: |
+        Loop the given code to create
+        a windmill.
+      grade4_artist_nested_loop_polygons1_instruction: "Loop this design 10 times.\n\\r\n\\r\nHow much do you have to turn each time you loop?"
+      grade4_artist_nested_loop_polygons2_instruction: "Loop this shape 6 times.\n\\r\n\\r\nHow much do you have to turn each time you loop? "
+      grade4_artist_nested_loop_squares1_instruction: |
+        Can you draw these 10 squares
+        of this sidewalk using a nested loop? Each square is 30 pixels.
+      grade4_artist_nested_loop_triangles1_instruction: |
+        Complete the code to draw
+        these triangles.  The first one is done for you.  Hint:  3 triangles in a
+        360 degree rotation.
+      grade4_artist_nested_loop_triangles2_instruction: |
+        Now nest this loop inside
+        another loop to draw 10 triangles.  This is called a "nested" loop.  
+      grade4_artist_nested_loop_triangles3_instruction: |
+        Can you draw a hexagon by
+        looping the triangle code?
+      grade4_artist_nested_loop_triangles4_instruction: |
+        Draw the teeth in the alligator's
+        mouth!
+      grade4_artist_nested_loop_triangles5_instruction: "Create a sun by nesting\nthe starter code in another loop.\\r\n\\r\nTo get this cool design with a hollow\ncenter, you'll need to jump forward by the length of the triangle before\nturning."
+      grade4_artist_nested_loop_triangles6_instruction: |
+        Can you draw these 36 triangles
+        using a nested loop?
+      grade4_artist_parameters_squares1_instruction: |
+        Click "edit" to fill in the
+        function definition of "draw a square" and add a parameter. It should take
+        a length parameter, just like the triangle. This time, draw 3 squares: 25,
+        50 and 75 pixels in length, each 100 pixels apart.
+      grade4_artist_parameters_triangles1_instruction: |
+        Today, we're going to try
+        out a different, more powerful function editor. See if you can figure out
+        how to edit the function 'draw a triangle' to find the bugs.
+      grade4_artist_parameters_triangles2_instruction: |
+        Do you notice anything different
+        about these function blocks? Click “Run” to see what happens.
+      grade4_artist_parameters_triangles2b_instruction: |
+        Can you complete this drawing?
+        The sides of each triangle are 25 pixels larger than the last.  The first
+        triangle has 25 pixel sides.
+      grade4_artist_parameters_triangles3_instruction: |
+        Can you complete this drawing?
+        The sides of each triangle are 25 pixels larger than the last.  The first
+        triangle has 25 pixel sides.
+      grade4_artist_parameters_triangles4_instruction: |
+        The code for this triangle
+        function is broken. Can you edit the function to fix it, and then make triangles
+        of length 25, 50, and 75?
+      grade4_artist_parameters_trianglesx_instruction: |
+        Can you complete this drawing?
+        The sides of each triangle are 25 pixels larger than the last.  The first
+        triangle has 25 pixel sides.
+      grade4_bee_conditionals_nested_loops_instruction: |
+        Collect all of the nectar.
+        You can only collect nectar from flowers, but you can check any space to see
+        if there is a flower.
+      grade4_bee_conditionals_new1_instruction: |
+        Collect all of the nectar. You can
+        only collect nectar from flowers, but you can check any space to see if there
+        is a flower.
+      grade4_bee_conditionals_new1a_instruction: |
+        Help the bee collect all of the
+        nectar. You can only collect nectar from flowers, but you can check any space
+        to see if there is a flower.
+      grade4_bee_conditionals_new2_instruction: |
+        Can you help the bee collect the
+        nectar from the flowers? You can only collect nectar from flowers, but you
+        can check any space to see if there is a flower.
+      grade4_bee_conditionals_new2a_instruction: |
+        Collect all of the nectar. You
+        can only collect nectar from flowers, but you can check any space to see if
+        there is a flower.
+      grade4_bee_conditionals_new3a_instruction: |
+        Collect all of the nectar or make
+        all the honey. You can only collect nectar from flowers and make honey from
+        honeycombs. Check any space to see if there is a flower or honeycomb.
+      grade4_bee_conditionals_new3b_instruction: |
+        Uh oh! The bee is not sure if he
+        should collect nectar or make honey. Can you help him out?
+      grade4_bee_conditionals_new3c_instruction: |
+        Help the bee collect all of the
+        nectar and make all of the honey! Hint: Try using a nested loop!
+      grade4_bee_conditionals_quantum1_instruction: |
+        This cloud is blocking my view!
+        Check to see if there's a flower under the cloud, and only get nectar if
+        there's a flower. Be careful, it can change!
+      grade4_bee_conditionals_quantum2_instruction: "More clouds! \\r\n\\r\nCheck underneath\nevery cloud to see if it is hiding a flower before you get nectar.  \\r\n\\r\nRemember:\nNot all clouds hide the same thing!"
+      grade4_bee_conditionals_quantum3_instruction: |
+        Now I just want to make honey.
+        Some of these clouds might have honeycombs under them. The way we've been
+        going about things won't work here. Be sure to check if a honeycomb is hiding
+        behind each cloud!
+      grade4_bee_conditionals_quantum4_instruction: |
+        Sometimes this cloud covers
+        a flower, and sometimes it covers a honeycomb! Use the if/else block to collect
+        nectar if it is a flower, else to make honey (because it is a honeycomb).
+      grade4_bee_conditionals_quantum5_instruction: "There will be either a flower\nor a honeycomb under each of those clouds!\\r\n\\r\nUse the `if/else` block\nto collect nectar if there is a flower.\\r\nOtherwise, make honey (because\nthere is a honeycomb)."
+      grade4_bee_functions_instruction: |
+        Have we met before? I'm the farmer! Please
+        help me remove this pile of dirt and fill this hole.
+      grade4_farmer_functions1_instruction: |
+        Have we met before? I'm the farmer!
+        Please help me remove this pile and fill this hole.
+      grade4_frozen_freeplay_instruction: |
+        You've officially become a master artist!
+        Create a winter wonderland.
+      grade4_frozen_functions0_instruction: |
+        A circle is a special shape. Can you
+        figure out what number to replace the question marks with to draw a circle?
+      grade4_frozen_functions1_instruction: |
+        Use the new “draw a circle” function
+        to create 10 overlapping circles. Don't forget to jump forward between circles.
+      grade4_frozen_functions1a_instruction: |
+        Use the new “Create a circle” block
+        to create 10 overlapping circles. Don't forget to jump forward between circles.
+      grade4_frozen_functions2_instruction: |
+        Now let's create 20 overlapping circles,
+        turning 18 degrees between each circle.
+      grade4_frozen_functions3_instruction: |
+        Here's a ”Create circle” block that
+        can make circles of different sizes. Can you use this to create a small circle
+        of size 5 and a larger circle of size 10?
+      grade4_frozen_functions4_instruction: |
+        Intricate snow patterns can be created
+        with very simple shapes. Can you make a pattern by repeating 5 circles of
+        size 5 and 5 circles of size 10?
+      grade4_frozen_nested_loop_diamonds1_instruction: |
+        Use a repeat around these
+        blocks to create a parallelogram. It's just like a rectangle but has different
+        angles. This one has 60 degree and 120 degree angles instead of all 90 degree
+        angles.
+      grade4_frozen_nested_loop_diamonds2_instruction: |
+        Did you know every snowflake
+        is a different shape? Let's create a new snowflake by using another “Repeat"
+        block to repeat a parallelogram 4 times, turning right by 90 degrees between
+        each parallelogram.
+      grade4_frozen_nested_loop_diamonds3_instruction: |
+        Now, let's create a new
+        snowflake by using the repeat block to repeat a parallelogram 10 times, turning
+        right by 36 degrees between each one.
+      grade4_frozen_square_instruction: |
+        Hi, I’m Anna of Arendelle! Let’s make a
+        square with the “Repeat” block, which uses fewer blocks. How many times (???)
+        should the “Repeat” block loop the blocks inside it to make a square?
+      grade4_frozen_square_loop1_instruction: |
+        Hi, I’m Anna of Arendelle! Let’s make
+        a square with the “Repeat” block, which uses fewer blocks. How many times
+        (???) should the “Repeat” block loop the blocks inside it to make a square?
+      grade4_frozen_square_loop2_instruction: |
+        Let's create three squares, turning
+        after each square. Be sure to turn by 120 degrees before each new square.
+      grade4_frozen_square_loop3_instruction: |
+        Can you create a snowflake using the
+        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
+        degrees between each square?
+      grade4_playlab_test_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      grade4_playlab_test2_instruction: |
+        Here's a function called `jump` that causes
+        your main character to jump up 100 pixels. Run the program and use the jump
+        function to collect all of the flags by moving the dog with the arrow keys.
+      grade4_prompt_test_instruction: This is a test play lab level.
+      grade4_review_artist1_instruction: |
+        Hi, I'm an artist. You can write code
+        to make me draw almost anything. Use a few blocks to make me draw over the
+        grey lines in the picture. (Each line is 100 pixels long)
+      grade4_review_artist2_instruction: |
+        This house needs a roof! Draw the triangle.  Hint:
+        all three sides are the same length.
+      grade4_review_artist3_instruction: |
+        The jump block moves the artist without
+        drawing. Draw the dashed line using both the `jump forward` and `move forward`
+        blocks. Each line is 50 pixels long.
+      grade4_review_bee1_instruction: |
+        Now use the `repeat` block to collect all
+        of the nectar and make all of the honey.
+      grade4_review_bee2_instruction: |
+        Collect nectar from each flower and make honey
+        at each honeycomb using the fewest blocks possible.
+      grade4_review_bee3_instruction: "Such a busy bee!\\r\n\\r\nHelp bee collect all\nof the nectar and make all of the honey with the fewest blocks possible."
+      grade5_artist_for_loops1_instruction: |
+        Use a repeat block to draw this triangle
+        that is 50 pixels wide.
+      grade5_artist_for_loops10_instruction: "Can you figure out how to use all of\nthe things you've learned to create this image?\\r\n\\r\nNeed a hint? Click\nhere."
+      grade5_artist_for_loops2_instruction: |
+        I've put the code for drawing a triangle
+        inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look
+        at the code before you hit "Run".
+      grade5_artist_for_loops3_instruction: |
+        Use the last puzzle as a reference to
+        complete this one.  The smallest triangle has 20 pixel sides, the largest
+        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
+        
+      grade5_artist_for_loops4_instruction: |
+        How would you modify what you've learned
+        to draw these squares? They start at 15 pixels long, the largest is 300 pixels
+        long, and each square is 15 pixels larger than the last. 
+      grade5_artist_for_loops5_instruction: "Just one little change to the code from\nthe last image can create this drawing. Can you figure out what that change\nis?\\r\n\\r\nHint:  You need to remove something!"
+      grade5_artist_for_loops6_instruction: |
+        If you turn a little bit more or less
+        than you normally would for a shape, it creates a neat effect. Try using some
+        of the code from the last level, but turning 89 degrees to create this twisted
+        square spiral.
+      grade5_artist_for_loops7_instruction: |
+        Make three small changes to the code
+        from the last level to get this!
+      grade5_artist_for_loops8_instruction: |
+        Remember back in a previous stage when
+        we used a variable to control the number of sides in a shape? We are going
+        to do the same thing with the `counter` variable now. This pattern starts
+        with a triangle and adds one side at a time until it draws a decagon (10 sides).
+        Each side should be 100 pixels long. 
+      grade5_artist_for_loops9_instruction: "Let's put it all together!  Using your\nknowledge of `for` loops and the `counter` variable, create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\\r\n\\r\nVery little\nof the code has been provided for you."
+      grade5_artist_for_loopsfreeplay11_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n\\r\nNeed a hint? Click here."
+      grade5_artist_for_loopsfreeplay12_instruction: |
+        Free Play: Try making some
+        drawings of your own using "for loops". We've added a few useful variables
+        for you as well.
+      grade5_artist_parameters_squares1_instruction: |
+        Click "edit" to fill in the
+        function definition of "draw a square" and add a parameter. It should take
+        a length parameter, just like the triangle. This time, draw 3 squares: 25,
+        50 and 75 pixels in length, each 100 pixels apart.
+      grade5_artist_parameters_squares2_instruction: |
+        Now try creating the function
+        from scratch! Create a function called 'draw a square' and use it to outline
+        these four boxes. Make sure to add a parameter for 'length'!
+      grade5_artist_parameters_stars1_instruction: |
+        That last one is tough if you
+        only use loops. Let's try drawing the same picture using this new 'function'
+        that will help to **draw a star**.
+      grade5_artist_parameters_triangles1_instruction: |
+        Today, we're going to try
+        out a different, more powerful function editor. See if you can figure out
+        how to edit the function 'draw a triangle' to find the bugs.
+      grade5_artist_parameters_triangles1a_instruction: |
+        Today, we're going to try
+        out a different, more powerful function editor. See if you can figure out
+        how to edit the function 'draw a triangle' to find the bugs.
+      grade5_artist_parameters_triangles2_instruction: |
+        This drawing can be easily
+        created using a new type of function that includes a parameter. The sides
+        of each triangle are 25 pixels larger than the last.  The first triangle has
+        25 pixel sides. Replace the '???' with the correct values to draw the picture.
+      grade5_artist_parameters_triangles2a_instruction: |
+        Do you notice anything different
+        about these function blocks? Click “Run” to see what happens.
+      grade5_artist_parameters_triangles3_instruction: "The code for this triangle\nfunction is broken.\\r\n\\r\nCan you edit the function to fix it, and then make\ntriangles of length 150, 75, 25?"
+      grade5_artist_parameters_triangles4_instruction: |
+        The code for this triangle
+        function is broken. Can you edit the function to fix it, and then make triangles
+        of length 25, 50, and 75?
+      grade5_artist_parameters_trianglesy_instruction: "The code for this triangle\nfunction is broken.\\r\n\\r\nCan you edit the function to fix it, and then make\ntriangles of length 150, 75, 25?"
+      grade5_artist_variables_freeplay10_instruction: |
+        Free Play: Experiment with
+        the number of sides this shape has. Can you change the algorithm so that the
+        overall size of the shape stays the same, no matter how many sides it has?
+        Hint: If you divide your starting length by the number of sides, the length
+        of each side will get shorter as the number of sides gets higher.
+      grade5_artist_variables_freeplay14_instruction: "Free Play: Check it out! Now\nyour algorithm is nested within one more loop. Experiment with changing the\nvalues of your two variables to draw cool patterns.\\r\n\\r\nFor even more effect,\ntry playing with color!  Use random colors inside loops to see how it changes\nyour design."
+      grade5_artist_variables_freeplay15_instruction: "Want a second peek at the\ninspiration design or the hints?  Click here!\\r\n\\r\nOtherwise, make a design\nall your own!"
+      grade5_artist_variables_freeplay16_instruction: |
+        Still playing?  Here is a
+        blank canvas where you can create whatever you want!
+      grade5_artist_variables_hexagons1_instruction: "Let's try it again! \\r\n\\r\nCan\nyou set the `length` variable to 60 to make this cool design with hexagons?"
+      grade5_artist_variables_letterT11_instruction: |
+        Here’s more complicated code
+        using the same concepts from the last puzzle - what should you set the "sides"
+        variable to in order to draw this picture made of squares?
+      grade5_artist_variables_octagons13_instruction: "When a shape has lots of sides,\neach side needs to be shorter if you want the whole pattern to fit on the\nscreen. \\r\nLet's recreate the algorithm for this amazing pattern, but instead\nof manually setting the `length` variable, let's use a math block with the\n`sides` variable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      grade5_artist_variables_pentagon8_instruction: "Use what you learned in the\nlast puzzle to create this hexagon using the \"sides\" variable.\\r\n\\r\nSee\nhow you could change just one value to draw a triangle,  square, pentagon,\nor octagon?"
+      grade5_artist_variables_pentagon9_instruction: |
+        Now, recreate the algorithm
+        from the last level and create a pentagon with sides of length 150.
+      grade5_artist_variables_pentagons1_instruction: "Draw this pattern of pentagons\nwith 100 pixel sides by setting the right value for `length` and dropping\nthe `length` variable into all of the the correct places. \\r\n\\r\nSee how\nyou only have to set the value for `length` once, and the code uses the right\nvalue everywhere?"
+      grade5_artist_variables_pentagons12_instruction: |
+        Let's set the "sides"
+        variable to 5. The more sides we add to this algorithm, the bigger this whole
+        pattern gets! Notice that there is another variable called "length". We
+        can now use that wherever we have a "move forward." Set the "length" variable
+        to 75 for this shape.
+      grade5_artist_variables_rectangle6_instruction: |
+        Now I want to make a rectangle
+        that is twice as tall as it is wide. We've got a variable called "width"
+        that needs to be set to 100. Can you use the math blocks to complete the code?
+      grade5_artist_variables_square7_instruction: "Here’s some code that can draw\nany regular polygon. There’s a new variable called sides that is set to 4.\nCan you use the sides variable (along with the math block) to turn the right\namount regardless of how many sides there are in the polygon?\\r\n\\r\nClick\nhere to go back to the hint!"
+      grade5_artist_variables_triangles1_instruction: "Let's draw an equilateral\ntriangle. \\r\n\\r\nIt has to be exactly 100 pixels long on each side."
+      grade5_artist_variables_triangles2_instruction: |
+        Instead of using "move forward
+        by 150," the "move" block is now referencing a variable called "length."
+        Can you set "length" to 150 to draw this new triangle?
+      grade5_artist_variables_triangles3_instruction: |
+        Drag a number block to both
+        the `set length` block and the `repeat _ times` block to draw a set of 50
+        pixel triangles. 
+      grade5_bee_for_loops1_instruction: |
+        Use a loop to collect the nectar from each
+        flower.
+      grade5_bee_for_loops10_instruction: |
+        If your loop is counting down, the increment
+        is subtracted from your counter variable each loop. What should your increment
+        be to collect 15, then 12, then 9, 6, 3 nectar?
+      grade5_bee_for_loops11_instruction: |
+        Ready for a challenge?  Take what you've
+        learned about loops and try to solve this problem. Remember: You may have
+        to run through solutions multiple times before you figure out all of the steps.
+      grade5_bee_for_loops2_instruction: |
+        Add the code necessary to make sure the
+        bee collects all the nectar. Look at how much code you need for this puzzle!
+        (We'll learn a simpler way in the next puzzle.)
+      grade5_bee_for_loops3_instruction: |
+        Ah, the "for loop" makes this much easier!
+        All the code you need is here, take a look at how it is put together then
+        click "Run" to see how it works. 
+      grade5_bee_for_loops4_instruction: |
+        Replace the ??? in the "for loop" with
+        the largest amount of nectar the bee has to collect. 
+      grade5_bee_for_loops5_instruction: |
+        Now we need to move forward "counter"
+        times, then get nectar "counter" times.  Can you use two "repeat" loops
+        to solve this challenge?
+      grade5_bee_for_loops6_instruction: |
+        You can also use a "for loop" to count
+        down. Try gathering this nectar by counting down from 5 to 1 by 1.
+      grade5_bee_for_loops7_instruction: |
+        The last number in your for loop is called
+        the "increment". Each time the loop is run, the counter variable changes
+        by the value of the increment. Try collecting these flowers using an increment
+        of 2.
+      grade5_bee_for_loops8_instruction: |
+        You've got this! What should your increment
+        be to collect 3, 6, 9, 12, 15 nectar?
+      grade5_bee_for_loops9_instruction: "Now, let's combine the \"counter\" variable\nwith a math block! How can you use the \"counter\" variable to navigate this\ngarden with the fewest number of blocks possible? What do you need to do to\ncollect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\\r\n\\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+      grade5_pixelation_instruction: |
+        Encode an image of anything you like using
+        binary. Remember that the binary language will be represented with '0' and
+        '1' only.
+      grade5_playlab_parameters_points1_instruction: "Here's the same game but most\nof the code is hidden. We've added a new function called `score_points.`\\r\n\\r\nAdd\na new parameter called `points` to the `player_score` function. \\r\n\\r\nThe\n`score_points` function should be able to both add and remove points from\n`player_score` depending on which actor is hit.\\r\nChanging the score by 1\nwill add a point, while changing the score by -1 will subtract a point.\\r\n\\r\nWhen\nyou're done, click \"Run\" to play.  When Dog scores 6 points, you will move\non to the next puzzle. "
+      grade5_playlab_variables1_instruction: |
+        This time you don't have to write
+        any code, just hit "Run" to play the game! In this game, you're the dog
+        who is trying to collect more flags than the cat. Use the down arrow to control
+        the dog. Press "Finish" when you're done playing.
+      grade5_playlab_variables2_instruction: |
+        The race in that last puzzle wasn't
+        very fair! Change the `dog_speed` variable to make sure you can collect more
+        flags than Cat. The first to collect 10 flags wins!
+      grade5_playlab_variables3_instruction: |
+        Use the left and right arrows to move,
+        and the up arrow to jump. See if you can collect all of the flags.
+      grade5_playlab_variables4_instruction: |
+        Now we're using a variable called
+        "height" to control how high the dog can jump. Update the "height" variable
+        so that the dog can jump high enough to reach all the flags.
+      grade5_playlab_variables5_instruction: "You've seen now how a variable can\nbe used to set the height of an actor's jump. How else could  you use a variable?\\r\n\\r\nLet's\nbuild a game! First we'll need a score. Try setting the 'points' variable\nto give yourself 10 free points!"
+      grade5_playlab_variables6_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      grade5_playlab_variables7_instruction: |
+        Nice, now let's make sure this game
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
+      grade5_playlab_variables_freeplay_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\nHint: scroll down to see all the commands\nin the workspace."
+      grade5_playlab_variables_jump1_instruction: |
+        This puzzle uses a hidden function
+        that makes the dog jump when the 'up' arrow is pressed. The height of the
+        jumps can be set at the start of the game using the 'jumpPower' variable.
+        Try to touch all of the flags!
+      gradeK_sequence_4_instruction: Try this one yourself from the beginning.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2822,32 +3503,70 @@ sk:
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
         get me to the pig.
-      K2.0 sequence 1_instruction: Change the code to get me to the pig!
+      K2.0 sequence 1_instruction: A bug! Fix the code to get me to the pig.
       K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
-      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 12_instruction: "Let's get that pig! "
+      K2.0 sequence 2_instruction: Fix the code to get me to the pig!
       K2.0 sequence 3_instruction: |
-        Something is not quite right. REMOVE blocks to
-        get me to the pig!
+        Something is not quite right. REMOVE a block
+        to get me to the pig!
       K2.0 sequence 4_instruction: |
-        Try it yourself!  Move one way, then another
-        to get me to the pig.
+        Time for a shorter puzzle!  Move one way, then
+        another to get me to the pig.
+      K2.0 sequence 4a_instruction: Try this puzzle again from the start!
       K2.0 sequence 5_instruction: Move one way, then another to get me to the pig!
       K2.0 sequence 6_instruction: |
         Figure out what is missing and then add blocks
         to get me to the pig!
       K2.0 sequence 7_instruction: |
-        Debug this level by adding and changing blocks
-        to get me to the pig!
+        Debug this level by changing a block to get me
+        to the pig!
       K2.0 sequence 8_instruction: |
         Debug this level by adding blocks to get me to
         the pig!
       K2.0 sequence 9_instruction: 'Go around the TNT to get me to the pig! '
+      K2.0 sequence FP_instruction: "It's a pig party!  Get those pigs! "
+      K2.0 sequence pre_instruction: |
+        Play with these blocks to see what they make
+        the bird do!
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      level 'grade3_Loops_10_instruction: "Such a busy bee!\\r\n\\r\nHelp bee collect\nall of the nectar and make all of the honey with the fewest blocks possible."
+      level 'grade3_Loops_11_instruction: "The shape of this path is different than\nthe others. \\r\n\\r\nCan you collect all of the nectar using as few blocks\nas possible?"
+      level 'grade3_Loops_12_instruction: |
+        Can you find the quickest way for the
+        bee to collect all of the nectar and make all of the honey?
+      level 'grade3_Loops_2_instruction: |
+        This time, use a loop to gather all of
+        the nectar.
+      level 'grade3_Loops_3_instruction: |
+        Use a `repeat` loop to collect all of the
+        nectar.
+      level 'grade3_Loops_4_instruction: |
+        Now use the `repeat` block to collect all
+        of the nectar and make all of the honey.
+      level 'grade3_Loops_5_instruction: |
+        What a beautiful field of flowers!   Help
+        the bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      level 'grade3_Loops_6_instruction: "How many times can loops help you in this\npuzzle?  \\r\n\\r\nLoops are your friend! Use a few of them to complete this\npuzzle with the fewest blocks possible."
+      level 'grade3_Loops_7_instruction: "Those flowers look tasty!\\r\n\\r\nCollect\nnectar from each of the flowers using the fewest blocks possible."
+      level 'grade3_Loops_8_instruction: |
+        Collect all the nectar and make all of
+        the honey using the fewest blocks possible.
+      level 'grade3_Loops_9_instruction: |
+        Collect nectar from each flower and make
+        honey at each honeycomb using the fewest blocks possible.
+      level 'grade4_bee_conditionals_new1'_instruction: |
+        Collect all of the nectar.
+        You can only collect nectar from flowers, but you can check any space to see
+        if there is a flower.
+      level grade3_Loops_2_instruction: |
+        This time, use a loop to gather all of the
+        nectar.
       Limited Quantity of Blocks Test_instruction: |
         Get me to the pig by adding only
         one block
@@ -2893,6 +3612,14 @@ sk:
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       Mike Pair Programming_instruction: Here are the instructions
+      Mike Test Bee Conditionals 1_instruction: |
+        This cloud is blocking my view!
+        Check to see if there's a flower under the cloud, and only get nectar if
+        there's a flower. Be careful, it can change!
+      Mike Test Bee Conditionals 2_instruction: |
+        Collect all of the nectar. You can
+        only collect nectar from flowers, but you can check any space to see if there
+        is a flower.
       MikeAssessment1_instruction: Now do it right!
       MikeStar_instruction: Draw this.
       MikeStarHard_instruction: Draw this.
@@ -3267,72 +3994,29 @@ sk:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
+        Beh do "Creepera" nie je dobrý nápad.
+        Opatrne prebehnite poza neho a dostante sa do bezpečia svojho domova.
       Overworld Chop Tree - allthethings_instruction: |
         Wood is a very important resource.
         Many things are made from it. Walk to the tree and use the “destroy block”
         command to chop it down.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Chop Tree_instruction: 'Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi "destroy block" na to aby si ho vyrúbal.'
+      Overworld Chop Trees_instruction: Potrebujeme postaviť dom pred tým než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
+      Overworld Free Play 20x20_instruction: Gratulujeme! Dokončili ste všetky puzzle! Teraz majnuj, stavaj a vytváraj niečo jedinečné použitím niečoho čo si sa naučil doteraz.
+      Overworld Free Play_instruction: Táto krajina je iba tvoja. Môžeš si vybrať čo chceš stavať.
+      Overworld House Frame - A_instruction: Poďme si spraviť vlastný dom! Toto miesto vyzerá dobre. Postav konštrukciu na hlinené bloky.
+      Overworld House Frame - C_instruction: Poďme si spraviť vlastný dom! Toto miesto vyzerá dobre. Postav konštrukciu na hlinené bloky.
+      Overworld House Frame B_instruction: Jedna stena je dokončená, poďme postaviť zbytok domu pokračovaním stavebného plánu! Budeš sa musieť opakovať veľa krát.
+      Overworld House Frame B2_instruction: Jedna stena je dokončená, poďme postaviť zbytok domu pokračovaním stavebného plánu! Budeš sa musieť opakovať veľa krát.
+      Overworld House Frame C_instruction: Jedna stena je dokončená, poďme postaviť zbytok domu pokračovaním stavebného plánu! Budeš sa musieť opakovať veľa krát.
+      Overworld House Frame Chosen_instruction: Vybuduj zvyšok svojho domu z hoci jakého materiálu, ktorý sa ti páči. Opakovací príkaz ti veľmi pomôže.
+      Overworld House Frame_instruction: Poďme si spraviť vlastný dom! Toto miesto vyzerá dobre. Postav konštrukciu na hlinené bloky.
+      Overworld Minecart Track_instruction: Si späť na povrch s množstvom podzemných zdrojov. Teraz budeme stavať trať na hlinenej ceste z vášho domu. Prvým krokom je vyčistiť cestu. Sleduj cestu a vyčisti všetky stromy.
+      Overworld Move to Sheep_instruction: Pohnite sa o jeden krok dopredu na to aby si sa dostal ku ovci.
+      Overworld Place Wall_instruction: Každý dom začína so stenou. Postav prvú časť domu požitím príkazov položiť a pohyb dopredu dokolečka.
+      Overworld Plant Crops_instruction: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch stranách vody aby si neskôr nebol hladný.
+      Overworld Powered Minecart_instruction: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož kolajnice z rohu mapy ku dveriam tvojho domu.
+      Overworld Shear Sheep_instruction: Je čas na strihanie oviec! Použi príkaz strihať na to aby si zozbieral vlnu z oviec.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3521,16 +4205,31 @@ sk:
         This game is called "Play Lab".  See if you can
         figure out what each block does.
       playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\\r\n\\r\nCan you\nhelp?"
+      playEventsK3_instruction: |
+        Jorge wants to be scratched behind the ears!  Can
+        you make it so that when you click Jorge he is happy?
+      playEventsK4_instruction: |
+        Can you make it so that Jorge the dog chases Robin
+        the bird when you click the up arrow?
+      playEventsK5_instruction: |
+        Now add code so that Robin flies away when you click
+        the forward arrow.
+      playEventsK6_instruction: |
+        Have Robin talk back to Jorge when you click on
+        her.
+      playEventsK7_instruction: What else can you do in this fun scene?
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. \\r\nYou must first check if\nthe nectar is equal to 1 using the `if nectar` block."
       PS Log test - Define and use turnAround_instruction: |
         Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to
         see full instructions)
+      PS predictive Applab level test_instruction: 'Here are some instructions. '
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -5456,24 +6155,12 @@ sk:
       U6 - updateRecord - Update Nonexistent Record_instruction: |
         Force updateRecord
         to fail by changing the ID of songToUpdate. (Click to see full instructions)
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: 'Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa pohneš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posunúť vpred" na správnom mieste, aby si vyťažil tieto bloky.'
+      Underground If Statements_instruction: 'Teraz to bude zapeklité. Vyťaž 3 redstony, no nespadni pritom do lávy. Použí príkaz "ak" aby si umiestnil cobbelstone cez všetku lávu, ktorú odkryješ.'
+      Underground Iron_instruction: 'Teraz to bude zapeklité. Vyťaž 3 redstony, no nespadni pritom do lávy. Použi príkaz "ak" aby si umiestnil cobbelstone cez všetku lávu, ktorú odkryješ.'
+      Underground Mine in a Circle_instruction: "Nájdite spôsob ako získať 5 diamantov a 7 redstonov! Skús použiť príkaz repeat [opakovať] vnorený v príkaze repeat pre chôdzu do obvodu štvorca. \\r"
+      Underground Mining Coal_instruction: Najcennejšie zdroje nájdete v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakľe a vyťaž aspoň 2 kusy uhlia.
+      Underground Test Level_instruction: Zozbieraj všetky minerály!
       Vigenere_instruction: Test
       WhileAdventure_instruction: |
         Our adventurer wants to collect coins. Can you
