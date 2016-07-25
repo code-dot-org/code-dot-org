@@ -89,5 +89,6 @@
   "turnTooltip": "把小艺术家向左或向右转指定的角度。",
   "turtleVisibilityTooltip": "使小艺术家可见或不可见。",
   "widthTooltip": "更改铅笔的宽度。",
-  "wrongColour": "您的图片显示颜色是错误的。该谜题需要颜色是 %1。"
+  "wrongColour": "您的图片显示颜色是错误的。该谜题需要颜色是 %1。",
+  "jumpTo": "jump to"
 }

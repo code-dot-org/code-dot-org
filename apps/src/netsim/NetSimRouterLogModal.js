@@ -5,7 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');

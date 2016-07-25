@@ -10,7 +10,7 @@
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var markup = require('./NetSimLogPanel.html.ejs');
 var Packet = require('./Packet');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');

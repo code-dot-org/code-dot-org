@@ -89,5 +89,6 @@
   "turnTooltip": "Tourne l'artiste à gauche ou à droite selon le degré indiqué.",
   "turtleVisibilityTooltip": "Rend l'artiste visible ou invisible.",
   "widthTooltip": "Modifie la largeur du crayon.",
-  "wrongColour": "Ton image est de la mauvaise couleur. Pour ce puzzle, elle doit être de 1%."
+  "wrongColour": "Ton image est de la mauvaise couleur. Pour ce puzzle, elle doit être de 1%.",
+  "jumpTo": "jump to"
 }

@@ -89,5 +89,6 @@
   "turnTooltip": "Kääntää taiteilijaa vasemmalle tai oikealle annetun astemäärän.",
   "turtleVisibilityTooltip": "Tekee taiteilijasta näkyvän tai näkymättömän.",
   "widthTooltip": "Muuttaa kynän paksuutta.",
-  "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1."
+  "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1.",
+  "jumpTo": "jump to"
 }

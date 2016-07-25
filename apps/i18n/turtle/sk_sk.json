@@ -89,5 +89,6 @@
   "turnTooltip": "Otočí maliara vľavo alebo vpravo o zadaný počet stupňov.",
   "turtleVisibilityTooltip": "Zviditeľní alebo skryje maliara.",
   "widthTooltip": "Zmení šírku ceruzky.",
-  "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1."
+  "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1.",
+  "jumpTo": "jump to"
 }

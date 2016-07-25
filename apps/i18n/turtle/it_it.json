@@ -89,5 +89,6 @@
   "turnTooltip": "Gira l'artista a sinistra o a destra della quantità di gradi specificata.",
   "turtleVisibilityTooltip": "Rende l'artista visibile o invisibile.",
   "widthTooltip": "Cambia la larghezza della matita.",
-  "wrongColour": "Il tuo disegno usa un colore sbagliato. Per questo esercizio, deve essere %1."
+  "wrongColour": "Il tuo disegno usa un colore sbagliato. Per questo esercizio, deve essere %1.",
+  "jumpTo": "jump to"
 }
