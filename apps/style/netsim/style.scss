@@ -139,6 +139,7 @@ $wide-column-width: 121px;
     }
 
     td {
+      color: $charcoal;
       font-family: monospace;
       white-space: pre-wrap;
       // Make sure table text can be selected and copied
