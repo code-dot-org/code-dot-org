@@ -348,50 +348,28 @@ GameLabP5.prototype.init = function (options) {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
   }.bind(this);
 
-  // Map of strings to constants for mouse states.
-  window.p5.prototype._clickKey = {
-    'leftButton': 'left',
-    'rightButton': 'right',
-    'centerButton': 'center'
-  };
-
-  // Returns a constant for a mouse state given a string.
-  window.p5.prototype._clickKeyFromString = function (buttonCode) {
-    if (this._clickKey[buttonCode]) {
-      return this._clickKey[buttonCode];
-    } else {
-      return buttonCode;
-    }
-  };
-
   // Overrride p5.play so we can use strings in addition to constants.
+  const p5IsMouseButtonInState = window.p5.prototype._isMouseButtonInState;
   window.p5.prototype._isMouseButtonInState = function (buttonCode, state) {
-    buttonCode = this._clickKeyFromString(buttonCode);
+    return p5IsMouseButtonInState.call(this.p5, this._clickKeyFromString(buttonCode), state);
+  }.bind(this);
 
-    // Below is copied from p5.play
-    var KEY_IS_UP = 0;
-    var KEY_WENT_DOWN = 1;
-    var KEY_IS_DOWN = 2;
-    var KEY_WENT_UP = 3;
+};
 
-    var mouseStates = this._p5play.mouseStates;
+// Map of strings to constants for mouse states.
+GameLabP5.prototype._clickKey = {
+  'leftButton': 'left',
+  'rightButton': 'right',
+  'centerButton': 'center'
+};
 
-    if (buttonCode === undefined) {
-      buttonCode = this.LEFT;
-    }
-
-    //undefined = not tracked yet, start tracking
-    if (mouseStates[buttonCode]===undefined) {
-      if(this.mouseIsPressed && this.mouseButton === buttonCode) {
-        mouseStates[buttonCode] = KEY_IS_DOWN;
-      } else {
-        mouseStates[buttonCode] = KEY_IS_UP;
-      }
-    }
-
-    return (mouseStates[buttonCode] === state);
-  };
-
+// Returns a constant for a mouse state given a string.
+GameLabP5.prototype._clickKeyFromString = function (buttonCode) {
+  if (this._clickKey[buttonCode]) {
+    return this._clickKey[buttonCode];
+  } else {
+    return buttonCode;
+  }
 };
 
 /**
