@@ -25,7 +25,7 @@ const BoardSetupStatus = React.createClass({
 
   render() {
     return (
-        <div className="setup-status">
+        <div className="setup-status" style={{'fontSize': '26px'}}>
           <SetupStep stepStatus={this.state['status-is-chrome']}
                      stepId="is-chrome"
                      stepName="Chrome version 33+"/>
@@ -162,20 +162,18 @@ const SetupStep = React.createClass({
     }
   },
 
-  classFor(stepStatus) {
+  styleFor(stepStatus) {
     switch (stepStatus) {
+      case ATTEMPTING:
       case WAITING:
-        return 'waiting';
+        return {color: '#949ca2'};
       case SUCCEEDED:
       case CELEBRATING:
-        return 'complete';
-      case ATTEMPTING:
-        return 'waiting';
-        return 'waiting';
+        return {color: 'green'};
       case HIDDEN:
-        return 'hidden';
+        return {display: 'none'};
       default:
-        return 'incomplete';
+        return {color: 'red', fontWeight: 'bold'};
     }
   },
 
@@ -185,8 +183,8 @@ const SetupStep = React.createClass({
     }
     return (
         <div id={this.props.stepId}
-             className={this.classFor(this.props.stepStatus)}>
-          <i className={this.iconFor(this.props.stepStatus)}/>
+             style={Object.assign({margin: '15px 0'}, this.styleFor(this.props.stepStatus))}>
+          <i style={{'marginRight': '6px'}} className={this.iconFor(this.props.stepStatus)}/>
           <span>{this.props.stepName}</span>
         </div>
     );
