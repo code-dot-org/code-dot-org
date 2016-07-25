@@ -26,6 +26,8 @@ require 'cdo/section_helpers'
 class Section < ActiveRecord::Base
   has_many :coteachers
   has_many :users, through: :coteachers
+  validates_associated :coteachers
+  # TODO: Validates !users.blank?
 
   has_many :followers, dependent: :restrict_with_error
   accepts_nested_attributes_for :followers

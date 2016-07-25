@@ -17,4 +17,13 @@
 class Coteacher < ActiveRecord::Base
   belongs_to :user
   belongs_to :section
+
+  def user_must_be_teacher
+    if user
+      errors.add(:user_id, "must be a teacher") unless user.teacher?
+    end
+  end
+
+  validates_presence_of :user, :section
+  validate :user_must_be_teacher
 end

@@ -26,19 +26,6 @@ class SectionTest < ActiveSupport::TestCase
     assert_match letters_without_vowels_regex, s3.code
   end
 
-  test "user must be teacher" do
-    teacher = create(:teacher)
-    student = create(:student)
-
-    teacher_section = Section.create(user: teacher, name: "a section")
-    assert teacher_section.persisted?
-
-    student_section = Section.create(user: student, name: "a section")
-
-    assert !student_section.persisted?
-    assert_equal ["User must be a teacher"], student_section.errors.full_messages
-  end
-
   test "can create section with duplicate name" do
     teacher = create(:teacher)
 

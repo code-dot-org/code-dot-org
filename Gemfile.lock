@@ -149,7 +149,14 @@ GEM
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.2.2)
+    byebug (9.0.5)
     cancancan (1.15.0)
+    capybara (2.5.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     childprocess (0.5.9)
@@ -631,7 +638,12 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
+<<<<<<< 3e468e7abc03f23679716b516c4a1ca219e7a891
   cancancan (~> 1.15.0)
+=======
+  byebug
+  cancancan (~> 1.10)
+>>>>>>> Adding Coteacher tests.
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
   codemirror-rails
