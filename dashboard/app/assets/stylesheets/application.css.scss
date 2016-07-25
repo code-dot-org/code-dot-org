@@ -1690,6 +1690,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1812,6 +1816,7 @@ a.download-video {
 
 .free-response .response {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {
