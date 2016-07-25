@@ -14,7 +14,7 @@ const initialState = {
   currentLevelId: null,
   professionalLearningCourse: null,
   // a mapping of level id to result
-  progress: {},
+  levelProgress: {},
   focusAreaPositions: [],
   saveAnswersBeforeNavigation: null,
   stages: null,
@@ -27,32 +27,36 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
+    // Re-initializing with full set of stages shouldn't blow away currentStageId
+    const currentStageId = state.currentStageId ||
+      (action.stages.length === 1 ? action.stages[0].id : undefined);
     // extract fields we care about from action
     return Object.assign({}, state, {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages
+      stages: action.stages,
+      currentStageId
     });
   }
 
   if (action.type === MERGE_PROGRESS) {
     // TODO: _.mergeWith after upgrading to Lodash 4+
-    let newProgress = {};
-    Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
-      newProgress[key] = mergeActivityResult(state.progress[key], action.progress[key]);
+    let newLevelProgress = {};
+    Object.keys(Object.assign({}, state.levelProgress, action.levelProgress)).forEach(key => {
+      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
     });
 
     return Object.assign({}, state, {
-      progress: newProgress,
+      levelProgress: newLevelProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        let id = level.uid || bestResultLevelId(level.ids, newProgress);
+        let id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
 
         if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
           Object.assign(level, action.peerReviewsPerformed[index]);
         }
 
-        return Object.assign({}, level, level.kind !== 'peer_review' && {status: activityCssClass(newProgress[id])});
+        return Object.assign({}, level, level.kind !== 'peer_review' && {status: activityCssClass(newLevelProgress[id])});
       })}))
     });
   }
@@ -117,9 +121,9 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   peerReviewsRequired
 });
 
-export const mergeProgress = (progress, peerReviewsPerformed) => ({
+export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
   type: MERGE_PROGRESS,
-  progress,
+  levelProgress,
   peerReviewsPerformed
 });
 

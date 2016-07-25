@@ -137,6 +137,7 @@ var TopInstructions = React.createClass({
       content: React.PropTypes.string.isRequired,
       block: React.PropTypes.object, // XML
     })).isRequired,
+    hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
@@ -217,7 +218,7 @@ var TopInstructions = React.createClass({
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
-      for (const image of images) {
+      for (let i = 0, image; (image = images[i]); i++) {
         image.onload = image.onload || this.scrollInstructionsToBottom;
       }
     }
@@ -404,8 +405,8 @@ var TopInstructions = React.createClass({
    * Handle a click to the hint display bubble (lightbulb)
    */
   handleClickBubble() {
-    // If we don't have authored hints, clicking bubble shouldnt do anything
-    if (this.props.hasAuthoredHints) {
+    // If we don't have authored hints to display, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
         promptForHint: true
       });
@@ -495,7 +496,7 @@ var TopInstructions = React.createClass({
             className="csf-top-instructions"
             style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
           >
-            <ChatBubble isMinecraft={this.props.isMinecraft}>
+            <ChatBubble>
               {this.props.hasContainedLevels &&
                 <ProtectedStatefulDiv
                   id="containedLevelContainer"
@@ -520,7 +521,6 @@ var TopInstructions = React.createClass({
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
                 key={hint.hintId}
-                isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 content={hint.content}
                 block={hint.block}
@@ -528,7 +528,6 @@ var TopInstructions = React.createClass({
             )}
             {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
               <InlineFeedback
-                isMinecraft={this.props.isMinecraft}
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
               />}
@@ -570,6 +569,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     hints: state.authoredHints.seenHints,
+    hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
