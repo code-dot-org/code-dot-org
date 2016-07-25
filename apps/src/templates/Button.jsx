@@ -105,13 +105,13 @@ const ARROW_URLS = {
   right: '/blockly/media/next-arrow-head.png',
 };
 
-const BaseButton = Radium(function BaseButton(props) {
-  const sizeStyle = style[props.size || 'normal'];
-  const config = BUTTON_TYPES[props.type];
+const BaseButton = Radium(function BaseButton({type, children, size, ...props}) {
+  const sizeStyle = style[size || 'normal'];
+  const config = BUTTON_TYPES[type];
   let styleArray = [style.base, config.style, sizeStyle];
   return (
     <button {...props} style={[styleArray, props.style]}>
-      {props.children}
+      {children}
     </button>
   );
 });
@@ -121,7 +121,7 @@ BaseButton.propTypes = {
   size: React.PropTypes.oneOf(['normal', 'large']),
 };
 
-const ArrowButton = Radium(function ArrowButton(props) {
+const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
   const config = BUTTON_TYPES[props.type];
   if (process.env.NODE_ENV === 'development') {
     if (!props.size === 'large') {
@@ -132,21 +132,21 @@ const ArrowButton = Radium(function ArrowButton(props) {
     <div
       style={[
         style.arrow.base,
-        style.arrow[props.arrow],
+        style.arrow[arrow],
         props.style
       ]}
     >
       <div
         style={[
           style.arrowHead.base,
-          style.arrowHead[props.arrow](config.style.backgroundColor)
+          style.arrowHead[arrow](config.style.backgroundColor)
         ]}
       />
       <BaseButton
         {...props}
         style={[
           style.withArrow.base,
-          style.withArrow[props.arrow]
+          style.withArrow[arrow]
         ]}
       />
     </div>
