@@ -27,12 +27,16 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
+    // Re-initializing with full set of stages shouldn't blow away currentStageId
+    const currentStageId = state.currentStageId ||
+      (action.stages.length === 1 ? action.stages[0].id : undefined);
     // extract fields we care about from action
     return Object.assign({}, state, {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages
+      stages: action.stages,
+      currentStageId
     });
   }
 
