@@ -21,7 +21,8 @@ module.exports = {
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
-      "ecmaVersion": 6
+      "ecmaVersion": 6,
+      "experimentalObjectRestSpread": true
     }
   },
   "rules": {
