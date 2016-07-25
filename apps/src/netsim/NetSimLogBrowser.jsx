@@ -9,6 +9,13 @@ import Packet from './Packet';
 // We want the table to scroll beyond this height
 const MAX_TABLE_HEIGHT = 500;
 
+const style = {
+  scrollArea: {
+    maxHeight: MAX_TABLE_HEIGHT,
+    overflowY: 'auto'
+  }
+};
+
 const NetSimLogBrowser = React.createClass({
   propTypes: Object.assign({}, Dialog.propTypes, {
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
@@ -39,10 +46,13 @@ const NetSimLogBrowser = React.createClass({
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
           />
-          <LogTable
-            headerFields={this.props.headerFields}
-            logRows={this.props.logRows}
-          />
+          <div style={style.scrollArea}>
+            {/* TODO: get table sticky headers working */}
+            <LogTable
+              headerFields={this.props.headerFields}
+              logRows={this.props.logRows}
+            />
+          </div>
         </Body>
       </Dialog>
     );
@@ -236,7 +246,10 @@ const LogTable = React.createClass({
     return (
       <Table.Provider columns={columns}>
         <Table.Header/>
-        <Table.Body rows={sortedRows} rowKey="uuid"/>
+        <Table.Body
+          rows={sortedRows}
+          rowKey="uuid"
+        />
       </Table.Provider>
     );
   }
