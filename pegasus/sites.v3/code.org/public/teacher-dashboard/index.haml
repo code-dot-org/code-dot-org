@@ -875,7 +875,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                 var existingLevelResult = $scope.surveyLevels.find(function (entry) {
                   return entry.result === sublevel_result.result &&
                          entry.stage === survey.stage &&
-                         entry.puzzle === survey.puzzle &&
                          entry.question === parseInt(sublevel_index) + 1;
                 });
 
@@ -894,7 +893,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
                   var levelResult = {
                     stage: survey.stage,
-                    puzzle: survey.puzzle,
                     question: parseInt(sublevel_index) + 1,
                     questionText: questionFieldText,
                     result: sublevel_result.result,
@@ -913,12 +911,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           }
         });
 
-        // Sort by stage, puzzle, question.
+        // Sort by stage, question.
         $scope.surveyLevels.sort(function (a, b) {
           if (a.stage !== b.stage) {
             return a.stage - b.stage;
-          } else if (a.puzzle !== b.puzzle) {
-            return a.puzzle - b.puzzle;
           } else {
             return a.question - b.question;
           }

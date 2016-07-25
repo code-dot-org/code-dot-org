@@ -271,7 +271,6 @@ class ApiControllerTest < ActionController::TestCase
     # all these are translation missing because we don't actually generate i18n files in tests
     expected_response = [
       {"stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
-        "puzzle" => 1,
         "levelgroup_results" => [
           {
             "question" => "test",
