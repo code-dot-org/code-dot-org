@@ -154,6 +154,7 @@
     "which": "1.1.1"
   },
   "dependencies": {
+    "@kadira/storybook": "^1.41.0",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
     "query-string": "4.1.0",

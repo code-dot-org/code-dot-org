@@ -80,6 +80,26 @@ if (envConstants.COVERAGE) {
   ];
 }
 
+var storybookConfig = _.extend({}, baseConfig, {
+  devtool: 'inline-source-map',
+  externals: {
+    "johnny-five": "var JohnnyFive",
+    "playground-io": "var PlaygroundIO",
+    "chrome-serialport": "var ChromeSerialport",
+    "blockly": "this Blockly",
+  },
+  plugins: [
+    new webpack.ProvidePlugin({React: 'react'}),
+    new webpack.DefinePlugin({
+      IN_UNIT_TEST: JSON.stringify(false),
+      'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
+      'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
+      BUILD_STYLEGUIDE: JSON.stringify(true),
+      PISKEL_DEVELOPMENT_MODE: false
+    }),
+  ]
+});
+
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
   devtool: 'inline-source-map',
@@ -108,7 +128,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_UNIT_TEST: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-      BUILD_STYLEGUIDE: JSON.stringify(true),
+      BUILD_STYLEGUIDE: JSON.stringify(false),
       PISKEL_DEVELOPMENT_MODE: false
     }),
   ]
@@ -210,5 +230,6 @@ function create(options) {
 module.exports = {
   config: baseConfig,
   karmaConfig: karmaConfig,
+  storybookConfig: storybookConfig,
   create: create
 };
