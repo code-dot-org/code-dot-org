@@ -4,6 +4,7 @@ import color from '../../../color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';
+import commonMsg from '@cdo/apps/locale';
 
 const styles = {
   lockSettingsButton: [
@@ -36,6 +37,10 @@ const styles = {
   }
 };
 
+/**
+ * This fakeData is temporary until we do the work on the backend to properly
+ * mark this as lockable or not.
+ */
 const fakeData = [
   {
     name: 'Farrah',
@@ -63,22 +68,21 @@ const StageLock = React.createClass({
   },
 
   render() {
-    // TODO - i18n
     return (
       <div>
         <button style={styles.lockSettingsButton} onClick={this.openDialog}>
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
-            Lock settings
+            {commonMsg.lockSettings()}
           </span>
         </button>
         <button style={styles.lockStageButton}>
-          Lock stage
+          {commonMsg.lockStage()}
         </button>
         <span style={styles.warning}>
           <FontAwesome icon="exclamation-triangle" style={styles.warnIcon}/>
           <span style={styles.warnText}>
-            Lock as soon as students are done
+            {commonMsg.lockWhenDone()}
           </span>
         </span>
         <StageLockDialog
