@@ -39,9 +39,9 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "min_workspace_height": "800",
-    "contained_level_names": null,
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

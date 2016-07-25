@@ -9,7 +9,7 @@
     "video_key": "C4_function_create",
     "embed": "false",
     "instructions": "Now try creating the function from scratch! Create a function called 'draw a square' and use it to outline these four boxes. Make sure to add a parameter for 'length'!",
-    "markdown_instructions": "Now try creating the function from scratch! Create a function called `draw a square` and use it to outline these four boxes. Make sure to add a parameter for `length`!",
+    "markdown_instructions": "Now try creating the function from scratch! Create a function called `draw a square` and use it to outline these four boxes. Make sure to add a parameter for `length`!\r\n\r\n![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
