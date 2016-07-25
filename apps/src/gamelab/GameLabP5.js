@@ -356,6 +356,7 @@ GameLabP5.prototype.init = function (options) {
       return buttonCode;
     }
   };
+
   // Map of strings to constants for mouse states.
   GameLabP5.prototype.CLICK_KEY = {
     'leftButton': window.p5.prototype.LEFT,
@@ -368,7 +369,6 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._isMouseButtonInState = function (buttonCode, state) {
     return p5IsMouseButtonInState.call(this.p5, this._clickKeyFromString(buttonCode), state);
   }.bind(this);
-
 };
 
 /**
