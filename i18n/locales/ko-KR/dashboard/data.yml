@@ -1,75 +1,5 @@
 ko:
   data:
-    script:
-      name:
-        20-hour:
-          desc: 유치원-중2(K-8) 학생들을 위한, 컴퓨터과학(Computer Science, 정보과학)
-          Unplug1: 1 단계
-          Maze: 2 단계
-          Unplug2: 3 단계
-          Unplug3: 4 단계
-          Artist: 5 단계
-          Unplug4: 6 단계
-          Artist2: 7 단계
-          Unplug5: 8 단계
-          Farmer: 9 단계
-          Unplug6: 10 단계
-          Artist3: 11 단계
-          Unplug7: 12 단계
-          Farmer2: 13 단계
-          Unplug8: 14 단계
-          Artist4: 15 단계
-          Unplug9: 16 단계
-          Farmer3: 17 단계
-          Unplug10: 18 단계
-          Artist5: 19 단계
-          Unplug11: 20 단계
-        Hour of Code:
-          desc: Hour of Code
-          Maze: 1 단계
-        Edit Code:
-          desc: 코드 수정(beta)
-          MazeEC: 1 단계
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: 1 단계
-        Builder Levels:
-          desc: 창작 퍼즐 (beta)
-          Custom: 1 단계
-        Flappy Levels:
-          desc: 플래피 버드
-          Flappy: 1 단계
-        Jigsaw Levels:
-          desc: 직소퍼즐 (beta)
-          Jigsaw: 1 단계
-        Step Levels:
-          desc: 미로 (beta)
-          MazeStep: 스테이지 단계
-        edit-code:
-          desc: 코드 수정(beta)
-          MazeEC: 1 단계
-          Applab: 2 단계
-          ArtistEC: 3 단계
-          StudioEC: 4 단계
-        events:
-          desc: Bounce (beta)
-          Bounce: 1 단계
-          Studio: 2 단계
-        builder:
-          desc: 창작 퍼즐 (beta)
-          Custom: 1 단계
-        flappy:
-          desc: 플래피 버드
-          Flappy: 1 단계
-        jigsaw:
-          desc: 직소퍼즐 (beta)
-          Jigsaw: 1 단계
-        step:
-          desc: 미로 (beta)
-          MazeStep: 스테이지 단계
-        wordsearch:
-          desc: 말하는 벌 (beta)
-          WordSearch: 1 단계
     game:
       name:
         Unplug1: 컴퓨터과학(Computer Science, 정보과학) 소개
@@ -497,6 +427,7 @@ ko:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

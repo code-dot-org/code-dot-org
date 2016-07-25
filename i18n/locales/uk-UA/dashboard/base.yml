@@ -72,7 +72,7 @@ uk:
     google_oauth2: обліковий запис Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Обліковий запис Microsoft
+    windowslive: обліковий запис Microsoft
     forgot_password: Забули свій пароль?
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?
@@ -125,6 +125,8 @@ uk:
     picture: Тепер знайдіть свою таємну картинку
     words: Тепер введіть свої таємні слова
     login: Вхід
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Забули пароль?
@@ -247,6 +249,10 @@ uk:
       signin: Вхід
       signup: Зареєструватися
       already_registered: Вже зареєстровані?
+      pair_programming: Парне програмування
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'Прогрес %{name}'
       progress: Ваш прогрес
@@ -281,6 +287,7 @@ uk:
       example_with_number: 'Приклад рішення %{solution_number}'
       submitted_on: 'Надіслано:'
       unsubmit: Відкликати
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -341,7 +348,7 @@ uk:
     announcement_title: Оголошення
     announcement_view_all: Переглянути всі
     announcement_message: 'Хочете допомогти нам протестувати нові функції? Ми знаємо, що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж оприлюднити цю функцію.'
-    announcement_button: Випробувати функцію
+    announcement_learn_more_button: Дізнайтеся більше
     announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
     announcement_petition_button: "Додайте своє ім'я"
   move_students:
@@ -406,8 +413,6 @@ uk:
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
-      ie_message: Code.org незабаром припинить підтримку Internet Explorer 8, 9, та 10. Будь ласка, оновіться до сучаснішого браузера.
-      ie_message_csedweek: CSEdWeek.org незабаром припинить підтримку Internet Explorer 8, 9, та 10. Будь ласка, оновіться до сучаснішого браузера.
       link: Дізнайтеся більше
   slow_loading: Це займає більше часу, ніж звичайно...
   try_reloading: Спробуйте перезавантажити сторінку
@@ -559,36 +564,6 @@ uk:
     hour: 1 година
     day: день
     week: тиждень
-  data:
-    script:
-      name:
-        20-hour:
-          title: Вступ в курс інформатики для 5-8 класів (15-25 годин)
-          description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
-        Hour of Code:
-          title: Година коду 2013
-          description: ""
-        edit-code:
-          title: Редагування коду
-          description: ""
-        events:
-          title: Події
-          description: ""
-        builder:
-          title: Будівельник
-          description: ""
-        flappy:
-          title: Код Пурха
-          description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!
-        jigsaw:
-          title: Головоломки
-          description: ""
-        step:
-          title: Крок
-          description: ""
-        sample_level_builder:
-          title: Зразок рівня Будівельника
-          description: ""
   age_interstitial:
     age: Ваш вік
     header: Оновити відомості про обліковий запис
@@ -622,6 +597,7 @@ uk:
     share_title: Поділитися своїм проектом
     share_copy_link: 'Скопіювати посилання:'
     share_embed_description: Можете вставити HTML-код, щоб вбудувати цей проект у веб-сторінку.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Вбудувати
     advanced_share: Показати розширені налаштування
     close: Закрити
@@ -645,6 +621,7 @@ uk:
     edit_project: Редагування проекту
     abuse:
       tos: "На цей проект надійшла скарга про порушення <a href='http://code.org/tos'>Умов надання послуг</a> Code.org's, тому ним не можна поділитись з іншими."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Якщо ви вважаєте це помилкою, будь ласка <a href='https://code.org/contact'>зв'яжіться з нами.</a>"
       go_to_code_studio: Перейти до Студії коду
       report_abuse_form:
@@ -676,6 +653,14 @@ uk:
     instructor_feedback: Коментар вчителя
     peer_feedback: Коментар інших учнів
     outdated: Цей коментар стосується попередньої версії роботи
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Шукати значок...
@@ -695,7 +680,9 @@ uk:
     content: Зміст
     practice: Методики викладання
   external_links:
-    disclaimer_md: "<strong>Відмова від відповідальності: Ви покидаєте поточний домен та переходите на сайт, який не підтримується Code.org.</strong> Політики приватності цього сайту можуть відрізнятись від прийнятих на Code.org's.<br/><br/>Ми відібрали ці ресурси, оскільки вважаємо їх корисними. Хоча ми не несемо безпосередньої відповідальності за зміст цього сайту, будь ласка, <a href='%{support_url}'>зв'яжіться із службою підтримки</a> якщо ви вважаєте цей вміст неприйнятним, або якщо посилання не працює."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Завантаження Години коду
     capsule_title: Маєте Інтернет?

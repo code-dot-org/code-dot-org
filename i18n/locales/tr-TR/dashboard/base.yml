@@ -125,6 +125,8 @@ tr:
     picture: Şimdi gizli resminizi bulun
     words: Şimdi gizli kelimelerinizi girin
     login: Giriş Yap
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Şifrenizi mi unuttunuz?
@@ -246,6 +248,10 @@ tr:
       signin: Giriş Yap
       signup: Kaydol
       already_registered: Zaten hesabınız var mı?
+      pair_programming: Eşli Programlama
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'ın işleniyor"
       progress: İlerlemeniz
@@ -280,6 +286,7 @@ tr:
       example_with_number: 'Örnek Çözüm %{solution_number}'
       submitted_on: '%{date} tarihinde gönderildi'
       unsubmit: Gönderme
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -340,7 +347,7 @@ tr:
     announcement_title: Bildirimler
     announcement_view_all: Tümünü Gör
     announcement_message: '<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir.'
-    announcement_button: Özelliği test et
+    announcement_learn_more_button: Daha fazlasını öğren
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
     announcement_petition_button: Adınızı Ekleyin
   move_students:
@@ -408,8 +415,6 @@ tr:
   compatibility:
     upgrade:
       unsupported_message: "Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir."
-      ie_message: Code.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
-      ie_message_csedweek: CSEdWeek.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
       link: Daha fazlasını öğren
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
@@ -561,36 +566,6 @@ tr:
     hour: 1 saat
     day: gün
     week: hafta
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Bilişim Teknolojileri Kursu Tanıtımı (15-25 saat)
-          description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
-        Hour of Code:
-          title: Kodlama Saati 2013
-          description: ""
-        edit-code:
-          title: Kodu Düzenle
-          description: ""
-        events:
-          title: Olaylar
-          description: ""
-        builder:
-          title: Oluşturucu
-          description: ""
-        flappy:
-          title: Flappy Kod
-          description: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
-        jigsaw:
-          title: Yapboz
-          description: ""
-        step:
-          title: Adım
-          description: ""
-        sample_level_builder:
-          title: Örnek Level Oluşturucu
-          description: ""
   age_interstitial:
     age: Yaşın
     header: Hesap Bilgileri Güncelleme
@@ -623,6 +598,7 @@ tr:
     share_title: Projenizi paylaşın
     share_copy_link: 'Bağlantıyı kopyala:'
     share_embed_description: Projeyi bir web sayfasında görüntülemek için yerleştirme kodunu HTML sayfasına yapıştırın.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Yerleştir
     advanced_share: Gelişmiş seçenekleri göster
     close: Kapat
@@ -650,6 +626,7 @@ tr:
     edit_project: Projeyi Düzenle
     abuse:
       tos: "Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a> ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Eğer bir hata olduğunu düşünüyorsanız, lütfen <a href='https://code.org/contact'>bizimle iletişime geçin.</a>"
       go_to_code_studio: "Kod Stüdyosu'na git"
       report_abuse_form:
@@ -681,6 +658,14 @@ tr:
     instructor_feedback: Eğitmen Geribildirimi
     peer_feedback: Geribildirim Gönder
     outdated: Bu geribildirim daha önce yollanan gönderiye eklendi
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Öğe ara...
@@ -700,13 +685,15 @@ tr:
     content: İçerik
     practice: Öğretmen Uygulamaları
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Saat Kodu İndirmeler
     capsule_title: İnternetiniz var mı?
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    capsule_desc: 'Web tabanlı <a href="%{url}">%{app_name}</a> kullanın.'
     instructions_headline: İnternet Yok Mu?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    instructions: 'Öğretmenler için Talimatlar: Eğer zayıf internet bağlantınız varsa, bu Kod Saati uygulamasını indirip çevrimdışı kullanabilirsiniz. Dilinizi ve platformunuzu seçin ve sınıftaki bütün bilgisayarlara yükleyin. USB kullanmak isteyebilirsiniz. NOT: Öğrenciler kod saatine giriş yapamayacak ve sertifika bastıramayacak. Öğretmenler önden sertifikaları yazdırabilir. a href="%{url}">here</a>.'
     minecraft_name: Minecraft Kod Saati
     starwars_blocks_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'

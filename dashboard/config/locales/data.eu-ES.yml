@@ -1,75 +1,5 @@
 "eu":
   data:
-    script:
-      name:
-        20-hour:
-          desc: DBH2ko ikasleentzako Informatikarako sarrera
-          Unplug1: 1. etapa
-          Maze: 2. etapa
-          Unplug2: 3. etapa
-          Unplug3: 4. etapa
-          Artist: 5. etapa
-          Unplug4: 6. etapa
-          Artist2: 7. etapa
-          Unplug5: 8. etapa
-          Farmer: 9. etapa
-          Unplug6: 10. etapa
-          Artist3: 11. etapa
-          Unplug7: 12. etapa
-          Farmer2: 13. etapa
-          Unplug8: 14. etapa
-          Artist4: 15. etapa
-          Unplug9: 16. etapa
-          Farmer3: 17. etapa
-          Unplug10: 18. etapa
-          Artist5: 19. etapa
-          Unplug11: 20. etapa
-        Hour of Code:
-          desc: Kode ordua
-          Maze: 1. etapa
-        Edit Code:
-          desc: Aldatu Kodea (beta)
-          MazeEC: 1. etapa
-        2014 Levels:
-          desc: Errebotea (beta)
-          Bounce: 1. etapa
-        Builder Levels:
-          desc: Erabiltzaileak sortutako ariketak (beta)
-          Custom: 1. etapa
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: 1. etapa
-        Jigsaw Levels:
-          desc: Puzzlea (beta)
-          Jigsaw: 1. etapa
-        Step Levels:
-          desc: Labirintoa (beta)
-          MazeStep: Eszenatoki pausua
-        edit-code:
-          desc: Aldatu Kodea (beta)
-          MazeEC: 1. etapa
-          Applab: 2. etapa
-          ArtistEC: 3. etapa
-          StudioEC: 4. etapa
-        events:
-          desc: Errebotea (beta)
-          Bounce: 1. etapa
-          Studio: 2. etapa
-        builder:
-          desc: Erabiltzaileak sortutako puzleak (beta)
-          Custom: 1. etapa
-        flappy:
-          desc: Flappy Bird
-          Flappy: 1. etapa
-        jigsaw:
-          desc: Buruhaustea (beta)
-          Jigsaw: 1. etapa
-        step:
-          desc: Labirintoa (beta)
-          MazeStep: Eszenatoki pausua
-        wordsearch:
-          desc: Ortografia erlea (beta)
-          WordSearch: 1. etapa
     game:
       name:
         Unplug1: Konputazio zientzetarako sarrera
@@ -783,6 +713,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'
