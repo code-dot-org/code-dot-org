@@ -43,13 +43,26 @@ const DataTable = React.createClass({
 
   getInitialState() {
     return {
-      newColumns: []
+      newColumns: [],
+      editingColumn: null
     };
   },
 
-  addColumn(newColumn) {
+  componentWillReceiveProps(nextProps) {
+    // Forget about new columns when switching between tables.
+    if (this.props.tableName !== nextProps.tableName) {
+      this.setState({newColumns: []});
+    }
+  },
+
+  /**
+   * @param {Array|undefined} newColumns
+   */
+  addColumn() {
+    const columnName = this.getNextColumnName();
     this.setState({
-      newColumns: this.state.newColumns.concat(newColumn)
+      newColumns: this.state.newColumns.concat(columnName),
+      editingColumn: columnName,
     });
   },
 
@@ -67,18 +80,34 @@ const DataTable = React.createClass({
     }
   },
 
+  /**
+   * @param {string|null} columnName Column to edit, or null to not edit any column.
+   */
+  editColumn(columnName) {
+    this.setState({editingColumn: columnName});
+  },
+
   renameColumn(oldName, newName) {
-    const newColumns = this.state.newColumns.map(
+    let newColumns = this.state.newColumns.map(
       curName => (curName === oldName ? newName : curName)
     );
-    this.setState({newColumns});
-    FirebaseStorage.renameColumn(
-      this.props.tableName,
-      oldName,
-      newName,
-      () => {},
-      error => console.warn(error)
-    );
+    // Append the new name if the old name was not found.
+    if (newColumns.indexOf(newName) === -1) {
+      newColumns.push(newName);
+    }
+    this.setState({
+      newColumns,
+      editingColumn: null
+    });
+    if (oldName !== newName) {
+      FirebaseStorage.renameColumn(
+        this.props.tableName,
+        oldName,
+        newName,
+        () => {},
+        error => console.warn(error)
+      );
+    }
   },
 
   getColumnNames() {
@@ -103,8 +132,25 @@ const DataTable = React.createClass({
     return columnNames;
   },
 
+  getNextColumnName() {
+    const names = this.getColumnNames();
+    let i = names.length;
+    while (names.includes(`column${i}`)) {
+      i++;
+    }
+    return `column${i}`;
+  },
+
   render() {
-    const columnNames = this.getColumnNames();
+    let columnNames = this.getColumnNames();
+    let editingColumn = this.state.editingColumn;
+
+    // Always show at least one column for empty tables.
+    if (Object.keys(this.props.tableRecords).length === 0 && columnNames.length === 1) {
+      editingColumn = this.getNextColumnName();
+      columnNames.push(editingColumn);
+    }
+
     const visible = (DataView.TABLE === this.props.view);
     const containerStyle = {
       display: visible ? 'block' : 'none',
@@ -135,6 +181,8 @@ const DataTable = React.createClass({
                   columnName={columnName}
                   columnNames={columnNames}
                   deleteColumn={this.deleteColumn}
+                  editColumn={this.editColumn}
+                  isEditing={editingColumn === columnName}
                   renameColumn={this.renameColumn}
                 />
               ))
