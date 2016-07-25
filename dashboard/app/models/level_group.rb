@@ -149,7 +149,6 @@ ruby
   # intermingled with real results.
   # [
   #   { stage: "Stage 30: Anonymous student survey",
-  #     puzzle: 1,
   #     levelgroup_results: [
   #       {
   #         results: [
@@ -183,7 +182,6 @@ ruby
         # All the results for one LevelGroup for a group of students.
         {
           stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
           levelgroup_results: levelgroup_results
         }
       else
