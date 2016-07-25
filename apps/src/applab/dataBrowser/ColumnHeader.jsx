@@ -23,13 +23,13 @@ const ColumnHeader = React.createClass({
     columnNames: React.PropTypes.array.isRequired,
     deleteColumn: React.PropTypes.func.isRequired,
     editColumn: React.PropTypes.func.isRequired,
+    isEditable: React.PropTypes.bool.isRequired,
     isEditing: React.PropTypes.bool.isRequired,
     renameColumn: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
     return {
-      isValid: true,
       newName: this.props.columnName,
       hasEnteredText: false,
     };
@@ -44,7 +44,6 @@ const ColumnHeader = React.createClass({
   componentWillReceiveProps(nextProps) {
     if (!this.props.isEditing && nextProps.isEditing) {
       this.setState({
-        isValid: true,
         newName: nextProps.columnName,
         hasEnteredText: false,
       });
@@ -62,10 +61,10 @@ const ColumnHeader = React.createClass({
   },
 
   handleChange(event) {
-    const newName = event.target.value;
-    const isValid = this.isValid(newName);
-    const hasEnteredText = true;
-    this.setState({hasEnteredText, isValid, newName});
+    this.setState({
+      newName: event.target.value,
+      hasEnteredText: true,
+    });
   },
 
   handleDelete() {
@@ -102,21 +101,22 @@ const ColumnHeader = React.createClass({
     }
   },
 
-  isValid(newName) {
+  isInputValid() {
     // The current name is always valid.
+    const newName = this.state.newName;
     return this.props.columnName === newName || !this.props.columnNames.includes(newName);
   },
 
   render() {
     const menuStyle = [styles.menu, {
-      display: this.props.columnName === 'id' ? 'none' : null,
+      display: this.props.isEditable ? null : 'none',
     }];
     const containerStyle = {
       display: this.props.isEditing ? 'none' : null
     };
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
-      backgroundColor: this.state.isValid ? null : "#ffcccc",
+      backgroundColor: this.isInputValid() ? null : "#ffcccc",
     }];
     return (
       <th style={dataStyles.headerCell}>
