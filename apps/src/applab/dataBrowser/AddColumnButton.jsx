@@ -22,7 +22,7 @@ const AddColumnButton = React.createClass({
   },
 
   handleAdd() {
-    this.props.addColumn('foo');
+    this.props.addColumn();
   },
 
   render() {

@@ -22,19 +22,37 @@ const ColumnHeader = React.createClass({
     columnName: React.PropTypes.string.isRequired,
     columnNames: React.PropTypes.array.isRequired,
     deleteColumn: React.PropTypes.func.isRequired,
+    editColumn: React.PropTypes.func.isRequired,
+    isEditing: React.PropTypes.bool.isRequired,
     renameColumn: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
     return {
-      isEditing: false,
       isValid: true,
-      newName: ''
+      newName: this.props.columnName,
+      hasEnteredText: false,
     };
   },
 
+  componentDidMount() {
+    if (this.props.isEditing) {
+      ReactDOM.findDOMNode(this.refs.input).select();
+    }
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.isEditing && nextProps.isEditing) {
+      this.setState({
+        isValid: true,
+        newName: nextProps.columnName,
+        hasEnteredText: false,
+      });
+    }
+  },
+
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.isEditing && !prevState.isEditing) {
+    if (this.props.isEditing && !this.state.hasEnteredText) {
       ReactDOM.findDOMNode(this.refs.input).select();
     }
   },
@@ -46,7 +64,8 @@ const ColumnHeader = React.createClass({
   handleChange(event) {
     const newName = event.target.value;
     const isValid = this.isValid(newName);
-    this.setState({isValid, newName});
+    const hasEnteredText = true;
+    this.setState({hasEnteredText, isValid, newName});
   },
 
   handleDelete() {
@@ -57,22 +76,30 @@ const ColumnHeader = React.createClass({
     if (event.key === 'Enter') {
       this.handleRenameConfirm();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.props.editColumn(null);
     }
   },
 
   handleRename() {
-    this.setState({
-      isEditing: true,
-      newName: this.props.columnName
-    });
+    this.props.editColumn(this.props.columnName);
   },
 
   handleRenameConfirm() {
-    if (this.state.isEditing && !this.props.columnNames.includes(this.state.newName)) {
-      this.props.renameColumn(this.props.columnName, this.state.newName);
+    // Make sure we only save once.
+    if (!this.props.isEditing) {
+      return;
     }
-    this.setState(this.getInitialState());
+
+    // Try to rename even if we are not changing the name, in case the column does not
+    // exist yet.
+    const oldName = this.props.columnName;
+    const newName = this.state.newName;
+    if (newName === oldName ||
+      (!this.props.columnNames.includes(newName)) && newName !== '') {
+      this.props.renameColumn(oldName, newName);
+    } else {
+      this.props.editColumn(null);
+    }
   },
 
   isValid(newName) {
@@ -85,10 +112,10 @@ const ColumnHeader = React.createClass({
       display: this.props.columnName === 'id' ? 'none' : null,
     }];
     const containerStyle = {
-      display: this.state.isEditing ? 'none' : null
+      display: this.props.isEditing ? 'none' : null
     };
     const inputStyle = [dataStyles.input, {
-      display: this.state.isEditing ? null : 'none',
+      display: this.props.isEditing ? null : 'none',
       backgroundColor: this.state.isValid ? null : "#ffcccc",
     }];
     return (

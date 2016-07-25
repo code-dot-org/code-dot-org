@@ -381,7 +381,7 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
     getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
   recordsRef.once('value')
     .then(snapshot => {
-      let recordsData = snapshot.val();
+      let recordsData = snapshot.val() || {};
       Object.keys(recordsData).forEach(recordId => {
         const record = JSON.parse(recordsData[recordId]);
         if (record[oldName] !== undefined) {
