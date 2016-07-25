@@ -65,6 +65,10 @@
         <block type="draw_colour_simple">
           <title name="COLOUR">#ff0000</title>
         </block>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_down_right"/>
+        <block type="simple_move_down_left"/>
       </xml>
     </toolbox_blocks>
   </blocks>
