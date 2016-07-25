@@ -10,9 +10,18 @@ import Packet from './Packet';
 const MAX_TABLE_HEIGHT = 500;
 
 const style = {
+  clear: {
+    clear: 'both'
+  },
   scrollArea: {
     maxHeight: MAX_TABLE_HEIGHT,
     overflowY: 'auto'
+  },
+  logBrowserFilters: {
+    marginBottom: '0.5em'
+  },
+  dropdown: {
+    fontSize: 14
   }
 };
 
@@ -71,7 +80,7 @@ const LogBrowserFilters = React.createClass({
 
   render() {
     return (
-      <div>
+      <div style={style.logBrowserFilters}>
         {this.props.canSetRouterLogMode &&
           <RouterLogModeDropdown
             i18n={this.props.i18n}
@@ -85,6 +94,7 @@ const LogBrowserFilters = React.createClass({
             currentTrafficFilter={this.props.currentTrafficFilter}
           />
         }
+        <div style={style.clear}/>
       </div>
     );
   }
@@ -101,6 +111,7 @@ const RouterLogModeDropdown = React.createClass({
       <select
         id="routerlog-mode"
         className="pull-right"
+        style={style.dropdown}
         value={this.props.isAllRouterLogMode ? 'all' : 'mine'}
       >
         <option value="mine">
@@ -126,6 +137,7 @@ const TrafficFilterDropdown = React.createClass({
         <select
           id="traffic-filter"
           className="pull-right"
+          style={style.dropdown}
           value={this.props.currentTrafficFilter}
         >
           <option value="none">
