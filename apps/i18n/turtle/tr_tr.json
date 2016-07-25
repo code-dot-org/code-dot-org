@@ -89,5 +89,6 @@
   "turnTooltip": "Sanatçı sağa ya da sola belirtilen açıda döndürür.",
   "turtleVisibilityTooltip": "Sanatçıyı, görünür ya da görünmez yapar.",
   "widthTooltip": "Kalemin kalınlığını değiştirir.",
-  "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir."
+  "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir.",
+  "jumpTo": "jump to"
 }

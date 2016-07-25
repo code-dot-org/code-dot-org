@@ -89,5 +89,6 @@
   "turnTooltip": "Snýr listamanninum til vinstri eða hægri um tiltekinn fjölda gráða.",
   "turtleVisibilityTooltip": "Gerir listamanninn sýnilegan eða ósýnilegan.",
   "widthTooltip": "Breytir breidd pensilsins.",
-  "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1."
+  "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1.",
+  "jumpTo": "jump to"
 }
