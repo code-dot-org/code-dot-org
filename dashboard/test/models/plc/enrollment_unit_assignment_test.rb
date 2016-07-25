@@ -41,6 +41,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal @content_learning_module, module_assignments.second.plc_learning_module
     assert_equal @practice_learning_module, module_assignments.third.plc_learning_module
 
+    Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(true)
+
     assert_equal [
       {
         category: Plc::LearningModule::REQUIRED_MODULE,
@@ -53,6 +55,25 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
       {
         category: Plc::LearningModule::PRACTICE_MODULE,
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      }
+    ], @unit_enrollment.summarize_progress
+  end
+
+  test 'Enrolling user in a course without an evaluation returns status appropriately' do
+    Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(false)
+
+    assert_equal [
+      {
+         category: Plc::LearningModule::PRACTICE_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      },
+      {
+         category: Plc::LearningModule::CONTENT_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      },
+      {
+         category: Plc::LearningModule::REQUIRED_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
       }
     ], @unit_enrollment.summarize_progress
   end
