@@ -163,10 +163,11 @@ level 'CSD U3 Interactive Card Other Conditionals'
 level 'CSD U3 Interactive Card Final'
 
 stage 'Complex Sprite Movement'
-# External HTML 
+level 'CSD U3 abstraction intro'
 level 'CSD U3 abstraction rotation'
 level 'CSD U3 abstraction velocityX'
 level 'CSD U3 abstraction velocityY'
+# template for next two levels, and setSpeed levels 'CSD U3 abstraction car template'
 level 'CSD U3 abstraction velocityXY'
 level 'CSD U3 abstraction car rotation'
 level 'CSD U3 abstraction change velocityX'
@@ -174,11 +175,9 @@ level 'CSD U3 abstraction change velocityXY'
 level 'CSD U3 abstraction setSpeed intro'
 level 'CSD U3 abstraction setSpeed'
 level 'CSD U3 abstraction demo pic'
-level 'CSD U3 abstraction animation'
-level 'CSD U3 abstraction animation rotate'
-level 'CSD U3 abstraction animation setSpeed'
-level 'CSD U3 abstraction circle'
-level 'CSD U3 abstraction animation circle'
+# template for next two levels 'CSD U3 abstraction space template'
+level 'CSD U3 abstraction space setup'
+level 'CSD U3 abstraction space animation'
 
 
 

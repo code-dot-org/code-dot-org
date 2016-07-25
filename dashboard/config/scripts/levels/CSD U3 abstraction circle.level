@@ -55,9 +55,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\"bee\"],\r\n  \"propsByKey\": {\r\n    \"bee\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/bee.png\",\r\n      \"frameSize\": {\"x\":88, \"y\": 72},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"red_car\"],\r\n  \"propsByKey\": {\r\n    \"red_car\": {\r\n      \"name\": \"red_car\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\r\n      \"frameSize\": {\"x\":170, \"y\": 76},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
     "markdown_instructions": "# getDirection()\r\n\r\nYou've been using getSpeed() and setSpeed()  to change the speed of a sprite in a particular direction.  What do you think will happen if you keep the speed the same, but use getDirection() and setSpeed() to change the direction?  Look at the code below and predict what it will do.  After you've run it, try changing the direction by different amounts to see what happens.",
-    "start_blocks": "var bee = createSprite(200, 50);\r\nbee.setAnimation(\"bee\");\r\n\r\nbee.setSpeed(5, 0);\r\n\r\nfunction draw() {\r\n  background(\"lightblue\");\r\n  bee.setSpeed(5, bee.getDirection() + 5);\r\n  drawSprites();\r\n}\r\n",
+    "start_blocks": "var car = createSprite(200, 50);\r\ncar.setAnimation(\"red_car\");\r\n\r\ncar.setSpeed(5, 0);\r\n\r\nfunction draw() {\r\n  background(\"green\");\r\n  car.setSpeed(5, car.getDirection() + 5);\r\n  drawSprites();\r\n}\r\n",
     "contained_level_names": null
   },
   "published": true,
