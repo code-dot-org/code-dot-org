@@ -5,7 +5,6 @@ import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '../../../color';
 import progressStyles from './progressStyles';
-import StageLock from './StageLock';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -67,7 +66,6 @@ const TeacherStageInfo = React.createClass({
               </span>
             </span>
           }
-          {this.props.lockable && <StageLock/>}
         </div>
       </div>
     );
