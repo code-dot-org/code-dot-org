@@ -42,6 +42,11 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
   );
 };
 
+/**
+ * @param {object} scriptData
+ * @param {string?} currentLevelId - Set when viewing course progress from our
+ *   dropdown vs. the course progress page
+ */
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
   const store = initializeStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
@@ -53,7 +58,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     data = data || {};
 
     // Show lesson plan links and other teacher info if teacher
-    if (data.isTeacher) {
+    if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
     }
 
