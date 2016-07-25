@@ -182,6 +182,7 @@ const DataTable = React.createClass({
                   columnNames={columnNames}
                   deleteColumn={this.deleteColumn}
                   editColumn={this.editColumn}
+                  isEditable={columnName !== 'id'}
                   isEditing={editingColumn === columnName}
                   renameColumn={this.renameColumn}
                 />
