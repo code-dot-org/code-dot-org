@@ -19,14 +19,35 @@ export function getOuterHeight(component, includeMargin=false) {
  */
 export function scrollBy(element, deltaY, animate=400) {
   const newScrollTop = element.scrollTop + deltaY;
+  scrollTo(element, newScrollTop, animate);
+}
+
+export function scrollTo(element, scrollTop, animate=400) {
   if (animate) {
     let $elem = $(element);
     if (!$elem.is(':animated')) {
       $elem.animate({
-        scrollTop: newScrollTop
+        scrollTop: scrollTop
       }, animate);
     }
   } else {
-    element.scrollTop = newScrollTop;
+    element.scrollTop = scrollTop;
   }
+}
+
+export function shouldDisplayChatTips(skinId) {
+  /*eslint-disable no-fallthrough*/
+  switch (skinId) {
+    case 'infinity':
+    case 'anna':
+    case 'elsa':
+    case 'craft':
+    // star wars
+    case 'hoc2015':
+    case 'hoc2015x':
+      return false;
+    default:
+      return true;
+  }
+  /*eslint-enable no-fallthrough*/
 }

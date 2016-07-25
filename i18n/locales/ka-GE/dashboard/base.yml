@@ -125,6 +125,8 @@ ka:
     picture: იპოვეთ თქვენი საიდუმლო სურათი
     words: ახლა შეიყვანეთ თქვენი საიდუმლო სიტყვები
     login: შესვლა
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: დაგავიწყდათ თქვენი პაროლი?
@@ -247,6 +249,10 @@ ka:
       signin: შესვლა
       signup: რეგისტრაცია
       already_registered: უკვე გაქვთ ანგარიში?
+      pair_programming: პროგრამირება წყვილებში
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name}-ს პროგრესი'
       progress: თქვენი პროგრესი
@@ -281,6 +287,7 @@ ka:
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
       submitted_on: 'ჩაბარების თარიღი:'
       unsubmit: ჩაბარების გაუქმება
+      worked_with: Worked With
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
@@ -341,7 +348,7 @@ ka:
     announcement_title: განცხადებები
     announcement_view_all: ყველას ნახვა
     announcement_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
-    announcement_button: Test the feature
+    announcement_learn_more_button: გაიგეთ მეტი
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: დაამატე შენი სახელი
   move_students:
@@ -406,8 +413,6 @@ ka:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: გაიგეთ მეტი
   slow_loading: ჰმ.. პროცესს ჩვეულებრივზე მეტი დრო მიაქვს...
   try_reloading: სცადეთ გვერდის გადატვირთვა
@@ -559,36 +564,6 @@ ka:
     hour: 1 საათი
     day: დღე
     week: კვირა
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 შესავალი კურსი ინფორმატიკაში (15-25 საათი)
-          description: ეს ოცსაათიანი კურსი ინფორმატიკისა და პროგრამირების ძირითად ცნებებს გაგაცნობთ. იგი შექმნილია K-8 კლასებში გამოსაყენებლად, თუმცა მისი მეშვეობით სწავლა ნებისმიერ ასაკშია სახალისო.
-        Hour of Code:
-          title: კოდის ერთი საათი 2013
-          description: ""
-        edit-code:
-          title: კოდის რედაქტირება
-          description: ""
-        events:
-          title: მოვლენები
-          description: ""
-        builder:
-          title: კონსტრუქტორი
-          description: ""
-        flappy:
-          title: Flappy კოდი
-          description: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy კოდი"!'
-        jigsaw:
-          title: ფაზლი
-          description: ""
-        step:
-          title: ნაბიჯი
-          description: ""
-        sample_level_builder:
-          title: საცდელი დონის კონსტრუქტორი
-          description: ""
   age_interstitial:
     age: თქვენი ასაკი
     header: ანგარიშის ინფორმაციის განახლება
@@ -621,6 +596,7 @@ ka:
     share_title: თქვენი პროექტის გაზიარება
     share_copy_link: 'დააკოპირეთ ლინკი:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: დახურვა
@@ -644,6 +620,7 @@ ka:
     edit_project: პროექტის რედაქტირება
     abuse:
       tos: "ამ პროექტს სხვებს ვერ გაუზიარებთ, იმიტომ რომ იგი აღნიშნულია, როგორც Code.org-ის<a href='http://code.org/tos'>მომსახურების პირობების</a> დამარღვეველი."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "თუ ფიქრობთ, რომ ეს შეცდომაა, <a href='https://code.org/contact'> დაგვიკავშირდით.</a>"
       go_to_code_studio: გადადით კოდის სტუდიაში
       report_abuse_form:
@@ -675,6 +652,14 @@ ka:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -694,7 +679,9 @@ ka:
     content: Content
     practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

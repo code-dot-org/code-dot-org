@@ -1,79 +1,5 @@
 "ja":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8(アメリカでの中学校）のコンピュータサイエンスコースを紹介
-          Unplug1: "ステージ 1"
-          Maze: "ステージ 2"
-          Unplug2: "ステージ 3"
-          Unplug3: "ステージ 4"
-          Artist: "ステージ 5"
-          Unplug4: "ステージ 6"
-          Artist2: "ステージ７"
-          Unplug5: "ステージ８"
-          Farmer: "ステージ 9"
-          Unplug6: "ステージ10"
-          Artist3: "ステージ11"
-          Unplug7: |
-            ステージ12
-          Farmer2: |
-            ステージ13
-          Unplug8: |
-            ステージ14
-          Artist4: |
-            ステージ15
-          Unplug9: "ステージ16"
-          Farmer3: "ステージ17"
-          Unplug10: "ステージ18"
-          Artist5: "ステージ19"
-          Unplug11: "ステージ20"
-        Hour of Code:
-          desc: Hour of Code（コーディングを学ぶ時間）
-          Maze: "ステージ 1"
-        Edit Code:
-          desc: "コードを編集する(ベータ版)"
-          MazeEC: "ステージ 1"
-        2014 Levels:
-          desc: "バウンス (ベータ版)"
-          Bounce: "ステージ 1"
-        Builder Levels:
-          desc: "ユーザーが作ったパズル (ベータ版)"
-          Custom: "ステージ 1"
-        Flappy Levels:
-          desc: "フラッピーバード"
-          Flappy: "ステージ 1"
-        Jigsaw Levels:
-          desc: "ジグソー パズル (ベータ版)"
-          Jigsaw: "ステージ 1"
-        Step Levels:
-          desc: "迷路 (ベータ版)"
-          MazeStep: "ステージ ステップ"
-        edit-code:
-          desc: "コードを編集する(ベータ版)"
-          MazeEC: "ステージ 1"
-          Applab: "ステージ 2"
-          ArtistEC: "ステージ 3"
-          StudioEC: "ステージ 4"
-        events:
-          desc: "バウンス (ベータ版)"
-          Bounce: "ステージ 1"
-          Studio: "ステージ 2"
-        builder:
-          desc: "ユーザーが作ったパズル (ベータ版)"
-          Custom: "ステージ 1"
-        flappy:
-          desc: "フラッピーバード"
-          Flappy: "ステージ 1"
-        jigsaw:
-          desc: "ジグソー パズル (ベータ版)"
-          Jigsaw: "ステージ 1"
-        step:
-          desc: "迷路 (ベータ版)"
-          MazeStep: "ステージ ステップ"
-        wordsearch:
-          desc: "スペリング コンテスト (ベータ版)"
-          WordSearch: "ステージ 1"
     game:
       name:
         Unplug1: "コンピューター・サイエンス入門"
@@ -547,6 +473,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

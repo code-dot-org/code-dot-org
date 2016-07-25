@@ -125,6 +125,8 @@ pt-BR:
     picture: Agora encontre sua foto secreta
     words: Agora digite suas palavras secretas
     login: Entrar
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Esqueceu sua senha?
@@ -247,6 +249,10 @@ pt-BR:
       signin: Entrar
       signup: Inscreva-se
       already_registered: Já se cadastrou?
+      pair_programming: Programação em duplas
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "progresso de %{name}'s"
       progress: Seu progresso
@@ -281,6 +287,7 @@ pt-BR:
       example_with_number: 'Solução do Exemplo %{solution_number}'
       submitted_on: 'Enviado em:'
       unsubmit: Cancelar envio
+      worked_with: Worked With
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -341,7 +348,7 @@ pt-BR:
     announcement_title: Anúncios
     announcement_view_all: Ver todos
     announcement_message: '<b>22 de abril de 2016</b> - Atividades offline são partes vitais do processo de aprendizagem, mas os professores nos disseram que encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode encontrar todos os recursos offline numa página só. Associar as lições com qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente.'
-    announcement_button: Teste a funcionalidade
+    announcement_learn_more_button: Saiba mais
     announcement_petition: Como professor, você está liderando o caminho em um movimento para dar a cada aluno em todas as escolas a oportunidade de aprender informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes de educação, 28 governadores e maiores empresas de CEOs da América se uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de ciência de computador K-12.
     announcement_petition_button: Adicione o seu nome
   move_students:
@@ -406,8 +413,6 @@ pt-BR:
   compatibility:
     upgrade:
       unsupported_message: "Seu navegador não é suportado. Por favor atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidades podem não funcionar."
-      ie_message: Code.org em breve irá remover o suporte para o Internet Explorer 8, 9 e 10. Por favor, atualize para um navegador moderno.
-      ie_message_csedweek: CSEdWeek.org em breve irá remover o suporte para o Internet Explorer 8, 9 e 10. Por favor, atualize para um navegador moderno.
       link: Saiba mais
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
@@ -559,36 +564,6 @@ pt-BR:
     hour: 1 hora
     day: dia
     week: semana
-  data:
-    script:
-      name:
-        20-hour:
-          title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental
-          description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
-        Hour of Code:
-          title: Hora do Código 2013
-          description: ""
-        edit-code:
-          title: Editar o código
-          description: ""
-        events:
-          title: Eventos
-          description: ""
-        builder:
-          title: Construtor
-          description: ""
-        flappy:
-          title: Código do Flappy bird
-          description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
-        jigsaw:
-          title: Quebra-cabeça
-          description: ""
-        step:
-          title: Etapa
-          description: ""
-        sample_level_builder:
-          title: Construtor de nível de exemplo
-          description: ""
   age_interstitial:
     age: Sua idade
     header: Atualização de informações da conta
@@ -621,6 +596,7 @@ pt-BR:
     share_title: Compartilhar seu projeto
     share_copy_link: 'Copie o link:'
     share_embed_description: Você pode colar o código embed em uma página HTML para exibir o projeto em uma página da Web.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Incorporar
     advanced_share: Mostrar opções avançadas
     close: Fechar
@@ -644,6 +620,7 @@ pt-BR:
     edit_project: Editar projeto
     abuse:
       tos: "Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Se você acha que isso é um erro, <a href='https://code.org/contact'>contate-nos.</a>"
       go_to_code_studio: Ir para o Code Studio
       report_abuse_form:
@@ -675,6 +652,14 @@ pt-BR:
     instructor_feedback: Feedback do instrutor
     peer_feedback: Feedback de mesmo nível
     outdated: Este feedback foi adicionado para uma versão anterior apresentada
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Procure por um ícone...
@@ -694,7 +679,9 @@ pt-BR:
     content: Conteúdo
     practice: Professor de práticas
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Downloads do Hour of Code
     capsule_title: Você tem Internet?

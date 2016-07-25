@@ -250,6 +250,9 @@
   "directionNortheastLetter": "NE",
   "directionSouthwestLetter": "SW",
   "directionSoutheastLetter": "SE",
+  "hintPromptInline": "Do you want a hint?",
   "less": "Less",
-  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
+  "no": "No",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team.",
+  "yes": "Yes"
 }

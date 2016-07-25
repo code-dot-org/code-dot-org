@@ -1,75 +1,5 @@
 "no":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Introduksjon til Informatikk for barne-og ungdomsskolen
-          Unplug1: Trinn 1
-          Maze: Trinn 2
-          Unplug2: Trinn 3
-          Unplug3: Trinn 4
-          Artist: Trinn 5
-          Unplug4: Trinn 6
-          Artist2: Trinn 7
-          Unplug5: Trinn 8
-          Farmer: Trinn 9
-          Unplug6: Nivå 10
-          Artist3: Nivå 11
-          Unplug7: Nivå 12
-          Farmer2: Nivå 13
-          Unplug8: Nivå 14
-          Artist4: Nivå 15
-          Unplug9: Nivå 16
-          Farmer3: Nivå 17
-          Unplug10: Nivå 18
-          Artist5: Nivå 19
-          Unplug11: Nivå 20
-        Hour of Code:
-          desc: Kodetimen
-          Maze: Trinn 1
-        Edit Code:
-          desc: Rediger kode (beta)
-          MazeEC: Trinn 1
-        2014 Levels:
-          desc: Sprett (beta)
-          Bounce: Trinn 1
-        Builder Levels:
-          desc: Brukeropprettede oppgaver (beta)
-          Custom: Trinn 1
-        Flappy Levels:
-          desc: Fuglen Flappy
-          Flappy: Trinn 1
-        Jigsaw Levels:
-          desc: Puslespill (beta)
-          Jigsaw: Trinn 1
-        Step Levels:
-          desc: Labyrint (beta)
-          MazeStep: Scenesteg
-        edit-code:
-          desc: Rediger kode (beta)
-          MazeEC: Trinn 1
-          Applab: Trinn 2
-          ArtistEC: Trinn 3
-          StudioEC: Trinn 4
-        events:
-          desc: Sprett (beta)
-          Bounce: Trinn 1
-          Studio: Trinn 2
-        builder:
-          desc: Brukeropprettede oppgaver (beta)
-          Custom: Trinn 1
-        flappy:
-          desc: Fuglen Flakse
-          Flappy: Trinn 1
-        jigsaw:
-          desc: Puslespill (beta)
-          Jigsaw: Trinn 1
-        step:
-          desc: Labyrint (beta)
-          MazeStep: Scenesteg
-        wordsearch:
-          desc: Stavekonkurranse (beta)
-          WordSearch: Trinn 1
     game:
       name:
         Unplug1: Introduksjon til informatikk
@@ -481,6 +411,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

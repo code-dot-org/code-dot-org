@@ -39,7 +39,7 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "Level marked as success if something is said by a character on the screen.",
   "level_concept_difficulty": {
   }
 }]]></config>

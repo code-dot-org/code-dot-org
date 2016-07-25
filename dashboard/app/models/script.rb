@@ -311,7 +311,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
+    name == 'edit-code'
   end
 
   def is_k1?
@@ -342,10 +342,6 @@ class Script < ActiveRecord::Base
 
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
-  def show_report_bug_link?
-    beta? || k5_course? || %w(algebra algebraa csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_lesson_plan?
