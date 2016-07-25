@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Today, we're going to try out a different, more powerful function editor. See if you can figure out how to edit the function 'draw a triangle' to find the bugs.",
+    "instructions": "This program looks okay from here, but something isn't working right. See if you can figure out how to edit the function 'draw a triangle' to find the bug.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

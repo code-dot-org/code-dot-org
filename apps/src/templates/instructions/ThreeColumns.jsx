@@ -21,8 +21,10 @@ const ThreeColumns = (props) => {
     middle: {
       width: '100%',
       position: 'relative',
+      marginRight: -300,
+      paddingRight: 300,
       float: 'left',
-      overflowY: 'hidden',
+      overflowY: 'scroll',
       height
     },
     left: {
