@@ -1,12 +1,11 @@
 /**
- * @overview Component for adding a new column to the specified table.
+ * @overview Component containing UI controls for modifying the table, including
+ * import, export, adding a new column, and deleting the entire table.
  */
 
-import Radium from 'radium';
 import React from 'react';
 
 import * as dataStyles from './dataStyles';
-import { connect } from 'react-redux';
 
 const containerStyle = {
   float: 'right',
@@ -16,23 +15,19 @@ const containerStyle = {
   paddingRight: 0
 };
 
-const AddColumnButton = React.createClass({
+const TableControls = React.createClass({
   propTypes: {
     addColumn: React.PropTypes.func.isRequired
-  },
-
-  handleAdd() {
-    this.props.addColumn();
   },
 
   render() {
     return (
       <div style={containerStyle}>
-        <button className="btn" onClick={this.handleAdd} style={dataStyles.button}>
+        <button className="btn" onClick={this.props.addColumn} style={dataStyles.button}>
           Add column
         </button>
       </div>
     );
   }
 });
-export default Radium(AddColumnButton);
+export default TableControls;
