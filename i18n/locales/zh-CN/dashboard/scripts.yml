@@ -2,15 +2,6 @@ zh:
   data:
     script:
       name:
-        test:
-          "Jigsaw: Learn to drag and drop": 拼图： 学习拖放
-          The Maze: 迷宫
-          Multi: 多个
-          Match: 匹配
-          Math Image: 数学图片
-          title: 测试课程
-          description: 只是一个内部测试的课程。
-          description_short: 只是一个内部测试的课程。
         course1:
           "Jigsaw: Learn to drag and drop": 拼图： 学习拖放
           "Maze: Sequence": 迷宫： 序列
@@ -210,17 +201,6 @@ zh:
           Variables: 变量
           For Loops: 计数循环
           Binary: 二进制
-        potus:
-          title: 特殊的
-          description_short: 特殊的
-          description: 特殊的
-          Special: 特殊的
-        special:
-          title: 特殊的
-          description_short: 特殊的
-          description: 特殊的
-          Special: 特殊的
-          Binary: 二进制
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -384,28 +364,8 @@ zh:
           description: 与愤怒的小鸟和植物大战僵尸中的角色一起来体验计算机科学的基础！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           Hour of Code 2013: 《编程一小时 2013》
-        Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 关卡
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 关卡
-        Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 关卡
-        How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 关卡
-        Tutorial - Code Studio Puzzle Challenge:
-          title: 'Tutorial - Code Studio Puzzle Challenge'
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: 关卡
@@ -429,8 +389,8 @@ zh:
           "Artist: Functions": 小艺术家：函数
           "Bee: Debugging": 小蜜蜂课程：调试
         cspunit1:
-          title: 'CSP Unit 1 - Digital Information'
-          description_short: Explore how digital information is represented and transferred
+          title: '(old) CS Principles Unit 1 - Digital Information'
+          description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: 第14课
           Lesson 14: 第14课
@@ -588,9 +548,9 @@ zh:
           description_short: Test Wednesay
           description: Test Wednesday
         cspunit3:
-          title: 'CSP Unit 3 - Programming'
+          title: '(old) CS Principles Unit 3 - Programming'
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming.
+          description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: 函数
@@ -695,24 +655,6 @@ zh:
           Strings and Images: 字符串和图像
           The Design Recipe: 设计食谱
           Next Steps: 下一步
-        sciPD complex adaptive 2:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: Introduction to PD
-          Pre-Workshop Online Component: Pre-Workshop Online Component
-        sciPD complex adaptive forum:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: Introduction to PD
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
-        Glenallan Career Day Demo:
-          new stage: new stage
-          title: Glenallan Career Day Demo
-          description_short: "Let's make some puzzles!"
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 关卡
         ECSPD-NexTech:
           Introduction to PD: Introduction to PD
           What is ECS?: What is ECS?
@@ -793,17 +735,8 @@ zh:
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
-        ui_tests:
-          title: UI Tests
-          description: "Script for test. Careful, don't change level ordering."
-          description_short: "Script for test. Careful, don't change level ordering."
-          All the Tests: All the Tests
-          Free Response: Free Response
-          Multi: 多个
-          Big Game: Big Game
-          new stage: new stage
         sciencePD2:
-          title: Computer Science in Science PD
+          title: 'CS in Science: Part 2'
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
@@ -816,6 +749,13 @@ zh:
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
+          Welcome!: 欢迎！
+          Review StarLogo Nova: Review StarLogo Nova
+          Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
+          Revisiting Agent Movement: Revisiting Agent Movement
+          Epidemic Model Extensions: Epidemic Model Extensions
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: 总结
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -832,8 +772,8 @@ zh:
           description: Testing
           description_short: Testing
         cspunit2:
-          title: 'CSP Unit 2 - The Internet'
-          description_short: 互联网
+          title: '(old) CS Principles Unit 2 - The Internet'
+          description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -936,6 +876,9 @@ zh:
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
           Swapped Levels: Swapped Levels
+          Gamelab: Gamelab
+          Anonymous student survey: Anonymous student survey
+          Anonymous student survey 2: Anonymous student survey 2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 第二阶段在线：混合的暑期学习
@@ -964,17 +907,6 @@ zh:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: 欢迎！
-        CSPfac intro:
-          title: 'CS Principles Facilitator Workshop '
-          description: Online levels for PD workshop
-          description_short: Online levels for PD workshop
-          Welcome!: 欢迎！
-          Pixelation Widget: Pixelation Widget
-          Text Compression Widget: Text Compression Widget
-          Internet Simulator: 互联网模拟器
-          App Lab: 应用实验室
-          Broadcast Lesson: Broadcast Lesson
-          Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
@@ -1036,12 +968,6 @@ zh:
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
           Equity PD: Equity PD
-        hoc2015:
-          title: 《编程一小时 2015》
-          description_short: 用游戏实验室创造故事或游戏。
-          description: 用游戏实验室创造故事或游戏。
-          Hour of Code: 编程一小时
-          Hour of Code 2015: 《编程一小时 2015》
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 第二阶段在线：混合的暑期学习
@@ -1194,11 +1120,6 @@ zh:
           description_short: Vigenere Cipher Widget
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher
           Vigenere: Vigenere
-        frequency:
-          title: Frequency Analysis Widget
-          description_short: Frequency Analysis Widget
-          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
-          Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
           description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
@@ -1468,7 +1389,7 @@ zh:
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
         cspunit3temp:
-          title: 'CSP Unit 3 - Temp'
+          title: '(old) CS Principles Unit 3 - Programming'
           description_short: 编程
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
@@ -1516,11 +1437,6 @@ zh:
           description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
           description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
           Hour of Code 2015: 《编程一小时 2015》
-        minecraft:
-          title: 我的世界
-          description_short: Use code to survive in a Minecraft world!
-          description: Use code to survive in a Minecraft world!
-          Craft: Craft
         mc:
           title: 我的世界 编程一小时
           description_short: 通过代码探索 我的世界 中的世界
@@ -1543,16 +1459,16 @@ zh:
           Assessing Computer Models: Assessing Computer Models
           (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
         cspunit5:
-          title: 'CSP Unit 5 - Performance Tasks'
-          description_short: Performance Tasks
+          title: '(old) CS Principles Unit 5 - Performance Tasks'
+          description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
           Explore PT Prep: Explore PT Prep
           Explore PT: Explore PT
           Create PT Prep: Create PT Prep
           Create PT: Create PT
         cspunit4:
-          title: 'CSP Unit 4 - Data'
-          description_short: Data
+          title: '(old) CS Principles Unit 4 - Data'
+          description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           Intro to Data: Introduction to Data
           Finding Trends with Visualizations: Finding Trends with Visualizations
@@ -1672,8 +1588,8 @@ zh:
           Sharing Student Work: Sharing Student Work
           Planning For the Future: Planning For the Future
         csp1:
-          title: 'CS Principles Unit 1 - The Internet'
-          description_short: 互联网
+          title: 'CSP Unit 1 - The Internet'
+          description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           Personal Innovations: Personal Innovations
           Sending Binary Messages: Sending Binary Messages
@@ -1700,8 +1616,8 @@ zh:
           Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
           Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
         csp2:
-          title: 'CS Principles Unit 2 - Digital Information'
-          description_short: Digital Information
+          title: 'CSP Unit 2 - Digital Information'
+          description_short: Explore how more complex digitial information is represented and manipulated through computation and visuzalization.
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           Bytes and File Sizes: Bytes and File Sizes
           Text Compression: Text Compression
@@ -1719,7 +1635,7 @@ zh:
           Creating Summary Tables: Creating Summary Tables
           Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
         csp3:
-          title: 'CSP Unit 3 - Programming'
+          title: 'CSP Unit 3 - Intro to Programming'
           description_short: 编程
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           The Need For Programming Languages: The Need For Programming Languages
@@ -1733,8 +1649,8 @@ zh:
           Looping and Random Numbers: Looping and Random Numbers
           Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
         csp4:
-          title: 'CS Principles Unit 4 - Big Data and Privacy'
-          description_short: Big Data and Privacy
+          title: 'CSP Unit 4 - Big Data and Privacy'
+          description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
           What is Big Data?: What is Big Data?
           Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
@@ -1748,8 +1664,8 @@ zh:
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         csp5:
-          title: 'CS Principles Unit 5 - Building Apps'
-          description_short: Building Apps
+          title: 'CSP Unit 5 - Building Apps'
+          description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           description: 'This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools. '
           Events Unplugged: Events Unplugged
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -1773,8 +1689,8 @@ zh:
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
         csp6:
-          title: 'CS Principles Unit 6 - Performance Tasks'
-          description_short: Performance Tasks
+          title: 'CSP Unit 6 - Performance Tasks'
+          description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           Create PT Prep: Create PT Prep
           Create PT: Create PT
@@ -1804,6 +1720,9 @@ zh:
           Complex Conditionals: Complex Conditionals
           Proposed Sprites and Props: Proposed Sprites and Props
           Conditionals Update: Conditionals Update
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
+          Complex Sprite Movement: Complex Sprite Movement
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1912,14 +1831,6 @@ zh:
           title: netsim task completion
           description: introduction to the internet simulator and a discussion of how we use it to teach the internet
           netsim: netsim
-        Test CPS PD:
-          test Unit 1 required reading: test Unit 1 required reading
-          test Unit 1 content module Alpha: test Unit 1 content module Alpha
-          test Unit 1 content module Bravo: test Unit 1 content module Bravo
-          test Unit 1 content module Charlie: test Unit 1 content module Charlie
-          test Unit 1 practice module Delta: test Unit 1 practice module Delta
-          test Unit 1 practice module Echo: test Unit 1 practice module Echo
-          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
         csp-facilitators :
           title: CSP Tool Overview
           description_short: Introduction to CS Principles for new Facilitators
@@ -2021,8 +1932,8 @@ zh:
           Artist Exemplar: Artist Exemplar
         2016_sciencePD_phase2b:
           title: Computer Science in Science PD Phase 2b 2016-2017
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
           Welcome!: 欢迎！
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -2049,8 +1960,8 @@ zh:
           Measuring Student Learning: Measuring Student Learning
         2016_sciencePD-phase2b:
           title: Computer Science in Science PD Phase 2b 2016 2017
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
           Welcome!: 欢迎！
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -2072,6 +1983,11 @@ zh:
           Loops Unplugged: Loops Unplugged
           Events Unplugged: Events Unplugged
           Events: 事件
+          Fuzz Fiesta: Fuzz Fiesta
+          title: Kindergarten
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2095,18 +2011,53 @@ zh:
           Internet: 互联网
           Crowdsourcing: 众包
           Digital Citizenship: 数字公民
+          "Unplugged: Conditionals with Cards": 'Unplugged: Conditionals with Cards'
+          "Unplugged: Decision Trees (New)": 'Unplugged: Decision Trees (New)'
+          "Unplugged: Nested Loops (New)": 'Unplugged: Nested Loops (New)'
+          Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested Loops)
         grade1:
           Predicting & Debugging: 'Predicting & Debugging'
           Persistence & Frustration: 'Persistence & Frustration'
           Sequences & Algorithms: 'Sequences & Algorithms'
           "Jigsaw: Learn to drag and drop": 拼图： 学习拖放
+          Debugging: Debugging
+          Programming Unplugged: Programming Unplugged
+          Programming: 编程
+          Being Safe Online: Being Safe Online
+          Loops Unplugged: Loops Unplugged
+          Loops: 循环
+          Events Unplugged: Events Unplugged
+          Events: 事件
+          More Computer Science: More Computer Science
+          title: Grade 1
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 10-110
+          Mixed Review (Ramp Up): Mixed Review (Ramp Up)
+          "Unplugged: Envelope Variables": 离线：封装变量
+          "Unplugged: Madlibs": 离线：疯狂填词
+          "Artist: Variables": 小艺术家：变量
+          "Play Lab: Variables": 游戏实验室：变量
+          "Unplugged: For Loop Fun": 离线：计数循环的乐趣
+          "Bee: For Loops": 蜜蜂：计数循环
+          "Artist: For Loops": 小艺术家：计数循环
+          "Unplugged: Songwriting with Parameters": 离线：用参数写歌
+          "Artist: Functions with Parameters": 小艺术家：有参数的函数
+          "Play Lab: Functions with Parameters": 游戏实验室：有参数的函数
+          "Bee: Functions with Parameters": 蜜蜂：有参数的函数
+          "Play Lab: Events and Conditionals": 'Play Lab: Events and Conditionals'
+          "Project: Chase/Collect Game": 'Project: Chase/Collect Game'
+          Scratch (Optional Third-Party Stage): Scratch (Optional Third-Party Stage)
+          "Unplugged: Binary Images": 'Unplugged: Binary Images'
+          "Pixelation: Binary Exploration": 'Pixelation: Binary Exploration'
+          Artist Binary: 小艺术家：二进制
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description_short: 'Unit 1: Human-Computer Interaction'
           description: 'Unit 1: Human-Computer Interaction'
           Welcome!: 欢迎！
@@ -2143,3 +2094,129 @@ zh:
           Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
           "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
           Day 18-21 Final Project: Day 18-21 Final Project
+        ecs-unit3:
+          title: ECS Unit 3
+          description_short: 'Unit 3: Web Design'
+          description: 'Unit 3: Web Design'
+          Getting Started: Getting Started
+          Intro to Unit 3: Intro to Unit 3
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+        ecs-unit4:
+          title: ECS Unit 4
+          description_short: 'Unit 4: Programming'
+          description: 'Unit 4: Programming'
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+        ecs-unit5:
+          title: ECS Unit 5
+          description_short: 'Unit 5: Computer and Data Analysis'
+          description: 'Unit 5: Computer and Data Analysis'
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Unit 5 lessons: Unit 5 lessons
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ecs-unit6:
+          title: ECS Unit 6
+          description_short: 'Unit 6: Robotics'
+          description: 'Unit 6: Robotics'
+          Getting Started: Getting Started
+          Unit 6 Overview: Unit 6 Overview
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
+        grade3:
+          Farmer Graph Paper Programming: Farmer Graph Paper Programming
+          Robot Games: Robot Games
+          About My Robot: About My Robot
+          Farmer Debug Relay Programming: Farmer Debug Relay Programming
+          Robot Debugging: Robot Debugging
+          Robot Farmer Loops: Robot Farmer Loops
+          Robot Farmer Conditionals Intro: Robot Farmer Conditionals Intro
+          Farmer Conditional with Cards: Farmer Conditional with Cards
+          Farmer Robot Conditionals: Farmer Robot Conditionals
+          Farmer Robot Conditionals with Else: Farmer Robot Conditionals with Else
+          Choose Your Own Adventure: Choose Your Own Adventure
+          Unplugged Conditionals with Loops: Unplugged Conditionals with Loops
+          Robot Farmer Conditionals with Loops: Robot Farmer Conditionals with Loops
+          Robot Running the Farm: Robot Running the Farm
+          Farmer Impacts of Computing: Farmer Impacts of Computing
+          Preview to What is Next: Preview to What is Next
+          title: Grade 3
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        alltheplcthings:
+          title: Sample course for PLC things
+          description_short: This is a sample course that has all of the plc special things
+          description: "This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon"
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: Lesson 1,4
+          Lesson 1,6: Lesson 1,6
+          Lesson 1,9: Lesson 1,9
+          Lesson 1,10: Lesson 1,10
+          Lesson 1,11: Lesson 1,11
+          Lesson 2,2: Lesson 2,2
+          Lesson 2,3: Lesson 2,3
+          Lesson 2,10: Lesson 2,10
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+        csd3:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: 编程
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
+          Variables and Animation: Variables and Animation
+          Sprites and Properties: Sprites and Properties
+          Sprites and Images: Sprites and Images
+          Booleans and Conditionals: Booleans and Conditionals
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Complex Conditionals: Complex Conditionals
+          "Project: Interactive Card": 'Project: Interactive Card'
+        grade2:
+          Online My New Pet Jigsaw: Online My New Pet Jigsaw
+          Build A Block: Build A Block
+          Caring for my new pet: Caring for my new pet
+          Pet's New Home: "Pet's New Home"
+          Exploring the neighborhood: Exploring the neighborhood
+          At The Dog Park: At The Dog Park
+          Build A Puppy Picture: Build A Puppy Picture
+          Have a name needs a do tag: Have a name needs a do tag
+          Getting Loopy: 越来越糊涂
+          Puppy Introduction: Puppy Introduction
+          Big Event: Big Event
+          Online Internet Safety: Online Internet Safety
+          Free Play with your Pet: Free Play with your Pet
+          Flappy: Flappy Bird
+          title: Grade 2
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+          Caring for My New Pet: Caring for My New Pet
+          New Home for My Pet: New Home for My Pet
+          Exploring the Neighborhood: Exploring the Neighborhood
+          Make a Dog Tag: Make a Dog Tag
+          Getting Loopy with Puppy: Getting Loopy with Puppy
+          Puppy Loops: Puppy Loops
+          Puppy Event: Puppy Event
