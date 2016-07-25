@@ -30,7 +30,7 @@ const ColumnHeader = React.createClass({
 
   getInitialState() {
     return {
-      newName: this.props.columnName,
+      newName: '',
       hasEnteredText: false,
     };
   },
@@ -43,10 +43,8 @@ const ColumnHeader = React.createClass({
 
   componentWillReceiveProps(nextProps) {
     if (!this.props.isEditing && nextProps.isEditing) {
-      this.setState({
-        newName: nextProps.columnName,
-        hasEnteredText: false,
-      });
+      // Don't display a stale value for newName.
+      this.setState(this.getInitialState());
     }
   },
 
@@ -144,7 +142,7 @@ const ColumnHeader = React.createClass({
         <input
           ref="input"
           style={inputStyle}
-          value={this.state.newName}
+          value={this.state.newName || this.props.columnName}
           onBlur={this.handleBlur}
           onChange={this.handleChange}
           onKeyUp={this.handleKeyUp}
