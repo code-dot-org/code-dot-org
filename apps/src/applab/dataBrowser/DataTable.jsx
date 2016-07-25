@@ -2,7 +2,7 @@
  * @overview Component for editing a data table.
  */
 
-import AddColumnButton from './AddColumnButton';
+import TableControls from './TableControls';
 import AddTableRow from './AddTableRow';
 import { DataView } from '../constants';
 import EditTableRow from './EditTableRow';
@@ -169,7 +169,7 @@ const DataTable = React.createClass({
           &nbsp;&gt; {this.props.tableName}
         </h4>
 
-        <AddColumnButton columns={columnNames} addColumn={this.addColumn}/>
+        <TableControls columns={columnNames} addColumn={this.addColumn}/>
 
         <table style={styles.table}>
           <tbody>
