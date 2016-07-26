@@ -1,7 +1,6 @@
 /* global dashboard */
 
 import React from 'react';
-import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '../../../color';
 import progressStyles from './progressStyles';
@@ -52,7 +51,7 @@ const TeacherStageInfo = React.createClass({
 
   render() {
     if (!this.props.lockable && !this.props.lessonPlanUrl) {
-      return <div/>;
+      return null;
     }
 
     return (
@@ -72,4 +71,4 @@ const TeacherStageInfo = React.createClass({
   }
 });
 
-export default Radium(TeacherStageInfo);
+export default TeacherStageInfo;
