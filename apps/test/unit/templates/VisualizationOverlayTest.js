@@ -43,7 +43,6 @@ describe('VisualizationOverlay', function () {
           id="visualizationOverlay"
           version="1.1"
           baseProfile="full"
-          xmlns="http://www.w3.org/2000/svg"
           width={TEST_APP_WIDTH}
           height={TEST_APP_HEIGHT}
           viewBox={`0 0 ${TEST_APP_WIDTH} ${TEST_APP_HEIGHT}`}
