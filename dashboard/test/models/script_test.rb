@@ -403,4 +403,37 @@ class ScriptTest < ActiveSupport::TestCase
     script = create :script, name: 'Invalid Name', skip_name_format_validation: true
     script.update!(login_required: true)
   end
+
+  test 'hides locked stages from unauthorized users' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    create(:follower, section: section, student_user: student)
+
+    authorized_teacher = create(:teacher)
+    authorized_student = create(:student)
+    authorized_section = create(:section, user: authorized_teacher)
+    create(:follower, section: authorized_section, student_user: authorized_student)
+    cohorts_district = create(:cohorts_district)
+    cohorts_district.cohort.teachers << authorized_teacher
+
+    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
+    scripts,_ = Script.setup([script_file_3_stages])
+    script = scripts[0]
+    first_stage = script.stages[0]
+
+    # make the first stage lockable
+    first_stage.lockable = true
+    first_stage.save!
+
+    assert_equal 2, script.summarize(student)[:stages].length
+    assert_equal 2, script.summarize(teacher)[:stages].length
+
+    # authorized teacher and their students should see all three stages
+    assert_equal 3, script.summarize(authorized_student)[:stages].length
+    assert_equal 3, script.summarize(authorized_teacher)[:stages].length
+
+    # if we dont specify a user, consider them unauthorized
+    assert_equal 2, script.summarize[:stages].length
+  end
 end

@@ -585,6 +585,10 @@ SQL
     admin? || cohorts.present?
   end
 
+  def student_of_authorized_teacher?
+    teachers.any?(&:authorized_teacher?)
+  end
+
   def student_of?(teacher)
     followeds.find_by_user_id(teacher.id).present?
   end

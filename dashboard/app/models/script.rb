@@ -605,8 +605,12 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize
+  def summarize(current_user = nil)
     summarized_stages = stages.map(&:summarize)
+
+    unless current_user && (current_user.authorized_teacher? || current_user.student_of_authorized_teacher?)
+      summarized_stages = summarized_stages.select{|stage| !stage[:lockable]}
+    end
 
     if peer_reviews_to_complete
       levels = []
