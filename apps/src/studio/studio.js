@@ -235,8 +235,7 @@ function loadLevel() {
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
   } else {
-    Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
-      level.firstSpriteIndex);
+    Studio.startAvatars = skin.avatarList;
   }
 
   // Override scalars.
@@ -261,18 +260,6 @@ function loadLevel() {
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
   studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
   studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
-}
-
-/**
- * Returns a list of avatars, reordered such that firstSpriteIndex comes first
- * (and is now at index 0).
- */
-function reorderedStartAvatars(avatarList, firstSpriteIndex) {
-  firstSpriteIndex = firstSpriteIndex || 0;
-  return _.flattenDeep([
-    avatarList.slice(firstSpriteIndex),
-    avatarList.slice(0, firstSpriteIndex)
-  ]);
 }
 
 var drawMap = function () {
@@ -1699,7 +1686,7 @@ Studio.initSprites = function () {
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
-  var presentAvatars = Studio.startAvatars.slice();
+  var presentAvatars = [];
 
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
@@ -1717,10 +1704,13 @@ Studio.initSprites = function () {
               x: col * Studio.SQUARE_SIZE,
               y: row * Studio.SQUARE_SIZE
             });
-        if (cell.sprite !== undefined) {
-          presentAvatars[Studio.spriteCount] =
-            skin.avatarList[cell.sprite + level.firstSpriteIndex];
-        }
+
+        var avatarIndex = cell.sprite !== undefined
+            ? cell.sprite
+            : (Studio.spriteCount + level.firstSpriteIndex) %
+                Studio.startAvatars.length;
+        presentAvatars[Studio.spriteCount] = Studio.startAvatars[avatarIndex];
+
         Studio.spriteCount++;
       }
     }
@@ -2295,7 +2285,7 @@ Studio.reset = function (first) {
     });
 
     var sprite = spriteStart.sprite === undefined
-        ? (i % Studio.startAvatars.length)
+        ? (i + level.firstSpriteIndex) % Studio.startAvatars.length
         : spriteStart.sprite;
 
     var opts = {
