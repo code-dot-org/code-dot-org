@@ -1699,6 +1699,7 @@ Studio.initSprites = function () {
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
+  var presentAvatars = Studio.startAvatars.slice();
 
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
@@ -1711,11 +1712,15 @@ Studio.initSprites = function () {
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        Studio.spriteStart_[Studio.spriteCount] = Object.assign({},
-            Studio.map[row][col].serialize(), {
+        var cell = Studio.map[row][col].serialize();
+        Studio.spriteStart_[Studio.spriteCount] = Object.assign({}, cell, {
               x: col * Studio.SQUARE_SIZE,
               y: row * Studio.SQUARE_SIZE
             });
+        if (cell.sprite !== undefined) {
+          presentAvatars[Studio.spriteCount] =
+            skin.avatarList[cell.sprite + level.firstSpriteIndex];
+        }
         Studio.spriteCount++;
       }
     }
@@ -1724,7 +1729,7 @@ Studio.initSprites = function () {
   if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
-    blocks.setStartAvatars(Studio.startAvatars);
+    blocks.setStartAvatars(presentAvatars);
 
     if (level.projectileCollisions) {
       blocks.enableProjectileCollisions(Blockly);
