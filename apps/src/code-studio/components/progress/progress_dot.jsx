@@ -5,18 +5,7 @@ import { connect } from 'react-redux';
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../../color';
-
-function createOutline(color) {
-  return `
-    ${color} 0 1px,
-    ${color} 1px 1px,
-    ${color} 1px 0px,
-    ${color} 1px -1px,
-    ${color} 0 -1px,
-    ${color} -1px -1px,
-    ${color} -1px 0,
-    ${color} -1px 1px`;
-}
+import progressStyles, { createOutline } from './progressStyles';
 
 const dotSize = 24;
 const styles = {
@@ -80,17 +69,7 @@ const styles = {
       fontSize: 16,
       lineHeight: '32px'
     },
-    icon: {
-      borderColor: 'transparent',
-      fontSize: 24,
-      verticalAlign: -4,
-      color: color.white,
-      textShadow: createOutline(color.lighter_gray),
-      ':hover': {
-        color: color.white,
-        backgroundColor: 'transparent'
-      }
-    },
+    icon: progressStyles.dotIcon,
     icon_small: {
       width: 9,
       height: 9,
