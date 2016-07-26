@@ -90,7 +90,8 @@ const ColumnHeader = React.createClass({
 
     const oldName = this.props.columnName;
     // newName could be undefined if the name has not been edited, or empty if the user
-    // has deleted all the text from the input.
+    // has deleted all the text from the input. In either case, treat the name as
+    // unchanged.
     const newName = this.state.newName || this.props.columnName;
     // Try to rename even if we are not changing the name, in case the column does not
     // exist yet.
