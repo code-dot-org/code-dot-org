@@ -202,7 +202,7 @@ GameLabP5.prototype.init = function (options) {
     }
 
     if (sprite.collider instanceof this.CircleCollider) {
-      return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
+      return this.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
     } else if (sprite.collider instanceof this.AABB) {
       return mousePosition.x > sprite.collider.left() &&
           mousePosition.y > sprite.collider.top() &&
