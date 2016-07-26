@@ -1,0 +1,12 @@
+name 'CSD U3 setSpeed STOP'
+title 'Stop Here'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# STOP
+
+discussion of previous prediction level
+
+next two levels (introducing setSpeed()) as class with teacher
+
+MARKDOWN

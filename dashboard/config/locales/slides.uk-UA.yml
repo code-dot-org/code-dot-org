@@ -1344,9 +1344,9 @@
           for each side of a triangle.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
-          cool!
+        text: Але ми хочемо намалювати шість трикутників. Для того, щоб зробити це,
+          ми візьмемо цей цикл і помістимо його всередину іншого "repeat block". Дуже
+          круто!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png

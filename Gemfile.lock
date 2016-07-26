@@ -235,6 +235,9 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.6.0.1)
     i18n (0.7.0)
+    ims-lti (1.1.10)
+      builder
+      oauth (~> 0.4.5)
     io-like (0.3.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -613,6 +616,7 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger (~> 1.11)
   httparty
+  ims-lti (~> 1.1)
   jbuilder (~> 1.2)
   jquery-cookie-rails
   jquery-rails (~> 3.1.0)

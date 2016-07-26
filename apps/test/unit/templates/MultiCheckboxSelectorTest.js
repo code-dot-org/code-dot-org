@@ -30,10 +30,11 @@ describe("MultiCheckboxSelector", () => {
     beforeEach(() => {
       render(
         <MultiCheckboxSelector
-            header="Some Items"
-            items={["one", "two", "three"]}
-            selected={["two"]}
-            onChange={onChange}>
+          header="Some Items"
+          items={["one", "two", "three"]}
+          selected={["two"]}
+          onChange={onChange}
+        >
           <ItemComponent />
         </MultiCheckboxSelector>
       );
@@ -83,10 +84,11 @@ describe("MultiCheckboxSelector", () => {
     beforeEach(() => {
       render(
         <MultiCheckboxSelector
-            header="Some Items"
-            items={["one", "two", "three"]}
-            selected={["two", "one", "three"]}
-            onChange={onChange}>
+          header="Some Items"
+          items={["one", "two", "three"]}
+          selected={["two", "one", "three"]}
+          onChange={onChange}
+        >
           <ItemComponent />
         </MultiCheckboxSelector>
       );

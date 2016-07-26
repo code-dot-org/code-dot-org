@@ -592,9 +592,9 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          isRtl={studioApp.isRtl()}
-          visualizationColumn={<FlappyVisualizationColumn/>}
-          onMount={onMount}
+        isRtl={studioApp.isRtl()}
+        visualizationColumn={<FlappyVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

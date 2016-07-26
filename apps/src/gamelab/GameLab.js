@@ -239,8 +239,8 @@ GameLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <GameLabView
-          showFinishButton={finishButtonFirstLine && showFinishButton}
-          onMount={onMount}
+        showFinishButton={finishButtonFirstLine && showFinishButton}
+        onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));

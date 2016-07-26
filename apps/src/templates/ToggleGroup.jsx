@@ -41,12 +41,13 @@ const ToggleGroup = React.createClass({
     return children.map((child, index) => {
       return (
         <ToggleButton
-            id={child.props.id}
-            key={child.key}
-            active={child.props.value === this.props.selected}
-            first={index === 0}
-            last={index === children.length - 1}
-            onClick={this.setSelected.bind(this, child.props.value)}>
+          id={child.props.id}
+          key={child.key}
+          active={child.props.value === this.props.selected}
+          first={index === 0}
+          last={index === children.length - 1}
+          onClick={this.setSelected.bind(this, child.props.value)}
+        >
           {child.props.children}
         </ToggleButton>
       );

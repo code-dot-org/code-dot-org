@@ -1,75 +1,5 @@
 "uz":
   data:
-    script:
-      name:
-        20-hour:
-          desc: 8 - 10 yoshli bolalar uchun Informatika kursiga kirish darslari
-          Unplug1: 1-bosqich
-          Maze: 2-bosqich
-          Unplug2: 3-bosqich
-          Unplug3: 4-bosqich
-          Artist: 5-bosqich
-          Unplug4: 6-bosqich
-          Artist2: 7-bosqich
-          Unplug5: 8-bosqich
-          Farmer: 9-bosqich
-          Unplug6: 10-bosqich
-          Artist3: 11-bosqich
-          Unplug7: 12-bosqich
-          Farmer2: 13-bosqich
-          Unplug8: 14-bosqich
-          Artist4: 15-bosqich
-          Unplug9: 16-bosqich
-          Farmer3: 17-bosqich
-          Unplug10: 18-bosqich
-          Artist5: 19-bosqich
-          Unplug11: 20-bosqich
-        Hour of Code:
-          desc: Dasturlash soati
-          Maze: 1-bosqich
-        Edit Code:
-          desc: Kodni tahrirlash (beta)
-          MazeEC: 1-bosqich
-        2014 Levels:
-          desc: Bauns (beta)
-          Bounce: 1-bosqich
-        Builder Levels:
-          desc: Foydalanuvchilar yaratgan boshqotirmalar (beta)
-          Custom: 1-bosqich
-        Flappy Levels:
-          desc: Pirilloq qushcha
-          Flappy: 1-bosqich
-        Jigsaw Levels:
-          desc: Topishmoq (beta)
-          Jigsaw: 1-bosqich
-        Step Levels:
-          desc: Labirint (beta)
-          MazeStep: Qadamma-qadam
-        edit-code:
-          desc: Kodni tahrirlash (beta)
-          MazeEC: 1-bosqich
-          Applab: 2-bosqich
-          ArtistEC: 3-bosqich
-          StudioEC: 4-bosqich
-        events:
-          desc: Bauns (beta)
-          Bounce: 1-bosqich
-          Studio: 2-bosqich
-        builder:
-          desc: Foydalanuvchilar yaratgan boshqotirmalar (beta)
-          Custom: 1-bosqich
-        flappy:
-          desc: Pirilloq qushcha
-          Flappy: 1-bosqich
-        jigsaw:
-          desc: Topishmoq (beta)
-          Jigsaw: 1-bosqich
-        step:
-          desc: Labirint (beta)
-          MazeStep: Qadamma-qadam
-        wordsearch:
-          desc: Talaffuz qiluvchi ari (beta)
-          WordSearch: 1-bosqich
     game:
       name:
         Unplug1: Informatikaga kirish
@@ -749,6 +679,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

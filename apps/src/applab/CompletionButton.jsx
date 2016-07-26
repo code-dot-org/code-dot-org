@@ -61,9 +61,9 @@ var CompletionButton = React.createClass({
       <ProtectedStatefulDiv style={styles.main}>
         <div id="share-cell" className={divClass}>
           <button
-              id={id}
-              className="share"
-              style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
+            id={id}
+            className="share"
+            style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
           >
             <img src="/blockly/media/1x1.gif"/>
             {contents}

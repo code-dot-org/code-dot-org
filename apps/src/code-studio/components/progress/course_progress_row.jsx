@@ -5,15 +5,11 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 
 import { stageShape } from './types';
-import StageProgress from './stage_progress.jsx';
+import StageProgress from './stage_progress';
+import TeacherStageInfo from './TeacherStageInfo';
 import color from '../../../color';
 
 const styles = {
-  lessonPlanLink: {
-    display: 'block',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 10
-  },
   row: {
     position: 'relative',
     boxSizing: 'border-box',
@@ -37,7 +33,7 @@ const styles = {
   stageName: {
     display: 'table-cell',
     width: 200,
-    verticalAlign: 'middle',
+    verticalAlign: 'top',
     paddingRight: 10
   },
   ribbonWrapper: {
@@ -78,7 +74,7 @@ const styles = {
  */
 const CourseProgressRow = React.createClass({
   propTypes: {
-    showLessonPlanLinks: React.PropTypes.bool,
+    showTeacherInfo: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
     stage: stageShape,
@@ -89,46 +85,52 @@ const CourseProgressRow = React.createClass({
     const stage = this.props.stage;
 
     return (
-      <div style={[
-        styles.row,
-        this.props.professionalLearningCourse && {background: color.white},
-        this.props.isFocusArea && styles.focusAreaRow
-      ]}>
+      <div
+        style={[
+          styles.row,
+          this.props.professionalLearningCourse && {background: color.white},
+          this.props.isFocusArea && styles.focusAreaRow
+        ]}
+      >
         {this.props.isFocusArea && [
-          <div style={styles.ribbonWrapper} key='ribbon'>
+          <div style={styles.ribbonWrapper} key="ribbon">
             <div style={styles.ribbon}>Focus Area</div>
           </div>,
           <a
             href={this.props.changeFocusAreaPath}
             style={styles.changeFocusArea}
-            key='changeFocusArea'
+            key="changeFocusArea"
           >
-            <i className='fa fa-pencil' style={styles.changeFocusAreaIcon} />
+            <i className="fa fa-pencil" style={styles.changeFocusAreaIcon} />
             <span>Change your focus area</span>
           </a>
         ]}
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
-          {this.props.showLessonPlanLinks && stage.lesson_plan_html_url &&
-            <a
-              target='_blank'
-              href={stage.lesson_plan_html_url}
-              style={styles.lessonPlanLink}
-            >
-              {dashboard.i18n.t('view_lesson_plan')}
-            </a>
-          }
         </div>
-        <StageProgress
-          levels={stage.levels}
-          courseOverviewPage={true}
-        />
+        <div>
+          {/*
+            Eventually this will be lockable={!!stage.lockable}. Stage.lockable
+            won't be true until we do the work on the backend, but I want to
+            make that explicit by just setting to false for now
+          */}
+          {this.props.showTeacherInfo &&
+            <TeacherStageInfo
+              lessonPlanUrl={stage.lesson_plan_html_url}
+              lockable={false}
+            />
+          }
+          <StageProgress
+            levels={stage.levels}
+            courseOverviewPage={true}
+          />
+        </div>
       </div>
     );
   }
 });
 
 export default connect(state => ({
-  showLessonPlanLinks: state.showLessonPlanLinks,
-  changeFocusAreaPath: state.changeFocusAreaPath
+  showTeacherInfo: state.progress.showTeacherInfo,
+  changeFocusAreaPath: state.progress.changeFocusAreaPath
 }))(Radium(CourseProgressRow));
