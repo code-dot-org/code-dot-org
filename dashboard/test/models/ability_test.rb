@@ -116,7 +116,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, ScriptLevel)
     assert ability.cannot?(:read, UserLevel)
     assert ability.cannot?(:read, UserScript)
-    assert ability.cannot?(:read, Section)
 
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)

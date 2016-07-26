@@ -36,7 +36,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "timeout_failure_tick": "550",
+    "timeout_failure_tick": "850",
     "contained_level_names": null
   },
   "published": true,

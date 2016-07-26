@@ -1,28 +1,19 @@
-:css
-  table {
-      border-collapse: collapse;
-  }
+%link{:href=>"/css/donors.css", :rel=>"stylesheet"} 
 
-  table, th, td {
-      border: 2px solid #F2F2F2;
-  }
-
-  table td {
-    text-align: center;
-  }
+- size ||= "small"
+- columns = size == "large" ? 2 : 3
 
 %table
-  - supporters.each_slice(columns).with_index do |group, groupindex|
+  - supporters.each_slice(columns) do |group|
     %tr
-    - group.each_with_index do |supporter, index|
+    - group.each do |supporter|
       - avatar_url = avatar_image(supporter[:name_s], 200)
-      %td{style: "width: #{780/columns}px; height: #{height}px"}
-        - fontsize = fontsize || "14px"
+      %td{class: "#{size}"}
         %a{:href=>supporter[:url_s], :target=>"_blank", :style=>"color: #7665a0"}
-          - if avatar_url
-            %img{:src=>avatar_url, :style=>"max-width: 100%; max-height: #{height*0.8}px"}
-          %p{style: "font-size: #{fontsize}px"}
-            - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
+          - if supporter[:show_s] == "logo" || supporter[:show_s] == "both"
+            %img{:src=>avatar_url, class: "#{size}-img"}
+          - if supporter[:show_s] == "name" || supporter[:show_s] == "both"
+            %p{class: "#{size}-font"}
               =supporter[:name_s]
 
 %br{:style=>'clear: both;'}

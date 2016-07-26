@@ -34,16 +34,16 @@ const AniGifPreview = React.createClass({
   render() {
     return (
       <div
-          id="ani-gif-preview-wrapper"
-          style={[styles.wrapper, this.props.instructionsInTopPane && styles.wrapperTopPane]}
+        id="ani-gif-preview-wrapper"
+        style={[styles.wrapper, this.props.instructionsInTopPane && styles.wrapperTopPane]}
       >
         <div
-            id="ani-gif-preview"
-            style={[
+          id="ani-gif-preview"
+          style={[
               styles.aniGifPreview(this.props.url),
               this.props.noVisualization && styles.bigPreview
             ]}
-            onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
+          onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
         />
       </div>
     );

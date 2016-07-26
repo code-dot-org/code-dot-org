@@ -1168,6 +1168,35 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this.animation = undefined;
 
+  /*
+   * @private
+   * Keep animation properties in sync with how the animation changes.
+   */
+  this._syncAnimationSizes = function(animations, currentAnimation) {
+    //has an animation but the collider is still default
+    //the animation wasn't loaded. if the animation is not a 1x1 image
+    //it means it just finished loading
+    if(this.colliderType === 'default' &&
+      animations[currentAnimation].getWidth() !== 1 &&
+       animations[currentAnimation].getHeight() !== 1
+      )
+    {
+    this.collider = this.getBoundingBox();
+    this.colliderType = 'image';
+    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+    //quadTree.insert(this);
+    }
+
+    //update size and collider
+    if(animations[currentAnimation].frameChanged || this.width === undefined || this.height === undefined)
+    {
+    //this.collider = this.getBoundingBox();
+    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+    }
+  };
+
   /**
   * Updates the sprite.
   * Called automatically at the beginning of the draw cycle.
@@ -1210,28 +1239,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
         //update it
         animations[currentAnimation].update();
 
-        //has an animation but the collider is still default
-        //the animation wasn't loaded. if the animation is not a 1x1 image
-        //it means it just finished loading
-        if(this.colliderType === 'default' &&
-          animations[currentAnimation].getWidth() !== 1 &&
-           animations[currentAnimation].getHeight() !== 1
-          )
-        {
-        this.collider = this.getBoundingBox();
-        this.colliderType = 'image';
-        this._internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
-        this._internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
-        //quadTree.insert(this);
-        }
-
-        //update size and collider
-        if(animations[currentAnimation].frameChanged || this._internalWidth === undefined || this._internalHeight === undefined)
-        {
-        //this.collider = this.getBoundingBox();
-        this._internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
-        this._internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
-        }
+        this._syncAnimationSizes(animations, currentAnimation);
       }
 
       //a collider is created either manually with setCollider or
@@ -1250,18 +1258,18 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
         if(this.colliderType === 'custom')
           {
-          this.collider.extents.x = this.collider.originalExtents.x * abs(this.scale) * abs(cos(t)) +
-          this.collider.originalExtents.y * abs(this.scale) * abs(sin(t));
+          this.collider.extents.x = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(cos(t)) +
+          this.collider.originalExtents.y * abs(this._getScaleY()) * abs(sin(t));
 
-          this.collider.extents.y = this.collider.originalExtents.x * abs(this.scale) * abs(sin(t)) +
-          this.collider.originalExtents.y * abs(this.scale) * abs(cos(t));
+          this.collider.extents.y = this.collider.originalExtents.x * abs(this.this._getScaleX()) * abs(sin(t)) +
+          this.collider.originalExtents.y * abs(this._getScaleY()) * abs(cos(t));
           }
         else if(this.colliderType === 'default')
           {
-          this.collider.extents.x = this._internalWidth * abs(this.scale) * abs(cos(t)) +
-          this._internalHeight * abs(this.scale) * abs(sin(t));
-          this.collider.extents.y = this._internalWidth * abs(this.scale) * abs(sin(t)) +
-          this._internalHeight * abs(this.scale) * abs(cos(t));
+          this.collider.extents.x = this._internalWidth * abs(this._getScaleX()) * abs(cos(t)) +
+          this._internalHeight * abs(this._getScaleY()) * abs(sin(t));
+          this.collider.extents.y = this._internalWidth * abs(this._getScaleX()) * abs(sin(t)) +
+          this._internalHeight * abs(this._getScaleY()) * abs(cos(t));
           }
         else if(this.colliderType === 'image')
           {
@@ -1331,8 +1339,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
     if(animations[currentAnimation] && (animations[currentAnimation].getWidth() !== 1 && animations[currentAnimation].getHeight() !== 1))
     {
       this.collider = this.getBoundingBox();
-      this._internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
-      this._internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
       //quadTree.insert(this);
       this.colliderType = 'image';
       //print("IMAGE COLLIDER ADDED");
@@ -1474,8 +1482,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
    */
   this.getBoundingBox = function() {
 
-    var w = animations[currentAnimation].getWidth()*abs(this.scale);
-    var h = animations[currentAnimation].getHeight()*abs(this.scale);
+    var w = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+    var h = animations[currentAnimation].getHeight()*abs(this._getScaleY());
 
     //if the bounding box is 1x1 the image is not loaded
     //potential issue with actual 1x1 images
@@ -1522,6 +1530,25 @@ function Sprite(pInst, _x, _y, _w, _h) {
       return dirY;
   };
 
+  /*
+   * Returns the value the sprite should be scaled in the X direction.
+   * Used to calculate rendering and collisions.
+   * @private
+   */
+  this._getScaleX = function()
+  {
+    return this.scale;
+  };
+
+  /*
+   * Returns the value the sprite should be scaled in the Y direction.
+   * Used to calculate rendering and collisions.
+   * @private
+   */
+  this._getScaleY = function()
+  {
+    return this.scale;
+  };
 
   /**
    * Manages the positioning, scale and rotation of the sprite
@@ -1543,7 +1570,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
       imageMode(CENTER);
 
       translate(this.position.x, this.position.y);
-      scale(this.scale*dirX, this.scale*dirY);
+      scale(this._getScaleX()*dirX, this._getScaleY()*dirY);
       if (pInst._angleMode === pInst.RADIANS) {
         rotate(radians(this.rotation));
       } else {
@@ -1854,6 +1881,9 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
       newAnimation.isSpriteAnimation = true;
 
+      this._internalWidth = newAnimation.getWidth()*abs(this._getScaleX());
+      this._internalHeight = newAnimation.getHeight()*abs(this._getScaleY());
+
       return newAnimation;
     }
     else
@@ -1871,6 +1901,10 @@ function Sprite(pInst, _x, _y, _w, _h) {
         this.animation = anim;
       }
       anim.isSpriteAnimation = true;
+
+      this._internalWidth = anim.getWidth()*abs(this._getScaleX());
+      this._internalHeight = anim.getHeight()*abs(this._getScaleY());
+
       return anim;
     }
 

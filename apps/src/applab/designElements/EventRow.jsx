@@ -32,7 +32,7 @@ var EventRow = module.exports = React.createClass({
           {this.props.desc}
         </div>
         <div>
-          <a onClick={this.props.handleInsert} className='hover-pointer'>Insert and show code</a>
+          <a onClick={this.props.handleInsert} className="hover-pointer">Insert and show code</a>
         </div>
       </div>
     );

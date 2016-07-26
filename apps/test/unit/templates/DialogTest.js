@@ -2,11 +2,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../util/configuredChai';
-import {setupLocales} from '../../util/testUtils';
-
-// Import order matters here :(
-setupLocales();
-const Dialog = require('@cdo/apps/templates/Dialog').default;
+import Dialog from '@cdo/apps/templates/Dialog';
 
 describe('Dialog', function () {
   describe('fullWidth option', function () {

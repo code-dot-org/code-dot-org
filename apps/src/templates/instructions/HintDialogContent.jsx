@@ -19,7 +19,7 @@ var HintDialogContent = React.createClass({
     return (<div>
       <h3>
         <Lightbulb size={32} style={{ margin: "-9px 5px -9px -5px" }}/>
-        { msg.hintTitle() }
+        {msg.hintTitle()}
       </h3>
       <div dangerouslySetInnerHTML={{ __html: this.props.content }}/>
       {block}

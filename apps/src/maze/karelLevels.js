@@ -1038,7 +1038,8 @@ module.exports = {
     'ideal': 8,
     'requiredBlocks': [
       [MOVE_FORWARD], [TURN_LEFT], [TURN_RIGHT],
-      [REPEAT], [DIG], [IF_OPT_PILE_PRESENT]
+      [REPEAT], [DIG],
+      [IF_OPT_PILE_PRESENT, WHILE_OPT_PILE_PRESENT]
     ],
     'scale': {
       'stepSpeed': 3

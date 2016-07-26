@@ -14,6 +14,20 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  /*
+   * @type {number}
+   * @private
+   * _horizontalStretch is the value to scale animation sprites in the X direction
+   */
+  s._horizontalStretch = 1;
+
+  /*
+   * @type {number}
+   * @private
+   * _verticalStretch is the value to scale animation sprites in the Y direction
+   */
+  s._verticalStretch = 1;
+
   s.setAnimation = function (animationName) {
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
@@ -71,6 +85,32 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   };
 
+  // The scale value should include the horizontal stretch for animations.
+  s._getScaleX = function () {
+    return s.scale * s._horizontalStretch;
+  };
+
+  // The scale value should include the vertical stretch for animations.
+  s._getScaleY = function () {
+    return s.scale * s._verticalStretch;
+  };
+
+  /*
+   * @private
+   * For game lab, don't update the animation sizes because all frames are the same size.
+   */
+  s._syncAnimationSizes = function (animations, currentAnimation) {
+    //has an animation but the collider is still default
+    //the animation wasn't loaded. if the animation is not a 1x1 image
+    //it means it just finished loading
+    if (this.colliderType === 'default' && animations[currentAnimation].getWidth() !== 1 &&
+      animations[currentAnimation].getHeight() !== 1) {
+      this.collider = this.getBoundingBox();
+      this.colliderType = 'image';
+      //quadTree.insert(this);
+    }
+  };
+
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
     get: function () {
@@ -105,13 +145,59 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   });
 
+  // Overriding these allows users to set a width for
+  // an animated sprite the same way they would an unanimated sprite.
+  Object.defineProperty(s, 'width', {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      if (s._internalWidth === undefined) {
+        return 100;
+      } else if (s.animation) {
+        return s._internalWidth * s._horizontalStretch;
+      } else {
+        return s._internalWidth;
+      }
+    },
+    set: function (value) {
+      if (s.animation) {
+        s._horizontalStretch = value / s._internalWidth;
+      } else {
+        s._internalWidth = value;
+      }
+    }
+  });
+
+  // Overriding these allows users to set a height for
+  // an animated sprite the same way they would an unanimated sprite.
+  Object.defineProperty(s, 'height', {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      if (s._internalHeight === undefined) {
+        return 100;
+      } else if (s.animation) {
+        return s._internalHeight * s._verticalStretch;
+      } else {
+        return s._internalHeight;
+      }
+    },
+    set: function (value) {
+      if (s.animation) {
+        s._verticalStretch = value / s._internalHeight;
+      } else {
+        s._internalHeight =  value;
+      }
+    }
+  });
+
   // p5.play stores width unscaled, but users in
   // Game Lab should have access to a scaled version.
   s.getScaledWidth = function () {
     return s.width * s.scale;
   };
 
-  // p5.play stores heigth unscaled, but users in
+  // p5.play stores height unscaled, but users in
   // Game Lab should have access to a scaled version.
   s.getScaledHeight = function () {
     return s.height * s.scale;

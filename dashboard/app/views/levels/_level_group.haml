@@ -27,7 +27,8 @@
     -# Show last attempted answer, unless this is a teacher looking at a student's attempt
     -# at an anonymous survey.  In that case it's very important that we do not show the
     -# last attempt.
-    - if @script_level.can_view_last_attempt(current_user, @user)
+    -# Check that @script_level exists, because it won't for a /level/ view.
+    - if @script_level && @script_level.can_view_last_attempt(current_user, @user)
       -# Fall back to retrieving the the last_attempt from the parsed levelgroup last_attempt
       - parsed = JSON.parse(@last_attempt || '{}')
       - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
