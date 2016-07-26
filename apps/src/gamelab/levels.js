@@ -91,6 +91,8 @@ levels.custom = utils.extend(levels.sandbox, {
     "setVelocity": null,
     "sprite.height": null,
     "sprite.width": null,
+    "getScaledWidth": null,
+    "getScaledHeight": null,
     "debug": null,
     "depth": null,
     "lifetime": null,

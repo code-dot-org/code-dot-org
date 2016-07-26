@@ -12,7 +12,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 var utils = require('../utils');
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var Provider = require('react-redux').Provider;
@@ -259,8 +259,8 @@ NetSim.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <NetSimView
-          generateCodeAppHtml={generateCodeAppHtmlFromEjs}
-          onMount={onMount}
+        generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+        onMount={onMount}
       />
     </Provider>
   , document.getElementById(config.containerId));

@@ -351,6 +351,9 @@ class Studio < Grid
     </value>
   </block>
 </category>
+<category name="Input">
+  <block type="studio_ask" />
+</category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
@@ -418,6 +421,12 @@ class Studio < Grid
   <block type="studio_moveNortheastDistance"></block>
   <block type="studio_moveSouthwestDistance"></block>
   <block type="studio_moveSoutheastDistance"></block>
+  <block type="controls_repeat_simplified">
+    <title name="TIMES">5</title>
+  </block>
+  <block type="controls_repeat_simplified_dropdown">
+    <title name="TIMES" config="3-10">3</title>
+  </block>
 </category>
     XML
   end

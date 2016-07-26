@@ -260,7 +260,7 @@ exports.initializeGlobalsToDefaultValues = function () {
   // Deep clone level so that changes we make to it for testing don't bleed
   // into other tests.
   NetSimGlobals.setRootControllers({}, {
-    level: _.clone(levels.custom, true),
+    level: _.cloneDeep(levels.custom),
     globalMaxRouters: 20
   });
 };

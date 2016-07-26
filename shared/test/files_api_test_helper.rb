@@ -95,6 +95,11 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def channel_policy_violation
+    get "/v3/channels/#{@channel_id}/privacy-profanity"
+    last_response.body
+  end
+
   def post_file_version(filename, version_id, file_contents, content_type)
     body = { files: [create_uploaded_file(filename, file_contents, content_type)] }
     headers = { 'CONTENT_TYPE' => content_type }

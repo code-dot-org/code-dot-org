@@ -129,7 +129,11 @@ module.exports = function (callback) {
   } else if (window.dashboard && dashboard.project) {
     dashboard.project.load().then(function () {
       if (dashboard.project.hideBecauseAbusive()) {
-        renderAbusive();
+        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
+        return $.Deferred().reject();
+      }
+      if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
         return $.Deferred().reject();
       }
     }).then(callback);

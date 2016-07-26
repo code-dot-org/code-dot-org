@@ -110,10 +110,11 @@ const AnimationListItem = React.createClass({
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
-              type="text"
-              style={styles.nameInput}
-              value={name}
-              onChange={this.onNameChange} />
+            type="text"
+            style={styles.nameInput}
+            value={name}
+            onChange={this.onNameChange}
+          />
         </div>
       );
     } else {
@@ -129,14 +130,16 @@ const AnimationListItem = React.createClass({
     return (
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
-            ref="thumbnail"
-            animationProps={this.props.animationProps}
-            isSelected={this.props.isSelected}
+          ref="thumbnail"
+          animationProps={this.props.animationProps}
+          isSelected={this.props.isSelected}
         />
         {animationName}
-        {this.props.isSelected && <ListItemButtons
+        {this.props.isSelected &&
+          <ListItemButtons
             onCloneClick={this.cloneAnimation}
-            onDeleteClick={this.deleteAnimation} />}
+            onDeleteClick={this.deleteAnimation}
+          />}
       </div>
     );
   }

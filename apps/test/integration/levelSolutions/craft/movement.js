@@ -1,7 +1,5 @@
-import {setupLocale} from '../../../util/testUtils';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 import blockUtils from '@cdo/apps/block_utils';
-setupLocale('craft');
 
 let _ = require('lodash');
 

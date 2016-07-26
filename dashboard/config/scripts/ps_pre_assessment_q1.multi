@@ -1,0 +1,8 @@
+name 'PS pre-assessment q1'
+question 'I have the ability to do my schoolwork'
+right 'Strongly disagree'
+right 'Disagree'
+wrong 'Slightly disagree'
+wrong 'Slightly agree'
+wrong 'Agree'
+wrong 'Strongly agree'
