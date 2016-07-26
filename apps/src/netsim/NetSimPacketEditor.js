@@ -6,7 +6,7 @@
 'use strict';
 
 import $ from 'jquery';
-var netsimMsg = require('./locale');
+var netsimMsg = require('@cdo/netsim/locale');
 var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
