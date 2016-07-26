@@ -60,8 +60,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
-    "contained_level_names": null,
-    "palette_category_at_start": "sprites"
+    "palette_category_at_start": "sprites",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
