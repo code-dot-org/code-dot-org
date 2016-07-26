@@ -659,6 +659,7 @@
   "vanish": "vanish",
   "vanishActorN": "vanish actor {spriteIndex}",
   "vanishTooltip": "Vanishes the actor.",
+  "wait": "wait",
   "waitFor": "wait for",
   "waitSeconds": "seconds",
   "waitForClick": "wait for click",
