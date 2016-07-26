@@ -415,6 +415,7 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       stage_flex_category = nil
+      stage_lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
@@ -428,6 +429,7 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         stage_flex_category = raw_level.delete(:stage_flex_category)
+        stage_lockable = raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
@@ -488,7 +490,7 @@ class Script < ActiveRecord::Base
             script: script
           )
 
-        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id

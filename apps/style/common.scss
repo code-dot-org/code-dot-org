@@ -871,6 +871,17 @@ input[type="radio"] {
   }
 }
 
+html[dir="RTL"] .prompt-icon-cell {
+  padding-right: 0px;
+  padding-left: 10px;
+  &.authored_hints {
+    #lightbulb {
+      right: 40px;
+      left: auto;
+    }
+  }
+}
+
 .qtip.cdo-qtips.qtip-authored-hint {
   .qtip-content {
     font-family: $gotham-regular;

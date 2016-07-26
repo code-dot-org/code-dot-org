@@ -21,7 +21,17 @@ module.exports = function (assetChosen, typeFilter, onClose) {
     id: 'manageAssetsModal',
     onHidden: onClose
   });
+  const appType = dashboard.project.getStandaloneApp();
+  // TODO: ditch this in favor of react-redux connector
+  // once more of code-studio is integrated into mainline react tree.
+  const studioApp = require('../../StudioApp').singleton;
+  const pageConstants = studioApp.reduxStore.getState().pageConstants;
+  const showWarning = appType === 'applab' && (
+    !pageConstants.isSignedIn || pageConstants.is13Plus
+  );
+
   ReactDOM.render(React.createElement(ImagePicker, {
+    showWarning,
     typeFilter: typeFilter,
     channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
