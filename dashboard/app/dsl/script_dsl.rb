@@ -43,12 +43,7 @@ class ScriptDSL < BaseDSL
 
   string :wrapup_video
 
-  # Can either provide a flex_category as an optional param, or an options hash
   def stage(name, properties = {})
-    # convert to opiton hash as necessary
-    if properties.is_a? String
-      properties = { flex_category: properties }
-    end
     @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
     @stage = name
     @stage_flex_category = properties[:flex_category]
