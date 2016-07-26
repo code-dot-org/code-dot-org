@@ -227,8 +227,10 @@ NetSimRouterLogModal.prototype.render = function () {
       setRouterLogMode={this.setRouterLogMode_.bind(this)}
       localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
       currentTrafficFilter={this.currentTrafficFilter_}
+      setTrafficFilter={this.setTrafficFilterMode_.bind(this)}
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
       logRows={tableRows}
+      renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
     />,
     this.rootDiv_[0]
   );
@@ -466,6 +468,7 @@ NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
  */
 NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
   this.currentTrafficFilter_ = newMode;
+  this.render();
 };
 
 /**

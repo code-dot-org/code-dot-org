@@ -33,8 +33,10 @@ const NetSimLogBrowser = React.createClass({
     setRouterLogMode: React.PropTypes.func.isRequired,
     localAddress: React.PropTypes.string,
     currentTrafficFilter: React.PropTypes.string.isRequired,
+    setTrafficFilter: React.PropTypes.func.isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    renderedRowLimit: React.PropTypes.number
   }),
 
   getDefaultProps() {
@@ -56,12 +58,14 @@ const NetSimLogBrowser = React.createClass({
             setRouterLogMode={this.props.setRouterLogMode}
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
+            setTrafficFilter={this.props.setTrafficFilter}
           />
           <div style={style.scrollArea}>
             {/* TODO: get table sticky headers working */}
             <LogTable
               headerFields={this.props.headerFields}
               logRows={this.props.logRows}
+              renderedRowLimit={this.props.renderedRowLimit}
             />
           </div>
         </Body>
@@ -78,7 +82,8 @@ const LogBrowserFilters = React.createClass({
     isAllRouterLogMode: React.PropTypes.bool,
     setRouterLogMode: React.PropTypes.func.isRequired,
     localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired
+    currentTrafficFilter: React.PropTypes.string.isRequired,
+    setTrafficFilter: React.PropTypes.func.isRequired
   },
 
   render() {
@@ -96,6 +101,7 @@ const LogBrowserFilters = React.createClass({
             i18n={this.props.i18n}
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
+            setTrafficFilter={this.props.setTrafficFilter}
           />
         }
         <div style={style.clear}/>
@@ -139,7 +145,12 @@ const TrafficFilterDropdown = React.createClass({
   propTypes: {
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
     localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired
+    currentTrafficFilter: React.PropTypes.string.isRequired,
+    setTrafficFilter: React.PropTypes.func.isRequired
+  },
+
+  onChange(event) {
+    this.props.setTrafficFilter(event.target.value);
   },
 
   render() {
@@ -149,6 +160,7 @@ const TrafficFilterDropdown = React.createClass({
           className="pull-right"
           style={style.dropdown}
           value={this.props.currentTrafficFilter}
+          onChange={this.onChange}
         >
           <option value="none">
             {this.props.i18n.logBrowserHeader_showAllTraffic()}
@@ -170,7 +182,8 @@ const TrafficFilterDropdown = React.createClass({
 const LogTable = React.createClass({
   propTypes: {
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    renderedRowLimit: React.PropTypes.number
   },
 
   getInitialState() {
@@ -258,11 +271,14 @@ const LogTable = React.createClass({
 
     const {logRows} = this.props;
     const {sortingColumns} = this.state;
-    const sortedRows = sort.sorter({
+    let sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: orderBy
     })(logRows);
+    if (this.props.renderedRowLimit !== undefined) {
+      sortedRows = sortedRows.slice(0, this.props.renderedRowLimit);
+    }
 
     return (
       <Table.Provider columns={columns}>
