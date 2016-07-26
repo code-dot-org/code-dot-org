@@ -1,3 +1,5 @@
+var P5 = require("script!@cdo/apps/../lib/p5play/p5");
+var P5Play = require("script!@cdo/apps/../lib/p5play/p5.play");
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
