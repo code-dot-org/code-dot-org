@@ -348,14 +348,14 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
  * @param {string} tableName
  * @param {string} columnName
  * @param {function()} onSuccess
- * @param {function(string)} onError
+ * @param {function(*)} onError
  */
 FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {
   const recordsRef =
     getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
   recordsRef.once('value')
     .then(snapshot => {
-      let recordsData = snapshot.val();
+      let recordsData = snapshot.val() || {};
       Object.keys(recordsData).forEach(recordId => {
         const record = JSON.parse(recordsData[recordId]);
         delete record[columnName];
@@ -374,7 +374,7 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
  * @param {string} oldName
  * @param {string} newName
  * @param {function()} onSuccess
- * @param {function(string)} onError
+ * @param {function(*)} onError
  */
 FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {
   const recordsRef =

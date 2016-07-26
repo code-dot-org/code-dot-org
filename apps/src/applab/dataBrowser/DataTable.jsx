@@ -49,15 +49,12 @@ const DataTable = React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
-    // Forget about new columns when switching between tables.
+    // Forget about new columns or editing columns when switching between tables.
     if (this.props.tableName !== nextProps.tableName) {
-      this.setState({newColumns: []});
+      this.setState(this.getInitialState());
     }
   },
 
-  /**
-   * @param {Array|undefined} newColumns
-   */
   addColumn() {
     const columnName = this.getNextColumnName();
     this.setState({

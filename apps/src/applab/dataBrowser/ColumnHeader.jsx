@@ -2,11 +2,12 @@
  * @overview Component for adding a new column to the specified table.
  */
 
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import * as dataStyles from './dataStyles';
+import { valueOr } from '../../utils';
 
 const styles = {
   menu: {
@@ -30,14 +31,14 @@ const ColumnHeader = React.createClass({
 
   getInitialState() {
     return {
-      newName: '',
+      newName: undefined,
       hasEnteredText: false,
     };
   },
 
   componentDidMount() {
     if (this.props.isEditing) {
-      ReactDOM.findDOMNode(this.refs.input).select();
+      this.input.select();
     }
   },
 
@@ -50,7 +51,7 @@ const ColumnHeader = React.createClass({
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.isEditing && !this.state.hasEnteredText) {
-      ReactDOM.findDOMNode(this.refs.input).select();
+      this.input.select();
     }
   },
 
@@ -87,12 +88,13 @@ const ColumnHeader = React.createClass({
       return;
     }
 
+    const oldName = this.props.columnName;
+    // newName could be undefined if the name has not been edited, or empty if the user
+    // has deleted all the text from the input.
+    const newName = this.state.newName || this.props.columnName;
     // Try to rename even if we are not changing the name, in case the column does not
     // exist yet.
-    const oldName = this.props.columnName;
-    const newName = this.state.newName;
-    if (newName === oldName ||
-      (!this.props.columnNames.includes(newName)) && newName !== '') {
+    if (newName === oldName || !this.props.columnNames.includes(newName)) {
       this.props.renameColumn(oldName, newName);
     } else {
       this.props.editColumn(null);
@@ -123,7 +125,7 @@ const ColumnHeader = React.createClass({
           {/* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */}
           <span className="dropdown pull-right" style={menuStyle}>
             <a className="dropdown-toggle" data-toggle="dropdown">
-              <i className="fa fa-cog" style={styles.icon} />
+              <FontAwesome icon="cog" style={styles.icon}/>
             </a>
             <ul className="dropdown-menu dropdown-menu-right">
               <li>
@@ -140,9 +142,9 @@ const ColumnHeader = React.createClass({
           </span>
         </div>
         <input
-          ref="input"
+          ref={input => this.input = input}
           style={inputStyle}
-          value={this.state.newName || this.props.columnName}
+          value={valueOr(this.state.newName, this.props.columnName)}
           onBlur={this.handleBlur}
           onChange={this.handleChange}
           onKeyUp={this.handleKeyUp}
