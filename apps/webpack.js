@@ -95,7 +95,7 @@ var storybookConfig = _.extend({}, baseConfig, {
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(true),
-      PISKEL_DEVELOPMENT_MODE: false
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]
 });
@@ -129,7 +129,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(false),
-      PISKEL_DEVELOPMENT_MODE: false
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]
 });
@@ -180,7 +180,7 @@ function create(options) {
         IN_UNIT_TEST: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
-        PISKEL_DEVELOPMENT_MODE: piskelDevMode
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
     ],
