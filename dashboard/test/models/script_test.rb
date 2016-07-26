@@ -348,7 +348,7 @@ class ScriptTest < ActiveSupport::TestCase
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
-    assert_equal 1, script.summarize[:stages].count
+    assert_equal 1, script.summarize(nil)[:stages].count
   end
 
   test 'should generate PLC objects' do
@@ -432,8 +432,5 @@ class ScriptTest < ActiveSupport::TestCase
     # authorized teacher and their students should see all three stages
     assert_equal 3, script.summarize(authorized_student)[:stages].length
     assert_equal 3, script.summarize(authorized_teacher)[:stages].length
-
-    # if we dont specify a user, consider them unauthorized
-    assert_equal 2, script.summarize[:stages].length
   end
 end

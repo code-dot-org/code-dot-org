@@ -605,10 +605,10 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize(current_user = nil)
+  def summarize(user)
     summarized_stages = stages.map(&:summarize)
 
-    unless current_user && (current_user.authorized_teacher? || current_user.student_of_authorized_teacher?)
+    unless user && (user.authorized_teacher? || user.student_of_authorized_teacher?)
       summarized_stages = summarized_stages.select{|stage| !stage[:lockable]}
     end
 
