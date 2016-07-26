@@ -10,7 +10,7 @@
 var studioApp = require('../StudioApp').singleton;
 var msg = require('./locale');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -27,36 +27,36 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 // 9 possible positions in playspace (+ random):
-var POSITION_VALUES = [[msg.positionRandom(), RANDOM_VALUE],
-    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
+var POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
 
 // Still a slightly reduced set of 17 out of 25 possible positions (+ random):
-var POSITION_VALUES_EXTENDED = [[msg.positionRandom(), RANDOM_VALUE],
-    [msg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
-    [msg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
-    [msg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
-    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-    [msg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
-    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-    [msg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
-    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
-    [msg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
-    [msg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
-    [msg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
+var POSITION_VALUES_EXTENDED = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
+    [commonMsg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
+    [commonMsg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
+    [commonMsg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
+    [commonMsg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
+    [commonMsg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
 
 var generateSetterCode = function (opts) {
   var value = opts.value || opts.ctx.getTitleValue('VALUE');
@@ -898,25 +898,50 @@ exports.install = function (blockly, blockInstallOptions) {
       West: {
         letter: commonMsg.directionWestLetter(),
         image: skin.leftArrow,
-        studioValue: Direction.WEST.toString(),
+        studioValue: Direction.WEST,
         tooltip: msg.moveLeftTooltip()
       },
       East: {
         letter: commonMsg.directionEastLetter(),
         image: skin.rightArrow,
-        studioValue: Direction.EAST.toString(),
+        studioValue: Direction.EAST,
         tooltip: msg.moveRightTooltip()
       },
       North: {
         letter: commonMsg.directionNorthLetter(),
         image: skin.upArrow,
-        studioValue: Direction.NORTH.toString(),
+        studioValue: Direction.NORTH,
         tooltip: msg.moveUpTooltip()
       },
-      South: { letter: commonMsg.directionSouthLetter(),
+      South: {
+        letter: commonMsg.directionSouthLetter(),
         image: skin.downArrow,
-        studioValue: Direction.SOUTH.toString(),
+        studioValue: Direction.SOUTH,
         tooltip: msg.moveDownTooltip()
+      },
+      Northwest: {
+        letter: commonMsg.directionNorthwestLetter(),
+        image: skin.upLeftArrow,
+        studioValue: Direction.NORTHWEST,
+        tooltip: msg.moveUpLeftTooltip()
+      },
+      Northeast: {
+        letter: commonMsg.directionNortheastLetter(),
+        image: skin.upRightArrow,
+        studioValue: Direction.NORTHEAST,
+        tooltip: msg.moveUpRightTooltip()
+      },
+      Southwest: {
+        letter: commonMsg.directionSouthwestLetter(),
+        image: skin.downLeftArrow,
+        studioValue: Direction.SOUTHWEST,
+        tooltip: msg.moveDownLeftTooltip()
+      },
+      Southeast: {
+        letter: commonMsg.directionSoutheastLetter(),
+        image: skin.downRightArrow,
+        studioValue: Direction.SOUTHEAST,
+        tooltip: msg.moveDownRightTooltip()
       }
     },
     DISTANCES: [
@@ -925,10 +950,9 @@ exports.install = function (blockly, blockInstallOptions) {
     ],
     DEFAULT_MOVE_DISTANCE: '100',
     generateBlocksForAllDirections: function () {
-      SimpleMove.generateBlocksForDirection("North");
-      SimpleMove.generateBlocksForDirection("South");
-      SimpleMove.generateBlocksForDirection("West");
-      SimpleMove.generateBlocksForDirection("East");
+      Object.keys(SimpleMove.DIRECTION_CONFIGS).forEach(function (dir) {
+        SimpleMove.generateBlocksForDirection(dir);
+      });
     },
     generateBlocksForDirection: function (direction) {
       generator["studio_move" + direction] = SimpleMove.generateCodeGenerator(direction, true);
@@ -970,9 +994,16 @@ exports.install = function (blockly, blockInstallOptions) {
 
       return function () {
         var sprite = this.getTitleValue('SPRITE') || '0';
-        var direction = directionConfig.studioValue;
+        var direction = directionConfig.studioValue.toString();
         var methodName = isEventMove ? 'move' : 'moveDistance';
-        var distance = this.getTitleValue('DISTANCE') || SimpleMove.DEFAULT_MOVE_DISTANCE;
+        // For diagonal move blocks, the move distance is longer than normal by
+        // a factor of sqrt(2), so that a move north followed by a move west
+        // takes you to the same spot as a single move northwest.
+        var defaultDistance =
+          constants.CardinalDirections.includes(directionConfig.studioValue) ?
+          SimpleMove.DEFAULT_MOVE_DISTANCE :
+          SimpleMove.DEFAULT_MOVE_DISTANCE * Math.sqrt(2);
+        var distance = this.getTitleValue('DISTANCE') || defaultDistance;
         return 'Studio.' + methodName + '(\'block_id_' + this.id + '\'' +
           ', ' + sprite +
           ', ' + direction +
@@ -2387,6 +2418,42 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.functional_keydown = function () {
     var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
     return 'Studio.isKeyDown(' + keyCode + ');';
+  };
+
+  /**
+   * Blocking prompt for user input.
+   */
+  blockly.Blocks.studio_ask = {
+    helpUrl: '',
+    init: function () {
+      var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+      // Must be marked EDITABLE so that cloned blocks share the same var name
+      fieldLabel.EDITABLE = true;
+      this.setHSV(312, 0.32, 0.62);
+      this.appendDummyInput().appendTitle(msg.ask());
+      this.setInputsInline(true);
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldImage(
+          Blockly.assetUrl('media/quote0.png'), 12, 12))
+        .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
+        .appendTitle(new Blockly.FieldImage(
+          Blockly.assetUrl('media/quote1.png'), 12, 12));
+      this.appendDummyInput().appendTitle(msg.toSet());
+      this.appendDummyInput()
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+        .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+          : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator.studio_ask = function () {
+    // Variable setter.
+    var argument0 = `prompt("${this.getTitleValue('TEXT')}")`;
+    var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
+    return varName + ' = ' + argument0 + ';\n';
   };
 };
 

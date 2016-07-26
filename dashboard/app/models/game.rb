@@ -141,6 +141,10 @@ class Game < ActiveRecord::Base
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB
   end
 
+  def sharing_filtered?
+    app == STUDIO
+  end
+
   def flappy?
     app == FLAPPY
   end

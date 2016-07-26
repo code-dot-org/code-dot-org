@@ -141,6 +141,8 @@
     picture: Ahora encuentra tu foto secreta
     words: Introduce ahora tus palabras secretas
     login: Iniciar Sesión
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "¿Olvidaste tu contraseña?"
@@ -293,6 +295,10 @@
       signin: Iniciar Sesión
       signup: Registrarse
       already_registered: "¿Ya estás registrado?"
+      pair_programming: Programación de pares
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
@@ -328,6 +334,7 @@
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
       unsubmit: NO enviado
+      worked_with: Worked With
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no
@@ -405,7 +412,7 @@
     announcement_view_all: Ver todo
     announcement_message: "<b>January 6, 2015</b> - Learn beyond one Hour of Code
       in your classroom. Start a new intro course and track student progress."
-    announcement_button: Compruebe la función de
+    announcement_learn_more_button: Aprende más
     announcement_petition: Como profesor, usted está liderando un movimiento para
       dar a cada estudiante en todas las escuelas la oportunidad de aprender computación.
       Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes
@@ -505,10 +512,6 @@
         navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros
         navegadores compatibles</a>. Puede tratar de ver la página, pero se espera
         una funcionalidad rota.
-      ie_message: Code.org pronto eliminará el soporte para Internet Explorer 8, 9
-        y 10. Por favor actualice a un navegador moderno.
-      ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet
-        Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
       link: Aprende más
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intente recargar la página
@@ -690,40 +693,6 @@
     hour: 1 hora
     day: día
     week: semana
-  data:
-    script:
-      name:
-        20-hour:
-          title: Curso de Introducción a las Ciencias de la Computación K-8 (15-25
-            horas)
-          description: 'Este curso de 20 horas introduce el núcleo de la informática
-            y conceptos de programación. El curso está diseñado para su uso en aulas
-            para los grados K-8, pero es divertido aprender en todas las edades.  '
-        Hour of Code:
-          title: La hora del código 2013
-          description: ''
-        edit-code:
-          title: Editar el código
-          description: ''
-        events:
-          title: Eventos
-          description: ''
-        builder:
-          title: Constructor
-          description: ''
-        flappy:
-          title: Código Flappy
-          description: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
-            nuestro tutorial de Código Flappy!"
-        jigsaw:
-          title: Rompecabezas
-          description: ''
-        step:
-          title: Paso
-          description: ''
-        sample_level_builder:
-          title: Constructor de nivel de ejemplo
-          description: ''
   age_interstitial:
     age: Tu edad
     header: Actualización de la información de tu cuenta
@@ -763,6 +732,8 @@
     share_copy_link: 'Copiar el enlace:'
     share_embed_description: Puedes pegar el código escondido en una página HTML para
       mostrar el proyecto en una página web.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Insertar
     advanced_share: Mostrar opciones avanzadas
     close: Cerrar
@@ -791,6 +762,8 @@
     abuse:
       tos: Este proyecto ha sido denunciado por violar los <a href='http://code.org/tos'>Términos
         de Uso</a> y no puede ser compartido con otros.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Si cree que esto es un error, <a href='https://code.org/contact'>contáctenos.</a>
       go_to_code_studio: Ve a Code Studio
       report_abuse_form:
@@ -831,6 +804,15 @@
     instructor_feedback: Retroalimentación del instructor
     peer_feedback: Retroalimentación de los compañeros
     outdated: Esta retroalimientación se añadió para una versión previamente presentada
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Busca un ícono…
@@ -851,13 +833,14 @@
     content: Contenido
     practice: Prácticas de Profesor
   external_links:
-    disclaimer_md: "<strong>Descargo de responsabilidad: ahora está dejando el dominio
-      Code.org, a un sitio que no es operado por Code.org.</strong> Este sitio puede
-      tener políticas de privacidad que difieren de Code.org. <br/><br/> Hemos seleccionado
-      estos recursos de terceros porque pensamos que serán útiles para usted. Aunque
-      no somos directamente responsables por el contenido de este sitio web, por favor
-      <a href='%{support_url}'><a href='mailto:support@code.org'>contacte con soporte</a>
-      si encuentra ofensivo el contenido, o si el sitio vinculado no está disponible."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hora de codigo descargas
     capsule_title: "¿Tienes Internet?"

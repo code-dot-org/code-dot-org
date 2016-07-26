@@ -35,7 +35,6 @@ exports.setupBlocklyFrame = function () {
   assert(Object.keys(global.Blockly).length > 0);
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
-  testUtils.setupLocales();
 
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files

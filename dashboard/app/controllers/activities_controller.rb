@@ -1,6 +1,4 @@
-require 'cdo/regexp'
-require 'cdo/geocoder'
-require 'cdo/web_purify'
+require 'cdo/share_filtering'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -12,7 +10,6 @@ class ActivitiesController < ApplicationController
   protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2_147_483_647
-  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
@@ -42,10 +39,15 @@ class ActivitiesController < ApplicationController
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
-      begin
-        share_failure = find_share_failure(params[:program])
-      rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
-        # If WebPurify fails, the program will be allowed
+      share_failure = nil
+      if @level.game.sharing_filtered?
+        begin
+          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
+          # If WebPurify or Geocoder fail, the program will be allowed, and we
+          # retain the share_checking_error to log it alongside the level_source
+          # ID below.
+        end
       end
 
       unless share_failure
@@ -106,24 +108,6 @@ class ActivitiesController < ApplicationController
   end
 
   private
-
-  def find_share_failure(program)
-    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
-
-    xml_tag_regexp = /<[^>]*>/
-    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
-
-    if email = RegexpUtils.find_potential_email(program_tags_removed)
-      return {message: t('share_code.email_not_allowed'), contents: email, type: 'email'}
-    elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
-      return {message: t('share_code.address_not_allowed'), contents: street_address, type: 'address'}
-    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
-      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number, type: 'phone'}
-    elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
-      return {message: t('share_code.profanity_not_allowed'), type: 'profanity'}
-    end
-    nil
-  end
 
   def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")

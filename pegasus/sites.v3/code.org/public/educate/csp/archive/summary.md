@@ -10,6 +10,8 @@ The materials below are from the '15-'16 Computer Science Principles pilot that 
 
 **IMPORTANT NOTE:** It is only the ['16-'17 syllabus and curriculum](/educate/csp) that is officially endorsed by the College Board and able to be submitted as a pre-approved syllabus for AP&reg; CSP audit.  
 
+* ['15-'16 Syllabus and Overview (**not** endorsed by College Board)](https://docs.google.com/document/export?format=pdf&id=15w5_kQOsY0fzT-jIa5TsqC11lEv-ciWB7jHqdEEZXkw)
+
 ## <a name="lessons"></a>Lessons
 
 

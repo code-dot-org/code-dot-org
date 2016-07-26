@@ -13,7 +13,7 @@ var dom = require('./dom');
 var constants = require('./constants.js');
 var experiments = require('./experiments');
 var KeyCodes = constants.KeyCodes;
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -76,7 +76,7 @@ var MAX_PHONE_WIDTH = 500;
  *           (such as when they are not signed in).
  */
 
-var StudioApp = function () {
+function StudioApp() {
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
 
@@ -229,9 +229,12 @@ var StudioApp = function () {
   this.noPadding = false;
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
+}
+// TODO: once code-studio and apps share common modules in the same bundle,
+// get rid of this window nonsense.
+module.exports = window.StudioApp = window.StudioApp || {
+  singleton: new StudioApp()
 };
-module.exports = StudioApp;
-StudioApp.singleton = new StudioApp();
 
 /**
  * Configure StudioApp options
@@ -339,7 +342,7 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-          showInstructionsDialog={(autoClose, showHints) => {
+        showInstructionsDialog={(autoClose, showHints) => {
             this.showInstructionsDialog_(config.level, autoClose, showHints);
           }}
       />
@@ -506,7 +509,8 @@ StudioApp.prototype.init = function (config) {
     utils.fireResizeEvent();
   }
 
-  this.alertIfAbusiveProject('#codeWorkspace');
+  this.alertIfAbusiveProject();
+  this.alertIfProfaneOrPrivacyViolatingProject();
 
   // make sure startIFrameEmbeddedApp has access to the config object
   // so it can decide whether or not to show a warning.
@@ -1070,6 +1074,10 @@ StudioApp.prototype.isRtl = function () {
  */
 StudioApp.prototype.localeDirection = function () {
   return (this.isRtl() ? 'rtl' : 'ltr');
+};
+
+StudioApp.prototype.showNextHint = function () {
+  return this.authoredHintsController_.showNextHint();
 };
 
 /**
@@ -1910,7 +1918,7 @@ StudioApp.prototype.configureDom = function (config) {
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
-  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -2815,14 +2823,27 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
 
 /**
  * If the current project is considered abusive, display a small alert box
- * @param {string} parentSelector The selector for the DOM element parent we
- *   should display the error in.
  */
-StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+StudioApp.prototype.alertIfAbusiveProject = function () {
   if (window.dashboard && dashboard.project &&
       dashboard.project.exceedsAbuseThreshold()) {
     var i18n = {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  }
+};
+
+/**
+ * If the current project violates privacy policy or contains profanity,
+ * display a small alert box.
+ */
+StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
+  if (window.dashboard && dashboard.project &&
+      dashboard.project.hasPrivacyProfanityViolation()) {
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.policy_violation'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
     };
     this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
@@ -2890,6 +2911,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
+    skinId: config.skinId,
+    showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -2907,7 +2930,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
-    is13Plus: config.is13Plus
+    is13Plus: config.is13Plus,
+    isSignedIn: config.isSignedIn,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

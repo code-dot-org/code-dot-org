@@ -111,6 +111,13 @@
         <block type="controls_repeat">
           <title name="TIMES">4</title>
         </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="do something"/>
+        </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>

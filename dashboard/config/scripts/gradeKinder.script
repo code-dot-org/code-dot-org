@@ -10,8 +10,10 @@ level 'MarbleMaze'
 
 stage 'Persistence & Frustration'
 level 'StevieMarbles'
-level 'MarbleMaze2'
 level 'FrustrationSolutions'
+level 'MarbleMaze2'
+level 'gradeK_external_FrustrationWorksheet'
+
 
 stage 'Sequences & Algorithms'
 level 'seqAlg'
@@ -47,7 +49,7 @@ level 'blockly:Jigsaw:12'
 assessment 'blockly:Jigsaw:13'
 
 stage 'Programming Unplugged'
-level 'comingSoon'
+level 'gradeK_unplugged_programming'
 
 stage 'Programming'
 level 'DebuggingIntro'
@@ -68,11 +70,12 @@ level 'K2.0 sequence FP'
 
 
 stage 'Being Safe Online'
-level 'onlineNeighbors'
+level 'GoingPlacesSafely'
+assessment 'K-1 Keep it Private multi 1'
 
 
 stage 'Loops Unplugged'
-level 'comingSoon'
+level 'gradeK_unplugged_loops'
 
 
 stage 'Loops'

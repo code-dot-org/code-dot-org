@@ -91,10 +91,11 @@ exports.checkSharedAppWarnings = function (options) {
 
   return ReactDOM.render(
       <ShareWarningsDialog
-          showStoreDataAlert={showStoreDataAlert}
-          is13Plus={is13Plus}
-          handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert, options)}
-          handleTooYoung={handleTooYoung}/>,
+        showStoreDataAlert={showStoreDataAlert}
+        is13Plus={is13Plus}
+        handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert, options)}
+        handleTooYoung={handleTooYoung}
+      />,
     modal
   );
 };

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Now have the artist draw three stars and jump over the moon!",
+    "instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't give up!\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -108,11 +108,8 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="controls_repeat" editable="false">
+        <block type="controls_repeat">
           <title name="TIMES">4</title>
-        </block>
-        <block type="controls_repeat" editable="false">
-          <title name="TIMES">8</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -125,12 +122,6 @@
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">8</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">8</title>
         </block>
       </xml>
     </recommended_blocks>
