@@ -47,6 +47,7 @@ var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var experiments = require('../experiments');
+var constants = require('../constants');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -982,6 +983,9 @@ Artist.prototype.step = function (command, values, options) {
       this.setHeading_(heading);
       this.moveForward_(result.distance);
       break;
+    case 'JT':  // Jump To Location
+      this.jumpTo_(values[0]);
+      break;
     case 'MD':  // Move diagonally (use longer steps if showing joints)
       distance = values[0];
       heading = values[1];
@@ -1107,6 +1111,18 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.isDrawingWithPattern = false;
   }
+};
+
+Artist.prototype.jumpTo_ = function (pos) {
+  let x, y;
+  if (Array.isArray(pos)) {
+    [x, y] = pos;
+  } else {
+    x = utils.xFromPosition(pos, CANVAS_WIDTH);
+    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
+  }
+  this.x = Number(x);
+  this.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {

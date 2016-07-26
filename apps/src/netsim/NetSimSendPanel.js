@@ -7,7 +7,7 @@
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var markup = require('./NetSimSendPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
