@@ -318,6 +318,8 @@ module.exports = function (grunt) {
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
         {pattern: 'build/**/*', watched: false, included: false, nocache: true},
         {pattern: 'static/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'lib/p5play/p5.js'},
+        {pattern: 'lib/p5play/p5.play.js'},
       ],
       client: {
         mocha: {
@@ -348,8 +350,6 @@ module.exports = function (grunt) {
     },
     entry: {
       files: [
-        {src: ['lib/p5play/p5.js']},
-        {src: ['lib/p5play/p5.play.js']},
         {src: ['test/entry-tests.js'], watched: false}
       ],
       preprocessors: {
