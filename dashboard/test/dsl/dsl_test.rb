@@ -376,9 +376,10 @@ DSL
     assert_equal expected, output
   end
 
-  test 'test Script DSL flex category as property or as property hash' do
+  test 'test Script DSL flex category as property hash' do
     input_dsl = <<DSL
-stage 'Stage1', 'Content'
+stage 'Stage1',
+  flex_category: 'Content'
 level 'Level 1'
 stage 'Stage2',
   flex_category: 'Practice'
