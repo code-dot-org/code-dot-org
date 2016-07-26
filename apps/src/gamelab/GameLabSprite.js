@@ -465,10 +465,10 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
                   m1 = 2 * other.mass / totalMass;
                   m2 = 2 * this.mass / totalMass;
                 }
-                var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
-                var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
-
+                
                 if (modifyPosition) {
+                  var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
+                  var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
                   this.velocity.sub(newVel1.mult(this.restitution));
                   other.velocity.sub(newVel2.mult(other.restitution));
                 }
@@ -571,6 +571,8 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
   return result;
 };
 
+/* eslint-enable */
+
 /**
  * Returns whether or not this sprite will bounce or collide with another sprite
  * or group. Modifies the sprite's touching property object.
@@ -578,7 +580,5 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
  */
 
 var isTouching = function (p5Inst, target) {
-  return this.AABBops('collide', target, function() {}, false);
+  return this.AABBops('collide', target, undefined, false);
 };
-
-/* eslint-enable */
