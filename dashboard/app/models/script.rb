@@ -385,7 +385,6 @@ class Script < ActiveRecord::Base
         scripts_to_add << [{
           id: script_data[:id],
           name: name,
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
@@ -550,7 +549,6 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
         Script.add_script({
           name: script_params[:name],
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
@@ -638,8 +636,6 @@ class Script < ActiveRecord::Base
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
-
-    summary[:trophies] = Concept.summarize_all if trophies
 
     summary
   end
