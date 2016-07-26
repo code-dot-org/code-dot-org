@@ -37,7 +37,6 @@ class DslTest < ActiveSupport::TestCase
         }
       ],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -65,7 +64,6 @@ class DslTest < ActiveSupport::TestCase
       id: nil,
       stages: [],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: true,
@@ -88,7 +86,6 @@ class DslTest < ActiveSupport::TestCase
       id: nil,
       stages: [],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: true,
@@ -111,7 +108,6 @@ class DslTest < ActiveSupport::TestCase
       id: nil,
       stages: [],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -134,7 +130,6 @@ class DslTest < ActiveSupport::TestCase
       id: nil,
       stages: [],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -172,7 +167,6 @@ level 'Level 3'
         }
       ],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -234,7 +228,6 @@ level 'Level 3'
         }
       ],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -292,7 +285,6 @@ level 'Level 3'
         }
       ],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -410,7 +402,6 @@ DSL
         }
       ],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,
@@ -450,7 +441,6 @@ DSL
         }
       ],
       hidden: true,
-      trophies: false,
       wrapup_video: nil,
       login_required: false,
       admin_required: false,

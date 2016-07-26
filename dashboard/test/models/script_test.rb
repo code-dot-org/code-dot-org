@@ -52,8 +52,8 @@ class ScriptTest < ActiveSupport::TestCase
     # Set different level name in tested script
     parsed_script[4][:levels][0]['name'] = "Level 1"
 
-    # Set different 'trophies' and 'hidden' options from defaults in Script.setup
-    options = {name: File.basename(@script_file, ".script"), trophies: true, hidden: false}
+    # Set different 'hidden' option from defaults in Script.setup
+    options = {name: File.basename(@script_file, ".script"), hidden: false}
     script = Script.add_script(options, parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
