@@ -348,7 +348,9 @@ module.exports = function (grunt) {
     },
     entry: {
       files: [
-        {src: ['test/entry-tests.js'], watched: false},
+        {src: ['lib/p5play/p5.js']},
+        {src: ['lib/p5play/p5.play.js']},
+        {src: ['test/entry-tests.js'], watched: false}
       ],
       preprocessors: {
         'test/entry-tests.js': ['webpack', 'sourcemap'],
