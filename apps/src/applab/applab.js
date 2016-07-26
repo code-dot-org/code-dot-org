@@ -11,7 +11,7 @@ import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -51,7 +51,6 @@ var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 var Exporter = require('./Exporter');
 
-var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');

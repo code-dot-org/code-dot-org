@@ -30,6 +30,8 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "start_direction": "90",
+    "instructions": "You just created a nested loop! Let's repeat all of these commands with another repeat block to draw windows on this house. Don't forget the jump block!",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>You just created a nested loop! Let's repeat all of these commands with **another** `repeat` block to draw windows on this house. Don't forget to `jump`!",
     "contained_level_names": null
   },
   "published": true,
@@ -99,6 +101,13 @@
               <title name="COLOUR">#ff0000</title>
             </block>
           </value>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="do something"/>
         </block>
       </xml>
     </toolbox_blocks>

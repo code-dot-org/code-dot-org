@@ -27,8 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "markdown_instructions": "In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,20 +1,17 @@
 name 'CSPPD2 PT reflection'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Practice PT >  Discussion
 
-### Practice PT >  Discussion
+<img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/dWXyxyscOLV4CVa/Screen%20Shot%202015-07-17%20at%2010.58.44%20PM.png" class="level-image">
 
-<img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/dWXyxyscOLV4CVa/Screen%20Shot%202015-07-17%20at%2010.58.44%20PM.png" width=250 style="float:right; margin-left:30px">
-#### Reminder: Accessing Forums
+## Reminder: Accessing Forums
+
 *Each lesson plan includes a link to a dedicated forum thread in the "Materials and Prep" section on the right side of the first page (shown on the right). You can always access the thread for a given lesson by following the link inside the lesson.* 
-<br><br>
 
 **For this activity, you'll need to click on the forum link for the lesson, either from the overview page on the second level, or directly from the [lesson plan](https://docs.google.com/document/d/1rkVbwb8nJBlnF9t3hkyIyckM6gJGEjcUwyQiyV-Jlu4/edit).** 
 
-<br><br>
-
->#### Assignment: Post to forum with thoughts on Practice PT
+>## Assignment: Post to forum with thoughts on Practice PT
 Now that you've worked on the practice performance task and become more familiar with the lesson, use the forum to discuss your questions about and plans using this project in your course. **For example, consider questions like**:
 
 >- How do you see this lesson **pulling together what students have learned** in this unit?
@@ -24,11 +21,9 @@ Now that you've worked on the practice performance task and become more familiar
 - How will you **assess student learning**?
 - What **content questions** do you have? 
 
-<br>
 Be on the lookout for questions from others that you feel comfortable answering, and make note of any strategies or ideas you want to borrow from others for teaching the lessons! 
-<br><br>
-#####  **Once you've posted in the forum, click continue below**
-<br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+**Once you've posted in the forum, click continue below.**
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

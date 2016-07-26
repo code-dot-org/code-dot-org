@@ -86,12 +86,12 @@ export const AppLabTooltipOverlay = React.createClass({
 
     return (
       <TooltipOverlay
-          width={this.props.width}
-          height={this.props.height}
-          mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
-          mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
-          providers={tooltipProviders}
-          tooltipAboveCursor={!!dragPoint}
+        width={this.props.width}
+        height={this.props.height}
+        mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
+        mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
+        providers={tooltipProviders}
+        tooltipAboveCursor={!!dragPoint}
       />
     );
   }

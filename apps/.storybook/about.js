@@ -1,4 +1,5 @@
 import * as storybook from '@kadira/storybook';
+import React from 'react';
 
 const styles = {
   about: {
@@ -142,6 +143,21 @@ storybook
           using the normal add() method.
         </li>
       </ul>
+      <h1>Marking Components as Deprecated</h1>
+      <p>
+        To mark a component as deprecated, use the <code>deprecatedStoriesOf()</code>
+        function instead of <code>storiesOf()</code>. The <code>deprecatedStoriesOf()</code>
+        function takes an optional third argument, which an object with additional information
+        about the deprecation. For example:
+        <pre>{`storybook.deprecatedStoriesOf('SomeComponent', module, {
+  reason: 'SomeComponent was really old and crufty, and someone built the new hotness.'
+  replacement: "NewHotness"
+})`}</pre>
+      </p>
+      <p>
+        This will automatically create a new deprecated story for
+        the component that contains a link to the stories for "NewHotness"
+      </p>
       <h1>Links</h1>
       <ul>
         <li>

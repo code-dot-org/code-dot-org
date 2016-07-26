@@ -314,4 +314,16 @@ class FollowersControllerTest < ActionController::TestCase
     assert user_script.assigned_at
     assert_equal @laurel_section_script.script, @student.primary_script
   end
+
+  test 'joining a pd workshop session redirects to the workshop enrollment controller' do
+    section = create :section, section_type: Section::TYPE_PD_WORKSHOP
+
+    # with and without sign-in
+    get :student_user_new, section_code: section.code
+    assert_redirected_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: section.code
+
+    sign_in create(:teacher)
+    get :student_user_new, section_code: section.code
+    assert_redirected_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: section.code
+  end
 end

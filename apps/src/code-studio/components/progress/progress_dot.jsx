@@ -184,11 +184,11 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
 
     return (
       <a
-        key='link'
+        key="link"
         href={level.locked ? undefined : level.url + location.search}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
         style={[
@@ -234,7 +234,7 @@ export const ProgressDot = React.createClass({
         {
           showLevelName &&
             <span
-              key='named_level'
+              key="named_level"
               style={[styles.levelName, level.locked && {color: color.charcoal}]}
             >
               {level.name}

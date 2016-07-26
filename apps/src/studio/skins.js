@@ -7,7 +7,7 @@
 
 var skinsBase = require('../skins');
 var msg = require('./locale');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var constants = require('./constants');
 var studioApp = require('../StudioApp').singleton;
 

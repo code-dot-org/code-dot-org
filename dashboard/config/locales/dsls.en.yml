@@ -169,6 +169,9 @@ en:
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
       CSD U3 Variables2 STOP variables in expressions: {}
+      CSD U3 abstraction intro:
+        description here: description here
+        title: title
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -1568,6 +1571,13 @@ en:
       grade1_story_theGreatTowerTopple:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
+      gradeK_external_FrustrationWorksheet:
+        Frustration Worksheet: Frustration Worksheet
+      gradeK_unplugged_events:
+        Big Event: Big Event
+      gradeK_unplugged_loops:
+        Loops Unplugged: Loops Unplugged
+      gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
       introduction to events: {}
@@ -1957,13 +1967,17 @@ en:
       name:
         CSP Culminating Assessment: {}
         PS U3 Assessment1 new: {}
+        PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
         TeacherCon Self-Assessment: {}
         TeacherCon Unit 1 Assessment: {}
+        Test anonymous student survey: {}
+        Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        brendan test survey: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -3973,6 +3987,12 @@ en:
         right answer: right answer
         wrong answer: wrong answer
         you are so smart!: you are so smart!
+      PS MC test 7-22:
+        Here is a description: Here is a description
+        Here is a title: Here is a title
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
@@ -4029,6 +4049,38 @@ en:
         description here: description here
         foo: foo
         title: title
+      PS pre-assessment q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
@@ -5247,6 +5299,18 @@ en:
         it replaces traditional science labs: it replaces traditional science labs
         it slows the process of discovery: it slows the process of discovery
         nothing at all: nothing at all
+      test anonymous student survey educational:
+        Do you think computer science is educational?: Do you think computer science is educational?
+        Maybe: Maybe
+        'No': 'No'
+        'Yes': 'Yes'
+      test anonymous student survey fun:
+        Agree: Agree
+        Computer science is fun.: Computer science is fun.
+        Disagree: Disagree
+        Neutral: Neutral
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
@@ -15,6 +14,8 @@ function shallowRender(element) {
 }
 
 describe('MarkdownInstructions', function () {
+  testUtils.throwOnConsoleErrors();
+
   it('standard case had top padding and no left margin', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
@@ -22,7 +23,7 @@ describe('MarkdownInstructions', function () {
           renderedMarkdown="md"
           markdownClassicMargins={false}
           inTopPane={false}
-          noInstrucstionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={true}
         />
       </div>
     );
@@ -38,7 +39,7 @@ describe('MarkdownInstructions', function () {
         <StatelessMarkdownInstructions
           renderedMarkdown="md"
           inTopPane={true}
-          noInstrucstionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={true}
         />
       </div>
     );
@@ -53,7 +54,8 @@ describe('NonMarkdownInstructions', function () {
       <div>
         <NonMarkdownInstructions
           puzzleTitle="title"
-          instructions="instructions"/>
+          instructions="instructions"
+        />
       </div>
     );
     var element = dom.children[0];
@@ -69,7 +71,8 @@ describe('NonMarkdownInstructions', function () {
         <NonMarkdownInstructions
           puzzleTitle="title"
           instructions="instructions"
-          instructions2="instructions2"/>
+          instructions2="instructions2"
+        />
       </div>
     );
     var element = dom.children[0];

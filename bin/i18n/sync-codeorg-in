@@ -5,7 +5,7 @@
 # as well as instructions for levelbuilder supported levels and
 # collects them to the single source folder i18n/locales/source.
 
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'fileutils'
 require 'yaml'
 require 'tempfile'

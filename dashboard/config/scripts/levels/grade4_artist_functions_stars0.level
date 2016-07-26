@@ -119,5 +119,10 @@
         </block>
       </xml>
     </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </predraw_blocks>
   </blocks>
 </Artist>
