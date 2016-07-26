@@ -224,6 +224,7 @@ NetSimRouterLogModal.prototype.render = function () {
       i18n={i18n}
       canSetRouterLogMode={this.canSetRouterLogMode_()}
       isAllRouterLogMode={this.isAllRouterLogMode_}
+      setRouterLogMode={this.setRouterLogMode_.bind(this)}
       localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
       currentTrafficFilter={this.currentTrafficFilter_}
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
@@ -454,6 +455,7 @@ NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
  */
 NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
   this.isAllRouterLogMode_ = mode === 'all';
+  this.render();
 };
 
 

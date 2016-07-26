@@ -30,6 +30,7 @@ const NetSimLogBrowser = React.createClass({
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
     canSetRouterLogMode: React.PropTypes.bool,
     isAllRouterLogMode: React.PropTypes.bool,
+    setRouterLogMode: React.PropTypes.func.isRequired,
     localAddress: React.PropTypes.string,
     currentTrafficFilter: React.PropTypes.string.isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -52,6 +53,7 @@ const NetSimLogBrowser = React.createClass({
             i18n={this.props.i18n}
             canSetRouterLogMode={this.props.canSetRouterLogMode}
             isAllRouterLogMode={this.props.isAllRouterLogMode}
+            setRouterLogMode={this.props.setRouterLogMode}
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
           />
@@ -74,6 +76,7 @@ const LogBrowserFilters = React.createClass({
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
     canSetRouterLogMode: React.PropTypes.bool,
     isAllRouterLogMode: React.PropTypes.bool,
+    setRouterLogMode: React.PropTypes.func.isRequired,
     localAddress: React.PropTypes.string,
     currentTrafficFilter: React.PropTypes.string.isRequired
   },
@@ -85,6 +88,7 @@ const LogBrowserFilters = React.createClass({
           <RouterLogModeDropdown
             i18n={this.props.i18n}
             isAllRouterLogMode={this.props.isAllRouterLogMode}
+            setRouterLogMode={this.props.setRouterLogMode}
           />
         }
         {this.props.localAddress &&
@@ -103,7 +107,12 @@ const LogBrowserFilters = React.createClass({
 const RouterLogModeDropdown = React.createClass({
   propTypes: {
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    isAllRouterLogMode: React.PropTypes.bool
+    isAllRouterLogMode: React.PropTypes.bool,
+    setRouterLogMode: React.PropTypes.func.isRequired
+  },
+
+  onChange(event) {
+    this.props.setRouterLogMode(event.target.value);
   },
 
   render() {
@@ -113,6 +122,7 @@ const RouterLogModeDropdown = React.createClass({
         className="pull-right"
         style={style.dropdown}
         value={this.props.isAllRouterLogMode ? 'all' : 'mine'}
+        onChange={this.onChange}
       >
         <option value="mine">
           {this.props.i18n.logBrowserHeader_toggleMine()}
@@ -172,7 +182,6 @@ const LogTable = React.createClass({
   },
 
   render() {
-    console.log(this.props.logRows);
     const headerFields = this.props.headerFields;
 
     // Define a sorting transform that can be applied to each column
