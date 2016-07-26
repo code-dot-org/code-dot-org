@@ -35,7 +35,7 @@
     "@cdo/apps": "file:src",
     "@code-dot-org/piskel": "0.4.0",
     "@kadira/react-storybook-addon-info": "^3.0.4",
-    "@kadira/storybook": "^1.34.0",
+    "@kadira/storybook": "^1.41.0",
     "Base64": "0.3.0",
     "babel-core": "6.9.0",
     "babel-istanbul-loader": "^0.1.0",
@@ -154,7 +154,6 @@
     "which": "1.1.1"
   },
   "dependencies": {
-    "@kadira/storybook": "^1.41.0",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
     "query-string": "4.1.0",
