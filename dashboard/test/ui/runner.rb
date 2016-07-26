@@ -250,6 +250,7 @@ if test_type == 'Eyes'
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
+status_page_url = nil
 if $options.with_status_page
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
@@ -521,7 +522,8 @@ $suite_duration = Time.now - $suite_start_time
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
   "Test count: #{($suite_success_count + $suite_fail_count)}. " \
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}."
+  "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"
