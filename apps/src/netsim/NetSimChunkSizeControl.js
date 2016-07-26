@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimSlider = require('./NetSimSlider');
 require('../utils'); // Provides Function.prototype.inherits
 

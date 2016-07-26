@@ -101,12 +101,15 @@ var VersionHistory = React.createClass({
       );
     } else {
       var rows = this.state.versions.map(function (version) {
-        return <VersionRow
-          key={version.versionId}
-          versionId={version.versionId}
-          lastModified={new Date(version.lastModified)}
-          isLatest={version.isLatest}
-          onChoose={this.onChooseVersion.bind(this, version.versionId)} />;
+        return (
+          <VersionRow
+            key={version.versionId}
+            versionId={version.versionId}
+            lastModified={new Date(version.lastModified)}
+            isLatest={version.isLatest}
+            onChoose={this.onChooseVersion.bind(this, version.versionId)}
+          />
+        );
       }.bind(this));
 
       body = (

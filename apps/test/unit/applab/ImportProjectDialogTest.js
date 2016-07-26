@@ -4,14 +4,12 @@ import sinon from 'sinon';
 import { shallow } from 'enzyme';
 
 import {expect} from '../../util/configuredChai';
-import {setupLocales} from '../../util/testUtils';
-setupLocales();
 
-var ImportProjectDialog = require('@cdo/apps/applab/ImportProjectDialog');
-var {
-  sources: sourcesApi,
-  channels: channelsApi,
-} = require('../../../src/clientApi');
+import ImportProjectDialog from '@cdo/apps/applab/ImportProjectDialog';
+import {
+  sources as sourcesApi,
+  channels as channelsApi,
+} from '@cdo/apps/clientApi';
 
 describe("Applab ImportProjectDialog component", function () {
 

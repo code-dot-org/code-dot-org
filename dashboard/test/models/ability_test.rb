@@ -30,6 +30,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
 
+    assert !ability.can?(:read, Section)
+
     assert !ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -54,6 +56,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Game)
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
+
+    assert !ability.can?(:read, Section)
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
@@ -82,6 +86,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Game)
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
+
+    assert !ability.can?(:read, Section)
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
@@ -142,6 +148,23 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:manage, LevelSourceHint)
     assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'teachers read their Section' do
+    teacher = create :teacher
+    ability = Ability.new teacher
+    my_section = create :section, user_id: teacher.id
+    not_my_section = create :section, user_id: create(:teacher).id
+
+    # When checking a class, conditions are ignored.
+    # See https://github.com/ryanb/cancan/wiki/checking-abilities#checking-with-class
+    assert ability.can? :read, Section
+
+    # A teacher can read their own section.
+    assert ability.can? :read, my_section
+
+    # A teacher cannot read another teacher's section.
+    assert ability.cannot? :read, not_my_section
   end
 
   test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do

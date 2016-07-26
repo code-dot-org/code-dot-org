@@ -73,6 +73,7 @@ h1 {
 }
 
 h2 {
+  margin: 25px 0 10px 0;
   font-family: $gotham-bold;
   font-weight: normal;
   font-size: 22px;
@@ -1689,6 +1690,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1779,6 +1784,39 @@ a.download-video {
       margin: 0;
     }
   }
+
+  blockquote {
+    padding: 15px 20px;
+    background: $lightest_purple;
+    border: 0;
+    border-radius: 10px;
+    clear: both;
+    p {
+      margin-bottom: 10px;
+    }
+    h2:first-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.level-image {
+  width: 380px;
+  float: right;
+  margin: 20px 0 30px 30px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px $shadow;
+  border: 1px solid $lighter_gray;
+}
+
+.external, .free-response {
+  max-width: 970px;
+  margin: auto;
+}
+
+.free-response .response {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {
@@ -2273,17 +2311,31 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-.instructions-markdown {
-  padding-top: 19px;
+.csf-top-instructions {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
     color: $black;
   }
 
+  .secondary-instructions p {
+    font-size: 14px;
+    color: #5b6770;
+  }
+
   strong {
     font-family: $gotham-bold;
   }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
 }
 
 .markdown-level-header-text {

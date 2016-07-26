@@ -10,7 +10,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -592,9 +592,9 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          isRtl={studioApp.isRtl()}
-          visualizationColumn={<FlappyVisualizationColumn/>}
-          onMount={onMount}
+        isRtl={studioApp.isRtl()}
+        visualizationColumn={<FlappyVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

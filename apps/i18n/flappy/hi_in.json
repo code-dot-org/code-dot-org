@@ -17,7 +17,7 @@
   "incrementPlayerScore": "अंक बनाओ",
   "incrementPlayerScoreTooltip": "वर्तमान खिलाडी के स्कोर में एक  जोड़ें।",
   "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
+  "no": "नहीं",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "playSoundRandom": "कोई सी भी ध्वनि चले.",
   "playSoundBounce": "उछलने की ध्वनि चले",
@@ -128,5 +128,5 @@
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
   "whenRunButtonClick": "when game starts",
   "whenRunButtonClickTooltip": "Execute the actions below when the game starts.",
-  "yes": "Yes"
+  "yes": "हाँ"
 }

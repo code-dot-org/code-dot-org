@@ -1,5 +1,5 @@
 var React = require('react');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var connect = require('react-redux').connect;
 
 var GameButtons = require('../templates/GameButtons').default;
@@ -52,7 +52,7 @@ var GameLabVisualizationColumn = function (props) {
 
 GameLabVisualizationColumn.propTypes = {
   finishButton: React.PropTypes.bool.isRequired,
-  instructionsInTopPane: BelowVisualization.propTypes.instructionsInTopPane,
+  instructionsInTopPane: React.PropTypes.bool.isRequired
 };
 
 module.exports = connect(function propsFromStore(state) {

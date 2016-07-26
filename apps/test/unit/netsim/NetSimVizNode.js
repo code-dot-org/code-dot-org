@@ -5,7 +5,6 @@ var testUtils = require('../../util/testUtils');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 
-testUtils.setupLocale('netsim');
 
 describe("NetSimVizNode", function () {
 

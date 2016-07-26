@@ -5,7 +5,7 @@ var AbuseError = require('./abuse_error');
  * A big blue box with an exclamation mark on the left and our abuse text on
  * the right.
  */
-var AbuseExclamation = React.createClass({
+export default React.createClass({
   propTypes: {
     i18n: React.PropTypes.shape({
       tos: React.PropTypes.string.isRequired,
@@ -77,9 +77,10 @@ var AbuseExclamation = React.createClass({
           </td>
           <td style={bodyStyle}>
             <AbuseError
-                i18n={this.props.i18n}
-                className="exclamation-abuse"
-                textStyle={textStyle}/>
+              i18n={this.props.i18n}
+              className="exclamation-abuse"
+              textStyle={textStyle}
+            />
             <p className="exclamation-abuse" style={textStyle}>
               <a href={finalLink}>{finalLinkText}</a>
             </p>
@@ -89,4 +90,3 @@ var AbuseExclamation = React.createClass({
     );
   }
 });
-module.exports = AbuseExclamation;

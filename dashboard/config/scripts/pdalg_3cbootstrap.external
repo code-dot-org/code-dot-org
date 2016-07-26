@@ -1,5 +1,4 @@
 name 'PDAlg 3CBootstrap'
-css 'k5pd'
 skip_dialog true
 
 markdown <<MARKDOWN

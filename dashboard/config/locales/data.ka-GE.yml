@@ -1,75 +1,5 @@
 "ka":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 შესავალი ინფორმატიკაში
-          Unplug1: "ეტაპი 1"
-          Maze: "ეტაპი 2"
-          Unplug2: "ეტაპი 3"
-          Unplug3: "ეტაპი 4"
-          Artist: "ეტაპი 5"
-          Unplug4: "ეტაპი 6"
-          Artist2: "ეტაპი 7"
-          Unplug5: "ეტაპი 8"
-          Farmer: "ეტაპი 9"
-          Unplug6: "ეტაპი 10"
-          Artist3: "ეტაპი 11"
-          Unplug7: "ეტაპი 12"
-          Farmer2: "ეტაპი 13"
-          Unplug8: "ეტაპი 14"
-          Artist4: "ეტაპი 15"
-          Unplug9: "ეტაპი 16"
-          Farmer3: "ეტაპი 17"
-          Unplug10: "ეტაპი 18"
-          Artist5: "ეტაპი 19"
-          Unplug11: "ეტაპი 20"
-        Hour of Code:
-          desc: "კოდის ერთი საათი"
-          Maze: "ეტაპი 1"
-        Edit Code:
-          desc: "კოდის რედაქტირება (ბეტა)"
-          MazeEC: "ეტაპი 1"
-        2014 Levels:
-          desc: Bounce თამაში (ბეტა)
-          Bounce: "ეტაპი 1"
-        Builder Levels:
-          desc: "მომხმარებლების მიერ შექმნილი თავსატეხები (საცდელი)"
-          Custom: "ეტაპი 1"
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: "ეტაპი 1"
-        Jigsaw Levels:
-          desc: "ფაზლი (ბეტა)"
-          Jigsaw: "ეტაპი 1"
-        Step Levels:
-          desc: "ლაბირინთი (ბეტა)"
-          MazeStep: "ეტაპის ნაბიჯი"
-        edit-code:
-          desc: "კოდის რედაქტირება (ბეტა)"
-          MazeEC: "ეტაპი 1"
-          Applab: "ეტაპი 2"
-          ArtistEC: "ეტაპი 3"
-          StudioEC: "ეტაპი 4"
-        events:
-          desc: Bounce თამაში (ბეტა)
-          Bounce: "ეტაპი 1"
-          Studio: "ეტაპი 2"
-        builder:
-          desc: "მომხმარებლების მიერ შექმნილი თავსატეხები (საცდელი)"
-          Custom: "ეტაპი 1"
-        flappy:
-          desc: Flappy Bird
-          Flappy: "ეტაპი 1"
-        jigsaw:
-          desc: "ფაზლი (ბეტა)"
-          Jigsaw: "ეტაპი 1"
-        step:
-          desc: "ლაბირინთი (ბეტა)"
-          MazeStep: "ეტაპის ნაბიჯი"
-        wordsearch:
-          desc: Spelling Bee (ბეტა)
-          WordSearch: "ეტაპი 1"
     game:
       name:
         Unplug1: "ინფორმატიკის შესავალი"
@@ -750,6 +680,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

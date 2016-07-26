@@ -879,6 +879,8 @@ en:
           Sample PLC Assessment: Sample PLC Assessment
           Swapped Levels: Swapped Levels
           Gamelab: Gamelab
+          Anonymous student survey: Anonymous student survey
+          Anonymous student survey 2: Anonymous student survey 2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1891,6 +1893,8 @@ en:
           Looping and Random Numbers: Looping and Random Numbers
           App Lab: App Lab
           Design Mode: Design Mode
+          Making it Interactive: Making it Interactive
+          Adding Functionality (optional): Adding Functionality (optional)
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
