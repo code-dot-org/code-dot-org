@@ -377,7 +377,7 @@ DSL
   end
 
   test 'test Script DSL flex category as property or as property hash' do
-    input_dsl = "
+    input_dsl = <<DSL
 stage 'Stage1', 'Content'
 level 'Level 1'
 stage 'Stage2',
@@ -385,7 +385,7 @@ stage 'Stage2',
 level 'Level 2'
 stage 'Stage3'
 level 'Level 3'
-"
+DSL
     expected = {
       id: nil,
       stages: [
@@ -424,14 +424,14 @@ level 'Level 3'
   end
 
   test 'test Script DSL property lockable as property hash' do
-    input_dsl = "
+    input_dsl = <<DSL
 stage 'Stage1',
   flex_category: 'Content',
   lockable: true
 level 'Level 1'
 stage 'Stage2'
 level 'Level 2'
-"
+DSL
     expected = {
       id: nil,
       stages: [
