@@ -119,6 +119,10 @@ class Studio < Grid
 </category>
 <category name="Events">
   <block type="studio_whenArrow" />
+  <block type="studio_whenUp" />
+  <block type="studio_whenDown" />
+  <block type="studio_whenLeft" />
+  <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
 </category>
