@@ -57,7 +57,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   ).done(data => {
     data = data || {};
 
-    // Show lesson plan links and other teacher info if teacher
+    // Show lesson plan links and other teacher info if teacher and on unit
+    // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
     }
