@@ -4,7 +4,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
@@ -91,6 +91,12 @@ const styles = {
     left: 0,
     marginLeft: 0
   },
+  leftColRtl: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    marginRight: 0
+  },
   embedView: {
     height: undefined,
     bottom: 0
@@ -105,6 +111,11 @@ const styles = {
     position: 'relative',
     top: 50,
     left: 25
+  },
+  scrollButtonsRtl: {
+    position: 'relative',
+    top: 50,
+    right: 25
   },
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
@@ -126,6 +137,10 @@ const styles = {
   instructionsWithTips: {
     width: 'calc(100% - 20px)',
     float: 'right'
+  },
+  instructionsWithTipsRtl: {
+    width: 'calc(100% - 20px)',
+    float: 'left'
   },
 };
 
@@ -469,7 +484,7 @@ var TopInstructions = React.createClass({
         <ThreeColumns
           styles={{
             container: [styles.body, this.props.isMinecraft && craftStyles.body],
-            left: styles.leftCol
+            left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
           }}
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
@@ -494,7 +509,11 @@ var TopInstructions = React.createClass({
           <div
             ref="instructions"
             className="csf-top-instructions"
-            style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
+            style={[
+              styles.instructions,
+              shouldDisplayChatTips(this.props.skinId) &&
+                (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
+            ]}
           >
             <ChatBubble>
               {this.props.hasContainedLevels &&
@@ -548,7 +567,7 @@ var TopInstructions = React.createClass({
             />
             {!this.props.collapsed &&
               <ScrollButtons
-                style={styles.scrollButtons}
+                style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
