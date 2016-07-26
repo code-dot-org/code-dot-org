@@ -1707,7 +1707,7 @@ Studio.initSprites = function () {
 
         var avatarIndex = cell.sprite !== undefined
             ? cell.sprite
-            : (Studio.spriteCount + level.firstSpriteIndex) %
+            : (Studio.spriteCount + (level.firstSpriteIndex || 0)) %
                 Studio.startAvatars.length;
         presentAvatars[Studio.spriteCount] = Studio.startAvatars[avatarIndex];
 
@@ -2285,7 +2285,7 @@ Studio.reset = function (first) {
     });
 
     var sprite = spriteStart.sprite === undefined
-        ? (i + level.firstSpriteIndex) % Studio.startAvatars.length
+        ? (i + (level.firstSpriteIndex || 0)) % Studio.startAvatars.length
         : spriteStart.sprite;
 
     var opts = {
