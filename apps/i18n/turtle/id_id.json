@@ -89,5 +89,6 @@
   "turnTooltip": "Membelok artis ke kiri atau ke kanan dengan beberapa derajat.",
   "turtleVisibilityTooltip": "Membuat artis terlihat atau tidak terlihat.",
   "widthTooltip": "Merubah lebar pensil.",
-  "wrongColour": "Gambar Anda memiliki warna yang salah.  Untuk teka-teki ini, perlu untuk menjadi %1."
+  "wrongColour": "Gambar Anda memiliki warna yang salah.  Untuk teka-teki ini, perlu untuk menjadi %1.",
+  "jumpTo": "jump to"
 }

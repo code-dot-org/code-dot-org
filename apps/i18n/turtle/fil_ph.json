@@ -89,5 +89,6 @@
   "turnTooltip": "Pagliko ng artist pakaliwa o pakanan ayon sa itinakdang bilang ng degrees.",
   "turtleVisibilityTooltip": "Ipakita o huwag ipakita ang artist.",
   "widthTooltip": "Pagbabago ng lapad ng lapis.",
-  "wrongColour": "Ang iyong larawan ay mali ang kulay. Para sa puzzle na ito ang kailangan ay %1."
+  "wrongColour": "Ang iyong larawan ay mali ang kulay. Para sa puzzle na ito ang kailangan ay %1.",
+  "jumpTo": "jump to"
 }

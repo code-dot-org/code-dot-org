@@ -261,7 +261,7 @@ module.exports = function (grunt) {
           '../shared/css/'
         ]
       },
-      files: _.zipObject([
+      files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
@@ -362,7 +362,7 @@ module.exports = function (grunt) {
   var bundles = [
     {
       uniqueName: 'apps',
-      entries: _.zipObject(appsToBuild.map(function (app) {
+      entries: _.fromPairs(appsToBuild.map(function (app) {
         return [app, './src/' + app + '/main.js'];
       }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
         [['applab-api', './src/applab/api-entry.js']]
@@ -510,7 +510,7 @@ module.exports = function (grunt) {
 
   config.uglify = {
     lib: {
-      files: _.zipObject([
+      files: _.fromPairs([
         'jsinterpreter/interpreter.js',
         'jsinterpreter/acorn.js',
         'p5play/p5.play.js',

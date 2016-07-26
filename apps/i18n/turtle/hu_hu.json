@@ -89,5 +89,6 @@
   "turnTooltip": "A művészt balra vagy jobbra fordul a megadott fokban.",
   "turtleVisibilityTooltip": "A művészt láthatóvá, vagy láthatatlanná teszi.",
   "widthTooltip": "A ceruza szélességének módosítása.",
-  "wrongColour": "A kép színe hibás.  Ehhez a rejtvényhez %1 kell lennie."
+  "wrongColour": "A kép színe hibás.  Ehhez a rejtvényhez %1 kell lennie.",
+  "jumpTo": "jump to"
 }

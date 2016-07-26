@@ -43,10 +43,11 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\"dragonfly\"],\r\n  \"propsByKey\": {\r\n    \"dragonfly\": {\r\n      \"name\": \"dragonfly\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\r\n      \"frameSize\": {\"x\":150, \"y\": 91},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
-    "start_blocks": "var sprite = createSprite(200, 350);\r\nsprite.setAnimation(\"dragonfly\");\r\n// make the dragonfly move here\r\n\r\nfunction draw() {\r\n  background(color(150,50,250));\r\n  drawSprites();\r\n}\r\n",
+    "start_blocks": "var sprite = createSprite(200, 350);\r\nsprite.setAnimation(\"dragonfly\");\r\n// initialize your sprite's velocityY here\r\n\r\nfunction draw() {\r\n  // change velocityY\r\n  \r\n  background(color(150,50,250));\r\n  drawSprites();\r\n}\r\n",
     "markdown_instructions": "# velocityY\r\n\r\n`velocityY` is like `velocityX`, but it moves things up and down.  Can you use it to make the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to make the sprite go up the screen.\r\n\r\n*Hint: Should velocity by positive or negative to move the sprite up the screen?*",
+    "palette_category_at_start": "sprites",
     "contained_level_names": null,
-    "palette_category_at_start": "sprites"
+    "project_template_level_name": "CSD U3 abstraction bug template"
   },
   "published": true,
   "notes": "",

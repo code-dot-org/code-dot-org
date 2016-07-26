@@ -1,10 +1,12 @@
 name 'PS MC test 7-22'
 title 'Here is a title'
 description 'Here is a description'
-question 'Question'
+question 'Here is a question'
 wrong 'wrong answer'
 right 'right answer'
+wrong 'another wrong answer'
+wrong 'yet another wrong answer'
 
 markdown <<MARKDOWN
-Here is *some* **markdown**.  :D 
+Here is *some* **markdown**.  
 MARKDOWN
