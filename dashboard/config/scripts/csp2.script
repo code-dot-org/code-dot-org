@@ -34,6 +34,9 @@ level 'Pixelation Bee'
 level 'Pixelation - Lesson 15 - Favicon Instructions'
 level 'Pixelation - Lesson 15 - Color Free Play'
 level 'a bit about pixels'
+assessment 'U2L5 Color Pixel MC Question'
+assessment 'U2L5 FR brighten darken image'
+
 
 stage 'Lossy Compression and File Formats'
 level 'v2 U2L5 Student Lesson Introduction'
@@ -47,14 +50,19 @@ level 'v2 U2L7 Student Lesson Introduction'
 
 stage 'Finding Trends with Visualizations'
 level 'v2 U2L8 Student Lesson Introduction'
+assessment 'U2L8 google trends MC'
+assessment 'U2L8 google trends hypothesis'
 
 stage 'Check Your Assumptions'
 level 'v2 U2L9 Student Lesson Introduction'
+assessment 'U2L9 What is digital divide MC'
+assessment 'U2L9 FR digital divide issue'
 
 stage 'Good and Bad Data Visualizations'
 level 'v2 U2L10 Student Lesson Introduction'
 level 'GoodBadVisualizations_v1'
 level 'GoodBadVisualizations_v2'
+assessment 'U2L10 FR why best worst viz'
 
 stage 'Making Data Visualizations'
 level 'v2 U2L11 Student Lesson Introduction'
