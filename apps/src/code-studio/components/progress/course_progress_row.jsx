@@ -33,7 +33,7 @@ const styles = {
   stageName: {
     display: 'table-cell',
     width: 200,
-    verticalAlign: 'top',
+    verticalAlign: 'middle',
     paddingRight: 10
   },
   ribbonWrapper: {
