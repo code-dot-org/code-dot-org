@@ -151,17 +151,20 @@ ruby
   #   { stage: "Stage 30: Anonymous student survey",
   #     levelgroup_results: [
   #       {
+  #         type: "multi",
+  #         question: "Computer science is fun",
   #         results: [
-  #           {result_text: "Strongly agree", result: "A", type: "multi"},
+  #           {answer_index: 0},
   #           {},
-  #           {result_text: "Strongly agree", result: "A", type: "multi"}] },
-  #         question: "Computer science is fun." },
+  #           {answer_index: 0}],
+  #         answer_texts: ["Agree", "Disagree", "Not sure"]}},
   #       {
-  #         results:
-  #           {result: "", type: "free_response"},
-  #           {result: "I like making games, and I also like the lifestyle.", type: "free_response"},
-  #           {}],
-  #         question: "Why are you doing this class?  Give at least two reasons."}}}]
+  #         type: "free_response",
+  #         question: "Why are you doing this class?  Give at least two reasons.",
+  #         results: [
+  #           {result: ""},
+  #           {result: "I like making games, and I also like the lifestyle."},
+  #           {}]}]}]
   #
 
   def self.get_survey_results(script, section)
