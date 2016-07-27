@@ -3,5 +3,6 @@ title 'PLC Test'
 description 'PLC test fixture script'
 peer_reviews_to_complete 42
 
-stage 'Sample Module', 'content'
+stage 'Sample Module',
+  flex_category: 'content'
 level 'Level 1'
