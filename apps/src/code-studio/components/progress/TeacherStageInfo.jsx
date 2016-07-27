@@ -3,6 +3,7 @@
 import React from 'react';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import StageLock from './StageLock';
 import color from '../../../color';
 import progressStyles from './progressStyles';
 
@@ -69,6 +70,7 @@ const TeacherStageInfo = React.createClass({
               </span>
             </span>
           }
+          {this.props.lockable && <StageLock/>}
         </div>
       </div>
     );
