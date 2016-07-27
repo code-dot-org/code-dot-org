@@ -107,7 +107,7 @@ const importableProjectShape = React.PropTypes.shape({
 // or with this component
 const AssetListItem = Radium(React.createClass({
   propTypes: {
-    asset: importableAssetShape.isRequired,
+    asset: importableAssetShape,
   },
 
   render() {
@@ -138,7 +138,7 @@ function quotedCommaJoin(strings) {
 
 export const ScreenListItem = Radium(React.createClass({
   propTypes: {
-    screen: importableScreenShape.isRequired,
+    screen: importableScreenShape,
   },
 
   render() {
@@ -181,7 +181,7 @@ export const ScreenListItem = Radium(React.createClass({
 var ImportScreensDialog = React.createClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
-    project: importableProjectShape.isRequired,
+    project: importableProjectShape,
     onImport: React.PropTypes.func.isRequired,
   }),
 
@@ -193,26 +193,34 @@ var ImportScreensDialog = React.createClass({
   },
 
   render() {
+    if (!this.props.project) {
+      return null;
+    }
     const nonImportableScreens = this.props.project.screens.filter(s => !s.canBeImported);
+    const importableScreens = this.props.project.screens.filter(s => s.canBeImported);
+    const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
-        confirmText="Import"
-        onConfirm={() => this.props.onImport(this.state.selectedScreens,
-                                               this.state.selectedAssets)}
+        confirmText={canImport ? "Import" : null}
+        onConfirm={canImport ? () => this.props.onImport(this.state.selectedScreens,
+                                                         this.state.selectedAssets)
+                                 : null}
+        onCancel={canImport ? null : this.props.handleClose}
         {...this.props}
       >
         <Body>
-          <MultiCheckboxSelector
-            style={styles.section}
-            header="Screens"
-            items={this.props.project.screens.filter(s => s.canBeImported)}
-            selected={this.state.selectedScreens}
-            onChange={selectedScreens => this.setState({selectedScreens})}
-            itemPropName="screen"
-          >
-            <ScreenListItem />
-          </MultiCheckboxSelector>
+          {importableScreens.length > 0 &&
+           <MultiCheckboxSelector
+             style={styles.section}
+             header="Screens"
+             items={importableScreens}
+             selected={this.state.selectedScreens}
+             onChange={selectedScreens => this.setState({selectedScreens})}
+             itemPropName="screen"
+           >
+             <ScreenListItem />
+           </MultiCheckboxSelector>}
           {this.props.project.otherAssets.length > 0 &&
            <MultiCheckboxSelector
              style={styles.section}
@@ -370,6 +378,7 @@ if (BUILD_STYLEGUIDE) {
             <ImportScreensDialog
               hideBackdrop
               onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
               project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
@@ -386,12 +395,30 @@ if (BUILD_STYLEGUIDE) {
             <ImportScreensDialog
               hideBackdrop
               onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
               project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
                     screens: [replacingScreen, newScreen, conflictingScreen],
                     otherAssets: [],
                   }}
+            />
+          )
+        }, {
+          name: 'When there are no importable screens',
+          description: `In the event that no screens can be imported, the screens section
+                        is hidden completely.`,
+          story: () => (
+            <ImportScreensDialog
+              hideBackdrop
+              onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
+              project={{
+                  id: 'poke-the-pig',
+                  name: 'Poke the Pig',
+                  screens: [conflictingScreen],
+                  otherAssets: [],
+                }}
             />
           )
         }, {
@@ -403,6 +430,7 @@ if (BUILD_STYLEGUIDE) {
             <ImportScreensDialog
               hideBackdrop
               onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
               project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
