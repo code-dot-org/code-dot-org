@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import applabConstants from './constants';
 import Dialog, {Body} from '../templates/Dialog';
 import AssetThumbnail, {
@@ -10,6 +11,9 @@ import MultiCheckboxSelector, {
   styles as multiCheckboxStyles
 } from '../templates/MultiCheckboxSelector';
 import color from '../color';
+import designMode from './designMode';
+import * as elementUtils from './designElements/elementUtils';
+import {toggleImportScreen} from './redux/screens';
 
 const SCALE = 0.1;
 const MARGIN = 10;
@@ -178,7 +182,7 @@ export const ScreenListItem = Radium(React.createClass({
   }
 }));
 
-var ImportScreensDialog = React.createClass({
+export const ImportScreensDialog = React.createClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
     project: importableProjectShape,
@@ -257,7 +261,77 @@ var ImportScreensDialog = React.createClass({
   }
 });
 
-export default ImportScreensDialog;
+/**
+ * Helper function that takes a dom node and returns an object that conforms
+ * to an importableScreenShape, checking for assets, and conflicting ids.
+ */
+function getImportableScreen(dom) {
+  const id = dom.id;
+  const willReplace = designMode.getAllScreenIds().includes(id);
+  const conflictingIds = [];
+  Array.from(dom.children).forEach(child => {
+    if (!elementUtils.isIdAvailable(child.id)) {
+      var existingElement = elementUtils.getPrefixedElementById(child.id);
+      if (existingElement && elementUtils.getId(existingElement.parentNode) !== id) {
+        conflictingIds.push(child.id);
+      }
+    }
+  });
+
+  // TODO: filter out assets that will just be imported without replacing anything.
+  const assetsToReplace = $('[data-canonical-image-url]', dom)
+    .toArray()
+    .map(n => $(n).attr('data-canonical-image-url'));
+
+  return {
+    id,
+    willReplace,
+    assetsToReplace,
+    conflictingIds,
+    html: dom.outerHTML,
+    canBeImported: conflictingIds.length === 0,
+  };
+}
+
+/**
+ * Helper function that takes a project object and returns an object that conforms to
+ * importableProjectShape.
+ */
+function getImportableProject(project) {
+  if (!project) {
+    return null;
+  }
+  const {channel, sources} = project;
+  const screens = [];
+  $(sources.html)
+    .find('.screen')
+    .css('position', 'inherit')
+    .css('display', 'block')
+    .each((index, screen) => {
+      screens.push(getImportableScreen(screen));
+    });
+  return {
+    id: 'foo',
+    name: channel.name,
+    screens,
+    otherAssets: [],
+  };
+}
+
+export default connect(
+  state => ({
+    isOpen: state.screens.isImportingScreen && state.screens.importProject.fetchedProject,
+    project: getImportableProject(state.screens.importProject.fetchedProject),
+  }),
+  dispatch => ({
+    onImport() {
+      alert("The import button has not been implemented yet. sorry!");
+    },
+    handleClose() {
+      dispatch(toggleImportScreen(false));
+    },
+  })
+)(ImportScreensDialog);
 
 if (BUILD_STYLEGUIDE) {
   const exampleHtml = `
