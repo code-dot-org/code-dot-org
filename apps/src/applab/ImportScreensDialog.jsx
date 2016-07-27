@@ -203,14 +203,16 @@ export const ImportScreensDialog = React.createClass({
     const nonImportableScreens = this.props.project.screens.filter(s => !s.canBeImported);
     const importableScreens = this.props.project.screens.filter(s => s.canBeImported);
     const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
+    let buttonProps = canImport ? {
+      confirmText: "Import",
+      onConfirm: () => this.props.onImport(this.state.selectedScreens, this.state.selectedAssets),
+    } : {
+      onCancel: this.props.handleClose
+    };
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
-        confirmText={canImport ? "Import" : null}
-        onConfirm={canImport ? () => this.props.onImport(this.state.selectedScreens,
-                                                         this.state.selectedAssets)
-                                 : null}
-        onCancel={canImport ? null : this.props.handleClose}
+        {...buttonProps}
         {...this.props}
       >
         <Body>
