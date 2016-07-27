@@ -1574,7 +1574,6 @@ en:
       grade1_story_theGreatTowerTopple:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
-      grade2_activity_beNice: {}
       grade2_unplugged_bigEvent: {}
       grade2_unplugged_buildAblock:
         Build a Block: Build a Block
@@ -4005,9 +4004,7 @@ en:
         "<b>C.</b> another wrong answer": "<b>C.</b> another wrong answer"
         "<b>D.</b>yet another wrong answer": "<b>D.</b>yet another wrong answer"
         Here is a description: Here is a description
-        Here is a question: Here is a question
         Here is a question.: Here is a question.
-        Here is a question.   I'll make it longer to see if it makes any difference at all.  I doubt it does.: Here is a question.   I'll make it longer to see if it makes any difference at all.  I doubt it does.
         Here is a title: Here is a title
         another wrong answer: another wrong answer
         feedback for this wrong answer.: feedback for this wrong answer.
@@ -4483,42 +4480,22 @@ en:
         packet: packet
         protocol: protocol
       U2L5 Color Pixel MC Question:
-        '': ''
         " ": " "
         1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
         1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
         3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
         3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
         30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
-        How Many Bytes?: How Many Bytes?
-        How many bytes does it take...: How many bytes does it take...
         How many bytes does it take...?: How many bytes does it take...?
         How many bytes?: How many bytes?
-        description here: description here
-        question: question
-        right answer: right answer
-        title: title
       U2L8 google trends MC:
         " ": " "
         People like dogs more than cats: People like dogs more than cats
         People search for "dogs" more frequently than "cats": People search for "dogs" more frequently than "cats"
-        Question: Question
         The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
         There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
         What does the visualization actually show?: What does the visualization actually show?
-        description here: description here
-        people like dogs more than cats: people like dogs more than cats
-        people search for "dogs" more frequently than "cats": people search for "dogs" more frequently than "cats"
-        people search for \"dogs\" more frequently than \"cats\": people search for \"dogs\" more frequently than \"cats\"
-        the popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: the popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
-        there was a sharp increase in the dog population sometime between 2014 and 2015: there was a sharp increase in the dog population sometime between 2014 and 2015
-        title: title
       U2L9 What is digital divide MC:
-        "...about how digital technology spreads by dividing and growing quickly similar to how cells in the body divide and grow": "...about how digital technology spreads by dividing and growing quickly similar to how cells in the body divide and grow"
-        "...about how newer devices use new protocols making it more difficult for them to communicate with older devices and technology": "...about how newer devices use new protocols making it more difficult for them to communicate with older devices and technology"
-        "...about how people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...about how people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
-        ? "...about how the amount of data in the world is growing so fast that the amount computing power and time we have to process it is lagging behind"
-        : "...about how the amount of data in the world is growing so fast that the amount computing power and time we have to process it is lagging behind"
         ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
@@ -4529,10 +4506,6 @@ en:
         What is the digital divide?: What is the digital divide?
         ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
         : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
-        ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is...
-        : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is...
-        Which of the following is the most accurate description of what is known as the \"digital divide\".  The digital divide is...: Which of the following is the most accurate description of what is known as the \"digital divide\".  The digital divide is...
-        foo: foo
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -5272,7 +5245,6 @@ en:
       pre-assessment survey q10:
         Agree: Agree
         Disagree: Disagree
-        I am better at computer science than most of the other kids at my school.: I am better at computer science than most of the other kids at my school.
         I think I will be better at computer science than most of the other kids at my school.: I think I will be better at computer science than most of the other kids at my school.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -5281,7 +5253,6 @@ en:
       pre-assessment survey q11:
         Agree: Agree
         Disagree: Disagree
-        I am very good at computer science.: I am very good at computer science.
         I think I will be  very good at computer science.: I think I will be  very good at computer science.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -5290,7 +5261,6 @@ en:
       pre-assessment survey q12:
         Agree: Agree
         Disagree: Disagree
-        I can figure out how to solve the most difficult problems in my computer science class if I try.: I can figure out how to solve the most difficult problems in my computer science class if I try.
         I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.: I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -5299,7 +5269,6 @@ en:
       pre-assessment survey q13:
         Agree: Agree
         Disagree: Disagree
-        I like (or think I will like) computer science.: I like (or think I will like) computer science.
         I like computer science.: I like computer science.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -5324,7 +5293,6 @@ en:
       pre-assessment survey q16:
         Agree: Agree
         Disagree: Disagree
-        It is important for me to be good at computer science.: It is important for me to be good at computer science.
         It is important to me to be good at computer science.: It is important to me to be good at computer science.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -5381,7 +5349,6 @@ en:
       pre-assessment survey q22:
         Agree: Agree
         'Computer science applies to most aspects of real life. ': 'Computer science applies to most aspects of real life. '
-        Computer science doesn't apply to most aspects of real life.: Computer science doesn't apply to most aspects of real life.
         Disagree: Disagree
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -5399,13 +5366,6 @@ en:
         Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
         'No': 'No'
         'Yes': 'Yes'
-      pre-assessment survey q25:
-        AP Computer Science: AP Computer Science
-        Exploring Computer Science (ECS): Exploring Computer Science (ECS)
-        'If yes, what computer science course(s) had you taken before your current computer science class? ': 'If yes, what computer science course(s) had you taken before your current computer science class? '
-        Keyboarding or software applications (including Microsoft Office): Keyboarding or software applications (including Microsoft Office)
-        N/A: N/A
-        Other computing courses (eg., Networking, Databases, Web Design, Programming, Security).: Other computing courses (eg., Networking, Databases, Web Design, Programming, Security).
       pre-assessment survey q26:
         ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
         : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
@@ -5416,7 +5376,6 @@ en:
         After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
         ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
         : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
-        If yes, where did you previously take a computer science class or program outside of school hours? Select all that apply.: If yes, where did you previously take a computer science class or program outside of school hours? Select all that apply.
         N/A: N/A
         Online program: Online program
         Other: Other
@@ -5439,7 +5398,6 @@ en:
         Agree: Agree
         Disagree: Disagree
         I am very good at school.: I am very good at school.
-        I have the ability to do my schoolwork: I have the ability to do my schoolwork
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -5454,13 +5412,11 @@ en:
         Prefer not to answer: Prefer not to answer
         Two or more races: Two or more races
         Which of the following best represents your racial and/or ethnic identity?: Which of the following best represents your racial and/or ethnic identity?
-        Which of the following best represents your racial and/or ethnic identity? Select all that apply.: Which of the following best represents your racial and/or ethnic identity? Select all that apply.
         White: White
       pre-assessment survey q4:
         Agree: Agree
         Disagree: Disagree
         I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
-        I have the ability to do my schoolwork: I have the ability to do my schoolwork
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
