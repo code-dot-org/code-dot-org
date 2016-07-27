@@ -1261,7 +1261,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
           this.collider.extents.x = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(cos(t)) +
           this.collider.originalExtents.y * abs(this._getScaleY()) * abs(sin(t));
 
-          this.collider.extents.y = this.collider.originalExtents.x * abs(this.this._getScaleX()) * abs(sin(t)) +
+          this.collider.extents.y = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(sin(t)) +
           this.collider.originalExtents.y * abs(this._getScaleY()) * abs(cos(t));
           }
         else if(this.colliderType === 'default')
