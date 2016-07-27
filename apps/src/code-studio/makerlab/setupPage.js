@@ -26,24 +26,36 @@ const BoardSetupStatus = React.createClass({
   render() {
     return (
         <div className="setup-status" style={{'fontSize': '26px'}}>
-          <SetupStep stepStatus={this.state['status-is-chrome']}
-                     stepId="is-chrome"
-                     stepName="Chrome version 33+"/>
-          <SetupStep stepStatus={this.state['status-app-installed']}
-                     stepId="app-installed"
-                     stepName="Chrome App installed"/>
-          <SetupStep stepStatus={this.state['status-windows-drivers']}
-                     stepId="windows-drivers"
-                     stepName="Windows drivers installed"/>
-          <SetupStep stepStatus={this.state['status-board-plug']}
-                     stepId="board-plug"
-                     stepName="Board plugged in"/>
-          <SetupStep stepStatus={this.state['status-board-connect']}
-                     stepId="board-connect"
-                     stepName="Board connectable"/>
-          <SetupStep stepStatus={this.state['status-board-components']}
-                     stepId="board-components"
-                     stepName="Board components usable"/>
+          <SetupStep
+            stepStatus={this.state['status-is-chrome']}
+            stepId="is-chrome"
+            stepName="Chrome version 33+"
+          />
+          <SetupStep
+            stepStatus={this.state['status-app-installed']}
+            stepId="app-installed"
+            stepName="Chrome App installed"
+          />
+          <SetupStep
+            stepStatus={this.state['status-windows-drivers']}
+            stepId="windows-drivers"
+            stepName="Windows drivers installed"
+          />
+          <SetupStep
+            stepStatus={this.state['status-board-plug']}
+            stepId="board-plug"
+            stepName="Board plugged in"
+          />
+          <SetupStep
+            stepStatus={this.state['status-board-connect']}
+            stepId="board-connect"
+            stepName="Board connectable"
+          />
+          <SetupStep
+            stepStatus={this.state['status-board-components']}
+            stepId="board-components"
+            stepName="Board components usable"
+          />
         </div>
     );
   },
