@@ -113,15 +113,10 @@ const CourseProgressRow = React.createClass({
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
         <div>
-          {/*
-            Eventually this will be lockable={!!stage.lockable}. Stage.lockable
-            won't be true until we do the work on the backend, but I want to
-            make that explicit by just setting to false for now
-          */}
           {this.props.showTeacherInfo &&
             <TeacherStageInfo
               lessonPlanUrl={stage.lesson_plan_html_url}
-              lockable={false}
+              lockable={!!stage.lockable}
             />
           }
           <StageProgress
