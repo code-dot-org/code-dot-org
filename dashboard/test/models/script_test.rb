@@ -403,4 +403,35 @@ class ScriptTest < ActiveSupport::TestCase
     script = create :script, name: 'Invalid Name', skip_name_format_validation: true
     script.update!(login_required: true)
   end
+
+  test 'names stages appropriately when script has lockable stages' do
+    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
+    scripts,_ = Script.setup([script_file_3_stages])
+    first = scripts[0].stages[0]
+    second = scripts[0].stages[1]
+    third = scripts[0].stages[2]
+
+    # Everything has Stage <number> when nothing is lockable
+    assert /^Stage 1:/.match(first.localized_title)
+    assert /^Stage 2:/.match(second.localized_title)
+    assert /^Stage 3:/.match(third.localized_title)
+
+    # When first stage is lockable, it has no stage number, and the next stage starts at 1
+    first.lockable = true
+    first.save!
+
+    assert /^Stage/.match(first.localized_title).nil?
+    assert /^Stage 1:/.match(second.localized_title)
+    assert /^Stage 2:/.match(third.localized_title)
+
+    # When only second stage is lockable, we count non-lockable stages appropriately
+    first.lockable = false
+    first.save!
+    second.lockable = true
+    second.save!
+
+    assert /^Stage 1:/.match(first.localized_title)
+    assert /^Stage/.match(second.localized_title).nil?
+    assert /^Stage 2:/.match(third.localized_title)
+  end
 end
