@@ -1,0 +1,7 @@
+name 'grade2_unplugged_neighborhood'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+![](https://images.code.org/d980357025d0e9faa09ea2928e42b594-image-1469574064931.00.40 PM.png)
+MARKDOWN
