@@ -32,8 +32,9 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n![Solution](https://images.code.org/660d9ed1984350fa2dcff82fcf97f1b8-image-1442951899761.54.28.png)\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "discard_background": "false"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n![Solution](https://images.code.org/0c94bcde33a00595aa099fea964ca80e-image-1469641309381.png)\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
