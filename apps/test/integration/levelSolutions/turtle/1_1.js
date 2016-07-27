@@ -46,11 +46,11 @@ module.exports = {
       xml: ''
     },
     {
-      // ??? takes precedence over extra top block
+      // extra top block takes precedence over ???
       description: "extra ??? block",
       expected: {
-        result: true,
-        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
+        result: false,
+        testResult: TestResults.EXTRA_TOP_BLOCKS_FAIL
       },
       xml:
         '<xml>' +
