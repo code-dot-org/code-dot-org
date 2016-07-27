@@ -1,8 +1,8 @@
 name 'PS MC test 7-22'
 title 'Here is a title'
+question "Here is a question."
 description 'Here is a description'
-question 'Here is a question'
-wrong 'wrong answer'
+wrong 'wrong answer', feedback: 'feedback for this wrong answer.'
 right 'right answer'
 wrong 'another wrong answer'
 wrong 'yet another wrong answer'

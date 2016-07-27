@@ -1,0 +1,8 @@
+name 'pre-assessment survey q22'
+question "Computer science applies to most aspects of real life. "
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
