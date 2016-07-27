@@ -4000,6 +4000,10 @@ en:
         wrong answer: wrong answer
         you are so smart!: you are so smart!
       PS MC test 7-22:
+        "<b>A.</b>  wrong answer": "<b>A.</b>  wrong answer"
+        "<b>B.</b> right answer": "<b>B.</b> right answer"
+        "<b>C.</b> another wrong answer": "<b>C.</b> another wrong answer"
+        "<b>D.</b>yet another wrong answer": "<b>D.</b>yet another wrong answer"
         Here is a description: Here is a description
         Here is a question: Here is a question
         Here is a question.: Here is a question.
