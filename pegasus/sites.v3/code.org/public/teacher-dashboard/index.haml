@@ -838,6 +838,9 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
       // Load surveys
 
+      // The ASCII value of A.  Used for rendering multiple choice captions.
+      var asciiForA = 65;
+
       $scope.surveys = sectionsService.surveys({id: $routeParams.id, script_id: scriptId});
 
       $scope.surveyLevels = [];
@@ -846,67 +849,84 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         $scope.surveysLoaded = true;
         $scope.surveyStages = $scope.findStages($scope.surveys);
 
-        $.each($scope.surveys, function(survey_index, survey) {
-
+        $.each($scope.surveys, function(surveyIndex, survey) {
           survey.status = survey.submitted ? submission_list.submitted : submission_list.in_progress;
 
           if (survey.levelgroup_results) {
+
             // Each LevelGroup's result has a list of the results for the levels in that order.
             // Because angular's nested iterators are kind of funky when trying to generate a table,
             // let's just generate a flat list of the level results to go into $scope.
-            $.each(survey.levelgroup_results, function(sublevel_index, sublevel_results) {
 
-              var questionText = sublevel_results.question;
+            $.each(survey.levelgroup_results, function(sublevelIndex, sublevelResults) {
+
+              var questionText = sublevelResults.question;
 
               // How many students answered this question?
-              var resultsLength = sublevel_results.results.length;
+              var resultsLength = sublevelResults.results.length;
 
-              // There can be multiple results for each sublevel.
-              $.each(sublevel_results.results, function(sublevel_result_index, sublevel_result) {
+              if (sublevelResults.type == "free_response") {
 
-                // Disambiguate free responses that are unsubmitted and that are empty strings.
-                if (sublevel_result.result === undefined || sublevel_result.result === "") {
-                  sublevel_result.result = null;
-                }
+                // Free response: just add all of the responses.
 
-                // Do we already have this level result?  If so, bump the count, otherwise create and
-                // add it.
+                $.each(sublevelResults.results, function(sublevelResultIndex, sublevelResult) {
 
-                var existingLevelResult = $scope.surveyLevels.find(function (entry) {
-                  return entry.result === sublevel_result.result &&
-                         entry.stage === survey.stage &&
-                         entry.question === parseInt(sublevel_index) + 1;
-                });
-
-                if (existingLevelResult) {
-                  existingLevelResult.count++;
-                  if (existingLevelResult.percent !== null) {
-                    existingLevelResult.percent = Math.round(existingLevelResult.count / resultsLength * 100) + "%";
+                  // Disambiguate free responses that are unsubmitted and that are empty strings.
+                  if (sublevelResult.result === undefined || sublevelResult.result === "") {
+                    sublevelResult.result = null;
                   }
-                } else {
-                  var questionFieldText = (parseInt(sublevel_index) + 1) + (questionText ? ". " + questionText : "");
-                  var resultFieldText = sublevel_result.result;
-                  if (sublevel_result.result_text) {
-                    resultFieldText += ". " + sublevel_result.result_text;
-                  }
-                  var percentField = sublevel_result.type === "multi" ? (Math.round(1 / resultsLength * 100)) + "%" : null;
 
-                  var levelResult = {
-                    stage: survey.stage,
-                    question: parseInt(sublevel_index) + 1,
-                    questionText: questionFieldText,
-                    result: sublevel_result.result,
-                    resultText: resultFieldText,
-                    count: 1,
-                    percent: percentField
-                  };
+                  var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
+                  var resultFieldText = sublevelResult.result;
 
-                  // Let's not create separate rows for answers which have no result to show.
-                  if (levelResult.resultText !== null) {
+                  // Only create separate rows for answers which have a result to show.
+                  if (resultFieldText !== null) {
+                    var levelResult = {
+                      stage: survey.stage,
+                      question: parseInt(sublevelIndex) + 1,
+                      questionText: questionFieldText,
+                      resultText: resultFieldText,
+                      count: 1
+                    };
+
                     $scope.surveyLevels.push(levelResult);
                   }
-                }
-              });
+                });
+
+              } else if (sublevelResults.type == "multi") {
+
+                // Multi: go through each answer and work out how many responses had that answer.
+
+                // Store one result per possible answer.
+                var results = [];
+
+                // First, build a result entry for each possible answer.
+                $.each(sublevelResults.answer_texts, function(answerTextIndex, answerText) {
+                  var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
+                  var answerFieldText = String.fromCharCode(asciiForA + answerTextIndex) + ". " + answerText;
+                  var levelResult = {
+                    stage: survey.stage,
+                    question: parseInt(sublevelIndex) + 1,
+                    questionText: questionFieldText,
+                    resultText: answerFieldText,
+                    count: 0,
+                    percent: "0%"
+                  };
+
+                  results[answerTextIndex] = levelResult;
+                });
+
+                // Second, go through each result and update the count for that result.
+                $.each(sublevelResults.results, function(sublevelResultIndex, sublevelResult) {
+                  if ("answer_index" in sublevelResult) {
+                    var answerIndex = sublevelResult.answer_index;
+                    results[answerIndex].count ++;
+                    results[answerIndex].percent = (Math.round(1 / resultsLength * 100)) + "%";
+                  }
+                });
+
+                $scope.surveyLevels = $scope.surveyLevels.concat(results);
+              }
             });
           }
         });
