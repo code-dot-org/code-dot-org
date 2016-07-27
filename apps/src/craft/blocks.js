@@ -234,6 +234,44 @@ exports.install = function (blockly, blockInstallOptions) {
     '}, \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.craft_onTouched = {
+    helpUrl: '',
+    init: function () {
+      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.ifBlockOptions || allDropdownBlocks);
+      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      dropdown.setValue(dropdownOptions[0][1]);
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle('on touched')
+          .appendTitle(dropdown, 'TYPE');
+      this.appendStatementInput('DO');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_onTouched = function () {
+    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    var blockType = this.getTitleValue('TYPE');
+    return 'onTouched("' + blockType + '", function(block) {\n' +
+      innerCode +
+    '}, \'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.craft_destroyEntity = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('destroy'));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_destroyEntity = function () {
+    return 'destroyEntity(block, \'block_id_' + this.id + '\');\n';
+  };
 
   blockly.Blocks.craft_ifLavaAhead = {
     helpUrl: '',

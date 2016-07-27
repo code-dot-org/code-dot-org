@@ -269,12 +269,16 @@ class Craft < Blockly
     <title name="DIR">right</title>
   </block>
   <block type='craft_destroyBlock'></block>
+  <block type='craft_destroyEntity'></block>
   <block type='craft_shear'></block>
   <block type='craft_placeBlock'></block>
   <block type='craft_placeTorch'></block>
   <block type='craft_plantCrop'></block>
   <block type='craft_tillSoil'></block>
   <block type='craft_placeBlockAhead'></block>
+</category>
+<category name="Events">
+  <block type="craft_onTouched"></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
