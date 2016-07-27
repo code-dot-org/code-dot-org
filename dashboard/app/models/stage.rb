@@ -80,6 +80,7 @@ class Stage < ActiveRecord::Base
           name: localized_name,
           title: localized_title,
           flex_category: localized_category,
+          lockable: !!lockable,
           # Ensures we get the cached ScriptLevels, vs hitting the db
           levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
       }
