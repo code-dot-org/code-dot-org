@@ -122,18 +122,18 @@ $wide-column-width: 121px;
 
     th.sort {
       cursor: pointer;
-      &:before {
+      &::before {
         padding-right: 0.5em;
         font-family: 'FontAwesome', sans-serif;
       }
-      &.sort-none:before {
+      &.sort-none::before {
         content: '\F0DC';
         color: rgba(255, 255, 255, 0.2);
       }
-      &.sort-asc:before {
+      &.sort-asc::before {
         content: '\F0DE';
       }
-      &.sort-desc:before {
+      &.sort-desc::before {
         content: '\F0DD';
       }
     }
