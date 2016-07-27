@@ -348,7 +348,7 @@ class ScriptTest < ActiveSupport::TestCase
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
-    assert_equal 1, script.summarize[:stages].count
+    assert_equal 1, script.summarize(nil)[:stages].count
   end
 
   test 'should generate PLC objects' do
@@ -402,5 +402,35 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can edit existing script with invalid name' do
     script = create :script, name: 'Invalid Name', skip_name_format_validation: true
     script.update!(login_required: true)
+  end
+
+  test 'hides locked stages from unauthorized users' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    create(:follower, section: section, student_user: student)
+
+    authorized_teacher = create(:teacher)
+    authorized_student = create(:student)
+    authorized_section = create(:section, user: authorized_teacher)
+    create(:follower, section: authorized_section, student_user: authorized_student)
+    cohorts_district = create(:cohorts_district)
+    cohorts_district.cohort.teachers << authorized_teacher
+
+    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
+    scripts,_ = Script.setup([script_file_3_stages])
+    script = scripts[0]
+    first_stage = script.stages[0]
+
+    # make the first stage lockable
+    first_stage.lockable = true
+    first_stage.save!
+
+    assert_equal 2, script.summarize(student)[:stages].length
+    assert_equal 2, script.summarize(teacher)[:stages].length
+
+    # authorized teacher and their students should see all three stages
+    assert_equal 3, script.summarize(authorized_student)[:stages].length
+    assert_equal 3, script.summarize(authorized_teacher)[:stages].length
   end
 end
