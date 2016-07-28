@@ -135,6 +135,7 @@ if (BUILD_STYLEGUIDE) {
       const packetNum = 1 + randInt(packetCount);
       return {
         'timestamp': Date.now() - randInt(600000),
+        'sourceUserName': lipsumWords[randInt(lipsumWords.length)],
         'logged-by': `Router ${routerNum}`,
         'status': Math.random() < 0.8 ? 'Success' : 'Dropped',
         'from-address': `${routerNum}.${1 + randInt(13)}`,
@@ -154,7 +155,7 @@ if (BUILD_STYLEGUIDE) {
             () => (
               <div id="netsim">
                 <NetSimLogBrowser
-                  isOpen={true}
+                  isOpen
                   i18n={i18n}
                   setRouterLogMode={() => null}
                   setTrafficFilter={() => null}
@@ -169,7 +170,7 @@ if (BUILD_STYLEGUIDE) {
             () => (
               <div id="netsim">
                 <NetSimLogBrowser
-                  isOpen={true}
+                  isOpen
                   i18n={i18n}
                   canSetRouterLogMode
                   isAllRouterLogMode
@@ -181,6 +182,26 @@ if (BUILD_STYLEGUIDE) {
                   logRows={sampleData}
                 />
               </div>
-            ));
+            ))
+      .addWithInfo(
+        `Teacher's View`,
+        `Here's what the teacher (or shard owner) gets to see`,
+        () => (
+          <div id="netsim">
+            <div className="new-router-log-modal">
+              <NetSimLogBrowser
+                isOpen
+                i18n={i18n}
+                isAllRouterLogMode
+                currentTrafficFilter="all"
+                setRouterLogMode={() => null}
+                setTrafficFilter={() => null}
+                headerFields={simplePacket}
+                logRows={sampleData}
+                userOwnsShard
+              />
+            </div>
+          </div>
+        ));
   };
 }
