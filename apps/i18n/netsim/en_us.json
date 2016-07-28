@@ -124,6 +124,7 @@
   "showingFirstXLogEntries": "Showing first {x} log entries.  Sort/filter to see more.",
   "size": "Size",
   "status": "Status",
+  "teacherLogButton": "Teacher View",
   "time": "Time",
   "to": "To",
   "unknownNode": "Unknown Node",
