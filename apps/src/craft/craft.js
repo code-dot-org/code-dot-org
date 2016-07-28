@@ -657,9 +657,9 @@ Craft.executeUserCode = function () {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
     },
-    onTouched: function (blockID, type, callback) {
+    onTouched: function (type, callback, blockID) {
       appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
-          (event) => {
+          function (event) {
               if (event.eventType !== 'blockTouched') {
                 return;
               }
@@ -670,8 +670,8 @@ Craft.executeUserCode = function () {
               callback(event.blockReference);
           });
     },
-    destroyEntity: function (blockReference) {
-      appCodeOrgAPI.destroyBlock(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    destroyEntity: function (blockReference, blockID) {
+      appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
     turnLeft: function (blockID) {
       appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");

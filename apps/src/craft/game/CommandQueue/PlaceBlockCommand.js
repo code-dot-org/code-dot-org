@@ -1,21 +1,20 @@
-
 import CommandState from "./CommandState.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class PlaceBlockCommand extends BaseCommand {
-    constructor(gameController, highlightCallback, blockType) {
-        super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, blockType) {
+    super(gameController, highlightCallback);
 
-        this.BlockType = blockType;
-    }
+    this.BlockType = blockType;
+  }
 
-    tick() {
-        // do stuff??
-    }
+  tick() {
+    // do stuff??
+  }
 
-    begin() {
-        super.begin();
-        this.GameController.placeBlock(this, this.BlockType);
-    }
+  begin() {
+    super.begin();
+    this.gameController.placeBlock(this, this.BlockType);
+  }
 }
 

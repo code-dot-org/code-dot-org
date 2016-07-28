@@ -1,7 +1,6 @@
 import BaseCommand from "./BaseCommand";
 import CommandState from "./CommandState.js";
 
-
 export default class CommandQueue {
   constructor(gameController) {
     this.gameController = gameController;

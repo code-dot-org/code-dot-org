@@ -40,15 +40,15 @@ export default class LevelBlock {
       this.isUsable = true;
     }
 
-    if (blockType === "creeper"){
+    if (blockType === "creeper") {
       this.isEntity = true;
     }
 
-    if (blockType === "glass"){
+    if (blockType === "glass") {
       this.isDestroyable = false;
     }
 
-    if (blockType === "bedrock"){
+    if (blockType === "bedrock") {
       this.isDestroyable = false;
     }
 

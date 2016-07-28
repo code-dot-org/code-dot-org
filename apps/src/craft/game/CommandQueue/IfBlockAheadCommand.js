@@ -1,55 +1,52 @@
-
 import CommandState from "./CommandState.js";
 import CommandQueue from "./CommandQueue.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class IfBlockAheadCommand extends BaseCommand {
-    constructor(gameController, highlightCallback, blockType, callback) {
-        super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, blockType, callback) {
+    super(gameController, highlightCallback);
 
-        this.blockType = blockType;
-        this.ifCodeCallback = callback;
+    this.blockType = blockType;
+    this.ifCodeCallback = callback;
 
-        this.queue = new CommandQueue(this);
+    this.queue = new CommandQueue(this);
+  }
+
+  tick() {
+    if (this.state === CommandState.WORKING) {
+      // tick our command queue
+      this.queue.tick();
     }
 
-    tick() {
-        if (this.state === CommandState.WORKING ) {
-            // tick our command queue
-            this.queue.tick();
-        }
-
-        if (this.queue.isFailed()) {
-            this.state = CommandState.FAILURE;
-        }
-
-        if (this.queue.isSucceeded()) {
-            this.state = CommandState.SUCCESS;
-        }
-
+    if (this.queue.isFailed()) {
+      this.state = CommandState.FAILURE;
     }
 
-    begin() {
-        super.begin();
-        if (this.GameController.DEBUG) {
-            console.log("WHILE command: BEGIN");
-        }
+    if (this.queue.isSucceeded()) {
+      this.state = CommandState.SUCCESS;
+    }
+  }
 
-        // setup the "if" check
-        this.handleIfCheck();
+  begin() {
+    super.begin();
+    if (this.gameController.DEBUG) {
+      console.log("WHILE command: BEGIN");
     }
 
-    handleIfCheck() {
-        if (this.GameController.isPathAhead(this.blockType)) {
-            this.queue.reset();
-            this.GameController.queue.setWhileCommandInsertState(this.queue);
-            this.ifCodeCallback(); // inserts commands via CodeOrgAPI
-            this.GameController.queue.setWhileCommandInsertState(null);
-            this.queue.begin();
-        } else {
-            this.state = CommandState.SUCCESS;
-        }
-    }
+    // setup the "if" check
+    this.handleIfCheck();
+  }
 
+  handleIfCheck() {
+    if (this.gameController.isPathAhead(this.blockType)) {
+      this.queue.reset();
+      this.gameController.queue.setWhileCommandInsertState(this.queue);
+      this.ifCodeCallback(); // inserts commands via CodeOrgAPI
+      this.gameController.queue.setWhileCommandInsertState(null);
+      this.queue.begin();
+    } else {
+      this.state = CommandState.SUCCESS;
+    }
+  }
 }
 

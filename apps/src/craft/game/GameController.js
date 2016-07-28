@@ -1,6 +1,7 @@
 import CommandQueue from "./CommandQueue/CommandQueue.js";
 import BaseCommand from "./CommandQueue/BaseCommand.js";
 import DestroyBlockCommand from "./CommandQueue/DestroyBlockCommand.js";
+import CallbackCommand from "./CommandQueue/CallbackCommand.js";
 import MoveForwardCommand from "./CommandQueue/MoveForwardCommand.js";
 import TurnCommand from "./CommandQueue/TurnCommand.js";
 import WhileCommand from "./CommandQueue/WhileCommand.js";
@@ -9,6 +10,8 @@ import IfBlockAheadCommand from "./CommandQueue/IfBlockAheadCommand.js";
 import LevelModel from "./LevelMVC/LevelModel.js";
 import LevelView from "./LevelMVC/LevelView.js";
 import AssetLoader from "./LevelMVC/AssetLoader.js";
+
+import FacingDirection from "./LevelMVC/FacingDirection.js";
 
 import * as CodeOrgAPI from "./API/CodeOrgAPI.js";
 
@@ -73,6 +76,8 @@ class GameController {
 
     this.resettableTimers = [];
 
+    this.events = [];
+
     // Phaser "slow motion" modifier we originally tuned animations using
     this.assumedSlowMotion = 1.5;
     this.initialSlowMotion = gameControllerConfig.customSlowMotion || this.assumedSlowMotion;
@@ -104,6 +109,7 @@ class GameController {
    * @param {Object} levelConfig
    */
   loadLevel(levelConfig) {
+    levelConfig.isEventLevel = true;
     this.levelData = Object.freeze(levelConfig);
 
     this.levelModel = new LevelModel(this.levelData);
@@ -120,6 +126,7 @@ class GameController {
       timer.stop(true);
     });
     this.resettableTimers.length = 0;
+    this.events.length = 0;
   }
 
   preload() {
@@ -147,92 +154,108 @@ class GameController {
   }
 
   update() {
-      this.queue.tick();
-      this.levelView.update();
+    this.queue.tick();
+    this.levelView.update();
 
-      if (this.queue.isFinished()) {
-          this.handleEndState();
-      }
+    if (this.queue.isFinished()) {
+      this.handleEndState();
+    }
   }
 
   addCheatKeys() {
-    this.game.input.keyboard.addKey(Phaser.Keyboard.TILDE).onUp.add(() => {
-      this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onUp.add(() => {
-        var dummyFunc = function () {
-          console.log("highlight move forward command.");
-        };
-        this.codeOrgAPI.moveForward(dummyFunc);
-      });
+    if (!this.levelData.isEventLevel) {
+      return;
+    }
+    this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("highlight move forward command.");
+      };
+      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
+      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Up);
+      this.queue.begin();
+    });
 
-      this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onUp.add(() => {
-        var dummyFunc = function () {
-          console.log("highlight turn right command.");
-        };
-        this.codeOrgAPI.turnRight(dummyFunc);
-      });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("highlight turn right command.");
+      };
+      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
+      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Right);
+      this.queue.begin();
+    });
 
-      this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onUp.add(() => {
-        var dummyFunc = function () {
-          console.log("highlight turn left command.");
-        };
-        this.codeOrgAPI.turnLeft(dummyFunc);
-      });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("highlight turn left command.");
+      };
+      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
+      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Left);
+      this.queue.begin();
+    });
 
-      this.game.input.keyboard.addKey(Phaser.Keyboard.P).onUp.add(() => {
-        var dummyFunc = function () {
-          console.log("highlight placeBlock command.");
-        };
-        this.codeOrgAPI.placeBlock(dummyFunc, "logOak");
-      });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("highlight turn left command.");
+      };
+      //if (this.queue.currentCommand instanceof CallbackCommand) { return; }
+      this.codeOrgAPI.moveDirection(dummyFunc, FacingDirection.Down);
+      this.queue.begin();
+    });
 
-      this.game.input.keyboard.addKey(Phaser.Keyboard.D).onUp.add(() => {
-        var dummyFunc = function () {
-          console.log("highlight destroy block command.");
-        };
-        this.codeOrgAPI.destroyBlock(dummyFunc);
-      });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.P).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("highlight placeBlock command.");
+      };
+      this.codeOrgAPI.placeBlock(dummyFunc, "logOak");
+      this.codeOrgAPI.startAttempt(dummyFunc);
+    });
 
-      this.game.input.keyboard.addKey(Phaser.Keyboard.E).onUp.add(() => {
-        var dummyFunc = function (result) {
-          console.log(`Execute command list done: ${result} `);
-        };
-        this.codeOrgAPI.startAttempt(dummyFunc);
-      });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.D).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("highlight destroy block command.");
+      };
+      this.codeOrgAPI.destroyBlock(dummyFunc);
+      this.codeOrgAPI.startAttempt(dummyFunc);
+    });
 
-      this.game.input.keyboard.addKey(Phaser.Keyboard.W).onUp.add(() => {
-        var dummyFunc = function () {
-          console.log("Execute While command list");
-        };
-        var blockType = "empty";
-        var codeBlock = function () {
-          this.GameController.codeOrgAPI.moveForward(function () {
-            console.log("Execute While command move block");
-          });
-          this.GameController.codeOrgAPI.moveForward(function () {
-            console.log("Execute While command move block2");
-          });
-          this.GameController.codeOrgAPI.turnLeft(function () {
-            console.log("Execute While command turn");
-          });
-        };
-        this.codeOrgAPI.whilePathAhead(dummyFunc, blockType, codeBlock);
-      });
+    this.game.input.keyboard.addKey(Phaser.Keyboard.E).onUp.add(() => {
+      var dummyFunc = function (result) {
+        console.log(`Execute command list done: ${result} `);
+      };
+      this.codeOrgAPI.startAttempt(dummyFunc);
+    });
+
+    this.game.input.keyboard.addKey(Phaser.Keyboard.W).onUp.add(() => {
+      var dummyFunc = function () {
+        console.log("Execute While command list");
+      };
+      var blockType = "empty";
+      var codeBlock = function () {
+        this.GameController.codeOrgAPI.moveForward(function () {
+          console.log("Execute While command move block");
+        });
+        this.GameController.codeOrgAPI.moveForward(function () {
+          console.log("Execute While command move block2");
+        });
+        this.GameController.codeOrgAPI.turnLeft(function () {
+          console.log("Execute While command turn");
+        });
+      };
+      this.codeOrgAPI.whilePathAhead(dummyFunc, blockType, codeBlock);
     });
   }
 
   handleEndState() {
-      // TODO: go into success/failure animation? (or are we called by CodeOrg for that?)
-
-      // report back to the code.org side the pass/fail result
-      //     then clear the callback so we dont keep calling it
-      if (this.OnCompleteCallback) {
-          if (this.queue.isSucceeded()) {
-              this.OnCompleteCallback(true, this.levelModel);
-          } else {
-              this.OnCompleteCallback(false, this.levelModel);
-          }
-          this.OnCompleteCallback = null;
+    // report back to the code.org side the pass/fail result
+    //     then clear the callback so we dont keep calling it
+    if (this.OnCompleteCallback) {
+      if (this.queue.isSucceeded()) {
+        this.OnCompleteCallback(true, this.levelModel);
+      } else {
+        this.OnCompleteCallback(false, this.levelModel);
       }
+      this.OnCompleteCallback = null;
+    }
   }
 
   render() {
@@ -255,9 +278,9 @@ class GameController {
   // command processors
   moveForward(commandQueueItem) {
     var player = this.levelModel.player,
-      allFoundCreepers,
-      groundType,
-      jumpOff;
+        allFoundCreepers,
+        groundType,
+        jumpOff;
 
     if (this.levelModel.canMoveForward()) {
       let wasOnBlock = player.isOnBlock;
@@ -274,17 +297,17 @@ class GameController {
       this.levelView.playMoveForwardAnimation(player.position, player.facing, jumpOff, player.isOnBlock, groundType, () => {
         this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
 
-      //First arg is if we found a creeper
+        // First arg is if we found a creeper
         allFoundCreepers = this.levelModel.isPlayerStandingNearCreeper();
 
         if (this.levelModel.isPlayerStandingInWater()) {
-            this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
-              commandQueueItem.failed();
-            } );
+          this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
+            commandQueueItem.failed();
+          });
         } else if (this.levelModel.isPlayerStandingInLava()) {
           this.levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
             commandQueueItem.failed();
-          } );
+          });
         } else {
           this.delayPlayerMoveBy(30, 200, () => {
             commandQueueItem.succeeded();
@@ -305,6 +328,30 @@ class GameController {
     }
   }
 
+  moveDirection(commandQueueItem, direction) {
+    const player = this.levelModel.player;
+
+    this.levelModel.turnToDirection(direction);
+
+    if (!this.levelModel.canMoveForward()) {
+      this.levelView.playBumpAnimation(player.position, player.facing, false);
+      commandQueueItem.succeeded();
+      // TODO(bjordan): handle facing edge of map
+      this.events.forEach(e => e({ eventType: 'blockTouched', blockReference: this.levelModel.getForwardBlock(), blockType: this.levelModel.getForwardBlockType() }));
+      return;
+    }
+
+    this.levelModel.moveDirection(direction);
+    const groundType = this.levelModel.groundPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
+    this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
+    this.levelView.playMoveForwardAnimation(player.position, player.facing, false, player.isOnBlock, groundType, () => {
+      this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
+      this.delayPlayerMoveBy(30, 200, () => {
+        commandQueueItem.succeeded();
+      });
+    });
+  }
+
   turn(commandQueueItem, direction) {
     if (direction === -1) {
       this.levelModel.turnLeft();
@@ -321,46 +368,56 @@ class GameController {
 
   }
 
+  destroyEntity(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+    this.destroyBlockWithoutPlayerInteraction([x, y]);
+    this.levelModel.computeShadingPlane();
+    this.levelModel.computeFowPlane();
+    this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+    this.levelView.updateFowPlane(this.levelModel.fowPlane);
+    commandQueueItem.succeeded();
+  }
+
   destroyBlockWithoutPlayerInteraction(position) {
     let block = this.levelModel.actionPlane[this.levelModel.yToIndex(position[1]) + position[0]];
     this.levelModel.destroyBlock(position);
 
-    if (block !== null) {
+    if (block) {
       let destroyPosition = block.position;
       let blockType = block.blockType;
 
       if (block.isDestroyable) {
         this.levelModel.computeShadingPlane();
         this.levelModel.computeFowPlane();
-        switch (blockType){
+        switch (blockType) {
           case "logAcacia":
           case "treeAcacia":
             blockType = "planksAcacia";
-          break;
+            break;
           case "logBirch":
           case "treeBirch":
-           blockType = "planksBirch";
-          break;
+            blockType = "planksBirch";
+            break;
           case "logJungle":
           case "treeJungle":
             blockType = "planksJungle";
-          break;
+            break;
           case "logOak":
           case "treeOak":
-           blockType = "planksOak";
-          break;
+            blockType = "planksOak";
+            break;
           case "logSpruce":
           case "treeSpruce":
             blockType = "planksSpruce";
-          break;
+            break;
         }
         this.levelView.actionPlaneBlocks[this.levelModel.yToIndex(destroyPosition[1]) + destroyPosition[0]].kill();
-        this.levelView.playExplosionAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, ()=>{}, true);
+        this.levelView.playExplosionAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, () => {}, true);
       } else if (block.isUsable) {
         switch (blockType) {
           case "sheep":
             // TODO: What to do with already sheered sheep?
-            this.levelView.playShearAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, ()=>{});
+            this.levelView.playShearAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, () => {});
             break;
         }
       }
@@ -379,27 +436,27 @@ class GameController {
         if (block.isDestroyable) {
           this.levelModel.computeShadingPlane();
           this.levelModel.computeFowPlane();
-          switch (blockType){
+          switch (blockType) {
             case "logAcacia":
             case "treeAcacia":
               blockType = "planksAcacia";
-            break;
+              break;
             case "logBirch":
             case "treeBirch":
-             blockType = "planksBirch";
-            break;
+              blockType = "planksBirch";
+              break;
             case "logJungle":
             case "treeJungle":
               blockType = "planksJungle";
-            break;
+              break;
             case "logOak":
             case "treeOak":
-             blockType = "planksOak";
-            break;
+              blockType = "planksOak";
+              break;
             case "logSpruce":
             case "treeSpruce":
               blockType = "planksSpruce";
-            break;
+              break;
           }
 
           this.levelView.playDestroyBlockAnimation(player.position, player.facing, destroyPosition, blockType, this.levelModel.shadingPlane, this.levelModel.fowPlane, () => {
@@ -471,7 +528,7 @@ class GameController {
         this.levelModel.destroyBlock(blockIndex);
       }
       if (this.levelModel.placeBlock(blockType)) {
-        this.levelView.playPlaceBlockAnimation(this.levelModel.player.position, this.levelModel.player.facing, blockType, blockTypeAtPosition,  () => {
+        this.levelView.playPlaceBlockAnimation(this.levelModel.player.position, this.levelModel.player.facing, blockType, blockTypeAtPosition, () => {
           this.levelModel.computeShadingPlane();
           this.levelModel.computeFowPlane();
           this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
@@ -487,7 +544,7 @@ class GameController {
         var signalBinding = this.levelView.playPlayerAnimation("jumpUp", this.levelModel.player.position, this.levelModel.player.facing, false).onLoop.add(() => {
           this.levelView.playIdleAnimation(this.levelModel.player.position, this.levelModel.player.facing, false);
           signalBinding.detach();
-          this.delayBy(800, () => { commandQueueItem.succeeded(); });
+          this.delayBy(800, () => commandQueueItem.succeeded());
         }, this);
       }
     } else {
@@ -530,7 +587,7 @@ class GameController {
   placeBlockForward(commandQueueItem, blockType) {
     var forwardPosition,
         placementPlane,
-        soundEffect = ()=>{};
+        soundEffect = () => {};
 
     if (!this.levelModel.canPlaceBlockForward()) {
       this.levelView.playPunchAirAnimation(this.levelModel.player.position, this.levelModel.player.facing, this.levelModel.player.position, () => {
@@ -543,7 +600,7 @@ class GameController {
     forwardPosition = this.levelModel.getMoveForwardPosition();
     placementPlane = this.levelModel.getPlaneToPlaceOn(forwardPosition);
     if (this.levelModel.isBlockOfTypeOnPlane(forwardPosition, "lava", placementPlane)) {
-      soundEffect = ()=>{this.levelView.audioPlayer.play("fizz");};
+      soundEffect = () => this.levelView.audioPlayer.play("fizz");
     }
     this.levelModel.placeBlockForward(blockType, placementPlane);
     this.levelView.playPlaceBlockInFrontAnimation(this.levelModel.player.position, this.levelModel.player.facing, this.levelModel.getMoveForwardPosition(), placementPlane, blockType, () => {
@@ -593,49 +650,49 @@ class GameController {
         );
       } else if (this.checkMinecartLevelEndAnimation()) {
         this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
-            () => { commandQueueItem.succeeded(); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
+            () => commandQueueItem.succeeded(), this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
       } else if (this.checkTntAnimation()) {
         this.levelView.scaleShowWholeWorld(() => {});
         var tnt = this.levelModel.getTnt();
         var wasOnBlock = player.isOnBlock;
         this.levelView.playDestroyTntAnimation(player.position, player.facing, player.isOnBlock, this.levelModel.getTnt(), this.levelModel.shadingPlane,
-        () => {
-          if (tnt.length) {
-            // Shakes camera (need to avoid contention with pan?)
-            //this.game.camera.setPosition(0, 5);
-            //this.game.add.tween(this.game.camera)
-            //    .to({y: -10}, 40, Phaser.Easing.Sinusoidal.InOut, false, 0, 3, true)
-            //    .to({y: 0}, 0)
-            //    .start();
-          }
-          for (var i in tnt) {
-            if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
-              this.levelModel.player.isOnBlock = false;
-            }
-            var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
-            this.levelModel.destroyBlock(tnt[i]);
-            for (var b = 1; b < surroundingBlocks.length; ++b) {
-              if (surroundingBlocks[b][0]) {
-                this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
+            () => {
+              if (tnt.length) {
+                // Shakes camera (need to avoid contention with pan?)
+                //this.game.camera.setPosition(0, 5);
+                //this.game.add.tween(this.game.camera)
+                //    .to({y: -10}, 40, Phaser.Easing.Sinusoidal.InOut, false, 0, 3, true)
+                //    .to({y: 0}, 0)
+                //    .start();
               }
-            }
-          }
-          if (!player.isOnBlock && wasOnBlock) {
-            this.levelView.playPlayerJumpDownVerticalAnimation(player.position, player.facing);
-          }
-          this.levelModel.computeShadingPlane();
-          this.levelModel.computeFowPlane();
-          this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
-          this.levelView.updateFowPlane(this.levelModel.fowPlane);
-          this.delayBy(200, () => {
-            this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock, () => {
-              commandQueueItem.succeeded();
+              for (var i in tnt) {
+                if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
+                  this.levelModel.player.isOnBlock = false;
+                }
+                var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
+                this.levelModel.destroyBlock(tnt[i]);
+                for (var b = 1; b < surroundingBlocks.length; ++b) {
+                  if (surroundingBlocks[b][0]) {
+                    this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
+                  }
+                }
+              }
+              if (!player.isOnBlock && wasOnBlock) {
+                this.levelView.playPlayerJumpDownVerticalAnimation(player.position, player.facing);
+              }
+              this.levelModel.computeShadingPlane();
+              this.levelModel.computeFowPlane();
+              this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+              this.levelView.updateFowPlane(this.levelModel.fowPlane);
+              this.delayBy(200, () => {
+                this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock, () => {
+                  commandQueueItem.succeeded();
+                });
+              });
             });
-          });
-        });
       } else {
         this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock,
-            () => { commandQueueItem.succeeded(); });
+            () => commandQueueItem.succeeded());
       }
     } else {
       this.levelView.playFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
@@ -644,8 +701,8 @@ class GameController {
     }
   }
 
-  isPathAhead(blockType)  {
-      return this.levelModel.isForwardBlockOfType(blockType);
+  isPathAhead(blockType) {
+    return this.levelModel.isForwardBlockOfType(blockType);
   }
 
 }
