@@ -37,7 +37,7 @@ const NetSimLogBrowserTable = React.createClass({
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     renderedRowLimit: React.PropTypes.number,
-    userOwnsShard: React.PropTypes.bool
+    teacherView: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -99,7 +99,7 @@ const NetSimLogBrowserTable = React.createClass({
       }
     });
 
-    if (this.props.userOwnsShard) {
+    if (this.props.teacherView) {
       columns.push({
         header: {
           label: 'Sent By',

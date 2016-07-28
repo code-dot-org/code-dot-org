@@ -27,7 +27,7 @@ const NetSimLogBrowser = React.createClass({
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     renderedRowLimit: React.PropTypes.number,
-    userOwnsShard: React.PropTypes.bool
+    teacherView: React.PropTypes.bool
   }),
 
   getDefaultProps() {
@@ -81,7 +81,7 @@ const NetSimLogBrowser = React.createClass({
               headerFields={this.props.headerFields}
               logRows={this.props.logRows}
               renderedRowLimit={this.props.renderedRowLimit}
-              userOwnsShard={this.props.userOwnsShard}
+              teacherView={this.props.teacherView}
             />
           </div>
         </Body>
@@ -198,7 +198,7 @@ if (BUILD_STYLEGUIDE) {
                 setTrafficFilter={() => null}
                 headerFields={simplePacket}
                 logRows={sampleData}
-                userOwnsShard
+                teacherView
               />
             </div>
           </div>
