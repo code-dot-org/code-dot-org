@@ -21,19 +21,15 @@ const DataProperties = React.createClass({
     onViewChange: React.PropTypes.func.isRequired
   },
 
-  getValue(key) {
-    return String(JSON.parse(this.props.keyValueData[key]));
-  },
-
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
     return (
-      <div id='dataProperties' style={{display: visible ? 'block' : 'none'}}>
+      <div id="dataProperties" style={{display: visible ? 'block' : 'none'}}>
         <h4>
          <a
-             href='#'
-             style={dataStyles.link}
-             onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+           href="#"
+           style={dataStyles.link}
+           onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
          >
            Data
          </a>
@@ -41,11 +37,6 @@ const DataProperties = React.createClass({
         </h4>
 
         <table>
-          <colgroup>
-            <col width='200'/>
-            <col width='200'/>
-            <col width='162'/>
-          </colgroup>
           <tbody>
             <tr>
               <th style={dataStyles.headerCell}>Key</th>
@@ -57,7 +48,11 @@ const DataProperties = React.createClass({
 
             {
               Object.keys(this.props.keyValueData).map(key => (
-                <EditKeyRow key={key} keyName={key} value={this.getValue(key)}/>
+                <EditKeyRow
+                  key={key}
+                  keyName={key}
+                  value={JSON.parse(this.props.keyValueData[key])}
+                />
               ))
             }
           </tbody>

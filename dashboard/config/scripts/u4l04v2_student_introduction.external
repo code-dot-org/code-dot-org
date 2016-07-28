@@ -3,17 +3,17 @@ title 'title'
 css 'unplugged'
 description 'description here'
 markdown <<MARKDOWN
-## Unit 4: Lesson 04 - Good and Bad Data Visualizations
+# Unit 4: Lesson 04 - Good and Bad Data Visualizations
 
-# Background
+## Background
 Visualizations of data are a powerful way to present information and insights learned from data. However, people use data visuals with varying success. In fact, very smart people struggle to make good data visualizations which correctly convey the findings from data. Some are strong data visualizations that create a deeper understanding of the underlying data. Others create misconceptions about the findings of data. Others are just hilariously bad. Your job is to rate the quality of the visualizations and keep a few notes about why they are good or bad.
 
-# Lesson
+## Lesson
 
 * Review Data Visualization 101 - How to Design Charts and Graphs
 * Review and evaluate a collection of data visualizations
 
-# Resources
+## Resources
 
 * Guide: <a href="http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf" target="_blank">Data Visualization 101: How To Design Charts and Graphs</a>
 * Worksheet: <a href="https://docs.google.com/document/d/1QL-y4zOFrZu6pc2Q6ZMd5Vb-MMGYfGuVCpiZuACDgfk/edit#" target="_blank">Data Visualization Scorecard</a>
@@ -22,7 +22,6 @@ Visualizations of data are a powerful way to present information and insights le
     * **Collection B** 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

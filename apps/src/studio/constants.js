@@ -48,6 +48,16 @@ exports.ClockwiseDirectionsFromNorth = [
 ];
 
 /**
+ * List of cardinal directions
+ */
+exports.CardinalDirections = [
+  Dir.NORTH,
+  Dir.SOUTH,
+  Dir.EAST,
+  Dir.WEST
+];
+
+/**
  * Given a 2D vector (x and y) provides the closest animation direction
  * given in our Direction enum.
  * @param {number} x

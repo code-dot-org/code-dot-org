@@ -275,8 +275,6 @@ var WorkshopForm = React.createClass({
           {options}
         </Input>
       );
-    } else {
-      this.setState({subject: null});
     }
   },
 
@@ -348,8 +346,8 @@ var WorkshopForm = React.createClass({
     var course = event.target.value;
     this.handleFieldChange('course', course);
 
-    // clear facilitators
-    this.setState({facilitators: []});
+    // clear facilitators and subject
+    this.setState({facilitators: [], subject: null});
     this.loadAvailableFacilitators(course);
   },
 

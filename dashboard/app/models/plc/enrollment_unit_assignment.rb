@@ -68,6 +68,36 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     plc_module_assignments.map{ |a| a.plc_learning_module.stage.position unless a.plc_learning_module.is_required? }.compact
   end
 
+  def summarize_progress
+    summary = []
+
+    categories_for_stage = plc_course_unit.script.stages.map(&:flex_category).uniq
+
+    # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
+    if plc_course_unit.has_evaluation?
+      Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
+        summary << {
+            category: flex_category || Plc::LearningModule::CONTENT_MODULE,
+            status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED
+        }
+      end
+    else
+      # Otherwise, status is determined by the completion of stages
+      categories_for_stage.each do |category|
+        summary << {
+            category: category || 'content',
+            status: Plc::EnrollmentModuleAssignment.stages_based_status(
+              plc_course_unit.script.stages.select { |stage| stage.flex_category == category },
+              user,
+              plc_course_unit.script
+            )
+        }
+      end
+    end
+
+    summary
+  end
+
   private
 
   def enroll_in_module(learning_module)

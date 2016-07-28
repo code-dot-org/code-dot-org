@@ -8,7 +8,7 @@ We are planning updates to our Privacy Policy and Terms of Service as described 
 
 # Upcoming Terms of Service - For Open Review
 
-Planning to update Terms of Service: Aug 15, 2016
+Planning to update Terms of Service: Aug 22, 2016
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the web sites located at [http://code.org](http://code.org), [http://csedweek.org](http://csedweek.org), [http://computinginthecore.org](http://computinginthecore.org), [http://hourofcode.com](http://hourofcode.com), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”), including the tutorial platform at [http://studio.code.org](http://studio.code.org) (“**Code Studio**”).
 

@@ -1,5 +1,7 @@
 /** @file Utility functions for the data browser. */
 
+import { valueOr } from '../../utils';
+
 /**
  * Convert a string to a boolean or number if possible.
  * @param val
@@ -12,8 +14,17 @@ export function castValue(val) {
   if (val === 'false' || val === false ) {
     return false;
   }
-  if (!isNaN(parseFloat(val))) {
+  if (!isNaN(val) && !isNaN(parseFloat(val))) {
     return parseFloat(val);
   }
   return val;
+}
+
+/**
+ * Return the value as a string if it is defined, or return '' if it is undefined.
+ * @param {*} val
+ * @returns {string}
+ */
+export function displayValue(val) {
+  return String(valueOr(val, ''));
 }

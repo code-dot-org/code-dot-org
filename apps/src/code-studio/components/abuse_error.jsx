@@ -22,11 +22,15 @@ var AbuseError = React.createClass({
     // our i18n strings
     return (
       <div className={this.props.className} style={this.props.style}>
-        <p style={this.props.textStyle}
-            dangerouslySetInnerHTML={{__html: this.props.i18n.tos}}>
+        <p
+          style={this.props.textStyle}
+          dangerouslySetInnerHTML={{__html: this.props.i18n.tos}}
+        >
         </p>
-        <p style={this.props.textStyle}
-          dangerouslySetInnerHTML={{__html: this.props.i18n.contact_us}}>
+        <p
+          style={this.props.textStyle}
+          dangerouslySetInnerHTML={{__html: this.props.i18n.contact_us}}
+        >
         </p>
       </div>
     );

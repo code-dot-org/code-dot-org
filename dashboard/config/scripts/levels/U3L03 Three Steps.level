@@ -37,7 +37,7 @@
     "instructions": "Define a function called drawSide() which draws three steps and moves the turtle to prepare for the next side (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

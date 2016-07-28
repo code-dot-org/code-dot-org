@@ -84,7 +84,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
   });
 
   it('throws if required prop fields are missing', function () {
-    const requiredFields = ['name', 'sourceSize', 'frameSize', 'frameCount', 'frameRate'];
+    const requiredFields = ['name', 'frameSize', 'frameCount', 'frameRate'];
     requiredFields.forEach(requiredField => {
       const keys = ['mykey'];
       let props = buildValidPropsForKeys(keys);

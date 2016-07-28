@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('../util/testUtils');
-testUtils.setupLocales();
 import {setupTestBlockly} from './util/testBlockly';
 
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');

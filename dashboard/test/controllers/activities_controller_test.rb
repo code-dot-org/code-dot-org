@@ -121,8 +121,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -214,8 +212,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
@@ -236,8 +232,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
@@ -270,8 +264,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -295,8 +287,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone does not allow negative lines of code" do
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -322,8 +312,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_controller_logs_milestone_regexp(/9999999/)
 
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -359,8 +347,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     # existing level
     script_start_date = Time.now - 5.days
@@ -417,8 +403,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     expect_s3_upload
 
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
@@ -443,8 +427,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     expect_s3_upload
 
@@ -472,8 +454,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -496,8 +476,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -586,8 +564,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check)
-
     expect_s3_upload
 
     original_activity_count = Activity.count
@@ -630,8 +606,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check)
 
     program = "<whatever>"
 
@@ -761,7 +735,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-    @controller.expects(:trophy_check).with(@user)
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
@@ -819,8 +792,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
         post :milestone, @milestone_params.merge(user_id: 0)
@@ -845,8 +816,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -897,8 +866,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
     expect_s3_upload
 
     assert_creates(LevelSource, LevelSourceImage) do
@@ -926,8 +893,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
     expect_s3_upload_failure
 
     assert_creates(LevelSource) do
@@ -946,7 +911,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # end
 
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
+      post :milestone, user_id: @user.id, script_level_id: create(:script_level, :playlab).id, program: studio_program_with_text('shit')
     end
     assert_response :success
     expected_response = {
@@ -967,7 +932,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('scheiße'))
+        post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('scheiße'))
       end
     end
     assert_response :success
@@ -978,14 +945,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with http error slogs' do
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
-    @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
+    WebPurify.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+      post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -1001,7 +970,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+      post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -1015,7 +986,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('putamadre'))
+        post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('putamadre'))
       end
     end
     assert_response :success
@@ -1025,7 +998,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('800-555-5555'))
+      post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('800-555-5555'))
     end
     assert_response :success
 
@@ -1041,9 +1016,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
+    script_level = create(:script_level, :playlab)
+    Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
 
-    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+    post :milestone, @milestone_params.merge(
+      script_level_id: script_level.id,
+      program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1056,7 +1034,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     WebPurify.stubs(:find_potential_profanity).returns false
     Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
 
-    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+    post :milestone, @milestone_params.merge(
+      script_level_id: create(:script_level, :playlab).id,
+      program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1117,19 +1097,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     sign_out @user
     assert_equal true, new_level
-  end
-
-  test 'trophy_check only on script with trophies' do
-    script_level_no_trophies = Script.where(trophies: false).first.script_levels.first
-    script_level_with_trophies = Script.where(trophies: true).first.script_levels.first
-
-    @controller.expects(:trophy_check).never
-    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies.id)
-    assert_response :success
-
-    @controller.expects(:trophy_check).with(@user)
-    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
-    assert_response :success
   end
 
   test 'does not backfill new users who submit unsuccessful first attempt' do

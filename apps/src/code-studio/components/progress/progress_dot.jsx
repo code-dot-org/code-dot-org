@@ -5,18 +5,7 @@ import { connect } from 'react-redux';
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../../color';
-
-function createOutline(color) {
-  return `
-    ${color} 0 1px,
-    ${color} 1px 1px,
-    ${color} 1px 0px,
-    ${color} 1px -1px,
-    ${color} 0 -1px,
-    ${color} -1px -1px,
-    ${color} -1px 0,
-    ${color} -1px 1px`;
-}
+import progressStyles, { createOutline } from './progressStyles';
 
 const dotSize = 24;
 const styles = {
@@ -80,17 +69,7 @@ const styles = {
       fontSize: 16,
       lineHeight: '32px'
     },
-    icon: {
-      borderColor: 'transparent',
-      fontSize: 24,
-      verticalAlign: -4,
-      color: color.white,
-      textShadow: createOutline(color.lighter_gray),
-      ':hover': {
-        color: color.white,
-        backgroundColor: 'transparent'
-      }
-    },
+    icon: progressStyles.dotIcon,
     icon_small: {
       width: 9,
       height: 9,
@@ -205,11 +184,11 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
 
     return (
       <a
-        key='link'
+        key="link"
         href={level.locked ? undefined : level.url + location.search}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
         style={[
@@ -255,7 +234,7 @@ export const ProgressDot = React.createClass({
         {
           showLevelName &&
             <span
-              key='named_level'
+              key="named_level"
               style={[styles.levelName, level.locked && {color: color.charcoal}]}
             >
               {level.name}
@@ -267,6 +246,6 @@ export const ProgressDot = React.createClass({
 });
 
 export default connect(state => ({
-  currentLevelId: state.currentLevelId,
-  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
+  currentLevelId: state.progress.currentLevelId,
+  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
 }))(Radium(ProgressDot));

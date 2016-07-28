@@ -1,12 +1,9 @@
 name 'CSPPD3-u2 unit 2 overview'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Unit 2 Overview > What’s Inside
 
-### Unit 2 Overview > What’s Inside
-
-<br/>
-#### What’s in the Unit 2 Overview? 
+>## What’s in the Unit 2 Overview?
 
 >- Visual breakdown of Unit 2 organized in logical chunks
 - Explanation of the CS concepts covered in each chunk
@@ -16,7 +13,5 @@ markdown <<MARKDOWN
 
 Click “Continue” below to get started learning more about Unit 2! 
 
-<br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

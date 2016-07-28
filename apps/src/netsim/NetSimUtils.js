@@ -6,7 +6,7 @@
 import $ from 'jquery';
 var utils = require('../utils'); // Provides String.prototype.repeat
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
 
@@ -238,7 +238,7 @@ exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
  * @private
  */
 exports.scrubLevelConfiguration_ = function (levelConfig) {
-  var scrubbedLevel = _.clone(levelConfig, true);
+  var scrubbedLevel = _.cloneDeep(levelConfig);
 
   // Convert old header spec format to new header spec format
   scrubbedLevel.routerExpectsPacketHeader =

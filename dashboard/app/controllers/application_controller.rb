@@ -135,7 +135,6 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
-        response[:trophy_updates] = options[:trophy_updates] unless options[:trophy_updates].blank?
         response[:new_level_completed] = options[:new_level_completed]
         response[:level_path] = build_script_level_path(script_level)
         script_level_solved_response(response, script_level)
@@ -153,7 +152,7 @@ class ApplicationController < ActionController::Base
     end
 
     if options[:share_failure]
-      response[:share_failure] = options[:share_failure]
+      response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
     if HintViewRequest.enabled?

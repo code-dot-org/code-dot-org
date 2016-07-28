@@ -175,7 +175,6 @@ Multi.prototype.ready = function () {
 
   if (this.standalone) {
     $('.submitButton').click($.proxy(this.submitButtonClick, this));
-    $('.unsubmitButton').click($.proxy(this.unsubmitButtonClick, this));
   }
 };
 
@@ -258,39 +257,6 @@ Multi.prototype.submitButtonClick = function () {
     this.crossedAnswers.unshift(this.lastSelectionIndex);
   }
 };
-
-// Unsubmit button should only be available when this is a standalone Multi.
-Multi.prototype.unsubmitButtonClick = function () {
-  var dialog = new window.Dialog({
-    body:
-      '<div class="modal-content no-modal-icon">' +
-        '<p class="dialog-title">Unsubmit answer</p>' +
-        '<p class="dialog-body">' +
-        'This will unsubmit your last answer.' +
-        '</p>' +
-        '<button id="continue-button">Okay</button>' +
-        '<button id="cancel-button">Cancel</button>' +
-      '</div>'
-  });
-
-  var dialogDiv = $(dialog.div);
-  dialog.show();
-
-  dialogDiv.find('#continue-button').click(function () {
-    $.post(window.appOptions.unsubmitUrl,
-      {"_method": 'PUT', user_level: {submitted: false}},
-      function (data) {
-        // Just reload so that the progress in the header is shown correctly.
-        location.reload();
-      }
-    );
-  });
-
-  dialogDiv.find('#cancel-button').click(function () {
-    dialog.hide();
-  });
-};
-
 
 Multi.prototype.validateAnswers = function () {
   if (this.selectedAnswers.length === this.numAnswers) {

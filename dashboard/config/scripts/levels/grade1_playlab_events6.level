@@ -37,8 +37,7 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "timeout_failure_tick": "550",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

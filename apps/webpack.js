@@ -9,6 +9,8 @@ var baseConfig = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
+      '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
+      '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       repl: path.resolve(__dirname, 'src/noop'),
     }
@@ -78,9 +80,35 @@ if (envConstants.COVERAGE) {
   ];
 }
 
+var storybookConfig = _.extend({}, baseConfig, {
+  devtool: 'inline-source-map',
+  externals: {
+    "johnny-five": "var JohnnyFive",
+    "playground-io": "var PlaygroundIO",
+    "chrome-serialport": "var ChromeSerialport",
+    "blockly": "this Blockly",
+  },
+  plugins: [
+    new webpack.ProvidePlugin({React: 'react'}),
+    new webpack.DefinePlugin({
+      IN_UNIT_TEST: JSON.stringify(false),
+      'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
+      'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
+      BUILD_STYLEGUIDE: JSON.stringify(true),
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
+    }),
+  ]
+});
+
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
   devtool: 'inline-source-map',
+  resolve: _.extend({}, baseConfig.resolve, {
+    alias: _.extend({}, baseConfig.resolve.alias, {
+      '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
+      '@cdo/netsim/locale': path.resolve(__dirname, 'test', 'util', 'netsim', 'locale-do-not-import.js'),
+    }),
+  }),
   externals: {
     "johnny-five": "var JohnnyFive",
     "playground-io": "var PlaygroundIO",
@@ -100,8 +128,8 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_UNIT_TEST: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-      BUILD_STYLEGUIDE: JSON.stringify(true),
-      PISKEL_DEVELOPMENT_MODE: false
+      BUILD_STYLEGUIDE: JSON.stringify(false),
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]
 });
@@ -152,7 +180,7 @@ function create(options) {
         IN_UNIT_TEST: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
-        PISKEL_DEVELOPMENT_MODE: piskelDevMode
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
     ],
@@ -202,5 +230,6 @@ function create(options) {
 module.exports = {
   config: baseConfig,
   karmaConfig: karmaConfig,
+  storybookConfig: storybookConfig,
   create: create
 };
