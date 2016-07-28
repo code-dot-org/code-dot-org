@@ -1382,6 +1382,53 @@ exports.install = function (blockly, blockInstallOptions) {
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
   };
 
+  blockly.Blocks.studio_addNumPoints = {
+    // Block for adding arbitrary number of points
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('NUM')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.add());
+      this.appendDummyInput().appendTitle(msg.points());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addPointsTooltip());
+    }
+  };
+
+  generator.studio_addNumPoints = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+    return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+        arg + '\');\n';
+  };
+
+  blockly.Blocks.studio_removeNumPoints = {
+    // Block for adding arbitrary number of points
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('NUM').appendTitle(msg.remove());
+      this.appendDummyInput().appendTitle(msg.points());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.removePointsTooltip());
+    }
+  };
+
+  generator.studio_removeNumPoints = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+    arg = (-1 * Number(arg)).toString();
+    return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+        arg + '\');\n';
+  };
+
   blockly.Blocks.studio_setScoreText = {
     // Block for setting the score text.
     helpUrl: '',
