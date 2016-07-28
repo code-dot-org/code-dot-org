@@ -1165,18 +1165,22 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
 };
 
 /**
- * @param {!number} nodeID
+ * @param {!NetSimMessage} message
  * @returns {string} Node display name
  * @private
  */
-NetSimRouterNode.prototype.getDisplayNameForNodeID_ = function (nodeID) {
+NetSimRouterNode.prototype.getSenderNameForMessage_ = function (message) {
+  // Special case: Show 'DNS' as from-name when message from auto-DNS service.
+  if (this.isMessageFromAutoDns_(message)) {
+    return 'DNS';
+  }
+
   var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
     this.shard_.nodeTable.readAll());
-  var node = _.find(nodes, (node) => node.entityID === nodeID);
+  var node = _.find(nodes, (node) => node.entityID === message.fromNodeID);
   if (node) {
     return node.getDisplayName();
   }
-
   return '';
 };
 
@@ -1471,7 +1475,7 @@ NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
 
     this.log(
         droppablePacket.payload,
-        this.getDisplayNameForNodeID_(droppablePacket.fromNodeID),
+        this.getSenderNameForMessage_(droppablePacket),
         NetSimLogEntry.LogStatus.DROPPED);
   }.bind(this));
 };
@@ -1541,7 +1545,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
     if (this.randomDropChance > 0 && NetSimGlobals.random() <= this.randomDropChance) {
       this.log(
           message.payload,
-          this.getDisplayNameForNodeID_(message.fromNodeID),
+          this.getSenderNameForMessage_(message),
           NetSimLogEntry.LogStatus.DROPPED);
       onComplete(null);
       return;
@@ -1576,7 +1580,7 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
   this.forwardMessageToNodeIDs_(message, connectedNodeIDs, function (err, result) {
     this.log(
         message.payload,
-        this.getDisplayNameForNodeID_(message.fromNodeID),
+        this.getSenderNameForMessage_(message),
         err ? NetSimLogEntry.LogStatus.DROPPED : NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(err, result);
   }.bind(this));
@@ -1629,7 +1633,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     logger.warn("Packet not readable by router");
     this.log(
         message.payload,
-        this.getDisplayNameForNodeID_(message.fromNodeID),
+        this.getSenderNameForMessage_(message),
         NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
@@ -1642,7 +1646,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     logger.warn("Destination address not reachable");
     this.log(
         message.payload,
-        this.getDisplayNameForNodeID_(message.fromNodeID),
+        this.getSenderNameForMessage_(message),
         NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
@@ -1651,7 +1655,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     logger.warn("Packet stopped at router.");
     this.log(
         message.payload,
-        this.getDisplayNameForNodeID_(message.fromNodeID),
+        this.getSenderNameForMessage_(message),
         NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(null);
     return;
@@ -1680,7 +1684,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
       function (err, result) {
         this.log(
             message.payload,
-            this.getDisplayNameForNodeID_(message.fromNodeID),
+            this.getSenderNameForMessage_(message),
             NetSimLogEntry.LogStatus.SUCCESS);
         onComplete(err, result);
       }.bind(this)
@@ -1745,6 +1749,27 @@ NetSimRouterNode.prototype.isMessageToAutoDns_ = function (message) {
   return message.toNodeID === this.entityID &&
       message.fromNodeID === this.entityID &&
       toAddress === this.getAutoDnsAddress();
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @return {boolean}
+ */
+NetSimRouterNode.prototype.isMessageFromAutoDns_ = function (message) {
+  var packet, fromAddress;
+  try {
+    packet = new Packet(this.packetSpec_, message.payload);
+    fromAddress = packet.getHeaderAsAddressString(Packet.HeaderType.FROM_ADDRESS);
+  } catch (error) {
+    logger.warn("Packet not readable by auto-DNS: " + error);
+    return false;
+  }
+
+  // Messages to the auto-dns are both to and from the router node, and
+  // addressed to the DNS.
+  return message.toNodeID === this.entityID &&
+    message.fromNodeID === this.entityID &&
+    fromAddress === this.getAutoDnsAddress();
 };
 
 /**
