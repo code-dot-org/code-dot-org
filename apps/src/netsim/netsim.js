@@ -358,7 +358,9 @@ NetSim.prototype.initWithUser_ = function (user) {
         disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'), {
+    user
+  });
 
   this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
       this.runLoop_);

@@ -5,13 +5,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var i18n = require('@cdo/netsim/locale');
+import i18n from '@cdo/netsim/locale';
 import experiments from '../experiments';
 import NetSimLogBrowser from './NetSimLogBrowser';
-var NetSimLogEntry = require('./NetSimLogEntry');
-var Packet = require('./Packet');
-var markup = require('./NetSimRouterLogModal.html.ejs');
-var NetSimGlobals = require('./NetSimGlobals');
+import NetSimLogEntry from './NetSimLogEntry';
+import Packet from './Packet';
+import markup from './NetSimRouterLogModal.html.ejs';
+import NetSimGlobals from './NetSimGlobals';
+import {doesUserOwnShard} from './NetSimUtils';
 
 /** @const {string} */
 var LOG_ENTRY_DATA_KEY = 'LogEntry';
@@ -28,9 +29,10 @@ function usingNewLogBrowser() {
  * all router logs together, in a searchable/sortable/filterable manner.
  *
  * @param {jQuery} rootDiv
+ * @param {!DashboardUser} options.user
  * @constructor
  */
-var NetSimRouterLogModal = module.exports = function (rootDiv) {
+var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
 
   /**
    * Component root, which we fill whenever we call render()
@@ -40,6 +42,11 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   if (!usingNewLogBrowser()) {
     this.rootDiv_.addClass('old-router-log-modal modal fade');
   }
+
+  /**
+   * @private {DashboardUser}
+   */
+  this.user_ = options.user;
 
   /**
    * Hidden by default.
@@ -247,6 +254,7 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
     'packet-info': entry.getLocalizedPacketInfo(),
     'message': entry.getMessageAscii()
   }));
+  const userOwnsShard = this.shard_ && doesUserOwnShard(this.user_, this.shard_.id);
   ReactDOM.render(
     <NetSimLogBrowser
       isOpen={this.isVisible()}
@@ -261,6 +269,7 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
       logRows={tableRows}
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
+      userOwnsShard={userOwnsShard}
     />,
     this.rootDiv_[0]
   );
