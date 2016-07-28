@@ -270,7 +270,7 @@ class ApiControllerTest < ActionController::TestCase
 
     # all these are translation missing because we don't actually generate i18n files in tests
     expected_response = [
-      { "stage" => "translation missing: en-us.data.script.name.bogus-script-10.title",
+      { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "levelgroup_results" => [
         { "type" => "text_match",
           "question" => "test",
