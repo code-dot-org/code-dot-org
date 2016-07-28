@@ -1259,6 +1259,7 @@ a.download-video {
     margin-top: 3px;
     overflow: hidden;
     padding: 10px;
+    min-height: 110px;
   }
   .teacher-announce .announce-content .content-img-container {
     float: left;
@@ -1274,7 +1275,7 @@ a.download-video {
     overflow: hidden;
     padding-left: 10px;
     line-height: 18px;
-    width: 610px;
+    width: 580px;
   }
   .teacher-announce .announce-content .content-text b {
     font-family: 'Gotham 5r', sans-serif;
