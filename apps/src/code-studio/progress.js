@@ -55,7 +55,11 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
-    { data: { user_id: clientState.queryParams('user_id') } }
+    {
+      data: {
+        user_id: clientState.queryParams('user_id')
+      }
+    }
   ).done(data => {
     data = data || {};
 

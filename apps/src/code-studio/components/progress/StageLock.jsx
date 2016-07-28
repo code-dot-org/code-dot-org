@@ -7,27 +7,12 @@ import progressStyles from './progressStyles';
 import commonMsg from '@cdo/locale';
 
 const styles = {
-  lockSettingsButton: [
-    progressStyles.blueButton, {
-      marginTop: 10,
-    }
-  ],
   lockSettingsText: {
     marginLeft: 10
   },
-  lockStageButton: {
-    fontSize: 14,
-    backgroundColor: color.orange,
-    color: color.white,
-    marginTop: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10
-  },
   warning: {
     position: 'relative',
-    top: 4
+    top: 2
   },
   warnIcon: {
     color: color.red
@@ -44,11 +29,11 @@ const styles = {
 const fakeData = [
   {
     name: 'Farrah',
-    locked: true
+    lockStatus: 'locked'
   },
   {
     name: 'George',
-    locked: false
+    lockStatus: 'editable'
   }
 ];
 
@@ -70,13 +55,13 @@ const StageLock = React.createClass({
   render() {
     return (
       <div>
-        <button style={styles.lockSettingsButton} onClick={this.openDialog}>
+        <button style={progressStyles.blueButton} onClick={this.openDialog}>
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
             {commonMsg.lockSettings()}
           </span>
         </button>
-        <button style={styles.lockStageButton}>
+        <button style={progressStyles.orangeButton}>
           {commonMsg.lockStage()}
         </button>
         <span style={styles.warning}>
