@@ -80,6 +80,29 @@ var allBlocks = [
   'tree',
   'wool'];
 
+var allSounds = [
+  'dig_wood1',
+  'stepGrass',
+  'stepWood',
+  'stepStone',
+  'stepGravel',
+  'stepFarmland',
+  'failure',
+  'success',
+  'fall',
+  'fuse',
+  'explode',
+  'placeBlock',
+  'collectedBlock',
+  'bump',
+  'punch',
+  'fizz',
+  'doorOpen',
+  'houseSuccess',
+  'minecart',
+  'sheepBaa'
+];
+
 function keysToDropdownOptions(keysList) {
   return keysList.map(function (key) {
     var displayText = (blocksToDisplayText[key] || key);
@@ -273,6 +296,21 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'destroyEntity(block, \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.craft_explodeEntity = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('explode it'));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_explodeEntity = function () {
+    return 'explodeEntity(block, \'block_id_' + this.id + '\');\n';
+  };
+
   blockly.Blocks.craft_ifLavaAhead = {
     helpUrl: '',
     init: function () {
@@ -312,6 +350,27 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Generator.get('JavaScript').craft_placeBlock = function () {
     var blockType = this.getTitleValue('TYPE');
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.craft_playSound = {
+    helpUrl: '',
+    init: function () {
+      var dropdownOptions = keysToDropdownOptions(allSounds);
+      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      dropdown.setValue(dropdownOptions[0][1]);
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle('play sound')
+          .appendTitle(dropdown, 'TYPE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_playSound = function () {
+    var blockType = this.getTitleValue('TYPE');
+    return 'playSound("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.craft_placeTorch = {

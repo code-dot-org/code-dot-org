@@ -673,6 +673,9 @@ Craft.executeUserCode = function () {
     destroyEntity: function (blockReference, blockID) {
       appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
+    explodeEntity: function (blockReference, blockID) {
+      appCodeOrgAPI.explodeEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
     turnLeft: function (blockID) {
       appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");
     },
@@ -714,6 +717,10 @@ Craft.executeUserCode = function () {
     placeBlock: function (blockType, blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),
         blockType);
+    },
+    playSound: function (soundID, blockID) {
+      appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
+        soundID);
     },
     plantCrop: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp.highlight.bind(studioApp, blockID),

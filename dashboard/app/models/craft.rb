@@ -269,7 +269,6 @@ class Craft < Blockly
     <title name="DIR">right</title>
   </block>
   <block type='craft_destroyBlock'></block>
-  <block type='craft_destroyEntity'></block>
   <block type='craft_shear'></block>
   <block type='craft_placeBlock'></block>
   <block type='craft_placeTorch'></block>
@@ -279,6 +278,9 @@ class Craft < Blockly
 </category>
 <category name="Events">
   <block type="craft_onTouched"></block>
+  <block type='craft_playSound'></block>
+  <block type='craft_explodeEntity'></block>
+  <block type='craft_destroyEntity'></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
