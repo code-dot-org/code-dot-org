@@ -78,6 +78,20 @@ export function get(controller) {
       controller.queue.addCommand(myQueueItem);
     },
 
+    explodeEntity: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.explodeEntity(myQueueItem, entity);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    playSound: function (highlightCallback, sound) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.playSound(myQueueItem, sound);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
     moveDirection: function (highlightCallback, direction) {
       const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
         controller.moveDirection(myQueueItem, direction);
