@@ -1,4 +1,5 @@
 /** @file Filtering controls for Log Browser modal */
+import _ from 'lodash';
 import React from 'react';
 
 const style = {
@@ -29,12 +30,23 @@ const NetSimLogBrowserFilters = React.createClass({
     setRouterLogMode: React.PropTypes.func.isRequired,
     localAddress: React.PropTypes.string,
     currentTrafficFilter: React.PropTypes.string.isRequired,
-    setTrafficFilter: React.PropTypes.func.isRequired
+    setTrafficFilter: React.PropTypes.func.isRequired,
+    currentSentByFilter: React.PropTypes.string.isRequired,
+    setSentByFilter: React.PropTypes.func.isRequired,
+    teacherView: React.PropTypes.bool,
+    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
   },
 
   render() {
     return (
       <div style={style.logBrowserFilters}>
+        {this.props.teacherView &&
+          <SentByDropdown
+            i18n={this.props.i18n}
+            currentSentByFilter={this.props.currentSentByFilter}
+            setSentByFilter={this.props.setSentByFilter}
+            logRows={this.props.logRows}
+          />}
         {this.props.canSetRouterLogMode &&
           <RouterLogModeDropdown
             i18n={this.props.i18n}
@@ -119,6 +131,41 @@ const TrafficFilterDropdown = React.createClass({
         <option value={`to ${this.props.localAddress}`}>
           {this.props.i18n.logBrowserHeader_showTrafficToMe()}
         </option>
+      </select>
+    );
+  }
+});
+
+const SentByDropdown = React.createClass({
+  propTypes: {
+    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
+    currentSentByFilter: React.PropTypes.string.isRequired,
+    setSentByFilter: React.PropTypes.func.isRequired,
+    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  },
+
+  onChange(event) {
+    this.props.setSentByFilter(event.target.value);
+  },
+
+  render() {
+    return (
+      <select
+        className="pull-right"
+        style={style.dropdown}
+        value={this.props.currentSentByFilter}
+        onChange={this.onChange}
+      >
+        <option value="none">
+          {this.props.i18n.logBrowserHeader_sentByAnyone()}
+        </option>
+        {_.uniq(this.props.logRows.map(row => row.sourceUserName))
+          .sort((a, b) => a.localeCompare(b))
+          .map(name => (
+          <option value={`by ${name}`} key={name}>
+            {this.props.i18n.logBrowserHeader_sentByName({name})}
+          </option>
+        ))}
       </select>
     );
   }

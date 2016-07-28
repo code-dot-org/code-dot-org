@@ -60,6 +60,8 @@
   "logBrowserHeader": "All Router Logs",
   "logBrowserHeader_all": "All Router Logs",
   "logBrowserHeader_mine": "My Router Logs",
+  "logBrowserHeader_sentByAnyone": "sent by anyone",
+  "logBrowserHeader_sentByName": "sent by {name}",
   "logBrowserHeader_showAllTraffic": "show all traffic",
   "logBrowserHeader_showMyTraffic": "show my traffic",
   "logBrowserHeader_showTrafficFromMe": "show traffic from me",

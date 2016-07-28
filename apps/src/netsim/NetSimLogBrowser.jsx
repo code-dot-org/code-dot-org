@@ -61,6 +61,16 @@ const NetSimLogBrowser = React.createClass({
     return header;
   },
 
+  getInitialState() {
+    return {
+      currentSentByFilter: 'none'
+    };
+  },
+
+  setSentByFilter(newFilter) {
+    this.setState({ currentSentByFilter: newFilter});
+  },
+
   render() {
     return (
       <Dialog fullWidth {...this.props}>
@@ -74,6 +84,10 @@ const NetSimLogBrowser = React.createClass({
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
             setTrafficFilter={this.props.setTrafficFilter}
+            currentSentByFilter={this.state.currentSentByFilter}
+            setSentByFilter={this.setSentByFilter}
+            teacherView={this.props.teacherView}
+            logRows={this.props.logRows}
           />
           <div style={style.scrollArea}>
             {/* TODO: get table sticky headers working */}
@@ -82,6 +96,7 @@ const NetSimLogBrowser = React.createClass({
               logRows={this.props.logRows}
               renderedRowLimit={this.props.renderedRowLimit}
               teacherView={this.props.teacherView}
+              currentSentByFilter={this.state.currentSentByFilter}
             />
           </div>
         </Body>
@@ -113,6 +128,8 @@ if (BUILD_STYLEGUIDE) {
       logBrowserHeader_trafficFromAddress: ({address}) => ` - Traffic From ${address}`,
       logBrowserHeader_trafficToAddress: ({address}) => ` - Traffic To ${address}`,
       logBrowserHeader_trafficToAndFromAddress: ({address}) => ` - Traffic To and From ${address}`,
+      logBrowserHeader_sentByAnyone: () => 'sent by anyone',
+      logBrowserHeader_sentByName: ({name}) => `sent by ${name}`
     };
 
     const simplePacket = [];
