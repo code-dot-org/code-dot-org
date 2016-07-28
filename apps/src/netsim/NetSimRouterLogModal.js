@@ -123,6 +123,13 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
    */
   this.currentTrafficFilter_ = 'none';
 
+  /**
+   * Whether we are currently rendering teacher view (which has additional
+   * columns and filter options).
+   * @private {boolean}
+   */
+  this.teacherView_ = false;
+
   this.render();
 };
 
@@ -181,7 +188,10 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 
 };
 
-NetSimRouterLogModal.prototype.show = function () {
+NetSimRouterLogModal.prototype.show = function (teacherView=false) {
+  // Extra check for setting teacherView here - must own the shard
+  this.teacherView_ = teacherView &&
+      (this.shard_ && doesUserOwnShard(this.user_, this.shard_.id));
   if (usingNewLogBrowser()) {
     this.onShow_();
   } else {
@@ -255,7 +265,6 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
     'packet-info': entry.getLocalizedPacketInfo(),
     'message': entry.getMessageAscii()
   }));
-  const userOwnsShard = this.shard_ && doesUserOwnShard(this.user_, this.shard_.id);
   ReactDOM.render(
     <NetSimLogBrowser
       isOpen={this.isVisible()}
@@ -270,7 +279,7 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
       logRows={tableRows}
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
-      teacherView={userOwnsShard}
+      teacherView={this.teacherView_}
     />,
     this.rootDiv_[0]
   );
