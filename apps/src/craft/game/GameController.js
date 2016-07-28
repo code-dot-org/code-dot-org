@@ -274,8 +274,58 @@ class GameController {
   getScreenshot() {
     return this.game.canvas.toDataURL("image/png");
   }
-
+  
   // command processors
+  moveEntityNorth(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+
+    this.moveEntityTo(entity, [x, y - 1]);
+    commandQueueItem.succeeded();
+  }
+
+  moveEntitySouth(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+
+    this.moveEntityTo(entity, [x, y + 1]);
+    commandQueueItem.succeeded();
+  }
+
+  moveEntityEast(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+
+    this.moveEntityTo(entity, [x + 1, y]);
+    commandQueueItem.succeeded();
+  }
+
+  moveEntityWest(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+
+    this.moveEntityTo(entity, [x - 1, y]);
+    commandQueueItem.succeeded();
+  }
+
+  moveEntityTo(entity, position) {
+    const playerIndex = this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0];
+
+    // Move only if the designated block is empty
+    const targetIndex = this.levelModel.yToIndex(position[1]) + position[0];  
+    if (this.levelModel.inBounds(position[0], position[1]) &&
+        this.levelModel.actionPlane[targetIndex].isEmpty &&
+        playerIndex !== targetIndex) {
+      const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
+      
+      // Move the block in the model and view.
+      this.levelModel.moveBlock(sourceIndex, targetIndex);
+      this.levelView.moveBlockSprite(sourceIndex, position);
+      
+      // Update renderer
+      this.levelModel.computeShadingPlane();
+      this.levelModel.computeFowPlane();
+      this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+      this.levelView.updateFowPlane(this.levelModel.fowPlane);
+    }
+  }
+  
   moveForward(commandQueueItem) {
     var player = this.levelModel.player,
         allFoundCreepers,
@@ -341,6 +391,7 @@ class GameController {
       return;
     }
 
+    
     this.levelModel.moveDirection(direction);
     const groundType = this.levelModel.groundPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
     this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
@@ -393,7 +444,7 @@ class GameController {
     this.levelModel.destroyBlock(position);
 
     if (block) {
-      let destroyPosition = block.position;
+      let destroyPosition = block.position; // position isn't a member of block, is this valid? Resolves to Undefined.
       let blockType = block.blockType;
 
       if (block.isDestroyable) {

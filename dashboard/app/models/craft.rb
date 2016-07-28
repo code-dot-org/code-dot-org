@@ -281,6 +281,10 @@ class Craft < Blockly
   <block type='craft_playSound'></block>
   <block type='craft_explodeEntity'></block>
   <block type='craft_destroyEntity'></block>
+  <block type='craft_moveEntityNorth'></block>
+  <block type='craft_moveEntitySouth'></block>
+  <block type='craft_moveEntityEast'></block>
+  <block type='craft_moveEntityWest'></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>

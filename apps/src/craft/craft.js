@@ -676,6 +676,18 @@ Craft.executeUserCode = function () {
     explodeEntity: function (blockReference, blockID) {
       appCodeOrgAPI.explodeEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
+    moveEntityNorth: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntityNorth(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    moveEntitySouth: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntitySouth(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    moveEntityEast: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntityEast(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    moveEntityWest: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntityWest(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
     turnLeft: function (blockID) {
       appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");
     },

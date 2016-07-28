@@ -962,6 +962,28 @@ export default class LevelView {
     tween.start();
   }
 
+  moveBlockSprite(sourceIndex, targetPosition){
+    const targetIndex = this.yToIndex(targetPosition[1]) + targetPosition[0];
+    const sprite = this.actionPlaneBlocks[sourceIndex]; 
+    
+    // move the actual sprite stored in the blocks array.
+    if (sprite) {
+      // Handle sprite offsets differently if a block vs. a non-block.
+      if (sprite.key === "blocks") {
+        sprite.x = -14 + 40 * targetPosition[0];
+        sprite.y = -22 + 40 * (targetPosition[1]);
+      }
+      else {
+        sprite.x = -6 + 40 * targetPosition[0];
+        sprite.y = -22 + 40 * (targetPosition[1]);
+      }
+
+      // move in the actionPlaneBlocks array
+      this.actionPlaneBlocks[targetIndex] = sprite;
+      this.actionPlaneBlocks[sourceIndex] = null;
+    }
+  }
+
   setPlayerPosition(x, y, isOnBlock) {
     this.playerSprite.x = -18 + 40 * x;
     this.playerSprite.y = -32 + (isOnBlock ? -23 : 0) + 40 * y;

@@ -580,6 +580,13 @@ export default class LevelModel {
     this.moveForward();
   }
 
+  moveBlock(sourceIndex, targetIndex) {
+    // Swap so that we don't invalidate our Block Reference.
+    const tempBlock = this.actionPlane[targetIndex];    
+    this.actionPlane[targetIndex] = this.actionPlane[sourceIndex];
+    this.actionPlane[sourceIndex] = tempBlock;
+  }
+
   placeBlock(blockType) {
     let blockPosition = this.player.position;
     let blockIndex = this.yToIndex(blockPosition[1]) + blockPosition[0];
@@ -654,7 +661,7 @@ export default class LevelModel {
         let inventoryType = this.getInventoryType(block.blockType);
         this.player.inventory[inventoryType] =
             (this.player.inventory[inventoryType] || 0) + 1;
-
+              
         if (block.isDestroyable) {
           this.actionPlane[blockIndex] = new LevelBlock("");
         }

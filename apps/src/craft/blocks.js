@@ -296,6 +296,67 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'destroyEntity(block, \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.craft_moveEntityNorth = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('move north'));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_moveEntityNorth = function () {
+    return 'moveEntityNorth(block, \'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.craft_moveEntitySouth = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('move south'));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_moveEntitySouth = function () {
+    return 'moveEntitySouth(block, \'block_id_' + this.id + '\');\n';
+  };
+
+
+  blockly.Blocks.craft_moveEntityEast = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('move east'));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_moveEntityEast = function () {
+    return 'moveEntityEast(block, \'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.craft_moveEntityWest = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel('move west'));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_moveEntityWest = function () {
+    return 'moveEntityWest(block, \'block_id_' + this.id + '\');\n';
+  };
+
   blockly.Blocks.craft_explodeEntity = {
     helpUrl: '',
     init: function () {
