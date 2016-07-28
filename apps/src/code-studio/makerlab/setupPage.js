@@ -37,7 +37,7 @@ const BoardSetupStatus = React.createClass({
           />
           <SetupStep
             stepStatus={this.state['status-windows-drivers']}
-            stepName="Windows drivers installed"
+            stepName="Windows drivers installed? (cannot auto-check)"
           />
           <SetupStep
             stepStatus={this.state['status-board-plug']}
