@@ -68,7 +68,7 @@ export default class BoardController {
    * Connects to board if not already connected.
    */
   ensureBoardConnected() {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
       if (this.board_) {
         // Already connected, just use existing board.
         resolve();
@@ -76,12 +76,12 @@ export default class BoardController {
       }
 
       this.connect()
-          .then(function (board) {
+          .then(board => {
             this.board_ = board;
             resolve();
-          }.bind(this))
+          })
           .catch(reject);
-    }.bind(this));
+    });
   }
 
   ensureComponentsInitialized() {
@@ -116,14 +116,14 @@ export default class BoardController {
       TouchSensor: TouchSensor
     };
 
-    Object.keys(componentConstructors).forEach(function (key) {
+    Object.keys(componentConstructors).forEach(key => {
       codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
 
-    Object.keys(this.prewiredComponents).forEach(function (key) {
+    Object.keys(this.prewiredComponents).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
-    }.bind(this));
+    });
   }
 
   reset() {
@@ -131,39 +131,13 @@ export default class BoardController {
       return;
     }
 
-    const resetComponent = (component) => {
-      try {
-        if (component.state && component.state.intervalId) {
-          clearInterval(component.state.intervalId);
-        } else if (component.state && component.state.interval) {
-          clearInterval(component.state.interval);
-        }
-        if (component.stop) {
-          component.stop();
-        }
-        if (component.off) {
-          component.off();
-        }
-        if (component.threshold) {
-          // Reset sensor thresholds to 1.0 in case changed.
-          component.threshold = 1;
-        }
-        if (component.removeAllListeners) {
-          component.removeAllListeners();
-        }
-      } catch (error) {
-        console.log('Error trying to cleanup component', error);
-        console.log(component);
-      }
-    };
-
     // Components which do not get registered with the johnny-five board, but
     // which can be reset in the same way.
     const standaloneComponents = [
       this.prewiredComponents.tap,
       this.prewiredComponents.touch
     ];
-    this.board_.register.concat(standaloneComponents).forEach(resetComponent);
+    this.board_.register.concat(standaloneComponents).forEach(BoardController.resetComponent);
   }
 
   pinMode(pin, modeConstant) {
@@ -204,6 +178,32 @@ export default class BoardController {
       board.once('ready', () => resolve(board));
       board.once('error', reject);
     });
+  }
+
+  static resetComponent(component) {
+    try {
+      if (component.state && component.state.intervalId) {
+        clearInterval(component.state.intervalId);
+      } else if (component.state && component.state.interval) {
+        clearInterval(component.state.interval);
+      }
+      if (component.stop) {
+        component.stop();
+      }
+      if (component.off) {
+        component.off();
+      }
+      if (component.threshold) {
+        // Reset sensor thresholds to 1.0 in case changed.
+        component.threshold = 1;
+      }
+      if (component.removeAllListeners) {
+        component.removeAllListeners();
+      }
+    } catch (error) {
+      console.log('Error trying to cleanup component', error);
+      console.log(component);
+    }
   }
 
   static getDevicePort() {

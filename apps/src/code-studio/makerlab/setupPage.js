@@ -116,7 +116,7 @@ const BoardSetupStatus = React.createClass({
               song: [
                 ["G3", 100], ["C4", 100], ["E4", 100], ["G4", 50],
                 [null, 150], ["E4", 75], ["G4", 400]
-              ], tempo: 45000
+              ], tempo: 41500
             });
             bc.prewiredComponents.colorLeds.forEach(l => l.color('green'));
           })
@@ -181,9 +181,7 @@ const SetupStep = React.createClass({
 });
 
 $(function () {
-  ReactDOM.render((
-      <BoardSetupStatus/>
-  ), document.getElementById('setup-status-mount'));
+  ReactDOM.render(<BoardSetupStatus/>, document.getElementById('setup-status-mount'));
   $('.maker-setup a').attr('target', '_blank');
 });
 
