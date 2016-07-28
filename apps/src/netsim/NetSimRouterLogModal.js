@@ -270,7 +270,7 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
       logRows={tableRows}
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
-      userOwnsShard={userOwnsShard}
+      teacherView={userOwnsShard}
     />,
     this.rootDiv_[0]
   );
