@@ -37,7 +37,8 @@ const NetSimLogBrowserTable = React.createClass({
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     renderedRowLimit: React.PropTypes.number,
-    teacherView: React.PropTypes.bool
+    teacherView: React.PropTypes.bool,
+    currentSentByFilter: React.PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -177,6 +178,14 @@ const NetSimLogBrowserTable = React.createClass({
       sortingColumns,
       sort: orderBy
     })(logRows);
+
+    // Filter by "sent by"
+    const sentByMatch = this.props.currentSentByFilter.match(/^by (.*)$/);
+    if (sentByMatch) {
+      sortedRows = sortedRows.filter(row => row.sourceUserName === sentByMatch[1]);
+    }
+
+    // Limit number of rendered rows
     if (this.props.renderedRowLimit !== undefined) {
       sortedRows = sortedRows.slice(0, this.props.renderedRowLimit);
     }
