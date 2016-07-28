@@ -937,6 +937,7 @@ NetSimRouterNode.prototype.log = function (packet, status) {
       this.entityID,
       packet,
       status,
+      'name', // TODO: Get source user name
       function () {});
 };
 
