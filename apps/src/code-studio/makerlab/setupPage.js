@@ -19,7 +19,7 @@ const BoardSetupStatus = React.createClass({
       'status-board-plug': WAITING,
       'status-board-connect': WAITING,
       'status-board-components': WAITING
-    }
+    };
   },
 
   render() {
@@ -130,6 +130,7 @@ const BoardSetupStatus = React.createClass({
 
 const SetupStep = React.createClass({
   propTypes: {
+    children: React.PropTypes.node,
     stepName: React.PropTypes.string.isRequired,
     stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired
   },
@@ -187,7 +188,7 @@ $(function () {
 
 function promiseWaitFor(ms) {
   return new Promise(resolve => {
-    setTimeout(resolve, ms)
+    setTimeout(resolve, ms);
   });
 }
 
