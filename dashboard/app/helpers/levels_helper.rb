@@ -28,9 +28,9 @@ module LevelsHelper
   end
 
   def readonly_view_options
-    level_view_options skip_instructions_popup: true
-    view_options readonly_workspace: true
-    view_options callouts: []
+    level_view_options(@level.id, skip_instructions_popup: true)
+    view_options(readonly_workspace: true)
+    view_options(callouts: [])
   end
 
   def set_channel
@@ -52,11 +52,16 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: @level.game.use_firebase_for_new_project?
+          useFirebase: use_firebase
         })
     end
 
-    view_options channel: channel_token.channel if channel_token
+    view_options(channel: channel_token.channel) if channel_token
+  end
+
+  def use_firebase
+    !!@level.game.use_firebase_for_new_project? ||
+        !!(request.parameters && request.parameters['useFirebase'])
   end
 
   def select_and_track_autoplay_video
@@ -120,7 +125,10 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
-    view_options server_level_id: @level.id
+    # Always pass user age limit
+    view_options(is_13_plus: current_user && !current_user.under_13?)
+
+    view_options(server_level_id: @level.id)
     if @script_level
       view_options(
         stage_position: @script_level.stage.position,
@@ -129,7 +137,7 @@ module LevelsHelper
     end
 
     if @script
-      view_options script_name: @script.name
+      view_options(script_name: @script.name)
     end
 
     unless params[:share]
@@ -163,7 +171,7 @@ module LevelsHelper
     if @user
       recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
       if recent_driver
-        level_view_options pairing_driver: recent_driver
+        level_view_options(pairing_driver: recent_driver)
       end
     end
 
@@ -232,7 +240,7 @@ module LevelsHelper
   def unplugged_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! level_view_options
+    app_options[:level].merge! level_view_options(@level.id)
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -246,15 +254,16 @@ module LevelsHelper
     level_options[:lastAttempt] = @last_attempt
     level_options.merge! @level.properties.camelize_keys
 
-    if current_user.nil? || current_user.teachers.empty?
-      # only students with teachers should be able to submit
+    unless current_user && (current_user.teachers.any? ||
+        (@level.try(:peer_reviewable) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
+      # only students with teachers or teachers enrolled in PLC submitting for a peer reviewable level
       level_options['submittable'] = false
     end
 
     app_options.merge! view_options.camelize_keys
 
-    app_options[:submitted] = level_view_options[:submitted]
-    app_options[:unsubmitUrl] = level_view_options[:unsubmit_url]
+    app_options[:submitted] = level_view_options(@level.id)[:submitted]
+    app_options[:unsubmitUrl] = level_view_options(@level.id)[:unsubmit_url]
 
     app_options
   end
@@ -331,11 +340,11 @@ module LevelsHelper
     end
 
     # Edit blocks-dependent options
-    if level_view_options[:edit_blocks]
+    if level_view_options(@level.id)[:edit_blocks]
       # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
-      level_options['edit_blocks'] = level_view_options[:edit_blocks]
+      level_options['edit_blocks'] = level_view_options(@level.id)[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
-      level_options['toolbox'] = level_view_options[:toolbox_blocks]
+      level_options['toolbox'] = level_view_options(@level.id)[:toolbox_blocks]
       level_options['embed'] = false
       level_options['hideSource'] = false
     end
@@ -350,7 +359,7 @@ module LevelsHelper
     end
 
     # Process level view options
-    level_overrides = level_view_options.dup
+    level_overrides = level_view_options(@level.id).dup
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true
@@ -426,30 +435,6 @@ module LevelsHelper
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
-  end
-
-  LevelViewOptions = Struct.new(*%i(
-    success_condition
-    start_blocks
-    toolbox_blocks
-    edit_blocks
-    skip_instructions_popup
-    embed
-    share
-    hide_source
-    submitted
-    unsubmit_url
-    iframe_embed
-    pairing_driver
-  ))
-  # Sets custom level options to be used by the view layer. The option hash is frozen once read.
-  def level_view_options(opts = nil)
-    @level_view_options ||= LevelViewOptions.new
-    if opts.blank?
-      @level_view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
-    else
-      opts.each{|k, v| @level_view_options[k] = v}
-    end
   end
 
   def string_or_image(prefix, text, source_level = nil)

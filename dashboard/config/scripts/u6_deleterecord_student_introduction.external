@@ -3,21 +3,20 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 4: Lesson 04 - Deleting Records
+# Unit 4: Lesson 04 - Deleting Records
 
-# Background
+## Background
 
 In this lesson, you will learn how to use the `deleteRecord` command to programmatically remove data from a table in a database. With this command, you can build apps that allow users to add and **remove** information from a database.
 
-# Vocabulary
+## Vocabulary
+
  * `deleteRecord` - the App Lab command for deleting a record from a database. You specify the name of the table, and an object you'd like to delete.
 
-# Lesson
+## Lesson
 
 * Delete records in a database by using an ID and `deleteRecord`.
 * Improve the Contacts App by adding the ability to delete contacts.
 
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

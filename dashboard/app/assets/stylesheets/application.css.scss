@@ -73,6 +73,7 @@ h1 {
 }
 
 h2 {
+  margin: 25px 0 10px 0;
   font-family: $gotham-bold;
   font-weight: normal;
   font-size: 22px;
@@ -131,18 +132,6 @@ img.video_thumbnail {
 
 .navbar {
   margin-bottom: 30px;
-}
-
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
 }
 
 .report_cell {
@@ -927,11 +916,6 @@ input.header_input {
   line-height: 20px;
 }
 
-.trophy_image {
-  width: 45px;
-  height: 45px;
-}
-
 #alert {
   color: $red;
   font-size: 130%;
@@ -1689,6 +1673,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1732,6 +1720,28 @@ a.download-video {
   }
 }
 
+.external-link-icon {
+  margin: 0 0.33em 0 20px;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 40px 0 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,
@@ -1757,6 +1767,39 @@ a.download-video {
       margin: 0;
     }
   }
+
+  blockquote {
+    padding: 15px 20px;
+    background: $lightest_purple;
+    border: 0;
+    border-radius: 10px;
+    clear: both;
+    p {
+      margin-bottom: 10px;
+    }
+    h2:first-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.level-image {
+  width: 380px;
+  float: right;
+  margin: 20px 0 30px 30px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px $shadow;
+  border: 1px solid $lighter_gray;
+}
+
+.external, .free-response {
+  max-width: 970px;
+  margin: auto;
+}
+
+.free-response .response {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {
@@ -2251,17 +2294,31 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-.instructions-markdown {
-  padding-top: 19px;
+.csf-top-instructions {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
     color: $black;
   }
 
+  .secondary-instructions p {
+    font-size: 14px;
+    color: #5b6770;
+  }
+
   strong {
     font-family: $gotham-bold;
   }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
 }
 
 .markdown-level-header-text {

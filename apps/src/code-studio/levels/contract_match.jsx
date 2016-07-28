@@ -165,17 +165,18 @@ $(window).load(function () {
     render: function () {
       return (
         <div>
-          <div id='sectionTitle'>Name</div>
+          <div id="sectionTitle">Name</div>
           <div>
-            <input id='functionNameText' onChange={this.onNameChangeEvent} placeholder='Name' type='text' value={this.state.name}/>
+            <input id="functionNameText" onChange={this.onNameChangeEvent} placeholder="Name" type="text" value={this.state.name}/>
           </div>
-          <div id='sectionTitle'>Domain <span className='section-type-hint'>(the domain is the type of input)</span></div>
+          <div id="sectionTitle">Domain <span className="section-type-hint">(the domain is the type of input)</span></div>
           <DomainsList
             domainTypes={this.state.domainTypes}
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
-            onDomainRemove={this.onDomainRemove}/>
-          <div id='sectionTitle' className="clear">Range <span className='section-type-hint'>(the range is the type of output)</span></div>
+            onDomainRemove={this.onDomainRemove}
+          />
+          <div id="sectionTitle" className="clear">Range <span className="section-type-hint">(the range is the type of output)</span></div>
           <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
       );
@@ -199,7 +200,8 @@ $(window).load(function () {
               order={object.order}
               type={object.type}
               key={object.key}
-              onTypeChange={curry(self.props.onDomainChange, object.key)}/>
+              onTypeChange={curry(self.props.onDomainChange, object.key)}
+            />
             <button className="btn domain-x-button" onClick={curry(self.props.onDomainRemove, object.key)}>Remove</button>
           </div>
         );

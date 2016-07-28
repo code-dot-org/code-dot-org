@@ -125,6 +125,8 @@ class Gamelab < Blockly
         "setVelocity": null,
         "sprite.height": null,
         "sprite.width": null,
+        "getScaledWidth": null,
+        "getScaledHeight": null,
         "debug": null,
         "depth": null,
         "lifetime": null,

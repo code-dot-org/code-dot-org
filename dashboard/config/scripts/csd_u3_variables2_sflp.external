@@ -2,7 +2,7 @@ name 'CSD U3 Variables2 SFLP'
 css 'unplugged'
 
 markdown <<MARKDOWN
-# Background
+# Overview
 
 The basic syntax and underlying behavior of variables is introduced through an unplugged activity. Using notecards and string to simulate variables within a program, you will implement a few short programs to learn how these programs would “look” if they could see inside their computer. Once comfortable with this syntax you complete several challenge exercises in which you must move information around in memory to achieve a desired “ending state” despite being able to use a limited set of commands.
 

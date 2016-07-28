@@ -27,9 +27,9 @@
   see_your_learning_plan: "查看你的学习计划。"
   submit: "提交"
   unsubmit: "未提交"
-  previous_page: "返回"
-  next_page: "前进"
-  next_resource: Next resource
+  previous_page: "上一页"
+  next_page: "下一页"
+  next_resource: "下一个资源"
   done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: "好吧"
@@ -127,6 +127,8 @@
     picture: "现在找出你秘密图片"
     words: "现在，输入你的秘密单词"
     login: "登录"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "忘记了您的密码吗？"
@@ -256,6 +258,10 @@
       signin: "登录"
       signup: "登录"
       already_registered: "已经注册了？"
+      pair_programming: "结对编程"
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}的进度"
       progress: "您的进度"
@@ -290,6 +296,7 @@
       example_with_number: "示例解决方案 %{solution_number}"
       submitted_on: "已提交于："
       unsubmit: "未提交"
+      worked_with: Worked With
   user:
     email_confirm_needed: "电子邮件地址尚未被确认："
     email_confirm_needed_required: "你的电子邮件地址%{email} 尚未被确认："
@@ -349,12 +356,8 @@
     print_certificate: "打印证书"
     announcement_title: "公告"
     announcement_view_all: "查看全部"
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "了解详情"
+    announcement_message: 想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。
+    announcement_learn_more_button: "了解详情"
     announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
       28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
@@ -433,10 +436,6 @@
     upgrade:
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
         target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: "了解详情"
   slow_loading: "请再多等一会儿..."
   try_reloading: "请重新刷新页面"
@@ -504,12 +503,12 @@
       title: "我的世界"
       body: "用代码来探索《我的世界》。"
     unplugged:
-      title: "不需要电的课程"
+      title: "离线课程"
       audience: "适合年龄 4 岁以上"
       body: |
         我们已经编译拔出经验教训，为您在您的课堂中使用的列表。现在你可以教计算机科学基础是否你有电脑在你的教室或不 ！尝试利用这些经验教训，作为一门独立的课程或互补借鉴任何计算机科学课程。
         我们做了一套离线课程在课堂上使用。现在，你即使没有电脑，也可以教授计算机科学的基础。尝试使用这些教材，作为一门独立课程或借鉴任何计算机科学课程。
-      body_short: "如果你没有电脑，（可以）在你的教室试试这些离线的教程。"
+      body_short: "如果你没有电脑，可以在你的教室试试这些离线的教程。"
   gallery:
     students_drew_these_with_code: "学生使用代码画了这些图案!"
     students_made_these_with_code: "学生使用代码做了这些内容!"
@@ -530,7 +529,7 @@
     report_bug: "报告错误"
     support: "获取帮助"
     support_url: "//support.code.org"
-    help_resources: "帮助以及资源"
+    help_resources: "帮助和资源"
   multi:
     wrong_title: "不正确的答案"
     wrong_body: "你已输入的答案不正确。请再试一次 ！"
@@ -590,36 +589,6 @@
     hour: 1 小时
     day: "日"
     week: "周"
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8计算机科学入门课程（15-25小时）
-          description: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。"
-        Hour of Code:
-          title: "《编程一小时 2013》"
-          description: ''
-        edit-code:
-          title: "编辑代码"
-          description: ''
-        events:
-          title: "事件"
-          description: ''
-        builder:
-          title: "生成器"
-          description: ''
-        flappy:
-          title: "飞扬的代码"
-          description: "想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！"
-        jigsaw:
-          title: "拼图"
-          description: ''
-        step:
-          title: "下一步"
-          description: ''
-        sample_level_builder:
-          title: "示例关卡生成器"
-          description: ''
   age_interstitial:
     age: "你的年龄"
     header: "帐户信息更新"
@@ -654,6 +623,8 @@
     share_title: "分享您的项目"
     share_copy_link: "复制链接："
     share_embed_description: "您可以将嵌入的代码粘贴到HTML页，就可以在另一个网页上显示这个项目。"
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: "插入"
     advanced_share: "显示更高级的选项"
     close: "关闭"
@@ -677,6 +648,8 @@
     edit_project: "编辑工程"
     abuse:
       tos: "此工程因违反了Code.org的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。"
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: "如果你认为有错误，请 <a href='https://code.org/contact'>联系我们</a>"
       go_to_code_studio: "转到代码工作室"
       report_abuse_form:
@@ -708,44 +681,54 @@
     instructor_feedback: "教师反馈"
     peer_feedback: "同伴反馈"
     outdated: "这个反馈是添加给以前提交的版本"
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: "查询图标"
       no_icons_found: "找不到该图标"
     playzone:
       artist_description: "和小艺术家一起设计出很酷的图形！"
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: "新的绘图"
+      continue_button: "去下一阶段"
       playlab_description: "通过游戏实验室创建故事或制作游戏！"
       playlab_title: "新的应用"
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      primary_header: "祝贺你 ！你完成 %{stageName} ！"
+      projects_description: "重新审视你现有的项目之一。"
+      projects_title: "打开一个项目"
+      secondary_header: "问你的老师要下一步做什么"
   flex_category:
     required: "概览"
     content: "内容"
-    practice: "老师的做法"
+    practice: "教学训练"
   external_links:
-    disclaimer_md: "<strong>免责声明 ︰ 你现在离开了 Code.org 领域，到一个不由 Code.org.</strong>运转的网站。此网站可能包含和
-      Code.org 不同的隐私政策。 <br/> <br/>。我们选择了这些第三方资源是因为我们认为他们会对你有帮助。如果有反感的内容，或者如果所链接的网站已不再可用，请
-      <a href='mailto:support@code.org'> 与支持部门联系</a> ，虽然我们并不直接负责本网站的内容。"
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
+    title: "编程一小时项目下载"
     capsule_title: "你有网络吗？"
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    capsule_desc: 使用在线、 基于 web 的 <a href="%{url}">%{app_name}</a>。
     instructions_headline: "没有网络？"
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
+    instructions: 指导教师︰ 如果你有互联网服务差，这些代码小时教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用
+      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可打印证书提前 <a href="%{url}">
+      在这里</a>。
+    minecraft_name: "我的世界 编程一小时"
+    starwars_blocks_name: "星球大战: 用代码构建一个星系（块）"
+    starwars_javascript_name: "星球大战: 用代码构建一个星系-JavaScript"
+    download_message: "下载 %{app_name}，供离线使用 (136MB)"
     download_in_english: "下载英语版本："
     download_in_spanish: "下载西班牙语版本："
     windows: Windows

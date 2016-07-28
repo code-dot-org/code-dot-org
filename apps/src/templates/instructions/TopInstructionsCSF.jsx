@@ -4,7 +4,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
@@ -18,16 +18,23 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
+import InlineHint from './InlineHint';
+import ChatBubble from './ChatBubble';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
-import { getOuterHeight, scrollBy } from './utils';
+import {
+  getOuterHeight,
+  scrollBy,
+  scrollTo,
+  shouldDisplayChatTips
+} from './utils';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -35,8 +42,9 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
-const SCROLL_BY_PERCENT = 0.4;
+const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -47,13 +55,6 @@ const craftStyles = {
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
-  },
-  instructionsChatBubble: {
-    backgroundColor: '#3B3B3B',
-    borderRadius: 4
-  },
-  instructionsChatText: {
-    color: 'white'
   },
 };
 
@@ -80,7 +81,8 @@ const styles = {
   },
   body: {
     backgroundColor: '#ddd',
-    borderRadius: 5,
+    borderTopRightRadius: 5,
+    borderTopLeftRadius: 5,
     width: '100%',
   },
   leftCol: {
@@ -89,15 +91,15 @@ const styles = {
     left: 0,
     marginLeft: 0
   },
+  leftColRtl: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    marginRight: 0
+  },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
-  },
-  secondaryInstructions: {
-    fontSize: 12,
-    color: '#5b6770'
+    bottom: 0
   },
   collapserButton: {
     position: 'absolute',
@@ -109,6 +111,11 @@ const styles = {
     position: 'relative',
     top: 50,
     left: 25
+  },
+  scrollButtonsRtl: {
+    position: 'relative',
+    top: 50,
+    right: 25
   },
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
@@ -125,29 +132,32 @@ const styles = {
     minHeight: 200,
   },
   instructions: {
-    padding: '5px 0'
+    padding: '5px 0',
   },
-  instructionsChatBubble: {
-    backgroundColor: 'white',
-    borderRadius: 10,
-    marginBottom: 10,
-    padding: 10,
+  instructionsWithTips: {
+    width: 'calc(100% - 20px)',
+    float: 'right'
   },
-  instructionsChatText: {
-    // note that we actually do need to specify lineHeight
-    // in pixels; it defaults to a multiple of fontSize
-    lineHeight: '25px',
-    fontSize: 16,
-    color: 'black',
-    margin: 0
+  instructionsWithTipsRtl: {
+    width: 'calc(100% - 20px)',
+    float: 'left'
   },
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
+    skinId: React.PropTypes.string,
+    hints: React.PropTypes.arrayOf(React.PropTypes.shape({
+      hintId: React.PropTypes.string.isRequired,
+      content: React.PropTypes.string.isRequired,
+      block: React.PropTypes.object, // XML
+    })).isRequired,
+    hasUnseenHint: React.PropTypes.bool.isRequired,
+    showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
@@ -156,6 +166,7 @@ var TopInstructions = React.createClass({
     shortInstructions: React.PropTypes.string.isRequired,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
+    clearFeedback: React.PropTypes.func.isRequired,
     feedback: React.PropTypes.shape({
       message: React.PropTypes.string.isRequired,
     }),
@@ -176,39 +187,71 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: 90,
-      promptForHint: false
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
+      promptForHint: false,
+      displayScrollButtons: true
     };
   },
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     // Update right col width now that we know how much space it needs, and
     // rerender if it has changed. One thing to note is that if we end up
     // resizing our column significantly, it can result in our maxNeededHeight
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
-    const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
+    const width = this.shouldDisplayCollapserButton() ?
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
+      // setting state in componentDidUpdate will trigger another
+      // re-render and is discouraged; unfortunately in this case we
+      // can't do it earlier in the lifecycle as we need to examine the
+      // actual DOM to determine the desired value. We are careful to
+      // only actually update the state when it has changed, which will
+      // prevent the possibility of an infinite loop and should serve to
+      // minimize excess rerenders.
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         rightColWidth: width
       });
     }
 
-    const gotNewFeedback = this.props.feedback && !prevProps.feedback;
-    if (gotNewFeedback) {
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({
-        promptForHint: false
-      });
-      if (this.props.collapsed) {
-        this.handleClickCollapser();
+    this.adjustMaxNeededHeight();
+
+    if (this.refs && this.refs.instructions) {
+      const contentContainer = this.refs.instructions.parentElement;
+      const contentHeight = contentContainer.scrollHeight;
+      const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
+      if (canScroll !== this.state.displayScrollButtons) {
+        // see comment above
+        // eslint-disable-next-line react/no-did-update-set-state
+        this.setState({
+          displayScrollButtons: canScroll
+        });
       }
     }
 
-    this.adjustMaxNeededHeight();
-    if (this.props.feedback || this.state.promptForHint) {
+    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
+    if (gotNewHint) {
+      const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
+      for (let i = 0, image; (image = images[i]); i++) {
+        image.onload = image.onload || this.scrollInstructionsToBottom;
+      }
+    }
+
+    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
+    }
+  },
+
+  componentWillUpdate(nextProps, nextState) {
+    const gotNewFeedback = !this.props.feedback && nextProps.feedback;
+    if (gotNewFeedback) {
+      this.setState({
+        promptForHint: false
+      });
+      if (!this.props.isMinecraft && nextProps.collapsed) {
+        this.handleClickCollapser();
+      }
     }
   },
 
@@ -279,8 +322,11 @@ var TopInstructions = React.createClass({
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
 
+    // Only include resizer height if resizer is available
+    const resizerHeight = collapsed ? 0 : RESIZER_HEIGHT;
+
     return Math.max(leftColHeight, middleColHeight, rightColHeight) +
-        RESIZER_HEIGHT + margins;
+        resizerHeight + margins;
   },
 
   /**
@@ -289,7 +335,7 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  handleHeightResize: function (delta) {
+  handleHeightResize: function (delta = 0) {
     const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
@@ -334,21 +380,11 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Handle an onWheel event inside instructions. Manually scroll it,
-   * since we are overriding default scroll functionality.
-   * @param {WheelEvent} wheelEvent
-   */
-  handleInstructionsWheel(wheelEvent) {
-    const contentContainer = this.refs.instructions.parentElement;
-    scrollBy(contentContainer, wheelEvent.deltaY);
-  },
-
-  /**
    * Handle a click to our "scroll up" button
    */
   handleScrollInstructionsUp() {
     const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.scrollHeight;
+    const contentHeight = contentContainer.clientHeight;
     scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
   },
 
@@ -357,25 +393,35 @@ var TopInstructions = React.createClass({
    */
   handleScrollInstructionsDown() {
     const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.scrollHeight;
+    const contentHeight = contentContainer.clientHeight;
     scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
   },
 
   /**
-   * Manually scroll instructions to bottom
+   * Manually scroll instructions to bottom. When we have multiple
+   * elements in instructions, "bottom" is defined as 10 pixels above
+   * the top of the bottommost element. This is so we don't scroll past
+   * the beginning of a long element, and so we scroll to a position
+   * such that you can see that there is an element above it which you
+   * can scroll up to.
    */
   scrollInstructionsToBottom() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.scrollHeight;
-    scrollBy(contentContainer, contentHeight);
+    const instructions = this.refs.instructions;
+    const contentContainer = instructions.parentElement;
+    if (instructions.children.length > 1) {
+      const lastChild = instructions.children[instructions.children.length - 1];
+      scrollTo(contentContainer, lastChild.offsetTop - 10);
+    } else {
+      scrollBy(contentContainer, contentContainer.scrollHeight);
+    }
   },
 
   /**
    * Handle a click to the hint display bubble (lightbulb)
    */
   handleClickBubble() {
-    // If we don't have authored hints, clicking bubble shouldnt do anything
-    if (this.props.hasAuthoredHints) {
+    // If we don't have authored hints to display, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
         promptForHint: true
       });
@@ -393,11 +439,19 @@ var TopInstructions = React.createClass({
 
   showHint() {
     this.dismissHintPrompt();
-    this.props.showInstructionsDialog();
+    this.props.showNextHint();
+    this.props.clearFeedback();
   },
 
   shouldDisplayHintPrompt() {
     return this.state && this.state.promptForHint && !this.props.collapsed;
+  },
+
+  shouldDisplayCollapserButton() {
+    if (this.props.isMinecraft) {
+      return false;
+    }
+    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
   },
 
   render: function () {
@@ -408,12 +462,12 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      }),
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main
     ];
-
-    const atMaxHeight = this.props.height === this.props.maxHeight;
 
     const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions);
@@ -428,101 +482,117 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            styles={{
-              container: [styles.body, this.props.isMinecraft && craftStyles.body],
-              left: styles.leftCol
-            }}
-            leftColWidth={leftColWidth}
-            rightColWidth={this.state.rightColWidth}
-            height={this.props.height - resizerHeight}
+          styles={{
+            container: [styles.body, this.props.isMinecraft && craftStyles.body],
+            left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
+          }}
+          leftColWidth={leftColWidth}
+          rightColWidth={this.state.rightColWidth}
+          height={this.props.height - resizerHeight}
         >
           <div
-              style={[
-                commonStyles.bubble,
-                this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
-              ]}
+            style={[
+              commonStyles.bubble,
+              this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
+            ]}
           >
             <ProtectedStatefulDiv
-                id="bubble"
-                className="prompt-icon-cell"
-                onClick={this.handleClickBubble}
+              id="bubble"
+              className="prompt-icon-cell"
+              onClick={this.handleClickBubble}
             >
               {this.props.smallStaticAvatar &&
-                <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+                <PromptIcon src={this.props.smallStaticAvatar} ref="icon"/>
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions"
-              onWheel={this.handleInstructionsWheel}
-              style={styles.instructions}
+          <div
+            ref="instructions"
+            className="csf-top-instructions"
+            style={[
+              styles.instructions,
+              shouldDisplayChatTips(this.props.skinId) &&
+                (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
+            ]}
           >
-            <div style={[styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble]}>
-              {this.props.hasContainedLevels && <ProtectedStatefulDiv
+            <ChatBubble>
+              {this.props.hasContainedLevels &&
+                <ProtectedStatefulDiv
                   id="containedLevelContainer"
                   ref="containedLevelContainer"
                   style={styles.containedLevelContainer}
-                />
-              }
-              {!this.props.hasContainedLevels && <Instructions
+                />}
+              {!this.props.hasContainedLevels &&
+                <Instructions
                   ref="instructions"
                   renderedMarkdown={renderedMarkdown}
                   onResize={this.adjustMaxNeededHeight}
                   inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                   aniGifURL={this.props.aniGifURL}
                   inTopPane
-                />
-              }
+                />}
               {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
                 <div
-                    style={styles.secondaryInstructions}
-                    dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />
-              }
-            </div>
-            {this.props.feedback && !this.props.collapsed && <InlineFeedback
-                styles={{
-                  container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
-                  message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
-                }}
+                  className="secondary-instructions"
+                  dangerouslySetInnerHTML={{ __html: instructions2 }}
+                />}
+            </ChatBubble>
+            {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
+              <InlineHint
+                key={hint.hintId}
+                borderColor={color.yellow}
+                content={hint.content}
+                block={hint.block}
+              />
+            )}
+            {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
+              <InlineFeedback
+                borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
-            />}
-            {this.shouldDisplayHintPrompt() && <HintPrompt
-                styles={{
-                  container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
-                  message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
-                }}
+              />}
+            {this.shouldDisplayHintPrompt() &&
+              <HintPrompt
+                isMinecraft={this.props.isMinecraft}
+                borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
-            />}
+              />}
           </div>
           <div>
             <CollapserButton
-                ref='collapser'
-                style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}
+              ref="collapser"
+              style={[styles.collapserButton, !this.shouldDisplayCollapserButton() && commonStyles.hidden]}
+              collapsed={this.props.collapsed}
+              onClick={this.handleClickCollapser}
             />
-            {!this.props.collapsed && <ScrollButtons
-                style={styles.scrollButtons}
-                ref='scrollButtons'
+            {!this.props.collapsed &&
+              <ScrollButtons
+                style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
+                ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
-                visible={!atMaxHeight}
+                visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
-            />}
+              />}
           </div>
         </ThreeColumns>
-        {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
-          position={this.props.height}
-          onResize={this.handleHeightResize}/>
-        }
+        {!this.props.collapsed && !this.props.isEmbedView &&
+          <HeightResizer
+            position={this.props.height}
+            onResize={this.handleHeightResize}
+          />}
       </div>
     );
   }
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    hints: state.authoredHints.seenHints,
+    hasUnseenHint: state.authoredHints.unseenHints.length > 0,
+    skinId: state.pageConstants.skinId,
+    showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
@@ -554,6 +624,9 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+    },
+    clearFeedback(height) {
+      dispatch(instructions.setFeedback(null));
     },
     showInstructionsDialog(height) {
       dispatch(openDialog({

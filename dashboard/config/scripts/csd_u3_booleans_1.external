@@ -2,7 +2,7 @@ name 'CSD U3 - Booleans - 1'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-# Background
+# Overview
 
 This lesson introduces boolean values and logic, as well as conditional statements. It starts by playing a simple game of Stand Up, Sit Down where the boolean (true/false) statements are in regard to personal properties (hair or eye color, clothing type, age, etc). The focus is thinking about you can frame a property with multiple potential values (such as age) with a binary question. You will then group objects based on increasingly complex boolean statements, including compound booleans with AND and OR. Finally you will be introduced to conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
 

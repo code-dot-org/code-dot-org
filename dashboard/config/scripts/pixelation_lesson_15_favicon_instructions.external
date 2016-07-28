@@ -6,14 +6,14 @@ skip_dialog 'true'
 
 markdown <<MARKDOWN
 # Project: Personal Favicon
+
 <img src = "https://code.org/images/cspunit1/code-pixel.png" align=right width=50 hspace=20>
 A favicon is a small image, usually 16x16 pixels, that is typically shown in a web browser’s address bar next to the title of the page or web address for a particular site. It is typically a small version of a company logo or some other symbol for the site. A favicon for Code.org is shown to the right.
 
-Favicons are designed by artists and programmed into web pages by web designers. Below are some examples of favicons—you might recognize some!
-<div>
+Favicons are designed by artists and programmed into web pages by web designers. Below are some examples of favicons &mdash; you might recognize some!
+
 <img src = "https://code.org/images/cspunit1/faviconExamplesAndScreenCap.png" align=center width=90% hspace=20>
-</div>
-<br>
+
 Do a google search for *Favicon* and see what comes up.
 
 **Directions:**
@@ -22,9 +22,7 @@ Do a google search for *Favicon* and see what comes up.
 * You must encode with 12 bits per pixel.
 * The image you make should represent your personality in some distinctive way. You will be using this favicon in future lessons and websites that you make so be creative and thoughtful.
 * After you have finished your favicon, share it with others in the class by sending them the bits with the Internet Simulator Widget!
-* Click continue to get started
-</br><br>
+* Click continue to get started.
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

@@ -3,21 +3,21 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 5: Lesson 02 - Explore Performance Task
+# Unit 5: Lesson 02 - Explore Performance Task
 
-# Background
+## Background
 
 It's finally time for you to take on the Explore Performance Task! For the next several days, you should work individually on your project without teacher support. At the end of the 8th day (or hour) of this task, you will submit your computational artifact and written responses to your teacher.
 
 Best of luck!
 
-# Lesson
+## Lesson
 
 * Make a plan for the Performance Task.
 * Complete the Explore Performance Task.
 * Submit your computational artifact and written responses.
 
-# Resources
+## Resources
 
 * Performance Task: <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4eWlNN1dKNnRCTG8" target="_blank">Explore Performance Task</a>
 * Rubric: Explore Performance Task Rubric

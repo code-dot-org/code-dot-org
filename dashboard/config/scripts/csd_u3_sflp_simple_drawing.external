@@ -2,7 +2,7 @@ name 'CSD-U3-SFLP Simple Drawing'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-# Background
+# Overview
 
 Welcome to Game Lab! Game lab allows you to draw interactive games and animations. The basis of games is animations as they create the look of motion on a 2D screen. Therefore we are going to start by learning about animations and progress to learning how to make them into games. In order to create animations we must first learn how to draw static images. So in this lesson we will be learning how to draw simple scenes with basic shapes. 
 
@@ -22,7 +22,8 @@ Welcome to Game Lab! Game lab allows you to draw interactive games and animation
 * **Program** - An algorithm that has been coded into something that can be run by a machine.
 
 # Commands
-### Shapes : 
+
+### Shapes:
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
 |rect(x, y, width, height)|Draws a rectangle| `rect(100, 200, 50, 20)` | link |
@@ -40,7 +41,7 @@ Welcome to Game Lab! Game lab allows you to draw interactive games and animation
 |noStroke()|Sets shapes to have no outline| `noStroke()`|link |
 |strokeWeight()|Sets the thickness of the outline| `strokeWeight(30)` |link |
 
-### Clean Code :
+### Clean Code:
 |Command| Meaning| Example |  Documentation |
 |---|---| --- | --- |
 |// comment|Creates information for humans| `// Creates arms ` |link |
@@ -49,8 +50,6 @@ Welcome to Game Lab! Game lab allows you to draw interactive games and animation
 * Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>
 * Activity Guide: <a href="https://docs.google.com/document/d/1o4GelXjOixZ82Kps3aOABPnAMdCIT5DfT-9rHDtX0DU/edit?usp=sharing">Shapes</a>
 * Activity Guide: <a href="https://drive.google.com/open?id=17-rj7SWbn1Nb0IQl-o-4h3VlS1kjId8T0o6HUGojglA">Plan Your Drawing</a>
-
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

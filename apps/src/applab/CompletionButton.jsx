@@ -1,4 +1,4 @@
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 var React = require('react');
 var connect = require('react-redux').connect;
@@ -31,7 +31,7 @@ var CompletionButton = React.createClass({
     isProjectLevel: React.PropTypes.bool.isRequired,
     isSubmittable: React.PropTypes.bool.isRequired,
     isSubmitted: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.object.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool
   },
 
   render: function () {
@@ -61,9 +61,9 @@ var CompletionButton = React.createClass({
       <ProtectedStatefulDiv style={styles.main}>
         <div id="share-cell" className={divClass}>
           <button
-              id={id}
-              className="share"
-              style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
+            id={id}
+            className="share"
+            style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
           >
             <img src="/blockly/media/1x1.gif"/>
             {contents}

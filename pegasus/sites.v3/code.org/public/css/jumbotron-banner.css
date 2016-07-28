@@ -104,6 +104,11 @@
   border-bottom: solid 2px rgb(255, 164, 0);
 }
 
+.photo-cred {
+  font-size: 12px;
+  font-style: italic;
+}
+
 @media screen and (min-width: 971px) {
   .jumbo-tutorial {
     background-color: rgba(0, 0, 0, 0.5);
@@ -132,7 +137,8 @@
   .jumbo-tutorial-box {
     background-color: white;
     background-size: 605px 100px;
-    padding: 10px;
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 10px;
     border: solid 1px #c6cacd;
     color: #4d575f;
   }
@@ -156,7 +162,7 @@
 
   .jumbo-h1-second-box {
     display: block;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: 10px;
     color: #4d575f;
   }
@@ -197,6 +203,7 @@
   .jumbo-h1-second-box {
     display: static;
     color: #4d575f;
+    margin-top: 0px !important;
   }
 
   .jumbo-logo {

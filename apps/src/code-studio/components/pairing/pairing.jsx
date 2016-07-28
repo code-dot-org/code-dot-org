@@ -146,7 +146,7 @@ const Pairing = React.createClass({
         <h1>Pair Programming</h1>
         <h2>You are Pair Programming with:</h2>
         {this.state.pairings.map(student =>
-          <div key={student.id} data-id={student.id} className='student'>{student.name}</div>
+          <div key={student.id} data-id={student.id} className="student">{student.name}</div>
         )}
         <div className="clear"></div>
         <button className="stop" onClick={this.handleStop}>Stop Pair Programming</button>

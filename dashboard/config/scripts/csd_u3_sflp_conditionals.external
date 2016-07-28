@@ -1,9 +1,8 @@
 name 'CSD U3 SFLP Conditionals'
-title 'title'
-description 'description here'
+css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Background
+# Overview
 
 After a brief online refresher with booleans students are introduced to some boolean producing keyboard input functions that they can use in conditionals to move sprites around the screen.
 

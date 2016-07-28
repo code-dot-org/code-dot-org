@@ -23,13 +23,13 @@
           future: "不能在未來"
   hello: "世界您好"
   welcome_back: "歡迎回來，%{name}"
-  your_professional_learning_plan: Your Professional Learning Plan
+  your_professional_learning_plan: "你/妳的專業學習計畫"
   see_your_learning_plan: "查看你的學習計劃"
   submit: "送出"
   unsubmit: "不提交"
   previous_page: "上一頁 "
   next_page: "下一頁"
-  next_resource: Next resource
+  next_resource: "下一個資源"
   done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: OK！
@@ -87,7 +87,7 @@
     teacher_title: "教師註冊"
     student_pitch: "學生註冊Code.org"
     student_title: "學生註冊"
-    signup_title: Sign up for Code.org
+    signup_title: Code.org 建立帳號
     school_name: "學校名稱 （選填）"
     school_address: "學校地址 （選填）"
     address_placeholder: "地址、 城市、 州、 郵遞區號"
@@ -107,7 +107,7 @@
       13 歲以下的，我通過提交這份表格確認，我有我的父母或法定監護人的許可，使用 Code.org 服務。 <br/>對於使用者 13歲以下，電子郵件地址將不會被存起來，因此我們將不會與他們聯繫。"
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'> 的服務條款</a> 的約束。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊"
-    user_type_label: Account Type
+    user_type_label: "帳戶類型"
     user_type_teacher: "教師"
     user_type_student: "學生 "
   signin_form:
@@ -126,6 +126,8 @@
     picture: "現在找出你的秘密圖片"
     words: "在這裡輸入你的通關密語"
     login: "登入"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "忘記了您的密碼嗎？"
@@ -254,6 +256,10 @@
       signin: "登入"
       signup: "註冊帳號"
       already_registered: "已經註冊了嗎？"
+      pair_programming: "配對程式設計"
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name} 的進度"
       progress: "您的進度"
@@ -288,6 +294,7 @@
       example_with_number: "解答範例 %{solution_number}"
       submitted_on: "提交時間："
       unsubmit: "不提交"
+      worked_with: Worked With
   user:
     email_confirm_needed: "電子郵件地址尚未被確認："
     email_confirm_needed_required: "您的電子位址 %{email} 尚未被確認："
@@ -352,7 +359,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "瞭解更多資訊"
+    announcement_learn_more_button: "瞭解更多資訊"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -360,13 +367,10 @@
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: "新增你的名字"
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
+    new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
+    section_code_not_entered: "請提供現在的區間代碼"
+    section_code_cant_be_current_section: "現在所使用的區間不能和新的區間相同"
+    current_section_dne: "抱歉，但區間 %{current_section_code} 並不存在。請輸入一個不同的區間代碼。"
     students_not_yours: You cannot move students from a section that does not belong
       to you.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
@@ -446,10 +450,6 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
       link: "瞭解更多資訊"
   slow_loading: "請再等等，這次讀取的時間比較久一點......."
   try_reloading: "請嘗試重新載入網頁"
@@ -518,7 +518,7 @@
       body: "使用程式來探索創世神的世界"
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: 4歲以上
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -609,36 +609,6 @@
     hour: "一小時"
     day: "天"
     week: "週"
-  data:
-    script:
-      name:
-        20-hour:
-          title: 'K 8 簡介電腦科學課程 （15-25 小時） '
-          description: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
-        Hour of Code:
-          title: "一小時Code 2013"
-          description: ''
-        edit-code:
-          title: "編輯程式碼"
-          description: ''
-        events:
-          title: "事件類別"
-          description: ''
-        builder:
-          title: "生成器"
-          description: ''
-        flappy:
-          title: Flappy遊戲設計
-          description: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
-        jigsaw:
-          title: "拼圖"
-          description: ''
-        step:
-          title: "步驟"
-          description: ''
-        sample_level_builder:
-          title: "範例關卡產生器"
-          description: ''
   age_interstitial:
     age: "你的年齡"
     header: "帳戶資訊更新"
@@ -672,6 +642,8 @@
     share_title: "分享專案"
     share_copy_link: "複製連結："
     share_embed_description: "您可以插入的代碼貼到 HTML 頁面，就可以在另一個網頁上顯示專案。"
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: "插入"
     advanced_share: "顯示進階選項"
     close: "退出"
@@ -695,6 +667,8 @@
     edit_project: "編輯專案"
     abuse:
       tos: "這個專案被回報為違反 Code.org 的<a href='http://code.org/tos'>服務條款</a>因此不能跟其它人進行分享。"
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: "如果你認為這是一個錯誤，請與我們 <a href='HTTPs://code.org/contact'> 聯繫</a>。"
       go_to_code_studio: "前往程式碼工作室"
       report_abuse_form:
@@ -729,37 +703,47 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: "搜索圖示..."
-      no_icons_found: "沒有圖示"
+      search_placeholder_text: "搜尋圖示..."
+      no_icons_found: "找不到圖示"
     playzone:
       artist_description: "和小畫家一起畫圖和設計!"
       artist_title: New Drawing
       continue_button: Go on to the next Stage
       playlab_description: "創建一個故事或做遊戲玩實驗室！"
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
+      playlab_title: "新的應用程式"
+      primary_header: "恭喜你 ！你完成 %{stageName} 了 ！"
       projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      projects_title: "打開一個專案"
+      secondary_header: "詢問你的老師要下一步該做什麼"
   flex_category:
     required: "概觀"
     content: Content
     practice: "老師的做法"
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    capsule_title: "你有連上網際網路嗎？"
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
+    instructions_headline: "沒有與網際網路連線嗎？"
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers
@@ -767,12 +751,12 @@
       on all computers. Note: students will not be able to log into Code Studio, save
       progress, or print certificates. Teachers may print certificates ahead of time
       <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: "當個創世神 一小時寫程式"
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_english: "下載英文版"
+    download_in_spanish: "下載西班牙文版"
     windows: Windows
     mac: Mac OS X
   plc:

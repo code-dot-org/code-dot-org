@@ -3,7 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var msg = require('./locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
@@ -35,6 +35,7 @@ var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import {GAME_WIDTH} from './constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -224,6 +225,7 @@ GameLab.prototype.init = function (config) {
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
@@ -237,8 +239,8 @@ GameLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <GameLabView
-          showFinishButton={finishButtonFirstLine && showFinishButton}
-          onMount={onMount}
+        showFinishButton={finishButtonFirstLine && showFinishButton}
+        onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));

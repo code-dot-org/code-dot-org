@@ -35,7 +35,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal true, app_options[:white_background]
     assert_equal [], app_options[:callouts]
 
-    options = assigns(:level_view_options)
+    options = assigns(:level_view_options_map)[@level_source.level_id]
     assert_equal true, options[:embed]
     assert_equal false, options[:share]
     assert_equal true, options[:skip_instructions_popup]

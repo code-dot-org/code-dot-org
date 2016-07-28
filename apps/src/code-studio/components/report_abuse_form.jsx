@@ -124,12 +124,15 @@ var ReportAbuseForm = React.createClass({
           <div>{i18n.t('project.abuse.report_abuse_form.abusive_url')}</div>
           <input type="text" readOnly={!!this.props.abuseUrl} style={{width: INPUT_WIDTH}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/ }
-          <div dangerouslySetInnerHTML={{
-            __html: i18n.t('project.abuse.report_abuse_form.abuse_type.question', {
-              link_start: '<a href="https://code.org/tos" target="_blank">',
-              link_end: '</a>'
-            })}}/>
+          {/* we dangerouslySetInnerHTML because our string has html in it*/}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: i18n.t('project.abuse.report_abuse_form.abuse_type.question', {
+                link_start: '<a href="https://code.org/tos" target="_blank">',
+                link_end: '</a>'
+              })
+            }}
+          />
           <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuse_type">
             <option value=""></option>
             <option value="harassment">{i18n.t('project.abuse.report_abuse_form.abuse_type.harassment')}</option>
@@ -141,13 +144,16 @@ var ReportAbuseForm = React.createClass({
           <div>{i18n.t('project.abuse.report_abuse_form.detail')}</div>
           <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuse_detail"/>
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/ }
-          <div dangerouslySetInnerHTML={{
-            __html: i18n.t('project.abuse.report_abuse_form.acknowledge', {
-              link_start_privacy: '<a href="https://code.org/privacy" target="_blank">',
-              link_start_tos: '<a href="https://code.org/tos" target="_blank">',
-              link_end: '</a>'
-            })}}/>
+          {/* we dangerouslySetInnerHTML because our string has html in it*/}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: i18n.t('project.abuse.report_abuse_form.acknowledge', {
+                link_start_privacy: '<a href="https://code.org/privacy" target="_blank">',
+                link_start_tos: '<a href="https://code.org/tos" target="_blank">',
+                link_end: '</a>'
+              })
+            }}
+          />
           <button onClick={this.handleSubmit}>
             {i18n.t('submit')}
           </button>

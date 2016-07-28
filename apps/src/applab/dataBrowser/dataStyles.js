@@ -6,6 +6,7 @@ import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
+const buttonCellWidth = 142;
 
 const editRow = {
   height: rowHeight
@@ -21,6 +22,10 @@ const cell = {
   border: '1px solid gray',
   fontSize: 14
 };
+
+const buttonCell = [cell, {
+  width: buttonCellWidth
+}];
 
 const headerCell = {
   padding: cellPadding,
@@ -57,6 +62,7 @@ export {
   editRow,
   addRow,
   cell,
+  buttonCell,
   headerCell,
   link,
   button,

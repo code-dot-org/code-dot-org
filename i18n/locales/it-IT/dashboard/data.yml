@@ -1,75 +1,5 @@
 it:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Corso introduttivo di informatica per scuole elementari e medie inferiori
-          Unplug1: Lezione 1
-          Maze: Lezione 2
-          Unplug2: Lezione 3
-          Unplug3: Lezione 4
-          Artist: Lezione 5
-          Unplug4: Lezione 6
-          Artist2: Lezione 7
-          Unplug5: Lezione 8
-          Farmer: Lezione 9
-          Unplug6: Lezione 10
-          Artist3: Lezione 11
-          Unplug7: Lezione 12
-          Farmer2: Lezione 13
-          Unplug8: Lezione 14
-          Artist4: Lezione 15
-          Unplug9: Lezione 16
-          Farmer3: Lezione 17
-          Unplug10: Lezione 18
-          Artist5: Lezione 19
-          Unplug11: Lezione 20
-        Hour of Code:
-          desc: "L'Ora del Codice"
-          Maze: Lezione 1
-        Edit Code:
-          desc: Modifica il codice (versione provvisoria)
-          MazeEC: Fase 1
-        2014 Levels:
-          desc: Ping-Pong (versione provvisoria)
-          Bounce: Lezione 1
-        Builder Levels:
-          desc: "Esercizi creati dall'utente (versione provvisoria)"
-          Custom: Lezione 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Lezione 1
-        Jigsaw Levels:
-          desc: Puzzle (versione provvisoria)
-          Jigsaw: Lezione 1
-        Step Levels:
-          desc: Labirinto (versione provvisoria)
-          MazeStep: Passo della lezione
-        edit-code:
-          desc: Modifica il codice (versione provvisoria)
-          MazeEC: Lezione 1
-          Applab: Lezione 2
-          ArtistEC: Lezione 3
-          StudioEC: Lezione 4
-        events:
-          desc: Ping-Pong (versione provvisoria)
-          Bounce: Lezione 1
-          Studio: Lezione 2
-        builder:
-          desc: "Esercizi creati dall'utente (versione provvisoria)"
-          Custom: Lezione 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Lezione 1
-        jigsaw:
-          desc: Puzzle (versione provvisoria)
-          Jigsaw: Lezione 1
-        step:
-          desc: Labirinto (versione provvisoria)
-          MazeStep: Passo della lezione
-        wordsearch:
-          desc: Ape Sapiente (versione provvisoria)
-          WordSearch: Lezione 1
     game:
       name:
         Unplug1: "Cos'è l'informatica"
@@ -524,6 +454,7 @@ it:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
