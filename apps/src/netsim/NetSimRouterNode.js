@@ -929,15 +929,16 @@ NetSimRouterNode.prototype.countConnections = function () {
 /**
  * Add a router log entry (not development logging, this is user-facing!)
  * @param {string} packet - binary log payload
+ * @param {string} senderName - name of user/node that sent the message
  * @param {NetSimLogEntry.LogStatus} status
  */
-NetSimRouterNode.prototype.log = function (packet, status) {
+NetSimRouterNode.prototype.log = function (packet, senderName, status) {
   NetSimLogEntry.create(
       this.shard_,
       this.entityID,
       packet,
       status,
-      'name', // TODO: Get source user name
+      senderName,
       function () {});
 };
 
@@ -1161,6 +1162,22 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   }
 
   return undefined;
+};
+
+/**
+ * @param {!number} nodeID
+ * @returns {string} Node display name
+ * @private
+ */
+NetSimRouterNode.prototype.getDisplayNameForNodeID_ = function (nodeID) {
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
+    this.shard_.nodeTable.readAll());
+  var node = _.find(nodes, (node) => node.entityID === nodeID);
+  if (node) {
+    return node.getDisplayName();
+  }
+
+  return '';
 };
 
 /**
@@ -1450,7 +1467,12 @@ NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
       return;
     }
 
-    this.log(droppablePacket.payload, NetSimLogEntry.LogStatus.DROPPED);
+    var cachedNodeRows = this.shard_.nodeTable.readAll();
+
+    this.log(
+        droppablePacket.payload,
+        this.getDisplayNameForNodeID_(droppablePacket.fromNodeID),
+        NetSimLogEntry.LogStatus.DROPPED);
   }.bind(this));
 };
 
@@ -1517,7 +1539,10 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
 
     // Apply random chance to drop packet, right as we are about to forward it
     if (this.randomDropChance > 0 && NetSimGlobals.random() <= this.randomDropChance) {
-      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+      this.log(
+          message.payload,
+          this.getDisplayNameForNodeID_(message.fromNodeID),
+          NetSimLogEntry.LogStatus.DROPPED);
       onComplete(null);
       return;
     }
@@ -1549,11 +1574,10 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
   });
 
   this.forwardMessageToNodeIDs_(message, connectedNodeIDs, function (err, result) {
-    if (err) {
-      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
-    } else {
-      this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
-    }
+    this.log(
+        message.payload,
+        this.getDisplayNameForNodeID_(message.fromNodeID),
+        err ? NetSimLogEntry.LogStatus.DROPPED : NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(err, result);
   }.bind(this));
 };
@@ -1603,7 +1627,10 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by router");
-    this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+    this.log(
+        message.payload,
+        this.getDisplayNameForNodeID_(message.fromNodeID),
+        NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
   }
@@ -1613,13 +1640,19 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   if (destinationNode === null) {
     // Can't find or reach the address within the simulation
     logger.warn("Destination address not reachable");
-    this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+    this.log(
+        message.payload,
+        this.getDisplayNameForNodeID_(message.fromNodeID),
+        NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
   } else if (destinationNode === this && toAddress === this.getAddress()) {
     // This router IS the packet's destination, it's done.
     logger.warn("Packet stopped at router.");
-    this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
+    this.log(
+        message.payload,
+        this.getDisplayNameForNodeID_(message.fromNodeID),
+        NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(null);
     return;
   }
@@ -1645,7 +1678,10 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
         visitedNodeIDs: message.visitedNodeIDs.concat(this.entityID)
       },
       function (err, result) {
-        this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
+        this.log(
+            message.payload,
+            this.getDisplayNameForNodeID_(message.fromNodeID),
+            NetSimLogEntry.LogStatus.SUCCESS);
         onComplete(err, result);
       }.bind(this)
   );
