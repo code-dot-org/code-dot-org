@@ -1,10 +1,8 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
 import React from 'react';
-import orderBy from 'lodash/orderBy';
-import {Table, sort} from 'reactabular';
-import moment from 'moment';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import Packet from './Packet';
+import NetSimLogBrowserTable from './NetSimLogBrowserTable';
 
 // We want the table to scroll beyond this height
 const MAX_TABLE_HEIGHT = 500;
@@ -62,7 +60,7 @@ const NetSimLogBrowser = React.createClass({
           />
           <div style={style.scrollArea}>
             {/* TODO: get table sticky headers working */}
-            <LogTable
+            <NetSimLogBrowserTable
               headerFields={this.props.headerFields}
               logRows={this.props.logRows}
               renderedRowLimit={this.props.renderedRowLimit}
@@ -179,124 +177,15 @@ const TrafficFilterDropdown = React.createClass({
   }
 });
 
-const LogTable = React.createClass({
-  propTypes: {
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number
-  },
-
-  getInitialState() {
-    return {
-      sortingColumns: {
-        0: {direction: 'desc', position: 0}
-      }
-    };
-  },
-
-  render() {
-    const headerFields = this.props.headerFields;
-
-    // Define a sorting transform that can be applied to each column
-    const sortable = sort.sort({
-      // Point the transform to your rows. React state can work for this purpose
-      // but you can use a state manager as well.
-      getSortingColumns: () => this.state.sortingColumns || {},
-
-      // The user requested sorting, adjust the sorting state accordingly.
-      // This is a good chance to pass the request through a sorter.
-      onSort: selectedColumn => {
-        this.setState({
-          sortingColumns: sort.byColumn({
-            sortingColumns: this.state.sortingColumns,
-            // Custom sortingOrder removes 'no-sort' from the cycle
-            sortingOrder: {
-              FIRST: 'asc',
-              asc: 'desc',
-              desc: 'asc'
-            },
-            selectedColumn
-          })
-        });
-      }
-    });
-
-    const showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
-
-    const showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
-
-    const showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
-        headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
-
-    let columns = [
-      {
-        header: {label: 'Time', transforms: [sortable]},
-        cell: {property: 'timestamp', format: timeFormatter}
-      },
-      {
-        header: {label: 'Logged By', transforms: [sortable]},
-        cell: {property: 'logged-by'}
-      },
-      {
-        header: {label: 'Status', transforms: [sortable]},
-        cell: {property: 'status'}
-      },
-    ];
-
-    if (showFromAddress) {
-      columns.push({
-        header: {label: 'From', transforms: [sortable]},
-        cell: {property: 'from-address'}
-      });
-    }
-
-    if (showToAddress) {
-      columns.push({
-        header: {label: 'To', transforms: [sortable]},
-        cell: {property: 'to-address'}
-      });
-    }
-
-    if (showPacketInfo) {
-      columns.push({
-        header: {label: 'Packet', transforms: [sortable]},
-        cell: {property: 'packet-info'}
-      });
-    }
-
-    columns.push({
-      header: {label: 'Message', transforms: [sortable]},
-      cell: {property: 'message'}
-    });
-
-    const {logRows} = this.props;
-    const {sortingColumns} = this.state;
-    let sortedRows = sort.sorter({
-      columns,
-      sortingColumns,
-      sort: orderBy
-    })(logRows);
-    if (this.props.renderedRowLimit !== undefined) {
-      sortedRows = sortedRows.slice(0, this.props.renderedRowLimit);
-    }
-
-    return (
-      <Table.Provider columns={columns}>
-        <Table.Header/>
-        <Table.Body
-          rows={sortedRows}
-          rowKey="uuid"
-        />
-      </Table.Provider>
-    );
-  }
-});
-
-function timeFormatter(timestamp) {
-  return moment(timestamp).format('h:mm:ss.SSS A');
-}
-
 if (BUILD_STYLEGUIDE) {
+  const range = function (i) {
+    return new Array(i).fill().map((_, i) => i);
+  };
+
+  const randInt = function (i) {
+    return Math.floor(i * Math.random());
+  };
+
   NetSimLogBrowser.styleGuideExamples = storybook => {
     const i18n = {
       logBrowserHeader_toggleMine: () => 'show my routers',
@@ -315,33 +204,28 @@ if (BUILD_STYLEGUIDE) {
       Packet.HeaderType.PACKET_COUNT
     ];
 
-    const sampleData = [
-      {
-        'timestamp': Date.now(),
-        'logged-by': 'Router 1', // TODO: Make this a Node
-        'status': 'Dropped',
-        'from-address': '10.1',
-        'to-address': '10.15',
-        'packet-info': '100',
-        'message': 'GET myhostname'
-      }, {
-        'timestamp': Date.now() - 400,
-        'logged-by': 'Router 1', // TODO: Make this a Node
-        'status': 'Success',
-        'from-address': '10.1',
-        'to-address': '10.15',
-        'packet-info': '100',
-        'message': 'What?'
-      }, {
-        'timestamp': Date.now() - 1000,
-        'logged-by': 'Router 1', // TODO: Make this a Node
-        'status': 'Success',
-        'from-address': '10.15',
-        'to-address': '10.1',
-        'packet-info': '100',
-        'message': 'Send that again!'
-      }
-    ];
+    const lipsumWords = `Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nam leo elit, tristique ac hendrerit vitae,
+        porta quis diam. Cras sit amet diam dapibus, ullamcorper nibh vitae,
+        luctus nisl. Curabitur fermentum accumsan commodo. Donec nec eros a
+        lorem tincidunt sodales ac sit amet odio. Duis eget ornare ante.`.split(/\s+/g);
+
+    const sampleData = new range(100).map(() => {
+      const routerNum = 1 + randInt(10);
+      const packetCount = 1 + randInt(4);
+      const packetNum = 1 + randInt(packetCount);
+      return {
+        'timestamp': Date.now() - randInt(600000),
+        'logged-by': `Router ${routerNum}`,
+        'status': Math.random() < 0.8 ? 'Success' : 'Dropped',
+        'from-address': `${routerNum}.${1 + randInt(13)}`,
+        'to-address': `${routerNum}.${1 + randInt(13)}`,
+        'packet-info': `${packetNum} of ${packetCount}`,
+        'message': range(randInt(20))
+            .map(() => lipsumWords[randInt(lipsumWords.length)])
+            .join(' ')
+      };
+    });
 
     return storybook
         .storiesOf('NetSimLogBrowser', module)
@@ -349,25 +233,39 @@ if (BUILD_STYLEGUIDE) {
             'No filtering allowed',
             `Here's what the dialog looks like with minimum settings.`,
             () => (
-                <NetSimLogBrowser
-                  i18n={i18n}
-                  headerFields={simplePacket}
-                  logRows={sampleData}
-                />
+              <div id="netsim">
+                <div className="new-router-log-modal">
+                  <NetSimLogBrowser
+                    isOpen={true}
+                    i18n={i18n}
+                    setRouterLogMode={() => null}
+                    setTrafficFilter={() => null}
+                    headerFields={simplePacket}
+                    logRows={sampleData}
+                  />
+                </div>
+              </div>
             ))
         .addWithInfo(
             'Student filters',
             `Here's what the dialog looks like with minimum settings.`,
             () => (
-                <NetSimLogBrowser
-                  i18n={i18n}
-                  canSetRouterLogMode
-                  isAllRouterLogMode
-                  localAddress="1.15"
-                  currentTrafficFilter="all"
-                  headerFields={fancyPacket}
-                  logRows={sampleData}
-                />
+              <div id="netsim">
+                <div className="new-router-log-modal">
+                  <NetSimLogBrowser
+                    isOpen={true}
+                    i18n={i18n}
+                    canSetRouterLogMode
+                    isAllRouterLogMode
+                    localAddress="1.15"
+                    currentTrafficFilter="all"
+                    setRouterLogMode={() => null}
+                    setTrafficFilter={() => null}
+                    headerFields={fancyPacket}
+                    logRows={sampleData}
+                  />
+                </div>
+              </div>
             ));
   };
 }
