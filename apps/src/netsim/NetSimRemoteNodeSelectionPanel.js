@@ -342,21 +342,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
  *          actual reset is authenticated on the server.
  */
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () {
-  if (!this.user_) {
-    return false;
-  } else if (this.user_.isAdmin) {
-    return true;
-  }
-
-  // Find a section ID in the current shard ID
-  var matches = /_(\d+)$/.exec(this.shardID_);
-  if (!matches) {
-    return false;
-  }
-
-  // matches[1] is the first capture group (\d+), the numeric section ID.
-  var sectionID = parseInt(matches[1], 10);
-  return this.user_.ownsSection(sectionID);
+  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
 };
 
 /**
