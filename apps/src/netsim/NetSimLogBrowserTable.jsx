@@ -5,6 +5,15 @@ import {Table, sort} from 'reactabular';
 import moment from 'moment';
 import Packet from './Packet';
 
+const style = {
+  nowrap: {
+    whiteSpace: 'nowrap'
+  },
+  prewrap: {
+    whiteSpace: 'pre-wrap'
+  }
+};
+
 /**
  * Table of log rows displayed in the Log Browser modal.
  * Wraps configuration and sorting behavior around a Reactabular table.
@@ -61,43 +70,75 @@ const NetSimLogBrowserTable = React.createClass({
 
     let columns = [
       {
-        header: {label: 'Time', transforms: [sortable]},
-        cell: {property: 'timestamp', format: timeFormatter}
+        header: {
+          label: 'Time',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {
+          property: 'timestamp',
+          format: timeFormatter,
+          props: {style: style.nowrap}
+        }
       },
       {
-        header: {label: 'Logged By', transforms: [sortable]},
-        cell: {property: 'logged-by'}
+        header: {
+          label: 'Logged By',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {property: 'logged-by', props: {style: style.nowrap}}
       },
       {
-        header: {label: 'Status', transforms: [sortable]},
-        cell: {property: 'status'}
+        header: {
+          label: 'Status',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {property: 'status', props: {style: style.nowrap}}
       },
     ];
 
     if (showFromAddress) {
       columns.push({
-        header: {label: 'From', transforms: [sortable]},
-        cell: {property: 'from-address'}
+        header: {
+          label: 'From',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {property: 'from-address', props: {style: style.nowrap}}
       });
     }
 
     if (showToAddress) {
       columns.push({
-        header: {label: 'To', transforms: [sortable]},
-        cell: {property: 'to-address'}
+        header: {
+          label: 'To',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {property: 'to-address', props: {style: style.nowrap}}
       });
     }
 
     if (showPacketInfo) {
       columns.push({
-        header: {label: 'Packet', transforms: [sortable]},
-        cell: {property: 'packet-info'}
+        header: {
+          label: 'Packet',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {property: 'packet-info', props: {style: style.nowrap}}
       });
     }
 
     columns.push({
-      header: {label: 'Message', transforms: [sortable]},
-      cell: {property: 'message'}
+      header: {
+        label: 'Message',
+        transforms: [sortable],
+        props: {style: style.nowrap}
+      },
+      cell: {property: 'message', props: {style: style.prewrap}}
     });
 
     const {logRows} = this.props;
