@@ -1,7 +1,19 @@
 var jsInterpreter;
 
+/** @type {GameLabLevel} */
+var level;
+
 module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
+};
+
+/**
+ * Provide the current Game Lab level because it can customize default
+ * sprite behaviors.
+ * @param {!GameLabLevel} lvl
+ */
+module.exports.injectLevel = function (lvl) {
+  level = lvl;
 };
 
 module.exports.createSprite = function (x, y, width, height) {
@@ -36,6 +48,9 @@ module.exports.createSprite = function (x, y, width, height) {
     }
     s.addAnimation(animationName, animation);
     s.changeAnimation(animationName);
+    if (level.pauseAnimationsByDefault) {
+      s.pause();
+    }
   };
 
   s.setFrame = function (frame) {
