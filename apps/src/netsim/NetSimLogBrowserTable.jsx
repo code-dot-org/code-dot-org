@@ -86,11 +86,14 @@ const NetSimLogBrowserTable = React.createClass({
 
     let columns = [];
 
-    // TODO: Something useful here
     if (this.props.userOwnsShard) {
       columns.push({
-        header: {label: 'Extra', transforms: [sortable]},
-        cell: {property: 'logged-by'}
+        header: {
+          label: 'Sent By',
+          transforms: [sortable],
+          props: {style: style.nowrap}
+        },
+        cell: {property: 'sourceUserName', props: {style: style.nowrap}}
       });
     }
 

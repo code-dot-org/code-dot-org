@@ -27,6 +27,7 @@ var logger = NetSimLogger.getSingleton();
  *           student.  May contain headers of its own.
  * @property {NetSimLogEntry.LogStatus} status
  * @property {number} timestamp
+ * @property {string} sourceUserName
  */
 
 /**
@@ -85,6 +86,8 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
    * @type {number}
    */
   this.timestamp = (row.timestamp !== undefined) ? row.timestamp : Date.now();
+
+  this.sourceUserName = utils.valueOr(row.sourceUserName, '');
 };
 NetSimLogEntry.inherits(NetSimEntity);
 
@@ -114,7 +117,8 @@ NetSimLogEntry.prototype.buildRow = function () {
     nodeID: this.nodeID,
     base64Binary: binaryToBase64(this.binary),
     status: this.status,
-    timestamp: this.timestamp
+    timestamp: this.timestamp,
+    sourceUserName: this.sourceUserName
   };
 };
 
@@ -125,14 +129,16 @@ NetSimLogEntry.prototype.buildRow = function () {
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} binary - log contents
  * @param {NetSimLogEntry.LogStatus} status
+ * @param {!string} sourceUserName
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
+NetSimLogEntry.create = function (shard, nodeID, binary, status, sourceUserName, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.binary = binary;
   entity.status = status;
   entity.timestamp = Date.now();
+  entity.sourceUserName = sourceUserName;
   entity.getTable().create(entity.buildRow(), function (err, result) {
     if (err) {
       onComplete(err, null);
