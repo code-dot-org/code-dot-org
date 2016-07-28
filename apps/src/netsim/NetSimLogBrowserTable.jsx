@@ -36,7 +36,8 @@ const NetSimLogBrowserTable = React.createClass({
   propTypes: {
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number
+    renderedRowLimit: React.PropTypes.number,
+    userOwnsShard: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -83,36 +84,46 @@ const NetSimLogBrowserTable = React.createClass({
     const showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
-    let columns = [
-      {
-        header: {
-          label: 'Time',
-          transforms: [sortable],
-          props: {style: style.nowrap}
-        },
-        cell: {
-          property: 'timestamp',
-          format: timeFormatter,
-          props: {style: style.nowrapTd}
-        }
+    let columns = [];
+
+    // TODO: Something useful here
+    if (this.props.userOwnsShard) {
+      columns.push({
+        header: {label: 'Extra', transforms: [sortable]},
+        cell: {property: 'logged-by'}
+      });
+    }
+
+    columns.push({
+      header: {
+        label: 'Time',
+        transforms: [sortable],
+        props: {style: style.nowrap}
       },
-      {
-        header: {
-          label: 'Logged By',
-          transforms: [sortable],
-          props: {style: style.nowrap}
-        },
-        cell: {property: 'logged-by', props: {style: style.nowrapTd}}
+      cell: {
+        property: 'timestamp',
+        format: timeFormatter,
+        props: {style: style.nowrapTd}
+      }
+    });
+
+    columns.push({
+      header: {
+        label: 'Logged By',
+        transforms: [sortable],
+        props: {style: style.nowrap}
       },
-      {
-        header: {
-          label: 'Status',
-          transforms: [sortable],
-          props: {style: style.nowrap}
-        },
-        cell: {property: 'status', props: {style: style.nowrapTd}}
+      cell: {property: 'logged-by', props: {style: style.nowrapTd}}
+    });
+
+    columns.push({
+      header: {
+        label: 'Status',
+        transforms: [sortable],
+        props: {style: style.nowrap}
       },
-    ];
+      cell: {property: 'status', props: {style: style.nowrapTd}}
+    });
 
     if (showFromAddress) {
       columns.push({
