@@ -270,49 +270,59 @@ class ApiControllerTest < ActionController::TestCase
 
     # all these are translation missing because we don't actually generate i18n files in tests
     expected_response = [
-      {"stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
-        "puzzle" => 1,
+      { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "levelgroup_results" => [
-          {
-            "question" => "test",
-            "results" => [
-              {"result" => "Free response from student 3", "type" => "free_response"},
-              {"result" => "This is a different free response", "type" => "free_response"},
-              {"result" => "Free response from student 5", "type" => "free_response"},
-              {"result" => "This is a free response", "type" => "free_response"},
-              {"result" => "Free response from student 4", "type" => "free_response"}]
-            },
-          {
-            "question" => "text2",
-            "results" => [
-              {"result_text" => "text1", "result" => "A", "type" => "multi"},
-              {}, {}, {}, {}]
-            },
-          {
-            "question" => "text2",
-            "results" => [
-              {},
-              {},
-              {"result_text" => nil, "result" => "C", "type" => "multi"},
-              {},
-              {"result_text" => nil, "result" => "B", "type" => "multi"}]
-            },
-          {
-            "question" => "text2",
-            "results" => [
-              {}, {},
-              {"result_text" => nil, "result" => "D", "type" => "multi"},
-              {}, {}]
-            },
-          {
-            "question" => "text2",
-            "results" => [
-              {},
-              {}, {}, {}, {}]
-            },
+        { "type" => "text_match",
+          "question" => "test",
+          "results" => [
+          {"result" => "Free response from student 3"},
+          {"result" => "This is a different free response"},
+          {"result" => "Free response from student 5"},
+          {"result" => "This is a free response"},
+          {"result" => "Free response from student 4"}],
+          "answer_texts" => nil},
+        { "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {"answer_index" => 0},
+            {},
+            {},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+        { "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {"answer_index" => 2},
+            {},
+            {"answer_index" => 1}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+        {
+          "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {"answer_index" => 3},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+        {
+          "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
         ]
       }
     ]
+
     assert_equal expected_response, JSON.parse(@response.body)
   end
 

@@ -1,0 +1,23 @@
+name 'CSP Unit 1 Cumulative Assessment MC'
+title 'CS Principles Unit 1 Assessment MC'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'CSPFinal_Question_7'
+level 'CSPFinal_Question_23'
+level 'CSPFinal_Question_12'
+level 'CSPFinal_Question_9'
+level 'CSPFinal_Question_8'
+
+page
+level 'CB_Question_20'
+level 'CSPFinal_Question_6'
+level 'CB_Question_3'
+level 'CSPFinal_Question_2'
+level 'CB_Question_1'
+
+page
+level 'CSPFinal_Question_1'
+level 'CSPFinal_Question_3'
+level 'CSPFinal_Question_4'

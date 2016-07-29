@@ -1176,14 +1176,6 @@ StudioApp.prototype.onReportComplete = function (response) {
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
   }
-
-  if (response.trophy_updates) {
-    response.trophy_updates.forEach(update => {
-      const concept_name = update[0];
-      const trophy_name = update[1];
-      trackEvent('Trophy', concept_name, trophy_name);
-    });
-  }
 };
 
 /**
