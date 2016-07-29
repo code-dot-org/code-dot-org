@@ -618,7 +618,7 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
-      var distThisMove = Math.min(cmd.opts.queuedDistance,
+      var distThisMove = Math.min(cmd.opts.queuedDistance || Infinity,
                                   Studio.sprite[cmd.opts.spriteIndex].speed);
       var moveDirection = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
       totalDelta.x += distThisMove * moveDirection.x;
@@ -1065,6 +1065,8 @@ Studio.onTick = function () {
     Studio.executeQueue('when-up');
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
+
+    Studio.executeQueue('askCallback');
 
     updateItems();
 
@@ -2096,7 +2098,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.perExecutionTimeouts.forEach(function (timeout) {
     clearTimeout(timeout);
   });
-  clearInterval(Studio.tickIntervalId);
+  Studio.pauseExecution();
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -2957,13 +2959,14 @@ Studio.execute = function () {
   $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
-  Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
+  Studio.resumeExecution();
 };
 
 /**
  * Pause calling `Studio.onTick`.
  */
 Studio.pauseExecution = function () {
+  Studio.paused = true;
   window.clearInterval(Studio.tickIntervalId);
 };
 
@@ -2971,6 +2974,7 @@ Studio.pauseExecution = function () {
  * Resume calling `Studio.onTick`.
  */
 Studio.resumeExecution = function () {
+  Studio.paused = false;
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
@@ -3686,7 +3690,7 @@ Studio.queueCmd = function (id, name, opts) {
 
 Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (Studio.yieldExecutionTicks > 0) {
+    if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
     if (handler.name === name && handler.cmdQueue.length) {
@@ -3697,7 +3701,7 @@ Studio.executeQueue = function (name, oneOnly) {
         } else {
           break;
         }
-        if (Studio.yieldExecutionTicks > 0) {
+        if (Studio.paused || Studio.yieldExecutionTicks > 0) {
           break;
         }
       }
@@ -3875,6 +3879,13 @@ Studio.callCmd = function (cmd) {
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
+      break;
+    case 'askForInput':
+      studioApp.highlight(cmd.id);
+      if (Studio.paused) {
+        return false;
+      }
+      Studio.askForInput(cmd.opts.question, cmd.opts.callback);
       break;
   }
   return true;
@@ -4793,7 +4804,15 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
   return foundCmd;
 };
 
+/**
+ * Pause execution and display a prompt for user input. When the user presses
+ * enter or clicks "Submit", resume execution.
+ * @param question
+ * @param callback
+ */
 Studio.askForInput = function (question, callback) {
+  Studio.pauseExecution();
+
   const viz = document.getElementById('visualization');
   const target = document.createElement('div');
   Object.assign(target.style, {
@@ -4807,9 +4826,12 @@ Studio.askForInput = function (question, callback) {
   studioApp.resizeVisualization();
 
   function onInputReceived(value) {
+    Studio.resumeExecution();
+
     ReactDOM.unmountComponentAtNode(target);
     viz.removeChild(target);
-    callback(value);
+    registerEventHandler(Studio.eventHandlers, 'askCallback', callback.bind(null, value || ''));
+    callHandler('askCallback');
   }
 
   ReactDOM.render(

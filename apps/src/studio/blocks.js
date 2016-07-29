@@ -2450,10 +2450,22 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.studio_ask = function () {
-    // Variable setter.
-    var argument0 = `prompt("${this.getTitleValue('TEXT')}")`;
+    var blockId = `block_id_${this.id}`;
+    var question = this.getTitleValue('TEXT');
     var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
-    return varName + ' = ' + argument0 + ';\n';
+
+    var nextBlock = this.nextConnection && this.nextConnection.targetBlock();
+    var nextCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+    nextCode = Blockly.Generator.prefixLines(`${varName} = value;\n${nextCode}`, '  ');
+
+    if (nextBlock) {
+      // We've already handled generation for nextBlock and all descendant blocks.
+      nextBlock.skipGeneration = true;
+    }
+
+    var callback = `function (value) {\n${nextCode}}`;
+
+    return `Studio.askForInput("${blockId}", "${question}", ${callback});\n`;
   };
 };
 
