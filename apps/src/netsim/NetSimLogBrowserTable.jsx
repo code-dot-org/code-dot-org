@@ -34,31 +34,33 @@ const NetSimLogBrowserTable = React.createClass({
     };
   },
 
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  },
+
+  // The user requested sorting, adjust the sorting state accordingly.
+  onSort(selectedColumn) {
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns: this.state.sortingColumns,
+        // Custom sortingOrder removes 'no-sort' from the cycle
+        sortingOrder: {
+          FIRST: 'asc',
+          asc: 'desc',
+          desc: 'asc'
+        },
+        selectedColumn
+      })
+    });
+  },
+
   render() {
     const headerFields = this.props.headerFields;
 
     // Define a sorting transform that can be applied to each column
     const sortable = sort.sort({
-      // Point the transform to your rows. React state can work for this purpose
-      // but you can use a state manager as well.
-      getSortingColumns: () => this.state.sortingColumns || {},
-
-      // The user requested sorting, adjust the sorting state accordingly.
-      // This is a good chance to pass the request through a sorter.
-      onSort: selectedColumn => {
-        this.setState({
-          sortingColumns: sort.byColumn({
-            sortingColumns: this.state.sortingColumns,
-            // Custom sortingOrder removes 'no-sort' from the cycle
-            sortingOrder: {
-              FIRST: 'asc',
-              asc: 'desc',
-              desc: 'asc'
-            },
-            selectedColumn
-          })
-        });
-      }
+      getSortingColumns: this.getSortingColumns,
+      onSort: this.onSort
     });
 
     const showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
