@@ -29,7 +29,7 @@ ru:
   unsubmit: Не отправлять
   previous_page: Предыдущая страница
   next_page: Следующая страница
-  next_resource: Next resource
+  next_resource: Следующий ресурс
   done_with_module: Done with this Learning Module
   cancel: Отмена
   okay: Хорошо
@@ -87,7 +87,7 @@ ru:
     teacher_title: Регистрация учителя
     student_pitch: Регистрация на code.org для учеников
     student_title: Регистрация ученика
-    signup_title: Sign up for Code.org
+    signup_title: Регистрация на code.org
     school_name: Название школы (не обязательно)
     school_address: Адрес школы (не обязательно)
     address_placeholder: адрес, город, область, индекс
@@ -106,7 +106,7 @@ ru:
     student_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org. Если мне меньше 13 лет, отправляя эту форму, я подтверждаю, что у меня есть разрешение моих родителей или законного опекуна на пользование услугами Code.org. <br/>Для пользователей младше 13 лет адреса электронной почты не хранятся в форме, которая позволяет нам связаться с ними."
     teacher_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org."
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная информация.
-    user_type_label: Account Type
+    user_type_label: Тип Аккаунта
     user_type_teacher: Учитель
     user_type_student: Ученик
   signin_form:
@@ -125,6 +125,8 @@ ru:
     picture: Теперь найдите свое секретное изображение
     words: Теперь введите свои секретные слова
     login: Вход
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Забыли Ваш пароль?
@@ -247,6 +249,10 @@ ru:
       signin: Вход
       signup: Регистрация
       already_registered: Уже зарегистрированы?
+      pair_programming: Программирование в парах
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'Результаты %{name}'
       progress: Ваши результаты
@@ -281,6 +287,7 @@ ru:
       example_with_number: 'Пример решения %{solution_number}'
       submitted_on: 'Отправлено %{date}'
       unsubmit: Не отправлять
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтвержден:'
@@ -341,7 +348,7 @@ ru:
     announcement_title: Объявления
     announcement_view_all: Посмотреть все
     announcement_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
-    announcement_button: Test the feature
+    announcement_learn_more_button: Узнать больше
     announcement_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
     announcement_petition_button: Добавьте ваше имя
   move_students:
@@ -406,8 +413,6 @@ ru:
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'> одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницы, но ожидаемая функциональность может быть повреждена."
-      ie_message: Code.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
-      ie_message_csedweek: CSEdWeek.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
       link: Узнать больше
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
@@ -559,36 +564,6 @@ ru:
     hour: 1 час
     day: день
     week: неделя
-  data:
-    script:
-      name:
-        20-hour:
-          title: 'Курс "Введение в информатику" (15-25 часов)'
-          description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
-        Hour of Code:
-          title: Час кода 2013
-          description: ""
-        edit-code:
-          title: Редактирование кода
-          description: ""
-        events:
-          title: События
-          description: ""
-        builder:
-          title: Конструктор
-          description: ""
-        flappy:
-          title: Порхающий код
-          description: '{отите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник Flappy код!'
-        jigsaw:
-          title: Головоломки
-          description: ""
-        step:
-          title: Шаг
-          description: ""
-        sample_level_builder:
-          title: Пример конструктора уровня
-          description: ""
   age_interstitial:
     age: Ваш возраст
     header: Обновление информации учетной записи
@@ -621,6 +596,7 @@ ru:
     share_title: Поделиться своим проектом
     share_copy_link: 'Скопировать ссылку:'
     share_embed_description: Вы можете вставить код в HTML-страницы для отображения проекта на веб-странице.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Код для вставки
     advanced_share: Показать дополнительные опции
     close: Закрыть
@@ -644,6 +620,7 @@ ru:
     edit_project: Редактировать проект
     abuse:
       tos: "Этот проект нарушает <a href='http://code.org/tos'>Условия предоставления услуг</a> Code.org, о чем было направлено уведомление, поэтому этим проектом нельзя поделиться."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Если вы считаете, что произошла ошибка, <a href='https://code.org/contact'>свяжитесь с нами.</a>"
       go_to_code_studio: 'Перейти в "Студию Кода"'
       report_abuse_form:
@@ -675,6 +652,14 @@ ru:
     instructor_feedback: Обратная связь с инструктором
     peer_feedback: Отзывы однокурсников
     outdated: Этот отзыв был добавлен для версии, загруженной раньше
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Искать значок...
@@ -694,7 +679,9 @@ ru:
     content: Содержимое
     practice: Практика учителя
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Загрузить программы Часа кода
     capsule_title: У Вас есть интернет?

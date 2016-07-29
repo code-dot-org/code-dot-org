@@ -1,75 +1,5 @@
 si:
   data:
-    script:
-      name:
-        20-hour:
-          desc: පරිඝණක විද්‍යා පඨමාලාව සදහා වු කේ-8 හැදින්වීම උත්සහකරන්
-          Unplug1: අදියර 1
-          Maze: අදියර 2
-          Unplug2: අදියර 3
-          Unplug3: අදියර 4
-          Artist: අදියර 5
-          Unplug4: අදියර 6
-          Artist2: අදියර 7
-          Unplug5: අදියර 8
-          Farmer: අදියර 9
-          Unplug6: අදියර 10
-          Artist3: අදියර 11
-          Unplug7: අදියර 12
-          Farmer2: අදියර 13
-          Unplug8: අදියර 14
-          Artist4: අදියර 15
-          Unplug9: අදියර 16
-          Farmer3: අදියර 17
-          Unplug10: අදියර 18
-          Artist5: අදියර 19
-          Unplug11: අදියර 20
-        Hour of Code:
-          desc: පැයේ කේතය
-          Maze: අදියර 1
-        Edit Code:
-          desc: කේතය සංස්කරණය (බීටා)
-          MazeEC: අදියර 1
-        2014 Levels:
-          desc: පොළා පැනීම (beta)
-          Bounce: අදියර 1
-        Builder Levels:
-          desc: භාවිතා කරන්නා විසින් සෑදූ ප්‍රෙහේලිකා (beta)
-          Custom: අදියර 1
-        Flappy Levels:
-          desc: Flappy කුරුල්ලා
-          Flappy: අදියර 1
-        Jigsaw Levels:
-          desc: පින්තූර ප්‍රෙහේලිකාව (beta)
-          Jigsaw: අදියර 1
-        Step Levels:
-          desc: අවුල් ජාලය (beta)
-          MazeStep: Stage Step
-        edit-code:
-          desc: කේතය සංස්කරණය (බීටා)
-          MazeEC: අදියර 1
-          Applab: අදියර 2
-          ArtistEC: අදියර 3
-          StudioEC: අදියර 4
-        events:
-          desc: පොළා පැනීම (beta)
-          Bounce: අදියර 1
-          Studio: අදියර 2
-        builder:
-          desc: භාවිතා කරන්නා විසින් සෑදූ ප්‍රෙහේලිකා (beta)
-          Custom: අදියර 1
-        flappy:
-          desc: Flappy කුරුල්ලා
-          Flappy: අදියර 1
-        jigsaw:
-          desc: පින්තූර ප්‍රෙහේලිකාව (beta)
-          Jigsaw: අදියර 1
-        step:
-          desc: අවුල් ජාලය (beta)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: අක්ෂර වින්‍යාස තරඟය (beta)
-          WordSearch: අදියර 1
     game:
       name:
         Unplug1: පරිඝණක විද්‍යාව හැදින්වීම
@@ -249,7 +179,7 @@ si:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
@@ -503,6 +433,7 @@ si:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

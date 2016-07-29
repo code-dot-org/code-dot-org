@@ -2,15 +2,6 @@ en:
   data:
     script:
       name:
-        test:
-          "Jigsaw: Learn to drag and drop": crwdns5322:0crwdne5322:0
-          The Maze: crwdns5323:0crwdne5323:0
-          Multi: crwdns5324:0crwdne5324:0
-          Match: crwdns5325:0crwdne5325:0
-          Math Image: crwdns5326:0crwdne5326:0
-          title: crwdns5821:0crwdne5821:0
-          description: crwdns5822:0crwdne5822:0
-          description_short: crwdns43228:0crwdne43228:0
         course1:
           "Jigsaw: Learn to drag and drop": crwdns5824:0crwdne5824:0
           "Maze: Sequence": crwdns5825:0crwdne5825:0
@@ -210,17 +201,6 @@ en:
           Variables: crwdns23564:0crwdne23564:0
           For Loops: crwdns23565:0crwdne23565:0
           Binary: crwdns27311:0crwdne27311:0
-        potus:
-          title: crwdns25200:0crwdne25200:0
-          description_short: crwdns25201:0crwdne25201:0
-          description: crwdns25202:0crwdne25202:0
-          Special: crwdns25203:0crwdne25203:0
-        special:
-          title: crwdns25204:0crwdne25204:0
-          description_short: crwdns25205:0crwdne25205:0
-          description: crwdns25206:0crwdne25206:0
-          Special: crwdns25207:0crwdne25207:0
-          Binary: crwdns27312:0crwdne27312:0
         algebra:
           title: crwdns27323:0crwdne27323:0
           description: crwdns27324:0crwdne27324:0
@@ -384,31 +364,11 @@ en:
           description: crwdns35358:0crwdne35358:0
           description_short: crwdns43237:0crwdne43237:0
           Hour of Code 2013: crwdns35359:0crwdne35359:0
-        Code Studio Puzzle Challenge:
-          title: crwdns35360:0crwdne35360:0
-          description_short: crwdns35361:0crwdne35361:0
-          description: crwdns35362:0crwdne35362:0
-          Puzzles: crwdns35363:0crwdne35363:0
         CodeStudioPuzzleChallenge:
           title: crwdns35364:0crwdne35364:0
           description_short: crwdns35365:0crwdne35365:0
           description: crwdns35366:0crwdne35366:0
           Puzzles: crwdns35367:0crwdne35367:0
-        Test - Code Studio Puzzle Challenge:
-          title: crwdns35368:0crwdne35368:0
-          description_short: crwdns35369:0crwdne35369:0
-          description: crwdns35370:0crwdne35370:0
-          Puzzles: crwdns35371:0crwdne35371:0
-        How to do the Code Studio Puzzle Challenge:
-          title: crwdns35372:0crwdne35372:0
-          description_short: crwdns35373:0crwdne35373:0
-          description: crwdns35374:0crwdne35374:0
-          Puzzles: crwdns35375:0crwdne35375:0
-        Tutorial - Code Studio Puzzle Challenge:
-          title: crwdns35376:0crwdne35376:0
-          description_short: crwdns35377:0crwdne35377:0
-          description: crwdns35378:0crwdne35378:0
-          Puzzles: crwdns35379:0crwdne35379:0
         Tutorial Video - Code Studio Puzzle Challenge:
           title: crwdns35380:0crwdne35380:0
           description_short: crwdns35381:0crwdne35381:0
@@ -695,24 +655,6 @@ en:
           Strings and Images: crwdns37987:0crwdne37987:0
           The Design Recipe: crwdns37988:0crwdne37988:0
           Next Steps: crwdns38397:0crwdne38397:0
-        sciPD complex adaptive 2:
-          title: crwdns37989:0crwdne37989:0
-          description: crwdns37990:0crwdne37990:0
-          description_short: crwdns43252:0crwdne43252:0
-          Introduction to PD: crwdns37991:0crwdne37991:0
-          Pre-Workshop Online Component: crwdns37992:0crwdne37992:0
-        sciPD complex adaptive forum:
-          title: crwdns37993:0crwdne37993:0
-          description: crwdns37994:0crwdne37994:0
-          description_short: crwdns43253:0crwdne43253:0
-          Introduction to PD: crwdns37995:0crwdne37995:0
-          Introduction to Complex Adaptive Systems: crwdns37996:0crwdne37996:0
-        Glenallan Career Day Demo:
-          new stage: crwdns37997:0crwdne37997:0
-          title: crwdns37998:0crwdne37998:0
-          description_short: crwdns37999:0crwdne37999:0
-          description: crwdns38000:0crwdne38000:0
-          Puzzles: crwdns38001:0crwdne38001:0
         ECSPD-NexTech:
           Introduction to PD: crwdns38002:0crwdne38002:0
           What is ECS?: crwdns38003:0crwdne38003:0
@@ -793,15 +735,6 @@ en:
           Introduction to StarLogo Nova: crwdns38067:0crwdne38067:0
           The Tutorial: crwdns38068:0crwdne38068:0
           Post-Survey: crwdns38069:0crwdne38069:0
-        ui_tests:
-          title: crwdns38070:0crwdne38070:0
-          description: crwdns38071:0crwdne38071:0
-          description_short: crwdns43260:0crwdne43260:0
-          All the Tests: crwdns38072:0crwdne38072:0
-          Free Response: crwdns38073:0crwdne38073:0
-          Multi: crwdns38074:0crwdne38074:0
-          Big Game: crwdns38398:0crwdne38398:0
-          new stage: crwdns43261:0crwdne43261:0
         sciencePD2:
           title: crwdns43262:0crwdne43262:0
           description: crwdns43263:0crwdne43263:0
@@ -816,6 +749,13 @@ en:
           Curricular Modules: crwdns38805:0crwdne38805:0
           Common Forms: crwdns38806:0crwdne38806:0
           Guides and Resources: crwdns38807:0crwdne38807:0
+          Welcome!: crwdns57702:0crwdne57702:0
+          Review StarLogo Nova: crwdns57703:0crwdne57703:0
+          Creating Breeds in Starlogo Nova: crwdns57704:0crwdne57704:0
+          Revisiting Agent Movement: crwdns57705:0crwdne57705:0
+          Epidemic Model Extensions: crwdns57706:0crwdne57706:0
+          Thinking Ahead to Implementation: crwdns57707:0crwdne57707:0
+          Wrap-Up: crwdns57708:0crwdne57708:0
         sciencePD3:
           title: crwdns43265:0crwdne43265:0
           description: crwdns43266:0crwdne43266:0
@@ -931,6 +871,9 @@ en:
           Game Lab: crwdns56596:0crwdne56596:0
           Sample PLC Assessment: crwdns56889:0crwdne56889:0
           Swapped Levels: crwdns56961:0crwdne56961:0
+          Gamelab: crwdns57709:0crwdne57709:0
+          Anonymous student survey: crwdns57710:0crwdne57710:0
+          Anonymous student survey 2: crwdns57711:0crwdne57711:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -959,17 +902,6 @@ en:
           Broadcast Lesson: crwdns41631:0crwdne41631:0
           Text Compression Lesson: crwdns41632:0crwdne41632:0
           Welcome!: crwdns41633:0crwdne41633:0
-        CSPfac intro:
-          title: crwdns41634:0crwdne41634:0
-          description: crwdns41635:0crwdne41635:0
-          description_short: crwdns43275:0crwdne43275:0
-          Welcome!: crwdns41636:0crwdne41636:0
-          Pixelation Widget: crwdns41637:0crwdne41637:0
-          Text Compression Widget: crwdns41638:0crwdne41638:0
-          Internet Simulator: crwdns41639:0crwdne41639:0
-          App Lab: crwdns41640:0crwdne41640:0
-          Broadcast Lesson: crwdns41641:0crwdne41641:0
-          Text Compression Lesson: crwdns41642:0crwdne41642:0
         K5-OnlinePD:
           title: crwdns42120:0crwdne42120:0
           description: crwdns42121:0crwdne42121:0
@@ -1027,12 +959,6 @@ en:
           Code.org Equity PD: crwdns41871:0crwdne41871:0
           Necessary Background: crwdns42119:0crwdne42119:0
           Equity PD: crwdns49758:0crwdne49758:0
-        hoc2015:
-          title: crwdns41872:0crwdne41872:0
-          description_short: crwdns41873:0crwdne41873:0
-          description: crwdns41874:0crwdne41874:0
-          Hour of Code: crwdns41875:0crwdne41875:0
-          Hour of Code 2015: crwdns48411:0crwdne48411:0
         algebraPD2:
           title: crwdns42133:0crwdne42133:0
           description: crwdns42134:0crwdne42134:0
@@ -1177,11 +1103,6 @@ en:
           description_short: crwdns48413:0crwdne48413:0
           description: crwdns48414:0crwdne48414:0
           Vigenere: crwdns48415:0crwdne48415:0
-        frequency:
-          title: crwdns48416:0crwdne48416:0
-          description_short: crwdns48417:0crwdne48417:0
-          description: crwdns48418:0crwdne48418:0
-          Frequency Analysis: crwdns48419:0crwdne48419:0
         algebraPD3a:
           title: crwdns45359:0crwdne45359:0
           description_short: crwdns45360:0crwdne45360:0
@@ -1496,11 +1417,6 @@ en:
           description_short: crwdns51320:0crwdne51320:0
           description: crwdns51321:0crwdne51321:0
           Hour of Code 2015: crwdns51322:0crwdne51322:0
-        minecraft:
-          title: crwdns54313:0crwdne54313:0
-          description_short: crwdns54314:0crwdne54314:0
-          description: crwdns54315:0crwdne54315:0
-          Craft: crwdns54316:0crwdne54316:0
         mc:
           title: crwdns54317:0crwdne54317:0
           description_short: crwdns54318:0crwdne54318:0
@@ -1784,6 +1700,9 @@ en:
           Complex Conditionals: crwdns57024:0crwdne57024:0
           Proposed Sprites and Props: crwdns57025:0crwdne57025:0
           Conditionals Update: crwdns57026:0crwdne57026:0
+          Draw Loop and Randomization: crwdns57712:0crwdne57712:0
+          Variables Unplugged: crwdns57713:0crwdne57713:0
+          Complex Sprite Movement: crwdns57714:0crwdne57714:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description_short: crwdns56471:0crwdne56471:0
@@ -1892,14 +1811,6 @@ en:
           title: crwdns56676:0crwdne56676:0
           description: crwdns56677:0crwdne56677:0
           netsim: crwdns56678:0crwdne56678:0
-        Test CPS PD:
-          test Unit 1 required reading: crwdns56679:0crwdne56679:0
-          test Unit 1 content module Alpha: crwdns56680:0crwdne56680:0
-          test Unit 1 content module Bravo: crwdns56681:0crwdne56681:0
-          test Unit 1 content module Charlie: crwdns56682:0crwdne56682:0
-          test Unit 1 practice module Delta: crwdns56683:0crwdne56683:0
-          test Unit 1 practice module Echo: crwdns56684:0crwdne56684:0
-          test Unit 1 practice module Foxtrot: crwdns56685:0crwdne56685:0
         csp-facilitators :
           title: crwdns56686:0crwdne56686:0
           description_short: crwdns56687:0crwdne56687:0
@@ -2052,6 +1963,11 @@ en:
           Loops Unplugged: crwdns57109:0crwdne57109:0
           Events Unplugged: crwdns57110:0crwdne57110:0
           Events: crwdns57111:0crwdne57111:0
+          Fuzz Fiesta: crwdns57715:0crwdne57715:0
+          title: crwdns57716:0crwdne57716:0
+          description_short: crwdns57717:0crwdne57717:0
+          description: crwdns57718:0crwdne57718:0
+          description_audience: crwdns57719:0crwdne57719:0
         grade4:
           title: crwdns57112:0crwdne57112:0
           description_short: crwdns57113:0crwdne57113:0
@@ -2075,16 +1991,51 @@ en:
           Internet: crwdns57131:0crwdne57131:0
           Crowdsourcing: crwdns57132:0crwdne57132:0
           Digital Citizenship: crwdns57133:0crwdne57133:0
+          "Unplugged: Conditionals with Cards": crwdns57720:0crwdne57720:0
+          "Unplugged: Decision Trees (New)": crwdns57721:0crwdne57721:0
+          "Unplugged: Nested Loops (New)": crwdns57722:0crwdne57722:0
+          Artist Ramp Up (including Nested Loops): crwdns57723:0crwdne57723:0
         grade1:
           Predicting & Debugging: crwdns57134:0crwdne57134:0
           Persistence & Frustration: crwdns57135:0crwdne57135:0
           Sequences & Algorithms: crwdns57136:0crwdne57136:0
           "Jigsaw: Learn to drag and drop": crwdns57137:0crwdne57137:0
+          Debugging: crwdns57724:0crwdne57724:0
+          Programming Unplugged: crwdns57725:0crwdne57725:0
+          Programming: crwdns57726:0crwdne57726:0
+          Being Safe Online: crwdns57727:0crwdne57727:0
+          Loops Unplugged: crwdns57728:0crwdne57728:0
+          Loops: crwdns57729:0crwdne57729:0
+          Events Unplugged: crwdns57730:0crwdne57730:0
+          Events: crwdns57731:0crwdne57731:0
+          More Computer Science: crwdns57732:0crwdne57732:0
+          title: crwdns57733:0crwdne57733:0
+          description_short: crwdns57734:0crwdne57734:0
+          description: crwdns57735:0crwdne57735:0
+          description_audience: crwdns57736:0crwdne57736:0
         grade5:
           title: crwdns57138:0crwdne57138:0
           description_short: crwdns57139:0crwdne57139:0
           description: crwdns57140:0crwdne57140:0
           description_audience: crwdns57141:0crwdne57141:0
+          Mixed Review (Ramp Up): crwdns57737:0crwdne57737:0
+          "Unplugged: Envelope Variables": crwdns57738:0crwdne57738:0
+          "Unplugged: Madlibs": crwdns57739:0crwdne57739:0
+          "Artist: Variables": crwdns57740:0crwdne57740:0
+          "Play Lab: Variables": crwdns57741:0crwdne57741:0
+          "Unplugged: For Loop Fun": crwdns57742:0crwdne57742:0
+          "Bee: For Loops": crwdns57743:0crwdne57743:0
+          "Artist: For Loops": crwdns57744:0crwdne57744:0
+          "Unplugged: Songwriting with Parameters": crwdns57745:0crwdne57745:0
+          "Artist: Functions with Parameters": crwdns57746:0crwdne57746:0
+          "Play Lab: Functions with Parameters": crwdns57747:0crwdne57747:0
+          "Bee: Functions with Parameters": crwdns57748:0crwdne57748:0
+          "Play Lab: Events and Conditionals": crwdns57749:0crwdne57749:0
+          "Project: Chase/Collect Game": crwdns57750:0crwdne57750:0
+          Scratch (Optional Third-Party Stage): crwdns57751:0crwdne57751:0
+          "Unplugged: Binary Images": crwdns57752:0crwdne57752:0
+          "Pixelation: Binary Exploration": crwdns57753:0crwdne57753:0
+          Artist Binary: crwdns57754:0crwdne57754:0
         ecs-unit1:
           title: crwdns57142:0crwdne57142:0
           description_short: crwdns57143:0crwdne57143:0
@@ -2119,3 +2070,129 @@ en:
           Day 15-16 Sorting Algorithms: crwdns57171:0crwdne57171:0
           "Day 17 Minimal Spanning Trees: Muddy City": crwdns57172:0crwdne57172:0
           Day 18-21 Final Project: crwdns57173:0crwdne57173:0
+        ecs-unit3:
+          title: crwdns57755:0crwdne57755:0
+          description_short: crwdns57756:0crwdne57756:0
+          description: crwdns57757:0crwdne57757:0
+          Getting Started: crwdns57758:0crwdne57758:0
+          Intro to Unit 3: crwdns57759:0crwdne57759:0
+          Teaching Strategies: crwdns57760:0crwdne57760:0
+          Unit 3 Day-by-Day: crwdns57761:0crwdne57761:0
+          Unit 3 Challenge: crwdns57762:0crwdne57762:0
+          Close & Next Steps: crwdns57763:0crwdne57763:0
+          Unit 3 Challenge Preview: crwdns57764:0crwdne57764:0
+        ecs-unit4:
+          title: crwdns57765:0crwdne57765:0
+          description_short: crwdns57766:0crwdne57766:0
+          description: crwdns57767:0crwdne57767:0
+          Getting Started: crwdns57768:0crwdne57768:0
+          Intro to Unit 4: crwdns57769:0crwdne57769:0
+          Teaching Strategies: crwdns57770:0crwdne57770:0
+          Unit 4 Day-by-Day: crwdns57771:0crwdne57771:0
+          Unit 4 Challenge: crwdns57772:0crwdne57772:0
+          Close & Next Steps: crwdns57773:0crwdne57773:0
+          Unit 4 Challenge Preview: crwdns57774:0crwdne57774:0
+        ecs-unit5:
+          title: crwdns57775:0crwdne57775:0
+          description_short: crwdns57776:0crwdne57776:0
+          description: crwdns57777:0crwdne57777:0
+          Getting Started: crwdns57778:0crwdne57778:0
+          Unit 5 Overview: crwdns57779:0crwdne57779:0
+          Unit 5 lessons: crwdns57780:0crwdne57780:0
+          Introduction to the Unit 5 Challenge: crwdns57781:0crwdne57781:0
+          Complete the Challenge: crwdns57782:0crwdne57782:0
+          Share out and Submit: crwdns57783:0crwdne57783:0
+        ecs-unit6:
+          title: crwdns57784:0crwdne57784:0
+          description_short: crwdns57785:0crwdne57785:0
+          description: crwdns57786:0crwdne57786:0
+          Getting Started: crwdns57787:0crwdne57787:0
+          Unit 6 Overview: crwdns57788:0crwdne57788:0
+          Unit 6 lessons: crwdns57789:0crwdne57789:0
+          Alternative Ideas for Unit 6: crwdns57790:0crwdne57790:0
+          Unit 6 Challenge: crwdns57791:0crwdne57791:0
+          Share out and Submit: crwdns57792:0crwdne57792:0
+        grade3:
+          Farmer Graph Paper Programming: crwdns57793:0crwdne57793:0
+          Robot Games: crwdns57794:0crwdne57794:0
+          About My Robot: crwdns57795:0crwdne57795:0
+          Farmer Debug Relay Programming: crwdns57796:0crwdne57796:0
+          Robot Debugging: crwdns57797:0crwdne57797:0
+          Robot Farmer Loops: crwdns57798:0crwdne57798:0
+          Robot Farmer Conditionals Intro: crwdns57799:0crwdne57799:0
+          Farmer Conditional with Cards: crwdns57800:0crwdne57800:0
+          Farmer Robot Conditionals: crwdns57801:0crwdne57801:0
+          Farmer Robot Conditionals with Else: crwdns57802:0crwdne57802:0
+          Choose Your Own Adventure: crwdns57803:0crwdne57803:0
+          Unplugged Conditionals with Loops: crwdns57804:0crwdne57804:0
+          Robot Farmer Conditionals with Loops: crwdns57805:0crwdne57805:0
+          Robot Running the Farm: crwdns57806:0crwdne57806:0
+          Farmer Impacts of Computing: crwdns57807:0crwdne57807:0
+          Preview to What is Next: crwdns57808:0crwdne57808:0
+          title: crwdns57809:0crwdne57809:0
+          description_short: crwdns57810:0crwdne57810:0
+          description: crwdns57811:0crwdne57811:0
+          description_audience: crwdns57812:0crwdne57812:0
+        Test CPS PD:
+          test Unit 1 required reading: crwdns56679:0crwdne56679:0
+          test Unit 1 content module Alpha: crwdns56680:0crwdne56680:0
+          test Unit 1 content module Bravo: crwdns56681:0crwdne56681:0
+          test Unit 1 content module Charlie: crwdns56682:0crwdne56682:0
+          test Unit 1 practice module Delta: crwdns56683:0crwdne56683:0
+          test Unit 1 practice module Echo: crwdns56684:0crwdne56684:0
+          test Unit 1 practice module Foxtrot: crwdns56685:0crwdne56685:0
+        alltheplcthings:
+          title: crwdns57813:0crwdne57813:0
+          description_short: crwdns57814:0crwdne57814:0
+          description: crwdns57815:0crwdne57815:0
+          Introduction to Teachercon: crwdns57816:0crwdne57816:0
+          Lesson 1,4: crwdns57817:0crwdne57817:0
+          Lesson 1,6: crwdns57818:0crwdne57818:0
+          Lesson 1,9: crwdns57819:0crwdne57819:0
+          Lesson 1,10: crwdns57820:0crwdne57820:0
+          Lesson 1,11: crwdns57821:0crwdne57821:0
+          Lesson 2,2: crwdns57822:0crwdne57822:0
+          Lesson 2,3: crwdns57823:0crwdne57823:0
+          Lesson 2,10: crwdns57824:0crwdne57824:0
+          Group Work and Peer Learning: crwdns57825:0crwdne57825:0
+          Balancing Teachers and Tools: crwdns57826:0crwdne57826:0
+        csd3:
+          title: crwdns57827:0crwdne57827:0
+          description_short: crwdns57828:0crwdne57828:0
+          description: crwdns57829:0crwdne57829:0
+          Drawing in Game Lab: crwdns57830:0crwdne57830:0
+          Draw Loop and Randomization: crwdns57831:0crwdne57831:0
+          Variables Unplugged: crwdns57832:0crwdne57832:0
+          Variables and Animation: crwdns57833:0crwdne57833:0
+          Sprites and Properties: crwdns57834:0crwdne57834:0
+          Sprites and Images: crwdns57835:0crwdne57835:0
+          Booleans and Conditionals: crwdns57836:0crwdne57836:0
+          Conditionals and Keyboard Input: crwdns57837:0crwdne57837:0
+          Complex Conditionals: crwdns57838:0crwdne57838:0
+          "Project: Interactive Card": crwdns57839:0crwdne57839:0
+        grade2:
+          Online My New Pet Jigsaw: crwdns57840:0crwdne57840:0
+          Build A Block: crwdns57841:0crwdne57841:0
+          Caring for my new pet: crwdns57842:0crwdne57842:0
+          Pet's New Home: crwdns57843:0crwdne57843:0
+          Exploring the neighborhood: crwdns57844:0crwdne57844:0
+          At The Dog Park: crwdns57845:0crwdne57845:0
+          Build A Puppy Picture: crwdns57846:0crwdne57846:0
+          Have a name needs a do tag: crwdns57847:0crwdne57847:0
+          Getting Loopy: crwdns57848:0crwdne57848:0
+          Puppy Introduction: crwdns57849:0crwdne57849:0
+          Big Event: crwdns57850:0crwdne57850:0
+          Online Internet Safety: crwdns57851:0crwdne57851:0
+          Free Play with your Pet: crwdns57852:0crwdne57852:0
+          Flappy: crwdns57853:0crwdne57853:0
+          title: crwdns57854:0crwdne57854:0
+          description_short: crwdns57855:0crwdne57855:0
+          description: crwdns57856:0crwdne57856:0
+          description_audience: crwdns57857:0crwdne57857:0
+          Caring for My New Pet: crwdns57858:0crwdne57858:0
+          New Home for My Pet: crwdns57859:0crwdne57859:0
+          Exploring the Neighborhood: crwdns57860:0crwdne57860:0
+          Make a Dog Tag: crwdns57861:0crwdne57861:0
+          Getting Loopy with Puppy: crwdns57862:0crwdne57862:0
+          Puppy Loops: crwdns57863:0crwdne57863:0
+          Puppy Event: crwdns57864:0crwdne57864:0

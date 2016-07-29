@@ -23,8 +23,8 @@ el:
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
   welcome_back: 'Καλώς ήρθες, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Το επαγγελματικό σας πλάνο εκμάθησης
+  see_your_learning_plan: Δείτε το σχέδιο εκμάθησής σας
   submit: Υποβολή
   unsubmit: Ανακλήθηκε
   previous_page: Προηγούμενη σελίδα
@@ -106,7 +106,7 @@ el:
     student_terms: "Συμφωνώ ότι δεσμεύομαι από τους <a href='http://code.org/tos'>όρους της υπηρεσίας</a> του Code.org. Εάν είμαι κάτω των 13 ετών, επιβεβαιώνω αποστέλλοντας αυτή τη φόρμα ότι έχω την άδεια από τους γονείς ή τους νόμιμους κηδεμόνες μου να χρησιμοποιώ τις υπηρεσίες του Code.org<br/>Για χρήστες κάτω των 13, οι διευθύνσεις email δεν αποθηκεύονται με τρόπο που να μας επιτρέπει να επικοινωνήσουμε μαζί τους."
     teacher_terms: "Συμφωνώ ότι δεσμεύομαι από τους <a href='http://code.org/tos'>όρους της υπηρεσίας</a> του Code.org."
     additional_information: Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί η εγγραφή σας.
-    user_type_label: Account Type
+    user_type_label: Τύπος λογαριασμού
     user_type_teacher: Καθηγητής
     user_type_student: φοιτητής/μαθητής
   signin_form:
@@ -125,6 +125,8 @@ el:
     picture: Τώρα βρείτε την μυστική σας εικόνα
     words: Τώρα δώστε τις μυστικές σας λέξεις
     login: Σύνδεση
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Ξέχασες τον κωδικό σου;
@@ -248,6 +250,10 @@ el:
       signin: Σύνδεση
       signup: Εγγραφή
       already_registered: Έχετε εγγραφεί ήδη;
+      pair_programming: Προγραμματισμός κατά ζεύγη
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'πρόοδος του %{name}'
       progress: Η πρόοδός σου
@@ -282,6 +288,7 @@ el:
       example_with_number: 'Παράδειγμα λύσης %{solution_number}'
       submitted_on: 'Υποβλήθηκε στις %{date}'
       unsubmit: Ανακλήθηκε
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'
@@ -341,11 +348,10 @@ el:
     print_certificate: Εκτύπωση πιστοποιητικού
     announcement_title: Ανακοινώσεις
     announcement_view_all: Προβολή όλων
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message: 'Θέλετε να μας βοηθήσετε να δοκιμάσουμε μια νέα λειτουργία; Γνωρίζουμε ότι είναι σημαντικό να ενθαρρύνουμε τους μαθητές να επαναλαμβάνουν και να πειραματίζονται, έτσι θα προσθέσουμε μια λειτουργία με "αχρησιμοποίητο κώδικα" για να επιτρέψουμε στους μαθητές να εκτελέσουν τον κωδικά τους, ακόμα και όταν υπάρχουν μη προσαρτημένα μπλοκ. Καλωσορίζουμε τα σχόλιά σας πριν κυκλοφορήσουμε δημόσια την νέα λειτουργία.'
+    announcement_learn_more_button: Μάθετε περισσότερα
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: Προσθέστε το όνομά σας
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
     section_code_not_entered: Please provide current_section_code.
@@ -354,7 +360,7 @@ el:
     students_not_yours: You cannot move students from a section that does not belong to you.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
+    student_not_found: Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών.
     all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
@@ -408,8 +414,6 @@ el:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: Μάθετε περισσότερα
   slow_loading: Αυτό διαρκεί περισσότερο από ότι συνήθως...
   try_reloading: Δοκίμασε να φορτώσεις ξανά τη σελίδα
@@ -561,36 +565,6 @@ el:
     hour: 1 ώρα
     day: ημέρα
     week: εβδομάδα
-  data:
-    script:
-      name:
-        20-hour:
-          title: Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)
-          description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
-        Hour of Code:
-          title: Ώρα του Κώδικα 2013
-          description: ""
-        edit-code:
-          title: Επεξεργασία κώδικα
-          description: ""
-        events:
-          title: Συμβάντα
-          description: ""
-        builder:
-          title: Δημιουργός
-          description: ""
-        flappy:
-          title: Flappy κώδικα
-          description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
-        jigsaw:
-          title: Παζλ
-          description: ""
-        step:
-          title: Βήμα
-          description: ""
-        sample_level_builder:
-          title: Δημιουργός Δείγματος Επιπέδου
-          description: ""
   age_interstitial:
     age: Η ηλικία σου
     header: Ενημέρωση Πληροφοριών Λογαριασμού
@@ -623,6 +597,7 @@ el:
     share_title: Μοιράσου το έργο σου
     share_copy_link: 'Αντιγραφή του συνδέσμου:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Κλείσιμο
@@ -646,6 +621,7 @@ el:
     edit_project: Επεξεργαστείτε το έργο
     abuse:
       tos: "Το έργο αυτό έχει αναφερθεί για την παραβίαση των όρων παροχής υπηρεσιών του Code.org <a href='http://code.org/tos'></a> και δεν μπορεί να μοιραστεί με άλλους."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Αν νομίζετε ότι αυτό να είναι ένα λάθος, παρακαλώ <a href='https://code.org/contact'> επικοινωνήστε μαζί μας.</a>"
       go_to_code_studio: Πηγαίνετε στο Code Studio
       report_abuse_form:
@@ -677,6 +653,14 @@ el:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Αναζήτηση για ένα εικονίδιο...
@@ -696,7 +680,9 @@ el:
     content: Content
     practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

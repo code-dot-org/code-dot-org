@@ -1,75 +1,5 @@
 mt:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Stage 10
-          Artist3: Stage 11
-          Unplug7: Stage 12
-          Farmer2: Stage 13
-          Unplug8: Stage 14
-          Artist4: Stage 15
-          Unplug9: Stage 16
-          Farmer3: Stage 17
-          Unplug10: Stage 18
-          Artist5: Stage 19
-          Unplug11: Stage 20
-        Hour of Code:
-          desc: Hour of Code
-          Maze: Stage 1
-        Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: Stage 1
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Stage 1
-        Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Stage 1
-        Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
-        Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        edit-code:
-          desc: Edit Code (beta)
-          MazeEC: Stage 1
-          Applab: Stage 2
-          ArtistEC: Stage 3
-          StudioEC: Stage 4
-        events:
-          desc: Bounce (beta)
-          Bounce: Stage 1
-          Studio: Stage 2
-        builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Stage 1
-        jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
-        step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Stage 1
     game:
       name:
         Unplug1: Introduction to Computer Science
@@ -249,7 +179,7 @@ mt:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
@@ -503,6 +433,7 @@ mt:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

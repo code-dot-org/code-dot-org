@@ -1,5 +1,6 @@
 /* global define, $ */
 import Immutable from 'immutable';
+import constants from './constants';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -146,14 +147,18 @@ export function wrapNumberValidatorsForLevelBuilder() {
 }
 
 /**
- * Return a random key name from an object.
- *
- * Slightly modified from: http://stackoverflow.com/a/15106541
+ * Return a random value from an array
  */
+export function randomValue(values) {
+  let key = Math.floor(Math.random() * values.length);
+  return values[key];
+}
 
+/**
+ * Return a random key name from an object.
+ */
 export function randomKey(obj) {
-  var keys = Object.keys(obj);
-  return keys[keys.length * Math.random() << 0];
+  return randomValue(Object.keys(obj));
 }
 
 /**
@@ -552,4 +557,88 @@ export function normalize(vector) {
     x: vector.x / mag,
     y: vector.y / mag
   };
+}
+
+/**
+ * @param {number} position selected from constants.Position
+ * @param {number} containerWidth width of the element we are
+ *        positioning within
+ * @param {number} spriteWidth width of the element being positioned
+ * @returns {number} left-most point of sprite given position constant
+ */
+export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
+  switch (position) {
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
+      return -spriteWidth;
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+      return 0;
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.TOPCENTER:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.OUTBOTTOMCENTER:
+      return (containerWidth - spriteWidth) / 2;
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMRIGHT:
+      return containerWidth - spriteWidth;
+    case constants.Position.OUTTOPOUTRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
+      return containerWidth;
+  }
+}
+
+/**
+ * @param {number} position selected from constants.Position
+ * @param {number} containerHeight height of the element we are
+ *        positioning within
+ * @param {number} spriteHeight height of the element being positioned
+ * @returns {number} top-most point of sprite given position constant
+ */
+export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
+  switch (position) {
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
+      return -spriteHeight;
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.TOPCENTER:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+      return 0;
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+      return (containerHeight - spriteHeight) / 2;
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+      return containerHeight - spriteHeight;
+    case constants.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
+      return containerHeight;
+  }
 }

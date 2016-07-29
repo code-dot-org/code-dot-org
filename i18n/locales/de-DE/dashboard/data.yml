@@ -1,75 +1,5 @@
 de:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Einführung in die Informatik bis 8. Schuljahr
-          Unplug1: Teil 1
-          Maze: Teil 2
-          Unplug2: Teil 3
-          Unplug3: Teil 4
-          Artist: Teil 5
-          Unplug4: Teil 6
-          Artist2: Teil 7
-          Unplug5: Teil 8
-          Farmer: Teil 9
-          Unplug6: Teil 10
-          Artist3: Teil 11
-          Unplug7: Teil 12
-          Farmer2: Teil 13
-          Unplug8: Teil 14
-          Artist4: Teil 15
-          Unplug9: Teil 16
-          Farmer3: Teil 17
-          Unplug10: Teil 18
-          Artist5: Teil 19
-          Unplug11: Teil 20
-        Hour of Code:
-          desc: Programmierstunde
-          Maze: Teil 1
-        Edit Code:
-          desc: Code bearbeiten (beta)
-          MazeEC: Stufe 1
-        2014 Levels:
-          desc: Hüpfen (beta)
-          Bounce: Stufe 1
-        Builder Levels:
-          desc: Selbstgemachte Puzzles (beta)
-          Custom: Stufe 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Stufe 1
-        Jigsaw Levels:
-          desc: Puzzle (beta)
-          Jigsaw: Stufe 1
-        Step Levels:
-          desc: Labyrinth (Beta)
-          MazeStep: Schritt
-        edit-code:
-          desc: Code bearbeiten (beta)
-          MazeEC: Stufe 1
-          Applab: Teil 2
-          ArtistEC: Teil 3
-          StudioEC: Teil 4
-        events:
-          desc: Hüpfen (beta)
-          Bounce: Stufe 1
-          Studio: Teil 2
-        builder:
-          desc: von Benutzern erstellte Aufgaben (beta)
-          Custom: Stufe 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Stufe 1
-        jigsaw:
-          desc: Puzzle (beta)
-          Jigsaw: Stufe 1
-        step:
-          desc: Labyrinth (Beta)
-          MazeStep: Schritt
-        wordsearch:
-          desc: Buchstabierwettbewerb (beta)
-          WordSearch: Stufe 1
     game:
       name:
         Unplug1: Einführung in die Informatik
@@ -489,6 +419,7 @@ de:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

@@ -38,6 +38,11 @@ export function scrollTo(element, scrollTop, animate=400) {
 export function shouldDisplayChatTips(skinId) {
   /*eslint-disable no-fallthrough*/
   switch (skinId) {
+    // skins without avatars
+    case 'calc':
+    case 'eval':
+    case 'jigsaw':
+    // skins with licensed avatars
     case 'infinity':
     case 'anna':
     case 'elsa':

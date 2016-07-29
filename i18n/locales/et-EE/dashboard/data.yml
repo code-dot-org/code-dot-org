@@ -1,75 +1,5 @@
 et:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 sissejuhatus arvutiteaduse kursusesse
-          Unplug1: Etapp 1
-          Maze: Etapp 2
-          Unplug2: Etapp 3
-          Unplug3: Etapp 4
-          Artist: Etapp 5
-          Unplug4: Etapp 6
-          Artist2: Etapp 7
-          Unplug5: Etapp 8
-          Farmer: Etapp 9
-          Unplug6: Etapp 10
-          Artist3: Etapp 11
-          Unplug7: Etapp 12
-          Farmer2: Etapp 13
-          Unplug8: Etapp 14
-          Artist4: Etapp 15
-          Unplug9: Etapp 16
-          Farmer3: Etapp 17
-          Unplug10: Etapp 18
-          Artist5: Etapp 19
-          Unplug11: Etapp 20
-        Hour of Code:
-          desc: KoodiTund
-          Maze: Etapp 1
-        Edit Code:
-          desc: Muuda koodi (beeta)
-          MazeEC: Etapp 1
-        2014 Levels:
-          desc: Bounce (beetaversioon)
-          Bounce: Etapp 1
-        Builder Levels:
-          desc: Kasutaja loodud mõistatused (beetaversioon)
-          Custom: Etapp 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Etapp 1
-        Jigsaw Levels:
-          desc: Jigsaw (beetaversioon)
-          Jigsaw: Etapp 1
-        Step Levels:
-          desc: Labürint (beeta)
-          MazeStep: Etapi samm
-        edit-code:
-          desc: Muuda koodi (beeta)
-          MazeEC: Etapp 1
-          Applab: Etapp 2
-          ArtistEC: Etapp 3
-          StudioEC: Etapp 4
-        events:
-          desc: Bounce (beetaversioon)
-          Bounce: Etapp 1
-          Studio: Etapp 2
-        builder:
-          desc: Kasutaja loodud mõistatused (beetaversioon)
-          Custom: Etapp 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Etapp 1
-        jigsaw:
-          desc: Jigsaw (beetaversioon)
-          Jigsaw: Etapp 1
-        step:
-          desc: Labürint (beeta)
-          MazeStep: Etapi samm
-        wordsearch:
-          desc: Õigekirjavõistlus (beta)
-          WordSearch: Etapp 1
     game:
       name:
         Unplug1: Sissejuhatus arvutiõpetusse
@@ -482,6 +412,7 @@ et:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

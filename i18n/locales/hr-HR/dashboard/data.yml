@@ -1,75 +1,5 @@
 hr:
   data:
-    script:
-      name:
-        20-hour:
-          desc: Uvod u informatički tečaj za učenike nižih razreda osnovne škole
-          Unplug1: Nivo 1
-          Maze: Nivo 2
-          Unplug2: Nivo 3
-          Unplug3: Nivo 4
-          Artist: Nivo 5
-          Unplug4: Nivo 6
-          Artist2: Nivo 7
-          Unplug5: Nivo 8
-          Farmer: Nivo 9
-          Unplug6: Nivo 10
-          Artist3: Nivo 11
-          Unplug7: Nivo 12
-          Farmer2: Nivo 13
-          Unplug8: Nivo 14
-          Artist4: Nivo 15
-          Unplug9: Nivo 16
-          Farmer3: Nivo 17
-          Unplug10: Nivo 18
-          Artist5: Nivo 19
-          Unplug11: Nivo 20
-        Hour of Code:
-          desc: Hour of Code
-          Maze: Nivo 1
-        Edit Code:
-          desc: Uređivanje kôda (beta)
-          MazeEC: Nivo 1
-        2014 Levels:
-          desc: Odskok (beta)
-          Bounce: Nivo 1
-        Builder Levels:
-          desc: Korisničke mozgalice (beta)
-          Custom: Nivo 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Nivo 1
-        Jigsaw Levels:
-          desc: Slagalica (beta)
-          Jigsaw: Nivo 1
-        Step Levels:
-          desc: Labirint (beta)
-          MazeStep: Naredni korak
-        edit-code:
-          desc: Uređivanje kôda (beta)
-          MazeEC: Nivo 1
-          Applab: Nivo 2
-          ArtistEC: Nivo 3
-          StudioEC: Nivo 4
-        events:
-          desc: Odskok (beta)
-          Bounce: Nivo 1
-          Studio: Nivo 2
-        builder:
-          desc: Korisničke mozgalice (beta)
-          Custom: Nivo 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Nivo 1
-        jigsaw:
-          desc: Slagalica (beta)
-          Jigsaw: Nivo 1
-        step:
-          desc: Labirint (beta)
-          MazeStep: Naredni korak
-        wordsearch:
-          desc: Slovkanje (beta)
-          WordSearch: Nivo 1
     game:
       name:
         Unplug1: Uvod u računalstvo
@@ -487,6 +417,7 @@ hr:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
