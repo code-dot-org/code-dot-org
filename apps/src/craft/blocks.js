@@ -132,6 +132,10 @@ exports.install = function (blockly, blockInstallOptions) {
   var allDropdownBlocks = inventoryBlocksEmpty ?
       allBlocks : craftBlockOptions.inventoryBlocks;
 
+  var allOnTouchedBlocks = [].concat([
+    'sheep'
+  ]).concat(allBlocks);
+
   blockly.Blocks.craft_moveForward = {
     helpUrl: '',
     init: function () {
@@ -169,6 +173,30 @@ exports.install = function (blockly, blockInstallOptions) {
     var dir = this.getTitleValue('DIR');
     var methodCall = dir === "left" ? "turnLeft" : "turnRight";
     return methodCall + '(\'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.craft_turnEntity = {
+    // Block for turning left or right.
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(this.DIRECTIONS), 'DIR');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Blocks.craft_turnEntity.DIRECTIONS =
+      [['turn entity left' + ' \u21BA', 'left'],
+        ['turn entity right' + ' \u21BB', 'right']];
+
+  // TODO(bjordan): fix, not turning
+  blockly.Generator.get('JavaScript').craft_turnEntity = function () {
+    // Generate JavaScript for turning left or right.
+    var dir = this.getTitleValue('DIR');
+    var methodCall = dir === "left" ? "turnEntity" : "turnEntity";
+    return methodCall + '(block, \''+dir+'\', \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.craft_destroyBlock = {
@@ -260,7 +288,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_onTouched = {
     helpUrl: '',
     init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.ifBlockOptions || allDropdownBlocks);
+      var dropdownOptions = keysToDropdownOptions(allOnTouchedBlocks);
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
       this.setHSV(140, 1.00, 0.74);
@@ -281,20 +309,32 @@ exports.install = function (blockly, blockInstallOptions) {
     '}, \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_destroyEntity = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel('destroy it'));
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
+  function simpleEntityBlock(simpleFunctionName, blockText) {
+    blockly.Blocks[`craft_${simpleFunctionName}`] = {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldLabel(blockText));
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+      }
+    };
 
-  blockly.Generator.get('JavaScript').craft_destroyEntity = function () {
-    return 'destroyEntity(block, \'block_id_' + this.id + '\');\n';
-  };
+    blockly.Generator.get('JavaScript')[`craft_${simpleFunctionName}`] = function () {
+      return `${simpleFunctionName}(block, 'block_id_${this.id}');\n`;
+    };
+  }
+
+  simpleEntityBlock('destroyEntity', 'destroy it');
+  simpleEntityBlock('flashEntity', 'flash it');
+  simpleEntityBlock('moveEntityForward', 'move it forward');
+  simpleEntityBlock('moveEntityTowardPlayer', 'move toward player');
+  simpleEntityBlock('moveEntityAwayFromPlayer', 'move away from player');
+  simpleEntityBlock('turnEntityRight', 'turn it right');
+  simpleEntityBlock('turnEntityLeft', 'turn it left');
+  simpleEntityBlock('turnEntityRandom', 'turn it random');
+  simpleEntityBlock('turnEntityToPlayer', 'turn toward player');
 
   blockly.Blocks.craft_moveEntityNorth = {
     helpUrl: '',

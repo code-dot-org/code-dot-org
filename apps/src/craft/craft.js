@@ -688,6 +688,33 @@ Craft.executeUserCode = function () {
     moveEntityWest: function (blockReference, blockID) {
       appCodeOrgAPI.moveEntityWest(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },
+    flashEntity: function (blockReference, blockID) {
+      appCodeOrgAPI.flashEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    moveEntityForward: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntityForward(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    moveEntityTowardPlayer: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntityTowardPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    moveEntityAwayFromPlayer: function (blockReference, blockID) {
+      appCodeOrgAPI.moveEntityAwayFromPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    turnEntity: function (blockReference, direction, blockID) {
+      appCodeOrgAPI.turnEntity(studioApp.highlight.bind(studioApp, blockID), blockReference, direction);
+    },
+    turnEntityRight: function (blockReference, blockID) {
+      appCodeOrgAPI.turnEntityRight(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    turnEntityLeft: function (blockReference, blockID) {
+      appCodeOrgAPI.turnEntityLeft(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    turnEntityRandom: function (blockReference, blockID) {
+      appCodeOrgAPI.turnEntityRandom(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
+    turnEntityToPlayer: function (blockReference, blockID) {
+      appCodeOrgAPI.turnEntityToPlayer(studioApp.highlight.bind(studioApp, blockID), blockReference);
+    },
     turnLeft: function (blockID) {
       appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");
     },

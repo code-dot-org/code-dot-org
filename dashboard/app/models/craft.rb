@@ -285,6 +285,15 @@ class Craft < Blockly
   <block type='craft_moveEntitySouth'></block>
   <block type='craft_moveEntityEast'></block>
   <block type='craft_moveEntityWest'></block>
+  <block type='craft_flashEntity'></block>
+  <block type='craft_moveEntityForward'></block>
+  <block type='craft_moveEntityTowardPlayer'></block>
+  <block type='craft_moveEntityAwayFromPlayer'></block>
+  <block type='craft_turnEntity'></block>
+  <block type='craft_turnEntityRight'></block>
+  <block type='craft_turnEntityLeft'></block>
+  <block type='craft_turnEntityRandom'></block>
+  <block type='craft_turnEntityToPlayer'></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
