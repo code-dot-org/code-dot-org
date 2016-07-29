@@ -9,6 +9,7 @@
 #  created_at    :datetime
 #  updated_at    :datetime
 #  flex_category :string(255)
+#  lockable      :boolean
 #
 
 # Ordered partitioning of script levels within a script
