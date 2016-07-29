@@ -197,6 +197,11 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block, opt_showHidden) {
   if (!block) {
     return '';
   }
+  if (block.skipGeneration) {
+    // Clear the flag, so it doesn't persist to future serializations.
+    block.skipGeneration = false;
+    return '';
+  }
   var showHidden = opt_showHidden == undefined ? true : opt_showHidden;
   if (block.disabled || (!showHidden && !block.isUserVisible())) {
     // Skip past this block if it is disabled or hidden.
