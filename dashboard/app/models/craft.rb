@@ -278,6 +278,7 @@ class Craft < Blockly
 </category>
 <category name="Events">
   <block type="craft_onTouched"></block>
+  <block type="craft_onPlayerMoved"></block>
   <block type='craft_playSound'></block>
   <block type='craft_explodeEntity'></block>
   <block type='craft_destroyEntity'></block>

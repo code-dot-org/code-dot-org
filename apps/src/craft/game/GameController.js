@@ -322,7 +322,7 @@ class GameController {
   moveEntityToPlayer(commandQueueItem, entity, isToward) {
     const aStar = new AStarPathFinding(this.levelModel);
     const entityPosition = this.levelModel.entityToPosition(entity);
-    
+
     const path = aStar.findPath([entityPosition.x, entityPosition.y], this.levelModel.player.position);
 
     // if there is a valid path to the player, turn to face the block in the first step.
@@ -331,7 +331,7 @@ class GameController {
       let targetPosition = isToward ? [firstNode.x, firstNode.y] : this.levelModel.getEntityRunAwayPosition(entity, this.levelModel.getFaceDirectionTo([entityPosition.x, entityPosition.y], [firstNode.x, firstNode.y]));
 
       // if the intent is to move away from the player, there may not be a valid position to move to.
-      if (targetPosition) { 
+      if (targetPosition) {
         this.moveEntityTo(entity, targetPosition);
       }
     }
@@ -424,7 +424,7 @@ class GameController {
     if (!this.levelModel.canMoveForward()) {
       this.levelView.playBumpAnimation(player.position, player.facing, false);
       commandQueueItem.succeeded();
-      
+
       // The world edge was bumped, don't invoke events.
       const forwardPos = this.levelModel.getMoveForwardPosition();
       if (this.levelModel.inBounds(forwardPos[0], forwardPos[1])) {
@@ -432,6 +432,16 @@ class GameController {
       }
       return;
     }
+
+    this.levelModel.actionPlane.forEach((block) => {
+      if (block.isEmpty) {
+        return;
+      }
+
+      this.events.forEach(e => {
+        e({ eventType: 'playerMoved', blockReference: block, blockType: block.blockType });
+      });
+    });
 
     this.levelModel.moveDirection(direction);
     const groundType = this.levelModel.groundPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;

@@ -1005,7 +1005,7 @@ export default class LevelView {
   playScaledSpeed(animationManager, name) {
     var animation = animationManager.getAnimation(name);
 
-    // if the animation doesn't exist, do nothing.  
+    // if the animation doesn't exist, do nothing.
     if (!animation) {
       return;
     }

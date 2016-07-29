@@ -670,6 +670,19 @@ Craft.executeUserCode = function () {
               callback(event.blockReference);
           });
     },
+    onPlayerMoved: function (type, callback, blockID) {
+      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
+          function (event) {
+              if (event.eventType !== 'playerMoved') {
+                return;
+              }
+              if (event.blockType !== type) {
+                return;
+              }
+
+              callback(event.blockReference);
+          });
+    },
     destroyEntity: function (blockReference, blockID) {
       appCodeOrgAPI.destroyEntity(studioApp.highlight.bind(studioApp, blockID), blockReference);
     },

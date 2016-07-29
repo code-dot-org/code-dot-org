@@ -309,6 +309,30 @@ exports.install = function (blockly, blockInstallOptions) {
     '}, \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.craft_onPlayerMoved = {
+    helpUrl: '',
+    init: function () {
+      var dropdownOptions = keysToDropdownOptions(allOnTouchedBlocks);
+      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      dropdown.setValue(dropdownOptions[0][1]);
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle('on player moved')
+          .appendTitle(dropdown, 'TYPE');
+      this.appendStatementInput('DO');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_onPlayerMoved = function () {
+    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
+    var blockType = this.getTitleValue('TYPE');
+    return 'onPlayerMoved("' + blockType + '", function(block) {\n' +
+      innerCode +
+    '}, \'block_id_' + this.id + '\');\n';
+  };
+
   function simpleEntityBlock(simpleFunctionName, blockText) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
