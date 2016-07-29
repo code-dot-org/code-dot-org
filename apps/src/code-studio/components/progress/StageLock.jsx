@@ -81,7 +81,7 @@ const StageLock = React.createClass({
         <StageLockDialog
           isOpen={this.state.dialogIsOpen}
           handleClose={this.closeDialog}
-          lockStatus={fakeData}
+          initialLockStatus={fakeData}
         />
       </div>
     );
