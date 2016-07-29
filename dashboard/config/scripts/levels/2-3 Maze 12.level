@@ -28,8 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "7/26: Added limit on move forwards and removed 5 starting move forwards - Ryan",

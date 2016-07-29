@@ -72,21 +72,27 @@ level 'U4 - Making Data Visualizations - Line Chart'
 level 'U4 - Making Data Visualizations - Bar Chart'
 level 'U4 - Making Data Visualizations - Edit Chart Appearance'
 level 'U4 - Making Data Visualizations - Free Play'
+assessment 'U2L10 FR describe what you made from lesson prompt'
 
 stage 'Discover a Data Story'
 level 'v2 U2L12 Student Lesson Introduction'
+assessment 'U2L12 FR reflection on collaboration'
 
 stage 'Cleaning Data'
 level 'v2 U2L13 Student Lesson Introduction'
 level 'U4 - Cleaning Data - Activity Guide'
 level 'U4 Cleaning Data Activity Guide Pt2'
 level 'U4 Cleaning Data Activity Guide Pt3'
+assessment 'U2L13 Cleaning Data MC'
+assessment 'U2L13 FR Reflection data analysis objective'
+
 
 stage 'Creating Summary Tables'
 level 'v2 U2L14 Student Lesson Introduction'
 level 'U4L08v2 Making Pivot Tables'
 level 'U4L08v2 Making Pivot Tables Part 2'
 level 'U4L08v2 Making Pivot Tables Part 3'
+assessment 'U2L14 Summary Tables MC'
 
 stage 'Practice PT - Tell a Data Story'
 level 'v2 U2L15 Student Lesson Introduction'

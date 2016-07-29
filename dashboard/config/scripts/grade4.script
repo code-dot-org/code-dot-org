@@ -46,44 +46,6 @@ level 'grade4_frozen_nested_loop_diamonds1'
 level 'grade4_frozen_nested_loop_diamonds2'
 level 'grade4_frozen_nested_loop_diamonds3'
 
-
-
-stage 'Bee: Conditionals'
-level 'grade4_bee_conditionals_ifvid'
-level 'grade4_bee_conditionals_quantum1'
-level 'grade4_bee_conditionals_quantum2'
-level 'grade4_bee_conditionals_new1a'
-#level 'grade4_bee_conditionals_new1'
-level 'grade4_bee_conditionals_new2a'
-level 'grade4_bee_conditionals_new2'
-level 'grade4_bee_conditionals_quantum3'
-level 'grade4_bee_conditionals_ifelsevid'
-level 'grade4_bee_conditionals_quantum4'
-level 'grade4_bee_conditionals_quantum5'
-level 'grade4_bee_conditionals_new3a'
-level 'grade4_bee_conditionals_new3b'
-level 'grade4_bee_conditionals_new3c'
-
-
-stage 'Unplugged: Conditionals with Cards'
-level 'Conditionals'
-assessment '2-3 Conditionals Multi 1'
-
-stage 'Conditionals'
-#If,ElseIf,Else,etc, nested
-level 'comingSoon'
-
-stage 'Unplugged: Decision Trees (New)'
-level 'comingSoon'
-
-stage 'Choose Your Own Adventure'
-level 'comingSoon'
-
-stage 'Project #1'
-level 'Test Play Lab'
-
-
-
 stage 'Songwriting'
 level 'SongwritingParameters'
 assessment '4-5 Songwriting Multi 1'
@@ -106,22 +68,46 @@ level 'grade4_frozen_functions3'
 level 'grade4_frozen_functions4'
 level 'grade4_frozen_freeplay'
 
+
+
+
+stage 'Unplugged: Conditionals with Cards'
+level 'Conditionals'
+assessment '2-3 Conditionals Multi 1'
+
+
+stage 'Project #1: Artist (Nested Loops, Functions)'
+level 'grade4_playlab_freeplay'
+
+
+
+
+
 stage 'Bee: Functions'
 level 'grade4_bee_functions_video'
+level 'grade4_partner_lightbot_link'
 
 
 
-stage 'Mixed Review #2 (Conditionals, Events, Functions)'
 
 
 
-stage 'Mixed Review #3 (Deduce the Concept)'
 
+stage 'New Playlab Behaviors and Events Review'
+level 'grade5_starwars_events_video'
+video_key_for_next_level 'starwars_blocks_events'
+level 'blockly:Studio:hoc2015_blockly_7'
+level 'blockly:Studio:hoc2015_blockly_8'
+level 'blockly:Studio:hoc2015_blockly_9'
+level 'blockly:Studio:hoc2015_blockly_10'
+level 'blockly:Studio:hoc2015_blockly_11'
+level 'blockly:Studio:hoc2015_blockly_12'
+level 'blockly:Studio:hoc2015_blockly_13'
+level 'blockly:Studio:hoc2015_blockly_14'
 
-
-stage 'Project #2'
-level 'comingSoon'
-
+stage 'Project 2: PlayLab Game (Events, Conditionals, Functions)'
+video_key_for_next_level 'starwars_blocks_congrats'
+level 'blockly:Studio:hoc2015_blockly_15'
 
 stage 'Internet'
 level 'Internet'
@@ -145,3 +131,33 @@ stage 'Artist Ramp Up (including Nested Loops)'
 stage 'Nested Loops'
 stage 'Decision Trees'
 stage 'PlayLab: Conditionals'
+stage 'Mixed Review #2 (Conditionals, Events, Functions)'
+stage 'Mixed Review #3 (Deduce the Concept)'
+stage 'Conditionals'
+stage 'Unplugged: Decision Trees (New)'
+stage 'Choose Your Own Adventure'
+stage 'Project #2'
+stage 'Project #1'
+
+
+
+
+#Removed Puzzles
+#level 'grade4_bee_conditionals_new1'
+
+
+#MOVE TO GRADE 3
+stage 'Bee: Conditionals'
+level 'grade4_bee_conditionals_ifvid'
+level 'grade4_bee_conditionals_quantum1'
+level 'grade4_bee_conditionals_quantum2'
+level 'grade4_bee_conditionals_new1a'
+level 'grade4_bee_conditionals_new2a'
+level 'grade4_bee_conditionals_new2'
+level 'grade4_bee_conditionals_quantum3'
+level 'grade4_bee_conditionals_ifelsevid'
+level 'grade4_bee_conditionals_quantum4'
+level 'grade4_bee_conditionals_quantum5'
+level 'grade4_bee_conditionals_new3a'
+level 'grade4_bee_conditionals_new3b'
+level 'grade4_bee_conditionals_new3c'
