@@ -8,6 +8,7 @@ hidden 'true'
 stage 'Design Mode'
 level 'CSDU4 - Design Mode - 15' # Intro design mode
 level 'CSDU4 - Design Mode - 4' # Change id, add second button
+level 'CSD U4 - Design Mode Text' # Add text header
 level 'CSDU4 - Design Mode - 21' # Upload image
 level 'CSDU4 - Design Mode - 29' # Dropdown
 level 'CSDU4 - Design Mode - 18' # Debugging depth (rework)

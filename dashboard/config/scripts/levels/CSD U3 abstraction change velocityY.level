@@ -20,7 +20,6 @@
     },
     "show_d_pad": "true",
     "edit_code": true,
-    "contained_level_names": null,
     "embed": "false",
     "start_blocks": "var sprite = createSprite(200, 350);\r\nsprite.setAnimation(\"dragonfly\");\r\n// initialize your sprite's velocity here\r\n\r\nfunction draw() {\r\n  // change your sprite's velocity here\r\n  \r\n  background(color(150,50,250));\r\n  drawSprites();\r\n}\r\n",
     "is_k1": "false",
@@ -49,7 +48,8 @@
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\"dragonfly\"],\r\n  \"propsByKey\": {\r\n    \"dragonfly\": {\r\n      \"name\": \"dragonfly\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\r\n      \"frameSize\": {\"x\":150, \"y\": 91},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
-    "markdown_instructions": "# Moving Faster\r\n\r\nJust as you can change `velocityX` inside the draw loop, you can change `velocityY` to make your sprite move faster up or down.  Can you add code into the draw loop to make the dragonfly go faster?\r\n\r\n# Do This\r\n\r\nUse the `velocityY` property to make the dragonfly fly faster and faster up the screen."
+    "markdown_instructions": "# Moving Faster\r\n\r\nJust as you can change `velocityX` inside the draw loop, you can change `velocityY` to make your sprite move faster up or down.  Can you add code into the draw loop to make the dragonfly go faster?\r\n\r\n# Do This\r\n\r\nUse the `velocityY` property to make the dragonfly fly faster and faster up the screen.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
