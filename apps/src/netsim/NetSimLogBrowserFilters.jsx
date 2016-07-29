@@ -162,10 +162,10 @@ const SentByDropdown = React.createClass({
         {_.uniq(this.props.logRows.map(row => row.sourceUserName))
           .sort((a, b) => a.localeCompare(b))
           .map(name => (
-          <option value={`by ${name}`} key={name}>
-            {this.props.i18n.logBrowserHeader_sentByName({name})}
-          </option>
-        ))}
+            <option value={`by ${name}`} key={name}>
+              {this.props.i18n.logBrowserHeader_sentByName({name})}
+            </option>
+          ))}
       </select>
     );
   }
