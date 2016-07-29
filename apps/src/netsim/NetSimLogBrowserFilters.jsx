@@ -9,6 +9,11 @@ const style = {
     marginBottom: 12
   },
   dropdown: {
+    margin: '5px 5px 0 5px',
+    padding: 0,
+    height: 22,
+    lineHeight: 20,
+    verticalAlign: 'middle',
     fontSize: 14
   }
 };

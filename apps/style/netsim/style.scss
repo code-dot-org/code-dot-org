@@ -145,19 +145,6 @@ $wide-column-width: 121px;
   }
 
   .new-router-log-modal {
-    select {
-      margin: 5px 5px 0 5px;
-      padding: 0;
-      height: 22px;
-      line-height: 20px;
-      font-size: smaller;
-      vertical-align: middle;
-    }
-
-    table {
-      margin-bottom: 0;
-    }
-
     th.sort {
       cursor: pointer;
       &::before {
@@ -174,21 +161,6 @@ $wide-column-width: 121px;
       &.sort-desc::before {
         content: '\F0DD';
       }
-    }
-
-    td {
-      color: $charcoal;
-      font-family: monospace;
-      white-space: pre-wrap;
-      // Make sure table text can be selected and copied
-      @include user_select(text);
-    }
-
-    .log-browser-limit-message {
-      padding: 0.5em;
-      text-align: center;
-      font-style: italic;
-      color: $charcoal;
     }
   }
 

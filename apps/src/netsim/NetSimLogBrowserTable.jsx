@@ -3,16 +3,28 @@ import React from 'react';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';
 import moment from 'moment';
+import color from '../color';
 import Packet from './Packet';
 
-const style = {
+let style = {
   nowrap: {
     whiteSpace: 'nowrap'
   },
   prewrap: {
     whiteSpace: 'pre-wrap'
+  },
+  table: {
+    marginBottom: 0
+  },
+  td: {
+    color: color.charcoal,
+    fontFamily: 'monospace',
+    // Make sure table text can be selected and copied
+    userSelect: 'text'
   }
 };
+style.nowrapTd = Object.assign({}, style.td, style.nowrap);
+style.prewrapTd = Object.assign({}, style.td, style.prewrap);
 
 /**
  * Table of log rows displayed in the Log Browser modal.
@@ -80,7 +92,7 @@ const NetSimLogBrowserTable = React.createClass({
         cell: {
           property: 'timestamp',
           format: timeFormatter,
-          props: {style: style.nowrap}
+          props: {style: style.nowrapTd}
         }
       },
       {
@@ -89,7 +101,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'logged-by', props: {style: style.nowrap}}
+        cell: {property: 'logged-by', props: {style: style.nowrapTd}}
       },
       {
         header: {
@@ -97,7 +109,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'status', props: {style: style.nowrap}}
+        cell: {property: 'status', props: {style: style.nowrapTd}}
       },
     ];
 
@@ -108,7 +120,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'from-address', props: {style: style.nowrap}}
+        cell: {property: 'from-address', props: {style: style.nowrapTd}}
       });
     }
 
@@ -119,7 +131,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'to-address', props: {style: style.nowrap}}
+        cell: {property: 'to-address', props: {style: style.nowrapTd}}
       });
     }
 
@@ -130,7 +142,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'packet-info', props: {style: style.nowrap}}
+        cell: {property: 'packet-info', props: {style: style.nowrapTd}}
       });
     }
 
@@ -140,7 +152,7 @@ const NetSimLogBrowserTable = React.createClass({
         transforms: [sortable],
         props: {style: style.nowrap}
       },
-      cell: {property: 'message', props: {style: style.prewrap}}
+      cell: {property: 'message', props: {style: style.prewrapTd}}
     });
 
     const {logRows} = this.props;
@@ -155,7 +167,7 @@ const NetSimLogBrowserTable = React.createClass({
     }
 
     return (
-      <Table.Provider columns={columns}>
+      <Table.Provider columns={columns} style={style.table}>
         <Table.Header/>
         <Table.Body
           rows={sortedRows}
