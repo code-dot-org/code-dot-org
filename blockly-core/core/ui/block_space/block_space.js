@@ -173,9 +173,14 @@ Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
  * the given XML. Used to display single blocks in feedback dialogs.
  * @param {!Element} container HTML Element into which to render
  * @param {!Element} xml XML block
+ * @param {Object} opt_options optional options
+ * @param {boolean} opt_options.noScrolling whether or not to disable
+ *        scrolling
  * @returns {Blockly.BlockSpace}
  */
-Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml) {
+Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml, opt_options) {
+  opt_options = opt_options || {};
+
   var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, function () {
     var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
     if (!metrics) {
@@ -189,6 +194,12 @@ Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml) {
   }, true, true);
 
   var blockSpace = blockSpaceEditor.blockSpace;
+
+  if (opt_options.noScrolling) {
+    blockSpace.scrollbarPair.dispose();
+    blockSpace.scrollbarPair = null;
+  }
+
   Blockly.Xml.domToBlockSpace(blockSpace, xml);
   return blockSpace;
 };
