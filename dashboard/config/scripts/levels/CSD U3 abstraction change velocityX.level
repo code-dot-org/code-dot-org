@@ -46,8 +46,8 @@
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "markdown_instructions": "# Moving Faster\r\n\r\nOne great thing about `velocityX` and `velocityY` is that they let you change the speed of your sprite without worrying about where it is.  You can make your sprite go faster or slower by changing `velocityX` and `velocityY` inside the draw loop.\r\n\r\n# Do This\r\n\r\nMake the fish get faster by adding `sprite.velocityX = sprite.velocityX - 1` inside the draw loop.",
-    "contained_level_names": null,
-    "palette_category_at_start": "sprites"
+    "palette_category_at_start": "sprites",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

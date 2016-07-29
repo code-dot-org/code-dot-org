@@ -33,7 +33,10 @@ export default function (state = initialState, action) {
     case CHANGE_SCREEN:
       return state.set('currentScreenId', action.screenId);
     case TOGGLE_IMPORT_SCREEN:
-      return state.set('isImportingScreen', action.importing);
+      return state.merge({
+        isImportingScreen: action.importing,
+        importProject: initialState.importProject,
+      });
     case IMPORT.IMPORT_PROJECT.START_FETCHING:
       return state.setIn(['importProject', 'isFetchingProject'], true);
     case IMPORT.IMPORT_PROJECT.FINISHED_FETCHING:
