@@ -38,11 +38,15 @@ const NetSimLogBrowser = React.createClass({
   },
 
   dialogTitle() {
-    const {i18n, isAllRouterLogMode, currentTrafficFilter} = this.props;
-    var header = isAllRouterLogMode ?
+    const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} = this.props;
+    if (teacherView) {
+      return i18n.logBrowserHeader_teacherView();
+    }
+
+    let header = isAllRouterLogMode ?
       i18n.logBrowserHeader_all() : i18n.logBrowserHeader_mine();
 
-    var match = /^(from|to|with) ([\d\.]+)/.exec(currentTrafficFilter);
+    const match = /^(from|to|with) ([\d\.]+)/.exec(currentTrafficFilter);
     if (match) {
       if ('from' === match[1]) {
         header += i18n.logBrowserHeader_trafficFromAddress({
@@ -129,7 +133,8 @@ if (BUILD_STYLEGUIDE) {
       logBrowserHeader_trafficToAddress: ({address}) => ` - Traffic To ${address}`,
       logBrowserHeader_trafficToAndFromAddress: ({address}) => ` - Traffic To and From ${address}`,
       logBrowserHeader_sentByAnyone: () => 'sent by anyone',
-      logBrowserHeader_sentByName: ({name}) => `sent by ${name}`
+      logBrowserHeader_sentByName: ({name}) => `sent by ${name}`,
+      logBrowserHeader_teacherView: () => 'Teacher View'
     };
 
     const simplePacket = [];
