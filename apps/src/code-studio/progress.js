@@ -19,6 +19,8 @@ import {
   authorizeLockable
 } from './progressRedux';
 
+import { setSections } from './teacherPanelRedux';
+
 var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
@@ -106,7 +108,14 @@ function renderTeacherPanel(store) {
     '/dashboardapi/section_progress',
     { data: { user_id: clientState.queryParams('user_id') } }
   ).done(data => {
-    console.log(data);
+    let sectionInfo = {};
+    data.forEach(section => {
+      sectionInfo[section.section_id] = {
+        name: section.section_name
+      };
+    });
+
+    store.dispatch(setSections(sectionInfo));
   });
 
   ReactDOM.render(
