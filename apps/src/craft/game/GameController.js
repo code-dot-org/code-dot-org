@@ -424,8 +424,12 @@ class GameController {
     if (!this.levelModel.canMoveForward()) {
       this.levelView.playBumpAnimation(player.position, player.facing, false);
       commandQueueItem.succeeded();
-      // TODO(bjordan): handle facing edge of map
-      this.events.forEach(e => e({ eventType: 'blockTouched', blockReference: this.levelModel.getForwardBlock(), blockType: this.levelModel.getForwardBlockType() }));
+      
+      // The world edge was bumped, don't invoke events.
+      const forwardPos = this.levelModel.getMoveForwardPosition();
+      if (this.levelModel.inBounds(forwardPos[0], forwardPos[1])) {
+        this.events.forEach(e => e({ eventType: 'blockTouched', blockReference: this.levelModel.getForwardBlock(), blockType: this.levelModel.getForwardBlockType() }));
+      }
       return;
     }
 

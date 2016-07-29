@@ -16,7 +16,7 @@ export default class LevelBlock {
     this.isTransparent = false;
 
     // facing direction to hold state of moving entities on action plane.
-    this.facing = FacingDirection.Down;
+    this.facing = FacingDirection.Left;
 
     if (blockType === "") {
       this.isWalkable = true;
