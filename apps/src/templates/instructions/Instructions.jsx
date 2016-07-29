@@ -125,7 +125,7 @@ var Instructions = React.createClass({
           <AniGifPreview/>
         }
 
-        {this.props.acapelaEnabled &&
+        {this.props.acapelaEnabled && this.props.acapelaSrc &&
           <div>
             <a
               className={classnames({
