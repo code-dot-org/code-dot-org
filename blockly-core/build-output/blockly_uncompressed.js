@@ -11275,7 +11275,7 @@ Blockly.BlockSvgFramed = function(block) {
 goog.inherits(Blockly.BlockSvgFramed, Blockly.BlockSvg);
 Blockly.BlockSvgFramed.prototype.initChildren = function() {
   var clip = Blockly.createSvgElement("clipPath", {id:"frameClip" + this.block_.id}, this.svgGroup_);
-  this.frameClipRect_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), height:FRAME_HEADER_HEIGHT, width:"100%"}, clip);
+  this.frameClipRect_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), height:FRAME_HEADER_HEIGHT}, clip);
   this.frameBase_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#dddddd", stroke:"#aaaaaa", rx:15, ry:15}, this.svgGroup_);
   this.frameHeader_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#aaaaaa", rx:15, ry:15, "clip-path":"url(#frameClip" + this.block_.id + ")"}, this.svgGroup_);
   this.frameText_ = Blockly.createSvgElement("text", {"class":"blocklyText", style:"font-size: 12pt"}, this.svgGroup_);
@@ -11290,6 +11290,7 @@ Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
   var groupRect = this.svgPath_.getBoundingClientRect();
   var width = groupRect.width + 2 * FRAME_MARGIN_SIDE;
   var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
+  this.frameClipRect_.setAttribute("width", width);
   this.frameBase_.setAttribute("width", width);
   this.frameBase_.setAttribute("height", height);
   this.frameHeader_.setAttribute("width", width);
