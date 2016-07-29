@@ -66,13 +66,41 @@ const StageLockDialog = React.createClass({
   propTypes: {
     isOpen: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
-    lockStatus: React.PropTypes.arrayOf(
+    initialLockStatus: React.PropTypes.arrayOf(
       React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
         lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ).isRequired
   },
+
+  getInitialState() {
+    return {
+      lockStatus: this.props.initialLockStatus
+    };
+  },
+
+  setAllLockStatus(lockStatus) {
+    this.setState({
+      lockStatus: this.state.lockStatus.map(item => ({
+        name: item.name,
+        lockStatus
+      }))
+    });
+  },
+
+  allowEditing() {
+    this.setAllLockStatus(LockStatus.Editable);
+  },
+
+  lockStage() {
+    this.setAllLockStatus(LockStatus.Locked);
+  },
+
+  showAnswers() {
+    this.setAllLockStatus(LockStatus.Readonly);
+  },
+
   render() {
     // TODO - i18n
     return (
@@ -87,25 +115,45 @@ const StageLockDialog = React.createClass({
               <tr>
                 <td>1. "Allow editing" while students should be taking the assessment.</td>
                 <td>
-                  <button style={progressStyles.orangeButton}>Allow editing</button>
+                  <button
+                    style={progressStyles.orangeButton}
+                    onClick={this.allowEditing}
+                  >
+                    Allow editing
+                  </button>
                 </td>
               </tr>
               <tr>
                 <td>2. Once time is up, "Lock stage" to hide questions.</td>
                 <td>
-                  <button style={progressStyles.orangeButton}>Lock stage</button>
+                  <button
+                    style={progressStyles.orangeButton}
+                    onClick={this.lockStage}
+                  >
+                    Lock stage
+                  </button>
                 </td>
               </tr>
               <tr>
                 <td>3. "Show answers" to put the assessment into a read-only mode.</td>
                 <td>
-                  <button style={progressStyles.orangeButton}>Show answers</button>
+                  <button
+                    style={progressStyles.orangeButton}
+                    onClick={this.showAnswers}
+                  >
+                    Show answers
+                  </button>
                 </td>
               </tr>
               <tr>
                 <td>4. "Re-lock stage" to prevent sharing of answers with other classes/schools.</td>
                 <td>
-                  <button style={progressStyles.orangeButton}>Re-lock stage</button>
+                  <button
+                    style={progressStyles.orangeButton}
+                    onClick={this.lockStage}
+                  >
+                    Re-lock stage
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -122,7 +170,7 @@ const StageLockDialog = React.createClass({
                 <th style={styles.headerRow}>Editable</th>
                 <th style={styles.headerRow}>Answers visible (read-only)</th>
               </tr>
-              {this.props.lockStatus.map(({name, lockStatus}, index) => (
+              {this.state.lockStatus.map(({name, lockStatus}, index) => (
                 <tr key={index}>
                   <td style={styles.tableCell}>{name}</td>
                   <td
