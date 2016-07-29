@@ -57,6 +57,68 @@ describe('GameLabSprite', function () {
       expect(sprite2.x).to.equal(200);
       expect(sprite2.y).to.equal(200);
     });
+  });
 
+  describe('width, height', function () {
+    it('defaults to 100 by 100 when no width or height are set for non-animated sprites', function () {
+      var sprite1 = createSprite(200, 200);
+      expect(sprite1.width).to.equal(100);
+      expect(sprite1.height).to.equal(100);
+    });
+
+    it('gets and sets the same value for non-animated sprites', function () {
+      var sprite1 = createSprite(200, 200);
+      sprite1.width = 200;
+      sprite1.height = 450;
+      expect(sprite1.width).to.equal(200);
+      expect(sprite1.height).to.equal(450);
+    });
+
+    it('gets unscaled width and height for non-animated sprites', function () {
+      var sprite1 = createSprite(200, 200);
+      sprite1.width = 200;
+      sprite1.height = 450;
+      sprite1.scale = 2;
+      expect(sprite1.width).to.equal(200);
+      expect(sprite1.height).to.equal(450);
+      expect(sprite1.scale).to.equal(2);
+      sprite1.scale = 0.5;
+      expect(sprite1.width).to.equal(200);
+      expect(sprite1.height).to.equal(450);
+      expect(sprite1.scale).to.equal(0.5);
+      sprite1.width = 100;
+      expect(sprite1.width).to.equal(100);
+    });
+
+  });
+
+  describe('getScaledWidth, getScaledHeight', function () {
+    it('returns width and height when no scale is set for non-animated sprites', function () {
+      var sprite1 = createSprite(200, 200);
+      expect(sprite1.getScaledWidth()).to.equal(100);
+      expect(sprite1.getScaledHeight()).to.equal(100);
+      sprite1.width = 200;
+      sprite1.height = 400;
+      expect(sprite1.getScaledWidth()).to.equal(200);
+      expect(sprite1.getScaledHeight()).to.equal(400);
+    });
+
+    it('gets scaled values for non-animated sprites', function () {
+      var sprite1 = createSprite(200, 200);
+      sprite1.width = 200;
+      sprite1.height = 450;
+      sprite1.scale = 2;
+      expect(sprite1.getScaledWidth()).to.equal(400);
+      expect(sprite1.getScaledHeight()).to.equal(900);
+      expect(sprite1.scale).to.equal(2);
+      sprite1.scale = 0.5;
+      expect(sprite1.getScaledWidth()).to.equal(100);
+      expect(sprite1.getScaledHeight()).to.equal(225);
+      expect(sprite1.width).to.equal(200);
+      expect(sprite1.height).to.equal(450);
+      expect(sprite1.scale).to.equal(0.5);
+      sprite1.width = 100;
+      expect(sprite1.getScaledWidth()).to.equal(50);
+    });
   });
 });
