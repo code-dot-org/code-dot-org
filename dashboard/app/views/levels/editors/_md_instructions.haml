@@ -1,6 +1,6 @@
 .field
   = f.label :instructions
-  = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+  = f.text_area :instructions, placeholder: 'Instructions', rows: 4, class:"input-block-level"
 .field
   = f.label :markdown_instructions
   %p When specified, these instructions will render in the instructions popup.
@@ -11,15 +11,24 @@
   #markdown-instructions-preview
 
 .field
-  = f.label :text_to_speech
-  %p When specified, this will generate audio that the students can use to have the instructions read aloud to them.
+  = f.label :text_to_speech_overrides
+  %p By default, Text-to-Speech will use the Instructions and Markdown Instructions texts as its sources. You can override them individually here if you wish to tweak the pronunciation.
   #tts-error.alert.alert-error{style: "display: none"}
     #alert-content
-  = f.text_area :custom_tts, placeholder: '', rows: 4
+  .row
+    .span6
+      %h5 Instructions
+      = f.text_area :tts_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+    .span6
+      %h5 Markdown Instructions
+      = f.text_area :tts_markdown_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
   - if CDO.use_acapela
     = f.label :voice
-    %select#level_tts_voice
-    %button#tts{type: 'button'} Hear TTS
+    %div
+      %select#level_tts_voice
+    %div
+      %button.tts#tts-instructions{type: 'button'} Hear Instructions
+      %button.tts#tts-markdown-instructions{type: 'button'} Hear Markdown Instructions
     %div
       %audio#tts-audio
 
@@ -42,13 +51,23 @@
       .children('details').details();
 
   if (#{!!CDO.use_acapela}) {
-    $('#tts').click(function () {
+    $('button.tts').click(function () {
+      var sourceText;
+      switch (this.id) {
+        case 'tts-instructions':
+          sourceText = $("#level_tts_instructions_override").val() || $("#level_instructions").val();
+          break;
+        case 'tts-markdown-instructions':
+          sourceText = $("#level_tts_markdown_instructions_override").val() || $('#markdown-instructions-preview').text()
+          break;
+      }
+
       $.getJSON("http://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
         cl_login: "#{CDO.acapela_login}",
         cl_app: "#{CDO.acapela_app}",
         cl_pwd: "#{CDO.acapela_password}",
         req_voice: $("#level_tts_voice").val(),
-        req_text: $("#level_custom_tts").val()
+        req_text: sourceText
       }, function (data) {
         $('#tts-error').hide();
         if (data.err_msg) {
