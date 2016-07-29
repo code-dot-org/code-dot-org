@@ -151,16 +151,14 @@ if (BUILD_STYLEGUIDE) {
             `Here's what the dialog looks like with minimum settings.`,
             () => (
               <div id="netsim">
-                <div className="new-router-log-modal">
-                  <NetSimLogBrowser
-                    isOpen={true}
-                    i18n={i18n}
-                    setRouterLogMode={() => null}
-                    setTrafficFilter={() => null}
-                    headerFields={simplePacket}
-                    logRows={sampleData}
-                  />
-                </div>
+                <NetSimLogBrowser
+                  isOpen={true}
+                  i18n={i18n}
+                  setRouterLogMode={() => null}
+                  setTrafficFilter={() => null}
+                  headerFields={simplePacket}
+                  logRows={sampleData}
+                />
               </div>
             ))
         .addWithInfo(
@@ -168,20 +166,18 @@ if (BUILD_STYLEGUIDE) {
             `Here's what the dialog looks like with filters and more columns.`,
             () => (
               <div id="netsim">
-                <div className="new-router-log-modal">
-                  <NetSimLogBrowser
-                    isOpen={true}
-                    i18n={i18n}
-                    canSetRouterLogMode
-                    isAllRouterLogMode
-                    localAddress="1.15"
-                    currentTrafficFilter="all"
-                    setRouterLogMode={() => null}
-                    setTrafficFilter={() => null}
-                    headerFields={fancyPacket}
-                    logRows={sampleData}
-                  />
-                </div>
+                <NetSimLogBrowser
+                  isOpen={true}
+                  i18n={i18n}
+                  canSetRouterLogMode
+                  isAllRouterLogMode
+                  localAddress="1.15"
+                  currentTrafficFilter="all"
+                  setRouterLogMode={() => null}
+                  setTrafficFilter={() => null}
+                  headerFields={fancyPacket}
+                  logRows={sampleData}
+                />
               </div>
             ));
   };
