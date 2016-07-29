@@ -1177,7 +1177,7 @@ Blockly.BlockSvgUnused.prototype.initChildren = function() {
   this.bindData_ = Blockly.bindEvent_(Blockly.mainBlockSpace.getCanvas(), Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED, this, this.unhide.bind(this));
   this.frameGroup_ = Blockly.createSvgElement("g", {"class":"blocklyUnusedFrame"});
   var clip = Blockly.createSvgElement("clipPath", {id:"frameClip" + this.block_.id}, this.frameGroup_);
-  this.frameClipRect_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), height:FRAME_HEADER_HEIGHT, width:"100%"}, clip);
+  this.frameClipRect_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), height:FRAME_HEADER_HEIGHT}, clip);
   this.frameBase_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#e7e8ea", stroke:"#c6cacd", rx:15, ry:15}, this.frameGroup_);
   this.frameHeader_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#c6cacd", rx:15, ry:15, "clip-path":"url(#frameClip" + this.block_.id + ")"}, this.frameGroup_);
   this.frameText_ = Blockly.createSvgElement("text", {"class":"blocklyText", style:"font-size: 12pt", y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2), "dominant-baseline":"central"}, this.frameGroup_);
@@ -1215,6 +1215,7 @@ Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
   var minWidth = this.frameText_.getBoundingClientRect().width + this.frameHelp_.getBoundingClientRect().width;
   var width = Math.max(groupRect.width, minWidth) + 2 * FRAME_MARGIN_SIDE;
   var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
+  this.frameClipRect_.setAttribute("width", width);
   this.frameBase_.setAttribute("width", width);
   this.frameBase_.setAttribute("height", height);
   this.frameHeader_.setAttribute("width", width);
