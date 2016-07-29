@@ -6,7 +6,7 @@ const style = {
     clear: 'both'
   },
   logBrowserFilters: {
-    marginBottom: '0.5em'
+    marginBottom: 12
   },
   dropdown: {
     fontSize: 14
