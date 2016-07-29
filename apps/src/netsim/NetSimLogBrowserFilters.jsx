@@ -31,20 +31,18 @@ const NetSimLogBrowserFilters = React.createClass({
     return (
       <div style={style.logBrowserFilters}>
         {this.props.canSetRouterLogMode &&
-        <RouterLogModeDropdown
-          i18n={this.props.i18n}
-          isAllRouterLogMode={this.props.isAllRouterLogMode}
-          setRouterLogMode={this.props.setRouterLogMode}
-        />
-        }
+          <RouterLogModeDropdown
+            i18n={this.props.i18n}
+            isAllRouterLogMode={this.props.isAllRouterLogMode}
+            setRouterLogMode={this.props.setRouterLogMode}
+          />}
         {this.props.localAddress &&
-        <TrafficFilterDropdown
-          i18n={this.props.i18n}
-          localAddress={this.props.localAddress}
-          currentTrafficFilter={this.props.currentTrafficFilter}
-          setTrafficFilter={this.props.setTrafficFilter}
-        />
-        }
+          <TrafficFilterDropdown
+            i18n={this.props.i18n}
+            localAddress={this.props.localAddress}
+            currentTrafficFilter={this.props.currentTrafficFilter}
+            setTrafficFilter={this.props.setTrafficFilter}
+          />}
         <div style={style.clear}/>
       </div>
     );
