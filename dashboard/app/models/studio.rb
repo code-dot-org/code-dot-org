@@ -286,6 +286,7 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_endGame" />
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
