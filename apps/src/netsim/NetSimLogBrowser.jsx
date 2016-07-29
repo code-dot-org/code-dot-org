@@ -36,10 +36,34 @@ const NetSimLogBrowser = React.createClass({
     };
   },
 
+  dialogTitle() {
+    const {i18n, isAllRouterLogMode, currentTrafficFilter} = this.props;
+    var header = isAllRouterLogMode ?
+      i18n.logBrowserHeader_all() : i18n.logBrowserHeader_mine();
+
+    var match = /^(from|to|with) ([\d\.]+)/.exec(currentTrafficFilter);
+    if (match) {
+      if ('from' === match[1]) {
+        header += i18n.logBrowserHeader_trafficFromAddress({
+          address: match[2]
+        });
+      } else if ('to' === match[1]) {
+        header += i18n.logBrowserHeader_trafficToAddress({
+          address: match[2]
+        });
+      } else if ('with' === match[1]) {
+        header += i18n.logBrowserHeader_trafficToAndFromAddress({
+          address: match[2]
+        });
+      }
+    }
+    return header;
+  },
+
   render() {
     return (
       <Dialog fullWidth {...this.props}>
-        <Title>Log Browser</Title>
+        <Title>{this.dialogTitle()}</Title>
         <Body>
           <NetSimLogBrowserFilters
             i18n={this.props.i18n}
@@ -81,7 +105,12 @@ if (BUILD_STYLEGUIDE) {
       logBrowserHeader_showAllTraffic: () => 'show all traffic',
       logBrowserHeader_showMyTraffic: () => 'show my traffic',
       logBrowserHeader_showTrafficFromMe: () => 'show traffic from me',
-      logBrowserHeader_showTrafficToMe: () => 'show traffic to me'
+      logBrowserHeader_showTrafficToMe: () => 'show traffic to me',
+      logBrowserHeader_all: () => 'All Router Logs',
+      logBrowserHeader_mine: () => 'My Router Logs',
+      logBrowserHeader_trafficFromAddress: ({address}) => ` - Traffic From ${address}`,
+      logBrowserHeader_trafficToAddress: ({address}) => ` - Traffic To ${address}`,
+      logBrowserHeader_trafficToAndFromAddress: ({address}) => ` - Traffic To and From ${address}`,
     };
 
     const simplePacket = [];
