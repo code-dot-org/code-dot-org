@@ -385,7 +385,6 @@ class Script < ActiveRecord::Base
         scripts_to_add << [{
           id: script_data[:id],
           name: name,
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
@@ -416,6 +415,7 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       stage_flex_category = nil
+      stage_lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
@@ -429,6 +429,7 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         stage_flex_category = raw_level.delete(:stage_flex_category)
+        stage_lockable = raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
@@ -489,7 +490,7 @@ class Script < ActiveRecord::Base
             script: script
           )
 
-        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id
@@ -548,7 +549,6 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
         Script.add_script({
           name: script_params[:name],
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
@@ -636,8 +636,6 @@ class Script < ActiveRecord::Base
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
-
-    summary[:trophies] = Concept.summarize_all if trophies
 
     summary
   end

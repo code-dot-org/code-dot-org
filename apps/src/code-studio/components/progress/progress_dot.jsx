@@ -5,18 +5,7 @@ import { connect } from 'react-redux';
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../../color';
-
-function createOutline(color) {
-  return `
-    ${color} 0 1px,
-    ${color} 1px 1px,
-    ${color} 1px 0px,
-    ${color} 1px -1px,
-    ${color} 0 -1px,
-    ${color} -1px -1px,
-    ${color} -1px 0,
-    ${color} -1px 1px`;
-}
+import progressStyles, { createOutline } from './progressStyles';
 
 const dotSize = 24;
 const styles = {
@@ -80,17 +69,7 @@ const styles = {
       fontSize: 16,
       lineHeight: '32px'
     },
-    icon: {
-      borderColor: 'transparent',
-      fontSize: 24,
-      verticalAlign: -4,
-      color: color.white,
-      textShadow: createOutline(color.lighter_gray),
-      ':hover': {
-        color: color.white,
-        backgroundColor: 'transparent'
-      }
-    },
+    icon: progressStyles.dotIcon,
     icon_small: {
       width: 9,
       height: 9,
@@ -188,8 +167,6 @@ export const ProgressDot = React.createClass({
       return 'fa-lock';
     } else if (level.status === 'perfect') {
       return 'fa-check';
-    } else if (level.status === 'review_rejected') {
-      return 'fa-exclamation';
     } else {
       return null;
     }
@@ -208,12 +185,13 @@ export const ProgressDot = React.createClass({
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
     const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const levelUrl = level.locked ? undefined : level.url + location.search;
 
     return (
       <a
         key="link"
-        href={level.locked ? undefined : level.url + location.search}
-        onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
+        href={levelUrl}
+        onClick={this.props.saveAnswersBeforeNavigation && (levelUrl ? dotClicked.bind(null, levelUrl) : false)}
         style={[
           styles.outer,
           (showLevelName || isPeerReview) && {display: 'table-row'},
@@ -269,6 +247,6 @@ export const ProgressDot = React.createClass({
 });
 
 export default connect(state => ({
-  currentLevelId: state.currentLevelId,
-  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
+  currentLevelId: state.progress.currentLevelId,
+  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
 }))(Radium(ProgressDot));

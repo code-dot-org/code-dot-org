@@ -31,6 +31,16 @@ describe("Applab Screens Reducer", function () {
       store.dispatch(toggleImportScreen(true));
       expect(store.getState().isImportingScreen).to.equal(true);
     });
+
+    it("will reset the importProject state", () => {
+      store.dispatch(toggleImportScreen(true));
+      const initialImportProject = store.getState().importProject;
+      store.dispatch(fetchProject('invalid url'));
+      expect(store.getState().importProject).to.not.equal(initialImportProject);
+
+      store.dispatch(toggleImportScreen(false));
+      expect(store.getState().importProject).to.equal(initialImportProject);
+    });
   });
 
   describe("the changeScreen action", () => {
