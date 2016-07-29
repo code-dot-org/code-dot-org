@@ -166,6 +166,14 @@ exports.changeScore = function (id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
+exports.getScore = function () {
+  return Studio.playerScore;
+};
+
+exports.setScore = function (value) {
+  Studio.setScore(value);
+};
+
 exports.addCharacter = function (id, className) {
   Studio.queueCmd(id, 'addItem', {
     'className': className

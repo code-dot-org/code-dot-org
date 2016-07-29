@@ -358,7 +358,10 @@ class Studio < Grid
 <category name="Input">
   <block type="studio_ask" />
 </category>
-<category name="Variables" custom="VARIABLE" />
+<category name="Variables" custom="VARIABLE">
+  <block type="studio_setScore" inline="false"/>
+  <block type="studio_getScore"/>
+</category>
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
 <category name="Functional Start">
