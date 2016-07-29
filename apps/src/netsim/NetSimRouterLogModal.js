@@ -37,8 +37,9 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
-  this.rootDiv_.addClass(usingNewLogBrowser() ?
-      'new-router-log-modal' : 'old-router-log-modal modal fade');
+  if (!usingNewLogBrowser()) {
+    this.rootDiv_.addClass('old-router-log-modal modal fade');
+  }
 
   /**
    * Hidden by default.
