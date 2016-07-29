@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { stageShape } from './types';
 import StageProgress from './stage_progress';
 import TeacherStageInfo from './TeacherStageInfo';
+import { ViewType } from '../../teacherPanelRedux';
 import color from '../../../color';
 
 const styles = {
@@ -130,7 +131,8 @@ const CourseProgressRow = React.createClass({
 });
 
 export default connect(state => ({
-  showTeacherInfo: state.progress.showTeacherInfo,
+  showTeacherInfo: state.progress.showTeacherInfo &&
+    state.teacherPanel.viewAs !== ViewType.Student,
   changeFocusAreaPath: state.progress.changeFocusAreaPath,
   lockableAuthorized: state.progress.lockableAuthorized
 }))(Radium(CourseProgressRow));

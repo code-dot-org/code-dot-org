@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, setViewType } from '../../teacherPanelRedux';
+import { ViewType, setViewType, selectSection } from '../../teacherPanelRedux';
 
 const styles = {
   viewAs: {
@@ -34,10 +34,21 @@ const styles = {
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    sections: React.PropTypes.object.isRequired, // TODO
+    selectedSection: React.PropTypes.string,
     setViewType: React.PropTypes.func.isRequired,
+    selectSection: React.PropTypes.func.isRequired,
+  },
+
+  handleSelectChange(event) {
+    this.props.selectSection(event.target.value);
   },
 
   render() {
+    const { viewAs, sections, selectedSection, setViewType } = this.props;
+    if (Object.keys(sections).length === 0) {
+      return null;
+    }
     // TODO - i18n
     // TODO - don't forget section is conditional on having unlocked stages
     return (
@@ -49,17 +60,30 @@ const ScriptTeacherPanel = React.createClass({
               View page as:
             </div>
             <div style={styles.toggleGroup}>
-              <ToggleGroup selected={this.props.viewAs} onChange={this.props.setViewType}>
+              <ToggleGroup
+                selected={viewAs}
+                onChange={setViewType}
+              >
                 <button value={ViewType.Student}>Student</button>
                 <button value={ViewType.Teacher}>Teacher</button>
               </ToggleGroup>
             </div>
           </div>
+          <select
+            name="sections"
+            style={styles.select}
+            value={selectedSection}
+            onChange={this.handleSelectChange}
+          >
+            <option value="none">Select a Section</option>
+            {Object.keys(sections).map(id => (
+              <option key={id} value={id}>
+                {sections[id].name}
+              </option>
+            ))}
+          </select>
           {this.props.viewAs === ViewType.Teacher &&
             <div>
-              <select name="sections" style={styles.select}>
-                <option>Select a Section</option>
-              </select>
               <div style={styles.text}>
                 Select a section to be able to lock and unlock assessments or
                 surveys. Click the lock settings button in the stage to the left.
@@ -80,9 +104,14 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect(state => ({
-  viewAs: state.teacherPanel.viewAs
+  viewAs: state.teacherPanel.viewAs,
+  sections: state.teacherPanel.sections,
+  selectedSection: state.teacherPanel.selectedSection
 }), dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));
+  },
+  selectSection(sectionId) {
+    dispatch(selectSection(sectionId));
   }
 }))(ScriptTeacherPanel);
