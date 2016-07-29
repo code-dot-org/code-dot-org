@@ -7,8 +7,6 @@ require 'logger'
 VAAS_URL = "http://vaas.acapela-group.com/Services/Synthesizer"
 VAAS_HASH = {
   prot_vers: "2",
-  cl_env: "APACHE_2.2.9_PHP_5.5",
-  cl_vers: "1-00",
   cl_login: CDO.acapela_login,
   cl_app: CDO.acapela_storage_app,
   cl_pwd: CDO.acapela_storage_password
