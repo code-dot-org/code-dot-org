@@ -13,6 +13,8 @@ import AssetLoader from "./LevelMVC/AssetLoader.js";
 
 import FacingDirection from "./LevelMVC/FacingDirection.js";
 
+import AStarPathFinding from "./LevelMVC/AStarPathFinding.js";
+
 import * as CodeOrgAPI from "./API/CodeOrgAPI.js";
 
 var GAME_WIDTH = 400;
@@ -105,6 +107,10 @@ class GameController {
     });
   }
 
+  getRandomBool() {
+    return this.levelModel.getRandomBool();
+  }
+
   /**
    * @param {Object} levelConfig
    */
@@ -146,6 +152,7 @@ class GameController {
         this.afterAssetsLoaded();
       }
     });
+
     this.game.load.start();
   }
 
@@ -274,7 +281,7 @@ class GameController {
   getScreenshot() {
     return this.game.canvas.toDataURL("image/png");
   }
-  
+
   // command processors
   moveEntityNorth(commandQueueItem, entity) {
     const {x, y} = this.levelModel.entityToPosition(entity);
@@ -304,20 +311,51 @@ class GameController {
     commandQueueItem.succeeded();
   }
 
+  moveEntityForward(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+
+    this.moveEntityTo(entity, this.levelModel.getEntityMoveForwardPosition([x, y], entity.facing));
+    commandQueueItem.succeeded();
+  }
+
+  // direction is 1 ==> move toward, or -1 ==> move away from
+  moveEntityToPlayer(commandQueueItem, entity, isToward) {
+    const aStar = new AStarPathFinding(this.levelModel);
+    const entityPosition = this.levelModel.entityToPosition(entity);
+    
+    const path = aStar.findPath([entityPosition.x, entityPosition.y], this.levelModel.player.position);
+
+    // if there is a valid path to the player, turn to face the block in the first step.
+    if (path.length > 0) {
+      const firstNode = path[0];
+      let targetPosition = isToward ? [firstNode.x, firstNode.y] : this.levelModel.getEntityRunAwayPosition(entity, this.levelModel.getFaceDirectionTo([entityPosition.x, entityPosition.y], [firstNode.x, firstNode.y]));
+
+      // if the intent is to move away from the player, there may not be a valid position to move to.
+      if (targetPosition) { 
+        this.moveEntityTo(entity, targetPosition);
+      }
+    }
+    commandQueueItem.succeeded();
+  }
+
   moveEntityTo(entity, position) {
-    const playerIndex = this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0];
+    const playerIndex = this.levelModel.coordinatesToIndex(this.levelModel.player.position);
 
     // Move only if the designated block is empty
-    const targetIndex = this.levelModel.yToIndex(position[1]) + position[0];  
+    const targetIndex = this.levelModel.coordinatesToIndex(position);
     if (this.levelModel.inBounds(position[0], position[1]) &&
         this.levelModel.actionPlane[targetIndex].isEmpty &&
         playerIndex !== targetIndex) {
       const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
-      
+
+      const sourcePos = this.levelModel.indexToXY(sourceIndex);
+      const targetPos = this.levelModel.indexToXY(targetIndex);
+      this.levelView.playEntityAnimation("normalWalk", this.levelModel.actionPlane.indexOf(entity), this.levelModel.getFaceDirectionTo([sourcePos.x, sourcePos.y], [targetPos.x, targetPos.y]));
+
       // Move the block in the model and view.
       this.levelModel.moveBlock(sourceIndex, targetIndex);
-      this.levelView.moveBlockSprite(sourceIndex, position);
-      
+      this.levelView.moveBlockSprite(sourceIndex, position, entity.isEntity);
+
       // Update renderer
       this.levelModel.computeShadingPlane();
       this.levelModel.computeFowPlane();
@@ -325,7 +363,7 @@ class GameController {
       this.levelView.updateFowPlane(this.levelModel.fowPlane);
     }
   }
-  
+
   moveForward(commandQueueItem) {
     var player = this.levelModel.player,
         allFoundCreepers,
@@ -339,9 +377,9 @@ class GameController {
 
       jumpOff = wasOnBlock && wasOnBlock !== player.isOnBlock;
       if (player.isOnBlock || jumpOff) {
-        groundType = this.levelModel.actionPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
+        groundType = this.levelModel.actionPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;
       } else {
-        groundType = this.levelModel.groundPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
+        groundType = this.levelModel.groundPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;
       }
 
       this.levelView.playMoveForwardAnimation(player.position, player.facing, jumpOff, player.isOnBlock, groundType, () => {
@@ -381,7 +419,7 @@ class GameController {
   moveDirection(commandQueueItem, direction) {
     const player = this.levelModel.player;
 
-    this.levelModel.turnToDirection(direction);
+    this.levelModel.turnToDirection(player, direction);
 
     if (!this.levelModel.canMoveForward()) {
       this.levelView.playBumpAnimation(player.position, player.facing, false);
@@ -391,9 +429,8 @@ class GameController {
       return;
     }
 
-    
     this.levelModel.moveDirection(direction);
-    const groundType = this.levelModel.groundPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
+    const groundType = this.levelModel.groundPlane[this.levelModel.coordinatesToIndex(player.position)].blockType;
     this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
     this.levelView.playMoveForwardAnimation(player.position, player.facing, false, player.isOnBlock, groundType, () => {
       this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
@@ -404,18 +441,52 @@ class GameController {
   }
 
   turn(commandQueueItem, direction) {
+    const player = this.levelModel.player;
+
     if (direction === -1) {
-      this.levelModel.turnLeft();
+      this.levelModel.turnLeft(player);
     }
 
     if (direction === 1) {
-      this.levelModel.turnRight();
+      this.levelModel.turnRight(player);
     }
     this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
 
     this.delayPlayerMoveBy(200, 800, () => {
       commandQueueItem.succeeded();
     });
+  }
+
+  turnEntity(commandQueueItem, entity, direction) {
+    if (direction === -1) {
+      this.levelModel.turnLeft(entity);
+    }
+
+    if (direction === 1) {
+      this.levelModel.turnRight(entity);
+    }
+
+    const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
+    this.levelView.updateBlockSpriteDirection(sourceIndex, entity.facing);
+
+    commandQueueItem.succeeded();
+  }
+
+  turnEntityToPlayer(commandQueueItem, entity) {
+    const aStar = new AStarPathFinding(this.levelModel);
+    const entityPosition = this.levelModel.entityToPosition(entity);
+
+    const path = aStar.findPath([entityPosition.x, entityPosition.y], this.levelModel.player.position);
+
+    // if there is a valid path to the player, turn to face the block in the first step.
+    if (path.length > 0) {
+      const firstNode = path[0];
+      this.levelModel.turnToDirection(entity, this.levelModel.getFaceDirectionTo([entityPosition.x, entityPosition.y], [firstNode.x, firstNode.y]));
+
+      const sourceIndex = this.levelModel.actionPlane.indexOf(entity);
+      this.levelView.updateBlockSpriteDirection(sourceIndex, entity.facing);
+    }
+    commandQueueItem.succeeded();
   }
 
   destroyEntity(commandQueueItem, entity) {
@@ -434,13 +505,21 @@ class GameController {
     commandQueueItem.succeeded();
   }
 
+  flashEntity(commandQueueItem, entity) {
+    const {x, y} = this.levelModel.entityToPosition(entity);
+    var delay = this.levelView.flashSpriteToWhite([x, y]);
+    this.delayBy(delay, () => {
+      commandQueueItem.succeeded();
+    });
+  }
+
   playSound(commandQueueItem, sound) {
     this.levelView.audioPlayer.play(sound);
     commandQueueItem.succeeded();
   }
 
   destroyBlockWithoutPlayerInteraction(position) {
-    let block = this.levelModel.actionPlane[this.levelModel.yToIndex(position[1]) + position[0]];
+      let block = this.levelModel.actionPlane[this.levelModel.yToIndex(position[1]) + position[0]];
     this.levelModel.destroyBlock(position);
 
     if (block) {
@@ -569,7 +648,7 @@ class GameController {
   }
 
   checkRailBlock(blockType) {
-    var checkRailBlock = this.levelModel.railMap[this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]];
+      var checkRailBlock = this.levelModel.railMap[this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]];
     if (checkRailBlock !== "") {
       blockType = checkRailBlock;
     } else {
@@ -579,7 +658,7 @@ class GameController {
   }
 
   placeBlock(commandQueueItem, blockType) {
-    var blockIndex = (this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]);
+      var blockIndex = (this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]);
     var blockTypeAtPosition = this.levelModel.actionPlane[blockIndex].blockType;
     if (this.levelModel.canPlaceBlock()) {
       if (this.checkMinecartLevelEndAnimation() && blockType === "rail") {

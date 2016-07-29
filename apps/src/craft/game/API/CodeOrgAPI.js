@@ -85,6 +85,13 @@ export function get(controller) {
       controller.queue.addCommand(myQueueItem);
     },
 
+    flashEntity: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.flashEntity(myQueueItem, entity);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
     playSound: function (highlightCallback, sound) {
       const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
         controller.playSound(myQueueItem, sound);
@@ -120,6 +127,27 @@ export function get(controller) {
       controller.queue.addCommand(myQueueItem);
     },
 
+    moveEntityForward: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveEntityForward(myQueueItem, entity);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    moveEntityTowardPlayer: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveEntityToPlayer(myQueueItem, entity, 1);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    moveEntityAwayFromPlayer: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.moveEntityToPlayer(myQueueItem, entity, 0);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
     moveDirection: function (highlightCallback, direction) {
       const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
         controller.moveDirection(myQueueItem, direction);
@@ -141,6 +169,42 @@ export function get(controller) {
 
     turnLeft: function (highlightCallback) {
       controller.queue.addCommand(new TurnCommand(controller, highlightCallback, -1));
+    },
+
+    turnEntity: function (highlightCallback, entity, direction) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.turnEntity(myQueueItem, entity, direction === 'right' ? 1 : -1);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    turnEntityRight: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.turnEntity(myQueueItem, entity, 1);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    turnEntityLeft: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.turnEntity(myQueueItem, entity, -1);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    turnEntityRandom: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        const rand = controller.getRandomBool();
+        controller.turnEntity(myQueueItem, entity, rand ? 1 : -1);
+      });
+      controller.queue.addCommand(myQueueItem);
+    },
+
+    turnEntityToPlayer: function (highlightCallback, entity) {
+      const myQueueItem = new CallbackCommand(controller, highlightCallback, () => {
+        controller.turnEntityToPlayer(myQueueItem, entity);
+      });
+      controller.queue.addCommand(myQueueItem);
     },
 
     destroyBlock: function (highlightCallback) {

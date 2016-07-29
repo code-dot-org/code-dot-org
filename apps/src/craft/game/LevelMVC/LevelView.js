@@ -216,6 +216,25 @@ export default class LevelView {
     this.playScaledSpeed(this.playerSprite.animations, "idle" + direction);
   }
 
+  updateBlockSpriteDirection(entityIndex, facing) {
+    const sprite = this.actionPlaneBlocks[entityIndex];
+    if (sprite) {
+      let direction = this.getDirectionName(facing);
+
+      this.playScaledSpeed(sprite.animations, "idle" + direction);
+    }
+  }
+
+  playEntityAnimation(animationName, sourceIndex, facing) {
+    let direction = this.getDirectionName(facing);
+    const sprite = this.actionPlaneBlocks[sourceIndex];
+
+    if (sprite) {
+      let animName = animationName + direction;
+      this.playScaledSpeed(sprite.animations, animName);
+    }
+  }
+
   playPlayerAnimation(animationName, position, facing, isOnBlock) {
     let direction = this.getDirectionName(facing);
     this.playerSprite.sortOrder = this.yToIndex(position[1]) + 5;
@@ -365,6 +384,53 @@ export default class LevelView {
         });
       });
     });
+  }
+
+  flashSpriteToWhite(position) {
+    let blockIndex = (this.yToIndex(position[1])) + position[0];
+    let block = this.actionPlaneBlocks[blockIndex];
+
+    var fillBmd = this.game.add.bitmapData(block.width, block.height);
+    fillBmd.fill(0xFF, 0xFF, 0xFF, 0xFF);
+    var maskBmd = this.game.add.bitmapData(block.width, block.height, block);
+    var maskedBmd = this.game.add.bitmapData(block.width, block.height);
+
+    var srcRect = { x: 0, y: 0, width: block.width, height: block.height };
+    var dstRect = { x: 0, y: 0, width: block.texture.crop.width, height: block.texture.crop.height };
+    maskedBmd.alphaMask(fillBmd, block, srcRect, dstRect);
+
+    var flashSprite = block.addChild(this.game.make.sprite(0, 0, maskedBmd.texture));
+    flashSprite.alpha = 0;
+    var fadeMs = 60;
+    var pauseMs = fadeMs * 4;
+    var totalIterations = 3;
+    var totalDuration = 0;
+    var aIn = { alpha: 1.0 };
+    var aOut = { alpha: 0.0 };
+    var fadeIn = this.game.add.tween(flashSprite).to(aIn, fadeMs, Phaser.Easing.Linear.None);
+    var fadeOut = this.game.add.tween(flashSprite).to(aOut, fadeMs, Phaser.Easing.Linear.None);
+    totalDuration = fadeMs * 2;
+    fadeIn.chain(fadeOut);
+    var lastStep = fadeOut;
+
+    for(var i = 0; i < totalIterations - 1; i++) {
+      var innerPause = this.game.add.tween(flashSprite).to(aOut, pauseMs, Phaser.Easing.Linear.None);
+      var innerFadeIn = this.game.add.tween(flashSprite).to(aIn, fadeMs, Phaser.Easing.Linear.None);
+      var innerFadeOut = this.game.add.tween(flashSprite).to(aOut, fadeMs, Phaser.Easing.Linear.None);
+      totalDuration += pauseMs + fadeMs * 2;
+      lastStep.chain(innerPause);
+      innerPause.chain(innerFadeIn);
+      innerFadeIn.chain(innerFadeOut);
+      lastStep = innerFadeOut;
+    }
+
+    lastStep.onComplete.add(() => {
+      flashSprite.destroy();
+    });
+
+    fadeIn.start();
+
+    return totalDuration * 2;
   }
 
   playExplodingCreeperAnimation(position, facing, destroyPosition, isOnBlock, completionHandler) {
@@ -938,6 +1004,12 @@ export default class LevelView {
 
   playScaledSpeed(animationManager, name) {
     var animation = animationManager.getAnimation(name);
+
+    // if the animation doesn't exist, do nothing.  
+    if (!animation) {
+      return;
+    }
+
     if (!animation.originalFps) {
       animation.originalFps = 1000 / animation.delay;
     }
@@ -962,21 +1034,24 @@ export default class LevelView {
     tween.start();
   }
 
-  moveBlockSprite(sourceIndex, targetPosition){
+  moveBlockSprite(sourceIndex, targetPosition, isEntity){
     const targetIndex = this.yToIndex(targetPosition[1]) + targetPosition[0];
-    const sprite = this.actionPlaneBlocks[sourceIndex]; 
-    
+    const sprite = this.actionPlaneBlocks[sourceIndex];
+
     // move the actual sprite stored in the blocks array.
     if (sprite) {
       // Handle sprite offsets differently if a block vs. a non-block.
-      if (sprite.key === "blocks") {
-        sprite.x = -14 + 40 * targetPosition[0];
+      if (!isEntity) {
+        sprite.x = -13 + 40 * targetPosition[0];
         sprite.y = -22 + 40 * (targetPosition[1]);
       }
       else {
         sprite.x = -6 + 40 * targetPosition[0];
         sprite.y = -22 + 40 * (targetPosition[1]);
       }
+
+      // Set the draw order appropriately so that sprites below this one will render on top of it.
+      sprite.sortOrder = this.yToIndex(targetPosition[1]) + 5;
 
       // move in the actionPlaneBlocks array
       this.actionPlaneBlocks[targetIndex] = sprite;
@@ -1765,6 +1840,50 @@ export default class LevelView {
           this.playRandomSheepAnimation(sprite);
         });
 
+        //idle_up
+        frameList = [];
+        for (i = 0; i < 5; ++i) {
+          frameList.push("Sheep_543");
+        }
+        sprite.animations.add("idle_up", frameList, 5, false).onComplete.add(() => {});
+
+        //idle_down
+        frameList = [];
+        for (i = 0; i < 5; ++i) {
+          frameList.push("Sheep_501");
+        }
+        sprite.animations.add("idle_down", frameList, 5, false).onComplete.add(() => {});
+
+        //idle_left
+        frameList = [];
+        for (i = 0; i < 5; ++i) {
+          frameList.push("Sheep_556");
+        }
+        sprite.animations.add("idle_left", frameList, 5, false).onComplete.add(() => {});
+
+        //idle_right
+        frameList = [];
+        for (i = 0; i < 5; ++i) {
+          frameList.push("Sheep_522");
+        }
+        sprite.animations.add("idle_right", frameList, 5, false).onComplete.add(() => {});
+
+        //normalWalk_up
+        frameList = Phaser.Animation.generateFrameNames("Sheep_", 532, 543, "", 0);
+        sprite.animations.add("normalWalk_up", frameList, 543-532, false).onComplete.add(() => {});
+
+        //normalWalk_down
+        frameList = Phaser.Animation.generateFrameNames("Sheep_", 490, 501, "", 0);
+        sprite.animations.add("normalWalk_down", frameList, 501-490, false).onComplete.add(() => {});
+
+        //normalWalk_left
+        frameList = Phaser.Animation.generateFrameNames("Sheep_", 545, 556, "", 0);
+        sprite.animations.add("normalWalk_left", frameList, 556-545, false).onComplete.add(() => {});
+
+        //normalWalk_right
+        frameList = Phaser.Animation.generateFrameNames("Sheep_", 511, 522, "", 0);
+        sprite.animations.add("normalWalk_right", frameList, 522-511, false).onComplete.add(() => {});
+
         // TODO(bjordan/gaallen) - update once updated Sheep.json
         frameList = Phaser.Animation.generateFrameNames("Sheep_", 490, 491, "", 0);
         stillFrames = Math.trunc(Math.random() * 3) + 3;
@@ -1781,7 +1900,7 @@ export default class LevelView {
         }
 
         sprite.animations.add("used", frameList, 15, true);
-        this.playAnimationWithOffset(sprite, "idle", 17, 199);
+      //  this.playAnimationWithOffset(sprite, "idle", 17, 199);
         break;
 
       case "creeper":

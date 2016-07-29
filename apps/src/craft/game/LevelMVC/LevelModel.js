@@ -210,10 +210,14 @@ export default class LevelModel {
   }
 
   getMoveForwardPosition() {
-    var cx = this.player.position[0],
-        cy = this.player.position[1];
+    return this.getEntityMoveForwardPosition(this.player.position, this.player.facing);
+  }
 
-    switch (this.player.facing) {
+  getEntityMoveForwardPosition(position, faceDirection) {
+    var cx = position[0],
+        cy = position[1];
+
+    switch (faceDirection) {
       case FacingDirection.Up:
         --cy;
         break;
@@ -281,12 +285,12 @@ export default class LevelModel {
   }
 
   isPlayerStandingInWater() {
-    let blockIndex = this.yToIndex(this.player.position[1]) + this.player.position[0];
+      let blockIndex = this.yToIndex(this.player.position[1]) + this.player.position[0];
     return this.groundPlane[blockIndex].blockType === "water";
   }
 
   isPlayerStandingInLava() {
-    let blockIndex = this.yToIndex(this.player.position[1]) + this.player.position[0];
+      let blockIndex = this.yToIndex(this.player.position[1]) + this.player.position[0];
     return this.groundPlane[blockIndex].blockType === "lava";
   }
 
@@ -500,6 +504,76 @@ export default class LevelModel {
     return null;
   }
 
+  // Returns a random integer between min (included) and max (excluded)
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  getRandomBool() {
+    // spread the random number across a decent range and mod for even/odd to determine turn direction.
+    return this.getRandomInt(0, 100) % 2;
+  }
+
+  // Based on the current position, attempt to move to the primary direction, if not valid, choose a random optional direction.
+  // If nowhere to move, then return null
+  getOptimalPosition(current, primary, optionA, optionB) {
+    const useOptionAFirst = this.getRandomBool();
+
+    const primaryPosition = this.getEntityMoveForwardPosition([current.x, current.y], primary);
+    const optionAPosition = this.getEntityMoveForwardPosition([current.x, current.y], useOptionAFirst ? optionA : optionB);
+    const optionBPosition = this.getEntityMoveForwardPosition([current.x, current.y], useOptionAFirst ? optionB : optionA);
+
+    if (this.inBounds(primaryPosition[0], primaryPosition[1]) && this.actionPlane[this.coordinatesToIndex(primaryPosition)].isEmpty) {
+      return primaryPosition;
+    }
+    else if (this.inBounds(optionAPosition[0], optionAPosition[1]) && this.actionPlane[this.coordinatesToIndex(optionAPosition)].isEmpty) {
+      return optionAPosition;
+    }
+    else if (this.inBounds(optionBPosition[0], optionBPosition[1]) && this.actionPlane[this.coordinatesToIndex(optionBPosition)].isEmpty) {
+      return optionBPosition;
+    }
+    return null;
+  }
+  
+  // Attempts to find a position that an entity can move to in the direction opposite the one specified.
+  getEntityRunAwayPosition(entity, direction) {
+    const entityPosition = this.entityToPosition(entity);
+    let position = null;
+
+    switch (direction) {
+      case FacingDirection.Up:
+        position = this.getOptimalPosition(entityPosition, FacingDirection.Down, FacingDirection.Left, FacingDirection.Right);
+        break;
+
+      case FacingDirection.Left:
+        position = this.getOptimalPosition(entityPosition, FacingDirection.Right, FacingDirection.Up, FacingDirection.Down);
+        break;
+
+      case FacingDirection.Down:
+        position = this.getOptimalPosition(entityPosition, FacingDirection.Up, FacingDirection.Left, FacingDirection.Right);
+        break;
+
+      case FacingDirection.Right:
+        position = this.getOptimalPosition(entityPosition, FacingDirection.Left, FacingDirection.Up, FacingDirection.Down);
+        break;
+    }
+    return position; // may be null
+  }
+
+  getFaceDirectionTo(sourcePosition, targetPosition) {
+    if(targetPosition[0] > sourcePosition[0]) { // turn to east
+      return FacingDirection.Right;
+    }
+    else if(targetPosition[0] < sourcePosition[0]) { // turn to west
+      return FacingDirection.Left;
+    }
+    else if(targetPosition[1] < sourcePosition[1]) { // turn to north
+      return FacingDirection.Up;
+    }
+    // turn to south
+    return FacingDirection.Down;
+  }
+
   canDestroyBlockForward() {
     var result = false;
 
@@ -531,58 +605,58 @@ export default class LevelModel {
     }
   }
 
-  turnLeft() {
-    switch (this.player.facing) {
+  turnLeft(entity) {
+    switch (entity.facing) {
       case FacingDirection.Up:
-        this.player.facing = FacingDirection.Left;
+        entity.facing = FacingDirection.Left;
         break;
 
       case FacingDirection.Left:
-        this.player.facing = FacingDirection.Down;
+        entity.facing = FacingDirection.Down;
         break;
 
       case FacingDirection.Down:
-        this.player.facing = FacingDirection.Right;
+        entity.facing = FacingDirection.Right;
         break;
 
       case FacingDirection.Right:
-        this.player.facing = FacingDirection.Up;
+        entity.facing = FacingDirection.Up;
         break;
     }
   }
 
-  turnRight() {
-    switch (this.player.facing) {
+  turnRight(entity) {
+    switch (entity.facing) {
       case FacingDirection.Up:
-        this.player.facing = FacingDirection.Right;
+        entity.facing = FacingDirection.Right;
         break;
 
       case FacingDirection.Right:
-        this.player.facing = FacingDirection.Down;
+        entity.facing = FacingDirection.Down;
         break;
 
       case FacingDirection.Down:
-        this.player.facing = FacingDirection.Left;
+        entity.facing = FacingDirection.Left;
         break;
 
       case FacingDirection.Left:
-        this.player.facing = FacingDirection.Up;
+        entity.facing = FacingDirection.Up;
         break;
     }
   }
 
-  turnToDirection(direction) {
-    this.player.facing = direction;
+  turnToDirection(entity, direction) {
+    entity.facing = direction;
   }
 
   moveDirection(direction) {
-    this.turnToDirection(direction);
+    this.turnToDirection(this.player, direction);
     this.moveForward();
   }
 
   moveBlock(sourceIndex, targetIndex) {
     // Swap so that we don't invalidate our Block Reference.
-    const tempBlock = this.actionPlane[targetIndex];    
+    const tempBlock = this.actionPlane[targetIndex];
     this.actionPlane[targetIndex] = this.actionPlane[sourceIndex];
     this.actionPlane[sourceIndex] = tempBlock;
   }
