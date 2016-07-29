@@ -157,7 +157,7 @@ if (BUILD_STYLEGUIDE) {
       const packetNum = 1 + randInt(packetCount);
       return {
         'timestamp': Date.now() - randInt(600000),
-        'sourceUserName': lipsumWords[randInt(lipsumWords.length)],
+        'sent-by': lipsumWords[randInt(lipsumWords.length)],
         'logged-by': `Router ${routerNum}`,
         'status': Math.random() < 0.8 ? 'Success' : 'Dropped',
         'from-address': `${routerNum}.${1 + randInt(13)}`,

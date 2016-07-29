@@ -107,7 +107,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'sourceUserName', props: {style: style.nowrapTd}}
+        cell: {property: 'sent-by', props: {style: style.nowrapTd}}
       });
     }
 
@@ -182,7 +182,7 @@ const NetSimLogBrowserTable = React.createClass({
     // Filter by "sent by"
     const sentByMatch = this.props.currentSentByFilter.match(/^by (.*)$/);
     if (sentByMatch) {
-      sortedRows = sortedRows.filter(row => row.sourceUserName === sentByMatch[1]);
+      sortedRows = sortedRows.filter(row => row['sent-by'] === sentByMatch[1]);
     }
 
     // Limit number of rendered rows

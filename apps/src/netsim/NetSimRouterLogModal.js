@@ -257,7 +257,7 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
   const tableRows = this.getSortedFilteredLogEntries(this.logEntries_).map(entry => ({
     'uuid': entry.uuid,
     'timestamp': entry.timestamp,
-    'sourceUserName': entry.sourceUserName,
+    'sent-by': entry.sentBy,
     'logged-by': getOriginNodeName(entry),
     'status': entry.getLocalizedStatus(),
     'from-address': entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS),
