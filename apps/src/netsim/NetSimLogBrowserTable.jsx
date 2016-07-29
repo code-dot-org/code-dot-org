@@ -107,7 +107,7 @@ const NetSimLogBrowserTable = React.createClass({
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'sourceUserName', props: {style: style.nowrap}}
+        cell: {property: 'sourceUserName', props: {style: style.nowrapTd}}
       });
     }
 
