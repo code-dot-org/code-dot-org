@@ -7,6 +7,7 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
+import TeacherPanel from './components/TeacherPanel';
 import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
 import { getStore } from './redux';
 
@@ -62,7 +63,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
-      getSectionProgress();
+      renderTeacherPanel(store);
     }
 
     if (data.focusAreaPositions) {
@@ -93,13 +94,25 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   );
 };
 
-function getSectionProgress() {
+function renderTeacherPanel(store) {
+  const div = document.createElement('div');
+  div.setAttribute('id', 'teacher-panel-container');
   $.ajax(
     '/dashboardapi/section_progress',
     { data: { user_id: clientState.queryParams('user_id') } }
   ).done(data => {
     console.log(data);
   });
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <TeacherPanel>
+        <div> foo </div>
+      </TeacherPanel>
+    </Provider>,
+    div
+  );
+  document.body.appendChild(div);
 }
 
 /**
