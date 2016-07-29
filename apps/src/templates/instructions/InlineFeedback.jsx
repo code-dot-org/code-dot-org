@@ -7,11 +7,8 @@ const InlineFeedback = ({ extra, message, styles, borderColor }) => {
   // easily detect its presence. This class should NOT be used for
   // styling.
   return (
-    <ChatBubble
-      borderColor={borderColor}
-      className="uitest-topInstructions-inline-feedback"
-    >
-      <p>{message}</p>
+    <ChatBubble borderColor={borderColor}>
+      <p className="uitest-topInstructions-inline-feedback">{message}</p>
       {extra && <p style={styles.message}>{extra}</p>}
     </ChatBubble>
   );
