@@ -357,8 +357,8 @@ module LevelsHelper
     if CDO.use_acapela
       app_options['acapelaEnabled'] = CDO.use_acapela
       voice = params[:voice] === 'b' ? :ella : :rosie
-      app_options['acapelaInstructionsSrc'] = "https://s3.amazonaws.com/cdo-tts/#{@level.tts_instructions_audio_file(voice)}"
-      app_options['acapelaMarkdownInstructionsSrc'] = "https://s3.amazonaws.com/cdo-tts/#{@level.tts_markdown_instructions_audio_file(voice)}"
+      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file(voice)}"
+      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file(voice)}"
     end
 
     if @level.is_a? NetSim
