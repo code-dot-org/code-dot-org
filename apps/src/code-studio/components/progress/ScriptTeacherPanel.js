@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { makeEnum } from '@cdo/apps/utils';
+import { ViewType, setViewType } from '../../teacherPanelRedux';
 
 const styles = {
   viewAs: {
@@ -30,18 +31,10 @@ const styles = {
   }
 };
 
-const ViewType = makeEnum('Student', 'Teacher');
-
 const ScriptTeacherPanel = React.createClass({
-  getInitialState() {
-    return {
-      // TODO - i think eventually this moves to redux
-      viewAs: ViewType.Teacher
-    };
-  },
-
-  handleChange(viewAs) {
-    this.setState({ viewAs });
+  propTypes: {
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    setViewType: React.PropTypes.func.isRequired,
   },
 
   render() {
@@ -56,13 +49,13 @@ const ScriptTeacherPanel = React.createClass({
               View page as:
             </div>
             <div style={styles.toggleGroup}>
-              <ToggleGroup selected={this.state.viewAs} onChange={this.handleChange}>
+              <ToggleGroup selected={this.props.viewAs} onChange={this.props.setViewType}>
                 <button value={ViewType.Student}>Student</button>
                 <button value={ViewType.Teacher}>Teacher</button>
               </ToggleGroup>
             </div>
           </div>
-          {this.state.viewAs === ViewType.Teacher &&
+          {this.props.viewAs === ViewType.Teacher &&
             <div>
               <select name="sections" style={styles.select}>
                 <option>Select a Section</option>
@@ -86,4 +79,10 @@ const ScriptTeacherPanel = React.createClass({
   }
 });
 
-export default ScriptTeacherPanel;
+export default connect(state => ({
+  viewAs: state.teacherPanel.viewAs
+}), dispatch => ({
+  setViewType(viewAs) {
+    dispatch(setViewType(viewAs));
+  }
+}))(ScriptTeacherPanel);
