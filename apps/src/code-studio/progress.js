@@ -14,7 +14,8 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo
+  showTeacherInfo,
+  authorizeLockable
 } from './progressRedux';
 
 var progress = module.exports;
@@ -66,6 +67,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.focusAreaPositions) {
       store.dispatch(updateFocusArea(data.changeFocusAreaPath,
         data.focusAreaPositions));
+    }
+
+    if (data.lockableAuthorized) {
+      store.dispatch(authorizeLockable());
     }
 
     // Merge progress from server (loaded via AJAX)
