@@ -89,5 +89,6 @@
   "turnTooltip": "指定した角度でアーティストを左まはた右に向ける",
   "turtleVisibilityTooltip": "アーティストを表示または非表示",
   "widthTooltip": "鉛筆の幅を変更",
-  "wrongColour": "あなたの絵は間違った色を使っています。このパズル では%1でなくてはいけません。"
+  "wrongColour": "あなたの絵は間違った色を使っています。このパズル では%1でなくてはいけません。",
+  "jumpTo": "jump to"
 }

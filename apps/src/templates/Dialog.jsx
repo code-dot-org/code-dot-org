@@ -149,7 +149,7 @@ const Dialog = React.createClass({
       children.push(<Title key="title">{this.props.title}</Title>);
     }
     if (this.props.body) {
-      children.push(<Body>{this.props.body}</Body>);
+      children.push(<Body key="body">{this.props.body}</Body>);
     }
     children = children.concat(this.props.children);
     if (this.props.cancelText || this.props.onCancel ||

@@ -4,9 +4,9 @@ import Radium from 'radium';
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 
-const InlineHint = ({ isMinecraft, borderColor, block, content }) => {
+const InlineHint = ({ borderColor, block, content }) => {
   return (
-    <ChatBubble isMinecraft={isMinecraft} borderColor={borderColor}>
+    <ChatBubble borderColor={borderColor}>
       <div
         dangerouslySetInnerHTML={{ __html: content }}
       />
@@ -19,7 +19,6 @@ InlineHint.propTypes = {
   block: React.PropTypes.object, // XML
   borderColor: React.PropTypes.string,
   content: React.PropTypes.string.isRequired,
-  isMinecraft: React.PropTypes.bool,
 };
 
 export default Radium(InlineHint);

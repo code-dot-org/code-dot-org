@@ -89,5 +89,6 @@
   "turnTooltip": "Draait de kunstenaar links of rechts met het opgegeven aantal graden.",
   "turtleVisibilityTooltip": "Maakt de kunstenaar zichtbaar of onzichtbaar.",
   "widthTooltip": "Verandert de dikte van het potlood.",
-  "wrongColour": "Je plaatje is de verkeerde kleur. Voor deze puzzel moet het %1 zijn."
+  "wrongColour": "Je plaatje is de verkeerde kleur. Voor deze puzzel moet het %1 zijn.",
+  "jumpTo": "jump to"
 }

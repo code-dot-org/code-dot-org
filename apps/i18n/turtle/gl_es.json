@@ -89,5 +89,6 @@
   "turnTooltip": "Vira o artista á dereita ou á esquerda usando o número especificado de graos.",
   "turtleVisibilityTooltip": "Fai que o artista fique visíbel ou invisíbel.",
   "widthTooltip": "Altera o longo do lapis.",
-  "wrongColour": "A súa figura está coa cor errónea. Para este desafío necesita ser %1."
+  "wrongColour": "A súa figura está coa cor errónea. Para este desafío necesita ser %1.",
+  "jumpTo": "jump to"
 }

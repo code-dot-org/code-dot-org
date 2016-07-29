@@ -27,36 +27,36 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 // 9 possible positions in playspace (+ random):
-var POSITION_VALUES = [[msg.positionRandom(), RANDOM_VALUE],
-    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
+var POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
 
 // Still a slightly reduced set of 17 out of 25 possible positions (+ random):
-var POSITION_VALUES_EXTENDED = [[msg.positionRandom(), RANDOM_VALUE],
-    [msg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
-    [msg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
-    [msg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
-    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-    [msg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
-    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-    [msg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
-    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
-    [msg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
-    [msg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
-    [msg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
+var POSITION_VALUES_EXTENDED = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
+    [commonMsg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
+    [commonMsg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
+    [commonMsg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
+    [commonMsg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
+    [commonMsg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
 
 var generateSetterCode = function (opts) {
   var value = opts.value || opts.ctx.getTitleValue('VALUE');
@@ -322,12 +322,30 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       if (spriteCount > 1) {
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
-                       'SPRITE');
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
+                         'SPRITE');
+        }
       } else {
-        this.appendDummyInput()
-          .appendTitle(msg.whenSpriteClicked());
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(new blockly.FieldImage(
+                skin[startAvatars[0]].dropdownThumbnail,
+                skin.dropdownThumbnailWidth,
+                skin.dropdownThumbnailHeight
+            ));
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.whenSpriteClicked());
+        }
       }
       this.setPreviousStatement(false);
       this.setInputsInline(true);

@@ -89,5 +89,6 @@
   "turnTooltip": "Snur kunstneren mot venstre eller høyre med den angitte vinkelen.",
   "turtleVisibilityTooltip": "Gjør kunstneren synlig eller usynlig.",
   "widthTooltip": "Endrer bredden på blyanten.",
-  "wrongColour": "Ditt bilde har feil farge. For denne oppgaven skal fargen være %1."
+  "wrongColour": "Ditt bilde har feil farge. For denne oppgaven skal fargen være %1.",
+  "jumpTo": "jump to"
 }

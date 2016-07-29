@@ -134,18 +134,6 @@ img.video_thumbnail {
   margin-bottom: 30px;
 }
 
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
-}
-
 .report_cell {
   text-align: center;
   color: white;
@@ -928,11 +916,6 @@ input.header_input {
   line-height: 20px;
 }
 
-.trophy_image {
-  width: 45px;
-  height: 45px;
-}
-
 #alert {
   color: $red;
   font-size: 130%;
@@ -1690,6 +1673,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1812,6 +1799,7 @@ a.download-video {
 
 .free-response .response {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {

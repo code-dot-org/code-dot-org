@@ -89,5 +89,6 @@
   "turnTooltip": "將藝術家向左轉動指定的角度",
   "turtleVisibilityTooltip": "將藝術家隱藏或顯示。",
   "widthTooltip": "更改畫筆的粗細。",
-  "wrongColour": "你圖形的顏色是錯誤的。在這個關卡中，它必須是 %1。"
+  "wrongColour": "你圖形的顏色是錯誤的。在這個關卡中，它必須是 %1。",
+  "jumpTo": "jump to"
 }

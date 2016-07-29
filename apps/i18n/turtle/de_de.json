@@ -89,5 +89,6 @@
   "turnTooltip": "Dreht den Künstler nach links oder rechts um den angegebenen Winkel.",
   "turtleVisibilityTooltip": "Macht den Künstler sichtbar oder unsichtbar.",
   "widthTooltip": "Ändert die Breite des Stiftes.",
-  "wrongColour": "Dein Bild hat die falsche Farbe. Für diese Aufgabe musst du die Farbe auf %1 setzen."
+  "wrongColour": "Dein Bild hat die falsche Farbe. Für diese Aufgabe musst du die Farbe auf %1 setzen.",
+  "jumpTo": "jump to"
 }

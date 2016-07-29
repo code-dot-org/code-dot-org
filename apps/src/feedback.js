@@ -30,7 +30,6 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = require('lodash');
 var codegen = require('./codegen');
@@ -83,7 +82,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
-  options.numTrophies = this.numTrophiesEarned_(options);
 
   var hadShareFailure = (options.response && options.response.share_failure);
   // options.response.level_source is the url that we are sharing; can't
@@ -111,10 +109,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
-  }
-  if (options.numTrophies) {
-    var trophies = this.getTrophiesElement_(options);
-    feedback.appendChild(trophies);
   }
   if (feedbackBlocks && feedbackBlocks.div) {
     if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
@@ -590,7 +584,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
           stageCompleted = options.response.stage_changing.previous.name;
         }
         var msgParams = {
-          numTrophies: options.numTrophies,
           stageNumber: 0, // TODO: remove once localized strings have been fixed
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
@@ -605,11 +598,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
             message = finalLevel ? (msg.finalStage(msgParams) + ' ') : '';
             message = message + reinfFeedbackMsg;
           }
-        } else if (options.numTrophies > 0) {
-          message = finalLevel ? msg.finalStageTrophies(msgParams) :
-                                 stageCompleted ?
-                                    msg.nextStageTrophies(msgParams) :
-                                    msg.nextLevelTrophies(msgParams);
         } else {
           var nextLevelMsg = (options.appStrings && options.appStrings.nextLevelMsg) ||
               msg.nextLevel(msgParams);
@@ -776,33 +764,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   }
 
   return sharingDiv;
-};
-
-/**
- *
- */
-FeedbackUtils.prototype.numTrophiesEarned_ = function (options) {
-  if (options.response && options.response.trophy_updates) {
-    return options.response.trophy_updates.length;
-  } else {
-    return 0;
-  }
-};
-
-/**
- *
- */
-FeedbackUtils.prototype.getTrophiesElement_ = function (options) {
-  var html = "";
-  for (var i = 0; i < options.numTrophies; i++) {
-    html += trophy({
-      img_url: options.response.trophy_updates[i][2],
-      concept_name: options.response.trophy_updates[i][0]
-    });
-  }
-  var trophies = document.createElement('div');
-  trophies.innerHTML = html;
-  return trophies;
 };
 
 /**

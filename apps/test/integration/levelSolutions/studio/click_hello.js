@@ -14,9 +14,9 @@ module.exports = {
       description: "Expected solution.",
       xml: '<xml><block type="when_run" deletable="false"></block><block type="studio_whenSpriteClicked" deletable="false"><next><block type="studio_saySprite"><title name="TEXT">hello</title></block></next></block></xml>',
       runBeforeClick: function (assert) {
-        // Make sure we reordered our start avatars
+        // Make sure we didn't reorder our start avatars
         assert(Studio.startAvatars.length, 23);
-        assert(Studio.startAvatars[0] === 'octopus');
+        assert(Studio.startAvatars[4] === 'octopus');
 
         // simulate a click so that level gets completed
         tickWrapper.runOnAppTick(Studio, 1, function () {

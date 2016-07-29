@@ -89,5 +89,6 @@
   "turnTooltip": "Casann seo an t-ealaíontóir ar chlé tríd an uillinn shonraithe.",
   "turtleVisibilityTooltip": "Taispeáin nó folaigh an t-ealaíontóir.",
   "widthTooltip": "Athraíonn seo leithead an phinn.",
-  "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo."
+  "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo.",
+  "jumpTo": "jump to"
 }
