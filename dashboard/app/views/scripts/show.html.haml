@@ -74,6 +74,3 @@
           = level.name
         .span8
           = level.instructions
-
-- if @script && current_user.try(:teacher?) && (!@script.respond_to?('professional_course?') || !@script.professional_course?)
-  = render partial: 'teacher'
