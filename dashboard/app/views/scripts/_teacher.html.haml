@@ -1,8 +1,9 @@
 - viewing_as_teacher = !params[:user_id]
 
+-# TODO - move this all to React
 - if current_user.try(:teacher?)
 
-  .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] || !@script_level ? '' : 'hidden'}
+  .teacher-panel{class: params[:user_id] || params[:section_id] || !@script_level ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
@@ -39,9 +40,9 @@
 
     function resizeScrollable() {
       var newHeight = $('.teacher-panel').innerHeight() -
-          $('.teacher-panel h3').outerHeight() -
-          15 - // magic..
-          $('.non-scrollable-wrapper').outerHeight();
+        $('.teacher-panel h3').outerHeight() -
+        15 - // magic..
+        $('.non-scrollable-wrapper').outerHeight();
       $('.scrollable-wrapper').css('max-height', newHeight);
     }
     $(document).ready(resizeScrollable);

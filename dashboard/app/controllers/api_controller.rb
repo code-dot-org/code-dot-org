@@ -11,8 +11,29 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
+  def all_section_progress
+    return unless current_user
+
+    data = current_user.sections.map do |section|
+      @section = section
+      @script = section.script
+      {
+        section_id: section.id,
+        section_name: section.name,
+        progress: single_section_progress
+      }
+    end
+    render json: data
+  end
+
   def section_progress
     load_section
+    load_script
+
+    render json: single_section_progress
+  end
+
+  def single_section_progress
     load_script
 
     # stage data
@@ -35,17 +56,15 @@ class ApiController < ApplicationController
       {id: student.id, levels: student_levels}
     end
 
-    data = {
-            students: students,
-            script: {
-                     id: @script.id,
-                     name: data_t_suffix('script.name', @script.name, 'title'),
-                     levels_count: @script.script_levels.length,
-                     stages: stages
-                    }
-           }
-
-    render json: data
+    {
+      students: students,
+      script: {
+        id: @script.id,
+        name: data_t_suffix('script.name', @script.name, 'title'),
+        levels_count: @script.script_levels.length,
+        stages: stages
+      }
+     }
   end
 
   def student_progress
