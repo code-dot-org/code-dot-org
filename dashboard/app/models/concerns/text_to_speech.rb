@@ -7,14 +7,20 @@ require 'redcarpet/render_strip'
 TTS_BUCKET = 'cdo-tts'
 
 # american candidate
-#VOICE = 'ella22k'
-#SPEED = 140
-#SHAPE = 98
 
 # british candidate
-VOICE = 'rosie22k'
-SPEED = 180
-SHAPE = 100
+VOICES = {
+  rosie: {
+    VOICE: 'rosie22k',
+    SPEED: 180,
+    SHAPE: 100
+  },
+  ella: {
+    VOICE: 'ella22k',
+    SPEED: 140,
+    SHAPE: 98
+  }
+}
 
 module TextToSpeech
   extend ActiveSupport::Concern
@@ -31,9 +37,9 @@ module TextToSpeech
     )
   end
 
-  def self.tts_upload_to_s3(text, filename)
+  def self.tts_upload_to_s3(text, filename, voice=:rosie)
     return if text.blank?
-    url = acapela_text_to_audio_url(text, VOICE, SPEED, SHAPE)
+    url = acapela_text_to_audio_url(text, VOICES[voice][:VOICE], VOICES[voice][:SPEED], VOICES[voice][:SHAPE])
     return if url.nil?
     uri = URI.parse(url)
     Net::HTTP.start(uri.host) { |http|
@@ -60,22 +66,24 @@ module TextToSpeech
     changed && write_to_file? && self.published
   end
 
-  def tts_instructions_audio_file
+  def tts_instructions_audio_file(voice=:rosie)
     content_hash = Digest::MD5.hexdigest(self.tts_instructions_text)
-    "#{VOICE}/#{SPEED}/#{SHAPE}/#{content_hash}/#{self.name}.mp3"
+    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
   end
 
-  def tts_markdown_instructions_audio_file
+  def tts_markdown_instructions_audio_file(voice=:rosie)
     content_hash = Digest::MD5.hexdigest(self.tts_markdown_instructions_text)
-    "#{VOICE}/#{SPEED}/#{SHAPE}/#{content_hash}/#{self.name}.mp3"
+    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
   end
 
   def tts_update
     if self.tts_should_update_instructions?
-      TextToSpeech.tts_upload_to_s3(self.tts_instructions_text, self.tts_instructions_audio_file)
+      TextToSpeech.tts_upload_to_s3(self.tts_instructions_text, self.tts_instructions_audio_file(:rosie), :rosie)
+      TextToSpeech.tts_upload_to_s3(self.tts_instructions_text, self.tts_instructions_audio_file(:ella), :ella)
     end
     if self.tts_should_update_markdown_instructions?
-      TextToSpeech.tts_upload_to_s3(self.tts_markdown_instructions_text, self.tts_markdown_instructions_audio_file)
+      TextToSpeech.tts_upload_to_s3(self.tts_markdown_instructions_text, self.tts_markdown_instructions_audio_file(:rosie), :rosie)
+      TextToSpeech.tts_upload_to_s3(self.tts_markdown_instructions_text, self.tts_markdown_instructions_audio_file(:ella), :ella)
     end
   end
 end
