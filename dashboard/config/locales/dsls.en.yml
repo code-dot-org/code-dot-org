@@ -1582,6 +1582,9 @@ en:
         title: title
       grade2_unplugged_rlAlgorithms:
         Real Life Algorithms: Real Life Algorithms
+      grade3_Unplugged_ConditionalsLoops:
+        Conditionals with Loops: Conditionals with Loops
+      grade3_farmer_stage13_placeholder: {}
       gradeK_external_FrustrationWorksheet:
         Frustration Worksheet: Frustration Worksheet
       gradeK_unplugged_events:
@@ -1604,6 +1607,9 @@ en:
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
       plc csp1 philosophy and commentary: {}
+      pre-assessment survey heading1: {}
+      pre-assessment survey heading2: {}
+      pre-assessment survey heading3: {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -1977,6 +1983,10 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Unit 1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
@@ -4394,11 +4404,31 @@ en:
         26^26: 26^26
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L13 Cleaning Data MC:
+        Cleaning and Filtering Data: Cleaning and Filtering Data
+        Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
+        Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
+        Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
+        Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
+        Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
       U2L14 Assessment3:
         'Assessment: Question 4': 'Assessment: Question 4'
         True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
         'false': 'false'
         'true': 'true'
+      U2L14 Summary Tables MC:
+        Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
+        Pivot tables are used to clean or alter raw data to get it into a computable form: Pivot tables are used to clean or alter raw data to get it into a computable form
+        Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of data
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
+        Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
+        Pivot tables are used to quickly remove errors and inconsistencies from the underlying raw dataset.: Pivot tables are used to quickly remove errors and inconsistencies from the underlying raw dataset.
+        What's it good for?: What's it good for?
+        Which of the following statements are true about pivot tables: Which of the following statements are true about pivot tables
+        Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
+        Which of the following statements are true about summary (pivot) tables: Which of the following statements are true about summary (pivot) tables
+        foo: foo
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
         'Assessment: Question 1': 'Assessment: Question 1'
