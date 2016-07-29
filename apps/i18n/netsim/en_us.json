@@ -66,6 +66,7 @@
   "logBrowserHeader_showMyTraffic": "show my traffic",
   "logBrowserHeader_showTrafficFromMe": "show traffic from me",
   "logBrowserHeader_showTrafficToMe": "show traffic to me",
+  "logBrowserHeader_teacherView": "Teacher View",
   "logBrowserHeader_toggleAll": "show all routers",
   "logBrowserHeader_toggleMine": "show my router",
   "logBrowserHeader_trafficFromAddress": " - Traffic From {address}",
