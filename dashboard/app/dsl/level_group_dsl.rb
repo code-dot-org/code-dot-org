@@ -57,7 +57,7 @@ class LevelGroupDSL < BaseDSL
     if level.nil?
       raise "Unable to locate level '#{name}'"
     end
-    if level.is_a?(FreeResponse) && level.allow_user_uploads
+    if level.is_a?(FreeResponse) && level.allow_user_uploads?
       raise "User uploads aren't supported in a LevelGroup (due to global channel) '#{name}'"
     end
     level_class = level.class.to_s.underscore

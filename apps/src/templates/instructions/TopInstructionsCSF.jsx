@@ -4,7 +4,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
@@ -91,6 +91,12 @@ const styles = {
     left: 0,
     marginLeft: 0
   },
+  leftColRtl: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    marginRight: 0
+  },
   embedView: {
     height: undefined,
     bottom: 0
@@ -105,6 +111,11 @@ const styles = {
     position: 'relative',
     top: 50,
     left: 25
+  },
+  scrollButtonsRtl: {
+    position: 'relative',
+    top: 50,
+    right: 25
   },
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
@@ -127,6 +138,10 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'right'
   },
+  instructionsWithTipsRtl: {
+    width: 'calc(100% - 20px)',
+    float: 'left'
+  },
 };
 
 var TopInstructions = React.createClass({
@@ -137,6 +152,7 @@ var TopInstructions = React.createClass({
       content: React.PropTypes.string.isRequired,
       block: React.PropTypes.object, // XML
     })).isRequired,
+    hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
@@ -217,7 +233,7 @@ var TopInstructions = React.createClass({
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
-      for (const image of images) {
+      for (let i = 0, image; (image = images[i]); i++) {
         image.onload = image.onload || this.scrollInstructionsToBottom;
       }
     }
@@ -404,8 +420,8 @@ var TopInstructions = React.createClass({
    * Handle a click to the hint display bubble (lightbulb)
    */
   handleClickBubble() {
-    // If we don't have authored hints, clicking bubble shouldnt do anything
-    if (this.props.hasAuthoredHints) {
+    // If we don't have authored hints to display, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
         promptForHint: true
       });
@@ -468,7 +484,7 @@ var TopInstructions = React.createClass({
         <ThreeColumns
           styles={{
             container: [styles.body, this.props.isMinecraft && craftStyles.body],
-            left: styles.leftCol
+            left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
           }}
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
@@ -493,9 +509,13 @@ var TopInstructions = React.createClass({
           <div
             ref="instructions"
             className="csf-top-instructions"
-            style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
+            style={[
+              styles.instructions,
+              shouldDisplayChatTips(this.props.skinId) &&
+                (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
+            ]}
           >
-            <ChatBubble isMinecraft={this.props.isMinecraft}>
+            <ChatBubble>
               {this.props.hasContainedLevels &&
                 <ProtectedStatefulDiv
                   id="containedLevelContainer"
@@ -520,7 +540,6 @@ var TopInstructions = React.createClass({
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
                 key={hint.hintId}
-                isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 content={hint.content}
                 block={hint.block}
@@ -528,7 +547,6 @@ var TopInstructions = React.createClass({
             )}
             {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
               <InlineFeedback
-                isMinecraft={this.props.isMinecraft}
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
               />}
@@ -549,7 +567,7 @@ var TopInstructions = React.createClass({
             />
             {!this.props.collapsed &&
               <ScrollButtons
-                style={styles.scrollButtons}
+                style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
                 ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
@@ -570,6 +588,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     hints: state.authoredHints.seenHints,
+    hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,

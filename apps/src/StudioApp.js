@@ -1176,14 +1176,6 @@ StudioApp.prototype.onReportComplete = function (response) {
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
   }
-
-  if (response.trophy_updates) {
-    response.trophy_updates.forEach(update => {
-      const concept_name = update[0];
-      const trophy_name = update[1];
-      trackEvent('Trophy', concept_name, trophy_name);
-    });
-  }
 };
 
 /**
@@ -1918,7 +1910,7 @@ StudioApp.prototype.configureDom = function (config) {
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
-  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
