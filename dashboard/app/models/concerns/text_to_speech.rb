@@ -6,6 +6,16 @@ require 'redcarpet/render_strip'
 
 TTS_BUCKET = 'cdo-tts'
 
+# american candidate
+#VOICE = 'ella22k'
+#SPEED = 140
+#SHAPE = 98
+
+# british candidate
+VOICE = 'rosie22k'
+SPEED = 180
+SHAPE = 100
+
 module TextToSpeech
   extend ActiveSupport::Concern
 
@@ -22,7 +32,10 @@ module TextToSpeech
   end
 
   def self.tts_upload_to_s3(text, filename)
-    uri = URI.parse(acapela_text_to_audio_url(text))
+    return if text.blank?
+    url = acapela_text_to_audio_url(text, VOICE, SPEED, SHAPE)
+    return if url.nil?
+    uri = URI.parse(url)
     Net::HTTP.start(uri.host) { |http|
       resp = http.get(uri.path)
       AWS::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
@@ -49,12 +62,12 @@ module TextToSpeech
 
   def tts_instructions_audio_file
     content_hash = Digest::MD5.hexdigest(self.tts_instructions_text)
-    "#{content_hash}/#{self.name}.mp3"
+    "#{VOICE}/#{SPEED}/#{SHAPE}/#{content_hash}/#{self.name}.mp3"
   end
 
   def tts_markdown_instructions_audio_file
     content_hash = Digest::MD5.hexdigest(self.tts_markdown_instructions_text)
-    "#{content_hash}/#{self.name}.mp3"
+    "#{VOICE}/#{SPEED}/#{SHAPE}/#{content_hash}/#{self.name}.mp3"
   end
 
   def tts_update

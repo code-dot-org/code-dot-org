@@ -64,8 +64,8 @@
 
       $.getJSON("http://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
         cl_login: "#{CDO.acapela_login}",
-        cl_app: "#{CDO.acapela_app}",
-        cl_pwd: "#{CDO.acapela_password}",
+        cl_app: "#{CDO.acapela_ephemeral_app}",
+        cl_pwd: "#{CDO.acapela_ephemeral_password}",
         req_voice: $("#level_tts_voice").val(),
         req_text: sourceText
       }, function (data) {
@@ -86,12 +86,11 @@
     $(document).ready(function () {
       $.getJSON("http://vaas.acapela-group.com/Services/Voices.json?jsoncallback=?", {
           cl_login: "#{CDO.acapela_login}",
-          cl_app: "#{CDO.acapela_app}",
+          cl_app: "#{CDO.acapela_ephemeral_app}",
           fields_selection: "language_desc;speaker",
           frequency: "22050",
           technology: "HQ",
         }, function (data) {
-
           var voices = Object.keys(data.voices).reduce(function (prev, curr) {
             var voice = {
               speaker: data.voices[curr].speaker,
