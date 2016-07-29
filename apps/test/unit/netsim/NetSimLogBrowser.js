@@ -5,6 +5,7 @@ import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {throwOnConsoleErrors} from '../../util/testUtils';
 import NetSimLogBrowser from '@cdo/apps/netsim/NetSimLogBrowser';
+import i18n from '@cdo/netsim/locale';
 
 describe('NetSimLogBrowser', function () {
   throwOnConsoleErrors();
@@ -12,7 +13,7 @@ describe('NetSimLogBrowser', function () {
   it('renders warning-free with the least possible parameters', function () {
     let shallowResult = shallow(
       <NetSimLogBrowser
-        i18n={{}}
+        i18n={i18n}
         setRouterLogMode={spy()}
         currentTrafficFilter="none"
         setTrafficFilter={spy()}
