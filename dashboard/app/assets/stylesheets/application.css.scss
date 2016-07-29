@@ -134,18 +134,6 @@ img.video_thumbnail {
   margin-bottom: 30px;
 }
 
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
-}
-
 .report_cell {
   text-align: center;
   color: white;
@@ -928,11 +916,6 @@ input.header_input {
   line-height: 20px;
 }
 
-.trophy_image {
-  width: 45px;
-  height: 45px;
-}
-
 #alert {
   color: $red;
   font-size: 130%;
@@ -1276,6 +1259,7 @@ a.download-video {
     margin-top: 3px;
     overflow: hidden;
     padding: 10px;
+    min-height: 110px;
   }
   .teacher-announce .announce-content .content-img-container {
     float: left;
@@ -1291,15 +1275,15 @@ a.download-video {
     overflow: hidden;
     padding-left: 10px;
     line-height: 18px;
-    width: 610px;
+    width: 580px;
   }
   .teacher-announce .announce-content .content-text b {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
     position: absolute;
-    bottom: 10px;
     right: 10px;
+    margin-top: 75px;
   }
   .teacher-announce a {
     text-decoration: none;
@@ -1690,6 +1674,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .external, .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1812,6 +1800,7 @@ a.download-video {
 
 .free-response .response {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {
@@ -1932,16 +1921,9 @@ div.mini_gallery_activity {
 }
 
 .buttons.submittable {
-  .submitButton {
+  .submitButton, .unsubmitButton {
     border-color: $purple;
     background-color: $purple;
-    color: white;
-    background-image: none;
-  }
-
-  .unsubmitButton {
-    border-color: $light_purple;
-    background-color: $light_purple;
     color: white;
     background-image: none;
   }

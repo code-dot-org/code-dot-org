@@ -119,6 +119,10 @@ class Studio < Grid
 </category>
 <category name="Events">
   <block type="studio_whenArrow" />
+  <block type="studio_whenUp" />
+  <block type="studio_whenDown" />
+  <block type="studio_whenLeft" />
+  <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
 </category>
@@ -421,6 +425,12 @@ class Studio < Grid
   <block type="studio_moveNortheastDistance"></block>
   <block type="studio_moveSouthwestDistance"></block>
   <block type="studio_moveSoutheastDistance"></block>
+  <block type="controls_repeat_simplified">
+    <title name="TIMES">5</title>
+  </block>
+  <block type="controls_repeat_simplified_dropdown">
+    <title name="TIMES" config="3-10">3</title>
+  </block>
 </category>
     XML
   end

@@ -89,5 +89,6 @@
   "turnTooltip": "Gira el artista a la izquierda o la derecha en la cantidad de grados especificada.",
   "turtleVisibilityTooltip": "Hace que el artista sea visible o invisible.",
   "widthTooltip": "Cambia el ancho del lápiz.",
-  "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1."
+  "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1.",
+  "jumpTo": "jump to"
 }

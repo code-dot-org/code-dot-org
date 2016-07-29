@@ -89,5 +89,6 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "পেন্সিলের প্রস্থ পরিবর্তন করে।",
-  "wrongColour": "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।"
+  "wrongColour": "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।",
+  "jumpTo": "jump to"
 }
