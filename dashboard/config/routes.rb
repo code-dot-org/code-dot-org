@@ -332,6 +332,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/dashboardapi/section_progress', to: 'api#all_section_progress'
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'

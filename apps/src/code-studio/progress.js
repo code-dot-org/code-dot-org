@@ -62,6 +62,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
+      getSectionProgress();
     }
 
     if (data.focusAreaPositions) {
@@ -91,6 +92,15 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     mountPoint
   );
 };
+
+function getSectionProgress() {
+  $.ajax(
+    '/dashboardapi/section_progress',
+    { data: { user_id: clientState.queryParams('user_id') } }
+  ).done(data => {
+    console.log(data);
+  });
+}
 
 /**
  * Creates a redux store with our initial progress
