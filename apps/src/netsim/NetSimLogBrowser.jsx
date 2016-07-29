@@ -210,19 +210,17 @@ if (BUILD_STYLEGUIDE) {
         `Here's what the teacher (or shard owner) gets to see`,
         () => (
           <div id="netsim">
-            <div className="new-router-log-modal">
-              <NetSimLogBrowser
-                isOpen
-                i18n={i18n}
-                isAllRouterLogMode
-                currentTrafficFilter="all"
-                setRouterLogMode={() => null}
-                setTrafficFilter={() => null}
-                headerFields={simplePacket}
-                logRows={sampleData}
-                teacherView
-              />
-            </div>
+            <NetSimLogBrowser
+              isOpen
+              i18n={i18n}
+              isAllRouterLogMode
+              currentTrafficFilter="all"
+              setRouterLogMode={() => null}
+              setTrafficFilter={() => null}
+              headerFields={simplePacket}
+              logRows={sampleData}
+              teacherView
+            />
           </div>
         ));
   };
