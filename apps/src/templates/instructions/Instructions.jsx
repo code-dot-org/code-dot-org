@@ -1,4 +1,7 @@
-var React = require('react');
+import React from 'react';
+import classnames from 'classnames';
+import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
@@ -16,6 +19,12 @@ const styles = {
   audio: {
     verticalAlign: "middle",
     margin: "0 10px",
+  },
+  error: {
+    display: 'inline-block',
+    marginLeft: 10,
+    marginBottom: 0,
+    padding: '5px 10px'
   }
 };
 
@@ -39,13 +48,39 @@ var Instructions = React.createClass({
     ),
     inTopPane: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    acapelaSrc: React.PropTypes.string.isRequired
+    acapelaEnabled: React.PropTypes.bool,
+    acapelaSrc: React.PropTypes.string,
+  },
+
+  getInitialState: function () {
+    return {
+      audioSrc: undefined,
+      audioError: undefined
+    };
   },
 
   playAudio: function () {
-    this.setState({
-      audioSrc: this.props.acapelaSrc
-    });
+    this.setState({ audioSrc: this.props.acapelaSrc });
+  },
+
+  componentWillUpdate: function (nextProps) {
+    if (this.props.renderedMarkdown !== nextProps.renderedMarkdown) {
+      this.setState({
+        audioSrc: undefined,
+        audioError: undefined
+      });
+    }
+  },
+
+  componentDidUpdate: function () {
+    if (this.refs.audio) {
+      $(ReactDOM.findDOMNode(this.refs.audio)).on("error", e => {
+        this.setState({
+          audioSrc: undefined,
+          audioError: "We're sorry, this audio file could not be played."
+        });
+      });
+    }
   },
 
   render: function () {
@@ -59,7 +94,6 @@ var Instructions = React.createClass({
     // Otherwise, render the title and up to two sets of instructions.
     // These instructions may contain spans and images as determined by
     // substituteInstructionImages
-
     return (
       <div style={styles.main}>
         {this.props.renderedMarkdown &&
@@ -79,24 +113,40 @@ var Instructions = React.createClass({
             instructions2={this.props.instructions2}
           />
         }
+
         {this.props.inputOutputTable &&
           <InputOutputTable data={this.props.inputOutputTable}/>
         }
+
         {this.props.aniGifURL && !this.props.inTopPane &&
           <img className="aniGif example-image" src={this.props.aniGifURL}/>
         }
         {this.props.aniGifURL && this.props.inTopPane &&
           <AniGifPreview/>
         }
-        {this.props.acapelaSrc && (<div>
-          <p style={{lineHeight: "14px", fontSize: "12px"}}>Note that in trial mode, we don't have access to the high-quality children's voices that we would probably want to use in production</p>
-          <a className="btn btn-primary" onClick={this.playAudio}><i className="icon-bullhorn icon-white"></i></a>
-          {this.state && this.state.audioSrc && <audio style={styles.audio} src={this.state.audioSrc} controls='controls' />}
-        </div>)}
+
+        {this.props.acapelaEnabled &&
+          <div>
+            <a
+              className={classnames({
+                'btn btn-primary' : true,
+                'disabled': !!this.state.audioError
+              })}
+              onClick={!this.state.audioError && this.playAudio}
+            ><i className="icon-bullhorn icon-white"></i></a>
+            {this.state.audioSrc && <audio ref="audio" style={styles.audio} src={this.state.audioSrc} controls="controls" />}
+            {this.state.audioError && <div className="alert alert-error" style={styles.error}>
+              <div id="alert-content">{this.state.audioError}</div>
+            </div>}
+          </div>
+        }
+
         {this.props.authoredHints}
       </div>
     );
   }
 });
 
-module.exports = Instructions;
+module.exports = connect(state => ({
+  acapelaEnabled: state.pageConstants.acapelaEnabled,
+}))(Instructions);

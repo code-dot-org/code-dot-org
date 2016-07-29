@@ -2912,7 +2912,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
     acapelaEnabled: !!config.acapelaEnabled,
-    acapelaSrc: config.acapelaSrc,
+    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
+    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
