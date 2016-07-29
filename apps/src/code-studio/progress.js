@@ -7,7 +7,7 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
-import TeacherPanel from './components/TeacherPanel';
+import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
 import { getStore } from './redux';
 
@@ -63,6 +63,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
+      // TODO - do i also need to validate that they have sections?
       renderTeacherPanel(store);
     }
 
@@ -106,9 +107,7 @@ function renderTeacherPanel(store) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeacherPanel>
-        <div> foo </div>
-      </TeacherPanel>
+      <ScriptTeacherPanel/>
     </Provider>,
     div
   );
