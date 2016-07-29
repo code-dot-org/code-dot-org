@@ -11,4 +11,5 @@ module.exports = {
   ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN', 'DATA'),
   DataView: utils.makeEnum('OVERVIEW', 'PROPERTIES', 'TABLE'),
   ANIMATION_LENGTH_MS: 200,
+  IMPORT_SCREEN: "Import screen...",
 };

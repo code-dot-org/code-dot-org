@@ -1,0 +1,56 @@
+= javascript_include_tag 'js/makerlab'
+= javascript_include_tag 'js/makerlab/setupPage'
+
+:css
+  .main {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .maker-setup img {
+    border-radius: 50%;
+    float: right;
+    margin: 0 0 15px 10px;
+  }
+
+.maker-setup
+  :markdown
+    # CS Discoveries Maker APIs Pilot IT Setup
+
+    ## The Circuit Playground
+
+    <center><a href="https://www.adafruit.com/products/3000"><img src="#{image_url('maker/circuit-playground-200.jpg')}" width=200></a></center>
+
+    The Adafruit [Circuit Playground](https://www.adafruit.com/products/3000) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.
+
+    In the Computer Science Discoveries curriculum being piloted this school year, we will be using the Circuit Playground tethered via USB to students' computers to allow for online curriculum integration and interactive debugging of programs.
+
+    To connect from USB to the [Code Studio App Lab website](https://code.org/educate/applab), we will need to install a Chrome App extension to support serial communication from the browser.
+
+    ## Computer Setup Steps
+
+    1. If you're using Windows, you will need to start by installing the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).
+    1. If you are using a new Circuit Playground board that has not previously been set up with the Circuit Playground Firmata sketch, [install the Circuit Playground Firmata sketch with these instructions](https://learn.adafruit.com/circuit-playground-firmata/overview).
+    1. Install [Google Chrome](https://www.google.com/chrome/browser/) and our [Web to Serial Chrome App extension](https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg). _Note: we plan to support other browsers including IE in Fall 2017._
+       * If you previously had the Chrome App installed, confirm the version # has been updated to 30, by navigating to `chrome://extensions` in your browser bar
+    1. Navigate to the Maker APIs w/ App Lab page:
+       * [Make an account](https://studio.code.org/users/sign_up) or [log in](https://studio.code.org/users/sign_in) to Code Studio.
+       * Navigate to the Maker APIs w/ App Lab project page: [https://studio.code.org/p/makerlab](https://studio.code.org/p/makerlab)
+    1. Plug in a Circuit Playground board, write some code (new blocks are in the “Maker Lab” and “Circuit” tabs) and press **Run**.
+    1. A dialog asking for permission for Code Studio to connect to the Chrome App will pop up. Click Accept.
+
+    ## Setup Status
+
+    <div id="setup-status-mount"/>
+
+    ## Debugging common issues
+
+    If something seems to not be working on the App Lab webpage, try the following steps to work around issues that come up:
+
+    1. Try refreshing the App Lab webpage.
+    1. Try un-plugging and re-plugging the board, and refreshing the webpage.
+    1. Double check the Computer Setup Steps above. Is the Chrome App being detected? Is the board plugged in, and connectable?
+
+    #### If you see an error like “ERROR: Line: 1: Unknown identifier: touchSensor0”
+
+    This often means one of the connection steps failed. Try following the steps above, and if something still seems to be going wrong, send along a support ticket and we can debug further.
