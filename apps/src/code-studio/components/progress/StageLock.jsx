@@ -38,6 +38,10 @@ const fakeData = [
 ];
 
 const StageLock = React.createClass({
+  propTypes: {
+    sectionsLoaded: React.PropTypes.bool.isRequired
+  },
+
   getInitialState() {
     return {
       dialogIsOpen: false
@@ -53,6 +57,10 @@ const StageLock = React.createClass({
   },
 
   render() {
+    // TODO - i18n
+    if (!this.props.sectionsLoaded) {
+      return <div>Loading...</div>;
+    }
     return (
       <div>
         <button style={progressStyles.blueButton} onClick={this.openDialog}>

@@ -34,8 +34,13 @@ const styles = {
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    sections: React.PropTypes.object.isRequired, // TODO
+    sections: React.PropTypes.objectOf(
+      React.PropTypes.shape({
+        name: React.PropTypes.string.isRequired
+      })
+    ).isRequired,
     selectedSection: React.PropTypes.string,
+    sectionsLoaded: React.PropTypes.bool.isRequired,
     setViewType: React.PropTypes.func.isRequired,
     selectSection: React.PropTypes.func.isRequired,
   },
@@ -45,10 +50,8 @@ const ScriptTeacherPanel = React.createClass({
   },
 
   render() {
-    const { viewAs, sections, selectedSection, setViewType } = this.props;
-    if (Object.keys(sections).length === 0) {
-      return null;
-    }
+    const { viewAs, sections, selectedSection, sectionsLoaded, setViewType } = this.props;
+    const hasSections = Object.keys(sections).length > 0;
     // TODO - i18n
     // TODO - don't forget section is conditional on having unlocked stages
     return (
@@ -69,20 +72,22 @@ const ScriptTeacherPanel = React.createClass({
               </ToggleGroup>
             </div>
           </div>
-          <select
-            name="sections"
-            style={styles.select}
-            value={selectedSection}
-            onChange={this.handleSelectChange}
-          >
-            <option value="none">Select a Section</option>
-            {Object.keys(sections).map(id => (
-              <option key={id} value={id}>
-                {sections[id].name}
-              </option>
-            ))}
-          </select>
-          {this.props.viewAs === ViewType.Teacher &&
+          {!sectionsLoaded && <div style={styles.text}>Loading...</div>}
+          {hasSections &&
+            <select
+              name="sections"
+              style={styles.select}
+              value={selectedSection}
+              onChange={this.handleSelectChange}
+            >
+              {Object.keys(sections).map(id => (
+                <option key={id} value={id}>
+                  {sections[id].name}
+                </option>
+              ))}
+            </select>
+          }
+          {hasSections && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
                 Select a section to be able to lock and unlock assessments or
@@ -106,7 +111,8 @@ const ScriptTeacherPanel = React.createClass({
 export default connect(state => ({
   viewAs: state.teacherPanel.viewAs,
   sections: state.teacherPanel.sections,
-  selectedSection: state.teacherPanel.selectedSection
+  selectedSection: state.teacherPanel.selectedSection,
+  sectionsLoaded: state.teacherPanel.sectionsLoaded
 }), dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));

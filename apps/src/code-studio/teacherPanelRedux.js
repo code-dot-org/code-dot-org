@@ -14,7 +14,8 @@ const SELECT_SECTION = 'teacherPanel/SELECT_SECTION';
 const initialState = {
   viewAs: ViewType.Teacher,
   sections: {},
-  selectedSection: 'none'
+  selectedSection: null,
+  sectionsLoaded: false
 };
 
 /**
@@ -29,7 +30,9 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === SET_SECTIONS) {
     return Object.assign({}, state, {
-      sections: action.sections
+      sections: action.sections,
+      sectionsLoaded: true,
+      selectedSection: Object.keys(action.sections)[0]
     });
   }
 
