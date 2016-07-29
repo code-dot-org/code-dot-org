@@ -2446,6 +2446,9 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
+      // This block handles generation of nextConnection descendants (in order
+      // to wrap them in a callback).
+      this.skipNextBlockGeneration = true;
     }
   };
 
@@ -2457,12 +2460,6 @@ exports.install = function (blockly, blockInstallOptions) {
     var nextBlock = this.nextConnection && this.nextConnection.targetBlock();
     var nextCode = Blockly.JavaScript.blockToCode(nextBlock, true);
     nextCode = Blockly.Generator.prefixLines(`${varName} = value;\n${nextCode}`, '  ');
-
-    if (nextBlock) {
-      // We've already handled generation for nextBlock and all descendant blocks.
-      nextBlock.skipGeneration = true;
-    }
-
     var callback = `function (value) {\n${nextCode}}`;
 
     return `Studio.askForInput("${blockId}", "${question}", ${callback});\n`;
