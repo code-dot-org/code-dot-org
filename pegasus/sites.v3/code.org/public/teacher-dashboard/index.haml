@@ -799,6 +799,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.changeScript = function(scriptId) {
 
       // Load assessments.
+      $scope.assessmentsLoaded = false;
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
       $scope.assessments.$promise.then(function(){
         $scope.assessmentsLoaded = true;
@@ -807,6 +808,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       });
 
       // Load surveys.
+      $scope.surveysLoaded = false;
       $scope.surveys = sectionsService.surveys({id: $routeParams.id, script_id: scriptId});
       $scope.surveys.$promise.then(function() {
         $scope.surveysLoaded = true;
