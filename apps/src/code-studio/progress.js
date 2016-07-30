@@ -21,17 +21,14 @@ import {
 var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
-    currentLevelId, saveAnswersBeforeNavigation) {
+    currentLevelId, saveAnswersBeforeNavigation, viewingOtherUser) {
   const store = initializeStoreWithProgress({
     name: scriptName,
     stages: [stageData]
-  }, currentLevelId, saveAnswersBeforeNavigation);
+  }, currentLevelId, saveAnswersBeforeNavigation, viewingOtherUser);
 
-  // Store results, except when a teacher viewing student results.
-  if (window.location.href.indexOf("user_id") === -1) {
-    store.dispatch(mergeProgress(_.mapValues(progressData.levels,
-      level => level.submitted ? SUBMITTED_RESULT : level.result)));
-  }
+  store.dispatch(mergeProgress(_.mapValues(progressData.levels,
+    level => level.submitted ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
@@ -103,7 +100,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * @returns {object} The created redux store
  */
 function initializeStoreWithProgress(scriptData, currentLevelId,
-    saveAnswersBeforeNavigation = false) {
+    saveAnswersBeforeNavigation = false, viewingOtherUser = false) {
   const store = getStore();
 
   store.dispatch(initProgress({
@@ -119,10 +116,13 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
     clientState.allLevelsProgress()[scriptData.name] || {}
   ));
 
-  // Progress from the server should be written down locally.
-  store.subscribe(() => {
-    clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
-  });
+  // Progress from the server should be written down locally, unless we're a teacher
+  // viewing a student's work.
+  if (!viewingOtherUser) {
+    store.subscribe(() => {
+      clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
+    });
+  }
 
   return store;
 }

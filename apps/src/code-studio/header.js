@@ -39,7 +39,7 @@ const PUZZLE_PAGE_NONE = -1;
  *   }>
  * }}
  */
-header.build = function (stageData, progressData, currentLevelId, scriptName, puzzlePage) {
+header.build = function (stageData, progressData, currentLevelId, scriptName, puzzlePage, viewingOtherUser) {
   stageData = stageData || {};
   progressData = progressData || {};
 
@@ -57,7 +57,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation);
+  progress.renderStageProgress(stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation, viewingOtherUser);
 
   $('.level_free_play').qtip({
     content: {

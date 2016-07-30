@@ -64,5 +64,5 @@
 
   :javascript
     //<![CDATA[
-    dashboard.header.build(#{script_level.stage.summarize.to_json}, #{user_progress}, "#{uid}", "#{script.name}", #{puzzle_page})
+    dashboard.header.build(#{script_level.stage.summarize.to_json}, #{user_progress}, "#{uid}", "#{script.name}", #{puzzle_page}, #{!!params[:user_id]})
     //]]>
