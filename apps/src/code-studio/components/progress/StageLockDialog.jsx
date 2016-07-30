@@ -4,6 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import progressStyles from './progressStyles';
 import color from '../../../color';
+import commonMsg from '@cdo/locale';
 
 // TODO - this enum belongs elsewhere, and use createEnum util
 const LockStatus = {
@@ -119,73 +120,72 @@ const StageLockDialog = React.createClass({
   },
 
   render() {
-    // TODO - i18n
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
       >
         <div style={styles.main}>
-          <div style={styles.title}>Steps to give assessment</div>
+          <div style={styles.title}>{commonMsg.assessmentSteps()}</div>
           <table>
             <tbody>
               <tr>
-                <td>1. "Allow editing" while students should be taking the assessment.</td>
+                <td>{commonMsg.allowEditingInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
                     onClick={this.allowEditing}
                   >
-                    Allow editing
+                    {commonMsg.allowEditing()}
                   </button>
                 </td>
               </tr>
               <tr>
-                <td>2. Once time is up, "Lock stage" to hide questions.</td>
+                <td>{commonMsg.lockStageInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
                     onClick={this.lockStage}
                   >
-                    Lock stage
+                    {commonMsg.lockStage()}
                   </button>
                 </td>
               </tr>
               <tr>
-                <td>3. "Show answers" to put the assessment into a read-only mode.</td>
+                <td>{commonMsg.showAnswersInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
                     onClick={this.showAnswers}
                   >
-                    Show answers
+                    {commonMsg.showAnswers()}
                   </button>
                 </td>
               </tr>
               <tr>
-                <td>4. "Re-lock stage" to prevent sharing of answers with other classes/schools.</td>
+                <td>{commonMsg.relockStageInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
                     onClick={this.lockStage}
                   >
-                    Re-lock stage
+                    {commonMsg.relockStage()}
                   </button>
                 </td>
               </tr>
             </tbody>
           </table>
-          <div style={styles.title}>Individual student control</div>
+          <div style={styles.title}>{commonMsg.studentControl()}</div>
           <div style={styles.tableDesc}>
-            Use the table below to control the state for each individual student.
+            {commonMsg.studentLockStateInstructions()}
           </div>
           <table style={styles.studentTable}>
             <tbody>
               <tr>
-                <th style={styles.headerRow}>Student</th>
-                <th style={styles.headerRow}>Locked</th>
-                <th style={styles.headerRow}>Editable</th>
-                <th style={styles.headerRow}>Answers visible (read-only)</th>
+                <th style={styles.headerRow}>{commonMsg.student()}</th>
+                <th style={styles.headerRow}>{commonMsg.locked()}</th>
+                <th style={styles.headerRow}>{commonMsg.editable()}</th>
+                <th style={styles.headerRow}>{commonMsg.answersVisible()}</th>
               </tr>
               {this.state.lockStatus.map(({name, lockStatus}, index) => (
                 <tr key={index}>
@@ -245,9 +245,11 @@ const StageLockDialog = React.createClass({
             style={progressStyles.baseButton}
             onClick={this.props.handleClose}
           >
-            Cancel
+            {commonMsg.dialogCancel()}
           </button>
-          <button style={progressStyles.blueButton}>Save</button>
+          <button style={progressStyles.blueButton}>
+            {commonMsg.save()}
+          </button>
         </div>
       </BaseDialog>
     );
