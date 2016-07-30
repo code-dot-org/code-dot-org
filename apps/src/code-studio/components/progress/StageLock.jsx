@@ -57,9 +57,8 @@ const StageLock = React.createClass({
   },
 
   render() {
-    // TODO - i18n
     if (!this.props.sectionsLoaded) {
-      return <div>Loading...</div>;
+      return <div>{commonMsg.loading()}</div>;
     }
     return (
       <div>
