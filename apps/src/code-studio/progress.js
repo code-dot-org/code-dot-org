@@ -48,8 +48,8 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
  * @param {string?} currentLevelId - Set when viewing course progress from our
  *   dropdown vs. the course progress page
  */
-progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  const store = initializeStoreWithProgress(scriptData, currentLevelId);
+progress.renderCourseProgress = function (scriptData, currentLevelId, viewingOtherUser) {
+  const store = initializeStoreWithProgress(scriptData, currentLevelId, false, viewingOtherUser);
   var mountPoint = document.createElement('div');
 
   $.ajax(
