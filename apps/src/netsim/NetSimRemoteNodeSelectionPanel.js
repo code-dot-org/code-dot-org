@@ -156,13 +156,15 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Create boilerplate panel markup
   NetSimRemoteNodeSelectionPanel.superPrototype.render.call(this);
 
+  const levelConfig = NetSimGlobals.getLevelConfig();
+
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
     remoteNode: this.remoteNode_,
-    canSeeTeacherLog: this.canCurrentUserSeeTeacherLog_()
+    canSeeTeacherLog: levelConfig.showAddRouterButton && this.canCurrentUserSeeTeacherLog_()
   }));
   this.getBody().html(newMarkup);
 
