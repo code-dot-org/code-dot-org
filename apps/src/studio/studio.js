@@ -1066,7 +1066,9 @@ Studio.onTick = function () {
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
 
-    Studio.executeQueue('askCallback');
+    for (let i = 0; i < Studio.askCallbackIndex; i++) {
+      Studio.executeQueue(`askCallback${i}`);
+    }
 
     updateItems();
 
@@ -2101,6 +2103,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.pauseExecution();
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
+  Studio.askCallbackIndex = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -4830,8 +4833,11 @@ Studio.askForInput = function (question, callback) {
 
     ReactDOM.unmountComponentAtNode(target);
     viz.removeChild(target);
-    registerEventHandler(Studio.eventHandlers, 'askCallback', callback.bind(null, value || ''));
-    callHandler('askCallback');
+
+    let handlerName = `askCallback${Studio.askCallbackIndex}`;
+    Studio.askCallbackIndex++;
+    registerEventHandler(Studio.eventHandlers, handlerName, callback.bind(null, value || ''));
+    callHandler(handlerName);
   }
 
   ReactDOM.render(
