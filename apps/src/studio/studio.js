@@ -2134,6 +2134,7 @@ function getDefaultMapName() {
 Studio.reset = function (first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.hideInputPrompt();
   Studio.gameState = Studio.GameStates.WAITING;
 
   resetItemOrProjectileList(Studio.projectiles);
@@ -4828,11 +4829,16 @@ Studio.askForInput = function (question, callback) {
   viz.appendChild(target);
   studioApp.resizeVisualization();
 
-  function onInputReceived(value) {
-    Studio.resumeExecution();
-
+  Studio.hideInputPrompt = function () {
     ReactDOM.unmountComponentAtNode(target);
     viz.removeChild(target);
+
+    Studio.hideInputPrompt = function () {};
+  };
+
+  function onInputReceived(value) {
+    Studio.resumeExecution();
+    Studio.hideInputPrompt();
 
     let handlerName = `askCallback${Studio.askCallbackIndex}`;
     Studio.askCallbackIndex++;
@@ -4844,6 +4850,10 @@ Studio.askForInput = function (question, callback) {
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
     target
   );
+};
+
+Studio.hideInputPrompt = function () {
+  // To be overriden when the prompt is displayed.
 };
 
 Studio.hideSpeechBubble = function (opts) {
