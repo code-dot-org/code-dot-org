@@ -69,7 +69,6 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
-      // TODO - do i also need to validate that they have sections?
       renderTeacherPanel(store);
     }
 
@@ -101,6 +100,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   );
 };
 
+/**
+ * Query the server for progress of all students in section, and render this to
+ * our teacher panel.
+ */
 function renderTeacherPanel(store) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
