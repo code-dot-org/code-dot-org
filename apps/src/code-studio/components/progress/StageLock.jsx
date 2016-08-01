@@ -39,7 +39,8 @@ const fakeData = [
 
 const StageLock = React.createClass({
   propTypes: {
-    sectionsLoaded: React.PropTypes.bool.isRequired
+    sectionsLoaded: React.PropTypes.bool.isRequired,
+    unlocked: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -68,15 +69,19 @@ const StageLock = React.createClass({
             {commonMsg.lockSettings()}
           </span>
         </button>
-        <button style={progressStyles.orangeButton}>
-          {commonMsg.lockStage()}
-        </button>
-        <span style={styles.warning}>
-          <FontAwesome icon="exclamation-triangle" style={styles.warnIcon}/>
-          <span style={styles.warnText}>
-            {commonMsg.lockWhenDone()}
+        {this.props.unlocked &&
+          <span>
+            <button style={progressStyles.orangeButton}>
+              {commonMsg.lockStage()}
+            </button>
+            <span style={styles.warning}>
+              <FontAwesome icon="exclamation-triangle" style={styles.warnIcon}/>
+              <span style={styles.warnText}>
+                {commonMsg.lockWhenDone()}
+              </span>
+            </span>
           </span>
-        </span>
+        }
         <StageLockDialog
           isOpen={this.state.dialogIsOpen}
           handleClose={this.closeDialog}
