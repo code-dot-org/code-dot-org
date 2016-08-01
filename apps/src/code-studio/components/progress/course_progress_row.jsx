@@ -135,11 +135,7 @@ const CourseProgressRow = React.createClass({
 export default connect(state => ({
   showTeacherInfo: state.progress.showTeacherInfo &&
     state.teacherPanel.viewAs !== ViewType.Student,
-<<<<<<< HEAD
-  changeFocusAreaPath: state.progress.changeFocusAreaPath,
-  lockableAuthorized: state.progress.lockableAuthorized
-=======
+  lockableAuthorized: state.progress.lockableAuthorized,
   sectionsLoaded: state.teacherPanel.sectionsLoaded,
   changeFocusAreaPath: state.progress.changeFocusAreaPath
->>>>>>> better UI for async getting sections
 }))(Radium(CourseProgressRow));
