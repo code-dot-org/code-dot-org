@@ -43,6 +43,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {string} options.levelKey
  * @param {string} options.sharedShardSeed
  * @param {function} options.showRouterLogCallback
+ * @param {function} options.showTeacherLogCallback
  * @constructor
  * @augments NetSimPanel
  */
@@ -150,10 +151,15 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
 
   /**
    * Function to call when we want to display the router log.
-   * @type {Function}
-   * @private
+   * @private {function}
    */
   this.showRouterLogCallback_ = options.showRouterLogCallback;
+
+  /**
+   * Function to call when we want to display the teacher view.
+   * @private {function}
+   */
+  this.showTeacherLogCallback_ = options.showTeacherLogCallback;
 
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
@@ -215,7 +221,8 @@ NetSimLobby.prototype.render = function () {
           cancelButtonCallback: this.onCancelButtonClick_.bind(this),
           joinButtonCallback: this.onJoinButtonClick_.bind(this),
           resetShardCallback: this.onResetShardButtonClick_.bind(this),
-          showRouterLogCallback: this.showRouterLogCallback_
+          showRouterLogCallback: this.showRouterLogCallback_,
+          showTeacherLogCallback: this.showTeacherLogCallback_
         });
 
   }

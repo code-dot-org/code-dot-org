@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-07-29T23:33:08.000Z",
+  "level_num": "custom",
+  "user_id": 340,
+  "properties": {
+    "markdown_instructions": "If yes, what computer science course(s) had you taken before your current computer science  class? ",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
