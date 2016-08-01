@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classNames';
+import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const TeacherPanel = React.createClass({
