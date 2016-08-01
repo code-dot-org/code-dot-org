@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import progressStyles from './progressStyles';
@@ -256,4 +257,20 @@ const StageLockDialog = React.createClass({
   }
 });
 
-export default Radium(StageLockDialog);
+export default connect(state => {
+  const initialLockStatus = [
+    {
+      name: 'Farrah',
+      lockStatus: 'locked'
+    },
+    {
+      name: 'George',
+      lockStatus: 'editable'
+    }
+  ];
+
+  return {
+    initialLockStatus,
+    isOpen: !!state.teacherPanel.lockDialogStageId
+  };
+})(Radium(StageLockDialog));

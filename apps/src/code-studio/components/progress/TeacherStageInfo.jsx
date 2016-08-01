@@ -46,6 +46,7 @@ const styles = {
 
 const TeacherStageInfo = React.createClass({
   propTypes: {
+    stageId: React.PropTypes.number.isRequired,
     lessonPlanUrl: React.PropTypes.string,
     lockable: React.PropTypes.bool.isRequired,
     unlocked: React.PropTypes.bool.isRequired,
@@ -74,6 +75,7 @@ const TeacherStageInfo = React.createClass({
           }
           {this.props.lockable &&
             <StageLock
+              stageId={this.props.stageId}
               sectionsLoaded={this.props.sectionsLoaded}
               unlocked={this.props.unlocked}
             />

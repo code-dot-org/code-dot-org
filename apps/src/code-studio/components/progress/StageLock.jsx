@@ -1,10 +1,12 @@
 import React from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import color from '../../../color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';
 import commonMsg from '@cdo/locale';
+import { openLockDialog, closeLockDialog } from '../../teacherPanelRedux';
 
 const styles = {
   lockSettingsText: {
@@ -22,39 +24,17 @@ const styles = {
   }
 };
 
-/**
- * This fakeData is temporary until we do the work on the backend to properly
- * mark this as lockable or not.
- */
-const fakeData = [
-  {
-    name: 'Farrah',
-    lockStatus: 'locked'
-  },
-  {
-    name: 'George',
-    lockStatus: 'editable'
-  }
-];
-
 const StageLock = React.createClass({
   propTypes: {
     sectionsLoaded: React.PropTypes.bool.isRequired,
-    unlocked: React.PropTypes.bool.isRequired
+    unlocked: React.PropTypes.bool.isRequired, // TODO - connect?
+    stageId: React.PropTypes.number.isRequired,
+    openLockDialog: React.PropTypes.func.isRequired,
+    closeLockDialog: React.PropTypes.func.isRequired,
   },
 
-  getInitialState() {
-    return {
-      dialogIsOpen: false
-    };
-  },
-
-  openDialog() {
-    this.setState({dialogIsOpen: true});
-  },
-
-  closeDialog() {
-    this.setState({dialogIsOpen: false});
+  openLockDialog() {
+    this.props.openLockDialog(this.props.stageId);
   },
 
   render() {
@@ -63,7 +43,7 @@ const StageLock = React.createClass({
     }
     return (
       <div>
-        <button style={progressStyles.blueButton} onClick={this.openDialog}>
+        <button style={progressStyles.blueButton} onClick={this.openLockDialog}>
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
             {commonMsg.lockSettings()}
@@ -83,13 +63,19 @@ const StageLock = React.createClass({
           </span>
         }
         <StageLockDialog
-          isOpen={this.state.dialogIsOpen}
-          handleClose={this.closeDialog}
-          initialLockStatus={fakeData}
+          handleClose={this.props.closeLockDialog}
         />
       </div>
     );
   }
 });
 
-export default Radium(StageLock);
+export default connect(() => ({
+}), dispatch => ({
+  openLockDialog(stageId) {
+    dispatch(openLockDialog(stageId));
+  },
+  closeLockDialog() {
+    dispatch(closeLockDialog());
+  }
+}))(Radium(StageLock));

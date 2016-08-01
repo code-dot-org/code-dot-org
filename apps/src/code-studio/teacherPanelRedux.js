@@ -2,6 +2,9 @@
  * Reducer and actions for teacher panel
  */
 
+// TODO - really this module is broader than just teacherPanel at this point.
+// come up with a better name
+
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
@@ -11,13 +14,16 @@ export const ViewType = makeEnum('Student', 'Teacher');
 const SET_VIEW_TYPE = 'teacherPanel/SET_VIEW_TYPE';
 const SET_SECTIONS = 'teacherPanel/SET_SECTIONS';
 const SELECT_SECTION = 'teacherPanel/SELECT_SECTION';
+const OPEN_LOCK_DIALOG = 'teacherPanel/OPEN_LOCK_DIALOG';
+const CLOSE_LOCK_DIALOG = 'teacherPanel/CLOSE_LOCK_DIALOG';
 
 const initialState = {
   viewAs: ViewType.Teacher,
   sections: {},
   selectedSection: null,
   sectionsLoaded: false,
-  unlockedStageIds: []
+  unlockedStageIds: [],
+  lockDialogStageId: null
 };
 
 /**
@@ -53,6 +59,18 @@ export default function reducer(state = initialState, action) {
     });
   }
 
+  if (action.type === OPEN_LOCK_DIALOG) {
+    return Object.assign({}, state, {
+      lockDialogStageId: action.stageId,
+    });
+  }
+
+  if (action.type === CLOSE_LOCK_DIALOG) {
+    return Object.assign({}, state, {
+      lockDialogStageId: null,
+    });
+  }
+
   return state;
 }
 
@@ -78,9 +96,17 @@ export const selectSection = sectionId => ({
   sectionId
 });
 
+export const openLockDialog = stageId => ({
+  type: OPEN_LOCK_DIALOG,
+  stageId
+});
+
+export const closeLockDialog = () => ({
+  type: CLOSE_LOCK_DIALOG
+});
+
 // Helpers
 const unlockedStages = (section) => {
-  console.log(section);
   return _.toPairs(section.stages).filter(([stageId, students]) => {
     return students.some(student => !student.locked);
   }).map(([stageId, stage]) => parseInt(stageId, 10));
