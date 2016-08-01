@@ -4418,17 +4418,11 @@ en:
         'true': 'true'
       U2L14 Summary Tables MC:
         Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
-        Pivot tables are used to clean or alter raw data to get it into a computable form: Pivot tables are used to clean or alter raw data to get it into a computable form
         Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
-        Pivot tables are used to quickly perform aggregate computations and groupings on a set of data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of data
         Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
         Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
-        Pivot tables are used to quickly remove errors and inconsistencies from the underlying raw dataset.: Pivot tables are used to quickly remove errors and inconsistencies from the underlying raw dataset.
         What's it good for?: What's it good for?
-        Which of the following statements are true about pivot tables: Which of the following statements are true about pivot tables
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
-        Which of the following statements are true about summary (pivot) tables: Which of the following statements are true about summary (pivot) tables
-        foo: foo
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
         'Assessment: Question 1': 'Assessment: Question 1'
