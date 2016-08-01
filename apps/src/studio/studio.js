@@ -1066,6 +1066,8 @@ Studio.onTick = function () {
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
 
+    // Run any callbacks from "ask" blocks. These get queued after the user
+    // provides input.
     for (let i = 0; i < Studio.askCallbackIndex; i++) {
       Studio.executeQueue(`askCallback${i}`);
     }
@@ -4829,12 +4831,7 @@ Studio.askForInput = function (question, callback) {
   viz.appendChild(target);
   studioApp.resizeVisualization();
 
-  Studio.hideInputPrompt = function () {
-    ReactDOM.unmountComponentAtNode(target);
-    viz.removeChild(target);
-
-    Studio.hideInputPrompt = function () {};
-  };
+  Studio.inputPromptElement = target;
 
   function onInputReceived(value) {
     Studio.resumeExecution();
@@ -4853,7 +4850,13 @@ Studio.askForInput = function (question, callback) {
 };
 
 Studio.hideInputPrompt = function () {
-  // To be overriden when the prompt is displayed.
+  const target = Studio.inputPromptElement;
+
+  if (target) {
+    ReactDOM.unmountComponentAtNode(target);
+    target.parentNode.removeChild(target);
+    Studio.inputPromptElement = null;
+  }
 };
 
 Studio.hideSpeechBubble = function (opts) {
