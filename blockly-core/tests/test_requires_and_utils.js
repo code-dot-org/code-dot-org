@@ -55,7 +55,9 @@ Blockly.Test.testWithReadOnlyBlockSpaceEditor = function (callback) {
   document.body.appendChild(container);
   container.style.width = 500 + 'px';
   container.style.height = 500 + 'px';
-  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, undefined, undefined, undefined, true);
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, {
+    readOnly: true
+  });
   callback(blockSpaceEditor);
   return container;
 };
