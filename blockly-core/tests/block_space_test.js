@@ -52,6 +52,31 @@ function test_blockSpaceBumpsBlocks() {
   goog.dom.removeNode(container);
 }
 
+function test_scrollingCapturesMouseWheelEvents() {
+  [true, false].forEach(function (scrollingEnabled) {
+    var container = Blockly.Test.initializeBlockSpaceEditor({
+      noScrolling: !scrollingEnabled
+    });
+
+    var eventCaptured = true;
+    container.addEventListener('wheel', function () {
+      eventCaptured = false;
+    });
+
+    Blockly.fireUiEvent(Blockly.mainBlockSpace.blockSpaceEditor.svg_, 'wheel', {
+      deltaY: 10
+    })
+
+    // When scrolling is enabled, the event should be captured by the
+    // ScrollBarPair and not make it up to the container.
+    // When scrolling is disabled, the event should not be captured, and
+    // should make it to the container and beyond.
+    assertEquals(eventCaptured, scrollingEnabled);
+
+    goog.dom.removeNode(container);
+  });
+}
+
 function test_scrollBarsActivateOnDropOutsideViewport() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
 
