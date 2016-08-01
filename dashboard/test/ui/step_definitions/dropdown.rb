@@ -4,7 +4,7 @@ end
 
 And /^I press the dropdown$/ do
   elements = @browser.find_elements(:class, 'blocklyText')
-  elements[6].click
+  elements[8].click
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|

@@ -44,6 +44,7 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {function} callbacks.cancelButtonCallback
  * @param {function} callbacks.joinButtonCallback
  * @param {function} callbacks.resetShardCallback
+ * @param {function} callbacks.showRouterLogCallback
  *
  * @constructor
  * @augments NetSimPanel
@@ -122,6 +123,13 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.resetShardCallback_ = buttonDebounce(callbacks.resetShardCallback);
 
+  /**
+   * Handler for "Router Log" button click.
+   * @type {function}
+   * @private
+   */
+  this.showRouterLogCallback_ = buttonDebounce(callbacks.showRouterLogCallback);
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
@@ -167,8 +175,11 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Button that takes you to the next level.
   NetSimUtils.makeContinueButton(this);
 
-  this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
-  this.addRouterButton_.click(unlessDisabled(this.addRouterCallback_));
+  var addRouterButton = this.getBody().find('#netsim-lobby-add-router');
+  addRouterButton.click(unlessDisabled(this.addRouterCallback_));
+
+  var showRouterLogButton = this.getBody().find('#show-router-log-modal');
+  showRouterLogButton.click(unlessDisabled(this.showRouterLogCallback_));
 
   this.getBody().find('.join-button').click(
       unlessDisabled(this.onJoinClick_.bind(this)));
