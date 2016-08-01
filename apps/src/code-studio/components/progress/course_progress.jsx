@@ -24,7 +24,7 @@ const CourseProgress = React.createClass({
   propTypes: {
     professionalLearningCourse: React.PropTypes.bool,
     focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
-    stages: React.PropTypes.arrayOf(stageShape),
+    stages: React.PropTypes.arrayOf(stageShape)
   },
 
   render() {
@@ -63,5 +63,5 @@ const CourseProgress = React.createClass({
 export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   focusAreaPositions: state.progress.focusAreaPositions,
-  stages: state.progress.stages,
+  stages: state.progress.stages
 }))(Radium(CourseProgress));

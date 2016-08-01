@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -126,36 +125,18 @@ const ScriptTeacherPanel = React.createClass({
   }
 });
 
-// TODO - where does this belong?
-const unlockedStages = (section) => {
-  return _.toPairs(section.stages).filter(([stageId, stage]) => {
-    // TODO
-    return true;
-  }).map(([stageId, stage]) => stageId);
-};
-
 export default connect(state => {
-  const { sections, selectedSection, sectionsLoaded } = state.teacherPanel;
-  const stages = state.progress.stages;
-
   let stageNames = {};
-  stages.forEach(stage => {
+  state.progress.stages.forEach(stage => {
     stageNames[stage.id] = stage.name;
   });
 
-  let unlockedStageIds = [];
-  if (sectionsLoaded) {
-    const currentSection = sections[selectedSection];
-    unlockedStageIds = unlockedStages(currentSection);
-  }
-
   return {
     viewAs: state.teacherPanel.viewAs,
-    sections,
-    selectedSection,
-    sectionsLoaded,
-    unlockedStageIds,
-    unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
+    sections: state.teacherPanel.sections,
+    selectedSection: state.teacherPanel.selectedSection,
+    sectionsLoaded: state.teacherPanel.sectionsLoaded,
+    unlockedStageNames: state.teacherPanel.unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({
   setViewType(viewAs) {

@@ -81,11 +81,12 @@ const CourseProgressRow = React.createClass({
     stage: stageShape,
     changeFocusAreaPath: React.PropTypes.string,
     lockableAuthorized: React.PropTypes.bool.isRequired,
-    sectionsLoaded: React.PropTypes.bool.isRequired
+    sectionsLoaded: React.PropTypes.bool.isRequired,
+    unlockedStageIds: React.PropTypes.arrayOf(React.PropTypes.number).isRequired
   },
 
   render() {
-    const stage = this.props.stage;
+    const { stage, unlockedStageIds} = this.props;
     if (this.props.stage.lockable && !this.props.lockableAuthorized) {
       return null;
     }
@@ -119,6 +120,7 @@ const CourseProgressRow = React.createClass({
             <TeacherStageInfo
               lessonPlanUrl={stage.lesson_plan_html_url}
               lockable={!!stage.lockable}
+              unlocked={unlockedStageIds.indexOf(stage.id) !== -1}
               sectionsLoaded={this.props.sectionsLoaded}
             />
           }
@@ -137,5 +139,6 @@ export default connect(state => ({
     state.teacherPanel.viewAs !== ViewType.Student,
   lockableAuthorized: state.progress.lockableAuthorized,
   sectionsLoaded: state.teacherPanel.sectionsLoaded,
-  changeFocusAreaPath: state.progress.changeFocusAreaPath
+  changeFocusAreaPath: state.progress.changeFocusAreaPath,
+  unlockedStageIds: state.teacherPanel.unlockedStageIds
 }))(Radium(CourseProgressRow));

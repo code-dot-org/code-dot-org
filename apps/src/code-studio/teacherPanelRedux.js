@@ -2,6 +2,7 @@
  * Reducer and actions for teacher panel
  */
 
+import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
 export const ViewType = makeEnum('Student', 'Teacher');
@@ -15,7 +16,8 @@ const initialState = {
   viewAs: ViewType.Teacher,
   sections: {},
   selectedSection: null,
-  sectionsLoaded: false
+  sectionsLoaded: false,
+  unlockedStageIds: []
 };
 
 /**
@@ -29,10 +31,13 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_SECTIONS) {
+    const sectionId = Object.keys(action.sections)[0];
+    const currentSection = action.sections[sectionId];
     return Object.assign({}, state, {
       sections: action.sections,
       sectionsLoaded: true,
-      selectedSection: Object.keys(action.sections)[0]
+      selectedSection: sectionId,
+      unlockedStageIds: unlockedStages(currentSection)
     });
   }
 
@@ -41,8 +46,10 @@ export default function reducer(state = initialState, action) {
     if (!state.sections[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
+    const currentSection = state.sections[sectionId];
     return Object.assign({}, state, {
-      selectedSection: sectionId
+      selectedSection: sectionId,
+      unlockedStageIds: unlockedStages(currentSection)
     });
   }
 
@@ -70,3 +77,11 @@ export const selectSection = sectionId => ({
   type: SELECT_SECTION,
   sectionId
 });
+
+// Helpers
+const unlockedStages = (section) => {
+  console.log(section);
+  return _.toPairs(section.stages).filter(([stageId, students]) => {
+    return students.some(student => !student.locked);
+  }).map(([stageId, stage]) => parseInt(stageId, 10));
+};
