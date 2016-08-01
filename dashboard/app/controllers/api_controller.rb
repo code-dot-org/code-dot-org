@@ -31,7 +31,7 @@ class ApiController < ApplicationController
             {
               id: student.id,
               name: student.name,
-              locked: user_level.submitted,
+              locked: user_level && user_level.submitted,
               readonly: false #user_level.readonly
             }
           end
