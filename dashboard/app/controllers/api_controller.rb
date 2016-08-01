@@ -11,6 +11,37 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
+  # TODO: come up with a name for this that i like and delete all_section_progress
+  def lockable_state_sections
+    return unless current_user
+
+    data = current_user.sections.each_with_object({}) do |section, section_hash|
+      section_hash[section.id] = {
+        section_id: section.id,
+        section_name: section.name,
+        stages: section.script.stages.each_with_object({}) do |stage, stage_hash|
+          next unless stage.lockable
+          # assumption that lockable stages have a single (assessment) level
+          if stage.script_levels.length > 1
+            raise 'Expect lockable stages to have a single script_level'
+          end
+          script_level = stage.script_levels[0]
+          stage_hash[stage.id] = section.students.map do |student|
+            user_level = student.user_level_for(script_level, script_level.level)
+            {
+              id: student.id,
+              name: student.name,
+              locked: user_level.submitted,
+              readonly: false #user_level.readonly
+            }
+          end
+        end
+      }
+    end
+
+    render json: data
+  end
+
   def all_section_progress
     return unless current_user
 

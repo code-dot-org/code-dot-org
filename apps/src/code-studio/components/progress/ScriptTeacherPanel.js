@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -36,11 +37,12 @@ const ScriptTeacherPanel = React.createClass({
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     sections: React.PropTypes.objectOf(
       React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired
+        section_name: React.PropTypes.string.isRequired
       })
     ).isRequired,
     selectedSection: React.PropTypes.string,
     sectionsLoaded: React.PropTypes.bool.isRequired,
+    unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     setViewType: React.PropTypes.func.isRequired,
     selectSection: React.PropTypes.func.isRequired,
   },
@@ -50,7 +52,14 @@ const ScriptTeacherPanel = React.createClass({
   },
 
   render() {
-    const { viewAs, sections, selectedSection, sectionsLoaded, setViewType } = this.props;
+    const {
+      viewAs,
+      sections,
+      selectedSection,
+      sectionsLoaded,
+      setViewType,
+      unlockedStageNames
+    } = this.props;
     const hasSections = Object.keys(sections).length > 0;
     // TODO - i18n
     // TODO - don't forget section is conditional on having unlocked stages
@@ -82,7 +91,7 @@ const ScriptTeacherPanel = React.createClass({
             >
               {Object.keys(sections).map(id => (
                 <option key={id} value={id}>
-                  {sections[id].name}
+                  {sections[id].section_name}
                 </option>
               ))}
             </select>
@@ -93,13 +102,22 @@ const ScriptTeacherPanel = React.createClass({
                 Select a section to be able to lock and unlock assessments or
                 surveys. Click the lock settings button in the stage to the left.
               </div>
-              <div style={styles.text}>
-                <FontAwesome icon="exclamation-triangle" style={styles.exclamation}/>
-                <div style={styles.dontForget}>Don't forget</div>
-              </div>
-              <div style={styles.text}>
-                Lock the following stages that are currently unlocked:
-              </div>
+              {unlockedStageNames.length > 0 &&
+                <div>
+                  <div style={styles.text}>
+                    <FontAwesome icon="exclamation-triangle" style={styles.exclamation}/>
+                    <div style={styles.dontForget}>Don't forget</div>
+                  </div>
+                  <div style={styles.text}>
+                    Lock the following stages that are currently unlocked:
+                    <ul>
+                      {unlockedStageNames.map((name, index) => (
+                        <li key={index}>{name}</li>)
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              }
             </div>
           }
         </div>
@@ -108,12 +126,38 @@ const ScriptTeacherPanel = React.createClass({
   }
 });
 
-export default connect(state => ({
-  viewAs: state.teacherPanel.viewAs,
-  sections: state.teacherPanel.sections,
-  selectedSection: state.teacherPanel.selectedSection,
-  sectionsLoaded: state.teacherPanel.sectionsLoaded
-}), dispatch => ({
+// TODO - where does this belong?
+const unlockedStages = (section) => {
+  return _.toPairs(section.stages).filter(([stageId, stage]) => {
+    // TODO
+    return true;
+  }).map(([stageId, stage]) => stageId);
+};
+
+export default connect(state => {
+  const { sections, selectedSection, sectionsLoaded } = state.teacherPanel;
+  const stages = state.progress.stages;
+
+  let stageNames = {};
+  stages.forEach(stage => {
+    stageNames[stage.id] = stage.name;
+  });
+
+  let unlockedStageIds = [];
+  if (sectionsLoaded) {
+    const currentSection = sections[selectedSection];
+    unlockedStageIds = unlockedStages(currentSection);
+  }
+
+  return {
+    viewAs: state.teacherPanel.viewAs,
+    sections,
+    selectedSection,
+    sectionsLoaded,
+    unlockedStageIds,
+    unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
+  };
+}, dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));
   },

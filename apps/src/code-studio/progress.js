@@ -111,14 +111,7 @@ function renderTeacherPanel(store) {
     '/dashboardapi/section_progress',
     { data: { user_id: clientState.queryParams('user_id') } }
   ).done(data => {
-    let sectionInfo = {};
-    data.forEach(section => {
-      sectionInfo[section.section_id] = {
-        name: section.section_name
-      };
-    });
-
-    store.dispatch(setSections(sectionInfo));
+    store.dispatch(setSections(data));
   });
 
   ReactDOM.render(
