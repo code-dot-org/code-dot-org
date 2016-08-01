@@ -25,8 +25,7 @@
     "start_direction": "2",
     "step_mode": "0",
     "instructions": "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\" to help me get there.",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
