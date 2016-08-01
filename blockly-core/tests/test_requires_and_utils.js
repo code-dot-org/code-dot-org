@@ -37,7 +37,7 @@ goog.require('Blockly.JavaScript.variables');
 /**
  * @returns {Element}
  */
-Blockly.Test.initializeBlockSpaceEditor = function () {
+Blockly.Test.initializeBlockSpaceEditor = function (opt_options) {
   var container = document.createElement('div');
   document.body.appendChild(container);
   container.style.width = 500 + 'px';
@@ -45,7 +45,7 @@ Blockly.Test.initializeBlockSpaceEditor = function () {
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject(container);
   Blockly.hasVerticalScrollbars = true;
-  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container, opt_options);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   return container;
 };
