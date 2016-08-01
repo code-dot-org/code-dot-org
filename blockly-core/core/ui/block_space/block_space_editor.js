@@ -65,6 +65,7 @@ Blockly.BlockSpaceEditor = function(container, opt_options) {
   }
 
   this.readOnly_ = !!opt_options.readOnly;
+  this.noScrolling_ = !!opt_options.noScrolling;
 
   /**
    * @type {Blockly.BlockSpace}
@@ -74,11 +75,6 @@ Blockly.BlockSpaceEditor = function(container, opt_options) {
     goog.bind(this.setBlockSpaceMetrics_, this),
     container
   );
-
-  if (opt_options.noScrolling) {
-    this.blockSpace.scrollbarPair.dispose();
-    this.blockSpace.scrollbarPair = null;
-  }
 
   /**
    * Set of blocks with limits, keyed by block type. Used to enforce
@@ -508,7 +504,8 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.flyout_.show(Blockly.languageTree.childNodes);
     }
   }
-  if (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars) {
+  if (!this.noScrolling_ &&
+      (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars)) {
     this.blockSpace.scrollbarPair = new Blockly.ScrollbarPair(
       this.blockSpace, Blockly.hasHorizontalScrollbars, Blockly.hasVerticalScrollbars);
     this.blockSpace.scrollbarPair.resize();
