@@ -36,7 +36,9 @@ const NetSimLogBrowserTable = React.createClass({
   propTypes: {
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number
+    renderedRowLimit: React.PropTypes.number,
+    teacherView: React.PropTypes.bool,
+    currentSentByFilter: React.PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -83,36 +85,49 @@ const NetSimLogBrowserTable = React.createClass({
     const showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
-    let columns = [
-      {
+    let columns = [];
+
+    columns.push({
+      header: {
+        label: 'Time',
+        transforms: [sortable],
+        props: {style: style.nowrap}
+      },
+      cell: {
+        property: 'timestamp',
+        format: timeFormatter,
+        props: {style: style.nowrapTd}
+      }
+    });
+
+    if (this.props.teacherView) {
+      columns.push({
         header: {
-          label: 'Time',
+          label: 'Sent By',
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {
-          property: 'timestamp',
-          format: timeFormatter,
-          props: {style: style.nowrapTd}
-        }
+        cell: {property: 'sent-by', props: {style: style.nowrapTd}}
+      });
+    }
+
+    columns.push({
+      header: {
+        label: 'Logged By',
+        transforms: [sortable],
+        props: {style: style.nowrap}
       },
-      {
-        header: {
-          label: 'Logged By',
-          transforms: [sortable],
-          props: {style: style.nowrap}
-        },
-        cell: {property: 'logged-by', props: {style: style.nowrapTd}}
+      cell: {property: 'logged-by', props: {style: style.nowrapTd}}
+    });
+
+    columns.push({
+      header: {
+        label: 'Status',
+        transforms: [sortable],
+        props: {style: style.nowrap}
       },
-      {
-        header: {
-          label: 'Status',
-          transforms: [sortable],
-          props: {style: style.nowrap}
-        },
-        cell: {property: 'status', props: {style: style.nowrapTd}}
-      },
-    ];
+      cell: {property: 'status', props: {style: style.nowrapTd}}
+    });
 
     if (showFromAddress) {
       columns.push({
@@ -163,6 +178,14 @@ const NetSimLogBrowserTable = React.createClass({
       sortingColumns,
       sort: orderBy
     })(logRows);
+
+    // Filter by "sent by"
+    const sentByMatch = this.props.currentSentByFilter.match(/^by (.*)$/);
+    if (sentByMatch) {
+      sortedRows = sortedRows.filter(row => row['sent-by'] === sentByMatch[1]);
+    }
+
+    // Limit number of rendered rows
     if (this.props.renderedRowLimit !== undefined) {
       sortedRows = sortedRows.slice(0, this.props.renderedRowLimit);
     }

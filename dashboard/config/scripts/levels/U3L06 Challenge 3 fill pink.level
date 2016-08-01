@@ -66,6 +66,56 @@
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and dot() without any loops."
+      },
+      {
+        "entries": [
+          "penColor:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to set the pen color at least twice"
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "To complete this task you need to draw at least 4 dots"
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to moveForward at least twice"
+      },
+      {
+        "entries": [
+          "penColor:1",
+          "dot:1",
+          "penColor:1",
+          "dot:1",
+          "moveForward:1",
+          "dot:1",
+          "moveForward:1",
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting that you'll set the pen color, draw a big dot, then set the pen color again, and draw 3 more dots moving forward a little bit each time."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,
