@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 const ChatBubbleTip = ({ isRtl, color, background }) => {
   background = background || 'white';
-  color = color || background;
+  color = color || 'none';
 
   const styles = {
     svg: {
