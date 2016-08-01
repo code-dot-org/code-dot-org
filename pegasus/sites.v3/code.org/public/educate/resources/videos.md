@@ -185,6 +185,26 @@ App Lab is a JavaScript programming environment for students to make simple apps
 
 <div style='clear:both'></div>
 
+# Build on problem solving skills with these digital tools
+
+[col-50]
+
+<img src='<%= CDO.shared_image_url('/teacher-announcement/csp-widgets.png') %>' style='width: 400px'>
+
+[/col-50]
+
+<div style="float:left; padding:20px; width:49%">
+
+Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Let them encrypt and decrypt messages, compress song lyrics, and more! Use the widgets on their own, or create a single concept lesson for your class using the plans linked below.
+
+<br>
+<br>
+<a href="/educate/csp/widgets"><button>Learn more</button></a>
+
+</div>
+
+<div style='clear:both'></div>
+
 # Find a guest speaker for your classroom
  
 <div style="float:left; padding:10px; width: 49%">
