@@ -195,7 +195,7 @@ App Lab is a JavaScript programming environment for students to make simple apps
 
 <div style="float:left; padding:20px; width:49%">
 
-Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Let them encrypt and decrypt messages, compress song lyrics, and more! Use the widgets on their own, or create a single concept lesson for your class using the plans linked below.
+Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Let them encrypt and decrypt messages, compress song lyrics, and more! Use the widgets on their own, or create a single-concept lesson for your class using the plans linked below.
 
 <br>
 <br>
