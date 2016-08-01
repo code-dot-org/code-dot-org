@@ -330,7 +330,7 @@ GEM
       rack (>= 1.0, < 3)
     omniauth-clever (1.2.1)
       omniauth-oauth2 (~> 1.1.1)
-    omniauth-facebook (1.6.0)
+    omniauth-facebook (3.0.0)
       omniauth-oauth2 (~> 1.1)
     omniauth-google-oauth2 (0.2.5)
       omniauth (> 1.0)
