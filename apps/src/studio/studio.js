@@ -235,7 +235,8 @@ function loadLevel() {
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
   } else {
-    Studio.startAvatars = skin.avatarList;
+    Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
+      level.firstSpriteIndex);
   }
 
   // Override scalars.
@@ -260,6 +261,18 @@ function loadLevel() {
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
   studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
   studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
+}
+
+/**
+ * Returns a list of avatars, reordered such that firstSpriteIndex comes first
+ * (and is now at index 0).
+ */
+function reorderedStartAvatars(avatarList, firstSpriteIndex) {
+  firstSpriteIndex = firstSpriteIndex || 0;
+  return _.flattenDeep([
+    avatarList.slice(firstSpriteIndex),
+    avatarList.slice(0, firstSpriteIndex)
+  ]);
 }
 
 var drawMap = function () {
@@ -1686,7 +1699,6 @@ Studio.initSprites = function () {
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
-  var presentAvatars = [];
 
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
@@ -1699,18 +1711,11 @@ Studio.initSprites = function () {
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        var cell = Studio.map[row][col].serialize();
-        Studio.spriteStart_[Studio.spriteCount] = Object.assign({}, cell, {
+        Studio.spriteStart_[Studio.spriteCount] = Object.assign({},
+            Studio.map[row][col].serialize(), {
               x: col * Studio.SQUARE_SIZE,
               y: row * Studio.SQUARE_SIZE
             });
-
-        var avatarIndex = cell.sprite !== undefined
-            ? cell.sprite
-            : (Studio.spriteCount + (level.firstSpriteIndex || 0)) %
-                Studio.startAvatars.length;
-        presentAvatars[Studio.spriteCount] = Studio.startAvatars[avatarIndex];
-
         Studio.spriteCount++;
       }
     }
@@ -1719,7 +1724,7 @@ Studio.initSprites = function () {
   if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
-    blocks.setStartAvatars(presentAvatars);
+    blocks.setStartAvatars(Studio.startAvatars);
 
     if (level.projectileCollisions) {
       blocks.enableProjectileCollisions(Blockly);
@@ -2285,7 +2290,7 @@ Studio.reset = function (first) {
     });
 
     var sprite = spriteStart.sprite === undefined
-        ? (i + (level.firstSpriteIndex || 0)) % Studio.startAvatars.length
+        ? (i % Studio.startAvatars.length)
         : spriteStart.sprite;
 
     var opts = {
