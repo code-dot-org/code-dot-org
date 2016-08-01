@@ -2911,7 +2911,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    acapelaEnabled: !!config.acapelaEnabled,
+    acapelaEnabled: config.acapelaEnabled && experiments.isEnabled('tts'),
     acapelaInstructionsSrc: config.acapelaInstructionsSrc,
     acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
     skinId: config.skinId,
