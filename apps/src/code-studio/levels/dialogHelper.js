@@ -138,6 +138,9 @@ window.dashboard.dialog = (function () {
     }
 
     var result = getResult();
+    if (result.response) {
+      result.response = encodeURIComponent(result.response);
+    }
     var showConfirmationDialog = result.showConfirmationDialog || false;
     if (showConfirmationDialog) {
       showDialog(showConfirmationDialog, function () {
@@ -177,7 +180,7 @@ window.dashboard.dialog = (function () {
     }
     function sendResultsCompletion() {
       var results = getResult();
-      var response = results.response;
+      var response = encodeURIComponent(results.response);
       var result = results.result;
       var errorType = results.errorType;
       var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
