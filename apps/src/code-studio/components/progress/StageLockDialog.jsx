@@ -4,15 +4,9 @@ import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import progressStyles from './progressStyles';
+import { LockStatus } from '../../teacherPanelRedux';
 import color from '../../../color';
 import commonMsg from '@cdo/locale';
-
-// TODO - this enum belongs elsewhere, and use createEnum util
-const LockStatus = {
-  Locked: 'locked',
-  Editable: 'editable',
-  Readonly: 'readonly'
-};
 
 const styles = {
   main: {
@@ -80,6 +74,12 @@ const StageLockDialog = React.createClass({
     return {
       lockStatus: this.props.initialLockStatus
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      lockStatus: nextProps.initialLockStatus
+    });
   },
 
   setAllLockStatus(lockStatus) {
@@ -258,19 +258,9 @@ const StageLockDialog = React.createClass({
 });
 
 export default connect(state => {
-  const initialLockStatus = [
-    {
-      name: 'Farrah',
-      lockStatus: 'locked'
-    },
-    {
-      name: 'George',
-      lockStatus: 'editable'
-    }
-  ];
-
+  console.log('connect', state);
   return {
-    initialLockStatus,
+    initialLockStatus: state.teacherPanel.lockStatus,
     isOpen: !!state.teacherPanel.lockDialogStageId
   };
 })(Radium(StageLockDialog));

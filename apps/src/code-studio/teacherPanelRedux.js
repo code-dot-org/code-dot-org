@@ -9,6 +9,7 @@ import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
 export const ViewType = makeEnum('Student', 'Teacher');
+export const LockStatus = makeEnum('Locked', 'Editable', 'Readonly');
 
 // Action types
 const SET_VIEW_TYPE = 'teacherPanel/SET_VIEW_TYPE';
@@ -23,7 +24,8 @@ const initialState = {
   selectedSection: null,
   sectionsLoaded: false,
   unlockedStageIds: [],
-  lockDialogStageId: null
+  lockDialogStageId: null,
+  lockStatus: [],
 };
 
 /**
@@ -60,8 +62,18 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === OPEN_LOCK_DIALOG) {
+    const { sections, selectedSection } = state;
+    const lockDialogStageId = action.stageId;
+
+    const students = sections[selectedSection].stages[lockDialogStageId];
     return Object.assign({}, state, {
-      lockDialogStageId: action.stageId,
+      lockDialogStageId,
+      lockStatus: students.map(student => ({
+        id: student.id,
+        name: student.name,
+        lockStatus: student.locked ? LockStatus.Locked : (
+          student.readonly ? LockStatus.Readonly : LockStatus.Editable)
+      }))
     });
   }
 
