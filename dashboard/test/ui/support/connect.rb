@@ -130,8 +130,11 @@ After do |scenario|
 end
 
 def check_for_page_errors
-  errors = @browser.execute_script('return window.detectedJSErrors;')
-  errors.should eq nil
+  js_errors = @browser.execute_script('return window.detectedJSErrors;')
+  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
+
+  # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
+  # js_errors.should eq nil
 end
 
 After do |_s|
