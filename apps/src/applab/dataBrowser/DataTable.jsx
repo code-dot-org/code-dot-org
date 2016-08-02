@@ -138,6 +138,14 @@ const DataTable = React.createClass({
     return `column${i}`;
   },
 
+  importCsv(csvData) {
+    FirebaseStorage.importCsv(
+      this.props.tableName,
+      csvData,
+      () => this.setState(this.getInitialState()),
+      msg => console.warn(msg));
+  },
+
   render() {
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
@@ -166,7 +174,11 @@ const DataTable = React.createClass({
           &nbsp;&gt; {this.props.tableName}
         </h4>
 
-        <TableControls columns={columnNames} addColumn={this.addColumn}/>
+        <TableControls
+          columns={columnNames}
+          addColumn={this.addColumn}
+          importCsv={this.importCsv}
+        />
 
         <table style={styles.table}>
           <tbody>

@@ -1,5 +1,7 @@
 /* global Applab */
 
+import { castValue } from './dataBrowser/dataUtils';
+import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
 
@@ -395,6 +397,84 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
+/**
+ * Parses a CSV string into records data in a format that can be written into the
+ * records node of a firebase table.
+ * @param {string} csvData
+ * @returns {Promise} A promise containing recordsData or an error message.
+ */
+function parseRecordsDataFromCsv(csvData) {
+  return new Promise((resolve, reject) => {
+    parseCsv(csvData, {columns: true}, (error, records) => {
+      if (error) {
+        return reject(error);
+      }
+      resolve(records);
+    });
+  }).then(records => {
+    let recordsData = {};
+    records.forEach((record, index) => {
+      const id = index + 1;
+      Object.keys(record).forEach(key => {
+        record[key] = castValue(record[key]);
+      });
+      record.id = id;
+      recordsData[id] = JSON.stringify(record);
+    });
+    return recordsData;
+  });
+}
+
+/**
+ * Validates that the records data does not exceed size limits.
+ * @param recordsData The records data to validate.
+ * @returns {Promise} A promise containing recordsData or an error message.
+ */
+function validateRecordsData(recordsData) {
+  return loadConfig().then(config => {
+    if (Object.keys(recordsData).length > config.maxTableRows) {
+      return Promise.reject(`Import failed because the data is too large. ` +
+        `A table may only contain ${config.maxTableRows} rows.`);
+    }
+    if (Object.keys(recordsData).some(record => record.length > config.maxRecordSize)) {
+      return Promise.reject(`Import failed because one of of the records is too large. ` +
+        `The maximum allowable size is ${config.maxRecordSize} bytes.`);
+    }
+    return recordsData;
+  });
+}
+
+/**
+ * Overwrites the table with new contents, and updates the table counters accordingly.
+ * Rate limit counters are not updated.
+ * @param {string} tableName
+ * @param recordsData
+ * @returns {Promise} A promise which is successful if all writes were successful.
+ */
+function overwriteTableData(tableName, recordsData) {
+  const recordsRef = getDatabase(Applab.channelId).child(
+    `storage/tables/${tableName}/records`);
+  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  return recordsRef.set(recordsData)
+    .then(() => {
+      // Work around security rule validation checks.
+      return countersRef.set(null);
+    }).then(() => {
+      const count = Object.keys(recordsData).length;
+      return countersRef.set({
+        lastId: count,
+        rowCount: count,
+      });
+    });
+}
+
+FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {
+  parseRecordsDataFromCsv(tableDataCsv)
+    .then(recordsData => validateRecordsData(recordsData))
+    .then(recordsData => overwriteTableData(tableName, recordsData))
     .then(onSuccess, onError);
 };
 

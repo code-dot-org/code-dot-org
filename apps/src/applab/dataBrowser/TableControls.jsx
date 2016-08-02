@@ -3,31 +3,65 @@
  * import, export, adding a new column, and deleting the entire table.
  */
 
+import Radium from 'radium';
 import React from 'react';
 
 import * as dataStyles from './dataStyles';
 
-const containerStyle = {
-  float: 'right',
-  paddingTop: 10,
-  paddingLeft: 10,
-  paddingBottom: 10,
-  paddingRight: 0
+const styles = {
+  container: {
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 0,
+    paddingRight: 0,
+  },
+  addButton: [dataStyles.button, {
+    float: 'right',
+  }],
 };
 
 const TableControls = React.createClass({
   propTypes: {
-    addColumn: React.PropTypes.func.isRequired
+    addColumn: React.PropTypes.func.isRequired,
+    importCsv: React.PropTypes.func.isRequired,
+  },
+
+  handleSelectImportFile() {
+    const msg = 'Importing this file will overwrite the existing data in this table. ' +
+      'Are you sure you want to continue?';
+    if (confirm(msg)) {
+      const file = this.importFileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = e => this.props.importCsv(e.target.result);
+      reader.readAsText(file);
+    }
   },
 
   render() {
     return (
-      <div style={containerStyle}>
-        <button className="btn" onClick={this.props.addColumn} style={dataStyles.button}>
+      <div style={styles.container}>
+        <span>
+          <input
+            ref={input => this.importFileInput = input}
+            type="file"
+            style={{display: 'none'}}
+            accept="csv"
+            onChange={this.handleSelectImportFile}
+          />
+          <button
+            className="btn"
+            onClick={() => this.importFileInput.click()}
+            style={dataStyles.button}
+          >
+            Import csv
+          </button>
+        </span>
+
+        <button className="btn" onClick={this.props.addColumn} style={styles.addButton}>
           Add column
         </button>
       </div>
     );
   }
 });
-export default TableControls;
+export default Radium(TableControls);
