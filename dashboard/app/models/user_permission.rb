@@ -23,7 +23,7 @@ class UserPermission < ActiveRecord::Base
   # Grants access to viewing hidden scripts.
   HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'
 
-  # Grants access to managing (e.g., editting) LevelSourceHint's and
+  # Grants access to managing (e.g., editing) LevelSourceHint's and
   # FrequentUnsuccessfulLevelSource's.
   # TODO(asher): If appropriate, finish deprecating this permission, as well as
   # the routes, models, controllers, and views related to this permission.
