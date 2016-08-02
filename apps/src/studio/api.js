@@ -244,6 +244,10 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
+exports.askForInput = function (id, question, callback) {
+  Studio.queueCmd(id, 'askForInput', {question, callback});
+};
+
 /**
  * @param {number} keyCode
  * @returns {boolean} True if key is currently down

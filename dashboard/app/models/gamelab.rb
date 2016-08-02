@@ -35,6 +35,7 @@ class Gamelab < Blockly
     data_properties
     hide_view_data_button
     debugger_disabled
+    pause_animations_by_default
     start_animations
   )
 

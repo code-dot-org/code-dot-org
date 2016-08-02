@@ -41,6 +41,7 @@
   "heightParameter": "magasság",
   "hideTurtle": "művész elrejtése",
   "jump": "Ugorj",
+  "jumpTo": "jump to",
   "jumpBackward": "ugrás hátra",
   "jumpForward": "ugrás előre",
   "jumpTooltip": "A művészt mozgatja rajzolás nélkül.",
@@ -89,6 +90,5 @@
   "turnTooltip": "A művészt balra vagy jobbra fordul a megadott fokban.",
   "turtleVisibilityTooltip": "A művészt láthatóvá, vagy láthatatlanná teszi.",
   "widthTooltip": "A ceruza szélességének módosítása.",
-  "wrongColour": "A kép színe hibás.  Ehhez a rejtvényhez %1 kell lennie.",
-  "jumpTo": "jump to"
+  "wrongColour": "A kép színe hibás.  Ehhez a rejtvényhez %1 kell lennie."
 }

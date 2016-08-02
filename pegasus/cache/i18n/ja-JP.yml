@@ -440,6 +440,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "あなたは先生ですか？"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -629,7 +631,7 @@
   dashboard_navigation_view_progress: "進行状況"
   dashboard_navigation_view_text_responses: "表示テキストの回答"
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "生徒を追加"
   dashboard_navigation_manage_students: "生徒の管理"
   dashboard_navigation_lesson_plans_resources: "レッスンプランと資料"
@@ -798,7 +800,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "もっと詳しく知る"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "今すぐ試す"
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education

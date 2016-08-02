@@ -147,6 +147,8 @@ GameLab.prototype.init = function (config) {
 
   config.usesAssets = true;
 
+  gameLabSprite.injectLevel(this.level);
+
   this.gameLabP5.init({
     gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),

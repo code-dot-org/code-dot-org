@@ -41,6 +41,7 @@
   "heightParameter":"höjd",
   "hideTurtle":"dölj konstnär",
   "jump":"hoppa",
+  "jumpTo":"jump to",
   "jumpBackward":"hoppa bakåt med",
   "jumpForward":"hoppa framåt med",
   "jumpTooltip":"Flyttar konstnären utan att lämna några spår.",

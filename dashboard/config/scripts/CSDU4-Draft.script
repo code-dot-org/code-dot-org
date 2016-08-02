@@ -8,9 +8,12 @@ hidden 'true'
 stage 'Design Mode'
 level 'CSDU4 - Design Mode - 15' # Intro design mode
 level 'CSDU4 - Design Mode - 4' # Change id, add second button
+level 'CSD U4 - Design Mode Text' # Add text header
+level 'CSD U4 - Design Mode Input Widgets' # Add input widgets
 level 'CSDU4 - Design Mode - 21' # Upload image
-level 'CSDU4 - Design Mode - 29' # Dropdown
+#level 'CSDU4 - Design Mode - 29' # Dropdown
 level 'CSDU4 - Design Mode - 18' # Debugging depth (rework)
+level 'CSD U4 - Design Mode Project' # Make your page
 
 stage 'Making it Interactive'
 level 'CSDU4 - Design Mode - 16' # Wire up your button (events stage)

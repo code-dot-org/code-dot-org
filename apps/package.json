@@ -132,6 +132,7 @@
     "react-redux": "4.4.5",
     "react-router": "2.6.0",
     "react-storybook-addon-add-stories-group": "0.1.0",
+    "reactabular": "^1.0.0",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
