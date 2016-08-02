@@ -182,9 +182,7 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_wait">
-    <title name="VALUE">500</title>
-  </block>
+  <block type="studio_wait"></block>
   <block type="studio_waitParams" inline="true">
     <value name="VALUE">
       <block type="math_number">

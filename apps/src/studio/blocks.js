@@ -1810,47 +1810,47 @@ exports.install = function (blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
-
-    blockly.Blocks.studio_setSpriteParams = {
-      helpUrl: '',
-      init: function () {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
-        this.setHSV(312, 0.32, 0.62);
-        this.appendValueInput('SPRITE')
-            .setCheck(blockly.BlockValueType.NUMBER)
-            .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-        this.appendDummyInput()
-            .appendTitle(dropdown, 'VALUE');
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.setSpriteTooltip());
-      }
-    };
-
-    blockly.Blocks.studio_setSpriteParamValue = {
-      helpUrl: '',
-      init: function () {
-        this.setHSV(312, 0.32, 0.62);
-        if (spriteCount > 1) {
-          this.appendDummyInput()
-            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
-        } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
-        }
-        this.appendValueInput('VALUE');
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.setSpriteTooltip());
-      }
-    };
   }
+
+  blockly.Blocks.studio_setSpriteParams = {
+    helpUrl: '',
+    init: function () {
+      this.VALUES = skin.spriteChoices;
+      var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+      // default to first item after random/hidden
+      dropdown.setValue(skin.spriteChoices[2][1]);
+
+      this.setHSV(312, 0.32, 0.62);
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER)
+          .appendTitle(msg.setSpriteN({spriteIndex: ''}));
+      this.appendDummyInput()
+          .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setSpriteParamValue = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
+      this.appendValueInput('VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteTooltip());
+    }
+  };
 
   generator.studio_setSprite = function () {
     var indexString = this.getTitleValue('SPRITE') || '0';
@@ -2078,11 +2078,22 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to half second
+        if (isK1) {
+          let dropdown = new blockly.FieldDropdown([1, 2, 3, 4, 5].map(
+                (val) => [val.toString(), (val * 1000).toString()]));
+          dropdown.setValue('1000');
+          this.appendDummyInput()
+            .appendTitle(msg.wait())
+            .appendTitle(new blockly.FieldImage(skin.clockIcon))
+            .appendTitle(dropdown, 'VALUE')
+            .appendTitle(msg.waitSeconds());
+        } else {
+          let dropdown = new blockly.FieldDropdown(this.VALUES);
+          dropdown.setValue(this.VALUES[2][1]);  // default to half second
 
-        this.appendDummyInput()
-          .appendTitle(dropdown, 'VALUE');
+          this.appendDummyInput()
+            .appendTitle(dropdown, 'VALUE');
+        }
       }
       this.setInputsInline(true);
       this.setPreviousStatement(true);
