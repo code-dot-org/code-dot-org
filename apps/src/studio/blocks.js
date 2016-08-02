@@ -1424,8 +1424,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_removeNumPoints = function () {
     var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
       Blockly.JavaScript.ORDER_NONE) || '1';
-    arg = (-1 * Number(arg)).toString();
-    return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+    return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
         arg + '\');\n';
   };
 
