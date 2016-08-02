@@ -14,6 +14,9 @@ const style = {
     borderStyle: 'solid',
     minWidth: 100,
     margin: 0,
+    ':hover': {
+      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
+    },
   },
   large: {
     fontSize: 35,
@@ -61,6 +64,9 @@ style.withArrow = {
     position: 'relative',
     top: (ARROW_HEIGHT - style.base.borderWidth - ARROW_BUTTON_PADDING * 2 - ARROW_BUTTON_HEIGHT)/2,
     margin: 0,
+    ':hover': {
+      boxShadow: 'none',
+    },
   },
   left: {
     paddingLeft: 0,

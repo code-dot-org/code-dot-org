@@ -1444,7 +1444,8 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
 };
 
 /**
- * Resize the visualization to the given width
+ * Resize the visualization to the given width. If no width is provided, the
+ * scale of child elements is updated to the current width.
  */
 StudioApp.prototype.resizeVisualization = function (width) {
   var editorColumn = $(".editor-column");
@@ -1454,7 +1455,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
-                         Math.min(this.maxVisualizationWidth, width));
+                         Math.min(this.maxVisualizationWidth, width || oldVizWidth));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -2436,7 +2437,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
+    showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };

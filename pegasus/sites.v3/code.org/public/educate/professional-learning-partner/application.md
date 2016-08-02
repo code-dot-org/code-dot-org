@@ -7,7 +7,7 @@ nav: plc_plp_nav
 
 We're so excited that you are interested in becoming a Code.org Professional Learning Partner for the 2017-18 school year and look forward to starting to work with you this Fall!
 
-Please note that we will only accept applicants from regions where we do not currently have a Professional Learning Partner. Check out a map of those regions <a href="/educate/professional-learning-partner/partners" target=_blank>here</a>. 
+Please note that we will only accept applicants from regions in the United States where we do not currently have a Professional Learning Partner. Check out a map of those regions <a href="/educate/professional-learning-partner/partners" target=_blank>here</a>. 
 
 ### Application Process ###
 

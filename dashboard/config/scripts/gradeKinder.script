@@ -52,8 +52,8 @@ stage 'Programming Unplugged'
 level 'gradeK_unplugged_programming'
 
 stage 'Programming'
-level 'DebuggingIntro'
 level 'K2.0 sequence pre'
+level 'DebuggingIntro'
 level 'K2.0 sequence 1'
 level 'K2.0 sequence 2'
 level 'K2.0 sequence 3'
@@ -79,7 +79,6 @@ level 'gradeK_unplugged_loops'
 
 
 stage 'Loops'
-level 'ArtistIntro'
 level 'artistLoopsK1'
 level 'ArtistLoopsIntro'
 level 'artistLoopsK2'

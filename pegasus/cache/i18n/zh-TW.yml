@@ -4,10 +4,8 @@
   'yes': "是"
   'no': "否"
   select_language: "請選擇您的語言"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org 將不提供 Internet Explorer 8、 9 和 10 的支援。請升級到較新版本的瀏覽器。
+  upgrade_ie_message_csedweek: CSEdWeek.org 將不提供 Internet Explorer 8、 9 和 10 的支援。請升級到較新版本的瀏覽器。
   upgrade_ie_link: "瞭解更多資訊"
   en: "資訊科學"
   computer_science_edweek: "電腦科學教育周"
@@ -391,6 +389,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "你是老師嗎？"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "激勵學生和志工參與一個小時的程式課程"
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour
     of Code，他們需要你的幫忙! '
@@ -564,7 +564,7 @@
   dashboard_navigation_view_progress: "進展"
   dashboard_navigation_view_text_responses: "觀看文字回應"
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "新增學生"
   dashboard_navigation_manage_students: "管理學生們"
   dashboard_navigation_lesson_plans_resources: "教案和資源"
@@ -735,7 +735,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "瞭解更多資訊"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "快來試試"
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education

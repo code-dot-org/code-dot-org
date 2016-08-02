@@ -61,6 +61,13 @@
   = boolean_check_box f, :debugger_disabled
 
 .field
+  =f.label 'Animations are paused by default'
+  %p
+    If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
+    Otherwise, it will be playing after a <tt>setAnimation</tt> call.
+  = boolean_check_box f, :pause_animations_by_default
+
+.field
   = f.label :start_animations, 'Starting animation list JSON'
   %p
     This should be equivalent to the animation JSON created by the animation tab.

@@ -185,12 +185,13 @@ export const ProgressDot = React.createClass({
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
     const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const levelUrl = level.locked ? undefined : level.url + location.search;
 
     return (
       <a
         key="link"
-        href={level.locked ? undefined : level.url + location.search}
-        onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
+        href={levelUrl}
+        onClick={this.props.saveAnswersBeforeNavigation && (levelUrl ? dotClicked.bind(null, levelUrl) : false)}
         style={[
           styles.outer,
           (showLevelName || isPeerReview) && {display: 'table-row'},

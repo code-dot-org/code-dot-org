@@ -4,10 +4,10 @@
   'yes': Oui
   'no': Non
   select_language: Veuillez sélectionner votre langue
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org supprimera bientôt son support pour Internet Explorer
+    8, 9 et 10. Merci de passer à un navigateur actuel.
+  upgrade_ie_message_csedweek: CSEdWeek.org supprimera bientôt son support pour Internet
+    Explorer 8, 9 et 10. Merci de passer à un navigateur actuel.
   upgrade_ie_link: Pour en savoir plus
   en: Informatique/Sciences informatiques
   computer_science_edweek: Semaine de l'enseignement de l’informatique
@@ -385,9 +385,9 @@
   homepage_banner_congress: Les leaders de l’Amérique font appel au Congrès pour financer
     le programme d'informatique K-12.
   homepage_banner_congress_link: Ajouter votre support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Nous faisons un changement majeur sur comment nous
+    soutenons la confidentialité de l'étudiant.
+  homepage_banner_emailprivacy_link: Lire la suite
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
@@ -487,12 +487,14 @@
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
   minecraft_subtitle: Une Heure de Code Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Avant que tu commences, regardes une de ces vidéos pour
+    l'inspiration
+  speak_another_language: Parle d'autres langues?
+  help_translate: Aides-nous a traduire.
+  no_internet: Pas d'internet ?
+  download_offline: Télécharger la version hors ligne.
+  are_you_teacher: "Êtes-vous un enseignant?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspirer les élèves et les bénévoles
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir
     Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils
@@ -713,8 +715,8 @@
     au dessus et vous y verrez les réponses de vos élèves.
   dashboard_assessments_summaries: Résumés
   dashboard_assessments_answers: Toutes les réponses
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Sondages
+  dashboard_percent: Pourcentage
   dashboard_filter_by_stage: 'Filtrer par étape :'
   dashboard_filter_all: Tout
   dashboard_download_csv: Télécharger en CSV
@@ -730,7 +732,7 @@
   dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: Root->dashboard_navigation_voir_text_réponses
   dashboard_navigation_view_assessments: "Évaluations"
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -942,7 +944,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Pour en savoir plus
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Essaie maintenant
   dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
     visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
     Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
@@ -1868,11 +1870,11 @@
   sphero_beyond_longdescription: Que vous soyez un éducateur ou un parent, les leçons
     SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots,
     tout en affûtant leurs compétences en mathématiques et en sciences.
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_hide_this_warning: Cacher l'avertissement
+  compatibility_unsupported_browser: Votre navigateur n'est pas supporté. Merci de
+    mettre a jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de
+    nos explorateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
+    avoir des erreurs de fonctionnalité.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
