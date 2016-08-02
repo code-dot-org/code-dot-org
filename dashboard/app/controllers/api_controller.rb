@@ -13,8 +13,11 @@ class ApiController < ApplicationController
 
   def update_lockable_state
     updates = params.require(:updates)
-    puts updates
-    head :ok
+    updates.to_a.each do |item|
+      # TODO: change unlocked_at as needed
+      UserLevel.find(item[:user_level_id]).update(submitted: item[:locked], view_answers: item[:view_answers])
+    end
+    render json: {}
   end
 
   # TODO: come up with a name for this that i like and delete all_section_progress
@@ -37,10 +40,10 @@ class ApiController < ApplicationController
           stage_hash[stage.id] = section.students.map do |student|
             user_level = UserLevel.find_or_create_by(user_id: student.id, level: script_level.level, script_id:  @script.id)
             {
-              user_level_id: user_level && user_level.id,
+              user_level_id: user_level.id,
               name: student.name,
-              locked: user_level && user_level.submitted && !user_level.view_answers,
-              readonly: user_level && user_level.view_answers
+              locked: user_level.submitted && !user_level.view_answers,
+              view_answers: user_level.view_answers
             }
           end
         end

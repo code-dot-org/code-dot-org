@@ -18,6 +18,7 @@ const SELECT_SECTION = 'teacherPanel/SELECT_SECTION';
 const OPEN_LOCK_DIALOG = 'teacherPanel/OPEN_LOCK_DIALOG';
 const CLOSE_LOCK_DIALOG = 'teacherPanel/CLOSE_LOCK_DIALOG';
 const BEGIN_SAVE = 'teacherPanel/BEGIN_SAVE';
+const FINISH_SAVE = 'teacherPanel/FINISH_SAVE';
 
 const initialState = {
   viewAs: ViewType.Teacher,
@@ -74,7 +75,7 @@ export default function reducer(state = initialState, action) {
         userLevelId: student.user_level_id,
         name: student.name,
         lockStatus: student.locked ? LockStatus.Locked : (
-          student.readonly ? LockStatus.Readonly : LockStatus.Editable)
+          student.view_answers ? LockStatus.Readonly : LockStatus.Editable)
       }))
     });
   }
@@ -82,6 +83,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
       lockDialogStageId: null,
+      lockStatus: [],
       saving: false
     });
   }
@@ -90,6 +92,29 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       saving: true
     });
+  }
+
+  if (action.type === FINISH_SAVE) {
+    // TODO - some of this might end up looking a lot cleaner if i used immutable.js
+    const { sections, selectedSection, lockDialogStageId } = state;
+    const nextLockStatus = action.lockStatus;
+    const nextStage = _.cloneDeep(sections[selectedSection].stages[lockDialogStageId]);
+    nextStage.forEach((item, index) => {
+      const update = nextLockStatus[index];
+      // We assume lockStatus is ordered the same as stageToUpdate. Let's
+      // validate that.
+      if (item.user_level_id !== update.userLevelId) {
+        throw new Error('Expect user ids be the same');
+      }
+      item.locked = update.lockStatus === LockStatus.Locked;
+      item.view_answers = update.lockStatus === LockStatus.Readonly;
+    });
+
+    const nextState = _.cloneDeep(state);
+    nextState.sections[selectedSection].stages[lockDialogStageId] = nextStage;
+    nextState.lockStatus = nextLockStatus;
+    nextState.unlockedStageIds = unlockedStages(nextState.sections[selectedSection]);
+    return nextState;
   }
 
   return state;
@@ -123,29 +148,42 @@ export const openLockDialog = stageId => ({
 });
 
 export const beginSave = () => ({ type: BEGIN_SAVE });
+export const finishSave = (newLockStatus) => ({
+  type: FINISH_SAVE,
+  lockStatus: newLockStatus
+});
 
-export const saveLockDialog = () => {
-  return dispatch => {
+export const saveLockDialog = (newLockStatus) => {
+  return (dispatch, getState) => {
+    const oldLockStatus = getState().teacherPanel.lockStatus;
+    const saveData = newLockStatus.filter((item, index) => {
+      // Only need to save items that changed
+      return !_.isEqual(item, oldLockStatus[index]);
+    }).map(item => ({
+      user_level_id: item.userLevelId,
+      locked: item.lockStatus === LockStatus.Locked,
+      view_answers: item.lockStatus === LockStatus.Readonly
+    }));
+
+    if (saveData.length === 0) {
+      dispatch(closeLockDialog());
+      return;
+    }
+
     dispatch(beginSave());
-    $.post('/dashboardapi/lock_status',
-    // TODO - post real data
-      {
-        updates: [{
-          user_level_id: '123',
-          locked: false,
-          readonly: true
-        }, {
-          user_level_id: '456',
-          locked: true,
-          readonly: false
-        }]
-      }
-    ).done(() => {
-      console.log('success');
+    $.ajax({
+      type: 'POST',
+      url: '/dashboardapi/lock_status',
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify({updates: saveData})
+    }).done(() => {
+      dispatch(finishSave(newLockStatus));
       dispatch(closeLockDialog());
     })
     .fail(err => {
-      console.error('error');
+      console.error(err);
+      dispatch(closeLockDialog());
     });
   };
 };
