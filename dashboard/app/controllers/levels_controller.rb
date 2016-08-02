@@ -14,7 +14,7 @@ class LevelsController < ApplicationController
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
-  LEVELS_PER_PAGE=100
+  LEVELS_PER_PAGE = 100
 
   # GET /levels
   # GET /levels.json
