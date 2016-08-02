@@ -750,6 +750,8 @@ ActiveRecord::Schema.define(version: 20160804153118) do
     t.integer  "script_id",       limit: 4
     t.integer  "level_source_id", limit: 4
     t.boolean  "submitted"
+    t.boolean  "view_answers"
+    t.datetime "unlocked_at"
   end
 
   add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
