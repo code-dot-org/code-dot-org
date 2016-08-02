@@ -86,8 +86,7 @@ const StageLockDialog = React.createClass({
 
   setAllLockStatus(lockStatus) {
     this.setState({
-      lockStatus: this.state.lockStatus.map(item => ({
-        name: item.name,
+      lockStatus: this.state.lockStatus.map(item => Object.assign({}, item, {
         lockStatus
       }))
     });
@@ -109,21 +108,23 @@ const StageLockDialog = React.createClass({
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
-    this.setState({
-      lockStatus: this.state.lockStatus.map((item, index) => {
-        if (index !== modifiedIndex) {
-          return item;
-        }
-        return {
-          name: item.name,
-          lockStatus: event.target.value
-        };
-      })
-    });
+    // Do this in a setTimeout so that the event has time to finish processing
+    // (i.e. so that checkbox is updated) before we call setState and rerender
+    setTimeout(() => {
+      this.setState({
+        lockStatus: this.state.lockStatus.map((item, index) => {
+          if (index !== modifiedIndex) {
+            return item;
+          }
+          return Object.assign({}, item, {
+            lockStatus: value
+          });
+        })
+      });
+    }, 0);
   },
 
   handleSave() {
-    console.log('saving', this.state.lockStatus);
     this.props.saveDialog(this.state.lockStatus);
   },
 
@@ -208,7 +209,7 @@ const StageLockDialog = React.createClass({
                     <input
                       type="radio"
                       name={index}
-                      value="locked"
+                      value={LockStatus.Locked}
                       checked={lockStatus === LockStatus.Locked}
                       onChange={this.handleRadioChange}
                     />
@@ -223,7 +224,7 @@ const StageLockDialog = React.createClass({
                     <input
                       type="radio"
                       name={index}
-                      value="editable"
+                      value={LockStatus.Editable}
                       checked={lockStatus === LockStatus.Editable}
                       onChange={this.handleRadioChange}
                     />
@@ -238,7 +239,7 @@ const StageLockDialog = React.createClass({
                     <input
                       type="radio"
                       name={index}
-                      value="readonly"
+                      value={LockStatus.Readonly}
                       checked={lockStatus === LockStatus.Readonly}
                       onChange={this.handleRadioChange}
                     />
