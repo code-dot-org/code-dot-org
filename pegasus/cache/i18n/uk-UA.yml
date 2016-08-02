@@ -483,6 +483,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "Ви вчитель?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "Надихайте учнів та волонтерів на Годину коду."
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести
     Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
@@ -703,7 +705,7 @@
   dashboard_navigation_view_progress: "Прогрес"
   dashboard_navigation_view_text_responses: "Текстові відповіді"
   dashboard_navigation_view_assessments: "Завдання"
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "Додати учнів"
   dashboard_navigation_manage_students: "Керування учнями"
   dashboard_navigation_lesson_plans_resources: "Плани уроків та ресурси"
@@ -896,7 +898,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "Дізнайтеся більше"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "Спробувати"
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного
     учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися
     із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори
@@ -1751,6 +1753,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "грати"
   artist_shortcode: art
-  are_you_teacher: Are you a teacher?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

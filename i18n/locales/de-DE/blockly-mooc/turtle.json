@@ -41,6 +41,7 @@
   "heightParameter":"Höhe",
   "hideTurtle":"Künstler ausblenden",
   "jump":"springen",
+  "jumpTo":"jump to",
   "jumpBackward":"springe rückwärts um",
   "jumpForward":"springe vorwärts um",
   "jumpTooltip":"Bewegt den Künstler, ohne Spuren zu hinterlassen.",

@@ -41,6 +41,7 @@
   "heightParameter":"hoogte",
   "hideTurtle":"verberg kunstenaar",
   "jump":"spring",
+  "jumpTo":"jump to",
   "jumpBackward":"spring achteruit met",
   "jumpForward":"spring vooruit met",
   "jumpTooltip":"Verplaatst de artiest zonder sporen na te laten.",
