@@ -19,7 +19,9 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.order(updated_at: :desc).page(params[:page]).per(LEVELS_PER_PAGE)
+    levels = Level.order(updated_at: :desc)
+    levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/1
