@@ -23,7 +23,7 @@ The program has four phases:
 - **Phase 4:** Wrap up and Transition to CS Discoveries - In this culminating workshop, teachers reflect on their first year teaching ECS, and make a plan for the second year. Starting in Fall 2017, teachers will have the option to teach [CS Discoveries](/educate/csd), an introductory course for 7th-9th grade students created by Code.org that brings together the power of our teaching and learning tools with the educational philosophies of ECS. At this workshop, teachers will have a chance to learn about this new course and how it might fit into their school.
 
 
-[<button>Apply now</button>](/educate/professional-learning/exploring-cs-apply)
+[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
 
 ## <a name="commitments"></a>What are the program commitments?
 
@@ -42,12 +42,13 @@ The Exploring Computer Science professional learning program is 94 hours of onli
 	  
 ## <a name="participate"></a>Who can Participate?
 
-The ECS Professional Learning Program is open to teachers in partner districts who are interested in teaching the Exploring Computer Science course. In order to participate in this program, educators need only demonstrate a commitment to delivering the ECS course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. 
+The ECS Professional Learning Program is open to teachers who are interested in teaching the Exploring Computer Science course. In order to participate in this program, educators need only demonstrate a commitment to delivering the ECS course in their classroom during the 2017-18 school year by having a slot on their school's master schedule. 
 
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach Exploring Computer Science. If your school district hasn't partnered with Code.org, encourage your administrators to [apply to be a partner district](/educate/districts).
 
-[<button>Apply now</button>](/educate/professional-learning/exploring-cs-apply) &nbsp;&nbsp;[<button>Join the wait list</button>](https://form.jotform.com/60337734068155)
+We're so excited that you're interested in applying for our Professional Learning Program! We are at capacity for this year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
+
+[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
 
