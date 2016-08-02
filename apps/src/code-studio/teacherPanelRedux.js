@@ -17,6 +17,7 @@ const SET_SECTIONS = 'teacherPanel/SET_SECTIONS';
 const SELECT_SECTION = 'teacherPanel/SELECT_SECTION';
 const OPEN_LOCK_DIALOG = 'teacherPanel/OPEN_LOCK_DIALOG';
 const CLOSE_LOCK_DIALOG = 'teacherPanel/CLOSE_LOCK_DIALOG';
+const BEGIN_SAVE = 'teacherPanel/BEGIN_SAVE';
 
 const initialState = {
   viewAs: ViewType.Teacher,
@@ -26,6 +27,7 @@ const initialState = {
   unlockedStageIds: [],
   lockDialogStageId: null,
   lockStatus: [],
+  saving: false
 };
 
 /**
@@ -69,7 +71,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       lockDialogStageId,
       lockStatus: students.map(student => ({
-        id: student.id,
+        userLevelId: student.user_level_id,
         name: student.name,
         lockStatus: student.locked ? LockStatus.Locked : (
           student.readonly ? LockStatus.Readonly : LockStatus.Editable)
@@ -80,6 +82,13 @@ export default function reducer(state = initialState, action) {
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
       lockDialogStageId: null,
+      saving: false
+    });
+  }
+
+  if (action.type === BEGIN_SAVE) {
+    return Object.assign({}, state, {
+      saving: true
     });
   }
 
@@ -112,6 +121,34 @@ export const openLockDialog = stageId => ({
   type: OPEN_LOCK_DIALOG,
   stageId
 });
+
+export const beginSave = () => ({ type: BEGIN_SAVE });
+
+export const saveLockDialog = () => {
+  return dispatch => {
+    dispatch(beginSave());
+    $.post('/dashboardapi/lock_status',
+    // TODO - post real data
+      {
+        updates: [{
+          user_level_id: '123',
+          locked: false,
+          readonly: true
+        }, {
+          user_level_id: '456',
+          locked: true,
+          readonly: false
+        }]
+      }
+    ).done(() => {
+      console.log('success');
+      dispatch(closeLockDialog());
+    })
+    .fail(err => {
+      console.error('error');
+    });
+  };
+};
 
 export const closeLockDialog = () => ({
   type: CLOSE_LOCK_DIALOG

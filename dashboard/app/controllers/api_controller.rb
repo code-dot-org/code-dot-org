@@ -11,6 +11,12 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
+  def update_lockable_state
+    updates = params.require(:updates)
+    puts updates
+    head :ok
+  end
+
   # TODO: come up with a name for this that i like and delete all_section_progress
   def lockable_state_sections
     return unless current_user
@@ -29,12 +35,12 @@ class ApiController < ApplicationController
           end
           script_level = stage.script_levels[0]
           stage_hash[stage.id] = section.students.map do |student|
-            user_level = student.user_level_for(script_level, script_level.level)
+            user_level = UserLevel.find_or_create_by(user_id: student.id, level: script_level.level, script_id:  @script.id)
             {
-              id: student.id,
+              user_level_id: user_level && user_level.id,
               name: student.name,
-              locked: user_level && user_level.submitted,
-              readonly: false #user_level.readonly
+              locked: user_level && user_level.submitted && !user_level.view_answers,
+              readonly: user_level && user_level.view_answers
             }
           end
         end
