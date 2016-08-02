@@ -162,8 +162,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
-  var hasNeitherBackButton = !againButton && !previousLevelButton;
-  var onlyContinue = continueButton && (hasNeitherBackButton || options.defaultToContinue);
+  const hasNeitherBackButton = !againButton && !previousLevelButton;
+  const onlyContinue = continueButton && hasNeitherBackButton;
+  const defaultContinue = onlyContinue || options.defaultToContinue;
 
   // get the topmost missing recommended block, if it exists, to be
   // added to the queue of contextual hints. If the user views the block
@@ -185,7 +186,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (!options.hideIcon) {
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   }
-  var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
+  const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = this.createModalDialog({
     Dialog: options.Dialog,

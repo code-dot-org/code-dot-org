@@ -69,6 +69,48 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawSquare: 2"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete the task you need to call the 2-param version of drawSquare, twice."
+      },
+      {
+        "entries": [
+          "penUp:0",
+          "moveTo:2",
+          "drawSquare:2",
+          "penDown:0",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "penUp:0",
+          "moveTo:2",
+          "drawSquare:2",
+          "penDown:0",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "penUp:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expeting you to insert two lines of code - two calls to drawSquare(size, width) at the top of the code. It should move to a locaiton, draw a larger square with a thin line, move to a different location, and then draw a smaller square with a thicker border."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

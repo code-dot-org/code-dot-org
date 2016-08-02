@@ -43,7 +43,8 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       cancelButtonCallback: function () {},
       joinButtonCallback: function () {},
       resetShardCallback: function () {},
-      showRouterLogCallback: function () {}
+      showRouterLogCallback: function () {},
+      showTeacherLogCallback: function () {}
     };
   });
 
