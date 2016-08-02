@@ -71,7 +71,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 ### <a name="features"></a>Features
 
 - Access to daily lesson plans, covering roughly 150 hours of material with linked activity guides and assessment support
-- Build problem solving skills through the use of computational widgets such as the [pixelation](/pixelation) and [text compression](/textcompression) widgets
+- Build problem solving skills through the use of [computational widgets](/educate/csp/widgets) such as the pixelation and text compression widgets
 - Rapidly develop shareable web applications using [App Lab](/educate/applab): Code.org's online, block to text, JavaScript programming environment
 - Experience a blend of online, guided tutorials and open-ended, project-based learning
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
@@ -79,12 +79,9 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).
 
-
-
 <p style="clear:both">&nbsp;</p>
 
-
-[<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
+[<button>Try the widgets</button>](/educate/csp/widgets) &nbsp;&nbsp; [<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
