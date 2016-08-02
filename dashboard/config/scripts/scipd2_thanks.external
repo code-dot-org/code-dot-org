@@ -3,12 +3,11 @@ title 'Great Job!'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+# Great Job!
 
-### Great Job!
+<img src="https://images.code.org/3046d4184bc15df14c6d0409ffb81970-image-1435777546007.gif" class="lefted roundedPic" width="350px"/>
 
-<br/><br/>
-<img src="https://images.code.org/3046d4184bc15df14c6d0409ffb81970-image-1435777546007.gif" class="lefted roundedPic" width="350px"/>Congratulations, by this point, you have nearly completed all of Phase 2!
+Congratulations, by this point, you have nearly completed all of Phase 2!
 
 As you head in to Phase 3, remember that Code.org will continue to be available as you proceed through the steps necessary to get your classroom going in the year to come.
 
@@ -18,7 +17,5 @@ For more unique questions, post a message in the <a href="http://forum.code.org/
 
 For all other issues, please contact us at <a href="mailto:teacher@code.org">teacher@code.org</a> and someone from our small team will get back to you as soon as we are able.
 
-<br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

@@ -64,6 +64,42 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "min_workspace_height": "-41",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward(pixels) and turnRight(degrees) without any loops."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "At a minimum, to draw the triangle you need to move 3 times."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "App Lab is expecting that you'll use a combination of turnRight(degrees) and moveForward(pixels) to complete this task.  There is a clever way to use turnLeft that will result in a correct program, but use turnRight for now."
+      },
+      {
+        "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "maxTimes": 3,
+        "message": "App Lab is expecting that you'll need to call turnRight(degrees) at least twice to do this task."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

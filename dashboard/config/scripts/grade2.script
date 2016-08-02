@@ -171,3 +171,10 @@ level_concept_difficulty '{"events":2,"sequencing":4}'
 level 'blockly:Flappy:9'
 level_concept_difficulty '{"events":1,"sequencing":1}'
 level 'blockly:Flappy:11'
+
+stage 'More CS with Run Marco'
+level 'grade2_link_RunMarco_partner'
+
+#stage 'More CS with Scratch'
+#level 'grade2_link_RunMarco_partner'
+

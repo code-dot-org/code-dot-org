@@ -44,7 +44,7 @@ var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 var experiments = require('../experiments');
-
+var InputPrompt = require('../templates/InputPrompt');
 var studioCell = require('./cell');
 
 // tests don't have svgelement
@@ -618,7 +618,7 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
-      var distThisMove = Math.min(cmd.opts.queuedDistance,
+      var distThisMove = Math.min(cmd.opts.queuedDistance || Infinity,
                                   Studio.sprite[cmd.opts.spriteIndex].speed);
       var moveDirection = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
       totalDelta.x += distThisMove * moveDirection.x;
@@ -1065,6 +1065,12 @@ Studio.onTick = function () {
     Studio.executeQueue('when-up');
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
+
+    // Run any callbacks from "ask" blocks. These get queued after the user
+    // provides input.
+    for (let i = 0; i < Studio.askCallbackIndex; i++) {
+      Studio.executeQueue(`askCallback${i}`);
+    }
 
     updateItems();
 
@@ -2096,9 +2102,10 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.perExecutionTimeouts.forEach(function (timeout) {
     clearTimeout(timeout);
   });
-  clearInterval(Studio.tickIntervalId);
+  Studio.pauseExecution();
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
+  Studio.askCallbackIndex = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -2129,6 +2136,7 @@ function getDefaultMapName() {
 Studio.reset = function (first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.hideInputPrompt();
   Studio.gameState = Studio.GameStates.WAITING;
 
   resetItemOrProjectileList(Studio.projectiles);
@@ -2957,6 +2965,22 @@ Studio.execute = function () {
   $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
+  Studio.resumeExecution();
+};
+
+/**
+ * Pause calling `Studio.onTick`.
+ */
+Studio.pauseExecution = function () {
+  Studio.paused = true;
+  window.clearInterval(Studio.tickIntervalId);
+};
+
+/**
+ * Resume calling `Studio.onTick`.
+ */
+Studio.resumeExecution = function () {
+  Studio.paused = false;
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
@@ -3672,7 +3696,7 @@ Studio.queueCmd = function (id, name, opts) {
 
 Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (Studio.yieldExecutionTicks > 0) {
+    if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
     if (handler.name === name && handler.cmdQueue.length) {
@@ -3683,7 +3707,7 @@ Studio.executeQueue = function (name, oneOnly) {
         } else {
           break;
         }
-        if (Studio.yieldExecutionTicks > 0) {
+        if (Studio.paused || Studio.yieldExecutionTicks > 0) {
           break;
         }
       }
@@ -3861,6 +3885,13 @@ Studio.callCmd = function (cmd) {
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
+      break;
+    case 'askForInput':
+      studioApp.highlight(cmd.id);
+      if (Studio.paused) {
+        return false;
+      }
+      Studio.askForInput(cmd.opts.question, cmd.opts.callback);
       break;
   }
   return true;
@@ -4777,6 +4808,55 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
     }
   });
   return foundCmd;
+};
+
+/**
+ * Pause execution and display a prompt for user input. When the user presses
+ * enter or clicks "Submit", resume execution.
+ * @param question
+ * @param callback
+ */
+Studio.askForInput = function (question, callback) {
+  Studio.pauseExecution();
+
+  const viz = document.getElementById('visualization');
+  const target = document.createElement('div');
+  Object.assign(target.style, {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '400px',
+    height: '400px',
+  });
+  viz.appendChild(target);
+  studioApp.resizeVisualization();
+
+  Studio.inputPromptElement = target;
+
+  function onInputReceived(value) {
+    Studio.resumeExecution();
+    Studio.hideInputPrompt();
+
+    let handlerName = `askCallback${Studio.askCallbackIndex}`;
+    Studio.askCallbackIndex++;
+    registerEventHandler(Studio.eventHandlers, handlerName, callback.bind(null, value || ''));
+    callHandler(handlerName);
+  }
+
+  ReactDOM.render(
+    <InputPrompt question={question} onInputReceived={onInputReceived} />,
+    target
+  );
+};
+
+Studio.hideInputPrompt = function () {
+  const target = Studio.inputPromptElement;
+
+  if (target) {
+    ReactDOM.unmountComponentAtNode(target);
+    target.parentNode.removeChild(target);
+    Studio.inputPromptElement = null;
+  }
 };
 
 Studio.hideSpeechBubble = function (opts) {

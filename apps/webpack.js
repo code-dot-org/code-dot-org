@@ -47,6 +47,7 @@ var baseConfig = {
         query: {
           cacheDirectory: true,
           sourceMaps: true,
+          compact: false,
         }
       },
     ],
