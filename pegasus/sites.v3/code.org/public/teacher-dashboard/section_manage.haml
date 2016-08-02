@@ -32,11 +32,11 @@ content-type: text/ng-template
               %select{ "ng-model" => "selectedSectionCode" }
                 %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id}", value: "{{section.code}}"}
                   {{section.name}}
-                %option{value: I18n.t('dashboard_sections_other_section')}
-                  {{otherSection}}
-            %div{ "ng-show" => "selectedSectionCode != 'Other Section'" }
+                %option{value: "{{otherTeacher}}"}
+                  = I18n.t('dashboard_sections_other_section')
+            %div{ "ng-show" => "selectedSectionCode != '{{otherTeacher}}'" }
               = I18n.t('dashboard_sections_one_per_teacher')
-            %div{ "ng-show" => "selectedSectionCode == 'Other Section'" }
+            %div{ "ng-show" => "selectedSectionCode == '{{otherTeacher}}'" }
               %label
                 .section-title.selection= I18n.t('dashboard_sections_enter_code')
                 %input{ class: "text-box selection-text", type: 'text', maxlength: 6, "ng-model" => "manuallySelectedSectionCode", placeholder: I18n.t('dashboard_sections_code_placeholder') }

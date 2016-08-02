@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Ukázka tisková zprávy pro politiky
 
 Pro okamžité zveřejnění   
@@ -42,9 +40,3 @@ Přes 100 miliónů studentů celosvětově již vyzkoušeli hodinu kódu. Díky
 [**VLOŽTE CITACI OD JINÉHO ORGANIZÁTORA NEBO NĚKOHO KDO BYL PŘÍTOMEN PŘI UDÁLOSTI**]
 
 Pro více informací o [**UDÁLOST/PROGRAM/ATD**], navštivte [**VLOŽTE WEBOVOU STRÁNKU**] nebo kontaktujte [** VLOŽTE KONTAKTNÍ INFORMACE**]
-
-  
-  
-
-
-<%= view :signup_button %>

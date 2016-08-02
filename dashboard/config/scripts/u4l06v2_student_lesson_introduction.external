@@ -3,29 +3,29 @@ title 'title'
 css 'unplugged'
 description 'description here'
 markdown <<MARKDOWN
-## Unit 4: Lesson 06 - Discover a Data Story
+# Unit 4: Lesson 06 - Discover a Data Story
 
-# Background
+## Background
 In the previous lesson we learned how to use a data visualization tool to create a visualization. 
 Sometimes data in its raw state is simply too big to be able to look at and derive any meaning. Even when the data is summarized in a table it can be difficult to “see” what the data shows.  
 
 The point of this lesson is that **data visualization is a useful tool for discovery**.  In today’s activity you and a partner will investigate some sets of data on your own and use visualization to discover a connection or trend. There are several datasets for you to choose from. 
 
+## Vocabulary
 
-# Vocabulary
 * **README** - a document providing background information about a dataset
 * **CSV** - abbreviation of “comma-separated values,” this is a widely-used format for storing data
 * **Raw data** - the original data as it was collected
 * **Summary table** a table of aggregate information about a dataset (e.g., the average, sum, count of some values)
 
-# Lesson
+## Lesson
 
 * Explore the 5 datasets with a partner.
 * Choose one to explore more deeply.
 * Use visualization to discover an interesting connection, trend or pattern.
 * Present one along with responses to prompts.
 
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1JFaikU67zbsJVgBRle1NiCdNOabzVetbVGHTRLdpRjg/edit#" target="_blank">Discover a Data Story</a>
 * Rubric: <a href="https://docs.google.com/document/d/1fFkCLZmkKRJ8fs5EgiXU8i8I5hU00pBSEHQbAsUVOBU/edit?usp=sharing" target="_blank">Present Your Data Story</a>
@@ -35,10 +35,7 @@ The point of this lesson is that **data visualization is a useful tool for disco
     * Movie Rating Data
     * Personality Test Data
     * Twitter Data
-    
-  
 * Guide for reference: <a href="http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf" target="_blank"> Data Visualization 101</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

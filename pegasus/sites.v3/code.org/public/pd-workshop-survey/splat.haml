@@ -10,9 +10,14 @@ title: "Professional Development Workshop Survey"
   workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
   pass unless workshop
 
+  teacher_id = enrollment[:user_id]
+  teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
+  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  email = teacher.nil? ? enrollment[:email] : teacher[:email]
+
   plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
   # Have they ever taken any pd-workshop-survey?
-  is_first_survey = DB[:forms].where(kind: 'PdWorkshopSurvey').count == 0
+  is_first_survey = teacher_id.nil? || DB[:forms].where(kind: 'PdWorkshopSurvey', user_id: teacher_id).count == 0
 
   # Have they taken this particular survey?
   previous_response = DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment[:id]).first
@@ -44,6 +49,10 @@ title: "Professional Development Workshop Survey"
 - else
 
   %form#pd-workshop-survey-form{role: 'form'}
+    %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
+    %input{name: 'email_s', type: 'hidden', value: email}
+    %input{name: 'name_s', type: 'hidden', value: name}
+
     %input{name: 'enrollment_id_i', type:'hidden', value: enrollment[:id]}
     %input{name: 'workshop_id_i', type: 'hidden', value: workshop[:id]}
     %input{name: 'plp_b', type: 'hidden', value: plp.nil? ? '0' : '1'}

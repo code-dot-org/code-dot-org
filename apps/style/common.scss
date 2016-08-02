@@ -757,18 +757,6 @@ input[type="radio"] {
   left: 0;
   z-index: -1;
 }
-.trophy {
-  min-width:100px;
-  text-align:center;
-  vertical-align:top;
-  display:inline-block;
-  max-width:100px;
-  margin-bottom:10px;
-}
-.trophyimg {
-  width:80px;
-  height:80px;
-}
 #dialog button {
   min-width: 4em;
 }
@@ -883,6 +871,17 @@ input[type="radio"] {
   }
 }
 
+html[dir="RTL"] .prompt-icon-cell {
+  padding-right: 0px;
+  padding-left: 10px;
+  &.authored_hints {
+    #lightbulb {
+      right: 40px;
+      left: auto;
+    }
+  }
+}
+
 .qtip.cdo-qtips.qtip-authored-hint {
   .qtip-content {
     font-family: $gotham-regular;
@@ -934,32 +933,6 @@ input[type="radio"] {
         left: -35px;
         font-size: 18px;
       }
-    }
-  }
-}
-
-.modal-content {
-  .instructionsImage {
-    height: 35px;
-    vertical-align: text-bottom;
-  }
-  .instructions2 {
-    .instructionsImage {
-      height: 24px;
-      vertical-align: text-bottom;
-    }
-  }
-}
-
-#prompt-table {
-  .instructionsImage {
-    height: 25px;
-    vertical-align: text-bottom;
-  }
-  #prompt2 {
-    .instructionsImage {
-      height: 20px;
-      vertical-align: text-bottom;
     }
   }
 }

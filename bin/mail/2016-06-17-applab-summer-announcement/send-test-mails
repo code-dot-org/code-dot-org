@@ -1,0 +1,3 @@
+#!/bin/sh
+
+../send-to-mailing-list 6-17-2016-teacher-email ../mailing-common/test-params-us.csv

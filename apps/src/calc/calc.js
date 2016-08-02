@@ -25,7 +25,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var jsnums = require('./js-numbers/js-numbers.js');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
@@ -35,7 +35,7 @@ var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -43,6 +43,7 @@ var EquationSet = require('./equationSet');
 var Equation = require('./equation');
 var Token = require('./token');
 var InputIterator = require('./inputIterator');
+var experiments = require('../experiments');
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
@@ -151,6 +152,8 @@ Calc.init = function (config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -203,13 +206,11 @@ Calc.init = function (config) {
 
   studioApp.setPageConstants(config);
 
-  var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
-
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={<CalcVisualizationColumn/>}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -471,6 +472,10 @@ function divZeroOrFailure(err) {
     return appSpecificFailureOutcome(calcMsg.divideByZeroError(), null);
   }
 
+  if (err instanceof ExpressionNode.ImaginaryNumberError) {
+    return appSpecificFailureOutcome(calcMsg.imaginaryNumberError(), null);
+  }
+
   // One way we know we can fail is with infinite recursion. Log if we fail
   // for some other reason
   if (!utils.isInfiniteRecursionError(err)) {
@@ -687,7 +692,11 @@ Calc.execute = function () {
     onComplete: onReportComplete
   };
 
-  appState.waitingForReport = true;
+  if (!level.isProjectLevel) {
+    // On project levels, report never actually returns. Don't set this as
+    // it would otherwise make our preAnimationFailure not display feedback.
+    appState.waitingForReport = true;
+  }
   studioApp.report(reportData);
 
   studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
@@ -726,7 +735,7 @@ Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
-  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
+  if (studioApp.hasUnwantedExtraTopBlocks()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     return;
@@ -755,14 +764,20 @@ Calc.generateResults_ = function () {
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopUsedBlocks());
   appState.failedInput = null;
 
-  // Note: This will take precedence over free play, so you can "fail" a free
-  // play level with a divide by zero error.
-  // Also worth noting, we might still end up getting a div zero later when
-  // we start varying inputs in evaluateResults_
+  // Note: These checks will take precedence over free play, so you can "fail"
+  // a free play level with a divide by zero or imaginary # error.
+  // Also worth noting, we might still end up getting a div zero or imaginary #
+  // later when we start varying inputs in evaluateResults_
   if (appState.userSet.hasDivZero()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.APP_SPECIFIC_FAIL;
     appState.message = calcMsg.divideByZeroError();
+    return;
+  }
+  if (appState.userSet.hasImaginary()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+    appState.message = calcMsg.imaginaryNumberError();
     return;
   }
 
@@ -923,6 +938,7 @@ function tokenListForEvaluation_(userSet, targetSet) {
   // Check for div zero
   if (evaluation.err) {
     if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+        evaluation.err instanceof ExpressionNode.ImaginaryNumberError ||
         utils.isInfiniteRecursionError(evaluation.err)) {
       // Expected type of error, do nothing.
     } else {
@@ -966,7 +982,8 @@ function tokenListForFailedFunctionInput_(userSet, targetSet) {
   }
   var evaluation = userSet.evaluateWithExpression(expression);
   if (evaluation.err) {
-    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+        evaluation.err instanceof ExpressionNode.ImaginaryNumberError) {
       evaluation.result = ''; // result will not be used in this case
     } else {
       throw evaluation.err;

@@ -21,6 +21,16 @@ class String
   end
 end
 
+def ask_for_name
+  name = ''
+  until name != ''
+    print "Who are you? "
+    name = gets.chomp
+  end
+  puts "Hi #{name}!"
+  name
+end
+
 def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
@@ -72,13 +82,36 @@ def open_in_default_browser(url)
   end
 end
 
-def content_push(server_name, environment_name)
+def content_push(server_name, environment_name, user_name)
   puts <<-EOS.unindent
     Follow the prompts given by the content-push script.
       If you need to do something fancier (or if the changed files do not
       "look ok" when it asks you), log in to staging and hand-craft the commit.
   EOS
-  system "ssh -t gateway.code.org ssh -t #{server_name} #{environment_name}/bin/content-push"
+  success = system "ssh -t gateway.code.org ssh -t #{server_name} \"#{environment_name}/bin/content-push --name=\\\"#{user_name}\\\"\""
+
+  # Notice if the content push fails, and be helpful about fixing the problem.
+  unless success
+    puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
+    should_i "ssh to #{server_name} so you can fix the problem manually" do
+      puts <<-EOS.unindent
+
+      #{bold "Connecting to #{server_name}."} Type 'logout' when you're done.
+
+      #{dim 'd[ o_0 ]b'}
+
+      EOS
+      system "ssh -t gateway.code.org ssh #{server_name}"
+      puts <<-EOS.unindent
+
+      #{dim 'd[ o_0 ]b'}
+
+      #{bold 'Welcome back!'}
+
+      EOS
+      press_enter_to_continue
+    end
+  end
 end
 
 def open_pull_request(base, compare, title)
@@ -101,6 +134,8 @@ puts <<-EOS.unindent
 
 EOS
 
+user_name = ask_for_name
+
 wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
 
 should_i "morning DTT" do
@@ -109,17 +144,17 @@ should_i "morning DTT" do
 end
 
 should_i "commit content changes from staging" do
-  content_push 'staging', 'staging'
+  content_push 'staging', 'staging', user_name
 end
 
 should_i "commit content changes from levelbuilder" do
-  content_push 'levelbuilder-staging', 'levelbuilder'
+  content_push 'levelbuilder-staging', 'levelbuilder', user_name
 
   should_i "merge from levelbuilder to staging" do
     open_pull_request 'staging', 'levelbuilder', 'Levelbuilder > Staging'
     wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
     should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
-      content_push 'staging', 'staging'
+      content_push 'staging', 'staging', user_name
     end
   end
 end

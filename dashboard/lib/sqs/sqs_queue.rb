@@ -1,5 +1,4 @@
 module SQS
-
   # A queue implementation backed by SQS. Assumes a queue processor to eventually
   # handle the queued messages.
   class SQSQueue
@@ -16,5 +15,4 @@ module SQS
       @sqs_client.send_message(queue_url: queue_url, message_body: message_body)
     end
   end
-
 end

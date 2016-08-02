@@ -9,7 +9,6 @@ def bash(command)
 end
 
 module PDF
-
   def self.get_local_pdf_paths(collate_file)
     _, paths = parse_collate_file(collate_file)
     existing_files remove_urls paths

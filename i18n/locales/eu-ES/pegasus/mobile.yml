@@ -1,7 +1,12 @@
 eu-ES:
   hour_of_code: Kode Ordua
   hello: Kaixo, mundua
+  "yes": Bai
+  "no": Ez
   select_language: Aukera ezazu zure hizkuntza, mesedez
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Ikasi gehiago
   en: Informatika
   computer_science_edweek: Informatikaren Ikaskuntzaren astea
   csedweek_dates: 2014-ko abenduaren 8-tik 14-ra
@@ -42,7 +47,7 @@ eu-ES:
   csedweek_map_legend_cs_tech_jam: Informatika astea
   cded_sign_up: Eman izena
   cded_try_it: Saiatu
-  twentyhours_trynow: Saiatu orain
+  try_now: Saiatu orain
   california_heading: Eskatu zure eskolan programazioa irakasteko
   california_text: "Edozein irakaslek eskaini ditzake gure <a href='http://studio.code.org/'> doako ikastaroak</a>. Edozein lehen hezkuntzako eskolak<a href='http://code.org/educate/k5'> irakats dezake programazioa</a>. Eskatu bigarren hezkuntzako eskolei gurekin <a href='http://code.org/educate/districts'> bazkidetzeko."
   california_button: Gehiago ikasi
@@ -284,6 +289,8 @@ eu-ES:
   homepage_banner_20k_teachers_link: Ikasi gehiago
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: Add your support
+  homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
+  homepage_banner_emailprivacy_link: Read more
   homepage_slot_text_title_hoc: Kode Ordua
   homepage_slot_text_blurb_hoc: Edonork ikasi dezake. Gaurtik hasi
   homepage_slot_text_link_hoc: Probatu Kode Ordua
@@ -361,14 +368,9 @@ eu-ES:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Erabili arrastatzeko blokeak eta JavaScript.
   starwars_javascript_specs: Ingelesez bakarrik | Nabigatzaile modernoak | 11 urtetik aurrera
-  starwars_javascript_start_button: Saiatu orain
   starwars_blocks_title: Blokeak
   starwars_blocks_description: Erabili arrastatzeko blokeak.
   starwars_blocks_specs: Hizkuntza asko | Arakatzaile modernoak, smartphoneak, tabletak | 6-106 adin bitartea
-  starwars_blocks_start_button: Gehiago ikasi
-  starwars_watch_videos: Hasi baino lehen, ikus ezazu bideo hauetakoren bat, animatzeko
-  starwars_speak_languages: Beste hizkuntza bat erabiltzen duzu?
-  starwars_help_translate: Lagundu guri itzulpenak egiten
   starwars_platform_text: Nabigatzaile modernoak, smatphoneak, tabletak
   mc_name: Minecraft Kode Ordua
   mc_longdescription: Erabili kode blokeak Steve edo Alex eramateko abentura batera Minecraft mundu honetan.
@@ -377,6 +379,11 @@ eu-ES:
   mc_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   mc_specs: Hizkuntza asko | Arakatzaile moderno eta tabletak | 6-106 adin bitartea
   minecraft_subtitle: Minecraft Kode Ordua
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Animatu ikasleak Kode Orduan parte hartzeko eta egin zaitez boluntario.
   volunteer_engineer_submission_subtitle_generic: '100.000 irakaslek beren ikasgeletan Kode orduan parte hartuko dute aurten, 2015, Abe 7-13 artean. Zure laguntza behar dute! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} irakaslek informatika gustuko duten boluntario gogotsuak behar dituzte Kode Orduan laguntzeko, abenduan.<br>%{num_volunteers} boluntariok eman dute izena. Animatu zu ere!'
@@ -501,9 +508,13 @@ eu-ES:
   dashboard_action_done: Egina
   dashboard_action_required: beharrezkoa
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -515,13 +526,14 @@ eu-ES:
   dashboard_navigation_section_pd: Garapen profesionala
   dashboard_navigation_section_speakers: 'Informatika <br/> Hizlari Gonbidatuak'
   dashboard_navigation_all_sections: Ikasleen kontuak eta aurrerapena
-  dashboard_navigation_view_progress: Aurrerapena Ikusi
-  dashboard_navigation_view_text_responses: Ikusi textu erantzunak
+  dashboard_navigation_view_progress: Aurrerapena
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Ikasleak Gehitu
   dashboard_navigation_manage_students: Ikasleak Kudeatu
   dashboard_navigation_lesson_plans_resources: Ikasgaien Plangintza eta Baliabideak
-  dashboard_navigation_view_stats: Estatistikak Ikusi
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Atala: %{section_name}'
   dashboard_navigation_student: 'Ikaslea: %{student_name}'
   dashboard_progress_not_started: hasi gabe
@@ -533,14 +545,16 @@ eu-ES:
   dashboard_progress_submitted: submitted
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: Atal berria
   dashboard_sections_jumbotron_instruction: Sekzio berriak sortu eta ikasleak gehitu bertara. Sekzioak ikasleak talde txikiagoetan antolatzen laguntzen dizu, horrela, beraien progresua ikusi eta bere kontuak administratu ditzazkezu.
   dashboard_sections_table_section: Atala
   dashboard_sections_table_secret: Login mota
   dashboard_sections_table_grade: Kalifikazioa
   dashboard_sections_table_course: Ikastaroa
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Ikasleak
   dashboard_sections_table_code: Sekzio Kodea
   dashboard_sections_name: Atal izena
@@ -556,7 +570,7 @@ eu-ES:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
@@ -664,8 +678,10 @@ eu-ES:
   dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: Ikasi gehiago
+  dashboard_announce_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Ikasi gehiago
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
@@ -785,6 +801,7 @@ eu-ES:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
@@ -800,7 +817,7 @@ eu-ES:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: Matematika
-  hoc_category_name: Kode ordua
+  hoc_category_name: Kode Ordua
   csf_category_name: CS Fundamentals
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
@@ -1199,9 +1216,8 @@ eu-ES:
   processing_beyond_longdescription: Processing programazio lengoaia izateaz gain, garapen ingurunea eta online komunitatea ere bada. 2001ean sortua, Processing-ek alfabetismo digitala sustatu eta uztartu du arte bisualen munduan teknologia txertatuz. Hasiera batean marrazketa software bezala sortu zen, baita programazioaren oinarriak era bisualean azaltzeko tresna gisa ere. Processing asko eraldatu da, eta mundu profesionalean bere txokoa osatzea lortu du, egun milaka ikaste, artista, diseinatzaile eta ikertzailek erabiltzen dutelarik ikasi, prototipoak egin edota garatzeko.
   alice_beyond_longdescription: Programazio ingurune berritzaile baten erabilerarekin, 3D animazioak sortu ahal izango dituzu. Alice proiektuak hainbat tresna eskaintzen ditu pentsamendu konputazionalaren, gatazken ebazpenaren eta programazioaren irakaskuntza eta ikasketa sustatzeko, adin tarte guztietan.
   sphero_beyond_longdescription: Hezitzailea edo gurasoa izan, SPRK ikasgaiak haurrei jarduera dibertigarri bat ematen die robotak programatzen beraien lagunekin beraien matematika eta zientzia gaitasunak elkarbanatzen dituzten bitartean.
-  compatibility_https_header: Mesedez, HTTPS gaitu Code.org-rentzat.
-  compatibility_https_message: "Segurtasuna hobetzeko, HTTPS-ra aldatzen ari gara %{https_date}-ean. Data horretatik aurrera ezingo zara Code.org-ra sartu.<a href='%{it_requirements_url}'>Hemen klikatu</a> HTTPS gaitzen ikasteko Code.org-rentzat."
-  compatibility_https_hide_this_warning: Ezkutatu ohar hau
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

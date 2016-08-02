@@ -29,6 +29,8 @@ bg:
   unsubmit: Не е добавено
   previous_page: Предишна страница
   next_page: Следваща страница
+  next_resource: Следващ ресурс
+  done_with_module: Done with this Learning Module
   cancel: Отмени
   okay: Добре
   heading_x_of_y: '%{heading} (page %{x} на %{y})'
@@ -85,6 +87,7 @@ bg:
     teacher_title: Регистрация за Учители/Възпитатели
     student_pitch: регистрация като ученик в Code.org
     student_title: регистрация
+    signup_title: Абонирайте се за Code.org
     school_name: Име на училище (по желание)
     school_address: Адрес на училището (по избор)
     address_placeholder: адрес, град, държава, пощенски код
@@ -103,6 +106,9 @@ bg:
     student_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>. Ако аз съм на възраст под 13 години, аз потвърждавам с подаването на този формуляр, че имам разрешението на моя родител или законен настойник за ползване на услугите на Code.org. <br/>За потребители под 13 имейл адресите не се съхраняват във форма, която да ни позволява да се свържем с тях."
     teacher_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>."
     additional_information: 'Ние изискваме  допълнителна информация за да продължим  вписването ви.'
+    user_type_label: Тип акаунт
+    user_type_teacher: Учител
+    user_type_student: Ученик
   signin_form:
     title: Вече имате профил? Влизане
     login: Имейл или потребителско име
@@ -119,6 +125,8 @@ bg:
     picture: Сега намерете вашата тайна картина
     words: Сега въведете вашите тайни думи
     login: Вход
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Забравена парола?
@@ -239,6 +247,10 @@ bg:
       signin: Вход
       signup: Регистрирайте се
       already_registered: Вече сте регистриран?
+      pair_programming: Програмиране по двойки
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'на %{name} в прогрес'
       progress: Вашият напредък
@@ -273,6 +285,7 @@ bg:
       example_with_number: 'Примерно решение %{solution_number}'
       submitted_on: 'Добавено на %{date}'
       unsubmit: Не е добавено
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -333,8 +346,8 @@ bg:
     announcement_title: Съобщения
     announcement_view_all: Преглед на всички
     announcement_message: '<b>22 април 2016</b> - Дейностите без компютър са важна част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите всички ресурси без компютър на една целева страница. Свържете уроците с всеки Кн клас, или използвайте самостоятелно като независим курс.'
-    announcement_button: Научете повече
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_learn_more_button: Научете повече
+    announcement_petition: Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование.
     announcement_petition_button: Добавете името си
   move_students:
     new_section_dne: 'Съжалявам, но %{new_section_code} раздел не съществува. Моля, въведете код за друг раздел.'
@@ -395,15 +408,10 @@ bg:
     notes_coming_soon: Бележки за този клип очаквайте скоро.
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
-  compatability:
-    working:
-      header: Ние работим по поддръжката на вашия браузър.
-      message: "Code.org използва модерни уеб технологии. Това прави сайта по-бърз при зареждане. Вашият браузър не поддържа всички предвидени функции и е възможно да възникнат проблеми при използването на тази част на сайта. Помогнете ни <a href='%{report_issue_url}'> като ни уведомите за всички проблеми, които сте открили</a>. Можете също да <a href='%{supported_browsers_url}'> надстроите браузъра си до поддържаната версия</a>."
-      hide_this_warning: Скрий предупреждението
+  compatibility:
     upgrade:
-      header: Моля, надстройте браузъра си.
-      message: "Code.org използва модерни уеб технологии. Това прави сайта по-бърз за използване. За съжаление, вашия браузър не поддържа всички функции, необходими за работата на тази част от сайта. <br/> <br/>Инсталирате браузър от нашия списък на поддържаните браузъри, за да продължите. Можете да <a href='#'> разгледате страницата</a>, но се очаква да възникнат функционални проблеми."
-      button: Премини към списъка на поддържаните браузъри
+      unsupported_message: "Вашият браузър не се поддържа. Моля, надстройте браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е възможно да не функционира както трябва."
+      link: Научете повече
   slow_loading: Това отнема повече време от обичайното...
   try_reloading: Опитайте да презаредите страницата
   next_stage: Завършено! Продължете към следващия етап
@@ -480,12 +488,14 @@ bg:
     picture_count: 'В изминалите <b>%{days}</b> дни,  ученици са начертали <b>%{count}</b> изображения като са писали свои собствени компютърни програми. Кликнете върху изображенията, за да видите всяка програма в действие.'
     activity_count: 'В изминалите <b>%{days}</b> дни, учениците са направили  <b>%{count}</b>  приложения и картини чрез писане на свои собствени компютърни програми. Щракнете върху картинките и скрийншотовете, за да видите всяка програма в действие.'
     want_to_make_your_own: Искате ли да направите свои собствени?
+    how_to_save: 'На последното ниво в тези уроци щракнете върху "Готово" и "Запази", за да запишете работата си в галерията.'
     more: 'Повече &rarr;'
     caption_by_name_age: 'по %{name}, възраст %{age}'
     caption_time_ago: '%{time_ago} преди'
     header: Галерия
     header_playlab: Театрална лаборатория
     header_artist: Художник
+    report_abuse: Съобщи за злоупотреба
   landing:
     prerelease: "Този курс е в <span class='betatext'> бета версия</span>.  Това означава, че не е окончателната версия на курса и е предмет на преразглеждане и подобрения."
     prerelease_hoc2014: "Този урок е в <span class='betatext'> бета версия</span>.  Това означава, че е предмет на преразглеждане и подобрения."
@@ -552,36 +562,6 @@ bg:
     hour: 1 час
     day: ден
     week: седмица
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 въведение в компютърните науки (15-25 часа)
-          description: Този 20-часов курс, представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
-        Hour of Code:
-          title: Час на кодирането 2013
-          description: ""
-        edit-code:
-          title: Редактиране на кода
-          description: ""
-        events:
-          title: Събития
-          description: ""
-        builder:
-          title: Строител
-          description: ""
-        flappy:
-          title: Flappy код
-          description: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
-        jigsaw:
-          title: Мозайка
-          description: ""
-        step:
-          title: Стъпка
-          description: ""
-        sample_level_builder:
-          title: Строител на примерно ниво
-          description: ""
   age_interstitial:
     age: Вашата възраст
     header: Актуализиране на информацията за акаунта
@@ -614,6 +594,7 @@ bg:
     share_title: Споделяне на Вашия проект
     share_copy_link: 'Копиране на връзката:'
     share_embed_description: Можете да поставите кода за вграждане в HTML страница за показване на проекта в уеб сайт.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: За вграждане
     advanced_share: Показване на разширените опции
     close: Затваряне
@@ -637,6 +618,7 @@ bg:
     edit_project: Редактиране на проект
     abuse:
       tos: "Този проект нарушава Code.org <a href='http://code.org/tos'> Условията за ползване</a> и не може да бъде споделен с други потребители."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Ако смятате, че това е грешка, моля <a href='https://code.org/contact'> свържете се с нас.</a>"
       go_to_code_studio: Отидете в Code Studio
       report_abuse_form:
@@ -665,16 +647,59 @@ bg:
     escalated:
       name: Ескалиране
       description: Бих искал инструкторът да преразгледа това твърдение
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: 'Инструктор: обратна връзка'
+    peer_feedback: Изпрати обратна връзка
+    outdated: Тази обратна връзка е добавена в по-ранна версия
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Търси икона...
       no_icons_found: Няма намерени икони
+    playzone:
+      artist_description: Начертайте готини картинки и дизайни с художника!
+      artist_title: Нов чертеж
+      continue_button: Преминете към следващия етап
+      playlab_description: Създайте история или направете игра с Театрална лаборатория!
+      playlab_title: Ново приложение
+      primary_header: 'Поздравления! Вие завършихте %{stageName}!'
+      projects_description: Вижте отново един от Вашите проекти.
+      projects_title: Отваряне на проект
+      secondary_header: Попитай учителя си какво да правиш
   flex_category:
     required: Общ преглед
     content: Съдържание
     practice: Учителски практики
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Часът на кода за сваляне
+    capsule_title: Имате ли интернет?
+    capsule_desc: 'Използвайте онлайн, уеб базирани <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: Нямате интернет?
+    instructions: 'Инструкции за учители: Ако имате лоша връзка с интернет, тези уроци на часът на кода са достъпни за изтегляне и инсталиране и използване офлайн. Изберете вашия език и платформа, изтеглете и го инсталирайте на всички компютри в класната стая. Вие може да използвате USB устройство, за да изтеглите веднъж и инсталирате на всички компютри. Забележка: учениците няма да могат да влезнат в код студио, да запишат прогреса си или да отпечатат сертификати. Учителите могат да отпечатат сертификатите преди дейността <a href="%{url}"> тук</a>.'
+    minecraft_name: Minecraft часът на кода
+    starwars_blocks_name: 'Междузвездни войни: Изграждане на галактика с код (блокове)'
+    starwars_javascript_name: 'Междузвездни войни: Изграждане на галактика с код (JavaScript)'
+    download_message: 'Изтегли %{app_name} за офлайн употреба (136MB)'
+    download_in_english: 'Изтегляне на английски език:'
+    download_in_spanish: 'Изтегляне на испански език:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

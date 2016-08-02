@@ -33,6 +33,7 @@ module StiFactory
     end
 
     private
+
     def identify_target_class(attributes)
       return(class_name_from_column_definition || self.name) if attributes.nil?
 

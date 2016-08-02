@@ -1,75 +1,5 @@
 fa:
   data:
-    script:
-      name:
-        20-hour:
-          desc: معرفی K-8 دوره علوم کامپیوتر
-          Unplug1: مرحله 1
-          Maze: مرحله 2
-          Unplug2: مرحله 3
-          Unplug3: مرحله 4
-          Artist: مرحله 5
-          Unplug4: مرحله 6
-          Artist2: مرحله 7
-          Unplug5: مرحله 8
-          Farmer: مرحله 9
-          Unplug6: مرحله ۱۰
-          Artist3: مرحله ۱۱
-          Unplug7: مرحله ۱۲
-          Farmer2: مرحله ۱۳
-          Unplug8: مرحله ۱۴
-          Artist4: مرحله ۱۵
-          Unplug9: مرحله ۱۶
-          Farmer3: مرحله ۱۷
-          Unplug10: مرحله ۱۸
-          Artist5: مرحله ۱۹
-          Unplug11: مرحله ۲۰
-        Hour of Code:
-          desc: ساعتی با کد
-          Maze: مرحله 1
-        Edit Code:
-          desc: ویرایش کد (آزمایشی)
-          MazeEC: مرحله 1
-        2014 Levels:
-          desc: جهش (بتا)
-          Bounce: مرحله 1
-        Builder Levels:
-          desc: پازل‌های ایجاد شده توسط کاربر (آزمایشی)
-          Custom: مرحله 1
-        Flappy Levels:
-          desc: 'پرنده شل و  ول'
-          Flappy: مرحله 1
-        Jigsaw Levels:
-          desc: جورچین (آزمایشی)
-          Jigsaw: مرحله 1
-        Step Levels:
-          desc: مارپیچ (آزمایشی)
-          MazeStep: بخش مرحله
-        edit-code:
-          desc: ویرایش کد (آزمایشی)
-          MazeEC: مرحله 1
-          Applab: مرحله 2
-          ArtistEC: مرحله 3
-          StudioEC: مرحله 4
-        events:
-          desc: جهش (بتا)
-          Bounce: مرحله 1
-          Studio: مرحله 2
-        builder:
-          desc: پازل‌های ایجاد شده توسط کاربر (آزمایشی)
-          Custom: مرحله 1
-        flappy:
-          desc: 'پرنده شل و  ول'
-          Flappy: مرحله 1
-        jigsaw:
-          desc: جورچین (آزمایشی)
-          Jigsaw: مرحله 1
-        step:
-          desc: مارپیچ (آزمایشی)
-          MazeStep: بخش مرحله
-        wordsearch:
-          desc: زنبور هجی (بتا)
-          WordSearch: مرحله 1
     game:
       name:
         Unplug1: آشنایی با علوم کامپیوتر
@@ -486,6 +416,7 @@ fa:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
@@ -529,10 +460,10 @@ fa:
         starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
         starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
         mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_repeat: 'ماین کرافت - تکرار'
+        mc_if_statements: 'ماین کرافت - جملات شرطی'
+        mc_congrats_share: 'ماین کرافت - تبریک'
+        mc_congrats_no_share: 'ماین کرافت - تبریک'
         gumball_intro: 'Gumball Hour of Code - Introduction'
         gumball_events: 'Gumball Hour of Code - Events'
         gumball_repeat: 'Gumball Hour of Code - Repeat statements'

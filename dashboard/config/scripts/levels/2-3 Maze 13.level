@@ -7,13 +7,13 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the pig by adding only one block",
+    "instructions": "Get me to the pig! You can only use one move forward block this time",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",
-    "markdown_instructions": "Get me to the pig by adding only one block.",
+    "markdown_instructions": "Get me to the pig! You can only use one `move forward` block this time",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,10 +26,11 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "[Ryan, 6/28] Updated to remove \"undeletable\" move forward and replace it with a limited # of move forwards in the toolbox",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -39,11 +40,11 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="maze_moveForward" deletable="false" y="75" x="75"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="maze_moveForward" limit="1"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>

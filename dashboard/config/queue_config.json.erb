@@ -9,6 +9,14 @@
       "num_workers_per_processor": 10,
       "initial_max_rate": 1000,
       "dcdo_max_rate_key": "activity_max_rate"
+    },
+    {
+      "name": "PdWorkshopQueue",
+      "handler_class": "Pd::AsyncWorkshopHandler",
+      "queue_url": "<%= CDO.pd_workshop_queue_url %>",
+      "num_processors": 1,
+      "num_workers_per_processor": 1,
+      "initial_max_rate": 10
     }
   ]
 }

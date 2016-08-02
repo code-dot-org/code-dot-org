@@ -9,9 +9,9 @@ There are many different kinds of charts that are used to visualize data. In thi
 
 * **Disclaimer:** This lesson is about using charts to explore trends in the data - **not about creating the world’s greatest chart**. While the early parts of the lesson will walk you through very specific steps to make a particular chart, by the end of the lesson you will be creating your own customized charts to **see what trends you can discover in the data**.
 
-<hr>
+---
 
-# Downloading the Data Set
+## Downloading the Data Set
 
 **Do This:** First, make sure you are logged into your Google Drive account. Then, click the link below to see the data set you will be using for the next few levels:
 
@@ -20,6 +20,4 @@ There are many different kinds of charts that are used to visualize data. In thi
 To make your own copy in your local Google Drive, click the “Open” icon: ![](https://images.code.org/0bd0989090eb89eb71134ad899ffc739-image-1454009835808.PNG)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

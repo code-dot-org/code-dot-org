@@ -3,7 +3,7 @@ css 'unplugged'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css" />
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css" />
 
 ### What's Next?
 
@@ -72,7 +72,7 @@ markdown <<MARKDOWN
                 Dozens of lessons for all grades K-8
             </td>	
             <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
-                Free to try, $399/classroom, <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css" />
+                Free to try, $399/classroom, <link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css" />
 
 			</td>
          </tr>

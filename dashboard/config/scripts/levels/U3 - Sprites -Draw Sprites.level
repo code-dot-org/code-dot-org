@@ -35,7 +35,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Draw Sprites\r\n\r\nThis program is supposed to draw two sprites but when the program is run they don't show up on screen.`createSprites` only creates the sprite but does not draw it on the game area. In order draw your sprite on the game area you need another block that was in the draw loop on the last level.\r\n\r\nCan you fix it? \r\n\r\n# Do This\r\n\r\n* Run the program and see what happens\r\n* Take a look back at the last level to see what is missing\r\n* Fix the program so that both sprites show up",
+    "markdown_instructions": "# Draw Sprites\r\n\r\nThis program is supposed to draw two sprites but when the program is run they don't show up on screen. `createSprites` only creates the sprite but does not draw it on the game area. In order draw your sprite on the display you need another block that was in the draw loop on the last level.\r\n\r\nCan you fix it? \r\n\r\n# Do This\r\n\r\n* Run the program and see what happens\r\n* Take a look back at the last level to see what is missing\r\n* Fix the program so that both sprites show up",
     "show_d_pad": "false",
     "start_blocks": "var sprite1 = createSprite(100,200, 30, 30);\r\nvar sprite2 = createSprite(300,20, 10, 40);\r\n\r\nfunction draw(){\r\n  \r\n}"
   },

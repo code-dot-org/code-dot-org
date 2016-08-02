@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ### Ci-dessous, vous trouverez un exemple de résolution favorable à la Semaine d'éducation des Sciences Informatiques et ses objectifs qui pourraient être utilisés par une région et vos législateurs locaux.
 
   
@@ -16,7 +15,7 @@ nav: promote_nav
 
 [DATE]
 
-Tandis que la technologie de l'informatique fait partie intégrante de la culture et transforme la manière dont nous interagissons les uns avec les autres et le monde autour de nous ;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Considérant que l'informatique est en train de transformer l'industrie, créant de nouveaux domaines commerciaux, intégrant l'innovation dans tous les domaines de la science et renforçant la productivité dans les secteurs économiques établis ;
 
@@ -26,7 +25,7 @@ Considérant que le domaine de l'informatique est une base fondamentale de l'èr
 
 Alors que le secteur des nouvelles technologies occupe une position unique pour aider à la relance économique par le biais de la recherche et du développement de nouvelles innovations ;
 
-Tandis que les perspectives d'emplois dans les nouvelles technologies sont prometteuses dans chaque STEM (Sciences, Technologie, ingénierie et mathématiques) ;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 En donnant aux étudiants la chance de participer à des activités d'informatique de haute qualité, nous les exposons à de riches possibilités dans un domaine qui offre et fournit des compétences d'esprit critique qui leur serviront tout au long de leur vie ;
 
@@ -53,4 +52,3 @@ Résolu, que le [Assemblée Nationale ou Sénat, État, région, ville ou Commis
 (4) encourage les législateurs à éliminer les obstacles qui empêchent les cours d'informatiques d'être intégrés dans les cursus diplômant comme le sont les mathématiques ou les sciences ;
 
 (5) encourage les possibilités, y compris par le biais de programmes existants, pour les femmes et les minorités sous-représentées dans le domaine de l'informatique.
-

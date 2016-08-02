@@ -6,10 +6,7 @@ nav: how_to_nav
 
 ---
 
-
 # Sådan organiserer du en Hour of Code
-
-Hold et Hour of Code-arrangement i Computer Science Education Week (<%= campaign_date('short') %>) for at fejre programmering og inspirere flere elever til at prøve det. Enhver kan hvor som helst organisere et Hour of Code-arrangement.
 
 ## 1) Forbered dit arrangement
 
@@ -37,13 +34,13 @@ Hold et Hour of Code-arrangement i Computer Science Education Week (<%= campaign
 
 ## Eksempel på arrangementsplan
 
-**Event:** Skole med Computer Science Education Week kick-off arrangementer
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Dato:** Den 7. december (starten på Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Tid:** I løbet af skoledagen. Formiddags begivenheder. Ca. 1 time.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Beliggenhed:** Skolens festsal (fx teater, gym, cafeteria)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -57,4 +54,3 @@ Hold et Hour of Code-arrangement i Computer Science Education Week (<%= campaign
 | 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever.                                   |
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                                                  |
 | 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                                                              |
-

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+
+def main
+  Dir.chdir(pegasus_dir) do
+    `rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync 2>&1`
+  end
+end
+
+main if only_one_running?(__FILE__)

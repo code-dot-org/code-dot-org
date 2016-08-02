@@ -8,6 +8,7 @@ class ScriptDSL < BaseDSL
     @description_audience = nil
     @stage = nil
     @stage_flex_category = nil
+    @stage_lockable = false
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -20,7 +21,6 @@ class ScriptDSL < BaseDSL
     @login_required = false
     @admin_required = false
     @student_of_admin_required = false
-    @trophies = false
     @pd = false
     @wrapup_video = nil
   end
@@ -30,21 +30,22 @@ class ScriptDSL < BaseDSL
   string :description_short
   string :description
   string :description_audience
+  string :professional_learning_course
+  integer :peer_reviews_to_complete
 
   boolean :hidden
   boolean :login_required
   boolean :admin_required
   boolean :student_of_admin_required
-  boolean :trophies
   boolean :pd
-  boolean :professional_learning_course
 
   string :wrapup_video
 
-  def stage(name, flex = nil)
+  def stage(name, properties = {})
     @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
     @stage = name
-    @stage_flex_category = flex
+    @stage_flex_category = properties[:flex_category]
+    @stage_lockable = properties[:lockable]
     @scriptlevels = []
     @concepts = []
     @skin = nil
@@ -56,13 +57,13 @@ class ScriptDSL < BaseDSL
       id: @id,
       stages: @stages,
       hidden: @hidden,
-      trophies: @trophies,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       admin_required: @admin_required,
       pd: @pd,
       student_of_admin_required: @student_of_admin_required,
-      professional_learning_course: @professional_learning_course
+      professional_learning_course: @professional_learning_course,
+      peer_reviews_to_complete: @peer_reviews_to_complete
     }
   end
 
@@ -96,6 +97,7 @@ class ScriptDSL < BaseDSL
     level = {
       :name => name,
       :stage_flex_category => @stage_flex_category,
+      :stage_lockable => @stage_lockable,
       :skin => @skin,
       :concepts => @concepts.join(','),
       :level_concept_difficulty => @level_concept_difficulty || {},
@@ -142,7 +144,7 @@ class ScriptDSL < BaseDSL
       @i18n_strings[stage[:stage]] = stage[:stage]
     end
 
-    {'name'=> {@name => @i18n_strings}}
+    {'name' => {@name => @i18n_strings}}
   end
 
   def self.parse_file(filename)

@@ -30,32 +30,43 @@ goog.require('goog.style');
 
 /**
  * Class for a top-level block editing blockSpace.
- * Handles constructing a top-level SVG element, and positioning, sizing,
- * and certain focus/mouse handling operations for itself.
+ * Handles constructing a top-level SVG element, and positioning, sizing, and certain
+ * focus/mouse handling operations for itself.
  * @constructor
- * @param {boolean} opt_hideTrashRect The trash rectangle is a dark grey
- * rectangle covering the entire toolbox area, and is faded in when the user
- * drags a block towards the toolbox to delete it.  However, when creating a
- * blockspace for something like the function editor, we don't want to create
- * an additional one, relying on the main blockspace editor's one instead.
- * @param {boolean} opt_readOnly whether or not to initialize this
- * workspace in readOnly mode. All Blockly elements that are (or can be)
- * aware of this BlockSpaceEditor will consider Blockly to be in
- * readOnly mode if this BlockSpaceEditor.readOnly OR Blockly.readOnly
- * are true
+ *
+ * @param {object} opt_options optional options
+ * @param {Function} opt_options.getMetrics A function that returns size/scrolling metrics.
+ * @param {Function} opt_options.setMetrics A function that sets size/scrolling metrics.
+ * @param {boolean} opt_options.readOnly whether or not to create this as a read-only
+ *      BlockSpaceEditor
+ * @param {boolean} opt_options.noScrolling whether or not to disable scrolling (only
+ *      recommended when readOnly)
+ * @param {boolean} opt_options.hideTrashRect The trash rectangle is a dark grey rectangle
+ *      covering the entire toolbox area, and is faded in when the user drags a block
+ *      towards the toolbox to delete it.  However, when creating a blockspace for
+ *      something like the function editor, we don't want to create an additional one,
+ *      relying on the main blockspace editor's one instead.
+ * @param {boolean} opt_options.readOnly whether or not to initialize this workspace in
+ *      readOnly mode. All Blockly elements that are (or can be) aware of this
+ *      BlockSpaceEditor will consider Blockly to be in readOnly mode if this
+ *      BlockSpaceEditor.readOnly OR Blockly.readOnly are true
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect, opt_readOnly) {
-  if (opt_getMetrics) {
-    this.getBlockSpaceMetrics_ = opt_getMetrics;
+Blockly.BlockSpaceEditor = function(container, opt_options) {
+  opt_options = opt_options || {};
+
+  if (opt_options.getMetrics) {
+    this.getBlockSpaceMetrics_ = opt_options.getMetrics;
   }
-  if (opt_setMetrics) {
-    this.setBlockSpaceMetrics_ = opt_setMetrics;
+  if (opt_options.setMetrics) {
+    this.setBlockSpaceMetrics_ = opt_options.setMetrics;
   }
-  if (opt_hideTrashRect) {
-    this.hideTrashRect_ = opt_hideTrashRect;
+  if (opt_options.hideTrashRect) {
+    this.hideTrashRect_ = opt_options.hideTrashRect;
   }
 
-  this.readOnly_ = !!opt_readOnly;
+  this.readOnly_ = !!opt_options.readOnly;
+  this.noScrolling_ = !!opt_options.noScrolling;
+
   /**
    * @type {Blockly.BlockSpace}
    */
@@ -64,6 +75,14 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
     goog.bind(this.setBlockSpaceMetrics_, this),
     container
   );
+
+  /**
+   * Set of blocks with limits, keyed by block type. Used to enforce
+   * limited quantities of blocks in workspace.
+   * @type {Blockly.BlockLimits}
+   */
+  this.blockLimits = new Blockly.BlockLimits();
+
   this.createDom_(container);
   this.init_();
 };
@@ -485,7 +504,8 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.flyout_.show(Blockly.languageTree.childNodes);
     }
   }
-  if (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars) {
+  if (!this.noScrolling_ &&
+      (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars)) {
     this.blockSpace.scrollbarPair = new Blockly.ScrollbarPair(
       this.blockSpace, Blockly.hasHorizontalScrollbars, Blockly.hasVerticalScrollbars);
     this.blockSpace.scrollbarPair.resize();

@@ -64,6 +64,7 @@ class CertificateImageTest < Minitest::Test
   end
 
   private
+
   def assert_image(image, width, height, format)
     info_line = image.inspect
     assert info_line.match(/#{format}/)

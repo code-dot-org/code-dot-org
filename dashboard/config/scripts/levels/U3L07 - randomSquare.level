@@ -8,13 +8,44 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "turnLeft": null,
-      "turnRight": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "forLoop_i_0_4": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null
+      "functionParams_none": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "functionParams_n": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction_n": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "oNA2Cr2+PBE0z1rrjD7TIPVeH6imutdR0Zz98BVgzSGblgCEaimwmo37WYH1\ntPWm\n",
@@ -52,7 +83,13 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

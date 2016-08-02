@@ -4,26 +4,25 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 14 - Practice PT - Propose an Innovation
+# Unit 4: Lesson 14 - Practice PT - Propose an Innovation
 
-# Background
+## Background
 
 To conclude the unit you will propose a technological solution that could address a need or problem that's important for you.  For this proposal you must specifically account for what data your innovation will produce and consume and the privacy and security concerns that arise as a result.
 
+## Lesson
 
-# Lesson
 * Form groups.
 * Select problem and audience.
 * Research current solutions and complete Research Guide.
 * Propose an innovation.
 * Complete one-pager.
 
-# Resources
+## Resources
 
 * PT Activity Guide: <a href="https://docs.google.com/document/d/1b5EhBSRFyZbcb2E5tg0-TrkdOijAPMefrSrYFMa0s4o/edit?usp=sharing" target="_blank">Practice PT - Propose an Innovation</a>
  
  (**NOTE:** The Activity Guide also contains a **one-pager template** and **rubric**)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

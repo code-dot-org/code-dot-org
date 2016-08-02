@@ -62,23 +62,30 @@
     font-size: 12px;
     color: white;
     overflow: hidden;
-    text-overflow: ellipsis;*/
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    margin-right: 10px
   }
 
+  .course a {
+    color: white;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-left: 10px;
+  }
 
 - courses = []
-- courses << { name: "Course 1", starts: 0, ends: 1, description: "Start with Course 1 for early readers", group: "CS Fundamentals" }
-- courses << { name: "Course 2", starts: 1, ends: 5, description: "Start with Course 2 for students who can read", group: "CS Fundamentals" }
-- courses << { name: "Course 3", starts: 3, ends: 5, description: "Course 3 is a follow-up to Course 2", group: "CS Fundamentals" }
-- courses << { name: "Course 4", starts: 5, ends: 6, description: "Course 4 is a follow-up to Course 3", group: "CS Fundamentals" }
+- courses << { name: "Course 1", starts: 0, ends: 1, description: "Introductory course for early readers.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
+- courses << { name: "Course 2", starts: 1, ends: 5, description: "Introductory course for students who can read.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
+- courses << { name: "Course 3", starts: 3, ends: 5, description: "Follow-up to Course 2.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
+- courses << { name: "Course 4", starts: 5, ends: 6, description: "Follow-up to Course 3.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
 
-- courses << { name: "CS in Science", starts: 6, ends: 8, description: "Learn programming through scientific models" }
-- courses << { name: "CS in Algebra ", starts: 6, ends: 8, description: "Learn functional programming through Algebra" }
-- courses << { name: "CS Discoveries", starts: 7, ends: 9, description: "Our new course for CS" }
-- courses << { name: "Exploring Computer Science", starts: 9, ends: 12, description: "A high school course designed to broaden participation in computer science" }
-- courses << { name: "Computer Science Principles", subtitle: "upcoming AP course", starts: 9, ends: 12, description: "A course teaching a wide range of computer science topics, including programming in JavaScript" }
+- courses << { name: "CS in Science", starts: 6, ends: 8, description: "Computer science concepts are introduced within the context of life, physical, and earth sciences.", link: "/curriculum/science" }
+- courses << { name: "CS in Algebra ", starts: 6, ends: 8, description: "Algebraic and geometric concepts are introduced through functional computer programming.", link: "/curriculum/algebra" }
+- courses << { name: "CS Discoveries", starts: 7, ends: 9, subtitle: "Under development", description: "Introductory computer science course that be a semester or year long.", link: "/educate/csd" }
+- courses << { name: "Computer Science Principles", subtitle: "Advanced Placement course", starts: 9, ends: 12, description: "A year-long rigorous introductory computer science course at the high-school level covering the Internet, data, and programming. Can be run as a non-AP course.", link: "/educate/csp" }
 
-- courses << { name: "Accelerated Course", starts: 5, ends: 12, description: "An alternate 20-hour course.", group: "CS Fundamentals", opacity: 0.7 }
+- courses << { name: "Accelerated Course", starts: 5, ends: 12, description: "A faster-paced course that covers all of the concepts covered in Courses 1 - 4 in 20-hours.", group: "CS Fundamentals", opacity: 0.7 }
 
 .courses
   .group
@@ -112,6 +119,9 @@
                 %br/
             .description
               =course[:description]
+            - if course[:link]
+              %a{href: course[:link] }
+                Learn more
 
   .notes{style: "clear: both"}
     %h3

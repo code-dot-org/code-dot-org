@@ -5,35 +5,76 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @course = create :plc_course
     @course_unit = create(:plc_course_unit, plc_course: @course)
-    @learning_module1 = create(:plc_learning_module, plc_course_unit: @course_unit)
-    @task1 = create(:plc_learning_resource_task, plc_learning_modules: [@learning_module1])
-    @learning_module2 = create(:plc_learning_module, plc_course_unit: @course_unit)
-    @task2 = create(:plc_written_submission_task, plc_learning_modules: [@learning_module2])
-    create(:plc_learning_module, plc_course_unit: @course_unit)
+    @script = @course_unit.script
+    @script.update(professional_learning_course: @course.name)
+
     @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
+    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
+    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
+
+    @required_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::REQUIRED_MODULE)
+    @content_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @practice_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+
+    Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
+
+    @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
+    @unit_enrollment = @enrollment.plc_unit_assignments.first
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
-    enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
-    enrollment.create_enrollment_unit_assignments
-    unit_enrollment = enrollment.plc_unit_assignments.first
-
-    module_assignments = unit_enrollment.plc_module_assignments
-    assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, unit_enrollment.status
+    module_assignments = @unit_enrollment.plc_module_assignments
+    assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     assert_equal 1, module_assignments.count
     assert_equal @required_learning_module, module_assignments.first.plc_learning_module
 
-    unit_enrollment.unlock_unit
-    unit_enrollment.reload
-    assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, unit_enrollment.status
+    @unit_enrollment.unlock_unit
+    @unit_enrollment.reload
+    assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, @unit_enrollment.status
 
-    unit_enrollment.enroll_user_in_unit_with_learning_modules([@learning_module1, @learning_module2])
-    unit_enrollment.reload
+    @unit_enrollment.enroll_user_in_unit_with_learning_modules([@content_learning_module, @practice_learning_module])
+    @unit_enrollment.reload
 
-    assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, unit_enrollment.status
+    assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, @unit_enrollment.status
     assert_equal 3, module_assignments.count
     assert_equal @required_learning_module, module_assignments.first.plc_learning_module
-    assert_equal @learning_module1, module_assignments.second.plc_learning_module
-    assert_equal @learning_module2, module_assignments.third.plc_learning_module
+    assert_equal @content_learning_module, module_assignments.second.plc_learning_module
+    assert_equal @practice_learning_module, module_assignments.third.plc_learning_module
+
+    Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(true)
+
+    assert_equal [
+      {
+        category: Plc::LearningModule::REQUIRED_MODULE,
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      },
+      {
+        category: Plc::LearningModule::CONTENT_MODULE,
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      },
+      {
+        category: Plc::LearningModule::PRACTICE_MODULE,
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      }
+    ], @unit_enrollment.summarize_progress
+  end
+
+  test 'Enrolling user in a course without an evaluation returns status appropriately' do
+    Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(false)
+
+    assert_equal [
+      {
+         category: Plc::LearningModule::PRACTICE_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      },
+      {
+         category: Plc::LearningModule::CONTENT_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      },
+      {
+         category: Plc::LearningModule::REQUIRED_MODULE,
+         status: Plc::EnrollmentModuleAssignment::COMPLETED
+      }
+    ], @unit_enrollment.summarize_progress
   end
 end

@@ -1,8 +1,7 @@
 name 'OPD-K5 Congrats'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
 
 # EVENTS > Congratulations!
 <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px" style="margin-right:45px; border-radius:10px;">

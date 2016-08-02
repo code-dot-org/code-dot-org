@@ -12,7 +12,6 @@ class SurveyResultsController < ApplicationController
         format.json { render json: @survey_result.errors, status: :unprocessable_entity }
       end
     end
-
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

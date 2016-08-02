@@ -9,8 +9,8 @@
 
 import $ from 'jquery';
 var utils = require('../utils');
-var _ = require('../lodash');
-var i18n = require('./locale');
+var _ = require('lodash');
+var i18n = require('@cdo/netsim/locale');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimAlert = require('./NetSimAlert');
@@ -36,12 +36,14 @@ var NetSimGlobals = require('./NetSimGlobals');
  * Generator and controller for lobby/connection controls.
  *
  * @param {jQuery} rootDiv
- * @param {NetSim} connection - The shard connection that this
+ * @param {NetSim} netsim - The shard connection that this
  *        lobby control will manipulate.
  * @param {Object} options
  * @param {DashboardUser} options.user
  * @param {string} options.levelKey
  * @param {string} options.sharedShardSeed
+ * @param {function} options.showRouterLogCallback
+ * @param {function} options.showTeacherLogCallback
  * @constructor
  * @augments NetSimPanel
  */
@@ -147,6 +149,18 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
    */
   this.disableEverythingKeys_ = {};
 
+  /**
+   * Function to call when we want to display the router log.
+   * @private {function}
+   */
+  this.showRouterLogCallback_ = options.showRouterLogCallback;
+
+  /**
+   * Function to call when we want to display the teacher view.
+   * @private {function}
+   */
+  this.showTeacherLogCallback_ = options.showTeacherLogCallback;
+
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
@@ -206,7 +220,9 @@ NetSimLobby.prototype.render = function () {
           addRouterCallback: this.addRouterToLobby.bind(this),
           cancelButtonCallback: this.onCancelButtonClick_.bind(this),
           joinButtonCallback: this.onJoinButtonClick_.bind(this),
-          resetShardCallback: this.onResetShardButtonClick_.bind(this)
+          resetShardCallback: this.onResetShardButtonClick_.bind(this),
+          showRouterLogCallback: this.showRouterLogCallback_,
+          showTeacherLogCallback: this.showTeacherLogCallback_
         });
 
   }

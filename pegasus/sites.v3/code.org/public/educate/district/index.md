@@ -11,7 +11,7 @@ Code.org has begun moving from partnering directly with districts and schools an
 Please [fill out our interest form](/educate/interesteddistrict) and share your information with the professional learning partner in your area ([please see a list of our current partners]()).  If there is no professional learning partner currently in your area, please reach out to qualified groups and encourage them to [apply here]()!
 
 
-[<button>Fill out our interest form</button>](https://docs.google.com/a/code.org/forms/d/1TmV2OUrCsgy53DWvxgoMouBcskSpkVpqYF3IQ1F87ao/viewform) 
+[<button>Fill out our interest form</button>](/educate/interesteddistrict) 
 
 ## Our Goals
 

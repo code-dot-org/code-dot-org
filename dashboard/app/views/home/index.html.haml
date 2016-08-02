@@ -10,6 +10,10 @@
   .row
     .span12
       - unless current_user
+        .row
+          .sign_in.show_only_on_mobile
+            %a{href: CDO.studio_url('/users/sign_in')}
+              %button.primary= t('nav.user.signin')
         #welcome_hero.welcome
           .row
             .welcomeleft.span2
@@ -35,7 +39,7 @@
     #user_hero
       = render template: 'api/user_hero'
     - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
-      - current_user.unadvertised_user_scripts.each_slice(2) do |course_pair|
+      - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
         .row
           - course_pair.each do |user_script|
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }

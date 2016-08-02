@@ -29,6 +29,8 @@ sk:
   unsubmit: Neodoslať
   previous_page: Predchádzajúca strana
   next_page: Nasledujúca strana
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Zrušiť
   okay: Dobre
   heading_x_of_y: '%{heading} (strana %{x} z %{y})'
@@ -85,6 +87,7 @@ sk:
     teacher_title: Prihlásiť sa ako učiteľ
     student_pitch: Prihlásiť sa do Code.org ako študent/žiak
     student_title: Prihlásiť sa ako študent/žiak
+    signup_title: Prihlásiť sa do Code.org
     school_name: Názov školy (voliteľné)
     school_address: Adresa školy (voliteľné)
     address_placeholder: adresa, mesto, štát, PSČ
@@ -103,6 +106,9 @@ sk:
     student_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>. Ak mám menej než 13 rokov, odoslaním tohoto formulára zároveň potvrdzujem že mám oprávnenie od mojich rodičov alebo zákonného zástupcu na používanie služby Code.org. <br/>Pre používateľov mladších ako 13 rokov nie sú e-mailové adresy uložené vo forme, ktorá umožnuje ich kontaktovanie."
     teacher_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>."
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie vášho prihlásenia/registrácie.
+    user_type_label: Typ účtu
+    user_type_teacher: Učiteľ
+    user_type_student: Študent
   signin_form:
     title: Máte už vytvorený účet? Prihláste sa
     login: E-mail alebo užívateľské meno
@@ -119,6 +125,8 @@ sk:
     picture: Teraz nájdite Váš tajný obrázok
     words: Teraz zadajte vaše tajné slová
     login: Prihlásiť sa
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Zabudli ste heslo?
@@ -241,6 +249,10 @@ sk:
       signin: Prihlásiť sa
       signup: Zaregistrovať sa
       already_registered: Ste už zaregistrovaný?
+      pair_programming: Pair Programming
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'Pokrok pre užívateľa %{name}'
       progress: Váš pokrok
@@ -275,6 +287,7 @@ sk:
       example_with_number: 'Príklad riešenia %{solution_number}'
       submitted_on: 'Dátum odoslania:'
       unsubmit: Neodoslať
+      worked_with: Worked With
   user:
     email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'
@@ -334,8 +347,8 @@ sk:
     print_certificate: Vytlačiť certifikát
     announcement_title: Oznámenia
     announcement_view_all: View all
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: Dozvedieť sa viac
+    announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+    announcement_learn_more_button: Dozvedieť sa viac
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Pridaj svoje meno
   move_students:
@@ -397,15 +410,10 @@ sk:
     notes_coming_soon: Poznámky pre toto video už čoskoro.
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
-  compatability:
-    working:
-      header: Pracujeme na podpore pre Váš prehliadač.
-      message: "Code.org používa moderné webové technológie. Vďaka tomu sa webová stránka rýchlejšie používa. Váš prehliadač nepodporuje všetky funkcie, ktoré sú nezbytné, a môže dochádzať k problémom pri používaní tejto časti webu. Pomôžte nám s tým <a href='%{report_issue_url}'> nahlasovaním všetkých problémov, ktoré nájdete</a>. Tiež je možné <a href='%{supported_browsers_url}'> inovovať prehliadať na podporovanú verziu</a>."
-      hide_this_warning: Skryť toto upozornenie
+  compatibility:
     upgrade:
-      header: Prosím aktualizujte svoj prehliadač.
-      message: "Code.org používa moderné webové technológie. Vďaka tomu je používanie rýchlejšie. Bohužiaľ váš prehliadač nepodporuje všetky funkcie potrebné na spustenie tejto časti stránky. <br/> <br/> Pre pokračovanie, nainštalujte prehliadač na našom zozname podporovaných prehliadačov. Môžete si <a href='#'> vyskúšať prezrieť túto stránku</a>, ale očakávajte obmedzenie funkčnosti."
-      button: Prejsť na zoznam podporovaných prehliadačov
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      link: Dozvedieť sa viac
   slow_loading: Trvá to dlhšie než zvyčajne...
   try_reloading: Skúste načítať stránku znovu
   next_stage: Hotovo! Pokračujte do ďalšej úrovne
@@ -482,12 +490,14 @@ sk:
     picture_count: 'V posledných <b>%{days}</b> dňoch, študenti nakreslil <b>%{count}</b> obrázkov napísaním vlastného počítačového programu. Kliknutím na obrázok uvidíte program v akcii.'
     activity_count: 'V posledných dňoch <b>%{days}</b>, študenti vytvorili<b>%{count}</b> aplikacií a fotiek napísaním vlastného počítačového programu. Kliknutím na obrázok a screenshot uvidíte program v akcii.'
     want_to_make_your_own: Chceš vytvoriť svoj vlastný?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Viac &rarr;'
     caption_by_name_age: 'podľa %{name}, vek %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Galéria
     header_playlab: Príbehy a hry
     header_artist: Kód art
+    report_abuse: Nahlásenie zneužitia
   landing:
     prerelease: "Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená, že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
     prerelease_hoc2014: "Tento tutoriál je v <span class='betatext'> beta verzii</span> a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
@@ -554,36 +564,6 @@ sk:
     hour: 1 hodina
     day: deň
     week: týždeň
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)
-          description: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
-        Hour of Code:
-          title: Hodina Kódu 2013
-          description: ""
-        edit-code:
-          title: Upraviť kód
-          description: ""
-        events:
-          title: Udalosti
-          description: ""
-        builder:
-          title: Prekladač
-          description: ""
-        flappy:
-          title: Flappy kód
-          description: Chcete napísať svoju vlastnú hru za menej než 10 minút? Skúste náš Flappy Code tutoriál!
-        jigsaw:
-          title: Skladačka
-          description: ""
-        step:
-          title: Krok
-          description: ""
-        sample_level_builder:
-          title: 'Ukážka levelu - Budovateľ'
-          description: ""
   age_interstitial:
     age: Váš vek
     header: Konto aktualizácia údajov
@@ -616,6 +596,7 @@ sk:
     share_title: Zdieľajte svoj projekt
     share_copy_link: 'Skopírujte odkaz:'
     share_embed_description: Môžete vložiť kód do HTML stránky pre zobrazenie projektu na webovej stránke.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Vložiť
     advanced_share: Zobraziť rozšírené možnosti
     close: Zatvoriť
@@ -639,6 +620,7 @@ sk:
     edit_project: Upraviť projekt
     abuse:
       tos: "Tento projekt bol nahlásený za porušenie <a href='http://code.org/tos'> Používateľských podmienok</a> Code.org a nie je ho možné zdieľať s ostatnými."
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Ak si myslíte, že to je chyba, prosím <a href='https://code.org/contact'> kontaktujte nás.</a>"
       go_to_code_studio: Prejsť na kód Studio
       report_abuse_form:
@@ -670,13 +652,56 @@ sk:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Hľadajte ikonu...
       no_icons_found: Nenašli sa žiadne ikony
+    playzone:
+      artist_description: Draw cool pictures and designs with the Artist!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Create a story or make a game with Play Lab!
+      playlab_title: New App
+      primary_header: 'Gratulujem! Dokončil si %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Otvoriť projekt
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Prehľad
     content: Obsah
     practice: Učiteľské cvičenia
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Máte prístup na internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Stiahnúť v angličtine:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

@@ -4,6 +4,11 @@ var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 
 var DefaultScreenButtonPropertyRow = React.createClass({
+  propTypes: {
+    handleChange: React.PropTypes.func.isRequired,
+    screenId: React.PropTypes.string
+  },
+
   handleMakeDefault: function (event) {
     this.props.handleChange(true);
   },
@@ -27,8 +32,9 @@ var DefaultScreenButtonPropertyRow = React.createClass({
     return (
       <div style={{marginLeft: 15}}>
         <button
-        style={defaultButtonStyle}
-        onClick={this.handleMakeDefault}>
+          style={defaultButtonStyle}
+          onClick={this.handleMakeDefault}
+        >
         Make Default
       </button>
     </div>

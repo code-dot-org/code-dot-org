@@ -5,31 +5,26 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 8 - The Internet Is for Everyone
+# Unit 1: Lesson 8 - The Internet Is for Everyone
 
-# Background
+## Background
 
 So far in this class you have solved a few problems by creating and using small protocols for transmitting data over a wire, but the Internet is obviously much bigger than a single wire connecting two people. It connects billions of people and even more billions of machines.  For it to work there must be open standards and protocols that anyone can follow, so that any machine can communicate with any other.  Without protocols it would be like machines speaking different languages. We’re going to look at some of the technical issues involved with having lots of machines trying to communicate at the same time in the next several lessons. In order to set the stage we want to consider some of the big societal questions about the importance of the Internet and issues and threats to its existence.
-  
 
-# Vocabulary
+## Vocabulary
 
-**Request for Comments (RFC)** documents are how standards and protocols are defined and published for all to see on the IETF website.  
+* **Request for Comments (RFC)** documents are how standards and protocols are defined and published for all to see on the IETF website.
 
-# Lesson
+## Lesson
 
 * Brief history on the IETF, and RFCs
 * Read/Skim RFC 3271 - The Internet Is For Everyone
 * Report and share examples from student experience that apply to these challenges
 
-
-# Resources
+## Resources
 
 * <a href='https://docs.google.com/document/d/1Wk_gWNLaFJHHgPKmWwasjKFZpVR5tHqxKY5M9ecbFC8' target='_blank' class='print_link'>Primary Source: "The Internet is for Everyone"</a> - Activity Guide (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
-
 * <a href='https://docs.google.com/document/d/1Ir6-we2SdZXtm81gVjGfd2ewkGC6CKEU3tCzo5CdrNg' target='_blank' class='print_link'>The Internet Is For Everyone - Abbreviated Version</a> - Resource (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

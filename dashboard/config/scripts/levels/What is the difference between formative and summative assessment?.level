@@ -1,0 +1,15 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-06-14T04:32:53.185Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "The following link is a resource that provides definitions and examples of formative and summative assessments:",
+    "link_title": "What is the difference between formative and summative assessment?",
+    "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</ExternalLink>

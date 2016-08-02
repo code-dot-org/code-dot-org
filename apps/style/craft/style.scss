@@ -419,6 +419,11 @@ $height-to-width: 434 / 477;
     font-size: 30px;
   }
 
+  #getting-started-header {
+    margin-left: 125px;
+    margin-bottom: 25px;
+  }
+
   #select-house-text {
     line-height: 50px;
     font-size: 22px;
@@ -926,4 +931,11 @@ $height-to-width: 434 / 477;
   @include translate-x-y-rotate(0, -5px, 180deg);
   bottom: -66px !important;
   margin-left: -33px !important;
+}
+
+// Overrides style in application.css.scss from dashboard
+.csf-top-instructions, .instructions-markdown {
+  p {
+    color: $white;
+  }
 }

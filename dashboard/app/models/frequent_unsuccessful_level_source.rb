@@ -57,8 +57,8 @@ class FrequentUnsuccessfulLevelSource < ActiveRecord::Base
       # increase complexity and violate abstraction but improve efficiency?
       next unless level_source.standardized?
       unsuccessful_level_source = FrequentUnsuccessfulLevelSource.where(
-          level_source_id: level_source_id,
-          level_id: level_id).first_or_create
+        level_source_id: level_source_id,
+        level_id: level_id).first_or_create
       unsuccessful_level_source.num_of_attempts = count
       # Make active if there are not enough crowdsourced hints yet.
       unsuccessful_level_source.active =

@@ -1,5 +1,5 @@
 var color = require('../color');
-var _ = require('../lodash');
+var _ = require('lodash');
 var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;

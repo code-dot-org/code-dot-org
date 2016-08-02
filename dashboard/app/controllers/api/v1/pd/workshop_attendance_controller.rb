@@ -11,13 +11,17 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     workshop_attendance_params[:session_attendances].each do |supplied_session_attendance|
       session = @workshop.sessions.find_by!(id: supplied_session_attendance[:session_id])
       existing_user_ids = session.attendances.map{|attendance| attendance.teacher.id}
-      supplied_attendances = supplied_session_attendance[:attendances]
+      supplied_attendances = supplied_session_attendance[:attendances] || []
       attending_user_ids = []
       supplied_attendances.each do |attendance|
         if attendance[:id]
           attending_user_ids << attendance[:id]
         elsif attendance[:email]
           teacher = create_teacher attendance[:email]
+
+          # join the workshop section
+          @workshop.section.add_student(teacher) if @workshop.section
+
           attending_user_ids << teacher.id
         end
       end
@@ -49,9 +53,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       email: email,
       school: enrollment.school
     }
-    teacher = User.find_or_create_teacher(params, current_user)
-
-    teacher
+    User.find_or_create_teacher(params, current_user)
   end
 
   def workshop_attendance_params

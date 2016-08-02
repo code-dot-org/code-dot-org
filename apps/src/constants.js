@@ -26,6 +26,7 @@ exports.TestResults = {
   NO_TESTS_RUN: -1,
 
   // The level was not solved.
+  GENERIC_FAIL: 0,                    // Used by DSL defined levels.
   EMPTY_BLOCK_FAIL: 1,                // An "if" or "repeat" block was empty.
   TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.
@@ -97,6 +98,34 @@ exports.KeyCodes = {
   COPY: 67,
   PASTE: 86,
   DELETE: 127
+};
+
+exports.Position = {
+  OUTTOPOUTLEFT:    1,
+  OUTTOPLEFT:       2,
+  OUTTOPCENTER:     3,
+  OUTTOPRIGHT:      4,
+  OUTTOPOUTRIGHT:   5,
+  TOPOUTLEFT:       6,
+  TOPLEFT:          7,
+  TOPCENTER:        8,
+  TOPRIGHT:         9,
+  TOPOUTRIGHT:      10,
+  MIDDLEOUTLEFT:    11,
+  MIDDLELEFT:       12,
+  MIDDLECENTER:     13,
+  MIDDLERIGHT:      14,
+  MIDDLEOUTRIGHT:   15,
+  BOTTOMOUTLEFT:    16,
+  BOTTOMLEFT:       17,
+  BOTTOMCENTER:     18,
+  BOTTOMRIGHT:      19,
+  BOTTOMOUTRIGHT:   20,
+  OUTBOTTOMOUTLEFT: 21,
+  OUTBOTTOMLEFT:    22,
+  OUTBOTTOMCENTER:  23,
+  OUTBOTTOMRIGHT:   24,
+  OUTBOTTOMOUTRIGHT:25
 };
 
 /** @const {string} SVG element namespace */

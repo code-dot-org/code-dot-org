@@ -5,7 +5,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -18,6 +18,7 @@ var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
+var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -129,6 +130,7 @@ Craft.init = function (config) {
   }
 
   config.level.disableFinalStageMessage = true;
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function () {
@@ -316,8 +318,8 @@ Craft.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<CraftVisualizationColumn/>}
-          onMount={onMount}
+        visualizationColumn={<CraftVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -593,7 +595,7 @@ Craft.executeUserCode = function () {
     return;
   }
 
-  if (studioApp.hasExtraTopBlocks()) {
+  if (studioApp.hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
     this.reportResult(false);

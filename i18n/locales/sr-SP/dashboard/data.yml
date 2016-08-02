@@ -1,75 +1,5 @@
 sr:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 увод у курс Информатике
-          Unplug1: Фаза 1
-          Maze: Фаза 2
-          Unplug2: Фаза 3
-          Unplug3: Фаза 4
-          Artist: Фаза 5
-          Unplug4: Фаза 6
-          Artist2: Фаза 7
-          Unplug5: Фаза 8
-          Farmer: Фаза 9
-          Unplug6: Фаза 10
-          Artist3: Фаза 11
-          Unplug7: Фаза 12
-          Farmer2: Фаза 13
-          Unplug8: Фаза 14
-          Artist4: Фаза 15
-          Unplug9: Фаза 16
-          Farmer3: Фаза 17
-          Unplug10: Фаза 18
-          Artist5: Фаза 19
-          Unplug11: Фаза 20
-        Hour of Code:
-          desc: Час кода
-          Maze: Фаза 1
-        Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: Фаза 1
-        2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Фаза 1
-        Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Фаза 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Фаза 1
-        Jigsaw Levels:
-          desc: Слагалица (проба)
-          Jigsaw: Фаза 1
-        Step Levels:
-          desc: Лавиринт (проба)
-          MazeStep: Stage Step
-        edit-code:
-          desc: Edit Code (beta)
-          MazeEC: Фаза 1
-          Applab: Фаза 2
-          ArtistEC: Фаза 3
-          StudioEC: Фаза 4
-        events:
-          desc: Bounce (beta)
-          Bounce: Фаза 1
-          Studio: Фаза 2
-        builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Фаза 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Фаза 1
-        jigsaw:
-          desc: Слагалица (проба)
-          Jigsaw: Фаза 1
-        step:
-          desc: Лавиринт (проба)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Фаза 1
     game:
       name:
         Unplug1: Увод у Компјутерске Науке
@@ -238,7 +168,7 @@ sr:
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_10: 'There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
@@ -492,6 +422,7 @@ sr:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

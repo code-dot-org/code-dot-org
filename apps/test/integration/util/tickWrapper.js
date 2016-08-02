@@ -1,5 +1,5 @@
 /* global Promise */
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /**

@@ -36,12 +36,12 @@ SeamlessDatabasePool.use_persistent_read_connection do
     data = users.map do |user|
       row = {}
       row.merge!({
-                     :'ID' => user.id,
+                     :ID => user.id,
                      :'Ops First Name' => user.ops_first_name,
                      :'Ops Last Name' => user.ops_last_name,
-                     :'Email' => user.email,
-                     :'District' => user.district.try(:name) || 'None',
-                     :'School' => user.ops_school || 'None'
+                     :Email => user.email,
+                     :District => user.district.try(:name) || 'None',
+                     :School => user.ops_school || 'None'
                  })
       level_progress = summarize_user_progress(script, user)[:levels]
       percent = percent_complete(script, user)

@@ -1,0 +1,64 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T16:06:55.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": {
+        "params": [
+
+        ],
+        "paletteParams": [
+
+        ]
+      },
+      "x": null,
+      "y": null,
+      "width": null,
+      "height": null,
+      "shapeColor": null,
+      "background": null,
+      "comment": null,
+      "rect": null,
+      "fill": null
+    },
+    "show_d_pad": "false",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Sprites vs. Rectangles\r\n\r\nSprites may seem a lot like fancy rectangles right now. In time you'll see that sprites are **much more powerful** but for now there's one key difference you need to know about.\r\n\r\nSprites have an `x` and a `y` location just like a rectangle. The key difference is that **a sprite's `x` and `y` are in the middle of the sprite, not the top left corner**. \r\n\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/b1b38266c674e43687148a1ec4fd8e82-image-1466007512332.17.59 AM.png\" style=\"float:right; width:200px\">\r\n\r\nThis program creates a red sprite and a green rectangle that are the same size and have the same `x` and `y`. **The sprite does not cover the rectangle since its `x` and `y` are at its center**.\r\n\r\n* Change the `x` and `y` properties of the sprite so that it entirely covers the green rectangle\r\n* When your program works correctly it should draw the image to the right",
+    "start_blocks": "var redSprite = createSprite();\r\n\r\n// Change these properties to entirely cover the green rectangle\r\nredSprite.x = 200;\r\nredSprite.y = 200;\r\nredSprite.width = 100;\r\nredSprite.height = 100;\r\nredSprite.shapeColor = \"red\";\r\n\r\nfill(\"green\");\r\nrect(200, 200, 100, 100);\r\n\r\ndrawSprites();",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -52,15 +52,20 @@ class Applab < Blockly
     ['applab']
   end
 
+  # List of possible palette categories
+  def self.palette_categories
+    %w(uicontrols canvas data turtle control math variables functions)
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-        user: params[:user],
-        game: Game.applab,
-        level_num: 'custom',
-        properties: {
-          code_functions: JSON.parse(palette),
-          edit_code: true
-        }
+      user: params[:user],
+      game: Game.applab,
+      level_num: 'custom',
+      properties: {
+        code_functions: JSON.parse(palette),
+        edit_code: true
+      }
     ))
   end
 

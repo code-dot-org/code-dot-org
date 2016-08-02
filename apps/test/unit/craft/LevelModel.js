@@ -1,11 +1,10 @@
 import {assert} from '../../util/configuredChai';
 
 let testUtils = require('../../util/testUtils');
-testUtils.setupLocale('calc');
 
 let LevelModel = require('@cdo/apps/craft/game/LevelMVC/LevelModel.js');
 
-let _ = require('@cdo/apps/lodash');
+let _ = require('lodash');
 
 let makePlane = (n, type) => _.range(n).map(() => type);
 let blankPlane = () => makePlane(100, '');

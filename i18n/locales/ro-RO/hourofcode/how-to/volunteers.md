@@ -10,14 +10,37 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 Vizitaţi o clasă locala pentru a inspira elevii sa continue sa invete tehnologia computerelor si programare. [ Fii voluntar pentru o oră](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## Alătură-te unei sesiuni de informare a voluntarilor
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Vom discuta despre cum să se coordoneze cu profesorii înaintea evenimentului lor Hour of Code, şi, de asemenea, ceea ce trebuie să faceţi în ziua evenimentului pentru a va pregăti. Vă rugăm să veniti cu întrebările dumneavoastră! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+Vom găzdui două sesiuni de informare pentru a explica cum va fi experiența tipică a unui voluntar. Vom discuta despre cum să se coordoneze cu profesorii înaintea evenimentului lor Hour of Code, şi, de asemenea, ceea ce trebuie să faceţi în ziua evenimentului pentru a va pregăti. Vă rugăm să veniti cu întrebările dumneavoastră! Aceste sesiuni de informare vor fi găzduite pe Hangouts on Air, dacă le ratezi poți să urmărești mai târziu sesiunea înregistrată. [Vezi ordinea de zi](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Dată         | Ora                     | Link to info session                                                            |
-| ------------ | ----------------------- | ------------------------------------------------------------------------------- |
-| 16 noiembrie | 1:00 pm - 1:30 pm PST   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 7 decembrie  | 11:00 am - 11:30 am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Dată
+    </th>
+    
+    <th>
+      Ora
+    </th>
+    
+    <th>
+      Link către sesiunea de informare
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Incercati tutorialele cu 30 de minute inainte
 
@@ -25,7 +48,7 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 ## 4. Recruteaza-ti colegii sa fie voluntari
 
-Spune-le prietenilor si colegilor despre Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Spune-le prietenilor si colegilor despre Hour of Code. Avem mii de profesori care se înscriu şi caută voluntari, așadar să le cereţi să se [înscrie ca voluntar](https://code.org/volunteer).
 
 **Exemple de email:**
 
@@ -33,29 +56,33 @@ Spune-le prietenilor si colegilor despre Hour of Code. We have thousands of teac
 
 Daca iti amintesti prima ta linie de cod, stii ca a dat forma restului vietii tale.
 
-Despre asta e Hour of Code. În ultimii doi ani, mişcarea a spulberat stereotipurile despre cum este sa programezi si a ajutat mai mult de 100 milioane de elevi din 180 de tari sa incerce stiinta computerului pentru prima data.
+Despre asta e Hour of Code. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**M-am inscris ca voluntar intr-o clasa locala**  
-7,098 de profesori au cerut deja ajutorul. Code.org repartizeaza clasele cu voluntarii tehnici ca tine ce ajuta elevii si profesorii pentru prima lor Ora de Programare.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Vă rugăm să [ fiti voluntar pentru o oră](https://code.org/volunteer/engineer). După ce vă înscrieţi, profesorii din scolile locale vor fi capabil să vă contacteze pentru ajutor folosind un formular.* Nu poti fi voluntar? [Ajuta la răspândirea vorbei despre Hour of Code](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Experienta ta conteaza**  
-Multe scoli nu predau tehnologia computerelor. Majoritatea elevilor nu stiu ca este despre rezolvarea problemelor si ca ne conecteaza pe toti. Aceasta este o şansă de a inspira cel puţin o persoană tânără în zona dumneavoastră.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Înscrie-te pentru a fi voluntar](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-* Adresa de e-mail nu va fi partajata cu profesorii.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 5. Solicită angajatorului să se implice
 
-[Trimite acest e-mail](https://hourofcode.com/promote/resources#email) manager-ului, sau CEO-ului.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 4. Promoveaza Hour of Code în comunitatea ta
 
-Recruteaza un grup local- un club mixt/baieti/fete, Biserica, Universitatea, veteranii sau sindicatul. Sau gazduieste Ora de Programare in cadrul unei petreceri pentru cartierul dumneavoastră. [Trimite acest e-mail](https://hourofcode.com/promote/resources#email).
+Recruteaza un grup local- un club mixt baieti/fete, Biserica, Universitatea, veteranii sau sindicatul. Sau gazduieste Ora de Programare in cadrul unei petreceri pentru cartierul dumneavoastră. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Cititi agenda propusa mai jos pentru a sti la ce sa te astepti cand vizitezi o clasa.
+## 7. Pregătește-te înainte de a vizita o clasă.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Ordinea de zi pentru voluntariat în sala de clasă
 

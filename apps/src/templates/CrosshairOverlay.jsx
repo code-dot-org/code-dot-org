@@ -34,18 +34,18 @@ const CrosshairOverlay = React.createClass({
     return (
       <g className="crosshair-overlay">
         <line
-            x1={this.props.mouseX}
-            y1={this.props.mouseY - CROSSHAIR_MARGIN}
-            x2={this.props.mouseX}
-            y2={0}
-            style={styles.line}
+          x1={this.props.mouseX}
+          y1={this.props.mouseY - CROSSHAIR_MARGIN}
+          x2={this.props.mouseX}
+          y2={0}
+          style={styles.line}
         />
         <line
-            x1={this.props.mouseX - CROSSHAIR_MARGIN}
-            y1={this.props.mouseY}
-            x2={0}
-            y2={this.props.mouseY}
-            style={styles.line}
+          x1={this.props.mouseX - CROSSHAIR_MARGIN}
+          y1={this.props.mouseY}
+          x2={0}
+          y2={this.props.mouseY}
+          style={styles.line}
         />
       </g>
     );

@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"вилучати пробіли з лівого боку",
   "TEXT_TRIM_OPERATOR_RIGHT":"вилучати пробіли з правого боку",
   "TEXT_TRIM_TOOLTIP":"Повертає копію тексту з пробілами вилученими від одного або обох кінців.",
+  "UNUSED_CODE":"Невикористаний код",
   "VARIABLES_DEFAULT_NAME":"елемент",
   "VARIABLES_GET_CREATE_SET":"Створити 'set %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

@@ -40,7 +40,7 @@ goog.require('goog.math.Rect');
  */
 Blockly.addClass_ = function(element, className) {
   var classes = element.getAttribute('class') || '';
-  if (Blockly.stringContainsClass_(classes, className)) {
+  if (!Blockly.stringContainsClass_(classes, className)) {
     if (classes) {
       classes += ' ';
     }
@@ -53,7 +53,7 @@ Blockly.elementHasClass_ = function (element, className) {
 };
 
 Blockly.stringContainsClass_ = function (classes, className) {
-  return (' ' + classes + ' ').indexOf(' ' + className + ' ') == -1;
+  return (' ' + classes + ' ').indexOf(' ' + className + ' ') !== -1;
 };
 
 /**
@@ -196,17 +196,23 @@ Blockly.unbindEvent_ = function(bindData) {
  * Fire a synthetic event.
  * @param {!Element} element The event's target element.
  * @param {string} eventName Name of event (e.g. 'click').
+ * @param {object} opt_properties optional properties to add to the
+ *    created event object (e.g. { screenX: 10 })
  */
-Blockly.fireUiEvent = function(element, eventName) {
+Blockly.fireUiEvent = function(element, eventName, opt_properties) {
+  opt_properties = opt_properties || {};
+
   var doc = document;
   if (doc.createEvent) {
     // W3
     var evt = doc.createEvent('UIEvents');
+    goog.object.extend(evt, opt_properties);
     evt.initEvent(eventName, true, true);  // event type, bubbling, cancelable
     element.dispatchEvent(evt);
   } else if (doc.createEventObject) {
     // MSIE
     var evt = doc.createEventObject();
+    goog.object.extend(evt, opt_properties);
     element.fireEvent('on' + eventName, evt);
   } else {
     throw 'FireEvent: No event creation mechanism.';
@@ -847,4 +853,18 @@ Blockly.findEmptyInput = function (block, inputType) {
   return goog.array.find(block.inputList, function(input) {
     return input.type === inputType && !input.connection.targetConnection;
   });
+};
+
+/**
+ * Aggregates counts for the number of occurrences of unique keys in the given
+ * list.
+ * @param {string[]} list
+ * @returns {Object.<string, number>}
+ */
+Blockly.aggregateCounts = function (list) {
+  return list.reduce(function (prev, curr) {
+    var count = prev[curr] || 0;
+    prev[curr] = count + 1;
+    return prev;
+  }, {});
 };

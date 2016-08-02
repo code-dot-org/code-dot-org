@@ -104,5 +104,4 @@ module Rack
       end
     end
   end
-
 end

@@ -6,8 +6,8 @@ var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
-var webpackConfig = require('./webpack.config');
-var LiveReloadPlugin = require('webpack-livereload-plugin');
+var webpackConfig = require('./webpack');
+var envConstants = require('./envConstants');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -21,7 +21,8 @@ module.exports = function (grunt) {
     // get compiled.
     fs.writeFileSync(
       'test/entry-tests.js',
-      "require('"+path.resolve(process.env.mocha_entry)+"')"
+      "require('babel-polyfill');\n" +
+      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
     );
   }
 
@@ -40,10 +41,10 @@ module.exports = function (grunt) {
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
-  var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
+  var SINGLE_APP = grunt.option('app') || envConstants.APP;
 
   /** @const {string[]} */
-  var APPS = [
+  var ALL_APPS = [
     'maze',
     'turtle',
     'bounce',
@@ -58,25 +59,14 @@ module.exports = function (grunt) {
     'gamelab'
   ];
 
-  if (APP_TO_BUILD) {
-    if (APPS.indexOf(APP_TO_BUILD) === -1) {
-      throw new Error('Unknown app: ' + APP_TO_BUILD);
-    }
-    APPS = [APP_TO_BUILD];
+  if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
+    throw new Error('Unknown app: ' + SINGLE_APP);
   }
 
-  // Parse options from environment.
-  var envOptions = {
-    dev: (process.env.MOOC_DEV === '1'),
-    autoReload: ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1
-  };
+  var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
-  config.clean = {
-    all: ['build']
-  };
-
-  var ace_suffix = envOptions.dev ? '' : '-min';
-  var dotMinIfNotDev = envOptions.dev ? '' : '.min';
+  var ace_suffix = envConstants.DEV ? '' : '-min';
+  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -108,6 +98,10 @@ module.exports = function (grunt) {
     }
   }
 
+  config.clean = {
+    all: ['build']
+  };
+
   config.copy = {
     src: {
       files: [
@@ -134,11 +128,20 @@ module.exports = function (grunt) {
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media'
         },
+        // We have to do some weird stuff to get our fallback video player working.
+        // video.js expects some of its own files to be served by the application, so
+        // we include them in our build and access them via static (non-fingerprinted)
+        // root-relative paths.
+        // We may have to do something similar with ace editor later, but generally
+        // we'd prefer to avoid this way of doing things.
+        // TODO: At some point, we may want to better rationalize the package
+        // structure for all of our different assets (including vendor assets,
+        // blockly media, etc).
         {
           expand: true,
-          cwd: 'style/applab',
-          src: ['*.css'],
-          dest: 'build/package/css'
+          cwd: './node_modules/video.js/dist/video-js',
+          src: ['**'],
+          dest: 'build/package/video-js'
         }
       ]
     },
@@ -248,47 +251,28 @@ module.exports = function (grunt) {
     }
   };
 
-  config.lodash = {
-    'build': {
-      'dest': 'src/lodash.js',
-      'options': {
-        'include': [
-          'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
-          'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-          'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq', 'assign', 'merge'
-        ]
-      }
-    }
-  };
-
   config.sass = {
     all: {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['../shared/css/']
+        includePaths: [
+          'node_modules',
+          '../shared/css/'
+        ]
       },
-      files: {
-        'build/package/css/common.css': 'style/common.scss',
-        'build/package/css/readonly.css': 'style/readonly.scss'
-      }
-    }
-  };
-  APPS.filter(function (app) {
-    return app !== 'none';
-  }).forEach(function (app) {
-    var src = 'style/' + app + '/style.scss';
-    var dest = 'build/package/css/' + app + '.css';
-    config.sass.all.files[dest] = src;
-  });
-
-  config.pseudoloc = {
-    all: {
-      srcBase: 'i18n',
-      srcLocale: 'en_us',
-      destBase: 'build/i18n',
-      pseudoLocale: 'en_ploc'
+      files: _.fromPairs([
+        ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
+        ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
+        ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
+        ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+      ].concat(appsToBuild.map(function (app) {
+        return [
+          'build/package/css/' + app + '.css', // dst
+          'style/' + app + '/style.scss' // src
+        ];
+      })))
     }
   };
 
@@ -303,7 +287,7 @@ module.exports = function (grunt) {
             return path.join(dest, outputPath);
           },
           expand: true,
-          src: ['i18n/**/*.json', 'build/i18n/**/*.json'],
+          src: ['i18n/**/*.json'],
           dest: 'build/package/js/'
         }
       ]
@@ -317,7 +301,7 @@ module.exports = function (grunt) {
     }
   };
 
-  var outputDir = 'build/package/js/';
+  var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
   };
@@ -325,7 +309,7 @@ module.exports = function (grunt) {
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
-      singleRun: process.env.MOOC_WATCH !== '1',
+      singleRun: !envConstants.WATCH,
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
@@ -352,6 +336,11 @@ module.exports = function (grunt) {
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
+    codeStudio: {
+      files: [
+        {src: ['test/code-studio-tests.js'], watched: false},
+      ],
+    },
     all: {
       files: [
         {src: ['test/index.js'], watched: false},
@@ -367,62 +356,138 @@ module.exports = function (grunt) {
     },
   };
 
-  var entries = {};
-  APPS.forEach(function (app) {
-    entries[app] = './src/'+app+'/main.js';
-  });
-  if (entries.applab) {
-    entries['applab-api'] = './src/applab/api-entry.js';
-  }
-  config.webpack = {
-    build: _.extend({}, webpackConfig, {
-      output: {
-        path: path.resolve(__dirname, outputDir),
-        filename: "[name].js",
+
+  var bundles = [
+    {
+      uniqueName: 'apps',
+      entries: _.fromPairs(appsToBuild.map(function (app) {
+        return [app, './src/' + app + '/main.js'];
+      }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
+        [['applab-api', './src/applab/api-entry.js']]
+      )),
+      commonFile: 'common'
+    },
+
+    {
+      uniqueName: 'codeStudio',
+      entries: {
+        'code-studio': './src/code-studio/code-studio.js',
+        'levelbuilder': './src/code-studio/levelbuilder.js',
+        'levelbuilder_markdown': './src/code-studio/levelbuilder_markdown.js',
+        'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
+        'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
+        'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
+        'districtDropdown': './src/code-studio/districtDropdown.js',
+        'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
+        'levels/widget': './src/code-studio/levels/widget.js',
+        'levels/external': './src/code-studio/levels/external.js',
+        // put these entry points in arrays so that they can be required elsewhere
+        // https://github.com/webpack/webpack/issues/300
+        'levels/multi': ['./src/code-studio/levels/multi.js'],
+        'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
+        'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
+        'levels/dialogHelper': './src/code-studio/levels/dialogHelper.js',
+        'initApp/initApp': './src/code-studio/initApp/initApp.js'
       },
-      devtool: 'cheap-module-eval-source-map',
-      entry: entries,
-      plugins: [
-        new webpack.DefinePlugin({
-          IN_UNIT_TEST: JSON.stringify(false),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-          PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name:'common',
-          minChunks: 2,
-        }),
-      ],
-      watch: true,
+      commonFile: 'code-studio-common',
+      provides: ['marked', 'react', 'react-dom', 'radium']
+    },
+
+    {
+      uniqueName: 'plc',
+      entries: {
+        plc: './src/code-studio/plc/plc.js'
+      },
+      provides: ['marked']
+    },
+
+    // Build embedVideo.js in its own step (skipping factor-bundle) so that
+    // we don't have to include the large code-studio-common file in the
+    // embedded video page, keeping it fairly lightweight.
+    // (I wonder how much more we could slim it down by removing jQuery!)
+    // @see embed.html.haml
+    {
+      uniqueName: 'embedVideo',
+      entries: {
+        embedVideo: './src/code-studio/embedVideo.js'
+      },
+      provides: ['jquery']
+    },
+
+    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in an iframe.
+    {
+      uniqueName: 'embedBlocks',
+      entries: {
+        embedBlocks: './src/code-studio/embedBlocks.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
+    },
+
+    {
+      uniqueName: 'makerlabDependencies',
+      entries: {
+        makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
+      },
+      provides: ['johnny-five', 'playground-io', 'chrome-serialport']
+    },
+
+    {
+      uniqueName: 'pd',
+      entries: {
+        pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
+      }
+    }
+  ];
+
+  // Create a config for each of our bundles
+  function createConfigs(bundles, options) {
+    var minify = options.minify;
+    var watch = options.watch;
+
+    return bundles.map(function (bundle) {
+      var uniqueName = bundle.uniqueName;
+      var entries = bundle.entries;
+      var commonFile = bundle.commonFile;
+      var provides = bundle.provides;
+
+      return webpackConfig.create({
+        uniqueName: bundle.uniqueName,
+        output: path.resolve(__dirname, OUTPUT_DIR),
+        entries: entries,
+        commonFile: commonFile,
+        provides: provides,
+        minify: minify,
+        watch: watch,
+        piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      });
+    });
+  }
+
+  config.webpack = {
+    build: createConfigs(bundles, {
+      minify: false,
+      watch: false,
+    }),
+
+    uglify: createConfigs(bundles, {
+      minify: true,
+      watch: false
+    }),
+
+    watch: createConfigs(bundles, {
+      minify: false,
+      watch: true
     })
   };
-  config.webpack.uglify = _.extend({}, config.webpack.build, {
-    devtool: 'source-map',
-    output: _.extend({}, config.webpack.build.output, {
-      filename: "[name].min.js",
-    }),
-    plugins: config.webpack.build.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
-    ]),
-  });
-  config.webpack.watch = _.extend({}, config.webpack.build, {
-    keepalive: true,
-    plugins: config.webpack.build.plugins.concat([
-      new LiveReloadPlugin({
-        appendScriptTag: envOptions.autoReload
-      }),
-    ])
-  });
 
-  var ext = envOptions.dev ? 'uncompressed' : 'compressed';
+  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
       nonull: true,
       src: [
+        'lib/blockly/preamble_' + ext + '.js',
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
         'lib/blockly/javascript_' + ext + '.js',
@@ -441,39 +506,31 @@ module.exports = function (grunt) {
     }
   };
 
-  var uglifiedFiles = {};
+
   config.uglify = {
-    browserified: {
-      files: uglifiedFiles
+    lib: {
+      files: _.fromPairs([
+        'jsinterpreter/interpreter.js',
+        'jsinterpreter/acorn.js',
+        'p5play/p5.play.js',
+        'p5play/p5.js'
+      ].map(function (src) {
+        return [
+          OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
+          OUTPUT_DIR + src // src
+        ];
+      }))
     }
   };
 
-  config.uglify.lib = {files: {}};
-  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
-    outputDir + 'jsinterpreter/interpreter.js';
-  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
-    outputDir + 'jsinterpreter/acorn.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
-    outputDir + 'p5play/p5.play.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
-    outputDir + 'p5play/p5.js';
-
   config.watch = {
-    js: {
-      files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src'],
-      options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true,
-        interrupt: true
-      }
-    },
+    // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true,
+        livereload: envConstants.AUTO_RELOAD,
         interrupt: true
       }
     },
@@ -482,7 +539,7 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     vendor_js: {
@@ -490,18 +547,28 @@ module.exports = function (grunt) {
       tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['pseudoloc', 'messages', 'notify:messages'],
+      tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
   };
+
+  config.concurrent = {
+    // run our two watch tasks concurrently so that they dont block each other
+    watch: {
+      tasks: ['watch', 'webpack:watch'],
+      options: {
+        logConcurrentOutput: true
+      }
+    }
+  },
 
   config.strip_code = {
     options: {
@@ -514,7 +581,7 @@ module.exports = function (grunt) {
   };
 
   config.notify = {
-    browserify: {options: {message: 'Browserify build completed.'}},
+    'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
@@ -535,8 +602,10 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    APPS.concat('common').map(function (item) {
-      var localeString = '/*' + item + '*/ module.exports = window.blockly.' + (item === 'common' ? 'locale' : 'appLocale') + ';';
+    appsToBuild.concat('common').map(function (item) {
+      var localeType = (item === 'common' ? 'locale' : 'appLocale');
+      var localeString = '/*' + item + '*/ ' +
+        'module.exports = window.blockly.' + localeType + ';';
       fs.writeFileSync(path.join(current, item + '.js'), localeString);
     });
   });
@@ -551,7 +620,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    'pseudoloc',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -561,21 +629,38 @@ module.exports = function (grunt) {
     'ejs'
   ]);
 
+  grunt.registerTask('compile-firebase-rules', function () {
+    try {
+      child_process.execSync('ls `npm bin`/firebase-bolt');
+    } catch (e) {
+      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
+      try {
+        child_process.execSync('which npm');
+      } catch (e) {
+        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
+      }
+      child_process.execSync('npm install');
+    }
+    child_process.execSync('mkdir -p ./build/package/firebase');
+    child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
+  });
+
   grunt.registerTask('postbuild', [
     'newer:copy:static',
     'newer:concat',
-    'newer:sass'
+    'newer:sass',
+    'compile-firebase-rules'
   ]);
 
   grunt.registerTask('build', [
     'prebuild',
     'webpack:build'
   ].concat([
-    'notify:browserify',
+    'notify:js-build',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : 'webpack:uglify',
+    envConstants.DEV ? 'noop' : 'webpack:uglify',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : 'uglify:lib',
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     'postbuild'
   ]));
 
@@ -583,7 +668,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dev', [
     'prebuild',
-    'webpack:watch',
+    'newer:sass',
+    'concurrent:watch',
     'postbuild',
   ]);
 
@@ -600,6 +686,14 @@ module.exports = function (grunt) {
     'newer:copy:static',
     'concat',
     'karma:integration'
+  ]);
+
+  grunt.registerTask('codeStudioTest', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+    'concat',
+    'karma:codeStudio'
   ]);
 
   grunt.registerTask('test', [

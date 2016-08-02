@@ -28,11 +28,40 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   after_create :create_enrollment_unit_assignments
 
+  def self.enroll_users(user_emails, course_id)
+    course = Plc::Course.find(course_id)
+    enrolled_users = []
+    nonexistant_users = []
+    nonteacher_users = []
+    other_failure_users = []
+    other_failure_errors = []
+
+    user_emails.each do |email|
+      user = User.find_by_email_or_hashed_email(email)
+
+      if user.nil?
+        nonexistant_users << email
+      elsif !user.teacher?
+        nonteacher_users << email
+      else
+        enrollment = find_or_create_by(user: user, plc_course: course)
+        if enrollment.valid?
+          enrolled_users << email
+        else
+          other_failure_users << email
+          other_failure_errors << enrollment.errors
+        end
+      end
+    end
+
+    return enrolled_users, nonexistant_users, nonteacher_users, other_failure_users, other_failure_errors
+  end
+
   def create_enrollment_unit_assignments
     plc_course.plc_course_units.each do |course_unit|
       Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
                                            plc_course_unit: course_unit,
-                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED,
+                                           status: course_unit.started ? Plc::EnrollmentUnitAssignment::IN_PROGRESS : Plc::EnrollmentUnitAssignment::START_BLOCKED,
                                            user: user)
     end
   end

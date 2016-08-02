@@ -10,14 +10,37 @@ Titel: < % = hoc_s(:title_how_to_volunteers) %> lay-out: breed nav: how_to_nav
 
 Bezoek een lokale klas om scholieren te inspireren om door te blijven leren programmeren. [Doe mee als een vrijwilliger voor een uur](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## 2. Word lid van een vrijwilliger infosessie
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We zullen bespreken hoe je met leraren moet samenwerken voor hun CodeUur event en ook wat je een dag van te voren moet doen om je voor te bereiden. Kom met vragen! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+Wij zullen twee infosessies hosten om uit te leggen wat een typische vrijwilliger ervaring zal zijn. We zullen bespreken hoe je met leraren moet samenwerken voor hun CodeUur event en ook wat je een dag van te voren moet doen om je voor te bereiden. Kom met vragen! Deze webinars zal worden gehost via Hangouts on Air, dus als je er één mist kan je het alsnog later terug kijken. [Zie de agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Datum       | Tijdstip      | Link to info session                                                            |
-| ----------- | ------------- | ------------------------------------------------------------------------------- |
-| 16 november | 13:00 - 13:30 | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3 december  | 11:00 - 11:30 | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Datum
+    </th>
+    
+    <th>
+      Tijdstip
+    </th>
+    
+    <th>
+      Link naar infosessie
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## Besteed 30 minuten van te voren aan de tutorials
 
@@ -25,7 +48,7 @@ Probeer de CodeUur tutorials op [code.org/learn](https://code.org/learn). Kies e
 
 ## 4. Moedig je medecollega's aan om ook mee te doen als een vrijwilliger
 
-Vertel uw vrienden en collega's over het CodeUur. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Vertel uw vrienden en collega's over het CodeUur. We hebben duizenden leraren die zich al hebben aangemeld en op zoek zijn naar vrijwilligers, dus vraag hen om zich [aan te melden als vrijwilliger](https://code.org/volunteer).
 
 **Voorbeeld e-mail:**
 
@@ -33,29 +56,33 @@ Vertel uw vrienden en collega's over het CodeUur. We have thousands of teachers 
 
 Als u uw allereerste codering onthoudt, weet u dat het een rol heeft gespeeld in uw leven.
 
-Dat is waar CodeUur voor staat. In de afgelopen twee jaar, heeft de organisatie stereotypes van wat het is om te coderen verbrijzeld en meer dan 100 miljoen leerlingen in 180 landen voor het eerst in aanmerking laten komen met programmeren.
+Dat is waar CodeUur voor staat. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Ik heb me aangemeld als vrijwilliger in een klas**   
-7,098 leerkrachten hebben al om hulp gevraagd. Code.org voegt klaslokalen samen, met technische vrijwilligers zoals u die scholieren en docenten kunnen helpen met hun eerste CodeUur.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Gelieve [vrijwilligers voor een uur](https://code.org/volunteer/engineer). Nadat u zich aangemeld heeft, kunnen lokale docenten contact met u opnemen voor help.* Kunt u geen vrijwilligerswerk doen? [Help met het verspreiden van het woord over het CodeUur](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Uw ervaring helpt**   
-De meeste scholen geven nog steeds geen lessen over programmering. De meeste studenten weten niet dat het gaat om grote problemen op te lossen en ons allemaal dichter aan elkaar te koppelen. Dit is de kans om ten minste éen jong persoon in uw omgeving te inspireren.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Meld u aan als vrijwilliger](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-* Uw e-mailadres zal nooit worden gedeeld met leerkrachten.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 4. Vraag uw werkgever om betrokken te raken
 
-[Stuur deze e-mail](https://hourofcode.com/promote/resources#email) naar uw manager of de CEO.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 4. Promoot the CodeUur in uw gemeenschap
 
-Werven een lokale groep — jongen/meisje scouts club, kerk, Universiteit, veteranen groep of vakbond. Of host een CodeUur "block party" in uw buurt. [Stuur deze e-mail](https://hourofcode.com/promote/resources#email).
+Werven een lokale groep — jongen/meisje scouts club, kerk, Universiteit, veteranen groep of vakbond. Of host een CodeUur "block party" in uw buurt. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Lees de voorgestelde agenda hieronder, zodat u weet wat u te verwachten wanneer u een klaslokaal bezoekt.
+## 7. Bereid u voor, voordat u een klaslokaal gaat bezoeken.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Agenda voor vrijwilligers in een klaslokaal
 

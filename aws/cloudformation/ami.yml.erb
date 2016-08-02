@@ -1,5 +1,8 @@
 <%
-update_bootstrap_script.call unless dry_run
+unless dry_run
+  update_cookbooks.call
+  update_bootstrap_script.call
+end
 
 # Nonce value for AMI resources. Change this value to generate a new base AMI on the next CloudFormation update.
 ami = 1
@@ -43,9 +46,10 @@ Resources:
           complete_id: "AMIComplete#{ami}",
           node_name: 'ami-${INSTANCE_ID}',
           run_list: [
-            'role[unmonitored-frontend]',
+            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]',
             'recipe[cdo-apps::stop]',
-          ]) %>
+          ],
+          commit: `git ls-remote origin #{branch} | cut -f1`.strip) %>
   AMI<%=ami%>: <%= lambda.call 'AMIManager',
     DependsOn: "WebServerAMI#{ami}",
     StackName: {Ref: 'AWS::StackName' },

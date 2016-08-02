@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
 
   
@@ -17,7 +15,7 @@ Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Datorer finns överallt. De är i våra fickor. They’re on our walls. De är i våra bilar. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
 But who exactly is going to write this software?
 
@@ -31,7 +29,7 @@ The problem begins in our middle and high schools. Nine out of ten of our school
 
 Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Vi behöver göra vissa ändringar.
+We need to make some changes.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
@@ -43,6 +41,4 @@ We need to recruit more computer science teachers and encourage professional dev
 
 According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Alla borde lära sig hur man kodar. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
-
-<%= view :signup_button %>
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.

@@ -34,6 +34,8 @@ class LevelsHelperTest < ActionView::TestCase
     options = blockly_options
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
 
+    reset_view_options
+
     @level.properties["maze"] = @level.properties["maze"].to_s
     options = blockly_options
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
@@ -49,6 +51,8 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = default_locale
     options = blockly_options
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
+
+    reset_view_options
 
     I18n.locale = new_locale
     options = blockly_options
@@ -73,6 +77,8 @@ class LevelsHelperTest < ActionView::TestCase
     @level.name = 'frozen line'
     options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
+
+    reset_view_options
 
     @level.name = 'this_level_doesnt_exist'
     options = blockly_options
@@ -155,14 +161,16 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal nil, view_options[:no_footer]
   end
 
-  test 'Blockly#blockly_options not modified by levels helper' do
+  test 'Blockly#blockly_app_options and Blockly#blockly_level_options not modified by levels helper' do
     level = create(:level, :blockly, :with_autoplay_video)
-    blockly_options = level.blockly_options
+    blockly_app_options = level.blockly_app_options level.game, level.skin
+    blockly_level_options = level.blockly_level_options
 
     @level = level
     app_options
 
-    assert_equal blockly_options, level.blockly_options
+    assert_equal blockly_app_options, level.blockly_app_options(level.game, level.skin)
+    assert_equal blockly_level_options, level.blockly_level_options
   end
 
   test 'app_options sets a channel' do
@@ -238,6 +246,30 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
   end
 
+  test 'submittable level is submittable for teacher enrolled in plc' do
+    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
+
+    user = create(:teacher)
+    sign_in user
+
+    app_options = self.question_options
+
+    assert_equal true, app_options[:level]['submittable']
+  end
+
+  test 'submittable level is not submittable for a teacher not enrolled in plc' do
+    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
+
+    user = create(:teacher)
+    sign_in user
+
+    app_options = self.question_options
+
+    assert_not app_options[:level]['submittable']
+  end
+
   test 'submittable level is submittable for student with teacher' do
     @level = create(:applab, submittable: true)
 
@@ -300,12 +332,12 @@ class LevelsHelperTest < ActionView::TestCase
 
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
-    @script.update(professional_learning_course: true)
+    @script.update(professional_learning_course: 'Professional Learning Course')
     @script_level = create(:script_level, level: @level, script: @script)
     assert_not can_view_solution?
 
     sign_out user
-    user = create :admin
+    user = create :levelbuilder
     sign_in user
     assert can_view_solution?
 
@@ -319,7 +351,6 @@ class LevelsHelperTest < ActionView::TestCase
     @script_level = create(:script_level, level: @level, script: @script)
     @level.update(ideal_level_source_id: nil)
     assert_not can_view_solution?
-
   end
 
   test 'show solution link shows link for appropriate users' do
@@ -327,7 +358,7 @@ class LevelsHelperTest < ActionView::TestCase
     @script = create(:script)
     @script_level = create(:script_level, level: @level, script: @script)
 
-    user = create :admin
+    user = create :levelbuilder
     sign_in user
     assert can_view_solution?
 

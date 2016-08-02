@@ -1,11 +1,10 @@
 name 'OPD-K5 Why teach CS'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
 
 ### CS FUNDAMENTALS > Why teach computer science?
-<img src="https://staging.code.org/images/edquote1.png" width="250px" style="margin-right:45px; border-radius:10px;" align="left">
+<img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; border-radius:10px;" align="left">
 
 [Research shows](http://code.org/promote) that computer science promotes critical thinking, creativity, problem-solving, and engagement in real-world skills.
 <br/><br/>

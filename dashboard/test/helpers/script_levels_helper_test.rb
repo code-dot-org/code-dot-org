@@ -6,6 +6,14 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   include ApplicationHelper
   include LevelsHelper
 
+  setup do
+    @teacher = create(:teacher)
+    @student = create(:student)
+    script = Script.find_by_name(Script::COURSE4_NAME)
+    @section = create(:section, user: @teacher, script: script)
+    create(:follower, section: @section, student_user: @student)
+  end
+
   test 'tracking_pixel_url' do
     # hoc
     assert_equal '//test.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Script.get_from_cache(Script::HOC_2013_NAME))
@@ -44,5 +52,70 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     self.stubs(:current_user).returns(nil)
     script_level = Script.twenty_hour_script.script_levels.fifth
     assert_equal 'Stage 2: The Maze', script_level.stage.summarize[:title]
+  end
+
+  test 'get End-of-Stage experience when enabled' do
+    self.stubs(:current_user).returns(@student)
+    script = @section.script
+    script_level = script.get_script_level_by_stage_and_position 2, 9
+    assert script_level.end_of_stage?, 'bad script_level selected for test'
+    @section.stage_extras = true
+    @section.save
+    response = {}
+
+    script_level_solved_response(response, script_level)
+    assert_equal true, response[:end_of_stage_experience]
+  end
+
+  test 'do not get End-of-Stage experience when disabled' do
+    self.stubs(:current_user).returns(@student)
+    script = @section.script
+    script_level = script.get_script_level_by_stage_and_position 2, 9
+    assert script_level.end_of_stage?, 'bad script_level selected for test'
+    @section.stage_extras = false
+    @section.save
+    response = {}
+
+    script_level_solved_response(response, script_level)
+    assert_equal false, response[:end_of_stage_experience]
+  end
+
+  test 'get End-of-Stage experience only for end of stage' do
+    self.stubs(:current_user).returns(@student)
+    script = @section.script
+    script_level = script.get_script_level_by_stage_and_position 2, 8
+    assert_equal false, script_level.end_of_stage?, 'bad script_level selected for test'
+    @section.stage_extras = true
+    @section.save
+    response = {}
+
+    script_level_solved_response(response, script_level)
+    assert_nil response[:end_of_stage_experience]
+  end
+
+  test 'get End-of-Stage experience only for student of teacher' do
+    script = @section.script
+    script_level = script.get_script_level_by_stage_and_position 2, 9
+    assert script_level.end_of_stage?, 'bad script_level selected for test'
+    @section.stage_extras = true
+    @section.save
+    response = {}
+
+    self.stubs(:current_user).returns(@student)
+    script_level_solved_response(response, script_level)
+    assert response[:end_of_stage_experience]
+
+    teacherless_student = create(:student)
+    self.stubs(:current_user).returns(teacherless_student)
+    script_level_solved_response(response, script_level)
+    assert_nil response[:end_of_stage_experience]
+
+    self.stubs(:current_user).returns(@teacher)
+    script_level_solved_response(response, script_level)
+    assert_nil response[:end_of_stage_experience]
+
+    self.stubs(:current_user).returns(nil)
+    script_level_solved_response(response, script_level)
+    assert_nil response[:end_of_stage_experience]
   end
 end

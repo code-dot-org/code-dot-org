@@ -1,6 +1,6 @@
 var animationTabModule = require('@cdo/apps/gamelab/AnimationTab/animationTabModule');
 import {expect} from '../../util/configuredChai';
-import {ADD_ANIMATION_AT} from '@cdo/apps/gamelab/animationModule';
+import {ADD_ANIMATION_AT} from '@cdo/apps/gamelab/animationListModule';
 
 describe('AnimationTab', function () {
   describe('reducer', function () {
@@ -32,20 +32,6 @@ describe('AnimationTab', function () {
         var state = { columnSizes: [], selectedAnimation: 'anotherKey' };
         var newState = reducer(state, selectAnimation('anotherKey'));
         expect(newState).to.equal(state);
-      });
-    });
-
-    describe('action: Game Lab ADD_ANIMATION_AT', function () {
-      it('changes selected animation to newly added animation', function () {
-        var action = {
-          type: ADD_ANIMATION_AT,
-          animationProps: {
-            key: 'new_animation_key'
-          }
-        };
-        var newState = reducer(initialState, action);
-        expect(newState).not.to.equal(initialState);
-        expect(newState).to.have.deep.property('selectedAnimation', 'new_animation_key');
       });
     });
   });

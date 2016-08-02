@@ -41,7 +41,7 @@ class AnimationsTest < FilesApiTestBase
     response = @api.post_file(cat_image_filename, cat_image_body, 'image/png')
     actual_cat_image_info = JSON.parse(response)
     expected_cat_image_info = {
-      'filename' =>  cat_image_filename,
+      'filename' => cat_image_filename,
       'category' => 'image',
       'size' => cat_image_body.length
     }

@@ -11,7 +11,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var studioMsg = require('./locale');
 var skins = require('../skins');
 var constants = require('./constants');
@@ -32,7 +32,7 @@ var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var Hammer = require('../hammer');
 var JSInterpreter = require('../JSInterpreter');
@@ -44,7 +44,7 @@ var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 var experiments = require('../experiments');
-
+var InputPrompt = require('../templates/InputPrompt');
 var studioCell = require('./cell');
 
 // tests don't have svgelement
@@ -56,6 +56,7 @@ if (typeof SVGElement !== 'undefined') {
 }
 
 var Direction = constants.Direction;
+var CardinalDirections = constants.CardinalDirections;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
@@ -268,7 +269,7 @@ function loadLevel() {
  */
 function reorderedStartAvatars(avatarList, firstSpriteIndex) {
   firstSpriteIndex = firstSpriteIndex || 0;
-  return _.flatten([
+  return _.flattenDeep([
     avatarList.slice(firstSpriteIndex),
     avatarList.slice(0, firstSpriteIndex)
   ]);
@@ -611,40 +612,28 @@ var delegate = function (scope, func, data) {
   };
 };
 
-var calcMoveDistanceFromQueues = function (index, yAxis, modifyQueues) {
-  var totalDistance = 0;
+var calcMoveDistanceFromQueues = function (index, modifyQueues) {
+  var totalDelta = {x: 0, y: 0};
 
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
-      var scaleFactor;
-      var distThisMove = Math.min(cmd.opts.queuedDistance,
+      var distThisMove = Math.min(cmd.opts.queuedDistance || Infinity,
                                   Studio.sprite[cmd.opts.spriteIndex].speed);
-      switch (cmd.opts.dir) {
-        case Direction.NORTH:
-          scaleFactor = yAxis ? -1 : 0;
-          break;
-        case Direction.WEST:
-          scaleFactor = yAxis ? 0: -1;
-          break;
-        case Direction.SOUTH:
-          scaleFactor = yAxis ? 1 : 0;
-          break;
-        case Direction.EAST:
-          scaleFactor = yAxis ? 0: 1;
-          break;
-      }
-      if (modifyQueues && (0 !== scaleFactor)) {
-        cmd.opts.queuedDistance -= distThisMove;
+      var moveDirection = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
+      totalDelta.x += distThisMove * moveDirection.x;
+      totalDelta.y += distThisMove * moveDirection.y;
+
+      if (modifyQueues && (moveDirection.x !== 0 || moveDirection.y !== 0)) {
+        cmd.opts.queuedDistance -=  distThisMove;
         if ("0.00" === Math.abs(cmd.opts.queuedDistance).toFixed(2)) {
           cmd.opts.queuedDistance = 0;
         }
       }
-      totalDistance += distThisMove * scaleFactor;
     }
   });
 
-  return totalDistance;
+  return totalDelta;
 };
 
 
@@ -657,6 +646,8 @@ var cancelQueuedMovements = function (index, yAxis) {
         cmd.opts.queuedDistance = 0;
       } else if (!yAxis && (dir === Direction.EAST || dir === Direction.WEST)) {
         cmd.opts.queuedDistance = 0;
+      } else if (!CardinalDirections.includes(dir)) {
+        cmd.opts.queuedDistance = 0;
       }
     }
   });
@@ -668,9 +659,12 @@ var cancelQueuedMovements = function (index, yAxis) {
 // NOTE: position values returned are not clamped to playspace boundaries
 //
 
-var getNextPosition = function (i, yAxis, modifyQueues) {
-  var curPos = yAxis ? Studio.sprite[i].y : Studio.sprite[i].x;
-  return curPos + calcMoveDistanceFromQueues(i, yAxis, modifyQueues);
+var getNextPosition = function (i, modifyQueues) {
+  var delta = calcMoveDistanceFromQueues(i, modifyQueues);
+  return {
+    x: Studio.sprite[i].x + delta.x,
+    y: Studio.sprite[i].y + delta.y
+  };
 };
 
 //
@@ -682,27 +676,26 @@ var performQueuedMoves = function (i) {
   var origX = sprite.x;
   var origY = sprite.y;
 
-  var nextX = getNextPosition(i, false, true);
-  var nextY = getNextPosition(i, true, true);
+  var nextPosition = getNextPosition(i, true);
 
   if (level.allowSpritesOutsidePlayspace) {
-    sprite.x = nextX;
-    sprite.y = nextY;
+    sprite.x = nextPosition.x;
+    sprite.y = nextPosition.y;
   } else {
     var playspaceBoundaries = Studio.getPlayspaceBoundaries(sprite);
 
-    // Clamp nextX to boundaries as newX:
+    // Clamp nextPosition.x to boundaries as newX:
     var newX = Math.min(playspaceBoundaries.right,
-                        Math.max(playspaceBoundaries.left, nextX));
-    if (nextX !== newX) {
+                        Math.max(playspaceBoundaries.left, nextPosition.x));
+    if (nextPosition.x !== newX) {
       cancelQueuedMovements(i, false);
     }
     sprite.x = newX;
 
-    // Clamp nextY to boundaries as newY:
+    // Clamp nextPosition.y to boundaries as newY:
     var newY = Math.min(playspaceBoundaries.bottom,
-                        Math.max(playspaceBoundaries.top, nextY));
-    if (nextY !== newY) {
+                        Math.max(playspaceBoundaries.top, nextPosition.y));
+    if (nextPosition.y !== newY) {
       cancelQueuedMovements(i, true);
     }
     sprite.y = newY;
@@ -1073,6 +1066,12 @@ Studio.onTick = function () {
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
 
+    // Run any callbacks from "ask" blocks. These get queued after the user
+    // provides input.
+    for (let i = 0; i < Studio.askCallbackIndex; i++) {
+      Studio.executeQueue(`askCallback${i}`);
+    }
+
     updateItems();
 
     checkForCollisions();
@@ -1367,18 +1366,16 @@ function checkForCollisions() {
     }
     var iHalfWidth = sprite.width / 2;
     var iHalfHeight = sprite.height / 2;
-    var iXPos = getNextPosition(i, false, false);
-    var iYPos = getNextPosition(i, true, false);
-    var iXCenter = iXPos + iHalfWidth;
-    var iYCenter = iYPos + iHalfHeight;
+    var iPos = getNextPosition(i, false);
+    var iXCenter = iPos.x + iHalfWidth;
+    var iYCenter = iPos.y + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
       if (i === j || !Studio.sprite[j].visible) {
         continue;
       }
-      var jXCenter = getNextPosition(j, false, false) +
-                      Studio.sprite[j].width / 2;
-      var jYCenter = getNextPosition(j, true, false) +
-                      Studio.sprite[j].height / 2;
+      var jPos = getNextPosition(j, false);
+      var jXCenter = jPos.x + Studio.sprite[j].width / 2;
+      var jYCenter = jPos.y + Studio.sprite[j].height / 2;
       if (collisionTest(iXCenter,
                         jXCenter,
                         spriteCollisionDistance(i, j, false),
@@ -1409,7 +1406,7 @@ function checkForCollisions() {
         createActorEdgeCollisionHandler(i));
 
     if (level.wallMapCollisions) {
-      if (Studio.willSpriteTouchWall(sprite, iXPos, iYPos)) {
+      if (Studio.willSpriteTouchWall(sprite, iPos.x, iPos.y)) {
         if (level.blockMovingIntoWalls) {
           cancelQueuedMovements(i, false);
           cancelQueuedMovements(i, true);
@@ -2007,15 +2004,17 @@ Studio.init = function (config) {
 
   studioApp.setPageConstants(config);
 
-  var visualizationColumn = <StudioVisualizationColumn
-    finishButton={!level.isProjectLevel}
-    inputOutputTable={level.inputOutputTable}/>;
+  var visualizationColumn = (
+    <StudioVisualizationColumn
+      finishButton={!level.isProjectLevel}
+    />
+  );
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={onMount}
+        visualizationColumn={visualizationColumn}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -2103,9 +2102,10 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.perExecutionTimeouts.forEach(function (timeout) {
     clearTimeout(timeout);
   });
-  clearInterval(Studio.tickIntervalId);
+  Studio.pauseExecution();
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
+  Studio.askCallbackIndex = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -2136,6 +2136,7 @@ function getDefaultMapName() {
 Studio.reset = function (first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.hideInputPrompt();
   Studio.gameState = Studio.GameStates.WAITING;
 
   resetItemOrProjectileList(Studio.projectiles);
@@ -2296,7 +2297,10 @@ Studio.reset = function (first) {
       visible: !level.spritesHiddenToStart
     });
 
-    var sprite = spriteStart.sprite || (i % Studio.startAvatars.length);
+    var sprite = spriteStart.sprite === undefined
+        ? (i % Studio.startAvatars.length)
+        : spriteStart.sprite;
+
     var opts = {
       spriteIndex: i,
       value: Studio.startAvatars[sprite],
@@ -2671,7 +2675,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     return true;
   }
 
-  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
+  if (studioApp.hasUnwantedExtraTopBlocks()) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     Studio.preExecutionFailure = true;
@@ -2961,6 +2965,22 @@ Studio.execute = function () {
   $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
+  Studio.resumeExecution();
+};
+
+/**
+ * Pause calling `Studio.onTick`.
+ */
+Studio.pauseExecution = function () {
+  Studio.paused = true;
+  window.clearInterval(Studio.tickIntervalId);
+};
+
+/**
+ * Resume calling `Studio.onTick`.
+ */
+Studio.resumeExecution = function () {
+  Studio.paused = false;
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
@@ -3676,7 +3696,7 @@ Studio.queueCmd = function (id, name, opts) {
 
 Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (Studio.yieldExecutionTicks > 0) {
+    if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
     if (handler.name === name && handler.cmdQueue.length) {
@@ -3687,7 +3707,7 @@ Studio.executeQueue = function (name, oneOnly) {
         } else {
           break;
         }
-        if (Studio.yieldExecutionTicks > 0) {
+        if (Studio.paused || Studio.yieldExecutionTicks > 0) {
           break;
         }
       }
@@ -3865,6 +3885,13 @@ Studio.callCmd = function (cmd) {
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
+      break;
+    case 'askForInput':
+      studioApp.highlight(cmd.id);
+      if (Studio.paused) {
+        return false;
+      }
+      Studio.askForInput(cmd.opts.question, cmd.opts.callback);
       break;
   }
   return true;
@@ -4495,16 +4522,15 @@ Studio.fixSpriteLocation = function () {
     }
 
     var sprite = Studio.sprite[spriteIndex];
-    var xPos = getNextPosition(spriteIndex, false, false);
-    var yPos = getNextPosition(spriteIndex, true, false);
+    var position = getNextPosition(spriteIndex, false);
 
-    if (Studio.willSpriteTouchWall(sprite, xPos, yPos)) {
+    if (Studio.willSpriteTouchWall(sprite, position.x, position.y)) {
 
       // Let's assume that one of the surrounding 8 squares is available.
       // (Note: this is a major assumption predicated on level design.)
 
-      var xCenter = xPos + sprite.width / 2;
-      var yCenter = yPos + sprite.height / 2;
+      var xCenter = position.x + sprite.width / 2;
+      var yCenter = position.y + sprite.height / 2;
 
       xCenter += skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
       yCenter += skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
@@ -4784,6 +4810,55 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
   return foundCmd;
 };
 
+/**
+ * Pause execution and display a prompt for user input. When the user presses
+ * enter or clicks "Submit", resume execution.
+ * @param question
+ * @param callback
+ */
+Studio.askForInput = function (question, callback) {
+  Studio.pauseExecution();
+
+  const viz = document.getElementById('visualization');
+  const target = document.createElement('div');
+  Object.assign(target.style, {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '400px',
+    height: '400px',
+  });
+  viz.appendChild(target);
+  studioApp.resizeVisualization();
+
+  Studio.inputPromptElement = target;
+
+  function onInputReceived(value) {
+    Studio.resumeExecution();
+    Studio.hideInputPrompt();
+
+    let handlerName = `askCallback${Studio.askCallbackIndex}`;
+    Studio.askCallbackIndex++;
+    registerEventHandler(Studio.eventHandlers, handlerName, callback.bind(null, value || ''));
+    callHandler(handlerName);
+  }
+
+  ReactDOM.render(
+    <InputPrompt question={question} onInputReceived={onInputReceived} />,
+    target
+  );
+};
+
+Studio.hideInputPrompt = function () {
+  const target = Studio.inputPromptElement;
+
+  if (target) {
+    ReactDOM.unmountComponentAtNode(target);
+    target.parentNode.removeChild(target);
+    Studio.inputPromptElement = null;
+  }
+};
+
 Studio.hideSpeechBubble = function (opts) {
   var speechBubble = document.getElementById('speechBubble' + opts.spriteIndex);
   speechBubble.setAttribute('visibility', 'hidden');
@@ -4953,83 +5028,6 @@ Studio.makeProjectile = function (opts) {
   }
 };
 
-//
-// xFromPosition: return left-most point of sprite given position constant
-//
-
-var xFromPosition = function (sprite, position) {
-  switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMOUTLEFT:
-      return -sprite.width;
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
-      return 0;
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.TOPCENTER:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.OUTBOTTOMCENTER:
-      return (Studio.MAZE_WIDTH - sprite.width) / 2;
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMRIGHT:
-      return Studio.MAZE_WIDTH - sprite.width;
-    case constants.Position.OUTTOPOUTRIGHT:
-    case constants.Position.TOPOUTRIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
-      return Studio.MAZE_WIDTH;
-  }
-};
-
-//
-// yFromPosition: return top-most point of sprite given position constant
-//
-
-var yFromPosition = function (sprite, position) {
-  switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.OUTTOPOUTRIGHT:
-      return -sprite.height;
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.TOPCENTER:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.TOPOUTRIGHT:
-      return 0;
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
-      return (Studio.MAZE_HEIGHT - sprite.height) / 2;
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
-      return Studio.MAZE_HEIGHT - sprite.height;
-    case constants.Position.OUTBOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
-    case constants.Position.OUTBOTTOMCENTER:
-    case constants.Position.OUTBOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
-      return Studio.MAZE_HEIGHT;
-  }
-};
 
 /**
  * Actors have a class name in the form "0". Returns true if this class is
@@ -5151,8 +5149,8 @@ Studio.setSpritePosition = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   if (opts.value) {
     // fill in .x and .y from the constants.Position value in opts.value
-    opts.x = xFromPosition(sprite, opts.value);
-    opts.y = yFromPosition(sprite, opts.value);
+    opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
+    opts.y = utils.yFromPosition(opts.value, Studio.MAZE_HEIGHT, sprite.height);
   }
   var samePosition = (sprite.x === opts.x && sprite.y === opts.y);
 
@@ -5189,8 +5187,8 @@ Studio.addGoal = function (opts) {
       height : utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT),
     };
     // fill in .x and .y from the constants.Position value in opts.value
-    opts.x = xFromPosition(sprite, opts.value);
-    opts.y = yFromPosition(sprite, opts.value);
+    opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
+    opts.y = utils.yFromPosition(opts.value, Studio.MAZE_HEIGHT, sprite.height);
   }
 
   var goal = {

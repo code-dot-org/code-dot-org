@@ -32,7 +32,7 @@ class DatastoreCache
   def notify_change_listeners
     @listeners.each do |listener|
       begin
-        listener.on_change()
+        listener.on_change
       rescue => exception
         Rails.logger.warn("Error calling listener: #{exception.message}")
         Honeybadger.notify(exception)
@@ -56,7 +56,7 @@ class DatastoreCache
     old_value = @cache[key]
     @datastore.set(key, value)
     set_local(key, value)
-    notify_change_listeners() if value != old_value
+    notify_change_listeners if value != old_value
   end
 
   # Return all cached elements
@@ -68,7 +68,7 @@ class DatastoreCache
   def clear
     @cache = {}
     @datastore.clear
-    notify_change_listeners()
+    notify_change_listeners
   end
 
   # When unicorn preload the app and then forks worker processes the update_thread

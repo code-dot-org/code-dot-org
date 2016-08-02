@@ -1,0 +1,42 @@
+name 'CSD U3 SFLP Sprites and Images'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Overview
+
+You are going to get to turn their rectangular sprites into images for the first time! There will be lots of practice in this lesson of using images to create some simple animations including spinning gears, swimming fish and a flying kite. You will be introduced to the mouse position is the first time. The mouse position will give user input to change the animations of your sprites.
+# Activities
+
+* Warm Up
+* Levels: Sprites and Images
+* Wrap Up: Update Sprite Card and Add Game Card
+
+# Vocab
+
+* **Property** - Attributes that describe an object&#39;s characteristics
+* **Rotate** - To turn a shape around a center point.
+* **Scale** - To increase the dimensions of a shape by the same factor in all directions.
+* **Sprite** - A graphic character on the screen with properties that describe its location, movement, and look.
+
+# Commands 
+
+### Sprites : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|sprite.rotation|Property for angle of rotation of sprite in degrees| `sprite.rotation = randomNumber(0,360);` | link |
+|sprite.scale|Property that make the image of the sprite bigger or smaller| `sprite.scale = 2;` | link |
+|sprite.setAnimation(image)|Sets the image of the sprite| `sprite.setAnimation("dog.png");` | link |
+
+### Input : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|mouseX|Gives the x position of the mouse|`sprite.x = mouseX;` | link |
+|mouseY|Gives the y position of the mouse|`sprite.y = mouseY;` | link |
+
+# Resources
+
+None
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

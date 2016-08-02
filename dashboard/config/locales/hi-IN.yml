@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: "पिछला पृष्ठ"
   next_page: "अगले पृष्ठ"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "रद्द करें"
   okay: "ठीक है"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -95,6 +97,7 @@
     teacher_title: "शिक्षक के लिए साइन अप"
     student_pitch: "कोड.ऑर्ग साइन अप छात्र के लिए"
     student_title: "छात्र के लिए साइन अप"
+    signup_title: Sign up for Code.org
     school_name: "स्कूल का नाम (यदि आप चाहते हैं)"
     school_address: "स्कूल का पता (यदि आप चाहते हैं)"
     address_placeholder: "पता, शहर, राज्य, पिन"
@@ -120,6 +123,9 @@
       से बंधे होने के लिए सहमत हूँ"
     additional_information: "हम कुछ अतिरिक्त जानकारी की आवश्यकता आप साइन अप करने के
       लिए जारी रखने के लिए ।"
+    user_type_label: Account Type
+    user_type_teacher: Teacher
+    user_type_student: "छात्र"
   signin_form:
     title: "एक खाता पहले से ही है ? साइन इन करें"
     login: "ईमेल या उपयोगकर्ता का नाम"
@@ -136,6 +142,8 @@
     picture: "अब अपने गुप्त चित्र ढूँढें"
     words: "अब आपके गुप्त शब्द दर्ज करें"
     login: Sign in
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "अपना पासवर्ड भूल गए?"
@@ -194,8 +202,8 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': 'No'
-      'yes': 'Yes'
+      'no': "नहीं"
+      'yes': "हाँ"
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -281,6 +289,10 @@
       signin: Sign in
       signup: Sign up
       already_registered: Already registered?
+      pair_programming: Pair Programming
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}'s progress"
       progress: Your progress
@@ -316,6 +328,7 @@
       example_with_number: Example Solution %{solution_number}
       submitted_on: Submitted on %{date}
       unsubmit: Unsubmit
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -392,7 +405,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "अधिक जानें"
+    announcement_learn_more_button: "अधिक जानें"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -476,23 +489,13 @@
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Autoplay videos
     download: Download Video
-  compatability:
-    working:
-      header: We are working on support for your browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+  compatibility:
     upgrade:
-      header: Please upgrade your browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      link: "अधिक जानें"
   slow_loading: This is taking longer than usual...
   try_reloading: Try reloading the page
   next_stage: Finished! Continue to next stage
@@ -587,12 +590,15 @@
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
+    report_abuse: Report Abuse
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback
@@ -668,39 +674,6 @@
     hour: 1 घंटा
     day: "दिन"
     week: "सप्ताह"
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
-        Hour of Code:
-          title: Hour of Code
-          description: ''
-        edit-code:
-          title: Edit Code
-          description: ''
-        events:
-          title: "घटनाएँ"
-          description: ''
-        builder:
-          title: Builder
-          description: ''
-        flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
-        jigsaw:
-          title: Jigsaw
-          description: ''
-        step:
-          title: Step
-          description: ''
-        sample_level_builder:
-          title: Sample Level Builder
-          description: ''
   age_interstitial:
     age: Your age
     header: Account Information Update
@@ -740,6 +713,8 @@
     share_copy_link: 'Copy the link:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: "बंद करें"
@@ -752,8 +727,8 @@
       on your projects at any time.
     need_help: Need help getting started?
     really_delete: "मिटाएँ?"
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: "हाँ"
+    delete_no: "नहीं"
     saved: "सहेजा गया"
     not_saved: Not saved
     cancel: "रद्द करें"
@@ -768,6 +743,8 @@
     abuse:
       tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
         of Service</a> and cannot be shared with others.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
       go_to_code_studio: Go to Code Studio
@@ -809,19 +786,72 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Draw cool pictures and designs with the Artist!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Create a story or make a game with Play Lab!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Overview
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

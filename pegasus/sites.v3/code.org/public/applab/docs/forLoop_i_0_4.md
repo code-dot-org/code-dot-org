@@ -49,7 +49,7 @@ ____________________________________________________
 ```
 // Count down to zero from 10.
 for(var i=10; i>0; i--){
- write(i) ;
+    write(i) ;
 }
 write('Blast Off!');
 ```
@@ -61,24 +61,25 @@ ____________________________________________________
 **Example: One Inch** Draw 8 tic marks along a line.
 
 ```
-// Draw 8 tic marks along a line.
 penUp();
 turnLeft();
 moveForward(100);
 turnLeft(180);
 penDown();
-for(var i=0; i<8; i++){
-  ticMark();
-	moveForward();
+for(var i=0; i<7; i++){
+    ticMark();
+    moveForward();
 }
 ticMark();
+penUp();
+moveForward();
 
 function ticMark() {
-  turnLeft();
-  moveForward(5);
-  turnLeft(180);
-  moveForward(5); 
-  turnLeft();  
+    turnLeft();
+    moveForward(5);
+    turnLeft(180);
+    moveForward(5); 
+    turnLeft();  
 }
 ```
 

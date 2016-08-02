@@ -27,11 +27,13 @@ zh:
   see_your_learning_plan: 查看你的学习计划。
   submit: 提交
   unsubmit: 未提交
-  previous_page: 返回
-  next_page: 前进
+  previous_page: 上一页
+  next_page: 下一页
+  next_resource: 下一个资源
+  done_with_module: Done with this Learning Module
   cancel: 取消
   okay: 好吧
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (%{y} 第%{x} 页)'
   add_teacher_form:
     code:
       label: '添加一个老师:'
@@ -85,6 +87,7 @@ zh:
     teacher_title: 老师注册
     student_pitch: Code.org 学生注册
     student_title: 学生注册
+    signup_title: 注册Code.org
     school_name: 学校名称 （可选）
     school_address: 学校地址 （可选）
     address_placeholder: 地址、 省市、 邮编
@@ -103,6 +106,9 @@ zh:
     student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用 Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
     additional_information: 我们需要一些额外的信息来继续为你注册.
+    user_type_label: 账户种类
+    user_type_teacher: 老师
+    user_type_student: 学生
   signin_form:
     title: 已经有账号了？登录
     login: 电子邮件或用户名
@@ -119,6 +125,8 @@ zh:
     picture: 现在找出你秘密图片
     words: 现在，输入你的秘密单词
     login: 登录
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: 忘记了您的密码吗？
@@ -238,6 +246,10 @@ zh:
       signin: 登录
       signup: 登录
       already_registered: 已经注册了？
+      pair_programming: 结对编程
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name}的进度'
       progress: 您的进度
@@ -272,6 +284,7 @@ zh:
       example_with_number: '示例解决方案 %{solution_number}'
       submitted_on: 已提交于：
       unsubmit: 未提交
+      worked_with: Worked With
   user:
     email_confirm_needed: 电子邮件地址尚未被确认：
     email_confirm_needed_required: '你的电子邮件地址%{email} 尚未被确认：'
@@ -331,8 +344,8 @@ zh:
     print_certificate: 打印证书
     announcement_title: 公告
     announcement_view_all: 查看全部
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: 了解详情
+    announcement_message: '想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。'
+    announcement_learn_more_button: 了解详情
     announcement_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
     announcement_petition_button: 添加您的姓名
   move_students:
@@ -363,7 +376,7 @@ zh:
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
     art_from_html: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; 2015 卡通网络.'
     art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org使用p5.play游戏资源库，根据<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>之许可。'
     powered_by_aws: 由亚马逊网络服务
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
     copyright: 版权
@@ -394,15 +407,10 @@ zh:
     notes_coming_soon: 此视频的备注即将推出。
     autoplay_option: 自动播放视频
     download: 下载视频
-  compatability:
-    working:
-      header: 我们在努力加入对你的浏览器的支持。
-      message: "Code.org利用现代网络技术. 这使得网站速度更快. 你的浏览器不支持所需的所有功能，使用该网站这一部分时，你可能会遇到问题. 请帮助我们通过<a href=' %{report_issue_url}'> 报告你所发现的任何问题</a>. 你还可以<a href='%{supported_browsers_url}'> 升级到浏览器支持的版本</a>."
-      hide_this_warning: 隐藏此警告
+  compatibility:
     upgrade:
-      header: 请升级你的浏览器。
-      message: "Code.org利用现代网络技术，这使得网站速度更快。很遗憾，您的浏览器不支持网站这部分所需要的所有功能. <br/> <br/>在我们支持的浏览器列表，安装浏览器来继续. 你可以 <a href='#'> 尝试查看此页</a>，但有可能网页不能正常使用。"
-      button: 跳转至支持的浏览器列表
+      unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}', target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
+      link: 了解详情
   slow_loading: 请再多等一会儿...
   try_reloading: 请重新刷新页面
   next_stage: 完成 ！继续下一个阶段
@@ -469,31 +477,33 @@ zh:
       title: 我的世界
       body: 用代码来探索《我的世界》。
     unplugged:
-      title: 不需要电的课程
+      title: 离线课程
       audience: 适合年龄 4 岁以上
       body: |
         我们已经编译拔出经验教训，为您在您的课堂中使用的列表。现在你可以教计算机科学基础是否你有电脑在你的教室或不 ！尝试利用这些经验教训，作为一门独立的课程或互补借鉴任何计算机科学课程。
         我们做了一套离线课程在课堂上使用。现在，你即使没有电脑，也可以教授计算机科学的基础。尝试使用这些教材，作为一门独立课程或借鉴任何计算机科学课程。
-      body_short: 如果你没有电脑，（可以）在你的教室试试这些离线的教程。
+      body_short: 如果你没有电脑，可以在你的教室试试这些离线的教程。
   gallery:
     students_drew_these_with_code: 学生使用代码画了这些图案!
     students_made_these_with_code: 学生使用代码做了这些内容!
     picture_count: '在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。'
     activity_count: '在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。'
     want_to_make_your_own: 想要做你自己的作品？
+    how_to_save: '在这些教程的最后一个级别，单击"完成"和"保存"以在画廊里保存您的作品。'
     more: '更多 &rarr;'
     caption_by_name_age: '%{name}，%{age} 岁'
     caption_time_ago: '%{time_ago}之前'
     header: 作品
     header_playlab: 游戏实验室
     header_artist: 艺术家
+    report_abuse: 报告滥用
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 它会根据反馈而被修订和改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 它会根据反馈而被修订和改善."
     report_bug: 报告错误
     support: 获取帮助
     support_url: //support.code.org
-    help_resources: 帮助以及资源
+    help_resources: 帮助和资源
   multi:
     wrong_title: 不正确的答案
     wrong_body: 你已输入的答案不正确。请再试一次 ！
@@ -523,7 +533,7 @@ zh:
     submit-incomplete-title: 提交您的评估
     submit-incomplete-body: 您有未完成问题，提交评估之后您将无法编辑它，您确定要这么做吗？
     submit-complete-title: 提交您的评估
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-body: 提交后您不能编辑您的评估。 是否确定？
   match:
     wrong_title: 不正确的解决方案
     wrong_body: 您输入的解决方案不正确。请再试一次 ！
@@ -553,36 +563,6 @@ zh:
     hour: 1 小时
     day: 日
     week: 周
-  data:
-    script:
-      name:
-        20-hour:
-          title: K-8计算机科学入门课程（15-25小时）
-          description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
-        Hour of Code:
-          title: 《编程一小时 2013》
-          description: ""
-        edit-code:
-          title: 编辑代码
-          description: ""
-        events:
-          title: 事件
-          description: ""
-        builder:
-          title: 生成器
-          description: ""
-        flappy:
-          title: 飞扬的代码
-          description: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
-        jigsaw:
-          title: 拼图
-          description: ""
-        step:
-          title: 下一步
-          description: ""
-        sample_level_builder:
-          title: 示例关卡生成器
-          description: ""
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
@@ -615,6 +595,7 @@ zh:
     share_title: 分享您的项目
     share_copy_link: 复制链接：
     share_embed_description: 您可以将嵌入的代码粘贴到HTML页，就可以在另一个网页上显示这个项目。
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: 插入
     advanced_share: 显示更高级的选项
     close: 关闭
@@ -638,6 +619,7 @@ zh:
     edit_project: 编辑工程
     abuse:
       tos: "此工程因违反了Code.org的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。"
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "如果你认为有错误，请 <a href='https://code.org/contact'>联系我们</a>"
       go_to_code_studio: 转到代码工作室
       report_abuse_form:
@@ -659,23 +641,66 @@ zh:
   peer_review:
     accepted:
       name: 已接受
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      description: '<strong>是的</strong> 这个提交 <strong>符合</strong> 的要求'
     rejected:
       name: 已拒绝
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      description: '<strong>否决</strong>这个提交<strong>不能满足</strong> 的要求'
     escalated:
       name: 升级
       description: 我想老师来审查此提交
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: 教师反馈
+    peer_feedback: 同伴反馈
+    outdated: 这个反馈是添加给以前提交的版本
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: 查询图标
       no_icons_found: 找不到该图标
+    playzone:
+      artist_description: 和小艺术家一起设计出很酷的图形！
+      artist_title: 新的绘图
+      continue_button: 去下一阶段
+      playlab_description: 通过游戏实验室创建故事或制作游戏！
+      playlab_title: 新的应用
+      primary_header: '祝贺你 ！你完成 %{stageName} ！'
+      projects_description: 重新审视你现有的项目之一。
+      projects_title: 打开一个项目
+      secondary_header: 问你的老师要下一步做什么
   flex_category:
     required: 概览
     content: 内容
-    practice: 老师的做法
+    practice: 教学训练
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: 编程一小时项目下载
+    capsule_title: 你有网络吗？
+    capsule_desc: '使用在线、 基于 web 的 <a href="%{url}">%{app_name}</a>。'
+    instructions_headline: 没有网络？
+    instructions: '指导教师︰ 如果你有互联网服务差，这些代码小时教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用 USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可打印证书提前 <a href="%{url}"> 在这里</a>。'
+    minecraft_name: 我的世界 编程一小时
+    starwars_blocks_name: '星球大战: 用代码构建一个星系（块）'
+    starwars_javascript_name: '星球大战: 用代码构建一个星系-JavaScript'
+    download_message: '下载 %{app_name}，供离线使用 (136MB)'
+    download_in_english: 下载英语版本：
+    download_in_spanish: 下载西班牙语版本：
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

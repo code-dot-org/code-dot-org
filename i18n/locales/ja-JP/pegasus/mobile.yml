@@ -1,7 +1,12 @@
 ja-JP:
   hour_of_code: Hour of Code（コーディングを学ぶ時間）
   hello: Hello world
+  "yes": はい
+  "no": ちがいます
   select_language: 言語を選択してください
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: もっと詳しく知る
   en: コンピュータサイエンス
   computer_science_edweek: コンピュータサイエンス教育週間
   csedweek_dates: 2014年12月8～14日
@@ -40,7 +45,7 @@ ja-JP:
   csedweek_map_legend_cs_tech_jam: Special Event
   cded_sign_up: 入会
   cded_try_it: 挑戦してみる
-  twentyhours_trynow: 今すぐ試す
+  try_now: 今すぐ試す
   california_heading: コンピュータサイエンスを教えるよう学校に依頼する
   california_text: "先生方の皆さん<a href='http://studio.code.org/'>無料のコース</a>を利用することができます。どの小学校でも<a href='http://code.org/educate/k5'>コンピューターサイエンスを教えることができます。</a>高校と提携するよう依頼しましょう<a href='http://code.org/educate/districts'>"
   california_button: もっとくわしく見る
@@ -282,6 +287,8 @@ ja-JP:
   homepage_banner_20k_teachers_link: もっと詳しく知る
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: Add your support
+  homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
+  homepage_banner_emailprivacy_link: Read more
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
@@ -359,14 +366,9 @@ ja-JP:
   starwars_javascript_title: JavaScriptの
   starwars_javascript_description: ブロックと、JavaScriptを使います。
   starwars_javascript_specs: 英語のみ | 最新のブラウザー | 11歳以上向け
-  starwars_javascript_start_button: 今すぐ試す
   starwars_blocks_title: ブロック達
   starwars_blocks_description: ドラッグアンドドロップできる、ブロックを使います。
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
-  starwars_blocks_start_button: 今すぐ試す
-  starwars_watch_videos: 始める前に、以下のビデオのうち1つを見てみましょう。
-  starwars_speak_languages: 別の言語を話しますか？
-  starwars_help_translate: 翻訳をお手伝い頂けませんか？
   starwars_platform_text: 最新ブラウザ、スマート フォン、タブレット
   mc_name: MinecraftのHour of Code (アワーオブコード)
   mc_longdescription: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
@@ -375,6 +377,11 @@ ja-JP:
   mc_platformtext: 最新ブラウザ、スマート フォン、タブレット
   mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraftプログラミング入門
+  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: "Don't have Internet?"
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
@@ -499,9 +506,13 @@ ja-JP:
   dashboard_action_done: 完了
   dashboard_action_required: 必須
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -513,13 +524,14 @@ ja-JP:
   dashboard_navigation_section_pd: プロになるために
   dashboard_navigation_section_speakers: 'コンピュータサイエンス <br/> ゲストスピーカー'
   dashboard_navigation_all_sections: 生徒用アカウントと進捗状況
-  dashboard_navigation_view_progress: 進行状況の表示
-  dashboard_navigation_view_text_responses: 表示テキストの回答
+  dashboard_navigation_view_progress: 進行状況
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: 生徒を追加
   dashboard_navigation_manage_students: 生徒の管理
   dashboard_navigation_lesson_plans_resources: レッスンプランと資料
-  dashboard_navigation_view_stats: 統計情報を見る
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'セクション: %{section_name}'
   dashboard_navigation_student: '生徒: %{student_name}'
   dashboard_progress_not_started: 未実施
@@ -531,14 +543,16 @@ ja-JP:
   dashboard_progress_submitted: 投稿しました。
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: 新しいセクション
   dashboard_sections_jumbotron_instruction: セクションを新規で作成し、学生を追加します。セクションを使うと生徒を複数の少人数のグループで管理できるので、進捗状況の把握や、アカウントの管理が容易になります。
   dashboard_sections_table_section: セクション
   dashboard_sections_table_secret: ログインタイプ
   dashboard_sections_table_grade: 学年
   dashboard_sections_table_course: コース
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: 生徒の皆さん
   dashboard_sections_table_code: セクション・コード
   dashboard_sections_name: セクション名
@@ -554,7 +568,7 @@ ja-JP:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
@@ -662,8 +676,10 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: もっと詳しく知る
+  dashboard_announce_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: もっと詳しく知る
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Hour of Codeはこちら - 12月8日 - 14日です！'
@@ -787,6 +803,7 @@ ja-JP:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
@@ -802,7 +819,7 @@ ja-JP:
   minecraft_name: マインクラフト
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: 数値
-  hoc_category_name: Hour of Code（コーディングを学ぶ時間）
+  hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
@@ -1207,9 +1224,8 @@ ja-JP:
   processing_beyond_longdescription: Processing はプログラミング言語のひとつであり、また開発環境のひとつでもあり、オンラインのコミュニティでもあります。2001 年に生まれてから、ビジュアルアートの分野でのソフトウェアリテラシーを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
   alice_beyond_longdescription: 3Dアニメーションの作成をサポートする革新的なプログラミング環境を使いながら、Aliceプロジェクトでは、幅広い年代の人に対して、コンピューターでの考え方、問題解決方法、コンピュータープログラミングを教えたり学んだりするための資料やツールを提供しています。
   sphero_beyond_longdescription: SPRK のレッスンなら、ご自身の立場が先生であろうと保護者であろうと、子どもたちに楽しくロボットのプログラミングについて学ぶ機会を提供できます。その過程で、算数と科学のスキルも身につきます。
-  compatibility_https_header: HTTPS を有効にしてください
-  compatibility_https_message: "Code.org では、セキュリティを強化するため、%{https_date} をもって HTTPS に切り替えます。それ以降は、HTTPS を有効にしない限り Code.org にアクセスできなくなります。HTTPS を有効にする方法については<a href='%{it_requirements_url}'>こちらをクリック</a>してください。"
-  compatibility_https_hide_this_warning: この警告を非表示
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

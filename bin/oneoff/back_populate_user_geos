@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+#
+# This script creates a user_geos entry (if one does not already exist) for
+# every user with a previous sign-in.
+
+require_relative '../../dashboard/config/environment'
+
+User.with_deleted.where.not(current_sign_in_ip: nil).find_each do |user|
+  next unless UserGeo.find_by_user_id(user.id).nil?
+
+  UserGeo.new.populate(user.id, user.current_sign_in_ip)
+end

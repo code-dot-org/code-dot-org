@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Get comfortable with the structure of this program, then move on to the next exercise. (Click to see full instructions)",
-    "markdown_instructions": "# Top-Down Design\r\n<img src=\"https://images.code.org/b4379f51db96b8b1c921de2579e16357-image-1443011791766.21.53 AM.png\" style=\"width: 150px; float: right\">\r\nLook at this complex version of the \"Under the Sea\" scene you drew in the previous lesson. **You now have all the skills you need to recreate this digital scene.**\r\n\r\nWe will use **Top-Down Design** to help manage the complexity of drawing this image. The starter code you will be provided already has broken the problem into multiple levels.\r\n\r\n# Overview of Program Structure\r\nYou are about to see that we've provided you with a good amount of starting code.  Here's a brief tour:\r\n\r\n**High-Level Function Calls:** These read almost like a story of how you will draw the image. There's one function for every major component of the scene.\r\n\r\n<img src=\"https://images.code.org/c07a9b544ab982a91c7cd99339cbe3c9-image-1447885047812.PNG\" style=\"width:200px;\">\r\n\r\n**High-Level Function Definitions:** These are **currently empty**. You will be adding code to these functions.  Each will contain a **loop** that will draw many copies of each component.\r\n\r\n![](https://images.code.org/1782d088206fede56df1e93482d35faa-image-1443019051470.37.20 AM.png)\r\n\r\n**Low-Level Functions:** These draw single elements of the scene. Most have been written for you already, but we've left a few for you to complete as well.\r\n\r\n![](https://images.code.org/bb081efc86641155eae5f4d363e3ccf4-image-1443019108814.38.22 AM.png)\r\n\r\n\r\n# Do This:\r\n\r\n* Review the structure of the code in this level.\r\n* Run the code to familiarize yourself with what it currently draws.\r\n* When you are ready to do so, move on!",
+    "markdown_instructions": "# Top-Down Design\r\n<img src=\"https://images.code.org/b4379f51db96b8b1c921de2579e16357-image-1443011791766.21.53 AM.png\" style=\"width: 150px; float: right\">\r\nLook at this complex version of the \"Under the Sea\" scene you drew in the previous lesson. **You now have all the skills you need to recreate this digital scene.**\r\n\r\nWe will use **Top-Down Design** to help manage the complexity of drawing this image. The starter code you will be provided already has broken the problem into multiple levels.\r\n\r\n# Overview of Program Structure\r\nYou are about to see that we've provided you with a good amount of starting code.  Here's a brief tour:\r\n\r\n**High-Level Function Calls:** These read almost like a story of how you will draw the image. There's one function for every major component of the scene.\r\n\r\n<img src=\"https://images.code.org/c07a9b544ab982a91c7cd99339cbe3c9-image-1447885047812.PNG\" style=\"width:200px;\">\r\n\r\n**High-Level Function Definitions:** These currently draw **a single copy of each component**. You will add code to these functions to draw many copies of each component in a variety of sizes and colors.\r\n\r\n![](https://images.code.org/1782d088206fede56df1e93482d35faa-image-1443019051470.37.20 AM.png)\r\n\r\n**Low-Level Functions:** These draw single elements of the scene. Most have been written for you already, but we've left a few for you to complete as well.\r\n\r\n![](https://images.code.org/bb081efc86641155eae5f4d363e3ccf4-image-1443019108814.38.22 AM.png)\r\n\r\n\r\n# Do This:\r\n\r\n* Review the structure of the code in this level.\r\n* Run the code to familiarize yourself with what it currently draws.\r\n* When you are ready to do so, move on!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +41,13 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

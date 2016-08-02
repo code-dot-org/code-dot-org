@@ -27,6 +27,5 @@ class LogTest < Minitest::Test
       CDO.log.info 'test'
     end
     assert_equal 'TEST LOG: test', out
-
   end
 end

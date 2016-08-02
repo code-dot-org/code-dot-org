@@ -16,6 +16,9 @@
         ]
       },
       "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0
+        },
         "params": [
           ""
         ],
@@ -26,7 +29,8 @@
       "penUp": null,
       "penDown": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -55,7 +59,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)",
+    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  We've started you out with a stub that **defines** a function called `right()`.  Start by adding code inside the function definition that will turn the turtle to the right (by turning left three times) when called. \r\n\r\nThen **use** this function in some code to draw a rectangle, as shown below.  Make sure the turtle ends facing the same direction and in the same location it started.\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)\r\n\r\n",
     "start_blocks": "function right(){\r\n  \r\n}",
     "never_autoplay_video": "false",
     "examples_required": "false",
@@ -65,7 +69,76 @@
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "true",
-    "execute_palette_apis_only": "true"
+    "execute_palette_apis_only": "true",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem - no loops, please."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft()."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function called right()."
+      },
+      {
+        "entries": [
+          "right"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to define a function called \"right\" and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+      },
+      {
+        "entries": [
+          "moveForward",
+          "moveForward",
+          "right",
+          "moveForward",
+          "right",
+          "moveForward",
+          "moveForward",
+          "right",
+          "moveForward",
+          "right"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "It doesn't seem like you are calling right() or moving forward enough times to draw the figure and end up where you started, facing the same direction."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

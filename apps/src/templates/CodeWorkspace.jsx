@@ -6,7 +6,7 @@ var JsDebugger = require('./JsDebugger');
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
 var color = require('../color');
@@ -49,6 +49,7 @@ var CodeWorkspace = React.createClass({
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool.isRequired,
+    style: React.PropTypes.bool,
     isRunning: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired
@@ -60,8 +61,8 @@ var CodeWorkspace = React.createClass({
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(function (key) {
-      // isRunning only affects style, and can be updated
-      if (key === 'isRunning') {
+      // isRunning and style only affect style, and can be updated
+      if (key === 'isRunning' || key === 'style') {
         return;
       }
 
@@ -95,12 +96,13 @@ var CodeWorkspace = React.createClass({
 
     var blocksGlyphImage = (
       <img
-          id="blocks_glyph"
-          src={hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-          style={[
-            styles.blocksGlyph,
-            isRtl && styles.blocksGlyphRtl
-          ]}/>
+        id="blocks_glyph"
+        src={hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
+        style={[
+          styles.blocksGlyph,
+          isRtl && styles.blocksGlyphRtl
+        ]}
+      />
     );
 
     var headerButtonIcon = [
@@ -114,12 +116,12 @@ var CodeWorkspace = React.createClass({
     ];
 
     return (
-      <span id="codeWorkspaceWrapper">
+      <span id="codeWorkspaceWrapper" style={props.style}>
         <PaneHeader
-            id="headers"
-            dir={props.localeDirection}
-            hasFocus={hasFocus}
-            className={props.isRunning ? 'is-running' : ''}
+          id="headers"
+          dir={props.localeDirection}
+          hasFocus={hasFocus}
+          className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
@@ -131,34 +133,37 @@ var CodeWorkspace = React.createClass({
               <span>{msg.showToolbox()}</span>
             </PaneSection>
             <PaneButton
-                id="show-code-header"
-                hiddenImage={blocksGlyphImage}
-                iconClass="fa fa-code"
-                label={msg.showCodeHeader()}
-                isRtl={isRtl}
-                isMinecraft={props.isMinecraft}
-                headerHasFocus={hasFocus}/>
-            {!props.readonlyWorkspace && <PaneButton
+              id="show-code-header"
+              hiddenImage={blocksGlyphImage}
+              iconClass="fa fa-code"
+              label={msg.showCodeHeader()}
+              isRtl={isRtl}
+              isMinecraft={props.isMinecraft}
+              headerHasFocus={hasFocus}
+            />
+            {!props.readonlyWorkspace &&
+              <PaneButton
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
                 label={msg.clearPuzzle()}
                 isRtl={isRtl}
-                isMinecraft={props.isMinecraft}/>
-            }
+                isMinecraft={props.isMinecraft}
+              />}
             <PaneButton
-                id="versions-header"
-                headerHasFocus={hasFocus}
-                iconClass="fa fa-clock-o"
-                label={msg.showVersionsHeader()}
-                isRtl={isRtl}
-                isMinecraft={props.isMinecraft}/>
+              id="versions-header"
+              headerHasFocus={hasFocus}
+              iconClass="fa fa-clock-o"
+              label={msg.showVersionsHeader()}
+              isRtl={isRtl}
+              isMinecraft={props.isMinecraft}
+            />
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
-                <ProtectedStatefulDiv id="blockUsed" className='block-counter-default'/>
+                <ProtectedStatefulDiv id="blockUsed" className="block-counter-default"/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
                 <span>{" " + msg.blocks()}</span>
@@ -168,8 +173,8 @@ var CodeWorkspace = React.createClass({
         </PaneHeader>
         {props.editCode &&
           <ProtectedStatefulDiv
-              id="codeTextbox"
-              className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+            id="codeTextbox"
+            className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
         }
         {props.showDebugger && <JsDebugger/>}

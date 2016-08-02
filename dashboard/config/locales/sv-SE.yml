@@ -30,6 +30,8 @@
   unsubmit: "Ångra Inlämnad"
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: Okej
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -94,6 +96,7 @@
     teacher_title: Skapa konto för lärare
     student_pitch: Skapa konto på Code.org som elev
     student_title: Skapa konto för elever
+    signup_title: Sign up for Code.org
     school_name: Skolans namn (valfritt)
     school_address: Skolans adress (valfritt)
     address_placeholder: adress, stad, län, postnummer
@@ -118,6 +121,9 @@
       användarvillkor</a>.
     additional_information: Vi behöver  ytterligare information att fortsätta registrera
       dig.
+    user_type_label: Account Type
+    user_type_teacher: Lärare
+    user_type_student: Student
   signin_form:
     title: Har du redan ett konto? Logga in
     login: E-post eller användarnamn
@@ -134,6 +140,8 @@
     picture: Hitta din hemliga bild
     words: Skriv dina hemliga ord
     login: Logga in
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Glömt ditt lösenord?
@@ -275,6 +283,10 @@
       signin: Logga in
       signup: Registrera dig
       already_registered: Redan registrerad?
+      pair_programming: Par-programmering
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
@@ -309,6 +321,7 @@
       example_with_number: Exempel lösning %{solution_number}
       submitted_on: 'Inlämnad den %{date} '
       unsubmit: "Ångra Inlämnad"
+      worked_with: Worked With
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
@@ -386,7 +399,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Lär dig mer
+    announcement_learn_more_button: Lär dig mer
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -469,25 +482,13 @@
     notes_coming_soon: Text till denna video kommer snart.
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
-  compatability:
-    working:
-      header: Vi arbetar för stöd till din webbläsare.
-      message: Code.org använder modern webbteknik vilket gör webbplatsen snabbare
-        att använda. Din webbläsare stöder inte alla funktioner som krävs, och du
-        kan uppleva problem när du använder denna del av webbplatsen. Hjälp oss genom
-        att <a href='%{report_issue_url}'> rapportera eventuella problem du hittar</a>.
-        Du kan även <a href='%{supported_browsers_url}'> uppgradera din webbläsare
-        till en version som stöds</a>.
-      hide_this_warning: Dölj denna varning
+  compatibility:
     upgrade:
-      header: Du måste uppgradera din webbläsare.
-      message: Code.org använder modern webbteknik vilket gör webbplatsen snabbare
-        att använda. Tyvärr stöder din webbläsare inte alla funktioner som krävs för
-        att köra denna del av webbplatsen. <br/> <br/>Installera en webbläsare som
-        finns med på vår lista över webbläsare som stöds för att fortsätta. Du kan
-        <a href='#'> prova att visa sidan</a>, men räkna inte med att allt kommer
-        fungera.
-      button: Visa listan över webbläsare som stöds
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      link: Lär dig mer
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
@@ -584,12 +585,15 @@
       appar och bilder genom att skriva egna datorprogram. Klicka på bilderna och
       skärmdumparna för att se varje program i aktion.
     want_to_make_your_own: Vill du göra din egen?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Mer &rarr;
     caption_by_name_age: av %{name}, ålder %{age}
     caption_time_ago: "%{time_ago} tid sedan"
     header: Galleri
     header_playlab: Spel-labb
     header_artist: Konstnären
+    report_abuse: Rapportera missbruk
   landing:
     prerelease: Denna kurs är i <span class='betatext'> beta</span>.  Detta innebär
       att det inte är den slutliga versionen av kursen, och är föremål för översyn
@@ -664,40 +668,6 @@
     hour: 1 timme
     day: dag
     week: vecka
-  data:
-    script:
-      name:
-        20-hour:
-          title: Introduktion till grundskolekurs i datavetenskap (15-25 timmar)
-          description: Denna 20-timmars kurs introducerar grundläggande datavetenskap
-            och programmeringsbegrepp. Kursen är utformad för användning i klassrummet
-            från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
-            åldrar.
-        Hour of Code:
-          title: Timme av Kod 2013
-          description: ''
-        edit-code:
-          title: Redigera kod
-          description: ''
-        events:
-          title: Händelser
-          description: ''
-        builder:
-          title: Byggare
-          description: ''
-        flappy:
-          title: Flappy-kod
-          description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
-            vår Flappy Code övning!
-        jigsaw:
-          title: Pussel
-          description: ''
-        step:
-          title: Steg
-          description: ''
-        sample_level_builder:
-          title: Exempel nivå-byggare
-          description: ''
   age_interstitial:
     age: Din ålder
     header: Kontoinformation uppdatering
@@ -736,6 +706,8 @@
     share_copy_link: 'Kopiera länken:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Embed
     advanced_share: Show advanced options
     close: Avsluta
@@ -764,6 +736,8 @@
     abuse:
       tos: Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'>
         Användarvillkor</a> och kan inte delas med andra.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Om du tror att detta är ett fel, vänligen <a href='https://code.org/contact'>
         Kontakta oss.</a>
       go_to_code_studio: Gå till Code Studio
@@ -803,19 +777,72 @@
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: Inga ikoner hittades
+    playzone:
+      artist_description: Rita häftiga bilder och mönster med konstnären!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Skapa en berättelse eller gör ett spel med Spel-labbet!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: "Översikt"
     content: Content
     practice: Teacher Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

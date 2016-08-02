@@ -68,40 +68,32 @@ function loadWorkshops() {
 function processPdWorkshops(workshops) {
   remainingWorkshops = workshops.length;
   $.each(workshops, function (i, workshop) {
-    var address = workshop.location_address;
+    var location = workshop.processed_location;
+    var latLng = new google.maps.LatLng(location.latitude, location.longitude);
+    var hash = latLng.toUrlValue();
 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address' : address }, function (results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        var location = results[0].geometry.location;
-        var lat = location.lat();
-        var lng = location.lng();
-        var hash = new google.maps.LatLng(lat, lng).toUrlValue();
+    var infoWindowContent = '';
 
-        var infoWindowContent = '';
+    if (typeof markers[hash] === 'undefined') {
+      infoWindowContent = compileHtmlNew(workshop, true);
+      markers[hash] = new google.maps.Marker({
+        position: latLng,
+        map: gmap,
+        title: workshop.location_name,
+        infoWindowContent: infoWindowContent
+      });
+      google.maps.event.addListener(markers[hash], "click",
+        function (e) {
+          infoWindow.setContent(this.get('infoWindowContent'));
+          infoWindow.open(gmap, this);
+        });
+    } else {
+      infoWindowContent = compileHtmlNew(workshop, false);
+      // Extend existing marker.
+      markers[hash].infoWindowContent += infoWindowContent;
+    }
 
-        if (typeof markers[hash] === 'undefined') {
-          infoWindowContent = compileHtmlNew(workshop, true);
-          markers[hash] = new google.maps.Marker({
-            position: location,
-            map: gmap,
-            title: workshop.location_name,
-            infoWindowContent: infoWindowContent
-          });
-          google.maps.event.addListener(markers[hash], "click",
-            function (e) {
-              infoWindow.setContent(this.get('infoWindowContent'));
-              infoWindow.open(gmap, this);
-            });
-        } else {
-          infoWindowContent = compileHtmlNew(workshop, false);
-          // Extend existing marker.
-          markers[hash].infoWindowContent += infoWindowContent;
-        }
-
-        geolocateComplete();
-      }
-    });
+    geolocateComplete();
   });
 }
 

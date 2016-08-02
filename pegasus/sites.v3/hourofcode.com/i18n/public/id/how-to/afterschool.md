@@ -6,18 +6,12 @@ nav: how_to_nav
 
 ---
 
-
 # How to teach one Hour of Code in after-school
 
-## 1) Daftar
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
-  * Daftar untuk menyelenggarakan [Hour of Code ](<%= resolve_url('/') %>) selama <%= campaign_date('short') %>.
-  * Promosikan [Hour of Code](<%= resolve_url('/promote') %>) Anda dan dorong orang lain untuk menyelenggarakan juga.
-
-## 2) Lihat video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Pilih tutorial:
-
-Kita akan menyelenggarakan berbagai [tutorial satu jam yang menyenangkan](<%= resolve_url('https://code.org/learn') %>) bagi siswa dari segala usia, yang dibuat oleh berbagai mitra. *Tutorial baru datang untuk memulai Hour of Code sebelum <%= campaign_date('full') %>.* [Coba tutorial yang ada saat ini.](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
 
 **Semua tutorial Hour of Code:**
 
@@ -26,18 +20,24 @@ Kita akan menyelenggarakan berbagai [tutorial satu jam yang menyenangkan](<%= re
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+## 3) Promote your Hour of Code
+
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+
 ## 4) Rencana kebutuhan teknologi Anda - komputer bersifat opsional
 
-Pengalaman terbaik dari Hour of Code adalah dengan menggunakan komputer yang terhubung dengan internet. Anda **tidak** membutuhkan komputer untuk setiap siswa, dan bahkan dapat menyelenggarakan Hour of Code tanpa komputer sama sekali.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-  * Uji tutorial pada komputer atau perangkat. Pastikan mereka bekerja dengan baik pada browser dengan suara dan video.
-  * Sediakan headphone, atau minta para peserta untuk membawa milik mereka sendiri jika tutorial Anda akan tersaji lebih baik dengan suara.
-  * **Tidak memiliki perangkat cukup?** Gunakan [pemrograman berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika anak-anak bermitra, mereka saling membantu dan mengandalkan peran pendidik yang lebih sedikit. Mereka juga akan melihat ilmu komputer adalah sosial dan kolaboratif.
-  * **Memiliki bandwidth rendah?** Rencanakan untuk proyeksikan video ke layar besar, sehingga semua orang tidak men-download video mereka sendiri. Atau coba tutorial unplugged / offline.
+**Plan Ahead!** Do the following before your event starts:
+
+  * Uji tutorial pada siswa komputer atau perangkat. Pastikan mereka bekerja dengan baik pada browser dengan suara dan video.
+  * Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik mereka sendiri, jika tutorial Anda berjalan lebih baik dengan suara.
+  * **Tidak memiliki perangkat cukup?** Gunakan [pemrograman berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu komputer adalah sosial dan kolaboratif.
+  * **Mempunyai bandwidth kecil?** Rencanakan untuk menunjukan video di depan kelas, supaya setiap pelajar tidak mengunduh video mereka sendiri. Atau cobalah tutorial offline atau tanpa komputer.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspirasi partisipan untuk memulai Hour of Code Anda
+## 5) Start your Hour of Code off with an inspiring video
 
 Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu komputer dapat memberikan dampak pada setiap bagian dari kehidupan kita.
 
@@ -48,13 +48,13 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
   * [Presiden Obama menyerukan semua pelajar untuk belajar ilmu komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Temukan lebih banyak video inspiratif [di sini](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Tidak apa-apa jika Anda baru dalam ilmu komputer. Berikut adalah beberapa ide untuk memperkenalkan kegiatan Hour of Code Anda:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
   * Jelaskan cara teknologi memberi dampak pada kehidupan kita, dengan contoh-contoh yang diminati oleh anak-anak (Bicarakan tentang apps dan teknologi yang digunakan untuk menyelamatkan nyawa, membantu orang, menghubungkan orang dll).
   * Daftarkan hal yang menggunakan kode dalam kehidupan sehari-hari.
   * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-**Butuh bimbingan lebih lanjut?** Download [template rencana pembelajaran ini](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 **Butuh lebih banyak ide pengajaran?** Periksa [praktek-praktek terbaik](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dari pendidik yang berpengalaman.
 
@@ -64,7 +64,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
   * Tulis link tutorial di papan tulis. Temukan link yang tercantum di [informasi untuk tutorial yang dipilih](<%= resolve_url('https://code.org/learn') %>) di bawah jumlah peserta.
 
-**Ketika seseorang datang ketika kesulitan, tidak apa-apa untuk menanggapi:**
+**When someone comes across difficulties it's okay to respond:**
 
   * "Saya tidak tahu. Mari kita memikirkan hal ini bersama-sama."
   * "Teknologi tidak selalu bekerja dengan cara yang kita inginkan."
@@ -93,26 +93,20 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
 ## 7) Rayakan
 
+[col-33]
+
+![](/images/fit-300/boy-certificate.jpg)
+
+[/col-33]
+
   * [Cetak sertifikat](<%= resolve_url('https://code.org/certificates') %>) untuk siswa Anda.
-  * [Cetak stiker "Aku sejam kode!"](<%= resolve_url('/promote/resources#stickers') %>).
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
+  * [Cetak stiker "Aku telah menyelesaikan Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) untuk siswa.
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
   * Bagikan foto dan video acara Hour of Code Anda pada media sosial. Gunakan #HourOfCode dan @codeorg sehingga kita dapat menyoroti keberhasilan Anda juga!
 
 [col-33]
 
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
 ![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -131,8 +125,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
 ## Apa yang selanjutnya dilakukan setelah Hour of Code?
 
-The Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
-

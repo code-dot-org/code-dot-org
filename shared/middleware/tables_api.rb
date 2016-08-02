@@ -192,7 +192,7 @@ class TablesApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete$} do |_endpoint, _channel_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   def get_approximate_record_size(table_name, record_json)
@@ -244,8 +244,8 @@ class TablesApi < Sinatra::Base
 
     new_value = JSON.parse(request.body.read)
 
-    if new_value.has_key?('id') && new_value['id'].to_i != id.to_i
-      halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
+    if new_value.key?('id') && new_value['id'].to_i != id.to_i
+      halt 400, {}, "Updating 'id' is not allowed" if new_value.key? 'id'
     end
     new_value.delete('id')
 
@@ -260,11 +260,11 @@ class TablesApi < Sinatra::Base
   end
 
   patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
   put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
   # GET /v3/export-(shared|user)-tables/<channel-id>/table-name
@@ -323,7 +323,7 @@ class TablesApi < Sinatra::Base
 
     # deleting the old records only after all validity checks have passed.
     begin
-      table.delete_all()
+      table.delete_all
     rescue Exception
       halt 500
     end
@@ -343,7 +343,7 @@ class TablesApi < Sinatra::Base
     limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.set_approximate_row_count(records.length)
 
-    redirect "#{table_url}"
+    redirect table_url
   end
 
   #
@@ -402,7 +402,7 @@ class TablesApi < Sinatra::Base
         next
       end
 
-      table.delete_all()
+      table.delete_all
       json_data[table_name].each_with_index do |record, i|
         record_size = get_approximate_record_size(table_name, record.to_json)
         record_too_large(record_size, i) if record_size > max_record_size
@@ -411,9 +411,8 @@ class TablesApi < Sinatra::Base
       limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
       limits.set_approximate_row_count(json_data[table_name].length)
 
-      table.ensure_metadata()
+      table.ensure_metadata
     end
-
   end
 
   private

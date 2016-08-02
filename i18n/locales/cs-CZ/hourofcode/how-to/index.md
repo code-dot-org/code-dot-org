@@ -6,15 +6,12 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 # Jak vyučovat jednu Hodinu kódu
 
-## 1) Přihlásit se
+Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-  * Přihlaste se k hostování [Hodiny kódu](%= resolve_url('/') %) během <%= campaign_date('short') %>.
-  * Propaguj svou [ Hodinu kódu](%= resolve_url('/promote') %) a povzbuď ostatní k hostování.
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial for your hour:
 
-## 1) Prohlédni si toto video s návodem <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Zvol si výukový kurz:
-
-Poskytujeme různé [zábavné, hodinu dlouhé cvičení](%= resolve_url('https://code.org/learn') %) pro studenty všech věků, vytvořeny různými druhy partnerů. * Nové cvičení přicházejí aby začali Hodinu kódu před <%= campaign_date('full') %>.*
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
 
 **[Studenty vedené cvičení Hodiny kódu:](%= resolve_url("https://code.org/learn") %)**
 
@@ -28,9 +25,15 @@ Poskytujeme různé [zábavné, hodinu dlouhé cvičení](%= resolve_url('https:
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+## 3) Promote your Hour of Code
+
+Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+
 ## 4) Plánuj potřeby technologie - počítače nejsou povinné
 
-Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebudete **však **potřebovat počítač pro každé dítě – Hodinu kódu lze dokonce absolvovat bez počítače.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+
+**Plan Ahead!** Do the following before your event starts:
 
   * Vyzkoušejte si výukové kurzy na počítačích nebo zařízeních. Ujistěte se, že fungují správně na prohlížečích se zvukem a videem.
   * Poskytněte sluchátka pro třídu, nebo požádejte studenty, aby si přinesli své vlastní, když kurz pracuje nejlépe se zvukem.
@@ -39,9 +42,9 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspirujte studenty k zahájení Hodiny kódu
+## 5) Start your Hour of Code off with an inspiring speaker or video
 
-**Přizvěte [lokální dobrovolníky](https://code.org/volunteer/local) aby inspirovali studenty, mluvením o škále možností s informatikou.** Jsou zde tisíce dobrovolníku kolem světa, připraveni vypomoci s Hodinou kódu. [Použijte tuto mapu](https://code.org/volunteer/local) k nalezení místních dobrovolníků, kteří mohou navštívit vaší učebnu nebo se připojit k video chat s vašimi studenty.
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
 
 [![](/images/fit-300/volunteer-map.png)](%= resolve_url('https://code.org/volunteer/local') %)
 
@@ -50,33 +53,39 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
   * Původní video od Code.org, ukazující Billa Gates, Zuckerberga a NBA hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Hodina kódu 2013 spusťte video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or <% if @country == 'uk' %> [video Hodina kódu 2015 ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [video Hodina kódu 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama vyzývá všechny studenty, aby se učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Najít další inspirativní video [zde](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Je to v pořádku, pokud vy a vaši studenti jste noví v informatice. Zde jsou některé nápady, jak uvést aktivitu Hodinu kódu:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Vysvětlete způsoby technologického ovlivnění našich životů, s příklady, jak chlapci i dívky se budou starat (mluví se o záchraně životů, pomoci a propojování lidí atd.).
+  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * Třída uvede seznam věcí každodenního života používající kód.
   * Najděte tipy k získání zájmu dívek o informatiku[zde](%= resolve_url('https://code.org/girls') %).
 
-**Potřebuje více poradit?** Stáhněte si [šablonu plánu lekcí ](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Chcete další nápady pro výuku?** Zkontrolujte si [nejlepší postupy](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) od zkušených pedagogů.
 
 ## 6) Kódujte!
 
-**Nasměrujte žáky k činnosti**
+**Direct students to the activity**
 
   * Napište na tabuli odkaz na výukový kurz. Najděte odkaz v seznamu na [informace pro vybraný výukový kurz](%= resolve_url('https://code.org/learn') %) pod počtem účastníků.
 
-**Když se vaši studenti narazí na těžkosti, je dobré na to reagovat:**
+[col-33]
+
+![](/images/fit-300/group_ar.jpg)
+
+[/col-33]
+
+**When your students come across difficulties it's okay to respond:**
 
   * "Já nevím. Vyřešme to společně."
   * "Technologie nefunguje vždy tak, jak chceme."
   * "Učení programovat je jako se učit nový jazyk; nebudete ihned plynule mluvit."
 
-**[Koukněte na tyto učící tipy](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**Co dělat, když žák skončí dříve?**
+**What to do if a student finishes early?**
 
   * Studenti se mohou podívat na všechny výukové kurzy Hodiny kódu a zkusit jinou aktivitu Hodiny kódu na [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
   * Nebo požádejte studenty, kteří jsou brzy hotoví, aby pomohli spolužákům, kteří mají s aktivitou potíže.
@@ -87,17 +96,17 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 
 [/col-33]
 
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
 <p style="clear:both">
   &nbsp;
 </p>
 
 ## 7) Oslavte
+
+[col-33]
+
+![](/images/fit-300/boy-certificate.jpg)
+
+[/col-33]
 
   * [Tisk certifikátů](%= resolve_url('https://code.org/certificates') %) pro vaše studenty.
   * [Tisk "Udělal jsem Hodinu kódu!"](%= resolve_url('/promote/resources#stickers') %) nálepek pro vaše studenty.
@@ -106,19 +115,7 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 
 [col-33]
 
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
 ![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -141,5 +138,3 @@ Hodina kódu je pouze první krok, na cestě k poučení o tom, jak technologie 
 
   * Povzbuďte studenty v pokračování [učit se online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Nvštivte](%= resolve_url('https://code.org/professional-development-workshops') %) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
-
-<%= view :signup_button %>

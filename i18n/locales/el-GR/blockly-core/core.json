@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"περικοπή κενών από την αριστερή πλευρά",
   "TEXT_TRIM_OPERATOR_RIGHT":"περικοπή κενών από τη δεξιά πλευρά",
   "TEXT_TRIM_TOOLTIP":"Επίστρεψε ένα αντίγραφο του κειμένου, αφαιρώντας τα κενά από το ένα ή και από τα δύο άκρα.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"αντικείμενο",
   "VARIABLES_GET_CREATE_SET":"Δημιούργησε 'όρισε %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

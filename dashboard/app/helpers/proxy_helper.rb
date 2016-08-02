@@ -14,7 +14,7 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    if !allowed_hostname?(url, allowed_hostname_suffixes)
+    unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
@@ -40,12 +40,12 @@ module ProxyHelper
     if media.is_a? Net::HTTPRedirection
       # Follow up to five redirects.
       render_proxied_url(
-          media['location'],
-          allowed_content_types: allowed_content_types,
-          allowed_hostname_suffixes: allowed_hostname_suffixes,
-          expiry_time: expiry_time,
-          infer_content_type: infer_content_type,
-          redirect_limit: redirect_limit - 1)
+        media['location'],
+        allowed_content_types: allowed_content_types,
+        allowed_hostname_suffixes: allowed_hostname_suffixes,
+        expiry_time: expiry_time,
+        infer_content_type: infer_content_type,
+        redirect_limit: redirect_limit - 1)
 
     elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.

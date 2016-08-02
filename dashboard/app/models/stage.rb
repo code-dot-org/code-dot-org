@@ -9,6 +9,7 @@
 #  created_at    :datetime
 #  updated_at    :datetime
 #  flex_category :string(255)
+#  lockable      :boolean
 #
 
 # Ordered partitioning of script levels within a script
@@ -37,8 +38,16 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_title
+    # The standard case for localized_title is something like "Stage 1: Maze".
+    # In the case of lockable stages, we don't want to include the Stage 1
+    return I18n.t("data.script.name.#{script.name}.#{name}") if lockable
+
     if script.stages.to_a.many?
-      I18n.t('stage_number', number: position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
+      # Because lockable stages aren't numbered, our stage number is actually our
+      # position, minus the number of lockable stages preceeding us
+      stage_number = position - script.stages.to_a[0, position].count(&:lockable)
+
+      I18n.t('stage_number', number: stage_number) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name
       script.localized_title
     end
@@ -80,6 +89,7 @@ class Stage < ActiveRecord::Base
           name: localized_name,
           title: localized_title,
           flex_category: localized_category,
+          lockable: !!lockable,
           # Ensures we get the cached ScriptLevels, vs hitting the db
           levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
       }
@@ -95,7 +105,7 @@ class Stage < ActiveRecord::Base
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
         unless extra_levels.empty?
           stage_data[:levels] += extra_levels
-          last_level_summary[:uid] = "#{last_level_summary[:id]}_0"
+          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
           last_level_summary[:url] << "/page/1"
         end
       end

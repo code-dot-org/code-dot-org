@@ -38,5 +38,5 @@ commonStyles.bubble = {
   color: color.black,
   marginBottom: 10,
   position: 'relative',
-  cursor: 'default'
+  cursor: 'pointer'
 };

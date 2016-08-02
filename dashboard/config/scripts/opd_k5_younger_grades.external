@@ -1,9 +1,8 @@
 name 'OPD-K5 Younger Grades'
-css 'k5pd'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
 
 ### Why teach computer science in the early grades?
 <img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" width="450px" style="margin-right:45px; border-radius:10px;">

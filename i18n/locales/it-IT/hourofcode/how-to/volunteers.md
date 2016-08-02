@@ -14,10 +14,33 @@ Fai visita ad una scuola della tua città per stimolare gli studenti a studiare 
 
 We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Si discuterà di come coordinarsi con gli insegnanti prima che il loro evento dell'Ora del Codice abbia luogo e anche di cosa si dovrebbe fare il giorno dell'evento. Per favore fatti avanti con le tue domande! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Data        | Ora                   | Link to info session                                                            |
-| ----------- | --------------------- | ------------------------------------------------------------------------------- |
-| 16 Novembre | 1:00pm - 1:30pm PST   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3 Dicembre  | 11:00am - 11:30am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Data
+    </th>
+    
+    <th>
+      Ora
+    </th>
+    
+    <th>
+      Link to info session
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Impiega 30 minuti per provare i corsi in anticipo
 
@@ -33,29 +56,33 @@ Parla ai tuoi amici e colleghi di lavoro dell'Ora del Codice. We have thousands 
 
 Se ti ricordi della prima riga di codice che hai scritto, allora sai che ha influito su tutto il resto della tua vita.
 
-Questo è ciò che è l'Ora del Codice. Negli ultimi due anni, il movimento ha mandato in frantumi gli stereotipi su ciò che vuol dire programmare ed ha aiutato più di 100 milioni di studenti in 180 nazioni a provare l'informatica per la prima volta.
+Questo è ciò che è l'Ora del Codice. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Mi sono iscritto come volontario in una scuola**  
-7.098 insegnanti hanno già chiesto aiuto. Code.org sta mettendo in comunicazione le classi con i volontari tecnici, come te, che possono aiutare gli studenti e gli insegnanti nella loro prima Ora del Codice.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Per favore iscriviti come [volontario per un ora](https://code.org/volunteer/engineer). Dopo che ti sarai iscritto, gli insegnanti potranno contattarti per ricevere aiuto attraverso un modulo sicuro.* Non puoi fare da volontario? [Aiutaci a spargere la voce su l'Ora del Codice](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**La tue esperienza è importante**  
-In molte scuole ancora non si insegna informatica. Molti studenti non sanno come si risolvono i problemi complessi e come si collegano ad altri problemi simili. Questa è un'opportunità per stimolare almeno un giovane della tua zona.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Iscriviti come volontario](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-*Il tuo indirizzo di posta elettronica non verrà mai condiviso con gli insegnanti.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 5. Chiedi al tuo datore di lavoro di partecipare
 
-[Invia questo messaggio di posta elettronica](https://hourofcode.com/promote/resources#email) al tuo responsabile, o AD.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 6. Promuovi l'Ora di Codice fra i tuoi conoscenti
 
-Recluta un po' di persone — tra i boy-scout, in parrocchia, all'università, tra gli esperti o al sindacato. Oppure ospita un "party" dell'Ora di Codice per il tuo quartiere. [Invia questo messaggio di posta elettronica](https://hourofcode.com/promote/resources#email).
+Recluta un po' di persone — tra i boy-scout, in parrocchia, all'università, tra gli esperti o al sindacato. Oppure ospita un "party" dell'Ora di Codice per il tuo quartiere. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Leggi il programma suggerito qui sotto in modo da sapere cosa aspettarti quando visiti una classe.
+## 7. Prepare before you visit a classroom.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Programma per fare Volontariato un una Classe
 

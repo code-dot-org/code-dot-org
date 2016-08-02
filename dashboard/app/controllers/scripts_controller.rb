@@ -11,7 +11,6 @@ class ScriptsController < ApplicationController
       redirect_to canonical_path, status: :moved_permanently
       return
     end
-
   end
 
   def index

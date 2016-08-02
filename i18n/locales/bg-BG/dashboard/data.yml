@@ -1,75 +1,5 @@
 bg:
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 въвеждащ курс по компютърни науки
-          Unplug1: Етап 1
-          Maze: Етап 2
-          Unplug2: Етап 3
-          Unplug3: Етап 4
-          Artist: Етап 5
-          Unplug4: Етап 6
-          Artist2: Етап 7
-          Unplug5: Етап 8
-          Farmer: Етап 9
-          Unplug6: Етап 10
-          Artist3: Етап 11
-          Unplug7: Етап 12
-          Farmer2: Етап 13
-          Unplug8: Етап 14
-          Artist4: Етап 15
-          Unplug9: Етап 16
-          Farmer3: Етап 17
-          Unplug10: Етап 18
-          Artist5: Етап 19
-          Unplug11: Етап 20
-        Hour of Code:
-          desc: Час на Кодирането
-          Maze: Етап 1
-        Edit Code:
-          desc: Редактиране на код (бета)
-          MazeEC: Етап 1
-        2014 Levels:
-          desc: Bounce (бета)
-          Bounce: Етап 1
-        Builder Levels:
-          desc: Създадени пъзели (бета) от ползватели
-          Custom: Етап 1
-        Flappy Levels:
-          desc: Flappy bird
-          Flappy: Етап 1
-        Jigsaw Levels:
-          desc: Мозайка (бета)
-          Jigsaw: Етап 1
-        Step Levels:
-          desc: Лабиринт (бета)
-          MazeStep: Първоначална стъпка
-        edit-code:
-          desc: Редактиране на код (бета)
-          MazeEC: Етап 1
-          Applab: Етап 2
-          ArtistEC: Етап 3
-          StudioEC: Етап 4
-        events:
-          desc: Bounce (бета)
-          Bounce: Етап 1
-          Studio: Етап 2
-        builder:
-          desc: Създадени пъзели (бета) от ползватели
-          Custom: Етап 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Етап 1
-        jigsaw:
-          desc: Мозайка (бета)
-          Jigsaw: Етап 1
-        step:
-          desc: Лабиринт (бета)
-          MazeStep: Първоначална стъпка
-        wordsearch:
-          desc: Правопис (бета)
-          WordSearch: Етап 1
     game:
       name:
         Unplug1: Въведение в компютърните науки
@@ -481,6 +411,7 @@ bg:
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'

@@ -25,7 +25,7 @@ def hash_to_yml_with_quoted_values(hash, yml_path)
 
   File.open(yml_path, 'wb') do |file|
     buffer.each_line do |line|
-      next if line=="---\n"
+      next if line == "---\n"
       next if line.empty?
       file.write(format_enus_yml_with_quotes(line))
     end
@@ -33,13 +33,12 @@ def hash_to_yml_with_quoted_values(hash, yml_path)
 end
 
 namespace :i18n do
-
   task :sync do
     gsheet = 'Data/I18n'
     path = pegasus_dir('cache/i18n/en-US.yml')
 
     file = gdrive.file(gsheet)
-    raise(RuntimeError, "Google Drive file '#{gsheet}' not found.") unless file
+    raise("Google Drive file '#{gsheet}' not found.") unless file
 
     mtime = file.mtime
     ctime = File.mtime(path).utc if File.file?(path)
@@ -49,10 +48,10 @@ namespace :i18n do
       en_us = {}
       line = 1
       CSV.parse(file.spreadsheet_csv) do |row|
-        en_us[row[0]]=row[1] unless line == 1
+        en_us[row[0]] = row[1] unless line == 1
         line += 1
       end
-      hash_to_yml_with_quoted_values({'en-US'=>en_us}, path)
+      hash_to_yml_with_quoted_values({'en-US' => en_us}, path)
       File.utime(File.atime(path), mtime, path)
     end
   end
@@ -61,5 +60,4 @@ namespace :i18n do
     puts "i18n:help - display this message"
     puts "i18n:sync - download the latest i18n gsheet"
   end
-
 end

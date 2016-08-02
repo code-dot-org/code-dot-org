@@ -1,8 +1,10 @@
 require 'open3'
+require 'yaml'
 require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
+SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}"
 
 def filter_grunt_jshint(modified_files)
   modified_files.select do |f|
@@ -27,6 +29,10 @@ def filter_haml(modified_files)
   modified_files.select { |f| f.end_with?(".haml") }
 end
 
+def filter_scss(modified_files)
+  modified_files.select { |f| File.fnmatch(SCSS_GLOB, f) }
+end
+
 def run(cmd, working_dir)
   Dir.chdir working_dir
   stdout, stderr, status = Open3.capture3(cmd)
@@ -34,15 +40,19 @@ def run(cmd, working_dir)
 end
 
 def run_rubocop(files)
-  run("bundle exec rubocop --force-exclusion #{files.join(" ")}", REPO_DIR)
+  run("bundle exec rubocop --force-exclusion #{files.join(' ')}", REPO_DIR)
 end
 
 def run_eslint(files)
-  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(" ")}", APPS_DIR)
+  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(' ')}", APPS_DIR)
 end
 
 def run_haml(files)
-  run("bundle exec haml-lint #{files.join(" ")}", REPO_DIR)
+  run("bundle exec haml-lint #{files.join(' ')}", REPO_DIR)
+end
+
+def run_scss(files)
+  run("bundle exec scss-lint #{files.join(' ')}", REPO_DIR)
 end
 
 def lint_failure(output)
@@ -51,20 +61,21 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
-def do_linting()
+def do_linting
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
+    Object.method(:run_scss) => filter_scss(modified_files),
     Object.method(:run_eslint) => filter_grunt_jshint(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 
   todo.each do |func, files|
-    if !files.empty?
+    unless files.empty?
       stdout, stderr, status = func.call(files)
       lint_failure(stdout + stderr) unless status.success?
     end
   end
 end
 
-do_linting()
+do_linting

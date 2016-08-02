@@ -1,7 +1,7 @@
 class Object
 
   # Returns true if nil or empty (string, array, hash)
-  def nil_or_empty?()
+  def nil_or_empty?
     self.nil? || self.empty?
   end
 
