@@ -257,10 +257,7 @@ const StageLockDialog = React.createClass({
   }
 });
 
-export default connect(state => {
-  console.log('connect', state);
-  return {
-    initialLockStatus: state.teacherPanel.lockStatus,
-    isOpen: !!state.teacherPanel.lockDialogStageId
-  };
-})(Radium(StageLockDialog));
+export default connect(state => ({
+  initialLockStatus: state.teacherPanel.lockStatus,
+  isOpen: !!state.teacherPanel.lockDialogStageId
+}))(Radium(StageLockDialog));

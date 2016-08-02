@@ -16,10 +16,12 @@ class ApiController < ApplicationController
     return unless current_user
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
+      @section = section
+      load_script
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: section.script.stages.each_with_object({}) do |stage, stage_hash|
+        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
           next unless stage.lockable
           # assumption that lockable stages have a single (assessment) level
           if stage.script_levels.length > 1
