@@ -8,7 +8,7 @@ Given(/^block "([^"]*)" is at a ((?:blockly )?)location "([^"]*)"$/) do |block, 
 end
 
 When(/^I click block "([^"]*)"$/) do |block|
-  @browser.execute_script("$(\"[block-id='#{get_block_id(block)}']\").simulate('click');")
+  @browser.execute_script("$(\"[block-id='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
 # Note: this is an offset relative to the current position of the block
