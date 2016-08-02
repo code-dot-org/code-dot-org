@@ -1,5 +1,7 @@
 'use strict';
 
+/* global dashboard */
+
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -72,8 +74,17 @@ window.getStartSources = function () {
   return window.__mostRecentWebLabInstance.startSources;
 };
 
+window.projectChanged = function () {
+  dashboard.project.projectChanged();
+};
+
+var getBrambleCode = null;
+window.installGetBrambleCode = function (fnGetBrambleCode) {
+  getBrambleCode = fnGetBrambleCode;
+};
+
 /**
- * Initialize Blockly and this WebLab instance.  Called on page load.
+ * Initialize this WebLab instance.  Called on page load.
  */
 WebLab.prototype.init = function (config) {
   if (!this.studioApp_) {
@@ -83,7 +94,9 @@ WebLab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  if (this.level.startSources && this.level.startSources.length > 0) {
+  if (this.level.lastAttempt) {
+    this.startSources = this.level.lastAttempt;
+  } else if (this.level.startSources && this.level.startSources.length > 0) {
     try {
       this.startSources = JSON.parse(this.level.startSources);
     } catch (err) {
@@ -101,6 +114,8 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+
+  config.getCodeAsync = this.getCodeAsync.bind(this);
 
   config.shareWarningInfo = {
     hasDataAPIs: function () {
@@ -158,6 +173,21 @@ WebLab.prototype.init = function (config) {
   ), document.getElementById(config.containerId));
 
   this.studioApp_.notifyInitialRenderComplete(config);
+};
+
+WebLab.prototype.getCodeAsync = function () {
+  return new Promise (function (resolve,reject) {
+    if (getBrambleCode !== null) {
+      getBrambleCode(function (code) {
+        resolve(code);
+      });
+    } else {
+      console.warn("getCodeAsync called before Bramble installed");
+      // BUGBUG for the moment return empty string - if we return null autosave will never work
+      // fix by delaying events.appInitialized until after Bramble is loaded
+      resolve("");
+    }
+  });
 };
 
 /**

@@ -352,7 +352,9 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          currentSources.source = this.sourceHandler.getLevelSource(currentSources.source);
+          this.sourceHandler.getLevelSource(currentSources.source).then(function (response) {
+            currentSources.source = response;
+          });
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -462,9 +464,12 @@ var projects = module.exports = {
       callback = args[0];
       forceNewVersion = args[1];
       this.sourceHandler.getAnimationList(animations => {
-        const source = this.sourceHandler.getLevelSource();
-        const html = this.sourceHandler.getLevelHtml();
-        this.save({source, html, animations}, callback, forceNewVersion);
+        var thisProject = this;
+        this.sourceHandler.getLevelSource().then(function (response) {
+          const source = response;
+          const html = thisProject.sourceHandler.getLevelHtml();
+          thisProject.save({source, html, animations}, callback, forceNewVersion);
+        });
       });
       return;
     }
@@ -537,16 +542,19 @@ var projects = module.exports = {
     }
 
     this.sourceHandler.getAnimationList(animations => {
-      const source = this.sourceHandler.getLevelSource();
-      const html = this.sourceHandler.getLevelHtml();
-      const newSources = {source, html, animations};
-      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-        hasProjectChanged = false;
-        return;
-      }
+      var thisProject = this;
+      this.sourceHandler.getLevelSource().then(function (response) {
+        const source = response;
+        const html = thisProject.sourceHandler.getLevelHtml();
+        const newSources = {source, html, animations};
+        if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+          hasProjectChanged = false;
+          return;
+        }
 
-      this.save(newSources, () => {
-        hasProjectChanged = false;
+        thisProject.save(newSources, () => {
+          hasProjectChanged = false;
+        });
       });
     });
   },
