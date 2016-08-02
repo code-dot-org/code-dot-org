@@ -3,12 +3,7 @@ title 'Remixing in StarLogo Nova'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
-
-
-### Remixing
-
-
+# Remixing
 
 One of the most helpful things to learn in StarLogo Nova is the art of "remixing."  Remixing a project not only saves a new copy of the project that you've been working on, it also allows you to make changes without disturbing previous work.  When in doubt, remix before you edit! 
 
@@ -69,6 +64,4 @@ When you're done, you will be asked to copy and paste the link into the PLC disc
 After you have shared your project, return here and click "Continue" to move on to the next stage.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

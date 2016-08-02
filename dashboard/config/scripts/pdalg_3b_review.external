@@ -2,8 +2,6 @@ name 'PDAlg 3B Review'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
 # Close & Next Steps > Let’s Review
 
 By now you should have completed Stages 1-5, and accomplished the following learning objectives:
@@ -11,10 +9,8 @@ By now you should have completed Stages 1-5, and accomplished the following lear
 - Built on your understanding of the Code.org CS in Algebra curriculum
 - Used and applied Code Studio tools, including new tools and features introduced since the summer PD ended
 - Practiced using the “sandbox free play environments” to teach a word problem from your own curriculum
-<br><br>
-Take a moment to reflect on your learning. If you like, you can go back and review any stages and levels that you wish to spend more time on. When you’re ready, click “Continue” below to move on.
 
-<br><br>
+Take a moment to reflect on your learning. If you like, you can go back and review any stages and levels that you wish to spend more time on. When you’re ready, click “Continue” below to move on.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
