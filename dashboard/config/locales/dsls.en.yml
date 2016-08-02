@@ -3260,7 +3260,6 @@ en:
         Searching through data: Searching through data
         Sorting data: Sorting data
       CPS Unit2 Ch 1 MC lossless compression:
-        '': ''
         " ": " "
         Compression: Compression
         Fast Fourier Transform compression: Fast Fourier Transform compression
@@ -3289,14 +3288,6 @@ en:
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
-      CSP Unit 2 Ch 1 MC heuristic:
-        Heuristic: Heuristic
-        When the optimal solution can only be found through a sequence mathematical equations.: When the optimal solution can only be found through a sequence mathematical equations.
-        When the optimal solution can only be found through inductive reasoning.: When the optimal solution can only be found through inductive reasoning.
-        When the optimal solution cannot be known through theory but can be found through experimentation.: When the optimal solution cannot be known through theory but can be found through experimentation.
-        When the optimal solution is unknown or would take too long to compute.: When the optimal solution is unknown or would take too long to compute.
-        ? Which of the following is the best description of scenario in which you need a heuristic approach to solving a computational problem
-        : Which of the following is the best description of scenario in which you need a heuristic approach to solving a computational problem
       CSP Unit 2 Ch 1 MC kilo v mega:
         1,000 times bigger: 1,000 times bigger
         1,000,000 times bigger: 1,000,000 times bigger
@@ -3314,41 +3305,19 @@ en:
       CSP Unit 2 Ch 2 MC google trends:
         " ": " "
         Generally speaking, since 2009 more people use "red" in their search terms than "blue", "yellow", "green", or "purple": Generally speaking, since 2009 more people use "red" in their search terms than "blue", "yellow", "green", or "purple"
-        Generally speaking, since 2009 more people use red in their search terms  than blue, yellow, green, or purple: Generally speaking, since 2009 more people use red in their search terms  than blue, yellow, green, or purple
         ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
         : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
         Since sometime around 2008 red has become the favorite color of more people: Since sometime around 2008 red has become the favorite color of more people
         ? The general decline in the search term "yellow" might be due to the decline of yellow taxis as car sharing services have become more popular
         : The general decline in the search term "yellow" might be due to the decline of yellow taxis as car sharing services have become more popular
-        ? The general decline in the search term yellow might be due to the decline of yellow taxis as car sharing services have become more popular
-        : The general decline in the search term yellow might be due to the decline of yellow taxis as car sharing services have become more popular
-        What is it showing?: What is it showing?
         What's it showing?: What's it showing?
-      CSP Unit 2 Ch. 1 MC - lossy compression:
-        " ": " "
-        Compression: Compression
-        Fast Fourier Transform compression: Fast Fourier Transform compression
-        Lossless compression: Lossless compression
-        Lossy compression: Lossy compression
-        Tailored compression: Tailored compression
-      CSP Unit 2 Ch. 1 MC heuristic:
-        When the optimal solution can only be found through a sequence mathematical equations.: When the optimal solution can only be found through a sequence mathematical equations.
-        When the optimal solution can only be found through inductive reasoning.: When the optimal solution can only be found through inductive reasoning.
-        When the optimal solution cannot be known through theory but can be found through experimentation.: When the optimal solution cannot be known through theory but can be found through experimentation.
-        When the optimal solution is unknown or would take too long to compute.: When the optimal solution is unknown or would take too long to compute.
-        ? Which of the following is the best description of scenario in which you need a heuristic approach to solving a computational problem
-        : Which of the following is the best description of scenario in which you need a heuristic approach to solving a computational problem
-        description here: description here
-        title: title
       CSP Unit2 Ch 1 MC hex rgb:
         " ": " "
         00F: 00F
         12-bit Red: 12-bit Red
-        12-bit red: 12-bit red
         F00: F00
         FF00: FF00
         FF0000: FF0000
-        right answer: right answer
       CSP Unit2 Ch1 MC megabyte:
         How big is it?: How big is it?
         Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
