@@ -62,9 +62,7 @@ const StageLock = React.createClass({
             </span>
           </span>
         }
-        <StageLockDialog
-          handleClose={this.props.closeLockDialog}
-        />
+        <StageLockDialog handleClose={this.props.closeLockDialog}/>
       </div>
     );
   }

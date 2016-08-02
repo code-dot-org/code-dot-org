@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import progressStyles from './progressStyles';
-import { LockStatus } from '../../teacherPanelRedux';
+import { LockStatus, saveLockDialog } from '../../teacherPanelRedux';
 import color from '../../../color';
 import commonMsg from '@cdo/locale';
 
@@ -67,7 +67,9 @@ const StageLockDialog = React.createClass({
         name: React.PropTypes.string.isRequired,
         lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
-    ).isRequired
+    ).isRequired,
+    saving: React.PropTypes.bool.isRequired,
+    saveDialog: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -118,6 +120,11 @@ const StageLockDialog = React.createClass({
         };
       })
     });
+  },
+
+  handleSave() {
+    console.log('saving', this.state.lockStatus);
+    this.props.saveDialog(this.state.lockStatus);
   },
 
   render() {
@@ -248,8 +255,12 @@ const StageLockDialog = React.createClass({
           >
             {commonMsg.dialogCancel()}
           </button>
-          <button style={progressStyles.blueButton}>
-            {commonMsg.save()}
+          <button
+            style={progressStyles.blueButton}
+            onClick={this.handleSave}
+            disabled={this.props.saving}
+          >
+            {this.props.saving ? commonMsg.saving() : commonMsg.save()}
           </button>
         </div>
       </BaseDialog>
@@ -259,5 +270,10 @@ const StageLockDialog = React.createClass({
 
 export default connect(state => ({
   initialLockStatus: state.teacherPanel.lockStatus,
-  isOpen: !!state.teacherPanel.lockDialogStageId
+  isOpen: !!state.teacherPanel.lockDialogStageId,
+  saving: state.teacherPanel.saving
+}), dispatch => ({
+  saveDialog(lockStatus) {
+    dispatch(saveLockDialog(lockStatus));
+  }
 }))(Radium(StageLockDialog));

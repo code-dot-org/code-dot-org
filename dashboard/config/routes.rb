@@ -332,7 +332,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/dashboardapi/section_progress', to: 'api#lockable_state_sections'
+  post '/dashboardapi/lock_status', to: 'api#update_lockable_state'
+  get '/dashboardapi/lock_status', to: 'api#lockable_state_sections'
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
