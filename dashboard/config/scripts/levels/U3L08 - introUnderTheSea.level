@@ -130,7 +130,7 @@
     "encrypted_examples": "QxlHOlEoY+tVdqAu1SEqEILYQyF/uQxfWeHDjPqJjBmURm/NXjWtYRWTuh8v\nti2W\n",
     "embed": "false",
     "instructions": "Add an extra fish, starfish, and piece of sea grass to the image. Look at, but don't change, the functions that create them. (Click to see full instructions)",
-    "markdown_instructions": "# Under the Sea!\r\n\r\nIn the next several challenges you will be working to improve **one program** that draws a simple underwater scene.  Each time you click Finish, your code will be pulled forward into the next challenge and you'll get new instructions telling you what to add.\r\n\r\n# Do This:\r\n\r\n* **Read through ** the program provided to get a basic understanding of what it does.\r\n* **Add function calls ** to the top of the program so that **two fish, two starfish, and two pieces of sea grass** appear somewhere in the scene.\r\n* **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
+    "markdown_instructions": "# Under the Sea!\r\n\r\nIn the next several challenges you will be working to improve **one program** that draws a simple underwater scene.  Each time you click Finish, your code will be pulled forward into the next challenge and you'll get new instructions telling you what to add.\r\n\r\n# Do This:\r\n\r\n* **Read through ** the program provided to get a basic understanding of what it does.\r\n* **Add function calls ** to the top of the program so that **two fish, two starfish, and two pieces of sea grass** appear somewhere in the scene.\r\n* **Hint:** you need to call `moveTo` before drawing a second fish, starfish or sea grass, otherwise you won't see the second one because it will draw exactly over the first one -- those functions draw based on where the turtle is just before the call.\r\n* **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -163,6 +163,32 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawStarfish:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to call drawStarfish() at least twice to create two star fish."
+      },
+      {
+        "entries": [
+          "drawFish:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to call drawFish() at least twice to create two fish."
+      },
+      {
+        "entries": [
+          "drawSeaGrass:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to call drawSeaGrass() at least twice to create two strands of seagrass"
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,
