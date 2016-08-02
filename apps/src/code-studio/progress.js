@@ -69,7 +69,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
-      renderTeacherPanel(store);
+      renderTeacherPanel(store, scriptData.id);
     }
 
     if (data.focusAreaPositions) {
@@ -104,12 +104,18 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * Query the server for progress of all students in section, and render this to
  * our teacher panel.
  */
-function renderTeacherPanel(store) {
+// TODO - rename since this is more than teacher panel (it's lockable stuff everywhere)
+function renderTeacherPanel(store, scriptId) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
   $.ajax(
     '/dashboardapi/section_progress',
-    { data: { user_id: clientState.queryParams('user_id') } }
+    {
+      data: {
+        user_id: clientState.queryParams('user_id'),
+        script_id: scriptId
+      }
+    }
   ).done(data => {
     store.dispatch(setSections(data));
   });
