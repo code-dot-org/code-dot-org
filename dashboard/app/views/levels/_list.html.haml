@@ -2,6 +2,9 @@
   = javascript_include_tag 'js/levelbuilder'
 
 %h1 Levels
+= form_tag levels_path, method: :get do
+  = label_tag 'Filter by name:'
+  = text_field_tag :name, params[:name]
 = paginate @levels
 %table
   %thead
