@@ -26,7 +26,8 @@ const NetSimLogBrowser = React.createClass({
     setTrafficFilter: React.PropTypes.func.isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    renderedRowLimit: React.PropTypes.number
+    renderedRowLimit: React.PropTypes.number,
+    teacherView: React.PropTypes.bool
   }),
 
   getDefaultProps() {
@@ -37,11 +38,15 @@ const NetSimLogBrowser = React.createClass({
   },
 
   dialogTitle() {
-    const {i18n, isAllRouterLogMode, currentTrafficFilter} = this.props;
-    var header = isAllRouterLogMode ?
+    const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} = this.props;
+    if (teacherView) {
+      return i18n.logBrowserHeader_teacherView();
+    }
+
+    let header = isAllRouterLogMode ?
       i18n.logBrowserHeader_all() : i18n.logBrowserHeader_mine();
 
-    var match = /^(from|to|with) ([\d\.]+)/.exec(currentTrafficFilter);
+    const match = /^(from|to|with) ([\d\.]+)/.exec(currentTrafficFilter);
     if (match) {
       if ('from' === match[1]) {
         header += i18n.logBrowserHeader_trafficFromAddress({
@@ -60,6 +65,16 @@ const NetSimLogBrowser = React.createClass({
     return header;
   },
 
+  getInitialState() {
+    return {
+      currentSentByFilter: 'none'
+    };
+  },
+
+  setSentByFilter(newFilter) {
+    this.setState({ currentSentByFilter: newFilter});
+  },
+
   render() {
     return (
       <Dialog fullWidth {...this.props}>
@@ -73,6 +88,10 @@ const NetSimLogBrowser = React.createClass({
             localAddress={this.props.localAddress}
             currentTrafficFilter={this.props.currentTrafficFilter}
             setTrafficFilter={this.props.setTrafficFilter}
+            currentSentByFilter={this.state.currentSentByFilter}
+            setSentByFilter={this.setSentByFilter}
+            teacherView={this.props.teacherView}
+            logRows={this.props.logRows}
           />
           <div style={style.scrollArea}>
             {/* TODO: get table sticky headers working */}
@@ -80,6 +99,8 @@ const NetSimLogBrowser = React.createClass({
               headerFields={this.props.headerFields}
               logRows={this.props.logRows}
               renderedRowLimit={this.props.renderedRowLimit}
+              teacherView={this.props.teacherView}
+              currentSentByFilter={this.state.currentSentByFilter}
             />
           </div>
         </Body>
@@ -111,6 +132,9 @@ if (BUILD_STYLEGUIDE) {
       logBrowserHeader_trafficFromAddress: ({address}) => ` - Traffic From ${address}`,
       logBrowserHeader_trafficToAddress: ({address}) => ` - Traffic To ${address}`,
       logBrowserHeader_trafficToAndFromAddress: ({address}) => ` - Traffic To and From ${address}`,
+      logBrowserHeader_sentByAnyone: () => 'sent by anyone',
+      logBrowserHeader_sentByName: ({name}) => `sent by ${name}`,
+      logBrowserHeader_teacherView: () => 'Teacher View'
     };
 
     const simplePacket = [];
@@ -133,6 +157,7 @@ if (BUILD_STYLEGUIDE) {
       const packetNum = 1 + randInt(packetCount);
       return {
         'timestamp': Date.now() - randInt(600000),
+        'sent-by': lipsumWords[randInt(lipsumWords.length)],
         'logged-by': `Router ${routerNum}`,
         'status': Math.random() < 0.8 ? 'Success' : 'Dropped',
         'from-address': `${routerNum}.${1 + randInt(13)}`,
@@ -152,7 +177,7 @@ if (BUILD_STYLEGUIDE) {
             () => (
               <div id="netsim">
                 <NetSimLogBrowser
-                  isOpen={true}
+                  isOpen
                   i18n={i18n}
                   setRouterLogMode={() => null}
                   setTrafficFilter={() => null}
@@ -167,7 +192,7 @@ if (BUILD_STYLEGUIDE) {
             () => (
               <div id="netsim">
                 <NetSimLogBrowser
-                  isOpen={true}
+                  isOpen
                   i18n={i18n}
                   canSetRouterLogMode
                   isAllRouterLogMode
@@ -179,6 +204,24 @@ if (BUILD_STYLEGUIDE) {
                   logRows={sampleData}
                 />
               </div>
-            ));
+            ))
+      .addWithInfo(
+        `Teacher's View`,
+        `Here's what the teacher (or shard owner) gets to see`,
+        () => (
+          <div id="netsim">
+            <NetSimLogBrowser
+              isOpen
+              i18n={i18n}
+              isAllRouterLogMode
+              currentTrafficFilter="all"
+              setRouterLogMode={() => null}
+              setTrafficFilter={() => null}
+              headerFields={simplePacket}
+              logRows={sampleData}
+              teacherView
+            />
+          </div>
+        ));
   };
 }

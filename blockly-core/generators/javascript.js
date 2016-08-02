@@ -234,7 +234,8 @@ Blockly.JavaScript.scrub_ = function(block, code, opt_showHidden) {
       }
     }
   }
-  var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
+  var nextBlock = !block.skipNextBlockGeneration && block.nextConnection &&
+      block.nextConnection.targetBlock();
   var nextCode = this.blockToCode(nextBlock, opt_showHidden);
   return commentCode + code + nextCode;
 };

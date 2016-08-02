@@ -30,7 +30,9 @@ var ReadOnlyBlockSpace = React.createClass({
       return new Error('ReadOnlyBlockSpace component MUST be rendered into a container that already exists in the DOM');
     }
 
-    let blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.refs.container, this.props.block);
+    let blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.refs.container, this.props.block, {
+      noScrolling: true
+    });
 
     let metrics = blockSpace.getMetrics();
     let height = metrics.contentHeight + metrics.contentTop;

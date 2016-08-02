@@ -393,6 +393,8 @@
   help_translate: "Help us translate."
   no_internet: "Don't have Internet?"
   download_offline: "Download the offline version."
+  are_you_teacher: "Are you a teacher?"
+  review_lesson_plan: "Review the lesson plan and other teacher resources."
   volunteer_engineer_submission_title: "Inspire students and volunteer"
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
