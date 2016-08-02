@@ -791,5 +791,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "おめでとうございます。マウスドロイドをつくるコードが追加されました。次のパズルへすすむか、または20匹のマウスドロイドをつかまえるパズルに再ちょうせんしてください。より多くのマウスドロイドを追加すると、ゲームが簡単になります。はやく動くには、キーボード (またはスクリーン) のやじるしを押しつづけてください。",
   "failedChangeSettingTimeout": "３人の反乱軍パイロットを捕まえてください。",
   "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。",
+  "add": "add",
+  "points": "points",
+  "remove": "remove",
   "wait": "wait"
 }

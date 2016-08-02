@@ -791,5 +791,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulujem, pridal si kód na vytvorenie Mouse Droida. Môžeš ísť na ďalší rébus alebo znova skúsiť dostať 20 Mouse Droidov. Skús si to uľahčiť pridaním viacerých! (Stlač a drž klávesy na svojej klávesnici (alebo obrazovke) aby si sa posúval rýchlejšie.)",
   "failedChangeSettingTimeout": "Dostaň sa k trom Pilotom Rebelov, aby si išiel ďalej.",
   "failedChangeSettingSettings": "Prispôsob si hru. Aby si prešiel týmto rébusom, potrebuješ si zmeniť droida a nastaviť jeho rýchlosť.",
+  "add": "add",
+  "points": "points",
+  "remove": "remove",
   "wait": "wait"
 }

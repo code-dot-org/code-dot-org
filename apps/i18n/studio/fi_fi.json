@@ -791,5 +791,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Onnittelut! Lisäsit koodia luodaksesi hiiridroideja. Nyt voit siirtyä seuraavaan tehtävään tai kokeilla napata uudet 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)",
   "failedChangeSettingTimeout": "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin.",
   "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta.",
+  "add": "add",
+  "points": "points",
+  "remove": "remove",
   "wait": "wait"
 }

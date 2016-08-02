@@ -791,5 +791,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulerer, du lagt til kode for å lage musedroider. Du kan gå til neste nivå eller prøve på nytt å få 20 musedroider. Prøve å gjøre det enklere ved å legge til flere av dem! (Trykk og hold inne tastene på tastaturet (eller skjermen) for å bevege deg raskere.)",
   "failedChangeSettingTimeout": "Ta tre opprørspiloter for å gå videre.",
   "failedChangeSettingSettings": "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten.",
+  "add": "add",
+  "points": "points",
+  "remove": "remove",
   "wait": "wait"
 }
