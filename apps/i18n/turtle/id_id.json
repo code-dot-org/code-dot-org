@@ -41,6 +41,7 @@
   "heightParameter": "tinggi",
   "hideTurtle": "sembunyikan artis",
   "jump": "lompat",
+  "jumpTo": "jump to",
   "jumpBackward": "lompat ke belakang ",
   "jumpForward": "lompat maju ",
   "jumpTooltip": "Mengerakan artis tanpa meninggalkan bekas apapun.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Membelok artis ke kiri atau ke kanan dengan beberapa derajat.",
   "turtleVisibilityTooltip": "Membuat artis terlihat atau tidak terlihat.",
   "widthTooltip": "Merubah lebar pensil.",
-  "wrongColour": "Gambar Anda memiliki warna yang salah.  Untuk teka-teki ini, perlu untuk menjadi %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Gambar Anda memiliki warna yang salah.  Untuk teka-teki ini, perlu untuk menjadi %1."
 }

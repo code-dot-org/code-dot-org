@@ -349,7 +349,9 @@ pl:
     announcement_title: Ogłoszenia
     announcement_view_all: Zobacz wszystko
     announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Ucz się więcej
+    announcement_try_now_button: Spróbuj teraz
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Dodaj swoje imię
   move_students:
@@ -525,6 +527,7 @@ pl:
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
     correct_body: Dziękujemy za wysłanie odpowiedzi.
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
@@ -679,6 +682,7 @@ pl:
     required: Streszczenie
     content: Treści
     practice: Teaching Practices
+    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

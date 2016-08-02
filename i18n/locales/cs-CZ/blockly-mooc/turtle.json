@@ -41,6 +41,7 @@
   "heightParameter":"výška",
   "hideTurtle":"skryjte malíře",
   "jump":"skoč",
+  "jumpTo":"jump to",
   "jumpBackward":"skoč zpět o",
   "jumpForward":"skoč vpřed o",
   "jumpTooltip":"Posuny malíře bez zanechání stopy.",

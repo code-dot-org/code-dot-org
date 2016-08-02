@@ -41,6 +41,7 @@
   "heightParameter": "augstums",
   "hideTurtle": "paslēpt tēlu",
   "jump": "lēkt",
+  "jumpTo": "jump to",
   "jumpBackward": "lekt atpakaļ par",
   "jumpForward": "lekt uz priekšu par",
   "jumpTooltip": "Pārvieto zīmējumu neatstājot pēdas.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Pagriezt zīmējumu pa labi par noteiktiem grādiem.",
   "turtleVisibilityTooltip": "Padara zīmējumu redzamu vai neredzamu.",
   "widthTooltip": "Nomaina zīmuļa platumu.",
-  "wrongColour": "Tava bilde ir nepareizajā krāsā. Šai puzlei nepieciešama šāda krāsa %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Tava bilde ir nepareizajā krāsā. Šai puzlei nepieciešama šāda krāsa %1."
 }

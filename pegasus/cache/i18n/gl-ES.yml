@@ -491,6 +491,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "É un profesor?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Anima a alumnos e voluntarios para participar
     na Hora de Código
   volunteer_engineer_submission_subtitle_generic: 'Un total de 100.000 profesores
@@ -718,7 +720,7 @@
   dashboard_navigation_view_progress: Progreso
   dashboard_navigation_view_text_responses: Ver respostas de texto
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Engadir alumnas/os
   dashboard_navigation_manage_students: Administrar as alumnas/os
   dashboard_navigation_lesson_plans_resources: Plans e recursos da clase
@@ -917,7 +919,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Aprende máis
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Proba agora
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1816,6 +1818,3 @@
   infinity_shortcode: inf
   playlab_shortcode: xogar
   artist_shortcode: art
-  are_you_teacher: Are you a teacher?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

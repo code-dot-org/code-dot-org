@@ -347,7 +347,9 @@ tr:
     announcement_title: Bildirimler
     announcement_view_all: Tümünü Gör
     announcement_message: '<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir.'
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Daha fazlasını öğren
+    announcement_try_now_button: Şimdi dene
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
     announcement_petition_button: Adınızı Ekleyin
   move_students:
@@ -526,6 +528,7 @@ tr:
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
     correct_title: Teşekkür ederiz
     correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Teşekkür ederiz
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
@@ -684,6 +687,7 @@ tr:
     required: Genel Bakış
     content: İçerik
     practice: Öğretmen Uygulamaları
+    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
