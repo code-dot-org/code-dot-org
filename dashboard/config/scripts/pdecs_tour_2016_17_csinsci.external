@@ -3,7 +3,7 @@ title 'Tour of PD Space'
 description 'tour of the PD space'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/onlinePDstage1puzzle2.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/onlinePDstage1puzzle2.css">
 
 ## Using the Space 
 

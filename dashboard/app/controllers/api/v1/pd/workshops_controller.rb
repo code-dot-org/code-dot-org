@@ -14,7 +14,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshops = Pd::Workshop.where(
       course: Pd::Workshop::COURSE_CSF,
       workshop_type: Pd::Workshop::TYPE_PUBLIC
-    )
+    ).where.not(processed_location: nil)
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
   end
@@ -27,6 +27,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
+    process_location
     if @workshop.update(workshop_params)
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -38,6 +39,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
+    process_location force: true
     if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -60,10 +62,18 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # POST /api/v1/pd/workshops/1/end
   def end
     @workshop.end!
+    Pd::AsyncWorkshopHandler.process_ended_workshop @workshop.id
     head :no_content
   end
 
   private
+
+  def process_location(force: false)
+    location_address = workshop_params[:location_address]
+    if force || location_address != @workshop.location_address
+      @workshop.processed_location = Pd::Workshop.process_location(location_address)
+    end
+  end
 
   def adjust_facilitators
     supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)

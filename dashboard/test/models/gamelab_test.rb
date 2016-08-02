@@ -17,8 +17,8 @@ class GamelabTest < ActiveSupport::TestCase
     /mx.match(file_contents)[1]
 
     assert_same_keys(JSON.parse(code_functions), JSON.parse(Gamelab.palette),
-                     'gamelab/levels.js', 'gamelab.rb',
-                     "Ruby-JavaScript palette mismatch")
+      'gamelab/levels.js', 'gamelab.rb',
+      "Ruby-JavaScript palette mismatch")
   end
 
 end

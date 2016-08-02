@@ -68,6 +68,13 @@ Cell.prototype.isVariable = function () {
 /**
  * @return {Number}
  */
+Cell.prototype.getOriginalValue = function () {
+  return this.originalValue_;
+};
+
+/**
+ * @return {Number}
+ */
 Cell.prototype.getCurrentValue = function () {
   return this.currentValue_;
 };

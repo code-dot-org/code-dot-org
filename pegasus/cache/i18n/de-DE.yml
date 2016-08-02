@@ -1,7 +1,14 @@
 "de-DE":
   hour_of_code: Stunde der Code
   hello: Hallo Welt
+  'yes': Ja
+  'no': Nein
   select_language: Bitte wähle deine Sprache
+  upgrade_ie_message: Code.org wird bald aufhören Internet Explorer 8, 9 und 10 zu
+    unterstützen. Bitte installieren Sie einen modernen Browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org wird bald aufhören Internet Explorer 8,
+    9 und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
+  upgrade_ie_link: Mehr erfahren
   en: Informatik
   computer_science_edweek: Informatik-Bildungswoche
   csedweek_dates: 8. - 14. Dezember, 2014
@@ -51,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Sonderveranstaltung
   cded_sign_up: Registrieren
   cded_try_it: Versuche es
-  twentyhours_trynow: Jetzt ausprobieren
+  try_now: Probiere es jetzt aus
   california_heading: Bitten Sie Ihre Schule, Informatik zu unterrichten
   california_text: Jeder Lehrer kann unsere <a href='http://studio.code.org/'>kostenlosen
     Kurse</a> anbieten. Jede Grundschule kann <a href='http://code.org/educate/k5'>Informatik</a>
@@ -129,20 +136,20 @@
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
   third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Besuche Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_curriculum: Lade Scratch Jr. Curriculum herunter
+  third_party_scratchjr_btn_site: Besuche Scratch J.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Lade Scratch Jr. Curriculum herunter
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
@@ -150,7 +157,7 @@
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_curriculum: Lade Lightbot Curriculum herunter
   third_party_lightbot_btn_site: Besuche Lichtroboter
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
@@ -163,7 +170,7 @@
     apps for Android devices. Newcomers to App Inventor can have their first app up
     and running in an hour or less, and can program more complex apps in significantly
     less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_curriculum: Lade App Inventor 2 Curriculum herunter
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Besuche App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
@@ -176,8 +183,8 @@
     fast alles - Handel, soziale Netzwerke, Gesundheitswesen und vieles mehr neu überdacht.
     Wir machen die Bildung, die die Welt benötigt - Die erste echte heimische Programmierausbildung.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: Besuche Codecademy
+  third_party_organization: Organisation
   third_party_curriculum: Lehrplan
   third_party_pricing: Preise
   third_party_cost_free: Kostenlos für Schüler und Lehrer
@@ -363,6 +370,9 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Unterstützen sie uns
+  homepage_banner_emailprivacy: We’re making an important change to how we support
+    student privacy.
+  homepage_banner_emailprivacy_link: Read more
   homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann es lernen. Jetzt beginnen
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
@@ -444,16 +454,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Verwende Drag-und-drop-Bausteine und JavaScript.
   starwars_javascript_specs: 'Nur Englisch | Moderne Browser | Alter: ab 11 Jahre'
-  starwars_javascript_start_button: Jetzt ausprobieren
   starwars_blocks_title: Bausteine
   starwars_blocks_description: Verwende Drag-und-drop-Bausteine.
   starwars_blocks_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets |
     Alter: 6-106'
-  starwars_blocks_start_button: Erfahre mehr
-  starwars_watch_videos: Bevor Sie loslegen, sehen Sie sich eines dieser inspirierenden
-    Videos an
-  starwars_speak_languages: Sie sprechen eine andere Sprache?
-  starwars_help_translate: Helfen Sie uns beim Übersetzen
   starwars_platform_text: Moderne Browser, Smartphones, Tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer
@@ -464,6 +468,12 @@
   mc_platformtext: Moderne Browser, Smartphones, Tablets
   mc_specs: 'Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106'
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
   volunteer_engineer_submission_title: Inspiriere die Schüler und mache mit
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen dieses Jahr
     vom 7. bis 13. Dezember 2015 eine Hour of Code mit ihren Klassen. Sie brauchen
@@ -662,11 +672,18 @@
   dashboard_action_required: erforderlich
   dashboard_assessments_view: 'Zeige Bewertungen in:'
   dashboard_assessments_none: Keine Bewertungen
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Zusammenfassungen
+  dashboard_assessments_answers: Alle Antworten
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Nach Schwierigkeitsstufen sortieren:'
   dashboard_filter_all: Alle
-  dashboard_download_csv: Download CSV
+  dashboard_download_csv: Als CSV herunterladen
   dashboard_navigation_home_page: Lehrer-Hauptseite
   dashboard_navigation_section_student_progress: Schülerkonten und Fortschritt
   dashboard_navigation_section_teacher_progress: Ihr Kursfortschritt
@@ -675,9 +692,10 @@
   dashboard_navigation_section_pd: Fortbildung
   dashboard_navigation_section_speakers: Informatik <br/> Gastredner
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
-  dashboard_navigation_view_progress: Fortschritt ansehen
+  dashboard_navigation_view_progress: Fortschritt
   dashboard_navigation_view_text_responses: Textantworten anzeigen
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -694,6 +712,7 @@
   dashboard_progress_view: 'Fortschritt ansehen:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: Keine Antworten
   dashboard_sections_new_section: Neue Lerngruppe
@@ -704,6 +723,7 @@
   dashboard_sections_table_secret: Login-Typ
   dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Schüler
   dashboard_sections_table_code: Lerngruppen-Code
   dashboard_sections_name: Lerngruppen-Name
@@ -872,7 +892,12 @@
     nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom
     19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet
     werden, werden voraussichtlich verspätet beantwortet."
-  dashboard_announce_button_text: Mehr erfahren
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Mehr erfahren
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
     Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an
     der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -1015,6 +1040,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1034,7 +1060,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bausteine)
   math_category_name: Mathematik
-  hoc_category_name: Programmierstunde
+  hoc_category_name: Stunde der Code
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
@@ -1743,11 +1769,11 @@
   sphero_beyond_longdescription: SPRK-Lektionen ermöglichen Kindern, einen Schnellkurs
     im Programmieren von Robotern zu absolvieren und dabei ihre Mathematik- und Naturwissenschafts-Kenntnisse
     zu erweitern.
-  compatibility_https_header: Bitte aktivieren Sie HTTPS für Code.org.
-  compatibility_https_message: Zur Erhöhung der Sicherheit wechseln wir am % {Https_date}
-    zu HTTPS. Nach diesem Datum können Sie nicht mehr auf Code.org zugreifen. <a href='%{it_requirements_url}'>Klicken
-    Sie hier</a>, um zu erfahren, wie Sie HTTPS für Code.org aktivieren.
-  compatibility_https_hide_this_warning: Diese Warnung ausblenden
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
+    Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen
+    von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten,
+    aber es können Fehler auftreten.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1756,8 +1782,6 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  are_you_teacher: Are you a teacher?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

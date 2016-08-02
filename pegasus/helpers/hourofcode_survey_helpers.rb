@@ -23,6 +23,5 @@ def generate_hoc_survey_report
       district: data['teacher_district_s'],
       prize_choice: data['prize_choice_s']
     }
-
   end.compact
 end

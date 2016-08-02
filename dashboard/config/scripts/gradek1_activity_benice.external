@@ -1,0 +1,5 @@
+name 'gradek1_activity_beNice'
+title 'The computer is your friend'
+markdown <<MARKDOWN
+This activity will teach students how to behave around equipment and in the computer lab.
+MARKDOWN

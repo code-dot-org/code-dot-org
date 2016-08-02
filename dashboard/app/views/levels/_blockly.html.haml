@@ -1,5 +1,7 @@
 - unless @is_legacy_share
   %div{style: 'display: none;'}= render partial: 'levels/reference_area'
+- if @level.contained_levels.present?
+  %div{style: 'display: none;'}= render partial: 'levels/contained_levels'
 
 -# Ensure Font Awesome is loaded for use in apps
 %span{style: 'font: 1px FontAwesome; position: absolute;', id: 'fa-preload'} &nbsp;
@@ -11,6 +13,13 @@
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
 
+:javascript
+  //<![CDATA[
+  var script_path = "#{@script_level && build_script_level_path(@script_level)}";
+  var appOptions = #{app_options.to_json};
+  appOptions.locale = '#{js_locale}';
+  //]]>
+
 - content_for :body_scripts do
   = render_app_dependencies
 
@@ -18,9 +27,6 @@
   -# have been loaded.
   :javascript
     //<![CDATA[
-    var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    var appOptions = #{app_options.to_json};
-    appOptions.locale = '#{js_locale}';
     apps.setupApp(appOptions);
     apps.load(apps.init);
     //]]>

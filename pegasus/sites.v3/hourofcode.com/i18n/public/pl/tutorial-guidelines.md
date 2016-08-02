@@ -5,10 +5,9 @@ layout: wide
 
 ---
 
+# Przewodnik ze wskazówkami dotyczącymi Hour of Code™ i Computer Science Education Week
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
-
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org będzie organizować wiele inicjatyw związanych z Hour of Code™ na stronach Code.org, Hour of Code oraz CSEdWeek. Aktualną listę można znaleźć w [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Chcemy aby nasza oferta była interesująca i zróżnicowana, jednak naszym głównym celem przekazanie wiedzy uczniom i nauczycielom, którzy nie mieli wcześniej styczności z informatyką. Traktuj ten dokument jak przewodnik, którego odbiorcami docelowymi są osoby bez doświadczenia w programowaniu i informatyce.
 
@@ -263,4 +262,3 @@ Prosimy wszystkich o promocje swojego 1-godzinnego samouczka dla swoich użytkow
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Powrót do góry**](#top)
-

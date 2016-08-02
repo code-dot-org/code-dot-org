@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "odstrániť medzery z ľavej strany",
   "TEXT_TRIM_OPERATOR_RIGHT": "odstrániť medzery z pravej strany",
   "TEXT_TRIM_TOOLTIP": "Vráti kópiu textu s medzerami odstránenými z oboch strán.",
+  "UNUSED_CODE": "Nepoužitý kód",
   "VARIABLES_DEFAULT_NAME": "položka",
   "VARIABLES_GET_CREATE_SET": "Vytvoriť 'set %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

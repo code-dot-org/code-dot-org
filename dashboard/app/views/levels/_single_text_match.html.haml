@@ -21,7 +21,9 @@
   :javascript
 
     window.levelGroup.levels[#{level.id}] = new TextMatch(
+      #{level.id},
       "level_#{level.id}",
+      "#{app}",
       #{standalone},
       #{data['answers'] || []},
       #{last_attempt.to_json}

@@ -1,7 +1,7 @@
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var $ = require('jquery');
 var ReactTestUtils = require('react-addons-test-utils');
 
@@ -389,7 +389,7 @@ module.exports = {
 
         $("#runButton").click();
         assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running in design mode');
-        assert.equal($('#screenSelector:disabled').length, 1, 'screen select disabled when running');
+        assert.equal($('#screenSelector').length, 0, 'no screen selector while running');
 
         $("#resetButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
@@ -559,7 +559,7 @@ module.exports = {
         assertPropertyRowValue(2, 'height (px)', 100, assert);
         assertPropertyRowExists(3, 'x position (px)', assert);
         assertPropertyRowExists(4, 'y position (px)', assert);
-        assertPropertyRowExists(5, 'picture Choose...', assert);
+        assertPropertyRowExists(5, 'image Choose...', assert);
         assertPropertyRowExists(6, 'hidden', assert);
         assertPropertyRowExists(7, 'depth', assert);
 
@@ -816,7 +816,7 @@ module.exports = {
     },
 
     {
-      description: "images reset when picture is cleared",
+      description: "images reset when image is cleared",
       editCode: true,
       xml: '',
       // Use an asset path which we can access so that image loading will succeed
@@ -836,7 +836,7 @@ module.exports = {
         $('#designModeButton').click();
         $('#design_image1').click();
 
-        assertPropertyRowExists(5, 'picture Choose...', assert);
+        assertPropertyRowExists(5, 'image Choose...', assert);
 
         var input = $('#propertyRowContainer input').eq(5)[0];
         var designImage = $('#design_image1')[0];

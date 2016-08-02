@@ -3,7 +3,7 @@
 import {assert} from './configuredChai';
 
 var utils = require('@cdo/apps/utils');
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -260,7 +260,7 @@ exports.initializeGlobalsToDefaultValues = function () {
   // Deep clone level so that changes we make to it for testing don't bleed
   // into other tests.
   NetSimGlobals.setRootControllers({}, {
-    level: _.clone(levels.custom, true),
+    level: _.cloneDeep(levels.custom),
     globalMaxRouters: 20
   });
 };

@@ -1,5 +1,4 @@
 module SQS
-
   # A collection of Counters for the queue processor.
   class Metrics
     attr_accessor :successes, :failures
@@ -60,5 +59,4 @@ module SQS
       value
     end
   end
-
 end

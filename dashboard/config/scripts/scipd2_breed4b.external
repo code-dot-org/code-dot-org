@@ -1,0 +1,29 @@
+name 'sciPD2 breed4b'
+title 'Preface to the Guided Introduction to StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### Collision Events
+<br>
+
+**Step 1**
+
+Sick turtles should probably get healthy when they interact with doctors, right?  Let’s make that happen!  Watch the video below and **code along** to make your sick turtles get better when they run into doctor turtles.
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/HxWvtyCSRkU" frameborder="0" allowfullscreen></iframe>
+
+<br>
+**[Can't see the video? Click here.](https://docs.google.com/document/d/13Hy2cTst-ZMtwZ_YxY-_ww68IdcHyRA9HqByLPBmKmM/edit?usp=sharing)**
+
+<br>
+
+**Step 2**
+
+**Save** and **run** your code.  When you click "Setup" and "Forever" watch your World carefully.  You should notice the red sick agents turning to blue healthy agents when they collide with yellow agents.  Your doctor agents should not change color.
+If your code isn't working the way you intended, please refer to the <a href="http://www.projectguts.org/files/StarlogoNova-DebuggingTips.docx">TroubleShooting Guide</a>.
+<br>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

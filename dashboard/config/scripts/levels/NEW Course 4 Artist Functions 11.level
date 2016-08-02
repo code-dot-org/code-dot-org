@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -56,17 +57,17 @@
           </mutation>
           <title name="NAME">draw a square 20</title>
           <statement name="STACK">
-            <block type="draw_width" inline="false">
+            <block type="draw_width" inline="false" movable="false">
               <value name="WIDTH">
                 <block type="math_number">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <next>
-                <block type="controls_repeat">
+                <block type="controls_repeat" movable="false">
                   <title name="TIMES">4</title>
                   <statement name="DO">
-                    <block type="draw_move" inline="true">
+                    <block type="draw_move" inline="true" movable="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">

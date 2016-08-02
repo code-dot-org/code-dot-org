@@ -1,0 +1,31 @@
+.extraLinks
+  %h4
+    Extra Links:
+    %a{href: '#', onclick: 'return extraLinksClick()'} [hide/show]
+  .content
+    = yield
+
+:javascript
+
+  var extraLinksBox;
+
+  $().ready(function() {
+    extraLinksBox = $(".extraLinks .content");
+    if (document.cookie.indexOf('hide-extra-links-menu') >= 0) {
+      extraLinksBox.hide();
+    }
+  });
+
+  // Toggles the visibility of the links, setting a cookie to preserve the
+  // preference.
+  function extraLinksClick() {
+    extraLinksBox.toggle();
+    if (extraLinksBox.is(":visible")) {
+      // Clear the cookie using a blank value and a date in the past.
+      document.cookie = "hide-extra-links-menu=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    } else {
+      // Set the cookie and make it expire far into the future.
+      document.cookie="hide-extra-links-menu=true; expires=Fri, 31 Dec 9999 23:59:59 GMT;";
+    }
+    return false;
+  }

@@ -4,28 +4,18 @@ unless dry_run
   update_bootstrap_script.call
   update_certs.call unless cdn_enabled
 end
-
-# Since DesiredCapacity can change dynamically, use the current value
-# in the template so it doesn't get reset to the original value on every stack update.
-autoscaling = Aws::AutoScaling::Client.new
-asg = autoscaling.describe_auto_scaling_groups.auto_scaling_groups.find do |group|
-  tags = group.tags.map{|tag| [tag.key, tag.value]}.to_h
-  tags['aws:cloudformation:stack-name'] == stack_name &&
-    tags['aws:cloudformation:logical-id'] == 'WebServer'
-end
-autoscaling_count = asg ? asg.desired_capacity : 2
-
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
-  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
+  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
+  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
   AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
+      LoadBalancerName: <%=stack_name%>
       CrossZone: true
       SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
       Subnets: <%=public_subnets%>
@@ -43,7 +33,7 @@ Resources:
           SSLCertificateId: <%=certificate_arn%>
           PolicyNames: [CookieBasedPolicy]
       HealthCheck:
-        Target: HTTP:80/health_check.php
+        Target: HTTP:80/health_check
         HealthyThreshold: 2
         UnhealthyThreshold: 5
         Interval: 10
@@ -53,24 +43,19 @@ Resources:
         Timeout: 300
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
+    UpdatePolicy:
+      AutoScalingReplacingUpdate:
+        WillReplace: true
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
-        Count: 2
-    UpdatePolicy:
-      AutoScalingRollingUpdate:
-        MaxBatchSize: 12
-        MinInstancesInService: <%=autoscaling_count%>
-        PauseTime: PT60M
-        WaitOnResourceSignals: true
+        Timeout: PT25M
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 1
+      MinSize: 2
       MaxSize: 12
-      DesiredCapacity: <%=autoscaling_count%>
       HealthCheckType: ELB
-      HealthCheckGracePeriod: 4000
+      HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
       MetricsCollection:
         - Granularity: 1Minute
@@ -108,14 +93,10 @@ Resources:
       EstimatedInstanceWarmup: 300
       PolicyType: StepScaling
       StepAdjustments:
-        # 50-60% cpu, no adjustment
+        # 60-40% cpu, no adjustment
         - MetricIntervalUpperBound: 0
-          MetricIntervalLowerBound: -10
-          ScalingAdjustment: 0
-        # 50-40% cpu, -10% instances
-        - MetricIntervalUpperBound: -10
           MetricIntervalLowerBound: -20
-          ScalingAdjustment: -10
+          ScalingAdjustment: 0
         # 40-30% cpu, -20% instances
         - MetricIntervalUpperBound: -20
           MetricIntervalLowerBound: -30
@@ -161,11 +142,21 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('chef_role_bootstrap.sh.erb',
+        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
           resource_id: 'WebServer',
           node_name: 'fe-${INSTANCE_ID}',
           run_list: ['role[front-end]'],
           commit: `git ls-remote origin #{branch} | cut -f1`.strip )%>
+  WebServerHook:
+    Type: AWS::AutoScaling::LifecycleHook
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
+      DefaultResult: ABANDON
+      HeartbeatTimeout: 1800 # seconds = 30 minutes
+      NotificationTargetARN: {Ref: WebServerHookTopic}
+      RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
+  WebServerHookTopic: {Type: 'AWS::SNS::Topic'}
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
@@ -213,6 +204,35 @@ Resources:
             HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
             DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
 <% end -%>
+  GeocoderSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Geocoder Cache Subnet Group
+      SubnetIds: <%=subnets%>
+  GeocoderGroup:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Geocoder Replication Group
+      NumCacheClusters: 3
+      Engine: redis
+      CacheNodeType: cache.r3.large
+      SecurityGroupIds: ['Fn::GetAtt': [VPC, RedisSecurityGroup]]
+      CacheSubnetGroupName: {Ref: GeocoderSubnetGroup}
+  ActivitiesQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="activities-#{stack_name}"%>
+      RedrivePolicy:
+        maxReceiveCount: 3
+        deadLetterTargetArn: {'Fn::GetAtt': [ActivitiesDeadQueue,Arn]}
+  ActivitiesDeadQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="activities_dead-#{stack_name}"%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"

@@ -6,7 +6,7 @@
 'use strict';
 
 import $ from 'jquery';
-var netsimMsg = require('./locale');
+var netsimMsg = require('@cdo/netsim/locale');
 var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
@@ -712,6 +712,9 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.keydown(function (jqueryEvent){
       if (isUnmodifiedEnterPress(jqueryEvent)) {
         this.enterKeyPressedCallback_(jqueryEvent);
+        // We don't want to insert a newline or anything, since we have special
+        // handling for the enter key.
+        jqueryEvent.preventDefault();
       }
     }.bind(this));
     rowFields.message.keyup(

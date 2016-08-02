@@ -1,5 +1,4 @@
 module SQS
-
   # Defines the interface for a queued messages handler.
   class MessagesHandler
 
@@ -10,5 +9,4 @@ module SQS
       raise 'Handle must be implemented by subclasses'
     end
   end
-
 end

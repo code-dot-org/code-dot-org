@@ -9,6 +9,7 @@ This page contains numerous resources to assist in advocacy. You can find links 
 ## Code.org blog posts
 ### Miscellaneous
 
+* [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
 * Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).
@@ -39,7 +40,10 @@ We are interested in seeing what's happening in computer science education inter
 ## Outside resources
 
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education"
-- On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools
+- [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in the report by [Burning Glass](http://burning-glass.com/research/coding-skills/).
+- 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html). 
+- BSA released a report on the [economic impact of software](http://softwareimpact.bsa.org/). 
+- On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.
 - [Arkansas has seen a major boost in CS enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). This spring, Arkansas passed a law requiring (and funding) every high school to teach CS. Months later, Arkansas has seen a 260% increase in total CS enrollment, a 300% increase among females, and a 600% increase among African American females. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 - [Twice as many Americans](http://changetheequation.org/blog/hidden-half) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are [women](http://changetheequation.org/blog/grid-uncounted-women-computing). 
 - Change the Equation has a [summary](http://changetheequation.org/blog/talent-hidden-plain-sight-addressing-gaps-computer-science) of untapped minority talent in computing.

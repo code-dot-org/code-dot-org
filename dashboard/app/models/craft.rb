@@ -27,21 +27,23 @@ require "csv"
 class Craft < Blockly
   # before_save :update_maps
 
-  serialized_attrs :ground_plane,
-                   :ground_decoration_plane,
-                   :action_plane,
-                   :player_start_position,
-                   :available_blocks,
-                   :if_block_options,
-                   :place_block_options,
-                   :player_start_direction,
-                   :verification_function,
-                   :show_popup_on_load,
-                   :is_daytime,
-                   :special_level_type,
-                   :grid_width,
-                   :grid_height,
-                   :free_play
+  serialized_attrs(
+    :ground_plane,
+    :ground_decoration_plane,
+    :action_plane,
+    :player_start_position,
+    :available_blocks,
+    :if_block_options,
+    :place_block_options,
+    :player_start_direction,
+    :verification_function,
+    :show_popup_on_load,
+    :is_daytime,
+    :special_level_type,
+    :grid_width,
+    :grid_height,
+    :free_play
+  )
 
   JSON_LEVEL_MAPS = [
       :ground_plane,

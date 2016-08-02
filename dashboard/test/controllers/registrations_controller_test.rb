@@ -300,23 +300,6 @@ class RegistrationsControllerTest < ActionController::TestCase
       assigns(:user).errors.full_messages
   end
 
-  test 'sign up as teacher' do
-    get :new, user: {user_type: 'teacher'}
-
-    assert_response :success
-
-    # no age dropdown, yes age hidden field
-    assert_select 'select[name*="age"]', 0
-    assert_select 'input[type="hidden"][name*="age"][value="21"]'
-  end
-
-  test 'sign up as student' do
-    get :new, user: {user_type: 'student'}
-
-    assert_response :success
-    assert_select 'select[name*="age"]'
-  end
-
   test 'deleting sets deleted at on a user' do
     user = create :user
     sign_in user

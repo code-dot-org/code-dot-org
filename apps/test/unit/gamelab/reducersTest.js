@@ -2,7 +2,7 @@ var actions = require('@cdo/apps/gamelab/actions');
 var createStore = require('@cdo/apps/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/configuredChai';
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/gamelab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');

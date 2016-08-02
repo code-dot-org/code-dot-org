@@ -12,7 +12,7 @@
     "start_direction": "0",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "14",
+    "ideal": "10",
     "slider_speed": "0.5",
     "free_play": "false",
     "embed": "false",
@@ -31,7 +31,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

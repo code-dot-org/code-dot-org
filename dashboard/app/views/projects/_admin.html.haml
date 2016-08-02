@@ -1,5 +1,5 @@
-- if current_user && current_user.admin?
-  = render layout: 'shared/admin' do
+- if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+  = render layout: 'shared/extra_links' do
     %h3 Debug
     %h4 projects ({{projects.length}} total including hidden)
     %pre

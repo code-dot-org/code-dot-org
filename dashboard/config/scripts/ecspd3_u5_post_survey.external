@@ -2,7 +2,7 @@ name 'ECSPD3-u5 post survey'
 css 'unplugged'
 markdown <<MARKDOWN
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Share Out and Submit > Post-Survey
 #### Great Job!
 Congratulations, you've finished the Online PD for Unit 5 of the ECS curriulum. Please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! 

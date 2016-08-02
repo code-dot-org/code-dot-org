@@ -37,22 +37,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up nvm
   1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
-  1. Add the following to `~/.bash_profile` or your desired shell configuration file:  
-      `export NVM_DIR=~/.nvm`  
+  1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+      `export NVM_DIR=~/.nvm`
       `. $(brew --prefix nvm)/nvm.sh`
   1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node 0.12.4
-  1. These steps are necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
-  1. `nvm install v0.12.4`
-  1. Make that your default version: `nvm alias default v0.12.4`
-  1. (Can be skipped if your version of node did not just change) Reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` 
+1. Install Node 0.12.15
+  1. These steps are necessary because of problems with the newest versions of node. We want to be on node 0.12.15 and npm 2.15.1.
+  1. `nvm install 0.12.15` this command should make this version the default version and print something like: `Creating default alias: default -> 0.12.15 (-> v0.12.15)`
+  1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 1. Check that you have the correct versions of everything:
   1. Open a new Terminal window
   1. `ruby --version  # --> ruby 2.2.3`
-  1. `nvm ls          # --> v0.12.4`
-  1. `node --version  # --> v0.12.4`
-  1. `npm --version   # --> 2.10.1`
+  1. `nvm ls          # --> v0.12.15`
+  1. `node --version  # --> v0.12.15`
+  1. `npm --version   # --> 2.15.1`
 
 ### Ubuntu 14.04
 
@@ -78,21 +77,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         1. Install rvm from https://rvm.io/
         1. `rvm install 2.2.3`
         1. `rvm use 2.2.3 --default`
-1. Install Node.js 0.12.4 and npm 2.10.1
+1. Install Node.js 0.12.15 and npm 2.15.1
   1. Option A - nvm
     1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
       - After completion, close your current terminal window and open a new one.
-    1. `nvm install 0.12.4`
+    1. `nvm install` (this will install the version defined in `.nvmrc`)
   1. Option B - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
     1. `sudo apt-get install -y nodejs`
   1. Option C - Manual install
     1. [Nodejs.org](https://nodejs.org/download/)
 1. Check that you have the correct versions of everything:
-  1. open a new Terminal window  
+  1. open a new Terminal window
   1. `ruby --version  # --> ruby 2.2.3`
-  1. `node --version  # --> v0.12.4`
-  1. `npm --version   # --> 2.10.1`
+  1. `node --version  # --> v0.12.15`
+  1. `npm --version   # --> 2.15.1`
 
 ### Windows note: use an Ubuntu VM
 
@@ -108,29 +107,25 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Enabling JavaScript builds
-The default dashboard install uses a static build of apps and of code-studio JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
+The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
 
 1. (OS X) Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. Edit locals.yml and enable the following options:
-   
+
    ```
    # code-dot-org/locals.yml
-   
+
    # These enable the local apps build
    build_apps: true
    use_my_apps: true
-   
-   # These enable the local code-studio build
-   build_code_studio: true
-   use_my_code_studio: true
-   
+
    # This enables the local blockly-core build
    build_blockly_core: true
    ```
 
 1. Run `rake package` for the changes to take effect.
 
-This configures dashboard to rebuild apps/code-studio/blockly-core whenever you run `rake build` and to use the versions that you built yourself.  See the documentation in those directories for faster ways to build and iterate.
+This configures dashboard to rebuild apps/blockly-core whenever you run `rake build` and to use the versions that you built yourself.  See the documentation in those directories for faster ways to build and iterate.
 
 If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
 

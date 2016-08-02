@@ -1,0 +1,41 @@
+name 'sciPD2 breed2b'
+title 'Preface to the Guided Introduction to StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### Creating Doctor Agents
+
+Doctor agents get created where the rest of the agents get created--in the World tab!  Follow the along with this video to create your Doctor agents!
+
+
+
+**Step 1**
+
+Watch the video below to create Doctor agents in your World tab.
+
+<br>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/W7Pzn18_TnU" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://docs.google.com/document/d/13Hy2cTst-ZMtwZ_YxY-_ww68IdcHyRA9HqByLPBmKmM/edit?usp=sharing)**
+
+
+**Step 2**
+
+Save, run your code, and click "Setup."  You should have yellow Doctor agents in your World now.  If you don't, refer to the <a href="http://www.projectguts.org/files/StarlogoNova-DebuggingTips.docx"> SLNova TroubleShooting Guide</a>.  
+
+**Step 3**
+
+For an extra challenge, add a slider to control the number of Doctor agents that get created in your World.  
+
+
+
+<br>
+
+
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

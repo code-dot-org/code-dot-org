@@ -1,5 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  respond_to :json
+
   def update
     @user = User.find(current_user.id)
     params.permit!

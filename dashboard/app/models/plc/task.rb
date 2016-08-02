@@ -19,17 +19,5 @@ class Plc::Task < ActiveRecord::Base
   belongs_to :script_level
   has_and_belongs_to_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_task_id', association_foreign_key: 'plc_learning_module_id'
 
-  include SerializedProperties
-  include StiFactory
-
   attr_readonly :type
-
-  # Can be overridden by subclasses, otherwise they will default to something like Learning Resource Task
-  def self.titleized_task_type
-    self.name.demodulize.titleize
-  end
-
-  def self.underscored_task_type
-    self.name.demodulize.underscore
-  end
 end

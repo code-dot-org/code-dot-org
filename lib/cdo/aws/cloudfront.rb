@@ -12,7 +12,12 @@ module AWS
     CACHED_METHODS = %w(HEAD GET OPTIONS)
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
     ERROR_CODES = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504]
-
+    # Configure CloudFront to forward these headers for S3 origins.
+    S3_FORWARD_HEADERS = %w(
+      Access-Control-Request-Headers
+      Access-Control-Request-Method
+      Origin
+    )
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
 
@@ -73,7 +78,7 @@ module AWS
         name[:items].sort! if name
       end
       config[:aliases][:items].sort!
-      config[:origins][:items].sort!
+      config[:origins][:items].sort_by!{|o| o[:id]}
       config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
     end
 
@@ -185,7 +190,7 @@ module AWS
         },
         default_root_object: '',
         origins: {# required
-          quantity: 1, # required
+          quantity: 2, # required
           items: [
             {
               id: 'cdo', # required
@@ -203,6 +208,17 @@ module AWS
               custom_headers: {
                 quantity: 0
               }
+            },
+            {
+              id: 'cdo-assets',
+              domain_name: "#{CDO.assets_bucket}.s3.amazonaws.com",
+              origin_path: "/#{rack_env}",
+              s3_origin_config: {
+                origin_access_identity: ''
+              },
+              custom_headers: {
+                quantity: 0
+              },
             },
           ],
         },
@@ -289,15 +305,24 @@ module AWS
           IncludeCookies: false,
           Prefix: cloudfront[:log][:prefix]
         },
-        Origins: [{
-          Id: 'cdo',
-          CustomOriginConfig: {
-            OriginProtocolPolicy: 'match-viewer'
+        Origins: [
+          {
+            Id: 'cdo',
+            CustomOriginConfig: {
+              OriginProtocolPolicy: 'match-viewer'
+            },
+            DomainName: origin,
+            OriginPath: '',
           },
-          DomainName: origin,
-          OriginPath: '',
-
-        }],
+          {
+            Id: 'cdo-assets',
+            DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
+            OriginPath: "/#{rack_env}",
+            S3OriginConfig: {
+              OriginAccessIdentity: ''
+            },
+          },
+        ],
         PriceClass: 'PriceClass_All',
         Restrictions: {
           GeoRestriction: {
@@ -315,6 +340,7 @@ module AWS
     # Syntax reference: http://docs.aws.amazon.com/sdkforruby/api/Aws/CloudFront/Types/CacheBehavior.html
     # `behavior_config` contains `headers` and `cookies` whitelists.
     def self.cache_behavior(behavior_config, path=nil)
+      s3 = behavior_config[:proxy] == 'cdo-assets'
       cookie_config = if behavior_config[:cookies].is_a?(Array)
                         {# required
                           forward: 'whitelist', # required, accepts none, whitelist, all
@@ -328,10 +354,12 @@ module AWS
                           forward: behavior_config[:cookies]
                         }
                       end
-      # Always explicitly include Host header in CloudFront's cache key, to match Varnish defaults.
-      headers = behavior_config[:headers] + ['Host']
+      # Include Host header in CloudFront's cache key to match Varnish for custom origins.
+      # Include S3 forward headers for s3 origins.
+      headers = behavior_config[:headers] +
+        (s3 ? S3_FORWARD_HEADERS : ['Host'])
       behavior = {# required
-        target_origin_id: 'cdo', # required
+        target_origin_id: (s3 ? behavior_config[:proxy] : 'cdo'), # required
         forwarded_values: {# required
           query_string: true, # required
           cookies: cookie_config,
@@ -357,7 +385,7 @@ module AWS
         smooth_streaming: false,
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
-        compress: false,
+        compress: s3, # Serve gzip-compressed assets on s3 origins
       }
       behavior[:path_pattern] = path if path
       behavior
@@ -365,6 +393,11 @@ module AWS
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior_cloudformation(behavior_config, path=nil)
+      s3 = behavior_config[:proxy] == 'cdo-assets'
+      # Include Host header in CloudFront's cache key to match Varnish for custom origins.
+      # Include S3 forward headers for s3 origins.
+      headers = behavior_config[:headers] +
+        (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'whitelist',
@@ -377,18 +410,18 @@ module AWS
       {
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
-        Compress: false,
+        Compress: s3,
         DefaultTTL: 0,
         ForwardedValues: {
           Cookies: cookie_config,
           # Always explicitly include Host and CloudFront-Forwarded-Proto headers in CloudFront's cache key, to match Varnish defaults.
-          Headers: behavior_config[:headers] + %w(Host CloudFront-Forwarded-Proto),
+          Headers: headers,
           QueryString: true
         },
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
-        TargetOriginId: 'cdo',
+        TargetOriginId: (s3 ? behavior_config[:proxy] : 'cdo'),
         TrustedSigners: [],
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|

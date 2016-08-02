@@ -16,14 +16,16 @@ class ImageLibTest < ActiveSupport::TestCase
     expected_image = test_image(expected_image_name)
 
     matching = images_equal?(framed_image, expected_image)
-    if !matching
+    unless matching
       # Save the generated image to a file to help with debugger
       tmp_path = '/tmp/framed_image.png'
       framed_image.write(tmp_path)
 
-      message = ["Overlaid image did not match expected value",
-                  "Actual image: #{tmp_path}",
-                  "Expected image: #{test_image_path(expected_image_name)}."].join("\n")
+      message = [
+        "Overlaid image did not match expected value",
+        "Actual image: #{tmp_path}",
+        "Expected image: #{test_image_path(expected_image_name)}."
+      ].join("\n")
       assert false, message
     end
   end
@@ -31,17 +33,17 @@ class ImageLibTest < ActiveSupport::TestCase
   # Make sure the images_match helper function is working correctly.
   def test_images_match
     assert images_equal?(test_image('foreground_overlay.png'),
-                         test_image('foreground_overlay_copy.png')),
-           'Identical images should match'
+      test_image('foreground_overlay_copy.png')),
+      'Identical images should match'
     assert images_equal?(test_image('foreground_overlay.png'),
-                         test_image('foreground_overlay.png')),
-           'Image should match itself'
+      test_image('foreground_overlay.png')),
+      'Image should match itself'
     refute images_equal?(test_image('foreground_overlay.png'),
-                         test_image('foreground_overlay_tweaked.png')),
-           'Images with same size but different pixels should not match'
+      test_image('foreground_overlay_tweaked.png')),
+      'Images with same size but different pixels should not match'
     refute images_equal?(test_image('foreground_overlay.png'),
-                         test_image('blank_sharing_drawing_anna.png')),
-           'Images with different sizes and pixels should not match'
+      test_image('blank_sharing_drawing_anna.png')),
+      'Images with different sizes and pixels should not match'
   end
 
   def test_to_png_for_png

@@ -6,28 +6,35 @@ student_of_admin_required 'true'
 hidden 'true'
 
 stage 'Design Mode'
-level 'CSDU4 - Design Mode - 15'
-level 'CSDU4 - Design Mode - 16'
-level 'CSDU4 - Design Mode - 4'
-level 'CSDU4 - Design Mode - 3'
-level 'CSDU4 - Design Mode - 11'
-level 'CSDU4 - Design Mode - 5'
-level 'CSDU4 - Design Mode - 17'
-level 'CSDU4 - Design Mode - 21'
-level 'CSDU4 - Design Mode - 18'
-level 'CSDU4 - Design Mode - 19'
-level 'CSDU4 - Design Mode - 20'
-level 'CSDU4 - Design Mode - 23'
-level 'CSDU4 - AppLab - 2'
-level 'CSDU4 - Design Mode - 24'
-level 'CSDU4 - Design Mode - 25'
-level 'CSDU4 - Design Mode - 26'
-level 'CSDU4 - Design Mode - 27'
-level 'CSDU4 - Design Mode - 28'
-level 'CSDU4 - Design Mode - 29'
-level 'CSDU4 - Design Mode - 30'
-level 'CSDU4 - Design Mode - 31'
-level 'CSDU4 - Design Mode - 32'
-level 'CSDU4 - Design Mode - 33'
-level 'CSDU4 - Design Mode - 8'
-level 'CSDU4 - Design Mode - 12'
+level 'CSDU4 - Design Mode - 15' # Intro design mode
+level 'CSDU4 - Design Mode - 4' # Change id, add second button
+level 'CSD U4 - Design Mode Text' # Add text header
+level 'CSD U4 - Design Mode Input Widgets' # Add input widgets
+level 'CSDU4 - Design Mode - 21' # Upload image
+#level 'CSDU4 - Design Mode - 29' # Dropdown
+level 'CSDU4 - Design Mode - 18' # Debugging depth (rework)
+level 'CSD U4 - Design Mode Project' # Make your page
+
+stage 'Making it Interactive'
+level 'CSDU4 - Design Mode - 16' # Wire up your button (events stage)
+level 'CSDU4 - Design Mode - 3' # How do Events work? (events stage)
+level 'CSDU4 - Design Mode - 11' # New event types (events stage)
+level 'CSDU4 - Design Mode - 5' # Debugging IDs (events stage)
+level 'CSDU4 - Design Mode - 17' # Debugging IDs & console.log() (events stage)
+level 'CSDU4 - Design Mode - 19' # Second screen (events stage)
+level 'CSDU4 - Design Mode - 20' # Set screen (events stage)
+
+stage 'Adding Functionality (optional)'
+level 'CSDU4 - Design Mode - 23' # Set text (advanced functionality stage)
+level 'CSDU4 - AppLab - 2' # User input (advanced functionality stage)
+level 'CSDU4 - Design Mode - 24' # Number input (advanced functionality stage)
+level 'CSDU4 - Design Mode - 25' # Text input (advanced functionality stage)
+level 'CSDU4 - Design Mode - 26' # Saving input (advanced functionality stage)
+level 'CSDU4 - Design Mode - 27' # Text output (advanced functionality stage)
+level 'CSDU4 - Design Mode - 28' # Change event (advanced functionality stage)
+level 'CSDU4 - Design Mode - 30' # Conditional (advanced functionality stage)
+level 'CSDU4 - Design Mode - 31' # Keypress (advanced functionality stage)
+level 'CSDU4 - Design Mode - 32' # Keyup/Keydown (advanced functionality stage)
+level 'CSDU4 - Design Mode - 33' # Sounds (advanced functionality stage)
+level 'CSDU4 - Design Mode - 8' # Moving buttons (advanced functionality stage)
+level 'CSDU4 - Design Mode - 12' # Text Label (advanced functionality stage)

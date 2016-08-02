@@ -24,7 +24,7 @@ var Eval = module.exports;
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
@@ -38,6 +38,7 @@ var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
 var utils = require('../utils');
+var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -84,6 +85,8 @@ Eval.init = function (config) {
   config.skin.smallStaticAvatar = null;
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
+
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
@@ -153,8 +156,8 @@ Eval.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<EvalVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={<EvalVisualizationColumn/>}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -505,6 +508,12 @@ Eval.execute = function () {
   }
 
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
+
+  if (!Eval.result && level.isProjectLevel) {
+    // In projects mode, report callback is never called. In the case of a
+    // failure, immediately display any feedback.
+    displayFeedback();
+  }
 };
 
 Eval.checkExamples_ = function (resetPlayspace) {

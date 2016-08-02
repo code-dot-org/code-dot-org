@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview The class representing one block.
  * @author fraser@google.com (Neil Fraser)
@@ -79,6 +81,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
+
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
   this.currentlyHidden_ = false;
@@ -136,6 +139,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.setCurrentlyHidden(true);
   }
 
+  this.handleBlockLimitChanges();
+
   /** @type {goog.events.EventTarget} */
   this.blockEvents = new goog.events.EventTarget();
 };
@@ -186,6 +191,35 @@ Blockly.Block.prototype.init = null;
  * @type {?function()}
  */
 Blockly.Block.prototype.onchange = null;
+
+/**
+ * Update limit UI on block count changes.
+ */
+Blockly.Block.prototype.handleBlockLimitChanges = function() {
+  if (this.blockSpace && this.blockSpace.blockSpaceEditor) {
+    // Normally we want to show block limits in the flyout, but while editing
+    // blocks (e.g. in the Toolbox Blocks Editor), we'd like to show them in
+    // the main block space.
+    var shouldShowBlockLimits = Blockly.editBlocks ? !this.isInFlyout : this.isInFlyout;
+    if (shouldShowBlockLimits) {
+      this.blockSpace.blockSpaceEditor.blockLimits.events.listen('change',
+          this.onBlockLimitChange.bind(this));
+    }
+  }
+};
+
+Blockly.Block.prototype.onBlockLimitChange = function(eventObject) {
+  if (eventObject.type !== this.type) {
+    return;
+  }
+  if (!this.svg_) {
+    return;
+  }
+
+  // When editing blocks, show full count. Otherwise, show remaining #.
+  var displayCount = Blockly.editBlocks ? eventObject.limit : eventObject.remaining;
+  this.svg_.updateLimit(displayCount);
+};
 
 /**
  * @param {Blockly.BlockSpace} blockSpace target blockspace to begin rendering on
@@ -925,6 +959,20 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       }
     };
     options.push(editableOption);
+
+    // limit
+    var getCurrentLimit = function() {
+      return block.blockSpace.blockSpaceEditor.blockLimits.getLimit(block.type);
+    };
+    var limitOption = {
+      text: "Set limit (current: " + (getCurrentLimit() || 'none') + ")",
+      enabled: true,
+      callback: function () {
+        block.blockSpace.blockSpaceEditor.blockLimits.setLimit(
+            block.type, prompt("New Limit", getCurrentLimit()));
+      }
+    };
+    options.push(limitOption);
   }
 
   // Allow the block to add or modify options.

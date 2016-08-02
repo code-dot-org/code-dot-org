@@ -173,22 +173,34 @@ Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
  * the given XML. Used to display single blocks in feedback dialogs.
  * @param {!Element} container HTML Element into which to render
  * @param {!Element} xml XML block
+ * @param {Object} opt_options optional options
+ * @param {boolean} opt_options.noScrolling whether or not to disable
+ *        scrolling
  * @returns {Blockly.BlockSpace}
  */
-Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml) {
-  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, function () {
-    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
-    if (!metrics) {
-      return null;
-    }
-    // Expand the view so we don't see scrollbars
-    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
-    return metrics;
-  }, function (xyRatio) {
-    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
-  }, true, true);
+Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml, opt_options) {
+  opt_options = opt_options || {};
+
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, {
+    getMetrics: function () {
+      var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+      if (!metrics) {
+        return null;
+      }
+      // Expand the view so we don't see scrollbars
+      metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+      return metrics;
+    },
+    setMetrics: function (xyRatio) {
+      Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+    },
+    hideTrashRect: true,
+    readOnly: true,
+    noScrolling: opt_options.noScrolling
+  });
 
   var blockSpace = blockSpaceEditor.blockSpace;
+
   Blockly.Xml.domToBlockSpace(blockSpace, xml);
   return blockSpace;
 };
@@ -657,6 +669,16 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
   if (xmlBlock.getElementsByTagName('block').length >=
       this.remainingCapacity()) {
     return;
+  }
+  if (this.blockSpaceEditor.blockLimits.hasBlockLimits()) {
+    var types = goog.array.map(xmlBlock.getElementsByTagName('block'), function(block) {
+      return block.getAttribute('type');
+    });
+    types.push(xmlBlock.getAttribute('type'));
+
+    if (!this.blockSpaceEditor.blockLimits.canAddBlocks(types)) {
+      return;
+    }
   }
   var block = Blockly.Xml.domToBlock(this, xmlBlock);
   // Move the duplicate to original position.

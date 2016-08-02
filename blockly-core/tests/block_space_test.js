@@ -52,6 +52,31 @@ function test_blockSpaceBumpsBlocks() {
   goog.dom.removeNode(container);
 }
 
+function test_scrollingCapturesMouseWheelEvents() {
+  [true, false].forEach(function (scrollingEnabled) {
+    var container = Blockly.Test.initializeBlockSpaceEditor({
+      noScrolling: !scrollingEnabled
+    });
+
+    var eventCaptured = true;
+    container.addEventListener('wheel', function () {
+      eventCaptured = false;
+    });
+
+    Blockly.fireUiEvent(Blockly.mainBlockSpace.blockSpaceEditor.svg_, 'wheel', {
+      deltaY: 10
+    })
+
+    // When scrolling is enabled, the event should be captured by the
+    // ScrollBarPair and not make it up to the container.
+    // When scrolling is disabled, the event should not be captured, and
+    // should make it to the container and beyond.
+    assertEquals(eventCaptured, scrollingEnabled);
+
+    goog.dom.removeNode(container);
+  });
+}
+
 function test_scrollBarsActivateOnDropOutsideViewport() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
 
@@ -192,4 +217,44 @@ function test_blockSpacesUseSameWidgetDiv() {
   var second = Blockly.WidgetDiv;
   assertNotNull(second);
   assertEquals(first, second);
+}
+
+function test_blockSpaceWithLimitedQuantitiesOfBlocks() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+
+  var flyout = Blockly.mainBlockSpace.blockSpaceEditor.flyout_;
+  flyout.init(Blockly.mainBlockSpace, true);
+
+  var toolboxXML = Blockly.Xml.textToDom(
+    '<xml>' +
+      '<block type="math_number" limit="1">' +
+        '<title name="NUM">0</title>' +
+      '</block>' +
+    '</xml>'
+  );
+  flyout.show(toolboxXML.childNodes);
+
+  var blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
+
+  assertEquals(true, blockLimits.hasBlockLimits());
+  assertEquals(1, blockLimits.limits_.math_number.limit);
+  assertEquals(0, blockLimits.limits_.math_number.count);
+
+  // can initially accomodate one more, but not two
+  assertEquals(true, blockLimits.blockTypeWithinLimits('math_number', 1));
+  assertEquals(false, blockLimits.blockTypeWithinLimits('math_number', 2));
+
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(
+    '<xml>' +
+      '<block type="math_number">' +
+        '<title name="NUM">0</title>' +
+      '</block>' +
+    '</xml>'
+  ));
+  flyout.onBlockSpaceChange_();
+
+  // can no longer even accomodate one
+  assertEquals(false, blockLimits.blockTypeWithinLimits('math_number', 1));
+
+  goog.dom.removeNode(container);
 }

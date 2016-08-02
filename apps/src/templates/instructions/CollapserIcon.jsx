@@ -2,7 +2,7 @@
 
 var React = require('react');
 var Radium = require('radium');
-var _ = require('../../lodash');
+var _ = require('lodash');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 
@@ -28,9 +28,11 @@ var CollapserIcon = function (props) {
   var iconClass = props.collapsed ? 'fa-chevron-circle-up' : 'fa-chevron-circle-down';
 
   return (
-    <i style={styles.showHideButton}
-        onClick={props.onClick}
-        className={iconClass + " fa"}/>
+    <i
+      style={styles.showHideButton}
+      onClick={props.onClick}
+      className={iconClass + " fa"}
+    />
   );
 };
 

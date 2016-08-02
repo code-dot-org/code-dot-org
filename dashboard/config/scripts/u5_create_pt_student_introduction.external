@@ -3,21 +3,21 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 5: Lesson 04 - Create Performance Task
+# Unit 5: Lesson 04 - Create Performance Task
 
-# Background
+## Background
 
 It's finally time for you to take on the Create Performance Task! For the next several days, you should work individually on your project without teacher support. At the end of the 12th day (or hour) of this task, you will submit your program code, video, and written responses to your teacher.
 
 Best of luck!
 
-# Lesson
+## Lesson
 
 * Make a plan for the Performance Task.
 * Complete the Create Performance Task.
 * Submit your program code, video, and written responses to your teacher.
 
-# Resources
+## Resources
 
 * Performance Task: <a href="https://drive.google.com/open?id=0B78N8p4zhHFgWHRQVE9PeEs5WmM" target="_blank">Create Performance Task</a>
 * Rubric: Create Performance Task Rubric

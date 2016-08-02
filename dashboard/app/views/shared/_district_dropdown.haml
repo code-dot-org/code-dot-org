@@ -8,7 +8,7 @@
 
     .form-group
       .question Select school type
-      %select#school-type.form-control{name: "#{form_name}[school_type]", type: "select", required: true}
+      %select#school-type.form-control{name: "#{form_name}[school_type]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
         %option{value: "charter"} Charter
         %option{value: "private"} Private

@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -8,12 +8,12 @@ var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
-var _ = require('./lodash');
+var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
 var experiments = require('./experiments');
 var KeyCodes = constants.KeyCodes;
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -27,6 +27,8 @@ var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
+import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -35,7 +37,17 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-import { setInstructionsConstants } from './redux/instructions';
+import { Provider } from 'react-redux';
+import {
+  substituteInstructionImages,
+  determineInstructionsConstants,
+  setInstructionsConstants,
+  setFeedback
+} from './redux/instructions';
+import {
+  openDialog as openInstructionsDialog,
+  closeDialog as closeInstructionsDialog
+} from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -50,8 +62,6 @@ var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
-var ENGLISH_LOCALE = 'en_us';
-
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
@@ -61,9 +71,12 @@ var MAX_PHONE_WIDTH = 500;
  * Object representing everything in window.appOptions (often passed around as
  * config)
  * @typedef {Object} AppOptionsConfig
+ * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
+ *           false if they are 12 or younger, and undefined if we don't know
+ *           (such as when they are not signed in).
  */
 
-var StudioApp = function () {
+function StudioApp() {
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
 
@@ -216,9 +229,12 @@ var StudioApp = function () {
   this.noPadding = false;
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
+}
+// TODO: once code-studio and apps share common modules in the same bundle,
+// get rid of this window nonsense.
+module.exports = window.StudioApp = window.StudioApp || {
+  singleton: new StudioApp()
 };
-module.exports = StudioApp;
-StudioApp.singleton = new StudioApp();
 
 /**
  * Configure StudioApp options
@@ -323,6 +339,17 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
+  ReactDOM.render(
+    <Provider store={this.reduxStore}>
+      <InstructionsDialogWrapper
+        showInstructionsDialog={(autoClose, showHints) => {
+            this.showInstructionsDialog_(config.level, autoClose, showHints);
+          }}
+      />
+    </Provider>,
+    document.body.appendChild(document.createElement('div'))
+  );
+
   if (config.usesAssets) {
     assetPrefix.init(config);
 
@@ -339,7 +366,6 @@ StudioApp.prototype.init = function (config) {
       containerId: config.containerId,
       embed: config.embed,
       level: config.level,
-      level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
@@ -422,7 +448,12 @@ StudioApp.prototype.init = function (config) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructionsDialog_(config.level, shouldAutoClose, false);
+      this.reduxStore.dispatch(openInstructionsDialog({
+        autoClose: shouldAutoClose,
+        showHints: false,
+        aniGifOnly: false,
+        hintsOnly: false
+      }));
     }.bind(this));
   }
 
@@ -464,10 +495,6 @@ StudioApp.prototype.init = function (config) {
     config.loadAudio();
   }
 
-  if (!config.showInstructionsInTopPane) {
-    this.configureAndShowInstructions_(config);
-  }
-
   this.configureHints_(config);
 
   if (this.editCode) {
@@ -482,7 +509,8 @@ StudioApp.prototype.init = function (config) {
     utils.fireResizeEvent();
   }
 
-  this.alertIfAbusiveProject('#codeWorkspace');
+  this.alertIfAbusiveProject();
+  this.alertIfProfaneOrPrivacyViolatingProject();
 
   // make sure startIFrameEmbeddedApp has access to the config object
   // so it can decide whether or not to show a warning.
@@ -499,6 +527,15 @@ StudioApp.prototype.init = function (config) {
 
   if (!!config.level.projectTemplateLevelName) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
+  }
+
+  if (!!config.level.pairingDriver) {
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+      </div>
+    );
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -592,41 +629,69 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
+StudioApp.prototype.getFirstContainedLevelResult_ = function () {
+  var results = this.getContainedLevelResults();
+  if (results.length !== 1) {
+    throw "Exactly one contained level result is currently required.";
+  }
+  return results[0];
+};
+
+StudioApp.prototype.hasValidContainedLevelResult_ = function () {
+  var firstResult = this.getFirstContainedLevelResult_();
+  return firstResult.result.valid;
+};
+
+/**
+ * @param {!AppOptionsConfig} config
+ */
+ StudioApp.prototype.notifyInitialRenderComplete = function (config) {
+  if (config.hasContainedLevels && config.containedLevelOps) {
+    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
+    this.getContainedLevelResults = config.containedLevelOps.getResults;
+
+    $('#containedLevel0').appendTo($('#containedLevelContainer'));
+
+    if (this.hasValidContainedLevelResult_()) {
+      // We already have an answer, don't allow it to be changed, but allow Run
+      // to be pressed so the code can be run again.
+      this.lockContainedLevelAnswers();
+    } else {
+      // No answers yet, disable Run button until there is an answer
+      $('#runButton').prop('disabled', true);
+
+      config.containedLevelOps.registerAnswerChangedFn(levelId => {
+        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
+      });
+    }
+  }
+};
+
+StudioApp.prototype.getContainedLevelResultsInfo = function () {
+  if (this.getContainedLevelResults) {
+    var firstResult = this.getFirstContainedLevelResult_();
+    var containedResult = firstResult.result;
+    var testResults = utils.valueOr(firstResult.testResult,
+        containedResult.result ? this.TestResults.ALL_PASS :
+          this.TestResults.GENERIC_FAIL);
+    return {
+      app: firstResult.app,
+      level: firstResult.id,
+      callback: firstResult.callback,
+      result: containedResult.result,
+      testResults: testResults,
+      program: containedResult.response,
+      feedback: firstResult.feedback
+    };
+  }
+};
+
 StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
     config.shareWarningInfo.onTooYoung = onTooYoung;
     showWarnings(config);
   } else {
     this.runButtonClick();
-  }
-};
-
-/**
- * Sets html for prompts below playspace, anigif, and shows instructions dialog
- * @param {AppOptionsConfig}
- */
-StudioApp.prototype.configureAndShowInstructions_ = function (config) {
-  var promptDiv = document.getElementById('prompt');
-  var prompt2Div = document.getElementById('prompt2');
-  if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(
-      config.level.instructions, this.skin.instructions2ImageSubstitutions);
-    $(promptDiv).html(instructionsHtml);
-  }
-  if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(
-      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
-    $(prompt2Div).html(instructions2Html);
-    $(prompt2Div).show();
-  }
-
-  var aniGifPreview = document.getElementById('ani-gif-preview');
-  if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
-    var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'inline-block';
   }
 };
 
@@ -638,21 +703,6 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
 StudioApp.prototype.configureHints_ = function (config) {
   if (!this.hasInstructionsToShow(config)) {
     return;
-  }
-
-  var bubble = document.getElementById('bubble');
-  if (bubble) {
-    dom.addClickTouchEvent(bubble, function () {
-      const reduxState = this.reduxStore.getState();
-      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
-      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
-
-      // Don't show dialog on click in top pane unless we have hints
-      if (instructionsInTopPane && !hasAuthoredHints) {
-        return;
-      }
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
   }
 
   var promptIcon = document.getElementById('prompt-icon');
@@ -706,24 +756,6 @@ StudioApp.prototype.scaleLegacyShare = function () {
     applyTransformOrigin(vizContainer, 'left top');
     applyTransformScale(vizContainer, 'scale(' + scale + ')');
   }
-};
-
-/**
- * @param {string} htmlText
- * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
- *   replacement values.
- */
-StudioApp.prototype.substituteInstructionImages = function (htmlText, substitutions) {
-  if (htmlText) {
-    for (var prop in substitutions) {
-      var value = substitutions[prop];
-      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
-      var re = new RegExp('\\[' + prop + '\\]', 'g');
-      htmlText = htmlText.replace(re, substitutionHtml);
-    }
-  }
-
-  return htmlText;
 };
 
 StudioApp.prototype.getCode = function () {
@@ -922,6 +954,10 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
+  if (this.lockContainedLevelAnswers) {
+    this.lockContainedLevelAnswers();
+  }
+
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
   run.style.display = showRun ? 'inline-block' : 'none';
@@ -1040,6 +1076,10 @@ StudioApp.prototype.localeDirection = function () {
   return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
+StudioApp.prototype.showNextHint = function () {
+  return this.authoredHintsController_.showNextHint();
+};
+
 /**
 * Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
 * XML argument may be generated from the console with:
@@ -1123,47 +1163,24 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
 
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
+
+  if (!response) {
+    return;
+  }
+
+  // Track GA events
+  if (response.new_level_completed) {
+    trackEvent('Puzzle', 'Completed', response.level_path, response.level_attempts);
+  }
+
+  if (response.share_failure) {
+    trackEvent('Share', 'Failure', response.share_failure.type);
+  }
 };
 
 /**
- * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
- *   have markdown instructions
- * @param {object} level
- * @param {boolean} showHints
- * @returns {React.element}
- */
-StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var renderedMarkdown;
-
-  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
-
-  // longInstructions will be undefined if non-english
-  if (longInstructions) {
-    var markdownWithImages = this.substituteInstructionImages(longInstructions,
-      this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = processMarkdown(markdownWithImages);
-  }
-
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  return (
-    <Instructions
-      puzzleTitle={puzzleTitle}
-      instructions={this.substituteInstructionImages(level.instructions,
-        this.skin.instructions2ImageSubstitutions)}
-      instructions2={this.substituteInstructionImages(level.instructions2,
-        this.skin.instructions2ImageSubstitutions)}
-      renderedMarkdown={renderedMarkdown}
-      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      aniGifURL={level.aniGifURL}
-      authoredHints={authoredHints}/>
-  );
-};
-
-/**
+ * Show our instructions dialog. This should never be called directly, and will
+ * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
  * @param {boolean} showHints
@@ -1193,9 +1210,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
       headerElement.className += ' no-modal-icon';
     }
   }
-
-  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
-    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1237,6 +1251,9 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     var event = document.createEvent('Event');
     event.initEvent('instructionsHidden', true, true);
     document.dispatchEvent(event);
+
+    // update redux
+    this.reduxStore.dispatch(closeInstructionsDialog());
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -1250,10 +1267,17 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
+  const authoredHints = showHints ?
+    this.authoredHintsController_.getHintsDisplay() : undefined;
+
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    ReactDOM.render(instructionsContent, instructionsReactContainer);
+  $(this.instructionsDialog.div).on('show.bs.modal', () => {
+    ReactDOM.render(
+      <Provider store={this.reduxStore}>
+        <DialogInstructions authoredHints={authoredHints}/>
+      </Provider>,
+      instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -1420,7 +1444,8 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
 };
 
 /**
- * Resize the visualization to the given width
+ * Resize the visualization to the given width. If no width is provided, the
+ * scale of child elements is updated to the current width.
  */
 StudioApp.prototype.resizeVisualization = function (width) {
   var editorColumn = $(".editor-column");
@@ -1430,7 +1455,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
-                         Math.min(this.maxVisualizationWidth, width));
+                         Math.min(this.maxVisualizationWidth, width || oldVizWidth));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -1559,9 +1584,38 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+  if (this.shouldDisplayFeedbackDialog(options)) {
+    // let feedback handle creating the dialog
+    this.feedback_.displayFeedback(options, this.requiredBlocks_,
       this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
       this.maxRecommendedBlocksToFlag_);
+  } else {
+    // update the block hints lightbulb
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    this.displayMissingBlockHints(missingBlockHints);
+
+    // communicate the feedback message to the top instructions via
+    // redux
+    const message = this.feedback_.getFeedbackMessage(options);
+    this.reduxStore.dispatch(setFeedback({ message }));
+  }
+};
+
+/**
+ * Whether feedback should be displayed as a modal dialog or integrated
+ * into the top instructions
+ * @param {Object} options
+ * @param {number} options.feedbackType Test results (a constant property
+ *     of this.TestResults).false
+ */
+StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  // If instructions in top pane are enabled and we show instructions
+  // when collapsed, we only use dialogs for success feedback.
+  const constants = this.reduxStore.getState().pageConstants;
+  if (constants.instructionsInTopPane && !constants.noInstructionsWhenCollapsed) {
+    return this.feedback_.canContinueToNextLevel(options.feedbackType);
+  }
+  return true;
 };
 
 /**
@@ -1609,9 +1663,28 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 * {number} testResult More specific data on success or failure of code.
 * {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
+* {Object} containedLevelResultsInfo Results from the contained level.
 * {function} onComplete Function to be called upon completion.
 */
 StudioApp.prototype.report = function (options) {
+
+  if (options.containedLevelResultsInfo) {
+    // If we have contained level results, just submit those directly and return
+    this.onAttempt({
+      callback: options.containedLevelResultsInfo.callback,
+      app: options.containedLevelResultsInfo.app,
+      level: options.containedLevelResultsInfo.level,
+      serverLevelId: options.containedLevelResultsInfo.level,
+      result: options.containedLevelResultsInfo.result,
+      testResult: options.containedLevelResultsInfo.testResults,
+      submitted: options.submitted,
+      program: options.containedLevelResultsInfo.program,
+      onComplete: options.onComplete
+    });
+    this.enableShowLinesCount = false;
+    return;
+  }
+
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1621,7 +1694,6 @@ StudioApp.prototype.report = function (options) {
   });
 
   this.lastTestResult = options.testResult;
-
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -1672,6 +1744,7 @@ StudioApp.prototype.resetButtonClick = function () {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
+  this.reduxStore.dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
@@ -1838,7 +1911,7 @@ StudioApp.prototype.configureDom = function (config) {
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
-  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -1970,6 +2043,24 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
+/**
+ * Move the droplet cursor to the first token at a specific line number.
+ * @param {Number} line zero-based line index
+ */
+StudioApp.prototype.setDropletCursorToLine_ = function (line) {
+  var dropletDocument = this.editor.getCursor().getDocument();
+  var docToken = dropletDocument.start;
+  var curLine = 0;
+  while (docToken && curLine < line) {
+    docToken = docToken.next;
+    if (docToken.type === 'newline') {
+      curLine++;
+    }
+  }
+  if (docToken) {
+    this.editor.setCursor(docToken);
+  }
+};
 
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
@@ -2126,9 +2217,63 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
   this.editor.on('palettetoggledone', function (e) {
-    // Reposition callouts after block/text toggle (in case they need to move)
-    $('.cdo-qtips').qtip('reposition', null, false);
+    $(window).trigger('droplet_change', ['togglepalette']);
   });
+
+  this.editor.on('selectpalette', function (e) {
+    $(window).trigger('droplet_change', ['selectpalette']);
+  });
+
+  $('.droplet-palette-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrollpalette']);
+  });
+
+  $('.droplet-main-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrolleditor']);
+  });
+
+  this.editor.aceEditor.getSession().on("changeScrollTop", function () {
+    $(window).trigger('droplet_change', ['scrollace']);
+  });
+
+  $.expr[':'].textEquals = function (el, i, m) {
+      var searchText = m[3];
+      var match = $(el).text().trim().match("^" + searchText + "$");
+      return match && match.length > 0;
+  };
+
+  $(window).on('prepareforcallout', function (e, options) {
+    // qtip_config's codeStudio options block is available in options
+    if (options.dropletPaletteCategory) {
+      this.editor.changePaletteGroup(options.dropletPaletteCategory);
+      var scrollContainer = $('.droplet-palette-scroller');
+      var scrollTo = $(options.selector);
+      if (scrollTo.length > 0) {
+        scrollContainer.scrollTop(scrollTo.offset().top - scrollContainer.offset().top +
+            scrollContainer.scrollTop());
+      }
+    } else if (options.codeString) {
+      var range = this.editor.aceEditor.find(options.codeString, {
+        caseSensitive: true,
+        range: null,
+        preventScroll: true
+      });
+      if (range) {
+        var lineIndex = range.start.row;
+        var line = lineIndex + 1; // 1-based line number
+        if (this.editor.currentlyUsingBlocks) {
+          options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
+          this.setDropletCursorToLine_(lineIndex);
+          this.editor.scrollCursorIntoPosition();
+          this.editor.redrawGutter();
+        } else {
+          options.selector = '.ace_gutter-cell:textEquals("' + line + '")';
+          this.editor.aceEditor.scrollToLine(lineIndex);
+          this.editor.aceEditor.renderer.updateFull(true);
+        }
+      }
+    }
+  }.bind(this));
 
   // Prevent the backspace key from navigating back. Make sure it's still
   // allowed on other elements.
@@ -2292,7 +2437,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
+    showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
@@ -2371,6 +2516,14 @@ StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
  */
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
+};
+
+/**
+ * Do we have any floating blocks that are not going to be handled
+ * gracefully?
+ */
+StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
+  return this.hasExtraTopBlocks() && !Blockly.showUnusedBlocks;
 };
 
 /**
@@ -2663,14 +2816,27 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
 
 /**
  * If the current project is considered abusive, display a small alert box
- * @param {string} parentSelector The selector for the DOM element parent we
- *   should display the error in.
  */
-StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+StudioApp.prototype.alertIfAbusiveProject = function () {
   if (window.dashboard && dashboard.project &&
       dashboard.project.exceedsAbuseThreshold()) {
     var i18n = {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  }
+};
+
+/**
+ * If the current project violates privacy policy or contains profanity,
+ * display a small alert box.
+ */
+StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
+  if (window.dashboard && dashboard.project &&
+      dashboard.project.hasPrivacyProfanityViolation()) {
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.policy_violation'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
     };
     this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
@@ -2731,13 +2897,15 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 /**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
- * @param {AppOptionsConfig}
+ * @param {AppOptionsConfig} config
  * @param {object} appSpecificConstants - Optional additional constants that
  *   are app specific.
  */
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
+    skinId: config.skinId,
+    showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -2747,45 +2915,20 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
+    noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
+    hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
-    aniGifURL: config.level.aniGifURL
+    aniGifURL: config.level.aniGifURL,
+    inputOutputTable: config.level.inputOutputTable,
+    is13Plus: config.is13Plus,
+    isSignedIn: config.isSignedIn,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  // also set some instructions specific constants
-  // If non-English, dont use level.markdownInstructions since they haven't been
-  // translated
-  const locale = config.locale || ENGLISH_LOCALE;
-  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
-  let shortInstructions = level.instructions;
-
-  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
-  // Our TopInstructions operate in two modes.
-  // In CSF we show short instructions when collapsed. In this mode, we assume
-  // that we have at least shortInstructions.
-  // In CSP we show no instructions  when collapsed. In this mode, we assume
-  // that we have at least longInstructions. In the case that we arent
-  // provided (markdown) longInstructions, treat our shortInstructiosn as our
-  // longInstructions
-  if (noInstructionsWhenCollapsed) {
-    if (shortInstructions && !longInstructions) {
-      longInstructions = shortInstructions;
-    }
-    // Never use short instructions in CSP
-    shortInstructions = undefined;
-  } else {
-    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
-      longInstructions = null;
-    }
-  }
-
-  this.reduxStore.dispatch(setInstructionsConstants({
-    noInstructionsWhenCollapsed,
-    shortInstructions,
-    longInstructions,
-  }));
+  const instructionsConstants = determineInstructionsConstants(config);
+  this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };

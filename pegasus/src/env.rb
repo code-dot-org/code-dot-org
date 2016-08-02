@@ -28,12 +28,11 @@ def src_dir(*paths)
 end
 
 module Pegasus
-
-  def self.logger()
+  def self.logger
     @@logger ||= create_logger
   end
 
-  def self.create_logger()
+  def self.create_logger
     logger = Logger.new STDOUT if rack_env?(:development)
     logger ||= Logger.new pegasus_dir('log', "#{rack_env}.log")
 
@@ -43,7 +42,7 @@ module Pegasus
   end
 end
 
-def load_pegasus_settings()
+def load_pegasus_settings
   $log = Pegasus.logger
 
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)

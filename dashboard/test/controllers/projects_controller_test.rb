@@ -69,34 +69,42 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
   end
 
-  test 'applab project level gets redirected if under 13' do
+  test 'applab and gamelab project level gets redirected if under 13' do
     sign_in create(:young_student)
 
-    get :load, key: :applab
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
 
-    assert_redirected_to '/'
+      assert_redirected_to '/'
+    end
   end
 
-  test 'applab project level gets redirected to edit if over 13' do
+  test 'applab and gamelab project level gets redirected to edit if over 13' do
     sign_in create(:student)
 
-    get :load, key: :applab
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
 
-    assert @response.headers['Location'].ends_with? '/edit'
+      assert @response.headers['Location'].ends_with? '/edit'
+    end
   end
 
-  test 'shared applab project does get redirected if under 13' do
+  test 'shared applab and gamelab project does get redirected if under 13' do
     sign_in create(:young_student)
 
-    get :show, key: :applab, share: true, channel_id: 'my_channel_id'
+    [:applab, :gamelab].each do |lab|
+      get :show, key: lab, share: true, channel_id: 'my_channel_id'
 
-    assert_redirected_to '/'
+      assert_redirected_to '/'
+    end
   end
 
-  test 'applab project level redirects to login if not signed in' do
+  test 'applab and gamelab project level redirects to login if not signed in' do
     sign_out :user
-    get :load, key: :applab
-    assert_redirected_to_sign_in
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+      assert_redirected_to_sign_in
+    end
   end
 
   test 'applab project level goes to edit if admin' do
@@ -133,23 +141,5 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in create(:admin)
     get :load, key: :gamelab
     assert @response.headers['Location'].ends_with? '/edit'
-  end
-
-  test 'gamelab project level redirects to home if teacher' do
-    sign_in create(:teacher)
-    get :load, key: :gamelab
-    assert_redirected_to '/'
-  end
-
-  test 'gamelab project level goes to edit if student of admin teacher' do
-    sign_in create(:student_of_admin)
-    get :load, key: :gamelab
-    assert @response.headers['Location'].ends_with? '/edit'
-  end
-
-  test 'gamelab project level redirects to home if student without admin teacher' do
-    sign_in create(:student)
-    get :load, key: :gamelab
-    assert_redirected_to '/'
   end
 end

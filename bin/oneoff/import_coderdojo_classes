@@ -3,7 +3,7 @@ require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'json'
 
-def main()
+def main
   url = 'https://zen.coderdojo.com/api/codedotorg'
   resp = Net::HTTP.get_response(URI.parse(url))
   data = JSON.parse(resp.body)

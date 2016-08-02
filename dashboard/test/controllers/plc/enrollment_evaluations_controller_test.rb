@@ -13,6 +13,8 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @course = create(:plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @course)
 
+    @module_required = create(:plc_learning_module, name: 'Required', plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
+
     @module_content_1 = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
     @module_content_2 = create(:plc_learning_module, name: 'Advanced Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
 
@@ -26,10 +28,17 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @unit_assignment = @enrollment.plc_unit_assignments.first
   end
 
+  test "previewing evaluation already triggers enrollments" do
+    Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_1, @module_practice_1])
+
+    get :preview_assignments, script_id: @course_unit.script.name
+    assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
+  end
+
   test "submit evaluation enrolls user in appropriate modules" do
     post :confirm_assignments, script_id: @course_unit.script.name, content_module: @module_content_1, practice_module: @module_practice_1
     assert_redirected_to script_path(@course_unit.script)
-    assert_equal (Set.new [@module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
+    assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end
 
   test "Posting anything other than one content and one practice module to confirm_assignments gets redirected" do
@@ -42,7 +51,17 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     ].each do |content_module, practice_module|
       post :confirm_assignments, script_id: @course_unit.script.name, content_module: content_module, practice_module: practice_module
       assert_redirected_to script_preview_assignments_path(@course_unit.script)
-      assert_empty @unit_assignment.plc_module_assignments
+      assert_equal [@module_required], @unit_assignment.plc_module_assignments.map(&:plc_learning_module)
     end
+  end
+
+  test "Preserve existing enrollments when going to adjust focus area (but not actually adjusting)" do
+    Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_2, @module_practice_2])
+
+    @unit_assignment.enroll_user_in_unit_with_learning_modules([@module_content_1, @module_practice_1])
+    get :preview_assignments, script_id: @course_unit.script.name
+
+    #In spite of the fact that the user answered stuff for content1 and practice1, their enrollment should still be 1, 1
+    assert_equal (Set.new([@module_required, @module_content_1, @module_practice_1])), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end
 end

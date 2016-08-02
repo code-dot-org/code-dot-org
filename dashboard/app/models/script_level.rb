@@ -67,6 +67,40 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def has_another_level_to_go_to?
+    if script.professional_learning_course?
+      !end_of_stage?
+    else
+      next_progression_level
+    end
+  end
+
+  def next_level_or_redirect_path_for_user(user)
+    # if we're coming from an unplugged level, it's ok to continue
+    # to unplugged level (example: if you start a sequence of
+    # assessments associated with an unplugged level you should
+    # continue on that sequence instead of skipping to next stage)
+    level_to_follow = (level.unplugged? || stage.unplugged?) ? next_level : next_progression_level
+
+    if script.professional_learning_course?
+      if level.try(:plc_evaluation?)
+        if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+          script_preview_assignments_path(script)
+        else
+          build_script_level_path(level_to_follow)
+        end
+      else
+        if has_another_level_to_go_to?
+          build_script_level_path(level_to_follow)
+        else
+          script_path(script)
+        end
+      end
+    else
+      level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+    end
+  end
+
   def next_level
     i = script.script_levels.index(self)
     return nil if i.nil? || i == script.script_levels.length
@@ -97,6 +131,10 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.last == self
   end
 
+  def end_of_script?
+    script.script_levels.to_a.last == self
+  end
+
   def long_assessment?
     if assessment
       if level.properties["pages"] && level.properties["pages"].length > 1
@@ -104,6 +142,10 @@ class ScriptLevel < ActiveRecord::Base
       end
     end
     false
+  end
+
+  def anonymous?
+    return assessment && level.properties["anonymous"] == "true"
   end
 
   def name
@@ -140,8 +182,14 @@ class ScriptLevel < ActiveRecord::Base
       kind = 'puzzle'
     end
 
+    ids = level_ids
+
+    levels.each do |l|
+      ids << l.contained_levels.map(&:id)
+    end
+
     summary = {
-        id: level.id,
+        ids: ids,
         position: position,
         kind: kind,
         icon: level.icon,
@@ -149,7 +197,7 @@ class ScriptLevel < ActiveRecord::Base
         url: build_script_level_url(self)
     }
 
-    summary[:name] = level.name if script.professional_learning_course?
+    summary[:name] = level.name if kind == 'named_level'
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level
@@ -182,11 +230,12 @@ class ScriptLevel < ActiveRecord::Base
   # level summaries.
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
-    level = Script.cache_find_level(last_level_summary[:id])
+    level_id = last_level_summary[:ids].first
+    level = Script.cache_find_level(level_id)
     extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
-      new_level[:uid] = "#{level.id}_#{page_index}"
+      new_level[:uid] = "#{level_id}_#{page_index}"
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index
@@ -202,4 +251,16 @@ class ScriptLevel < ActiveRecord::Base
   def to_param
     position.to_s
   end
+
+  # Given the signed-in user and an optional user that is being viewed
+  # (e.g. a student viewed by a teacher), tell us whether we are allowed
+  # to view their prior answer.
+  def can_view_last_attempt(user, viewed_user)
+    # If it's an anonymous survey, then teachers can't view student answers
+    return false if user && viewed_user && user != viewed_user && anonymous?
+
+    # Everything else is okay.
+    return true
+  end
+
 end

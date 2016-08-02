@@ -818,8 +818,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * It can either be an Axis Aligned Bounding Box (a non-rotated rectangle)
   * or a circular collider.
   * If the sprite is checked for collision, bounce, overlapping or mouse events the
-  * collider is automatically created from the width and height parameter passed at the
-  * creation of the sprite or the from the image dimension in case of animate sprites
+  * collider is automatically created from the width and height
+  * of the sprite or from the image dimension in case of animate sprites
   *
   * You can set a custom collider with Sprite.setCollider
   *
@@ -1011,6 +1011,32 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this.mouseIsPressed = false;
 
+  /*
+  * Width of the sprite's current image.
+  * If no images or animations are set it's the width of the
+  * placeholder rectangle.
+  * Used internally to make calculations and draw the sprite.
+  *
+  * @private
+  * @property _internalWidth
+  * @type {Number}
+  * @default 100
+  */
+  this._internalWidth = _w;
+
+  /*
+  * Height of the sprite's current image.
+  * If no images or animations are set it's the height of the
+  * placeholder rectangle.
+  * Used internally to make calculations and draw the sprite.
+  *
+  * @private
+  * @property _internalHeight
+  * @type {Number}
+  * @default 100
+  */
+  this._internalHeight = _h;
+
   /**
   * Width of the sprite's current image.
   * If no images or animations are set it's the width of the
@@ -1020,6 +1046,17 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
+  Object.defineProperty(this, 'width', {
+    enumerable: true,
+    configurable: true,
+    get: function() {
+      return this._internalWidth;
+    },
+    set: function(value) {
+      this._internalWidth = value;
+    }
+  });
+
   if(_w === undefined)
     this.width = 100;
   else
@@ -1034,6 +1071,17 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
+  Object.defineProperty(this, 'height', {
+    enumerable: true,
+    configurable: true,
+    get: function() {
+      return this._internalHeight;
+    },
+    set: function(value) {
+      this._internalHeight = value;
+    }
+  });
+
   if(_h === undefined)
     this.height = 100;
   else
@@ -1048,7 +1096,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-  this.originalWidth = this.width;
+  this.originalWidth = this._internalWidth;
 
   /**
   * Unscaled height of the sprite
@@ -1059,7 +1107,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-  this.originalHeight = this.height;
+  this.originalHeight = this._internalHeight;
 
   /**
   * True if the sprite has been removed.
@@ -1120,6 +1168,35 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this.animation = undefined;
 
+  /*
+   * @private
+   * Keep animation properties in sync with how the animation changes.
+   */
+  this._syncAnimationSizes = function(animations, currentAnimation) {
+    //has an animation but the collider is still default
+    //the animation wasn't loaded. if the animation is not a 1x1 image
+    //it means it just finished loading
+    if(this.colliderType === 'default' &&
+      animations[currentAnimation].getWidth() !== 1 &&
+       animations[currentAnimation].getHeight() !== 1
+      )
+    {
+    this.collider = this.getBoundingBox();
+    this.colliderType = 'image';
+    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+    //quadTree.insert(this);
+    }
+
+    //update size and collider
+    if(animations[currentAnimation].frameChanged || this.width === undefined || this.height === undefined)
+    {
+    //this.collider = this.getBoundingBox();
+    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+    }
+  };
+
   /**
   * Updates the sprite.
   * Called automatically at the beginning of the draw cycle.
@@ -1162,28 +1239,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
         //update it
         animations[currentAnimation].update();
 
-        //has an animation but the collider is still default
-        //the animation wasn't loaded. if the animation is not a 1x1 image
-        //it means it just finished loading
-        if(this.colliderType === 'default' &&
-          animations[currentAnimation].getWidth() !== 1 &&
-           animations[currentAnimation].getHeight() !== 1
-          )
-        {
-        this.collider = this.getBoundingBox();
-        this.colliderType = 'image';
-        this.width = animations[currentAnimation].getWidth()*abs(this.scale);
-        this.height = animations[currentAnimation].getHeight()*abs(this.scale);
-        //quadTree.insert(this);
-        }
-
-        //update size and collider
-        if(animations[currentAnimation].frameChanged || this.width === undefined || this.height === undefined)
-        {
-        //this.collider = this.getBoundingBox();
-        this.width = animations[currentAnimation].getWidth()*abs(this.scale);
-        this.height = animations[currentAnimation].getHeight()*abs(this.scale);
-        }
+        this._syncAnimationSizes(animations, currentAnimation);
       }
 
       //a collider is created either manually with setCollider or
@@ -1202,26 +1258,26 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
         if(this.colliderType === 'custom')
           {
-          this.collider.extents.x = this.collider.originalExtents.x * abs(this.scale) * abs(cos(t)) +
-          this.collider.originalExtents.y * abs(this.scale) * abs(sin(t));
+          this.collider.extents.x = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(cos(t)) +
+          this.collider.originalExtents.y * abs(this._getScaleY()) * abs(sin(t));
 
-          this.collider.extents.y = this.collider.originalExtents.x * abs(this.scale) * abs(sin(t)) +
-          this.collider.originalExtents.y * abs(this.scale) * abs(cos(t));
+          this.collider.extents.y = this.collider.originalExtents.x * abs(this._getScaleX()) * abs(sin(t)) +
+          this.collider.originalExtents.y * abs(this._getScaleY()) * abs(cos(t));
           }
         else if(this.colliderType === 'default')
           {
-          this.collider.extents.x = this.originalWidth * abs(this.scale) * abs(cos(t)) +
-          this.originalHeight * abs(this.scale) * abs(sin(t));
-          this.collider.extents.y = this.originalWidth * abs(this.scale) * abs(sin(t)) +
-          this.originalHeight * abs(this.scale) * abs(cos(t));
+          this.collider.extents.x = this._internalWidth * abs(this._getScaleX()) * abs(cos(t)) +
+          this._internalHeight * abs(this._getScaleY()) * abs(sin(t));
+          this.collider.extents.y = this._internalWidth * abs(this._getScaleX()) * abs(sin(t)) +
+          this._internalHeight * abs(this._getScaleY()) * abs(cos(t));
           }
         else if(this.colliderType === 'image')
           {
-          this.collider.extents.x = this.width * abs(cos(t)) +
-          this.height * abs(sin(t));
+          this.collider.extents.x = this._internalWidth * abs(cos(t)) +
+          this._internalHeight * abs(sin(t));
 
-          this.collider.extents.y = this.width * abs(sin(t)) +
-          this.height * abs(cos(t));
+          this.collider.extents.y = this._internalWidth * abs(sin(t)) +
+          this._internalHeight * abs(cos(t));
           }
         }
 
@@ -1283,8 +1339,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
     if(animations[currentAnimation] && (animations[currentAnimation].getWidth() !== 1 && animations[currentAnimation].getHeight() !== 1))
     {
       this.collider = this.getBoundingBox();
-      this.width = animations[currentAnimation].getWidth()*abs(this.scale);
-      this.height = animations[currentAnimation].getHeight()*abs(this.scale);
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
       //quadTree.insert(this);
       this.colliderType = 'image';
       //print("IMAGE COLLIDER ADDED");
@@ -1296,7 +1352,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
     }
     else //get the with and height defined at the creation
     {
-      this.collider = new AABB(pInst, this.position, createVector(this.width, this.height));
+      this.collider = new AABB(pInst, this.position, createVector(this._internalWidth, this._internalHeight));
       //quadTree.insert(this);
       this.colliderType = 'default';
     }
@@ -1426,8 +1482,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
    */
   this.getBoundingBox = function() {
 
-    var w = animations[currentAnimation].getWidth()*abs(this.scale);
-    var h = animations[currentAnimation].getHeight()*abs(this.scale);
+    var w = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+    var h = animations[currentAnimation].getHeight()*abs(this._getScaleY());
 
     //if the bounding box is 1x1 the image is not loaded
     //potential issue with actual 1x1 images
@@ -1474,6 +1530,25 @@ function Sprite(pInst, _x, _y, _w, _h) {
       return dirY;
   };
 
+  /*
+   * Returns the value the sprite should be scaled in the X direction.
+   * Used to calculate rendering and collisions.
+   * @private
+   */
+  this._getScaleX = function()
+  {
+    return this.scale;
+  };
+
+  /*
+   * Returns the value the sprite should be scaled in the Y direction.
+   * Used to calculate rendering and collisions.
+   * @private
+   */
+  this._getScaleY = function()
+  {
+    return this.scale;
+  };
 
   /**
    * Manages the positioning, scale and rotation of the sprite
@@ -1495,7 +1570,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
       imageMode(CENTER);
 
       translate(this.position.x, this.position.y);
-      scale(this.scale*dirX, this.scale*dirY);
+      scale(this._getScaleX()*dirX, this._getScaleY()*dirY);
       if (pInst._angleMode === pInst.RADIANS) {
         rotate(radians(this.rotation));
       } else {
@@ -1559,7 +1634,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
     {
       noStroke();
       fill(this.shapeColor);
-      rect(0, 0, this.width, this.height);
+      rect(0, 0, this._internalWidth, this._internalHeight);
     }
   };
 
@@ -1614,7 +1689,16 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
     if(isNaN(direction))
       direction = 0;
-    return degrees(direction);
+
+    // Unlike Math.atan2, the atan2 method above will return degrees if
+    // the current p5 angleMode is DEGREES, and radians if the p5 angleMode is
+    // RADIANS.  This method should always return degrees (for now).
+    // See https://github.com/molleindustria/p5.play/issues/94
+    if (pInst._angleMode === pInst.RADIANS) {
+      direction = degrees(direction);
+    }
+
+    return direction;
   };
 
   /**
@@ -1797,6 +1881,9 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
       newAnimation.isSpriteAnimation = true;
 
+      this._internalWidth = newAnimation.getWidth()*abs(this._getScaleX());
+      this._internalHeight = newAnimation.getHeight()*abs(this._getScaleY());
+
       return newAnimation;
     }
     else
@@ -1814,6 +1901,10 @@ function Sprite(pInst, _x, _y, _w, _h) {
         this.animation = anim;
       }
       anim.isSpriteAnimation = true;
+
+      this._internalWidth = anim.getWidth()*abs(this._getScaleX());
+      this._internalHeight = anim.getHeight()*abs(this._getScaleY());
+
       return anim;
     }
 
@@ -3210,22 +3301,22 @@ defineLazyP5Property('AABB', boundConstructorFactory(AABB));
    * "data/file0003.png" and "data/file0004.png" will be loaded as well.
    *
    * @example
-	* <code>
-	* var sequenceAnimation;<br>
+  * <code>
+  * var sequenceAnimation;<br>
    * var glitch;<br><br>
-	* function preload() {<br>
+  * function preload() {<br>
    *   sequenceAnimation = loadAnimation("data/walking0001.png", "data/walking0005.png");<br>
    *   glitch = loadAnimation("data/dog.png", "data/horse.png", "data/cat.png", "data/snake.png");<br>
    * }<br><br>
-	* function setup() {<br>
-	*   createCanvas(800, 600);<br>
-	* }<br><br>
-	* function draw() {<br>
-	*   background(0);<br>
-	*   animation(sequenceAnimation, 100, 100);<br>
+  * function setup() {<br>
+  *   createCanvas(800, 600);<br>
+  * }<br><br>
+  * function draw() {<br>
+  *   background(0);<br>
+  *   animation(sequenceAnimation, 100, 100);<br>
    *   animation(glitch, 200, 100);<br>
-	* }
-	* </code>
+  * }
+  * </code>
    *
    * @class Animation
    * @constructor
@@ -3408,7 +3499,9 @@ function Animation(pInst) {
   else if (frameArguments.length === 1 && (frameArguments[0] instanceof SpriteSheet))
   {
     this.spriteSheet = frameArguments[0];
-    this.images = this.spriteSheet.frames;
+    this.images = this.spriteSheet.frames.map(function (f) {
+      return f.frame;
+    });
   }
   else if(frameArguments.length !== 0)//arbitrary list of images
   {
@@ -3435,11 +3528,8 @@ function Animation(pInst) {
 
     if (this.spriteSheet) {
       myClone.spriteSheet = this.spriteSheet.clone();
-      myClone.images = myClone.spriteSheet.frames;
-    } else {
-      for (var i = 0; i < this.images.length; i++)
-        myClone.images.push(this.images[i]);
     }
+    myClone.images = this.images.slice();
 
     myClone.offX = this.offX;
     myClone.offY = this.offY;
@@ -3486,7 +3576,7 @@ function Animation(pInst) {
       if(this.images[frame] !== undefined)
       {
         if (this.spriteSheet) {
-          var frame_info = this.images[frame].frame;
+          var frame_info = this.images[frame];
           pInst.image(this.spriteSheet.image, frame_info.x, frame_info.y, frame_info.width,
             frame_info.height, this.offX, this.offY, frame_info.width, frame_info.height);
         } else {
@@ -3813,7 +3903,7 @@ function SpriteSheet(pInst) {
   this.drawFrame = function(frame_name, x, y, width, height) {
     var frameToDraw;
     if (typeof frame_name === 'number') {
-      frameToDraw = this.frames[frame_name];
+      frameToDraw = this.frames[frame_name].frame;
     } else {
       for (var i = 0; i < this.frames.length; i++) {
         if (this.frames[i].name === frame_name) {
@@ -3888,15 +3978,15 @@ function construct(constructor, args) {
 function Quadtree( bounds, max_objects, max_levels, level ) {
 
   this.active = true;
-  this.max_objects	= max_objects || 10;
-  this.max_levels		= max_levels || 4;
+  this.max_objects  = max_objects || 10;
+  this.max_levels   = max_levels || 4;
 
-  this.level 			= level || 0;
-  this.bounds 		= bounds;
+  this.level      = level || 0;
+  this.bounds     = bounds;
 
-  this.objects 		= [];
-  this.object_refs	= [];
-  this.nodes 			= [];
+  this.objects    = [];
+  this.object_refs  = [];
+  this.nodes      = [];
 }
 
 Quadtree.prototype.updateBounds = function() {
@@ -3931,61 +4021,61 @@ Quadtree.prototype.updateBounds = function() {
 };
 
 /*
-	 * Split the node into 4 subnodes
-	 */
+   * Split the node into 4 subnodes
+   */
 Quadtree.prototype.split = function() {
 
-  var nextLevel	= this.level + 1,
-      subWidth	= Math.round( this.bounds.width / 2 ),
-      subHeight 	= Math.round( this.bounds.height / 2 ),
-      x 			= Math.round( this.bounds.x ),
-      y 			= Math.round( this.bounds.y );
+  var nextLevel = this.level + 1,
+      subWidth  = Math.round( this.bounds.width / 2 ),
+      subHeight   = Math.round( this.bounds.height / 2 ),
+      x       = Math.round( this.bounds.x ),
+      y       = Math.round( this.bounds.y );
 
   //top right node
   this.nodes[0] = new Quadtree({
-    x	: x + subWidth,
-    y	: y,
-    width	: subWidth,
-    height	: subHeight
+    x : x + subWidth,
+    y : y,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 
   //top left node
   this.nodes[1] = new Quadtree({
-    x	: x,
-    y	: y,
-    width	: subWidth,
-    height	: subHeight
+    x : x,
+    y : y,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 
   //bottom left node
   this.nodes[2] = new Quadtree({
-    x	: x,
-    y	: y + subHeight,
-    width	: subWidth,
-    height	: subHeight
+    x : x,
+    y : y + subHeight,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 
   //bottom right node
   this.nodes[3] = new Quadtree({
-    x	: x + subWidth,
-    y	: y + subHeight,
-    width	: subWidth,
-    height	: subHeight
+    x : x + subWidth,
+    y : y + subHeight,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 };
 
 
 /*
-	 * Determine the quadtrant for an area in this node
-	 */
+   * Determine the quadtrant for an area in this node
+   */
 Quadtree.prototype.getIndex = function( pRect ) {
   if(!pRect.collider)
     return -1;
   else
   {
-    var index 				= -1,
-        verticalMidpoint 	= this.bounds.x + (this.bounds.width / 2),
-        horizontalMidpoint 	= this.bounds.y + (this.bounds.height / 2),
+    var index         = -1,
+        verticalMidpoint  = this.bounds.x + (this.bounds.width / 2),
+        horizontalMidpoint  = this.bounds.y + (this.bounds.height / 2),
 
         //pRect can completely fit within the top quadrants
         topQuadrant = (pRect.collider.top() < horizontalMidpoint && pRect.collider.top() + pRect.collider.size().y < horizontalMidpoint),
@@ -4016,10 +4106,10 @@ Quadtree.prototype.getIndex = function( pRect ) {
 
 
 /*
-	 * Insert an object into the node. If the node
-	 * exceeds the capacity, it will split and add all
-	 * objects to their corresponding subnodes.
-	 */
+   * Insert an object into the node. If the node
+   * exceeds the capacity, it will split and add all
+   * objects to their corresponding subnodes.
+   */
 Quadtree.prototype.insert = function( obj ) {
   //avoid double insertion
   if(this.objects.indexOf(obj) === -1)
@@ -4064,8 +4154,8 @@ Quadtree.prototype.insert = function( obj ) {
 
 
 /*
-	 * Return all objects that could collide with a given area
-	 */
+   * Return all objects that could collide with a given area
+   */
 Quadtree.prototype.retrieve = function( pRect ) {
 
 
@@ -4103,8 +4193,8 @@ Quadtree.prototype.retrieveFromGroup = function( pRect, group ) {
 };
 
 /*
-	 * Get all objects stored in the quadtree
-	 */
+   * Get all objects stored in the quadtree
+   */
 Quadtree.prototype.getAll = function() {
 
   var objects = this.objects;
@@ -4118,8 +4208,8 @@ Quadtree.prototype.getAll = function() {
 
 
 /*
-	 * Get the node in which a certain object is stored
-	 */
+   * Get the node in which a certain object is stored
+   */
 Quadtree.prototype.getObjectNode = function( obj ) {
 
   var index;
@@ -4150,9 +4240,9 @@ Quadtree.prototype.getObjectNode = function( obj ) {
 
 
 /*
-	 * Removes a specific object from the quadtree
-	 * Does not delete empty subnodes. See cleanup-function
-	 */
+   * Removes a specific object from the quadtree
+   * Does not delete empty subnodes. See cleanup-function
+   */
 Quadtree.prototype.removeObject = function( obj ) {
 
   var node = this.getObjectNode( obj ),
@@ -4165,8 +4255,8 @@ Quadtree.prototype.removeObject = function( obj ) {
 
 
 /*
-	 * Clear the quadtree and delete all objects
-	 */
+   * Clear the quadtree and delete all objects
+   */
 Quadtree.prototype.clear = function() {
 
   this.objects = [];
@@ -4183,9 +4273,9 @@ Quadtree.prototype.clear = function() {
 
 
 /*
-	 * Clean up the quadtree
-	 * Like clear, but objects won't be deleted but re-inserted
-	 */
+   * Clean up the quadtree
+   * Like clear, but objects won't be deleted but re-inserted
+   */
 Quadtree.prototype.cleanup = function() {
 
   var objects = this.getAll();

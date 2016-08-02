@@ -3,7 +3,7 @@ var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
 
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 
 var levelDef = {
   map: [

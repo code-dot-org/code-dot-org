@@ -1,6 +1,4 @@
-require 'cdo/regexp'
-require 'cdo/geocoder'
-require 'cdo/web_purify'
+require 'cdo/share_filtering'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -12,7 +10,6 @@ class ActivitiesController < ApplicationController
   protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2_147_483_647
-  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
@@ -35,17 +32,22 @@ class ActivitiesController < ApplicationController
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    if !enabled
+    unless enabled
       head 503
       return
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
-      begin
-        share_failure = find_share_failure(params[:program])
-      rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
-        # If WebPurify fails, the program will be allowed
+      share_failure = nil
+      if @level.game.sharing_filtered?
+        begin
+          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
+          # If WebPurify or Geocoder fail, the program will be allowed, and we
+          # retain the share_checking_error to log it alongside the level_source
+          # ID below.
+        end
       end
 
       unless share_failure
@@ -87,7 +89,6 @@ class ActivitiesController < ApplicationController
     render json: milestone_response(script_level: @script_level,
                                     level: @level,
                                     total_lines: total_lines,
-                                    trophy_updates: @trophy_updates,
                                     solved?: solved,
                                     level_source: @level_source.try(:hidden) ? nil : @level_source,
                                     level_source_image: @level_source_image,
@@ -106,24 +107,6 @@ class ActivitiesController < ApplicationController
   end
 
   private
-
-  def find_share_failure(program)
-    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
-
-    xml_tag_regexp = /<[^>]*>/
-    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
-
-    if email = RegexpUtils.find_potential_email(program_tags_removed)
-      return {message: t('share_code.email_not_allowed'), contents: email, type: 'email'}
-    elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
-      return {message: t('share_code.address_not_allowed'), contents: street_address, type: 'address'}
-    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
-      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number, type: 'phone'}
-    elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
-      return {message: t('share_code.profanity_not_allowed'), type: 'profanity'}
-    end
-    nil
-  end
 
   def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
@@ -168,7 +151,9 @@ class ActivitiesController < ApplicationController
         script_level: @script_level,
         new_result: test_result,
         submitted: params[:submitted],
-        level_source_id: @level_source.try(:id)
+        level_source_id: @level_source.try(:id),
+        level: @level,
+        pairings: pairings
       )
     end
 
@@ -182,12 +167,6 @@ class ActivitiesController < ApplicationController
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
-    end
-
-    begin
-      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
-    rescue StandardError => e
-      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
   end
 
@@ -203,41 +182,6 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def trophy_check(user)
-    @trophy_updates ||= []
-    # called after a new activity is logged to assign any appropriate trophies
-    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by(&:concept)
-    progress = user.concept_progress
-
-    progress.each_pair do |concept, counts|
-      current = current_trophies[concept]
-      pct = counts[:current].to_f/counts[:max]
-
-      new_trophy = Trophy.find_by_id case
-        when pct == Trophy::GOLD_THRESHOLD
-          Trophy::GOLD
-        when pct >= Trophy::SILVER_THRESHOLD
-          Trophy::SILVER
-        when pct >= Trophy::BRONZE_THRESHOLD
-          Trophy::BRONZE
-        else
-          # "no trophy earned"
-      end
-
-      if new_trophy
-        if new_trophy.id == current.try(:trophy_id)
-          # they already have the right trophy
-        elsif current
-          current.update_attributes!(trophy_id: new_trophy.id)
-          @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        else
-          UserTrophy.create!(user: user, trophy_id: new_trophy.id, concept: concept)
-          @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        end
-      end
-    end
-  end
-
   def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
     if current_user || session.id
@@ -245,7 +189,7 @@ class ActivitiesController < ApplicationController
     else
       log_string += "\tanon"
     end
-    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" +
+    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
     log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
     log_string += "\t#{request.user_agent}"

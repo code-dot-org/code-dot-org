@@ -60,14 +60,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, stage: sl.stage, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/1$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal 'puzzle', summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/2$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal 'puzzle', summary[:kind]
@@ -161,4 +161,102 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal(script_level3, ScriptLevel.cache_find(script_level3.id))
   end
 
+  test 'has another level answers appropriately for professional learning courses' do
+    create_fake_plc_data
+
+    assert @script_level1.has_another_level_to_go_to?
+    assert_not @script_level2.has_another_level_to_go_to?
+  end
+
+  test 'redirects appropriately for professional learning courses' do
+    create_fake_plc_data
+
+    assert_equal script_preview_assignments_path(@plc_script), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
+    @unit_assignment.destroy
+    assert_equal script_stage_script_level_path(@plc_script, @stage, @script_level2.position), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
+
+    assert_equal script_stage_script_level_path(@plc_script, @stage, @evaluation_script_level.position), @script_level1.next_level_or_redirect_path_for_user(@user)
+    assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
+  end
+
+  test 'can view my last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can view other user last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    teacher = create :teacher
+    student = create :student
+
+    assert script_level.can_view_last_attempt(teacher, student)
+  end
+
+  test 'can view my last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can not view other user last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+    teacher = create :teacher
+
+    assert_not script_level.can_view_last_attempt(teacher, student)
+  end
+
+  private
+
+  def create_fake_plc_data
+    @plc_course_unit = create(:plc_course_unit)
+    @plc_script = @plc_course_unit.script
+    @plc_script.update(professional_learning_course: 'My course name')
+    @stage = create(:stage)
+    @level1 = create(:maze)
+    evaluation_multi = create(:evaluation_multi, name: 'Evaluation Multi')
+    @evaluation_level = create(:level_group, name: 'Evaluation Quiz')
+    @evaluation_level.properties['title'] = @evaluation_level.name
+    @evaluation_level.properties['pages'] = [{'levels' => [evaluation_multi.name]}]
+    @level2 = create(:maze)
+    @script_level1 = create(:script_level, script: @plc_script, stage: @stage, position: 1, levels: [@level1])
+    @evaluation_script_level = create(:script_level, script: @plc_script, stage: @stage, position: 2, levels: [@evaluation_level])
+    @script_level2 = create(:script_level, script: @plc_script, stage: @stage, position: 3, levels: [@level2])
+    @user = create :teacher
+    user_course_enrollment = create(:plc_user_course_enrollment, plc_course: @plc_course_unit.plc_course, user: @user)
+    @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
+  end
 end

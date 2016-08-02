@@ -4,7 +4,7 @@ nav: educate_nav
 ---
 
 # Middle School
-Our current middle school curriculum focuses on using computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels. Our newest course-in-development, CS Discoveries, will be a year-long computer science course designed for middle school students.
+Our current middle school curriculum focuses on using computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels. Our newest course-in-development, CS Discoveries, will be a year-long computer science course designed for middle school students. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 # Computer Science Discoveries
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.

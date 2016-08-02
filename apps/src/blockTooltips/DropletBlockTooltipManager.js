@@ -102,7 +102,10 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
       }.bind(this)
     });
 
-    // Store the title/funcName as a block id so we can attach callouts later:
+    // Store the title/funcName as data-block so we can attach callouts later:
+    $(blockHoverDiv).attr('data-block', funcName);
+    // Store it also as a long id string for older callouts (note this
+    // won't work with jquery if the funcName contains characters such as "*"):
     $(blockHoverDiv).attr('id', 'droplet_palette_block_' + funcName);
     $(blockHoverDiv).tooltipster(configuration);
   }.bind(this));

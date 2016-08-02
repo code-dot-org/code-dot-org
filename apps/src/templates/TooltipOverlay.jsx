@@ -101,13 +101,13 @@ let TooltipOverlay = React.createClass({
       return (
         <g key={index}>
           <rect
-              x={rectX}
-              y={rectY}
-              width={TEXT_RECT_WIDTH}
-              height={TEXT_RECT_HEIGHT}
-              rx={TEXT_RECT_RADIUS}
-              ry={TEXT_RECT_RADIUS}
-              style={styles.rect}
+            x={rectX}
+            y={rectY}
+            width={TEXT_RECT_WIDTH}
+            height={TEXT_RECT_HEIGHT}
+            rx={TEXT_RECT_RADIUS}
+            ry={TEXT_RECT_RADIUS}
+            style={styles.rect}
           />
           <text x={textX} y={textY} style={styles.text}>
             {string}

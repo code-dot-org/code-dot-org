@@ -50,9 +50,9 @@ def saucelabs_browser
     retries = 0
     begin
       browser = Selenium::WebDriver.for(:remote,
-                                        url: url,
-                                        desired_capabilities: capabilities,
-                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
+        url: url,
+        desired_capabilities: capabilities,
+        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -117,8 +117,8 @@ def log_result(result)
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   HTTParty.put(url,
-               body: {"passed" => result}.to_json,
-               headers: {'Content-Type' => 'application/json'})
+    body: {"passed" => result}.to_json,
+    headers: {'Content-Type' => 'application/json'})
 end
 
 all_passed = true

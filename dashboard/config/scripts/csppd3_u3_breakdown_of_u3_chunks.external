@@ -2,7 +2,7 @@ name 'CSPPD3-u3 breakdown of u3 chunks'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Unit 3 Overview > Unit 3 Description and Breakdown
 <br/>
 <img src="https://images.code.org/cd3c4d96a6b2a287db6cd1394cd314c4-image-1446480287872.png" width="450" style="float:left; margin-right:20px">

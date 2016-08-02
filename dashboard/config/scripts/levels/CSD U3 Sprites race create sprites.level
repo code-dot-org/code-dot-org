@@ -1,0 +1,76 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T19:24:48.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
+      "x": null,
+      "y": null,
+      "sprite.width": null,
+      "sprite.height": null,
+      "shapeColor": null,
+      "background": null,
+      "comment": null,
+      "rect": null,
+      "fill": null,
+      "draw": null,
+      "color": null,
+      "stroke": null,
+      "noStroke": null,
+      "noFill": null,
+      "ellipse": null,
+      "text": null,
+      "textSize": null,
+      "textAlign": null
+    },
+    "show_d_pad": "false",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Putting it All Together\r\n\r\nLet's put all of this together in a fun way. You're going to make three sprites \"race\" across the screen by combining the counter pattern, random numbers, and sprite properties.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/1ee52eac731176211c286023c87c166a-image-1466021038288.03.29 PM.png\" style=\"float:right; width:200px\">\r\n\r\nTo begin with make three different sprites and put them in a row on the left side of your screen.\r\n\r\n* **Create three sprites** and give them labels\r\n* **Add code to the \"Draw Background\" section of the draw loop that draws the background and your sprites**\r\n* Your animation should look like the example at the right.",
+    "start_blocks": "// Creating Sprites and Setting Starting Properties\r\n\r\nfunction draw(){\r\n  \t// Draw Background\r\n  \r\n\t// Update Properties\r\n\t \r\n\t// Draw Animations\r\n\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "project_template_level_name": "CSD U3 Sprites Template Race",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>
