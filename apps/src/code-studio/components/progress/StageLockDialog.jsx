@@ -67,7 +67,7 @@ const StageLockDialog = React.createClass({
         name: React.PropTypes.string.isRequired,
         lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
-    ).isRequired,
+    ),
     saving: React.PropTypes.bool.isRequired,
     saveDialog: React.PropTypes.func.isRequired
   },
@@ -79,6 +79,9 @@ const StageLockDialog = React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.saving) {
+      return;
+    }
     this.setState({
       lockStatus: nextProps.initialLockStatus
     });
