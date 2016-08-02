@@ -965,33 +965,6 @@ class User < ActiveRecord::Base
     self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
   end
 
-  # make some random-ish fake progress for a user. As you may have
-  # guessed, this is for developer testing purposes and should not be
-  # used by any user-facing features.
-  def hack_progress(options = {})
-    options[:script_id] ||= Script.twenty_hour_script.id
-    script = Script.get_from_cache(options[:script_id])
-
-    options[:levels] ||= script.script_levels.count / 2
-
-    script.script_levels[0..options[:levels]].each do |sl|
-      # create some fake testresults
-      test_result = rand(100)
-
-      Activity.create!(user: self, level: sl.level, test_result: test_result)
-
-      if test_result > 10 # < 10 will be not attempted
-        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          user_level = UserLevel.where(user: self, level: sl.level, script: sl.script).first_or_create
-          user_level.attempts += 1 unless user_level.best?
-          user_level.best_result = test_result
-          user_level.save!
-        end
-      end
-    end
-    User.track_script_progress(self.id, script.id)
-  end
-
   def self.csv_attributes
     # same as in UserSerializer
     [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
