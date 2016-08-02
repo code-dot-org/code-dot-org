@@ -25,6 +25,8 @@ class UserPermission < ActiveRecord::Base
 
   # Grants access to managing (e.g., editting) LevelSourceHint's and
   # FrequentUnsuccessfulLevelSource's.
+  # TODO(asher): If appropriate, finish deprecating this permission, as well as
+  # the routes, models, controllers, and views related to this permission.
   HINT_ACCESS = 'hint_access'
 
   # Grants access to managing (e.g., editing) levels, stages, scripts, etc.
