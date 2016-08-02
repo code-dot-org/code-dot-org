@@ -9,9 +9,11 @@ require 'cdo/geocoder'
 DASHBOARD = sequel_connect(CDO.dashboard_db_writer, CDO.dashboard_db_writer)
 
 def main
+  time_now = DateTime.now
   to_geolocate = DASHBOARD[:user_geos].where(indexed_at: nil).limit(1000)
 
   to_geolocate.each do |user_geo|
+    user_geo.indexed_at = time_now
     location = Geocoder.search(user_geo.ip_address).first
     if location
       user_geo.city = location.city
