@@ -10,6 +10,8 @@ window.initLevelGroup = function (
   currentPage,
   lastAttempt) {
 
+  var blankCharacter = "\u25A1";
+
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -41,7 +43,7 @@ window.initLevelGroup = function (
         continue;
       }
       var subLevelResult = levels[subLevelId].getResult(true);
-      var response = encodeURIComponent(subLevelResult.response);
+      var response = encodeURIComponent(replaceEmoji(subLevelResult.response, blankCharacter));
       var result = subLevelResult.result;
       var errorType = subLevelResult.errorType;
       var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
@@ -89,12 +91,11 @@ window.initLevelGroup = function (
    *  "1939": {"result": "2,1", "valid": true}}
    */
   function getResult() {
-
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
       var currentAnswer = levels[levelId].getResult(true);
-      var levelResult = currentAnswer.response.toString();
+      var levelResult = replaceEmoji(currentAnswer.response.toString(), blankCharacter);
       var valid = currentAnswer.valid;
       lastAttempt[levelId] = {result: levelResult, valid: valid};
     });
@@ -143,6 +144,28 @@ window.initLevelGroup = function (
           },
           submitSublevelResults);
     }
+  }
+
+  // Replaces emoji in a string with the given string.
+  // Returns the updated string.
+  // Source: http://crocodillon.com/blog/parsing-emoji-unicode-in-javascript
+  function replaceEmoji(source, replace) {
+    /* An issue in Babel is preventing us from using this version.
+    var ranges = [
+      '\ud83c[\udf00-\udfff]', // U+1F300 to U+1F3FF
+      '\ud83d[\udc00-\ude4f]', // U+1F400 to U+1F64F
+      '\ud83d[\ude80-\udeff]'  // U+1F680 to U+1F6FF
+    ];
+    */
+
+    // Build the ranges in a way that works with Babel.
+    var ranges = [
+      String.fromCharCode(0xd83c) + '[' + String.fromCharCode(0xdf00) + '-' + String.fromCharCode(0xdfff) + ']',
+      String.fromCharCode(0xd83d) + '[' + String.fromCharCode(0xdc00) + '-' + String.fromCharCode(0xde4f) + ']',
+      String.fromCharCode(0xd83d) + '[' + String.fromCharCode(0xde80) + '-' + String.fromCharCode(0xdeff) + ']'
+    ];
+
+    return source.replace(new RegExp(ranges.join('|'), 'g'), replace);
   }
 
   $(".nextPageButton").click(function (event) {
