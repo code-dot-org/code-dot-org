@@ -130,6 +130,18 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
    */
   this.teacherView_ = false;
 
+  /**
+   * Pre-bound callback for use when rendering.
+   * @private {function}
+   */
+  this.boundSetRouterLogMode_ = this.setRouterLogMode_.bind(this);
+
+  /**
+   * Pre-bound callback for use when rendering.
+   * @private {function}
+   */
+  this.boundSetTrafficFilterMode_ = this.setTrafficFilterMode_.bind(this);
+
   this.render();
 };
 
@@ -272,10 +284,10 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
       i18n={i18n}
       canSetRouterLogMode={this.canSetRouterLogMode_()}
       isAllRouterLogMode={this.isAllRouterLogMode_}
-      setRouterLogMode={this.setRouterLogMode_.bind(this)}
+      setRouterLogMode={this.boundSetRouterLogMode_}
       localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
       currentTrafficFilter={this.currentTrafficFilter_}
-      setTrafficFilter={this.setTrafficFilterMode_.bind(this)}
+      setTrafficFilter={this.boundSetTrafficFilterMode_}
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
       logRows={tableRows}
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
