@@ -173,7 +173,7 @@ export const saveLockDialog = (newLockStatus) => {
     dispatch(beginSave());
     $.ajax({
       type: 'POST',
-      url: '/dashboardapi/lock_status',
+      url: '/api/lock_status',
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify({updates: saveData})

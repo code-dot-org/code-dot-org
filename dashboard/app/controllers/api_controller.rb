@@ -20,8 +20,8 @@ class ApiController < ApplicationController
     render json: {}
   end
 
-  # TODO: come up with a name for this that i like and delete all_section_progress
-  def lockable_state_sections
+  # For a given users, gets the lockable state for each user in each of their sections
+  def lockable_state
     return unless current_user
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
@@ -53,29 +53,8 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  def all_section_progress
-    return unless current_user
-
-    data = current_user.sections.map do |section|
-      @section = section
-      @script = section.script
-      {
-        section_id: section.id,
-        section_name: section.name,
-        progress: single_section_progress
-      }
-    end
-    render json: data
-  end
-
   def section_progress
     load_section
-    load_script
-
-    render json: single_section_progress
-  end
-
-  def single_section_progress
     load_script
 
     # stage data
@@ -98,15 +77,17 @@ class ApiController < ApplicationController
       {id: student.id, levels: student_levels}
     end
 
-    {
-      students: students,
-      script: {
-        id: @script.id,
-        name: data_t_suffix('script.name', @script.name, 'title'),
-        levels_count: @script.script_levels.length,
-        stages: stages
-      }
-     }
+    data = {
+            students: students,
+            script: {
+                     id: @script.id,
+                     name: data_t_suffix('script.name', @script.name, 'title'),
+                     levels_count: @script.script_levels.length,
+                     stages: stages
+                    }
+           }
+
+    render json: data
   end
 
   def student_progress
