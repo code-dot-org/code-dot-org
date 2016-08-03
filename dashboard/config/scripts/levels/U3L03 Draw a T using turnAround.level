@@ -69,8 +69,76 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
-    "data_tables": "[\r\n  {\r\n    \"entries\": [\r\n      \"[forTest]\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnLeft:1\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft().\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"moveForward:1\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnRight\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnAround\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 1,\r\n    \"message\": \"You need to define a function called turnAround and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnAround\",\r\n      \"turnLeft\",\r\n      \"turnLeft\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 1,\r\n    \"message\": \"The turnAround function should be calling turnLeft two times.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnAround\",\"turnAround\",\r\n      \"moveForward\",\"moveForward\",\"moveForward\",\"moveForward\"\r\n    ],\r\n    \"matchType\": \"inexact\",\r\n    \"minTimes\": 1,\r\n    \"message\": \"It doesn't seem like you are calling turnAround() or moving forward enough times to draw the figure.\"\r\n  }\r\n]",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft()."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnAround"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to define a function called turnAround and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+      },
+      {
+        "entries": [
+          "turnAround",
+          "turnLeft",
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "The turnAround function should be calling turnLeft two times."
+      },
+      {
+        "entries": [
+          "turnAround",
+          "turnAround",
+          "moveForward",
+          "moveForward",
+          "moveForward",
+          "moveForward"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "It doesn't seem like you are calling turnAround() or moving forward enough times to draw the figure."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

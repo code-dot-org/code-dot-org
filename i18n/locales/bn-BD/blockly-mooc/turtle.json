@@ -41,6 +41,7 @@
   "heightParameter":"উচ্চতা",
   "hideTurtle":"শিল্পী লুকান",
   "jump":"লাফান",
+  "jumpTo":"jump to",
   "jumpBackward":"লাফ দিয়ে পিছান",
   "jumpForward":"লাফ দিয়ে এগোন",
   "jumpTooltip":"Moves the artist without leaving any marks.",

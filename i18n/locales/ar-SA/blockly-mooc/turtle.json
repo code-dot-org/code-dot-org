@@ -41,6 +41,7 @@
   "heightParameter":"الارتفاع",
   "hideTurtle":"إخفاء الفنان",
   "jump":"قفز",
+  "jumpTo":"jump to",
   "jumpBackward":"القفز إلى الخلف بمقدار",
   "jumpForward":"القفز إلى الأمام بمقدار",
   "jumpTooltip":"تحريك الفنان دون ترك أي علامات.",

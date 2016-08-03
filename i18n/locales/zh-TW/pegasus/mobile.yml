@@ -4,8 +4,8 @@ zh-TW:
   "yes": 是
   "no": 否
   select_language: 請選擇您的語言
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org 將不提供 Internet Explorer 8、 9 和 10 的支援。請升級到較新版本的瀏覽器。
+  upgrade_ie_message_csedweek: CSEdWeek.org 將不提供 Internet Explorer 8、 9 和 10 的支援。請升級到較新版本的瀏覽器。
   upgrade_ie_link: 瞭解更多資訊
   en: 資訊科學
   computer_science_edweek: 電腦科學教育周
@@ -366,6 +366,8 @@ zh-TW:
   help_translate: Help us translate.
   no_internet: "Don't have Internet?"
   download_offline: Download the offline version.
+  are_you_teacher: 你是老師嗎？
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: 激勵學生和志工參與一個小時的程式課程
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour of Code，他們需要你的幫忙! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} 教師想要參與一個小時程式課程的<br>%{num_volunteers} 志工 註冊 加入他們'
@@ -493,8 +495,8 @@ zh-TW:
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
   dashboard_surveys_answers: Surveys
   dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -511,7 +513,7 @@ zh-TW:
   dashboard_navigation_view_progress: 進展
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: 新增學生
   dashboard_navigation_manage_students: 管理學生們
   dashboard_navigation_lesson_plans_resources: 教案和資源
@@ -661,9 +663,9 @@ zh-TW:
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
   dashboard_announce_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: 瞭解更多資訊
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: 快來試試
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: 新增你的名字
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
