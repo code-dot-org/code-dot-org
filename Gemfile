@@ -203,6 +203,7 @@ gem 'rack-attack', '~> 4.4'
 # Generate SSL certificates
 gem 'acmesmith'
 
+gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'
