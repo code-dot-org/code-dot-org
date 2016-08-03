@@ -41,6 +41,7 @@
   "heightParameter": "alçcada",
   "hideTurtle": "amaga l'artista",
   "jump": "salt",
+  "jumpTo": "jump to",
   "jumpBackward": "salta cap enrere",
   "jumpForward": "salta cap endevant",
   "jumpTooltip": "Mou l'artista sense deixar ninguna marca.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Gira l'artista cap a l'esquerra o dreta segons el nombre especificat de graus.",
   "turtleVisibilityTooltip": "Fer l'artista visible o invisible.",
   "widthTooltip": "Canvia el gruix del llapis.",
-  "wrongColour": "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1."
 }

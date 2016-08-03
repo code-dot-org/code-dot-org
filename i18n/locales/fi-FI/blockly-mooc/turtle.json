@@ -41,6 +41,7 @@
   "heightParameter":"korkeus",
   "hideTurtle":"piilota taiteilija",
   "jump":"hyppää",
+  "jumpTo":"jump to",
   "jumpBackward":"hyppää taaksepäin",
   "jumpForward":"hyppää eteenpäin",
   "jumpTooltip":"Liikuttaa taiteilijaa piirtämättä jälkeä.",

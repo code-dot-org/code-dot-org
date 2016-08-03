@@ -40,11 +40,11 @@
         video: Unplug3
       Unplug4:
         title: Algoritmi
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Ova lekcija obuhvaća algoritama.  Koristeći oblik tangram i graficki
+          papir, prva vježba će pokazati koliko je važno  da se svaka instrukcija
+          razumna i nedvosmislena što je više moguće.  Nakon toga, studenti će istražiti
+          na koliko načina mogu da presaviju papir u obliku pravokutnik, primjetice
+          da  neki metodi mogu uzeti više ili manje presavijanja od drugih.
         pdfs:
         - unplug4
         video: Unplug4

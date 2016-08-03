@@ -41,6 +41,7 @@
   "heightParameter": "altura",
   "hideTurtle": "ocultar o artista",
   "jump": "saltar",
+  "jumpTo": "jump to",
   "jumpBackward": "saltar para trás por",
   "jumpForward": "saltar para a frente por",
   "jumpTooltip": "Move o artista sem deixar marcas.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Vira o artista à direita ou à esquerda de acordo com o número de graus especificado.",
   "turtleVisibilityTooltip": "Torna o artista visível ou invisível.",
   "widthTooltip": "Altera a largura do lápis.",
-  "wrongColour": "A tua imagem está na cor errada. Neste desafio tem de ser %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "A tua imagem está na cor errada. Neste desafio tem de ser %1."
 }
