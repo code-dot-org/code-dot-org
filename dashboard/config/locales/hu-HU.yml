@@ -140,8 +140,8 @@
     picture: Keress egy titkos képet
     words: "Írd be a titkos szavaidat"
     login: Bejelentkezés
-    invalid_login: "Érvénytelen bejelentkezés, kérjük próbáld meg újra"
-    pair_programming: Van egy társam a számítógépnél
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Elfelejtette jelszavát?
@@ -286,9 +286,9 @@
       signup: Regisztrálás
       already_registered: Már regisztráltál?
       pair_programming: Páros programozás
-      team: Csapat
-      driver: Vezető
-      navigator: Navigátor
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: Fejlődése
@@ -403,12 +403,7 @@
       hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá
       tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket
       a "fel nem használt blokk" funkcióról annak bevezetése előtt.
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class
-      how the Internet works, how cryptography keeps data secure, and other concepts?
-      We’ve taken the best interactive tools from our Computer Science Principles
-      curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Tudj meg többet
-    announcement_try_now_button: Próbálja ki most
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -644,9 +639,6 @@
     wrong_body: Köszönjük az elküldött válaszokat.
     correct_title: Köszönöm
     correct_body: Köszönjük az elküldött válaszokat.
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
   level_group-submittable:
     wrong_title: Köszönöm
     wrong_body: Köszönjük az elküldött válaszokat.
@@ -826,17 +818,16 @@
       continue_button: Go on to the next Stage
       playlab_description: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
       playlab_title: "Új aplikáció"
-      primary_header: Gratulálunk! Befejezted a %{stageName}! szakaszt!
+      primary_header: Congratulations! You finished %{stageName}!
       projects_description: Revisit one of your existing projects.
-      projects_title: Egy projekt megnyitása
+      projects_title: Open a project
       secondary_header: Kérdezd meg a tanárod, hogy mit csinálj legközelebb
   flex_category:
     required: "Összefoglaló"
-    content: Tartalom
-    practice: Tanítási gyakorlatok
-    peer_review: Peer Review
+    content: Content
+    practice: Teacher Practices
   external_links:
-    disclaimer: Felelősséget kizáró nyilatkozat
+    disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
       by Code.org.
     disclaimer_text: This site may have privacy policies that differ from Code.org's.
@@ -846,9 +837,9 @@
       objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Van interneted?
+    capsule_title: Do you have Internet?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: Nincs internet?
+    instructions_headline: No Internet?
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers
@@ -856,12 +847,12 @@
       on all computers. Note: students will not be able to log into Code Studio, save
       progress, or print certificates. Teachers may print certificates ahead of time
       <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Kódolás Órája
-    starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blocks)'
-    starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Letöltés angolul:'
-    download_in_spanish: 'Letöltés spanyolul:'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
   plc:

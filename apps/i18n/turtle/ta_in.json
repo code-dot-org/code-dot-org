@@ -41,7 +41,6 @@
   "heightParameter": "உயரம்",
   "hideTurtle": "கலைஞரை மறை",
   "jump": "jump",
-  "jumpTo": "jump to",
   "jumpBackward": "பின்னோக்கி தாவு",
   "jumpForward": "முன்னோக்கி தாவு",
   "jumpTooltip": "Moves the artist without leaving any marks.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "Changes the width of the pencil.",
-  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
+  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1.",
+  "jumpTo": "jump to"
 }

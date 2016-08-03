@@ -238,7 +238,10 @@ zh:
         你可以用兩個程式積木就完成上一題的任務嗎? 
         (提示: 使用程式積木"repeat times"來建立一個迴圈)
       2-3 Maze 12 (old)_instruction: 帶我到那隻豬旁邊，這次使用重複次數的程式積木。
-      2-3 Maze 12 - One Move Block_instruction: "得到這頭豬 ！但這一次，你只能用一個 '前進' 塊。你看看有沒有其他方塊可以幫助你？"
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         你可以只用兩個程式積木來替代原先的五個程式積木嗎?
         (提示: 使用程式積木"repeat times"來建立一個迴圈)
@@ -291,111 +294,6 @@ zh:
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: 往前移動 來幫助鳥抓到頑皮的豬。
-      20hr_farmer_stage9_1_instruction: |
-        Hi, I'm a farmer. I need your help to flatten
-        the field on my farm so it's ready for planting. Move me to the pile of dirt
-        and use the "remove" block to remove it.
-      20hr_farmer_stage9_10_instruction: |
-        I'm working late, so it's dark out, and
-        I can't tell how large the piles are. Now I don't have all the options I
-        used to have on the while block. Move me along the field, and if there is
-        a pile, remove it
-      20hr_farmer_stage9_11_instruction: |
-        It's still dark outside. Move me along
-        the field. If there is a pile, remove it, and if there is a hole, fill it
-        in. Hint: use the dropdown menu of options on the "if" block.
-      20hr_farmer_stage9_2_instruction: |
-        Next, move me to the hole and fill it with
-        TWO shovelfuls of dirt, using the "fill" block.
-      20hr_farmer_stage9_3_instruction: |
-        Move me to the pile of dirt and tell me
-        how many shovelfuls to remove using as few blocks as possible.
-      20hr_farmer_stage9_4_instruction: |
-        Can you help me remove all four piles of
-        dirt? Hint: use a repeat block if you can.
-      20hr_farmer_stage9_5_instruction: |
-        Help me fill in all these holes with 5 shovelfuls
-        of dirt. Hint: you can put a "repeat" block inside the "while" block.
-      20hr_farmer_stage9_6_instruction: |
-        Remove all the piles of dirt, using as few
-        blocks as possible. The new options in the dropdown menu on the "while"
-        block tell me if I'm standing on a pile or a hole.
-      20hr_farmer_stage9_7_instruction: |
-        Wow, I found a really deep hole! I don't
-        know how many shovelfuls of dirt it needs. Can you write a program that fills
-        it until the ground is even?
-      20hr_farmer_stage9_8_instruction: |
-        Help me fill in the hole at the end of the
-        field, using as few blocks as possible.
-      20hr_farmer_stage9_9_instruction: |
-        Make me remove all these piles of dirt.
-        Try to use as few blocks as possible. Hint: try using a "while" block.
-      20hr_maze_stage2_1_instruction: |
-        Can you help me to catch the naughty pig?
-        Stack a couple of "move forward" blocks together and press "Run" to help
-        me get there.
-      20hr_maze_stage2_10_instruction: |
-        Ok, try the new "repeat until" block -
-        it will repeat until I reach the annoying pig.
-      20hr_maze_stage2_11_instruction: |
-        Ok, one last time for practice - can you
-        solve this one using only 4 blocks?
-      20hr_maze_stage2_12_instruction: |
-        Dear person. Me zombie. Me hungry. Must...
-        get... to sunflower... Can you get me there with only 5 blocks?
-      20hr_maze_stage2_13_instruction: |
-        Ok, this is similar, but slightly different.
-        Can you do it in only 5 blocks?
-      20hr_maze_stage2_14_instruction: |
-        Use the new "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      20hr_maze_stage2_15_instruction: |
-        Ok, this is just like the last puzzle, but
-        you need to remember how you used the "if" block and the "repeat" block
-        together.
-      20hr_maze_stage2_16_instruction: |
-        Me want sunflower! Use an "if" block to
-        get me there with the fewest number of blocks.
-      20hr_maze_stage2_17_instruction: |
-        Ok, let's do that again for practice - this
-        isn't very different, but watch out for the chompers!
-      20hr_maze_stage2_18_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      20hr_maze_stage2_19_instruction: |
-        One more practice of the "if-else" block,
-        can you get it right on your first try?
-      20hr_maze_stage2_2_instruction: |
-        This pig is ruffling my feathers. Help me
-        to find him!
-      20hr_maze_stage2_20_instruction: |
-        Can you add just 3 blocks to help me solve
-        a more complex maze? If you do it right, I can walk any curvy path no matter
-        the length.
-      20hr_maze_stage2_3_instruction: |
-        Trace the path and lead me to the silly pig.
-        Avoid TNT or the feathers will fly!
-      20hr_maze_stage2_4_instruction: |
-        Guide me to the green evilness! (Watch out
-        for TNT)
-      20hr_maze_stage2_5_instruction: |
-        Keep calm and help me to find the bad pig.
-        Otherwise I might get angry!
-      20hr_maze_stage2_6_instruction: |
-        There's a way I can get to the silly pig
-        using only 2 blocks. Can you figure it out?
-      20hr_maze_stage2_7_instruction: |
-        Try to get me to the green intruder using
-        only three blocks.
-      20hr_maze_stage2_8_instruction: |
-        Help me banish this bad piggy using the fewest
-        number of blocks. Try using more than one "repeat times" block.
-      20hr_maze_stage2_9_instruction: |
-        When a block is grey, that means you can't
-        delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
-        Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
       4-5 Artist 1_instruction: '請幫我畫完我的箱子。(每一條線的長度是 300 像素) '
       4-5 Artist 10_instruction: '按下"執行"來試試程式碼。 接著，重複它來完成這個圖。每次執行的顏色都會不一樣。'
       4-5 Artist 11_instruction: 完成綠線。線是 300 個像數長，之間的距離為15 個像數。
@@ -1134,9 +1032,6 @@ zh:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      Collector Demo_instruction: |
-        Look at all this loot! Help me get as many coins
-        as I can so I can improve my farm. I can only use 9 blocks though!
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -1343,8 +1238,12 @@ zh:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Functions challenge_instruction: 按一下此處再次查看提示。
-      Course 4 Artist Functions Inspiration_instruction: 按一下此處再次查看提示。
+      Course 4 Artist Functions challenge_instruction: |
+        Click here to see the hints
+        again.
+      Course 4 Artist Functions Inspiration_instruction: |
+        Click here to see the hints
+        again.
       Course 4 Artist Functions inspire_instruction: |
         Click here to see the inspiration
         picture again.
@@ -1633,12 +1532,12 @@ zh:
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
-      Course 4 EC 1a_instruction: 沒有規則。沒有線索。只是挑戰 ！
-      Course 4 EC 1b_instruction: 沒有規則。沒有線索。只是挑戰 ！
-      Course 4 EC 2a_instruction: 沒有規則。沒有線索。只是挑戰 ！
-      Course 4 EC 2b_instruction: 沒有規則。沒有線索。只是挑戰 ！
-      Course 4 EC 2c_instruction: 沒有規則。沒有線索。只是挑戰 ！
-      Course 4 EC 2d_instruction: 沒有規則。沒有線索。只是挑戰 ！
+      Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2a_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2b_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2c_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 3_instruction: |
         Use what you learned in the previous level to draw
         an image like this. Note: The code becomes more simple if you incorporate
@@ -1646,7 +1545,7 @@ zh:
       Course 4 EC 3a_instruction: |
         Extreme Challenge: No rules. No clues. Just the
         challenge!
-      Course 4 Maze 1_instruction: 將憤怒鳥帶到小豬 ！
+      Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: 小心TNT炸藥!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: |
@@ -1832,17 +1731,6 @@ zh:
       Course1BeePuzzle12_instruction: 讓我採3次花蜜來製作2次蜂蜜
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
-      course2_playlab_stage17_1_instruction: 你能讓這隻狗說出「Hello World!」嗎？
-      course2_playlab_stage17_2_instruction: |
-        Can you make the dog say something
-        and then have the cat say something afterwards?
-      course2_playlab_stage17_3_instruction: |
-        Can you write a program to make this
-        dog move to the cat?
-      course2_playlab_stage17_4_instruction: |
-        Can you write a program that makes
-        the dog move to the cat, and have the cat say "hello" when the dog reaches
-        him?
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -2549,24 +2437,6 @@ zh:
       grade2_PuppyLoops_9_instruction: |
         看起來Ｃ被畫反了
         你可以將它改正嗎？
-      grade3_AboutMyRobot_1_instruction: |
-        Make your robot say "Hello!" when the
-        button is clicked.
-      grade3_AboutMyRobot_2_instruction: |
-        Edit the code so that when the second bird
-        is clicked, your program plays a sound!
-      grade3_AboutMyRobot_3_instruction: |
-        When the third bird is clicked, the background
-        should change to a city. Can you add code to make this happen?
-      grade3_AboutMyRobot_4_instruction: |
-        Add code to make something happen when
-        the fourth bird is clicked. Be creative!
-      grade3_AboutMyRobot_5_instruction: |
-        About My Robot Project! Write code so that
-        clicking on each bird shows a new fact about your robot.
-      grade3_AboutMyRobot_TeacherIDo_instruction: |
-        Run this puzzle and click on the
-        robot to see what happens!
       grade3_Conditionals_1 BAD_instruction: 使用迴圈來收集所有的花蜜。
       grade3_Conditionals_1_instruction: 你好，我是一隻蜜蜂！ 幫我從花中採集的全部的花蜜吧！ 記得使用剛剛所學到的迴圈。
       grade3_Conditionals_10 BAD_instruction: 從這排花中採集花蜜。使用巢狀迴圈。
@@ -2666,10 +2536,6 @@ zh:
       grade4_arist_nested_loop_triangles6_instruction: |
         Can you draw these 36 triangles
         using a nested loop?
-      grade4_artist_freeplay_instruction: |
-        Create your own project! This creation
-        will be saved to your Projects dashboard so that you can easily edit it any
-        time!
       grade4_artist_functions_stars0_instruction: |
         Have you drawn something like
         this star before? Practice making it one more time by adding a turn and a
@@ -2849,9 +2715,6 @@ zh:
         Let's create three squares, turning
         after each square. Be sure to turn by 120 degrees before each new square.
       grade4_frozen_square_loop3_instruction: 這次您可以用「重複」程式積木來畫 10 次正方形，每次轉 36 度嗎？這樣可以畫出一片雪花喔！
-      grade4_playlab_freeplay_instruction: |
-        It's free play time! Have fun with all
-        the blocks in your tool box. 
       grade4_playlab_test_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       grade4_playlab_test2_instruction: |
         Here's a function called `jump` that causes
@@ -2874,30 +2737,6 @@ zh:
         of the nectar and make all of the honey.
       grade4_review_bee2_instruction: 從每一朵花中採集花蜜，在每一個蜂窩裡釀蜜。
       grade4_review_bee3_instruction: 使用和上一個謎題類似的迴圈，但還要再加上一個轉彎。
-      grade5_artist_binary1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
-      grade5_artist_binary10_instruction: 按一下此處查看提示。
-      grade5_artist_binary11_instruction: |
-        Free Play: Here's a blank canvas for
-        you to draw on.  Have fun!
-      grade5_artist_binary2_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
-      grade5_artist_binary3_instruction: |
-        Which of these binary strings could you
-        loop 8 times to draw this image?
-      grade5_artist_binary4_instruction: |
-        Can you draw this pattern by looping just
-        three binary digits (0s and 1s)?
-      grade5_artist_binary5_instruction: |
-        Each binary string represents one row of
-        this picture. Can you rearrange them so it draws a smiley face instead of
-        a frowny face?
-      grade5_artist_binary6_instruction: |
-        Which 6 digit binary string, repeated 11
-        times, will draw this image?
-      grade5_artist_binary7_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
-      grade5_artist_binary8_instruction: 完成這幅畫。
-      grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw\non - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we start to get\ncreative with the bits?"
       grade5_artist_for_loops1_instruction: |
         Use a repeat block to draw this triangle
         that is 50 pixels wide.
@@ -2936,25 +2775,6 @@ zh:
         Free Play: Try making some
         drawings of your own using "for loops". We've added a few useful variables
         for you as well.
-      grade5_artist_freeplay_instruction: |
-        Create your own project! This creation
-        will be saved to your Projects dashboard so that you can easily edit it any
-        time!
-      grade5_artist_functionparameters10_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
-      grade5_artist_functionparameters11_instruction: |
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
-        Play with the pen width to see how different your drawings look!
-      grade5_artist_functionparameters7_instruction: |
-        This image is similar to the
-        last. Can you use a `for` loop with your function to make this design?
-      grade5_artist_functionparameters8_instruction: "Let's edit this \"draw a polygon\"\nfunction. It already has a \"sides\" parameter. Now, let's add a \"length\"\nparameter. \\r\nThe perimeter of each shape is 200 pixels long. Do you remember\nthe equation to make shapes the same size when they have a different number\nof sides?"
-      grade5_artist_functionparameters9_instruction: |
-        Edit "draw a spiral edge"
-        to use "length" and "sides" parameters, then recreate these shapes.
-      grade5_artist_functionparameters_6_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
       grade5_artist_parameters_squares1_instruction: |
         Click "edit" to fill in the
         function definition of "draw a square" and add a parameter. It should take
@@ -2969,9 +2789,9 @@ zh:
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade5_artist_parameters_triangles1_instruction: |
-        This program looks okay from
-        here, but something isn't working right. See if you can figure out how to
-        edit the function 'draw a triangle' to find the bug.
+        Today, we're going to try
+        out a different, more powerful function editor. See if you can figure out
+        how to edit the function 'draw a triangle' to find the bugs.
       grade5_artist_parameters_triangles1a_instruction: |
         Today, we're going to try
         out a different, more powerful function editor. See if you can figure out
@@ -3070,71 +2890,16 @@ zh:
         You've got this! What should your increment
         be to collect 3, 6, 9, 12, 15 nectar?
       grade5_bee_for_loops9_instruction: "Now, let's combine the \"counter\" variable\nwith a math block! How can you use the \"counter\" variable to navigate this\ngarden with the fewest number of blocks possible? What do you need to do to\ncollect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\\r\n\\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
-      grade5_bee_parameters_new1_instruction: |
-        Help the bee collect all of the nectar.
-        You can only collect nectar from flowers, but you can check any space to see
-        if there is a flower.
-      grade5_bee_parameters_new2_instruction: |
-        Let's take that last program you
-        wrote and turn it into a function. Then, call the function to collect the
-        nectar when needed. This may seem like a strange step now, but it will be
-        really helpful soon!
-      grade5_bee_parameters_new3_instruction: |
-        Time to put the function to the test!
-        Let's see if it makes it any easier to collect these three rows of nectar.
-      grade5_bee_parameters_new4_instruction: |
-        How is your function holding up? We
-        may need to make some adjustments here. Can you add a 'length' parameter
-        to the function so that it will still work if the row is a different length?
-      grade5_bee_parameters_new5_instruction: |
-        Challenge Level! You are doing great
-        so far! Let's use this parametric function to collect a lot of nectar.
-      grade5_bee_parameters_new6_instruction: |
-        You can make your program much shorter
-        and more efficient when you notice new patterns. Try using some other blocks
-        to make a short and simple solution!
-      grade5_bee_parameters_new7_instruction: |
-        Something looks a little different.
-        Can you modify your function to account for all this honey that needs to be
-        made?
-      grade5_bee_parameters_new8_instruction: |
-        That's a great function you've created!
-        You are officially on your own now. Collect all the nectar. Make all the honey.
-      grade5_bee_parameters_new9_instruction: |
-        Bonus Challenge! If you are feeling
-        ambitious, try this puzzle. It is possible to collect all of the nectar and
-        make all of the honey using only a For loop, a Repeat loop, a function call,
-        and a turn. Try it all on your own, or view the hints to build it step-by-step.
-        Great job with this stage!
       grade5_pixelation_instruction: |
         Encode an image of anything you like using
         binary. Remember that the binary language will be represented with '0' and
         '1' only.
-      grade5_playlab_freeplay_instruction: |
-        It's free play time! Have fun with all
-        the blocks in your tool box. 
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most\nof the code is hidden. We've added a new function called `score_points.`\\r\n\\r\nAdd\na new parameter called `points` to the `player_score` function. \\r\n\\r\nThe\n`score_points` function should be able to both add and remove points from\n`player_score` depending on which actor is hit.\\r\nChanging the score by 1\nwill add a point, while changing the score by -1 will subtract a point.\\r\n\\r\nWhen\nyou're done, click \"Run\" to play.  When Dog scores 6 points, you will move\non to the next puzzle. "
       grade5_playlab_variables1_instruction: |
         This time you don't have to write
         any code, just hit "Run" to play the game! In this game, you're the dog
         who is trying to collect more flags than the cat. Use the down arrow to control
         the dog. Press "Finish" when you're done playing.
-      grade5_playlab_variables10_instruction: |
-        Edit the the "patrol" function to
-        add an "actor" parameter, so that we can call it for each of the actors
-        on the screen. Remember, the actors correspond to numbers 1, 2, and 3.
-      grade5_playlab_variables11_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
-      grade5_playlab_variables12_instruction: "Let's have some fun! Look at the\ncode provided to see if you can figure out what each block does.  \\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags.\\r\nNOTE:\nYou don't need to make any changes to the program"
-      grade5_playlab_variables13_instruction: |
-        Use the `when actor touches` block
-        to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      grade5_playlab_variables14_instruction: |
-        It's free play time! Have fun with
-        all the blocks in your tool box. 
       grade5_playlab_variables2_instruction: |
         The race in that last puzzle wasn't
         very fair! Change the `dog_speed` variable to make sure you can collect more
@@ -3153,16 +2918,12 @@ zh:
         isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
         Cat (actor 2), you should lose a point. Start with 10 points so it's not
         too hard. Let your score drop down from 10 to 0 to pass the level.
-      grade5_playlab_variables71_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
-      grade5_playlab_variables81_instruction: "We've added one last function for\nyou. \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move to the next puzzle. "
-      grade5_playlab_variables9_instruction: "Here's a function called `patrol`.\n\\r\n\\r\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels."
       grade5_playlab_variables_freeplay_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\nHint: scroll down to see all the commands\nin the workspace."
       grade5_playlab_variables_jump1_instruction: |
         This puzzle uses a hidden function
         that makes the dog jump when the 'up' arrow is pressed. The height of the
         jumps can be set at the start of the game using the 'jumpPower' variable.
         Try to touch all of the flags!
-      grade5_prompt_test_instruction: This is a test play lab level.
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
       Infinity_catch_instruction: 您能寫一個程式，用方向鍵控制艾莎 (演員2) 去抓到安娜嗎？
       Infinity_finale_instruction: 自由發揮吧！然後把您的成果分享出來！
@@ -3174,12 +2935,14 @@ zh:
       Infinity_shoot_instruction: 杯麵是「演員2」。讓杯麵對著阿廣發射火箭吧！
       Infinity_shoot_directions_instruction: 阿廣是「演員3」。讓阿廣對著其他四個角色各發射一個東西出去，每一次發射後都等一秒再發射下一個。
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: 接觸更多的雪花 ！
+      Infinity_touch_faster_instruction: Touch even more snowflakes!
       Infinity_touch_four_instruction: 上、下、左、右移動安娜去碰四個雪花。
       Infinity_touch_score_instruction: 讓安娜去碰雪花，每次碰到就得一分。按下「執行」以後，就用方向鍵去控制安娜讓她得分吧！
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
-      K-1 Artist 1 Assessment 1_instruction: 繪製一條向上短線及一條向右長線 ！
+      K-1 Artist 1 Assessment 1_instruction: |
+        Draw a short line up and a long one
+        to the right!
       K-1 artist 1 level 10_instruction: '用"跳躍"和"畫線"的程式積木來畫出虛線'
       K-1 artist 1 level 9_instruction: 用三行程式碼畫出這張圖
       K-1 Artist Loops 1_instruction: 向東移動4次來畫出這條線。
@@ -3207,8 +2970,8 @@ zh:
         up and draw a line.
       K-1 Artist1 8_instruction: '用"跳躍"和"畫線"的程式積木來畫出虛線'
       K-1 Artist1 9_instruction: 繪製與跳過，來完成虛線
-      K-1 Artist1 Assessment 1_instruction: 繪製短和長的線 ！
-      K-1 Artist1 Assessment 2_instruction: 繪製短虛線畫 ！
+      K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
+      K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
       K-1 Artist2 1_instruction: 在三角形底下畫一個正方形
       K-1 Artist2 2_instruction: 跳到房子旁邊並畫出一個正方形
       K-1 Artist2 3_instruction: 在正方形的上方再畫另一個正方形
@@ -3220,7 +2983,7 @@ zh:
       K-1 Artist2_7_instruction: 幫梳妝台最上面的抽屜畫一個矩形!
       K-1 Bee 1_instruction: 讓我移動到花兒那，採點花蜜，再回到蜂巢，製作蜂蜜
       K-1 Bee 10_instruction: 讓我採4次花蜜來製作2次蜂蜜
-      K-1 Bee 11.5_instruction: 採集4個花蜜並用它們來做出4個蜂蜜!
+      K-1 Bee 11.5_instruction: Get four nectar to make four honey!
       K-1 Bee 11_instruction: 採集3個花蜜並做出1個蜂蜜
       K-1 Bee 12_instruction: 讓我採3次花蜜來製作2次蜂蜜
       K-1 Bee 13_instruction: 採集3個花蜜並做出1個蜂蜜!
@@ -3234,10 +2997,10 @@ zh:
       K-1 Bee 7_instruction: 讓我採3次花蜜來製作2次蜂蜜
       K-1 Bee 8_instruction: 讓我採2次花蜜來製作2次蜂蜜
       K-1 Bee 9_instruction: 讓我採2次花蜜來製作2次蜂蜜
-      K-1 Bee Assessment 1_instruction: 收集花蜜來做成蜂蜜!
-      K-1 Bee Assessment 2_instruction: 收集花蜜來做成蜂蜜!
+      K-1 Bee Assessment 1_instruction: Get nectar to make honey!
+      K-1 Bee Assessment 2_instruction: Get nectar to make honey!
       K-1 Bee Loops 1_instruction: 收集花蜜來做成蜂蜜!
-      K-1 Bee Loops 10_instruction: 採集所有的花蜜及制成所有的蜂蜜。
+      K-1 Bee Loops 10_instruction: Get all of the nectar and make all of the honey.
       K-1 Bee Loops 11_instruction: '評估: 使用迴圈來採集花蜜和製作蜂蜜!'
       K-1 Bee Loops 12_instruction: '評估: 使用迴圈來採集花蜜、製作蜂蜜和移動!'
       K-1 Bee Loops 2_instruction: 用一個迴圈來移動，然後採集花蜜並做成蜂蜜!
@@ -3249,11 +3012,13 @@ zh:
       K-1 Bee Loops 6_instruction: |
         Use a `repeat` loop to get the nectar, get honey,
         and to move!
-      K-1 Bee Loops 7_instruction: 收集花蜜來做成蜂蜜!
-      K-1 Bee Loops 8_instruction: 收集花蜜來做成蜂蜜!
-      K-1 Bee Loops 9_instruction: 採集所有的花蜜及制成所有的蜂蜜。
-      K-1 Bee Loops Assessment 1_instruction: '採集花蜜並制造蜂蜜及使用"迴圈"來移動 ！'
-      K-1 Bee Loops Assessment 2_instruction: '便用"迴圈"來採集蜂蜜並制做花蜜 ！'
+      K-1 Bee Loops 7_instruction: Get the nectar and make honey!
+      K-1 Bee Loops 8_instruction: Get the nectar and make honey!
+      K-1 Bee Loops 9_instruction: Get the all the nectar and make all of the honey.
+      K-1 Bee Loops Assessment 1_instruction: |
+        Get nectar to make honey and use loops
+        to move!
+      K-1 Bee Loops Assessment 2_instruction: Get nectar to make honey using loops!
       K-1 Bee Puzzle 12_instruction: 讓我採3次花蜜來製作2次蜂蜜
       K-1 Building a Foundation Assessment_instruction: |
         建一個三層的金字塔。
@@ -3299,7 +3064,7 @@ zh:
       K-1 Maze Loops 5_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 6_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 7_instruction: Get me to the pig! Be sure to use `repeat` loops.
-      K-1 Maze Loops 8_instruction: '用"重複"程式積木使我走到豬的位置!'
+      K-1 Maze Loops 8_instruction: Use `repeat` loops to get me to the pig.
       K-1 Maze Loops 9_instruction: 帶我到那隻豬旁邊!
       K-1 Maze Loops Assessment 1_instruction: '評估 -- 用迴圈來讓我到達豬的位置!'
       K-1 Maze Loops Assessment 2_instruction: '評估 -- 用迴圈來讓我到達豬的位置!'
@@ -4017,7 +3782,6 @@ zh:
         Here are regular instructions for a level. There
         is nothing fancy going on here.
       PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. \\r\nYou must first check if\nthe nectar is equal to 1 using the `if nectar` block."
-      PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: |
         Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to
@@ -5851,7 +5615,7 @@ zh:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: 範本
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\\r\n\\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

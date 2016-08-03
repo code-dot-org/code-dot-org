@@ -492,8 +492,6 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: Bạn có phải là giáo viên?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Truyền cảm hứng cho sinh viên và tình nguyện
     viên
   volunteer_engineer_submission_subtitle_generic: '100,000 giáo viên sẽ hướng dẫn
@@ -719,7 +717,7 @@
   dashboard_navigation_view_progress: Sự tiến bộ
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Phương pháp đánh giá
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Thêm sinh viên
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
@@ -911,7 +909,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Tìm hiểu thêm
-  dashboard_announce_try_now_button: Thử ngay bây giờ
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào
     để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây
     giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo
@@ -1767,3 +1765,6 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
+  are_you_teacher: Are you a teacher?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

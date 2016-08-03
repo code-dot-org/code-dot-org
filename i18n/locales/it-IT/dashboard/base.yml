@@ -350,9 +350,7 @@ it:
     announcement_title: Annunci
     announcement_view_all: Visualizza tutto
     announcement_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Ulteriori informazioni
-    announcement_try_now_button: Prova adesso
     announcement_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
     announcement_petition_button: Aggiungi il tuo nome
   move_students:
@@ -529,7 +527,6 @@ it:
     wrong_body: Grazie per aver inviato delle risposte.
     correct_title: Grazie!
     correct_body: Grazie per aver inviato delle risposte.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Grazie!
     wrong_body: Grazie per aver inviato delle risposte.
@@ -685,7 +682,6 @@ it:
     required: Panoramica
     content: Contenuto
     practice: "Pratiche d'insegnante"
-    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

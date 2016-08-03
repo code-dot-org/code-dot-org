@@ -41,7 +41,6 @@
   "heightParameter":"ความสูง",
   "hideTurtle":"ซ่อนศิลปิน",
   "jump":"กระโดด",
-  "jumpTo":"jump to",
   "jumpBackward":"กระโดดไปข้างหลังด้วยระยะทาง",
   "jumpForward":"กระโดดไปข้างหน้าด้วยระยะทาง",
   "jumpTooltip":"ย้าย Artist โดยไม่ต้องออกจากเครื่องหมายใด ๆ",

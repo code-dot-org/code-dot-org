@@ -941,7 +941,7 @@ en:
           Unit 1, Day 17-19. What Is Intelligence?: crwdns43384:0crwdne43384:0
           "Unit 1, Days 1-2: What Is a Computer?": crwdns43385:0crwdne43385:0
           Unit 1, Days 3-4 Buying a Computer: crwdns43386:0crwdne43386:0
-          '0': crwdns43387:0crwdne43387:0
+          0: crwdns43387:0crwdne43387:0
           1: crwdns43388:0crwdne43388:0
           Unit 1, Days 5-7 Searching and Web 2.0: crwdns43389:0crwdne43389:0
           Unit 1, Days 8-9 Impact of Computers and Communication: crwdns43390:0crwdne43390:0
@@ -1437,7 +1437,7 @@ en:
           Thinking About Implementation: crwdns54751:0crwdne54751:0
           Wrap-Up: crwdns54752:0crwdne54752:0
           Assessing Computer Models: crwdns55898:0crwdne55898:0
-          "(optional) Refresh your connection to Complex Adaptive Systems": crwdns55899:0crwdne55899:0
+          (optional) Refresh your connection to Complex Adaptive Systems: crwdns55899:0crwdne55899:0
         cspunit5:
           title: crwdns55921:0crwdne55921:0
           description_short: crwdns55922:0crwdne55922:0
@@ -1741,8 +1741,8 @@ en:
           Wrap Up: crwdns56615:0crwdne56615:0
           Welcome to Phase 1!: crwdns56616:0crwdne56616:0
           Background and Context: crwdns56617:0crwdne56617:0
-          'Classroom and workshop style ': crwdns56618:0crwdne56618:0
-          'Classroom and Workshop Style ': crwdns56619:0crwdne56619:0
+          Classroom and workshop style : crwdns56618:0crwdne56618:0
+          Classroom and Workshop Style : crwdns56619:0crwdne56619:0
         algebraFacilitator:
           title: crwdns56620:0crwdne56620:0
           description_short: crwdns56621:0crwdne56621:0
@@ -1871,8 +1871,6 @@ en:
           Looping and Random Numbers: crwdns56814:0crwdne56814:0
           App Lab: crwdns56815:0crwdne56815:0
           Design Mode: crwdns56816:0crwdne56816:0
-          Making it Interactive: crwdns57996:0crwdne57996:0
-          Adding Functionality (optional): crwdns57997:0crwdne57997:0
         CSDU1-Draft:
           title: crwdns56817:0crwdne56817:0
           description_short: crwdns56818:0crwdne56818:0
@@ -1997,10 +1995,6 @@ en:
           "Unplugged: Decision Trees (New)": crwdns57721:0crwdne57721:0
           "Unplugged: Nested Loops (New)": crwdns57722:0crwdne57722:0
           Artist Ramp Up (including Nested Loops): crwdns57723:0crwdne57723:0
-          "Project #1: Artist (Nested Loops, Functions)": crwdns57998:0crwdne57998:0
-          New Playlab Behaviors and Events Review: crwdns57999:0crwdne57999:0
-          "Project 2: PlayLab Game (Events, Conditionals, Functions)": crwdns58000:0crwdne58000:0
-          "Bee: Nested Loops": crwdns58001:0crwdne58001:0
         grade1:
           Predicting & Debugging: crwdns57134:0crwdne57134:0
           Persistence & Frustration: crwdns57135:0crwdne57135:0
@@ -2042,9 +2036,6 @@ en:
           "Unplugged: Binary Images": crwdns57752:0crwdne57752:0
           "Pixelation: Binary Exploration": crwdns57753:0crwdne57753:0
           Artist Binary: crwdns57754:0crwdne57754:0
-          "Project 1: Choose Your Own Story App": crwdns58002:0crwdne58002:0
-          "Project 2: For Loops with the Artist": crwdns58003:0crwdne58003:0
-          "Project 3: Design your own App (PlayLab)": crwdns58004:0crwdne58004:0
         ecs-unit1:
           title: crwdns57142:0crwdne57142:0
           description_short: crwdns57143:0crwdne57143:0
@@ -2205,23 +2196,3 @@ en:
           Getting Loopy with Puppy: crwdns57862:0crwdne57862:0
           Puppy Loops: crwdns57863:0crwdne57863:0
           Puppy Event: crwdns57864:0crwdne57864:0
-          More CS with Scratch: crwdns58005:0crwdne58005:0
-        transferring-over:
-          20-hr Stage 9: crwdns58006:0crwdne58006:0
-          20-hr Stage 2: crwdns58007:0crwdne58007:0
-          Course 2 Stage 17: crwdns58008:0crwdne58008:0
-        cspunit1assessment:
-          title: crwdns58009:0crwdne58009:0
-          description_short: crwdns58010:0crwdne58010:0
-          description: crwdns58011:0crwdne58011:0
-          CS Principles Culminating Assessment: crwdns58012:0crwdne58012:0
-        cspunit2ch1assessment:
-          title: crwdns58013:0crwdne58013:0
-          description_short: crwdns58014:0crwdne58014:0
-          description: crwdns58015:0crwdne58015:0
-          CS Principles Unit 2 Assessment: crwdns58016:0crwdne58016:0
-        cspunit2ch2assessment:
-          title: crwdns58017:0crwdne58017:0
-          description_short: crwdns58018:0crwdne58018:0
-          description: crwdns58019:0crwdne58019:0
-          CS Principles Unit 2 Assessment: crwdns58020:0crwdne58020:0

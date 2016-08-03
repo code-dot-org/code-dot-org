@@ -502,8 +502,6 @@
   help_translate: Aiutaci a tradurre.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: Sei un insegnante?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
     del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
@@ -736,7 +734,7 @@
   dashboard_navigation_view_progress: Avanzamento
   dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_surveys: Sondaggi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -942,7 +940,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ulteriori informazioni
-  dashboard_announce_try_now_button: Prova adesso
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
     ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
     è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -1855,3 +1853,6 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
+  are_you_teacher: Are you a teacher?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

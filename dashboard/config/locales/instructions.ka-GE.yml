@@ -393,111 +393,6 @@
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: "დაეხმარეთ ჩიტს ჯიუტი გოჭის დაჭერაში მისი წინ გადაადგილებით"
-      20hr_farmer_stage9_1_instruction: |
-        Hi, I'm a farmer. I need your help to flatten
-        the field on my farm so it's ready for planting. Move me to the pile of dirt
-        and use the "remove" block to remove it.
-      20hr_farmer_stage9_10_instruction: |
-        I'm working late, so it's dark out, and
-        I can't tell how large the piles are. Now I don't have all the options I
-        used to have on the while block. Move me along the field, and if there is
-        a pile, remove it
-      20hr_farmer_stage9_11_instruction: |
-        It's still dark outside. Move me along
-        the field. If there is a pile, remove it, and if there is a hole, fill it
-        in. Hint: use the dropdown menu of options on the "if" block.
-      20hr_farmer_stage9_2_instruction: |
-        Next, move me to the hole and fill it with
-        TWO shovelfuls of dirt, using the "fill" block.
-      20hr_farmer_stage9_3_instruction: |
-        Move me to the pile of dirt and tell me
-        how many shovelfuls to remove using as few blocks as possible.
-      20hr_farmer_stage9_4_instruction: |
-        Can you help me remove all four piles of
-        dirt? Hint: use a repeat block if you can.
-      20hr_farmer_stage9_5_instruction: |
-        Help me fill in all these holes with 5 shovelfuls
-        of dirt. Hint: you can put a "repeat" block inside the "while" block.
-      20hr_farmer_stage9_6_instruction: |
-        Remove all the piles of dirt, using as few
-        blocks as possible. The new options in the dropdown menu on the "while"
-        block tell me if I'm standing on a pile or a hole.
-      20hr_farmer_stage9_7_instruction: |
-        Wow, I found a really deep hole! I don't
-        know how many shovelfuls of dirt it needs. Can you write a program that fills
-        it until the ground is even?
-      20hr_farmer_stage9_8_instruction: |
-        Help me fill in the hole at the end of the
-        field, using as few blocks as possible.
-      20hr_farmer_stage9_9_instruction: |
-        Make me remove all these piles of dirt.
-        Try to use as few blocks as possible. Hint: try using a "while" block.
-      20hr_maze_stage2_1_instruction: |
-        Can you help me to catch the naughty pig?
-        Stack a couple of "move forward" blocks together and press "Run" to help
-        me get there.
-      20hr_maze_stage2_10_instruction: |
-        Ok, try the new "repeat until" block -
-        it will repeat until I reach the annoying pig.
-      20hr_maze_stage2_11_instruction: |
-        Ok, one last time for practice - can you
-        solve this one using only 4 blocks?
-      20hr_maze_stage2_12_instruction: |
-        Dear person. Me zombie. Me hungry. Must...
-        get... to sunflower... Can you get me there with only 5 blocks?
-      20hr_maze_stage2_13_instruction: |
-        Ok, this is similar, but slightly different.
-        Can you do it in only 5 blocks?
-      20hr_maze_stage2_14_instruction: |
-        Use the new "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      20hr_maze_stage2_15_instruction: |
-        Ok, this is just like the last puzzle, but
-        you need to remember how you used the "if" block and the "repeat" block
-        together.
-      20hr_maze_stage2_16_instruction: |
-        Me want sunflower! Use an "if" block to
-        get me there with the fewest number of blocks.
-      20hr_maze_stage2_17_instruction: |
-        Ok, let's do that again for practice - this
-        isn't very different, but watch out for the chompers!
-      20hr_maze_stage2_18_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      20hr_maze_stage2_19_instruction: |
-        One more practice of the "if-else" block,
-        can you get it right on your first try?
-      20hr_maze_stage2_2_instruction: |
-        This pig is ruffling my feathers. Help me
-        to find him!
-      20hr_maze_stage2_20_instruction: |
-        Can you add just 3 blocks to help me solve
-        a more complex maze? If you do it right, I can walk any curvy path no matter
-        the length.
-      20hr_maze_stage2_3_instruction: |
-        Trace the path and lead me to the silly pig.
-        Avoid TNT or the feathers will fly!
-      20hr_maze_stage2_4_instruction: |
-        Guide me to the green evilness! (Watch out
-        for TNT)
-      20hr_maze_stage2_5_instruction: |
-        Keep calm and help me to find the bad pig.
-        Otherwise I might get angry!
-      20hr_maze_stage2_6_instruction: |
-        There's a way I can get to the silly pig
-        using only 2 blocks. Can you figure it out?
-      20hr_maze_stage2_7_instruction: |
-        Try to get me to the green intruder using
-        only three blocks.
-      20hr_maze_stage2_8_instruction: |
-        Help me banish this bad piggy using the fewest
-        number of blocks. Try using more than one "repeat times" block.
-      20hr_maze_stage2_9_instruction: |
-        When a block is grey, that means you can't
-        delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
-        Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
       4-5 Artist 1_instruction: "დამასრულებინეთ ჩემი ყუთის ხატვა. (ყოველი გვერდის
         სიგრძე არის 300 პიქსელი) "
       4-5 Artist 10_instruction: კოდის შესამოწმებლად დააჭირეთ ღილაკს "გაშვება". ნახატის
@@ -1409,9 +1304,6 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      Collector Demo_instruction: |
-        Look at all this loot! Help me get as many coins
-        as I can so I can improve my farm. I can only use 9 blocks though!
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? \n"
       Course 2 Bee Loops 13_instruction: |
@@ -2109,17 +2001,6 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
-      course2_playlab_stage17_1_instruction: შეგიძლიათ ათქმევინოთ ამ ძაღლს "ჰეი, სამყარო"?
-      course2_playlab_stage17_2_instruction: |
-        Can you make the dog say something
-        and then have the cat say something afterwards?
-      course2_playlab_stage17_3_instruction: |
-        Can you write a program to make this
-        dog move to the cat?
-      course2_playlab_stage17_4_instruction: |
-        Can you write a program that makes
-        the dog move to the cat, and have the cat say "hello" when the dog reaches
-        him?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -2895,24 +2776,6 @@
         არასწორია. \\r\\r გაასწორეთ კოდი: ულვაშები ტოლი სიგრძისა უნდა იყოს."
       grade2_PuppyLoops_9_instruction: "როგორც ჩანს კოდში C უკუღმაა დახატული.\\r\\r
         შეგიძლიათ ისევ C-ს დაამგვანოთ?"
-      grade3_AboutMyRobot_1_instruction: |
-        Make your robot say "Hello!" when the
-        button is clicked.
-      grade3_AboutMyRobot_2_instruction: |
-        Edit the code so that when the second bird
-        is clicked, your program plays a sound!
-      grade3_AboutMyRobot_3_instruction: |
-        When the third bird is clicked, the background
-        should change to a city. Can you add code to make this happen?
-      grade3_AboutMyRobot_4_instruction: |
-        Add code to make something happen when
-        the fourth bird is clicked. Be creative!
-      grade3_AboutMyRobot_5_instruction: |
-        About My Robot Project! Write code so that
-        clicking on each bird shows a new fact about your robot.
-      grade3_AboutMyRobot_TeacherIDo_instruction: |
-        Run this puzzle and click on the
-        robot to see what happens!
       grade3_Conditionals_1 BAD_instruction: "გამოიყენეთ ციკლი, რომ შეაგროვოთ მთელი
         ნექტარი."
       grade3_Conditionals_1_instruction: |-
@@ -3118,10 +2981,6 @@
       grade4_arist_nested_loop_triangles6_instruction: |
         Can you draw these 36 triangles
         using a nested loop?
-      grade4_artist_freeplay_instruction: |
-        Create your own project! This creation
-        will be saved to your Projects dashboard so that you can easily edit it any
-        time!
       grade4_artist_functions_stars0_instruction: |
         Have you drawn something like
         this star before? Practice making it one more time by adding a turn and a
@@ -3323,8 +3182,6 @@
       grade4_frozen_square_loop3_instruction: "შეგიძლიათ გამეორების ბლოკით 10 კვადრატის
         შექმნით და შემობრუნების ბლოკით 36 გრადუსით მობრუნებით ყოველი კვადრატის შემდეგ
         ფიფქი შექმნათ?"
-      grade4_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
-        blocks in your tool box. \n"
       grade4_playlab_test_instruction: |-
         გამოიყენეთ ისრები და ისროლეთ გულები.\r
         \r
@@ -3352,40 +3209,6 @@
       grade4_review_bee3_instruction: "ოჰ, რა დაკავებული ფუტკარია!\\r\\r დაეხმარეთ
         მას მოკრიბოს მთელი ნექტარი და გააკეთოს მთელი თაფლი ბლოკების მინიმალური რაოდენობის
         გამოყენებით."
-      grade5_artist_binary1_instruction: |-
-        ბინარულობა არის ინფორმაციის მხოლოდ ორი ვარიანტით წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს "გამორთულია" (წარმოდგენილია რიცხვით 0) და "ჩართულია" (წარმოდგენილია რიცხვით 1).\r
-        \r
-        მოცემული გაქვთ პიქსელების ბადე და გარკვეული პიქსელების ჩართვით შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს ბინარულად დაახატინოთ "01010101"?
-      grade5_artist_binary10_instruction: "მინიშნებების სანახავად დააჭირეთ აქ."
-      grade5_artist_binary11_instruction: |
-        Free Play: Here's a blank canvas for
-        you to draw on.  Have fun!
-      grade5_artist_binary2_instruction: |-
-        ეს ფუნქცია 1-ებისა და 0-ების ორობით ხაზს იყენებს მხატვრისთვის მითითებების მისაცემად: გაჰყვეს მარცხნიდან მარჯვნივ, ზემოდან ქვემოთ. მხატვარი შეავსებს კვადრატებს როცა შეხვდება 1 და არ შეავსება კვადრატს როცა დაინახავს 0-ს.\r
-        \r
-        გაუშვით ეს კოდი და ნახეთ, როგორ იყენებს მხატვარი ორობითს თავისი ნიმუშის შესაქმნელად.
-      grade5_artist_binary3_instruction: |
-        Which of these binary strings could you
-        loop 8 times to draw this image?
-      grade5_artist_binary4_instruction: |
-        Can you draw this pattern by looping just
-        three binary digits (0s and 1s)?
-      grade5_artist_binary5_instruction: |
-        Each binary string represents one row of
-        this picture. Can you rearrange them so it draws a smiley face instead of
-        a frowny face?
-      grade5_artist_binary6_instruction: |
-        Which 6 digit binary string, repeated 11
-        times, will draw this image?
-      grade5_artist_binary7_instruction: "რომელია უმოკლესი ორობითი ხაზი, რომელიც შეგიძლიათ
-        გაიმეოროთ ამ სურათის დასახატად?"
-      grade5_artist_binary8_instruction: "დაასრულეთ ეს ნახატი."
-      grade5_artist_binary9_instruction: |-
-        Here's a higher resolution canvas to draw
-        on - 16 pixels by 16 pixels!\r
-        \r
-        See what happens when we start to get
-        creative with the bits?
       grade5_artist_for_loops1_instruction: "დახატეთ ეს სამკუთხედი ისე, რომ ზომით
         50 პქსელი იყოს. მინიშნება: გამოიყენეთ გამეორების ბლოკი."
       grade5_artist_for_loops10_instruction: |-
@@ -3440,29 +3263,6 @@
         Free Play: Try making some
         drawings of your own using "for loops". We've added a few useful variables
         for you as well.
-      grade5_artist_freeplay_instruction: |
-        Create your own project! This creation
-        will be saved to your Projects dashboard so that you can easily edit it any
-        time!
-      grade5_artist_functionparameters10_instruction: |-
-        თავისუფალი შთაგონება:
-        უკვე ყველაფერი იცით იმისთვის, რომ ასეთი ნიმუშები შექმნათ! თუ ეს სურათი შთაგაგონებთ, სცადეთ შექმნათ რამე მსგავსი. ან გააკეთეთ რამე თქვენი ფანტაზიის მიხედვით.\r
-        \r
-        გაინტერესებთ, როგორ შეიქმნა შთაგონების ნიმუში? ეწვიეთ https://studio.code.org/c/106387530-ს და იხილეთ ამოხსნა.
-      grade5_artist_functionparameters11_instruction: |
-        თავისუფალი თამაში: აქ რამდენიმე ფუნქციაა, რომელიც დაწერეთ და რამდენიმე, რომლითაც თამაში შეგიძლიათ. დახატეთ რამე მაგარი!
-        შეცვალეთ ფაქრის სისქე და დააკვირდით შედეგს!
-      grade5_artist_functionparameters7_instruction: |
-        This image is similar to the
-        last. Can you use a `for` loop with your function to make this design?
-      grade5_artist_functionparameters8_instruction: |-
-        მოდით, ჩავასწოროთ ფუნქცია "მრავალკუთხედის დახატვა". მას უკვე აქვს პარამეტრი "გვერდები". ახლა ჩავასწოროთ ფუნქცია ისე, რომ მას გააჩნდეს პარამეტრი "სიგრძე".\r
-        მინიშნება: ყოველი ფიგურის მთლიანი ზომა არის 200 პიქსელი. გახსოვთ განტოლება, რომლითაც სხვადასხვა რაოდენობის გვერდების მქონდე ფიგურები ერთი ზომის ხდება?
-      grade5_artist_functionparameters9_instruction: |
-        Edit "draw a spiral edge"
-        to use "length" and "sides" parameters, then recreate these shapes.
-      grade5_artist_functionparameters_6_instruction: "შეგიძლიათ დაასრულოთ ეს ნახატი?
-        ყოველი ფიგურის გვერდის სიგრძეა 100 პიქსელი."
       grade5_artist_parameters_squares1_instruction: |
         Click "edit" to fill in the
         function definition of "draw a square" and add a parameter. It should take
@@ -3477,9 +3277,9 @@
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade5_artist_parameters_triangles1_instruction: |
-        This program looks okay from
-        here, but something isn't working right. See if you can figure out how to
-        edit the function 'draw a triangle' to find the bug.
+        Today, we're going to try
+        out a different, more powerful function editor. See if you can figure out
+        how to edit the function 'draw a triangle' to find the bugs.
       grade5_artist_parameters_triangles1a_instruction: |
         Today, we're going to try
         out a different, more powerful function editor. See if you can figure out
@@ -3638,48 +3438,10 @@
         \r
         Remember: If your loop is counting up, the increment is added
         to your "counter" variable each time through.
-      grade5_bee_parameters_new1_instruction: |
-        Help the bee collect all of the nectar.
-        You can only collect nectar from flowers, but you can check any space to see
-        if there is a flower.
-      grade5_bee_parameters_new2_instruction: |
-        Let's take that last program you
-        wrote and turn it into a function. Then, call the function to collect the
-        nectar when needed. This may seem like a strange step now, but it will be
-        really helpful soon!
-      grade5_bee_parameters_new3_instruction: |
-        Time to put the function to the test!
-        Let's see if it makes it any easier to collect these three rows of nectar.
-      grade5_bee_parameters_new4_instruction: |
-        How is your function holding up? We
-        may need to make some adjustments here. Can you add a 'length' parameter
-        to the function so that it will still work if the row is a different length?
-      grade5_bee_parameters_new5_instruction: |
-        Challenge Level! You are doing great
-        so far! Let's use this parametric function to collect a lot of nectar.
-      grade5_bee_parameters_new6_instruction: |
-        You can make your program much shorter
-        and more efficient when you notice new patterns. Try using some other blocks
-        to make a short and simple solution!
-      grade5_bee_parameters_new7_instruction: |
-        Something looks a little different.
-        Can you modify your function to account for all this honey that needs to be
-        made?
-      grade5_bee_parameters_new8_instruction: |
-        That's a great function you've created!
-        You are officially on your own now. Collect all the nectar. Make all the honey.
-      grade5_bee_parameters_new9_instruction: |
-        Bonus Challenge! If you are feeling
-        ambitious, try this puzzle. It is possible to collect all of the nectar and
-        make all of the honey using only a For loop, a Repeat loop, a function call,
-        and a turn. Try it all on your own, or view the hints to build it step-by-step.
-        Great job with this stage!
       grade5_pixelation_instruction: |
         Encode an image of anything you like using
         binary. Remember that the binary language will be represented with '0' and
         '1' only.
-      grade5_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
-        blocks in your tool box. \n"
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most\nof
         the code is hidden. We've added a new function called `score_points.`\\r\n\\r\nAdd\na
         new parameter called `points` to the `player_score` function. \\r\n\\r\nThe\n`score_points`
@@ -3693,21 +3455,6 @@
         any code, just hit "Run" to play the game! In this game, you're the dog
         who is trying to collect more flags than the cat. Use the down arrow to control
         the dog. Press "Finish" when you're done playing.
-      grade5_playlab_variables10_instruction: დაარედაქტირეთ "პატრული" ფუნქცია ისე,
-        რომ მას დაემატოს "პერსონაჟის" პარამეტრი- ასე ჩვენ შევძლებთ მის გამოძახებას
-        თითოეული მსახიობისთვის. გახსოვდეთ, რომ მსახიობები შეესაბამებიან რიცხვებს 1,
-        2 და 3.
-      grade5_playlab_variables11_instruction: '"პატრულირების" ფუნქციას დაუმატეთ პარამეტრი
-        "სიჩქარე". სცადეთ გამოიყენოთ ბლოკი "სიჩქარის განსაზღვრა" ამ ახალ "სიჩქარის"
-        პარამეტრთან და მოაპოვებინეთ პინგვინს ორივე დროშა, სანამ ელფები რომელიმეს დაეუფლებიან.'
-      grade5_playlab_variables12_instruction: |-
-        შეხედეთ მოცემულ კოდს და სცადეთ გაარკვიოთ, რას აკეთებს თითოეული ბლოკი. \r
-        \r
-        როცა მორჩებით, გამოიყენეთ ისრები ძაღლის საკონტროლებლად და დროშების შესაგროვებლად.
-      grade5_playlab_variables13_instruction: გამოიყენეთ "შეხებისას" ბლოკი, რომ დააბრუნოთ
-        ძაღლი მარცხენა ზედა კუთხეში მხოლოდ იმ შემთხვევაში, თუ ის სხვა მსახიობს შეეხება.
-      grade5_playlab_variables14_instruction: "It's free play time! Have fun with\nall
-        the blocks in your tool box. \n"
       grade5_playlab_variables2_instruction: შეჯიბრი წინა თავსატეხში არც ისე სამართლიანი
         იყო! შეცვალეთ "ძაღლის_სიჩქარე" ცვლადი, რათა შეძლოთ კატაზე მეტი დროშის შეგროვება.
         პირველი, ვინც შეაგროვებს 10 დროშას, გაიმარჯვებს!
@@ -3733,19 +3480,6 @@
         - ყოველ ჯერზე, როცა ძაღლს (პერსონაჟი 1) მოხვდება ცეცხლოვანი ბურთი, ქულა უნდა
         დაკარგოთ. დაიწყეთ 10 ქულით, რომ ძალიან რთული არ იყოს. ჩამოაგდეთ თქვენი ქულა
         10-დან 0-მდე, რათა გადალახო დონე."
-      grade5_playlab_variables71_instruction: "ესაა თამაში წინა დონიდან,\nმაგრამ კოდის
-        უმეტესობა დამალულია. მოცემულია ახალი ფუნქცია \"ქულის_დაგროვება\".\\r\n\\r\nდაარედაქტირეთ\nფუნქცია
-        ისე, რომ ცვლადს \"მოთამაშის_ანგარიში\" დაემატოს პარამეტრი\n\"ქულები\".\\r\n\\r\nცვლადი
-        \"მოთამაშის_ანგარიში\" უნდა გაიზარდოს ყოველჯერ, როცა\nძაღლი მონიშნავს კატას
-        გულით და იკლებდეს, როცა კატა მონიშნავს ძაღლს გულით.\\r\n\\r\nმინიშნება:\nროცა
-        დაასრულებთ, დააჭირეთ \"გაშვებას\". როცა ძაღლი დააგროვებს 6 ქულას, \nთქვენ
-        გადახვლათ შემდეგ დონეზე. "
-      grade5_playlab_variables81_instruction: "ჩვენ თქვენთვის დავამატეთ კიდევ ერთი
-        ფუნქცია.\\r\n\\r\nდააპროგრამეთ თქვენი თამაში ისე, რომ იძახებდეს \"დონის გაზრდის\"
-        ფუნქციას თუ \"მოთამაშის_ქულა\" > 10. \\r\n\\r\nითამაშეთ! შემდეგ თავსატეხზე
-        გადასასვლელად მეოთხე დონეს უნდა გასცდეთ. "
-      grade5_playlab_variables9_instruction: ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ
-        ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.
       grade5_playlab_variables_freeplay_instruction: |-
         Free Play time! Here are all
         of the variables we've played with so far in this stage, as well as a few
@@ -3764,7 +3498,6 @@
         that makes the dog jump when the 'up' arrow is pressed. The height of the
         jumps can be set at the start of the game using the 'jumpPower' variable.
         Try to touch all of the flags!
-      grade5_prompt_test_instruction: This is a test play lab level.
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
       Infinity_catch_instruction: შეგიძლიათ ელზა ("პერსონაჟი 2") ანას ისრებიანი ღილაკების
         გამოყენებით დააწიო?
@@ -4729,7 +4462,6 @@
         from a purple flower if it doesn't have any. \r
         You must first check if
         the nectar is equal to 1 using the `if nectar` block.
-      PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: |
         Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to

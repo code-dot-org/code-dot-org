@@ -41,7 +41,6 @@
   "heightParameter": "visina",
   "hideTurtle": "sakrij crtača",
   "jump": "skoči",
-  "jumpTo": "jump to",
   "jumpBackward": "skoči unazad za",
   "jumpForward": "skoči naprijed za",
   "jumpTooltip": "Pomakni crtača bez ostavljanja ikakvih tragova.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Okreće crtača lijevo ili desno za zadani broj stupnjeva.",
   "turtleVisibilityTooltip": "Pokazuje ili skriva crtača.",
   "widthTooltip": "Mijenja širinu traga olovke.",
-  "wrongColour": "Tvoja slika je pogrešne boje. U ovom zadatku treba biti boja %1."
+  "wrongColour": "Tvoja slika je pogrešne boje. U ovom zadatku treba biti boja %1.",
+  "jumpTo": "jump to"
 }

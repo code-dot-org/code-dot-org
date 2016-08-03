@@ -348,9 +348,7 @@ uk:
     announcement_title: Оголошення
     announcement_view_all: Переглянути всі
     announcement_message: 'Хочете допомогти нам протестувати нові функції? Ми знаємо, що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж оприлюднити цю функцію.'
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Дізнайтеся більше
-    announcement_try_now_button: Спробувати
     announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
     announcement_petition_button: "Додайте своє ім'я"
   move_students:
@@ -526,7 +524,6 @@ uk:
     wrong_body: Дякуємо за надсилання відповіді.
     correct_title: Дякую
     correct_body: Дякуємо за надсилання відповіді.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Дякую
     wrong_body: Дякуємо за надсилання відповіді.
@@ -682,7 +679,6 @@ uk:
     required: Огляд
     content: Зміст
     practice: Методики викладання
-    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

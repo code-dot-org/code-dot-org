@@ -41,7 +41,6 @@
   "heightParameter": "višina",
   "hideTurtle": "skrij umetnika",
   "jump": "skoči",
-  "jumpTo": "jump to",
   "jumpBackward": "skoči nazaj za",
   "jumpForward": "skoči naprej za",
   "jumpTooltip": "Premakne umetnika brez puščanja kakih sledi.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Obrne umetnika levo ali desno za določeno število stopinj.",
   "turtleVisibilityTooltip": "Naredi umetnika vidnega ali nevidnega.",
   "widthTooltip": "Spremeni debelino pisala.",
-  "wrongColour": "Tvoja slika je napačne barve. Za to uganko mora biti %1."
+  "wrongColour": "Tvoja slika je napačne barve. Za to uganko mora biti %1.",
+  "jumpTo": "jump to"
 }

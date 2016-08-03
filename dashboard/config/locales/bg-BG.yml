@@ -140,8 +140,8 @@
     picture: "Сега намерете вашата тайна картина"
     words: "Сега въведете вашите тайни думи"
     login: "Вход"
-    invalid_login: "Невалидна влизане, моля опитайте отново"
-    pair_programming: "Имам партньор на моя компютър"
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: "Забравена парола?"
@@ -289,9 +289,9 @@
       signup: "Регистрирайте се"
       already_registered: "Вече сте регистриран?"
       pair_programming: "Програмиране по двойки"
-      team: "Екип"
-      driver: "Шофьор"
-      navigator: "Навигатор"
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: "на %{name} в прогрес"
       progress: "Вашият напредък"
@@ -326,7 +326,7 @@
       example_with_number: "Примерно решение %{solution_number}"
       submitted_on: "Добавено на %{date}"
       unsubmit: "Не е добавено"
-      worked_with: "Работи с"
+      worked_with: Worked With
   user:
     email_confirm_needed: "Имейл адресът не е потвърден:"
     email_confirm_needed_required: "Вашият email адрес не е потвърден %{email} :"
@@ -405,12 +405,7 @@
       може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
       всички ресурси без компютър на една целева страница. Свържете уроците с всеки
       Кн клас, или използвайте самостоятелно като независим курс."
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class
-      how the Internet works, how cryptography keeps data secure, and other concepts?
-      We’ve taken the best interactive tools from our Computer Science Principles
-      curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "Научете повече"
-    announcement_try_now_button: "Опитайте сега"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да
       дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
       Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -646,9 +641,6 @@
     wrong_body: "Благодаря Ви, че подадохте отговор"
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор"
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
   level_group-submittable:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"
@@ -735,8 +727,8 @@
     share_copy_link: "Копиране на връзката:"
     share_embed_description: "Можете да поставите кода за вграждане в HTML страница
       за показване на проекта в уеб сайт."
-    share_u13_warning: "Попитай учителя си преди да споделиш. Споделяй само с други
-      ученици от твоето училище."
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: "За вграждане"
     advanced_share: "Показване на разширените опции"
     close: "Затваряне"
@@ -768,9 +760,8 @@
     abuse:
       tos: "Този проект нарушава Code.org <a href='http://code.org/tos'> Условията
         за ползване</a> и не може да бъде споделен с други потребители."
-      policy_violation: "Този проект съдържа информация, която не може да бъде споделена
-        с други потребители. Обърнете се към собственика на приложението да промени
-        съдържанието."
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: "Ако смятате, че това е грешка, моля <a href='https://code.org/contact'>
         свържете се с нас.</a>"
       go_to_code_studio: "Отидете в Code Studio"
@@ -841,16 +832,15 @@
     required: "Общ преглед"
     content: "Съдържание"
     practice: "Учителски практики"
-    peer_review: Peer Review
   external_links:
-    disclaimer: "Отказ от отговорност"
-    leaving_domain: "Сега напускате този домейн, преминавайки към сайт, който не се
-      управлява от Code.org."
-    disclaimer_text: "Този сайт може да има политика за поверителност, която се различава
-      от тази на Code.org. Ние не сме пряко отговорни за съдържанието на този сайт,
-      моля, <a href='%{support_url}'>contact support</a>свържете се с поддръжката
-      ако откриете, че съдържанието е нежелателно, или ако линка към сайта вече не
-      е достъпен."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: "Часът на кода за сваляне"
     capsule_title: "Имате ли интернет?"

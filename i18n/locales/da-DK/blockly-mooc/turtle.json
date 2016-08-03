@@ -41,7 +41,6 @@
   "heightParameter":"højde",
   "hideTurtle":"skjul kunstner",
   "jump":"hop",
-  "jumpTo":"jump to",
   "jumpBackward":"hop baglæns ved",
   "jumpForward":"hop fremad ved",
   "jumpTooltip":"Flytter kunstneren uden at efterlade nogen mærker.",

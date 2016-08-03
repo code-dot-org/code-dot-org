@@ -41,7 +41,6 @@
   "heightParameter": "kõrgus",
   "hideTurtle": "peida kunstnik",
   "jump": "hüppa",
-  "jumpTo": "jump to",
   "jumpBackward": "hüppa tagasi",
   "jumpForward": "hüppa edasi",
   "jumpTooltip": "Liigutab kunstnikku joont tõmbamata.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Pöörab kunstnikku vasakule või paremale etteantud nurga võrra.",
   "turtleVisibilityTooltip": "Teeb kunstniku nähtavaks või peidab selle.",
   "widthTooltip": "Muudab pliiatsi laiust.",
-  "wrongColour": "Sinu pilt on valet värvi. Selle mõistatuse jaoks peab värv olema %1."
+  "wrongColour": "Sinu pilt on valet värvi. Selle mõistatuse jaoks peab värv olema %1.",
+  "jumpTo": "jump to"
 }

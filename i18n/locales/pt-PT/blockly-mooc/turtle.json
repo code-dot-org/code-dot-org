@@ -41,7 +41,6 @@
   "heightParameter":"altura",
   "hideTurtle":"ocultar o artista",
   "jump":"saltar",
-  "jumpTo":"jump to",
   "jumpBackward":"saltar para trás por",
   "jumpForward":"saltar para a frente por",
   "jumpTooltip":"Move o artista sem deixar marcas.",
