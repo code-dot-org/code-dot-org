@@ -111,23 +111,8 @@ window.initLevelGroup = function (
     var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
-    function escape(key, val) {
-      if (typeof(val) !== "string") {
-        return val;
-      }
-      return val
-        .replace(/[\\]/g, '\\\\')
-        .replace(/[\"]/g, '\\"')
-        .replace(/[\/]/g, '\\/')
-        .replace(/[\b]/g, '\\b')
-        .replace(/[\f]/g, '\\f')
-        .replace(/[\n]/g, '\\n')
-        .replace(/[\r]/g, '\\r')
-        .replace(/[\t]/g, '\\t');
-    }
-
     return {
-      "response": encodeURIComponent(JSON.stringify(lastAttempt, escape)),
+      "response": encodeURIComponent(JSON.stringify(lastAttempt)),
       "result": true,
       "errorType": null,
       "submitted": window.appOptions.level.submittable || forceSubmittable,
