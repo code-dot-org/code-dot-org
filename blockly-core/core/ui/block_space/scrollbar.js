@@ -59,8 +59,10 @@ Blockly.ScrollbarPair = function(blockSpace, addHorizontal, addVertical) {
  * Unlink from all DOM elements to prevent memory leaks.
  */
 Blockly.ScrollbarPair.prototype.dispose = function() {
-  Blockly.unbindEvent_(this.onResizeWrapper_);
-  this.onResizeWrapper_ = null;
+  if (this.onResizeWrapper_) {
+    Blockly.unbindEvent_(this.onResizeWrapper_);
+    this.onResizeWrapper_ = null;
+  }
   if (this.corner_) {
     goog.dom.removeNode(this.corner_);
   }

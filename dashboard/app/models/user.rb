@@ -527,8 +527,8 @@ class User < ActiveRecord::Base
   end
 
   def authorized_teacher?
-    # you are "really" a teacher if you are in any cohort for an ops workshop
-    admin? || cohorts.present?
+    # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
+    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?))
   end
 
   def student_of_authorized_teacher?

@@ -492,6 +492,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: Você é um professor?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire alunos e voluntários
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores
     vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro
@@ -721,7 +723,7 @@
   dashboard_navigation_view_progress: Progresso
   dashboard_navigation_view_text_responses: Respostas de texto
   dashboard_navigation_view_assessments: Avaliações
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
@@ -922,7 +924,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Saiba mais
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Experimente agora
   dashboard_announce_petition: Como professor, você está liderando o caminho em um
     movimento para dar a cada aluno em todas as escolas a oportunidade de aprender
     informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana,

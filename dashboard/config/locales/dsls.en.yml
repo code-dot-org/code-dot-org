@@ -1539,6 +1539,7 @@ en:
         duino music: duino music
       duino pov:
         duino pov: duino pov
+      ecs unit 2 introduction: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -3258,6 +3259,20 @@ en:
         Deleting entries from data: Deleting entries from data
         Searching through data: Searching through data
         Sorting data: Sorting data
+      CPS Unit2 Ch 1 MC lossless compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossy compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -3273,6 +3288,43 @@ en:
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
+      CSP Unit 2 Ch 1 MC kilo v mega:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 metadata:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 2 MC google trends:
+        " ": " "
+        Generally speaking, since 2009 more people use "red" in their search terms than "blue", "yellow", "green", or "purple": Generally speaking, since 2009 more people use "red" in their search terms than "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2008 red has become the favorite color of more people: Since sometime around 2008 red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of yellow taxis as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of yellow taxis as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit2 Ch 1 MC hex rgb:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
+      CSP Unit2 Ch1 MC megabyte:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
@@ -4418,17 +4470,11 @@ en:
         'true': 'true'
       U2L14 Summary Tables MC:
         Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
-        Pivot tables are used to clean or alter raw data to get it into a computable form: Pivot tables are used to clean or alter raw data to get it into a computable form
         Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
-        Pivot tables are used to quickly perform aggregate computations and groupings on a set of data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of data
         Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
         Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
-        Pivot tables are used to quickly remove errors and inconsistencies from the underlying raw dataset.: Pivot tables are used to quickly remove errors and inconsistencies from the underlying raw dataset.
         What's it good for?: What's it good for?
-        Which of the following statements are true about pivot tables: Which of the following statements are true about pivot tables
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
-        Which of the following statements are true about summary (pivot) tables: Which of the following statements are true about summary (pivot) tables
-        foo: foo
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
         'Assessment: Question 1': 'Assessment: Question 1'

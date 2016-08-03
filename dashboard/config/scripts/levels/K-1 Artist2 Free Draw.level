@@ -14,7 +14,6 @@
     "skip_instructions_popup": "false",
     "free_play": "true",
     "slider_speed": "0.4",
-    "contained_level_names": null,
     "embed": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -31,7 +30,8 @@
     "disable_examples": "false",
     "impressive": "false",
     "discard_background": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

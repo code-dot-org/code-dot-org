@@ -41,6 +41,7 @@ class Section < ActiveRecord::Base
   LOGIN_TYPE_WORD = 'word'
 
   TYPES = [
+    TYPE_CSF_WORKSHOP = 'csf_workshop',
     TYPE_PD_WORKSHOP = 'pd_workshop'
   ]
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true

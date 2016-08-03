@@ -2,8 +2,6 @@ name 'PDAlg 3CGo'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
 # Getting Started > Ready? Set? Go!
 
 By completing this stage, you should have:
@@ -15,9 +13,7 @@ In the next stage, we will:
 
 - Gather student programming artifacts and share them with your peers
 
-
 Click “Continue” below to move on.
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
