@@ -88,6 +88,13 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
   this.latestRowID_ = 0;
 
   /**
+   * Cached list of all sender names that appear in the logs, which we update
+   * incrementally.
+   * @private {string[]}
+   */
+  this.uniqueSenderNames_ = [];
+
+  /**
    * Tracking information for which events we're registered to, so we can
    * perform cleanup as needed.
    * @private {Object}
@@ -290,6 +297,7 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
       setTrafficFilter={this.boundSetTrafficFilterMode_}
       headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
       logRows={tableRows}
+      senderNames={this.uniqueSenderNames_}
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
       teacherView={this.teacherView_}
     />,
@@ -620,6 +628,7 @@ NetSimRouterLogModal.prototype.onShardChange = function (newShard, localNode) {
 
   // When changing shards, reset log so we fetch the whole thing next time.
   this.logEntries_.length = 0;
+  this.uniqueSenderNames_.length = 0;
   this.latestRowID_ = 0;
   this.shard_ = newShard;
   this.localNode_ = localNode;
@@ -636,8 +645,17 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
     this.latestRowID_ = Math.max(row.id, this.latestRowID_);
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);
+
   // Modify this.logEntries_ in-place, appending new log entries
   Array.prototype.push.apply(this.logEntries_, newLogEntries);
+
+  // Add any new senders to the uniqueSenderNames list
+  newLogEntries.forEach(entry => {
+    if (!this.uniqueSenderNames_.includes(entry.sentBy)) {
+      this.uniqueSenderNames_.push(entry.sentBy);
+    }
+  });
+
   if (usingNewLogBrowser()) {
     this.render();
   } else {
