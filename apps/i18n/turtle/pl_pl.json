@@ -41,7 +41,6 @@
   "heightParameter": "wysokość",
   "hideTurtle": "ukryj artystę",
   "jump": "skocz",
-  "jumpTo": "jump to",
   "jumpBackward": "skocz do tyłu o",
   "jumpForward": "skocz do przodu o",
   "jumpTooltip": "Przenosi artystę nie zostawiając żadnych śladów.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Obraca artystę w lewo lub prawo o określoną liczbę stopni.",
   "turtleVisibilityTooltip": "Artysta staje się widoczny lub niewidoczny.",
   "widthTooltip": "Zmienia grubość ołówka.",
-  "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1."
+  "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1.",
+  "jumpTo": "jump to"
 }

@@ -41,7 +41,6 @@
   "heightParameter": "înălțime",
   "hideTurtle": "ascunde artistul",
   "jump": "sari",
-  "jumpTo": "jump to",
   "jumpBackward": "sari înapoi cu",
   "jumpForward": "Sari înainte cu",
   "jumpTooltip": "Mută artistul fără a lăsa urme.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Întoarce artistul la stânga în funcție de unghiul specificat.",
   "turtleVisibilityTooltip": "Face artistul vizibil sau invizibil.",
   "widthTooltip": "Modifică lăţimea creionului.",
-  "wrongColour": "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1."
+  "wrongColour": "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1.",
+  "jumpTo": "jump to"
 }

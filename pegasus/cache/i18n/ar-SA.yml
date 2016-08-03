@@ -457,8 +457,6 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: "هل أنت معلم؟"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: ألهم الطلاب و تطوع لأجل "Hour of code".
   volunteer_engineer_submission_subtitle_generic: 100.000 مدرس سيقدمون فعالية "ساعة
     برمجة" في أقسامهم هذه السنة، من 07 إلى 13 ديسمبر 2015. إنهم يحتاجون ساعدتكم
@@ -666,7 +664,7 @@
   dashboard_navigation_view_progress: "في تقدم"
   dashboard_navigation_view_text_responses: "استجابات النص"
   dashboard_navigation_view_assessments: "التقييمات"
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: "إضافة طلاب"
   dashboard_navigation_manage_students: "إدارة الطلاب"
   dashboard_navigation_lesson_plans_resources: "خطط الدرس والموارد"
@@ -854,7 +852,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "اعرف المزيد"
-  dashboard_announce_try_now_button: "جرب الآن"
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في
     كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع
     منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات
@@ -1667,3 +1665,6 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
+  are_you_teacher: Are you a teacher?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

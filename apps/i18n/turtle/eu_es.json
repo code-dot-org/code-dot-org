@@ -41,7 +41,6 @@
   "heightParameter": "Altuera",
   "hideTurtle": "ezkutatu artista",
   "jump": "salto egin",
-  "jumpTo": "jump to",
   "jumpBackward": "salto egin atzera",
   "jumpForward": "salto egin aurrera",
   "jumpTooltip": "Artista mugitzen du inongo aztarnarik utzi gabe.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Artista ezkerrera biratzen du zehaztutako angeluan.",
   "turtleVisibilityTooltip": "Artista ikuskor edo ikustezin bihurtzen du.",
   "widthTooltip": "Arkatzaren lodiera aldatzen du.",
-  "wrongColour": "Zure irudia kolore okerrekoa da. Ariketa honetarako %1 behar du izan."
+  "wrongColour": "Zure irudia kolore okerrekoa da. Ariketa honetarako %1 behar du izan.",
+  "jumpTo": "jump to"
 }

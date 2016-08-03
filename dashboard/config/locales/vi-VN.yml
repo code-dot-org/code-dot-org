@@ -415,12 +415,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class
-      how the Internet works, how cryptography keeps data secure, and other concepts?
-      We’ve taken the best interactive tools from our Computer Science Principles
-      curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Tìm hiểu thêm
-    announcement_try_now_button: Thử ngay bây giờ
     announcement_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào để
       trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây
       giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh
@@ -662,9 +657,6 @@
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
     correct_title: Cảm ơn bạn
     correct_body: Cảm ơn bạn đã gửi câu trả lời.
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
   level_group-submittable:
     wrong_title: Cảm ơn bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
@@ -857,7 +849,6 @@
     required: Tổng quan
     content: Content
     practice: Teacher Practices
-    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

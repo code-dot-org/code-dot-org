@@ -41,7 +41,6 @@
   "heightParameter": "aukštis",
   "hideTurtle": "slėpti menininką",
   "jump": "šok",
-  "jumpTo": "jump to",
   "jumpBackward": "peršok atgal per",
   "jumpForward": "peršok į priekį per",
   "jumpTooltip": "Pajudina menininką jam nieko nepiešiant.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Pasuka menininką į kairę pasirinktu kampu laipsniais.",
   "turtleVisibilityTooltip": "Padaro menininką matomą arba nematomą.",
   "widthTooltip": "Pakeičia pieštuko plotį.",
-  "wrongColour": "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1."
+  "wrongColour": "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1.",
+  "jumpTo": "jump to"
 }

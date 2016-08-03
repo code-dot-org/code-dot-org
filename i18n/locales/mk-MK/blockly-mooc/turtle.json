@@ -41,7 +41,6 @@
   "heightParameter":"height",
   "hideTurtle":"hide artist",
   "jump":"Рипај ",
-  "jumpTo":"jump to",
   "jumpBackward":"jump backward by",
   "jumpForward":"jump forward by",
   "jumpTooltip":"Moves the artist without leaving any marks.",

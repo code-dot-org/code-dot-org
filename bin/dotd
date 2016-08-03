@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'cgi'
-require 'logger'
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
 # you to format your code more readably.
@@ -22,9 +21,6 @@ class String
   end
 end
 
-LOG_FILE = '/var/log/code-dot-org-dotd.log'
-LOGGER = Logger.new(LOG_FILE, 'daily')
-
 def ask_for_name
   name = ''
   until name != ''
@@ -32,7 +28,6 @@ def ask_for_name
     name = gets.chomp
   end
   puts "Hi #{name}!"
-  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DotD")
   name
 end
 
@@ -41,7 +36,6 @@ def should_i(question)
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
     if 'yes'.start_with?(response) # also catches blank/return ;)
-      LOGGER.info("[#{Time.new.strftime('%I:%M %p')}]: #{question}")
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
@@ -200,7 +194,7 @@ should_i "DTP" do
 end
 
 puts <<-EOS.unindent
-  * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
+  * Send your DOTD Report to dev@code.org
 EOS
 press_enter_to_continue
 

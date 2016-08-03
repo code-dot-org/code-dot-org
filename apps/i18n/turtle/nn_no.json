@@ -41,7 +41,6 @@
   "heightParameter": "høgd",
   "hideTurtle": "skjul artist",
   "jump": "hopp",
-  "jumpTo": "jump to",
   "jumpBackward": "hopp bakover med",
   "jumpForward": "hopp framover med",
   "jumpTooltip": "Flyttar artisten sporlaust.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Snur artisten mot venstre eller høgre med gitt vinkel.",
   "turtleVisibilityTooltip": "Gjør artisten synleg eller usynleg.",
   "widthTooltip": "Endrer breidda på blyanten.",
-  "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1."
+  "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1.",
+  "jumpTo": "jump to"
 }
