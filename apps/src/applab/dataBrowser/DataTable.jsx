@@ -146,6 +146,11 @@ const DataTable = React.createClass({
       msg => console.warn(msg));
   },
 
+  exportCsv() {
+    const tableName = encodeURIComponent(this.props.tableName);
+    location.href = `/v3/export-firebase-tables/${Applab.channelId}/${tableName}`;
+  },
+
   render() {
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
@@ -178,6 +183,7 @@ const DataTable = React.createClass({
           columns={columnNames}
           addColumn={this.addColumn}
           importCsv={this.importCsv}
+          exportCsv={this.exportCsv}
         />
 
         <table style={styles.table}>
