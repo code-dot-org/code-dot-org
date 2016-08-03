@@ -6,10 +6,6 @@
 var marked = require("marked");
 var initializeCodeMirror = require("./initializeCodeMirror");
 
-marked.setOptions({
-  sanitize: true
-});
-
 /**
  * Initializes a live preview markdown editor that spits its contents out into
  * a given text area as embedded markdown of the form:
