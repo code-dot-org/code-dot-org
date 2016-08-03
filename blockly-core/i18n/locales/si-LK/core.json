@@ -27,7 +27,7 @@
   "COLOUR_RGB_TOOLTIP": "නිරූපිත තරමින් රතු, කොල හා නිල් වර්ණ භාවිත කරමින් වර්ණයක් තනන්න. සියලු අගයන් 0 ත් 100 යත් අතර තිබිය යුතුය.",
   "CONFIRM_CREATE_VARIABLE": "තනන්න",
   "CONFIRM_DELETE_FUNCTION_MESSAGE": "අවවාදයයි! ඔබ %1 මකාදමන බවට තහවුරු කරනවාද?",
-  "CONFIRM_RENAME_VARIABLE": "Rename",
+  "CONFIRM_RENAME_VARIABLE": "නැවත නම් කරන්න",
   "CONTRACT_EDITOR_HEADER": "නිර්මාණ වට්ටෝරුව",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "ලූපයෙන් එලියට ඉවත්වෙන්න",

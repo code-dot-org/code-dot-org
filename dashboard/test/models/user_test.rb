@@ -1165,6 +1165,11 @@ class UserTest < ActiveSupport::TestCase
     assert real_teacher.teacher?
     assert real_teacher.authorized_teacher?
 
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.authorized_teacher?
+
     # admins should be authorized teachers too
     admin = create :teacher
     admin.admin = true
