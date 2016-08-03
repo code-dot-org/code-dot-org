@@ -74,7 +74,7 @@ ru-RU:
   view_course: Посмотреть курс
   view_unit: Посмотреть подраздел
   make_app: Создать приложение
-  congrats_guest_speaker_title: Найти приглашенного оратора для аудитории
+  congrats_guest_speaker_title: Найти приглашенного оратора для вашей аудитории
   congrats_guest_speaker_desc: Теперь, когда ваши ученики прошли курс информатики, подумайте над тем, чтобы отметить это событие и ознакомить их с тем, как применить всё изученное в реальном мире, пригласив в класс гостя-докладчика. Вы можете воспользоваться нашим списком волонтеров, готовых прийти к вам на занятие или найти студентов или технических специалистов, работающих в этой сфере, из любого города, которые готовы вдохновить учеников удаленно при помощи видеочата.
   congrats_guest_speaker_cta: Найти приглашенного оратора
   congrats_third_party_title: Используйте свои новые навыки с этими приложениями и веб-сайтами
@@ -271,8 +271,8 @@ ru-RU:
   homepage_banner_20k_teachers_link: Узнать больше
   homepage_banner_congress: Лидеры Америки призывают Конгресс к финансированию K-12 курса информатики.
   homepage_banner_congress_link: Помогите
-  homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Мы вносим важное изменение в то, как мы поддерживаем студенческую частную жизнь.
+  homepage_banner_emailprivacy_link: Подробнее
   homepage_slot_text_title_hoc: Час кода
   homepage_slot_text_blurb_hoc: Каждый может учиться. Начните сегодня
   homepage_slot_text_link_hoc: Попробуйте Час кода
@@ -361,11 +361,13 @@ ru-RU:
   mc_platformtext: Современные браузеры, смартфоны, планшеты
   mc_specs: На разных языках | Современные браузеры, смартфоны, планшеты | Возраст от 6 лет и старше
   minecraft_subtitle: Час Кода Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: "Don't have Internet?"
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Прежде чем начать, посмотрите одно их этих вдохновляющих видео
+  speak_another_language: Говорите на другом языке?
+  help_translate: Помогите нам перевести.
+  no_internet: У Вас нет интернета?
+  download_offline: Скачайте оффлайн версию.
+  are_you_teacher: Вы учитель?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Вдохновляйте учеников и волонтеров
   volunteer_engineer_submission_subtitle_generic: '100&#160;000 учителей собираются провести час кода в своих классах в этом году 7-13 декабря 2015 г. Им нужна ваша помощь! '
   volunteer_engineer_submission_subtitle_specific: 'Количество учителей, которым нужны волонтеры: %{num_teachers}.<br>Количество зарегистрированных волонтеров: %{num_volunteers}. Присоединиться к ним.'
@@ -494,8 +496,8 @@ ru-RU:
   dashboard_assessments_none_part2: Если Вы преподаете в средних или старших классах школы, то в рамках Студии Кода найдете контрольные вопросы, которые могут помочь Вашим ученикам подготовиться к тесту AP. Чтобы использовать результаты ответов на эти вопросы, сначала назначьте своему классу курс, а затем из выпадающего меню выберите его, после чего увидите здесь ответы Ваших учеников.
   dashboard_assessments_summaries: Сводные данные тестирования
   dashboard_assessments_answers: Все ответы
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Опросы
+  dashboard_percent: Процент
   dashboard_filter_by_stage: 'Фильтр по ступеням:'
   dashboard_filter_all: Все
   dashboard_download_csv: Загрузить CSV
@@ -510,7 +512,7 @@ ru-RU:
   dashboard_navigation_view_progress: Прогресс
   dashboard_navigation_view_text_responses: Текстовые ответы
   dashboard_navigation_view_assessments: оценки
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Добавить учеников
   dashboard_navigation_manage_students: Управление учениками
   dashboard_navigation_lesson_plans_resources: Планы уроков и ресурсы
@@ -660,9 +662,9 @@ ru-RU:
   dashboard_announcements: Объявления
   dashboard_announce_view_all: Посмотреть все
   dashboard_announce_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Узнать больше
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Попробуйте сейчас
   dashboard_announce_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
   dashboard_announce_petition_button: Добавьте ваше имя
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
@@ -1199,7 +1201,7 @@ ru-RU:
   processing_beyond_longdescription: Processing — это язык программирования, среда разработки и онлайн-сообщество. С 2001 года Processing способствует обучению информатике для решения задач изобразительного искусства, а также увеличения доли визуального представления в технологиях. Изначально он был создан для разработки программных макетов и преподавания основ программирования с точки зрения визуального восприятия, но теперь Processing превратился в инструмент разработки для профессионалов. На сегодняшний день десятки тысяч студентов, художников, дизайнеров, исследователей и любителей используют Processing для обучения, создания прототипов и проектов.
   alice_beyond_longdescription: Используя инновационную среду программирования для создания 3D-анимации, проект Alice предлагает инструменты и учебные материалы для обучения вычислительному мышлению, навыкам решения задач и программированию для учеников разного возраста и уровней.
   sphero_beyond_longdescription: Неважно, являетесь ли вы педагогом или родителем, уроки SPRK позволят детишкам пройти интенсивный курс по программированию роботов, одновременно улучшая их навыки в математике и точных науках.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Скрыть это предупреждение
   compatibility_unsupported_browser: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'> одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницы, но ожидаемая функциональность может быть повреждена."
   starwars_shortcode: star
   mc_shortcode: mc

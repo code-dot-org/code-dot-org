@@ -41,6 +41,7 @@
   "heightParameter": "chiều cao",
   "hideTurtle": "ẩn nghệ sĩ",
   "jump": "nhảy",
+  "jumpTo": "jump to",
   "jumpBackward": "di chuyển bút lui về mà không ghi",
   "jumpForward": "di chuyển tới trước (mà không ghi)",
   "jumpTooltip": "di chuyển nghệ sĩ mà không để lại bất kì dấu gì.",
@@ -89,6 +90,5 @@
   "turnTooltip": "rẽ nghệ sĩ về bên phải hay bên trái một góc nhất định.",
   "turtleVisibilityTooltip": "Làm ẩn hoặc hiện họa sĩ.",
   "widthTooltip": "thay đổi độ rộng của cây bút chì.",
-  "wrongColour": "Bức hình của bạn bị sai màu. Cho bài này, cần phải là",
-  "jumpTo": "jump to"
+  "wrongColour": "Bức hình của bạn bị sai màu. Cho bài này, cần phải là"
 }

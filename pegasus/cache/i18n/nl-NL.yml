@@ -491,6 +491,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: Bent u een leraar?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger
     voor het Uur Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit
@@ -708,7 +710,7 @@
   dashboard_navigation_view_progress: Voortgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
   dashboard_navigation_lesson_plans_resources: Lesplan en middelen
@@ -902,7 +904,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Leer meer
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Probeer nu
   dashboard_announce_petition: Als leerkracht neemt u het voortouw in een beweging
     die elke leerling op elke school de mogelijkheid geeft om informatica te leren.
     Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
@@ -1783,6 +1785,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  are_you_teacher: Are you a teacher?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

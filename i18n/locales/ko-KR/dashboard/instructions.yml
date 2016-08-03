@@ -27,7 +27,7 @@ ko:
         한 개의 사각형을 똑같은 크기의 정사각형 2개로 나누어 보세요.
         사각형의 폭은 200 픽셀이고, 높이는 100 픽셀입니다.
       2-3 Artist 9 NEW_instruction: 이 연을 완성해주세요.
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: 계단 그리기 완료!
       2-3 Artist 9_instruction: 이 연을 완성해주세요.
       2-3 Artist Assessment 1_instruction: |
         형성 평가: 마지막 이빨을 그려주세요.
@@ -289,6 +289,111 @@ ko:
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: 새를 앞으로 이동시켜서, 나쁜 돼지를 잡아보세요.
+      20hr_farmer_stage9_1_instruction: |
+        Hi, I'm a farmer. I need your help to flatten
+        the field on my farm so it's ready for planting. Move me to the pile of dirt
+        and use the "remove" block to remove it.
+      20hr_farmer_stage9_10_instruction: |
+        I'm working late, so it's dark out, and
+        I can't tell how large the piles are. Now I don't have all the options I
+        used to have on the while block. Move me along the field, and if there is
+        a pile, remove it
+      20hr_farmer_stage9_11_instruction: |
+        It's still dark outside. Move me along
+        the field. If there is a pile, remove it, and if there is a hole, fill it
+        in. Hint: use the dropdown menu of options on the "if" block.
+      20hr_farmer_stage9_2_instruction: |
+        Next, move me to the hole and fill it with
+        TWO shovelfuls of dirt, using the "fill" block.
+      20hr_farmer_stage9_3_instruction: |
+        Move me to the pile of dirt and tell me
+        how many shovelfuls to remove using as few blocks as possible.
+      20hr_farmer_stage9_4_instruction: |
+        Can you help me remove all four piles of
+        dirt? Hint: use a repeat block if you can.
+      20hr_farmer_stage9_5_instruction: |
+        Help me fill in all these holes with 5 shovelfuls
+        of dirt. Hint: you can put a "repeat" block inside the "while" block.
+      20hr_farmer_stage9_6_instruction: |
+        Remove all the piles of dirt, using as few
+        blocks as possible. The new options in the dropdown menu on the "while"
+        block tell me if I'm standing on a pile or a hole.
+      20hr_farmer_stage9_7_instruction: |
+        Wow, I found a really deep hole! I don't
+        know how many shovelfuls of dirt it needs. Can you write a program that fills
+        it until the ground is even?
+      20hr_farmer_stage9_8_instruction: |
+        Help me fill in the hole at the end of the
+        field, using as few blocks as possible.
+      20hr_farmer_stage9_9_instruction: |
+        Make me remove all these piles of dirt.
+        Try to use as few blocks as possible. Hint: try using a "while" block.
+      20hr_maze_stage2_1_instruction: |
+        Can you help me to catch the naughty pig?
+        Stack a couple of "move forward" blocks together and press "Run" to help
+        me get there.
+      20hr_maze_stage2_10_instruction: |
+        Ok, try the new "repeat until" block -
+        it will repeat until I reach the annoying pig.
+      20hr_maze_stage2_11_instruction: |
+        Ok, one last time for practice - can you
+        solve this one using only 4 blocks?
+      20hr_maze_stage2_12_instruction: |
+        Dear person. Me zombie. Me hungry. Must...
+        get... to sunflower... Can you get me there with only 5 blocks?
+      20hr_maze_stage2_13_instruction: |
+        Ok, this is similar, but slightly different.
+        Can you do it in only 5 blocks?
+      20hr_maze_stage2_14_instruction: |
+        Use the new "if" block to let me decide
+        when to turn. Hint: you only need one more block, but learn how we set it
+        up so you can do it on your own next time.
+      20hr_maze_stage2_15_instruction: |
+        Ok, this is just like the last puzzle, but
+        you need to remember how you used the "if" block and the "repeat" block
+        together.
+      20hr_maze_stage2_16_instruction: |
+        Me want sunflower! Use an "if" block to
+        get me there with the fewest number of blocks.
+      20hr_maze_stage2_17_instruction: |
+        Ok, let's do that again for practice - this
+        isn't very different, but watch out for the chompers!
+      20hr_maze_stage2_18_instruction: |
+        The "If-else" blocks checks a condition,
+        and then does one thing OR another. To get me to the sunflower try to use
+        this new block.
+      20hr_maze_stage2_19_instruction: |
+        One more practice of the "if-else" block,
+        can you get it right on your first try?
+      20hr_maze_stage2_2_instruction: |
+        This pig is ruffling my feathers. Help me
+        to find him!
+      20hr_maze_stage2_20_instruction: |
+        Can you add just 3 blocks to help me solve
+        a more complex maze? If you do it right, I can walk any curvy path no matter
+        the length.
+      20hr_maze_stage2_3_instruction: |
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or the feathers will fly!
+      20hr_maze_stage2_4_instruction: |
+        Guide me to the green evilness! (Watch out
+        for TNT)
+      20hr_maze_stage2_5_instruction: |
+        Keep calm and help me to find the bad pig.
+        Otherwise I might get angry!
+      20hr_maze_stage2_6_instruction: |
+        There's a way I can get to the silly pig
+        using only 2 blocks. Can you figure it out?
+      20hr_maze_stage2_7_instruction: |
+        Try to get me to the green intruder using
+        only three blocks.
+      20hr_maze_stage2_8_instruction: |
+        Help me banish this bad piggy using the fewest
+        number of blocks. Try using more than one "repeat times" block.
+      20hr_maze_stage2_9_instruction: |
+        When a block is grey, that means you can't
+        delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
+        Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
       4-5 Artist 1_instruction: |
         상자 그리기를 완성할 수 있도록 도와주세요.
         (선의 길이는 300 픽셀입니다.) 
@@ -1036,6 +1141,9 @@ ko:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
+      Collector Demo_instruction: |
+        Look at all this loot! Help me get as many coins
+        as I can so I can improve my farm. I can only use 9 blocks though!
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -1471,6 +1579,17 @@ ko:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      course2_playlab_stage17_1_instruction: '강아지가 "hello world"라고 말하도록 할 수 있을까요?'
+      course2_playlab_stage17_2_instruction: |
+        Can you make the dog say something
+        and then have the cat say something afterwards?
+      course2_playlab_stage17_3_instruction: |
+        Can you write a program to make this
+        dog move to the cat?
+      course2_playlab_stage17_4_instruction: |
+        Can you write a program that makes
+        the dog move to the cat, and have the cat say "hello" when the dog reaches
+        him?
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -2180,6 +2299,24 @@ ko:
       grade2_PuppyLoops_7_instruction: 해바라기로 이동하기 위해서 여러분들이 배운 것들을 사용해보세요!
       grade2_PuppyLoops_8_instruction: "고양이 수염을 그리는 코드에 문제가 있습니다.\n\\r\n\\r\n고양이 수염의 길이가 같도록 코드를 고쳐주세요."
       grade2_PuppyLoops_9_instruction: "C가 왼쪽으로 그려지는 코드 같습니다!\\r\n\\r\nC를 정확하게 그리려면 어떻게 해야할까요?"
+      grade3_AboutMyRobot_1_instruction: |
+        Make your robot say "Hello!" when the
+        button is clicked.
+      grade3_AboutMyRobot_2_instruction: |
+        Edit the code so that when the second bird
+        is clicked, your program plays a sound!
+      grade3_AboutMyRobot_3_instruction: |
+        When the third bird is clicked, the background
+        should change to a city. Can you add code to make this happen?
+      grade3_AboutMyRobot_4_instruction: |
+        Add code to make something happen when
+        the fourth bird is clicked. Be creative!
+      grade3_AboutMyRobot_5_instruction: |
+        About My Robot Project! Write code so that
+        clicking on each bird shows a new fact about your robot.
+      grade3_AboutMyRobot_TeacherIDo_instruction: |
+        Run this puzzle and click on the
+        robot to see what happens!
       grade3_Conditionals_1 BAD_instruction: 꽃꿀을 모두 모으기 위해서 반복 구조를 사용해보세요.
       grade3_Conditionals_1_instruction: "저는 배고픈 꿀벌입니다! \\r\n최소한의 블록만 사용해서 꽃꿀을 모두 모을 수 있게 해주세요."
       grade3_Conditionals_10 BAD_instruction: 꽃들로 부터 꽃꿀을 모으세요. 중첩 반복을 사용하면 됩니다.
@@ -2289,6 +2426,10 @@ ko:
       grade4_arist_nested_loop_triangles6_instruction: |
         Can you draw these 36 triangles
         using a nested loop?
+      grade4_artist_freeplay_instruction: |
+        Create your own project! This creation
+        will be saved to your Projects dashboard so that you can easily edit it any
+        time!
       grade4_artist_functions_stars0_instruction: |
         Have you drawn something like
         this star before? Practice making it one more time by adding a turn and a
@@ -2470,6 +2611,9 @@ ko:
       grade4_frozen_square_loop3_instruction: |
         "반복" 블록을 사용해서 사각형을 10번 만들어 보세요.
         삼각형을 한 번씩 그릴 때마다, 회전 블록을 이용해서 36 도 만큼 씩 회전시켜주세요.
+      grade4_playlab_freeplay_instruction: |
+        It's free play time! Have fun with all
+        the blocks in your tool box. 
       grade4_playlab_test_instruction: "오른쪽 방향키를 이용해 하트를 맞춰보세요.\\r\n\\r\n이 게임에서는 어떻게 포인트를 올려야 할까요?\n강아지가 하트로 고양이를 맞출 때마다 \"점수\" 변수에 1씩 더해보세요.\n\"캐릭터 2가 물체에 닿으면\" 이벤트를 이용해 점수를 업데이트하면 됩니다. \"점수=점수+1\"로 설정해서\n변수의 값을 하나씩 올리면 됩니다. 점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요."
       grade4_playlab_test2_instruction: |
         Here's a function called `jump` that causes
@@ -2494,6 +2638,28 @@ ko:
         최대한 적은 블록들을 사용해서
         각 꽃에서 꽃꿀을 모은 후, 각각의 벌집에 꿀을 만들어 넣어 보세요.
       grade4_review_bee3_instruction: "꿀벌이 엄청 바쁘네요!\\r\n\\r\n최대한 적은 블록들을 사용해서\n꽃꿀을 모으고 꿀을 만들 수 있도록 꿀벌을 도와 주세요."
+      grade5_artist_binary1_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다. \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\\r\n\\r\n주어진 \"픽셀판\"이라는 격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수 표현으로 \"01010101\"을 그리도록 해보세요."
+      grade5_artist_binary10_instruction: 여기를 눌러 힌트를 살펴보세요.
+      grade5_artist_binary11_instruction: |
+        Free Play: Here's a blank canvas for
+        you to draw on.  Have fun!
+      grade5_artist_binary2_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서 오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \\r\n\\r\n이 코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
+      grade5_artist_binary3_instruction: |
+        Which of these binary strings could you
+        loop 8 times to draw this image?
+      grade5_artist_binary4_instruction: |
+        Can you draw this pattern by looping just
+        three binary digits (0s and 1s)?
+      grade5_artist_binary5_instruction: |
+        Each binary string represents one row of
+        this picture. Can you rearrange them so it draws a smiley face instead of
+        a frowny face?
+      grade5_artist_binary6_instruction: |
+        Which 6 digit binary string, repeated 11
+        times, will draw this image?
+      grade5_artist_binary7_instruction: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은 어떤 것 일까요?
+      grade5_artist_binary8_instruction: 이 그림을 마무리 해보세요.
+      grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw\non - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we start to get\ncreative with the bits?"
       grade5_artist_for_loops1_instruction: 반복 블록을 1개 사용하여 너비가 50 픽셀인 삼각형을 그려주세요.
       grade5_artist_for_loops10_instruction: "Can you figure out how to use all of\nthe things you've learned to create this image?\\r\n\\r\nNeed a hint? Click\nhere."
       grade5_artist_for_loops2_instruction: |
@@ -2530,6 +2696,24 @@ ko:
         Free Play: Try making some
         drawings of your own using "for loops". We've added a few useful variables
         for you as well.
+      grade5_artist_freeplay_instruction: |
+        Create your own project! This creation
+        will be saved to your Projects dashboard so that you can easily edit it any
+        time!
+      grade5_artist_functionparameters10_instruction: "멋진 자유 플레이: 여러분들은 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다.\n이 그림이 멋지다고 생각하면, 비슷하게 다른 것을 만들어보세요. 아니면, 만들고 싶은 것을\n만들어보세요.\\r\n\\r\n이런 멋진 패턴이 어떻게 만들어졌는지 궁금한가요? "
+      grade5_artist_functionparameters11_instruction: |
+        자유 플레이: 여기 여러분들이 작성한 함수들과 가지고 놀 수 있는 몇 개의 함수가 더 있습니다.
+        멋진 것들을 그려보세요! 선 그리기로 얼마나 많은 것들을 그릴 수 있는지 해보세요.
+      grade5_artist_functionparameters7_instruction: |
+        This image is similar to the
+        last. Can you use a `for` loop with your function to make this design?
+      grade5_artist_functionparameters8_instruction: "\"다각형 그리기\" 함수를 수정해 보세요. \"변의 길이\" 매개 변수가 있습니다. 이제 \"길이\"를 매개 변수로 추가해 보세요. \\r\n각 모양의 둘레의 길이는 200 픽셀입니다. 다각형에서 면의 개수가 달라질 때, 같은 크기로 만드는 공식 기억하고 있으시죠?"
+      grade5_artist_functionparameters9_instruction: |
+        Edit "draw a spiral edge"
+        to use "length" and "sides" parameters, then recreate these shapes.
+      grade5_artist_functionparameters_6_instruction: |
+        이 그림을 완성할 수 있겠나요?
+        모든 모양의 한 변의 길이는 100 픽셀입니다.
       grade5_artist_parameters_squares1_instruction: |
         Click "edit" to fill in the
         function definition of "draw a square" and add a parameter. It should take
@@ -2544,9 +2728,9 @@ ko:
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade5_artist_parameters_triangles1_instruction: |
-        Today, we're going to try
-        out a different, more powerful function editor. See if you can figure out
-        how to edit the function 'draw a triangle' to find the bugs.
+        This program looks okay from
+        here, but something isn't working right. See if you can figure out how to
+        edit the function 'draw a triangle' to find the bug.
       grade5_artist_parameters_triangles1a_instruction: |
         Today, we're going to try
         out a different, more powerful function editor. See if you can figure out
@@ -2645,16 +2829,64 @@ ko:
         You've got this! What should your increment
         be to collect 3, 6, 9, 12, 15 nectar?
       grade5_bee_for_loops9_instruction: "Now, let's combine the \"counter\" variable\nwith a math block! How can you use the \"counter\" variable to navigate this\ngarden with the fewest number of blocks possible? What do you need to do to\ncollect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\\r\n\\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+      grade5_bee_parameters_new1_instruction: |
+        Help the bee collect all of the nectar.
+        You can only collect nectar from flowers, but you can check any space to see
+        if there is a flower.
+      grade5_bee_parameters_new2_instruction: |
+        Let's take that last program you
+        wrote and turn it into a function. Then, call the function to collect the
+        nectar when needed. This may seem like a strange step now, but it will be
+        really helpful soon!
+      grade5_bee_parameters_new3_instruction: |
+        Time to put the function to the test!
+        Let's see if it makes it any easier to collect these three rows of nectar.
+      grade5_bee_parameters_new4_instruction: |
+        How is your function holding up? We
+        may need to make some adjustments here. Can you add a 'length' parameter
+        to the function so that it will still work if the row is a different length?
+      grade5_bee_parameters_new5_instruction: |
+        Challenge Level! You are doing great
+        so far! Let's use this parametric function to collect a lot of nectar.
+      grade5_bee_parameters_new6_instruction: |
+        You can make your program much shorter
+        and more efficient when you notice new patterns. Try using some other blocks
+        to make a short and simple solution!
+      grade5_bee_parameters_new7_instruction: |
+        Something looks a little different.
+        Can you modify your function to account for all this honey that needs to be
+        made?
+      grade5_bee_parameters_new8_instruction: |
+        That's a great function you've created!
+        You are officially on your own now. Collect all the nectar. Make all the honey.
+      grade5_bee_parameters_new9_instruction: |
+        Bonus Challenge! If you are feeling
+        ambitious, try this puzzle. It is possible to collect all of the nectar and
+        make all of the honey using only a For loop, a Repeat loop, a function call,
+        and a turn. Try it all on your own, or view the hints to build it step-by-step.
+        Great job with this stage!
       grade5_pixelation_instruction: |
         Encode an image of anything you like using
         binary. Remember that the binary language will be represented with '0' and
         '1' only.
+      grade5_playlab_freeplay_instruction: |
+        It's free play time! Have fun with all
+        the blocks in your tool box. 
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most\nof the code is hidden. We've added a new function called `score_points.`\\r\n\\r\nAdd\na new parameter called `points` to the `player_score` function. \\r\n\\r\nThe\n`score_points` function should be able to both add and remove points from\n`player_score` depending on which actor is hit.\\r\nChanging the score by 1\nwill add a point, while changing the score by -1 will subtract a point.\\r\n\\r\nWhen\nyou're done, click \"Run\" to play.  When Dog scores 6 points, you will move\non to the next puzzle. "
       grade5_playlab_variables1_instruction: |
         This time you don't have to write
         any code, just hit "Run" to play the game! In this game, you're the dog
         who is trying to collect more flags than the cat. Use the down arrow to control
         the dog. Press "Finish" when you're done playing.
+      grade5_playlab_variables10_instruction: |
+        "순찰" 함수에 "캐릭터" 매개변수를 추가해서, 원하는 캐릭터를 화면에 나타낼 수 있도록 해보세요.
+        캐릭터들은 1, 2, 3 으로 선택할 수 있도록 해주세요.
+      grade5_playlab_variables11_instruction: '"순찰" 함수에 "속도" 매개변수를 더 추가해 보세요. 다른 캐릭터들이 깃발을 잡기 전에 펭귄이 깃발들을 잡을 수 있도록 "속도" 매개변수를 "속도 설정" 블록에 사용하세요.'
+      grade5_playlab_variables12_instruction: "자 이제 즐겨보세요. 주어진 코드가 어떻게 동작하게 될지 한 블록씩 살펴보세요. \\r\n\\r\n살펴본 다음에, 강아지 캐릭터를 방향키로 움직여 깃발을 모두 모아보세요."
+      grade5_playlab_variables13_instruction: '"캐릭터가 닿으면" 블록을 이용해서, 강아지 캐릭터다 다른 캐릭터들에 닿으면, 처음의 가장 위쪽의 가장 왼쪽으로 이동되도록 해 보세요.'
+      grade5_playlab_variables14_instruction: |
+        It's free play time! Have fun with
+        all the blocks in your tool box. 
       grade5_playlab_variables2_instruction: '이전 퍼즐은 공정하지 않았습니다! "강아지 속도" 변수의 값을 바꿔서 고양이보다 더 많은 깃발을 모을 수 있도록 해보세요. 10 개의 깃발을 먼저 모으면 이깁니다!'
       grade5_playlab_variables3_instruction: |
         이번에는 새로운 종류의 게임입니다!
@@ -2669,12 +2901,18 @@ ko:
         좋아요. 이제 이 게임을 좀더 어렵게 만들어보세요. 강아지(캐릭터 1) 가 고양이(캐릭터 2) 가 발사한
         노란 하트를 맞으면, 점수를 잃어야 합니다. 10 포인트에서 시작하기 때문에 아주 어렵지는 않습니다.
         10 부터 0 까지 포인트를 내려서 이 레벨을 통과해보세요.
+      grade5_playlab_variables71_instruction: "이전 단계에서 봤던 게임입니다만, 대부분의 코드가 숨겨져있습니다. 여기에 \"score_points\" 함수가 있습니다.\\r\n\\r\n함수를 수정해서 \"points\" 매개변수를 \"player_score\"의 변수로 추가해 주세요.\\r\n\\r\n\"play_score\" 변수는 강아지가 고양이에게 하트를 붙일 때마다 증가하고, 고양이가 강아지에게 하트를 붙일 때마다 감소해야합니다.\\r\n\\r\n참고:\n\"실행\"을 눌러 실행해 보세요. 강아지가 6 포인트를 얻으면 다음 퍼즐로 갈 수 있습니다. "
+      grade5_playlab_variables81_instruction: "여러분을 위해서 함수를 하나더 추가했습니다.\\r\n\\r\n\"if\" 명령어를 이용해서 \"player_score\" 가 일정 점수를 넘으면 \"level_up\" 함수가 실행되도록 프로그램을 만들어 보세요.\\r\n\\r\n예시: \"player_score\" > 6\\r\n\\r\n게임을 해보고, 레벨4를 통과해서 다음 퍼즐로 가보세요. "
+      grade5_playlab_variables9_instruction: |
+        "순찰" 함수가 있습니다.
+        함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.
       grade5_playlab_variables_freeplay_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\nHint: scroll down to see all the commands\nin the workspace."
       grade5_playlab_variables_jump1_instruction: |
         This puzzle uses a hidden function
         that makes the dog jump when the 'up' arrow is pressed. The height of the
         jumps can be set at the start of the game using the 'jumpPower' variable.
         Try to touch all of the flags!
+      grade5_prompt_test_instruction: This is a test play lab level.
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
       Infinity_catch_instruction: '방향키를 이용해서 엘사("캐릭터 2") 가 안나를 잡아보세요.'
       Infinity_finale_instruction: 원하는대로 만들고 친구들에게 공유해 보세요.
@@ -3501,6 +3739,7 @@ ko:
         Here are regular instructions for a level. There
         is nothing fancy going on here.
       PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. \\r\nYou must first check if\nthe nectar is equal to 1 using the `if nectar` block."
+      PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: |
         Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to

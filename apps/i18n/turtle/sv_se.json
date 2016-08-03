@@ -41,6 +41,7 @@
   "heightParameter": "höjd",
   "hideTurtle": "dölj konstnär",
   "jump": "hoppa",
+  "jumpTo": "jump to",
   "jumpBackward": "hoppa bakåt med",
   "jumpForward": "hoppa framåt med",
   "jumpTooltip": "Flyttar konstnären utan att lämna några spår.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Svänger konstnären vänster eller höger med en viss vinkel i grader.",
   "turtleVisibilityTooltip": "Gör konstnären synlig/osynlig.",
   "widthTooltip": "Ändrar tjockleken på pennan.",
-  "wrongColour": "Din bild är i fel färg. För det här pusslet måste den vara %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Din bild är i fel färg. För det här pusslet måste den vara %1."
 }

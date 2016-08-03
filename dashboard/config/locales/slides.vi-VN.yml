@@ -603,21 +603,20 @@
           làm cho càng nhiều mật ong mà các tổ ong có thể giữ.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: If you're able to get all the nectar and make all the honey, you succeed
-          and go to the next level. Otherwise, you need to try this puzzle again.
-          Play around a while and see what it feels like to "bee" a programmer!
+        text: Nếu bạn có thể thu thập tất cả các mật hoa và tạo ra mật ong, bạn sẽ
+          qua cửa. Nếu không bạn sẽ phải thử lại màn này. Hãy hơi một lúc và cảm nhận
+          mình như một "con ong" lập trình chăm chỉ!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: A loop is a repetition of activity. So going into a hive to inspect,
-          I look at a frame and then I put it back, so I repeat that same activity
-          multiple times. It's looping around, doing the same activity multiple times.
+        text: '"Vòng lặp" là sự lặp lại liên tục của hoạt động. Khi tôi nhìn vào tổ
+          ong để kiểm tra mật, tôi nhìn vào một tấm lưới và kéo nó ra, và việc này
+          được lặp lại nhiều lần. Việc "lặp đi lặp lại" như vậy gọi là Vòng lặp.'
       2:
         image: notes/C1_bee_loops_2.png
-        text: In this level, we want the bee to collect three nectars from the flower.
-          Instead of using three "get nectar" blocks, you're going to use the repeat
-          block to get nectar three times. Hit "Run" and see if you got it right.
-          Nice!
+        text: Ở màn này, chúng ta muốn chú ong sẽ thu thập ba giọt mật từ bông hoa.
+          Thay vì sử dụng ba khối "lấy mật", bạn sẽ sử dụng "khối lặp" để lấy mật
+          ba lần. Bấm "chạy" để xem bạn có làm đúng không. Tốt lắm!
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png

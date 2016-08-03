@@ -394,7 +394,12 @@
       الضروري أن نشجع الطلاب على المراجعة و التجربة, لذلك سوف نقوم بإضافة ميزة "كود
       غير مستخدم" للسماح للطلاب بتنفيذ كودهم الخاص حتى ولو كانت قطع برمجية غير مرفقة.
       نحن نرحب بردودكم قبل أن نطلق هذه الميزات للعامة.
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "اعرف المزيد"
+    announcement_try_now_button: "جرب الآن"
     announcement_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة
       الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع منك.
       هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات
@@ -621,6 +626,9 @@
     wrong_body: "شكرا لك على تقديم الإجابات."
     correct_title: "شكراً"
     correct_body: "شكرا لك على تقديم الإجابات."
+    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
+      for aggregate results.  Note that results are only visible if at least five
+      students submitted the survey.
   level_group-submittable:
     wrong_title: "شكراً"
     wrong_body: "شكرا لك على تقديم الإجابات."
@@ -800,6 +808,7 @@
     required: "لمحة عامة"
     content: "محتوى"
     practice: "تمارين معلم الرياضيات"
+    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
