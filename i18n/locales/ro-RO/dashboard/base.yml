@@ -348,9 +348,7 @@ ro:
     announcement_title: Anunțuri
     announcement_view_all: Vizualizare toate
     announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Află mai mult
-    announcement_try_now_button: Încearcă acum
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -526,7 +524,6 @@ ro:
     wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
     correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Mulţumesc
     wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
@@ -681,7 +678,6 @@ ro:
     required: Prezentare generală
     content: Content
     practice: Teaching Practices
-    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

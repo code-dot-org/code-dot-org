@@ -478,8 +478,6 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: Czy jesteś nauczycielem?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
@@ -697,7 +695,7 @@
   dashboard_navigation_view_progress: Postęp
   dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_surveys: Surveys
   dashboard_navigation_add_students: Dodaj uczniów
   dashboard_navigation_manage_students: Zarządzaj uczniami
   dashboard_navigation_lesson_plans_resources: Plany lekcji i zasoby
@@ -899,7 +897,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ucz się więcej
-  dashboard_announce_try_now_button: Spróbuj teraz
+  dashboard_announce_try_now_button: Try it now
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1800,3 +1798,6 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
+  are_you_teacher: Are you a teacher?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys

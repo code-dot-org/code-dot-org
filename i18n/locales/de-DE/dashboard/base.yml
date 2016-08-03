@@ -348,9 +348,7 @@ de:
     announcement_title: Ankündigungen
     announcement_view_all: Alle anzeigen
     announcement_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet werden, werden voraussichtlich verspätet beantwortet.'
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Mehr erfahren
-    announcement_try_now_button: Probiere es jetzt aus
     announcement_petition: 'Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von "K-12 computer science education" zu erbitten.'
     announcement_petition_button: Fügen Sie Ihren Namen ein
   move_students:
@@ -526,7 +524,6 @@ de:
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
     correct_title: Vielen Dank
     correct_body: Vielen Dank für das Einsenden Ihrer Fragen.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Vielen Dank
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
@@ -681,7 +678,6 @@ de:
     required: Übersicht
     content: Inhalt
     practice: Lehrer Übungen
-    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

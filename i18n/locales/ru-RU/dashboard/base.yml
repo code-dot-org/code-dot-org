@@ -125,8 +125,8 @@ ru:
     picture: Теперь найдите свое секретное изображение
     words: Теперь введите свои секретные слова
     login: Вход
-    invalid_login: Неверный логин, пожалуйста, попробуйте снова
-    pair_programming: У меня есть партнер на моем компьютере
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Забыли Ваш пароль?
@@ -250,9 +250,9 @@ ru:
       signup: Регистрация
       already_registered: Уже зарегистрированы?
       pair_programming: Программирование в парах
-      team: Команда
-      driver: Водитель
-      navigator: Штурман
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: 'Результаты %{name}'
       progress: Ваши результаты
@@ -287,7 +287,7 @@ ru:
       example_with_number: 'Пример решения %{solution_number}'
       submitted_on: 'Отправлено %{date}'
       unsubmit: Не отправлять
-      worked_with: Работал с
+      worked_with: Worked With
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтвержден:'
@@ -348,9 +348,7 @@ ru:
     announcement_title: Объявления
     announcement_view_all: Посмотреть все
     announcement_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Узнать больше
-    announcement_try_now_button: Попробуйте сейчас
     announcement_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
     announcement_petition_button: Добавьте ваше имя
   move_students:
@@ -526,7 +524,6 @@ ru:
     wrong_body: Спасибо за ответ
     correct_title: Спасибо
     correct_body: Спасибо за ответ
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Спасибо
     wrong_body: Спасибо за ответ
@@ -599,7 +596,7 @@ ru:
     share_title: Поделиться своим проектом
     share_copy_link: 'Скопировать ссылку:'
     share_embed_description: Вы можете вставить код в HTML-страницы для отображения проекта на веб-странице.
-    share_u13_warning: Попросите вашего учителя перед предоставлением общего доступа. Только поделиться с другими в вашей школе.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Код для вставки
     advanced_share: Показать дополнительные опции
     close: Закрыть
@@ -623,7 +620,7 @@ ru:
     edit_project: Редактировать проект
     abuse:
       tos: "Этот проект нарушает <a href='http://code.org/tos'>Условия предоставления услуг</a> Code.org, о чем было направлено уведомление, поэтому этим проектом нельзя поделиться."
-      policy_violation: Этот проект содержит информацию, которой нельзя делиться с другими. Пожалуйста, свяжитесь с владельцем приложения что бы исправить содержание его приложения.
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "Если вы считаете, что произошла ошибка, <a href='https://code.org/contact'>свяжитесь с нами.</a>"
       go_to_code_studio: 'Перейти в "Студию Кода"'
       report_abuse_form:
@@ -681,11 +678,10 @@ ru:
     required: Краткий обзор
     content: Содержимое
     practice: Практика учителя
-    peer_review: Peer Review
   external_links:
-    disclaimer: Отказ от ответственности
-    leaving_domain: Сейчас вы покидаете этот домен, сайт, который не управляется Code.org.
-    disclaimer_text: "Этот сайт может иметь политику конфиденциальности, которые отличаются от Code.org's. Мы выбрали эти ресурсы третьих лиц, потому что мы думаем, что они будут полезными для вас. Хотя мы не несем прямую ответственность за содержание данного веб-сайта, пожалуйста, <a href='%{support_url}'> обратитесь в службу поддержки</a> если вы нашли неприятное содержание, или если связанный сайт больше не доступен."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Загрузить программы Часа кода
     capsule_title: У Вас есть интернет?

@@ -129,18 +129,8 @@ After do |scenario|
   log_result all_passed
 end
 
-def check_for_page_errors
-  js_errors = @browser.execute_script('return window.detectedJSErrors;')
-  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
-
-  # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
-  # js_errors.should eq nil
-end
-
 After do |_s|
   unless @browser.nil?
-    check_for_page_errors
-
     # clear session state (or get a new browser)
     if slow_browser?
       unless @browser.current_url.include?('studio')

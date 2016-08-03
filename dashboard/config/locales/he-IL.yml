@@ -28,7 +28,7 @@
   submit: "שלח"
   unsubmit: "בטל הגשה"
   previous_page: Previous page
-  next_page: "הדף הבא"
+  next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "בטל"
@@ -116,7 +116,7 @@
       אני מסכים להיות כפוף לתנאים של Code.org.
       קישור: http://code.org/tos.
     additional_information: "יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך."
-    user_type_label: "סוג חשבון"
+    user_type_label: Account Type
     user_type_teacher: "מורה"
     user_type_student: "תלמיד"
   signin_form:
@@ -393,12 +393,7 @@
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class
-      how the Internet works, how cryptography keeps data secure, and other concepts?
-      We’ve taken the best interactive tools from our Computer Science Principles
-      curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "למד עוד"
-    announcement_try_now_button: "נסה עכשיו"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -617,9 +612,6 @@
     wrong_body: Thank you for submitting answers.
     correct_title: "תודה רבה"
     correct_body: Thank you for submitting an answer
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
   level_group-submittable:
     wrong_title: "תודה רבה"
     wrong_body: Thank you for submitting answers.
@@ -804,7 +796,6 @@
     required: "סקירה"
     content: Content
     practice: Teacher Practices
-    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

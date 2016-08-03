@@ -41,7 +41,6 @@
   "heightParameter": "hündürlük",
   "hideTurtle": "rəssamı gizlət",
   "jump": "atıl",
-  "jumpTo": "jump to",
   "jumpBackward": "geriyə atıl",
   "jumpForward": "irəli atıl",
   "jumpTooltip": "Heç bir iz qoymadan rəssamın yerini dəyişir.",
@@ -90,5 +89,6 @@
   "turnTooltip": "Rəssamı qeyd olunmuş dərəcə qədər sola və ya sağa döndərir.",
   "turtleVisibilityTooltip": "Rəssamı görünən və ya görünməz edir.",
   "widthTooltip": "Karandaşın qalınlığını dəyişir.",
-  "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."
+  "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır.",
+  "jumpTo": "jump to"
 }

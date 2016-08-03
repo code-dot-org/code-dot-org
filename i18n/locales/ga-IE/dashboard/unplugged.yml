@@ -33,7 +33,7 @@ ga:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Coinníollacha
+        title: Conditions
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -63,132 +63,133 @@ ga:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Clabhsúr
+        title: Wrap-Up
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Mapaí Meidhreacha
-        desc: Cruthóidh na daltaí algartaim shimplí (treoracha) chun carachtar a threorú trí chathair ghríobháin le hordú amháin.
+        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Bog é, Bog é
-        desc: Cruthóidh na daltaí algartaim shimplí (treoracha) chun carachtar a threorú trí chathair ghríobháin le hordú amháin.
+        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
-        desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
+        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Dúshraith a Leagan
-        desc: Tógfaidh na daltaí struchtúir as ábhar a soláthraítear dóibh. Caithfidh na struchtúir coinníoll éigin a chomhlíonadh (airde éigin a shroicheadh nó meáchan éigin a iompar), agus pléifidh na daltaí an smaoineamh gur gá an taos a choimeád leis an oigheann nuair a éiríonn cúrsaí níos deacra.
+        desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
         title: Bí Lúbach
-        desc: Tugann an ceacht seo buneolas ar lúba (treoracha athdhéanta) sa ríomhchlárú trí ghníomhaíocht damhsa. Foghlaimeoidh na daltaí cóiréagrafaíocht shimplí agus déanfaidh siad an damhsa arís is aris eile.
+        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
         title: Códáil sealaíochta
-        desc: Glacfaidh na daltaí páirt i rás sealaíochta, ag rith trasna na páirce chun algartam a scríobh, bunaithe ar Ríomhchlárú ar Ghrafpháipéar. Ní féidir leo ach treoir amháin a scríobh sa turas, agus má tá botún ann, caithfidh siad gach rud a scriosadh agus tosú ón bpointe sin.
+        desc: |-
+          Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
         title: Coinníollacha
-        desc: 'Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."'
+        desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
         title: An Teagmhas Mór
-        desc: 'Foghlaimeoidh na daltaí faoi "teagmhais" sa ríomhchlárú, gníomhartha a ndéanann an ríomhaire monatóireacht leanúnach orthu. Brúfaidh an múinteoir cnaipí ar chianrialtán páipéir, agus freagróidh na daltaí, ag brath ar an gcnaipe a bhí brúite.'
+        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Ag Taisteal Slán Sábháilte
-        desc: Tá an tIdirlíon cumhachtach, ach uaireanta contúirteach freisin. Foghlaimeoidh na daltaí conas is féidir fanacht slán sábháilte ar an Idirlíon.
+        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Ríomhchlárú ar Ghrafpháipéar
-        desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
+        desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
         title: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
-        desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid eitleán páipéir mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Bráisléid Dhénártha
-        desc: Déanfaidh gach dalta bráisléad mar léiriú dénártha ar an chéad litir ina (h)ainm. Foghlaimeoidh na daltaí gur féidir sonraí a stóráil agus a léiriú ar níos mó ná bealach amháin.
+        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
         title: Do Lorg Digiteach
-        desc: 'Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg digiteach seo.'
+        desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
         video: C2_digital_footprint
       ComputationalThinking:
         title: Smaointeoireacht Ríomhaireachtúil
-        desc: Úsáidfidh na daltaí céimeanna sa smaointeoireacht ríomhaireachtúil (.i. miondealú, meaitseáil patrún, teibiú, algartam) chun cluiche a imirt gan rialacha gan treoracha.
+        desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Móibílí Gréine
-        desc: Sa cheacht seo, cruthóidh na daltaí algartam le hathróga agus le feidhmeanna (blúirí cóid is féidir a úsáid arís is arís eile) chun móibílí gréine a dhéanamh as sreangáin agus coirníní.
+        desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Ceapadh Ceoil le Paraiméadair
-        desc: Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi pharaiméadair (luachanna a athraíonn feidhm gan gá an fheidhm a athscríobh).
+        title: Songwriting with Parameters
+        desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Algartaim Fhíorshaoil: An Rás Díslí'
-        desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil. Mar chuid den cheacht seo, aithneoidh agus scríobhfaidh na daltaí an t-algartam taobh thiar de chluiche díslí.
+        title: 'Real life algorithms: Dice Race'
+        desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
         video: C3_dice_race
       Internet:
         title: An tIdirlíon
-        desc: Seolfaidh na daltaí teachtaireachtaí ar pháipéar a léiríonn prótacail Idirlín éagsúla.
+        desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:
         title: Sluafhoinsiú
-        desc: 'Úsáideann na daltaí "sluafhoinsiú", teicníc réitithe fadhbanna atá coitianta sa ríomheolaíocht, chun tasc a dhéanamh níos tapúla mar ghrúpa ná dá mbeadh dalta amháin ann.'
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Saoránacht Dhigiteach
-        desc: Cuireann na daltaí faisnéis phríobháideach i gcodarsnacht le faisnéis phearsanta, agus foghlaimíonn siad faoin ábhar is féidir comhroinnt ar líne go sábháilte, agus ábhar atá contúirteach.
+        desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Algartaim Tangraim
-        desc: Taispeánann an ceacht seo rud éigin tábhachtach faoi algartaim. Mura bhfuil algartam sách cruinn, ní féidir leat muinín a chur sna torthaí. Má tá tú ag iarraidh torthaí níos iontaofa, ní mór duit algartam mionsonraithe a úsáid.
+        title: Tangram Algorithms
+        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Athróga i gClúdach Litreach
-        desc: Tugann athróga go leor saoirse duit mar ríomheolaí. Sa cheacht seo, foghlaimeoidh na daltaí cad is athróg ann, ach conas is féidir athróga a úsáid ar mhórán bealaí éagsúla. Úsáid an ghníomhaíocht seo roimh (nó in éineacht leis) an gceacht ar an teibiú chun an smaoineamh a threisiú.
+        title: Envelope Variables
+        desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
         video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
-        desc: Is é an teibiú ceann de na coincheapa is tábhachtaí sa ríomheolaíocht. Sa ghníomhaíocht seo, déanfaidh na daltaí anailís ar scéalta, ag lorg difríochtaí sa chaoi go mbeidh siad in ann iad a theibiú. Bainfear úsáid as na scéalta teibithe sin mar theimpléid le haghaidh scéalta nua craiceáilte!
+        desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Spraoi le Lúba
-        desc: Tá a fhios againn cheana go ligeann lúba dúinn rudaí a dhéanamh arís is arís eile, ach anois táimid ar tí foghlaim conas is féidir lúba a bhfuil struchtúr breise iontu a úsáid.
+        title: For Loop Fun
+        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Ceapadh Ceoil le Paraiméadair
+        title: Songwriting With Parameters
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Íomhánna Dénártha
+        title: Binary Images
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Físchluichí agus Plánaí Comhordanáidí
+        title: Video Games and Coordinate Planes
         desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Conarthaí, Fearann, agus Raon
+        title: Contracts, Domain, and Range
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
         video: alg_5_contracts
       DesignRecipe:
-        title: Oideas Dearaidh
+        title: The Design Recipe
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
         video: alg_8_design_recipe
       Booleans:
-        title: Athróga Boole agus Loighic
+        title: Booleans and Logic
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Coinníollacha agus Feidhmeanna Breacleanúnacha
+        title: Conditionals and Piecewise Functions
         desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
         video: alg_10_conditionals
       CollisionDetection:
