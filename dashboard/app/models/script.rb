@@ -314,7 +314,8 @@ class Script < ActiveRecord::Base
     name == 'edit-code'
   end
 
-  def is_k1?
+  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
+  def is_k1?  # rubocop:disable PredicateName
     name == 'course1'
   end
 
