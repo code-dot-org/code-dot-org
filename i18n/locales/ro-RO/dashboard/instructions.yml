@@ -298,6 +298,111 @@ ro:
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Ajută pasărea să prindă porcul buclucaș mutăndu-l înainte
+      20hr_farmer_stage9_1_instruction: |
+        Hi, I'm a farmer. I need your help to flatten
+        the field on my farm so it's ready for planting. Move me to the pile of dirt
+        and use the "remove" block to remove it.
+      20hr_farmer_stage9_10_instruction: |
+        I'm working late, so it's dark out, and
+        I can't tell how large the piles are. Now I don't have all the options I
+        used to have on the while block. Move me along the field, and if there is
+        a pile, remove it
+      20hr_farmer_stage9_11_instruction: |
+        It's still dark outside. Move me along
+        the field. If there is a pile, remove it, and if there is a hole, fill it
+        in. Hint: use the dropdown menu of options on the "if" block.
+      20hr_farmer_stage9_2_instruction: |
+        Next, move me to the hole and fill it with
+        TWO shovelfuls of dirt, using the "fill" block.
+      20hr_farmer_stage9_3_instruction: |
+        Move me to the pile of dirt and tell me
+        how many shovelfuls to remove using as few blocks as possible.
+      20hr_farmer_stage9_4_instruction: |
+        Can you help me remove all four piles of
+        dirt? Hint: use a repeat block if you can.
+      20hr_farmer_stage9_5_instruction: |
+        Help me fill in all these holes with 5 shovelfuls
+        of dirt. Hint: you can put a "repeat" block inside the "while" block.
+      20hr_farmer_stage9_6_instruction: |
+        Remove all the piles of dirt, using as few
+        blocks as possible. The new options in the dropdown menu on the "while"
+        block tell me if I'm standing on a pile or a hole.
+      20hr_farmer_stage9_7_instruction: |
+        Wow, I found a really deep hole! I don't
+        know how many shovelfuls of dirt it needs. Can you write a program that fills
+        it until the ground is even?
+      20hr_farmer_stage9_8_instruction: |
+        Help me fill in the hole at the end of the
+        field, using as few blocks as possible.
+      20hr_farmer_stage9_9_instruction: |
+        Make me remove all these piles of dirt.
+        Try to use as few blocks as possible. Hint: try using a "while" block.
+      20hr_maze_stage2_1_instruction: |
+        Can you help me to catch the naughty pig?
+        Stack a couple of "move forward" blocks together and press "Run" to help
+        me get there.
+      20hr_maze_stage2_10_instruction: |
+        Ok, try the new "repeat until" block -
+        it will repeat until I reach the annoying pig.
+      20hr_maze_stage2_11_instruction: |
+        Ok, one last time for practice - can you
+        solve this one using only 4 blocks?
+      20hr_maze_stage2_12_instruction: |
+        Dear person. Me zombie. Me hungry. Must...
+        get... to sunflower... Can you get me there with only 5 blocks?
+      20hr_maze_stage2_13_instruction: |
+        Ok, this is similar, but slightly different.
+        Can you do it in only 5 blocks?
+      20hr_maze_stage2_14_instruction: |
+        Use the new "if" block to let me decide
+        when to turn. Hint: you only need one more block, but learn how we set it
+        up so you can do it on your own next time.
+      20hr_maze_stage2_15_instruction: |
+        Ok, this is just like the last puzzle, but
+        you need to remember how you used the "if" block and the "repeat" block
+        together.
+      20hr_maze_stage2_16_instruction: |
+        Me want sunflower! Use an "if" block to
+        get me there with the fewest number of blocks.
+      20hr_maze_stage2_17_instruction: |
+        Ok, let's do that again for practice - this
+        isn't very different, but watch out for the chompers!
+      20hr_maze_stage2_18_instruction: |
+        The "If-else" blocks checks a condition,
+        and then does one thing OR another. To get me to the sunflower try to use
+        this new block.
+      20hr_maze_stage2_19_instruction: |
+        One more practice of the "if-else" block,
+        can you get it right on your first try?
+      20hr_maze_stage2_2_instruction: |
+        This pig is ruffling my feathers. Help me
+        to find him!
+      20hr_maze_stage2_20_instruction: |
+        Can you add just 3 blocks to help me solve
+        a more complex maze? If you do it right, I can walk any curvy path no matter
+        the length.
+      20hr_maze_stage2_3_instruction: |
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or the feathers will fly!
+      20hr_maze_stage2_4_instruction: |
+        Guide me to the green evilness! (Watch out
+        for TNT)
+      20hr_maze_stage2_5_instruction: |
+        Keep calm and help me to find the bad pig.
+        Otherwise I might get angry!
+      20hr_maze_stage2_6_instruction: |
+        There's a way I can get to the silly pig
+        using only 2 blocks. Can you figure it out?
+      20hr_maze_stage2_7_instruction: |
+        Try to get me to the green intruder using
+        only three blocks.
+      20hr_maze_stage2_8_instruction: |
+        Help me banish this bad piggy using the fewest
+        number of blocks. Try using more than one "repeat times" block.
+      20hr_maze_stage2_9_instruction: |
+        When a block is grey, that means you can't
+        delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
+        Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
       4-5 Artist 1_instruction: 'Ajută-mă să termin de desenat cutia mea. (Fiecare linie are o lungime de 300 de pixeli) '
       4-5 Artist 10_instruction: |
         Apasă "Rulează" să testezi codul. Apoi, repetă-l 
@@ -1093,6 +1198,9 @@ ro:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
+      Collector Demo_instruction: |
+        Look at all this loot! Help me get as many coins
+        as I can so I can improve my farm. I can only use 9 blocks though!
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -1375,6 +1483,17 @@ ro:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      course2_playlab_stage17_1_instruction: 'Poți face acest câine să spună "Bună ziua lume"?'
+      course2_playlab_stage17_2_instruction: |
+        Can you make the dog say something
+        and then have the cat say something afterwards?
+      course2_playlab_stage17_3_instruction: |
+        Can you write a program to make this
+        dog move to the cat?
+      course2_playlab_stage17_4_instruction: |
+        Can you write a program that makes
+        the dog move to the cat, and have the cat say "hello" when the dog reaches
+        him?
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -2075,6 +2194,24 @@ ro:
       grade2_PuppyLoops_7_instruction: Du-mă la floarea-soarelui!
       grade2_PuppyLoops_8_instruction: 'Codul pentru cele trei mustăți pe care le vezi este greșit. Indiciu: fiecare mustață are o lungime de 75 de pixeli. Repară acest cod pentru a desena mustățile.'
       grade2_PuppyLoops_9_instruction: Se pare că litera C în cod este desenată invers. Poţi să o faci să arate ca un C?
+      grade3_AboutMyRobot_1_instruction: |
+        Make your robot say "Hello!" when the
+        button is clicked.
+      grade3_AboutMyRobot_2_instruction: |
+        Edit the code so that when the second bird
+        is clicked, your program plays a sound!
+      grade3_AboutMyRobot_3_instruction: |
+        When the third bird is clicked, the background
+        should change to a city. Can you add code to make this happen?
+      grade3_AboutMyRobot_4_instruction: |
+        Add code to make something happen when
+        the fourth bird is clicked. Be creative!
+      grade3_AboutMyRobot_5_instruction: |
+        About My Robot Project! Write code so that
+        clicking on each bird shows a new fact about your robot.
+      grade3_AboutMyRobot_TeacherIDo_instruction: |
+        Run this puzzle and click on the
+        robot to see what happens!
       grade3_Conditionals_1 BAD_instruction: Folosește o buclă pentru a colecta tot nectarul.
       grade3_Conditionals_1_instruction: Bună, sunt o albină! Ajută-mă să colectez tot nectarul din flori. Folosește o buclă.
       grade3_Conditionals_10 BAD_instruction: Adună nectarul din rândurile de flori! Utilizează o buclă imbricată.
@@ -2198,6 +2335,10 @@ ro:
       grade4_arist_nested_loop_triangles6_instruction: |
         Can you draw these 36 triangles
         using a nested loop?
+      grade4_artist_freeplay_instruction: |
+        Create your own project! This creation
+        will be saved to your Projects dashboard so that you can easily edit it any
+        time!
       grade4_artist_functions_stars0_instruction: |
         Have you drawn something like
         this star before? Practice making it one more time by adding a turn and a
@@ -2377,6 +2518,9 @@ ro:
         Let's create three squares, turning
         after each square. Be sure to turn by 120 degrees before each new square.
       grade4_frozen_square_loop3_instruction: 'Poţi crea un fulg de zăpadă folosind blocul "Repetă" pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se roti cu 36 de grade între fiecare pătrat?'
+      grade4_playlab_freeplay_instruction: |
+        It's free play time! Have fun with all
+        the blocks in your tool box. 
       grade4_playlab_test_instruction: |
         În jocul nostru, cum ar trebui să marcăm puncte?
         Adaugă 1 variabilei tale "puncte" de fiecare dată când câinele loveşte pisica cu o inimă. Foloseşte evenimentul "when actor 2 touches anything" pentru a declanşa o actualizare a scorului tău. Poţi incrementa variabila ta prin setarea acesteia "points = points + 1." Obţine punctaj de până la 10 (din 1 în 1!) pentru a trece nivelul.
@@ -2399,6 +2543,28 @@ ro:
         of the nectar and make all of the honey.
       grade4_review_bee2_instruction: Colecteaza nectarul din fiecare floare si fa miere la fiecare fagure de miere.
       grade4_review_bee3_instruction: Foloseste o bucla similara ca in puzzleul trecut, dar foloseste un viraj.
+      grade5_artist_binary1_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \\r\\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
+      grade5_artist_binary10_instruction: Click aici pentru a vedea indicii.
+      grade5_artist_binary11_instruction: |
+        Free Play: Here's a blank canvas for
+        you to draw on.  Have fun!
+      grade5_artist_binary2_instruction: "Aici avem o funcție care ia un şir binar format din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede 0. \\r\n\\r\nRulează codul pentru a vedea cum artistul folosește şirul binar pentru a desena acest model."
+      grade5_artist_binary3_instruction: |
+        Which of these binary strings could you
+        loop 8 times to draw this image?
+      grade5_artist_binary4_instruction: |
+        Can you draw this pattern by looping just
+        three binary digits (0s and 1s)?
+      grade5_artist_binary5_instruction: |
+        Each binary string represents one row of
+        this picture. Can you rearrange them so it draws a smiley face instead of
+        a frowny face?
+      grade5_artist_binary6_instruction: |
+        Which 6 digit binary string, repeated 11
+        times, will draw this image?
+      grade5_artist_binary7_instruction: Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
+      grade5_artist_binary8_instruction: Finalizează acest desen.
+      grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw\non - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we start to get\ncreative with the bits?"
       grade5_artist_for_loops1_instruction: 'Desenează acest triunghi de 50 de pixeli mărime. Tip: folosește un bloc "repetă".'
       grade5_artist_for_loops10_instruction: "Can you figure out how to use all of\nthe things you've learned to create this image?\\r\n\\r\nNeed a hint? Click\nhere."
       grade5_artist_for_loops2_instruction: |
@@ -2435,6 +2601,26 @@ ro:
         Free Play: Try making some
         drawings of your own using "for loops". We've added a few useful variables
         for you as well.
+      grade5_artist_freeplay_instruction: |
+        Create your own project! This creation
+        will be saved to your Projects dashboard so that you can easily edit it any
+        time!
+      grade5_artist_functionparameters10_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și personal.\\r\n\\r\nVrei să știi cum a fost făcut modelul nostru de inspirație? "
+      grade5_artist_functionparameters11_instruction: |
+        Joc la alegere: Aici sunt funcțiile pe care le-ai scris tu și încă ceva în plus cu care să te joci. Desenează ceva minunat!
+        Joacă-te cu lățimea peniței pentru a vedea cât de diferit arată desenele tale!
+      grade5_artist_functionparameters7_instruction: |
+        This image is similar to the
+        last. Can you use a `for` loop with your function to make this design?
+      grade5_artist_functionparameters8_instruction: |
+        Hai să edităm această funcţie "desenează o formă". Ea are deja un parametru "lungime". Acum, hai să edităm funcţia pentru a adăuga un parametru "laturi". Amintește-ți că unghiul de viraj pentru o formă dată este de 360 împărţit la numărul de laturi avute. Sugestie: Dimensiunea globală a fiecărei forme este de 200 de pixeli. 
+        îți amintești ecuaţia pentru a face forme de aceeaşi dimensiune, atunci când acestea au un număr diferit de laturi?
+      grade5_artist_functionparameters9_instruction: |
+        Edit "draw a spiral edge"
+        to use "length" and "sides" parameters, then recreate these shapes.
+      grade5_artist_functionparameters_6_instruction: |
+        Poţi completa acest desen? 
+        Laturile tuturor formelor sunt de 100 de pixeli lungime.
       grade5_artist_parameters_squares1_instruction: |
         Click "edit" to fill in the
         function definition of "draw a square" and add a parameter. It should take
@@ -2449,9 +2635,9 @@ ro:
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade5_artist_parameters_triangles1_instruction: |
-        Today, we're going to try
-        out a different, more powerful function editor. See if you can figure out
-        how to edit the function 'draw a triangle' to find the bugs.
+        This program looks okay from
+        here, but something isn't working right. See if you can figure out how to
+        edit the function 'draw a triangle' to find the bug.
       grade5_artist_parameters_triangles1a_instruction: |
         Today, we're going to try
         out a different, more powerful function editor. See if you can figure out
@@ -2547,16 +2733,62 @@ ro:
         You've got this! What should your increment
         be to collect 3, 6, 9, 12, 15 nectar?
       grade5_bee_for_loops9_instruction: "Now, let's combine the \"counter\" variable\nwith a math block! How can you use the \"counter\" variable to navigate this\ngarden with the fewest number of blocks possible? What do you need to do to\ncollect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\\r\n\\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+      grade5_bee_parameters_new1_instruction: |
+        Help the bee collect all of the nectar.
+        You can only collect nectar from flowers, but you can check any space to see
+        if there is a flower.
+      grade5_bee_parameters_new2_instruction: |
+        Let's take that last program you
+        wrote and turn it into a function. Then, call the function to collect the
+        nectar when needed. This may seem like a strange step now, but it will be
+        really helpful soon!
+      grade5_bee_parameters_new3_instruction: |
+        Time to put the function to the test!
+        Let's see if it makes it any easier to collect these three rows of nectar.
+      grade5_bee_parameters_new4_instruction: |
+        How is your function holding up? We
+        may need to make some adjustments here. Can you add a 'length' parameter
+        to the function so that it will still work if the row is a different length?
+      grade5_bee_parameters_new5_instruction: |
+        Challenge Level! You are doing great
+        so far! Let's use this parametric function to collect a lot of nectar.
+      grade5_bee_parameters_new6_instruction: |
+        You can make your program much shorter
+        and more efficient when you notice new patterns. Try using some other blocks
+        to make a short and simple solution!
+      grade5_bee_parameters_new7_instruction: |
+        Something looks a little different.
+        Can you modify your function to account for all this honey that needs to be
+        made?
+      grade5_bee_parameters_new8_instruction: |
+        That's a great function you've created!
+        You are officially on your own now. Collect all the nectar. Make all the honey.
+      grade5_bee_parameters_new9_instruction: |
+        Bonus Challenge! If you are feeling
+        ambitious, try this puzzle. It is possible to collect all of the nectar and
+        make all of the honey using only a For loop, a Repeat loop, a function call,
+        and a turn. Try it all on your own, or view the hints to build it step-by-step.
+        Great job with this stage!
       grade5_pixelation_instruction: |
         Encode an image of anything you like using
         binary. Remember that the binary language will be represented with '0' and
         '1' only.
+      grade5_playlab_freeplay_instruction: |
+        It's free play time! Have fun with all
+        the blocks in your tool box. 
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most\nof the code is hidden. We've added a new function called `score_points.`\\r\n\\r\nAdd\na new parameter called `points` to the `player_score` function. \\r\n\\r\nThe\n`score_points` function should be able to both add and remove points from\n`player_score` depending on which actor is hit.\\r\nChanging the score by 1\nwill add a point, while changing the score by -1 will subtract a point.\\r\n\\r\nWhen\nyou're done, click \"Run\" to play.  When Dog scores 6 points, you will move\non to the next puzzle. "
       grade5_playlab_variables1_instruction: |
         This time you don't have to write
         any code, just hit "Run" to play the game! In this game, you're the dog
         who is trying to collect more flags than the cat. Use the down arrow to control
         the dog. Press "Finish" when you're done playing.
+      grade5_playlab_variables10_instruction: 'Completează parametrul de intrare "actor" astfel încât putem apela funcţia "patrol" pentru fiecare dintre actori. Amintiţi-vă, actorii corespund cifrelor 1, 2 şi 3.'
+      grade5_playlab_variables11_instruction: 'Adauga un alt parametru numit "viteza" in functia de "preluare". Incearca sa utilizezi un bloc "seteaza viteza" impreuna cu noul parametru "viteza" pentru a ajuta pinguinul sa ia ambele steaguri inainte ca alte spirite sa ajunga la unul din ele.'
+      grade5_playlab_variables12_instruction: "Uită-te la codul furnizat pentru a vedea dacă îţi dai seama ce face fiecare bloc de instrucţiuni. \\r\n\\r\nCând eşti gata, foloseşte tastele săgeţi pentru a controla câinele şi adună toate steagurile."
+      grade5_playlab_variables13_instruction: 'Foloseşte blocul de instrucţiuni "when touching" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă acesta atinge oricare unul din celelalte personaje.'
+      grade5_playlab_variables14_instruction: |
+        It's free play time! Have fun with
+        all the blocks in your tool box. 
       grade5_playlab_variables2_instruction: 'Cursa în acest ultim puzzle nu a fost foarte corectă! Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri decât pisica. Primul care adună 10 steaguri câştigă!'
       grade5_playlab_variables3_instruction: Aici avem un nou tip de joc! Foloseşte pentru mutare tastele săgeţi stânga şi dreapta şi pentru a sării tasta săgeată sus. Vezi dacă poţi să aduni toate steagurile.
       grade5_playlab_variables4_instruction: |
@@ -2568,12 +2800,18 @@ ro:
         În jocul nostru, cum ar trebui să marcăm puncte?
         Adaugă 1 variabilei tale "puncte" de fiecare dată când câinele loveşte pisica cu o inimă. Foloseşte evenimentul "when actor 2 touches anything" pentru a declanşa o actualizare a scorului tău. Poţi incrementa variabila ta prin setarea acesteia "points = points + 1." Obţine punctaj de până la 10 (din 1 în 1!) pentru a trece nivelul.
       grade5_playlab_variables7_instruction: 'Frumos, acum hai să ne asigurăm că acest joc nu este prea uşor - de fiecare dată când câinele (actor 1) este lovit de o minge de foc, tu ar trebui să pierzi un punct. Începe cu 10 puncte astfel încât să nu fie prea greu. Lasă scorul să scadă de la 10 la 0 pentru a schimba nivelul.'
+      grade5_playlab_variables71_instruction: "Aici este jocul nostru dintr-o etapa incipienta, dar majoritatea codului este ascuns. Este o functie noua \"inscrie_puncte.\" \\r\n\\r\n Editati functia astfel incat paramentrul 'Puncte' sa fie adaugat la variabila ''scorul_jucatorului\". \\r\n\\r\nVariabila \"scorul_jucatorului\" trebuie sa creasca de fiecare data cand \ncatelul eticheteaza pisica cu inimioare, si descreste cand pisica prinde cainele.\\r\n\\r\nNota:\nCand ai terminat, apasa \"Ruleaza\" pentru a te juca. Cand cainele inscrie 6 puncte, vei trece la urmatorul puzzle. "
+      grade5_playlab_variables81_instruction: "Am adăugat o ultimă funcţie pentru a o utiliza.\\r\n\\r\nProgramează jocul tău pentru a apela funcţia if \"level up\" cu argumentul \"player_points\" > 10. \\r\n\\r\nJoacă şi treci de nivelul 4 prin accesarea puzzle-lui următor. "
+      grade5_playlab_variables9_instruction: |
+        Aici este o funcţie numită "patrol."
+        Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
       grade5_playlab_variables_freeplay_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\nHint: scroll down to see all the commands\nin the workspace."
       grade5_playlab_variables_jump1_instruction: |
         This puzzle uses a hidden function
         that makes the dog jump when the 'up' arrow is pressed. The height of the
         jumps can be set at the start of the game using the 'jumpPower' variable.
         Try to touch all of the flags!
+      grade5_prompt_test_instruction: This is a test play lab level.
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
       Infinity_catch_instruction: 'Poţi s-o faci pe Elsa ("actorul 2") să o ajungă pe Anna folosind tastele săgeată?'
       Infinity_finale_instruction: Creează orice vrei tu şi distribuie-l/-o!
@@ -3294,6 +3532,7 @@ ro:
         Here are regular instructions for a level. There
         is nothing fancy going on here.
       PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. \\r\nYou must first check if\nthe nectar is equal to 1 using the `if nectar` block."
+      PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: |
         Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to

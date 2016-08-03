@@ -31,13 +31,13 @@ level 'pre-assessment survey q20'
 level 'pre-assessment survey q21'
 level 'pre-assessment survey q22'
 level 'pre-assessment survey q23'
-#level 'pre-assessment survey q24A'
+level 'pre-assessment survey q24A'
 
 
 page
 text 'pre-assessment survey heading3'
 level 'pre-assessment survey q24'
-#level 'pre-assessment survey q25A'
+level 'pre-assessment survey q25A'
 level 'pre-assessment survey q26'
 level 'pre-assessment survey q27'
 

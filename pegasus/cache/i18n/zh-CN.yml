@@ -386,6 +386,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "你是老师吗？"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "激励学生和志愿者"
   volunteer_engineer_submission_subtitle_generic: '2015年12月7-13日，约有10万名教师在他们的课堂上主办编程一小时活动。他（她）们需要你的帮助！ '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 老师们需要志愿者。<br>%{num_volunteers}
@@ -541,7 +543,7 @@
   dashboard_navigation_view_progress: "进度"
   dashboard_navigation_view_text_responses: "文字回应"
   dashboard_navigation_view_assessments: "测验"
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "添加学生"
   dashboard_navigation_manage_students: "管理学生"
   dashboard_navigation_lesson_plans_resources: "课程计划及资源"
@@ -700,7 +702,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "了解详情"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "现在就试试"
   dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
     28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
   dashboard_announce_petition_button: "添加您的姓名"

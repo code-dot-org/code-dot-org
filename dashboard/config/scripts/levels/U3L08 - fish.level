@@ -123,7 +123,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "GPXFnF+1wV0v9rwXPd0VYlBfXKUCc+LQo4fBvFOBPV05iBekTaW0yMm3cBn2\noDoi\n",
@@ -160,7 +161,39 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawFish:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add a parameter to drawFish, and to call it at least twice to create two fish of different sizes."
+      },
+      {
+        "entries": [
+          "drawSeaGrass:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add a parameter to drawSeaGrass, and to call it at least twice to create two strands of seagrass of different sizes."
+      },
+      {
+        "entries": [
+          "drawStarfish:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to modify drawStarfish to add a parameter and call it at least twice to create two star fish of different sizes."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

@@ -78,7 +78,7 @@ Blockly.JavaScript.scrub_ = function(a, b, c) {
       a.inputList[g].type == Blockly.INPUT_VALUE && (e = a.inputList[g].connection.targetBlock()) && (e = Blockly.Generator.allNestedComments(e)) && (d += Blockly.Generator.prefixLines(e, "// "))
     }
   }
-  a = a.nextConnection && a.nextConnection.targetBlock();
+  a = !a.skipNextBlockGeneration && a.nextConnection && a.nextConnection.targetBlock();
   c = this.blockToCode(a, c);
   return d + b + c
 };

@@ -470,6 +470,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "Сіз оқутышысыз ба?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "Оқушылар мен еріктілерді шабыттандыру"
   volunteer_engineer_submission_subtitle_generic: '2015 жылдың 7-13 желтоқсанында
     100000 мұғалім өз сыныптарында Бағдарламалау сағатын өткізбек. Оларға сенің көмегің
@@ -690,7 +692,7 @@
   dashboard_navigation_view_progress: "Ілгерілеуі"
   dashboard_navigation_view_text_responses: "Жауаптарды қарау"
   dashboard_navigation_view_assessments: "Бағалаулар"
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "Оқушыларды қосу"
   dashboard_navigation_manage_students: "Оқушыларды басқару"
   dashboard_navigation_lesson_plans_resources: "Сабақ жоспары мен оқу материалдары"
@@ -883,7 +885,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "толығырақ білу"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "Қазір қолданып көріңіз"
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education

@@ -56,6 +56,7 @@ exports.load = function (assetUrl, id) {
     shortLine: assetUrl('media/common_images/move-short.png'),
     soundIcon: assetUrl('media/common_images/play-sound.png'),
     clickIcon: assetUrl('media/common_images/when-click-hand.png'),
+    clockIcon: assetUrl('media/common_images/clock-icon.png'),
     startIcon: assetUrl('media/common_images/when-run.png'),
     runArrow: assetUrl('media/common_images/run-arrow.png'),
     endIcon: assetUrl('media/common_images/end-icon.png'),

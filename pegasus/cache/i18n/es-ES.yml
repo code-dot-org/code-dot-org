@@ -479,6 +479,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "¿Eres profesor/a?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la
     Hora de Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar
@@ -707,7 +709,7 @@
   dashboard_navigation_view_progress: Progreso
   dashboard_navigation_view_text_responses: Respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
@@ -908,7 +910,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Aprende más
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Probar ahora
   dashboard_announce_petition: Como profesor, está liderando el camino de un movimiento
     para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática.
     Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana,

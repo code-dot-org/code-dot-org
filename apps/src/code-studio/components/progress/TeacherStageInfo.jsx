@@ -1,6 +1,7 @@
 /* global dashboard */
 
 import React from 'react';
+import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '../../../color';
 import progressStyles from './progressStyles';
@@ -12,7 +13,7 @@ import progressStyles from './progressStyles';
 
 const styles = {
   container: {
-    marginBottom: 15,
+    marginBottom: 5,
     marginLeft: 5
   },
   main: {
@@ -22,7 +23,10 @@ const styles = {
     borderColor: color.cyan,
     borderRadius: 10,
     borderStyle: 'solid',
-    padding: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
     maxWidth: '90%'
   },
   lessonPlan: {
@@ -71,4 +75,4 @@ const TeacherStageInfo = React.createClass({
   }
 });
 
-export default TeacherStageInfo;
+export default Radium(TeacherStageInfo);

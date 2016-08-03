@@ -41,6 +41,7 @@
   "heightParameter": "උස",
   "hideTurtle": "චිත්‍ර ශිල්පියා සඟවන්න",
   "jump": "පනින්න",
+  "jumpTo": "jump to",
   "jumpBackward": "jump backward by",
   "jumpForward": "jump forward by",
   "jumpTooltip": "කිසිම ලකුණක් ඉතිරි නොකර චිත්‍ර ශිල්පියා පියවර කරන්න.",
@@ -89,6 +90,5 @@
   "turnTooltip": "චිත්‍ර ශිල්පියා නිශ්චිත කෝණයකින් දකුනට හෝ වමට හරවන්න.",
   "turtleVisibilityTooltip": "චිත්‍ර ශිල්පියා දෘශ්යමාන හෝ අදෘශ්යමාන කරන්න.",
   "widthTooltip": "පැන්සලේ පළල වෙනස් කිරීම.",
-  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
 }

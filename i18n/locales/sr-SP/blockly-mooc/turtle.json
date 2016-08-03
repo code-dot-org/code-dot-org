@@ -41,6 +41,7 @@
   "heightParameter":"висина",
   "hideTurtle":"сакриј уметника",
   "jump":"скок",
+  "jumpTo":"jump to",
   "jumpBackward":"скочи назад за",
   "jumpForward":"скочи напред за",
   "jumpTooltip":"Помера уметника тако да не оставља трагове.",
