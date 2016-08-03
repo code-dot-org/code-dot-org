@@ -47,18 +47,12 @@
 
 %h2 Teachers
 - if @teachers.size > 0
-  - if @teachers.size == @teacher_limit
-    -# This is actually not true if the there were exactly @response_limit
-    -# records.
-    WARNING: The results are sampled, there are additional records not being
-    displayed.
-    %br
-
   -# Note that newlines were replaced in the controller, the commas are replaced in the .csv.erb.
   #{link_to 'Download CSV', {:format => :csv}} (commas and newlines have been replaced by spaces)
 
   %br
 
+  = paginate @teachers
   %table.teachers
     - if @headers
       %tr
@@ -67,8 +61,8 @@
             %span= field
     - @teachers.each do |teacher|
       %tr
-        - teacher.each do |field|
+        - [:id, :name, :email, :full_address, :num_students].each do |field|
           %td
-            %span= field
+            %span= teacher[field]
 - else
   No teachers met the specified search criteria.
