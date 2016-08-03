@@ -91,11 +91,13 @@ module UsersHelper
           ul = uls.try(:[], level_id)
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
+          view_answers = !!ul.try(:view_answers)
           if completion_status != 'not_tried'
             user_data[:levels][level_id] = {
                 status: completion_status,
                 result: ul.try(:best_result) || 0,
                 submitted: submitted ? true : nil,
+                view_answers: view_answers ? true : nil,
                 paired: ul.paired? ? true : nil
             }.compact
 

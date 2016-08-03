@@ -8,7 +8,7 @@ import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
-import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
+import { SUBMITTED_RESULT, LOCKED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
 import { getStore } from './redux';
 
 import {
@@ -83,11 +83,13 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
-      store.dispatch(mergeProgress(
-        _.mapValues(data.levels,
-          level => level.submitted ? SUBMITTED_RESULT : level.result),
-        data.peerReviewsPerformed
-      ));
+      const levelProgress = _.mapValues(data.levels, level => {
+        if (level.submitted) {
+          return level.view_answers ? SUBMITTED_RESULT : LOCKED_RESULT;
+        }
+        return level.result;
+      });
+      store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));
     }
   });
 

@@ -194,6 +194,9 @@ export const closeLockDialog = () => ({
 
 // Helpers
 const unlockedStages = (section) => {
+  if (!section) {
+    return [];
+  }
   return _.toPairs(section.stages).filter(([stageId, students]) => {
     return students.some(student => !student.locked);
   }).map(([stageId, stage]) => parseInt(stageId, 10));
