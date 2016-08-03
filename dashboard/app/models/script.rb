@@ -605,12 +605,16 @@ class Script < ActiveRecord::Base
   end
 
   def summarize(user)
+    # TODO: (brent): i thought i made this unnecessary (passing in user)
+    # instead we should return all stages, but let client hide lockable stages
+    # until they've determined if authorized
     summarized_stages = stages.map(&:summarize)
 
     unless user && (user.authorized_teacher? || user.student_of_authorized_teacher?)
       summarized_stages = summarized_stages.select{|stage| !stage[:lockable]}
     end
 
+    # TODO: ask mehal why these are locked
     if peer_reviews_to_complete
       levels = []
       peer_reviews_to_complete.times do |x|
