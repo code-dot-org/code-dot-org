@@ -280,6 +280,14 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         ));
       }
 
+      if (canSeeTeacherLog) {
+        buttons.push(buttonMarkup(
+            i18n.teacherLogButton(),
+            'show-teacher-log-modal',
+            ['secondary']
+        ));
+      }
+
       if (buttons.length > 0) {
         writeEmptyRow(buttons.join(' '));
       } else if (lobbyRows.length === 0) {

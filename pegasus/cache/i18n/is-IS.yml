@@ -4,10 +4,10 @@
   'yes': Já
   'no': Nei
   select_language: Vinsamlegast veldu tungumál þitt
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org mun brátt hætta stuðningi við Internet Explorer 8,
+    9 og 10. Vinsamlegast uppfærðu í nýlegan vafra.
+  upgrade_ie_message_csedweek: CSEdWeek.org mun brátt hætta stuðningi við Internet
+    Explorer 8, 9 og 10. Vinsamlegast uppfærðu í nýlegan vafra.
   upgrade_ie_link: Læra meira
   en: Tölvunarfræði
   computer_science_edweek: Vika tölvunarfræði
@@ -479,6 +479,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: Ertu kennari?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Vertu nemendum hvatning með liðveislu
   volunteer_engineer_submission_subtitle_generic: '100.000 kennarar ætla að halda
     Klukkustund kóðunar í skólastofunni 7.-13. des. 2015. Þeir þurfa aðstoð þína! '
@@ -698,7 +700,7 @@
   dashboard_navigation_view_progress: Framvinda
   dashboard_navigation_view_text_responses: Skoða textasvör
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
   dashboard_navigation_lesson_plans_resources: Kennsluáætlanir og tilföng
@@ -896,7 +898,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Læra meira
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Prófa núna
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education

@@ -31,7 +31,7 @@ describe("NetSimRouterLogModal", function () {
         rootDiv = $('<div>');
 
         router = new NetSimRouterNode(testShard, {});
-        modal = new NetSimRouterLogModal(rootDiv);
+        modal = new NetSimRouterLogModal(rootDiv, {user: {}});
       });
 
       it("defaults to showing all router logs when not connected to a router", function () {
@@ -84,7 +84,7 @@ describe("NetSimRouterLogModal", function () {
         levelConfig = NetSimGlobals.getLevelConfig();
         testShard = fakeShard();
         rootDiv = $('<div>');
-        modal = new NetSimRouterLogModal(rootDiv);
+        modal = new NetSimRouterLogModal(rootDiv, {user: {}});
 
         NetSimRouterNode.create(testShard, function (e, r) {
           router = r;
@@ -153,7 +153,7 @@ describe("NetSimRouterLogModal", function () {
       experiments.setEnabled('netsimNewLogBrowser', false);
       testShard = fakeShard();
       rootDiv = $(document.createElement('div'));
-      modal = new NetSimRouterLogModal(rootDiv);
+      modal = new NetSimRouterLogModal(rootDiv, {user: {}});
       modal.onShardChange(testShard, null);
 
       // Start with modal showing
@@ -167,6 +167,7 @@ describe("NetSimRouterLogModal", function () {
           1,
           DataConverters.asciiToBinary(asciiMessage, 8),
           NetSimLogEntry.LogStatus.SUCCESS,
+          'Test User',
           function () {});
     }
 

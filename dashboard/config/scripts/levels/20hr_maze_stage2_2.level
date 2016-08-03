@@ -24,9 +24,8 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "contained_level_names": null,
     "instructions": "This pig is ruffling my feathers. Help me to find him!",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
