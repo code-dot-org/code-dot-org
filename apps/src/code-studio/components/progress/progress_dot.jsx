@@ -20,7 +20,8 @@ const styles = {
   },
   disabledLevel: {
     pointerEvents: 'none',
-    cursor: 'default'
+    cursor: 'default',
+    color: color.charcoal
   },
   dot: {
     common: {
@@ -197,7 +198,7 @@ export const ProgressDot = React.createClass({
         style={[
           styles.outer,
           (showLevelName || isPeerReview) && {display: 'table-row'},
-           isLocked && styles.disabledLevel
+          isLocked && styles.disabledLevel
          ]}
       >
         {(level.icon && !isPeerReview) ?
