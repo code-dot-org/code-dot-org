@@ -41,6 +41,7 @@
   "heightParameter":"výška",
   "hideTurtle":"skry maliara",
   "jump":"skoč",
+  "jumpTo":"jump to",
   "jumpBackward":"skoč dozadu o",
   "jumpForward":"skoč dopredu o",
   "jumpTooltip":"Posunie maliara bez zanechania stôp.",

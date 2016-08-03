@@ -41,6 +41,7 @@
   "heightParameter":"înălțime",
   "hideTurtle":"ascunde artistul",
   "jump":"sari",
+  "jumpTo":"jump to",
   "jumpBackward":"sari înapoi cu",
   "jumpForward":"Sari înainte cu",
   "jumpTooltip":"Mută artistul fără a lăsa urme.",

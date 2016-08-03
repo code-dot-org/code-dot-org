@@ -182,9 +182,7 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_wait">
-    <title name="VALUE">500</title>
-  </block>
+  <block type="studio_wait"></block>
   <block type="studio_waitParams" inline="true">
     <value name="VALUE">
       <block type="math_number">
@@ -194,11 +192,25 @@ class Studio < Grid
   </block>
   <block type="studio_playSound" />
   <block type="studio_changeScore" />
-  <block type="studio_setScoreText" inline="true">
-    <value name="TEXT">
+  <block type="studio_addPoints" />
+  <block type="studio_removePoints" />
+  <block type="studio_addNumPoints">
+    <value name="NUM">
       <block type="math_number">
         <title name="NUM">1</title>
       </block>
+    </value>
+  </block>
+  <block type="studio_removeNumPoints">
+    <value name="NUM">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_setScoreText" inline="true">
+    <value name="TEXT">
+      <block type="text" />
     </value>
   </block>
   <block type="studio_saySprite">

@@ -324,9 +324,8 @@
   homepage_banner_20k_teachers_link: "더 알아보기"
   homepage_banner_congress: "미국 지도자들은 K-12 컴퓨터 과학(정보 과학) 을 위한 기금을 의회에 요청하고 있습니다."
   homepage_banner_congress_link: "지원하기"
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: "우리는 학생 개인 정보 보호 지원 방법에 대한 중요한 변화를 만들고 있습니다."
+  homepage_banner_emailprivacy_link: "자세히 보기"
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: "누구든지 배울 수 있습니다. 오늘 시작하세요."
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -417,12 +416,13 @@
   mc_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   mc_specs: "여러 언어 | 최신 웹브라우저, 태블릿 | 6-106 세"
   minecraft_subtitle: "마인크래프트 Hour of Code"
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: "시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요."
+  speak_another_language: "다른 언어를 할 줄 아나요?"
+  help_translate: "번역하는 것을 도와주세요."
+  no_internet: "인터넷을 사용할 수 없습니까?"
+  download_offline: "오프라인 버전 다운로드"
+  are_you_teacher: "선생님이신가요?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "학생들과 자원봉사자들에게 꿈과 희망을 불어넣어 주세요."
   volunteer_engineer_submission_subtitle_generic: "올 해 12월7일-13일까지 100,000 명의 선생님들이
     수업 중에 Hour of Code 행사를 운영할 예정입니다. 선생님들은 여러분들의 도움이 필요합니다! "
@@ -592,8 +592,8 @@
     드롭다운 메뉴에서 과정을 고르면 됩니다. 그러면 여러분 학생들의 답변을 여기서 볼 수 있습니다."
   dashboard_assessments_summaries: "요약"
   dashboard_assessments_answers: "모든 답변"
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: "설문"
+  dashboard_percent: "퍼센트"
   dashboard_filter_by_stage: "단계에 따라 필터링하기:"
   dashboard_filter_all: "모두"
   dashboard_download_csv: CSV 다운로드
@@ -608,7 +608,7 @@
   dashboard_navigation_view_progress: "진행도"
   dashboard_navigation_view_text_responses: "텍스트 응답"
   dashboard_navigation_view_assessments: "평가 점수"
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
   dashboard_navigation_lesson_plans_resources: "수업 계획 및 자료"
@@ -779,7 +779,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "더 알아보기"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "지금 해보기"
   dashboard_announce_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에
     앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
     CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
@@ -1479,7 +1479,7 @@
     solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
   sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을
     통해 수학 과학 능력을 향상시킬 수 있습니다.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: "경고창 숨기기"
   compatibility_unsupported_browser: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}',
     target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지
     않을 수 있습니다."
@@ -1491,6 +1491,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
-  are_you_teacher: Are you a teacher?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
