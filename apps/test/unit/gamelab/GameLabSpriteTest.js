@@ -207,7 +207,7 @@ describe('GameLabSprite', function () {
   });
 
   describe('collision types using AABBOps', function () {
-    var sprite, spriteTarget;
+    let sprite, spriteTarget;
 
     beforeEach(function () {
       // sprite in to the left, moving right
@@ -216,14 +216,14 @@ describe('GameLabSprite', function () {
       spriteTarget = createSprite(300, 100, 20, 20);
       sprite.velocity.x = 3;
       spriteTarget.velocity.x = 0;
+
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
     });
 
     it('stops movement of colliding sprite when sprites bounce', function () {
       // sprite stops moving, spriteTarget moves right
-      expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(0);
-
-      var bounce = sprite.bounce(spriteTarget);
+      const bounce = sprite.bounce(spriteTarget);
 
       expect(bounce).to.equal(true);
 
@@ -250,10 +250,7 @@ describe('GameLabSprite', function () {
 
     it('stops movement of colliding sprite when sprites collide', function () {
       // sprite stops moving, spriteTarget stops moving
-      expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(0);
-
-      var collide = sprite.collide(spriteTarget);
+      const collide = sprite.collide(spriteTarget);
 
       expect(collide).to.equal(true);
 
@@ -280,10 +277,7 @@ describe('GameLabSprite', function () {
 
     it('continues movement of colliding sprite when sprites displace', function () {
       // sprite continues moving, spriteTarget gets pushed by sprite
-      expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(0);
-
-      var displace = sprite.displace(spriteTarget);
+      const displace = sprite.displace(spriteTarget);
 
       expect(displace).to.equal(true);
       expect(sprite.position.x).to.equal(281);
@@ -311,10 +305,7 @@ describe('GameLabSprite', function () {
 
     it('reverses direction of colliding sprite when sprites bounceOff', function () {
       // sprite reverses direction of movement, spriteTarget remains in its location
-      expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(0);
-
-      var bounceOff = sprite.bounceOff(spriteTarget);
+      const bounceOff = sprite.bounceOff(spriteTarget);
 
       expect(bounceOff).to.equal(true);
       expect(sprite.position.x).to.equal(280);
@@ -342,10 +333,7 @@ describe('GameLabSprite', function () {
 
     it('continues movement of colliding sprite when sprites overlap', function () {
       // sprite continues moving, spriteTarget remains in it's location
-      expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(0);
-
-      var overlap = sprite.overlap(spriteTarget);
+      const overlap = sprite.overlap(spriteTarget);
 
       expect(overlap).to.equal(true);
       expect(sprite.position.x).to.equal(281);
