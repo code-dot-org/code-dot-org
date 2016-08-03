@@ -125,8 +125,8 @@ zh:
     picture: 現在找出你的秘密圖片
     words: 在這裡輸入你的通關密語
     login: 登入
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: 登錄無效，請再試一次
+    pair_programming: 在我的電腦有一個夥伴
   password:
     reset_form:
       title: 忘記了您的密碼嗎？
@@ -253,7 +253,7 @@ zh:
       signup: 註冊帳號
       already_registered: 已經註冊了嗎？
       pair_programming: 配對程式設計
-      team: Team
+      team: 團隊
       driver: Driver
       navigator: Navigator
     popup:
@@ -290,7 +290,7 @@ zh:
       example_with_number: '解答範例 %{solution_number}'
       submitted_on: 提交時間：
       unsubmit: 不提交
-      worked_with: Worked With
+      worked_with: 共事
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
     email_confirm_needed_required: '您的電子位址 %{email} 尚未被確認：'
@@ -351,7 +351,9 @@ zh:
     announcement_title: 公告
     announcement_view_all: 全部查看
     announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: 瞭解更多資訊
+    announcement_try_now_button: 快來試試
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: 新增你的名字
   move_students:
@@ -361,9 +363,9 @@ zh:
     current_section_dne: '抱歉，但區間 %{current_section_code} 並不存在。請輸入一個不同的區間代碼。'
     students_not_yours: You cannot move students from a section that does not belong to you.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    student_ids_not_entered: 請提供 student_ids。
+    student_not_found: 找不到一個或多個學生。
+    all_students_must_be_in_current_section: 所有的學生都必須修讀您的部分。
     already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: 在程式碼工作室中學習
@@ -527,6 +529,7 @@ zh:
     wrong_body: 感謝您提交的答案
     correct_title: 謝謝
     correct_body: 感謝您提交的答案
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: 謝謝
     wrong_body: 感謝您提交的答案
@@ -681,8 +684,9 @@ zh:
     required: 概觀
     content: Content
     practice: 老師的做法
+    peer_review: Peer Review
   external_links:
-    disclaimer: Disclaimer
+    disclaimer: 免責聲明
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
     disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
@@ -693,7 +697,7 @@ zh:
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
     minecraft_name: 當個創世神 一小時寫程式
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    starwars_javascript_name: '星球大戰: 用程式代碼(JavaScript) 建立一個銀河系'
     download_message: 'Download %{app_name} for offline use (136MB)'
     download_in_english: 下載英文版
     download_in_spanish: 下載西班牙文版

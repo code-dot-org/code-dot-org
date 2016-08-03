@@ -41,6 +41,7 @@
   "heightParameter": "גובה",
   "hideTurtle": "הסתר את האמן",
   "jump": "קפוץ",
+  "jumpTo": "jump to",
   "jumpBackward": "קפוץ אחורה",
   "jumpForward": "קפוץ קדימה",
   "jumpTooltip": "להזיז את האמן מבלי להשאיר סימנים.",
@@ -89,6 +90,5 @@
   "turnTooltip": "סובב את האמן שמאלה או ימינה על פי מספר המעלות שמצויין.",
   "turtleVisibilityTooltip": "הפוך את האמן לנראה או בלתי-נראה.",
   "widthTooltip": "שנה את עובי העיפרון.",
-  "wrongColour": "התמונה בצבע לא נכון. לחידה הזאת, היא צריכה להיות %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "התמונה בצבע לא נכון. לחידה הזאת, היא צריכה להיות %1."
 }
