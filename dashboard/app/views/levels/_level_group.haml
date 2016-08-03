@@ -36,6 +36,8 @@
       -# Fall back to retrieving the the last_attempt from the parsed levelgroup last_attempt
       - parsed = JSON.parse(@last_attempt || '{}')
       - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
+      -# Unescape the string.  (We escaped characters like \", \n and \t before sending.)
+      - sublevel_last_attempt = JSON.load(%Q("#{sublevel_last_attempt}"))
       - if @user && current_user && @user != current_user
         -# load other user's solution for teachers viewing their students' solution
         - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)

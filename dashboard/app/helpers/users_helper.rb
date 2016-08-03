@@ -132,7 +132,11 @@ module UsersHelper
     if level.is_a? LevelGroup
       pages_completed = []
 
-      last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
+      if false && user.last_attempt(level).level_source
+        last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
+      else
+        last_attempt = {}
+      end
 
       # Go through each page.
       level.properties["pages"].each do |page|
@@ -151,7 +155,7 @@ module UsersHelper
           level_id = embedded_level.id
 
           # Do we have a valid result for this level in the LevelGroup last_attempt?
-          if last_attempt[level_id.to_s] && last_attempt[level_id.to_s]["valid"]
+          if last_attempt.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
             page_valid_result_count += 1
           end
         end

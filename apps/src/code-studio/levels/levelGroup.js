@@ -41,7 +41,7 @@ window.initLevelGroup = function (
         continue;
       }
       var subLevelResult = levels[subLevelId].getResult(true);
-      var response = subLevelResult.response;
+      var response = encodeURIComponent(subLevelResult.response);
       var result = subLevelResult.result;
       var errorType = subLevelResult.errorType;
       var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
@@ -89,6 +89,7 @@ window.initLevelGroup = function (
    *  "1939": {"result": "2,1", "valid": true}}
    */
   function getResult() {
+
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
@@ -110,8 +111,23 @@ window.initLevelGroup = function (
     var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
+    function escape(key, val) {
+      if (typeof(val) !== "string") {
+        return val;
+      }
+      return val
+        .replace(/[\\]/g, '\\\\')
+        .replace(/[\"]/g, '\\"')
+        .replace(/[\/]/g, '\\/')
+        .replace(/[\b]/g, '\\b')
+        .replace(/[\f]/g, '\\f')
+        .replace(/[\n]/g, '\\n')
+        .replace(/[\r]/g, '\\r')
+        .replace(/[\t]/g, '\\t');
+    }
+
     return {
-      "response": JSON.stringify(lastAttempt),
+      "response": encodeURIComponent(JSON.stringify(lastAttempt, escape)),
       "result": true,
       "errorType": null,
       "submitted": window.appOptions.level.submittable || forceSubmittable,
