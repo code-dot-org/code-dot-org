@@ -133,7 +133,7 @@ class ApiController < ApplicationController
 
   def script_structure
     script = Script.get_from_cache(params[:script_name])
-    render json: script.summarize(current_user)
+    render json: script.summarize
   end
 
   # Return a JSON summary of the user's progress across all scripts.
