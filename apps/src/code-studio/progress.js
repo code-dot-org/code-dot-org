@@ -111,7 +111,7 @@ function renderTeacherPanel(store, scriptId) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
   $.ajax(
-    '/dashboardapi/lock_status',
+    '/api/lock_status',
     {
       data: {
         user_id: clientState.queryParams('user_id'),
