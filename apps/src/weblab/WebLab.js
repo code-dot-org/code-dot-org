@@ -8,13 +8,11 @@ import ReactDOM from 'react-dom';
 // var commonMsg = require('../locale');
 // var msg = require('./locale');
 // var levels = require('./levels');
-// var codegen = require('../codegen');
 // var api = require('./api');
 // var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
-// var dropletUtils = require('../dropletUtils');
 var _ = require('lodash');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var errorHandler = require('../errorHandler');
@@ -23,10 +21,8 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-// var reducers = require('./reducers');
 var WebLabView = require('./WebLabView');
 var Provider = require('react-redux').Provider;
-// import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 /**
  * An instantiable WebLab class
@@ -64,10 +60,8 @@ WebLab.prototype.log = function (object) {
  */
 WebLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
+  // BUGBUG - use or remove this
   this.studioApp_.reset = this.reset.bind(this);
-  this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
-
-  this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
 window.getStartSources = function () {
@@ -91,6 +85,7 @@ WebLab.prototype.init = function (config) {
     throw new Error("WebLab requires a StudioApp");
   }
 
+  // BUGBUG use or remove skin
   this.skin = config.skin;
   this.level = config.level;
 
@@ -104,19 +99,20 @@ WebLab.prototype.init = function (config) {
     }
   }
 
+  // BUGBUG use or remove this
   config.usesAssets = true;
 
-//  config.appMsg = msg;
 
+  // BUGBUG are the below correct?
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
-
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
+  // BUGBUG what to do with this?
   config.shareWarningInfo = {
     hasDataAPIs: function () {
       return this.hasDataStoreAPIs(this.studioApp_.getCode());
@@ -133,36 +129,21 @@ WebLab.prototype.init = function (config) {
 
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
- //   config.loadAudio = this.loadAudio_.bind(this);
+
     config.afterInject = this.afterInject_.bind(this, config);
     config.afterEditorReady = this.afterEditorReady_.bind(this, false /* breakpointsEnabled */);
 
     // BUGBUG
     window.Blockly = null;
-
+    // BUGBUG should we init here? (I had it commented out)
    // this.studioApp_.init(config);
 
-   // var finishButton = document.getElementById('finishButton');
-   // if (finishButton) {
-   //   dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
-   // }
     var webEditorIFrame = document.getElementById('web-editor-iframe');
 //    var webEditorWindow = webEditorIFrame.contentWindow;
 //    frameSetStartSource(this.initialSource);
 //    webEditorWindow.setStartSource(this.initialSource);
 //    webEditorWindow.postMessage(this.initialSource, "*");
   }.bind(this);
-
-  var showFinishButton = !this.level.isProjectLevel;
-  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-
-  this.studioApp_.setPageConstants(config, {
-    channelId: config.channel,
-  });
-
-  // Push project-sourced animation metadata into store
-//  const initialAnimationList = config.initialAnimationList || this.startAnimations;
-//  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
@@ -204,25 +185,6 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
       this.onIsRunningChange(state.runState.isRunning);
     }
   });
-};
-
-WebLab.prototype.onIsRunningChange = function () {
-  this.setCrosshairCursorForPlaySpace();
-};
-
-WebLab.prototype.calculateVisualizationScale_ = function () {
-  var divGameLab = document.getElementById('divGameLab');
-  // Calculate current visualization scale:
-  return divGameLab.getBoundingClientRect().width / divGameLab.offsetWidth;
-};
-
-/**
- * @param {string} code The code to search for Data Storage APIs
- * @return {boolean} True if the code uses any data storage APIs
- */
-WebLab.prototype.hasDataStoreAPIs = function (code) {
-  return /createRecord/.test(code) || /updateRecord/.test(code) ||
-      /setKeyValue/.test(code);
 };
 
 /**
@@ -281,158 +243,3 @@ WebLab.prototype.reset = function (ignore) {
   }
   */
 };
-
-WebLab.prototype.onPuzzleComplete = function (submit) {
-  if (this.executionError) {
-    this.result = this.studioApp_.ResultType.ERROR;
-  } else {
-    // In most cases, submit all results as success
-    this.result = this.studioApp_.ResultType.SUCCESS;
-  }
-
-  // If we know they succeeded, mark levelComplete true
-  var levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
-
-  if (this.executionError) {
-    this.testResults = this.studioApp_.getTestResults(levelComplete, {
-        executionError: this.executionError
-    });
-  } else if (!submit) {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
-  }
-
-  // Stop everything on screen
-  this.reset();
-
-  var program;
-  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
-
-  if (containedLevelResultsInfo) {
-    // Keep our this.testResults as always passing so the feedback dialog
-    // shows Continue (the proper results will be reported to the service)
-    this.testResults = this.studioApp_.TestResults.ALL_PASS;
-    this.message = containedLevelResultsInfo.feedback;
-  } else if (this.level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = encodeURIComponent(this.studioApp_.getCode());
-    this.message = null;
-  } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = encodeURIComponent(Blockly.Xml.domToText(xml));
-    this.message = null;
-  }
-
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
-    this.studioApp_.playAudio('win');
-  } else {
-    this.studioApp_.playAudio('failure');
-  }
-
-  this.waitingForReport = true;
-
-  var sendReport = function () {
-    this.studioApp_.report({
-      app: 'gamelab',
-      level: this.level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      submitted: submit,
-      program: program,
-      image: this.encodedFeedbackImage,
-      containedLevelResultsInfo: containedLevelResultsInfo,
-      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-    });
-
-    if (this.studioApp_.isUsingBlockly()) {
-      // reenable toolbox
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    }
-  }.bind(this);
-
-  var divGameLab = document.getElementById('divGameLab');
-  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divGameLab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        this.feedbackImage = pngDataUrl;
-        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }.bind(this)
-    });
-  }
-};
-
-WebLab.prototype.onSubmitComplete = function (response) {
-  window.location.href = response.redirect;
-};
-
-/**
- * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
- */
-WebLab.prototype.onReportComplete = function (response) {
-  this.response = response;
-  this.waitingForReport = false;
-  this.studioApp_.onReportComplete(response);
-  this.displayFeedback_();
-};
-
-/**
- * Click the run button.  Start the program.
- */
-WebLab.prototype.runButtonClick = function () {
-  this.studioApp_.toggleRunReset('reset');
-  // document.getElementById('spinner').style.visibility = 'visible';
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
-  this.studioApp_.attempts++;
-  this.execute();
-
-  // Enable the Finish button if is present:
-  var shareCell = document.getElementById('share-cell');
-  if (shareCell) {
-    shareCell.className = 'share-cell-enabled';
-  }
-};
-
-/**
- * App specific displayFeedback function that calls into
- * this.studioApp_.displayFeedback when appropriate
- */
-WebLab.prototype.displayFeedback_ = function () {
-  var level = this.level;
-
-  this.studioApp_.displayFeedback({
-    app: 'gamelab',
-    skin: this.skin.id,
-    feedbackType: this.testResults,
-    message: this.message,
-    response: this.response,
-    level: level,
-    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
-    // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing: !level.disableSharing && (level.freePlay /* || level.impressive */),
-    // impressive levels are already saved
-    // alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
-    appStrings: {
-      // reinfFeedbackMsg: msg.reinfFeedbackMsg(),
-      // sharingText: msg.shareGame()
-    }
-  });
-};
-
-/*
-WebLab.prototype.getAppReducers = function () {
-  return reducers;
-};
-*/
