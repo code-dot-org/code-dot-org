@@ -132,7 +132,7 @@ module UsersHelper
     if level.is_a? LevelGroup
       pages_completed = []
 
-      if false && user.last_attempt(level).level_source
+      if user.last_attempt(level).level_source
         last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
       else
         last_attempt = {}
