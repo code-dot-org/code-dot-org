@@ -1,10 +1,14 @@
 name 'Equity Stage2Go'
 skip_dialog true
 markdown <<MARKDOWN
-# Introduction to Equity > Looking Ahead
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
-<img src="https://images.code.org/c4304ce43e50b4895ece2fded45daaab-image-1436483765820.JPG" class="level-image">
+### Introduction to Equity > Looking Ahead
 
+<br/><br/>
+<img src="https://images.code.org/c4304ce43e50b4895ece2fded45daaab-image-1436483765820.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+
+<br/><br/>
 By completing this stage, you should have:
 
 - Defined equity 
