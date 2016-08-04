@@ -369,6 +369,19 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._isMouseButtonInState = function (buttonCode, state) {
     return p5IsMouseButtonInState.call(this.p5, this._clickKeyFromString(buttonCode), state);
   }.bind(this);
+
+  window.p5.prototype.createEdgeSprites = function () {
+    this.leftEdge = this.createSprite(-50, 200, 100, 400);
+    this.rightEdge = this.createSprite(450, 200, 100, 400);
+    this.topEdge = this.createSprite(200, -50, 400, 100);
+    this.bottomEdge = this.createSprite(200, 450, 400, 100);
+
+    this.edges = this.createGroup();
+    this.edges.add(this.leftEdge);
+    this.edges.add(this.rightEdge);
+    this.edges.add(this.topEdge);
+    this.edges.add(this.bottomEdge);
+  };
 };
 
 /**
@@ -631,7 +644,12 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
     rotationZ: this.p5,
     pRotationX: this.p5,
     pRotationY: this.p5,
-    pRotationZ: this.p5
+    pRotationZ: this.p5,
+    leftEdge: this.p5,
+    rightEdge: this.p5,
+    topEdge: this.p5,
+    bottomEdge: this.p5,
+    edges: this.p5
   };
 };
 
