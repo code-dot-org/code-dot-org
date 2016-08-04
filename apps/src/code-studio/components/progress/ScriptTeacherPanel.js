@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, setViewType, selectSection } from '../../teacherPanelRedux';
+import { ViewType, setViewType, selectSection } from '../../stageLockRedux';
 
 const styles = {
   viewAs: {
@@ -132,11 +132,11 @@ export default connect(state => {
   });
 
   return {
-    viewAs: state.teacherPanel.viewAs,
-    sections: state.teacherPanel.sections,
-    selectedSection: state.teacherPanel.selectedSection,
-    sectionsLoaded: state.teacherPanel.sectionsLoaded,
-    unlockedStageNames: state.teacherPanel.unlockedStageIds.map(id => stageNames[id])
+    viewAs: state.stageLock.viewAs,
+    sections: state.stageLock.sections,
+    selectedSection: state.stageLock.selectedSection,
+    sectionsLoaded: state.stageLock.sectionsLoaded,
+    unlockedStageNames: state.stageLock.unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({
   setViewType(viewAs) {

@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';
 import commonMsg from '@cdo/locale';
-import { openLockDialog, closeLockDialog } from '../../teacherPanelRedux';
+import { openLockDialog, closeLockDialog } from '../../stageLockRedux';
 
 const styles = {
   lockSettingsText: {

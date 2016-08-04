@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import progressStyles from './progressStyles';
-import { LockStatus, saveLockDialog } from '../../teacherPanelRedux';
+import { LockStatus, saveLockDialog } from '../../stageLockRedux';
 import color from '../../../color';
 import commonMsg from '@cdo/locale';
 
@@ -274,9 +274,9 @@ const StageLockDialog = React.createClass({
 });
 
 export default connect(state => ({
-  initialLockStatus: state.teacherPanel.lockStatus,
-  isOpen: !!state.teacherPanel.lockDialogStageId,
-  saving: state.teacherPanel.saving
+  initialLockStatus: state.stageLock.lockStatus,
+  isOpen: !!state.stageLock.lockDialogStageId,
+  saving: state.stageLock.saving
 }), dispatch => ({
   saveDialog(lockStatus) {
     dispatch(saveLockDialog(lockStatus));

@@ -19,7 +19,7 @@ import {
   authorizeLockable
 } from './progressRedux';
 
-import { setSections } from './teacherPanelRedux';
+import { setSections } from './stageLockRedux';
 
 var progress = module.exports;
 
