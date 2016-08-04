@@ -1,4 +1,5 @@
 /** @file Test of Log Browser Filters component. */
+import _ from 'lodash';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {spy} from 'sinon';
@@ -21,17 +22,17 @@ describe('NetSimLogBrowserFilters', function () {
   describe('Teacher View', function () {
     it('shows sent-by dropdown', function () {
       const setSentByFilter = spy();
-      const logRows = [];
+      const senderNames = [];
       expect(shallowWithDefaults({
         teacherView: true,
         setSentByFilter,
-        logRows
+        senderNames
       })).to.contain(
         <SentByDropdown
           i18n={i18n}
           currentSentByFilter="none"
           setSentByFilter={setSentByFilter}
-          logRows={logRows}
+          senderNames={senderNames}
         />
       );
     });
@@ -47,6 +48,7 @@ describe('NetSimLogBrowserFilters', function () {
         currentSentByFilter="none"
         setSentByFilter={spy()}
         logRows={[]}
+        senderNames={[]}
         {...props}
       />);
   }
@@ -105,12 +107,14 @@ describe('SentByDropdown', function () {
   });
 
   function mountWithLogRows(logRows) {
+    const senderNames = _.uniq(logRows.map(row => row['sent-by']));
     return mount(
       <SentByDropdown
         i18n={i18n}
         currentSentByFilter="none"
         setSentByFilter={spy()}
         logRows={logRows}
+        senderNames={senderNames}
       />
     );
   }
