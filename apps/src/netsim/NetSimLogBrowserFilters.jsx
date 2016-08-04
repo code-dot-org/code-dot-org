@@ -136,7 +136,7 @@ const TrafficFilterDropdown = React.createClass({
   }
 });
 
-export const SentByDropdown = React.createClass({
+const SentByDropdown = React.createClass({
   propTypes: {
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
     currentSentByFilter: React.PropTypes.string.isRequired,
@@ -159,7 +159,7 @@ export const SentByDropdown = React.createClass({
         <option value="none">
           {this.props.i18n.logBrowserHeader_sentByAnyone()}
         </option>
-        {_.uniq(this.props.logRows.map(row => row['sent-by']))
+        {_.uniq(this.props.logRows.map(row => row.sentBy))
           .sort((a, b) => a.localeCompare(b))
           .map(name => (
             <option value={`by ${name}`} key={name}>
