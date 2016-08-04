@@ -9,9 +9,9 @@ nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Προωθήστε την Ώρα του Κώδικα
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Φιλοξενείτε μία Ώρα του Κώδικα; [Δείτε τον οδηγό πως-να](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -20,12 +20,6 @@ nav: promote_nav
 ## Κρεμάστε αυτές τις αφίσες στο σχολείο σας
 
 <%= view :promote_posters %>
-
-<a id="banners"></a>
-
-## Τοποθέτησε αυτά τα διαφημιστικά στην ιστοσελίδα σου
-
-[![εικόνα](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="social"></a>
 
@@ -37,17 +31,27 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Χρησιμοποιήστε το λογότυπο της Ώρας του Κώδικα για να τη διαδώσετε
 
 [![εικόνα](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Κατεβάστε εκδόσεις υψηλής ανάλυσης](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Συμπεριλάβετε γλώσσα στην σελίδα (ή στο υποσέλιδο), συμπεριλαμβάνοντας συνδέσμους προς τις ιστοσελίδες CSEdWeek και Code.org, οι οποίοι θα λένε τα ακόλουθα:
+    
+    *“Η 'Ώρα του Κώδικα' είναι μια διεθνής πρωτοβουλία από την Εκπαιδευτική Εβδομάδα Πληροφορικής [csedweek.org] και την Code.org [code.org] για να εισαγάγει εκατομμύρια μαθητές σε μια ώρα της επιστήμης της πληροφορικής και του προγραμματισμού υπολογιστών.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Εκτυπώστε αυτά τα αυτοκόλητα και δώστε τα στους μαθητές σας
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Τα αυτοκόλητα έχουν 2.5 εκ. διάμετρο, 63 ανά φύλλο)  
 [![εικόνα](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -58,13 +62,13 @@ nav: promote_nav
 
 ## Ζήτησε από το σχολείο, τον εργοδότη ή τους φίλους να εγγραφούν:
 
-Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. Αν έχετε ξανακούσει για την Ώρα του Κώδικα, ίσως γνωρίζετε ότι έχει φτιάξει ιστορία. Πάνω από 100 εκατομμύρια μαθητές έχουν δοκιμάσει μια Ώρα του Κώδικα.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Με την Ώρα του Κώδικα, η επιστήμη της πληροφορικής έχει βρεθεί στην αρχική σελίδα των Ιστοσελίδων των Google, MSN και Yahoo! και της Disney. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτή την κίνηση. Πέρυσι, κάθε κατάστημα της εταιρείας Apple στον κόσμο φιλοξένεισε μια Ώρα του Κώδικα, και ακόμη και ο Πρόεδρος Ομπάμα έγραψε την πρώτη του γραμμή σε κώδικα, ως μέλος της εκστρατείας.
+Με την Ώρα του Κώδικα, η επιστήμη της πληροφορικής έχει βρεθεί στην αρχική σελίδα των Ιστοσελίδων των Google, MSN και Yahoo! και της Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-Φέτος, ας κάνουμε κάτι ακόμα μεγαλύτερο. Σας ζητώ να συμμετάσχετε στην Ώρα των Κώδικα 2015. Σας παρακαλώ να εμπλακείτε σε μια εκδήλωση για την Ώρα του Κώδικα κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης στην Επιστήμη των Υπολογιστών, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Διαδώστε το. Φιλοξενήστε μια εκδήλωση. Ζητήστε από ένα τοπικό σχολείο να συμμετάσχει. Ή δοκιμαστε οι ίδιοι την Ώρα του Κώδικα -- όλοι μπορούν να επωφεληθούν μαθαίνοντας τα βασικά.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Ξεκινήσετε στο http://hourofcode.com/<%= @country %>
 
@@ -72,17 +76,17 @@ nav: promote_nav
 
 ## Κάλεσε τα ΜΜΕ να καλύψουν την εκδήλωσή σου:
 
-**Γραμμή Τίτλου:** Τοπικό σχολείο συμμετέχει στην αποστολή του να γνωρίσουν οι μαθητές την Επιστήμη των Υπολογιστών
+**Γραμμή Τίτλου:** Τοπικό σχολείο συμμετέχει στην αποστολή του να γνωρίσουν οι μαθητές την Επιστήμη της Πληροφορικής
 
-Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν τώρα Πληροφορική από ό,τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι βρισκόμαστε καθ' οδόν για να το αλλάξουμε αυτό.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό.
 
-Με την Ώρα του Κώδικα, η επιστήμη της πληροφορικής έχει βρεθεί στην αρχική σελίδα των Ιστοσελίδων των Google, MSN και Yahoo! και της Disney. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτή την κίνηση. Πέρυσι, κάθε κατάστημα της εταιρείας Apple στον κόσμο φιλοξένεισε μια Ώρα του Κώδικα, και ακόμη και ο Πρόεδρος Ομπάμα έγραψε την πρώτη του γραμμή σε κώδικα, ως μέλος της εκστρατείας.
+Με την Ώρα του Κώδικα, η επιστήμη της πληροφορικής έχει βρεθεί στην αρχική σελίδα των Ιστοσελίδων των Google, MSN και Yahoo! και της Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-Για αυτό το λόγο, κάθε ένας από τους [X αριθμός] μαθητές στο [SCHOOL NAME] παίρνουν μέρος στη μεγαλύτερη εκπαιδευτική εκδήλωση στην Ιστορία: την Ώρα του Κώδικα, στις 8-14 Δεκεμβρίου.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Σας γράφω για να σας προσκαλέσω να παρακολουθήσετε την έναρξη της εκδήλωσης και να δείτε τα παιδιά να αρχίζουν τη δραστηριότητά τους στις [DATE].
 
-Η Ώρα του Κώδικα, που διοργανώνεται από τον μη κερδοσκοπικό οργανισμό Code.org και πάνω από 100 άλλους, είναι μια δήλωση ότι τωρινή γενιά μαθητών είναι έτοιμη να καλλιεργήσει κρίσιμες δεξιότητες για την επιτυχία της τον 21ο αιώνα. Σας παρακαλούμε να έρθετε μαζί μας.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Σας παρακαλούμε να έρθετε μαζί μας.
 
 **Επικοινωνία:** [ΤΟ ΟΝΟΜΑ ΣΑΣ], [TITLE], ΑΡΙΘΜΟΣ ΕΠΙΚΟΙΝΩΝΙΑΣ
 
@@ -98,33 +102,36 @@ nav: promote_nav
 
 Αγαπητοί Γονείς,
 
-Ζούμε σε έναν κόσμο που περιβάλλεται από την τεχνολογία. Γνωρίζουμε ότι, ανεξάρτητα από τον τομέα που θα επιλέξει κάθε μαθητής να ασχοληθεί ως ενήλικας, η ικανότητα του να πετύχει θα εξαρτάται όλο και περισσότερο από τον βαθμό κατανόησης του πως λειτουργεί η τεχνολογία. Αλλά μόνο πολύ λίγοι από εμάς μαθαίνουν την Επιστήμη των Υπολογιστών και λιγότεροι μαθητές την μελετούν από ότι πριν μια δεκαετία.
+Ζούμε σε έναν κόσμο που περιβάλλεται από την τεχνολογία. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Γι' αυτό, όλο το σχολείο συμμετέχει στην μεγαλύτερη εκπαιδευτική εκδήλωση στην Ιστορία: την Ώρα του Κώδικα, κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας της Επιστήμης της Πληροφορικής (8-14 7-13). Πάνω από 100 εκατομμύρια μαθητές σε όλο τον κόσμο έχουν ήδη δοκιμάσει μια Ώρα του Κώδικα.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-Η εκδήλωσή μας για την Ώρα του Κώδικα είναι μια δήλωση ότι το [ΟΝΟΜΑ ΣΧΟΛΕΙΟΥ] είναι έτοιμο να διδάξει και να καλλιεργήσει αυτές τις θεμελιώδεις δεξιότητες για τον 21 αιώνα. Για να μπορέσουμε να συνεχίσουμε να παρέχουμε στους μαθητές σας δραστηριότητες προγραμματισμού, θέλουμε να κάνουμε την εκδήλωση της Ώρας του Κώδικα τεράστια. Σας ενθαρρύνω να γίνεται εθελοντής, να έρθετε σε επαφή με τα τοπικά ΜΜΕ, να μοιραστείτε τα νέα στα μέσα κοινωνικής δικτύωσης, ακόμα και να σκεφτείτε να φιλοξενήσετε επιπρόσθετες εκδηλώσεις για την Ώρα του Κώδικα στην περιοχή σας.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Αυτή είναι η ευκαιρία να αλλάξουμε το μέλλον της εκπαίδευσης στην/στον [ΟΝΟΜΑ ΠΟΛΗΣ/ΚΟΙΝΟΤΗΤΑΣ].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Για λεπτομέρειες δείτε στο http://hourofcode.com/<%= @country %>, και βοηθήστε να εξαπλώσουμε το μήνυμα.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Με εκτίμηση,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Ο Διευθυντής σας
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
 ## Προσκάλεσε έναν πολιτικό στην εκδήλωση του σχολείου σας:
 
-Κύριε [Βουλευτά/Περιφερειάρχη/Περιφεριακές Σύμβουλε/Δήμαρχε/Δημοτικέ Σύμβουλε ΕΠΙΘΕΤΟ]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Γνωρίζατε ότι στην σημερινή οικονομία, οι θέσεις εργασίας που αφορούν την Πληροφορική είναι τριπλάσιες από τους αποφοίτους του τομέα; Και ότι η επιστήμη των υπολογιστών είναι θεμελιώδης για *κάθε* τομέα σήμερα;. Παρόλα αυτά, τα περισσότερα σχολεία δεν την διδάσκουν. Εμείς εδώ στο [ΟΝΟΜΑ ΣΧΟΛΕΙΟΥ], προσπαθούμε να το αλλάξουμε αυτό.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Γι' αυτό, όλο το σχολείο συμμετέχει στην μεγαλύτερη εκπαιδευτική εκδήλωση στην Ιστορία: την Ώρα του Κώδικα, κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας της Επιστήμης της Πληροφορικής (8-14 7-13). Πάνω από 100 εκατομμύρια μαθητές σε όλο τον κόσμο έχουν ήδη δοκιμάσει μια Ώρα του Κώδικα.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Σας γράφω για να σας προσκαλέσω να πάρετε μέρος στην εκδήλωση για την Ώρα του Κώδικα, με μια ομιλία σας στην τελετή έναρξης. Η εκδήλωση θα γίνει στις [ΗΜ/ΝΙΑ, ΩΡΑ, ΤΟΠΟΘΕΣΙΑ], και θα δηλώσουμε σθεναρά ότι η [ΠΟΛΗ/ΠΕΡΙΟΧΗ] είναι έτοιμη να καλλιεργήσει στους μαθητές κρίσιμες δεξιότητες για τον 21ο αιώνα. Θέλουμε να διασφαλίσουμε ότι οι μαθητές μας είναι στην πρώτη γραμμή της δημιουργίας της τεχνολογίας του μέλλοντος--και όχι απλοί καταναλωτές της.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Παρακαλώ επικοινωνείστε μαζί μου στο [ΤΗΛΕΦΩΝΟ ή ΔΙΕΥΘΥΝΣΗ ΗΛΕΚΤΡΟΝΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ]. Ανυπομονώ για την απάντησή σας.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Με εκτίμηση, [NAME],[TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
+Sincerely, [NAME], [TITLE]

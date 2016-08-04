@@ -27,6 +27,13 @@ module TestRunUtils
     end
   end
 
+  def self.run_local_ui_test
+    feature_path = File.expand_path(ENV['feature'])
+    Dir.chdir(dashboard_dir('test/ui/')) do
+      RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --feature=#{feature_path}"
+    end
+  end
+
   def self.run_code_studio_tests
     Dir.chdir(code_studio_dir) do
       with_hipchat_logging('code studio tests') do

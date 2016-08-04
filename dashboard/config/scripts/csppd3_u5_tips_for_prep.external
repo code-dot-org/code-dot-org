@@ -1,7 +1,7 @@
 name 'CSPPD3-u5 tips for prep'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Getting Started > Tips for Preparation
 <img src="https://images.code.org/f77ac251f1047fb1c65e817d5dcc426c-image-1456501044623.png" style="width: 200px; float: right; border: solid 1px #DDDDDD">
 

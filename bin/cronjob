@@ -77,4 +77,4 @@ def main
   email_notify command, exitstatus, result, ARGV[1]
 end
 
-main()
+main

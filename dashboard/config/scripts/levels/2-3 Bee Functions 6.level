@@ -30,7 +30,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "fast_get_nectar_animation": "true"
+    "fast_get_nectar_animation": "true",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.\",\r\n  \"hint_id\": \"2-3_Bee_Functions_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

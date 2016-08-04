@@ -3,21 +3,21 @@ title 'Overview of PD "course"'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Welcome to CSP Facilitator Prep! 
+# Welcome to CSP Facilitator Prep!
 
 The following levels contain materials that will be used during our workshop on June 6 - 7. The layout is as follows: 
 
-### Overview of tools and widgets 
+## Overview of tools and widgets
+
 * Pixelation Widget
 * Text Compression Widget
 * Internet Simulator Widget
 * App Lab Programming Environment
 
-### Lesson Materials and Resources
+## Lesson Materials and Resources
+
 * Broadcast lesson (unit 2) 
 * Text Compression lesson (unit 1) 
-<br>
-<br>
-<br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -4,17 +4,26 @@ class HintViewRequestsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
-    status_code = :unauthorized
-    if HintViewRequest.enabled? && current_user
-      valid_request = HintViewRequest.create(
-        script_id: params[:script_id],
-        level_id: params[:level_id],
-        user_id: current_user.id,
-        feedback_type: params[:feedback_type],
-        feedback_xml: params[:feedback_xml]
-      ).valid?
-      status_code = valid_request ? :created : :bad_request
+    unless HintViewRequest.enabled? && current_user
+      head :unauthorized
+      return
     end
-    head status_code
+
+    hint_view_request = HintViewRequest.new(hint_view_request_params.merge(user_id: current_user.id))
+
+    pairings.each do |paired_user|
+      # Ignore errors here.
+      HintViewRequest.create(hint_view_request_params.merge(user_id: paired_user.id))
+    end
+
+    if hint_view_request.save
+      head :created
+    else
+      head :bad_request
+    end
+  end
+
+  def hint_view_request_params
+    params.permit(:script_id, :level_id, :feedback_type, :feedback_xml)
   end
 end

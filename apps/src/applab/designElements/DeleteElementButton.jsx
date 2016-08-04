@@ -55,13 +55,15 @@ var DeleteElementButton = React.createClass({
         <div style={[styles.right, styles.confirming]}>
           Delete?
           <button
-              style={[commonStyles.button, styles.red]}
-              onClick={this.finishDelete}>
+            style={[commonStyles.button, styles.red]}
+            onClick={this.finishDelete}
+          >
             Yes
           </button>
           <button
-              style={commonStyles.button}
-              onClick={this.abortDelete}>
+            style={commonStyles.button}
+            onClick={this.abortDelete}
+          >
             No
           </button>
         </div>
@@ -70,8 +72,9 @@ var DeleteElementButton = React.createClass({
     return (
       <div>
         <button
-            style={[commonStyles.button, styles.red, styles.right]}
-            onClick={this.handleDeleteInternal}>
+          style={[commonStyles.button, styles.red, styles.right]}
+          onClick={this.handleDeleteInternal}
+        >
           Delete
         </button>
       </div>

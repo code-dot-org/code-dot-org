@@ -21,7 +21,6 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     @unrelated_teacher = create :teacher
     create :pd_attendance, session: @another_workshop.sessions[0], teacher: @unrelated_teacher
     create :districts_users, district: @district, user: @unrelated_teacher
-
   end
 
   test 'for_teacher for_workshop' do

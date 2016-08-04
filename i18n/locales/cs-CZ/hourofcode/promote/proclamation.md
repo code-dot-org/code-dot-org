@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Níže je ukázka řešení podporující Týden informatiky a jeho cíle, které by mohly být využity státními a místními zákonodárci.
 
   
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [DATE]
 
-Zatímco výpočetní technologie jsou integrální částí naší kultury a transformují lidské interakce mezi sebou a světem kolem sebe;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Zatímco informatika transformuje průmysl, vytváří nové obory v komerci, posunuje inovaci vpřed ve všech oborech vědy, a zvětšuje produktivitu v daných ekonomických sektorech;
 
@@ -25,7 +23,7 @@ Zatímco obor informatiky je základní věda pro digitální věk;
 
 Zatímco sektor informačních technologií je unikátně položen, tak aby pomáhal ekonomice pomocí výzkumů a rozvoji nových inovací;
 
-Zatímco výhled pro práce spojené s informatikou je velice světlý, s jednou ve každé ze dvou STEM zaměstnání ve výpočetním povolání;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Zatímco poskytnutí studentům šanci, zúčastnit se vysoce kvalitních informatičních aktivit, je vystavuje bohatým příležitostem v oboru, které jim prohlubuje kritické myšlení, které jim bude sloužit skrze celý jejich život;
 
@@ -52,5 +50,3 @@ Bylo vyřešeno, že [SENÁT, STÁT, KRAJ, MĚSTO NEBO ŠKOLNÍ RADA] --
 (4) Podporuje tvůrce pravidel v odstranění bariér, které zabraňují tomu, aby ji byla v maturitní zkoušce přikládána stejná váha jako matematice nebo přířorodovědným předmětům;
 
 (5) podporuje možnosti zapojení/uplatnění žen a minorit v oblasti informatiky pomocí existujících programů.
-
-<%= view :signup_button %>

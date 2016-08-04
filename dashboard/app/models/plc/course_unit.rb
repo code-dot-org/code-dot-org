@@ -10,6 +10,7 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  script_id        :integer
+#  started          :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -24,6 +25,10 @@ class Plc::CourseUnit < ActiveRecord::Base
   has_many :plc_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_course_unit_id', dependent: :destroy
 
   validates :plc_course, presence: true
+
+  def has_evaluation?
+    script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? { |level| level.class == EvaluationMulti }
+  end
 
   def determine_preferred_learning_modules(user)
     evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}

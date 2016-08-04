@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :paired_user_level do
+    driver_user_level {user_level}
+    navigator_user_level {user_level}
+  end
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -11,6 +16,13 @@ FactoryGirl.define do
     # Child of :user factory, since it's in the `factory :user` block
     factory :admin do
       admin true
+    end
+
+    factory :levelbuilder do
+      after(:create) do |levelbuilder|
+        levelbuilder.permission = UserPermission::LEVELBUILDER
+        levelbuilder.save
+      end
     end
 
     factory :teacher do
@@ -42,6 +54,23 @@ FactoryGirl.define do
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
           district_contact.save
+        end
+      end
+      # Creates a teacher optionally enrolled in a workshop,
+      # joined the workshop section,
+      # or marked attended on the first workshop session.
+      factory :pd_workshop_participant do
+        transient do
+          workshop nil
+          enrolled true
+          in_section false
+          attended false
+        end
+        after(:create) do |teacher, evaluator|
+          raise 'workshop required' unless evaluator.workshop
+          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
+          create :pd_attendance, session: evaluator.workshop.sessions.first, teacher: teacher if evaluator.attended
         end
       end
     end
@@ -152,6 +181,14 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :free_response, :parent => Level, :class => FreeResponse do
+    game {Game.free_response}
+  end
+
+  factory :playlab, :parent => Level, :class => Studio do
+    game {create(:game, app: Game::PLAYLAB)}
+  end
+
   factory :makerlab, :parent => Level, :class => Applab do
     game {Game.applab}
     properties{{makerlab_enabled: true}}
@@ -163,7 +200,19 @@ FactoryGirl.define do
 
   factory :multi, :parent => Level, :class => Applab do
     game {create(:game, app: "multi")}
-    properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
+    properties {
+      {
+        question: 'question text',
+        answers: [
+          {text: 'answer1', correct: true},
+          {text: 'answer2', correct: false},
+          {text: 'answer3', correct: false},
+          {text: 'answer4', correct: false}],
+        questions: [
+          {text: 'question text'}],
+        options: {hide_submit: false}
+      }
+    }
   end
 
   factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do
@@ -171,7 +220,6 @@ FactoryGirl.define do
   end
 
   factory :external, parent: Level, class: External do
-
   end
 
   factory :external_link, parent: Level, class: ExternalLink do
@@ -202,7 +250,7 @@ FactoryGirl.define do
   end
 
   factory :script do
-    sequence(:name) { |n| "bogus_script_#{n}" }
+    sequence(:name) { |n| "bogus-script-#{n}" }
   end
 
   factory :script_level do
@@ -228,6 +276,10 @@ FactoryGirl.define do
 
     trait :never_autoplay_video_false do
       levels {[create(:level, :never_autoplay_video_false)]}
+    end
+
+    trait :playlab do
+      levels {[create(:playlab)]}
     end
 
     chapter do |script_level|
@@ -406,7 +458,7 @@ FactoryGirl.define do
 
   factory :level_group do
     game {create(:game, app: "level_group")}
-    properties{{title: 'title', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
+    properties{{title: 'title', anonymous: 'false', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
   end
 
   factory :survey_result do
@@ -444,6 +496,7 @@ FactoryGirl.define do
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
     sessions {[create(:pd_session)]}
+    section {create(:section)}
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
   end
@@ -492,5 +545,4 @@ FactoryGirl.define do
     state "WA"
     zip "98101"
   end
-
 end

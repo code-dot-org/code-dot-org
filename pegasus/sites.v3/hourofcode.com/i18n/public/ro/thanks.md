@@ -1,34 +1,34 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
+  title: <%= hoc_s(:title_signup_thanks) %>
+  layout: wide
+  nav: how_to_nav
 
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  social:
+    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "og:image:width": 1440
+    "og:image:height": 900
+    "og:url": "http://<%=request.host%>"
 
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
----
+    "twitter:card": player
+    "twitter:site": "@codeorg"
+    "twitter:url": "http://<%=request.host%>"
+    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-Tu faci posibil pentru toti elevii din intreaga lume sa invete o Ora de Programare ce le poate *chimba tot resul vietii*, in timpul campaniei <%= campaign_date('full') %>. Vom afia in curand premiile, noile tutoriale si alte noutati distractive. Ce poti face acum?
+Tu faci posibil pentru toti elevii din intreaga lume sa invete o Ora de Programare ce le poate *chimba tot resul vietii*, in timpul campaniei <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Ce poti face acum?
 
 ## 1. Răspândește vestea
 

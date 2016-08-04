@@ -11,13 +11,14 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({
          linesOfCode: 42,
          linesOfCodeText: 'Total lines of code: 42',
-         levels: {},
-         trophies: {current: 0, of: 'of', max: 27},
+         lockableAuthorized: false,
+         levels: {}
     }, summarize_user_progress(script, user))
 
     assert_equal({
          linesOfCode: 42,
          linesOfCodeText: 'Total lines of code: 42',
+         lockableAuthorized: false,
          scripts: {},
      }, summarize_user_progress_for_all_scripts(user))
 
@@ -28,33 +29,33 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({
       linesOfCode: 42,
       linesOfCodeText: 'Total lines of code: 42',
+      lockableAuthorized: false,
       levels: {
-        ul1.level_id => {status: 'perfect', result: 100, submitted: false},
-        ul3.level_id => {status: 'passed', result: 20, submitted: false}
-      },
-      trophies: {current: 0, of: 'of', max: 27}
+        ul1.level_id => {status: 'perfect', result: 100},
+        ul3.level_id => {status: 'passed', result: 20}
+      }
     }, summarize_user_progress(script, user))
 
     # Also test with level progress excluded.
     exclude_level_progress = true
     assert_equal({
-                     linesOfCode: 42,
-                     linesOfCodeText: 'Total lines of code: 42',
-                     trophies: {current: 0, of: 'of', max: 27}
-                 }, summarize_user_progress(script, user, exclude_level_progress))
+     linesOfCode: 42,
+     lockableAuthorized: false,
+     linesOfCodeText: 'Total lines of code: 42'
+   }, summarize_user_progress(script, user, exclude_level_progress))
 
     assert_equal({
-       linesOfCode: 42,
-       linesOfCodeText: 'Total lines of code: 42',
-       scripts: {
-           script.name => {
-               levels: {
-                   ul1.level_id => {status: 'perfect', result: 100, submitted: false},
-                   ul3.level_id => {status: 'passed', result: 20, submitted: false}
-               },
-               trophies: {current: 0, of: 'of', max: 27},
-           }
+     linesOfCode: 42,
+     linesOfCodeText: 'Total lines of code: 42',
+     lockableAuthorized: false,
+     scripts: {
+       script.name => {
+         levels: {
+           ul1.level_id => {status: 'perfect', result: 100},
+           ul3.level_id => {status: 'passed', result: 20}
+         }
        }
+     }
     }, summarize_user_progress_for_all_scripts(user))
 
     assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
@@ -65,23 +66,22 @@ class UsersHelperTest < ActionView::TestCase
     ul1b = create :user_level, user: user, best_result: 10, script: course1, level: course1.script_levels[1].level
 
     assert_equal({
-         linesOfCode: 42,
-         linesOfCodeText: 'Total lines of code: 42',
-         scripts: {
-             script.name => {
-                 levels: {
-                     ul1.level_id => {status: 'perfect', result: 100, submitted: false},
-                     ul3.level_id => {status: 'passed', result: 20, submitted: false}
-                 },
-                 trophies: {current: 0, of: 'of', max: 27}
-             },
-             course1.name => {
-                 levels: {
-                     ul1b.level_id => {status: 'attempted', result: 10, submitted: false},
-                 }
-             }
-
+       linesOfCode: 42,
+       linesOfCodeText: 'Total lines of code: 42',
+       lockableAuthorized: false,
+       scripts: {
+         script.name => {
+           levels: {
+             ul1.level_id => {status: 'perfect', result: 100},
+             ul3.level_id => {status: 'passed', result: 20}
+           }
+         },
+         course1.name => {
+           levels: {
+             ul1b.level_id => {status: 'attempted', result: 10},
+           }
          }
+       }
      }, summarize_user_progress_for_all_scripts(user))
   end
 
@@ -122,14 +122,14 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({
       linesOfCode: 42,
       linesOfCodeText: 'Total lines of code: 42',
+      lockableAuthorized: false,
       levels: {
         ul.level_id => {
           status: 'perfect',
           result: 100,
-          submitted: false,
           pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
-        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT, submitted: false},
-        "#{ul.level_id}_1" => {result: nil, submitted: false}
+        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT},
+        "#{ul.level_id}_1" => {}
       }
     }, summarize_user_progress(script, user))
   end

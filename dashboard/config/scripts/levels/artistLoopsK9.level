@@ -8,7 +8,7 @@
     "skin": "artist",
     "instructions": "**Challenge:**  Lovely! Let's take a walk around the garden.",
     "x": "50",
-    "y": "200",
+    "y": "350",
     "start_direction": "90",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -31,8 +31,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This challenge uses FOUR loops, one right after another!\",\r\n  \"hint_id\": \"artistLoopsK9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that every loop makes a stair pattern that travels in a different direction.\\n\\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)\",\r\n  \"hint_id\": \"artistLoopsK9_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The loops should do this:\\n- Loop 1\\n  - Right\\n  - Down\\n  \\n- Loop 2\\n  - Right\\n  - Up\\n\\n- Loop 3\\n  - Left\\n  - Up\\n\\n- Loop 4\\n  - Left\\n  - Down\",\r\n  \"hint_id\": \"artistLoopsK9_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "markdown_instructions": "**Challenge:**  Lovely! Let's take a walk around the garden.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This challenge uses FOUR loops, one right after another!\",\r\n  \"hint_id\": \"artistLoopsK9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n**Challenge:**  Lovely! Let's take a walk around the garden.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -46,34 +46,22 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">3</title>
+              <title name="TIMES" config="3-10">6</title>
               <statement name="DO">
-                <block type="simple_move_right">
-                  <next>
-                    <block type="simple_move_down"/>
-                  </next>
-                </block>
+                <block type="simple_move_right"/>
               </statement>
-              <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
-                  <statement name="DO">
-                    <block type="simple_move_right">
-                      <next>
-                        <block type="simple_move_up"/>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
             </block>
           </next>
         </block>
-        <block type="controls_repeat_simplified_dropdown" y="150px" x="250px">
-          <title name="TIMES" config="3-10">3</title>
+        <block type="simple_move_left" y="150px" x="350px"/>
+        <block type="controls_repeat_simplified_dropdown" y="220px" x="75px">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+            <block type="simple_move_up"/>
+          </statement>
         </block>
-        <block type="controls_repeat_simplified_dropdown" y="250px" x="350px">
-          <title name="TIMES" config="3-10">3</title>
+        <block type="controls_repeat_simplified_dropdown" y="350px" x="225px">
+          <title name="TIMES" config="3-10">6</title>
         </block>
       </xml>
     </start_blocks>
@@ -85,52 +73,43 @@
         <block type="simple_move_left"/>
         <block type="simple_jump_down"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-8">???</title>
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">3</title>
+              <title name="TIMES" config="3-10">6</title>
               <statement name="DO">
-                <block type="simple_move_right">
-                  <next>
-                    <block type="simple_move_down"/>
-                  </next>
-                </block>
+                <block type="simple_move_right"/>
               </statement>
               <next>
                 <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
+                  <title name="TIMES" config="3-10">6</title>
                   <statement name="DO">
-                    <block type="simple_move_right">
-                      <next>
-                        <block type="simple_move_up"/>
-                      </next>
-                    </block>
+                    <block type="simple_move_up"/>
                   </statement>
                   <next>
                     <block type="controls_repeat_simplified_dropdown">
-                      <title name="TIMES" config="3-10">3</title>
+                      <title name="TIMES" config="3-10">6</title>
                       <statement name="DO">
-                        <block type="simple_move_left">
-                          <next>
-                            <block type="simple_move_up"/>
-                          </next>
-                        </block>
+                        <block type="simple_move_left"/>
                       </statement>
                       <next>
                         <block type="controls_repeat_simplified_dropdown">
-                          <title name="TIMES" config="3-10">3</title>
+                          <title name="TIMES" config="3-10">6</title>
                           <statement name="DO">
-                            <block type="simple_move_left">
-                              <next>
-                                <block type="simple_move_down"/>
-                              </next>
-                            </block>
+                            <block type="simple_move_down"/>
                           </statement>
                         </block>
                       </next>

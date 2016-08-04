@@ -27,6 +27,19 @@
                 - else
                   %span.puzzle-number
                     = @script_level.position
+              - if @user_level.driver_user_levels.present? || @user_level.navigator_user_levels.present?
+                #worked_with
+                  %h4
+                    %i.fa.fa-users
+                    = t('teacher.panel.worked_with')
+                  - @user_level.driver_user_levels.each do |driver_user_level|
+                    %div
+                      = link_to driver_user_level.user.name, build_script_level_path(@script_level, user_id: driver_user_level.user_id, section_id: @section.id)
+                      %i= t('nav.user.driver')
+                  - @user_level.navigator_user_levels.each do |navigator_user_level|
+                    %div
+                      = navigator_user_level.user.name
+                      %i= t('nav.user.navigator')
               - if @user_level.submitted?
                 #submitted
                   %div= t('teacher.panel.submitted_on')
@@ -91,7 +104,11 @@
                     - else
                       %span.puzzle-number
                         = @script_level.position
-                %td.name= link_to student.name, build_script_level_path(@script_level, user_id: student.id, section_id: @section.id)
+                %td.name{class: user_level && user_level.navigator? && !user_level.driver? ? 'navigator' : ''}
+                  = link_to build_script_level_path(@script_level, user_id: student.id, section_id: @section.id) do
+                    = student.name
+                    - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
+                      %i.fa.fa-users.pair-programming-icon
   :javascript
     function resizeScrollable() {
       var newHeight = $('.teacher-panel').innerHeight() -

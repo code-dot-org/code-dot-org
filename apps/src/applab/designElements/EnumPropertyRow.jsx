@@ -6,6 +6,7 @@ var EnumPropertyRow = React.createClass({
     initialValue: React.PropTypes.string.isRequired,
     options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     handleChange: React.PropTypes.func.isRequired,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -26,9 +27,11 @@ var EnumPropertyRow = React.createClass({
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
-        <select className="form-control"
-                value={this.state.selectedValue}
-                onChange={this.handleChange}>
+        <select
+          className="form-control"
+          value={this.state.selectedValue}
+          onChange={this.handleChange}
+        >
           {options}
         </select>
       </div>

@@ -127,7 +127,8 @@ class Deliverer
 
     message = StringIO.new
 
-    to_address = parse_address(header['to'], recipient)
+    # Merge contact_email from the delivery for code studio students whose emails we don't store in contacts.
+    to_address = parse_address(header['to'], recipient.merge({temporary_email: delivery[:contact_email]}))
     message.puts 'To: ' + format_address(to_address)
 
     from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
@@ -147,14 +148,16 @@ class Deliverer
     message.puts 'MIME-Version: 1.0'
 
     attachments = header['attachments'] || {}
+    if params['attachments']
+      attached_files = Poste2.load_attachments(params['attachments'])
+      attachments.merge! attached_files
+    end
 
-    #unless attachments.empty?
     marker = "==_mimepart_#{SecureRandom.hex(17)}"
     message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
 
     message.puts ''
     message.puts "--#{marker}"
-    #end
 
     message.puts 'Content-Type: text/html; charset=UTF-8'
     message.puts 'Content-Transfer-Encoding: 8bit'
@@ -169,7 +172,8 @@ class Deliverer
         message.puts 'Content-Transfer-Encoding: base64'
         message.puts "Content-Disposition: attachment; filename=\"#{filename}\""
         message.puts ''
-        message.write content.scan(/.{61}/).join("\n")
+
+        message.write content.scan(/.{1,61}/).join("\n")
       end
     end
 
@@ -204,11 +208,11 @@ class Deliverer
     raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
 
     engine = {
-      '.haml'=>TextRender::HamlEngine,
-      '.html'=>TextRender::ErbEngine,
-      '.md'=>TextRender::MarkdownEngine,
-      '.txt'=>TextRender::MarkdownEngine,
-      '.yml'=>TextRender::YamlEngine,
+      '.haml' => TextRender::HamlEngine,
+      '.html' => TextRender::ErbEngine,
+      '.md' => TextRender::MarkdownEngine,
+      '.txt' => TextRender::MarkdownEngine,
+      '.yml' => TextRender::YamlEngine,
     }[File.extname(path).downcase]
 
     @templates[name] = Poste::Template.new IO.read(path), engine
@@ -229,8 +233,11 @@ class Deliverer
     address = address.to_s.strip
     return parse_addresses(address).first unless address.empty?
 
+    # Student accounts don't have a stored email in contacts,
+    # so we use the temporary email here when email doesn't exist.
     email = defaults[:email].to_s.strip
-    return nil if email.empty?
+    email = defaults[:temporary_email] if email.blank?
+    return nil if email.blank?
 
     {email: email}.tap do |address|
       name = defaults[:name].to_s.strip
@@ -290,7 +297,15 @@ def main
         raise
       end
 
-      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).update(sent_at: sent_at)
+      if Poste.dashboard_student?(delivery[:hashed_email])
+        # We clear the email here for privacy. Note that (given architecture)
+        # it has to be persisted for a short while to actually send the email.
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at, contact_email: '')
+      else
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at)
+      end
     end
   end
   workers.each(&:join)

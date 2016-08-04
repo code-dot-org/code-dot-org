@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -66,7 +64,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
@@ -109,7 +107,7 @@ A committee of computer science educators will rank submissions based on qualita
 
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -165,7 +163,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
@@ -204,7 +202,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -222,7 +220,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names.
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
@@ -241,7 +239,7 @@ Example tracking pixels for AppInventor:
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
@@ -254,7 +252,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
 
-[**Tagasi algusesse**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
@@ -262,6 +260,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Tagasi algusesse**](#top)
-
-<%= view :signup_button %>
+[**Back to the top**](#top)

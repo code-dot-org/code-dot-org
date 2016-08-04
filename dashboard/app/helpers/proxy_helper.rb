@@ -14,7 +14,7 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    if !allowed_hostname?(url, allowed_hostname_suffixes)
+    unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."

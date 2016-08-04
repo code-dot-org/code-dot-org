@@ -1,0 +1,22 @@
+%div.row
+  %div.span6
+    %h2
+      Workshop Details
+%div.row
+  %div.span2{style: 'text-align: right'}
+    %strong
+      = @workshop.sessions.count == 1 ? 'Date:' : 'Dates:'
+  %div.span4
+    - @workshop.sessions.each do |session|
+      = session.formatted_date_with_start_and_end_times
+      %br
+%div.row
+  %div.span2{style: 'text-align: right'}
+    %strong
+      Location:
+  %div.span2
+    = @workshop.location_name
+    %br
+    = @workshop.location_address
+%br
+= simple_format(@workshop.notes)

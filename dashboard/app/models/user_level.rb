@@ -52,6 +52,33 @@ class UserLevel < ActiveRecord::Base
     Activity.passing? best_result
   end
 
+  # user levels can be linked through pair programming. The 'driver'
+  # user level is the one that is linked to the user account that
+  # completed the activity; the 'navigator' user level is the one that
+  # also gets credit for the solution.
+  has_many :paired_user_levels_as_navigator, class_name: 'PairedUserLevel', foreign_key: 'navigator_user_level_id'
+  has_many :paired_user_levels_as_driver, class_name: 'PairedUserLevel', foreign_key: 'driver_user_level_id'
+
+  has_many :navigator_user_levels, through: :paired_user_levels_as_driver
+  has_many :driver_user_levels, through: :paired_user_levels_as_navigator
+
+  def driver?
+    navigator_user_levels.present?
+  end
+
+  def navigator?
+    driver_user_levels.present?
+  end
+
+  def self.most_recent_driver(script, level, user)
+    most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
+    most_recent ? most_recent.user.name : nil
+  end
+
+  def paired?
+    driver? || navigator?
+  end
+
   def handle_unsubmit
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT

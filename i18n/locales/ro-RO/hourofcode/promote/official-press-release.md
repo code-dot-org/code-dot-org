@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Model de comunicat de presa pentru functionarii alesi
 
 Pentru lansare imediata  
@@ -42,9 +40,3 @@ Peste 100 de milioane de studenţi din întreaga lume au încercat deja o Ora de
 [**INTRODUCEŢI CITAT DE LA O ALTĂ ORGANIZAŢIE SAU CINEVA CARE A PARTICIPAT LA EVENIMENT**]
 
 Pentru mai multe informaţii despre [**Eveniment/PROGRAM/ETC**], vizitaţi [**INSERATI SITE**] sau contactaţi [**Introduceţi informaţii de CONTACT**]
-
-  
-  
-
-
-<%= view :signup_button %>

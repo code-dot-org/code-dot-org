@@ -2,7 +2,7 @@ name 'ECS Phase 3 Welcome' 
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"> 
  
 ## Getting Started > Welcome! 
 <br>

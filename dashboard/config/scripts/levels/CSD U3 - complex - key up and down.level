@@ -63,7 +63,12 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment": null,
+      "comment_Sprites": null,
+      "comment_GameLab": null,
+      "comment_Variables": null,
+      "comment_Math": null,
+      "comment_Control": null,
+      "comment_Drawing": null,
       "console.log": null
     },
     "show_d_pad": "true",
@@ -94,6 +99,7 @@
     "debugger_disabled": "false",
     "callout_json": "[]",
     "start_blocks": "var clicks = 0\r\n\r\nfunction draw() {\r\n  // If mouseWentDown, add one to the clicks variable\r\n  \r\n  background(\"white\");\r\n  textSize(50);\r\n  textAlign(CENTER, CENTER);\r\n  text(clicks, 0, 0, 400, 400);\r\n}",
+    "hide_animation_mode": "false",
     "contained_level_names": null
   },
   "published": true,

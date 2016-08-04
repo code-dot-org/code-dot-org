@@ -1,16 +1,41 @@
 #!/usr/bin/env ruby
 
-# This script populates the hashed_email column of the pegasus poste_deliveries table.
+# This script populates the hashed_email column of the pegasus poste_deliveries
+# table.
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'digest/md5'
 require src_dir 'database'
 
-def main
-  DB[:poste_deliveries].each do |delivery|
-    hashed_email = Digest::MD5.hexdigest(delivery[:contact_email])
-    DB[:poste_deliveries].where(id: delivery[:id]).update(hashed_email: hashed_email)
-  end
+if ARGV.length != 3
+  puts 'Usage: ./bin/oneoff/back_populate_poste_deliveries_hashed_email '\
+    'start_index end_index batch_size'
+  exit 1
 end
 
-main if only_one_running?(__FILE__)
+start_index = ARGV[0].to_i
+end_index = ARGV[1].to_i
+batch_size = ARGV[2].to_i
+
+until start_index > end_index
+  puts "Processing from #{start_index} to #{start_index + batch_size}..."
+
+  # For efficiency reasons, we keep a hash of ID to hashed_email, doing the
+  # update in a transaction. To minimize locking of the table, we compute the
+  # hash outside of the update transaction.
+  hashed_email_updates = {}
+  DB[:poste_deliveries].
+    where(id: start_index..(start_index + batch_size)).
+    each do |delivery|
+    hashed_email = Digest::MD5.hexdigest(delivery[:contact_email])
+    hashed_email_updates[delivery[:id]] = hashed_email
+  end
+
+  DB.transaction do
+    hashed_email_updates.each_pair do |id, hashed_email|
+      DB[:poste_deliveries].where(id: id).update(hashed_email: hashed_email)
+    end
+  end
+
+  start_index += batch_size
+end

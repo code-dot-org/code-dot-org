@@ -98,7 +98,7 @@ class HipChat
         succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
       end
 
-      if !succeeded
+      unless succeeded
         CDO.log.info("#{room}: #{message}")
         CDO.log.info('^^^ Unable to post message to HipChat due to repeated errors')
       end

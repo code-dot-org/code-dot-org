@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-Usted está haciendo posible que los estudiantes de todo el mundo aprendan una Hora del Código que puede *cambiar el resto de sus vidas*, durante <%= campaign_date('full') %>. Estaremos en contacto para actualizaciones de premios, nuevos tutoriales y otras actualizaciones emocionantes. ¿Qué puedes hacer ahora?
+Usted está haciendo posible que los estudiantes de todo el mundo aprendan una Hora del Código que puede *cambiar el resto de sus vidas*, durante <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. ¿Qué puedes hacer ahora?
 
 ## 1. Corre la voz
 
@@ -22,11 +22,11 @@ Se acaba de unir al movimiento de la Hora del Código. Díselo a tus amigos con 
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Encuentre un voluntario local para ayudarte con tu evento.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Buscar en nuestro mapa del voluntariado](%= resolve_url('https://code.org/volunteer/local') %) para que los voluntarios puedan visitar tu aula o hagan un videochat remotamente para inspirar a tus estudiantes acerca de la amplitud de posibilidades con las Ciencias de la Computación.
 
-## 3. Pídale a toda su escuela que ofrezca una Hora de Código
+## 3. Pídale a toda su escuela que ofrezca una Hora del Código
 
 [Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a su director y desafíe a cada clase de su escuela para que se inscriba.
 
@@ -42,8 +42,8 @@ Se acaba de unir al movimiento de la Hora del Código. Díselo a tus amigos con 
 
 [Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a sus representantes locales, Concejo Municipal o junta escolar e invítelos a visitar su escuela para la Hora de Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
 
-## 7. Plan your Hour of Code
+## 7. Planifica tu Hora del Código
 
-Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+Elija una actividad de la Hora del Código y [revise esta guía](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

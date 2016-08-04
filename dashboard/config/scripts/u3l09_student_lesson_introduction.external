@@ -3,13 +3,13 @@ title 'Scene Design Part 1: Plan '
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 08 - Practice PT - Design a Digital Scene
+# Unit 3: Lesson 08 - Practice PT - Design a Digital Scene
 
-# Background
+## Background
 
 Breaking down complex programming tasks is useful not only because it makes solutions easier to conceive of, but because it allows multiple programmers to work on the program at the same time. In this project you will use this principle to collaboratively develop your own digital scene.
 
-# Lesson
+## Lesson
 
 * Collaborate with a group to choose a topic for a digital scene
 * Identify the major components of your digital scene and assign them to individual group members
@@ -17,13 +17,10 @@ Breaking down complex programming tasks is useful not only because it makes solu
 * Recombine your group's code and use it to create a digital scene
 * Complete reflection questions
   
-# Resources
-* Activity Guide and Group Planning Guide: <a href="https://docs.google.com/document/d/1FI-_esPMKY9I455G75w0-X932aGJktrLCc16v1iCtlQ/edit?usp=sharing" target="_blank">
- Practice PT - Design a Digital Scene
-</a>
-* Worksheet: <a href="https://docs.google.com/document/d/19pgdzB9bs94iti-fC3iIMDUmEWSpY5v17wQt14AUzHg/edit?usp=sharing" target="_blank">
-Submission Guidelines: Reflection and Rubric
-</a>
+## Resources
+
+* Activity Guide and Group Planning Guide: <a href="https://docs.google.com/document/d/1FI-_esPMKY9I455G75w0-X932aGJktrLCc16v1iCtlQ/edit?usp=sharing" target="_blank">Practice PT - Design a Digital Scene</a>
+* Worksheet: <a href="https://docs.google.com/document/d/19pgdzB9bs94iti-fC3iIMDUmEWSpY5v17wQt14AUzHg/edit?usp=sharing" target="_blank">Submission Guidelines: Reflection and Rubric</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

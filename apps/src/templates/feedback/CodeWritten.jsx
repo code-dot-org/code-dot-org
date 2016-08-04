@@ -1,11 +1,12 @@
 var React = require('react');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 
 var CodeWritten = React.createClass({
 
   propTypes: {
     numLinesWritten: React.PropTypes.number.isRequired,
     totalNumLinesWritten: React.PropTypes.number.isRequired,
+    children: React.PropTypes.node,
   },
 
   render: function () {

@@ -19,7 +19,7 @@ class DCDOBase
     raise ArgumentError unless key.is_a? String
     value = @datastore_cache.get(key)
 
-    if !value.nil?
+    unless value.nil?
       return value
     end
 

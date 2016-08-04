@@ -1263,7 +1263,7 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
   this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
-  this.setFunctionalOutput(!0, Blockly.BlockValueType.NUMBER);
+  this.setFunctionalOutput(!1);
   var a = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
   this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a, Blockly.Procedures.rename), "NAME").appendTitle("", "PARAMS");
   this.appendFunctionalInput("STACK");
@@ -1325,7 +1325,7 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
   return this.outputType_
 }, updateOutputType:function(a) {
   this.outputType_ = a;
-  this.changeFunctionalOutput(this.outputType_)
+  this.setHSV.apply(this, Blockly.FunctionalTypeColors[a])
 }, dispose:function(a, b, c) {
   if(!c) {
     var d = this.getTitleValue("NAME");

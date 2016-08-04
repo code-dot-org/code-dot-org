@@ -1,22 +1,25 @@
 lt:
   site_name: PROGRAMAVIMO VALANDA
-  hour_of_code: Hour of Code
-  language: Anglų
+  hour_of_code: Programavimo valanda
+  language: Lietuvių
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
-  coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 7
-  campaign_date_start_long: December 7
-  campaign_date_short: Dec. 7-13
-  campaign_date_full: December 7-13
+  coming_soon: Jau greitai
+  campaign_date_start_short: Dec. 5
+  campaign_date_start_long: December 5
+  campaign_date_short: Dec. 5-11
+  campaign_date_full: December 5-11
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Peržiūrėti naują vaizdo įrašą '
-  front_watch_regular_video: Watch the video
-  front_volunteers: Technical volunteers wanted
+  front_watch_regular_video: Pažiūrėk video
+  front_volunteers: Ieškomi techniniai savanoriai
+  front_start_learning: Start learning
   header_menu_resources: Mokomieji ištekliai
   header_menu_faq: DUK
   header_menu_prizes: Prizai
-  header_menu_how_to: How-To
+  header_menu_how_to: Kaip
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
@@ -150,18 +153,18 @@ lt:
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Išsamiau
   nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
+  how_to_nav_educators: Pedagogams
+  how_to_nav_after_school: Po pamokų
+  how_to_nav_parents: Tėvams
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
-  how_to_nav_companies: For companies
+  how_to_nav_organizations: Organizacijoms
+  how_to_nav_companies: Įmonėms
   how_to_nav_afterschool_educators: For after-school educators
   how_to_nav_volunteers: For volunteers
   prizes_nav_title: Prizai
-  prizes_nav_home: All prizes
+  prizes_nav_home: Visi prizai
   prizes_nav_hardware: Hardware prize signup
   prizes_nav_terms: Terms and conditions
   prizes_nav_faq: DUK
@@ -174,8 +177,10 @@ lt:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
-  whats_next_header: "What's next?"
+  prizes_more: More exciting prizes
+  whats_next_header: Kas toliau?
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
@@ -185,11 +190,11 @@ lt:
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Bet kas gali išmokti.
-  get_started: Start
+  get_started: Pradėti
   beyond_an_hour: Beyond an Hour of Code
   register_now: Registruotis
-  share_on_facebook: Share on Facebook
-  share_on_twitter: Share on Twitter
+  share_on_facebook: "Dalintis „Facebook'e“"
+  share_on_twitter: "Dalintis „Twitter'yje“"
   front_join_us_heading: '"Programavimo valanda" kiekvienam moksleiviui.'
   front_join_us_description: Informatika yra svarbi beveik kiekvienam. Padėkime ją pažinti 100 milijonų moksleivių.
   front_join_us_description_short: Computer science is a foundation for every student.
@@ -208,7 +213,7 @@ lt:
   front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Just love computer science?
   front_join_us_cs_volunteer: Passionate about computer science education?
-  front_join_us_spread: Spread the word.
+  front_join_us_spread: Skleisti žodį.
   front_join_us_spread_word: Spread the word in your community
   front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
@@ -241,9 +246,9 @@ lt:
   signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Jūsų vardas
-  signup_email_placeholder: you@example.com
+  signup_email_placeholder: jūs@example.com
   signup_organization_name_placeholder: For example, Lincoln High School
-  signup_event_location_placeholder: "Pašto kodas ir šalis ARBA pilnas adresas.\r\n(Tai bus naudojama pažymėti renginiui žemėlapyje.)"
+  signup_event_location_placeholder: "Pašto kodas ir šalis ARBA pilnas adresas.\\r\n(Tai bus naudojama pažymėti renginiui žemėlapyje.)"
   signup_special_event_details_placeholder: Aprašykite, kuo šis renginys ypatingas
   signup_send_posters_address_placeholder: Šis adresas nebus viešai rodomas mūsų žemėlapyje.
   signup_event_type_in_school: Mokykloje
@@ -252,20 +257,21 @@ lt:
   signup_submit_error_message: Įvyko klaida. Patikrinkite, ar tinkamai užpildėte visus reikiamus laukus.
   signup_thank_you_header: 'Ačiū, kad užsiregistravote į "Programavimo valandos" renginį.'
   signup_thank_you_message: Jums išsiuntėme el. laišką su paaiškinimais.
+  map_title: Hour of Code map
   map_header: '# Programavimo valandos renginiai pasaulyje'
-  see_all_events: See all events
+  see_all_events: Peržiūrėti visus renginius
   map_header_company: '# pagal organizatorius'
   map_header_country: '# in %{country}'
   map_search_placeholder: 'Ieškoti "Programavimo valandos" renginių'
   map_search_search: Paieška
-  map_search_reset: Reset
-  map_legend_title: Legend
+  map_search_reset: Atstatyti
+  map_legend_title: Paaiškinimas
   map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: Special Event
-  meta_tag_og_title: 'Štai ir "Programavimo valanda"'
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
-  meta_tag_twitter_title: 'Štai ir "Programavimo valanda"'
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
+  map_legend_cs_tech_jam: Specialus renginys
+  meta_tag_og_title: Štai ir Programavimo valanda
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
+  meta_tag_twitter_title: Štai ir Programavimo valanda
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
   twitter_default_text: 'Aš dalyvauju šių metų "Programavimo valandoje" (#HourOfCode), o tu? @codeorg'
   hardware_prizes_form_name_label: Jūsų vardas
   hardware_prizes_form_name_placeholder: Jūsų vardas
@@ -291,10 +297,11 @@ lt:
   hardware_prizes_form_submit_label: Išsaugoti
   hoc_faq_title: DUK
   hoc_faq_what_is_hoc_q: 'Kas yra "Programavimo valanda"?'
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
+  hoc_faq_what_is_hoc_a: |-
+    The Hour of Code started as a one-hour introduction to computer science, designed to demystify "code", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide.
   hoc_faq_last_year: Išbandykite pamokėles
   hoc_faq_when_is_hoc_q: 'Kada vyks "Programavimo valanda"?'
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: Kodėl informatika?
   hoc_faq_why_cs_a: "<i>Kiekvienam</i> moksleiviui gali praversti informatikos/programavimo žinios. Tai lavina mąstymą, kūrybiškumą, organizacinius gebėjimus. Anksti su tuo susipažinę, vaikai turės gerus pamatus 21 amžiaus karjerai. Išsamiau: <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: How do I participate in the Hour of Code?
@@ -304,19 +311,17 @@ lt:
   hoc_faq_host_q: Aš nieko neišmanau apie programavimą. Ar vis tiek galiu organizuoti renginį?
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Ar kiekvienam dalyviui reikia kompiuterio?
-  hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
+  hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at all. </ul>"
   hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: How can I make an Hour of Code tutorial?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_account_q: Ar moksleiviai turi būti prisiregistravę?
   hoc_faq_account_a: "Ne, čia nebūtina jokia registracija. Tik norintiems dalyvauti <a href='http://code.org/learn/beyond'>kituose kursuose</a>, reikia registruotis, kad būtų išsaugoma, kas jau padaryta."
-  hoc_faq_frozen_q: Where can I find new tutorials featuring Star Wars, Minecraft and Anna and Elsa from Frozen?
-  hoc_faq_frozen_a: "They are now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy them!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Our new Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
@@ -330,10 +335,12 @@ lt:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   stats_growth: Mūsų svetainė greičiausiai pasiekė 15 mln. žmonių.
-  stats_i18n: Students are learning in 40 languages
+  stats_i18n: Students are learning in over 45 languages
   stats_tumblr: 'Tumblr: 3.5 years'
   stats_facebook: 'Facebook: 3 years'
   stats_twitter: 'Twitter: 2.5 years'
@@ -393,17 +400,17 @@ lt:
   title_press_kit: Press Kit
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
-  title_partners: Partners
+  title_partners: Partneriai
   title_prizes_faq: Prizes FAQ
   title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Thank you
+  title_prizes_thanks: Ačiū
   title_prizes: Prizai
   title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Mokomieji ištekliai
   title_signup_thanks: Ačiū už registraciją surengti Programavimo valandą!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-  events_nav_title: Hour of Code Events
+  events_nav_title: Programavimo valandos renginiai
   events_nav_all: Visi renginiai
   events_nav_whole_schools: Mokyklos, kur renginys vyksta visiems
   events_nav_special: Specialūs renginiai
@@ -415,10 +422,13 @@ lt:
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: renginys
   events: renginiai
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
-  footer_menu_partners: Partners
-  footer_menu_contact: Contact us
+  footer_menu_partners: Partneriai
+  footer_menu_contact: Susisiek su mumis
   footer_menu_support: Parama
   footer_menu_terms: Dalyvavimo sąlygos
   footer_menu_privacy: Privatumo taisyklės

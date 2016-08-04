@@ -4,23 +4,23 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Encoding Numbers in the Real World
-# Background
+# Unit 1: Encoding Numbers in the Real World
 
-Today's news - as well as history - is rich with fascinating stories about encoding numbers in computers. Some stories vividly illustrate the problems that can arise.
+## Background
 
+Today's news &mdash; as well as history &mdash; is rich with fascinating stories about encoding numbers in computers. Some stories vividly illustrate the problems that can arise.
 
-# Lesson
+## Lesson
 
 * Examine real-world issues related to number encoding in computers
 * Share your knowledge with your class through a jigsaw activity.
 
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1CLjtKlAQtgq704vy7vvDOwPeqni1hZcyHnAwUGIywdI/edit?usp=sharing" target="_blank">Encoding Numbers in the Real World</a>
 * Presentation Checklist <a href="https://docs.google.com/document/d/1CLjtKlAQtgq704vy7vvDOwPeqni1hZcyHnAwUGIywdI/edit?usp=sharing" target="_blank">Encoding Numbers in the Real World</a>
 
-# Articles
+## Articles
 
 * <a href="http://en.wikipedia.org/wiki/Year_2038_problem" target="_blank">The 2038 Problem</a>
 * <a href="http://en.wikipedia.org/wiki/Year_2000_problem" target="_blank">The Y2K Problem</a>

@@ -2,7 +2,7 @@ name 'U3L24 Return Statements Lecture'
 
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/U3L24_codeStyle.css" />
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/U3L24_codeStyle.css" />
 
 # What's this Return block?
 

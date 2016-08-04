@@ -5,44 +5,36 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 19 - Public Key Cryptography
+# Unit 2: Lesson 19 - Public Key Cryptography
 
-# Background
+## Background
 
 Arithmetic can be used to encrypt a message which only an intended recipient can decrypt and read. Using a public key and private key, messages can be encrypted and transmitted securely even if the message itself and the method used to encrypt it are both public.  
 
 The modulo operation (or "clock arithmetic" as we call it in the lesson) is a real one-way function that is used for asymmetric encryption.  The modulo operation gives the remainder
 
-# Vocabulary
+## Vocabulary
 
-**Modulus** - the "clock size" 
+* **Modulus** - the "clock size"
+* **Modulo (or "mod")** - the name of the mathematical operation.  Modulo gives the remainder from dividing two numbers.  For example: 17 MOD 13 is 4.
+* **Asymmetric encryption:** a type of cryptographic based on algorithms that require two keys – one of which is secret (or private) and one of which is public (freely known to others).
+* **Public key:** a value that can be used to encrypt a message. However, only when combined with a mathematically-related private key, can the message be decrypted.
+* **Private key:** the complementary key to a public key that is used to decrypt a message.
 
-**Modulo (or "mod")** - the name of the mathematical operation.  Modulo gives the remainder from dividing two numbers.  For example: 17 MOD 13 is 4.
-
-**Asymmetric encryption:** a type of cryptographic based on algorithms that require two keys – one of which is secret (or private) and one of which is public (freely known to others).
-
-**Public key:** a value that can be used to encrypt a message. However, only when combined with a mathematically-related private key, can the message be decrypted. 
-
-**Private key:** the complementary key to a public key that is used to decrypt a message.
-
-
-# Lesson
+## Lesson
 
 * Learn about Modulo as "clock arithmetic"
 * Explore the Modulo Clock in the Public Key Crypto Widget
 * Use the Public Key Crypto Widget to send a secure message
 * Review the mathematical foundations of Cryptography and why Public Key Cryptography is so important.
 
-
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1rcXn-3B0JWY3ifeZkhVB3OFHNYClsY80LCIVIOOpExs" target="_blank">Public Key Cryptography</a>
 * Widget: <a href="https://studio.code.org/projects/applab/hCEJDg_MsULeilvyoikF4g" target="_top">Public Key Crypto Widget</a>
 * Optional: <a href="https://docs.google.com/document/d/1d6mEbpykWsFKP2PAC5cj7ak_ouoPrwhMcFpYf7xd_Yw" target="_top">Handout: How Does Public Key Crypto Really Work?</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -1,26 +1,23 @@
 name 'CSPPD3-u2 checkin'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-
-### Unit 2 Overview > Pause and Reflect
+# Unit 2 Overview > Pause and Reflect
 
 Now you’ve seen an overview of Unit 2, and gotten a chance to check out the material covered, as well as a few resources. 
 
->##### Pause here. How are you feeling about this Unit? 
+>**Pause here. How are you feeling about this Unit?**
 
->- what content do you already know from this Unit? 
-- what do you want to learn more about? 
+>- What content do you already know from this Unit?
+- What do you want to learn more about?
 
-#### Think about your needs and the areas where you currently feel comfortable. 
+## Think about your needs and the areas where you currently feel comfortable
 
-In the forum threads linked below, share where you think you can help others in this unit, and where you would like help in this unit. 
+In the forum threads linked below, share where you think you can help others in this unit, and where you would like help in this unit.
 
-- what do you think you can help other teachers with from this unit? <a href=“http://forum.code.org/t/unit-2-topics-i-can-help-others-understand/2219” target=_blank>forum thread</a>
-- what do you want help with from this unit?<a href=“http://forum.code.org/t/unit-2-topics-i-would-like-help-with-from-this-unit/2220” target=_blank>forum thread</a>
+- What do you think you can help other teachers with from this unit? <a href=“http://forum.code.org/t/unit-2-topics-i-can-help-others-understand/2219” target=_blank>forum thread</a>
+- What do you want help with from this unit?<a href=“http://forum.code.org/t/unit-2-topics-i-would-like-help-with-from-this-unit/2220” target=_blank>forum thread</a>
 
->After you post, read through other responses. Share your ideas and suggestions with others, and take note of any suggestions you see that might help you. 
+>After you post, read through other responses. Share your ideas and suggestions with others, and take note of any suggestions you see that might help you.
 
-<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

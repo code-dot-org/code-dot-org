@@ -6,34 +6,39 @@ nav: promote_nav
 
 ---
 
-
 # Mẫu văn bản áp dụng giấy biên nhận cho viên chức dân cử
 
-giấy biên nhận cần gấp [DATE] Liên hệ: [CONTACT INFORMATION]  
+For Immediate Release  
+[**DATE**]  
+Contact: [**CONTACT INFORMATION**]  
   
 
 
-ỦY VIÊN/THƯỢNG NGHỊ SĨ/THÀNH VIÊN HỘI ĐỒNG/ĐẠI DIỆN THÀNH VIÊN HỘI ĐỒNG \[CHÈN TÊN\]\[ đã tham gia vào HOUR OF CODE cùng với các sinh viên địa phương\]</center>   
-  
+**
 
-
-DATE - [CHÈN TÊN] thành viên chính và có năng lực của [CHÈN TÊN CỦA TRƯỜNG], đại diện cho doanh nhân và gia đình hiện tại [TÊN SỰ KIỆN] ĐỂ THAM GIA Hour of Code như là một phần của Tuần lễ giáo dục khoa học máy tính. [CHÈN TÊN] và thành viên tham gia trong số mười nghìn người trên thế giới tham gia vào sự kiện học tập lớn nhất trong lịch sử.
-
-[CHÈN CHI TIẾT VỀ SỰ KIỆN, SỬ DỤNG NGÔN NGỮ MÔ TẢ VÀ ĐỊNH LƯỢNG. VÍ DỤ:] “Trường tiểu học Daniels Run đã tổ chức sự kiện ''Hour of Code toàn trường'' đưa học sinh tiếp cận với khoa học máy tính Hơn 700 sinh viên đến từ tất cả các lớp đã làm ít nhất một Hour of Code Và cha mẹ và tình nguyện viên từ các cộng đồng đã dành cả ngày giúp những con em cùng nhau tạo một cuộc họp đưa ra lý do tại sao máy tính khoa học quan trọng trong cuộc sống của các học sinh."
-
-[MẪU VĂN BẢN CHO PHẠM VI BỐI CẢNH:] Máy tính có ở khắp nơi, nhưng chỉ một vài trường dạy khoa học máy tính cách đây khoảng hơn 10 năm. Những cô gái và học sinh của màu sắc thiếu đại diện nghiêm trọng . Các tin tốt đang được chúng ta thay đổi cho tốt hơn. Hour of Code là cánh cửa cung cấp cho tất cả học sinh quyền truy cập vào khoa học giáo dục máy tính chất lượng cao.
-
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! và Disney. Tổng thống Obama, Shakira và Ashton Kutcher đã cùng khởi động Hour of Code với các video. Hơn 100 đối tác đã cùng nhau hỗ trợ cho sự kiện này.
-
-[CHÈN TRÍCH DẪN TỪ NGƯỜI PHÁT NGÔN, VÍ DU:] "Chúng tôi cần khuyến khích và định hướng học sinh quan tâm đến khoa học máy tính," ông [CHÈN TÊN]. "Mọi học sinh xứng đáng có cơ hội để học khoa học máy tính để có các cơ hội nghề nghiệp tốt nhất của thế kỷ 21."
-
-[CHÈN THÊM THÔNG TIN VỀ CÁC SỰ KIỆN CỦA BẠN VÀ/HOẶC TỔ CHỨC CỦA BẠN]
-
-[CHÈN TRÍCH DẪN TỪ MỘT TỔ CHỨC HOẶC AI ĐÓ NHỮNG NGƯỜI THAM DỰ SỰ KIỆN]
-
-Để biết thêm chi tiết về [Sự kiện/chương trình/ETC], truy cập vào [CHÈN Trang web] hoặc liên lạc [Chèn thông tin liên hệ].
+<center>
+  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+</center>
 
   
   
+</p> 
 
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! và Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]

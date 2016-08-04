@@ -4,15 +4,18 @@ fa:
   language: فارسی
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: به زودي
-  campaign_date_start_short: Dec. 7
-  campaign_date_start_long: December 7
-  campaign_date_short: Dec. 7-13
-  campaign_date_full: December 7-13
+  campaign_date_start_short: Dec. 5
+  campaign_date_start_long: December 5
+  campaign_date_short: Dec. 5-11
+  campaign_date_full: December 5-11
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: ويدئوي جديد را ببينيد
   front_watch_regular_video: Watch the video
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: منابع
   header_menu_faq: پرسش و پاسخ
   header_menu_prizes: جوایز
@@ -174,7 +177,9 @@ fa:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
+  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -243,7 +248,7 @@ fa:
   signup_name_placeholder: نام شما
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: به عنوان مثال، دبیرستان لينكلن
-  signup_event_location_placeholder: "کد پستی و کشور یا  آدرس كامل. \r (براي قراردادن پين در نقشه مان استفاده خواهد شد)"
+  signup_event_location_placeholder: "کد پستی و کشور یا  آدرس كامل. \\r (براي قراردادن پين در نقشه مان استفاده خواهد شد)"
   signup_special_event_details_placeholder: چيزي كه باعث خاص شدن اين رويداد مي شود را توصيف كنيد
   signup_send_posters_address_placeholder: این آدرس بر نقشه ما نمايش داده نخواهد شد
   signup_event_type_in_school: در مدرسه
@@ -252,6 +257,7 @@ fa:
   signup_submit_error_message: خطایی رخ داد. لطفا مطمئن شويد كه تمامي فيلدهاي مورد نياز به درستي پر شده اند.
   signup_thank_you_header: 'با تشکر از شما برای ثبت نام براي برگزاري رويداد يك "ساعت كد نويسي".'
   signup_thank_you_message: ما يك ايميل تاييد بهمراه اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم.
+  map_title: Hour of Code map
   map_header: 'رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
   see_all_events: See all events
   map_header_company: '# بوسیله ی سازماندهان شرکتی'
@@ -294,7 +300,7 @@ fa:
   hoc_faq_what_is_hoc_a: "ساعت کد معرفی یک ساعته علوم کامپیوتر، طراحی شده برای ساده کردن کد و نشان  دادن این که هر کسی می تواند  اصول اولیه را یاد بگیرد. <a href='http://code.org/learn'> این آموزشات را بررسی کنید.</a>."
   hoc_faq_last_year: آموزشات را امتحان کنید.
   hoc_faq_when_is_hoc_q: '"ساعت كد نويسي" چه زماني است؟'
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: چرا دانش كامپيوتر؟
   hoc_faq_why_cs_a: "<i>هر</i> دانش آموزي باید فرصت یادگیری علوم کامپیوتر را داشته باشد تا به پرورش مهارت‌هاي حل مسئله، منطق و خلاقيت كمك كند. دانش آموزان هر چه زودتر شروع كنند، پايه قوي تري را براي موفقيت در مسير شغلي قرن 21 خواهند داشت. براي آمار بیشتر <a href='http://code.org'> Code.org</a> را ببینید."
   hoc_faq_how_participate_q: 'چگونه مي توانم در "ساعت كد نويسي" شركت كنم؟'
@@ -304,7 +310,7 @@ fa:
   hoc_faq_host_q: من چيزي درباره كد نويسي نمي دانم. آيا همچنان مي توانم ميزبان چنين رويدادي باشم؟
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: آيا هر شركت‌كننده يك رايانه نياز دارد؟
   hoc_faq_need_computers_a: "خير. آموزش‌هاي ساعت کدنويسي روی رایانه های شخصی، تلفن‌هاي هوشمند، تبلت‌ها قابل استفاده‌اند و بعضي از آن‌ها به هيچ رايانه‌اي نیاز ندارند! <p><i>چند گزینه:</i> <br><ul><li><b>كار گروهي </b> تحقیقات نشان می‌دهد كه كه بهترين يادگيري دانش‌آموزان در <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> گروه‌هاي برنامه‌نويسي اتفاق مي‌افتد</a> با به اشتراک‌گذاری رايانه و کار گروهي. دانش‌آموزان خود را به تشكيل گروه‌هاي دو نفره تشويق كنيد. <li><b>از پروژكتور استفاده كنيد</b> اگر شما یک پروژکتور و کامپیوتر متصل به وب داريد، كل گروه مي‌توانند ساعت كدنويسي را با هم انجام دهند. بخش‌هاي ويديويي را با هم ببينيد و به نوبت معماها را حل كنيد و به سوالات پاسخ دهيد.<li><b>بدون رايانه.</b> ما آموزش‌هايي را ارائه مي‌دهيم كه هيچ نيازي به رايانه ندارند. </ul>"
   hoc_faq_international_q: 'که من در آن هستم <country>. چگونه بین المللی شرکت کنم?'
@@ -313,8 +319,6 @@ fa:
   hoc_faq_tutorial_a: "اگر مشتاق به همكاري در آموزش‌ها هستيد <a href='target-tutorial-guidelines'> راهنماها و دستورالعمل‌های ما را ببينيد</a>. ما از ميزباني هر گزينه‌اي براي همكاري استقبال مي‌كنيم، ولي هدف اصلي ما بهبود تجربه براي دانش‌آموزان و معلماني است كه با علوم كامپيوتر تازه آشنا مي‌شوند."
   hoc_faq_account_q: آیا دانش آموزان نیاز دارند با استفاده از یک حساب کاربری وارد سیستم شوند?
   hoc_faq_account_a: "نه. برای امتحان کردن ساعت کدنویسی دانش آموزان نیاز به هیچ ثبت نام یا ورود به سیستمی ندارند. بیشتر <a href='http://code.org/learn/beyond'> دوره های پیگیر</a> نیاز به ایجاد حساب کاربری برای ثبت پیشرفت دانش آموزان دارند."
-  hoc_faq_frozen_q: آموزش با آنا و السا کجاست?
-  hoc_faq_frozen_a: "حالا روی <a href='http://code.org/learn'>code.org/learn</a> منتشر شده است. امیدواریم از آن لذت ببرید!"
   hoc_faq_high_school_q: کدام فعالیت را باید با دانش آموزان دبیرستانی انجام دهم?
   hoc_faq_high_school_a: "برای تمام سنین، ما امتحان کردن یکی از آموزش های مبتدی روی <a href='http://code.org/learn'>Code.org/learn</a> را برای شروع توصیه می کنیم، مثل آموزش های انگری برد یا آنا و السا. یک دانش آموز دبیرستانی باید بتواند یکی از این ها را در 30 دقیقه تمام کند و سپس بتواند یک آموزش پیشرفته تر در جاوا اسکریپت، مانند Khan Academy یا CodeHR را امتحان کند."
   hoc_faq_scratch_q: من برای ساعت کدنویسی از Scratch استفاده میکنم، اما اگر دانش آموزانم به جای لپ تاپ از آی پد استفاده کنند چه می شود?
@@ -330,10 +334,12 @@ fa:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: آماري از ساعت كدنويسي در سال 2013
   stats_growth: سريع‌ترين در رسيدن به 15 ميليون كاربر.
-  stats_i18n: Students are learning in 40 languages
+  stats_i18n: Students are learning in over 45 languages
   stats_tumblr: 'تامبلر: سه سال و نيم'
   stats_facebook: 'فیسبوک: سه سال'
   stats_twitter: 'توییتر: دو سال و نيم'
@@ -415,6 +421,9 @@ fa:
   events_orgs_title: تمام وقایع ساعت کد سازماندهی شده توسط سازمان های همکار
   event: رویداد
   events: رویدادها
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: 'حق طبع و نشر Code.org  2015. کلیه حقوق محفوظ می‌باشد.'
   footer_trademark_message: ™Hour of Code علامت تجاري Code.org است.
   footer_menu_partners: شرکا

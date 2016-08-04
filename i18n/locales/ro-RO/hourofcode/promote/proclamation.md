@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
 
   
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [DATA]
 
-Întrucât tehnologia este o parte integrantă a culturii şi se transformă in functie de modul în care oamenii interacţionează cu fiecare şi de lumea din jurul lor;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Întrucât stiinta computerului si programarea transforma industria, creeaza noi domenii de comert, conduce inovaţia în toate domeniile ştiinţei, şi susţine productivitatea în sectorul economic stabilit;
 
@@ -25,7 +23,7 @@ Chiar daca acest câmpul de stiinta calculatorului stă la baza sectorului tehno
 
 Întrucât sectorul tehnologiei informaţiilor este poziţionat unic pentru a ajuta redresării economice prin cercetare şi dezvoltare de noi inovaţii;
 
-Întrucât perspectivele pentru slujbe in IT sunt sclipitoare; una din 2 din friecare job-uri STEM sunt in IT;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Întrucât furnizarea sansei elevilor de a participa la activităţi de inalta clasa privind stiinta calculatorului si programare ii expune la oportunităţile bogate pe care domeniul le oferă şi la abilităţile de gândire critică, care le va servi toată viaţa;
 
@@ -52,5 +50,3 @@ Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
 (4) încurajează factorii de decizie politică să elimine barierele care împiedică clasele de informatica sa fie considerate egale cu cele de matematica sau ştiinţă in ceea ce priveste cerinţele de absolvire;
 
 (5) încurajează oportunităţi, inclusiv prin programele existente, pentru femei şi minorităţile slab reprezentate înstiinta calculatorului si programare.
-
-<%= view :signup_button %>

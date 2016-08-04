@@ -209,6 +209,7 @@ class LevelSourceHintsController < ApplicationController
     @game = @level.game
 
     level_view_options(
+      @level.id,
       start_blocks: @level_source.data,
       hide_source: false,
       share: true

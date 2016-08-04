@@ -8,11 +8,14 @@ pl:
   campaign_date_start_long: 7 grudnia
   campaign_date_short: 7-13 grudnia
   campaign_date_full: 7-13 grudnia
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Dołącz do największej akcji edukacyjnej w historii, 7-13 grudnia 2015
   front_intro_default: 'Godzina Kodowania jest globalną akcją, w której udział biorą dziesiątki milionów uczniów z ponad 180 krajów. Nieważne kim jesteś ani skąd pochodzisz, każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są dostępne w ponad 40 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>'
   front_watch_video: Obejrzyj nowy film
   front_watch_regular_video: Obejrzyj wideo
   front_volunteers: Potrzebni są wolontariusze techniczni
+  front_start_learning: Start learning
   header_menu_resources: Materiały
   header_menu_faq: FAQ
   header_menu_prizes: Nagrody
@@ -174,7 +177,9 @@ pl:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Nagrody dla każdego nauczyciela
   prizes_10k: W każdym stanie USA (oraz w Waszyngtonie) jedna szkoła publiczna wygra nagrody o wartości $10,000
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Każdy</i> organizator otrzyma kupon upominkoway do sklepów Amazon.com lub Microsoft Windows.'
+  prizes_more: More exciting prizes
   whats_next_header: Co dalej?
   whats_next_description: "Wyślemy Ci materiały oraz pomocne wskazówki. Nowe poradniki na rok 2015 wkrótce będą dostępne dla każdej przeglądarki, smartfonu - lub nawet bez komputera! <a href='http://code.org/learn'> Spróbuj dostępnych poradników</a>"
   whats_next_how_to: "<a href='/how-to'>Jak poprowadzić Godzinę Kodowania</a>"
@@ -243,7 +248,7 @@ pl:
   signup_name_placeholder: Twoje imię i nazwisko
   signup_email_placeholder: Jan.Kowalski@example.com
   signup_organization_name_placeholder: Na przykład Lincoln High School
-  signup_event_location_placeholder: "Kod pocztowy i kraj LUB pełny adres. \r \n(użyjemy tej informacji, by przypiąć was szpilką na naszej mapie)"
+  signup_event_location_placeholder: "Kod pocztowy i kraj LUB pełny adres. \\r \n(użyjemy tej informacji, by przypiąć was szpilką na naszej mapie)"
   signup_special_event_details_placeholder: Opisz, co sprawia, że to wydarzenie jest wyjątkowe
   signup_send_posters_address_placeholder: Ten adres nie zostanie udostępniony na naszej mapie
   signup_event_type_in_school: W szkole
@@ -252,6 +257,7 @@ pl:
   signup_submit_error_message: Wystąpił błąd. Upewnij się, że wszystkie wymagane pola zostały wypełnione prawidłowo.
   signup_thank_you_header: Dziękujemy za rejestrację jako organizator Hour of Code.
   signup_thank_you_message: Wysłaliśmy do Ciebie e-mail z potwierdzeniem oraz informacjami, które pomogą Ci zacząć.
+  map_title: Hour of Code map
   map_header: '# wydarzeń Hour of Code na całym świecie'
   see_all_events: Zobacz wszystkie wydarzenia
   map_header_company: '# by company organizers'
@@ -261,7 +267,7 @@ pl:
   map_search_reset: Resetuj
   map_legend_title: Legenda
   map_legend_hoc_events: Wydarzenia Godziny Kodowania
-  map_legend_cs_tech_jam: Special Event
+  map_legend_cs_tech_jam: Wydarzenie specjalne
   meta_tag_og_title: Zbliża się Godzina Kodowania
   meta_tag_og_description: The Hour of Code to globalny ruch docierający do dziesiątek milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek od 4 do 104 lat.
   meta_tag_twitter_title: Zbliża się Godzina Kodowania
@@ -304,7 +310,7 @@ pl:
   hoc_faq_host_q: Nic nie wiem o kodowaniu. Czy nadal mogę utworzyć wydarzenie?
   hoc_faq_host_a: "Oczywiście. Ćwiczenia Hour of Code możesz wykonywać samodzielnie. Jedyne co musisz zrobić to <a href='%{codeorg_url}/learn'>spróbować naszych obecnych samouczków</a>, wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą. Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola wzwyż. Zacznij planowanie swojego wydarzenia poprzez przeczytanie naszych <a href=''how-to'>jak poprowadzić</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Czy potrzebuję komputerów dla każdego uczestnika?
   hoc_faq_need_computers_a: "Nie. Posiadamy samouczki do Hour of Code, które działają na komputerach, smartfonach, tabletach, a niektóre z nich w ogóle nie potrzebują urządzenia! Możesz dołączyć gdziekolwiek jesteś, z jakimkolwiek sprzętem. <p><i>Oto kilka opcji:</i><br><ul><li><b>Pracujcie w parach.</b> Badania pokazują, że uczniowie najlepiej uczą się poprzez <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programowanie parami</a>, dzielenie komputera i współpracowanie. Zachęć swoich uczniów, by połączyli się w pary.<li><b>Użyj projektora.</b> Jeśli masz projektor i ekran komputera podłączony do sieci, twoja cała klasa może uczestniczyć w Hour of Code wspólnie. Oglądajcie fragmenty filmików razem i na zmianę rozwiązujcie zagadki i odpowiadajcie na pytania.<li><b>Przeprowadźcie to bez podłączenia.</b>Oferujemy samouczki, które w ogóle nie wymagają komputera.</ul>"
   hoc_faq_international_q: 'Jestem w <country>. Jak mogę wziąć udział międzynarodowo?'
@@ -313,8 +319,6 @@ pl:
   hoc_faq_tutorial_a: "Jeśli jesteś zainteresowany byciem partnerem przy nauce, <a href='target-tutorial-guidelines'> Zobacz nasze wskazówki i instrukcje</a>. Chcielibyśmy zrealizować szereg atrakcyjnych działań, ale głównym celem jest, aby  uczniowie i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia."
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
   hoc_faq_account_a: "Nie. Rejestracja i logowanie nie są wymagane aby spróbować Godziny Kodowania. Większość kursów <a href='http://code.org/learn/beyond'>kursów</a> wymaga stworzenia konta jedynie aby zapisywać postęp uczniów."
-  hoc_faq_frozen_q: Gdzie jest samouczek z Anną i Elsą?
-  hoc_faq_frozen_a: "Jest opublikowany na <a href='http://code.org/learn'> Code.org/learn</a>. Mamy nadzieję, że ci się spodoba!"
   hoc_faq_high_school_q: Jakie aktywności wykonywać ze starszymi uczniami?
   hoc_faq_high_school_a: "Bez względu na wiek, polecamy wypróbowanie naszego samouczka dla początkujących na <a href='http://code.org/learn'>Code.org/learn</a>, np. samoucznka z Angry Birds lub z Anną i Elsą. Starsi uczniowie powinni być w stanie je ukończyć w 30 minut, a potem możesz spróbować bardziej zaawansowanych kursów JavaScript na Khan Academy lub CodeHS."
   hoc_faq_scratch_q: Podczas godziny kodowania używam Scratcha, ale co jeśli moi uczniowie używają iPadów zamiast laptopów?
@@ -330,7 +334,9 @@ pl:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
   stats_i18n: Uczniowie uczą się w 40 językach
@@ -415,6 +421,9 @@ pl:
   events_orgs_title: Wszystkie wydarzenia z serii Godzina Kodowania organizowane przez partnerów
   event: wydarzenie
   events: wydarzenia
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
   footer_trademark_message: Hour od Code™ jest znakiem towarowym Code.org.
   footer_menu_partners: Partnerzy

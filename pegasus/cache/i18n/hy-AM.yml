@@ -1,5 +1,5 @@
 "hy-AM":
-  hour_of_code: "Ժամ օրենսգրքի"
+  hour_of_code: "Կոդի ժամ"
   hello: "Բարև աշխարհ"
   'yes': "այո"
   'no': "ոչ"
@@ -43,19 +43,19 @@
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
   hoc2014_everyone: Everyone
-  hoc2014_support: Support it
+  hoc2014_support: "Աջակցել &#x25BE;"
   hoc2014_whatishoc: What is the Hour of Code?
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
-  csedweek_map_search_reset: "տեղավորել"
+  csedweek_map_search_reset: "Վերականգնել"
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: "Գրանցվել"
   cded_try_it: Try it
-  twentyhours_trynow: "Փորձել հիմա"
+  try_now: "Փորձել հիմա"
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
@@ -284,13 +284,13 @@
   studiobar_elementary_body: Our three new courses for K&#8209;5
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_flappy_title: Flappy-ի կոդը
+  studiobar_flappy_body: "Սարքիր և կիսվիր քո Flappy խաղով"
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: "Ժամ օրենսգրքի"
+  studiobar_frozen_title: "Կոդի ժամ"
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
+  studiobar_donate_title: "Նվիրաբերել"
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
@@ -307,21 +307,21 @@
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Մեր երեխաները &mdash; ներառյալ մեր աղջիկները &mdash;
+    պետք է հնարավորություն ունենան սովորելու համակգչային գիտություններ.&rdquo;
+    Sheryl, Facebook-ի COO
   homepage_hero_text_satya: |
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
     Satya, CEO of Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Եթե դու գիտես կոդ գրել,
+    դու կարող ես ընտրեոլ քո կյանքի ուղին.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Այս հմտությունները փոխեցին իմ ապագան.
+    Էլ չասած, թե ինչ զվարճալի է.&rdquo;
+    Luna, 7-րդ դասարան
   homepage_hero_text_student2: |
     &ldquo;I have never, ever seen my kids
     so excited about learning.&rdquo;
@@ -343,19 +343,18 @@
     all of which are essential in any career.&rdquo;
     Floresa, teacher
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo; Այս ծրագիրը օգնեց իմ բոլոր աշակերտներին.&rdquo;
+    Adam, ուսուցիչ
+  homepage_hero_text_stat_loc: 2.5 միլին աղջիկներ են սովորում Code Studio-ի միջոցով
+  homepage_hero_text_stat_students: "#student_count ուսանողներ Code Studio-ում"
+  homepage_hero_text_stat_served: "Կոդի Ժամի #served մասնակից"
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: Flappy-ի կոդը
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: "# served"
   homepage_action_text_join_us: Join us
@@ -365,7 +364,7 @@
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: ''
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: "Սկսել սովորել"
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
@@ -383,20 +382,23 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_slot_text_title_hoc: "Ժամ օրենսգրքի"
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
-  homepage_slot_text_link_hoc: "Փորձեք ժամը օրենսգրքի"
+  homepage_banner_emailprivacy: We’re making an important change to how we support
+    student privacy.
+  homepage_banner_emailprivacy_link: Read more
+  homepage_slot_text_title_hoc: "Կոդի ժամ"
+  homepage_slot_text_blurb_hoc: "Յուրաքանչյուրը կարող է սովորել. Սկսիր այսօր."
+  homepage_slot_text_link_hoc: "Փորձիր Կոդի Ժամը"
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: "Ուսանողներ"
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: "Փորձել բոլոր տուտորիալները"
   homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
   homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_title_educators: "Ուսուցիչներ"
+  homepage_slot_text_blurb_educators: "Դասավանդիր քո աշակերտներին"
   homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: Middle school
   homepage_slot_text_link_high: High school
@@ -410,9 +412,9 @@
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org շնորհակալ է բոլոր աջակիցներից
-  homepage_donors_seall: See all
-  homepage_donors_donate: Donate
+  homepage_header_donors: Code.org շնորհակալ է բոլոր աջակիցներին
+  homepage_donors_seall: "Տեսնել բոլորը"
+  homepage_donors_donate: "Նվիրաբերել"
   contact_form_topic_student: "Ես աշակերտ եմ"
   contact_form_topic_parent: "Ես ծնող եմ"
   contact_form_topic_teacher: "Ես ուսուցիչ/մանկավարժ եմ"
@@ -462,16 +464,10 @@
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: "Փորձել հիմա"
   starwars_blocks_title: Blocks
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
-  starwars_blocks_start_button: "Փորձել հիմա"
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
@@ -482,6 +478,14 @@
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  are_you_teacher: "Դուք ուսուցիչ եք?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -583,7 +587,7 @@
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
   petition_age: "Տարիք"
-  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_title: "Ուսուցչի գլխավոր էջը"
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
   dashboard_landing_watch_video: for a tour of the new features!
@@ -680,10 +684,12 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_home_page: "Ուսուցչի գլխավոր էջը"
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
@@ -694,6 +700,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -877,7 +884,12 @@
     so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
     concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
     the user experience</a> to answer the big question: <i>What can students do?</i>'
-  dashboard_announce_button_text: "Սովորել ավելին"
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: "Սովորել ավելին"
+  dashboard_announce_try_now_button: "Փորձել հիմա"
   dashboard_announce_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ
     յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային
     գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ,
@@ -994,7 +1006,7 @@
   hourofcode_name: Placeholder for new code.org/hoc
   playlab_name: Play Lab
   infinity_name: Infinity Խաղալ Lab
-  artist_name: Artist
+  artist_name: "Արտիստ"
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -1035,7 +1047,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: "Մաթեմատիկա"
-  hoc_category_name: "Ժամ օրենսգրքի"
+  hoc_category_name: "Կոդի ժամ"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
@@ -1711,11 +1723,11 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: "Թաքցնել այս նախազգուշացումը"
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn

@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### U nastavku je uzorak op-ed podrške tjednu računarstva i njegovih ciljeva koje mogu koristiti država, lokalni zakonodavci poslovni ljudi itd.
 
   
@@ -13,36 +11,34 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
-**Naslov: Programiranje...Tamo su poslovi**
+**Title: Computing…Where the Jobs Are**
 
-**[NAME] i [RAZMOTRITE PISANJE SA PROFESOROM, NADREĐENIM ILI POSLOVNIM LIDEROM]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Računari su posvuda. Oni su u našim džepovima. Oni su na našim zidovima. Oni su u našim automobilima. Su kritični dio infrastrukture, od elektromreže na semaforima do unutrašnje opreme financijskih tržišta. I sva ta računala imaju jednu zajedničku stvar. Ovise o aplikacijama koje im govore što učiniti.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Ali tko će pisati ovaj softver?
+But who exactly is going to write this software?
 
-S obzirom kako se brzo naš svijet transformira tehnologijom, za očekivati je da broj polaznika studija računarstva danas bude na vrhuncu. Griješite. U stvari, danas ima manje studenata studija računarstva, i manje škola za poučavanje računarstva, nego prije deset godina.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-U vrijeme kada potražnja za vještim programerima nikada nije bila veća, mi dajemo manje računalnih stručnjaka. Čak i u ovo doba visoke nezaposlenosti, tisuće slobodnih radnih mjesta, mnogi od njih ovdje u **[UMETNI država/grad]**, će ostati neispunjena zbog nedostatka broja osoba s pravim setom vještina.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Zašto je to tako? I kako to možemo promijeniti?
+Why is this? And how can we address it?
 
-Problem počinje u srednjim i visokim školama. Devet od deset naših škola ne nude programiranje. U **[školskom distriktu]** prošle godine, samo **[NUMBER]** učenika je izašao na visoki Advanced Placement (AP) ispit u računarstvu, samo **[%]** od svih učenika koji izlaze na AP u našoj državi. Jednostavno ne radimo dovoljno da pripremimo ili ohrabrimo naše studente da idu za tim dobro plaćenim, vitalnim karijerama.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Gotovo sve glavne računarske inovacije izmišljene su u SAD-u, a oni su u opasnosti od gubitka vodstva ako sada nešto ne učinine.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Moraju napraviti neke promjene.
+We need to make some changes.
 
-**[OBAVEZNO ZA DRŽAVE GDJE TO VRIJEDI]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Pozitivna promjena bila bi dopustiti rigorozne tečajeve informatike da budu obavezni za diplomu u srednjim školalma u predmetima matematike ili informatike. U **[UMETNI državu]**, tečajevi informatičke znanosti su izborni predmeti. S obzirom na akademske zahtjeve, studenti ne mogu priuštiti da izaberu kao izborni predmet Informatiku. Ova promjena može imati veliki utjecaj. U državama gdje je informatika bitna za dobijanje diplome, tečajevi informatike su 50% veći s mnogo višom stopom sudjelovanja manjina u odnosu na države koje tretiraju znanost kao izborni predmet.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Također bismo treballi raditi sa mladim učenicima kako bi pobudili njihovo zanimanje za računarstvo i programiranje. Naša djecane bi trebala samo znati kako koristiti aplikacije i puštati video igre-trebala bi znati kako ih naapraviti. Djeca mogu naučiti osnove kodiranja već u drugom razredu.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Trebamo zaposliti više nastavnika informatike i poticati stručno usavršavanje u ovom području. Danas postoje mnogi online resursi koji mogu pomoći nastavnicima u pristupu i održavanju u toku s najnovijom tehnologijom za svoje učenike.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Prema Uredu za poslovnu statistiku, do 2020, bit će 9,2 milijuna radnih mjesta u STEM poljima. Pola tih poslova — 4,6 milijuna — bit će u računarstvo i informacijskoj tehnologiji. I informatika sve više postaje temeljno znanje za 21. stoljeće. Koji će ispuniti te poslove ako našoj djeci ne damo priliku da steknu vještine koje su potrebne?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. U školama diljem **[STATE]**, naši učenici će sudjelovati u nacionalnom Satu kodiranja, skidajući veo misterije sa predmeta računarstva i uz malo dobro volje će im se otvoriti apetit da naučite još više. Sam ću im se pridružiti, i pozivam vas isto da se pridružite. Svatko treba naučiti kako kodirati. Visit https://hourofcode.com/<%= @country %> to learn more and get started. I podržite naše napore da donesemo više informatike u škole u **[STATE]**.
-
-<%= view :signup_button %>
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.

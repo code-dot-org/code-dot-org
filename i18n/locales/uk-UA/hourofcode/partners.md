@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-<%= view :signup_button %>
-
 <% if @country == 'la' %>
 
 # Latin America Partners
@@ -27,6 +25,22 @@ title: <%= hoc_s(:title_partners) %>
 # Australia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'cn' %>
+
+# China Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
+
+<% end %>
+
+<% if @country == 'fr' %>
+
+# France Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
 <% end %>
 
@@ -62,6 +76,14 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'nl' %>
+
+# Netherlands Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
+
+<% end %>
+
 <% if @country == 'nz' %>
 
 # New Zealand Partners
@@ -86,19 +108,19 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Основні партнери та корпоративні прихильники
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Основні рекламні партнери
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Міжнародні партнери
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
@@ -110,7 +132,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Партнери з інфраструктури та інструментів
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
@@ -119,5 +141,3 @@ title: <%= hoc_s(:title_partners) %>
 # Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-
-<%= view :signup_button %>

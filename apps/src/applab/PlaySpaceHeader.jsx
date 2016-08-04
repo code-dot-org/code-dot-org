@@ -2,7 +2,7 @@
 
 var React = require('react');
 var constants = require('./constants');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var utils = require('../utils');
 var actions = require('./actions');
 var connect = require('react-redux').connect;
@@ -45,10 +45,10 @@ var PlaySpaceHeader = React.createClass({
     if (!this.shouldHideToggle()) {
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
-          <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
-          <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+          <button id="codeModeButton" value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
+          <button id="designModeButton" value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
           {this.props.hasDataMode &&
-            <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
+            <button id="dataModeButton" value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
           }
         </ToggleGroup>
       );
@@ -58,9 +58,12 @@ var PlaySpaceHeader = React.createClass({
       rightSide = <ViewDataButton onClick={this.handleViewData} />;
     } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
         !this.props.playspacePhoneFrame) {
-      rightSide = <ScreenSelector
+      rightSide = (
+        <ScreenSelector
           screenIds={this.props.screenIds}
-          onCreate={this.props.onScreenCreate}/>;
+          onCreate={this.props.onScreenCreate}
+        />
+      );
     }
 
     return (

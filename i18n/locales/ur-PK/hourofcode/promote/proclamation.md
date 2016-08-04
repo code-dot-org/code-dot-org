@@ -4,53 +4,49 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### ذیل میں ایک سیمپل جو کمپیوٹر سائنس ایجوکیشن ویک کی حمایت میں قرارداد ہے اور جس کے مقاصد کو اسٹیٹ اور مقامی لیجسٹیز (قانون ساز) استعمال کرسکتے ہیں۔
 
   
-[ہاؤس، سینیٹ، اسٹیٹ، کاؤنٹی، یا سٹی کی قرارداد یا باضابطہ اعلان###]– یہ کہ کمپیوٹر سائنس ایجوکیشن ویک، کمپیوٹر سائنس کے کلیدی کردار پر روشنی ڈالتا ہے کہ یہ ہماری سوسائٹی کو تبدیل کرنے میں کس طرح کام کرتا ہے اور کیسے کمپیوٹر سائنس اختراعات کو قابل اور کیسے اقتصادی مواقعوں کو جنم دیتا ہے؛
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[ہاؤس، سینیٹ، اسٹیٹ، کاؤنٹی، یا سٹی کی قرارداد یا باضابطہ اعلان###]
+[HOUSE OR SENATE RESOLUTION ###]
 
-[تاریخ]
+[DATE]
 
-جیسا کہ کمپیوٹر ٹیکنالوجی ثقافت کا ایک لازمی جُز ہے اور یہ روبہ مائل تبدیلی ہے کہ لوگ ایک دوسرے سے اور گردو بیش دنیا سے کیسے رابطہ کریں؛
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-جیسا کہ کمپیوٹر سائنس انڈسٹری کے تمام شعبوں میں اختراعی تبدیلیاں لا رہی ہے، کامرس کے نئے شعبہ بنانے، صنعت کو تبدیل کرنے اور قائم اقتصادی شعبوں میں پیداوار کو محفوظ بنا رہی ہے؛
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-جیسا کہ کمپیوٹر سائنس کی فیلڈ ہماری اکانومی (معیشت) میں انفارمیشن ٹیکنالوجی سیکٹر کو سہارا دی ہوئی ہے جو کہ یونائیٹڈ اسٹیٹ کی اقتصادی پیداوار میں ایک نمایاں حصہ ہے
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-جیسا کہ کمپیوٹر سائنس کی فیلڈ اس ڈیجیٹل ایج کے لیے بنیادی سائنس ہے؛
+Whereas the field of computer science is a foundational science for the digital age;
 
-اور یہ کہ انفارمیشن ٹیکنالوجی کے شعبہ/سیکٹر نئی اختراعات و تحقیق اور ترقی کے ذریعہ اقتصادی بحالی میں مدد منفرد انداز میں کرتی ہے۔
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-اور یہ کہ کمپیوٹر سائنس جابز کا پیش منظر بہت روشن ہے ملک میں ہر دو میں سے ایک STEM جابز کمپیوٹنگ کی اسامیاں ہے؛
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-اور یہ کہ یہ اسٹوڈینٹس کو اعلی-درجہ کی کمپیوٹر سائنس ایکٹیویٹیز میں شرکت کا موقع فراہم کرتی ہے اور انہیں اس فیلڈ میں موجود بھرپور مواقع سے اجاگر کرتی ہے اور کریٹیکل تھنکنگ کی مہارت دیتی ہے جو کہ زندگی بھر ان کے کام آتی ہے؛
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-اور یہ کہ تمام اسٹوڈینٹس کمپیوٹر سائنس کی تعلیم میں ایک جامع تیاری کے مستحق ہیں، بشمول تعلیم یافتہ ٹیچرز تک رسائی، ٹیکنالوجی، اور عمر کی مناسبت سے نصاب کی ضروریات جو ایلیمنٹری اور سیکنڈری لیولز میں کمپیوٹر سائنس کی تعلیم سیکھنے کے لیے ضروری ہیں؛
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-اور یہ کہ کمپیوٹر سائنس ایجوکیشن کو چیلنجز سے بھی نمٹنا ہے، بشمول ہائی اسکول گریجویشن مطلوبات کے ضمن میں، کمپیوٹر سائنس کلاسز کا شمار اور کمپیوٹر سائنس ٹیچرز کی پیشہ ورانہ ترقی کی فراہمی؛
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-اور یہ کہ کمپیوٹر سائنس ایجوکیشن ویک کے دوران آور-آف-کوڈ میں شرکت کمپیوٹر سائنس کے بارے میں ابہام کو ختم کرنے کا باعث اور زیادہ اسٹوڈینٹس کو کمپیوٹر سائنس میں مزید تعلیم حاصل کرنے کے لیے حوصلہ افزائی کرسکتا ہے۔
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-اور یہ کہ کمپیوٹر سائنس کی فیلڈ میں روکاوٹوں سے نمٹنے کی برابر صلاحیت ہے بشمول، تمام لیول اور برانچز کی خواتین اور پسماندہ اقلیت کو زیادہ متوجہ کرنے اور شرکت کے لیے ہے؛
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-اور یہ کہ گریس مرے ھوپر، کمپیوٹر سائنس کی فیلڈ کی اولین خاتون ہیں، جنہوں نے نئی پروگرامنگ لینگویجز اسٹینڈرڈ کیں اور کمپیوٹر سسٹمز میں اسٹینڈرڈ کی بانی ہوتے ہوئے کمپیوٹر سائنس میں کئی جدتوں کی بنیاد رکھی؛ اور 
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-جیسا کہ یہ ہفتہ <%= campaign_date('start-long') %>، گریس ھوپر کی سالگرہ کے اعزاز میں "کمپیوٹر سائنس ایجوکیشن ویک" ان کے نام سے منسوب کیا جاتا ہے، اور اب، لہذا، طے کر لیا گیا ہے کہ
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-قرارداد منظور ہوئی، کہ [ہاؤس، سینیٹ، اسٹیٹ، کاؤنٹی، سٹی یا اسکول بورڈ ###] --
+Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) کمپیوٹر سائنس ایجوکیشن ویک (<%= campaign_date('full') %>) لقب/عہدہ کی حمایت کریں گے؛
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) اسکولز، ایجوکیٹرز، پیرینٹس اور پالیسی میکرز کو کمپیوٹر سائنس ایجوکیشن میں شرکت کرنے کے لیے حوصلہ افزائی کریں۔ اس سے ان کے اسٹوڈینٹس کو آور-آف-کوڈ میں شرکت کا موقع ملے۔
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) اسکولز، ٹیچرز، ریسرچرز، یونیورسٹیز، بزنس لیڈر اور پالیسی میکرز کی حوصلہ افزائی کریں کہ وہ ٹیچرز کے لیے ایسے مکینزم کی نشاندہی کریں کہ انہیں بہترین پروفیشنل ڈیولپمنٹ حاصل ہو تاکہ وہ کمپیوٹر سائنس کے تمام ایجوکیشنل لیولز میں پائیدار سیکھنے کا تجربہ فراہم کرسکیں اور اسٹوڈینٹس کی حوصلہ افزائی کریں تاکہ وہ کمپیوٹر سائنس کے کانسیپٹ (تصور) سے فیض یاب ہوسکیں؛
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) پالیسی میکرز کی حوصلہ افزائی کریں کہ وہ اُن روکاوٹوں کو ہٹا دیں جن میں گریجویشن کی ریکوائرمنٹ کے لیے کمپیوٹر سائنس کی کلاسز کو میتھ یا سائنس گریڈ کے طور پر شمار کیا جا رہا ہے؛
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) مواقوں کی حوصلہ افزائی کریں، بشمول کمپیوٹر سائنس کے موجودہ پروگرامز کے ذریعہ، ان خواتین اور پسماندہ اقلیتوں کے لیے۔
-
-<%= view :signup_button %>
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
