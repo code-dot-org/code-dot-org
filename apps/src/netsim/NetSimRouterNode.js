@@ -1505,7 +1505,7 @@ NetSimRouterNode.prototype.findFirstLocallySimulatedPacketOverMemoryLimit = func
  * @private
  */
 NetSimRouterNode.prototype.isMessageToRouter_ = function (message) {
-  if (this.dnsMode === DnsMode.AUTOMATIC && this.isMessageToAutoDns_(message)) {
+  if (this.isMessageToAutoDns_(message)) {
     return false;
   }
 
@@ -1735,6 +1735,11 @@ NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (messages) {
  * @return {boolean}
  */
 NetSimRouterNode.prototype.isMessageToAutoDns_ = function (message) {
+  // Impossible if we're not in Auto-DNS mode.
+  if (this.dnsMode !== DnsMode.AUTOMATIC) {
+    return false;
+  }
+
   var packet, toAddress;
   try {
     packet = new Packet(this.packetSpec_, message.payload);
@@ -1756,6 +1761,11 @@ NetSimRouterNode.prototype.isMessageToAutoDns_ = function (message) {
  * @return {boolean}
  */
 NetSimRouterNode.prototype.isMessageFromAutoDns_ = function (message) {
+  // Impossible if we're not in Auto-DNS mode.
+  if (this.dnsMode !== DnsMode.AUTOMATIC) {
+    return false;
+  }
+
   var packet, fromAddress;
   try {
     packet = new Packet(this.packetSpec_, message.payload);
