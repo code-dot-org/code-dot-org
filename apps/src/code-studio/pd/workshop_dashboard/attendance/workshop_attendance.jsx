@@ -1,20 +1,22 @@
-/*
-  Display and edit attendance for a workshop.
-  It has a tab for each session which lists all enrolled teachers and their status.
-  Route: /workshops/:workshopId/attendance(/:sessionIndex)
+/**
+ * Display and edit attendance for a workshop.
+ * It has a tab for each session which lists all enrolled teachers and their status.
+ * Route: /workshops/:workshopId/attendance(/:sessionIndex)
  */
 
 import $ from 'jquery';
-var _ = require('lodash');
+import _ from 'lodash';
 import React from 'react';
-var SessionTime = require('../components/session_time');
-var SessionAttendance = require('./session_attendance');
-var Row = require('react-bootstrap').Row;
-var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
-var Button = require('react-bootstrap').Button;
-var Tabs = require('react-bootstrap').Tabs;
-var Tab = require('react-bootstrap').Tab;
-var Col = require('react-bootstrap').Col;
+import SessionTime from '../components/session_time';
+import SessionAttendance from './session_attendance';
+import {
+  Row,
+  Col,
+  ButtonToolbar,
+  Button,
+  Tabs,
+  Tab
+} from 'react-bootstrap';
 
 var WorkshopAttendance = React.createClass({
   contextTypes: {
@@ -28,7 +30,7 @@ var WorkshopAttendance = React.createClass({
     }).isRequired
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       loading: true,
       workshopState: undefined,
@@ -38,7 +40,7 @@ var WorkshopAttendance = React.createClass({
     };
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     // Response format:
     // [
     //   state: _workshop state_,
@@ -49,17 +51,17 @@ var WorkshopAttendance = React.createClass({
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`,
       dataType: "json"
-    }).done(function (data) {
+    }).done((data) => {
       this.setState({
         loading: false,
         workshopState: data.state,
         sessionAttendances: data.session_attendances,
         adminActions: data.admin_actions
       });
-    }.bind(this));
+    });
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
@@ -68,15 +70,15 @@ var WorkshopAttendance = React.createClass({
     }
   },
 
-  handleNavSelect: function (sessionIndex) {
+  handleNavSelect(sessionIndex) {
     this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionIndex}`);
   },
 
-  handleCancelClick: function (e) {
+  handleCancelClick() {
     this.context.router.push(`/workshops/${this.props.params.workshopId}`);
   },
 
-  handleSaveClick: function (e) {
+  handleSaveClick() {
     var url = `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`;
     var data = this.prepareDataForApi();
     this.saveRequest = $.ajax({
@@ -85,20 +87,20 @@ var WorkshopAttendance = React.createClass({
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify({pd_workshop: data})
-    }).done(function () {
+    }).done(() => {
       this.context.router.push('/workshops/' + this.props.params.workshopId);
-    }.bind(this));
+    });
   },
 
-  prepareDataForApi: function () {
+  prepareDataForApi() {
     // Convert to {session_attendances: [session_id, attendances: [user_id or email]]}
     return {
-      session_attendances: this.state.sessionAttendances.map(function (sessionAttendance) {
+      session_attendances: this.state.sessionAttendances.map((sessionAttendance) => {
         return {
           session_id: sessionAttendance.session.id,
-          attendances: sessionAttendance.attendance.filter(function (attendance) {
+          attendances: sessionAttendance.attendance.filter((attendance) => {
             return attendance.attended;
-          }).map(function (attendance) {
+          }).map((attendance) => {
             if (attendance.user_id) {
               return {id: attendance.user_id};
             }
@@ -111,21 +113,21 @@ var WorkshopAttendance = React.createClass({
     };
   },
 
-  handleAttendanceChange: function (i, value) {
+  handleAttendanceChange(i, value) {
     var clonedAttendances = _.cloneDeep(this.state.sessionAttendances);
     clonedAttendances[this.activeSessionIndex()].attendance[i].attended = value;
     this.setState({sessionAttendances: clonedAttendances});
   },
 
-  activeSessionIndex: function () {
+  activeSessionIndex() {
     return parseInt(this.props.params.sessionIndex, 10) || 0;
   },
 
-  handleAdminOverrideClick: function () {
+  handleAdminOverrideClick() {
     this.setState({adminOverride: !this.state.adminOverride});
   },
 
-  renderAdminControls: function () {
+  renderAdminControls() {
     if (!this.state.adminActions) {
       return null;
     }
@@ -148,13 +150,13 @@ var WorkshopAttendance = React.createClass({
     );
   },
 
-  render: function () {
+  render() {
     if (this.state.loading) {
       return <i className="fa fa-spinner fa-pulse fa-3x" />;
     }
 
     let isReadOnly = this.state.workshopState === 'Ended';
-    let sessionTabs = this.state.sessionAttendances.map(function (sessionAttendance, i) {
+    let sessionTabs = this.state.sessionAttendances.map((sessionAttendance, i) => {
       var session = sessionAttendance.session;
       return (
         <Tab key={i} eventKey={i} title={<SessionTime session={session}/>}>
@@ -167,7 +169,7 @@ var WorkshopAttendance = React.createClass({
           />
         </Tab>
       );
-    }.bind(this));
+    });
 
     let intro = null;
     if (isReadOnly) {
@@ -185,7 +187,7 @@ var WorkshopAttendance = React.createClass({
         </h1>
         {intro}
         {isReadOnly ? null : this.renderAdminControls()}
-        <Tabs activeKey={this.activeSessionIndex()} onSelect={this.handleNavSelect}>
+        <Tabs activeKey={this.activeSessionIndex()} onSelect={this.handleNavSelect} id="attendance-tabs">
           {sessionTabs}
         </Tabs>
         <br />
@@ -201,4 +203,4 @@ var WorkshopAttendance = React.createClass({
     );
   }
 });
-module.exports = WorkshopAttendance;
+export default WorkshopAttendance;

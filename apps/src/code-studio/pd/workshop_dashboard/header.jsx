@@ -1,9 +1,9 @@
-/*
-  Header present throughout the workshop dashboard UI.
-  Displays navigation breadcrumbs.
+/**
+ * Header present throughout the workshop dashboard UI.
+ * Displays navigation breadcrumbs.
  */
 import React from 'react';
-var Breadcrumb = require('react-bootstrap').Breadcrumb;
+import {Breadcrumb} from 'react-bootstrap';
 
 var Header = React.createClass({
   contextTypes: {
@@ -20,11 +20,11 @@ var Header = React.createClass({
     children: React.PropTypes.object.isRequired
   },
 
-  handleClick: function (path) {
+  handleClick(path) {
     this.context.router.push(path.toLowerCase());
   },
 
-  renderBreadcrumbItems: function () {
+  renderBreadcrumbItems() {
     var breadcrumbItems = [];
     var builtPath = "/";
     breadcrumbItems.push({name: "Workshop Dashboard", path: builtPath});
@@ -43,7 +43,7 @@ var Header = React.createClass({
       }
     }
 
-    return breadcrumbItems.map( function (breadcrumbItem, i) {
+    return breadcrumbItems.map((breadcrumbItem, i) => {
       if (i < breadcrumbItems.length - 1) {
         return (
           <Breadcrumb.Item
@@ -60,10 +60,10 @@ var Header = React.createClass({
           </Breadcrumb.Item>
         );
       }
-    }.bind(this));
+    });
   },
 
-  render: function () {
+  render() {
     return (
       <div>
         <Breadcrumb>
@@ -74,4 +74,4 @@ var Header = React.createClass({
     );
   }
 });
-module.exports = Header;
+export default Header;

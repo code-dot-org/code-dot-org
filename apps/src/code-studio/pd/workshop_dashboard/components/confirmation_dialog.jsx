@@ -1,9 +1,8 @@
-/*
-  Modal confirmation (OK/Cancel) dialog with custom text and events.
+/**
+ * Modal confirmation (OK/Cancel) dialog with custom text and events.
  */
 import React from 'react';
-var Modal = require('react-bootstrap').Modal;
-var Button = require('react-bootstrap').Button;
+import {Modal, Button} from 'react-bootstrap';
 
 var ConfirmationDialog = React.createClass({
   propTypes: {
@@ -14,7 +13,7 @@ var ConfirmationDialog = React.createClass({
     bodyText: React.PropTypes.string.isRequired
   },
 
-  render: function () {
+  render() {
     return (
       <Modal show={this.props.show} onHide={this.props.onCancel}>
         <Modal.Header closeButton>
@@ -31,5 +30,4 @@ var ConfirmationDialog = React.createClass({
     );
   }
 });
-
-module.exports = ConfirmationDialog;
+export default ConfirmationDialog;

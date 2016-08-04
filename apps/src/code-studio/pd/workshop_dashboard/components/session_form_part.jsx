@@ -1,16 +1,21 @@
-/*
-  Individual Session input for creating and editing workshops.
-  Sets date, startTime, and endTime for the session.
+/**
+ * Individual Session input for creating and editing workshops.
+ * Sets date, startTime, and endTime for the session.
  */
 
 import $ from 'jquery';
-var React = require('react');
-var ReactDOM = require('react-dom');
-var moment = require('moment');
-var Row = require('react-bootstrap').Row;
-var Col = require('react-bootstrap').Col;
-var Input = require('react-bootstrap').Input;
-var Button = require('react-bootstrap').Button;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import moment from 'moment';
+import {
+  Row,
+  Col,
+  Button,
+  FormGroup,
+  FormControl,
+  InputGroup,
+  HelpBlock
+} from 'react-bootstrap';
 
 var styles = {
   readOnlyInput: {
@@ -34,26 +39,26 @@ var SessionFormPart = React.createClass({
     onChange: React.PropTypes.func.isRequired,
   },
 
-  handleDateChange: function (e) {
+  handleDateChange(e) {
     this.props.session.date = e.target.value;
     this.props.onChange(this.props.session);
   },
-  handleStartTimeChange: function (e) {
+  handleStartTimeChange(e) {
     this.props.session.startTime = e.target.value;
     this.props.onChange(this.props.session);
   },
-  handleEndTimeChange: function (e) {
+  handleEndTimeChange(e) {
     this.props.session.endTime = e.target.value;
     this.props.onChange(this.props.session);
   },
-  handleRemoveClick: function (e) {
+  handleRemoveClick() {
     this.props.onRemove();
   },
-  handleAddClick: function (e) {
+  handleAddClick() {
     this.props.onAdd();
   },
 
-  renderAddButton: function () {
+  renderAddButton() {
     if (this.props.onAdd && !this.props.readOnly) {
       return (
         <Button onClick={this.handleAddClick} >
@@ -63,7 +68,7 @@ var SessionFormPart = React.createClass({
     }
     return null;
   },
-  renderRemoveButton: function () {
+  renderRemoveButton() {
     if (this.props.onRemove && !this.props.readOnly) {
       return (
         <Button onClick={this.handleRemoveClick}>
@@ -74,7 +79,7 @@ var SessionFormPart = React.createClass({
     return null;
   },
 
-  render: function () {
+  render() {
     var style = {};
     var help = {};
     if (this.props.shouldValidate) {
@@ -101,43 +106,58 @@ var SessionFormPart = React.createClass({
     return (
       <Row>
         <Col sm={4}>
-          <Input
-            type="text"
-            className="date-picker"
-            value={this.props.session.date || ''}
-            onChange={this.handleDateChange}
-            addonAfter={!this.props.readOnly && <i className="fa fa-calendar" />}
-            bsStyle={style.date}
-            help={help.date}
-            style={this.props.readOnly && styles.readOnlyInput}
-            disabled={this.props.readOnly}
-          />
+          <FormGroup validationState={style.date}>
+            <InputGroup>
+              <FormControl
+                type="text"
+                ref={(ref) => this.dateControl = ReactDOM.findDOMNode(ref)}
+                value={this.props.session.date || ''}
+                onChange={this.handleDateChange}
+                style={this.props.readOnly && styles.readOnlyInput}
+                disabled={this.props.readOnly}
+              />
+              <InputGroup.Addon>
+                {!this.props.readOnly && <i className="fa fa-calendar" />}
+              </InputGroup.Addon>
+            </InputGroup>
+          </FormGroup>
+          <HelpBlock>{help.date}</HelpBlock>
         </Col>
         <Col sm={3}>
-          <Input
-            type="time"
-            placeholder="hh:mm"
-            value={this.props.session.startTime || ''}
-            onChange={this.handleStartTimeChange}
-            addonAfter={!this.props.readOnly && <i className="fa fa-clock-o" />}
-            bsStyle={style.startTime}
-            help={help.startTime}
-            style={this.props.readOnly && styles.readOnlyInput}
-            disabled={this.props.readOnly}
-          />
+          <FormGroup validationState={style.startTime}>
+            <InputGroup>
+              <FormControl
+                type="time"
+                placeholder="hh:mm"
+                value={this.props.session.startTime || ''}
+                onChange={this.handleStartTimeChange}
+                style={this.props.readOnly && styles.readOnlyInput}
+                disabled={this.props.readOnly}
+              />
+              <InputGroup.Addon>
+                {!this.props.readOnly && <i className="fa fa-clock-o" />}
+              </InputGroup.Addon>
+            </InputGroup>
+            <HelpBlock>{help.startTime}</HelpBlock>
+          </FormGroup>
         </Col>
         <Col sm={3}>
-          <Input
-            type="time"
-            placeholder="hh:mm"
-            value={this.props.session.endTime || ''}
-            onChange={this.handleEndTimeChange}
-            addonAfter={!this.props.readOnly && <i className="fa fa-clock-o" />}
-            bsStyle={style.endTime}
-            help={help.endTime}
-            style={this.props.readOnly && styles.readOnlyInput}
-            disabled={this.props.readOnly}
-          />
+          <FormGroup validationState={style.endTime}>
+            <InputGroup>
+              <FormControl
+                type="time"
+                placeholder="hh:mm"
+                value={this.props.session.endTime || ''}
+                onChange={this.handleEndTimeChange}
+                style={this.props.readOnly && styles.readOnlyInput}
+                disabled={this.props.readOnly}
+              />
+              <InputGroup.Addon>
+                {!this.props.readOnly && <i className="fa fa-clock-o" />}
+              </InputGroup.Addon>
+            </InputGroup>
+            <HelpBlock>{help.endTime}</HelpBlock>
+          </FormGroup>
         </Col>
         <Col sm={2}>
           {this.renderAddButton()}
@@ -155,28 +175,29 @@ var SessionFormPart = React.createClass({
     this.applyDatePicker();
   },
 
-  componentDidUpdate: function (prevProps) {
+  componentDidUpdate(prevProps) {
     if (prevProps.readOnly && !this.props.readOnly) {
       this.applyDatePicker();
     }
   },
 
-  applyDatePicker: function () {
+  applyDatePicker() {
     // Add date picker to date input.
-    var dateInput = $(ReactDOM.findDOMNode(this)).find('.date-picker');
-    $(dateInput).datepicker({
-      minDate: 0,
-      dateFormat: 'mm/dd/y',
-      onSelect: function (dateText) {
-      this.props.session.date = dateText;
-      this.props.onChange(this.props.session);
-      }.bind(this)
-    });
+    if (this.dateControl) {
+      $(this.dateControl).datepicker({
+        minDate: 0,
+        dateFormat: 'mm/dd/y',
+        onSelect: (dateText) => {
+          this.props.session.date = dateText;
+          this.props.onChange(this.props.session);
+        }
+      });
 
-    // Show the date picker also when the calender icon to the right of the input is clicked.
-    $(dateInput).next().on("click", function () {
-      $(dateInput).datepicker("show");
-    });
+      // Show the date picker also when the calender icon to the right of the input is clicked.
+      $(this.dateControl).next().on("click", () => {
+        $(this.dateControl).datepicker("show");
+      });
+    }
   }
 });
-module.exports = SessionFormPart;
+  export default SessionFormPart;
