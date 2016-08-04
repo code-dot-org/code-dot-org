@@ -472,6 +472,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: "আপনি কি শিক্ষক?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: "ছাত্র এবং স্বেচ্ছাসেবকদের এক ঘন্টার কোডের
     জন্য অনুপ্রাণিত করুন"
   volunteer_engineer_submission_subtitle_generic: "এই বছর, ডিসেম্বর ৭-১৩, ২০১৫, ১০০০০০
@@ -694,7 +696,7 @@
   dashboard_navigation_view_progress: "অগ্রগতি"
   dashboard_navigation_view_text_responses: "লিখিত জবাব দেখুন"
   dashboard_navigation_view_assessments: "মূল্যায়ন"
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
   dashboard_navigation_manage_students: " শিক্ষার্থীদের পরিচালনা করন"
   dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
@@ -885,7 +887,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "আরও জানুন"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: "এখন চেষ্টা করুন"
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1747,6 +1749,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  are_you_teacher: Are you a teacher?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
