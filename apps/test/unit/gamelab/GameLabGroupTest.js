@@ -1,34 +1,15 @@
 /** @file Tests for GameLabGroup, our extension of p5.play Group */
-import "script!@cdo/apps/../lib/p5play/p5";
-import "script!@cdo/apps/../lib/p5play/p5.play";
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
-import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/gamelab/GameLabSprite';
-import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/gamelab/GameLabGroup';
+import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabGroup', function () {
   let gameLabP5, createSprite, createGroup;
 
   beforeEach(function () {
-    gameLabP5 = new GameLabP5();
-    gameLabP5.init({
-        onExecutionStarting: spy(),
-        onPreload: spy(),
-        onSetup: spy(),
-        onDraw: spy()
-    });
-    gameLabP5.startExecution();
-
-    var interpreter = {getCurrentState: function () {return {};}};
-    injectJSInterpreterToSprite(interpreter);
-    injectJSInterpreterToGroup(interpreter);
+    gameLabP5 = createGameLabP5();
     createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
     createGroup = gameLabP5.p5.createGroup.bind(gameLabP5.p5);
-  });
-
-  afterEach(function () {
-    gameLabP5.resetExecution();
   });
 
   describe('methods applying to each sprite', function () {
