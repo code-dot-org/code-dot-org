@@ -366,6 +366,8 @@ en-US:
   help_translate: crwdns57868:0crwdne57868:0
   no_internet: crwdns57869:0crwdne57869:0
   download_offline: crwdns57870:0crwdne57870:0
+  are_you_teacher: crwdns58021:0crwdne58021:0
+  review_lesson_plan: crwdns58022:0crwdne58022:0
   volunteer_engineer_submission_title: crwdns54486:0crwdne54486:0
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
   volunteer_engineer_submission_subtitle_specific: 'crwdns54487:0%{num_teachers}crwdnd54487:0%{num_volunteers}crwdne54487:0'
@@ -509,7 +511,7 @@ en-US:
   dashboard_navigation_view_progress: crwdns57068:0crwdne57068:0
   dashboard_navigation_view_text_responses: crwdns57069:0crwdne57069:0
   dashboard_navigation_view_assessments: crwdns56256:0crwdne56256:0
-  dashboard_navigation_view_surveys: crwdns57873:0crwdne57873:0
+  dashboard_navigation_view_assessments_surveys: crwdns58023:0crwdne58023:0
   dashboard_navigation_add_students: crwdns7798:0crwdne7798:0
   dashboard_navigation_manage_students: crwdns7799:0crwdne7799:0
   dashboard_navigation_lesson_plans_resources: crwdns22278:0crwdne22278:0

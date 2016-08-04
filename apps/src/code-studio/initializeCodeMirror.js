@@ -9,6 +9,7 @@ require("codemirror/mode/markdown/markdown");
 require("codemirror/addon/edit/closetag");
 require("codemirror/addon/edit/matchtags");
 require("codemirror/addon/edit/matchbrackets");
+require("codemirror/addon/edit/trailingspace");
 require("codemirror/addon/fold/xml-fold");
 require("codemirror/mode/xml/xml");
 require("codemirror/mode/javascript/javascript");
@@ -37,6 +38,7 @@ module.exports = function (name, mode, callback, attachments) {
     viewportMargin: Infinity,
     matchTags: {bothTags: true},
     autoCloseTags: true,
+    showTrailingSpace: true,
     lineWrapping: true
   });
   if (callback) {

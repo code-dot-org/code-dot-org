@@ -1005,7 +1005,7 @@
           Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
           'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
           Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
-          0: |
+          '0': |
             Unit 1, Days 1-2
             What Is a Computer?
           1: |
@@ -1929,8 +1929,8 @@
           Wrap Up: Wrap Up
           Welcome to Phase 1!: Welcome to Phase 1!
           Background and Context: Background and Context
-          Classroom and workshop style: 'Classroom and workshop style '
-          Classroom and Workshop Style: 'Classroom and Workshop Style '
+          'Classroom and workshop style ': 'Classroom and workshop style '
+          'Classroom and Workshop Style ': 'Classroom and Workshop Style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description_short: Teach Algebra through Functional Programming
@@ -2072,6 +2072,8 @@
           Looping and Random Numbers: Looping and Random Numbers
           App Lab: "앱 연구실"
           Design Mode: Design Mode
+          Making it Interactive: Making it Interactive
+          Adding Functionality (optional): Adding Functionality (optional)
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
@@ -2200,6 +2202,13 @@
           'Unplugged: Nested Loops (New)': 'Unplugged: Nested Loops (New)'
           Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested
             Loops)
+          'Project #1: Artist (Nested Loops, Functions)': 'Project #1: Artist (Nested
+            Loops, Functions)'
+          New Playlab Behaviors and Events Review: New Playlab Behaviors and Events
+            Review
+          'Project 2: PlayLab Game (Events, Conditionals, Functions)': 'Project 2:
+            PlayLab Game (Events, Conditionals, Functions)'
+          'Bee: Nested Loops': "꿀벌: 중첩 반복"
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2241,6 +2250,11 @@
           'Unplugged: Binary Images': 'Unplugged: Binary Images'
           'Pixelation: Binary Exploration': 'Pixelation: Binary Exploration'
           Artist Binary: "화가 2진"
+          'Project 1: Choose Your Own Story App': 'Project 1: Choose Your Own Story
+            App'
+          'Project 2: For Loops with the Artist': 'Project 2: For Loops with the Artist'
+          'Project 3: Design your own App (PlayLab)': 'Project 3: Design your own
+            App (PlayLab)'
         ecs-unit1:
           title: ECS Part 1
           description_short: 'Unit 1: Human-Computer Interaction'
@@ -2419,3 +2433,26 @@
           Getting Loopy with Puppy: Getting Loopy with Puppy
           Puppy Loops: Puppy Loops
           Puppy Event: Puppy Event
+          More CS with Scratch: More CS with Scratch
+        transferring-over:
+          20-hr Stage 9: 20-hr Stage 9
+          20-hr Stage 2: 20-hr Stage 2
+          Course 2 Stage 17: Course 2 Stage 17
+        cspunit1assessment:
+          title: CS Principles Unit 1 Assessment
+          description_short: Unit 1 Assessment
+          description: This 10-question multiple choice assessment is similar in style
+            to the AP CSP Exam and covers material from Unit 1
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspunit2ch1assessment:
+          title: CS Principles Unit 2 Ch 1 Assessment
+          description_short: Unit 2.1 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 2 Chapter 1 (Lessons 1-6)
+          CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
+        cspunit2ch2assessment:
+          title: CS Principles Unit 2 Ch 2 Assessment
+          description_short: Unit 2.1 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)
+          CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
