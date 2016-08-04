@@ -5,19 +5,15 @@ skip_dialog true
 
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
-
-### Necessary Background >> Equity is More than Race and Gender
-
-<br/>
+# Necessary Background >> Equity is More than Race and Gender
 
 Big equity discussions tend to revolve around the most visible human differences, namely race and gender. Yet, in every classroom, underneath the obvious qualities that set people apart, there are less noticable differences that affect student opportunites and advantages. 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hero_Kids-Iglu.jpg/600px-Hero_Kids-Iglu.jpg" class="roundedPic lefted" width="350px"/>Unconscious biases can form around a child's personality type, perceived academic aptitude, or socioeconomic status.  It is very important to identify these preconceived beliefs before you start teaching computer science, because even the smallest edge of "this isn't for you" in your attitude will multiply within a student during each battle with debugging.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hero_Kids-Iglu.jpg/600px-Hero_Kids-Iglu.jpg" style="width: 350px" class="level-image">
+
+Unconscious biases can form around a child's personality type, perceived academic aptitude, or socioeconomic status.  It is very important to identify these preconceived beliefs before you start teaching computer science, because even the smallest edge of "this isn't for you" in your attitude will multiply within a student during each battle with debugging.
 
 Any student can be good at computer science: the quiet ones, the athletic ones, *and* the creative ones.  Some students may need more encouragement than others to hang in there (using grit and persistence). Some may need more practice with the keyboard before learning to program.  Some may need to get up and walk around more often in order to focus while they're sitting.  Great computer scientists take all forms, and that's one more reason for emphasizing equity in computer science.
 
-<br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
