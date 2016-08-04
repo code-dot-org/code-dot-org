@@ -1,25 +1,23 @@
 name 'ECSPD U4 D 24 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 24 Scratch -- Games
+# Day 24 Scratch &mdash; Games
 
 First, let's explore the fourteenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 178-182.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=178)
 
-#### Key Concepts
+## Key Concepts
 
 Students investigate two different types of games by customizing sprites, adding another sprite that gives you 2 points and getting the game to stop at 10 points or more by telling you that you won..
 
-#### Common Difficulties
+## Common Difficulties
 
 Some students may struggle a bit with the variable and conditional blocks used in these games.  It is suggested to have the students work in pairs to complete the monkey and pinball games so they can talk about what is going on in the game and how to make the correct modifications.
-<br><br>
+
 For this lesson you need – [monkey game.sb](http://www.exploringcs.org/curriculum), [pinball.sb](http://www.exploringcs.org/curriculum)
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -42,6 +40,6 @@ For this lesson you need – [monkey game.sb](http://www.exploringcs.org/curricu
 - [http://scratch.mit.edu](http://scratch.mit.edu/)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
