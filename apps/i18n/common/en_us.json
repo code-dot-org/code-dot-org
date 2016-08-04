@@ -5,6 +5,7 @@
   "animationMode": "Animation",
   "answersVisible": "Answers visible (read-only)",
   "assessmentSteps": "Steps to give assessment",
+  "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Back to previous level",
   "blocklyMessage": "Blockly",
   "blocks": "blocks",
