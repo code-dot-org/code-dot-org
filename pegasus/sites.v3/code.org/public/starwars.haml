@@ -54,8 +54,12 @@ social:
   =view :inspirational_videos
 
 %h2.sw-header2
+  = I18n.t(:are_you_teacher)
+  %a{href: "/hourofcode/starwars"}= I18n.t(:review_lesson_plan)
+
+%h2.sw-header2
   = I18n.t(:speak_another_language)
-  %a{href: "/translate/starwarws"}= I18n.t(:help_translate)
+  %a{href: "/translate/starwars"}= I18n.t(:help_translate)
 
 %h2.sw-header2
   = I18n.t(:no_internet)

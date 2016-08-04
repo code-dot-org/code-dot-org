@@ -209,8 +209,8 @@ Calc.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<CalcVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={<CalcVisualizationColumn/>}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)

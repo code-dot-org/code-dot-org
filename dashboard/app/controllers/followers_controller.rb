@@ -35,7 +35,7 @@ class FollowersController < ApplicationController
   # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
     if @section && @section.section_type == Section::TYPE_PD_WORKSHOP
-      redirect_to controller: 'pd/workshop_enrollment', action: 'join_section'
+      redirect_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: @section.code
       return
     end
 

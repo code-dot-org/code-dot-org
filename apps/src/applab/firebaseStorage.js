@@ -342,4 +342,60 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   let keyValueMap = JSON.parse(jsonData);
   keysRef.update(keyValueMap).then(onSuccess, onError);
 };
+
+/**
+ * Delete every instance of the specified column name currently in the table.
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {function()} onSuccess
+ * @param {function(*)} onError
+ */
+FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {
+  const recordsRef =
+    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value')
+    .then(snapshot => {
+      let recordsData = snapshot.val() || {};
+      Object.keys(recordsData).forEach(recordId => {
+        const record = JSON.parse(recordsData[recordId]);
+        delete record[columnName];
+        recordsData[recordId] = JSON.stringify(record);
+      });
+      return recordsData;
+    })
+    .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
+/**
+ * Rename every instance of the specified column name currently in the table. This is
+ * unsafe in that we do not check whether data already exists in the new column.
+ * @param {string} tableName
+ * @param {string} oldName
+ * @param {string} newName
+ * @param {function()} onSuccess
+ * @param {function(*)} onError
+ */
+FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {
+  const recordsRef =
+    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value')
+    .then(snapshot => {
+      let recordsData = snapshot.val() || {};
+      // Preserve column order.
+      Object.keys(recordsData).forEach(recordId => {
+        const oldRecord = JSON.parse(recordsData[recordId]);
+        let newRecord = {};
+        Object.keys(oldRecord).forEach(oldKey => {
+          const newKey = (oldKey === oldName ? newName : oldKey);
+          newRecord[newKey] = oldRecord[oldKey];
+        });
+        recordsData[recordId] = JSON.stringify(newRecord);
+      });
+      return recordsData;
+    })
+    .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
 export default FirebaseStorage;

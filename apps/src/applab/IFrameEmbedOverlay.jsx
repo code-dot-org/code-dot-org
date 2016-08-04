@@ -79,8 +79,10 @@ var IFrameEmbedOverlay = React.createClass({
 
   render() {
     return (
-      <div style={[styles.overlay.wrapper, !this.state.tooYoung && {cursor: 'cursor'}]}
-           onClick={this.onClick}>
+      <div
+        style={[styles.overlay.wrapper, !this.state.tooYoung && {cursor: 'cursor'}]}
+        onClick={this.onClick}
+      >
         {
           this.state.tooYoung ?
           <div className="alert alert-danger">

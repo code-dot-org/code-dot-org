@@ -54,8 +54,10 @@ var AssetThumbnail = Radium(React.createClass({
       <div className="assetThumbnail" style={[styles.wrapper, this.props.style]}>
         {type === 'image' ?
          <img src={assetsApi.basePath(name)} style={assetThumbnailStyle} /> :
-         <i className={defaultIcons[type] || defaultIcons.unknown}
-            style={[assetIconStyle, this.props.iconStyle]} />
+         <i
+           className={defaultIcons[type] || defaultIcons.unknown}
+           style={[assetIconStyle, this.props.iconStyle]}
+         />
         }
       </div>
     );

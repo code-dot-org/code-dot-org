@@ -12,7 +12,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 var utils = require('../utils');
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var Provider = require('react-redux').Provider;
@@ -259,8 +259,8 @@ NetSim.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <NetSimView
-          generateCodeAppHtml={generateCodeAppHtmlFromEjs}
-          onMount={onMount}
+        generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+        onMount={onMount}
       />
     </Provider>
   , document.getElementById(config.containerId));
@@ -358,7 +358,9 @@ NetSim.prototype.initWithUser_ = function (user) {
         disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'), {
+    user
+  });
 
   this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
       this.runLoop_);
@@ -369,7 +371,9 @@ NetSim.prototype.initWithUser_ = function (user) {
       this, {
         user: user,
         levelKey: this.getUniqueLevelKey(),
-        sharedShardSeed: this.getOverrideShardID()
+        sharedShardSeed: this.getOverrideShardID(),
+        showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false),
+        showTeacherLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, true)
       });
 
   // Tab panel - contains instructions, my device, router, dns
@@ -386,7 +390,8 @@ NetSim.prototype.initWithUser_ = function (user) {
           routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
           routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
-          becomeDnsCallback: this.becomeDnsNode.bind(this)
+          becomeDnsCallback: this.becomeDnsNode.bind(this),
+          showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
   }

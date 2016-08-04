@@ -18,7 +18,8 @@ var ImagePicker = React.createClass({
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
     channelId: React.PropTypes.string.isRequired,
-    uploadsEnabled: React.PropTypes.bool.isRequired
+    uploadsEnabled: React.PropTypes.bool.isRequired,
+    showWarning: React.PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -61,7 +62,12 @@ var ImagePicker = React.createClass({
       divider: {
         borderColor: color.purple,
         margin: '5px 0'
-      }
+      },
+      warning: {
+        color: color.red,
+        fontSize: 13,
+        fontWeight: 'bold',
+      },
     };
 
     var modeSwitch, title = this.props.assetChosen ?
@@ -70,11 +76,11 @@ var ImagePicker = React.createClass({
 
     var imageTypeFilter = !this.props.typeFilter || this.props.typeFilter === 'image';
     if (this.props.assetChosen && imageTypeFilter) {
-      modeSwitch = <div>
+      modeSwitch = (<div>
         <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
         <p onClick={this.setIconMode} style={styles.iconModeToggle}>Icons</p>
         <hr style={styles.divider}/>
-      </div>;
+      </div>);
     }
 
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
@@ -82,12 +88,18 @@ var ImagePicker = React.createClass({
         assetChosen={this.props.assetChosen}
         allowedExtensions={extensionFilter[this.props.typeFilter]}
         channelId={this.props.channelId}
-        uploadsEnabled={this.props.uploadsEnabled}/> :
+        uploadsEnabled={this.props.uploadsEnabled}
+      /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
     return (
       <div className="modal-content" style={styles.root}>
         {title}
+        {this.props.showWarning && (
+           <p style={styles.warning}>
+             Warning: Do not upload anything that contains personal information.
+           </p>
+         )}
         {modeSwitch}
         {body}
       </div>
@@ -95,3 +107,21 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
+
+
+if (BUILD_STYLEGUIDE) {
+  const Dialog = require('@cdo/apps/templates/Dialog').default;
+  const Body = require('@cdo/apps/templates/Dialog').Body;
+  ImagePicker.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('ImagePicker', module)
+      .addStoryTable([
+        {
+          name: 'with warning',
+          story: () => (
+            <ImagePicker showWarning channelId="some-channel" uploadsEnabled />
+          )
+        },
+      ]);
+  };
+}

@@ -79,19 +79,22 @@ const MultiCheckboxSelector = Radium(React.createClass({
       <div style={this.props.style}>
         <h2 style={styles.header}>
           <input
-              type="checkbox"
-              style={[styles.checkbox, styles.selectAllCheckbox]}
-              checked={this.areAllSelected()}
-              onChange={this.toggleSelectAll}/>
+            type="checkbox"
+            style={[styles.checkbox, styles.selectAllCheckbox]}
+            checked={this.areAllSelected()}
+            onChange={this.toggleSelectAll}
+          />
           {this.props.header}
         </h2>
         <ul style={styles.list}>
           {this.props.items.map((item, index) => (
              <li style={styles.listItem} key={index}>
-               <input style={styles.checkbox}
-                      type="checkbox"
-                      checked={this.props.selected.includes(item)}
-                      onChange={() => this.toggle(item)} />
+               <input
+                 style={styles.checkbox}
+                 type="checkbox"
+                 checked={this.props.selected.includes(item)}
+                 onChange={() => this.toggle(item)}
+               />
                {React.cloneElement(this.props.children, {[this.props.itemPropName]:item})}
              </li>
            ))}
@@ -131,10 +134,11 @@ if (BUILD_STYLEGUIDE) {
           name: 'with some selected',
           story: () => (
             <MultiCheckboxSelector
-                header="Some Items"
-                items={["one", "two", "three"]}
-                selected={["two"]}
-                onChange={storybook.action("onChange")}>
+              header="Some Items"
+              items={["one", "two", "three"]}
+              selected={["two"]}
+              onChange={storybook.action("onChange")}
+            >
               <ItemComponent />
             </MultiCheckboxSelector>
           )
@@ -142,10 +146,11 @@ if (BUILD_STYLEGUIDE) {
           name: 'with all selected',
           story: () => (
             <MultiCheckboxSelector
-                header="Some Items"
-                items={["one", "two", "three"]}
-                selected={["two", "one", "three"]}
-                onChange={storybook.action("onChange")}>
+              header="Some Items"
+              items={["one", "two", "three"]}
+              selected={["two", "one", "three"]}
+              onChange={storybook.action("onChange")}
+            >
               <ItemComponent />
             </MultiCheckboxSelector>
           )
@@ -153,14 +158,15 @@ if (BUILD_STYLEGUIDE) {
           name: 'with complex item component',
           story: () => (
             <MultiCheckboxSelector
-                header="Some Items"
-                items={[
+              header="Some Items"
+              items={[
                   {id: 'one', name: 'Item the First'},
                   {id: 'two', name: 'Item the Second!'},
                 ]}
-                itemPropName="screen"
-                selected={[]}
-                onChange={storybook.action("onChange")}>
+              itemPropName="screen"
+              selected={[]}
+              onChange={storybook.action("onChange")}
+            >
               <ComplexItemComponent style={{border: '1px solid black', padding: 10}} />
             </MultiCheckboxSelector>
           )

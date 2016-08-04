@@ -72,11 +72,13 @@ var BaseDialog = React.createClass({
       modalBackdropClassNames = "modal-backdrop in";
     }
     var body = (
-      <div style={bodyStyle}
-           tabIndex="-1"
-           className={modalClassNames}
-           ref="dialog"
-           onKeyDown={this.closeOnEscape}>
+      <div
+        style={bodyStyle}
+        tabIndex="-1"
+        className={modalClassNames}
+        ref="dialog"
+        onKeyDown={this.closeOnEscape}
+      >
         <div className={modalBodyClassNames}>
           {!this.props.uncloseable &&
            <div id="x-close" className="x-close" onClick={this.closeDialog}></div>}
@@ -105,9 +107,9 @@ if (BUILD_STYLEGUIDE) {
       return (
         <div>
           <BaseDialog
-              isOpen={!!this.state && this.state.open}
-              handleClose={() => this.setState({open: false})}
-              {...this.props}
+            isOpen={!!this.state && this.state.open}
+            handleClose={() => this.setState({open: false})}
+            {...this.props}
           >
             <div style={{border: '1px solid black'}}>
               The contents of the dialog go inside this box! woo

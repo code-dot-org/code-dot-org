@@ -130,9 +130,9 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '37', cookies[:lines]
     assert_nil session[:lines]
 
-    script = create :script, name: 'progress_test'
+    script = create :script, name: 'progress-test'
     sl = create(:script_level, script: script)
-    data = {'progress_test' => {sl.level_id => 100}}
+    data = {'progress-test' => {sl.level_id => 100}}
     session[:progress] = data
     assert_equal 100, client_state.level_progress(sl)
     assert_equal data.to_json, cookies[:progress]

@@ -23,7 +23,7 @@ Executes the *callback* function code when a specific event *type* occurs for th
 
 [/short_description]
 
-Interactive apps need both UI elements ([button()](/applab/docs/button), [textInput()](/applab/docs/textInput), [textLabel()](/applab/docs/textLabel), [dropDown()](/applab/docs/dropDown), [checkBox()](/applab/docs/checkBox), [radioButton()](/applab/docs/radioButton), [image()](/applab/docs/image)), and event handlers for those UI elements and each type of user interaction needed. The UI element, with unique id, must exist before the onEvent function can be used.
+Interactive apps need both UI elements ([button()](/applab/docs/button), [textInput()](/applab/docs/textInput), [textLabel()](/applab/docs/textLabel), [dropDown()](/applab/docs/dropdown), [checkBox()](/applab/docs/checkbox), [radioButton()](/applab/docs/radioButton), [image()](/applab/docs/image)), and event handlers for those UI elements and each type of user interaction needed. The UI element, with unique id, must exist before the onEvent function can be used.
 
 [/description]
 

@@ -208,9 +208,6 @@ class User < ActiveRecord::Base
 
   has_many :gallery_activities, -> {order 'id desc'}
 
-  has_many :user_trophies
-  has_many :trophies, through: :user_trophies, source: :trophy
-
   # student/teacher relationships where I am the teacher
   has_many :followers
   has_many :students, through: :followers, source: :student_user
@@ -500,43 +497,13 @@ class User < ActiveRecord::Base
 
     script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
-      is_unpassed_progression_level(script_level, user_level)
+      unpassed_progression_level?(script_level, user_level)
     end
   end
 
-  def is_unpassed_progression_level(script_level, user_level)
+  def unpassed_progression_level?(script_level, user_level)
     is_passed = (user_level && user_level.passing?)
     script_level.valid_progression_level? && !is_passed
-  end
-
-  def progress(script)
-    #trophy_id summing is a little hacky, but efficient. It takes advantage of the fact that:
-    #broze id: 1, silver id: 2 and gold id: 3
-    User.connection.select_one(<<SQL)
-select
-  (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
-  (select count(*) * 3 from concepts) as max_trophies
-from script_levels sl
-left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
-left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
-where sl.script_id = #{script.id}
-SQL
-  end
-
-  def concept_progress(script = Script.twenty_hour_script)
-    # TODO: Cache everything but the user's progress.
-    user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
-    user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
-    result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
-
-    script.levels.includes(:concepts).each do |level|
-      level.concepts.each do |concept|
-        result[concept][:current] += 1 if user_levels_map[level.id].try(:best_result).to_i >= Activity::MINIMUM_PASS_RESULT
-        result[concept][:max] += 1
-        result[concept][:trophy] ||= user_trophy_map[concept.id]
-      end
-    end
-    result
   end
 
   def last_attempt(level)
@@ -545,27 +512,6 @@ SQL
 
   def last_attempt_for_any(levels)
     Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
-  end
-
-  def average_student_trophies
-    User.connection.select_value(<<SQL)
-select coalesce(avg(num), 0)
-from (
-    select coalesce(sum(trophy_id), 0) as num
-    from followers f
-    left outer join user_trophies ut on f.student_user_id = ut.user_id
-    where f.user_id = #{self.id}
-    group by f.student_user_id
-    ) trophy_counts
-SQL
-  end
-
-  def trophy_count
-    User.connection.select_value(<<SQL)
-select coalesce(sum(trophy_id), 0) as num
-from user_trophies
-where user_id = #{self.id}
-SQL
   end
 
   def student?
@@ -581,8 +527,12 @@ SQL
   end
 
   def authorized_teacher?
-    # you are "really" a teacher if you are in any cohort for an ops workshop
-    admin? || cohorts.present?
+    # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
+    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?))
+  end
+
+  def student_of_authorized_teacher?
+    teachers.any?(&:authorized_teacher?)
   end
 
   def student_of?(teacher)
@@ -1013,33 +963,6 @@ SQL
 
   def can_pair_with?(other_user)
     self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
-  end
-
-  # make some random-ish fake progress for a user. As you may have
-  # guessed, this is for developer testing purposes and should not be
-  # used by any user-facing features.
-  def hack_progress(options = {})
-    options[:script_id] ||= Script.twenty_hour_script.id
-    script = Script.get_from_cache(options[:script_id])
-
-    options[:levels] ||= script.script_levels.count / 2
-
-    script.script_levels[0..options[:levels]].each do |sl|
-      # create some fake testresults
-      test_result = rand(100)
-
-      Activity.create!(user: self, level: sl.level, test_result: test_result)
-
-      if test_result > 10 # < 10 will be not attempted
-        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          user_level = UserLevel.where(user: self, level: sl.level, script: sl.script).first_or_create
-          user_level.attempts += 1 unless user_level.best?
-          user_level.best_result = test_result
-          user_level.save!
-        end
-      end
-    end
-    User.track_script_progress(self.id, script.id)
   end
 
   def self.csv_attributes

@@ -119,6 +119,10 @@ class Studio < Grid
 </category>
 <category name="Events">
   <block type="studio_whenArrow" />
+  <block type="studio_whenUp" />
+  <block type="studio_whenDown" />
+  <block type="studio_whenLeft" />
+  <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
 </category>
@@ -178,9 +182,7 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_wait">
-    <title name="VALUE">500</title>
-  </block>
+  <block type="studio_wait"></block>
   <block type="studio_waitParams" inline="true">
     <value name="VALUE">
       <block type="math_number">
@@ -190,11 +192,25 @@ class Studio < Grid
   </block>
   <block type="studio_playSound" />
   <block type="studio_changeScore" />
-  <block type="studio_setScoreText" inline="true">
-    <value name="TEXT">
+  <block type="studio_addPoints" />
+  <block type="studio_removePoints" />
+  <block type="studio_addNumPoints">
+    <value name="NUM">
       <block type="math_number">
         <title name="NUM">1</title>
       </block>
+    </value>
+  </block>
+  <block type="studio_removeNumPoints">
+    <value name="NUM">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_setScoreText" inline="true">
+    <value name="TEXT">
+      <block type="text" />
     </value>
   </block>
   <block type="studio_saySprite">
@@ -351,6 +367,9 @@ class Studio < Grid
     </value>
   </block>
 </category>
+<category name="Input">
+  <block type="studio_ask" />
+</category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
@@ -418,6 +437,12 @@ class Studio < Grid
   <block type="studio_moveNortheastDistance"></block>
   <block type="studio_moveSouthwestDistance"></block>
   <block type="studio_moveSoutheastDistance"></block>
+  <block type="controls_repeat_simplified">
+    <title name="TIMES">5</title>
+  </block>
+  <block type="controls_repeat_simplified_dropdown">
+    <title name="TIMES" config="3-10">3</title>
+  </block>
 </category>
     XML
   end
