@@ -97,7 +97,7 @@ We may also survey Users to provide us with optional demographic information (su
 
 Computer science educators may provide a school or classroom street address along with a description of course offerings, in order to allow students or parents to find local schools, summer-camps, or workshops that teach computer science in their neighborhood. 
 
-Lastly, for teachers, educators, and partners who participate in our computer science training programs, we may ask for information that is required for compensating you for your work (such as a mailing address to send a check, or a tax form containing your social security number for IRS reporting purposes).
+Lastly, for teachers, educators, and partners who participate in our computer science training programs, we may ask for information that is required for compensating or acknowledging you for your work (such as a mailing address to send a check, the name of the school/district that employs you, or a tax form containing your social security number for IRS reporting purposes).
 
 
 ## Location Information

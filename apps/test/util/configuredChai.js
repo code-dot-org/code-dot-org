@@ -2,7 +2,7 @@
 import chai from 'chai';
 import chaiSubset from 'chai-subset';
 import chaiEnzyme from 'chai-enzyme';
-chai.use(chaiEnzyme);
+chai.use(chaiEnzyme());
 chai.use(chaiSubset);
 chai.includeStack = true;
 export default chai;

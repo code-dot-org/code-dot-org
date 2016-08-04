@@ -205,4 +205,158 @@ describe('GameLabSprite', function () {
       });
     });
   });
+
+  describe('collision types using AABBOps', function () {
+    let sprite, spriteTarget;
+
+    beforeEach(function () {
+      // sprite in to the left, moving right
+      // spriteTarget in to the right, stationary
+      sprite = createSprite(281, 100, 20, 20);
+      spriteTarget = createSprite(300, 100, 20, 20);
+      sprite.velocity.x = 3;
+      spriteTarget.velocity.x = 0;
+
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+    });
+
+    it('stops movement of colliding sprite when sprites bounce', function () {
+      // sprite stops moving, spriteTarget moves right
+      const bounce = sprite.bounce(spriteTarget);
+
+      expect(bounce).to.equal(true);
+
+      expect(sprite.position.x).to.equal(280); // move back to not overlap with spriteTarget
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(0);
+      expect(spriteTarget.velocity.x).to.equal(3);
+
+      sprite.update();
+      spriteTarget.update();
+
+      expect(sprite.position.x).to.equal(280);
+      expect(spriteTarget.position.x).to.equal(303);
+      expect(sprite.velocity.x).to.equal(0);
+      expect(spriteTarget.velocity.x).to.equal(3);
+
+      sprite.bounce(spriteTarget);
+
+      expect(sprite.position.x).to.equal(280);
+      expect(spriteTarget.position.x).to.equal(303);
+      expect(sprite.velocity.x).to.equal(0);
+      expect(spriteTarget.velocity.x).to.equal(3);
+    });
+
+    it('stops movement of colliding sprite when sprites collide', function () {
+      // sprite stops moving, spriteTarget stops moving
+      const collide = sprite.collide(spriteTarget);
+
+      expect(collide).to.equal(true);
+
+      expect(sprite.position.x).to.equal(280);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(3); // collide causes no movement, but velocity holds
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.update();
+      spriteTarget.update();
+
+      expect(sprite.position.x).to.equal(283); // moves forward on update
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.collide(spriteTarget);
+
+      expect(sprite.position.x).to.equal(280); // displaced back to original position
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+    });
+
+    it('continues movement of colliding sprite when sprites displace', function () {
+      // sprite continues moving, spriteTarget gets pushed by sprite
+      const displace = sprite.displace(spriteTarget);
+
+      expect(displace).to.equal(true);
+      expect(sprite.position.x).to.equal(281);
+      expect(spriteTarget.position.x).to.equal(301);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0); // spriteTarget does move, but velocity is 0
+
+      sprite.update();
+      spriteTarget.update();
+
+      expect(displace).to.equal(true);
+      expect(sprite.position.x).to.equal(284);
+      expect(spriteTarget.position.x).to.equal(301);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.displace(spriteTarget);
+
+      expect(displace).to.equal(true);
+      expect(sprite.position.x).to.equal(284);
+      expect(spriteTarget.position.x).to.equal(304);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+    });
+
+    it('reverses direction of colliding sprite when sprites bounceOff', function () {
+      // sprite reverses direction of movement, spriteTarget remains in its location
+      const bounceOff = sprite.bounceOff(spriteTarget);
+
+      expect(bounceOff).to.equal(true);
+      expect(sprite.position.x).to.equal(280);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(-3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.update();
+      spriteTarget.update();
+
+      expect(bounceOff).to.equal(true);
+      expect(sprite.position.x).to.equal(277);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(-3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.bounceOff(spriteTarget);
+
+      expect(bounceOff).to.equal(true);
+      expect(sprite.position.x).to.equal(277);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(-3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+    });
+
+    it('continues movement of colliding sprite when sprites overlap', function () {
+      // sprite continues moving, spriteTarget remains in it's location
+      const overlap = sprite.overlap(spriteTarget);
+
+      expect(overlap).to.equal(true);
+      expect(sprite.position.x).to.equal(281);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.update();
+      spriteTarget.update();
+
+      expect(overlap).to.equal(true);
+      expect(sprite.position.x).to.equal(284);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+
+      sprite.overlap(spriteTarget);
+
+      expect(overlap).to.equal(true);
+      expect(sprite.position.x).to.equal(284);
+      expect(spriteTarget.position.x).to.equal(300);
+      expect(sprite.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
+    });
+  });
 });

@@ -232,7 +232,7 @@ function wrappedSortable(defaultSortable) {
     const {className: originalClassName} = originalProps;
     return {
       ...newProps,
-      originalClassName,
+      className: originalClassName,
       style: Object.assign({}, originalProps.style, {cursor: 'pointer'}),
       children: (
         <span>

@@ -76,13 +76,9 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
 <br/><br/>
- 
-**Example Workshop Agendas**<br/> 
 
-- Phase 2: Summer Study- More details coming soon!<br/>
-- Phase 3: Academic Year Development- More details coming soon!
-
-	
+**When to Host the Academic Year Workshop**<br/>
+Phase 3 is best held in early October prior to when order of operations and early math take place in the classroom, which are the concepts that CSinA Course A integrate into.
 	
 **Ordering Supplies**<br/>
 [Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
@@ -130,6 +126,11 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
 <br/><br/>
+
+**When to Schedule Phase 3 Workshops**<br/> 
+
+- Session A should be held 1-2 months after school starts.
+- Session B should be held second semester in the February/March timeframe.
  
 **Example Workshop Agendas**<br/> 
 
@@ -192,7 +193,6 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- [Session B](/files/ecs-p3b-agenda.pdf)<Br/>
 	- [Session C](/files/ecs-p3c-agenda.pdf)<br/>
 	- [Session D](/files/ecs-p3d-agenda.pdf)<br/>
-- [Phase 4: Summer Wrap-Up](/files/ecs-p4-agenda.pdf)
  
 **Ordering Supplies**<br/>
 [Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
@@ -223,6 +223,18 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
+**When Follow-up Workshops Should be Held**<br/>
+
+- Quarter 1 = end of unit 1, first half of unit 2
+	- ~4 weeks into school 
+- Quarter 2 = second half of unit 2, unit 3 
+	- 9-12 weeks into school
+- Quarter 3 = unit 4, first half of unit 5 
+	- Start of second semester
+- Quarter 4 = second half of unit 5, unit 6 
+	- Ideally in mid feb. 
+	- Early March  at the latest
+
 
 **Example Workshop Agendas**<br/> 
 
@@ -234,7 +246,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- Session D<br/>
 
 **Ordering Supplies**<br/>
-[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
+Code.org will send each partner a full year's worth of supplies for the continuing workshops prior to your first continuing workshop.
 
 
 **Catering** <br/>
