@@ -21,11 +21,15 @@ const styles = {
   addButton: [dataStyles.button, {
     float: 'right',
   }],
+  clearButton: [dataStyles.editButton, {
+    width: 103,
+  }]
 };
 
 const TableControls = React.createClass({
   propTypes: {
     addColumn: React.PropTypes.func.isRequired,
+    clearTable: React.PropTypes.func.isRequired,
     exportCsv: React.PropTypes.func.isRequired,
     importCsv: React.PropTypes.func.isRequired,
   },
@@ -44,6 +48,14 @@ const TableControls = React.createClass({
   render() {
     return (
       <div style={styles.container}>
+        <button
+          className="btn btn-danger"
+          onClick={this.props.clearTable}
+          style={styles.clearButton}
+        >
+          Clear table
+        </button>
+
         <button className="btn" onClick={this.props.exportCsv} style={styles.exportButton}>
           Export to csv
         </button>

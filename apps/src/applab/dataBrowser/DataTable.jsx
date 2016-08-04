@@ -151,6 +151,19 @@ const DataTable = React.createClass({
     location.href = `/v3/export-firebase-tables/${Applab.channelId}/${tableName}`;
   },
 
+  /** Delete all rows, but preserve the columns. */
+  clearTable() {
+    const msg = 'Do you really want to delete all data from this table? ' +
+      'You cannot undo this action.';
+    if (confirm(msg)) {
+      const newColumns = this.getColumnNames();
+      FirebaseStorage.deleteTable(
+        this.props.tableName,
+        () => this.setState({newColumns, editingColumn: null}),
+        msg => console.warn(msg));
+    }
+  },
+
   render() {
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
@@ -182,6 +195,7 @@ const DataTable = React.createClass({
         <TableControls
           columns={columnNames}
           addColumn={this.addColumn}
+          clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
         />
