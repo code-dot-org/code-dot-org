@@ -30,8 +30,10 @@ module GitUtils
       pegasus: ['pegasus/**/*', 'lib/**/*', 'shared/**/*']
   }
 
-  def self.run_if_project_affected(project, message_run, message_no_run, &block)
-    run_if_files_changed(project.to_s, PROJECT_DEPENDENCY_GLOBS[project], message_run, message_no_run, &block)
+  def self.run_if_project_affected(project_or_projects, message_run, message_no_run, &block)
+    projects = project_or_projects.is_a?(Symbol) ? [project_or_projects] : project_or_projects
+    globs_to_check = projects.map{|p| PROJECT_DEPENDENCY_GLOBS[p] }.flatten.uniq
+    run_if_files_changed(project_or_projects.to_s, globs_to_check, message_run, message_no_run, &block)
   end
 
   def self.run_if_files_changed(identifier, changed_globs, message_modified, message_unmodified, &block)

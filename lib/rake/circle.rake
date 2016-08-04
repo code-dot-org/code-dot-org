@@ -14,12 +14,8 @@ def running_ui_tests?
   GitUtils.circle_commit_contains?(RUN_UI_TESTS_TAG)
 end
 
-def build_if_files_changed(subproject, &block)
-  GitUtils.run_if_project_affected(subproject, 'Using "my" build.', 'Using existing build.', &block)
-end
-
-def random_string_of_length(n)
-  rand(36**n).to_s(36)
+def build_if_files_changed(projects, &block)
+  GitUtils.run_if_project_affected(projects, 'Using "my" build.', 'Using existing build.', &block)
 end
 
 namespace :circle do
@@ -83,9 +79,9 @@ namespace :circle do
   task :run_linting do
     if GitUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
       HipChat.log "Commit message: '#{GitUtils.latest_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all linting."
-      RakeUtils.rake_stream_output 'lint:javascript'
+      RakeUtils.rake_stream_output 'lint:all'
     else
-      RakeUtils.rake_stream_output 'lint:javascript:changed'
+      RakeUtils.rake_stream_output 'lint:changed'
     end
   end
 
@@ -101,7 +97,7 @@ namespace :circle do
       RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.3.15-linux.tar.gz'
       RakeUtils.system_stream_output 'tar -xzf sc-4.3.15-linux.tar.gz'
       Dir.chdir(Dir.glob('sc-*-linux')[0]) do
-        RakeUtils.exec_in_background "./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{random_string_of_length(32)}"
+        RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY'
       end
       RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
       Dir.chdir('dashboard/test/ui') do
