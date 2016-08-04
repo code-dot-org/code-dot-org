@@ -94,6 +94,10 @@ module RakeUtils
     system "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', *args
   end
 
+  def self.bundle_exec_streaming(*args)
+    system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', *args
+  end
+
   def self.nproc
     SprocketsDerailleur.worker_count
   end

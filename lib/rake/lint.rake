@@ -9,7 +9,7 @@ end
 def lint_code_studio_js
   Dir.chdir(code_studio_dir) do
     HipChat.log 'Linting <b>code-studio</b> JavaScript...'
-    RakeUtils.system 'npm run lint-js'
+    RakeUtils.system_stream_output 'npm run lint-js'
   end
 end
 
@@ -17,22 +17,22 @@ def lint_apps_js
   Dir.chdir(apps_dir) do
     HipChat.log 'Linting <b>apps</b> JavaScript...'
     # lint all js/jsx files in dashboard/app/assets/javascript
-    RakeUtils.system './node_modules/.bin/eslint -c .eslintrc.js ../dashboard/app/ --ext .js,.jsx'
+    RakeUtils.system_stream_output './node_modules/.bin/eslint -c .eslintrc.js ../dashboard/app/ --ext .js,.jsx'
     # also do our standard apps lint
-    RakeUtils.system 'npm run lint'
+    RakeUtils.system_stream_output 'npm run lint'
   end
 end
 
 def lint_ruby
-  RakeUtils.bundle_exec 'rubocop'
+  RakeUtils.bundle_exec_streaming 'rubocop'
 end
 
 def lint_haml
-  RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
+  RakeUtils.bundle_exec_streaming 'haml-lint dashboard pegasus'
 end
 
 def lint_scss
-  RakeUtils.bundle_exec 'scss-lint'
+  RakeUtils.bundle_exec_streaming 'scss-lint'
 end
 
 namespace :lint do
