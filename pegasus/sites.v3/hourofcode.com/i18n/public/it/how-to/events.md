@@ -6,10 +6,7 @@ nav: how_to_nav
 
 ---
 
-
 # Come organizzare un evento dell'Ora del Codice
-
-Organizza un evento dell'Ora del Codice durante la Settimana di Educazione all'Informatica (<%= campaign_date('short') %>) per festeggiare l'informatica e stimolare più studenti a provarla. Chiunque, in ogni parte del mondo, può organizzare un evento dell'Ora del Codice.
 
 ## 1) Prepara il tuo evento
 
@@ -37,13 +34,13 @@ Organizza un evento dell'Ora del Codice durante la Settimana di Educazione all'I
 
 ## Esempio di Piano Organizzativo dell'Evento
 
-**Evento:** Assemblea per l'inizio della settimana dell'educazione informatica
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Data:** 7 Dicembre (inizio della settimana di Educazione Informatica)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Tempo:** Durante la giornata scolastica, preferibilmente a metà mattina. Durata 1 ora circa.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Luogo:** Aula Magna (teatro, palestra, aula)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -57,4 +54,3 @@ Organizza un evento dell'Ora del Codice durante la Settimana di Educazione all'I
 | 10:30 - 10:40 am | Gli studenti svolgono una dimostrazione di un'Ora del Codice al resto della scuola. Scambio delle parti: lasciate che siano loro ad insegnare al dirigente scolastico, ai rappresentanti politici o agli altri alunni. |
 | 10:40 - 11:00 am | Alcuni studenti mostrano un'attività tradizionale e come l'informatica possa essere insegnata senza l'uso di computer.                                                                                                 |
 | 11:00 - 11:05 am | L'insegnante che ha aiutato ad organizzare l'evento terrà il discorso conclusivo.                                                                                                                                      |
-

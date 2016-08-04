@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 links to online simulations' 
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"> 
 
 ## Alternative Ideas for Unit 6 >  Links to Online Simulations Using Robots and Tangibles 
  

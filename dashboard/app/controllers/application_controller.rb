@@ -135,7 +135,6 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
-        response[:trophy_updates] = options[:trophy_updates] unless options[:trophy_updates].blank?
         response[:new_level_completed] = options[:new_level_completed]
         response[:level_path] = build_script_level_path(script_level)
         script_level_solved_response(response, script_level)
@@ -153,7 +152,7 @@ class ApplicationController < ActionController::Base
     end
 
     if options[:share_failure]
-      response[:share_failure] = options[:share_failure]
+      response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
     if HintViewRequest.enabled?
@@ -220,5 +219,34 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     authorize! :read, :reports
+  end
+
+  # Pairings are stored as an array of user ids in the session
+  # (storing full objects is not a good idea because the session is
+  # saved as a cookie)
+
+  def pairings=(pairings_from_params)
+    # remove pairings
+    if pairings_from_params.blank?
+      session[:pairings] = []
+      return
+    end
+
+    # replace pairings
+    session[:pairings] = pairings_from_params.map do |pairing_param|
+      other_user = User.find(pairing_param[:id])
+      if current_user.can_pair_with? other_user
+        other_user.id
+      else
+        # TODO: should this cause an error to be returned to the user?
+        nil
+      end
+    end.compact
+  end
+
+  def pairings
+    return [] if session[:pairings].blank?
+
+    User.find(session[:pairings])
   end
 end

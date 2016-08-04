@@ -4,7 +4,8 @@ var rowStyle = require('./rowStyle');
 var OptionsSelectRow = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLSelectElement).isRequired,
-    handleChange: React.PropTypes.func
+    handleChange: React.PropTypes.func,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -40,7 +41,8 @@ var OptionsSelectRow = React.createClass({
           <textarea
             onChange={this.handleChangeInternal}
             value={this.state.value}
-            style={textAreaStyle} />
+            style={textAreaStyle}
+          />
         </div>
       </div>
     );

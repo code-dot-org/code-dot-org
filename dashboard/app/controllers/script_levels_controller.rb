@@ -160,8 +160,11 @@ class ScriptLevelsController < ApplicationController
 
       user_level = current_user.user_level_for(@script_level, @level)
       if user_level && user_level.submitted?
-        level_view_options(submitted: true)
-        level_view_options(unsubmit_url: url_for(user_level))
+        level_view_options(
+          @level.id,
+          submitted: true,
+          unsubmit_url: url_for(user_level)
+        )
         readonly_view_options
       end
     end
@@ -255,7 +258,7 @@ class ScriptLevelsController < ApplicationController
 
     view_options(
       full_width: true,
-      small_footer: @game.uses_small_footer? || enable_scrolling?,
+      small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?
     )
 

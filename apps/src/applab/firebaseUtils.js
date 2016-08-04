@@ -78,8 +78,6 @@ function getFirebase() {
       fb.authWithCustomToken(Applab.firebaseAuthToken, (err, user) => {
         if (err) {
           throw new Error(`error authenticating to Firebase: ${err}`);
-        } else {
-          Applab.firebaseUserId = user.uid;
         }
       });
     }

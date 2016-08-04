@@ -1,7 +1,7 @@
 name 'CSPPD3-u4 chapter 2 chunk 1'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Unit 4 Overview > Chapter 2 > Resources for Lessons 10 - 13
 #### Data in the Real World

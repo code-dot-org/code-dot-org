@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-
 # Recomandări si explicații pentru Hour of Code și Saptamana Educatiei in Tehnologia computer-ului si programare
 
 Code.org va gazdui o varietate de activităţi site(urile) Web Hour of Code pe Code.org, Hour of Code, şi CSEdWeek. Lista curentă este la [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
@@ -214,13 +213,13 @@ După succesul campaniei 2013, am luat măsuri pentru a face sigur că am înfii
 
 O parte din acest lucru este de a proteja marca "Hour of Code" pentru a preveni confuzii. Mulţi dintre partenerii noştri au realizat tutoriale sau au folosit "Hour of Code" pe site-urile web. Nu vrem să prevenim acest lucru, dar vrem să ne asigurăm că se încadrează în câteva limite:
 
-  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Ora de Cod de ACME Corp".
+  2. Utilizează un exponent "TM" în locurile cele mai proeminente în care menționezi "Hour of Code", atât pe site-ul tău de web cât şi în descrierea aplicației.
   3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
     
     *"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."*
 
-  4. No use of "Hour of Code" in app names.
+  4. A nu se utiliza "Hour of Code"/Ora de Cod în nume de aplicații.
 
 [**La începutul paginii**](#top)
 
@@ -264,4 +263,3 @@ Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră util
 Dacă creaţi un tutorial care este proiectat pentru vision-impaired, ne-ar plăcea să-l evidenţiaţi pentru telespectatorii cu cititoare de ecran. Noi nu au primit încă un astfel de tutorial, şi ar fi dornici să includem unul ca o opţiune pentru acesti elevi.
 
 [**La începutul paginii**](#top)
-

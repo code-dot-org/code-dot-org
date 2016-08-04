@@ -4,9 +4,9 @@ description 'tour of the PD space'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/onlinePDstage1puzzle2.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/onlinePDstage1puzzle2.css">
 
-## Using the Space 
+# Using the Space
 
 All of your Online professional learning will be done here, in Code Studio. Below you'll find a quick tour of the interface, which demonstrates several important features of using Code Studio:
 <br>
@@ -15,9 +15,9 @@ All of your Online professional learning will be done here, in Code Studio. Belo
 The main PD page is broken up into several __stages__, which each represent a different topic or idea
 
 <h4><details>
-<summary>click here to see more about stages</summary>
+<summary>Click here to see more about stages</summary>
 <br>
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
 <img src ="/script_assets/pd/pd_stage_overview.gif" />
 </details></h4>
@@ -48,10 +48,10 @@ For video or reading levels, the icons will go grey when completed.
 > **IMPORTANT:** All icons for all levels need to be filled in as finished for this module to be considered 100% complete. An icon will not be changed to green or grey unless you click a continue or a submit button. As you progress through the levels, check back periodically to ensure the levels you have completed are recorded as being successfully finished.
 
 <h4><details>
-<summary>click here to see more about levels</summary>
+<summary>Click here to see more about levels</summary>
 <br>
 
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
 <img src ="/script_assets/pd/pd_level_overview.gif" />
 </details></h4>
@@ -59,13 +59,15 @@ For video or reading levels, the icons will go grey when completed.
 <br>
 
 __Accessing levels__ can be done four ways:
-<ol><li>clicking from the main page, </li><li> clicking to a different level in the same stage with the circles on the header of the page,</li><li> advance to the next level by clicking "continue" or "submit" at the bottom of each level (<bold>NOTE: this is the way you'll advance through most activities in Code Studio</bold>) </li>
-<li>using the drop-down menu in the header can be used to access any level (this is helpful for going back to a level you've completed before)</li></ol>
+1. Clicking from the main page.
+2. Clicking to a different level in the same stage with the circles on the header of the page.
+3. Advance to the next level by clicking "continue" or "submit" at the bottom of each level. (**Note:** This is the way you'll advance through most activities in Code Studio.)
+4. Using the drop-down menu in the header can be used to access any level. (This is helpful for going back to a level you've completed before.)
 
 <h4><details>
-<summary>click here to see more about accessing levels</summary>
+<summary>Click here to see more about accessing levels</summary>
 <br>
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
 <img src ="/script_assets/pd/pd-level-click.gif" />
 </details></h4>
@@ -75,9 +77,9 @@ __Accessing levels__ can be done four ways:
 __Resizing text boxes__ can be done by clicking and dragging the bottom-right corner of the box. 
 
 <h4><details>
-<summary>click here to see more about resizing text boxes</summary>
+<summary>Click here to see more about resizing text boxes</summary>
 <br>
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
 <img src ="/script_assets/pd/pd-resizing-box.gif" />
 </details></h4>

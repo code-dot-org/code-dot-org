@@ -27,10 +27,6 @@ namespace :lint do
       # also do our standard apps lint
       RakeUtils.system 'npm run lint'
     end
-    Dir.chdir(code_studio_dir) do
-      HipChat.log 'Linting <b>code-studio</b> JavaScript...'
-      RakeUtils.system 'npm run lint-js'
-    end
   end
 
   task all: [:ruby, :haml, :scss, :javascript]

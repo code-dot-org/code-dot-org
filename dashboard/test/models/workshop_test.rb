@@ -13,7 +13,6 @@ class WorkshopTest < ActiveSupport::TestCase
                                 end: segment_start_and_end.last)
       end
       workshop.save!
-
     end
   end
 
@@ -166,7 +165,6 @@ class WorkshopTest < ActiveSupport::TestCase
 
     assert_equal 'CS in Science', create(:workshop, program_type: '1').program_type_short_name
     assert_equal 'CS in Algebra', create(:workshop, program_type: '2').program_type_short_name
-
   end
 
   test "phase_short_name" do

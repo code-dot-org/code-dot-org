@@ -6,10 +6,7 @@ nav: how_to_nav
 
 ---
 
-
 # How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) 活動準備工作
 
@@ -37,13 +34,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 活動規劃範例
 
-**活動:**開啟學校內的電腦科學教育週集會
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**時間:**上學日的某天，活動首選上午，約1小時。
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**地點:**學校禮堂(如劇院、體育館、餐廳)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -57,4 +54,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | 學生演示不插電活動，如何在沒有電腦的情況下也可以教大家電腦科學。                                                                                                                |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-

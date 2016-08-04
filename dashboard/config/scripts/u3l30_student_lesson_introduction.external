@@ -3,25 +3,24 @@ title 'An Introduction to Arrays'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 24 - Introduction to Arrays
+# Unit 3: Lesson 24 - Introduction to Arrays
 
-# Background
+## Background
 
 It is very common to want to store lists of information in our programs. This could be done with variables but they have many shortcomings when it comes to doing so. Most programming languages, including JavaScript, include a list structure of some sort to make it easier to hold many pieces of related information. When used carefully, lists can greatly expand the functionality of our apps.  The list structure in JavaScript is called an array.
 
-# Vocabulary
+## Vocabulary
 
-**List:** a generic term for a programming data structure that holds multiple items
+* **List:** A generic term for a programming data structure that holds multiple items.
+* **Array:** A data structure in JavaScript used to represent a list.
 
-**Array:** a data structure in JavaScript used to represent a list 
-
-# Lesson
+## Lesson
 
 * Learn how to design arrays to hold a variety of information.
 * Access information in an array by its index.
 * Develop a simple application that uses an array.
 
-# Resources
+## Resources
 
 * Tutorial Video: Introduction to Lists
 

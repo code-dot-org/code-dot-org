@@ -33,11 +33,11 @@ class LevelSource < ActiveRecord::Base
   # A level_source is considered to be standardized if it does not have this.
   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
 
-  def LevelSource.cache_key(level_id, md5)
+  def self.cache_key(level_id, md5)
     "#{level_id}-#{md5}"
   end
 
-  def LevelSource.find_identical_or_create(level, data)
+  def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
 
     Rails.cache.fetch(cache_key(level.id, md5)) do
@@ -68,7 +68,7 @@ class LevelSource < ActiveRecord::Base
       data = self.data.gsub(XMLNS_STRING, '')
       LevelSource.where(level_id: self.level_id,
                         data: data,
-                        md5: Digest::MD5.hexdigest(data)).first_or_create().id
+                        md5: Digest::MD5.hexdigest(data)).first_or_create.id
     end
   end
 

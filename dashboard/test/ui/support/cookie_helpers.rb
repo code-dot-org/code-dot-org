@@ -1,4 +1,5 @@
 require 'active_support/key_generator'
+require 'active_support/all'
 
 module CookieHelpers
   def debug_cookies(cookies)

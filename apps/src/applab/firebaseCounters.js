@@ -106,10 +106,8 @@ export function incrementRateLimitCounters() {
  * @returns {Promise<number>} The current server time in milliseconds.
  */
 function getCurrentTime() {
-  const serverTimeRef = getDatabase(Applab.channelId)
-    .child(`serverTime/${Applab.firebaseUserId}`);
+  const serverTimeRef = getDatabase(Applab.channelId).child('serverTime');
   return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(() => {
-    serverTimeRef.onDisconnect().remove();
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
   });
 }

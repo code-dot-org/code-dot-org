@@ -4,7 +4,6 @@ Tytuł: <%= hoc_s(:title_partners) %>
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Partnerzy z Ameryki Łacińskiej
@@ -29,6 +28,22 @@ Tytuł: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'cn' %>
+
+# Partnerzy z Chin
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
+
+<% end %>
+
+<% if @country == 'fr' %>
+
+# Partnerzy z Francji
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
+
+<% end %>
+
 <% if @country == 'id' %>
 
 # Partnerzy z Indonezji
@@ -39,7 +54,7 @@ Tytuł: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Partnerzy z Irlandii
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -58,6 +73,14 @@ Tytuł: <%= hoc_s(:title_partners) %>
 # Partnerzy z Japonii
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
+<% if @country == 'nl' %>
+
+# Partnerzy z Holandii
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
 <% end %>
 
@@ -103,13 +126,13 @@ Tytuł: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Partnerzy Poradników
+# Partnerzy Samouczków
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Partnerzy Infrastruktury i Narzędzia
+# Partnerzy Infrastruktury i Narzędzi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
@@ -118,4 +141,3 @@ Tytuł: <%= hoc_s(:title_partners) %>
 # Pozostali Partnerzy
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-

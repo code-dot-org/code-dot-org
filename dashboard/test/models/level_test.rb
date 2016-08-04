@@ -4,10 +4,10 @@ class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
   setup do
-    @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
-    @custom_turtle_data = {:solution_level_source_id=>4, :user_id=>1}
-    @maze_data = {:game_id=>25, :name=>"__bob4", :level_num=>"custom", :skin=>"birds", :instructions=>"sdfdfs", :type=>'Maze'}
-    @custom_maze_data = @maze_data.merge(:user_id=>1)
+    @turtle_data = {:game_id => 23, :name => "__bob4", :level_num => "custom", :skin => "artist", :instructions => "sdfdfs", :type => 'Artist'}
+    @custom_turtle_data = {:solution_level_source_id => 4, :user_id => 1}
+    @maze_data = {:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze'}
+    @custom_maze_data = @maze_data.merge(:user_id => 1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -15,7 +15,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'create level' do
-    Level.create(:game_id=>25, :name=>"__bob4", :level_num=>"custom", :skin=>"birds", :instructions=>"sdfdfs", :type=>'Maze')
+    Level.create(:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze')
   end
 
   test "throws argument error on bad data" do
@@ -89,13 +89,13 @@ class LevelTest < ActiveSupport::TestCase
     level = Level.create(@maze_data)
     toolbox = Nokogiri::XML(level.complete_toolbox(:start_blocks))
 
-    assert_equal "xml", toolbox.root().name
-    assert_equal "toolbox", toolbox.root().attributes["id"].value
+    assert_equal "xml", toolbox.root.name
+    assert_equal "toolbox", toolbox.root.attributes["id"].value
 
-    first_category = toolbox.root().children.first
+    first_category = toolbox.root.children.first
     assert_equal "category", first_category.name
 
-    first_block = toolbox.root().css('category > *').first
+    first_block = toolbox.root.css('category > *').first
     assert_equal "block", first_block.name
     assert_equal 'category', first_block.attributes['type'].value
   end

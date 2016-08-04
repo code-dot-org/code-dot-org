@@ -1,6 +1,6 @@
 title 'CSP Unit 4 - Data'
 description 'Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.'
-description_short 'Data'
+description_short 'DEPRECATED - Data'
 login_required 'true'
 hidden 'false'
 

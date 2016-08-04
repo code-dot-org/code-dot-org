@@ -99,11 +99,6 @@ Style/CaseIndentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# Offense count: 57
-# Cop supports --auto-correct.
-Style/ClassMethods:
-  Enabled: false
-
 # Offense count: 80
 Style/ClassVars:
   Enabled: false
@@ -127,13 +122,6 @@ Style/ConditionalAssignment:
 
 # Offense count: 9
 Style/ConstantName:
-  Enabled: false
-
-# Offense count: 50
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundBlockBody:
   Enabled: false
 
 # Offense count: 274
@@ -192,16 +180,6 @@ Style/Lambda:
 Style/LeadingCommentSpace:
   Enabled: false
 
-# Offense count: 24
-# Cop supports --auto-correct.
-Style/LineEndConcatenation:
-  Enabled: false
-
-# Offense count: 59
-# Cop supports --auto-correct.
-Style/MethodCallParentheses:
-  Enabled: false
-
 # Offense count: 5
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -236,24 +214,11 @@ Style/MultilineTernaryOperator:
 Style/MutableConstant:
   Enabled: false
 
-# Offense count: 30
-# Cop supports --auto-correct.
-Style/NegatedIf:
-  Enabled: false
-
 # Offense count: 19
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 # SupportedStyles: skip_modifier_ifs, always
 Style/Next:
-  Enabled: false
-
-# Offense count: 3
-# Configuration parameters: NamePrefix, NamePrefixBlacklist, NameWhitelist.
-# NamePrefix: is_, has_, have_
-# NamePrefixBlacklist: is_, has_, have_
-# NameWhitelist: is_a?
-Style/PredicateName:
   Enabled: false
 
 # Offense count: 7
@@ -300,12 +265,6 @@ Style/SpaceAroundEqualsInParameterDefault:
 Style/SpaceAroundKeyword:
   Enabled: false
 
-# Offense count: 394
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-Style/SpaceAroundOperators:
-  Enabled: false
-
 # Offense count: 207
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -337,13 +296,6 @@ Style/SpaceInsideHashLiteralBraces:
 # Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
-  Enabled: false
-
-# Offense count: 12
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiteralsInInterpolation:
   Enabled: false
 
 # Offense count: 30

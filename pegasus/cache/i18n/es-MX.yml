@@ -57,7 +57,7 @@
   csedweek_map_legend_cs_tech_jam: Eventos Especiales de Ciencias de la Computación
   cded_sign_up: Registrarse
   cded_try_it: Pruébalo
-  twentyhours_trynow: Probar ahora
+  try_now: Probar ahora
   california_heading: Pídele a tu escuela que enseñe ciencias de la computación
   california_text: Cualquier maestro puede ofrecer nuestros <a href='http://studio.code.org/'>cursos
     gratuitos</a>. Cualquier primaria puede <a href='http://code.org/educate/k5'>enseñar
@@ -376,6 +376,9 @@
   homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar
     la informática K-12.
   homepage_banner_congress_link: Añadir su apoyo
+  homepage_banner_emailprivacy: We’re making an important change to how we support
+    student privacy.
+  homepage_banner_emailprivacy_link: Read more
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -460,15 +463,10 @@
   starwars_javascript_description: Arrastra y suelta los bloques y utiliza JavaScript.
   starwars_javascript_specs: Sólo en inglés | Navegadores Actuales | Mayores de 11
     años
-  starwars_javascript_start_button: Prueba ahora
   starwars_blocks_title: Bloques
   starwars_blocks_description: Arrastra y suelta los bloques.
   starwars_blocks_specs: Muchos lenguajes|Smartphones, tablets, navegadores actuales
     | Edad 6-106
-  starwars_blocks_start_button: Probar ahora
-  starwars_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
-  starwars_speak_languages: "¿Hablas otro idioma?"
-  starwars_help_translate: Ayúdanos a traducir a tu idioma
   starwars_platform_text: Navegadores modernos, smartphones, tabletas
   mc_name: Hora de Código de Minecraft
   mc_longdescription: Utiliza bloques de código para llevar a Steve o Alex en una
@@ -479,6 +477,14 @@
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
   mc_specs: Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106
   minecraft_subtitle: Hora de Código de Minecraft
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  are_you_teacher: "¿Eres un maestro/a?"
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la
     Hora de Código.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar
@@ -624,9 +630,9 @@
     ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas
     web, a hacer tu propia app o explorar otros lenguajes como C++, Ruby o Python!
   dashboard_landing_inspire: Inspira a tus estudiantes con carteles, videos y más.
-  dashboard_landing_video_library: Usa un vídeo de la biblioteca de vídeos de los
-    conceptos de informática.
-  dashboard_landing_report_bug: Solicita una característica o informa sobre un error.
+  dashboard_landing_video_library: Use un video de la videoteca de los conceptos de
+    ciencia de computadoras.
+  dashboard_landing_report_bug: Solicitar una característica o notificar un error.
   dashboard_landing_teacher_forum: "Únete a la comunidad de aprendizaje profesional."
   dashboard_hoc_courses: La Hora de Código para todas las edades
   dashboard_hoc_courses_desc: "¡Prueba alguno de estos tutoriales de menos de 1 hora
@@ -684,7 +690,10 @@
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_assessments_view: 'Ver evaluaciones en:'
-  dashboard_assessments_none: Sin evaluaciones
+  dashboard_assessments_none: Mayoría de los maestros medir el progreso de sus estudiantes
+    usando la pestaña de "Ver avances". Si usted está interesado en dar a sus estudiantes
+    evaluaciones adicionales, usted puede encontrar preguntas recomendadas y áreas
+    en los planes de lección. Estos son realizados fuera de estudio código.
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso
     de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code
     Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar
@@ -692,6 +701,8 @@
     desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
   dashboard_assessments_summaries: Sumarios
   dashboard_assessments_answers: Todas las respuestas
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -704,12 +715,13 @@
   dashboard_navigation_section_speakers: Informática<br/>Oradores invitados
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
   dashboard_navigation_view_progress: Progreso
-  dashboard_navigation_view_text_responses: Ver Respuestas de Texto
+  dashboard_navigation_view_text_responses: Respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
-  dashboard_navigation_view_stats: Ver estadísticas
+  dashboard_navigation_view_stats: Estadísticas
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
   dashboard_progress_not_started: No iniciado
@@ -725,7 +737,12 @@
     in %{script_name}
   dashboard_progress_pair_programming: programación de par
   dashboard_responses_view: 'Ver respuestas de texto:'
-  dashboard_responses_none: Sin respuestas de texto
+  dashboard_responses_none: La mayoría de nuestras clases está diseñada para funcionar
+    para las edades más jóvenes y que requieren los estudiantes escribir las respuestas
+    del texto a las preguntas, así que no verá los comentarios de texto aquí. Para
+    estudiantes mayores en cursos de secundaria y media, puedes ver sus presentaciones
+    a las preguntas de respuesta abierta texto eligiendo el curso asignado en el desplegable
+    de arriba.
   dashboard_sections_new_section: Nueva sección
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
     a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños
@@ -756,9 +773,9 @@
     para cada profesor. Sus estudiantes serán agregados a esta nueva sección y dejarán
     la sección anterior.
   dashboard_sections_move_to_section: 'Avanzar a sección:'
-  dashboard_sections_enter_code: 'Ingresar código de sección:'
+  dashboard_sections_enter_code: 'Introduzca el código de sección:'
   dashboard_sections_code_placeholder: código de 6 caracteres (ABCDEF)
-  dashboard_sections_other_section: Otra Sección
+  dashboard_sections_other_section: Otra maestra
   dashboard_sections_both_sections: "¿Desearía que el(los) estudiante(s) permanezcan
     en ambas secciones?"
   dashboard_sections_yes_both: Sí, deseo copiar al (los) estudiante (s) para que permanezcan
@@ -900,7 +917,12 @@
   dashboard_announce_view_all: Ver todo
   dashboard_announce_message: "<b>January 6, 2015</b> - Learn beyond one Hour of Code
     in your classroom. Start a new intro course and track student progress."
-  dashboard_announce_button_text: Aprende más
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Aprende más
+  dashboard_announce_try_now_button: Probar ahora
   dashboard_announce_petition: Como profesor, usted está liderando un movimiento para
     dar a cada estudiante en todas las escuelas la oportunidad de aprender computación.
     Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes
@@ -1035,7 +1057,7 @@
   accelerated_name: Curso acelerado
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
-  cspunit3_name: Principios de CS Unidad 3
+  cspunit3_name: 'Unidad 3: programación'
   cspunit4_name: 'Tema 4: Datos'
   cspunit5_name: 'Unidad 5: Explorar y Crear PT'
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
@@ -1059,7 +1081,7 @@
   classicmaze_name: Laberinto clásico
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
-  starwarsblocks_name: Bloques de La Guerra de Las Galaxias
+  starwarsblocks_name: Star Wars (bloques)
   math_category_name: Matemáticas
   hoc_category_name: Hora del código
   csf_category_name: Fundamentos de CS
@@ -1784,11 +1806,11 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  compatibility_https_header: Habilitar HTTPS para Code.org.
-  compatibility_https_message: Para aumentar la seguridad, nos cambió a HTTPS en %{https_date}.
-    Usted no podrá acceder a Code.org después de esta fecha. <a href='%{it_requirements_url}'>
-    Haga clic aquí</a> para aprender cómo activar HTTPS para Code.org.
-  compatibility_https_hide_this_warning: Ocultar esta advertencia
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Su navegador no es compatible. Por favor, actualice
+    su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros
+    navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una
+    funcionalidad rota.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn

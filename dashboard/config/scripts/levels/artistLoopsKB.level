@@ -31,7 +31,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There should be 3 blocks inside of your loop to solve this puzzle.\",\r\n  \"hint_id\": \"artistLoopsKB_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nLook!  It's a theater.  Help me set up the chairs so we can all see the stage.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c4263306ebb0ad1d99fe6f200a790d0c-image-1467936424533.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -63,6 +64,14 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="simple_jump_left"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-8">???</title>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

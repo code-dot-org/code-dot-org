@@ -12,14 +12,37 @@ nav: how_to_nav
 
 Посетете местните класни стаи, за да вдъхновите учениците да продължават да учат компютърни науки. [ Доброволец за един час](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## 2. Присъединете се към сесия за доброволци
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Ние ще обсъдим как да координирате действията си с учителите преди тяхното Hour of Code събитие, а също и какво трябва да направите в деня на събитието, за да подготвите събитието. Моля, задайте вашите въпроси! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+Ще проведем две информационни сесии, за да обясним какъв типичен доброволчески опит търсим. Ние ще обсъдим как да координирате действията си с учителите преди тяхното Hour of Code събитие, а също и какво трябва да направите в деня на събитието, за да подготвите събитието. Моля, задайте вашите въпроси! Тези уебинари ще бъдат проведени през Hangouts on Air, така че ако ги пропуснете все още можете да ги гледате записани по-късно. [ вижте дневния ред](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Дата       | Време                 | Link to info session                                                            |
-| ---------- | --------------------- | ------------------------------------------------------------------------------- |
-| 16 ноември | 1:00 ч.-1:30 pm PST   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3 декември | 11:00 ч.-11:30 am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Дата
+    </th>
+    
+    <th>
+      Време
+    </th>
+    
+    <th>
+      Връзка към информационна сесия
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Отделете 30 минути, за да опитате уроците предварително
 
@@ -27,7 +50,7 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 ## 4. Превърнете Вашите колеги в доброволци
 
-Кажете на приятели и колеги за Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Кажете на приятели и колеги за Hour of Code. Ние имаме хиляди учители, записали се, че търсят доброволци, помолете им като [ се регистрирате като доброволец](https://code.org/volunteer).
 
 **Примерни имейли:**
 
@@ -35,29 +58,33 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 Ако си спомняш първия си ред код, знаеш, че той оформи останалата част от живота ти.
 
-Това е причината, заради която Hour of Code съществува. През последните две години движението е разрушило стереотипите за това, какво е програмиране и помогна на повече от 100 милиона ученици в 180 страни да опитат компютърните науки за първи път.
+Това е причината, заради която Hour of Code съществува. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Записах се за доброволческа дейност в класната стая**   
-7,098 учители вече са поискали помощ. Code.org свързва класните стаи с технически доброволци като Вас, които можете да помогнете на ученици и учители в техния първи Hour of Code.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Моля, [ станете доброволец за един час](https://code.org/volunteer/engineer). След като се регистрирате, местни учители ще могат да се свържат с вас за помощ, използвайки защитена форма.* Не можете да сте доброволец? [ Помогнете за популяризирането на Hour of Code](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Вашият опит е от значение**   
-В повечето училища все още не се изучават компютърни науки. Повечето ученици не знаят, че става въпрос за решаване на големи проблеми, което ни свързва по-близо. Това е шанс да вдъхновите поне един млад човек във Вашия район.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Регистрирай се за да доброволец](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-* Вашият имейл адрес няма да бъде споделен с учители.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 3. Посъветвайте се с Вашия работодател за възможно включване
 
-[ Изпратете този имейл](https://hourofcode.com/promote/resources#email) на Вашия ръководител или изпълнителен директор.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 4. Промотиране на Hour of Code във Вашата общност
 
-Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. [ Изпратете този имейл](https://hourofcode.com/promote/resources#email).
+Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Прочетете предложения дневен ред по-долу, за да знаете какво да очаквате, когато посещавате класната стая.
+## 7. Подгответе се преди да посетите класната стая.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Дневен ред за доброволчеството в класната стая
 

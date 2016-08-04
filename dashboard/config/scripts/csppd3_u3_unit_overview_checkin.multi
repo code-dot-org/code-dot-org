@@ -10,7 +10,7 @@ right 'I feel like I need to do SOME review of lessons, content, etc before I te
 right 'I feel like I need to do A LOT of review of lessons, content, etc before I teach this'  
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Unit 3 Overview > Checking In
 
