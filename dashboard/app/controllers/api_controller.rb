@@ -14,8 +14,11 @@ class ApiController < ApplicationController
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
-      # TODO: change unlocked_at as needed
-      UserLevel.find(item[:user_level_id]).update(submitted: item[:locked], view_answers: item[:view_answers])
+      UserLevel.find(item[:user_level_id]).update(
+        submitted: item[:locked],
+        view_answers: item[:view_answers],
+        unlocked_at: item[:locked] ? nil : Time.now
+      )
     end
     render json: {}
   end
@@ -42,7 +45,7 @@ class ApiController < ApplicationController
             {
               user_level_id: user_level.id,
               name: student.name,
-              locked: user_level.submitted && !user_level.view_answers,
+              locked: user_level.locked?,
               view_answers: user_level.view_answers
             }
           end
