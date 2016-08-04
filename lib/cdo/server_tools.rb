@@ -27,14 +27,14 @@ class ServerTools
 
     production_attributes = `knife environment show production`
     ids.each do |id|
-      if !production_attributes.index("#{id.name}:").nil?
-        raise "Before deprovisoning #{id.name}, you must remove it from the chef " +
+      unless production_attributes.index("#{id.name}:").nil?
+        raise "Before deprovisoning #{id.name}, you must remove it from the chef " \
               "app-servers attribute using 'knife environment edit production'."
       end
     end
 
     validate_ids(ids)
-    return if !prompt_for_action('deregister, disable alerts, and terminate the EC2 instances', ids)
+    return unless prompt_for_action('deregister, disable alerts, and terminate the EC2 instances', ids)
 
     deregister_frontends_internal(ids)
     disable_frontend_newrelic_alerts_internal(ids)
@@ -45,7 +45,7 @@ class ServerTools
   def self.disable_frontend_newrelic_alerts(name_glob)
     ids = find_frontend_identifiers(name_glob)
     validate_ids(ids)
-    return if !prompt_for_action('disable NewRelic alerts', ids)
+    return unless prompt_for_action('disable NewRelic alerts', ids)
 
     disable_frontend_newrelic_alerts_internal(ids)
   end
@@ -54,7 +54,7 @@ class ServerTools
   def self.enable_frontend_newrelic_alerts(name_glob)
     ids = find_frontend_identifiers(name_glob)
     validate_ids(ids)
-    return if !prompt_for_action('enable production NewRelic alerts', ids)
+    return unless prompt_for_action('enable production NewRelic alerts', ids)
 
     puts "Enabling NewRelic alerts for #{ids.map(&:name).join(' ')}"
     NewRelic.enable_alerts(ids.map(&:hostname))
@@ -64,7 +64,7 @@ class ServerTools
   def self.deregister_frontends(name_glob)
     ids = find_frontend_identifiers(name_glob)
     validate_ids(ids)
-    return if !prompt_for_action('deregister from the ELB', ids)
+    return unless prompt_for_action('deregister from the ELB', ids)
     deregister_frontends_internal(ids)
   end
 
@@ -74,7 +74,7 @@ class ServerTools
     ids = find_frontend_identifiers(name_glob)
 
     validate_ids(ids)
-    return if !prompt_for_action('terminate the EC2 instances', ids)
+    return unless prompt_for_action('terminate the EC2 instances', ids)
 
     puts "Terminating #{ids.map(:names).join(' ')}"
     instance_ids = ids.map(:instance_id)

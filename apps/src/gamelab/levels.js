@@ -5,6 +5,25 @@ var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
 
+// TODO (bbuchanan): Continue documenting the game lab level object properties.
+/**
+ * Properties of the game lab level object
+ * @typedef {Object} GameLabLevel
+ *
+ * @property {Object.<string, null>} codeFunctions - collection of blocks to
+ *           be made available in the droplet toolbox on this level.
+ *
+ * @property {?boolean} hideAnimationMode - If true, the animation tab should be
+ *           inaccessible to the student on this level.
+ *
+ * @property {?boolean} pauseAnimationsByDefault - If true, then after
+ *           `setAnimation` a sprite's animation will always be paused,
+ *           not playing.
+ *
+ * @property {?SerializedAnimationList} startAnimations - Initial state of the
+ *           animation list for this level / what to return to on reset.
+ */
+
 /*
  * Configuration for all levels.
  */
@@ -76,6 +95,8 @@ levels.custom = utils.extend(levels.sandbox, {
     "setVelocity": null,
     "sprite.height": null,
     "sprite.width": null,
+    "getScaledWidth": null,
+    "getScaledHeight": null,
     "debug": null,
     "depth": null,
     "lifetime": null,

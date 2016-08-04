@@ -24,30 +24,31 @@ const styles = {
 };
 
 const AniGifPreview = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string.isRequired,
+    instructionsInTopPane: React.PropTypes.bool.isRequired,
+    showInstructionsDialog: React.PropTypes.func.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired,
+  },
+
   render() {
     return (
       <div
-          id="ani-gif-preview-wrapper"
-          style={[styles.wrapper, this.props.instructionsInTopPane && styles.wrapperTopPane]}
+        id="ani-gif-preview-wrapper"
+        style={[styles.wrapper, this.props.instructionsInTopPane && styles.wrapperTopPane]}
       >
         <div
-            id="ani-gif-preview"
-            style={[
+          id="ani-gif-preview"
+          style={[
               styles.aniGifPreview(this.props.url),
               this.props.noVisualization && styles.bigPreview
             ]}
-            onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
+          onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
         />
       </div>
     );
   }
 });
-
-AniGifPreview.propTypes = {
-  url: React.PropTypes.string.isRequired,
-  instructionsInTopPane: React.PropTypes.bool.isRequired,
-  showInstructionsDialog: React.PropTypes.func.isRequired
-};
 
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,

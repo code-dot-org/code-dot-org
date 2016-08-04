@@ -10,7 +10,7 @@ nav: plp_playbook_nav
 
 ## Resources 
 
-Check these resources if you ahve questions about what to order, how many to order, or navigating the marketplace.
+Check these resources if you have questions about what to order, how many to order, or navigating the marketplace.
 
 
 - [Webinar Recording (Partial)](https://bluejeans.com/playback/s/ZzQZ9gCZnv5GCDcjptghUQOWKudzXaQfHO2feZ7bOPyCzVl01OxzLuQmmB6Xz31J)<br/>

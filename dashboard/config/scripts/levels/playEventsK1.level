@@ -61,10 +61,6 @@
           <title name="SPRITE">0</title>
           <title name="VALUE">Hi there.</title>
         </block>
-        <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-        </block>
         <block type="studio_setSpriteEmotion">
           <title name="SPRITE">0</title>
           <title name="VALUE">0</title>

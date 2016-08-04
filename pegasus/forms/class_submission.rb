@@ -64,7 +64,7 @@ class ClassSubmission
   def self.formats_with_i18n_labels(groups)
     results = {}
     groups.each_pair do |key,group|
-      results[key] = {'label'=>I18n.t("class_submission_#{key}"), 'children'=>{}}
+      results[key] = {'label' => I18n.t("class_submission_#{key}"), 'children' => {}}
       group.each do |format|
         format = "#{key}_#{format}"
         results[key]['children'][format] = I18n.t("class_submission_#{format}")
@@ -183,7 +183,7 @@ class ClassSubmission
       fq: fq,
       fl: fl,
       facet: true,
-      'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
+      'facet.field' => ['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows: rows,
       sort: "school_name_s asc"
     }

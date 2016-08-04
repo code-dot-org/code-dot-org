@@ -6,21 +6,18 @@ nav: how_to_nav
 
 ---
 
-
-# How to organize an Hour of Code event
-
-Organizar el evento "Hora de Código" durante la Semana de la Educación de Ciencias de la Computación (<%= campaign_date('short') %>) para celebrar las ciencias de la computación e inspirar que más estudiantes lo intenten. Cualquiera, en cualquier lugar puede organizar un evento "Hora de Código".
+# Cómo organizar un evento de la Hora de Código
 
 ## 1) Prepárate para tu evento.
 
   * Determina un lugar, fecha y hora
   * Envía [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) invitando al alcalde, diputado, presidente autonómico o empresario influyente para que de una charla.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+  * Invita a los medios/prensa como la radio o televisión local, periódicos o blogs de educación o tecnología. Vea nuestro [kit de prensa](<%= resolve_url('/promote/press-kit') %>) para obtener ayuda.
 
 ## 2) Durante tu evento
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+  * Comience su evento con uno de nuestros [vídeos motivadores](<%= resolve_url('/promote/resources#videos') %>).
+  * De una introducción resumiendo la importancia de las Ciencias de la Computación, puedes usar estas [estadísticas e infografías](<%= resolve_url('/promote/stats') %>).   
       
     
   * Otras ideas de evento: 
@@ -37,13 +34,13 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 
 ## Ejemplo de un programa para tu evento
 
-**Evento:** Reunión de inicio de la semana de la educación en ciencias de la computación para todo el centro
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Fecha:** 7 de Diciembre (inicio de la semana de la educación en ciencias de la computación)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Hora:** Durante la jornada escolar. Son preferibles los eventos a media mañana. Aproximadamente 1 hora.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Lugar:** Salón de reuniones de la escuela (p.e., salón de actos, gimnasio, cafetería)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -51,10 +48,9 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 
 | Hora             | Acción                                                                                                                                                                                 |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                                                             |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>)                                        |
+| 10:00 - 10:05 am | Empiece con uno de nuestros[vídeos motivacionales](<%= resolve_url('/promote/resources#videos') %>)                                                                                      |
+| 10:05 - 10:15 am | El Director hace una presentación sobre la importancia de las Ciencias de la Computación. Use estas [estadísticas e infografías](<%= resolve_url('/promote/stats') %>)                   |
 | 10:15 - 10:30 am | Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.                              |
 | 10:30 - 10:40 am | Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes. |
 | 10:40 - 11:00 am | Los estudiantes hacen una demostración de una actividad sin conexión y como las ciencias de la computación pueden enseñarse sin usar ordenadores.                                      |
 | 11:00 - 11:05 am | El profesor que organizó el evento para toda la escuela dará la charla de cierre.                                                                                                      |
-

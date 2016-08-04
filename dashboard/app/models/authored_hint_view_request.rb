@@ -45,7 +45,7 @@ class AuthoredHintViewRequest < ActiveRecord::Base
   validates :script, :presence => true
   validates :level, :presence => true
 
-  def AuthoredHintViewRequest.enabled?(script = nil)
+  def self.enabled?(script = nil)
     if script
       Gatekeeper.allows('authored_hint_view_request', where: { script_name: script.name }, default: true)
     else

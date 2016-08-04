@@ -14,17 +14,17 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Grazas por rexistrarte para realizar unha Hora do Código!
 
-Ti estas a facer posible que os estudantes de todo o mundo aprendan unha Hora do Código que pode *cambiar resto das suas vidas*, dende o < % = 7 ao 13_de Decembro('completo') % &gt. Estaremos en contacto sobre premios, novos titoriais e outras actualizacións emocionantes. ¿Qué podes facer agora?
+Ti estas a facer posible que os estudantes de todo o mundo aprendan unha Hora do Código que pode *cambiar resto das suas vidas*, dende o <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. ¿Qué podes facer agora?
 
 ## 1. Corre a voz
 
-Xa te uniches o movemento da Hora do Código. Dillo os teus amigos con **#HourOfCode**!
+Xa te uniches ao movemento da Hora do Código. Dillo os teus amigos con **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 1. Atope un voluntario local para axudarlle co seu evento.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Procure o noso mapa de voluntarios](https://code.org/volunteer/local) para ver os voluntarios que poden visitar a aula ou a vídeo conversa de xeito remoto e así animar os seus alumnos sobre a amplitude de posibilidades que ten a ciencia informática.
 
 ## 3. Pídelle á túa escola que acolla unha Hora do Código
 
@@ -42,8 +42,8 @@ Xa te uniches o movemento da Hora do Código. Dillo os teus amigos con **#HourOf
 
 [Envía este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) ós teus representantes locais, concello ou xunta escolar e invítatos a visitar a túa escola para a Hora do Código. Pode axudar a dar apoio a que a Informática por mais dunha hora.
 
-## 7. Plan your Hour of Code
+## 7. Planifique a súa Hora do Código
 
-Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+Escolla unha actividade da Hora do Código e [vexa esta guía práctica](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

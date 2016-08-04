@@ -28,7 +28,7 @@ class DynamoTable
     @metadata_item ||= db.get_item(
       table_name: CDO.dynamo_table_metadata_table,
       consistent_read: true,
-      key: {'hash'=>@metadata_hash}
+      key: {'hash' => @metadata_hash}
     ).item
 
     # only return the parts we care about
@@ -62,7 +62,7 @@ class DynamoTable
     begin
       db.delete_item(
         table_name: CDO.dynamo_tables_table,
-        key: {'hash'=>@hash, 'row_id'=>id},
+        key: {'hash' => @hash, 'row_id' => id},
         expected: row_id_exists(id),
       )
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
@@ -75,7 +75,7 @@ class DynamoTable
     ids = ids_to_a
     unless ids.empty?
       items = ids.map do |id|
-        { delete_request: { key: {'hash'=>@hash, 'row_id'=>id} } }
+        { delete_request: { key: {'hash' => @hash, 'row_id' => id} } }
       end
 
       # batch_write_items can only handle 25 items at a time, so split into groups of 25
@@ -87,7 +87,7 @@ class DynamoTable
     end
     db.delete_item(
       table_name: CDO.dynamo_table_metadata_table,
-      key: {'hash'=>@metadata_hash}
+      key: {'hash' => @metadata_hash}
     )
     true
   end
@@ -96,7 +96,7 @@ class DynamoTable
     row = db.get_item(
       table_name: CDO.dynamo_tables_table,
       consistent_read: true,
-      key: {'hash'=>@hash, 'row_id'=>id},
+      key: {'hash' => @hash, 'row_id' => id},
     ).item
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
 
@@ -191,7 +191,7 @@ class DynamoTable
   end
 
   def rename_column(old_name, new_name, ip_address)
-    ensure_metadata()
+    ensure_metadata
     column_list = JSON.parse(metadata["column_list"])
     new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
     set_column_list_metadata(new_column_list)
@@ -213,7 +213,7 @@ class DynamoTable
   end
 
   def add_columns(column_names)
-    ensure_metadata()
+    ensure_metadata
     column_list = JSON.parse(metadata["column_list"])
     column_names.each do |col|
       column_list = TableMetadata.add_column(column_list, col)
@@ -222,7 +222,7 @@ class DynamoTable
   end
 
   def delete_column(column_name, ip_address)
-    ensure_metadata()
+    ensure_metadata
     column_list = JSON.parse(metadata["column_list"])
     new_column_list = TableMetadata.remove_column(column_list, column_name)
     set_column_list_metadata(new_column_list)

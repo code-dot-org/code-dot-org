@@ -1,13 +1,9 @@
 * * *
 
-title: <%= hoc_s(:title_whole_school) %> layout: wide
+titel: < % = hoc_s(:title_whole_school) %> lay-out: breed
 
 * * *
 
-<%= view :signup_button %>
-
 # Zorg dat je hele school meedoet
 
-Hier komt informatie waarmee je je hele school kunt laten meedoen met het Uur Code.
-
-<%= view :signup_button %>
+Hier komt informatie waarmee je je hele school kunt laten meedoen met het CodeUur.

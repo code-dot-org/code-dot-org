@@ -119,16 +119,6 @@ namespace :seed do
     end
   end
 
-  task trophies: :environment do
-    # code in user.rb assumes that broze id: 1, silver id: 2 and gold id: 3.
-    Trophy.transaction do
-      Trophy.reset_db
-      %w(Bronze Silver Gold).each_with_index do |trophy, id|
-        Trophy.create!(id: id + 1, name: trophy, image_name: "#{trophy.downcase}trophy.png")
-      end
-    end
-  end
-
   task prize_providers: :environment do
     PrizeProvider.transaction do
       PrizeProvider.reset_db
@@ -145,7 +135,7 @@ namespace :seed do
         {name: 'DonorsChoose.org $250', description_token: 'donors_choose_bonus', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
         {name: 'Skype', description_token: 'skype', url: 'http://www.skype.com/', image_name: 'skype_card.jpg'}
       ].each_with_index do |pp, id|
-        PrizeProvider.create!(pp.merge!({:id=>id + 1}))
+        PrizeProvider.create!(pp.merge!({:id => id + 1}))
       end
     end
   end
@@ -267,10 +257,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
+  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
 end

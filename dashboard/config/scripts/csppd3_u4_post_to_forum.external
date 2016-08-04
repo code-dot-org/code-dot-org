@@ -1,7 +1,7 @@
 name 'CSPPD3-u4 post to forum'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Share Out and Submit > Share on the Forum 
 

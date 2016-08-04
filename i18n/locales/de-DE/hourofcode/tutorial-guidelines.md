@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -17,7 +15,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 **After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details siehe unten.
+**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 
@@ -74,7 +72,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorials werden an höherer Position aufgeführt wenn diese:**
+**Tutorials will be listed higher if they are:**
 
   * hohe Qualität
   * designed for beginners - among students AND teachers
@@ -87,7 +85,7 @@ A committee of computer science educators will rank submissions based on qualita
   * promote learning by all demographic groups (esp. under-represented groups)
   * nicht nur auf HTML und CSS fokussiert - (unser Ziel ist Informatik, nicht einfach nur HTML-Programmierung)
 
-**Tutorials werden an geringerer Position aufgeführt wenn diese:**
+**Tutorials will be listed lower if they are:**
 
   * geringere Qualität
   * more advanced level of teaching (not for beginners)
@@ -117,7 +115,7 @@ Ultimately, the goal of the Hour of Code campaign is to broaden participation in
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**Was Sie brauchen:**
+**What you’ll need:**
 
   * Ihr Name, Logo (jpg, png, usw.)
   * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
@@ -184,7 +182,7 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 
 **Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Haben Sie? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.** ]
 
@@ -263,5 +261,3 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
-
-<%= view :signup_button %>

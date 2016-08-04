@@ -103,11 +103,11 @@
     "default_language": "pt",
     "partner_page": "br.code.org",
     "campaign_date_year": "2016",
-    "campaign_date_full_year": "December 5-11, 2016",
-    "campaign_date_start_short": "5 de dez",
-    "campaign_date_start_long": "5 de dezembro",
-    "campaign_date_short": "5-11 de dez",
-    "campaign_date_full": "5-11 de dezembro"
+    "campaign_date_full_year": "outubro 3-7, 2016",
+    "campaign_date_start_short": "3 de out",
+    "campaign_date_start_long": "3 de outubro",
+    "campaign_date_short": "3-7 de out",
+    "campaign_date_full": "3-7 de outubro"
   },
   "ca": {
     "full_name": "Canada",
@@ -136,11 +136,11 @@
     "default_language": "es",
     "partner_page": "code.org",
     "campaign_date_year": "2016",
-    "campaign_date_full_year": "December 5-11, 2016",
-    "campaign_date_start_short": "5 de dic",
-    "campaign_date_start_long": "5 de diciembre",
-    "campaign_date_short": "5-11 de dic",
-    "campaign_date_full": "5-11 de diciembre"
+    "campaign_date_full_year": "octubre 3-7, 2016",
+    "campaign_date_start_short": "3 de oct",
+    "campaign_date_start_long": "3 de octubre",
+    "campaign_date_short": "3-7 de oct",
+    "campaign_date_full": "3-7 de octubre"
   },
   "cz": {
     "full_name": "Czech Republic",
@@ -191,7 +191,7 @@
     "default_language": "es",
     "partner_page": "code.org",
     "campaign_date_year": "2016",
-    "campaign_date_full_year": "December 5-11, 2016",
+    "campaign_date_full_year": "diciembre 5-11, 2016",
     "campaign_date_start_short": "5 de dic",
     "campaign_date_start_long": "5 de diciembre",
     "campaign_date_short": "5-11 de dic",
@@ -345,11 +345,11 @@
     "default_language": "la",
     "partner_page": "code.org",
     "campaign_date_year": "2016",
-    "campaign_date_full_year": "December 5-11, 2016",
-    "campaign_date_start_short": "5 de dic",
-    "campaign_date_start_long": "5 de diciembre",
-    "campaign_date_short": "5-11 de dic",
-    "campaign_date_full": "5-11 de diciembre"
+    "campaign_date_full_year": "octubre 3-7, 2016",
+    "campaign_date_start_short": "3 de oct",
+    "campaign_date_start_long": "3 de octubre",
+    "campaign_date_short": "3-7 de oct",
+    "campaign_date_full": "3-7 de octubre"
   },
   "lv": {
     "full_name": "Latvia",
@@ -444,11 +444,11 @@
     "default_language": "es",
     "partner_page": "code.org",
     "campaign_date_year": "2016",
-    "campaign_date_full_year": "December 5-11, 2016",
-    "campaign_date_start_short": "5 de dic",
-    "campaign_date_start_long": "5 de diciembre",
-    "campaign_date_short": "5-11 de dic",
-    "campaign_date_full": "5-11 de diciembre"
+    "campaign_date_full_year": "octubre 3-7, 2016",
+    "campaign_date_start_short": "3 de oct",
+    "campaign_date_start_long": "3 de octubre",
+    "campaign_date_short": "3-7 de oct",
+    "campaign_date_full": "3-7 de octubre"
   },
   "pk": {
     "full_name": "Pakistan",
@@ -488,7 +488,7 @@
     "default_language": "po",
     "partner_page": "code.org",
     "campaign_date_year": "2016",
-    "campaign_date_full_year": "December 5-11, 2016",
+    "campaign_date_full_year": "dezembro 5-11, 2016",
     "campaign_date_start_short": "5 de dez",
     "campaign_date_start_long": "5 de dezembro",
     "campaign_date_short": "5-11 de dez",

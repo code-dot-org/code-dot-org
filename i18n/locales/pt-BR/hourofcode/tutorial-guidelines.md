@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 
 A Code.org disponibilizará uma variedade de atividades da Hora do Código nos sites da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -214,13 +212,13 @@ Depois do sucesso da campanha de 2013, tomamos medidas para garantir que a Hora 
 
 Como parte desse trabalho, queremos proteger a marca "Hour of Code" (adaptada para o português como "Hora do Código") para evitar confusões. Muitos de nossos parceiros de tutoriais têm usado os nomes "Hour of Code" e "Hora do Código" em seus sites. Não queremos impedir esse uso, mas garantir que esteja dentro de alguns limites:
 
-  1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora do Código promovida pela ACME Corp".
+  2. Use "TM" sobrescrito nos textos de maior destaque quando mencionar "Hour of Code" (ou Hora do Código), tanto em seu website como em descrições de aplicativos.
   3. Use o seguinte texto na página (ou no rodapé), com links para os sites da Semana da Educação em Ciência da Computação e Code.org:
     
     *"A 'Hora do Código' é uma iniciativa nacional da Semana da Educação em Ciência da Computação[csedweek.org] e da Code.org[code.org] para proporcionar a experiência de uma hora de ciência da computação e programação de computadores a milhões de estudantes."*
 
-  4. No use of "Hour of Code" in app names.
+  4. É proibido o uso de "Hour of Code" em nomes de aplicativos.
 
 [**Voltar ao início**](#top)
 
@@ -263,5 +261,3 @@ Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos us
 Se você criar um tutorial voltado para pessoas com deficiência visual, adoraríamos divulgá-lo para os usuários com leitores de tela. Ainda não recebemos nenhum tutorial com esse perfil, e estamos ansiosos para disponibilizar essa opção para esses estudantes.
 
 [**Voltar ao início**](#top)
-
-<%= view :signup_button %>

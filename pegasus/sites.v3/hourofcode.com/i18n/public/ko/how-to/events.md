@@ -6,21 +6,18 @@ nav: how_to_nav
 
 ---
 
-
-# How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+# Hour of Code 이벤트를 준비하는 방법
 
 ## 1) 이벤트 준비하기
 
   * 장소, 날짜, 시간을 결정하세요.
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+  * 강연을 하기 위해 여러분의 지역 시장, 지역 의원, 지역 공무원, 지역 사업가를 초청하는 [편지](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)를 보내세요.
+  * 지역 신문, 지역 미디어, 지역 교육/공학 블로거들을 초대하세요. [프레스 키트](<%= hoc_uri('/resources/press-kit') %>)를 살펴보시면 됩니다.
 
 ## 2) 이벤트 기간 동안에
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+  * [영감을 주는 동영상들](<%= resolve_url('/promote/resources#videos') %>) 중 하나로 여러분의 이벤트를 시작하세요.
+  * 이 [통계 자료와 인포그래픽들](<%= resolve_url('/promote/stats') %>)을 활용하여 컴퓨터과학의 중요성을 개관적으로 설명하세요.   
       
     
   * 다른 이벤트 아이디어들: 
@@ -37,24 +34,23 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 이벤트 계획 예시
 
-**이벤트:** 학교 전체 행사로서 컴퓨터과학교육주간 킥오프 과정
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**시간:** 학교 일과 중. 아침-점심 사이 시간. 대략 1시간 정도.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**장소:** 학교 강당 시설(예를 들어 극장, 체육관, 카페테리아 식당)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## 이벤트 일정
 
-| 시간               | 내용                                                                                                                                              |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>) |
-| 10:15 - 10:30 am | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.                                                               |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.                                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-
+| 시간               | 내용                                                                                             |
+| ---------------- | ---------------------------------------------------------------------------------------------- |
+| 오전 10:00 - 10:05 | [영감을 주는 동영상](<%= resolve_url('/promote/resources#videos') %>) 중 하나를 여세요.                         |
+| 오전 10:05 - 10:15 | 교장선생님이 컴퓨터과학의 중요성을 개략적으로 소개합니다. 이러한 [통계 자료와 인포그래픽](<%= resolve_url('/promote/stats') %>)을 사용하세요. |
+| 오전 10:15 - 10:30 | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.              |
+| 오전 10:30 - 10:40 | 학교 전체를 위해 학생들이 Hour of Code 의 데모를 시연한다. 재미있는 이벤트로 학생들이 교장, 정치인, 다른 학생들을 가르쳐 주도록 한다.            |
+| 오전 10:40 - 11:00 | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.             |
+| 오전 11:00 - 11:05 | 학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.                                                                |

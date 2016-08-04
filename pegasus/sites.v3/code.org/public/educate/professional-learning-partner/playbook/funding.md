@@ -4,17 +4,39 @@ nav: plp_playbook_nav
 ---
 <a id="top"></a>
 
+# Topics
+
+
+**Organization Sustainability:**<br/>
+
+- [Goals](#goal)
+- [What to start doing today](#today)
+
+
+**Fundraising Playbook:**<br/>
+
+- [Playbook start](#start)
+- [Types of funders](#funders)
+- [Fundraising strategy and best practices](#strategy)
+- [Donor research](#research)
+- [Outreach](#outreach)
+- [Making the ask](#ask)
+- [Donor research](#research)
+- [Stewardship](#stewardship)
+- [Fundraising Do's and Don'ts](#do)
+
+
 # How does your organization become sustainable?
 
 This year most of your funding will come from Code.org.
 It's important to start thinking about how you will sustain these programs without our funding over time.
-
+<a id="goal"></a>
 ### Goals:
 - 50% of funding needed for year 3 (2018-19 SY) raised by end of 2016-17 SY
 - 100% of funding needed for year 3 raised by end of 2017-18 SY
 
 Code.org will help make introductions where we have them and will host an event that you can use to get donors.
-
+<a id="today"></a>
 ### What should you start doing today?
 
 - Create your prospect list of potential funders (who is likely to fund your Program Manager, etc.) 
@@ -22,9 +44,15 @@ Code.org will help make introductions where we have them and will host an event 
 - Start outreach to potential funders to pitch them through emails, calls or in person meetings 
 - Use a special event as your “closer” event
 
-# Fundraising Play Book 
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="start"></a>
+<br/>
+<br/>
+# Fundraising Playbook 
 
-When looking for donor support, it is important for your organization to understand the different types of donors. Each donor type may have different partnership expectations and giving trends that can either help or detract from your organization’s mission. 
+When looking for donor support, it is important for your organization to understand the different types of donors. Each donor type may have different partnership expectations and giving trends that can either help or detract from your organization’s mission.
 
 **Types of Support:**
  
@@ -35,7 +63,11 @@ When looking for donor support, it is important for your organization to underst
 
 Note: This list of revenue streams is not exhaustive, but outlines the types of revenue streams Code.org pursues. You could also explore: crowdfunding, employee matching/giving, planned giving, events/galas, etc). Your organization should decide what fundraising methods work best to achieve your mission.
 
-
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="funders"></a>
+<br/>
 ## Types of Funders Definitions:
 
 |Type of Funder | Definition|
@@ -45,6 +77,11 @@ Note: This list of revenue streams is not exhaustive, but outlines the types of 
 |**Corporations** | Corporate giving includes grants from corporate Foundations (ex. Verizon Foundation), where you develop a proposal or perhaps a partnership agreement to achieve certain goals to demonstrate the impact of their donation. Grants can be general operating or restricted giving. <br>*Sponsorship support is marketing focused donations from corporate Foundations or marketing departments where you promote the company’s association with your organization or campaign (ex. Corporation’s logo on campaign materials) in exchange for their sponsorship donation. Sponsorships are typically general operating support*.|
 |**National Foundations** | Large national Foundations are often private, independent organizations that have missions of their own and core giving focus areas.|
 
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="strategy"></a>
+<br/>
 ## Strategy:
 
 ### Fundraising Strategy Best Practices:
@@ -61,8 +98,13 @@ Note: This list of revenue streams is not exhaustive, but outlines the types of 
 |**The Laws of Fundraising** | </ul><li> People give to people </li><li> People give because they are asked </li><li> 90% of the money comes from 10% of the donors</li><li>  People give to a winning cause</li><li> People give in relation to who asks</li><li>Giving is contagious </li><li> Previous donors are the best prospects</li><li> Personal visits result in larger gifts</ul>|
 |**Requirements for Success** | **The Case:** Rationale behind initiative (compelling reason why to give). Educate the donor about the current issues and how your organization will help to solve a problem or advance your mission<br>**Tap Their Passion:** Ask the donor what they would like to change or preserve through donations to highlight their values and aspirations. How does the donor want to make a difference and how does that align with your mission?<br>**Leadership:** Those who advocate for the cause (internal and external)<br>**Prospects:** Identify potential partners who share your vision<br>**Plan:** Thorough strategy, clear demonstration of goals and outcomes, donor stewardship and fiscal integrity|
 |**Four Step Donor Cultivation Process**|<ol><li> **Research:** identify potential donors</li><li>**Outreach:** share information</li><li>**Make the ask:** through meetings and proposals</li><li>**Stewardship:** thank your donors and provide updates</ol>|
-|**Planning** | Overall financial goal with benchmarks</ul><li>**Timetable:** who will be asked when and timing of gift receipt</li><li>T**able/pyramid of gifts needed:** # of $1M+, # of $500-999K, # >$500K</li><li>**Specific plans:** strategy for each individual and foundation </ul>
+|**Planning** | Overall financial goal with benchmarks</ul><li>**Timetable:** who will be asked when and timing of gift receipt</li><li>**Table/pyramid of gifts needed:** # of $1M+, # of $500-999K, # >$500K</li><li>**Specific plans:** strategy for each individual and foundation </ul>
 
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="research"></a>
+<br/>
 # Research
 The relationship between an organization and their donors should be based on clear communication and a partnership based in a common goal and mission. Throughout the research process to identify prospective donors, your organization will look at many different aspects of the prospective donor to assess if the donor is a good match for your organization. 
 
@@ -94,6 +136,11 @@ Overall, match level is based on the research areas aligning with your own organ
   * [GrantSpace](http://grantspace.org/skills/find-foundation-corporate-donors)
   * [Charity Navigator](http://www.charitynavigator.org/)
   
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="outreach"></a>
+<br/>
 # Outreach 
 Outreach is the securing of initial calls and meetings with potential funders. Once you have your research completed and you have determined your “pipeline” i.e. target list of potential donors to reach out to, its time to make the ask.
 
@@ -111,6 +158,11 @@ Outreach is the securing of initial calls and meetings with potential funders. O
 - Create Impact Reports/communications to demonstrate the value of the donor’s support
 - Reach out and set up a call or meeting 6-9 months into your grant cycle to start having renewal discussions
 
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="ask"></a>
+<br/>
 # Making the ask
 **Elevator pitch:** have a 30 second to 5 minute “pitch” following this high level framework. If you don’t have much time, focus on the the first three bullets. The goal is to get the potential donor excited enough to want to continue the conversation (via email, phone, in person meeting) until you secure the donation.
 
@@ -134,7 +186,11 @@ Outreach is the securing of initial calls and meetings with potential funders. O
 ## Other Outreach Resources:
 - GrantSpace: [Proposal writing tips](http://grantspace.org/skills/proposal-writing)
 
-
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="stewardship"></a>
+<br/>
 # Stewardship
 Stewardship is the ongoing relationship you have with your donor after the gift is given. This includes updates on your organization's successes or upcoming events, executing grant deliverables, sending a charitable receipt or thank you, etc.
 
@@ -155,7 +211,11 @@ Not all donors are required to receive a charitable receipt (i.e. donations thro
 ## Other Stewardship Tools:
 - [CRM Software overview by Business News Daily](http://www.businessnewsdaily.com/7839-best-crm-software.html)
 
-
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="do"></a>
+<br/>
 # Fundraising Do's and Don'ts
 
 ## Do's:
@@ -181,6 +241,4 @@ Not all donors are required to receive a charitable receipt (i.e. donations thro
 - Speaking rather than remaining silent after asking for the gifts
 - Not asking the prospect what the organization can do to help reach the prospect’s dreams or goals
 
-
-
-
+[**Back to the top**](#top)

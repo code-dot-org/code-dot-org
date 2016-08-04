@@ -4,22 +4,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ## اپنے آور-آف-کوڈ ایونٹ میں میڈیا کو کیسے متوجہ کیا جائے
 
-*تمام پریس اور میڈیا انکوائریز کے لیے، رابطہ کریں <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### اہم تجاویز – کی-ٹپس
 
   * اپنے ایونٹ سے تقریباً دو ہفتے پہلے ای میل کے ذریعے میڈیا تک رسائی اور آگاہ کریں۔ اگر آپ کو ابتدائی جواب موصول نہ ہو تو، ای-میل اور فون سے فالو-اَپ کرتے رہیں۔
   * اپنے اسکول کے اسٹاف میمبرز یا والیئنٹرز سے کہیں کہ وہ تصاویر لیں اور اسے آن-لائن شیئر کریں یا پریس کو بھیج دیں۔
   * اپنی ویب سائیٹ کے ھوم پیج اور اسکول کے نیوز-پیپر (جریدے) پر آور-آف-کوڈ کے بارے میں لکھیں اور ایونٹ کی تفصیلات، تصاویر، اور اسٹوڈینٹس ایکٹیویٹیز پوسٹ کریں۔
-  * فیس بُک اور ٹیوٹر پر اپنے پلانز کے اَپ-ڈیٹس شیئر کریں، اپنے ایونٹس کو اناؤنس کریں اور 7-13 دسمبر کے دوران تصاویر پوسٹ کریں۔ اس ہیش ٹیگ کو استعمال کریں ** #آور-آف-کوڈ** تاکہ Code.org آپ کے ایونٹس کو دیکھ اور پروموٹ کرسکے۔
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### اسٹیپ-بائی-اسٹیپ گائیڈ:
 
-**1- اپنا ایونٹ پلان بنائیں**
+**1. Plan your event**
 
   * آور-آف-کوڈ کو بھرپور طریقہ سے کرنے کے لیے اسمبلی پلان کریں۔
   * بھیجیں [ایک خط](%= resolve_url('/promote/resources#sample-emails') %) پیرنٹس کو۔ ان سے درخواست کریں کہ وہ اس پیغام کو عام کریں
@@ -27,37 +25,35 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * گروپ ایکٹیویٹیز آرگنائز کریں (جیسا کہ ایک 'اَن-پلگڈ' پروگرامنگ ایکٹیویٹی)، یا اسٹوڈینٹ کی جانب سے تخلیق کردہ اور لیڈ-ایکٹیویٹیز کا مظاہرہ کرنا۔
   * Code.org کی [آور-آف-کوڈ ویڈیو](%= resolve_url('/') %) دکھائیں یا کوئی اور [جو انہیں](%= resolve_url('/promote/resources#videos') %) انسپائر (متاثر) کریں۔
 
-**2۔ مخصوص مقامی رپورٹرز کی نشاندہی کریں جو کہ تعلیمی اور مقامی سرگرمیوں کی رپورٹنگ کرتے ہیں۔**
+**2. Identify specific local reporters that cover education or local events.**
 
-مقامی نیوز پیپر (اخبار)، ٹی وی اسٹیشن، ریڈیو اسٹیشن یا بلاگ کے بارے میں غور کریں۔
+Think a local newspaper, TV station, radio station or blog.
 
-رپورٹر کے رابطہ کی معلومات تلاش کرنے کے لیے آن-لائن دیکھیں۔ اگر آپ تلاش نہ کرسکیں، تو پبلیکیشن کو کال کر کے پوچھیں یا ایک ای-میل کریں tips@PUBLICATIONNAME.com ای-میل ایڈریس پر بھیجیں اور اس میں یہ درخواست کریں کہ اس معاملہ کو صحیح رپورٹر تک بھیج دیا جائے۔
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3۔ لوکل میڈیا سے رابطہ کریں**
+**3. Contact local media**
 
-ان تک پہنچنے کا بہترین طریقہ ای-میل ہے۔ یہ مختصر اور جامع ہونا چاہیے: کہ کیوں دیگر لوگوں کو اس ایونٹ کے بارے میں فکرمند ہونا چاہیئے؟ جو ایونٹ پر موجود ہوں گے ان کے رابطہ کی معلومات شامل کریں (بشمول سیل فون نمبر)۔ **دیکھیں ایک [میڈیا کے لیے ایک سیمپل طرز ](%= resolve_url('/promote/resources#sample-emails') %):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
 
-**4۔ فیلڈ میں پوچھے جانے والے ممکنہ سوالات کی تیاری کریں۔ یہاں کچھ مثالیں پیش نظر ہیں:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*آپ کا اسکول ایک آور-آف-کوڈ کیوں کر رہا ہے؟*
+*Why is your school doing an Hour of Code?*
 
-جیسا کہ ہم سب جانتے ہیں کہ اسٹوڈینٹس کے لیے یہ اہم ہے کہ وہ آج کی ٹیک-سیچوریٹڈ دنیا میں کہاں اور کیسے سیکھیں، بہت سے ٹیچرز کو کمپیوٹر سائنس کا تجربہ نہیں ہے اور نہیں جانتے کہ کہاں سے شروع کرنا ہے۔ یہ ایونٹ ہم سب کے لیے کمپیوٹر سائنس کے بارے میں جاننے کا بہت اچھا چانس ہے۔
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-ہمیں امید ہے کہ یہ اسٹوڈینٹس میں سیکھنے کے عمل کو جاری رکھنے کی دلچسپی کو ابھارے گا۔ ریسرچ سے یہ بات ثابت ہے کہ بچے، لکھنے پڑھنے سے پہلے پروگرامنگ کانسیپٹس کو جلد سمجھ لیتے ہیں۔ درحقیقت، کم عمری میں اُن کے ذہن کمپیوٹر لینگویج کے لیے زیادہ موزوں (ریسیپٹو) ہوتے ہیں، بالکل کسی غیر مادری زبانوں کی طرح۔
+We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*یہ کیوں اہم ہے؟*
+*Why is this important?*
 
-In China, every student takes computer science to graduate high school. یو ایس میں 90% فیصد اسکولز سرے سے اسے سکھاتے ہی نہیں۔ یہ وقت ہمارے لیے 21ویں صدی کے ساتھ چلنے کا ہے۔ قطع نظر اس کے، ہم یہ جانتے ہیں کہ ہمارے اسٹوڈینٹس بڑے ہو کر کیا کریں گے، چاہے وہ میڈیسن، بزنس، پولیٹیکس، یا پھر آرٹ میں جائیں، یہ جاننا کہ ٹیکنالوجی کیسے بنانی ہے ان کو اعتماد دیتی ہے اور کیسے کامیاب ہونا ہے یہ سیکھاتی ہے۔
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
-**ان مٹیریئلز میں آپ مزید تفصیلات اور کوٹس شامل کرسکتے ہیں۔**
+**More details and a quote you can use in materials**
 
-"آور-آف-کوڈ اس لئے ڈیزائن کیا گیا تاکہ کوڈ کا ابہام ختم کیا جاسکے اور یہ دکھایا جائے کہ کمپیوٹر سائنس کوئی راکٹ سائنس نہیں ہے۔ کوئی بھی بیسکس (بنیادی معلومات) سیکھ سکتا ہے،" حادی پاورتی، فاؤنڈر اور ceo آف Code.org۔ دنیا بھر کے 100 ملین سے زائد اسٹوڈینٹس پہلے ہی آور-آف-کوڈ ٹرائی کرچکے ہیں۔ کمپیوٹر سائنس ایجوکیشن میں 21ویں صدی کے متعلقہ تقاضے تمام حدیں پار کرچکے ہیں بلکہ حدوں کا تصور ہی باقی نہ رہا۔"
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **About Code.org**
 
-Code.org ایک پبلک نان پرافٹ ادارہ ہے جو کمپیوٹر سائنس میں شرکت کو بڑھاوا دینے، عورتوں اور پسماندہ رنگ و نسل کے اسٹوڈینٹس کی شرکت کو بڑھانے کے لیے وقف ہے۔ اس کا وژن یہ ہے کہ ہر اسکول کے ہر اسٹوڈینٹ کو کمپیوٹر پروگرامنگ سیکھنے کا موقع ملنا چاہیے۔ 2013 میں اس کی لانچنگ (افتتاح) کے بعد Code.org آور-آف-کوڈ کیمپین (مہم) کو آرگنائز کر رہے جو کہ اب تک 100 ملین سے زائد کمپیوٹر سائنس کے اسٹوڈینٹس کو متعارف کرایا جاچکا ہے اور کمپیوٹر سائنس کے پروگرامز کو پڑھانے کے لیے ملک بھر میں 70 پبلک اسکول ڈسٹرکٹس کے ساتھ شراکت داری کی ہے۔ Code.org کارپوریشنز، فاؤنڈیشنز اور فراخ دل افراد کی جانب سے رفاہی عطیات کے ساتھ معاونت یافتہ ہے، بشمول مائیکروسافٹ، انفوسیس فاؤنڈیشن، USA، دی بالمر فیملی گوینگ، اومڈیار نیٹ-ورک اور دوسرے۔ For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-مزید ریسورسز اور سیمپل ای-میلز کے لیے [یہاں دیکھیں ](%= resolve_url('/promote') %).
-
-<%= view :signup_button %>
+Find more resources and sample emails [here](%= resolve_url('/promote') %).

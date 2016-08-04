@@ -4,34 +4,22 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 7 - Binary Numbers
-# Background
+# Unit 1: Lesson 7 - Binary Numbers
+
+## Background
+
 Binary number patterns occur over and over in computing contexts. A proper number system represents values and enables counting and arithmetic. Predictive rules for counting is one trademark of all number systems. Certain numbers occur over and over in computing (2, 4, 8, 16, 32, 64...). In a computer, numbers are represented as binary. The numbers listed earlier represent the highest value that can be represented with each additional binary digit.
 
-# Lesson
+## Lesson
 
 * Represent numbers with patterns of only two symbols - 0 and 1.
 * Write numbers using 4 bits.
 * Convert between binary and decimal numbers.
 
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1ArgvzIYfZsEBfB5HPGgaawlFG3ADh_l1t2QG76HeVBA/edit?usp=sharing" target="_blank">Binary Practice</a>
 * Binary Game: <a href="http://forums.cisco.com/CertCom/game/binary_game_page.htm" target=_blank> Binary Game </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
-
-
-
-
-
-
-
-
-
-
-
-
-
-

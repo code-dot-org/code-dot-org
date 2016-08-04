@@ -3,8 +3,9 @@
 /* global PISKEL_DEVELOPMENT_MODE */
 import React from 'react';
 import {connect} from 'react-redux';
-import {METADATA_SHAPE} from '../animationMetadata';
-import {MessageType} from '@code-dot-org/piskel';
+import PiskelApi from '@code-dot-org/piskel';
+import * as PropTypes from '../PropTypes';
+import {editAnimation} from '../animationListModule';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -24,47 +25,143 @@ const PiskelEditor = React.createClass({
     // Provided manually
     style: React.PropTypes.object,
     // Provided by Redux
-    animations: React.PropTypes.arrayOf(React.PropTypes.shape(METADATA_SHAPE)).isRequired,
-    selectedAnimation: React.PropTypes.string
+    animationList: PropTypes.AnimationList.isRequired,
+    selectedAnimation: PropTypes.AnimationKey,
+    channelId: React.PropTypes.string.isRequired,
+    editAnimation: React.PropTypes.func.isRequired
+  },
+
+  componentDidMount() {
+    /**
+     * @private {boolean} Tracks whether Piskel can receive API messages yet.
+     */
+    this.isPiskelReady_ = false;
+
+    /**
+     * @private {boolean} Track whether we're mid-load so we don't fire save
+     *          events during load.
+     */
+    this.isLoadingAnimation_ = false;
+
+    /**
+     * @private {AnimationKey} reference to animation that is currently loaded
+     *          in the editor.
+     */
+    this.loadedAnimation_ = null;
+
+    this.piskel = new PiskelApi();
+    this.piskel.attachToPiskel(this.iframe);
+    this.piskel.onPiskelReady(this.onPiskelReady);
+    this.piskel.onStateSaved(this.onAnimationSaved);
+  },
+
+  componentWillUnmount() {
+    this.piskel.detachFromPiskel();
+    this.piskel = undefined;
   },
 
   componentWillReceiveProps(newProps) {
-    const {animations, selectedAnimation} = newProps;
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
-      this.postMessage({
-        type: MessageType.LOAD_ANIMATION,
-        animation: animations.find(animation => animation.key === selectedAnimation)
-      });
+      this.loadSelectedAnimation_(newProps);
     }
   },
 
-  componentShouldUpdate() {
+  loadSelectedAnimation_(props) {
+    const key = props.selectedAnimation;
+    if (!this.isPiskelReady_) {
+      return;
+    }
+
+    if (key === this.loadedAnimation_) {
+      // I wonder if this is ever valid - like we want to load some external edit?
+      return;
+    }
+
+    if (!key) {
+      // TODO: Put Piskel into a 'nothing-selected' state?
+      return;
+    }
+
+    if (this.isLoadingAnimation_) {
+      return;
+    }
+
+    const animationProps = props.animationList.propsByKey[key];
+    if (!animationProps) {
+      throw new Error('No props present for animation with key ' + key);
+    }
+
+    this.isLoadingAnimation_ = true;
+    // Special case: When selecting a new, blank animation (one that is 'loaded'
+    // but has no loaded content) tell Piskel to create a new animation with
+    // its dimensions.
+    if (animationProps.loadedFromSource && animationProps.sourceUrl === null &&
+        animationProps.blob === null && animationProps.dataURI === null) {
+      this.piskel.createNewPiskel(
+          animationProps.frameSize.x,
+          animationProps.frameSize.y,
+          animationProps.frameRate,
+          () => {
+            this.loadedAnimation_ = key;
+            this.isLoadingAnimation_ = false;
+          });
+    } else {
+      this.piskel.loadSpritesheet(
+          animationProps.dataURI,
+          animationProps.frameSize.x,
+          animationProps.frameSize.y,
+          animationProps.frameRate,
+          () => {
+            this.loadedAnimation_ = key;
+            this.isLoadingAnimation_ = false;
+
+            // If the selected animation changed out from under us, load again.
+            if (this.props.selectedAnimation !== key) {
+              this.loadSelectedAnimation_(this.props);
+            }
+          });
+    }
+  },
+
+  // We are hosting an embedded application in an iframe; we should never try
+  // to re-render it.
+  shouldComponentUpdate() {
     return false;
   },
 
-  /**
-   * Send a message to Piskel.
-   * The message should be an object (much like a Redux action) that the Piskel
-   * API can handle.
-   * @param {object} message
-   */
-  postMessage(message) {
-    // Piskel should be hosted on the same origin (domain) as gamelab; we don't
-    // want to send messages to other domains.
-    // TODO (bbuchanan): Inject window origin to remove global dependency?
-    const targetOrigin = location.origin;
-    this.iframe.contentWindow.postMessage(message, targetOrigin);
+  onPiskelReady() {
+    this.isPiskelReady_ = true;
+    this.loadSelectedAnimation_(this.props);
+  },
+
+  onAnimationSaved(message) {
+    if (this.isLoadingAnimation_) {
+      return;
+    }
+    this.props.editAnimation(this.loadedAnimation_, {
+      blob: message.blob,
+      dataURI: message.dataURI,
+      sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
+      frameSize: {x: message.frameSizeX, y: message.frameSizeY},
+      frameCount: message.frameCount,
+      frameRate: message.frameRate
+    });
   },
 
   render() {
-    return <iframe
+    return (
+      <iframe
         ref={iframe => this.iframe = iframe}
         style={this.props.style}
         src={PISKEL_PATH}
-    />;
+      />
+    );
   }
 });
 export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
-  animations: state.animations
+  animationList: state.animationList,
+  channelId: state.pageConstants.channelId
+}), dispatch => ({
+  editAnimation: (key, props) => dispatch(editAnimation(key, props))
 }))(PiskelEditor);

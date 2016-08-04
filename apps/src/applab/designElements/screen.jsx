@@ -13,7 +13,7 @@ var elementUtils = require('./elementUtils');
 var ScreenProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
   },
 
   handleIconColorChange: function (value) {
@@ -32,29 +32,34 @@ var ScreenProperties = React.createClass({
         <ColorPickerPropertyRow
           desc={'icon color'}
           initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
-          handleChange={this.handleIconColorChange} />
+          handleChange={this.handleIconColorChange}
+        />
       );
     }
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
-          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
-          handleChange={this.props.handleChange.bind(this, 'screen-image')} />
+          handleChange={this.props.handleChange.bind(this, 'screen-image')}
+        />
         {iconColorPicker}
         <DefaultScreenButtonPropertyRow
           screenId={elementUtils.getId(element)}
-          handleChange={this.props.handleChange.bind(this, 'is-default')}/>
+          handleChange={this.props.handleChange.bind(this, 'is-default')}
+        />
       </div>);
   }
 });
@@ -62,7 +67,8 @@ var ScreenProperties = React.createClass({
 var ScreenEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired,
   },
 
   // The screen click event handler code currently receives clicks to any
@@ -103,21 +109,24 @@ var ScreenEvents = React.createClass({
     var keyDesc = 'Triggered when a key is pressed.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={clickName}
           desc={clickDesc}
-          handleInsert={this.insertClick}/>
+          handleInsert={this.insertClick}
+        />
         <EventRow
           name={keyName}
           desc={keyDesc}
-          handleInsert={this.insertKey}/>
+          handleInsert={this.insertKey}
+        />
       </div>
     );
   }

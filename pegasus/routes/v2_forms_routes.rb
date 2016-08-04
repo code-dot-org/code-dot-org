@@ -9,7 +9,7 @@ post '/v2/forms/:kind' do |kind|
   begin
     form = insert_form(kind, payload)
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
-  rescue FormError=>e
+  rescue FormError => e
     form_error! e
   end
 end
@@ -39,7 +39,7 @@ delete '/v2/forms/:kind/:secret' do |kind, secret|
   no_content!
 end
 post '/v2/forms/:kind/:secret/delete' do |kind, secret|
-  call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
+  call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
 patch '/v2/forms/:kind/:secret' do |kind, secret|
@@ -51,12 +51,12 @@ patch '/v2/forms/:kind/:secret' do |kind, secret|
     content_type :json
     forbidden! unless form = update_form(kind, secret, payload)
     JSON.load(form[:data]).merge(secret: secret).to_json
-  rescue FormError=>e
+  rescue FormError => e
     form_error! e
   end
 end
 post '/v2/forms/:kind/:secret/update' do |kind, secret|
-  call(env.merge('REQUEST_METHOD'=>'PATCH', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
+  call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
 review '/v2/forms/:kind/:secret' do |kind, secret|
@@ -81,11 +81,10 @@ review '/v2/forms/:kind/:secret' do |kind, secret|
   ({review: review}).to_json
 end
 post '/v2/forms/:kind/:secret/review' do |kind, secret|
-  call(env.merge('REQUEST_METHOD'=>'REVIEW', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
+  call(env.merge('REQUEST_METHOD' => 'REVIEW', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
 get '/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret/status/cancelled' do |secret|
-
   def send_receipts(form)
     templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
     recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
@@ -140,7 +139,7 @@ post '/v2/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_
   begin
     form = insert_form(kind, payload, parent_id: parent_form[:id])
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
-  rescue FormError=>e
+  rescue FormError => e
     form_error! e
   end
 end

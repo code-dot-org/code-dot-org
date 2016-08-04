@@ -12,7 +12,8 @@ var StudioAppWrapper = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired
+    isShareView: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.node,
   },
 
   requiresLandscape: function () {

@@ -93,15 +93,15 @@ class RedisTableTest < Minitest::Test
        'table2' => {'rows' => [table2_row1]}},
       table_map)
 
-    table_map = RedisTable.get_tables(@redis, 'shard1', {'table'  =>  3})
+    table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 3})
     assert_equal(
-      {'table' =>  {'rows' => [row3]}},
+      {'table' => {'rows' => [row3]}},
       table_map)
 
-    table_map = RedisTable.get_tables(@redis, 'shard1', {'table'  =>  4, 'table2'  =>  1})
+    table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 4, 'table2' => 1})
     assert_equal(
-      {'table' =>  {'rows' => []},
-       'table2' =>  {'rows' => [table2_row1]}},
+      {'table' => {'rows' => []},
+       'table2' => {'rows' => [table2_row1]}},
       table_map)
 
     assert_equal({}, RedisTable.get_tables(@redis, 'shard1', {}))

@@ -6,7 +6,7 @@
 import $ from 'jquery';
 var utils = require('../utils'); // Provides Function.prototype.inherits
 var markup = require('./NetSimSlider.html.ejs');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 
 /**
  * @type {number}

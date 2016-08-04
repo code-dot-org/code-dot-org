@@ -1,18 +1,27 @@
 name 'CSD U3 - Booleans - 1'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 07 - Booleans and Conditionals
+# Overview
 
-# Background
+This lesson introduces boolean values and logic, as well as conditional statements. It starts by playing a simple game of Stand Up, Sit Down where the boolean (true/false) statements are in regard to personal properties (hair or eye color, clothing type, age, etc). The focus is thinking about you can frame a property with multiple potential values (such as age) with a binary question. You will then group objects based on increasingly complex boolean statements, including compound booleans with AND and OR. Finally you will be introduced to conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
 
-In this lesson, students are introduced to boolean values and logic, as well as conditional statements. We start by playing a simple game of Stand Up, Sit Down where the boolean (true/false) statements are in regard to personal properties (hair or eye color, clothing type, age, etc). This gets students thinking about how they can frame a property with multiple potential values (such as age) with a binary question.
+# Activities
 
-From there students are provided a group of objects with similar, yet varying, physical properties. With a partner they group those objects based on increasingly complex boolean statements, including compound booleans with AND and OR.
+* Warm Up: Stand Up, Sit Down
+* Unplugged: Asking the Right Questions
+* Unplugged: Sorting with Booleans
+* Unplugged: Conditionals
+* Wrap Up: Explicit Conditionals
 
-# Vocabulary
+# Vocab
 * **Boolean** - A value of either TRUE or FALSE
 * **Conditionals** - Statements that only run under certain conditions.
 * **Expression** - Any valid unit of code that resolves to a value.
+
+# Commands
+
+None
 
 # Resources
 * <a href='https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/' target='_blank' class='print_link'>Boolean Properties</a> - Activity Guide (<a href='https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=doc' class='print_link'>DOCX</a>)

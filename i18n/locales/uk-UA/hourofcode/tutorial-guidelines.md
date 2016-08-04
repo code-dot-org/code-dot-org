@@ -4,13 +4,11 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці. Скористайтесь цим документом в якості шаблону для своїх заходів, спрямованих на користувачів, котрі не мають досвіду вивчення програмування та інформатики.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -52,7 +50,7 @@ Examples:
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. В ідеалі, завдання та підручники мають бути інтегровані безпосередньо у платформу програмування, щоб уникнути незручного перемикання вікон чи закладок.
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
 Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
 
@@ -66,15 +64,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## Як буде оцінено підручники
 
-Комісія вчителів інформатики розгляне надіслані матеріали за якісними та кількісними характеристиками, включно з опитуванням широкого кола педагогів.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Підручники отримають вищі оцінки, якщо:**
+**Tutorials will be listed higher if they are:**
 
   * вони мають високу якість
   * designed for beginners - among students AND teachers
@@ -87,7 +85,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * promote learning by all demographic groups (esp. under-represented groups)
   * спрямовані не лише на веб-дизайн HTML+CSS (наша мета - інформатика, а не HTML-код)
 
-**Підручники отримають нижчі оцінки, якщо:**
+**Tutorials will be listed lower if they are:**
 
   * вони низької якості
   * призначені для вищого рівня (не для початківців)
@@ -96,7 +94,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * reinforce stereotypes that hinder participation by under-represented student groups
   * пропонуються на платформі, яка бере плату за навчання
 
-**Підручники НЕ відображатимуться, якщо:**
+**Tutorials will NOT be listed if they:**
 
   * не створені як (приблизно) одно-годинне заняття
   * вимагають реєстрації 
@@ -107,9 +105,9 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-Загалом, метою кампанії Година коду є залучення учнів та вчителів до інформатики та програмування, а також популяризація доступності предмету для всіх, у легшому, ніж уявляється вигляді. Зокрема, ця мета досягається тим, що учням та вчителям пропонується якомога простіший та якісніший вибір навчальних ресурсів, зрозумілих для новачків. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +115,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**Що вам знадобиться:**
+**What you’ll need:**
 
   * Ваше ім'я, емблема (jpg, png, і т. д.)
   * URL для знімка екрану або рекламного зображення підручника Години коду. Зображення/скріншоти повинні бути точно 446 х 335 пікселів. Якщо відповідне зображення не буде надано, ми зробимо власний знімок екрану АБО виключимо Ваш підручник зі списку.
@@ -165,32 +163,32 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * Для оффлайнових завдань 
           * Кількість завантажень паперової версії діяльності (за наявності)
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Пропозиції для розробки заходів
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Ні за яких обставин не можна використовувати логотип і назву Code.org. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Переконайтесь, що середньостатистичний учень може завершити завдання за 1 годину.** Розгляньте варіант додавання відкритого завдання у кінці для тих учнів, котрі пройдуть урок швидше. Пам'ятайте, що більшість дітей будуть абсолютними новачками в інформатиці та програмуванні.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Додайте рекомендації для вчителів.** Більшість завдань мають бути спрямованими на самостійну роботу учнів, але якщо завдання потребує допомоги чи супроводу вчителя, додайте чіткі та прості вказівки у формі рекомендацій за окремим посиланням. Новачками будуть не лише учні, але й деякі вчителі. Включіть наступну інформацію:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Наш підручник найкраще працює на наступних платформах і браузерах
   * Does it work on smartphones? Tablets?
   * Ви рекомендуєте парне програмування? 
   * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**Включіть зворотний зв'язок в кінці діяльності.** (Наприклад: "Ви завершили 10 рівнів і дізналися про цикли! Чудова робота!")
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode" або "Я пройшов #HourofCode в рамках #CSEdWeek. А ви? @Scratch.” Використовуйте хеш-тег **#HourOfCode** (з великими літерами H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.** ]
 
-**Поясніть або прив'яжіть своє завдання до соціально значущого контексту.** Програмування стає суперсилою, коли учні бачать, як вони можуть змінити світ на краще!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Не вимагайте реєстрації чи платежу, перед тим як учні спробують ваш підручник.** Підручники, які вимагають реєстрації або оплати, не будуть включені у список
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
@@ -198,13 +196,13 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
   * Керівник вносить пропозиції, вказує на помилки та задає питання. 
   * Учні повинні мінятися ролями принаймні двічі за заняття.
 
-Переваги парного програмування:
+Benefits of Pair Programming:
 
   * Учні можуть допомогти один одному, не покладаючись на вчителя
   * Ілюстрація того, що програмування є не індивідуальним заняттям, а включає соціальну взаємодію
   * Не у всіх кабінетах є достатньо комп'ютерів для моделі 1:1
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -212,7 +210,7 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 
 After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Одним з аспектів цього є захист торгової марки "Hour of Code" з метою запобігання плутанини. Багато наших партнерів-розробників завдань використали "Hour of Code" на своїх сайтах. Ми не хочемо забороняти таке використання, але воно має перебувати в межах вимог:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
   2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
@@ -222,46 +220,44 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
   4. No use of "Hour of Code" in app names.
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Точка стеження
 
-Для того, щоб мати точнішу статистику участі, ми хочемо, щоб кожен партнер-розробник підручника, розмістив 1-піксельне зображення для відстеження у свою першу та останню вправу (перший піксель стартової сторінки та останній піксель фінальної сторінки вправи. Не на проміжних сторінках).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Це дозволить нам порахувати користувачів, яких ви безпосередньо залучите до відвідування свого сайту для проходження Години коду, або користувачів, які відвідають сторінку за посиланням вчителя. Це призведе до більш точного підрахунку учнів, котрі скористались вашим посібником, і допоможе вам залучити користувачів. Якщо ви вставите піксель в кінці, це дозволить нам вимірювати відсоток повного опрацювання підручника.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Якщо Ваш підручник буде затверджено і розміщено у переліку посібників, Code.org надасть унікальний піксель відстеження для додавання на сторінки цього ресурсу. Див. приклад нижче.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Примітка: для встановлюваних додатків це робити не обов'язково (для iOS/Android додатків або комп'ютерних програм)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Приклад пікселя відстеження для AppInventor:
+Example tracking pixels for AppInventor:
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Сприяння підручникам, тижню інформатики та Годині коду
 
-Ми просимо усіх поширювати власні одно-годинні підручники для своїх користувачів. Please direct them to ***your*** Hour of Code page. Знайомі користувачі ймовірніше відреагують на особисте запрошення спробувати Ваш підручник. Використовуйте міжнародну кампанію тижня інформатики Година коду для того, щоб запросити інших приєднатися. Допоможіть нам зібрати 100 мільйонів учасників.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Поширюйте інформацію про Годину коду через соціальні мережі, традиційні медіа, списки розсилки тощо, використовуючи хеш-тег **#HourOfCode** (з великими літерами H, O, C)
   * Організуйте місцевий захід або попросіть співробітників провести захід у найближчій школі чи спільноті.
   * Ознайомтесь з нашим ресурсним комплектом з подальшою інформацією (скоро).
 
-[**На початок**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Спеціально для учнів з обмеженими можливостями
 
-Якщо ви створюєте підручник, призначений для учнів з проблемами зору, ми будемо раді виділити його для користувачів з активованим озвученням екрану. Ми ще не отримували такого підручника, але хотіли б мати такий варіант для цих учнів.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**На початок**](#top)
-
-<%= view :signup_button %>
+[**Back to the top**](#top)

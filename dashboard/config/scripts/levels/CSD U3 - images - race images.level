@@ -53,7 +53,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Race Cars\r\n\r\nYou made a racing game in the last lesson. You can now make those rectangles look like race cars!\r\n\r\n# Do This\r\n\r\n* Use the race car images in the animations tab to update your racing animation\r\n\r\n# Til the Animation Tab Works\r\n\r\n* <a href=\"https://images.code.org/5a3f86377f5127280ea5e2395e28b939-image-1466197875302.png\"> Yellow Race Car </a>\r\n\r\n* <a href=\"https://images.code.org/252623d123ebaa915ed18d5178851135-image-1466197875300.png\">Blue Race Car</a>\r\n\r\n* <a href=\"https://images.code.org/7c79994af93423fce214af286c3fab50-image-1466197875300.png\"> Pink Race Car</a>\r\n\r\n* <a href=\"https://images.code.org/63b01450d2616a8eb71401c1c0e4fde4-image-1466197875301.png\">Purple Race Car</a>\r\n\r\n* <a href=\"https://images.code.org/433fd11ee771fc2cfe88a41658359bca-image-1466197875301.png\">Red Race Car</a>\r\n\r\n* <a href=\"https://images.code.org/dd3ba23ae412209b0d91d75031e351bd-image-1466197875299.png\"> Black Race Car</a>",
+    "markdown_instructions": "# Race Cars\r\n\r\nYou made a racing game in the last lesson. You can now make those rectangles look like race cars!\r\n\r\n# Do This\r\n\r\n* Use the race car images in the animations tab to update your racing animation",
     "start_blocks": "// Creating Sprites and Setting Starting Properties\r\n\r\nfunction draw(){\r\n\t// Update Properties\r\n\t \r\n\t// Drawing\r\n\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",

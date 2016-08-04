@@ -12,8 +12,18 @@
       "move": null,
       "moveTo": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
@@ -22,6 +32,10 @@
       "penWidth": null,
       "penColor": null,
       "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
         "params": [
           "0",
           "0",
@@ -40,10 +54,29 @@
       "speed": null,
       "forLoop_i_0_4": null,
       "randomNumber_min_max": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null
+      "functionParams_none": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "functionParams_n": {
+        "paramButtons": {
+          "minArgs": 1
+        }
+      },
+      "callMyFunction": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction_n": {
+        "paramButtons": {
+          "minArgs": 1
+        }
+      },
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -78,7 +111,13 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "false",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

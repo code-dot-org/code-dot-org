@@ -16,10 +16,33 @@ Navštivte třídu a inspirujte studenty, aby se věnovali počítačům. [Pomá
 
 Budeme hostovat dvě info zasedání, abychom vysvětlili, jaký bude typický dobrovolnický zážitek. Budeme diskutovat, jak spolupracovat s učiteli před jejich Hodinou kódu a co na den, kdy bude probíhat, připravit. Přijďte s vašimi dotazy, prosím! Tyto info zasedání budou hostovány skrze Hangouty, takže pokuď zasedání nestihnete, stále se můžete podívat na záznam zasedání později. [podívejte se na denní program](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Datum         | Čas               | Odkaz k info zasedání                                                           |
-| ------------- | ----------------- | ------------------------------------------------------------------------------- |
-| 16. listopadu | 13:00 - 13:30 PST | [Odkaz k nahrávce](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0)  |
-| 3. prosince   | 11:00 - 11:30 PST | [Odkaz k připojení](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0) |
+<table>
+  <tr>
+    <th>
+      Datum
+    </th>
+    
+    <th>
+      Čas
+    </th>
+    
+    <th>
+      Odkaz k info zasedání
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Věnujte 30 minut před výukou
 
@@ -35,29 +58,33 @@ Pověz svým přátelům a spolupracovníkům o Hodině kódu. Máme tisíce uč
 
 Pokud si pamatuješ svůj první řádek kódu, víš, že utvořil zbytek tvého života.
 
-To je přesně to, o čem je Hodina kódu. Za poslední dva roky hnutí rozbilo stereotypní představy o tom, co je kódování a pomohlo více než 100 milionům studentů ve 180 zemích vyzkoušet počítačovou vědu poprvé.
+To je přesně to, o čem je Hodina kódu. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Přihlásil jsem se jako dobrovolník v místní třídě**  
-7 098 učitelů již požádalo o pomoc. Code.org propojuje třídy a technické dobrovolníky, jako jsi ty, kteří mohou pomoci studentům a učitelům s jejich první hodinou kódu.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Prosím [staň se dobrovolníkem](https://code.org/volunteer/engineer). Až se zaregistruješ, místní učitelé tě budou moci kontaktovat pomocí bezpečného formuláře.* Nemůžeš? [Pomoz rozšířit povědomí o Hodině kódu](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Na tvých zkušenostech záleží**  
-Většina škol stále nevyučuje počítačovou vědu. Většina studentů neví, že je to o řešení velkých problémů a bližším propojením nás všech. Toto je šance, jak inspirovat alespoň jednoho mladého člověka v tvém okolí.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Zaregistrujte se jako dobrovolník](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-*Tvoje emailová adresa nebude nikdy sdílena s učiteli.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 5. Požádejte svého zaměstnavatele, aby se zapojil
 
-[Pošlete tento email](https://hourofcode.com/promote/resources#email) svému nadřízenému nebo řediteli.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 6. Propagujte Hodinu kódu ve své komunitě
 
-Naverbujte lokální skupinu - chlapecké/holčičí skautské kluby, kostely, univerzity, veteránské skupiny nebo pracovní svazy. Nebo hostujte Hodinu kódu "block party" pro vaše sousedství. [Pošlete tento email](https://hourofcode.com/promote/resources#email).
+Naverbujte lokální skupinu - chlapecké/holčičí skautské kluby, kostely, univerzity, veteránské skupiny nebo pracovní svazy. Nebo hostujte Hodinu kódu "block party" pro vaše sousedství. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Přečtěte si doporučený program níže, abyste věděli co očekávat, když navštívíte třídu
+## 7. Připravte se dříve, než navštívíte třídu.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Program pro dobrovolníka ve třídě
 

@@ -241,7 +241,7 @@ features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
 git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{git_branch} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
@@ -250,6 +250,7 @@ if test_type == 'Eyes'
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
+status_page_url = nil
 if $options.with_status_page
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
@@ -328,8 +329,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_circle" if $options.is_circle
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
-  arguments += " -t ~@no_ie9" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '9.0'
-  arguments += " -t ~@no_ie10" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '10.0'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
@@ -384,8 +383,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
                       1].max # rerun at least once even if not flaky
 
-        confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
-        flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
+        confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+        flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
 
         if max_reruns < 2
           $lock.synchronize { puts flakiness_message.green }
@@ -425,7 +424,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
@@ -520,10 +519,11 @@ $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
 
-HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
-  "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
-  "Total reruns of flaky tests: #{$total_flaky_reruns}."
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
+  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
+  "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

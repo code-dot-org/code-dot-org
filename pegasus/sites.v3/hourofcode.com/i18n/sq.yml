@@ -8,11 +8,14 @@ sq:
   campaign_date_start_long: 7 dhjetor
   campaign_date_short: 7-13 dhjetor
   campaign_date_full: 7-13 dhjetor
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Bashkohuni eventit më të madh në histori, dhjetor 7-13, 2015
   front_intro_default: 'Ora e Kodimit është lëvizje globale që përfshin dhjetëra miliona pjesëmarrës nga më shumë se 180 shtete. Kushdo, kudo mund të organizojë eventin Ora e Kodimit. Tutoriale një orëshe janë të vlefshme në mbi 30 gjuhë. Përvoja nuk është e nevojshme. <strong>Moshat nga 4 deri 104.</strong>'
   front_watch_video: Shikoje videon e re
   front_watch_regular_video: Shiko videon
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: Burime
   header_menu_faq: Pyetje të Shpeshta (PESH)
   header_menu_prizes: Shpërblime
@@ -174,7 +177,9 @@ sq:
   prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
   prizes_header: Shpërblime për çdo mësimdhënës
   prizes_10k: Një shkollë publike në secilin shtet të SHBA (dhe Washington DC) do të fitojë teknologji në vlerë $10,000
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Secili</i> organizator i Orës së Kodimit do të marrë shpërblesë <b>10$ nga Amazon.com, iTunes ose Windows Store</b> në shenjë falënderimi!'
+  prizes_more: More exciting prizes
   whats_next_header: çfarë tutje?
   whats_next_description: "Do ju dergojmë materiale dhe këshilla të dobishme për eventin tuaj. Tutorialet e reja të 2015 së shpejti do të arrijnë për çfarëdo browser-i, smartphone -apo edhe pa kompjuter! <a href='http://code.org/learn'>provo tutorialet aktual</a>"
   whats_next_how_to: "<a href='/how-to'>Si të realizojmë një Orë Kodimi</a>"
@@ -243,7 +248,7 @@ sq:
   signup_name_placeholder: Emri juaj
   signup_email_placeholder: ju@shembull.com
   signup_organization_name_placeholder: Për shembull, Shkolla Fan Noli
-  signup_event_location_placeholder: "Kodi postar dhe shteti OSE adresa e plotë.\r (Do të përdorim këtë për ta vënë shenjën në hartën tonë)"
+  signup_event_location_placeholder: "Kodi postar dhe shteti OSE adresa e plotë.\\r (Do të përdorim këtë për ta vënë shenjën në hartën tonë)"
   signup_special_event_details_placeholder: Përshkruaj çfare e bën këtë të jetë event i veçantë
   signup_send_posters_address_placeholder: Kjo adresë nuk do të shfaqet në hartën tonë
   signup_event_type_in_school: Në një shkollë
@@ -252,6 +257,7 @@ sq:
   signup_submit_error_message: Ka ndodhur një gabim. Të lutem të kontrollo të sigurohesh se të gjitha fushat e kërkuara janë plotësuar si duhet.
   signup_thank_you_header: Falemnderit që u regjistruat për të organizuar eventin Ora e Kodimit.
   signup_thank_you_message: Ua dërguam email konfirmimin me informacionin që ju ndihmon të filloni.
+  map_title: Hour of Code map
   map_header: '# evente Ora e Kodimit nëpër botë'
   see_all_events: Shiko të gjitha eventet
   map_header_company: '# nga organizator kompanie'
@@ -306,7 +312,7 @@ sq:
   hoc_faq_host_q: Nuk di asgjë për kodimin. A mund të jem organizator i ndonjë eventi?
   hoc_faq_host_a: "Sigurisht që mundeni. Aktivitetet e Orës së Kodimit janë të vetë-drejtuara. Ajo çfarë duhet të bëni është <a href='%{codeorg_url}/learn'>të provoni tutorialet tona aktuale</a>, të zgjidhni tutorialin që dëshironi dhe të zgjidhni një orë &mdash; për të tjerat kujdesemi ne. Kemi zgjidhje për çdo moshë dhe nivel përvoje, nga fëmijët e kopështit e tutje. Filloni të planifikoni eventin tuaj duke lexuar <a href='/how-to'>udhëzuesin tonë</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Më duhet të siguroj nga një kompjuter për secilin pjesëmarrës?
   hoc_faq_need_computers_a: "Jo. Ne kemi tutoriale të Orës së Kodimit që janë të përdorueshme në kompjuter, telefona të mençur, tableta, madje dhe të tjera për të cilët nuk nevojiten fare kompjuter! Mund të bashkoheni kudo që të jeni, me ato mjete që keni. <p><i>Ja disa mundësi:</i> <br> <ul> <li><b>Punoni në grupe.</b> Studimet tregojnë se studentët mësojnë më mirë <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programimin nga dy</a>, duke drejtuar nga një kompjuter dhe duke punuar së bashku. Inkurajoni studentët tuaj të punojnë në grup.<li><b>Përdorni projektorë.</b> Nëse keni projektor dhe një ekran për një kompjuter të lidhur në internet, i gjithë grupi juaj mund të zhvillojë një Orë të Kodimit së bashku. Ndiqni bashkarisht pjesë të videove dhe kaloni radhën duke zgjidhur problema ose duke i'u përgjigjur pyetjeve. <li><b>Punoni të shkëputur.</b> Ofrojmë tutoriale që nuk kërkojnë fare kompjuter.</ul>"
   hoc_faq_international_q: 'Ndodhem në <country>. Si të marr pjesë?'
@@ -315,8 +321,6 @@ sq:
   hoc_faq_tutorial_a: "Nëse jeni të interesuar të bëheni partner për tutoriale, <a href='target-tutorial-guidelines'>ndiqni udhëzimet dhe instruksionet tona</a>. Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike."
   hoc_faq_account_q: A duhet pjesëmarrësit të LOG ON kur përdorin një llogari?
   hoc_faq_account_a: "Jo. Absolutisht nuk nevojitet Regjistrim apo Login për nxënësit për të provuar Orën e Kodimit. Shumica e <a href='http://%{codeorg_url}/learn/beyond'>kurseve</a> kërkojnë krijimin e një llogarie për të ruajtur të dhënat që dëshmojnë progresin e studentit."
-  hoc_faq_frozen_q: Ku është tutoriali me Anën dhe Elsën?
-  hoc_faq_frozen_a: "Tani është botuar në <a href='%{codeorg_url}/learn'>faqen e tutorialeve</a>. Ne shpresojmë që ju ta pëlqeni!"
   hoc_faq_high_school_q: 'Çfarë aktiviteteti  mundem ta realizoj me nxënësit e shkollës së mesme?'
   hoc_faq_high_school_a: "Për të gjitha moshat, ne rekomandojmë të provoni një nga tutorialet fillestare në <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, si tutoriali i Angry Birds ose me Anna dhe Elsa. Një student gjimnazi duhet të jetë i aftë të përfundojë një nga këto në 30 minuta dhe më pas mund të provojë një tutorial më të avancuar në JavaScript, si Khan Academy ose CodeHS."
   hoc_faq_scratch_q: E realizoj Orën e Kodimit përmes Scratch, por çfarë nëse nxënësit kanë iPad-e në vend të laptopëve?
@@ -332,7 +336,9 @@ sq:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
   stats_growth: "Ishte më e shpejta për t'i arritur 15 milion përdorues."
   stats_i18n: Nxënësit mësojnë në 40 gjuhë
@@ -417,6 +423,9 @@ sq:
   events_orgs_title: Të gjitha eventet e Orës së Kodimit nga organizatat bashkëpunuese
   event: event
   events: evente
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: E drejta e autorit 2015 Code.org. Të gjitha të drejtat e rezervuara.
   footer_trademark_message: Hour of Code™ është markë e Code.org.
   footer_menu_partners: Partnerët

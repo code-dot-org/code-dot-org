@@ -5,12 +5,11 @@ layout: wide
 
 ---
 
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-ما مي خواهيم ميزبان مجموعه اي از گزينه هاي جذاب باشيم، با اين حال هدف اصلي ما بهبود تجارب دانش آموزان و معلماني است كه در حوزه علوم كامپيوتر تازه وارد هستند. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -263,4 +262,3 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
-

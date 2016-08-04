@@ -20,7 +20,7 @@ Scenario: Using a studio dropdown
   And element ".congrats" is visible
 
 Scenario: Resizing Sprites
-  Given I am on "http://learn.code.org/s/allthethings/stage/21/puzzle/1?noautoplay=true"
+  Given I am on "http://learn.code.org/s/allthethings/stage/22/puzzle/1?noautoplay=true"
   And I rotate to landscape
   #And I close the dialog
 

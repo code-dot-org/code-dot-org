@@ -5,9 +5,9 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 14 - The Internet and Society
+# Unit 1: Lesson 14 - The Internet and Society
 
-# Background
+## Background
 
 The Internet and the technologies built upon it have been immensely impactful on society. They have allowed people from across the world to communicate and collaborate at the speed of light. You've learned about the physical nature of networks: Internet Protocols, routing, packets, scaling, redundancy, reliability, DNS, and HTTP. Now you will get a chance to investigate how these technologies have connections to the social impacts of the internet.  You will research an area of focus under one of three major topics
 
@@ -17,17 +17,15 @@ The Internet and the technologies built upon it have been immensely impactful on
 
 You will research the topic and develop a 2-minute flash talk on an aspect that is personally meaningful. This lesson is essential practice for the Explore Performance Task later on in the school year.
 
-# Lesson
+## Lesson
 
 * Pick and research a topic
 * Create (write) a flash talk
 * Present
 
-# Resources
+## Resources
 
 * Practice PT - <a href="https://docs.google.com/document/d/12xUM2C-exWlwQDZuxrlR0VjyiFyZql8Gj3Wu1FWHfc8/edit#" target="_blank"> Flash Talk: The Internet and Society</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

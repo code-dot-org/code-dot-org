@@ -1,75 +1,5 @@
 "tr":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Anaokulu-8. sinif bilgisayar bilimi dersi girişi
-          Unplug1: 1. Aşama
-          Maze: Bölüm 2
-          Unplug2: 3. Aşama
-          Unplug3: 4. Aşama
-          Artist: 5. Aşama
-          Unplug4: 6. Aşama
-          Artist2: 7. Aşama
-          Unplug5: 8. Aşama
-          Farmer: 9. Aşama
-          Unplug6: 10. Aşama
-          Artist3: 11. Aşama
-          Unplug7: 12. Aşama
-          Farmer2: 13. Aşama
-          Unplug8: 14. Aşama
-          Artist4: 15. Aşama
-          Unplug9: 16. Aşama
-          Farmer3: 17. Aşama
-          Unplug10: 18. Aşama
-          Artist5: 19. Aşama
-          Unplug11: 20. Aşama
-        Hour of Code:
-          desc: Saat Kodu
-          Maze: 1. Aşama
-        Edit Code:
-          desc: Kodu Düzenle (beta)
-          MazeEC: 1. Aşama
-        2014 Levels:
-          desc: Sıçrama (beta)
-          Bounce: 1. Aşama
-        Builder Levels:
-          desc: Kullanıcı Yapımı Bulmacalar (beta)
-          Custom: 1. Aşama
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: 1. Aşama
-        Jigsaw Levels:
-          desc: Yapboz (beta)
-          Jigsaw: 1. Aşama
-        Step Levels:
-          desc: Labirent (beta)
-          MazeStep: Aşama Adımı
-        edit-code:
-          desc: Kodu Düzenle (beta)
-          MazeEC: 1. Aşama
-          Applab: Bölüm 2
-          ArtistEC: 3. Aşama
-          StudioEC: 4. Aşama
-        events:
-          desc: Sıçrama (beta)
-          Bounce: 1. Aşama
-          Studio: 2. Aşama
-        builder:
-          desc: Kullanıcı Yapımı Bulmacalar (beta)
-          Custom: 1. Aşama
-        flappy:
-          desc: Flappy Bird
-          Flappy: 1. Aşama
-        jigsaw:
-          desc: Yapboz (beta)
-          Jigsaw: 1. Aşama
-        step:
-          desc: Labirent (beta)
-          MazeStep: Aşama Adımı
-        wordsearch:
-          desc: Bilge Arı (beta)
-          WordSearch: 1. Aşama
     game:
       name:
         Unplug1: Bilgisayar Bilimlerine Giriş
@@ -766,6 +696,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

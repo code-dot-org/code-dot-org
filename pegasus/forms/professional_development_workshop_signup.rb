@@ -81,13 +81,13 @@ class ProfessionalDevelopmentWorkshopSignup
   end
 
   def self.index(data)
-    data['teacher_role_ss'] = (data['teacher_role_ss']||[]) - ['Other']
+    data['teacher_role_ss'] = (data['teacher_role_ss'] || []) - ['Other']
     data['teacher_role_ss'].concat(data['teacher_role_other_ss'] || []).sort.uniq
 
-    data['school_type_ss'] = (data['school_type_ss']||[]) - ['Other']
+    data['school_type_ss'] = (data['school_type_ss'] || []) - ['Other']
     data['school_type_ss'].concat(data['school_type_other_ss'] || []).sort.uniq
 
-    data['school_levels_ss'] = (data['school_levels_ss']||[]) - ['Other']
+    data['school_levels_ss'] = (data['school_levels_ss'] || []) - ['Other']
     data['school_levels_ss'].concat(data['school_levels_other_ss'] || []).sort.uniq
 
     data['workshop_id_i'] = data['parent_form_i']

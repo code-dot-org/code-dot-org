@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Undirbúningur viðburðar
 
@@ -36,13 +32,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Dæmi um dagskrá viðburðar
 
-**Viðburður:** Vika tölvunarfræði sett í samkomusal skóla
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Tími:** Á kennslutíma. Helst á miðmorgni. Lengd u.þ.b. 1 klst.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Staður:** Samkomusalur skóla   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | Nemendur sýna dæmi um verkefni án tölvu og hvernig hægt er að kenna tölvunarfræði án þess að nota tölvur.                                       |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-
-<%= view :signup_button %>

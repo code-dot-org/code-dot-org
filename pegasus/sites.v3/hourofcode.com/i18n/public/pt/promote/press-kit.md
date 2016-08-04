@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ## Como atrair a mídia para sua Hora do Código
 
 *Para ver todas as perguntas da imprensa e da mídia, entre em contato pelo e-mail <press@code.org>*
@@ -16,7 +15,7 @@ nav: promote_nav
   * Entre em contato com a mídia por e-mail, duas semanas antes do seu evento. Faça o acompanhamento por e-mail e telefone, caso você não receba uma resposta inicial.
   * Peça a um membro da equipe escolar ou voluntário que tire fotos para serem compartilhadas on-line ou enviadas para a imprensa.
   * Escreva sobre a Hora do Código na página inicial do seu site e no jornal da sua escola. Publique os detalhes do seu evento e as fotos das atividades dos alunos.
-  * No Facebook e no Twitter, compartilhe atualizações sobre seus planos, anuncie seus eventos e publique fotos durante o período de 7 a 13 de dezembro. Use a hashtag **#HoraDoCodigo** para que a Code.org possa ver e promover seus eventos.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guia passo a passo:
 
@@ -36,7 +35,7 @@ Procure na Internet informações de contato de jornalistas. Se não conseguir e
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= resolve_url('/promote/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 
@@ -44,15 +43,15 @@ A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e ob
 
 Embora todos nós saibamos a importância de os alunos aprenderem como navegar neste mundo cheio de tecnologia em que vivemos, muitos professores não têm experiência em ciência da computação e não sabem por onde começar. Este evento é uma oportunidade para que todos nós vejamos do que a ciência da computação é capaz.
 
-Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Algumas pesquisas também mostram que as crianças entendem conceitos de programação antes de aprenderem a ler e a escrever. Na verdade, o cérebro delas é mais receptivo às linguagens computacionais nessas idades, assim como acontece com os idiomas estrangeiros.
+Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Research also shows that kids can pick up programming concepts before they know how to read and write. Na verdade, o cérebro delas é mais receptivo às linguagens computacionais nessas idades, assim como acontece com os idiomas estrangeiros.
 
 *Por que isso é importante?*
 
-In China, every student takes computer science to graduate high school. Nos EUA, 90% das escolas sequer a ensinam. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia permitirá que eles tenham a confiança e o conhecimento necessários para alcançar o sucesso.
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **Mais detalhes e uma citação que podem ser usados nos materiais**
 
-"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo, todos podem aprender seus fundamentos básicos", Hadi Partovi, fundador e CEO da Code.org. "Mais de 100 milhões de alunos por todo mundo experimentaram uma Hora do Código. A demanda pelo ensino da ciência da computação, uma área de extrema relevância no século XXI, cruza todas as fronteiras e não conhece limites."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Mais de 100 milhões de alunos por todo mundo experimentaram uma Hora do Código. A demanda pelo ensino da ciência da computação, uma área de extrema relevância no século XXI, cruza todas as fronteiras e não conhece limites."
 
 **Sobre a Code.org**
 
@@ -60,4 +59,3 @@ A Code.org® é uma instituição pública sem fins lucrativos dedicada a promov
 
   
 Encontre mais recursos e exemplos de e-mail [aqui](<%= resolve_url('/promote') %>).
-

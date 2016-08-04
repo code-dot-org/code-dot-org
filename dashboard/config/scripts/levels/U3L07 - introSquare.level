@@ -8,7 +8,12 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "forLoop_i_0_4": null
@@ -50,7 +55,8 @@
     "video_key": "csp_applab_loops",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

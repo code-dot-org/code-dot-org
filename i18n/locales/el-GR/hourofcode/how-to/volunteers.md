@@ -14,10 +14,33 @@
 
 We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Θα συζητήσουμε πώς να συντονιστείτε με καθηγητές πριν την εκδήλωση της ώρας του κώδικα καθώς και τι πρέπει να κάνετε την ημέρα της εκδήλωσης για προετοιμασία. Παρακαλούμε ρωτήστε μας οτιδήποτε! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Ημερομηνία   | Ώρα                       | Link to info session                                                            |
-| ------------ | ------------------------- | ------------------------------------------------------------------------------- |
-| 16 Νοεμβρίου | 1:00 μ.μ. - 1:30 pm PST   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3 Δεκεμβρίου | 11:00 π.μ. - 11:30 am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Ημερομηνία
+    </th>
+    
+    <th>
+      Ώρα
+    </th>
+    
+    <th>
+      Link to info session
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Διαθέστε μόλις 30 λεπτά δοκιμάζοντας τα μαθήματα εκ των προτέρων
 
@@ -33,29 +56,33 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 Αν θυμάστε σας την πολύ πρώτη γραμμή κώδικα που γράψατε, γνωρίζετε ότι επηρέασε το υπόλοιπο της ζωής σας.
 
-Αυτό είναι στην ουσία η Ώρα του Κώδικα. Τα τελευταία δύο χρόνια, το κίνημα θρυμμάτισε στερεότυπα του τι είναι να φτιάχνεις κώδικα και βοήθησε πάνω από 100 εκατομμύρια σπουδαστές σε 180 χώρες να δοκιμάσουν την Πληροφορική για πρώτη φορά.
+Αυτό είναι στην ουσία η Ώρα του Κώδικα. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Υπέγραψαν για να εργαστούν εθελοντικά σε τοπική τάξη**   
-7,098 καθηγητές έχουν ήδη ζητήσει βοήθεια. Στο Code.org ταιριάζουν αίθουσες διδασκαλίας με τεχνικούς εθελοντές ( όπως και εσείς) που μπορούν να βοηθήσουν μαθητές και καθηγητές στην πρώτη τους ώρα του κώδικα.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Παρακαλώ [ γίνετε εθελοντής για μια ώρα](https://code.org/volunteer/engineer). Αφού εγγραφείτε, τοπικοί δάσκαλοι θα είναι σε θέση να επικοινωνήσουν μαζί σας για βοήθεια χρησιμοποιώντας μια ασφαλή form.* δεν μπορείτε να γίνετε εθελοντής; [Προσφέρετε βοήθεια να εξαπλωθεί το μήνυμα για την ώρα του κώδικα](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-** η εμπειρία σας είναι σημαντική **  
-Τα περισσότερα σχολεία ακόμα δεν έχουν μάθημα πληροφορικής στο πρόγραμμά τους. Οι περισσότεροι φοιτητές δεν γνωρίζουν ότι αφορά την επίλυση μεγάλων προβλημάτων, και μας συνδέει όλους πιο κοντά μαζί. Αυτή είναι μια ευκαιρία να εμπνεύσετε τουλάχιστον ένα νεαρό άτομο στην περιοχή σας.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Εγγραφείτε για να είστε εθελοντές](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-* Η διεύθυνση ηλεκτρονικού ταχυδρομείου σας ποτέ δε θα μοιραστεί σε άλλους εκπαιδευτικούς.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## Ζήτα από τον εργοδότη σου να εμπλακεί
 
-[Στείλετε αυτό το μήνυμα](https://hourofcode.com/promote/resources#email) στον διαχειριστή ή στον Διευθύνων Σύμβουλο σας.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 4. Προώθησε την Ώρα του Κώδικα στην κοινότητά σου
 
-Προσκάλεσε να αναμειχθούν μια τοπική ομάδα - αγόρια/κορίτσια πρόσκοποι, την Εκκλησία, μια πανεπιστημιακή ομάδα, μια ομάδα ατόμων τρίτης ηλικίας ή ένα σωματείο εργαζομένων. Ή φιλοξένησε μια Ώρα του Κώδικα "πάρτυ στην οικοδομή" για τη γειτονιά σου. [Στείλετε αυτό το μήνυμα](https://hourofcode.com/promote/resources#email).
+Προσκάλεσε να αναμειχθούν μια τοπική ομάδα - αγόρια/κορίτσια πρόσκοποι, την Εκκλησία, μια πανεπιστημιακή ομάδα, μια ομάδα ατόμων τρίτης ηλικίας ή ένα σωματείο εργαζομένων. Ή φιλοξένησε μια Ώρα του Κώδικα "πάρτυ στην οικοδομή" για τη γειτονιά σου. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Διαβάστε την προτεινόμενη ημερήσια διάταξη παρακάτω, ώστε να γνωρίζετε τι να περιμένετε όταν επισκέπτεστε μια τάξη.
+## 7. Prepare before you visit a classroom.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Ημερήσια διάταξη για τον εθελοντισμό σε μια σχολική τάξη
 

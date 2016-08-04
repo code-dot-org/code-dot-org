@@ -33,8 +33,6 @@
  *= require selectize.default
  */
 
-// TODO: Move into code-studio.scss when it exists.
-@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
@@ -70,12 +68,17 @@ body.pin_bottom {
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+  font-size: 32px;
   color: $purple;
 }
 
 h2 {
+  margin: 25px 0 10px 0;
   font-family: $gotham-bold;
   font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: $teal;
 }
 
 hr {
@@ -129,18 +132,6 @@ img.video_thumbnail {
 
 .navbar {
   margin-bottom: 30px;
-}
-
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
 }
 
 .report_cell {
@@ -539,6 +530,11 @@ $small-footer-standard-width: 400px;
   color: black;
 }
 
+.user_options .pairing_summary {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
 .full_container {
   padding: 0px 25px 25px 25px;
 }
@@ -920,11 +916,6 @@ input.header_input {
   line-height: 20px;
 }
 
-.trophy_image {
-  width: 45px;
-  height: 45px;
-}
-
 #alert {
   color: $red;
   font-size: 130%;
@@ -1268,6 +1259,7 @@ a.download-video {
     margin-top: 3px;
     overflow: hidden;
     padding: 10px;
+    min-height: 110px;
   }
   .teacher-announce .announce-content .content-img-container {
     float: left;
@@ -1283,14 +1275,15 @@ a.download-video {
     overflow: hidden;
     padding-left: 10px;
     line-height: 18px;
-    width: 610px;
+    width: 580px;
   }
   .teacher-announce .announce-content .content-text b {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
-    float: right;
-    margin-top: 25px;
+    position: absolute;
+    right: 10px;
+    margin-top: 75px;
   }
   .teacher-announce a {
     text-decoration: none;
@@ -1382,9 +1375,6 @@ a.download-video {
   #lesson {
     #heading {
       width: 700px;
-      h2 {
-        margin-top: 0;
-      }
     }
     #trynow {
       float: right;
@@ -1438,6 +1428,10 @@ a.download-video {
 }
 
 #signinsection {
+  ul.students, ul.pictures {
+    margin-left: 0;
+  }
+
   ul.students li,
   ul.pictures li {
     list-style-type: none;
@@ -1458,6 +1452,18 @@ a.download-video {
   ul.students li.selected,
   ul.pictures li.selected {
     background-color: $yellow;
+  }
+
+  #pairing_checkbox {
+    margin: 5px 0;
+    label {
+      font-size: 17.5px;
+    }
+    label, input {
+      margin: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -1668,6 +1674,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .external, .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1711,6 +1721,28 @@ a.download-video {
   }
 }
 
+.external-link-icon {
+  margin: 0 0.33em 0 20px;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 40px 0 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,
@@ -1736,6 +1768,39 @@ a.download-video {
       margin: 0;
     }
   }
+
+  blockquote {
+    padding: 15px 20px;
+    background: $lightest_purple;
+    border: 0;
+    border-radius: 10px;
+    clear: both;
+    p {
+      margin-bottom: 10px;
+    }
+    h2:first-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.level-image {
+  width: 380px;
+  float: right;
+  margin: 20px 0 30px 30px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px $shadow;
+  border: 1px solid $lighter_gray;
+}
+
+.external, .free-response {
+  max-width: 970px;
+  margin: auto;
+}
+
+.free-response .response {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {
@@ -1856,16 +1921,9 @@ div.mini_gallery_activity {
 }
 
 .buttons.submittable {
-  .submitButton {
+  .submitButton, .unsubmitButton {
     border-color: $purple;
     background-color: $purple;
-    color: white;
-    background-image: none;
-  }
-
-  .unsubmitButton {
-    border-color: $light_purple;
-    background-color: $light_purple;
     color: white;
     background-image: none;
   }
@@ -1884,7 +1942,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
   margin: auto;
-  h2 {
+  h1 {
     text-align: center;
   }
   p {
@@ -2230,17 +2288,31 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-.instructions-markdown {
-  padding-top: 19px;
+.csf-top-instructions {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
     color: $black;
   }
 
+  .secondary-instructions p {
+    font-size: 14px;
+    color: #5b6770;
+  }
+
   strong {
     font-family: $gotham-bold;
   }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
 }
 
 .markdown-level-header-text {

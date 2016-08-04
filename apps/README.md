@@ -227,13 +227,7 @@ more information on how to use the `storybook` api.
 
 ##### Static Styleguide #####
 
-You can also build a completely static version of the styleguide by running
-
-```
-npm run build-storybook
-```
-
-which will then be available at http://localhost-studio.code.org:3000/styleguide/
+A static version of the styleguide is hosted at https://code-dot-org.github.io/cdo-styleguide/
 
 #### Full build with blockly-core changes
 

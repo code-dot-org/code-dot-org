@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Making Pivot Tables Part 1 - The Basics
+# Making Pivot Tables Part 1 - The Basics
 
-# Getting Started - Copy the Data
+## Getting Started - Copy the Data
 **To start, make a copy** of <a href="https://drive.google.com/open?id=0B2QFqkDgv9LjZU1sZ0hDdnZ6ck0" target="_blank">Teenage Movie Ratings Subset.csv</a> and open it in a spreadsheet program.  
 
 * The data is a subset of the larger <a href="https://drive.google.com/drive/u/0/folders/0B78N8p4zhHFgZTJMR1J6V1Bnc3c" target="_blank">movie ratings dataset</a> we saw in a previous lesson.
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 * The data has been filtered so that it only contains movies that were rated by at least 2 females and 2 males in the 14-18 year-old range.
 
 
-# Making Summary Tables
+## Making Summary Tables
 We’re first going to make a simple summary table that shows the average rating for every movie that’s in the data. 
 
 Here is what we're going for:
@@ -22,7 +22,7 @@ Here is what we're going for:
 
 <hr>
 
-# Your First Summary Table
+## Your First Summary Table
 In most spreadsheet programs a Summary Table is called a **pivot table**.
 
 **Do This:** With the spreadsheet open in Google Sheets choose _**Data** -> **Pivot table...**_
@@ -33,7 +33,7 @@ In most spreadsheet programs a Summary Table is called a **pivot table**.
 
 <hr>
 
-# Add Rows and Values to Your Table
+## Add Rows and Values to Your Table
 The menu on the right side of the pivot table lets you choose what you want the rows, columns, and values to be in your summary table. We want to set it up so that:
  
  * Each **row** is one movie.
@@ -45,7 +45,7 @@ The menu on the right side of the pivot table lets you choose what you want the 
 
 *Setting the Rows to "movie," Values to "rating," and Summarize By to AVERAGE*
 
-# What Happened? Computation!
+## What Happened? Computation!
 **The power of the pivot table** is that it allows you to compute things you could *never* do by just filtering and sorting.  The pivot table is doing a lot of computing behind the scenes for you - which is great - but you should understand what's really happening so you can make your own choices in the future.  Here's a synopsis:
 
 * **Rows** - Group By: movie
@@ -59,7 +59,7 @@ The menu on the right side of the pivot table lets you choose what you want the 
 
 <hr>
   
-# Let's Change the Value - Summarize by: COUNT
+## Let's Change the Value - Summarize by: COUNT
 Change *summarize by* from AVERAGE to COUNT. Now, instead of computing the average rating, this will **count the number of ratings for each movie**. 
 
 ![](https://images.code.org/4e3cceb21e2d54c500564a352abc4b0c-image-1453396358019.gif)
@@ -68,7 +68,7 @@ Change *summarize by* from AVERAGE to COUNT. Now, instead of computing the avera
 
 <hr>
 
-# Add Another Field to Values
+## Add Another Field to Values
 
 Let's show **both the average rating *and* the count** side-by-side in the table.  To do this we **add another Values field**.  The count is already there, so let's add the average rating again. Now, for each movie we'll see the total number of ratings the average rating.
 
@@ -78,7 +78,7 @@ Let's show **both the average rating *and* the count** side-by-side in the table
 
 <hr>
 
-# That's It for the Basics of Pivot Tables!
+## That's It for the Basics of Pivot Tables!
 There's not much more to it than that. Once you get the hang of pivot tables they can be a very powerful tool for manipulating data. There are more advanced things you can do with a pivot table if you like, but you know enough now that you can probably just play around with the other settings and see what happens.
 
 **Key Ideas**:
@@ -91,13 +91,7 @@ There's not much more to it than that. Once you get the hang of pivot tables the
  
  * **A summary table can be a first step toward a good visualization.** Often it's difficult to make a meaningful chart or graphic out of raw data.  You often want to **summarize it first, then chart it!** 
 
-
 Click continue to see an example...
 
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
- 
-
-
 MARKDOWN

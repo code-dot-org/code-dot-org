@@ -77,7 +77,8 @@ var SharingWarningsDialog = module.exports = React.createClass({
             is13Plus={this.props.is13Plus}
             showStoreDataAlert={this.props.showStoreDataAlert}
             handleTooYoung={this.handleTooYoung}
-            handleClose={this.handleClose}/>
+            handleClose={this.handleClose}
+          />
         </div>
       </div>
     );

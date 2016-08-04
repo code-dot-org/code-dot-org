@@ -58,37 +58,37 @@ var Visualization = React.createClass({
 
     return (
       <div
-          id={VISUALIZATION_DIV_ID}
-          className={classNames({
-            responsive: this.props.isResponsive,
-            with_padding: this.props.visualizationHasPadding
-          })}
-          style={[
-            !this.props.isResponsive && styles.nonResponsive,
-            this.props.isShareView && styles.share,
-            this.props.playspacePhoneFrame && styles.phoneFrame,
-            this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
-          ]}
+        id={VISUALIZATION_DIV_ID}
+        className={classNames({
+          responsive: this.props.isResponsive,
+          with_padding: this.props.visualizationHasPadding
+        })}
+        style={[
+          !this.props.isResponsive && styles.nonResponsive,
+          this.props.isShareView && styles.share,
+          this.props.playspacePhoneFrame && styles.phoneFrame,
+          this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
+        ]}
       >
         <div
-            id="divApplab"
-            className="appModern"
-            tabIndex="1"
+          id="divApplab"
+          className="appModern"
+          tabIndex="1"
         />
         <div
-            id="designModeViz"
-            className="appModern"
-            style={commonStyles.hidden}
+          id="designModeViz"
+          className="appModern"
+          style={commonStyles.hidden}
         />
         <VisualizationOverlay width={appWidth} height={appHeight}>
           <AppLabCrosshairOverlay/>
           <AppLabTooltipOverlay/>
         </VisualizationOverlay>
         <div
-            style={[
-              styles.screenBlock,
-              !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
-            ]}
+          style={[
+            styles.screenBlock,
+            !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
+          ]}
         />
       </div>
     );

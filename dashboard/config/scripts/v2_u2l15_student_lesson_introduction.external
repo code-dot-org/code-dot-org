@@ -4,24 +4,23 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 15 - Practice PT - Tell a Data Story
+# Unit 2: Lesson 15 - Practice PT - Tell a Data Story
 
-# Background
+## Background
 
 This practice PT develops several of the skills you need for the AP Explore Performance Task.  In particular: the creation of a computational artifact, and written responses to prompts about what the artifact is showing.
 
 We collect data to learn about the world and test our hypotheses about the patterns and relationships that might otherwise be invisible. Computational tools now make it possible to quickly collect and analyze vast amounts of data, but those processes still depend on knowledgeable and thoughtful people who understand the data being used and can clearly present the conclusions draw from it. For this Practice PT you will be doing just that with the data you and your classmates have collected.
 
-# Lesson
+## Lesson
 
 * Discover and present an interesting "story" in the data your class collected.
 * Create a visualization that presents your story.
 * Complete the written responses to explain and interpret your visualization.
 
-# Resources
+## Resources
 
 * Practice PT Overview and Rubric: <a href='https://docs.google.com/document/d/1HVUQhwuuKC5IejdUabA4FGS2xfjXMrRvKy0wJSnP8uU/edit?usp=sharing' target="_blank">Tell a Data Story</a>
 
 <a class='btn btn-large btn-primary next-stage submitButton'>Continue</a>
-
 MARKDOWN

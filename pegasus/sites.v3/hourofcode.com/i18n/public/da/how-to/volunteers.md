@@ -16,10 +16,33 @@ Besøg en lokal klasse for at inspirere eleverne til at lære programmering. [Fr
 
 We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Vi vil komme ind på koordinationen med lærerne før deres Hour of Code begivenhed, samt hvad du bør gøre på selve dagen, for at være forberedt. Stil endelig spørgsmål! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Dato         | Tidspunkt         | Link to info session                                                            |
-| ------------ | ----------------- | ------------------------------------------------------------------------------- |
-| 16. november | 13.00 - 13.30 PST | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3. december  | 11.00 - 11.30 PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Dato
+    </th>
+    
+    <th>
+      Tidspunkt
+    </th>
+    
+    <th>
+      Link to info session
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. bruge 30 minutter på at prøve øvelserne på forhånd
 
@@ -35,29 +58,33 @@ Fortæl dine venner og kollegaer om Hour of Code. We have thousands of teachers 
 
 Hvis du kan huske din første linje kode, ved du at den formede resten af dit liv.
 
-Det er netop det, Hour of Code handler om. I de seneste to år, har bevægelsen rykket ved forestillingen om, hvad det vil sige at programmere samt hjulpet mere end 100 millioner studerende i 180 lande, med at anvende computer teknologi på denne måde for første gang.
+Det er netop det, Hour of Code handler om. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Jeg har tilmeldt mig som frivillige til en lokal klasse**   
-7,098 lærere har allerede bedt om hjælp. Code.org matcher klasser med tekniske frivillige som dig, som kan hjælpe elever og lærere igennem deres første Hour of Code.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Bliv [frivillig i en time](https://code.org/volunteer/engineer). Når du har tilmeldt dig, vil lokale lærere kunne kontakte dig via sikker kommunikation.* Ønsker du ikke at være frivillig? [Hjælp med at sprede budskabet om Hour of Code](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Din erfaring tæller**   
-De fleste skoler underviser stadig ikke i datalogi/programmering. De fleste studerende ved ikke, at det handler om løsning af store problemer og om at binde os alle tættere sammen. Dette er en chance for at inspirere mindst en ung person i dit område.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Meld dig som frivillig](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-* Din e-mail adresse vil aldrig blive delt med lærere.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 4. Få din arbejdsgiver involveret
 
-[Send denne e-mail](https://hourofcode.com/promote/resources#email) til din chef eller administrerende direktør.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 6. Promover Hour of Code i dit lokalsamfund
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send denne e-mail](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Læs den foreslåede dagsorden nedenfor, så du ved hvad du kan forvente når du besøger et klasseværelse.
+## 7. Prepare before you visit a classroom.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Dagsorden for frivilligt arbejde i en skoleklasse
 
