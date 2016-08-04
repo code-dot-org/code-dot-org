@@ -5,19 +5,13 @@ css 'unplugged'
 skip_dialog true 
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Welcome to the Family! 
-
+# Welcome to the Family! 
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/fDv6zirEto8" frameborder="0" allowfullscreen></iframe>
-<br>
 
 **[Can't see the video? Watch it here](https://www.dropbox.com/s/vgwlmajfe3tqdxn/ecs-p1-welcome-color.mp4?dl=0)**
 
-<br>
+When you're ready, click continue below to get started with your Online Introduction to the Professional Learning Program.
 
-#### When you're ready, click continue below to get started with your Online Introduction to the Professional Learning Program.
-<br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
