@@ -40,6 +40,7 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
+  capabilities[:tunnelIdentifier] = "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}" if ENV['CIRCLE_BUILD_NUM']
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
