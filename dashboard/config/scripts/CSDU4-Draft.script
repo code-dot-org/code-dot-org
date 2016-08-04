@@ -16,13 +16,13 @@ level 'CSDU4 - Design Mode - 18' # Debugging depth (rework)
 level 'CSD U4 - Design Mode Project' # Make your page
 
 stage 'Making it Interactive'
-level 'CSDU4 - Design Mode - 16' # Wire up your button (events stage)
+level 'CSDU4 - Design Mode - 16' # Wire up your button console.log (events stage)
 level 'CSDU4 - Design Mode - 3' # How do Events work? (events stage)
+level 'CSDU4 - Design Mode - 19' # Second screen (events stage)
+level 'CSDU4 - Design Mode - 20' # Set screen (events stage)
 level 'CSDU4 - Design Mode - 11' # New event types (events stage)
 level 'CSDU4 - Design Mode - 5' # Debugging IDs (events stage)
 level 'CSDU4 - Design Mode - 17' # Debugging IDs & console.log() (events stage)
-level 'CSDU4 - Design Mode - 19' # Second screen (events stage)
-level 'CSDU4 - Design Mode - 20' # Set screen (events stage)
 
 stage 'Adding Functionality (optional)'
 level 'CSDU4 - Design Mode - 23' # Set text (advanced functionality stage)
