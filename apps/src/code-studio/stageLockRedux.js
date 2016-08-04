@@ -1,9 +1,7 @@
 /**
- * Reducer and actions for teacher panel
+ * Reducer and actions for stage lock info. This includes the teacher panel on
+ * the course overview page, and the stage locking dialog.
  */
-
-// TODO - really this module is broader than just teacherPanel at this point.
-// come up with a better name
 
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
@@ -12,13 +10,13 @@ export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'Readonly');
 
 // Action types
-const SET_VIEW_TYPE = 'teacherPanel/SET_VIEW_TYPE';
-const SET_SECTIONS = 'teacherPanel/SET_SECTIONS';
-const SELECT_SECTION = 'teacherPanel/SELECT_SECTION';
-const OPEN_LOCK_DIALOG = 'teacherPanel/OPEN_LOCK_DIALOG';
-const CLOSE_LOCK_DIALOG = 'teacherPanel/CLOSE_LOCK_DIALOG';
-const BEGIN_SAVE = 'teacherPanel/BEGIN_SAVE';
-const FINISH_SAVE = 'teacherPanel/FINISH_SAVE';
+const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
+const SET_SECTIONS = 'stageLock/SET_SECTIONS';
+const SELECT_SECTION = 'stageLock/SELECT_SECTION';
+const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
+const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
+const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
+const FINISH_SAVE = 'stageLock/FINISH_SAVE';
 
 const initialState = {
   viewAs: ViewType.Teacher,
@@ -27,12 +25,13 @@ const initialState = {
   sectionsLoaded: false,
   unlockedStageIds: [],
   lockDialogStageId: null,
+  // The locking info for the currently selected section/stage
   lockStatus: [],
   saving: false
 };
 
 /**
- * Teacher panel reducer
+ * Stage lock reducer
  */
 export default function reducer(state = initialState, action) {
   if (action.type === SET_VIEW_TYPE) {
@@ -95,10 +94,12 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === FINISH_SAVE) {
-    // TODO - some of this might end up looking a lot cleaner if i used immutable.js
     const { sections, selectedSection, lockDialogStageId } = state;
     const nextLockStatus = action.lockStatus;
     const nextStage = _.cloneDeep(sections[selectedSection].stages[lockDialogStageId]);
+
+    // Update locked/view_answers in stages based on the new lockStatus provided
+    // by our dialog.
     nextStage.forEach((item, index) => {
       const update = nextLockStatus[index];
       // We assume lockStatus is ordered the same as stageToUpdate. Let's
@@ -155,7 +156,7 @@ export const finishSave = (newLockStatus) => ({
 
 export const saveLockDialog = (newLockStatus) => {
   return (dispatch, getState) => {
-    const oldLockStatus = getState().teacherPanel.lockStatus;
+    const oldLockStatus = getState().stageLock.lockStatus;
     const saveData = newLockStatus.filter((item, index) => {
       // Only need to save items that changed
       return !_.isEqual(item, oldLockStatus[index]);
@@ -193,6 +194,12 @@ export const closeLockDialog = () => ({
 });
 
 // Helpers
+
+/**
+ * Given the info for a particular section, find the set of stages that are not
+ * fully locked (i.e. there is at least one student who is not locked), and
+ * return their ids.
+ */
 const unlockedStages = (section) => {
   if (!section) {
     return [];
