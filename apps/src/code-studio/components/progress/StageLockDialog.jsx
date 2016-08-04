@@ -33,7 +33,7 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontWeight: 'bold'
   },
-  tableDesc: {
+  descriptionText: {
     marginTop: 10,
     marginBottom: 10
   },
@@ -187,8 +187,9 @@ const StageLockDialog = React.createClass({
               </tr>
             </tbody>
           </table>
+          <div style={styles.descriptionText}>{commonMsg.autolock()}</div>
           <div style={styles.title}>{commonMsg.studentControl()}</div>
-          <div style={styles.tableDesc}>
+          <div style={styles.descriptionText}>
             {commonMsg.studentLockStateInstructions()}
           </div>
           <table style={styles.studentTable}>
