@@ -32,6 +32,27 @@ const styles = {
   }
 };
 
+const ViewAsToggle = ({viewAs, setViewType}) => (
+  <div className="non-scrollable-wrapper">
+    <div style={styles.viewAs}>
+      {commonMsg.viewPageAs()}
+    </div>
+    <div style={styles.toggleGroup}>
+      <ToggleGroup
+        selected={viewAs}
+        onChange={setViewType}
+      >
+        <button value={ViewType.Student}>{commonMsg.student()}</button>
+        <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
+      </ToggleGroup>
+    </div>
+  </div>
+);
+ViewAsToggle.propTypes = {
+  viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+  setViewType: React.PropTypes.func.isRequired,
+};
+
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -65,20 +86,7 @@ const ScriptTeacherPanel = React.createClass({
       <TeacherPanel>
         <h3>{commonMsg.teacherPanel()}</h3>
         <div className="content">
-          <div className="non-scrollable-wrapper">
-            <div style={styles.viewAs}>
-              {commonMsg.viewPageAs()}
-            </div>
-            <div style={styles.toggleGroup}>
-              <ToggleGroup
-                selected={viewAs}
-                onChange={setViewType}
-              >
-                <button value={ViewType.Student}>{commonMsg.student()}</button>
-                <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
-              </ToggleGroup>
-            </div>
-          </div>
+          <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
           {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
           {hasSections &&
             <select
