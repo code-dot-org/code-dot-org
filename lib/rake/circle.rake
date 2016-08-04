@@ -1,12 +1,9 @@
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'securerandom'
 
 RUN_UI_TESTS_TAG = '[test ui]'
 RUN_ALL_TESTS_TAG = '[test all]'
-
-def random_string_of_length(n)
-  rand(36**n).to_s(36)
-end
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
@@ -31,7 +28,7 @@ namespace :circle do
       RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.3.15-linux.tar.gz'
       RakeUtils.system_stream_output 'tar -xzf sc-4.3.15-linux.tar.gz'
       Dir.chdir(Dir.glob('sc-*-linux')[0]) do
-        RakeUtils.exec_in_background "./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{random_string_of_length(32)}"
+        RakeUtils.exec_in_background "./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{SecureRandom.uuid}"
       end
       RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
       Dir.chdir('dashboard/test/ui') do
