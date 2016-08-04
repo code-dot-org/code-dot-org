@@ -1,6 +1,8 @@
 name 'ECSPD Unit 3 Outline'
 markdown <<MARKDOWN
-# Getting Started > Course Outline
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+
+## Getting Started > Course Outline
 
 This online PD has 6 stages, which can be broken down into four main sections:
 
@@ -38,10 +40,13 @@ We recommend you spend between 10-15 minutes completing Stages 1-3, preferably b
 ## Section 4: Close & Next Steps
 
 The final stage summarizes the online PD and prepares you for the next step in your ECS professional development journey. We recommend you complete this final stage after you have successfully completed all other stages and levels in this online PD. It should take you no longer than 10 minutes.
-
+<br><br>
 No matter what order you do things in, be sure you do click “continue” at the bottom of each level so you get credit for completing everything. 
 
+
 Click “Continue” below to review suggestions for planning your participation in this course.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

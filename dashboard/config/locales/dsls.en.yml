@@ -142,9 +142,6 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
-      Begin planning your project:
-        description here: description here
-        title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD U3 - Booleans - 1: {}
@@ -675,7 +672,7 @@ en:
       ECSPD3-u5 day 9-12: {}
       ECSPD3-u5 intro to u5: {}
       ECSPD3-u5 lesson overview: {}
-      ECSPD3-u5 list of challenges: {}
+      'ECSPD3-u5 list of challenges ': {}
       ECSPD3-u5 overview: {}
       ECSPD3-u5 plan: {}
       ECSPD3-u5 post survey: {}
@@ -1030,9 +1027,6 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
-      Prepare for your presentation:
-        description here: description here
-        title: title
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
@@ -1581,7 +1575,6 @@ en:
       grade1_story_theGreatTowerTopple:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
-      grade1_unplugged_behavingInLab: {}
       grade2_unplugged_bigEvent: {}
       grade2_unplugged_buildAblock:
         Build a Block: Build a Block
@@ -1593,21 +1586,6 @@ en:
       grade3_Unplugged_ConditionalsLoops:
         Conditionals with Loops: Conditionals with Loops
       grade3_farmer_stage13_placeholder: {}
-      grade4_project_design:
-        description here: description here
-        title: title
-      grade4_project_design_image:
-        description here: description here
-        title: title
-      grade4_project_presentation:
-        description here: description here
-        title: title
-      grade5_project_design:
-        description here: description here
-        title: title
-      grade5_project_presentation:
-        description here: description here
-        title: title
       gradeK_external_FrustrationWorksheet:
         Frustration Worksheet: Frustration Worksheet
       gradeK_unplugged_events:
@@ -2006,8 +1984,6 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
-        CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
-        CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
@@ -3312,42 +3288,6 @@ en:
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
-      CSP Unit 1 Ch 1 MC binary def:
-        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
-        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
-        It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
-        It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
-        The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
-        What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
-        What's Binary?: What's Binary?
-      CSP Unit 1 Ch 1 MC binary to dec simple:
-        '0010': '0010'
-        '0101': '0101'
-        '0110': '0110'
-        '1010': '1010'
-        Decimal to Binary: Decimal to Binary
-        What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?: What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?
-      CSP Unit 1 Ch 1 MC bits to make 512:
-        10 bits: 10 bits
-        16 bits: 16 bits
-        17 bits: 17 bits
-        8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
-        9 bits: 9 bits
-        How Many Bits?: How Many Bits?
-      CSP Unit 1 Ch 2 MC internet layers:
-        " ": " "
-        DNS relies on TCP/IP: DNS relies on TCP/IP
-        HTTP relies on TCP/IP: HTTP relies on TCP/IP
-        Layers of Protocols: Layers of Protocols
-        TCP/IP relies on DNS: TCP/IP relies on DNS
-        TCP/IP relies on HTTP: TCP/IP relies on HTTP
-      CSP Unit 1 Ch 2 MC packets:
-        Messages are broken into packets to improve reliability of the internet: Messages are broken into packets to improve reliability of the internet
-        Packets: Packets
-        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
-        Packets can be routed on different paths from sender to receiver.: Packets can be routed on different paths from sender to receiver.
-        TCP guarantees that no packets are ever dropped: TCP guarantees that no packets are ever dropped
-        Which of the following is NOT true about TCP/IP packets?: Which of the following is NOT true about TCP/IP packets?
       CSP Unit 2 Ch 1 MC kilo v mega:
         1,000 times bigger: 1,000 times bigger
         1,000,000 times bigger: 1,000,000 times bigger
@@ -3362,68 +3302,15 @@ en:
         metadata: metadata
         predata: predata
         superdata: superdata
-      CSP Unit 2 Ch 2 MC IETF:
-        A collection of the leaders of the Tier 1 Internet service providers.: A collection of the leaders of the Tier 1 Internet service providers.
-        A loosely organized collection of citizens and engineers.: A loosely organized collection of citizens and engineers.
-        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
-        Political leaders and heads of state.: Political leaders and heads of state.
-        The IETF: The IETF
-        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
-        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
-        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
-      CSP Unit 2 Ch 2 MC data bias:
-        " ": " "
-        Data Bias: Data Bias
-        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
-        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
-        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
-        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
-        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
-        You learn that responses were collected only by mobile app.: You learn that responses were collected only by mobile app.
-        ? You learn that the survey administrators only asked a representative sample of students, rather than every student in each state.
-        : You learn that the survey administrators only asked a representative sample of students, rather than every student in each state.
-        You learn that the survey was only available to students who scored at the top 10% on the PSAT.: You learn that the survey was only available to students who scored at the top 10% on the PSAT.
-        You learn the survey was available to complete in both digital and paper form.: You learn the survey was available to complete in both digital and paper form.
       CSP Unit 2 Ch 2 MC google trends:
         " ": " "
-        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
-        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        Generally speaking, since 2009 more people use "red" in their search terms than "blue", "yellow", "green", or "purple": Generally speaking, since 2009 more people use "red" in their search terms than "blue", "yellow", "green", or "purple"
         ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
         : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
-        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
-        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
-        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        Since sometime around 2008 red has become the favorite color of more people: Since sometime around 2008 red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of yellow taxis as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of yellow taxis as car sharing services have become more popular
         What's it showing?: What's it showing?
-      CSP Unit 2 Ch 2 MC routing simple:
-        A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
-        Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
-        'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
-        ? Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
-        : Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
-        Routing: Routing
-        Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.: Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.
-      CSP Unit 2 Ch 2 MC worst viz:
-        " ": " "
-        Chart A (Line Chart): Chart A (Line Chart)
-        Chart B (Vertical Bar Chart): Chart B (Vertical Bar Chart)
-        Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
-        Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
-        Which is the Best?: Which is the Best?
-      CSP Unit 2 Ch2 MC data cleaning:
-        " ": " "
-        Data Cleaning: Data Cleaning
-        ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
-        : 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
-        Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
-        Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
-        Translate all states into their two-letter state code: Translate all states into their two-letter state code
-      CSP Unit 2 ch 2 MC trends as predictors:
-        " ": " "
-        Search Trends: Search Trends
-        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
-        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
-        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
-        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
       CSP Unit2 Ch 1 MC hex rgb:
         " ": " "
         00F: 00F

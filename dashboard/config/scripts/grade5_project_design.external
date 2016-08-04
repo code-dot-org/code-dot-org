@@ -1,9 +1,0 @@
-name 'grade5_project_design'
-title 'title'
-description 'description here'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-<B>The Design Process</B>
-
-The design process is a list of steps students will follow to work on their final projects. Sometimes developing a solution involves designing a product, such as a machine or game, that will meet a certain criteria for accomplishing a task. It’s important to think of the design process as a “wheel” with no set beginning or end, and as an ongoing process. In this lesson students will navigate through the steps of the design process to build their interactive games. 
-MARKDOWN
