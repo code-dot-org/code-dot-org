@@ -342,7 +342,7 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-          showInstructionsDialog={(autoClose, showHints) => {
+        showInstructionsDialog={(autoClose, showHints) => {
             this.showInstructionsDialog_(config.level, autoClose, showHints);
           }}
       />
@@ -1076,6 +1076,10 @@ StudioApp.prototype.localeDirection = function () {
   return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
+StudioApp.prototype.showNextHint = function () {
+  return this.authoredHintsController_.showNextHint();
+};
+
 /**
 * Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
 * XML argument may be generated from the console with:
@@ -1171,14 +1175,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
-  }
-
-  if (response.trophy_updates) {
-    response.trophy_updates.forEach(update => {
-      const concept_name = update[0];
-      const trophy_name = update[1];
-      trackEvent('Trophy', concept_name, trophy_name);
-    });
   }
 };
 
@@ -1448,7 +1444,8 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
 };
 
 /**
- * Resize the visualization to the given width
+ * Resize the visualization to the given width. If no width is provided, the
+ * scale of child elements is updated to the current width.
  */
 StudioApp.prototype.resizeVisualization = function (width) {
   var editorColumn = $(".editor-column");
@@ -1458,7 +1455,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
-                         Math.min(this.maxVisualizationWidth, width));
+                         Math.min(this.maxVisualizationWidth, width || oldVizWidth));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -1914,7 +1911,7 @@ StudioApp.prototype.configureDom = function (config) {
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
-  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -2440,7 +2437,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
+    showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
@@ -2907,6 +2904,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
+    skinId: config.skinId,
+    showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,

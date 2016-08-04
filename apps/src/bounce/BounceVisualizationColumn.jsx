@@ -16,7 +16,7 @@ var BounceVisualizationColumn = function () {
       <GameButtons>
         <ArrowButtons/>
 
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+        {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
 
         <ProtectedStatefulDiv id="share-cell-wrapper">
           <div id="share-cell" className="share-cell-none">

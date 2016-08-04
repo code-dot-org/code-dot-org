@@ -1,10 +1,17 @@
 module UsersHelper
   include ApplicationHelper
 
-  # Summarize a user and his or progress progress within a certain script.
+  # Summarize a user and his or her progress progress within a certain script.
   # Example return value:
-  # { "linesOfCode": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
-  #   "levels": {"135": {"status": "perfect", "result": 100}}}
+  # {
+  #   "linesOfCode": 34,
+  #   "linesOfCodeText": "Total lines of code: 34",
+  #   "disableSocialShare": true,
+  #   "lockableAuthorized": true,
+  #   "levels": {
+  #     "135": {"status": "perfect", "result": 100}
+  #   }
+  # }
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = {}
     merge_user_summary(user_data, user)
@@ -38,27 +45,11 @@ module UsersHelper
     user_data
   end
 
-  def summarize_trophies(script, user = current_user)
-    return {} unless user
-
-    progress = user.progress(script)
-    trophies = {
-      current: progress['current_trophies'],
-      of: I18n.t(:of),
-      max: progress['max_trophies'],
-    }
-
-    user.concept_progress(script).each_pair do |concept, counts|
-      trophies[concept.name] = counts[:current].to_f / counts[:max]
-    end
-
-    trophies
-  end
-
   # Merge the user summary into the specified result hash.
   private def merge_user_summary(user_data, user)
     if user
       user_data[:disableSocialShare] = true if user.under_13?
+      user_data[:lockableAuthorized] = user.authorized_teacher? || user.student_of_authorized_teacher?
       user_data[:isTeacher] = true if user.teacher?
       user_data[:linesOfCode] = user.total_lines
     else
@@ -82,10 +73,6 @@ module UsersHelper
   # Merge the progress for the specified script and user into the user_data result hash.
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
-
-    if script.trophies
-      user_data[:trophies] = summarize_trophies(script, user)
-    end
 
     if script.professional_learning_course?
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)

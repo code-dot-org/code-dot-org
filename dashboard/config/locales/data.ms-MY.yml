@@ -1,75 +1,5 @@
 "ms":
   data:
-    script:
-      name:
-        20-hour:
-          desc: K-8 Intro untuk kursus Sains Komputer
-          Unplug1: Peringkat 1
-          Maze: Peringkat 2
-          Unplug2: Peringkat 3
-          Unplug3: Peringkat 4
-          Artist: Peringkat 5
-          Unplug4: Peringkat 6
-          Artist2: Peringkat 7
-          Unplug5: Peringkat 8
-          Farmer: Peringkat 9
-          Unplug6: Peringkat 10
-          Artist3: Peringkat 11
-          Unplug7: Peringkat 12
-          Farmer2: Peringkat 13
-          Unplug8: Peringkat 14
-          Artist4: Peringkat 15
-          Unplug9: Peringkat 16
-          Farmer3: Peringkat 17
-          Unplug10: Peringkat 18
-          Artist5: Peringkat 19
-          Unplug11: Peringkat 20
-        Hour of Code:
-          desc: Hour of Code
-          Maze: Peringkat 1
-        Edit Code:
-          desc: Edit Kod (beta)
-          MazeEC: Peringkat 1
-        2014 Levels:
-          desc: Lantun (beta)
-          Bounce: Peringkat 1
-        Builder Levels:
-          desc: Teka-teki Dihasilkan Pengguna (beta)
-          Custom: Peringkat 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Peringkat 1
-        Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Peringkat 1
-        Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        edit-code:
-          desc: Edit Kod (beta)
-          MazeEC: Peringkat 1
-          Applab: Peringkat 2
-          ArtistEC: Peringkat 3
-          StudioEC: Peringkat 4
-        events:
-          desc: Lantun (beta)
-          Bounce: Peringkat 1
-          Studio: Peringkat 2
-        builder:
-          desc: Teka-teki Dihasilkan Pengguna (beta)
-          Custom: Peringkat 1
-        flappy:
-          desc: Flappy Bird
-          Flappy: Peringkat 1
-        jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Peringkat 1
-        step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Peringkat 1
     game:
       name:
         Unplug1: Pengenalan kepada Sains komputer
@@ -756,6 +686,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

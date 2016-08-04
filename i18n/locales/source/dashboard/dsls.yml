@@ -155,9 +155,7 @@ en:
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
       CSD U3 SFLP Card Project: {}
-      CSD U3 SFLP Conditionals:
-        description here: description here
-        title: title
+      CSD U3 SFLP Conditionals: {}
       CSD U3 SFLP Sprites and Images:
         description here: description here
         title: title
@@ -171,6 +169,12 @@ en:
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
       CSD U3 Variables2 STOP variables in expressions: {}
+      CSD U3 abstraction intro:
+        description here: description here
+        title: title
+      CSD U3 setSpeed STOP:
+        Stop Here: Stop Here
+        description here: description here
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -1556,6 +1560,40 @@ en:
       equity vids:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
+      grade1_activity_frustration:
+        Dealing with Frustration: Dealing with Frustration
+      grade1_activity_groupTower:
+        Students build group tower: Students build group tower
+      grade1_activity_whatDoesItDo:
+        What does it do: What does it do
+      grade1_activity_whatGoesWrong:
+        What Will Go Wrong: What Will Go Wrong
+      grade1_story_spottedBugs:
+        The Spotted Bugs: The Spotted Bugs
+        The spotted bugs are so much less trouble than the unspotted ones!: The spotted bugs are so much less trouble than the unspotted ones!
+      grade1_story_theGreatTowerTopple:
+        PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
+        The Great Tower Topple: The Great Tower Topple
+      grade2_unplugged_bigEvent: {}
+      grade2_unplugged_buildAblock:
+        Build a Block: Build a Block
+      grade2_unplugged_neighborhood:
+        description here: description here
+        title: title
+      grade2_unplugged_rlAlgorithms:
+        Real Life Algorithms: Real Life Algorithms
+      grade3_Unplugged_ConditionalsLoops:
+        Conditionals with Loops: Conditionals with Loops
+      grade3_farmer_stage13_placeholder: {}
+      gradeK_external_FrustrationWorksheet:
+        Frustration Worksheet: Frustration Worksheet
+      gradeK_unplugged_events:
+        Big Event: Big Event
+      gradeK_unplugged_loops:
+        Loops Unplugged: Loops Unplugged
+      gradeK_unplugged_programming: {}
+      gradek1_activity_beNice:
+        The computer is your friend: The computer is your friend
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
@@ -1569,6 +1607,9 @@ en:
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
       plc csp1 philosophy and commentary: {}
+      pre-assessment survey heading1: {}
+      pre-assessment survey heading2: {}
+      pre-assessment survey heading3: {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -1942,14 +1983,22 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Unit 1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
+        PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
         TeacherCon Self-Assessment: {}
         TeacherCon Unit 1 Assessment: {}
+        Test anonymous student survey: {}
+        Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        brendan test survey: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -3952,6 +4001,22 @@ en:
         a secret password: a secret password
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
         a week-long course to learn about computers: a week-long course to learn about computers
+      PS MC predictive q1:
+        Make a prediction: Make a prediction
+        Not quite.  This answer does not work because of some reason specific to this answer choice: Not quite.  This answer does not work because of some reason specific to this answer choice
+        What do you think will happen?: What do you think will happen?
+        right answer: right answer
+        wrong answer: wrong answer
+        you are so smart!: you are so smart!
+      PS MC test 7-22:
+        "<b>A.</b>  wrong answer": "<b>A.</b>  wrong answer"
+        "<b>B.</b> right answer": "<b>B.</b> right answer"
+        "<b>C.</b> another wrong answer": "<b>C.</b> another wrong answer"
+        "<b>D.</b>yet another wrong answer": "<b>D.</b>yet another wrong answer"
+        Here is a description: Here is a description
+        Here is a question.: Here is a question.
+        Here is a title: Here is a title
+        feedback for this wrong answer.: feedback for this wrong answer.
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
@@ -4008,6 +4073,38 @@ en:
         description here: description here
         foo: foo
         title: title
+      PS pre-assessment q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
@@ -4307,11 +4404,25 @@ en:
         26^26: 26^26
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L13 Cleaning Data MC:
+        Cleaning and Filtering Data: Cleaning and Filtering Data
+        Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
+        Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
+        Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
+        Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
+        Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
       U2L14 Assessment3:
         'Assessment: Question 4': 'Assessment: Question 4'
         True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
         'false': 'false'
         'true': 'true'
+      U2L14 Summary Tables MC:
+        Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
+        Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
+        Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
+        What's it good for?: What's it good for?
+        Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
         'Assessment: Question 1': 'Assessment: Question 1'
@@ -4388,6 +4499,33 @@ en:
         hierarchy: hierarchy
         packet: packet
         protocol: protocol
+      U2L5 Color Pixel MC Question:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
+      U2L8 google trends MC:
+        " ": " "
+        People like dogs more than cats: People like dogs more than cats
+        People search for "dogs" more frequently than "cats": People search for "dogs" more frequently than "cats"
+        The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
+        There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
+        What does the visualization actually show?: What does the visualization actually show?
+      U2L9 What is digital divide MC:
+        ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
+        ? "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        : "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        ? "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        : "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        What is the digital divide?: What is the digital divide?
+        ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+        : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -5116,6 +5254,233 @@ en:
         What is f(2)?: What is f(2)?
         f(x) = x + 3: f(x) = x + 3
         x: x
+      pre-assessment survey q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q10:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be better at computer science than most of the other kids at my school.: I think I will be better at computer science than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q11:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be  very good at computer science.: I think I will be  very good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q12:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.: I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q13:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q14:
+        Agree: Agree
+        Disagree: Disagree
+        I think computer science is interesting.: I think computer science is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q15:
+        Agree: Agree
+        Disagree: Disagree
+        I like (or think I will like) doing computer science activities.: I like (or think I will like) doing computer science activities.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q17:
+        Agree: Agree
+        Disagree: Disagree
+        Kids like me do computer science.: Kids like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q18:
+        Agree: Agree
+        Disagree: Disagree
+        I like (or think I will like) computer science more than other kids at my school.: I like (or think I will like) computer science more than other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q19:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q20:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q21:
+        Agree: Agree
+        Disagree: Disagree
+        I use computer science skills in my daily life.: I use computer science skills in my daily life.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q22:
+        Agree: Agree
+        'Computer science applies to most aspects of real life. ': 'Computer science applies to most aspects of real life. '
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q23:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q24:
+        Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
+        'No': 'No'
+        'Yes': 'Yes'
+      pre-assessment survey q26:
+        ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        'No': 'No'
+        'Yes': 'Yes'
+      pre-assessment survey q27:
+        After school program at my school: After school program at my school
+        After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
+        ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        N/A: N/A
+        Online program: Online program
+        Other: Other
+        Summer program/camp: Summer program/camp
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Other
+        What grade are you in?: What grade are you in?
+      pre-assessment survey q29:
+        Female: Female
+        'I identify my gender as:': 'I identify my gender as:'
+        Male: Male
+        Other: Other
+        Prefer not to answer: Prefer not to answer
+      pre-assessment survey q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q30:
+        American Indian or Alaska Native: American Indian or Alaska Native
+        Asian: Asian
+        Black or African American: Black or African American
+        Hispanic or Latino/Latina: Hispanic or Latino/Latina
+        Native Hawaiian or Other Pacific Islander: Native Hawaiian or Other Pacific Islander
+        Other: Other
+        Prefer not to answer: Prefer not to answer
+        Two or more races: Two or more races
+        Which of the following best represents your racial and/or ethnic identity?: Which of the following best represents your racial and/or ethnic identity?
+        White: White
+      pre-assessment survey q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q5:
+        Agree: Agree
+        Disagree: Disagree
+        I like my schoolwork.: I like my schoolwork.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q6:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q7:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time at school.: I enjoy my time at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q8:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my school work.: It is important for me to be good at my school work.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q9:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       sciPD PreQ 1:
         Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
         'No': 'No'
@@ -5226,6 +5591,18 @@ en:
         it replaces traditional science labs: it replaces traditional science labs
         it slows the process of discovery: it slows the process of discovery
         nothing at all: nothing at all
+      test anonymous student survey educational:
+        Do you think computer science is educational?: Do you think computer science is educational?
+        Maybe: Maybe
+        'No': 'No'
+        'Yes': 'Yes'
+      test anonymous student survey fun:
+        Agree: Agree
+        Computer science is fun.: Computer science is fun.
+        Disagree: Disagree
+        Neutral: Neutral
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

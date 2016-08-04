@@ -11,7 +11,7 @@ Code.org is selecting organizations, as partners, to help spread computer scienc
 
 Each partner's program manager will attend our Program Manager Summit, a fabulous experience designed to welcome Professional Learning Partners to the extended Code.org family. In addition, we will provide funding based on demonstrated need to help each organization establish itself as a local Code.org professional learning partner.
 
-The ideal Professional Learning Partner is a regional education unit, a non-profit, or a university with existing, positive relationships with nearby school districts and the local education community.
+The ideal Professional Learning Partner is a U.S. based regional education unit, a non-profit, or a university with existing, positive relationships with nearby school districts and the local education community.
 
 [col-50]
 

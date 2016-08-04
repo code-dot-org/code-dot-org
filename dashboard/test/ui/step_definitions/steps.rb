@@ -46,6 +46,22 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
+  install_js_error_recorder
+end
+
+def install_js_error_recorder
+  @browser.execute_script(<<-JS
+  // Wrap existing window onerror handler with a script error recorder.
+  var windowOnError = window.onerror;
+  window.onerror = function (msg) {
+    window.detectedJSErrors = window.detectedJSErrors || [];
+    window.detectedJSErrors.push(msg);
+    if (windowOnError) {
+      return windowOnError.apply(this, arguments);
+    }
+  };
+  JS
+  )
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -618,7 +634,7 @@ end
 Given(/^I am enrolled in a plc course$/) do
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users.first[1][:email])
-  course = Plc::Course.find_by(name: 'CSP Support')
+  course = Plc::Course.find_by(name: 'All The PLC Things')
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
 end

@@ -787,8 +787,8 @@ Bounce.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<BounceVisualizationColumn/>}
-          onMount={onMount}
+        visualizationColumn={<BounceVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

@@ -44,7 +44,7 @@ var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 var experiments = require('../experiments');
-
+var InputPrompt = require('../templates/InputPrompt');
 var studioCell = require('./cell');
 
 // tests don't have svgelement
@@ -618,7 +618,7 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
-      var distThisMove = Math.min(cmd.opts.queuedDistance,
+      var distThisMove = Math.min(cmd.opts.queuedDistance || Infinity,
                                   Studio.sprite[cmd.opts.spriteIndex].speed);
       var moveDirection = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
       totalDelta.x += distThisMove * moveDirection.x;
@@ -1065,6 +1065,12 @@ Studio.onTick = function () {
     Studio.executeQueue('when-up');
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
+
+    // Run any callbacks from "ask" blocks. These get queued after the user
+    // provides input.
+    for (let i = 0; i < Studio.askCallbackIndex; i++) {
+      Studio.executeQueue(`askCallback${i}`);
+    }
 
     updateItems();
 
@@ -2007,8 +2013,8 @@ Studio.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={onMount}
+        visualizationColumn={visualizationColumn}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -2096,9 +2102,10 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.perExecutionTimeouts.forEach(function (timeout) {
     clearTimeout(timeout);
   });
-  clearInterval(Studio.tickIntervalId);
+  Studio.pauseExecution();
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
+  Studio.askCallbackIndex = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -2129,6 +2136,7 @@ function getDefaultMapName() {
 Studio.reset = function (first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.hideInputPrompt();
   Studio.gameState = Studio.GameStates.WAITING;
 
   resetItemOrProjectileList(Studio.projectiles);
@@ -2957,6 +2965,22 @@ Studio.execute = function () {
   $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
+  Studio.resumeExecution();
+};
+
+/**
+ * Pause calling `Studio.onTick`.
+ */
+Studio.pauseExecution = function () {
+  Studio.paused = true;
+  window.clearInterval(Studio.tickIntervalId);
+};
+
+/**
+ * Resume calling `Studio.onTick`.
+ */
+Studio.resumeExecution = function () {
+  Studio.paused = false;
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
@@ -3672,7 +3696,7 @@ Studio.queueCmd = function (id, name, opts) {
 
 Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (Studio.yieldExecutionTicks > 0) {
+    if (Studio.paused || Studio.yieldExecutionTicks > 0) {
       return;
     }
     if (handler.name === name && handler.cmdQueue.length) {
@@ -3683,7 +3707,7 @@ Studio.executeQueue = function (name, oneOnly) {
         } else {
           break;
         }
-        if (Studio.yieldExecutionTicks > 0) {
+        if (Studio.paused || Studio.yieldExecutionTicks > 0) {
           break;
         }
       }
@@ -3861,6 +3885,13 @@ Studio.callCmd = function (cmd) {
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
+      break;
+    case 'askForInput':
+      studioApp.highlight(cmd.id);
+      if (Studio.paused) {
+        return false;
+      }
+      Studio.askForInput(cmd.opts.question, cmd.opts.callback);
       break;
   }
   return true;
@@ -4779,6 +4810,55 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
   return foundCmd;
 };
 
+/**
+ * Pause execution and display a prompt for user input. When the user presses
+ * enter or clicks "Submit", resume execution.
+ * @param question
+ * @param callback
+ */
+Studio.askForInput = function (question, callback) {
+  Studio.pauseExecution();
+
+  const viz = document.getElementById('visualization');
+  const target = document.createElement('div');
+  Object.assign(target.style, {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '400px',
+    height: '400px',
+  });
+  viz.appendChild(target);
+  studioApp.resizeVisualization();
+
+  Studio.inputPromptElement = target;
+
+  function onInputReceived(value) {
+    Studio.resumeExecution();
+    Studio.hideInputPrompt();
+
+    let handlerName = `askCallback${Studio.askCallbackIndex}`;
+    Studio.askCallbackIndex++;
+    registerEventHandler(Studio.eventHandlers, handlerName, callback.bind(null, value || ''));
+    callHandler(handlerName);
+  }
+
+  ReactDOM.render(
+    <InputPrompt question={question} onInputReceived={onInputReceived} />,
+    target
+  );
+};
+
+Studio.hideInputPrompt = function () {
+  const target = Studio.inputPromptElement;
+
+  if (target) {
+    ReactDOM.unmountComponentAtNode(target);
+    target.parentNode.removeChild(target);
+    Studio.inputPromptElement = null;
+  }
+};
+
 Studio.hideSpeechBubble = function (opts) {
   var speechBubble = document.getElementById('speechBubble' + opts.spriteIndex);
   speechBubble.setAttribute('visibility', 'hidden');
@@ -4948,83 +5028,6 @@ Studio.makeProjectile = function (opts) {
   }
 };
 
-//
-// xFromPosition: return left-most point of sprite given position constant
-//
-
-var xFromPosition = function (sprite, position) {
-  switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMOUTLEFT:
-      return -sprite.width;
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
-      return 0;
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.TOPCENTER:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.OUTBOTTOMCENTER:
-      return (Studio.MAZE_WIDTH - sprite.width) / 2;
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMRIGHT:
-      return Studio.MAZE_WIDTH - sprite.width;
-    case constants.Position.OUTTOPOUTRIGHT:
-    case constants.Position.TOPOUTRIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
-      return Studio.MAZE_WIDTH;
-  }
-};
-
-//
-// yFromPosition: return top-most point of sprite given position constant
-//
-
-var yFromPosition = function (sprite, position) {
-  switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.OUTTOPOUTRIGHT:
-      return -sprite.height;
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.TOPCENTER:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.TOPOUTRIGHT:
-      return 0;
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
-      return (Studio.MAZE_HEIGHT - sprite.height) / 2;
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
-      return Studio.MAZE_HEIGHT - sprite.height;
-    case constants.Position.OUTBOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
-    case constants.Position.OUTBOTTOMCENTER:
-    case constants.Position.OUTBOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
-      return Studio.MAZE_HEIGHT;
-  }
-};
 
 /**
  * Actors have a class name in the form "0". Returns true if this class is
@@ -5146,8 +5149,8 @@ Studio.setSpritePosition = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   if (opts.value) {
     // fill in .x and .y from the constants.Position value in opts.value
-    opts.x = xFromPosition(sprite, opts.value);
-    opts.y = yFromPosition(sprite, opts.value);
+    opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
+    opts.y = utils.yFromPosition(opts.value, Studio.MAZE_HEIGHT, sprite.height);
   }
   var samePosition = (sprite.x === opts.x && sprite.y === opts.y);
 
@@ -5184,8 +5187,8 @@ Studio.addGoal = function (opts) {
       height : utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT),
     };
     // fill in .x and .y from the constants.Position value in opts.value
-    opts.x = xFromPosition(sprite, opts.value);
-    opts.y = yFromPosition(sprite, opts.value);
+    opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
+    opts.y = utils.yFromPosition(opts.value, Studio.MAZE_HEIGHT, sprite.height);
   }
 
   var goal = {

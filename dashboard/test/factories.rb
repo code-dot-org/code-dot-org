@@ -200,7 +200,19 @@ FactoryGirl.define do
 
   factory :multi, :parent => Level, :class => Applab do
     game {create(:game, app: "multi")}
-    properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
+    properties {
+      {
+        question: 'question text',
+        answers: [
+          {text: 'answer1', correct: true},
+          {text: 'answer2', correct: false},
+          {text: 'answer3', correct: false},
+          {text: 'answer4', correct: false}],
+        questions: [
+          {text: 'question text'}],
+        options: {hide_submit: false}
+      }
+    }
   end
 
   factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do
@@ -238,7 +250,7 @@ FactoryGirl.define do
   end
 
   factory :script do
-    sequence(:name) { |n| "bogus_script_#{n}" }
+    sequence(:name) { |n| "bogus-script-#{n}" }
   end
 
   factory :script_level do

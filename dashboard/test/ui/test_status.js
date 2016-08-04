@@ -330,7 +330,7 @@ function toggleHideSucceeded() {
   hideSucceeded = !hideSucceeded;
   hideSucceededButton.textContent = `${hideSucceeded ? 'Show' : 'Hide'} Succeeded`;
   let sheet = document.styleSheets[document.styleSheets.length - 1];
-  let display = hideSucceeded ? 'none' : 'inherit';
+  let display = hideSucceeded ? 'none' : 'table-row';
   let rule = _.findLast(sheet.rules, rule => rule.selectorText === '.SUCCEEDED');
   if (rule) {
     rule.style.display = display;

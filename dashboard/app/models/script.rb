@@ -35,7 +35,17 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
-  validates :name, presence: true, uniqueness: { case_sensitive: false}
+
+  attr_accessor :skip_name_format_validation
+
+  validates :name,
+    presence: true,
+    uniqueness: {case_sensitive: false},
+    format: {
+      unless: :skip_name_format_validation,
+      with: /\A[a-z0-9\-]+\z/,
+      message: 'can only contain lowercase letters, numbers and dashes'
+    }
 
   include SerializedProperties
 
@@ -301,10 +311,11 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
+    name == 'edit-code'
   end
 
-  def is_k1?
+  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
+  def is_k1?  # rubocop:disable PredicateName
     name == 'course1'
   end
 
@@ -332,10 +343,6 @@ class Script < ActiveRecord::Base
 
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
-  def show_report_bug_link?
-    beta? || k5_course?
   end
 
   def has_lesson_plan?
@@ -379,7 +386,6 @@ class Script < ActiveRecord::Base
         scripts_to_add << [{
           id: script_data[:id],
           name: name,
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
@@ -410,6 +416,7 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       stage_flex_category = nil
+      stage_lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
@@ -423,6 +430,7 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         stage_flex_category = raw_level.delete(:stage_flex_category)
+        stage_lockable = raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
@@ -483,7 +491,7 @@ class Script < ActiveRecord::Base
             script: script
           )
 
-        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id
@@ -532,7 +540,7 @@ class Script < ActiveRecord::Base
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
-    script.update!(options)
+    script.update!(options.merge(skip_name_format_validation: true))
     script
   end
 
@@ -542,7 +550,6 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
         Script.add_script({
           name: script_params[:name],
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
@@ -630,8 +637,6 @@ class Script < ActiveRecord::Base
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
-
-    summary[:trophies] = Concept.summarize_all if trophies
 
     summary
   end

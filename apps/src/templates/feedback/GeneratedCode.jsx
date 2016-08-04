@@ -12,7 +12,9 @@ var GeneratedCode = React.createClass({
   render: function () {
     return (<div className="generated-code-container">
       <p className="generatedCodeMessage" dangerouslySetInnerHTML={{__html: this.props.message}} />
-      <pre className="generatedCode" dangerouslySetInnerHTML={{ __html: this.props.code }} />
+
+      {/* code container should be LTR even in RTL mode */}
+      <pre className="generatedCode" dir="ltr" dangerouslySetInnerHTML={{ __html: this.props.code }} />
     </div>);
   }
 });
