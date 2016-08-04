@@ -1,12 +1,10 @@
 name 'ECSPD What Is Problem Solving'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Teaching Strategies > The Problem Solving Process
+# Teaching Strategies > The Problem Solving Process
 
 Unit 2 is all about problem solving. The ECS version 5 curriculum suggests you teach students an explicit problem solving process, which has four main steps:
 
-### PROBLEM SOLVING STEPS
+## Problem Solving Steps
 
 1. **Understand the problem** - read or listen to the problem statement.
 
@@ -17,8 +15,6 @@ Unit 2 is all about problem solving. The ECS version 5 curriculum suggests you t
 4. **Review and reflect** - once the problem is solved, reflect on the plan that was used.
 
 Click "Continue" to move on.
-
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

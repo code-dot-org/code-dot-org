@@ -1,61 +1,20 @@
 name 'ECSPD Unit 2 Lesson Overview'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-<style>
-tr.finished td:first-child:before {
-    color: #ffa400;
-    content: ' *';
-    display:inline;
-    font-size: 150%;
-}
-
-tr td:first-child {
-  width: 40px;
-}
-
-tr { 
-  border: dotted;
-  border-width: 1px 0;
-}
-
-tr:last-child {
-  border-bottom: none;
-}
-</style>
-
-## Introduction to Unit 2 > Prioritizing Lessons
+# Introduction to Unit 2 > Prioritizing Lessons
 
 Please review this high-level summary in the lessons in Unit 2. If you like, you can make a list in your ECS journal of the lessons you are excited to teach, those you have concerns about, and those you plan to skip. This list will come in handy later as you review the stages and levels that follow.
 
-<br/><br/>
-<table cellpadding="5">
-<tbody>
-<tr><th>Day</th><th>Topic</th><th>Description</th></tr>
-
-<tr><td>1-2</td><td>Solving Community Problems with Data</td><td>Introduce data collection and problem solving.</td></tr>
-
-<tr><td>3</td><td>Intro To Problem Solving: Candy Bar Activity</td><td>Introduce the four steps of the problem solving process.</td></tr>
-
-<tr ><td>4-6</td><td>Strategies in Problem Solving: Handshake Activity</td><td>Apply the problem solving process. Use different strategies to plan and carry out the plan to solve several problems..</td></tr>
-
-<tr class="finished"><td>7-9</td><td>Problem Solving:Cornrow Curves</td><td>Reinforce the four steps of the problem solving process.</td></tr>
-
-<tr class="finished"><td>10-12</td><td>Binary Number Systems</td><td>Count in the binary number system. Convert binary and decimal numbers in the context of topics that are important to computer science.</td></tr>
-
-<tr class="finished"><td>13-14</td><td>Linear and Binary Search: Tower Building Activity</td><td>Introduce the linear and binary search algorithms</td></tr>
-
-<tr class="finished"><td>15-16</td><td>Sorting Algorithms</td><td>Explore sorted and unsorted lists and various sorting algorithms.</td></tr>
-
-<tr class="finished"><td>17</td><td>Minimal Spanning Trees: Muddy City</td><td>Introduce minimal spanning trees and how graphs can be used to help solve problems.</td></tr>
-
-<tr><td>18-21</td><td>Final Project</td><td>Final projects and presentations</td></tr>
-
-</tbody>
-</table>
-
-<br/>
+| Day | Topic | Description |
+| --- | --- | --- |
+| 1-2 | Solving Community Problems with Data | Introduce data collection and problem solving. |
+| 3 | Intro To Problem Solving: Candy Bar Activity | Introduce the four steps of the problem solving process.|
+| 4-6 | Strategies in Problem Solving: Handshake Activity | Apply the problem solving process. Use different strategies to plan and carry out the plan to solve several problems.. |
+| 7-9 | Problem Solving:Cornrow Curves | Reinforce the four steps of the problem solving process. |
+| 10-12 | Binary Number Systems | Count in the binary number system. Convert binary and decimal numbers in the context of topics that are important to computer science. |
+| 13-14 | Linear and Binary Search: Tower Building Activity | Introduce the linear and binary search algorithms |
+| 15-16 | Sorting Algorithms | Explore sorted and unsorted lists and various sorting algorithms. |
+| 17 | Minimal Spanning Trees: Muddy City | Introduce minimal spanning trees and how graphs can be used to help solve problems.|
+| 18-21 | Final Project | Final projects and presentations |
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
