@@ -87,7 +87,6 @@ class UserLevel < ActiveRecord::Base
     end
   end
 
-  # note: this puts us in a position where we're locked but not submitted
   def has_autolocked?
     (self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago)
   end

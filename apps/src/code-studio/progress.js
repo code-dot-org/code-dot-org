@@ -106,7 +106,6 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * Query the server for progress of all students in section, and render this to
  * our teacher panel.
  */
-// TODO - rename since this is more than teacher panel (it's lockable stuff everywhere)
 function renderTeacherPanel(store, scriptId) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
