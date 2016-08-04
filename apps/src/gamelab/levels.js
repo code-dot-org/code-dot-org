@@ -80,7 +80,7 @@ levels.custom = utils.extend(levels.sandbox, {
     // Sprites
     "var sprite = createSprite": null,
     "createEdgeSprites": null,
-    "setSpeed": null,
+    "setSpeedAndDirection": null,
     "getDirection": null,
     "getSpeed": null,
     "isTouching": null,
@@ -148,7 +148,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "setRotationEach": null,
     "setRotationSpeedEach": null,
     "setScaleEach": null,
-    "setSpeedEach": null,
+    "setSpeedAndDirectionEach": null,
     "setVelocityEach": null,
     "setVelocityXEach": null,
     "setVelocityYEach": null,
