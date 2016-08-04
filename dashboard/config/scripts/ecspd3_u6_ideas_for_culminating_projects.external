@@ -1,17 +1,15 @@
 name 'ECSPD3-u6 ideas for culminating projects' 
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"> 
- 
-## Alternative Ideas for Unit 6 > Ideas for Culminating Projects, Portfolios, Etc. 
- 
-<br><br> 
-#### Concepts Covered  
-End of year projects, portfolios, articles or videos for reflection.  
- 
-#### Overview 
+# Alternative Ideas for Unit 6 > Ideas for Culminating Projects, Portfolios, Etc.
+
+## Concepts Covered
+
+End of year projects, portfolios, articles or videos for reflection.
+
+## Overview
+
 As you are considering an end of year final project, portfolio or reflection piece that would demonstrate students understanding of the curriculum, you will want to consider a project that brings in the three strands of ECS, the computational thinking practices, and the process of problem solving.
-<br><br>
 
 Let's take a look at some possible curriculum connections to the units.
 Unit 1 - Explore ethical issues relating to technology, privacy or security. 
@@ -19,15 +17,13 @@ Unit 2 - Use the problem solving process to address a concern in the school or c
 Unit 3 - HTML: Build a website for another teacher, local company.
 Unit 4 - Create a review game, digital story, interview.
 Unit 5 - Conduct market research: collect data on an issue and tell a story about your data.
-<br><br>
 
 Regardless the project, you need to consider the planning aspect. This will help your students articulate what they want to do, break it down into a manageable task and give you a chance to give feedback and facilitate the conversation.
-<br><br>
 
-Here is a Project Design Rubric to help give you some guidance -
- <a href="http://bie.org/object/document/project_design_rubric"target=_blank>Design Rubric</a>  
+Here is a Project Design Rubric to help give you some guidance - <a href="http://bie.org/object/document/project_design_rubric"target=_blank>Design Rubric</a>  
 
-##### Create a Project
+### Create a Project
+
 You could use the framework from one of the following challenges that happen across the country as a start for your final project:
 
 - <a href="http://www.technovationchallenge.org/2016-curriculum/"target=_blank>Technovation Challenge</a>
@@ -47,7 +43,8 @@ A great resource that was recently shared on the CS10K Community by Leslie Aaron
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/l5Tw0PGcyN0" frameborder="0" allowfullscreen></iframe>	
 
-##### Portfolio
+### Portfolio
+
 Have students create portfolio using PowerPoint or web site, where the students have a slide or pages dedicated to one unit or all units on that slide show artifacts and a description of what they learned and why they chose that one.
 
 - <a href="http://tasteofcomputing.cdm.depaul.edu/images/PDF/ECS_ToC%20Final%20R1.pdf"target=_blank>A Taste of Computing P.37</a>
@@ -59,8 +56,6 @@ Have students create portfolio using PowerPoint or web site, where the students 
 	- <a href="https://docs.google.com/document/d/1zmN9u0qbuJGXSOLbjDawDpDLaoSDRywkqX-6vXTCJkU/edit"target=_blank>Propose and Innovation</a>
 
 Click “Continue” below to learn about the next lesson.  
- 
-<br/><br/> 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -497,11 +497,11 @@ class User < ActiveRecord::Base
 
     script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
-      is_unpassed_progression_level(script_level, user_level)
+      unpassed_progression_level?(script_level, user_level)
     end
   end
 
-  def is_unpassed_progression_level(script_level, user_level)
+  def unpassed_progression_level?(script_level, user_level)
     is_passed = (user_level && user_level.passing?)
     script_level.valid_progression_level? && !is_passed
   end
@@ -528,7 +528,8 @@ class User < ActiveRecord::Base
 
   def authorized_teacher?
     # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
-    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?))
+    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
+      permission?(UserPermission::LEVELBUILDER)
   end
 
   def student_of_authorized_teacher?
