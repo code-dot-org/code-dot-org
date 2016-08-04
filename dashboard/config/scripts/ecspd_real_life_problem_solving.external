@@ -1,11 +1,9 @@
 name 'ECSPD Real Life Problem Solving'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Teaching Strategies > Teaching the Problem Solving Process
 
-## Teaching Strategies > Teaching the Problem Solving Process
-
-### What’s the problem with problem solving?
+## What’s the problem with problem solving?
 
 Often in school students have seen problem solving processes such as these in very scripted settings. They don't see the problem presented as relevant to their life. One thing that will make this unit more engaging to you and your students is if you can choose problems that are relevant to students lives but also get at the problem solving process. 
 
@@ -14,9 +12,8 @@ Often in school students have seen problem solving processes such as these in ve
 Please read other posts and share your thoughts on the forum.
 
 <a href="http://forum.code.org/t/pd-discussion-topic-real-world-problem-solving/2085" target="_blank"><button>Post in the forums</button></a>
-<br><br>
-After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

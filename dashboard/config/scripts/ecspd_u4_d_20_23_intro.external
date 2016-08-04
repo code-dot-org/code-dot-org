@@ -1,25 +1,23 @@
 name 'ECSPD U4 D 20-23 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 20-23 Scratch -- Timing Game
+# Day 20-23 Scratch &mdash; Timing Game
 
 First, let's explore the thirteenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 176-177.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=176)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will create their own timing game and participate in an Arcade Day where they will have the opportunity to share their game with their peers.
 
-#### Common Difficulties
+## Common Difficulties
 
 Students may want to create an elaborate game that you might not know how to help them with.  Remember that you may want to review the problem solving process, writing a storyboard for their game and then having them write the algorithm for their program to get started. You can also have them get help from other students.
-<br><br>
+
 It would be best to have students start with at basic idea or prototype for their game and then work on adding extensions as they can see success and time allows.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -37,6 +35,6 @@ It would be best to have students start with at basic idea or prototype for thei
 - [http://scratch.mit.edu](http://scratch.mit.edu/)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
