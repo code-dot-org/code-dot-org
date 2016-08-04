@@ -70,12 +70,7 @@ export default function reducer(state = initialState, action) {
     const students = sections[selectedSection].stages[lockDialogStageId];
     return Object.assign({}, state, {
       lockDialogStageId,
-      lockStatus: students.map(student => ({
-        userLevelId: student.user_level_id,
-        name: student.name,
-        lockStatus: student.locked ? LockStatus.Locked : (
-          student.view_answers ? LockStatus.Readonly : LockStatus.Editable)
-      }))
+      lockStatus: lockStatusForStage(state, action.stageId)
     });
   }
 
@@ -94,9 +89,9 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === FINISH_SAVE) {
-    const { sections, selectedSection, lockDialogStageId } = state;
-    const nextLockStatus = action.lockStatus;
-    const nextStage = _.cloneDeep(sections[selectedSection].stages[lockDialogStageId]);
+    const { sections, selectedSection } = state;
+    const { lockStatus: nextLockStatus, stageId } = action;
+    const nextStage = _.cloneDeep(sections[selectedSection].stages[stageId]);
 
     // Update locked/view_answers in stages based on the new lockStatus provided
     // by our dialog.
@@ -112,7 +107,7 @@ export default function reducer(state = initialState, action) {
     });
 
     const nextState = _.cloneDeep(state);
-    nextState.sections[selectedSection].stages[lockDialogStageId] = nextStage;
+    nextState.sections[selectedSection].stages[stageId] = nextStage;
     nextState.lockStatus = nextLockStatus;
     nextState.unlockedStageIds = unlockedStages(nextState.sections[selectedSection]);
     return nextState;
@@ -148,15 +143,21 @@ export const openLockDialog = stageId => ({
   stageId
 });
 
-export const beginSave = () => ({ type: BEGIN_SAVE });
-export const finishSave = (newLockStatus) => ({
+const beginSave = () => ({ type: BEGIN_SAVE });
+const finishSave = (newLockStatus, stageId) => ({
   type: FINISH_SAVE,
-  lockStatus: newLockStatus
+  lockStatus: newLockStatus,
+  stageId
 });
 
-export const saveLockDialog = (newLockStatus) => {
+/**
+ * Action asynchronously dispatches a set of actions around saving our
+ * lock status.
+ */
+const performSave = (newLockStatus, stageId) => {
   return (dispatch, getState) => {
     const oldLockStatus = getState().stageLock.lockStatus;
+
     const saveData = newLockStatus.filter((item, index) => {
       // Only need to save items that changed
       return !_.isEqual(item, oldLockStatus[index]);
@@ -179,13 +180,30 @@ export const saveLockDialog = (newLockStatus) => {
       contentType: 'application/json',
       data: JSON.stringify({updates: saveData})
     }).done(() => {
-      dispatch(finishSave(newLockStatus));
+      dispatch(finishSave(newLockStatus, stageId));
       dispatch(closeLockDialog());
     })
     .fail(err => {
       console.error(err);
       dispatch(closeLockDialog());
     });
+  };
+};
+
+export const saveLockDialog = (newLockStatus) => {
+  return (dispatch, getState) => {
+    const stageId = getState().stageLock.lockDialogStageId;
+    dispatch(performSave(newLockStatus, stageId));
+  };
+};
+
+export const lockStage = (stageId) => {
+  return (dispatch, getState) => {
+    const oldLockStatus = lockStatusForStage(getState().stageLock, stageId);
+    const newLockStatus = oldLockStatus.map(student => Object.assign({}, student, {
+      lockStatus: LockStatus.Locked
+    }));
+    dispatch(performSave(newLockStatus, stageId));
   };
 };
 
@@ -207,4 +225,16 @@ const unlockedStages = (section) => {
   return _.toPairs(section.stages).filter(([stageId, students]) => {
     return students.some(student => !student.locked);
   }).map(([stageId, stage]) => parseInt(stageId, 10));
+};
+
+const lockStatusForStage = (state, stageId) => {
+  const { sections, selectedSection } = state;
+
+  const students = sections[selectedSection].stages[stageId];
+  return students.map(student => ({
+    userLevelId: student.user_level_id,
+    name: student.name,
+    lockStatus: student.locked ? LockStatus.Locked : (
+      student.view_answers ? LockStatus.Readonly : LockStatus.Editable)
+  }));
 };

@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';
 import commonMsg from '@cdo/locale';
-import { openLockDialog, closeLockDialog } from '../../stageLockRedux';
+import { openLockDialog, closeLockDialog, lockStage } from '../../stageLockRedux';
 
 const styles = {
   lockSettingsText: {
@@ -31,10 +31,15 @@ const StageLock = React.createClass({
     stageId: React.PropTypes.number.isRequired,
     openLockDialog: React.PropTypes.func.isRequired,
     closeLockDialog: React.PropTypes.func.isRequired,
+    lockStage: React.PropTypes.func.isRequired
   },
 
   openLockDialog() {
     this.props.openLockDialog(this.props.stageId);
+  },
+
+  lockStage() {
+    this.props.lockStage(this.props.stageId);
   },
 
   render() {
@@ -51,7 +56,7 @@ const StageLock = React.createClass({
         </button>
         {this.props.unlocked &&
           <span>
-            <button style={progressStyles.orangeButton}>
+            <button style={progressStyles.orangeButton} onClick={this.lockStage}>
               {commonMsg.lockStage()}
             </button>
             <span style={styles.warning}>
@@ -75,5 +80,8 @@ export default connect(() => ({
   },
   closeLockDialog() {
     dispatch(closeLockDialog());
+  },
+  lockStage(stageId) {
+    dispatch(lockStage(stageId));
   }
 }))(Radium(StageLock));
