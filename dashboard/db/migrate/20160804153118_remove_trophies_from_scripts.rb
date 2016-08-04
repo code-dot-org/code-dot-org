@@ -6,6 +6,6 @@ class RemoveTrophiesFromScripts < ActiveRecord::Migration
       end
     end
 
-    remove_column :scripts, :trophies, :boolean
+    remove_column :scripts, :trophies, :boolean, null: false, default: false
   end
 end
