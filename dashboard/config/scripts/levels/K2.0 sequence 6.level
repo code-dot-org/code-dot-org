@@ -12,7 +12,7 @@
     "step_mode": "1",
     "is_k1": "true",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "5",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,6 +27,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nFigure out what is missing and then add blocks to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,

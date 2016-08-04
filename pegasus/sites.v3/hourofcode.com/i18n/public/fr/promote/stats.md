@@ -6,16 +6,16 @@ nav: promote_nav
 
 ---
 
-
 # Présentation et statistiques utiles
 
 ## Utiliser ce court texte de présentation dans vos newsletters
 
 ### Demandez plus d'informatique dans votre école. Commencez avec Une Heure de Code
 
-Les ordinateurs sont partout, mais les écoles enseignent moins l'informatique qu'il y a 10 ans. La bonne nouvelle, c'est nous sommes sur le point de changer cela. Si vous avez entendu parler de l'évènement [Une Heures de Code](<%= resolve_url('/') %>) l'année dernière, vous savez peut-être qu'il a marqué l'histoire. Dès la première édition d'Une Heure de Code, 15 millions d'étudiants ont essayé l'informatique et la programmation. L'an dernier, ce nombre a augmenté et est passé à 60 millions d'élèves ! [Une Heure de Code](<%= resolve_url('/') %>) est une introduction d'une heure à l'informatique. Elle est conçue pour démystifier le code et montrer que n'importe qui peut en apprendre les rudiments. [Inscrivez-vous](<%= resolve_url('/') %>) pour organiser Une heure de Code <%= campaign_date('full') %> au cours de la semaine de l'éducation des sciences informatiques. Pour ajoutez votre école à la carte des évènements, rendez-vous sur https://hourofcode.com/<%= @country %>
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! La bonne nouvelle, c'est nous sommes sur le point de changer cela. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+
+The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 ## Infographies
 
 <%= view :stats_carousel %>
-

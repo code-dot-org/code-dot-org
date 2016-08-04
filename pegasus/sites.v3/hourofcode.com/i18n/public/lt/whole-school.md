@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
-# Get your whole school to participate
+# Paskatink savo mokyklą dalyvauti
 
 Information about getting whole schools to participate in the Hour of Code will go here.
-

@@ -15,9 +15,9 @@ namespace :test do
     TestRunUtils.run_apps_tests
   end
 
-  desc 'Runs code studio tests.'
-  task :code_studio do
-    TestRunUtils.run_code_studio_tests
+  desc 'Run a single eyes test locally using chromedriver.'
+  task :ui do
+    TestRunUtils.run_local_ui_test
   end
 
   desc 'Runs blockly-core tests.'
@@ -83,11 +83,11 @@ namespace :test do
       end
     end
 
-    task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
+    task all: [:apps, :blockly_core, :dashboard, :pegasus, :shared]
   end
 
   task changed: ['changed:all']
 
-  task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
+  task all: [:apps, :blockly_core, :dashboard, :pegasus, :shared]
 end
 task test: ['test:changed']

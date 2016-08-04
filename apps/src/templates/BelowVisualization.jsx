@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 var React = require('react');
 import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
@@ -43,14 +44,14 @@ const BelowVisualization = React.createClass({
       <ProtectedStatefulDiv id="belowVisualization">
         {!instructionsInTopPane &&
           <div
-              id="bubble"
-              className="clearfix"
-              style={commonStyles.bubble}
-              onClick={this.props.showInstructionsDialog}
+            id="bubble"
+            className="clearfix"
+            style={commonStyles.bubble}
+            onClick={this.props.showInstructionsDialog}
           >
             <table
-                id="prompt-table"
-                className={this.props.aniGifURL ? 'with-ani-gif' : undefined}
+              id="prompt-table"
+              className={this.props.aniGifURL ? 'with-ani-gif' : undefined}
             >
               <tbody>
                 <tr>
@@ -61,13 +62,13 @@ const BelowVisualization = React.createClass({
                   }
                   <td id="prompt-cell">
                     <p
-                        id="prompt"
-                        dangerouslySetInnerHTML={{ __html: this.props.shortInstructions}}
+                      id="prompt"
+                      dangerouslySetInnerHTML={{ __html: this.props.shortInstructions}}
                     />
                     {this.props.shortInstructions2 &&
                       <p
-                          id="prompt2"
-                          dangerouslySetInnerHTML={{ __html: this.props.shortInstructions2}}
+                        id="prompt2"
+                        dangerouslySetInnerHTML={{ __html: this.props.shortInstructions2}}
                       />
                     }
                   </td>

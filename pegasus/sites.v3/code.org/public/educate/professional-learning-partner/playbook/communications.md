@@ -8,12 +8,21 @@ nav: plp_playbook_nav
 
 ## Table of contents
 
+- [Weekly Newsletter Archive](#archive)
 - [Communication to teachers from Code.org](#code.org)
 - [Workshop communications](#workshop)
 - [Email templates](#templates)
 - [Tips for writing an awesome email](#tips)
 - [Branding guidelines](#branding)
 
+________________
+<a id="archive"></a>
+<br/>
+<br/>
+
+## [Weekly Newsletter Archive](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing)
+
+<br/>
 ________________
 <a id="code.org"></a>
 <br/>

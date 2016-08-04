@@ -1,0 +1,8 @@
+name 'pre-assessment survey q5'
+question 'I like my schoolwork.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

@@ -4,7 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Partnerët Latino-Amerikan
@@ -26,6 +25,22 @@ title: <%= hoc_s(:title_partners) %>
 # Partnerët Australian
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'cn' %>
+
+# China Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
+
+<% end %>
+
+<% if @country == 'fr' %>
+
+# France Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
 <% end %>
 
@@ -58,6 +73,14 @@ title: <%= hoc_s(:title_partners) %>
 # Japan Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
+<% if @country == 'nl' %>
+
+# Netherlands Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
 <% end %>
 
@@ -109,7 +132,7 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Partnerët e infrastrukturës dhe mjetet
+# Partnerët e infrastrukturës dhe mjeteve
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
@@ -118,4 +141,3 @@ title: <%= hoc_s(:title_partners) %>
 # Partnerët Plotësues
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-

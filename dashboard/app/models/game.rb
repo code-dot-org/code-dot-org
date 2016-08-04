@@ -141,6 +141,10 @@ class Game < ActiveRecord::Base
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB
   end
 
+  def sharing_filtered?
+    app == STUDIO
+  end
+
   def flappy?
     app == FLAPPY
   end
@@ -164,6 +168,10 @@ class Game < ActiveRecord::Base
 
   def has_i18n?
     !(app == NETSIM || app == APPLAB || app == GAMELAB)
+  end
+
+  def use_firebase_for_new_project?
+    app == APPLAB && CDO.use_firebase_for_new_applab_projects
   end
 
   def self.setup

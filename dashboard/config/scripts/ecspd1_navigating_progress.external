@@ -4,7 +4,7 @@ description 'Navigating and Progress'
 css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 #### How To Navigate the Online Professional Learning Program and Check Your Progress
 <br/>

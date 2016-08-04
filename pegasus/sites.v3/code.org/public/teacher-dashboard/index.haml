@@ -127,6 +127,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
          assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
+         surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
       });
     }]).config(['$httpProvider', function($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -733,45 +734,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
-    $scope.section = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    $scope.tab = 'assessments';
-
-    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
-    // error handling
-    $scope.genericError = function(result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-    $scope.section.$promise.catch($scope.genericError);
-    $scope.sections.$promise.catch($scope.genericError);
-    $scope.assessments.$promise.catch($scope.genericError);
-
-    // fill in the course dropdown with the section's default course
-    $scope.section.$promise.then(
-      function(section) {
-        $scope.course_id = section.course.id;
-      }
-    );
-
-    // the ng-select in the nav compares by reference not by value, so we can't just set
-    // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
-
-    $scope.assessmentsLoaded = false;
-    $scope.stages = [];
-
-    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
-
-    // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.assessments.$promise]).then(function(){
-      $scope.assessmentsLoaded = true;
-      $scope.findStages();
-    });
-
+    // Some strings.
     var submission_list = {
       submitted:   '#{I18n.t('dashboard_submission_submitted')}',
       in_progress: '#{I18n.t('dashboard_submission_in_progress')}',
@@ -784,55 +747,213 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
     };
 
+    // Initial requests.
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+    $scope.tab = 'assessments';
+
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+
+    $scope.assessmentsLoaded = false;
+    $scope.assessmentStages = [];
+    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
+
+    $scope.surveysLoaded = false;
+    $scope.surveyStages = [];
+    $scope.surveys = sectionsService.surveys({id: $routeParams.id});
+
+    // Error handling.
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
+    $scope.assessments.$promise.catch($scope.genericError);
+
+    // Fill in the course dropdown with the section's default course.
+    $scope.section.$promise.then(
+      function(section) {
+        $scope.course_id = section.course.id;
+      }
+    );
+
+    // The ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(
+      function( sections ){
+        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      }
+    );
+
+    // Wait until we have initial section, assessment, and survey data.
+    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function(){
+      $scope.assessmentsLoaded = true;
+      $scope.surveysLoaded = true;
+      $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
+      $scope.assessmentStages = $scope.findStages($scope.assessments);
+      $scope.surveyLevels = $scope.getSurveyData($scope.surveys);
+      $scope.surveyStages = $scope.findStages($scope.surveys);
+    });
+
+    // Re-retrieve assessment and survey data when the script is changed using the dropdown.
     $scope.changeScript = function(scriptId) {
+
+      // Load assessments.
       $scope.assessmentsLoaded = false;
-      $scope.stages = [];
-
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
-
-      $scope.levels = [];
-
       $scope.assessments.$promise.then(function(){
         $scope.assessmentsLoaded = true;
-        $scope.findStages();
+        $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
+        $scope.assessmentStages = $scope.findStages($scope.assessments);
+      });
 
-        $.each($scope.assessments, function(index, assessment) {
-
-          if (assessment.multi_count === 0) {
-            assessment.multi_correct_percent = 0;
-          } else {
-            assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
-          }
-          assessment.status = assessment.submitted ? submission_list.submitted : submission_list.in_progress;
-
-          // Don't show a timestamp for non-submittted assessments.
-          if (!assessment.submitted) {
-            assessment.timestamp = null;
-          }
-
-          // Each LevelGroup's result has a list of the results for the levels in that order.
-          // Because angular's nested iterators are kind of funky when trying to generate a table,
-          // let's just generate a flat list of the level results to go into $scope.
-          $.each(assessment.level_results, function(index, level_result) {
-            var levelResult = {
-              stage: assessment.stage,
-              puzzle: assessment.puzzle,
-              question: index + 1,
-              student: assessment.student,
-              studentResult: level_result.student_result,
-              correct: correctness_list[level_result.correct]
-            };
-            $scope.levels.push(levelResult);
-          });
-        });
+      // Load surveys.
+      $scope.surveysLoaded = false;
+      $scope.surveys = sectionsService.surveys({id: $routeParams.id, script_id: scriptId});
+      $scope.surveys.$promise.then(function() {
+        $scope.surveysLoaded = true;
+        $scope.surveyStages = $scope.findStages($scope.surveys);
+        $scope.surveyLevels = $scope.getSurveyData($scope.surveys);
       });
     };
 
-    $scope.findStages = function() {
-      $scope.stages = $.map($scope.assessments, function(row) {
+    $scope.findStages = function(source) {
+      return $.map(source, function(row) {
         return row.stage;
       }).filter(function(item, i, array) { // uniquify
         return array.indexOf(item) == i;
       });
+    }
+
+    $scope.getAssessmentData = function(assessments) {
+      var results = [];
+
+      $.each(assessments, function(index, assessment) {
+
+        if (assessment.multi_count === 0) {
+          assessment.multi_correct_percent = 0;
+        } else {
+          assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
+        }
+        assessment.status = assessment.submitted ? submission_list.submitted : submission_list.in_progress;
+
+        // Don't show a timestamp for non-submittted assessments.
+        if (!assessment.submitted) {
+          assessment.timestamp = null;
+        }
+
+        // Each LevelGroup's result has a list of the results for the levels in that order.
+        // Because angular's nested iterators are kind of funky when trying to generate a table,
+        // let's just generate a flat list of the level results to go into $scope.
+        $.each(assessment.level_results, function(index, level_result) {
+          var levelResult = {
+            stage: assessment.stage,
+            puzzle: assessment.puzzle,
+            question: index + 1,
+            student: assessment.student,
+            studentResult: level_result.student_result,
+            correct: correctness_list[level_result.correct]
+          };
+          results.push(levelResult);
+        });
+      });
+
+      return results;
+    }
+
+    $scope.getSurveyData = function(surveys) {
+      // The ASCII value of A.  Used for rendering multiple choice captions.
+      var asciiForA = 65;
+
+      var surveyResults = [];
+
+      $.each($scope.surveys, function(surveyIndex, survey) {
+
+        survey.status = survey.submitted ? submission_list.submitted : submission_list.in_progress;
+
+        if (survey.levelgroup_results) {
+
+          // Each LevelGroup's result has a list of the results for the levels in that order.
+          // Because angular's nested iterators are kind of funky when trying to generate a table,
+          // let's just generate a flat list of the level results to go into $scope.
+          $.each(survey.levelgroup_results, function(sublevelIndex, sublevelResults) {
+            var questionText = sublevelResults.question;
+
+            // How many students answered this question?
+            var resultsLength = sublevelResults.results.length;
+
+            if (sublevelResults.type == "free_response") {
+              // Free response: just add all of the responses.
+              $.each(sublevelResults.results, function(sublevelResultIndex, sublevelResult) {
+                // Disambiguate free responses that are unsubmitted and that are empty strings.
+                if (sublevelResult.result === undefined || sublevelResult.result === "") {
+                  sublevelResult.result = null;
+                }
+
+                var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
+                var resultFieldText = sublevelResult.result;
+
+                // Only create separate rows for answers which have a result to show.
+                if (resultFieldText !== null) {
+                  var levelResult = {
+                    stage: survey.stage,
+                    question: parseInt(sublevelIndex) + 1,
+                    questionText: questionFieldText,
+                    resultText: resultFieldText,
+                    count: 1
+                  };
+
+                  surveyResults.push(levelResult);
+                }
+              });
+
+            } else if (sublevelResults.type == "multi") {
+              // Multi: go through each answer and work out how many responses had that answer.
+
+              // Store one result per possible answer.
+              var multiResults = [];
+
+              // First, build a result entry for each possible answer.
+              $.each(sublevelResults.answer_texts, function(answerTextIndex, answerText) {
+                var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
+                var answerFieldText = String.fromCharCode(asciiForA + answerTextIndex) + ". " + answerText;
+
+                var levelResult = {
+                  stage: survey.stage,
+                  question: parseInt(sublevelIndex) + 1,
+                  questionText: questionFieldText,
+                  resultText: answerFieldText,
+                  count: 0,
+                  percent: "0%"
+                };
+
+                multiResults[answerTextIndex] = levelResult;
+              });
+
+              // Second, go through each result and update the count for that result.
+              $.each(sublevelResults.results, function(sublevelResultIndex, sublevelResult) {
+                if ("answer_index" in sublevelResult) {
+                  var answerIndex = sublevelResult.answer_index;
+                  multiResults[answerIndex].count ++;
+                  multiResults[answerIndex].percent = (Math.round(1 / resultsLength * 100)) + "%";
+                }
+              });
+
+              surveyResults = surveyResults.concat(multiResults);
+            }
+          });
+        }
+      });
+
+      // Sort by stage, question.
+      surveyResults.sort(function (a, b) {
+        if (a.stage !== b.stage) {
+          return a.stage - b.stage;
+        } else {
+          return a.question - b.question;
+        }
+      });
+
+      return surveyResults;
     }
   }]);

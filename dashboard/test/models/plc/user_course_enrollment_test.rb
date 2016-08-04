@@ -29,4 +29,13 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     assert_equal nonteacher_users, [student_email]
     assert_empty other_failure_users
   end
+
+  test 'enrolling in a started course creates unit enrollments that are in progress' do
+    @course_unit1.update(started: true)
+
+    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+
+    assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
+    assert_equal [Plc::EnrollmentUnitAssignment::IN_PROGRESS, Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status)
+  end
 end

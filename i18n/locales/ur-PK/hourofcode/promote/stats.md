@@ -4,18 +4,16 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # بلربز اور قابل استعمال شماریات (اسٹیٹس)
 
 ## اس مختصر بلرب کو نیوزلیٹر میں استعمال کریں
 
 ### اپنے اسکول میں کمپیوٹر سائنس کو لائیں۔ آور-آف-کوڈ سے شروعات کریں۔
 
-کمپیوٹر ہر جگہ ہیں لکن بہت کم اسکول دس سال پرانے کمپیوٹر سائنس سے مختلف پڑھاتے ہیں اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ اگر آپ نے گزشتہ سال [آور-آف-کوڈ](%= resolve_url('/') %) کے بارے میں سنا تھا، تو آپ یہ بھی جانتے ہوں گے کہ اس نے تاریخ رقم کر دی تھی۔ اولین آور-آف-کوڈ میں 15 ملین اسٹوڈینٹس نے کمپیوٹر سائنس پر کوشش کی تھی۔ گزشتہ سال، یہ تعداد بڑھ کر 60 ملین اسٹوڈینٹس تک جا پہنچی! آور-آف-کوڈ<0> اس لئے ڈیزائن کیا گیا تاکہ کوڈ کا ابہام ختم کیا جاسکے اور یہ دکھایا جائے کہ کمپیوٹر سائنس کوئی راکٹ سائنس نہیں ہے۔ کوئی بھی بیسکس (بنیادی معلومات) سیکھ سکتا ہے [ سائن اَپ کریں](%= resolve_url('/') %) تاکہ اس پر ایک آور-آف-کوڈ ھوسٹ کرسکیں <%= campaign_date('full') %> کمپیوٹر سائنس ایجوکیشن ویک کے دوران۔ اپنے اسکول کو میپ (نقشہ) پر شامل کرنے کے لیے، https://hourofcode.com/ پر جائیں<%= @country %></p> 
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+
+The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 ## انفوگرافکس
 
 <%= view :stats_carousel %>
-
-<%= view :signup_button %>

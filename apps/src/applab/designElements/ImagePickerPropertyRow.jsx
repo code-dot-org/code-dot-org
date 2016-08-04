@@ -13,7 +13,8 @@ var USER_INPUT_DELAY = 1500;
 var PropertyRow = React.createClass({
   propTypes: {
     initialValue: React.PropTypes.string.isRequired,
-    handleChange: React.PropTypes.func
+    handleChange: React.PropTypes.func,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -67,7 +68,8 @@ var PropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}
-            style={rowStyle.input} />
+            style={rowStyle.input}
+          />
           &nbsp;
           <a onClick={this.handleButtonClick}>
             Choose...

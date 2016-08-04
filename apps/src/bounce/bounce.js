@@ -10,7 +10,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var bounceMsg = require('./locale');
 var skins = require('../skins');
 var tiles = require('./tiles');
@@ -787,8 +787,8 @@ Bounce.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<BounceVisualizationColumn/>}
-          onMount={onMount}
+        visualizationColumn={<BounceVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

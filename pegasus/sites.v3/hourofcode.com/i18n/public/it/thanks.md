@@ -1,34 +1,34 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
+  title: <%= hoc_s(:title_signup_thanks) %>
+  layout: wide
+  nav: how_to_nav
 
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  social:
+    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "og:image:width": 1440
+    "og:image:height": 900
+    "og:url": "http://<%=request.host%>"
 
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
----
+    "twitter:card": player
+    "twitter:site": "@codeorg"
+    "twitter:url": "http://<%=request.host%>"
+    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
 
-Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. Saremo in contatto per i premi, le nuove esercitazioni e altri aggiornamenti interessanti. Cosa puoi fare ora?
+Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Cosa puoi fare ora?
 
 ## 1. Diffondi la notizia
 

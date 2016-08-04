@@ -10,7 +10,7 @@ Throughout Courses 1, 2, and 3, you'll write programs using different characters
 <br/>
 
 <img align="left" src="http://code.org/images/mockup_birds.png" height="200" width="300" hspace="20">
-<img align="left" src="http://staging.code.org/images/pvz.png" height="200" width="300" hspace="20">
+<img align="left" src="//code.org/images/pvz.png" height="200" width="300" hspace="20">
 <br/>
 <br/>
 <br/>
@@ -37,7 +37,7 @@ You'll need to get the angry bird to the pig, and you'll need to get the zombie 
 #### Artist
 <br/>
 
-<img align="left" src="http://staging.code.org/images/artist.png" height="200" width="300" hspace="20">
+<img align="left" src="//code.org/images/artist.png" height="200" width="300" hspace="20">
 
 You have to make the artist draw over the grey lines by moving him around the canvas. He'll draw a line behind him wherever he goes.
 <br/>
@@ -61,7 +61,7 @@ You have to make the artist draw over the grey lines by moving him around the ca
 #### Bee
 <br/>
 
-<img align="left" src="http://staging.code.org/images/bee.png" height="200" width="300" hspace="20">
+<img align="left" src="//code.org/images/bee.png" height="200" width="300" hspace="20">
 
 You'll need to move the bee around to collect all the nectar and make all the honey. The units of nectar and honey needed for each puzzle are written in the lower right-hand corner of each flower or honeycomb.
 <br/>
@@ -85,7 +85,7 @@ You'll need to move the bee around to collect all the nectar and make all the ho
 #### Playlab
 <br/>
 
-<img align="left" src="http://staging.code.org/images/playlab.png" height="200" width="300" hspace="20">
+<img align="left" src="//code.org/images/playlab.png" height="200" width="300" hspace="20">
 
 In Playlab, you'll create games and stories. For the Playlab puzzles, the goals for each puzzle are slightly different, so be sure to read the instructions which are in the pop-up when you first navigate to a puzzle and are also listed under the "Run" button. 
 <br/>
@@ -113,7 +113,7 @@ In Playlab, you'll create games and stories. For the Playlab puzzles, the goals 
 #### Flappy
 <br/>
 
-<img align="left" src="http://staging.code.org/images/flappy.png" height="200" width="300" hspace="20">
+<img align="left" src="//code.org/images/flappy.png" height="200" width="300" hspace="20">
 
 In Flappy, you'll create your very own Flappy bird game. The puzzles leading up to the game creation help you learn pieces of code you'll need for your game. The goals for each puzzle are slightly different, so be sure to read the instructions which are in the pop-up when you first navigate to a puzzle and are also listed under the "Run" button. 
 <br/>
@@ -141,7 +141,7 @@ In Flappy, you'll create your very own Flappy bird game. The puzzles leading up 
 #### Bounce
 <br/>
 
-<img align="left" src="http://staging.code.org/images/bounce.png" height="200" width="300" hspace="20">
+<img align="left" src="//code.org/images/bounce.png" height="200" width="300" hspace="20">
 
 In Bounce, you get to create your own game. The puzzles leading up to the game creation help you learn pieces of code you'll need for your game. The goals for each puzzle are slightly different, so be sure to read the instructions which are in the pop-up when you first navigate to a puzzle and are also listed under the "Run" button. 
 <br/>

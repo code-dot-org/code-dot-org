@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-<%= view :signup_button %>
-
 <% if @country == 'la' %>
 
 # Latin America Partners
@@ -27,6 +25,22 @@ title: <%= hoc_s(:title_partners) %>
 # Australia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'cn' %>
+
+# China Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
+
+<% end %>
+
+<% if @country == 'fr' %>
+
+# France Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
 <% end %>
 
@@ -62,6 +76,14 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'nl' %>
+
+# Netherlands Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
+
+<% end %>
+
 <% if @country == 'nz' %>
 
 # New Zealand Partners
@@ -86,38 +108,36 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Major Kasosyo at mga tagasuporta Corporate
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Major Kasosyo Pang-promosyon
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International na Mga Kasosyo
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Kasosyo sa Tutorial
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Mga kasosyo sa imprastraktura at mga gamit
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Karagdagang Mga Kasosyo
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-
-<%= view :signup_button %>

@@ -12,7 +12,7 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
       # Start with enrollments.
       object.workshop.enrollments.each do |enrollee|
         user = enrollee.resolve_user
-        participants[enrollee.email] = {
+        participants[enrollee.email.downcase] = {
           name: enrollee.name,
           email: enrollee.email,
           enrolled: true,
@@ -25,8 +25,8 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
       # Next, check for teachers in the section who aren't enrolled.
       if object.workshop.section
         object.workshop.section.students.all.each do |section_student|
-          next if participants.include? section_student.email
-          participants[section_student.email] = {
+          next if participants.include? section_student.email.downcase
+          participants[section_student.email.downcase] = {
             name: section_student.name,
             email: section_student.email,
             enrolled: false,

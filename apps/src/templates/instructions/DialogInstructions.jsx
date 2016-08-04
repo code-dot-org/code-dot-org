@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 var processMarkdown = require('marked');
 
 /**
@@ -31,15 +31,15 @@ const DialogInstructions = React.createClass({
     const showHints = !this.props.aniGifOnly;
     return (
       <Instructions
-          puzzleTitle={msg.puzzleTitle({
+        puzzleTitle={msg.puzzleTitle({
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
-          instructions={showInstructions ?  this.props.shortInstructions : undefined}
-          instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
-          renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
-          aniGifURL={showAniGif ? this.props.aniGifURL : undefined}
-          authoredHints={showHints ? this.props.authoredHints : undefined}
+        instructions={showInstructions ?  this.props.shortInstructions : undefined}
+        instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
+        renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
+        aniGifURL={showAniGif ? this.props.aniGifURL : undefined}
+        authoredHints={showHints ? this.props.authoredHints : undefined}
       />
     );
   }

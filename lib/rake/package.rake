@@ -8,10 +8,6 @@ namespace :package do
     apps: {
       target: apps_dir('build/package'),
       symlink_name: 'blockly'
-    },
-    code_studio: {
-      target: code_studio_dir('build'),
-      symlink_name: 'code-studio'
     }
   }
 

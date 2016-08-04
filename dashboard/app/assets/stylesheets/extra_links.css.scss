@@ -1,0 +1,28 @@
+@import "color";
+@import "font";
+@import "mixins";
+
+.extraLinks {
+  @include selectable;
+  border: 2px solid $light_gray;
+  padding: 10px;
+  background: $lighter_gray;
+  position: fixed;
+  bottom: 27px; /* just above small footer */
+  left: 0;
+  h4 {
+    font-size: 14px;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+  }
+  opacity: 0.98;
+  color: black;
+
+  /* don't take over the whole window*/
+  max-height: 50%;
+  /* only display scrollbars when needed */
+  overflow: auto;
+  /* admin box appears in front of the rest of the level */
+  z-index: 400;
+}

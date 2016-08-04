@@ -8,7 +8,16 @@
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
       "x": null,
       "y": null,
       "width": null,
@@ -24,8 +33,8 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Animating with Sprites\r\n\r\n**Sprite properties can be used in the counter pattern too**.\r\n\r\n\t// Counter Pattern with variables\r\n    x = x + 1;\r\n    \r\n    // Counter Pattern with sprite properties\r\n    mySprite.x = mySprite.x + 1\r\n\r\nIf you call ![](https://images.code.org/16810be94cc61ea828e0acce5b642468-image-1466009389700.19.16 AM.png) inside the draw loop then you can use this counter pattern to animate sprites as well.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/a34d5c36c98c2d61ce341be59cbcf315-image-1466534169200.gif\" style=\"float:right; width:200px\">\r\n\r\n\r\n\r\nThis program creates 2 sprites and then animates one of them to move across the screen using the counter pattern.\r\n\r\n* Inside the draw loop **add code that uses the counter pattern to make the orange sprite move down the screen**\r\n* Hint: How can you use the counter pattern here? Look at the code for the redSprite if you need help.\r\n* Your animation should look like the example at the right.",
-    "start_blocks": "var redSprite = createSprite(50, 50, 50, 50);\r\nredSprite.shapeColor = \"red\";\r\n\r\nvar orangeSprite = createSprite(200, 50, 50, 50);\r\norangeSprite.shapeColor = \"orange\";\r\n\r\nfunction draw(){\r\n\t// Update Values\r\n\tredSprite.x = redSprite.x + 1;\r\n\t \r\n\t// Drawing\r\n\tbackground(\"white\");\r\n\tdrawSprites();\r\n}",
+    "markdown_instructions": "# Animating with Sprites\r\n\r\n**Sprite properties can be used in the counter pattern too**.\r\n\r\n\t// Counter Pattern with variables\r\n    x = x + 1;\r\n    \r\n    // Counter Pattern with sprite properties\r\n    mySprite.x = mySprite.x + 1\r\n\r\nIf you call ![](https://images.code.org/16810be94cc61ea828e0acce5b642468-image-1466009389700.19.16 AM.png) inside the draw loop then you can use this counter pattern to animate sprites as well.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/a34d5c36c98c2d61ce341be59cbcf315-image-1466534169200.gif\" style=\"float:right; width:200px\">\r\n\r\n\r\nThis program creates 2 sprites and then animates one of them to move across the screen using the counter pattern.\r\n\r\n* Inside the draw loop **add code that uses the counter pattern to make the orange sprite move across the screen**\r\n* Hint: How can you use the counter pattern here? Look at the code for the redSprite if you need help.\r\n* Your animation should look like the example at the right.",
+    "start_blocks": "var redSprite = createSprite(50, 50);\r\nredSprite.width = 50;\r\nredSprite.height = 50;\r\nredSprite.shapeColor = \"red\";\r\n\r\nvar orangeSprite = createSprite(200, 50);\r\norangeSprite.width = 50;\r\norangeSprite.height = 50;\r\norangeSprite.shapeColor = \"orange\";\r\n\r\nfunction draw(){\r\n  \t// Draw Background\r\n  \tbackground(\"white\");\r\n  \r\n\t// Update Values\r\n\tredSprite.x = redSprite.x + 1;\r\n\t \r\n\t// Drawing Animations\r\n\tdrawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

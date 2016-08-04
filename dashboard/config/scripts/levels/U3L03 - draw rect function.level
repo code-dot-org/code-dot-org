@@ -7,123 +7,30 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onEvent": null,
-      "button": null,
-      "textInput": null,
-      "textLabel": null,
-      "dropdown": null,
-      "getText": null,
-      "setText": null,
-      "checkbox": null,
-      "radioButton": null,
-      "getChecked": null,
-      "setChecked": null,
-      "image": null,
-      "getImageURL": null,
-      "setImageURL": null,
-      "playSound": null,
-      "showElement": null,
-      "hideElement": null,
-      "deleteElement": null,
-      "setPosition": null,
-      "write": null,
-      "getXPosition": null,
-      "getYPosition": null,
-      "setScreen": null,
-      "createCanvas": null,
-      "setActiveCanvas": null,
-      "line": null,
-      "circle": null,
-      "rect": null,
-      "setStrokeWidth": null,
-      "setStrokeColor": null,
-      "setFillColor": null,
-      "drawImage": null,
-      "getImageData": null,
-      "putImageData": null,
-      "clearCanvas": null,
-      "getRed": null,
-      "getGreen": null,
-      "getBlue": null,
-      "getAlpha": null,
-      "setRed": null,
-      "setGreen": null,
-      "setBlue": null,
-      "setAlpha": null,
-      "setRGB": null,
-      "startWebRequest": null,
-      "setKeyValue": null,
-      "getKeyValue": null,
-      "createRecord": null,
-      "readRecords": null,
-      "updateRecord": null,
-      "deleteRecord": null,
-      "getUserId": null,
-      "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0
+        },
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
       "penUp": null,
       "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-      "setTimeout": null,
-      "clearTimeout": null,
-      "setInterval": null,
-      "clearInterval": null,
-      "getTime": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "lessThanOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-      "declareAssign_x": null,
-      "assign_x": null,
-      "declareAssign_x_prompt": null,
-      "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
-      "insertItem": null,
-      "appendItem": null,
-      "removeItem": null,
       "functionParams_none": null,
-      "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -158,7 +65,77 @@
     "debugger_disabled": "true",
     "encrypted_examples": "lP3v8o6oIQ+pLg0QOLcUdtQ3BrqIk3aEpYIvTsV+IRmNH1+I2xeJmeEgGFr2\nTXST\n",
     "lock_zero_param_functions": "true",
-    "execute_palette_apis_only": "true"
+    "execute_palette_apis_only": "true",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem - no loops, please."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft()."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function called right()."
+      },
+      {
+        "entries": [
+          "drawRectangle"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to define a function called \"drawRectangle\" and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+      },
+      {
+        "entries": [
+          "drawRectangle",
+          "moveForward",
+          "moveForward",
+          "right",
+          "moveForward",
+          "right",
+          "moveForward",
+          "moveForward",
+          "right",
+          "moveForward",
+          "right"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "Hmmm, something isn't right.  Your code should now start with a call to drawRectangle() - a function you defined. It also doesn't seem like you are calling right() or moving forward enough times to draw the figure and end up where you started, facing the same direction."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

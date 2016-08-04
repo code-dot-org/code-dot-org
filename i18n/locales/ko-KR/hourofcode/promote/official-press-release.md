@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # 지역 행정직정치인(선출직)을 위한 샘플 보도 자료
 
 빠른 보도자료 배포를 위해  
@@ -42,9 +40,3 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 [**이벤트에 참여하는 사람/조직 등에 대한 내용 입력**]
 
 [**이벤트/프로그램/기타**]에 대한 더 자세한 사항은 [**웹사이트 입력**] 에 접속해 보시거나, [**연락처 정보 입력**]에 문의해 주세요.
-
-  
-  
-
-
-<%= view :signup_button %>

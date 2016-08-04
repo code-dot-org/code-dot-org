@@ -6,43 +6,39 @@ nav: promote_nav
 
 ---
 
-
 # سیمپل پریس ریلیز برائے الیکٹڈ آفیشیلز
 
-برائے فوری اجراء   
-] **تاریخ** [   
-رابطہ کریں: **]رابطہ کی معلومات** [  
+For Immediate Release  
+[**DATE**]  
+Contact: [**CONTACT INFORMATION**]  
   
 
 
+**
+
 <center>
-  <strong> گورنر/سینیٹر/اسمبلی ممبر/ریپریزنٹیٹو/میئر/کونسل ممبر ]نام داخل کریں[ ]نے آور-آف-کوڈ میں مقامی اسٹوڈینٹس کے ساتھ شرکت کی[ </strong> <br /> کمیونٹی باہم مل کر کمپیوٹر سائنس ایجوکیشن ویک میں شرکت کرے تاکہ کمپیوٹر سائنس کی تعلیم کی اہمیت کے بارے میں آگاہی بڑھائی جاسکے۔
+  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
   
   
+</p> 
 
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 
-**تاریخ** - ] **نام داخل کریں**[ نے آج پرنسپل اور فیکلٹی ممبرز کے ساتھ شمولیت اختیار کی ] **اسکول کا نام داخل کریں**[، بزنس لیڈرز اور مقامی فیملیز نے بھی ] **ایونٹ کا نام **[ تاکہ آور-آف-کوڈ میں شرکت کر کے کمپیوٹر سائنس ایجوکیشن ویک کا حصہ بنیں۔ ] <0>نام داخل کریں</0>[ اور اس طرح کمیونٹی ممبرز تمام دنیا کے کے لاکھوں کروڑوں لوگوں کے ساتھ سیکھنے کے لیے تاریخ کے سب سے بڑے ایونٹ کا حصہ بن جائیں گے۔
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
 
-] ** ایونٹ کی تفصیلات داخل کریں، واضح اور جامع زبان استعمال کریں۔ مثال کے طور پر: **[  
-”ڈینیل جو کہ ایک ایلیمنٹری اسکول چلاتا ہے، نے اسکول بھر میں آور-آف-کوڈ کا ایونٹ منعقد کیا تاکہ اسٹوڈینٹس کو کمپیوٹر سائنس سے روشناس کیا جاسکے۔ تمام گریڈ کے 700 سے زائد اسٹوڈینٹس نے کم از کم ایک آور-آف-کوڈ کیا۔ اور کمیونٹی سے وابستہ کئی درجن پیرنٹس (والدین) اور والینٹیئرز نے اس دن مدد کی اور اپنے ساتھ بچوں کو اسمبلی کرانے لائے، یہ ظاہر کرنے کے لیے کہ کیوں کمپیوٹر سائنس ان اسٹوڈینٹس کی زندگیوں کے لیے اہم ہے۔“
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-] **سیمپل اسٹاک ٹیکسٹ فار کانٹیکسٹ:**[   
-کمپیوٹر ہر جگہ ہیں، لیکن گزشتہ 10 سال سے گنتی کے چند ہی اسکول کمپیوٹر سائنس سیکھاتے ہیں۔ دیگر رنگ و نسل لڑکیاں اور اسٹوڈینٹس شدید طور پر زیر-نمائندہ رہے تھے۔ اچھی خبر یہ ہے کہ اب ہم اس کو بہتری کے لیے تبدیل کر رہے ہیں۔ آور-آف-کوڈ تمام اسٹوڈینٹس کو اعلی معیار کی کمپیوٹر سائنس ایجوکیشن کی رسائی فراہم کرنے کے راستہ کا دروازہ ہے۔
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! اور ڈزنی پر بھی۔ President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-دنیا بھر کے 100 ملین سے زائد اسٹوڈینٹس پہلے ہی آور-آف-کوڈ ٹرائی کرچکے ہیں۔ آور-آف-کوڈ کا شکریہ: کہ کمپیوٹر سائنس گوگل، MSN ، یاھو کے ہوم پیج پر تھا! اور ڈزنی پر بھی۔ صدر اوباما، شاکرا اور ایشٹن کُشر نے تمام آور-آف-کوڈ میں ویڈیوز کے ذریعہ بھرپور ساتھ دیا۔ 100 سے زائد پارٹنرز نے باہمی طور اس مہم کی معاونت کی۔
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 
-] **اسپوکس-پرسن کی جانب سے کوٹس داخل کریں، مثال درج ذیل ہے:**[   
-” ہمیں اپنے اسٹوڈینٹس کی کمپیوٹر سائنس میں دلچسپی کو سراہنا اور حوصلہ افزائی کرنا چاہیے،“ ] **نام داخل کریں**[ نے کہا۔ ” ہر اسٹوڈینٹ کمپیوٹر سائنس سیکھنے اور 21ویں صدی کے بہترین کریئر تک رسائی حاصل کرنے کا مستحق ہے۔“
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
 
-] **اپنے ایونٹ یا/اور آرگنائزیشن کے بارے میں مزید معلومات داخل کریں**[
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
-] **اسپوکس-پرسن کی جانب سے کوٹس داخل کریں، مثال درج ذیل ہے:**[ <1/> ” ہمیں اپنے اسٹوڈینٹس کی کمپیوٹر سائنس میں دلچسپی کو سراہنا اور حوصلہ افزائی کرنا چاہیے،“ ] <0>نام داخل کریں</0>[ نے کہا۔
-
-اس کے بارے میں مزید معلومات کے لیے ] **ایونٹ/پروگرام/وغیرہ**[ ، وزٹ ] ** ویب سائیٹ داخل کریں**[ یا رابطہ ] ** کانٹیکٹ انفارمیشن داخل کریں**[ 
-
-  
-  
-
-
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]

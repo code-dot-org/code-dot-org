@@ -1,10 +1,8 @@
 * * *
 
-title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+titel: < % = hoc_s(:title_tutorial_guidelines) %> lay-out: breed
 
 * * *
-
-<%= view :signup_button %>
 
 # Tutorial richtlijnen voor het CodeUur en de week van programmeren
 
@@ -25,7 +23,7 @@ We bieden een verscheidenheid aan boeiende mogelijkheden, maar we willen vooral 
 
   * [Algemene richtlijnen voor het samenstellen van een CodeUur activiteit](#guidelines)
   * [Evaluatieproces voor het opnemen van opdrachten](#inclusion)
-  * [Aanmelden (voor 1/10/2014)](#submit)
+  * [Aanmelden](#submit)
   * [Tips voor het ontwerpen van een activiteit](#design)
   * [Richtlijnen voor gebruik van het handelsmerk](#tm)
   * [Bijhouden van Pixel](#pixel)
@@ -113,7 +111,7 @@ Het uiteindelijke doel van de CodeUur campagne is om betrokkenheid van leerlinge
 
 <a id="submit"></a>
 
-## Aanmelden (voor 1/10/2014)
+## Aanmelden
 
 Bezoek de [pagina CodeUur ™ activiteit indienen](https://goo.gl/kNrV3l) en volgt u de stappen voor het indienen van uw tutorial.
 
@@ -147,13 +145,13 @@ Bezoek de [pagina CodeUur ™ activiteit indienen](https://goo.gl/kNrV3l) en vol
       * Basis school: rangen 6-8
       * Middelbare School: rangen 9-12
       * Alle leeftijden
-  * Geef ook een aanbeveling voor het informatica niveau met de termen: beginner, gevorderde of expert. De Uur Code website zal activiteiten voor beginners het meest prominent plaatsen. Als u een Intermediate en Advanced CodeUur™ activiteit wilt voorbereiden, gelieve de geëiste voorkennis in de beschrijving van uw activiteit te vermelden.
+  * Geef ook een aanbeveling voor het informatica niveau met de termen: beginner, gevorderde of expert. De CodeUur website zal activiteiten voor beginners het meest prominent plaatsen. Als u een Intermediate en Advanced CodeUur™ activiteit wilt voorbereiden, gelieve de geëiste voorkennis in de beschrijving van uw activiteit te vermelden.
   * Technische eisen: 
-      * Om zo nauwkeurig mogelijk de deelname te kunnen volgen willen we iedere partner vragen om 1-pixel volg plaatjes op de eerste en laatste pagina van hun Uur Code opdrachten te plaatsen. Plaats een 1-pixel startplaatje op de eerste pagina en een 1-pixel einde-plaatje op de laatste pagina. Plaats geen 1-pixel plaatjes op tussenliggende pagina's. Zie de Tracking Pixel alinea hieronder voor meer details. 
+      * Om zo nauwkeurig mogelijk de deelname te kunnen volgen willen we iedere partner vragen om 1-pixel volg plaatjes op de eerste en laatste pagina van hun CodeUur opdrachten te plaatsen. Plaats een 1-pixel startplaatje op de eerste pagina en een 1-pixel einde-plaatje op de laatste pagina. Plaats geen 1-pixel plaatjes op tussenliggende pagina's. Zie de Tracking Pixel alinea hieronder voor meer details. 
       * Na afsluiting van uw activiteit, moeten gebruikers worden doorgestuurd naar [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) waar zij de volgende stappen kunnen nemen: 
-          * Delen op sociale media dat zij het Uur Code voltooid hebben
-          * Een certificaat ontvangen voor het voltooien van het Uur Code
-          * Het bekijken van leaderboards waar te vinden is welke landen/steden de hoogste participatiegraad van Uur Code activiteiten hebben
+          * Delen op sociale media dat zij het CodeUur voltooid hebben
+          * Een certificaat ontvangen voor het voltooien van het CodeUur
+          * Het bekijken van leaderboards waar te vinden is welke landen/steden de hoogste participatiegraad van CodeUur activiteiten hebben
           * Voeg een button aan uw activiteit die zegt "Ik ben klaar met mijn CodeUur" die terug linkt naar [< % resolve_url('code.org/api/hour/finish') %> =](%= resolve_url('https://code.org/api/hour/finish') %), voor deelnemers die een uur zitten aan uw activiteit maar het toch niet voltooien. 
   * *(Optioneel)* We zullen de activiteit opvolgen met een online enquête/formulier waarin we vragen naar verslag van de volgende activiteit statistieken voor de week van 7 december om 12:01 tot 23:59 13 december 
       * Voor online activiteiten (met name smartphone/Tablet PC apps): 
@@ -212,15 +210,15 @@ Voordelen van het programmeren in paren:
 
 Na het succes van de campagne in 2013 hebben we stappen genomen om ervoor te zorgen dat we het CodeUur kunnen instellen als een beweging die jaarlijks met meer trouw en zonder verwarring kan worden herhaald.
 
-Een van de middelen hiertoe is de bescherming van het label "Uur Code" om verwarring te vermijden. Veel van onze opdracht partners hebben "Uur Code" op hun websites gebruikt. We willen dit gebruik niet stoppen, maar we willen wel een paar grenzen stellen:
+Een van de middelen hiertoe is de bescherming van het label "CodeUur" om verwarring te vermijden. Veel van onze opdracht partners hebben "CodeUur" op hun websites gebruikt. We willen dit gebruik niet stoppen, maar we willen wel een paar grenzen stellen:
 
-  1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Elke verwijzing naar "CodeUur" moet worden gebruikt op een zodanige manier deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
+  2. Gebruik een "TM" superscript op de meest prominente plaatsen waar u "CodeUur" opnoemt, zowel op uw website en app beschrijvingen.
   3. Plaats op uw pagina (of in de de voettekst) de volgende tekst, waaronder koppelingen naar de websites van CSEdWeek en Code.org, met de volgende inhoud:
     
-    *"Het 'Hour of Code' is een wereldwijd initiatief van de Computer Science Education Week[csedweek.org] en Code.org [code.org] om miljoenen studenten te laten kennismaken met één uur van informatica en programmeren."*
+    *"Het 'CodeUur' is een wereldwijd initiatief van de week van programmeren [csedweek.org] en Code.org [code.org] om miljoenen studenten te laten kennismaken met één uur van informatica en programmeren."*
 
-  4. No use of "Hour of Code" in app names.
+  4. Geen gebruik van "CodeUur" in app namen.
 
 [**Terug naar de top**](#top)
 
@@ -228,7 +226,7 @@ Een van de middelen hiertoe is de bescherming van het label "Uur Code" om verwar
 
 ## Bijhouden van Pixel
 
-Om nauwkeuriger deelname te kunnen bijhouden, verzoeken wij dat elke derde partij opdracht partners, zoals u,1-pixel afbeeldingen wil plaatsen op de eerste en de laatste pagina van hun uur van Code tutorials (een begin pixel-afbeelding op de startpagina. en een laatste pixel-afbeelding op de pagina einde. En niet op tussentijdse pagina's).
+Om nauwkeuriger deelname te kunnen bijhouden, verzoeken wij dat elke derde partij opdracht partners, zoals u, 1-pixel afbeeldingen wil plaatsen op de eerste en de laatste pagina van hun CodeUur tutorials (een begin pixel-afbeelding op de startpagina. en een laatste pixel-afbeelding op de pagina einde. En niet op tussentijdse pagina's).
 
 Dit maakt het ons mogelijk om gebruikers te volgen die u rechtstreeks aantrekt voor een bezoek aan uw website om mee te doen aan hun CodeUur, of gebruikers die u bezoeken wanneer een leraar uw URL rechtstreeks op hun whiteboard typt. Het zal leiden tot meer accurate deelnemersaantallen voor uw opdrachten, wat u helpt om meer gebruikers aan te trekken. Als u de pixel op het einde toevoegt laat het ons ook toe om te meten hoeveel opdrachten volledig werden afgewerkt.
 
@@ -245,7 +243,7 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 <a id="promote"></a>
 
-## Het promoten van uw tutorials, CSEdWeek en Hour of Code
+## Het promoten van uw tutorials, CSEdWeek en CodeUur
 
 Wij vragen iedereen om hun eigen 1-uur-tutorial te promoten bij uw gebruikers. Verwijs deze door naar ***uw*** CodeUur-pagina. Uw gebruikers zullen veel sneller reageren op een mailing van u over uw opdracht. Gebruik de internationale Uur Code campagne voor de onderwijs Week van de informatia als een excuus om hen aan te moedigen anderen te vragen mee te doen en ons te helpen het aantal van 100 miljoen deelnemers in totaal te bereiken.
 
@@ -259,10 +257,8 @@ Wij vragen iedereen om hun eigen 1-uur-tutorial te promoten bij uw gebruikers. V
 
 <a id="disabilities"></a>
 
-## Een speciale opmerking voor studenten met een handicap
+## Een speciale opmerking voor scholieren met een handicap
 
 Als u een opdracht maakt die ontworpen is voor slechtzienden willen we deze graag markeren voor personen met schermlezers. We hebben nog geen dergelijke opdracht ontvangen en willen graag zo'n opdracht toevoegen voor de slechtziende leerlingen.
 
 [**Terug naar de top**](#top)
-
-<%= view :signup_button %>

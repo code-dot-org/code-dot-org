@@ -2,7 +2,8 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import FontAwesome from '../FontAwesome';
-import msg from '../../locale';
+import msg from '@cdo/locale';
+import { connect } from 'react-redux';
 
 const styles = {
   collapseButton: {
@@ -12,6 +13,9 @@ const styles = {
   },
   collapseIcon: {
     marginRight: 5
+  },
+  collapseIconRtl: {
+    marginLeft: 5
   }
 };
 
@@ -20,19 +24,25 @@ const styles = {
  */
 const CollapserButton = props => (
   <button
-      style={[styles.collapseButton, props.style]}
-      onClick={props.onClick}>
+    style={[styles.collapseButton, props.style]}
+    onClick={props.onClick}
+  >
     <FontAwesome
-        icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
-        style={styles.collapseIcon}
+      icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
+      style={props.isRtl ? styles.collapseIconRtl : styles.collapseIcon}
     />
-    {props.collapsed ? msg.more() : msg.hide()}
+    {props.collapsed ? msg.more() : msg.less()}
   </button>
 );
 CollapserButton.propTypes = {
   style: React.PropTypes.object,
+  isRtl: React.PropTypes.bool.isRequired,
   onClick: React.PropTypes.func.isRequired,
   collapsed: React.PropTypes.bool.isRequired
 };
 
-export default Radium(CollapserButton);
+export default connect(state => {
+  return {
+    isRtl: state.pageConstants.localeDirection === 'rtl',
+  };
+})(Radium(CollapserButton));

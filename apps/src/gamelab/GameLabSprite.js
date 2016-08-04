@@ -1,7 +1,19 @@
 var jsInterpreter;
 
+/** @type {GameLabLevel} */
+var level;
+
 module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
+};
+
+/**
+ * Provide the current Game Lab level because it can customize default
+ * sprite behaviors.
+ * @param {!GameLabLevel} lvl
+ */
+module.exports.injectLevel = function (lvl) {
+  level = lvl;
 };
 
 module.exports.createSprite = function (x, y, width, height) {
@@ -14,6 +26,20 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  /*
+   * @type {number}
+   * @private
+   * _horizontalStretch is the value to scale animation sprites in the X direction
+   */
+  s._horizontalStretch = 1;
+
+  /*
+   * @type {number}
+   * @private
+   * _verticalStretch is the value to scale animation sprites in the Y direction
+   */
+  s._verticalStretch = 1;
+
   s.setAnimation = function (animationName) {
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
@@ -22,6 +48,9 @@ module.exports.createSprite = function (x, y, width, height) {
     }
     s.addAnimation(animationName, animation);
     s.changeAnimation(animationName);
+    if (level.pauseAnimationsByDefault) {
+      s.pause();
+    }
   };
 
   s.setFrame = function (frame) {
@@ -71,6 +100,32 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   };
 
+  // The scale value should include the horizontal stretch for animations.
+  s._getScaleX = function () {
+    return s.scale * s._horizontalStretch;
+  };
+
+  // The scale value should include the vertical stretch for animations.
+  s._getScaleY = function () {
+    return s.scale * s._verticalStretch;
+  };
+
+  /*
+   * @private
+   * For game lab, don't update the animation sizes because all frames are the same size.
+   */
+  s._syncAnimationSizes = function (animations, currentAnimation) {
+    //has an animation but the collider is still default
+    //the animation wasn't loaded. if the animation is not a 1x1 image
+    //it means it just finished loading
+    if (this.colliderType === 'default' && animations[currentAnimation].getWidth() !== 1 &&
+      animations[currentAnimation].getHeight() !== 1) {
+      this.collider = this.getBoundingBox();
+      this.colliderType = 'image';
+      //quadTree.insert(this);
+    }
+  };
+
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
     get: function () {
@@ -104,6 +159,64 @@ module.exports.createSprite = function (x, y, width, height) {
       s.position.y = value;
     }
   });
+
+  // Overriding these allows users to set a width for
+  // an animated sprite the same way they would an unanimated sprite.
+  Object.defineProperty(s, 'width', {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      if (s._internalWidth === undefined) {
+        return 100;
+      } else if (s.animation) {
+        return s._internalWidth * s._horizontalStretch;
+      } else {
+        return s._internalWidth;
+      }
+    },
+    set: function (value) {
+      if (s.animation) {
+        s._horizontalStretch = value / s._internalWidth;
+      } else {
+        s._internalWidth = value;
+      }
+    }
+  });
+
+  // Overriding these allows users to set a height for
+  // an animated sprite the same way they would an unanimated sprite.
+  Object.defineProperty(s, 'height', {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      if (s._internalHeight === undefined) {
+        return 100;
+      } else if (s.animation) {
+        return s._internalHeight * s._verticalStretch;
+      } else {
+        return s._internalHeight;
+      }
+    },
+    set: function (value) {
+      if (s.animation) {
+        s._verticalStretch = value / s._internalHeight;
+      } else {
+        s._internalHeight =  value;
+      }
+    }
+  });
+
+  // p5.play stores width unscaled, but users in
+  // Game Lab should have access to a scaled version.
+  s.getScaledWidth = function () {
+    return s.width * s.scale;
+  };
+
+  // p5.play stores height unscaled, but users in
+  // Game Lab should have access to a scaled version.
+  s.getScaledHeight = function () {
+    return s.height * s.scale;
+  };
 
   Object.defineProperty(s, 'velocityX', {
     enumerable: true,
@@ -162,9 +275,10 @@ module.exports.createSprite = function (x, y, width, height) {
 
 /*
  * Copied code from p5play from Sprite() with targeted modifications that
- * use the additional state parameter
+ * use the additional state parameter and use modifyPosition to determine 
+ * whether to modify the sprite's velocity and position.
  */
-var AABBops = function (p5Inst, type, target, callback) {
+var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
 
   // These 3 are utility p5 functions that don't depend on p5 instance state in
   // order to work properly, so we'll go ahead and make them easy to
@@ -334,7 +448,7 @@ var AABBops = function (p5Inst, type, target, callback) {
           {
             var newVelX1, newVelY1, newVelX2, newVelY2;
 
-            if(!this.immovable)
+            if(!this.immovable && modifyPosition)
             {
               this.position.add(displacement);
               this.previousPosition = createVector(this.position.x, this.position.y);
@@ -366,11 +480,13 @@ var AABBops = function (p5Inst, type, target, callback) {
                   m1 = 2 * other.mass / totalMass;
                   m2 = 2 * this.mass / totalMass;
                 }
-                var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
-                var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
-
-                this.velocity.sub(newVel1.mult(this.restitution));
-                other.velocity.sub(newVel2.mult(other.restitution));
+                
+                if (modifyPosition) {
+                  var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
+                  var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
+                  this.velocity.sub(newVel1.mult(this.restitution));
+                  other.velocity.sub(newVel2.mult(other.restitution));
+                }
               } else {
                 if(otherImmovable)
                 {
@@ -396,13 +512,13 @@ var AABBops = function (p5Inst, type, target, callback) {
                 {
 
 
-                  if(!this.immovable)
+                  if(!this.immovable && modifyPosition)
                   {
                     this.velocity.x = newVelX1*this.restitution;
 
                   }
 
-                  if(!otherImmovable)
+                  if(!otherImmovable && modifyPosition)
                     other.velocity.x = newVelX2*other.restitution;
 
                 }
@@ -410,10 +526,10 @@ var AABBops = function (p5Inst, type, target, callback) {
                 if(abs(displacement.x)<abs(displacement.y))
                 {
 
-                  if(!this.immovable)
+                  if(!this.immovable && modifyPosition)
                     this.velocity.y = newVelY1*this.restitution;
 
-                  if(!otherImmovable)
+                  if(!otherImmovable && modifyPosition)
                     other.velocity.y = newVelY2*other.restitution;
                 }
               }
@@ -470,6 +586,8 @@ var AABBops = function (p5Inst, type, target, callback) {
   return result;
 };
 
+/* eslint-enable */
+
 /**
  * Returns whether or not this sprite will bounce or collide with another sprite
  * or group. Modifies the sprite's touching property object.
@@ -477,159 +595,5 @@ var AABBops = function (p5Inst, type, target, callback) {
  */
 
 var isTouching = function (p5Inst, target) {
-
-  /*
-   * This code is a subset of the original AABBops method. It needs to be kept in
-   * sync with p5play's method, much like our stateful async version of AABBops
-   * above.
-   */
-
-  // These 3 are utility p5 functions that don't depend on p5 instance state in
-  // order to work properly, so we'll go ahead and make them easy to
-  // access without needing to bind them to a p5 instance.
-  var abs = p5.prototype.abs;
-  var round = p5.prototype.round;
-  var quadTree = p5Inst.quadTree;
-
-  var createVector = p5Inst.createVector.bind(p5Inst);
-  var AABB = p5Inst.AABB.bind(p5Inst);
-
-  // These 2 are not bound as they are used for instanceof checks:
-  var Sprite = p5Inst.Sprite;
-  var CircleCollider = p5Inst.CircleCollider;
-
-  this.touching.left = false;
-  this.touching.right = false;
-  this.touching.top = false;
-  this.touching.bottom = false;
-
-  var result = false;
-
-  //if single sprite turn into array anyway
-  var others = [];
-
-  if(target instanceof Sprite)
-    others.push(target);
-  else if(target instanceof Array)
-  {
-    if(quadTree !== undefined && quadTree.active)
-      others = quadTree.retrieveFromGroup( this, target);
-
-    if(others.length === 0)
-      others = target;
-
-  }
-  else
-    throw new Error('Error: isTouching can only be checked between sprites or groups');
-
-    for(var i=0; i<others.length; i++)
-      if(this !== others[i] && !this.removed) //you can check collisions within the same group but not on itself
-      {
-        var displacement;
-        var other = others[i];
-
-        if(this.collider === undefined)
-          this.setDefaultCollider();
-
-        if(other.collider === undefined)
-          other.setDefaultCollider();
-
-        if(this.collider !== undefined && other.collider !== undefined)
-        {
-          displacement = createVector(0, 0);
-
-          //if the sum of the speed is more than the collider i may
-          //have a tunnelling problem
-          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) === 0;
-
-          var tunnelY = abs(this.velocity.y-other.velocity.y) >= other.collider.size().y/2 && round(this.deltaY - this.velocity.y) === 0;
-
-
-          if(tunnelX || tunnelY)
-          {
-            //instead of using the colliders I use the bounding box
-            //around the previous position and current position
-            //this is regardless of the collider type
-
-            //the center is the average of the coll centers
-            var c = createVector(
-                                 (this.position.x+this.previousPosition.x)/2,
-                                 (this.position.y+this.previousPosition.y)/2);
-
-            //the extents are the distance between the coll centers
-            //plus the extents of both
-            var e = createVector(
-                                 abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
-                                 abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
-
-            var bbox = new AABB(p5Inst, c, e, this.collider.offset);
-
-            //bbox.draw();
-
-            if(bbox.overlap(other.collider))
-            {
-              if(tunnelX) {
-
-                //entering from the right
-                if(this.velocity.x < 0)
-                  displacement.x = other.collider.right() - this.collider.left() + 1;
-                else if(this.velocity.x > 0 )
-                  displacement.x = other.collider.left() - this.collider.right() -1;
-              }
-
-              if(tunnelY) {
-                //from top
-                if(this.velocity.y > 0)
-                  displacement.y = other.collider.top() - this.collider.bottom() - 1;
-                else if(this.velocity.y < 0 )
-                  displacement.y = other.collider.bottom() - this.collider.top() + 1;
-
-              }
-
-            }//end overlap
-
-          }
-          else //non tunnel overlap
-          {
-            /* First, check for adjacency using overlap method.
-             *
-             * We do this to ensure isTouching returns true for cases when
-             * bounce, collide would return true and also when overlap would
-             * return true.
-             *
-             * NOTE: this.touching will remain all false in the adjacent case,
-             * but the function will return true.
-             */
-
-            //if the other is a circle I calculate the displacement from here
-            //and reverse it
-            if (this.collider instanceof CircleCollider) {
-              if (other.collider.overlap(this.collider)) {
-                result = true;
-                displacement = other.collider.collide(this.collider).mult(-1);
-              }
-            }
-            else if (this.collider.overlap(other.collider)) {
-              result = true;
-              displacement = this.collider.collide(other.collider);
-            }
-          }
-
-          if(displacement.x !== 0 || displacement.y !== 0)
-          {
-            if(displacement.x > 0)
-              this.touching.left = true;
-            if(displacement.x < 0)
-              this.touching.right = true;
-            if(displacement.y < 0)
-              this.touching.bottom = true;
-            if(displacement.y > 0)
-              this.touching.top = true;
-          }
-        }//end collider exists
-      }//end this !== others[i] && !this.removed
-
-  return result;
+  return this.AABBops('collide', target, undefined, false);
 };
-
-/* eslint-enable */

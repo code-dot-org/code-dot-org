@@ -46,11 +46,31 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
+  install_js_error_recorder
+end
+
+def install_js_error_recorder
+  @browser.execute_script(<<-JS
+  // Wrap existing window onerror handler with a script error recorder.
+  var windowOnError = window.onerror;
+  window.onerror = function (msg) {
+    window.detectedJSErrors = window.detectedJSErrors || [];
+    window.detectedJSErrors.push(msg);
+    if (windowOnError) {
+      return windowOnError.apply(this, arguments);
+    }
+  };
+  JS
+  )
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait_with_timeout.until { @browser.find_element(selection_criteria) }
+end
+
+When /^I go to the newly opened tab$/ do
+  @browser.switch_to.window(@browser.window_handles.last)
 end
 
 When /^I close the dialog$/ do
@@ -231,7 +251,7 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " +
+  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
 end
@@ -291,16 +311,16 @@ end
 
 When /^I press delete$/ do
   script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
-  script +="{"
-  script +="  target: {},"
-  script +="  preventDefault: function() {},"
-  script +="  keyCode: $.simulate.keyCode['DELETE']"
-  script +="})"
+  script += "{"
+  script += "  target: {},"
+  script += "  preventDefault: function() {},"
+  script += "  keyCode: $.simulate.keyCode['DELETE']"
+  script += "})"
   @browser.execute_script(script)
 end
 
 When /^I hold key "([^"]*)"$/ do |key_code|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
+  script = "$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
@@ -450,7 +470,7 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
+  expect(@browser.execute_script("return $(#{selector.dump}).length")).to eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -614,7 +634,7 @@ end
 Given(/^I am enrolled in a plc course$/) do
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users.first[1][:email])
-  course = Plc::Course.find_by(name: 'CSP Support')
+  course = Plc::Course.find_by(name: 'All The PLC Things')
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
 end
@@ -672,25 +692,8 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
-And(/^I sign in as an admin named "([^"]*)"$/) do |name|
-  steps %Q{
-    Given I am on "http://studio.code.org/reset_session"
-    And I am on "http://studio.code.org/users/sign_in"
-    And I display toast "Loading Rails, creating admin user... (This may take 30 seconds)"
-  }
-
-  require_rails_env
-  email, password = generate_user(name)
-  create_admin_user(name, email, password)
-
-  steps %Q{
-    When I type "#{email}" into "#user_login"
-    And I type "#{password}" into "#user_password"
-    And I click selector "input[type=submit][value='Sign in']"
-    Then I wait to see ".header_user"
-  }
-end
-
+# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
+# thereof, removing it if it remains unused.
 And(/I display toast "([^"]*)"$/) do |message|
   @browser.execute_script(<<-SCRIPT)
     var div = document.createElement('div');
@@ -728,7 +731,7 @@ When(/^I debug cookies$/) do
 end
 
 When(/^I debug focus$/) do
-  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
+  puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

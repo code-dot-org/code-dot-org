@@ -1,0 +1,56 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-07-19T17:57:45.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "comment_GameLab": null,
+      "var sprite = createSprite": null,
+      "setAnimation": null,
+      "rotationSpeed": null,
+      "comment_Sprites": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"sun\"],\r\n  \"propsByKey\": {\r\n    \"sun\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/sun.png\",\r\n      \"frameSize\": {\"x\":100, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "start_blocks": "var sun = createSprite(200, 200);\r\nsun.setAnimation(\"sun\");\r\n// initialize the sprite's rotationSpeed property here\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  drawSprites();\r\n}\r\n",
+    "markdown_instructions": "# rotationSpeed\r\n\r\nYou've already learned how to make your sprite spin by using the `rotation` block.  For example, when you wanted your sprite to rotate by two degrees each time it was drawn, you put `sprite.rotation = sprite.rotation + 2` inside the draw loop.  Because this is something that you will do a lot, there's a special property called `rotationSpeed` that does this for you. If you want your sprite to rotate by two degrees each time it's drawn, you can use `sprite.rotationSpeed = 2`.\r\n\r\n# Do This\r\n\r\nMake the sun rotate by 3 degrees each time using the `sprite.rotationSpeed` block. ",
+    "palette_category_at_start": "sprites",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

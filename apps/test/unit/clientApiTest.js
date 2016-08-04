@@ -27,6 +27,15 @@ describe('clientApi module', () => {
     xhr.restore();
   });
 
+  describe('the withProjectId function', () => {
+    it('returns a copy of the clientApi with the projectId set', () => {
+      var newApi = clientApi.assets.withProjectId('some-other-project');
+      expect(clientApi.assets.projectId).to.be.undefined;
+      expect(newApi.projectId).to.equal('some-other-project');
+      expect(newApi).to.be.an.instanceof(clientApi.assets.constructor);
+    });
+  });
+
   describe('the ajax function', (done) => {
     it('will complain if window.dashboard is not set, because ugh...', () => {
       window.dashboard = undefined;
@@ -75,6 +84,11 @@ describe('clientApi module', () => {
       expect(requests[0].method).to.equal('GET');
       expect(requests[0].url).to.equal('/v3/assets/some-project/exists.png');
       requests[0].respond(200, {}, 'this is an asset!');
+    });
+
+    it('will use the specified projectId for the url when set', () => {
+      clientApi.assets.withProjectId('some-other-project').ajax();
+      expect(requests[0].url).to.equal('/v3/assets/some-other-project');
     });
   });
 

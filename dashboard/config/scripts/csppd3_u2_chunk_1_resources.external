@@ -1,33 +1,26 @@
 name 'CSPPD3-u2 chunk 1 resources'
 css 'unplugged' 
 markdown <<MARKDOWN
-
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-
-### Unit 2 Overview > Layers of the Internet: Resources
-<br/>
+# Unit 2 Overview > Layers of the Internet: Resources
 
 Here are a few resources to help you get started with understanding these CS concepts. Don't forget to share the resources you find or make in the <a href=“forum.code.org/c/csp-feedback” target=_blank>forum!</a>
 
-#### Addressing on the Internet
+## Addressing on the Internet
 
 - <a href=“https://youtu.be/5o8CwafCxnU?” target=_blank>The Internet: IP Addresses and DNS (watch the first 4:15 for details on IP addresses)</a> 
 
-
-#### Redundancy and Packets
+## Redundancy and Packets
 
 - <a href = “https://youtu.be/AYdF7b3nMto” target=_blank>The Internet: Packets, Routing, and Reliability</a>
 
-
-#### Algorithms on the Internet
+## Algorithms on the Internet
 
 - <a href= “https://youtu.be/oWMpR_RxufI” target=_blank>Teaching Tips: How Routers Learn</a> 
 
-#### Abstraction on the Internet
+## Abstraction on the Internet
 
 - <a href=“https://youtu.be/kBXQZMmiA4s” target=_blank>The Internet: HTTP and HTML</a>
 - <a href=“https://youtu.be/5o8CwafCxnU?” target=_blank>The Internet: IP Addresses and DNS (start watching at 4:16 for details on DNS)</a> 
 
-<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
 
-Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. Saremo in contatto per i premi, le nuove esercitazioni e altri aggiornamenti interessanti. Cosa puoi fare ora?
+Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Cosa puoi fare ora?
 
 ## 1. Diffondi la notizia
 

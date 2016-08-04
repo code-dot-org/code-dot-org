@@ -5,12 +5,11 @@ layout: wide
 
 ---
 
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-हामी आकर्षक विकल्प को एक किसिम पाहुना गर्न चाहन्छु , तर मुख्य लक्ष्य कम्प्युटर विज्ञान लागि नयाँ हो , जो विद्यार्थी र शिक्षकहरू लागि अनुभव अनुकूलन गर्न छ । कृपया यो कागजातलाई तपाइँको क्रियाकलापको सिर्जनामा मार्गदर्शन गर्न, कोडिङ, कम्प्युटर प्रोगामिङ्, र कम्प्युटर विज्ञानको पृष्ठभूमि नभएका प्रयोगकर्तामा लक्षित गर्न प्रयोग गर्नुहोस्।
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -52,7 +51,7 @@ Examples:
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. आदर्श रूपमा, निर्देशन र अभ्यासहरूलाई प्रोग्रामिङ् प्लेटफर्ममा, अभ्यास र प्रोगामिङ्को प्लेटफर्मको बीच स्विच गर्ने ट्याब वा सन्झ्यालहरू हटाउन सीधै एकिकृत गरिएको हुन्छ।
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
 Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
 
@@ -66,15 +65,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## ट्यूटोरियल समावेशीकरणका लागि मूल्यांकन कसरी गरिनेछ
 
-कम्प्यूटर विज्ञान शिक्षकहरूको एक समितिले शिक्षहरूको एक व्यापक सेटबाट सर्वेक्षणको नतिजाहरू सहित गुणात्मक र परिमाणात्मक मैट्रिक्सको आधारमा क्रमको प्रस्तुत गर्छन्।
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**तल दिएका विशेषताहरु भेटिएमा ट्यूटोरियलहरुलाई उच्च क्रम अनुसार राखिनेछ:**
+**Tutorials will be listed higher if they are:**
 
   * उच्च गुणस्तर
   * designed for beginners - among students AND teachers
@@ -87,7 +86,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * promote learning by all demographic groups (esp. under-represented groups)
   * अशुद्ध HTML +CSS वेब डिज़ाइनमा ध्यान दिन - (हाम्रो लक्ष्य कम्प्यूटर विज्ञान हो, HTML कोडिंग मात्र होइन)
 
-**तल दिएका विशेषताहरु भेटिएमा ट्यूटोरियलहरुलाई निम्न क्रम अनुसार राखिनेछ:**
+**Tutorials will be listed lower if they are:**
 
   * निम्न गुणस्तर
   * सिकाउन (सिकारूहरूको लागि होइन) को थप उन्नत स्तर
@@ -96,7 +95,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * reinforce stereotypes that hinder participation by under-represented student groups
   * एक सिक्ने मञ्चको ट्यूशन शूल्कहरूको लागि एक अपसेलको रूपमा सेवा गर्न
 
-**यदि तिनिहरू हुन्छन् भने अभ्यासहरूलाई सूचीबद्ध गरिने छैन:**
+**Tutorials will NOT be listed if they:**
 
   * एक (लगभग) एक घण्टे गतिविधि हुन तैयार गरिएको छैन
   * साइन अप गर्न आवश्यक 
@@ -107,9 +106,9 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-अन्तत:, Hour of Code को कम्प्यूटर विज्ञानमा विद्यार्थी र शिक्षकहरूद्वारा व्यापक सहभागी हुने अभियान गर्न, र त्यस कम्प्यूटर विज्ञान सबैको लागि पहुँचयोग्य छ, र "तपाइँले सोच्नुभएको भन्दा सहज" छ भनि देखाउने लक्ष्य छ। धेरै तरिकाहरूमा, पहिलो-पटकको प्रयोगकर्ताको लागि उच्च गुणस्तरको विकल्पहरूमा ध्यान दिई विद्यार्थी र शिक्षकहरूलाई केहि स सामान्य छनोटहरू प्रदान गरि बढी मात्रामा लक्ष्यको प्राप्त गरिनेछ। Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +116,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**तपाइँलाई के चाहिनेछ:**
+**What you’ll need:**
 
   * तपाइँको नाम, लोगो (jpg, png, आदि।)
   * HoC गतिविधिको एक स्क्रिनसट वा विज्ञापन छविको लागि URL. छवि/स्क्रिनसटहरू ठीक 446 x 335 रिजोल्यूसनको हुनुपर्छ। यदि मिल्दो छवि प्रदान गरिएन छैन, हामी तपाइँको अभ्यासमा आफ्नो स्क्रिनसटहरू लिन वा यसको सूचीमा छनोट नगर्न सक्छौँ।
@@ -165,32 +164,32 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * अफलाइन गतिविधिहरूको लागि 
           * गतिविधिो (यदि मिल्दो छ भने) कागजी संस्करणको डाउनलोडहरूको संख्या
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## क्रियाकलाब डिजाइनका लागि सुझाव
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. कुनै परिस्थितिहरू Code.org लोगो र प्रयोग गरिएको नाम हुन सक्दैन। Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**औसत विद्यार्थीले आरामसँग एक घण्टामा सकाउन सक्छन् भनि पक्का गर्नुहोस्।** पाठ मार्फत अझ छिटो सर्ने विद्यार्थीहरूको लागि अन्तमा एक ओपन एंडेड गतिविधि थप्न ध्यान दिनुहोस्। धेरै बच्चाहरू कम्प्युटर विज्ञान र कोडिङ्मा एकदमै नौला छन् भनि याद राख्नुहोस्।
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**शिक्षकको नोटहरूको समावेश गर्नुहोस्।** धेरै गतिविधिहरू विद्यार्थी-निर्देशित हुनुपर्छ, तर एक गतिविधिलाई शिक्षकद्वारा मदद गरेको वा मिलाइएको हुन्छ भने, कृपया शिक्षकहरूको लागि तपाइँको गतिविधिलाई एक अलग URLको साथ शिक्षकको-नोटहरूको फारमा स्पष्ट र सामान्य निर्देशनहरूको समावेश गर्नुहोस्। सिकारू विद्यार्थीहरूको लागि मात्र होइन, केहि शिक्षकहरूको रूपमा राम्रोसँग गर्न सक्छन्। निम्न लिखित जानकारीको समावेश गर्नुहोस्:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * हाम्रो अभ्यासले निम्न लिखित मञ्च र ब्राउजरहरूमा राम्रोसँग काम गर्छ
   * Does it work on smartphones? Tablets?
   * तपाइँलाई जोडी प्रोगामिङ्लाई सिफारिश गर्नुहुन्छ? 
   * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**गतिविधिको अन्तमा रायको सामेल गर्नुहोस्।** (उदाहरण: "तपाइँले 10 स्तरहरू सकाउनु भयो र लूपहरूको बारेमा सिक्नु भयो! राम्रो काम!")
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” वा “मैले #CSEdWeek को भागको रूपमा #HourofCode लाई सकाएँ। तपाइँले गर्नुभयो? @स्क्र्याच।” (ठूलो अक्षरहरू H, O, C सँग) hashtag **#HourOfCode** को प्रयोग गर्नुहोस्
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.** ]
 
-**गतिवधिलाई सामाजिक रूपले महत्त्वपुर्ण प्रसङ्गमा व्याख्या गर्नुहोस् वा जडान गर्नुहोस्।** विद्यार्थीहरूले कसरी यसले संसारलाई अझ राम्रो गर्नको लागि परिवर्तन गर्न सक्छ हेर्दा कम्प्युटर प्रोगामिङ् महाशक्ति हुन जान्छ!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**विद्यार्थीहरूले तपाइँको अभ्यासमा प्रयास गर्नु पहिले साइनअप वा भुक्तानीको आवश्यकता पर्दैन।** साइनअप गर्न वा भुक्तानी गर्न आवश्यक अभ्यासहरूलाई सूचीबद्ध गरिने छैन
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
@@ -198,13 +197,13 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
   * नेभिगेटरले सुझावहरू बनाउँछ, त्रुटिहरू देखाउँछ, र प्रश्नहरू सोध्छ। 
   * विद्यार्थीहरूले कम्तिमा पनि सत्रमा दुई पटक स्विच गर्नुपर्छ।
 
-जोडी प्रोगामिङ्को फाइदाहरू:
+Benefits of Pair Programming:
 
   * विद्यार्थीहरूले शिक्षकलाई विश्वास गर्नुको सट्टा एउटा अर्कोलाई मदद गर्न सक्छ।
   * कोडिङ्को एक एकल गतिविधि देखाउँछ, तर एक सामाजिक अन्तरक्रियाको समावेश गर्दैछ
   * 1:1 अनुभवको लागि सबै कक्षाकोठा र ल्याबहरूसँग पर्याप्त कम्प्युटरहरू छैन
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -212,7 +211,7 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 
 After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-यसको एउटा टुक्राले भ्रमको स्थितिलाई रोक्न "Hour of Code" व्यापार चिन्हको सुरक्षा गर्छ। हाम्रो अधिकांश सहभागीहरूले तपाइँको वेब साइटहरूमा "Hour of Code" को प्रयोग गर्छन्। हामी यसको प्रयोग गर्न रोक्न चाँहदैनौँ, तर हामी यसलाई केहि सीमाहरू भित्र ठीक गर्न पक्का गर्न चाहन्छौँ:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. "Hour of Code" को लागि कुनै पनि सन्दर्भलाई यसले तपाइँको आफ्नो ब्र्याण्ड नामलाई, तर Hour of Code लाई ग्रामीण स्तरका गतिको रूपमा सन्दर्भित गर्नु भन्दा सुझाव नगर्ने फेसनमा प्रयोग गरिएको हुन्छ। Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
   2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
@@ -222,7 +221,7 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
   4. No use of "Hour of Code" in app names.
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
@@ -234,33 +233,32 @@ This will allow us to count users who you directly recruit to visit your website
 
 If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-नोट: यो स्थापना हुने एपहरू (आईओएस/एन्ड्रोइड एपहरू, वा डेस्कटप-स्थापना एपहरू) गर्नको लागि आवश्यक हुँदैन
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-AppInventor को लागि पिक्सेलहरू ट्रयाकिङ् गर्ने उदाहरण:
+Example tracking pixels for AppInventor:
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## आफ्नो ट्यूटोरियलको प्रवर्द्धन गर्ने
 
-हामी तिनिहरूको आफ्नो 1 -घण्टे अभ्यासलाई तपाइँको प्रयोगकर्ताहरूमा प्रवर्द्धन गर्न सबैलाई सोध्छौँ। Please direct them to ***your*** Hour of Code page. तपाइँको प्रयोगकर्ताहरू तपाइँको अभ्यासको बारेमा तपाइँबाट अधिक रूपले मेलिङ्मा गर्ने प्रतिक्रिया हुने सम्भावना छ। अरूहरूलाई यसमा आबद्ध हुन बोलाउन प्रयोगकर्ताहरूलाई प्रोत्साहन गर्ने बहानाको रूपमा कम्प्युटर विज्ञान शिक्षाको लागि अन्तर्राष्ट्रीय Hour of Code को अभियानको प्रयोग गर्नुहोस्, हामीलाई 100 मिलियन जम्मा सहभागीहरू पुर्याउन मदत गर्नुहोस्।
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * सामाजिक मीडिया, परम्परागत मीडिया, मेलिंग सूचीहरू, आदि hashtag **#HourOfCode** (H, O, C ठूलो अक्षरहरूसँग) Hour of Code लाई प्रबर्द्धन गर्नुहोस्
   * स्थानीय घटना होस्ट गर्न वा स्थानीय विद्यालय वा सामुदायिक समूहहरूमा घटनालाई होस्ट गर्न तपाइँको कर्मचारीहरूलाई सोध्नुहोस्।
   * थप जानकारी (आउँदै छ) को लागि हाम्रो स्रोतको किटहरू हेर्नुहोस्।
 
-[**माथि फर्कन**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## अक्षम भएका विद्यार्थीहरूको लागि विशेष नोट
 
-यदि तपाइँले अभ्यासलाई दृष्टि-बिहिन भएकाको लागि परिकल्पना गरि सिर्जना गर्नुहुन्छ भने, हामी स्क्रिन-पाठकका दर्शकहरूको लागि यसलाई हाइलाइट गर्न रूचाउँछौँ। हामीले अझै यस्ता अभ्यासको प्राप्ति गरेका छैनौँ, र यी विद्यार्थीहरूको लागि विकल्पको रूपमा एउटाको समावेश गर्न उत्साहि हुनेछौँ।
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**माथि फर्कन**](#top)
-
+[**Back to the top**](#top)

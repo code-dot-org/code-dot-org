@@ -196,17 +196,23 @@ Blockly.unbindEvent_ = function(bindData) {
  * Fire a synthetic event.
  * @param {!Element} element The event's target element.
  * @param {string} eventName Name of event (e.g. 'click').
+ * @param {object} opt_properties optional properties to add to the
+ *    created event object (e.g. { screenX: 10 })
  */
-Blockly.fireUiEvent = function(element, eventName) {
+Blockly.fireUiEvent = function(element, eventName, opt_properties) {
+  opt_properties = opt_properties || {};
+
   var doc = document;
   if (doc.createEvent) {
     // W3
     var evt = doc.createEvent('UIEvents');
+    goog.object.extend(evt, opt_properties);
     evt.initEvent(eventName, true, true);  // event type, bubbling, cancelable
     element.dispatchEvent(evt);
   } else if (doc.createEventObject) {
     // MSIE
     var evt = doc.createEventObject();
+    goog.object.extend(evt, opt_properties);
     element.fireEvent('on' + eventName, evt);
   } else {
     throw 'FireEvent: No event creation mechanism.';

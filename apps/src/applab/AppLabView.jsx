@@ -1,6 +1,6 @@
 /** @file Top-level view for App Lab */
-'use strict';
-
+import ImportProjectDialog from './ImportProjectDialog';
+import ImportScreensDialog from './ImportScreensDialog';
 var React = require('react');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -8,7 +8,7 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 import { ApplabInterfaceMode } from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
-import DataWorkspace from './DataWorkspace';
+import DataWorkspace from './dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
 import { connect } from 'react-redux';
 
@@ -40,13 +40,17 @@ var AppLabView = React.createClass({
     const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
     return (
       <StudioAppWrapper>
+        <ImportProjectDialog />
+        <ImportScreensDialog />
         <ApplabVisualizationColumn
-            isEditingProject={this.props.isEditingProject}
-            screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate} />
+          isEditingProject={this.props.isEditingProject}
+          screenIds={this.props.screenIds}
+          onScreenCreate={this.props.onScreenCreate}
+        />
         <ProtectedStatefulDiv
-            id="visualizationResizeBar"
-            className="fa fa-ellipsis-v" />
+          id="visualizationResizeBar"
+          className="fa fa-ellipsis-v"
+        />
         <InstructionsWithWorkspace>
           <CodeWorkspace style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
           {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}

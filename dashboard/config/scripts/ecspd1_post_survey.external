@@ -4,7 +4,7 @@ css 'unplugged'
 markdown <<MARKDOWN
 
  
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 # Post-Survey
  
 Now that you've completed the first phase of the professional learning program, please take a moment to complete this post-survey.

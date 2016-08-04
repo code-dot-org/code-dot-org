@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### 下面是由電腦科學教育周支援的示例專欄，目標是它可以由國家、地方立法者、商界領袖等使用。
 
   
@@ -44,5 +42,3 @@ Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/
 根據勞動統計局的資料，即到 2020 年，將有 920 萬工作崗位在專業領域。 一半的工作 — — 460 萬 — — 將在計算或資訊技術。 電腦科學是 21 世紀日益變為基礎知識。 如果我們不給予孩子機會獲得所需的技能，誰將填補這些工作呢?
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. 在整個 **[STATE]** 的學校，我們的學生將參加國家代碼小時、 解密電腦科學學科和希望吸引他們瞭解更多。 我會加入他們，和我邀請你也加入行列。 每個人都應該學會如何編寫代碼。 Visit https://hourofcode.com/<%= @country %> to learn more and get started. 和支援我們的努力，即是把電腦科學帶進在 **[STATE]** 的更多學校。.
-
-<%= view :signup_button %>

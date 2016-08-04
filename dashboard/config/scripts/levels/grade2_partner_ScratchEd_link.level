@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-08-01T21:42:03.000Z",
+  "level_num": "custom",
+  "user_id": 53,
+  "properties": {
+    "link_title": "Scratch Ed",
+    "url": "http://scratched.gse.harvard.edu/guide/files/CreativeComputing20140820_LearnerWorkbook.pdf"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

@@ -9,7 +9,7 @@ fr:
         video: Unplug1
       Unplug2:
         title: Algorithmique
-        desc: "Munis uniquement de papiers et de feutres, les élèves apprendront les quatre étapes de la pensée computationnelle. Après une brève introduction, les élèves seront divisés en groupes où ils devront créer des indications pour que les autres élèves dessinent un monstre précis (à partir d'un catalogue de monstres présélectionnés). La tâche dans son ensemble doit être décomposée, puis les équipes vont analyser tous les monstres du catalogue de modèles, résumer les différents détails des monstres, puis utiliser ces informations afin de créer un algorithme (instructions) pour qu’une autre équipe dessine un certain monstre. Les équipes échangeront alors les algorithmes et dessineront le monstre sur la base de ce qu’indique cet algorithme. Est-ce que le dessin répond aux attentes de l’équipe d’origine\\_?"
+        desc: "Munis uniquement de papiers et de feutres, les élèves apprendront les quatre étapes de la pensée computationnelle. Après une brève introduction, les élèves seront divisés en groupes où ils devront créer des indications pour que les autres élèves dessinent un monstre précis (à partir d'un catalogue de monstres présélectionnés). La tâche dans son ensemble doit être décomposée, puis les équipes vont analyser tous les monstres du catalogue de modèles, résumer les différents détails des monstres, puis utiliser ces informations afin de créer un algorithme (instructions) pour qu’une autre équipe dessine un certain monstre. Les équipes échangeront alors les algorithmes et dessineront le monstre sur la base de ce qu’indique cet algorithme. Est-ce que le dessin répond aux attentes de l’équipe d’origine?"
         pdfs:
           - unplug2
         video: Unplug2
@@ -27,13 +27,13 @@ fr:
         video: Unplug4
       Unplug5:
         title: fonctions
-        desc: "Dans cette leçon, les élèves feront un capteur de soleil à l’aide de cordes, de perles et d’un objet fétiche particulier. Les élèves suivront une série d’étapes répétitives, et il leur sera alors demandé d'identifier certains ensembles de «\\_compétences\\_» qui sont reproduites plusieurs fois. Ces compétences étant définies, elles seront appelées depuis un programme principal et tout le merveilleux processus de création sera enregistré sur une seule feuille de papier. Le programme final vise la classe entière, quel que soit leur type de cordes, de perles et d’objet fétiche. Pour permettre cela de manière efficace, les élèves devront «\\_résumer\\_» les détails de leurs matériaux spécifiques et créer des termes vagues pour les fournitures personnelles.  Cette utilisation d'espaces réservés génériques est une merveilleuse introduction aux variables."
+        desc: "Dans cette leçon, les élèves feront un capteur de soleil à l’aide de cordes, de perles et d’un objet fétiche particulier. Les élèves suivront une série d’étapes répétitives, et il leur sera alors demandé d'identifier certains ensembles de «compétences» qui sont reproduites plusieurs fois. Ces compétences étant définies, elles seront appelées depuis un programme principal et tout le merveilleux processus de création sera enregistré sur une seule feuille de papier. Le programme final vise la classe entière, quel que soit leur type de cordes, de perles et d’objet fétiche. Pour permettre cela de manière efficace, les élèves devront «résumer» les détails de leurs matériaux spécifiques et créer des termes vagues pour les fournitures personnelles.  Cette utilisation d'espaces réservés génériques est une merveilleuse introduction aux variables."
         pdfs:
           - unplug5
         video: Unplug5
       Unplug6:
         title: Les conditions
-        desc: "Il s'agit d'un jeu s’adressant à toute la classe.  Après avoir introduit la notion d’instructions conditionnelles, d’instructions «\\_Si\\_» et de boucles, la classe peut s'entrainer ensemble à l'aide d'un programme pré-écrit, d'un paquet de cartes et d'un tirage au sort."
+        desc: "Il s'agit d'un jeu s’adressant à toute la classe.  Après avoir introduit la notion d’instructions conditionnelles, d’instructions «Si» et de boucles, la classe peut s'entrainer ensemble à l'aide d'un programme pré-écrit, d'un paquet de cartes et d'un tirage au sort."
         pdfs:
           - unplug6
         video: Unplug6
@@ -51,7 +51,7 @@ fr:
         video: Unplug8
       Unplug9:
         title: Relayer la programmation
-        desc: "Cette leçon emprunte une idée d'une activité précédente (4. La programmation sur papier millimétré) et utilise ses compétences pour insister sur l'importance de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement ces programmes pour y repérer les «\\_bogues\\_»."
+        desc: "Cette leçon emprunte une idée d'une activité précédente (4. La programmation sur papier millimétré) et utilise ses compétences pour insister sur l'importance de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement ces programmes pour y repérer les «bogues»."
         pdfs:
           - unplug9
         video: Unplug9
@@ -76,7 +76,7 @@ fr:
         desc: "Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une seule commande."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: "Algorithmes du monde réel\\_: Planter une graine"
+        title: 'Algorithmes du monde réel: Planter une graine'
         desc: "Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, en utilisant comme exemple l’action de planter une graine. Elle se concentre également sur la vue d’ensemble de l'informatique et la façon dont les algorithmes jouent un rôle essentiel."
         video: C1_planting_seed
       BuildingAFoundation:
@@ -89,15 +89,15 @@ fr:
         video: C1_getting_loopy
       RelayProgramming:
         title: Programmation de relais
-        desc: "Les élèves courent une course de relais, où ils traversent rapidement le jardin pour aller écrire un algorithme basé sur une image de « Programmation sur papier millimétré\\_». Ils ne peuvent écrire qu’une seule instruction à la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour retourner à ce point."
+        desc: "Les élèves courent une course de relais, où ils traversent rapidement le jardin pour aller écrire un algorithme basé sur une image de « Programmation sur papier millimétré». Ils ne peuvent écrire qu’une seule instruction à la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour retourner à ce point."
         video: C2_relay_programming
       Conditionals:
         title: Instructions conditionnelles
-        desc: "Pour mieux comprendre les instructions conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme «\\_Si je tire une carte rouge, je gagne un point\\_», ou «\\_Si je tire une carte noire, tu gagnes un point\\_»."
+        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme «Si je tire une carte rouge, je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
         video: C2_conditionals_with_cards
       BigEvent:
         title: Le Grand Événement
-        desc: "Les élèves découvrent le concept de la programmation d’«\\_événements\\_», qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant appuiera sur des boutons à distance et les élèves réagiront en fonction du bouton choisi."
+        desc: "Les élèves découvrent le concept de la programmation d’«événements», qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant appuiera sur des boutons à distance et les élèves réagiront en fonction du bouton choisi."
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Se déplacer en toute sécurité
@@ -108,7 +108,7 @@ fr:
         desc: "Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades afin de reproduire un dessin."
         video: C2_graph_paper
       PaperPlanes:
-        title: "Algorithmes du monde réel\\_: Avions en papier"
+        title: 'Algorithmes du monde réel: Avions en papier'
         desc: "Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, plus précisément en faisant des avions en papier. Cette leçon se concentre également sur l'informatique en général et la façon dont les algorithmes jouent un rôle essentiel."
         video: C2_paper_airplanes
       BinaryBracelets:
@@ -132,7 +132,7 @@ fr:
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre le passage de paramètres (qui permettent de personnaliser une fonction sans avoir à la réécrire complètement).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: "Les algorithmes du monde réel\\_: La course de dés"
+        title: 'Les algorithmes du monde réel: La course de dés'
         desc: "Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront l'algorithme pour un jeu de course de dés."
         video: C3_dice_race
       Internet:

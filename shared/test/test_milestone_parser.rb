@@ -61,7 +61,7 @@ class TestMilestoneParser < Minitest::Test
     assert_equal 90, count
     assert_equal 6, @fetch_count
     assert_equal parser.cache, @cache
-    assert_equal LOG_SIZE*3 + 20*3, @bytes_count
+    assert_equal LOG_SIZE * 3 + 20 * 3, @bytes_count
   end
 
   def test_parse_fully_cached

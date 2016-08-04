@@ -16,4 +16,7 @@ class Languages
     @@table.select(:locale_s)
   end
 
+  def self.get_hoc_languages
+    @@table.select(:locale_s, :unique_language_s, :crowdin_code_s, :crowdin_name_s).where("crowdin_code_s != 'en'")
+  end
 end

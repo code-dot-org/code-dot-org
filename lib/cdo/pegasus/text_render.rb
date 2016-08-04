@@ -201,11 +201,11 @@ module TextRender
   #
   def self.file(path,locals={})
     engine = {
-      '.haml'=>HamlEngine,
-      '.html'=>ErbEngine,
-      '.md'=>MarkdownEngine,
-      '.txt'=>MarkdownEngine,
-      '.yml'=>YamlEngine,
+      '.haml' => HamlEngine,
+      '.html' => ErbEngine,
+      '.md' => MarkdownEngine,
+      '.txt' => MarkdownEngine,
+      '.yml' => YamlEngine,
     }[File.extname(path).downcase]
     f(engine, path, locals)
   end

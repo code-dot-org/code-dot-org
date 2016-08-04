@@ -73,15 +73,16 @@ var ScreenSelector = React.createClass({
 
     return (
       <select
-          id="screenSelector"
-          style={[
-            styles.dropdown,
-            (!this.props.hasDesignMode || this.props.isReadOnlyWorkspace) &&
-              commonStyles.hidden
-          ]}
-          value={this.props.currentScreenId || ''}
-          onChange={this.handleChange}
-          disabled={Applab.isRunning()}>
+        id="screenSelector"
+        style={[
+          styles.dropdown,
+          (!this.props.hasDesignMode || this.props.isReadOnlyWorkspace) &&
+            commonStyles.hidden
+        ]}
+        value={this.props.currentScreenId || ''}
+        onChange={this.handleChange}
+        disabled={Applab.isRunning()}
+      >
         {options}
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
         {experiments.isEnabled('applab-import') &&

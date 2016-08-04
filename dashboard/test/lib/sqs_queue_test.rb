@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'sqs/sqs_queue'
 
-class SqsQueueTest  < ActiveSupport::TestCase
+class SqsQueueTest < ActiveSupport::TestCase
 
   def test_enqueue
     queue_url = 'https://example.com/fake_queue'

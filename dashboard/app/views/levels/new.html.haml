@@ -1,8 +1,8 @@
-%h2 Choose a type of level to build
+%h1 Choose a type of level to build
 
 = link_to 'Script and Level builder how to', 'https://docs.google.com/a/code.org/document/d/1HcYloRHibxk0Axnuw3A3w_Ht3AEmBHO0IUCaYFfs838/edit?usp=sharing'
 
-%h3 Blockly
+%h2 Blockly
 %ul
   %li= link_to 'Build a Maze Level', new_level_path(type: 'Maze')
   %li= link_to 'Build a Farmer/Bee Level', new_level_path(type: 'Karel')
@@ -11,11 +11,11 @@
   %li= link_to 'Build a Playlab Droplet Level', new_level_path(type: 'StudioEC')
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
 
-%h3 Content
+%h2 Content
 %ul
   %li= link_to 'Build a Standalone Video Level', new_level_path(type: 'StandaloneVideo')
 
-%h3 DSL-Defined
+%h2 DSL-Defined
 %ul
   %li= link_to 'Build a Multi Level', new_level_path(type: 'Multi')
   %li= link_to 'Build a Match Level', new_level_path(type: 'Match')
@@ -25,7 +25,7 @@
   %li= link_to 'Build an External HTML Level', new_level_path(type: 'External')
   %li= link_to 'Build a LevelGroup Level', new_level_path(type: 'LevelGroup')
 
-%h3 CSP Apps
+%h2 CSP Apps
 %p These level types are not localized (en_us only!)
 %ul
   %li= link_to 'Build an Applab Droplet Level', new_level_path(type: 'Applab')
@@ -39,12 +39,12 @@
   %li= link_to 'Build a Free Response Level (use this for open-ended responses instead of Text Match)', new_level_path(type: 'FreeResponse')
   %li= link_to 'Build an External Link Level', new_level_path(type: 'ExternalLink')
 
-%h3 Algebra
+%h2 Algebra
 %ul
   %li= link_to 'Build a Calc Level', new_level_path(type: 'Calc')
   %li= link_to 'Build an Eval Level', new_level_path(type: 'Eval')
 
-%h3 Your Levels
+%h2 Your Levels
 - @levels.each do |level|
   %li
     = level.name
@@ -53,7 +53,7 @@
     = link_to t('crud.delete'), level_path(level, redirect: new_level_path), method: :delete
     = link_to 'Clone', level_clone_path(level), method: :post
 
-%h3 All levels
+%h2 All levels
 %ul
   %li
     = link_to 'All levels', levels_path

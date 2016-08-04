@@ -7,7 +7,7 @@
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimSlider = require('./NetSimSlider');
 
 /**

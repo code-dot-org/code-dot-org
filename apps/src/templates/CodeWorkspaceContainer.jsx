@@ -63,6 +63,7 @@ var CodeWorkspaceContainer = React.createClass({
 
     // not in redux
     topMargin: React.PropTypes.number.isRequired,
+    children: React.PropTypes.node,
   },
 
   /**

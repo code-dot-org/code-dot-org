@@ -1,0 +1,47 @@
+name 'CSP pre-assessment survey'
+title 'Pre-survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'pre-assessment survey heading1'
+level 'pre-assessment survey q1'
+level 'pre-assessment survey q2'
+level 'pre-assessment survey q3'
+level 'pre-assessment survey q4'
+level 'pre-assessment survey q5'
+level 'pre-assessment survey q6'
+level 'pre-assessment survey q7'
+level 'pre-assessment survey q8'
+
+page
+text 'pre-assessment survey heading2'
+level 'pre-assessment survey q9'
+level 'pre-assessment survey q10'
+level 'pre-assessment survey q11'
+level 'pre-assessment survey q12'
+level 'pre-assessment survey q13'
+level 'pre-assessment survey q14'
+level 'pre-assessment survey q15'
+level 'pre-assessment survey q16'
+level 'pre-assessment survey q17'
+level 'pre-assessment survey q18'
+level 'pre-assessment survey q19'
+level 'pre-assessment survey q20'
+level 'pre-assessment survey q21'
+level 'pre-assessment survey q22'
+level 'pre-assessment survey q23'
+level 'pre-assessment survey q24A'
+
+
+page
+text 'pre-assessment survey heading3'
+level 'pre-assessment survey q24'
+level 'pre-assessment survey q25A'
+level 'pre-assessment survey q26'
+level 'pre-assessment survey q27'
+
+page
+level 'pre-assessment survey q28'
+level 'pre-assessment survey q29'
+level 'pre-assessment survey q30'

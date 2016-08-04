@@ -4,13 +4,11 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Guião para a Hora de Código e Semana da Educação de Ciência computacional
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Por favor, utilize este documento para orientar a criação de sua atividade, direcionada para o utilizador que tem antecedentes na codificação, programação de computadores e ciência da computação.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -263,5 +261,3 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
-
-<%= view :signup_button %>

@@ -9,5 +9,7 @@ module.exports = {
   ICON_PREFIX_REGEX: new RegExp('^icon://'),
   NEW_SCREEN: "New screen...",
   ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN', 'DATA'),
+  DataView: utils.makeEnum('OVERVIEW', 'PROPERTIES', 'TABLE'),
   ANIMATION_LENGTH_MS: 200,
+  IMPORT_SCREEN: "Import screen...",
 };

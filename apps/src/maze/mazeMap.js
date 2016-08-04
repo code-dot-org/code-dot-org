@@ -24,16 +24,23 @@ MazeMap.prototype.forEachCell = function (cb) {
   });
 };
 
+MazeMap.prototype.getCell = function (x, y) {
+  return this.currentStaticGrid[x] && this.currentStaticGrid[x][y];
+};
+
 MazeMap.prototype.isDirt = function (x, y) {
-  return this.currentStaticGrid[x] && this.currentStaticGrid[x][y] && this.currentStaticGrid[x][y].isDirt();
+  let cell = this.getCell(x, y);
+  return cell && cell.isDirt();
 };
 
 MazeMap.prototype.getTile = function (x, y) {
-  return this.currentStaticGrid[x] && this.currentStaticGrid[x][y] && this.currentStaticGrid[x][y].getTile();
+  let cell = this.getCell(x, y);
+  return cell && cell.getTile();
 };
 
 MazeMap.prototype.getValue = function (x, y) {
-  return this.currentStaticGrid[x] && this.currentStaticGrid[x][y] && this.currentStaticGrid[x][y].getCurrentValue();
+  let cell = this.getCell(x, y);
+  return cell && cell.getCurrentValue();
 };
 
 MazeMap.prototype.setValue = function (x, y, val) {

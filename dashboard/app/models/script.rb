@@ -35,7 +35,17 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
-  validates :name, presence: true, uniqueness: { case_sensitive: false}
+
+  attr_accessor :skip_name_format_validation
+
+  validates :name,
+    presence: true,
+    uniqueness: {case_sensitive: false},
+    format: {
+      unless: :skip_name_format_validation,
+      with: /\A[a-z0-9\-]+\z/,
+      message: 'can only contain lowercase letters, numbers and dashes'
+    }
 
   include SerializedProperties
 
@@ -70,61 +80,61 @@ class Script < ActiveRecord::Base
     end
   end
 
-  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required peer_reviews_to_complete)
 
-  def Script.twenty_hour_script
+  def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
-  def Script.hoc_2014_script
+  def self.hoc_2014_script
     Script.get_from_cache(Script::HOC_NAME)
   end
 
-  def Script.starwars_script
+  def self.starwars_script
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def Script.minecraft_script
+  def self.minecraft_script
     Script.get_from_cache(Script::MINECRAFT_NAME)
   end
 
-  def Script.starwars_blocks_script
+  def self.starwars_blocks_script
     Script.get_from_cache(Script::STARWARS_BLOCKS_NAME)
   end
 
-  def Script.frozen_script
+  def self.frozen_script
     Script.get_from_cache(Script::FROZEN_NAME)
   end
 
-  def Script.course1_script
+  def self.course1_script
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
-  def Script.course2_script
+  def self.course2_script
     Script.get_from_cache(Script::COURSE2_NAME)
   end
 
-  def Script.course3_script
+  def self.course3_script
     Script.get_from_cache(Script::COURSE3_NAME)
   end
 
-  def Script.course4_script
+  def self.course4_script
     Script.get_from_cache(Script::COURSE4_NAME)
   end
 
-  def Script.infinity_script
+  def self.infinity_script
     Script.get_from_cache(Script::INFINITY_NAME)
   end
 
-  def Script.flappy_script
+  def self.flappy_script
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
-  def Script.playlab_script
+  def self.playlab_script
     Script.get_from_cache(Script::PLAYLAB_NAME)
   end
 
-  def Script.artist_script
+  def self.artist_script
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
@@ -301,10 +311,11 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
+    name == 'edit-code'
   end
 
-  def is_k1?
+  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
+  def is_k1?  # rubocop:disable PredicateName
     name == 'course1'
   end
 
@@ -334,16 +345,12 @@ class Script < ActiveRecord::Base
     name.match(Regexp.union('algebra', 'Algebra'))
   end
 
-  def show_report_bug_link?
-    beta? || k5_course?
-  end
-
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra algebraa cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?
-    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
@@ -379,16 +386,10 @@ class Script < ActiveRecord::Base
         scripts_to_add << [{
           id: script_data[:id],
           name: name,
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
-          properties: {
-                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
-                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
-                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
-                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
-                      },
+          properties: Script.build_property_hash(script_data)
         }, stages.map{|stage| stage[:scriptlevels]}.flatten]
       end
 
@@ -415,6 +416,7 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       stage_flex_category = nil
+      stage_lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
@@ -428,6 +430,7 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         stage_flex_category = raw_level.delete(:stage_flex_category)
+        stage_lockable = raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
@@ -488,7 +491,7 @@ class Script < ActiveRecord::Base
             script: script
           )
 
-        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id
@@ -537,7 +540,7 @@ class Script < ActiveRecord::Base
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
-    script.update!(options)
+    script.update!(options.merge(skip_name_format_validation: true))
     script
   end
 
@@ -547,16 +550,10 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
         Script.add_script({
           name: script_params[:name],
-          trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
-          properties: {
-                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
-                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
-                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
-                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
-          }
+          properties: Script.build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
       end
@@ -608,14 +605,38 @@ class Script < ActiveRecord::Base
   end
 
   def summarize
+    summarized_stages = stages.map(&:summarize)
+
+    if peer_reviews_to_complete
+      levels = []
+      peer_reviews_to_complete.times do |x|
+        levels << {
+            ids: [x],
+            kind: 'peer_review',
+            title: '',
+            url: '',
+            name: I18n.t('peer_review.reviews_unavailable'),
+            icon: 'fa-lock',
+            locked: true
+        }
+      end
+
+      peer_review_section = {
+          name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+          flex_category: 'Peer Review',
+          levels: levels
+      }
+
+      summarized_stages << peer_review_section
+    end
+
     summary = {
       id: id,
       name: name,
-      plc: professional_learning_course,
-      stages: stages.map(&:summarize),
+      plc: professional_learning_course?,
+      stages: summarized_stages,
+      peerReviewsRequired: peer_reviews_to_complete || 0
     }
-
-    summary[:trophies] = Concept.summarize_all if trophies
 
     summary
   end
@@ -627,5 +648,15 @@ class Script < ActiveRecord::Base
 
   def localized_title
     I18n.t "data.script.name.#{name}.title"
+  end
+
+  def self.build_property_hash(script_data)
+    {
+      pd: script_data[:pd] || false, # default false
+      admin_required: script_data[:admin_required] || false, # default false
+      professional_learning_course: script_data[:professional_learning_course] || false, # default false
+      student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
+      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
+    }.compact
   end
 end
