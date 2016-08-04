@@ -1,32 +1,20 @@
+/* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
-import "script!@cdo/apps/../lib/p5play/p5";
-import "script!@cdo/apps/../lib/p5play/p5.play";
-import sinon from 'sinon';
+import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
-import {injectJSInterpreter} from '@cdo/apps/gamelab/GameLabSprite';
+import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabSprite', function () {
-  var gameLabP5;
-  let createSprite;
+  let gameLabP5, createSprite;
 
   beforeEach(function () {
-    gameLabP5 = new GameLabP5();
-    gameLabP5.init({onExecutionStarting: sinon.spy(), onPreload: sinon.spy(), onSetup: sinon.spy(), onDraw: sinon.spy()});
-    gameLabP5.startExecution();
-
-    var interpreter = {getCurrentState: function () {return {};}};
-    injectJSInterpreter(interpreter);
+    gameLabP5 = createGameLabP5();
     createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
-  });
-
-  afterEach(function () {
-    gameLabP5.resetExecution();
   });
 
   it('aliases setSpeed to setSpeedAndDirection', function () {
     let sprite1 = createSprite(0, 0);
-    sinon.spy(sprite1, 'setSpeed');
+    spy(sprite1, 'setSpeed');
     expect(sprite1.setSpeed.calledOnce).to.be.false;
 
     const speed = 5;
