@@ -607,7 +607,6 @@ class Script < ActiveRecord::Base
   def summarize
     summarized_stages = stages.map(&:summarize)
 
-    # TODO: ask mehal why these are locked
     if peer_reviews_to_complete
       levels = []
       peer_reviews_to_complete.times do |x|

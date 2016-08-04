@@ -4,6 +4,7 @@ import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { ViewType, setViewType, selectSection } from '../../stageLockRedux';
+import commonMsg from '@cdo/locale';
 
 const styles = {
   viewAs: {
@@ -60,27 +61,25 @@ const ScriptTeacherPanel = React.createClass({
       unlockedStageNames
     } = this.props;
     const hasSections = Object.keys(sections).length > 0;
-    // TODO - i18n
-    // TODO - don't forget section is conditional on having unlocked stages
     return (
       <TeacherPanel>
-        <h3>Teacher Panel</h3>
+        <h3>{commonMsg.teacherPanel()}</h3>
         <div className="content">
           <div className="non-scrollable-wrapper">
             <div style={styles.viewAs}>
-              View page as:
+              {commonMsg.viewPageAs()}
             </div>
             <div style={styles.toggleGroup}>
               <ToggleGroup
                 selected={viewAs}
                 onChange={setViewType}
               >
-                <button value={ViewType.Student}>Student</button>
-                <button value={ViewType.Teacher}>Teacher</button>
+                <button value={ViewType.Student}>{commonMsg.student()}</button>
+                <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
               </ToggleGroup>
             </div>
           </div>
-          {!sectionsLoaded && <div style={styles.text}>Loading...</div>}
+          {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
           {hasSections &&
             <select
               name="sections"
@@ -98,17 +97,16 @@ const ScriptTeacherPanel = React.createClass({
           {hasSections && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
-                Select a section to be able to lock and unlock assessments or
-                surveys. Click the lock settings button in the stage to the left.
+                {commonMsg.selectSection()}
               </div>
               {unlockedStageNames.length > 0 &&
                 <div>
                   <div style={styles.text}>
                     <FontAwesome icon="exclamation-triangle" style={styles.exclamation}/>
-                    <div style={styles.dontForget}>Don't forget</div>
+                    <div style={styles.dontForget}>{commonMsg.dontForget}</div>
                   </div>
                   <div style={styles.text}>
-                    Lock the following stages that are currently unlocked:
+                    {commonMsg.lockFollowing()}
                     <ul>
                       {unlockedStageNames.map((name, index) => (
                         <li key={index}>{name}</li>)
