@@ -1,27 +1,25 @@
 name 'ECSPD U4 D 2-3 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 2-3 Scratch – Name Project
+# Day 2-3 Scratch &mdash; Name Project
 
 First, let's explore the second lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 139.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=139)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will use the "when green flag clicked" block to complete the name project.
 
-#### Common Difficulties
+## Common Difficulties
 
 Students will have the opportunity to write a program based on their own name.  Many students will want to do something elaborate, but not have the skill set to do so. Remind them that you will be spending the next month learning about all of the blocks in Scratch and how to use them to create really cool programs.
-<br><br>
+
 You'll be working off of the name.sb file and some students might struggle with saving and opening files in the Scratch environment.
-<br><br>
+
 For this lesson you need – [name.sb file](http://www.exploringcs.org/curriculum)
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -45,6 +43,6 @@ For this lesson you need – [name.sb file](http://www.exploringcs.org/curriculu
 - Changing Color - [http://learnscratch.org/sc1-l3](http://learnscratch.org/sc1-l3)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
