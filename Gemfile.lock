@@ -305,6 +305,7 @@ GEM
     multipart-post (2.0.0)
     mysql2 (0.3.20)
     naturally (1.3.0)
+    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -631,6 +632,7 @@ DEPENDENCIES
   mocha
   mysql2 (~> 0.3.13)
   naturally
+  net-http-persistent
   net-scp
   net-ssh
   newrelic_rpm (~> 3.10.0.279)
