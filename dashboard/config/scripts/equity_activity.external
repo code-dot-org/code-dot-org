@@ -3,7 +3,10 @@ title 'Initial Activity'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-# Leading a Discussion on Equity in PD >> Initial Activity
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+
+
+### Leading a Discussion on Equity in PD >> Initial Activity
 
 _(approx 10 minutes)_
 
