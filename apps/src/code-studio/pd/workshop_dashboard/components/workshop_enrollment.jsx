@@ -1,8 +1,8 @@
-/*
-  Displays nicely-formatted session time for a workshop.
+/**
+ * Displays nicely-formatted session time for a workshop.
 */
 import React from 'react';
-const Table = require('react-bootstrap').Table;
+import {Table} from 'react-bootstrap';
 
 let styles = {
   th: {
@@ -73,4 +73,4 @@ const WorkshopEnrollment = React.createClass({
   }
 });
 
-module.exports = WorkshopEnrollment;
+export default WorkshopEnrollment;

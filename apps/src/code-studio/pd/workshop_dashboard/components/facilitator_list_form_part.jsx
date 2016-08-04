@@ -1,12 +1,9 @@
-/*
-  Dynamic list of facilitator select controls for creating & editing workshops.
+/**
+ * Dynamic list of facilitator select controls for creating & editing workshops.
  */
 
-var _ = require('lodash');
 import React from 'react';
-var Row = require('react-bootstrap').Row;
-var Col = require('react-bootstrap').Col;
-var Button = require('react-bootstrap').Button;
+import {Row, Col, Button} from 'react-bootstrap';
 
 var MAX_FACILITATORS = 10;
 
@@ -39,17 +36,17 @@ var FacilitatorListFormPart = React.createClass({
     onChange: React.PropTypes.func
   },
 
-  handleAddClick: function (e) {
+  handleAddClick() {
     this.props.facilitators.push({id: -1});
     this.props.onChange(this.props.facilitators);
   },
 
-  handleRemoveClick: function (i, e) {
+  handleRemoveClick(i) {
     this.props.facilitators.splice(i, 1)[0];
     this.props.onChange(this.props.facilitators);
   },
 
-  renderRemoveButton: function (i) {
+  renderRemoveButton(i) {
     return (
       <Button onClick={this.handleRemoveClick.bind(null, i)} >
         <i className="fa fa-minus" />
@@ -57,7 +54,7 @@ var FacilitatorListFormPart = React.createClass({
     );
   },
 
-  renderFacilitatorRows: function () {
+  renderFacilitatorRows() {
     if (!this.props.readOnly && this.props.facilitators.length === 0) {
       // Start with a placeholder empty row.
       this.props.facilitators.push({id: -1});
@@ -78,11 +75,11 @@ var FacilitatorListFormPart = React.createClass({
     return (<div>{rows}</div>);
   },
 
-  renderFacilitatorDisplay: function (facilitator) {
+  renderFacilitatorDisplay(facilitator) {
     return `${facilitator.name} (${facilitator.email})`;
   },
 
-  renderFacilitatorReadOnlyRow: function (facilitator, i) {
+  renderFacilitatorReadOnlyRow(facilitator, i) {
     return (
       <Row key={i}>
         <Col sm={8}>
@@ -97,7 +94,7 @@ var FacilitatorListFormPart = React.createClass({
     );
   },
 
-  renderFacilitatorEditRow: function (facilitator, i, facilitators, filteredAvailableFacilitators) {
+  renderFacilitatorEditRow(facilitator, i, facilitators, filteredAvailableFacilitators) {
     if (filteredAvailableFacilitators.length === 0) {
       var text = this.props.course === '' ? 'Please select a course' : `No facilitators are available for ${this.props.course}`;
       return (
@@ -142,7 +139,7 @@ var FacilitatorListFormPart = React.createClass({
     );
   },
 
-  renderFacilitatorOption: function (facilitator) {
+  renderFacilitatorOption(facilitator) {
     if (facilitator.id === -1) {
       return (
         <option key={-1}>-- Choose a facilitator --</option>
@@ -156,13 +153,13 @@ var FacilitatorListFormPart = React.createClass({
     );
   },
 
-  handleFacilitatorChange: function (i, selectedId) {
+  handleFacilitatorChange(i, selectedId) {
     var selectedFacilitator = this.props.availableFacilitators.find((f) => f.id === parseInt(selectedId, 10));
     this.props.facilitators[i] = selectedFacilitator;
     this.props.onChange(this.props.facilitators);
   },
 
-  render: function () {
+  render() {
     return (
       <div className="facilitatorList">
         <h3>Facilitators</h3>
@@ -171,4 +168,4 @@ var FacilitatorListFormPart = React.createClass({
     );
   }
 });
-module.exports = FacilitatorListFormPart;
+export default FacilitatorListFormPart;

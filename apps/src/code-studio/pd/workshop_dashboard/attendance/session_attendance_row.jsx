@@ -1,10 +1,9 @@
-/*
-  Display and edit attendance for a single teacher in a session,
-  for use in SessionAttendance.
+/**
+ * Display and edit attendance for a single teacher in a session,
+ * for use in SessionAttendance.
  */
-import React from 'react';
-var OverlayTrigger = require('react-bootstrap').OverlayTrigger;
-var Tooltip = require('react-bootstrap').Tooltip;
+import React from "react";
+import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
 var styles = {
   contents: {
@@ -30,13 +29,13 @@ var SessionAttendanceRow = React.createClass({
     isReadOnly: React.PropTypes.bool
   },
 
-  isValid: function () {
+  isValid() {
     // Must have an account and have joined the section before being marked attended,
     // unless overridden by an admin.
     return (this.props.attendance.user_id && this.props.attendance.in_section) || this.props.adminOverride;
   },
 
-  handleClickAttended: function () {
+  handleClickAttended() {
     if (this.isValid()) {
       this.props.onChange();
     }
@@ -99,4 +98,4 @@ var SessionAttendanceRow = React.createClass({
     );
   }
 });
-module.exports = SessionAttendanceRow;
+export default SessionAttendanceRow;

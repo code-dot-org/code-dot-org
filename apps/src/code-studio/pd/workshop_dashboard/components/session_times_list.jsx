@@ -1,8 +1,8 @@
-/*
-  Displays a list of nicely-formatted session times for a workshop.
+/**
+ * Displays a list of nicely-formatted session times for a workshop.
  */
 import React from 'react';
-var SessionTime = require('./session_time');
+import SessionTime from './session_time';
 
 var SessionTimesList = React.createClass({
   propTypes: {
@@ -13,8 +13,8 @@ var SessionTimesList = React.createClass({
     ).isRequired
   },
 
-  render: function () {
-    var listItems = this.props.sessions.map(function (session) {
+  render() {
+    var listItems = this.props.sessions.map((session) => {
       return (
         <li key={session.id} style={{whiteSpace: 'nowrap'}}>
           <SessionTime session={session}/>
@@ -29,4 +29,4 @@ var SessionTimesList = React.createClass({
     );
   }
 });
-module.exports = SessionTimesList;
+export default SessionTimesList;
