@@ -79,6 +79,7 @@ levels.custom = utils.extend(levels.sandbox, {
 
     // Sprites
     "var sprite = createSprite": null,
+    "createEdgeSprites": null,
     "setSpeed": null,
     "getDirection": null,
     "getSpeed": null,
