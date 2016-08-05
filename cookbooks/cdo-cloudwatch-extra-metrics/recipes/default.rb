@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-apt_package ['libwww-perl', 'libdatetime-perl']
+apt_package ['unzip', 'libwww-perl', 'libdatetime-perl']
 
 remote_file "#{Chef::Config[:file_cache_path]}/CloudWatchMonitoringScripts-1.2.1.zip" do
   source "http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip"
