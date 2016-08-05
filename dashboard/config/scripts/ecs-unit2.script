@@ -55,7 +55,7 @@ named_level 'ECS Unit 2 Challenge Submission'
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
-level 'ECSPD 1 page template'
+# level 'ECSPD 1 page template'
 
 stage 'Day 1-2 Solving Community Problems with Data'
 stage 'Day 3 Intro To Problem Solving: Candy Bar Activity'

@@ -371,6 +371,12 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      Categorizing Data: {}
+      Cleaning Data: {}
+      'Collection A: Good and Bad Visualizations':
+        description here: description here
+        title: title
+      'Collection B: Good and Bad Visualizations': {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
       ECS PD1 teaching strategies:
@@ -715,6 +721,7 @@ en:
       ECSPD3-u6 share out overview: {}
       ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
+      Editing Chart Appearance: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Empty Markdown Level: {}
@@ -747,6 +754,7 @@ en:
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
         description here: description here
         title: title
@@ -770,6 +778,11 @@ en:
         tour of the PD space: tour of the PD space
       Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
+      Making Pivot Tables Part 1 - The Basics: {}
+      Making Pivot Tables Part 2 - Manipulation and Visualization: {}
+      Making a Bar Chart: {}
+      Making a Line Chart: {}
+      Making a Scatter Plot: {}
       MarbleMaze:
         Marble Maze: Marble Maze
         Marble Maze Activity for K Level: Marble Maze Activity for K Level
