@@ -19,6 +19,11 @@ VOICES = {
     VOICE: 'ella22k',
     SPEED: 140,
     SHAPE: 98
+  },
+  sharon: {
+    VOICE: 'sharon22k',
+    SPEED: 180,
+    SHAPE: 100
   }
 }
 
@@ -80,10 +85,12 @@ module TextToSpeech
     if self.tts_should_update_instructions?
       TextToSpeech.tts_upload_to_s3(self.tts_instructions_text, self.tts_instructions_audio_file(:rosie), :rosie)
       TextToSpeech.tts_upload_to_s3(self.tts_instructions_text, self.tts_instructions_audio_file(:ella), :ella)
+      TextToSpeech.tts_upload_to_s3(self.tts_instructions_text, self.tts_instructions_audio_file(:sharon), :sharon)
     end
     if self.tts_should_update_markdown_instructions?
       TextToSpeech.tts_upload_to_s3(self.tts_markdown_instructions_text, self.tts_markdown_instructions_audio_file(:rosie), :rosie)
       TextToSpeech.tts_upload_to_s3(self.tts_markdown_instructions_text, self.tts_markdown_instructions_audio_file(:ella), :ella)
+      TextToSpeech.tts_upload_to_s3(self.tts_markdown_instructions_text, self.tts_markdown_instructions_audio_file(:sharon), :sharon)
     end
   end
 end
