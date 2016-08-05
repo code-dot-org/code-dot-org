@@ -44,6 +44,7 @@ module TextToSpeech
 
   def self.tts_upload_to_s3(text, filename, voice=:rosie)
     return if text.blank?
+    return if AWS::S3.exists_in_bucket(TTS_BUCKET, filename)
     url = acapela_text_to_audio_url(text, VOICES[voice][:VOICE], VOICES[voice][:SPEED], VOICES[voice][:SHAPE])
     return if url.nil?
     uri = URI.parse(url)
