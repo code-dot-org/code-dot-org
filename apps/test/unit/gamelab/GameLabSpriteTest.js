@@ -27,6 +27,38 @@ describe('GameLabSprite', function () {
     });
   });
 
+  describe('property aliases', function () {
+    let testSprite;
+
+    beforeEach(function () {
+      testSprite = createSprite();
+    });
+
+    it('aliases velocity.x to velocityX', function () {
+      testSprite.velocity.x = 1;
+      expect(testSprite.velocity.x).to.equal(testSprite.velocityX);
+      const newValue = 2;
+      testSprite.velocityX = newValue;
+      expect(testSprite.velocity.x).to.equal(testSprite.velocityX).to.equal(newValue);
+    });
+
+    it('aliases velocity.y to velocityY', function () {
+      testSprite.velocity.y = 1;
+      expect(testSprite.velocity.y).to.equal(testSprite.velocityY);
+      const newValue = 2;
+      testSprite.velocityY = newValue;
+      expect(testSprite.velocity.y).to.equal(testSprite.velocityY).to.equal(newValue);
+    });
+
+    it('aliases life to lifetime', function () {
+      testSprite.life = 1;
+      expect(testSprite.life).to.equal(testSprite.lifetime);
+      const newValue = 2;
+      testSprite.lifetime = newValue;
+      expect(testSprite.life).to.equal(testSprite.lifetime).to.equal(newValue);
+    });
+  });
+
   describe('isTouching', function () {
     it('returns false if the collider and colliding sprite dont overlap', function () {
       var sprite1 = createSprite(0, 0, 100, 100);
