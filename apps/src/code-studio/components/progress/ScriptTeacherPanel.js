@@ -131,18 +131,28 @@ const ScriptTeacherPanel = React.createClass({
   }
 });
 
-export default connect(state => {
+export default connect((state, ownProps) => {
+  const { viewAs, sections, selectedSection, sectionsLoaded } = state.stageLock;
+  const currentSection = sections[selectedSection];
+  const stages = currentSection ? currentSection.stages : {};
+
+  const unlockedStageIds = Object.keys(stages).filter(stageId => {
+    // filter to only stages that are unlocked
+    const stageStudents = currentSection.stages[stageId];
+    return stageStudents.some(student => !student.locked);
+  });
+
   let stageNames = {};
   state.progress.stages.forEach(stage => {
     stageNames[stage.id] = stage.name;
   });
 
   return {
-    viewAs: state.stageLock.viewAs,
-    sections: state.stageLock.sections,
-    selectedSection: state.stageLock.selectedSection,
-    sectionsLoaded: state.stageLock.sectionsLoaded,
-    unlockedStageNames: state.stageLock.unlockedStageIds.map(id => stageNames[id])
+    viewAs,
+    sections,
+    selectedSection,
+    sectionsLoaded,
+    unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({
   setViewType(viewAs) {

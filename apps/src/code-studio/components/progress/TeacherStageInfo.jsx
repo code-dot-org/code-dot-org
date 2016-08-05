@@ -6,6 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLock from './StageLock';
 import color from '../../../color';
 import progressStyles from './progressStyles';
+import { stageShape } from './types';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -46,26 +47,24 @@ const styles = {
 
 const TeacherStageInfo = React.createClass({
   propTypes: {
-    stageId: React.PropTypes.number.isRequired,
-    lessonPlanUrl: React.PropTypes.string,
-    lockable: React.PropTypes.bool.isRequired,
-    unlocked: React.PropTypes.bool.isRequired,
-    sectionsLoaded: React.PropTypes.bool.isRequired
+    stage: stageShape
   },
 
   clickLessonPlan() {
-    window.open(this.props.lessonPlanUrl, '_blank');
+    window.open(this.props.stage.lesson_plan_html_url, '_blank');
   },
 
   render() {
-    if (!this.props.lockable && !this.props.lessonPlanUrl) {
+    const { stage } = this.props;
+    const lessonPlanUrl = stage.lesson_plan_html_url;
+    if (!stage.lockable && !lessonPlanUrl) {
       return null;
     }
 
     return (
       <div style={styles.container}>
         <div style={styles.main}>
-          {this.props.lessonPlanUrl &&
+          {lessonPlanUrl &&
             <span style={styles.lessonPlan} onClick={this.clickLessonPlan}>
               <FontAwesome icon="file-text" style={styles.dotIcon}/>
               <span style={styles.lessonPlanText}>
@@ -73,12 +72,8 @@ const TeacherStageInfo = React.createClass({
               </span>
             </span>
           }
-          {this.props.lockable &&
-            <StageLock
-              stageId={this.props.stageId}
-              sectionsLoaded={this.props.sectionsLoaded}
-              unlocked={this.props.unlocked}
-            />
+          {stage.lockable &&
+            <StageLock stage={stage}/>
           }
         </div>
       </div>

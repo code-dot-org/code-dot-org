@@ -23,7 +23,6 @@ const initialState = {
   sections: {},
   selectedSection: null,
   sectionsLoaded: false,
-  unlockedStageIds: [],
   lockDialogStageId: null,
   // The locking info for the currently selected section/stage
   lockStatus: [],
@@ -47,7 +46,6 @@ export default function reducer(state = initialState, action) {
       sections: action.sections,
       sectionsLoaded: true,
       selectedSection: sectionId,
-      unlockedStageIds: unlockedStages(currentSection)
     });
   }
 
@@ -59,7 +57,6 @@ export default function reducer(state = initialState, action) {
     const currentSection = state.sections[sectionId];
     return Object.assign({}, state, {
       selectedSection: sectionId,
-      unlockedStageIds: unlockedStages(currentSection)
     });
   }
 
@@ -109,7 +106,6 @@ export default function reducer(state = initialState, action) {
     const nextState = _.cloneDeep(state);
     nextState.sections[selectedSection].stages[stageId] = nextStage;
     nextState.lockStatus = nextLockStatus;
-    nextState.unlockedStageIds = unlockedStages(nextState.sections[selectedSection]);
     return nextState;
   }
 
