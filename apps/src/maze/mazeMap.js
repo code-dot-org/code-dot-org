@@ -121,9 +121,11 @@ MazeMap.getAllStaticGrids = variableGrid => {
 };
 
 
-MazeMap.deserialize = (serializedValues, cellClass) => new MazeMap(serializedValues.map(row => row.map(cellClass.deserialize)));
+MazeMap.deserialize = (serializedValues, cellClass) =>
+    new MazeMap(serializedValues.map(row => row.map(cellClass.deserialize)));
 
-MazeMap.parseFromOldValues = (map, initialDirt, cellClass) => new MazeMap(map.map((row, x) => row.map((mapCell, y) => {
-  const initialDirtCell = initialDirt && initialDirt[x][y];
-  return cellClass.parseFromOldValues(mapCell, initialDirtCell);
-})));
+MazeMap.parseFromOldValues = (map, initialDirt, cellClass) =>
+  new MazeMap(map.map((row, x) => row.map((mapCell, y) => {
+    const initialDirtCell = initialDirt && initialDirt[x][y];
+    return cellClass.parseFromOldValues(mapCell, initialDirtCell);
+  })));
