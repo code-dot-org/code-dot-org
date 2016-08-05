@@ -82,7 +82,6 @@ var projectileCollisions = false;
 var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
-var spriteOverrides = {};
 
 var customGameLogic = null;
 
@@ -104,10 +103,6 @@ exports.enableSpritesOutsidePlayspace = function (blockly) {
 
 exports.setStartAvatars = function (avatarList) {
   startAvatars = avatarList.slice(0);
-};
-
-exports.setSpriteOverides = function (overrides) {
-  spriteOverrides = overrides;
 };
 
 exports.registerCustomGameLogic = function (customGameLogicToRegister) {
@@ -155,10 +150,7 @@ exports.install = function (blockly, blockInstallOptions) {
   function startingSpriteImageDropdown() {
     var spriteNumbers = _.range(0, spriteCount);
     var choices = _.map(spriteNumbers, function (index) {
-      var imageIndex = spriteOverrides[index] === undefined
-          ? index
-          : spriteOverrides[index];
-      var skinId = startAvatars[imageIndex];
+      var skinId = startAvatars[index];
       return [skin[skinId].dropdownThumbnail, index.toString()];
     });
     return new blockly.FieldImageDropdown(choices, skin.dropdownThumbnailWidth,
@@ -346,7 +338,7 @@ exports.install = function (blockly, blockInstallOptions) {
             .appendTitle(commonMsg.when())
             .appendTitle(new blockly.FieldImage(skin.clickIcon))
             .appendTitle(new blockly.FieldImage(
-                skin[startAvatars[spriteOverrides[0] || 0]].dropdownThumbnail,
+                skin[startAvatars[0]].dropdownThumbnail,
                 skin.dropdownThumbnailWidth,
                 skin.dropdownThumbnailHeight
             ));

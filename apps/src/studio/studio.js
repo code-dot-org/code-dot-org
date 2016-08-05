@@ -1706,7 +1706,7 @@ Studio.initSprites = function () {
 
   Studio.spriteGoals_ = [];
 
-  Studio.spriteOverrides = {};
+  let spriteOverrides = {};
 
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
@@ -1725,7 +1725,8 @@ Studio.initSprites = function () {
           if (adjustedSprite < 0) {
             adjustedSprite += Studio.startAvatars.length;
           }
-          Studio.spriteOverrides[Studio.spriteCount] = adjustedSprite;
+          spriteOverrides[Studio.spriteCount] =
+            Studio.startAvatars[adjustedSprite];
         }
         Studio.spriteStart_[Studio.spriteCount] = Object.assign({}, cell, {
               x: col * Studio.SQUARE_SIZE,
@@ -1736,11 +1737,12 @@ Studio.initSprites = function () {
     }
   }
 
+  Object.assign(Studio.startAvatars, spriteOverrides);
+
   if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
-    blocks.setSpriteOverides(Studio.spriteOverrides);
 
     if (level.projectileCollisions) {
       blocks.enableProjectileCollisions(Blockly);
