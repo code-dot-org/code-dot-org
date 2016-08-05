@@ -10,7 +10,7 @@ def build_all?
 end
 
 def running_ui_tests?
-  ENV['CIRCLE_NODE_INDEX'] == 1
+  ENV['CIRCLE_NODE_INDEX'] == '1'
 end
 
 def build_if_files_changed(projects, &block)
