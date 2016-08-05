@@ -87,13 +87,18 @@ module.exports.createSprite = function (x, y, width, height) {
     return s.animation ? s.animation.frameChanged : false;
   };
 
-  s.destroy = function () {
-    s.remove();
+  /**
+   * Map from existing method names to new alias names we want to use in GameLab.
+   * @type {{string: string}}
+   */
+  const ALIASED_METHODS = {
+    'remove': 'destroy',
+    'setSpeed': 'setSpeedAndDirection'
   };
-
-  s.setSpeedAndDirection = function () {
-    return s.setSpeed.apply(s, arguments);
-  };
+  Object.keys(ALIASED_METHODS).forEach(originalMethodName => {
+    const newMethodName = ALIASED_METHODS[originalMethodName];
+    s[newMethodName] = s[originalMethodName];
+  });
 
   s.pointTo = function (x, y) {
     var yDelta = y - s.position.y;

@@ -1,6 +1,5 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
-import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
@@ -12,16 +11,20 @@ describe('GameLabSprite', function () {
     createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
   });
 
-  it('aliases setSpeed to setSpeedAndDirection', function () {
-    let sprite1 = createSprite(0, 0);
-    spy(sprite1, 'setSpeed');
-    expect(sprite1.setSpeed.calledOnce).to.be.false;
+  describe('method aliases', function () {
+    let testSprite;
 
-    const speed = 5;
-    const direction = 180;
-    sprite1.setSpeedAndDirection(speed, direction);
-    expect(sprite1.setSpeed.calledOnce).to.be.true;
-    expect(sprite1.setSpeed.calledWith(speed, direction)).to.be.true;
+    beforeEach(function () {
+      testSprite = createSprite();
+    });
+
+    it('aliases setSpeed to setSpeedAndDirection', function () {
+      expect(testSprite.setSpeedAndDirection).to.equal(testSprite.setSpeed);
+    });
+
+    it('aliases remove to destroy', function () {
+      expect(testSprite.destroy).to.equal(testSprite.remove);
+    });
   });
 
   describe('isTouching', function () {
