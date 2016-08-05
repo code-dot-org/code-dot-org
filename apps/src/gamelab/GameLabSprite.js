@@ -6,6 +6,8 @@ import _ from 'lodash';
  * @type {{string: string}}
  */
 const ALIASED_PROPERTIES = {
+  'position.x': 'x',
+  'position.y': 'y',
   'velocity.x': 'velocityX',
   'velocity.y': 'velocityY',
   'life': 'lifetime'
@@ -172,26 +174,6 @@ module.exports.createSprite = function (x, y, width, height) {
       if (s.animation) {
         s.animation.frameDelay = value;
       }
-    }
-  });
-
-  Object.defineProperty(s, 'x', {
-    enumerable: true,
-    get: function () {
-      return s.position.x;
-    },
-    set: function (value) {
-      s.position.x = value;
-    }
-  });
-
-  Object.defineProperty(s, 'y', {
-    enumerable: true,
-    get: function () {
-      return s.position.y;
-    },
-    set: function (value) {
-      s.position.y = value;
     }
   });
 

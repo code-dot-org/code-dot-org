@@ -34,6 +34,22 @@ describe('GameLabSprite', function () {
       testSprite = createSprite();
     });
 
+    it('aliases position.x to positionX', function () {
+      testSprite.position.x = 1;
+      expect(testSprite.position.x).to.equal(testSprite.x);
+      const newValue = 2;
+      testSprite.x = newValue;
+      expect(testSprite.position.x).to.equal(testSprite.x).to.equal(newValue);
+    });
+
+    it('aliases position.y to positionY', function () {
+      testSprite.position.y = 1;
+      expect(testSprite.position.y).to.equal(testSprite.y);
+      const newValue = 2;
+      testSprite.y = newValue;
+      expect(testSprite.position.y).to.equal(testSprite.y).to.equal(newValue);
+    });
+
     it('aliases velocity.x to velocityX', function () {
       testSprite.velocity.x = 1;
       expect(testSprite.velocity.x).to.equal(testSprite.velocityX);
