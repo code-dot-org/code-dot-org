@@ -21,11 +21,11 @@ import {
 var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
-    currentLevelId, saveAnswersBeforeNavigation, viewingOtherUser) {
+    currentLevelId, saveAnswersBeforeNavigation) {
   const store = initializeStoreWithProgress({
     name: scriptName,
     stages: [stageData]
-  }, currentLevelId, saveAnswersBeforeNavigation, viewingOtherUser);
+  }, currentLevelId, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
     level => level.submitted ? SUBMITTED_RESULT : level.result)));
@@ -48,8 +48,8 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
  * @param {string?} currentLevelId - Set when viewing course progress from our
  *   dropdown vs. the course progress page
  */
-progress.renderCourseProgress = function (scriptData, currentLevelId, viewingOtherUser) {
-  const store = initializeStoreWithProgress(scriptData, currentLevelId, false, viewingOtherUser);
+progress.renderCourseProgress = function (scriptData, currentLevelId) {
+  const store = initializeStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
   $.ajax(
@@ -100,7 +100,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId, viewingOth
  * @returns {object} The created redux store
  */
 function initializeStoreWithProgress(scriptData, currentLevelId,
-    saveAnswersBeforeNavigation = false, viewingOtherUser = false) {
+    saveAnswersBeforeNavigation = false) {
   const store = getStore();
 
   store.dispatch(initProgress({
@@ -118,7 +118,8 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.
-  if (!viewingOtherUser) {
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+  if (!isViewingStudentAnswer) {
     store.subscribe(() => {
       clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
     });
