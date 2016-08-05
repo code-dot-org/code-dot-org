@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Pagauk 3 Sukilimo Pilotus.",
   "failedChangeSettingSettings": "Pasidaryk žaidimą pagal save! Kad išspręstum šį galvosūkį, tau reikia pakeisti savo robotą ir nustatyti jo greitį.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }
