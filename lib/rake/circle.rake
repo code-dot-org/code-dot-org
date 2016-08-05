@@ -1,6 +1,5 @@
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-require 'securerandom'
 
 RUN_UI_TESTS_TAG = '[test ui]'
 RUN_ALL_TESTS_TAG = '[test all]'
