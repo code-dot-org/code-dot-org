@@ -7,6 +7,7 @@ import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';
 import commonMsg from '@cdo/locale';
 import { openLockDialog, closeLockDialog, lockStage } from '../../stageLockRedux';
+import { stageShape } from './types';
 
 const styles = {
   lockSettingsText: {
@@ -26,20 +27,22 @@ const styles = {
 
 const StageLock = React.createClass({
   propTypes: {
+    stage: stageShape,
+
+    // redux provided
     sectionsLoaded: React.PropTypes.bool.isRequired,
-    unlocked: React.PropTypes.bool.isRequired, // TODO - connect?
-    stageId: React.PropTypes.number.isRequired,
+    unlocked: React.PropTypes.bool.isRequired,
     openLockDialog: React.PropTypes.func.isRequired,
     closeLockDialog: React.PropTypes.func.isRequired,
     lockStage: React.PropTypes.func.isRequired
   },
 
   openLockDialog() {
-    this.props.openLockDialog(this.props.stageId);
+    this.props.openLockDialog(this.props.stage.id);
   },
 
   lockStage() {
-    this.props.lockStage(this.props.stageId);
+    this.props.lockStage(this.props.stage.id);
   },
 
   render() {
@@ -73,8 +76,21 @@ const StageLock = React.createClass({
   }
 });
 
-export default connect(() => ({
-}), dispatch => ({
+export default connect((state, ownProps) => {
+  const { sectionsLoaded, sections, selectedSection } = state.stageLock;
+  let unlocked = false;
+  if (sectionsLoaded) {
+    const currentSection = sections[selectedSection];
+    const stageStudents = currentSection.stages[ownProps.stage.id];
+
+    unlocked = stageStudents.some(student => !student.locked);
+  }
+
+  return {
+    unlocked,
+    sectionsLoaded
+  };
+}, dispatch => ({
   openLockDialog(stageId) {
     dispatch(openLockDialog(stageId));
   },
