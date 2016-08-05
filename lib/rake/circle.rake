@@ -67,20 +67,13 @@ namespace :circle do
   desc "Runs tests for changed sub-folders, or all tests if #{RUN_ALL_TESTS_TAG} is present in the most recent commit message."
   task :run_tests do
     if GitUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
-      HipChat.log "Commit message: '#{GitUtils.latest_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all tests."
+      HipChat.log "Commit message: '#{GitUtils.latest_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all linting and tests."
+      RakeUtils.rake_stream_output 'lint:all'
       RakeUtils.rake_stream_output 'test:all'
     else
-      RakeUtils.rake_stream_output 'test:changed'
-    end
-  end
-
-  desc "Runs linting for changed sub-folders, or all linting if #{RUN_ALL_TESTS_TAG} is present in the most recent commit message."
-  task :run_linting do
-    if GitUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
-      HipChat.log "Commit message: '#{GitUtils.latest_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all linting."
-      RakeUtils.rake_stream_output 'lint:all'
-    else
+      HipChat.log "Commit message: '#{GitUtils.latest_commit_message}' does not contain #{RUN_ALL_TESTS_TAG}, running linting and tests for changed projects."
       RakeUtils.rake_stream_output 'lint:changed'
+      RakeUtils.rake_stream_output 'test:changed'
     end
   end
 
