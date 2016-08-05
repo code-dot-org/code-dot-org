@@ -20,6 +20,7 @@ import {
   ButtonToolbar,
   Button
 } from 'react-bootstrap';
+import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
@@ -334,7 +335,7 @@ const Workshop = React.createClass({
     );
 
     const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
-      const date = moment.utc(session.start).format('MM/DD/YY');
+      const date = moment.utc(session.start).format(DATE_FORMAT);
       return (
         <Button key={i} onClick={this.handleTakeAttendanceClick.bind(null,i)}>
           {date}
