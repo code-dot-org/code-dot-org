@@ -90,30 +90,7 @@ By exploring innovative computing devices from a variety of fields, students wil
 
 ## <a name="involved"></a>Get Involved
 
-<div style="float:left; padding:10px; width:33%">
-
-<h4> Help us write the CS Discoveries curriculum </h4>
-
-We're looking to assemble a summer writing cohort from June 27 - Aug 19, 2016 to help develop the CS Discoveries curriculum. If you're a K-12 CS or STEM educator with curriculum writing experience, please consider applying!
-<br><br>
-
-<a href="/about/jobs#summercohort"> <button>Learn more</button> </a>
-
-</div>
-
-<div style="float:left; padding:10px; width:33%">
-
-<h4> Pilot the curriculum in your classroom </h4>
-
-If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through April 2016.
-
-<br><br>
-
-<a href="/educate/csd/pilot"> <button>Apply now</button> </a>
-
-</div>
-
-<div style="float:left; padding:10px; width:33%">
+<div style="float:left; padding:0px; width:100%">
 
 <h4> Stay up to date on our progress </h4>
 

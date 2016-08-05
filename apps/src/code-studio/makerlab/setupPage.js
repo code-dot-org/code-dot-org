@@ -2,12 +2,12 @@ import BoardController from '@cdo/apps/makerlab/BoardController';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const HIDDEN = 0;
-const WAITING = 1;
-const ATTEMPTING = 2;
-const SUCCEEDED = 3;
-const FAILED = 4;
-const CELEBRATING = 5;
+const HIDDEN = 'HIDDEN';
+const WAITING = 'WAITING';
+const ATTEMPTING = 'ATTEMPTING';
+const SUCCEEDED = 'SUCCEEDED';
+const FAILED = 'FAILED';
+const CELEBRATING = 'CELEBRATING';
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
 const BoardSetupStatus = React.createClass({
@@ -22,35 +22,62 @@ const BoardSetupStatus = React.createClass({
     };
   },
 
+  getSurveyURL() {
+    const baseFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSe4NB7weq20sydf4kKn3QzIIn1O91hfPNU0U6b2xc1W6w44eQ/viewform';
+    const userAgentFieldFill = `entry.1520933088=${encodeURIComponent(navigator.userAgent)}`;
+    const prettifiedCurrentStates = JSON.stringify(this.state, null, 2);
+    const setupStatesFieldFill = `entry.804069894=${encodeURIComponent(prettifiedCurrentStates)}`;
+    return `${baseFormURL}?${userAgentFieldFill}&${setupStatesFieldFill}`;
+  },
+
   render() {
     return (
-        <div className="setup-status" style={{'fontSize': '26px'}}>
-          <SetupStep
-            stepStatus={this.state['status-is-chrome']}
-            stepName="Chrome version 33+"
-          >
-            {isChrome() && " - Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33"}
-          </SetupStep>
-          <SetupStep
-            stepStatus={this.state['status-app-installed']}
-            stepName="Chrome App installed"
-          />
-          <SetupStep
-            stepStatus={this.state['status-windows-drivers']}
-            stepName="Windows drivers installed? (cannot auto-check)"
-          />
-          <SetupStep
-            stepStatus={this.state['status-board-plug']}
-            stepName="Board plugged in"
-          />
-          <SetupStep
-            stepStatus={this.state['status-board-connect']}
-            stepName="Board connectable"
-          />
-          <SetupStep
-            stepStatus={this.state['status-board-components']}
-            stepName="Board components usable"
-          />
+        <div>
+          <h2>
+            Setup Status
+            <input style={{marginLeft: 9, marginTop: -4}} className="btn" type="button" value="re-detect" onClick={() => window.location.reload()}/>
+          </h2>
+          <div className="setup-status" style={{'fontSize': '26px'}}>
+            <SetupStep
+              stepStatus={this.state['status-is-chrome']}
+              stepName="Chrome version 33+"
+            >
+              {isChrome() && " - Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33"}
+            </SetupStep>
+            <SetupStep
+              stepStatus={this.state['status-app-installed']}
+              stepName="Chrome App installed"
+            />
+            <SetupStep
+              stepStatus={this.state['status-windows-drivers']}
+              stepName="Windows drivers installed? (cannot auto-check)"
+            />
+            <SetupStep
+              stepStatus={this.state['status-board-plug']}
+              stepName="Board plugged in"
+            />
+            <SetupStep
+              stepStatus={this.state['status-board-connect']}
+              stepName="Board connectable"
+            />
+            <SetupStep
+              stepStatus={this.state['status-board-components']}
+              stepName="Board components usable"
+            />
+          </div>
+          <h2>Survey / Support</h2>
+          <div>
+            <p>Did it work? Having trouble?</p>
+
+            <a
+              href={this.getSurveyURL()}
+              style={{'fontSize': '20px', marginBottom: 14, marginTop: 12, display: 'block'}}
+            >
+              Submit our quick survey&nbsp;
+              <i className="fa fa-arrow-circle-o-right"></i>
+            </a>
+            <p>Results of setup status detection and browser/platform information will be pre-filled in the survey through the link above.</p>
+          </div>
         </div>
     );
   },

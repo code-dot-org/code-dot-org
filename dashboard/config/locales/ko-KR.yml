@@ -129,8 +129,8 @@
     picture: "자신의 비밀 그림을 선택하세요."
     words: "자신의 비밀 단어를 입력하세요."
     login: "로그인"
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: "잘못된 로그인입니다. 다시 시도하세요."
+    pair_programming: "나는 컴퓨터 안에 파트너가 있습니다."
   password:
     reset_form:
       title: "비밀번호를 잊으셨나요?"
@@ -266,9 +266,9 @@
       signup: "가입하기"
       already_registered: "이미 등록하였나요?"
       pair_programming: "페어 프로그래밍"
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: "팀"
+      driver: "드라이버(운전자)"
+      navigator: "네비게이터"
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: "내 진도"
@@ -303,7 +303,7 @@
       example_with_number: "예시 해법 %{solution_number}"
       submitted_on: "제출:"
       unsubmit: "제출 취소"
-      worked_with: Worked With
+      worked_with: "~와 협력합니다."
   user:
     email_confirm_needed: "이메일 주소가 확인되지 않았습니다:"
     email_confirm_needed_required: "당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:"
@@ -370,7 +370,12 @@
     announcement_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
       언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
       모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "더 알아보기"
+    announcement_try_now_button: "지금 해보기"
     announcement_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고
       있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은
       미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
@@ -577,6 +582,9 @@
     wrong_body: "답변 주셔서 감사 합니다."
     correct_title: "고마워"
     correct_body: "답변 주셔서 감사 합니다."
+    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
+      for aggregate results.  Note that results are only visible if at least five
+      students submitted the survey.
   level_group-submittable:
     wrong_title: "고마워"
     wrong_body: "답변 주셔서 감사 합니다."
@@ -652,8 +660,7 @@
     share_title: "프로젝트 공유"
     share_copy_link: "링크 복사"
     share_embed_description: "웹 페이지에서 프로젝트를 보여주기 위해 HTML 페이지에 소스 코드를 붙여넣을 수 있습니다."
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_u13_warning: "공유하기 전에 선생님께 여쭤보세요. 여러분 학교에 있는 다른 사용자에게만 공유할 수 있습니다."
     embed: "삽입"
     advanced_share: "고급 옵션 표시"
     close: "닫기"
@@ -680,8 +687,8 @@
     abuse:
       tos: "이 프로젝트는 Code.org의 <a href='http://code.org/tos'>이용 약관</a>을 위반하였습니다. 이
         프로젝트는 다른 사람과 공유할 수 없습니다."
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "이 프로젝트는 다른 사람과 공유할 수 없는 정보를 포함하고 있습니다. 애플리케이션의 내용을 수정하려면
+        그 애플리케이션의 소유자에게 문의하세요."
       contact_us: "오류를 발견하면 <a href='https://code.org/contact'> 로 문의해주세요.</a>"
       go_to_code_studio: Code Studio로 가기
       report_abuse_form:
@@ -742,15 +749,13 @@
     required: "개요"
     content: "콘텐츠"
     practice: "선생님 연습"
+    peer_review: Peer Review
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    disclaimer: "경고"
+    leaving_domain: "여러분은 이제 이 도메인을 떠나 Code.org가 운영하지 않는 다른 사이트로 이동합니다."
+    disclaimer_text: "이 사이트는 Code.org의 개인정보정책과 다를 수 있습니다. 우리는 여러분들에게 유용할 것이라고 생각하기에
+      이 타사 자원들을 선택했습니다. 우리가 이 웹사이트 내용에 대해 직접적으로 책임을 지지 않는 동안, 만약 여러분이 불쾌한 컨텐츠를 발견하였거나
+      연결된 사이트 이용이 불가능할 때 <a href='%{support_url}'>지원 문의</a>해 주세요."
   hoc_download:
     title: Hour of Code 다운로드
     capsule_title: "인터넷을 사용할 수 있습니까?"

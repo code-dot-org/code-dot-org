@@ -41,6 +41,7 @@
   "heightParameter": "altura",
   "hideTurtle": "ocultar artista",
   "jump": "salta",
+  "jumpTo": "jump to",
   "jumpBackward": "saltar hacia atrás",
   "jumpForward": "saltar hacia adelante",
   "jumpTooltip": "Mueve el artista sin dejar ninguna marca.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Gira el artista a la izquierda o la derecha en la cantidad de grados especificada.",
   "turtleVisibilityTooltip": "Hace que el artista sea visible o invisible.",
   "widthTooltip": "Cambia el ancho del lápiz.",
-  "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1."
 }

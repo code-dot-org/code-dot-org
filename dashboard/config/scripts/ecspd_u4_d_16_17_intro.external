@@ -1,23 +1,21 @@
 name 'ECSPD U4 D 16-17 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 16-17 Scratch -- AND OR and Randomness
+# Day 16-17 Scratch &mdash; AND OR and Randomness
 
 First, let's explore the tenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 167-169.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=167)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will use conditionals with the "and" block, "or" block and "pick random\_to\_" block to write a grade program and a dice program.
 
-#### Common Difficulties
+## Common Difficulties
 
 This lesson introduces the "and" block,  "or" block and "random" block. It might be helpful to do an unplugged activity to help students grasp the concept of And/Or.  Truth tables can also be a helpful way to teach more complicated conditionals.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -38,7 +36,6 @@ This lesson introduces the "and" block,  "or" block and "random" block. It might
 - [http://scratch.mit.edu](http://scratch.mit.edu/)
 
 Click "Continue" below to move on to the next stage.
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

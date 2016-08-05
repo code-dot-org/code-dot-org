@@ -2,9 +2,6 @@ name 'PDAlg 3CCourseAB'
 skip_dialog true
 
 markdown <<MARKDOWN
-
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
 # Planning For the Future > Updates to the Structure of CS in Algebra
 
 ## Splitting the course in two
@@ -23,8 +20,8 @@ For classes that wish to go further, the second 10 hour course builds on the ski
 
 None of the lessons from the original version of CS in Algebra have been removed, but in response to teacher feedback we have restructued the course to make it easier to integrate just the Evaluation Blocks and Design Recipe elements into your class. Course A and Course B together make up the same original 20 lessons, but if you would like to use the original materials they are still available [here](https://code.org/curriculum/algebra)
 
-<br><br>
 Click the “Continue” button below to review tips for using this online learning space.
-<br><br>
-<a class="btn btn-large btn-info" target="_blank" href="https://code.org/educate/algebra">Learn More</a><a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+<a class="btn btn-large btn-info" target="_blank" href="https://code.org/educate/algebra">Learn More</a>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

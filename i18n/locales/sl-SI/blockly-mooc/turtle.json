@@ -41,6 +41,7 @@
   "heightParameter":"višina",
   "hideTurtle":"skrij umetnika",
   "jump":"skoči",
+  "jumpTo":"jump to",
   "jumpBackward":"skoči nazaj za",
   "jumpForward":"skoči naprej za",
   "jumpTooltip":"Premakne umetnika brez puščanja kakih sledi.",

@@ -126,8 +126,8 @@ fr:
     picture: Maintenant, trouve ta photo secrète
     words: Maintenant entre tes mots secrets
     login: Connexion
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: "Erreur d'identifiant, réessayez"
+    pair_programming: "J'ai un partenaire au mon ordi"
   password:
     reset_form:
       title: Mot de passe oublié ?
@@ -253,9 +253,9 @@ fr:
       signup: S’inscrire
       already_registered: Déjà enregistré ?
       pair_programming: Programmation à deux
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Equipe
+      driver: Navigateur
+      navigator: Navigateur
     popup:
       progress_for_user: 'progrès de %{name}'
       progress: Ton progrès
@@ -290,7 +290,7 @@ fr:
       example_with_number: 'Exemple de solution %{solution_number}'
       submitted_on: 'Soumis le :'
       unsubmit: Ne pas envoyer
-      worked_with: Worked With
+      worked_with: Travaille avec
   user:
     email_confirm_needed: "L'adresse e-mail n'a pas été confirmée:"
     email_confirm_needed_required: "Votre adresse e-mail %{email} n'a pas été confirmée :"
@@ -351,7 +351,9 @@ fr:
     announcement_title: Annonces
     announcement_view_all: Tout voir
     announcement_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Pour en savoir plus
+    announcement_try_now_button: Essaie maintenant
     announcement_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
     announcement_petition_button: Ajoutez votre nom
   move_students:
@@ -416,7 +418,7 @@ fr:
     download: Télécharger la vidéo
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre a jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos explorateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des erreurs de fonctionnalité."
       link: Pour en savoir plus
   slow_loading: "Cela prend plus de temps que d'habitude..."
   try_reloading: Essaie de recharger la page
@@ -530,6 +532,7 @@ fr:
     wrong_body: "Merci d'avoir soumis des réponses."
     correct_title: Merci
     correct_body: "Merci d'avoir soumis des réponses."
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: Merci
     wrong_body: "Merci d'avoir soumis des réponses."
@@ -602,7 +605,7 @@ fr:
     share_title: Partage ton projet
     share_copy_link: 'Copie le lien :'
     share_embed_description: Vous pouvez copier le code intégré dans une page HTML pour afficher le projet sur une page web.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
+    share_u13_warning: Demander à ton professeur avant de partager. Partager seulement avec ceux de ton école.
     embed: Intégré
     advanced_share: Afficher les options avancées
     close: Fermer
@@ -626,7 +629,7 @@ fr:
     edit_project: Modifier le projet
     abuse:
       tos: "Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>Conditions générales d'utilisation</a> de Code.org, et ne peut donc pas être partagé avec d'autres développeurs."
-      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Ce projet contient des informations qui ne peuvent pas être partagées. Contactez le propriétaire de l’application pour corriger le contenu de leur application.
       contact_us: "Si tu penses qu'il s'agit d'une erreur, merci de <a href='https://code.org/contact'> nous contacter.</a>"
       go_to_code_studio: Aller sur Code Studio
       report_abuse_form:
@@ -684,20 +687,23 @@ fr:
     required: Aperçu
     content: Contenu
     practice: Pratiques de l’enseignant
+    peer_review: Peer Review
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
-    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Avertissement
+    leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas géré par Code.org.
+    disclaimer_text: "Ce site peut avoir des conditions particulières qui diffère de Code.org. Nous avons sélectionner ces ressources de tierces parties car nous pensons qu'elles vous serons utiles. Nous ne sommes directement pas responsable pour le contenu de ces sites, merci de <a href='%{support_url}'>contacter le support</a> si vous trouvez des contenus suspects ou si les liens ne sont plus actifs."
   hoc_download:
     title: "Téléchargements d'Heure de Code"
     capsule_title: Vous avez Internet ?
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    capsule_desc: |-
+      Utiliser l'application en ligne <a href="%{url}">%{app_name}</a>.
     instructions_headline: Pas d’Internet ?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: 'Download %{app_name} for offline use (136MB)'
+    instructions: |-
+      Instructions pour les enseignants : Si vous avez un débit Internet faibles, ces tutoriels d'Heures de Code sont disponibles en télécharger et utilisable hors ligne. Choisissez votre langue et votre plate-forme, télécharger et installer les sur tous les ordinateurs dans votre salle de classe. Vous pouvez utiliser une clé USB pour le téléchargement et l'installation sur tous les ordinateurs. Remarque : les étudiants ne seront pas en mesure d’ouvrir une session à Code Studio, enregistrer des progrès ou imprimer les certificats. Enseignants peuvent imprimer des certificats en avance <a href="%{url}">ici</a>.
+    minecraft_name: Heure de Code de Minecraft
+    starwars_blocks_name: 'Star Wars : Construire une Galaxie avec du Code (Blocks)'
+    starwars_javascript_name: 'Star Wars : Construire une Galaxie avec du Code (JavaScript)'
+    download_message: "Téléchargement %{app_name} pour l'utilisation hors ligne (136 Mo)"
     download_in_english: 'Télécharger en anglais :'
     download_in_spanish: 'Télécharger en espagnol :'
     windows: Windows
