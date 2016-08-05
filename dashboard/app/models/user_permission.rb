@@ -31,6 +31,7 @@ class UserPermission < ActiveRecord::Base
 
   # Grants access to managing (e.g., editing) levels, stages, scripts, etc.
   # Also grants access to viewing extra links related to editing these.
+  # Also makes the account satisfy authorized_teacher?.
   LEVELBUILDER = 'levelbuilder'
 
   # Grants access to managing professional development workshops and

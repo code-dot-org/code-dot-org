@@ -38,7 +38,11 @@ var BaseDialog = React.createClass({
   },
 
   focusDialog: function () {
-    if (this.props.isOpen) {
+    // Don't steal focus if the active element is already a descendant of the
+    // dialog - prevents focus loss on updates of open BaseDialog components.
+    const descendantIsActive = document.activeElement && this.refs.dialog &&
+        this.refs.dialog.contains(document.activeElement);
+    if (this.props.isOpen && !descendantIsActive) {
       this.refs.dialog.focus();
     }
   },
