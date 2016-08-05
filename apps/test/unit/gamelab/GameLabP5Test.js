@@ -1,25 +1,16 @@
-var P5 = require("script!@cdo/apps/../lib/p5play/p5");
-var P5Play = require("script!@cdo/apps/../lib/p5play/p5.play");
-import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
-import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
-import {assert} from '../../util/configuredChai';
+/** @file Test of our p5.play wrapper object */
+import {assert, expect} from '../../util/configuredChai';
+import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabP5', function () {
-  var gameLabP5;
+  let gameLabP5;
 
   beforeEach(function () {
-    gameLabP5 = new GameLabP5();
-    gameLabP5.init({onExecutionStarting: sinon.spy(), onPreload: sinon.spy(), onSetup: sinon.spy(), onDraw: sinon.spy()});
-    gameLabP5.startExecution();
-  });
-
-  afterEach(function () {
-    gameLabP5.resetExecution();
+    gameLabP5 = createGameLabP5();
   });
 
   describe('mouseIsOver method', function () {
-    var sprite;
+    let sprite;
 
     beforeEach(function () {
       sprite = gameLabP5.p5.createSprite(0, 0);
