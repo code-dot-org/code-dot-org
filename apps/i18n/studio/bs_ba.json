@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Uzmi tri Pobunjenička Pilota za nastavak.",
   "failedChangeSettingSettings": "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

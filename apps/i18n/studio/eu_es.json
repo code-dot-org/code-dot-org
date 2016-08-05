@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Lortu hiru Rebel Pilot aurrera jarraitzeko.",
   "failedChangeSettingSettings": "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

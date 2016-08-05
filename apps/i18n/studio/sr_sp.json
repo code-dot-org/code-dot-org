@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Ухвати три пилота побуњеника како би наставио даље.",
   "failedChangeSettingSettings": "Играј игру другачије. Промени дроида и подеси му брзину.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

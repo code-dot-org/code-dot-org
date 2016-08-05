@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Pak drie Rebel Pilots om verder te gaan.",
   "failedChangeSettingSettings": "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }
