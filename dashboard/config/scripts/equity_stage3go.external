@@ -1,14 +1,10 @@
 name 'Equity Stage3Go'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Creating Equitable Learning Environments > Looking Ahead
 
-### CREATING EQUITABLE LEARNING ENVIRONMENTS > Looking Ahead
-
-<br/><br/>
 <img src="https://images.code.org/6a08796304fa0ca78a28c14bb5e319ac-image-1436485232372.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
 
-<br/><br/>
 By completing this stage, you should have:
 
 - Identified resources for further discussion and study 
@@ -21,5 +17,4 @@ In the next stage, we will:
 - Access resources and your digital certificate
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

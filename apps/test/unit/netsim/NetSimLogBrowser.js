@@ -19,6 +19,7 @@ describe('NetSimLogBrowser', function () {
         setTrafficFilter={spy()}
         headerFields={[]}
         logRows={[]}
+        senderNames={[]}
       />);
     expect(shallowResult).not.to.be.empty;
   });

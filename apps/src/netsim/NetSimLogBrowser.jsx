@@ -1,4 +1,5 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
+import _ from 'lodash';
 import React from 'react';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import Packet from './Packet';
@@ -26,6 +27,7 @@ const NetSimLogBrowser = React.createClass({
     setTrafficFilter: React.PropTypes.func.isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     renderedRowLimit: React.PropTypes.number,
     teacherView: React.PropTypes.bool
   }),
@@ -91,7 +93,7 @@ const NetSimLogBrowser = React.createClass({
             currentSentByFilter={this.state.currentSentByFilter}
             setSentByFilter={this.setSentByFilter}
             teacherView={this.props.teacherView}
-            logRows={this.props.logRows}
+            senderNames={this.props.senderNames}
           />
           <div style={style.scrollArea}>
             {/* TODO: get table sticky headers working */}
@@ -169,6 +171,8 @@ if (BUILD_STYLEGUIDE) {
       };
     });
 
+    const senderNames = _.uniq(sampleData.map(row => row['sent-by']));
+
     return storybook
         .storiesOf('NetSimLogBrowser', module)
         .addWithInfo(
@@ -183,6 +187,7 @@ if (BUILD_STYLEGUIDE) {
                   setTrafficFilter={() => null}
                   headerFields={simplePacket}
                   logRows={sampleData}
+                  senderNames={senderNames}
                 />
               </div>
             ))
@@ -202,6 +207,7 @@ if (BUILD_STYLEGUIDE) {
                   setTrafficFilter={() => null}
                   headerFields={fancyPacket}
                   logRows={sampleData}
+                  senderNames={senderNames}
                 />
               </div>
             ))
@@ -219,6 +225,7 @@ if (BUILD_STYLEGUIDE) {
               setTrafficFilter={() => null}
               headerFields={simplePacket}
               logRows={sampleData}
+              senderNames={senderNames}
               teacherView
             />
           </div>
