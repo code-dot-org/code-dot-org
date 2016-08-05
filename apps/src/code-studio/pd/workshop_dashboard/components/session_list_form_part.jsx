@@ -1,15 +1,14 @@
-/*
-  Dynamic list of session inputs for creating and editing workshops.
+/**
+ * Dynamic list of session inputs for creating and editing workshops.
  */
 import React from 'react';
-var moment = require('moment');
-var SessionFormPart = require('./session_form_part');
-var Row = require('react-bootstrap').Row;
-var Col = require('react-bootstrap').Col;
+import moment from 'moment';
+import {Row, Col} from 'react-bootstrap';
+import SessionFormPart from './session_form_part';
 
-var MAX_SESSIONS = 10;
+const MAX_SESSIONS = 10;
 
-var SessionListFormPart = React.createClass({
+const SessionListFormPart = React.createClass({
   propTypes: {
     sessions: React.PropTypes.array.isRequired,
     onChange: React.PropTypes.func,
@@ -19,15 +18,15 @@ var SessionListFormPart = React.createClass({
 
   nextPlaceholderId: 1,
 
-  handleChange: function (i, session) {
+  handleChange(i, session) {
     this.props.sessions[i] = session;
     this.props.onChange(this.props.sessions);
   },
 
-  handleAdd: function () {
-    let sessions = this.props.sessions;
-    let lastSession = sessions[sessions.length - 1];
-    let newSession = {
+  handleAdd() {
+    const sessions = this.props.sessions;
+    const lastSession = sessions[sessions.length - 1];
+    const newSession = {
       // Placeholder Ids are needed to generate unique keys in the React list.
       // Prefix with _ so they don't conflict with actual Ids on sessions that have been saved.
       placeholderId: '_' + (this.nextPlaceholderId++),
@@ -43,16 +42,16 @@ var SessionListFormPart = React.createClass({
     this.props.onChange(sessions);
   },
 
-  handleRemove: function (i) {
-    var sessions = this.props.sessions;
-    var removedSession = sessions.splice(i, 1)[0];
+  handleRemove(i) {
+    const sessions = this.props.sessions;
+    const removedSession = sessions.splice(i, 1)[0];
     this.props.onChange(sessions, removedSession);
   },
 
-  render: function () {
-    var sessionForms = this.props.sessions.map(function (session, i, sessions) {
-      var handleAdd = i === sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
-      var handleRemove = sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
+  render() {
+    const sessionForms = this.props.sessions.map((session, i, sessions) => {
+      const handleAdd = i === sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
+      const handleRemove = sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
       return (
         <SessionFormPart
           readOnly={this.props.readOnly}
@@ -64,7 +63,7 @@ var SessionListFormPart = React.createClass({
           shouldValidate={this.props.shouldValidate}
         />
       );
-    }.bind(this));
+    });
 
     return (
       <div>
@@ -84,4 +83,4 @@ var SessionListFormPart = React.createClass({
     );
   }
 });
-module.exports = SessionListFormPart;
+export default SessionListFormPart;
