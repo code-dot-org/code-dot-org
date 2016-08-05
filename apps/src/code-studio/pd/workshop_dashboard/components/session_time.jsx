@@ -1,10 +1,10 @@
-/*
-  Displays nicely-formatted session time for a workshop.
+/**
+ * Displays nicely-formatted session time for a workshop.
 */
 import React from 'react';
-var moment = require('moment');
+import moment from 'moment';
 
-var SessionTime = React.createClass({
+const SessionTime = React.createClass({
   propTypes: {
     session: React.PropTypes.shape({
       start: React.PropTypes.string.isRequired,
@@ -12,11 +12,11 @@ var SessionTime = React.createClass({
     }).isRequired
   },
 
-  render: function () {
-    var formattedTime = moment.utc(this.props.session.start).format('MM/DD/YY, h:mmA') +
+  render() {
+    const formattedTime = moment.utc(this.props.session.start).format('MM/DD/YY, h:mmA') +
       '-' + moment.utc(this.props.session.end).format('h:mmA');
 
     return <div>{formattedTime}</div>;
   }
 });
-module.exports = SessionTime;
+export default SessionTime;

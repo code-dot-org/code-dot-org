@@ -1,20 +1,20 @@
-/*
-  Creates a new workshop.
-  Route: /workshops/new
+/**
+ * Creates a new workshop.
+ * Route: /workshops/new
  */
 import React from 'react';
-var WorkshopForm = require('./components/workshop_form');
+import WorkshopForm from './components/workshop_form';
 
-var NewWorkshop = React.createClass({
+const NewWorkshop = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
 
-  handleSaved: function (workshop) {
+  handleSaved(workshop) {
     this.context.router.push(`/workshops/${workshop.id}`);
   },
 
-  render: function () {
+  render() {
     return (
       <div>
         <h2>New Workshop</h2>
@@ -23,4 +23,4 @@ var NewWorkshop = React.createClass({
     );
   }
 });
-module.exports = NewWorkshop;
+export default NewWorkshop;
