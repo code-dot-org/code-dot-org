@@ -5,7 +5,7 @@
 import React from 'react';
 import {Breadcrumb} from 'react-bootstrap';
 
-var Header = React.createClass({
+const Header = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -25,8 +25,8 @@ var Header = React.createClass({
   },
 
   renderBreadcrumbItems() {
-    var breadcrumbItems = [];
-    var builtPath = "/";
+    const breadcrumbItems = [];
+    let builtPath = "/";
     breadcrumbItems.push({name: "Workshop Dashboard", path: builtPath});
 
     if (this.props.routes[1].breadcrumbs) {
@@ -34,10 +34,10 @@ var Header = React.createClass({
       // The associated path part will be an id if that is present in params (e.g. "Workshop" -> this.props.params.workshopId)
       // Otherwise it will be same as the display text.
       // The last item, the current page, will be plain text instead of a link.
-      var breadcrumbs = this.props.routes[1].breadcrumbs.split(",");
-      for (var i = 0; i < breadcrumbs.length; i++) {
-        var breadcrumb = breadcrumbs[i];
-        var paramName = breadcrumb[0].toLowerCase() + breadcrumb.substr(1) + "Id";
+      const breadcrumbs = this.props.routes[1].breadcrumbs.split(",");
+      for (let i = 0; i < breadcrumbs.length; i++) {
+        const breadcrumb = breadcrumbs[i];
+        const paramName = breadcrumb[0].toLowerCase() + breadcrumb.substr(1) + "Id";
         builtPath += (this.props.params[paramName] || breadcrumb) + "/";
         breadcrumbItems.push({name: breadcrumb, path: builtPath});
       }

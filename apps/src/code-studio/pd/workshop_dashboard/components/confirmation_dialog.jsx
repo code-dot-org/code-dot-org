@@ -4,7 +4,7 @@
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
-var ConfirmationDialog = React.createClass({
+const ConfirmationDialog = React.createClass({
   propTypes: {
     show: React.PropTypes.bool,
     onOk: React.PropTypes.func.isRequired,
