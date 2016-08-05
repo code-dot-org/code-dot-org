@@ -14,12 +14,14 @@ const ALIASED_PROPERTIES = {
 };
 
 /**
- * Map from existing method names to new alias names we want to use in GameLab.
+ * Map from existing (deep) method names to new alias names we want to use
+ * in GameLab.
  * @type {{string: string}}
  */
 const ALIASED_METHODS = {
   'remove': 'destroy',
-  'setSpeed': 'setSpeedAndDirection'
+  'setSpeed': 'setSpeedAndDirection',
+  'animation.changeFrame': 'setFrame'
 };
 
 var jsInterpreter;
@@ -64,7 +66,12 @@ module.exports.createSprite = function (x, y, width, height) {
 
   // Alias p5.play sprite methods to new names
   for (const originalMethodName in ALIASED_METHODS) {
-    s[ALIASED_METHODS[originalMethodName]] = s[originalMethodName];
+    s[ALIASED_METHODS[originalMethodName]] = function () {
+      const originalMethod = _.get(s, originalMethodName);
+      if (originalMethod) {
+        originalMethod.apply(s, arguments);
+      }
+    };
   }
 
   /*
@@ -91,12 +98,6 @@ module.exports.createSprite = function (x, y, width, height) {
     s.changeAnimation(animationName);
     if (level.pauseAnimationsByDefault) {
       s.pause();
-    }
-  };
-
-  s.setFrame = function (frame) {
-    if (s.animation) {
-      s.animation.setFrame(frame);
     }
   };
 

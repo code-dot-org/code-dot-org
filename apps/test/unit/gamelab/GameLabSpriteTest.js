@@ -1,5 +1,6 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
+import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
@@ -19,11 +20,22 @@ describe('GameLabSprite', function () {
     });
 
     it('aliases setSpeed to setSpeedAndDirection', function () {
-      expect(testSprite.setSpeedAndDirection).to.equal(testSprite.setSpeed);
+      spy(testSprite, 'setSpeed');
+      testSprite.setSpeedAndDirection();
+      expect(testSprite.setSpeed.calledOnce).to.be.true;
     });
 
     it('aliases remove to destroy', function () {
-      expect(testSprite.destroy).to.equal(testSprite.remove);
+      spy(testSprite, 'remove');
+      testSprite.destroy();
+      expect(testSprite.remove.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.changeFrame to setFrame', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'changeFrame');
+      testSprite.setFrame();
+      expect(testSprite.animation.changeFrame.calledOnce).to.be.true;
     });
   });
 
@@ -220,12 +232,8 @@ describe('GameLabSprite', function () {
     describe('sprites with animations', function () {
       var sprite1;
       beforeEach(function () {
-        var image = new p5.Image(100, 100, gameLabP5.p5);
-        var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-        var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-        var animation = new gameLabP5.p5.Animation(sheet);
         sprite1 = createSprite(0, 0);
-        sprite1.addAnimation('label', animation);
+        sprite1.addAnimation('label', createTestAnimation());
       });
 
       it('returns width and height when no scale is set', function () {
@@ -409,4 +417,11 @@ describe('GameLabSprite', function () {
       expect(spriteTarget.velocity.x).to.equal(0);
     });
   });
+
+  function createTestAnimation() {
+    var image = new p5.Image(100, 100, gameLabP5.p5);
+    var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
+    var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
+    return new gameLabP5.p5.Animation(sheet);
+  }
 });
