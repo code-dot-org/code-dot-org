@@ -1,14 +1,32 @@
 import _ from 'lodash';
 
+/**
+ * Map from existing (deep) property names to new alias names we want to use
+ * in GameLab.
+ * @type {{string: string}}
+ */
+const ALIASED_PROPERTIES = {
+  'velocity.x': 'velocityX',
+  'velocity.y': 'velocityY',
+  'life': 'lifetime'
+};
+
+/**
+ * Map from existing method names to new alias names we want to use in GameLab.
+ * @type {{string: string}}
+ */
+const ALIASED_METHODS = {
+  'remove': 'destroy',
+  'setSpeed': 'setSpeedAndDirection'
+};
+
 var jsInterpreter;
-
-/** @type {GameLabLevel} */
-var level;
-
 module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
+/** @type {GameLabLevel} */
+var level;
 /**
  * Provide the current Game Lab level because it can customize default
  * sprite behaviors.
@@ -27,6 +45,25 @@ module.exports.createSprite = function (x, y, width, height) {
    */
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
+
+  // Alias p5.play sprite properties to new names
+  for (const originalPropertyName in ALIASED_PROPERTIES) {
+    const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
+    Object.defineProperty(s, newPropertyName, {
+      enumerable: true,
+      get: function () {
+        return _.get(s, originalPropertyName);
+      },
+      set: function (value) {
+        _.set(s, originalPropertyName, value);
+      }
+    });
+  }
+
+  // Alias p5.play sprite methods to new names
+  for (const originalMethodName in ALIASED_METHODS) {
+    s[ALIASED_METHODS[originalMethodName]] = s[originalMethodName];
+  }
 
   /*
    * @type {number}
@@ -88,18 +125,6 @@ module.exports.createSprite = function (x, y, width, height) {
   s.frameDidChange = function () {
     return s.animation ? s.animation.frameChanged : false;
   };
-
-  /**
-   * Map from existing method names to new alias names we want to use in GameLab.
-   * @type {{string: string}}
-   */
-  const ALIASED_METHODS = {
-    'remove': 'destroy',
-    'setSpeed': 'setSpeedAndDirection'
-  };
-  for (const originalMethodName in ALIASED_METHODS) {
-    s[ALIASED_METHODS[originalMethodName]] = s[originalMethodName];
-  }
 
   s.pointTo = function (x, y) {
     var yDelta = y - s.position.y;
@@ -227,29 +252,6 @@ module.exports.createSprite = function (x, y, width, height) {
   s.getScaledHeight = function () {
     return s.height * s.scale;
   };
-
-  /**
-   * Map from existing (deep) property names to new alias names we want to use
-   * in GameLab.
-   * @type {{string: string}}
-   */
-  const ALIASED_PROPERTIES = {
-    'velocity.x': 'velocityX',
-    'velocity.y': 'velocityY',
-    'life': 'lifetime'
-  };
-  for (const originalPropertyName in ALIASED_PROPERTIES) {
-    const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
-    Object.defineProperty(s, newPropertyName, {
-      enumerable: true,
-      get: function () {
-        return _.get(s, originalPropertyName);
-      },
-      set: function (value) {
-        _.set(s, originalPropertyName, value);
-      }
-    });
-  }
 
   s.shapeColor = this.color(127, 127, 127);
   s.AABBops = AABBops.bind(s, this);
