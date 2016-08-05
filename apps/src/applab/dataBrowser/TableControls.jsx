@@ -15,15 +15,12 @@ const styles = {
     paddingLeft: 0,
     paddingRight: 0,
   },
-  exportButton: [dataStyles.editButton, {
+  clearButton: [dataStyles.rightButton, {
+    width: 103,
+  }],
+  exportButton: [dataStyles.rightButton, {
     width: 120
   }],
-  addButton: [dataStyles.button, {
-    float: 'right',
-  }],
-  clearButton: [dataStyles.editButton, {
-    width: 103,
-  }]
 };
 
 const TableControls = React.createClass({
@@ -48,15 +45,15 @@ const TableControls = React.createClass({
   render() {
     return (
       <div style={styles.container}>
-        <button
-          className="btn btn-danger"
-          onClick={this.props.clearTable}
-          style={styles.clearButton}
-        >
-          Clear table
+        <button className="btn" onClick={this.props.addColumn} style={dataStyles.button}>
+          Add column
         </button>
 
-        <button className="btn" onClick={this.props.exportCsv} style={styles.exportButton}>
+        <button
+          className="btn"
+          onClick={this.props.exportCsv}
+          style={styles.exportButton}
+        >
           Export to csv
         </button>
 
@@ -71,15 +68,21 @@ const TableControls = React.createClass({
           <button
             className="btn"
             onClick={() => this.importFileInput.click()}
-            style={dataStyles.button}
+            style={dataStyles.rightButton}
           >
             Import csv
           </button>
         </span>
 
-        <button className="btn" onClick={this.props.addColumn} style={styles.addButton}>
-          Add column
+        <button
+          className="btn btn-danger"
+          onClick={this.props.clearTable}
+          style={styles.clearButton}
+        >
+          Clear table
         </button>
+
+        <div style={{clear: 'both'}}/>
       </div>
     );
   }
