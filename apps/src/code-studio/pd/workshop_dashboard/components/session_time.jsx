@@ -4,7 +4,7 @@
 import React from 'react';
 import moment from 'moment';
 
-var SessionTime = React.createClass({
+const SessionTime = React.createClass({
   propTypes: {
     session: React.PropTypes.shape({
       start: React.PropTypes.string.isRequired,
@@ -13,7 +13,7 @@ var SessionTime = React.createClass({
   },
 
   render() {
-    var formattedTime = moment.utc(this.props.session.start).format('MM/DD/YY, h:mmA') +
+    const formattedTime = moment.utc(this.props.session.start).format('MM/DD/YY, h:mmA') +
       '-' + moment.utc(this.props.session.end).format('h:mmA');
 
     return <div>{formattedTime}</div>;

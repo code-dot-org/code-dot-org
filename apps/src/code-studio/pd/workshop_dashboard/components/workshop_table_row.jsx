@@ -7,7 +7,7 @@ import SessionTimesList from './session_times_list';
 import ConfirmationDialog from './confirmation_dialog';
 import FacilitatorsList from './facilitators_list';
 
-var WorkshopTableRow = React.createClass({
+const WorkshopTableRow = React.createClass({
   propTypes: {
     workshop: React.PropTypes.shape({
       sessions: React.PropTypes.array.isRequired,

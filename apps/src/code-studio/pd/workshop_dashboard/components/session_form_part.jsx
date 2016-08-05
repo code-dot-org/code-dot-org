@@ -17,7 +17,7 @@ import {
   HelpBlock
 } from 'react-bootstrap';
 
-var styles = {
+const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
@@ -25,7 +25,7 @@ var styles = {
   }
 };
 
-var SessionFormPart = React.createClass({
+const SessionFormPart = React.createClass({
   propTypes: {
     session: React.PropTypes.shape({
       date: React.PropTypes.string,
@@ -80,8 +80,8 @@ var SessionFormPart = React.createClass({
   },
 
   render() {
-    var style = {};
-    var help = {};
+    const style = {};
+    const help = {};
     if (this.props.shouldValidate) {
       if (!this.props.session.date) {
         style.date = "error";
@@ -110,7 +110,7 @@ var SessionFormPart = React.createClass({
             <InputGroup>
               <FormControl
                 type="text"
-                ref={(ref) => this.dateControl = ReactDOM.findDOMNode(ref)}
+                ref={ref => this.dateControl = ReactDOM.findDOMNode(ref)}
                 value={this.props.session.date || ''}
                 onChange={this.handleDateChange}
                 style={this.props.readOnly && styles.readOnlyInput}
@@ -187,7 +187,7 @@ var SessionFormPart = React.createClass({
       $(this.dateControl).datepicker({
         minDate: 0,
         dateFormat: 'mm/dd/y',
-        onSelect: (dateText) => {
+        onSelect: dateText => {
           this.props.session.date = dateText;
           this.props.onChange(this.props.session);
         }
@@ -200,4 +200,4 @@ var SessionFormPart = React.createClass({
     }
   }
 });
-  export default SessionFormPart;
+export default SessionFormPart;

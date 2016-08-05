@@ -5,9 +5,9 @@
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 
-var MAX_FACILITATORS = 10;
+const MAX_FACILITATORS = 10;
 
-var styles = {
+const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
@@ -15,7 +15,7 @@ var styles = {
   }
 };
 
-var FacilitatorListFormPart = React.createClass({
+const FacilitatorListFormPart = React.createClass({
   propTypes: {
     availableFacilitators: React.PropTypes.arrayOf(
       React.PropTypes.shape({
@@ -60,13 +60,13 @@ var FacilitatorListFormPart = React.createClass({
       this.props.facilitators.push({id: -1});
     }
 
-    var rows = this.props.facilitators.map((facilitator, i, facilitators) => {
+    const rows = this.props.facilitators.map((facilitator, i, facilitators) => {
       if (this.props.readOnly) {
         return this.renderFacilitatorReadOnlyRow(facilitator, i);
       } else {
         // Remove already-selected facilitators from available list.
-        var filteredAvailableFacilitators = this.props.availableFacilitators.filter((availableFacilitator) => {
-          return !facilitators.find((f) => f.id === availableFacilitator.id);
+        const filteredAvailableFacilitators = this.props.availableFacilitators.filter(availableFacilitator => {
+          return !facilitators.find(f => f.id === availableFacilitator.id);
         });
         return this.renderFacilitatorEditRow(facilitator, i, facilitators, filteredAvailableFacilitators);
       }
@@ -96,7 +96,7 @@ var FacilitatorListFormPart = React.createClass({
 
   renderFacilitatorEditRow(facilitator, i, facilitators, filteredAvailableFacilitators) {
     if (filteredAvailableFacilitators.length === 0) {
-      var text = this.props.course === '' ? 'Please select a course' : `No facilitators are available for ${this.props.course}`;
+      const text = this.props.course === '' ? 'Please select a course' : `No facilitators are available for ${this.props.course}`;
       return (
         <label key={i}>
           {text}
@@ -104,7 +104,7 @@ var FacilitatorListFormPart = React.createClass({
       );
     }
 
-    var addButton = null;
+    let addButton = null;
     if (i === facilitators.length - 1 && facilitators.length < MAX_FACILITATORS &&
       this.props.facilitators[i].id > 0 && filteredAvailableFacilitators.length > 1 ) {
 
@@ -114,10 +114,10 @@ var FacilitatorListFormPart = React.createClass({
         </Button>
       );
     }
-    var removeButton = facilitators.length > 1 ? this.renderRemoveButton(i) : null;
+    const removeButton = facilitators.length > 1 ? this.renderRemoveButton(i) : null;
 
-    var facilitatorOptions = [this.renderFacilitatorOption(facilitator)].concat(
-      filteredAvailableFacilitators.map((f) => this.renderFacilitatorOption(f))
+    const facilitatorOptions = [this.renderFacilitatorOption(facilitator)].concat(
+      filteredAvailableFacilitators.map(f => this.renderFacilitatorOption(f))
     );
 
     return (
@@ -126,7 +126,8 @@ var FacilitatorListFormPart = React.createClass({
           <select
             className="form-control"
             value={facilitator.id}
-            onChange={(e) => this.handleFacilitatorChange(i, e.target.value)}
+            data-index={i}
+            onChange={this.handleFacilitatorChange}
           >
             {facilitatorOptions}
           </select>
@@ -153,9 +154,11 @@ var FacilitatorListFormPart = React.createClass({
     );
   },
 
-  handleFacilitatorChange(i, selectedId) {
-    var selectedFacilitator = this.props.availableFacilitators.find((f) => f.id === parseInt(selectedId, 10));
-    this.props.facilitators[i] = selectedFacilitator;
+  handleFacilitatorChange(event) {
+    const index = $(event.target).attr('data-index');
+    const selectedId = event.target.value;
+
+    this.props.facilitators[index] = this.props.availableFacilitators.find(f => f.id === parseInt(selectedId, 10));
     this.props.onChange(this.props.facilitators);
   },
 

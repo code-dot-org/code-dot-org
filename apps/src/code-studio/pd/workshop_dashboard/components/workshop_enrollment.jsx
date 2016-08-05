@@ -4,7 +4,7 @@
 import React from 'react';
 import {Table} from 'react-bootstrap';
 
-let styles = {
+const styles = {
   th: {
     backgroundImage: 'none',
     padding: 0,
@@ -30,8 +30,8 @@ const WorkshopEnrollment = React.createClass({
 
   render: function () {
     if (this.props.enrollments.length === 0) {
-      let signupUrl = location.origin + "/pd/workshops/" + this.props.workshopId + '/enroll';
-      let signupLink = <a href={signupUrl} target="_blank">{signupUrl}</a>;
+      const signupUrl = location.origin + "/pd/workshops/" + this.props.workshopId + '/enroll';
+      const signupLink = <a href={signupUrl} target="_blank">{signupUrl}</a>;
       return (
         <div>
           No one is currently signed up for your workshop. Share your workshop sign-up
@@ -40,7 +40,7 @@ const WorkshopEnrollment = React.createClass({
       );
     }
 
-    var enrollmentRows = this.props.enrollments.map(function (enrollment, i) {
+    const enrollmentRows = this.props.enrollments.map(function (enrollment, i) {
       return (
         <tr key={i}>
           <td>{i + 1}</td>
