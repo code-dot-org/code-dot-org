@@ -1,9 +1,7 @@
 name 'ECS Phase 3 Unit 4 Overview'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Getting Started > About this Online PD
+# Getting Started > About this Online PD
 
 This online professional development is designed to support you in delivering content from Unit 4 of the ECS Version 5 curriculum. By working through the stages and levels that follow, you will:
 
@@ -12,15 +10,18 @@ This online professional development is designed to support you in delivering co
 - Prepare, plan and share at least one lesson from Unit 4, tailored to your classroom and your needs
 - Connect with the Code.org ECS community for addtional support throughout Unit 4
 
-# Pre-requisites
+## Pre-requisites
+
 For success in this online PD, we assume that you have participated in a five-day face-to-face ECS training this summer. You also should have completed online PD on [Units 1](https://studio.code.org/s/ECSPD3-Unit1/), [2](https://studio.code.org/s/ECSPD3-Unit2/) and [3](https://studio.code.org/s/ECSPD3-Unit3/). During your in-person workshop, you spent time planning and experiencing a lesson from Unit 4. In this online PD, we're going to spend time looking over the lessons that weren't explored during the workshop and consider the resources and materials that will be helpful in planning and delivering Unit 4.
 
-# Course duration
+## Course duration
+
 Completing this online PD should take about 2 hours, depending on your prior knowledge and how deeply you want to dive into the resources provided. 
 
-# Course timeline
+## Course timeline
+
 This online professional development is **not** designed to be a sequential online course. Instead, it is designed to serve as a reference to you throughout the 2015-16 school year as you plan, and deliver Unit 4 of the ECS Version 5 curriculum. 
-<br><br>
+
 > Please work through the stages and levels that follow at your own pace. Make your own choices about how deep to go in any particular level or stage, based on:
 
 > - Which lessons from the curriculum you plan to implement in your classroom
@@ -28,13 +29,13 @@ This online professional development is **not** designed to be a sequential onli
 
 > Create your own schedule for learning, but at minimum, **plan to finish all the stages and levels in this online PD prior to June 30th to receive your stipend.** 
 
-# Important reminder
+## Important reminder
+
 If you are participating in this online PD through your district or school’s partnership with Code.org, you will be held accountable for earning a “green dot” for each level in this online PD. This means that you are required to click the orange “Continue” button at the bottom of each level. You can check your progress at any time by clicking the “down arrow” at the top of the screen.
-<br><br>
+
 > Keep in mind: this online PD is not designed to be completed sequentially, but instead to serve as an on-going reference and support to you throughout the year. Be sure to click “Continue” whenever you use a level; this will help you keep track throughout the year of what you’ve completed and what you still need to review.
 
 Click the “Continue” button below to review tips for using this online learning space.
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
