@@ -4337,23 +4337,23 @@ Studio.setSpriteSize = function (opts) {
 };
 
 Studio.changeScore = function (opts) {
-
-  if (typeof opts.value !== 'number' &&
-      (typeof opts.value !== 'string' || isNaN(opts.value))) {
-    throw new TypeError("Incorrect parameter: " + opts.value);
-  }
-
-  Studio.adjustScore(Number(opts.value));
+  Studio.adjustScore(Studio.paramAsNumber(opts.value));
 };
 
 Studio.reduceScore = function (opts) {
+  Studio.adjustScore(-1 * Studio.paramAsNumber(opts.value));
+};
 
-  if (typeof opts.value !== 'number' &&
-      (typeof opts.value !== 'string' || isNaN(opts.value))) {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+Studio.setScore = function (value) {
+  Studio.adjustScore(Studio.paramAsNumber(value) - Studio.playerScore);
+};
+
+Studio.paramAsNumber = function (value) {
+  if (typeof value !== 'number' &&
+      (typeof value !== 'string' || isNaN(value))) {
+    throw new TypeError("Incorrect parameter: " + value);
   }
-
-  Studio.adjustScore(-Number(opts.value));
+  return Number(value);
 };
 
 Studio.adjustScore = function (value) {
