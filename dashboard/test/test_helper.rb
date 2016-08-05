@@ -2,8 +2,10 @@ if ENV['COVERAGE'] # set this environment variable when running tests if you wan
   require 'simplecov'
   SimpleCov.start :rails
 elsif ENV['CI'] # this is set by circle
-  require 'coveralls'
-  Coveralls.wear!('rails')
+  # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
+  # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
+  # require 'coveralls'
+  # Coveralls.wear!('rails')
 end
 
 require 'minitest/reporters'
