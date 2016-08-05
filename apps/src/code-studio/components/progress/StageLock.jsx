@@ -81,9 +81,11 @@ export default connect((state, ownProps) => {
   let unlocked = false;
   if (sectionsLoaded) {
     const currentSection = sections[selectedSection];
-    const stageStudents = currentSection.stages[ownProps.stage.id];
+    if (currentSection) {
+      const stageStudents = currentSection.stages[ownProps.stage.id];
+      unlocked = stageStudents.some(student => !student.locked);
+    }
 
-    unlocked = stageStudents.some(student => !student.locked);
   }
 
   return {

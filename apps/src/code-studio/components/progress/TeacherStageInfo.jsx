@@ -1,6 +1,7 @@
 /* global dashboard */
 
 import React from 'react';
+import { connect } from 'react-redux';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLock from './StageLock';
@@ -47,7 +48,10 @@ const styles = {
 
 const TeacherStageInfo = React.createClass({
   propTypes: {
-    stage: stageShape
+    stage: stageShape,
+
+    // redux provided
+    hasNoSections: React.PropTypes.bool.isRequired,
   },
 
   clickLessonPlan() {
@@ -57,7 +61,9 @@ const TeacherStageInfo = React.createClass({
   render() {
     const { stage } = this.props;
     const lessonPlanUrl = stage.lesson_plan_html_url;
-    if (!stage.lockable && !lessonPlanUrl) {
+
+    const lockable = stage.lockable && !this.props.hasNoSections;
+    if (!lockable && !lessonPlanUrl) {
       return null;
     }
 
@@ -72,13 +78,14 @@ const TeacherStageInfo = React.createClass({
               </span>
             </span>
           }
-          {stage.lockable &&
-            <StageLock stage={stage}/>
-          }
+          {lockable && <StageLock stage={stage}/>}
         </div>
       </div>
     );
   }
 });
 
-export default Radium(TeacherStageInfo);
+export default connect(state => ({
+  hasNoSections: state.stageLock.sectionsLoaded &&
+    Object.keys(state.stageLock.sections).length === 0
+}))(Radium(TeacherStageInfo));
