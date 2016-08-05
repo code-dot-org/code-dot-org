@@ -111,7 +111,7 @@ const ScriptTeacherPanel = React.createClass({
                 <div>
                   <div style={styles.text}>
                     <FontAwesome icon="exclamation-triangle" style={styles.exclamation}/>
-                    <div style={styles.dontForget}>{commonMsg.dontForget}</div>
+                    <div style={styles.dontForget}>{commonMsg.dontForget()}</div>
                   </div>
                   <div style={styles.text}>
                     {commonMsg.lockFollowing()}
