@@ -21,7 +21,11 @@ const ALIASED_PROPERTIES = {
 const ALIASED_METHODS = {
   'remove': 'destroy',
   'setSpeed': 'setSpeedAndDirection',
-  'animation.changeFrame': 'setFrame'
+  'animation.changeFrame': 'setFrame',
+  'animation.nextFrame': 'nextFrame',
+  'animation.previousFrame': 'previousFrame',
+  'animation.play': 'play',
+  'animation.stop': 'stop'
 };
 
 var jsInterpreter;
@@ -98,30 +102,6 @@ module.exports.createSprite = function (x, y, width, height) {
     s.changeAnimation(animationName);
     if (level.pauseAnimationsByDefault) {
       s.pause();
-    }
-  };
-
-  s.nextFrame = function () {
-    if (s.animation) {
-      s.animation.nextFrame();
-    }
-  };
-
-  s.previousFrame = function () {
-    if (s.animation) {
-      s.animation.previousFrame();
-    }
-  };
-
-  s.play = function () {
-    if (s.animation) {
-      s.animation.play();
-    }
-  };
-
-  s.pause = function () {
-    if (s.animation) {
-      s.animation.stop();
     }
   };
 
