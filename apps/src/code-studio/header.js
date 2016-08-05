@@ -128,8 +128,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   function lazyLoadPopup() {
     if (!popupLoaded) {
       popupLoaded = true;
-      $.getJSON(`/api/script_structure/${scriptName}`,
-        data => progress.renderCourseProgress(data, currentLevelId));
+      $.getJSON(`/api/script_structure/${scriptName}`, data => progress.renderCourseProgress(data, currentLevelId));
     }
   }
 };
