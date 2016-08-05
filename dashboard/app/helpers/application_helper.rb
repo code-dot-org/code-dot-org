@@ -185,7 +185,8 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def is_k1?
+  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
+  def is_k1?  # rubocop:disable PredicateName
     is_k1 = @script.try(:is_k1?)
     is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
     is_k1

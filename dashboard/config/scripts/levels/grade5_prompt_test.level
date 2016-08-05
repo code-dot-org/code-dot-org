@@ -15,14 +15,14 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This is a test play lab level.",
+    "instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "free_play": "false",
+    "free_play": "true",
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
@@ -44,7 +44,8 @@
     "examples_required": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block."
   },
   "published": true,
   "notes": "",
@@ -56,41 +57,129 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_ask">
-              <title name="TEXT">What is your name?</title>
-              <title name="VAR">text</title>
+            <block type="studio_saySpriteParamsTime" inline="true">
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TEXT">
+                <block type="text">
+                  <title name="TEXT">Dogs are the best!</title>
+                </block>
+              </value>
+              <value name="TIME">
+                <block type="math_number">
+                  <title name="NUM">2</title>
+                </block>
+              </value>
               <next>
                 <block type="studio_saySpriteParamsTime" inline="true">
                   <value name="SPRITE">
                     <block type="math_number">
-                      <title name="NUM">1</title>
+                      <title name="NUM">2</title>
                     </block>
                   </value>
                   <value name="TEXT">
-                    <block type="text_join" inline="false">
-                      <mutation items="3"/>
-                      <value name="ADD0">
-                        <block type="text">
-                          <title name="TEXT">Hello, </title>
-                        </block>
-                      </value>
-                      <value name="ADD1">
-                        <block type="variables_get">
-                          <title name="VAR">text</title>
-                        </block>
-                      </value>
-                      <value name="ADD2">
-                        <block type="text">
-                          <title name="TEXT">!</title>
-                        </block>
-                      </value>
+                    <block type="text">
+                      <title name="TEXT">Cats are the best!</title>
                     </block>
                   </value>
                   <value name="TIME">
                     <block type="math_number">
-                      <title name="NUM">1</title>
+                      <title name="NUM">2</title>
                     </block>
                   </value>
+                  <next>
+                    <block type="studio_ask">
+                      <title name="TEXT">Do you like dogs or cats?</title>
+                      <title name="VAR">text</title>
+                      <next>
+                        <block type="controls_if" inline="false">
+                          <mutation elseif="1" else="1"/>
+                          <value name="IF0">
+                            <block type="logic_compare" inline="true">
+                              <title name="OP">EQ</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">text</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="text">
+                                  <title name="TEXT">dogs</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="studio_setSpriteEmotionParams" inline="true">
+                              <title name="VALUE">1</title>
+                              <value name="SPRITE">
+                                <block type="math_number">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="studio_setSpriteEmotionParams" inline="true">
+                                  <title name="VALUE">3</title>
+                                  <value name="SPRITE">
+                                    <block type="math_number">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <value name="IF1">
+                            <block type="logic_compare" inline="true">
+                              <title name="OP">EQ</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">text</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="text">
+                                  <title name="TEXT">cats</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO1">
+                            <block type="studio_setSpriteEmotionParams" inline="true">
+                              <title name="VALUE">1</title>
+                              <value name="SPRITE">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="studio_setSpriteEmotionParams" inline="true">
+                                  <title name="VALUE">3</title>
+                                  <value name="SPRITE">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="studio_setScoreText" inline="true">
+                              <value name="TEXT">
+                                <block type="text">
+                                  <title name="TEXT">Error: Answer not understood.</title>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -120,44 +209,6 @@
                 <title name="NUM">1</title>
               </block>
             </value>
-          </block>
-          <block type="studio_ask">
-            <title name="TEXT">What is your name?</title>
-            <title name="VAR">text</title>
-            <next>
-              <block type="studio_saySpriteParamsTime" inline="true">
-                <value name="SPRITE">
-                  <block type="math_number">
-                    <title name="NUM">1</title>
-                  </block>
-                </value>
-                <value name="TEXT">
-                  <block type="text_join" inline="false">
-                    <mutation items="3"/>
-                    <value name="ADD0">
-                      <block type="text">
-                        <title name="TEXT">Hello, </title>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="variables_get">
-                        <title name="VAR">text</title>
-                      </block>
-                    </value>
-                    <value name="ADD2">
-                      <block type="text">
-                        <title name="TEXT">!</title>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="TIME">
-                  <block type="math_number">
-                    <title name="NUM">1</title>
-                  </block>
-                </value>
-              </block>
-            </next>
           </block>
           <block type="studio_setBackground">
             <title name="VALUE">"cave"</title>
@@ -259,59 +310,28 @@
           </block>
         </category>
         <category name="Text">
+          <block type="studio_ask">
+            <title name="TEXT">Type a question here.</title>
+            <title name="VAR">text</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">text</title>
+          </block>
           <block type="text">
             <title name="TEXT"/>
           </block>
           <block type="text_join" inline="false">
             <mutation items="2"/>
-          </block>
-          <block type="text_append" inline="false">
-            <title name="VAR">i</title>
-            <value name="TEXT">
+            <value name="ADD0">
               <block type="text">
                 <title name="TEXT"/>
               </block>
             </value>
-          </block>
-          <block type="text_length" inline="false"/>
-          <block type="text_isEmpty" inline="true"/>
-          <block type="text_indexOf" inline="true">
-            <title name="END">FIRST</title>
-            <value name="VALUE">
-              <block type="variables_get">
-                <title name="VAR">text</title>
+            <value name="ADD1">
+              <block type="text">
+                <title name="TEXT"/>
               </block>
             </value>
-          </block>
-          <block type="text_charAt" inline="true">
-            <mutation at="true"/>
-            <title name="WHERE">FROM_START</title>
-            <value name="VALUE">
-              <block type="variables_get">
-                <title name="VAR">text</title>
-              </block>
-            </value>
-          </block>
-          <block type="text_getSubstring" inline="true">
-            <mutation at1="true" at2="true"/>
-            <title name="WHERE1">FROM_START</title>
-            <title name="WHERE2">FROM_START</title>
-            <value name="STRING">
-              <block type="variables_get">
-                <title name="VAR">text</title>
-              </block>
-            </value>
-          </block>
-          <block type="text_changeCase" inline="false">
-            <title name="CASE">UPPERCASE</title>
-          </block>
-          <block type="text_trim" inline="false">
-            <title name="MODE">BOTH</title>
-          </block>
-          <block type="text_print" inline="false"/>
-          <block type="text_prompt">
-            <title name="TYPE">TEXT</title>
-            <title name="TEXT"/>
           </block>
         </category>
         <category name="Loops">

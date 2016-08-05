@@ -110,7 +110,8 @@ class Gamelab < Blockly
 
         // Sprites
         "var sprite = createSprite": null,
-        "setSpeed": null,
+        "createEdgeSprites": null,
+        "setSpeedAndDirection": null,
         "getDirection": null,
         "getSpeed": null,
         "isTouching": null,
@@ -178,7 +179,7 @@ class Gamelab < Blockly
         "setRotationEach": null,
         "setRotationSpeedEach": null,
         "setScaleEach": null,
-        "setSpeedEach": null,
+        "setSpeedAndDirectionEach": null,
         "setVelocityEach": null,
         "setVelocityXEach": null,
         "setVelocityYEach": null,

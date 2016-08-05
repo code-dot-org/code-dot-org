@@ -985,38 +985,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options_map)[level.id][:unsubmit_url]
   end
 
-  def create_admin_script
-    create(:script, admin_required: true).tap do |script|
-      create :script_level, script: script
-    end
-  end
-
-  test "should not get show of admin script if not signed in" do
-    admin_script = create_admin_script
-
-    get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_redirected_to_sign_in
-  end
-
-  test "should not get show of admin script if signed in as not admin" do
-    admin_script = create_admin_script
-
-    sign_in create(:student)
-    get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :forbidden
-  end
-
-  # TODO(asher): Consolidate the tests when the user is an admin. In particular,
-  # these scripts should no longer exist, should be accessible to noone, and
-  # will go away.
-  test "should not get show of admin script if signed in as admin" do
-    admin_script = create_admin_script
-
-    sign_in create(:admin)
-    get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :forbidden
-  end
-
   def create_student_of_admin_script
     create(:script, student_of_admin_required: true).tap do |script|
       create :script_level, script: script
