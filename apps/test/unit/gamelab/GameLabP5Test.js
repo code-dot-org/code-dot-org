@@ -6,21 +6,24 @@ import {expect} from '../../util/configuredChai';
 import {assert} from '../../util/configuredChai';
 
 describe('GameLabP5', function () {
+  var gameLabP5;
+
+  beforeEach(function () {
+    gameLabP5 = new GameLabP5();
+    gameLabP5.init({onExecutionStarting: sinon.spy(), onPreload: sinon.spy(), onSetup: sinon.spy(), onDraw: sinon.spy()});
+    gameLabP5.startExecution();
+  });
+
+  afterEach(function () {
+    gameLabP5.resetExecution();
+  });
+
   describe('mouseIsOver method', function () {
-    var gameLabP5;
     var sprite;
 
     beforeEach(function () {
-      gameLabP5 = new GameLabP5();
-      gameLabP5.init({onExecutionStarting: sinon.spy(), onPreload: sinon.spy(), onSetup: sinon.spy(), onDraw: sinon.spy()});
-      gameLabP5.startExecution();
-
       sprite = gameLabP5.p5.createSprite(0, 0);
       sprite.setCollider("circle", 0, 0, 100);
-    });
-
-    afterEach(function () {
-      gameLabP5.resetExecution();
     });
 
     it('returns true when the mouse is within the circle collider', function () {
@@ -44,21 +47,13 @@ describe('GameLabP5', function () {
   });
 
   describe('createEdgeSprites method', function () {
-    var gameLabP5;
-    var sprite;
+    var edgeGroup;
 
     beforeEach(function () {
-      gameLabP5 = new GameLabP5();
-      gameLabP5.init({onExecutionStarting: sinon.spy(), onPreload: sinon.spy(), onSetup: sinon.spy(), onDraw: sinon.spy()});
-      gameLabP5.startExecution();
-    });
-
-    afterEach(function () {
-      gameLabP5.resetExecution();
+      edgeGroup = gameLabP5.p5.createEdgeSprites();
     });
 
     it('returns a group of sprites', function () {
-      var edgeGroup = gameLabP5.p5.createEdgeSprites();
       expect(edgeGroup).to.equal(gameLabP5.p5.edges);
       expect(edgeGroup.contains(gameLabP5.p5.rightEdge)).to.equal(true);
       expect(edgeGroup.contains(gameLabP5.p5.leftEdge)).to.equal(true);
@@ -68,7 +63,6 @@ describe('GameLabP5', function () {
     });
 
     it('creates edge sprites off screen', function () {
-      var edgeGroup = gameLabP5.p5.createEdgeSprites();
       assert.containSubset(gameLabP5.p5.leftEdge, {position: {x: -50, y: 200}, width: 100, height: 400});
       assert.containSubset(gameLabP5.p5.rightEdge, {position: {x: 450, y: 200}, width: 100, height: 400});
       assert.containSubset(gameLabP5.p5.bottomEdge, {position: {x: 200, y: 450}, width: 400, height: 100});
