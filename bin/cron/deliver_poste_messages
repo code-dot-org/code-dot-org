@@ -239,9 +239,9 @@ class Deliverer
     email = defaults[:temporary_email] if email.blank?
     return nil if email.blank?
 
-    {email: email}.tap do |address|
+    {email: email}.tap do |name_and_email|
       name = defaults[:name].to_s.strip
-      address[:name] = name unless name.empty?
+      name_and_email[:name] = name unless name.empty?
     end
   end
 

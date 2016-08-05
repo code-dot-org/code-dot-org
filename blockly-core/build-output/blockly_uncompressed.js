@@ -1180,11 +1180,15 @@ Blockly.BlockSvgUnused.prototype.initChildren = function() {
   this.frameClipRect_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), height:FRAME_HEADER_HEIGHT}, clip);
   this.frameBase_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#e7e8ea", stroke:"#c6cacd", rx:15, ry:15}, this.frameGroup_);
   this.frameHeader_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#c6cacd", rx:15, ry:15, "clip-path":"url(#frameClip" + this.block_.id + ")"}, this.frameGroup_);
-  this.frameText_ = Blockly.createSvgElement("text", {"class":"blocklyText", style:"font-size: 12pt", y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2), "dominant-baseline":"central"}, this.frameGroup_);
+  var frameTextVerticalPosition = -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2);
+  if(Blockly.ieVersion()) {
+    frameTextVerticalPosition += 4
+  }
+  this.frameText_ = Blockly.createSvgElement("text", {"class":"blocklyText", style:"font-size: 12pt", y:frameTextVerticalPosition, "dominant-baseline":"central"}, this.frameGroup_);
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.UNUSED_CODE));
   this.frameHelp_ = Blockly.createSvgElement("g", {"class":"blocklyHelp"}, this.frameGroup_);
   Blockly.createSvgElement("circle", {fill:"#7665a0", r:FRAME_HEADER_HEIGHT * 0.75 * 0.5}, this.frameHelp_);
-  Blockly.createSvgElement("text", {"class":"blocklyText"}, this.frameHelp_).appendChild(document.createTextNode("?"))
+  Blockly.createSvgElement("text", {"class":"blocklyText", y:Blockly.ieVersion() ? 4 : 0}, this.frameHelp_).appendChild(document.createTextNode("?"))
 };
 Blockly.BlockSvgUnused.prototype.getPadding = function() {
   return{top:FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT, right:FRAME_MARGIN_SIDE, bottom:FRAME_MARGIN_BOTTOM, left:FRAME_MARGIN_SIDE}
@@ -1198,7 +1202,7 @@ Blockly.BlockSvgUnused.prototype.bindClickEvent = function() {
     if(Blockly.isRightButton(e)) {
       return
     }
-    this.frameHelp_.dispatchEvent(new Event(Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT, {bubbles:true}));
+    Blockly.fireUiEvent(this.frameHelp_, Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT);
     e.stopPropagation();
     e.preventDefault()
   })
@@ -25675,7 +25679,7 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
   }
 };
 Blockly.Css.CONTENT = [".blocklyLimit rect {", " fill: #a69bc1;", "}", ".blocklyLimit .blocklyText {", " font-size: 10pt;", " fill: #fff;", "}", ".blocklyUnused .blocklyLimit rect {", " fill: #c6cacd;", "}", ".blocklyUnused .blocklyLimit .blocklyText {", " fill: #5b6770", "}", ".blocklyUnused .blocklyPath, .blocklyUnused .blocklyPathDark, .blocklyUnused .blocklyPathLight, .blocklyUnused .blocklyEditableText {", " opacity: 0.25;", "}", ".blocklyUnused .blocklyUnusedFrame {", " transition: opacity 2s;", 
-" opacity: 0.8;", "}", ".blocklyUnused .blocklyUnusedFrame .blocklyText {", " fill: #000;", "}", ".blocklyUnused .blocklyUnusedFrame.hidden {", " opacity: 0;", " visibility: hidden", "}", ".blocklyUnused .blocklyHelp {", " cursor: pointer;", "}", ".blocklyUnused .blocklyHelp .blocklyText {", " fill: #fff;", " font-size: 10pt;", " text-anchor: middle;", " alignment-baseline: central;", "}", ".blocklyDraggable {", "  cursor: url(%CURSOR_OPEN_PATH%) 8 5, auto;", "}", ".dragging, .dragging .blocklySvg, .dragging .blocklyDraggable {", 
+" opacity: 0.8;", "}", ".blocklyUnused .blocklyUnusedFrame .blocklyText {", " fill: #000;", "}", ".blocklyUnused .blocklyUnusedFrame.hidden {", " opacity: 0;", " visibility: hidden", "}", ".blocklyUnused .blocklyHelp {", " cursor: pointer;", "}", ".blocklyUnused .blocklyHelp .blocklyText {", " fill: #fff;", " font-size: 10pt;", " text-anchor: middle;", " dominant-baseline: central;", "}", ".blocklyDraggable {", "  cursor: url(%CURSOR_OPEN_PATH%) 8 5, auto;", "}", ".dragging, .dragging .blocklySvg, .dragging .blocklyDraggable {", 
 "  cursor: url(%CURSOR_CLOSED_PATH%) 7 3, auto !important;", "}", "#%CONTAINER_ID% {", "  border: 1px solid #ddd;", "}", "#%CONTAINER_ID% .userHidden {", "  display: none;", "}", "#%CONTAINER_ID% .hiddenFlyout {", "  display: none !important;", "}", "#%CONTAINER_ID%.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#%CONTAINER_ID%.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#%CONTAINER_ID%.edit .userHidden .blocklyPathDark, #%CONTAINER_ID%.edit .userHidden .blocklyPathLight {", 
 "  display: none;", "}", ".blocklySvg {", "  cursor: pointer;", "  background-color: #fff;", "  overflow: hidden;", "}", "g.blocklyDraggable {", "  -ms-touch-action: none;", "  touch-action: none;", "}", ".blocklyWidgetDiv {", "  position: absolute;", "  display: none;", "  z-index: 999;", "}", ".blocklyResizeSE {", "  fill: #aaa;", "  cursor: se-resize;", "}", ".blocklyResizeSW {", "  fill: #aaa;", "  cursor: sw-resize;", "}", ".blocklyResizeLine {", "  stroke-width: 1;", "  stroke: #888;", "}", 
 ".blocklyHighlightedConnectionPath {", "  stroke-width: 4px;", "  stroke: #fc3;", "  fill: none;", "}", ".blocklyPathLight {", "  fill: none;", "  stroke-width: 2;", "  stroke-linecap: round;", "}", ".blocklySpotlight>.blocklyPath {", "  fill: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPath {", "  stroke-width: 3px;", "  stroke: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPathLight {", "  display: none;", "}", ".blocklyUndeletable>.blocklyEditableText>rect {", 

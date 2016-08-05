@@ -41,6 +41,7 @@
   "heightParameter": "gjatësia",
   "hideTurtle": "zhduk artistin",
   "jump": "hidhu",
+  "jumpTo": "jump to",
   "jumpBackward": "kërce mbrapa me",
   "jumpForward": "kërce përpara me",
   "jumpTooltip": "Zhvendose artistin pa lënë asnjë shenjë.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Kthen artistin majtas ose djathtas nga numri i përcaktuar i gradëve.",
   "turtleVisibilityTooltip": "Bën artistin të dukshëm ose të padukshëm.",
   "widthTooltip": "Ndryshon gjerësinë e lapsit.",
-  "wrongColour": "Figura jote është në ngjyrën e gabuar. Për këtë formuese duhet të jetë %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Figura jote është në ngjyrën e gabuar. Për këtë formuese duhet të jetë %1."
 }

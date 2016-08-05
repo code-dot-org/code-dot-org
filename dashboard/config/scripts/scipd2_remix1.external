@@ -3,25 +3,20 @@ title 'Remixing Experience'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+# Remixing Experiences
 
-### Remixing Experiences
-
-<br/>
 Now that you've taken a look at some of the powerful features of StarLogo Nova, let's go back and help you get more experience with the modules that you have already completed. 
 
 Look at your public gallery and choose at least two projects from each of your completed modules to remix.  Once you do, try to find a way to add all of the features that you have just learned into each model.  
 
 Can you:
-<ul>
-<li>give an agent the camera?</li>
-<li>add at least one more procedure?</li>
-<li>add a couple of extra conditionals?</li>
-<li>experiment with extreme wiggle?</li>
-<li>create some alternate breeds?</li>
-<li>add a slider to quickly modify your environment?</li>
-<li>detect a collision or proximity of agents?</li>
-</ul>
+ - Give an agent the camera?
+ - Add at least one more procedure?
+ - Add a couple of extra conditionals?
+ - Experiment with extreme wiggle?
+ - Create some alternate breeds?
+ - Add a slider to quickly modify your environment?
+ - Detect a collision or proximity of agents?
 
 Upon completion of each remix, head over to the discussion forum on [Expert Remixing](http://forum.code.org/t/expert-remixing/949) and paste the link to the project in your public gallery in this forum and explain what you did, and why the result still makes sense as a scientific model. 
 
@@ -29,9 +24,7 @@ Upon completion of each remix, head over to the discussion forum on [Expert Remi
 Discuss Your Remix >>
 </button></a>
 
-
 Once you're done at the forum, come back and continue on to the next stage.
-<br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

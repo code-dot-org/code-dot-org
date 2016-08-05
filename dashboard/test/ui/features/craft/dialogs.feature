@@ -38,6 +38,7 @@ Feature: Minecraft dialog levels
     And element "#runButton" is visible
 
 #  @eyes
+  @skip
   Scenario: Playing level 6, seeing house select dialog
     Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/6?noautoplay=true&customSlowMotion=0.1"
 #    And I open my eyes to test "Minecraft Level 6 dialogs"

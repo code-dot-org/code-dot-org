@@ -23,7 +23,7 @@ Gets the text from the specified screen element.
 
 [/short_description]
 
-To capture data entered by the user, your apps will need to read data from [textInput()](/applab/docs/textInput) or [textArea()](/applab/docs/textArea) screen elements. getText() is usually used in an [onEvent()](/applab/docs/onEvent) callback function, and returns a string that can be stored in a variable or used as a parameter in another function call.
+To capture data entered by the user, your apps will need to read data from [textInput()](/applab/docs/textInput) or textArea screen elements. getText() is usually used in an [onEvent()](/applab/docs/onEvent) callback function, and returns a string that can be stored in a variable or used as a parameter in another function call.
 
 [/description]
 

@@ -341,7 +341,9 @@ en:
     announcement_title: crwdns56513:0crwdne56513:0
     announcement_view_all: crwdns56514:0crwdne56514:0
     announcement_message: crwdns56515:0crwdne56515:0
+    announcement_csp_widgets_message: crwdns57910:0crwdne57910:0
     announcement_learn_more_button: crwdns57407:0crwdne57407:0
+    announcement_try_now_button: crwdns57911:0crwdne57911:0
     announcement_petition: crwdns56517:0crwdne56517:0
     announcement_petition_button: crwdns56518:0crwdne56518:0
   move_students:
@@ -517,6 +519,7 @@ en:
     wrong_body: crwdns56222:0crwdne56222:0
     correct_title: crwdns56173:0crwdne56173:0
     correct_body: crwdns56174:0crwdne56174:0
+    hide_survey_last_answer: crwdns57912:0crwdne57912:0
   level_group-submittable:
     wrong_title: crwdns56223:0crwdne56223:0
     wrong_body: crwdns56224:0crwdne56224:0
@@ -671,6 +674,7 @@ en:
     required: crwdns56538:0crwdne56538:0
     content: crwdns56539:0crwdne56539:0
     practice: crwdns56540:0crwdne56540:0
+    peer_review: crwdns57913:0crwdne57913:0
   external_links:
     disclaimer: crwdns57418:0crwdne57418:0
     leaving_domain: crwdns57419:0crwdne57419:0

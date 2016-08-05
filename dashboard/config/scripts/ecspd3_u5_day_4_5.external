@@ -1,22 +1,21 @@
 name 'ECSPD3-u5 day 4-5'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Unit 5 Lessons > Days 4-5
 
-## Unit 5 Lessons > Days 4-5
+## Concepts Covered
 
-<br><br>
-#### Concepts Covered 
 Research questions, validating claims with research data.
 
-#### Lesson Overview
+## Lesson Overview
+
 This lesson finishes off the room data collection project with a debrieft. Afterwards students have time to **explore the sample data sets** provided in a data analysis analysis tool and research questions around either the sample final projects or one of their choosing. Students should be able to **identify research questions** that can be answered to validate the message/story they want to tell with appropriate research data.
 <br><br>
 Students will need to keep in mind the complexities of creating appropriate survey questions, collecting the data sets, processing data sets using a data analysis tool, and be able to report their findings using a website or scratch project.
  
-#### Lesson Resources
+## Lesson Resources
 
-##### <a href=" https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=201" target=_blank>Lesson Plan link >> </a>
+#### <a href=" https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=201" target=_blank>Lesson Plan link >> </a>
 
 - <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=198" target=_blank>Room Data Collection Project </a>
 - <a href="" target=_blank>Data Analysis and Research Questions </a>
@@ -25,14 +24,10 @@ Students will need to keep in mind the complexities of creating appropriate surv
 - <a href="http://math.youngzones.org/stat_graph.html" target=_blank>Statistical Graphs </a>
 - <a href="http://www.shmoop.com/basic-statistics-probability/designing-study.html" target=_blank>Basic Statistics and Probability</a>
 
->##### Hints from an ECS Teacher:
-* As you examine data sets for the final project topics and answer the “Data Analysis questions” listed with each topic, you may want to remember that in Excel you can use a pivot table to summarize counts of each category. A pivot table is a useful tool for discovering trends and patterns in the data. 
-
-<br><br>
+> ## Hints from an ECS Teacher:
+> - As you examine data sets for the final project topics and answer the “Data Analysis questions” listed with each topic, you may want to remember that in Excel you can use a pivot table to summarize counts of each category. A pivot table is a useful tool for discovering trends and patterns in the data. 
 
 Click “Continue” below to learn about the next lesson. 
 
-<br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

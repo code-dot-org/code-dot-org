@@ -493,6 +493,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: Vai jūs esat skolotājs?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -711,7 +713,7 @@
   dashboard_navigation_view_progress: Apskatīt sekmes
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Pievienot skolēnus
   dashboard_navigation_manage_students: Pārvaldīt skolēnus
   dashboard_navigation_lesson_plans_resources: Stundu plāni un resursi
@@ -902,7 +904,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Uzzini vairāk
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Izmēģini tūlīt
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1743,6 +1745,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
-  are_you_teacher: Are you a teacher?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
