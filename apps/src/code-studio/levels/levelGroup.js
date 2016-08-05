@@ -10,8 +10,6 @@ window.initLevelGroup = function (
   currentPage,
   lastAttempt) {
 
-  var blankCharacter = "\u25A1";
-
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -43,7 +41,7 @@ window.initLevelGroup = function (
         continue;
       }
       var subLevelResult = levels[subLevelId].getResult(true);
-      var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString(), blankCharacter));
+      var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
       var result = subLevelResult.result;
       var errorType = subLevelResult.errorType;
       var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
@@ -95,7 +93,7 @@ window.initLevelGroup = function (
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
       var currentAnswer = levels[levelId].getResult(true);
-      var levelResult = replaceEmoji(currentAnswer.response.toString(), blankCharacter);
+      var levelResult = replaceEmoji(currentAnswer.response.toString());
       var valid = currentAnswer.valid;
       lastAttempt[levelId] = {result: levelResult, valid: valid};
     });
@@ -146,10 +144,12 @@ window.initLevelGroup = function (
     }
   }
 
-  // Replaces emoji in a string with the given string.
+  // Replaces emoji in a string with a blank character.
   // Returns the updated string.
   // Source: http://crocodillon.com/blog/parsing-emoji-unicode-in-javascript
-  function replaceEmoji(source, replace) {
+  function replaceEmoji(source) {
+    const blankCharacter = "\u25A1";
+
     // Build the ranges in a way that works with Babel (which currently handles
     // \u encoding in a string incorrectly).
     var ranges = [
@@ -158,7 +158,7 @@ window.initLevelGroup = function (
       String.fromCharCode(0xd83d) + '[' + String.fromCharCode(0xde80) + '-' + String.fromCharCode(0xdeff) + ']'
     ];
 
-    return source.replace(new RegExp(ranges.join('|'), 'g'), replace);
+    return source.replace(new RegExp(ranges.join('|'), 'g'), blankCharacter);
   }
 
   $(".nextPageButton").click(function (event) {
