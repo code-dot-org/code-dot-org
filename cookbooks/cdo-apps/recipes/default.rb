@@ -76,6 +76,8 @@ include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 
+include_recipe 'cdo-cloudwatch-extra-metrics'
+
 include_recipe 'cdo-apps::bundle_bootstrap'
 
 # Install optional package build targets if specified in attributes.

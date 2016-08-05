@@ -7,6 +7,8 @@ DEPENDENCIES
     path: cdo-authorized-keys
   cdo-awscli
     path: cdo-awscli
+  cdo-cloudwatch-extra-metrics
+    path: cdo-cloudwatch-extra-metrics
   cdo-freegeoip
     path: cdo-freegeoip
   cdo-github-access
@@ -62,6 +64,7 @@ GRAPH
   cdo-apps (0.2.141)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
+    cdo-cloudwatch-extra-metrics (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-networking (>= 0.0.0)
@@ -78,6 +81,9 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.1)
+  cdo-cloudwatch-extra-metrics (0.1.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
   cdo-freegeoip (0.1.1)
     ark (>= 0.0.0)
     poise-service (>= 0.0.0)

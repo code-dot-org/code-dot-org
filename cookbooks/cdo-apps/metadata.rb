@@ -9,6 +9,7 @@ version          '0.2.141'
 depends 'apt'
 depends 'build-essential'
 
+depends 'cdo-cloudwatch-extra-metrics'
 depends 'cdo-repository'
 depends 'cdo-secrets'
 depends 'cdo-postfix'
