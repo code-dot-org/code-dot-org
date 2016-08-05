@@ -4,6 +4,7 @@
  */
 
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
@@ -16,6 +17,15 @@ import {
   InputGroup,
   HelpBlock
 } from 'react-bootstrap';
+import TimeSelect from './time_select';
+import {
+  DATE_FORMAT,
+  TIME_FORMAT,
+  DATEPICKER_FORMAT
+} from '../workshopConstants';
+
+const MIN_TIME = moment('7:00am', TIME_FORMAT);
+const MAX_TIME = moment('7:00pm', TIME_FORMAT);
 
 const styles = {
   readOnlyInput: {
@@ -39,17 +49,23 @@ const SessionFormPart = React.createClass({
     onChange: React.PropTypes.func.isRequired,
   },
 
-  handleDateChange(e) {
-    this.props.session.date = e.target.value;
-    this.props.onChange(this.props.session);
+  handleDateChange(event) {
+    this.handleChange('date', event.target.value);
   },
-  handleStartTimeChange(e) {
-    this.props.session.startTime = e.target.value;
-    this.props.onChange(this.props.session);
+  handleStartTimeChange(time) {
+    this.handleChange('startTime', time);
   },
-  handleEndTimeChange(e) {
-    this.props.session.endTime = e.target.value;
-    this.props.onChange(this.props.session);
+  handleEndTimeChange(time) {
+    this.handleChange('endTime', time);
+  },
+  handleChange(fieldName, value) {
+    const updatedSession = _.set(
+      _.cloneDeep(this.props.session),
+      fieldName,
+      value
+    );
+
+    this.props.onChange(updatedSession);
   },
   handleRemoveClick() {
     this.props.onRemove();
@@ -79,28 +95,58 @@ const SessionFormPart = React.createClass({
     return null;
   },
 
+  // Return the time 1 minute before specified maxTime, bounded by MAX_TIME
+  getBoundedMaxTime(maxTime) {
+    const m = moment(maxTime, TIME_FORMAT);
+    if (!m.isValid()) {
+      return MAX_TIME;
+    }
+    return moment.min(MAX_TIME, m.subtract({minutes: 1}));
+  },
+
+  // Return the time 1 minute after specified minTime, bounded by MIN_TIME
+  getBoundedMinTime(minTime) {
+    const m = moment(minTime, TIME_FORMAT);
+    if (!m.isValid()) {
+      return MIN_TIME;
+    }
+    return moment.max(MIN_TIME, m.add({minutes: 1}));
+  },
+
   render() {
     const style = {};
     const help = {};
+    const date = moment(this.props.session.date, DATE_FORMAT);
     if (this.props.shouldValidate) {
       if (!this.props.session.date) {
         style.date = "error";
         help.date = "Required.";
-      } else if (!moment(this.props.session.date, 'MM/DD/YY').isValid()) {
+      } else if (!date.isValid()) {
         style.date = "error";
-        help.date = "Must be a valid date in MM/DD/YY format.";
+        help.date = `Must be a valid date in ${DATE_FORMAT} format.`;
       }
-      if (!this.props.session.startTime) {
-        style.startTime = "error";
-        help.startTime = "Required.";
-      }
-      if (!this.props.session.endTime) {
-        style.endTime = "error";
-        help.endTime = "Required.";
-      } else if (this.props.session.endTime <= this.props.session.startTime) {
-        style.endTime = "error";
-        help.endTime = "Must end after it starts.";
-      }
+    }
+
+    // Start and end times have default values and should always be validated.
+    const startTime = moment(this.props.session.startTime, TIME_FORMAT);
+    const endTime = moment(this.props.session.endTime, TIME_FORMAT);
+    if (!this.props.session.startTime) {
+      style.startTime = "error";
+      help.startTime = "Required.";
+    } else if (!startTime.isValid()) {
+      style.startTime = "error";
+      help.startTime = "Invalid format.";
+    }
+    if (!this.props.session.endTime) {
+      style.endTime = "error";
+      help.endTime = "Required.";
+    } else if (!endTime.isValid()) {
+      style.endTime = "error";
+      help.endTime = "Invalid format.";
+    }
+    if (startTime.isValid() && endTime.isValid() && !endTime.isAfter(startTime)) {
+      style.endTime = "error";
+      help.endTime = "Must end after it starts.";
     }
 
     return (
@@ -125,37 +171,27 @@ const SessionFormPart = React.createClass({
         </Col>
         <Col sm={3}>
           <FormGroup validationState={style.startTime}>
-            <InputGroup>
-              <FormControl
-                type="time"
-                placeholder="hh:mm"
-                value={this.props.session.startTime || ''}
-                onChange={this.handleStartTimeChange}
-                style={this.props.readOnly && styles.readOnlyInput}
-                disabled={this.props.readOnly}
-              />
-              <InputGroup.Addon>
-                {!this.props.readOnly && <i className="fa fa-clock-o" />}
-              </InputGroup.Addon>
-            </InputGroup>
+            <TimeSelect
+              id="startTime-select"
+              onChange={this.handleStartTimeChange}
+              value={this.props.session.startTime}
+              readOnly={this.props.readOnly}
+              minTime={MIN_TIME}
+              maxTime={this.getBoundedMaxTime(this.props.session.endTime)}
+            />
             <HelpBlock>{help.startTime}</HelpBlock>
           </FormGroup>
         </Col>
         <Col sm={3}>
           <FormGroup validationState={style.endTime}>
-            <InputGroup>
-              <FormControl
-                type="time"
-                placeholder="hh:mm"
-                value={this.props.session.endTime || ''}
-                onChange={this.handleEndTimeChange}
-                style={this.props.readOnly && styles.readOnlyInput}
-                disabled={this.props.readOnly}
-              />
-              <InputGroup.Addon>
-                {!this.props.readOnly && <i className="fa fa-clock-o" />}
-              </InputGroup.Addon>
-            </InputGroup>
+            <TimeSelect
+              id="endTime-select"
+              onChange={this.handleEndTimeChange}
+              value={this.props.session.endTime}
+              readOnly={this.props.readOnly}
+              minTime={this.getBoundedMinTime(this.props.session.startTime)}
+              maxTime={MAX_TIME}
+            />
             <HelpBlock>{help.endTime}</HelpBlock>
           </FormGroup>
         </Col>
@@ -186,8 +222,8 @@ const SessionFormPart = React.createClass({
     if (this.dateControl) {
       $(this.dateControl).datepicker({
         minDate: 0,
-        dateFormat: 'mm/dd/y',
-        onSelect: dateText => {
+        dateFormat: DATEPICKER_FORMAT,
+        onSelect: (dateText) => {
           this.props.session.date = dateText;
           this.props.onChange(this.props.session);
         }

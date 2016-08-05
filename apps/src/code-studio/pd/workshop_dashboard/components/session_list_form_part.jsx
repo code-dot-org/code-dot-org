@@ -5,8 +5,7 @@ import React from 'react';
 import moment from 'moment';
 import {Row, Col} from 'react-bootstrap';
 import SessionFormPart from './session_form_part';
-
-const MAX_SESSIONS = 10;
+import {DATE_FORMAT, MAX_SESSIONS} from '../workshopConstants';
 
 const SessionListFormPart = React.createClass({
   propTypes: {
@@ -35,7 +34,7 @@ const SessionListFormPart = React.createClass({
       endTime: lastSession.endTime
     };
     if (lastSession.date) {
-      newSession.date = moment(lastSession.date, 'MM/DD/YY').add(1,'days').format('MM/DD/YY');
+      newSession.date = moment(lastSession.date, DATE_FORMAT).add(1,'days').format(DATE_FORMAT);
     }
 
     sessions.push(newSession);
