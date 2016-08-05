@@ -6,13 +6,6 @@ def lint_if_changed(projects, &block)
   GitUtils.run_if_project_affected(projects, 'Starting linting.', 'Skipping linting.', &block)
 end
 
-def lint_code_studio_js
-  Dir.chdir(code_studio_dir) do
-    HipChat.log 'Linting <b>code-studio</b> JavaScript...'
-    RakeUtils.system_stream_output 'npm run lint-js'
-  end
-end
-
 def lint_apps_js
   Dir.chdir(apps_dir) do
     HipChat.log 'Linting <b>apps</b> JavaScript...'
@@ -57,33 +50,19 @@ namespace :lint do
       lint_apps_js
     end
 
-    task :code_studio do
-      lint_code_studio_js
-    end
-
     task :changed do
       lint_if_changed(:apps) do
         lint_apps_js
       end
-
-      lint_if_changed(:code_studio) do
-        lint_code_studio_js
-      end
     end
-
-    task all: [:apps, :code_studio]
   end
 
-  task javascript: ['javascript:all']
+  task javascript: ['javascript:apps']
 
   desc 'Lints code changed from staging.'
   task :changed do
     lint_if_changed(:apps) do
       lint_apps_js
-    end
-
-    lint_if_changed(:code_studio) do
-      lint_code_studio_js
     end
 
     lint_if_changed([:dashboard, :pegasus, :shared]) do
