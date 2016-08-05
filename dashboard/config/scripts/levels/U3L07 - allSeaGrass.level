@@ -165,6 +165,23 @@
     "log_conditions": [
       {
         "entries": [
+          "drawSeaGrass:2"
+        ],
+        "matchType": "exact",
+        "minTimes": 30,
+        "message": "drawAllSeaGrass: App lab is expecting that you write a loop runs about 50 times (min 30) and repeatedly calls drawSeaGrass(radius, numWaves), making sure to change the turtle's location before each call.  It appears as though the sequence is slightly different or you're not running the loop at least 30 times."
+      },
+      {
+        "entries": [
+          "drawAllSeaGrass:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllSeaGrass function is the loop."
+      },
+      {
+        "entries": [
           "drawAllSeaStars:0",
           "[forInit]"
         ],
