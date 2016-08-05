@@ -358,7 +358,11 @@ module LevelsHelper
       # TTS is currently only enabled for k1
       app_options['acapelaEnabled'] = CDO.use_acapela && script.is_k1?
       # temporary parameter for a/b testing our voice options
-      voice = params[:voice] === 'b' ? :ella : :rosie
+      voice = :rosie
+      if params[:voice]
+        voice = :ella if params[:voice] === 'b'
+        voice = :sharon if params[:voice] === 'c'
+      end
       app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file(voice)}"
       app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file(voice)}"
     end
