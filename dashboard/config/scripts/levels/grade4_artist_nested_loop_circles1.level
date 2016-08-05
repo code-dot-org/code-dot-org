@@ -78,7 +78,7 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="controls_repeat">
+        <block type="controls_repeat" limit="2">
           <title name="TIMES">???</title>
         </block>
         <block type="draw_colour" inline="true">

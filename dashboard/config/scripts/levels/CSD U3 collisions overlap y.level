@@ -19,7 +19,6 @@
       "velocityY": null,
       "visible": null,
       "comment_Sprites": null,
-      "comment_Drawing": null,
       "ifBlock": null,
       "comment_Control": null,
       "addOperator": null,
@@ -39,13 +38,7 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "comment_Variables": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null,
-      "comment": null
+      "comment_Variables": null
     },
     "show_d_pad": "true",
     "edit_code": true,

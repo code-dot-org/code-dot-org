@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
   "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

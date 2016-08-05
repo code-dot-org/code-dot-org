@@ -1382,6 +1382,41 @@ exports.install = function (blockly, blockInstallOptions) {
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
   };
 
+  blockly.Blocks.studio_setScore = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      this.appendValueInput('VALUE')
+        .appendTitle(msg.setScore());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setScoreTooltip());
+    }
+  };
+
+  generator.studio_setScore = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
+       Blockly.JavaScript.ORDER_NONE) || '0';
+   return 'Studio.setScore(' + arg + ');\n';
+  };
+
+  blockly.Blocks.studio_getScore = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      this.appendDummyInput()
+          .appendTitle(msg.score());
+      this.setOutput(true, Blockly.BlockValueType.NUMBER);
+      this.setTooltip(msg.getScoreTooltip());
+    }
+  };
+
+  generator.studio_getScore = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
+       Blockly.JavaScript.ORDER_NONE) || '0';
+   return ['Studio.getScore()', 0];
+  };
+
   blockly.Blocks.studio_addNumPoints = {
     // Block for adding arbitrary number of points
     helpUrl: '',

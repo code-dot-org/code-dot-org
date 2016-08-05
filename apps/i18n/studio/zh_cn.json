@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "获得三名反叛飞行员来进入下一关。",
   "failedChangeSettingSettings": "制作你自己的游戏，要通过这一关，您需要更改您的机器人并设置它的速度。",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

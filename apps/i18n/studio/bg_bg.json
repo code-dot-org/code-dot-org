@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Стигни до трима Бунтовник пилоти, за да продължиш.",
   "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }
