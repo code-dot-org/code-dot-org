@@ -496,14 +496,17 @@ class User < ActiveRecord::Base
     user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.detect do |script_level|
-      user_level = user_levels_by_level[script_level.level_id]
-      unpassed_progression_level?(script_level, user_level)
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      unpassed_progression_level?(script_level, user_levels)
     end
   end
 
-  def unpassed_progression_level?(script_level, user_level)
-    is_passed = (user_level && user_level.passing?)
-    script_level.valid_progression_level? && !is_passed
+  # Return true if script_level is a valid_progression_level and every
+  # user_level is either missing or not passing
+  def unpassed_progression_level?(script_level, user_levels)
+    script_level.valid_progression_level? && user_levels.all? do |user_level|
+      !(user_level && user_level.passing?)
+    end
   end
 
   def last_attempt(level)
