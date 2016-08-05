@@ -24,6 +24,11 @@ import {
   ButtonToolbar,
   Alert
 } from 'react-bootstrap';
+import {
+  TIME_FORMAT,
+  DATE_FORMAT,
+  DATETIME_FORMAT
+} from '../workshopConstants';
 
 var styles = {
   readOnlyInput: {
@@ -31,6 +36,12 @@ var styles = {
     cursor: 'default',
     border: 'none'
   }
+};
+
+const placeholderSession = {
+  placeholderId: '_0',
+  startTime: '9:00am',
+  endTime: '5:00pm'
 };
 
 var WorkshopForm = React.createClass({
@@ -69,7 +80,7 @@ var WorkshopForm = React.createClass({
       course: '',
       subject: '',
       notes:'',
-      sessions: [{placeholderId: '_0'}],
+      sessions: [placeholderSession],
       destroyedSessions: [],
       availableFacilitators: [],
       showSaveConfirmation: false
@@ -172,9 +183,9 @@ var WorkshopForm = React.createClass({
     return sessions.map((session) => {
       return {
         id: session.id,
-        date: moment.utc(session.start).format('MM/DD/YY'),
-        startTime: moment.utc(session.start).format('HH:mm'),
-        endTime: moment.utc(session.end).format('HH:mm')
+        date: moment.utc(session.start).format(DATE_FORMAT),
+        startTime: moment.utc(session.start).format(TIME_FORMAT),
+        endTime: moment.utc(session.end).format(TIME_FORMAT)
       };
     });
   },
@@ -184,8 +195,8 @@ var WorkshopForm = React.createClass({
     return sessions.map((session) => {
       return {
         id: session.id,
-        start: moment.utc(session.date + ' ' + session.startTime, 'MM/DD/YY HH:mm').format(),
-        end: moment.utc(session.date + ' ' + session.endTime, 'MM/DD/YY HH:mm').format()
+        start: moment.utc(session.date + ' ' + session.startTime, DATETIME_FORMAT).format(),
+        end: moment.utc(session.date + ' ' + session.endTime, DATETIME_FORMAT).format()
       };
     }).concat(destroyedSessions.map((destroyedSession) => {
       return {
@@ -457,8 +468,9 @@ var WorkshopForm = React.createClass({
     if (shouldValidate) {
       for (var i = 0; i < this.state.sessions.length; i++) {
         var session = this.state.sessions[i];
-        if (!session.date || !moment(session.date, 'MM/DD/YY').isValid() ||
-          !session.startTime || !session.endTime) {
+        if (!session.date || !moment(session.date, DATE_FORMAT).isValid() ||
+          !session.startTime || !moment(session.startTime, TIME_FORMAT).isValid() ||
+          !session.endTime || !moment(session.endTime, TIME_FORMAT).isValid()) {
           validation.isValid = false;
         }
       }
