@@ -61,6 +61,16 @@ namespace :lint do
       lint_code_studio_js
     end
 
+    task :changed do
+      lint_if_changed(:apps) do
+        lint_apps_js
+      end
+
+      lint_if_changed(:code_studio) do
+        lint_code_studio_js
+      end
+    end
+
     task all: [:apps, :code_studio]
   end
 
