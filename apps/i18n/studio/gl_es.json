@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Obten tres pilotos rebeldes para seguir adiante.",
   "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Arriba a tres Pilots Rebels per seguir endavant.",
   "failedChangeSettingSettings": "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

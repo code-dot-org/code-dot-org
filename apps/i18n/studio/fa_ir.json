@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "برای ادامه سه خلبان شورشی بگیر.",
   "failedChangeSettingSettings": "بازی را ازان خود کن. برای قبول شدن این پازل شما باید روبات خود را عوض کرده و سرعت آن را تنظیم نمائید.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

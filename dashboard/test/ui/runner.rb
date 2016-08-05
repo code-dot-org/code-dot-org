@@ -271,10 +271,29 @@ if $options.with_status_page
   HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
+def test_run_identifier(browser, feature)
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
-  browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+  browser_name = browser_name_or_unknown(browser)
+  "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+end
+
+def browser_name_or_unknown(browser)
+  browser['name'] || 'UnknownBrowser'
+end
+
+def flakiness_for_browser_feature(browser_feature)
+  TestFlakiness.test_flakiness[test_run_identifier(browser_feature[0], browser_feature[1])] || 1.0
+end
+
+# Sort by flakiness (most flaky at end of array, will get run first)
+browser_features.sort! do |browser_feature_a, browser_feature_b|
+  flakiness_for_browser_feature(browser_feature_b) <=>
+    flakiness_for_browser_feature(browser_feature_a)
+end
+
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
+  browser_name = browser_name_or_unknown(browser)
+  test_run_string = test_run_identifier(browser, feature)
 
   if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"

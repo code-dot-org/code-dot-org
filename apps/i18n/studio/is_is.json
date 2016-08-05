@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Náðu þremur flugmönnum til að halda áfram.",
   "failedChangeSettingSettings": "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

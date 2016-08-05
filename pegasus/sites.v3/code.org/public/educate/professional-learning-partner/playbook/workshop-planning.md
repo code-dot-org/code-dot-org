@@ -225,15 +225,21 @@ These guidelines explain the type of space your facilitators need to run a succe
 
 **When Follow-up Workshops Should be Held**<br/>
 
-- Quarter 1 = end of unit 1, first half of unit 2
+- Workshop 1 = end of unit 1, first half of unit 2
 	- ~4 weeks into school 
-- Quarter 2 = second half of unit 2, unit 3 
+	- Teachers should be implementing curriculum before attending this workshop.
+	- Airing on slightly later side is better than airing on slightly earlier side
+- Workshop 2 = second half of unit 2, unit 3 
 	- 9-12 weeks into school
-- Quarter 3 = unit 4, first half of unit 5 
-	- Start of second semester
-- Quarter 4 = second half of unit 5, unit 6 
-	- Ideally in mid feb. 
+	- Should occur before teachers begin teaching unit 3
+- Workshop 3 = unit 4, first half of unit 5 
+	- Start of second semester or December
+- Workshop 4 = second half of unit 5, unit 6 
+	- Ideally in mid February. 
 	- Early March  at the latest
+	- Ideally this should occur 1 month prior to teachers beginning to teach Unit 6<br/>
+
+Take a look at the [CSP pacing guide](https://code.org/curriculum/docs/csp/units_horizSnap.png) for more information.
 
 
 **Example Workshop Agendas**<br/> 

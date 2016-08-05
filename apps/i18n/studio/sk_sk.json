@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Dostaň sa k trom Pilotom Rebelov, aby si išiel ďalej.",
   "failedChangeSettingSettings": "Prispôsob si hru. Aby si prešiel týmto rébusom, potrebuješ si zmeniť droida a nastaviť jeho rýchlosť.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }
