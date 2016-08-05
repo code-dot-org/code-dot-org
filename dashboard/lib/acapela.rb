@@ -13,16 +13,16 @@ VAAS_HASH = {
 }
 
 def acapela_text_to_audio_url(text, voice="rosie22k", speed=180, shape=100)
-  url = URI.parse(VAAS_URL)
-  request = VAAS_HASH.merge({
+  params = {
     req_voice: voice,
     req_text: text,
     req_spd: speed,
     req_vct: shape
-  })
+  }
+  Rails.logger.info "TTS: requesting conversion with request data #{params}"
 
-  Rails.logger.info "TTS: requesting conversion with request data #{request}"
-  response = Net::HTTP.post_form(url, request)
+  request = VAAS_HASH.merge(params)
+  response = Net::HTTP.post_form(URI.parse(VAAS_URL), request)
 
   Rails.logger.info "TTS: response with status code #{response.code}"
   if response.code == '200'
