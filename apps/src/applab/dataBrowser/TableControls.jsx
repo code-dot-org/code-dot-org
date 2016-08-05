@@ -32,12 +32,19 @@ const TableControls = React.createClass({
   },
 
   handleSelectImportFile() {
+    if (!this.importFileInput.value) {
+      return;
+    }
     const msg = 'Importing this file will overwrite the existing data in this table. ' +
       'Are you sure you want to continue?';
     if (confirm(msg)) {
       const file = this.importFileInput.files[0];
       const reader = new FileReader();
-      reader.onload = e => this.props.importCsv(e.target.result);
+      reader.onload = e => {
+        this.props.importCsv(e.target.result);
+        // Make sure we get another change event if the same file is selected again.
+        this.importFileInput.value = "";
+      };
       reader.readAsText(file);
     }
   },
