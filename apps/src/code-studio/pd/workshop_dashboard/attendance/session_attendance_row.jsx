@@ -5,7 +5,7 @@
 import React from "react";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
-var styles = {
+const styles = {
   contents: {
     height: '100%',
     width: '100%',
@@ -13,7 +13,7 @@ var styles = {
   }
 };
 
-var SessionAttendanceRow = React.createClass({
+const SessionAttendanceRow = React.createClass({
   propTypes: {
     sessionId: React.PropTypes.number,
     attendance: React.PropTypes.shape({
@@ -42,7 +42,7 @@ var SessionAttendanceRow = React.createClass({
   },
 
   renderAttendedCellContents: function () {
-    var checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
+    const checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
     if (this.props.isReadOnly) {
       return (
         <div>
@@ -51,14 +51,14 @@ var SessionAttendanceRow = React.createClass({
       );
     }
 
-    var contents = (
+    const contents = (
       <div style={styles.contents} onClick={this.handleClickAttended}>
         <i className={checkBoxClass}/>
       </div>
     );
 
     if (!this.isValid()) {
-      var tooltip = (
+      const tooltip = (
         <Tooltip id={0}>
           Teachers must have a Code Studio account and join the section before they can be marked attended.
         </Tooltip>

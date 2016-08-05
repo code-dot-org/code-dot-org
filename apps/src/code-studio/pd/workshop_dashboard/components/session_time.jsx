@@ -8,7 +8,7 @@ import {
   DATETIME_FORMAT
 } from '../workshopConstants';
 
-var SessionTime = React.createClass({
+const SessionTime = React.createClass({
   propTypes: {
     session: React.PropTypes.shape({
       start: React.PropTypes.string.isRequired,
@@ -17,7 +17,7 @@ var SessionTime = React.createClass({
   },
 
   render() {
-    var formattedTime = moment.utc(this.props.session.start).format(DATETIME_FORMAT) +
+    const formattedTime = moment.utc(this.props.session.start).format(DATETIME_FORMAT) +
       '-' + moment.utc(this.props.session.end).format(TIME_FORMAT);
 
     return <div>{formattedTime}</div>;

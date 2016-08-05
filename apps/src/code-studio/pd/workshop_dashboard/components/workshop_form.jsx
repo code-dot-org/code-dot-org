@@ -30,7 +30,7 @@ import {
   DATETIME_FORMAT
 } from '../workshopConstants';
 
-var styles = {
+const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
@@ -44,7 +44,7 @@ const placeholderSession = {
   endTime: '5:00pm'
 };
 
-var WorkshopForm = React.createClass({
+const WorkshopForm = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -141,7 +141,7 @@ var WorkshopForm = React.createClass({
       method: "GET",
       url: `/api/v1/pd/course_facilitators?course=${course}`,
       dataType: "json"
-    }).done((data) => {
+    }).done(data => {
       this.setState({availableFacilitators: data});
     });
   },
@@ -172,7 +172,7 @@ var WorkshopForm = React.createClass({
     if (!this.autocomplete && this.locationAddressControl && this.isGoogleMapsLoaded()) {
       this.autocomplete = new google.maps.places.Autocomplete(this.locationAddressControl);
       google.maps.event.addListener(this.autocomplete, 'place_changed', () => {
-        var place = this.autocomplete.getPlace();
+        const place = this.autocomplete.getPlace();
         this.setState({location_address: place.formatted_address});
       });
     }
@@ -180,7 +180,7 @@ var WorkshopForm = React.createClass({
 
   // Convert from [start, end] to [date, startTime, endTime]
   prepareSessionsForForm(sessions) {
-    return sessions.map((session) => {
+    return sessions.map(session => {
       return {
         id: session.id,
         date: moment.utc(session.start).format(DATE_FORMAT),
@@ -192,13 +192,13 @@ var WorkshopForm = React.createClass({
 
   // Convert from [date, startTime, endTime] to [start, end] and merge destroyedSessions
   prepareSessionsForApi(sessions, destroyedSessions) {
-    return sessions.map((session) => {
+    return sessions.map(session => {
       return {
         id: session.id,
         start: moment.utc(session.date + ' ' + session.startTime, DATETIME_FORMAT).format(),
         end: moment.utc(session.date + ' ' + session.endTime, DATETIME_FORMAT).format()
       };
-    }).concat(destroyedSessions.map((destroyedSession) => {
+    }).concat(destroyedSessions.map(destroyedSession => {
       return {
         id: destroyedSession.id,
         _destroy: true
@@ -208,13 +208,13 @@ var WorkshopForm = React.createClass({
 
   // Convert from [id, name, email] to an array of ids.
   prepareFacilitatorsForApi(facilitators) {
-    return facilitators.filter((f) => f.id > 0).map((f) => f.id);
+    return facilitators.filter(f => f.id > 0).map(f => f.id);
   },
 
   handleSessionsChange(sessions, removedSession) {
     sessions = _.cloneDeep(sessions);
     sessions.sessionsModified = true;
-    var destroyedSessions = [];
+    const destroyedSessions = [];
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
@@ -225,16 +225,17 @@ var WorkshopForm = React.createClass({
   },
 
   renderCourseSelect(validation) {
-    var options = window.dashboard.workshop.COURSES.map((course, i) => {
+    const options = window.dashboard.workshop.COURSES.map((course, i) => {
       return (<option key={i} value={course}>{course}</option>);
     });
-    var placeHolder = this.state.course ? null : <option />;
+    const placeHolder = this.state.course ? null : <option />;
     return (
       <FormGroup validationState={validation.style.course}>
         <ControlLabel>Course</ControlLabel>
         <FormControl
           componentClass="select"
           value={this.state.course || ''}
+          name="course"
           onChange={this.handleCourseChange}
           style={this.props.readOnly && styles.readOnlyInput}
           disabled={this.props.readOnly}
@@ -248,17 +249,18 @@ var WorkshopForm = React.createClass({
   },
 
   renderWorkshopTypeSelect(validation) {
-    var options = window.dashboard.workshop.TYPES.map((workshopType, i) => {
+    const options = window.dashboard.workshop.TYPES.map((workshopType, i) => {
       return (<option key={i} value={workshopType}>{workshopType}</option>);
     });
-    var placeHolder = this.state.workshop_type ? null : <option />;
+    const placeHolder = this.state.workshop_type ? null : <option />;
     return (
       <FormGroup validationState={validation.style.workshop_type}>
         <ControlLabel>Workshop Type</ControlLabel>
         <FormControl
           componentClass="select"
           value={this.state.workshop_type || ''}
-          onChange={(event) => {this.handleFieldChange('workshop_type', event.target.value);}}
+          name="workshop_type"
+          onChange={this.handleFieldChange}
           style={this.props.readOnly && styles.readOnlyInput}
           disabled={this.props.readOnly}
         >
@@ -276,17 +278,18 @@ var WorkshopForm = React.createClass({
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      var options = window.dashboard.workshop.SUBJECTS[this.state.course].map((subject, i) => {
+      const options = window.dashboard.workshop.SUBJECTS[this.state.course].map((subject, i) => {
         return (<option key={i} value={subject}>{subject}</option>);
       });
-      var placeHolder = this.state.subject ? null : <option />;
+      const placeHolder = this.state.subject ? null : <option />;
       return (
         <FormGroup validationState={validation.style.subject}>
           <ControlLabel>Subject</ControlLabel>
           <FormControl
             componentClass="select"
             value={this.state.subject || ''}
-            onChange={(event) => {this.handleFieldChange('subject', event.target.value);}}
+            name="subject"
+            onChange={this.handleFieldChange}
             style={this.props.readOnly && styles.readOnlyInput}
             disabled={this.props.readOnly}
           >
@@ -300,7 +303,7 @@ var WorkshopForm = React.createClass({
   },
 
   handleErrorClick(i) {
-    var errors = _.cloneDeep(this.state.errors);
+    const errors = _.cloneDeep(this.state.errors);
     errors.splice(i,1);
     this.setState({errors: errors});
   },
@@ -335,7 +338,7 @@ var WorkshopForm = React.createClass({
   },
 
   handleSaveClick() {
-    var validation = this.validate();
+    const validation = this.validate();
     if (validation.isValid) {
       if (this.shouldConfirmSave()) {
         this.setState({showSaveConfirmation: true});
@@ -359,13 +362,21 @@ var WorkshopForm = React.createClass({
     this.setState({showSaveConfirmation: false});
   },
 
-  handleFieldChange(fieldName, value) {
+  // Determines which field to update based on the target's name attribute. Returns new value.
+  handleFieldChange(event) {
+    const fieldName = $(event.target).attr('name');
+    if (!fieldName) {
+      console.error("Expected name attribute on handleFieldChange target.");
+      return null;
+    }
+
+    const value = event.target.value;
     this.setState({[fieldName]: value});
+    return value;
   },
 
   handleCourseChange(event) {
-    var course = event.target.value;
-    this.handleFieldChange('course', course);
+    const course = this.handleFieldChange(event);
 
     // clear facilitators and subject
     this.setState({facilitators: [], subject: null});
@@ -373,7 +384,7 @@ var WorkshopForm = React.createClass({
   },
 
   save(notify = false) {
-    var data = {
+    const data = {
       facilitators: this.prepareFacilitatorsForApi(this.state.facilitators),
       location_name: this.state.location_name,
       location_address: this.state.location_address,
@@ -386,7 +397,7 @@ var WorkshopForm = React.createClass({
       notify: notify
     };
 
-    var method, url;
+    let method, url;
     if (this.props.workshop) {
       data.id = this.props.workshop.id;
       method = 'PATCH';
@@ -402,11 +413,11 @@ var WorkshopForm = React.createClass({
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify({pd_workshop: data})
-    }).done((data) => {
+    }).done(data => {
       if (this.props.onSaved) {
         this.props.onSaved(data);
       }
-    }).fail((data) => {
+    }).fail(data => {
       if (data.responseJSON.errors) {
         this.setState({
           errors: data.responseJSON.errors,
@@ -426,7 +437,7 @@ var WorkshopForm = React.createClass({
       return null;
     }
 
-    var saveText = this.props.workshop ? 'Save' : 'Publish';
+    const saveText = this.props.workshop ? 'Save' : 'Publish';
     return (
       <Row>
         <Col sm={12}>
@@ -464,10 +475,10 @@ var WorkshopForm = React.createClass({
   },
 
   validate(shouldValidate = true) {
-    var validation = {isValid: true, style: {}, help: {}};
+    const validation = {isValid: true, style: {}, help: {}};
     if (shouldValidate) {
-      for (var i = 0; i < this.state.sessions.length; i++) {
-        var session = this.state.sessions[i];
+      for (let i = 0; i < this.state.sessions.length; i++) {
+        const session = this.state.sessions[i];
         if (!session.date || !moment(session.date, DATE_FORMAT).isValid() ||
           !session.startTime || !moment(session.startTime, TIME_FORMAT).isValid() ||
           !session.endTime || !moment(session.endTime, TIME_FORMAT).isValid()) {
@@ -513,7 +524,7 @@ var WorkshopForm = React.createClass({
   },
 
   renderForm() {
-    let validation = this.validate(this.state.shouldValidate);
+    const validation = this.validate(this.state.shouldValidate);
 
     return (
       <Grid>
@@ -537,7 +548,8 @@ var WorkshopForm = React.createClass({
                 <FormControl
                   type="text"
                   value={this.state.location_name || ''}
-                  onChange={(event) => {this.handleFieldChange('location_name', event.target.value);}}
+                  name="location_name"
+                  onChange={this.handleFieldChange}
                   maxLength={255}
                   style={this.props.readOnly && styles.readOnlyInput}
                   disabled={this.props.readOnly}
@@ -551,10 +563,11 @@ var WorkshopForm = React.createClass({
                 <FormControl
                   type="text"
                   key={this.state.useAutocomplete} // Change key to force re-draw
-                  ref={(ref) => this.locationAddressControl = ReactDOM.findDOMNode(ref)}
+                  ref={ref => this.locationAddressControl = ReactDOM.findDOMNode(ref)}
                   value={this.state.location_address || ''}
                   placeholder="Enter a location"
-                  onChange={(event) => {this.handleFieldChange('location_address', event.target.value);}}
+                  name="location_address"
+                  onChange={this.handleFieldChange}
                   maxLength={255}
                   style={this.props.readOnly && styles.readOnlyInput}
                   disabled={this.props.readOnly}
@@ -570,7 +583,8 @@ var WorkshopForm = React.createClass({
                 <FormControl
                   type="text"
                   value={this.state.capacity || ''}
-                  onChange={(event) => {this.handleFieldChange('capacity', event.target.value);}}
+                  name="capacity"
+                  onChange={this.handleFieldChange}
                   maxLength={4}
                   style={this.props.readOnly && styles.readOnlyInput}
                   disabled={this.props.readOnly}
@@ -597,7 +611,8 @@ var WorkshopForm = React.createClass({
                   placeholder="Use this space to tell teachers any important
                   information like building location, lunch options or pre-work."
                   value={this.state.notes || ''}
-                  onChange={(event) => {this.handleFieldChange('notes', event.target.value);}}
+                  name="notes"
+                  onChange={this.handleFieldChange}
                   maxLength={65535}
                   rows={Math.max(5, this.state.notes.split("\n").length + 1)}
                   style={this.props.readOnly && styles.readOnlyInput}

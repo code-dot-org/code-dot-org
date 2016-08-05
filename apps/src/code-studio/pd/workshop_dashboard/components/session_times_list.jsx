@@ -4,7 +4,7 @@
 import React from 'react';
 import SessionTime from './session_time';
 
-var SessionTimesList = React.createClass({
+const SessionTimesList = React.createClass({
   propTypes: {
     sessions: React.PropTypes.arrayOf(
       React.PropTypes.shape({
@@ -14,7 +14,7 @@ var SessionTimesList = React.createClass({
   },
 
   render() {
-    var listItems = this.props.sessions.map((session) => {
+    const listItems = this.props.sessions.map(session => {
       return (
         <li key={session.id} style={{whiteSpace: 'nowrap'}}>
           <SessionTime session={session}/>

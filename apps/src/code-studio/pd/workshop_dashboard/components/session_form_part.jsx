@@ -27,7 +27,7 @@ import {
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);
 
-var styles = {
+const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
@@ -35,7 +35,7 @@ var styles = {
   }
 };
 
-var SessionFormPart = React.createClass({
+const SessionFormPart = React.createClass({
   propTypes: {
     session: React.PropTypes.shape({
       date: React.PropTypes.string,
@@ -105,8 +105,8 @@ var SessionFormPart = React.createClass({
   },
 
   render() {
-    let style = {};
-    let help = {};
+    const style = {};
+    const help = {};
     let date = moment(this.props.session.date, DATE_FORMAT);
     if (this.props.shouldValidate) {
       if (!this.props.session.date) {
@@ -147,7 +147,7 @@ var SessionFormPart = React.createClass({
             <InputGroup>
               <FormControl
                 type="text"
-                ref={(ref) => this.dateControl = ReactDOM.findDOMNode(ref)}
+                ref={ref => this.dateControl = ReactDOM.findDOMNode(ref)}
                 value={this.props.session.date || ''}
                 onChange={e => this.handleChange('date', e.target.value)}
                 style={this.props.readOnly && styles.readOnlyInput}

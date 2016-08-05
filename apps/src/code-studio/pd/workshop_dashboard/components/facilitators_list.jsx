@@ -3,7 +3,7 @@
  */
 import React from 'react';
 
-var FacilitatorsList = React.createClass({
+const FacilitatorsList = React.createClass({
   propTypes: {
     facilitators: React.PropTypes.arrayOf(
       React.PropTypes.shape({
@@ -14,7 +14,7 @@ var FacilitatorsList = React.createClass({
   },
 
   render() {
-    var listItems = this.props.facilitators.map((facilitator, i) => {
+    const listItems = this.props.facilitators.map((facilitator, i) => {
       return (
         <li key={i}>
           {facilitator.name} ({facilitator.email})

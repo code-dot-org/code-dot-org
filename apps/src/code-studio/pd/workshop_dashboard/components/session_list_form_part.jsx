@@ -7,7 +7,7 @@ import {Row, Col} from 'react-bootstrap';
 import SessionFormPart from './session_form_part';
 import {DATE_FORMAT, MAX_SESSIONS} from '../workshopConstants';
 
-var SessionListFormPart = React.createClass({
+const SessionListFormPart = React.createClass({
   propTypes: {
     sessions: React.PropTypes.array.isRequired,
     onChange: React.PropTypes.func,
@@ -23,9 +23,9 @@ var SessionListFormPart = React.createClass({
   },
 
   handleAdd() {
-    let sessions = this.props.sessions;
-    let lastSession = sessions[sessions.length - 1];
-    let newSession = {
+    const sessions = this.props.sessions;
+    const lastSession = sessions[sessions.length - 1];
+    const newSession = {
       // Placeholder Ids are needed to generate unique keys in the React list.
       // Prefix with _ so they don't conflict with actual Ids on sessions that have been saved.
       placeholderId: '_' + (this.nextPlaceholderId++),
@@ -42,15 +42,15 @@ var SessionListFormPart = React.createClass({
   },
 
   handleRemove(i) {
-    var sessions = this.props.sessions;
-    var removedSession = sessions.splice(i, 1)[0];
+    const sessions = this.props.sessions;
+    const removedSession = sessions.splice(i, 1)[0];
     this.props.onChange(sessions, removedSession);
   },
 
   render() {
-    var sessionForms = this.props.sessions.map((session, i, sessions) => {
-      var handleAdd = i === sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
-      var handleRemove = sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
+    const sessionForms = this.props.sessions.map((session, i, sessions) => {
+      const handleAdd = i === sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
+      const handleRemove = sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
       return (
         <SessionFormPart
           readOnly={this.props.readOnly}
