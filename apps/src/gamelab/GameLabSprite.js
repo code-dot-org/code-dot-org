@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 var jsInterpreter;
 
 /** @type {GameLabLevel} */
@@ -95,10 +97,9 @@ module.exports.createSprite = function (x, y, width, height) {
     'remove': 'destroy',
     'setSpeed': 'setSpeedAndDirection'
   };
-  Object.keys(ALIASED_METHODS).forEach(originalMethodName => {
-    const newMethodName = ALIASED_METHODS[originalMethodName];
-    s[newMethodName] = s[originalMethodName];
-  });
+  for (const originalMethodName in ALIASED_METHODS) {
+    s[ALIASED_METHODS[originalMethodName]] = s[originalMethodName];
+  }
 
   s.pointTo = function (x, y) {
     var yDelta = y - s.position.y;
@@ -227,35 +228,28 @@ module.exports.createSprite = function (x, y, width, height) {
     return s.height * s.scale;
   };
 
-  Object.defineProperty(s, 'velocityX', {
-    enumerable: true,
-    get: function () {
-      return s.velocity.x;
-    },
-    set: function (value) {
-      s.velocity.x = value;
-    }
-  });
-
-  Object.defineProperty(s, 'velocityY', {
-    enumerable: true,
-    get: function () {
-      return s.velocity.y;
-    },
-    set: function (value) {
-      s.velocity.y = value;
-    }
-  });
-
-  Object.defineProperty(s, 'lifetime', {
-    enumerable: true,
-    get: function () {
-      return s.life;
-    },
-    set: function (value) {
-      s.life = value;
-    }
-  });
+  /**
+   * Map from existing (deep) property names to new alias names we want to use
+   * in GameLab.
+   * @type {{string: string}}
+   */
+  const ALIASED_PROPERTIES = {
+    'velocity.x': 'velocityX',
+    'velocity.y': 'velocityY',
+    'life': 'lifetime'
+  };
+  for (const originalPropertyName in ALIASED_PROPERTIES) {
+    const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
+    Object.defineProperty(s, newPropertyName, {
+      enumerable: true,
+      get: function () {
+        return _.get(s, originalPropertyName);
+      },
+      set: function (value) {
+        _.set(s, originalPropertyName, value);
+      }
+    });
+  }
 
   s.shapeColor = this.color(127, 127, 127);
   s.AABBops = AABBops.bind(s, this);
