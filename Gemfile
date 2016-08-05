@@ -172,7 +172,7 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers', re
 gem 'aws-sdk', '~> 2'
 
 # Lint tools
-group :development, :staging do
+group :development, :staging, :test do
   gem 'rubocop', '0.37.2', require: false
   gem 'haml_lint', require: false
   gem 'scss_lint', require: false
