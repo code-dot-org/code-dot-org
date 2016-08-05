@@ -15,9 +15,11 @@ module.exports = function (typeFilter) {
     };
   });
   var handleChooseClick = function (callback) {
+    const studioApp = require('../StudioApp').singleton;
+
     dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
-    }, typeFilter);
+    }, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
   };
   options.push({
     text: commonMsg.choosePrefix(),
