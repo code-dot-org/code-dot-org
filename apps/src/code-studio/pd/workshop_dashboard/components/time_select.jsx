@@ -49,7 +49,7 @@ const styles = {
 
 const INTERVAL = {minutes: 30};
 
-var TimeSelect = React.createClass({
+const TimeSelect = React.createClass({
   propTypes: {
     id: React.PropTypes.string.isRequired,
     value: React.PropTypes.string,
@@ -80,20 +80,19 @@ var TimeSelect = React.createClass({
   },
 
   render() {
-    let times = [];
-    let minTime = moment(this.props.minTime, TIME_FORMAT);
-    let maxTime = moment(this.props.maxTime, TIME_FORMAT);
-    let intervalDuration = moment.duration(INTERVAL);
+    const times = [];
+    const minTime = moment(this.props.minTime, TIME_FORMAT);
+    const maxTime = moment(this.props.maxTime, TIME_FORMAT);
+    const intervalDuration = moment.duration(INTERVAL);
 
     // Show times every INTERVAL (i.e. 30 minutes) starting from the next full INTERVAL
     // on or after minTime and ending on or before maxTime.
-    let startTime = moment(Math.ceil((+minTime)/(+intervalDuration)) * (+intervalDuration));
-    let endTime = moment(Math.floor((+maxTime)/(+intervalDuration)) * (+intervalDuration));
-    let time;
-    for (time = startTime; time.isSameOrBefore(endTime); time = time.add(INTERVAL)) {
+    const startTime = moment(Math.ceil((+minTime)/(+intervalDuration)) * (+intervalDuration));
+    const endTime = moment(Math.floor((+maxTime)/(+intervalDuration)) * (+intervalDuration));
+    for (let time = startTime; time.isSameOrBefore(endTime); time = time.add(INTERVAL)) {
       times.push(time.format(TIME_FORMAT));
     }
-    let menuItems = times.map((time, i) => {
+    const menuItems = times.map((time, i) => {
       return (
         <MenuItem
           key={i}
