@@ -30,7 +30,8 @@ def saucelabs_browser
     raise "Please define CDO.saucelabs_authkey"
   end
 
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@ondemand.saucelabs.com:80/wd/hub"
+  is_tunnel = ENV['CIRCLE_BUILD_NUM']
+  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
   browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
@@ -40,8 +41,11 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
+
+  circle_run_identifier = ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}" : nil
+  capabilities[:tunnelIdentifier] = circle_run_identifier if circle_run_identifier
   capabilities[:name] = ENV['TEST_RUN_NAME']
-  capabilities[:build] = ENV['BUILD']
+  capabilities[:build] = circle_run_identifier || ENV['BUILD']
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -129,8 +133,18 @@ After do |scenario|
   log_result all_passed
 end
 
+def check_for_page_errors
+  js_errors = @browser.execute_script('return window.detectedJSErrors;')
+  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
+
+  # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
+  # js_errors.should eq nil
+end
+
 After do |_s|
   unless @browser.nil?
+    check_for_page_errors
+
     # clear session state (or get a new browser)
     if slow_browser?
       unless @browser.current_url.include?('studio')

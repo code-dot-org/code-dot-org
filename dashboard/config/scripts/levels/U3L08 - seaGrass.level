@@ -123,7 +123,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "mw7K3bcGkm3K5WHwGn7UCO5xRFoDSN/FslZx9vRR0t+0QODGkcQveddvClvJ\nzXdk\n",
@@ -160,7 +161,31 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawSeaGrass:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to add a parameter to drawSeaGrass, and to call it at least twice to create two strands of seagrass of different sizes."
+      },
+      {
+        "entries": [
+          "drawStarfish:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "The task asks you to modify drawStarfish to add a parameter and call it at least twice to create two star fish of different sizes."
+      }
+    ],
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

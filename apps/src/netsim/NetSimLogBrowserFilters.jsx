@@ -1,5 +1,4 @@
 /** @file Filtering controls for Log Browser modal */
-import _ from 'lodash';
 import React from 'react';
 
 const style = {
@@ -34,7 +33,7 @@ const NetSimLogBrowserFilters = React.createClass({
     currentSentByFilter: React.PropTypes.string.isRequired,
     setSentByFilter: React.PropTypes.func.isRequired,
     teacherView: React.PropTypes.bool,
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   render() {
@@ -45,7 +44,7 @@ const NetSimLogBrowserFilters = React.createClass({
             i18n={this.props.i18n}
             currentSentByFilter={this.props.currentSentByFilter}
             setSentByFilter={this.props.setSentByFilter}
-            logRows={this.props.logRows}
+            senderNames={this.props.senderNames}
           />}
         {this.props.canSetRouterLogMode &&
           <RouterLogModeDropdown
@@ -136,12 +135,12 @@ const TrafficFilterDropdown = React.createClass({
   }
 });
 
-const SentByDropdown = React.createClass({
+export const SentByDropdown = React.createClass({
   propTypes: {
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
     currentSentByFilter: React.PropTypes.string.isRequired,
     setSentByFilter: React.PropTypes.func.isRequired,
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   onChange(event) {
@@ -159,7 +158,7 @@ const SentByDropdown = React.createClass({
         <option value="none">
           {this.props.i18n.logBrowserHeader_sentByAnyone()}
         </option>
-        {_.uniq(this.props.logRows.map(row => row.sentBy))
+        {this.props.senderNames
           .sort((a, b) => a.localeCompare(b))
           .map(name => (
             <option value={`by ${name}`} key={name}>
