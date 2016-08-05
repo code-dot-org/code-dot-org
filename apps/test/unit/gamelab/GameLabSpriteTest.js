@@ -37,6 +37,34 @@ describe('GameLabSprite', function () {
       testSprite.setFrame();
       expect(testSprite.animation.changeFrame.calledOnce).to.be.true;
     });
+
+    it('aliases animation.nextFrame to nextFrame', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'nextFrame');
+      testSprite.nextFrame();
+      expect(testSprite.animation.nextFrame.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.previousFrame to previousFrame', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'previousFrame');
+      testSprite.previousFrame();
+      expect(testSprite.animation.previousFrame.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.play to play', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'play');
+      testSprite.play();
+      expect(testSprite.animation.play.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.stop to stop', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'stop');
+      testSprite.stop();
+      expect(testSprite.animation.stop.calledOnce).to.be.true;
+    });
   });
 
   describe('property aliases', function () {
