@@ -59,10 +59,10 @@ describe('GameLabSprite', function () {
       expect(testSprite.animation.play.calledOnce).to.be.true;
     });
 
-    it('aliases animation.stop to stop', function () {
+    it('aliases animation.stop to pause', function () {
       testSprite.addAnimation('label', createTestAnimation());
       stub(testSprite.animation, 'stop');
-      testSprite.stop();
+      testSprite.pause();
       expect(testSprite.animation.stop.calledOnce).to.be.true;
     });
   });

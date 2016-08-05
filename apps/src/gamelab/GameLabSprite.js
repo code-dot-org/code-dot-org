@@ -25,7 +25,7 @@ const ALIASED_METHODS = {
   'animation.nextFrame': 'nextFrame',
   'animation.previousFrame': 'previousFrame',
   'animation.play': 'play',
-  'animation.stop': 'stop'
+  'animation.stop': 'pause'
 };
 
 var jsInterpreter;
