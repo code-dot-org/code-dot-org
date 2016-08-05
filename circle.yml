@@ -25,6 +25,7 @@ dependencies:
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
+    - 'echo "applitools_eyes_api_key: $APPLITOOLS_KEY" >> locals.yml'
     - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
     - 'echo "use_my_apps: true" >> locals.yml'
