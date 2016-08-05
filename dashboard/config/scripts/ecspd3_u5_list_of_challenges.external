@@ -1,13 +1,10 @@
-name 'ECSPD3-u5 list of challenges '
+name 'ECSPD3-u5 list of challenges'
 css 'unplugged'
 markdown <<MARKDOWN
-
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-### Challenge Overview > List of Lessons 
+# Challenge Overview > List of Lessons 
 
 See below for the list of challenge lessons. Feel free to click through to the lesson plans and explore the materials so you can select one to complete. **Your goal right now is to pick the lesson that you will complete later.**
-<br><br>
+
 As you check out the lessons and choose a topic, focus your energy on stuff that's new to you, and do as much as you feel you need to do to understand the concepts, give suggestions about how to teach the lesson, and create an assessment or extension activity.
 
 - Days 1-8 give some context for data and set up the final project (which students work towards for the whole unit)
@@ -15,7 +12,6 @@ As you check out the lessons and choose a topic, focus your energy on stuff that
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/3" target=_blank>Day 4 - 5: Developing research questions</a>
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/4" target=_blank>Day 6 - 7: Building group norms</a>
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/5" target=_blank>Day 8: Check in Day</a>
-
 
 - Days 9-25 give students space to learn data analysis and visualization techniques
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/6" target=_blank>Day 9 - 12: Maps, identifying variables, subsetting data, sorting data, frequency, Bubble Charts</a>
@@ -25,7 +21,6 @@ As you check out the lessons and choose a topic, focus your energy on stuff that
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/10" target=_blank>Day 18 - 20: Mean, Median, Minimum, Maximum, Histograms, Box Plots</a>
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/11" target=_blank>Day 21: Review: Mean, Median, Minimum, Maximum</a>
 
-
 - Days 22 - 24: Filtering Text data (remove punctuation, remove case, remove stop words, stemming), Analyzing word counts.)
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/12" target=_blank>Day 25: Review: Text Data</a>
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/13" target=_blank>Days 26-30 give students space to pull everything together and prepare for and present their final projects</a>
@@ -34,7 +29,6 @@ As you check out the lessons and choose a topic, focus your energy on stuff that
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/16" target=_blank>Day 30: Present final project </a>
 
 Once you've selected a lesson, click **continue** below. 
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

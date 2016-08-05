@@ -67,10 +67,17 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
     'clip-path': 'url(#frameClip' + this.block_.id + ')'
   }, this.frameGroup_);
 
+  var frameTextVerticalPosition = -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2);
+  if (Blockly.ieVersion()) {
+    // in non-IE browsers, we use dominant-baseline to vertically center
+    // our text. That is unfortunately not supported in IE, so we
+    // manually offset by 4 pixels to compensate.
+    frameTextVerticalPosition += 4;
+  }
   this.frameText_ = Blockly.createSvgElement('text', {
     'class': 'blocklyText',
     style: 'font-size: 12pt',
-    y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2),
+    y: frameTextVerticalPosition,
     'dominant-baseline': 'central'
   }, this.frameGroup_);
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.UNUSED_CODE));
@@ -83,7 +90,8 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
     r: FRAME_HEADER_HEIGHT * 0.75 * 0.5
   }, this.frameHelp_);
   Blockly.createSvgElement('text', {
-    'class': 'blocklyText'
+    'class': 'blocklyText',
+    y: Blockly.ieVersion() ? 4 : 0 // again, offset text manually in IE
   }, this.frameHelp_).appendChild(document.createTextNode("?"));
 };
 
@@ -113,9 +121,7 @@ Blockly.BlockSvgUnused.prototype.bindClickEvent = function () {
       return;
     }
 
-    this.frameHelp_.dispatchEvent(new Event(Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT, {
-      bubbles: true
-    }));
+    Blockly.fireUiEvent(this.frameHelp_, Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT);
     e.stopPropagation();
     e.preventDefault();
   });
