@@ -6,7 +6,7 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import WorkshopTable from './components/workshop_table';
 
-var WorkshopIndex = React.createClass({
+const WorkshopIndex = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },

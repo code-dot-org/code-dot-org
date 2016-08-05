@@ -5,7 +5,7 @@ import React from 'react';
 import SessionAttendanceRow from './session_attendance_row';
 import {Table} from 'react-bootstrap';
 
-var SessionAttendance = React.createClass({
+const SessionAttendance = React.createClass({
   propTypes: {
     sessionId: React.PropTypes.number,
     attendance: React.PropTypes.array.isRequired,
@@ -19,7 +19,7 @@ var SessionAttendance = React.createClass({
   },
 
   render() {
-    var tableRows = this.props.attendance.map((attendanceRow, i) => {
+    const tableRows = this.props.attendance.map((attendanceRow, i) => {
       return (
         <SessionAttendanceRow
           key={i}

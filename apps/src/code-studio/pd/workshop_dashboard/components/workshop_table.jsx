@@ -8,7 +8,7 @@ import React from 'react';
 import WorkshopTableRow from './workshop_table_row';
 import {Table} from 'react-bootstrap';
 
-var WorkshopTable = React.createClass({
+const WorkshopTable = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -38,7 +38,7 @@ var WorkshopTable = React.createClass({
         url: this.props.queryUrl,
         dataType: 'json'
       })
-      .done((data) => {
+      .done(data => {
         this.setState({
           loading: false,
           workshops: data
@@ -67,7 +67,7 @@ var WorkshopTable = React.createClass({
         url: '/api/v1/pd/workshops/' + workshop.id
       })
       .done(() => {
-        var workshops = _.cloneDeep(this.state.workshops);
+        const workshops = _.cloneDeep(this.state.workshops);
         workshops.splice(workshop_index, 1);
         this.setState({workshops: workshops});
       });
@@ -82,7 +82,7 @@ var WorkshopTable = React.createClass({
       return <p>None.</p>;
     }
 
-    var tableRows = this.state.workshops.map((workshop, i) => {
+    const tableRows = this.state.workshops.map((workshop, i) => {
       return (
         <WorkshopTableRow
           workshop={workshop}

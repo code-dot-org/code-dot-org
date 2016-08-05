@@ -5,7 +5,7 @@
 import React from 'react';
 import WorkshopForm from './components/workshop_form';
 
-var NewWorkshop = React.createClass({
+const NewWorkshop = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },

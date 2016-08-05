@@ -24,7 +24,7 @@ import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 
-  var Workshop = React.createClass({
+const Workshop = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -66,7 +66,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}`,
       dataType: "json"
-    }).done((data) => {
+    }).done(data => {
       this.setState({
         loadingWorkshop: false,
         workshop: _.pick(data, [
@@ -95,7 +95,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
       dataType: "json"
-    }).done((data) => {
+    }).done(data => {
       this.setState({
         loadingEnrollments: false,
         enrollments: data,
@@ -135,7 +135,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       method: "POST",
       url: "/api/v1/pd/workshops/" + this.props.params.workshopId + "/start",
       dataType: "json"
-    }).done((data) => {
+    }).done(data => {
       this.setState({
         showStartWorkshopConfirmation: false,
         workshop: _.merge(_.cloneDeep(this.state.workshop), {
@@ -206,14 +206,14 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       return null;
     }
 
-    let header = (
+    const header = (
       <div>
         Your workshop sign-up link:
       </div>
     );
 
-    let signupUrl = `${location.origin}/pd/workshops/${this.props.params.workshopId}/enroll`;
-    let content = (
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.params.workshopId}/enroll`;
+    const content = (
       <div>
         <p>Share this link with teachers who need to sign up for your workshop.</p>
         <a href={signupUrl} target="_blank">
@@ -226,7 +226,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
   },
 
   renderIntroPanel() {
-    let header = (
+    const header = (
       <div>
         Workshop State: {this.state.workshop.state}
       </div>
@@ -253,9 +253,9 @@ import WorkshopEnrollment from './components/workshop_enrollment';
           </div>
         );
         break;
-      case 'In Progress':
-        var joinUrl = location.origin + "/join/" + this.state.workshop.section_code;
-        var joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
+      case 'In Progress': {
+        const joinUrl = location.origin + "/join/" + this.state.workshop.section_code;
+        const joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
         contents = (
           <div>
             <p>
@@ -286,6 +286,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
           </div>
         );
         break;
+      }
       default:
         contents = (
           <div>
@@ -326,14 +327,14 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       return null;
     }
 
-    let header = (
+    const header = (
       <div>
         Take Attendance:
       </div>
     );
 
-    let attendanceButtons = this.state.workshop.sessions.map((session, i) => {
-      let date = moment.utc(session.start).format('MM/DD/YY');
+    const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
+      const date = moment.utc(session.start).format('MM/DD/YY');
       return (
         <Button key={i} onClick={this.handleTakeAttendanceClick.bind(null,i)}>
           {date}
@@ -341,7 +342,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       );
     });
 
-    let contents = (
+    const contents = (
       <div>
         <p>
           Every day of the workshop, you must take attendance in order for teachers to
@@ -363,13 +364,13 @@ import WorkshopEnrollment from './components/workshop_enrollment';
       return null;
     }
 
-    let header = (
+    const header = (
       <div>
         End Workshop:
       </div>
     );
 
-    let contents = (
+    const contents = (
       <div>
         <p>
           After the last day of your workshop, you must end the workshop.
@@ -447,7 +448,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
   },
 
   renderEnrollmentsPanel() {
-    let header = (
+    const header = (
       <div>
         Workshop Enrollment:{' '}
         {this.state.workshop.enrolled_teacher_count}/{this.state.workshop.capacity}
