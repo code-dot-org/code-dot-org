@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello.",
   "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Consegue três Pilotos Rebeldes para seguires em frente.",
   "failedChangeSettingSettings": "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

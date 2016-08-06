@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Nå frem til tre Rebel Pilots for at gå videre.",
   "failedChangeSettingSettings": "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

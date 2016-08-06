@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Obtine 3 Rebel Pilots pentru a trece mai departe.",
   "failedChangeSettingSettings": "Fa-ti propriul joc. Pentru a trece de acest puzzle, trebuie sa iti schimbi robotul si sa ii setezi viteza.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

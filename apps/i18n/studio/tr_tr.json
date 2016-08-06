@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Taşımak için üç Rebel Pilotlar alın.",
   "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

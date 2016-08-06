@@ -93,8 +93,8 @@ class TablesTest < Minitest::Test
     id = create_record(record).to_i
     create_record(record2, 413)
 
-    actual_created_record = read_records.find do |record|
-      record['id'] == id
+    actual_created_record = read_records.find do |created_record|
+      created_record['id'] == id
     end
     assert_equal id, actual_created_record['id'], 'actual created record has correct id'
 

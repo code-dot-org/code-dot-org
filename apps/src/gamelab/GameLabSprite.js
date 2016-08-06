@@ -91,6 +91,10 @@ module.exports.createSprite = function (x, y, width, height) {
     s.remove();
   };
 
+  s.setSpeedAndDirection = function () {
+    return s.setSpeed.apply(s, arguments);
+  };
+
   s.pointTo = function (x, y) {
     var yDelta = y - s.position.y;
     var xDelta = x - s.position.x;
@@ -275,7 +279,7 @@ module.exports.createSprite = function (x, y, width, height) {
 
 /*
  * Copied code from p5play from Sprite() with targeted modifications that
- * use the additional state parameter and use modifyPosition to determine 
+ * use the additional state parameter and use modifyPosition to determine
  * whether to modify the sprite's velocity and position.
  */
 var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
@@ -480,7 +484,7 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
                   m1 = 2 * other.mass / totalMass;
                   m2 = 2 * this.mass / totalMass;
                 }
-                
+
                 if (modifyPosition) {
                   var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
                   var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);

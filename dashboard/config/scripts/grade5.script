@@ -20,8 +20,8 @@ level 'grade5_playlab_variables5'
 level 'grade5_playlab_variables6'
 level 'grade5_playlab_variables7'
 level 'grade5_playlab_variables14'
-level 'Prompt Test'
 level 'grade5_prompt_test'
+level 'Prompt Test'
 
 stage 'Artist: Variables'
 level 'grade5_artist_variables_triangles1'
@@ -87,7 +87,7 @@ level 'grade5_bee_parameters_new9'
 
 stage 'Explore project ideas',
   flex_category: 'practice'
-named_level 'NEW Course 4 Artist Params inspire'
+named_level 'Inspirational Artwork'
 named_level 'Food Fight'
 named_level 'Guess The Number'
 named_level 'Rock Paper Scissors'

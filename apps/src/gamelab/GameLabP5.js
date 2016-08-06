@@ -381,6 +381,8 @@ GameLabP5.prototype.init = function (options) {
     this.edges.add(this.rightEdge);
     this.edges.add(this.topEdge);
     this.edges.add(this.bottomEdge);
+
+    return this.edges;
   };
 };
 
