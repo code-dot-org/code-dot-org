@@ -1,5 +1,6 @@
 @eyes
 @as_student
+@no_circle
 Feature: Eyes Tests for Top Instructions
 
 Scenario: Top Instructions
