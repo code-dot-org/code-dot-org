@@ -1,33 +1,5 @@
 import _ from 'lodash';
 
-/**
- * Map from existing (deep) property names to new alias names we want to use
- * in GameLab.
- * @type {{string: string}}
- */
-const ALIASED_PROPERTIES = {
-  'position.x': 'x',
-  'position.y': 'y',
-  'velocity.x': 'velocityX',
-  'velocity.y': 'velocityY',
-  'life': 'lifetime'
-};
-
-/**
- * Map from existing (deep) method names to new alias names we want to use
- * in GameLab.
- * @type {{string: string}}
- */
-const ALIASED_METHODS = {
-  'remove': 'destroy',
-  'setSpeed': 'setSpeedAndDirection',
-  'animation.changeFrame': 'setFrame',
-  'animation.nextFrame': 'nextFrame',
-  'animation.previousFrame': 'previousFrame',
-  'animation.play': 'play',
-  'animation.stop': 'pause'
-};
-
 var jsInterpreter;
 module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
@@ -53,30 +25,8 @@ module.exports.createSprite = function (x, y, width, height) {
    */
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
-
-  // Alias p5.play sprite properties to new names
-  for (const originalPropertyName in ALIASED_PROPERTIES) {
-    const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
-    Object.defineProperty(s, newPropertyName, {
-      enumerable: true,
-      get: function () {
-        return _.get(s, originalPropertyName);
-      },
-      set: function (value) {
-        _.set(s, originalPropertyName, value);
-      }
-    });
-  }
-
-  // Alias p5.play sprite methods to new names
-  for (const originalMethodName in ALIASED_METHODS) {
-    s[ALIASED_METHODS[originalMethodName]] = function () {
-      const originalMethod = _.get(s, originalMethodName);
-      if (originalMethod) {
-        originalMethod.apply(s, arguments);
-      }
-    };
-  }
+  addPropertyAliases(s);
+  addMethodAliases(s);
 
   /*
    * @type {number}
@@ -565,3 +515,69 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
 var isTouching = function (p5Inst, target) {
   return this.AABBops('collide', target, undefined, false);
 };
+
+/**
+ * Map from existing (deep) property names to new alias names we want to use
+ * in GameLab.
+ * @type {{string: string}}
+ */
+const ALIASED_PROPERTIES = {
+  'position.x': 'x',
+  'position.y': 'y',
+  'velocity.x': 'velocityX',
+  'velocity.y': 'velocityY',
+  'life': 'lifetime'
+};
+
+/**
+ * Alias p5.play sprite properties to new names
+ * @param {Sprite} sprite
+ */
+function addPropertyAliases(sprite) {
+  for (const originalPropertyName in ALIASED_PROPERTIES) {
+    const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
+    Object.defineProperty(sprite, newPropertyName, {
+      enumerable: true,
+      get: function () {
+        return _.get(sprite, originalPropertyName);
+      },
+      set: function (value) {
+        _.set(sprite, originalPropertyName, value);
+      }
+    });
+  }
+}
+
+/**
+ * Map from existing (deep) method names to new alias names we want to use
+ * in GameLab.
+ * @type {{string: string}}
+ */
+const ALIASED_METHODS = {
+  'remove': 'destroy',
+  'setSpeed': 'setSpeedAndDirection',
+  'animation.changeFrame': 'setFrame',
+  'animation.nextFrame': 'nextFrame',
+  'animation.previousFrame': 'previousFrame',
+  'animation.play': 'play',
+  'animation.stop': 'pause'
+};
+
+/**
+ * Alias p5.play sprite methods to new names
+ * @param {Sprite} sprite
+ */
+function addMethodAliases(sprite) {
+  for (const originalMethodName in ALIASED_METHODS) {
+    sprite[ALIASED_METHODS[originalMethodName]] = function () {
+      const originalMethod = _.get(sprite, originalMethodName);
+      // The method must be bound against the second-to-last thing in the path;
+      // or against the sprite itself, if there is no second-to-last thing.
+      const bindTargetPath = originalMethodName.split('.').slice(0, -1).join('.');
+      const bindTarget = _.get(sprite, bindTargetPath) || sprite;
+      if (originalMethod) {
+        originalMethod.apply(bindTarget, arguments);
+      }
+    };
+  }
+}
