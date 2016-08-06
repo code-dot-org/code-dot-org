@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    return if redirect_under_13(@level)
+    return if redirect_under_13_without_tos_teacher(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
       if channel
@@ -66,7 +66,7 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
-    return if redirect_under_13(@level)
+    return if redirect_under_13_without_tos_teacher(@level)
     redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
@@ -88,7 +88,7 @@ class ProjectsController < ApplicationController
       response.headers['Content-Security-Policy'] = ''
     else
       # the age restriction is handled in the front-end for iframe embeds.
-      return if redirect_under_13(@level)
+      return if redirect_under_13_without_tos_teacher(@level)
     end
     level_view_options(
       @level.id,
