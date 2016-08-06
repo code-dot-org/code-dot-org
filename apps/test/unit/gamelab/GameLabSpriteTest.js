@@ -1,28 +1,27 @@
+/* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
-import "script!@cdo/apps/../lib/p5play/p5";
-import "script!@cdo/apps/../lib/p5play/p5.play";
-import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
-import {injectJSInterpreter} from '@cdo/apps/gamelab/GameLabSprite';
-import sinon from 'sinon';
+import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
+import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabSprite', function () {
-  var gameLabP5;
-  let createSprite;
+  let gameLabP5, createSprite;
 
   beforeEach(function () {
-    gameLabP5 = new GameLabP5();
-    gameLabP5.init({onExecutionStarting: sinon.spy(), onPreload: sinon.spy(), onSetup: sinon.spy(), onDraw: sinon.spy()});
-    gameLabP5.startExecution();
-
-    var interpreter = {getCurrentState: function () {return {};}};
-    injectJSInterpreter(interpreter);
+    gameLabP5 = createGameLabP5();
     createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
   });
 
-  afterEach(function () {
-    gameLabP5.resetExecution();
+  it('aliases setSpeed to setSpeedAndDirection', function () {
+    let sprite1 = createSprite(0, 0);
+    spy(sprite1, 'setSpeed');
+    expect(sprite1.setSpeed.calledOnce).to.be.false;
+
+    const speed = 5;
+    const direction = 180;
+    sprite1.setSpeedAndDirection(speed, direction);
+    expect(sprite1.setSpeed.calledOnce).to.be.true;
+    expect(sprite1.setSpeed.calledWith(speed, direction)).to.be.true;
   });
 
   describe('isTouching', function () {

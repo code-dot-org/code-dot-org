@@ -1706,6 +1706,8 @@ Studio.initSprites = function () {
 
   Studio.spriteGoals_ = [];
 
+  let spriteOverrides = {};
+
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
@@ -1714,11 +1716,19 @@ Studio.initSprites = function () {
                                   y: row * Studio.SQUARE_SIZE,
                                   finished: false});
       } else if (Studio.map[row][col].getTileType() & SquareType.SPRITESTART) {
+        let cell = Studio.map[row][col].serialize();
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        Studio.spriteStart_[Studio.spriteCount] = Object.assign({},
-            Studio.map[row][col].serialize(), {
+        if (cell.sprite !== undefined) {
+          let adjustedSprite = cell.sprite - level.firstSpriteIndex;
+          if (adjustedSprite < 0) {
+            adjustedSprite += Studio.startAvatars.length;
+          }
+          spriteOverrides[Studio.spriteCount] =
+            Studio.startAvatars[adjustedSprite];
+        }
+        Studio.spriteStart_[Studio.spriteCount] = Object.assign({}, cell, {
               x: col * Studio.SQUARE_SIZE,
               y: row * Studio.SQUARE_SIZE
             });
@@ -1726,6 +1736,8 @@ Studio.initSprites = function () {
       }
     }
   }
+
+  Object.assign(Studio.startAvatars, spriteOverrides);
 
   if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
@@ -2299,7 +2311,11 @@ Studio.reset = function (first) {
 
     var sprite = spriteStart.sprite === undefined
         ? (i % Studio.startAvatars.length)
-        : spriteStart.sprite;
+        : spriteStart.sprite - level.firstSpriteIndex;
+
+    if (sprite < 0) {
+      sprite += Studio.startAvatars.length;
+    }
 
     var opts = {
       spriteIndex: i,
@@ -4337,23 +4353,23 @@ Studio.setSpriteSize = function (opts) {
 };
 
 Studio.changeScore = function (opts) {
-
-  if (typeof opts.value !== 'number' &&
-      (typeof opts.value !== 'string' || isNaN(opts.value))) {
-    throw new TypeError("Incorrect parameter: " + opts.value);
-  }
-
-  Studio.adjustScore(Number(opts.value));
+  Studio.adjustScore(Studio.paramAsNumber(opts.value));
 };
 
 Studio.reduceScore = function (opts) {
+  Studio.adjustScore(-1 * Studio.paramAsNumber(opts.value));
+};
 
-  if (typeof opts.value !== 'number' &&
-      (typeof opts.value !== 'string' || isNaN(opts.value))) {
-    throw new TypeError("Incorrect parameter: " + opts.value);
+Studio.setScore = function (value) {
+  Studio.adjustScore(Studio.paramAsNumber(value) - Studio.playerScore);
+};
+
+Studio.paramAsNumber = function (value) {
+  if (typeof value !== 'number' &&
+      (typeof value !== 'string' || isNaN(value))) {
+    throw new TypeError("Incorrect parameter: " + value);
   }
-
-  Studio.adjustScore(-Number(opts.value));
+  return Number(value);
 };
 
 Studio.adjustScore = function (value) {
