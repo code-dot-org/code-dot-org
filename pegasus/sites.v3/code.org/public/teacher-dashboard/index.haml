@@ -945,12 +945,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         }
       });
 
-      // Sort by stage, question.
+      // Sort by stage, question, result text.
       surveyResults.sort(function (a, b) {
         if (a.stage !== b.stage) {
           return a.stage - b.stage;
-        } else {
+        } else if (a.question !== b.question) {
           return a.question - b.question;
+        } else {
+          return a.resultText - b.resultText;
         }
       });
 
