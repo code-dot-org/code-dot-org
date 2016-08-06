@@ -418,9 +418,9 @@ function parseRecordsDataFromCsv(csvData) {
     let recordsData = {};
     records.forEach((record, index) => {
       const id = index + 1;
-      Object.keys(record).forEach(key => {
+      for (const key in record) {
         record[key] = castValue(record[key]);
-      });
+      }
       record.id = id;
       recordsData[id] = JSON.stringify(record);
     });
@@ -439,7 +439,7 @@ function validateRecordsData(recordsData) {
       return Promise.reject(`Import failed because the data is too large. ` +
         `A table may only contain ${config.maxTableRows} rows.`);
     }
-    if (Object.keys(recordsData).some(record => record.length > config.maxRecordSize)) {
+    if (Object.keys(recordsData).some(id => recordsData[id].length > config.maxRecordSize)) {
       return Promise.reject(`Import failed because one of of the records is too large. ` +
         `The maximum allowable size is ${config.maxRecordSize} bytes.`);
     }
