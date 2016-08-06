@@ -92,6 +92,7 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
+@no_circle
 Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
@@ -238,6 +239,17 @@ Examples:
   | url                                                               | test_name                    |
   | http://hourofcode.com/us                                          | logged out hourofcode.com us |
   | http://hourofcode.com/br                                          | logged out hourofcode.com br |
-  | http://code.org/                                                  | logged out code.org homepage |
   | http://studio.code.org/                                           | logged out studio homepage   |
   | http://studio.code.org/s/allthethings                             | logged out script progress   |
+
+@no_circle
+Scenario Outline: Temporarily eyes disabled simple page view without instructions dialog
+  Given I am on "http://learn.code.org/"
+  When I open my eyes to test "<test_name>"
+  And I am on "<url>"
+  When I rotate to landscape
+  Then I see no difference for "initial load"
+  And I close my eyes
+Examples:
+  | url                                                               | test_name                    |
+  | http://code.org/                                                  | logged out code.org homepage |
