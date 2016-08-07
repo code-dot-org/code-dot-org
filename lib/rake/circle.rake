@@ -23,6 +23,7 @@ namespace :circle do
       RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM --tunnel-domains localhost-studio.code.org,localhost.code.org'
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+    RakeUtils.system_stream_output 'mkdir -p $CIRCLE_TEST_REPORTS/cucumber'
     Dir.chdir('dashboard/test/ui') do
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       RakeUtils.system_stream_output "bundle exec ./runner.rb --eyes -f #{eyes_features.join(',')} -c ChromeLatestWin7,iPhone -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
