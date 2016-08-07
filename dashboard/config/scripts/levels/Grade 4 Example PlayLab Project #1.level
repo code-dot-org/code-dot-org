@@ -8,7 +8,7 @@
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "instructions": "Take a look at this project.  Do you see how it was made?",
     "is_k1": "false",
@@ -22,9 +22,9 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false",
+    "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
-    "disable_sharing": "false",
+    "disable_sharing": "true",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -42,8 +42,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "wall_map_collisions": "false",
-    "block_moving_into_walls": "false",
+    "wall_map_collisions": "true",
+    "block_moving_into_walls": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -52,67 +52,203 @@
   }
 }]]></config>
   <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="when_run"/>
+      </xml>
+    </initialization_blocks>
     <start_blocks>
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_setSprite">
-              <title name="SPRITE">0</title>
-              <title name="VALUE">random</title>
+            <block type="studio_setBackground">
+              <title name="VALUE">"winter"</title>
+              <next>
+                <block type="studio_showTitleScreen">
+                  <title name="TITLE">animal frogger</title>
+                  <title name="TEXT">dodge the random thing thrown at you and get to the unicorn</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="SPRITE">1</title>
+                      <title name="VALUE">"dog"</title>
+                      <next>
+                        <block type="studio_setSprite">
+                          <title name="SPRITE">2</title>
+                          <title name="VALUE">"cat"</title>
+                          <next>
+                            <block type="studio_setSprite">
+                              <title name="SPRITE">0</title>
+                              <title name="VALUE">"dragon"</title>
+                              <next>
+                                <block type="studio_setSprite">
+                                  <title name="SPRITE">3</title>
+                                  <title name="VALUE">"unicorn"</title>
+                                  <next>
+                                    <block type="studio_setSpritePosition">
+                                      <title name="SPRITE">0</title>
+                                      <title name="VALUE">18</title>
+                                      <next>
+                                        <block type="studio_setSpritePosition">
+                                          <title name="SPRITE">1</title>
+                                          <title name="VALUE">14</title>
+                                          <next>
+                                            <block type="studio_setSpritePosition">
+                                              <title name="SPRITE">2</title>
+                                              <title name="VALUE">12</title>
+                                              <next>
+                                                <block type="studio_setSpritePosition">
+                                                  <title name="SPRITE">3</title>
+                                                  <title name="VALUE">8</title>
+                                                  <next>
+                                                    <block type="studio_setSpriteSpeed">
+                                                      <title name="SPRITE">0</title>
+                                                      <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn">
-          <mutation>
-            <arg name="height"/>
-            <arg name="actor"/>
-            <description>jump function block with height and actor parameter</description>
-          </mutation>
-          <title name="NAME">jump</title>
-          <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-              <title name="DIR">1</title>
-              <value name="SPRITE">
-                <block type="parameters_get" uservisible="false">
-                  <title name="VAR">actor</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="parameters_get" uservisible="false">
-                  <title name="VAR">height</title>
-                </block>
-              </value>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_throw">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">random</title>
+              <title name="DIR">8</title>
               <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                  <title name="DIR">4</title>
-                  <value name="SPRITE">
-                    <block type="parameters_get" uservisible="false">
-                      <title name="VAR">actor</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="parameters_get" uservisible="false">
-                      <title name="VAR">height</title>
-                    </block>
-                  </value>
+                <block type="studio_wait">
+                  <title name="VALUE">5000</title>
                 </block>
               </next>
             </block>
           </statement>
         </block>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">0</title>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_throw">
+              <title name="SPRITE">2</title>
+              <title name="VALUE">random</title>
+              <title name="DIR">2</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">5000</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">4</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">8</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">any_projectile</title>
+          <next>
+            <block type="studio_changeScore">
+              <title name="VALUE">-1</title>
+              <next>
+                <block type="studio_setSpritePosition">
+                  <title name="SPRITE">0</title>
+                  <title name="VALUE">18</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">3</title>
           <next>
             <block type="studio_changeScore">
               <title name="VALUE">1</title>
               <next>
-                <block type="studio_setSprite">
-                  <title name="SPRITE">0</title>
-                  <title name="VALUE">random</title>
+                <block type="studio_setBackground">
+                  <title name="VALUE">"rainbow"</title>
                   <next>
                     <block type="studio_setSpritePosition">
                       <title name="SPRITE">0</title>
-                      <title name="VALUE">random</title>
+                      <title name="VALUE">18</title>
+                      <next>
+                        <block type="studio_throw">
+                          <title name="SPRITE">1</title>
+                          <title name="VALUE">random</title>
+                          <title name="DIR">8</title>
+                          <next>
+                            <block type="studio_throw">
+                              <title name="SPRITE">2</title>
+                              <title name="VALUE">random</title>
+                              <title name="DIR">2</title>
+                              <next>
+                                <block type="studio_saySprite">
+                                  <title name="SPRITE">0</title>
+                                  <title name="TEXT">click on me when your done playing.</title>
+                                  <next>
+                                    <block type="studio_setSpritePosition">
+                                      <title name="SPRITE">0</title>
+                                      <title name="VALUE">18</title>
+                                      <next>
+                                        <block type="studio_setBackground">
+                                          <title name="VALUE">"space"</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -120,57 +256,39 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn">
-          <mutation>
-            <arg name="actor"/>
-            <arg name="speed"/>
-            <description>Move a sprite up an down at the given speed</description>
-          </mutation>
-          <title name="NAME">patrol</title>
-          <statement name="STACK">
-            <block type="studio_setSpriteSpeedParams" inline="true" uservisible="false">
-              <value name="SPRITE">
-                <block type="parameters_get" uservisible="false">
-                  <title name="VAR">actor</title>
-                </block>
-              </value>
-              <value name="VALUE">
-                <block type="parameters_get" uservisible="false">
-                  <title name="VAR">speed</title>
-                </block>
-              </value>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">0</title>
               <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                  <title name="DIR">1</title>
-                  <value name="SPRITE">
-                    <block type="parameters_get" uservisible="false">
-                      <title name="VAR">actor</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">400</title>
-                    </block>
-                  </value>
+                <block type="studio_vanish">
+                  <title name="SPRITE">1</title>
                   <next>
-                    <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                      <title name="DIR">4</title>
-                      <value name="SPRITE">
-                        <block type="parameters_get" uservisible="false">
-                          <title name="VAR">actor</title>
+                    <block type="studio_vanish">
+                      <title name="SPRITE">2</title>
+                      <next>
+                        <block type="studio_vanish">
+                          <title name="SPRITE">3</title>
+                          <next>
+                            <block type="studio_wait">
+                              <title name="VALUE">500</title>
+                              <next>
+                                <block type="studio_showTitleScreen">
+                                  <title name="TITLE">you did good</title>
+                                  <title name="TEXT">please play again.</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
                         </block>
-                      </value>
-                      <value name="DISTANCE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">400</title>
-                        </block>
-                      </value>
+                      </next>
                     </block>
                   </next>
                 </block>
               </next>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </start_blocks>

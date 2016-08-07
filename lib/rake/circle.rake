@@ -20,11 +20,13 @@ namespace :circle do
     RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.3.15-linux.tar.gz'
     RakeUtils.system_stream_output 'tar -xzf sc-4.3.15-linux.tar.gz'
     Dir.chdir(Dir.glob('sc-*-linux')[0]) do
-      RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM'
+      RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM --tunnel-domains localhost-studio.code.org,localhost.code.org'
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
-      RakeUtils.system_stream_output 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 35 --retry_count 3 --html'
+      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      RakeUtils.system_stream_output "bundle exec ./runner.rb --eyes -f #{eyes_features.join(',')} -c ChromeLatestWin7,iPhone -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
+      RakeUtils.system_stream_output 'bundle exec ./runner.rb -c ChromeLatestWin7,Firefox45Win7,IE11Win10,SafariYosemite -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html'
     end
   end
 end

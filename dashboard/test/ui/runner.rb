@@ -287,8 +287,8 @@ end
 
 # Sort by flakiness (most flaky at end of array, will get run first)
 browser_features.sort! do |browser_feature_a, browser_feature_b|
-  flakiness_for_browser_feature(browser_feature_a) <=>
-    flakiness_for_browser_feature(browser_feature_b)
+  flakiness_for_browser_feature(browser_feature_b) <=>
+    flakiness_for_browser_feature(browser_feature_a)
 end
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|

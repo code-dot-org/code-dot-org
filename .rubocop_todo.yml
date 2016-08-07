@@ -34,10 +34,6 @@ Lint/ParenthesesAsGroupedExpression:
 Lint/RescueException:
   Enabled: false
 
-# Offense count: 12
-Lint/ShadowingOuterLocalVariable:
-  Enabled: false
-
 # Offense count: 32
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.

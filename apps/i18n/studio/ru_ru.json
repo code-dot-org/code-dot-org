@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Поймай три Пилота-повстанца для продолжения.",
   "failedChangeSettingSettings": "Создай свою собственную игру. Чтобы решить эту головоломку, тебе нужно изменить свой дроид и задать скорость его передвижения.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "3명의 반란군 조종사를 움직이세요.",
   "failedChangeSettingSettings": "게임을 직접 만들어보세요. 이 퍼즐을 해결하기 위해서는 드로이드와 드로이드의 속도를 변경해야 합니다.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

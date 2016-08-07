@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Három Lázadót kell elkapnod a továbbjutáshoz.",
   "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

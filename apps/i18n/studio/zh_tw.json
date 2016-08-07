@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "接觸3個反抗軍飛行員以便繼續。",
   "failedChangeSettingSettings": "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

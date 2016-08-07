@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Ta tre Rebel Pilots for å gå vidare.",
   "failedChangeSettingSettings": "Gjer spelet til ditt eige. For å klare denne oppgåva må du endre droiden din og sette hastigheita.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

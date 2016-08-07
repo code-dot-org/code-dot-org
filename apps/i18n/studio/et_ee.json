@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Edasiliikumiseks hangi kolm pilooti.",
   "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }
