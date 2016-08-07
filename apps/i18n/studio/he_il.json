@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "השיגו שלושה טייסי מחתרת על מנת להמשיך הלאה.",
   "failedChangeSettingSettings": "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

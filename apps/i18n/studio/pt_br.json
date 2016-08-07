@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Pegue três Pilotos Rebeldes para seguir em frente.",
   "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

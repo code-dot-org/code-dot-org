@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Дістанься до трьох Пілотів повстанців, щоб рухатися далі.",
   "failedChangeSettingSettings": "Створи власну гру. Щоб пройти цей рівень потрібно змінити дроїда та задати його швидкість.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

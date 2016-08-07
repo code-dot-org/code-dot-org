@@ -192,11 +192,21 @@ level 'CSD U3 collisions overlap x'
 level 'CSD U3 collisions overlap y'
 level 'CSD U3 collisions overlap'
 level 'CSD U3 collisions car'
-level 'CSD U3 collisions displace x'
 level 'CSD U3 collisions displace y'
+level 'CSD U3 collisions displace x'
 level 'CSD U3 collisions displace intro'
 level 'CSD U3 collisions displace diagonal'
+level 'CSD U3 collisions sundae' 
+#missing level collide (arrows)
 level 'CSD U3 collisions bounce intro'
+#missing level bounce
+level 'CSD U3 collisions bounceOff intro'
+level 'CSD U3 collisions bounceOff'
+# missing level displace
+# missing level collisions (obstacle course)
+level 'CSD U3 collisions tennis' # bounceOff
+level 'CSD U3 collisions bumper' # bounce
+
 
 # Not In Use
 stage 'Proposed Sprites and Props'

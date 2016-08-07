@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Dapatkan tiga Pilot Pemberontak untuk dapat lanjut.",
   "failedChangeSettingSettings": "Buatlah game tersebut milikmu. Untuk menyelesaikan teka-teki ini, kamu harus mengganti droidmu dan menetapkan kecepatannya.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

@@ -17,7 +17,6 @@ machine:
 dependencies:
   cache_directories:
     - "apps/node_modules"
-    - "code-studio/node_modules"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev enscript
@@ -29,6 +28,7 @@ dependencies:
     - 'echo "sync_assets: false" >> locals.yml'
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
+    - 'echo "applitools_eyes_api_key: $APPLITOOLS_KEY" >> locals.yml'
     - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
     # Run rake install

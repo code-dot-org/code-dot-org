@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Жалғастыру үшін үш көтерілісші ұшқыштарды жина.",
   "failedChangeSettingSettings": "Өз ойыныңды құр.Келесі деңгейге өту үшін сізге дройдтын келбетін өзгертіп қолғалыс жылдамдығын орналастыру қажет.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

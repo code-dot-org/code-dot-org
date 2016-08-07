@@ -70,7 +70,7 @@ class ProfessionalDevelopmentWorkshop
 
         results['progress_snapshot_t'] = uploaded_data "workshop-progress-snapshot-#{data['section_id_s']}", snapshot.to_json
 
-        recipients = snapshot.map{|row| {email: row[:email], name: row[:name]}}
+        recipients = snapshot.map{|snapshot_row| {email: snapshot_row[:email], name: snapshot_row[:name]}}
         recipients.each do |recipient|
           begin
             Poste2.send_message('professional-development-workshop-section-receipt',

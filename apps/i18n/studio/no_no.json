@@ -792,7 +792,11 @@
   "failedChangeSettingTimeout": "Ta tre opprørspiloter for å gå videre.",
   "failedChangeSettingSettings": "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten.",
   "add": "add",
+  "getScoreTooltip": "A variable representing the player's score",
   "points": "points",
   "remove": "remove",
+  "score": "score",
+  "setScore": "set score to",
+  "setScoreTooltip": "Sets the player's score to the specified amount",
   "wait": "wait"
 }

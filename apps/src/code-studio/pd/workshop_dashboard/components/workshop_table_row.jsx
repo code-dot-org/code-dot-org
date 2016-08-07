@@ -1,13 +1,13 @@
-/*
-  Workshop summary display for use as a row in WorkshopTable
+/**
+ * Workshop summary display for use as a row in WorkshopTable
  */
 import React from 'react';
-var SessionTimesList = require('./session_times_list');
-var ConfirmationDialog = require('./confirmation_dialog');
-var FacilitatorsList = require('./facilitators_list');
-var Button = require('react-bootstrap').Button;
+import {Button} from 'react-bootstrap';
+import SessionTimesList from './session_times_list';
+import ConfirmationDialog from './confirmation_dialog';
+import FacilitatorsList from './facilitators_list';
 
-var WorkshopTableRow = React.createClass({
+const WorkshopTableRow = React.createClass({
   propTypes: {
     workshop: React.PropTypes.shape({
       sessions: React.PropTypes.array.isRequired,
@@ -24,33 +24,33 @@ var WorkshopTableRow = React.createClass({
     onDelete: React.PropTypes.func
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       showDeleteConfirmation: false
     };
   },
 
-  handleViewClick: function (e) {
+  handleViewClick() {
     this.props.onView(this.props.workshop);
   },
-  handleEditClick: function (e) {
+  handleEditClick() {
     this.props.onEdit(this.props.workshop);
   },
 
-  handleDeleteClick: function () {
+  handleDeleteClick() {
     this.setState({showDeleteConfirmation: true});
   },
 
-  handleDeleteCanceled: function () {
+  handleDeleteCanceled() {
     this.setState({showDeleteConfirmation: false});
   },
 
-  handleDeleteConfirmed: function () {
+  handleDeleteConfirmed() {
     this.setState({showDeleteConfirmation: false});
     this.props.onDelete(this.props.workshop);
   },
 
-  renderEditButton: function () {
+  renderEditButton() {
     if (!this.props.onEdit) {
       return null;
     }
@@ -62,7 +62,7 @@ var WorkshopTableRow = React.createClass({
     );
   },
 
-  renderDeleteButton: function () {
+  renderDeleteButton() {
     if (!this.props.onDelete) {
       return null;
     }
@@ -74,7 +74,7 @@ var WorkshopTableRow = React.createClass({
     );
   },
 
-  render: function () {
+  render() {
     return (
       <tr>
         <td>

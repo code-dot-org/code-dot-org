@@ -78,7 +78,7 @@ assessment 'U3L08 Assessment2'
 
 stage 'Looping and Random Numbers'
 level 'v2 U3L09 Student Lesson Introduction'
-named_level 'U3L07 - introSquare'
+level 'U3L07 - introSquare'
 level 'U3L07 - randomSquare'
 level 'U3L07 - randomDots1'
 level 'U3L07 - loopsWithRandom'
