@@ -6,6 +6,7 @@ import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
+import experiments from '../../experiments';
 
 const styles = {
   main: {
@@ -96,7 +97,7 @@ var Instructions = React.createClass({
     // substituteInstructionImages
     return (
       <div style={styles.main}>
-        {this.props.renderedMarkdown &&
+        {this.props.renderedMarkdown && !experiments.isEnabled('hideInstructions') &&
           <MarkdownInstructions
             ref="instructionsMarkdown"
             renderedMarkdown={this.props.renderedMarkdown}
@@ -106,7 +107,7 @@ var Instructions = React.createClass({
         }
         { /* Note: In this case props.instructions might be undefined, but we
           still want to render NonMarkdownInstructions to get the puzzle title */
-        !this.props.renderedMarkdown &&
+        !this.props.renderedMarkdown && !experiments.isEnabled('hideInstructions') &&
           <NonMarkdownInstructions
             puzzleTitle={this.props.puzzleTitle}
             instructions={this.props.instructions}
