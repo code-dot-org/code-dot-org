@@ -150,7 +150,7 @@ const finishSave = (newLockStatus, stageId) => ({
  * Action asynchronously dispatches a set of actions around saving our
  * lock status.
  */
-const performSave = (newLockStatus, stageId) => {
+const performSave = (newLockStatus, stageId, onComplete) => {
   return (dispatch, getState) => {
     const oldLockStatus = getState().stageLock.lockStatus;
 
@@ -164,7 +164,7 @@ const performSave = (newLockStatus, stageId) => {
     }));
 
     if (saveData.length === 0) {
-      dispatch(closeLockDialog());
+      onComplete();
       return;
     }
 
@@ -177,11 +177,11 @@ const performSave = (newLockStatus, stageId) => {
       data: JSON.stringify({updates: saveData})
     }).done(() => {
       dispatch(finishSave(newLockStatus, stageId));
-      dispatch(closeLockDialog());
+      onComplete();
     })
     .fail(err => {
       console.error(err);
-      dispatch(closeLockDialog());
+      onComplete();
     });
   };
 };
@@ -189,7 +189,9 @@ const performSave = (newLockStatus, stageId) => {
 export const saveLockDialog = (newLockStatus) => {
   return (dispatch, getState) => {
     const stageId = getState().stageLock.lockDialogStageId;
-    dispatch(performSave(newLockStatus, stageId));
+    dispatch(performSave(newLockStatus, stageId, () => {
+      dispatch(closeLockDialog());
+    }));
   };
 };
 
@@ -199,7 +201,7 @@ export const lockStage = (stageId) => {
     const newLockStatus = oldLockStatus.map(student => Object.assign({}, student, {
       lockStatus: LockStatus.Locked
     }));
-    dispatch(performSave(newLockStatus, stageId));
+    dispatch(performSave(newLockStatus, stageId, () => {}));
   };
 };
 
