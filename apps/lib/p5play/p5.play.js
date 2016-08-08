@@ -128,7 +128,7 @@ var round = p5.prototype.round;
 * @type {Group}
 */
 
-defineLazyP5Property('allSprites', function() { return new Group(); });
+defineLazyP5Property('allSprites', function() { return new p5.prototype.Group(); });
 
 p5.prototype.spriteUpdate = true;
 

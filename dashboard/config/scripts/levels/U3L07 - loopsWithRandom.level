@@ -51,7 +51,6 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
     "log_conditions": [
       {
         "entries": [
@@ -85,7 +84,8 @@
         "message": "We've detected that you have two loops, but perhaps you have one loop inside another?  The loops should appear one after the other - the loop that fills the screen with colored dots should run to completion, THEN another loop that draws white dots should start up."
       }
     ],
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

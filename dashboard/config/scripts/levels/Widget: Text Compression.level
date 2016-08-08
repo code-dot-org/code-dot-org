@@ -9,8 +9,7 @@
     "video_key": "csp_textcompression_new",
     "skip_dialog": true,
     "instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.",
-    "markdown_instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.",
-    "poems": null
+    "markdown_instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern."
   },
   "published": true,
   "notes": "",

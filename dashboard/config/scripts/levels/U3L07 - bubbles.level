@@ -163,7 +163,6 @@
     "encrypted_examples": "7uj3V2UtF4+l+kiwHdwp5diDc49I21ixmbYZ1YccA/qgAgT6GRlHiumryjw0\nl4wK\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
     "log_conditions": [
       {
         "entries": [
@@ -185,7 +184,8 @@
         "message": "App lab is expecting that you would simply 'wrap a loop around' the existing code that was inside the drawAllBubbles function - a looping of two commands: moveTo(x,y) and drawBubble(size). And that that loop would run 200 times or more.  It appears as though the sequence is slightly different or you're not running the loop 200 times."
       }
     ],
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

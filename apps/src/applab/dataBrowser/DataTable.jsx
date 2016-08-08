@@ -13,6 +13,7 @@ import React from 'react';
 import { changeView } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import { connect } from 'react-redux';
+import applabMsg from '../locale';
 
 const MAX_TABLE_WIDTH = 970;
 
@@ -138,6 +139,30 @@ const DataTable = React.createClass({
     return `column${i}`;
   },
 
+  importCsv(csvData) {
+    FirebaseStorage.importCsv(
+      this.props.tableName,
+      csvData,
+      () => this.setState(this.getInitialState()),
+      msg => console.warn(msg));
+  },
+
+  exportCsv() {
+    const tableName = encodeURIComponent(this.props.tableName);
+    location.href = `/v3/export-firebase-tables/${Applab.channelId}/${tableName}`;
+  },
+
+  /** Delete all rows, but preserve the columns. */
+  clearTable() {
+    if (confirm(applabMsg.confirmClearTable())) {
+      const newColumns = this.getColumnNames();
+      FirebaseStorage.deleteTable(
+        this.props.tableName,
+        () => this.setState({newColumns, editingColumn: null}),
+        msg => console.warn(msg));
+    }
+  },
+
   render() {
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
@@ -166,7 +191,13 @@ const DataTable = React.createClass({
           &nbsp;&gt; {this.props.tableName}
         </h4>
 
-        <TableControls columns={columnNames} addColumn={this.addColumn}/>
+        <TableControls
+          columns={columnNames}
+          addColumn={this.addColumn}
+          clearTable={this.clearTable}
+          importCsv={this.importCsv}
+          exportCsv={this.exportCsv}
+        />
 
         <table style={styles.table}>
           <tbody>
