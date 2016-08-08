@@ -8,9 +8,15 @@ import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
-import { SUBMITTED_RESULT, LOCKED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
 import { getStore } from './redux';
-
+import { setSections } from './stageLockRedux';
+import {
+  SUBMITTED_RESULT,
+  LOCKED_RESULT,
+  LevelStatus,
+  mergeActivityResult,
+  activityCssClass
+} from './activityUtils';
 import {
   initProgress,
   mergeProgress,
@@ -18,8 +24,6 @@ import {
   showTeacherInfo,
   authorizeLockable
 } from './progressRedux';
-
-import { setSections } from './stageLockRedux';
 
 var progress = module.exports;
 
@@ -87,9 +91,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.submitted) {
           return level.view_answers ? SUBMITTED_RESULT : LOCKED_RESULT;
         }
-        // TODO - may still be able to improve how we communicate locked state
-        // for progress
-        if (level.status === 'locked') {
+        if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
         return level.result;

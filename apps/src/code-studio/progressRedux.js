@@ -2,7 +2,13 @@
  * Reducer and actions for progress
  */
 
-import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
+import {
+  SUBMITTED_RESULT,
+  LOCKED_RESULT,
+  LevelStatus,
+  mergeActivityResult,
+  activityCssClass
+} from './activityUtils';
 
 // Action types
 const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -55,10 +61,11 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       levelProgress: newLevelProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        // TODO - level.uid can be something like "4011_0" here, and the levels will be 4011, but
-        // we never call bestResultLeveId bc we already have a uid
-        let id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+        if (stage.lockable && newLevelProgress[level.ids[0]] === LOCKED_RESULT) {
+          return Object.assign({}, level, { status: LevelStatus.locked });
+        }
 
+        const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
         if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
           Object.assign(level, action.peerReviewsPerformed[index]);
         }
