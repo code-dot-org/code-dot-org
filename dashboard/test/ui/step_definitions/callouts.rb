@@ -4,12 +4,12 @@ end
 
 And(/^callout "([^"]*)" is visible$/) do |callout_id|
   short_wait.until { callout_visible?(callout_id) }
-  callout_visible?(callout_id).should eq true
+  expect(callout_visible?(callout_id)).to eq(true)
 end
 
 And(/^callout "([^"]*)" is hidden$/) do |callout_id|
   short_wait.until { !callout_visible?(callout_id) }
-  callout_visible?(callout_id).should eq false
+  expect(callout_visible?(callout_id)).to eq(false)
 end
 
 And(/^I close callout "([^"]*)"$/) do |callout_id|
@@ -20,9 +20,9 @@ And(/^I close callout "([^"]*)"$/) do |callout_id|
 end
 
 And(/^callout "([^"]*)" does not exist$/) do |callout_id|
-  callout_exists?(callout_id).should eq false
+  expect(callout_exists?(callout_id)).to eq(false)
 end
 
 And(/^callout "([^"]*)" exists$/) do |callout_id|
-  callout_exists?(callout_id).should eq true
+  expect(callout_exists?(callout_id)).to eq(true)
 end
