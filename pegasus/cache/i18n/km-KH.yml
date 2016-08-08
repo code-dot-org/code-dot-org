@@ -1726,3 +1726,5 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
