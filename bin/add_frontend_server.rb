@@ -98,11 +98,9 @@ def determine_frontend_instance_distribution
 
   frontend_instances.flatten!
 
-  instance_distribution = frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
+  frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
     instance_distribution[instance.placement.availability_zone] += 1
   }
-
-  instance_distribution
 end
 
 # Return an array of objects that have the names and zones of instances to create

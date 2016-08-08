@@ -338,6 +338,36 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
 
+  test 'script with inactive level completed is completed' do
+    user = create :user
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    script = create :script
+    script_level = create(:script_level, script: script,
+                          levels: [level, level2],
+                          properties: '{"maze 2": {"active": false}}')
+    create :user_script, user: user, script: script
+    UserLevel.create(user: user, level: script_level.levels[1], script: script,
+        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+
+    assert user.completed?(script)
+  end
+
+  test 'script with active level completed is completed' do
+    user = create :user
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    script = create :script
+    script_level = create(:script_level, script: script,
+                          levels: [level, level2],
+                          properties: '{"maze 2": {"active": false}}')
+    create :user_script, user: user, script: script
+    UserLevel.create(user: user, level: script_level.levels[0], script: script,
+        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+
+    assert user.completed?(script)
+  end
+
   test 'user is created with secret picture and word' do
     user = create :user
     assert user.secret_picture
