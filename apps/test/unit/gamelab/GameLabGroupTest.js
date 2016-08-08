@@ -49,6 +49,19 @@ describe('GameLabGroup', function () {
         }
         expect(result).to.equal(false);
       });
+      it('returns true if any sprite in group overlaps target sprite', function () {
+        var sprite1 = createSprite(160, 160, 100, 100);
+        var sprite2 = createSprite(400, 400, 100, 100);
+        var targetSprite = createSprite(200, 200, 100, 100);
+        var group = createGroup();
+        group.add(sprite1);
+        group.add(sprite2);
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.isTouching(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
     });
   });
 });
