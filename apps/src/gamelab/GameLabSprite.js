@@ -172,28 +172,28 @@ module.exports.createSprite = function (x, y, width, height) {
   s.createGroupState = function (type, target, callback, modifyPosition=true) {
     if (target instanceof Array) {
       // Colliding with a group.
-        var state = jsInterpreter.getCurrentState();
-        if (!state.__i) {
-          state.__i = 0;
-          state.__didCollide = false;
+      var state = jsInterpreter.getCurrentState();
+      if (!state.__i) {
+        state.__i = 0;
+        state.__didCollide = false;
+      }
+      if (state.__i < target.size()) {
+        if (!state.__subState) {
+          // Before we call AABBops (another stateful function), hang a __subState
+          // off of state, so it can use that instead to track its state:
+          state.__subState = { doneExec: true };
         }
-        if (state.__i < target.size()) {
-          if (!state.__subState) {
-            // Before we call AABBops (another stateful function), hang a __subState
-            // off of state, so it can use that instead to track its state:
-            state.__subState = { doneExec: true };
-          }
-          var didTouch = this.AABBops(type, target[state.__i], callback, modifyPosition);
-          if (state.__subState.doneExec) {
-            state.__didCollide = didTouch || state.__didCollide;
-            delete state.__subState;
-            state.__i++;
-          }
-          state.doneExec = false;
-        } else {
-          state.doneExec = true;
-          return state.__didCollide;
+        var didTouch = this.AABBops(type, target[state.__i], callback, modifyPosition);
+        if (state.__subState.doneExec) {
+          state.__didCollide = didTouch || state.__didCollide;
+          delete state.__subState;
+          state.__i++;
         }
+        state.doneExec = false;
+      } else {
+        state.doneExec = true;
+        return state.__didCollide;
+      }
     } else {
       return this.AABBops(type, target, callback, modifyPosition);
     }
