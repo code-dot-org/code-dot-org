@@ -186,7 +186,7 @@ class ApiController < ApplicationController
         next if script_level.anonymous?
 
         last_attempt = student.last_attempt_for_any(script_level.levels)
-        level_group = last_attempt.level
+        level_group = last_attempt.try(:level) || script_level.oldest_active_level
         response = last_attempt.try(:level_source).try(:data)
 
         next unless response
