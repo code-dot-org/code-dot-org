@@ -1,14 +1,14 @@
-/*
-  Table displaying workshop summaries based on a supplied query.
+/**
+ * Table displaying workshop summaries based on a supplied query.
  */
 
 import $ from 'jquery';
-var _ = require('lodash');
+import _ from 'lodash';
 import React from 'react';
-var WorkshopTableRow = require('./workshop_table_row');
-var Table = require('react-bootstrap').Table;
+import WorkshopTableRow from './workshop_table_row';
+import {Table} from 'react-bootstrap';
 
-var WorkshopTable = React.createClass({
+const WorkshopTable = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -19,34 +19,34 @@ var WorkshopTable = React.createClass({
     canDelete: React.PropTypes.bool
   },
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
       canEdit: false,
       canDelete: false
     };
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       loading: true
     };
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.loadRequest = $.ajax({
         method: 'GET',
         url: this.props.queryUrl,
         dataType: 'json'
       })
-      .done(function (data) {
+      .done(data => {
         this.setState({
           loading: false,
           workshops: data
         });
-      }.bind(this));
+      });
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
@@ -55,25 +55,25 @@ var WorkshopTable = React.createClass({
     }
   },
 
-  handleView: function (workshop) {
+  handleView(workshop) {
     this.context.router.push('/workshops/' + workshop.id);
   },
-  handleEdit: function (workshop) {
+  handleEdit(workshop) {
     this.context.router.push('/workshops/' + workshop.id + '/edit');
   },
-  handleDelete: function (workshop_index, workshop) {
+  handleDelete(workshop_index, workshop) {
     this.deleteRequest = $.ajax({
         method: 'DELETE',
         url: '/api/v1/pd/workshops/' + workshop.id
       })
-      .done(function () {
-        var workshops = _.cloneDeep(this.state.workshops);
+      .done(() => {
+        const workshops = _.cloneDeep(this.state.workshops);
         workshops.splice(workshop_index, 1);
         this.setState({workshops: workshops});
-      }.bind(this));
+      });
   },
 
-  render: function () {
+  render() {
     if (this.state.loading) {
       return <i className="fa fa-spinner fa-pulse fa-3x" />;
     }
@@ -82,7 +82,7 @@ var WorkshopTable = React.createClass({
       return <p>None.</p>;
     }
 
-    var tableRows = this.state.workshops.map(function (workshop, i) {
+    const tableRows = this.state.workshops.map((workshop, i) => {
       return (
         <WorkshopTableRow
           workshop={workshop}
@@ -92,7 +92,7 @@ var WorkshopTable = React.createClass({
           onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
         />
       );
-    }.bind(this));
+    });
     return (
       <Table striped bordered condensed hover>
         <thead>
@@ -114,4 +114,4 @@ var WorkshopTable = React.createClass({
     );
   }
 });
-module.exports = WorkshopTable;
+export default WorkshopTable;
