@@ -2,6 +2,7 @@
 
 var commonMsg = require('@cdo/locale');
 var utils = require('../utils');
+const studioApp = require('../StudioApp').singleton;
 
 /**
  * Returns a list of options (optionally filtered by type) for code-mode
@@ -15,8 +16,6 @@ module.exports = function (typeFilter) {
     };
   });
   var handleChooseClick = function (callback) {
-    const studioApp = require('../StudioApp').singleton;
-
     dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
     }, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
