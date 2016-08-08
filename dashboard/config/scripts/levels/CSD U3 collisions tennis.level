@@ -176,7 +176,6 @@
     },
     "show_d_pad": "true",
     "edit_code": true,
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "# Tennis\r\n\r\nComplete the tennis game by making sure the ball and the racket interact in the right way. You can use your up and down arrows to control the racket.\r\n\r\n# Do This\r\n\r\nAdd a `displace`, `bounce`, or `bounceOff` block in the draw loop to make the sprites interact as they do in the picture.\r\n\r\n[//]: # (https://images.code.org/8d8cf039f50114c07a21e73bbc1c8dfe-image-1470418244037.png)\r\n\r\n[//]: # (https://images.code.org/d05be653ae7e4717353dffd08af9c656-image-1470418244039.png)",
     "is_k1": "false",
@@ -203,7 +202,8 @@
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\"racket\", \"ball\"],\r\n  \"propsByKey\": {\r\n    \"racket\": {\r\n      \"name\": \"racket\",\r\n      \"sourceUrl\": \"https://images.code.org/8d8cf039f50114c07a21e73bbc1c8dfe-image-1470418244037.png\",\r\n      \"frameSize\": {\"x\":17, \"y\": 75},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"ball\": {\r\n      \"name\": \"ball\",\r\n      \"sourceUrl\": \"https://images.code.org/d05be653ae7e4717353dffd08af9c656-image-1470418244039.png\",\r\n      \"frameSize\": {\"x\":30, \"y\": 30},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}"
+    "start_animations": "{\r\n  \"orderedKeys\": [\"racket\", \"ball\"],\r\n  \"propsByKey\": {\r\n    \"racket\": {\r\n      \"name\": \"racket\",\r\n      \"sourceUrl\": \"https://images.code.org/8d8cf039f50114c07a21e73bbc1c8dfe-image-1470418244037.png\",\r\n      \"frameSize\": {\"x\":17, \"y\": 75},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"ball\": {\r\n      \"name\": \"ball\",\r\n      \"sourceUrl\": \"https://images.code.org/d05be653ae7e4717353dffd08af9c656-image-1470418244039.png\",\r\n      \"frameSize\": {\"x\":30, \"y\": 30},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

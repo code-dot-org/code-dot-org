@@ -72,9 +72,9 @@ end
 def threaded_each(array, thread_count=2)
   # NOTE: Queue is used here because it is threadsafe - it is the ONLY threadsafe datatype in base ruby!
   #   Without Queue, the array would need to be protected using a Mutex.
-  queue = Queue.new.tap do |queue|
+  queue = Queue.new.tap do |q|
     array.each do |i|
-      queue << i
+      q << i
     end
   end
 
