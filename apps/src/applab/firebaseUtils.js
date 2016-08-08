@@ -22,7 +22,7 @@ export function loadConfig() {
   }
 
   const configRef = getConfigRef();
-  return configRef.once('value', snapshot => {
+  return configRef.once('value').then(snapshot => {
     handleLoadConfig(snapshot.val());
 
     // Make sure we don't listen multiple times.
