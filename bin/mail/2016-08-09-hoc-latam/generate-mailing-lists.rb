@@ -24,10 +24,10 @@ LATAM_ES_COUNTRIES = [
   'Argentina',
   'Puerto Rico'
 ]
-es_country_or_list = LATAM_ES_COUNTRIES.map(&:strip).join(' OR ')
+es_country_or_list = LATAM_ES_COUNTRIES.join(' OR ')
 
-LATAM_ES_COUNTRY_CODES = %w(mx gt sv cr ni bz pa cu do ve ec pe bo py uy cl ra pr)
-es_country_code_or_list = LATAM_ES_COUNTRY_CODES.map(&:strip).join(' OR ')
+LATAM_ES_COUNTRY_CODES = %w(mx gt sv cr ni bz pa cu do ve co ec pe bo py uy cl ar pr)
+es_country_code_or_list = LATAM_ES_COUNTRY_CODES.join(' OR ')
 
 def query_from_list(queries)
   {}.tap do |contacts|
