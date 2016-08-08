@@ -32,13 +32,3 @@
 }
 
 /* End of borrowed from dashboard for included classroom landing. */
-
-/* Some custom styling for included user_stats. */
-
-#trophies td {
-  padding: 0px;
-  border-width: 0px;
-  font-size: 13px;
-}
-
-/* End of custom styling for included user_stats. */
