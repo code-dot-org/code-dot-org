@@ -78,7 +78,28 @@ module.exports.Group = function (baseConstructor) {
   array.isTouching = function (target) {
     var didTouch = false;
     for (var i = 0; i < this.length; i++) {
-      didTouch = this[i].isTouching(target) || didTouch;
+      var state = jsInterpreter.getCurrentState();
+      if (!state.__i) {
+        state.__i = 0;
+        state.__didCollide = false;
+      }
+      if (state.__i < this.size()) {
+        if (!state.__subState) {
+          // Before we call AABBops (another stateful function), hang a __subState
+          // off of state, so it can use that instead to track its state:
+          state.__subState = { doneExec: true };
+        }
+        didTouch = this[i].isTouching(target) || didTouch;
+        if (state.__subState.doneExec) {
+          state.__didCollide = didTouch || state.__didCollide;
+          delete state.__subState;
+          state.__i++;
+        }
+        state.doneExec = false;
+      } else {
+        state.doneExec = true;
+        return state.__didCollide;
+      }
       // Note: can't early out because each call needs to update the sprite's
       // touching property.
     }
