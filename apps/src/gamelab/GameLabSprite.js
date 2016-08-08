@@ -167,9 +167,104 @@ module.exports.createSprite = function (x, y, width, height) {
   };
 
   s.shapeColor = this.color(127, 127, 127);
+
+  Object.defineProperty(s, 'velocityX', {
+    enumerable: true,
+    get: function () {
+      return s.velocity.x;
+    },
+    set: function (value) {
+      s.velocity.x = value;
+    }
+  });
+
+  Object.defineProperty(s, 'velocityY', {
+    enumerable: true,
+    get: function () {
+      return s.velocity.y;
+    },
+    set: function (value) {
+      s.velocity.y = value;
+    }
+  });
+
+  Object.defineProperty(s, 'lifetime', {
+    enumerable: true,
+    get: function () {
+      return s.life;
+    },
+    set: function (value) {
+      s.life = value;
+    }
+  });
+
   s.AABBops = AABBops.bind(s, this);
-  s.bounceOff = s.AABBops.bind(s, 'bounceOff');
-  s.isTouching = isTouching.bind(s, this);
+  s.createGroupState = function (type, target, callback, modifyPosition=true) {
+    if (target instanceof Array) {
+      // Colliding with a group.
+      var didTouch = false;
+      for (var i = 0; i < target.size(); i++) {
+        var state = jsInterpreter.getCurrentState();
+        if (!state.__i) {
+          state.__i = 0;
+          state.__didCollide = false;
+        }
+        if (state.__i < target.size()) {
+          if (!state.__subState) {
+            // Before we call AABBops (another stateful function), hang a __subState
+            // off of state, so it can use that instead to track its state:
+            state.__subState = { doneExec: true };
+          }
+          didTouch = this.AABBops(type, target[i], callback, modifyPosition) || didTouch;
+          if (state.__subState.doneExec) {
+            state.__didCollide = didTouch || state.__didCollide;
+            delete state.__subState;
+            state.__i++;
+          }
+          state.doneExec = false;
+        } else {
+          state.doneExec = true;
+          return state.__didCollide;
+        }
+        // Note: can't early out because each call needs to update the sprite's
+        // touching property.
+      }
+      return didTouch;
+    } else {
+      return this.AABBops(type, target, callback, modifyPosition);
+    }
+  };
+
+  s.bounceOff = function (target, callback) {
+    return this.createGroupState('bounceOff', target, callback);
+  };
+
+  /**
+   * Returns whether or not this sprite will bounce or collide with another sprite
+   * or group. Modifies the sprite's touching property object.
+   * @method
+   */
+  s.isTouching = function (target) {
+    return this.createGroupState('collide', target, undefined, false);
+  };
+
+  // Overriding overlap, collide, displace, bounce, to work with our group states.
+  s.overlap = function (target, callback) {
+    return this.createGroupState('overlap', target, callback);
+  };
+
+  s.collide = function (target, callback) {
+    return this.createGroupState('collide', target, callback);
+  };
+
+  s.displace = function (target, callback) {
+    return this.createGroupState('displace', target, callback);
+  };
+
+  s.bounce = function (target, callback) {
+    return this.createGroupState('bounce', target, callback);
+  };
+
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
 
@@ -505,16 +600,6 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
 };
 
 /* eslint-enable */
-
-/**
- * Returns whether or not this sprite will bounce or collide with another sprite
- * or group. Modifies the sprite's touching property object.
- * @method
- */
-
-var isTouching = function (p5Inst, target) {
-  return this.AABBops('collide', target, undefined, false);
-};
 
 /**
  * Map from existing (deep) property names to new alias names we want to use
