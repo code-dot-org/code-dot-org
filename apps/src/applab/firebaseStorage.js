@@ -296,6 +296,36 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
 };
 
 /**
+ * @param {boolean} overwrite
+ * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
+ *   or an empty map if overwrite is true.
+ */
+function getExistingTables(overwrite) {
+  if (overwrite) {
+    return Promise.resolve({});
+  }
+  const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+  return tablesRef.once('value').then(snapshot => snapshot.val() || {});
+}
+
+/**
+ * Converts records into a format that can be written to a table's `records` node in
+ * firebase, overwriting the "id" field of each record if necessary.
+ * @param {Array.<Object>} records Array of raw javascript objects representing records.
+ * @returns {Object} Map representing records data, where each key is a record id, and
+ *   each value is a JSON-encoded record containing an "id" field equal to the record id.
+ */
+function getRecordsData(records) {
+  const recordsData = {};
+  records.forEach((record, index) => {
+    const id = index + 1;
+    record.id = id;
+    recordsData[id] = JSON.stringify(record);
+  });
+  return recordsData;
+}
+
+/**
  * Populates a channel with table data for one or more tables
  * @param {string} jsonData The json data that represents the tables in the format of:
  *   {
@@ -304,26 +334,24 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
  * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
- *    and http status in case of failure.
+ * @param {function} onError Function to call with an error in case of failure.
  */
 FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Respect overwrite
-  let promises = [];
-  let tablesRef = getDatabase(Applab.channelId).child('storage/tables');
-  let tablesMap = JSON.parse(jsonData);
-  Object.keys(tablesMap).forEach(tableName => {
-    let recordsMap = tablesMap[tableName];
-    let recordsRef = tablesRef.child(`${tableName}/records`);
-    Object.keys(recordsMap).forEach(recordId => {
-      let recordString = JSON.stringify(recordsMap[recordId]);
-      promises.push(recordsRef.child(recordId).set(recordString));
-    });
-  });
-  Promise.all(promises).then(onSuccess, onError);
+  getExistingTables(overwrite).then(existingTables => {
+    const promises = [];
+    const newTables = JSON.parse(jsonData);
+    for (const tableName in newTables) {
+      if (overwrite || (existingTables[tableName] === undefined)) {
+        const newRecords = newTables[tableName];
+        const recordsData = getRecordsData(newRecords);
+        promises.push(overwriteTableData(tableName, recordsData));
+      }
+    }
+    return Promise.all(promises);
+  }).then(onSuccess, onError);
 };
 
 /**
