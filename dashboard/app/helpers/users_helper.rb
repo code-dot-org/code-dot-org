@@ -92,7 +92,10 @@ module UsersHelper
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
           view_answers = !!ul.try(:view_answers)
-          if !ul && sl.stage.lockable? || ul.try(:locked?)
+          locked = ul.try(:locked?) || sl.stage.lockable? && !ul
+
+          # for now, we don't allow authorized teachers to be "locked"
+          if locked && !user.authorized_teacher?
             user_data[:levels][level_id] = {
               status: 'locked'
             }
