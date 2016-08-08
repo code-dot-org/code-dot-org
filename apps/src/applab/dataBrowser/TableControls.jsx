@@ -5,6 +5,7 @@
 
 import Radium from 'radium';
 import React from 'react';
+import applabMsg from '../locale';
 
 import * as dataStyles from './dataStyles';
 
@@ -35,9 +36,7 @@ const TableControls = React.createClass({
     if (!this.importFileInput.value) {
       return;
     }
-    const msg = 'Importing this file will overwrite the existing data in this table. ' +
-      'Are you sure you want to continue?';
-    if (confirm(msg)) {
+    if (confirm(applabMsg.confirmImportOverwrite())) {
       const file = this.importFileInput.files[0];
       const reader = new FileReader();
       reader.onload = e => {

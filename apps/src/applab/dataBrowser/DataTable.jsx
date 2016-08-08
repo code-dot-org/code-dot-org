@@ -13,6 +13,7 @@ import React from 'react';
 import { changeView } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import { connect } from 'react-redux';
+import applabMsg from '../locale';
 
 const MAX_TABLE_WIDTH = 970;
 
@@ -153,9 +154,7 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    const msg = 'Do you really want to delete all data from this table? ' +
-      'You cannot undo this action.';
-    if (confirm(msg)) {
+    if (confirm(applabMsg.confirmClearTable())) {
       const newColumns = this.getColumnNames();
       FirebaseStorage.deleteTable(
         this.props.tableName,
