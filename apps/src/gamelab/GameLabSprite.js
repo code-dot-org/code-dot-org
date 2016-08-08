@@ -168,36 +168,6 @@ module.exports.createSprite = function (x, y, width, height) {
 
   s.shapeColor = this.color(127, 127, 127);
 
-  Object.defineProperty(s, 'velocityX', {
-    enumerable: true,
-    get: function () {
-      return s.velocity.x;
-    },
-    set: function (value) {
-      s.velocity.x = value;
-    }
-  });
-
-  Object.defineProperty(s, 'velocityY', {
-    enumerable: true,
-    get: function () {
-      return s.velocity.y;
-    },
-    set: function (value) {
-      s.velocity.y = value;
-    }
-  });
-
-  Object.defineProperty(s, 'lifetime', {
-    enumerable: true,
-    get: function () {
-      return s.life;
-    },
-    set: function (value) {
-      s.life = value;
-    }
-  });
-
   s.AABBops = AABBops.bind(s, this);
   s.createGroupState = function (type, target, callback, modifyPosition=true) {
     if (target instanceof Array) {
