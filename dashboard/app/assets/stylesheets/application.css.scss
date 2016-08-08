@@ -24,7 +24,6 @@
  *= require user-menu
  *= require user-progress
  *= require user-hero
- *= require teacher-dashboard
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -1196,6 +1195,62 @@ a.download-video {
 
   #welcome h2 {
     font-size: 18px;
+  }
+
+  #teacher_announcement {
+    margin-top: 10px;
+  }
+
+  .teacher-announce {
+    position: relative;
+    font-size: 14px;
+  }
+  .teacher-announce .announce-heading {
+    background-color: $purple;
+    border-radius: 4px;
+    color: white;
+    height: 20px;
+    overflow: hidden;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  .teacher-announce .announce-heading .heading-view-all {
+    float: right;
+  }
+  .teacher-announce .announce-content {
+    background-color: $lightest_purple;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 110px;
+  }
+  .teacher-announce .announce-content .content-img-container {
+    float: left;
+  }
+  .teacher-announce .announce-content .content-img {
+    border-radius: 4px;
+    height: 108px;
+  }
+  .teacher-announce .announce-content .content-text {
+    color: $charcoal;
+    float: left;
+    max-height: 90px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 18px;
+    width: 580px;
+  }
+  .teacher-announce .announce-content .content-text b {
+    font-family: 'Gotham 5r', sans-serif;
+  }
+  .teacher-announce .announce-learn-more {
+    position: absolute;
+    right: 10px;
+    margin-top: 75px;
+  }
+  .teacher-announce a {
+    text-decoration: none;
   }
 
   .gallery {
