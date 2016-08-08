@@ -2056,7 +2056,7 @@ $modal-no-icon-gap: 22px;
 
   .aniGif {
     display: block;
-    margin: 0 auto 6px;
+    margin: 0 auto 6px auto;
     position: relative;
     z-index: -1;
   }
@@ -2105,7 +2105,7 @@ $modal-no-icon-gap: 22px;
     font-size: 20px;
     line-height: normal;
     color: $charcoal;
-    margin: 0 0 8px;
+    margin: 0 0 8px 0;
   }
 
   .instructions-container {
@@ -2183,7 +2183,7 @@ $modal-no-icon-gap: 22px;
   /*margin-top: 10px;*/
   margin-bottom: 15px;
   float: left;
-  padding: 0 0 15px;
+  padding: 0 0 15px 0;
   background-color: white;
   $outside-margin-side: 15px;
   width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
