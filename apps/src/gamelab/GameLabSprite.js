@@ -172,8 +172,6 @@ module.exports.createSprite = function (x, y, width, height) {
   s.createGroupState = function (type, target, callback, modifyPosition=true) {
     if (target instanceof Array) {
       // Colliding with a group.
-      var didTouch = false;
-      for (var i = 0; i < target.size(); i++) {
         var state = jsInterpreter.getCurrentState();
         if (!state.__i) {
           state.__i = 0;
@@ -185,7 +183,7 @@ module.exports.createSprite = function (x, y, width, height) {
             // off of state, so it can use that instead to track its state:
             state.__subState = { doneExec: true };
           }
-          didTouch = this.AABBops(type, target[i], callback, modifyPosition) || didTouch;
+          var didTouch = this.AABBops(type, target[state.__i], callback, modifyPosition);
           if (state.__subState.doneExec) {
             state.__didCollide = didTouch || state.__didCollide;
             delete state.__subState;
@@ -196,10 +194,6 @@ module.exports.createSprite = function (x, y, width, height) {
           state.doneExec = true;
           return state.__didCollide;
         }
-        // Note: can't early out because each call needs to update the sprite's
-        // touching property.
-      }
-      return didTouch;
     } else {
       return this.AABBops(type, target, callback, modifyPosition);
     }
