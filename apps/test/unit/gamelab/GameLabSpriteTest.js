@@ -1,6 +1,6 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
-import {spy} from 'sinon';
+import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
@@ -12,16 +12,107 @@ describe('GameLabSprite', function () {
     createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
   });
 
-  it('aliases setSpeed to setSpeedAndDirection', function () {
-    let sprite1 = createSprite(0, 0);
-    spy(sprite1, 'setSpeed');
-    expect(sprite1.setSpeed.calledOnce).to.be.false;
+  describe('method aliases', function () {
+    let testSprite;
 
-    const speed = 5;
-    const direction = 180;
-    sprite1.setSpeedAndDirection(speed, direction);
-    expect(sprite1.setSpeed.calledOnce).to.be.true;
-    expect(sprite1.setSpeed.calledWith(speed, direction)).to.be.true;
+    beforeEach(function () {
+      testSprite = createSprite();
+    });
+
+    it('aliases setSpeed to setSpeedAndDirection', function () {
+      spy(testSprite, 'setSpeed');
+      testSprite.setSpeedAndDirection();
+      expect(testSprite.setSpeed.calledOnce).to.be.true;
+    });
+
+    it('aliases remove to destroy', function () {
+      spy(testSprite, 'remove');
+      testSprite.destroy();
+      expect(testSprite.remove.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.changeFrame to setFrame', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'changeFrame');
+      testSprite.setFrame();
+      expect(testSprite.animation.changeFrame.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.nextFrame to nextFrame', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'nextFrame');
+      testSprite.nextFrame();
+      expect(testSprite.animation.nextFrame.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.previousFrame to previousFrame', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'previousFrame');
+      testSprite.previousFrame();
+      expect(testSprite.animation.previousFrame.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.play to play', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'play');
+      testSprite.play();
+      expect(testSprite.animation.play.calledOnce).to.be.true;
+    });
+
+    it('aliases animation.stop to pause', function () {
+      testSprite.addAnimation('label', createTestAnimation());
+      stub(testSprite.animation, 'stop');
+      testSprite.pause();
+      expect(testSprite.animation.stop.calledOnce).to.be.true;
+    });
+  });
+
+  describe('property aliases', function () {
+    let testSprite;
+
+    beforeEach(function () {
+      testSprite = createSprite();
+    });
+
+    it('aliases position.x to positionX', function () {
+      testSprite.position.x = 1;
+      expect(testSprite.position.x).to.equal(testSprite.x);
+      const newValue = 2;
+      testSprite.x = newValue;
+      expect(testSprite.position.x).to.equal(testSprite.x).to.equal(newValue);
+    });
+
+    it('aliases position.y to positionY', function () {
+      testSprite.position.y = 1;
+      expect(testSprite.position.y).to.equal(testSprite.y);
+      const newValue = 2;
+      testSprite.y = newValue;
+      expect(testSprite.position.y).to.equal(testSprite.y).to.equal(newValue);
+    });
+
+    it('aliases velocity.x to velocityX', function () {
+      testSprite.velocity.x = 1;
+      expect(testSprite.velocity.x).to.equal(testSprite.velocityX);
+      const newValue = 2;
+      testSprite.velocityX = newValue;
+      expect(testSprite.velocity.x).to.equal(testSprite.velocityX).to.equal(newValue);
+    });
+
+    it('aliases velocity.y to velocityY', function () {
+      testSprite.velocity.y = 1;
+      expect(testSprite.velocity.y).to.equal(testSprite.velocityY);
+      const newValue = 2;
+      testSprite.velocityY = newValue;
+      expect(testSprite.velocity.y).to.equal(testSprite.velocityY).to.equal(newValue);
+    });
+
+    it('aliases life to lifetime', function () {
+      testSprite.life = 1;
+      expect(testSprite.life).to.equal(testSprite.lifetime);
+      const newValue = 2;
+      testSprite.lifetime = newValue;
+      expect(testSprite.life).to.equal(testSprite.lifetime).to.equal(newValue);
+    });
   });
 
   describe('isTouching', function () {
@@ -169,12 +260,8 @@ describe('GameLabSprite', function () {
     describe('sprites with animations', function () {
       var sprite1;
       beforeEach(function () {
-        var image = new p5.Image(100, 100, gameLabP5.p5);
-        var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-        var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-        var animation = new gameLabP5.p5.Animation(sheet);
         sprite1 = createSprite(0, 0);
-        sprite1.addAnimation('label', animation);
+        sprite1.addAnimation('label', createTestAnimation());
       });
 
       it('returns width and height when no scale is set', function () {
@@ -358,4 +445,11 @@ describe('GameLabSprite', function () {
       expect(spriteTarget.velocity.x).to.equal(0);
     });
   });
+
+  function createTestAnimation() {
+    var image = new p5.Image(100, 100, gameLabP5.p5);
+    var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
+    var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
+    return new gameLabP5.p5.Animation(sheet);
+  }
 });

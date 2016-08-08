@@ -1,12 +1,12 @@
+import _ from 'lodash';
+
 var jsInterpreter;
-
-/** @type {GameLabLevel} */
-var level;
-
 module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
+/** @type {GameLabLevel} */
+var level;
 /**
  * Provide the current Game Lab level because it can customize default
  * sprite behaviors.
@@ -25,6 +25,8 @@ module.exports.createSprite = function (x, y, width, height) {
    */
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
+  addPropertyAliases(s);
+  addMethodAliases(s);
 
   /*
    * @type {number}
@@ -53,46 +55,8 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   };
 
-  s.setFrame = function (frame) {
-    if (s.animation) {
-      s.animation.setFrame(frame);
-    }
-  };
-
-  s.nextFrame = function () {
-    if (s.animation) {
-      s.animation.nextFrame();
-    }
-  };
-
-  s.previousFrame = function () {
-    if (s.animation) {
-      s.animation.previousFrame();
-    }
-  };
-
-  s.play = function () {
-    if (s.animation) {
-      s.animation.play();
-    }
-  };
-
-  s.pause = function () {
-    if (s.animation) {
-      s.animation.stop();
-    }
-  };
-
   s.frameDidChange = function () {
     return s.animation ? s.animation.frameChanged : false;
-  };
-
-  s.destroy = function () {
-    s.remove();
-  };
-
-  s.setSpeedAndDirection = function () {
-    return s.setSpeed.apply(s, arguments);
   };
 
   s.pointTo = function (x, y) {
@@ -141,26 +105,6 @@ module.exports.createSprite = function (x, y, width, height) {
       if (s.animation) {
         s.animation.frameDelay = value;
       }
-    }
-  });
-
-  Object.defineProperty(s, 'x', {
-    enumerable: true,
-    get: function () {
-      return s.position.x;
-    },
-    set: function (value) {
-      s.position.x = value;
-    }
-  });
-
-  Object.defineProperty(s, 'y', {
-    enumerable: true,
-    get: function () {
-      return s.position.y;
-    },
-    set: function (value) {
-      s.position.y = value;
     }
   });
 
@@ -221,36 +165,6 @@ module.exports.createSprite = function (x, y, width, height) {
   s.getScaledHeight = function () {
     return s.height * s.scale;
   };
-
-  Object.defineProperty(s, 'velocityX', {
-    enumerable: true,
-    get: function () {
-      return s.velocity.x;
-    },
-    set: function (value) {
-      s.velocity.x = value;
-    }
-  });
-
-  Object.defineProperty(s, 'velocityY', {
-    enumerable: true,
-    get: function () {
-      return s.velocity.y;
-    },
-    set: function (value) {
-      s.velocity.y = value;
-    }
-  });
-
-  Object.defineProperty(s, 'lifetime', {
-    enumerable: true,
-    get: function () {
-      return s.life;
-    },
-    set: function (value) {
-      s.life = value;
-    }
-  });
 
   s.shapeColor = this.color(127, 127, 127);
   s.AABBops = AABBops.bind(s, this);
@@ -601,3 +515,69 @@ var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
 var isTouching = function (p5Inst, target) {
   return this.AABBops('collide', target, undefined, false);
 };
+
+/**
+ * Map from existing (deep) property names to new alias names we want to use
+ * in GameLab.
+ * @type {{string: string}}
+ */
+const ALIASED_PROPERTIES = {
+  'position.x': 'x',
+  'position.y': 'y',
+  'velocity.x': 'velocityX',
+  'velocity.y': 'velocityY',
+  'life': 'lifetime'
+};
+
+/**
+ * Alias p5.play sprite properties to new names
+ * @param {Sprite} sprite
+ */
+function addPropertyAliases(sprite) {
+  for (const originalPropertyName in ALIASED_PROPERTIES) {
+    const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
+    Object.defineProperty(sprite, newPropertyName, {
+      enumerable: true,
+      get: function () {
+        return _.get(sprite, originalPropertyName);
+      },
+      set: function (value) {
+        _.set(sprite, originalPropertyName, value);
+      }
+    });
+  }
+}
+
+/**
+ * Map from existing (deep) method names to new alias names we want to use
+ * in GameLab.
+ * @type {{string: string}}
+ */
+const ALIASED_METHODS = {
+  'remove': 'destroy',
+  'setSpeed': 'setSpeedAndDirection',
+  'animation.changeFrame': 'setFrame',
+  'animation.nextFrame': 'nextFrame',
+  'animation.previousFrame': 'previousFrame',
+  'animation.play': 'play',
+  'animation.stop': 'pause'
+};
+
+/**
+ * Alias p5.play sprite methods to new names
+ * @param {Sprite} sprite
+ */
+function addMethodAliases(sprite) {
+  for (const originalMethodName in ALIASED_METHODS) {
+    sprite[ALIASED_METHODS[originalMethodName]] = function () {
+      const originalMethod = _.get(sprite, originalMethodName);
+      // The method must be bound against the second-to-last thing in the path;
+      // or against the sprite itself, if there is no second-to-last thing.
+      const bindTargetPath = originalMethodName.split('.').slice(0, -1).join('.');
+      const bindTarget = _.get(sprite, bindTargetPath) || sprite;
+      if (originalMethod) {
+        originalMethod.apply(bindTarget, arguments);
+      }
+    };
+  }
+}
