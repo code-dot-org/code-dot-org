@@ -38,7 +38,6 @@ const WorkshopIndex = React.createClass({
         <h2>Past</h2>
         <WorkshopTable
           queryUrl="/api/v1/pd/workshops/?state=Ended"
-          canDelete
         />
       </div>
     );
