@@ -148,7 +148,7 @@
     "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#c88a3793cf7953090f78fa36f0e991abdcd756da",
     "uglify-js": "2.4.24",
     "video.js": "4.5.2",
-    "webpack": "1.13.0",
+    "webpack": "1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-livereload-plugin": "^0.8.1",
