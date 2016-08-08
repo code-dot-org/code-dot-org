@@ -2,6 +2,7 @@ general:
   artifacts:
     - dashboard/test/ui
     - dashboard/log
+    - dashboard/tmp/cache/flakiness.json
     - pegasus/log
 machine:
   ruby:
