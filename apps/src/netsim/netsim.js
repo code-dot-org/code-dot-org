@@ -358,7 +358,9 @@ NetSim.prototype.initWithUser_ = function (user) {
         disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'), {
+    user
+  });
 
   this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
       this.runLoop_);
@@ -369,7 +371,9 @@ NetSim.prototype.initWithUser_ = function (user) {
       this, {
         user: user,
         levelKey: this.getUniqueLevelKey(),
-        sharedShardSeed: this.getOverrideShardID()
+        sharedShardSeed: this.getOverrideShardID(),
+        showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false),
+        showTeacherLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, true)
       });
 
   // Tab panel - contains instructions, my device, router, dns
@@ -386,7 +390,8 @@ NetSim.prototype.initWithUser_ = function (user) {
           routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
           routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
-          becomeDnsCallback: this.becomeDnsNode.bind(this)
+          becomeDnsCallback: this.becomeDnsNode.bind(this),
+          showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
   }

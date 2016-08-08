@@ -81,6 +81,10 @@ h2 {
   color: $teal;
 }
 
+h3 {
+  font-size: 18px;
+}
+
 hr {
   border-color: $teal;
   border-bottom: none;
@@ -132,18 +136,6 @@ img.video_thumbnail {
 
 .navbar {
   margin-bottom: 30px;
-}
-
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
 }
 
 .report_cell {
@@ -259,28 +251,14 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {
+  a:link, a:visited, a:hover, a:active {
     font-family: $gotham-extra-bold;
     font-weight: normal;
-    color: $dark_color;
-  }
-  a:visited {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
+    color: $cyan;
+    background-color: transparent;
   }
   a:hover {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
-    background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
-    background-color: transparent;
   }
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
@@ -316,28 +294,14 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {
+  a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
     font-weight: normal;
     color: white;
-  }
-  a:visited {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
+    background-color: transparent;
   }
   a:hover {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
-    background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
-    background-color: transparent;
   }
   select {
     width: auto;
@@ -346,19 +310,7 @@ html, body {
     margin-bottom: 4px;
     }
   .fineprint {
-    a:link {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:visited {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:hover {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:active {
+    a:link, a:visited, a:hover, a:active {
       font-family: $gotham-bold;
       font-weight: normal;
     }
@@ -928,11 +880,6 @@ input.header_input {
   line-height: 20px;
 }
 
-.trophy_image {
-  width: 45px;
-  height: 45px;
-}
-
 #alert {
   color: $red;
   font-size: 130%;
@@ -1276,6 +1223,7 @@ a.download-video {
     margin-top: 3px;
     overflow: hidden;
     padding: 10px;
+    min-height: 110px;
   }
   .teacher-announce .announce-content .content-img-container {
     float: left;
@@ -1291,15 +1239,15 @@ a.download-video {
     overflow: hidden;
     padding-left: 10px;
     line-height: 18px;
-    width: 610px;
+    width: 580px;
   }
   .teacher-announce .announce-content .content-text b {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
     position: absolute;
-    bottom: 10px;
     right: 10px;
+    margin-top: 75px;
   }
   .teacher-announce a {
     text-decoration: none;
@@ -1691,7 +1639,7 @@ a.download-video {
 .level-group-content {
   overflow: hidden;
 
-  .free-response {
+  .external, .free-response {
     margin-left: 0;
   }
 }
@@ -1937,16 +1885,9 @@ div.mini_gallery_activity {
 }
 
 .buttons.submittable {
-  .submitButton {
+  .submitButton, .unsubmitButton {
     border-color: $purple;
     background-color: $purple;
-    color: white;
-    background-image: none;
-  }
-
-  .unsubmitButton {
-    border-color: $light_purple;
-    background-color: $light_purple;
     color: white;
     background-image: none;
   }

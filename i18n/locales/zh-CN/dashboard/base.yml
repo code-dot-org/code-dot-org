@@ -345,7 +345,9 @@ zh:
     announcement_title: 公告
     announcement_view_all: 查看全部
     announcement_message: '想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。'
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: 了解详情
+    announcement_try_now_button: 现在就试试
     announcement_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
     announcement_petition_button: 添加您的姓名
   move_students:
@@ -523,6 +525,7 @@ zh:
     wrong_body: 感谢您提交答案。
     correct_title: 谢谢你
     correct_body: 感谢您提交答案。
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: 谢谢你
     wrong_body: 感谢您提交答案。
@@ -677,6 +680,7 @@ zh:
     required: 概览
     content: 内容
     practice: 教学训练
+    peer_review: Peer Review
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

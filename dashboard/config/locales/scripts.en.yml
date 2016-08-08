@@ -992,6 +992,7 @@ en:
           Welcome!: Welcome!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
+          Lesson Prep: Lesson Prep
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -1653,7 +1654,7 @@ en:
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
-          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done in the early fall of 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below.  DESCRIPTION: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.'
           What is Big Data?: What is Big Data?
           Rapid Research - Data Innovations: Rapid Research - Data Innovations
           Identifying People with Data: Identifying People with Data
@@ -1668,7 +1669,7 @@ en:
         csp5:
           title: CSP Unit 5 - Building Apps
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
-          description: 'This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools. '
+          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
           Events Unplugged: Events Unplugged
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1725,6 +1726,7 @@ en:
           Draw Loop and Randomization: Draw Loop and Randomization
           Variables Unplugged: Variables Unplugged
           Complex Sprite Movement: Complex Sprite Movement
+          Collisions: Collisions
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1975,6 +1977,7 @@ en:
           Wrap-Up: Wrap-Up
         kinderTest:
           Kindergarten Stage 1: Kindergarten Stage 1
+          'Bee: Conditionals': 'Bee: Conditionals'
         gradeKinder:
           Debugging: Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2019,6 +2022,17 @@ en:
           'Unplugged: Decision Trees (New)': 'Unplugged: Decision Trees (New)'
           'Unplugged: Nested Loops (New)': 'Unplugged: Nested Loops (New)'
           Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested Loops)
+          'Project #1: Artist (Nested Loops, Functions)': 'Project #1: Artist (Nested Loops, Functions)'
+          New Playlab Behaviors and Events Review: New Playlab Behaviors and Events Review
+          'Project 2: PlayLab Game (Events, Conditionals, Functions)': 'Project 2: PlayLab Game (Events, Conditionals, Functions)'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Final Project - Unplugged: Design Process': 'Final Project - Unplugged: Design Process'
+          'Final Project - Work Day: Build Project Online': 'Final Project - Work Day: Build Project Online'
+          Final Project - Presentation Day: Final Project - Presentation Day
+          More Programming with Scratch: More Programming with Scratch
+          Explore project ideas: Explore project ideas
+          Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
+          Build a Star Wars Game!: Build a Star Wars Game!
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2060,6 +2074,17 @@ en:
           'Unplugged: Binary Images': 'Unplugged: Binary Images'
           'Pixelation: Binary Exploration': 'Pixelation: Binary Exploration'
           Artist Binary: Artist Binary
+          'Project 1: Choose Your Own Story App': 'Project 1: Choose Your Own Story App'
+          'Project 2: For Loops with the Artist': 'Project 2: For Loops with the Artist'
+          'Project 3: Design your own App (PlayLab)': 'Project 3: Design your own App (PlayLab)'
+          Concept Script (All below this point): Concept Script (All below this point)
+          'Final Project - Unplugged: Design Process': 'Final Project - Unplugged: Design Process'
+          'Final Project - Work Day: Build Project Online': 'Final Project - Work Day: Build Project Online'
+          Final Project - Review/Revise Day: Final Project - Review/Revise Day
+          Final Project - Presentation Day: Final Project - Presentation Day
+          Try programming with Khan Academy: Try programming with Khan Academy
+          Digital Citizenship: Digital Citizenship
+          Explore project ideas: Explore project ideas
         ecs-unit1:
           title: ECS Unit 1
           description_short: 'Unit 1: Human-Computer Interaction'
@@ -2161,6 +2186,9 @@ en:
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          More Programming with Scratch: More Programming with Scratch
+          More Programming with CS4FN: More Programming with CS4FN
+          Robot Farmer While: Robot Farmer While
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2224,3 +2252,58 @@ en:
           Getting Loopy with Puppy: Getting Loopy with Puppy
           Puppy Loops: Puppy Loops
           Puppy Event: Puppy Event
+          More CS with Scratch: More CS with Scratch
+          More CS with Run Marco: More CS with Run Marco
+        transferring-over:
+          20-hr Stage 9: 20-hr Stage 9
+          20-hr Stage 2: 20-hr Stage 2
+          Course 2 Stage 17: Course 2 Stage 17
+          Course 3 Stage 16: Course 3 Stage 16
+          Course 3 Stage 17: Course 3 Stage 17
+        cspunit1assessment:
+          title: CS Principles Unit 1 Assessment
+          description_short: Unit 1 Assessment
+          description: This 10-question multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspunit2ch1assessment:
+          title: CS Principles Unit 2 Ch 1 Assessment
+          description_short: Unit 2.1 Assessment
+          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 2 Chapter 1 (Lessons 1-6)
+          CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
+        cspunit2ch2assessment:
+          title: CS Principles Unit 2 Ch 2 Assessment
+          description_short: Unit 2.1 Assessment
+          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)
+          CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
+        k5concepts:
+          title: K5 Concepts
+          Events: Events
+          Loops: Loops
+          Nested Loops: Nested Loops
+          Conditionals: Conditionals
+          While Loops: While Loops
+          Functions: Functions
+          Variables: Variables
+          For Loops: For Loops
+          Functions with Parameters: Functions with Parameters
+          Binary: Binary
+        cspunit1ch1assessment:
+          CS Principles Unit 1 Ch 1 Assessment: CS Principles Unit 1 Ch 1 Assessment
+          title: CS Principles Unit 1 Ch 1 Assessment
+          description_short: Unit 1.1 Assessment
+          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1 Chapter 1 (Lessons 1-7)
+        cspunit1ch2assessment:
+          CS Principles Unit 1 Ch 2 Assessment: CS Principles Unit 1 Ch 2 Assessment
+          title: CS Principles Unit 1 Ch 2 Assessment
+          description_short: Unit 1.2 Assessment
+          description: This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1 Chapter 2 (Lessons 8-14)
+        algebrapdnext:
+          title: Computer Science in Algebra PD Phase 2
+          description_short: "\tPhase 3: School Year Support"
+          description: Teach Algebra through Functional Programming
+          Welcome!: Welcome!
+          Teaching with Puzzles: Teaching with Puzzles
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          The Design Recipe: The Design Recipe
+          Teacher Dashboard: Teacher Dashboard
+          Lesson Prep: Lesson Prep

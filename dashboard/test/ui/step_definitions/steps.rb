@@ -46,6 +46,22 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
+  install_js_error_recorder
+end
+
+def install_js_error_recorder
+  @browser.execute_script(<<-JS
+  // Wrap existing window onerror handler with a script error recorder.
+  var windowOnError = window.onerror;
+  window.onerror = function (msg) {
+    window.detectedJSErrors = window.detectedJSErrors || [];
+    window.detectedJSErrors.push(msg);
+    if (windowOnError) {
+      return windowOnError.apply(this, arguments);
+    }
+  };
+  JS
+  )
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -309,9 +325,18 @@ When /^I hold key "([^"]*)"$/ do |key_code|
 end
 
 When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
-  @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
-  @browser.execute_script("$('" + selector + "').keyup()")
-  @browser.execute_script("$('" + selector + "').change()")
+  type_into_selector("\"#{input_text}\"", selector)
+end
+
+When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
+  type_into_selector("\'#{input_text}\'", selector)
+end
+
+# The selector should be wrapped in appropriate quotes when passed into here.
+def type_into_selector(input_text, selector)
+  @browser.execute_script("$('#{selector}').val(#{input_text})")
+  @browser.execute_script("$('#{selector}').keyup()")
+  @browser.execute_script("$('#{selector}').change()")
 end
 
 When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
@@ -430,6 +455,14 @@ end
 
 Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
   element_value_is(selector, expected_value)
+end
+
+Then /^element "([^"]*)" has escaped value "([^"]*)"$/ do |selector, expected_value|
+  element_value_is(selector, YAML.load(%Q(---\n"#{expected_value}"\n)))
+end
+
+Then /^element "([^"]*)" has escaped value '([^']*)'$/ do |selector, expected_value|
+  element_value_is(selector, YAML.load(%Q(---\n"#{expected_value.gsub('"', '\"')}"\n)))
 end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|

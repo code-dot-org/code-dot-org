@@ -1,0 +1,105 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2016-07-29T16:41:40.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "pvz",
+    "maze": "[[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,1,1,1,1,1,1],[1,0,1,0,0,0,0,0],[1,0,1,0,1,1,1,1],[1,0,1,0,3,0,0,1],[1,0,1,0,0,0,0,1],[2,0,1,1,1,1,1,1]]",
+    "instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "0",
+    "step_mode": "0",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever" deletable="false">
+              <statement name="DO">
+                <block type="maze_ifElse" deletable="false" editable="false">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="ELSE">
+                    <block type="maze_ifElse" deletable="false" editable="false">
+                      <title name="DIR">isPathRight</title>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_forever"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever">
+              <statement name="DO">
+                <block type="maze_ifElse">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="maze_ifElse">
+                      <title name="DIR">isPathRight</title>
+                      <statement name="DO">
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

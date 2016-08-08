@@ -276,11 +276,15 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         buttons.push(buttonMarkup(
             i18n.logBrowserButton(),
             'show-router-log-modal',
-            ['secondary'],
-            {
-              'data-toggle':'modal',
-              'data-target':'#router-log-modal'
-            }
+            ['secondary']
+        ));
+      }
+
+      if (canSeeTeacherLog) {
+        buttons.push(buttonMarkup(
+            i18n.teacherLogButton(),
+            'show-teacher-log-modal',
+            ['secondary']
         ));
       }
 

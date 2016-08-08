@@ -16,6 +16,10 @@ var createCategory = blockUtils.createCategory;
  * @property {?boolean} hideAnimationMode - If true, the animation tab should be
  *           inaccessible to the student on this level.
  *
+ * @property {?boolean} pauseAnimationsByDefault - If true, then after
+ *           `setAnimation` a sprite's animation will always be paused,
+ *           not playing.
+ *
  * @property {?SerializedAnimationList} startAnimations - Initial state of the
  *           animation list for this level / what to return to on reset.
  */
@@ -75,7 +79,8 @@ levels.custom = utils.extend(levels.sandbox, {
 
     // Sprites
     "var sprite = createSprite": null,
-    "setSpeed": null,
+    "createEdgeSprites": null,
+    "setSpeedAndDirection": null,
     "getDirection": null,
     "getSpeed": null,
     "isTouching": null,
@@ -143,7 +148,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "setRotationEach": null,
     "setRotationSpeedEach": null,
     "setScaleEach": null,
-    "setSpeedEach": null,
+    "setSpeedAndDirectionEach": null,
     "setVelocityEach": null,
     "setVelocityXEach": null,
     "setVelocityYEach": null,

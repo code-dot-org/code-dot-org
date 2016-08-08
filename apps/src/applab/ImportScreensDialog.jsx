@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import applabConstants from './constants';
 import Dialog, {Body} from '../templates/Dialog';
 import AssetThumbnail, {
@@ -10,6 +11,9 @@ import MultiCheckboxSelector, {
   styles as multiCheckboxStyles
 } from '../templates/MultiCheckboxSelector';
 import color from '../color';
+import designMode from './designMode';
+import * as elementUtils from './designElements/elementUtils';
+import {toggleImportScreen} from './redux/screens';
 
 const SCALE = 0.1;
 const MARGIN = 10;
@@ -107,7 +111,7 @@ const importableProjectShape = React.PropTypes.shape({
 // or with this component
 const AssetListItem = Radium(React.createClass({
   propTypes: {
-    asset: importableAssetShape.isRequired,
+    asset: importableAssetShape,
   },
 
   render() {
@@ -138,7 +142,7 @@ function quotedCommaJoin(strings) {
 
 export const ScreenListItem = Radium(React.createClass({
   propTypes: {
-    screen: importableScreenShape.isRequired,
+    screen: importableScreenShape,
   },
 
   render() {
@@ -178,10 +182,10 @@ export const ScreenListItem = Radium(React.createClass({
   }
 }));
 
-var ImportScreensDialog = React.createClass({
+export const ImportScreensDialog = React.createClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
-    project: importableProjectShape.isRequired,
+    project: importableProjectShape,
     onImport: React.PropTypes.func.isRequired,
   }),
 
@@ -193,26 +197,36 @@ var ImportScreensDialog = React.createClass({
   },
 
   render() {
+    if (!this.props.project) {
+      return null;
+    }
     const nonImportableScreens = this.props.project.screens.filter(s => !s.canBeImported);
+    const importableScreens = this.props.project.screens.filter(s => s.canBeImported);
+    const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
+    let buttonProps = canImport ? {
+      confirmText: "Import",
+      onConfirm: () => this.props.onImport(this.state.selectedScreens, this.state.selectedAssets),
+    } : {
+      onCancel: this.props.handleClose
+    };
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
-        confirmText="Import"
-        onConfirm={() => this.props.onImport(this.state.selectedScreens,
-                                               this.state.selectedAssets)}
+        {...buttonProps}
         {...this.props}
       >
         <Body>
-          <MultiCheckboxSelector
-            style={styles.section}
-            header="Screens"
-            items={this.props.project.screens.filter(s => s.canBeImported)}
-            selected={this.state.selectedScreens}
-            onChange={selectedScreens => this.setState({selectedScreens})}
-            itemPropName="screen"
-          >
-            <ScreenListItem />
-          </MultiCheckboxSelector>
+          {importableScreens.length > 0 &&
+           <MultiCheckboxSelector
+             style={styles.section}
+             header="Screens"
+             items={importableScreens}
+             selected={this.state.selectedScreens}
+             onChange={selectedScreens => this.setState({selectedScreens})}
+             itemPropName="screen"
+           >
+             <ScreenListItem />
+           </MultiCheckboxSelector>}
           {this.props.project.otherAssets.length > 0 &&
            <MultiCheckboxSelector
              style={styles.section}
@@ -249,7 +263,77 @@ var ImportScreensDialog = React.createClass({
   }
 });
 
-export default ImportScreensDialog;
+/**
+ * Helper function that takes a dom node and returns an object that conforms
+ * to an importableScreenShape, checking for assets, and conflicting ids.
+ */
+function getImportableScreen(dom) {
+  const id = dom.id;
+  const willReplace = designMode.getAllScreenIds().includes(id);
+  const conflictingIds = [];
+  Array.from(dom.children).forEach(child => {
+    if (!elementUtils.isIdAvailable(child.id)) {
+      var existingElement = elementUtils.getPrefixedElementById(child.id);
+      if (existingElement && elementUtils.getId(existingElement.parentNode) !== id) {
+        conflictingIds.push(child.id);
+      }
+    }
+  });
+
+  // TODO: filter out assets that will just be imported without replacing anything.
+  const assetsToReplace = $('[data-canonical-image-url]', dom)
+    .toArray()
+    .map(n => $(n).attr('data-canonical-image-url'));
+
+  return {
+    id,
+    willReplace,
+    assetsToReplace,
+    conflictingIds,
+    html: dom.outerHTML,
+    canBeImported: conflictingIds.length === 0,
+  };
+}
+
+/**
+ * Helper function that takes a project object and returns an object that conforms to
+ * importableProjectShape.
+ */
+function getImportableProject(project) {
+  if (!project) {
+    return null;
+  }
+  const {channel, sources} = project;
+  const screens = [];
+  $(sources.html)
+    .find('.screen')
+    .css('position', 'inherit')
+    .css('display', 'block')
+    .each((index, screen) => {
+      screens.push(getImportableScreen(screen));
+    });
+  return {
+    id: 'foo',
+    name: channel.name,
+    screens,
+    otherAssets: [],
+  };
+}
+
+export default connect(
+  state => ({
+    isOpen: state.screens.isImportingScreen && state.screens.importProject.fetchedProject,
+    project: getImportableProject(state.screens.importProject.fetchedProject),
+  }),
+  dispatch => ({
+    onImport() {
+      alert("The import button has not been implemented yet. sorry!");
+    },
+    handleClose() {
+      dispatch(toggleImportScreen(false));
+    },
+  })
+)(ImportScreensDialog);
 
 if (BUILD_STYLEGUIDE) {
   const exampleHtml = `
@@ -370,6 +454,7 @@ if (BUILD_STYLEGUIDE) {
             <ImportScreensDialog
               hideBackdrop
               onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
               project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
@@ -386,12 +471,30 @@ if (BUILD_STYLEGUIDE) {
             <ImportScreensDialog
               hideBackdrop
               onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
               project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
                     screens: [replacingScreen, newScreen, conflictingScreen],
                     otherAssets: [],
                   }}
+            />
+          )
+        }, {
+          name: 'When there are no importable screens',
+          description: `In the event that no screens can be imported, the screens section
+                        is hidden completely.`,
+          story: () => (
+            <ImportScreensDialog
+              hideBackdrop
+              onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
+              project={{
+                  id: 'poke-the-pig',
+                  name: 'Poke the Pig',
+                  screens: [conflictingScreen],
+                  otherAssets: [],
+                }}
             />
           )
         }, {
@@ -403,6 +506,7 @@ if (BUILD_STYLEGUIDE) {
             <ImportScreensDialog
               hideBackdrop
               onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
               project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',

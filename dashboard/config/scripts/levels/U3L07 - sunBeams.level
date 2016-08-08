@@ -123,7 +123,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -161,7 +162,121 @@
     "debugger_disabled": "true",
     "encrypted_examples": "ToEYCIYVuoG2mW6IGXl7LyPid6DhKBwG52TNhJz97eqV8aPuPAd+nirROos3\nGbfX\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawAllSunbeams:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllSunbeams function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawSunbeam:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 75,
+        "message": "drawAllSunbeams: App lab is expecting that drawSunbeams(size) will be called 'about' 100 times (min 75), presumably in a loop. It appears as though drawSunbeams is not being called at least 75 times."
+      },
+      {
+        "entries": [
+          "drawSeagrass:2"
+        ],
+        "matchType": "exact",
+        "minTimes": 30,
+        "message": "drawAllSeaGrass: App lab is expecting that drawSeaGrass(radius, numWaves) will be called 'about' 50 times (min 30), presumably in a loop. It appears as though drawSeaGrass is not being called at least 30 times."
+      },
+      {
+        "entries": [
+          "drawAllSeagrass:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllSeaGrass function is the loop."
+      },
+      {
+        "entries": [
+          "drawAllSeaStars:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllSeaStars function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawSeaStar:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 5,
+        "message": "drawAllSeaStars: App lab is expecting that you write a loop runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawSeaStar:1",
+          "[forInit]",
+          "[forTest]",
+          "[forUpdate]",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 3,
+        "message": "App lab is expecting that the drawSeaStar function will contain a loop.  See part one of the instructions."
+      },
+      {
+        "entries": [
+          "drawAllFish:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllFish function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawFish:4",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 15,
+        "message": "drawAllFish: App lab is expecting that you write a loop runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+      },
+      {
+        "entries": [
+          "drawAllBubbles:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllBubbles function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawBubble:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 200,
+        "message": "drawAllBubbles: App lab is expecting that you would simply 'wrap a loop around' the existing code that was inside the drawAllBubbles function - a looping of two commands: moveTo(x,y) and drawBubble(size). And that that loop would run 200 times or more.  It appears as though the sequence is slightly different or you're not running the loop 200 times."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

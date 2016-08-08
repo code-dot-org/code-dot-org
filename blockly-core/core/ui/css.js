@@ -133,7 +133,7 @@ Blockly.Css.CONTENT = [
   ' fill: #fff;',
   ' font-size: 10pt;',
   ' text-anchor: middle;',
-  ' alignment-baseline: central;',
+  ' dominant-baseline: central;',
   '}',
   '.blocklyDraggable {',
   '  cursor: url(%CURSOR_OPEN_PATH%) 8 5, auto;',

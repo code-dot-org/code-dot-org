@@ -33,7 +33,7 @@ const styles = {
   stageName: {
     display: 'table-cell',
     width: 200,
-    verticalAlign: 'top',
+    verticalAlign: 'middle',
     paddingRight: 10
   },
   ribbonWrapper: {
@@ -79,10 +79,14 @@ const CourseProgressRow = React.createClass({
     isFocusArea: React.PropTypes.bool,
     stage: stageShape,
     changeFocusAreaPath: React.PropTypes.string,
+    lockableAuthorized: React.PropTypes.bool.isRequired
   },
 
   render() {
     const stage = this.props.stage;
+    if (this.props.stage.lockable && !this.props.lockableAuthorized) {
+      return null;
+    }
 
     return (
       <div
@@ -132,5 +136,6 @@ const CourseProgressRow = React.createClass({
 
 export default connect(state => ({
   showTeacherInfo: state.progress.showTeacherInfo,
-  changeFocusAreaPath: state.progress.changeFocusAreaPath
+  changeFocusAreaPath: state.progress.changeFocusAreaPath,
+  lockableAuthorized: state.progress.lockableAuthorized
 }))(Radium(CourseProgressRow));

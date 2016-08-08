@@ -1,6 +1,6 @@
 /** @file Top-level view for App Lab */
-'use strict';
-
+import ImportProjectDialog from './ImportProjectDialog';
+import ImportScreensDialog from './ImportScreensDialog';
 var React = require('react');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -40,6 +40,8 @@ var AppLabView = React.createClass({
     const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
     return (
       <StudioAppWrapper>
+        <ImportProjectDialog />
+        <ImportScreensDialog />
         <ApplabVisualizationColumn
           isEditingProject={this.props.isEditingProject}
           screenIds={this.props.screenIds}

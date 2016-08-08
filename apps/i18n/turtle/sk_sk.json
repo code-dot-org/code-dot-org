@@ -41,6 +41,7 @@
   "heightParameter": "výška",
   "hideTurtle": "skry maliara",
   "jump": "skoč",
+  "jumpTo": "jump to",
   "jumpBackward": "skoč dozadu o",
   "jumpForward": "skoč dopredu o",
   "jumpTooltip": "Posunie maliara bez zanechania stôp.",
@@ -89,6 +90,5 @@
   "turnTooltip": "Otočí maliara vľavo alebo vpravo o zadaný počet stupňov.",
   "turtleVisibilityTooltip": "Zviditeľní alebo skryje maliara.",
   "widthTooltip": "Zmení šírku ceruzky.",
-  "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1.",
-  "jumpTo": "jump to"
+  "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1."
 }

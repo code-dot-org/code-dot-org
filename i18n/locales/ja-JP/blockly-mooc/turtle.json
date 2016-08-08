@@ -41,6 +41,7 @@
   "heightParameter":"高さ",
   "hideTurtle":"アーティストを隠す",
   "jump":"ジャンプ",
+  "jumpTo":"jump to",
   "jumpBackward":"うしろへジャンプする",
   "jumpForward":"まえにジャンプする",
   "jumpTooltip":"何も書かずにアーティストを移動",
