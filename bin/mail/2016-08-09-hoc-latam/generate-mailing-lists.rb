@@ -23,10 +23,10 @@ LATAM_ES_COUNTRIES = [
   'Chile',
   'Argentina',
   'Puerto Rico'
-]
+].freeze
 es_country_or_list = LATAM_ES_COUNTRIES.join(' OR ')
 
-LATAM_ES_COUNTRY_CODES = %w(mx gt sv cr ni bz pa cu do ve co ec pe bo py uy cl ar pr)
+LATAM_ES_COUNTRY_CODES = %w(mx gt sv cr ni bz pa cu do ve co ec pe bo py uy cl ar pr).freeze
 es_country_code_or_list = LATAM_ES_COUNTRY_CODES.join(' OR ')
 
 def query_from_list(queries)
