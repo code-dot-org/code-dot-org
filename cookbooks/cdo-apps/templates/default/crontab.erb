@@ -97,7 +97,7 @@
   # report memory and disk space utilization to CloudWatch every five minutes
   # we do not use the cronjob helper method because this should not execute with
   # bundle.
-  $crontab << "*/5 * * * * #{home_dir('aws-scripts-mon')}mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
+  $crontab << "*/5 * * * * #{home_dir('aws-scripts-mon')}/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
 %>
 #
 # node: <%= node.name %>
