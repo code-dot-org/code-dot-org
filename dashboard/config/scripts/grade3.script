@@ -26,7 +26,8 @@ level 'blockly:Bounce:9'
 #level 'grade3_RobotGames_8'
 level 'blockly:Bounce:10'
 #level 'grade3_RobotGames_9'
-
+level 'blockly:Bounce:11'
+level 'blockly:Bounce:12'
 
 stage 'About My Robot'
 #level 'grade3_AboutMyRobot_TeacherIDo'

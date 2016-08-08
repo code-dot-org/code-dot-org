@@ -44,8 +44,8 @@
     "examples_required": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null,
-    "markdown_instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block."
+    "markdown_instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
