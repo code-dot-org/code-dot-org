@@ -24,7 +24,6 @@
  *= require user-menu
  *= require user-progress
  *= require user-hero
- *= require teacher-dashboard
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -80,6 +79,10 @@ h2 {
   font-size: 22px;
   line-height: 30px;
   color: $teal;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 hr {
@@ -248,28 +251,14 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {
+  a:link, a:visited, a:hover, a:active {
     font-family: $gotham-extra-bold;
     font-weight: normal;
-    color: $dark_color;
-  }
-  a:visited {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
+    color: $cyan;
+    background-color: transparent;
   }
   a:hover {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
-    background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
-    background-color: transparent;
   }
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
@@ -305,28 +294,14 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {
+  a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
     font-weight: normal;
     color: white;
-  }
-  a:visited {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
+    background-color: transparent;
   }
   a:hover {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
-    background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
-    background-color: transparent;
   }
   select {
     width: auto;
@@ -335,19 +310,7 @@ html, body {
     margin-bottom: 4px;
     }
   .fineprint {
-    a:link {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:visited {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:hover {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:active {
+    a:link, a:visited, a:hover, a:active {
       font-family: $gotham-bold;
       font-weight: normal;
     }
@@ -1232,6 +1195,62 @@ a.download-video {
 
   #welcome h2 {
     font-size: 18px;
+  }
+
+  #teacher_announcement {
+    margin-top: 10px;
+  }
+
+  .teacher-announce {
+    position: relative;
+    font-size: 14px;
+  }
+  .teacher-announce .announce-heading {
+    background-color: $purple;
+    border-radius: 4px;
+    color: white;
+    height: 20px;
+    overflow: hidden;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  .teacher-announce .announce-heading .heading-view-all {
+    float: right;
+  }
+  .teacher-announce .announce-content {
+    background-color: $lightest_purple;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 110px;
+  }
+  .teacher-announce .announce-content .content-img-container {
+    float: left;
+  }
+  .teacher-announce .announce-content .content-img {
+    border-radius: 4px;
+    height: 108px;
+  }
+  .teacher-announce .announce-content .content-text {
+    color: $charcoal;
+    float: left;
+    max-height: 90px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 18px;
+    width: 580px;
+  }
+  .teacher-announce .announce-content .content-text b {
+    font-family: 'Gotham 5r', sans-serif;
+  }
+  .teacher-announce .announce-learn-more {
+    position: absolute;
+    right: 10px;
+    margin-top: 75px;
+  }
+  .teacher-announce a {
+    text-decoration: none;
   }
 
   .gallery {
