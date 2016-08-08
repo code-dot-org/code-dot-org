@@ -82,6 +82,10 @@ h2 {
   color: $teal;
 }
 
+h3 {
+  font-size: 18px;
+}
+
 hr {
   border-color: $teal;
   border-bottom: none;
@@ -248,28 +252,14 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {
+  a:link, a:visited, a:hover, a:active {
     font-family: $gotham-extra-bold;
     font-weight: normal;
-    color: $dark_color;
-  }
-  a:visited {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
+    color: $cyan;
+    background-color: transparent;
   }
   a:hover {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
-    background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $dark_color;
-    background-color: transparent;
   }
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
@@ -305,28 +295,14 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {
+  a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
     font-weight: normal;
     color: white;
-  }
-  a:visited {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
+    background-color: transparent;
   }
   a:hover {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
-    background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
-    font-family: $gotham-regular;
-    font-weight: normal;
-    color: white;
-    background-color: transparent;
   }
   select {
     width: auto;
@@ -335,19 +311,7 @@ html, body {
     margin-bottom: 4px;
     }
   .fineprint {
-    a:link {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:visited {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:hover {
-      font-family: $gotham-bold;
-      font-weight: normal;
-    }
-    a:active {
+    a:link, a:visited, a:hover, a:active {
       font-family: $gotham-bold;
       font-weight: normal;
     }
