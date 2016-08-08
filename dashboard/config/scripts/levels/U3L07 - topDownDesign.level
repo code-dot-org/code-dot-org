@@ -43,10 +43,6 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "log_conditions": [
       {
         "entries": [
@@ -150,7 +146,8 @@
         "minTimes": 1,
         "message": "It seems like you modified code a bit more than we were expecting.  Assuming you've studied the setup here enough to get the gist, you're ready to move on.  Revert back to the original state (click 'Version History' then 'Delete Progress') and continue on to the next level."
       }
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
