@@ -282,14 +282,17 @@ FirebaseStorage.resetRecordListener = function () {
 };
 
 /**
- * Delete an entire table from firebase storage.
+ * Delete an entire table from firebase storage, then reset its lastId and rowCount.
  * @param {string} tableName
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
-  tableRef.set(null).then(onSuccess, onError);
+  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  tableRef.set(null)
+    .then(() => countersRef.set(null))
+    .then(onSuccess, onError);
 };
 
 /**
