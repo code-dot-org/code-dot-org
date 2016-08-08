@@ -1,30 +1,30 @@
-- cta_url = "http://blog.code.org/post/147243645493/"
-- csp_widgets_url = "http://teacherblog.code.org/post/148059231974/explore-cs-concepts-in-any-classroom-with-these-4"
+- cta_url = 'http://blog.code.org/post/147243645493/'
+- csp_widgets_url = 'http://teacherblog.code.org/post/148059231974/explore-cs-concepts-in-any-classroom-with-these-4'
 
-%div.teacher-announce
-  %a.announce-heading-link{href: 'http://teacherblog.code.org/'}
-    %div.announce-heading
-      = t('home.announcement_title')
-      %div.heading-view-all
-        = t('home.announcement_view_all')
-        >>
-  %div.announce-content
+.teacher-announce
+  .announce-heading{style: 'height: 20px;'}
+    = t('home.announcement_title')
+  .announce-content
     %a{href: cta_url, target: '_blank'}
-      %div.content-img-container{style: 'margin: 15px 50px 0px 50px;'}
-        = image_tag(CDO.shared_image_url('/teacher-announcement/privacy-policy.png'), width: '100px')
-    %div.content-text
+      .content-img-container
+        = image_tag(CDO.shared_image_url('/teacher-announcement/privacy-policy.png'), width: '200px')
+    .content-text
       != t('home.announcement_message')
-    %div.announce-learn-more
+    .announce-learn-more
       %a{href: cta_url, target: '_blank'}
         %button.primary= t('home.announcement_learn_more_button')
-  %div.announce-content
+  .announce-content
     %a{href: csp_widgets_url, target: '_blank'}
-      %div.content-img-container
+      .content-img-container
         = image_tag(CDO.shared_image_url('/teacher-announcement/csp-widgets.png'), width: '200px')
-    %div.content-text
+    .content-text
       != t('home.announcement_csp_widgets_message')
-    %div.announce-learn-more
+    .announce-learn-more
       %a{href: csp_widgets_url, target: '_blank'}
         %button.primary= t('home.announcement_try_now_button')
+  .mini-announcement
+    .content-text
+      %i.fa.fa-hand-o-right
+      != t('home.announcement_all', teacher_blog_url: 'http://teacherblog.code.org/')
 
 #clearboth{style: 'clear: both;'}

@@ -145,20 +145,27 @@ window.initLevelGroup = function (
   }
 
   // Replaces emoji in a string with a blank character.
+  // (In fact, it's replacing all supplementary, i.e. non-BMP, characters.)
   // Returns the updated string.
-  // Source: http://crocodillon.com/blog/parsing-emoji-unicode-in-javascript
+  //
+  // More information:
+  //   http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-utf8mb4.html
+  //     describes the database's inability to store supplementary characters, which
+  //     are those outside of the BMP (Basic Multilingual Plane).
+  //   https://mathiasbynens.be/notes/javascript-encoding
+  //     describes how characters outside the BMP can only be encoded in UTF-16
+  //     using a surrogate pair, which is what we use to detect such characters.
+  //
   function replaceEmoji(source) {
     const blankCharacter = "\u25A1";
 
-    // Build the ranges in a way that works with Babel (which currently handles
-    // \u encoding in a string incorrectly).
-    var ranges = [
-      String.fromCharCode(0xd83c) + '[' + String.fromCharCode(0xdf00) + '-' + String.fromCharCode(0xdfff) + ']',
-      String.fromCharCode(0xd83d) + '[' + String.fromCharCode(0xdc00) + '-' + String.fromCharCode(0xde4f) + ']',
-      String.fromCharCode(0xd83d) + '[' + String.fromCharCode(0xde80) + '-' + String.fromCharCode(0xdeff) + ']'
-    ];
+    // Build the range for the supplementary pair in a way that works with Babel
+    // (which currently handles \u encoding in a string incorrectly).
+    var range =
+      '[' + String.fromCharCode(0xD800) + '-' + String.fromCharCode(0xDBFF) + '][' +
+            String.fromCharCode(0xDC00) + '-' + String.fromCharCode(0xDFFF) + ']';
 
-    return source.replace(new RegExp(ranges.join('|'), 'g'), blankCharacter);
+    return source.replace(new RegExp(range, 'g'), blankCharacter);
   }
 
   $(".nextPageButton").click(function (event) {
