@@ -1,11 +1,11 @@
-/*
-  Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
+/**
+ * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
 import React from 'react';
-var SessionAttendanceRow = require('./session_attendance_row');
-var Table = require('react-bootstrap').Table;
+import SessionAttendanceRow from './session_attendance_row';
+import {Table} from 'react-bootstrap';
 
-var SessionAttendance = React.createClass({
+const SessionAttendance = React.createClass({
   propTypes: {
     sessionId: React.PropTypes.number,
     attendance: React.PropTypes.array.isRequired,
@@ -14,12 +14,12 @@ var SessionAttendance = React.createClass({
     isReadOnly: React.PropTypes.bool
   },
 
-  handleChange: function (i) {
+  handleChange(i) {
     this.props.onChange(i, !this.props.attendance[i].attended);
   },
 
-  render: function () {
-    var tableRows = this.props.attendance.map(function (attendanceRow, i) {
+  render() {
+    const tableRows = this.props.attendance.map((attendanceRow, i) => {
       return (
         <SessionAttendanceRow
           key={i}
@@ -30,7 +30,7 @@ var SessionAttendance = React.createClass({
           isReadOnly={this.props.isReadOnly}
         />
       );
-    }.bind(this));
+    });
     return (
       <div>
         <Table striped bordered condensed hover>
@@ -52,4 +52,4 @@ var SessionAttendance = React.createClass({
     );
   }
 });
-module.exports = SessionAttendance;
+export default SessionAttendance;
