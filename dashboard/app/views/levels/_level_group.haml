@@ -27,7 +27,7 @@
   -# page.  The controller takes care of that for us.
   - current_page = params[:puzzle_page] || 1
 
-  - if @script_level.stage.lockable && @current_user.user_level_for(@script_level, @level).submitted
+  - if @current_user.user_level_locked?(@script_level, @level)
     = render partial: 'levels/locked'
   - else
     - @pages.each do |page|

@@ -92,7 +92,11 @@ module UsersHelper
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
           view_answers = !!ul.try(:view_answers)
-          if completion_status != 'not_tried'
+          if !ul && sl.stage.lockable?
+            user_data[:levels][level_id] = {
+              status: 'locked'
+            }
+          elsif completion_status != 'not_tried'
             user_data[:levels][level_id] = {
                 status: completion_status,
                 result: ul.try(:best_result) || 0,

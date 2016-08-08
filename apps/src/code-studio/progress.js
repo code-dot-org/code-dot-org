@@ -87,6 +87,11 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.submitted) {
           return level.view_answers ? SUBMITTED_RESULT : LOCKED_RESULT;
         }
+        // TODO - may still be able to improve how we communicate locked state
+        // for progress
+        if (level.status === 'locked') {
+          return LOCKED_RESULT;
+        }
         return level.result;
       });
       store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));

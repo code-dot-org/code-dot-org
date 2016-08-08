@@ -158,7 +158,7 @@ const performSave = (newLockStatus, stageId) => {
       // Only need to save items that changed
       return !_.isEqual(item, oldLockStatus[index]);
     }).map(item => ({
-      user_level_id: item.userLevelId,
+      user_level_data: item.userLevelData,
       locked: item.lockStatus === LockStatus.Locked,
       view_answers: item.lockStatus === LockStatus.Readonly
     }));
@@ -228,7 +228,7 @@ const lockStatusForStage = (state, stageId) => {
 
   const students = sections[selectedSection].stages[stageId];
   return students.map(student => ({
-    userLevelId: student.user_level_id,
+    userLevelData: student.user_level_data,
     name: student.name,
     lockStatus: student.locked ? LockStatus.Locked : (
       student.view_answers ? LockStatus.Readonly : LockStatus.Editable)
