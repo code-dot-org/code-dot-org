@@ -22,7 +22,8 @@ class String
   end
 end
 
-LOG_FILE = '/var/log/code-dot-org-dotd.log'
+BIN_DIR = File.expand_path(File.dirname(__FILE__))
+LOG_FILE = "#{BIN_DIR}/log/dotd.log"
 LOGGER = Logger.new(LOG_FILE, 'daily')
 
 def ask_for_name
