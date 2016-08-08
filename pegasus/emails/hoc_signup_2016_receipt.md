@@ -52,28 +52,28 @@ Estás recibiendo este correo electrónico porque usted se registro para la Hora
 
 <% elsif inPortuguese %>
 
-# Obrigado por se inscrever para sediar a Hora do Código!
+# Obrigado por se inscrever para organizar um evento da Hora do Código!
 
-Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode mudar suas vidas, no período de 7 a 13 de dezembro.
+Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode mudar suas vidas, no período de 3 a 7 de outubro.
 
 #### Entraremos em contato para falar sobre novos tutoriais e outras atualizações. Então, o que você pode fazer agora?
 
-## 1. Find a local volunteer to help you with your event.
-[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+## 1. Encontre um voluntário para ajudá-lo no evento.
+[Busque em nosso mapa de voluntários](https://code.org/volunteer/local) voluntários que possam visitar sua sala de aula ou fazer um chat de vídeo remotamente para inspirar seus alunos, falando sobre a imensidão de possibilidades que a Ciência da Computação proporciona.
 
 ## 2. Divulgue
-We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+Precisamos da sua ajuda para alcançar organizadores do mundo todo. Fale para os seus amigos sobre a #HoraDoCodigo. [Use estes recursos](https://<%= hostname %>/promote/resources) para promover seu evento.
 
-## 3. Recruit your whole school for the Hour of Code
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
+## 3. Convide sua escola inteira para participar da Hora do Código
+[Envie este e-mail](https://<%= hostname %>/promote/resources#sample-emails) para o diretor ou [compartilhe estes materiais](https://<%= hostname %>/promote/resources).
 
-## 4. Peça para seu empregador participar
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+## 4. Peça para que sua empresa participe
+[Envie este e-mail](https://<%= hostname %>/promote/resources#sample-emails) para seu gerente ou CEO.
 
-## 5. Promote the Hour of Code in your community
-Recrute um grupo na sua região ou mesmo alguns amigos. [Envie este e-mail](https://<%= hostname %>/resources#sample-emails).
+## 5. Promova a Hora do Código na sua comunidade
+Reúna um grupo da sua região ou mesmo alguns amigos. [Envie este e-mail](https://<%= hostname %>/promote/resources#sample-emails).
 
-Obrigado por liderar o movimento para dar a todos os alunos a chance de aprender os conceitos e habilidades básicas da ciência da computação.
+Obrigado por participar deste movimento e por dar aos alunos a chance de aprender as habilidades básicas da Ciência da Computação.
 
 Hadi Partovi<br />
 Fundador da Code.org
