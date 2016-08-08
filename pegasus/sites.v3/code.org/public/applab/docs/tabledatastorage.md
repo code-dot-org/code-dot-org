@@ -29,7 +29,7 @@ If you were storing this data on a piece of paper, or with a spreadsheet app, yo
 <br>
 The table has a row of column names, and then each row that is added to the table fills in one or more
  of the columns. App Lab's table data storage let you store similarly formatted data, and provides simple
-  functions to [read](/applab/docs/readRecords), [create](/applab/docs/createRecords), [delete](/applab/docs/deleteRecord), and [update](/applab/docs/updateRecord) records (rows) in a table, right from your app.
+  functions to [read](/applab/docs/readRecords), [create](/applab/docs/createRecord), [delete](/applab/docs/deleteRecord), and [update](/applab/docs/updateRecord) records (rows) in a table, right from your app.
 
 ### Definitions
 _Table:_ A collection of records with shared column names

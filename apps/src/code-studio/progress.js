@@ -14,7 +14,8 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo
+  showTeacherInfo,
+  authorizeLockable
 } from './progressRedux';
 
 var progress = module.exports;
@@ -68,6 +69,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         data.focusAreaPositions));
     }
 
+    if (data.lockableAuthorized) {
+      store.dispatch(authorizeLockable());
+    }
+
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
       store.dispatch(mergeProgress(
@@ -111,10 +116,14 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
     clientState.allLevelsProgress()[scriptData.name] || {}
   ));
 
-  // Progress from the server should be written down locally.
-  store.subscribe(() => {
-    clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
-  });
+  // Progress from the server should be written down locally, unless we're a teacher
+  // viewing a student's work.
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+  if (!isViewingStudentAnswer) {
+    store.subscribe(() => {
+      clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
+    });
+  }
 
   return store;
 }

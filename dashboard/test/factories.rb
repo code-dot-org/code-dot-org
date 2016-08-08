@@ -32,6 +32,9 @@ FactoryGirl.define do
       factory :admin_teacher do
         admin true
       end
+      factory :terms_of_service_teacher do
+        terms_of_service_version 1
+      end
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -88,6 +91,13 @@ FactoryGirl.define do
     factory :student_of_admin do
       after(:create) do |user|
         section = create(:section, user: create(:admin_teacher))
+        create(:follower, section: section, student_user: user)
+      end
+    end
+
+    factory :young_student_with_tos_teacher do
+      after(:create) do |user|
+        section = create(:section, user: create(:terms_of_service_teacher))
         create(:follower, section: section, student_user: user)
       end
     end
@@ -200,7 +210,19 @@ FactoryGirl.define do
 
   factory :multi, :parent => Level, :class => Applab do
     game {create(:game, app: "multi")}
-    properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
+    properties {
+      {
+        question: 'question text',
+        answers: [
+          {text: 'answer1', correct: true},
+          {text: 'answer2', correct: false},
+          {text: 'answer3', correct: false},
+          {text: 'answer4', correct: false}],
+        questions: [
+          {text: 'question text'}],
+        options: {hide_submit: false}
+      }
+    }
   end
 
   factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do

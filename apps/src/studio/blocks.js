@@ -322,12 +322,30 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       if (spriteCount > 1) {
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
-                       'SPRITE');
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
+                         'SPRITE');
+        }
       } else {
-        this.appendDummyInput()
-          .appendTitle(msg.whenSpriteClicked());
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(new blockly.FieldImage(
+                skin[startAvatars[0]].dropdownThumbnail,
+                skin.dropdownThumbnailWidth,
+                skin.dropdownThumbnailHeight
+            ));
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.whenSpriteClicked());
+        }
       }
       this.setPreviousStatement(false);
       this.setInputsInline(true);
@@ -1364,6 +1382,87 @@ exports.install = function (blockly, blockInstallOptions) {
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
   };
 
+  blockly.Blocks.studio_setScore = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      this.appendValueInput('VALUE')
+        .appendTitle(msg.setScore());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setScoreTooltip());
+    }
+  };
+
+  generator.studio_setScore = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
+       Blockly.JavaScript.ORDER_NONE) || '0';
+   return 'Studio.setScore(' + arg + ');\n';
+  };
+
+  blockly.Blocks.studio_getScore = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      this.appendDummyInput()
+          .appendTitle(msg.score());
+      this.setOutput(true, Blockly.BlockValueType.NUMBER);
+      this.setTooltip(msg.getScoreTooltip());
+    }
+  };
+
+  generator.studio_getScore = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'VALUE',
+       Blockly.JavaScript.ORDER_NONE) || '0';
+   return ['Studio.getScore()', 0];
+  };
+
+  blockly.Blocks.studio_addNumPoints = {
+    // Block for adding arbitrary number of points
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('NUM')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.add());
+      this.appendDummyInput().appendTitle(msg.points());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addPointsTooltip());
+    }
+  };
+
+  generator.studio_addNumPoints = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+    return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+        arg + '\');\n';
+  };
+
+  blockly.Blocks.studio_removeNumPoints = {
+    // Block for adding arbitrary number of points
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('NUM').appendTitle(msg.remove());
+      this.appendDummyInput().appendTitle(msg.points());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.removePointsTooltip());
+    }
+  };
+
+  generator.studio_removeNumPoints = function () {
+    var arg = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+    return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
+        arg + '\');\n';
+  };
+
   blockly.Blocks.studio_setScoreText = {
     // Block for setting the score text.
     helpUrl: '',
@@ -1792,47 +1891,47 @@ exports.install = function (blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
-
-    blockly.Blocks.studio_setSpriteParams = {
-      helpUrl: '',
-      init: function () {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
-        this.setHSV(312, 0.32, 0.62);
-        this.appendValueInput('SPRITE')
-            .setCheck(blockly.BlockValueType.NUMBER)
-            .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-        this.appendDummyInput()
-            .appendTitle(dropdown, 'VALUE');
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.setSpriteTooltip());
-      }
-    };
-
-    blockly.Blocks.studio_setSpriteParamValue = {
-      helpUrl: '',
-      init: function () {
-        this.setHSV(312, 0.32, 0.62);
-        if (spriteCount > 1) {
-          this.appendDummyInput()
-            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
-        } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
-        }
-        this.appendValueInput('VALUE');
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.setSpriteTooltip());
-      }
-    };
   }
+
+  blockly.Blocks.studio_setSpriteParams = {
+    helpUrl: '',
+    init: function () {
+      this.VALUES = skin.spriteChoices;
+      var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+      // default to first item after random/hidden
+      dropdown.setValue(skin.spriteChoices[2][1]);
+
+      this.setHSV(312, 0.32, 0.62);
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER)
+          .appendTitle(msg.setSpriteN({spriteIndex: ''}));
+      this.appendDummyInput()
+          .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setSpriteParamValue = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
+      this.appendValueInput('VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteTooltip());
+    }
+  };
 
   generator.studio_setSprite = function () {
     var indexString = this.getTitleValue('SPRITE') || '0';
@@ -2060,11 +2159,22 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to half second
+        if (isK1) {
+          let dropdown = new blockly.FieldDropdown([1, 2, 3, 4, 5].map(
+                (val) => [val.toString(), (val * 1000).toString()]));
+          dropdown.setValue('1000');
+          this.appendDummyInput()
+            .appendTitle(msg.wait())
+            .appendTitle(new blockly.FieldImage(skin.clockIcon))
+            .appendTitle(dropdown, 'VALUE')
+            .appendTitle(msg.waitSeconds());
+        } else {
+          let dropdown = new blockly.FieldDropdown(this.VALUES);
+          dropdown.setValue(this.VALUES[2][1]);  // default to half second
 
-        this.appendDummyInput()
-          .appendTitle(dropdown, 'VALUE');
+          this.appendDummyInput()
+            .appendTitle(dropdown, 'VALUE');
+        }
       }
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -2446,14 +2556,23 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
+      // This block handles generation of nextConnection descendants (in order
+      // to wrap them in a callback).
+      this.skipNextBlockGeneration = true;
     }
   };
 
   generator.studio_ask = function () {
-    // Variable setter.
-    var argument0 = `prompt("${this.getTitleValue('TEXT')}")`;
+    var blockId = `block_id_${this.id}`;
+    var question = this.getTitleValue('TEXT');
     var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
-    return varName + ' = ' + argument0 + ';\n';
+
+    var nextBlock = this.nextConnection && this.nextConnection.targetBlock();
+    var nextCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+    nextCode = Blockly.Generator.prefixLines(`${varName} = value;\n${nextCode}`, '  ');
+    var callback = `function (value) {\n${nextCode}}`;
+
+    return `Studio.askForInput("${blockId}", "${question}", ${callback});\n`;
   };
 };
 

@@ -2,8 +2,6 @@ name 'PDAlg 3CElective'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
 # Planning For the Future > Teaching a CS elective
 
 ## You're already a CS teacher!
@@ -29,6 +27,6 @@ In fall 2016, the College Board will launch its newest AP® course, [AP Computer
 
 Starting in the 2016-17 school year Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles (AP CSP). This endorsement affirms that all components of Code.org CSP’s offerings are aligned to the AP Curriculum Framework standards and the AP CSP assessment. Using an endorsed provider affords schools access to resources including an AP CSP syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CSP.
 
-<br><br>
-<a class="btn btn-large btn-info" target="_blank" href="https://code.org/educate/">Learn More</a><a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+<a class="btn btn-large btn-info" target="_blank" href="https://code.org/educate/">Learn More</a>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -123,11 +123,12 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Add Bubbles\r\n<img src=\"https://images.code.org/ffeec83d7bb838f87f46ec1638710440-image-1443019519379.44.49 AM.png\" style=\"width: 200px; float: right\">\r\nThe first high-level function you will write is `drawAllBubbles`. You may have noticed that the bubbles in the image look very similar to the dots example we've already drawn in this lesson. Now we'll use that skill to add to our image.\r\n\r\n# Do This:\r\n\r\n* **Read** the `drawBubble` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Modify the code** of `drawAllBubbles`:\r\n * **Add a loop** inside the function.\r\n * **Place the commands already inside the function in your loop**. This way your code will move the turtle randomly and call `drawBubble` many times.\r\n * **Set the number of iterations** in your loop so that the screen is filled with bubbles. Try starting with 200 and then adjust to whatever number you like.",
+    "markdown_instructions": "# Add Bubbles\r\n<img src=\"https://images.code.org/ffeec83d7bb838f87f46ec1638710440-image-1443019519379.44.49 AM.png\" style=\"width: 200px; float: right\">\r\nThe first high-level function you will write is `drawAllBubbles`. You may have noticed that the bubbles in the image look very similar to the dots example we've already drawn in this lesson. Now we'll use that skill to add to our image.\r\n\r\n# Do This:\r\n\r\n* **Read** the `drawBubble` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Modify the code** of `drawAllBubbles`:\r\n * **Add a loop** inside the function.\r\n * **Move the commands that were already inside the function *inside the loop* instead** -- In other words \"wrap a loop around the existing lines of code that are inside the function. This way your code will move the turtle randomly and call `drawBubble` many times.\r\n * **Set the number of iterations** in your loop so that the screen is filled with bubbles. Try starting with 200 and then adjust to whatever number you like.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -161,7 +162,34 @@
     "debugger_disabled": "true",
     "encrypted_examples": "7uj3V2UtF4+l+kiwHdwp5diDc49I21ixmbYZ1YccA/qgAgT6GRlHiumryjw0\nl4wK\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawAllBubbles:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllBubbles function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawBubble:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 200,
+        "message": "App lab is expecting that you would simply 'wrap a loop around' the existing code that was inside the drawAllBubbles function - a looping of two commands: moveTo(x,y) and drawBubble(size). And that that loop would run 200 times or more.  It appears as though the sequence is slightly different or you're not running the loop 200 times."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

@@ -1,9 +1,9 @@
-/*
-  List of facilitators for display in the workshop summary.
+/**
+ * List of facilitators for display in the workshop summary.
  */
 import React from 'react';
 
-var FacilitatorsList = React.createClass({
+const FacilitatorsList = React.createClass({
   propTypes: {
     facilitators: React.PropTypes.arrayOf(
       React.PropTypes.shape({
@@ -13,8 +13,8 @@ var FacilitatorsList = React.createClass({
     ).isRequired
   },
 
-  render: function () {
-    var listItems = this.props.facilitators.map(function (facilitator, i) {
+  render() {
+    const listItems = this.props.facilitators.map((facilitator, i) => {
       return (
         <li key={i}>
           {facilitator.name} ({facilitator.email})
@@ -29,4 +29,4 @@ var FacilitatorsList = React.createClass({
     );
   }
 });
-module.exports = FacilitatorsList;
+export default FacilitatorsList;

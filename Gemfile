@@ -66,6 +66,7 @@ group :development, :test do
   # for ui testing
   gem 'cucumber'
   gem 'selenium-webdriver', '~> 2.45.0'
+  gem 'net-http-persistent'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -203,6 +204,7 @@ gem 'rack-attack', '~> 4.4'
 # Generate SSL certificates
 gem 'acmesmith'
 
+gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'

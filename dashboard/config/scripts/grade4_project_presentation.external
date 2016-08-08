@@ -1,0 +1,9 @@
+name 'grade4_project_presentation'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<b>Project Presentations</b>
+
+In this stage, teachers will prepare student to present their projects. Different options such as a playtesting session and gallery walk will be outlined. Teachers will also be provided with a rubric for assessing projects and students' use of the design process.
+MARKDOWN

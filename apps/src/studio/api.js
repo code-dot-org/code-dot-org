@@ -166,6 +166,14 @@ exports.changeScore = function (id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
+exports.getScore = function () {
+  return Studio.playerScore;
+};
+
+exports.setScore = function (value) {
+  Studio.setScore(value);
+};
+
 exports.addCharacter = function (id, className) {
   Studio.queueCmd(id, 'addItem', {
     'className': className
@@ -234,6 +242,10 @@ exports.onEvent = function (id, eventName, func) {
     'eventName': String(eventName),
     'func': func
   });
+};
+
+exports.askForInput = function (id, question, callback) {
+  Studio.queueCmd(id, 'askForInput', {question, callback});
 };
 
 /**

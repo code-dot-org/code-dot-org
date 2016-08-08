@@ -1,27 +1,25 @@
 name 'ECSPD U4 D 4 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 4 Scratch – Creating Dialogue
+# Day 4 Scratch &mdash; Creating Dialogue
 
 First, let's explore the third lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 140-142.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=140)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will create a program that tells a knock-knock joke by using dialogue between two or more sprites.  The main blocks in this lesson are "say\_ for\_ secs" block and the "wait\_sec" block.
 
-#### Common Difficulties
+## Common Difficulties
 
 This lesson presents a really fun activity for students, but it can be frustrating for students if: A) they struggle to understand how the "say\_for\_sec" block works and B) are impatient to do trial and error practice with the "wait\_sec" block.
-<br><br>
+
 It is a great idea to have a sample dialogue with students prior to them programming.  It may even be beneficial for students to do some pseudo code on paper or dry erase boards where students can write out their joke and work with a partner to figure out the correct code.
-<br><br>
+
 There is not premade file for this activity so students will need some coaching on creating a new file and saving it for the first time.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -42,8 +40,8 @@ There is not premade file for this activity so students will need some coaching 
 - Joke - [http://learnscratch.org/sc3-u1/sc3-l1](http://learnscratch.org/sc3-u1/sc3-l1)
 
 **Consider:** In this video, what did you notice about the blocks being used?  What specific activities can you use to help your students understand how to  use the blocks necessary for a dialogue?
-<br><br>
+
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

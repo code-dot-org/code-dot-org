@@ -47,7 +47,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Terminology: *Parameter*\r\n\r\nWhen you have a command like: `moveForward(100)` we say that the `moveForward()` command *accepts a **parameter***.  And 100 is the value *given* or *supplied* to `moveForward()`'s **parameter**.  Since this value can change, you will often see a written description for the command that looks something like **`moveForward(pixels)`** to indicate that the value supplied to `moveForward()`'s **parameter** should be the number of pixels you want it move.\r\n\r\nThe good old `moveForward()` command still exists.  In fact it's the **same command** as `moveForward(pixels)`. The \"parameter-less\" version of `moveForward()` simply supplies a **default value** to the parameter.  We might also say that the `moveForward()` command has an **optional parameter** since you could call either `moveForward()` or `moveForward(50)` and it doesn't cause an error when you run the program.\r\n\r\nNOTE: you can write your own functions that accept parameters, too!  But we'll get to that in later lessons.\r\n\r\n# New Commands!\r\n\r\nCheck it out.  The turtle toolbox now contains the *parameterized* versions of the turtle commands including `turnLeft(angle)` and `turnRight(angle)`.  Notice that `penUp()` and `penDown()` don't have parameters.  Use the parameterized versions of the commands to draw a triangle with sides that are 100 pixels long.\r\n\r\n<img src=\"https://images.code.org/0207568ff82b0571fa6757081330749d-image-1441901783815.png\" width=150>",
+    "markdown_instructions": "# Terminology: *Parameter*\r\n\r\nWhen you have a command like: `moveForward(100)` we say that the `moveForward()` command *accepts a **parameter***.  And 100 is the value *given* or *supplied* to `moveForward()`'s **parameter**.  Since this value can change, you will often see a written description for the command that looks something like **`moveForward(pixels)`** to indicate that the value supplied to `moveForward()`'s **parameter** should be the number of pixels you want it move.\r\n\r\nThe good old `moveForward()` command still exists.  In fact it's the **same command** as `moveForward(pixels)`. The \"parameter-less\" version of `moveForward()` simply supplies a **default value** to the parameter.  We might also say that the `moveForward()` command has an **optional parameter** since you could call either `moveForward()` or `moveForward(50)` and it doesn't cause an error when you run the program.\r\n\r\nNOTE: you can write your own functions that accept parameters, too!  But we'll get to that in later lessons.\r\n\r\n# New Commands!\r\n\r\nCheck it out.  The turtle toolbox now contains the *parameterized* versions of the turtle commands including `turnLeft(angle)` and `turnRight(angle)`.  Notice that `penUp()` and `penDown()` don't have parameters.  \r\n\r\n# Do This:\r\n\r\nUse the parameterized versions of the commands to draw a triangle with sides that are 100 pixels long.\r\n\r\n<img src=\"https://images.code.org/0207568ff82b0571fa6757081330749d-image-1441901783815.png\" width=150>",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "text_mode_at_start": "false",
@@ -64,6 +64,42 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "min_workspace_height": "-41",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward(pixels) and turnRight(degrees) without any loops."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "At a minimum, to draw the triangle you need to move 3 times."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "App Lab is expecting that you'll use a combination of turnRight(degrees) and moveForward(pixels) to complete this task.  There is a clever way to use turnLeft that will result in a correct program, but use turnRight for now."
+      },
+      {
+        "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "maxTimes": 3,
+        "message": "App Lab is expecting that you'll need to call turnRight(degrees) at least twice to do this task."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

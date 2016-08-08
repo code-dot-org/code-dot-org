@@ -474,6 +474,8 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
+  are_you_teacher: Sind Sie ein Lehrer?
+  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspiriere die Schüler und mache mit
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen dieses Jahr
     vom 7. bis 13. Dezember 2015 eine Hour of Code mit ihren Klassen. Sie brauchen
@@ -695,7 +697,7 @@
   dashboard_navigation_view_progress: Fortschritt
   dashboard_navigation_view_text_responses: Textantworten anzeigen
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_surveys: Surveys
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
@@ -897,7 +899,7 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Mehr erfahren
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Probiere es jetzt aus
   dashboard_announce_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
     Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an
     der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -1782,3 +1784,5 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
