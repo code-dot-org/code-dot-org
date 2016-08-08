@@ -324,25 +324,44 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
 };
 
 /**
+ * @param {boolean} overwrite
+ * @returns {Promise} Promise containing a map of existing key/value pairs, or an
+ *   empty map if overwrite is true.
+ */
+function getExistingKeyValues(overwrite) {
+  if (overwrite) {
+    return Promise.resolve({});
+  }
+  return getKeysRef(Applab.channelId).once('value')
+    .then(snapshot => snapshot.val() || {});
+}
+
+/**
  * Populates the key/value store with initial data
- * @param {string} jsonData The json data that represents the tables in the format of:
+ * @param {string} jsonData The json data that represents the keys/value pairs in the
+ *   format of:
  *   {
  *     "click_count": 5,
  *     "button_color": "blue"
  *   }
- * @param {bool} overwrite Whether to overwrite a table if it already exists.
+ * @param {bool} overwrite Whether to overwrite a key if it already exists.
  * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
- *    and http status in case of failure.
+ * @param {function} onError Function to call with an error in case of failure.
  */
 FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Respect overwrite
-  let keysRef = getKeysRef(Applab.channelId);
-  let keyValueMap = JSON.parse(jsonData);
-  keysRef.update(keyValueMap).then(onSuccess, onError);
+  getExistingKeyValues(overwrite).then(oldKeyValues => {
+    const newKeyValues = JSON.parse(jsonData);
+    const keysData = {};
+    for (const key in newKeyValues) {
+      if (overwrite || (oldKeyValues[key] === undefined)) {
+        keysData[key] = JSON.stringify(newKeyValues[key]);
+      }
+    }
+    getKeysRef(Applab.channelId).update(keysData).then(onSuccess, onError);
+  });
 };
 
 /**
