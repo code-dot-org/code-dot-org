@@ -3778,22 +3778,32 @@ function Animation(pInst) {
 
   /**
   * Returns the current frame width in pixels.
+  * If there is no image loaded, returns 1.
   *
   * @method getWidth
   * @return {Number} Frame width
   */
   this.getWidth = function() {
-    return this.images[frame].width;
+    if (this.images[frame]) {
+      return this.images[frame].width;
+    } else {
+      return 1;
+    }
   };
 
   /**
   * Returns the current frame height in pixels.
+  * If there is no image loaded, returns 1.
   *
   * @method getHeight
   * @return {Number} Frame height
   */
   this.getHeight = function() {
-    return this.images[frame].height;
+    if (this.images[frame]) {
+      return this.images[frame].height;
+    } else {
+      return 1;
+    }
   };
 
 }
