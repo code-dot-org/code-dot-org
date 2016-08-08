@@ -2,7 +2,6 @@ general:
   artifacts:
     - dashboard/test/ui
     - dashboard/log
-    - dashboard/tmp/cache/flakiness.json
     - pegasus/log
 machine:
   ruby:
@@ -18,6 +17,7 @@ machine:
 dependencies:
   cache_directories:
     - "apps/node_modules"
+    - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev enscript
