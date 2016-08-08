@@ -50,6 +50,14 @@ const editButton = {
   width: 60
 };
 
+const rightButton = {
+  float: 'right',
+  marginTop: 0,
+  marginLeft: 10,
+  marginBottom: 0,
+  marginRight: 0,
+};
+
 const input = {
   width: 'calc(100% - 14px)',
   height: 20,
@@ -67,5 +75,6 @@ export {
   link,
   button,
   editButton,
+  rightButton,
   input
 };

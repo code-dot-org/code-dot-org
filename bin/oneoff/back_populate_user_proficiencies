@@ -175,10 +175,14 @@ def compute_basic_proficiency_at(proficiency, line)
   return nil
 end
 
-CSV.foreach('/tmp/user_proficiency.csv').with_index do |line, line_num|
-  puts "PROCESSING: line #{line_num}..." if line_num % 1000 == 0
+line_num = 0
+user_id = 0
 
-  begin
+begin
+  CSV.foreach('/tmp/user_proficiency.csv').with_index do |line, csv_line_num|
+    line_num = csv_line_num
+    puts "PROCESSING: line #{line_num}..." if line_num % 1000 == 0
+
     user_id = line[0].to_i
 
     proficiency = UserProficiency.find_or_create_by(user_id: user_id)
@@ -196,15 +200,16 @@ CSV.foreach('/tmp/user_proficiency.csv').with_index do |line, line_num|
     proficiency.last_progress_at = TIME_CUTOFF unless proficiency.last_progress_at
 
     proficiency.save!
-  rescue Exception => e
-    # Since exceptions may happen naturally, we simply log the relevant
-    # information to the console and give the executing user a chance to abort
-    # the script.
-    puts "EXCEPTION:"
-    puts "  USER: #{user_id}"
-    puts "  MESSAGE: #{e.message}"
-    sleep(10)
-  ensure
-    puts "DONE, PROCESSING: line #{linenum}..."
   end
+rescue Exception => e
+  # Since exceptions may happen naturally, we simply log the relevant
+  # information to the console and give the executing user a chance to abort
+  # the script.
+  puts "EXCEPTION:"
+  puts "  USER: #{user_id}"
+  puts "  LINE_NUM: #{line_num}"
+  puts "  MESSAGE: #{e.message}"
+  sleep(10)
+ensure
+  puts "DONE, PROCESSING: line #{line_num}..."
 end
