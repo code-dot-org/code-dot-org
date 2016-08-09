@@ -102,5 +102,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'emails are stored in lowercase' do
     enrollment = build :pd_enrollment, email: 'MixedCase@Example.net'
     assert_equal 'mixedcase@example.net', enrollment.email
+
+    # Also accepts nil
+    enrollment.email = nil
+    assert_nil enrollment.email
   end
 end

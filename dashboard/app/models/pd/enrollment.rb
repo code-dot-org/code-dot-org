@@ -40,7 +40,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   # Always store emails in lowercase to match the behavior in User.
   def email=(value)
-    write_attribute(:email, value.downcase)
+    write_attribute(:email, value.try(:downcase))
   end
 
   def resolve_user
