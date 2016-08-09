@@ -2,6 +2,7 @@
 
 require 'cgi'
 require 'logger'
+require 'tmpdir'
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
 # you to format your code more readably.
@@ -22,7 +23,7 @@ class String
   end
 end
 
-LOG_FILE = '/var/log/code-dot-org-dotd.log'
+LOG_FILE = "#{Dir.tmpdir}/dotd.log"
 LOGGER = Logger.new(LOG_FILE, 'daily')
 
 def ask_for_name
