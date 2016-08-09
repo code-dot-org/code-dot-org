@@ -36,14 +36,19 @@ describe('GameLabGroup', function () {
   });
 
   describe('collision methods', function () {
+    var sprite1, sprite2, targetSprite, group;
+
+    beforeEach(function () {
+      sprite1 = createSprite(0, 0, 100, 100);
+      sprite2 = createSprite(400, 400, 100, 100);
+      targetSprite = createSprite(200, 200, 100, 100);
+      group = createGroup();
+      group.add(sprite1);
+      group.add(sprite2);
+    });
+
     describe('isTouching', function () {
       it('returns false if no sprite in group overlaps target sprite', function () {
-        var sprite1 = createSprite(0, 0, 100, 100);
-        var sprite2 = createSprite(400, 400, 100, 100);
-        var targetSprite = createSprite(200, 200, 100, 100);
-        var group = createGroup();
-        group.add(sprite1);
-        group.add(sprite2);
         let result;
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
@@ -52,17 +57,10 @@ describe('GameLabGroup', function () {
       });
 
       it('returns true if first sprite in group overlaps target sprite', function () {
-        var sprite1 = createSprite(0, 0, 100, 100);
-        var sprite2 = createSprite(400, 400, 100, 100);
-        var targetSprite = createSprite(200, 200, 100, 100);
-
         // Make sprite1 overlap with target sprite
         sprite1.x = targetSprite.x;
         sprite1.y = targetSprite.y;
 
-        var group = createGroup();
-        group.add(sprite1);
-        group.add(sprite2);
         let result;
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
@@ -71,17 +69,10 @@ describe('GameLabGroup', function () {
       });
 
       it('returns true if last sprite in group overlaps target sprite', function () {
-        var sprite1 = createSprite(0, 0, 100, 100);
-        var sprite2 = createSprite(400, 400, 100, 100);
-        var targetSprite = createSprite(200, 200, 100, 100);
-
         // Make sprite1 overlap with target sprite
         sprite2.x = targetSprite.x;
         sprite2.y = targetSprite.y;
 
-        var group = createGroup();
-        group.add(sprite1);
-        group.add(sprite2);
         let result;
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
@@ -90,19 +81,12 @@ describe('GameLabGroup', function () {
       });
 
       it('returns true if every sprite in group overlaps target sprite', function () {
-        var sprite1 = createSprite(0, 0, 100, 100);
-        var sprite2 = createSprite(400, 400, 100, 100);
-        var targetSprite = createSprite(200, 200, 100, 100);
-
         // Make sprite1 overlap with target sprite
         sprite1.x = targetSprite.x;
         sprite1.y = targetSprite.y;
         sprite2.x = targetSprite.x;
         sprite2.y = targetSprite.y;
 
-        var group = createGroup();
-        group.add(sprite1);
-        group.add(sprite2);
         let result;
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
