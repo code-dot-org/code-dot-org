@@ -1,6 +1,8 @@
+@import "color";
+
 body {
   background-color: $white;
-  color: #333;
+  color: $dark_charcoal;
   font-size: 13px;
   line-height: 18px;
 }
@@ -11,7 +13,7 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: $lightest_gray;
   padding: 10px;
   font-size: 11px;
 }
@@ -23,11 +25,11 @@ div {
 }
 
 #notice {
-  color: green;
+  color: $realgreen;
 }
 
 .field_with_errors label {
-  color: red;
+  color: $red;
   display: inline-block;
 }
 
@@ -45,7 +47,7 @@ div {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: $white;
   h2 {
     text-align: left;
     font-weight: bold;

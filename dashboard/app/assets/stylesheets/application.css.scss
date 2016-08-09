@@ -156,7 +156,7 @@ img.video_thumbnail {
   float: left;
   clear: left;
   width: 23px;
-  border: 1px solid lightgray;
+  border: 1px solid $light_gray;
   margin: 5px;
   vertical-align: middle;
 }
@@ -328,7 +328,7 @@ $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #copyright-flyout, #more-menu {
-  background-color: #ddd; /* Matches blockly flyout */
+  background-color: $blockly_flyout_gray; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
   a {
@@ -647,7 +647,7 @@ $default-modal-width: 640px;
     font-family: $gotham-extra-bold;
     font-size: 20px;
     line-height: 20px;
-    color: #fff176;
+    color: $droplet_yellow;
   }
 }
 
@@ -701,10 +701,10 @@ $default-modal-width: 640px;
       font-size: 24pt;
 
       &.fa-facebook {
-        background-color: #3b5998;
+        background-color: $facebook_blue;
       }
       &.fa-twitter {
-        background-color: #00aced;
+        background-color: $twitter_blue;
       }
     }
     span {
@@ -1469,7 +1469,7 @@ a.download-video {
     vertical-align: top;
   }
   .error_in_field {
-    color: red;
+    color: $red;
     opacity: 0;
     display: table-cell;
     padding-left: 10px;
@@ -1842,7 +1842,7 @@ div.gallery_activity {
   img {
     width: $img_size;
     height: $img_size;
-    border: $img_border_size groove lightgray;
+    border: $img_border_size groove $light_gray;
   }
   .caption {
     color: $charcoal;
@@ -1866,7 +1866,7 @@ div.mini_gallery_activity {
   img {
     width: $img_size;
     height: $img_size;
-    border: $img_border_size groove lightgray;
+    border: $img_border_size groove $light_gray;
   }
 }
 
@@ -1918,7 +1918,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .answerbutton {
     &.lock-answers {
       pointer-events: none;
-      color: grey;
+      color: $light_gray;
     }
   }
 
@@ -2121,7 +2121,7 @@ $modal-no-icon-gap: 22px;
     height: auto;
     margin: 0 15px 0 0;
     float: left;
-    border: lightgrey;
+    border: $light_gray;
     border-style: solid;
   }
 
@@ -2506,5 +2506,5 @@ $width: 400px;
   padding: 3px;
   z-index: 100;
   cursor: pointer;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 7px 2px $shadow;
 }
