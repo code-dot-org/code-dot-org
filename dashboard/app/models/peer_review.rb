@@ -146,7 +146,7 @@ class PeerReview < ActiveRecord::Base
     if user &&
         script.peer_reviews_to_complete.try(:>, 0) &&
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
-      reviews_done = PeerReview.where(reviewer: user, script: script, status: [0, 1, 2]).size
+      reviews_done = PeerReview.where(reviewer: user, script: script, status: PeerReview.statuses.values).size
 
       if reviews_done >= script.peer_reviews_to_complete
         Plc::EnrollmentModuleAssignment::COMPLETED
