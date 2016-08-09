@@ -43,14 +43,14 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" limit="1"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar"/>
+        <block type="maze_nectar" limit="1"/>
         <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
