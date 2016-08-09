@@ -4,9 +4,6 @@ import { cellId } from './mazeUtils';
 import { SquareType } from './tiles';
 import { SVG_NS } from '../constants';
 
-const ALL_CHARS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
-  "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
 // this should match with Maze.SQUARE_SIZE
 const SQUARE_SIZE = 50;
 
@@ -198,6 +195,8 @@ export default class WordSearch {
 
 WordSearch.START_CHAR = '-';
 WordSearch.EMPTY_CHAR = '_';
+WordSearch.ALL_CHARS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
+  "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 /**
  * For wordsearch, values in Maze.map can take the form of a number (i.e. 2 means
@@ -229,10 +228,10 @@ WordSearch.randomLetter = function (restrictions) {
   if (restrictions) {
     // args consists of ALL_CHARS followed by the set of restricted letters
     const args = restrictions || [];
-    args.unshift(ALL_CHARS);
+    args.unshift(WordSearch.ALL_CHARS);
     letterPool = _.without.apply(null, args);
   } else {
-    letterPool = ALL_CHARS;
+    letterPool = WordSearch.ALL_CHARS;
   }
 
   return _.sample(letterPool);
