@@ -354,8 +354,8 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
-      get 'test_logs/:branch/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
-      get 'test_logs/:branch/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+      get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 
