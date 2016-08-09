@@ -16,12 +16,12 @@ end
 
 And /^Applab HTML has a button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
-  /button/.match(code).nil?.should eq false
+  expect(/button/.match(code).nil?).to be(false)
 end
 
 And /^Applab HTML has no button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
-  /button/.match(code).nil?.should eq true
+  expect(/button/.match(code).nil?).to be(true)
 end
 
 Given /^I start a new Applab project$/ do
@@ -116,7 +116,7 @@ end
 
 Then(/^the droplet code is "([^"]*)"$/) do |code|
   code.gsub!("\\n", "\n")
-  @browser.execute_script("return Applab.getCode()").should eq code
+  expect(@browser.execute_script("return Applab.getCode()")).to eq(code)
 end
 
 And /^I append text to droplet "([^"]*)"$/ do |text|
@@ -328,9 +328,9 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
 end
 
 And /^Firebase is enabled$/ do
-  @browser.execute_script("return dashboard.project.useFirebase()").should eq true
+  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(true)
 end
 
 And /^Firebase is disabled$/ do
-  @browser.execute_script("return dashboard.project.useFirebase()").should eq false
+  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(true)
 end

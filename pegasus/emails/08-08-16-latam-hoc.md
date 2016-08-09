@@ -35,7 +35,7 @@ P.D. Si quieres ayudarnos a traducir tutoriales, [hazlo saber](https://code.org/
 <p>
 <hr/>
 <small>
-Code.org is a 501c3 non-profit located at 1501 Fourth Avenue, Suite 900, Seattle, WA, 98101. You’re receiving this email because you hosted an <a href="https://hourofcode.com/">Hour of Code</a> in 2014. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
+Code.org is a 501c3 non-profit located at 1501 Fourth Avenue, Suite 900, Seattle, WA, 98101. You’re receiving this email because you hosted an <a href="https://hourofcode.com/">Hour of Code</a> in a previous year. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
 </small></p>
 
 ![](<%= tracking_pixel %>)
