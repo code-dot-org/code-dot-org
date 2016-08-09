@@ -1,4 +1,5 @@
 import color from '../color';
+import Subtype from './subtype';
 import _ from 'lodash';
 import { cellId } from './mazeUtils';
 import { SquareType } from './tiles';
@@ -10,11 +11,16 @@ const SQUARE_SIZE = 50;
 /**
  * Create a new WordSearch.
  */
-export default class WordSearch {
-  constructor(goal, map) {
-    this.goal_ = goal;
+export default class WordSearch extends Subtype {
+  constructor(maze, studioApp, config) {
+    super(maze, studioApp, config);
+    this.goal_ = config.level.searchWord;
     this.visited_ = '';
-    this.map_ = map;
+    this.map_ = config.level.map;
+  }
+
+  isWordSearch() {
+    return true;
   }
 
   /**
