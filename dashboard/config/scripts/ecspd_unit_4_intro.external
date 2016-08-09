@@ -1,19 +1,12 @@
 name 'ECSPD Unit 4 Intro'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Introduction to Unit 4 > About this stage
+# Introduction to Unit 4 > About this stage
 
 In this stage, you will:
 
 - Get a high-level overview of the ECS Unit 4: Programming curriculum
 
-<br><br>
 > Review the content provided in the levels that follow. As you work your way through, remember to always click “Continue” at the bottom of each page in order to earn your green dot for each level.
 
 When you finish this stage, we’ll move on to Stage 3, which covers teaching strategies that are useful for Unit 4.
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
