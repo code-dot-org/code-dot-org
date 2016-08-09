@@ -39,6 +39,10 @@ const InputPrompt = React.createClass({
     this.props.onInputReceived(this.refs.answer.value);
   },
 
+  componentDidMount() {
+    this.refs.answer.focus();
+  },
+
   render() {
     return (
       <form style={styles.form} onSubmit={this.handleSubmit}>
