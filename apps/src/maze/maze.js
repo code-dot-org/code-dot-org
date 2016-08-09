@@ -533,7 +533,7 @@ Maze.init = function (config) {
   } else if (mazeUtils.isCollectorSkin(config.skinId)) {
     Maze.collector = new Collector(Maze, studioApp, config);
   } else if (config.skinId === 'letters') {
-    Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
+    Maze.wordSearch = new WordSearch(level.searchWord, level.map);
   }
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
