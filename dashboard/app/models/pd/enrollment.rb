@@ -38,6 +38,11 @@ class Pd::Enrollment < ActiveRecord::Base
     self.code = unused_random_code
   end
 
+  # Always store emails in lowercase to match the behavior in User.
+  def email=(value)
+    write_attribute(:email, value.downcase)
+  end
+
   def resolve_user
     user || User.find_by_email_or_hashed_email(self.email)
   end
