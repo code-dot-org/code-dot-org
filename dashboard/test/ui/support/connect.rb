@@ -19,7 +19,7 @@ def local_browser
 end
 
 def slow_browser?
-  ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
+  ['iPhone', 'iPad'].include? @cucumber_env['BROWSER_CONFIG']
 end
 
 def saucelabs_browser
@@ -35,7 +35,7 @@ def saucelabs_browser
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
-  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
+  browser_config = $browser_configs.detect {|b| b['name'] == @cucumber_env['BROWSER_CONFIG'] }
 
   browser_config.each do |key, value|
     capabilities[key] = value
@@ -45,7 +45,7 @@ def saucelabs_browser
 
   circle_run_identifier = ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}" : nil
   capabilities[:tunnelIdentifier] = circle_run_identifier if circle_run_identifier
-  capabilities[:name] = ENV['TEST_RUN_NAME']
+  capabilities[:name] = @cucumber_env['TEST_RUN_NAME']
   capabilities[:build] = circle_run_identifier || ENV['BUILD']
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
@@ -70,7 +70,7 @@ def saucelabs_browser
   puts "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
-  unless ENV['MOBILE']
+  unless @cucumber_env['MOBILE']
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
@@ -95,6 +95,16 @@ browser = nil
 
 Before do
   puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
+
+  @cucumber_env = ENV.select do |k, _|
+    [
+        'BROWSER_CONFIG',
+        'BS_ROTATABLE',
+        'MOBILE',
+        'TEST_RUN_NAME',
+        'APPLITOOLS_HOST_OS'
+    ].include? k
+  end
 
   if slow_browser?
     browser ||= get_browser
