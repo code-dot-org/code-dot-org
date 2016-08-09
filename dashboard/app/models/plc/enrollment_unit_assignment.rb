@@ -96,7 +96,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     end
 
     # If there are peer reviews, summarize that progress as well
-    if plc_course_unit.script.peer_reviews_to_complete.try(:>, 0)
+    if plc_course_unit.script.has_peer_reviews?
       summary << {
           category: 'peer_review',
           status: PeerReview.get_review_completion_status(user, plc_course_unit.script)
