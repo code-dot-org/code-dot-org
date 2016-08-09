@@ -3,9 +3,6 @@ general:
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
-  branches:
-    ignore:
-      - test # skip running on test branch until resolved status page collisions
 machine:
   ruby:
     version: 2.2.3
