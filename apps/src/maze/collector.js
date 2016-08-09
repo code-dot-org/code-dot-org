@@ -10,6 +10,8 @@
 
 import { TestResults } from '../constants.js';
 
+import Subtype from './subtype';
+import CollectorDrawer from './collectorDrawer';
 import mazeMsg from './locale';
 import tiles from './tiles';
 
@@ -18,15 +20,27 @@ const COLLECTED_NOTHING = 1;
 const COLLECTED_SOME = 2;
 const COLLECTED_EVERYTHING = 3;
 
-export default class Collector {
+export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
-    this.maze_ = maze;
-    this.studioApp_ = studioApp;
-    this.skin_ = config.skin;
+    super(maze, studioApp, config);
 
     // Collector level types treat the "ideal" block count as a hard
     // requirement
     this.maxBlocks_ = config.level.ideal;
+  }
+
+  /**
+   * @override
+   */
+  isCollector() {
+    return true;
+  }
+
+  /**
+   * @override
+   */
+  createGridItemDrawer() {
+    return new CollectorDrawer(this.maze_.map, this.skin_.goal);
   }
 
   /**
@@ -66,8 +80,7 @@ export default class Collector {
    * @return {boolean} Has the user completed this level
    */
   finished() {
-    return this.getTotalCollected() > 0 &&
-        this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+    return false;
   }
 
   /**
@@ -86,6 +99,10 @@ export default class Collector {
     } else {
       executionInfo.terminateWithValue(COLLECTED_SOME);
     }
+  }
+
+  hasMessage(testResults) {
+    return true;
   }
 
   /**
