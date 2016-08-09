@@ -52,7 +52,8 @@ var SharingWarnings = module.exports = React.createClass({
 
       },
       moreInfo: {
-        marginLeft: 0
+        marginLeft: 0,
+        fontSize: 15
       },
       ok: {
         backgroundColor: color.orange,
