@@ -12,6 +12,11 @@ class ApiControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     sign_in @teacher
 
+    # make them an authorized_Teacher
+    cohort = create(:cohort)
+    cohort.teachers << @teacher
+    cohort.save!
+
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
@@ -25,6 +30,24 @@ class ApiControllerTest < ActionController::TestCase
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.backfill_user_scripts
     @student_flappy_1.reload
+  end
+
+  def create_script_with_lockable_stage
+    script = create :script
+
+    # Create a LevelGroup level.
+    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level.properties['submittable'] = true
+    level.save!
+
+    stage = create :stage, name: 'Stage1', script: script, lockable: true
+
+    # Create a ScriptLevel joining this level to the script.
+    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+
+    [script, level, stage]
   end
 
   def make_progress_in_section(script)
@@ -431,6 +454,101 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal script, assigns(:script)
+  end
+
+  test "should get lock state when no user_level" do
+    script, level, stage = create_script_with_lockable_stage
+
+    get :lockable_state, section_id: @section.id, script_id: script.id
+    assert_response :success
+    body = JSON.parse(response.body)
+
+    assert_equal [@section.id.to_s, @flappy_section.id.to_s], body.keys, "entry for each section"
+
+    # do a bunch of validation on our first section
+    section_response = body[@section.id.to_s]
+    assert_equal @section.id, section_response['section_id']
+    assert_equal @section.name, section_response['section_name']
+    assert_equal 1, section_response['stages'].length
+
+    stages_response = section_response['stages']
+    assert_equal 1, stages_response.keys.length, '1 stage in our script'
+    stage_response = stages_response[stage.id.to_s]
+    assert_equal 5, stage_response.length, "entry for each student in section"
+
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
+      student_response = stage_response[index]
+      assert_equal({
+        "user_id" => student.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      }, student_response['user_level_data'], 'user_id, level_id, and script_id for not yet existing user_level')
+      assert_equal student.name, student_response['name']
+      assert_equal true, student_response['locked'], 'starts out locked'
+      assert_equal nil, student_response['view_answers']
+    end
+
+    # do a much more limited set of validation for the flappy section
+    flappy_section_response = body[@flappy_section.id.to_s]
+    assert_equal @flappy_section.id, flappy_section_response['section_id']
+    assert_equal 1, flappy_section_response['stages'][stage.id.to_s].length
+    assert_equal @student_flappy_1.name, flappy_section_response['stages'][stage.id.to_s][0]['name']
+  end
+
+  test "should get lock state when we have user_levels" do
+    script, level, stage = create_script_with_lockable_stage
+
+    # student_1 is unlocked
+    student_1_user_level = create :user_level, user: @student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+
+    # student_2 can view answers
+    student_2_user_level = create :user_level, user: @student_2, script: script, level: level, submitted: false, view_answers: true, unlocked_at: Time.now
+
+    # student_3 has a user_level, but is still locked
+    student_3_user_level = create :user_level, user: @student_3, script: script, level: level, submitted: true, view_answers: false
+
+    # student_4 got autolocked while editing
+    student_4_user_level = create :user_level, user: @student_4, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
+
+    # student_5 got autolocked while viewing answers
+    student_5_user_level = create :user_level, user: @student_5, script: script, level: level, submitted: false, view_answers: true, unlocked_at: 2.days.ago
+
+    get :lockable_state, section_id: @section.id, script_id: script.id
+    assert_response :success
+    body = JSON.parse(response.body)
+
+    student_responses = body[@section.id.to_s]['stages'][stage.id.to_s]
+    assert_equal 5, student_responses.length
+
+    # student_1 is unlocked
+    student_1_response = student_responses[0]
+    assert_equal({"user_level_id" => student_1_user_level.id}, student_1_response['user_level_data'])
+    assert_equal false, student_1_response['locked']
+    assert_equal false, student_1_response['view_answers']
+
+    # student_2 is unlocked
+    student_2_response = student_responses[1]
+    assert_equal({"user_level_id" => student_2_user_level.id}, student_2_response['user_level_data'])
+    assert_equal false, student_2_response['locked']
+    assert_equal true, student_2_response['view_answers']
+
+    # student_3 has a user_level, but is still locked
+    student_3_response = student_responses[2]
+    assert_equal({"user_level_id" => student_3_user_level.id}, student_3_response['user_level_data'])
+    assert_equal true, student_3_response['locked']
+    assert_equal false, student_3_response['view_answers']
+
+    # student_4 got autolocked while editing
+    student_4_response = student_responses[3]
+    assert_equal({"user_level_id" => student_4_user_level.id}, student_4_response['user_level_data'])
+    assert_equal true, student_4_response['locked']
+    assert_equal false, student_4_response['view_answers']
+
+    # student_5 got autolocked while viewing answers
+    student_5_response = student_responses[4]
+    assert_equal({"user_level_id" => student_5_user_level.id}, student_5_response['user_level_data'])
+    assert_equal true, student_5_response['locked']
+    assert_equal false, student_5_response['view_answers']
   end
 
   test "should get user progress" do
