@@ -1,0 +1,83 @@
+@import 'color';
+@import 'font';
+
+.teacher-announce {
+  position: relative;
+  font-family: "Gotham 4r", sans-serif;
+  color: $dark_charcoal;
+  font-size: 14px;
+
+  .announce-heading {
+    background-color: $cyan;
+    border-radius: 4px;
+    color: white;
+    height: 40px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    font-family: "Gotham 4r", sans-serif;
+    font-size: 20px;
+  }
+
+  .announce-content {
+    background-color: $lightest_cyan;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 110px;
+
+    .content-img-container {
+      float: left;
+    }
+
+    .content-img {
+      border-radius: 4px;
+      max-height: 145px;
+    }
+
+    .content-text {
+      float: left;
+      max-height: 100px;
+      overflow: hidden;
+      padding-left: 10px;
+      line-height: 20px;
+      width: 590px;
+
+      b {
+        font-family: 'Gotham 5r', sans-serif;
+      }
+    }
+    .announce-learn-more {
+      position: relative;
+      float: right;
+      margin-top: 75px;
+    }
+    .announce-learn-more .primary {
+      background-color: $cyan;
+      border-color: $cyan;
+    }
+  }
+
+  .mini-announcement {
+    background-color: $lightest_cyan;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 20px;
+
+    .content-text {
+      width: 900px;
+
+      a {
+        text-decoration: none;
+        color: $cyan;
+      }
+
+      .fa {
+        margin: 0 10px 0 5px;
+      }
+    }
+  }
+}

@@ -81,11 +81,11 @@
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever" uservisible="false">
+        <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="studio_setScoreText" inline="true" uservisible="false">
+            <block type="studio_setScoreText" inline="true">
               <value name="TEXT">
-                <block type="variables_get" uservisible="false">
+                <block type="variables_get">
                   <title name="VAR">points</title>
                 </block>
               </value>
