@@ -32,7 +32,7 @@ ENV['BUILD'] = `git rev-parse --short HEAD`
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 # Upload the given log to the cucumber-logs s3 bucket.
