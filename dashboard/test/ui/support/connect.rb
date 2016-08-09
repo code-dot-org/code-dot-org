@@ -6,6 +6,15 @@ require_relative '../../../../deployment'
 require 'active_support/core_ext/object/blank'
 
 $browser_configs = JSON.load(open("browsers.json"))
+$cucumber_env = ENV.select do |k, _|
+  [
+      'BROWSER_CONFIG',
+      'BS_ROTATABLE',
+      'MOBILE',
+      'TEST_RUN_NAME',
+      'APPLITOOLS_HOST_OS'
+  ].include? k
+end
 
 MAX_CONNECT_RETRIES = 3
 
@@ -96,15 +105,7 @@ browser = nil
 Before do
   puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
-  @cucumber_env = ENV.select do |k, _|
-    [
-        'BROWSER_CONFIG',
-        'BS_ROTATABLE',
-        'MOBILE',
-        'TEST_RUN_NAME',
-        'APPLITOOLS_HOST_OS'
-    ].include? k
-  end
+  @cucumber_env = $cucumber_env
 
   if slow_browser?
     browser ||= get_browser
