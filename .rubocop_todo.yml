@@ -249,6 +249,13 @@ Style/RescueModifier:
 Style/SpaceAfterComma:
   Enabled: false
 
+# Offense count: 197
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: space, no_space
+Style/SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
 # Offense count: 13
 # Cop supports --auto-correct.
 Style/SpaceAroundKeyword:
