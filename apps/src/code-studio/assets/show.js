@@ -13,7 +13,7 @@ var Dialog = require('../dialog');
  *   uploaded.
  * @param onClose {Function} Called when the user closes the asset manager.
  */
-module.exports = function (assetChosen, typeFilter, onClose) {
+module.exports = function (assetChosen, typeFilter, onClose, showUnderageWarning) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = new Dialog({
@@ -21,24 +21,16 @@ module.exports = function (assetChosen, typeFilter, onClose) {
     id: 'manageAssetsModal',
     onHidden: onClose
   });
-  const appType = dashboard.project.getStandaloneApp();
-  // TODO: ditch this in favor of react-redux connector
-  // once more of code-studio is integrated into mainline react tree.
-  const studioApp = require('../../StudioApp').singleton;
-  const pageConstants = studioApp.reduxStore.getState().pageConstants;
-  const showWarning = appType === 'applab' && (
-    !pageConstants.isSignedIn || pageConstants.is13Plus
-  );
 
   ReactDOM.render(React.createElement(ImagePicker, {
-    showWarning,
     typeFilter: typeFilter,
     channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);
-    } : null
+    } : null,
+    showUnderageWarning,
   }), codeDiv);
 
   dialog.show();
