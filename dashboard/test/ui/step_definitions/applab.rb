@@ -332,5 +332,5 @@ And /^Firebase is enabled$/ do
 end
 
 And /^Firebase is disabled$/ do
-  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(true)
+  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
 end
