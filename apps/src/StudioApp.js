@@ -1448,6 +1448,10 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
  * scale of child elements is updated to the current width.
  */
 StudioApp.prototype.resizeVisualization = function (width) {
+  if ($('#visualizationColumn').hasClass('wireframeShare')) {
+    return;
+  }
+
   var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
