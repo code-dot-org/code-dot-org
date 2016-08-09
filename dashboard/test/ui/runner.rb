@@ -213,10 +213,10 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(arguments)
+def run_tests(env, arguments)
   start_time = Time.now
   puts "cucumber #{arguments}"
-  Open3.popen3("cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, "cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -315,21 +315,22 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_threads => $
   # HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
-  ENV['BROWSER_CONFIG'] = browser_name
+  run_environment = {}
+  run_environment['BROWSER_CONFIG'] = browser_name
 
-  ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
-  ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
-  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
-  ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
-  ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
-  ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
-  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
-  ENV['TEST_RUN_NAME'] = test_run_string
+  run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
+  run_environment['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
+  run_environment['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  run_environment['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
+  run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
+  run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
+  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['TEST_RUN_NAME'] = test_run_string
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
+  run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     if $options.out
@@ -430,7 +431,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_threads => $
   FileUtils.rm rerun_filename, force: true
 
   reruns = 0
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments)
   log_link = upload_log_and_get_public_link(html_output_filename, {
       commit: COMMIT_HASH,
       success: succeeded.to_s,
@@ -447,7 +448,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_threads => $
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments)
     log_link = upload_log_and_get_public_link(html_output_filename, {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,

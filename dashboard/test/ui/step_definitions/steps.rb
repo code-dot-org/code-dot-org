@@ -158,13 +158,13 @@ When /^I submit$/ do
 end
 
 When /^I rotate to landscape$/ do
-  if @cucumber_env['BS_ROTATABLE'] == "true"
+  if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
   end
 end
 
 When /^I rotate to portrait$/ do
-  if @cucumber_env['BS_ROTATABLE'] == "true"
+  if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:portrait)
   end
 end
