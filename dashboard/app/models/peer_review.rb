@@ -142,9 +142,25 @@ class PeerReview < ActiveRecord::Base
     end
   end
 
+  def self.get_review_completion_status(user, script)
+    if user &&
+        script.peer_reviews_to_complete.try(:>, 0) &&
+        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+      reviews_done = PeerReview.where(reviewer: user, script: script, status: [0, 1, 2]).size
+
+      if reviews_done >= script.peer_reviews_to_complete
+        Plc::EnrollmentModuleAssignment::COMPLETED
+      elsif reviews_done > 0
+        Plc::EnrollmentModuleAssignment::IN_PROGRESS
+      else
+        Plc::EnrollmentModuleAssignment::NOT_STARTED
+      end
+    end
+  end
+
   def self.get_peer_review_summaries(user, script)
     if user &&
-        script.professional_learning_course? &&
+        script.peer_reviews_to_complete.try(:>, 0) &&
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
 
       PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
