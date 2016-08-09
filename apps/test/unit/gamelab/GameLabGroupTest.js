@@ -94,5 +94,245 @@ describe('GameLabGroup', function () {
         expect(result).to.equal(true);
       });
     });
+
+    describe('collide', function () {
+      it('returns false if no sprite in group overlaps target sprite', function () {
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.collide(targetSprite);
+        }
+        expect(result).to.equal(false);
+      });
+
+      it('returns true if first sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.collide(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if last sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.collide(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if every sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.collide(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+    });
+
+    describe('bounce', function () {
+      it('returns false if no sprite in group overlaps target sprite', function () {
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounce(targetSprite);
+        }
+        expect(result).to.equal(false);
+      });
+
+      it('returns true if first sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounce(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if last sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounce(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if every sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounce(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+    });
+
+    describe('bounceOff', function () {
+      it('returns false if no sprite in group overlaps target sprite', function () {
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounceOff(targetSprite);
+        }
+        expect(result).to.equal(false);
+      });
+
+      it('returns true if first sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounceOff(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if last sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounceOff(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if every sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.bounceOff(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+    });
+
+    describe('overlap', function () {
+      it('returns false if no sprite in group overlaps target sprite', function () {
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.overlap(targetSprite);
+        }
+        expect(result).to.equal(false);
+      });
+
+      it('returns true if first sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.overlap(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if last sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.overlap(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if every sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.overlap(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+    });
+
+    describe('displace', function () {
+      it('returns false if no sprite in group overlaps target sprite', function () {
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.displace(targetSprite);
+        }
+        expect(result).to.equal(false);
+      });
+
+      it('returns true if first sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.displace(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if last sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.displace(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+
+      it('returns true if every sprite in group overlaps target sprite', function () {
+        // Make sprite1 overlap with target sprite
+        sprite1.x = targetSprite.x;
+        sprite1.y = targetSprite.y;
+        sprite2.x = targetSprite.x;
+        sprite2.y = targetSprite.y;
+
+        let result;
+        for (let i = 0; i < group.length + 1; i++) {
+          result = group.displace(targetSprite);
+        }
+        expect(result).to.equal(true);
+      });
+    });
   });
 });
