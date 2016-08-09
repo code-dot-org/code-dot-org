@@ -228,6 +228,9 @@ end
 if $options.force_db_access
   $options.pegasus_db_access = true
   $options.dashboard_db_access = true
+elsif ENV['CI']
+  $options.pegasus_db_access = true
+  $options.dashboard_db_access = true
 elsif rack_env?(:development)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
