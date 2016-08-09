@@ -594,4 +594,9 @@ module LevelsHelper
       Ability.new(current_user).can? :view_level_solutions, @script
     end
   end
+
+  def should_show_inline_answer?
+    current_user.try(:authorized_teacher?) && !@script.try(:pd?) ||
+      (@script_level && UserLevel.find_by(user: @current_user, level: @script_level.level).try(:view_answers))
+  end
 end

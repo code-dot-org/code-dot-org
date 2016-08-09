@@ -12,6 +12,8 @@
 #  script_id       :integer
 #  level_source_id :integer
 #  submitted       :boolean
+#  view_answers    :boolean
+#  unlocked_at     :datetime
 #
 # Indexes
 #
@@ -23,6 +25,8 @@ require 'cdo/activity_constants'
 # Summary information about a User's Activity on a Level in a Script.
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ActiveRecord::Base
+  AUTOLOCK_PERIOD = 1.day
+
   belongs_to :user
   belongs_to :level
   belongs_to :script
@@ -83,5 +87,13 @@ class UserLevel < ActiveRecord::Base
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
+  end
+
+  def has_autolocked?
+    (self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago)
+  end
+
+  def locked?
+    self.submitted? && !self.view_answers? || self.has_autolocked?
   end
 end

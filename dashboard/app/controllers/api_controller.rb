@@ -11,6 +11,79 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
+  # TODO: what's to prevent a malicious entity from adding an arbitrarily large number of these
+  def update_lockable_state
+    updates = params.require(:updates)
+    updates.to_a.each do |item|
+      user_level_data = item[:user_level_data]
+      if user_level_data[:user_level_id]
+        UserLevel.find(item[:user_level_data][:user_level_id]).update(
+          submitted: item[:locked],
+          view_answers: item[:view_answers],
+          unlocked_at: item[:locked] ? nil : Time.now
+        )
+      # if we're still locked, there's no need to create a new user_level
+      elsif !item[:locked]
+        if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
+          raise 'Must provide user, level, and script ids'
+        end
+        UserLevel.create(
+          user_id: user_level_data[:user_id],
+          level_id: user_level_data[:level_id],
+          script_id: user_level_data[:script_id],
+          submitted: false,
+          view_answers: item[:view_answers],
+          unlocked_at: Time.now
+        )
+      end
+    end
+    render json: {}
+  end
+
+  # For a given users, gets the lockable state for each user in each of their sections
+  def lockable_state
+    return unless current_user
+
+    data = current_user.sections.each_with_object({}) do |section, section_hash|
+      unless section[:deleted_at]
+        @section = section
+        load_script
+        section_hash[section.id] = {
+          section_id: section.id,
+          section_name: section.name,
+          stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+            next unless stage.lockable?
+            # assumption that lockable stages have a single (assessment) level
+            if stage.script_levels.length > 1
+              raise 'Expect lockable stages to have a single script_level'
+            end
+            script_level = stage.script_levels[0]
+            stage_hash[stage.id] = section.students.map do |student|
+              user_level = UserLevel.find_by(user_id: student.id, level: script_level.level, script_id:  @script.id)
+              # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
+              # don't yet have a user_level, and need to provide enough data to create one
+              if user_level
+                user_level_data = { user_level_id: user_level.id }
+              else
+                user_level_data = { user_id: student.id, level_id: script_level.level.id, script_id: script_level.script.id }
+              end
+
+              {
+                user_level_data: user_level_data,
+                name: student.name,
+                # if we don't have a user level, consider us locked
+                locked: user_level ? user_level.locked? : true,
+                view_answers: user_level ? user_level.view_answers : nil
+              }
+            end
+          end
+        }
+      end
+    end
+
+    render json: data
+  end
+
   def section_progress
     load_section
     load_script

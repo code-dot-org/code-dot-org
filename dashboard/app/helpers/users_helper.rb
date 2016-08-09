@@ -91,11 +91,20 @@ module UsersHelper
           ul = uls.try(:[], level_id)
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
-          if completion_status != 'not_tried'
+          view_answers = !!ul.try(:view_answers)
+          locked = ul.try(:locked?) || sl.stage.lockable? && !ul
+
+          # for now, we don't allow authorized teachers to be "locked"
+          if locked && !user.authorized_teacher?
+            user_data[:levels][level_id] = {
+              status: 'locked'
+            }
+          elsif completion_status != 'not_tried'
             user_data[:levels][level_id] = {
                 status: completion_status,
                 result: ul.try(:best_result) || 0,
                 submitted: submitted ? true : nil,
+                view_answers: view_answers ? true : nil,
                 paired: ul.paired? ? true : nil
             }.compact
 
@@ -132,7 +141,7 @@ module UsersHelper
     if level.is_a? LevelGroup
       pages_completed = []
 
-      if user.last_attempt(level).level_source
+      if user.last_attempt(level).try(:level_source)
         last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
       end
 
