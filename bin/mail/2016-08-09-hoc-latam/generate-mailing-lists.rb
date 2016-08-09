@@ -58,20 +58,25 @@ es_queries = {
       create_ip_country_s:(#{es_country_or_list})
     )
   ),
+
+  # 'la' is an exception to the ISO 3166 country codes,
+  # it's our own code for the Latin America region and localized page at hourofcode.com/la
   es_2015: %Q(
     kind_s: HocSignup2015 AND
     (
       location_country_s:(#{es_country_or_list}) OR
       create_ip_country_s:(#{es_country_or_list}) OR
-      hoc_country_s:'la'
+      hoc_country_s:la
     )
   ),
+
+  # 3 localized Hour of Code pages in Spanish during 2016 campaign (Latin America, Colombia, Peru)
   es_2016: %Q(
     kind_s: HocSignup2016 AND
     (
-      location_country_s:'Brazil' OR
-      create_ip_country_s:'Brazil' OR
-      hoc_country_s:('la' OR 'co' OR 'pe')
+      location_country_s:(#{es_country_or_list}) OR
+      create_ip_country_s:(#{es_country_or_list}) OR
+      hoc_country_s:(la OR co OR pe)
     )
   )
 }
@@ -96,7 +101,7 @@ pt_queries = {
     (
       location_country_s:Brazil OR
       create_ip_country_s:Brazil OR
-      hoc_country_s:'br'
+      hoc_country_s:br
     )
   ),
   pt_2016: %q(
