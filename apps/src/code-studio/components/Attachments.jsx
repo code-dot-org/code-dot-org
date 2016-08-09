@@ -26,7 +26,8 @@ var styles = {
  */
 var Attachments = React.createClass({
   propTypes: {
-    readonly: React.PropTypes.bool
+    readonly: React.PropTypes.bool,
+    showUnderageWarning: React.PropTypes.bool,
   },
 
   getInitialState: function () {
@@ -45,7 +46,7 @@ var Attachments = React.createClass({
   },
 
   showAssetManager: function () {
-    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}));
+    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}), this.props.showUnderageWarning);
   },
 
   render: function () {
