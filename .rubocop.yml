@@ -72,9 +72,6 @@ Style/IfInsideElse:
 Style/RedundantReturn:
   Enabled: false
 
-# As of July 2016, there is enough disagreement in our codebase, on our team,
-# and apathy to the rule to suggest a negative cost-benefit of enabling the
-# rule.
 Style/StringLiterals:
   Enabled: false
 
