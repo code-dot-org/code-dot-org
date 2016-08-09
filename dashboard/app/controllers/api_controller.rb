@@ -23,18 +23,17 @@ class ApiController < ApplicationController
           unlocked_at: item[:locked] ? nil : Time.now
         )
       # if we're still locked, there's no need to create a new user_level
+      # TODO: consider the case where teacher unlocked them (such that a user level was created, but the client is still
+      # using userid/levelid/scriptid), then relocked them - we DO actually need to update here
       elsif !item[:locked]
         if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
           raise 'Must provide user, level, and script ids'
         end
-        UserLevel.create(
-          user_id: user_level_data[:user_id],
-          level_id: user_level_data[:level_id],
-          script_id: user_level_data[:script_id],
-          submitted: false,
-          view_answers: item[:view_answers],
-          unlocked_at: Time.now
-        )
+        UserLevel.find_or_create_by(user_id: user_level_data[:user_id], level_id: user_level_data[:level_id], script_id: user_level_data[:script_id]) do |user_level|
+          user_level.submitted = false
+          user_level.view_answers = item[:view_answers]
+          user_level.unlocked_at = Time.now
+        end
       end
     end
     render json: {}
@@ -65,15 +64,16 @@ class ApiController < ApplicationController
               if user_level
                 user_level_data = { user_level_id: user_level.id }
               else
+                # TODO: i wonder if we can/should just always take this path
                 user_level_data = { user_id: student.id, level_id: script_level.level.id, script_id: script_level.script.id }
               end
 
               {
                 user_level_data: user_level_data,
                 name: student.name,
-                # if we don't have a user level, consider us locked
+                # if we don't have a user level, consider ourselves locked
                 locked: user_level ? user_level.locked? : true,
-                view_answers: user_level ? user_level.view_answers : nil
+                view_answers: user_level ? !user_level.locked? && user_level.view_answers? : false
               }
             end
           end
