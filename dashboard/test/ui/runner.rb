@@ -291,7 +291,9 @@ browser_features.sort! do |browser_feature_a, browser_feature_b|
     flakiness_for_browser_feature(browser_feature_a)
 end
 
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_threads => $options.parallel_limit) do |browser, feature|
+# Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+parallel_config = ENV['CI'] ? {:in_threads => $options.parallel_limit} : {:in_processes => $options.parallel_limit}
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
 
