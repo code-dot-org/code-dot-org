@@ -8,6 +8,10 @@ import ConfirmationDialog from './confirmation_dialog';
 import FacilitatorsList from './facilitators_list';
 
 const WorkshopTableRow = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   propTypes: {
     workshop: React.PropTypes.shape({
       sessions: React.PropTypes.array.isRequired,
@@ -19,8 +23,8 @@ const WorkshopTableRow = React.createClass({
       facilitators: React.PropTypes.array.isRequired,
       state: React.PropTypes.string.isRequired
     }).isRequired,
-    onView: React.PropTypes.func.isRequired,
-    onEdit: React.PropTypes.func,
+    viewUrl: React.PropTypes.string.isRequired,
+    editUrl: React.PropTypes.string,
     onDelete: React.PropTypes.func
   },
 
@@ -30,11 +34,14 @@ const WorkshopTableRow = React.createClass({
     };
   },
 
-  handleViewClick() {
-    this.props.onView(this.props.workshop);
+  handleViewClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.viewUrl);
   },
-  handleEditClick() {
-    this.props.onEdit(this.props.workshop);
+
+  handleEditClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.editUrl);
   },
 
   handleDeleteClick() {
@@ -50,13 +57,29 @@ const WorkshopTableRow = React.createClass({
     this.props.onDelete(this.props.workshop);
   },
 
+  renderViewButton() {
+    return (
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.viewUrl)}
+        onClick={this.handleViewClick}
+      >
+        View
+      </Button>
+    );
+  },
+
   renderEditButton() {
-    if (!this.props.onEdit) {
+    if (!this.props.editUrl) {
       return null;
     }
 
     return (
-      <Button bsSize="xsmall" onClick={this.handleEditClick}>
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.editUrl)}
+        onClick={this.handleEditClick}
+      >
         Edit
       </Button>
     );
@@ -99,7 +122,7 @@ const WorkshopTableRow = React.createClass({
           {this.props.workshop.state}
         </td>
         <td>
-          <Button bsSize="xsmall" onClick={this.handleViewClick}>View</Button>
+          {this.renderViewButton()}
           {this.renderEditButton()}
           {this.renderDeleteButton()}
           <ConfirmationDialog
