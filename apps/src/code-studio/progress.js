@@ -14,7 +14,8 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showLessonPlans
+  showTeacherInfo,
+  authorizeLockable
 } from './progressRedux';
 
 var progress = module.exports;
@@ -42,6 +43,11 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
   );
 };
 
+/**
+ * @param {object} scriptData
+ * @param {string?} currentLevelId - Set when viewing course progress from our
+ *   dropdown vs. the course progress page
+ */
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
   const store = initializeStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
@@ -52,14 +58,19 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   ).done(data => {
     data = data || {};
 
-    // Show lesson plan links if teacher
-    if (data.isTeacher) {
-      store.dispatch(showLessonPlans());
+    // Show lesson plan links and other teacher info if teacher and on unit
+    // overview page
+    if (data.isTeacher && !currentLevelId) {
+      store.dispatch(showTeacherInfo());
     }
 
     if (data.focusAreaPositions) {
       store.dispatch(updateFocusArea(data.changeFocusAreaPath,
         data.focusAreaPositions));
+    }
+
+    if (data.lockableAuthorized) {
+      store.dispatch(authorizeLockable());
     }
 
     // Merge progress from server (loaded via AJAX)
@@ -105,10 +116,14 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
     clientState.allLevelsProgress()[scriptData.name] || {}
   ));
 
-  // Progress from the server should be written down locally.
-  store.subscribe(() => {
-    clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
-  });
+  // Progress from the server should be written down locally, unless we're a teacher
+  // viewing a student's work.
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+  if (!isViewingStudentAnswer) {
+    store.subscribe(() => {
+      clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
+    });
+  }
 
   return store;
 }

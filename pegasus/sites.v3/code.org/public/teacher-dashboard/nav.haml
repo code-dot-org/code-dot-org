@@ -33,7 +33,7 @@ content-type: text/ng-template
 
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "assessments" ? "active tab" : "tab"'}
-        %a{'ng-href' => "#/sections/{{section.id}}/assessments"}= I18n.t('dashboard_navigation_view_assessments')
+        %a{'ng-href' => "#/sections/{{section.id}}/assessments"}= I18n.t('dashboard_navigation_view_assessments_surveys')
 
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}

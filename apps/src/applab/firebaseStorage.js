@@ -1,5 +1,7 @@
 /* global Applab */
 
+import { castValue } from './dataBrowser/dataUtils';
+import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
 
@@ -280,15 +282,48 @@ FirebaseStorage.resetRecordListener = function () {
 };
 
 /**
- * Delete an entire table from firebase storage.
+ * Delete an entire table from firebase storage, then reset its lastId and rowCount.
  * @param {string} tableName
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
-  tableRef.set(null).then(onSuccess, onError);
+  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  tableRef.set(null)
+    .then(() => countersRef.set(null))
+    .then(onSuccess, onError);
 };
+
+/**
+ * @param {boolean} overwrite
+ * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
+ *   or an empty map if overwrite is true.
+ */
+function getExistingTables(overwrite) {
+  if (overwrite) {
+    return Promise.resolve({});
+  }
+  const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+  return tablesRef.once('value').then(snapshot => snapshot.val() || {});
+}
+
+/**
+ * Converts records into a format that can be written to a table's `records` node in
+ * firebase, overwriting the "id" field of each record if necessary.
+ * @param {Array.<Object>} records Array of raw javascript objects representing records.
+ * @returns {Object} Map representing records data, where each key is a record id, and
+ *   each value is a JSON-encoded record containing an "id" field equal to the record id.
+ */
+function getRecordsData(records) {
+  const recordsData = {};
+  records.forEach((record, index) => {
+    const id = index + 1;
+    record.id = id;
+    recordsData[id] = JSON.stringify(record);
+  });
+  return recordsData;
+}
 
 /**
  * Populates a channel with table data for one or more tables
@@ -299,47 +334,198 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
  * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
- *    and http status in case of failure.
+ * @param {function} onError Function to call with an error in case of failure.
  */
 FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Respect overwrite
-  let promises = [];
-  let tablesRef = getDatabase(Applab.channelId).child('storage/tables');
-  let tablesMap = JSON.parse(jsonData);
-  Object.keys(tablesMap).forEach(tableName => {
-    let recordsMap = tablesMap[tableName];
-    let recordsRef = tablesRef.child(`${tableName}/records`);
-    Object.keys(recordsMap).forEach(recordId => {
-      let recordString = JSON.stringify(recordsMap[recordId]);
-      promises.push(recordsRef.child(recordId).set(recordString));
-    });
-  });
-  Promise.all(promises).then(onSuccess, onError);
+  getExistingTables(overwrite).then(existingTables => {
+    const promises = [];
+    const newTables = JSON.parse(jsonData);
+    for (const tableName in newTables) {
+      if (overwrite || (existingTables[tableName] === undefined)) {
+        const newRecords = newTables[tableName];
+        const recordsData = getRecordsData(newRecords);
+        promises.push(overwriteTableData(tableName, recordsData));
+      }
+    }
+    return Promise.all(promises);
+  }).then(onSuccess, onError);
 };
 
 /**
+ * @param {boolean} overwrite
+ * @returns {Promise} Promise containing a map of existing key/value pairs, or an
+ *   empty map if overwrite is true.
+ */
+function getExistingKeyValues(overwrite) {
+  if (overwrite) {
+    return Promise.resolve({});
+  }
+  return getKeysRef(Applab.channelId).once('value')
+    .then(snapshot => snapshot.val() || {});
+}
+
+/**
  * Populates the key/value store with initial data
- * @param {string} jsonData The json data that represents the tables in the format of:
+ * @param {string} jsonData The json data that represents the keys/value pairs in the
+ *   format of:
  *   {
  *     "click_count": 5,
  *     "button_color": "blue"
  *   }
- * @param {bool} overwrite Whether to overwrite a table if it already exists.
+ * @param {bool} overwrite Whether to overwrite a key if it already exists.
  * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
- *    and http status in case of failure.
+ * @param {function} onError Function to call with an error in case of failure.
  */
 FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Respect overwrite
-  let keysRef = getKeysRef(Applab.channelId);
-  let keyValueMap = JSON.parse(jsonData);
-  keysRef.update(keyValueMap).then(onSuccess, onError);
+  getExistingKeyValues(overwrite).then(oldKeyValues => {
+    const newKeyValues = JSON.parse(jsonData);
+    const keysData = {};
+    for (const key in newKeyValues) {
+      if (overwrite || (oldKeyValues[key] === undefined)) {
+        keysData[key] = JSON.stringify(newKeyValues[key]);
+      }
+    }
+    getKeysRef(Applab.channelId).update(keysData).then(onSuccess, onError);
+  });
 };
+
+/**
+ * Delete every instance of the specified column name currently in the table.
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {function()} onSuccess
+ * @param {function(*)} onError
+ */
+FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {
+  const recordsRef =
+    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value')
+    .then(snapshot => {
+      let recordsData = snapshot.val() || {};
+      Object.keys(recordsData).forEach(recordId => {
+        const record = JSON.parse(recordsData[recordId]);
+        delete record[columnName];
+        recordsData[recordId] = JSON.stringify(record);
+      });
+      return recordsData;
+    })
+    .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
+/**
+ * Rename every instance of the specified column name currently in the table. This is
+ * unsafe in that we do not check whether data already exists in the new column.
+ * @param {string} tableName
+ * @param {string} oldName
+ * @param {string} newName
+ * @param {function()} onSuccess
+ * @param {function(*)} onError
+ */
+FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {
+  const recordsRef =
+    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value')
+    .then(snapshot => {
+      let recordsData = snapshot.val() || {};
+      // Preserve column order.
+      Object.keys(recordsData).forEach(recordId => {
+        const oldRecord = JSON.parse(recordsData[recordId]);
+        let newRecord = {};
+        Object.keys(oldRecord).forEach(oldKey => {
+          const newKey = (oldKey === oldName ? newName : oldKey);
+          newRecord[newKey] = oldRecord[oldKey];
+        });
+        recordsData[recordId] = JSON.stringify(newRecord);
+      });
+      return recordsData;
+    })
+    .then(recordsData => recordsRef.set(recordsData))
+    .then(onSuccess, onError);
+};
+
+/**
+ * Parses a CSV string into records data in a format that can be written into the
+ * records node of a firebase table.
+ * @param {string} csvData
+ * @returns {Promise} A promise containing recordsData or an error message.
+ */
+function parseRecordsDataFromCsv(csvData) {
+  return new Promise((resolve, reject) => {
+    parseCsv(csvData, {columns: true}, (error, records) => {
+      if (error) {
+        return reject(error);
+      }
+      resolve(records);
+    });
+  }).then(records => {
+    let recordsData = {};
+    records.forEach((record, index) => {
+      const id = index + 1;
+      for (const key in record) {
+        record[key] = castValue(record[key]);
+      }
+      record.id = id;
+      recordsData[id] = JSON.stringify(record);
+    });
+    return recordsData;
+  });
+}
+
+/**
+ * Validates that the records data does not exceed size limits.
+ * @param recordsData The records data to validate.
+ * @returns {Promise} A promise containing recordsData or an error message.
+ */
+function validateRecordsData(recordsData) {
+  return loadConfig().then(config => {
+    if (Object.keys(recordsData).length > config.maxTableRows) {
+      return Promise.reject(`Import failed because the data is too large. ` +
+        `A table may only contain ${config.maxTableRows} rows.`);
+    }
+    if (Object.keys(recordsData).some(id => recordsData[id].length > config.maxRecordSize)) {
+      return Promise.reject(`Import failed because one of of the records is too large. ` +
+        `The maximum allowable size is ${config.maxRecordSize} bytes.`);
+    }
+    return recordsData;
+  });
+}
+
+/**
+ * Overwrites the table with new contents, and updates the table counters accordingly.
+ * Rate limit counters are not updated.
+ * @param {string} tableName
+ * @param recordsData
+ * @returns {Promise} A promise which is successful if all writes were successful.
+ */
+function overwriteTableData(tableName, recordsData) {
+  const recordsRef = getDatabase(Applab.channelId).child(
+    `storage/tables/${tableName}/records`);
+  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  return recordsRef.set(recordsData)
+    .then(() => {
+      // Work around security rule validation checks.
+      return countersRef.set(null);
+    }).then(() => {
+      const count = Object.keys(recordsData).length;
+      return countersRef.set({
+        lastId: count,
+        rowCount: count,
+      });
+    });
+}
+
+FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {
+  parseRecordsDataFromCsv(tableDataCsv)
+    .then(recordsData => validateRecordsData(recordsData))
+    .then(recordsData => overwriteTableData(tableName, recordsData))
+    .then(onSuccess, onError);
+};
+
 export default FirebaseStorage;

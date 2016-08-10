@@ -1,18 +1,18 @@
 name 'ECSPD3-u6 links to online simulations' 
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"> 
+# Alternative Ideas for Unit 6 >  Links to Online Simulations Using Robots and Tangibles
 
-## Alternative Ideas for Unit 6 >  Links to Online Simulations Using Robots and Tangibles 
- 
-<br><br> 
-#### Concepts Covered  
-Online Robot Simulations and Tangibles.  
- 
-#### Overview 
+## Concepts Covered
+
+Online Robot Simulations and Tangibles.
+
+## Overview
+
 If you don't have physical robots there are a variety of other options to give students the experience of working with robots.  Listed are some virtual options you can try out.
 
-##### Simulations
+### Simulations
+
 - <a href="http://www.robotvirtualworlds.com/" target=_blank>Robot Virtual Worlds</a>  
 - <a href="https://www.robomindacademy.com/go/course/robomind/Teaser/A1/0" target=_blank>Robot Mind Academy</a>  
 - <a href="http://simspark.sourceforge.net/wiki/index.php/Main_Page" target=_blank>SimSpark - Soccer Game Simulation for the Robo Cup Challenge </a>   
@@ -25,7 +25,8 @@ If you don't have physical robots there are a variety of other options to give s
 - <a href=" http://kidsahead.com/subjects/1-robotics/activities/30" target=_blank>Build a Virtual Robot</a>
 - <a href=" http://kidsahead.com/subjects/4-video-games/activities/213" target=_blank>Build a 3D Robot</a>
 
-##### Tangibles
+### Tangibles
+
 - Makey Makey
 	- <a href="https://vimeo.com/60307041"target=_blank>Makey Makey Video</a>  
 	- <a href="http://makeymakey.com/guides/"target=_blank>Makey Makey Guide</a>
@@ -48,9 +49,7 @@ If you don't have physical robots there are a variety of other options to give s
 - Augmented Realty
 	- <a href="http://engagetheirminds.com/augmented-reality/" target=_blank>Augmented Reality Lesson Plans</a>
 - E-Textiles
-	<br>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/4DjdJydl-ds" frameborder="0" allowfullscreen></iframe>
-	<br>
 	- <a href="http://www.ncwit.org/sites/default/files/resources/etextiles_box.pdf" target=_blank>E-Textiles Lesson Plan</a>
 	- <a href="https://www.sparkfun.com/products/11590" target=_blank>ProtoSnap LilyTwinkle E-Textiles Lesson Plan</a>
 - Chatbots
@@ -62,13 +61,8 @@ If you don't have physical robots there are a variety of other options to give s
 	- <a href="https://www.tinkercad.com/about/learn" target=_blank>Tinkercad Tutorials</a>
 	- <a href="http://www.123dapp.com/howto/design" target=_blank>123 Design Tutorials</a>
 	- <a href="http://www.schrockguide.net/3d-printing.html" target=_blank>3D Printing Lesson Plans and Resources</a>
-		
-<br>
 
-Click “Continue” below to learn about the next lesson.  
- 
-<br/><br/> 
+Click “Continue” below to learn about the next lesson.
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

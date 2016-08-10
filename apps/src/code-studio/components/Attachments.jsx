@@ -26,7 +26,8 @@ var styles = {
  */
 var Attachments = React.createClass({
   propTypes: {
-    readonly: React.PropTypes.bool
+    readonly: React.PropTypes.bool,
+    showUnderageWarning: React.PropTypes.bool,
   },
 
   getInitialState: function () {
@@ -45,7 +46,7 @@ var Attachments = React.createClass({
   },
 
   showAssetManager: function () {
-    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}));
+    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}), this.props.showUnderageWarning);
   },
 
   render: function () {
@@ -53,7 +54,7 @@ var Attachments = React.createClass({
     if (this.state.loaded) {
       attachmentList = assetListStore.list().map(function (asset) {
         var url = '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename;
-        return <a key={asset.filename} style={styles.attachment} href={url} target='_blank'>{asset.filename}</a>;
+        return <a key={asset.filename} style={styles.attachment} href={url} target="_blank">{asset.filename}</a>;
       });
     }
 
@@ -62,10 +63,11 @@ var Attachments = React.createClass({
       button = (
         <input
           style={styles.button}
-          className='btn btn-default'
-          type='button'
-          value='Add/Remove Attachments'
-          onClick={this.showAssetManager}/>
+          className="btn btn-default"
+          type="button"
+          value="Add/Remove Attachments"
+          onClick={this.showAssetManager}
+        />
       );
     }
 

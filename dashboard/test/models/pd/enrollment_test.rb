@@ -41,15 +41,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.valid?
     assert_equal [
       'Name is required',
-      'Email is required',
-      'School is required',
-      'School type is required'
+      'Email is required'
     ], enrollment.errors.full_messages
 
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
-    enrollment.school = 'school'
-    enrollment.school_type = 'school type'
     assert enrollment.valid?
   end
 
@@ -101,5 +97,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     CDO.expects(:log).returns(mock_logger)
 
     Pd::Enrollment.create_for_unenrolled_attendees(workshop)
+  end
+
+  test 'emails are stored in lowercase' do
+    enrollment = build :pd_enrollment, email: 'MixedCase@Example.net'
+    assert_equal 'mixedcase@example.net', enrollment.email
+
+    # Also accepts nil
+    enrollment.email = nil
+    assert_nil enrollment.email
   end
 end

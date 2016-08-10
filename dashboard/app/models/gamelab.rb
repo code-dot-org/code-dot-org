@@ -35,6 +35,7 @@ class Gamelab < Blockly
     data_properties
     hide_view_data_button
     debugger_disabled
+    pause_animations_by_default
     start_animations
   )
 
@@ -109,7 +110,8 @@ class Gamelab < Blockly
 
         // Sprites
         "var sprite = createSprite": null,
-        "setSpeed": null,
+        "createEdgeSprites": null,
+        "setSpeedAndDirection": null,
         "getDirection": null,
         "getSpeed": null,
         "isTouching": null,
@@ -125,6 +127,8 @@ class Gamelab < Blockly
         "setVelocity": null,
         "sprite.height": null,
         "sprite.width": null,
+        "getScaledWidth": null,
+        "getScaledHeight": null,
         "debug": null,
         "depth": null,
         "lifetime": null,
@@ -175,7 +179,7 @@ class Gamelab < Blockly
         "setRotationEach": null,
         "setRotationSpeedEach": null,
         "setScaleEach": null,
-        "setSpeedEach": null,
+        "setSpeedAndDirectionEach": null,
         "setVelocityEach": null,
         "setVelocityXEach": null,
         "setVelocityYEach": null,

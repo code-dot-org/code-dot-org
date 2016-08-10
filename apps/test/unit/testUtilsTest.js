@@ -1,6 +1,10 @@
 /** @file Who watches the watchers? */
+import React from 'react';
 import {expect} from '../util/configuredChai';
-import {forEveryBooleanPermutation} from '../util/testUtils';
+import {
+    forEveryBooleanPermutation,
+    throwOnConsoleErrors
+} from '../util/testUtils';
 
 describe('forEveryBooleanPermutation', function () {
   it('invokes a function with no arguments once', function () {
@@ -20,7 +24,7 @@ describe('forEveryBooleanPermutation', function () {
       expect([a]).to.deep.equal(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty();
+    expect(expectedInvocations).to.be.empty;
   });
 
   it('invokes a function with two arguments four times...', function () {
@@ -34,7 +38,7 @@ describe('forEveryBooleanPermutation', function () {
       expect([a, b]).to.deep.equal(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty();
+    expect(expectedInvocations).to.be.empty;
   });
 
   it('invokes a function with three arguments eight times...', function () {
@@ -52,6 +56,23 @@ describe('forEveryBooleanPermutation', function () {
       expect([a, b, c]).to.deep.equal(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty();
+    expect(expectedInvocations).to.be.empty;
+  });
+});
+
+describe('throwOnConsoleErrors', function () {
+  describe('without it', function () {
+    it('console.error does not throw an exception', function () {
+        expect(() => console.error('This console.error call is intentional.'))
+            .not.to.throw();
+    });
+  });
+
+  describe('with it', function () {
+    throwOnConsoleErrors();
+    it('console.error does throw an exception', function () {
+      expect(() => console.error('should throw'))
+          .to.throw(Error, 'should throw');
+    });
   });
 });

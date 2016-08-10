@@ -1,18 +1,14 @@
 name 'CSPPD3-u2 complete the challenge overview'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Complete the Challenge > What’s Inside
 
-### Complete the Challenge > What’s Inside
+## What goes into Completing the Challenge? 
 
-<br/>
-#### What goes into Completing the Challenge? 
-
->- Get into the lesson and do the core activity 
+> - Get into the lesson and do the core activity 
 - Extend the lesson by creating an extended learning activity or an assessment question
 
 Click “Continue” below to get started with the Unit 2 challenge! 
 
-<br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

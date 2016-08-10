@@ -34,6 +34,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'maker/setup', to: 'maker#setup'
+
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
 
@@ -74,6 +76,7 @@ Dashboard::Application.routes.draw do
     passwords: 'passwords'
   }
   get 'discourse/sso' => 'discourse_sso#sso'
+  post '/auth/lti', to: 'lti_provider#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
@@ -318,6 +321,9 @@ Dashboard::Application.routes.draw do
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+    get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
+    post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+    patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
     # This is a developer aid that allows previewing rendered mail views with fixed test data.
     # The route is restricted so it only exists in development mode.
@@ -329,6 +335,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
+  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
@@ -347,8 +354,8 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
-      get 'test_logs/:branch/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
-      get 'test_logs/:branch/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+      get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 

@@ -22,6 +22,7 @@ class Ability
       UserPermission,
       Follower,
       PeerReview,
+      Section,
       # Ops models
       District,
       Workshop,
@@ -62,7 +63,7 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :read, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
         can :manage, Follower
@@ -119,35 +120,23 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.persisted? && user.admin?
+    if user.persisted? && user.student_of_admin? # logged in, not admin, is student of admin
       can :read, Script
       can :read, ScriptLevel
-    elsif user.persisted? && user.student_of_admin? # logged in, not admin, is student of admin
-      can :read, Script do |script|
-        !script.admin_required?
-      end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.admin_required?
-      end
     elsif user.persisted? # logged in, not admin, not student of admin
       can :read, Script do |script|
-        !script.admin_required? &&
-            !script.student_of_admin_required?
+        !script.student_of_admin_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.admin_required? &&
-            !script_level.script.student_of_admin_required?
+        !script_level.script.student_of_admin_required?
       end
     else # not logged in
       can :read, Script do |script|
-        !script.admin_required? &&
-            !script.student_of_admin_required? &&
-            !script.login_required?
+        !script.student_of_admin_required? && !script.login_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required? &&
-            !script_level.script.student_of_admin_required? &&
-            !script_level.script.admin_required?
+        !script_level.script.student_of_admin_required? &&
+          !script_level.script.login_required?
       end
     end
 
@@ -156,12 +145,10 @@ class Ability
     # through ProjectsController and their view/edit requirements are defined
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
-      if project_type_props[:admin_required]
-        can :load_project, project_type_key if user.admin?
-      elsif project_type_props[:student_of_admin_required]
-        can :load_project, project_type_key if user.admin? || user.student_of_admin?
+      if project_type_props[:student_of_admin_required]
+        can :load_project, project_type_key if user.student_of_admin?
       elsif project_type_props[:login_required]
-        can :load_project, project_type_key if user.id
+        can :load_project, project_type_key if user.persisted?
       else
         can :load_project, project_type_key
       end

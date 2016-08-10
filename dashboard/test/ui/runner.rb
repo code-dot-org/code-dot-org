@@ -23,14 +23,16 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'socket'
 
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = GitUtils.current_branch
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 # Upload the given log to the cucumber-logs s3 bucket.
@@ -240,8 +242,7 @@ all_features = Dir.glob('features/**/*.feature')
 features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
-git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] = "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
@@ -250,6 +251,7 @@ if test_type == 'Eyes'
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
+status_page_url = nil
 if $options.with_status_page
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
@@ -259,8 +261,10 @@ if $options.with_status_page
   File.open(status_page_filename, 'w') do |file|
     file.write haml_engine.render(Object.new, {
       api_origin: CDO.studio_url('', scheme),
+      s3_bucket: S3_LOGS_BUCKET,
+      s3_prefix: S3_LOGS_PREFIX,
       type: test_type,
-      git_branch: git_branch,
+      git_branch: GIT_BRANCH,
       commit_hash: COMMIT_HASH,
       start_time: $suite_start_time,
       browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
@@ -270,10 +274,29 @@ if $options.with_status_page
   HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
+def test_run_identifier(browser, feature)
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
-  browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+  browser_name = browser_name_or_unknown(browser)
+  "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+end
+
+def browser_name_or_unknown(browser)
+  browser['name'] || 'UnknownBrowser'
+end
+
+def flakiness_for_browser_feature(browser_feature)
+  TestFlakiness.test_flakiness[test_run_identifier(browser_feature[0], browser_feature[1])] || 1.0
+end
+
+# Sort by flakiness (most flaky at end of array, will get run first)
+browser_features.sort! do |browser_feature_a, browser_feature_b|
+  flakiness_for_browser_feature(browser_feature_b) <=>
+    flakiness_for_browser_feature(browser_feature_a)
+end
+
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
+  browser_name = browser_name_or_unknown(browser)
+  test_run_string = test_run_identifier(browser, feature)
 
   if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
@@ -521,7 +544,8 @@ $suite_duration = Time.now - $suite_start_time
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
   "Test count: #{($suite_success_count + $suite_fail_count)}. " \
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}."
+  "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

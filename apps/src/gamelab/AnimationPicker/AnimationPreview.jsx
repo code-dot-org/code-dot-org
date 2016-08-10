@@ -119,10 +119,11 @@ const AnimationPreview = React.createClass({
 
     return (
       <div
-          ref="root"
-          style={containerStyle}
-          onMouseOver={this.onMouseOver}
-          onMouseOut={this.onMouseOut}>
+        ref="root"
+        style={containerStyle}
+        onMouseOver={this.onMouseOver}
+        onMouseOut={this.onMouseOut}
+      >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>
     );

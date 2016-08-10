@@ -1,28 +1,26 @@
 name 'ECSPD U4 D 14 Intro'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-
-## Day 14 Scratch -- Variables
+# Day 14 Scratch &mdash; Variables
 
 First, let's explore the eighth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 162-163.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=162)
 
-#### Key Concepts
+## Key Concepts
 
 - Students will be introduced to variables and explore how to use variables in a game they create where they will earn points for picking healthy foods and lose points for picking unhealthy foods. They will be using the "change\_by\_" block , if\_then" block, a variable block and an operator block.
 - Students will also learn the concept of iteration and the importance of initialization. Some examples are here: [https://scratch.mit.edu/projects/84788156/#editor](https://scratch.mit.edu/projects/84788156/#editor)
 
-#### Common Difficulties
+## Common Difficulties
 
 Variables are a tricky topic but they are an important concept to master in Computer Science. Part of what can make variables a challenge is that they are different than the variables you use in math class.  Working to solidify variables will be a worthwhile concept to focus on.
-<br><br>
+
 You could even play a few rounds of a simple game in class where the students earn or lose points. The goal of playing this game will be to motivate variables with the idea of needing to store some information (in this case the score). After playing the game for a while (and giving students a chance to have their scores change) talk as a group about how you might create that same game in Scratch. 
-<br><br>
+
 If you are not comfortable with variables yourself, take some time to work through the lesson.
 
-#### All Resources for This Lesson
+## All Resources for This Lesson
 
 **Teacher Supports:**
 
@@ -44,8 +42,8 @@ If you are not comfortable with variables yourself, take some time to work throu
 - Variables - [http://learnscratch.org/sc2-u4/sc2-l20](http://learnscratch.org/sc2-u4/sc2-l20)
 
 **Consider:** What are some real life scenarios that demonstrate the concept of variables well?  How might real life scenarios help students better understand how variables work?
-<br><br>
+
 Click "Continue" below to move on to the next stage.
-<br><br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

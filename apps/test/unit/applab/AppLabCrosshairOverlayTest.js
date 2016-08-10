@@ -27,19 +27,19 @@ describe('AppLabCrosshairOverlay', () => {
     stubDraggedElementDropPoint.returns(null);
     renderer.render(
         <AppLabCrosshairOverlay
-            width={TEST_APP_WIDTH}
-            height={TEST_APP_HEIGHT}
-            mouseX={TEST_MOUSE_X}
-            mouseY={TEST_MOUSE_Y}
+          width={TEST_APP_WIDTH}
+          height={TEST_APP_HEIGHT}
+          mouseX={TEST_MOUSE_X}
+          mouseY={TEST_MOUSE_Y}
         />
     );
     const result = renderer.getRenderOutput();
     expect(result).to.deep.equal(
         <CrosshairOverlay
-            width={TEST_APP_WIDTH}
-            height={TEST_APP_HEIGHT}
-            mouseX={TEST_MOUSE_X}
-            mouseY={TEST_MOUSE_Y}
+          width={TEST_APP_WIDTH}
+          height={TEST_APP_HEIGHT}
+          mouseX={TEST_MOUSE_X}
+          mouseY={TEST_MOUSE_Y}
         />
     );
   });
@@ -50,19 +50,19 @@ describe('AppLabCrosshairOverlay', () => {
     stubDraggedElementDropPoint.returns({ left: dropPointX, top: dropPointY });
     renderer.render(
         <AppLabCrosshairOverlay
-            width={TEST_APP_WIDTH}
-            height={TEST_APP_HEIGHT}
-            mouseX={TEST_MOUSE_X}
-            mouseY={TEST_MOUSE_Y}
+          width={TEST_APP_WIDTH}
+          height={TEST_APP_HEIGHT}
+          mouseX={TEST_MOUSE_X}
+          mouseY={TEST_MOUSE_Y}
         />
     );
     const result = renderer.getRenderOutput();
     expect(result).to.deep.equal(
         <CrosshairOverlay
-            width={TEST_APP_WIDTH}
-            height={TEST_APP_HEIGHT}
-            mouseX={dropPointX}
-            mouseY={dropPointY}
+          width={TEST_APP_WIDTH}
+          height={TEST_APP_HEIGHT}
+          mouseX={dropPointX}
+          mouseY={dropPointY}
         />
     );
   });

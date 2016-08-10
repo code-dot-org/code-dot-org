@@ -68,6 +68,49 @@
     "execute_palette_apis_only": "false",
     "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n",
     "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem"
+      },
+      {
+        "entries": [
+          "penUp:0",
+          "moveTo:2",
+          "drawSquare:1",
+          "penDown:0",
+          "moveForward:1",
+          "turnRight:0",
+          "moveForward:1",
+          "turnRight:0",
+          "moveForward:1",
+          "turnRight:0",
+          "moveForward:1",
+          "turnRight:0",
+          "penUp:0",
+          "moveTo:2",
+          "drawSquare:1",
+          "penDown:0",
+          "moveForward:1",
+          "turnRight:0",
+          "moveForward:1",
+          "turnRight:0",
+          "moveForward:1",
+          "turnRight:0",
+          "moveForward:1",
+          "turnRight:0",
+          "penUp:0"
+        ],
+        "matchType": "excat",
+        "minTimes": 1,
+        "message": "App Lab is only expecting you to change a small thing inside the defiinition of drawSquare.  You shouldn't need to add or remove any lines of code - just change one line."
+      }
+    ],
     "contained_level_names": null
   },
   "published": true,

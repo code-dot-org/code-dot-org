@@ -1,21 +1,21 @@
-/*
-  Workshop Index. Displays workshop summaries and controls for CRUD actions.
-  Route: /workshops
+/**
+ * Workshop Index. Displays workshop summaries and controls for CRUD actions.
+ * Route: /workshops
  */
 import React from 'react';
-var WorkshopTable = require('./components/workshop_table');
-var Button = require('react-bootstrap').Button;
+import {Button} from 'react-bootstrap';
+import WorkshopTable from './components/workshop_table';
 
-var WorkshopIndex = React.createClass({
+const WorkshopIndex = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
 
-  handleNewWorkshopClick: function (e) {
+  handleNewWorkshopClick() {
     this.context.router.push('/workshops/new');
   },
 
-  render: function () {
+  render() {
     return (
       <div>
         <h1>Your Workshops</h1>
@@ -38,10 +38,9 @@ var WorkshopIndex = React.createClass({
         <h2>Past</h2>
         <WorkshopTable
           queryUrl="/api/v1/pd/workshops/?state=Ended"
-          canDelete
         />
       </div>
     );
   }
 });
-module.exports = WorkshopIndex;
+export default WorkshopIndex;

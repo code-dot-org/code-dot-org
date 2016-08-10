@@ -64,13 +64,13 @@ ________________
 
 **ECS, CS in Science, and CS in Algebra Facilitator Payments**
 
-- All facilitators (veteran and facilitators in training) are paid $500 per workshop day.
-- Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
-- Each PLP is responsible for contracting with and paying any local veteran facilitators and any facilitators in training who will be with you all year. We will include the funding for you to pay them in our checks to your organization.
+- All facilitators (veteran and facilitators in training) are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
+- This summer, Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
+- Starting with the first Academic Year Workshop, each PLP is responsible for contracting with and paying all facilitators. We will include the funding for you to pay them in our checks to your organization.
 
 **CS Principles Facilitator Payments**
 
-- All facilitators are paid $500 per workshop day.
+- All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
 - Each PLP is responsible for contracting with and paying any facilitators who run local workshops.
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
 

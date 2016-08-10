@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduction to Computer Science
+        title: "कंप्यूटर विज्ञान का परिचय"
         desc: "यह पाठ आपको कंप्यूटर विज्ञान की अवधारणाओं से अवगत कराएगी और यह समझाएगी
           की एक कंप्यूटर वैज्ञानिक के कार्ये होते हैं। यह  छात्रों को भी एक कंप्यूटर
           वैज्ञानिक की भूमिका ग्रहण करने का अवसर  देगी। इस पाठ के अंत में सभी विद्याथियों
@@ -98,7 +98,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: The Internet
+        title: "इंटरनेट"
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
