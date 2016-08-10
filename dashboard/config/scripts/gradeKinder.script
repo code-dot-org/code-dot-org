@@ -77,6 +77,8 @@ assessment 'K-1 Keep it Private multi 1'
 stage 'Loops Unplugged'
 level 'gradeK_unplugged_loops'
 
+stage 'Loops Intro'
+
 
 stage 'Loops'
 level 'gradek_artist_loopsPre'
@@ -89,10 +91,9 @@ level 'gradek_artist_loops5'
 level 'gradek_artist_loops6'
 level 'gradek_artist_loops7'
 level 'gradek_artist_loops8'
-level 'artistLoopsK9'
-level 'artistLoopsKA'
-level 'artistLoopsKB'
-level 'artistLoopsKFP'
+level 'gradek_artist_loops9'
+level 'gradek_artist_loopsA'
+level 'gradek_artist_loopsFP'
 
 stage 'Events Unplugged'
 level 'BigEvent'
