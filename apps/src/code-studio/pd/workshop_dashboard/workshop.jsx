@@ -92,6 +92,7 @@ const Workshop = React.createClass({
   },
 
   loadEnrollments() {
+    this.setState({loadingEnrollments: true});
     this.loadEnrollmentsRequest = $.ajax({
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
@@ -107,6 +108,16 @@ const Workshop = React.createClass({
     });
   },
 
+  handleDeleteEnrollment(id) {
+    this.deleteEnrollmentRequest = $.ajax({
+      method: 'DELETE',
+      url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments/${id}`,
+      dataType: "json"
+    }).done(() => {
+      // reload
+      this.loadEnrollments();
+    });
+  },
 
   componentWillUnmount() {
     if (this.loadWorkshopRequest) {
@@ -114,6 +125,9 @@ const Workshop = React.createClass({
     }
     if (this.loadEnrollmentsRequest) {
       this.loadEnrollmentsRequest.abort();
+    }
+    if (this.deleteEnrollmentRequest) {
+      this.deleteEnrollmentRequest.abort();
     }
     if (this.startRequest) {
       this.startRequest.abort();
@@ -195,7 +209,6 @@ const Workshop = React.createClass({
 
   handleEnrollmentRefreshClick() {
     this.loadEnrollments();
-    this.setState({loadingEnrollments: true});
   },
 
   getSectionUrl() {
@@ -467,6 +480,7 @@ const Workshop = React.createClass({
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           enrollments={this.state.enrollments}
+          onDelete={this.handleDeleteEnrollment}
         />
       );
     }
