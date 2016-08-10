@@ -277,22 +277,6 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-dependent option
-    # Fetch localized strings
-    if l.custom?
-      loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.en? || loc_val.nil?
-        level_options['instructions'] = loc_val
-      end
-    else
-      %w(instructions).each do |label|
-        val = [l.game.app, l.game.name].map { |name|
-          data_t("level.#{label}", "#{name}_#{l.level_num}")
-        }.compact.first
-        level_options[label] ||= val unless val.nil?
-      end
-    end
-
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
