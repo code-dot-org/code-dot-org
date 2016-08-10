@@ -23,14 +23,16 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'socket'
 
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = GitUtils.current_branch
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 # Upload the given log to the cucumber-logs s3 bucket.
@@ -240,8 +242,7 @@ all_features = Dir.glob('features/**/*.feature')
 features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
-git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] = "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
@@ -260,8 +261,10 @@ if $options.with_status_page
   File.open(status_page_filename, 'w') do |file|
     file.write haml_engine.render(Object.new, {
       api_origin: CDO.studio_url('', scheme),
+      s3_bucket: S3_LOGS_BUCKET,
+      s3_prefix: S3_LOGS_PREFIX,
       type: test_type,
-      git_branch: git_branch,
+      git_branch: GIT_BRANCH,
       commit_hash: COMMIT_HASH,
       start_time: $suite_start_time,
       browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},

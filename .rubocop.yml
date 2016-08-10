@@ -6,8 +6,7 @@ AllCops:
   Exclude:
     - 'apps/**/*'
     - 'code-studio/**/*'
-    - 'dashboard/db/**/*'
-    - 'dashboard/db/*'
+    - 'dashboard/db/schema.rb'
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
