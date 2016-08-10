@@ -75,6 +75,14 @@ class Pd::Enrollment < ActiveRecord::Base
     end
   end
 
+  def in_section?
+    user = resolve_user
+    return false unless user && self.workshop.section
+
+    # Teachers enrolled in the workshop are "students" in the section.
+    self.workshop.section.students.exists?(user.id)
+  end
+
   private
 
   def unused_random_code
