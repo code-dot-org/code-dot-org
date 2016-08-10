@@ -43,10 +43,7 @@ module RakeUtils
   end
 
   def self.system(*args)
-    if ENV['RAKE_VERBOSE']
-      system_stream_output(*args)
-      return
-    end
+    return system_stream_output(*args) if ENV['RAKE_VERBOSE']
 
     command = command_(*args)
     status, output = system__ command
