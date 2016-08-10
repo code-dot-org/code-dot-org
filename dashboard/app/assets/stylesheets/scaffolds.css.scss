@@ -1,6 +1,8 @@
+@import "color";
+
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: $white;
+  color: $default_text;
   font-size: 13px;
   line-height: 18px;
 }
@@ -11,7 +13,7 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: $lightest_gray;
   padding: 10px;
   font-size: 11px;
 }
@@ -23,29 +25,29 @@ div {
 }
 
 #notice {
-  color: green;
+  color: $realgreen;
 }
 
 .field_with_errors label {
-  color: red;
+  color: $red;
   display: inline-block;
 }
 
 .field_with_errors input {
-  background-color: yellow;
+  background-color: $realyellow;
 }
 
 .field_with_errors_div {
-  background-color: yellow;
+  background-color: $realyellow;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid #c00;
+  border: 2px solid $red;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: $white;
   h2 {
     text-align: left;
     font-weight: bold;
@@ -53,8 +55,8 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0;
-    background-color: #c00;
-    color: #fff;
+    background-color: $red;
+    color: $white;
   }
   ul li {
     font-size: 12px;
