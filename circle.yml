@@ -43,6 +43,8 @@ dependencies:
     - 'echo "sync_assets: false" >> locals.yml'
     # Run rake install
     - bundle exec rake install
+      environment:
+        RAKE_VERBOSE: true
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:
