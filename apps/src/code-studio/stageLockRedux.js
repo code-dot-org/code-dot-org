@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
 export const ViewType = makeEnum('Student', 'Teacher');
-export const LockStatus = makeEnum('Locked', 'Editable', 'Readonly');
+export const LockStatus = makeEnum('Locked', 'Editable', 'ViewAnswers');
 
 // Action types
 const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
@@ -18,7 +18,7 @@ const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
 const FINISH_SAVE = 'stageLock/FINISH_SAVE';
 
-const initialState = {
+export const initialState = {
   viewAs: ViewType.Teacher,
   sections: {},
   selectedSection: null,
@@ -54,17 +54,14 @@ export default function reducer(state = initialState, action) {
     if (!state.sections[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
-    const currentSection = state.sections[sectionId];
     return Object.assign({}, state, {
       selectedSection: sectionId,
     });
   }
 
   if (action.type === OPEN_LOCK_DIALOG) {
-    const { sections, selectedSection } = state;
     const lockDialogStageId = action.stageId;
 
-    const students = sections[selectedSection].stages[lockDialogStageId];
     return Object.assign({}, state, {
       lockDialogStageId,
       lockStatus: lockStatusForStage(state, action.stageId)
@@ -100,7 +97,7 @@ export default function reducer(state = initialState, action) {
         throw new Error('Expect user ids be the same');
       }
       item.locked = update.lockStatus === LockStatus.Locked;
-      item.view_answers = update.lockStatus === LockStatus.Readonly;
+      item.view_answers = update.lockStatus === LockStatus.ViewAnswers;
     });
 
     const nextState = _.cloneDeep(state);
@@ -139,8 +136,8 @@ export const openLockDialog = stageId => ({
   stageId
 });
 
-const beginSave = () => ({ type: BEGIN_SAVE });
-const finishSave = (newLockStatus, stageId) => ({
+export const beginSave = () => ({ type: BEGIN_SAVE });
+export const finishSave = (newLockStatus, stageId) => ({
   type: FINISH_SAVE,
   lockStatus: newLockStatus,
   stageId
@@ -160,7 +157,7 @@ const performSave = (newLockStatus, stageId, onComplete) => {
     }).map(item => ({
       user_level_data: item.userLevelData,
       locked: item.lockStatus === LockStatus.Locked,
-      view_answers: item.lockStatus === LockStatus.Readonly
+      view_answers: item.lockStatus === LockStatus.ViewAnswers
     }));
 
     if (saveData.length === 0) {
@@ -233,6 +230,6 @@ const lockStatusForStage = (state, stageId) => {
     userLevelData: student.user_level_data,
     name: student.name,
     lockStatus: student.locked ? LockStatus.Locked : (
-      student.view_answers ? LockStatus.Readonly : LockStatus.Editable)
+      student.view_answers ? LockStatus.ViewAnswers : LockStatus.Editable)
   }));
 };

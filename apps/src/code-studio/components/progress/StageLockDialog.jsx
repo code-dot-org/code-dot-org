@@ -104,7 +104,7 @@ const StageLockDialog = React.createClass({
   },
 
   showAnswers() {
-    this.setAllLockStatus(LockStatus.Readonly);
+    this.setAllLockStatus(LockStatus.ViewAnswers);
   },
 
   handleRadioChange(event) {
@@ -237,14 +237,14 @@ const StageLockDialog = React.createClass({
                     style={[
                       styles.tableCell,
                       styles.radioCell,
-                      lockStatus === LockStatus.Readonly && styles.selectedCell
+                      lockStatus === LockStatus.ViewAnswers && styles.selectedCell
                     ]}
                   >
                     <input
                       type="radio"
                       name={index}
-                      value={LockStatus.Readonly}
-                      checked={lockStatus === LockStatus.Readonly}
+                      value={LockStatus.ViewAnswers}
+                      checked={lockStatus === LockStatus.ViewAnswers}
                       onChange={this.handleRadioChange}
                     />
                   </td>
