@@ -70,6 +70,8 @@ module.exports.Group = function (baseConstructor) {
   /**
    * Test each member of group against the target using the isTouching sprite
    * method.  Return true if any touching occurred.
+   * This follows the same approach as _groupCollideGameLab to properly
+   * handle JSInterpreter __substate.
    *
    * @method isTouching
    * @param {Object} target Group or Sprite
@@ -83,8 +85,8 @@ module.exports.Group = function (baseConstructor) {
     }
     if (state.__i < this.size()) {
       if (!state.__subState) {
-        // Before we call AABBops (another stateful function), hang a __subState
-        // off of state, so it can use that instead to track its state:
+        // Before we call Sprite.isTouching which calls AABBops (another stateful function),
+        // hang a __subState off of state, so it can use that instead to track its state:
         state.__subState = { doneExec: true };
       }
       var didTouch = this.get(state.__i).isTouching(target);
