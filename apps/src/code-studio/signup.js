@@ -34,7 +34,7 @@ window.SignupManager = function (options) {
         var errorField = $(`#${field}-block .error_in_field`);
          // We have a custom inline message for user_type errors already set in the DOM.
         if (field !== "user_type") {
-          errorField.text(err.responseJSON.errors[field]);
+          errorField.text(err.responseJSON.errors[field][0]);
         }
         errorField.fadeTo("normal", 1);
       }
