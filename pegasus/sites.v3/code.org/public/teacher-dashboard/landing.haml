@@ -3,14 +3,6 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
-:ruby
-  def can_see_pd_workshop_dashboard?
-    dashboard_user[:admin] ||
-      have_permission?('workshop_organizer') ||
-      have_permission?('facilitator') ||
-      have_permission?('district_contact')
-  end
-
 .teacher-announcements
   = view :teacher_announcements
 
@@ -21,14 +13,14 @@ content-type: text/ng-template
     %a{href:CDO.studio_url('/pd/workshop_dashboard')}
       %h3
         Manage PD Workshops
-  -if dashboard_user[:admin]
+  -if dashboard_admin?
     %h1
       Ops Dashboard
     %a{href:'/ops-dashboard#/districts'}
       %h3
         Manage Districts
-  -if dashboard_user[:admin] || have_permission?('facilitator')
-    -if !dashboard_user[:admin]
+  -if dashboard_admin? || have_permission?('facilitator')
+    -if !dashboard_admin?
       %h1
         Facilitator Dashboard
     %a{href:'/ops-dashboard#/workshops'}
@@ -40,11 +32,11 @@ content-type: text/ng-template
     %a{href:'/ops-dashboard#/workshops'}
       %h3
         View PD Workshops
-  -if dashboard_user[:admin] || have_permission?('district_contact')
+  -if dashboard_admin? || have_permission?('district_contact')
     %a{href:'/ops-dashboard#/teacher-cohorts'}
       %h3
         Manage Teacher Cohorts
-  -if dashboard_user[:admin] || have_permission?('create_professional_development_workshop')
+  -if dashboard_admin? || have_permission?('create_professional_development_workshop')
     %h1
       Affiliate Dashboard
     %a{href:'/manage-professional-development-workshops'}
