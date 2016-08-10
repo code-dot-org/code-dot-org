@@ -751,9 +751,10 @@ class ApiControllerTest < ActionController::TestCase
     end
 
     # can't update students that dont belong to teacher
+    other_student = create :student
     updates = [{
       user_level_data: {
-        user_id: @student_flappy_1.id,
+        user_id: other_student.id,
         level_id: level.id,
         script_id: script.id
       },
