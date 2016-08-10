@@ -19,7 +19,7 @@ var ImagePicker = React.createClass({
     typeFilter: React.PropTypes.string,
     channelId: React.PropTypes.string.isRequired,
     uploadsEnabled: React.PropTypes.bool.isRequired,
-    showWarning: React.PropTypes.bool.isRequired,
+    showUnderageWarning: React.PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -95,11 +95,11 @@ var ImagePicker = React.createClass({
     return (
       <div className="modal-content" style={styles.root}>
         {title}
-        {this.props.showWarning && (
-           <p style={styles.warning}>
-             Warning: Do not upload anything that contains personal information.
-           </p>
-         )}
+        {this.props.showUnderageWarning && (
+          <p style={styles.warning}>
+            Warning: Do not upload anything that contains personal information.
+          </p>
+        )}
         {modeSwitch}
         {body}
       </div>
@@ -107,6 +107,8 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
+
+
 
 
 if (BUILD_STYLEGUIDE) {

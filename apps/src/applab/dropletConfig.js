@@ -8,6 +8,8 @@ var ChartApi = require('./ChartApi');
 var elementUtils = require('./designElements/elementUtils');
 var setPropertyDropdown = require('./setPropertyDropdown').setPropertyDropdown;
 
+const studioApp = require('../StudioApp').singleton;
+
 var applabConstants = require('./constants');
 
 var DEFAULT_WIDTH = "320";
@@ -15,7 +17,7 @@ var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter);
+  dashboard.assets.showAssetManager(callback, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
 }
 
 var COLOR_LIGHT_GREEN = '#D3E965';

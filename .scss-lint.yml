@@ -50,5 +50,3 @@ linters:
     enabled: false
   VendorPrefix:
     enabled: false
-  ZeroUnit:
-    enabled: false
