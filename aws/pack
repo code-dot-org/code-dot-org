@@ -1,0 +1,33 @@
+#!/bin/bash
+# Run this script to build Docker and AWS images using Packer.
+# Works on Linux AMD64 platform.
+# Requires `curl` and `unzip` installed on the host machine (for Packer download + install).
+# Also requires `git-core` to determine branch.
+
+# Chefdk should be installed in order to use berks (version 0.11.2 matches the Chef 12.7.2 client required): 
+# `curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -v 0.11.2`
+
+# Docker is required to be installed also:
+# `wget -qO- https://get.docker.com/ | sh`
+# And if you're not running as root it is recommended to add your user to the docker group: `sudo usermod -aG docker $(whoami)`
+set -e
+
+# Download and install Packer to a temp folder.
+PACKER_VERSION=0.8.6
+PACKER_URL="https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
+TMPDIR=~/.cdo
+PACKER_PATH=${TMPDIR}/packer
+if [ ! -f ${PACKER_PATH}/packer ]; then
+  TMPFILE=$(mktemp)
+  mkdir -p ${PACKER_PATH}
+  curl -L ${PACKER_URL} -o ${TMPFILE}
+  unzip -d ${PACKER_PATH} ${TMPFILE}
+  rm ${TMPFILE}
+fi
+
+export PATH=${PATH}:${PACKER_PATH}
+
+(cd ../cookbooks; berks vendor .berkshelf)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+ROOT=$(dirname ${PWD})
+PACKER_LOG=1 packer build -var "branch=${BRANCH}" -var "root=${ROOT}" packer.json

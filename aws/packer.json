@@ -1,0 +1,81 @@
+{
+  "variables": {
+    "branch": "staging",
+    "root": "{{pwd}}"
+  },
+  "builders": [
+    {
+      "type": "docker",
+      "image": "wjordan/ubuntu-chef",
+      "commit": true,
+      "pull": true,
+      "volumes": {
+        "{{user `root`}}": "/home/ubuntu/adhoc"
+      },
+      "run_command": ["-d", "-i", "-t", "--cap-add", "SYS_ADMIN", "{{.Image}}", "/bin/bash"]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo mkdir -p /var/chef/environments && sudo mkdir -p /var/chef/cookbooks && sudo chown -R ubuntu:ubuntu /var/chef",
+        "sudo mkdir -p /tmp/packer-chef-client && sudo chown -R ubuntu:ubuntu /tmp/packer-chef-client"
+      ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "echo $(id -u ubuntu) > /proc/self/loginuid"
+      ],
+      "only": ["docker"]
+    },
+    {
+      "type": "file",
+      "source": "../cookbooks/.berkshelf/",
+      "destination": "/var/chef/cookbooks"
+    },
+    {
+      "type": "file",
+      "source": "../cookbooks/cdo-apps/test/environments/",
+      "destination": "/var/chef/environments"
+    },
+    {
+      "type": "chef-client",
+      "install_command": "curl -L https://www.chef.io/chef/install.sh | {{if .Sudo}}sudo{{end}} bash -s -- -v 12.7.2",
+      "execute_command": "sudo -u ubuntu -H /bin/bash -c 'sudo chef-client -z --no-color -c {{.ConfigPath}} -j {{.JsonPath}}'",
+      "chef_environment": "adhoc",
+      "node_name": "cdo-adhoc",
+      "server_url": "http://localhost:8889",
+      "skip_clean_node": true,
+      "skip_clean_client": true,
+      "run_list": [
+        "apt",
+        "cdo-mysql::server",
+        "cdo-apps",
+        "cdo-apps::stop"
+      ],
+      "config_template": "./client.rb.template",
+      "json": {
+        "cdo-repository": {
+          "branch": "{{user `branch`}}"
+        }
+      }
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "pickettd/code-dot-org",
+        "tag": "1.01",
+        "force": true,
+        "only": ["docker"]
+      },
+      {
+        "type": "docker-push",
+        "only": ["docker"]
+      }
+    ]
+  ]
+}
