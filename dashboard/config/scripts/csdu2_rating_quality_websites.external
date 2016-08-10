@@ -1,6 +1,5 @@
-name 'unique level name here'
-title 'title'
-description 'description here'
+name 'CSDU2 - Rating Quality Websites'
+
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Overview:

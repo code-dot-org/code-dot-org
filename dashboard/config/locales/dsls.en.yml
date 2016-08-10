@@ -183,6 +183,7 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSDU2 - Rating Quality Websites: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -191,6 +192,7 @@ en:
         title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Pre-survey: {}
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
@@ -1045,6 +1047,13 @@ en:
       Prepare for your presentation:
         description here: description here
         title: title
+      SFLP - Web - Describing Webpages: {}
+      SFLP - Web - Designing Code for Computers: {}
+      SFLP - Web - Designing Webpages: {}
+      SFLP - Web - Digital Footprint: {}
+      SFLP - Web - Images on the Web: {}
+      SFLP - Web - Quality Websites: {}
+      SFLP - Web - Text on the Web: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
