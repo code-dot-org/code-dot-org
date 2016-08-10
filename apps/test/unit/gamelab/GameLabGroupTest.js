@@ -36,6 +36,14 @@ describe('GameLabGroup', function () {
   });
 
   describe('collision methods', function () {
+    // Note: collision methods will need to be called multiple times with groups to simulate
+    // what happens in GameLab. When the function is called once (but has multiple sprites
+    // in the group), it will not return a value. It's only when state.doneExec is true (so when
+    // it's looped through all the sprites), that it will return the stored value on the state.
+    // With the way we setup our JSInterpreter in tests, doneExec has no effect on recalling
+    // isTouching so it will only get called once (even though state gets stored). We have for
+    // loops around collision methods in the tests below to mimic how the JSInterpreter behaves
+    // in gamelab.
     var sprite1, sprite2, targetSprite, group;
 
     beforeEach(function () {
