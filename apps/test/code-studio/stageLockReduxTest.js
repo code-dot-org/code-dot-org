@@ -1,5 +1,8 @@
 import { assert } from 'chai';
+import { createStore } from '@cdo/apps/redux';
+import { combineReducers } from 'redux';
 import _ from 'lodash';
+import sinon from 'sinon';
 
 import reducer, {
   initialState,
@@ -11,7 +14,12 @@ import reducer, {
   beginSave,
   finishSave,
   openLockDialog,
-  closeLockDialog
+  closeLockDialog,
+  saveLockDialog,
+  lockStage,
+  BEGIN_SAVE,
+  FINISH_SAVE,
+  CLOSE_LOCK_DIALOG
 } from '@cdo/apps/code-studio/stageLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
@@ -205,7 +213,7 @@ describe('reducer tests', () => {
     it('updates both lockStatus, and the appropriate part of the info in sectoins', () => {
       let state = reducer(initialState, setSections(fakeSectionData));
       state = reducer(state, openLockDialog(stage1Id));
-      state = reducer(state, beginSave);
+      state = reducer(state, beginSave());
 
       const student1LockStatus = state.lockStatus[0].lockStatus;
       const student2LockStatus = state.lockStatus[1].lockStatus;
@@ -246,5 +254,117 @@ describe('reducer tests', () => {
       assert.equal(nextStudent2.locked, false);
       assert.equal(nextStudent2.view_answers, true);
     });
+  });
+});
+
+describe('saveLockDialog', () => {
+  let xhr;
+  let lastRequest;
+  let store;
+  let reducerSpy;
+
+  // Intercept all XHR requests, storing the last one
+  beforeEach(() => {
+    xhr = sinon.useFakeXMLHttpRequest();
+    xhr.onCreate = req => {
+      lastRequest = req;
+    };
+    reducerSpy = sinon.spy(reducer);
+    store = createStore(combineReducers({stageLock: reducerSpy}));
+  });
+
+  afterEach(() => {
+    lastRequest = null;
+    xhr.restore();
+  });
+
+  it('successfully saves via dialog', () => {
+    store.dispatch(setSections(fakeSectionData));
+    store.dispatch(openLockDialog(stage1Id));
+
+    let newLockStatus = _.cloneDeep(store.getState().stageLock.lockStatus);
+    // swap students two and three in terms of lock status
+    newLockStatus[1].lockStatus = LockStatus.ViewAnswers;
+    newLockStatus[2].lockStatus = LockStatus.Editable;
+
+    reducerSpy.reset();
+
+    store.dispatch(saveLockDialog(newLockStatus));
+
+    const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
+    const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
+    const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
+
+    const updates = JSON.parse(lastRequest.requestBody).updates;
+
+    // Make sure we filtered out unchanged student (student1) and pass in the
+    // right data
+    assert.deepEqual(updates, [
+      {
+        user_level_data: student2.user_level_data,
+        locked: false,
+        view_answers: true
+      },
+      {
+        user_level_data: student3.user_level_data,
+        locked: false,
+        view_answers: false
+      }
+    ]);
+
+    lastRequest.respond(200, { 'Content-Type': 'application/json' }, JSON.stringify({}));
+
+    assert.equal(reducerSpy.callCount, 3);
+
+    const firstAction = reducerSpy.getCall(0).args[1];
+    const secondAction = reducerSpy.getCall(1).args[1];
+    const thirdAction = reducerSpy.getCall(2).args[1];
+
+    assert.equal(firstAction.type, BEGIN_SAVE);
+    assert.equal(secondAction.type, FINISH_SAVE);
+    assert.equal(thirdAction.type, CLOSE_LOCK_DIALOG);
+
+  });
+
+  it('successfully lockStage without dialog', () => {
+    store.dispatch(setSections(fakeSectionData));
+
+    reducerSpy.reset();
+
+    store.dispatch(lockStage(stage1Id));
+
+    const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
+    const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
+    const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
+
+    const updates = JSON.parse(lastRequest.requestBody).updates;
+
+    assert.deepEqual(updates, [
+      {
+        user_level_data: student1.user_level_data,
+        locked: true,
+        view_answers: false
+      },
+      {
+        user_level_data: student2.user_level_data,
+        locked: true,
+        view_answers: false
+      },
+      {
+        user_level_data: student3.user_level_data,
+        locked: true,
+        view_answers: false
+      }
+    ]);
+
+    lastRequest.respond(200, { 'Content-Type': 'application/json' }, JSON.stringify({}));
+
+    assert.equal(reducerSpy.callCount, 2);
+
+    const firstAction = reducerSpy.getCall(0).args[1];
+    const secondAction = reducerSpy.getCall(1).args[1];
+
+    assert.equal(firstAction.type, BEGIN_SAVE);
+    assert.equal(secondAction.type, FINISH_SAVE);
   });
 });
