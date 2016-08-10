@@ -2,6 +2,7 @@
 
 var React = require('react');
 var rowStyle = require('./rowStyle');
+const studioApp = require('../../StudioApp').singleton;
 
 // We'd prefer not to make GET requests every time someone types a character.
 // This is the amount of time that must pass between edits before we'll do a GET
@@ -52,7 +53,7 @@ var PropertyRow = React.createClass({
     //
     // However today the `createModalDialog` function and `Dialog` component
     // are intertwined with `StudioApp` which is why we have this direct call.
-    dashboard.assets.showAssetManager(this.changeImage, 'image');
+    dashboard.assets.showAssetManager(this.changeImage, 'image', null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
   },
 
   changeImage: function (filename) {
