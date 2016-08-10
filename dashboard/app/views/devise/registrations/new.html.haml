@@ -41,11 +41,6 @@
           = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
-        #name-block.itemblock
-          .labelblock= t('activerecord.attributes.user.name')
-          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
-          .error_in_field
-
         - if f.object.password_required?
           #password-block.itemblock
             .labelblock= t('activerecord.attributes.user.password')
@@ -56,6 +51,11 @@
             .labelblock= t('activerecord.attributes.user.password_confirmation')
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
+
+        #name-block.itemblock
+          .labelblock= t('activerecord.attributes.user.name')
+          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          .error_in_field
 
         #schoolname-block.itemblock{style: "display: none"}
           .labelblock= t('signup_form.school_name')
