@@ -227,7 +227,7 @@ module AWS
           js: method(:js),
           subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
           public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
-          lambda: method(:lambda),
+          lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
           update_bootstrap_script: method(:update_bootstrap_script),
