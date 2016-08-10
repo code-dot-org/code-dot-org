@@ -42,7 +42,7 @@ dependencies:
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "sync_assets: false" >> locals.yml'
     # Run rake install
-    - bundle exec rake install
+    - bundle exec rake install:
       environment:
         RAKE_VERBOSE: true
     # Run rake build (twice in case of intermittent test failures within rake build)
