@@ -82,19 +82,33 @@ window.SignupManager = function (options) {
   }
 
   $(".signupform").submit(function () {
-    var formData = $('#new_user').serializeArray();
+    // Clear the prior hashed email.
+    $('#user_hashed_email').val('');
 
-    // Teachers get age 21.
+    // Hash the email.
+    window.dashboard.hashEmail({email_selector: "#user_email",
+      hashed_email_selector: "#user_hashed_email",
+      age_selector: "#user_user_age",
+      skip_clear_email: true});
+
+    var formData = $("#new_user").serializeArray();
+
     if (isTeacherSelected()) {
-      formData.push({name: 'user[age]', value: 21});
+      // Teachers get age 21 in the form data.
+      formData.push({name: "user[age]", value: 21});
+    } else {
+      // Students have their email cleared from the form data.
+      // (But we left it showing in the form UI in case they
+      // reattempt.)
+      $.grep(formData, e => e.name === "user[email]")[0].value = "";
     }
 
     // Hide all errors that might be showing from a previous attempt.
     $(".error_in_field").css("opacity", 0);
 
     // Hide any other hint messages that might be showing based on input.
-    $('#password_message').text("");
-    $('#password_message_confirmation').text("");
+    $("#password_message").text("");
+    $("#password_message_confirmation").text("");
 
     $.ajax({
       url: "/users.json",
@@ -136,10 +150,4 @@ window.SignupManager = function (options) {
   $("#user_name").placeholder();
   $("#user_email").placeholder();
   $("#user_school").placeholder();
-
-  $(".signupform").on("submit", function (e) {
-    window.dashboard.hashEmail({ email_selector: '#user_email',
-      hashed_email_selector: '#user_hashed_email',
-      age_selector: '#user_age'});
-  });
 };
