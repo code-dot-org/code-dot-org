@@ -66,11 +66,10 @@ begin
   # sized.
   update_array.each_slice(batch_size) do |update_array_slice|
     ActiveRecord::Base.transaction do
-      update_array_slice.each do |user_id_level_id_level_source_id|
+      update_array_slice.each do |user_id, level_id, level_source_id|
         UserLevel.
-          where(user_id: user_id_level_id_level_source_id[0]).
-          where(level_id: user_id_level_id_level_source_id[1]).
-          update(level_source_id: user_id_level_id_level_source_id[2])
+          where(user_id: user_id, level_id: level_id).
+          update(level_source_id: level_source_id)
       end
     end
   end
