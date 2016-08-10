@@ -88,8 +88,8 @@ var move = function (direction, id) {
       break;
   }
   Maze.executionInfo.queueAction(command, id);
-  if (Maze.wordSearch) {
-    Maze.wordSearch.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
+  if (Maze.subtype.isWordSearch()) {
+    Maze.subtype.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
   }
   if (Maze.shouldCheckSuccessOnMove()) {
     Maze.checkSuccess();
