@@ -6,7 +6,7 @@
   "user_id": 318,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -26,9 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you help me plant wheat on 2 rows? I think the best way would be to use loops!",
+    "instructions": "(Notes for Review) Since the last stage taught the 'repeat until' block, the purpose of this is most likely to teach the 'repeat while' block. In the context of the levels already created, I think using the 'repeat' and 'if' blocks could be possible,  (ex. if the crops weren't spread as evenly on the field so the farmer would have to test for wheat present before collecting it). A Repeat While block would be more applicable if there were multiple wheat/potatoes in each square, which might be a possible change.\r\n\r\nGrant Notes: for the coins, 1=0 and 2=1 (I couldn't get the coins to show up with a value of 0). The wheat should grow at random intervals. For the graphic, think about the Minecraft way of growing wheat (green, has multiple heights showing growth, then yellow for ripe).",
     "step_speed": "2",
-    "ideal": "10",
+    "ideal": "5",
+    "markdown_instructions": "I can only collect wheat when it has grown to ripeness and is nice and yellow. Can you help me collect the wheat in this row that is ready to harvest?",
     "contained_level_names": null
   },
   "published": true,
@@ -37,6 +38,17 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" deletable="false">
+              <title name="TIMES">7</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_move">
@@ -59,44 +71,19 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">4</title>
+              <title name="TIMES">7</title>
               <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="maze_fill"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                <block type="collector_ifCollectible">
+                  <statement name="DO">
+                    <block type="collector_collect"/>
+                  </statement>
                   <next>
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                          <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">4</title>
-                              <statement name="DO">
-                                <block type="maze_fill">
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
