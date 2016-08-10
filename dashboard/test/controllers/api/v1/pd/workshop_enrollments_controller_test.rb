@@ -109,10 +109,17 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_response :forbidden
   end
 
-  test 'attempting to delete a nonexistent enrollment renders 404' do
+  test 'deleting an enrollment is idempotent' do
     sign_in create(:admin)
 
+    delete :destroy, workshop_id: @workshop.id, id: @enrollment.id
+    assert_response :success
+
+    delete :destroy, workshop_id: @workshop.id, id: @enrollment.id
+    assert_response :success
+
+    # deleting a non-existent enrollment also succeeds
     delete :destroy, workshop_id: @workshop.id, id: @unrelated_enrollment.id
-    assert_response 404
+    assert_response :success
   end
 end

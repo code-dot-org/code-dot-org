@@ -9,12 +9,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ::ApplicationController
   # DELETE /api/v1/pd/workshops/1/enrollments/1
   def destroy
     enrollment = @workshop.enrollments.find_by(id: params[:id])
-    unless enrollment
-      head :not_found
-      return
-    end
-
-    enrollment.destroy!
+    enrollment.destroy! if enrollment
     head :no_content
   end
 end
