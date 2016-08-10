@@ -575,6 +575,7 @@ class ApiControllerTest < ActionController::TestCase
     script, level, _ = create_script_with_lockable_stage
 
     user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
+    user_level_data2 = {user_id: @student_2.id, level_id: level.id, script_id: script.id}
 
     # unlock a user_level that does not yet exist
     assert_equal nil, UserLevel.find_by(user_level_data)
@@ -604,6 +605,30 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
     assert_equal true, user_level.view_answers?
     assert_not_nil user_level.unlocked_at
+
+    # multiple updates at once
+    user_level.delete!
+    assert_equal nil, UserLevel.find_by(user_level_data)
+    assert_equal nil, UserLevel.find_by(user_level_data2)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: false,
+      view_answers: false
+    }, {
+      user_level_data: user_level_data2,
+      locked: false,
+      view_answers: false
+    }]
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal false, user_level.submitted?
+    assert_equal false, user_level.view_answers?
+    assert_not_nil user_level.unlocked_at
+
+    user_level2 = UserLevel.find_by(user_level_data2)
+    assert_equal false, user_level2.submitted?
+    assert_equal false, user_level2.view_answers?
+    assert_not_nil user_level2.unlocked_at
   end
 
   test "should update lockable state for existing levels" do
@@ -667,8 +692,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
     assert_equal true, user_level.view_answers?
     assert_not_nil user_level.unlocked_at
-
-    # TODO: multiple updates
   end
 
   test "should fail to update lockable state if given bad data" do
@@ -727,8 +750,19 @@ class ApiControllerTest < ActionController::TestCase
       post :update_lockable_state, updates: updates
     end
 
-    # TODO: can't update students not in section
-    # updates = [
+    # can't update students that dont belong to teacher
+    updates = [{
+      user_level_data: {
+        user_id: @student_flappy_1.id,
+        level_id: level.id,
+        script_id: script.id
+      },
+      locked: true,
+      view_answers: false
+    }]
+    assert_raises do
+      post :update_lockable_state, updates: updates
+    end
   end
 
   test "should get user progress" do

@@ -11,19 +11,21 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
-  # TODO: what's to prevent a malicious entity from adding an arbitrarily large number of these
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
       user_level_data = item[:user_level_data]
 
-      # TODO: maybe we validate that user_id is a student of current_user
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         raise 'Must provide user, level, and script ids'
       end
 
       if item[:locked] && item[:view_answers]
         raise 'Can not view answers while locked'
+      end
+
+      unless User.find(user_id).teachers.include? current_user
+        raise 'Can only update lockable state for users students'
       end
 
       user_level = UserLevel.find_by(
@@ -63,7 +65,6 @@ class ApiController < ApplicationController
         stages: @script.stages.each_with_object({}) do |stage, stage_hash|
           next unless stage.lockable?
           # assumption that lockable stages have a single (assessment) level
-          # TODO: test this error condition
           if stage.script_levels.length > 1
             raise 'Expect lockable stages to have a single script_level'
           end
