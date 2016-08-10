@@ -7,6 +7,5 @@ class CreateLevelBlock < ActiveRecord::Migration
 
       t.timestamps
     end
-
   end
 end
