@@ -28,7 +28,9 @@
   - current_page = params[:puzzle_page] || 1
 
   - if @current_user.user_level_locked?(@script_level, @level)
-    = render partial: 'levels/locked'
+    .locked-level{style: 'font-size: 14px; margin-top: 10px; margin-bottom: 10px;'}
+      =t('locked_stage')
+    = link_to t('continue'), @script_level.next_level_or_redirect_path_for_user(@current_user), class: 'btn btn-large btn-primary next-stage submitButton'
   - else
     - @pages.each do |page|
       - unless data["title"].blank?
@@ -61,12 +63,12 @@
         .level-group-content
           - if ['multi', 'evaluation_multi'].include? level_class
             -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
-            - unless should_show_inline_answer?
+            - unless @current_user.should_see_inline_answer?(@script_level)
               - level.properties['answers'].each { |answer| answer['correct'] = false }
             = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
           - elsif level_class == "text_match"
             -# For students (or teachers doing PD), clear out all answers.
-            - unless should_show_inline_answer?
+            - unless @current_user.should_see_inline_answer?(@script_level)
               - level.properties['answers'] = nil
             = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
           - elsif level_class == "free_response"
