@@ -193,7 +193,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
 

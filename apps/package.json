@@ -99,7 +99,7 @@
     "johnny-five": "0.9.62",
     "jquery": "2.1.4",
     "jquery-ui": "1.10.5",
-    "jquery.cookie": "^1.4.1",
+    "js-cookie": "^2.1.2",
     "js-yaml": "^3.6.0",
     "json-loader": "0.5.4",
     "karma": "^0.13.22",
