@@ -1440,6 +1440,23 @@ function loadStudio(skin, assetUrl) {
     background: skin.assetUrl('background_grid.png'),
   };
 
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), '"blank"'],
+    ['set test map', '"testwall"'],
+  ];
+
+  skin.wallMapLayers = {
+    blank: {
+      srcUrl: skin.assetUrl('obstacle_blank.png'),
+    },
+    testwall: {
+      srcUrl: skin.assetUrl('obstacle_testwall.png'),
+    },
+  };
+
   skin.avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus", "witch",
     "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
     "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",

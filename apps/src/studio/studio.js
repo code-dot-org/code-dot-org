@@ -261,6 +261,23 @@ function loadLevel() {
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
   studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
   studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
+
+  if (skin.wallMapLayers) {
+    Studio.wallMapLayers = {};
+    for (let map in skin.wallMapLayers) {
+      let img = new Image();
+      img.onload = function () {
+        var canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var context = canvas.getContext('2d');
+        context.drawImage(img, 0, 0);
+        Studio.wallMapLayers[map] =
+            context.getImageData(0, 0, canvas.width, canvas.height).data;
+      };
+      img.src = skin.wallMapLayers[map].srcUrl;
+    }
+  }
 }
 
 /**
@@ -677,29 +694,48 @@ var performQueuedMoves = function (i) {
   var origY = sprite.y;
 
   var nextPosition = getNextPosition(i, true);
+  var newX, newY;
 
   if (level.allowSpritesOutsidePlayspace) {
-    sprite.x = nextPosition.x;
-    sprite.y = nextPosition.y;
+    newX = nextPosition.x;
+    newY = nextPosition.y;
   } else {
     var playspaceBoundaries = Studio.getPlayspaceBoundaries(sprite);
 
     // Clamp nextPosition.x to boundaries as newX:
-    var newX = Math.min(playspaceBoundaries.right,
+    newX = Math.min(playspaceBoundaries.right,
                         Math.max(playspaceBoundaries.left, nextPosition.x));
     if (nextPosition.x !== newX) {
       cancelQueuedMovements(i, false);
     }
-    sprite.x = newX;
 
     // Clamp nextPosition.y to boundaries as newY:
-    var newY = Math.min(playspaceBoundaries.bottom,
+    newY = Math.min(playspaceBoundaries.bottom,
                         Math.max(playspaceBoundaries.top, nextPosition.y));
     if (nextPosition.y !== newY) {
       cancelQueuedMovements(i, true);
     }
-    sprite.y = newY;
   }
+
+  if (level.blockMovingIntoWalls) {
+    if (Studio.willSpriteTouchWall(sprite, newX, newY)) {
+      if (!Studio.willSpriteTouchWall(sprite, newX, origY)) {
+        newY = origY;
+        cancelQueuedMovements(i, true);
+      } else if (!Studio.willSpriteTouchWall(sprite, origX, newY)) {
+        newX = origX;
+        cancelQueuedMovements(i, false);
+      } else {
+        newX = origX;
+        newY = origY;
+        cancelQueuedMovements(i, false);
+        cancelQueuedMovements(i, true);
+      }
+    }
+  }
+
+  sprite.x = newX;
+  sprite.y = newY;
 
   // if sprite position changed, note it
   if (origX !== sprite.x || origY !== sprite.y) {
@@ -1549,6 +1585,11 @@ Studio.getWallValue = function (row, col) {
     return 0;
   }
 
+  if (Studio.wallMapLayers) {
+    // If we're using images to define walls, tiles aren't themselves walls
+    return 0;
+  }
+
   if (Studio.wallMap) {
     return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
@@ -1586,7 +1627,15 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     collisionRects = skin.customObstacleZones[Studio.background][Studio.wallMapRequested];
   }
 
-  if (collisionRects) {
+  var wallMapLayer = null;
+  if (Studio.wallMapLayers) {
+    wallMapLayer = Studio.wallMapLayers[Studio.wallMapRequested];
+  }
+
+  if (wallMapLayer) {
+    // Comapre against a layout image
+    return wallMapLayer[4 * (400 * yCenter + xCenter)] === 0;
+  } else if (collisionRects) {
     // Compare against a set of specific rectangles.
     for (var i = 0; i < collisionRects.length; i++) {
       var rect = collisionRects[i];
@@ -4497,7 +4546,8 @@ Studio.setMap = function (opts) {
     useMap = mapValue;
   }
 
-  if (useMap !== null && !skin[useMap]) {
+  if (useMap !== null && !skin[useMap] &&
+      !(skin.wallMapLayers && skin.wallMapLayers[useMap])) {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
@@ -4561,14 +4611,14 @@ Studio.fixSpriteLocation = function () {
 
       for (var row = minRow; row <= maxRow; row++) {
         for (var col = minCol; col <= maxCol; col++) {
-          if (! Studio.getWallValue(row, col)) {
-
-            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
+          var tryX = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
               skin.wallCollisionRectOffsetX;
-            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
+          var tryY = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
               skin.wallCollisionRectOffsetY;
+          if (!Studio.willSpriteTouchWall(sprite, tryX, tryY)) {
+            sprite.x = tryX;
+            sprite.y = tryY;
             sprite.setDirection(Direction.NONE);
-
             return;
           }
         }
