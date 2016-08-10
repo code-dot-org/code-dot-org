@@ -3,9 +3,6 @@ general:
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
-  branches:
-    ignore:
-      - test # skip running on test branch until resolved status page collisions
 machine:
   ruby:
     version: 2.2.3
@@ -20,6 +17,7 @@ machine:
 dependencies:
   cache_directories:
     - "apps/node_modules"
+    - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev enscript

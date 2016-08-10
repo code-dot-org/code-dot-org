@@ -234,4 +234,31 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     assert_equal expected_reviews, PeerReview.get_peer_review_summaries(@user, @script)
   end
+
+  test 'peer review section status' do
+    @script.update(peer_reviews_to_complete: 2)
+    Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
+
+    PeerReview.stubs(:where).returns([0, 0]) # Just need to return an array of size two
+    assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, PeerReview.get_review_completion_status(@user, @script)
+
+    PeerReview.stubs(:where).returns([0])
+    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, PeerReview.get_review_completion_status(@user, @script)
+
+    PeerReview.stubs(:where).returns([])
+    assert_equal Plc::EnrollmentModuleAssignment::NOT_STARTED, PeerReview.get_review_completion_status(@user, @script)
+  end
+
+  test 'peer review section status edge cases' do
+    assert_nil PeerReview.get_review_completion_status(nil, @script)
+
+    @script.update(peer_reviews_to_complete: nil)
+    assert_nil PeerReview.get_review_completion_status(@user, @script)
+
+    @script.update(peer_reviews_to_complete: 0)
+    assert_nil PeerReview.get_review_completion_status(@user, @script)
+
+    @script.update(peer_reviews_to_complete: 2)
+    assert_nil PeerReview.get_review_completion_status(@user, @script)
+  end
 end
