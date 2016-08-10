@@ -131,6 +131,7 @@ en:
     user_type_label: "Account Type"
     user_type_teacher: "Teacher"
     user_type_student: "Student"
+    field_is_required: "is required"
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email or username'
