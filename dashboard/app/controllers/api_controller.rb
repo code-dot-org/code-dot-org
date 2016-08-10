@@ -24,7 +24,7 @@ class ApiController < ApplicationController
         raise 'Can not view answers while locked'
       end
 
-      unless User.find(user_id).teachers.include? current_user
+      unless User.find(user_level_data[:user_id]).teachers.include? current_user
         raise 'Can only update lockable state for users students'
       end
 
