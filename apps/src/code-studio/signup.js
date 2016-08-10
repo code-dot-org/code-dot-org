@@ -74,7 +74,7 @@ window.SignupManager = function (options) {
 
   function isTeacherSelected() {
     var formData = $('#new_user').serializeArray();
-    var userType = $.grep(formData, function (e) { return e.name === "user[user_type]"; });
+    var userType = $.grep(formData, e => e.name === "user[user_type]");
     if (userType.length === 1 && userType[0].value === "teacher") {
       return true;
     }
