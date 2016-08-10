@@ -1,6 +1,20 @@
 /** @file Collapsible panel with title, used for each character in crypto widget */
 import React from 'react';
+import color from '../color';
 import {AnyChildren} from './types';
+
+const style = {
+  root: {
+    margin: 5,
+  },
+  header: {
+    fontFamily: `"Gotham 5r", sans-serif`,
+    color: color.charcoal,
+    borderBottomStyle: 'solid',
+    borderBottomWidth: 1,
+    borderBottomColor: color.charcoal
+  }
+};
 
 const CollapsiblePanel = React.createClass({
   propTypes: {
@@ -10,9 +24,13 @@ const CollapsiblePanel = React.createClass({
 
   render() {
     return (
-      <div>
-        {this.props.title}
-        {this.props.children}
+      <div style={style.root}>
+        <div style={style.header}>
+          {this.props.title}
+        </div>
+        <div>
+          {this.props.children}
+        </div>
       </div>);
   }
 });
