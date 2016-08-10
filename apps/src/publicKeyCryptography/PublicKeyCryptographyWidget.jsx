@@ -1,5 +1,7 @@
 /** @file Root component for Public Key Cryptography widget */
 import React from 'react';
+import Characters, {Alice, Eve, Bob} from './Characters';
+import ModuloClock from './ModuloClock';
 
 const PublicKeyCryptographyWidget = React.createClass({
   render() {
@@ -35,23 +37,3 @@ HyperlinksList.propTypes = {
     React.PropTypes.element,
     React.PropTypes.arrayOf(React.PropTypes.element)])
 };
-
-function Characters() {
-  return <div/>;
-}
-
-function Alice() {
-  return <div/>;
-}
-
-function Eve() {
-  return <div/>;
-}
-
-function Bob() {
-  return <div/>;
-}
-
-function ModuloClock() {
-  return <div/>;
-}
