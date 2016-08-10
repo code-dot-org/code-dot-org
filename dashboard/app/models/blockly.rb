@@ -25,6 +25,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
+  include LocaleHelper
 
   serialized_attrs %w(
     level_url
@@ -292,10 +293,27 @@ class Blockly < Level
         level_prop.delete('fn_failureCondition')
       end
 
+      loc_instructions = localized_instructions
+      level_prop['instructions'] = loc_instructions unless loc_instructions.nil?
+
       # Set some values that Blockly expects on the root of its options string
       level_prop.reject!{|_, value| value.nil?}
     end
     options.freeze
+  end
+
+  def localized_instructions
+    if self.custom?
+      loc_val = data_t("instructions", "#{self.name}_instruction")
+      unless I18n.en? || loc_val.nil?
+        return loc_val
+      end
+    else
+      val = [self.game.app, self.game.name].map { |name|
+        data_t("level.instructions", "#{name}_#{self.level_num}")
+      }.compact.first
+      return val unless val.nil?
+    end
   end
 
   def self.base_url
