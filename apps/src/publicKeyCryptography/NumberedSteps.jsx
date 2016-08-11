@@ -14,7 +14,7 @@ export default function NumberedSteps(props) {
       <tbody>
         {React.Children.map(props.children, (child, index) => (
           <tr>
-            <td style={style.td}>{(index + 1) + '.'}</td>
+            <td style={style.td}>{(index + 1) + ')'}</td>
             <td style={style.td}>{child}</td>
           </tr>
         ))}
