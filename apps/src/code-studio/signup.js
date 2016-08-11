@@ -95,7 +95,7 @@ window.SignupManager = function (options) {
 
     if (isTeacherSelected()) {
       // Teachers get age 21 in the form data.
-      formData.push({name: "user[age]", value: 21});
+      formData.push({name: "user[age]", value: "21+"});
     } else {
       // Students have their email cleared from the form data.
       // (But we left it showing in the form UI in case they
