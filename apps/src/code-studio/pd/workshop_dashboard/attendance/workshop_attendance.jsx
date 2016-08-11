@@ -14,6 +14,8 @@ import {
   Col,
   ButtonToolbar,
   Button,
+  SplitButton,
+  MenuItem,
   Tabs,
   Tab
 } from 'react-bootstrap';
@@ -92,6 +94,19 @@ const WorkshopAttendance = React.createClass({
   },
 
   handleSaveClick() {
+    this.save(() => {
+      // Navigate after save.
+      this.context.router.push('/workshops/' + this.props.params.workshopId);
+    });
+  },
+
+  handleSaveAndDownloadCsvClick() {
+    this.save(() => {
+      window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
+    });
+  },
+
+  save(callback) {
     const url = `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`;
     const data = this.prepareDataForApi();
     this.saveRequest = $.ajax({
@@ -101,7 +116,9 @@ const WorkshopAttendance = React.createClass({
       contentType: 'application/json',
       data: JSON.stringify({pd_workshop: data})
     }).done(() => {
-      this.context.router.push('/workshops/' + this.props.params.workshopId);
+      if (callback) {
+        callback();
+      }
     });
   },
 
@@ -204,9 +221,18 @@ const WorkshopAttendance = React.createClass({
         </Tabs>
         <br />
         <Row>
-          <Col sm={4}>
+          <Col sm={10}>
             <ButtonToolbar>
-              <Button bsStyle="primary" onClick={this.handleSaveClick}>Save</Button>
+              <SplitButton
+                bsStyle="primary"
+                title="Save"
+                id="save-button"
+                onClick={this.handleSaveClick}
+              >
+                <MenuItem eventKey="1" onSelect={this.handleSaveAndDownloadCsvClick}>
+                  Save and download Csv
+                </MenuItem>
+              </SplitButton>
               <Button onClick={this.handleCancelClick}>Cancel</Button>
             </ButtonToolbar>
           </Col>
