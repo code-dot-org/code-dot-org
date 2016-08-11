@@ -17,6 +17,7 @@ machine:
 dependencies:
   cache_directories:
     - "apps/node_modules"
+    - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev enscript
@@ -39,7 +40,9 @@ dependencies:
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "sync_assets: false" >> locals.yml'
     # Run rake install
-    - bundle exec rake install
+    - bundle exec rake install:
+        environment:
+          RAKE_VERBOSE: true
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:

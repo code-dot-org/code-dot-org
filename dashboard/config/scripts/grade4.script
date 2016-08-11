@@ -7,7 +7,7 @@ professional_learning_course "Other plc course"
 stage 'Digital Citizenship',
   flex_category: 'required'
 level 'DigitalCitizenship'
-assessment '4-5 Digital Footprint Multi 1'
+#assessment '4-5 Digital Footprint Multi 1'
 
 stage 'Build a Star Wars Game!',
   flex_category: 'content'
@@ -25,7 +25,7 @@ level 'blockly:Studio:hoc2015_blockly_14'
 stage 'Unplugged: Nested Loops (New)',
   flex_category: 'content'
 level 'GettingLoopy'
-assessment '2-3 Getting Loopy Multi 1'
+#assessment '2-3 Getting Loopy Multi 1'
 
 stage 'Artist: Nested Loops',
   flex_category: 'content'
@@ -40,13 +40,14 @@ level 'grade4_artist_nested_loop_triangles5'
 level 'grade4_artist_nested_loop_squares1'
 level 'grade4_artist_nestedLoops_challenge'
 level 'grade4_artist_nestedLoops_challenge2'
-level 'grade4_artist_nested_loop_triangles1'
-level 'grade4_artist_nested_loop_triangles3'
-level 'grade4_artist_nested_loop_triangles2'
-assessment 'grade4_artist_nested_loop_circles1'
-assessment '4-5 artist loops multi 1'
+level 'grade4_artist_nested_loop_circles1'
+assessment 'grade4_artist_nested_loop_triangles1'
+assessment 'grade4_artist_nested_loop_triangles3'
+assessment 'grade4_artist_nested_loop_triangles2'
+#assessment '4-5 artist loops multi 1'
 
-stage 'Bee: Nested Loops',
+stage 'Bee: Nested Loops'
+stage 'Bee: Determine the Concept',
   flex_category: 'content'
 #original sequence
 level 'grade4_bee_nestedLoops0'
@@ -63,19 +64,10 @@ level 'grade4_bee_conditionals_new2'
 level 'grade4_bee_conditionals_new3b'
 level 'grade4_bee_conditionals_new3c'
 assessment 'grade4_bee_nestedLoops_assess'
-#while loop sequence - move to K5 concepts script?
-#level '2-3 Bee Loops 8'
-#level '4-5 Bee Nested Loops 7'
-#level '2-3 Bee Loops 10'
-#level '4-5 Bee Nested Loops 9'
-#level '4-5 Bee Nested Loops Rows'
-#assessment '2-3 Bee Loops Assessment 1'
-#assessment '4-5 bee loops multi 1'
 
 stage 'Songwriting',
   flex_category: 'content'
 level 'SongwritingParameters'
-assessment '4-5 Songwriting Multi 1'
 
 stage 'New Artist: Functions',
   flex_category: 'content'
@@ -94,10 +86,6 @@ level 'grade4_frozen_functions1'
 level 'grade4_frozen_functions2'
 level 'grade4_artist_functions_freeplay'
 
-stage 'Project #1: Artist (Nested Loops, Functions)',
-  flex_category: 'content'
-#level 'grade4_artist_freeplay'
-
 stage 'Scaffolded Project Stage (Loops, Events, Conditionals, Functions)',
   flex_category: 'content'
 level 'grade4_scaffolded_project1'
@@ -107,6 +95,7 @@ level 'grade4_scaffolded_project4'
 
 stage 'Explore project ideas',
   flex_category: 'practice'
+named_level 'Geometric Pattern'
 named_level 'Pizza on a Plate'
 named_level 'Unicorn Tag'
 
@@ -134,18 +123,11 @@ named_level 'More programming with Scratch!'
 
 #Removed Puzzles
 #level 'grade4_bee_conditionals_new1'
-
-#--These puzzle could be repurposed for a ramp-up module or moved to grade 3. Please save.
-#level 'grade4_bee_conditionals_ifvid'
-#level 'grade4_bee_conditionals_quantum1'
-#level 'grade4_bee_conditionals_quantum2'
-#level 'grade4_bee_conditionals_new1a'
-#level 'grade4_bee_conditionals_new2a'
-#level 'grade4_bee_conditionals_new2'
-#level 'grade4_bee_conditionals_quantum3'
-#level 'grade4_bee_conditionals_ifelsevid'
-#level 'grade4_bee_conditionals_quantum4'
-#level 'grade4_bee_conditionals_quantum5'
-#level 'grade4_bee_conditionals_new3a'
-#level 'grade4_bee_conditionals_new3b'
-#level 'grade4_bee_conditionals_new3c'
+#while loop sequence - move to K5 concepts script?
+#level '2-3 Bee Loops 8'
+#level '4-5 Bee Nested Loops 7'
+#level '2-3 Bee Loops 10'
+#level '4-5 Bee Nested Loops 9'
+#level '4-5 Bee Nested Loops Rows'
+#assessment '2-3 Bee Loops Assessment 1'
+#assessment '4-5 bee loops multi 1'

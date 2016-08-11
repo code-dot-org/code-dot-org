@@ -8,7 +8,7 @@ Code.org partners with school districts across the country to suppport and expan
 
 Code.org has begun moving from partnering directly with districts and schools and instead partners with [professional learning partners](/educate/professional-learning-partner) throughout the country to help bring high quality K-12 computer science education to their communities.  Code.org will work with each region’s professional learning partner and connect them with interested districts and schools.
 
-Please [fill out our interest form](/educate/interesteddistrict) and share your information with the professional learning partner in your area ([please see a list of our current partners]()).  If there is no professional learning partner currently in your area, please reach out to qualified groups and encourage them to [apply here]()!
+Please [fill out our interest form](/educate/interesteddistrict) and share your information with the professional learning partner in your area ([please see a list of our current partners](/educate/district/partners)).  If there is no professional learning partner currently in your area, please reach out to qualified groups and encourage them to [apply here]()!
 
 
 [<button>Fill out our interest form</button>](/educate/interesteddistrict) 
