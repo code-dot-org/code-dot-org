@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
  */
 
 const ThreeColumns = (props) => {
-  const { isRtl, styles, leftColWidth, rightColWidth, height, children } = props;
+  const { isRtl, styles, leftColWidth, rightColWidth, height, children, allowScrolling } = props;
 
   const defaultStyles = {
     container: {
@@ -22,11 +22,6 @@ const ThreeColumns = (props) => {
     middle: {
       width: '100%',
       position: 'relative',
-      marginRight: isRtl ? undefined : -300,
-      paddingRight: isRtl ? undefined : 300,
-      marginLeft: isRtl ? -300 : undefined,
-      paddingLeft: isRtl ? 300 : undefined,
-      overflowY: 'scroll',
       float: isRtl ? 'right' : 'left',
       height
     },
@@ -47,6 +42,16 @@ const ThreeColumns = (props) => {
     }
   };
 
+  if (allowScrolling) {
+    Object.assign(defaultStyles.middle, {
+      marginRight: isRtl ? undefined : -300,
+      paddingRight: isRtl ? undefined : 300,
+      marginLeft: isRtl ? -300 : undefined,
+      paddingLeft: isRtl ? 300 : undefined,
+      overflowY: 'scroll',
+    });
+  }
+
   return (
     <div style={[defaultStyles.container, styles.container]}>
       <div style={[defaultStyles.middle, styles.middle]}>{children[1]}</div>
@@ -62,6 +67,7 @@ ThreeColumns.propTypes = {
   rightColWidth: React.PropTypes.number,
   height: React.PropTypes.number,
   isRtl: React.PropTypes.bool.isRequired,
+  allowScrolling: React.PropTypes.bool,
   children: React.PropTypes.node,
   customProp: (props) => {
     if (props.children.length !== 3) {
