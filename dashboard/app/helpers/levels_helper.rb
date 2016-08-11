@@ -277,6 +277,10 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
+    # Locale-depdendant option
+    loc_instructions = l.localized_instructions
+    level_options['instructions'] = loc_instructions unless loc_instructions.nil?
+
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script

@@ -293,9 +293,6 @@ class Blockly < Level
         level_prop.delete('fn_failureCondition')
       end
 
-      loc_instructions = localized_instructions
-      level_prop['instructions'] = loc_instructions unless loc_instructions.nil?
-
       # Set some values that Blockly expects on the root of its options string
       level_prop.reject!{|_, value| value.nil?}
     end
