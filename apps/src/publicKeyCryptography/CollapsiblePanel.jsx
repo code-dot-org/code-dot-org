@@ -9,6 +9,7 @@ const style = {
   },
   header: {
     fontFamily: `"Gotham 5r", sans-serif`,
+    fontSize: 16,
     color: color.charcoal,
     borderBottomStyle: 'solid',
     borderBottomWidth: 1,
