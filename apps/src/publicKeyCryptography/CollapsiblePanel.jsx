@@ -4,9 +4,6 @@ import color from '../color';
 import {AnyChildren} from './types';
 
 const style = {
-  root: {
-    margin: 5,
-  },
   header: {
     fontFamily: `"Gotham 5r", sans-serif`,
     fontSize: 16,
@@ -25,7 +22,7 @@ const CollapsiblePanel = React.createClass({
 
   render() {
     return (
-      <div style={style.root}>
+      <div>
         <div style={style.header}>
           {this.props.title}
         </div>

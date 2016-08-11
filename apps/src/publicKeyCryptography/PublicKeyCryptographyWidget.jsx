@@ -26,7 +26,7 @@ const PublicKeyCryptographyWidget = React.createClass({
           <a href="https://docs.google.com/document/d/1rcXn-3B0JWY3ifeZkhVB3OFHNYClsY80LCIVIOOpExs/edit">Instructions</a>
           <a href="https://docs.google.com/document/d/1d6mEbpykWsFKP2PAC5cj7ak_ouoPrwhMcFpYf7xd_Yw/edit">How the math works</a>
         </HyperlinksList>
-        <EqualColumns>
+        <EqualColumns intercolumnarDistance={20}>
           <Alice/>
           <Eve/>
           <Bob/>
