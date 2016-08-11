@@ -17,8 +17,8 @@ namespace :circle do
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task :run_ui_tests do
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test ./bin/dashboard-server'
-    RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.3.15-linux.tar.gz'
-    RakeUtils.system_stream_output 'tar -xzf sc-4.3.15-linux.tar.gz'
+    RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.3.16-linux.tar.gz'
+    RakeUtils.system_stream_output 'tar -xzf sc-4.3.16-linux.tar.gz'
     Dir.chdir(Dir.glob('sc-*-linux')[0]) do
       RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM --tunnel-domains localhost-studio.code.org,localhost.code.org'
     end
