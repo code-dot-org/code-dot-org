@@ -272,8 +272,20 @@ function loadLevel() {
         canvas.height = img.height;
         var context = canvas.getContext('2d');
         context.drawImage(img, 0, 0);
-        Studio.wallMapLayers[map] =
-            context.getImageData(0, 0, canvas.width, canvas.height).data;
+        var data = context.getImageData(0, 0, canvas.width, canvas.height).data;
+        var arr = new Uint8Array(20000);
+        for (var i = 0; i < 400; i++) {
+          for (var j = 0; j < 400; j+=8) {
+            let bits = 0;
+            for (var k = 0; k < 8; k++) {
+              if (data[4 * (400 * i + j + k)] === 0) {
+                bits = bits | (1 << k);
+              }
+            }
+            arr[i * 50 + j / 8] = bits;
+          }
+        }
+        Studio.wallMapLayers[map] = arr;
       };
       img.src = skin.wallMapLayers[map].srcUrl;
     }
@@ -1634,7 +1646,22 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
 
   if (wallMapLayer) {
     // Comapre against a layout image
-    return wallMapLayer[4 * (400 * yCenter + xCenter)] === 0;
+    //let index = (400 * yCenter + xCenter) >> 3;
+    //let mask = 1 << (xCenter & 7);
+    //return wallMapLayer[index] & mask;
+
+    const yTop = yCenter - collidableHeight / 2;
+    const xLeft = xCenter - collidableWidth / 2;
+
+    for (let y = 0; y < collidableWidth; y++) {
+      for (let x = 0; x < collidableHeight; x++) {
+        let index = (400 * (yTop + y) + (xLeft + x)) >> 3;
+        let mask = 1 << ((xLeft + x) & 7);
+        if (wallMapLayer[index] & mask) {
+          return true;
+        }
+      }
+    }
   } else if (collisionRects) {
     // Compare against a set of specific rectangles.
     for (var i = 0; i < collisionRects.length; i++) {
