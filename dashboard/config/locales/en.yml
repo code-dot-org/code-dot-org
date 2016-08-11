@@ -133,7 +133,7 @@ en:
     user_type_student: "Student"
   signin_form:
     title: 'Have an account already? Sign in'
-    login: 'Email or username'
+    login: 'Email'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'

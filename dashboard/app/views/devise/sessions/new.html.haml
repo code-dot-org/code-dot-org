@@ -27,8 +27,8 @@
         = f.password_field :password
       %br/
       - if devise_mapping.rememberable?
-        %label
-          = f.check_box :remember_me, { style: 'margin: 0;'}
+        %label.rememberme
+          = f.check_box :remember_me
           = t('signin_form.remember')
       %p
         &nbsp;
@@ -56,7 +56,6 @@
 
 :javascript
   $( "#user_login" ).placeholder();
-
 
   $( ".edit_user" ).on("submit", function(e){
   });
