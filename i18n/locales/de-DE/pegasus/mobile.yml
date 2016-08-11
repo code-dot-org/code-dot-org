@@ -219,7 +219,7 @@ de-DE:
   studiobar_flappy_body: Eigenes Flappy-Spiel erstellen und teilen
   studiobar_teacher_title: Für Lehrer gemacht
   studiobar_teacher_body: Code-Studio im Unterricht verwenden
-  studiobar_frozen_title: Stunde der Code
+  studiobar_frozen_title: Stunde des Codes
   studiobar_frozen_body: Wintermärchen mit Anna und Elsa erstellen
   studiobar_donate_title: Spenden
   studiobar_donate_body: Für jeden gespendeten Dollar ermöglichen Sie eine Hour of Code für ein Kind
@@ -662,13 +662,13 @@ de-DE:
   dashboard_faq: Häufig gestellte Fragen
   dashboard_faq_k5: 'Häufig gestellte Fragen zum Vor- und Grundschulunterricht'
   dashboard_announcements: Ankündigungen
-  dashboard_announce_view_all: Alle anzeigen
   dashboard_announce_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet werden, werden voraussichtlich verspätet beantwortet.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Mehr erfahren
   dashboard_announce_try_now_button: Probiere es jetzt aus
   dashboard_announce_petition: 'Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von "K-12 computer science education" zu erbitten.'
   dashboard_announce_petition_button: Fügen Sie Ihren Namen ein
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   learn_more: Erfahre mehr
@@ -802,7 +802,7 @@ de-DE:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bausteine)
   math_category_name: Mathematik
-  hoc_category_name: Stunde der Code
+  hoc_category_name: Stunde des Codes
   csf_category_name: CS Fundamentals
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"

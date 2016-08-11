@@ -5,24 +5,24 @@ tr:
         'Unplug1': Bilgisayar Bilimlerine Giriş
         'Maze': Labirent
         'Multi': Çok Seçimli Şeyler
-        Unplug2: Sayısal Düşünme
-        Unplug3: Grafikli Kağıdıyla Programlama
+        'Unplug2': Sayısal Düşünme
+        'Unplug3': Grafikli Kağıdıyla Programlama
         'Artist': Sanatçı
-        Unplug4: Algoritmalar
+        'Unplug4': Algoritmalar
         'Artist2': Sanatçı 2
-        Unplug5: Fonksiyonlar
+        'Unplug5': Fonksiyonlar
         'Farmer': Çiftçi
-        Unplug6: Koşullar
+        'Unplug6': Koşullar
         'Artist3': Sanatçı 3
         'Unplug7': Şarkı Yazma
         'Farmer2': Çiftçi 2
-        Unplug8: Soyutlama
+        'Unplug8': Soyutlama
         'Artist4': Sanatçı 4
         'Unplug9': Röle Programlama
         'Farmer3': Çiftçi 3
         'Unplug10': İnternet
         'Artist5': Sanatçı 5
-        Unplug11: Özet
+        'Unplug11': Özet
         'MazeEC': Labirent
         'Bounce': Sıçrama
         'Flappy': Flappy Bird

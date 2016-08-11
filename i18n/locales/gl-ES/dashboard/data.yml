@@ -5,24 +5,24 @@ gl:
         'Unplug1': Introdución á informática
         'Maze': O Labirinto
         'Multi': Material de múltiple escolla
-        Unplug2: Pensamento computacional
-        Unplug3: Programación en Papel Cadriculado
+        'Unplug2': Pensamento computacional
+        'Unplug3': Programación en Papel Cadriculado
         'Artist': O Artista
-        Unplug4: Algoritmos
+        'Unplug4': Algoritmos
         'Artist2': O Artista 2
-        Unplug5: Funcións
+        'Unplug5': Funcións
         'Farmer': O Agricultor
-        Unplug6: Condicionais
+        'Unplug6': Condicionais
         'Artist3': O Artista 3
         'Unplug7': Escribindo unha Canción
         'Farmer2': O Agricultor 2
-        Unplug8: Abstracción
+        'Unplug8': Abstracción
         'Artist4': O Artista 4
         'Unplug9': Programación baixo presión
         'Farmer3': O Agricultor 3
         'Unplug10': A Internet
         'Artist5': O Artista 5
-        Unplug11: Sumario
+        'Unplug11': Sumario
         'MazeEC': O Labirinto
         'Bounce': Rebote
         'Flappy': Paxaro Flappy

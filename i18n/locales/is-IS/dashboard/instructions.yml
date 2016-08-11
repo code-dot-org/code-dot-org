@@ -149,10 +149,7 @@ is:
       2-3 Maze 12 (copy 1)_instruction: 'Getur þú nú leyst þetta með aðeins tveimur kubbum? (Vísbending: Búðu til lykkju með "endurtaka" kubbi.)'
       2-3 Maze 12 (copy 2)_instruction: 'Getur þú nú leyst þetta með aðeins tveimur kubbum? (Vísbending: Búðu til lykkju með "endurtaka" kubbi.)'
       2-3 Maze 12 (old)_instruction: 'Komdu mér til svínsins - í þetta sinn með "endurtaka" kubbnum!'
-      2-3 Maze 12 - One Move Block_instruction: |
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: 'Náðu til svínsins! En í þetta sinn mátt þú aðeins nota einn "fara áfram" kubb. Séðru nokkra aðra kubba sem gætu hjálpað þér?'
       2-3 Maze 12_instruction: 'Getur þú skipt þessum fimm kubbum út fyrir aðeins tvo? (Vísbending: Þú þarft að búa til lykkju með "endurtaka" kubbi til að ljúka þessu borði.)'
       2-3 Maze 13 (old)_instruction: 'Komdu mér til svínsins - í þetta sinn með "endurtaka þar til" kubbnum!'
       2-3 Maze 13_instruction: "Komdu mér til svínsins með því að nota bara tvo kubba.\\r\n(Vísbending: Þú verður að nota \"endurtaka\" kubbinn til að ljúka þessu borði)"
@@ -197,15 +194,8 @@ is:
       2-3 Maze sq9_instruction: Notaðu lykkjur til að ná svínka með færri kubbum.
       2-3_instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3level1_instruction: Láttu fuglinn ná óþæga svíninu með því að færa hann áfram
-      20hr_farmer_stage9_1_instruction: |
-        Hi, I'm a farmer. I need your help to flatten
-        the field on my farm so it's ready for planting. Move me to the pile of dirt
-        and use the "remove" block to remove it.
-      20hr_farmer_stage9_10_instruction: |
-        I'm working late, so it's dark out, and
-        I can't tell how large the piles are. Now I don't have all the options I
-        used to have on the while block. Move me along the field, and if there is
-        a pile, remove it
+      20hr_farmer_stage9_1_instruction: 'Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta túnið á jörðinni minni svo að ég geti ræktað það. Færðu mig að moldarhaugnum og notaðu "fjarlægja" kubbinn til að fjarlægja hauginn.'
+      20hr_farmer_stage9_10_instruction: 'Ég er að vinna seint og það er orðið svo dimmt að ég sé ekki hve stórir haugarnir eru. Nú hef ég ekki alla valkostina sem voru á "meðan" kubbnum. Láttu mig færast eftir túninu og ef það er haugur, þá fjarlægja hann'
       20hr_farmer_stage9_11_instruction: |
         It's still dark outside. Move me along
         the field. If there is a pile, remove it, and if there is a hole, fill it
@@ -219,9 +209,7 @@ is:
       20hr_farmer_stage9_4_instruction: |
         Can you help me remove all four piles of
         dirt? Hint: use a repeat block if you can.
-      20hr_farmer_stage9_5_instruction: |
-        Help me fill in all these holes with 5 shovelfuls
-        of dirt. Hint: you can put a "repeat" block inside the "while" block.
+      20hr_farmer_stage9_5_instruction: 'Hjálpaðu mér að fylla allar þessar holur með 5 skóflum af mold. Vísbending: Þú getur sett "endurtaka" kubb innan í "meðan" kubb.'
       20hr_farmer_stage9_6_instruction: |
         Remove all the piles of dirt, using as few
         blocks as possible. The new options in the dropdown menu on the "while"
@@ -236,10 +224,7 @@ is:
       20hr_farmer_stage9_9_instruction: |
         Make me remove all these piles of dirt.
         Try to use as few blocks as possible. Hint: try using a "while" block.
-      20hr_maze_stage2_1_instruction: |
-        Can you help me to catch the naughty pig?
-        Stack a couple of "move forward" blocks together and press "Run" to help
-        me get there.
+      20hr_maze_stage2_1_instruction: 'Getur þú hjálpað mér að ná óþæga svíninu? Raðaðu nokkrum "fara áfram" kubbum saman og ýttu svo á "Keyra" til að hjálpa mér að komast þangað.'
       20hr_maze_stage2_10_instruction: |
         Ok, try the new "repeat until" block -
         it will repeat until I reach the annoying pig.
@@ -422,7 +407,7 @@ is:
       4-5 Maze 9_instruction: 'Búðu til lykkju með "endurtaka þar til" kubbnum.'
       4-5 Maze Assessment 1_instruction: 'Mat: Náðu til sólblómsins.'
       4-5 Maze Conditionals 1_instruction: 'Notaðu "endurtaka þar til" kubb til að koma uppvakningnum til sólblómsins.'
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "Getur þú bætt við bara 3 kubbum til að hjálpa uppvakningnum að rata flóknari leið? \\r\n\\r\nEf þú gerir það rétt, getur hann gengið hvaða slóð sem er alveg sama hvað hún er löng!"
       4-5 Maze Conditionals 2_instruction: 'Notaðu "endurtaka þar til" kubb til að koma uppvakningnum til sólblómsins.'
       4-5 Maze Conditionals 3_instruction: 'Notaðu "ef" kubbinn til að láta mig ákveða hvenær á að snúa. Vísbending: Þú þarft aðeins einn kubb í viðbót, en taktu eftir hvernig hann er svo þú getir gert þetta án hjálpar í næstu þraut.'
       4-5 Maze Conditionals 4_instruction: 'Jæja, þetta er alveg eins og síðasta þraut, en þú þarft að muna hvernig "ef" og "endurtaka" kubbarnir voru notaðir saman.'
@@ -519,12 +504,16 @@ is:
       Artist - Nested Loops 8_instruction: 'Endurtaktu þetta 6 sinnum í lykkju. Hvað þarf að snúa mikið í hverri umferð? (Vísbending: Hvað er 360 deilt með 6?)'
       Artist - Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       Artist - Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að ljúka teikningunni.
+      Artist Inspiration_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant to know how our inspiration pattern was made? "
       artistLoopsK1_instruction: |
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
       artistLoopsK2_instruction: |
-        The Artist is trying to draw a line five times,
-        but can't get it right.  Can you help?
+        Now, use a `repeat` loop to draw this line five
+        times!
+      artistLoopsK2gradek_artist_loops3_instruction: |
+        Now, use a `repeat` loop to
+        draw this line five times!
       artistLoopsK3_instruction: |
         Draw a line eight steps long. This will become
         the land for our kingdom!
@@ -695,9 +684,7 @@ is:
       Code Studio Puzzle Challenge Bee Screencast_instruction: Færðu býfluguna að blóminu og sæktu allan blómasafann.
       Code Studio Puzzle Challenge Square - Artist_instruction: 'Teiknaðu ferning með því að nota gefnu breytuna "lengd".'
       Code Studio Puzzle Challenge Var - Artist_instruction: 'Teiknaðu línu með því að nota breytu "lengd" með gildið 180.'
-      Collector Demo_instruction: |
-        Look at all this loot! Help me get as many coins
-        as I can so I can improve my farm. I can only use 9 blocks though!
+      Collector Demo_instruction: Sjáðu þessar fúlgur fjár! Hjálpaðu mér að ná sem flestum peningum svo að ég geti endurbætt býlið mitt. Ég má þó aðeins nota 9 kubba!
       Course 2 Bee Loops 1_instruction: 'Hæ, ég er býfluga. Getur þú hjálpað mér að safna blómasafanum úr þessum blómum? '
       Course 2 Bee Loops 13_instruction: 'Mat: Notaðu "endurtaka" kubbinn til að safna öllum blómasafanum.'
       Course 2 Bee Loops 2_instruction: Er auðveldara að leysa þetta sama verkefni með lykkju?
@@ -912,14 +899,10 @@ is:
       Course 4 Play Labs For Loops 7a_instruction: "Nú erum við að komast áleiðis! Hvernig væri að telja hve oft við getum smellt á Vitkann áður en Hundur kemst upp í 30?\\r\n\\r\nBættu kubbum í Vitkann svo að í hvert skipti sem smellt er á hann þá hækki breytan \"clicked\" um 1. Þú getur hunsað \"increment\" í bili.\\r\n\\r\nHundur byrjar að telja þegar þú smellir á \"Keyra\"."
       Course 4 Play Labs For Loops 8_instruction: "Hjálpaðu leikmönnum að hreyfast um leið og þeir telja.\\r\n\\r\nHundur á að hreyfast og bæta 2 við (teljari + 2) í hvert skipti. Köttur á að hreyfast og margfalda með 2 (teljari * 2) í hvert skipti. Mörgæs á að hreyfast og telja í 2. veldi (teljari ^ 2) í hvert skipti. Hver verður fyrstur til að ná sínu flaggi?"
       Course 4 Play Labs For Loops 8a_instruction: "Til að ljúka leiknum þurfum við að nota \"increment\" breytuna aftur. Við skulum tengja hana við áfanga í leiknum.\\r\n\\r\n1) Ef smellt er á Vitkann skal telja það.\\r\n2) Ef smellt er að minnsta kosti 10 sinnum á Vitkann áður en Hundur telur upp í 30, skal hækka \"increment\" um 1 og byrja aftur.\\r\n3) Ef ekki er smellt á Vitkann a.m.k. 10 sinnum er leiknum lokið."
-      Course 4 Playlab For Loop Freeplay_instruction: |
-        Freeplay: Use everything you've
-        learned so far to make a game that includes a `for` loop!
-      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
-      Course 4 Playlab For Loops 5b_instruction: |
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
+      Course 4 Playlab For Loop Freeplay_instruction: 'Frjáls æfing: Notaðu allt sem þú hefur lært til að búa til leik sem inniheldur "frá" lykkju!'
+      Course 4 Playlab For Loops 4b_instruction: "Nú ætla þessir tveir leikmenn að fara í kapp!  \\r\n\\r\nHvor um sig mun færast um 'counter' skref í einu, en teljararnir þeirra munu hafa mismunandi gildi vegna 'frá' lykkjanna.  \\r\n\\r\nGetur þú breytt aukningunni í annarri lykkjunni svo þeir komi jafnt í mark?"
+      Course 4 Playlab For Loops 5b_instruction: "Breyttu aukningunni í þessum 'frá' lykkjum svo leikmennirnir tveir endi á nákvæmlega sama stað."
+      Course 4 Playlab For Loops 6b_instruction: "Breyttu þessari 'frá' lykkju svo úr verði leikur sem þér finnst gaman að spila!\\r\n\\r\nÝttu á \"Keyra\" og smelltu fjórum sinnum á Madame\nUnicorn til að vinna. "
       Course 4 SCF 1_instruction: Notaðu föllin sem hér eru til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðunum með jafna tölu er hliðrað til hægri?
       Course 4 SCF 1a_instruction: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
       Course 4 SCF 1b_instruction: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
@@ -949,16 +932,67 @@ is:
       Course1MazeAssessment1_instruction: "Þetta er próf!\\r\nFærðu mig í eina átt, svo í aðra, til að ég nái svíninu"
       Course1MazeAssessment2_instruction: "Þetta er próf!\\r\nFærðu mig í eina átt, svo í aðra, til að ég nái svíninu."
       course2_playlab_stage17_1_instruction: 'Getur þú látið hundinn segja "Halló heimur"?'
-      course2_playlab_stage17_2_instruction: |
-        Can you make the dog say something
-        and then have the cat say something afterwards?
-      course2_playlab_stage17_3_instruction: |
-        Can you write a program to make this
-        dog move to the cat?
-      course2_playlab_stage17_4_instruction: |
-        Can you write a program that makes
-        the dog move to the cat, and have the cat say "hello" when the dog reaches
-        him?
+      course2_playlab_stage17_10_instruction: |
+        Can you add blocks to change the background
+        and the speed of Waddles, and then move him with the arrows until you score?
+      course2_playlab_stage17_11_instruction: |
+        Create your own story. When you're
+        done, click Finish to let friends try your story on their phones.
+      course2_playlab_stage17_2_instruction: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
+      course2_playlab_stage17_3_instruction: Getur þú skrifað forrit sem færir hundinn að kettinum?
+      course2_playlab_stage17_4_instruction: 'Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?'
+      course2_playlab_stage17_5_instruction: |
+        Can you write a program to make the
+        octopus say "hello" when it is clicked?
+      course2_playlab_stage17_6_instruction: |
+        Can you write a program to make Waddles
+        move around using the up / down / left /right keys to hit all of the targets?
+      course2_playlab_stage17_7_instruction: |
+        The "repeat forever" block allows
+        you to run code continuously. Can you attach blocks to move this dinosaur
+        up and down repeatedly?
+      course2_playlab_stage17_8_instruction: |
+        Can you have Waddles say "Ouch!"
+        and play a "hit" sound if he runs into the dinosaur, and then move him with
+        the arrows to make that happen?
+      course2_playlab_stage17_9_instruction: |
+        Can you add a block to score a point
+        when Waddles runs into the octopus, and then move him with the arrows until
+        you score?
+      course3_playlab_stage16_1_instruction: 'Getur þú látið hundinn segja "Halló heimur"?'
+      course3_playlab_stage16_2_instruction: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
+      course3_playlab_stage16_3_instruction: Getur þú skrifað forrit sem færir hundinn að kettinum?
+      course3_playlab_stage16_4_instruction: 'Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?'
+      course3_playlab_stage16_5_instruction: |
+        Can you add a block to make the octopus
+        happy?
+      course3_playlab_stage16_6_instruction: |
+        Create your own story. When you're
+        done, click Finish to let friends try your story on their phones.
+      course3_playlab_stage17_1_instruction: |
+        Can you write a program to make the
+        octopus say "hello" when it is clicked?
+      course3_playlab_stage17_2_instruction: |
+        Can you write a program to make Waddles
+        move around using the up / down / left /right keys to hit all of the targets?
+      course3_playlab_stage17_3_instruction: |
+        The "repeat forever" block allows
+        you to run code continuously. Can you attach blocks to move this dinosaur
+        up and down repeatedly?
+      course3_playlab_stage17_4_instruction: |
+        Can you have Waddles say "Ouch!"
+        and play a "hit" sound if he runs into the dinosaur, and then move him with
+        the arrows to make that happen?
+      course3_playlab_stage17_5_instruction: |
+        Can you add a block to score a point
+        when Waddles runs into the octopus, and then move him with the arrows until
+        you score?
+      course3_playlab_stage17_6_instruction: |
+        Can you add blocks to change the background
+        and the speed of Waddles, and then move him with the arrows until you score?
+      course3_playlab_stage17_7_instruction: |
+        Create your own story. When you're
+        done, click Finish to let friends try your story on their phones.
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -1123,6 +1157,9 @@ is:
       CSD U3 Variables2 expressions_instruction: |
         Use console.log to display the
         results of each expression. Then create your own.
+      CSD U4 - Events Template_instruction: |
+        Add a large red button to your screen
+        using Design Mode. (Click for full instructions.)
       CSDU4 - AppLab - 1_instruction: |
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1158,17 +1195,10 @@ is:
       CSDU4 - Design Mode - 18_instruction: |
         Fix the layout of the bullseye game.
         (Click to see full instructions)
-      CSDU4 - Design Mode - 19_instruction: |
-        Make a 2 screen app with a black screen
-        and a white screen. (Click to see detailed instructions)
       CSDU4 - Design Mode - 2_instruction: |
         Run a program with two buttons that have
         the same id to see the warning message in the console. Change the ids to make
         the program run without getting a warning message.
-      CSDU4 - Design Mode - 20_instruction: |
-        Make a 2 screen app which can switch
-        back and forth between a black screen and a white screen using buttons. (Click
-        to see detailed instructions.)
       CSDU4 - Design Mode - 24_instruction: |
         Add an Text Input box for the name and
         age. (Click to see full instructions)
@@ -1190,9 +1220,6 @@ is:
       CSDU4 - Design Mode - 29_instruction: |
         Add a dropdown for their guess instead
         of promptNum (Click to see full instructions)
-      CSDU4 - Design Mode - 3_instruction: |
-        Add an event handler to the button to
-        move the turtle forward. (Click to see full instructions)
       CSDU4 - Design Mode - 30_instruction: |
         Show different die images for the random
         number generated. (Click to see full instructions)
@@ -1313,6 +1340,8 @@ is:
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
         that fills it until the ground is even?  Hint:  Try using the while loop this
         time.
+      Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan \"if\" statement to program your game to call the \"level_up\" function\nonly when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move to the next puzzle. "
+      Food Fight_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan \"if\" statement to program your game to call the \"level_up\" function\nonly when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move to the next puzzle. "
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: 'Hér er "búa til hring" kubbur sem getur búið til mismunandi stóra hringi. Getur þú notað hann til að búa til lítinn hring í stærð 5 og annan stærri í stærð 10?'
@@ -1334,6 +1363,15 @@ is:
       frozen square loop 3x_instruction: Búum til þrjá ferninga með snúningi eftir hvern. Gættu þess að snúa um 120 gráður á milli ferninga.
       frozen square loop_instruction: 'Hæ, ég er Anna frá Arendelle! Búum til ferning með "endurtaka" kubbnum, sem notar færri kubba. Hve oft (???) ætti "endurtaka" kubburinn að endurtaka innihald sitt til að búa til ferning?'
       frozen square snowflake_instruction: 'Getur þú búið til snjókorn með því að nota "endurtaka" kubbinn til að búa til ferning 10 sinnum og "snúa" kubbinn til að snúa um 36 gráður eftir hvern ferning?'
+      Geometric Pattern_instruction: |
+        Project Idea: Create a pattern using geometric
+        ideas like shapes. This requires persistence and planning!
+      "Grade 4 Example PlayLab Project #1_instruction": |
+        Take a look at this project.  Do
+        you see how it was made?
+      "Grade 4 Example PlayLab Project #2_instruction": |
+        Take a look at this project.  Do
+        you see how it was made?
       grade1_artist_loops1_instruction: |
         The Artist is trying to draw a line six
         times, but can't get it right.  Can you help?
@@ -1431,16 +1469,24 @@ is:
       grade1_video_frustrationRainbow_instruction: |
         This video describes the rainbow
         of frustration and introduces persistence.
+      grade2_CaringForNewPet_0_instruction: |
+        Can you help me catch the naughty pig?
+        Add a move forward block to this code, then press "Run".
       grade2_CaringForNewPet_1_instruction: |
         Can you help me catch the naughty pig?
         Stack a couple of `move forward` blocks below the `when run` block and press
         "Run". 
+      grade2_CaringForNewPet_10_instruction: Komdu mér til svínsins!
+      grade2_CaringForNewPet_11_instruction: |
+        Keep calm and help me find the bad
+        pig. Otherwise I might get angry!
       grade2_CaringForNewPet_2_instruction: |
         This pig is ruffling my feathers. Help
         me get to him!
       grade2_CaringForNewPet_3_instruction: |
         Trace the path and lead me to the silly
         pig. Avoid TNT or feathers will fly!
+      grade2_CaringForNewPet_3D_instruction: Fix this code to get me to the pig!
       grade2_CaringForNewPet_4_instruction: |
         Keep calm and help me find the bad pig.
         Otherwise I might get angry!
@@ -1448,6 +1494,9 @@ is:
       grade2_CaringForNewPet_6_instruction: |
         Guide me to the green evilness! (Watch
         out for TNT)
+      grade2_CaringForNewPet_7D_instruction: |
+        This code has a lot of bugs, you'll
+        need to both remove and add blocks to get me to the pig.
       grade2_MakeDogTag_1_instruction: |
         Hi, I'm an artist. You can write code to
         make me draw almost anything. Use a few blocks to make me draw over the grey
@@ -1490,15 +1539,9 @@ is:
       grade2_PuppyLoops_7_instruction: Komdu mér til sólsblómsins!
       grade2_PuppyLoops_8_instruction: 'Þessi kóði fyrir veiðihárin þrjú sem þú sérð er rangur. Vísbending: Hvert hár ætti að vera 75 díla langt. Lagaðu kóðann svo hann teikni veiðihárin.'
       grade2_PuppyLoops_9_instruction: Hér virðist C vera teiknað öfugt. Getur þú teiknað það rétt?
-      grade3_AboutMyRobot_1_instruction: |
-        Make your robot say "Hello!" when the
-        button is clicked.
-      grade3_AboutMyRobot_2_instruction: |
-        Edit the code so that when the second bird
-        is clicked, your program plays a sound!
-      grade3_AboutMyRobot_3_instruction: |
-        When the third bird is clicked, the background
-        should change to a city. Can you add code to make this happen?
+      grade3_AboutMyRobot_1_instruction: 'Láttu vélmennið þitt segja "Hello!" þegar smellt er á hnappinn.'
+      grade3_AboutMyRobot_2_instruction: Breyttu kóðanum þannig að ef smellt er á annan fuglinn, þá spili forritið hljóð!
+      grade3_AboutMyRobot_3_instruction: Þegar smellt er á þriðja fuglinn ætti bakgrunnurinn að breytast í borg. Getur þú bætt við kóða svo að þetta gerist?
       grade3_AboutMyRobot_4_instruction: |
         Add code to make something happen when
         the fourth bird is clicked. Be creative!
@@ -1508,6 +1551,55 @@ is:
       grade3_AboutMyRobot_TeacherIDo_instruction: |
         Run this puzzle and click on the
         robot to see what happens!
+      grade3_bee_conditionals_new1a_instruction: |
+        Help the bee collect all of the
+        nectar. You can only collect nectar from flowers, but you can check any space
+        to see if there is a flower.
+      grade3_bee_conditionals_new1b_instruction: |
+        Help the bee collect all of the
+        nectar. You can only collect nectar from flowers, but you can check any space
+        to see if there is a flower.
+      grade3_bee_conditionals_new2_instruction: |
+        Can you help the bee collect the
+        nectar from the flowers? You can only collect nectar from flowers, but you
+        can check any space to see if there is a flower.
+      grade3_bee_conditionals_new2a_instruction: |
+        Now we know that every flower has
+        exactly one nectar. Use the blocks provided to check each space and only get
+        nectar when there's a flower. 
+      grade3_bee_conditionals_new2b_instruction: |
+        Collect all of the nectar. You
+        can only collect nectar from flowers, but you can check any space to see if
+        there is a flower.
+      grade3_bee_conditionals_new3a_instruction: |
+        Collect all of the nectar or make
+        all the honey. You can only collect nectar from flowers and make honey from
+        honeycombs. Check any space to see if there is a flower or honeycomb.
+      grade3_bee_conditionals_new3b_instruction: |
+        Uh oh! The bee is not sure if he
+        should collect nectar or make honey. Can you help him out?
+      grade3_bee_conditionals_new3c_instruction: |
+        Help the bee collect all of the
+        nectar and make all of the honey! Hint: Try using one loop inside of another
+        loop.
+      grade3_bee_Conditionals_new4_instruction: |
+        Now try checking all of these flowers
+        with "if" blocks to see if there is any nectar available.
+      grade3_bee_conditionals_quantum1_instruction: |
+        This cloud is blocking my view!
+        Check to see if there's a flower under the cloud, and only get nectar if
+        there's a flower. Be careful, it can change!
+      grade3_bee_conditionals_quantum2_instruction: Þessa stundina vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
+      grade3_bee_conditionals_quantum3_instruction: |
+        Now I just want to make honey.
+        Some of these clouds might have honeycombs under them. The way we've been
+        going about things won't work here. Be sure to check if a honeycomb is hiding
+        behind each cloud!
+      grade3_bee_conditionals_quantum4_instruction: |
+        Sometimes this cloud covers
+        a flower, and sometimes it covers a honeycomb! Use the if/else block to collect
+        nectar if it is a flower, else to make honey (because it is a honeycomb).
+      grade3_bee_conditionals_quantum5_instruction: "There will be either a flower\nor a honeycomb under each of those clouds!\\r\n\\r\nUse the `if/else` block\nto collect nectar if there is a flower.\\r\nOtherwise, make honey (because\nthere is a honeycomb)."
       grade3_Conditionals_1 BAD_instruction: Notaðu lykkju til að safna öllum blómasafanum.
       grade3_Conditionals_1_instruction: Hæ, ég er býfluga! Hjálpaðu mér að safna öllum blómasafanum úr blómunum. Notaðu lykkju.
       grade3_Conditionals_10 BAD_instruction: Safnaðu blómasafa úr blómabeðunum! Notaðu faldaða lykkju.
@@ -1578,6 +1670,89 @@ is:
       grade3_Loops_8_instruction: Notaðu lykkju til að safna blómasafanum og búa til hunangið.
       grade3_Loops_9_instruction: Safnaðu blómasafa úr hverju blómi og búðu til hunang í hverju búi.
       grade3_Loops_TeacherIDo_instruction: "Those flowers look tasty!\\r\n\\r\nCollect\nnectar from each of the flowers using the fewest blocks possible."
+      grade3_robotFarmer_ConditionalsIntro_1_instruction: |
+        Hi, I'm a farmer. I need
+        your help to flatten the field on my farm so it's ready for planting. Move
+        me to the pile of dirt and use the "remove" block to remove it.
+      grade3_robotFarmer_ConditionalsIntro_10_instruction: |
+        I'm working late, so
+        it's dark out, and I can't tell how large the piles are. Now I don't have
+        all the options I used to have on the while block. Move me along the field,
+        and if there is a pile, remove it
+      grade3_robotFarmer_ConditionalsIntro_11_instruction: |
+        It's still dark outside.
+        Move me along the field. If there is a pile, remove it, and if there is a
+        hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
+      grade3_robotFarmer_ConditionalsIntro_2_instruction: |
+        Next, move me to the hole
+        and fill it with TWO shovelfuls of dirt, using the "fill" block.
+      grade3_robotFarmer_ConditionalsIntro_3_instruction: |
+        Move me to the pile of
+        dirt and tell me how many shovelfuls to remove using as few blocks as possible.
+      grade3_robotFarmer_ConditionalsIntro_4_instruction: |
+        Can you help me remove
+        all four piles of dirt? Hint: use a repeat block if you can.
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: |
+        Help me fill in all these
+        holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside
+        the "while" block.
+      grade3_robotFarmer_ConditionalsIntro_6_instruction: |
+        Remove all the piles of
+        dirt, using as few blocks as possible. The new options in the dropdown menu
+        on the "while" block tell me if I'm standing on a pile or a hole.
+      grade3_robotFarmer_ConditionalsIntro_7_instruction: |
+        Wow, I found a really
+        deep hole! I don't know how many shovelfuls of dirt it needs. Can you write
+        a program that fills it until the ground is even?
+      grade3_robotFarmer_ConditionalsIntro_8_instruction: |
+        Help me fill in the hole
+        at the end of the field, using as few blocks as possible.
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: |
+        Make me remove all these
+        piles of dirt. Try to use as few blocks as possible. Hint: try using a "while"
+        block.
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: |
+        Help me fill
+        in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat"
+        block inside the "while" block.
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2_instruction: |
+        I'm working
+        late, so it's dark out, and I can't tell how large the piles are. Now I
+        don't have all the options I used to have on the while block. Move me along
+        the field, and if there is a pile, remove it
+      grade3_RunningFarm_1_instruction: "(Notes for Review) Since the last stage\ntaught the 'repeat until' block, the purpose of this is most likely to teach\nthe 'repeat while' block. In the context of the levels already created,\nI think using the 'repeat' and 'if' blocks could be possible,  (ex. if\nthe crops weren't spread as evenly on the field so the farmer would have\nto test for wheat present before collecting it). A Repeat While block would\nbe more applicable if there were multiple wheat/potatoes in each square, which\nmight be a possible change.\\r\n\\r\nGrant Notes: for the coins, 1=0 and 2=1\n(I couldn't get the coins to show up with a value of 0). The wheat should\ngrow at random intervals. For the graphic, think about the Minecraft way of\ngrowing wheat (green, has multiple heights showing growth, then yellow for\nripe)."
+      grade3_RunningFarm_10_instruction: |
+        I want to collect as much wheat and carrots
+        as I can. Can you help me? How many crops do you think we can collect? I bet
+        using loops would really help us out!
+      grade3_RunningFarm_2_instruction: "NOTES: have wheat and potatoes interspersed\nthrough row. Potatoes should be fully grown, with some randomly showing more\nthan 1 potato per spot.\\r\n\\r\n"
+      grade3_RunningFarm_3_instruction: |
+        Can you help me plant at least 24 crops
+        in this field? I bet using loops would really help us out!
+      grade3_RunningFarm_4_instruction: |
+        Can you help me collect all the wheat in
+        this field? I think the best way would be to use loops!
+      grade3_RunningFarm_5_instruction: |
+        Can you help me collect all the wheat and
+        carrots in this field? I think the best way would be to use loops!
+      grade3_RunningFarm_6_instruction: |
+        Can you help me collect at least 24 crops
+        from this field? I bet using loops would really help us out!
+      grade3_RunningFarm_7_instruction: |
+        Can you help me collect all the wheat and
+        carrots in this field? I think the best way would be to use loops!
+      grade3_RunningFarm_8_instruction: |
+        Can you help me collect at least 24 crops
+        from this field? I bet using loops would really help us out!
+      grade3_RunningFarm_9_instruction: |
+        Can you help me plant and then collect 14
+        bundles of wheat in this field? I think the best way would be to use loops!
+      grade3_RunningFarm_TeacherIDo_instruction: |
+        Teacher I Do: Show students how
+        they can use loops and conditionals to plant and harvest 2 rows of crops.
+      grade3_RunningFarm_TeacherIDo2_instruction: |
+        Teacher I Do: Show students how
+        to use loops to harvest many crops.
       grade4_arist_functions_star0_instruction: |
         Have you drawn something like this
         star before? Practice making it one more time by adding a turn and a repeat
@@ -1607,15 +1782,28 @@ is:
         Can you draw these 36 triangles
         using a nested loop?
       grade4_artist_freeplay_instruction: |
-        Create your own project! This creation
+        You are on your own now! Try out any of
+        the functions you used in this stage or try this new function that will automatically
+        give your image a beautiful background color! This creation will be saved
+        to your Projects dashboard so that you can easily edit it any time!
+      grade4_artist_functions1_instruction: 'Halló. Ég uppvakningur listamaður. Ég elska teikna! Hjálpa mér teikna ferköntuðu gleraugun. Vísbending: Brúin milli glerja er 25 dílum styttri en hlið glers.'
+      grade4_artist_functions2_instruction: "Functions let you define new blocks!\n\\r\n\\r\nWe've moved the blocks needed for drawing a square into a function\ncalled `draw a square`. This time, use the `draw a square` function to create\nthe glasses. \\r\n\\r\nThe squares are 75 pixels apart."
+      grade4_artist_functions_challenge_instruction: |
+        Use the suggested functions
+        to draw four rows of hexagons. Notice how our even numbered rows are shifted
+        to the right?
+      grade4_artist_functions_freeplay_instruction: |
+        You are on your own now! Try
+        out any of the functions you used in this stage or try this new function that
+        will automatically give your image a beautiful background color! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
         time!
       grade4_artist_functions_stars0_instruction: |
-        Have you drawn something like
-        this star before? Practice making it one more time by adding a turn and a
-        repeat block.
+        We will come back to functions
+        shortly. Let's take a break to practice making this star. You can make this
+        drawing by adding a turn and a repeat block.
       grade4_artist_functions_stars1_instruction: |
-        Now that you car draw a star,
+        Now that you can draw a star,
         try drawing four stars!
       grade4_artist_functions_stars2_instruction: |
         When is drawing three stars harder
@@ -1625,13 +1813,13 @@ is:
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade4_artist_functions_windows0_instruction: |
-        Have you drawn something like
-        this star before? Practice making it one more time by adding a turn and a
-        repeat block.
+        You are doing great! Do you
+        remember when you used nested loops to draw a pinwheel shape out of triangles?
+        Let's try using that same algorithm to make a window!
       grade4_artist_functions_windows1_instruction: |
-        You just created a nested loop!
-        Let's repeat all of these commands with another repeat block to draw windows
-        on this house. Don't forget the jump block!
+        If you can draw one window,
+        you can draw three! Try using your choice of a nested loop or a function here.
+        Don't forget the jump block!
       grade4_artist_functions_windows2_instruction: |
         Can you figure out how to add
         these windows? Watch out for the door!
@@ -1642,7 +1830,7 @@ is:
         Loop the given code to create
         a windmill.
       grade4_artist_nested_loop_polygons1_instruction: "Loop this design 10 times.\n\\r\n\\r\nHow much do you have to turn each time you loop?"
-      grade4_artist_nested_loop_polygons2_instruction: "Loop this shape 6 times.\n\\r\n\\r\nHow much do you have to turn each time you loop? "
+      grade4_artist_nested_loop_polygons2_instruction: "Hi, I'm the Artist! Let's\ncreate some drawings together! For starters, try repeating this shape 6 times.\n\\r\n\\r\nHow much do you have to turn each time you loop? "
       grade4_artist_nested_loop_squares1_instruction: |
         Can you draw these 10 squares
         of this sidewalk using a nested loop? Each square is 30 pixels.
@@ -1650,19 +1838,21 @@ is:
         Complete the code to draw
         these triangles.  The first one is done for you.  Hint:  3 triangles in a
         360 degree rotation.
-      grade4_artist_nested_loop_triangles2_instruction: |
-        Now nest this loop inside
-        another loop to draw 10 triangles.  This is called a "nested" loop.  
-      grade4_artist_nested_loop_triangles3_instruction: |
-        Can you draw a hexagon by
-        looping the triangle code?
+      grade4_artist_nested_loop_triangles2_instruction: "Let's make a quick adjustment\nto get completely different image!  \\r\nHint: ? × 10 = 360"
+      grade4_artist_nested_loop_triangles3_instruction: "Can you draw a hexagon by\nlooping the triangle code?\\r\nHint: 6 × ? = 360"
       grade4_artist_nested_loop_triangles4_instruction: |
-        Draw the teeth in the alligator's
-        mouth!
+        Hi! I'm the Artist. Let's
+        try some different types of drawings together. Can you help me draw the bottom
+        teeth in the alligator's mouth?
       grade4_artist_nested_loop_triangles5_instruction: "Create a sun by nesting\nthe starter code in another loop.\\r\n\\r\nTo get this cool design with a hollow\ncenter, you'll need to jump forward by the length of the triangle before\nturning."
       grade4_artist_nested_loop_triangles6_instruction: |
         Can you draw these 36 triangles
         using a nested loop?
+      grade4_artist_nestedLoops_challenge_instruction: "Click here to see the full\ninstructions again!\\r\n\\r\nHere is the code for an interesting shape.  What\nhappens when you repeat it multiple times, turning between each iteration?   Notice\nthat the turns in this shape add up to 420 degrees, which means that when\nyour artist is done drawing, it will be facing a different direction than\nwhen you started.  That new direction is exactly 60 degrees to the right of\nwhere you began."
+      grade4_artist_nestedLoops_challenge2_instruction: |
+        Now for a challenge!  Feel
+        free to use trial and error. You are not expected to get the image perfect
+        the first time.   Want to see more hints?  Click here!
       grade4_artist_parameters_squares1_instruction: |
         Click "edit" to fill in the
         function definition of "draw a square" and add a parameter. It should take
@@ -1698,17 +1888,17 @@ is:
         only collect nectar from flowers, but you can check any space to see if there
         is a flower.
       grade4_bee_conditionals_new1a_instruction: |
-        Help the bee collect all of the
-        nectar. You can only collect nectar from flowers, but you can check any space
-        to see if there is a flower.
+        Help the bee make all of the honey.
+        You can only make honey at a honey comb, but you can check any space to see
+        if there is a honey comb.
       grade4_bee_conditionals_new2_instruction: |
         Can you help the bee collect the
         nectar from the flowers? You can only collect nectar from flowers, but you
         can check any space to see if there is a flower.
       grade4_bee_conditionals_new2a_instruction: |
-        Collect all of the nectar. You
-        can only collect nectar from flowers, but you can check any space to see if
-        there is a flower.
+        Make all of the honey. It's actually
+        more efficient to check each space for a honey comb, even when you know are
+        empty.
       grade4_bee_conditionals_new3a_instruction: |
         Collect all of the nectar or make
         all the honey. You can only collect nectar from flowers and make honey from
@@ -1718,7 +1908,8 @@ is:
         should collect nectar or make honey. Can you help him out?
       grade4_bee_conditionals_new3c_instruction: |
         Help the bee collect all of the
-        nectar and make all of the honey! Hint: Try using a nested loop!
+        nectar and make all of the honey! Hint: Try using one loop inside of another
+        loop.
       grade4_bee_conditionals_quantum1_instruction: |
         This cloud is blocking my view!
         Check to see if there's a flower under the cloud, and only get nectar if
@@ -1737,6 +1928,16 @@ is:
       grade4_bee_functions_instruction: |
         Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
+      grade4_bee_nestedLoops0_instruction: Notaðu lykkju til að safna öllum blómasafanum.
+      grade4_bee_nestedLoops1_instruction: 'Safnaðu öllum blómasafa úr hverju blómi. Notaðu faldaða lykkju. '
+      grade4_bee_nestedLoops2_instruction: Can you determine the missing blocks?
+      grade4_bee_nestedLoops3_instruction: Safnaðu öllum blómasafanum með því að búa til faldaða lykkju.
+      grade4_bee_nestedLoops4_instruction: 'Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. Notaðu faldaða lykkju. '
+      grade4_bee_nestedLoops5_instruction: "Challenge time!\\r\n\\r\nCollect all of\nthe nectar from each flower and make honey at each honeycomb. \\r\n\\r\nHint:\nYou will need 4 repeat blocks!"
+      grade4_bee_nestedLoops_assess_instruction: "**Assessment:** Collect all of\nthe nectar and make all of the honey using loops.\\r\n\\r\nHint: There are several\npossible solutions!"
+      grade4_designProcess_vid_instruction: |
+        Prepare to build a project within some
+        given parameters.
       grade4_farmer_functions1_instruction: |
         Have we met before? I'm the farmer!
         Please help me remove this pile and fill this hole.
@@ -1762,10 +1963,10 @@ is:
         with very simple shapes. Can you make a pattern by repeating 5 circles of
         size 5 and 5 circles of size 10?
       grade4_frozen_nested_loop_diamonds1_instruction: |
-        Use a repeat around these
-        blocks to create a parallelogram. It's just like a rectangle but has different
-        angles. This one has 60 degree and 120 degree angles instead of all 90 degree
-        angles.
+        Let’s use a repeat block
+        to create a rhombus. Like a square, all sides are equal length, but the angles
+        are different. This one has 60 degree and 120 degree angles instead of all
+        90 degree angles.
       grade4_frozen_nested_loop_diamonds2_instruction: |
         Did you know every snowflake
         is a different shape? Let's create a new snowflake by using another “Repeat"
@@ -1775,6 +1976,10 @@ is:
         Now, let's create a new
         snowflake by using the repeat block to repeat a parallelogram 10 times, turning
         right by 36 degrees between each one.
+      grade4_frozen_nested_loop_rectangle1_instruction: |
+        Hi, I’m Anna of Arendelle!
+        Let’s use a repeat block to create a rectangle. This one is  200 pixels long
+        and 100 pixels tall. All of the corners are 90 degree angles.
       grade4_frozen_square_instruction: |
         Hi, I’m Anna of Arendelle! Let’s make a
         square with the “Repeat” block, which uses fewer blocks. How many times (???)
@@ -1790,6 +1995,13 @@ is:
       grade4_playlab_freeplay_instruction: |
         It's free play time! Have fun with all
         the blocks in your tool box. 
+      grade4_playLab_proj_example1_instruction: instructions
+      grade4_playLab_proj_example1a_instruction: |
+        Take a look at this project.  Do
+        you see how it was made?
+      grade4_playLab_proj_example2a_instruction: |
+        Take a look at this project.  Do
+        you see how it was made?
       grade4_playlab_test_instruction: "Notaðu hægri örina til að skjóta hjörtum.\\r\n\\r\nHvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna \"stig\" í hvert skipti sem hundurinn hittir köttinn með hjarta. Notaðu atvikið \"þegar leikmaður 2 snertir eitthvað\" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með \"stig = stig + 1\". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið."
       grade4_playlab_test2_instruction: |
         Here's a function called `jump` that causes
@@ -1810,6 +2022,18 @@ is:
         of the nectar and make all of the honey.
       grade4_review_bee2_instruction: Safnaðu blómasafa úr hverju blómi og búðu til hunang í hverju búi.
       grade4_review_bee3_instruction: Notaðu svipaða lykkju og í síðustu þraut, en bættu við snúningi.
+      grade4_scaffolded_project1_instruction: |
+        Add some basics actions to get your
+        project started. Trying add a few actors, then have them move around or say
+        things.
+      grade4_scaffolded_project2_instruction: |
+        Now let's make your project more
+        interactive! Add some events so that you can control your actors or respond
+        to collisions. Add and remove points!
+      grade4_scaffolded_project3_instruction: |
+        Try adding a function to your project.
+        There are several pre-made functions for your use or you can write your own!
+      grade4_scaffolded_project4_instruction: "Finally, let's add conditionals."
       grade5_artist_binary1_instruction: "Tvíundir eru aðferð þar sem upplýsingar eru settar fram með aðeins tveimur valkostum. Hér ætlum við að nota valkostina \"af\" (táknað með tölunni 0) og \"á\" (táknað með 1).\\r\n\\r\nÞú færð grind af \"dílum\" sem þú getur farið í gegnum og búið til mynstur með því að kveikja á einhverjum dílum. Getur þú látið listamanninn teikna tvíundirnar \"01010101\" í fyrstu röðina?"
       grade5_artist_binary10_instruction: Smelltu hér til að sjá vísbendingar.
       grade5_artist_binary11_instruction: |
@@ -1834,6 +2058,14 @@ is:
       grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw\non - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we start to get\ncreative with the bits?"
       grade5_artist_for_loops1_instruction: 'Teiknaðu þennan þríhyrning sem er 50 díla breiður. Vísbending: Notaðu endurtekningarkubb.'
       grade5_artist_for_loops10_instruction: "Can you figure out how to use all of\nthe things you've learned to create this image?\\r\n\\r\nNeed a hint? Click\nhere."
+      grade5_artist_for_loops1a_instruction: |
+        Try using a `for loop`to create this
+        triangular design. Don't worry that the numbers are different than the last
+        puzzle. As long as you turn by the right number of degrees, the artist will
+        make the correct shape!
+      grade5_artist_for_loops1b_instruction: |
+        *Free Play:* Experiment with the `for
+        loop` and the `counter` variable.
       grade5_artist_for_loops2_instruction: |
         I've put the code for drawing a triangle
         inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look
@@ -1931,6 +2163,9 @@ is:
         Here’s more complicated code
         using the same concepts from the last puzzle - what should you set the "sides"
         variable to in order to draw this picture made of squares?
+      grade5_artist_variables_new1_instruction: |
+        Here is a program that will create
+        an array of shapes. Modify it so that it creates the design we need.
       grade5_artist_variables_octagons13_instruction: "When a shape has lots of sides,\neach side needs to be shorter if you want the whole pattern to fit on the\nscreen. \\r\nLet's recreate the algorithm for this amazing pattern, but instead\nof manually setting the `length` variable, let's use a math block with the\n`sides` variable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       grade5_artist_variables_pentagon8_instruction: "Use what you learned in the\nlast puzzle to create this hexagon using the \"sides\" variable.\\r\n\\r\nSee\nhow you could change just one value to draw a triangle,  square, pentagon,\nor octagon?"
       grade5_artist_variables_pentagon9_instruction: |
@@ -2066,8 +2301,49 @@ is:
         that makes the dog jump when the 'up' arrow is pressed. The height of the
         jumps can be set at the start of the game using the 'jumpPower' variable.
         Try to touch all of the flags!
-      grade5_prompt_test_instruction: This is a test play lab level.
+      grade5_prompt_test_instruction: |
+        Variables aren't always numbers. What if
+        you wanted to store a word or text? Experiment with the new `ask` block.
+      gradek_adventurer_loops1_instruction: |
+        This is Laurel the Adventurer!  Can
+        you move her around and get gold?
+      gradek_adventurer_loopsPre_instruction: |
+        This is Laurel the Adventurer!  Can
+        you move her around and get gold?
+      gradek_artist_loops1_instruction: |
+        Help the artist draw this line two times
+        forward.
+      gradek_artist_loops2_instruction: |
+        Our artist is trying to draw a line five
+        times, but can't get it right.  Can you help?
+      gradek_artist_loops3_instruction: |
+        Now, use a `repeat` loop to draw this line
+        five times!
+      gradek_artist_loops4_instruction: |
+        Draw a line eight steps long. This will
+        become our horizon.
+      gradek_artist_loops5_instruction: "Let's put a nice hill in the back."
+      gradek_artist_loops6_instruction: |
+        Use the `repeat` loop to add waves to the
+        water.
+      gradek_artist_loops7_instruction: We need a ladder up to the boat.
+      gradek_artist_loops8_instruction: 'The stairs are broken.  Help me fix them.'
+      gradek_artist_loops9_instruction: |
+        Time to head back to land. Help me put down
+        stones so I don't fall in!
+      gradek_artist_loopsA_instruction: |
+        Help me build steps to watch the ship sail
+        away.
+      gradek_artist_loopsFP_instruction: |
+        The artist saw something funny in the distance.  Draw
+        what you think he saw.
+      gradek_artist_loopsPre_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
+      Guess The Number_instruction: |
+        Build whatever you want. This is an example
+        of a number-guessing game!
       Infinity_catch_instruction: 'Getur þú látið Elsu ("leikmann 2") ná Önnu með því að nota örvarlyklana?'
       Infinity_finale_instruction: Búðu til hvað sem þú vilt og deildu því!
       Infinity_move_collide_instruction: 'Hiro er "leikmaður 1". Færðu hann til hægri að Baymax og spilaðu hljóð þegar þeir snertast.'
@@ -2081,6 +2357,39 @@ is:
       Infinity_touch_faster_instruction: Snertu enn fleiri snjókorn!
       Infinity_touch_four_instruction: Færðu Önnu upp, niður, vinstri og hægri til að snerta öll snjókornin fjögur.
       Infinity_touch_score_instruction: 'Láttu Önnu fá stig þegar hún snertir snjókorn. Smelltu svo á "Keyra" og stýrðu henni svo hún snerti hvert snjókorn einu sinni.'
+      Inspirational Artwork_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant to know how our inspiration pattern was made? "
+      "Internet Simulator: Broadcast Mode_instruction": "Now use the Internet Simulator\nto send the battleship moves. For setup, join a Room with your group, and\nadd ships to your paper board for each opponent. When playing, all communication\nmust be done through the tool, so no talking, but have fun!\\r\n"
+      "Internet Simulator: Broadcast_instruction": "Now use the Internet Simulator\nto send the battleship moves. For setup, join a Room with your group, and\nadd ships to your paper board for each opponent. When playing, all communication\nmust be done through the tool, so no talking, but have fun!\\r\n"
+      "Internet Simulator: DNS Mode_instruction": |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      "Internet Simulator: DNS_instruction": |
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
+      "Internet Simulator: Packets_instruction": "Develop a Protocol for Reliably\nSending a Message.\\r\n\\r\nConstraints:\\r\n- Packets may contain only 8 characters\\r\n-\nPackets may drop with small probability\\r\n- Packets may not arrive in order"
+      "Internet Simulator: Routers_instruction": |
+        Send messages with your classmates
+        (Click to see full instructions)
+      "Internet Simulator: Sending Binary Messages 1_instruction": |
+        Develop, document,
+        and test a protocol that allows you to use Internet Simulator to relay a message.
+        See the worksheet for more detailed instructions.  
+      "Internet Simulator: sending binary messages_instruction": |
+        Develop, document,
+        and test a protocol that allows you to use Internet Simulator to relay a message.
+        See the worksheet for more detailed instructions.  
+      "Internet Simulator: sending numbers_instruction": |
+        With your partner, develop
+        a protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      "Internet Simulator: sending text_instruction": |
+        Work with a partner or in
+        a small team to develop a protocol that allows you to send formatted text.
+        See the worksheet handed out by your teacher for more detailed instructions!
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Teiknaðu stutta línu upp og langa til hægri!
@@ -2252,10 +2561,6 @@ is:
       level 'grade3_Loops_9_instruction: |
         Collect nectar from each flower and make
         honey at each honeycomb using the fewest blocks possible.
-      level 'grade4_bee_conditionals_new1'_instruction: |
-        Collect all of the nectar.
-        You can only collect nectar from flowers, but you can check any space to see
-        if there is a flower.
       level grade3_Loops_2_instruction: |
         This time, use a loop to gather all of the
         nectar.
@@ -2610,6 +2915,9 @@ is:
         Here is a bigger image at 9 bits per pixel.
         With 9 bits per pixel you can express 512 different colors. Click through
         to see the next image which is even more sophisticated, but easier to understand.
+      Pizza on a Plate_instruction: |
+        Project Idea: Create a picture of something
+        familiar from the real world. This requires persistence and planning!
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
@@ -2647,6 +2955,9 @@ is:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Prompt Test_instruction: |
+        Build whatever you want. This is an example of a
+        number-guessing game!
       PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. \\r\nYou must first check if\nthe nectar is equal to 1 using the `if nectar` block."
       PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: |
@@ -4412,8 +4723,24 @@ is:
       Underground Mine in a Circle_instruction: "Finndu leið til að ná 5 af demanti og 7 af roðasteini! Prófaðu að nota endurtaka skipun innan í endurtaka skipun til að ganga í ferning.\\r\n"
       Underground Mining Coal_instruction: Þú finnur dýrmætasta hráefnið neðanjarðar, en það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2 af kolum.
       Underground Test Level_instruction: Safnaðu öllum steindunum!
+      Unicorn Tag_instruction: |
+        Take a look at this project.  Do you see how it was
+        made?
       Vigenere_instruction: Test
       WhileAdventure_instruction: |
         Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?
+      "Widget: Black and White Pixelation_instruction": |
+        Now make your own image!
+        We've started you off with a 10x10 canvas but you can make it whatever size
+        you want. Happy pixeling!
+      "Widget: Color Pixelation_instruction": |
+        Requirements: The icon must be 16x16
+        pixels. You must use the Pixelation Widget to encode the bits of color information.
+        The image must be encoded with at least 12 bits per pixel.
+      "Widget: Text Compression_instruction": |
+        Look for patterns (repeated words
+        or phrases) in the text. Enter the patterns you see into the dictionary on
+        the right. As you type entries into the dictionary, the symbol for the entry
+        is inserted into the text in place of the pattern.
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

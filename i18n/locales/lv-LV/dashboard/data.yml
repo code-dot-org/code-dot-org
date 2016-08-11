@@ -5,24 +5,24 @@ lv:
         'Unplug1': Ievads datorzinātnēs
         'Maze': Labirints
         'Multi': Atbilžu varianti
-        Unplug2: Algoritmiska domāšana
-        Unplug3: Rūtiņpapīra programmēšana
+        'Unplug2': Algoritmiska domāšana
+        'Unplug3': Rūtiņpapīra programmēšana
         'Artist': Mākslinieks
-        Unplug4: Algoritmi
+        'Unplug4': Algoritmi
         'Artist2': Mākslinieks 2
-        Unplug5: Funkcijas
+        'Unplug5': Funkcijas
         'Farmer': Fermeris
-        Unplug6: Sazarojumi
+        'Unplug6': Sazarojumi
         'Artist3': Mākslinieks 3
         'Unplug7': Dziesmas rakstīšana
         'Farmer2': Fermeris 2
-        Unplug8: Abstrakcija
+        'Unplug8': Abstrakcija
         'Artist4': Mākslinieks 4
         'Unplug9': Releju programmēšana
         'Farmer3': Fermeris 3
         'Unplug10': Internets
         'Artist5': Mākslinieks 5
-        Unplug11: Ietīt
+        'Unplug11': Ietīt
         'MazeEC': Labirints
         'Bounce': Atlekt
         'Flappy': Flappy putns

@@ -353,7 +353,6 @@
     choose_next_course: "從下方課程中選擇一個進行體驗"
     print_certificate: "列印證書"
     announcement_title: "公告"
-    announcement_view_all: "全部查看"
     announcement_message: 'We''ve started to measure student learning in Courses 1-4
       and our Accelerated Course on Code Studio. There''s a lot that goes into it,
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
@@ -371,6 +370,8 @@
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: "新增你的名字"
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
     section_code_not_entered: "請提供現在的區間代碼"
