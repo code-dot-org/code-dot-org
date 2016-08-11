@@ -19,6 +19,16 @@ const style = {
 
 /** Root component for Public Key Cryptography widget */
 const PublicKeyCryptographyWidget = React.createClass({
+  getInitialState() {
+    return {
+      publicModulus: undefined
+    };
+  },
+
+  onChangePublicModulus(event) {
+    this.setState({publicModulus: parseInt(event.target.value, 10)});
+  },
+
   render() {
     return (
       <div style={style.root}>
@@ -27,9 +37,18 @@ const PublicKeyCryptographyWidget = React.createClass({
           <a href="https://docs.google.com/document/d/1d6mEbpykWsFKP2PAC5cj7ak_ouoPrwhMcFpYf7xd_Yw/edit">How the math works</a>
         </HyperlinksList>
         <EqualColumns intercolumnarDistance={20}>
-          <Alice/>
-          <Eve/>
-          <Bob/>
+          <Alice
+            publicModulus={this.state.publicModulus}
+            onChangePublicModulus={this.onChangePublicModulus}
+          />
+          <Eve
+            publicModulus={this.state.publicModulus}
+            onChangePublicModulus={this.onChangePublicModulus}
+          />
+          <Bob
+            publicModulus={this.state.publicModulus}
+            onChangePublicModulus={this.onChangePublicModulus}
+          />
         </EqualColumns>
         <ModuloClock/>
       </div>);
