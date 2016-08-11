@@ -597,7 +597,6 @@ Maze.init = function (config) {
 
     Maze.map.resetDirt();
 
-    // TODO can this be moved deeper into Subtype?
     Maze.gridItemDrawer = Maze.subtype.createGridItemDrawer();
 
     drawMap();
@@ -1834,10 +1833,10 @@ function atFinish() {
  * has finished running completely.
  */
 Maze.shouldCheckSuccessOnMove = function () {
-  if (Maze.subtype.isWordSearch() || Maze.subtype.isCollector() || Maze.map.hasMultiplePossibleGrids()) {
+  if (Maze.map.hasMultiplePossibleGrids()) {
     return false;
   }
-  return true;
+  return Maze.subtype.shouldCheckSuccessOnMove();
 };
 
 /**

@@ -19,6 +19,9 @@ export default class WordSearch extends Subtype {
     this.map_ = config.level.map;
   }
 
+  /**
+   * @override
+   */
   isWordSearch() {
     return true;
   }
@@ -26,6 +29,7 @@ export default class WordSearch extends Subtype {
   /**
    * Generate random tiles for walls (with some restrictions) and draw them to
    * the svg.
+   * @override
    */
   drawMapTiles(svg) {
     let letter;
@@ -48,9 +52,17 @@ export default class WordSearch extends Subtype {
 
   /**
    * Returns true if we've spelled the right word.
+   * @override
    */
   finished() {
     return this.visited_ === this.goal_;
+  }
+
+  /**
+   * @override
+   */
+  shouldCheckSuccessOnMove() {
+    return false;
   }
 
   /**
@@ -142,6 +154,7 @@ export default class WordSearch extends Subtype {
 
   /**
    * Reset all tiles to beginning state
+   * @override
    */
   resetTiles() {
     for (let row = 0; row < this.map_.length; row++) {
