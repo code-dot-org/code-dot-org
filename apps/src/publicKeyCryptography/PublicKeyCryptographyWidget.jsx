@@ -5,6 +5,7 @@ import EqualColumns from './EqualColumns';
 import {Alice, Eve, Bob} from './Characters';
 import ModuloClock from './ModuloClock';
 
+/** Root component for Public Key Cryptography widget */
 const PublicKeyCryptographyWidget = React.createClass({
   render() {
     return (
@@ -24,6 +25,7 @@ const PublicKeyCryptographyWidget = React.createClass({
 });
 export default PublicKeyCryptographyWidget;
 
+/** Block of verticalbar-separated hyperlinks at top of page. */
 function HyperlinksList(props) {
   let children = React.Children.toArray(props.children);
   for (let i = children.length - 1; i > 0; i--) {
