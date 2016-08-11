@@ -680,8 +680,8 @@ class Script < ActiveRecord::Base
           },
           name: student.name,
           # if we don't have a user level, consider ourselves locked
-          locked: user_level ? user_level.locked? : true,
-          view_answers: user_level ? !user_level.locked? && user_level.view_answers? : false
+          locked: user_level ? user_level.locked?(stage) : true,
+          view_answers: user_level ? !user_level.locked?(stage) && user_level.view_answers? : false
         }
       end
     end
