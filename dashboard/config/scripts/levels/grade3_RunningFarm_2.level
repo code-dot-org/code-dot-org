@@ -6,7 +6,7 @@
   "user_id": 318,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -26,9 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you help me plant one row of wheat and one row of carrots? I think the best way would be to use loops!",
+    "instructions": "NOTES: have wheat and potatoes interspersed throughout the row. Potatoes should be fully grown, with some randomly showing more than 1 potato per spot. This is different from the previous puzzle because students will have to use the drop down menu on the IF block to select potatoes instead of harvesting wheat.\r\n\r\n",
     "step_speed": "2",
     "ideal": "10",
+    "markdown_instructions": "Can you help me collect only the potatoes from this field?",
     "contained_level_names": null
   },
   "published": true,
@@ -37,6 +38,17 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" deletable="false">
+              <title name="TIMES">7</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_move">
@@ -59,44 +71,19 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">4</title>
+              <title name="TIMES">7</title>
               <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="maze_fill"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                <block type="collector_ifCollectible">
+                  <statement name="DO">
+                    <block type="collector_collect"/>
+                  </statement>
                   <next>
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                          <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">4</title>
-                              <statement name="DO">
-                                <block type="maze_fill">
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
