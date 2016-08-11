@@ -479,7 +479,7 @@
   no_internet: "Нямате интернет?"
   download_offline: "Изтеглете офлайн версията."
   are_you_teacher: "Учител ли сте?"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "Преглед на урочен план и други ресурси за учителя."
   volunteer_engineer_submission_title: "Вдъхнови ученици и доброволци за Hour of Code."
   volunteer_engineer_submission_subtitle_generic: '100 000 учители ще бъдат домакини
     на Hour of Code в техния клас тази година, 7-13 декември 2015. Те искат вашата
@@ -704,7 +704,7 @@
   dashboard_navigation_view_progress: "Прогрес"
   dashboard_navigation_view_text_responses: "Текстови отговори"
   dashboard_navigation_view_assessments: "Оценки"
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: "Оценки и анкети"
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
@@ -894,7 +894,6 @@
   dashboard_faq: "Често задавани въпроси"
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: "Съобщения"
-  dashboard_announce_view_all: "Преглед на всички"
   dashboard_announce_message: "<b>22 април 2016</b> - Дейностите без компютър са важна
     част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите
     може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
@@ -913,6 +912,8 @@
     зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
     образование."
   dashboard_announce_petition_button: "Добавете името си"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
   learn_more: "Научете повече"
@@ -1774,5 +1775,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>

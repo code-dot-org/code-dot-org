@@ -5,24 +5,24 @@ zh:
         'Unplug1': 计算机科学导论
         'Maze': 迷宫
         'Multi': 多选项目
-        Unplug2: 计算式思维技巧
-        Unplug3: 图纸上编程
+        'Unplug2': 计算式思维技巧
+        'Unplug3': 图纸上编程
         'Artist': 小艺术家
-        Unplug4: 算法
+        'Unplug4': 算法
         'Artist2': 小艺术家 2
-        Unplug5: 函数
+        'Unplug5': 函数
         'Farmer': 农夫
-        Unplug6: 条件语句
+        'Unplug6': 条件语句
         'Artist3': 小艺术家 3
         'Unplug7': 歌曲创作
         'Farmer2': 农民 2
-        Unplug8: 抽象化
+        'Unplug8': 抽象化
         'Artist4': 小艺术家 4
         'Unplug9': 编程接力
         'Farmer3': ' 农夫3'
         'Unplug10': 互联网
         'Artist5': 小艺术家 5
-        Unplug11: 总结
+        'Unplug11': 总结
         'MazeEC': 迷宫
         'Bounce': 弹跳
         'Flappy': Flappy Bird

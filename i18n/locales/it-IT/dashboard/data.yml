@@ -5,24 +5,24 @@ it:
         'Unplug1': "Cos'è l'informatica"
         'Maze': Il labirinto
         'Multi': Materiale con Risposte Multiple
-        Unplug2: Pensiero computazionale
-        Unplug3: Programmazione su carta a quadretti
+        'Unplug2': Pensiero computazionale
+        'Unplug3': Programmazione su carta a quadretti
         'Artist': "L'artista"
-        Unplug4: Algoritmi
+        'Unplug4': Algoritmi
         'Artist2': "L'artista 2"
-        Unplug5: Funzioni
+        'Unplug5': Funzioni
         'Farmer': La Contadina
-        Unplug6: Istruzioni condizionali
+        'Unplug6': Istruzioni condizionali
         'Artist3': "L'artista 3"
         'Unplug7': Composizione di canzoni
         'Farmer2': La Contadina 2
-        Unplug8: Astrazione
+        'Unplug8': Astrazione
         'Artist4': "L'artista 4"
         'Unplug9': Programmazione a Staffetta
         'Farmer3': La Contadina 3
         'Unplug10': Internet
         'Artist5': "L'artista 5"
-        Unplug11: Conclusione
+        'Unplug11': Conclusione
         'MazeEC': Il Labirinto
         'Bounce': Ping-Pong
         'Flappy': Flappy Bird

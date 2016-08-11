@@ -5,24 +5,24 @@ nl:
         'Unplug1': Inleiding Informatica
         'Maze': Het Doolhof
         'Multi': Meerkeuze dingen
-        Unplug2: Rekenend Denken
-        Unplug3: Programmeren op Ruitjespapier
+        'Unplug2': Rekenend Denken
+        'Unplug3': Programmeren op Ruitjespapier
         'Artist': De Artiest
-        Unplug4: Algoritmen
+        'Unplug4': Algoritmen
         'Artist2': De Artiest 2
-        Unplug5: Functies
+        'Unplug5': Functies
         'Farmer': De Boer
-        Unplug6: Voorwaardelijke instructies
+        'Unplug6': Voorwaardelijke instructies
         'Artist3': De Artiest 3
         'Unplug7': Liedjes Schrijven
         'Farmer2': De Boer 2
-        Unplug8: Abstractie
+        'Unplug8': Abstractie
         'Artist4': De Artiest 4
         'Unplug9': Estafette Programmeren
         'Farmer3': De Boer 3
         'Unplug10': Het Internet
         'Artist5': De Artiest 5
-        Unplug11: Einde
+        'Unplug11': Einde
         'MazeEC': Het Doolhof
         'Bounce': Stuiter
         'Flappy': Flappy Bird

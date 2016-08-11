@@ -389,7 +389,6 @@
     choose_next_course: "جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل"
     print_certificate: "طباعة الشهادة"
     announcement_title: "إعلانات"
-    announcement_view_all: "عرض الكل"
     announcement_message: هل تريد مساعدتنا في اختبار ميزات جديدة؟ نحن نعلم أنه من
       الضروري أن نشجع الطلاب على المراجعة و التجربة, لذلك سوف نقوم بإضافة ميزة "كود
       غير مستخدم" للسماح للطلاب بتنفيذ كودهم الخاص حتى ولو كانت قطع برمجية غير مرفقة.
@@ -406,6 +405,8 @@
       الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم
       الكمبيوتر."
     announcement_petition_button: "أضف أسمك"
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال
       كود قسم مختلف."
