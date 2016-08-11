@@ -901,7 +901,6 @@
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_view_all: Ver todo
   dashboard_announce_message: "<b>6 de enero, 2015</b> - Aprender más allá de una
     Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un
     seguimiento del progreso del alumno."
@@ -918,6 +917,8 @@
     grandes de América se unieron en una carta abierta pidiendo al congreso de los
     Estados Unidos financiar la educación en informática para K-12.
   dashboard_announce_petition_button: Agrega tu nombre
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   learn_more: Aprenda más
@@ -1809,5 +1810,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
