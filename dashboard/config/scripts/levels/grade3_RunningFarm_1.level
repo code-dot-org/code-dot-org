@@ -73,7 +73,7 @@
             <block type="controls_repeat">
               <title name="TIMES">7</title>
               <statement name="DO">
-                <block type="collector_whileCollectible">
+                <block type="collector_ifCollectible">
                   <statement name="DO">
                     <block type="collector_collect"/>
                   </statement>
