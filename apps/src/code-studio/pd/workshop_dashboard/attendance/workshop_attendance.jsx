@@ -14,8 +14,8 @@ import {
   Col,
   ButtonToolbar,
   Button,
-  SplitButton,
-  MenuItem,
+  OverlayTrigger,
+  Tooltip,
   Tabs,
   Tab
 } from 'react-bootstrap';
@@ -51,7 +51,9 @@ const WorkshopAttendance = React.createClass({
       workshopState: undefined,
       sessionAttendances: undefined,
       adminActions: undefined,
-      adminOverride: false
+      adminOverride: false,
+      saving: false,
+      isModified: false
     };
   },
 
@@ -89,24 +91,12 @@ const WorkshopAttendance = React.createClass({
     this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionIndex}`);
   },
 
-  handleCancelClick() {
+  handleBackClick() {
     this.context.router.push(`/workshops/${this.props.params.workshopId}`);
   },
 
   handleSaveClick() {
-    this.save(() => {
-      // Navigate after save.
-      this.context.router.push('/workshops/' + this.props.params.workshopId);
-    });
-  },
-
-  handleSaveAndDownloadCsvClick() {
-    this.save(() => {
-      window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
-    });
-  },
-
-  save(callback) {
+    this.setState({saving: true});
     const url = `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`;
     const data = this.prepareDataForApi();
     this.saveRequest = $.ajax({
@@ -116,10 +106,15 @@ const WorkshopAttendance = React.createClass({
       contentType: 'application/json',
       data: JSON.stringify({pd_workshop: data})
     }).done(() => {
-      if (callback) {
-        callback();
-      }
+      this.setState({
+        saving: false,
+        isModified: false
+      });
     });
+  },
+
+  handleDownloadCsvClick() {
+    window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
   },
 
   prepareDataForApi() {
@@ -146,7 +141,10 @@ const WorkshopAttendance = React.createClass({
   handleAttendanceChange(i, value) {
     const clonedAttendances = _.cloneDeep(this.state.sessionAttendances);
     clonedAttendances[this.activeSessionIndex()].attendance[i].attended = value;
-    this.setState({sessionAttendances: clonedAttendances});
+    this.setState({
+      sessionAttendances: clonedAttendances,
+      isModified: true
+    });
   },
 
   activeSessionIndex() {
@@ -223,17 +221,20 @@ const WorkshopAttendance = React.createClass({
         <Row>
           <Col sm={10}>
             <ButtonToolbar>
-              <SplitButton
+              <Button
+                disabled={!this.state.isModified && !this.state.saving}
                 bsStyle="primary"
-                title="Save"
-                id="save-button"
                 onClick={this.handleSaveClick}
               >
-                <MenuItem eventKey="1" onSelect={this.handleSaveAndDownloadCsvClick}>
-                  Save and download Csv
-                </MenuItem>
-              </SplitButton>
-              <Button onClick={this.handleCancelClick}>Cancel</Button>
+                Save
+              </Button>
+              <Button
+                disabled={this.state.isModified}
+                onClick={this.handleDownloadCsvClick}
+              >
+                Download CSV
+              </Button>
+              <Button onClick={this.handleBackClick}>Back</Button>
             </ButtonToolbar>
           </Col>
         </Row>
