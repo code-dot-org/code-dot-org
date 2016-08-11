@@ -21,7 +21,7 @@ ENV["RACK_ENV"] = "test"
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
 CDO.rack_env = "test" if defined? CDO
-Rails.application.reload_routes! if defined? Rails
+Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
@@ -217,7 +217,7 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    @html_document ||= if @response.content_type === Mime::XML
+    @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
                          Nokogiri::HTML::Document.parse(@response.body, &:strict)

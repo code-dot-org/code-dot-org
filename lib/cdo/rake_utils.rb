@@ -154,7 +154,7 @@ module RakeUtils
   # full revision history needed to find the original commit SHA.
   def self.git_folder_hash(dir)
     Dir.chdir(File.expand_path(dir)) do
-      Digest::SHA2.hexdigest(`git ls-tree -r HEAD`)
+      Digest::SHA2.hexdigest(`git ls-tree -r HEAD 2>/dev/null`)
     end
   end
 

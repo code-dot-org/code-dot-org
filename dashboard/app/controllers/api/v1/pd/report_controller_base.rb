@@ -1,5 +1,5 @@
 class Api::V1::Pd::ReportControllerBase < ::ApplicationController
-  before_filter :default_to_json
+  before_action :default_to_json
 
   def default_to_json
     request.format = :json unless request.format.csv?

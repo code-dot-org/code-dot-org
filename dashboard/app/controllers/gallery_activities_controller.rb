@@ -1,5 +1,5 @@
 class GalleryActivitiesController < ApplicationController
-  before_filter :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: :index
   load_and_authorize_resource
   check_authorization
 

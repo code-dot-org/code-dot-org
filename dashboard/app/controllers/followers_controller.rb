@@ -4,7 +4,7 @@
 # models).
 
 class FollowersController < ApplicationController
-  before_filter :authenticate_user!, except: [:student_user_new, :student_register]
+  before_action :authenticate_user!, except: [:student_user_new, :student_register]
   before_action :load_section, only: [:create, :student_user_new, :student_register]
 
   # join a section as a logged in student

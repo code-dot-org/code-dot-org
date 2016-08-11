@@ -3,10 +3,12 @@ require_relative 'test_helper'
 require 'cdo/analytics/milestone_parser'
 
 class MilestoneParser
-  # self.log_debug = true # Uncomment to show debug logs
-
   def stub_fetch(key, path, bytes)
     TestMilestoneParser.instance.fetch(key, path, bytes)
+  end
+
+  def debug(msg)
+    # CDO.log.info msg # Uncomment to show debug logs
   end
 end
 

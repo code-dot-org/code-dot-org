@@ -114,7 +114,7 @@ module Ops
           format_teachers_for_csv(@workshop.teachers, teacher_info)
           format_teachers_for_csv(@workshop.unexpected_teachers, teacher_info)
 
-          render text: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher }}
+          render plain: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher }}
         end
       end
     end
@@ -131,7 +131,7 @@ module Ops
             find_or_create_by(teacher_id: id, segment_id: @segment.id).
             update!(status: status, notes: notes)
       end
-      render text: 'OK'
+      render plain: 'OK'
     end
 
     # POST /ops/segments/1/attendance
@@ -159,7 +159,7 @@ module Ops
     # DELETE /ops/attendance/1
     def destroy
       @workshop_attendance.destroy
-      render text: 'OK'
+      render plain: 'OK'
     end
 
     private

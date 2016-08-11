@@ -174,7 +174,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
