@@ -56,7 +56,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create user with invalid email" do
-    user = User.create(@good_data.merge({email: 'foo@bar'}))
+    user = User.create(@good_data.merge({email: 'foo@bar@com'}))
     assert !user.valid?
     assert user.errors[:email].length == 1
   end
