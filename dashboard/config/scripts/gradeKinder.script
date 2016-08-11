@@ -78,6 +78,11 @@ stage 'Loops Unplugged'
 level 'gradeK_unplugged_loops'
 
 stage 'Loops Intro'
+level 'gradek_adventurer_loopsPre'
+level 'gradek_adventurer_loops1'
+level 'gradek_adventurer_loops2'
+level 'gradek_adventurer_loops3'
+level 'gradek_adventurer_loops4'
 
 
 stage 'Loops'
