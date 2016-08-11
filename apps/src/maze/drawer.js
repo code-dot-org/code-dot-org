@@ -70,7 +70,7 @@ export default class Drawer {
     // the href to whatever we want it to be, and hide it if we don't
     // have one
     img = img || this.createImage_(prefix, row, col);
-    img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
+    img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href || '');
     img.setAttribute('visibility', href ? 'visible' : 'hidden');
 
     return img;
