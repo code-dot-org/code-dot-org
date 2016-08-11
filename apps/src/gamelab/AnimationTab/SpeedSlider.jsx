@@ -95,6 +95,7 @@ const SpeedSlider = React.createClass({
       dragStart: mousePosition.x,
       valueStart: newValue
     });
+    this.startDragging();
   },
 
   onKnobMouseDown(event) {
@@ -103,6 +104,12 @@ const SpeedSlider = React.createClass({
       dragStart: mousePosition.x,
       valueStart: this.props.value
     });
+    this.startDragging();
+  },
+
+  startDragging() {
+    document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('mouseup', this.stopDragging);
   },
 
   onMouseMove(event) {
@@ -115,6 +122,8 @@ const SpeedSlider = React.createClass({
 
   stopDragging(event) {
     this.setState(this.getInitialState());
+    document.removeEventListener('mousemove', this.onMouseMove);
+    document.removeEventListener('mouseup', this.stopDragging);
   },
 
   render() {
@@ -130,8 +139,6 @@ const SpeedSlider = React.createClass({
           width="150"
           height="35"
           ref={el => this.SVG_ = el}
-          onMouseMove={this.state.dragStart !== undefined ? this.onMouseMove : undefined}
-          onMouseUp={this.stopDragging}
         >
           {/*<!-- Slow icon. -->*/}
           <clipPath id="slowClipPath">
