@@ -8,6 +8,8 @@ machine:
     version: 2.2.3
   node:
     version: 0.12.0
+  java:
+    version: openjdk8 # used for Applitools merge API tool
   environment:
     RAILS_ENV: test
     RACK_ENV: test
