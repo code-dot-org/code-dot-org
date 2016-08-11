@@ -18,7 +18,6 @@ module AWS
     TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
 
-
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
     # Use [DOMAIN] wildcard SSL certificate for ELB and CloudFront, if available.
@@ -100,9 +99,8 @@ module AWS
           {template_body: template}
         elsif template.length < 460800
           CDO.log.warn 'Uploading template to S3...'
-          bucket = TEMP_BUCKET
-          key = AWS::S3.upload_to_bucket(bucket, "#{STACK_NAME}-#{Digest::MD5.hexdigest(template)}-cfn.json", template, no_random: true)
-          {template_url: "https://s3.amazonaws.com/#{bucket}/#{key}"}
+          key = AWS::S3.upload_to_bucket(TEMP_BUCKET, "#{STACK_NAME}-#{Digest::MD5.hexdigest(template)}-cfn.json", template, no_random: true)
+          {template_url: "https://s3.amazonaws.com/#{TEMP_BUCKET}/#{key}"}
         else
           raise 'Template is too large'
         end
@@ -352,12 +350,11 @@ module AWS
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
           `zip -qr - *.js node_modules`
         end
-        bucket = S3_BUCKET
         key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
-        object_exists = Aws::S3::Client.new.head_object(bucket: bucket, key: key) rescue nil
-        AWS::S3.upload_to_bucket(bucket, key, code_zip, no_random: true) unless object_exists
+        object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
+        AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true) unless object_exists
         {
-          S3Bucket: bucket,
+          S3Bucket: S3_BUCKET,
           S3Key: key
         }.to_json
       end
