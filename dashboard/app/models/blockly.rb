@@ -25,7 +25,6 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
-  include LocaleHelper
 
   serialized_attrs %w(
     level_url
@@ -301,13 +300,13 @@ class Blockly < Level
 
   def localized_instructions
     if self.custom?
-      loc_val = data_t("instructions", "#{self.name}_instruction")
+      loc_val = I18n.t("data.instructions").try(:[], "#{self.name}_instruction".to_sym)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
     else
       val = [self.game.app, self.game.name].map { |name|
-        data_t("level.instructions", "#{name}_#{self.level_num}")
+        I18n.t("data.level.instructions").try(:[], "#{name}_#{self.level_num}".to_sym)
       }.compact.first
       return val unless val.nil?
     end
