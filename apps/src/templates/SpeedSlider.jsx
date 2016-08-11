@@ -5,7 +5,7 @@ var dom = require('../dom');
 
 const style = {
   sliderTrack: {
-    stroke: color.light_gray,
+    stroke: color.lightest_purple,
     strokeWidth: 4,
     strokeLinecap: "round",
   },
