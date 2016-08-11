@@ -25,6 +25,12 @@ import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 
+const styles = {
+  linkButton: {
+    color:'inherit'
+  }
+};
+
 const Workshop = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -209,6 +215,10 @@ const Workshop = React.createClass({
 
   handleEnrollmentRefreshClick() {
     this.loadEnrollments();
+  },
+
+  handleEnrollmentDownloadClick() {
+    window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
   },
 
   getSectionUrl() {
@@ -466,8 +476,11 @@ const Workshop = React.createClass({
       <div>
         Workshop Enrollment:{' '}
         {this.state.workshop.enrolled_teacher_count}/{this.state.workshop.capacity}
-        <Button bsStyle="link" style={{color:'inherit'}} onClick={this.handleEnrollmentRefreshClick}>
+        <Button bsStyle="link" style={styles.linkButton} onClick={this.handleEnrollmentRefreshClick}>
           <i className="fa fa-refresh" />
+        </Button>
+        <Button bsStyle="link" style={styles.linkButton} onClick={this.handleEnrollmentDownloadClick}>
+          <i className="fa fa-arrow-circle-down" />
         </Button>
       </div>
     );
