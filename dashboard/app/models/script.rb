@@ -659,4 +659,31 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
     }.compact
   end
+
+  def lockable_state(students)
+    self.stages.each_with_object({}) do |stage, stage_hash|
+      next unless stage.lockable?
+      # assumption that lockable stages have a single (assessment) level
+      if stage.script_levels.length > 1
+        raise 'Expect lockable stages to have a single script_level'
+      end
+      script_level = stage.script_levels[0]
+      stage_hash[stage.id] = students.map do |student|
+        user_level = UserLevel.find_by(user_id: student.id, level: script_level.level, script_id:  self.id)
+        # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
+        # don't yet have a user_level, and need to provide enough data to create one
+        {
+          user_level_data: {
+            user_id: student.id,
+            level_id: script_level.level.id,
+            script_id: script_level.script.id
+          },
+          name: student.name,
+          # if we don't have a user level, consider ourselves locked
+          locked: user_level ? user_level.locked? : true,
+          view_answers: user_level ? !user_level.locked? && user_level.view_answers? : false
+        }
+      end
+    end
+  end
 end
