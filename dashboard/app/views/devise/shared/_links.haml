@@ -8,7 +8,8 @@
   = link_to t('nav.user.signup'), new_user_registration_path
   %br/
   %br/
-- if devise_mapping.recoverable? && controller_name != 'passwords'
+-# If we are in sign-in (but not sign-up) and can offer to recover forgotten password.
+- if controller_name == 'sessions' && devise_mapping.recoverable? && controller_name != 'passwords'
   = link_to t('auth.forgot_password'), new_password_path(resource_name)
   %br/
   %br/

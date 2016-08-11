@@ -48,6 +48,7 @@ class Game < ActiveRecord::Base
   EVAL = 'eval'
   TEXT_COMPRESSION = 'text_compression'
   LEVEL_GROUP = 'level_group'
+  PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -103,6 +104,10 @@ class Game < ActiveRecord::Base
 
   def self.frequency_analysis
     @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
+  end
+
+  def self.public_key_cryptography
+    @@game_public_key_cryptography ||= find_by_name("PublicKeyCryptography")
   end
 
   def self.multi
@@ -236,6 +241,7 @@ class Game < ActiveRecord::Base
         StandaloneVideo:standalone_video
         ExternalLink:external_link
         EvaluationMulti:evaluation_multi
+        PublicKeyCryptography:public_key_cryptography
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
