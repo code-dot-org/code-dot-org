@@ -33,13 +33,13 @@
 .field
   = f.label :images, 'Image field in JSON array format, e.g.:'
   %div
-    %p{:style => '-webkit-user-select: text'} [{"filename":"cat.svg","position":[16,170]},{"filename":"lion.svg","position":[15,250]},{"filename":"elephant.svg","position":[127,220]},{"filename":"cow.svg","position":[255,250]}]
-    %p Ask an engineer to add the SVG assets to the Blockly/static/turtle folder and push to dashboard.
+    %pre{:style => '-webkit-user-select: text'}= "[\n  {\"filename\": \"https://images.code.org/cat.png\", \"position\": [16, 170]},\n  {\"filename\": \"https://images.code.org/lion.png\", \"position\": [15, 250]},\n  {\"filename\": \"https://images.code.org/elephant.png\", \"position\": [127, 220]},\n  {\"filename\": \"https://images.code.org/cow.png\", \"position\": [255, 250]}\n]"
+    %p Paste or drag images into this field to upload them, similar to adding images to Markdown Instructions.
   = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']
   :javascript
     var editor = CodeMirror.fromTextArea($("#level_images").get(0), {
       mode: 'javascript',
-      /viewportMargin: Infinity,
+      viewportMargin: Infinity,
       lineWrapping: true
     });
 
@@ -47,7 +47,7 @@
       uploadUrl: '/level_assets/upload',
       uploadFieldName: 'file',
       downloadFieldName: 'newAssetUrl',
-      allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/svg'],
+      allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
       progressText: '"Uploading file..."',
       urlText: '"{filename}"', // `{filename}` tag gets replaced with URL
       errorText: "Error uploading file",
