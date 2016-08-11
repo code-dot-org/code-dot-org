@@ -496,7 +496,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
-    message += "<br/><i>rerun: bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}</i>"
+    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end
