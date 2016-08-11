@@ -14,9 +14,8 @@
 #signup
   .row
     .span9
-      %h1= t('signup_form.signup_title')
-      %p= t('signup_form.overview_student').html_safe
-      %p= sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
+      %h1= t('signup_form.title')
+      %p= t('signup_form.overview').html_safe
 
   .row
     .span8.signupblock
