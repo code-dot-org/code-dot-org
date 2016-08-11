@@ -129,6 +129,7 @@ var Instructions = React.createClass({
         {this.props.acapelaEnabled && this.props.acapelaSrc &&
           <div>
             <a
+              id="tts-button"
               className={classnames({
                 'btn btn-primary' : true,
                 'disabled': !!this.state.audioError
