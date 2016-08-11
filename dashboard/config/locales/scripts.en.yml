@@ -881,6 +881,7 @@ en:
           Gamelab: Gamelab
           Anonymous student survey: Anonymous student survey
           Anonymous student survey 2: Anonymous student survey 2
+          Public Key Cryptography: Public Key Cryptography
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1907,6 +1908,13 @@ en:
           description: Temp place to work on U2 of Disco
           Headers and Lists: Headers and Lists
           Introduction to HTML: Introduction to HTML
+          Quality Websites: Quality Websites
+          Designing Web Pages: Designing Web Pages
+          Describing Webpages: Describing Webpages
+          Text on the Web: Text on the Web
+          Designing Code for Computers: Designing Code for Computers
+          Digital Footprint: Digital Footprint
+          Images on the Web: Images on the Web
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -1995,6 +2003,7 @@ en:
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2308,3 +2317,7 @@ en:
           The Design Recipe: The Design Recipe
           Teacher Dashboard: Teacher Dashboard
           Lesson Prep: Lesson Prep
+        csp-pre-survey:
+          title: CS Principles Pre-Survey
+          Anonymous student survey 2: Anonymous student survey 2
+          Anonymous student pre-survey: Anonymous student pre-survey
