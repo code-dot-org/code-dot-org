@@ -289,7 +289,7 @@ $calculate_flakiness = true
 # the rest of this script execution if an error occurs during calculation.
 # returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
 def flakiness_for_test(test_run_identifier)
-  return false unless $calculate_flakiness
+  return nil unless $calculate_flakiness
   TestFlakiness.test_flakiness[test_run_identifier]
 rescue Exception => e
   puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
@@ -401,7 +401,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
-      # ask saucelabs how flaky the test is
       flakiness = flakiness_for_test(test_run_string)
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
