@@ -1603,6 +1603,10 @@ a.download-video {
   }
 }
 
+.external .content-level {
+  overflow: hidden;
+}
+
 .peer-review input[type=radio] {
   margin: 0 3px 3px 5px;
 }
