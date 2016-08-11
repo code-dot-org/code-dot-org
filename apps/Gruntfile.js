@@ -267,6 +267,7 @@ module.exports = function (grunt) {
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
         ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+        ['build/package/css/publicKeyCryptography.css', 'style/publicKeyCryptography/publicKeyCryptography.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
@@ -438,6 +439,14 @@ module.exports = function (grunt) {
       entries: {
         pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
       }
+    },
+
+    {
+      uniqueName: 'publicKeyCryptography',
+      entries: {
+        publicKeyCryptography: './src/publicKeyCryptography/publicKeyCryptography.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
     }
   ];
 
