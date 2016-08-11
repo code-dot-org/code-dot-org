@@ -182,6 +182,9 @@ endvariants
 stage 'Anonymous student survey'
 assessment 'Test anonymous student survey'
 
-stage 'Anonymous student survey 2', 
+stage 'Anonymous student survey 2',
 lockable: true
 assessment 'CSP pre-assessment survey'
+
+stage 'Public Key Cryptography'
+level 'AllThethings Public Key Cryptography'

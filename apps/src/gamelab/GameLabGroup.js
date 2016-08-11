@@ -70,19 +70,36 @@ module.exports.Group = function (baseConstructor) {
   /**
    * Test each member of group against the target using the isTouching sprite
    * method.  Return true if any touching occurred.
+   * This follows the same approach as _groupCollideGameLab to properly
+   * handle JSInterpreter __substate.
    *
    * @method isTouching
    * @param {Object} target Group or Sprite
    * @return {boolean} True if any touching occurred
    */
   array.isTouching = function (target) {
-    var didTouch = false;
-    for (var i = 0; i < this.length; i++) {
-      didTouch = this[i].isTouching(target) || didTouch;
-      // Note: can't early out because each call needs to update the sprite's
-      // touching property.
+    var state = jsInterpreter.getCurrentState();
+    if (!state.__i) {
+      state.__i = 0;
+      state.__didCollide = false;
     }
-    return didTouch;
+    if (state.__i < this.size()) {
+      if (!state.__subState) {
+        // Before we call Sprite.isTouching which calls AABBops (another stateful function),
+        // hang a __subState off of state, so it can use that instead to track its state:
+        state.__subState = { doneExec: true };
+      }
+      var didTouch = this.get(state.__i).isTouching(target);
+      if (state.__subState.doneExec) {
+        state.__didCollide = didTouch || state.__didCollide;
+        delete state.__subState;
+        state.__i++;
+      }
+      state.doneExec = false;
+    } else {
+      state.doneExec = true;
+      return state.__didCollide;
+    }
   };
 
   array.setPropertyEach = function (propName, value) {
