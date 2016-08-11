@@ -459,7 +459,6 @@ Applab.setStepSpeed = function (speed) {
 function getCurrentTickLength() {
   var debugStepDelay;
   if (debuggerUi) {
-    // debugStepDelay will be undefined if no speed slider is present
     debugStepDelay = debuggerUi.getStepDelay();
   }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
@@ -628,7 +627,7 @@ Applab.init = function (config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick, studioApp.reduxStore);
   }
 
   config.loadAudio = function () {
