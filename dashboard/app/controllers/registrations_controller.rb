@@ -24,7 +24,7 @@ class RegistrationsController < Devise::RegistrationsController
       if successfully_updated
         set_locale_cookie(@user.locale)
         # Sign in the user bypassing validation in case his password changed
-        sign_in @user, :bypass => true
+        bypass_sign_in @user
 
         format.html do
           set_flash_message :notice, @user.pending_reconfirmation? ? :update_needs_confirmation : :updated
