@@ -1,6 +1,7 @@
 var React = require('react');
 var color = require('../../color');
 var Radium = require('radium');
+var dom = require('../../dom');
 
 const style = {
   sliderTrack: {
@@ -26,17 +27,101 @@ var sliderImages = {
   lightRabbit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAYAAAAPr1RWAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUCEjcsBQRNEAAAAX9JREFUOMuV0zFrVUEQBeBvwCJEEqukEeWhgiiCiIVYWATROqKFrUV6EfwH/gLbVBY2gpAilUQbCaKNRSQgGEnzCt8DwQRDurGZK5d4zbtv4LI7c3fP2Z09J/SMzHxY068R8bnPnhM9gc/X9ApWMhM+4DX8j6wXeETsZOZ8pXu4hZu4ivXM3IuInX/2mTLqFgMsFfgsXmHjKMHU4B1Ej3EZB3iJdxExmtiWzLyGO3hQpY9Yw27rlJtYwDesYJyZWxExmtTz+7jbym/Ut5+ZqxhjucAXas0SfmIUE6T3pGeH9mscYxVbEXEs+FvM9QSdwxs8L3V19zwzF3Gv0u84WfPZY0h+tGQ76tR5tWK5AA/qmms4izMlwSZ+13gO242hMnOxIYgq3K6Xbk75Hr9KAZu4hItFMo8vRXyhXDvAbtU3MIyIwwb8WeM2fMKwnCgiDjNzpkBPt1w6rHyA6+XaJtbxIlp6/gvYgHa8x8zR/+1akT3CKTyN9oIuwCkd2ybyB67+kmBPPxeyAAAAAElFTkSuQmCC"
 };
 
+const knobXMax = 135;
+const knobXMin = 15;
+const TRACK_LENGTH = knobXMax - knobXMin;
+
 /**
  * Slider for modifying frameDelay. Ideally we will eventually have a common component
  * used by debugger, turtle, and here.
  */
 const SpeedSlider = React.createClass({
   propTypes: {
-    hasFocus: React.PropTypes.bool/*.isRequired as soon as everything is hooked up. */,
+    hasFocus: React.PropTypes.bool,
     style: React.PropTypes.object,
+    value: React.PropTypes.number.isRequired,
+    onChange: React.PropTypes.func.isRequired
   },
+
+  getInitialState() {
+    return {
+      dragStart: undefined,
+      valueStart: undefined
+    };
+  },
+
+  componentDidMount() {
+    this.isAndroid_ = dom.isAndroid();
+    this.isIOS_ = dom.isIOS();
+    this.isWindowsTouch_ = dom.isWindowsTouch();
+  },
+
+  mouseToSvg_(e) {
+    var svgPoint = this.SVG_.createSVGPoint();
+    // Most browsers provide clientX/Y. iOS only provides pageX/Y.
+    // Android Chrome only provides coordinates within e.changedTouches.
+    if (this.isWindowsTouch_) {
+      // Only screenX/Y properly accounts for zooming in on windows touch.
+      svgPoint.x = e.screenX;
+      svgPoint.y = e.screenY;
+    } else if (this.isAndroid_) {
+      svgPoint.x = e.changedTouches[0].pageX;
+      svgPoint.y = e.changedTouches[0].pageY;
+    } else if (this.isIOS_) {
+      svgPoint.x = e.pageX;
+      svgPoint.y = e.pageY;
+    } else {
+      svgPoint.x = e.clientX;
+      svgPoint.y = e.clientY;
+    }
+    var matrix = this.SVG_.getScreenCTM().inverse();
+    return svgPoint.matrixTransform(matrix);
+  },
+
+  clampValue(val) {
+    return Math.min(Math.max(val, 0), 1);
+  },
+
+  svgPositionToValue(position) {
+    position = (position - knobXMin)/TRACK_LENGTH;
+    return this.clampValue(position);
+  },
+
+  onTrackMouseDown(event) {
+    let mousePosition = this.mouseToSvg_(event);
+    const newValue = this.svgPositionToValue(mousePosition.x);
+    this.props.onChange(newValue);
+    this.setState({
+      dragStart: mousePosition.x,
+      valueStart: newValue
+    });
+  },
+
+  onKnobMouseDown(event) {
+    let mousePosition = this.mouseToSvg_(event);
+    this.setState({
+      dragStart: mousePosition.x,
+      valueStart: this.props.value
+    });
+  },
+
+  onMouseMove(event) {
+    let mousePosition = this.mouseToSvg_(event);
+    let mouseDelta = mousePosition.x - this.state.dragStart;
+    let valueDelta = mouseDelta / TRACK_LENGTH;
+    let newValue = this.clampValue(this.state.valueStart + valueDelta);
+    this.props.onChange(newValue);
+  },
+
+  stopDragging(event) {
+    this.setState(this.getInitialState());
+  },
+
   render() {
     const props = this.props;
+    let clampedValue = this.clampValue(props.value);
+    const knobWidth = 16;
+    let knobXPosition = knobXMin + TRACK_LENGTH*clampedValue - 1/2*knobWidth;
     return (
       <div id="slider-cell" style={props.style}>
         <svg
@@ -44,6 +129,9 @@ const SpeedSlider = React.createClass({
           version="1.1"
           width="150"
           height="35"
+          ref={el => this.SVG_ = el}
+          onMouseMove={this.state.dragStart !== undefined ? this.onMouseMove : undefined}
+          onMouseUp={this.stopDragging}
         >
           {/*<!-- Slow icon. -->*/}
           <clipPath id="slowClipPath">
@@ -79,8 +167,21 @@ const SpeedSlider = React.createClass({
             x={121}
             y={3}
           />
-          <line style={style.sliderTrack} x1="10" y1="25" x2="140" y2="25" />
-          <path id="knob" style={style.sliderKnob} transform="translate(67, 10)" d="m 8,0 l -8,8 v 12 h 16 v -12 z" />
+          <line
+            style={style.sliderTrack}
+            x1="10"
+            y1="25"
+            x2="140"
+            y2="25"
+            onMouseDown={this.onTrackMouseDown}
+          />
+          <path
+            id="knob"
+            style={style.sliderKnob}
+            transform={`translate(${knobXPosition}, 10)`}
+            d="m 8,0 l -8,8 v 12 h 16 v -12 z"
+            onMouseDown={this.onKnobMouseDown}
+          />
         </svg>
       </div>
     );
@@ -90,12 +191,28 @@ const SpeedSlider = React.createClass({
 export default Radium(SpeedSlider);
 
 if (BUILD_STYLEGUIDE) {
+  const StorybookHarness = React.createClass({
+    getInitialState() {
+      return {
+        value: 0.5
+      };
+    },
+
+    onValueChange(newValue) {
+      this.setState({value: newValue});
+    },
+
+    render() {
+      return <SpeedSlider hasFocus={false} value={this.state.value} onChange={this.onValueChange} />;
+    }
+  });
+
   SpeedSlider.styleGuideExamples = storybook => {
     return storybook
       .storiesOf('SpeedSlider', module)
       .addWithInfo(
         'Default',
         '',
-        () => (<SpeedSlider hasFocus={false}/>));
+        () => <StorybookHarness/>);
   };
 }
