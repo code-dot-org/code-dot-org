@@ -5,6 +5,7 @@ login_required 'true'
 hidden 'false'
 
 stage "Personal Innovations"
+named_level 'CSP Pre-survey'
 level 'U1L1 Student Lesson Introduction'
 named_level 'Computer Science is Changing Everything'
 level 'U1L1 - FR computer science word association'
