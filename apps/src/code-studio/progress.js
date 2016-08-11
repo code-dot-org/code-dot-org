@@ -88,12 +88,13 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
       const levelProgress = _.mapValues(data.levels, level => {
-        if (level.submitted) {
-          return level.view_answers ? SUBMITTED_RESULT : LOCKED_RESULT;
-        }
         if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
+        if (level.submitted || level.view_answers) {
+          return SUBMITTED_RESULT;
+        }
+
         return level.result;
       });
       store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));

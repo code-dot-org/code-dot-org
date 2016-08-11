@@ -92,7 +92,7 @@ module UsersHelper
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
           view_answers = !!ul.try(:view_answers)
-          locked = ul.try(:locked?) || sl.stage.lockable? && !ul
+          locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
 
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
@@ -116,7 +116,8 @@ module UsersHelper
               pages_completed.each_with_index do |result, index|
                 user_data[:levels]["#{level_id}_#{index}"] = {
                   result: result,
-                  submitted: submitted ? true : nil
+                  submitted: submitted ? true : nil,
+                  view_answers: view_answers ? true : nil
                 }.compact
               end
             end

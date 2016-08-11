@@ -84,17 +84,19 @@ class UserLevel < ActiveRecord::Base
   end
 
   def handle_unsubmit
-    if submitted_changed? from: true, to: false
+    if submitted_changed? from: true, to: false && !self.view_answers
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
   end
 
-  def has_autolocked?
+  def has_autolocked?(stage)
+    return false unless stage.lockable?
     (self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago)
   end
 
-  def locked?
-    self.submitted? && !self.view_answers? || self.has_autolocked?
+  def locked?(stage)
+    return false unless stage.lockable?
+    self.submitted? && !self.view_answers? || self.has_autolocked?(stage)
   end
 
   def self.update_lockable_state(user_id, level_id, script_id, locked, view_answers)
