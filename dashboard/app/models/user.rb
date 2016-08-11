@@ -493,7 +493,7 @@ class User < ActiveRecord::Base
   end
 
   def user_level_locked?(script_level, level)
-    false unless script_level.stage.lockable?
+    return false unless script_level.stage.lockable?
     user_level = user_level_for(script_level, level)
     user_level.nil? || user_level.submitted?
   end
