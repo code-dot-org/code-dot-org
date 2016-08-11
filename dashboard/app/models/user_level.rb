@@ -96,4 +96,19 @@ class UserLevel < ActiveRecord::Base
   def locked?
     self.submitted? && !self.view_answers? || self.has_autolocked?
   end
+
+  def self.update_lockable_state(user_id, level_id, script_id, locked, view_answers)
+    user_level = UserLevel.find_by(user_id: user_id, level_id: level_id, script_id: script_id)
+
+    # no need to create a level if it's just going to be locked
+    return if !user_level && locked
+
+    user_level ||= UserLevel.create(user_id: user_id, level_id: level_id, script_id: script_id)
+
+    user_level.update!(
+      submitted: locked,
+      view_answers: !locked && view_answers,
+      unlocked_at: locked ? nil : Time.now
+    )
+  end
 end
