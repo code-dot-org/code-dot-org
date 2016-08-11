@@ -21,7 +21,7 @@
       %audio#tts-audio
 
 :javascript
-  if (#{!!CDO.use_acapela}) {
+  if (#{!!CDO.acapela_login}) {
     $('button.tts').click(function () {
       var sourceText;
       switch (this.id) {
