@@ -1,5 +1,5 @@
 CDO:
-  image: "pickettd/code-dot-org:0.11"
+  image: "pickettd/code-dot-org:0.12"
   volumes:
     - .:/home/ubuntu/adhoc
   ports:
