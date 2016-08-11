@@ -178,7 +178,6 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
-    acapelaEnabled: React.PropTypes.bool,
     acapelaInstructionsSrc: React.PropTypes.string,
     acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
 
@@ -594,7 +593,6 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    acapelaEnabled: state.pageConstants.acapelaEnabled,
     acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
     acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
     hints: state.authoredHints.seenHints,

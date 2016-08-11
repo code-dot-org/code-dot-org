@@ -64,7 +64,6 @@ dashboard_enable_pegasus: true
 #pusher_application_secret: ''
 
 # Configuration options for Acapela-Group.com integration
-#use_acapela: true
 #acapela_storage_app: ''
 #acapela_storage_password: ''
 #acapela_ephemeral_app: ''

@@ -49,7 +49,6 @@ var Instructions = React.createClass({
     ),
     inTopPane: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    acapelaEnabled: React.PropTypes.bool,
     acapelaSrc: React.PropTypes.string,
   },
 
@@ -126,7 +125,7 @@ var Instructions = React.createClass({
           <AniGifPreview/>
         }
 
-        {this.props.acapelaEnabled && this.props.acapelaSrc &&
+        {experiments.isEnabled('tts') && this.props.acapelaSrc &&
           <div>
             <a
               id="tts-button"
@@ -149,6 +148,4 @@ var Instructions = React.createClass({
   }
 });
 
-module.exports = connect(state => ({
-  acapelaEnabled: state.pageConstants.acapelaEnabled,
-}))(Instructions);
+module.exports = Instructions;
