@@ -36,3 +36,22 @@
     %p{:style => '-webkit-user-select: text'} [{"filename":"cat.svg","position":[16,170]},{"filename":"lion.svg","position":[15,250]},{"filename":"elephant.svg","position":[127,220]},{"filename":"cow.svg","position":[255,250]}]
     %p Ask an engineer to add the SVG assets to the Blockly/static/turtle folder and push to dashboard.
   = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']
+  :javascript
+    var editor = CodeMirror.fromTextArea($("#level_images").get(0), {
+      mode: 'javascript',
+      /viewportMargin: Infinity,
+      lineWrapping: true
+    });
+
+    inlineAttach.attachToCodeMirror(editor, {
+      uploadUrl: '/level_assets/upload',
+      uploadFieldName: 'file',
+      downloadFieldName: 'newAssetUrl',
+      allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/svg'],
+      progressText: '"Uploading file..."',
+      urlText: '"{filename}"', // `{filename}` tag gets replaced with URL
+      errorText: "Error uploading file",
+      extraHeaders: {
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
