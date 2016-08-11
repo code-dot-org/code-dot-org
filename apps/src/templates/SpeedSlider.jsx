@@ -1,7 +1,7 @@
 var React = require('react');
-var color = require('../../color');
+var color = require('../color');
 var Radium = require('radium');
-var dom = require('../../dom');
+var dom = require('../dom');
 
 const style = {
   sliderTrack: {
