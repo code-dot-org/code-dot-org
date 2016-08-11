@@ -39,6 +39,13 @@ export default class Collector extends Subtype {
   /**
    * @override
    */
+  shouldCheckSuccessOnMove() {
+    return false;
+  }
+
+  /**
+   * @override
+   */
   createGridItemDrawer() {
     return new CollectorDrawer(this.maze_.map, this.skin_.goal);
   }
@@ -78,6 +85,7 @@ export default class Collector extends Subtype {
 
   /**
    * @return {boolean} Has the user completed this level
+   * @override
    */
   finished() {
     return false;
@@ -86,6 +94,7 @@ export default class Collector extends Subtype {
   /**
    * Called after user's code has finished executing. Gives us a chance to
    * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @override
    */
   onExecutionFinish() {
     const executionInfo = this.maze_.executionInfo;
@@ -101,6 +110,9 @@ export default class Collector extends Subtype {
     }
   }
 
+  /**
+   * @override
+   */
   hasMessage(testResults) {
     return true;
   }
@@ -109,6 +121,7 @@ export default class Collector extends Subtype {
    * Get any app-specific message, based on the termination value,
    * or return null if none applies.
    * @return {string|null} message
+   * @override
    */
   getMessage(terminationValue) {
     switch (terminationValue) {
@@ -129,6 +142,7 @@ export default class Collector extends Subtype {
    * Get the test results based on the termination value.  If there is
    * no app-specific failure, this returns StudioApp.getTestResults().
    * @return {number} testResult
+   * @override
    */
   getTestResults(terminationValue) {
     switch (terminationValue) {

@@ -193,6 +193,7 @@ export default class Bee extends Subtype {
   /**
    * Get the test results based on the termination value.  If there is
    * no app-specific failure, this returns StudioApp.getTestResults().
+   * @override
    */
   getTestResults(terminationValue) {
     switch (terminationValue) {
@@ -221,6 +222,9 @@ export default class Bee extends Subtype {
     return this.studioApp_.getTestResults(false);
   }
 
+  /**
+   * @override
+   */
   hasMessage(testResults) {
     return testResults === TestResults.APP_SPECIFIC_FAIL;
   }
@@ -228,6 +232,7 @@ export default class Bee extends Subtype {
   /**
    * Get any app-specific message, based on the termination value,
    * or return null if none applies.
+   * @override
    */
   getMessage(terminationValue) {
     switch (terminationValue) {
