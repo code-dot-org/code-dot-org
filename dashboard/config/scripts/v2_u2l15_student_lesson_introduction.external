@@ -1,26 +1,39 @@
 name 'v2 U2L15 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-
-markdown <<MARKDOWN
-# Unit 2: Lesson 15 - Practice PT - Tell a Data Story
-
-## Background
-
-This practice PT develops several of the skills you need for the AP Explore Performance Task.  In particular: the creation of a computational artifact, and written responses to prompts about what the artifact is showing.
-
-We collect data to learn about the world and test our hypotheses about the patterns and relationships that might otherwise be invisible. Computational tools now make it possible to quickly collect and analyze vast amounts of data, but those processes still depend on knowledgeable and thoughtful people who understand the data being used and can clearly present the conclusions draw from it. For this Practice PT you will be doing just that with the data you and your classmates have collected.
-
-## Lesson
-
-* Discover and present an interesting "story" in the data your class collected.
-* Create a visualization that presents your story.
-* Complete the written responses to explain and interpret your visualization.
-
-## Resources
-
-* Practice PT Overview and Rubric: <a href='https://docs.google.com/document/d/1HVUQhwuuKC5IejdUabA4FGS2xfjXMrRvKy0wJSnP8uU/edit?usp=sharing' target="_blank">Tell a Data Story</a>
-
-<a class='btn btn-large btn-primary next-stage submitButton'>Continue</a>
-MARKDOWN
+encrypted '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
+6tKHxA+vTrZtc2wt
+'

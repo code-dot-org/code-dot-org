@@ -62,7 +62,7 @@ def update_document_type_form(db_id, solr_id)
     return
   end
 
-  SOLR.update([solr_doc])
+  SOLR.update([solr_form_doc])
   DB[:forms].where(id: db_id).update(indexed_at: DateTime.now)
 end
 
