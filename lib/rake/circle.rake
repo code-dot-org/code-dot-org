@@ -1,7 +1,15 @@
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'open-uri'
+require 'json'
 
 RUN_ALL_TESTS_TAG = '[test all]'
+
+def merge_eyes_baselines(branch, base)
+  RakeUtils.system_stream_output 'wget http://support.applitools.com/customer/portal/kb_article_attachments/85844/original.jar?1465324958'
+  RakeUtils.system_stream_output 'mv *.jar* applitools-merge.jar'
+  RakeUtils.system_stream_output "java -jar applitools-merge.jar -url https://eyes.applitools.com/api/baselines/copybranch?accesskey=$EYES_ACCESS_KEY -n Code.org -s #{branch} -t #{base}"
+end
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
@@ -32,23 +40,15 @@ namespace :circle do
 
   desc 'Merges eyes test baselines from a branch if this is a run for a merge commit.'
   task :merge_eyes_baselines do
-    RakeUtils.system_stream_output 'wget http://support.applitools.com/customer/portal/kb_article_attachments/85844/original.jar?1465324958'
-    RakeUtils.system_stream_output 'mv *.jar* applitools-merge.jar'
-    RakeUtils.system_stream_output 'java -jar applitools-merge.jar'
     begin
-      require 'open-uri'
-      require 'json'
       commit_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/commits/#{RakeUtils.git_revision}").read)
       commit_merges_branch = commit_json['commit']['message'].match(/from code-dot-org\/(.*)\n\n/)[1]
       if commit_merges_branch
         HipChat.log "Commit appears to merge #{commit_merges_branch} into #{GitUtils.current_branch}"
-        HipChat.log 'TODO(brian): perform applitools merge!'
+        merge_eyes_baselines(commit_merges_branch, GitUtils.current_branch)
       end
-      # pr_number = ENV['CIRCLE_PR_NUMBER']
-      # pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
-      # HipChat.log "My branch is #{pr_json['base']['ref']}"
     rescue => e
-      e.message
+      HipChat.log "Eyes baseline not merged: #{e.message}"
     end
   end
 end
