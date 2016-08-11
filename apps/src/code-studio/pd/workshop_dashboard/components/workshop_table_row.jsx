@@ -10,6 +10,7 @@ import FacilitatorsList from './facilitators_list';
 const WorkshopTableRow = React.createClass({
   propTypes: {
     workshop: React.PropTypes.shape({
+      id: React.PropTypes.number.isRequired,
       sessions: React.PropTypes.array.isRequired,
       location_name: React.PropTypes.string.isRequired,
       workshop_type: React.PropTypes.string.isRequired,
@@ -21,7 +22,16 @@ const WorkshopTableRow = React.createClass({
     }).isRequired,
     onView: React.PropTypes.func.isRequired,
     onEdit: React.PropTypes.func,
-    onDelete: React.PropTypes.func
+      onDelete: React.PropTypes.func,
+    showSignupUrl: React.PropTypes.bool
+  },
+
+  getDefaultProps() {
+    return {
+      onEdit: null,
+      onDelete: null,
+      showSignupUrl: false
+    };
   },
 
   getInitialState() {
@@ -74,6 +84,21 @@ const WorkshopTableRow = React.createClass({
     );
   },
 
+  renderSignupUrlCell() {
+    if (!this.props.showSignupUrl) {
+      return null;
+    }
+
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.workshop.id}/enroll`;
+    return (
+      <td>
+        <a href={signupUrl} target="_blank">
+          {signupUrl}
+        </a>
+      </td>
+    );
+  },
+
   render() {
     return (
       <tr>
@@ -98,6 +123,7 @@ const WorkshopTableRow = React.createClass({
         <td>
           {this.props.workshop.state}
         </td>
+        {this.renderSignupUrlCell()}
         <td>
           <Button bsSize="xsmall" onClick={this.handleViewClick}>View</Button>
           {this.renderEditButton()}
