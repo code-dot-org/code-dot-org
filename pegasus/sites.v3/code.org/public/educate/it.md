@@ -21,10 +21,11 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 ### Hardware
 
 - We recommend at least a 15 MBit/sec Internet connection for your school.
+- You will need a desktop or laptop computer with a mouse and keyboard for our CS Principles and CS Discoveries courses.
 
 ### Software
 
-- Tutorials work on [any modern browser](https://support.code.org/hc/en-us/articles/202591743).
+- Tutorials work on [any modern browser](https://support.code.org/hc/en-us/articles/202591743) and operating system.
 - If YouTube is blocked at your school and you're using Firefox or Safari, Code.org hosted videos require [Flash player](https://get.adobe.com/flashplayer/). Chrome, iOS and Android do not require extra software to play videos.
 
 ## Can you play this video?
