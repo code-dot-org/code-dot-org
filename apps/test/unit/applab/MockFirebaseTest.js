@@ -35,6 +35,34 @@ describe('MockFirebase', () => {
     });
   });
 
+  describe('set', () => {
+    it('calls callbacks', done => {
+      const firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.set('foo', () => done());
+      firebase.flush();
+    });
+
+    it('resolves promises', done => {
+      const firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.set('bar').then(() => done());
+      firebase.flush();
+    });
+  });
+
+  describe('update', () => {
+    it('calls callbacks', done => {
+      const firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.update({foo: 'bar'}, () => done());
+      firebase.flush();
+    });
+
+    it('resolves promises', done => {
+      const firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.update({foo: 'bar'}).then(() => done());
+      firebase.flush();
+    });
+  });
+
   it('resolves promises when invoked via firebaseUtils', done => {
     const channelRef = getDatabase(Applab.channelId);
     channelRef.set('foo');
