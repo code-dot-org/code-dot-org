@@ -1,6 +1,7 @@
 /** @file Character calculations, displayed side-by-side */
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
+import NumberedSteps from './NumberedSteps';
 
 const style = {
   alice: {
@@ -20,7 +21,27 @@ const style = {
 export function Alice() {
   return (
     <CollapsiblePanel title="Alice">
-      <div style={style.alice}/>
+      <NumberedSteps>
+        <div>
+          Enter public modulus
+        </div>
+        <div>
+          Set a private key
+          <br/>Your computed public key is ??
+        </div>
+        <div>
+          Enter Bob's public number:
+        </div>
+        <div>
+          Calculate Bob's secret number.
+          <div>
+            (?? x ?) MOD ?? <button>Go</button>
+          </div>
+          <div>
+            Bob's secret number is ??!
+          </div>
+        </div>
+      </NumberedSteps>
     </CollapsiblePanel>);
 }
 
