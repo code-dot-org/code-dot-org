@@ -49,6 +49,10 @@ module GitUtils
     branch_to_base(current_branch)
   end
 
+  def self.current_branch_base_no_origin
+    branch_to_base(current_branch).replace('origin/', '')
+  end
+
   # Given a branch name, returns its likely base branch / merge destination
   def self.branch_to_base(branch_name)
     case branch_name
