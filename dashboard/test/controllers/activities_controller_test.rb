@@ -1194,4 +1194,63 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
+
+  test "milestone fails to update locked level" do
+    teacher = create(:teacher)
+
+    # make them an authorized_teacher
+    cohort = create(:cohort)
+    cohort.teachers << teacher
+    cohort.save!
+
+    section = create(:section, user: teacher, login_type: 'word')
+    student_1 = create(:follower, section: section).student_user
+    sign_in student_1
+
+    script = create :script
+
+    # Create a LevelGroup level.
+    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level.properties['submittable'] = true
+    level.save!
+
+    stage = create :stage, name: 'Stage1', script: script, lockable: true
+
+    # Create a ScriptLevel joining this level to the script.
+    script_level = create :script_level, script: script, levels: [level], assessment: true, stage: stage
+
+    milestone_params = {
+      user_id: student_1,
+      script_level_id: script_level.id,
+      level_id: level.id,
+      program: '<hey>',
+      app: 'level_group',
+      level: nil,
+      result: 'true',
+      pass: 'true',
+      testResult: '100',
+      submitted: 'true'
+    }
+
+    # milestone post should fail because there's no user_level, and it is thus locked by implication
+    post :milestone, milestone_params
+    assert_response 403
+
+    # explicity create a user_level that is unlocked
+    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+
+    # should now succeed
+    post :milestone, milestone_params
+    assert_response :success
+
+    # milestone post should cause it to become locked again
+    user_level = UserLevel.find(user_level.id)
+    assert user_level.locked?(stage)
+
+    # milestone post should also fail when we have an existing user_level that is locked
+    post :milestone, milestone_params
+    assert_response 403
+  end
 end
