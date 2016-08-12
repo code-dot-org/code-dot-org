@@ -495,7 +495,7 @@ class User < ActiveRecord::Base
   def user_level_locked?(script_level, level)
     return false unless script_level.stage.lockable?
     user_level = user_level_for(script_level, level)
-    user_level.nil? || user_level.submitted?
+    user_level.nil? || user_level.locked?(script_level.stage)
   end
 
   def next_unpassed_progression_level(script)

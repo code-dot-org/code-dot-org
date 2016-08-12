@@ -108,9 +108,11 @@ class UserLevel < ActiveRecord::Base
     user_level ||= UserLevel.create(user_id: user_id, level_id: level_id, script_id: script_id)
 
     user_level.update!(
-      submitted: locked,
+      submitted: locked || view_answers,
       view_answers: !locked && view_answers,
-      unlocked_at: locked ? nil : Time.now
+      unlocked_at: locked ? nil : Time.now,
+      # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
+      best_result: (locked || view_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
     )
   end
 end

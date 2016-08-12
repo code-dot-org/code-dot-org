@@ -602,7 +602,7 @@ class ApiControllerTest < ActionController::TestCase
 
     post :update_lockable_state, updates: updates
     user_level = UserLevel.find_by(user_level_data)
-    assert_equal false, user_level.submitted?
+    assert_equal true, user_level.submitted?
     assert_equal true, user_level.view_answers?
     assert_not_nil user_level.unlocked_at
 
@@ -661,12 +661,12 @@ class ApiControllerTest < ActionController::TestCase
 
     post :update_lockable_state, updates: updates
     user_level = UserLevel.find_by(user_level_data)
-    assert_equal false, user_level.submitted?
+    assert_equal true, user_level.submitted?
     assert_equal true, user_level.view_answers?
     assert_not_nil user_level.unlocked_at
 
     # update from view_answers to locked
-    user_level.update!(submitted: false, unlocked_at: Time.now, view_answers: true)
+    user_level.update!(submitted: true, unlocked_at: Time.now, view_answers: true)
     updates = [{
       user_level_data: user_level_data,
       locked: true,
@@ -680,17 +680,17 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal nil, user_level.unlocked_at
 
     # update from view_answers to editable
-    user_level.update!(submitted: false, unlocked_at: Time.now, view_answers: true)
+    user_level.update!(submitted: true, unlocked_at: Time.now, view_answers: true)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
-      view_answers: true
+      view_answers: false
     }]
 
     post :update_lockable_state, updates: updates
     user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.submitted?
-    assert_equal true, user_level.view_answers?
+    assert_equal false, user_level.view_answers?
     assert_not_nil user_level.unlocked_at
   end
 
