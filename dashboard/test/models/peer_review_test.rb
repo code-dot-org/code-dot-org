@@ -24,7 +24,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       user_id: user.id,
       level_id: @script_level.level_id,
       script_id: @script_level.script_id,
-      new_result: Activity::UNSUBMITTED_RESULT,
+      new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
       submitted: true,
       level_source_id: level_source_id,
       pairing_user_ids: nil
@@ -59,17 +59,17 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'approving both reviews should mark the corresponding UserLevel as accepted' do
     level_source = create :level_source, data: 'My submitted answer'
 
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
     track_progress level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
     user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review1.update! reviewer: create(:user), status: 'accepted'
     user_level.reload
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review2.update! reviewer: create(:user), status: 'accepted'
     user_level.reload
@@ -79,17 +79,17 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'rejecting both reviews should mark the corresponding UserLevel as rejected' do
     level_source = create :level_source, data: 'My submitted answer'
 
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
     track_progress level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
     user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review1.update! reviewer: create(:user), status: 'rejected'
     user_level.reload
-    assert_equal Activity::UNSUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review2.update! reviewer: create(:user), status: 'rejected'
     user_level.reload
@@ -102,7 +102,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     level_source = create(:level_source, data: 'Some answer')
 
-    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
 
     assert_equal [nil, nil], PeerReview.all.map(&:reviewer)
@@ -129,7 +129,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     level_source = create(:level_source, data: 'Some answer')
 
-    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
 
     first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
@@ -152,7 +152,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     level_source = create(:level_source, data: 'Some answer')
 
-    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+    Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
 
     first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
