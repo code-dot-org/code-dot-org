@@ -78,6 +78,20 @@ stage 'Loops Unplugged'
 level 'comingSoon'
 
 
+stage 'Loops Intro'
+level 'grade1_adventurer_loopsPre'
+level 'grade1_adventurer_loops1'
+level 'grade1_adventurer_loops2'
+level 'grade1_adventurer_loops3'
+level 'grade1_adventurer_loops4'
+level 'grade1_adventurer_loops5'
+level 'grade1_adventurer_loops6'
+level 'grade1_adventurer_loops7_challenge'
+level 'grade1_adventurer_loops8_challenge'
+level 'grade1_adventurer_loops9'
+level 'grade1_adventurer_loops10'
+
+
 stage 'Loops'
 level 'ArtistIntro'
 level 'artistLoopsK1'
