@@ -50,7 +50,17 @@ module GitUtils
   end
 
   def self.current_branch_base_no_origin
-    branch_to_base(current_branch).replace('origin/', '')
+    branch_to_base(current_branch).gsub('origin/', '')
+  end
+
+  def self.circle_pr_branch_base_no_origin
+    begin
+      pr_number = ENV['CIRCLE_PR_NUMBER']
+      pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
+      pr_json['base']['ref']
+    rescue => e
+      nil
+    end
   end
 
   # Given a branch name, returns its likely base branch / merge destination

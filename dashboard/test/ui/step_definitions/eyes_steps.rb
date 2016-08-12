@@ -1,4 +1,8 @@
+$LOAD_PATH.unshift File.expand_path('../../../../../lib', __FILE__)
 require 'eyes_selenium'
+require 'cdo/git_utils'
+require 'open-uri'
+require 'json'
 
 # Override default match timeout (2 seconds) to help prevent laggy UI from breaking eyes tests.
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
@@ -10,6 +14,20 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   batch_name = test_name + " | " + ENV['BATCH_NAME']
   @eyes.batch = Applitools::Base::BatchInfo.new(batch_name)
 
+  @eyes.branch_name = GitUtils.current_branch
+
+  pr_base = GitUtils.circle_pr_branch_base_no_origin
+  if pr_base
+    puts "Branch is #{pr_base}"
+    @eyes.parent_branch_name = pr_base
+  else
+    fallback_branch = GitUtils.current_branch_base_no_origin
+    puts "No PR for eyes branch: #{GitUtils.current_branch}, using fallback branch #{fallback_branch}"
+    @eyes.parent_branch_name = fallback_branch
+  end
+
+  ensure_branch_exists(@eyes.parent_branch_name)
+
   @original_browser = @browser
   config = { app_name: 'Code.org', test_name: test_name, driver: @browser }
   if @original_browser.capabilities.browser_name == 'chrome'
@@ -17,6 +35,15 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   end
   @browser.capabilities[:takes_screenshot] = true
   @browser = @eyes.open(config)
+end
+
+def ensure_branch_exists(branch_name)
+  eyes = Applitools::Eyes.new
+  eyes.api_key = CDO.applitools_eyes_api_key
+  eyes.branch_name = branch_name
+  eyes.open(app_name: 'Code.org', test_name: 'Dummy branch creation check', driver: @browser)
+  eyes.check_window('Dummy branch creation check', MATCH_TIMEOUT)
+  eyes.close(false)
 end
 
 And(/^I close my eyes$/) do
@@ -35,4 +62,5 @@ def ensure_eyes_available
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
+  @eyes.log_handler = Logger.new(STDOUT)
 end
