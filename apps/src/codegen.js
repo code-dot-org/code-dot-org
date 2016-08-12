@@ -16,13 +16,28 @@ exports.ForStatementMode = {
 };
 
 window.addEventListener('message', e => {
-  console.log(e.data.fn, e.data.args);
+  const args = [];
+  for (var i in e.data.args) {
+    args[+i] = e.data.args[i];
+  }
+
+  console.log(e.data.fn, args);
+  if (messageHandlers[e.data.fn]) {
+    messageHandlers[e.data.fn].apply(null, args);
+  }
 });
+
+const messageHandlers = {};
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
-exports.evalWith = function (code, options, experimentalFrame) {
+exports.evalWith = function (code, options, async) {
+  if (async) {
+    code += 'wrapper.done();';
+    options.wrapper = {done: () => null};
+  }
+
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function (interpreter, scope) {
@@ -45,22 +60,30 @@ exports.evalWith = function (code, options, experimentalFrame) {
     };
     ctor.prototype = Function.prototype;
 
-    if (experimentalFrame) {
+    if (async) {
 
       const mocks = [];
       for (let api in options) {
         const mock = {};
         mocks.push(mock);
         for (let fn in options[api]) {
+          const f = options[api][fn];
+          if (typeof f !== 'function') {
+            // Only proxy functions.
+            continue;
+          }
+          messageHandlers[fn] = f.bind(options[api]);
           mock[fn] = function () {
             window.postMessage({
               fn: fn,
               args: arguments
             }, location);
-            options[api][fn].apply(options[api], arguments);
           };
         }
       }
+
+      // Override the `done` handler to hook program completion.
+      messageHandlers.done = async;
       args = mocks;
     }
 
