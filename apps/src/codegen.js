@@ -15,6 +15,10 @@ exports.ForStatementMode = {
   UPDATE: 3
 };
 
+window.addEventListener('message', e => {
+  console.log(e.data.fn, e.data.args);
+});
+
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
@@ -42,13 +46,17 @@ exports.evalWith = function (code, options, experimentalFrame) {
     ctor.prototype = Function.prototype;
 
     if (experimentalFrame) {
+
       const mocks = [];
       for (let api in options) {
         const mock = {};
         mocks.push(mock);
         for (let fn in options[api]) {
           mock[fn] = function () {
-            console.log(fn, arguments);
+            window.postMessage({
+              fn: fn,
+              args: arguments
+            }, location);
             options[api][fn].apply(options[api], arguments);
           };
         }
