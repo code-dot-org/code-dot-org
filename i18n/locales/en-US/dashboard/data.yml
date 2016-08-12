@@ -5,24 +5,24 @@ en:
         'Unplug1': crwdns3875:0crwdne3875:0
         'Maze': crwdns2630:0crwdne2630:0
         'Multi': crwdns5103:0crwdne5103:0
-        Unplug2: crwdns3876:0crwdne3876:0
-        Unplug3: crwdns3877:0crwdne3877:0
+        'Unplug2': crwdns3876:0crwdne3876:0
+        'Unplug3': crwdns3877:0crwdne3877:0
         'Artist': crwdns2631:0crwdne2631:0
-        Unplug4: crwdns3878:0crwdne3878:0
+        'Unplug4': crwdns3878:0crwdne3878:0
         'Artist2': crwdns2632:0crwdne2632:0
-        Unplug5: crwdns4164:0crwdne4164:0
+        'Unplug5': crwdns4164:0crwdne4164:0
         'Farmer': crwdns2633:0crwdne2633:0
-        Unplug6: crwdns3880:0crwdne3880:0
+        'Unplug6': crwdns3880:0crwdne3880:0
         'Artist3': crwdns2634:0crwdne2634:0
         'Unplug7': crwdns3881:0crwdne3881:0
         'Farmer2': crwdns2635:0crwdne2635:0
-        Unplug8: crwdns3882:0crwdne3882:0
+        'Unplug8': crwdns3882:0crwdne3882:0
         'Artist4': crwdns2636:0crwdne2636:0
         'Unplug9': crwdns3883:0crwdne3883:0
         'Farmer3': crwdns2637:0crwdne2637:0
         'Unplug10': crwdns3884:0crwdne3884:0
         'Artist5': crwdns2638:0crwdne2638:0
-        Unplug11: crwdns3885:0crwdne3885:0
+        'Unplug11': crwdns3885:0crwdne3885:0
         'MazeEC': crwdns3886:0crwdne3886:0
         'Bounce': crwdns4458:0crwdne4458:0
         'Flappy': crwdns4650:0crwdne4650:0

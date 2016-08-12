@@ -5,24 +5,24 @@ da:
         'Unplug1': Introduktion til datalogi
         'Maze': Labyrinten
         'Multi': Flere valgs ting
-        Unplug2: Data-Tænkning
-        Unplug3: Programmering på millimeterpapir
+        'Unplug2': Data-Tænkning
+        'Unplug3': Programmering på millimeterpapir
         'Artist': Kunstneren
-        Unplug4: Algoritmer
+        'Unplug4': Algoritmer
         'Artist2': Kunstneren 2
-        Unplug5: Funktioner
+        'Unplug5': Funktioner
         'Farmer': Landmanden
-        Unplug6: Betingelser
+        'Unplug6': Betingelser
         'Artist3': Kunstneren 3
         'Unplug7': Sangskrivning
         'Farmer2': Landmanden 2
-        Unplug8: Abstraktion
+        'Unplug8': Abstraktion
         'Artist4': Kunstneren 4
         'Unplug9': Stafet-programmering
         'Farmer3': Landmanden 3
         'Unplug10': Internettet
         'Artist5': Kunstneren 5
-        Unplug11: Afslutning
+        'Unplug11': Afslutning
         'MazeEC': Labyrinten
         'Bounce': Hoppe
         'Flappy': Flappy fuglen

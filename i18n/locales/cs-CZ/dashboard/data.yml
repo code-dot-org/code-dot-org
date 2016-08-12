@@ -5,24 +5,24 @@ cs:
         'Unplug1': Úvod do počítačové vědy
         'Maze': Bludiště
         'Multi': Více voleb
-        Unplug2: Aritmetické Myšlení
-        Unplug3: Programování Na Milimetrovém Papíru
+        'Unplug2': Aritmetické Myšlení
+        'Unplug3': Programování Na Milimetrovém Papíru
         'Artist': Umělec
-        Unplug4: Algoritmy
+        'Unplug4': Algoritmy
         'Artist2': Umělec 2
-        Unplug5: Funkce
+        'Unplug5': Funkce
         'Farmer': Farmářka
-        Unplug6: Podmínky
+        'Unplug6': Podmínky
         'Artist3': Umělec 3
         'Unplug7': Psaní Písně
         'Farmer2': Farmářka 2
-        Unplug8: Abstrakce
+        'Unplug8': Abstrakce
         'Artist4': Malíř 4
         'Unplug9': Štafetové programování
         'Farmer3': Farmář 3
         'Unplug10': Internet
         'Artist5': Umělec 5
-        Unplug11: Shrnutí
+        'Unplug11': Shrnutí
         'MazeEC': Bludiště
         'Bounce': Odraz
         'Flappy': Flappy Bird

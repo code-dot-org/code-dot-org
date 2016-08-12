@@ -409,7 +409,6 @@
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
     announcement_title: Anuncios
-    announcement_view_all: Ver todo
     announcement_message: "<b>January 6, 2015</b> - Learn beyond one Hour of Code
       in your classroom. Start a new intro course and track student progress."
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
@@ -425,6 +424,8 @@
       se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para
       financiar en la educacion de K-12 informática.
     announcement_petition_button: Agrega tu nombre
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduzca
       un código de sección diferente.
