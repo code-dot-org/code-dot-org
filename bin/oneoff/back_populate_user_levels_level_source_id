@@ -7,13 +7,11 @@
 #
 #   CREATE TABLE backfill_#{LOW_ID}_#{HIGH_ID} AS
 #   SELECT
-#     t.user_id,
-#     t.level_id,
+#     t.user_levels_id,
 #     activities.level_source_id
 #   FROM (
 #     SELECT
-#       user_levels.user_id AS user_id,
-#       user_levels.level_id AS level_id,
+#       user_levels.id AS user_levels_id
 #       MAX(activities.id) AS activities_id
 #     FROM user_levels
 #     INNER JOIN activities
@@ -23,7 +21,7 @@
 #       AND user_levels.id < #{HIGH_ID}
 #       AND user_levels.level_source_id IS NULL
 #       AND activities.level_source_id IS NOT NULL
-#     GROUP BY 1,2
+#     GROUP BY user_levels_id
 #   ) AS t
 #   INNER JOIN activities
 #     ON activities.id = t.activities_id;
@@ -56,19 +54,18 @@ begin
   # the updates in a transaction.
   update_array = []
   CSV.foreach(filename) do |line|
-    user_id = line[0]
-    level_id = line[1]
-    level_source_id = line[2]
-    update_array << [user_id, level_id, level_source_id]
+    user_levels_id = line[0]
+    level_source_id = line[1]
+    update_array << [user_levels_id, level_source_id]
   end
 
   # Process the array in batches, so that the transactions are appropriate
   # sized.
   update_array.each_slice(batch_size) do |update_array_slice|
     ActiveRecord::Base.transaction do
-      update_array_slice.each do |user_id, level_id, level_source_id|
+      update_array_slice.each do |user_levels_id, level_source_id|
         UserLevel.
-          where(user_id: user_id, level_id: level_id).
+          find_by_id(user_levels_id).
           update(level_source_id: level_source_id)
       end
     end

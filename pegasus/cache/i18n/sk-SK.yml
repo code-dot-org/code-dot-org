@@ -879,7 +879,6 @@
   dashboard_faq: "Často kladené otázky"
   dashboard_faq_k5: "Často kladené otázky – prvý stupeň"
   dashboard_announcements: Oznámenia
-  dashboard_announce_view_all: View all
   dashboard_announce_message: Want to help us test a new feature? We know it’s important
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
@@ -896,6 +895,8 @@
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Pridaj svoje meno
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   learn_more: "Ďalšie informácie"
@@ -1752,5 +1753,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>

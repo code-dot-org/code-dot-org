@@ -25,12 +25,8 @@ Resources:
                   - 'cloudformation:DescribeStackResources'
                   - 'autoscaling:CompleteLifecycleAction'
                   - 'ec2:DescribeImages'
+                  - 'cloudwatch:PutMetricData'
                 Resource: '*'
-  FrontendInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [Ref: FrontendRole]
   StandaloneFrontendRole:
     Type: AWS::IAM::Role
     Properties:
@@ -57,6 +53,7 @@ Resources:
                   - 'logs:Create*'
                   - 'logs:PutLogEvents'
                   - 'logs:PutRetentionPolicy'
+                  - 'cloudwatch:PutMetricData'
                 Resource: '*'
               - Effect: Allow
                 Action:
@@ -68,11 +65,26 @@ Resources:
                   - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
                     table/adhoc_properties
                   ]]}
+  FrontendInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: [Ref: FrontendRole]
   StandaloneFrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
       Roles: [Ref: StandaloneFrontendRole]
+  ProductionInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: [Ref: FrontendRole]
+  StagingInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: [Ref: FrontendRole]
   LifecycleHookRole:
     Type: AWS::IAM::Role
     Properties:
