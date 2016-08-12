@@ -11,79 +11,83 @@ describe('MockFirebase', () => {
     };
   });
 
-  describe('once', () => {
-    it('calls callbacks', done => {
-      const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.set('foo');
-      firebase.once('value', snapshot => {
-          expect(snapshot.val()).to.equal('foo');
-          done();
-        },
-        error => console.warn(error));
-      firebase.flush();
+  describe('when invoked directly', () => {
+    let firebase;
+
+    beforeEach(() => {
+      firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.autoFlush();
+    });
+
+    describe('once', () => {
+      it('calls callbacks', done => {
+        firebase.set('foo');
+        firebase.once('value',
+          snapshot => {
+            expect(snapshot.val()).to.equal('foo');
+            done();
+          },
+          error => console.warn(error));
+      });
+
+      it('resolves promises', done => {
+        firebase.set('bar');
+        firebase.once('value').then(
+          snapshot => {
+            expect(snapshot.val()).to.equal('bar');
+            done();
+          },
+          error => {throw error;});
+      });
+    });
+
+    describe('set', () => {
+      it('calls callbacks', done => {
+        firebase.set('foo', done);
+      });
+
+      it('resolves promises', done => {
+        firebase.set('bar').then(done);
+      });
+    });
+
+    describe('update', () => {
+      it('calls callbacks', done => {
+        firebase.update({foo: 'bar'}, done);
+      });
+
+      it('resolves promises', done => {
+        firebase.update({foo: 'bar'}).then(done);
+      });
+    });
+  });
+
+  describe('when invoked via firebaseUtils', () => {
+    let channelRef;
+
+    beforeEach(() => {
+      channelRef = getDatabase(Applab.channelId);
+      channelRef.autoFlush();
     });
 
     it('resolves promises', done => {
-      const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.set('bar');
-      firebase.once('value').then(snapshot => {
+      channelRef.set('foo');
+      channelRef.once('value').then(
+        snapshot => {
+          expect(snapshot.val()).to.equal('foo');
+          done();
+        },
+        error => {throw error;});
+    });
+
+    it('shares state between children', done => {
+      channelRef.child('foo').set('bar');
+      channelRef.child('foo').once('value').then(
+        snapshot => {
           expect(snapshot.val()).to.equal('bar');
           done();
         },
         error => {throw error;});
-      firebase.flush();
     });
-  });
-
-  describe('set', () => {
-    it('calls callbacks', done => {
-      const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.set('foo', done);
-      firebase.flush();
-    });
-
-    it('resolves promises', done => {
-      const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.set('bar').then(done);
-      firebase.flush();
-    });
-  });
-
-  describe('update', () => {
-    it('calls callbacks', done => {
-      const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.update({foo: 'bar'}, done);
-      firebase.flush();
-    });
-
-    it('resolves promises', done => {
-      const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.update({foo: 'bar'}).then(done);
-      firebase.flush();
-    });
-  });
-
-  it('resolves promises when invoked via firebaseUtils', done => {
-    const channelRef = getDatabase(Applab.channelId);
-    channelRef.set('foo');
-
-    channelRef.once('value').then(snapshot => {
-        expect(snapshot.val()).to.equal('foo');
-        done();
-      },
-      error => {throw error;});
-    channelRef.flush();
-  });
-
-  it('shares state between children', done => {
-    const channelRef = getDatabase(Applab.channelId);
-    channelRef.child('foo').set('bar');
-
-    channelRef.child('foo').once('value').then(snapshot => {
-        expect(snapshot.val()).to.equal('bar');
-        done();
-      },
-      error => {throw error;});
-    channelRef.flush();
   });
 });
