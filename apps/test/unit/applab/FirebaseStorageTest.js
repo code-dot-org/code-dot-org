@@ -4,11 +4,11 @@ import { getDatabase, getFirebase } from '@cdo/apps/applab/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   beforeEach(() => {
-    window.Applab = {
+    window.Applab = Object.assign({}, window.Applab, {
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
-    };
+    });
   });
 
   describe('populateTable', () => {
