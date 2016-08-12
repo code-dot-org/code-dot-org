@@ -125,8 +125,8 @@ uk:
     picture: Тепер знайдіть свою таємну картинку
     words: Тепер введіть свої таємні слова
     login: Вхід
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Помилковий логін, будь ласка, спробуйте знову
+    pair_programming: "Я працюю з партнером за одним комп'ютером"
   password:
     reset_form:
       title: Забули пароль?
@@ -250,9 +250,9 @@ uk:
       signup: Зареєструватися
       already_registered: Вже зареєстровані?
       pair_programming: Парне програмування
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Команда
+      driver: Водій
+      navigator: Навігатор
     popup:
       progress_for_user: 'Прогрес %{name}'
       progress: Ваш прогрес
@@ -287,7 +287,7 @@ uk:
       example_with_number: 'Приклад рішення %{solution_number}'
       submitted_on: 'Надіслано:'
       unsubmit: Відкликати
-      worked_with: Worked With
+      worked_with: У співпраці з
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -346,13 +346,13 @@ uk:
     choose_next_course: Спробуйте курс Студії коду, обравши один з варіантів
     print_certificate: Друкувати сертифікат
     announcement_title: Оголошення
-    announcement_view_all: Переглянути всі
     announcement_message: 'Хочете допомогти нам протестувати нові функції? Ми знаємо, що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж оприлюднити цю функцію.'
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Дізнайтеся більше
     announcement_try_now_button: Спробувати
     announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
     announcement_petition_button: "Додайте своє ім'я"
+    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: 'Вибачте, але групи %{new_section_code} не існує. Вкажіть інший код групи.'
     section_code_not_entered: Будь ласка, вкажіть current_section_code.
@@ -526,7 +526,7 @@ uk:
     wrong_body: Дякуємо за надсилання відповіді.
     correct_title: Дякую
     correct_body: Дякуємо за надсилання відповіді.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
+    hide_survey_last_answer: "Це опитування є анонімним.  Будь ласка, відвідайте панель вчителя для перегляду узагальнених результатів.  Зверніть увагу, що результати можна побачити, лише якщо принаймні п'ять студентів пройшли опитування."
   level_group-submittable:
     wrong_title: Дякую
     wrong_body: Дякуємо за надсилання відповіді.
@@ -600,7 +600,7 @@ uk:
     share_title: Поділитися своїм проектом
     share_copy_link: 'Скопіювати посилання:'
     share_embed_description: Можете вставити HTML-код, щоб вбудувати цей проект у веб-сторінку.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
+    share_u13_warning: Запитайте вчителя перед тим, як ділитись. Поширюйте лише для учасників зі своєї школи.
     embed: Вбудувати
     advanced_share: Показати розширені налаштування
     close: Закрити
@@ -624,7 +624,7 @@ uk:
     edit_project: Редагування проекту
     abuse:
       tos: "На цей проект надійшла скарга про порушення <a href='http://code.org/tos'>Умов надання послуг</a> Code.org's, тому ним не можна поділитись з іншими."
-      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "Цей проект містить інформацію, якою не можна ділитись з іншими. Зв'яжіться з власником програми, щоб виправити вміст цього продукту."
       contact_us: "Якщо ви вважаєте це помилкою, будь ласка <a href='https://code.org/contact'>зв'яжіться з нами.</a>"
       go_to_code_studio: Перейти до Студії коду
       report_abuse_form:
@@ -682,11 +682,11 @@ uk:
     required: Огляд
     content: Зміст
     practice: Методики викладання
-    peer_review: Peer Review
+    peer_review: Рецензування
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
-    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Відмова від відповідальності
+    leaving_domain: Ви покидаєте цей домен на сайт, який не керується Code.org.
+    disclaimer_text: "Цей сайт може мати політику конфіденційності, що відрізняється від Code.org. Ми відібрали ці ресурси, оскільки вважаємо їх корисними. Хоча ми не несемо прямої відповідальності за зміст цього сайту, будь ласка, <a href='%{support_url}'>зверніться до служби підтримки</a>, якщо ви вважаєте цей вміст неприйнятним, або якщо посилання не працює."
   hoc_download:
     title: Завантаження Години коду
     capsule_title: Маєте Інтернет?

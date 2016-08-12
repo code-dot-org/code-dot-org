@@ -411,7 +411,6 @@
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
     print_certificate: Zertifikat drucken
     announcement_title: Ankündigungen
-    announcement_view_all: Alle anzeigen
     announcement_message: "<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme
       an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden
       Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros
@@ -430,6 +429,8 @@
       ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung
       von "K-12 computer science education" zu erbitten.
     announcement_petition_button: Fügen Sie Ihren Namen ein
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Entschuldigung, aber die Sektion %{new_section_code} existiert
       nicht. Bitte geben Sie einen anderen Sektionscode ein.

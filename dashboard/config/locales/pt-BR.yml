@@ -410,7 +410,6 @@
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
     announcement_title: Anúncios
-    announcement_view_all: Ver todos
     announcement_message: "<b>22 de abril de 2016</b> - Atividades offline são partes
       vitais do processo de aprendizagem, mas os professores nos disseram que encontrar
       todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode
@@ -429,6 +428,8 @@
       em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de
       ciência de computador K-12.
     announcement_petition_button: Adicione o seu nome
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Desculpe, mas não existe secção %{new_section_code}. Por favor
       insira um código de seção diferente.

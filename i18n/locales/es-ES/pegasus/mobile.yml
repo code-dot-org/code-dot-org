@@ -660,13 +660,13 @@ es-ES:
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_view_all: Ver todo
   dashboard_announce_message: '<b>6 de enero, 2015</b> - Aprender más allá de una Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un seguimiento del progreso del alumno.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Aprende más
   dashboard_announce_try_now_button: Probar ahora
   dashboard_announce_petition: "Como profesor, está liderando el camino de un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática. Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana, los líderes de la educación, los 28 gobernadores y CEO's de las compañías más grandes de América se unieron en una carta abierta pidiendo al congreso de los Estados Unidos financiar la educación en informática para K-12."
   dashboard_announce_petition_button: Agrega tu nombre
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: '¡La Hora de Code está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   learn_more: Aprenda más

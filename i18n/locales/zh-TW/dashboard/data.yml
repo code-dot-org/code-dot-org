@@ -5,24 +5,24 @@ zh:
         'Unplug1': 電腦科學導論
         'Maze': 迷宮
         'Multi': 多選項目
-        Unplug2: 運算式思維
-        Unplug3: 圖畫紙程式設計
+        'Unplug2': 運算式思維
+        'Unplug3': 圖畫紙程式設計
         'Artist': 藝術家
-        Unplug4: 演算法
+        'Unplug4': 演算法
         'Artist2': '藝術家 2 '
-        Unplug5: 函數類別
+        'Unplug5': 函數類別
         'Farmer': 農夫
-        Unplug6: 流程類別
+        'Unplug6': 流程類別
         'Artist3': '藝術家 3 '
         'Unplug7': 歌曲創作
         'Farmer2': '農夫 2 '
-        Unplug8: 摘要
+        'Unplug8': 摘要
         'Artist4': '藝術家 4 '
         'Unplug9': 接力式程式設計
         'Farmer3': '農夫 3 '
         'Unplug10': 網際網路
         'Artist5': '藝術家 5 '
-        Unplug11: 總結
+        'Unplug11': 總結
         'MazeEC': 迷宮
         'Bounce': 彈跳
         'Flappy': Flappy Bird

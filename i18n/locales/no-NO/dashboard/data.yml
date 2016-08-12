@@ -5,24 +5,24 @@
         'Unplug1': Introduksjon til informatikk
         'Maze': Labyrinten
         'Multi': Ting med flere valg
-        Unplug2: Programmeringstenkning
-        Unplug3: Millimeterpapirprogrammering
+        'Unplug2': Programmeringstenkning
+        'Unplug3': Millimeterpapirprogrammering
         'Artist': Kunstneren
-        Unplug4: Algoritmer
+        'Unplug4': Algoritmer
         'Artist2': Kunstneren 2
-        Unplug5: Funksjoner
+        'Unplug5': Funksjoner
         'Farmer': Bonden
-        Unplug6: Betingelser
+        'Unplug6': Betingelser
         'Artist3': Kunstneren 3
         'Unplug7': Låtskriving
         'Farmer2': Bonden 2
-        Unplug8: Abstraksjon
+        'Unplug8': Abstraksjon
         'Artist4': Kunstneren 4
         'Unplug9': Relé-programmering
         'Farmer3': Bonden 3
         'Unplug10': Internett
         'Artist5': Kunstneren 5
-        Unplug11: Oppsummering
+        'Unplug11': Oppsummering
         'MazeEC': Labyrinten
         'Bounce': sprett
         'Flappy': Fuglen Flakse

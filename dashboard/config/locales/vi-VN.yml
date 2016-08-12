@@ -409,7 +409,6 @@
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
     print_certificate: In giấy chứng nhận
     announcement_title: Announcements
-    announcement_view_all: Tất cả
     announcement_message: 'We''ve started to measure student learning in Courses 1-4
       and our Accelerated Course on Code Studio. There''s a lot that goes into it,
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
@@ -428,6 +427,8 @@
       cùng nhau trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục
       khoa học máy tính.
     announcement_petition_button: Add your name
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.

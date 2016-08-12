@@ -399,7 +399,6 @@
     choose_next_course: "Опитайте курс като си изберете един от тези по-долу"
     print_certificate: "Печат на сертификат"
     announcement_title: "Съобщения"
-    announcement_view_all: "Преглед на всички"
     announcement_message: "<b>22 април 2016</b> - Дейностите без компютър са важна
       част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите
       може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
@@ -418,6 +417,8 @@
       зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
       образование."
     announcement_petition_button: "Добавете името си"
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля,
       въведете код за друг раздел."
@@ -646,9 +647,9 @@
     wrong_body: "Благодаря Ви, че подадохте отговор"
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор"
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: "Това анкета е анонимна.  Моля, посетете учителското
+      таблото за обобщени резултати.  Имайте предвид, че резултатите ще се виждат
+      само ако най-малко пет ученици са направили анкетата."
   level_group-submittable:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"
@@ -841,7 +842,7 @@
     required: "Общ преглед"
     content: "Съдържание"
     practice: "Учителски практики"
-    peer_review: Peer Review
+    peer_review: "Вашаят отзив"
   external_links:
     disclaimer: "Отказ от отговорност"
     leaving_domain: "Сега напускате този домейн, преминавайки към сайт, който не се
