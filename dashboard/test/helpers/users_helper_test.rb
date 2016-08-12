@@ -162,6 +162,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # put in in "view answers" mode
     user_level.delete!
+    # TODO: going from editable to view_answers should probably actually make this go to submitted? check with poorva
     user_level = create :user_level, user: user, best_result: nil, level: level, script: script, unlocked_at: Time.now, view_answers: true, submitted: false
     assert_equal({}, summarize_user_progress(script, user)[:levels], 'No level progress since we still dont have a result')
 
@@ -172,12 +173,14 @@ class UsersHelperTest < ActionView::TestCase
       level.id => { status: 'locked' }
     }, summarize_user_progress(script, user)[:levels], 'level shows as locked again')
 
-    # unlock it again, and simulate a sum
+    # unlock it again
     user_level.delete!
     level_source = create :level_source, data: "{}"
     user_level = create :user_level, user: user, best_result: 100, level: level, script: script, unlocked_at: Time.now, view_answers: false, submitted: false, level_source: level_source
     assert_equal({
-      level.id => { status: 'locked' }
+      level.id => { status: 'perfect', result: 100, pages_completed: [nil, nil] },
+      "#{level.id}_0" => {},
+      "#{level.id}_1" => {}
     }, summarize_user_progress(script, user)[:levels], 'level still shows as locked')
 
     # now unlock it with a submission
