@@ -687,7 +687,7 @@ Artist.prototype.evalCode = function (code) {
   try {
     codegen.evalWith(code, {
       Turtle: this.api
-    });
+    }, true);
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
     // stop further execution, animate what occured before the infinite loop,

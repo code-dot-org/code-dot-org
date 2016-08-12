@@ -18,7 +18,7 @@ exports.ForStatementMode = {
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
-exports.evalWith = function (code, options) {
+exports.evalWith = function (code, options, experimentalFrame) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function (interpreter, scope) {
@@ -40,6 +40,22 @@ exports.evalWith = function (code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
+
+    if (experimentalFrame) {
+      const mocks = [];
+      for (let api in options) {
+        const mock = {};
+        mocks.push(mock);
+        for (let fn in options[api]) {
+          mock[fn] = function () {
+            console.log(fn, arguments);
+            options[api][fn].apply(options[api], arguments);
+          };
+        }
+      }
+      args = mocks;
+    }
+
     return new ctor().apply(null, args);
   }
 };
