@@ -1293,9 +1293,11 @@ function onDataViewChange(view, oldTableName, newTableName) {
   }
   const storageRef = getDatabase(Applab.channelId).child('storage');
 
-  // unlisten from previous data view
-  storageRef.child('keys').off();
-  storageRef.child(`tables/${oldTableName}/records`).off();
+  // Unlisten from previous data view. This should not interfere with events listened to
+  // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
+  // only unlistening from 'value' events here.
+  storageRef.child('keys').off('value');
+  storageRef.child(`tables/${oldTableName}/records`).off('value');
 
   switch (view) {
     case DataView.PROPERTIES:
