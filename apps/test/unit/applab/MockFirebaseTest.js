@@ -1,6 +1,6 @@
 import { expect } from '../../util/configuredChai';
 import MockFirebase from '../../util/MockFirebase';
-import { getDatabase } from '../../../src/applab/firebaseUtils';
+import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
 
 describe('MockFirebase', () => {
   beforeEach(() => {
@@ -30,7 +30,7 @@ describe('MockFirebase', () => {
           expect(snapshot.val()).to.equal('bar');
           done();
         },
-        error => console.warn(error));
+        error => {throw error;});
       firebase.flush();
     });
   });
@@ -38,13 +38,13 @@ describe('MockFirebase', () => {
   describe('set', () => {
     it('calls callbacks', done => {
       const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.set('foo', () => done());
+      firebase.set('foo', done);
       firebase.flush();
     });
 
     it('resolves promises', done => {
       const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.set('bar').then(() => done());
+      firebase.set('bar').then(done);
       firebase.flush();
     });
   });
@@ -52,13 +52,13 @@ describe('MockFirebase', () => {
   describe('update', () => {
     it('calls callbacks', done => {
       const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.update({foo: 'bar'}, () => done());
+      firebase.update({foo: 'bar'}, done);
       firebase.flush();
     });
 
     it('resolves promises', done => {
       const firebase = new MockFirebase('https://example.firebaseio.com/');
-      firebase.update({foo: 'bar'}).then(() => done());
+      firebase.update({foo: 'bar'}).then(done);
       firebase.flush();
     });
   });
@@ -71,9 +71,7 @@ describe('MockFirebase', () => {
         expect(snapshot.val()).to.equal('foo');
         done();
       },
-      error => {
-        throw new Error(error);
-      });
+      error => {throw error;});
     channelRef.flush();
   });
 
@@ -85,9 +83,7 @@ describe('MockFirebase', () => {
         expect(snapshot.val()).to.equal('bar');
         done();
       },
-      error => {
-        throw new Error(error);
-      });
+      error => {throw error;});
     channelRef.flush();
   });
 });
