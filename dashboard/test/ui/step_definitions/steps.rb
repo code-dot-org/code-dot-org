@@ -131,7 +131,7 @@ end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  @browser.current_url.should eq url
+  expect(@browser.current_url).to eq(url)
 end
 
 Then /^I wait until current URL contains "([^"]*)"$/ do |url|
@@ -146,7 +146,7 @@ end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
   url = replace_hostname(url)
-  @browser.current_url.should include url
+  expect(@browser.current_url).to include(url)
 end
 
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
@@ -344,11 +344,11 @@ When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
-  @browser.title.should eq title
+  expect(@browser.title).to eq(title)
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}").should eq true
+  expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
 Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
@@ -467,7 +467,7 @@ end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value = @browser.execute_script("return $(\"#{selector}\").is(':checked');")
-  value.should eq negation.nil?
+  expect(value).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
@@ -483,7 +483,7 @@ end
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
   visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  visible.should eq (negation.nil?)
+  expect(visible).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
@@ -493,7 +493,7 @@ end
 Then /^element "([^"]*)" is hidden$/ do |selector|
   visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
   visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  visible.should eq false
+  expect(visible).to eq(false)
 end
 
 def has_class?(selector, class_name)
@@ -501,17 +501,17 @@ def has_class?(selector, class_name)
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
-  has_class?(selector, class_name).should eq true
+  expect(has_class?(selector, class_name)).to eq(true)
 end
 
 Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
-  has_class?(selector, class_name).should eq false
+  expect(has_class?(selector, class_name)).to eq(false)
 end
 
 Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
   # Can't use jQuery hasClass here, due to limited SVG support
   class_list = @browser.execute_script("return $(\"#{selector}\", $(\"#{parent_selector}\").contents())[0].getAttribute(\"class\")")
-  class_list.should include class_name
+  expect(class_list).to include(class_name)
 end
 
 def disabled?(selector)
@@ -519,11 +519,11 @@ def disabled?(selector)
 end
 
 Then /^element "([^"]*)" is (?:enabled|not disabled)$/ do |selector|
-  disabled?(selector).should eq false
+  expect(disabled?(selector)).to eq(false)
 end
 
 Then /^element "([^"]*)" is disabled$/ do |selector|
-  disabled?(selector).should eq true
+  expect(disabled?(selector)).to eq(true)
 end
 
 And /^output url$/ do
@@ -536,7 +536,7 @@ end
 
 Then /^there's an image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
@@ -553,28 +553,28 @@ end
 
 Then /^I see jquery selector (.*)$/ do |selector|
   exists = @browser.execute_script("return $(\"#{selector}\").length != 0;")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^there's an SVG image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('image').filter('[xlink\\\\:href*=\"#{path}\"]').length != 0")
-  exists.should eq true
+  expect(exists).to eq(true)
 end
 
 Then /^there's not an SVG image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('image').filter('[xlink\\\\:href*=\"#{path}\"]').length != 0")
-  exists.should eq false
+  expect(exists).to eq(false)
 end
 
 Then(/^"([^"]*)" should be in front of "([^"]*)"$/) do |selector_front, selector_behind|
   front_z_index = @browser.execute_script("return $('#{selector_front}').css('z-index')").to_i
   behind_z_index = @browser.execute_script("return $('#{selector_behind}').css('z-index')").to_i
-  front_z_index.should be > behind_z_index
+  expect(front_z_index).to be > behind_z_index
 end
 
 Then(/^I set slider speed to medium/) do
@@ -609,7 +609,7 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
     @parent_item = @browser.find_element(:css, parent)
   }
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  @parent_item.should eq @actual_parent_item
+  expect(@parent_item).to eq(@actual_parent_item)
 end
 
 And(/^I set the language cookie$/) do
@@ -682,6 +682,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up"
     And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -698,7 +699,6 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
-    And I select the "Teacher" option in dropdown "user_user_type"
     And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
@@ -819,7 +819,7 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   elsif redirect_source == 'dashboard' || redirect_source == 'none'
     state = nil
   end
-  @browser.execute_script("return window.history.state").should eq state
+  expect(@browser.execute_script("return window.history.state")).to eq(state)
 end
 
 last_shared_url = nil
@@ -845,17 +845,17 @@ end
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(class_name).should eq true
+  expect(classes.include?(class_name)).to eq(true)
 end
 
 Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(class_name).should eq false
+  expect(classes.include?(class_name)).to eq(false)
 end
 
 Then /^there is no horizontal scrollbar$/ do
-  @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
+  expect(@browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth')).to eq(true)
 end
 
 # Place files in dashboard/test/fixtures

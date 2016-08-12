@@ -282,15 +282,48 @@ FirebaseStorage.resetRecordListener = function () {
 };
 
 /**
- * Delete an entire table from firebase storage.
+ * Delete an entire table from firebase storage, then reset its lastId and rowCount.
  * @param {string} tableName
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
-  tableRef.set(null).then(onSuccess, onError);
+  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  tableRef.set(null)
+    .then(() => countersRef.set(null))
+    .then(onSuccess, onError);
 };
+
+/**
+ * @param {boolean} overwrite
+ * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
+ *   or an empty map if overwrite is true.
+ */
+function getExistingTables(overwrite) {
+  if (overwrite) {
+    return Promise.resolve({});
+  }
+  const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+  return tablesRef.once('value').then(snapshot => snapshot.val() || {});
+}
+
+/**
+ * Converts records into a format that can be written to a table's `records` node in
+ * firebase, overwriting the "id" field of each record if necessary.
+ * @param {Array.<Object>} records Array of raw javascript objects representing records.
+ * @returns {Object} Map representing records data, where each key is a record id, and
+ *   each value is a JSON-encoded record containing an "id" field equal to the record id.
+ */
+function getRecordsData(records) {
+  const recordsData = {};
+  records.forEach((record, index) => {
+    const id = index + 1;
+    record.id = id;
+    recordsData[id] = JSON.stringify(record);
+  });
+  return recordsData;
+}
 
 /**
  * Populates a channel with table data for one or more tables
@@ -301,48 +334,65 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
  * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
- *    and http status in case of failure.
+ * @param {function} onError Function to call with an error in case of failure.
  */
 FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Respect overwrite
-  let promises = [];
-  let tablesRef = getDatabase(Applab.channelId).child('storage/tables');
-  let tablesMap = JSON.parse(jsonData);
-  Object.keys(tablesMap).forEach(tableName => {
-    let recordsMap = tablesMap[tableName];
-    let recordsRef = tablesRef.child(`${tableName}/records`);
-    Object.keys(recordsMap).forEach(recordId => {
-      let recordString = JSON.stringify(recordsMap[recordId]);
-      promises.push(recordsRef.child(recordId).set(recordString));
-    });
-  });
-  Promise.all(promises).then(onSuccess, onError);
+  getExistingTables(overwrite).then(existingTables => {
+    const promises = [];
+    const newTables = JSON.parse(jsonData);
+    for (const tableName in newTables) {
+      if (overwrite || (existingTables[tableName] === undefined)) {
+        const newRecords = newTables[tableName];
+        const recordsData = getRecordsData(newRecords);
+        promises.push(overwriteTableData(tableName, recordsData));
+      }
+    }
+    return Promise.all(promises);
+  }).then(onSuccess, onError);
 };
 
 /**
+ * @param {boolean} overwrite
+ * @returns {Promise} Promise containing a map of existing key/value pairs, or an
+ *   empty map if overwrite is true.
+ */
+function getExistingKeyValues(overwrite) {
+  if (overwrite) {
+    return Promise.resolve({});
+  }
+  return getKeysRef(Applab.channelId).once('value')
+    .then(snapshot => snapshot.val() || {});
+}
+
+/**
  * Populates the key/value store with initial data
- * @param {string} jsonData The json data that represents the tables in the format of:
+ * @param {string} jsonData The json data that represents the keys/value pairs in the
+ *   format of:
  *   {
  *     "click_count": 5,
  *     "button_color": "blue"
  *   }
- * @param {bool} overwrite Whether to overwrite a table if it already exists.
+ * @param {bool} overwrite Whether to overwrite a key if it already exists.
  * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
- *    and http status in case of failure.
+ * @param {function} onError Function to call with an error in case of failure.
  */
 FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Respect overwrite
-  let keysRef = getKeysRef(Applab.channelId);
-  let keyValueMap = JSON.parse(jsonData);
-  keysRef.update(keyValueMap).then(onSuccess, onError);
+  getExistingKeyValues(overwrite).then(oldKeyValues => {
+    const newKeyValues = JSON.parse(jsonData);
+    const keysData = {};
+    for (const key in newKeyValues) {
+      if (overwrite || (oldKeyValues[key] === undefined)) {
+        keysData[key] = JSON.stringify(newKeyValues[key]);
+      }
+    }
+    getKeysRef(Applab.channelId).update(keysData).then(onSuccess, onError);
+  });
 };
 
 /**

@@ -66,8 +66,8 @@ type TableCounter {
   rowCount: Number | Null
 
   validate() {
-    this.lastId >= orZero(prior(this).lastId) &&
-    this.rowCount >= 0 && this.rowCount <= root.v3.config.channels.maxTableRows
+    orZero(this.lastId) >= orZero(prior(this).lastId) &&
+    orZero(this.rowCount) >= 0 && orZero(this.rowCount) <= root.v3.config.channels.maxTableRows
   }
 }
 

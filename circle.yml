@@ -17,6 +17,7 @@ machine:
 dependencies:
   cache_directories:
     - "apps/node_modules"
+    - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev enscript
@@ -41,7 +42,9 @@ dependencies:
     - 'case $CIRCLE_NODE_INDEX in 1) echo "override_dashboard: \"localhost-studio.code.org:3000\"" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 1) echo "override_pegasus: \"localhost.code.org:3000\"" >> locals.yml ;; esac'
     # Run rake install
-    - bundle exec rake install
+    - bundle exec rake install:
+        environment:
+          RAKE_VERBOSE: true
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:

@@ -1448,6 +1448,10 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
  * scale of child elements is updated to the current width.
  */
 StudioApp.prototype.resizeVisualization = function (width) {
+  if ($('#visualizationColumn').hasClass('wireframeShare')) {
+    return;
+  }
+
   var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
@@ -1591,7 +1595,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via

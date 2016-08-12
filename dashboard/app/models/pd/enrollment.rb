@@ -38,6 +38,11 @@ class Pd::Enrollment < ActiveRecord::Base
     self.code = unused_random_code
   end
 
+  # Always store emails in lowercase to match the behavior in User.
+  def email=(value)
+    write_attribute(:email, value.try(:downcase))
+  end
+
   def resolve_user
     user || User.find_by_email_or_hashed_email(self.email)
   end
@@ -68,6 +73,14 @@ class Pd::Enrollment < ActiveRecord::Base
         )
       end
     end
+  end
+
+  def in_section?
+    user = resolve_user
+    return false unless user && self.workshop.section
+
+    # Teachers enrolled in the workshop are "students" in the section.
+    self.workshop.section.students.exists?(user.id)
   end
 
   private

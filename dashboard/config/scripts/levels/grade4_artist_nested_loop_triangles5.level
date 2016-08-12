@@ -43,25 +43,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat" editable="false">
-              <title name="TIMES">3</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant" editable="false">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">50</title>
-                  <next>
-                    <block type="draw_turn_by_constant" editable="false">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">120</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

@@ -2559,7 +2559,10 @@ exports.install = function (blockly, blockInstallOptions) {
       // This block handles generation of nextConnection descendants (in order
       // to wrap them in a callback).
       this.skipNextBlockGeneration = true;
-    }
+    },
+    getVars: Blockly.Blocks.variables_get.getVars,
+    renameVar: Blockly.Blocks.variables_get.renameVar,
+    removeVar: Blockly.Blocks.variables_get.removeVar
   };
 
   generator.studio_ask = function () {

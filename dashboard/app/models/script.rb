@@ -7,7 +7,6 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  wrapup_video_id :integer
-#  trophies        :boolean          default(FALSE), not null
 #  hidden          :boolean          default(FALSE), not null
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
@@ -365,6 +364,10 @@ class Script < ActiveRecord::Base
 
   def professional_course?
     pd? || professional_learning_course?
+  end
+
+  def has_peer_reviews?
+    peer_reviews_to_complete.try(:>, 0)
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)

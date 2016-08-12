@@ -120,13 +120,13 @@ theme: pdf
             = format_integer_with_commas(state_info[:ap_hispanic_i])
           - else
             none
-          were Hispanic;
+          students were Hispanic;
           - if state_info[:ap_black_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_black_i])
           - else
             none
-          were black.
+          students were black.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -183,9 +183,14 @@ theme: pdf
       = succeed '.' do
         = state_info[:state_name_s]
     %ul
+      - if state_info[:professional_learning_partners_t] != 'none'
+        %li
+          Code.org's professional learning partner(s) is/are:
+          = succeed '.' do
+            = state_info[:professional_learning_partners_t]
       - if state_info[:school_district_partners_t] != 'no school districts in the state'
         %li
-          Code.org has partnered with
+          Code.org has partnered with the following school district(s):
           = succeed '.' do
             = state_info[:school_district_partners_t]
       - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
