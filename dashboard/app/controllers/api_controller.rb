@@ -17,15 +17,18 @@ class ApiController < ApplicationController
       user_level_data = item[:user_level_data]
 
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
-        raise 'Must provide user, level, and script ids'
+        # Must provide user, level, and script ids
+        return head :bad_request
       end
 
       if item[:locked] && item[:view_answers]
-        raise 'Can not view answers while locked'
+        # Can not view answers while locked
+        return head :bad_request
       end
 
       unless User.find(user_level_data[:user_id]).teachers.include? current_user
-        raise 'Can only update lockable state for users students'
+        # Can only update lockable state for users students
+        return head :forbidden
       end
 
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
@@ -34,7 +37,7 @@ class ApiController < ApplicationController
     render json: {}
   end
 
-  # For a given users, gets the lockable state for each user in each of their sections
+  # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
     return unless current_user
 
@@ -46,7 +49,10 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: @script.lockable_state(section.students)
+        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+          stage_state = stage.lockable_state(section.students)
+          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        end
       }
     end
 

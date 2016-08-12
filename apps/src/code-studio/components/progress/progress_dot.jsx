@@ -187,6 +187,7 @@ export const ProgressDot = React.createClass({
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
     const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = level.locked || level.status === LevelStatus.locked;
     const levelUrl = isLocked ? undefined : level.url + location.search;
 

@@ -710,9 +710,8 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       view_answers: false
     }]
-    assert_raises do
-      post :update_lockable_state, updates: updates
-    end
+    post :update_lockable_state, updates: updates
+    assert_response 400
 
     updates = [{
       user_level_data: {
@@ -723,9 +722,8 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       view_answers: false
     }]
-    assert_raises do
-      post :update_lockable_state, updates: updates
-    end
+    post :update_lockable_state, updates: updates
+    assert_response 400
 
     updates = [{
       user_level_data: {
@@ -736,9 +734,8 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       view_answers: false
     }]
-    assert_raises do
-      post :update_lockable_state, updates: updates
-    end
+    post :update_lockable_state, updates: updates
+    assert_response 400
 
     # can't set to lockable and view_answers
     updates = [{
@@ -746,9 +743,8 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       view_answers: true
     }]
-    assert_raises do
-      post :update_lockable_state, updates: updates
-    end
+    post :update_lockable_state, updates: updates
+    assert_response 400
 
     # can't update students that dont belong to teacher
     other_student = create :student
@@ -761,9 +757,8 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       view_answers: false
     }]
-    assert_raises do
-      post :update_lockable_state, updates: updates
-    end
+    post :update_lockable_state, updates: updates
+    assert_response 403
   end
 
   test "should get user progress" do
