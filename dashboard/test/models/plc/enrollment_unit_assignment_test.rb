@@ -43,6 +43,9 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(true)
 
+    @script.update(peer_reviews_to_complete: 2)
+    PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
+
     assert_equal [
       {
         category: Plc::LearningModule::REQUIRED_MODULE,
@@ -55,6 +58,10 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
       {
         category: Plc::LearningModule::PRACTICE_MODULE,
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+      },
+      {
+          category: 'peer_review',
+          status: Plc::EnrollmentModuleAssignment::NOT_STARTED
       }
     ], @unit_enrollment.summarize_progress
   end

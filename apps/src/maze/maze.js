@@ -49,7 +49,7 @@ var Collector = require('./collector');
 var Cell = require('./cell');
 var BeeCell = require('./beeCell');
 var WordSearch = require('./wordsearch');
-var scrat = require('./scrat');
+var Scrat = require('./scrat');
 
 var CollectorDrawer = require('./collectorDrawer');
 var DirtDrawer = require('./dirtDrawer');
@@ -381,8 +381,8 @@ function isOnPathStr(x, y) {
 function drawMapTiles(svg) {
   if (Maze.wordSearch) {
     return Maze.wordSearch.drawMapTiles(svg);
-  } else if (mazeUtils.isScratSkin(skin.id)) {
-    return scrat.drawMapTiles(svg);
+  } else if (Maze.scrat) {
+    return Maze.scrat.drawMapTiles(svg);
   }
 
   // Compute and draw the tile for each square.
@@ -526,6 +526,7 @@ Maze.init = function (config) {
   Maze.bee = undefined;
   Maze.collector = undefined;
   Maze.wordSearch = undefined;
+  Maze.scrat = undefined;
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
@@ -534,7 +535,10 @@ Maze.init = function (config) {
     Maze.collector = new Collector(Maze, studioApp, config);
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map);
+  } else if (mazeUtils.isScratSkin(skin.id)) {
+    Maze.scrat = new Scrat(Maze, studioApp);
   }
+
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
   } else {
@@ -1699,8 +1703,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin(skin.id)) {
-    scrat.scheduleDance(victoryDance, timeAlloted, skin);
+  if (Maze.scrat) {
+    Maze.scrat.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 

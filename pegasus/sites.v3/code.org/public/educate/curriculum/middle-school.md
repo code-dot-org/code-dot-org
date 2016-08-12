@@ -25,7 +25,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 <div style="clear: both;"></div>
 
-[<button>Learn more about curriculum</button>](/curriculum/science) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
+[<button>Learn more about curriculum</button>](<%= CDO.code_org_url('/curriculum/science') %>) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
 
 # Computer Science in Algebra
 

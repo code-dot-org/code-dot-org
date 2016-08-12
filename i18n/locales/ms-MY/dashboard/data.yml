@@ -5,24 +5,24 @@ ms:
         'Unplug1': Pengenalan kepada Sains komputer
         'Maze': Simpang Siur
         'Multi': Multiple Choice Stuffs
-        Unplug2: Pengiraan pemikiran
-        Unplug3: Pengaturcaraan kertas graf
+        'Unplug2': Pengiraan pemikiran
+        'Unplug3': Pengaturcaraan kertas graf
         'Artist': Pelukis
-        Unplug4: Algoritma
+        'Unplug4': Algoritma
         'Artist2': Artis 2
-        Unplug5: Fungsi
+        'Unplug5': Fungsi
         'Farmer': Petani
-        Unplug6: Bersyarat
+        'Unplug6': Bersyarat
         'Artist3': Artis 3
         'Unplug7': Lagu
         'Farmer2': Petani 2
-        Unplug8: Abstraksi
+        'Unplug8': Abstraksi
         'Artist4': Artis 4
         'Unplug9': Pengaturcaraan penyampai
         'Farmer3': Petani 3
         'Unplug10': Internet
         'Artist5': Artis 5
-        Unplug11: Wrap-up
+        'Unplug11': Wrap-up
         'MazeEC': Simpang Siur
         'Bounce': Lantunan
         'Flappy': Flappy Bird

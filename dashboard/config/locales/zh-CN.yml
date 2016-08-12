@@ -127,8 +127,8 @@
     picture: "现在找出你秘密图片"
     words: "现在，输入你的秘密单词"
     login: "登录"
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: "登录无效，请重试"
+    pair_programming: "我在我的电脑上有伙伴"
   password:
     reset_form:
       title: "忘记了您的密码吗？"
@@ -259,9 +259,9 @@
       signup: "登录"
       already_registered: "已经注册了？"
       pair_programming: "结对编程"
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: "团队"
+      driver: "驱动"
+      navigator: "导航"
     popup:
       progress_for_user: "%{name}的进度"
       progress: "您的进度"
@@ -296,7 +296,7 @@
       example_with_number: "示例解决方案 %{solution_number}"
       submitted_on: "已提交于："
       unsubmit: "未提交"
-      worked_with: Worked With
+      worked_with: "一起工作"
   user:
     email_confirm_needed: "电子邮件地址尚未被确认："
     email_confirm_needed_required: "你的电子邮件地址%{email} 尚未被确认："
@@ -355,7 +355,6 @@
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
     announcement_title: "公告"
-    announcement_view_all: "查看全部"
     announcement_message: 想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
@@ -366,6 +365,8 @@
     announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
       28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: "抱歉，但分段 %{new_section_code} 并不存在。请输入一个不同的分段代码。"
     section_code_not_entered: "请提供 current_section_code。"
@@ -554,9 +555,9 @@
     wrong_body: "感谢您提交答案。"
     correct_title: "谢谢你"
     correct_body: "感谢您提交答案。"
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: |
+      这个调查是匿名的。请访问教导面板以查询结果汇总。
+      注意，只有至少五个学生提交了调查报告结果才会可见。
   level_group-submittable:
     wrong_title: "谢谢你"
     wrong_body: "感谢您提交答案。"
@@ -631,8 +632,7 @@
     share_title: "分享您的项目"
     share_copy_link: "复制链接："
     share_embed_description: "您可以将嵌入的代码粘贴到HTML页，就可以在另一个网页上显示这个项目。"
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_u13_warning: "在分享之前问问你的老师。只和你学校里的其他人分享。"
     embed: "插入"
     advanced_share: "显示更高级的选项"
     close: "关闭"
@@ -656,8 +656,7 @@
     edit_project: "编辑工程"
     abuse:
       tos: "此工程因违反了Code.org的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。"
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "这个项目包含了不能和他人分享的数据。请联系应用程序的主人以修复他们的应用内容。"
       contact_us: "如果你认为有错误，请 <a href='https://code.org/contact'>联系我们</a>"
       go_to_code_studio: "转到代码工作室"
       report_abuse_form:
@@ -716,16 +715,12 @@
     required: "概览"
     content: "内容"
     practice: "教学训练"
-    peer_review: Peer Review
+    peer_review: "互相检查"
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    disclaimer: "免责声明"
+    leaving_domain: "你现在正在离开code.org，访问一个不由我们创建的站点。"
+    disclaimer_text: "这个站点可能包含与Code.org不同的隐私策略。我们选择了这些第三方资源，因为我们认为他们对你有帮助。我们并不直接对该网站的内容负责，如果你发现了让你感到反感的内容，或这个链接指向的站点已不再可用，请通过
+      <a href='%{support_url}'>和支持部门联系。</a>"
   hoc_download:
     title: "编程一小时项目下载"
     capsule_title: "你有网络吗？"

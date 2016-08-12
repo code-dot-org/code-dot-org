@@ -169,7 +169,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   // get the topmost missing recommended block, if it exists, to be
   // added to the queue of contextual hints. If the user views the block
   // in the dialog, mark it as seen and add it to the list as such.
-  var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks);
+  var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks, options.level.isK1);
   var markContextualHintsAsSeen = function () {
     missingRecommendedBlockHints.filter(function (hint) {
       return feedbackBlocks && feedbackBlocks.xml && feedbackBlocks.xml.indexOf(hint.blockDisplayXML) > -1;
@@ -1186,11 +1186,12 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
  * be presented to the user as hints.
  * @param {!TestableBlock[]} blocks
  */
-FeedbackUtils.prototype.getMissingBlockHints = function (blocks) {
+FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
   return this.getMissingBlocks_(blocks, 1)
     .blocksToDisplay
     .map(function (block) {
-      block.alreadySeen = false;
+      // in K1, we default to already seen
+      block.alreadySeen = isK1;
       return block;
     });
 };

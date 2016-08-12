@@ -346,13 +346,13 @@ ko:
     choose_next_course: 아래의 Code Studio 과정을 해보세요.
     print_certificate: 인증서 인쇄
     announcement_title: 공시사항
-    announcement_view_all: 모두 보기
     announcement_message: '<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은 언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서 모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요.'
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: 더 알아보기
     announcement_try_now_button: 지금 해보기
     announcement_petition: 교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다.
     announcement_petition_button: 이름을 입력하세요
+    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: '죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요.'
     section_code_not_entered: Current_section_code를 입력 하십시오.
@@ -526,7 +526,7 @@ ko:
     wrong_body: 답변 주셔서 감사 합니다.
     correct_title: 고마워
     correct_body: 답변 주셔서 감사 합니다.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
+    hide_survey_last_answer: 이 설문조사는 익명으로 처리됩니다. 결과를 확인하시려면 교사 대시보드를 방문하세요. 다섯 명 이상의 학생이 설문에 응해야만 결과를 볼 수 있음을 알아두시기 바랍니다.
   level_group-submittable:
     wrong_title: 고마워
     wrong_body: 답변 주셔서 감사 합니다.
@@ -681,7 +681,7 @@ ko:
     required: 개요
     content: 콘텐츠
     practice: 선생님 연습
-    peer_review: Peer Review
+    peer_review: 동료 평가
   external_links:
     disclaimer: 경고
     leaving_domain: 여러분은 이제 이 도메인을 떠나 Code.org가 운영하지 않는 다른 사이트로 이동합니다.

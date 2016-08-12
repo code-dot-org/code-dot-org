@@ -5,24 +5,24 @@ nn:
         'Unplug1': Introduksjon til informatikk
         'Maze': Labyrinten
         'Multi': Fleirvalsprøver
-        Unplug2: Programmeringstenking
-        Unplug3: Programmering på millimeterpapir
+        'Unplug2': Programmeringstenking
+        'Unplug3': Programmering på millimeterpapir
         'Artist': Kunstnaren
-        Unplug4: Algoritmer
+        'Unplug4': Algoritmer
         'Artist2': Kunstnaren 2
-        Unplug5: Funksjonar
+        'Unplug5': Funksjonar
         'Farmer': Bonden
-        Unplug6: Betingelser
+        'Unplug6': Betingelser
         'Artist3': Kunstnaren 3
         'Unplug7': Låtskriving
         'Farmer2': Bonden 2
-        Unplug8: Abstraksjon
+        'Unplug8': Abstraksjon
         'Artist4': Kunstnaren 4
         'Unplug9': Programmeringsstafett
         'Farmer3': Bonden 3
         'Unplug10': Internett
         'Artist5': Kunstnaren 5
-        Unplug11: Oppsummering
+        'Unplug11': Oppsummering
         'MazeEC': Labyrinten
         'Bounce': Sprett
         'Flappy': Flaksefugl

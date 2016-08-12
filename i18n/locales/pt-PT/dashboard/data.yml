@@ -5,24 +5,24 @@ pt:
         'Unplug1': Introdução à Ciência Computacional
         'Maze': O Labirinto
         'Multi': Perguntas de escolha múltipla
-        Unplug2: Pensamento computacional
-        Unplug3: Programação em Papel Quadriculado
+        'Unplug2': Pensamento computacional
+        'Unplug3': Programação em Papel Quadriculado
         'Artist': O Artista
-        Unplug4: Algoritmos
+        'Unplug4': Algoritmos
         'Artist2': O Artista 2
-        Unplug5: Funções
+        'Unplug5': Funções
         'Farmer': O Agricultor
-        Unplug6: Condicionais
+        'Unplug6': Condicionais
         'Artist3': O Artista 3
         'Unplug7': Escrevendo uma Canção
         'Farmer2': O Agricultor 2
-        Unplug8: Abstração
+        'Unplug8': Abstração
         'Artist4': O Artista 4
         'Unplug9': Programação Relay
         'Farmer3': O Agricultor 3
         'Unplug10': A Internet
         'Artist5': O Artista 5
-        Unplug11: Sumário
+        'Unplug11': Sumário
         'MazeEC': O Labirinto
         'Bounce': Bounce
         'Flappy': Flappy Bird

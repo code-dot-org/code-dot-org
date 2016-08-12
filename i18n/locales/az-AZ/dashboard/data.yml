@@ -5,24 +5,24 @@ az:
         'Unplug1': İnformatikaya giriş
         'Maze': Labirint
         'Multi': Multiple Choice Stuffs
-        Unplug2: Hesablama təfəkkürü
-        Unplug3: Millimetrlik kağızda proqramlaşdırma
+        'Unplug2': Hesablama təfəkkürü
+        'Unplug3': Millimetrlik kağızda proqramlaşdırma
         'Artist': Rəssam
-        Unplug4: Alqoritmlər
+        'Unplug4': Alqoritmlər
         'Artist2': Rəssam 2
-        Unplug5: Funksiyalar
+        'Unplug5': Funksiyalar
         'Farmer': Fermer
-        Unplug6: Şərti ifadələr
+        'Unplug6': Şərti ifadələr
         'Artist3': Rəssam 3
         'Unplug7': Mahnı bəstələmə
         'Farmer2': Fermer 2
-        Unplug8: Mücərrədlik
+        'Unplug8': Mücərrədlik
         'Artist4': Rəssam 4
         'Unplug9': Estafet proqramlaşdırması
         'Farmer3': Fermer 3
         'Unplug10': İnternet
         'Artist5': Rəssam 5
-        Unplug11: Yekun
+        'Unplug11': Yekun
         'MazeEC': Labirint
         'Bounce': Bounce
         'Flappy': Flappy Bird

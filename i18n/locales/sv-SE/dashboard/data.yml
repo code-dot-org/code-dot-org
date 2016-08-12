@@ -5,24 +5,24 @@ sv:
         'Unplug1': Introduktion till Datavetenskap
         'Maze': Labyrinten
         'Multi': Flervals grejor
-        Unplug2: Uträkningstänkande
-        Unplug3: Kalkyleringsprogrammering
+        'Unplug2': Uträkningstänkande
+        'Unplug3': Kalkyleringsprogrammering
         'Artist': Konstnären
-        Unplug4: Algoritmer
+        'Unplug4': Algoritmer
         'Artist2': Konstnären 2
-        Unplug5: Funktioner
+        'Unplug5': Funktioner
         'Farmer': Bonden
-        Unplug6: Villkor
+        'Unplug6': Villkor
         'Artist3': Konstnären 3
         'Unplug7': Sångskrivande
         'Farmer2': Bonden 2
-        Unplug8: Abstraktion
+        'Unplug8': Abstraktion
         'Artist4': Konstnären 4
         'Unplug9': Relä programmering
         'Farmer3': Bonden 3
         'Unplug10': Internet
         'Artist5': Konstnären 5
-        Unplug11: Gör klart
+        'Unplug11': Gör klart
         'MazeEC': Labyrinten
         'Bounce': Studsa
         'Flappy': Flappy Bird

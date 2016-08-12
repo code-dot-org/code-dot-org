@@ -46,7 +46,7 @@
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
-    "instructions": "Develop a Protocol for Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain only 6 characters\r\n- Packets may drop with small probability\r\n- Packets may not arrive in order",
+    "instructions": "Develop a Protocol for Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain only 8 characters\r\n- Packets may drop with small probability\r\n- Packets may not arrive in order",
     "default_packet_size_limit": "80",
     "show_tabs": "[\"instructions\",\"my_device\",\"router\"]",
     "default_tab_index": "0",
