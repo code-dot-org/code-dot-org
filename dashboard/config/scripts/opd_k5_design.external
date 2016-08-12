@@ -1,14 +1,7 @@
 name 'OPD-K5 Design'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
-
-### BEST PRACTICES > Lesson Planning
-<br><br>
+# Best Practices > Lesson Planning
 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/WBA-jP4HtR8" frameborder="0" allowfullscreen></iframe>
-
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
