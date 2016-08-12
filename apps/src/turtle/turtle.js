@@ -683,11 +683,11 @@ Artist.prototype.runButtonClick = function () {
   this.execute();
 };
 
-Artist.prototype.evalCode = function (code) {
+Artist.prototype.evalCode = function (code, async) {
   try {
     codegen.evalWith(code, {
       Turtle: this.api
-    }, true);
+    }, async);
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
     // stop further execution, animate what occured before the infinite loop,
@@ -755,8 +755,22 @@ Artist.prototype.execute = function () {
     return;
   }
 
+  const afterEval = () => {
+    // api.log now contains a transcript of all the user's actions.
+    this.studioApp_.playAudio('start', {loop: true});
+    // animate the transcript.
+
+    this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+
+    if (this.studioApp_.isUsingBlockly()) {
+      // Disable toolbox while running
+      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+    }
+  };
+
   if (this.level.editCode) {
     this.initInterpreter();
+    afterEval();
   } else {
     this.code = '';
 
@@ -765,18 +779,7 @@ Artist.prototype.execute = function () {
     }
 
     this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
-    this.evalCode(this.code);
-  }
-
-  // api.log now contains a transcript of all the user's actions.
-  this.studioApp_.playAudio('start', {loop : true});
-  // animate the transcript.
-
-  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // Disable toolbox while running
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+    this.evalCode(this.code, afterEval);
   }
 };
 
