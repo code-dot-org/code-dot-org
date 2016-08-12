@@ -16,14 +16,14 @@ exports.ForStatementMode = {
 };
 
 window.addEventListener('message', e => {
+  // Fix up arguments array.
   const args = [];
   for (var i in e.data.args) {
     args[+i] = e.data.args[i];
   }
 
-  console.log(e.data.fn, args);
-  if (messageHandlers[e.data.fn]) {
-    messageHandlers[e.data.fn].apply(null, args);
+  if (messageHandlers[e.data.api] && messageHandlers[e.data.api][e.data.fn]) {
+    messageHandlers[e.data.api][e.data.fn].apply(null, args);
   }
 });
 
@@ -66,15 +66,17 @@ exports.evalWith = function (code, options, async) {
       for (let api in options) {
         const mock = {};
         mocks.push(mock);
+        messageHandlers[api] = {};
         for (let fn in options[api]) {
           const f = options[api][fn];
           if (typeof f !== 'function') {
             // Only proxy functions.
             continue;
           }
-          messageHandlers[fn] = f.bind(options[api]);
+          messageHandlers[api][fn] = f.bind(options[api]);
           mock[fn] = function () {
             window.postMessage({
+              api: api,
               fn: fn,
               args: arguments
             }, location);
@@ -83,7 +85,7 @@ exports.evalWith = function (code, options, async) {
       }
 
       // Override the `done` handler to hook program completion.
-      messageHandlers.done = async;
+      messageHandlers.wrapper = {done: async};
       args = mocks;
     }
 
