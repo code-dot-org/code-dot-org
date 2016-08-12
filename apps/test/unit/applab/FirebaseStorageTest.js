@@ -1,6 +1,6 @@
 import { expect } from '../../util/configuredChai';
-import FirebaseStorage from '../../../src/applab/firebaseStorage';
-import { getDatabase, getFirebase } from '../../../src/applab/firebaseUtils';
+import FirebaseStorage from '@cdo/apps/applab/firebaseStorage';
+import { getDatabase, getFirebase } from '@cdo/apps/applab/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   beforeEach(() => {
@@ -19,13 +19,12 @@ describe('FirebaseStorage', () => {
         }
       }
     };
-    const NEW_TABLE_DATA_JSON =
-      '{' +
-      '  "cities": [' +
-      '    {"city": "Seattle", "state": "WA"},' +
-      '    {"city": "Chicago", "state": "IL"}' +
-      '  ]' +
-      '}';
+    const NEW_TABLE_DATA_JSON = `{
+      "cities": [
+        {"city": "Seattle", "state": "WA"},
+        {"city": "Chicago", "state": "IL"}
+      ]
+    }`;
     const NEW_TABLE_DATA = {
       cities: {
         records: {
@@ -38,9 +37,7 @@ describe('FirebaseStorage', () => {
       return getDatabase(Applab.channelId).child(`storage/tables`).once('value')
         .then(snapshot => {
           expect(snapshot.val()).to.deep.equal(expectedTablesData);
-        }, error => {
-          console.warn(`verifyTable promise rejected: ${error}`);
-        });
+        }, error => {throw error;});
     }
 
     beforeEach(() => {
@@ -53,9 +50,7 @@ describe('FirebaseStorage', () => {
         NEW_TABLE_DATA_JSON,
         overwrite,
         () => verifyTable(NEW_TABLE_DATA).then(done),
-        error => {
-          console.warn(`populateTable promise rejected: ${error}`);
-        });
+        error => {throw error;});
     });
 
     it('does not overwrite existing data when overwrite is false', done => {
@@ -66,9 +61,7 @@ describe('FirebaseStorage', () => {
             NEW_TABLE_DATA_JSON,
             overwrite,
             () => verifyTable(EXISTING_TABLE_DATA).then(done),
-            error => {
-              console.warn(`populateTable promise rejected: ${error}`);
-            });
+            error => {throw error;});
 
         });
     });
@@ -81,9 +74,7 @@ describe('FirebaseStorage', () => {
             NEW_TABLE_DATA_JSON,
             overwrite,
             () => verifyTable(NEW_TABLE_DATA).then(done),
-            error => {
-              console.warn(`populateTable promise rejected: ${error}`);
-            });
+            error => {throw error;});
 
         });
     });
