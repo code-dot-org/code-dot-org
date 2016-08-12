@@ -5,24 +5,24 @@ sr:
         'Unplug1': Увод у Компјутерске Науке
         'Maze': Лавиринт
         'Multi': Multiple Choice Stuffs
-        Unplug2: Компјутерско Размишљање
-        Unplug3: Графичко програмирање
+        'Unplug2': Компјутерско Размишљање
+        'Unplug3': Графичко програмирање
         'Artist': Уметник
-        Unplug4: Алгоритми
+        'Unplug4': Алгоритми
         'Artist2': Уметник 2
-        Unplug5: Функције
+        'Unplug5': Функције
         'Farmer': Фармер
-        Unplug6: Кондиционали
+        'Unplug6': Кондиционали
         'Artist3': Уметник 3
         'Unplug7': Писање Песама
         'Farmer2': Фармер 2
-        Unplug8: Апстракција
+        'Unplug8': Апстракција
         'Artist4': Уметник 4
         'Unplug9': Релејно Програмирање
         'Farmer3': Фармер 3
         'Unplug10': Интернет
         'Artist5': Уметник 5
-        Unplug11: Замотај-Умотај
+        'Unplug11': Замотај-Умотај
         'MazeEC': Лавиринт
         'Bounce': Bounce
         'Flappy': Flappy Bird

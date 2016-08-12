@@ -1089,6 +1089,7 @@
           Welcome!: Tervetuloa!
           The Design Recipe: Suunnitteluresepti
           Teaching with Puzzles: Teaching with Puzzles
+          Lesson Prep: Lesson Prep
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -1929,6 +1930,7 @@
           Draw Loop and Randomization: Draw Loop and Randomization
           Variables Unplugged: Variables Unplugged
           Complex Sprite Movement: Complex Sprite Movement
+          Collisions: Collisions
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2050,6 +2052,15 @@
           description: introduction to the internet simulator and a discussion of
             how we use it to teach the internet
           netsim: netsim
+        'csp-facilitators ':
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These
+            levels provide a glimpse into the tools we use throughout the curriculum
+            to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
         csp-facilitators:
           title: CSP Tool Overview
           description_short: Introduction to CS Principles for new Facilitators
@@ -2126,6 +2137,13 @@
           description: Temp place to work on U2 of Disco
           Headers and Lists: Headers and Lists
           Introduction to HTML: Introduction to HTML
+          Quality Websites: Quality Websites
+          Designing Web Pages: Designing Web Pages
+          Describing Webpages: Describing Webpages
+          Text on the Web: Text on the Web
+          Designing Code for Computers: Designing Code for Computers
+          Digital Footprint: Digital Footprint
+          Images on the Web: Images on the Web
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2198,6 +2216,7 @@
           Wrap-Up: Yhteenveto
         kinderTest:
           Kindergarten Stage 1: Kindergarten Stage 1
+          'Bee: Conditionals': 'Mehiläinen: ehtolauseet'
         gradeKinder:
           Debugging: Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2215,6 +2234,7 @@
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2251,6 +2271,17 @@
           'Project 2: PlayLab Game (Events, Conditionals, Functions)': 'Project 2:
             PlayLab Game (Events, Conditionals, Functions)'
           'Bee: Nested Loops': 'Mehiläinen: sisäkkäiset silmukat'
+          'Final Project - Unplugged: Design Process': 'Final Project - Unplugged:
+            Design Process'
+          'Final Project - Work Day: Build Project Online': 'Final Project - Work
+            Day: Build Project Online'
+          Final Project - Presentation Day: Final Project - Presentation Day
+          More Programming with Scratch: More Programming with Scratch
+          Explore project ideas: Explore project ideas
+          Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded
+            Project Stage (Loops, Events, Conditionals, Functions)
+          Build a Star Wars Game!: Build a Star Wars Game!
+          'Bee: Determine the Concept': 'Bee: Determine the Concept'
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2298,6 +2329,16 @@
           'Project 2: For Loops with the Artist': 'Project 2: For Loops with the Artist'
           'Project 3: Design your own App (PlayLab)': 'Project 3: Design your own
             App (PlayLab)'
+          Concept Script (All below this point): Concept Script (All below this point)
+          'Final Project - Unplugged: Design Process': 'Final Project - Unplugged:
+            Design Process'
+          'Final Project - Work Day: Build Project Online': 'Final Project - Work
+            Day: Build Project Online'
+          Final Project - Review/Revise Day: Final Project - Review/Revise Day
+          Final Project - Presentation Day: Final Project - Presentation Day
+          Try programming with Khan Academy: Try programming with Khan Academy
+          Digital Citizenship: Digitaalinen kansalaisuus
+          Explore project ideas: Explore project ideas
         ecs-unit1:
           title: ECS Part 1
           description_short: 'Unit 1: Human-Computer Interaction'
@@ -2410,6 +2451,9 @@
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          More Programming with Scratch: More Programming with Scratch
+          More Programming with CS4FN: More Programming with CS4FN
+          Robot Farmer While: Robot Farmer While
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2477,10 +2521,13 @@
           Puppy Loops: Puppy Loops
           Puppy Event: Puppy Event
           More CS with Scratch: More CS with Scratch
+          More CS with Run Marco: More CS with Run Marco
         transferring-over:
           20-hr Stage 9: 20-hr Stage 9
           20-hr Stage 2: 20-hr Stage 2
           Course 2 Stage 17: Course 2 Stage 17
+          Course 3 Stage 16: Course 3 Stage 16
+          Course 3 Stage 17: Course 3 Stage 17
         cspunit1assessment:
           title: CS Principles Unit 1 Assessment
           description_short: Unit 1 Assessment
@@ -2499,3 +2546,41 @@
           description: This multiple choice assessment is similar in style to the
             AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)
           CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
+        k5concepts:
+          title: K5 Concepts
+          Events: Tapahtumat
+          Loops: Silmukat
+          Nested Loops: Sisäkkäiset silmukat
+          Conditionals: Ehtolausekkeet
+          While Loops: Niin kauan kuin -silmukat
+          Functions: Funktiot
+          Variables: Muuttujat
+          For Loops: Silmukat
+          Functions with Parameters: Parametrilliset funktiot
+          Binary: Binääri
+        cspunit1ch1assessment:
+          CS Principles Unit 1 Ch 1 Assessment: CS Principles Unit 1 Ch 1 Assessment
+          title: CS Principles Unit 1 Ch 1 Assessment
+          description_short: Unit 1.1 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 1 Chapter 1 (Lessons 1-7)
+        cspunit1ch2assessment:
+          CS Principles Unit 1 Ch 2 Assessment: CS Principles Unit 1 Ch 2 Assessment
+          title: CS Principles Unit 1 Ch 2 Assessment
+          description_short: Unit 1.2 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 1 Chapter 2 (Lessons 8-14)
+        algebrapdnext:
+          title: Computer Science in Algebra PD Phase 2
+          description_short: "\\tPhase 3: School Year Support"
+          description: Teach Algebra through Functional Programming
+          Welcome!: Tervetuloa!
+          Teaching with Puzzles: Teaching with Puzzles
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          The Design Recipe: Suunnitteluresepti
+          Teacher Dashboard: Teacher Dashboard
+          Lesson Prep: Lesson Prep
+        csp-pre-survey:
+          title: CS Principles Pre-Survey
+          Anonymous student survey 2: Anonymous student survey 2
+          Anonymous student pre-survey: Anonymous student pre-survey

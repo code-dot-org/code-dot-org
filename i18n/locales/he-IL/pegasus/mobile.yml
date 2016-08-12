@@ -4,7 +4,7 @@ he-IL:
   "yes": כן
   "no": לא
   select_language: אנא בחר את שפתך
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: 'Code.org יסיר בקרוב תמיכה ב- Internet Explorer 8, 9 ו-10. אנא שדרג לדפדפן מודרני.'
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: למד עוד
   en: מדעי המחשב
@@ -77,7 +77,7 @@ he-IL:
   congrats_guest_speaker_title: מצא מרצה אורח לכיתה שלך
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: מצא מרצה אורח
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_third_party_title: השתמש בכישורים החדשים שלך באתרים והאפליקציות הללו
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -95,7 +95,7 @@ he-IL:
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: 'בקר ב - Tynker'
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Visit Scratch Jr.
@@ -108,7 +108,7 @@ he-IL:
   third_party_lightbot_btn_site: Visit Lightbot
   third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
   third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_forum: פורום מדעי המחשב האקדמיה של קהאן
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
@@ -667,13 +667,13 @@ he-IL:
   dashboard_faq: שאלות נפוצות
   dashboard_faq_k5: שאלות נפוצות למורי יסודי
   dashboard_announcements: הודעות
-  dashboard_announce_view_all: הצג הכל
   dashboard_announce_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: למד עוד
   dashboard_announce_try_now_button: נסה עכשיו
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'שעה של הקוד הוא כאן - דצמבר 8-14!'
   code_sign_up: הירשם להשתתף במהלך שבוע חינוך מדעי המחשב
   learn_more: למד עוד
