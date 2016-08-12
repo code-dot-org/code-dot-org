@@ -409,7 +409,6 @@
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
     announcement_title: Anuncios
-    announcement_view_all: Ver todo
     announcement_message: "<b>6 de enero, 2015</b> - Aprender más allá de una Hora
       de Code en tu clase. Comienza un nuevo curso de introducción y realiza un seguimiento
       del progreso del alumno."
@@ -426,6 +425,8 @@
       compañías más grandes de América se unieron en una carta abierta pidiendo al
       congreso de los Estados Unidos financiar la educación en informática para K-12.
     announcement_petition_button: Agrega tu nombre
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduce
       un código de sección diferente.

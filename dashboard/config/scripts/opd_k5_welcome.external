@@ -1,21 +1,7 @@
 name 'OPD-K5 Welcome'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Getting Started > Welcome!
 
-
-### GETTING STARTED > Welcome!
-
-
-
-<br/>
 <iframe width="640" height="390" src="https://www.youtube.com/embed/yd0TQzYbnTI" frameborder="0" allowfullscreen></iframe>
-
-<br/>
-<br/>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

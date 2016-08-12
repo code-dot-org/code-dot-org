@@ -660,13 +660,13 @@ ru-RU:
   dashboard_faq: Часто задаваемые вопросы
   dashboard_faq_k5: 'K-5: часто задаваемые вопросы'
   dashboard_announcements: Объявления
-  dashboard_announce_view_all: Посмотреть все
   dashboard_announce_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Узнать больше
   dashboard_announce_try_now_button: Попробуйте сейчас
   dashboard_announce_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
   dashboard_announce_petition_button: Добавьте ваше имя
+  dashboard_announce_all: "Будьте в курсе новых функций и обновлений нашего блога учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: Зарегистрируйтесь для участия в неделе информатики
   learn_more: Подробнее

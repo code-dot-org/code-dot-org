@@ -901,7 +901,6 @@
   dashboard_faq: Pertanyaan yang Sering Diajukan
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
-  dashboard_announce_view_all: Lihat semua
   dashboard_announce_message: Want to help us test a new feature? We know it’s important
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
@@ -918,6 +917,8 @@
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Tambahkan nama Anda
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -1817,5 +1818,3 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>

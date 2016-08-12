@@ -43,7 +43,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
     end
   end

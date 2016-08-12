@@ -5,24 +5,24 @@ fa:
         'Unplug1': آشنایی با علوم کامپیوتر
         'Maze': پیچ و خم
         'Multi': چیزهای چندگزینه ای
-        Unplug2: تفکر محاسباتی
-        Unplug3: 'برنامه نویسی روی کاغذ شطرنجی '
+        'Unplug2': تفکر محاسباتی
+        'Unplug3': 'برنامه نویسی روی کاغذ شطرنجی '
         'Artist': هنرمند
-        Unplug4: الگوریتم
+        'Unplug4': الگوریتم
         'Artist2': هنرمند 2
-        Unplug5: توابع
+        'Unplug5': توابع
         'Farmer': کشاورز
-        Unplug6: مشروط
+        'Unplug6': مشروط
         'Artist3': هنرمند 3
         'Unplug7': آهنگ سازی
         'Farmer2': کشاورز 2
-        Unplug8: انتزاع
+        'Unplug8': انتزاع
         'Artist4': هنرمند 4
         'Unplug9': برنامه نویسی رله
         'Farmer3': کشاورز 3
         'Unplug10': اینترنت
         'Artist5': هنرمند 5
-        Unplug11: خلاصه
+        'Unplug11': خلاصه
         'MazeEC': مارپیچ
         'Bounce': پریدن
         'Flappy': 'پرنده شل و  ول'
