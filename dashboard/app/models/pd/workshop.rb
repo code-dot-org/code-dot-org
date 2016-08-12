@@ -17,6 +17,7 @@
 #  ended_at           :datetime
 #  created_at         :datetime
 #  updated_at         :datetime
+#  processed_at       :datetime
 #
 # Indexes
 #
