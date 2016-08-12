@@ -74,22 +74,30 @@ exports.evalWith = function (code, options, async) {
             continue;
           }
           messageHandlers[api][fn] = f.bind(options[api]);
-          mock[fn] = function () {
-            window.postMessage({
-              api: api,
-              fn: fn,
+          mock[fn] = `function () {
+            window.parent.postMessage({
+              api: '${api}',
+              fn: '${fn}',
               args: arguments
-            }, location);
-          };
+            }, '*');
+          }`;
         }
       }
 
       // Override the `done` handler to hook program completion.
       messageHandlers.wrapper = {done: async};
-      args = mocks;
-    }
 
-    return new ctor().apply(null, args);
+      const generatedApi = '[{' + mocks.map(m => Object.keys(m).map(k => `${k}:${m[k]}`).join(',')).join('},{') + '}]';
+      const fullCode = `(function (${Object.keys(options).join(',')}) { ${code} }).apply(null, ${generatedApi})`;
+      console.log(fullCode);
+
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('sandbox', 'allow-scripts');
+      iframe.src = `data:text/html;charset=utf-8,<style>body{background:#0f0}</style><script>${fullCode}</script>`;
+      document.body.appendChild(iframe);
+    } else {
+      return new ctor().apply(null, args);
+    }
   }
 };
 
