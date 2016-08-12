@@ -74,7 +74,7 @@ class ImageLibTest < ActiveSupport::TestCase
   # the ImageMagic compare tool.
   def images_equal?(image1, image2)
     result = capture_stderr do
-      MiniMagick::Tool::Compare.new(false) do |c|
+      MiniMagick::Tool::Compare.new(whiny: false) do |c|
         # Use the absolute error metric, which outputs non-zero to stderr
         # if images don't match.
         c.metric('ae')
