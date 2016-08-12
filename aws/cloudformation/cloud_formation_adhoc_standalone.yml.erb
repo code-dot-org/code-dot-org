@@ -14,9 +14,9 @@ end
 AWSTemplateFormatVersion: 2010-09-09
 Description: Standalone Code.org application on a single EC2 instance<%=cdn_enabled ? ' over CloudFront CDN' : ''%>.
 Resources:
-  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
-  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
-  AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC' %>
+  IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM' %>
+  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:

@@ -946,7 +946,6 @@
   dashboard_faq: "Συχνές Ερωτήσεις"
   dashboard_faq_k5: "Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)"
   dashboard_announcements: "Ανακοινώσεις"
-  dashboard_announce_view_all: "Προβολή όλων"
   dashboard_announce_message: Θέλετε να μας βοηθήσετε να δοκιμάσουμε μια νέα λειτουργία;
     Γνωρίζουμε ότι είναι σημαντικό να ενθαρρύνουμε τους μαθητές να επαναλαμβάνουν
     και να πειραματίζονται, έτσι θα προσθέσουμε μια λειτουργία με "αχρησιμοποίητο
@@ -965,6 +964,8 @@
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: "Προσθέστε το όνομά σας"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!"
   code_sign_up: "Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής"
@@ -1910,5 +1911,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
