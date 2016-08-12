@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805190505) do
+ActiveRecord::Schema.define(version: 20160812010138) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -396,6 +396,7 @@ ActiveRecord::Schema.define(version: 20160805190505) do
     t.datetime "ended_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "processed_at"
   end
 
   add_index "pd_workshops", ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
