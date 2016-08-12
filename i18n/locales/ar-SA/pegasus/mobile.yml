@@ -671,13 +671,13 @@ ar-SA:
   dashboard_faq: الأسئلة الشائعة
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
-  dashboard_announce_view_all: عرض الكل
   dashboard_announce_message: 'هل تريد مساعدتنا في اختبار ميزات جديدة؟ نحن نعلم أنه من الضروري أن نشجع الطلاب على المراجعة و التجربة, لذلك سوف نقوم بإضافة ميزة "كود غير مستخدم" للسماح للطلاب بتنفيذ كودهم الخاص حتى ولو كانت قطع برمجية غير مرفقة. نحن نرحب بردودكم قبل أن نطلق هذه الميزات للعامة.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: اعرف المزيد
   dashboard_announce_try_now_button: جرب الآن
   dashboard_announce_petition: كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم الكمبيوتر.
   dashboard_announce_petition_button: أضف أسمك
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: جرب الآن

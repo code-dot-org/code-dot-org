@@ -661,13 +661,13 @@ ka-GE:
   dashboard_faq: ხშირად დასმული კითხვები
   dashboard_faq_k5: K-5 ხშირად დასმული კითხვები
   dashboard_announcements: განცხადებები
-  dashboard_announce_view_all: ყველას ნახვა
   dashboard_announce_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: გაიგეთ მეტი
   dashboard_announce_try_now_button: სცადეთ ახლა
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: დაამატე შენი სახელი
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!'
   code_sign_up: დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში
   learn_more: სცადეთ ახლა

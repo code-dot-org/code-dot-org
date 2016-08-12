@@ -7,8 +7,8 @@ module MarkdownHandler
     space_after_headers: true
   }
 
-  # Rewrite YouTube iframe elements to use the fallback-player iframe instead.
-  class YoutubeRewriter < Redcarpet::Render::HTML
+  class CustomRewriter < Redcarpet::Render::HTML
+    # Rewrite YouTube iframe elements to use the fallback-player iframe instead.
     def block_html(html)
       doc = ::Nokogiri::HTML(html)
       nodes = doc.xpath(%w(youtube youtubeeducation).map{|x| "//iframe[@src[contains(.,'#{x}.com/embed')]]"}.join(' | '))
@@ -23,10 +23,20 @@ module MarkdownHandler
       end
       doc.css('body').children.to_html
     end
+
+    # Open links in a new tab by default.
+    def link(link, title, content)
+      # `content` is already escaped by Redcarpet.
+      "<a target='_blank' href='#{Rack::Utils.escape_html(link)}' title='#{Rack::Utils.escape_html(title)}'>#{content}</a>"
+    end
+
+    def autolink(link, _)
+      link(link, nil, link)
+    end
   end
 
   def self.call(template)
-    @markdown ||= Redcarpet::Markdown.new(YoutubeRewriter, MARKDOWN_OPTIONS)
+    @markdown ||= Redcarpet::Markdown.new(CustomRewriter, MARKDOWN_OPTIONS)
     "#{@markdown.render(template.source).inspect}.html_safe"
   end
 end

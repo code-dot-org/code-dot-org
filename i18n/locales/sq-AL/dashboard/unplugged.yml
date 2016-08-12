@@ -1,196 +1,196 @@
 sq:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Hyrje në Shkencë Kompjuterike
         desc: "Ky mësim do ju prezantojë me konceptet e Shkencës Kompjuterike dhe do shpjegojë çfarë bën një Shkencëtar Kompjuterik. Do ti japë gjithashtu, studentëve një mundësi për të pranuar rolin e një shkencëtari kompjuterik. Në fund të këtij aktiviteti, çdo student do të ketë një përkujtuesë se çfarë mësoi ai/ajo. Ti mund t'ju shmangësh femijëve mësimin e fjalëve të fjalorit që shoqërohen më mësimin që vazhdojnë, por ti paraqesësh ata në një zbavitje dhe lojë është shumë më produktive sesa të presësh për mundësi më të avancuara."
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Të Menduarit Kompjuterik
         desc: 'Pa asgjë tjetër, përveç letrës dhe markerave, studentët do të mësojnë katër hapat e mendimit kompjuterik. Pas  një përshkrimi të shkurtër, studentët duhet të ndahen në grupe ku ata do të krijojnë udhëzime për studentët e tjerë që të vizatojnë shembuj specifik (nga një katalog i shembujve të para-përzgjedhur). E gjithë detyra duhet të dekompozohet, më pas skuadrat do të analizojnë gjithë shembujt në katalogun e modeleve, detaje të ndryshme abstrakte nga shembujt, më pas përdor atë informacion për të krijuar një algoritëm (udhëzim) për skuadrën që të vizatojë një shembull të caktuar. Skuadrat, pastaj, do të shkëmbejnë algoritmet me një grup tjetër dhe do vizatojnë shembujt bazuar në çfarë tregon algoritmi. A është vizatimi ai çfarë synonte skuadra?'
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Programimi grafik me letër
         desc: Duke programuar një tjetër për të vizatuar figura, studentët do të fillojnë të kuptojnë se për çfarë është programimi vërtet. Klasa do të fillojë nga studentët duke udhëzuar njëri tjetrin për të ngjyrosur katrorë në letër me përpjekje për të riprodhuar një figurë ekzistuese. Nëse ka kohë, mësimi mund të përfundojë me imazhe që studentët krijojnë vetë.
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritmet
         desc: Ky mësim përfshin algoritmet. Duke përdorur forma tangrame dhe letra, ushtrimi i parë do të tregojë sa e rëndësishme është të bësh çdo udhëzim aq të qartë sa të jetë e mundur. Pas kësaj, klasa do të eksplorojë në sa mënyra mund të përmbledhësh letra në një drejtkëndësh, duke vënë në dukje se si disa metoda mund të marrin më shumë ose më pak se sa të tjerat.
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funksionet
         desc: 'Në këtë mësim, studentët do të bëjnë një suncatcher nga string, rruaza, dhe një bukuri të veçantë. Studentët do të ndjekin një seri hapash të përsëritura, atëherë të kërkohet për të identifikuar grupe të caktuara të "aftësive" që janë të dyfishta disa herë. Pasi këto aftësi janë të përcaktuara, ata do të thirren nga një program kryesor dhe i gjithë procesi i bukur i krijimit do të regjistrohen në një fletë të vetme letre. Programi përfundimtar do të përshtatet drejt të gjithë klasës. Për të lejuar në mënyrë efektive për këtë, nxënësit do të duhet të "abstrakte nga" detajet e materialeve të tyre specifike dhe të krijojnë kushte të paqarta për furnizime të një individi. Ky përdorim i placeholders është një hyrje e mrekullueshme për tek variablat. '
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Kushtet
         desc: Kjo është një lojë klase. Pas prezantimit te idesë të kushtoreve, përcaktimeve-if dhe cikleve, klasa mund të praktikohet bashkë duke përdorur programin e para-shkruar, pakon e letrave të bixhozit dhe fatin e vizatimit.
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Të Shkruarit Këngë
         desc: Të lexuarit të teksteve është një sipërmarrje logjike për shumë studentë. Ne do të marrim një aktivitet që tashmë është njohuri e zakonshme dhe do ta shndërrojmë atë në një edukim solid në përcaktimin dhe thërritjen e funksioneve. Sapo studentët të familjarizohen me proçesin përcakto/thërrit, ne do të shtojmë aftësi ekstra, të cilat përparojnë me parametrat që kalojnë brenda atyre që thërret funksioni.
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstraksioni
         desc: Ky aktivitet kombinon rutinën e përditëshme të studentëve të tu dhe lojën e të menduarit të stilit Mad-Lib për të ndihmuar klasën tënde të mësojë rreth efektivitetit të abstraksionit.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Programimi i Besuar
         desc: Ky mësim do të marre ide nga një veprimatri e mëparshme (4. Programimi në Letër Grafike) dhe përdor ato njohuri për të theksuar rëndësinë e programeve të përfunduar që veprojnë në sekuencë dhe kontrollojnë programet në mënyrë të vazhdueshme për probleme.
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Interneti
         desc: Në këtë mësim, studentët do të lundrojnë përmes internetit, ndërsa do mësojnë rreth adresave të webit, IPs dhe DNS.
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Mbyll
         desc: 'Përmbledhja përfundimtare në seritë 20-orëshe do të ndihmojë klasën të lehtësojë të gjitha momentet e preferuara të tyre, ndërkohë duke ju dhënë atyre hapa të tjerë që ata mund të marrin përsipër  nëse janë të interesuar në vazhdimin e udhëtimit të tyre në shkencën kompjuterike.'
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Hartat e Gëzuara
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur një personazh midis një labirinti duke përdorur një komandë të vetme.
         video: C1_hartat_e gëzuara_unplugged
-      MoveIt:
+      'MoveIt':
         title: Lëvize, Lëvize
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
         video: C1_lëvizelëvize_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
         video: C1_tëmbjellësh_farë
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Krijimi i një Baze
         desc: Studentët ndërtojnë një strukturë duke përdorur vetëm pajisjet e siguruara. Strukturat duhet të perfundojnë një detyrë (të arrijnë një gjatësi të sigurtë dhe të durojnë një peshë të sigurtë), dhestudentët të diskutojnë idenë e të qënit këmbëngulës kur gjërat komplikohen.
         video: C1_ndërtimi_bazës
-      GettingLoopy:
+      'GettingLoopy':
         title: Duke u Çmëndur
         desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione të përsëritshme) ndërmjet një aktiviteti kërcimi. Studentët do të mësojnë koreografi të thjeshta, më pas do të udhëzohen ta përsërisin atë.
         video: C1_duke_ u çmendur
-      RelayProgramming:
+      'RelayProgramming':
         title: Programimi i Besuar
         desc: 'Studentët vrapojnë në garë të besueshme, ku ata ndeshen mes për mes kopshtit për të shkruar një algoritëm bazuar në një imazh "Programimi i Letrës Grafike". Ata mund të shkruajnë një udhëzim në kohë dhe nëse ka ndonjë gabim diku, ata duhet të fshijnë gjithçka për tu kthyer tek ajo pikë.'
         video: C2_programim_i besuar
-      Conditionals:
+      'Conditionals':
         title: Kushtet
         desc: 'Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."'
         video: C2_kushtoret_me_karta
-      BigEvent:
+      'BigEvent':
         title: Eventi i Madh
         desc: 'Studentët janë prezantuar me konceptet e programimit të "eventeve", të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme. Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë në varësi të butonit që është shtypur.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Programimi Grafik me Letër
         desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës që të ribëjnë një vizatim.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Algoritmet e Jetës-Reale: Planet në Letër'
         desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme, në mënyrë specifike të të bërit aeroplanë letre. Ky mësim gjithashtu fokusohet në figura më të mëdha të shkencës kompjuterike dhe se si algoritmet luajnë një rol të rëndësishëm.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Byzylykët Binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Gjurmët e Tua Dixhitale
         desc: 'Mësuesit i prezantojnë studentëve idenë që futja e informacionit online rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.'
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Të Menduarit Kompjuterik
         desc: Studentët përdorin hapat e mendimit kompjuterik (dekompozim, lidhje modelesh, abstrakt, algoritëm) për të zbuluar si të luajnë një lojë që vjen pa udhëzime.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Suncatchers-at Funksionalë
         desc: Studentët krijojnë një algoritëm me variabla dhe funksione (pjesë kodi që ti dëshiron ti përdorësh herë pas here) për të krijuar suncatchers duke përdorur varg dhe rruaza.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Të shkruarit këngë me Parametra
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë funksionin).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Algoritmet e jetës reale: Dice Race'
         desc: Ky mësim tregon mënyrat si ne i përdorim algoritmat në jetën e përditshme. Si pjesë e kësaj, studentët do të identifikojnë dhe do shkruajnë algoritmat për një lojë garë me zara.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Studentët dërgojnë mesazhe duke paraqitur metoda të ndryshme transmetiti Interneti, duke përdorur copa letre.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Crowdsourcing
         desc: Studentët përdorin crowdsourcing, një teknikë zgjidhje-problemesh, e zakonshme në shkencën kompjuterike, për të përfunduar një detyrë bashkë si një klasë, më efiçente se sa një student të përpiqej vetë.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Shtetësi Dixhitale
         desc: Studentët eksplorojnë ndryshimin ndërmjet informacionit privat dhe informacionit personal, duke dalluar çfarë është e sigurt dhe jo e sigurt, për tu ndarë online.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Algoritmat Tangram
         desc: Ky mësim na tregon ne diçka të rëndësishme rreth algoritmeve. Nëse e mban një algoritëm të thjeshtë, ka shumë mënyra ta përdorësh atë. Nëse do të sigurohesh që çdo njeri të përfundojë me të njëjtën gjë, atëhere algoritmi jot ka nevojë për më shumë detaje.
         video: Algoritmet C4 unplugged
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Variablat Zarf
         desc: Variablat të lejojnë shumë liri në shkencën kompjuterike. Ky mësim ndihmon në shpjegimin se çfarë janë variablat dhe se si mund ti përdorim në mënyra të ndryshme. Përdor këtë veprimatri përpara (ose në bahkëpunim me) mësimit që të goditet ideja e shtëpisë vërtet.
         video: Variablat C4 unplugged
-      MadGlibs:
+      'MadGlibs':
         title: Glibsi i Çmendur
         desc: 'Abstraksioni është një nga njohuritë më të rëndësishme për një shkencëtar kompjuterash që ta kuptojë. Ky aktivitet do ti bëjë studentët të analizojnë histori për ndryshimet që ata ti përmbledhin ato. Këto histori të përmbledhura  do të bëhen shembuj për histori të tjera të reja argëtuese.'
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: Qef me Ciklet For
         desc: Ne e dimë që ciklet na lejojnë të bëjmë veprime herë pas here, por tani ne do të mësojmë se si të përdorim ciklet me një strukturë shtesë të ndërtuar brënda.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Të shkruarit këngë me Parametra
         desc: 'Një nga strukturat më madhështore në botën e shkencës kompjuterike është funksioni. Funksionet (ndonjëhere quhen proçedura) janë programe të vola që ti mund ti përdorësh herë pas here brenda programit më të madh. Ky mësim do të ndihmojë studentët në mënyrë logjike të kuptojnë pse duke kombinuar pjesët e kodit në funksione, është një praktikë kaq ndihmuese.  '
         video: Parametrat C4_unplugged_
-      BinaryImages:
+      'BinaryImages':
         title: Imazhet Binare
         desc: Edhe pse shumë njerëz mendojnë për binarët si zero dhe njësha striktë, kurset tona të mëparshme i mësuan studentëve që informacioni mund të paraqitet në opsione të ndryshme binare. Ky mësim merr këtë koncept një hap më larg kur ilustron se si një kompjuter mund të ruajë edhe informacione më komplekse (si psh imazhe dhe ngjyra) në binarë, gjithashtu.
         video: binarë C4_unplugged_
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Video Games dhe Plane Koordinative
         desc: "Mëso sesi lojrat që të pelqejnë janë faktikisht të drejtuara nga algjebra! Eksploro se si shprehjet algjebrike dhe plani koordinativ mund të n'a ndihmojnë të kuptojmë sesi funksionojnë lojrat kompjuterike, dhe më pas fillo te planifikosh rreth lojes që ti do të krijosh."
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Kontrata, Domaini dhe Vargu
         desc: "Kontratat japin një mundesi të kuptojmë dhe diskutojmë funksionet. Gjatë mësimit do të shikojmë sesi Kontratat mund te n'a mesojne te kuptojme nje gjuhë apo funksion te ri ne programim."
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Receta e Dizenjimit
         desc: 'Ne fazën finale, studentet shkruajtën disa funksione shume te thjeshta - por funksione me të sofistikuara kërkojnë një qasje me të mirëmenduar. Receta e Dizenjimit eshte një qasje e strukturuar për të përgatitur funksione ku perfshihet edhe shkruajtja e teksteve për te siguruar mbarëvajtjen e funksionit në perputhje me pritshmerite.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Boolean dhe Logjika
         desc: Booleans janë i katerti dhe i fundit lloj informacioni që ju do mësoni në këtë kurs. Gjate ketij kursi ju do të mësoni se çfarë janë Booleans dhe sesi mund të ndihmojnë të shkruajmë funksione logjike
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Kushtet dhe Funksionet Piecewise
         desc: 'Parametrat qe ne i kthejme ne funksione i bejne rezultatet te ndryshojne bazuar ne nje model te palekundshem. Te supozojme qe i deshirojme parametrat  me disa vlera per te sjelle rezultate duke perdorur nje model por vlerat e tjera te perdorin modele te ndryshme. Ketu nevojiten fjalite kushtore...'
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Zbulimi i Perplasjes dhe Teorema e Pitagores
         desc: Te percaktosh se kur te prekesh objektet ne ekran eshte nje aspekt i rendesishem per shumicen e lojrave. Ne kete mesim do te shikojme sesi Teorema e Pitagores dhe Formula e Distances mund te perdoren per te percaktuar largesine e dy pikave ne nje avion, dhe me pas te percaktojme nese ato dy pika ( apo personazhe lojrash) po takojne ne ndonje pike.
         video: alg_16_biggame_collision_detection

@@ -5,24 +5,24 @@ fa:
         'Unplug1': Introduction to Computer Science
         'Maze': The Maze
         'Multi': Multiple Choice Stuffs
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
+        'Unplug2': Computational Thinking
+        'Unplug3': Graph Paper Programming
         'Artist': The Artist
-        Unplug4: Algorithms
+        'Unplug4': Algorithms
         'Artist2': The Artist 2
-        Unplug5: Functions
+        'Unplug5': Functions
         'Farmer': The Farmer
-        Unplug6: Conditionals
+        'Unplug6': Conditionals
         'Artist3': The Artist 3
         'Unplug7': Song Writing
         'Farmer2': The Farmer 2
-        Unplug8: Abstraction
+        'Unplug8': Abstraction
         'Artist4': The Artist 4
         'Unplug9': Relay Programming
         'Farmer3': The Farmer 3
         'Unplug10': The Internet
         'Artist5': The Artist 5
-        Unplug11: Wrap-up
+        'Unplug11': Wrap-up
         'MazeEC': The Maze
         'Bounce': Bounce
         'Flappy': Flappy Bird

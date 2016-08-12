@@ -5,24 +5,24 @@ sl:
         'Unplug1': Uvod v računalništvo
         'Maze': Labirint
         'Multi': Možnih je več odgovorov
-        Unplug2: Računalniško razmišljanje
-        Unplug3: Obarvajmo kvadratke
+        'Unplug2': Računalniško razmišljanje
+        'Unplug3': Obarvajmo kvadratke
         'Artist': Umetnik
-        Unplug4: Algoritmi
+        'Unplug4': Algoritmi
         'Artist2': Umetnik 2
-        Unplug5: Funkcije
+        'Unplug5': Funkcije
         'Farmer': Kmetovanje
-        Unplug6: Pogoji
+        'Unplug6': Pogoji
         'Artist3': Umetnik 3
         'Unplug7': Pisanje pesmi
         'Farmer2': Kmetovanje 2
-        Unplug8: Abstrakcija
+        'Unplug8': Abstrakcija
         'Artist4': Umetnik 4
         'Unplug9': Relejsko programiranje
         'Farmer3': Kmetovanje 3
         'Unplug10': Internet
         'Artist5': Umetnik 5
-        Unplug11: Povzetek
+        'Unplug11': Povzetek
         'MazeEC': Labirint
         'Bounce': Skokica
         'Flappy': Plahutač (Flappy)
