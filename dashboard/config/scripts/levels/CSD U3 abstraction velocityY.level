@@ -47,6 +47,7 @@
     "markdown_instructions": "# velocityY\r\n\r\n`velocityY` is like `velocityX`, but it moves things up and down.  Can you use it to make the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to make the sprite go up the screen.\r\n\r\n*Hint: Should velocity by positive or negative to move the sprite up the screen?*",
     "palette_category_at_start": "sprites",
     "project_template_level_name": "CSD U3 abstraction bug template",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

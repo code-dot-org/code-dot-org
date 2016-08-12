@@ -59,7 +59,7 @@
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth" limit="1"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">5</title>
+          <title name="TIMES" config="3-10">3</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -78,7 +78,12 @@
                 <block type="maze_moveEast"/>
               </statement>
               <next>
-                <block type="maze_moveSouth"/>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth"/>
+                  </statement>
+                </block>
               </next>
             </block>
           </next>

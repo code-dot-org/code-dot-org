@@ -161,7 +161,7 @@ assessment '2-3 bee conditionals multi 3'
 stage 'Binary Bracelets'
 level 'BinaryBracelets'
 assessment '2-3 Binary Match 1'
-assessment '2-3 Binary Multi 1'
+#assessment '2-3 Binary Multi 1'
 
 stage 'The Big Event'
 level 'BigEvent'
