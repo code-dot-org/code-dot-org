@@ -3,14 +3,6 @@ import MockFirebase from '../../util/MockFirebase';
 import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
 
 describe('MockFirebase', () => {
-  beforeEach(() => {
-    window.Applab = {
-      channelId: "test-firebase-channel-id",
-      firebaseName: 'test-firebase-name',
-      firebaseAuthToken: 'test-firebase-auth-token',
-    };
-  });
-
   describe('when invoked directly', () => {
     let firebase;
 
@@ -66,6 +58,11 @@ describe('MockFirebase', () => {
     let channelRef;
 
     beforeEach(() => {
+      window.Applab = {
+        channelId: "test-firebase-channel-id",
+        firebaseName: 'test-firebase-name',
+        firebaseAuthToken: 'test-firebase-auth-token',
+      };
       channelRef = getDatabase(Applab.channelId);
       channelRef.autoFlush();
     });
