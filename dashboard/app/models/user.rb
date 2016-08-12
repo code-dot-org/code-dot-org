@@ -748,7 +748,7 @@ class User < ActiveRecord::Base
       script = follower.section && follower.section.script
       next unless script
 
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         user_script.assigned_at = follower.created_at if
           follower.created_at &&
@@ -760,7 +760,7 @@ class User < ActiveRecord::Base
 
     # backfill progress in scripts
     Script.all.each do |script|
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         ul_map = user_levels_by_level(script)
         script.script_levels.each do |sl|
@@ -788,7 +788,7 @@ class User < ActiveRecord::Base
   end
 
   def self.track_script_progress(user_id, script_id)
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
       time_now = Time.now
 
@@ -808,7 +808,7 @@ class User < ActiveRecord::Base
       return
     end
 
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
       time_now = Time.now
       user_proficiency.last_progress_at = time_now
@@ -867,7 +867,7 @@ class User < ActiveRecord::Base
     new_level_perfected = false
 
     user_level = nil
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
@@ -905,7 +905,7 @@ class User < ActiveRecord::Base
           pairing_user_ids: nil,
           is_navigator: true
         )
-        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(
             navigator_user_level_id: navigator_user_level.id,
             driver_user_level_id: user_level.id
@@ -948,7 +948,7 @@ class User < ActiveRecord::Base
   end
 
   def assign_script(script)
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
       user_script.assigned_at = Time.now
 
