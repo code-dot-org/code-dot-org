@@ -187,7 +187,7 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 0,
       promptForHint: false,
       displayScrollButtons: true
     };
@@ -200,7 +200,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -489,6 +489,7 @@ var TopInstructions = React.createClass({
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - resizerHeight}
+          allowScrolling={!this.props.isMinecraft}
         >
           <div
             style={[

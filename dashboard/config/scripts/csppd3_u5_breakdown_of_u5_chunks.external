@@ -1,21 +1,19 @@
 name 'CSPPD3-u5 breakdown of u5 chunks'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Unit 5 Overview > Unit 5 Description and Breakdown
 
-### Unit 5 Overview > Unit 5 Description and Breakdown
-<br/>
 <img src="https://images.code.org/73cc590445fa6ae6e92cce4ef3d02b7a-image-1457474376362.23.30 PM.png" width="450" style="float:left; margin-left:10px; margin-right: 30px">
 
-#### What’s in Unit 5?
+## What’s in Unit 5?
 
-Unit 5 is mostly time set aside for administration of the AP Performance Tasks.  There are two Performance Tasks, and each has a lesson that prepares students to start doing the task.  <br><br>
+Unit 5 is mostly time set aside for administration of the AP Performance Tasks.  There are two Performance Tasks, and each has a lesson that prepares students to start doing the task.
 
-**Students should be prepared** in terms of skills for doing the tasks.  For each task there is a lesson in front of it that helps students understand and familiarize themselves with the Task.  
+**Students should be prepared** in terms of skills for doing the tasks.  For each task there is a lesson in front of it that helps students understand and familiarize themselves with the Task.
 
-##### Explore Performance Task
+### Explore Performance Task
 
-The skinny: The Explore Performance Task is essentially a research paper.  Students must investigate a modern computing innovation, write about how it works, and describe its impacts (both good and bad) on society.<br><br>
+The skinny: The Explore Performance Task is essentially a research paper.  Students must investigate a modern computing innovation, write about how it works, and describe its impacts (both good and bad) on society.
 
 **Unit 5 - Lesson 1** gears students up to actually do the task.  In that lesson students will:
 
@@ -28,11 +26,11 @@ The skinny: The Explore Performance Task is essentially a research paper.  Stude
 
 - Timeline for administering the task
 - Tips on the role of the role of the instructor
-- Instructor Dos and Don'ts during administration of the Task 
+- Instructor Dos and Don'ts during administration of the Task
 
-##### Create Performance Task
+### Create Performance Task
 
-The skinny: The Create Performance task asks students to write a program and identify key aspects of it through a) the code itself b) a video demonstration of the program and c) writing. The writing prompts ask students to identify the program’s intended purpose, and the key algorithms and abstractions in the code.<br><br>
+The skinny: The Create Performance task asks students to write a program and identify key aspects of it through a) the code itself b) a video demonstration of the program and c) writing. The writing prompts ask students to identify the program’s intended purpose, and the key algorithms and abstractions in the code.
 
 **Unit 5 - Lesson 3** gears students up to actually do the task.  In that lesson students will:
 
@@ -46,8 +44,5 @@ The skinny: The Create Performance task asks students to write a program and ide
 
 - Timeline for administering the task
 - Tips on the role of the instructor
-- Instructor Dos and Don'ts during administration of the Task 
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+- Instructor Dos and Don'ts during administration of the Task
 MARKDOWN

@@ -35,6 +35,7 @@
     "never_autoplay_video": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\r\n  \"hint_id\": \"2-3_Artist_Functions_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade4_artist_funcions2_1\",\r\n  \"callout_text\": \"When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?\",\r\n  \"element_id\": \"start\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -47,12 +48,12 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" movable="false">
+            <block type="procedures_callnoreturn" movable="false" id="start">
               <mutation name="draw a square"/>
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" x="400">
           <mutation/>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
