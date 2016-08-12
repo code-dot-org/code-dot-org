@@ -897,7 +897,6 @@
   dashboard_faq: "پرسش و پاسخ‌های متداول"
   dashboard_faq_k5: "پرسش های متداول پیش از دبستان"
   dashboard_announcements: "اطلاعیه‌ها"
-  dashboard_announce_view_all: "مشاهده همه"
   dashboard_announce_message: "میخواهید به ما در بررسی یک ویژگی جدید کمک کنید؟ما میدانیم
     که تشویق دانش آموزان به تکرار کردن و آزمایش کردن امر مهمی است٫بنابراین ما میخواهیم
     ویژگی کد های استفاده نشده را اضافه کنیم تا دانش آموزان اجازه داشته باشند تا کد
@@ -915,6 +914,8 @@
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: "نام خود را اضافه کنید"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!"
   code_sign_up: "ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر"
   learn_more: "بیشتر یاد بگیرید"
@@ -1792,5 +1793,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>

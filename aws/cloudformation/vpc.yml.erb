@@ -7,7 +7,7 @@ Resources:
     Properties:
       CidrBlock: 10.0.0.0/16
       EnableDnsHostnames: true
-  VpcClassicLink: <%= lambda.call 'VpcClassicLink',
+  VpcClassicLink: <%= lambda_fn.call 'VpcClassicLink',
     VpcId: {Ref: 'VPC'},
     DnsSupport: true %>
   InternetGateway:

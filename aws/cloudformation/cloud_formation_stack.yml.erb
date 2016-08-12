@@ -9,9 +9,9 @@ end
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
-  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
-  AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
+  IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
+  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
