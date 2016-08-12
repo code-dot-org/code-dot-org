@@ -200,6 +200,7 @@ class Pd::Workshop < ActiveRecord::Base
   def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
+    workshop.update!(processed_at: Time.zone.now)
 
     workshop.send_exit_surveys
   end
@@ -210,15 +211,9 @@ class Pd::Workshop < ActiveRecord::Base
       enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
     end
 
-    Pd::Enrollment.create_for_unenrolled_attendees(self)
-
     # Send the emails
     self.enrollments.reload.each do |enrollment|
       next unless enrollment.user
-
-      # Make sure every enrolled user is a teacher and has an exposed email
-      # because some teachers accidentally create student accounts
-      enrollment.user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email) unless enrollment.user.teacher?
 
       # Make sure user joined the section
       next unless section.students.exists?(enrollment.user.id)
