@@ -293,7 +293,7 @@ GEM
     marked-rails (0.3.2.0)
     metaclass (0.0.4)
     mime-types (2.99.1)
-    mini_magick (4.3.3)
+    mini_magick (4.5.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     minitest-around (0.3.2)
