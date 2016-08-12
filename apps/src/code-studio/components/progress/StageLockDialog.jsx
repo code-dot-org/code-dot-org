@@ -14,7 +14,9 @@ const styles = {
     marginBottom: 10,
     marginLeft: 20,
     marginRight: 20,
-    color: color.charcoal
+    color: color.charcoal,
+    maxHeight: 600,
+    overflowY: 'scroll'
   },
   title: {
     color: color.teal,
@@ -193,13 +195,15 @@ const StageLockDialog = React.createClass({
             {commonMsg.studentLockStateInstructions()}
           </div>
           <table style={styles.studentTable}>
-            <tbody>
+            <thead>
               <tr>
                 <th style={styles.headerRow}>{commonMsg.student()}</th>
                 <th style={styles.headerRow}>{commonMsg.locked()}</th>
                 <th style={styles.headerRow}>{commonMsg.editable()}</th>
                 <th style={styles.headerRow}>{commonMsg.answersVisible()}</th>
               </tr>
+            </thead>
+            <tbody>
               {this.state.lockStatus.map(({name, lockStatus}, index) => (
                 <tr key={index}>
                   <td style={styles.tableCell}>{name}</td>
