@@ -165,8 +165,7 @@ class ScriptLevelsController < ApplicationController
           submitted: true,
           unsubmit_url: url_for(user_level)
         )
-        # if lockable and submitted, we don't want to be readonly since we end up just rendering a different view
-        readonly_view_options unless @script_level.stage.lockable?
+        readonly_view_options
       end
       readonly_view_options if user_level && user_level.view_answers?
     end
