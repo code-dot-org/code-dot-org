@@ -168,7 +168,6 @@ class UsersHelperTest < ActionView::TestCase
       "#{level.id}_0" => { submitted: true, view_answers: true },
       "#{level.id}_1" => { submitted: true, view_answers: true }
     }, summarize_user_progress(script, user)[:levels], 'level shows as locked again')
-    # assert_equal({}, summarize_user_progress(script, user)[:levels], 'No level progress since we still dont have a result')
 
     # now lock it by submitting it (even though we don't have a level source attached)
     user_level.delete!

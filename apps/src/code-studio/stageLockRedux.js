@@ -61,10 +61,9 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === OPEN_LOCK_DIALOG) {
     const lockDialogStageId = action.stageId;
-
     return Object.assign({}, state, {
       lockDialogStageId,
-      lockStatus: lockStatusForStage(state, action.stageId)
+      lockStatus: lockStatusForStage(state, lockDialogStageId)
     });
   }
 

@@ -85,7 +85,6 @@ export default connect((state, ownProps) => {
       const stageStudents = currentSection.stages[ownProps.stage.id];
       unlocked = stageStudents.some(student => !student.locked);
     }
-
   }
 
   return {
