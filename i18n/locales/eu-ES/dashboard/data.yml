@@ -5,24 +5,24 @@ eu:
         'Unplug1': Konputazio zientzetarako sarrera
         'Maze': labirintoa
         'Multi': Aukera anitzeko gaiak
-        Unplug2: Pentsamendu konputazionala
-        Unplug3: Paperean marraztuz programatu
+        'Unplug2': Pentsamendu konputazionala
+        'Unplug3': Paperean marraztuz programatu
         'Artist': Artista
-        Unplug4: Algoritmoak
+        'Unplug4': Algoritmoak
         'Artist2': Artista 2
-        Unplug5: Funtzioak
+        'Unplug5': Funtzioak
         'Farmer': Baserritarra
-        Unplug6: Baldintzak
+        'Unplug6': Baldintzak
         'Artist3': Artista 3
         'Unplug7': Abestiak idazten
         'Farmer2': Baserritarra 2
-        Unplug8: Abstrakzioa
+        'Unplug8': Abstrakzioa
         'Artist4': Artista 4
         'Unplug9': Txandaka programatzen
         'Farmer3': Baserritarra 3
         'Unplug10': Internet
         'Artist5': Artista 5
-        Unplug11: Errepasoa
+        'Unplug11': Errepasoa
         'MazeEC': labirintoa
         'Bounce': Errebotea
         'Flappy': Flappy Bird

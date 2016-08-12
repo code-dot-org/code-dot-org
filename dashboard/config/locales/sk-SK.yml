@@ -396,7 +396,6 @@
     choose_next_course: Vyskúšajte Code Studio kurz výberom niektorého z nižsie uvedených
     print_certificate: Vytlačiť certifikát
     announcement_title: Oznámenia
-    announcement_view_all: View all
     announcement_message: 'We''ve started to measure student learning in Courses 1-4
       and our Accelerated Course on Code Studio. There''s a lot that goes into it,
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
@@ -414,6 +413,8 @@
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Pridaj svoje meno
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje.
       Zadajte kód inej sekcie.

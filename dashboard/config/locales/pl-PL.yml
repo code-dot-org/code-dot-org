@@ -23,13 +23,13 @@
           future: nie może być w przyszłości
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Twój profesionalny plan nauki
+  see_your_learning_plan: Zobacz swój plan nauki
   submit: Wyślij
   unsubmit: Nieprzesłane
   previous_page: Poprzednia strona
   next_page: Następna strona
-  next_resource: Next resource
+  next_resource: Następne źródło
   done_with_module: Done with this Learning Module
   cancel: Anuluj
   okay: OK
@@ -138,8 +138,8 @@
     picture: Teraz znajdź swój tajny obrazek
     words: Teraz wpisz swoje tajne słowa
     login: Zaloguj się
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Zły login, proszę spróbować ponownie
+    pair_programming: Mam partnera na moim komputerze
   password:
     reset_form:
       title: Nie pamiętasz hasła?
@@ -294,9 +294,9 @@
       signup: Zarejestruj się
       already_registered: Czy jesteś Już zarejestrowany?
       pair_programming: Programowanie w parach
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Zespół
+      driver: Kierowca
+      navigator: Nawigacja
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
@@ -331,7 +331,7 @@
       example_with_number: Przykładowe rozwiązanie %{solution_number}
       submitted_on: Przesłane dnia %{date}
       unsubmit: Nieprzesłane
-      worked_with: Worked With
+      worked_with: Pracował/a z
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -403,12 +403,11 @@
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
     announcement_title: Ogłoszenia
-    announcement_view_all: Zobacz wszystko
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_message: "<b>Ważna zmiana w tym jak obsługujemy prywatność uczniów</b>
+      <br/> Ogłaszamy okres miesiąca, aby przejrzeć zmiany w naszej polityce prywatności
+      i aby przekazać swoją opinię. Największą zmianą jest przeprojektowanie logowania,
+      które pozwala nam usunąć wszystkie adresy e-mail dla kont studenta Code Studi.
+      Inna duża zmiana obejmuje dostęp do naszych narzędzi do tworzenia aplikacji."
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -421,6 +420,8 @@
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Dodaj swoje imię
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Przepraszamy, sekcja %{new_section_code} nie istnieje. Wprowadź
       inny kod sekcji.
@@ -433,7 +434,7 @@
       to you.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
+    student_not_found: Nie można odnaleźć jednego lub więcej uczniów.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
@@ -821,14 +822,14 @@
   components:
     icon_library:
       search_placeholder_text: Szukaj ikony...
-      no_icons_found: Nie odnaleziono ikon
+      no_icons_found: Nie znaleziono ikon
     playzone:
       artist_description: Rysuj fajne obrazki i wzory z Artystą!
-      artist_title: Nowy rysunek
+      artist_title: Nowy Rysunek
       continue_button: Przejdź do następnego etapu
       playlab_description: Utwórz historyjkę lub grę z Play Lab!
       playlab_title: Nowa aplikacja
-      primary_header: Gratulacje po ukończeniu etapu %{stageName}!
+      primary_header: Gratulacje! Ukończyłeś etap %{stageName}!
       projects_description: Odwiedź ponownie, jeden ze swoich projektów.
       projects_title: Otwórz projekt
       secondary_header: Zapytaj nauczyciela, co robić dalej

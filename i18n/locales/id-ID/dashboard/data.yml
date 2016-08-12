@@ -5,24 +5,24 @@ id:
         'Unplug1': Pengantar Ilmu Komputer
         'Maze': Labirin
         'Multi': Beberapa pilihan barang
-        Unplug2: Berpikir secara komputasi
-        Unplug3: Pemrograman grafis diatas kertas
+        'Unplug2': Berpikir secara komputasi
+        'Unplug3': Pemrograman grafis diatas kertas
         'Artist': Artis
-        Unplug4: Algoritma
+        'Unplug4': Algoritma
         'Artist2': Artis 2
-        Unplug5: Fungsi
+        'Unplug5': Fungsi
         'Farmer': Petani
-        Unplug6: Kondisi
+        'Unplug6': Kondisi
         'Artist3': Artis 3
         'Unplug7': Menulis lagu
         'Farmer2': Petani 2
-        Unplug8: Abstraksi
+        'Unplug8': Abstraksi
         'Artist4': Artis 4
         'Unplug9': Pemrograman relay
         'Farmer3': Petani 3
         'Unplug10': Internet
         'Artist5': Artis 5
-        Unplug11: Penutupan
+        'Unplug11': Penutupan
         'MazeEC': Labirin
         'Bounce': Terpental
         'Flappy': Burung Flappy

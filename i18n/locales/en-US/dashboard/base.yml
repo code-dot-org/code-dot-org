@@ -339,13 +339,13 @@ en:
     choose_next_course: crwdns43451:0crwdne43451:0
     print_certificate: crwdns41905:0crwdne41905:0
     announcement_title: crwdns56513:0crwdne56513:0
-    announcement_view_all: crwdns56514:0crwdne56514:0
     announcement_message: crwdns56515:0crwdne56515:0
     announcement_csp_widgets_message: crwdns57910:0crwdne57910:0
     announcement_learn_more_button: crwdns57407:0crwdne57407:0
     announcement_try_now_button: crwdns57911:0crwdne57911:0
     announcement_petition: crwdns56517:0crwdne56517:0
     announcement_petition_button: crwdns56518:0crwdne56518:0
+    announcement_all: 'crwdns58048:0%{teacher_blog_url}crwdne58048:0'
   move_students:
     new_section_dne: 'crwdns56519:0%{new_section_code}crwdne56519:0'
     section_code_not_entered: crwdns56520:0crwdne56520:0

@@ -60,7 +60,8 @@ module ScriptLevelsHelper
   end
 
   def section_options
-    current_user.sections.map do |section|
+    # TODO(asher): remove check for deleted_at when possible.
+    current_user.sections.where(deleted_at: nil).map do |section|
       content_tag 'option', section.name, value: url_for(params.merge(section_id: section.id, user_id: nil))
     end.join(" ").html_safe
   end

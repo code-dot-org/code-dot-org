@@ -409,7 +409,6 @@
     choose_next_course: "Попробуйте курс студии кода, выбрав один из вариантов ниже"
     print_certificate: "Распечатать сертификат"
     announcement_title: "Объявления"
-    announcement_view_all: "Посмотреть все"
     announcement_message: "Мы начали измерять уровень обучения студентов на курсах
       1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит
       в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a
@@ -429,6 +428,8 @@
       в открытом письме к Конгрессу США финансировать K-12 образовательную программу
       компьютерной науки."
     announcement_petition_button: "Добавьте ваше имя"
+    announcement_all: "Будьте в курсе новых функций и обновлений нашего блога учителей.
+      <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
   move_students:
     new_section_dne: "Извините, но раздел %{new_section_code} не существует. Пожалуйста,
       введите другой раздел кода."
@@ -658,9 +659,9 @@
     wrong_body: "Спасибо за ответ"
     correct_title: "Спасибо"
     correct_body: "Спасибо за ответ"
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: "Это анонимный опрос. Пожалуйста, посетите информационную
+      страницу учителей для сбора результатов. Обратите внимание, что результаты будут
+      видны, только если в опросе участвовало хотя бы пять студентов."
   level_group-submittable:
     wrong_title: "Спасибо"
     wrong_body: "Спасибо за ответ"
@@ -837,7 +838,7 @@
   components:
     icon_library:
       search_placeholder_text: "Искать значок..."
-      no_icons_found: "Значёк не найден"
+      no_icons_found: "Значок не найден"
     playzone:
       artist_description: "Рисуйте картины и узоры вместе с художником!"
       artist_title: "Новый рисунок"
@@ -852,7 +853,7 @@
     required: "Краткий обзор"
     content: "Содержимое"
     practice: "Практика учителя"
-    peer_review: Peer Review
+    peer_review: "Рецензирование"
   external_links:
     disclaimer: "Отказ от ответственности"
     leaving_domain: "Сейчас вы покидаете этот домен, сайт, который не управляется

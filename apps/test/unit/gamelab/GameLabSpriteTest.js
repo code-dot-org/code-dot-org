@@ -3,6 +3,7 @@
 import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
+import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabSprite', function () {
   let gameLabP5, createSprite;
@@ -443,6 +444,137 @@ describe('GameLabSprite', function () {
       expect(spriteTarget.position.x).to.equal(300);
       expect(sprite.velocity.x).to.equal(3);
       expect(spriteTarget.velocity.x).to.equal(0);
+    });
+  });
+
+  describe('collisions with groups', function () {
+    let sprite, spriteTarget1, spriteTarget2, group;
+    let gameLabP5Stateful, createStatefulGroup, createStatefulSprite;
+
+    beforeEach(function () {
+      gameLabP5Stateful = createStatefulGameLabP5();
+      createStatefulGroup = gameLabP5Stateful.p5.createGroup.bind(gameLabP5Stateful.p5);
+      createStatefulSprite = gameLabP5Stateful.p5.createSprite.bind(gameLabP5Stateful.p5);
+      spriteTarget1 = createStatefulSprite(0, 0, 100, 100);
+      spriteTarget2 = createStatefulSprite(400, 400, 100, 100);
+      sprite = createStatefulSprite(200, 200, 100, 100);
+      group = createStatefulGroup();
+      group.add(spriteTarget1);
+      group.add(spriteTarget2);
+    });
+
+    it('isTouching returns false when sprite touches nothing in the group', function () {
+      let result;
+      for (let i = 0; i < group.length + 1; i++) {
+        result = sprite.isTouching(group);
+      }
+      expect(result).to.equal(false);
+    });
+
+    it('isTouching returns true when sprite touches anything in the group', function () {
+      spriteTarget1.x = sprite.x;
+      spriteTarget1.y = sprite.y;
+
+      let result2;
+      for (let i = 0; i < group.length + 1; i++) {
+        result2 = sprite.isTouching(group);
+      }
+      expect(result2).to.equal(true);
+    });
+
+    it('collide returns false when sprite touches nothing in the group', function () {
+      let result;
+      for (let i = 0; i < group.length + 1; i++) {
+        result = sprite.collide(group);
+      }
+      expect(result).to.equal(false);
+    });
+
+    it('collide returns true when sprite touches anything in the group', function () {
+      spriteTarget1.x = sprite.x;
+      spriteTarget1.y = sprite.y;
+
+      let result2;
+      for (let i = 0; i < group.length + 1; i++) {
+        result2 = sprite.collide(group);
+      }
+      expect(result2).to.equal(true);
+    });
+
+    it('bounce returns false when sprite touches nothing in the group', function () {
+      let result;
+      for (let i = 0; i < group.length + 1; i++) {
+        result = sprite.bounce(group);
+      }
+      expect(result).to.equal(false);
+    });
+
+    it('bounce returns true when sprite touches anything in the group', function () {
+      spriteTarget1.x = sprite.x;
+      spriteTarget1.y = sprite.y;
+
+      let result2;
+      for (let i = 0; i < group.length + 1; i++) {
+        result2 = sprite.bounce(group);
+      }
+      expect(result2).to.equal(true);
+    });
+
+    it('bounceOff returns false when sprite touches nothing in the group', function () {
+      let result;
+      for (let i = 0; i < group.length + 1; i++) {
+        result = sprite.bounceOff(group);
+      }
+      expect(result).to.equal(false);
+    });
+
+    it('bounceOff returns true when sprite touches anything in the group', function () {
+      spriteTarget1.x = sprite.x;
+      spriteTarget1.y = sprite.y;
+
+      let result2;
+      for (let i = 0; i < group.length + 1; i++) {
+        result2 = sprite.bounceOff(group);
+      }
+      expect(result2).to.equal(true);
+    });
+
+    it('displace returns false when sprite touches nothing in the group', function () {
+      let result;
+      for (let i = 0; i < group.length + 1; i++) {
+        result = sprite.displace(group);
+      }
+      expect(result).to.equal(false);
+    });
+
+    it('displace returns true when sprite touches anything in the group', function () {
+      spriteTarget1.x = sprite.x;
+      spriteTarget1.y = sprite.y;
+
+      let result2;
+      for (let i = 0; i < group.length + 1; i++) {
+        result2 = sprite.displace(group);
+      }
+      expect(result2).to.equal(true);
+    });
+
+    it('overlap returns false when sprite touches nothing in the group', function () {
+      let result;
+      for (let i = 0; i < group.length + 1; i++) {
+        result = sprite.overlap(group);
+      }
+      expect(result).to.equal(false);
+    });
+
+    it('overlap returns true when sprite touches anything in the group', function () {
+      spriteTarget1.x = sprite.x;
+      spriteTarget1.y = sprite.y;
+
+      let result2;
+      for (let i = 0; i < group.length + 1; i++) {
+        result2 = sprite.overlap(group);
+      }
+      expect(result2).to.equal(true);
     });
   });
 
