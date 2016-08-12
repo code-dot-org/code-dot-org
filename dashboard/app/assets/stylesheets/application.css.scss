@@ -1330,18 +1330,24 @@ a.download-video {
     display: inline-block;
     width: 600px;
   }
+  .singleitemblock {
+    width: 364px;
+    text-align: right;
+  }
   .labelblock {
     display: inline-block;
     width: 140px;
   }
   .rememberme {
     font-size: 13px;
-    padding-top: 10px;
 
     #user_remember_me {
       margin-top: -2px;
       margin-right: 3px;
     }
+  }
+  button {
+    margin-bottom: 10px;
   }
 }
 
