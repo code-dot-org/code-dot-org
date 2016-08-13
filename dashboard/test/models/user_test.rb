@@ -996,6 +996,32 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'sample answer', ul.level_source.data
   end
 
+  test 'track_level_progress_sync does not overwrite level_source_id with nil' do
+    script_level = create :script_level
+    user = create :user
+    level_source = create :level_source, data: 'sample answer'
+    create :user_level,
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id,
+      level_source_id: level_source.id
+
+    User.track_level_progress_sync(
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id,
+      level_source_id: nil,
+      new_result: 100,
+      submitted: false
+    )
+
+    assert_equal level_source.id, UserLevel.find_by(
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id
+    ).level_source_id
+  end
+
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
