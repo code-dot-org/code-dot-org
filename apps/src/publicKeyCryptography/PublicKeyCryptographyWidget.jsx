@@ -4,6 +4,7 @@ import {AnyChildren} from './types';
 import EqualColumns from './EqualColumns';
 import {Alice, Eve, Bob} from './Characters';
 import ModuloClock from './ModuloClock';
+import {computePublicKey} from './cryptographyMath';
 
 const style = {
   root: {
@@ -21,15 +22,28 @@ const style = {
 const PublicKeyCryptographyWidget = React.createClass({
   getInitialState() {
     return {
-      publicModulus: undefined
+      publicModulus: null,
+      privateKey: null
     };
   },
 
-  onChangePublicModulus(event) {
-    this.setState({publicModulus: parseInt(event.target.value, 10)});
+  setPublicModulus(publicModulus) {
+    this.setState({
+      publicModulus,
+      privateKey: null
+    });
+  },
+
+  setPrivateKey(privateKey) {
+    this.setState({privateKey});
   },
 
   render() {
+    const {
+      publicModulus,
+      privateKey
+    } = this.state;
+    const publicKey = privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : undefined;
     return (
       <div style={style.root}>
         <HyperlinksList>
@@ -38,16 +52,21 @@ const PublicKeyCryptographyWidget = React.createClass({
         </HyperlinksList>
         <EqualColumns intercolumnarDistance={20}>
           <Alice
-            publicModulus={this.state.publicModulus}
-            onChangePublicModulus={this.onChangePublicModulus}
+            publicModulus={publicModulus}
+            privateKey={privateKey}
+            publicKey={publicKey}
+            setPublicModulus={this.setPublicModulus}
+            setPrivateKey={this.setPrivateKey}
           />
           <Eve
-            publicModulus={this.state.publicModulus}
-            onChangePublicModulus={this.onChangePublicModulus}
+            publicModulus={publicModulus}
+            publicKey={publicKey}
+            setPublicModulus={this.setPublicModulus}
           />
           <Bob
-            publicModulus={this.state.publicModulus}
-            onChangePublicModulus={this.onChangePublicModulus}
+            publicModulus={publicModulus}
+            publicKey={publicKey}
+            setPublicModulus={this.setPublicModulus}
           />
         </EqualColumns>
         <ModuloClock/>
