@@ -34,7 +34,7 @@ module Rack
         l.split(';q=')
       }
 
-      lang = languages_and_qvalues.sort_by { |(locale, qvalue)|
+      lang = languages_and_qvalues.sort_by { |(_locale, qvalue)|
         qvalue.to_f
       }.last.first
 
