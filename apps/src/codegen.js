@@ -29,6 +29,18 @@ window.addEventListener('message', e => {
 
 const messageHandlers = {};
 
+let frame = null;
+function runInFrame(code) {
+  if (frame) {
+    document.body.removeChild(frame);
+  }
+  frame = document.createElement('iframe');
+  frame.setAttribute('sandbox', 'allow-scripts');
+  frame.style = 'display: none;';
+  frame.src = `data:text/html;charset=utf-8,<script>${code}</script>`;
+  document.body.appendChild(frame);
+}
+
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
@@ -46,6 +58,37 @@ exports.evalWith = function (code, options, async) {
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
     myInterpreter.run();
+  } else if (async) {
+
+    const mocks = [];
+    for (let api in options) {
+      const mock = {};
+      mocks.push(mock);
+      messageHandlers[api] = {};
+      for (let fn in options[api]) {
+        const f = options[api][fn];
+        if (typeof f !== 'function') {
+          // Only proxy functions.
+          continue;
+        }
+        messageHandlers[api][fn] = f.bind(options[api]);
+        mock[fn] = `function () {
+            window.parent.postMessage({
+              api: '${api}',
+              fn: '${fn}',
+              args: arguments
+            }, '*');
+          }`;
+      }
+    }
+
+    // Override the `done` handler to hook program completion.
+    messageHandlers.wrapper = {done: async};
+
+    const generatedApi = '[{' + mocks.map(m => Object.keys(m).map(k => `${k}:${m[k]}`).join(',')).join('},{') + '}]';
+    const fullCode = `(function (${Object.keys(options).join(',')}) { ${code} }).apply(null, ${generatedApi})`;
+
+    runInFrame(fullCode);
   } else {
     // execute JS code "natively"
     var params = [];
@@ -59,45 +102,7 @@ exports.evalWith = function (code, options, async) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-
-    if (async) {
-
-      const mocks = [];
-      for (let api in options) {
-        const mock = {};
-        mocks.push(mock);
-        messageHandlers[api] = {};
-        for (let fn in options[api]) {
-          const f = options[api][fn];
-          if (typeof f !== 'function') {
-            // Only proxy functions.
-            continue;
-          }
-          messageHandlers[api][fn] = f.bind(options[api]);
-          mock[fn] = `function () {
-            window.parent.postMessage({
-              api: '${api}',
-              fn: '${fn}',
-              args: arguments
-            }, '*');
-          }`;
-        }
-      }
-
-      // Override the `done` handler to hook program completion.
-      messageHandlers.wrapper = {done: async};
-
-      const generatedApi = '[{' + mocks.map(m => Object.keys(m).map(k => `${k}:${m[k]}`).join(',')).join('},{') + '}]';
-      const fullCode = `(function (${Object.keys(options).join(',')}) { ${code} }).apply(null, ${generatedApi})`;
-      console.log(fullCode);
-
-      const iframe = document.createElement('iframe');
-      iframe.setAttribute('sandbox', 'allow-scripts');
-      iframe.src = `data:text/html;charset=utf-8,<style>body{background:#0f0}</style><script>${fullCode}</script>`;
-      document.body.appendChild(iframe);
-    } else {
-      return new ctor().apply(null, args);
-    }
+    return new ctor().apply(null, args);
   }
 };
 
