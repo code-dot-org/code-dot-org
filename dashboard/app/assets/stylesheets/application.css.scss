@@ -1331,8 +1331,8 @@ a.download-video {
     width: 600px;
   }
   .singleitemblock {
+    padding-left: 144px;
     width: 364px;
-    text-align: right;
   }
   .labelblock {
     display: inline-block;
@@ -1340,6 +1340,7 @@ a.download-video {
   }
   .rememberme {
     font-size: 13px;
+    margin-bottom: 22px;
 
     #user_remember_me {
       margin-top: -2px;
@@ -1347,6 +1348,10 @@ a.download-video {
     }
   }
   button {
+    width: 220px;
+    margin-bottom: 7px;
+  }
+  .forgotpassword {
     margin-bottom: 10px;
   }
 }

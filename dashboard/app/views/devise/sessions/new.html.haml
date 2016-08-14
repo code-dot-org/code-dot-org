@@ -22,7 +22,6 @@
         .labelblock
           = t('signin_form.login')
         = f.text_field :login, autofocus: true
-      %br/
 
       -# Password
       .itemblock
@@ -30,27 +29,26 @@
           = t('signin_form.password')
         = f.password_field :password
 
-      -# Forgot password?
+      -# Sign in button
       .singleitemblock
-        - if devise_mapping.recoverable?
-          = link_to t('auth.forgot_password'), new_password_path(resource_name)
+        %button.primary{onclick: '$("#new_user").submit();'}= t('signin_form.submit')
 
       -# Remember me
       - if devise_mapping.rememberable?
-        .rememberme
+        .singleitemblock.rememberme
           = f.check_box :remember_me
           = t('signin_form.remember')
-      %br/
 
-      -# Sign in button
-      %button.primary{onclick: '$("#new_user").submit();'}= t('signin_form.submit')
-      %br/
-      %br/
+      -# Forgot password?
+      .singleitemblock.forgotpassword
+        - if devise_mapping.recoverable?
+          = link_to t('auth.forgot_password'), new_password_path(resource_name)
 
       -# Sign up
       - if devise_mapping.registerable?
-        = t('auth.notyet_signedup')
-        = link_to t('nav.user.signup'), new_user_registration_path
+        .singleitemblock
+          = link_to new_user_registration_path do
+            %button.secondary= t('nav.user.signup')
 
     %h3= t('signin.try_heading')
     .row{style: 'margin: 0px;'}
