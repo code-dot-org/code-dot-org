@@ -28,10 +28,14 @@
         .labelblock
           = t('signin_form.password')
         = f.password_field :password
+        -# Forgot password?
+        - if devise_mapping.recoverable?
+          &nbsp;
+          = link_to t('auth.forgot_password'), new_password_path(resource_name)
 
       -# Sign in button
       .singleitemblock
-        %button.primary{onclick: '$("#new_user").submit();'}= t('signin_form.submit')
+        %button#signin-button.primary{onclick: '$("#new_user").submit();'}= t('signin_form.submit')
 
       -# Remember me
       - if devise_mapping.rememberable?
@@ -39,27 +43,29 @@
           = f.check_box :remember_me
           = t('signin_form.remember')
 
-      -# Forgot password?
-      .singleitemblock.forgotpassword
-        - if devise_mapping.recoverable?
-          = link_to t('auth.forgot_password'), new_password_path(resource_name)
-
-      -# Sign up
+      -# Not yet signed up?  Sign up
+      .singleitemblock
+        = t('auth.notyet_signedup')
       - if devise_mapping.registerable?
         .singleitemblock
           = link_to new_user_registration_path do
-            %button.secondary= t('nav.user.signup')
-
-    %h3= t('signin.try_heading')
-    .row{style: 'margin: 0px;'}
-      = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
-      = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
-    .row{style: 'margin: 20px 0px 0px 0px;'}
-      = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
+            %button#signup-button.secondary= t('nav.user.signup')
 
   .span4
     %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }= render "devise/shared/links"
+
+%br/
+%br/
+
+.row
+  .span12
+    %h3= t('signin.try_heading')
+.row
+  = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
+
 
 %br/
 %br/
