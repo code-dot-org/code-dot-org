@@ -2,7 +2,9 @@
 import React from 'react';
 import {AnyChildren} from './types';
 import EqualColumns from './EqualColumns';
-import {Alice, Eve, Bob} from './Characters';
+import Alice from './Alice';
+import Bob from './Bob';
+import Eve from './Eve';
 import ModuloClock from './ModuloClock';
 import {computePublicKey} from './cryptographyMath';
 
@@ -37,6 +39,8 @@ const PublicKeyCryptographyWidget = React.createClass({
   },
 
   setPrivateKey(privateKey) {
+    // Calculate public key and push it to Eve and Bob (Alice uses the
+    // authoritative public key, pushed as a prop)
     const {publicModulus} = this.state;
     const publicKey = this.publicKey({privateKey, publicModulus});
     this.eve.setPublicKey(publicKey);
