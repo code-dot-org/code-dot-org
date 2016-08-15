@@ -23,27 +23,41 @@ const PublicKeyCryptographyWidget = React.createClass({
   getInitialState() {
     return {
       publicModulus: null,
-      privateKey: null
+      privateKey: null,
+      secretNumber: null
     };
   },
 
   setPublicModulus(publicModulus) {
     this.setState({
       publicModulus,
-      privateKey: null
+      privateKey: null,
+      secretNumber: null,
     });
   },
 
   setPrivateKey(privateKey) {
+    const {publicModulus} = this.state;
+    const publicKey = this.publicKey({privateKey, publicModulus});
+    this.eve.setPublicKey(publicKey);
+    this.bob.setPublicKey(publicKey);
     this.setState({privateKey});
+  },
+
+  setSecretNumber(secretNumber) {
+    this.setState({secretNumber});
+  },
+
+  publicKey({privateKey, publicModulus}) {
+    return privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : null;
   },
 
   render() {
     const {
       publicModulus,
-      privateKey
+      privateKey,
+      secretNumber
     } = this.state;
-    const publicKey = privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : undefined;
     return (
       <div style={style.root}>
         <HyperlinksList>
@@ -52,21 +66,24 @@ const PublicKeyCryptographyWidget = React.createClass({
         </HyperlinksList>
         <EqualColumns intercolumnarDistance={20}>
           <Alice
+            ref={x => this.alice = x}
             publicModulus={publicModulus}
             privateKey={privateKey}
-            publicKey={publicKey}
+            publicKey={this.publicKey({privateKey, publicModulus})}
             setPublicModulus={this.setPublicModulus}
             setPrivateKey={this.setPrivateKey}
           />
           <Eve
+            ref={x => this.eve = x}
             publicModulus={publicModulus}
-            publicKey={publicKey}
             setPublicModulus={this.setPublicModulus}
           />
           <Bob
+            ref={x => this.bob = x}
             publicModulus={publicModulus}
-            publicKey={publicKey}
             setPublicModulus={this.setPublicModulus}
+            secretNumber={secretNumber}
+            setSecretNumber={this.setSecretNumber}
           />
         </EqualColumns>
         <ModuloClock/>

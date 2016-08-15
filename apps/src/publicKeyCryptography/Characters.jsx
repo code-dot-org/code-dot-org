@@ -1,4 +1,5 @@
 /** @file Character calculations, displayed side-by-side */
+import _ from 'lodash';
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
@@ -69,12 +70,22 @@ export const Alice = React.createClass({
 export const Eve = React.createClass({
   propTypes: {
     publicModulus: React.PropTypes.number,
-    publicKey: React.PropTypes.number,
     setPublicModulus: React.PropTypes.func.isRequired
   },
 
+  getInitialState() {
+    return {
+      publicKey: null
+    };
+  },
+
+  setPublicKey(publicKey) {
+    this.setState({publicKey});
+  },
+
   render() {
-    const {publicModulus, publicKey, setPublicModulus} = this.props;
+    const {publicModulus, setPublicModulus} = this.props;
+    const {publicKey} = this.state;
     return (
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
@@ -82,7 +93,7 @@ export const Eve = React.createClass({
             Set a public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
           </div>
           <div>
-            Enter Alice's public key: {publicKey}
+            Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
           </div>
           <div>
             Crack Alice's private key:
@@ -107,12 +118,29 @@ export const Eve = React.createClass({
 export const Bob = React.createClass({
   propTypes: {
     publicModulus: React.PropTypes.number,
-    publicKey: React.PropTypes.number,
-    setPublicModulus: React.PropTypes.func.isRequired
+    setPublicModulus: React.PropTypes.func.isRequired,
+    secretNumber: React.PropTypes.number,
+    setSecretNumber: React.PropTypes.func.isRequired
+  },
+
+  getInitialState() {
+    return {
+      publicKey: null
+    };
+  },
+
+  setPublicKey(publicKey) {
+    this.setState({publicKey});
   },
 
   render() {
-    const {publicModulus, publicKey, setPublicModulus} = this.props;
+    const {
+      publicModulus,
+      setPublicModulus,
+      secretNumber,
+      setSecretNumber
+    } = this.props;
+    const {publicKey} = this.state;
     return (
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
@@ -120,10 +148,10 @@ export const Bob = React.createClass({
             Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
           </div>
           <div>
-            Enter Alice's public key: {publicKey}
+            Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
           </div>
           <div>
-            Pick your secret number:
+            Pick your secret number: <SecretNumberDropdown value={secretNumber} onChange={setSecretNumber} publicModulus={publicModulus}/>
           </div>
           <div>
             Calculate your public number:
@@ -152,6 +180,16 @@ function PrivateKeyDropdown(props) {
   return <IntegerDropdown options={privateKeyList(publicModulus)} {...rest}/>;
 }
 PrivateKeyDropdown.propTypes = {
+  publicModulus: React.PropTypes.number,
+  value: React.PropTypes.number,
+  onChange: React.PropTypes.func.isRequired
+};
+
+function SecretNumberDropdown(props) {
+  const {publicModulus, ...rest} = props;
+  return <IntegerDropdown options={_.range(0, publicModulus)} {...rest}/>;
+}
+SecretNumberDropdown.propTypes = {
   publicModulus: React.PropTypes.number,
   value: React.PropTypes.number,
   onChange: React.PropTypes.func.isRequired
