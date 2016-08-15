@@ -1,4 +1,4 @@
-import utils from '../utils';
+import { randomValue } from '../utils';
 import Subtype from './subtype';
 import mazeMsg from './locale';
 import BeeCell from './beeCell';
@@ -511,7 +511,7 @@ export default class Bee extends Subtype {
       tileChoices.push(noTree);
     }
 
-    return utils.randomValue(tileChoices);
+    return randomValue(tileChoices);
   }
 
 }
