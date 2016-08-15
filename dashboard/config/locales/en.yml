@@ -128,7 +128,7 @@ en:
     field_is_required: "is required"
   signin_form:
     title: 'Have an account already? Sign in'
-    login: 'Email or username'
+    login: 'Email'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
@@ -265,7 +265,7 @@ en:
       prizes: 'Prizes'
       logout: 'Sign out'
       signin: 'Sign in'
-      signup: 'Sign up'
+      signup: 'Create an account'
       already_registered: 'Already registered?'
       pair_programming: 'Pair Programming'
       team: 'Team'
