@@ -157,4 +157,11 @@ export default class Collector extends Subtype {
 
     return this.studioApp_.getTestResults(false);
   }
+
+  /**
+   * @override
+   */
+  getEmptyTile() {
+    return 'null0';
+  }
 }

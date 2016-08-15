@@ -498,5 +498,21 @@ export default class Bee extends Subtype {
     this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
   }
 
+  /**
+   * @override
+   */
+  getEmptyTile(x, y, adjacentToPath, wallMap) {
+    // begin with three trees
+    var tileChoices = ['null3', 'null4', 'null0'];
+    var noTree = 'null1';
+    // want it to be more likely to have a tree when adjacent to path
+    var n = adjacentToPath ? tileChoices.length * 2 : tileChoices.length * 6;
+    for (var i = 0; i < n; i++) {
+      tileChoices.push(noTree);
+    }
+
+    return utils.randomValue(tileChoices);
+  }
+
 }
 
