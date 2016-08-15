@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nOur artist is trying to draw a line five times, but can't get it right.  Can you help?<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\r\n\r\n![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)",
     "contained_level_names": null
   },
   "published": true,
