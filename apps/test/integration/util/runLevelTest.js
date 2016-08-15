@@ -118,6 +118,10 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
+  window.dashboard.project.useFirebase = function () {
+    return Boolean(testData.useFirebase);
+  };
+
   var main = window[app + 'Main'];
   main({
     skinId: skinId,
