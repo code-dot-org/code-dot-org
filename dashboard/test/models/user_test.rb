@@ -1284,4 +1284,11 @@ class UserTest < ActiveSupport::TestCase
     create :follower, user: another_teacher, student_user: follower.student_user
     assert_equal 1, follower.student_user.terms_version
   end
+
+  test 'terms_of_service_version for students with deleted teachers' do
+    time_now = DateTime.now
+    follower = create :follower
+    follower.user.update(deleted_at: time_now, terms_of_service_version: 1)
+    assert_equal nil, follower.student_user.terms_version
+  end
 end
