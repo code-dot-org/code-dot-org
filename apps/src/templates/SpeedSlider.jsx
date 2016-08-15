@@ -32,8 +32,8 @@ const knobXMin = 15;
 const TRACK_LENGTH = knobXMax - knobXMin;
 
 /**
- * Slider for modifying frameDelay. Ideally we will eventually have a common component
- * used by debugger, turtle, and here.
+ * SpeedSlider for modifying a value.
+ * For a usage example, see JSDebugger.
  */
 const SpeedSlider = React.createClass({
   propTypes: {
