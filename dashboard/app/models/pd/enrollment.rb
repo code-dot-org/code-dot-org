@@ -38,9 +38,9 @@ class Pd::Enrollment < ActiveRecord::Base
     self.code = unused_random_code
   end
 
-  # Always store emails in lowercase to match the behavior in User.
+  # Always store emails in lowercase and stripped to match the behavior in User.
   def email=(value)
-    write_attribute(:email, value.try(:downcase))
+    write_attribute(:email, value.try(:downcase).try(:strip))
   end
 
   def resolve_user
