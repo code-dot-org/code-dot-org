@@ -88,7 +88,7 @@ content-type: text/ng-template
         %form{:action=>"/certificates", :method=>"POST"}
           %input{"ng-repeat" => "student in section.students", :type=>'hidden', :name=>'names[]', :value=>'{{student.name}}'}
           %input{:type=>'hidden', :name=>'course', :value=>'{{section.course.name}}'}
-          %input.btn.btn-white{type:"submit", value:"Print Certificates", style:"margin-top:10px; width:100%"}
+          %input.btn.btn-white{type:"submit", value: I18n.t('dashboard_action_print_certificates'), style:"margin-top:10px; width:100%"}
 
   %br/
   %br/
