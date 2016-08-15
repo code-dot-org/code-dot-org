@@ -1,11 +1,10 @@
 /** @file The Bob character panel from the crypto widget */
-import _ from 'lodash';
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
-import PublicModulusDropdown from './PublicModulusDropdown';
-import IntegerDropdown from './IntegerDropdown';
+import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
+import {PublicModulusDropdown, SecretNumberDropdown} from './cryptographyFields';
 
 const Bob = React.createClass({
   propTypes: {
@@ -69,10 +68,10 @@ const Bob = React.createClass({
           <div>
             Calculate your public number:
             <div>
-              ({publicKey} x {secretNumber})MOD {publicModulus} <button>Go</button>
+              (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/> <button>Go</button>
             </div>
             <div>
-              Your computed public number is {publicNumber}
+              Your computed public number is <IntegerField value={publicNumber}/>
             </div>
           </div>
         </NumberedSteps>
@@ -80,13 +79,3 @@ const Bob = React.createClass({
   }
 });
 export default Bob;
-
-function SecretNumberDropdown(props) {
-  const {publicModulus, ...rest} = props;
-  return <IntegerDropdown options={_.range(0, publicModulus)} {...rest}/>;
-}
-SecretNumberDropdown.propTypes = {
-  publicModulus: React.PropTypes.number,
-  value: React.PropTypes.number,
-  onChange: React.PropTypes.func.isRequired
-};
