@@ -54,6 +54,14 @@ const SpeedSlider = React.createClass({
     this.isAndroid_ = dom.isAndroid();
     this.isIOS_ = dom.isIOS();
     this.isWindowsTouch_ = dom.isWindowsTouch();
+
+    var thisSlider = this;
+    dom.addMouseDownTouchEvent(this.knob_, function (e) {
+      return thisSlider.onKnobMouseDown(e);
+    });
+    dom.addMouseDownTouchEvent(this.track_, function (e) {
+      return thisSlider.onTrackMouseDown(e);
+    });
   },
 
   mouseToSvg_(e) {
@@ -108,8 +116,8 @@ const SpeedSlider = React.createClass({
   },
 
   startDragging() {
-    document.addEventListener('mousemove', this.onMouseMove);
-    document.addEventListener('mouseup', this.stopDragging);
+    this.unbindOnMouseMove = dom.addMouseMoveTouchEvent(document, this.onMouseMove);
+    this.unbindStopDragging = dom.addMouseUpTouchEvent(document, this.stopDragging);
   },
 
   onMouseMove(event) {
@@ -122,8 +130,8 @@ const SpeedSlider = React.createClass({
 
   stopDragging(event) {
     this.setState(this.getInitialState());
-    document.removeEventListener('mousemove', this.onMouseMove);
-    document.removeEventListener('mouseup', this.stopDragging);
+    this.unbindOnMouseMove();
+    this.unbindStopDragging();
   },
 
   render() {
@@ -180,14 +188,14 @@ const SpeedSlider = React.createClass({
             y1="25"
             x2="140"
             y2="25"
-            onMouseDown={this.onTrackMouseDown}
+            ref={el => this.track_ = el}
           />
           <path
             id="knob"
             style={style.sliderKnob}
             transform={`translate(${knobXPosition}, 10)`}
             d="m 8,0 l -8,8 v 12 h 16 v -12 z"
-            onMouseDown={this.onKnobMouseDown}
+            ref={el => this.knob_ = el}
           />
         </svg>
       </div>
