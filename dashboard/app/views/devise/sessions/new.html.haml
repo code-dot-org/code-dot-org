@@ -35,7 +35,7 @@
 
       -# Sign in button
       .singleitemblock
-        %button#signin-button.primary{onclick: '$("#new_user").submit();'}= t('signin_form.submit')
+        %button#signin-button.primary= t('signin_form.submit')
 
       -# Remember me
       - if devise_mapping.rememberable?
