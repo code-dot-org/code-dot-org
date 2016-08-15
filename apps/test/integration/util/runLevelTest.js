@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
+import { getConfigRef, getDatabase } from '@cdo/apps/applab/firebaseUtils';
+
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -125,12 +127,30 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
+    // Fail fast if firebase is used without testData.useFirebase being specified.
+    firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
+    firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
     isAdmin: true,
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
       if (level.editCode && !studioApp.editor) {
+        timeout = 500;
+      }
+
+      // Avoid unnecessary delay for tests which don't use firebase.
+      if (testData.useFirebase) {
+        getDatabase(Applab.channelId).autoFlush();
+        getConfigRef().set({
+          limits: {
+            '15': 5,
+            '60': 10
+          },
+          maxRecordSize: 100,
+          maxPropertySize: 100,
+          maxTableRows: 20
+        });
         timeout = 500;
       }
 
