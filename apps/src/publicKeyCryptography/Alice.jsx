@@ -2,10 +2,10 @@
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
-import PublicModulusDropdown from './PublicModulusDropdown';
-import IntegerDropdown from './IntegerDropdown';
+import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {computePublicKey, privateKeyList} from './cryptographyMath';
+import {PrivateKeyDropdown, PublicModulusDropdown} from './cryptographyFields';
+import {computePublicKey} from './cryptographyMath';
 
 const Alice = React.createClass({
   propTypes: {
@@ -64,7 +64,7 @@ const Alice = React.createClass({
           <div>
             Set a private key:
             <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>
-            <div>Your computed public key is {publicKey}</div>
+            <div>Your computed public key is <IntegerField value={publicKey}/></div>
           </div>
           <div>
             Enter Bob's public number:
@@ -73,11 +73,11 @@ const Alice = React.createClass({
           <div>
             Calculate Bob's secret number.
             <div>
-              ({publicNumber} x {privateKey}) MOD {publicModulus}
+              (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/>
               <button>Go</button>
             </div>
             <div>
-              Bob's secret number is {secretNumber}!
+              Bob's secret number is <IntegerField value={secretNumber}/>!
             </div>
           </div>
         </NumberedSteps>
@@ -85,13 +85,3 @@ const Alice = React.createClass({
   }
 });
 export default Alice;
-
-function PrivateKeyDropdown(props) {
-  const {publicModulus, ...rest} = props;
-  return <IntegerDropdown options={privateKeyList(publicModulus)} {...rest}/>;
-}
-PrivateKeyDropdown.propTypes = {
-  publicModulus: React.PropTypes.number,
-  value: React.PropTypes.number,
-  onChange: React.PropTypes.func.isRequired
-};
