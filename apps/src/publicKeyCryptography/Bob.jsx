@@ -9,49 +9,70 @@ import IntegerTextbox from './IntegerTextbox';
 
 const Bob = React.createClass({
   propTypes: {
-    publicModulus: React.PropTypes.number,
     setPublicModulus: React.PropTypes.func.isRequired,
-    secretNumber: React.PropTypes.number,
-    setSecretNumber: React.PropTypes.func.isRequired
+    setPublicNumber: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
     return {
-      publicKey: null
+      publicModulus: null,
+      publicKey: null,
+      secretNumber: null,
     };
+  },
+
+  setPublicModulus(publicModulus) {
+    this.setState({publicModulus});
+    this.setSecretNumber(null);
+  },
+
+  onPublicModulusChange(publicModulus) {
+    this.setPublicModulus(publicModulus);
+    this.props.setPublicModulus(publicModulus);
   },
 
   setPublicKey(publicKey) {
     this.setState({publicKey});
   },
 
+  setSecretNumber(secretNumber) {
+    const {publicKey, publicModulus} = this.state;
+    this.setState({secretNumber});
+    this.props.setPublicNumber(this.publicNumber({publicKey, secretNumber, publicModulus}));
+  },
+
+  publicNumber({publicKey, secretNumber, publicModulus}) {
+    return publicKey && secretNumber && publicModulus ?
+        ((publicKey * secretNumber) % publicModulus) :
+        null;
+  },
+
   render() {
     const {
       publicModulus,
-      setPublicModulus,
-      secretNumber,
-      setSecretNumber
-    } = this.props;
-    const {publicKey} = this.state;
+      publicKey,
+      secretNumber
+    } = this.state;
+    const publicNumber = this.publicNumber(this.state);
     return (
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
           <div>
-            Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
+            Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
           </div>
           <div>
             Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
           </div>
           <div>
-            Pick your secret number: <SecretNumberDropdown value={secretNumber} onChange={setSecretNumber} publicModulus={publicModulus}/>
+            Pick your secret number: <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>
           </div>
           <div>
             Calculate your public number:
             <div>
-              (?? x ??)MOD ?? <button>Go</button>
+              ({publicKey} x {secretNumber})MOD {publicModulus} <button>Go</button>
             </div>
             <div>
-              Your computed public number is ??
+              Your computed public number is {publicNumber}
             </div>
           </div>
         </NumberedSteps>
