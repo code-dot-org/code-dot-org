@@ -15,7 +15,6 @@ var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
 var NetSimRouterNode = require('./NetSimRouterNode');
 require('../utils'); // Provides Function.prototype.inherits
-import experiments from '../experiments';
 
 /**
  * Apply a very small debounce to lobby buttons to avoid doing extra work

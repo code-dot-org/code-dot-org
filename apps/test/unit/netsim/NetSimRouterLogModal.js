@@ -2,8 +2,6 @@
 'use strict';
 import $ from 'jquery';
 import {assert, expect} from '../../util/configuredChai';
-import experiments from '@cdo/apps/experiments';
-var testUtils = require('../../util/testUtils');
 var NetSimLocalClientNode = require("@cdo/apps/netsim/NetSimLocalClientNode");
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');

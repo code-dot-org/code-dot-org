@@ -6,7 +6,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/netsim/locale';
-import experiments from '../experiments';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import NetSimLogEntry from './NetSimLogEntry';
 import Packet from './Packet';
