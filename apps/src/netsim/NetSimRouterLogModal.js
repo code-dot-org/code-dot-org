@@ -21,7 +21,7 @@ var LOG_ENTRY_DATA_KEY = 'LogEntry';
 var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
 
 function usingNewLogBrowser() {
-  return experiments.isEnabled('netsimNewLogBrowser');
+  return true;
 }
 
 /**

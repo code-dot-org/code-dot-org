@@ -355,8 +355,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () 
 };
 
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ = function () {
-  return experiments.isEnabled('netsimNewLogBrowser') &&
-      NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
 };
 
 /**
