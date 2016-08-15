@@ -57,7 +57,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 3 && Maze.bee.honey_ === 3;
+        return Maze.subtype.nectars_.length === 3 && Maze.subtype.honey_ === 3;
       },
       xml: '<xml>' + NOOP_REPEAT_START + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -77,7 +77,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_FINISHED
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 3 && Maze.bee.honey_ === 3;
+        return Maze.subtype.nectars_.length === 3 && Maze.subtype.honey_ === 3;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -97,7 +97,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_FINISHED
       },
       customValidator: function () {
-        return Maze.bee.nectars_.length === 2 && Maze.bee.honey_ === 3;
+        return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 3;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
