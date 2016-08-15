@@ -49,7 +49,7 @@
         response: $('.response').val(),
         submitted: appOptions.level.submittable || forceSubmittable,
         result: true,
-        testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::FREE_PLAY_RESULT}
+        testResult: #{level.submittable? ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT}
       };
     }
 
