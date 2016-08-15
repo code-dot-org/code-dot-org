@@ -1,6 +1,11 @@
-title ' TEMP CSD Unit 1'
+title 'TEMP CSD Unit 1'
 description 'Temp place to work on U1 of Disco'
 description_short 'Problem Solving'
 login_required 'true'
-student_of_admin_required 'true'
 hidden 'true'
+
+stage 'Processing Information'
+level 'CSD U1 - PixFilter 1x1 intro'
+level 'CSD U1 - PixFilter Filter Intro'
+level 'CSD U1 - PixFilter Mushroom'
+level 'CSD U1 - PixFilter Mario'
