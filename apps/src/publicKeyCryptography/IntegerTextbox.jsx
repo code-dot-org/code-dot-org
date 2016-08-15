@@ -9,12 +9,12 @@ const IntegerTextbox = React.createClass({
 
   onChange(event) {
     const value = parseInt(event.target.value, 10);
-    this.props.onChange(typeof value === 'number' && !isNaN(value) ? value : null);
+    this.props.onChange(Number.isInteger(value) ? value : null);
   },
 
   render() {
     let {value} = this.props;
-    if (typeof value !== 'number') {
+    if (!Number.isInteger(value)) {
       value = '';
     }
     return <input value={value} onChange={this.onChange}/>;

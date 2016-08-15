@@ -9,7 +9,7 @@ const style = {
 
 export default function IntegerField(props) {
   const composedStyle = Object.assign({}, style, props.style);
-  const displayValue = typeof props.value === 'number' && !isNaN(props.value) ? props.value : '??';
+  const displayValue = Number.isInteger(props.value) ? props.value : '??';
   return <span style={composedStyle}>{displayValue}</span>;
 }
 IntegerField.propTypes = {
