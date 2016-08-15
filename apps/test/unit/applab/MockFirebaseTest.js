@@ -3,6 +3,23 @@ import MockFirebase from '../../util/MockFirebase';
 import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
 
 describe('MockFirebase', () => {
+  describe('initialization', () => {
+    let firebase;
+
+    beforeEach(() => {
+      firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.autoFlush();
+      return firebase.set('foo');
+    });
+
+    it('tests can see data set in beforeEach', done => {
+      firebase.once('value').then(snapshot => {
+        expect(snapshot.val()).to.equal('foo');
+        done();
+      });
+    });
+  });
+
   describe('when invoked directly', () => {
     let firebase;
 
