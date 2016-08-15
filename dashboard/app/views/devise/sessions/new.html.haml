@@ -50,7 +50,7 @@
       - if devise_mapping.registerable?
         .singleitemblock
           = link_to new_user_registration_path do
-            %button#signup-button.secondary= t('nav.user.signup')
+            %button#signup-button.secondary{type: 'button'}= t('nav.user.signup')
 
   .span4
     .sidebar= render "devise/shared/links"
@@ -77,8 +77,6 @@
 
 :javascript
   $("#user_login").placeholder();
-
-  $(".edit_user").on("submit", function (e) {});
 
   $("#new_user").on("submit", function (e) {
     window.dashboard.hashEmail({
