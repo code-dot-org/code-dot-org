@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nHelp the artist draw this line two times forward.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "Help the artist draw this line two times forward.\r\n\r\n![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)",
     "contained_level_names": null
   },
   "published": true,
