@@ -66,19 +66,23 @@ def generate_professional_development_workshop_teachers_report
         join(:users, id: :student_user_id).
         select(:users__id___id, :users__created_at___created_at)
 
-      if students.count > 0
-        lifetime = students.map{|s| (Time.now - s[:created_at]) / (60 * 60 * 24)}.reduce(:+) / students.count.to_f
-
-        levels = students.map do |s|
-          DASHBOARD_DB[:user_levels].
-            where(user_id: s[:id]).
-            and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
-            count
-        end.reduce(:+) / students.count.to_f
-      else
-        lifetime = 0
-        levels = 0
-      end
+      # TODO(asher): Uncomment this code after making it performant enough to
+      # successfully run. Also below, where `lifetime` and `levels` are put in
+      # the hash.
+      #
+      # if students.count > 0
+      #  lifetime = students.map{|s| (Time.now - s[:created_at]) / (60 * 60 * 24)}.reduce(:+) / students.count.to_f
+      #
+      #  levels = students.map do |s|
+      #    DASHBOARD_DB[:user_levels].
+      #      where(user_id: s[:id]).
+      #      and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+      #      count
+      #   end.reduce(:+) / students.count.to_f
+      # else
+      #   lifetime = 0
+      #   levels = 0
+      # end
 
       {
         teacher_name: teacher[:name],
@@ -86,8 +90,8 @@ def generate_professional_development_workshop_teachers_report
         affiliate_name: affiliate[:name],
         affiliate_email: affiliate[:user_id],
         students_count: students.count,
-        students_average_lifetime_days: lifetime.round,
-        students_average_levels_completed: levels.round(2)
+        # students_average_lifetime_days: lifetime.round,
+        # students_average_levels_completed: levels.round(2)
       }
     end.compact
   end.compact.flatten
