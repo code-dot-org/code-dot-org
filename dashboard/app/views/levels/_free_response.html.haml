@@ -46,7 +46,7 @@
       var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
       return {
-        response: $('.response').val(),
+        response: encodeURIComponent($('.response').val()),
         submitted: appOptions.level.submittable || forceSubmittable,
         result: true,
         testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::FREE_PLAY_RESULT}
