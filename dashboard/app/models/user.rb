@@ -1008,8 +1008,12 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
+    # As of August 2016, it may be the case that the `followed` exists but
+    # `followed.user` does not as the result of user deletion. In this case, we
+    # ignore any terms of service versions associated with deleted teacher
+    # accounts.
     followeds.
-      collect{|followed| followed.user.terms_of_service_version}.
+      collect{|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
   end
