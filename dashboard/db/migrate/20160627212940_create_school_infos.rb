@@ -31,12 +31,10 @@ class CreateSchoolInfos < ActiveRecord::Migration
         end
 
         SchoolInfo.where(attributes).first_or_create
-
       end
 
       add_reference(:pd_enrollments, :school_info)
     end
-
   end
 
   def down
