@@ -119,6 +119,7 @@
     "messageformat": "0.2.2",
     "mkdirp": "0.5.1",
     "mochify": "2.18.0",
+    "mockfirebase": "^0.12.0",
     "moment": "2.14.1",
     "newrelic": "^1.27.2",
     "node-sass": "1.2.2",
