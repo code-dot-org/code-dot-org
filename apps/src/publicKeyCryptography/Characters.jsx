@@ -17,6 +17,16 @@ export const Alice = React.createClass({
     setPrivateKey: React.PropTypes.func.isRequired
   },
 
+  getInitialState() {
+    return {
+      publicNumber: null
+    };
+  },
+
+  setPublicNumber(publicNumber) {
+    this.setState({publicNumber});
+  },
+
   render() {
     const {
       publicModulus,
@@ -25,10 +35,14 @@ export const Alice = React.createClass({
       setPublicModulus,
       setPrivateKey
     } = this.props;
+    const {
+      publicNumber
+    } = this.state;
+    const secretNumber = (publicNumber * privateKey) % publicModulus;
+
     return (
       <CollapsiblePanel title="Alice">
         <NumberedSteps lineHeight={LINE_HEIGHT}>
-
           <div>
             Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
           </div>
@@ -37,16 +51,16 @@ export const Alice = React.createClass({
             <div>Your computed public key is {publicKey}</div>
           </div>
           <div>
-            Enter Bob's public number:
+            Enter Bob's public number: <NumberTextbox value={publicNumber} onChange={this.setPublicNumber}/>
           </div>
           <div>
             Calculate Bob's secret number.
             <div>
-              (?? x ?) MOD ??
+              ({publicNumber} x {privateKey}) MOD {publicModulus}
               <button>Go</button>
             </div>
             <div>
-              Bob's secret number is ??!
+              Bob's secret number is {secretNumber}!
             </div>
           </div>
         </NumberedSteps>
@@ -169,8 +183,8 @@ const NumberDropdown = React.createClass({
   },
 
   onChange(event) {
-    const value = event.target.value;
-    this.props.onChange(value === '' ? null : parseInt(value, 10));
+    const value = parseInt(event.target.value, 10);
+    this.props.onChange(typeof value === 'number' && !isNaN(value) ? value : null);
   },
 
   render() {
@@ -186,3 +200,22 @@ const NumberDropdown = React.createClass({
   }
 });
 
+const NumberTextbox = React.createClass({
+  propTypes: {
+    value: React.PropTypes.number,
+    onChange: React.PropTypes.func.isRequired
+  },
+
+  onChange(event) {
+    const value = parseInt(event.target.value, 10);
+    this.props.onChange(typeof value === 'number' && !isNaN(value) ? value : null);
+  },
+
+  render() {
+    let {value} = this.props;
+    if (typeof value !== 'number') {
+      value = '';
+    }
+    return <input value={value} onChange={this.onChange}/>;
+  }
+});
