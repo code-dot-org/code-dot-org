@@ -888,7 +888,9 @@ class User < ActiveRecord::Base
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
-      user_level.level_source_id = level_source_id unless is_navigator
+      if level_source_id && !is_navigator
+        user_level.level_source_id = level_source_id
+      end
 
       user_level.save!
     end
