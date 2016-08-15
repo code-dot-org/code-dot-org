@@ -79,7 +79,6 @@ describe("NetSimRouterLogModal", function () {
     var modal, rootDiv, testShard, localNode, router, levelConfig;
 
     beforeEach(function () {
-      experiments.setEnabled('netsimNewLogBrowser', useNewLogBrowser);
       levelConfig = NetSimGlobals.getLevelConfig();
       testShard = fakeShard();
       rootDiv = $('<div>');
