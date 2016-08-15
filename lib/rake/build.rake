@@ -173,6 +173,13 @@ namespace :build do
     end
   end
 
+  task :restart_process_queues do
+    if CDO.daemon
+      HipChat.log 'Restarting <b>process_queues</b>...'
+      RakeUtils.restart_service 'process_queues'
+    end
+  end
+
   task :start_varnish do
     Dir.chdir(aws_dir) do
       unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') == 0)
@@ -190,6 +197,7 @@ namespace :build do
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
+  tasks << :restart_process_queues if CDO.daemon
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 end
