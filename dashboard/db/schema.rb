@@ -356,16 +356,6 @@ ActiveRecord::Schema.define(version: 20160812010138) do
     t.string   "email",               limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
-    t.string   "code",               limit: 255
-    t.string   "school",             limit: 255
-    t.integer  "school_district_id", limit: 4
-    t.integer  "school_zip",         limit: 4
-    t.string   "school_type",        limit: 255
-    t.string   "school_state",       limit: 255
-    t.integer  "user_id",            limit: 4
-    t.integer  "school_info_id",     limit: 4
-=======
     t.string   "school",              limit: 255
     t.string   "code",                limit: 255
     t.integer  "school_district_id",  limit: 4
@@ -375,7 +365,7 @@ ActiveRecord::Schema.define(version: 20160812010138) do
     t.integer  "user_id",             limit: 4
     t.datetime "survey_sent_at"
     t.integer  "completed_survey_id", limit: 4
->>>>>>> staging
+    t.integer  "school_info_id",     limit: 4
   end
 
   add_index "pd_enrollments", ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
