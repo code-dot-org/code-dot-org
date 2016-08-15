@@ -17,13 +17,15 @@ const Alice = React.createClass({
     return {
       publicModulus: null,
       privateKey: null,
-      publicNumber: null
+      publicNumber: null,
+      secretNumber: null
     };
   },
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setPrivateKey(null);
+    this.clearSecretNumber();
   },
 
   onPublicModulusChange(publicModulus) {
@@ -32,27 +34,44 @@ const Alice = React.createClass({
   },
 
   setPrivateKey(privateKey) {
-    const {publicModulus} = this.state;
     this.setState({privateKey});
+    this.clearSecretNumber();
+  },
+
+  onPrivateKeyChange(privateKey) {
+    const {publicModulus} = this.state;
+    this.setPrivateKey(privateKey);
     this.props.setPublicKey(this.getPublicKey({privateKey, publicModulus}));
   },
 
   setPublicNumber(publicNumber) {
     this.setState({publicNumber});
+    this.clearSecretNumber();
   },
 
   getPublicKey({privateKey, publicModulus}) {
     return privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : null;
   },
 
+  computeSecretNumber() {
+    const {publicModulus, privateKey, publicNumber} = this.state;
+    const secretNumber = [publicModulus, privateKey, publicNumber].every(Number.isInteger) ?
+        (publicNumber * privateKey) % publicModulus : null;
+    this.setState({secretNumber});
+  },
+
+  clearSecretNumber() {
+    this.setState({secretNumber: null});
+  },
+
   render() {
     const {
       publicModulus,
       privateKey,
-      publicNumber
+      publicNumber,
+      secretNumber
     } = this.state;
     const publicKey = this.getPublicKey({privateKey, publicModulus});
-    const secretNumber = (publicNumber * privateKey) % publicModulus;
 
     return (
       <CollapsiblePanel title="Alice">
@@ -63,7 +82,7 @@ const Alice = React.createClass({
           </div>
           <div>
             Set a private key:
-            <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>
+            <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.onPrivateKeyChange}/>
             <div>Your computed public key is <IntegerField value={publicKey}/></div>
           </div>
           <div>
@@ -73,7 +92,8 @@ const Alice = React.createClass({
           <div>
             Calculate Bob's secret number.
             <div>
-              (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/> <button>Go</button>
+              (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/>
+              <button onClick={this.computeSecretNumber}>Go</button>
             </div>
             <div>
               Bob's secret number is <IntegerField value={secretNumber}/>!
