@@ -17,12 +17,14 @@ const Bob = React.createClass({
       publicModulus: null,
       publicKey: null,
       secretNumber: null,
+      publicNumber: null
     };
   },
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setSecretNumber(null);
+    this.clearPublicNumber();
   },
 
   onPublicModulusChange(publicModulus) {
@@ -32,27 +34,34 @@ const Bob = React.createClass({
 
   setPublicKey(publicKey) {
     this.setState({publicKey});
+    this.clearPublicNumber();
   },
 
   setSecretNumber(secretNumber) {
     const {publicKey, publicModulus} = this.state;
     this.setState({secretNumber});
-    this.props.setPublicNumber(this.publicNumber({publicKey, secretNumber, publicModulus}));
+    this.clearPublicNumber();
   },
 
-  publicNumber({publicKey, secretNumber, publicModulus}) {
-    return publicKey && secretNumber && publicModulus ?
-        ((publicKey * secretNumber) % publicModulus) :
-        null;
+  computePublicNumber() {
+    const {publicKey, secretNumber, publicModulus} = this.state;
+    const publicNumber = [publicKey, secretNumber, publicModulus].every(Number.isInteger) ?
+        ((publicKey * secretNumber) % publicModulus) : null;
+    this.setState({publicNumber});
+    this.props.setPublicNumber(publicNumber);
+  },
+
+  clearPublicNumber() {
+    this.setState({publicNumber: null});
   },
 
   render() {
     const {
       publicModulus,
       publicKey,
-      secretNumber
+      secretNumber,
+      publicNumber
     } = this.state;
-    const publicNumber = this.publicNumber(this.state);
     return (
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
@@ -68,7 +77,8 @@ const Bob = React.createClass({
           <div>
             Calculate your public number:
             <div>
-              (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/> <button>Go</button>
+              (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
+              <button onClick={this.computePublicNumber}>Go</button>
             </div>
             <div>
               Your computed public number is <IntegerField value={publicNumber}/>
