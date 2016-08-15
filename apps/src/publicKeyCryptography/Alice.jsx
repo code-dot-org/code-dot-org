@@ -22,10 +22,12 @@ const Alice = React.createClass({
   },
 
   setPublicModulus(publicModulus) {
-    this.setState({
-      publicModulus,
-      privateKey: null,
-    });
+    this.setState({publicModulus});
+    this.setPrivateKey(null);
+  },
+
+  onPublicModulusChange(publicModulus) {
+    this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
   },
 
@@ -57,7 +59,7 @@ const Alice = React.createClass({
         <NumberedSteps>
           <div>
             Enter public modulus:
-            <PublicModulusDropdown value={publicModulus} onChange={this.setPublicModulus}/>
+            <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
           </div>
           <div>
             Set a private key:

@@ -6,7 +6,6 @@ import Alice from './Alice';
 import Bob from './Bob';
 import Eve from './Eve';
 import ModuloClock from './ModuloClock';
-import {computePublicKey} from './cryptographyMath';
 
 const style = {
   root: {
@@ -22,52 +21,26 @@ const style = {
 
 /** Root component for Public Key Cryptography widget */
 const PublicKeyCryptographyWidget = React.createClass({
-  getInitialState() {
-    return {
-      publicModulus: null,
-      privateKey: null,
-      secretNumber: null
-    };
-  },
-
   setPublicModulus(publicModulus) {
-    this.setState({
-      publicModulus,
-      privateKey: null,
-      secretNumber: null,
-    });
-  },
-
-  setPrivateKey(privateKey) {
-    // Calculate public key and push it to Eve and Bob (Alice uses the
-    // authoritative public key, pushed as a prop)
-    const {publicModulus} = this.state;
-    const publicKey = this.publicKey({privateKey, publicModulus});
-    this.eve.setPublicKey(publicKey);
-    this.bob.setPublicKey(publicKey);
-    this.setState({privateKey});
+    // Anyone can set the public modulus.  Inform everyone.
+    this.alice.setPublicModulus(publicModulus);
+    this.bob.setPublicModulus(publicModulus);
+    this.eve.setPublicModulus(publicModulus);
   },
 
   setPublicKey(publicKey) {
     // Only Alice can set the public key.  Inform Bob and Eve.
-    this.eve.setPublicKey(publicKey);
     this.bob.setPublicKey(publicKey);
+    this.eve.setPublicKey(publicKey);
   },
 
-  setSecretNumber(secretNumber) {
-    this.setState({secretNumber});
-  },
-
-  publicKey({privateKey, publicModulus}) {
-    return privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : null;
+  setPublicNumber(publicNumber) {
+    // Only Bob can set the public number.  Inform Alice and Eve.
+    this.alice.setPublicNumber(publicNumber);
+    this.eve.setPublicNumber(publicNumber);
   },
 
   render() {
-    const {
-      publicModulus,
-      privateKey,
-      secretNumber
-    } = this.state;
     return (
       <div style={style.root}>
         <HyperlinksList>
@@ -82,15 +55,12 @@ const PublicKeyCryptographyWidget = React.createClass({
           />
           <Eve
             ref={x => this.eve = x}
-            publicModulus={publicModulus}
             setPublicModulus={this.setPublicModulus}
           />
           <Bob
             ref={x => this.bob = x}
-            publicModulus={publicModulus}
             setPublicModulus={this.setPublicModulus}
-            secretNumber={secretNumber}
-            setSecretNumber={this.setSecretNumber}
+            setPublicNumber={this.setPublicNumber}
           />
         </EqualColumns>
         <ModuloClock/>
