@@ -21,7 +21,9 @@ export function setExternalGlobals() {
       hasPrivacyProfanityViolation: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
-      useFirebase: function () { return false; }
+      // Always use firebase (not dynamodb) for Applab data storage commands. Individual
+      // tests must still specify testData.useFirebase to initialize Firebase properly.
+      useFirebase: function () { return true; }
     },
     assets: {
       showAssetManager: function () {},
