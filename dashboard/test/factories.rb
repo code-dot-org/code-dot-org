@@ -1,3 +1,4 @@
+FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :paired_user_level do
     driver_user_level {user_level}
@@ -61,7 +62,7 @@ FactoryGirl.define do
       end
       # Creates a teacher optionally enrolled in a workshop,
       # joined the workshop section,
-      # or marked attended on the first workshop session.
+      # or marked attended on either all (true) or a specified list of workshop sessions.
       factory :pd_workshop_participant do
         transient do
           workshop nil
@@ -73,7 +74,12 @@ FactoryGirl.define do
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
           evaluator.workshop.section.add_student teacher if evaluator.in_section
-          create :pd_attendance, session: evaluator.workshop.sessions.first, teacher: teacher if evaluator.attended
+          if evaluator.attended
+            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
+            attended_sessions.each do |session|
+              create :pd_attendance, session: session, teacher: teacher
+            end
+          end
         end
       end
     end
@@ -118,7 +124,7 @@ FactoryGirl.define do
     app "maze"
   end
 
-  factory :level, :class => Blockly do
+  factory :level, class: Blockly do
     sequence(:name) { |n| "Level_#{n}" }
     sequence(:level_num) {|n| "1_2_#{n}" }
 
@@ -166,49 +172,49 @@ FactoryGirl.define do
     end
   end
 
-  factory :unplugged, :parent => Level, :class => Unplugged do
+  factory :unplugged, parent: :level, class: Unplugged do
     game {create(:game, app: "unplug")}
   end
 
-  factory :match, :parent => Level, :class => Match do
+  factory :match, parent: :level, class: Match do
     game {create(:game, app: "match")}
     properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
-  factory :text_match, :parent => Level, :class => TextMatch do
+  factory :text_match, parent: :level, class: TextMatch do
     game {create(:game, app: "textmatch")}
     properties{{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
-  factory :artist, :parent => Level, :class => Artist do
+  factory :artist, parent: :level, class: Artist do
   end
 
-  factory :maze, :parent => Level, :class => Maze do
+  factory :maze, parent: :level, class: :Maze do
     skin 'birds'
   end
 
-  factory :applab, :parent => Level, :class => Applab do
+  factory :applab, parent: :level, class: Applab do
     game {Game.applab}
   end
 
-  factory :free_response, :parent => Level, :class => FreeResponse do
+  factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
   end
 
-  factory :playlab, :parent => Level, :class => Studio do
+  factory :playlab, parent: :level, class: Studio do
     game {create(:game, app: Game::PLAYLAB)}
   end
 
-  factory :makerlab, :parent => Level, :class => Applab do
+  factory :makerlab, parent: :level, class: Applab do
     game {Game.applab}
     properties{{makerlab_enabled: true}}
   end
 
-  factory :gamelab, :parent => Level, :class => Gamelab do
+  factory :gamelab, parent: :level, class: Gamelab do
     game {Game.gamelab}
   end
 
-  factory :multi, :parent => Level, :class => Applab do
+  factory :multi, parent: :level, class: Applab do
     game {create(:game, app: "multi")}
     properties {
       {
@@ -225,14 +231,14 @@ FactoryGirl.define do
     }
   end
 
-  factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do
+  factory :evaluation_multi, parent: :level, class: EvaluationMulti do
     game {create(:game, app: 'evaluation_multi')}
   end
 
-  factory :external, parent: Level, class: External do
+  factory :external, parent: :level, class: External do
   end
 
-  factory :external_link, parent: Level, class: ExternalLink do
+  factory :external_link, parent: :level, class: ExternalLink do
     game {Game.external_link}
     url nil
     link_title 'title'
@@ -419,14 +425,14 @@ FactoryGirl.define do
     status nil
   end
 
-  factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
+  factory :plc_enrollment_unit_assignment, class: 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
     status Plc::EnrollmentUnitAssignment::START_BLOCKED
     user nil
   end
 
-  factory :plc_course_unit, :class => 'Plc::CourseUnit' do
+  factory :plc_course_unit, class: 'Plc::CourseUnit' do
     plc_course {create(:plc_course)}
     script {create(:script)}
     unit_name "MyString"
@@ -434,35 +440,35 @@ FactoryGirl.define do
     unit_order 1
   end
 
-  factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
+  factory :plc_enrollment_module_assignment, class: 'Plc::EnrollmentModuleAssignment' do
     plc_enrollment_unit_assignment nil
     plc_learning_module nil
     user nil
   end
 
-  factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
+  factory :plc_user_course_enrollment, class: 'Plc::UserCourseEnrollment' do
     status "MyString"
     plc_course nil
     user nil
   end
 
-  factory :plc_task, :class => 'Plc::Task' do
+  factory :plc_task, class: 'Plc::Task' do
     name "MyString"
     plc_learning_modules []
     after(:create) do |plc_task|
       plc_task.plc_learning_modules.each do |learning_module|
-        plc_task.script_level = create(:script_level, stage: learning_module.stage, script: learning_module.plc_course_unit.script, level: create(:level))
+        plc_task.script_level = create(:script_level, stage: learning_module.stage, script: learning_module.plc_course_unit.script, levels: [create(:level)])
       end
     end
   end
 
-  factory :plc_learning_module, :class => 'Plc::LearningModule' do
+  factory :plc_learning_module, class: 'Plc::LearningModule' do
     name "MyString"
     plc_course_unit {create(:plc_course_unit)}
     stage {create(:stage)}
     module_type Plc::LearningModule::CONTENT_MODULE
   end
-  factory :plc_course, :class => 'Plc::Course' do
+  factory :plc_course, class: 'Plc::Course' do
     name "MyString"
   end
 
@@ -502,6 +508,15 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+    transient do
+      num_sessions 0
+    end
+    after(:create) do |workshop, evaluator|
+      # Sessions, one per day starting today
+      evaluator.num_sessions.times do |i|
+        workshop.sessions << create(:pd_session, workshop: workshop, start: Date.today + i.days)
+      end
+    end
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do

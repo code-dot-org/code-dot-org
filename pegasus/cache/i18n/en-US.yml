@@ -517,6 +517,7 @@
   dashboard_action_remove_confirm: "Remove?"
   dashboard_action_done: "Done"
   dashboard_action_required: "required"
+  dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
@@ -802,11 +803,11 @@
   course3_name: "Course 3"
   course4_name: "Course 4"
   accelerated_name: "Accelerated Course"
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'

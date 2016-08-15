@@ -163,6 +163,7 @@ level 'CSD U3 Interactive Card Other Conditionals'
 level 'CSD U3 Interactive Card Final'
 
 stage 'Complex Sprite Movement'
+level 'CSD U3 abstraction teaser'
 level 'CSD U3 abstraction intro'
 level 'CSD U3 abstraction rotation'
 # template for velocityX levels 'CSD U3 abstraction fish template'
@@ -191,19 +192,22 @@ level 'CSD U3 collisions car intro'
 level 'CSD U3 collisions overlap x'
 level 'CSD U3 collisions overlap y'
 level 'CSD U3 collisions overlap'
+level 'CSD U3 collisions STOP isTouching'
 level 'CSD U3 collisions car'
+
+# put levels below in new lesson?
 level 'CSD U3 collisions displace y'
 level 'CSD U3 collisions displace x'
 level 'CSD U3 collisions displace intro'
 level 'CSD U3 collisions displace diagonal'
 level 'CSD U3 collisions sundae' 
-#missing level collide (arrows)
+level 'CSD U3 collisions collide' 
 level 'CSD U3 collisions bounce intro'
-#missing level bounce
+level 'CSD U3 collisions bounce'
 level 'CSD U3 collisions bounceOff intro'
 level 'CSD U3 collisions bounceOff'
-# missing level displace
-# missing level collisions (obstacle course)
+level 'CSD U3 collisions pirate'
+level 'CSD U3 collisions obstacle'
 level 'CSD U3 collisions tennis' # bounceOff
 level 'CSD U3 collisions bumper' # bounce
 

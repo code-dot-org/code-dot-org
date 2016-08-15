@@ -1,13 +1,11 @@
 name 'U3L24 Conditionals Lecture'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/U3L24_codeStyle.css" />
-
 # Breaking Down if/else Statements
 
 What do if/else if/else statements actually do? They let you control the flow of your program. 
 
-### What is an if statement?
+## What is an if statement?
 
 <br/>
 <img src="https://images.code.org/d62a7b736e7d69957b1c129e0a4ecbe0-image-1437086155945.png" width="300" style="float: left; padding-right: 20px; padding-bottom: 20px;"></img>
@@ -28,8 +26,7 @@ This kind of condition, that can only be evaluated to true or false is called a 
 George Boole was a mathematician who was born in England in the mid 1800s who laid the foundation for Boolean algebra. Boolean algebra is a form of algebra in which the variables represent the values are *true* and *false* rather than the numbers 0-9.
 </details>
 
-<br/>
-### What happens with an if/else statement?
+## What happens with an if/else statement?
 
 
 <img src="https://images.code.org/7f9d457746e3e92324a8e0863aa6088d-image-1437086176386.png" width="400" style="float: right; padding-left: 20px; padding-bottom: 20px;"></img>
@@ -45,8 +42,7 @@ Just like the word "if," "else" is a keyword that your computer reads. If your c
 <br/>
 If the **condition** evaluates to **true**, the computer will treat the body of the "else" as if it didn't exist. If the **condition** evaluates to **false**, the computer will treat the body of the "if" as if it didn't exist. It will only take one of the two possible paths.
 
-<br/>
-### What about an if/else if/else?
+## What about an if/else if/else?
 
 <img src="https://images.code.org/588c6bc9181a591ac20f22d7539b6336-image-1437086182350.png" width="300" style="float: left; padding-right: 20px;"></img>
 
@@ -63,8 +59,4 @@ Once again, the computer chooses only one of the possible paths. When the comput
 <code>} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
 
 If the condition evaluates to **true**, the computer will execute the body of the **else if** statement and ignore everything else. If the condition evaluates to **false**, the computer will check for the next **else** statement.
-
-<br/><br/><br/><br/>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
