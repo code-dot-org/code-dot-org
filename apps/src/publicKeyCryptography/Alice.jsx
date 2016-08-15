@@ -73,8 +73,7 @@ const Alice = React.createClass({
           <div>
             Calculate Bob's secret number.
             <div>
-              (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/>
-              <button>Go</button>
+              (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/> <button>Go</button>
             </div>
             <div>
               Bob's secret number is <IntegerField value={secretNumber}/>!

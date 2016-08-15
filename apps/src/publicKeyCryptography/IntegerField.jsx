@@ -8,9 +8,11 @@ const style = {
 };
 
 export default function IntegerField(props) {
+  const composedStyle = Object.assign({}, style, props.style);
   const displayValue = typeof props.value === 'number' && !isNaN(props.value) ? props.value : '??';
-  return <span style={style}>{displayValue}</span>;
+  return <span style={composedStyle}>{displayValue}</span>;
 }
 IntegerField.propTypes = {
-  value: React.PropTypes.number
+  value: React.PropTypes.number,
+  style: React.PropTypes.object
 };

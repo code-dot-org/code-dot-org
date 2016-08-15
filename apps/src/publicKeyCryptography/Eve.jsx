@@ -4,6 +4,7 @@ import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
+import ValidatorField from './ValidatorField';
 import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
@@ -58,6 +59,12 @@ const Eve = React.createClass({
       publicNumber,
       secretNumber
     } = this.state;
+    const privateKeyEquationResult = publicKey !== null && privateKey !== null && publicModulus !== null ?
+        (publicKey * privateKey) % publicModulus :
+        null;
+    const secretNumberEquationResult = publicKey !== null && secretNumber !== null && publicModulus !== null ?
+        (publicKey * secretNumber) % publicModulus :
+        null;
     return (
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
@@ -70,7 +77,7 @@ const Eve = React.createClass({
           <div>
             Crack Alice's private key:
             <div>
-              (<IntegerField value={publicKey}/> x <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>)MOD <IntegerField value={publicModulus}/> = 1 (??)
+              (<IntegerField value={publicKey}/> x <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>)MOD <IntegerField value={publicModulus}/> = 1 <ValidatorField value={privateKeyEquationResult} expectedValue={1}/>
             </div>
           </div>
           <div>
@@ -79,7 +86,7 @@ const Eve = React.createClass({
           <div>
             Crack Bob's secret number:
             <div>
-              (<IntegerField value={publicKey}/> x <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>)MOD <IntegerField value={publicModulus}/>  = <IntegerField value={publicNumber}/> (??)
+              (<IntegerField value={publicKey}/> x <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>)MOD <IntegerField value={publicModulus}/>  = <IntegerField value={publicNumber}/> <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber}/>
             </div>
           </div>
         </NumberedSteps>
