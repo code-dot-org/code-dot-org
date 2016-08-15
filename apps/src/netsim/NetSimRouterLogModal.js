@@ -19,10 +19,6 @@ var LOG_ENTRY_DATA_KEY = 'LogEntry';
 /** @const {number} */
 var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
 
-function usingNewLogBrowser() {
-  return true;
-}
-
 /**
  * Generator and controller for contents of modal dialog that reveals
  * all router logs together, in a searchable/sortable/filterable manner.
@@ -38,9 +34,6 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
    * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
-  if (!usingNewLogBrowser()) {
-    this.rootDiv_.addClass('old-router-log-modal modal fade');
-  }
 
   /**
    * @private {DashboardUser}
@@ -52,12 +45,6 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
    * @private {boolean}
    */
   this.isVisible_ = false;
-
-  if (!usingNewLogBrowser()) {
-    // Attach handlers for showing and hiding the modal
-    this.rootDiv_.on('shown.bs.modal', this.onShow_.bind(this));
-    this.rootDiv_.on('hidden.bs.modal', this.onHide_.bind(this));
-  }
 
   /**
    * @private {NetSimShard}
@@ -202,20 +189,12 @@ NetSimRouterLogModal.prototype.show = function (teacherView=false) {
   // Extra check for setting teacherView here - must own the shard
   this.teacherView_ = teacherView &&
       (this.shard_ && doesUserOwnShard(this.user_, this.shard_.id));
-  if (usingNewLogBrowser()) {
-    this.onShow_();
-  } else {
-    this.rootDiv_.modal('show');
-  }
+  this.onShow_();
 };
 
 NetSimRouterLogModal.prototype.hide = function () {
-  if (usingNewLogBrowser()) {
-    this.onHide_();
-    this.render();
-  } else {
-    this.rootDiv_.modal('hide');
-  }
+  this.onHide_();
+  this.render();
 };
 
 /**
@@ -252,11 +231,7 @@ NetSimRouterLogModal.prototype.isVisible = function () {
  * Fill the root div with new elements reflecting the current state
  */
 NetSimRouterLogModal.prototype.render = function () {
-  if (usingNewLogBrowser()) {
-    this.newRender_();
-  } else {
-    this.oldRender_();
-  }
+  this.newRender_();
 };
 
 NetSimRouterLogModal.prototype.newRender_ = function () {
@@ -566,7 +541,7 @@ NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
  */
 NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
   this.isAllRouterLogMode_ = mode === 'all';
-  usingNewLogBrowser() && this.render();
+  this.render();
 };
 
 
@@ -577,7 +552,7 @@ NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
  */
 NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
   this.currentTrafficFilter_ = newMode;
-  usingNewLogBrowser() && this.render();
+  this.render();
 };
 
 /**
@@ -647,9 +622,5 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
     }
   });
 
-  if (usingNewLogBrowser()) {
-    this.render();
-  } else {
-    this.renderNewLogEntries_(newLogEntries);
-  }
+  this.render();
 };
