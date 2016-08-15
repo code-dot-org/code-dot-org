@@ -12,6 +12,8 @@
 #  script_id       :integer
 #  level_source_id :integer
 #  submitted       :boolean
+#  view_answers    :boolean
+#  unlocked_at     :datetime
 #
 # Indexes
 #
