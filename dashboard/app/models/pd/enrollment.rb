@@ -47,34 +47,6 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(self.email)
   end
 
-  # Create an enrollment entry for anyone in the workshop section, regardless of actual attendance
-  def self.create_for_unenrolled_attendees(workshop)
-    enrolled_user_ids = Set.new
-    workshop.enrollments.each do |enrollment|
-      user = enrollment.resolve_user
-      enrolled_user_ids.add user.id if user
-    end
-
-    [].tap do |new_enrollments|
-      next unless workshop.section
-      workshop.section.students.each do |attendee|
-        next if enrolled_user_ids.include? attendee.id
-
-        if attendee.email.blank?
-          CDO.log.warn "Unable to create an enrollment for workshop attendee with no email. User Id: #{attendee.id}"
-          next
-        end
-
-        new_enrollments << Pd::Enrollment.create!(
-          workshop: workshop,
-          name: attendee.name,
-          email: attendee.email,
-          user: attendee
-        )
-      end
-    end
-  end
-
   def in_section?
     user = resolve_user
     return false unless user && self.workshop.section

@@ -14,9 +14,7 @@ stage "Sending Binary Messages"
 level 'v2 U1L2 Student Lesson Introduction'
 assessment 'U1L2 Multiple Choice Assessment Question'
 assessment 'U1L2 Free response assessment question'
-assessment 'U1L2 Free response reflection question'
 assessment  'U1L3 Free response reflection question'
-assessment 'U1L3 Multiple Choice'
 assessment 'U1L3 Free Response'
 
 stage 'Sending Binary Messages with the Internet Simulator'
@@ -24,6 +22,7 @@ level 'v2 U1L3 Student Lesson Introduction'
 named_level 'Internet Simulator: Sending Binary Messages'
 named_level 'The Internet: Wires, Cables, and Wifi'
 assessment 'U1L4 Multiple Choice'
+assessment 'U1L3 Multiple Choice'
 assessment 'U1L4 Free Response Reflection'
 assessment 'U1L5 Matching Assessment'
 

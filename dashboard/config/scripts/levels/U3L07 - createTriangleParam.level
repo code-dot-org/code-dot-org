@@ -80,14 +80,14 @@
       {
         "entries": [
           "drawTriangle:1",
-          "moveFoward:1",
+          "moveForward:1",
           "turnLeft:1",
-          "moveFoward:1",
+          "moveForward:1",
           "turnLeft:1",
-          "moveFoward:1",
+          "moveForward:1",
           "turnLeft:1"
         ],
-        "matchType": "exact",
+        "matchType": "inexact",
         "minTimes": 2,
         "message": "App Lab is expecting that you will define drawTrinagle to moveFoward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started."
       },

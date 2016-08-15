@@ -61,7 +61,7 @@ FactoryGirl.define do
       end
       # Creates a teacher optionally enrolled in a workshop,
       # joined the workshop section,
-      # or marked attended on the first workshop session.
+      # or marked attended on either all (true) or a specified list of workshop sessions.
       factory :pd_workshop_participant do
         transient do
           workshop nil
@@ -73,7 +73,12 @@ FactoryGirl.define do
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
           evaluator.workshop.section.add_student teacher if evaluator.in_section
-          create :pd_attendance, session: evaluator.workshop.sessions.first, teacher: teacher if evaluator.attended
+          if evaluator.attended
+            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
+            attended_sessions.each do |session|
+              create :pd_attendance, session: session, teacher: teacher
+            end
+          end
         end
       end
     end
@@ -502,6 +507,15 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+    transient do
+      num_sessions 0
+    end
+    after(:create) do |workshop, evaluator|
+      # Sessions, one per day starting today
+      evaluator.num_sessions.times do |i|
+        workshop.sessions << create(:pd_session, workshop: workshop, start: Date.today + i.days)
+      end
+    end
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do

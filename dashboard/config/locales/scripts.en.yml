@@ -1902,6 +1902,7 @@ en:
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
+          Processing Information: Processing Information
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
           description_short: Web Development

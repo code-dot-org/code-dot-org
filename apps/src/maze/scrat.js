@@ -2,6 +2,8 @@ import {SquareType} from './tiles';
 import {Direction} from './tiles';
 import _ from 'lodash';
 
+import Subtype from './subtype';
+
 const TILE_SHAPES = {
   'log':             [0, 0],
   'lily1':           [1, 0],
@@ -22,11 +24,13 @@ const TILE_SHAPES = {
   'empty': [4, 0]
 };
 
-export default class Scrat {
+export default class Scrat extends Subtype {
 
-  constructor(maze, studioApp) {
-    this.maze_ = maze;
-    this.studioApp_ = studioApp;
+  /**
+   * @override
+   */
+  isScrat() {
+    return true;
   }
 
   // Returns true if the tile at x,y is either a water tile or out of bounds
