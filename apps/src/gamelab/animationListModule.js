@@ -3,6 +3,11 @@
  */
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
+import {
+  fetchUrlAsBlob,
+  blobToDataURI,
+  dataURIToSourceSize
+} from '../imageUtils';
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
@@ -380,36 +385,6 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
-}
-
-function fetchUrlAsBlob(url, onComplete) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'blob';
-  xhr.onload = e => {
-    if (e.target.status === 200) {
-      onComplete(null, e.target.response);
-    } else {
-      onComplete(new Error(`URL ${url} responded with code ${e.target.status}`));
-    }
-  };
-  xhr.onerror = e => onComplete(new Error(`Error ${e.target.status} occurred while receiving the document.`));
-  xhr.send();
-}
-
-function blobToDataURI(blob, onComplete) {
-  let fileReader = new FileReader();
-  fileReader.onload = e => onComplete(e.target.result);
-  fileReader.readAsDataURL(blob);
-}
-
-function dataURIToSourceSize(dataURI) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve({x: image.width, y: image.height});
-    image.onerror = err => reject(err);
-    image.src = dataURI;
-  });
 }
 
 /**

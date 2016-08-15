@@ -7,6 +7,7 @@
 
 'use strict';
 
+import {imageDataFromSourceUrl} from '../imageUtils';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -183,6 +184,9 @@ var RESET_TEXT_Y_POSITION = 380;
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
+var BYTES_PER_PIXEL = 4;
+var BITS_PER_BYTE = 8;
+
 var twitterOptions = {
   text: studioMsg.shareStudioTwitter(),
   hashtag: "StudioCode"
@@ -262,34 +266,35 @@ function loadLevel() {
   studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
   studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
 
+  Studio.BYTES_PER_ROW = Math.ceil(Studio.MAZE_WIDTH / BITS_PER_BYTE);
+
   if (skin.wallMapLayers) {
     Studio.wallMapLayers = {};
-    for (let map in skin.wallMapLayers) {
-      let img = new Image();
-      img.onload = function () {
-        var canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        var context = canvas.getContext('2d');
-        context.drawImage(img, 0, 0);
-        var data = context.getImageData(0, 0, canvas.width, canvas.height).data;
-        var arr = new Uint8Array(20000);
-        for (var i = 0; i < 400; i++) {
-          for (var j = 0; j < 400; j+=8) {
-            let bits = 0;
-            for (var k = 0; k < 8; k++) {
-              if (data[4 * (400 * i + j + k)] === 0) {
-                bits = bits | (1 << k);
-              }
-            }
-            arr[i * 50 + j / 8] = bits;
-          }
-        }
-        Studio.wallMapLayers[map] = arr;
-      };
-      img.src = skin.wallMapLayers[map].srcUrl;
+    for (const mapName in skin.wallMapLayers) {
+      imageDataFromSourceUrl(skin.wallMapLayers[mapName].srcUrl, imageData => {
+        Studio.wallMapLayers[mapName] = wallMapFromImageData(imageData);
+      });
     }
   }
+}
+
+function wallMapFromImageData(data) {
+  // Every row starts with a new byte to make some calculations simpler. The
+  // default width of 400 fits perfectly into 50 bytes anyway.
+  const arr = new Uint8Array(Studio.MAZE_HEIGHT * Studio.BYTES_PER_ROW);
+  for (let y = 0; y < Studio.MAZE_HEIGHT; y++) {
+    for (let x = 0; x < Studio.MAZE_WIDTH; x += BITS_PER_BYTE) {
+      let bits = 0;
+      for (let k = 0; k < BITS_PER_BYTE; k++) {
+        if (x + k < Studio.MAZE_WIDTH &&
+            data[BYTES_PER_PIXEL * ((y * Studio.MAZE_WIDTH) + x + k)] === 0) {
+          bits = bits | (1 << k);
+        }
+      }
+      arr[(y * Studio.BYTES_PER_ROW) + (x / BITS_PER_BYTE)] = bits;
+    }
+  }
+  return arr;
 }
 
 /**
@@ -729,7 +734,7 @@ var performQueuedMoves = function (i) {
     }
   }
 
-  if (level.blockMovingIntoWalls) {
+  if (level.blockMovingIntoWalls && (newX !== origX || newY !== origY)) {
     if (Studio.willSpriteTouchWall(sprite, newX, newY)) {
       if (!Studio.willSpriteTouchWall(sprite, newX, origY)) {
         newY = origY;
@@ -1640,25 +1645,31 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
   }
 
   var wallMapLayer = null;
-  if (Studio.wallMapLayers) {
+  if (Studio.wallMapLayers && Studio.wallMapRequested) {
     wallMapLayer = Studio.wallMapLayers[Studio.wallMapRequested];
   }
 
   if (wallMapLayer) {
-    // Comapre against a layout image
-    //let index = (400 * yCenter + xCenter) >> 3;
-    //let mask = 1 << (xCenter & 7);
-    //return wallMapLayer[index] & mask;
+    // Compare against a layout image
 
     const yTop = yCenter - collidableHeight / 2;
+    const yBottom = yTop + collidableHeight;
     const xLeft = xCenter - collidableWidth / 2;
+    const xRight = xLeft + collidableWidth;
+    const xStart = Math.floor(xLeft / BITS_PER_BYTE);
+    const xEnd = Math.floor((xRight - 1) / BITS_PER_BYTE);
 
-    for (let y = 0; y < collidableWidth; y++) {
-      for (let x = 0; x < collidableHeight; x++) {
-        let index = (400 * (yTop + y) + (xLeft + x)) >> 3;
-        let mask = 1 << ((xLeft + x) & 7);
-        if (wallMapLayer[index] & mask) {
-          return true;
+    for (let y = yTop; y < yBottom; y++) {
+      const rowStart = Studio.BYTES_PER_ROW * y;
+      for (let x = xStart; x <= xEnd; x++) {
+        if (wallMapLayer[rowStart + x]) {
+          const start = Math.max(xLeft, Math.floor(x * BITS_PER_BYTE));
+          const end = Math.min(xRight, Math.floor((x + 1) * BITS_PER_BYTE));
+          for (let i = start; i < end; i++) {
+            if (wallMapLayer[rowStart + x] & (1 << (i % BITS_PER_BYTE))) {
+              return true;
+            }
+          }
         }
       }
     }
@@ -4608,45 +4619,41 @@ Studio.setMap = function (opts) {
 Studio.fixSpriteLocation = function () {
   if (level.wallMapCollisions && level.blockMovingIntoWalls) {
 
-    var spriteIndex = 0;
+    for (var spriteIndex = 0; spriteIndex < Studio.sprite.length; spriteIndex++) {
+      var sprite = Studio.sprite[spriteIndex];
+      var position = getNextPosition(spriteIndex, false);
 
-    if (Studio.sprite.length <= spriteIndex) {
-      return;
-    }
+      if (Studio.willSpriteTouchWall(sprite, position.x, position.y)) {
 
-    var sprite = Studio.sprite[spriteIndex];
-    var position = getNextPosition(spriteIndex, false);
+        // Let's assume that one of the surrounding 8 squares is available.
+        // (Note: this is a major assumption predicated on level design.)
 
-    if (Studio.willSpriteTouchWall(sprite, position.x, position.y)) {
+        var xCenter = position.x + sprite.width / 2;
+        var yCenter = position.y + sprite.height / 2;
 
-      // Let's assume that one of the surrounding 8 squares is available.
-      // (Note: this is a major assumption predicated on level design.)
+        xCenter += skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
+        yCenter += skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
 
-      var xCenter = position.x + sprite.width / 2;
-      var yCenter = position.y + sprite.height / 2;
+        var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
+        var yGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
 
-      xCenter += skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
-      yCenter += skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
+        var minRow = Math.max(yGrid - 1, 0);
+        var maxRow = Math.min(yGrid + 1, Studio.ROWS - 1);
+        var minCol = Math.max(xGrid - 1, 0);
+        var maxCol = Math.min(xGrid + 1, Studio.COLS - 1);
 
-      var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
-      var yGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
-
-      var minRow = Math.max(yGrid - 1, 0);
-      var maxRow = Math.min(yGrid + 1, Studio.ROWS - 1);
-      var minCol = Math.max(xGrid - 1, 0);
-      var maxCol = Math.min(xGrid + 1, Studio.COLS - 1);
-
-      for (var row = minRow; row <= maxRow; row++) {
-        for (var col = minCol; col <= maxCol; col++) {
-          var tryX = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
-              skin.wallCollisionRectOffsetX;
-          var tryY = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
-              skin.wallCollisionRectOffsetY;
-          if (!Studio.willSpriteTouchWall(sprite, tryX, tryY)) {
-            sprite.x = tryX;
-            sprite.y = tryY;
-            sprite.setDirection(Direction.NONE);
-            return;
+        for (var row = minRow; row <= maxRow; row++) {
+          for (var col = minCol; col <= maxCol; col++) {
+            var tryX = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
+                skin.wallCollisionRectOffsetX;
+            var tryY = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
+                skin.wallCollisionRectOffsetY;
+            if (!Studio.willSpriteTouchWall(sprite, tryX, tryY)) {
+              sprite.x = tryX;
+              sprite.y = tryY;
+              sprite.setDirection(Direction.NONE);
+              return;
+            }
           }
         }
       }
