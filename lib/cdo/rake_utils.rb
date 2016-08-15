@@ -31,6 +31,10 @@ module RakeUtils
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
+  def self.restart_service(id)
+    sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
+  end
+
   def self.system_(*args)
     status, _ = system__(command_(*args))
     status
