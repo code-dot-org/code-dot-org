@@ -39,9 +39,10 @@
 
       -# Remember me
       - if devise_mapping.rememberable?
-        .singleitemblock.rememberme
-          = f.check_box :remember_me
-          = t('signin_form.remember')
+        .singleitemblock
+          %label.rememberme
+            = f.check_box :remember_me
+            = t('signin_form.remember')
 
       -# Not yet signed up?  Sign up
       .singleitemblock
