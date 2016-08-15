@@ -48,6 +48,12 @@ const PublicKeyCryptographyWidget = React.createClass({
     this.setState({privateKey});
   },
 
+  setPublicKey(publicKey) {
+    // Only Alice can set the public key.  Inform Bob and Eve.
+    this.eve.setPublicKey(publicKey);
+    this.bob.setPublicKey(publicKey);
+  },
+
   setSecretNumber(secretNumber) {
     this.setState({secretNumber});
   },
@@ -71,11 +77,8 @@ const PublicKeyCryptographyWidget = React.createClass({
         <EqualColumns intercolumnarDistance={20}>
           <Alice
             ref={x => this.alice = x}
-            publicModulus={publicModulus}
-            privateKey={privateKey}
-            publicKey={this.publicKey({privateKey, publicModulus})}
             setPublicModulus={this.setPublicModulus}
-            setPrivateKey={this.setPrivateKey}
+            setPublicKey={this.setPublicKey}
           />
           <Eve
             ref={x => this.eve = x}

@@ -5,52 +5,68 @@ import NumberedSteps from './NumberedSteps';
 import PublicModulusDropdown from './PublicModulusDropdown';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
-import {privateKeyList} from './cryptographyMath';
+import {computePublicKey, privateKeyList} from './cryptographyMath';
 
 const Alice = React.createClass({
   propTypes: {
-    publicModulus: React.PropTypes.number,
-    privateKey: React.PropTypes.number,
-    publicKey: React.PropTypes.number,
     setPublicModulus: React.PropTypes.func.isRequired,
-    setPrivateKey: React.PropTypes.func.isRequired
+    setPublicKey: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
     return {
+      publicModulus: null,
+      privateKey: null,
       publicNumber: null
     };
+  },
+
+  setPublicModulus(publicModulus) {
+    this.setState({
+      publicModulus,
+      privateKey: null,
+    });
+    this.props.setPublicModulus(publicModulus);
+  },
+
+  setPrivateKey(privateKey) {
+    const {publicModulus} = this.state;
+    this.setState({privateKey});
+    this.props.setPublicKey(this.getPublicKey({privateKey, publicModulus}));
   },
 
   setPublicNumber(publicNumber) {
     this.setState({publicNumber});
   },
 
+  getPublicKey({privateKey, publicModulus}) {
+    return privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : null;
+  },
+
   render() {
     const {
       publicModulus,
       privateKey,
-      publicKey,
-      setPublicModulus,
-      setPrivateKey
-    } = this.props;
-    const {
       publicNumber
     } = this.state;
+    const publicKey = this.getPublicKey({privateKey, publicModulus});
     const secretNumber = (publicNumber * privateKey) % publicModulus;
 
     return (
       <CollapsiblePanel title="Alice">
         <NumberedSteps>
           <div>
-            Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
+            Enter public modulus:
+            <PublicModulusDropdown value={publicModulus} onChange={this.setPublicModulus}/>
           </div>
           <div>
-            Set a private key: <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={setPrivateKey}/>
+            Set a private key:
+            <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>
             <div>Your computed public key is {publicKey}</div>
           </div>
           <div>
-            Enter Bob's public number: <IntegerTextbox value={publicNumber} onChange={this.setPublicNumber}/>
+            Enter Bob's public number:
+            <IntegerTextbox value={publicNumber} onChange={this.setPublicNumber}/>
           </div>
           <div>
             Calculate Bob's secret number.
