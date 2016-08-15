@@ -1,6 +1,6 @@
 import { expect } from '../../util/configuredChai';
 import FirebaseStorage from '@cdo/apps/applab/firebaseStorage';
-import { getDatabase, getFirebase } from '@cdo/apps/applab/firebaseUtils';
+import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   beforeEach(() => {
@@ -10,6 +10,32 @@ describe('FirebaseStorage', () => {
       firebaseAuthToken: 'test-firebase-auth-token',
     });
     getDatabase(Applab.channelId).autoFlush();
+    return getConfigRef().set({
+      limits: {
+        '15': 5,
+        '60': 10
+      },
+      maxRecordSize: 100,
+      maxPropertySize: 100,
+      maxTableRows: 20
+    });
+  });
+
+  describe('createRecord', () => {
+    it('creates a record', done => {
+      FirebaseStorage.createRecord(
+        'mytable',
+        {name: 'bob', age: 8},
+        () => {
+          getDatabase(Applab.channelId).child(`storage/tables/${'mytable'}/records`)
+            .once('value')
+            .then(snapshot => {
+              expect(snapshot.val()).to.deep.equal({1:'{"name":"bob","age":8,"id":1}'});
+              done();
+            });
+        },
+        error => {throw error;});
+    });
   });
 
   describe('populateTable', () => {
