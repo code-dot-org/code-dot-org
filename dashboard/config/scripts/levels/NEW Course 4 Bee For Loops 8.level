@@ -33,7 +33,8 @@
     "step_speed": "1",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If your loop is counting up, the increment is added to your counter variable each time through. \\n\\nWhat do you need to add to each number to get the number after it?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If your loop is counting up, the increment is added to your counter variable each time through. \\n\\nWhat do you need to add to each number to get the number after it?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -58,7 +59,7 @@
               </value>
               <value name="TO">
                 <block type="math_number">
-                  <title name="NUM">9</title>
+                  <title name="NUM">15</title>
                 </block>
               </value>
               <value name="BY">

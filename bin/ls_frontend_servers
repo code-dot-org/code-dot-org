@@ -9,11 +9,12 @@
 # frontend-d02            ip-10-157-137-197.ec2.internal
 # ...
 
-require 'aws-sdk'
 require 'optparse'
 ENV['RAILS_ENV'] = 'production'
 require_relative '../deployment'
+require 'aws-sdk'
 CDO.chef_managed = true
+CDO.log.level = Logger::WARN
 
 if __FILE__ == $0
   json_format = false

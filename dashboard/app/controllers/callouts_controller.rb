@@ -64,6 +64,7 @@ class CalloutsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_callout
     @callout = Callout.find(params[:id])

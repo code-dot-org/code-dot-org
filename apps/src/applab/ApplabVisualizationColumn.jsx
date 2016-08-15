@@ -11,14 +11,10 @@ var PhoneFrame = require('./PhoneFrame');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
 
 var styles = {
-  nonResponsive: {
-    maxWidth: applabConstants.APP_WIDTH,
-  },
   completion: {
     display: 'inline'
   },
@@ -65,12 +61,14 @@ var ApplabVisualizationColumn = React.createClass({
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
+    nonResponsiveWidth: React.PropTypes.number.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
+    isPaused: React.PropTypes.bool,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -89,11 +87,11 @@ var ApplabVisualizationColumn = React.createClass({
       // wrap our visualization in a phone frame
       visualization = (
         <PhoneFrame
-            isDark={this.props.isRunning}
-            showSelector={!this.props.isRunning}
-            isPaused={this.props.isPaused}
-            screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate}
+          isDark={this.props.isRunning}
+          showSelector={!this.props.isRunning}
+          isPaused={this.props.isPaused}
+          screenIds={this.props.screenIds}
+          onScreenCreate={this.props.onScreenCreate}
         >
           {visualization}
         </PhoneFrame>
@@ -107,26 +105,31 @@ var ApplabVisualizationColumn = React.createClass({
 
     return (
       <div
-          id="visualizationColumn"
-          className={visualizationColumnClassNames}
-          style={[!this.props.isResponsive && styles.nonResponsive]}
+        id="visualizationColumn"
+        className={visualizationColumnClassNames}
+        style={[!this.props.isResponsive && {maxWidth: this.props.nonResponsiveWidth}]}
       >
-        {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
+        {!this.props.isReadOnlyWorkspace &&
+          <PlaySpaceHeader
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate} />
+            onScreenCreate={this.props.onScreenCreate}
+          />
         }
         {visualization}
         {this.props.isIframeEmbed &&
-         <div style={styles.resetButtonWrapper}>
-           <ResetButton hideText={true}
-                        style={styles.resetButton}
-                        imageStyle={styles.resetButtonImage} />
-         </div>
+          <div style={styles.resetButtonWrapper}>
+            <ResetButton
+              hideText={true}
+              style={styles.resetButton}
+              imageStyle={styles.resetButtonImage}
+            />
+          </div>
         }
         <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
-          <div style={[
+          <div
+            style={[
               styles.completion,
               this.props.playspacePhoneFrame && styles.phoneFrameCompletion
             ]}
@@ -146,6 +149,7 @@ module.exports = connect(function propsFromStore(state) {
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),
+    nonResponsiveWidth: state.pageConstants.nonResponsiveVisualizationColumnWidth,
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,

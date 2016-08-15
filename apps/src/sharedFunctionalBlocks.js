@@ -2,7 +2,7 @@
  * A set of functional blocks
  */
 var _ = require('lodash');
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
 
@@ -470,7 +470,7 @@ function installCondForType(blockly, generator, type) {
      */
     removeConditionalRow: function (id) {
       var index = this.pairs_.indexOf(id);
-      if (!_(this.pairs_).contains(id) || this.pairs_.length === 1) {
+      if (!_(this.pairs_).includes(id) || this.pairs_.length === 1) {
         return;
       }
       this.pairs_.splice(index, 1);
@@ -528,7 +528,7 @@ function installCondForType(blockly, generator, type) {
       }
 
       for (i = 0; i < lastRow; i++) {
-        if (!_(pairs).contains(i)) {
+        if (!_(pairs).includes(i)) {
           this.removeConditionalRow(i);
         }
       }

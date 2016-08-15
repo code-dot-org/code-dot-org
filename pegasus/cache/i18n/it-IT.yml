@@ -4,10 +4,10 @@
   'yes': Sì
   'no': 'No'
   select_language: Seleziona per favore la tua lingua
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org non supporterà più Internet Explorer 8, 9 e 10. Effettua
+    l'aggiornamento ad un browser più moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org non supporterà più Internet Explorer 8,
+    9 e 10. Effettua l'aggiornamento ad un browser più moderno.
   upgrade_ie_link: Ulteriori informazioni
   en: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
@@ -58,7 +58,7 @@
   csedweek_map_legend_cs_tech_jam: Eventi speciali
   cded_sign_up: Iscriviti
   cded_try_it: Prova
-  twentyhours_trynow: Prova adesso
+  try_now: Prova adesso
   california_heading: Chiedi alla tua scuola di insegnare informatica
   california_text: Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>corsi
     gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>insegnare
@@ -86,17 +86,17 @@
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course1: Congratulazioni per il completamento del
-    corso 1
-  congratulations_on_completing_course2: Congratulazioni per il completamento del
-    corso 2
-  congratulations_on_completing_course3: Congratulazioni per il completamento del
-    corso 3
-  congratulations_on_completing_course4: Congratulazioni per il completamento del
-    corso 4
-  congratulations_on_completing_accelerated: Congratulazioni per il completamento
-    del corso accelerato
-  congrats_next_tutorials_title: Prova ora questi tutorial
+  congratulations_on_completing_course1: Complimenti per aver completato il Corso
+    1
+  congratulations_on_completing_course2: Complimenti per aver completato il Corso
+    2
+  congratulations_on_completing_course3: Complimenti per aver completato il Corso
+    3
+  congratulations_on_completing_course4: Complimenti per aver completato il Corso
+    4
+  congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
+    Rapido
+  congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
   get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
@@ -268,11 +268,12 @@
   hoc_is_here: Impara l'informatica. Essa sta cambiando tutto. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg @programmafuturo'
-  just_did_course1: Ho appena finito il corso 1 - verificalo su @codeorg
-  just_did_course2: Ho appena finito il corso 2 - verificalo su @codeorg
-  just_did_course3: Ho appena finito il corso 3 - verificalo su @codeorg
-  just_did_course4: Ho appena finito il corso 4 - verificalo su @codeorg
-  just_did_accelerated: Ho appena finito il corso accelerato - Verificalo su @codeorg
+  just_did_course1: Ho appena completato il Corso 1 - Provalo! Su @codeorg @programmafuturo
+  just_did_course2: Ho appena completato il Corso 2 - Provalo! Su @codeorg @programmafuturo
+  just_did_course3: Ho appena completato il Corso 3 - Provalo! Su @codeorg @programmafuturo
+  just_did_course4: Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo
+  just_did_accelerated: Ho appena completato il Corso Rapido - Provalo! Su @codeorg
+    @programmafuturo
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   learn_hoc: Fai l'Ora del Codice
@@ -397,6 +398,9 @@
   homepage_banner_congress: Alcuni personaggi di spicco americani chiedono al Congresso
     di finanziare il programma d'informatica K-12.
   homepage_banner_congress_link: Aggiungi il tuo sostegno
+  homepage_banner_emailprivacy: Stiamo facendo un cambiamento importante per tutelare
+    ancora di più la privacy degli studenti.
+  homepage_banner_emailprivacy_link: Ulteriori informazioni…
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
@@ -472,22 +476,17 @@
     stimolanti</a> fatti da celebrità e modelli di riferimento
   playlab_choose_theme: Scegli il tema del tuo Laboratorio
   playlab_classic_title: Classico
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Lo straordinario mondo di Gumball
   playlab_iceage_title: L'Era Glaciale - È in arrivo
   playlab_iceage_title_live: L'Era Glaciale
   starwars_subtitle: Costruisci una galassia con il codice
   starwars_javascript_title: Javascript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
   starwars_javascript_specs: Solo in inglese | Browser moderni | Da 11 anni in su
-  starwars_javascript_start_button: Prova adesso
   starwars_blocks_title: Blocchi
   starwars_blocks_description: Usa la programmazione a blocchi.
   starwars_blocks_specs: Molte lingue | Browser, smartphone e tablet moderni | Da
     6 anni in su
-  starwars_blocks_start_button: Prova adesso
-  starwars_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
-  starwars_speak_languages: Parli un'altra lingua?
-  starwars_help_translate: Aiutaci a tradurre
   starwars_platform_text: Browser moderni, smartphone, tablet
   mc_name: L'Ora del Codice con Minecraft
   mc_longdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
@@ -498,6 +497,14 @@
   mc_platformtext: Browser moderni, smartphone, Tablet
   mc_specs: Molte lingue | Browser e tablet moderni | Da 6 anni in su
   minecraft_subtitle: L'Ora del Codice con Minecraft
+  watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
+  speak_another_language: Parli un'altra lingua?
+  help_translate: Aiutaci a tradurre.
+  no_internet: Non hai Internet?
+  download_offline: Scarica la versione offline.
+  are_you_teacher: Sei un insegnante?
+  review_lesson_plan: Valuta il piano di lavoro della lezione e le altre risorse per
+    l’insegnante.
   volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
     del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
@@ -665,17 +672,19 @@
     professionali gratuiti e di elevata qualità: <a href="/professional-development-workshops">trovate
     quello più vicino a voi!</a>'
   dashboard_middle_courses: Corsi da 20 ore per la scuola secondaria di primo grado
-  dashboard_middle_courses_desc: Il nostro curriculum per la secondaria di primo grado
-    utilizza l'informatica e la programmazione all'interno della matematica e delle
-    scienze - come strumento per insegnare concetti matematici e scientifici. Per
-    iscriversi a seminari di sviluppo professionale, iscriversi a <a href="/educate/districts">
-    per un partenariato</a> con Code.org.
+  dashboard_middle_courses_desc: 'I nostri corsi per la scuola secondaria di primo
+    grado utilizzano l''informatica e la programmazione all''interno della matematica
+    e delle scienze - come strumento per insegnare concetti matematici e scientifici.
+    Per gli insegnanti in Italia: accedi a <a href="http://programmailfuturo.it">Programma
+    il Futuro</a> per avere assistenza specifica. Per gli insegnanti negli USA: iscriversi
+    al <a href="/educate/districts">partenariato</a> con Code.org.'
   dashboard_high_courses: Corsi di un anno per la scuola secondaria superiore
-  dashboard_high_courses_desc: Il programma della nostra scuola superiore aiuta i
-    distretti scolastici offrendo corsi di informatica per l'intero anno, preparando
-    i docenti ad ampliare l'offerta formativa in questo nuovo campo. Per iscriversi
-    ai seminari di sviluppo professionale, iscrivetevi a un <a href="/educate/districts">
-    per un partenariato</a> con Code.org.
+  dashboard_high_courses_desc: 'Il nostro programma per la scuola secondaria di secondo
+    grado offre corsi di informatica per l''intero anno, preparando i docenti ad ampliare
+    l''offerta formativa in questo nuovo campo. Per gli insegnanti in Italia: accedi
+    a <a href="http://programmailfuturo.it">Programma il Futuro</a> per avere assistenza
+    specifica. Per gli insegnanti negli USA: iscriversi al <a href="/educate/districts">partenariato</a>
+    con Code.org.'
   dashboard_course_csina: Informatica in Algebra
   dashboard_course_csina_desc: Code.org ha collaborato con Bootstrap per sviluppare
     un curriculum che insegni i concetti algebrici e geometrici attraverso la programmazione
@@ -714,6 +723,8 @@
     corso dal menu a tendina qui sopra per vedere le risposte degli studenti.
   dashboard_assessments_summaries: Riassunti
   dashboard_assessments_answers: Tutte le risposte
+  dashboard_surveys_answers: Sondaggi
+  dashboard_percent: Percento
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
   dashboard_download_csv: Scarica CSV
@@ -725,13 +736,14 @@
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
-  dashboard_navigation_view_progress: Controlla i progressi
-  dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
+  dashboard_navigation_view_progress: Avanzamento
+  dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
+  dashboard_navigation_view_assessments_surveys: Valutazioni/Sondaggi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: Guarda le statistiche
+  dashboard_navigation_view_stats: Statistiche
   dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
   dashboard_progress_not_started: non avviato
@@ -745,7 +757,7 @@
   dashboard_progress_view: 'Mostra i progressi in:'
   dashboard_progress_student_in_script: Informazioni sui progressi di %{student_name}
     in %{script_name}
-  dashboard_progress_pair_programming: programmazione in Coppia
+  dashboard_progress_pair_programming: Programmazione in Coppia
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
@@ -756,7 +768,7 @@
   dashboard_sections_table_secret: Tipo di accesso
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Fase extra
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
@@ -855,11 +867,11 @@
     grado
   dashboard_curriculum_high_title: Risorse per insegnanti della secondaria superiore
   dashboard_lesson_plans: Piano di lavoro delle lezioni
-  dashboard_view_all_lesson_plans: Scarica il curriculum completo per i corsi 1-3
+  dashboard_view_all_lesson_plans: Scarica il curriculum completo per i corsi 1-4
   dashboard_course1: 'Corso 1:'
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
-  dashboard_course4: 'Corso 4 (beta): '
+  dashboard_course4: 'Corso 4: '
   dashboard_unplugged: Se non hai dei computers, <a href='%{unplugged_url}'>prova
     queste lezioni</a> nella tua classe.
   dashboard_curriculum: Curriculum
@@ -911,7 +923,8 @@
   dashboard_sections_account_creation_question: Chi crea gli account per gli studenti?
   dashboard_sections_password_question: Che cosa usano gli studenti come password?
   dashboard_sections_picture_account_creation: Un immagine scelta da Code.org
-  dashboard_sections_word_account_creation: Una parola scelta da Code.org
+  dashboard_sections_word_account_creation: Una coppia di parole semplici scelte da
+    Code.org
   dashboard_sections_sign_in_question: Dove fanno accesso gli studenti?
   dashboard_sections_sign_in_unique: L'unica pagina Web elencata nella scheda "Gestisci
     i tuoi studenti"
@@ -922,13 +935,17 @@
   dashboard_faq: FAQ - Domande e risposte
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
-  dashboard_announce_view_all: Visualizza tutto
   dashboard_announce_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono
     una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato
     che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
     Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
     pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-  dashboard_announce_button_text: Ulteriori informazioni
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Ulteriori informazioni
+  dashboard_announce_try_now_button: Prova adesso
   dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
     ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
     è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -937,6 +954,8 @@
     aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di
     informatica K-12.
   dashboard_announce_petition_button: Aggiungi il tuo nome
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1070,6 +1089,7 @@
   cspunit6_name: I principi dell'informatica - Unità 6
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Test completo - 50 domande
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
@@ -1285,14 +1305,14 @@
     per le classi 2-5.
   course3_shortdescription_congrats: Pronti ad andare oltre? Gli studenti potranno
     approfondire gli argomenti di programmazione introdotti nei corsi precedenti per
-    trovare soluzioni flessibili per risolvere problemi più complessi. Alla fine di
-    questo corso, gli studenti saranno in grado di creare storie interattive e giochi
-    che potranno condividere con chiunque. Consigliato per classi 4-5.
+    trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
+    saranno in grado di creare storie interattive e giochi che potranno condividere
+    con chiunque.
   course4_shortdescription_congrats: Pronti ad andare oltre? Gli studenti potranno
     approfondire gli argomenti di programmazione introdotti nei corsi precedenti per
     trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
     saranno in grado di creare storie interattive e giochi che potranno condividere
-    con chiunque. Consigliato per classi 4-8.
+    con chiunque.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -1827,12 +1847,11 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
-  compatibility_https_header: Serve abilitare il protocollo HTTPS per Code.org.
-  compatibility_https_message: Per aumentare la sicurezza, noi stiamo passando a HTTPS
-    su %{https_date}. Non sarete in grado di accedere Code.org dopo questa data. <a
-    href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare
-    HTTPS per accedere a Code.org.
-  compatibility_https_hide_this_warning: Nascondi questo avviso
+  compatibility_hide_this_warning: Nascondi questo avviso
+  compatibility_unsupported_browser: Il tuo browser non è supportato. Si prega di
+    aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'>
+    uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina,
+    ma aspettati qualche malfunzionamento.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1841,3 +1860,4 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
+  dashboard_action_print_certificates: Print certificates

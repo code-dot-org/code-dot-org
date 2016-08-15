@@ -69,7 +69,7 @@ end
 
 def yamlize(hsh)
   hsh.each do |_k, v|
-    if v.has_key? "properties"
+    if v.key? "properties"
       v['properties'] = v['properties'].to_json
     end
   end

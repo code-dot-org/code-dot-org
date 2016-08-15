@@ -3,7 +3,7 @@ require_relative '../../pegasus/src/env'
 require src_dir 'database'
 require 'cdo/poste'
 
-def load_contacts()
+def load_contacts
   {}.tap do |contacts|
     DB[:contacts].all.each do |contact|
       contacts[contact[:email]] = contact[:id]
@@ -43,7 +43,7 @@ def process_command_line(argv=ARGV)
     i = 0
     c = argv.count
 
-    while(i < c)
+    while i < c
       if argv[i] == '--threads'
         raise ArgumentError, 'no value for --threads flag provided.' unless (i += 1) < c
         params[:threads] = argv[i].to_i
@@ -88,7 +88,7 @@ Options:
 I look for templates in pegasus/emails
 EOS
 
-def main()
+def main
   params = process_command_line
   raise ArgumentError, USAGE unless params[:template] && params[:csv]
 

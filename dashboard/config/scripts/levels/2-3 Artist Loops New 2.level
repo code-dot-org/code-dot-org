@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Here is the same puzzle that we just solved, but this time, we have to use loops to pass it.  Can you put a `repeat` around the starter code to finish the robot head?",
+    "instructions": "Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -17,7 +17,7 @@
     "slider_speed": "0.7",
     "video_key": "C2_artist_loops",
     "embed": "false",
-    "markdown_instructions": "Here is the same puzzle that we just solved, but this time, we *have* to use loops to pass it.  \r\n\r\nCan you put a `repeat` around the starter code to finish the robot head?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?\r\n\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,10 +32,12 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "7/26: Added limit on the number of moves and turns - Ryan",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -44,23 +46,18 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="draw_move_by_constant" deletable="false">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-          <next>
-            <block type="draw_turn_by_constant_dropdown" deletable="false">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">90</title>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant" limit="1">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown" limit="1">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>

@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-
 # Οδηγός σεναρίων εκμάθησης για την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής (CsedWeek)
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
@@ -25,7 +24,7 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
   * [General guidelines for creating an Hour of Code™ activity](#guidelines)
   * [Τρόπος αξιολόγησης των σεναρίων προς ανάρτηση](#inclusion)
-  * [How to submit (Due 10/15/2015)](#submit)
+  * [Πώς να υποβάλετε (προθεσμία 15/10/2015)](#submit)
   * [Προτάσεις για το σχεδιασμό της δραστηριότητάς σας](#design)
   * [Βασικές κατευθύνσεις](#tm)
   * [Εικονοστοιχείο ανίχνευσης](#pixel)
@@ -42,13 +41,13 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 
 You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
 
-Examples:
+Παραδείγματα:
 
   * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [Μια δραστηριότητα arduino για έναν καθηγητή φυσικής](https://csedweek.org/csteacher/arduino.pdf)
+  * [Μια ιστορία δραστηριότητας τεχνολογίας για έναν καθηγητή ιστορίας](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>Πώς μπορώ να υποβάλω το δικό μου σχέδιο μαθήματος;</button>](#submit)
 
   
   
@@ -113,7 +112,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 <a id="submit"></a>
 
-## How to submit (Due 10/15/2015)
+## Πώς να υποβάλετε (προθεσμία 15/10/2015)
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
@@ -150,7 +149,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Παρακαλούμε συμπεριλάβετε επίσης την προτεινόμενη εμπειρία στην επιστήμη των υπολογιστών: Αρχάριοι, Μέτριοι, Προχωρημένοι. Η ιστοσελίδα της Ώρας του Κώδικα θα επισημάνει τις δραστηριότητες για Αρχαρίους σε πιο περίοπτη θέση. Εάν επιθυμείτε να προετοιμάσετε Δραστηριότητες για την Ώρα του Κώδικα Μέτριου και Προχωρημένου επιπέδου, παρακαλούμε να συμπεριλάβετε τις προαπαιτούμενες γνώσεις που χρειάζονται στην περιγραφή της δραστηριότητάς σας.
   * Τεχνικές απαιτήσεις: 
       * Για να μπορούμε να προσδιορίσουμε με ακρίβεια τις συμμετοχές, θέλουμε κάθε δημιουργός να συμπεριλαμβάνει εικόνες ανίχνευσης 1 εικονοστοιχείου στην πρώτη και στην τελευταία σελίδα του οδηγού εκμάθησης για την Ώρα του Κώδικα. Τοποθετήστε μια μια αρχική εικόνα 1 εικονοστοιχείου στην αρχική σελίδα και μια τελική εικόνα μια στην τελική σελίδα. Μην τοποθετείτε pixel στις ενδιάμεσες σελίδες. Ανατρέξτε παρακάτω στην ενότητα "Εικονοστοιχείο Ανίχνευσης" για περισσότερες πληροφορίες. 
-      * Ολοκληρώνοντας τη δραστηριότητα, οι χρήστες πρέπει να κατευθύνονται στην σελίδα [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Ολοκληρώνοντας τη δραστηριότητα, οι χρήστες πρέπει να κατευθύνονται στην σελίδα [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) όπου θα μπορούν να: 
           * Προβάλλουν στα μέσα κοινωνικής δικτύωσης το γεγονός ότι ολοκλήρωσαν μια Ώρα του Κώδικα
           * Λάβουν ένα πιστοποιητικό για την ολοκλήρωση της Ώρας του Κώδικα
           * Δουν τους πίνακες χωρών/πόλεων με τις περισσότερες συμμετοχές στις δραστηριότητες της Ώρας του Κώδικα
@@ -214,13 +213,13 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
 
 Ένα τμήμα είναι να προστατεύσει το εμπορικό σήμα "Ώρα κώδικα" για να αποφευχθεί η σύγχυση. Πολλοί από τους συνεργάτες μας έχουν χρησιμοποιήσει το "Ώρα του Κώδικα" στις ιστοσελίδες τους. Δεν θέλουμε να εμποδίσουμε αυτή τη χρήση, αλλά θέλουμε να σιγουρέψουμε ότι ακολουθεί κάποιες αρχές και όρια:
 
-  1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Κακό παράδειγμα: "Δοκίμασε την Ώρα του Κώδικα από την ACME Corp"
-  2. Να χρησιμοποιείτε την ένδειξη ΤΜ" ως δείκτη στις πιο εμφανής θέσεις όπου αναφέρετε την "Ώρα του Κώδικα", τόσο στις περιγραφές του ιστότοπού σας όσο και σε αυτές των εφαρμογών σας
+  1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Συμπεριλάβετε γλώσσα στην σελίδα (ή στο υποσέλιδο), συμπεριλαμβάνοντας συνδέσμους προς τις ιστοσελίδες CSEdWeek και Code.org, οι οποίοι θα λένε τα ακόλουθα:
     
     *“Η 'Ώρα του Κώδικα' είναι μια διεθνής πρωτοβουλία από την Εκπαιδευτική Εβδομάδα Πληροφορικής [csedweek.org] και την Code.org [code.org] για να εισαγάγει εκατομμύρια μαθητές σε μια ώρα της επιστήμης της πληροφορικής και του προγραμματισμού υπολογιστών.”*
 
-  4. Μην χρησιμοποιείτε το "Ώρα του Κώδικα" ως όνομα ή μέρος ονόματος για εφαρμογές
+  4. No use of "Hour of Code" in app names.
 
 [**Επιστροφή στην κορυφή**](#top)
 
@@ -264,4 +263,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 Εάν δημιουργείτε ένα φροντιστήριο που σχεδιάζεται για άτομα με προβλήματα όρασης, θα θέλαμε να το τονίσουμε για όσους χρησιμοποιούν αναγνώστες οθόνης. Δεν έχουμε λάβει ακόμη κάποιο τέτοιο οδηγό, και θα ήταν πολύ ωραίο να συμπεριλάβουμε και αυτή την επιλογή για αυτούς τους μαθητές.
 
 [**Επιστροφή στην κορυφή**](#top)
-

@@ -66,6 +66,11 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def copy_assets(source_channel_id, source_filenames)
+    post("/v3/copy-assets/#{@channel_id}?src_channel=#{source_channel_id}&src_files=#{JSON.generate(source_filenames)}", '', {})
+    last_response.body
+  end
+
   def delete_object(filename)
     delete "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
   end
@@ -87,6 +92,11 @@ class FilesApiTestHelper
 
   def post_object_version(filename, version_id, body = '', headers = {})
     post "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+    last_response.body
+  end
+
+  def channel_policy_violation
+    get "/v3/channels/#{@channel_id}/privacy-profanity"
     last_response.body
   end
 

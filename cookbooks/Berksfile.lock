@@ -7,6 +7,10 @@ DEPENDENCIES
     path: cdo-authorized-keys
   cdo-awscli
     path: cdo-awscli
+  cdo-cloudwatch-extra-metrics
+    path: cdo-cloudwatch-extra-metrics
+  cdo-freegeoip
+    path: cdo-freegeoip
   cdo-github-access
     path: cdo-github-access
   cdo-home-ubuntu
@@ -57,9 +61,10 @@ GRAPH
     seven_zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.133)
+  cdo-apps (0.2.147)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
+    cdo-cloudwatch-extra-metrics (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-networking (>= 0.0.0)
@@ -72,17 +77,23 @@ GRAPH
     cdo-varnish (>= 0.0.0)
     chef_hostname (>= 0.0.0)
     omnibus_updater (>= 0.0.0)
+    poise-service (>= 0.0.0)
     sudo-user (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.1)
-  cdo-github-access (0.1.4)
+  cdo-cloudwatch-extra-metrics (0.1.5)
+    ark (>= 0.0.0)
+  cdo-freegeoip (0.1.1)
+    ark (>= 0.0.0)
+    poise-service (>= 0.0.0)
+  cdo-github-access (0.1.5)
   cdo-home-ubuntu (0.1.2)
   cdo-java-7 (0.1.1)
     build-essential (>= 0.0.0)
   cdo-mysql (0.1.3)
   cdo-networking (0.1.1)
     ixgbevf (>= 0.0.0)
-  cdo-newrelic (0.1.7)
+  cdo-newrelic (0.1.8)
     apt (>= 0.0.0)
   cdo-nginx (0.0.9)
     apt (>= 0.0.0)
@@ -95,11 +106,11 @@ GRAPH
   cdo-repository (0.2.11)
     cdo-github-access (>= 0.0.0)
   cdo-ruby (0.2.8)
-  cdo-secrets (0.1.6)
+  cdo-secrets (0.1.7)
   cdo-solr (0.1.7)
     cdo-java-7 (>= 0.0.0)
-  cdo-users (0.1.15)
-  cdo-varnish (0.3.115)
+  cdo-users (0.1.18)
+  cdo-varnish (0.3.122)
     apt (>= 0.0.0)
   chef-client (4.2.4)
     cron (>= 1.2.0)
@@ -125,6 +136,9 @@ GRAPH
   ntp (1.8.6)
   ohai (2.1.0)
   omnibus_updater (2.0.0)
+  poise (2.7.1)
+  poise-service (1.3.1)
+    poise (~> 2.0)
   postfix (3.7.0)
   seven_zip (1.0.4)
     windows (>= 1.2.2)

@@ -50,18 +50,18 @@ class GAClient
     @@profile_id = CDO.ga_profile_id.to_s                   # Analytics profile ID.
 
     @@client = Google::APIClient.new(
-        :application_name => 'cdo-ga-analytics',
-        :application_version => '0.0.1')
+      :application_name => 'cdo-ga-analytics',
+      :application_version => '0.0.1')
 
     ## Load our credentials for the service account
     signing_key = Google::APIClient::KeyUtils.load_from_pkcs12(pkcs12_key, key_secret)
 
     @@client.authorization = Signet::OAuth2::Client.new(
-        :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
-        :audience => 'https://accounts.google.com/o/oauth2/token',
-        :scope => 'https://www.googleapis.com/auth/analytics.readonly',
-        :issuer => service_account_email,
-        :signing_key => signing_key)
+      :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
+      :audience => 'https://accounts.google.com/o/oauth2/token',
+      :scope => 'https://www.googleapis.com/auth/analytics.readonly',
+      :issuer => service_account_email,
+      :signing_key => signing_key)
 
     ## Request a token for our service account
     @@client.authorization.fetch_access_token!

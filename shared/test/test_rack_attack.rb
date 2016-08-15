@@ -200,7 +200,6 @@ class RackAttackTest < Minitest::Test
     assert_equal RATE_LIMITED, last_response.status, "update on other table is rate limited."
     delete_record id, OTHER_TABLE
     assert_equal RATE_LIMITED, last_response.status, "delete on other table is rate limited."
-
   end
 
   def test_property_limits_enforced

@@ -20,5 +20,5 @@ query_subscribed_contacts(q: "kind_s:user && role_s:teacher")
 query_all_emails_at_domain('microsoft.com')
 query_all_emails_at_domain('xbox.com')
 
-ALL.values.each {|c| c[:organizer] = false unless c.has_key? :organizer}
+ALL.values.each {|c| c[:organizer] = false unless c.key? :organizer}
 export_contacts_to_csv ALL, "11-16-hoc-organizers.csv"

@@ -8,7 +8,7 @@ require 'minitest/autorun'
 # Use this class as the base class for your tests
 class SequelTestCase < Minitest::Test
   def run(*args, &block)
-    Sequel::Model.db.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+    Sequel::Model.db.transaction(:rollback => :always, :auto_savepoint => true){super}
     self
   end
 end

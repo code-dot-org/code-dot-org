@@ -1,5 +1,4 @@
 def validate_form(kind, data)
-
   def csv_multivalue(value)
     return value if value.class == FieldError
     begin
@@ -173,8 +172,8 @@ def update_form(kind, secret, data)
   data = validate_form(kind, prev_data.merge(symbolized_data))
 
   form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
-  form[:email] = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
-  form[:name] = data[:name_s].to_s.strip if data.has_key?(:name_s)
+  form[:email] = data[:email_s].to_s.strip.downcase if data.key?(:email_s)
+  form[:name] = data[:name_s].to_s.strip if data.key?(:name_s)
   form[:data] = data.to_json
   form[:updated_at] = DateTime.now
   form[:updated_ip] = request.ip

@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Få hele skolen din til å delta
 
-Informasjon om hvordan du får hele skolen din til å organisere en Kodetime legges inn her.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

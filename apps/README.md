@@ -95,7 +95,7 @@ Since the longer the polling is, the longer the delay before builds can be, we'l
 To have grunt rebuild on changes but not run an express server, you can use the constituent commands:
 
 ```
-MOOC_DEV=1 grunt build watch
+DEV=1 grunt build watch
 ```
 
 #### Running tests
@@ -116,10 +116,10 @@ npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ##### Rerun Tests Automatically #####
 
 To rerun tests automatically on every file change, set the environment variable
-`MOOC_WATCH=1`:
+`WATCH=1`:
 
 ```
-MOOC_WATCH=1 npm run test:unit
+WATCH=1 npm run test:unit
 ```
 
 This will work on any of the test commands.
@@ -129,10 +129,10 @@ This will work on any of the test commands.
 To debug tests, your best bet is to run them in Chrome. Keep in mind that there
 can be subtle differences between Chrome and PhantomJS, so after fixing your
 test in Chrome, make sure it still works in PhantomJS. To run the tests in
-Chrome, use the `MOOC_BROWSER` environment variable in conjunction with `MOOC_WATCH`:
+Chrome, use the `BROWSER` environment variable in conjunction with `WATCH`:
 
 ```
-MOOC_BROWSER=Chrome MOOC_WATCH=1 npm run test:unit
+BROWSER=Chrome WATCH=1 npm run test:unit
 ```
 
 A new chrome browser window will open where the tests will be running. You can
@@ -189,6 +189,46 @@ fetching files served by the test runner, prefix the file path with
 document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 ```
 
+#### UI Component Style Guide ####
+
+We use `react-storybook` to generate a ui component style guide that you can use
+to discover what components are available to reuse as you build new
+features. You can also use the style guide to more easily develop new components
+without having to run all of code.org.
+
+To view the styleguide run
+
+```
+npm run storybook
+```
+
+and browse to http://localhost:9001/.
+
+You can add new sections to the styleguide (perhaps for a new component you are
+building) by adding the following code:
+
+```javascript
+if (BUILD_STYLEGUIDE) {
+  SomeComponent.styleGuideExamples = storybook => {
+    return storybook
+      .storiesOf('SomeComponent', module)
+      .add(
+        'Example #1',
+        () => <Component/>
+      )
+  };
+}
+```
+
+By wrapping your code in a `BUILD_STYLEGUIDE` check, you can guarantee that it
+won't appear in production builds. See the
+[react-storybook documentation](https://github.com/kadirahq/react-storybook) for
+more information on how to use the `storybook` api.
+
+##### Static Styleguide #####
+
+A static version of the styleguide is hosted at https://code-dot-org.github.io/cdo-styleguide/
+
 #### Full build with blockly-core changes
 
 1. Check out [blockly-core](https://github.com/code-dot-org/blockly-core/) as a sibling directory to blockly.
@@ -201,7 +241,7 @@ document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 It's especially important to test your changes with localization when modifying layouts. We support
 right-to-left languages and have some special layout tweaks embedded in the CSS to support that.
 
-Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locales are `en_us` and `en_ploc` (pseudolocalized).
+Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locale is `en_us`
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 

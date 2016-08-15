@@ -28,6 +28,22 @@ exports.moveRight = function (distance) {
   ArtistApi.log.push(['MV', distance, 90, null]);
 };
 
+exports.moveUpRight = function (distance) {
+  ArtistApi.log.push(['MD', distance, 45, null]);
+};
+
+exports.moveDownRight = function (distance) {
+  ArtistApi.log.push(['MD', distance, 135, null]);
+};
+
+exports.moveDownLeft = function (distance) {
+  ArtistApi.log.push(['MD', distance, 225, null]);
+};
+
+exports.moveUpLeft = function (distance) {
+  ArtistApi.log.push(['MD', distance, 315, null]);
+};
+
 exports.jumpUp = function (distance) {
   ArtistApi.log.push(['JD', distance, 0, null]);
 };
@@ -42,6 +58,22 @@ exports.jumpLeft = function (distance) {
 
 exports.jumpRight = function (distance) {
   ArtistApi.log.push(['JD', distance, 90, null]);
+};
+
+exports.jumpUpRight = function (distance) {
+  ArtistApi.log.push(['JD', distance, 45, null]);
+};
+
+exports.jumpDownRight = function (distance) {
+  ArtistApi.log.push(['JD', distance, 135, null]);
+};
+
+exports.jumpDownLeft = function (distance) {
+  ArtistApi.log.push(['JD', distance, 225, null]);
+};
+
+exports.jumpUpLeft = function (distance) {
+  ArtistApi.log.push(['JD', distance, 315, null]);
 };
 
 exports.jumpForward = function (distance) {

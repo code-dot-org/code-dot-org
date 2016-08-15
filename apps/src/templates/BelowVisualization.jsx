@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 var React = require('react');
 import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
@@ -5,6 +6,8 @@ var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
+import AniGifPreview from './instructions/AniGifPreview';
+import { openDialog } from '../redux/instructionsDialog';
 
 const styles = {
   aniGifPreviewWrapper: {
@@ -24,7 +27,8 @@ const BelowVisualization = React.createClass({
     shortInstructions2: React.PropTypes.string,
     aniGifURL: React.PropTypes.string,
     instructionsInTopPane: React.PropTypes.bool.isRequired,
-    smallStaticAvatar: React.PropTypes.string
+    smallStaticAvatar: React.PropTypes.string,
+    showInstructionsDialog: React.PropTypes.func.isRequired
   },
 
   render() {
@@ -36,20 +40,18 @@ const BelowVisualization = React.createClass({
       aniGifURL
     } = this.props;
 
-    const aniGifPreviewStyle = {
-      backgroundImage: "url('" + this.props.aniGifURL + "')"
-    };
     return (
       <ProtectedStatefulDiv id="belowVisualization">
         {!instructionsInTopPane &&
           <div
-              id="bubble"
-              className="clearfix"
-              style={commonStyles.bubble}
+            id="bubble"
+            className="clearfix"
+            style={commonStyles.bubble}
+            onClick={this.props.showInstructionsDialog}
           >
             <table
-                id="prompt-table"
-                className={this.props.aniGifURL ? 'with-ani-gif' : undefined}
+              id="prompt-table"
+              className={this.props.aniGifURL ? 'with-ani-gif' : undefined}
             >
               <tbody>
                 <tr>
@@ -60,13 +62,13 @@ const BelowVisualization = React.createClass({
                   }
                   <td id="prompt-cell">
                     <p
-                        id="prompt"
-                        dangerouslySetInnerHTML={{ __html: this.props.shortInstructions}}
+                      id="prompt"
+                      dangerouslySetInnerHTML={{ __html: this.props.shortInstructions}}
                     />
                     {this.props.shortInstructions2 &&
                       <p
-                          id="prompt2"
-                          dangerouslySetInnerHTML={{ __html: this.props.shortInstructions2}}
+                        id="prompt2"
+                        dangerouslySetInnerHTML={{ __html: this.props.shortInstructions2}}
                       />
                     }
                   </td>
@@ -75,13 +77,7 @@ const BelowVisualization = React.createClass({
             </table>
 
             {inputOutputTable && <InputOutputTable data={inputOutputTable}/>}
-
-            {this.props.aniGifURL &&
-              <div id="ani-gif-preview-wrapper" style={styles.aniGifPreviewWrapper}>
-                <div id="ani-gif-preview" style={aniGifPreviewStyle}>
-                </div>
-              </div>
-            }
+            {aniGifURL && <AniGifPreview/>}
           </div>
         }
       </ProtectedStatefulDiv>
@@ -96,4 +92,13 @@ export default connect(state => ({
   shortInstructions2: state.instructions.shortInstructions2,
   smallStaticAvatar: state.pageConstants.smallStaticAvatar,
   inputOutputTable: state.pageConstants.inputOutputTable
+}), dispatch => ({
+  showInstructionsDialog() {
+    dispatch(openDialog({
+      autoClose: false,
+      showHints: true,
+      aniGifOnly: false,
+      hintsOnly: false
+    }));
+  }
 }))(BelowVisualization);

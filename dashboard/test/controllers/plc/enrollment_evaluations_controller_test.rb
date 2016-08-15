@@ -29,7 +29,6 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   end
 
   test "previewing evaluation already triggers enrollments" do
-    # Argh, come on stubbing
     Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_1, @module_practice_1])
 
     get :preview_assignments, script_id: @course_unit.script.name

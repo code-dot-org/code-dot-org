@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ### Dibawah ini adalah contoh op-ed yang mendukung Pekan Edukasi Ilmu Komputer dan tujuan yang dapat digunakan oleh negara, legislator lokal, pemimpin bisnis, dll.
 
   
@@ -45,4 +44,3 @@ Kita perlu merekrut guru sains komputer lain dan mendorong pengembangan profesio
 Menurut Bureau of Labor Statistics, 2020 nanti, akan ada 9.2 juta pekerjaan dalam bidang STEM. Setengah dari pekerjaan-pekerjaan tersebut — 4,6 juta — adalah teknologi komputasi atau informasi. Dan ilmu komputer semakin menjadi dasar pengetahuan untuk abad 21. Siapa yang akan mengisi pekerjaan ini jika anak-anak kita tidak diberikan kesempatan untuk mendapatkan keahlian yang dibutuhkan?
 
 Minggu ini, <%= campaign_date('full') %>, adalah Pekan Edukasi Ilmu Komputer. Di sekolah di seluruh **[STATE]**, siswa kami akan berpartisipasi dalam Hour of Code nasional, menjelaskan tentang ilmu komputer dan mudah-mudahan menarik minat mereka untuk pergi pada dan belajar lebih banyak. Aku akan bergabung dengan mereka, dan saya mengundang Anda untuk bergabung juga. Semua orang harus belajar bagaimana coding. Kunjungi https://hourofcode.com/<%= @country %> untuk mempelajari lebih lanjut dan memulai. Dan dukung upaya kami untuk membawa ilmu komputer ke sekolah-sekolah lain di **[STATE]**.
-

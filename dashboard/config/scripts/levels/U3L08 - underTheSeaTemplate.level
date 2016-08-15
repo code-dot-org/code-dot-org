@@ -12,8 +12,18 @@
       "move": null,
       "moveTo": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
@@ -29,6 +39,10 @@
       "speed": null,
       "randomNumber_min_max": null,
       "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
         "params": [
           "__",
           "__",
@@ -55,7 +69,7 @@
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "slider_speed": "1.0",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -81,10 +95,14 @@
     "execute_palette_apis_only": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

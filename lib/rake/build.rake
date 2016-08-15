@@ -4,7 +4,6 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 
 namespace :build do
-
   desc 'Runs Chef Client to configure the OS environment.'
   task :configure do
     if CDO.chef_managed
@@ -57,14 +56,15 @@ namespace :build do
     end
   end
 
+  # TODO: (brent) - temporarily leave in a build step that just does a clean of
+  # code-studio to make sure we don't have artifacts from old builds
   desc 'Builds code studio.'
   task :code_studio do
-    Dir.chdir(code_studio_dir) do
-      HipChat.log 'Installing <b>code-studio</b> dependencies...'
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run build:dist'
+    if File.exist?(code_studio_dir)
+      Dir.chdir(code_studio_dir) do
+        HipChat.log 'Removing <b>code-studio</b>...'
+        RakeUtils.system 'rm -rf build'
+      end
     end
   end
   task :'code-studio' => :code_studio
@@ -81,6 +81,11 @@ namespace :build do
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
+      # Unless on production, serve UI test directory
+      unless rack_env?(:production)
+        RakeUtils.ln_s('../test/ui', dashboard_dir('public', 'ui_test'))
+      end
+
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
@@ -113,7 +118,7 @@ namespace :build do
         if rack_env?(:development) && CDO.skip_seed_all
           HipChat.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n"\
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n"\
-              "see changes to: videos, concepts, levels, scripts, trophies, prize providers, \n "\
+              "see changes to: videos, concepts, levels, scripts, prize providers, \n "\
               "callouts, hints, secret words, or secret pictures."
         else
           HipChat.log 'Seeding <b>dashboard</b>...'
@@ -168,6 +173,13 @@ namespace :build do
     end
   end
 
+  task :restart_process_queues do
+    if CDO.daemon
+      HipChat.log 'Restarting <b>process_queues</b>...'
+      RakeUtils.restart_service 'process_queues'
+    end
+  end
+
   task :start_varnish do
     Dir.chdir(aws_dir) do
       unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') == 0)
@@ -185,6 +197,7 @@ namespace :build do
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
+  tasks << :restart_process_queues if CDO.daemon
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 end

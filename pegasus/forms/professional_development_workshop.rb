@@ -28,7 +28,7 @@ class ProfessionalDevelopmentWorkshop
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'workshop_receipt'
   end
 
@@ -36,17 +36,17 @@ class ProfessionalDevelopmentWorkshop
     DASHBOARD_DB[:followers].
       join(:users, id: :student_user_id).
       select(Sequel.as(:student_user_id, :id),
-             :users__id___id,
-             :users__name___name,
-             :users__email___email,
-            ).
+        :users__id___id,
+        :users__name___name,
+        :users__email___email,
+      ).
       where(section_id: section_id).
       all.map do |result|
-      levels = DashboardStudent.completed_levels(result[:id])
-      result[:levels] = levels.all
-      result[:levels_count] = levels.count
-      result
-    end
+        levels = DashboardStudent.completed_levels(result[:id])
+        result[:levels] = levels.all
+        result[:levels_count] = levels.count
+        result
+      end
   end
 
   # TODO: Move this to a helper.
@@ -70,15 +70,15 @@ class ProfessionalDevelopmentWorkshop
 
         results['progress_snapshot_t'] = uploaded_data "workshop-progress-snapshot-#{data['section_id_s']}", snapshot.to_json
 
-        recipients = snapshot.map{|row| {email: row[:email], name: row[:name]}}
+        recipients = snapshot.map{|snapshot_row| {email: snapshot_row[:email], name: snapshot_row[:name]}}
         recipients.each do |recipient|
           begin
             Poste2.send_message('professional-development-workshop-section-receipt',
-                                Poste2.ensure_recipient(recipient[:email], name: recipient[:name], ip_address: '127.0.0.1'),
-                                workshop_id: row[:id],
-                                location_name: data['location_name_s'],
-                                facilitator_name: data['name_s'],
-                                start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
+              Poste2.ensure_recipient(recipient[:email], name: recipient[:name], ip_address: '127.0.0.1'),
+              workshop_id: row[:id],
+              location_name: data['location_name_s'],
+              facilitator_name: data['name_s'],
+              start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
           rescue => e
             puts "#{recipient[:name]} <#{recipient[:email]}> couldn't be sent a pd certificate because: #{e.message}"
           end

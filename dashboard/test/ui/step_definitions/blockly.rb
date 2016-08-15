@@ -51,8 +51,8 @@ end
 
 Then /^block "([^"]*)" is at offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  point.x.should eq x.to_i
-  point.y.should eq y.to_i
+  expect(point.x).to eq(x.to_i)
+  expect(point.y).to eq(y.to_i)
 end
 
 Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ do |block, negation, is_blockly, location_identifier|
@@ -144,7 +144,7 @@ end
 
 And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ do |phrase|
   @browser.execute_script("Blockly.mainBlockSpace.clear();")
-  xml = '<xml><block type="when_run" deletable="false"><next><block type="studio_saySprite"><title name="SPRITE">0</title><title name="TEXT">'+ phrase +'</title></block></next></block></xml>'
+  xml = '<xml><block type="when_run" deletable="false"><next><block type="studio_saySprite"><title name="SPRITE">0</title><title name="TEXT">' + phrase + '</title></block></next></block></xml>'
   @browser.execute_script("__TestInterface.loadBlocks('" + xml + "');")
 end
 
@@ -203,7 +203,6 @@ When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do 
     });"
   puts script
   @browser.execute_script(script)
-
 end
 
 When(/^"(.+)" refers to block "(.+)"$/) do |block_alias, block_id|

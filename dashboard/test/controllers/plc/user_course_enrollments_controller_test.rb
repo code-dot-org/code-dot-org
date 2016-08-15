@@ -18,10 +18,10 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
   test 'invalid email address' do
     post :create, user_emails: 'invalid', plc_course_id: @plc_course.id
-    assert_redirected_to action: :new, notice: 'Unknown users invalid'
+    assert_redirected_to action: :new, notice: 'The following users did not exist <li>invalid</li><br/>'
 
-    post :create, user_emails: "invalid\r\n#{@user.email}"
-    assert_redirected_to action: :new, notice: 'Unknown users invalid'
+    post :create, user_emails: "invalid\r\n#{@user.email}", plc_course_id: @plc_course.id
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>The following users did not exist <li>invalid</li><br/>"
   end
 
   test 'validation failed' do
@@ -37,13 +37,13 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       post :create, user_emails: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for #{@user.email}"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
 
     user2 = create :teacher
     user3 = create :teacher
 
     post :create, user_emails: "#{user2.email}\r\n#{user3.email}", plc_course_id: @plc_course.id
-    assert_redirected_to action: :new, notice: "Enrollments created for #{user2.email}, #{user3.email}"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{user2.email}</li><li>#{user3.email}</li><br/>"
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user2, plc_course: @plc_course).count
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user3, plc_course: @plc_course).count
 
@@ -51,7 +51,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       post :create, user_emails: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for #{@user.email}"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
   end
 
   test 'Enrollment is viewable in all possible enrollment states' do

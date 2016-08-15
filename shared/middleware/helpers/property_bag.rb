@@ -13,7 +13,7 @@ class PropertyBag
     @table = PEGASUS_DB[:app_properties]
   end
 
-  def items()
+  def items
     @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id)
   end
 
@@ -55,7 +55,7 @@ class PropertyBag
     JSON.load(row[:value])
   end
 
-  def to_hash()
+  def to_hash
     {}.tap do |results|
       items.each do |row|
         results[row[:name]] = PropertyBag.parse_value(row[:value])
@@ -91,7 +91,7 @@ class DynamoPropertyBag
     begin
       db.delete_item(
         table_name: CDO.dynamo_properties_table,
-        key: {'hash'=>@hash,name: name},
+        key: {'hash' => @hash,name: name},
         expected: name_exists(name),
       )
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
@@ -104,7 +104,7 @@ class DynamoPropertyBag
     item = db.get_item(
       table_name: CDO.dynamo_properties_table,
       consistent_read: true,
-      key: {'hash'=>@hash, 'name'=>name},
+      key: {'hash' => @hash, 'name' => name},
     ).item
 
     raise NotFound, "key '#{name}' not found" unless item
@@ -131,7 +131,7 @@ class DynamoPropertyBag
     end
   end
 
-  def to_hash()
+  def to_hash
     last_evaluated_key = nil
 
     results = {}

@@ -1,0 +1,62 @@
+body {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+h3 {
+  margin-bottom: 0.1em;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding-left: 0.3em;
+  min-width: 60px;
+}
+
+td.log-link {
+  text-align: center;
+}
+
+.centered-column {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#refresh-controls {
+  float: right;
+}
+
+.progress-bar {
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar .bar {
+  float: left;
+  height: 10px;
+}
+
+.progress-bar .clear-both {
+  clear: both;
+}
+
+.SUCCEEDED, .success {
+  background-color: #78ea78;
+}
+
+.FAILED, .failure {
+  background-color: #ff8888;
+}
+
+.PENDING, .pending {
+  background-color: #dddddd;
+}

@@ -30,6 +30,3 @@ cp_msg_js uk uk_ua
 cp_msg_js vi vi_vn
 cp_msg_js zh_cn zh_cn
 cp_msg_js zh_tw zh_tw
-
-# Just re-use English for Ploc for core (for now)
-cp_msg_js en_us en_ploc

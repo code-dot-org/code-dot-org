@@ -4,7 +4,7 @@ end
 
 And /^I press the dropdown$/ do
   elements = @browser.find_elements(:class, 'blocklyText')
-  elements[6].click
+  elements[8].click
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|
@@ -17,7 +17,7 @@ Then /^the dropdown is (.*)$/ do |visibility|
   end
 
   element = @browser.find_element(:class, 'blocklyWidgetDiv')
-  element.attribute('style').match(Regexp.new("display: #{expected}")).should_not eq nil
+  expect(element.attribute('style').match(Regexp.new("display: #{expected}"))).not_to eq(nil)
 end
 
 Then /^I select the crash item from the dropdown$/ do

@@ -25,7 +25,7 @@ SOLR = Solr::Server.new(host: CDO.solr_server)
 
 USERS = DASHBOARD_DB[:users]
 
-def get_start_id()
+def get_start_id
   row = PEGASUS_DB[:properties].where(key: 'solr-user-last-id').first
   unless row
     row = {key: 'solr-user-last-id', value: 0}
@@ -38,7 +38,7 @@ def save_last_id(id)
   PEGASUS_DB[:properties].where(key: 'solr-user-last-id').update(value: id.to_i)
 end
 
-def main()
+def main
   batch_size = 25000
 
   last_id = start_id = get_start_id
@@ -86,7 +86,6 @@ def main()
   end
 
   save_last_id(last_id)
-
 end
 
 main if only_one_running?(__FILE__)

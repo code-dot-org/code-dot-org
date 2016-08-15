@@ -106,10 +106,19 @@ $wide-column-width: 121px;
     margin: 0;
   }
 
-  #router-log-modal {
-    display: none; // Initial state
+  .old-router-log-modal {
+    display: none;
     width: 90%;
     margin-left: -45%;
+
+    select {
+      margin: 5px 5px 0 5px;
+      padding: 0;
+      height: 22px;
+      line-height: 20px;
+      font-size: smaller;
+      vertical-align: middle;
+    }
 
     .modal-body {
       max-height: 450px;

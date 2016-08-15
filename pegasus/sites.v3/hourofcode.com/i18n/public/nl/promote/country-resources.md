@@ -6,28 +6,32 @@ nav: promote_nav
 
 ---
 
-
 <% if @country == 'la' %>
 
-# Recursos
+# Hulpmiddelen
 
-## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
-<
+## Videos <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
+<;
 
-p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
+[**Waarom moet iedereen programmeren leren? Deelnemen aan de tijdcode in Argentinië (5min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
-<
+<;
 
-p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+[**Het CodeUur in Chili (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe>
+<;
+
+[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
 ## Video 's <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
-<
+<;
 
-p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+[**Doe mee met Nova Scotia met het CodeUur (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
 <% elsif @country == 'id' %>
 
@@ -37,63 +41,90 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <% elsif @country == 'jp' %>
 
-## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
-<
+## CodeUur 2015 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<;
 
-p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+[**CodeUur 2015 (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[CodeUur les gids](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
-<br/><br/>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/0hfb0d5GxSw"><strong>Friends of Technology Hour of Code (2 min)</strong></a>
+  
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe>
+<;
+
+[**Friends of Technology CodeUur (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+
+<% elsif @country == 'nz' %>
+
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
+<;
+
+[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
+
+  
+  
+
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
+
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
+<% elsif @country == 'ro' %>
+
+Va multumim pentru inregistrare, daca doriti materiale printate pentru promovarea evenimentului, echipa din Romania vi le poate trimite prin curier. Trebuie doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# How-to Guide voor organisaties
 
-## Use this handout to recruit corporations
+## Gebruik deze hand-out om bedrijven te werven
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Probeer de opdrachten:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+We zullen een verscheidenheid van leuke, één uur lang durende tutorials gemaakt door verschillende partners hosten. Er zullen nieuwe tutorials komen voor de kick off van het CodeUur <%= campaign_date('full') %>.
 
-**Alle Uur Code handleidingen:**
+**Alle CodeUur handleidingen:**
 
-  * Require minimal prep-time for organizers
-  * Zijn zelf-sturend, waardoor scholieren op hun eigen tempo en vaardigheidsniveau kunnen werken
+  * Er is minimale voorbereiding vereist van de organisatoren
+  * Zij zijn zelf-geleid, die leerlingen toe laten om op hun eigen tempo en vaardigheidsniveau kunnen werken
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Plan uw hardware benodigdheden - computers zijn optioneel
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Je ervaart het CodeUur het best met een aan het Internet verbonden computer. Maar je hebt niet voor ieder kind een computer nodig, en je kunt het CodeUur zelfs helemaal zonder computer doen.
 
   * **Probeer de opdrachten op de computers of apparaten van leerlingen.** Controleer dat ze goed werken (met geluid en video).
   * **Bekijk de felicitatiepagina alvast** om te zien wat leerlingen zien wanneer ze klaar zijn. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Zorg voor koptelefoons voor de klas**, of vraag leerlingen ze zelf mee te nemen, als de opdracht die je kiest het beste werkt met geluid.
 
-## 3) Plan ahead based on your technology available
+## 3) Plan vooruit op basis van de beschikbare techniek
 
-  * **Heb je niet genoeg apparaten?** Gebruik [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Heb je niet genoeg apparaten?** Gebruik [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Wanneer deelnemers samenwerken, kunnen ze elkaar helpen en vertrouwen ze minder op de leraar.
   * **Weinig bandbreedte?** Toon de video's klassikaal zodat niet iedere leerling ze hoeft te downloaden. Of probeer de unplugged/offline-opdrachten.
 
-## 4) Inspire students - show them a video
+## 4) Inspireer leerlingen - laat ze een video zien
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Toon leerlingen bij de start van Uur Code een inspirerende video. Voorbeelden:
 
-  * De originele Code.org lanceringsvideo, met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-  * [President Obama roept alle leerlingen op om te leren programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * De originele Code.org lanceringsvideo, in samenwerking met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * Het [CodeUur 2013 lanceer video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of het [CodeUur 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+  * [President Obama roept alle leerlingen op om mee te doen met programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Maak je leerlingen enthousiast - geef ze een korte inleiding**
 
 <% else %>
 
-# Additional resources coming soon!
+# Extra middelen komen binnenkort!
 
 <% end %>
-

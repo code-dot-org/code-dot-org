@@ -8,7 +8,7 @@ javascript:
   enabled: false
 
 scss:
-  enabled: false
+  config_file: .scss-lint.yml
 
 haml:
   config_file: .haml-lint.yml

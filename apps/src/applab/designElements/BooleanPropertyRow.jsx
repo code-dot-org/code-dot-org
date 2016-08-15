@@ -4,7 +4,8 @@ var rowStyle = require('./rowStyle');
 var BooleanPropertyRow = React.createClass({
   propTypes: {
     initialValue: React.PropTypes.bool.isRequired,
-    handleChange: React.PropTypes.func
+    handleChange: React.PropTypes.func,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -34,7 +35,8 @@ var BooleanPropertyRow = React.createClass({
           <div
             className={classes}
             style={rowStyle.checkbox}
-            onClick={this.handleClick}/>
+            onClick={this.handleClick}
+          />
         </div>
       </div>
     );

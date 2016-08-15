@@ -30,11 +30,11 @@ class ClassSubmission
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'class_submission_receipt'
   end
 
-  def self.formats()
+  def self.formats
     (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
       'in_school' => %w(
         daily_programming_course
@@ -64,7 +64,7 @@ class ClassSubmission
   def self.formats_with_i18n_labels(groups)
     results = {}
     groups.each_pair do |key,group|
-      results[key] = {'label'=>I18n.t("class_submission_#{key}"), 'children'=>{}}
+      results[key] = {'label' => I18n.t("class_submission_#{key}"), 'children' => {}}
       group.each do |format|
         format = "#{key}_#{format}"
         results[key]['children'][format] = I18n.t("class_submission_#{format}")
@@ -74,7 +74,7 @@ class ClassSubmission
     results
   end
 
-  def self.languages()
+  def self.languages
     [
       'Code.org Code Studio',
       'Alice',
@@ -102,7 +102,7 @@ class ClassSubmission
     ]
   end
 
-  def self.levels()
+  def self.levels
     (@levels ||= {})[I18n.locale] ||= levels_with_i18n_labels(
       'preschool',
       'elementary',
@@ -121,7 +121,7 @@ class ClassSubmission
     results
   end
 
-  def self.published_states()
+  def self.published_states
     %w(
       approved
       rejected
@@ -183,7 +183,7 @@ class ClassSubmission
       fq: fq,
       fl: fl,
       facet: true,
-      'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
+      'facet.field' => ['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows: rows,
       sort: "school_name_s asc"
     }

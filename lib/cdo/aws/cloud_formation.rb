@@ -1,4 +1,5 @@
 require_relative '../../../deployment'
+require 'active_support/core_ext/string/inflections'
 require 'cdo/rake_utils'
 require 'aws-sdk'
 require 'json'
@@ -7,6 +8,7 @@ require 'erb'
 require 'tempfile'
 require 'base64'
 require 'uglifier'
+require 'digest'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -14,6 +16,7 @@ module AWS
 
     # Hard-coded values for our CloudFormation template.
     TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
+    TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
@@ -32,7 +35,8 @@ module AWS
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
 
-    BRANCH = ENV['branch'] || rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env
+    BRANCH = ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
@@ -48,6 +52,7 @@ module AWS
     CDN_ENABLED = !!ENV['CDN_ENABLED']
 
     STACK_ERROR_LINES = 250
+    LOG_NAME = '/var/log/bootstrap.log'
 
     class << self
       # Validates that the template is valid CloudFormation syntax.
@@ -57,9 +62,75 @@ module AWS
       def validate
         template = json_template(dry_run: true)
         CDO.log.info JSON.pretty_generate(JSON.parse(template))
-        CDO.log.info cfn.validate_template(
-          template_body: template
-        ).description
+        template_info = string_or_url(template)
+        CDO.log.info cfn.validate_template(template_info).description
+        CDO.log.info "Parameters: #{parameters(template).join("\n")}"
+
+        if stack_exists?
+          CDO.log.info 'Listing changes to existing stack:'
+          change_set_id = cfn.create_change_set(stack_options(template).merge(
+            change_set_name: "#{STACK_NAME}-#{Digest::MD5.hexdigest(template)}"
+          )).id
+
+          begin
+            begin
+              sleep 1
+              change_set = cfn.describe_change_set(change_set_name: change_set_id)
+            end while %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+            change_set.changes.each do |change|
+              c = change.resource_change
+              str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
+              str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
+              str += " (#{c.details.map{|d| d.target.name}.join(', ')})" if c.details.any?
+              CDO.log.info str
+            end
+            CDO.log.info 'No changes' if change_set.changes.empty?
+
+          ensure
+            cfn.delete_change_set(change_set_name: change_set_id)
+          end
+        end
+      end
+
+      # Returns an inline string or S3 URL depending on the size of the template.
+      def string_or_url(template)
+        # Upload the template to S3 if it's too large to be passed directly.
+        if template.length < 51200
+          {template_body: template}
+        elsif template.length < 460800
+          CDO.log.warn 'Uploading template to S3...'
+          key = AWS::S3.upload_to_bucket(TEMP_BUCKET, "#{STACK_NAME}-#{Digest::MD5.hexdigest(template)}-cfn.json", template, no_random: true)
+          {template_url: "https://s3.amazonaws.com/#{TEMP_BUCKET}/#{key}"}
+        else
+          raise 'Template is too large'
+        end
+      end
+
+      def parameters(template)
+        params = JSON.parse(template)['Parameters']
+        return [] unless params
+        params.keys.map do |key|
+          value = CDO[key.underscore]
+          if value
+            {
+              parameter_key: key,
+              parameter_value: value
+            }
+          else
+            {
+              parameter_key: key,
+              use_previous_value: true
+            }
+          end
+        end.flatten
+      end
+
+      def stack_options(template)
+        {
+          stack_name: STACK_NAME,
+          capabilities: ['CAPABILITY_IAM'],
+          parameters: parameters(template)
+        }.merge(string_or_url(template))
       end
 
       def create_or_update
@@ -67,11 +138,9 @@ module AWS
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{STACK_NAME}..."
         start_time = Time.now
-        updated_stack_id = cfn.method("#{action}_stack").call(
-          stack_name: STACK_NAME,
-          template_body: template,
-          capabilities: ['CAPABILITY_IAM']
-        ).stack_id
+        options = stack_options(template)
+        options[:on_failure] = 'DO_NOTHING' if action == :create
+        updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
         wait_for_stack(action, start_time)
         CDO.log.info 'Outputs:'
         cfn.describe_stacks(stack_name: updated_stack_id).stacks.first.outputs.each do |output|
@@ -91,8 +160,13 @@ module AWS
       end
 
       private
+
       def cfn
         @@cfn ||= Aws::CloudFormation::Client.new
+      end
+
+      def logs
+        @@logs ||= Aws::CloudWatchLogs::Client.new
       end
 
       # Only way to determine whether a given stack exists using the Ruby API.
@@ -134,35 +208,55 @@ module AWS
         )
       end
 
+      # Prints the latest output from a CloudWatch Logs log stream, if present.
+      def tail_log(quiet: false)
+        log_config = {
+          log_group_name: STACK_NAME,
+          log_stream_name: LOG_NAME
+        }
+        log_config[:next_token] = @@log_token unless @@log_token.nil?
+        # Return silently if we can't get the log events for any reason.
+        resp = logs.get_log_events(log_config) rescue return
+        resp.events.each do |event|
+          CDO.log.info(event.message) unless quiet
+        end
+        @@log_token = resp.next_forward_token
+      end
+
+      # Prints the latest CloudFormation stack events.
+      def tail_events(stack_id)
+        stack_events = cfn.describe_stack_events(stack_name: stack_id).stack_events
+        stack_events.reject{|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
+          CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+        end
+        @@event_timestamp = stack_events.map(&:timestamp).max
+      end
+
       def wait_for_stack(action, start_time)
         CDO.log.info "Stack #{action} requested, waiting for provisioning to complete..."
+        stack_id = STACK_NAME
         begin
-          cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: STACK_NAME) do |w|
-            w.max_attempts = 360 # 1 hour
-            w.delay = 10
-            w.before_wait { print '.' }
-          end
-        rescue Aws::Waiters::Errors::FailureStateError
-          CDO.log.info "\nError on #{action}. Event log:"
-          events = []
-          cfn.describe_stack_events(stack_name: STACK_NAME).stack_events.each do |event|
-            events << event
-            break if event.timestamp < start_time
-          end
-          events.reject { |event| event.resource_status_reason.nil? }.sort_by(&:timestamp).each do |event|
-            CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
-            if (match = event.resource_status_reason.match /with UniqueId (?<instance>i-\w+)/)
-              instance = match[:instance]
-              CDO.log.info "Printing the last #{STACK_ERROR_LINES} lines to help debug the instance failure.."
-              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
-              ec2 = Aws::EC2::Client.new
-              lines = Base64.decode64(ec2.get_console_output(instance_id: instance).output).lines
-              CDO.log.info lines[-[lines.length,STACK_ERROR_LINES].min..-1].join
+          @@event_timestamp = start_time
+          @@log_token = nil
+          tail_log(quiet: true)
+          stack_id = cfn.describe_stacks(stack_name: stack_id).stacks.first.stack_id
+          cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: stack_id) do |w|
+            w.delay = 10 # seconds
+            w.max_attempts = 360 # = 1 hour
+            w.before_wait do
+              tail_events(stack_id)
+              tail_log
+              print '.'
             end
           end
+          tail_events(stack_id)
+          tail_log
+        rescue Aws::Waiters::Errors::FailureStateError
+          tail_events(stack_id)
+          tail_log
+          CDO.log.info "\nError on #{action}."
           if action == :create
-            CDO.log.info 'Cleaning up failed stack creation...'
-            self.delete
+            CDO.log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
           end
           return
         end
@@ -171,7 +265,8 @@ module AWS
       end
 
       def json_template(dry_run: false)
-        template_string = File.read(aws_dir('cloudformation', TEMPLATE))
+        filename = aws_dir('cloudformation', TEMPLATE)
+        template_string = File.read(filename)
         availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
         azs = availability_zones.map { |zone| zone[-1].upcase }
         @@local_variables = OpenStruct.new(
@@ -196,22 +291,25 @@ module AWS
           s3_bucket: S3_BUCKET,
           file: method(:file),
           js: method(:js),
+          js_zip: method(:js_zip),
+          erb: method(:erb),
           subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
           public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
-          lambda: method(:lambda),
+          lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
-          update_bootstrap_script: method(:update_bootstrap_script)
+          update_bootstrap_script: method(:update_bootstrap_script),
+          log_name: LOG_NAME
         )
-        erb_output = erb_eval(template_string)
+        erb_output = erb_eval(template_string, filename)
         YAML.load(erb_output).to_json
       end
 
       # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
-      def source(str, vars={})
+      def source(str, filename, vars={})
         local_vars = @@local_variables.dup
         vars.each { |k, v| local_vars[k] = v }
-        lines = erb_eval(str, local_vars).each_line.map do |line|
+        lines = erb_eval(str, filename, local_vars).each_line.map do |line|
           # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
           line.split(/(%{.*})/).map do |x|
             x =~ /%{.*}/ ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
@@ -222,8 +320,15 @@ module AWS
 
       # Inline a file into a CloudFormation template.
       def file(filename, vars={})
-        str = File.read(aws_dir('cloudformation', filename))
-        source(str, vars)
+        str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
+        source(str, filename, vars)
+      end
+
+      def erb(filename, vars={})
+        local_vars = @@local_variables.dup
+        vars.each { |k, v| local_vars[k] = v }
+        str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
+        erb_eval(str, filename, vars)
       end
 
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
@@ -238,15 +343,29 @@ module AWS
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        source(str)
+        source(str, filename)
+      end
+
+      def js_zip
+        code_zip = Dir.chdir(aws_dir('cloudformation')) do
+          `zip -qr - *.js node_modules`
+        end
+        key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
+        object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
+        AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true) unless object_exists
+        {
+          S3Bucket: S3_BUCKET,
+          S3Key: key
+        }.to_json
       end
 
       # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
       def lambda(function_name, properties={})
+        custom_type = properties.delete(:CustomType)
         depends_on = properties.delete(:DependsOn)
         custom_resource = {
-          Type: properties.delete('Type') || "Custom::#{function_name}",
+          Type: properties.delete('Type') || "Custom::#{custom_type || function_name}",
           Properties: {
             ServiceToken: {'Fn::Join' => [':',[
               'arn:aws:lambda',
@@ -261,9 +380,9 @@ module AWS
         custom_resource.to_json
       end
 
-      def erb_eval(str, local_vars=nil)
+      def erb_eval(str, filename=nil, local_vars=nil)
         local_vars ||= @@local_variables
-        ERB.new(str, nil, '-').result(local_vars.instance_eval{binding})
+        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_vars.instance_eval{binding})
       end
 
     end

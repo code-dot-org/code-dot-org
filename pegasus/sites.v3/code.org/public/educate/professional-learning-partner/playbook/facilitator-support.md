@@ -8,18 +8,21 @@ nav: plp_playbook_nav
 # Facilitator Support
 
 
-### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
+#### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Support Documents](#support)
+- [CS Principles Resources](#csp)
 - [Facilitator Payments](#pay)
 
 ________________
 <a id="page"></a>
 ## Example Facilitator One Pager
-<a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>This one pager</a> is an example of how to format the information that facilitators will need to run a successful workshop. 
+The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
+
+Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop. 
 
 ________________
 <a id="contract"></a>
@@ -39,18 +42,35 @@ ________________
 
 [**Back to the top**](#top)
 ________________
+<a id="csp"></a>
+
+## CS Principles Resources
+
+Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
+
+[Welcome to CSP Facilitator Program - Slides](https://drive.google.com/open?id=1h5HcI4BKHLwWGYV1mcsV3HUWsb8YMwCcTIbqwI5yps8)
+
+[Navigating Code Studio and the Teacher Experience - Slides](https://drive.google.com/open?id=1QTo_BqHR1yXTqlwHHDXipnfDKEifdCGMFPHBcwa437k)<br/>
+
+[Deep Dive into CSP Curriculum Tools - Slides](https://drive.google.com/open?id=1941E16ptXwvgyHzJOW4_r6f4wnPAlUN9rk25dkHkJ38)<br/>
+
+[CSP and the College Board - Slides](https://drive.google.com/open?id=1z8G-J0aDZnAJSR2jA3JJrHJASUjPRdX8ItouG5OpwZE)<br/>
+
+
+[**Back to the top**](#top)
+________________
 <a id="pay"></a>
 ## Facilitator Payments
 
 **ECS, CS in Science, and CS in Algebra Facilitator Payments**
 
-- All facilitators (veteran and facilitators in training) are paid $500 per workshop day.
-- Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
-- Each PLP is responsible for contracting with and paying any local veteran facilitators and any facilitators in training who will be with you all year. We will include the funding for you to pay them in our checks to your organization.
+- All facilitators (veteran and facilitators in training) are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
+- This summer, Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
+- Starting with the first Academic Year Workshop, each PLP is responsible for contracting with and paying all facilitators. We will include the funding for you to pay them in our checks to your organization.
 
 **CS Principles Facilitator Payments**
 
-- All facilitators are paid $500 per workshop day.
+- All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
 - Each PLP is responsible for contracting with and paying any facilitators who run local workshops.
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
 

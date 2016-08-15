@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-
 # Guidelines for øvelser til Hour of Code™ og Computer Science Education Week
 
 Code.org er vært for en række forskellige Hour of Code aktiviteter på Code.org, Hour of Code og CSEdWeek hjemmesiderne. Den nuværende liste kan ses på [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
@@ -263,4 +262,3 @@ Vi beder alle om at fremme deres egen 1 times tutorial til dine brugere. Please 
 Hvis du opretter en øvelse, der er designet til de svagtseende, vil vi gerne fremhæve det for seerne med skærm-læsere. Vi har endnu ikke modtaget sådan en øvelse, men vi vil meget gerne også give disse elever muligheder.
 
 [**Tilbage til toppen**](#top)
-

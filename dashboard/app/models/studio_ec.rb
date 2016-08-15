@@ -32,14 +32,14 @@ class StudioEC < Studio
 
   def self.create_from_level_builder(params, level_params)
     level = new(level_params.merge(
-        user: params[:user],
-        game: Game.studio_ec,
-        level_num: 'custom',
-        properties: {
-          code_functions: JSON.parse(palette),
-          goal_override: JSON.parse(goal_override),
-          edit_code: true
-        }
+      user: params[:user],
+      game: Game.studio_ec,
+      level_num: 'custom',
+      properties: {
+        code_functions: JSON.parse(palette),
+        goal_override: JSON.parse(goal_override),
+        edit_code: true
+      }
     ))
     level.create_maze(level_params, params)
     level

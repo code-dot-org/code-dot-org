@@ -139,9 +139,9 @@ class ExperimentActivity < ActiveRecord::Base
 
     # Extract hash keys from parameters for manually testing experiments.
     stanford_experiment_hash = self.try_get_int_parameter(
-        options[:uri], FEEDBACK_EXPERIMENT_PARAMETER)
+      options[:uri], FEEDBACK_EXPERIMENT_PARAMETER)
     hint_visibility_experiment_hash = self.try_get_int_parameter(
-        options[:uri], VISIBILITY_EXPERIMENT_PARAMETER)
+      options[:uri], VISIBILITY_EXPERIMENT_PARAMETER)
 
     # If we are doing the Stanford hint experiment, choose the hint from the appropriate source.
     if (stanford_experiment_hash ||
@@ -152,7 +152,7 @@ class ExperimentActivity < ActiveRecord::Base
       in_hint_experiment = true
       hash_value = stanford_experiment_hash || ip_to_hash_value(options[:ip]) || 0
       response[:hint] = options[:level_source].get_hint_from_source(
-          self.pick_mod_length(FEEDBACK_EXPERIMENT_SOURCES, hash_value))
+        self.pick_mod_length(FEEDBACK_EXPERIMENT_SOURCES, hash_value))
     else
       response[:hint] = specific_hint
     end
@@ -169,12 +169,12 @@ class ExperimentActivity < ActiveRecord::Base
     # If in an experiment, record values written to options.
     if in_hint_experiment && options[:activity]
       response[:activity_hint] = ActivityHint.create!(
-          activity_id: options[:activity].id,
-          level_source_hint_id: response[:hint] && response[:hint].id,
-          hint_visibility: response[:hint_request_placement],
-          # Since this is guarded by in_hint_experiment, hash_value must be
-          # defined and numeric.
-          ip_hash: hash_value
+        activity_id: options[:activity].id,
+        level_source_hint_id: response[:hint] && response[:hint].id,
+        hint_visibility: response[:hint_request_placement],
+        # Since this is guarded by in_hint_experiment, hash_value must be
+        # defined and numeric.
+        ip_hash: hash_value
       )
     end
 

@@ -6,74 +6,74 @@ nav: how_to_nav
 
 ---
 
+# Zo kunt u CodeUur uitleggen op de naschoolse opvang
 
-# How to teach one Hour of Code in After-school
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
-## 1) Sign up
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
 
-  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+**Alle CodeUur handleidingen:**
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
-
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
-
-**Alle Uur Code handleidingen:**
-
-  * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Er is minimale voorbereiding vereist van de organisatoren
+  * Zij zijn zelf-geleid, die studenten toelaten om op hun eigen tempo en vaardigheidsniveau te kunnen werken
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 3) Promote your Hour of Code
 
-The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When kids partner up, they help each other and rely less on the organizer. Ze zullen ook inzien dat informatica sociaal is en samenwerking vereist.
-  * **Have low bandwidth?** Plan to project videos onto a big screen, so everyone isn't downloading their own videos. Or try the unplugged / offline tutorials.
+## 4) Bereid uw benodigdheden voor - computers zijn optioneel
+
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+
+**Plan Ahead!** Do the following before your event starts:
+
+  * Test vooraf tutorials op computers of andere apparatuur. Zorg ervoor dat de tutorials goed werken op browsers met audio- en videoapparatuur.
+  * Voorzie koptelefonen voor uw klas, of vraag de leerlingen om het zelf mee te nemen, als de tutorial het beste met geluid werkt.
+  * **Heeft u niet genoeg apparatuur?** Maak dan [tweetallen](https://www.youtube.com/watch?v=vgkahOzFH2Q). Als leerlingen in paren werken helpen ze elkaar en zijn ze minder afhankelijk van de leerkracht. Ze zullen ook inzien dat programmeren sociaal is en samenwerking vereist.
+  * **Weinig bandbreedte?** Toon de video's klassikaal zodat niet iedere leerling ze hoeft te downloaden. Of probeer de unplugged/offline-opdrachten.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) Start your Hour of Code off with an inspiring video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invloed van programmeren is in ons leven.
 
-**Show an inspirational video:**
+**Laat inspirerende video zien:**
 
-  * De originele Code.org lanceringsvideo, met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [President Obama roept alle leerlingen op om te leren programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * De originele Code.org lanceringsvideo, in samenwerking met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * De [CodeUur 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de <% if @country == 'uk' %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) < % anders %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [President Obama roept alle leerlingen op om mee te doen met programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Vind meer inspirerende video's [hier](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are both brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-  * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Leg uit hoe technologie impact heeft op ons leven, doe dit met behulp van voorbeelden zodat zowel jongens als meisjes interesse zullen tonen (Praat over apps en technologie dat wordt gebruikt om levens te redden, mensen te helpen, en mensen in contact brengt met elkaar etc).
+  * Maak een lijst over dingen die gebruik maken van codes in het dagelijks leven.
+  * Zie [hier](<%= resolve_url('https://code.org/girls') %>) tips om meisjes ook geïnteresseerd te krijgen in programmering.
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+**Wilt u meer ideeën over lesgeven?** Bekijk [ de methoden ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) van ervaren docenten.
 
 ## 6) Code!
 
-**Direct participants to the activity**
+**Betrek de deelnemers mee aan de activiteit**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Schrijf de tutorial link op een whiteboard. De link kunt u vinden op de [informatie voor uw geselecteerde tutorial](<%= resolve_url('https://code.org/learn') %>) onder het aantal deelnemers.
 
 **When someone comes across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Ik weet het niet. Laten we het samen oplossen."
+  * "Technologie werkt niet altijd op de manier waarop we dat willen."
+  * "Leren programma is als het leren van een nieuwe taal; je zal het niet gelijk onder de knie hebben."
 
-**What to do if someone finishes early?**
+**Wat te doen wanneer iemand snel klaar is?**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
-  * Or, ask those who finish early to help others who are having trouble.
+  * Stimuleer deelnemers om een andere CodeUur activiteit uit te proberen op [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Of vraag degenen die snel klaar zijn om anderen met problemen te helpen.
 
 [col-33]
 
@@ -91,23 +91,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
-
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-[col-33]
-
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
+## 7) Vier het
 
 [col-33]
 
@@ -115,19 +99,33 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 [/col-33]
 
+  * [Print de certificaten](<%= resolve_url('https://code.org/certificates') %>) voor uw studenten.
+  * [Print de "Ik heb meegedaan met CodeUur!"](<%= resolve_url('/promote/resources#stickers') %>) stickers voor uw leerlingen.
+  * [Bestel aangepaste t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw studenten.
+  * Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
+
+[col-33]
+
+![](/images/fit-260/highlight-certificates.jpg)
+
+[/col-33]
+
 <p style="clear:both">
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Andere CodeUur bronnen voor docenten:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Maak gebruik van [de sjabloon van de lessen plan](/files/AfterschoolEducatorLessonPlanOutline.docx) om uw CodeUur te organiseren.
+  * Bekijk [de methoden](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) van eerdere CodeUur organisatoren. 
+  * Kijk naar de opname van onze [ opvoeders gids voor de lezing van CodeUur](https://youtu.be/EJeMeSW2-Mw).
+  * [Woon een live Q & A bij ](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) met onze stichter, Hadi Partovi om CodeUur voor te bereiden.
+  * Bezoek de [CodeUur Forum](http://forum.code.org/c/plc/hour-of-code) om advies, inzicht en steun van andere organisatoren te krijgen. <% if @country == 'us' %>
+  * Bekijk het [CodeUur FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Wat komt er na het Uur Code?
+## Wat komt er na het CodeUur?
 
-Het Uur Code is slechts een eerste stap op een reis om meer te leren hoe technologie werkt en hoe je softwaretoepassingen kan maken. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen kunt maken. Zet deze reis voort:
 
+  * Moedig leerlingen aan om online te blijven [leren ](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Woon](<%= resolve_url('https://code.org/professional-development-workshops') %>) een 1-dag in-persoon workshop, om instructie te over programmeren van een ervaren programmeur. (Alleen VS opvoeders)

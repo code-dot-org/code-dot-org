@@ -12,7 +12,6 @@ def hash_to_query(hash, namespace=nil)
 end
 
 module Slog
-
   class Writer
 
     def initialize(params)
@@ -73,5 +72,4 @@ module Slog
     end
 
   end
-
 end

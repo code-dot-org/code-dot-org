@@ -25,11 +25,14 @@ class XhrProxyController < ApplicationController
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     accuweather.com
     api.data.gov
+    api.openweathermap.org
     api.randomuser.me
+    api.spotify.com
     api.zippopotam.us
     code.org
     data.cityofchicago.org
     googleapis.com
+    herokuapp.com
     query.yahooapis.com
     noaa.gov
     rhcloud.com
@@ -62,10 +65,10 @@ class XhrProxyController < ApplicationController
     Rails.logger.info "XhrProxyControllerRequest #{event_details}"
 
     render_proxied_url(
-        url,
-        allowed_content_types: ALLOWED_CONTENT_TYPES,
-        allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
-        expiry_time: EXPIRY_TIME,
-        infer_content_type: false)
+      url,
+      allowed_content_types: ALLOWED_CONTENT_TYPES,
+      allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
+      expiry_time: EXPIRY_TIME,
+      infer_content_type: false)
   end
 end

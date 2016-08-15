@@ -9,8 +9,6 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
       "Game.frameRate": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
@@ -19,7 +17,6 @@
       "x": null,
       "y": null,
       "rotation": null,
-      "scale": null,
       "shapeColor": null,
       "background": null,
       "fill": null,
@@ -47,7 +44,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment": null,
+      "comment_Drawing": null,
+      "comment_Variables": null,
+      "comment_GameLab": null,
+      "comment_Math": null,
+      "comment_Sprites": null,
       "console.log": null
     },
     "edit_code": true,
@@ -75,8 +76,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/dfdc813b35a6773684e77618cffb04c9-image-1465570394783.gif\" alt=\"wheel spinning\" style=\"width:200px;float:right\" >\r\n\r\n# Rotation\r\n\r\nOne of the cool things about properties are there are new things you can control about a sprite that you could not about a drawn shape! \r\n\r\nOne of those things you can control about a sprite is its rotation.  The `rotation` property sets the angle in degrees that the sprite should be turned to. With this you can angle a sprite to a certain orientation or make it spin!\r\n\r\n# Do This\r\nYou are going to start creating a spinner wheel similar to one you might find at a carnival.\r\n\r\n* Create a sprite\r\n* Set the sprite to the wheel image in the animation tab\r\n* Add a command to set the rotation property of the sprite\r\n* Increment the rotation property of the sprite to produce a spinning effect\r\n* Test it out\r\n* Play with the increment amount to find a speed you like",
-    "project_template_level_name": "CSD U3 - wheel template"
+    "markdown_instructions": "<img src=\"https://images.code.org/dfdc813b35a6773684e77618cffb04c9-image-1465570394783.gif\" alt=\"wheel spinning\" style=\"width:200px;float:right\" >\r\n\r\n# Rotation\r\n\r\nProperties allow you to control new things about a sprite that you could not control about a drawn shape! \r\n\r\nOne of those things you can control about a sprite is its rotation.  The **`rotation` property sets the angle in degrees that the sprite should be turned to**. With this you can angle a sprite to a certain orientation or make it spin!\r\n\r\n# Do This\r\nYou are going to start creating a spinner wheel similar to one you might find at a carnival.\r\n\r\n* Create a **new sprite**\r\n* **Set the image** of the sprite to the provided wheel image\r\n* Use the **`rotation` property as a counter** by 1 to produce a spinning effect\r\n* Test it out\r\n* Play with the increment amount to find a speed you like",
+    "project_template_level_name": "CSD U3 - wheel template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

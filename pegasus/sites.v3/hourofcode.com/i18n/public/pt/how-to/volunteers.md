@@ -12,14 +12,37 @@ nav: how_to_nav
 
 Visite uma sala de aula da sua região e inspire os alunos a continuar aprendendo ciência da computação. [Voluntário por uma hora](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## 2. Participe de uma sessão de informações para voluntários
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Vamos discutir como coordenar com os professores antes de seu evento da Hora do Código e o que você deve fazer no dia do evento para se preparar. Traga suas perguntas! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+Vamos promover duas sessões de informações para explicar como será uma típica experiência de voluntariado. Vamos discutir como coordenar com os professores antes de seu evento da Hora do Código e o que você deve fazer no dia do evento para se preparar. Traga suas perguntas! Essas sessões serão organizadas via Hangouts, então se você por acaso perder algum, você pode assistir à sessão gravada depois. [Veja a agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Data           | Hora                                | Link to info session                                                            |
-| -------------- | ----------------------------------- | ------------------------------------------------------------------------------- |
-| 16 de novembro | 13:00 - 13:30 - horário do pacífico | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3 de dezembro  | 11:00 - 11:30 - horário do pacífico | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Data
+    </th>
+    
+    <th>
+      Hora
+    </th>
+    
+    <th>
+      Link para a sessão de informações
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Antes de participar, experimente os tutoriais por 30 minutos
 
@@ -27,7 +50,7 @@ Experimente os tutoriais da Hora do código em [code.org/learn](https://code.org
 
 ## 4. Convide colegas de trabalho para se voluntariarem
 
-Conte aos seus amigos e colegas sobre a Hora do Código. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Conte aos seus amigos e colegas sobre a Hora do Código. Temos milhares de professores cadastrados procurando por voluntários, então peça a eles para se [cadastrarem como voluntários](https://code.org/volunteer).
 
 **Modelo de e-mail:**
 
@@ -35,29 +58,33 @@ Conte aos seus amigos e colegas sobre a Hora do Código. We have thousands of te
 
 Se você se lembra de sua primeira linha de código, você sabe que ela foi responsável por tudo o que aconteceu no resto da sua vida.
 
-É disso que se trata a Hora do Código. Nos últimos dois anos, o movimento quebrou estereótipos de como é programar e ajudar mais de 100 milhões de alunos em 180 países a experimentar a ciência da computação pela primeira vez.
+É disso que se trata a Hora do Código. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Eu me cadastrei como voluntário em uma sala de aula da região**   
-7.098 professores já pediram ajuda. A Code.org está colocando as salas de aula em contato com voluntários como você, que podem ajudar os alunos e os professores em sua primeira Hora do Código.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Seja [voluntário por uma hora](https://code.org/volunteer/engineer). Depois de se cadastrar, os professores da região poderão entrar em contato com você pedindo ajuda por meio de um formulário de segurança.* Você não pode se voluntariar? [Ajude a divulgar a Hora do Código](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Sua experiência é importante**  
-A maioria das escolas ainda não ensina ciência da computação. A maioria dos alunos não sabe que ela resolve grandes problemas e conecta as pessoas. Essa é uma chance de inspirar pelo menos um jovem da sua região.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Cadastre-se como voluntário](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-*Seu endereço de e-mail jamais será divulgado para os professores.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 5. Peça para seu empregador participar
 
-[Envie este e-mail](https://hourofcode.com/promote/resources#email) para seu gerente ou CEO.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 6. Promova a Hora do Código em sua comunidade
 
-Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou sedie uma "festa" da Hora do Código na sua vizinhança. [Envie este e-mail](https://hourofcode.com/promote/resources#email).
+Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou sedie uma "festa" da Hora do Código na sua vizinhança. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Leia a agenda sugerida abaixo para saber o que esperar quando você visitar uma sala de aula.
+## 7. Prepare-se antes de visitar uma sala de aula.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Passo a passo para o voluntariado em sala de aula
 

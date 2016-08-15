@@ -32,7 +32,9 @@
     "examples_required": "false",
     "ideal": "10",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\r\n  \"hint_id\": \"Course_4_Artist_11_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\r\n  \"hint_id\": \"Course_4_Artist_11_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\r\n  \"hint_id\": \"Course_4_Artist_11_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\r\n  \"hint_id\": \"Course_4_Artist_11_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -86,16 +88,13 @@
             <block type="colour_random"/>
           </value>
         </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES">uninitialized</title>
-        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown">
+            <block type="controls_repeat">
               <title name="TIMES" config="3-10">6</title>
               <statement name="DO">
                 <block type="draw_colour" inline="true" id="draw-color">

@@ -35,10 +35,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Oval\r\n\r\nEllipse is just a fancy name for oval.  We use the <img src=\"https://images.code.org/95b202f548bdbc7901031756438c214a-image-1460736125110.01.34 PM.png\" width=175> block to draw ovals.  The values for ellipse are very similar to rectangle but have one major difference. Can you figure out the difference?\r\n\r\n# Do This\r\n\r\n* Add a `rect` command\r\n* Add an `ellipse` command\r\n* Give `ellipse` the same input values you give `rect`\r\n* What do you notice?",
+    "markdown_instructions": "# Oval\r\n\r\nEllipse is just a fancy name for oval.  You can use the <img src=\"https://images.code.org/95b202f548bdbc7901031756438c214a-image-1460736125110.01.34 PM.png\" width=175> block to draw ovals.  The values for ellipse are very similar to rectangle but have one major difference. Can you figure out the difference?\r\n\r\n# Do This\r\n\r\n* Add a `rect` command\r\n* Add an `ellipse` command\r\n* Give `ellipse` the same input values you give `rect`\r\n* What do you notice?",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_ellipse\",\r\n  \"callout_text\": \"Use this block to draw an oval\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"center center\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Do This",
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

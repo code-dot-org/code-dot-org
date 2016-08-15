@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'cgi'
+require 'logger'
+require 'tmpdir'
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
 # you to format your code more readably.
@@ -21,6 +23,9 @@ class String
   end
 end
 
+LOG_FILE = "#{Dir.tmpdir}/dotd.log"
+LOGGER = Logger.new(LOG_FILE, 'daily')
+
 def ask_for_name
   name = ''
   until name != ''
@@ -28,6 +33,7 @@ def ask_for_name
     name = gets.chomp
   end
   puts "Hi #{name}!"
+  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DotD")
   name
 end
 
@@ -36,6 +42,7 @@ def should_i(question)
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
     if 'yes'.start_with?(response) # also catches blank/return ;)
+      LOGGER.info("[#{Time.new.strftime('%I:%M %p')}]: #{question}")
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
@@ -98,15 +105,15 @@ def content_push(server_name, environment_name, user_name)
 
       #{bold "Connecting to #{server_name}."} Type 'logout' when you're done.
 
-      #{dim "d[ o_0 ]b"}
+      #{dim 'd[ o_0 ]b'}
 
       EOS
       system "ssh -t gateway.code.org ssh #{server_name}"
       puts <<-EOS.unindent
 
-      #{dim "d[ o_0 ]b"}
+      #{dim 'd[ o_0 ]b'}
 
-      #{bold "Welcome back!"}
+      #{bold 'Welcome back!'}
 
       EOS
       press_enter_to_continue
@@ -194,7 +201,7 @@ should_i "DTP" do
 end
 
 puts <<-EOS.unindent
-  * Send your DOTD Report to dev@code.org
+  * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
 EOS
 press_enter_to_continue
 

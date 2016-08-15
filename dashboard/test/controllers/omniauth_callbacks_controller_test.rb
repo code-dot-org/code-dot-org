@@ -20,15 +20,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown facebook account needs additional information" do
     auth = stub('auth',
-                uid: '1111',
-                provider: 'facebook',
-                info: stub('info',
-                           nickname: '',
-                           name: 'someone',
-                           email: nil,
-                           user_type: nil,
-                           dob: nil,
-                           gender: nil))
+      uid: '1111',
+      provider: 'facebook',
+      info: stub(
+        'info',
+        nickname: '',
+        name: 'someone',
+        email: nil,
+        user_type: nil,
+        dob: nil,
+        gender: nil
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -37,7 +40,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes =  session['devise.user_attributes']
+    attributes = session['devise.user_attributes']
 
     assert_equal nil, attributes['email']
     assert_equal nil, attributes['age']
@@ -45,15 +48,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown clever teacher account" do
     auth = stub('auth',
-                uid: '1111',
-                provider: 'clever',
-                info: stub('info', nickname: '',
-                           name: {'first' => 'Hat', 'last' => 'Cat'},
-                           email: 'first_last@clever_teacher.xx',
-                           user_type: 'teacher',
-                           dob: nil,
-                           gender: nil))
-
+      uid: '1111',
+      provider: 'clever',
+      info: stub(
+        'info',
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: 'first_last@clever_teacher.xx',
+        user_type: 'teacher',
+        dob: nil,
+        gender: nil
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -71,15 +77,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown clever district admin account creates teacher" do
     auth = stub('auth',
-                uid: '1111',
-                provider: 'clever',
-                info: stub('info', nickname: '',
-                           name: {'first' => 'Hat', 'last' => 'Cat'},
-                           email: 'first_last@clever_district_admin.xx',
-                           user_type: 'district_admin',
-                           dob: nil,
-                           gender: nil))
-
+      uid: '1111',
+      provider: 'clever',
+      info: stub(
+        'info',
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: 'first_last@clever_district_admin.xx',
+        user_type: 'district_admin',
+        dob: nil,
+        gender: nil
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -97,15 +106,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown clever school admin account creates teacher" do
     auth = stub('auth',
-                uid: '1111',
-                provider: 'clever',
-                info: stub('info', nickname: '',
-                           name: {'first' => 'Hat', 'last' => 'Cat'},
-                           email: 'first_last@clever_school_admin.xx',
-                           user_type: 'school_admin',
-                           dob: nil,
-                           gender: nil))
-
+      uid: '1111',
+      provider: 'clever',
+      info: stub(
+        'info',
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: 'first_last@clever_school_admin.xx',
+        user_type: 'school_admin',
+        dob: nil,
+        gender: nil
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -123,15 +135,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown clever teacher account needs additional information" do
     auth = stub('auth',
-                uid: '1111',
-                provider: 'clever',
-                info: stub('info', nickname: '',
-                           name: {'first' => 'Hat', 'last' => 'Cat'},
-                           email: nil,
-                           user_type: 'teacher',
-                           dob: nil,
-                           gender: nil))
-
+      uid: '1111',
+      provider: 'clever',
+      info: stub(
+        'info',
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: nil,
+        user_type: 'teacher',
+        dob: nil,
+        gender: nil
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -140,21 +155,25 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes =  session['devise.user_attributes']
+    attributes = session['devise.user_attributes']
 
     assert_equal nil, attributes['email']
   end
 
   test "authorizing with unknown clever student account creates student" do
     auth = stub('auth',
-                uid: '111133',
-                provider: 'clever',
-                info: stub('info', nickname: '',
-                           name: {'first' => 'Hat', 'last' => 'Cat'},
-                           email: nil,
-                           user_type: 'student',
-                           dob: Date.today - 10.years,
-                           gender: 'f'))
+      uid: '111133',
+      provider: 'clever',
+      info: stub(
+        'info',
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: nil,
+        user_type: 'student',
+        dob: Date.today - 10.years,
+        gender: 'f'
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -176,14 +195,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   # workflow where we persist student email addresses.
   test "authorizing with unknown clever student account does not save email" do
     auth = stub('auth',
-                uid: '111133',
-                provider: 'clever',
-                info: stub('info', nickname: '',
-                           name: {'first' => 'Hat', 'last' => 'Cat'},
-                           email: 'hat.cat@example.com',
-                           user_type: 'student',
-                           dob: Date.today - 10.years,
-                           gender: 'f'))
+      uid: '111133',
+      provider: 'clever',
+      info: stub(
+        'info',
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: 'hat.cat@example.com',
+        user_type: 'student',
+        dob: Date.today - 10.years,
+        gender: 'f'
+      )
+    )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 

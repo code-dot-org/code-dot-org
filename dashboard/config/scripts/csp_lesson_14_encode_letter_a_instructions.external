@@ -4,7 +4,7 @@ css 'unplugged'
 skip_dialog true
 
 markdown <<MARKDOWN
-<img align="left" src="http://staging.code.org/images/cspunit1/letterA.png" width="200" hspace="20">
+<img align="left" src="//code.org/images/cspunit1/letterA.png" width="200" hspace="20">
 # Task 1: Make a 3x5 letter 'A'
 Start by trying to recreate the 3x5 letter “A” depicted (at left) using the pixelation widget.  
 When you click continue it will take you to the widget.

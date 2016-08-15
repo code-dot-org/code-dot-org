@@ -138,6 +138,7 @@ class DSLDefined < Level
   end
 
   private
+
   def delete_level_file
     File.delete(file_path) if File.exist?(file_path)
   end
