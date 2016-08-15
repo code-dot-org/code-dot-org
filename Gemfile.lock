@@ -379,8 +379,6 @@ GEM
       rack
     rack-cache (1.5.1)
       rack (>= 0.4)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
     rack-mini-profiler (0.9.7)
       rack (>= 1.1.3)
     rack-protection (1.5.3)
@@ -661,7 +659,6 @@ DEPENDENCIES
   quiet_assets
   rack-attack (~> 4.4)
   rack-cache
-  rack-contrib (~> 1.1)
   rack-mini-profiler
   rack-ssl-enforcer
   rack_csrf
