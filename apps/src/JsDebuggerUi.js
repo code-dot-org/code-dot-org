@@ -32,7 +32,7 @@ var WATCH_VALUE_NOT_RUNNING = "undefined";
  * App Lab, Game Lab, etc.
  * @param {!function} runApp - callback for "launching" the app, which is used
  *        by the "Step In" button when the app isn't running.
- * @param {!ReduxStore} reduxStore
+ * @param {!Store} reduxStore
  * @constructor
  */
 var JsDebuggerUi = module.exports = function (runApp, reduxStore) {
