@@ -1,8 +1,12 @@
 /** @file Character calculations, displayed side-by-side */
 import React from 'react';
+import color from '../color';
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import {primesInRange, privateKeyList} from './cryptographyMath';
+
+/** @const {number} Line height for numbered steps, helps align input fields */
+const LINE_HEIGHT = 30;
 
 export const Alice = React.createClass({
   propTypes: {
@@ -23,14 +27,14 @@ export const Alice = React.createClass({
     } = this.props;
     return (
       <CollapsiblePanel title="Alice">
-        <NumberedSteps>
+        <NumberedSteps lineHeight={LINE_HEIGHT}>
 
           <div>
             Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
           </div>
           <div>
             Set a private key: <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={setPrivateKey}/>
-            <br/>Your computed public key is {publicKey}
+            <div>Your computed public key is {publicKey}</div>
           </div>
           <div>
             Enter Bob's public number:
@@ -61,7 +65,7 @@ export const Eve = React.createClass({
     const {publicModulus, publicKey, setPublicModulus} = this.props;
     return (
       <CollapsiblePanel title="Eve">
-        <NumberedSteps>
+        <NumberedSteps lineHeight={LINE_HEIGHT}>
           <div>
             Set a public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
           </div>
@@ -99,7 +103,7 @@ export const Bob = React.createClass({
     const {publicModulus, publicKey, setPublicModulus} = this.props;
     return (
       <CollapsiblePanel title="Bob">
-        <NumberedSteps>
+        <NumberedSteps lineHeight={LINE_HEIGHT}>
           <div>
             Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={setPublicModulus}/>
           </div>
@@ -141,6 +145,22 @@ PrivateKeyDropdown.propTypes = {
   onChange: React.PropTypes.func.isRequired
 };
 
+const NumberDropdownStyle = {
+  width: 100,
+  height: Math.min(LINE_HEIGHT, 24),
+  // lineHeight does not get the automatic 'px' suffix
+  // see https://facebook.github.io/react/tips/style-props-value-px.html
+  lineHeight: `${LINE_HEIGHT}px`,
+  verticalAlign: 'middle',
+  marginBottom: 0,
+  paddingTop: 2,
+  paddingBottom: 2,
+  borderRadius: 4,
+  color: color.charcoal,
+  border: `1px solid ${color.lighter_gray}`,
+  backgroundColor: color.white
+};
+
 const NumberDropdown = React.createClass({
   propTypes: {
     value: React.PropTypes.number,
@@ -159,7 +179,7 @@ const NumberDropdown = React.createClass({
       value = '';
     }
     return (
-      <select value={value} onChange={this.onChange}>
+      <select style={NumberDropdownStyle} value={value} onChange={this.onChange}>
         <option key="empty" value=""/>
         {options.map(n => <option key={n} value={n}>{n}</option>)}
       </select>);
