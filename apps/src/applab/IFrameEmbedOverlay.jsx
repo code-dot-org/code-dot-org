@@ -3,7 +3,7 @@ import React from 'react';
 var Radium = require('radium');
 var studioApp = require('../StudioApp').singleton;
 var applabConstants = require('./constants');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 const PHONE_MARGIN = 68;
 
@@ -79,8 +79,10 @@ var IFrameEmbedOverlay = React.createClass({
 
   render() {
     return (
-      <div style={[styles.overlay.wrapper, !this.state.tooYoung && {cursor: 'cursor'}]}
-           onClick={this.onClick}>
+      <div
+        style={[styles.overlay.wrapper, !this.state.tooYoung && {cursor: 'cursor'}]}
+        onClick={this.onClick}
+      >
         {
           this.state.tooYoung ?
           <div className="alert alert-danger">

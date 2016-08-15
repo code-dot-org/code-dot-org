@@ -94,10 +94,12 @@ var HeightResizer = React.createClass({
     }];
 
     return (
-      <div style={mainStyle}
-          onMouseDown={this.onMouseDown}
-          onMouseUp={this.onMouseUp}
-          onMouseMove={this.onMouseMove}>
+      <div
+        style={mainStyle}
+        onMouseDown={this.onMouseDown}
+        onMouseUp={this.onMouseUp}
+        onMouseMove={this.onMouseMove}
+      >
         <div style={styles.ellipsis} className="fa fa-ellipsis-h"/>
       </div>
     );

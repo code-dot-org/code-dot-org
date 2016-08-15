@@ -86,7 +86,7 @@ class HipchatTest < Minitest::Test
     # Make we only tried 3 times (HipChat.MAX_RETRIES)
     assert_equal 3, HipChat.retries_for_test
     assert_in_delta BACKOFF + (2 * BACKOFF) + (4 * BACKOFF),
-                    HipChat.total_backoff_for_test
+      HipChat.total_backoff_for_test
   end
 
   # Verify correct behavior when hip chat logging is disabled.

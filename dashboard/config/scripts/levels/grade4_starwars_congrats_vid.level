@@ -1,0 +1,17 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-08-02T14:23:17.467Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "video_key": "starwars_blocks_congrats",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "Eventually, a new video will need to be created with a similar purpose and feel but without the Star Wars theme.",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

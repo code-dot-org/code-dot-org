@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "remover espacios del lado izquierdo",
   "TEXT_TRIM_OPERATOR_RIGHT": "remover los espacios del lado derecho",
   "TEXT_TRIM_TOOLTIP": "Devuelve una copia del texto con los espacios removidos de uno o ambos extremos.",
-  "UNUSED_CODE": "Código sin usar",
+  "UNUSED_CODE": "Codigo no usado",
   "VARIABLES_DEFAULT_NAME": "elemento",
   "VARIABLES_GET_CREATE_SET": "Crear 'set %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

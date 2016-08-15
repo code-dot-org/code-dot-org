@@ -1,53 +1,76 @@
 /* global define, $ */
-'use strict';
-
 import Immutable from 'immutable';
+import constants from './constants';
 
-exports.shallowCopy = function (source) {
+/**
+ * Checks whether the given subsequence is truly a subsequence of the given sequence,
+ * and whether the elements appear in the same order as the sequence.
+ *
+ * @param sequence Array - The sequence that the subsequence should be a subsequence of.
+ * @param subsequence Array - A subsequence of the given sequence.
+ * @returns boolean - whether or not subsequence is really a subsequence of sequence.
+ */
+export function isSubsequence(sequence, subsequence) {
+  let superIndex = 0, subIndex = 0;
+  while (subIndex < subsequence.length) {
+    while (superIndex < sequence.length && subsequence[subIndex] !== sequence[superIndex]) {
+      superIndex++;
+    }
+    if (superIndex >= sequence.length) {
+      // we went off the end while searching
+      return false;
+    }
+    subIndex++;
+    superIndex++;
+  }
+  return true;
+}
+
+export function shallowCopy(source) {
   var result = {};
   for (var prop in source) {
     result[prop] = source[prop];
   }
 
   return result;
-};
+}
 
 /**
  * Returns a clone of the object, stripping any functions on it.
  */
-exports.cloneWithoutFunctions = function (object) {
+export function cloneWithoutFunctions(object) {
   return JSON.parse(JSON.stringify(object));
-};
+}
 
 /**
  * Returns a string with a double quote before and after.
  */
-exports.quote = function (str) {
+export function quote(str) {
   return '"' + str + '"';
-};
+}
 
 /**
  * Returns a new object with the properties from defaults overridden by any
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use Object.assign({}, defaults, options) instead
  */
-exports.extend = function (defaults, options) {
+export function extend(defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
   }
 
   return finalOptions;
-};
+}
 
-exports.escapeHtml = function (unsafe) {
+export function escapeHtml(unsafe) {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
-};
+}
 
 /**
  * Version of modulo which, unlike javascript's `%` operator,
@@ -55,41 +78,41 @@ exports.escapeHtml = function (unsafe) {
  * @param number
  * @param mod
  */
-exports.mod = function (number, mod) {
+export function mod(number, mod) {
   return ((number % mod) + mod) % mod;
-};
+}
 
 /**
  * Generates an array of integers from start to end inclusive
  */
-exports.range = function (start, end) {
+export function range(start, end) {
   var ints = [];
   for (var i = start; i <= end; i++) {
     ints.push(i);
   }
   return ints;
-};
+}
 
 /**
  * Given two functions, generates a function that returns the result of the
  * second function if and only if the first function returns true
  */
-exports.executeIfConditional = function (conditional, fn) {
+export function executeIfConditional(conditional, fn) {
   return function () {
     if (conditional()) {
       return fn.apply(this, arguments);
     }
   };
-};
+}
 
 /**
  * Removes all single and double quotes from a string
  * @param inputString
  * @returns {string} string without quotes
  */
-exports.stripQuotes = function (inputString) {
+export function stripQuotes(inputString) {
   return inputString.replace(/["']/g, "");
-};
+}
 
 /**
  * Defines an inheritance relationship between parent class and this class.
@@ -104,7 +127,7 @@ Function.prototype.inherits = function (parent) {
  * Wrap a couple of our Blockly number validators to allow for ???.  This is
  * done so that level builders can specify required blocks with wildcard fields.
  */
-exports.wrapNumberValidatorsForLevelBuilder = function () {
+export function wrapNumberValidatorsForLevelBuilder() {
   var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
   var numVal = Blockly.FieldTextInput.numberValidator;
 
@@ -121,18 +144,22 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
     }
     return numVal(text);
   };
-};
+}
+
+/**
+ * Return a random value from an array
+ */
+export function randomValue(values) {
+  let key = Math.floor(Math.random() * values.length);
+  return values[key];
+}
 
 /**
  * Return a random key name from an object.
- *
- * Slightly modified from: http://stackoverflow.com/a/15106541
  */
-
-exports.randomKey = function (obj) {
-  var keys = Object.keys(obj);
-  return keys[keys.length * Math.random() << 0];
-};
+export function randomKey(obj) {
+  return randomValue(Object.keys(obj));
+}
 
 /**
  * Generate a random identifier in a format matching the RFC-4122 specification.
@@ -144,18 +171,18 @@ exports.randomKey = function (obj) {
  *
  * @returns {string} RFC4122-compliant UUID
  */
-exports.createUuid = function () {
+export function createUuid() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
-};
+}
 
-exports.fireResizeEvent = function () {
+export function fireResizeEvent() {
   var ev = document.createEvent('Event');
   ev.initEvent('resize', true, true);
   window.dispatchEvent(ev);
-};
+}
 
 // ECMAScript 6 polyfill for String.prototype.repeat
 // Polyfill adapted from
@@ -214,9 +241,9 @@ if (!String.prototype.repeat) {
  * undefined instead of whether val is falsey.
  * @returns {*} val if not undefined, otherwise defaultVal
  */
-exports.valueOr = function (val, defaultVal) {
+export function valueOr(val, defaultVal) {
   return val === undefined ? defaultVal : val;
-};
+}
 
 
 /**
@@ -226,7 +253,7 @@ exports.valueOr = function (val, defaultVal) {
  * Note: Other languages probably have localized messages, meaning we won't
  * catch them.
  */
-exports.isInfiniteRecursionError = function (err) {
+export function isInfiniteRecursionError(err) {
   // Chrome/Safari: message ends in a period in Safari, not in Chrome
   if (err instanceof RangeError &&
     /^Maximum call stack size exceeded/.test(err.message)) {
@@ -250,10 +277,10 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   return false;
-};
+}
 
 // TODO(dave): move this logic to dashboard.
-exports.getPegasusHost = function () {
+export function getPegasusHost() {
   switch (window.location.hostname) {
     case 'studio.code.org':
     case 'learn.code.org':
@@ -278,12 +305,12 @@ exports.getPegasusHost = function () {
           return null;
       }
   }
-};
+}
 
 /**
  * IE9 throws an exception when trying to access the media field of a stylesheet
  */
-exports.browserSupportsCssMedia = function () {
+export function browserSupportsCssMedia() {
   var styleSheets = document.styleSheets;
   for (var i = 0; i < styleSheets.length; i++) {
     var rules = styleSheets[i].cssRules || styleSheets[i].rules;
@@ -297,14 +324,14 @@ exports.browserSupportsCssMedia = function () {
     }
   }
   return true;
-};
+}
 
 /**
  * Remove escaped characters and HTML to convert some rendered text to what should appear in user-edited controls
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines
  */
-exports.unescapeText = function (text) {
+export function unescapeText(text) {
   var cleanedText = text;
 
   // Handling of line breaks:
@@ -343,14 +370,14 @@ exports.unescapeText = function (text) {
   cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
   cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
   return cleanedText;
-};
+}
 
 /**
  * Escape special characters in a piece of text, and convert newlines to seperate divs
  * @param text
  * @returns String with special characters escaped and newlines converted divs
  */
-exports.escapeText = function (text) {
+export function escapeText(text) {
   var escapedText = text.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
@@ -372,10 +399,10 @@ exports.escapeText = function (text) {
   return first + rest.map(function (line) {
     return '<div>' + (line.length ? line : '<br>') + '</div>';
   }).join('');
-};
+}
 
-exports.showUnusedBlockQtip = function (targetElement) {
-  var msg = require('./locale');
+export function showUnusedBlockQtip(targetElement) {
+  var msg = require('@cdo/locale');
   $(targetElement).qtip({
     content: {
       text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
@@ -399,7 +426,7 @@ exports.showUnusedBlockQtip = function (targetElement) {
     },
     show: false // don't show on mouseover
   }).qtip('show');
-};
+}
 
 /**
  * Converts degrees into radians.
@@ -407,16 +434,16 @@ exports.showUnusedBlockQtip = function (targetElement) {
  * @param degrees - The degrees to convert to radians
  * @return `degrees` converted to radians
  */
-exports.degreesToRadians = function (degrees) {
+export function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
-};
+}
 
 /**
  * Simple wrapper around localStorage.setItem that catches any exceptions (for
  * example when we call setItem in Safari's private mode)
  * @return {boolean} True if we set successfully
  */
-exports.trySetLocalStorage = function (item, value) {
+export function trySetLocalStorage(item, value) {
   try {
     localStorage.setItem(item, value);
     return true;
@@ -424,7 +451,7 @@ exports.trySetLocalStorage = function (item, value) {
     return false;
   }
 
-};
+}
 
 /**
  * Generates a simple enum object
@@ -434,7 +461,7 @@ exports.trySetLocalStorage = function (item, value) {
  *   Seasons.SUMMER === 'SUMMER';
  *   // etc...
  */
-exports.makeEnum = function () {
+export function makeEnum() {
   var result = {}, key;
   for (var i = 0; i < arguments.length; i++) {
     key = String(arguments[i]);
@@ -447,7 +474,7 @@ exports.makeEnum = function () {
     Object.freeze(result);
   }
   return result;
-};
+}
 
 /**
  * If the string is too long, truncate it and append an ellipsis.
@@ -455,12 +482,12 @@ exports.makeEnum = function () {
  * @param {number} maxLength
  * @returns {string}
  */
-exports.ellipsify = function (inputText, maxLength) {
+export function ellipsify(inputText, maxLength) {
   if (inputText && inputText.length > maxLength) {
     return inputText.substr(0, maxLength - 3) + "...";
   }
   return inputText || '';
-};
+}
 
 /**
  * Returns deep merge of two objects, concatenating rather than overwriting
@@ -477,7 +504,7 @@ exports.ellipsify = function (inputText, maxLength) {
  * @param {Object} overrides
  * @returns {Object} original object (now modified in-place)
  */
-exports.deepMergeConcatArrays = (baseObject, overrides) => {
+export function deepMergeConcatArrays(baseObject, overrides) {
   function deepConcatMerger(a, b) {
     const isList = Immutable.List.isList;
     if (isList(a) && isList(b)) {
@@ -491,7 +518,7 @@ exports.deepMergeConcatArrays = (baseObject, overrides) => {
 
   var baseImmutable = Immutable.fromJS(baseObject);
   return baseImmutable.mergeWith(deepConcatMerger, overrides).toJS();
-};
+}
 
 /**
  * Creates a new event in a cross-browswer-compatible way.
@@ -505,7 +532,7 @@ exports.deepMergeConcatArrays = (baseObject, overrides) => {
  * @param {boolean} [bubbles=false]
  * @param {boolean} [cancelable=false]
  */
-exports.createEvent = function (type, bubbles = false, cancelable = false) {
+export function createEvent(type, bubbles = false, cancelable = false) {
   var customEvent;
   try {
     customEvent = new Event(type, { bubbles, cancelable });
@@ -514,4 +541,104 @@ exports.createEvent = function (type, bubbles = false, cancelable = false) {
     customEvent.initEvent(type, bubbles, cancelable);
   }
   return customEvent;
-};
+}
+
+/**
+ * @param {Object} vector with x and y coordinates
+ * @returns {Object} vector with x and y coordinates and length 1 (or 0 if
+ *   the argument also had length 0)
+ */
+export function normalize(vector) {
+  var mag = Math.sqrt((vector.x * vector.x) + (vector.y * vector.y));
+  if (mag === 0) {
+    return vector;
+  }
+  return {
+    x: vector.x / mag,
+    y: vector.y / mag
+  };
+}
+
+/**
+ * @param {number} position selected from constants.Position
+ * @param {number} containerWidth width of the element we are
+ *        positioning within
+ * @param {number} spriteWidth width of the element being positioned
+ * @returns {number} left-most point of sprite given position constant
+ */
+export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
+  switch (position) {
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
+      return -spriteWidth;
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+      return 0;
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.TOPCENTER:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.OUTBOTTOMCENTER:
+      return (containerWidth - spriteWidth) / 2;
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMRIGHT:
+      return containerWidth - spriteWidth;
+    case constants.Position.OUTTOPOUTRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
+      return containerWidth;
+  }
+}
+
+/**
+ * @param {number} position selected from constants.Position
+ * @param {number} containerHeight height of the element we are
+ *        positioning within
+ * @param {number} spriteHeight height of the element being positioned
+ * @returns {number} top-most point of sprite given position constant
+ */
+export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
+  switch (position) {
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
+      return -spriteHeight;
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.TOPCENTER:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+      return 0;
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+      return (containerHeight - spriteHeight) / 2;
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+      return containerHeight - spriteHeight;
+    case constants.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
+      return containerHeight;
+  }
+}

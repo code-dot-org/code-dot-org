@@ -1,7 +1,6 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 
-testUtils.setupLocales();
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
@@ -24,6 +23,7 @@ function createFakeSkin() {
     redFlower: 'redFlower.png',
     purpleFlower: 'purpleFlower.png',
     honey: 'honey.png',
+    cloud: 'cloud.png',
     flowerComb: 'flowercomb.png',
     numbers: 'numbers.png'
   };

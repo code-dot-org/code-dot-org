@@ -2,7 +2,7 @@ name 'CSD U3 Variables STOP misconceptions prediction'
 css 'unplugged' 
 
 markdown <<MARKDOWN
-# Misconceptions: Make a Prediction
+# Stop and Discuss
 
 You've already worked with unplugged variables and you've had an opportunity to program with them a little bit. See if you can predict the output of these short programs that **highlight common misconceptions about variables**.
 

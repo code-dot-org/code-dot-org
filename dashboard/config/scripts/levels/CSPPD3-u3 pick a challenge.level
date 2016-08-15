@@ -5,10 +5,16 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\">\n\n### Challenge Overview > What's your Challenge? \n\n<br/>\n#### Enter the lesson you selected for your challenge in the text box below.\n\n- 2 - 5: Turtle Drawing\n- 6 - 7: Functions and Simple Loops\n- 14-15: Variables \n- 16: Strings\n- 18: Programming Flow and Conditionals\n\n>Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. \n<br><br>\n<a href=\"http://forum.code.org/t/unit-3-challenge-selection/2470\" target=_blank>forums >> </a>\n\n<br>\n",
+    "markdown_instructions": "# Challenge Overview > What's your Challenge? \r\n\r\n## Enter the lesson you selected for your challenge in the text box below.\r\n\r\n- 2 - 5: Turtle Drawing\r\n- 6 - 7: Functions and Simple Loops\r\n- 14-15: Variables \r\n- 16: Strings\r\n- 18: Programming Flow and Conditionals\r\n\r\nNow that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. \r\n\r\n#### <a href=\"http://forum.code.org/t/unit-3-challenge-selection/2470\" target=_blank>Forums <i class=\"fa fa-external-link-square\" /></a>",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

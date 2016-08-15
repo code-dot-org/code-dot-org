@@ -13,7 +13,5 @@
   "browserify-shim": {
     "marked": "global:marked"
   },
-  "dependencies": {
-    "firebase": "^2.4.1"
-  }
+  "dependencies": {}
 }

@@ -10,25 +10,25 @@ DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_read
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 def add_count_to_hash(hash, key, count)
-  hash[key] = hash.has_key?(key) ? hash[key] + count : count
+  hash[key] = hash.key?(key) ? hash[key] + count : count
 end
 
 def analyze_day_fast(date)
   day = date.strftime('%Y-%m-%d')
   next_day = (date + 1).strftime('%Y-%m-%d')
 
-  weighted_count = "SUM(" +
+  weighted_count = "SUM(" \
     " IF(session REGEXP '^_.*_'," +
     # Parses the session weight 'xyz' from the session '_xyz_abcdefghijk'.
     "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
     # The session does not specify the session weight, default to one.
-    "   1)" +
+    "   1)" \
     " ) AS count"
-  from_where = "FROM hoc_activity" +
-    " WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" +
+  from_where = "FROM hoc_activity" \
+    " WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" \
     "   OR (pixel_started_at >= '#{day}' AND pixel_started_at < '#{next_day}')"
-  finished_from_where = "FROM hoc_activity" +
-    " WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
+  finished_from_where = "FROM hoc_activity" \
+    " WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" \
     "   OR (pixel_finished_at >= '#{day}' AND pixel_finished_at < '#{next_day}')"
 
   # Generate a list of Code.org tutorials so that we can generate the count for
@@ -81,14 +81,14 @@ def analyze_day_fast(date)
   finished = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{finished_from_where}").first[:count].to_i
 
   {
-    'started'=>started,
-    'finished'=>finished,
-    'cities'=>cities,
-    'states'=>states,
-    'countries'=>countries,
-    'tutorials'=>tutorials,
-    'codedotorg_tutorial_count'=>codedotorg_tutorial_count,
-    'votes'=>{ 'boys'=>'0', 'girls'=>'0' },
+    'started' => started,
+    'finished' => finished,
+    'cities' => cities,
+    'states' => states,
+    'countries' => countries,
+    'tutorials' => tutorials,
+    'codedotorg_tutorial_count' => codedotorg_tutorial_count,
+    'votes' => { 'boys' => '0', 'girls' => '0' },
   }
 end
 

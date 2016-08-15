@@ -27,20 +27,26 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     assert_equal @user, module_assignment.user
     assert_equal Plc::EnrollmentModuleAssignment::NOT_STARTED, module_assignment.status
 
-    User.track_level_progress_sync(user_id: @user.id,
-                                   level_id: @level2.id,
-                                   script_id: @course_unit.script.id,
-                                   new_result: ActivityConstants::MINIMUM_PASS_RESULT,
-                                   submitted: true,
-                                   level_source_id: nil)
+    User.track_level_progress_sync(
+      user_id: @user.id,
+      level_id: @level2.id,
+      script_id: @course_unit.script.id,
+      new_result: ActivityConstants::MINIMUM_PASS_RESULT,
+      submitted: true,
+      level_source_id: nil,
+      pairing_user_ids: nil
+    )
     assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, module_assignment.status
 
-    User.track_level_progress_sync(user_id: @user.id,
-                                   level_id: @level3.id,
-                                   script_id: @course_unit.script.id,
-                                   new_result: ActivityConstants::BEST_PASS_RESULT,
-                                   submitted: true,
-                                   level_source_id: nil)
+    User.track_level_progress_sync(
+      user_id: @user.id,
+      level_id: @level3.id,
+      script_id: @course_unit.script.id,
+      new_result: ActivityConstants::BEST_PASS_RESULT,
+      submitted: true,
+      level_source_id: nil,
+      pairing_user_ids: nil
+    )
     assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, module_assignment.status
   end
 end

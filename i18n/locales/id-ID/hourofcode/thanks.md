@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-Anda memungkinkan siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka*, selama <%= campaign_date('full') %>. Kami akan menghubungi tentang hadiah, tutorial baru dan update menarik lainnya. Apa yang dapat Anda lakukan sekarang?
+Anda memungkinkan siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka*, selama <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Apa yang dapat Anda lakukan sekarang?
 
 ## 1. Sebarkan berita
 

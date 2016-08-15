@@ -26,10 +26,10 @@ class MediaProxyController < ApplicationController
   # Return the proxied media at the given URL.
   def get
     render_proxied_url(
-        params[:u],
-        allowed_content_types: ALLOWED_CONTENT_TYPES,
-        allowed_hostname_suffixes: nil, # allow any hostname
-        expiry_time: EXPIRY_TIME,
-        infer_content_type: true)
+      params[:u],
+      allowed_content_types: ALLOWED_CONTENT_TYPES,
+      allowed_hostname_suffixes: nil, # allow any hostname
+      expiry_time: EXPIRY_TIME,
+      infer_content_type: true)
   end
 end

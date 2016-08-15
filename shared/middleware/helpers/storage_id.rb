@@ -71,13 +71,13 @@ def storage_id(endpoint)
   @user_storage_id ||= storage_id_for_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
-def storage_id_cookie_name()
+def storage_id_cookie_name
   name = "storage_id"
   name += "_#{rack_env}" unless rack_env?(:production)
   name
 end
 
-def storage_id_for_user()
+def storage_id_for_user
   return nil unless request.user_id
 
   # Return the user's storage-id, if it exists.
@@ -105,7 +105,7 @@ def storage_id_for_user()
   user_storage_ids_table.insert(user_id: request.user_id)
 end
 
-def storage_id_from_cookie()
+def storage_id_from_cookie
   encrypted = CGI.unescape(request.cookies[storage_id_cookie_name].to_s)
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
@@ -113,7 +113,7 @@ def storage_id_from_cookie()
   storage_id
 end
 
-def user_storage_ids_table()
+def user_storage_ids_table
   @user_storage_ids_table ||= PEGASUS_DB[:user_storage_ids]
 end
 

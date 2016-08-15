@@ -1,7 +1,3 @@
--#
-  Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
-  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
-
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
@@ -10,14 +6,12 @@
     .form-group
       %label.control-label{for: "hoc-name"}
         = hoc_s(:signup_name_label)
-        %span.required-asterisk *
       %div
         %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
 
     .form-group
       %label.control-label{for: "hoc-email"}
         = hoc_s(:signup_email_label)
-        %span.required-asterisk *
       %div
         %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
 
@@ -45,6 +39,18 @@
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
 
+    - if @country == 'us'
+      .form-group
+        .checkbox
+          %label
+            %input#hoc-send-posters-flag{name: "send_posters_flag_b", type: "checkbox", value: "1"}/
+            =hoc_s(:signup_send_posters_flag_label)
+
+      .form-group{style: "display: none;"}
+        %label.control-label{for: "hoc-send-posters-address"}= hoc_s(:signup_send_posters_address_label)
+        %div
+          %textarea#hoc-send-posters-address.form-control{name: "send_posters_address_s", placeholder: hoc_s(:signup_send_posters_address_placeholder), style: "height: 5em;"}
+
     .form-group
       .checkbox
         %label
@@ -65,7 +71,6 @@
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
     %p.multiple-event-warning
-      %span.required-asterisk *
       = hoc_s(:signup_multiple_event_warning)
     .form-group.submit-btn
       %div
@@ -88,6 +93,13 @@
         $('#hoc-special-event-details').closest('.form-group').slideDown();
       } else {
         $('#hoc-special-event-details').closest('.form-group').slideUp();
+      }
+    });
+    $('#hoc-send-posters-flag').change(function() {
+      if($(this).is(':checked')) {
+        $('#hoc-send-posters-address').closest('.form-group').slideDown();
+      } else {
+        $('#hoc-send-posters-address').closest('.form-group').slideUp();
       }
     });
     $('#hoc-event-type').change(function() {
@@ -115,7 +127,7 @@
     $("#signup_submit").attr('disabled','disabled');
 
     $.ajax({
-      url: "/forms/HocSignup2015",
+      url: "/forms/HocSignup2016",
       type: "post",
       dataType: "json",
       data: $("#hoc-signup-form").serialize()

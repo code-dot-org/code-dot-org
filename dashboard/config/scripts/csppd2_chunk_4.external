@@ -2,21 +2,13 @@ name 'CSPPD2 chunk 4'
 css 'unplugged'
 
 markdown <<MARKDOWN
-### Chunk 4: Compressing and Storing Information > Overview of the Lessons
+# Chunk 4: Compressing and Storing Information > Overview of the Lessons
 
 <img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/yggDBu0V24XwkVv/Screen%20Shot%202015-07-18%20at%2012.03.21%20AM.png" width=“70%” style="float:left; margin-right:30px">
-<br>
-<br>
 
 In the fourth chunk of lessons students start thinking about the size of the files that are created by applying the different protocols they've developed for representing information. They move into thinking about how to use compression to decrease the total file size, and then develop an encoding scheme for images black and white and then color. The chunk of lessons ends with students researching and comparing different file types that are used in the real world. 
-  
-
-<br>
 
 On the next page we'll look at the one-page overview from each lesson, but remember that you can always see the [entire unit on Code Studio](https://studio.code.org/s/cspunit1/). 
-<br><br>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

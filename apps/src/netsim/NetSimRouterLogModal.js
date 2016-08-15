@@ -2,14 +2,17 @@
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
  */
-'use strict';
-
 import $ from 'jquery';
-var i18n = require('./locale');
-var NetSimLogEntry = require('./NetSimLogEntry');
-var Packet = require('./Packet');
-var markup = require('./NetSimRouterLogModal.html.ejs');
-var NetSimGlobals = require('./NetSimGlobals');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import i18n from '@cdo/netsim/locale';
+import experiments from '../experiments';
+import NetSimLogBrowser from './NetSimLogBrowser';
+import NetSimLogEntry from './NetSimLogEntry';
+import Packet from './Packet';
+import markup from './NetSimRouterLogModal.html.ejs';
+import NetSimGlobals from './NetSimGlobals';
+import {doesUserOwnShard} from './NetSimUtils';
 
 /** @const {string} */
 var LOG_ENTRY_DATA_KEY = 'LogEntry';
@@ -17,20 +20,33 @@ var LOG_ENTRY_DATA_KEY = 'LogEntry';
 /** @const {number} */
 var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
 
+function usingNewLogBrowser() {
+  return experiments.isEnabled('netsimNewLogBrowser');
+}
+
 /**
  * Generator and controller for contents of modal dialog that reveals
  * all router logs together, in a searchable/sortable/filterable manner.
  *
  * @param {jQuery} rootDiv
+ * @param {!DashboardUser} options.user
  * @constructor
  */
-var NetSimRouterLogModal = module.exports = function (rootDiv) {
+var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
 
   /**
    * Component root, which we fill whenever we call render()
    * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
+  if (!usingNewLogBrowser()) {
+    this.rootDiv_.addClass('old-router-log-modal modal fade');
+  }
+
+  /**
+   * @private {DashboardUser}
+   */
+  this.user_ = options.user;
 
   /**
    * Hidden by default.
@@ -38,14 +54,21 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    */
   this.isVisible_ = false;
 
-  // Attach handlers for showing and hiding the modal
-  this.rootDiv_.on('shown.bs.modal', this.onShow_.bind(this));
-  this.rootDiv_.on('hidden.bs.modal', this.onHide_.bind(this));
+  if (!usingNewLogBrowser()) {
+    // Attach handlers for showing and hiding the modal
+    this.rootDiv_.on('shown.bs.modal', this.onShow_.bind(this));
+    this.rootDiv_.on('hidden.bs.modal', this.onHide_.bind(this));
+  }
 
   /**
    * @private {NetSimShard}
    */
   this.shard_ = null;
+
+  /**
+   * @private {NetSimClientNode}
+   */
+  this.localNode_ = null;
 
   /**
    * @private {NetSimRouterNode}
@@ -63,6 +86,13 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    * @private {number}
    */
   this.latestRowID_ = 0;
+
+  /**
+   * Cached list of all sender names that appear in the logs, which we update
+   * incrementally.
+   * @private {string[]}
+   */
+  this.uniqueSenderNames_ = [];
 
   /**
    * Tracking information for which events we're registered to, so we can
@@ -91,6 +121,25 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    * @private {boolean}
    */
   this.isAllRouterLogMode_ = true;
+
+  /**
+   * What type of filtering we are currently doing.  By default this is 'none',
+   * doing no additional filtering on the logs.  It can also be set to
+   * 'from <ip>', 'to <ip>', or 'with <ip>' (meaning from OR to)
+   * @private {!string}
+   */
+  this.currentTrafficFilter_ = 'none';
+
+  /**
+   * Whether we are currently rendering teacher view (which has additional
+   * columns and filter options).
+   * @private {boolean}
+   */
+  this.teacherView_ = false;
+
+  // Pre-bind callbacks for use when rendering
+  this.setRouterLogMode_ = this.setRouterLogMode_.bind(this);
+  this.setTrafficFilterMode_ = this.setTrafficFilterMode_.bind(this);
 
   this.render();
 };
@@ -150,6 +199,26 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 
 };
 
+NetSimRouterLogModal.prototype.show = function (teacherView=false) {
+  // Extra check for setting teacherView here - must own the shard
+  this.teacherView_ = teacherView &&
+      (this.shard_ && doesUserOwnShard(this.user_, this.shard_.id));
+  if (usingNewLogBrowser()) {
+    this.onShow_();
+  } else {
+    this.rootDiv_.modal('show');
+  }
+};
+
+NetSimRouterLogModal.prototype.hide = function () {
+  if (usingNewLogBrowser()) {
+    this.onHide_();
+    this.render();
+  } else {
+    this.rootDiv_.modal('hide');
+  }
+};
+
 /**
  * State changes that occur when shoing the log.
  * @private
@@ -184,7 +253,51 @@ NetSimRouterLogModal.prototype.isVisible = function () {
  * Fill the root div with new elements reflecting the current state
  */
 NetSimRouterLogModal.prototype.render = function () {
-  // Be lazy, don't render if not visible.
+  if (usingNewLogBrowser()) {
+    this.newRender_();
+  } else {
+    this.oldRender_();
+  }
+};
+
+NetSimRouterLogModal.prototype.newRender_ = function () {
+  const getOriginNodeName = entry => {
+    const originNode = entry.getOriginNode();
+    return originNode ? originNode.getDisplayName() : entry.nodeID;
+  };
+  const tableRows = this.getSortedFilteredLogEntries(this.logEntries_).map(entry => ({
+    'uuid': entry.uuid,
+    'timestamp': entry.timestamp,
+    'sent-by': entry.sentBy,
+    'logged-by': getOriginNodeName(entry),
+    'status': entry.getLocalizedStatus(),
+    'from-address': entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS),
+    'to-address': entry.getHeaderField(Packet.HeaderType.TO_ADDRESS),
+    'packet-info': entry.getLocalizedPacketInfo(),
+    'message': entry.getMessageAscii()
+  }));
+  ReactDOM.render(
+    <NetSimLogBrowser
+      isOpen={this.isVisible()}
+      handleClose={this.hide.bind(this)}
+      i18n={i18n}
+      canSetRouterLogMode={this.canSetRouterLogMode_()}
+      isAllRouterLogMode={this.isAllRouterLogMode_}
+      setRouterLogMode={this.setRouterLogMode_}
+      localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
+      currentTrafficFilter={this.currentTrafficFilter_}
+      setTrafficFilter={this.setTrafficFilterMode_}
+      headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
+      logRows={tableRows}
+      senderNames={this.uniqueSenderNames_}
+      renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
+      teacherView={this.teacherView_}
+    />,
+    this.rootDiv_[0]
+  );
+};
+
+NetSimRouterLogModal.prototype.oldRender_ = function () {
   if (!this.isVisible()) {
     return;
   }
@@ -192,17 +305,24 @@ NetSimRouterLogModal.prototype.render = function () {
   // Re-render entire log browser UI
   var renderedMarkup = $(markup({
     isAllRouterLogMode: this.isAllRouterLogMode_,
-    canToggleRouterLogMode: this.canToggleRouterLogMode_(),
+    canSetRouterLogMode: this.canSetRouterLogMode_(),
+    currentTrafficFilter: this.currentTrafficFilter_,
+    localAddress: this.localNode_ ? this.localNode_.getAddress() : undefined,
     sortBy: this.sortBy_,
     sortDescending: this.sortDescending_
   }));
   this.rootDiv_.html(renderedMarkup);
 
   // Add input handlers
-  this.getRouterLogToggleButton().one('click', function () {
-    this.toggleRouterLogMode_();
+  this.getRouterLogModeDropdown().one('change', (evt) => {
+    this.setRouterLogMode_(evt.target.value);
     this.render();
-  }.bind(this));
+  });
+
+  this.getTrafficFilterCycleDropdown().one('change', (evt) => {
+    this.setTrafficFilterMode_(evt.target.value);
+    this.render();
+  });
 
   this.rootDiv_.find('th').click(function (event) {
     this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
@@ -210,8 +330,8 @@ NetSimRouterLogModal.prototype.render = function () {
 
   // Add rows to the table
   var rows = this.getSortedFilteredLogEntries(this.logEntries_)
-      .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
-      .map(this.makeTableRow_.bind(this));
+    .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
+    .map(this.makeTableRow_.bind(this));
   this.rootDiv_.find('tbody').append(rows);
 
   if (rows.length === MAXIMUM_ROWS_IN_FULL_RENDER) {
@@ -284,14 +404,31 @@ function getNextInfo(rows, atIndex) {
  *          according to the log browser's current settings.
  */
 NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntries) {
-  // Filter entries to current log browser filter mode
-  var filteredLogEntries = this.isAllRouterLogMode_ ?
-      logEntries :
-      logEntries.filter(function (entry) {
-        return entry.nodeID === this.router_.entityID;
-      }, this);
+  let filterPredicates = [];
 
-  return filteredLogEntries.sort(this.getSortComparator_());
+  // Add router mode filter
+  if (!this.isAllRouterLogMode_) {
+    filterPredicates.push(e => e.nodeID === this.router_.entityID);
+  }
+
+  // Add traffic filter
+  const match = /^(from|to|with) ([\d\.]+)/.exec(this.currentTrafficFilter_);
+  if (match) {
+    const fromPredicate = e => e.getHeaderField(Packet.HeaderType.FROM_ADDRESS) === match[2];
+    const toPredicate = e => e.getHeaderField(Packet.HeaderType.TO_ADDRESS) === match[2];
+    const withPredicate = e => fromPredicate(e) || toPredicate(e);
+    if ('from' === match[1]) {
+      filterPredicates.push(fromPredicate);
+    } else if ('to' === match[1]) {
+      filterPredicates.push(toPredicate);
+    } else if ('with' === match[1]) {
+      filterPredicates.push(withPredicate);
+    }
+  }
+
+  return logEntries
+      .filter(e => filterPredicates.every(p => p(e)))
+      .sort(this.getSortComparator_());
 };
 
 /**
@@ -374,7 +511,7 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
 };
 
 /**
- * Called by the sumulation's onRouterConnect and onRouterDisconnect
+ * Called by the simulation's onRouterConnect and onRouterDisconnect
  * methods, this locally remembers the current router state and triggers
  * a rerender
  * @param {NetSimRouterNode} router
@@ -382,6 +519,9 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
 NetSimRouterLogModal.prototype.setRouter = function (router) {
   this.router_ = router;
   this.isAllRouterLogMode_ = !this.hasLocalRouter_();
+  if (!this.hasLocalRouter_()) {
+    this.currentTrafficFilter_ = 'none';
+  }
   this.render();
 };
 
@@ -412,7 +552,7 @@ NetSimRouterLogModal.prototype.hasLocalRouter_ = function () {
  * @returns {boolean}
  * @private
  */
-NetSimRouterLogModal.prototype.canToggleRouterLogMode_ = function () {
+NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
   if (this.isAllRouterLogMode_) {
     return this.hasLocalRouter_();
   } else {
@@ -421,29 +561,51 @@ NetSimRouterLogModal.prototype.canToggleRouterLogMode_ = function () {
 };
 
 /**
- * Toggles this.isAllRouterLogMode_ between `true` and `false`
+ * Changes the router log filtering mode
+ * @param {string} mode - either "all" or "mine"
  * @private
  */
-NetSimRouterLogModal.prototype.toggleRouterLogMode_ = function () {
-  this.isAllRouterLogMode_ = !this.isAllRouterLogMode_;
+NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
+  this.isAllRouterLogMode_ = mode === 'all';
+  usingNewLogBrowser() && this.render();
+};
+
+
+/**
+ * Sets this.currentTrafficFilter_.
+ * @param {string} newMode - the new traffic filter mode
+ * @private
+ */
+NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
+  this.currentTrafficFilter_ = newMode;
+  usingNewLogBrowser() && this.render();
 };
 
 /**
- * Finds the button used to toggle between router log modes
+ * Finds the dropdown used to change router log modes
  * @returns {jQuery}
  * @private
  */
-NetSimRouterLogModal.prototype.getRouterLogToggleButton = function () {
-  return this.rootDiv_.find('button#routerlog-toggle');
+NetSimRouterLogModal.prototype.getRouterLogModeDropdown = function () {
+  return this.rootDiv_.find('select#routerlog-mode');
+};
+
+/**
+ * Finds the dropdown used to change traffic filter modes
+ * @returns {jQuery}
+ * @private
+ */
+NetSimRouterLogModal.prototype.getTrafficFilterCycleDropdown = function () {
+  return this.rootDiv_.find('select#traffic-filter');
 };
 
 /**
  * Give the log browser a reference to the shard, so that it can query the
  * log table.  Or, pass null when disconnecting from a shard.
  * @param {NetSimShard|null} newShard
+ * @param {NetSimLocalClientNode|null} localNode
  */
-NetSimRouterLogModal.prototype.setShard = function (newShard) {
-
+NetSimRouterLogModal.prototype.onShardChange = function (newShard, localNode) {
   if (this.eventKeys_.registeredWithShard) {
     this.eventKeys_.registeredWithShard.logTable.tableChange.unregister(
         this.eventKeys_.logTableChange);
@@ -458,8 +620,10 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
 
   // When changing shards, reset log so we fetch the whole thing next time.
   this.logEntries_.length = 0;
+  this.uniqueSenderNames_.length = 0;
   this.latestRowID_ = 0;
   this.shard_ = newShard;
+  this.localNode_ = localNode;
 };
 
 /**
@@ -473,7 +637,20 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
     this.latestRowID_ = Math.max(row.id, this.latestRowID_);
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);
+
   // Modify this.logEntries_ in-place, appending new log entries
   Array.prototype.push.apply(this.logEntries_, newLogEntries);
-  this.renderNewLogEntries_(newLogEntries);
+
+  // Add any new senders to the uniqueSenderNames list
+  newLogEntries.forEach(entry => {
+    if (!this.uniqueSenderNames_.includes(entry.sentBy)) {
+      this.uniqueSenderNames_.push(entry.sentBy);
+    }
+  });
+
+  if (usingNewLogBrowser()) {
+    this.render();
+  } else {
+    this.renderNewLogEntries_(newLogEntries);
+  }
 };

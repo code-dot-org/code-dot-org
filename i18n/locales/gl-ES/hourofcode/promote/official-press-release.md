@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Mostra da nota de prensa para os representantes políticos
 
 Para publicación inmediata  
@@ -42,9 +40,3 @@ Máis de 100 millóns de estudantes en todo o mundo xa teñen participado nalgun
 [**INSERTE UNHA CITA DE OUTRA ORGANIZACIÓN OU DALGUÉN QUE ACUDISE Ó EVENTO**]
 
 Para máis información sobre [**EVENTO/PROGRAMA/ETC**], visite [**INSERTE SITIO WEB**] ou contacte con [**INSERTE INFORMACIÓN DE CONTACTO**]
-
-  
-  
-
-
-<%= view :signup_button %>

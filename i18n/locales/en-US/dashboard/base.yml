@@ -29,6 +29,8 @@ en:
   unsubmit: crwdns56122:0crwdne56122:0
   previous_page: crwdns56442:0crwdne56442:0
   next_page: crwdns56247:0crwdne56247:0
+  next_resource: crwdns56990:0crwdne56990:0
+  done_with_module: crwdns56991:0crwdne56991:0
   cancel: crwdns56443:0crwdne56443:0
   okay: crwdns56444:0crwdne56444:0
   heading_x_of_y: 'crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0'
@@ -85,6 +87,7 @@ en:
     teacher_title: crwdns3898:0crwdne3898:0
     student_pitch: crwdns4887:0crwdne4887:0
     student_title: crwdns4632:0crwdne4632:0
+    signup_title: crwdns56992:0crwdne56992:0
     school_name: crwdns2940:0crwdne2940:0
     school_address: crwdns3037:0crwdne3037:0
     address_placeholder: crwdns2942:0crwdne2942:0
@@ -103,6 +106,9 @@ en:
     student_terms: crwdns9002:0crwdne9002:0
     teacher_terms: crwdns7339:0crwdne7339:0
     additional_information: crwdns7492:0crwdne7492:0
+    user_type_label: crwdns56993:0crwdne56993:0
+    user_type_teacher: crwdns56994:0crwdne56994:0
+    user_type_student: crwdns56995:0crwdne56995:0
   signin_form:
     title: crwdns4520:0crwdne4520:0
     login: crwdns2948:0crwdne2948:0
@@ -119,6 +125,8 @@ en:
     picture: crwdns6587:0crwdne6587:0
     words: crwdns6588:0crwdne6588:0
     login: crwdns6589:0crwdne6589:0
+    invalid_login: crwdns57400:0crwdne57400:0
+    pair_programming: crwdns57401:0crwdne57401:0
   password:
     reset_form:
       title: crwdns2952:0crwdne2952:0
@@ -234,6 +242,10 @@ en:
       signin: crwdns2597:0crwdne2597:0
       signup: crwdns2598:0crwdne2598:0
       already_registered: crwdns8813:0crwdne8813:0
+      pair_programming: crwdns57402:0crwdne57402:0
+      team: crwdns57403:0crwdne57403:0
+      driver: crwdns57404:0crwdne57404:0
+      navigator: crwdns57405:0crwdne57405:0
     popup:
       progress_for_user: 'crwdns38277:0%{name}crwdne38277:0'
       progress: crwdns2599:0crwdne2599:0
@@ -268,6 +280,7 @@ en:
       example_with_number: 'crwdns45369:0%{solution_number}crwdne45369:0'
       submitted_on: crwdns49667:0crwdne49667:0
       unsubmit: crwdns49668:0crwdne49668:0
+      worked_with: crwdns57406:0crwdne57406:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
@@ -326,11 +339,13 @@ en:
     choose_next_course: crwdns43451:0crwdne43451:0
     print_certificate: crwdns41905:0crwdne41905:0
     announcement_title: crwdns56513:0crwdne56513:0
-    announcement_view_all: crwdns56514:0crwdne56514:0
     announcement_message: crwdns56515:0crwdne56515:0
-    announcement_button: crwdns56516:0crwdne56516:0
+    announcement_csp_widgets_message: crwdns57910:0crwdne57910:0
+    announcement_learn_more_button: crwdns57407:0crwdne57407:0
+    announcement_try_now_button: crwdns57911:0crwdne57911:0
     announcement_petition: crwdns56517:0crwdne56517:0
     announcement_petition_button: crwdns56518:0crwdne56518:0
+    announcement_all: 'crwdns58048:0%{teacher_blog_url}crwdne58048:0'
   move_students:
     new_section_dne: 'crwdns56519:0%{new_section_code}crwdne56519:0'
     section_code_not_entered: crwdns56520:0crwdne56520:0
@@ -393,8 +408,6 @@ en:
   compatibility:
     upgrade:
       unsupported_message: 'crwdns56929:0%{supported_browsers_url}crwdne56929:0'
-      ie_message: crwdns56930:0crwdne56930:0
-      ie_message_csedweek: crwdns56931:0crwdne56931:0
       link: crwdns56932:0crwdne56932:0
   slow_loading: crwdns3859:0crwdne3859:0
   try_reloading: crwdns3860:0crwdne3860:0
@@ -506,6 +519,7 @@ en:
     wrong_body: crwdns56222:0crwdne56222:0
     correct_title: crwdns56173:0crwdne56173:0
     correct_body: crwdns56174:0crwdne56174:0
+    hide_survey_last_answer: crwdns57912:0crwdne57912:0
   level_group-submittable:
     wrong_title: crwdns56223:0crwdne56223:0
     wrong_body: crwdns56224:0crwdne56224:0
@@ -546,36 +560,6 @@ en:
     hour: crwdns6550:0crwdne6550:0
     day: crwdns6551:0crwdne6551:0
     week: crwdns6552:0crwdne6552:0
-  data:
-    script:
-      name:
-        20-hour:
-          title: crwdns6553:0crwdne6553:0
-          description: crwdns6554:0crwdne6554:0
-        Hour of Code:
-          title: crwdns33868:0crwdne33868:0
-          description: crwdns6556:0crwdne6556:0
-        edit-code:
-          title: crwdns6557:0crwdne6557:0
-          description: crwdns6558:0crwdne6558:0
-        events:
-          title: crwdns6559:0crwdne6559:0
-          description: crwdns6560:0crwdne6560:0
-        builder:
-          title: crwdns6561:0crwdne6561:0
-          description: crwdns6562:0crwdne6562:0
-        flappy:
-          title: crwdns6563:0crwdne6563:0
-          description: crwdns6564:0crwdne6564:0
-        jigsaw:
-          title: crwdns6565:0crwdne6565:0
-          description: crwdns6566:0crwdne6566:0
-        step:
-          title: crwdns6567:0crwdne6567:0
-          description: crwdns6568:0crwdne6568:0
-        sample_level_builder:
-          title: crwdns6569:0crwdne6569:0
-          description: crwdns6570:0crwdne6570:0
   age_interstitial:
     age: crwdns7663:0crwdne7663:0
     header: crwdns7664:0crwdne7664:0
@@ -608,6 +592,7 @@ en:
     share_title: crwdns35044:0crwdne35044:0
     share_copy_link: crwdns35045:0crwdne35045:0
     share_embed_description: crwdns56529:0crwdne56529:0
+    share_u13_warning: crwdns57408:0crwdne57408:0
     embed: crwdns56530:0crwdne56530:0
     advanced_share: crwdns56531:0crwdne56531:0
     close: crwdns35046:0crwdne35046:0
@@ -631,6 +616,7 @@ en:
     edit_project: crwdns48358:0crwdne48358:0
     abuse:
       tos: crwdns48359:0crwdne48359:0
+      policy_violation: crwdns57409:0crwdne57409:0
       contact_us: crwdns48360:0crwdne48360:0
       go_to_code_studio: crwdns48361:0crwdne48361:0
       report_abuse_form:
@@ -662,6 +648,14 @@ en:
     instructor_feedback: crwdns56731:0crwdne56731:0
     peer_feedback: crwdns56732:0crwdne56732:0
     outdated: crwdns56733:0crwdne56733:0
+    review_in_progress: crwdns57410:0crwdne57410:0
+    link_to_submitted_review: crwdns57411:0crwdne57411:0
+    reviews_unavailable: crwdns57412:0crwdne57412:0
+    review_count: 'crwdns57413:0%{review_count}crwdne57413:0'
+    must_be_enrolled: crwdns57414:0crwdne57414:0
+    no_reviews_at_this_moment_notice: crwdns57415:0crwdne57415:0
+    review_submitted: crwdns57416:0crwdne57416:0
+    review_new_submission: crwdns57417:0crwdne57417:0
   components:
     icon_library:
       search_placeholder_text: crwdns56250:0crwdne56250:0
@@ -680,8 +674,11 @@ en:
     required: crwdns56538:0crwdne56538:0
     content: crwdns56539:0crwdne56539:0
     practice: crwdns56540:0crwdne56540:0
+    peer_review: crwdns57913:0crwdne57913:0
   external_links:
-    disclaimer_md: crwdns56734:0crwdne56734:0
+    disclaimer: crwdns57418:0crwdne57418:0
+    leaving_domain: crwdns57419:0crwdne57419:0
+    disclaimer_text: 'crwdns57420:0%{support_url}crwdne57420:0'
   hoc_download:
     title: crwdns56942:0crwdne56942:0
     capsule_title: crwdns56943:0crwdne56943:0
@@ -696,3 +693,12 @@ en:
     download_in_spanish: crwdns56952:0crwdne56952:0
     windows: crwdns56953:0crwdne56953:0
     mac: crwdns56954:0crwdne56954:0
+  plc:
+    preview_assignments:
+      content_focus_header: crwdns56996:0crwdne56996:0
+      practice_focus_header: crwdns56997:0crwdne56997:0
+      content_focus_strong: crwdns56998:0crwdne56998:0
+      practice_focus_strong: crwdns56999:0crwdne56999:0
+      choose_different_focus_area: crwdns57000:0crwdne57000:0
+      other_focus_areas_available: crwdns57001:0crwdne57001:0
+      confirm_focus_areas: crwdns57002:0crwdne57002:0

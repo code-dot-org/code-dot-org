@@ -8,11 +8,14 @@ ur:
   campaign_date_start_long: 7 دسمبر
   campaign_date_short: 7 تا 13 دسمبر
   campaign_date_full: 7 تا 13 دسمبر
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: تاریخ میں ہونے والی سب سے بڑی سیکھنے کی تقریب میں شامل ہوجائیے، 7 تا 13 دسمبر، 2015
   front_intro_default: 'آور آف کوڈ 180+ سے زائد ممالک میں لاکھوں طالب علموں تک پہنچنے کی ایک عالمی تحریک ہے۔ کوئی بھی کہیں بھی ایک آور-آف-کوڈ کا انعقاد منظم کراسکتا ہے۔ ون-آور ٹیٹوریئلز (اسباق) 40 سے زائد زبانوں میں دستیاب ہیں۔ تجربہ کی ضرورت نہیں۔ <strong>عمر 4 تا 104۔</strong>'
   front_watch_video: نئی ویڈیو دیکھیں
   front_watch_regular_video: ویڈیو دیکھیئے
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: وسائل
   header_menu_faq: عمومی سوالات
   header_menu_prizes: انعامات
@@ -174,7 +177,9 @@ ur:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
+  prizes_more: More exciting prizes
   whats_next_header: آگے کیا ہے؟
   whats_next_description: "ہم آپ کے ایونٹ کے لیے آپ کو مٹیریئل اور مددگار تجاویز بھیجیں گے۔ 2015 کے نئے ٹیٹوریئل جلد آ رہے ہیں، کسی بھی براؤز، اسمارٹ فون – یا بغیر کسی کمپیوٹر کے! <a href='http://code.org/learn'> موجودہ ٹیٹوریئل آزمائیں </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -234,7 +239,7 @@ ur:
   signup_event_location_label: Event location (optional)
   signup_special_event_flag_label: Highlight my special event
   signup_special_event_details_label: Special event details
-  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only)'
+  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
   signup_send_posters_address_label: Address of school or organization
   signup_whole_school_flag_label: This event is for a whole school
   signup_your_event: Sign up your event
@@ -243,7 +248,7 @@ ur:
   signup_name_placeholder: Your Name
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: For example, Lincoln High School
-  signup_event_location_placeholder: "Postal code and country OR full address.\r\n(We’ll use this to place a pin on our map)"
+  signup_event_location_placeholder: Postal code and country OR full address.
   signup_special_event_details_placeholder: Describe what makes this a special event
   signup_send_posters_address_placeholder: This address will not be shared on our map
   signup_event_type_in_school: In a school
@@ -252,6 +257,7 @@ ur:
   signup_submit_error_message: An error occurred. Please check to make sure all required fields have been filled out properly.
   signup_thank_you_header: Thank you for signing-up to host an Hour of Code event.
   signup_thank_you_message: We sent you a confirmation email with information to help you get started.
+  map_title: Hour of Code map
   map_header: '# Hour of Code events around the world'
   see_all_events: See all events
   map_header_company: '# by company organizers'
@@ -262,10 +268,10 @@ ur:
   map_legend_title: Legend
   map_legend_hoc_events: Hour of Code Event
   map_legend_cs_tech_jam: Special Event
-  meta_tag_og_title: The Hour of Code is coming
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
-  meta_tag_twitter_title: The Hour of Code is coming
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
+  meta_tag_og_title: Every child deserves opportunity
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
+  meta_tag_twitter_title: Every child deserves opportunity
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   hardware_prizes_form_name_label: Your name
   hardware_prizes_form_name_placeholder: Your name
@@ -306,7 +312,7 @@ ur:
   hoc_faq_host_q: میں کوڈنگ کے بارے میں کچھ نہیں جانتا۔ کیا اس کے باوجود میں ایونٹ کو ھوسٹ کرسکتا ہوں؟
   hoc_faq_host_a: "بالکل، آور-آف-کوڈ کی سرگرمیاں سیلف-گائیڈڈ (ازخود رہنما) ہیں۔ آپ کو صرف یہ کرنا ہے کہ <a href='%{codeorg_url}/learn'> ہمارے کرنٹ ٹیٹوریئلز (موجود آزمائشی مشق) کو ٹرائی کریں </a> ، وہی ٹیٹوریئل منتخب کریں جو آپ کو پسند ہوں، اور کوئی وقت منتخب کریں;mdash&, باقی سب ہم سنبھال لیں گے۔ ہمارے پاس ہر عمر اور ہر سطح کے تجربہ کے لوگوں، کنڈرگارڈن سے لیکر اوپر تک، کے لیے آپشنز بھی موجود ہیں۔ ایونٹ میں حصہ لینے کی پلاننگ سے شروعات کرنے کیلئے ہماری <a href='/resources/how-to'>ھاؤ ٹو گائیڈ</a> پڑھیں۔"
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: کیا مجھے ہر حصہ لینے والے کے لیے کمپیوٹرز کی ضرورت ہوگی؟
   hoc_faq_need_computers_a: "نہیں۔ ہمارے پاس آور-آف-کوڈ کے ایسے ٹیٹوریئلز ہیں جو PCs، اسمارٹ فونز، ٹیبلٹس، اور کچھ ایسے بھی ہیں جس کے لیے کمپیوٹر کی بالکل بھی ضرورت نہیں! آپ ہمیں جوائن کرسکتے ہیں جہاں بھی آپ ہوں، اورجو کچھ بھی آپ کے پاس ہو۔ <p><i> یہاں چند آپشنز ہیں: </i> <br> <ul> <li><b> مل کر کام کریں۔</b> تحقیق سے واضح ہے کہ اسٹوڈینٹس بہترین سیکھتے ہیں <ahref='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> پیئر پروگرامنگ سے،</a> کمپیوٹر شیئر کر کے اور مل کر کام کرکے ۔ اپنے اسٹوڈینٹس کو مل جل کر کام کرنے کی ترغیب دیں اور حوصلہ افزائی کریں۔ <li><b> پروجیکٹڈ اسکرین کا استعمال کریں۔</b> اگر آپ کے پاس ایک ویب-کننکٹڈ کمپیوٹر کے لیے ایک پروجیکٹر اور اسکرین موجود ہے، تو آپ کے تمام گروپ ایک ساتھ مل کر آور-آف-کوڈ میں حصہ لے سکتے ہیں۔ ویڈیو والے پورشنز ساتھ مل کر دیکھیں اور سوالات کے جوابات یا پزل کو حل، باری سے کریں۔ <li><b> غیر منسلک ہوجائیں۔</b> ہم ایسے ٹیٹوریئلز پیش کرتے ہیں جس میں کمپیوٹر کی سرے سے کوئی ضرورت نہیں۔ </ul>"
   hoc_faq_international_q: 'میں <country> میں ہوں۔ میں انٹرنیشنل سطح پر کیسے شرکت کروں؟'
@@ -315,8 +321,6 @@ ur:
   hoc_faq_tutorial_a: "اگر آپ ٹیٹوریئل پارٹنر بننے میں دلچپسی رکھتے ہیں تو <a href='/tutorial-guidelines'> ہماری گائیڈلائنز اور انسٹرکشنز (ہدایات) دیکھیں۔ ہم انواع اقسام پر مشتمل آزمائشی سرگرمیاں بخوشی ھوسٹ کریں گے، لیکن اس کا بنیادی مقصد اسٹوڈینٹس اور ٹیچرز جنہوں نے کمپیوٹر سائنس میں ابھی پہلا قدم رکھا ہے، کے لیے بہتر سے بہترین تجربہ پیش کرنا ہے۔"
   hoc_faq_account_q: کیا اسٹوڈینٹس کو کوئی اکاؤنٹ استعمال کرنے کے لیے لاگ-آن ہونے کی ضرورت ہے؟
   hoc_faq_account_a: "نہیں۔ آور-آف-کوڈ ٹرائی کرنے کے لیے اسٹوڈینٹس کو بالکل کوئی سائن اپ یا لاگ-ان کرنے کی ضرورت نہیں ہے۔ بہت سے <a href='%{codeorg_url}/learn/beyond'> فالو-آن کورسز</a> میں اسٹوڈینٹس کی پیش قدمی کو محفوظ کرنے کے لیے اکاؤنت بنانے کی ضرورت ہوگی۔"
-  hoc_faq_frozen_q: اینا اور ایلسا کے ٹیٹوریئل کہاں ہیں؟
-  hoc_faq_frozen_a: "وہ اب <a href='%{codeorg_url}/learn'> ٹیٹوریئل پیج </a> پر پبلش (شائع) ہوچکے ہیں۔ ہمیں امید ہے کہ آپ اسے انجوائے کریں گے۔"
   hoc_faq_high_school_q: ہائی اسکول اسٹوڈینٹس کی حیثیت سے مجھے کونسی ایکٹیویٹی اختیار کرنا چاہیے؟
   hoc_faq_high_school_a: "ہم ہر عمر کیلئے شروع میں، ہم تجویز کرتے ہیں کہ ہمارے بیگنرز ٹیٹوریئل جو کہ شروع کرنے کیلئے یہاں<a href='%{codeorg_url}/learn'>%{partner_url}/ سیکھیں </a> سے ایک ٹرائی کریں، مثال کے طور پر اینگری برڈ والا ٹیوٹوریئل یا اینا اور ایلسا۔ ایک ہائی اسکول کے اسٹوڈینٹ کو ان میں سے ایک کو 30 منٹ میں مکمل کرنے کے قابل ہونا چاہیئے۔ اور پھر وہ زیادہ ایڈوانس ٹیٹوریئل جاوا اسکرپٹ میں ٹرائی کرسکتے ہیں، جیسا کہ خان ایکیڈمی یا CodeHS۔"
   hoc_faq_scratch_q: 'میں آور-آف-کوڈ  کیلئے، اسکریچ(ایپ) پر کام کر رہا ہوں، لیکن اگر میرے اسٹوڈینٹس کے پاس لیپ ٹاپ کی جگہ آئی-پیڈ ہوا تو؟'
@@ -332,7 +336,9 @@ ur:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: کوڈ-آف-آور کے شماریات 2013
   stats_growth: It was the fastest to reach 15 million users.
   stats_i18n: اسٹوڈینٹس 40 زبانوں میں سیکھ رہے ہیں
@@ -417,6 +423,9 @@ ur:
   events_orgs_title: آور-آف-کوڈ کے تمام ایونٹس پارٹنر آرگنائزیشنز نے منعقد کرائے
   event: ایونٹایونٹس
   events: ایونٹس
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: کاپی رائٹ 2015 Code.org۔ جملہ حقوق محفوظ.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: پارٹنرز

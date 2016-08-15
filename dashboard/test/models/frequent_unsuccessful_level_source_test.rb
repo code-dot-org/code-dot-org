@@ -30,9 +30,9 @@ class FrequentUnsuccessfulLevelSourceTest < ActiveSupport::TestCase
     @level_sources = @level_sources_data.map { |x|
       level_source = create :level_source, level_id: x[:level].id
       setup_activities(level_source,
-                       Activity::MAXIMUM_NONOPTIMAL_RESULT, x[:failing])
+        Activity::MAXIMUM_NONOPTIMAL_RESULT, x[:failing])
       setup_activities(level_source,
-                       Activity::BEST_PASS_RESULT, x[:passing])
+        Activity::BEST_PASS_RESULT, x[:passing])
       if x[:hints]
         x[:hints].times do
           create :level_source_hint, level_source_id: level_source.id,

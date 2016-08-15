@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Zapojte do toho celú školu
 
-Informácie o zapojení celej školy do Hodiny Kódovania patria sem.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

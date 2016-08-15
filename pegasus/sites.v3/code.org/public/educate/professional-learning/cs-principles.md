@@ -26,7 +26,7 @@ The program has two components:
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
 
 
-[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply)
+[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
 
 ## <a name="commitments"></a>What are the program commitments?
 
@@ -45,11 +45,11 @@ Continuing Professional Development: (September - June)
 
 ## <a name="participate"></a>Who can Participate?
 
-The CSP Educator Development Program is open to teachers in partner districts who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. 
+The CSP Educator Development Program is open to teachers who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2017-18 school year by having a slot on their school's master schedule. 
 
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS Principles. If your school district hasn't partnered with Code.org, encourage your administrators to [apply to be a partner district](/educate/districts).
+We're so excited that you're interested in applying for our Professional Learning Program! We are at capacity for this year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
 
-[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply) &nbsp;&nbsp;[<button>Join the wait list</button>](https://form.jotform.com/53365196731157)
+[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)

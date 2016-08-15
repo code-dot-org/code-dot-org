@@ -26,8 +26,9 @@ var DuplicateElementButton = React.createClass({
     return (
       <div style={styles.main}>
         <button
-            style={[commonStyles.button, styles.duplicateButton]}
-            onClick={this.handleDuplicate}>
+          style={[commonStyles.button, styles.duplicateButton]}
+          onClick={this.handleDuplicate}
+        >
           Duplicate
         </button>
     </div>

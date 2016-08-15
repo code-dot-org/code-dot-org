@@ -1,0 +1,45 @@
+---
+<%
+  require 'country_codes'
+  require 'state_abbr'
+  splat = request.splat_path_info[1..-1].split("/")
+  country_code = splat.first
+  country = country_name_from_code(country_code)
+  if country_code == 'us'
+    state_code = splat.last unless country_code == splat.last
+    state = get_us_state_from_abbr(state_code) unless state_code.nil_or_empty?
+  end
+%>
+title: <%= hoc_s(:events_all_title) %> - <%= state ? state : country %>
+layout: wide
+---
+-require 'country_codes'
+-require 'state_abbr'
+-SOLR = Solr::Server.new(host:CDO.solr_server)
+-events = []
+-splat = request.splat_path_info[1..-1].split("/")
+-country_code = splat.first
+-country = country_name_from_code(country_code)
+-country = 'United States' if country == 'us'
+-state_code = splat.last unless country_code == splat.last
+-if country_code == 'us' && state_code
+  -state = get_us_state_from_abbr(state_code) unless state_code.nil_or_empty?
+  -results = SOLR.query(q:"*:*", fl:['organization_name_s', 'location_city_s'], fq:["kind_s:HocSignup2015", "location_country_code_s:\"#{country_code.upcase}\"", "location_state_code_s:\"#{state_code.upcase}\"", "organization_name_s:[* TO *]"], sort:'organization_name_s asc', rows:1000)
+-else
+  -results = SOLR.query(q:"*:*", fl:['organization_name_s', 'location_city_s'], fq:["kind_s:HocSignup2015", "location_country_code_s:#{country_code.upcase}", "organization_name_s:[* TO *]"], sort:'organization_name_s asc', rows:1000)
+
+-pass unless results.count > 0
+-require 'active_support/core_ext/hash/slice'
+-results.each do |result|
+  -events << result.slice('organization_name_s', 'location_city_s')
+
+%h1= hoc_s(:events_all_title) + ' — ' + (state ? state : country)
+
+%ul
+  -event_names = []
+  -events.sort{|a,b|a['organization_name_s'].downcase<=>b['organization_name_s'].downcase}.each do |event|
+    -event_name = event['organization_name_s']
+    -event_name += ' (' + event['location_city_s'] + ')' unless event['location_city_s'].nil_or_empty?
+    -event_names << event_name
+  -event_names.uniq{|s|s} .each do |event_name|
+    %li{class: "hoc-event"}= event_name

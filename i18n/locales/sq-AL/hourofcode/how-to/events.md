@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Si të organizosh ngjarjen e Orës së Kodimit
-
-Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterike (<%= campaign_date('short') %>) për të festuar shkencat kompjuterike dhe frymëzo më shumë student ta provojnë atë. Kushdo, kudo mund të organizojë një event Ore Kodimi.
 
 ## 1) Përgatitu për eventin tënd
 
@@ -36,13 +32,13 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 
 ## Shembull i Planit të Event-it
 
-**Event:** Asamblea e nisjes së gjithë shkolla në Javën Edukative të Shkencave Kompjuterike
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Data:** 8-të Dhj (fillimi i Javes Edukative të Shkencave Kompjuterike)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Koha:** Gjatë ditës së shkollës. Mesdita preferohet për eventin. Afërsisht 1 orë.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Vendi:** Salla e mbledhjeve (p.sh teatri, palestra, kafeneja)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 | 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                              |
 | 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
 | 11:00 - 11:05 paradite | Mësuesit që ndihmojnë në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                  |
-
-<%= view :signup_button %>

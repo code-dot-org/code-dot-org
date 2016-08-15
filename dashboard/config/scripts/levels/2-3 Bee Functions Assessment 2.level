@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: Create a function to move forward and make 3 honey, then return the bee to where it started.",
+    "instructions": "Assessment: Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -17,7 +17,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-3,0,0,-3,0,-3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "15",
-    "markdown_instructions": "**Assessment:** Create a function to move forward and make 3 honey, then return the bee to where it started.",
+    "markdown_instructions": "**Assessment:** Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -32,7 +32,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "fast_get_nectar_animation": "true"
+    "fast_get_nectar_animation": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

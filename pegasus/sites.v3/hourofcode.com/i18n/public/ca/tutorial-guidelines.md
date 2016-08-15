@@ -5,12 +5,11 @@ layout: wide
 
 ---
 
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-Ens agradaria oferir una varietat d'opcions engrescadores, però l'objectiu principal és optimitzar l'experiència per a estudiants i professors que s'inicien en el món de la informàtica. Si us plau, utilitza aquest document per guiar-te durant el desenvolupament de la teva activitat, dirigida als usuaris sense massa coneixements previs en programació d'ordinadors, ni en tecnologia informàtica.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -52,7 +51,7 @@ Examples:
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Idealment, les instruccions i tutorials estan integrats directament en la plataforma de programació, per evitar la commutació de pestanyes o finestres entre la classe i la plataforma de programació.
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
 Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
 
@@ -66,15 +65,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## Com les guies seran avaluades per a la seva inclusió
 
-Un Comitè d'educadors de ciència informàtica classificarà les propostes basant-se en indicadors qualitatius i quantitatius, inclosos els resultats de la enquesta d'un conjunt més ampli d'educadors.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Els tutorials pujaran en el llistat si són:**
+**Tutorials will be listed higher if they are:**
 
   * alta qualitat
   * designed for beginners - among students AND teachers
@@ -87,7 +86,7 @@ Un Comitè d'educadors de ciència informàtica classificarà les propostes basa
   * promote learning by all demographic groups (esp. under-represented groups)
   * disseny web no purament enfocat a HTML+CSS - (el nostre objectiu és la informàtica, no només codificació de HTML)
 
-**Els tutorials baixaran en el llistat si són:**
+**Tutorials will be listed lower if they are:**
 
   * baixa qualitat
   * nivell més avançat de l'ensenyament (no per a principiants)
@@ -96,7 +95,7 @@ Un Comitè d'educadors de ciència informàtica classificarà les propostes basa
   * reinforce stereotypes that hinder participation by under-represented student groups
   * serveixi com una venda addicional d'una plataforma d'aprenentatge que cobra matrícula
 
-**Els tutorials NO apareixeran si:**
+**Tutorials will NOT be listed if they:**
 
   * no estan dissenyats per ser (aproximadament) una activitat d'1 hora
   * requereixen inscripció 
@@ -107,9 +106,9 @@ Un Comitè d'educadors de ciència informàtica classificarà les propostes basa
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-En definitiva, l'objectiu de l'Hora de Codi és ampliar la participació en informàtica per alumnes i professors, i per ajudar a mostrar que la informàtica és accessible per a tothom, i "més fàcil del que creus." De totes formes, aquest objectiu s'aconsegueix millor donant menys opcions i més simples, amb un enfocament en les opcions de qualitat per a un usuari novell. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +116,7 @@ En definitiva, l'objectiu de l'Hora de Codi és ampliar la participació en info
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**El que necessitaràs:**
+**What you’ll need:**
 
   * El seu nom, logotip (jpg, png, etc.)
   * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
@@ -165,7 +164,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
@@ -204,7 +203,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -222,7 +221,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names.
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
@@ -241,7 +240,7 @@ Example tracking pixels for AppInventor:
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
@@ -254,7 +253,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
 
-[**Tornar a dalt**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
@@ -262,5 +261,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Tornar a dalt**](#top)
-
+[**Back to the top**](#top)

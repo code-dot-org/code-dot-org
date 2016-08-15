@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # कसरि Hour of Code कार्यक्रम संचालन गर्ने
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## १) कार्यक्रमको बारेमा योजना बनाउनु होस्
 
@@ -38,7 +34,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,5 +52,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-
-<%= view :signup_button %>

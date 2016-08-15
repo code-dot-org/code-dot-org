@@ -1,4 +1,5 @@
 require 'selenium/webdriver'
+require 'selenium/webdriver/remote/http/persistent'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../deployment'
@@ -30,7 +31,8 @@ def saucelabs_browser
     raise "Please define CDO.saucelabs_authkey"
   end
 
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@ondemand.saucelabs.com:80/wd/hub"
+  is_tunnel = ENV['CIRCLE_BUILD_NUM']
+  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
   browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
@@ -40,8 +42,11 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
+
+  circle_run_identifier = ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}" : nil
+  capabilities[:tunnelIdentifier] = circle_run_identifier if circle_run_identifier
   capabilities[:name] = ENV['TEST_RUN_NAME']
-  capabilities[:build] = ENV['BUILD']
+  capabilities[:build] = circle_run_identifier || ENV['BUILD']
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -50,9 +55,9 @@ def saucelabs_browser
     retries = 0
     begin
       browser = Selenium::WebDriver.for(:remote,
-                                        url: url,
-                                        desired_capabilities: capabilities,
-                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
+        url: url,
+        desired_capabilities: capabilities,
+        http_client: Selenium::WebDriver::Remote::Http::Persistent.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -117,8 +122,8 @@ def log_result(result)
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   HTTParty.put(url,
-               body: {"passed" => result}.to_json,
-               headers: {'Content-Type' => 'application/json'})
+    body: {"passed" => result}.to_json,
+    headers: {'Content-Type' => 'application/json'})
 end
 
 all_passed = true
@@ -129,8 +134,18 @@ After do |scenario|
   log_result all_passed
 end
 
+def check_for_page_errors
+  js_errors = @browser.execute_script('return window.detectedJSErrors;')
+  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
+
+  # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
+  # js_errors.should eq nil
+end
+
 After do |_s|
   unless @browser.nil?
+    check_for_page_errors
+
     # clear session state (or get a new browser)
     if slow_browser?
       unless @browser.current_url.include?('studio')

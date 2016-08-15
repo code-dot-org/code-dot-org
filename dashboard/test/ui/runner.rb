@@ -15,6 +15,7 @@ require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
 
+require 'haml'
 require 'json'
 require 'yaml'
 require 'optparse'
@@ -22,21 +23,24 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 require 'parallel'
+require 'socket'
 
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+GIT_BRANCH = GitUtils.current_branch
+COMMIT_HASH = RakeUtils.git_revision
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = GitUtils.current_branch
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 # Upload the given log to the cucumber-logs s3 bucket.
 # @param [String] filename of log file to be uploaded.
 # @return [String] a public hyperlink to the uploaded log, or empty string.
-def upload_log_and_get_public_link(filename)
+def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename)
+  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => msg
   HipChat.log "Uploading log to S3 failed: #{msg}"
@@ -146,6 +150,10 @@ opt_parser = OptionParser.new do |opts|
     f = `egrep -r "Given I am on .*#{scriptname.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
     $options.feature = f.split ','
   end
+  opts.on('--with-status-page', 'Generate a test status summary page for this test run') do
+    $options.with_status_page = true
+    $options.html = true # Implied by wanting a status page
+  end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit
@@ -154,6 +162,8 @@ end
 
 opt_parser.parse!(ARGV)
 passed_features = ARGV + ($options.feature || [])
+# Standardize: Drop leading dot-slash on feature paths
+passed_features.map! {|feature| feature.gsub(/^\.\//, '')}
 
 $browsers = JSON.load(open("browsers.json"))
 
@@ -205,10 +215,10 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(arguments)
+def run_tests(env, arguments)
   start_time = Time.now
   puts "cucumber #{arguments}"
-  Open3.popen3("cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, "cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -232,20 +242,72 @@ all_features = Dir.glob('features/**/*.feature')
 features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
-git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
-test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
-HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads..."
-if test_type == 'eyes tests'
+test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
+HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+if test_type == 'Eyes'
   HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
+status_page_url = nil
+if $options.with_status_page
+  test_status_template = File.read('test_status.haml')
+  haml_engine = Haml::Engine.new(test_status_template)
+  status_page_filename = "test_status_#{test_type}.html"
+  scheme = (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
+  status_page_url = CDO.studio_url('/ui_test/' + status_page_filename, scheme)
+  File.open(status_page_filename, 'w') do |file|
+    file.write haml_engine.render(Object.new, {
+      api_origin: CDO.studio_url('', scheme),
+      s3_bucket: S3_LOGS_BUCKET,
+      s3_prefix: S3_LOGS_PREFIX,
+      type: test_type,
+      git_branch: GIT_BRANCH,
+      commit_hash: COMMIT_HASH,
+      start_time: $suite_start_time,
+      browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
+      features: features_to_run
+    })
+  end
+  HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
+end
+
+def test_run_identifier(browser, feature)
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
-  browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+  browser_name = browser_name_or_unknown(browser)
+  "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+end
+
+def browser_name_or_unknown(browser)
+  browser['name'] || 'UnknownBrowser'
+end
+
+$calculate_flakiness = true
+# Retrieves / calculates flakiness for given test run identifier, giving up for
+# the rest of this script execution if an error occurs during calculation.
+# returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
+def flakiness_for_test(test_run_identifier)
+  return nil unless $calculate_flakiness
+  TestFlakiness.test_flakiness[test_run_identifier]
+rescue Exception => e
+  puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
+  $calculate_flakiness = false
+  nil
+end
+
+# Sort by flakiness (most flaky at end of array, will get run first)
+browser_features.sort! do |browser_feature_a, browser_feature_b|
+  (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
+    (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
+end
+
+# Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+parallel_config = ENV['CI'] ? {:in_threads => $options.parallel_limit} : {:in_processes => $options.parallel_limit}
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
+  browser_name = browser_name_or_unknown(browser)
+  test_run_string = test_run_identifier(browser, feature)
 
   if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
@@ -267,21 +329,22 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   # HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
-  ENV['BROWSER_CONFIG'] = browser_name
+  run_environment = {}
+  run_environment['BROWSER_CONFIG'] = browser_name
 
-  ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
-  ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
-  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
-  ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
-  ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
-  ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
-  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
-  ENV['TEST_RUN_NAME'] = test_run_string
+  run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
+  run_environment['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
+  run_environment['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  run_environment['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
+  run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
+  run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
+  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['TEST_RUN_NAME'] = test_run_string
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
+  run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     if $options.out
@@ -300,8 +363,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_circle" if $options.is_circle
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
-  arguments += " -t ~@no_ie9" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '9.0'
-  arguments += " -t ~@no_ie10" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '10.0'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
@@ -343,8 +404,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
-      # ask saucelabs how flaky the test is
-      flakiness = TestFlakiness.test_flakiness[test_run_string]
+      flakiness = flakiness_for_test(test_run_string)
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
         return 1
@@ -356,8 +416,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
                       1].max # rerun at least once even if not flaky
 
-        confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
-        flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
+        confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+        flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
 
         if max_reruns < 2
           $lock.synchronize { puts flakiness_message.green }
@@ -383,22 +443,31 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
   FileUtils.rm rerun_filename, force: true
 
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
-
   reruns = 0
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments)
+  log_link = upload_log_and_get_public_link(html_output_filename, {
+      commit: COMMIT_HASH,
+      success: succeeded.to_s,
+      attempt: reruns.to_s,
+      duration: test_duration.to_s
+  })
+
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
-    # Upload the failure log to S3, so we can examine it at our leisure.
-    log_link = upload_log_and_get_public_link(html_output_filename)
-
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments)
+    log_link = upload_log_and_get_public_link(html_output_filename, {
+        commit: COMMIT_HASH,
+        duration: test_duration.to_s,
+        attempt: reruns.to_s,
+        success: succeeded.to_s
+    })
   end
 
   $lock.synchronize do
@@ -433,15 +502,12 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    # Upload the failure log to S3, so we can examine it at our leisure.
-    log_link = upload_log_and_get_public_link(html_output_filename)
-
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
-    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
+    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end
@@ -486,10 +552,11 @@ $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
 
-HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
-  "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
-  "Total reruns of flaky tests: #{$total_flaky_reruns}."
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
+  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
+  "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

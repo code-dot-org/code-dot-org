@@ -1,10 +1,8 @@
 * * *
 
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+titel: < % = hoc_s(:title_press_release) %> lay-out: breed nav: promote_nav
 
 * * *
-
-<%= view :signup_button %>
 
 ## Hoe je de aandacht van de media trekt voor je CodeUur-evenement
 
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * Neem twee weken voor je evenement contact op met de media. Krijg je niet direct antwoord, bel of mail dan nog even na.
   * Vraag of een collega of vrijwilliger fotos wil nemen om online te delen en naar de pers te sturen.
   * Schrijf over het CodeUur op de website van de school en in het schoolblad. Schrijf over het evenement zelf en voeg afbeeldingen toe van deelnemers.
-  * Deel je plannen en aankondigen op Facebook en Twitter en post foto's van 7 tot 13 december. Gebruik de hashtag **#HourOfCode** zodat Code.org je evenement kan zien en promoten.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Stappenplan:
 
@@ -35,7 +33,7 @@ Kijk online of je contactinformatie kan vinden voor journalisten. Kun je deze ni
 
 **3. Neem contact op met lokale media**
 
-De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen waarom dit evenement voor anderen interessant is? Voorzie contactinformatie (een GSM-nummer) voor wie er naar de eventlocatie komt. **Zie een [voorbeeld pitch naar media](%= resolve_url('/promote/resources#sample-emails') %):**
+De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen waarom dit evenement voor anderen interessant is? Voorzie contactinformatie (een GSM-nummer) voor wie er naar de eventlocatie komt. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
 
 **4. Bereid je voor om vragen te beantwoorden over je evenement. Voorbeelden:**
 
@@ -43,15 +41,15 @@ De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overb
 
 We weten allemaal dat het belangrijk is dat leerlingen wegwijs worden in onze digitale wereld. Veel leraren hebben weinig ervaring met informatica en weten niet waar ze moeten beginnen. Dit evenement is een kans voor ons allemaal om te zien wat informatica inhoudt.
 
-We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek toont ook aan dat kinderen programmeerconcepten snappen nog voor ze kunnen lezen en schrijven. Hun hersenen staan op jonge leeftijd open voor programmeertalen, net zoals met vreemde talen.
+We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Research also shows that kids can pick up programming concepts before they know how to read and write. Hun hersenen staan op jonge leeftijd open voor programmeertalen, net zoals met vreemde talen.
 
 *Waarom is dit belangrijk?*
 
-In China, every student takes computer science to graduate high school. In de westerse wereld wordt het op 90% van de scholen niet eens gegeven. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen.
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **Meer details en een citaat dat je kunt gebruiken in materialen**
 
-"Het CodeUur is ontworpen om code te ontrafelen en te laten zien dat informatica geen rocket-science is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een CodeUur. De eis voor relevante 21e eeuw programmering overschrijdt alle grenzen en kent geen regels
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een CodeUur. De eis voor relevante 21e eeuw programmering overschrijdt alle grenzen en kent geen regels
 
 **Over Code.org**
 
@@ -59,5 +57,3 @@ Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van
 
   
 Vind meer bronnen en voorbeeld e-mails [hier](%= resolve_url('/promote') %).
-
-<%= view :signup_button %>

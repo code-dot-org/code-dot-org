@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 # 當選官員的新聞稿草稿
 
 即時消息  
@@ -43,8 +42,3 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 [**插入從參加了此次盛會的另一個組織或一個人引述**]
 
 有關的詳細資訊[**事件，方案，等**] ，請訪問 [**插入網站**] 或聯繫 [**插入連絡人資訊**]
-
-  
-  
-
-

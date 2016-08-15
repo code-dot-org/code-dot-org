@@ -30,6 +30,8 @@
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Próxima página
+  next_resource: Próximo recurso
+  done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
   heading_x_of_y: "%{heading} (página %{y} de %{x})"
@@ -96,6 +98,7 @@
     teacher_title: Cadastro de professores
     student_pitch: Cadastro de aluno na Code.org
     student_title: Cadastro de alunos
+    signup_title: Cadastre-se no Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -120,6 +123,9 @@
       da Code.org.
     additional_information: Precisamos de mais informações para continuar com o processo
       de inscrição.
+    user_type_label: Tipo de conta
+    user_type_teacher: Professor
+    user_type_student: Estudante
   signin_form:
     title: Já tem uma conta? Entre
     login: Email ou nome de usuário
@@ -136,6 +142,8 @@
     picture: Agora encontre sua foto secreta
     words: Agora digite suas palavras secretas
     login: Entrar
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: Esqueceu sua senha?
@@ -289,6 +297,10 @@
       signin: Entrar
       signup: Inscreva-se
       already_registered: Já se cadastrou?
+      pair_programming: Programação em duplas
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: progresso de %{name}'s
       progress: Seu progresso
@@ -324,6 +336,7 @@
       example_with_number: Solução do Exemplo %{solution_number}
       submitted_on: 'Enviado em:'
       unsubmit: Cancelar envio
+      worked_with: Worked With
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -397,13 +410,17 @@
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
     announcement_title: Anúncios
-    announcement_view_all: Ver todos
     announcement_message: "<b>22 de abril de 2016</b> - Atividades offline são partes
       vitais do processo de aprendizagem, mas os professores nos disseram que encontrar
       todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode
       encontrar todos os recursos offline numa página só. Associar as lições com qualquer
       aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
-    announcement_button: Saiba mais
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class
+      how the Internet works, how cryptography keeps data secure, and other concepts?
+      We’ve taken the best interactive tools from our Computer Science Principles
+      curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: Saiba mais
+    announcement_try_now_button: Experimente agora
     announcement_petition: Como professor, você está liderando o caminho em um movimento
       para dar a cada aluno em todas as escolas a oportunidade de aprender informática.
       Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes
@@ -411,6 +428,8 @@
       em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de
       ciência de computador K-12.
     announcement_petition_button: Adicione o seu nome
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Desculpe, mas não existe secção %{new_section_code}. Por favor
       insira um código de seção diferente.
@@ -501,14 +520,10 @@
     download: Baixar Vídeo
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
+      unsupported_message: Seu navegador não é suportado. Por favor atualize seu navegador
+        para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores
+        suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidades
+        podem não funcionar.
       link: Saiba mais
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
@@ -646,6 +661,9 @@
     wrong_body: Obrigado por enviar uma resposta
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta
+    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
+      for aggregate results.  Note that results are only visible if at least five
+      students submitted the survey.
   level_group-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar uma resposta
@@ -692,40 +710,6 @@
     hour: 1 hora
     day: dia
     week: semana
-  data:
-    script:
-      name:
-        20-hour:
-          title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes
-            do ensino fundamental
-          description: Este curso de 20 horas apresenta o núcleo da computação e conceitos
-            de programação. O curso é projetado para uso em salas de aula para o Ensino
-            Fundamental, mas é divertido de aprender em todas as idades.
-        Hour of Code:
-          title: Hora do Código 2013
-          description: ''
-        edit-code:
-          title: Editar o código
-          description: ''
-        events:
-          title: Eventos
-          description: ''
-        builder:
-          title: Construtor
-          description: ''
-        flappy:
-          title: Código do Flappy bird
-          description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
-            nosso tutorial sobre o Código do Flappy bird!
-        jigsaw:
-          title: Quebra-cabeça
-          description: ''
-        step:
-          title: Etapa
-          description: ''
-        sample_level_builder:
-          title: Construtor de nível de exemplo
-          description: ''
   age_interstitial:
     age: Sua idade
     header: Atualização de informações da conta
@@ -765,6 +749,8 @@
     share_copy_link: 'Copie o link:'
     share_embed_description: Você pode colar o código embed em uma página HTML para
       exibir o projeto em uma página da Web.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
     embed: Incorporar
     advanced_share: Mostrar opções avançadas
     close: Fechar
@@ -773,8 +759,8 @@
     updated: Atualizado
     project_type: Tipo de projeto
     help_text: Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma
-      coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você
-      pode voltar a trabalhar nos seus projetos a qualquer hora.
+      coisa</strong> abaixo para iniciar um novo projeto!<br/>Você pode voltar a trabalhar
+      nos seus projetos a qualquer hora.
     need_help: Precisa de ajuda para começar?
     really_delete: Excluir?
     delete_yes: Sim
@@ -793,6 +779,8 @@
     abuse:
       tos: Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos
         de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas.
+      policy_violation: This project contains information that cannot be shared with
+        others. Please contact the app owner to fix the contents of their app.
       contact_us: Se você acha que isso é um erro, <a href='https://code.org/contact'>contate-nos.</a>
       go_to_code_studio: Ir para o Code Studio
       report_abuse_form:
@@ -833,49 +821,73 @@
     instructor_feedback: Feedback do instrutor
     peer_feedback: Feedback de mesmo nível
     outdated: Este feedback foi adicionado para uma versão anterior apresentada
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: Procure por um ícone...
       no_icons_found: Nenhum ícone foi encontrado
     playzone:
       artist_description: Faça desenhos e figuras legais com o Artista!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Novo Desenho
+      continue_button: Vá para a próxima fase
       playlab_description: Crie uma história ou um jogo no Laboratório!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Novo Aplicativo
+      primary_header: Parabéns! Você completou %{stageName}!
+      projects_description: Revisite um dos seus projetos existentes.
+      projects_title: Abrir um projeto
+      secondary_header: Pergunte a seu professor o que fazer em seguida
   flex_category:
     required: Visão geral
     content: Conteúdo
     practice: Professor de práticas
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Aviso: Você está agora deixando o domínio Code.org, para
-      um site que não é operado por Code.org.</strong> Este site pode ter políticas
-      de privacidade que diferem do Code.org. <br/> <br/> Nós selecionamos estes recursos
-      de terceiros, porque achamos que eles serão úteis para você. Enquanto nós não
-      somos diretamente responsáveis pelo conteúdo deste site, por favor <a href='mailto:support@code.org'>
-      entre em contato com o suporte</a> se você encontrar o conteúdo censurável,
-      ou se o site vinculado não está mais disponível."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated
+      by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
+    title: Downloads do Hour of Code
+    capsule_title: Você tem Internet?
+    capsule_desc: Use o on-line, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: Sem Internet?
+    instructions: 'Instruções para os professores: se você tem um mau serviço de Internet,
+      estes tutoriais do Hour of Code (Hora de Código) estão disponiveis para baixar
+      e instalar para uso offline. Escolha seu idioma e a plataforma, baixe e instale-o
+      em todos os computadores da sua sala de aula. Você pode usar um Pendrive para
+      instalar em todas as maquinas. Nota: os estudantes não serão capaz de fazer
+      entrar no Code Studio (Estúdio de Código) para salvar ou imprimir certificados.
+      Os professores podem imprimimir os certificados <a href="%{url}">aqui</a>.'
     minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    starwars_blocks_name: 'Star Wars: Construindo uma galáxia com código (Blocos)'
+    starwars_javascript_name: 'Star Wars: Construindo uma galáxia com código (JavaScript)'
+    download_message: Baixar %{app_name} para uso offline (136MB)
+    download_in_english: 'Download em inglês:'
+    download_in_spanish: 'Download em espanhol:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

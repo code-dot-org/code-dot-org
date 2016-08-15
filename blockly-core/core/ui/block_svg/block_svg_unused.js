@@ -46,8 +46,7 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
   this.frameClipRect_ = Blockly.createSvgElement('rect', {
     x: -FRAME_MARGIN_SIDE,
     y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
-    height: FRAME_HEADER_HEIGHT,
-    width: '100%'
+    height: FRAME_HEADER_HEIGHT
   }, clip);
 
   this.frameBase_ = Blockly.createSvgElement('rect', {
@@ -68,10 +67,17 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
     'clip-path': 'url(#frameClip' + this.block_.id + ')'
   }, this.frameGroup_);
 
+  var frameTextVerticalPosition = -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2);
+  if (Blockly.ieVersion()) {
+    // in non-IE browsers, we use dominant-baseline to vertically center
+    // our text. That is unfortunately not supported in IE, so we
+    // manually offset by 4 pixels to compensate.
+    frameTextVerticalPosition += 4;
+  }
   this.frameText_ = Blockly.createSvgElement('text', {
     'class': 'blocklyText',
     style: 'font-size: 12pt',
-    y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2),
+    y: frameTextVerticalPosition,
     'dominant-baseline': 'central'
   }, this.frameGroup_);
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.UNUSED_CODE));
@@ -80,15 +86,12 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
     'class': 'blocklyHelp'
   }, this.frameGroup_);
   Blockly.createSvgElement('circle', {
-    stroke: "#ffffff",
-    fill: '#59b9dc',
+    fill: '#7665a0',
     r: FRAME_HEADER_HEIGHT * 0.75 * 0.5
   }, this.frameHelp_);
   Blockly.createSvgElement('text', {
     'class': 'blocklyText',
-    style: 'font-size: 12pt',
-    dx: -FRAME_HEADER_HEIGHT * 0.75 * 0.5 * 0.5,
-    dy: FRAME_HEADER_HEIGHT * 0.75 * 0.5 * 0.5
+    y: Blockly.ieVersion() ? 4 : 0 // again, offset text manually in IE
   }, this.frameHelp_).appendChild(document.createTextNode("?"));
 };
 
@@ -118,9 +121,7 @@ Blockly.BlockSvgUnused.prototype.bindClickEvent = function () {
       return;
     }
 
-    this.frameHelp_.dispatchEvent(new Event(Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT, {
-      bubbles: true
-    }));
+    Blockly.fireUiEvent(this.frameHelp_, Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT);
     e.stopPropagation();
     e.preventDefault();
   });
@@ -150,6 +151,7 @@ Blockly.BlockSvgUnused.prototype.render = function (svgGroup) {
   var width = Math.max(groupRect.width, minWidth) + 2 * FRAME_MARGIN_SIDE;
   var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
 
+  this.frameClipRect_.setAttribute('width', width);
   this.frameBase_.setAttribute('width', width);
   this.frameBase_.setAttribute('height', height);
   this.frameHeader_.setAttribute('width', width);

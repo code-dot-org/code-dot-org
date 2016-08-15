@@ -2,15 +2,6 @@
   data:
     script:
       name:
-        test:
-          'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
-          The Maze: "Лабиринт"
-          Multi: "Мульти"
-          Match: "Соответствие"
-          Math Image: "Математическое изображение"
-          title: "Тестовый курс"
-          description: "Просто внутренний проверочный курс."
-          description_short: "Просто внутренний проверочный курс."
         course1:
           'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
           'Maze: Sequence': "Лабиринт: Последовательность"
@@ -238,17 +229,6 @@
           Variables: "Переменные"
           For Loops: "Циклы с параметром"
           Binary: "Двоичный"
-        potus:
-          title: "специальные"
-          description_short: "специальные"
-          description: "специальные"
-          Special: "Специальные"
-        special:
-          title: "специальные"
-          description_short: "специальные"
-          description: "специальные"
-          Special: "Специальные"
-          Binary: "Двоичный"
         algebra:
           title: "Информатика в алгебре"
           description: "Изучайте функциональное программирование, используя алгебру"
@@ -431,28 +411,8 @@
             Plants vs. Zombies!"
           description_short: "Постигай азы программирования с забавными персонажами!"
           Hour of Code 2013: "Час кода 2013"
-        Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
-        Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
-        How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
-        Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
@@ -771,25 +731,6 @@
           Strings and Images: "Строки и картинки"
           The Design Recipe: "Создание рецепта"
           Next Steps: Next Steps
-        sciPD complex adaptive 2:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: "Введение в профессиональные разработки"
-          Pre-Workshop Online Component: Pre-Workshop Online Component
-        sciPD complex adaptive forum:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: "Введение в профессиональные разработки"
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
-            Systems
-        Glenallan Career Day Demo:
-          new stage: new stage
-          title: Glenallan Career Day Demo
-          description_short: Let's make some puzzles!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
         ECSPD-NexTech:
           Introduction to PD: "Введение в профессиональные разработки"
           What is ECS?: What is ECS?
@@ -878,15 +819,6 @@
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
-        ui_tests:
-          title: UI Tests
-          description: Script for test. Careful, don't change level ordering.
-          description_short: Script for test. Careful, don't change level ordering.
-          All the Tests: All the Tests
-          Free Response: Free Response
-          Multi: "Мульти"
-          Big Game: Big Game
-          new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
           description: "Этап 2 онлайн: Смешанное летнее обучение"
@@ -901,6 +833,13 @@
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
+          Welcome!: "Добро пожаловать!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
+          Revisiting Agent Movement: Revisiting Agent Movement
+          Epidemic Model Extensions: Epidemic Model Extensions
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Итоги"
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -1024,6 +963,9 @@
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
           Swapped Levels: Swapped Levels
+          Gamelab: Gamelab
+          Anonymous student survey: Anonymous student survey
+          Anonymous student survey 2: Anonymous student survey 2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Этап 2 онлайн: Смешанное летнее обучение"
@@ -1053,17 +995,6 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: "Добро пожаловать!"
-        CSPfac intro:
-          title: 'CS Principles Facilitator Workshop '
-          description: Online levels for PD workshop
-          description_short: Online levels for PD workshop
-          Welcome!: "Добро пожаловать!"
-          Pixelation Widget: Pixelation Widget
-          Text Compression Widget: Text Compression Widget
-          Internet Simulator: "Интернет-симулятор"
-          App Lab: "Лаборатория приложений"
-          Broadcast Lesson: Broadcast Lesson
-          Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -1111,7 +1042,7 @@
           Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
           'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
           Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
-          0: |
+          '0': |
             Unit 1, Days 1-2
             What Is a Computer?
           1: |
@@ -1139,13 +1070,6 @@
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
           Equity PD: Equity PD
-        hoc2015:
-          title: "Час кода 2015"
-          description_short: "Используйте лабораторию игр для создания историй или
-            игр."
-          description: "Используйте лабораторию игр для создания историй или игр."
-          Hour of Code: Hour of Code
-          Hour of Code 2015: "Час кода 2015"
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: "Этап 2 онлайн: Смешанное летнее обучение"
@@ -1169,6 +1093,7 @@
           Welcome!: "Добро пожаловать!"
           The Design Recipe: "Создание рецепта"
           Teaching with Puzzles: Teaching with Puzzles
+          Lesson Prep: Lesson Prep
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: "Этап 2 онлайн: Смешанное летнее обучение"
@@ -1331,13 +1256,6 @@
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
             messages using a Vigenere Cipher
           Vigenere: Vigenere
-        frequency:
-          title: Frequency Analysis Widget
-          description_short: Frequency Analysis Widget
-          description: Use the Frequency Analysis Widget to analyze letter frequencies
-            in an input text compared to expected frequencies for standard English.
-            Use that comparison to explore cracking Shift and Substitution Ciphers.
-          Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
           description_short: CS in Algebra blended online school year study
@@ -1684,11 +1602,6 @@
           description: "Научись программировать дроидов и создай свою собственную
             игру по мотивам Звездных войн в далекой-далекой галактике."
           Hour of Code 2015: "Час кода 2015"
-        minecraft:
-          title: Minecraft
-          description_short: Use code to survive in a Minecraft world!
-          description: Use code to survive in a Minecraft world!
-          Craft: Craft
         mc:
           title: "Час кода с Minecraft"
           description_short: "Исследуйте мир Minecraft с помощью программного кода"
@@ -2015,10 +1928,18 @@
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
           CSD U3 Variables and Animation: CSD U3 Variables and Animation
-          Booleans and Conditionals: Booleans and Conditionals
           SFLP: SFLP
           Animations: Animations
           'Project: Interactive Card': 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
+          Complex Sprite Movement: Complex Sprite Movement
+          Collisions: Collisions
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2061,8 +1982,8 @@
           Wrap Up: Wrap Up
           Welcome to Phase 1!: Welcome to Phase 1!
           Background and Context: Background and Context
-          Classroom and workshop style: 'Classroom and workshop style '
-          Classroom and Workshop Style: 'Classroom and Workshop Style '
+          'Classroom and workshop style ': 'Classroom and workshop style '
+          'Classroom and Workshop Style ': 'Classroom and Workshop Style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description_short: Teach Algebra through Functional Programming
@@ -2130,6 +2051,7 @@
           description_short: Unreleased level types for UI testing as admin
           description: Unreleased level types for UI testing as admin
           Game Lab: Game Lab
+          Contained Levels: Contained Levels
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2139,14 +2061,15 @@
           description: introduction to the internet simulator and a discussion of
             how we use it to teach the internet
           netsim: netsim
-        Test CPS PD:
-          test Unit 1 required reading: test Unit 1 required reading
-          test Unit 1 content module Alpha: test Unit 1 content module Alpha
-          test Unit 1 content module Bravo: test Unit 1 content module Bravo
-          test Unit 1 content module Charlie: test Unit 1 content module Charlie
-          test Unit 1 practice module Delta: test Unit 1 practice module Delta
-          test Unit 1 practice module Echo: test Unit 1 practice module Echo
-          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        'csp-facilitators ':
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These
+            levels provide a glimpse into the tools we use throughout the curriculum
+            to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
         csp-facilitators:
           title: CSP Tool Overview
           description_short: Introduction to CS Principles for new Facilitators
@@ -2211,6 +2134,8 @@
           Looping and Random Numbers: Looping and Random Numbers
           App Lab: "Лаборатория приложений"
           Design Mode: Design Mode
+          Making it Interactive: Making it Interactive
+          Adding Functionality (optional): Adding Functionality (optional)
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
@@ -2221,6 +2146,13 @@
           description: Temp place to work on U2 of Disco
           Headers and Lists: Headers and Lists
           Introduction to HTML: Introduction to HTML
+          Quality Websites: Quality Websites
+          Designing Web Pages: Designing Web Pages
+          Describing Webpages: Describing Webpages
+          Text on the Web: Text on the Web
+          Designing Code for Computers: Designing Code for Computers
+          Digital Footprint: Digital Footprint
+          Images on the Web: Images on the Web
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2235,52 +2167,6 @@
           description: Test of new educational philosophy with guiding storyline
           description_audience: Ages 8-18+
           Sample Stage: Sample Stage
-        TeacherCon:
-          title: TeacherCon Supports
-          description: We will use this during TeacherCon to deliver supports and
-            materials for sessions
-          Introduction to Teachercon: Introduction to Teachercon
-          'Lesson 1.4: number systems - circle triangle square': 'Lesson 1.4: number
-            systems - circle triangle square'
-          'Lesson 1.6: sending numbers': 'Lesson 1.6: sending numbers'
-          'Lesson 1.9: internet addressing (battleship)': 'Lesson 1.9: internet addressing
-            (battleship)'
-          'Lesson 1.10: routers and redundancy': 'Lesson 1.10: routers and redundancy'
-          'Lesson 1.11: Packets and Making a Reliable Internet': 'Lesson 1.11: Packets
-            and Making a Reliable Internet'
-          'Lesson 2.2: text compression': 'Lesson 2.2: text compression'
-          'Lesson 2.3: black and white pixelation': 'Lesson 2.3: black and white pixelation'
-          'Lesson 2.10: good and bad data visualizations': 'Lesson 2.10: good and
-            bad data visualizations'
-          Group Work and Peer Learning: Group Work and Peer Learning
-          Balancing Teachers and Tools: Balancing Teachers and Tools
-          Discovery Learning: Discovery Learning
-          Capturing Student Learning: Capturing Student Learning
-          Lesson 14 number systems - circle triangle square: Lesson 14 number systems
-            - circle triangle square
-          'Lesson 1,4: number systems - circle triangle square': 'Lesson 1,4: number
-            systems - circle triangle square'
-          'Lesson 1,6: sending numbers': 'Lesson 1,6: sending numbers'
-          'Lesson 1,9: internet addressing (battleship)': 'Lesson 1,9: internet addressing
-            (battleship)'
-          'Lesson 1,10: routers and redundancy': 'Lesson 1,10: routers and redundancy'
-          'Lesson 1,11: Packets and Making a Reliable Internet': 'Lesson 1,11: Packets
-            and Making a Reliable Internet'
-          'Lesson 2,2: text compression': 'Lesson 2,2: text compression'
-          'Lesson 2,3: black and white pixelation': 'Lesson 2,3: black and white pixelation'
-          'Lesson 2,10: good and bad data visualizations': 'Lesson 2,10: good and
-            bad data visualizations'
-          'Lesson 1,4: Number Systems - circle triangle square': 'Lesson 1,4: Number
-            Systems - circle triangle square'
-          'Lesson 1,6: Sending Numbers': 'Lesson 1,6: Sending Numbers'
-          'Lesson 1,10: Routers and Redundancy': 'Lesson 1,10: Routers and Redundancy'
-          'Lesson 2,2: Text Compression': 'Lesson 2,2: Text Compression'
-          'Lesson 2,3: Black and White Pixelation': 'Lesson 2,3: Black and White Pixelation'
-          'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2,10: Good and
-            Bad Data Visualizations'
-          Measuring Student Learning: Measuring Student Learning
-          description_short: We will use this during TeacherCon to deliver supports
-            and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2288,9 +2174,422 @@
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: "Художник: процедуры"
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
         artistExemplar:
           title: Artist Exemplar
           description_short: How can we make the artist levels really hum?
           description: These artist levels will knock the socks off of third graders
           description_audience: "Возраст 8-18 лет"
           Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: "Этап 2 онлайн: Смешанное летнее обучение"
+          description: "Этап 2 онлайн: Смешанное летнее обучение"
+          Welcome!: "Добро пожаловать!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Итоги"
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports
+            and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and
+            materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: "Этап 2 онлайн: Смешанное летнее обучение"
+          description: "Этап 2 онлайн: Смешанное летнее обучение"
+          Welcome!: "Добро пожаловать!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Итоги"
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1
+          'Bee: Conditionals': "Пчела: Условные команды"
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
+          Programming: "Программирование"
+          Being Safe Online: Being Safe Online
+          Loops: "Циклы"
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: "События"
+          Fuzz Fiesta: Fuzz Fiesta
+          title: Kindergarten
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+          Loops Intro: Loops Intro
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
+          Conditionals: "Условные операторы"
+          'Bee: Conditionals': "Пчела: Условные команды"
+          'PlayLab: Conditionals': 'PlayLab: Conditionals'
+          Songwriting: "Написание песен"
+          'Bee: Functions': "Пчела: Функции"
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          'Project #1': 'Project #1'
+          Nested Loops: "Вложенные циклы"
+          'Artist: Nested Loops': "Художник: Вложенные циклы"
+          'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2 (Conditionals,
+            Events, Functions)'
+          'New Artist: Functions': 'New Artist: Functions'
+          'Project #2': 'Project #2'
+          'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
+          Internet: "интернет"
+          Crowdsourcing: "Краудсорсинг"
+          Digital Citizenship: "Цифровое гражданство"
+          'Unplugged: Conditionals with Cards': 'Unplugged: Conditionals with Cards'
+          'Unplugged: Decision Trees (New)': 'Unplugged: Decision Trees (New)'
+          'Unplugged: Nested Loops (New)': 'Unplugged: Nested Loops (New)'
+          Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested
+            Loops)
+          'Project #1: Artist (Nested Loops, Functions)': 'Project #1: Artist (Nested
+            Loops, Functions)'
+          New Playlab Behaviors and Events Review: New Playlab Behaviors and Events
+            Review
+          'Project 2: PlayLab Game (Events, Conditionals, Functions)': 'Project 2:
+            PlayLab Game (Events, Conditionals, Functions)'
+          'Bee: Nested Loops': "Пчела: Вложенные циклы"
+          'Final Project - Unplugged: Design Process': 'Final Project - Unplugged:
+            Design Process'
+          'Final Project - Work Day: Build Project Online': 'Final Project - Work
+            Day: Build Project Online'
+          Final Project - Presentation Day: Final Project - Presentation Day
+          More Programming with Scratch: More Programming with Scratch
+          Explore project ideas: Explore project ideas
+          Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded
+            Project Stage (Loops, Events, Conditionals, Functions)
+          Build a Star Wars Game!: Build a Star Wars Game!
+          'Bee: Determine the Concept': 'Bee: Determine the Concept'
+        grade1:
+          Predicting & Debugging: Predicting & Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
+          Debugging: Debugging
+          Programming Unplugged: Programming Unplugged
+          Programming: "Программирование"
+          Being Safe Online: Being Safe Online
+          Loops Unplugged: Loops Unplugged
+          Loops: "Циклы"
+          Events Unplugged: Events Unplugged
+          Events: "События"
+          More Computer Science: More Computer Science
+          title: Grade 1
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+          Mixed Review (Ramp Up): Mixed Review (Ramp Up)
+          'Unplugged: Envelope Variables': "Урок без компьютера: Конвертные переменные"
+          'Unplugged: Madlibs': "Урок без компьютера: игра «Пропуски»"
+          'Artist: Variables': "Художник: Переменные"
+          'Play Lab: Variables': "Лаборатория игр: Переменные"
+          'Unplugged: For Loop Fun': "Урок без компьютера: Игры с циклами"
+          'Bee: For Loops': "Пчела: Циклы с параметром"
+          'Artist: For Loops': "Художник: Циклы с параметром"
+          'Unplugged: Songwriting with Parameters': "Урок без компьютера: Написание
+            песен с параметрами"
+          'Artist: Functions with Parameters': "Художник: Функции с параметрами"
+          'Play Lab: Functions with Parameters': "Лаборатория игр: Функции с параметрами"
+          'Bee: Functions with Parameters': "Пчела: Функции с параметрами"
+          'Play Lab: Events and Conditionals': 'Play Lab: Events and Conditionals'
+          'Project: Chase/Collect Game': 'Project: Chase/Collect Game'
+          Scratch (Optional Third-Party Stage): Scratch (Optional Third-Party Stage)
+          'Unplugged: Binary Images': 'Unplugged: Binary Images'
+          'Pixelation: Binary Exploration': 'Pixelation: Binary Exploration'
+          Artist Binary: "Художник: двоичная система"
+          'Project 1: Choose Your Own Story App': 'Project 1: Choose Your Own Story
+            App'
+          'Project 2: For Loops with the Artist': 'Project 2: For Loops with the Artist'
+          'Project 3: Design your own App (PlayLab)': 'Project 3: Design your own
+            App (PlayLab)'
+          Concept Script (All below this point): Concept Script (All below this point)
+          'Final Project - Unplugged: Design Process': 'Final Project - Unplugged:
+            Design Process'
+          'Final Project - Work Day: Build Project Online': 'Final Project - Work
+            Day: Build Project Online'
+          Final Project - Review/Revise Day: Final Project - Review/Revise Day
+          Final Project - Presentation Day: Final Project - Presentation Day
+          Try programming with Khan Academy: Try programming with Khan Academy
+          Digital Citizenship: "Цифровое гражданство"
+          Explore project ideas: Explore project ideas
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: "Добро пожаловать!"
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: "Итоги"
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project
+        ecs-unit3:
+          title: ECS Unit 3
+          description_short: 'Unit 3: Web Design'
+          description: 'Unit 3: Web Design'
+          Getting Started: Getting Started
+          Intro to Unit 3: Intro to Unit 3
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+        ecs-unit4:
+          title: ECS Unit 4
+          description_short: 'Unit 4: Programming'
+          description: 'Unit 4: Programming'
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+        ecs-unit5:
+          title: ECS Unit 5
+          description_short: 'Unit 5: Computer and Data Analysis'
+          description: 'Unit 5: Computer and Data Analysis'
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Unit 5 lessons: Unit 5 lessons
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ecs-unit6:
+          title: ECS Unit 6
+          description_short: 'Unit 6: Robotics'
+          description: 'Unit 6: Robotics'
+          Getting Started: Getting Started
+          Unit 6 Overview: Unit 6 Overview
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
+        grade3:
+          Farmer Graph Paper Programming: Farmer Graph Paper Programming
+          Robot Games: Robot Games
+          About My Robot: About My Robot
+          Farmer Debug Relay Programming: Farmer Debug Relay Programming
+          Robot Debugging: Robot Debugging
+          Robot Farmer Loops: Robot Farmer Loops
+          Robot Farmer Conditionals Intro: Robot Farmer Conditionals Intro
+          Farmer Conditional with Cards: Farmer Conditional with Cards
+          Farmer Robot Conditionals: Farmer Robot Conditionals
+          Farmer Robot Conditionals with Else: Farmer Robot Conditionals with Else
+          Choose Your Own Adventure: Choose Your Own Adventure
+          Unplugged Conditionals with Loops: Unplugged Conditionals with Loops
+          Robot Farmer Conditionals with Loops: Robot Farmer Conditionals with Loops
+          Robot Running the Farm: Robot Running the Farm
+          Farmer Impacts of Computing: Farmer Impacts of Computing
+          Preview to What is Next: Preview to What is Next
+          title: Grade 3
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+          More Programming with Scratch: More Programming with Scratch
+          More Programming with CS4FN: More Programming with CS4FN
+          Robot Farmer While: Robot Farmer While
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        alltheplcthings:
+          title: Sample course for PLC things
+          description_short: This is a sample course that has all of the plc special
+            things
+          description: This is a sample course that has all of the plc special things.
+            Enrollment in this course does nothing. Right now, it's just a copy of
+            TeacherCon
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: Lesson 1,4
+          Lesson 1,6: Lesson 1,6
+          Lesson 1,9: Lesson 1,9
+          Lesson 1,10: Lesson 1,10
+          Lesson 1,11: Lesson 1,11
+          Lesson 2,2: Lesson 2,2
+          Lesson 2,3: Lesson 2,3
+          Lesson 2,10: Lesson 2,10
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+        csd3:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: "Программирование"
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
+          Variables and Animation: Variables and Animation
+          Sprites and Properties: Sprites and Properties
+          Sprites and Images: Sprites and Images
+          Booleans and Conditionals: Booleans and Conditionals
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Complex Conditionals: Complex Conditionals
+          'Project: Interactive Card': 'Project: Interactive Card'
+        grade2:
+          Online My New Pet Jigsaw: Online My New Pet Jigsaw
+          Build A Block: Build A Block
+          Caring for my new pet: Caring for my new pet
+          Pet's New Home: Pet's New Home
+          Exploring the neighborhood: Exploring the neighborhood
+          At The Dog Park: At The Dog Park
+          Build A Puppy Picture: Build A Puppy Picture
+          Have a name needs a do tag: Have a name needs a do tag
+          Getting Loopy: "Зацикливание"
+          Puppy Introduction: Puppy Introduction
+          Big Event: Big Event
+          Online Internet Safety: Online Internet Safety
+          Free Play with your Pet: Free Play with your Pet
+          Flappy: "Лётная"
+          title: Grade 2
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+          Caring for My New Pet: Caring for My New Pet
+          New Home for My Pet: New Home for My Pet
+          Exploring the Neighborhood: Exploring the Neighborhood
+          Make a Dog Tag: Make a Dog Tag
+          Getting Loopy with Puppy: Getting Loopy with Puppy
+          Puppy Loops: Puppy Loops
+          Puppy Event: Puppy Event
+          More CS with Scratch: More CS with Scratch
+          More CS with Run Marco: More CS with Run Marco
+        transferring-over:
+          20-hr Stage 9: 20-hr Stage 9
+          20-hr Stage 2: 20-hr Stage 2
+          Course 2 Stage 17: Course 2 Stage 17
+          Course 3 Stage 16: Course 3 Stage 16
+          Course 3 Stage 17: Course 3 Stage 17
+        cspunit1assessment:
+          title: CS Principles Unit 1 Assessment
+          description_short: Unit 1 Assessment
+          description: This 10-question multiple choice assessment is similar in style
+            to the AP CSP Exam and covers material from Unit 1
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspunit2ch1assessment:
+          title: CS Principles Unit 2 Ch 1 Assessment
+          description_short: Unit 2.1 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 2 Chapter 1 (Lessons 1-6)
+          CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
+        cspunit2ch2assessment:
+          title: CS Principles Unit 2 Ch 2 Assessment
+          description_short: Unit 2.1 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)
+          CS Principles Unit 2 Assessment: CS Principles Unit 2 Assessment
+        k5concepts:
+          title: K5 Concepts
+          Events: "События"
+          Loops: "Циклы"
+          Nested Loops: "Вложенные циклы"
+          Conditionals: "Условные операторы"
+          While Loops: "Циклы «пока»"
+          Functions: "Процедуры"
+          Variables: "Переменные"
+          For Loops: "Циклы с параметром"
+          Functions with Parameters: "Процедуры с параметрами"
+          Binary: "Двоичный"
+        cspunit1ch1assessment:
+          CS Principles Unit 1 Ch 1 Assessment: CS Principles Unit 1 Ch 1 Assessment
+          title: CS Principles Unit 1 Ch 1 Assessment
+          description_short: Unit 1.1 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 1 Chapter 1 (Lessons 1-7)
+        cspunit1ch2assessment:
+          CS Principles Unit 1 Ch 2 Assessment: CS Principles Unit 1 Ch 2 Assessment
+          title: CS Principles Unit 1 Ch 2 Assessment
+          description_short: Unit 1.2 Assessment
+          description: This multiple choice assessment is similar in style to the
+            AP CSP Exam and covers material from Unit 1 Chapter 2 (Lessons 8-14)
+        algebrapdnext:
+          title: Computer Science in Algebra PD Phase 2
+          description_short: "\\tPhase 3: School Year Support"
+          description: Teach Algebra through Functional Programming
+          Welcome!: "Добро пожаловать!"
+          Teaching with Puzzles: Teaching with Puzzles
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          The Design Recipe: "Создание рецепта"
+          Teacher Dashboard: "Панель управления преподавателя"
+          Lesson Prep: Lesson Prep
+        csp-pre-survey:
+          title: CS Principles Pre-Survey
+          Anonymous student survey 2: Anonymous student survey 2
+          Anonymous student pre-survey: Anonymous student pre-survey

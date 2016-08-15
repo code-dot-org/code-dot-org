@@ -3,7 +3,6 @@ require_relative 'env'
 
 # Honeybadger extensions for command error logging
 module Honeybadger
-
   # notify_command_error - log an error from an executed command to honeybadger.
   #   Attempts to parse the underlying exception from stderr,
   #   and logs captured stdout and environment variables (with sensitive values hidden) in the context.
@@ -56,5 +55,4 @@ module Honeybadger
 
     [error_message, error_lines]
   end
-
 end

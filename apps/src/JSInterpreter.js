@@ -171,9 +171,9 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
  *        can be added with calls to createGlobalProperty()
  */
 JSInterpreter.prototype.parse = function (options) {
-  if (!this.studioApp.hideSource) {
-    this.calculateCodeInfo(options.code);
+  this.calculateCodeInfo(options.code);
 
+  if (!this.studioApp.hideSource) {
     var session = this.studioApp.editor.aceEditor.getSession();
     this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
   } else {

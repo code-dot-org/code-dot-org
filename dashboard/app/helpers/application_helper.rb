@@ -5,7 +5,6 @@ require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
-
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
@@ -173,8 +172,8 @@ module ApplicationHelper
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
       I18n.t("errors.messages.not_saved",
-                      count: resource.errors.count,
-                      resource: resource.class.model_name.human.downcase)
+        count: resource.errors.count,
+        resource: resource.class.model_name.human.downcase)
 
     html = <<-HTML
     <div id="error_explanation">
@@ -186,7 +185,8 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def is_k1?
+  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
+  def is_k1?  # rubocop:disable PredicateName
     is_k1 = @script.try(:is_k1?)
     is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
     is_k1
@@ -194,9 +194,9 @@ module ApplicationHelper
 
   def script_certificate_image_url(user, script)
     certificate_image_url(
-        name: user.name,
-        course: script.name,
-        course_title: data_t_suffix('script.name', script.name, 'title'))
+      name: user.name,
+      course: script.name,
+      course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)
@@ -222,5 +222,31 @@ module ApplicationHelper
 
   def page_mode
     PageMode.get(request)
+  end
+
+  def response_for_share_failure(share_failure)
+    return nil unless share_failure
+    {}.tap do |failure|
+      failure[:message] = share_failure_message(share_failure.type)
+      failure[:type] = share_failure.type
+      failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
+    end
+  end
+
+  private
+
+  def share_failure_message(failure_type)
+    case failure_type
+      when ShareFiltering::FailureType::EMAIL
+        t('share_code.email_not_allowed')
+      when ShareFiltering::FailureType::ADDRESS
+        t('share_code.address_not_allowed')
+      when ShareFiltering::FailureType::PHONE
+        t('share_code.phone_number_not_allowed')
+      when ShareFiltering::FailureType::PROFANITY
+        t('share_code.profanity_not_allowed')
+      else
+        raise ArgumentError.new("Unknown share failure type #{failure_type}")
+    end
   end
 end

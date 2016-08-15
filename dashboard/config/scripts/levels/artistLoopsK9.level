@@ -1,0 +1,126 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2016-06-22T23:56:05.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "instructions": "**Challenge:**  Lovely! Let's take a walk around the garden.",
+    "x": "50",
+    "y": "350",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This challenge uses FOUR loops, one right after another!\",\r\n  \"hint_id\": \"artistLoopsK9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n**Challenge:**  Lovely! Let's take a walk around the garden.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif\" width=\"300\"/>\r\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">6</title>
+              <statement name="DO">
+                <block type="simple_move_right"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="simple_move_left" y="150px" x="350px"/>
+        <block type="controls_repeat_simplified_dropdown" y="220px" x="75px">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+            <block type="simple_move_up"/>
+          </statement>
+        </block>
+        <block type="controls_repeat_simplified_dropdown" y="350px" x="225px">
+          <title name="TIMES" config="3-10">6</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="simple_jump_down"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">6</title>
+              <statement name="DO">
+                <block type="simple_move_right"/>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">6</title>
+                  <statement name="DO">
+                    <block type="simple_move_up"/>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="simple_move_left"/>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat_simplified_dropdown">
+                          <title name="TIMES" config="3-10">6</title>
+                          <statement name="DO">
+                            <block type="simple_move_down"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

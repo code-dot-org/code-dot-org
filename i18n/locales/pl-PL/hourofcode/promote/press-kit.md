@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ## Jak przyciągnąć uwagę mediów do twojej akcji "Godzina Kodowania"
 
 *Wszelkie zapytania odnośnie prasy i mediów kieruj na <press@code.org>*
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś(aś) wstępnej odpowiedzi.
   * Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.
   * Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.
-  * Podziel się swoimi planami na Facebooku i Twitterze, informuj o nadchodzących wydarzeniach i udostępniaj zdjęcia podczas 7-13 grudnia. Użyj hashtaga **#HourOfCode**, by Code.org mogło zauważyć i promować twoje wydarzenia.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Instrukcja krok po kroku:
 
@@ -35,7 +33,7 @@ Poszukaj w internecie kontaktu do dziennikarza. Jeśli nie możesz go znaleźć,
 
 **3. Skontaktuj się z mediami lokalnymi**
 
-Najlepszą metodą jest poczta elektroniczna. Mail powinien być któtki i zawierać informację: czemu inni ludzie powinni się zainteresować tym wydarzeniem? Załącz informacje kontaktowe (w tym numer telefonu komówkowego) do osoby, która w dniu wydarzenia będzie na miejscu. **Zobacz [przykładową próbkę dla mediów](%= resolve_url('/promote/resources#sample-emails') %):**
+Najlepszą metodą jest poczta elektroniczna. Mail powinien być któtki i zawierać informację: czemu inni ludzie powinni się zainteresować tym wydarzeniem? Załącz informacje kontaktowe (w tym numer telefonu komówkowego) do osoby, która w dniu wydarzenia będzie na miejscu. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
 
 **4. Przygotuj odpowiedzi na pytania dotyczące wydarzenia w twojej szkole. Tutaj jest kilka przykładów:**
 
@@ -43,15 +41,15 @@ Najlepszą metodą jest poczta elektroniczna. Mail powinien być któtki i zawie
 
 Podczas gdy wszyscy wiemy, że to ważne dla uczniów, aby dowiedzieć się, jak poruszać się po dzisiejszym, nasyconym techniką, świecie, wielu nauczycieli nie jest doświadczonych w dziedzinie informatyki i nie wiedzą od czego zacząć. To wydarzenie jest szansą dla nas wszystkich, aby zobaczyć, czym właściwie jest informatyka.
 
-Mamy nadzieję, że uda się rozbudzić zainteresowanie uczniów, i że będą oni kontynuować naukę. Badania naukowe pokazują także, że dzieci zaczynają rozumieć koncepcje programistyczne zanim jeszcze nauczą się czytać i pisać. Po prawdzie ich mózgi są nastawione na rozumienie języków programowania, podobnie jak dzieje się w przypadku języków obcych.
+Mamy nadzieję, że uda się rozbudzić zainteresowanie uczniów, i że będą oni kontynuować naukę. Research also shows that kids can pick up programming concepts before they know how to read and write. Po prawdzie ich mózgi są nastawione na rozumienie języków programowania, podobnie jak dzieje się w przypadku języków obcych.
 
 *Dlaczego jest to ważne?*
 
-In China, every student takes computer science to graduate high school. 90% szkół w USA tego przedmiotu nawet nie uczy. Najwyższy czas, by nadążyć za XXI wiekiem. Bez względu na to, czy nasi uczniowie w dorosłym życiu pójdą w kierunku medycyny, biznesu, polityki, czy sztuki, wiedza o tworzeniu technologii doda im pewności siebie w każdej dziedzinie i pozwoli im odnieść sukces.
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **Więcej szczegółów i cytat, który możesz użyć w materiałach**
 
-„Celem Hour of Code jest wyjaśnienie kodu i pokazanie, że informatyka to nie jest wielka filozofia. Każdy może nauczyć się podstaw”, powiedział Hadi Partovi, założyciel i CEO Code.org. "Ponad 100 milionów studentów na całym świecie spróbowało Godziny Kodowania. Popyt na informatykę 21 wieku nie zna granic."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Ponad 100 milionów studentów na całym świecie spróbowało Godziny Kodowania. Popyt na informatykę 21 wieku nie zna granic."
 
 **O Code.org**
 
@@ -59,5 +57,3 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
   
 Znajdź więcej zasobów i przykładowych e-mailów [tutaj](%= resolve_url('/promote') %).
-
-<%= view :signup_button %>

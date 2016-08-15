@@ -56,7 +56,7 @@ template '/etc/varnish/accept-language.vcl' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :reload, 'service[varnish]', :delayed
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/default.vcl' do
@@ -64,7 +64,7 @@ template '/etc/varnish/default.vcl' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :reload, 'service[varnish]', :delayed
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/secret' do
@@ -72,7 +72,7 @@ template '/etc/varnish/secret' do
   user 'root'
   group 'root'
   mode '0600'
-  notifies :reload, 'service[varnish]', :delayed
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 service "varnish" do

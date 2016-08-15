@@ -3,9 +3,11 @@ require 'fake_sqs/test_integration'
 
 # Launch a fake SQS service running on Localhost
 Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
-$fake_sqs_service = FakeSQS::TestIntegration.new(database: ':memory:',
-  sqs_endpoint: 'localhost', sqs_port: 4568)
-sleep(2) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
+$fake_sqs_service = FakeSQS::TestIntegration.new(
+  database: ':memory:',
+  sqs_endpoint: 'localhost',
+  sqs_port: 4568
+)
 
 class Pd::AsyncWorkshopHandlerTest < ActiveSupport::TestCase
 
@@ -35,6 +37,47 @@ class Pd::AsyncWorkshopHandlerTest < ActiveSupport::TestCase
 
     Pd::Workshop.expects(:process_ended_workshop_async).with(@workshop.id)
     process_pending_queue_messages
+  end
+
+  test 'unexpected action' do
+    e = assert_raises RuntimeError do
+      Pd::AsyncWorkshopHandler.process_workshop(@workshop.id, 'nonsense')
+    end
+    assert e.message.include? 'Unexpected action'
+  end
+
+  test 'test and production raise error when no queue provided' do
+    CDO.expects(:pd_workshop_queue_url).returns(nil).at_least_once
+
+    [:test, :production].each do |env|
+      set_env env
+      e = assert_raises RuntimeError do
+        Pd::AsyncWorkshopHandler.process_ended_workshop(@workshop.id)
+      end
+      assert e.message.include? 'CDO.pd_workshop_queue_url is required'
+    end
+  end
+
+  test 'specified queue is used' do
+    CDO.expects(:pd_workshop_queue_url).returns(@queue_url).at_least_once
+
+    mock_queue = mock
+    mock_queue.expects(:enqueue).times(3)
+    Pd::AsyncWorkshopHandler.expects(:workshop_queue).returns(mock_queue).times(3)
+
+    # include an environment other than the required test & production
+    [:test, :production, :adhoc].each do |env|
+      set_env env
+      Pd::AsyncWorkshopHandler.process_ended_workshop(@workshop.id)
+    end
+  end
+
+  test 'no queue specified in development env processes immediately' do
+    CDO.expects(:pd_workshop_queue_url).returns(nil).at_least_once
+    set_env :development
+
+    Pd::AsyncWorkshopHandler.expects(:handle_operation)
+    Pd::AsyncWorkshopHandler.process_ended_workshop(@workshop.id)
   end
 
   private

@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # 選出された議員の皆様への、プレスリリースのサンプル
 
 緊急リリースのため  
@@ -42,9 +40,3 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 [**ここに、他の学校や組織、もしくはイベント参加者の感想を入れる**]
 
 [**イベント名**] に関するより詳しい情報を手にいれるために、サイト（ [**WEBサイトのアドレス**] ）を訪れるか、もしくはこちらへご連絡ください。 [**連絡先**]
-
-  
-  
-
-
-<%= view :signup_button %>

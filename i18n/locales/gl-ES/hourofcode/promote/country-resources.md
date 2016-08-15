@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 <% if @country == 'la' %>
 
 # Recursos
@@ -20,6 +18,11 @@ p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del
 <
 
 p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
@@ -43,9 +46,38 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'nl' %>
+
+  
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+
+<% elsif @country == 'nz' %>
+
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
+
+  
+  
+
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
+
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
+<% elsif @country == 'ro' %>
+
+Va multumim pentru inregistrare, daca doriti materiale printate pentru promovarea evenimentului, echipa din Romania vi le poate trimite prin curier. Trebuie doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
 
 <% elsif @country == 'uk' %>
 
@@ -59,10 +91,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**All Hour of Code tutorials:**
+**Todos os titoriais da Hora de Código:**
 
-  * Require minimal prep-time for organizers
-  * Son titoriais guiados, o que permite ós estudantes traballaren ó seu propio ritmo e segundo as súas habilidades
+  * Esixen un tempo mínimo de preparación dos organizadores
+  * Son titoriais guiados, o que permite os estudantes traballaren ao seu propio ritmo e segundo as súas habilidades
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
@@ -83,9 +115,9 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * O vídeo orixinal de lanzamento da Code.org, coa participación de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (hai versións de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [O vídeo do presidente Obama convidando a todos os alumnos a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 
@@ -94,5 +126,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 # Proximamente, recursos adicionais!
 
 <% end %>
-
-<%= view :signup_button %>

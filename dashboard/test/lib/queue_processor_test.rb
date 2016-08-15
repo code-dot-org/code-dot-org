@@ -16,9 +16,9 @@ require 'sqs/queue_processor_config'
 unless ENV['USE_REAL_SQS'] == 'true'
   require 'fake_sqs/test_integration'
   Aws.config.update(
-      region: 'us-east-1',
-      :access_key_id     => "access key id",
-      :secret_access_key => "secret access key"
+    region: 'us-east-1',
+    :access_key_id     => "access key id",
+    :secret_access_key => "secret access key"
   )
   $fake_sqs_service = FakeSQS::TestIntegration.new(
     database: ':memory:',
@@ -103,9 +103,9 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
   def test_queue_processor
     response = @sqs.create_queue(
-        queue_name: "test-queue-processor-test",
-        # Set a short visibility timeout so that retries will happen quickly.
-        attributes: {"VisibilityTimeout" => "1"}
+      queue_name: "test-queue-processor-test",
+      # Set a short visibility timeout so that retries will happen quickly.
+      attributes: {"VisibilityTimeout" => "1"}
     )
     queue_url = response.queue_url
 
@@ -125,13 +125,13 @@ class QueueProcessorTest < ActiveSupport::TestCase
     }
 
     config = SQS::QueueProcessorConfig.new(
-        queue_url: queue_url,
-        handler: handler,
-        initial_max_rate: global_max_messages_per_sec,
-        max_rate_proc: max_rate_proc,
-        num_processors: 1,
-        num_workers_per_processor: num_workers,
-        logger: logger)
+      queue_url: queue_url,
+      handler: handler,
+      initial_max_rate: global_max_messages_per_sec,
+      max_rate_proc: max_rate_proc,
+      num_processors: 1,
+      num_workers_per_processor: num_workers,
+      logger: logger)
     processor = SQS::QueueProcessor.new(config, sqs_metrics)
     processor.start
 
@@ -217,11 +217,11 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     DCDO.set('test_rate', nil)
     assert_equal config.initial_max_rate, config.max_rate_proc.call,
-                 'Max rate proc should return initial_max_rate if DCDO value is not set'
+      'Max rate proc should return initial_max_rate if DCDO value is not set'
 
     DCDO.set('test_rate', 234)
     assert_equal 234, config.max_rate_proc.call,
-                 'Max rate proc should return DCDO value if set'
+      'Max rate proc should return DCDO value if set'
 
     config2 = configs[1]
     assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example2', config2.queue_url

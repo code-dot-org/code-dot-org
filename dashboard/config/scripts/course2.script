@@ -34,7 +34,10 @@ level '2-3 Artist 3new'
 level '2-3 Artist 3.4'
 level '2-3 Artist 4'
 level '2-3 Artist 6'
-level '2-3 Artist 9'
+variants
+level '2-3 Artist 9',active:false
+level '2-3 Artist 9 NEW',active:true
+endvariants
 level '2-3 Artist 7'
 level '2-3 Artist 8'
 level '2-3 Artist Free Play'
@@ -158,7 +161,7 @@ assessment '2-3 bee conditionals multi 3'
 stage 'Binary Bracelets'
 level 'BinaryBracelets'
 assessment '2-3 Binary Match 1'
-assessment '2-3 Binary Multi 1'
+#assessment '2-3 Binary Multi 1'
 
 stage 'The Big Event'
 level 'BigEvent'

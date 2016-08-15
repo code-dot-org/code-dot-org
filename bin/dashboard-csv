@@ -18,7 +18,7 @@ class DB < ActiveRecord::Base
 
 end
 
-def main()
+def main
   q = ARGV.join(' ').strip
   return if q.empty?
 

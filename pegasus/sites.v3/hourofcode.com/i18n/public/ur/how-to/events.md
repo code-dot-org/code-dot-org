@@ -6,15 +6,12 @@ nav: how_to_nav
 
 ---
 
-
-# How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+# آور-آف-کوڈ کا انعقاد کیسے کریں
 
 ## 1) Prepare for your event
 
   * Determine a venue, date and time
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * بھیجیں [ایک خط](<%= resolve_url('/promote/resources#sample-emails') %>) اپنے مقامی میئر، کانگریس مین، گورنر، یا مؤثر بزنس پرسن کو شرکت کے لیے مدعو کریں کہ خطاب کرے۔
   * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
 ## 2) During your event
@@ -33,13 +30,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 ## 3) Share how it went
 
   * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * ہیش-ٹیگ استعمال کریں تاکہ ** #آور-آف-کوڈ# **
 
 ## Example Event Plan
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -57,4 +54,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-

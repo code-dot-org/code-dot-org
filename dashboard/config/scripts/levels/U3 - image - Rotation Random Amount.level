@@ -9,8 +9,6 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
       "Game.frameRate": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
@@ -19,7 +17,6 @@
       "x": null,
       "y": null,
       "rotation": null,
-      "scale": null,
       "shapeColor": null,
       "background": null,
       "fill": null,
@@ -47,7 +44,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment": null,
+      "comment_Drawing": null,
+      "comment_Variables": null,
+      "comment_GameLab": null,
+      "comment_Math": null,
+      "comment_Sprites": null,
       "console.log": null
     },
     "edit_code": true,
@@ -75,8 +76,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/a7697b89e2c6ea67ae453410a1da6d47-image-1465572156435.gif\" alt=\"wheel spinning\" style=\"width:200px;float:right\" >\r\n\r\n# Random Rotation\r\n\r\nUsing random numbers with rotation can add interesting animation effects. One effect you can use rotation for is shaking. An object can look like its shaking a little when you set its rotation to a small random number repeatedly.\r\n\r\n# Do This\r\nYou are going to start creating a spinner wheel similar to one you might find at a carnival.\r\n\r\n* Create a clicker sprite\r\n* Set the sprite to the clicker image in the animation tab\r\n* Set the rotation to a random number between -5 and 5\r\n* Test it out",
-    "project_template_level_name": "CSD U3 - wheel template"
+    "markdown_instructions": "<img src=\"https://images.code.org/a7697b89e2c6ea67ae453410a1da6d47-image-1465572156435.gif\" alt=\"wheel spinning\" style=\"width:200px;float:right\" >\r\n\r\n# Random Rotation\r\n\r\nUsing random numbers with rotation can add interesting animation effects. One effect you can use rotation for is shaking. **An object can look like its shaking a little when you set its rotation to a small random number repeatedly.**\r\n\r\n# Do This\r\nYou are going to start creating a spinner wheel similar to one you might find at a carnival. You set up the wheel on the last level so you are just adding the clicker at the top.\r\n\r\n* Create a clicker sprite\r\n* Set the sprite to the provided clicker image\r\n* Set the rotation to a random number between -5 and 5\r\n* Test it out",
+    "project_template_level_name": "CSD U3 - wheel template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

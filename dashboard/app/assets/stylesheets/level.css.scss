@@ -7,7 +7,7 @@ li.level_name {
 .new_level {
   input, textarea {
     display: block;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0;
   }
 }
 
@@ -24,7 +24,11 @@ li.level_name {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0; bottom: 0; right: 0; left: 0; /* fill parent */
+  // Fill parent.
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .aspect-ratio {
   width: 100%;
@@ -33,7 +37,7 @@ li.level_name {
   position: relative;
   min-width: 280px;
 }
-.aspect-ratio:after {
+.aspect-ratio::after {
   padding-top: 120.25%;
   display: block;
   content: '';

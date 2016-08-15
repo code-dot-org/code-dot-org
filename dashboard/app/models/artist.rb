@@ -47,9 +47,9 @@ class Artist < Blockly
 
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-        user: params[:user],
-        game: Game.custom_artist,
-        level_num: 'custom',
+      user: params[:user],
+      game: Game.custom_artist,
+      level_num: 'custom',
     ))
   end
 
@@ -83,6 +83,8 @@ class Artist < Blockly
           </block>
         </value>
       </block>
+      <block type="jump_to" />
+      <block type="jump_to_xy" />
       <block type="jump_by_constant">
         <title name="VALUE">100</title>
       </block>
@@ -253,14 +255,26 @@ class Artist < Blockly
       <block type="simple_move_down"></block>
       <block type="simple_move_right"></block>
       <block type="simple_move_left"></block>
+      <block type="simple_move_up_left"></block>
+      <block type="simple_move_up_right"></block>
+      <block type="simple_move_down_left"></block>
+      <block type="simple_move_down_right"></block>
       <block type="simple_move_up_length"></block>
       <block type="simple_move_down_length"></block>
       <block type="simple_move_right_length"></block>
       <block type="simple_move_left_length"></block>
+      <block type="simple_move_up_left_length"></block>
+      <block type="simple_move_up_right_length"></block>
+      <block type="simple_move_down_left_length"></block>
+      <block type="simple_move_down_right_length"></block>
       <block type="simple_jump_up"></block>
       <block type="simple_jump_down"></block>
       <block type="simple_jump_right"></block>
       <block type="simple_jump_left"></block>
+      <block type="simple_jump_up_left"></block>
+      <block type="simple_jump_up_right"></block>
+      <block type="simple_jump_down_left"></block>
+      <block type="simple_jump_down_right"></block>
     XML
   end
 end

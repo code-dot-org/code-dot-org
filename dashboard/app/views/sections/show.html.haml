@@ -13,19 +13,20 @@
       $(this).addClass('selected');
       $('input#user_id').val($(this).attr('id'));
 
-      if (loginType == loginTypeWord)
-      {
+      if (loginType == loginTypeWord) {
         // Clear the password.
         $('#secret_words').val("");
-      }
-      else if (loginType == loginTypePicture)
-      {
+      } else if (loginType == loginTypePicture) {
         // Deselect picture.
         $('ul.pictures li').removeClass('selected');
       }
 
       // Disable the login button.
       $('#login_button').prop('disabled', true);
+
+      // Hide the pairing checkbox
+      $('#pairing_checkbox').hide();
+
 
       // Reveal the secret section...
       $('#secret').hide().slideDown();
@@ -40,12 +41,18 @@
       $(this).addClass('selected');
       $('input#secret_picture_id').val($(this).attr('id'));
 
+      // Show the pairing checkbox
+      $('#pairing_checkbox').show();
+
       // Enable the login button.
       $('#login_button').prop('disabled', false);
     });
 
     // Type something in password box.
     $('#secret_words').keyup(function() {
+      // Show the pairing checkbox
+      $('#pairing_checkbox').show();
+
       // Enable the login button.
       $('#login_button').prop('disabled', false);
     });
@@ -64,7 +71,7 @@
     .clear
 
   - if @section.login_type == Section::LOGIN_TYPE_PICTURE
-    %div#secret{style: 'display: none;'}
+    #secret{style: 'display: none;'}
       %h4.instructions= t('signinsection.picture')
       %ul.pictures
         - @secret_pictures.each do |secret_picture|
@@ -76,10 +83,13 @@
     = hidden_field_tag :secret_picture_id
     = hidden_field_tag :user_id
     - if @section.login_type == Section::LOGIN_TYPE_WORD
-      %div#secret{style: 'display: none;'}
+      #secret{style: 'display: none;'}
         %h4.instructions= t('signinsection.words')
         = text_field_tag :secret_words, nil, autocomplete: 'off'
         .clear
+    #pairing_checkbox{style: 'display: none'}
+      = check_box_tag :show_pairing_dialog
+      = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
     = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
 
 %br/

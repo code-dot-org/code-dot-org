@@ -614,7 +614,63 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
     .concat(configuredBlocks);
 };
 
+/**
+ * Gets the first parameter of the given function name, given either that
+ * function's DropletBlock or an AceEditor instance with its current cursor
+ * set to after the method.
+ *
+ *
+ * @param {string} methodName name of method to get first param of
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ * @param {AceEditor} editor
+ * @return {string|null} found parameter (without quotes) or null if none found
+ * @throws {Error} encountered unexpected Droplet token
+ */
+exports.getFirstParam = function (methodName, block, editor) {
+  if (!block) {
+    // If we're not given a block, assume that we're in text mode
+    var cursor = editor.session.selection.getCursor();
+    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
+
+    return getFirstParamFromCode(methodName, contents);
+  }
+  // We have a block. Parse it to find our first socket.
+  var token = block.start;
+  do {
+    if (token.type === 'socketStart') {
+      var textToken = token.next;
+      if (textToken.type === 'text') {
+        return textToken.value;
+      } else if (textToken.type === 'blockStart') {
+        return textToken.next.value;
+      } else {
+        throw new Error('unexpected');
+      }
+    }
+    token = token.next;
+  } while (token);
+  return null;
+};
+
+function getFirstParamFromCode(methodName, code) {
+  var prefix = `${methodName}(`;
+  code = code.slice(code.lastIndexOf(prefix));
+  // quote, followed by param, followed by end quote, comma, and optional whitespace
+  const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
+  // param, comma, and optional whitespace
+  const backslashNoQuoteRegex = `^${methodName}\\(([^"']*),\\s*$`;
+  var matchQuote = new RegExp(backslashEscapedRegex).exec(code);
+  var matchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
+  if (matchQuote) {
+    return matchQuote[2];
+  } else if (matchNoQuote) {
+    return matchNoQuote[1];
+  }
+  return null;
+}
+
 exports.__TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig,
-  filteredBlocksFromConfig: filteredBlocksFromConfig
+  filteredBlocksFromConfig: filteredBlocksFromConfig,
+  getFirstParamFromCode: getFirstParamFromCode
 };
