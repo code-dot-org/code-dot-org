@@ -803,11 +803,11 @@
   course3_name: "Course 3"
   course4_name: "Course 4"
   accelerated_name: "Accelerated Course"
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
