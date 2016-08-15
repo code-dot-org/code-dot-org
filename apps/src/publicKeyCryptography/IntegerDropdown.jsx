@@ -30,12 +30,12 @@ const IntegerDropdown = React.createClass({
 
   onChange(event) {
     const value = parseInt(event.target.value, 10);
-    this.props.onChange(typeof value === 'number' && !isNaN(value) ? value : null);
+    this.props.onChange(Number.isInteger(value) ? value : null);
   },
 
   render() {
     let {value, options} = this.props;
-    if (typeof value !== 'number') {
+    if (!Number.isInteger(value)) {
       value = '';
     }
     return (

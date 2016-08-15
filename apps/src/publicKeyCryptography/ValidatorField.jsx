@@ -44,15 +44,11 @@ ValidatorField.propTypes = {
 };
 
 function statusFromProps({value, expectedValue}) {
-  if (isPopulated(value) && isPopulated(expectedValue)) {
+  if ([value, expectedValue].every(Number.isInteger)) {
     if (value === expectedValue) {
       return CORRECT;
     }
     return INCORRECT;
   }
   return UNKNOWN;
-}
-
-function isPopulated(val) {
-  return typeof val === 'number' && !isNaN(val);
 }
