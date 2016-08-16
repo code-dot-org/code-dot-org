@@ -1,5 +1,5 @@
 import utils from '../utils';
-import Subtype from './subtype';
+import Gatherer from './gatherer';
 import mazeMsg from './locale';
 import BeeCell from './beeCell';
 import BeeItemDrawer from './beeItemDrawer';
@@ -12,7 +12,7 @@ const UNLIMITED_NECTAR = 99;
 const EMPTY_HONEY = -98; // Hive with 0 honey
 const EMPTY_NECTAR = 98; // flower with 0 honey
 
-export default class Bee extends Subtype {
+export default class Bee extends Gatherer {
   constructor(maze, studioApp, config) {
     super(maze, studioApp, config);
 
@@ -80,26 +80,9 @@ export default class Bee extends Subtype {
   }
 
   /**
-   * @param {Number} row
-   * @param {Number} col
-   * @returns {Number} val
-   */
-  getValue(row, col) {
-    return this.maze_.map.currentStaticGrid[row][col].getCurrentValue();
-  }
-
-  /**
-   * @param {Number} row
-   * @param {Number} col
-   * @param {Number} val
-   */
-  setValue(row, col, val) {
-    this.maze_.map.currentStaticGrid[row][col].setCurrentValue(val);
-  }
-
-  /**
    * Did we reach our total nectar/honey goals?
    * @return {boolean}
+   * @override
    */
   finished() {
     // nectar/honey goals
@@ -111,15 +94,11 @@ export default class Bee extends Subtype {
       return false;
     }
 
-    if (!this.collectedEverything()) {
-      return false;
-    }
-
-    return true;
+    return super.finished();
   }
 
   /**
-   * @return {boolean}
+   * @override
    */
   collectedEverything() {
     // quantum maps implicity require "collect everything", non-quantum
@@ -128,11 +107,7 @@ export default class Bee extends Subtype {
       return true;
     }
 
-    const missedSomething = this.maze_.map.currentStaticGrid.some(
-      row => row.some(cell => cell.isDirt() && cell.getCurrentValue() > 0)
-    );
-
-    return !missedSomething;
+    return super.collectedEverything();
   }
 
   /**
@@ -220,13 +195,6 @@ export default class Bee extends Subtype {
     }
 
     return this.studioApp_.getTestResults(false);
-  }
-
-  /**
-   * @override
-   */
-  hasMessage(testResults) {
-    return testResults === TestResults.APP_SPECIFIC_FAIL;
   }
 
   /**
@@ -455,14 +423,6 @@ export default class Bee extends Subtype {
     const row = this.maze_.pegmanY;
 
     return this.hiveRemainingCapacity(row, col);
-  }
-
-  // ANIMATIONS
-  playAudio_(sound) {
-    // Check for StudioApp, which will often be undefined in unit tests
-    if (this.studioApp_) {
-      this.studioApp_.playAudio(sound);
-    }
   }
 
   animateGetNectar() {
