@@ -1902,6 +1902,7 @@ en:
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
+          Processing Information: Processing Information
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
           description_short: Web Development
@@ -2061,6 +2062,7 @@ en:
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0

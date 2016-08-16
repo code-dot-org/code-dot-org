@@ -161,10 +161,10 @@ GEM
       oily_png (>= 1.2)
       oj
       selenium-webdriver (>= 2.45.0)
-    factory_girl (4.5.0)
+    factory_girl (4.7.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
-      factory_girl (~> 4.5.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
     fake_sqs (0.3.1)
       builder
@@ -180,7 +180,7 @@ GEM
     firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.0)
       railties (>= 3.2, < 5.1)
-    geocoder (1.2.11)
+    geocoder (1.3.7)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     gli (2.13.4)
@@ -293,7 +293,7 @@ GEM
     marked-rails (0.3.2.0)
     metaclass (0.0.4)
     mime-types (2.99.1)
-    mini_magick (4.3.3)
+    mini_magick (4.5.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     minitest-around (0.3.2)
@@ -379,8 +379,6 @@ GEM
       rack
     rack-cache (1.5.1)
       rack (>= 0.4)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
     rack-mini-profiler (0.9.7)
       rack (>= 1.1.3)
     rack-protection (1.5.3)
@@ -434,7 +432,7 @@ GEM
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
     retriable (1.4.1)
-    retryable (1.3.5)
+    retryable (2.0.4)
     rmagick (2.15.4)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -504,7 +502,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
-    spring (1.3.6)
+    spring (1.7.2)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
     sprockets (2.12.4)
@@ -661,7 +659,6 @@ DEPENDENCIES
   quiet_assets
   rack-attack (~> 4.4)
   rack-cache
-  rack-contrib (~> 1.1)
   rack-mini-profiler
   rack-ssl-enforcer
   rack_csrf

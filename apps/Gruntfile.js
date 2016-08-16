@@ -445,7 +445,7 @@ module.exports = function (grunt) {
     {
       uniqueName: 'publicKeyCryptography',
       entries: {
-        publicKeyCryptography: './src/publicKeyCryptography/publicKeyCryptography.js'
+        publicKeyCryptography: './src/publicKeyCryptography/main.js'
       },
       provides: ['react', 'react-dom', 'radium']
     }
