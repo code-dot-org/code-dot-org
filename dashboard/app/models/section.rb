@@ -86,6 +86,7 @@ class Section < ActiveRecord::Base
     follower
   end
 
+  # TODO: Check this out for coteachers
   def teacher
     user
   end
