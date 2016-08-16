@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class LevelsHelperTest < ActionView::TestCase
-  include Devise::TestHelpers
-  include LocaleHelper
+  include Devise::Test::ControllerHelpers
 
   def sign_in(user)
     # override the default sign_in helper because we don't actually have a request or anything here

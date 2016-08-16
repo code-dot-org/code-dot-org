@@ -2,7 +2,7 @@
 require 'test_helper'
 
 class FeatureModeControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @admin = create(:admin)
