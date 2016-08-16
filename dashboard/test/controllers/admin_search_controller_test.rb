@@ -10,7 +10,7 @@ class AdminSearchControllerTest < ActionController::TestCase
     @not_admin = create(:user, username: 'notadmin')
 
     @teacher = create(:teacher)
-    @teacher_section = create(:section, user: @teacher)
+    @teacher_section = create(:section, users: [@teacher])
   end
 
   # Confirm the permissioning on these pages is admin-only.
@@ -46,8 +46,13 @@ class AdminSearchControllerTest < ActionController::TestCase
   #
 
   test "should lookup_section" do
+<<<<<<< 6576b0ea74cfa6c3fe22262d5549e55cf24bafd0
     post :lookup_section, {section_code: @teacher_section.code}
     assert_select '#section_owner', 'Owner: ' + @teacher.email
+=======
+    post :lookup_section, {:section_code => @teacher_section.code}
+    assert_select '#section_owners', 'Owner(s): ' + @teacher.email
+>>>>>>> Fixing AdminSearchControllerTest
   end
 
   test "should lookup_section error if not found" do

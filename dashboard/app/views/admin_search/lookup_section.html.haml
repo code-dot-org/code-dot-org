@@ -7,19 +7,12 @@
   %br/
   = submit_tag 'Go!'
 
-= form_tag(undelete_section_url, method: :post) do
-  - if @section && @section.user
-    %p= "Section code: #{@section.code}"
-    %p{id: 'section_owner'}= "Owner: #{@section.user.email}"
-    %a{href: teacher_dashboard_section_progress_url(@section)}
-      %p View this section
-    - if @section.deleted_at
-      = hidden_field_tag 'section_code', @section.code
-      = submit_tag 'Undelete!'
-    %h3 Section dump
-    %pre= @section.inspect
-    %h3 Teacher dump
-    %pre= @section.user.inspect
-  - elsif @section
-    %p= "Section code: #{@section.code}"
-    %p{id: 'section_owner'}= "Owner: DELETED"
+- if @section
+  %p= "Section code: #{@section.code}"
+  %p{id: 'section_owners'}= "Owner(s): #{@section.users.map(&:email).join(", ")}"
+  %a{href: teacher_dashboard_section_progress_url(@section)}
+    %p View this section
+  %h3 Section dump
+  %pre= @section.inspect
+  %h3 Teacher dump
+  %pre= @section.users.inspect
