@@ -585,6 +585,7 @@ DEPENDENCIES
   acts_as_list
   annotate (~> 2.6.6)
   aws-sdk (~> 2)
+  bcrypt
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
