@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PairingsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     @user = create :user

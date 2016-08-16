@@ -1,7 +1,7 @@
 require 'test_helper'
 module Ops
   class WorkshopsControllerTest < ::ActionController::TestCase
-    include Devise::Test::ControllerHelpers
+    include Devise::TestHelpers
     API = ::OPS::API
 
     setup do
@@ -66,7 +66,10 @@ module Ops
         "name" => @workshop.name,
         "program_type" => "5",
         "location" => @workshop.location,
-        "cohorts" => [{"id" => @cohort.id}, {"id" => another_cohort.id}]
+        "instructions" => nil,
+        "cohorts" => [{"id" => @cohort.id}, {"id" => another_cohort.id}],
+        "facilitators" => nil,
+        "teachers" => nil
       }
       patch :update, id: @workshop.id, workshop: workshop_params
       assert_response :success
