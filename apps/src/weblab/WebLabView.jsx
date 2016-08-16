@@ -65,7 +65,7 @@ var WebLabView = React.createClass({
           <a id="inspector-link" href="#"> Inspector </a>
           <br/>
           <br/>
-          <iframe src="/bramble/hosted2.html" frameBorder="0"
+          <iframe src="/weblab/host" frameBorder="0"
             width="100%" height="560px" scrolling="no" />
         </div>
       </StudioAppWrapper>

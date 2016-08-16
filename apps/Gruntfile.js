@@ -179,6 +179,12 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
+          cwd: './node_modules/@code-dot-org/bramble/dist',
+          src: ['**'],
+          dest: 'build/package/js/bramble/'
+        },
+        {
+          expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full' + dotMinIfNotDev + '.js'],
           dest: 'build/package/js/droplet/',
