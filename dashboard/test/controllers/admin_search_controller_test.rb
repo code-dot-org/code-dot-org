@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminSearchControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     @admin = create(:admin)

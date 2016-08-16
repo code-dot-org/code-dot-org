@@ -2,7 +2,7 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]

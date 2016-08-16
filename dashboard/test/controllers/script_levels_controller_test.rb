@@ -2,7 +2,7 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
   include UsersHelper  # For user session state accessors.
   include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
