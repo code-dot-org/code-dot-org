@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
 export const ViewType = makeEnum('Student', 'Teacher');
-export const LockStatus = makeEnum('Locked', 'Editable', 'ViewAnswers');
+export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types
 const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
@@ -86,7 +86,7 @@ export default function reducer(state = initialState, action) {
     const { lockStatus: nextLockStatus, stageId } = action;
     const nextStage = _.cloneDeep(sections[selectedSection].stages[stageId]);
 
-    // Update locked/view_answers in stages based on the new lockStatus provided
+    // Update locked/readonly_answers in stages based on the new lockStatus provided
     // by our dialog.
     nextStage.forEach((item, index) => {
       const update = nextLockStatus[index];
@@ -96,7 +96,7 @@ export default function reducer(state = initialState, action) {
         throw new Error('Expect user ids be the same');
       }
       item.locked = update.lockStatus === LockStatus.Locked;
-      item.view_answers = update.lockStatus === LockStatus.ViewAnswers;
+      item.readonly_answers = update.lockStatus === LockStatus.ReadonlyAnswers;
     });
 
     const nextState = _.cloneDeep(state);
@@ -156,7 +156,7 @@ const performSave = (newLockStatus, stageId, onComplete) => {
     }).map(item => ({
       user_level_data: item.userLevelData,
       locked: item.lockStatus === LockStatus.Locked,
-      view_answers: item.lockStatus === LockStatus.ViewAnswers
+      readonly_answers: item.lockStatus === LockStatus.ReadonlyAnswers
     }));
 
     if (saveData.length === 0) {
@@ -229,6 +229,6 @@ const lockStatusForStage = (state, stageId) => {
     userLevelData: student.user_level_data,
     name: student.name,
     lockStatus: student.locked ? LockStatus.Locked : (
-      student.view_answers ? LockStatus.ViewAnswers : LockStatus.Editable)
+      student.readonly_answers ? LockStatus.ReadonlyAnswers : LockStatus.Editable)
   }));
 };

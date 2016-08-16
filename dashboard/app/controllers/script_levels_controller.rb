@@ -167,7 +167,7 @@ class ScriptLevelsController < ApplicationController
         )
         readonly_view_options
       end
-      readonly_view_options if user_level && user_level.view_answers?
+      readonly_view_options if user_level && user_level.readonly_answers?
     end
 
     level_source.try(:replace_old_when_run_blocks)

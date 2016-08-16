@@ -93,7 +93,7 @@ module UsersHelper
           ul = uls.try(:[], level_id)
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
-          view_answers = !!ul.try(:view_answers)
+          readonly_answers = !!ul.try(:readonly_answers)
           locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
 
           # for now, we don't allow authorized teachers to be "locked"
@@ -106,7 +106,7 @@ module UsersHelper
                 status: completion_status,
                 result: ul.try(:best_result) || 0,
                 submitted: submitted ? true : nil,
-                view_answers: view_answers ? true : nil,
+                readonly_answers: readonly_answers ? true : nil,
                 paired: ul.paired? ? true : nil
             }.compact
 
@@ -119,7 +119,7 @@ module UsersHelper
                 user_data[:levels]["#{level_id}_#{index}"] = {
                   result: result,
                   submitted: submitted ? true : nil,
-                  view_answers: view_answers ? true : nil
+                  readonly_answers: readonly_answers ? true : nil
                 }.compact
               end
             end

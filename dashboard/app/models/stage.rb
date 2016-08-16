@@ -146,7 +146,7 @@ class Stage < ActiveRecord::Base
         name: student.name,
         # if we don't have a user level, consider ourselves locked
         locked: user_level ? user_level.locked?(self) : true,
-        view_answers: user_level ? !user_level.locked?(self) && user_level.view_answers? : false
+        readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
       }
     end
   end
