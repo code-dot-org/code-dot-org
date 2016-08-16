@@ -245,11 +245,12 @@ class Pd::Workshop < ActiveRecord::Base
     self.started_at = Time.zone.now
     self.section = Section.create!(
       name: friendly_name,
-      user_id: organizer_id,
-      section_type: section_type
+      # user_id: self.organizer_id,
+      section_type: Section::TYPE_PD_WORKSHOP
     )
-    save!
-    section
+    self.save!
+    self.section.users << User.find(self.organizer_id)
+    self.section
   end
 
   # Ends the workshop, or no-op if it's already ended.
