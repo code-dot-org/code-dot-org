@@ -1,12 +1,8 @@
-/** @file Non-editable positive integer field in the cryptography widget */
+/** @file Non-editable integer field that checks its value against an expected
+ *        value and communicates a correct match or a failure. */
 import React from 'react';
 import color from '../color';
 import IntegerField from './IntegerField';
-
-const style = {
-  backgroundColor: color.lightest_cyan,
-  borderRadius: 4
-};
 
 const UNKNOWN = 0;
 const INCORRECT = 1;
