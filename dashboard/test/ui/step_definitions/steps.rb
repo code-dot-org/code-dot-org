@@ -636,7 +636,7 @@ Given(/^I sign in as "([^"]*)"/) do |name|
     Then I click selector "#signin_button"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
-    And I click selector "input[type=submit][value='Sign in']"
+    And I click selector "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -688,7 +688,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
-    And I click selector "input[type=submit][value='Sign up']"
+    And I click selector "#signin-button"
     And I wait until I am on "http://studio.code.org/"
   }
 end
@@ -704,7 +704,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I click selector "input[type=submit][value='Sign up']"
+    And I click selector "#signin-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
 end
