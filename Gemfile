@@ -8,7 +8,6 @@ gem 'rails', '~> 4.2.6'
 gem 'responders', '~> 2.0'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'rack-contrib', '~> 1.1'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'

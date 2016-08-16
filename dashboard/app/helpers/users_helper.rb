@@ -17,8 +17,10 @@ module UsersHelper
     merge_user_summary(user_data, user)
     merge_script_progress(user_data, user, script, exclude_level_progress)
 
-    user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
-      summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(script))
+    if script.has_peer_reviews?
+      user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
+        summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(script))
+      end
     end
 
     user_data.compact

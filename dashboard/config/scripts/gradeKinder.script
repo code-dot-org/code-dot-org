@@ -83,6 +83,11 @@ level 'gradek_adventurer_loops1'
 level 'gradek_adventurer_loops2'
 level 'gradek_adventurer_loops3'
 level 'gradek_adventurer_loops4'
+level 'gradek_adventurer_loops5'
+level 'gradek_adventurer_loops6'
+level 'gradek_adventurer_loops7_challenge'
+level 'gradek_adventurer_loops8'
+level 'gradek_adventurer_loops9'
 
 
 stage 'Loops'
