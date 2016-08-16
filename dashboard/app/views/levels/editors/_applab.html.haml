@@ -70,7 +70,7 @@
           { "entries": ["function1", "function2"], "matchType": "exact", "minTimes": 1, "message": "You need to call both functions." },
           { "entries": ["[forTest]", "moveTo", "randomNumber", "randomNumber"], "matchType": "inexact", "minTimes": 20, "message": "You need to call moveTo in a for loop." }
         ]
-  = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions or ''
+  = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions ? JSON.pretty_generate(@level.log_conditions) : ''
   :javascript
     levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
 

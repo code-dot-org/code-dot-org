@@ -887,7 +887,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script)
     level = create(:maze)
-    create(:script_level, script: script, stage: stage, level: level)
+    create(:script_level, script: script, stage: stage, levels: [level])
 
     script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
