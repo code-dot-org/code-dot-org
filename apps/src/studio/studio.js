@@ -2309,13 +2309,7 @@ Studio.reset = function (first) {
       visible: !level.spritesHiddenToStart
     });
 
-    var sprite = spriteStart.sprite === undefined
-        ? (i % Studio.startAvatars.length)
-        : spriteStart.sprite - (level.firstSpriteIndex || 0);
-
-    if (sprite < 0) {
-      sprite += Studio.startAvatars.length;
-    }
+    var sprite = i % Studio.startAvatars.length;
 
     var opts = {
       spriteIndex: i,
