@@ -43,7 +43,10 @@ export default function (state = initialState, action) {
     case UPDATE_KEY_VALUE_DATA:
       return state.set('keyValueData', action.keyValueData);
     case UPDATE_TABLE_RECORDS:
-      return state.set('tableRecords', action.tableRecords);
+      if (state.tableName === action.tableName) {
+        return state.set('tableRecords', action.tableRecords);
+      }
+      return state;
     default:
       return state;
   }
@@ -79,7 +82,8 @@ export const updateKeyValueData = keyValueData => ({
   keyValueData
 });
 
-export const updateTableRecords = tableRecords => ({
+export const updateTableRecords = (tableName, tableRecords) => ({
   type: UPDATE_TABLE_RECORDS,
+  tableName,
   tableRecords
 });
