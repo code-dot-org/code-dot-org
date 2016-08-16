@@ -160,6 +160,9 @@ export function getSerializedAnimationList(animationList) {
  * @throws {Error} if the list is not in a valid format.
  */
 export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
+  // TODO: Don't call React.PropTypes directly
+  // This _will_ break in React 16
+  // see https://facebook.github.io/react/warnings/dont-call-proptypes.html
   let validationResult = SerializedAnimationList.isRequired(
       {serializedAnimationList},
       'serializedAnimationList',
