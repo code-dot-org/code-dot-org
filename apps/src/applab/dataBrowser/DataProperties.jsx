@@ -27,6 +27,7 @@ const DataProperties = React.createClass({
       <div id="dataProperties" style={{display: visible ? 'block' : 'none'}}>
         <h4>
          <a
+           id="propertiesBackToOverview"
            href="#"
            style={dataStyles.link}
            onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
