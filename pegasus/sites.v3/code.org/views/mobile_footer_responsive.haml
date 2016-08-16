@@ -6,3 +6,6 @@
       &copy; Code.org, 2015
     .right{:style=>'float:right'}
       =view :language
+      - if request.language == "en"
+        %br
+        %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400; text-transform: uppercase;"} Privacy Policy
