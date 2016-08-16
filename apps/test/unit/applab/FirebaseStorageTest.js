@@ -18,6 +18,8 @@ describe('FirebaseStorage', () => {
       maxRecordSize: 100,
       maxPropertySize: 100,
       maxTableRows: 20
+    }).then(() => {
+      getDatabase(Applab.channelId).set(null);
     });
   });
 
