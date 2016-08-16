@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminReportsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     # Stub used by :admin_stats.

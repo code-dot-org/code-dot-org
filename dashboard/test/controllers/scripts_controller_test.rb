@@ -2,7 +2,7 @@
 require 'test_helper'
 
 class ScriptsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     @admin = create(:admin)
