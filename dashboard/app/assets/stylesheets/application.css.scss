@@ -363,6 +363,18 @@ $small-footer-standard-width: 400px;
       }
     }
   }
+
+  @media screen and (min-width: 401px) and (max-width: 1150px) {
+    .base-link {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .base-link {
+      font-size: 10px;
+    }
+  }
 }
 
 .small-footer-base {
