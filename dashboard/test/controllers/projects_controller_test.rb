@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
   setup do
     sign_in create(:user)
   end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminFunometerControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     # Stub used by :funometer.

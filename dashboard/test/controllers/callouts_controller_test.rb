@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CalloutsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+  include Devise::TestHelpers
 
   setup do
     @callout = Callout.first
