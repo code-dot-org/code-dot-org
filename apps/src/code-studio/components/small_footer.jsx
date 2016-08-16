@@ -32,6 +32,10 @@ var SmallFooter = React.createClass({
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
     i18nDropdown: React.PropTypes.string,
+    privacyPolicyInBase: React.PropTypes.bool.isRequired,
+    privacyPolicyStrings: React.PropTypes.shape({
+      link: React.PropTypes.string.isRequired
+    }),
     copyrightInBase: React.PropTypes.bool.isRequired,
     copyrightStrings: React.PropTypes.shape({
       thank_you: React.PropTypes.string.isRequired,
@@ -41,7 +45,8 @@ var SmallFooter = React.createClass({
       powered_by_aws: React.PropTypes.string.isRequired,
       trademark: React.PropTypes.string.isRequired
     }),
-    baseCopyrightString: React.PropTypes.string,
+    basePrivacyPolicyString: React.PropTypes.string,
+    baseCopyrightString: React.PropTypes.string.isRequired,
     baseMoreMenuString: React.PropTypes.string.isRequired,
     baseStyle: React.PropTypes.object,
     menuItems: React.PropTypes.arrayOf(
@@ -111,6 +116,16 @@ var SmallFooter = React.createClass({
     this.clickBaseMenu();
   },
 
+  clickBasePrivacyPolicy: function () {
+    if (this.props.privacyPolicyInBase) {
+      // When we have multiple items in our base row, ignore clicks to the
+      // row that aren't on those particular items
+      return;
+    }
+
+    this.clickBaseMenu();
+  },
+
   clickBaseCopyright: function () {
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
@@ -155,6 +170,9 @@ var SmallFooter = React.createClass({
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
       }),
+      privacy: {
+        color: '#0094ca',
+      },
       copyright: {
         display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
         position: 'absolute',
@@ -196,17 +214,16 @@ var SmallFooter = React.createClass({
               __html: decodeURIComponent(this.props.i18nDropdown)
             }}
           />
-          <small>
-            {this.renderCopyright()}
-            <a
-              className="more-link"
-              href="javascript:void(0)"
-              onClick={this.clickBaseMenu}
-            >
-              {this.props.baseMoreMenuString + ' '}
-              <i className={caretIcon}/>
-            </a>
-          </small>
+          {this.renderPrivacy(styles)}
+          {this.renderCopyright()}
+          <a
+            className="more-link base-link"
+            href="javascript:void(0)"
+            onClick={this.clickBaseMenu}
+          >
+            {this.props.baseMoreMenuString + ' '}
+            <i className={caretIcon}/>
+          </a>
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
@@ -223,12 +240,31 @@ var SmallFooter = React.createClass({
     );
   },
 
+  renderPrivacy: function (styles) {
+    if (this.props.privacyPolicyInBase) {
+      return (
+        <span>
+          <a
+            className="privacy-link base-link"
+            href="https://code.org/privacy"
+            target="_blank"
+            style={styles.privacy}
+            onClick={this.clickBasePrivacyPolicy}
+          >
+            {this.props.basePrivacyPolicyString}
+          </a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+        </span>
+      );
+    }
+  },
+
   renderCopyright: function () {
     if (this.props.copyrightInBase) {
       return (
         <span>
           <a
-            className="copyright-link"
+            className="copyright-link base-link"
             href="#"
             onClick={this.clickBaseCopyright}
           >
