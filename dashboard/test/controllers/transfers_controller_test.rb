@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TransfersControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @teacher = create(:teacher)
