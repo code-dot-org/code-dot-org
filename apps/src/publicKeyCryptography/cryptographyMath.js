@@ -35,11 +35,6 @@ export const privateKeyList = memoize(publicModulus => {
   }
   potentialVals[1] = 0;
   for (let j = 0; j < publicModulus - 2; j++) {
-    // let pct = parseInt(publicModulus*0.05);
-    // if (j % pct === 0){
-    //   return [parseInt((j / (publicModulus -2))*j)];
-    // }
-
     if (potentialVals[j] !== 0){
       privateKeys.push(j);
       const inverse = computePublicKey(j, publicModulus);
