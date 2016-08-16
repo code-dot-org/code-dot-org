@@ -299,3 +299,31 @@ exports.honeyCreated = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_created", id);
   return Maze.subtype.honey_;
 });
+
+/**
+ * Harvester
+ */
+
+exports.getCorn = API_FUNCTION(function (id) {
+  Maze.subtype.getCorn(id);
+});
+
+exports.getPumpkin = API_FUNCTION(function (id) {
+  Maze.subtype.getPumpkin(id);
+});
+
+exports.getWheat = API_FUNCTION(function (id) {
+  Maze.subtype.getWheat(id);
+});
+
+exports.atCorn = API_FUNCTION(function (id) {
+  return Maze.subtype.atCorn(id);
+});
+
+exports.atPumpkin = API_FUNCTION(function (id) {
+  return Maze.subtype.atPumpkin(id);
+});
+
+exports.atWheat = API_FUNCTION(function (id) {
+  return Maze.subtype.atWheat(id);
+});
