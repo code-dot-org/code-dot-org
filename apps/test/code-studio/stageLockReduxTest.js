@@ -44,7 +44,7 @@ const fakeSectionData = {
             level_id: 2000,
             script_id: 3000
           },
-          view_answers: false
+          readonly_answers: false
         },
         // unlocked
         {
@@ -55,7 +55,7 @@ const fakeSectionData = {
             level_id: 2000,
             script_id: 3000
           },
-          view_answers: false
+          readonly_answers: false
         },
         // view answers
         {
@@ -66,7 +66,7 @@ const fakeSectionData = {
             level_id: 2000,
             script_id: 3000
           },
-          view_answers: true
+          readonly_answers: true
         },
       ]
     }
@@ -84,7 +84,7 @@ const fakeSectionData = {
             level_id: 2000,
             script_id: 3000
           },
-          view_answers: false
+          readonly_answers: false
         }
       ]
     }
@@ -179,7 +179,7 @@ describe('reducer tests', () => {
         {
           userLevelData: student3.user_level_data,
           name: student3.name,
-          lockStatus: LockStatus.ViewAnswers
+          lockStatus: LockStatus.ReadonlyAnswers
         }
       ];
       assert.deepEqual(nextState.lockStatus, expected);
@@ -220,20 +220,20 @@ describe('reducer tests', () => {
       const student3LockStatus = state.lockStatus[2].lockStatus;
       assert.equal(student1LockStatus, LockStatus.Locked);
       assert.equal(student2LockStatus, LockStatus.Editable);
-      assert.equal(student3LockStatus, LockStatus.ViewAnswers);
+      assert.equal(student3LockStatus, LockStatus.ReadonlyAnswers);
       const student1 = state.sections[section1Id].stages[stage1Id][0];
       const student2 = state.sections[section1Id].stages[stage1Id][1];
       const student3 = state.sections[section1Id].stages[stage1Id][2];
       assert.equal(student1.locked, true);
-      assert.equal(student1.view_answers, false);
+      assert.equal(student1.readonly_answers, false);
       assert.equal(student2.locked, false);
-      assert.equal(student2.view_answers, false);
+      assert.equal(student2.readonly_answers, false);
       assert.equal(student3.locked, false);
-      assert.equal(student3.view_answers, true);
+      assert.equal(student3.readonly_answers, true);
 
       let newLockStatus = _.cloneDeep(state.lockStatus);
       // swap students two and three in terms of lock status
-      newLockStatus[1].lockStatus = LockStatus.ViewAnswers;
+      newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
       newLockStatus[2].lockStatus = LockStatus.Editable;
       const action = finishSave(newLockStatus, stage1Id);
       const nextState = reducer(state, action);
@@ -242,17 +242,17 @@ describe('reducer tests', () => {
       const nextStudent2LockStatus = nextState.lockStatus[1].lockStatus;
       const nextStudent3LockStatus = nextState.lockStatus[2].lockStatus;
       assert.equal(nextStudent1LockStatus, LockStatus.Locked);
-      assert.equal(nextStudent2LockStatus, LockStatus.ViewAnswers);
+      assert.equal(nextStudent2LockStatus, LockStatus.ReadonlyAnswers);
       assert.equal(nextStudent3LockStatus, LockStatus.Editable);
       const nextStudent1 = nextState.sections[section1Id].stages[stage1Id][0];
       const nextStudent2 = nextState.sections[section1Id].stages[stage1Id][1];
       const nextStudent3 = nextState.sections[section1Id].stages[stage1Id][2];
       assert.equal(nextStudent1.locked, true);
-      assert.equal(nextStudent1.view_answers, false);
+      assert.equal(nextStudent1.readonly_answers, false);
       assert.equal(nextStudent3.locked, false);
-      assert.equal(nextStudent3.view_answers, false);
+      assert.equal(nextStudent3.readonly_answers, false);
       assert.equal(nextStudent2.locked, false);
-      assert.equal(nextStudent2.view_answers, true);
+      assert.equal(nextStudent2.readonly_answers, true);
     });
   });
 });
@@ -284,7 +284,7 @@ describe('saveLockDialog', () => {
 
     let newLockStatus = _.cloneDeep(store.getState().stageLock.lockStatus);
     // swap students two and three in terms of lock status
-    newLockStatus[1].lockStatus = LockStatus.ViewAnswers;
+    newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
     newLockStatus[2].lockStatus = LockStatus.Editable;
 
     reducerSpy.reset();
@@ -303,12 +303,12 @@ describe('saveLockDialog', () => {
       {
         user_level_data: student2.user_level_data,
         locked: false,
-        view_answers: true
+        readonly_answers: true
       },
       {
         user_level_data: student3.user_level_data,
         locked: false,
-        view_answers: false
+        readonly_answers: false
       }
     ]);
 
@@ -343,17 +343,17 @@ describe('saveLockDialog', () => {
       {
         user_level_data: student1.user_level_data,
         locked: true,
-        view_answers: false
+        readonly_answers: false
       },
       {
         user_level_data: student2.user_level_data,
         locked: true,
-        view_answers: false
+        readonly_answers: false
       },
       {
         user_level_data: student3.user_level_data,
         locked: true,
-        view_answers: false
+        readonly_answers: false
       }
     ]);
 

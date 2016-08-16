@@ -84,7 +84,7 @@ class UserLevel < ActiveRecord::Base
   end
 
   def handle_unsubmit
-    if submitted_changed? from: true, to: false && !self.view_answers
+    if submitted_changed? from: true, to: false && !self.readonly_answers
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
   end
@@ -96,10 +96,10 @@ class UserLevel < ActiveRecord::Base
 
   def locked?(stage)
     return false unless stage.lockable?
-    self.submitted? && !self.view_answers? || self.has_autolocked?(stage)
+    self.submitted? && !self.readonly_answers? || self.has_autolocked?(stage)
   end
 
-  def self.update_lockable_state(user_id, level_id, script_id, locked, view_answers)
+  def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
     user_level = UserLevel.find_by(user_id: user_id, level_id: level_id, script_id: script_id)
 
     # no need to create a level if it's just going to be locked
@@ -108,11 +108,11 @@ class UserLevel < ActiveRecord::Base
     user_level ||= UserLevel.create(user_id: user_id, level_id: level_id, script_id: script_id)
 
     user_level.update!(
-      submitted: locked || view_answers,
-      view_answers: !locked && view_answers,
+      submitted: locked || readonly_answers,
+      readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
-      best_result: (locked || view_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
+      best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
     )
   end
 end

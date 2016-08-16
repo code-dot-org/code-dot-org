@@ -90,7 +90,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
-        if (level.submitted || level.view_answers) {
+        if (level.submitted || level.readonly_answers) {
           return SUBMITTED_RESULT;
         }
 

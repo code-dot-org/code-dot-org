@@ -21,7 +21,7 @@ class ApiController < ApplicationController
         return head :bad_request
       end
 
-      if item[:locked] && item[:view_answers]
+      if item[:locked] && item[:readonly_answers]
         # Can not view answers while locked
         return head :bad_request
       end
@@ -32,7 +32,7 @@ class ApiController < ApplicationController
       end
 
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
-        user_level_data[:script_id], item[:locked], item[:view_answers])
+        user_level_data[:script_id], item[:locked], item[:readonly_answers])
     end
     render json: {}
   end
