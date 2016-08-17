@@ -1745,10 +1745,10 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(312, 0.32, 0.62);
-      this.VALUES = skin.mapChoices;
+      this.VALUES = skin.mapChoices.map(
+          opt => [opt[0], opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`]);
 
-      var dropdown = new blockly.FieldDropdown(
-          skin.mapChoices.map(opt => [opt[0], `"${opt[1]}"`]));
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
