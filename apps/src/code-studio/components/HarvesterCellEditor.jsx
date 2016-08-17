@@ -19,15 +19,20 @@ var HarvesterCellEditor = React.createClass({
   },
 
   handleChange: function (event) {
-    var values = {};
-    var nodes = ReactDOM.findDOMNode(this).querySelectorAll('[name]');
-    // see "Iterating over Node Lists" here for an explanation of this
-    // strange-looking for loop
-    // https://google.github.io/styleguide/javascriptguide.xml?showone=Tips_and_Tricks#Tips_and_Tricks
-    for (var i = 0, node; (node = nodes[i]); i++) {
-      values[node.name] = isNaN(node.value) ? undefined : Number(node.value);
-    }
-    console.log(values);
+    var serializedArray = $(ReactDOM.findDOMNode(this)).serializeArray();
+    var values = serializedArray.reduce((prev, curr) => {
+      var value = isNaN(curr.value) ? undefined : Number(curr.value);
+      if (curr.name in prev) {
+        if (Array.isArray(prev[curr.name])) {
+          prev[curr.name].push(value);
+        } else {
+          prev[curr.name] = [prev[curr.name], value];
+        }
+      } else {
+        prev[curr.name] = value;
+      }
+      return prev;
+    }, {});
     this.props.onUpdate(values);
   },
 
@@ -40,16 +45,9 @@ var HarvesterCellEditor = React.createClass({
   render: function () {
     var values = this.props.cell.serialize();
 
-    // If the cell has no features, it should have neither value nor
-    // range
-    if (values.featureType === undefined) {
-      values.value = undefined;
-      values.range = undefined;
-    }
-
     // We want undefined values that are going to be in <selects> to
     // actually be the STRING 'undefined' rather than the value.
-    ['tileType', 'featureType'].forEach(function (value) {
+    ['tileType'].forEach(function (value) {
       if (values[value] === undefined) {
         values[value] = 'undefined';
       }
@@ -68,22 +66,20 @@ var HarvesterCellEditor = React.createClass({
           <option value={SquareType.START}>start</option>
         </select>
 
-        <label htmlFor="featureType">Feature Type:</label>
-        <select name="featureType" value={values.featureType} onChange={this.handleChange}>
-          {Object.keys(HarvesterCell.FeatureType).map(function (type) {
-            var value = HarvesterCell.FeatureType[type];
-            if (value === undefined) {
-              value = 'undefined';
-            }
-            return (<option value={value}>{type}</option>);
-          })}
-        </select>
+        <label htmlFor="possibleFeatures">Possible Features:</label>
+        {Object.keys(HarvesterCell.FeatureType).map(function (type) {
+          var value = HarvesterCell.FeatureType[type];
+          return (<label key={type}><input type="checkbox" name="possibleFeatures" value={value} checked={values.possibleFeatures.includes(value)} onChange={this.handleChange} />{type}</label>);
+        }, this)}
+
+        <label htmlFor="startsHidden">Starts Hidden:</label>
+        <input type="checkbox" name="startsHidden" checked={values.startsHidden} value={true} onChange={this.handleChange} />
 
         <label htmlFor="value">Value:</label>
-        <input type="number" name="value" min="0" value={values.value} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
+        <input type="number" name="value" min="0" value={values.value} onChange={this.handleChange} />
 
         <label htmlFor="range">Range (defaults to value):</label>
-        <input type="number" name="range" min={values.value} value={values.range} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
+        <input type="number" name="range" min={values.value} value={values.range} onChange={this.handleChange} />
       </form>
     );
   },

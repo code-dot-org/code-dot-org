@@ -3,6 +3,10 @@ import { TestResults } from '../constants.js';
 
 export default class Gatherer extends Subtype {
 
+  reset() {
+    this.maze_.map.resetDirt();
+  }
+
   /**
    * @param {Number} row
    * @param {Number} col
