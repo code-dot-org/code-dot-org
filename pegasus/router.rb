@@ -95,7 +95,6 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
     set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
-
   end
 
   before do
