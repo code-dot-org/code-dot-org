@@ -56,6 +56,11 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
+    // Never advance the frame if the frameRate is 0
+    if (this.props.animationProps.frameRate === 0) {
+      return;
+    }
+
     this.setState({
       currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
