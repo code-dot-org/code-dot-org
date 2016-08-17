@@ -39,8 +39,8 @@
     code:
       label: 'Müəllim əlavə edin:'
       placeholder: Section Code (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Xahiş edirik, sizin müəlliminiz tərəfindən sizin ilə paylaşılmış
+        kodu daxil edin. ABCDEF kimi 6 hərfli koddur.
     submit: Müəllim əlavə edin
   add_hint_form:
     placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
@@ -120,7 +120,7 @@
       tabe olmağımı qəbul edirəm.
     additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
       ehtiyacımız var.
-    user_type_label: Account Type
+    user_type_label: Hesab növü
     user_type_teacher: Müəllim
     user_type_student: "şagird"
   signin_form:
@@ -191,7 +191,7 @@
     code: 'Kod:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
+    donorschoose_project: Bir layihə göndərin
     donorschoose_how_to: Kodunuzu necə istifadə etməli
     success: Mükafatınızı müvəffəqiyyətlə xərclədiniz, aşağıdakı koda baxın.
     error: Mükafatınızı xərcləmək mümkün olmadı, lütfən bir də cəhd edin.
@@ -209,7 +209,7 @@
       msg_student: 'QEYD: Ancaq bir növ mükafat seçə bilərsiniz.'
       msg_publicschool: Zəhmət olmasa, ABŞ dövlət məktəbinin müəllimi olduğunuzu təsdiq
         edin.
-      msg_visit_website: Visit website
+      msg_visit_website: Səhifəyə nəzər sal
     providers:
       apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
@@ -295,8 +295,8 @@
       signup: Qeydiyyatdan keçin
       already_registered: Artıq qeydiyyatdan keçmisiniz?
       pair_programming: Pair Programming
-      team: Team
-      driver: Driver
+      team: Komanda
+      driver: Sürücü
       navigator: Navigator
     popup:
       progress_for_user: "%{name}'s progress"
@@ -327,7 +327,7 @@
       answer_viewer: Answer Viewer
       student: "şagird"
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      try_it_yourself: "özünüz edin"
       section: Bölmə
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
@@ -405,7 +405,6 @@
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Sertifikatı çap edin
     announcement_title: Elanlar
-    announcement_view_all: Hamısına baxın
     announcement_message: 'We''ve started to measure student learning in Courses 1-4
       and our Accelerated Course on Code Studio. There''s a lot that goes into it,
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
@@ -423,6 +422,8 @@
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add your name
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.

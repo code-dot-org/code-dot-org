@@ -1,12 +1,10 @@
 name 'OPD-K5 Stage9Start'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
+# Planning > Exploring Teacher Resources
 
-### PLANNING > Exploring Teacher Resources
-<br><br>
 Now that you have a firm grasp on how to code, as well as some beginning understandings of how to teach computer science, it's time to start planning your instruction.
-<br><br>
+
 By completing Stage 10, you will:
 
 - Explore Code Studio and [Teacher Dashboard](http://code.org/teacher-dashboard#/) resources
@@ -16,7 +14,6 @@ Throughout Stages 4-8, you took a look at some of the "unplugged" and online lea
 
 <img src="https://code.org/images/teacher-dashboard/teacher-homepage.png" width="450px" style="margin-right:45px; border-radius:10px;">
 
-<br><br>
 When you're logged into Code Studio as a teacher, you have access to many features that your students do not. We will explore those features in this stage. Let's start first with an overview. Here are the tiles on the Teacher Dashboard:
 
 - [Student Accounts and Progress](http://code.org/teacher-dashboard#/sections): Create sections for each of your classes, and assess the learning of all of your students.
@@ -29,7 +26,4 @@ When you're logged into Code Studio as a teacher, you have access to many featur
 * * *
 
 Let's begin exploring in more detail.
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

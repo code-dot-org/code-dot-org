@@ -1,4 +1,4 @@
-en-US:
+"en-US":
   hour_of_code: crwdns54655:0crwdne54655:0
   hello: crwdns3593:0crwdne3593:0
   "yes": crwdns56982:0crwdne56982:0
@@ -659,13 +659,13 @@ en-US:
   dashboard_faq: crwdns23313:0crwdne23313:0
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
-  dashboard_announce_view_all: crwdns50093:0crwdne50093:0
   dashboard_announce_message: crwdns57071:0crwdne57071:0
   dashboard_announce_csp_widgets_message: crwdns57874:0crwdne57874:0
   dashboard_announce_learn_more_button: crwdns57875:0crwdne57875:0
   dashboard_announce_try_now_button: crwdns57876:0crwdne57876:0
   dashboard_announce_petition: crwdns56705:0crwdne56705:0
   dashboard_announce_petition_button: crwdns56706:0crwdne56706:0
+  dashboard_announce_all: 'crwdns58242:0%{teacher_blog_url}crwdne58242:0'
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
   learn_more: crwdns23316:0crwdne23316:0

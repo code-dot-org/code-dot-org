@@ -281,14 +281,23 @@ def browser_name_or_unknown(browser)
   browser['name'] || 'UnknownBrowser'
 end
 
-def flakiness_for_browser_feature(browser_feature)
-  TestFlakiness.test_flakiness[test_run_identifier(browser_feature[0], browser_feature[1])] || 1.0
+$calculate_flakiness = true
+# Retrieves / calculates flakiness for given test run identifier, giving up for
+# the rest of this script execution if an error occurs during calculation.
+# returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
+def flakiness_for_test(test_run_identifier)
+  return nil unless $calculate_flakiness
+  TestFlakiness.test_flakiness[test_run_identifier]
+rescue Exception => e
+  puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
+  $calculate_flakiness = false
+  nil
 end
 
 # Sort by flakiness (most flaky at end of array, will get run first)
 browser_features.sort! do |browser_feature_a, browser_feature_b|
-  flakiness_for_browser_feature(browser_feature_b) <=>
-    flakiness_for_browser_feature(browser_feature_a)
+  (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
+    (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
 end
 
 # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
@@ -392,8 +401,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config)
     elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
-      # ask saucelabs how flaky the test is
-      flakiness = TestFlakiness.test_flakiness[test_run_string]
+      flakiness = flakiness_for_test(test_run_string)
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
         return 1
@@ -496,7 +504,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config)
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
-    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
+    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end

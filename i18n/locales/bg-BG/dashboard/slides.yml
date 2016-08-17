@@ -931,17 +931,17 @@ bg:
         text: '"Докато" циклите са доста подобни на това, което правиш в ежедневния живот. Представи си че миеш колата, и трябва да я търкаш до пълно почистване. Докато не е чисто, ти трябва да продължиш да търкаш. Ти преценяваш това през цялото време.'
       2:
         image: notes/C3_farmer_while_2.png
-        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+        text: Трябва ни нов поглед, за да помогнем на фермера. Той се нарича докато-блок. Всъщност е доста лесно. Докато твърдението в горната част е вярно, трябва да се направи нещо. Например, докато има купчина извършвай действие премахване. Давай напред и да го пробваме с фермера.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
         text: Този урок е за функционални слънцеотразители. Вие ще създавате много такива с помощта на функции. Има няколко стъпки в създаването на един слънцеотразител. Някои от стъпките, които правите, трябва да се повтарят много пъти.
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+        text: Първата стъпка в опростяване на процеса на правене на suncatcher е да разберем какво се повтаря отново и отново. Ние може да групирате тези стъпки в това, което ние наричаме функция.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: Но има нещо повече за създаването на красиви suncatcher отколкото следване на точните стъпки. Понякога искаме да бъдем креативни и ще използваме промяна на цвета на мънистата. Можем да направим всеки suncatcher уникален, ако използваме различни цветни мъниста.
       4:
         image: notes/C3_functional_suncatchers_4.png
         text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
@@ -1273,7 +1273,7 @@ bg:
         text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
       3:
         image: notes/unplug2_3.png
-        text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
+        text: Първите групи ще имат за задача да направят план на игра. След това те ще търсят модели между всички чудовища в каталога. Когато намерят разлики между чудовищата, те ще трябва да ги отделят. Например едно чудовище в каталога има vegitas очи и друго е с spritem очи. Но те и двете имат очи, така че ние можем да напишем, че чудовището има празни очи.
       4:
         image: notes/unplug2_4.png
         text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."

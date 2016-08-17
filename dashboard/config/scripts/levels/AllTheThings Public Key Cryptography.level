@@ -1,0 +1,14 @@
+<PublicKeyCryptography>
+  <config><![CDATA[{
+  "game_id": 57,
+  "created_at": "2016-08-10T17:31:14.467Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skip_dialog": true,
+    "href": "public_key_cryptography/public_key_cryptography.html"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</PublicKeyCryptography>

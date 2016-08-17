@@ -844,7 +844,6 @@
   dashboard_faq: "الأسئلة الشائعة"
   dashboard_faq_k5: "الأسئلة المتاوترة الطرح في المستوى الخامس K-5"
   dashboard_announcements: "إعلانات"
-  dashboard_announce_view_all: "عرض الكل"
   dashboard_announce_message: هل تريد مساعدتنا في اختبار ميزات جديدة؟ نحن نعلم أنه
     من الضروري أن نشجع الطلاب على المراجعة و التجربة, لذلك سوف نقوم بإضافة ميزة "كود
     غير مستخدم" للسماح للطلاب بتنفيذ كودهم الخاص حتى ولو كانت قطع برمجية غير مرفقة.
@@ -861,6 +860,8 @@
     الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم
     الكمبيوتر."
   dashboard_announce_petition_button: "أضف أسمك"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "إرسال رسالة إلكترونية"
   code_sign_up: "قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب"
   learn_more: "جرب الآن"
@@ -1667,5 +1668,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

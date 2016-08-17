@@ -416,7 +416,6 @@
     choose_next_course: Essaye un cours Code Studio en le choisissant ci-dessous
     print_certificate: Imprimer le certificat
     announcement_title: Annonces
-    announcement_view_all: Tout voir
     announcement_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre
       participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression
       ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque
@@ -436,6 +435,8 @@
       demandant au Congrès américain de financer l’enseignement de l'informatiques
       du K-12.
     announcement_petition_button: Ajoutez votre nom
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
       saisir un nom de section différent.
@@ -673,9 +674,9 @@
     wrong_body: Merci d'avoir soumis des réponses.
     correct_title: Merci
     correct_body: Merci d'avoir soumis des réponses.
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: Cette enquête est anonyme. Veuillez consulter le tableau
+      de bord de l'enseignant pour des résultats agrégés.  Notez que les résultats
+      ne sont visibles que si au moins cinq élèves ont répondu à l’enquête.
   level_group-submittable:
     wrong_title: Merci
     wrong_body: Merci d'avoir soumis des réponses.
@@ -867,7 +868,7 @@
     required: Aperçu
     content: Contenu
     practice: Pratiques de l’enseignant
-    peer_review: Peer Review
+    peer_review: Correction par un pair
   external_links:
     disclaimer: Avertissement
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas

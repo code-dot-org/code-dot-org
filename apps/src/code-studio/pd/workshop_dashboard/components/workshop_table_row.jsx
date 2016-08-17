@@ -8,8 +8,13 @@ import ConfirmationDialog from './confirmation_dialog';
 import FacilitatorsList from './facilitators_list';
 
 const WorkshopTableRow = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   propTypes: {
     workshop: React.PropTypes.shape({
+      id: React.PropTypes.number.isRequired,
       sessions: React.PropTypes.array.isRequired,
       location_name: React.PropTypes.string.isRequired,
       workshop_type: React.PropTypes.string.isRequired,
@@ -19,9 +24,18 @@ const WorkshopTableRow = React.createClass({
       facilitators: React.PropTypes.array.isRequired,
       state: React.PropTypes.string.isRequired
     }).isRequired,
-    onView: React.PropTypes.func.isRequired,
-    onEdit: React.PropTypes.func,
-    onDelete: React.PropTypes.func
+    viewUrl: React.PropTypes.string.isRequired,
+    editUrl: React.PropTypes.string,
+    onDelete: React.PropTypes.func,
+    showSignupUrl: React.PropTypes.bool
+  },
+
+  getDefaultProps() {
+    return {
+      onEdit: null,
+      onDelete: null,
+      showSignupUrl: false
+    };
   },
 
   getInitialState() {
@@ -30,11 +44,14 @@ const WorkshopTableRow = React.createClass({
     };
   },
 
-  handleViewClick() {
-    this.props.onView(this.props.workshop);
+  handleViewClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.viewUrl);
   },
-  handleEditClick() {
-    this.props.onEdit(this.props.workshop);
+
+  handleEditClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.editUrl);
   },
 
   handleDeleteClick() {
@@ -50,13 +67,29 @@ const WorkshopTableRow = React.createClass({
     this.props.onDelete(this.props.workshop);
   },
 
+  renderViewButton() {
+    return (
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.viewUrl)}
+        onClick={this.handleViewClick}
+      >
+        View
+      </Button>
+    );
+  },
+
   renderEditButton() {
-    if (!this.props.onEdit) {
+    if (!this.props.editUrl) {
       return null;
     }
 
     return (
-      <Button bsSize="xsmall" onClick={this.handleEditClick}>
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.editUrl)}
+        onClick={this.handleEditClick}
+      >
         Edit
       </Button>
     );
@@ -71,6 +104,21 @@ const WorkshopTableRow = React.createClass({
       <Button bsSize="xsmall" onClick={this.handleDeleteClick}>
         Delete
       </Button>
+    );
+  },
+
+  renderSignupUrlCell() {
+    if (!this.props.showSignupUrl) {
+      return null;
+    }
+
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.workshop.id}/enroll`;
+    return (
+      <td>
+        <a href={signupUrl} target="_blank">
+          {signupUrl}
+        </a>
+      </td>
     );
   },
 
@@ -98,8 +146,9 @@ const WorkshopTableRow = React.createClass({
         <td>
           {this.props.workshop.state}
         </td>
+        {this.renderSignupUrlCell()}
         <td>
-          <Button bsSize="xsmall" onClick={this.handleViewClick}>View</Button>
+          {this.renderViewButton()}
           {this.renderEditButton()}
           {this.renderDeleteButton()}
           <ConfirmationDialog

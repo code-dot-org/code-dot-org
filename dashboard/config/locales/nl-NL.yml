@@ -408,7 +408,6 @@
     choose_next_course: Probeer een Code Studio cursus door er hier onder één te kiezen
     print_certificate: print certificaat
     announcement_title: Aankondigingen
-    announcement_view_all: Alles weergeven
     announcement_message: 'We''ve started to measure student learning in Courses 1-4
       and our Accelerated Course on Code Studio. There''s a lot that goes into it,
       so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
@@ -427,6 +426,8 @@
       een open brief aan het Amerikaanse Congres met de vraag om informatica op de
       basisschool te financieren.
     announcement_petition_button: Voeg je naam toe
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Sorry, maar de groep %{new_section_code} bestaat niet. Vul een
       andere groepscode in.

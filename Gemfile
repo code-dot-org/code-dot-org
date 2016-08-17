@@ -8,7 +8,6 @@ gem 'rails', '~> 4.2.6'
 gem 'responders', '~> 2.0'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'rack-contrib', '~> 1.1'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
@@ -112,7 +111,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'devise_invitable', '~> 1.5.2'
+gem 'devise_invitable', '~> 1.6.0'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
@@ -211,3 +210,4 @@ gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'
+gem 'bcrypt'

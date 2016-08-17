@@ -393,7 +393,6 @@
     choose_next_course: Zkuste kurz Code Studio výběrem níže
     print_certificate: Vytisknout certifikát
     announcement_title: Oznámení
-    announcement_view_all: Zobrazit vše
     announcement_message: Chcete nám pomoci otestovat novou funkci? Víme, že je důležité
       podporovat studenty při opakování a experimentování, takže budeme přidávat funkci
       "nepoužívaný kód" umožňující studentům spuštění vlastního kódu, i v situaci,
@@ -412,6 +411,8 @@
       kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní
       docházky na základních i středních školách.
     announcement_petition_button: Přidej své jméno
+    announcement_all: Keep up to date with new features and updates on our teacher
+      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
     new_section_dne: Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte
       jiný kód sekce.

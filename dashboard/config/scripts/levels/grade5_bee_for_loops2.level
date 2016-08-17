@@ -31,7 +31,7 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "Add the code necessary to make sure the bee collects all the nectar. \r\n\r\nLook at how much code you need for this puzzle!   \r\n(We'll learn a simpler way in the next puzzle.)",
+    "markdown_instructions": "Add the code necessary to make sure the bee collects all the nectar.\r\n\r\nLook at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
     "step_speed": "1",
     "contained_level_names": null
   },

@@ -905,7 +905,6 @@
   dashboard_faq: "Часто задаваемые вопросы"
   dashboard_faq_k5: 'K-5: часто задаваемые вопросы'
   dashboard_announcements: "Объявления"
-  dashboard_announce_view_all: "Посмотреть все"
   dashboard_announce_message: "Мы начали измерять уровень обучения студентов на курсах
     1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит
     в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'>
@@ -925,6 +924,8 @@
     в открытом письме к Конгрессу США финансировать K-12 образовательную программу
     компьютерной науки."
   dashboard_announce_petition_button: "Добавьте ваше имя"
+  dashboard_announce_all: "Будьте в курсе новых функций и обновлений нашего блога
+    учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: "Зарегистрируйтесь для участия в неделе информатики"
   learn_more: "Подробнее"
@@ -1821,5 +1822,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates
