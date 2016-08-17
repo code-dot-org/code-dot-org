@@ -654,40 +654,43 @@ describe("NetSimTable", function () {
   });
 
   describe("refresh jitter", function () {
+    let clock;
+
     beforeEach(function () {
+      clock = sinon.useFakeTimers(Date.now());
+
       // Re-enable 50ms jitter to test random refresh delays.
       netsimTable.setMaximumJitterDelay(50);
     });
 
-    it("waits a random amount of time before reading on each request", function (testDone) {
+    afterEach(function () {
+      clock.restore();
+    });
+
+    it("waits a random amount of time before reading on each request", function () {
       NetSimGlobals.setRandomSeed('Jitter test 1');
       // With this seed, the refresh fires sometime between 30-40ms.
 
       netsimTable.refresh();
-      delayTest(30, testDone, function () {
-        assert.equal('', apiTable.log());
+      clock.tick(30);
+      assert.equal('', apiTable.log());
 
-        delayTest(10, testDone, function () {
-          assert.equal('readAll', apiTable.log());
-          testDone();
-        });
-      });
+      clock.tick(10);
+      assert.equal('readAll', apiTable.log());
     });
 
-    it("second example (different random seed)", function (testDone) {
+    it("second example (different random seed)", function () {
       NetSimGlobals.setRandomSeed('Jitter test 2');
       // With this seed, the refresh fires almost immediately - in under 10 ms.
 
       netsimTable.refresh();
       assert.equal('', apiTable.log());
 
-      delayTest(10, testDone, function () {
-        assert.equal('readAll', apiTable.log());
-        testDone();
-      });
+      clock.tick(10);
+      assert.equal('readAll', apiTable.log());
     });
 
-    it("recalculated for every refresh", function (testDone) {
+    it("recalculated for every refresh", function () {
       NetSimGlobals.setRandomSeed('Jitter test 3');
       // Without request coalescing, we start two requests at the same time,
       // but they will actually fire with different random delays.
@@ -699,15 +702,12 @@ describe("NetSimTable", function () {
       assert.equal('', apiTable.log());
 
       // First one has fired after 20ms
-      delayTest(20, testDone, function () {
-        assert.equal('readAll', apiTable.log());
+      clock.tick(20);
+      assert.equal('readAll', apiTable.log());
 
         // Second has fired after 20ms more
-        delayTest(20, testDone, function () {
-          assert.equal('readAllreadAll', apiTable.log());
-          testDone();
-        });
-      });
+      clock.tick(20);
+      assert.equal('readAllreadAll', apiTable.log());
     });
   });
 
