@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var cookies = require('js-cookie');
+import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 
 import { mergeActivityResult } from './activityUtils';
