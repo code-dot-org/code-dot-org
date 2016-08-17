@@ -37,7 +37,8 @@
     "block_moving_into_walls": "false",
     "instructions": "Now let's make your project more interactive! Add some events so that you can control your actors or respond to collisions. Add and remove points!",
     "project_template_level_name": "grade4_scaffolded_template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "first_sprite_index": "0"
   },
   "published": true,
   "notes": "",
