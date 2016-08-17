@@ -19,5 +19,4 @@ class SurveyResultsController < ApplicationController
     params.require(:survey).
       permit(SurveyResult::ALL_ATTRS.map(&:to_sym) + [:kind])
   end
-
 end

@@ -1,5 +1,4 @@
 class BringToSchool2013
-
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]
@@ -26,5 +25,4 @@ class BringToSchool2013
 
     result
   end
-
 end

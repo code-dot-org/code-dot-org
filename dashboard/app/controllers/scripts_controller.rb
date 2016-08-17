@@ -88,5 +88,4 @@ class ScriptsController < ApplicationController
   def script_params
     params.require(:script).permit(:name)
   end
-
 end
