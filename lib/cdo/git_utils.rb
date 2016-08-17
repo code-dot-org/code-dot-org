@@ -56,6 +56,10 @@ module GitUtils
     branch_to_base(current_branch).gsub('origin/', '')
   end
 
+  def self.pr_base_branch_or_default_no_origin
+    circle_pr_branch_base_no_origin || current_branch_base_no_origin
+  end
+
   def self.circle_pr_branch_base_no_origin
     pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
     pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
