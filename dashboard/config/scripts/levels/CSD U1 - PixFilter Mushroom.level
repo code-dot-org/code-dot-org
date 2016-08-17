@@ -174,10 +174,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "markdown_instructions": "# Filtering Images\r\nNow that we've seen how a single pixel can be filtered to change its color, let's try applying a filter to an image made of multiple pixels. The filter your create will be applied to each pixel in the image - and you still have the light bulbs available to experiment with how your filter will work with individual colors.\r\n\r\n\r\n# Do This\r\nHere's a picture of a red mushroom - you're going to try and turn it into a yellow mushroom.\r\n\r\n* First, determine which bit needs to change in order to turn red into yellow\r\n* Once you've figured out which bit needs changing, use the filter dropdowns to make all of the red areas turn yellow\r\n* After you've got the filter working so that the red has turned yellow, see if you can come up with filters that turn the mushroom other colors\r\n\r\n_How many tries did it take you to find the right filter?_\r\n\r\n\r\n\r\n",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

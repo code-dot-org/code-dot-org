@@ -27,8 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "What should you add to this code to get all of the gold?",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -43,13 +42,21 @@
             <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="maze_moveEast"/>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="collector_collect"/>
+                  </next>
+                </block>
               </statement>
               <next>
                 <block type="controls_repeat_simplified_dropdown">
                   <title name="TIMES" config="3-10">3</title>
                   <statement name="DO">
-                    <block type="maze_moveSouth"/>
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
                   </statement>
                 </block>
               </next>
@@ -64,6 +71,7 @@
         <block type="maze_moveWest" limit="1"/>
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth" limit="1"/>
+        <block type="collector_collect"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>
         </block>
@@ -81,19 +89,31 @@
             <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="maze_moveEast"/>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="collector_collect"/>
+                  </next>
+                </block>
               </statement>
               <next>
                 <block type="controls_repeat_simplified_dropdown">
                   <title name="TIMES" config="3-10">3</title>
                   <statement name="DO">
-                    <block type="maze_moveSouth"/>
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
                   </statement>
                   <next>
                     <block type="controls_repeat_simplified_dropdown">
                       <title name="TIMES" config="3-10">5</title>
                       <statement name="DO">
-                        <block type="maze_moveWest"/>
+                        <block type="maze_moveWest">
+                          <next>
+                            <block type="collector_collect"/>
+                          </next>
+                        </block>
                       </statement>
                     </block>
                   </next>
