@@ -133,10 +133,6 @@ class Documents < Sinatra::Base
     @locals = {header: {}}
   end
 
-  get '/honeybadger' do
-    raise 'test honeybadger error'
-  end
-
   # Language selection
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
