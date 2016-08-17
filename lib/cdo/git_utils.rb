@@ -57,7 +57,7 @@ module GitUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    pr_number = ENV['CIRCLE_PR_NUMBER']
+    pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
     pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
     pr_json['base']['ref']
   rescue => _
