@@ -17,7 +17,7 @@ const FeatureType = {
   NONE: 0,
   CORN: 1,
   PUMPKIN: 2,
-  WHEAT: 3,
+  BEAN: 3,
 };
 
 export default class HarvesterCell extends Cell {
@@ -58,25 +58,11 @@ export default class HarvesterCell extends Cell {
     this.startsHidden_ = !!startsHidden;
   }
 
+  /**
+   * @return {boolean}
+   */
   startsHidden() {
     return this.startsHidden_;
-  }
-
-  /**
-   * Returns a new HarvesterCell that's an exact replica of this one
-   * @return {HarvesterCell}
-   * @override
-   */
-  clone() {
-    const newHarvesterCell = new HarvesterCell(
-      this.tileType_,
-      this.originalValue_,
-      this.range_,
-      this.possibleFeatures_,
-      this.startsHidden_
-    );
-    newHarvesterCell.setCurrentValue(this.currentValue_);
-    return newHarvesterCell;
   }
 
   /**
@@ -138,7 +124,7 @@ export default class HarvesterCell extends Cell {
 
     const feature = this.possibleFeatures_[0];
 
-    return ['none', 'corn', 'pumpkin', 'wheat'][feature];
+    return ['none', 'corn', 'pumpkin', 'bean'][feature];
   }
 
   isCorn() {
@@ -149,8 +135,8 @@ export default class HarvesterCell extends Cell {
     return this.possibleFeatures_.includes(FeatureType.PUMPKIN);
   }
 
-  isWheat() {
-    return this.possibleFeatures_.includes(FeatureType.WHEAT);
+  isBean() {
+    return this.possibleFeatures_.includes(FeatureType.BEAN);
   }
 
   /**
