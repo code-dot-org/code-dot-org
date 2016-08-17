@@ -16,6 +16,10 @@ machine:
     SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 8G
   services:
     - docker
+checkout:
+  post:
+    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-base ;; esac:
+        parallel: true
 dependencies:
   cache_directories:
     - "apps/node_modules"
