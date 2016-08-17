@@ -519,71 +519,60 @@ describe("NetSimTable", function () {
   });
 
   describe("initial delay coalescing", function () {
-    var COALESCE_WINDOW = 100; // ms
+    const COALESCE_WINDOW = 100; // ms
+    let clock;
 
     beforeEach(function () {
+      clock = sinon.useFakeTimers(Date.now());
       // Re-enable 100ms before-refresh delay to coalesce messages
       netsimTable.setMinimumDelayBeforeRefresh(COALESCE_WINDOW);
     });
 
-    describe('with fake timers', function () {
-      let clock;
-
-      beforeEach(function () {
-        clock = sinon.useFakeTimers(Date.now());
-      });
-
-      afterEach(function () {
-        clock.restore();
-      });
-
-      it("does not read until minimum delay passes", function () {
-        netsimTable.refreshTable_(callback);
-        assert.equal('', apiTable.log());
-        clock.tick(COALESCE_WINDOW);
-        assert.equal('readAll', apiTable.log());
-      });
-
-      it("coalesces multiple rapid requests", function () {
-        netsimTable.refreshTable_(callback);
-        netsimTable.refreshTable_(callback);
-        netsimTable.refreshTable_(callback);
-        assert.equal('', apiTable.log());
-
-        clock.tick(COALESCE_WINDOW / 2);
-        netsimTable.refreshTable_(callback);
-        netsimTable.refreshTable_(callback);
-        netsimTable.refreshTable_(callback);
-        assert.equal('', apiTable.log());
-
-        clock.tick(COALESCE_WINDOW / 2);
-        // Only one request at initial delay
-        assert.equal('readAll', apiTable.log());
-
-        clock.tick(COALESCE_WINDOW / 2);
-        // Still only one request has occurred - the calls at 50ms
-        // were coalesced into the initial call.
-        assert.equal('readAll', apiTable.log());
-      });
+    afterEach(function () {
+      clock.restore();
     });
 
-
-    it("does not coalesce if requests are far enough apart", function (testDone) {
+    it("does not read until minimum delay passes", function () {
       netsimTable.refreshTable_(callback);
-      delayTest(COALESCE_WINDOW, testDone, function () {
-        assert.equal('readAll', apiTable.log());
+      assert.equal('', apiTable.log());
+      clock.tick(COALESCE_WINDOW);
+      assert.equal('readAll', apiTable.log());
+    });
 
-        // This kicks off another delayed request
-        netsimTable.refreshTable_(callback);
-        assert.equal('readAll', apiTable.log());
+    it("coalesces multiple rapid requests", function () {
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      assert.equal('', apiTable.log());
 
-        delayTest(COALESCE_WINDOW, testDone, function () {
-          // Both requests occur
-          assert.equal('readAllreadAll', apiTable.log());
+      clock.tick(COALESCE_WINDOW / 2);
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      assert.equal('', apiTable.log());
 
-          testDone();
-        });
-      });
+      clock.tick(COALESCE_WINDOW / 2);
+      // Only one request at initial delay
+      assert.equal('readAll', apiTable.log());
+
+      clock.tick(COALESCE_WINDOW / 2);
+      // Still only one request has occurred - the calls at 50ms
+      // were coalesced into the initial call.
+      assert.equal('readAll', apiTable.log());
+    });
+
+    it("does not coalesce if requests are far enough apart", function () {
+      netsimTable.refreshTable_(callback);
+      clock.tick(COALESCE_WINDOW);
+      assert.equal('readAll', apiTable.log());
+
+      // This kicks off another delayed request
+      netsimTable.refreshTable_(callback);
+      assert.equal('readAll', apiTable.log());
+
+      clock.tick(COALESCE_WINDOW);
+      // Both requests occur
+      assert.equal('readAllreadAll', apiTable.log());
     });
   });
 
