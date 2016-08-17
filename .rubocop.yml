@@ -5,7 +5,6 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
-    - 'code-studio/**/*'
     - 'dashboard/db/schema.rb'
   DisplayCopNames: true
   TargetRubyVersion: 2.2

@@ -138,15 +138,14 @@ GEM
     daemons (1.2.3)
     dalli (2.7.4)
     debug_inspector (0.0.2)
-    devise (3.5.1)
+    devise (4.2.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
+      railties (>= 4.1.0, < 5.1)
       responders
-      thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise_invitable (1.5.2)
-      actionmailer (>= 3.2.6, < 5)
+    devise_invitable (1.6.0)
+      actionmailer (>= 3.2.6)
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -161,10 +160,10 @@ GEM
       oily_png (>= 1.2)
       oj
       selenium-webdriver (>= 2.45.0)
-    factory_girl (4.5.0)
+    factory_girl (4.7.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
-      factory_girl (~> 4.5.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
     fake_sqs (0.3.1)
       builder
@@ -180,7 +179,7 @@ GEM
     firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.0)
       railties (>= 3.2, < 5.1)
-    geocoder (1.2.11)
+    geocoder (1.3.7)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     gli (2.13.4)
@@ -379,8 +378,6 @@ GEM
       rack
     rack-cache (1.5.1)
       rack (>= 0.4)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
     rack-mini-profiler (0.9.7)
       rack (>= 1.1.3)
     rack-protection (1.5.3)
@@ -588,6 +585,7 @@ DEPENDENCIES
   acts_as_list
   annotate (~> 2.6.6)
   aws-sdk (~> 2)
+  bcrypt
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
@@ -602,7 +600,7 @@ DEPENDENCIES
   daemons
   dalli
   devise
-  devise_invitable (~> 1.5.2)
+  devise_invitable (~> 1.6.0)
   execjs
   eyes_selenium (~> 2.28.0)
   factory_girl_rails
@@ -661,7 +659,6 @@ DEPENDENCIES
   quiet_assets
   rack-attack (~> 4.4)
   rack-cache
-  rack-contrib (~> 1.1)
   rack-mini-profiler
   rack-ssl-enforcer
   rack_csrf

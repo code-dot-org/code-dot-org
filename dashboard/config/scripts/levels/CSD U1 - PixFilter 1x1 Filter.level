@@ -174,10 +174,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "markdown_instructions": "# Filtering Images\r\nIf you've ever used Instragram you've probably encountered an image filter. Image filters read in each pixel, process it in some way, and the return the filtered pixel. In this tool we're going to start by filtering just a single pixel before moving on to a full image.\r\n\r\nYou’ll notice there are three drop downs under the picture. A red replace, a green replace, and a blue replace. Next to it are drop downs for the colors. How many bits are we working with? Yes, we’re working with 3. We also learned that the bits control the colors. First bit controls R, second bit controls G, third bit controls B.\r\n\r\n\r\n# Do This\r\nTry changing the color drop downs next to replace. Based on how the bits change, can you formulate what replace is doing? Talk to your partner and see if you can figure it out.\r\n\r\n",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

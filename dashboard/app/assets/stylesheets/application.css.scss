@@ -1330,9 +1330,38 @@ a.download-video {
     display: inline-block;
     width: 600px;
   }
+  .singleitemblock {
+    padding-left: 144px;
+    width: 364px;
+  }
   .labelblock {
     display: inline-block;
     width: 140px;
+  }
+  .rememberme {
+    font-size: 13px;
+    margin-bottom: 22px;
+
+    #user_remember_me {
+      margin-top: -2px;
+      margin-right: 3px;
+    }
+  }
+  button {
+    width: 220px;
+  }
+  #signin-button {
+    margin-bottom: 7px;
+  }
+  #signup-button {
+    margin-top: 4px;
+  }
+  .forgotpassword {
+    margin-bottom: 10px;
+  }
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid $dark_charcoal;
   }
 }
 

@@ -4,6 +4,5 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # STOP
-
-Stop level to talk about abstraction and isTouching()
+Stop level to talk about other things that sprite could do when they run into each other.  Next level is done as a group.
 MARKDOWN
