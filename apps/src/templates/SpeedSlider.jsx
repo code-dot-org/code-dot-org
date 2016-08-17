@@ -135,7 +135,7 @@ const SpeedSlider = React.createClass({
     let clampedValue = this.clampValue(props.value);
     let knobXPosition = knobXMin + TRACK_LENGTH*clampedValue - knobWidth/2;
     return (
-      <div id="slider-cell" style={props.style}>
+      <div id="slidercell" style={props.style}>
         <svg
           width="150"
           height="35"
