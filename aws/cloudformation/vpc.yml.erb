@@ -7,7 +7,7 @@ Resources:
     Properties:
       CidrBlock: 10.0.0.0/16
       EnableDnsHostnames: true
-  VpcClassicLink: <%= lambda.call 'VpcClassicLink',
+  VpcClassicLink: <%= lambda_fn.call 'VpcClassicLink',
     VpcId: {Ref: 'VPC'},
     DnsSupport: true %>
   InternetGateway:
@@ -142,6 +142,16 @@ Resources:
           FromPort: 6379
           ToPort: 6379
           SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
+  EFSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: EFS access from frontends
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 2049
+          ToPort: 2049
+          SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
   DBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -186,6 +196,21 @@ Resources:
     Properties:
       DBSubnetGroupDescription: Public Database Subnet Group
       SubnetIds: <%=azs.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
+  RedshiftSubnetGroup:
+    Type: AWS::Redshift::ClusterSubnetGroup
+    Properties:
+      Description: Redshift Public Subnet Group
+      SubnetIds: <%=azs.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
+  RedshiftSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Inbound Redshift connections from public Internet.
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 5439
+          ToPort: 5439
+          CidrIp: 0.0.0.0/0
 Outputs:
   VpcId:
     Description: VPC ID
@@ -205,6 +230,15 @@ Outputs:
   DBSecurityGroup:
     Description: Security group for DB
     Value: {'Fn::GetAtt': [DBSecurityGroup, GroupId]}
+  RedshiftSubnetGroup:
+    Description: Subnet group for Redshift
+    Value: {Ref: RedshiftSubnetGroup}
+  RedshiftSecurityGroup:
+    Description: Security group for Redshift
+    Value: {'Fn::GetAtt': [RedshiftSecurityGroup, GroupId]}
+  EFSSecurityGroup:
+    Description: Security group for EFS
+    Value: {'Fn::GetAtt': [EFSSecurityGroup, GroupId]}
 <%
   availability_zones.each_with_index do |zone, i|
     az = zone[-1].upcase

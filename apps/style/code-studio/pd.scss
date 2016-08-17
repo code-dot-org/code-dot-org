@@ -17,7 +17,7 @@
   @import "bootstrap-sass/assets/stylesheets/bootstrap";
   @include buttons();
 
-  a {
+  a:not(.btn) {
     color: $purple;
     font-family: "Gotham 7r";
     &:hover {

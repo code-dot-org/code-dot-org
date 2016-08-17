@@ -6,7 +6,7 @@
   "user_id": 318,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,13 +22,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "1",
+    "start_direction": "0",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you help me collect at least 24 crops from this field? I bet using loops would really help us out!",
+    "instructions": "Have wheat and potatoes planted randomly at various growth stages. Now we introduce multiple while loops (stacked) nested inside a loop. The two while loops in the solution represent different while loops (while there is potato and while there is wheat)",
     "step_speed": "2",
-    "ideal": "34",
+    "ideal": "16",
+    "markdown_instructions": "Harvesting one type of crop at a time takes too long. Can you help me harvest both wheat and potatoes in one run? I wonder if you can stack another While There is... loop on top of another one?",
     "contained_level_names": null
   },
   "published": true,
@@ -37,6 +38,61 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" deletable="false">
+              <title name="TIMES">7</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="collector_whileCollectible">
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="controls_repeat" deletable="false">
+                              <title name="TIMES">7</title>
+                              <statement name="DO">
+                                <block type="collector_whileCollectible">
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_move">
@@ -58,18 +114,18 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">6</title>
+            <block type="controls_repeat" deletable="false">
+              <title name="TIMES">7</title>
               <statement name="DO">
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="collector_ifCollectible">
+                    <block type="collector_whileCollectible">
                       <statement name="DO">
                         <block type="collector_collect"/>
                       </statement>
                       <next>
-                        <block type="collector_ifCollectible">
+                        <block type="collector_whileCollectible">
                           <statement name="DO">
                             <block type="collector_collect"/>
                           </statement>
@@ -89,15 +145,15 @@
                         <block type="maze_turn">
                           <title name="DIR">turnRight</title>
                           <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">6</title>
+                            <block type="controls_repeat" deletable="false">
+                              <title name="TIMES">7</title>
                               <statement name="DO">
-                                <block type="collector_ifCollectible">
+                                <block type="collector_whileCollectible">
                                   <statement name="DO">
                                     <block type="collector_collect"/>
                                   </statement>
                                   <next>
-                                    <block type="collector_ifCollectible">
+                                    <block type="collector_whileCollectible">
                                       <statement name="DO">
                                         <block type="collector_collect"/>
                                       </statement>
@@ -110,84 +166,6 @@
                                   </next>
                                 </block>
                               </statement>
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
-                                          <next>
-                                            <block type="controls_repeat">
-                                              <title name="TIMES">6</title>
-                                              <statement name="DO">
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
-                                                  <next>
-                                                    <block type="collector_ifCollectible">
-                                                      <statement name="DO">
-                                                        <block type="collector_collect"/>
-                                                      </statement>
-                                                      <next>
-                                                        <block type="collector_ifCollectible">
-                                                          <statement name="DO">
-                                                            <block type="collector_collect"/>
-                                                          </statement>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </statement>
-                                              <next>
-                                                <block type="maze_turn">
-                                                  <title name="DIR">turnRight</title>
-                                                  <next>
-                                                    <block type="maze_move">
-                                                      <title name="DIR">moveForward</title>
-                                                      <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnRight</title>
-                                                          <next>
-                                                            <block type="controls_repeat">
-                                                            <title name="TIMES">6</title>
-                                                            <statement name="DO">
-                                                            <block type="collector_ifCollectible">
-                                                            <statement name="DO">
-                                                            <block type="collector_collect"/>
-                                                            </statement>
-                                                            <next>
-                                                            <block type="collector_ifCollectible">
-                                                            <statement name="DO">
-                                                            <block type="collector_collect"/>
-                                                            </statement>
-                                                            <next>
-                                                            <block type="maze_move">
-                                                            <title name="DIR">moveForward</title>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </statement>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>

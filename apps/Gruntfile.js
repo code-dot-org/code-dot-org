@@ -267,6 +267,7 @@ module.exports = function (grunt) {
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
         ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+        ['build/package/css/publicKeyCryptography.css', 'style/publicKeyCryptography/publicKeyCryptography.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
@@ -378,6 +379,7 @@ module.exports = function (grunt) {
         'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
         'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
         'districtDropdown': './src/code-studio/districtDropdown.js',
+        'signup': './src/code-studio/signup.js',
         'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
         'levels/widget': './src/code-studio/levels/widget.js',
         'levels/external': './src/code-studio/levels/external.js',
@@ -438,6 +440,14 @@ module.exports = function (grunt) {
       entries: {
         pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
       }
+    },
+
+    {
+      uniqueName: 'publicKeyCryptography',
+      entries: {
+        publicKeyCryptography: './src/publicKeyCryptography/main.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
     }
   ];
 

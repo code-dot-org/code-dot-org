@@ -17,7 +17,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "7",
-    "markdown_instructions": "What a beautiful field of flowers!   \r\n\r\nHelp the bee visit each one.\r\n\r\nCan you find a way to do it with fewer than 7 blocks?",
+    "markdown_instructions": "What a beautiful field of flowers!\r\n\r\nHelp the bee visit each one.\r\n\r\nCan you find a way to do it with fewer than 7 blocks?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The first action will be a turn, rather than a move.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  \",\r\n  \"hint_id\": \"2-3_Bee_Loops_7_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",

@@ -7,13 +7,11 @@
 #
 #   CREATE TABLE backfill_#{LOW_ID}_#{HIGH_ID} AS
 #   SELECT
-#     t.user_id,
-#     t.level_id,
+#     t.user_levels_id,
 #     activities.level_source_id
 #   FROM (
 #     SELECT
-#       user_levels.user_id AS user_id,
-#       user_levels.level_id AS level_id,
+#       user_levels.id AS user_levels_id
 #       MAX(activities.id) AS activities_id
 #     FROM user_levels
 #     INNER JOIN activities
@@ -23,7 +21,7 @@
 #       AND user_levels.id < #{HIGH_ID}
 #       AND user_levels.level_source_id IS NULL
 #       AND activities.level_source_id IS NOT NULL
-#     GROUP BY 1,2
+#     GROUP BY user_levels_id
 #   ) AS t
 #   INNER JOIN activities
 #     ON activities.id = t.activities_id;
@@ -45,7 +43,7 @@ if ARGV.length != 2
 end
 
 filename = ARGV[0]
-batch_size = ARGV[1]
+batch_size = ARGV[1].to_i
 
 # Since the updated_at field is used as a proxy for "last_progress_at" for the
 # user_level, we intentionally do not want to modify that field.
@@ -56,20 +54,24 @@ begin
   # the updates in a transaction.
   update_array = []
   CSV.foreach(filename) do |line|
-    user_id = line[0]
-    level_id = line[1]
-    level_source_id = line[2]
-    update_array << [user_id, level_id, level_source_id]
+    user_levels_id = line[0].to_i
+    level_source_id = line[1].to_i
+    update_array << [user_levels_id, level_source_id]
   end
+
+  puts "Found #{update_array.length} updates to process..."
 
   # Process the array in batches, so that the transactions are appropriate
   # sized.
+  batch_index = 0
   update_array.each_slice(batch_size) do |update_array_slice|
+    puts "Updating #{batch_index} to #{batch_index + batch_size} of #{update_array.length}..."
+    batch_index += batch_size
     ActiveRecord::Base.transaction do
-      update_array_slice.each do |user_id, level_id, level_source_id|
+      update_array_slice.each do |user_levels_id, level_source_id|
         UserLevel.
-          where(user_id: user_id, level_id: level_id).
-          update(level_source_id: level_source_id)
+          find_by_id(user_levels_id).
+          update!(level_source_id: level_source_id)
       end
     end
   end
