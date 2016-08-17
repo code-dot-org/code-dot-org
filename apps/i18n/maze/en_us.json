@@ -15,6 +15,7 @@
   "continue": "Continue",
   "corn": "corn",
   "cornTooltip": "Harvest some corn",
+  "didNotCollectAllCrops": "Make sure you don't leave any crops behind!",
   "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "dig": "remove 1",
   "digTooltip": "remove 1 unit of dirt",
@@ -24,6 +25,7 @@
   "dirW": "W",
   "doCode": "do",
   "elseCode": "else",
+  "emptyCropError": "That crop is all gone.",
   "fill": "fill 1",
   "fillN": "fill {shovelfuls}",
   "fillSquare": "fill square",
@@ -69,7 +71,6 @@
   "noPathAhead": "path is blocked",
   "noPathLeft": "no path to the left",
   "noPathRight": "no path to the right",
-  "notAtFlowerError": "You can only get nectar from a flower.",
   "notAtHoneycombError": "You can only make honey at a honeycomb.",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "pathAhead": "path ahead",
@@ -100,6 +101,7 @@
   "whileMsg": "while",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
+  "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Yes",
   "youSpelled": "You spelled"
 }
