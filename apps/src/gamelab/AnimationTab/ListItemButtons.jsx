@@ -37,9 +37,8 @@ var styles = {
 };
 
 var sliderStyle = {
-  sliderCell: {
-    float: 'none'
-  }
+  float: 'none',
+  display: 'block'
 };
 
 /**
