@@ -4,9 +4,10 @@ import { SVG_NS } from '../constants';
 const SQUARE_SIZE = 50;
 
 export default class HarvesterDrawer extends Drawer {
-  constructor(map, skin, bee) {
+  constructor(map, skin, subtype) {
     super(map, '');
     this.skin_ = skin;
+    this.subtype_ = subtype;
   }
 
   /**
@@ -14,14 +15,11 @@ export default class HarvesterDrawer extends Drawer {
    */
   getAsset(prefix, row, col) {
     switch (prefix) {
-      case 'corn':
-        return this.skin_.corn;
-      case 'pumpkin':
-        return this.skin_.pumpkin;
-      case 'wheat':
-        return this.skin_.wheat;
       case 'sprout':
         return this.skin_.sprout;
+      case 'crop':
+        var crop = this.subtype_.getCell(row, col).featureName();
+        return this.skin_[crop];
     }
   }
 
@@ -33,37 +31,25 @@ export default class HarvesterDrawer extends Drawer {
    * @param {boolean} running Is user code currently running
    */
   updateItemImage(row, col, running) {
-    let cell = this.map_.getVariableCell(row, col);
+    let variableCell = this.map_.getVariableCell(row, col);
+    let cell = this.map_.getCell(row, col);
 
-    if (!cell.hasValue()) {
+    if (!variableCell.hasValue()) {
       return;
-    }
-
-    let prefix;
-    switch (true) {
-      case cell.isCorn():
-        prefix = 'corn';
-        break;
-      case cell.isPumpkin():
-        prefix = 'pumpkin';
-        break;
-      case cell.isWheat():
-        prefix = 'wheat';
-        break;
     }
 
     if (running) {
       if (cell.getCurrentValue() > 0) {
-        this.show(prefix, row, col);
+        this.show('crop', row, col);
         this.updateCounter(row, col, cell.getCurrentValue());
       } else {
-        this.hide(prefix, row, col);
+        this.hide('crop', row, col);
         this.hide('counter', row, col);
       }
       this.hide('sprout', row, col);
     } else {
       this.show('sprout', row, col);
-      this.hide(prefix, row, col);
+      this.hide('crop', row, col);
       this.hide('counter', row, col);
     }
   }
@@ -78,7 +64,6 @@ export default class HarvesterDrawer extends Drawer {
   show(prefix, row, col) {
     this.updateImageWithIndex_(prefix, row, col);
   }
-
 
   /**
    * @override

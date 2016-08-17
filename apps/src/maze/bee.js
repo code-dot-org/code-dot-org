@@ -76,7 +76,7 @@ export default class Bee extends Gatherer {
       this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
       this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
     }
-    this.maze_.map.resetDirt();
+    super.reset();
   }
 
   /**
