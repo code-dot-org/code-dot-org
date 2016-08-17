@@ -368,7 +368,7 @@ FactoryGirl.define do
 
   factory :follower do
     section
-    user { section.user }
+    user {section.users.first}
     student_user { create :student }
   end
 

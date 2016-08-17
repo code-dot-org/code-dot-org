@@ -75,15 +75,20 @@ class Section < ActiveRecord::Base
   end
 
   def add_student(student, move_for_same_teacher: true)
-    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: user_id))
+    # TODO: Find out where this return value is being used
+    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: self.user_id))
       # if this student is already in another section owned by the
       # same teacher, move them to this section instead of creating a
       # new one
       follower.update_attributes!(section: self)
+      [follower]
     else
-      follower = Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+      followers = []
+      self.users.each do |user|
+        followers << Follower.create!(user_id: user.id, student_user: student, section: self)
+      end
+      followers
     end
-    follower
   end
 
   # TODO: Check this out for coteachers
