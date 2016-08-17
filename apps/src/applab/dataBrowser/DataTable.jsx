@@ -182,6 +182,7 @@ const DataTable = React.createClass({
       <div id="dataTable" style={containerStyle}>
         <h4>
           <a
+            id="tableBackToOverview"
             href="#"
             style={dataStyles.link}
             onClick={() => this.props.onViewChange(DataView.OVERVIEW)}

@@ -222,7 +222,7 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource && config.level.editCode;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
   }
 
   this.studioApp_.setPageConstants(config, {

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ZendeskSessionControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   setup do
     @user = create(:student)
   end

@@ -37,7 +37,8 @@
     "block_moving_into_walls": "false",
     "instructions": "Finally, let's add conditionals.",
     "project_template_level_name": "grade4_scaffolded_template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "first_sprite_index": "0"
   },
   "published": true,
   "notes": "",
