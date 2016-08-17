@@ -6,9 +6,8 @@ require 'json'
 RUN_ALL_TESTS_TAG = '[test all]'
 
 def merge_eyes_baselines(branch, base)
-  RakeUtils.system_stream_output 'wget http://support.applitools.com/customer/portal/kb_article_attachments/85844/original.jar?1465324958'
-  RakeUtils.system_stream_output 'mv *.jar* applitools-merge.jar'
-  RakeUtils.system_stream_output "java -jar applitools-merge.jar -url https://eyes.applitools.com/api/baselines/copybranch?accesskey=$EYES_ACCESS_KEY -n Code.org -s #{branch} -t #{base}"
+  RakeUtils.rake_stream_output "eyes:create[#{base}]"
+  RakeUtils.rake_stream_output "eyes:merge[#{branch},#{base}]"
 end
 
 namespace :circle do

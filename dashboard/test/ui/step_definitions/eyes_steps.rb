@@ -26,8 +26,6 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     @eyes.parent_branch_name = fallback_branch
   end
 
-  ensure_branch_exists(@eyes.parent_branch_name)
-
   @original_browser = @browser
   config = { app_name: 'Code.org', test_name: test_name, driver: @browser }
   if @original_browser.capabilities.browser_name == 'chrome'
@@ -35,15 +33,6 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   end
   @browser.capabilities[:takes_screenshot] = true
   @browser = @eyes.open(config)
-end
-
-def ensure_branch_exists(branch_name)
-  eyes = Applitools::Eyes.new
-  eyes.api_key = CDO.applitools_eyes_api_key
-  eyes.branch_name = branch_name
-  eyes.open(app_name: 'Code.org', test_name: 'Dummy branch creation check', driver: @browser)
-  eyes.check_window('Dummy branch creation check', MATCH_TIMEOUT)
-  eyes.close(false)
 end
 
 And(/^I close my eyes$/) do
