@@ -30,6 +30,7 @@
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "flowerEmptyError": "The flower you're on has no more nectar.",
   "get": "get",
+  "has": "has",
   "heightParameter": "height",
   "holePresent": "there is a hole",
   "honey": "make honey",

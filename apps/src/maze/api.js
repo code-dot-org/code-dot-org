@@ -327,3 +327,15 @@ exports.atPumpkin = API_FUNCTION(function (id) {
 exports.atWheat = API_FUNCTION(function (id) {
   return Maze.subtype.atWheat(id);
 });
+
+exports.hasCorn = API_FUNCTION(function (id) {
+  return Maze.subtype.hasCorn(id);
+});
+
+exports.hasPumpkin = API_FUNCTION(function (id) {
+  return Maze.subtype.hasPumpkin(id);
+});
+
+exports.hasWheat = API_FUNCTION(function (id) {
+  return Maze.subtype.hasWheat(id);
+});

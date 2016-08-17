@@ -72,6 +72,27 @@ class Karel < Maze
       <block type="maze_untilBlockedOrNotClear"></block>
       <block type="maze_forever"></block>
     </category>
+    <category name="Harvester">
+      <block type="harvester_ifAtCrop"></block>
+      <block type="harvester_ifAtCropElse"></block>
+      <block type="harvester_ifHasCrop"></block>
+      <block type="harvester_whileHasCrop"></block>
+      <block type="harvester_corn"></block>
+      <block type="harvester_pumpkin"></block>
+      <block type="harvester_wheat"></block>
+      <block type="harvester_ifAtCorn"></block>
+      <block type="harvester_ifAtCornElse"></block>
+      <block type="harvester_ifHasCorn"></block>
+      <block type="harvester_whileHasCorn"></block>
+      <block type="harvester_ifAtPumpkin"></block>
+      <block type="harvester_ifAtPumpkinElse"></block>
+      <block type="harvester_ifHasPumpkin"></block>
+      <block type="harvester_whileHasPumpkin"></block>
+      <block type="harvester_ifAtWheat"></block>
+      <block type="harvester_ifAtWheatElse"></block>
+      <block type="harvester_ifHasWheat"></block>
+      <block type="harvester_whileHasWheat"></block>
+    </category>
     <category name="Bee">
       <block type="maze_nectar"></block>
       <block type="maze_honey"></block>
