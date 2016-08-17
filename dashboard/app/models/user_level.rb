@@ -34,11 +34,19 @@ class UserLevel < ActiveRecord::Base
 
   before_save :handle_unsubmit
 
+  validate :readonly_requires_submitted
+
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> { where.not(best_result: nil) }
   scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
   scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
+
+  def readonly_requires_submitted
+    if readonly_answers? && !submitted?
+      errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
+    end
+  end
 
   def best?
     Activity.best? best_result
