@@ -4,13 +4,13 @@
     .row
       .span8{style: (full_width ? 'width: 560px;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; &nbsp; | &nbsp; &nbsp;'
-        = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400; text-transform: uppercase;'
-        .dim!= piped_spaces
-        = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
+        = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
         .dim!= piped_spaces
         = link_to t('footer.translate'), CDO.code_org_url('/translate')
         .dim!= piped_spaces
         = link_to t('footer.support'), t('footer.support_url')
+        .dim!= piped_spaces
+        = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
         %br/
 
         %small.fineprint.dim
