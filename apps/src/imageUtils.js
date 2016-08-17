@@ -20,24 +20,25 @@ export function blobToDataURI(blob, onComplete) {
 }
 
 export function dataURIToSourceSize(dataURI) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve({x: image.width, y: image.height});
-    image.onerror = err => reject(err);
-    image.src = dataURI;
+  return uriToImage(dataURI).then(image => ({x: image.width, y: image.height}));
+}
+
+export function uriToImageData(uri) {
+  return uriToImage(uri).then(image => {
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0);
+    return context.getImageData(0, 0, canvas.width, canvas.height).data;
   });
 }
 
-export function imageDataFromSourceUrl(url, callback) {
-  const img = new Image();
-  img.onload = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    const context = canvas.getContext('2d');
-    context.drawImage(img, 0, 0);
-    const data = context.getImageData(0, 0, canvas.width, canvas.height).data;
-    callback(data);
-  };
-  img.src = url;
+function uriToImage(uri) {
+  return new Promise((resolve, reject) => {
+    let image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = err => reject(err);
+    image.src = uri;
+  });
 }
