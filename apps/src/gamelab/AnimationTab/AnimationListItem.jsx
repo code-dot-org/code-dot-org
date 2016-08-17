@@ -6,10 +6,11 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameRate} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
+import _ from 'lodash';
 
 const styles = {
   tile: {
@@ -75,6 +76,7 @@ const AnimationListItem = React.createClass({
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
+    setAnimationFrameRate: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   },
@@ -101,6 +103,10 @@ const AnimationListItem = React.createClass({
 
   onNameChange(event) {
     this.props.setAnimationName(this.props.animationKey, event.target.value);
+  },
+
+  setAnimationFrameRate(event) {
+    this.props.setAnimationFrameRate(this.props.animationKey, event);
   },
 
   render() {
@@ -137,8 +143,10 @@ const AnimationListItem = React.createClass({
         {animationName}
         {this.props.isSelected &&
           <ListItemButtons
+            onFrameRateChanged={this.setAnimationFrameRate}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
+            frameRate={this.props.animationProps.frameRate}
           />}
       </div>
     );
@@ -158,5 +166,9 @@ export default connect(state => ({
   },
   setAnimationName(animationKey, newName) {
     dispatch(setAnimationName(animationKey, newName));
+  },
+  setAnimationFrameRate(animationKey, frameRate) {
+    let debounced = _.debounce(dispatch, 200);
+    debounced(setAnimationFrameRate(animationKey, frameRate));
   }
 }))(Radium(AnimationListItem));
