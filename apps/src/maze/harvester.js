@@ -19,6 +19,28 @@ export default class Harvester extends Gatherer {
     return new HarvesterDrawer(this.maze_.map, this.skin_, this);
   }
 
+  hasCorn(id) {
+    return this.hasHarvest(HarvesterCell.FeatureType.CORN, id);
+  }
+
+  hasPumpkin(id) {
+    return this.hasHarvest(HarvesterCell.FeatureType.PUMPKIN, id);
+  }
+
+  hasWheat(id) {
+    return this.hasHarvest(HarvesterCell.FeatureType.WHEAT, id);
+  }
+
+  hasHarvest(crop, id) {
+    const col = this.maze_.pegmanX;
+    const row = this.maze_.pegmanY;
+
+    const cell = this.getCell(row, col);
+
+    this.maze_.executionInfo.queueAction('has_' + cell.featureName(), id);
+    return cell.featureType() === crop && cell.getCurrentValue() > 0;
+  }
+
   atCorn(id) {
     return this.atHarvest(HarvesterCell.FeatureType.CORN, id);
   }
