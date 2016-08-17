@@ -7,10 +7,12 @@
 
 'use strict';
 
-import {imageDataFromSourceUrl} from '../imageUtils';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TileWalls from './tileWalls';
+import ObstacleZoneWalls from './obstacleZoneWalls';
+import MaskWalls from './maskWalls';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var studioMsg = require('./locale');
@@ -184,9 +186,6 @@ var RESET_TEXT_Y_POSITION = 380;
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
-var BYTES_PER_PIXEL = 4;
-var BITS_PER_BYTE = 8;
-
 var twitterOptions = {
   text: studioMsg.shareStudioTwitter(),
   hashtag: "StudioCode"
@@ -266,35 +265,17 @@ function loadLevel() {
   studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
   studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
 
-  Studio.BYTES_PER_ROW = Math.ceil(Studio.MAZE_WIDTH / BITS_PER_BYTE);
-
-  if (skin.wallMapLayers) {
-    Studio.wallMapLayers = {};
-    for (const mapName in skin.wallMapLayers) {
-      imageDataFromSourceUrl(skin.wallMapLayers[mapName].srcUrl, imageData => {
-        Studio.wallMapLayers[mapName] = wallMapFromImageData(imageData);
-      });
-    }
-  }
+  Studio.walls = loadWalls();
 }
 
-function wallMapFromImageData(data) {
-  // Every row starts with a new byte to make some calculations simpler. The
-  // default width of 400 fits perfectly into 50 bytes anyway.
-  const arr = new Uint8Array(Studio.MAZE_HEIGHT * Studio.BYTES_PER_ROW);
-  for (let y = 0; y < Studio.MAZE_HEIGHT; y++) {
-    for (let x = 0; x < Studio.MAZE_WIDTH; x += BITS_PER_BYTE) {
-      let bits = 0;
-      for (let k = 0; k < BITS_PER_BYTE; k++) {
-        if (x + k < Studio.MAZE_WIDTH &&
-            data[BYTES_PER_PIXEL * ((y * Studio.MAZE_WIDTH) + x + k)] === 0) {
-          bits = bits | (1 << k);
-        }
-      }
-      arr[(y * Studio.BYTES_PER_ROW) + (x / BITS_PER_BYTE)] = bits;
-    }
+function loadWalls() {
+  if (skin.customObstacleZones) {
+    return new ObstacleZoneWalls(level, skin);
   }
-  return arr;
+  if (skin.wallMapLayers) {
+    return new MaskWalls(level, skin);
+  }
+  return new TileWalls(level, skin);
 }
 
 /**
@@ -517,10 +498,6 @@ var drawMap = function () {
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) <= xVariance) && (Math.abs(y1 - y2) <= yVariance);
-}
-
-function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
-  return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
 
 Studio.allGoals_ = function () {
@@ -1620,106 +1597,7 @@ Studio.getWallValue = function (row, col) {
  */
 
 Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
-  var collidableHeight = collidable.height;
-  var collidableWidth = collidable.width;
-
-  if (!level.gridAlignedMovement) {
-    xCenter += skin.wallCollisionRectOffsetX;
-    yCenter += skin.wallCollisionRectOffsetY;
-    collidableHeight = skin.wallCollisionRectHeight || collidableHeight;
-    collidableWidth = skin.wallCollisionRectWidth || collidableWidth;
-  }
-
-  Studio.drawDebugRect("avatarCollision", xCenter, yCenter, collidableWidth, collidableHeight);
-
-  var colsOffset = Math.floor(xCenter) + 1;
-  var rowsOffset = Math.floor(yCenter) + 1;
-  var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
-  var iYGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
-
-  var collisionRects = null;
-  if (skin.customObstacleZones &&
-      skin.customObstacleZones[Studio.background] &&
-      skin.customObstacleZones[Studio.background][Studio.wallMapRequested]) {
-    collisionRects = skin.customObstacleZones[Studio.background][Studio.wallMapRequested];
-  }
-
-  var wallMapLayer = null;
-  if (Studio.wallMapLayers && Studio.wallMapRequested) {
-    wallMapLayer = Studio.wallMapLayers[Studio.wallMapRequested];
-  }
-
-  if (wallMapLayer) {
-    // Compare against a layout image
-
-    Studio.drawDebugOverlay(skin.wallMapLayers[Studio.wallMapRequested].srcUrl);
-
-    const yTop = yCenter - collidableHeight / 2;
-    const yBottom = yTop + collidableHeight;
-    const xLeft = xCenter - collidableWidth / 2;
-    const xRight = xLeft + collidableWidth;
-    const xStart = Math.floor(xLeft / BITS_PER_BYTE);
-    const xEnd = Math.floor((xRight - 1) / BITS_PER_BYTE);
-
-    for (let y = yTop; y < yBottom; y++) {
-      const rowStart = Studio.BYTES_PER_ROW * y;
-      for (let x = xStart; x <= xEnd; x++) {
-        if (wallMapLayer[rowStart + x]) {
-          const start = Math.max(xLeft, Math.floor(x * BITS_PER_BYTE));
-          const end = Math.min(xRight, Math.floor((x + 1) * BITS_PER_BYTE));
-          for (let i = start; i < end; i++) {
-            if (wallMapLayer[rowStart + x] & (1 << (i % BITS_PER_BYTE))) {
-              return true;
-            }
-          }
-        }
-      }
-    }
-  } else if (collisionRects) {
-    // Compare against a set of specific rectangles.
-    for (var i = 0; i < collisionRects.length; i++) {
-      var rect = collisionRects[i];
-      var rectWidth = rect.maxX-rect.minX+1;
-      var rectHeight = rect.maxY-rect.minY+1;
-      var rectCenterX = rect.minX + rectWidth/2;
-      var rectCenterY = rect.minY + rectHeight/2;
-      Studio.drawDebugRect("avatarCollision", rectCenterX, rectCenterY, rectWidth, rectHeight);
-      if (overlappingTest(xCenter,
-                          rectCenterX,
-                          rectWidth / 2 + collidableWidth / 2,
-                          yCenter,
-                          rectCenterY,
-                          rectHeight / 2 + collidableHeight / 2)) {
-        return true;
-      }
-    }
-  } else {
-    // Compare against regular wall tiles.
-    for (var col = Math.max(0, xGrid - colsOffset);
-         col < Math.min(Studio.COLS, xGrid + colsOffset);
-         col++) {
-      for (var row = Math.max(0, iYGrid - rowsOffset);
-           row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
-           row++) {
-        if (Studio.getWallValue(row, col)) {
-          Studio.drawDebugRect("avatarCollision",
-                               (col + 0.5) * Studio.SQUARE_SIZE,
-                               (row + 0.5) * Studio.SQUARE_SIZE,
-                               Studio.SQUARE_SIZE,
-                               Studio.SQUARE_SIZE);
-          if (overlappingTest(xCenter,
-                              (col + 0.5) * Studio.SQUARE_SIZE,
-                              Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
-                              yCenter,
-                              (row + 0.5) * Studio.SQUARE_SIZE,
-                              Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
-            return true;
-          }
-        }
-      }
-    }
-  }
-  return false;
+  return Studio.walls.willCollidableTouchWall(collidable, xCenter, yCenter);
 };
 
 Studio.onSvgDrag = function (e) {
@@ -4551,6 +4429,7 @@ Studio.setBackground = function (opts) {
 
   if (backgroundValue !== Studio.background) {
     Studio.background = backgroundValue;
+    Studio.walls.setBackground(backgroundValue);
 
     var element = document.getElementById('background');
     element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
@@ -4622,6 +4501,7 @@ Studio.setMap = function (opts) {
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
   Studio.wallMapRequested = opts.value;
+  Studio.walls.setWallMapRequested(opts.value);
 
   // Draw the tiles (again) now that we know which background we're using.
   $(".tileClip").remove();
