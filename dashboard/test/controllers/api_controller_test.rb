@@ -502,7 +502,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
 
     # student_2 can view answers
-    create :user_level, user: @student_2, script: script, level: level, submitted: false, readonly_answers: true, unlocked_at: Time.now
+    create :user_level, user: @student_2, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: Time.now
 
     # student_3 has a user_level, but is still locked
     create :user_level, user: @student_3, script: script, level: level, submitted: true, readonly_answers: false
@@ -511,7 +511,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_4, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
 
     # student_5 got autolocked while viewing answers
-    create :user_level, user: @student_5, script: script, level: level, submitted: false, readonly_answers: true, unlocked_at: 2.days.ago
+    create :user_level, user: @student_5, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
 
     get :lockable_state, section_id: @section.id, script_id: script.id
     assert_response :success

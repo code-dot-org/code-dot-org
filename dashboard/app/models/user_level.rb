@@ -99,7 +99,7 @@ class UserLevel < ActiveRecord::Base
 
   def has_autolocked?(stage)
     return false unless stage.lockable?
-    (self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago)
+    self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago
   end
 
   def locked?(stage)
