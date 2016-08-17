@@ -5,22 +5,6 @@ var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
-/**
- * Helper method for introducing a delay in your test method.
- * @param {number} delayMs - Number of milliseconds to wait before continuing.
- * @param {function} testDone - Chai's "done" callback.
- * @param {function} nextStep - Function to call after the delay.
- */
-function delayTest(delayMs, testDone, nextStep) {
-  setTimeout(function () {
-    try {
-      nextStep();
-    } catch (e) {
-      testDone(e);
-    }
-  }, delayMs);
-}
-
 describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
 
@@ -712,8 +696,10 @@ describe("NetSimTable", function () {
   });
 
   describe("incremental update", function () {
+    let clock;
 
     beforeEach(function () {
+      clock = sinon.useFakeTimers(Date.now());
       // New table configured for incremental refresh
       netsimTable = NetSimTestUtils.overrideNetSimTableApi(
           new NetSimTable(fakeChannel, 'testShard', 'testTable', {
@@ -727,25 +713,26 @@ describe("NetSimTable", function () {
       apiTable = netsimTable.api_.remoteTable;
     });
 
-    it("Initially requests from row 1", function (testDone) {
-      assert.equal('', apiTable.log());
-      netsimTable.refreshTable_(callback);
-      delayTest(0, testDone, function () {
-        assert.equal('readAllFromID[1]', apiTable.log());
-        assert.deepEqual([], netsimTable.readAll());
-
-        // Keeps requesting from row 1 when there's no content
-        apiTable.clearLog();
-        assert.equal('', apiTable.log());
-        netsimTable.refreshTable_(callback);
-        delayTest(0, testDone, function () {
-          assert.equal('readAllFromID[1]', apiTable.log());
-          testDone();
-        });
-      });
+    afterEach(function () {
+      clock.restore();
     });
 
-    it("Requests from beyond most recent row received in refresh", function (testDone) {
+    it("Initially requests from row 1", function () {
+      assert.equal('', apiTable.log());
+      netsimTable.refreshTable_(callback);
+      clock.tick(0);
+      assert.equal('readAllFromID[1]', apiTable.log());
+      assert.deepEqual([], netsimTable.readAll());
+
+      // Keeps requesting from row 1 when there's no content
+      apiTable.clearLog();
+      assert.equal('', apiTable.log());
+      netsimTable.refreshTable_(callback);
+      clock.tick(0);
+      assert.equal('readAllFromID[1]', apiTable.log());
+    });
+
+    it("Requests from beyond most recent row received in refresh", function () {
       var row1, row2, row3, row4;
       netsimTable.create({}, function (err, result) { row1 = result; });
       netsimTable.create({}, function (err, result) { row2 = result; });
@@ -754,24 +741,20 @@ describe("NetSimTable", function () {
 
       apiTable.clearLog();
       netsimTable.refreshTable_(callback);
-      delayTest(0, testDone, function () {
-        // Intentionally "1" here - we update our internal "latestRowID"
-        // until after an incremental or full read.
-        assert.equal('readAllFromID[1]', apiTable.log());
-        assert.deepEqual([row1, row2, row3], netsimTable.readAll());
+      clock.tick(0);
+      // Intentionally "1" here - we update our internal "latestRowID"
+      // until after an incremental or full read.
+      assert.equal('readAllFromID[1]', apiTable.log());
+      assert.deepEqual([row1, row2, row3], netsimTable.readAll());
 
-        apiTable.clearLog();
-        netsimTable.create({}, function (err, result) { row4 = result; });
-        netsimTable.refreshTable_(callback);
-        delayTest(0, testDone, function () {
-          // Got 1, 2, 3 in last refresh, so we read all from 4 this time.
-          assert.equal('create[{}]readAllFromID[4]', apiTable.log());
-          assert.deepEqual([row1, row2, row3, row4], netsimTable.readAll());
-          testDone();
-        });
-      });
+      apiTable.clearLog();
+      netsimTable.create({}, function (err, result) { row4 = result; });
+      netsimTable.refreshTable_(callback);
+      clock.tick(0);
+      // Got 1, 2, 3 in last refresh, so we read all from 4 this time.
+      assert.equal('create[{}]readAllFromID[4]', apiTable.log());
+      assert.deepEqual([row1, row2, row3, row4], netsimTable.readAll());
     });
-
   });
 
 });
