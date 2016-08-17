@@ -5,3 +5,30 @@
   margin: 200px;
   font-style: italic;
 }
+
+$line-height: 30px;
+
+.integer-dropdown {
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle;
+
+  .Select-control {
+    height: $line-height - 2px;
+    line-height: $line-height - 2px;
+
+    .Select-placeholder, .Select-value {
+      line-height: $line-height - 2px;
+    }
+
+    .Select-input {
+      height: $line-height - 2px;
+      line-height: $line-height - 2px;
+
+      &> input {
+        padding: 2px 0 8px 0;
+      }
+    }
+
+  }
+}
