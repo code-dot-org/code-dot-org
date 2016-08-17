@@ -37,8 +37,7 @@ function runInFrame(code) {
   frame = document.createElement('iframe');
   frame.style.display = 'none';
   frame.setAttribute('sandbox', 'allow-scripts');
-  const markup = encodeURIComponent(`<script>${code}</script>`);
-  frame.setAttribute('src', `data:text/html;charset=utf-8,${markup}`);
+  frame.setAttribute('srcdoc', `<script>${code}</script>`);
   document.body.appendChild(frame);
 }
 
