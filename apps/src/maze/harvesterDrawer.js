@@ -38,7 +38,11 @@ export default class HarvesterDrawer extends Drawer {
       return;
     }
 
-    if (running) {
+    if (cell.startsHidden() && !running) {
+      this.show('sprout', row, col);
+      this.hide('crop', row, col);
+      this.hide('counter', row, col);
+    } else {
       if (cell.getCurrentValue() > 0) {
         this.show('crop', row, col);
         this.updateCounter(row, col, cell.getCurrentValue());
@@ -47,10 +51,6 @@ export default class HarvesterDrawer extends Drawer {
         this.hide('counter', row, col);
       }
       this.hide('sprout', row, col);
-    } else {
-      this.show('sprout', row, col);
-      this.hide('crop', row, col);
-      this.hide('counter', row, col);
     }
   }
 
