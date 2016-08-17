@@ -1132,5 +1132,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         properties: '{"maze 1": {"active": false}}'))
     assert_equal assigns(:level), level
   end
-
 end

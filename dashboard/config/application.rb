@@ -21,7 +21,6 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'

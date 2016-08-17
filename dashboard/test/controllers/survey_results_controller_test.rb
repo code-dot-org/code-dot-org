@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SurveyResultsControllerTest < ActionController::TestCase
-
   setup do
     @teacher = create(:teacher)
   end
@@ -48,5 +47,4 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert_equal 'Diversity2016', survey_result.kind
     assert survey_result['properties']['nonwhitelisted'].nil?
   end
-
 end
