@@ -109,20 +109,20 @@
       },
       {
         "entries": [
-          "turnRight:1"
+          "turnRight"
         ],
         "matchType": "exact",
         "minTimes": 3,
-        "message": "To draw the square you need to turn right at least 3 times (4 if you want to end up where you started)."
+        "message": "To draw the square you need to turnRight at least 3 times -- 4 if you want to end up where you started."
       },
       {
         "entries": [
           "moveForward:1",
-          "turnRight:1",
+          "turnRight",
           "moveForward:1",
-          "turnRight:1",
+          "turnRight",
           "moveForward:1",
-          "turnRight:1",
+          "turnRight",
           "moveForward:1"
         ],
         "matchType": "exact",

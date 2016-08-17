@@ -6,7 +6,7 @@ def slog(h)
 end
 
 class ApiControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @teacher = create(:teacher)
