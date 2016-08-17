@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/cdo/git_utils'
+
+`git merge origin/#{GitUtils.circle_pr_branch_base_no_origin}`
+
+exit($?.exitstatus)
