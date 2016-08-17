@@ -48,11 +48,15 @@ const AnimationPreview = React.createClass({
   },
 
   onMouseOver: function () {
-    this.advanceFrame();
+    if (!this.props.alwaysPlay){
+      this.advanceFrame();
+    }
   },
 
   onMouseOut: function () {
-    this.stopAndResetAnimation();
+    if (!this.props.alwaysPlay){
+      this.stopAndResetAnimation();
+    }
   },
 
   advanceFrame: function () {
