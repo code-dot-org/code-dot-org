@@ -65,6 +65,12 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study',
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1',
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
+    ],
+    COURSE_CSP => [
+      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
+      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
+      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
+      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'
     ]
   }
 
