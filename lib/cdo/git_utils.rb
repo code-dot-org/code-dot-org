@@ -1,4 +1,5 @@
 require 'json'
+require 'open-uri'
 
 module GitUtils
   # Returns true if file is different from the committed version in git.
