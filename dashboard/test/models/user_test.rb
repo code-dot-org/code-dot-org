@@ -1234,7 +1234,8 @@ class UserTest < ActiveSupport::TestCase
   test 'student and teacher relationships' do
     student = create :student
     teacher = create :teacher
-    section = create :section, user_id: teacher.id
+    section = create :section
+    section.users << teacher
 
     follow = Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
 
@@ -1294,6 +1295,33 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair_with?(student)
   end
 
+  test 'student_of_admin?' do
+    teacher = create :teacher
+    section1 = create :section, users: [teacher]
+
+    admin_teacher = create :admin_teacher
+    section2 = create :section, users: [admin_teacher]
+
+    student_of_none = create :student
+
+    student_of_normal_teacher = create :student
+    create :follower, section: section1, student_user: student_of_normal_teacher
+
+    student_of_admin_teacher = create :student
+    create :follower, section: section2, student_user: student_of_admin_teacher
+
+    student_of_both_teachers = create :student
+    create :follower, section: section1, student_user: student_of_both_teachers
+    create :follower, section: section2, student_user: student_of_both_teachers
+
+    assert !teacher.student_of_admin?
+    assert !admin_teacher.student_of_admin?
+    assert !student_of_none.student_of_admin?
+    assert !student_of_normal_teacher.student_of_admin?
+    assert student_of_admin_teacher.student_of_admin?
+    assert student_of_both_teachers.student_of_admin?
+  end
+
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
     fake_teacher = create :teacher
@@ -1329,8 +1357,8 @@ class UserTest < ActiveSupport::TestCase
 
     picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
-    assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
-    assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+    assert picture_section.users.first.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+    assert word_section.users.first.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
 
     student_without_password = create(:student, encrypted_password: '')
 
