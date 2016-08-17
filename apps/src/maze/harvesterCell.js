@@ -1,12 +1,5 @@
 /**
- * @overview HarvesterCell represents the contets of the grid elements for Bee.
- * Bee HarvesterCells are more complex than many other kinds of cell; they can be
- * "hidden" with clouds, they can represent multiple different kinds of
- * element (flower, hive), some of which can be multiple colors (red,
- * purple), and which can have a range of possible values.
- *
- * Some cells can also be "variable", meaning that their contents are
- * not static but can in fact be randomized between runs.
+ * @overview HarvesterCell represents the contets of the grid elements for Harvester.
  */
 
 import Cell from './cell';
