@@ -69,11 +69,16 @@ var HarvesterCellEditor = React.createClass({
         <label htmlFor="possibleFeatures">Possible Features:</label>
         {Object.keys(HarvesterCell.FeatureType).map(function (type) {
           var value = HarvesterCell.FeatureType[type];
-          return (<label key={type}><input type="checkbox" name="possibleFeatures" value={value} checked={values.possibleFeatures.includes(value)} onChange={this.handleChange} />{type}</label>);
+          return (
+            <label className="checkbox" key={type}>
+              <input type="checkbox" name="possibleFeatures" value={value} checked={values.possibleFeatures.includes(value)} onChange={this.handleChange} />
+              {type}
+            </label>
+          );
         }, this)}
 
         <label htmlFor="startsHidden">Starts Hidden:</label>
-        <input type="checkbox" name="startsHidden" checked={values.startsHidden} value={true} onChange={this.handleChange} />
+        <input style={{margin: 0}} type="checkbox" name="startsHidden" checked={values.startsHidden} value={1} onChange={this.handleChange} />
 
         <label htmlFor="value">Value:</label>
         <input type="number" name="value" min="0" value={values.value} onChange={this.handleChange} />

@@ -55,7 +55,11 @@ export default class HarvesterCell extends Cell {
     /**
      * @type {Boolean}
      */
-    this.startsHidden_ = startsHidden;
+    this.startsHidden_ = !!startsHidden;
+  }
+
+  startsHidden() {
+    return this.startsHidden_;
   }
 
   /**
