@@ -526,12 +526,22 @@ describe("NetSimTable", function () {
       netsimTable.setMinimumDelayBeforeRefresh(COALESCE_WINDOW);
     });
 
-    it("does not read until minimum delay passes", function (testDone) {
-      netsimTable.refreshTable_(callback);
-      assert.equal('', apiTable.log());
-      delayTest(COALESCE_WINDOW, testDone, function () {
+    describe('with fake timers', function () {
+      let clock;
+
+      beforeEach(function () {
+        clock = sinon.useFakeTimers(Date.now());
+      });
+
+      afterEach(function () {
+        clock.restore();
+      });
+
+      it("does not read until minimum delay passes", function () {
+        netsimTable.refreshTable_(callback);
+        assert.equal('', apiTable.log());
+        clock.tick(COALESCE_WINDOW);
         assert.equal('readAll', apiTable.log());
-        testDone();
       });
     });
 
