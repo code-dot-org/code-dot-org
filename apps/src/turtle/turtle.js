@@ -683,11 +683,11 @@ Artist.prototype.runButtonClick = function () {
   this.execute();
 };
 
-Artist.prototype.evalCode = function (code, async) {
+Artist.prototype.evalCode = function (code, asyncCallback) {
   try {
     codegen.evalWith(code, {
       Turtle: this.api
-    }, async);
+    }, asyncCallback);
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
     // stop further execution, animate what occured before the infinite loop,
