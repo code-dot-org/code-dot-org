@@ -1443,7 +1443,10 @@ function loadStudio(skin, assetUrl) {
   skin.mapChoices = [
     [msg.setMapRandom(), RANDOM_VALUE],
     [msg.setMapBlank(), 'blank'],
-    ['set test map', 'testwall'],
+    [msg.setMapCircle(), 'circle'],
+    [msg.setMapHorizontal(), 'horizontal'],
+    [msg.setMapGrid(), 'grid'],
+    [msg.setMapBlobs(), 'blobs']
   ];
 
   skin.wallMapLayers = {
@@ -1452,6 +1455,18 @@ function loadStudio(skin, assetUrl) {
     },
     testwall: {
       srcUrl: skin.assetUrl('obstacle_testwall.png'),
+    },
+    circle: {
+      srcUrl: skin.assetUrl('obstacle_circle.png'),
+    },
+    horizontal: {
+      srcUrl: skin.assetUrl('obstacle_horizontal.png'),
+    },
+    grid: {
+      srcUrl: skin.assetUrl('obstacle_grid.png'),
+    },
+    blobs: {
+      srcUrl: skin.assetUrl('obstacle_blobs.png'),
     },
   };
 
