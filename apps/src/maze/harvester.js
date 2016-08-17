@@ -27,8 +27,8 @@ export default class Harvester extends Gatherer {
     return this.hasHarvest(HarvesterCell.FeatureType.PUMPKIN, id);
   }
 
-  hasWheat(id) {
-    return this.hasHarvest(HarvesterCell.FeatureType.WHEAT, id);
+  hasBean(id) {
+    return this.hasHarvest(HarvesterCell.FeatureType.BEAN, id);
   }
 
   hasHarvest(crop, id) {
@@ -49,8 +49,8 @@ export default class Harvester extends Gatherer {
     return this.atHarvest(HarvesterCell.FeatureType.PUMPKIN, id);
   }
 
-  atWheat(id) {
-    return this.atHarvest(HarvesterCell.FeatureType.WHEAT, id);
+  atBean(id) {
+    return this.atHarvest(HarvesterCell.FeatureType.BEAN, id);
   }
 
   atHarvest(crop, id) {
@@ -76,8 +76,8 @@ export default class Harvester extends Gatherer {
     this.getHarvest(HarvesterCell.FeatureType.PUMPKIN, id);
   }
 
-  getWheat(id) {
-    this.getHarvest(HarvesterCell.FeatureType.WHEAT, id);
+  getBean(id) {
+    this.getHarvest(HarvesterCell.FeatureType.BEAN, id);
   }
 
   getHarvest(crop, id) {
@@ -108,8 +108,8 @@ export default class Harvester extends Gatherer {
     this.animateGetHarvest(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  animateGetWheat(id) {
-    this.animateGetHarvest(HarvesterCell.FeatureType.WHEAT);
+  animateGetBean(id) {
+    this.animateGetHarvest(HarvesterCell.FeatureType.BEAN);
   }
 
   animateGetHarvest(crop) {

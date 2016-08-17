@@ -6,7 +6,7 @@ var msg = require('./locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
-const CROPS = ['corn', 'pumpkin', 'wheat'];
+const CROPS = ['corn', 'pumpkin', 'bean'];
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -67,7 +67,7 @@ function addIfSpecificCropHasBlock(blockly, generator, crop) {
     init: function () {
       this.setHSV(196, 1.0, 0.79);
       this.appendDummyInput()
-          .appendTitle([msg.ifCode(), msg.has(), msg[crop]()].join(' '));
+          .appendTitle([msg.ifCode(), msg[`has${crop}`]()].join(' '));
       this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());
@@ -90,7 +90,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
     init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle([msg.whileMsg(), msg.has(), msg[crop]()].join(' '));
+          .appendTitle([msg.whileMsg(), msg[`has${crop}`]()].join(' '));
       this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());
@@ -119,7 +119,7 @@ exports.install = function (blockly, blockInstallOptions) {
     blockUtils.generateSimpleBlock(blockly, generator, {
       name: `harvester_${crop}`,
       helpUrl: '',
-      title: isK1 ? msg.get() : `${msg.get()} ${msg[crop]()}`,
+      title: isK1 ? msg.pick() : `${msg.pick()} ${msg[crop]()}`,
       titleImage: isK1 ? skin[crop] : undefined,
       tooltip: msg[`${crop}Tooltip`](),
       functionName: `Maze.get${capitalizeFirstLetter(crop)}`
@@ -131,7 +131,8 @@ exports.install = function (blockly, blockInstallOptions) {
     addWhileSpecificCropHasBlock(blockly, generator, crop);
   });
 
-  const LOCATIONS = CROPS.map(crop => [msg[crop](), capitalizeFirstLetter(crop)]);
+  const AT_OPTIONS = CROPS.map(crop => [msg[crop](), capitalizeFirstLetter(crop)]);
+  const HAS_OPTIONS = CROPS.map(crop => [msg[`has${crop}`](), capitalizeFirstLetter(crop)]);
 
   blockly.Blocks.harvester_ifAtCrop = {
     helpUrl: '',
@@ -140,7 +141,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
           .appendTitle([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(LOCATIONS), 'LOC');
+          .appendTitle(new blockly.FieldDropdown(AT_OPTIONS), 'LOC');
       this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());
@@ -163,7 +164,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
           .appendTitle([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(LOCATIONS), 'LOC');
+          .appendTitle(new blockly.FieldDropdown(AT_OPTIONS), 'LOC');
       this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());
@@ -187,9 +188,9 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(196, 1.0, 0.79);
       this.appendDummyInput()
-          .appendTitle([msg.ifCode(), msg.has()].join(' '));
+          .appendTitle(msg.ifCode());
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(LOCATIONS), 'LOC');
+          .appendTitle(new blockly.FieldDropdown(HAS_OPTIONS), 'LOC');
       this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());
@@ -210,9 +211,9 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
-          .appendTitle([msg.whileMsg(), msg.has()].join(' '));
+          .appendTitle(msg.whileMsg());
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(LOCATIONS), 'LOC');
+          .appendTitle(new blockly.FieldDropdown(HAS_OPTIONS), 'LOC');
       this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());

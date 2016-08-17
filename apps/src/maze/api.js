@@ -312,8 +312,8 @@ exports.getPumpkin = API_FUNCTION(function (id) {
   Maze.subtype.getPumpkin(id);
 });
 
-exports.getWheat = API_FUNCTION(function (id) {
-  Maze.subtype.getWheat(id);
+exports.getBean = API_FUNCTION(function (id) {
+  Maze.subtype.getBean(id);
 });
 
 exports.atCorn = API_FUNCTION(function (id) {
@@ -324,8 +324,8 @@ exports.atPumpkin = API_FUNCTION(function (id) {
   return Maze.subtype.atPumpkin(id);
 });
 
-exports.atWheat = API_FUNCTION(function (id) {
-  return Maze.subtype.atWheat(id);
+exports.atBean = API_FUNCTION(function (id) {
+  return Maze.subtype.atBean(id);
 });
 
 exports.hasCorn = API_FUNCTION(function (id) {
@@ -336,6 +336,6 @@ exports.hasPumpkin = API_FUNCTION(function (id) {
   return Maze.subtype.hasPumpkin(id);
 });
 
-exports.hasWheat = API_FUNCTION(function (id) {
-  return Maze.subtype.hasWheat(id);
+exports.hasBean = API_FUNCTION(function (id) {
+  return Maze.subtype.hasBean(id);
 });
