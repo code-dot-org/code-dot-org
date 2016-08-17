@@ -544,7 +544,7 @@ EOS
 end.each do |succeeded, message, reruns|
   $total_flaky_reruns += reruns
   if succeeded
-    $total_flaky_successful_reruns += 1
+    $total_flaky_successful_reruns += reruns
     $suite_success_count += 1
   else
     $suite_fail_count += 1
