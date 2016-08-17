@@ -168,7 +168,7 @@ export default connect(state => ({
     dispatch(setAnimationName(animationKey, newName));
   },
   setAnimationFrameRate(animationKey, frameRate) {
-    let debounced = _.debounce(dispatch, 200);
+    let debounced = _.debounce(dispatch, 100);
     debounced(setAnimationFrameRate(animationKey, frameRate));
   }
 }))(Radium(AnimationListItem));
