@@ -1,3 +1,5 @@
+require 'json'
+
 module GitUtils
   # Returns true if file is different from the committed version in git.
   def self.file_changed_from_git?(file)
@@ -54,13 +56,11 @@ module GitUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    begin
-      pr_number = ENV['CIRCLE_PR_NUMBER']
-      pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
-      pr_json['base']['ref']
-    rescue => e
-      nil
-    end
+    pr_number = ENV['CIRCLE_PR_NUMBER']
+    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
+    pr_json['base']['ref']
+  rescue => _
+    nil
   end
 
   # Given a branch name, returns its likely base branch / merge destination

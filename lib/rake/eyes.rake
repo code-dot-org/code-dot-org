@@ -64,19 +64,19 @@ namespace :eyes do
     HipChat.log "#{MERGE_EMOJI}  Merging baselines #{args}"
     merge_eyes_baselines(args[:branch], args[:base])
   end
-  task :force_merge, [:branch, :base] do |t, args|
+  task :force_merge, [:branch, :base] do |_, args|
     HipChat.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
     force_merge_eyes_baselines(args[:branch], args[:base])
   end
-  task :force_copy, [:branch, :base] do |t, args|
+  task :force_copy, [:branch, :base] do |_, args|
     HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
     force_copy_eyes_baselines(args[:branch], args[:base])
   end
-  task :create, [:branch] do |t, args|
+  task :create, [:branch] do |_, args|
     HipChat.log "#{Emoji.find_by_alias('baby').raw}  Creating branch #{args}"
     create_branch(args[:branch])
   end
-  task :delete, [:branch] do |t, args|
+  task :delete, [:branch] do |_, args|
     HipChat.log "Deleting branch #{args}"
     delete_eyes_branch(args[:branch])
   end
