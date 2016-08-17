@@ -25,6 +25,8 @@ require 'open3'
 require 'parallel'
 require 'socket'
 
+require_relative './utils/selenium_browser'
+
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
@@ -176,12 +178,7 @@ $total_flaky_reruns = 0
 $failures = []
 
 if $options.local
-  # Verify that chromedriver is actually running
-  unless `ps`.include?('chromedriver')
-    puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
-chromedriver found at #{`which chromedriver`}"
-    system("chromedriver &")
-  end
+  SeleniumBrowser.ensure_chromedriver_running
   $browsers = [{:browser => "local"}]
 end
 

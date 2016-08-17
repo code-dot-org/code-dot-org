@@ -21,6 +21,7 @@ dependencies:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
+    - ".tmputils"
   override:
     - sudo apt-get install libicu-dev enscript
     - bundle install --without ''
