@@ -32,11 +32,11 @@ group :development do
   gem 'annotate', '~> 2.6.6'
   gem 'rack-mini-profiler'
   gem 'web-console', '~> 2.0'
+  gem 'thin', '~> 1.6.2'
 end
 
 group :development, :test do
   gem 'shotgun'
-  gem 'thin', '~> 1.6.2'
   gem 'rerun', '~> 0.10.0'
   gem 'rack-cache'
   # Use debugger
