@@ -4357,14 +4357,6 @@ en:
         7 bits: 7 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
         ? |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
-
-          How many bits would you need to encode everything that could be typed on this keyboard?
-        : |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
-
-          How many bits would you need to encode everything that could be typed on this keyboard?
-        ? |-
           The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
@@ -4387,7 +4379,6 @@ en:
         097 112 112 108 101: 097 112 112 108 101
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
         'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
-        'The word "Apple" translated into its ASCII number equivalent is:': 'The word "Apple" translated into its ASCII number equivalent is:'
       U1L2 Multiple Choice Assessment Question:
         'A binary question is defined as:': 'A binary question is defined as:'
         A message which has two possible states: A message which has two possible states
@@ -4417,7 +4408,6 @@ en:
         '4': '4'
         '6': '6'
         '8': '8'
-        If you just had a circle and a square, how many 3-shape permutations could you make?: If you just had a circle and a square, how many 3-shape permutations could you make?
         If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?: If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
       U1L8 Multiple Choice:
@@ -4428,8 +4418,6 @@ en:
         'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
         ? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
         : You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
-        ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
-        : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
       U2L01 Assessment 1:
         A loosely organized collection of citizens and engineers who communicate mostly by email.: A loosely organized collection of citizens and engineers who communicate mostly by email.
         An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
