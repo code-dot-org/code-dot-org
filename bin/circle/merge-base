@@ -2,6 +2,10 @@
 
 require_relative '../../lib/cdo/git_utils'
 
+`echo "$CIRCLE_PR_NUMBER"`
+`echo "$CIRCLE_PROJECT_USERNAME"`
+`echo "$CIRCLE_BRANCH"`
+
 `git merge origin/#{GitUtils.circle_pr_branch_base_no_origin}`
 
 exit($?.exitstatus)
