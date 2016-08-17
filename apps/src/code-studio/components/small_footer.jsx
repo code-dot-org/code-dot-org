@@ -33,9 +33,6 @@ var SmallFooter = React.createClass({
     // encode string of html
     i18nDropdown: React.PropTypes.string,
     privacyPolicyInBase: React.PropTypes.bool.isRequired,
-    privacyPolicyStrings: React.PropTypes.shape({
-      link: React.PropTypes.string.isRequired
-    }),
     copyrightInBase: React.PropTypes.bool.isRequired,
     copyrightStrings: React.PropTypes.shape({
       thank_you: React.PropTypes.string.isRequired,
