@@ -63,6 +63,8 @@ export default class HarvesterDrawer extends Drawer {
         this.hide('counter', row, col);
       } else if (variableCell.isVariableRange()) {
         this.updateCounter(row, col, '?');
+      } else {
+        this.updateCounter(row, col, cell.getOriginalValue());
       }
     }
   }
