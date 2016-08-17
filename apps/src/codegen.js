@@ -35,17 +35,18 @@ function runInFrame(code) {
     document.body.removeChild(frame);
   }
   frame = document.createElement('iframe');
+  frame.style.display = 'none';
   frame.setAttribute('sandbox', 'allow-scripts');
-  frame.style = 'display: none;';
-  frame.src = `data:text/html;charset=utf-8,<script>${code}</script>`;
+  const markup = encodeURIComponent(`<script>${code}</script>`);
+  frame.setAttribute('src', `data:text/html;charset=utf-8,${markup}`);
   document.body.appendChild(frame);
 }
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
-exports.evalWith = function (code, options, async) {
-  if (async) {
+exports.evalWith = function (code, options, asyncCallback) {
+  if (asyncCallback) {
     code += 'wrapper.done();';
     options.wrapper = {done: () => null};
   }
@@ -58,7 +59,7 @@ exports.evalWith = function (code, options, async) {
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
     myInterpreter.run();
-  } else if (async) {
+  } else if (asyncCallback) {
 
     const mocks = [];
     for (let api in options) {
@@ -76,14 +77,14 @@ exports.evalWith = function (code, options, async) {
             window.parent.postMessage({
               api: '${api}',
               fn: '${fn}',
-              args: arguments
+              args: [].slice.call(arguments, 0)
             }, '*');
           }`;
       }
     }
 
     // Override the `done` handler to hook program completion.
-    messageHandlers.wrapper = {done: async};
+    messageHandlers.wrapper = {done: asyncCallback};
 
     const generatedApi = '[{' + mocks.map(m => Object.keys(m).map(k => `${k}:${m[k]}`).join(',')).join('},{') + '}]';
     const fullCode = `(function (${Object.keys(options).join(',')}) { ${code} }).apply(null, ${generatedApi})`;
