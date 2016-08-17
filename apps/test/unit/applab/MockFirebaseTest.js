@@ -3,6 +3,23 @@ import MockFirebase from '../../util/MockFirebase';
 import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
 
 describe('MockFirebase', () => {
+  describe('initialization', () => {
+    let firebase;
+
+    beforeEach(() => {
+      firebase = new MockFirebase('https://example.firebaseio.com/');
+      firebase.autoFlush();
+      return firebase.set('foo');
+    });
+
+    it('tests can see data set in beforeEach', done => {
+      firebase.once('value').then(snapshot => {
+        expect(snapshot.val()).to.equal('foo');
+        done();
+      });
+    });
+  });
+
   describe('when invoked directly', () => {
     let firebase;
 
@@ -19,7 +36,7 @@ describe('MockFirebase', () => {
             expect(snapshot.val()).to.equal('foo');
             done();
           },
-          error => console.warn(error));
+          error => {throw error;});
       });
 
       it('resolves promises', done => {
@@ -50,6 +67,32 @@ describe('MockFirebase', () => {
 
       it('resolves promises', done => {
         firebase.update({foo: 'bar'}).then(done);
+      });
+    });
+
+    describe('transaction', () => {
+      it('calls callbacks', done => {
+        firebase.set('foo', () => {
+          firebase.transaction(data => {
+            return 'bar';
+          }, (error, committed, snapshot) => {
+            expect(committed).to.equal(true);
+            expect(snapshot.val()).to.equal('bar');
+            done();
+          });
+        });
+      });
+
+      it('resolves promises', done => {
+        firebase.set('foo').then(() => {
+          firebase.transaction(data => {
+            return 'bar';
+          }).then(txnData => {
+            expect(txnData.committed).to.equal(true);
+            expect(txnData.snapshot.val()).to.equal('bar');
+            done();
+          });
+        });
       });
     });
   });

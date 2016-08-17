@@ -43,7 +43,7 @@ if ARGV.length != 2
 end
 
 filename = ARGV[0]
-batch_size = ARGV[1]
+batch_size = ARGV[1].to_i
 
 # Since the updated_at field is used as a proxy for "last_progress_at" for the
 # user_level, we intentionally do not want to modify that field.
@@ -54,19 +54,24 @@ begin
   # the updates in a transaction.
   update_array = []
   CSV.foreach(filename) do |line|
-    user_levels_id = line[0]
-    level_source_id = line[1]
+    user_levels_id = line[0].to_i
+    level_source_id = line[1].to_i
     update_array << [user_levels_id, level_source_id]
   end
 
+  puts "Found #{update_array.length} updates to process..."
+
   # Process the array in batches, so that the transactions are appropriate
   # sized.
+  batch_index = 0
   update_array.each_slice(batch_size) do |update_array_slice|
+    puts "Updating #{batch_index} to #{batch_index + batch_size} of #{update_array.length}..."
+    batch_index += batch_size
     ActiveRecord::Base.transaction do
       update_array_slice.each do |user_levels_id, level_source_id|
         UserLevel.
           find_by_id(user_levels_id).
-          update(level_source_id: level_source_id)
+          update!(level_source_id: level_source_id)
       end
     end
   end

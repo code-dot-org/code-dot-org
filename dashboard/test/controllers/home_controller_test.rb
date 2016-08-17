@@ -3,7 +3,7 @@ require 'test_helper'
 require 'time'
 
 class HomeControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     # stub properties so we don't try to hit pegasus db
