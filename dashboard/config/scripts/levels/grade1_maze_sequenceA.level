@@ -28,8 +28,7 @@
     "examples_required": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"grade1_maze_sequence10_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
