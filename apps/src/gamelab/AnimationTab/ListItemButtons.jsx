@@ -9,8 +9,8 @@ import * as PropTypes from '../PropTypes';
 
 var styles = {
   root: {
-    marginLeft: 4,
-    marginRight: 4,
+    marginRight: 6,
+    marginLeft: 6,
     marginTop: 6,
     textAlign: 'center',
     color: color.white,
@@ -37,7 +37,7 @@ var styles = {
 };
 
 var sliderStyle = {
-  slidercell: {
+  sliderCell: {
     float: 'none'
   }
 };
@@ -48,7 +48,7 @@ var sliderStyle = {
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
-      <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameRate} onChange={props.onFrameRateChanged}/>
+      <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameRate} lineWidth={120} onChange={props.onFrameRateChanged}/>
       <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
       <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
     </div>
