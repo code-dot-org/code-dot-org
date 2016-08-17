@@ -66,6 +66,30 @@ const input = {
   padding: '4px 6px'
 };
 
+const viewHeader = {
+  marginTop: 10,
+    marginBottom: 10,
+    marginLeft: 0,
+    marginRight: 0,
+};
+
+const backLink = {
+  fontSize: 17.5,
+};
+
+const debugLink = {
+  float: 'right',
+};
+
+const debugData = {
+  backgroundColor: color.lightest_gray,
+  borderRadius: 10,
+  border: `1px solid ${color.light_gray}`,
+  fontFamily: 'monospace',
+  padding: 10,
+  whiteSpace: 'pre-wrap',
+};
+
 export {
   editRow,
   addRow,
@@ -76,5 +100,9 @@ export {
   button,
   editButton,
   rightButton,
-  input
+  input,
+  viewHeader,
+  backLink,
+  debugLink,
+  debugData,
 };
