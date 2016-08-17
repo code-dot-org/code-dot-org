@@ -45,6 +45,13 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
 end
 
 def generate_professional_development_workshop_teachers_report
+  # Grab the script IDs for the CSF scripts.
+  csf_script_ids = DASHBOARD_DB[:scripts].
+    where('name IN ("20-hour", "course1", "course2", "course3", "course4")').
+    select(:id).
+    map(&:values).
+    flatten
+
   # generate a report about the teachers trained by affiliates and their students' progress
   PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |affiliate|
     data = JSON.parse(affiliate[:data]) rescue {}
@@ -67,10 +74,10 @@ def generate_professional_development_workshop_teachers_report
         count
 
       students_with_progress_count = DASHBOARD_DB[:followers].
-        where(user_id: teacher_user_id).
+        where(followers__user_id: teacher_user_id).
         join(:users, id: :student_user_id).
-        join(:user_scripts, user_id: id).
-        where(script_id: [1, 17, 18, 19, 23]).
+        join(:user_scripts, user_id: :id).
+        where(script_id: csf_script_ids).
         count
 
       {
