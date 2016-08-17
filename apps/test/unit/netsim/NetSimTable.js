@@ -1,5 +1,6 @@
 'use strict';
 import {assert} from '../../util/configuredChai';
+import sinon from 'sinon';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -486,26 +487,34 @@ describe("NetSimTable", function () {
     assert.equal(notifyCount, 1);
   });
 
-  it("polls table on tick", function (testDone) {
-    // Initial tick always triggers a poll event.
-    netsimTable.tick();
-    delayTest(0, testDone, function () {
+  describe('polling', function () {
+    let clock;
+
+    beforeEach(function () {
+      clock = sinon.useFakeTimers(Date.now());
+    });
+
+    afterEach(function () {
+      clock.restore();
+    });
+
+    it("polls table on tick", function () {
+      // Initial tick always triggers a poll event.
+      netsimTable.tick();
+      clock.tick(0);
       assert.equal(apiTable.log(), 'readAll');
 
       // Additional tick does not trigger poll event...
       apiTable.log('');
       netsimTable.tick();
-      delayTest(0, testDone, function () {
-        assert.equal(apiTable.log(), '');
+      clock.tick(0);
+      assert.equal(apiTable.log(), '');
 
-        // Until poll interval is reached.
-        netsimTable.lastRefreshTime_ = Date.now() - (netsimTable.pollingInterval_);
-        netsimTable.tick();
-        delayTest(0, testDone, function () {
-          assert.equal(apiTable.log(), 'readAll');
-          testDone();
-        });
-      });
+      // Until poll interval is reached.
+      clock.tick(netsimTable.pollingInterval_);
+      netsimTable.tick();
+      clock.tick(0);
+      assert.equal(apiTable.log(), 'readAll');
     });
   });
 
