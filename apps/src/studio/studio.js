@@ -1652,6 +1652,8 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
   if (wallMapLayer) {
     // Compare against a layout image
 
+    Studio.drawDebugOverlay(skin.wallMapLayers[Studio.wallMapRequested].srcUrl);
+
     const yTop = yCenter - collidableHeight / 2;
     const yBottom = yTop + collidableHeight;
     const xLeft = xCenter - collidableWidth / 2;
@@ -3286,12 +3288,33 @@ Studio.drawTimeoutRect = function () {
 };
 
 /**
+ * Draw an image with 0.5 opacity over the entire play area.
+ */
+Studio.drawDebugOverlay = function (src) {
+  if (showDebugInfo) {
+    const svg = document.getElementById('svgStudio');
+    const group = document.createElementNS(SVG_NS, 'g');
+    group.setAttribute('class', "walls debugImage");
+    const mapImage = document.createElementNS(SVG_NS, 'image');
+    mapImage.setAttribute('width', Studio.MAZE_WIDTH);
+    mapImage.setAttribute('height', Studio.MAZE_HEIGHT);
+    mapImage.setAttribute('x', 0);
+    mapImage.setAttribute('y', 0);
+    mapImage.setAttribute('opacity', '0.5');
+    mapImage.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', src);
+    group.appendChild(mapImage);
+    svg.appendChild(group);
+  }
+};
+
+/**
  * Clear the debug rectangles.
  */
 
 Studio.clearDebugElements = function () {
   $(".debugRect").remove();
   $(".debugLine").remove();
+  $(".debugImage").remove();
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
