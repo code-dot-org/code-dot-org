@@ -6,9 +6,10 @@ var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 describe("NetSimTable", function () {
-  var apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
+  let clock, apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
 
   beforeEach(function () {
+    clock = sinon.useFakeTimers(Date.now());
     fakeChannel = {
       subscribe: function () {}
     };
@@ -29,6 +30,10 @@ describe("NetSimTable", function () {
       notified = true;
       notifyCount++;
     });
+  });
+
+  afterEach(function () {
+    clock.restore();
   });
 
   it("throws if constructed with missing arguments", function () {
@@ -472,16 +477,6 @@ describe("NetSimTable", function () {
   });
 
   describe('polling', function () {
-    let clock;
-
-    beforeEach(function () {
-      clock = sinon.useFakeTimers(Date.now());
-    });
-
-    afterEach(function () {
-      clock.restore();
-    });
-
     it("polls table on tick", function () {
       // Initial tick always triggers a poll event.
       netsimTable.tick();
@@ -504,16 +499,10 @@ describe("NetSimTable", function () {
 
   describe("initial delay coalescing", function () {
     const COALESCE_WINDOW = 100; // ms
-    let clock;
 
     beforeEach(function () {
-      clock = sinon.useFakeTimers(Date.now());
       // Re-enable 100ms before-refresh delay to coalesce messages
       netsimTable.setMinimumDelayBeforeRefresh(COALESCE_WINDOW);
-    });
-
-    afterEach(function () {
-      clock.restore();
     });
 
     it("does not read until minimum delay passes", function () {
@@ -561,17 +550,9 @@ describe("NetSimTable", function () {
   });
 
   describe("refresh throttling", function () {
-    let clock;
-
     beforeEach(function () {
-      clock = sinon.useFakeTimers(Date.now());
-
       // Re-enable 50ms refreshTable_ throttle to test throttling feature
       netsimTable.setMinimumDelayBetweenRefreshes(50);
-    });
-
-    afterEach(function () {
-      clock.restore();
     });
 
     it("still reads immediately on first request", function () {
@@ -638,17 +619,9 @@ describe("NetSimTable", function () {
   });
 
   describe("refresh jitter", function () {
-    let clock;
-
     beforeEach(function () {
-      clock = sinon.useFakeTimers(Date.now());
-
       // Re-enable 50ms jitter to test random refresh delays.
       netsimTable.setMaximumJitterDelay(50);
-    });
-
-    afterEach(function () {
-      clock.restore();
     });
 
     it("waits a random amount of time before reading on each request", function () {
@@ -696,10 +669,7 @@ describe("NetSimTable", function () {
   });
 
   describe("incremental update", function () {
-    let clock;
-
     beforeEach(function () {
-      clock = sinon.useFakeTimers(Date.now());
       // New table configured for incremental refresh
       netsimTable = NetSimTestUtils.overrideNetSimTableApi(
           new NetSimTable(fakeChannel, 'testShard', 'testTable', {
@@ -711,10 +681,6 @@ describe("NetSimTable", function () {
 
       // Necessary to re-get apiTable when we recreate netsimTable
       apiTable = netsimTable.api_.remoteTable;
-    });
-
-    afterEach(function () {
-      clock.restore();
     });
 
     it("Initially requests from row 1", function () {
