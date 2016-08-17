@@ -85,6 +85,15 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
+    this.setState({frameRate: nextProps.animationProps.frameRate});
+  },
+
+  componentWillMount() {
+    this.setState({frameRate: this.props.animationProps.frameRate});
+    this.debounced = _.debounce(() => {
+      const latestFrameRate = this.state.frameRate;
+      this.props.setAnimationFrameRate(this.props.animationKey, latestFrameRate);
+    }, 200);
   },
 
   onSelect() {
@@ -105,8 +114,9 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
-  setAnimationFrameRate(event) {
-    this.props.setAnimationFrameRate(this.props.animationKey, event);
+  setAnimationFrameRate(frameRate) {
+    this.setState({frameRate: frameRate});
+    this.debounced();
   },
 
   render() {
@@ -137,7 +147,7 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={this.props.animationProps}
+          animationProps={Object.assign({}, this.props.animationProps, {frameRate: this.state.frameRate})}
           isSelected={this.props.isSelected}
         />
         {animationName}
@@ -146,7 +156,7 @@ const AnimationListItem = React.createClass({
             onFrameRateChanged={this.setAnimationFrameRate}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
-            frameRate={this.props.animationProps.frameRate}
+            frameRate={this.state.frameRate}
           />}
       </div>
     );
@@ -154,21 +164,22 @@ const AnimationListItem = React.createClass({
 });
 export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
-}), dispatch => ({
-  cloneAnimation(animationKey) {
-    dispatch(cloneAnimation(animationKey));
-  },
-  deleteAnimation(animationKey) {
-    dispatch(deleteAnimation(animationKey));
-  },
-  selectAnimation(animationKey) {
-    dispatch(selectAnimation(animationKey));
-  },
-  setAnimationName(animationKey, newName) {
-    dispatch(setAnimationName(animationKey, newName));
-  },
-  setAnimationFrameRate(animationKey, frameRate) {
-    let debounced = _.debounce(dispatch, 100);
-    debounced(setAnimationFrameRate(animationKey, frameRate));
-  }
-}))(Radium(AnimationListItem));
+}), dispatch => {
+  return {
+    cloneAnimation(animationKey) {
+      dispatch(cloneAnimation(animationKey));
+    },
+    deleteAnimation(animationKey) {
+      dispatch(deleteAnimation(animationKey));
+    },
+    selectAnimation(animationKey) {
+      dispatch(selectAnimation(animationKey));
+    },
+    setAnimationName(animationKey, newName) {
+      dispatch(setAnimationName(animationKey, newName));
+    },
+    setAnimationFrameRate(animationKey, frameRate) {
+      dispatch(setAnimationFrameRate(animationKey, frameRate));
+    }
+  };
+})(Radium(AnimationListItem));
