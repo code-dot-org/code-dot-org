@@ -515,7 +515,7 @@ module LevelsHelper
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
-  def instruction_gif_asset_path filename
+  def instruction_gif_asset_path(filename)
     File.join('/', instruction_gif_relative_path, filename)
   end
 
