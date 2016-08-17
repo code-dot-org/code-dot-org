@@ -91,6 +91,7 @@ export function incrementRateLimitCounters() {
           const nextResetTimeMs = lastResetTimeMs + interval * 1000;
           const timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
           // TODO(dave): notify new relic
+          Applab.showRateLimitAlert();
           return Promise.reject(`rate limit exceeded. please wait ${timeRemaining} seconds before retrying.`);
         } else {
           return Promise.resolve();
