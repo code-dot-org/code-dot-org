@@ -173,6 +173,7 @@ $suite_success_count = 0
 $suite_fail_count = 0
 # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
 $total_flaky_reruns = 0
+$total_flaky_successful_reruns = 0
 $failures = []
 
 if $options.local
@@ -543,6 +544,7 @@ EOS
 end.each do |succeeded, message, reruns|
   $total_flaky_reruns += reruns
   if succeeded
+    $total_flaky_successful_reruns += 1
     $suite_success_count += 1
   else
     $suite_fail_count += 1
@@ -559,6 +561,7 @@ HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " 
   "Test count: #{($suite_success_count + $suite_fail_count)}. " \
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
   "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
 if $suite_fail_count > 0
