@@ -37,7 +37,9 @@ Style/WordArray:
 
 # END CODE.ORG OVERRIDES
 
-# BEGIN BLACKLIST
+# BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
+# future. Rules we plan to fix (but are currently failing) belong in
+# .rubocop_todo.yml.
 
 Metrics/AbcSize:
   Enabled: false
