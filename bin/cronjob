@@ -55,11 +55,13 @@ end
 # honeybadger_notify - log an error to honeybadger.
 #
 def honeybadger_notify command, exitstatus, stdout, stderr
-  Honeybadger.configure do |config|
-    config.api_key = CDO.cronjobs_honeybadger_api_key
-    config.environment_name = ENV['RACK_ENV']
-  end
-
+  ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
+  # Configure and start Honeybadger
+  honeybadger_config = Honeybadger::Config.new(
+    env: ENV['RACK_ENV'],
+    api_key: CDO.cronjobs_honeybadger_api_key
+  )
+  Honeybadger.start(honeybadger_config)
   Honeybadger.notify_command_error "cronjob #{command}", exitstatus, stdout, stderr
 end
 
