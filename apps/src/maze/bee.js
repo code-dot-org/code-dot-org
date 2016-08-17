@@ -1,4 +1,4 @@
-import utils from '../utils';
+import { randomValue } from '../utils';
 import Gatherer from './gatherer';
 import mazeMsg from './locale';
 import BeeCell from './beeCell';
@@ -456,6 +456,22 @@ export default class Bee extends Gatherer {
     this.maze_.gridItemDrawer.updateItemImage(row, col, true);
 
     this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  }
+
+  /**
+   * @override
+   */
+  getEmptyTile(x, y, adjacentToPath, wallMap) {
+    // begin with three trees
+    var tileChoices = ['null3', 'null4', 'null0'];
+    var noTree = 'null1';
+    // want it to be more likely to have a tree when adjacent to path
+    var n = adjacentToPath ? tileChoices.length * 2 : tileChoices.length * 6;
+    for (var i = 0; i < n; i++) {
+      tileChoices.push(noTree);
+    }
+
+    return randomValue(tileChoices);
   }
 
 }

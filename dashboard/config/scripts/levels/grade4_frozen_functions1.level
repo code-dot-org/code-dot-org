@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "skin": "anna",
+    "skin": "artist",
     "instructions": "Use the new “draw a circle” function to create 10 overlapping circles. Don't forget to jump forward between circles.",
     "x": "80",
     "y": "150",

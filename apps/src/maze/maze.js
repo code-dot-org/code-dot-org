@@ -39,7 +39,6 @@ var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
-var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var experiments = require('../experiments');
 
@@ -149,32 +148,6 @@ var initWallMap = function () {
  */
 var timeoutList = require('../timeoutList');
 
-// Map each possible shape to a sprite.
-// Input: Binary string representing Centre/North/West/South/East squares.
-// Output: [x, y] coordinates of each tile's sprite in tiles.png.
-var TILE_SHAPES = {
-  '10010': [4, 0], // Dead ends
-  '10001': [3, 3],
-  '11000': [0, 1],
-  '10100': [0, 2],
-  '11010': [4, 1], // Vertical
-  '10101': [3, 2], // Horizontal
-  '10110': [0, 0], // Elbows
-  '10011': [2, 0],
-  '11001': [4, 2],
-  '11100': [2, 3],
-  '11110': [1, 1], // Junctions
-  '10111': [1, 0],
-  '11011': [2, 1],
-  '11101': [1, 2],
-  '11111': [2, 2], // Cross
-  'null0': [4, 3], // Empty
-  'null1': [3, 0],
-  'null2': [3, 1],
-  'null3': [0, 3],
-  'null4': [1, 3],
-};
-
 function drawMap() {
   var svg = document.getElementById('svgMaze');
   var x, y, k, tile;
@@ -207,7 +180,7 @@ function drawMap() {
     svg.appendChild(tile);
   }
 
-  drawMapTiles(svg);
+  Maze.subtype.drawMapTiles(svg, Maze.wallMap);
 
   // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
   var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
@@ -359,86 +332,6 @@ function drawMap() {
       numColPegman: 4,
       numRowPegman: 9
     });
-  }
-}
-
-// Returns true if the tile at x,y is either a wall or out of bounds
-function isWallOrOutOfBounds(col, row) {
-  return Maze.map.getTile(row, col) === SquareType.WALL ||
-      Maze.map.getTile(row, col) === undefined;
-}
-
-// Return a value of '0' if the specified square is wall or out of bounds '1'
-// otherwise (empty, obstacle, start, finish).
-function isOnPathStr(x, y) {
-  return isWallOrOutOfBounds(x, y) ? "0" : "1";
-}
-
-// Draw the tiles making up the maze map.
-function drawMapTiles(svg) {
-  if (Maze.subtype.drawMapTiles) {
-    return Maze.subtype.drawMapTiles(svg);
-  }
-
-  // Compute and draw the tile for each square.
-  var tileId = 0;
-  var tile, origTile;
-  for (var y = 0; y < Maze.map.ROWS; y++) {
-    for (var x = 0; x < Maze.map.COLS; x++) {
-      // Compute the tile index.
-      tile = isOnPathStr(x, y) +
-        isOnPathStr(x, y - 1) + // North.
-        isOnPathStr(x + 1, y) + // West.
-        isOnPathStr(x, y + 1) + // South.
-        isOnPathStr(x - 1, y); // East.
-
-      var adjacentToPath = (tile !== '00000');
-
-      // Draw the tile.
-      if (!TILE_SHAPES[tile]) {
-        // We have an empty square. Handle it differently based on skin.
-        if (Maze.subtype.isBee()) {
-          // begin with three trees
-          var tileChoices = ['null3', 'null4', 'null0'];
-          var noTree = 'null1';
-          // want it to be more likely to have a tree when adjacent to path
-          var n = adjacentToPath ? tileChoices.length * 2 : tileChoices.length * 6;
-          for (var i = 0; i < n; i++) {
-            tileChoices.push(noTree);
-          }
-
-          tile = _.sample(tileChoices);
-        } else if (Maze.subtype.isCollector()) {
-          tile = 'null0';
-        } else {
-          // Empty square.  Use null0 for large areas, with null1-4 for borders.
-          if (!adjacentToPath && Math.random() > 0.3) {
-            Maze.wallMap[y][x] = 0;
-            tile = 'null0';
-          } else {
-            var wallIdx = Math.floor(1 + Math.random() * 4);
-            Maze.wallMap[y][x] = wallIdx;
-            tile = 'null' + wallIdx;
-          }
-
-          // For the first 3 levels in maze, only show the null0 image.
-          if (level.id === '2_1' || level.id === '2_2' || level.id === '2_3') {
-            Maze.wallMap[y][x] = 0;
-            tile = 'null0';
-          }
-        }
-      }
-
-      Maze.drawTile(svg, TILE_SHAPES[tile], y, x, tileId);
-
-      // Draw checkerboard for bee.
-      if (Maze.subtype.isBee() && (x + y) % 2 === 0) {
-        var isPath = !/null/.test(tile);
-        Maze.gridItemDrawer.addCheckerboardTile(y, x, isPath);
-      }
-
-      tileId++;
-    }
   }
 }
 
@@ -1055,7 +948,10 @@ Maze.execute = function (stepMode) {
         // failures, randomly select one of the failing grids to be the
         // "real" state of the map. If all grids are successful,
         // randomly select any one of them.
-        var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
+        var i = (failures.length > 0) ?
+            utils.randomValue(failures) :
+            utils.randomValue(successes);
+
         Maze.map.useGridWithId(i);
         Maze.subtype.reset();
       }

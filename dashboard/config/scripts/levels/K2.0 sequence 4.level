@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,2,1,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,2,1,4,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Time for a shorter puzzle!  Move one way, then another to get me to the pig.",
     "start_direction": "1",
@@ -27,8 +27,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use 2 move blocks to complete this puzzle!\",\r\n  \"hint_id\": \"K2.0_sequence_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "markdown_instructions": "Time for a shorter puzzle!  Move one way, then another to get me to the pig.\r\n\r\n![](https://images.code.org/316aaa5aef0a4f5b7b3b2e74aae5837c-image-1467932983130.gif)",
-    "contained_level_names": null
+    "markdown_instructions": "Time for a shorter puzzle!  Move one way, then another to get me to the pig.\r\n\r\n![](https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif)\r\n",
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -46,8 +47,8 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveNorth"/>
         <block type="maze_moveEast"/>
+        <block type="maze_moveSouth"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>
@@ -56,7 +57,7 @@
           <next>
             <block type="maze_moveEast">
               <next>
-                <block type="maze_moveNorth"/>
+                <block type="maze_moveSouth"/>
               </next>
             </block>
           </next>
