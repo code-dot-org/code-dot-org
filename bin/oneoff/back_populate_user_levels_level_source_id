@@ -43,30 +43,49 @@ if ARGV.length != 2
 end
 
 filename = ARGV[0]
-batch_size = ARGV[1]
+batch_size = ARGV[1].to_i
 
 # Since the updated_at field is used as a proxy for "last_progress_at" for the
 # user_level, we intentionally do not want to modify that field.
 ActiveRecord::Base.record_timestamps = false
 
 begin
-  # Read the contents of the file, saving them to an array so that we can batch
-  # the updates in a transaction.
-  update_array = []
+  # Read the contents of the file, saving them to a hash so that we can update
+  # all UserLevel's associated with a fixed LevelSource at once.
+  puts "Building update_hash..."
+  update_hash = Hash.new {|hash, key| hash[key] = []}
   CSV.foreach(filename) do |line|
-    user_levels_id = line[0]
-    level_source_id = line[1]
-    update_array << [user_levels_id, level_source_id]
+    user_levels_id = line[0].to_i
+    level_source_id = line[1].to_i
+    update_hash[level_source_id] << user_levels_id
   end
 
-  # Process the array in batches, so that the transactions are appropriate
-  # sized.
-  update_array.each_slice(batch_size) do |update_array_slice|
+  puts "Built update_hash with #{update_hash.size} distinct level_source_id's."
+
+  # Transform the hash into an array of hashes, each with batch_size many keys,
+  # for batching in transactions.
+  count = 0
+  update_hash_batches = []
+  current_hash = {}
+  update_hash.each_pair do |level_source_id, user_levels_id_array|
+    if count % batch_size == 0
+      update_hash_batches << current_hash
+      current_hash = {}
+    end
+    current_hash[level_source_id] = user_levels_id_array
+
+    count += 1
+  end
+
+  puts "Built update_hash_batches with #{update_hash_batches.size} batches."
+
+  # Perform the actual DB updates, batched in transactions.
+  update_hash_batches.each_with_index do |batch, index|
+    puts "Processing batch #{index}..."
     ActiveRecord::Base.transaction do
-      update_array_slice.each do |user_levels_id, level_source_id|
-        UserLevel.
-          find_by_id(user_levels_id).
-          update(level_source_id: level_source_id)
+      batch.each do |level_source_id, user_levels_id_array|
+        UserLevel.where(id: user_levels_id_array).
+          update_all(level_source_id: level_source_id)
       end
     end
   end

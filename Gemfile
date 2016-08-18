@@ -78,6 +78,9 @@ group :development, :test do
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
+
+  # for emoji in utility output
+  gem 'gemoji'
 end
 
 group :doc do
@@ -108,7 +111,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'devise_invitable', '~> 1.5.2'
+gem 'devise_invitable', '~> 1.6.0'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
@@ -192,7 +195,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
 
@@ -207,3 +209,4 @@ gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'
+gem 'bcrypt'
