@@ -28,7 +28,14 @@ class Stage < ActiveRecord::Base
   end
 
   def to_param
-    position.to_s
+    # lockable and non-lockable stages end up using two different routes. In
+    # both cases we want to base the to_param on their position relative to other
+    # stages of the same class
+    if lockable?
+      script.position_to_lockable_position(position).to_s
+    else
+      script.position_to_non_lockable_position(position).to_s
+    end
   end
 
   def unplugged?
@@ -45,7 +52,7 @@ class Stage < ActiveRecord::Base
     if script.stages.to_a.many?
       # Because lockable stages aren't numbered, our stage number is actually our
       # position, minus the number of lockable stages preceeding us
-      stage_number = position - script.stages.to_a[0, position].count(&:lockable)
+      stage_number = script.position_to_non_lockable_position position
 
       I18n.t('stage_number', number: stage_number) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name

@@ -50,6 +50,47 @@ class Script < ActiveRecord::Base
 
   after_save :generate_plc_objects
 
+  # A script with a mix of lockable and non-lockable stages needs to be able to
+  # map to/from unfiltered position to filtered position. So, for example if
+  # a script has two lockable stages followed by a non-lockable stage, the third
+  # stage has a position of 3 but a non-lockable position of 1.
+
+  # Map from absolute position, to position amongst non-lockable stages
+  def position_to_non_lockable_position(position)
+    position - self.stages.to_a[0, position].count(&:lockable)
+  end
+
+  # Map from absolute position, to position amongst lockable stages
+  def position_to_lockable_position(position)
+    self.stages.to_a[0, position].count(&:lockable)
+  end
+
+  # Map from position amongs non-lockable stages to absolute position
+  def non_lockable_position_to_position(non_lockable_position)
+    lockable_stages = 0
+    non_lockable_stages = 0
+    self.stages.each do |stage|
+      lockable_stages += 1 if stage.lockable?
+      non_lockable_stages += 1 unless stage.lockable?
+      break if non_lockable_stages == non_lockable_position
+    end
+    raise ActiveRecord::RecordNotFound unless non_lockable_stages == non_lockable_position
+    lockable_stages + non_lockable_stages
+  end
+
+  # Map from position amongs lockable stages to absolute position
+  def lockable_position_to_position(lockable_position)
+    lockable_stages = 0
+    non_lockable_stages = 0
+    self.stages.each do |stage|
+      lockable_stages += 1 if stage.lockable?
+      non_lockable_stages += 1 unless stage.lockable?
+      break if lockable_stages == lockable_position
+    end
+    raise ActiveRecord::RecordNotFound unless lockable_stages == lockable_position
+    lockable_stages + non_lockable_stages
+  end
+
   def generate_plc_objects
     if professional_learning_course?
       course = Plc::Course.find_or_create_by! name: professional_learning_course
@@ -293,7 +334,6 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    stage_position ||= 1
     self.script_levels.to_a.find do |sl|
       sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
     end
