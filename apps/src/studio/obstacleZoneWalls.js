@@ -1,8 +1,8 @@
 import Walls from './walls';
 
 export default class ObstacleZoneWalls extends Walls {
-  constructor(level, skin) {
-    super(level, skin);
+  constructor(level, skin, drawDebugRect) {
+    super(level, skin, drawDebugRect);
     this.obstacleZones = skin.customObstacleZones;
   }
 
@@ -22,7 +22,7 @@ export default class ObstacleZoneWalls extends Walls {
         const rectHeight = rect.maxY-rect.minY+1;
         const rectCenterX = rect.minX + rectWidth/2;
         const rectCenterY = rect.minY + rectHeight/2;
-        Studio.drawDebugRect("avatarCollision", rectCenterX, rectCenterY,
+        this.drawDebugRect("avatarCollision", rectCenterX, rectCenterY,
             rectWidth, rectHeight);
 
         if (this.overlappingTest(

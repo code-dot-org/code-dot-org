@@ -5,10 +5,13 @@ const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
 
 export default class CollisionMaskWalls extends Walls {
-  constructor(level, skin) {
-    super(level, skin);
+  constructor(level, skin, drawDebugRect, drawDebugOverlay, width, height) {
+    super(level, skin, drawDebugRect);
 
-    this.bytesPerRow = Math.ceil(Studio.MAZE_WIDTH / BITS_PER_BYTE);
+    this.width = width;
+    this.height = height;
+    this.drawDebugOverlay = drawDebugOverlay;
+    this.bytesPerRow = Math.ceil(width / BITS_PER_BYTE);
     this.wallMaps = {};
     for (const mapName in skin.wallMaps) {
       imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
@@ -28,7 +31,7 @@ export default class CollisionMaskWalls extends Walls {
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
     if (this.wallMaps[this.wallMapRequested]) {
       var wallMap = this.wallMaps[this.wallMapRequested].wallMap;
-      Studio.drawDebugOverlay(this.wallMaps[this.wallMapRequested].srcUrl);
+      this.drawDebugOverlay(this.wallMaps[this.wallMapRequested].srcUrl);
 
       const yTop = yCenter - collidableHeight / 2;
       const yBottom = yTop + collidableHeight;
@@ -65,13 +68,13 @@ export default class CollisionMaskWalls extends Walls {
    * leftmost of the 8 pixels stored in a byte.
    */
   wallMapFromImageData(data) {
-    const arr = new Uint8Array(Studio.MAZE_HEIGHT * this.bytesPerRow);
-    for (let y = 0; y < Studio.MAZE_HEIGHT; y++) {
-      for (let x = 0; x < Studio.MAZE_WIDTH; x += BITS_PER_BYTE) {
+    const arr = new Uint8Array(this.height * this.bytesPerRow);
+    for (let y = 0; y < this.height; y++) {
+      for (let x = 0; x < this.width; x += BITS_PER_BYTE) {
         let bits = 0;
         for (let k = 0; k < BITS_PER_BYTE; k++) {
-          if (x + k < Studio.MAZE_WIDTH &&
-              data[BYTES_PER_PIXEL * ((y * Studio.MAZE_WIDTH) + x + k)] === 0) {
+          if (x + k < this.width &&
+              data[BYTES_PER_PIXEL * ((y * this.width) + x + k)] === 0) {
             bits = bits | (1 << k);
           }
         }
