@@ -4,6 +4,8 @@ theme: none
 content-type: text/ng-template
 ---
 .teacher-announcements
+  - unless accepted_latest_terms?
+    = view :accept_terms_reminder
   = view :teacher_announcements
 
 .ops-workshops
