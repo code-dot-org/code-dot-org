@@ -41,7 +41,7 @@ module.exports = {
       });
 
       target.html(optgroups.join(''));
-      target.find('option[value="rosie22k"]').attr("selected",true);
+      target.find('option[value="sharon22k"]').attr("selected",true);
     });
   }
 };

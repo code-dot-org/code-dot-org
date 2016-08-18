@@ -42,7 +42,7 @@ module TextToSpeech
     )
   end
 
-  def self.tts_upload_to_s3(text, filename, voice=:rosie)
+  def self.tts_upload_to_s3(text, filename, voice=:sharon)
     return if text.blank?
     return if AWS::S3.exists_in_bucket(TTS_BUCKET, filename)
     url = acapela_text_to_audio_url(text, VOICES[voice][:VOICE], VOICES[voice][:SPEED], VOICES[voice][:SHAPE])
@@ -72,29 +72,25 @@ module TextToSpeech
     changed && write_to_file? && self.published
   end
 
-  def tts_instructions_audio_file(voice=:rosie)
+  def tts_instructions_audio_file(voice=:sharon)
     content_hash = Digest::MD5.hexdigest(self.tts_instructions_text)
     "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
   end
 
-  def tts_markdown_instructions_audio_file(voice=:rosie)
+  def tts_markdown_instructions_audio_file(voice=:sharon)
     content_hash = Digest::MD5.hexdigest(self.tts_markdown_instructions_text)
     "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
   end
 
   def tts_update
-    VOICES.each do |voice, _|
-      TextToSpeech.tts_upload_to_s3(
-        self.tts_instructions_text,
-        self.tts_instructions_audio_file(voice),
-        voice
-      ) if self.tts_should_update_instructions?
+    TextToSpeech.tts_upload_to_s3(
+      self.tts_instructions_text,
+      self.tts_instructions_audio_file
+    ) if self.tts_should_update_instructions?
 
-      TextToSpeech.tts_upload_to_s3(
-        self.tts_markdown_instructions_text,
-        self.tts_markdown_instructions_audio_file(voice),
-        voice
-      ) if self.tts_should_update_markdown_instructions?
-    end
+    TextToSpeech.tts_upload_to_s3(
+      self.tts_markdown_instructions_text,
+      self.tts_markdown_instructions_audio_file
+    ) if self.tts_should_update_markdown_instructions?
   end
 end

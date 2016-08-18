@@ -357,15 +357,8 @@ module LevelsHelper
     # TTS
     # TTS is currently only enabled for k1
     if script && script.is_k1?
-      # temporary parameter for a/b testing our voice options
-      # TODO remove this once we have chosen a voice
-      voice = :rosie
-      if params[:voice]
-        voice = :ella if params[:voice] === 'b'
-        voice = :sharon if params[:voice] === 'c'
-      end
-      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file(voice)}"
-      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file(voice)}"
+      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
+      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
     end
 
     if @level.is_a? NetSim
