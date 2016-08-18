@@ -92,7 +92,7 @@ class UserLevel < ActiveRecord::Base
   end
 
   def handle_unsubmit
-    if submitted_changed? from: true, to: false && !self.readonly_answers
+    if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
   end

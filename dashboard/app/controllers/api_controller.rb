@@ -27,7 +27,7 @@ class ApiController < ApplicationController
       end
 
       unless User.find(user_level_data[:user_id]).teachers.include? current_user
-        # Can only update lockable state for users students
+        # Can only update lockable state for user's students
         return head :forbidden
       end
 
@@ -39,7 +39,10 @@ class ApiController < ApplicationController
 
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
-    return unless current_user
+    unless current_user
+      render json: {}
+      return
+    end
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
       next if section[:deleted_at]
