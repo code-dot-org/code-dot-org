@@ -53,7 +53,7 @@
     = f.label :code_functions, 'Edit Droplet Palette'
     = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
     :javascript
-      levelbuilder.initializeCodeMirror('level_code_functions', 'javascript');
+      window.codeFunctionsEditor = levelbuilder.initializeCodeMirror('level_code_functions', 'javascript');
 - else
   .field
     = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
