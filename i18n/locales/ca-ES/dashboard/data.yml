@@ -5,24 +5,24 @@ ca:
         'Unplug1': Introducció a la informàtica
         'Maze': El laberint
         'Multi': "Coses d'elecció múltiple"
-        Unplug2: Pensament computacional
-        Unplug3: Programació de paper quadriculat
+        'Unplug2': Pensament computacional
+        'Unplug3': Programació de paper quadriculat
         'Artist': "L'artista"
-        Unplug4: Algorismes
+        'Unplug4': Algorismes
         'Artist2': "L'artista 2"
-        Unplug5: Funcions
+        'Unplug5': Funcions
         'Farmer': La pagesa
-        Unplug6: Condicionals
+        'Unplug6': Condicionals
         'Artist3': "L'artista 3"
         'Unplug7': Composició de la cançó
         'Farmer2': La pagesa 2
-        Unplug8: Abstracció
+        'Unplug8': Abstracció
         'Artist4': "L'artista 4"
         'Unplug9': Programació en relleus
         'Farmer3': La pagesa 3
         'Unplug10': Internet
         'Artist5': "L'artista 5"
-        Unplug11: Recapitulació
+        'Unplug11': Recapitulació
         'MazeEC': El Laberint
         'Bounce': Rebota
         'Flappy': Flappy Bird

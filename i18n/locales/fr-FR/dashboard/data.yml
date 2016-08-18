@@ -5,24 +5,24 @@ fr:
         'Unplug1': "Introduction à l'Informatique"
         'Maze': Le labyrinthe
         'Multi': Les questions à choix multiples
-        Unplug2: Pensée computationnelle
-        Unplug3: Programmation sur papier quadrillé
+        'Unplug2': Pensée computationnelle
+        'Unplug3': Programmation sur papier quadrillé
         'Artist': "L'Artiste"
-        Unplug4: Algorithmes
+        'Unplug4': Algorithmes
         'Artist2': "L'Artiste 2"
-        Unplug5: Fonctions
+        'Unplug5': Fonctions
         'Farmer': Le Fermier
-        Unplug6: Instructions conditionnelles
+        'Unplug6': Instructions conditionnelles
         'Artist3': "L'Artiste 3"
         'Unplug7': Composition de chansons
         'Farmer2': Le Fermier 2
-        Unplug8: Abstraction
+        'Unplug8': Abstraction
         'Artist4': "L'Artiste 4"
         'Unplug9': Programmation de relais
         'Farmer3': Le Fermier 3
         'Unplug10': L’Internet
         'Artist5': "L'Artiste 5"
-        Unplug11: Conclusions
+        'Unplug11': Conclusions
         'MazeEC': Le labyrinthe
         'Bounce': Casse-briques à rebond
         'Flappy': Flappy Bird

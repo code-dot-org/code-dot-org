@@ -695,7 +695,6 @@
   dashboard_faq: "常见的问题"
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: "公告"
-  dashboard_announce_view_all: "查看全部"
   dashboard_announce_message: 想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
@@ -706,6 +705,8 @@
   dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
     28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
   dashboard_announce_petition_button: "添加您的姓名"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
   learn_more: "现在就试试"
@@ -1298,5 +1299,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

@@ -58,7 +58,8 @@ class Pd::WorkshopOrganizerPaymentTest < ActiveSupport::TestCase
   test 'public unqualified' do
     empty_workshop = create :pd_workshop,
       course: Pd::Workshop::COURSE_CSP,
-      workshop_type: Pd::Workshop::TYPE_PUBLIC
+      workshop_type: Pd::Workshop::TYPE_PUBLIC,
+      subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
 
     payment = Pd::WorkshopOrganizerPayment.new empty_workshop
     assert_equal 0, payment.teachers.count

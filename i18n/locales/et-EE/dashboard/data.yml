@@ -5,24 +5,24 @@ et:
         'Unplug1': Sissejuhatus arvutiõpetusse
         'Maze': Labürint
         'Multi': Mitmik-valiku asjad
-        Unplug2: Arvutuslik mõtlemine
-        Unplug3: Millimeetripaberi programmeerimine
+        'Unplug2': Arvutuslik mõtlemine
+        'Unplug3': Millimeetripaberi programmeerimine
         'Artist': Kunstnik
-        Unplug4: Algoritmid
+        'Unplug4': Algoritmid
         'Artist2': Kunstnik tase 2
-        Unplug5: Funktsioonid
+        'Unplug5': Funktsioonid
         'Farmer': Talunik
-        Unplug6: Tingimuslaused
+        'Unplug6': Tingimuslaused
         'Artist3': Kunstnik tase 3
         'Unplug7': Laulu kirjutamine
         'Farmer2': Talunik tase 2
-        Unplug8: Abstraktsus
+        'Unplug8': Abstraktsus
         'Artist4': Kunstnik tase 4
         'Unplug9': Relee Programmeerimine
         'Farmer3': Talunik tase 3
         'Unplug10': Internet
         'Artist5': Kunstnik tase 5
-        Unplug11: Kokkuvõte
+        'Unplug11': Kokkuvõte
         'MazeEC': Labürint
         'Bounce': Põrkama
         'Flappy': Flappy Bird

@@ -116,7 +116,8 @@ To provide a personalized learning and high-quality experience for our Users, we
 To track information about use of our Sites, we use various technological tools. For example: Like most websites, whether or not you are a registered member, we may send one or more cookies – small text files containing a string of alphanumeric characters – to your computer. Cookies remember information about your activities on a website and enable us to provide you with a more personalized learning experience. Code.org may use both session cookies and persistent cookies. A session cookie disappears automatically after you close your browser. A persistent cookie remains after you close your browser and may be used by your browser on subsequent visits to the Website. You can, however, remove a persistent cookie at any time. Please review your web browser “Help” file, Tools menu or similar section to learn the proper way to modify your cookie settings, or visit [www.allaboutcookies.org](http://www.allaboutcookies.org). Please note that without cookies you will not have access to certain services and features on the Website.
 
 A pixel tag (also known as a “clear GIF” or “web beacon”) is a tiny image – typically just one-pixel – that can be placed on a Web page or in an email to you, to tell us when you have displayed that page or opened that email.  
- 
+
+<a id="thirdparties"></a>
 ## Third Parties
 Code.org may use a variety of third-party service providers, such as email services to send email, analytics companies to understand our Website usage, and social networking platforms to host our videos. We may allow third-party service providers to place and read their own cookies, web beacons, and similar technologies to collect information through the Website. This technical information is collected directly and automatically by these third parties.
 
@@ -150,6 +151,7 @@ For the purposes of testing our Website and services before releasing them into 
 
 Code.org does not directly collect or store payment instruments. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information). 
 
+<a id="#studentemails">
 ## Student Email Addresses
 
 When students create accounts on Code Studio, Code.org does not store the email address provided by those Users in a retrievable format. Instead, we immediately create and store only a one-way hashed version of the email address (which cannot be converted back into the original address), and use it only for the purposes of login, account management, and password recovery. In fact, when creating a student account or during login, the actual account email address is never even transmitted to Code.org's servers. The only circumstance when Code.org's servers receive a student's Code Studio account email address is if the student forgets their password and asks to reset it. At that point, the student is prompted to enter their email, which is used to send them a password reset link.
@@ -176,6 +178,7 @@ To participate in the evaluation, these school districts are asked provide stude
 
 Code.org’s officers, directors,employees, agents and contractors must have a legitimate business reason (related directly to furthering our charitable, non-profit education-focused mission) to access Personal Information you provide to Code.org, for example to assist in product support. Code.org will require our officers, directors, employees, agents, and contractors to comply with this Privacy Policy, and to treat any Personal Information of Code.org Users as confidential information.
 
+<a id="sharedata"></a>
 ## How We Share or Transfer Data
 
 We do not rent or sell Personal Information, Persistent Identifiers, or any other information that we collect from Users, or exploit it for financial gain in any other way. Code.org will never share or grant rights to Personal Information with other third-party organizations to use without your consent, except as part of a specific program or feature for which you will have the explicit ability and choice to opt-in. 

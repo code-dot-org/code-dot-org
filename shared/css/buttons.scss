@@ -1,21 +1,32 @@
 @import 'color';
 @import 'font';
 
+@mixin button-with-color($color) {
+  background-color: $color;
+  border-color: $color;
+  color: $white;
+  margin: 0;
+  padding: 6px 12px;
+  height: 34px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: $gotham-regular;
+  font-weight: normal;
+  letter-spacing: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .primary {
-	background-color: $orange;
-	border-color: $orange;
-	color: $white;
-	margin: 0;
-	padding: 6px 12px;
-	height: 34px;
-	line-height: 20px;
-	font-size: 14px;
-	font-family: $gotham-regular;
-	font-weight: normal;
-	letter-spacing: normal;
-	text-align: center;
-	vertical-align: middle;
+  @include button-with-color($orange);
 }
 .primary:hover {
-	box-shadow: none;
+  box-shadow: none;
+}
+
+.secondary {
+  @include button-with-color($cyan);
+}
+.secondary:hover {
+  box-shadow: none;
 }

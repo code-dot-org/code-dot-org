@@ -9,20 +9,18 @@ import WorkshopTableRow from './workshop_table_row';
 import {Table} from 'react-bootstrap';
 
 const WorkshopTable = React.createClass({
-  contextTypes: {
-    router: React.PropTypes.object.isRequired
-  },
-
   propTypes: {
     queryUrl: React.PropTypes.string.isRequired,
     canEdit: React.PropTypes.bool,
-    canDelete: React.PropTypes.bool
+    canDelete: React.PropTypes.bool,
+    showSignupUrl: React.PropTypes.bool
   },
 
   getDefaultProps() {
     return {
       canEdit: false,
-      canDelete: false
+      canDelete: false,
+      showSignupUrl: false
     };
   },
 
@@ -55,12 +53,6 @@ const WorkshopTable = React.createClass({
     }
   },
 
-  handleView(workshop) {
-    this.context.router.push('/workshops/' + workshop.id);
-  },
-  handleEdit(workshop) {
-    this.context.router.push('/workshops/' + workshop.id + '/edit');
-  },
   handleDelete(workshop_index, workshop) {
     this.deleteRequest = $.ajax({
         method: 'DELETE',
@@ -87,12 +79,15 @@ const WorkshopTable = React.createClass({
         <WorkshopTableRow
           workshop={workshop}
           key={workshop.id}
-          onView={this.handleView}
-          onEdit={this.props.canEdit ? this.handleEdit : null}
+          viewUrl={`/workshops/${workshop.id}`}
+          editUrl={this.props.canEdit ? `/workshops/${workshop.id}/edit` : null}
           onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
+          showSignupUrl={this.props.showSignupUrl}
         />
       );
     });
+
+    const signupUrlHeader = this.props.showSignupUrl ? <th>Signup Url</th> : null;
     return (
       <Table striped bordered condensed hover>
         <thead>
@@ -104,6 +99,7 @@ const WorkshopTable = React.createClass({
           <th>Signups</th>
           <th>Facilitators</th>
           <th>Current State</th>
+          {signupUrlHeader}
           <th>Manage</th>
         </tr>
         </thead>

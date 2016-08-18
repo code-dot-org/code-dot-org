@@ -53,7 +53,7 @@ p,pre,span {
 
 body {
   @include unselectable;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   padding: 0;
   font-style: normal;
 }
@@ -93,8 +93,8 @@ hr {
 
 th {
   background-color: $charcoal;
-  color: white;
-  border: 1px solid white;
+  color: $white;
+  border: 1px solid $white;
   text-align: left;
   font-size: 120%;
   font-family: $gotham-bold;
@@ -141,13 +141,13 @@ img.video_thumbnail {
 
 .report_cell {
   text-align: center;
-  color: white;
-  border: 1px solid black;
+  color: $white;
+  border: 1px solid $black;
 }
 
 .report_row {
   height: 26px;
-  border-top: 1px solid black;
+  border-top: 1px solid $black;
 }
 
 .report_key {
@@ -157,7 +157,7 @@ img.video_thumbnail {
   float: left;
   clear: left;
   width: 23px;
-  border: 1px solid lightgray;
+  border: 1px solid $light_gray;
   margin: 5px;
   vertical-align: middle;
 }
@@ -298,7 +298,7 @@ html, body {
   a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
     font-weight: normal;
-    color: white;
+    color: $white;
     background-color: transparent;
   }
   a:hover {
@@ -329,7 +329,7 @@ $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #copyright-flyout, #more-menu {
-  background-color: #ddd; /* Matches blockly flyout */
+  background-color: $blockly_flyout_gray; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
   a {
@@ -361,6 +361,12 @@ $small-footer-standard-width: 400px;
       &:hover {
         color: $lightest_gray;
       }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    small {
+      font-size: 10px;
     }
   }
 }
@@ -463,27 +469,27 @@ $small-footer-standard-width: 400px;
 
 .user_options, .project_more_popup {
   display: none;
-  background-color: white;
+  background-color: $white;
   a:link {
-    color: black;
+    color: $black;
   }
   a:visited {
-    color: black;
+    color: $black;
   }
   a:hover {
-    color: white;
+    color: $white;
     background-color: $dark_color;
     text-decoration: none;
   }
   a:active {
-    color: white;
+    color: $white;
     background-color: $dark_color;
   }
-  border: 1px solid black;
+  border: 1px solid $black;
   z-index: 100001;
   text-align: left;
   white-space: nowrap;
-  color: black;
+  color: $black;
   position: absolute;
   right: 0;
   padding: 10px;
@@ -492,7 +498,7 @@ $small-footer-standard-width: 400px;
 }
 
 .user_options a {
-  color: black;
+  color: $black;
 }
 
 .user_options .pairing_summary {
@@ -516,7 +522,7 @@ $default-modal-width: 640px;
 .modal {
   a:hover {
     color: $red;
-    background-color: white;
+    background-color: $white;
   }
 
   &#block-documentation-lightbox {
@@ -565,7 +571,7 @@ $default-modal-width: 640px;
 }
 
 .btn#dataConfirmOK:hover {
-  color: white;
+  color: $white;
   background-color: $orange;
 }
 
@@ -589,7 +595,7 @@ $default-modal-width: 640px;
     padding: 5px;
 
     a {
-      color: white;
+      color: $white;
     }
   }
 }
@@ -648,7 +654,7 @@ $default-modal-width: 640px;
     font-family: $gotham-extra-bold;
     font-size: 20px;
     line-height: 20px;
-    color: #fff176;
+    color: $droplet_yellow;
   }
 }
 
@@ -680,7 +686,7 @@ $default-modal-width: 640px;
   .social-buttons a {
     display: inline-block;
     background: $purple;
-    color: white;
+    color: $white;
     border-radius: 5px;
     margin-right: 8px;
     font-size: larger;
@@ -702,10 +708,10 @@ $default-modal-width: 640px;
       font-size: 24pt;
 
       &.fa-facebook {
-        background-color: #3b5998;
+        background-color: $facebook_blue;
       }
       &.fa-twitter {
-        background-color: #00aced;
+        background-color: $twitter_blue;
       }
     }
     span {
@@ -796,7 +802,7 @@ input.header_input {
   border-bottom: 5px;
   border-radius: 0 0 6px 6px;
   z-index: 1050;
-  background-color: white;
+  background-color: $white;
   overflow: hidden;
 }
 
@@ -990,7 +996,7 @@ input.header_input {
 
       a {
         background: $dark_color;
-        color: white;
+        color: $white;
         &:hover {
           color: $green;
         }
@@ -1006,7 +1012,7 @@ input.header_input {
 
     li.ui-state-active {
       a {
-        background: white;
+        background: $white;
         color: $orange;
         &:hover {
           color: $orange;
@@ -1077,7 +1083,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: white;
+  background-color: $white;
   color: $charcoal;
   border: 1px solid $charcoal;
   border-radius: 8px;
@@ -1138,7 +1144,7 @@ a.download-video {
     border-radius: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: white;
+    color: $white;
     overflow: hidden;
   }
 
@@ -1157,7 +1163,7 @@ a.download-video {
 
   .lines_of_code_header {
     width: 100%;
-    color: white;
+    color: $white;
     padding-left: 30px;
     padding-top: 0;
     font-size: 24px;
@@ -1165,7 +1171,7 @@ a.download-video {
   }
 
   a.lines_of_code_link {
-    color: white;
+    color: $white;
     text-decoration: none;
     font-family: $gotham-bold;
     font-weight: normal;
@@ -1181,7 +1187,7 @@ a.download-video {
 
   .row#continue {
     background-color: $teal;
-    color: white;
+    color: $white;
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
@@ -1222,14 +1228,14 @@ a.download-video {
       width: 154px;
       img {
         border: 2px solid $lighter_gray;
-        background-color: white;
+        background-color: $white;
       }
     }
   }
 
   h3.whitetext {
     a, a:link, a:hover, a:visited {
-      color: white;
+      color: $white;
       text-decoration: none;
       cursor: pointer;
     }
@@ -1248,13 +1254,13 @@ a.download-video {
     }
 
     li.active a, li.active a:hover, li.active a:link {
-      background-color: white;
+      background-color: $white;
       color: $purple;
       border: 2px solid $purple;
     }
     li a:hover, a:focus {
       text-decoration: none;
-      background-color: white;
+      background-color: $white;
     }
   }
 
@@ -1330,9 +1336,38 @@ a.download-video {
     display: inline-block;
     width: 600px;
   }
+  .singleitemblock {
+    padding-left: 144px;
+    width: 364px;
+  }
   .labelblock {
     display: inline-block;
     width: 140px;
+  }
+  .rememberme {
+    font-size: 13px;
+    margin-bottom: 22px;
+
+    #user_remember_me {
+      margin-top: -2px;
+      margin-right: 3px;
+    }
+  }
+  button {
+    width: 220px;
+  }
+  #signin-button {
+    margin-bottom: 7px;
+  }
+  #signup-button {
+    margin-top: 4px;
+  }
+  .forgotpassword {
+    margin-bottom: 10px;
+  }
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid $dark_charcoal;
   }
 }
 
@@ -1377,9 +1412,6 @@ a.download-video {
 }
 
 #signup {
-  .signupblock {
-    background-color: $lightest_gray;
-  }
   .signupform {
     padding: 20px;
     margin-bottom: 0;
@@ -1408,13 +1440,19 @@ a.download-video {
   #usernamefield {
     vertical-align: top;
   }
+  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
+    width: 234px;
+  }
   #usernamemessage, #password_message, #password_message_confirmation {
     display: inline-block;
     max-width: 180px;
     vertical-align: top;
   }
+  #password_confirmation-block {
+    margin-bottom: 20px;
+  }
   .error_in_field {
-    color: red;
+    color: $red;
     opacity: 0;
     display: table-cell;
     padding-left: 10px;
@@ -1435,6 +1473,14 @@ a.download-video {
     font-size: 16px;
     color: $charcoal;
     margin-top: 15px;
+  }
+  #user_type-block {
+    margin-bottom: 20px;
+  }
+  .devise_links {
+    padding-left: 20px;
+    margin-top: 20px;
+    border-left: 1px solid $black;
   }
 }
 
@@ -1498,7 +1544,7 @@ a.download-video {
     list-style-type: none;
     margin-left: 0;
     li {
-      background-color: white;
+      background-color: $white;
       border-color: $lighter_gray;
     }
   }
@@ -1528,7 +1574,7 @@ a.download-video {
     }
   }
   .answer {
-    background-color: white;
+    background-color: $white;
     border-color: $lighter_cyan;
   }
   .answer.ui-draggable:hover {
@@ -1603,12 +1649,16 @@ a.download-video {
   }
 }
 
+.external .content-level {
+  overflow: hidden;
+}
+
 .peer-review input[type=radio] {
   margin: 0 3px 3px 5px;
 }
 
 .peer-review-content {
-  background: #fff;
+  background: $white;
   border: 1px solid $light_gray;
   border-radius: 5px;
   padding: 10px;
@@ -1672,7 +1722,7 @@ a.download-video {
       font-size: 18px;
       font-family: $gotham-extra-bold;
       font-weight: normal;
-      color: white;
+      color: $white;
       background: $cyan;
       margin: 0;
     }
@@ -1787,7 +1837,7 @@ div.gallery_activity {
   img {
     width: $img_size;
     height: $img_size;
-    border: $img_border_size groove lightgray;
+    border: $img_border_size groove $light_gray;
   }
   .caption {
     color: $charcoal;
@@ -1811,13 +1861,13 @@ div.mini_gallery_activity {
   img {
     width: $img_size;
     height: $img_size;
-    border: $img_border_size groove lightgray;
+    border: $img_border_size groove $light_gray;
   }
 }
 
 .infobox {
   background-color: $charcoal;
-  color: white;
+  color: $white;
   font-size: 13px;
   padding-right: 10px;
   font-family: $gotham-regular;
@@ -1833,7 +1883,7 @@ div.mini_gallery_activity {
   .submitButton, .unsubmitButton {
     border-color: $purple;
     background-color: $purple;
-    color: white;
+    color: $white;
     background-image: none;
   }
 }
@@ -1863,7 +1913,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .answerbutton {
     &.lock-answers {
       pointer-events: none;
-      color: grey;
+      color: $light_gray;
     }
   }
 
@@ -2066,7 +2116,7 @@ $modal-no-icon-gap: 22px;
     height: auto;
     margin: 0 15px 0 0;
     float: left;
-    border: lightgrey;
+    border: $light_gray;
     border-style: solid;
   }
 
@@ -2128,12 +2178,12 @@ $modal-no-icon-gap: 22px;
 #ok-button {
   background-color: $orange;
   border: 1px solid $orange;
-  color: white;
+  color: $white;
   min-width: 100px;
 }
 
 .lightbulb-button {
-  background-color: white;
+  background-color: $white;
   font-family: $gotham-bold;
   border: 1px solid $charcoal;
   color: $charcoal;
@@ -2144,14 +2194,14 @@ $modal-no-icon-gap: 22px;
 
 #again-button, #cancel-button {
   background-color: $green;
-  color: white;
+  color: $white;
   margin-left: 0;
   margin-right: 10px;
 }
 
 #continue-button {
   background-color: $orange;
-  color: white;
+  color: $white;
   margin-left: 0;
   margin-right: 10px;
 }
@@ -2184,7 +2234,7 @@ $modal-no-icon-gap: 22px;
   margin-bottom: 15px;
   float: left;
   padding: 0 0 15px 0;
-  background-color: white;
+  background-color: $white;
   $outside-margin-side: 15px;
   width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
@@ -2212,7 +2262,7 @@ $modal-no-icon-gap: 22px;
 
   .secondary-instructions p {
     font-size: 14px;
-    color: #5b6770;
+    color: $charcoal;
   }
 
   strong {
@@ -2230,7 +2280,7 @@ $modal-no-icon-gap: 22px;
   font-weight: normal;
   line-height: 27px;
   font-size: 24px;
-  color: #7665a0;
+  color: $purple;
 
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
@@ -2264,7 +2314,7 @@ $modal-no-icon-gap: 22px;
 
 .exclamation-abuse {
   a, a:hover {
-    color: white;
+    color: $white;
     text-decoration: underline;
   }
 }
@@ -2278,12 +2328,12 @@ button {
   border: 1px solid $lightest_gray;
   font-size: large;
   background-color: $lightest_gray;
-  color: #000;
+  color: $black;
 }
 button.launch {
   border: 1px solid $orange;
   background-color: $orange;
-  color: white;
+  color: $white;
   font-size: large;
   min-width: 96px;
   margin-left: 0;
@@ -2327,7 +2377,7 @@ button.notext {
 }
 
 @mixin bottom-shadow {
-  @include box-shadow(0 10px 13px -11px black);
+  @include box-shadow(0 10px 13px -11px $black);
 }
 
 @mixin rounded-border {
@@ -2426,7 +2476,7 @@ $width: 400px;
   z-index: 1000;
 
   a {
-    color: #949ca2;
+    color: $light_gray;
     &:hover {
       text-decoration: none;
     }
@@ -2434,7 +2484,7 @@ $width: 400px;
 
   #logo-container {
     padding: 4px;
-    background-color: #949ca2;
+    background-color: $light_gray;
     width: 60px;
     border-radius: 5px;
     margin-bottom: 4px;
@@ -2446,10 +2496,10 @@ $width: 400px;
   position: fixed;
   top: 0;
   right: 0;
-  color: white;
+  color: $white;
   background-color: $light_purple;
   padding: 3px;
   z-index: 100;
   cursor: pointer;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 7px 2px $shadow;
 }

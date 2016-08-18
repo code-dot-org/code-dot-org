@@ -22,31 +22,52 @@ level 'blockly:Studio:hoc2015_blockly_12'
 level 'blockly:Studio:hoc2015_blockly_13'
 level 'blockly:Studio:hoc2015_blockly_14'
 
-stage 'Unplugged: Nested Loops (New)',
+stage 'Songwriting',
   flex_category: 'content'
-level 'GettingLoopy'
-#assessment '2-3 Getting Loopy Multi 1'
+level 'SongwritingParameters'
 
-stage 'Artist: Nested Loops',
+stage 'New Artist: Functions',
   flex_category: 'content'
-level 'grade4_frozen_nested_loop_rectangle1'
-level 'grade4_frozen_nested_loop_diamonds1'
-level 'grade4_frozen_nested_loop_diamonds2'
-level 'grade4_frozen_nested_loop_diamonds3'
-level 'grade4_artist_nested_loop_polygons1'
-level 'grade4_artist_nested_loop_polygons2'
-level 'grade4_artist_nested_loop_triangles4'
-level 'grade4_artist_nested_loop_triangles5'
-level 'grade4_artist_nested_loop_squares1'
-level 'grade4_artist_nestedLoops_challenge'
-level 'grade4_artist_nestedLoops_challenge2'
-level 'grade4_artist_nested_loop_circles1'
-assessment 'grade4_artist_nested_loop_triangles1'
-assessment 'grade4_artist_nested_loop_triangles3'
-assessment 'grade4_artist_nested_loop_triangles2'
-#assessment '4-5 artist loops multi 1'
+level 'grade4_artist_functions1'
+level 'grade4_artist_functions2'
+level 'grade4_artist_functions_stars0'
+level 'grade4_artist_functions_stars1'
+level 'grade4_artist_functions_stars2'
+level 'grade4_artist_functions_stars3'
+level 'grade4_artist_functions_windows0'
+level 'grade4_artist_functions_windows1'
+level 'grade4_artist_functions_windows2'
+level 'grade4_artist_functions_challenge'
+level 'grade4_artist_functions_challenge2'
+level 'grade4_frozen_functions0'
+level 'grade4_frozen_functions1'
+level 'grade4_frozen_functions2'
+#level 'grade4_artist_functions_freeplay'
 
-stage 'Bee: Nested Loops'
+stage 'Bee: Functions (Course 3)'
+level 'grade4_bee_functions1'
+level 'grade4_bee_functions2'
+level 'grade4_bee_functions3'
+level 'grade4_bee_functions4'
+level 'grade4_bee_functions5'
+level 'grade4_bee_functions6'
+level 'grade4_bee_functions7'
+level 'grade4_bee_functions8'
+level 'grade4_bee_functions9'
+assessment 'grade4_bee_functions10'
+assessment 'grade4_bee_functions11'
+
+stage 'Unplugged: Funky Functions'
+level 'grade4_unplugged_FunkyFunctions'
+
+stage 'Farmer: Functions (New)'
+level 'grade4_farmer_functions1'
+level 'grade4_farmer_functions2'
+level 'grade4_farmer_functions3'
+level 'grade4_farmer_functions4'
+level 'grade4_farmer_functions5'
+level 'grade4_farmer_functions6'
+
 stage 'Bee: Determine the Concept',
   flex_category: 'content'
 #original sequence
@@ -64,27 +85,6 @@ level 'grade4_bee_conditionals_new2'
 level 'grade4_bee_conditionals_new3b'
 level 'grade4_bee_conditionals_new3c'
 assessment 'grade4_bee_nestedLoops_assess'
-
-stage 'Songwriting',
-  flex_category: 'content'
-level 'SongwritingParameters'
-
-stage 'New Artist: Functions',
-  flex_category: 'content'
-level 'grade4_artist_functions1'
-level 'grade4_artist_functions2'
-level 'grade4_artist_functions_stars0'
-level 'grade4_artist_functions_stars1'
-level 'grade4_artist_functions_stars2'
-level 'grade4_artist_functions_stars3'
-level 'grade4_artist_functions_windows0'
-level 'grade4_artist_functions_windows1'
-level 'grade4_artist_functions_windows2'
-level 'grade4_artist_functions_challenge'
-level 'grade4_frozen_functions0'
-level 'grade4_frozen_functions1'
-level 'grade4_frozen_functions2'
-level 'grade4_artist_functions_freeplay'
 
 stage 'Scaffolded Project Stage (Loops, Events, Conditionals, Functions)',
   flex_category: 'content'
@@ -118,16 +118,3 @@ named_level 'Project Presentations (Teacher Lesson Plan)'
 stage 'More Programming with Scratch',
   flex_category: 'practice'
 named_level 'More programming with Scratch!'
-
-
-
-#Removed Puzzles
-#level 'grade4_bee_conditionals_new1'
-#while loop sequence - move to K5 concepts script?
-#level '2-3 Bee Loops 8'
-#level '4-5 Bee Nested Loops 7'
-#level '2-3 Bee Loops 10'
-#level '4-5 Bee Nested Loops 9'
-#level '4-5 Bee Nested Loops Rows'
-#assessment '2-3 Bee Loops Assessment 1'
-#assessment '4-5 bee loops multi 1'

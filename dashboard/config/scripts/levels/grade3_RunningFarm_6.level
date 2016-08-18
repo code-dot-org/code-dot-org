@@ -6,7 +6,7 @@
   "user_id": 318,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}]]",
+    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -26,9 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you help me collect at least 24 crops from this field? I bet using loops would really help us out!",
+    "instructions": "This puzzle should randomly populate the entire field with wheat and potatoes. The puzzle should also start with the following event blocks: up arrow, down arrow, left arrow, right arrow, and space bar. Can we check to make sure students are using while loop?",
     "step_speed": "2",
-    "ideal": "22",
+    "ideal": "11",
+    "markdown_instructions": "My navigation system is still broken! Please help, I need to collect 30 potatoes.",
     "contained_level_names": null
   },
   "published": true,
@@ -56,107 +57,7 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">6</title>
-              <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="collector_collect"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
-                  <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                          <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">6</title>
-                              <statement name="DO">
-                                <block type="collector_collect">
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
-                                          <next>
-                                            <block type="controls_repeat">
-                                              <title name="TIMES">6</title>
-                                              <statement name="DO">
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
-                                                  <next>
-                                                    <block type="collector_collect"/>
-                                                  </next>
-                                                </block>
-                                              </statement>
-                                              <next>
-                                                <block type="maze_turn">
-                                                  <title name="DIR">turnRight</title>
-                                                  <next>
-                                                    <block type="maze_move">
-                                                      <title name="DIR">moveForward</title>
-                                                      <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnRight</title>
-                                                          <next>
-                                                            <block type="controls_repeat">
-                                                            <title name="TIMES">6</title>
-                                                            <statement name="DO">
-                                                            <block type="collector_collect">
-                                                            <next>
-                                                            <block type="maze_move">
-                                                            <title name="DIR">moveForward</title>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </statement>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </solution_blocks>
   </blocks>

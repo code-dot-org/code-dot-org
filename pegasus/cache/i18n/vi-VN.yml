@@ -901,7 +901,6 @@
   dashboard_faq: Câu hỏi thường gặp
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: Tất cả
   dashboard_announce_message: Want to help us test a new feature? We know it’s important
     to encourage students to iterate and experiment, so we'll be adding an "unused
     code" feature to allow students to run their code even when there are unattached
@@ -919,6 +918,8 @@
     trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục khoa học máy
     tính.
   dashboard_announce_petition_button: Add your name
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
   code_sign_up: "Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính"
   learn_more: Tìm hiểu thêm
@@ -1767,5 +1768,4 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

@@ -41,7 +41,7 @@
   "heightParameter":"высота",
   "hideTurtle":"скрыть художника",
   "jump":"прыгнуть",
-  "jumpTo":"jump to",
+  "jumpTo":"перейти к",
   "jumpBackward":"прыгнуть назад на",
   "jumpForward":"прыгнуть вперед на",
   "jumpTooltip":"Перемещает художника, не оставляя следов.",

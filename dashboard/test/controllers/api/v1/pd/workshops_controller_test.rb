@@ -363,7 +363,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     {
       location_address: 'Seattle, WA',
       workshop_type: Pd::Workshop::TYPE_PUBLIC,
-      course: Pd::Workshop::COURSE_CSP,
+      course: Pd::Workshop::COURSE_CSF,
       capacity: 10,
       sessions_attributes: [
         {

@@ -5,24 +5,24 @@ fi:
         'Unplug1': Johdanto tietojenkäsittelyyn
         'Maze': Sokkelo
         'Multi': Monivalintajuttuja
-        Unplug2: Automatisointiajattelu
-        Unplug3: Ruutupaperiohjelmointi
+        'Unplug2': Automatisointiajattelu
+        'Unplug3': Ruutupaperiohjelmointi
         'Artist': Taiteilija
-        Unplug4: Algoritmit
+        'Unplug4': Algoritmit
         'Artist2': Taiteilija 2
-        Unplug5: Funktiot
+        'Unplug5': Funktiot
         'Farmer': Maanviljelijä
-        Unplug6: Ehtolausekkeet
+        'Unplug6': Ehtolausekkeet
         'Artist3': Taiteilija 3
         'Unplug7': Sävellys
         'Farmer2': Maanviljelijä 2
-        Unplug8: Abstraktio
+        'Unplug8': Abstraktio
         'Artist4': Taiteilija 4
         'Unplug9': Releohjelmointi
         'Farmer3': Maanviljelijä 3
         'Unplug10': Internetti
         'Artist5': Taiteilija 5
-        Unplug11: Yhteenveto
+        'Unplug11': Yhteenveto
         'MazeEC': Sokkelo
         'Bounce': Bounce
         'Flappy': Flappy Bird
