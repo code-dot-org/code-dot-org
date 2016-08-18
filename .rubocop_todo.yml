@@ -287,13 +287,6 @@ Style/SpaceInsideBlockBraces:
 Style/SpaceInsideHashLiteralBraces:
   Enabled: false
 
-# Offense count: 13953
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Enabled: false
-
 # Offense count: 30
 # Cop supports --auto-correct.
 # Configuration parameters: AllowNamedUnderscoreVariables.
