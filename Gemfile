@@ -78,6 +78,9 @@ group :development, :test do
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
+
+  # for emoji in utility output
+  gem 'gemoji'
 end
 
 group :doc do

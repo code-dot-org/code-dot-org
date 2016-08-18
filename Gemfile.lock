@@ -179,6 +179,7 @@ GEM
     firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.0)
       railties (>= 3.2, < 5.1)
+    gemoji (2.1.0)
     geocoder (1.3.7)
     gherkin (2.12.2)
       multi_json (~> 1.3)
@@ -607,6 +608,7 @@ DEPENDENCIES
   firebase
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
+  gemoji
   geocoder
   google-api-client
   google_drive (~> 1.0.0)
