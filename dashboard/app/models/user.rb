@@ -254,6 +254,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
+  # Append to the end of the array when adding a new version
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
   ]
@@ -1016,5 +1017,10 @@ class User < ActiveRecord::Base
       collect{|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
+  end
+
+  # Returns whether the user has accepted the latest major version of the Terms of Service
+  def accepted_latest_terms?
+    terms_of_service_version == TERMS_OF_SERVICE_VERSIONS.last
   end
 end
