@@ -6,7 +6,7 @@ var progress = require('../progress');
 var clientState = require('../clientState');
 var color = require('../../color');
 
-import { activityCssClass, mergeActivityResult } from '../activityUtils';
+import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityUtils';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -73,7 +73,7 @@ module.exports = function (callback) {
 
           // Set the progress color
           var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
-          if (status && status !== 'not_tried' && status !== 'attempted') {
+          if (status && status !== LevelStatus.not_tried && status !== LevelStatus.attempted) {
             Object.assign(css, {color: color.white});
           }
           $('.level-' + levelId).css(css);
