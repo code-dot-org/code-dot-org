@@ -71,6 +71,7 @@
   "noPathAhead": "path is blocked",
   "noPathLeft": "no path to the left",
   "noPathRight": "no path to the right",
+  "notAtFlowerError": "You can only get nectar from a flower.",
   "notAtHoneycombError": "You can only make honey at a honeycomb.",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "pathAhead": "path ahead",
