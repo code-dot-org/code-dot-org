@@ -16,7 +16,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,1,0],[0,0,0,1,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "13",
+    "ideal": "15",
     "markdown_instructions": "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse the function to collect all of the nectar.",
     "never_autoplay_video": "false",
     "step_speed": "1",
@@ -34,6 +34,7 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.\",\r\n  \"hint_id\": \"2-3_Bee_Functions_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "contained_level_names": null
   },
   "published": true,
@@ -106,27 +107,37 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">2</title>
-              <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="procedures_callnoreturn">
-                      <mutation name="move and get nectar"/>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
               <next>
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                <block type="procedures_callnoreturn">
+                  <mutation name="move and get nectar"/>
                   <next>
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="move and get nectar"/>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="move and get nectar"/>
+                              <next>
+                                <block type="controls_repeat_dropdown">
+                                  <title name="TIMES" config="3-10">3</title>
+                                  <statement name="DO">
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="procedures_callnoreturn">
+                                      <mutation name="move and get nectar"/>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>

@@ -38,7 +38,7 @@ require('./components/Attachments');
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('./clientState.js');
+window.dashboard.clientState = require('./clientState');
 window.dashboard.createCallouts = require('./callouts');
 window.dashboard.hashEmail = require('./hashEmail');
 window.dashboard.funometer = require('./funometerPercentagesByDay');

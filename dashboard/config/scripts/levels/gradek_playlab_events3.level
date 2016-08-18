@@ -36,8 +36,8 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null,
-    "first_sprite_index": "0"
+    "first_sprite_index": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Level marked as success if the background is a city, therefore kids have to not only write code, but also click bird to make level succeed.\r\nCan change to just checking whether all event handlers have something under them, but cannot check for city in that case.",

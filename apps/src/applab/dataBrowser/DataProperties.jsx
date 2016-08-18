@@ -2,6 +2,7 @@
  * @overview Component for editing key/value pairs.
  */
 
+import _ from 'lodash';
 import AddKeyRow from './AddKeyRow';
 import { DataView } from '../constants';
 import EditKeyRow from './EditKeyRow';
@@ -21,23 +22,64 @@ const DataProperties = React.createClass({
     onViewChange: React.PropTypes.func.isRequired
   },
 
+  getInitialState() {
+    return {
+      showDebugView: false,
+    };
+  },
+
+  toggleDebugView() {
+    const showDebugView = !this.state.showDebugView;
+    this.setState({showDebugView});
+  },
+
+  getKeyValueJson() {
+    const keyValueData = _.mapValues(this.props.keyValueData, JSON.parse);
+    return JSON.stringify(keyValueData, null, 2);
+  },
+
+
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
+    const keyValueDataStyle = {
+      display: this.state.showDebugView ? 'none' : ''
+    };
+    const debugDataStyle = [dataStyles.debugData, {
+      display: this.state.showDebugView ? '' : 'none',
+    }];
     return (
       <div id="dataProperties" style={{display: visible ? 'block' : 'none'}}>
-        <h4>
-         <a
-           id="propertiesBackToOverview"
-           href="#"
-           style={dataStyles.link}
-           onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
-         >
-           Data
-         </a>
-         &nbsp;&gt; Key/value pairs
-        </h4>
+        <div style={dataStyles.viewHeader}>
+          <span style={dataStyles.backLink}>
+            <a
+              id="propertiesBackToOverview"
+              href="#"
+              style={dataStyles.link}
+              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+            >
+              Data
+            </a>
+            &nbsp;&gt; Key/value pairs
+          </span>
 
-        <table>
+          <span style={dataStyles.debugLink}>
+            <a
+              id="tableDebugLink"
+              href="#"
+              style={dataStyles.link}
+              onClick={() => this.toggleDebugView()}
+            >
+              {this.state.showDebugView ? 'Key/value view' : 'Debug view'}
+            </a>
+
+          </span>
+        </div>
+
+        <div style={debugDataStyle}>
+          {this.getKeyValueJson()}
+        </div>
+
+        <table style={keyValueDataStyle}>
           <tbody>
             <tr>
               <th style={dataStyles.headerCell}>Key</th>
