@@ -58,11 +58,14 @@ class PeerReview < ActiveRecord::Base
         review_to_clone = get_potential_reviews(script, user).sample
 
         if review_to_clone
-          new_review = review_to_clone.clone
+          new_review = review_to_clone.dup
           new_review.update(reviewer: user, status: nil, data: nil)
+          new_review
+        else
+          # If we get here, it means that every review in the pool was either submitted by this user
+          # or has been reviewed by this user. Oh well, return nothing.
+          nil
         end
-
-        review_to_clone
       end
     end
   end
