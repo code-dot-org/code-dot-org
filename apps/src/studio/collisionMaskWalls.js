@@ -4,28 +4,28 @@ import {imageDataFromURI} from '../imageUtils';
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
 
-export default class MaskWalls extends Walls {
+export default class CollisionMaskWalls extends Walls {
   constructor(level, skin) {
     super(level, skin);
 
     this.bytesPerRow = Math.ceil(Studio.MAZE_WIDTH / BITS_PER_BYTE);
-    this.wallMapLayers = {};
-    for (const mapName in skin.wallMapLayers) {
-      imageDataFromURI(skin.wallMapLayers[mapName].srcUrl).then(imageData => {
-        this.wallMapLayers[mapName] = {
+    this.wallMaps = {};
+    for (const mapName in skin.wallMaps) {
+      imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
+        this.wallMaps[mapName] = {
           wallMap: this.wallMapFromImageData(imageData),
-          srcUrl: skin.wallMapLayers[mapName].srcUrl
+          srcUrl: skin.wallMaps[mapName].srcUrl
         };
       });
     }
   }
 
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
-    if (this.wallMapLayers[this.wallMapRequested]) {
-      var wallMapLayer = this.wallMapLayers[this.wallMapRequested].wallMap;
+    if (this.wallMaps[this.wallMapRequested]) {
+      var wallMap = this.wallMaps[this.wallMapRequested].wallMap;
       // Compare against a layout image
 
-      Studio.drawDebugOverlay(this.wallMapLayers[this.wallMapRequested].srcUrl);
+      Studio.drawDebugOverlay(this.wallMaps[this.wallMapRequested].srcUrl);
 
       const yTop = yCenter - collidableHeight / 2;
       const yBottom = yTop + collidableHeight;
@@ -37,11 +37,11 @@ export default class MaskWalls extends Walls {
       for (let y = yTop; y < yBottom; y++) {
         const rowStart = this.bytesPerRow * y;
         for (let x = xStart; x <= xEnd; x++) {
-          if (wallMapLayer[rowStart + x]) {
+          if (wallMap[rowStart + x]) {
             const start = Math.max(xLeft, Math.floor(x * BITS_PER_BYTE));
             const end = Math.min(xRight, Math.floor((x + 1) * BITS_PER_BYTE));
             for (let i = start; i < end; i++) {
-              if (wallMapLayer[rowStart + x] & (1 << (i % BITS_PER_BYTE))) {
+              if (wallMap[rowStart + x] & (1 << (i % BITS_PER_BYTE))) {
                 return true;
               }
             }

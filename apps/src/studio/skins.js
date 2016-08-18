@@ -1449,7 +1449,7 @@ function loadStudio(skin, assetUrl) {
     [msg.setMapBlobs(), 'blobs']
   ];
 
-  skin.wallMapLayers = {
+  skin.wallMaps = {
     blank: {
       srcUrl: skin.assetUrl('obstacle_blank.png'),
     },
