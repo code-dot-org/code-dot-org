@@ -363,9 +363,9 @@ ActiveRecord::Schema.define(version: 20160812010138) do
     t.string   "school_type",         limit: 255
     t.string   "school_state",        limit: 255
     t.integer  "user_id",             limit: 4
+    t.integer  "school_info_id",      limit: 4
     t.datetime "survey_sent_at"
     t.integer  "completed_survey_id", limit: 4
-    t.integer  "school_info_id",     limit: 4
   end
 
   add_index "pd_enrollments", ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
@@ -587,7 +587,6 @@ ActiveRecord::Schema.define(version: 20160812010138) do
   end
 
   create_table "school_infos", force: :cascade do |t|
-    t.string   "name",                  limit: 255
     t.string   "school_type",           limit: 255
     t.integer  "zip",                   limit: 4
     t.string   "state",                 limit: 255

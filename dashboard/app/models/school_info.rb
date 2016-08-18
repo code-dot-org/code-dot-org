@@ -3,7 +3,6 @@
 # Table name: school_infos
 #
 #  id                    :integer          not null, primary key
-#  name                  :string(255)
 #  school_type           :string(255)
 #  zip                   :integer
 #  state                 :string(255)
@@ -15,10 +14,6 @@
 # Indexes
 #
 #  fk_rails_951bceb7e3  (school_district_id)
-#
-# Foreign Keys
-#
-#  fk_rails_951bceb7e3  (school_district_id => school_districts.id)
 #
 
 class SchoolInfo < ActiveRecord::Base
@@ -32,7 +27,7 @@ class SchoolInfo < ActiveRecord::Base
 
   SCHOOL_STATE_OTHER = "other"
 
-  # remap what the form has to what we write to here
+  # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
   def school_zip=(input)
     self.zip = input
   end
@@ -42,7 +37,6 @@ class SchoolInfo < ActiveRecord::Base
   end
 
   validate :validate_school_district
-  validates :name, presence: true
 
   # Validates the district dropdown.  This list is more verbose than it
   # needs to be, but correlates to the list of valid configurations given
