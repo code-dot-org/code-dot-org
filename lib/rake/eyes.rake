@@ -22,7 +22,6 @@ MERGE_EMOJI = "\u{1F500}"
 def ensure_merge_util
   java_version_output = `java -version 2>&1`
   raise "Applitools merge util requires Java 1.8 #{Emoji.find_by_alias('sweat_smile').raw}" unless java_version_output =~ /version "1\.8/
-  FileUtils.mkdir_p TMP_UTIL_DIR
   unless File.exist? MERGE_UTIL_PATH
     RakeUtils.system_stream_output "wget #{REMOTE_JAR_SOURCE} -O #{MERGE_UTIL_PATH}"
   end
