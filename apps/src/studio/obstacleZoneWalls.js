@@ -6,6 +6,9 @@ export default class ObstacleZoneWalls extends Walls {
     this.obstacleZones = skin.customObstacleZones;
   }
 
+  /**
+   * @override
+   */
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
     if (this.obstacleZones[this.background] &&
         this.obstacleZones[this.background][this.wallMapRequested]) {
