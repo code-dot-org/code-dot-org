@@ -42,12 +42,17 @@ You can find that key by [logging in](https://eyes.applitools.com/app/sessions/)
 
 1. `bundle exec ./runner.rb --eyes -c Chrome33Win7,iPhone`
 
-## Watch for run on next deploy
+## Watch for run on CircleCI and test server deploy
 
-In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will
-be run (as of writing, currently only against the Chrome 33 browser and iPhone).
+Both on CircleCI In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will be run (as of writing, currently only against the Chrome 33 browser and iPhone).
 
-Results are reported to HipChat.
+Results will show up in the Selenium HTML output when changes occur. You can navigate to the reported URL from there to accept the new baseline.
+ 
+## CircleCI branch and merge handling
+
+Each time an Eyes UI test is run, it is run with branch set to that branch, and parent_branch set to either the target of a PR with that branch or the default base branch for that given branch (`test` -> `production`, `staging` -> `test`, `[feature branches, etc.]` -> `staging`).
+
+Per [Applitools' documentation, we use the copybranch API endpoint](http://support.applitools.com/customer/en/portal/articles/2142886-using-multiple-branches-) to merge baselines when a merge commit is detected on a given branch.
 
 ## See Also
 
