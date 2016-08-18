@@ -6,7 +6,8 @@ import color from '../color';
 const style = {
   root: {
     textAlign: 'center',
-    marginTop: 30
+    marginTop: 30,
+    marginBottom: 30
   },
   svg: {
     width: 300,
