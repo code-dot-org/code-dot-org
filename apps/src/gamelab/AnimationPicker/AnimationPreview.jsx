@@ -48,15 +48,11 @@ const AnimationPreview = React.createClass({
   },
 
   onMouseOver: function () {
-    if (!this.props.alwaysPlay){
-      this.advanceFrame();
-    }
+    this.advanceFrame();
   },
 
   onMouseOut: function () {
-    if (!this.props.alwaysPlay){
-      this.stopAndResetAnimation();
-    }
+    this.stopAndResetAnimation();
   },
 
   advanceFrame: function () {
@@ -130,8 +126,8 @@ const AnimationPreview = React.createClass({
       <div
         ref="root"
         style={containerStyle}
-        onMouseOver={this.onMouseOver}
-        onMouseOut={this.onMouseOut}
+        onMouseOver={!this.props.alwaysPlay ? this.onMouseOver : null}
+        onMouseOut={!this.props.alwaysPlay ? this.onMouseOut : null}
       >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>
