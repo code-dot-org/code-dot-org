@@ -356,7 +356,7 @@ module LevelsHelper
 
     # TTS
     # TTS is currently only enabled for k1
-    if script.is_k1?
+    if script && script.is_k1?
       # temporary parameter for a/b testing our voice options
       # TODO remove this once we have chosen a voice
       voice = :rosie
