@@ -21,7 +21,7 @@ export const activityCssClass = result => {
     return 'not_tried';
   }
   if (result === REVIEW_ACCEPTED_RESULT) {
-    return 'perfect';
+    return 'review_accepted';
   }
   if (result === REVIEW_REJECTED_RESULT) {
     return 'review_rejected';

@@ -1,4 +1,5 @@
 var _ = require('lodash');
+import { randomValue } from '../utils';
 
 /**
  * An instantiable Artist API logic. The methods on this object are called by
@@ -11,6 +12,10 @@ var ArtistAPI = function () {
 };
 
 module.exports = ArtistAPI;
+
+ArtistAPI.prototype.random = function (values) {
+  return randomValue(values);
+};
 
 ArtistAPI.prototype.drawCircle = function (size, id) {
   for (var i = 0; i < 36; i++) {
@@ -126,6 +131,30 @@ ArtistAPI.prototype.moveRight = function (distance, id) {
   this.log.push(['MV', distance, 90, id]);
 };
 
+ArtistAPI.prototype.jumpTo = function (position, id) {
+  this.log.push(['JT', position, id]);
+};
+
+ArtistAPI.prototype.jumpToXY = function (x, y, id) {
+  this.log.push(['JT', [x, y], id]);
+};
+
+ArtistAPI.prototype.moveUpRight = function (distance, id) {
+  this.log.push(['MD', distance, 45, id]);
+};
+
+ArtistAPI.prototype.moveDownRight = function (distance, id) {
+  this.log.push(['MD', distance, 135, id]);
+};
+
+ArtistAPI.prototype.moveDownLeft = function (distance, id) {
+  this.log.push(['MD', distance, 225, id]);
+};
+
+ArtistAPI.prototype.moveUpLeft = function (distance, id) {
+  this.log.push(['MD', distance, 315, id]);
+};
+
 ArtistAPI.prototype.jumpUp = function (distance, id) {
   this.log.push(['JD', distance, 0, id]);
 };
@@ -140,6 +169,22 @@ ArtistAPI.prototype.jumpLeft = function (distance, id) {
 
 ArtistAPI.prototype.jumpRight = function (distance, id) {
   this.log.push(['JD', distance, 90, id]);
+};
+
+ArtistAPI.prototype.jumpUpRight = function (distance, id) {
+  this.log.push(['JD', distance, 45, id]);
+};
+
+ArtistAPI.prototype.jumpDownRight = function (distance, id) {
+  this.log.push(['JD', distance, 135, id]);
+};
+
+ArtistAPI.prototype.jumpDownLeft = function (distance, id) {
+  this.log.push(['JD', distance, 225, id]);
+};
+
+ArtistAPI.prototype.jumpUpLeft = function (distance, id) {
+  this.log.push(['JD', distance, 315, id]);
 };
 
 ArtistAPI.prototype.jumpForward = function (distance, id) {

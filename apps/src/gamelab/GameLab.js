@@ -3,7 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var msg = require('./locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
@@ -147,6 +147,8 @@ GameLab.prototype.init = function (config) {
 
   config.usesAssets = true;
 
+  gameLabSprite.injectLevel(this.level);
+
   this.gameLabP5.init({
     gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
@@ -220,7 +222,7 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource && config.level.editCode;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
   }
 
   this.studioApp_.setPageConstants(config, {
@@ -239,8 +241,8 @@ GameLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <GameLabView
-          showFinishButton={finishButtonFirstLine && showFinishButton}
-          onMount={onMount}
+        showFinishButton={finishButtonFirstLine && showFinishButton}
+        onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));

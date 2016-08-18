@@ -591,13 +591,14 @@ module LevelsHelper
     generator.create_token(payload, options)
   end
 
-  # If this is a restricted level (i.e., applab) and user is under 13, redirect
-  # with a flash alert.
-  def redirect_under_13(level)
+  # If this is a restricted level (i.e., applab), the user is under 13, and the
+  # user has not teacher that has accepted our (August 2016) terms of service,
+  # redirect with a flash alert.
+  def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Lab.
     return unless level.game == Game.applab || level.game == Game.gamelab
 
-    if current_user && current_user.under_13?
+    if current_user && current_user.under_13? && current_user.terms_version.nil?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
     end

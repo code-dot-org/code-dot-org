@@ -105,9 +105,9 @@ class ApplicationController < ActionController::Base
                            :hashed_email]
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.for(:sign_up) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.for(:sign_in) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:sign_up) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:sign_in) do |u| u.permit PERMITTED_USER_FIELDS end
   end
 
   def with_locale
@@ -135,7 +135,6 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
-        response[:trophy_updates] = options[:trophy_updates] unless options[:trophy_updates].blank?
         response[:new_level_completed] = options[:new_level_completed]
         response[:level_path] = build_script_level_path(script_level)
         script_level_solved_response(response, script_level)

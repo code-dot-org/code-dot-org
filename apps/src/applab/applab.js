@@ -11,7 +11,7 @@ import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -459,7 +459,6 @@ Applab.setStepSpeed = function (speed) {
 function getCurrentTickLength() {
   var debugStepDelay;
   if (debuggerUi) {
-    // debugStepDelay will be undefined if no speed slider is present
     debugStepDelay = debuggerUi.getStepDelay();
   }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
@@ -628,7 +627,7 @@ Applab.init = function (config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick, studioApp.reduxStore);
   }
 
   config.loadAudio = function () {
@@ -835,7 +834,7 @@ function setupReduxSubscribers(store) {
     const lastView = lastState.data && lastState.data.view;
     const isDataMode = (state.interfaceMode === ApplabInterfaceMode.DATA);
     if ((isDataMode && view !== lastView) || changedToDataMode(state, lastState)) {
-      onDataViewChange(state.data.view, state.data.tableName);
+      onDataViewChange(state.data.view, lastState.data.tableName, state.data.tableName);
     }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
@@ -1235,6 +1234,10 @@ Applab.execute = function () {
   if (Applab.makerlabController) {
     Applab.makerlabController
         .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .catch((error) => {
+          studioApp.displayPlayspaceAlert("error",
+              <div>{`Board connection error: ${error}`}</div>);
+        })
         .then(Applab.beginVisualizationRun);
   } else {
     Applab.beginVisualizationRun();
@@ -1283,25 +1286,27 @@ function onInterfaceModeChange(mode) {
  * Handle a view change within data mode.
  * @param {DataView} view
  */
-function onDataViewChange(view, tableName) {
+function onDataViewChange(view, oldTableName, newTableName) {
   if (!studioApp.reduxStore.getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
   const storageRef = getDatabase(Applab.channelId).child('storage');
+
+  // Unlisten from previous data view. This should not interfere with events listened to
+  // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
+  // only unlistening from 'value' events here.
+  storageRef.child('keys').off('value');
+  storageRef.child(`tables/${oldTableName}/records`).off('value');
+
   switch (view) {
-    case DataView.OVERVIEW:
-      storageRef.off();
-      return;
     case DataView.PROPERTIES:
-      storageRef.off();
       storageRef.child('keys').on('value', snapshot => {
         studioApp.reduxStore.dispatch(updateKeyValueData(snapshot.val()));
       });
       return;
     case DataView.TABLE:
-      storageRef.off();
-      storageRef.child(`tables/${tableName}/records`).on('value', snapshot => {
-        studioApp.reduxStore.dispatch(updateTableRecords(snapshot.val()));
+      storageRef.child(`tables/${newTableName}/records`).on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateTableRecords(newTableName, snapshot.val()));
       });
       return;
     default:

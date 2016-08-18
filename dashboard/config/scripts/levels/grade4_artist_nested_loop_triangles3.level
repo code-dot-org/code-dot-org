@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a hexagon by looping the triangle code?",
+    "instructions": "Can you draw a hexagon by looping the triangle code?\r\nHint: 6 × ? = 360",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,11 +29,12 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw a hexagon by looping the triangle code?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Can you draw a hexagon by looping the triangle code?\r\nHint: 6 × ? = 360\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Don't forget to make a turn after your inner loop.\\n\\nYou'll be looping 6 triangles over 360 degrees.\\n\\n**360 / 6 = ?**\",\r\n  \"hint_id\": \"4-5_Nested_Loops_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Don't forget to make a turn after your inner loop.\\n\\nYou'll be looping 6 triangles over 360 degrees.\\n\\n**6 x ? = 360**\",\r\n  \"hint_id\": \"4-5_Nested_Loops_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "true",
     "discard_background": "false",
+    "video_key": "C3_artist_nested_loops",
     "contained_level_names": null
   },
   "published": true,
@@ -44,42 +45,28 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="controls_repeat" deletable="false" editable="false">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="draw_move_by_constant" deletable="false" editable="false">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">100</title>
-              <next>
-                <block type="draw_turn_by_constant" deletable="false" editable="false">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">120</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant_dropdown" limit="1">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="36,45,60,90,120,180">90</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="36,45,60,90,120,180">90</title>
         </block>
-        <block type="jump_by_constant">
+        <block type="jump_by_constant_dropdown">
           <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
-        <block type="controls_repeat">
+        <block type="controls_repeat" limit="2">
           <title name="TIMES">???</title>
         </block>
         <block type="draw_colour" inline="true">
@@ -103,13 +90,13 @@
         </block>
         <block type="pick_one">
           <statement name="PICK">
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE">60</title>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE" config="36,45,60,90,120,180">120</title>
               <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">60</title>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="36,45,60,90,120,180">60</title>
                 </block>
               </next>
             </block>
@@ -119,31 +106,35 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-          <statement name="DO">
+        <block type="when_run" deletable="false" movable="false">
+          <next>
             <block type="controls_repeat">
-              <title name="TIMES">3</title>
+              <title name="TIMES">6</title>
               <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant_dropdown">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE" config="50,100,150,200,300">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE" config="36,45,60,90,120,180">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">120</title>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="36,45,60,90,120,180">60</title>
                     </block>
                   </next>
                 </block>
               </statement>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">60</title>
-                </block>
-              </next>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

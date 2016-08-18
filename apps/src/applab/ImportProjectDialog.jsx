@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import Dialog, {Body, Buttons, Confirm, Footer} from '../templates/Dialog';
 import color from '../color';
-import {fetchProject} from './redux/screens';
+import {fetchProject, toggleImportScreen} from './redux/screens';
 
 const styles = {
   urlInputWrapper: {
@@ -25,7 +25,7 @@ const styles = {
   },
 };
 
-const ImportProjectDialog = React.createClass({
+export const ImportProjectDialog = React.createClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
     onImport: React.PropTypes.func.isRequired,
@@ -33,16 +33,15 @@ const ImportProjectDialog = React.createClass({
     error: React.PropTypes.bool,
   }),
 
-  getDefaultProps() {
-    return {
-      onImport() {},
-    };
-  },
-
   getInitialState() {
     return {
       url: '',
     };
+  },
+
+  onImport() {
+    this.props.onImport(this.state.url);
+    this.setState(this.getInitialState());
   },
 
   render() {
@@ -56,10 +55,11 @@ const ImportProjectDialog = React.createClass({
           </p>
           <div style={styles.urlInputWrapper}>
             <input
-                type="text"
-                value={this.state.url}
-                style={styles.urlInput}
-                onChange={event => this.setState({url: event.target.value})}/>
+              type="text"
+              value={this.state.url}
+              style={styles.urlInput}
+              onChange={event => this.setState({url: event.target.value})}
+            />
           </div>
           {this.props.error &&
            <p style={styles.errorText}>
@@ -69,8 +69,10 @@ const ImportProjectDialog = React.createClass({
           }
         </Body>
         <Buttons>
-          <Confirm onClick={() => this.props.onImport(this.state.url)}
-                   disabled={this.props.isFetching}>
+          <Confirm
+            onClick={this.onImport}
+            disabled={this.props.isFetching}
+          >
             {this.props.isFetching && <span className="fa fa-spin fa-spinner"></span>}
             {' '}Next
           </Confirm>
@@ -80,7 +82,21 @@ const ImportProjectDialog = React.createClass({
   }
 });
 
-export default ImportProjectDialog;
+export default connect(
+  state => ({
+    isOpen: state.screens.isImportingScreen && !state.screens.importProject.fetchedProject,
+    isFetching: state.screens.importProject.isFetchingProject,
+    error: state.screens.importProject.errorFetchingProject,
+  }),
+  dispatch => ({
+    onImport(url) {
+      dispatch(fetchProject(url));
+    },
+    handleClose() {
+      dispatch(toggleImportScreen(false));
+    },
+  })
+)(ImportProjectDialog);
 
 
 if (BUILD_STYLEGUIDE) {
@@ -92,24 +108,27 @@ if (BUILD_STYLEGUIDE) {
           name: 'On open',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop
-                onImport={storybook.action("onImport")} />
+              hideBackdrop
+              onImport={storybook.action("onImport")}
+            />
           )
         }, {
           name: 'While fetching',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop
-                isFetching
-                onImport={storybook.action("onImport")} />
+              hideBackdrop
+              isFetching
+              onImport={storybook.action("onImport")}
+            />
           )
         }, {
           name: 'Error Fetching',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop
-                error
-                onImport={storybook.action("onImport")} />
+              hideBackdrop
+              error
+              onImport={storybook.action("onImport")}
+            />
           )
         },
       ]);

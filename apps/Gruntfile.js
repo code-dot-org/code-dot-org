@@ -268,12 +268,13 @@ module.exports = function (grunt) {
           '../shared/css/'
         ]
       },
-      files: _.zipObject([
+      files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
         ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+        ['build/package/css/publicKeyCryptography.css', 'style/publicKeyCryptography/publicKeyCryptography.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
@@ -367,7 +368,7 @@ module.exports = function (grunt) {
   var bundles = [
     {
       uniqueName: 'apps',
-      entries: _.zipObject(appsToBuild.map(function (app) {
+      entries: _.fromPairs(appsToBuild.map(function (app) {
         return [app, './src/' + app + '/main.js'];
       }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
         [['applab-api', './src/applab/api-entry.js']]
@@ -379,11 +380,13 @@ module.exports = function (grunt) {
       uniqueName: 'codeStudio',
       entries: {
         'code-studio': './src/code-studio/code-studio.js',
-        levelbuilder: './src/code-studio/levelbuilder.js',
-        levelbuilder_markdown: './src/code-studio/levelbuilder_markdown.js',
-        levelbuilder_studio: './src/code-studio/levelbuilder_studio.js',
-        levelbuilder_gamelab: './src/code-studio/levelbuilder_gamelab.js',
-        districtDropdown: './src/code-studio/districtDropdown.js',
+        'levelbuilder': './src/code-studio/levelbuilder.js',
+        'levelbuilder_markdown': './src/code-studio/levelbuilder_markdown.js',
+        'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
+        'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
+        'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
+        'districtDropdown': './src/code-studio/districtDropdown.js',
+        'signup': './src/code-studio/signup.js',
         'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
         'levels/widget': './src/code-studio/levels/widget.js',
         'levels/external': './src/code-studio/levels/external.js',
@@ -444,6 +447,14 @@ module.exports = function (grunt) {
       entries: {
         pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
       }
+    },
+
+    {
+      uniqueName: 'publicKeyCryptography',
+      entries: {
+        publicKeyCryptography: './src/publicKeyCryptography/main.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
     }
   ];
 
@@ -515,7 +526,7 @@ module.exports = function (grunt) {
 
   config.uglify = {
     lib: {
-      files: _.zipObject([
+      files: _.fromPairs([
         'jsinterpreter/interpreter.js',
         'jsinterpreter/acorn.js',
         'p5play/p5.play.js',

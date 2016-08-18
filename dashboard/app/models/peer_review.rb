@@ -55,19 +55,21 @@ class PeerReview < ActiveRecord::Base
         peer_review.update!(reviewer: user)
         peer_review
       else
-        # Eventually, more complex logic will go here for duplicating existing reviews
-        nil
+        review_to_clone = get_potential_reviews(script, user).sample
+
+        if review_to_clone
+          new_review = review_to_clone.clone
+          new_review.update(reviewer: user, status: nil, data: nil)
+        end
+
+        review_to_clone
       end
     end
   end
 
   def self.get_review_for_user(script, user)
-    where(
-      script: script,
+    PeerReview.get_potential_reviews(script, user).where(
       status: nil
-    ).where.not(
-      submitter: user,
-      level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     ).where(
       'reviewer_id is null or created_at < now() - interval 1 day'
     ).take
@@ -140,9 +142,25 @@ class PeerReview < ActiveRecord::Base
     end
   end
 
+  def self.get_review_completion_status(user, script)
+    if user &&
+        script.has_peer_reviews? &&
+        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+      reviews_done = PeerReview.where(reviewer: user, script: script, status: PeerReview.statuses.values).size
+
+      if reviews_done >= script.peer_reviews_to_complete
+        Plc::EnrollmentModuleAssignment::COMPLETED
+      elsif reviews_done > 0
+        Plc::EnrollmentModuleAssignment::IN_PROGRESS
+      else
+        Plc::EnrollmentModuleAssignment::NOT_STARTED
+      end
+    end
+  end
+
   def self.get_peer_review_summaries(user, script)
     if user &&
-        script.professional_learning_course? &&
+        script.has_peer_reviews? &&
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
 
       PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
@@ -169,5 +187,14 @@ class PeerReview < ActiveRecord::Base
       result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
       locked: false
     }
+  end
+
+  def self.get_potential_reviews(script, user)
+    where(
+      script: script,
+    ).where.not(
+      submitter: user,
+      level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+    )
   end
 end

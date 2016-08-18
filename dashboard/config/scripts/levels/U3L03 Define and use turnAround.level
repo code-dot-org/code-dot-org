@@ -131,7 +131,7 @@
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "message": "It's not quite right yet.  Did you forget to move forward after turning around?"
+        "message": "It's not quite right yet.  Did you move forward immediately after turning around?"
       }
     ],
     "fail_on_lint_errors": "false",

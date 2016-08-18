@@ -12,6 +12,7 @@ var BaseDialog = React.createClass({
     handleClose: React.PropTypes.func,
     uncloseable: React.PropTypes.bool,
     hideBackdrop: React.PropTypes.bool,
+    fullWidth: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
     children: React.PropTypes.node,
   },
@@ -37,7 +38,11 @@ var BaseDialog = React.createClass({
   },
 
   focusDialog: function () {
-    if (this.props.isOpen) {
+    // Don't steal focus if the active element is already a descendant of the
+    // dialog - prevents focus loss on updates of open BaseDialog components.
+    const descendantIsActive = document.activeElement && this.refs.dialog &&
+        this.refs.dialog.contains(document.activeElement);
+    if (this.props.isOpen && !descendantIsActive) {
       this.refs.dialog.focus();
     }
   },
@@ -54,6 +59,12 @@ var BaseDialog = React.createClass({
         marginLeft: 0,
       };
     }
+    if (this.props.fullWidth) {
+      bodyStyle = Object.assign({}, bodyStyle, {
+        width: '90%',
+        marginLeft: '-45%'
+      });
+    }
 
     let modalClassNames = "modal";
     let modalBodyClassNames = "modal-body";
@@ -65,11 +76,13 @@ var BaseDialog = React.createClass({
       modalBackdropClassNames = "modal-backdrop in";
     }
     var body = (
-      <div style={bodyStyle}
-           tabIndex="-1"
-           className={modalClassNames}
-           ref="dialog"
-           onKeyDown={this.closeOnEscape}>
+      <div
+        style={bodyStyle}
+        tabIndex="-1"
+        className={modalClassNames}
+        ref="dialog"
+        onKeyDown={this.closeOnEscape}
+      >
         <div className={modalBodyClassNames}>
           {!this.props.uncloseable &&
            <div id="x-close" className="x-close" onClick={this.closeDialog}></div>}
@@ -92,21 +105,23 @@ var BaseDialog = React.createClass({
 });
 module.exports = BaseDialog;
 
-// TODO: remove the undefined check once code-studio is merged with apps
-// Code studio's build system is not configured to replace BUILD_STYLEGUIDE
-// in the same way that webpack's build system is configured.
-if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
+if (BUILD_STYLEGUIDE) {
   var ExampleDialogButton = React.createClass({
     render() {
       return (
         <div>
-          <BaseDialog isOpen={!!this.state && this.state.open}
-                  handleClose={() => this.setState({open: false})}>
+          <BaseDialog
+            isOpen={!!this.state && this.state.open}
+            handleClose={() => this.setState({open: false})}
+            {...this.props}
+          >
             <div style={{border: '1px solid black'}}>
               The contents of the dialog go inside this box! woo
             </div>
           </BaseDialog>
-          <button onClick={() => this.setState({open: true})}>Open the example dialog</button>
+          <button onClick={() => this.setState({open: true})}>
+            Open the example dialog
+          </button>
         </div>
       );
     }
@@ -127,7 +142,10 @@ if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
           )
         }, {
           name: 'click to open',
-          story: () => <ExampleDialogButton />,
+          story: () => <ExampleDialogButton />
+        }, {
+          name: 'fullWidth',
+          story: () => <ExampleDialogButton fullWidth/>
         }, {
           name: 'old style',
           description: `Dialogs with the useDeprecatedGlobalStyles flag

@@ -3,23 +3,15 @@ title 'Introduction to Phase 2'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+# Welcome to the Phase 3 Online Challenges
 
-### Welcome to the Phase 3 Online Challenges
+<img src="https://csedweek.org/images/fit-260/chris-poster.png" class="level-image">
 
-<img src="https://csedweek.org/images/fit-260/chris-poster.png" width="320" style="float:right; margin-left:30px;" class="roundedPic" />
+## Phase 3 Post In-Person - Online
 
-#### <i>Phase 3 Post In-Person - Online</i>
-
-Welcome to the online challenges portion of your Phase 3 PD! Here you will continue to learn from the community of CS in Science teachers and spend more time with the curriculum to prepare for teaching the course in your classroom. These online activities should take no more than 8 hours, and we recommend splitting that time between the weeks following each of your two Phase 3 In-Person sessions. 
+Welcome to the online challenges portion of your Phase 3 PD! Here you will continue to learn from the community of CS in Science teachers and spend more time with the curriculum to prepare for teaching the course in your classroom. These online activities should take no more than 8 hours, and we recommend splitting that time between the weeks following each of your two Phase 3 In-Person sessions.
 
 > Note: In order for this PD to be considered complete, you must finish this online PD by June 6th, 2016
 
 To complete these challenges you'll need to use your Project GUTS curriculum, which contains each of the various modules that you visited over the past year.
-
-<br/>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

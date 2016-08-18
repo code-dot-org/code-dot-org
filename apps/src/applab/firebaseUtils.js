@@ -22,7 +22,7 @@ export function loadConfig() {
   }
 
   const configRef = getConfigRef();
-  return configRef.once('value', snapshot => {
+  return configRef.once('value').then(snapshot => {
     handleLoadConfig(snapshot.val());
 
     // Make sure we don't listen multiple times.
@@ -49,13 +49,15 @@ function handleLoadConfig(configData) {
  */
 function validateConfig(configData) {
   return (
+    configData &&
     configData.maxTableRows > 0 &&
     configData.maxRecordSize > 0 &&
     configData.maxPropertySize > 0 &&
+    configData.limits &&
     Object.keys(configData.limits).length > 0);
 }
 
-function getConfigRef() {
+export function getConfigRef() {
   return getFirebase().child('v3/config/channels');
 }
 

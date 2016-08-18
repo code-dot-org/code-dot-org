@@ -118,15 +118,33 @@ theme: pdf
           - if state_info[:ap_hispanic_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_hispanic_i])
+            - if state_info[:ap_hispanic_i] == 1
+              student was 
+            - else 
+              students were 
           - else
-            none
-          were Hispanic;
+            no students were 
+          Hispanic;
           - if state_info[:ap_black_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_black_i])
+            - if state_info[:ap_black_i] == 1
+              student was
+            - else
+              students were 
           - else
-            none
-          were black.
+            no students were 
+          black;
+          - if state_info[:ap_native_american_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_native_american_i])
+            - if state_info[:ap_native_american_i] == 1
+              student was
+            - else
+              students were
+          - else
+            no students were
+          Native American.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -183,9 +201,14 @@ theme: pdf
       = succeed '.' do
         = state_info[:state_name_s]
     %ul
+      - if state_info[:professional_learning_partners_t] != 'none'
+        %li
+          Code.org's professional learning partner(s) is/are:
+          = succeed '.' do
+            = state_info[:professional_learning_partners_t]
       - if state_info[:school_district_partners_t] != 'no school districts in the state'
         %li
-          Code.org has partnered with
+          Code.org has partnered with the following school district(s):
           = succeed '.' do
             = state_info[:school_district_partners_t]
       - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
@@ -273,7 +296,6 @@ theme: pdf
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_1_t]
 
       %div.policy-item
@@ -290,8 +312,7 @@ theme: pdf
             provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
-            %i.fa.fa-square-o
-            = state_info[:state_name_s]
+            %i.fa.fa-check-square-o
             = state_info[:policy_2_t]
 
       %div.policy-item
@@ -309,7 +330,6 @@ theme: pdf
         - elsif state_info[:cs_teacher_cert_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_3_t]
 
       %div.policy-item
@@ -327,7 +347,6 @@ theme: pdf
         - elsif state_info[:pre_service_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_4_t]
 
       %div.policy-item
@@ -345,7 +364,6 @@ theme: pdf
         - elsif state_info[:state_position_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_5_t]
 
       %div.policy-item
@@ -363,7 +381,6 @@ theme: pdf
         - elsif state_info[:require_hs_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_6_t]
 
       %div.policy-item
@@ -387,7 +404,6 @@ theme: pdf
         - elsif state_info[:cs_counts_t] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_7_t]
             Find out how other states allow computer science to count towards graduation at
             = succeed "." do
@@ -408,7 +424,6 @@ theme: pdf
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_8_t]
 
   %div

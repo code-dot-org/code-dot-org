@@ -37,6 +37,7 @@
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
+    = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
   .field
     = f.hidden_field :published
   .actions

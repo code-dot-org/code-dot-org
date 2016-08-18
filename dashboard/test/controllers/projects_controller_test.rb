@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   setup do
     sign_in create(:user)
   end
@@ -96,6 +96,16 @@ class ProjectsControllerTest < ActionController::TestCase
       get :show, key: lab, share: true, channel_id: 'my_channel_id'
 
       assert_redirected_to '/'
+    end
+  end
+
+  test 'shared applab and gamelab project level gets redirected to edit if under 13 with tos teacher' do
+    sign_in create(:young_student_with_tos_teacher)
+
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+
+      assert @response.headers['Location'].ends_with? '/edit'
     end
   end
 

@@ -88,11 +88,20 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   def exit_survey(workshop, teacher, enrollment)
+    # In case the workshop is reprocessed, do not send duplicate exit surveys.
+    if enrollment.survey_sent_at
+      CDO.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{enrollment.id}"
+      return
+    end
+    enrollment.update!(survey_sent_at: Time.zone.now)
+
     @workshop = workshop
     @teacher = teacher
+    @enrollment = enrollment
     @is_first_workshop = Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
 
     @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
+    @dash_code = CDO.pd_workshop_exit_survey_dash_code
 
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF

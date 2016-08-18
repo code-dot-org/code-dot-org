@@ -1,19 +1,21 @@
 import React from 'react';
 import Radium from 'radium';
+import ChatBubble from './ChatBubble';
 
-const InlineFeedback = ({ extra, message, styles }) => {
+const InlineFeedback = ({ extra, message, styles, borderColor }) => {
   // We add a classname to this element exclusively so that UI tests can
   // easily detect its presence. This class should NOT be used for
   // styling.
   return (
-    <div style={styles.container} className="uitest-topInstructions-inline-feedback">
-      <p style={styles.message}>{message}</p>
+    <ChatBubble borderColor={borderColor}>
+      <p className="uitest-topInstructions-inline-feedback">{message}</p>
       {extra && <p style={styles.message}>{extra}</p>}
-    </div>
+    </ChatBubble>
   );
 };
 
 InlineFeedback.propTypes = {
+  borderColor: React.PropTypes.string,
   extra: React.PropTypes.string,
   message: React.PropTypes.string.isRequired,
   styles: React.PropTypes.object,

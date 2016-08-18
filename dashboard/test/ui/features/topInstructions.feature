@@ -1,5 +1,6 @@
 @eyes
 @as_student
+@no_circle
 Feature: Eyes Tests for Top Instructions
 
 Scenario: Top Instructions
@@ -24,6 +25,16 @@ Scenario: Top Instructions
   And I press "runButton"
   And I wait to see ".uitest-topInstructions-inline-feedback"
   And I see no difference for "maze with hints"
+
+  Then I press "lightbulb"
+  And I see no difference for "maze with hint prompt"
+
+  Then I resize top instructions to "200" pixels tall
+  And I see no difference for "maze with expanded instructions"
+
+  Then I press ".csf-top-instructions button:contains('Yes')" using jQuery
+  And I wait to see ".block-space"
+  And I see no difference for "maze with block hint"
 
   Then I am on "http://learn.code.org/s/course4/stage/19/puzzle/3?noautoplay=true&enableExperiments=topInstructionsCSF"
   And I see no difference for "Bee with starting hints"

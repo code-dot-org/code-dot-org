@@ -28,7 +28,7 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\r\n  \"hint_id\": \"K2.0_sequence_3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nSomething is not quite right. REMOVE a block to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "Something is not quite right. REMOVE a block to get me to the pig!\r\n\r\n![](https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif)",
     "contained_level_names": null
   },
   "published": true,
@@ -41,7 +41,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveEast">
+            <block type="maze_moveEast" movable="false">
               <next>
                 <block type="maze_moveSouth">
                   <next>

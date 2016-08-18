@@ -2,7 +2,7 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   include UsersHelper  # For user session state accessors.
   include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
@@ -699,9 +699,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
   end
 
-  test 'no report bug link for 20 hour' do
-    get :show, script_id: @script, id: @script_level.id
-    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]', 0
+  test 'report bug link for 20 hour' do
+    get :show, script_id: '20-hour', stage_id: 1, id: 1
+    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 
   test 'report bug link for course1' do
@@ -709,9 +709,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 
-  test 'no report bug link for frozen' do
+  test 'report bug link for frozen' do
     get :show, script_id: 'frozen', stage_id: 1, id: 1
-    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]', 0
+    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 
   test 'report bug link for course4' do
@@ -887,7 +887,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script)
     level = create(:maze)
-    create(:script_level, script: script, stage: stage, level: level)
+    create(:script_level, script: script, stage: stage, levels: [level])
 
     script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
@@ -983,38 +983,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal true, assigns(:level_view_options_map)[level.id][:submitted]
     assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options_map)[level.id][:unsubmit_url]
-  end
-
-  def create_admin_script
-    create(:script, admin_required: true).tap do |script|
-      create :script_level, script: script
-    end
-  end
-
-  test "should not get show of admin script if not signed in" do
-    admin_script = create_admin_script
-
-    get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_redirected_to_sign_in
-  end
-
-  test "should not get show of admin script if signed in as not admin" do
-    admin_script = create_admin_script
-
-    sign_in create(:student)
-    get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :forbidden
-  end
-
-  # TODO(asher): Consolidate the tests when the user is an admin. In particular,
-  # these scripts should no longer exist, should be accessible to noone, and
-  # will go away.
-  test "should not get show of admin script if signed in as admin" do
-    admin_script = create_admin_script
-
-    sign_in create(:admin)
-    get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :forbidden
   end
 
   def create_student_of_admin_script

@@ -123,7 +123,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -161,7 +162,53 @@
     "debugger_disabled": "true",
     "encrypted_examples": "8irC4Fn6WFTKryz+f4jlykmX3IDyRGVjdbJeaYgnY82XCgm6CLspMW3sxVLq\nVXOr\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawAllFish:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllFish function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawFish:4",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 15,
+        "message": "drawAllFish: App lab is expecting that you write a loop runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+      },
+      {
+        "entries": [
+          "drawAllBubbles:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllBubbles function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawBubble:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 200,
+        "message": "drawAllBubbles: App lab is expecting that you would simply 'wrap a loop around' the existing code that was inside the drawAllBubbles function - a looping of two commands: moveTo(x,y) and drawBubble(size). And that that loop would run 200 times or more.  It appears as though the sequence is slightly different or you're not running the loop 200 times."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

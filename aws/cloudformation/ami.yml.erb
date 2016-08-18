@@ -11,8 +11,8 @@ ami = 1
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
-  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
+  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC' %>
+  IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM' %>
   AMIComplete<%=ami%>:
     Type: AWS::CloudFormation::WaitCondition
     DependsOn: AMI<%=ami%>
@@ -50,7 +50,7 @@ Resources:
             'recipe[cdo-apps::stop]',
           ],
           commit: `git ls-remote origin #{branch} | cut -f1`.strip) %>
-  AMI<%=ami%>: <%= lambda.call 'AMIManager',
+  AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "WebServerAMI#{ami}",
     StackName: {Ref: 'AWS::StackName' },
     Region: {Ref: 'AWS::Region' },

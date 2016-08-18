@@ -13,10 +13,6 @@ class AbilityTest < ActiveSupport::TestCase
     @student_of_admin_script = create(:script, student_of_admin_required: true).tap do |script|
       @student_of_admin_script_level = create(:script_level, script: script)
     end
-
-    @admin_script = create(:script, admin_required: true).tap do |script|
-      @admin_script_level = create(:script_level, script: script)
-    end
   end
 
   test "as guest" do
@@ -38,12 +34,10 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert !ability.can?(:read, @login_required_script)
     assert !ability.can?(:read, @student_of_admin_script)
-    assert !ability.can?(:read, @admin_script)
 
     assert ability.can?(:read, @public_script_level)
     assert !ability.can?(:read, @login_required_script_level)
     assert !ability.can?(:read, @student_of_admin_script_level)
-    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as member" do
@@ -68,12 +62,10 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
     assert !ability.can?(:read, @student_of_admin_script)
-    assert !ability.can?(:read, @admin_script)
 
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @login_required_script_level)
     assert !ability.can?(:read, @student_of_admin_script_level)
-    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as student of admin" do
@@ -98,12 +90,10 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @student_of_admin_script)
-    assert !ability.can?(:read, @admin_script)
 
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @login_required_script_level)
     assert ability.can?(:read, @student_of_admin_script_level)
-    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as admin" do
@@ -116,7 +106,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, ScriptLevel)
     assert ability.cannot?(:read, UserLevel)
     assert ability.cannot?(:read, UserScript)
-    assert ability.cannot?(:read, Section)
 
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)
@@ -128,12 +117,10 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @public_script)
     assert ability.cannot?(:read, @login_required_script)
     assert ability.cannot?(:read, @student_of_admin_script)
-    assert ability.cannot?(:read, @admin_script)
 
     assert ability.cannot?(:read, @public_script_level)
     assert ability.cannot?(:read, @login_required_script_level)
     assert ability.cannot?(:read, @student_of_admin_script_level)
-    assert ability.cannot?(:read, @admin_script_level)
   end
 
   test 'with hint_access manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do

@@ -8,7 +8,6 @@ gem 'rails', '~> 4.2.6'
 gem 'responders', '~> 2.0'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'rack-contrib', '~> 1.1'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
@@ -66,6 +65,7 @@ group :development, :test do
   # for ui testing
   gem 'cucumber'
   gem 'selenium-webdriver', '~> 2.45.0'
+  gem 'net-http-persistent'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -108,13 +108,14 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'devise_invitable', '~> 1.5.2'
+gem 'devise_invitable', '~> 1.6.0'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-windowslive', '~> 0.0.9'
 gem 'omniauth-clever', '~> 1.2.1'
+gem 'ims-lti', '~> 1.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -191,7 +192,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
 
@@ -202,6 +202,8 @@ gem 'rack-attack', '~> 4.4'
 # Generate SSL certificates
 gem 'acmesmith'
 
+gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'
+gem 'bcrypt'

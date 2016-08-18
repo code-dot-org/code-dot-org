@@ -149,14 +149,14 @@ class ApiController < ApplicationController
       student_hash = {id: student.id, name: student.name}
 
       text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt(script_level.level)
+        last_attempt = student.last_attempt_for_any(script_level.levels)
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
-          question: script_level.level.properties['title'],
+          question: last_attempt.level.properties['title'],
           response: response,
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
         }
@@ -185,14 +185,15 @@ class ApiController < ApplicationController
         # Don't allow somebody to peek inside an anonymous survey using this API.
         next if script_level.anonymous?
 
-        last_attempt = student.last_attempt(script_level.level)
+        last_attempt = student.last_attempt_for_any(script_level.levels)
+        level_group = last_attempt.try(:level) || script_level.oldest_active_level
         response = last_attempt.try(:level_source).try(:data)
 
         next unless response
 
         response_parsed = JSON.parse(response)
 
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = student.user_level_for(script_level, level_group)
 
         # Summarize some key data.
         multi_count = 0
@@ -201,7 +202,7 @@ class ApiController < ApplicationController
         # And construct a listing of all the individual levels and their results.
         level_results = []
 
-        script_level.level.levels.each do |level|
+        level_group.levels.each do |level|
           if level.is_a? Multi
             multi_count += 1
           end
@@ -248,7 +249,7 @@ class ApiController < ApplicationController
           student: student_hash,
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
-          question: script_level.level.properties["title"],
+          question: level_group.properties["title"],
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,

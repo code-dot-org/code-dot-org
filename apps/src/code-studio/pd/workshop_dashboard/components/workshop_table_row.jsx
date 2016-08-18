@@ -1,15 +1,20 @@
-/*
-  Workshop summary display for use as a row in WorkshopTable
+/**
+ * Workshop summary display for use as a row in WorkshopTable
  */
 import React from 'react';
-var SessionTimesList = require('./session_times_list');
-var ConfirmationDialog = require('./confirmation_dialog');
-var FacilitatorsList = require('./facilitators_list');
-var Button = require('react-bootstrap').Button;
+import {Button} from 'react-bootstrap';
+import SessionTimesList from './session_times_list';
+import ConfirmationDialog from './confirmation_dialog';
+import FacilitatorsList from './facilitators_list';
 
-var WorkshopTableRow = React.createClass({
+const WorkshopTableRow = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   propTypes: {
     workshop: React.PropTypes.shape({
+      id: React.PropTypes.number.isRequired,
       sessions: React.PropTypes.array.isRequired,
       location_name: React.PropTypes.string.isRequired,
       workshop_type: React.PropTypes.string.isRequired,
@@ -19,50 +24,78 @@ var WorkshopTableRow = React.createClass({
       facilitators: React.PropTypes.array.isRequired,
       state: React.PropTypes.string.isRequired
     }).isRequired,
-    onView: React.PropTypes.func.isRequired,
-    onEdit: React.PropTypes.func,
-    onDelete: React.PropTypes.func
+    viewUrl: React.PropTypes.string.isRequired,
+    editUrl: React.PropTypes.string,
+    onDelete: React.PropTypes.func,
+    showSignupUrl: React.PropTypes.bool
   },
 
-  getInitialState: function () {
+  getDefaultProps() {
+    return {
+      onEdit: null,
+      onDelete: null,
+      showSignupUrl: false
+    };
+  },
+
+  getInitialState() {
     return {
       showDeleteConfirmation: false
     };
   },
 
-  handleViewClick: function (e) {
-    this.props.onView(this.props.workshop);
-  },
-  handleEditClick: function (e) {
-    this.props.onEdit(this.props.workshop);
+  handleViewClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.viewUrl);
   },
 
-  handleDeleteClick: function () {
+  handleEditClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.editUrl);
+  },
+
+  handleDeleteClick() {
     this.setState({showDeleteConfirmation: true});
   },
 
-  handleDeleteCanceled: function () {
+  handleDeleteCanceled() {
     this.setState({showDeleteConfirmation: false});
   },
 
-  handleDeleteConfirmed: function () {
+  handleDeleteConfirmed() {
     this.setState({showDeleteConfirmation: false});
     this.props.onDelete(this.props.workshop);
   },
 
-  renderEditButton: function () {
-    if (!this.props.onEdit) {
+  renderViewButton() {
+    return (
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.viewUrl)}
+        onClick={this.handleViewClick}
+      >
+        View
+      </Button>
+    );
+  },
+
+  renderEditButton() {
+    if (!this.props.editUrl) {
       return null;
     }
 
     return (
-      <Button bsSize="xsmall" onClick={this.handleEditClick}>
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.editUrl)}
+        onClick={this.handleEditClick}
+      >
         Edit
       </Button>
     );
   },
 
-  renderDeleteButton: function () {
+  renderDeleteButton() {
     if (!this.props.onDelete) {
       return null;
     }
@@ -74,7 +107,22 @@ var WorkshopTableRow = React.createClass({
     );
   },
 
-  render: function () {
+  renderSignupUrlCell() {
+    if (!this.props.showSignupUrl) {
+      return null;
+    }
+
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.workshop.id}/enroll`;
+    return (
+      <td>
+        <a href={signupUrl} target="_blank">
+          {signupUrl}
+        </a>
+      </td>
+    );
+  },
+
+  render() {
     return (
       <tr>
         <td>
@@ -98,8 +146,9 @@ var WorkshopTableRow = React.createClass({
         <td>
           {this.props.workshop.state}
         </td>
+        {this.renderSignupUrlCell()}
         <td>
-          <Button bsSize="xsmall" onClick={this.handleViewClick}>View</Button>
+          {this.renderViewButton()}
           {this.renderEditButton()}
           {this.renderDeleteButton()}
           <ConfirmationDialog

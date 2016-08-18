@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class LevelsHelperTest < ActionView::TestCase
-  include Devise::TestHelpers
-  include LocaleHelper
+  include Devise::Test::ControllerHelpers
 
   def sign_in(user)
     # override the default sign_in helper because we don't actually have a request or anything here
@@ -333,7 +332,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
     @script.update(professional_learning_course: 'Professional Learning Course')
-    @script_level = create(:script_level, level: @level, script: @script)
+    @script_level = create(:script_level, levels: [@level], script: @script)
     assert_not can_view_solution?
 
     sign_out user
@@ -348,7 +347,7 @@ class LevelsHelperTest < ActionView::TestCase
     @script_level = nil
     assert_not can_view_solution?
 
-    @script_level = create(:script_level, level: @level, script: @script)
+    @script_level = create(:script_level, levels: [@level], script: @script)
     @level.update(ideal_level_source_id: nil)
     assert_not can_view_solution?
   end
@@ -356,7 +355,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'show solution link shows link for appropriate users' do
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
-    @script_level = create(:script_level, level: @level, script: @script)
+    @script_level = create(:script_level, levels: [@level], script: @script)
 
     user = create :levelbuilder
     sign_in user

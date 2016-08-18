@@ -3,7 +3,6 @@ title 'Accelerated Intro to CS Course'
 description 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
 description 'This 20-hour course covers the core computer science and programming concepts in courses 2-4.'
 hidden 'false'
-trophies 'true'
 
 stage 'Introduction to Computer Science'
 concepts 'sequence'

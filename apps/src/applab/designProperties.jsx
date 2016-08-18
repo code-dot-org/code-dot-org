@@ -169,27 +169,35 @@ var DesignProperties = React.createClass({
           </p>
         </div>
         <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
-          <div id="propertiesTab"
-              style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeTab : styles.inactiveTab}
-              className="hover-pointer"
-              onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}>
+          <div
+            id="propertiesTab"
+            style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeTab : styles.inactiveTab}
+            className="hover-pointer"
+            onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
+          >
             <span style={styles.tabLabel}>PROPERTIES</span>
           </div>
-          <div id="eventsTab"
-              style={this.state.selectedTab === TabType.EVENTS ? styles.activeTab : styles.inactiveTab}
-              className="hover-pointer"
-              onClick={this.handleTabClick.bind(this, TabType.EVENTS)}>
+          <div
+            id="eventsTab"
+            style={this.state.selectedTab === TabType.EVENTS ? styles.activeTab : styles.inactiveTab}
+            className="hover-pointer"
+            onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
+          >
             <span style={styles.tabLabel}>EVENTS</span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
-            <ElementSelect onChangeElement={this.props.onChangeElement}
+            <ElementSelect
+              onChangeElement={this.props.onChangeElement}
               elementIdList={this.props.elementIdList}
-              selected={this.props.element} />
+              selected={this.props.element}
+            />
           </div>
         </div>
         <div id="designWorkspaceBody" style={styles.workspaceBody}>
-          <div id="propertiesBody"
-              style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeBody : styles.inactiveBody}>
+          <div
+            id="propertiesBody"
+            style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeBody : styles.inactiveBody}
+          >
             {/* We provide a key to the outer div so that element foo and element bar are
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
@@ -198,24 +206,28 @@ var DesignProperties = React.createClass({
                 {!isOnlyScreen &&
                 <DeleteElementButton
                   shouldConfirm={isScreen}
-                  handleDelete={this.props.onDelete}/>
+                  handleDelete={this.props.onDelete}
+                />
                 }
                 {!isScreen &&
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
                 }
               </div>
               <PropertyComponent
-                  element={this.props.element}
-                  handleChange={this.props.handleChange}
-                  onDepthChange={this.props.onDepthChange}/>
-            </div>
-          </div>
-          <div id="eventsBody"
-              style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}>
-            <EventComponent
                 element={this.props.element}
                 handleChange={this.props.handleChange}
-                onInsertEvent={this.props.onInsertEvent}
+                onDepthChange={this.props.onDepthChange}
+              />
+            </div>
+          </div>
+          <div
+            id="eventsBody"
+            style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}
+          >
+            <EventComponent
+              element={this.props.element}
+              handleChange={this.props.handleChange}
+              onInsertEvent={this.props.onInsertEvent}
             />
           </div>
         </div>

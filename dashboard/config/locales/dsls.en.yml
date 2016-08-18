@@ -131,8 +131,7 @@ en:
       Algo How Routers Learn Student Lesson Introduction:
         description here: description here
         title: title
-      Algo MST Student Lesson Introduction:
-        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
+      Algo MST Student Lesson Introduction: {}
       Algo Shortest Path Student Lesson Introduction:
         description here: description here
         title: title
@@ -142,6 +141,9 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Begin planning your project:
+        description here: description here
+        title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD U3 - Booleans - 1: {}
@@ -169,11 +171,22 @@ en:
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
       CSD U3 Variables2 STOP variables in expressions: {}
+      CSD U3 abstraction intro:
+        description here: description here
+        title: title
+      CSD U3 collisions STOP isTouching:
+        STOP: STOP
+        description here: description here
+      CSD U3 setSpeed STOP:
+        Stop Here: Stop Here
+        description here: description here
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSDU2 - Rating Quality Websites: {}
+      CSDU2- home page examples: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -182,6 +195,7 @@ en:
         title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Pre-survey: {}
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
@@ -362,6 +376,11 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      Categorizing Data: {}
+      Cleaning Data: {}
+      'Collection A: Good and Bad Visualizations': {}
+      'Collection B: Good and Bad Visualizations': {}
+      Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
       ECS PD1 teaching strategies:
@@ -374,7 +393,6 @@ en:
       ECS Phase 3 Unit4 Welcome: {}
       ECS Phase 3 Welcome: {}
       ECSD3-u5 do the challenge: {}
-      ECSPD 1 page template: {}
       ECSPD Challenge Intro: {}
       ECSPD Challenge Reflection: {}
       ECSPD Challenge Rubric:
@@ -666,7 +684,7 @@ en:
       ECSPD3-u5 day 9-12: {}
       ECSPD3-u5 intro to u5: {}
       ECSPD3-u5 lesson overview: {}
-      'ECSPD3-u5 list of challenges ': {}
+      ECSPD3-u5 list of challenges: {}
       ECSPD3-u5 overview: {}
       ECSPD3-u5 plan: {}
       ECSPD3-u5 post survey: {}
@@ -706,6 +724,7 @@ en:
       ECSPD3-u6 share out overview: {}
       ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
+      Editing Chart Appearance: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Empty Markdown Level: {}
@@ -732,12 +751,14 @@ en:
       Exploring Practices and Strategies during TeacherCon: {}
       External level test (will):
         first computer program: first computer program
+      Favicon Instructions: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
         description here: description here
         title: title
@@ -761,6 +782,11 @@ en:
         tour of the PD space: tour of the PD space
       Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
+      Making Pivot Tables Part 1 - The Basics: {}
+      Making Pivot Tables Part 2 - Manipulation and Visualization: {}
+      Making a Bar Chart: {}
+      Making a Line Chart: {}
+      Making a Scatter Plot: {}
       MarbleMaze:
         Marble Maze: Marble Maze
         Marble Maze Activity for K Level: Marble Maze Activity for K Level
@@ -1021,6 +1047,16 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Prepare for your presentation:
+        description here: description here
+        title: title
+      SFLP - Web - Describing Webpages: {}
+      SFLP - Web - Designing Code for Computers: {}
+      SFLP - Web - Designing Webpages: {}
+      SFLP - Web - Digital Footprint: {}
+      SFLP - Web - Images on the Web: {}
+      SFLP - Web - Quality Websites: {}
+      SFLP - Web - Text on the Web: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
@@ -1032,17 +1068,14 @@ en:
       TLO practical:
         TLO in Practice: TLO in Practice
       TeacherCon Agenda: {}
-      Test External Markdown:
-        Test External Markdown: Test External Markdown
+      Test External Markdown: {}
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
         The Great Bug Bash: The Great Bug Bash
-      U1L1 Student Lesson Introduction:
-        Impact of Innovation: Impact of Innovation
-        description here: description here
+      U1L1 Student Lesson Introduction: {}
       U1L10 Lesson Overview: {}
       U1L10 Lesson Plan: {}
       U1L10 Student Lesson Introduction:
@@ -1053,18 +1086,10 @@ en:
       U1L11 Student Lesson Introduction:
         description here: description here
         title: title
-      U1L12 Student Lesson Introduction:
-        description here: description here
-        title: title
-      U1L13 Student Lesson Summary:
-        description here: description here
-        title: title
-      U1L14 Student Lesson Summary:
-        description here: description here
-        title: title
-      U1L15 Student Lesson Summary:
-        description here: description here
-        title: title
+      U1L12 Student Lesson Introduction: {}
+      U1L13 Student Lesson Summary: {}
+      U1L14 Student Lesson Summary: {}
+      U1L15 Student Lesson Summary: {}
       U1L16 Student Lesson Introduction:
         Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
@@ -1085,9 +1110,7 @@ en:
       U1L4 Widget Demo - Video:
         Widget Demonstration - Video: Widget Demonstration - Video
         description here: description here
-      U1L5 Student Lesson Introduction:
-        description here: description here
-        title: title
+      U1L5 Student Lesson Introduction: {}
       U1L6 Lesson Overview: {}
       U1L6 Lesson Plan: {}
       U1L6 Student Lesson Introduction:
@@ -1101,9 +1124,7 @@ en:
         title: title
       U1L9 Lesson Overview: {}
       U1L9 Lesson Plan: {}
-      U1L9 Student Lesson Introduction:
-        description here: description here
-        title: title
+      U1L9 Student Lesson Introduction: {}
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1116,40 +1137,31 @@ en:
       U2L12 Student Lesson Introduction:
         description here: description here
         title: title
-      U2L13 Student Lesson Introduction:
-        Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
-      U2L14 Student Lesson Introduction:
-        Cracking the Code: Cracking the Code
-      U2L15 Student Lesson Introduction:
-        Encryption Algorithms: Encryption Algorithms
+      U2L13 Student Lesson Introduction: {}
+      U2L14 Student Lesson Introduction: {}
+      U2L15 Student Lesson Introduction: {}
       U2L16 Student Lesson Introduction:
         Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
       U2L17 Student Lesson Introduction:
         Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
         description here: description here
-      U2L18 Student Lesson Introduction:
-        One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+      U2L18 Student Lesson Introduction: {}
       U2L19 Student Lesson Introduction:
         Public Key Encryption: Public Key Encryption
       U2L2 Lesson Overview: {}
       U2L2 Lesson Plan: {}
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
-      U2L20 Student Lesson Introduction:
-        Security and Hacking in the Real World: Security and Hacking in the Real World
+      U2L20 Student Lesson Introduction: {}
       U2L3 Lesson Overview: {}
       U2L3 Lesson Plan: {}
-      U2L3 Student Lesson Introduction:
-        Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
+      U2L3 Student Lesson Introduction: {}
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Redundancy: U2L04 Routers and Redundancy
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
-      U2L6 Student Lesson Introduction:
-        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
-      U2L7 Student Lesson Introduction:
-        description here: description here
-        title: title
+      U2L6 Student Lesson Introduction: {}
+      U2L7 Student Lesson Introduction: {}
       U2L8 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1285,8 +1297,7 @@ en:
       U3L20 - combining And and Or explanation:
         description here: description here
         title: title
-      U3L20 Student Lesson Introduction:
-        Conditional Basics: Conditional Basics
+      U3L20 Student Lesson Introduction: {}
       U3L21 Student Lesson Introduction:
         More Variables: More Variables
       U3L21 Student Lesson Introduction v2: {}
@@ -1299,14 +1310,11 @@ en:
       U3L24 Return Statements Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
-      U3L25 Student Lesson Introduction:
-        Compound Conditionals: Compound Conditionals
+      U3L25 Student Lesson Introduction: {}
       U3L26 Student Lesson Introduction:
         Strings and Substrings: Strings and Substrings
-      U3L27 Student Lesson Introduction:
-        Digital Assistant Challenge: Digital Assistant Challenge
-      U3L28 Student Lesson Introduction:
-        While Loop Basics: While Loop Basics
+      U3L27 Student Lesson Introduction: {}
+      U3L28 Student Lesson Introduction: {}
       U3L29 Student Lesson Introduction:
         While Loops and Counting: While Loops and Counting
       U3L30 Student Lesson Introduction:
@@ -1533,6 +1541,7 @@ en:
         duino music: duino music
       duino pov:
         duino pov: duino pov
+      ecs unit 2 introduction: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -1568,6 +1577,43 @@ en:
       grade1_story_theGreatTowerTopple:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
+      grade1_unplugged_behavingInLab: {}
+      grade2_unplugged_bigEvent: {}
+      grade2_unplugged_buildAblock:
+        Build a Block: Build a Block
+      grade2_unplugged_neighborhood:
+        description here: description here
+        title: title
+      grade2_unplugged_rlAlgorithms:
+        Real Life Algorithms: Real Life Algorithms
+      grade3_Unplugged_ConditionalsLoops:
+        Conditionals with Loops: Conditionals with Loops
+      grade3_farmer_stage13_placeholder: {}
+      grade4_project_design:
+        description here: description here
+        title: title
+      grade4_project_design_image:
+        description here: description here
+        title: title
+      grade4_project_presentation:
+        description here: description here
+        title: title
+      grade4_unplugged_FunkyFunctions:
+        Funky Functions: Funky Functions
+        Illustrate the power of functions: Illustrate the power of functions
+      grade5_project_design:
+        description here: description here
+        title: title
+      grade5_project_presentation:
+        description here: description here
+        title: title
+      gradeK_external_FrustrationWorksheet:
+        Frustration Worksheet: Frustration Worksheet
+      gradeK_unplugged_events:
+        Big Event: Big Event
+      gradeK_unplugged_loops:
+        Loops Unplugged: Loops Unplugged
+      gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
       introduction to events: {}
@@ -1583,6 +1629,9 @@ en:
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
       plc csp1 philosophy and commentary: {}
+      pre-assessment survey heading1: {}
+      pre-assessment survey heading2: {}
+      pre-assessment survey heading3: {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -1863,9 +1912,7 @@ en:
         The Need for DNS: The Need for DNS
       v2 U1L13 Student Lesson Introduction:
         HTTP and Abstraction: HTTP and Abstraction
-      v2 U1L14 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U1L14 Student Lesson Introduction: {}
       v2 U1L2 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1881,20 +1928,13 @@ en:
       v2 U1L6 Student Lesson Introduction:
         Sending Numbers: Sending Numbers
         description here: description here
-      v2 U1L8 Student Lesson Introduction:
-        description here: description here
-        title: title
-      v2 U1L9 Student Lesson Introduction:
-        The Need for Addressing: The Need for Addressing
-      v2 U2L1 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U1L8 Student Lesson Introduction: {}
+      v2 U1L9 Student Lesson Introduction: {}
+      v2 U2L1 Student Lesson Introduction: {}
       v2 U2L10 Student Lesson Introduction:
         description here: description here
         title: title
-      v2 U2L11 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U2L11 Student Lesson Introduction: {}
       v2 U2L12 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1904,33 +1944,23 @@ en:
       v2 U2L14 Student Lesson Introduction:
         description here: description here
         title: title
-      v2 U2L15 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U2L15 Student Lesson Introduction: {}
       v2 U2L2 Student Lesson Summary:
         description here: description here
         title: title
-      v2 U2L3 Student Lesson Summary:
-        description here: description here
-        title: title
-      v2 U2L4 Student Lesson Summary:
-        description here: description here
-        title: title
+      v2 U2L3 Student Lesson Summary: {}
+      v2 U2L4 Student Lesson Summary: {}
       v2 U2L5 Student Lesson Introduction:
         Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
-      v2 U2L6 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U2L6 Student Lesson Introduction: {}
       v2 U2L7 Student Lesson Introduction:
         description here: description here
         title: title
       v2 U2L8 Student Lesson Introduction:
         description here: description here
         title: title
-      v2 U2L9 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U2L9 Student Lesson Introduction: {}
       v2 U3L01 Student Lesson Introduction:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       v2 U3L02 Student Lesson Introduction:
@@ -1947,8 +1977,7 @@ en:
         Creating Functions with Parameters: Creating Functions with Parameters
       v2 U3L09 Student Lesson Introduction:
         Looping and Random Numbers: Looping and Random Numbers
-      v2 U3L10 Student Lesson Introduction:
-        Design a Digital Scene: Design a Digital Scene
+      v2 U3L10 Student Lesson Introduction: {}
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
       wn scratchjr 1:
@@ -1956,7 +1985,14 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP pre-assessment survey: {}
         PS U3 Assessment1 new: {}
+        PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
@@ -1966,6 +2002,7 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        brendan test survey: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -2578,79 +2615,12 @@ en:
         Match the bit sending technology with the underlying system: Match the bit sending technology with the underlying system
         'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment: Sending Bits in the Real World'
         Radio Wave: Radio Wave
-      'U2L06 - Matching: Label the Diagram':
-        A: A
-        B: B
-        C: C
-        Cycle: Cycle
-        D: D
-        E: E
-        Edge: Edge
-        Graph: Graph
-        Graph Terminology: Graph Terminology
-        Look at the diagram below and then match the proper term with what each label is pointing to.: Look at the diagram below and then match the proper term with what each label is pointing to.
-        Node: Node
-        Weight: Weight
-      U2L14 Assessment:
-        'Assessment: Question 1': 'Assessment: Question 1'
-        Caesar cipher: Caesar cipher
-        another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
-        cipher: cipher
-        decrypt: decrypt
-        encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
-        encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
-        heuristic: heuristic
-        random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
-        use an algorithm to decode a message: use an algorithm to decode a message
-        use an algorithm to encode a message: use an algorithm to encode a message
-      U2L14 Assessment4:
-        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
-        'Assessment: Question 5': 'Assessment: Question 5'
-        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
-        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
-        ? |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
-        : |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
-        Random Substitution Cipher: Random Substitution Cipher
-        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
-        Vigenere Cipher: Vigenere Cipher
-      U2L17 - Vocabulary matching:
-        " <br>Brute force": " <br>Brute force"
-        "<br>Computationally hard": "<br>Computationally hard"
-        "<br>Heuristic": "<br>Heuristic"
-        "<br>One Way Function": "<br>One Way Function"
-        A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
-        An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
-        Assessment 2 - Matching: Assessment 2 - Matching
-        Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
-        Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
-      U2L18 Match terms to cups and beans analogy:
-        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
-        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
-        Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity: Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity
-        Bob adding beans to the cup: Bob adding beans to the cup
-        Decrypting a message: Decrypting a message
-        Encrypting a message: Encrypting a message
-        Private key: Private key
-        Public key: Public key
-        The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
-      U2L3 Assessment:
-        A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
-        A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
-        A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
-        IP addresses, Packets and Protocols: IP addresses, Packets and Protocols
-        IPv4 packet: IPv4 packet
-        The Internet Protocol (IP): The Internet Protocol (IP)
-        The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
-        packet: packet
-        protocol: protocol
+      'U2L06 - Matching: Label the Diagram': {}
+      U2L14 Assessment: {}
+      U2L14 Assessment4: {}
+      U2L17 - Vocabulary matching: {}
+      U2L18 Match terms to cups and beans analogy: {}
+      U2L3 Assessment: {}
       U3L05 Assessment1:
         Effort: Effort
         Programming Efficiency Question 1: Programming Efficiency Question 1
@@ -3111,120 +3081,36 @@ en:
         <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
         <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
         <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
-      CB_Question_1:
-        2 times as many values can be represented.: 2 times as many values can be represented.
-        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
-        32 times as many values can be represented.: 32 times as many values can be represented.
-        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
-      CB_Question_10:
-        Better late than never.: Better late than never.
-        Hello. Better late than never.: Hello. Better late than never.
-        Hello. Is anyone there?: Hello. Is anyone there?
-        Is anyone there?: Is anyone there?
-      CB_Question_11:
-        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
-        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
-        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
-        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
-      CB_Question_12:
-        I and II: I and II
-        I only: I only
-        II only: II only
-        Neither I nor II: Neither I nor II
-      CB_Question_13:
-        Algorithm A always calculates the correct average, but Algorithm B does not.: Algorithm A always calculates the correct average, but Algorithm B does not.
-        Algorithm B always calculates the correct average, but Algorithm A does not.: Algorithm B always calculates the correct average, but Algorithm A does not.
-        Both Algorithm A and Algorithm B always calculate the correct average.: Both Algorithm A and Algorithm B always calculate the correct average.
-        Neither Algorithm A nor Algorithm B calculates the correct average.: Neither Algorithm A nor Algorithm B calculates the correct average.
-      CB_Question_14:
-        <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">: <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">
-        <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">: <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">
-        <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">: <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">
-        <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">: <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">
-      CB_Question_15:
-        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
-        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
-        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
-        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
-      CB_Question_16:
-        <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">: <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">
-        <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">: <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">
-        <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">: <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">
-        <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">: <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">
-      CB_Question_17:
-        Nothing is displayed; the program results in an infinite loop.: Nothing is displayed; the program results in an infinite loop.
-        The number 0 is displayed.: The number 0 is displayed.
-        The number 10 is displayed.: The number 10 is displayed.
-        The number 6 is displayed.: The number 6 is displayed.
-      CB_Question_18:
-        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
-        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
-        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
-        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
-      CB_Question_19:
-        "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
-        "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
-        "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
-        "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
-      CB_Question_2:
-        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-      CB_Question_20:
-        about.example.com: about.example.com
-        example.co.uk: example.co.uk
-        example.com.org: example.com.org
-        example.org: example.org
-      CB_Question_21:
-        An algorithm that, given a list of integers, displays only the negative integers in the list: An algorithm that, given a list of integers, displays only the negative integers in the list
-        An algorithm that, given a list of integers, displays the number of even integers in the list: An algorithm that, given a list of integers, displays the number of even integers in the list
-        An algorithm that, given a list of integers, displays the sum of the integers in the list: An algorithm that, given a list of integers, displays the sum of the integers in the list
-        An algorithm that, given two integers, displays the greater of the two integers: An algorithm that, given two integers, displays the greater of the two integers
-      CB_Question_22:
-        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>
-        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
-        <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
-        <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
-      CB_Question_3:
-        A: A
-        L: L
-        V: V
-        Y: Y
-      CB_Question_4:
-        Input A can be either true or false: Input A can be either true or false
-        Input A must be false: Input A must be false
-        Input A must be true: Input A must be true
-        There is no possible value of input A that will cause the circuit to have the output true.: There is no possible value of input A that will cause the circuit to have the output true.
-      CB_Question_5:
-        <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">: <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">
-        <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">: <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">
-        <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">: <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">
-        <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">: <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">
-      CB_Question_6:
-        Computer simulations can only be built after the real-world object or system has been created.: Computer simulations can only be built after the real-world object or system has been created.
-        Computer simulations only run on very powerful computers that are not available to the public.: Computer simulations only run on very powerful computers that are not available to the public.
-        Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.: Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.
-        It is difficult to change input parameters or conditions when using computer simulations.: It is difficult to change input parameters or conditions when using computer simulations.
-      CB_Question_7:
-        To determine the time of day that the site is most active: To determine the time of day that the site is most active
-        To determine the topics that many users are posting about: To determine the topics that many users are posting about
-        To determine the users who post messages most frequently: To determine the users who post messages most frequently
-        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
-      CB_Question_8:
-        <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">: <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">
-        <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">: <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">
-        <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">: <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">
-        <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">: <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">
-      CB_Question_9:
-        Backing up data: Backing up data
-        Deleting entries from data: Deleting entries from data
-        Searching through data: Searching through data
-        Sorting data: Sorting data
+      CB_Question_1: {}
+      CB_Question_10: {}
+      CB_Question_11: {}
+      CB_Question_12: {}
+      CB_Question_13: {}
+      CB_Question_14: {}
+      CB_Question_15: {}
+      CB_Question_16: {}
+      CB_Question_17: {}
+      CB_Question_18: {}
+      CB_Question_19: {}
+      CB_Question_2: {}
+      CB_Question_20: {}
+      CB_Question_21: {}
+      CB_Question_22: {}
+      CB_Question_3: {}
+      CB_Question_4: {}
+      CB_Question_5: {}
+      CB_Question_6: {}
+      CB_Question_7: {}
+      CB_Question_8: {}
+      CB_Question_9: {}
+      CPS Unit2 Ch 1 MC lossless compression: {}
+      CPS Unit2 Ch 1 MC lossy compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -3240,6 +3126,120 @@ en:
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
+      CSP Unit 1 Ch 1 MC binary def:
+        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
+        It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
+        The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
+        What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
+        What's Binary?: What's Binary?
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+        Decimal to Binary: Decimal to Binary
+        What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?: What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?
+      CSP Unit 1 Ch 1 MC bits to make 512:
+        10 bits: 10 bits
+        16 bits: 16 bits
+        17 bits: 17 bits
+        8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
+        9 bits: 9 bits
+        How Many Bits?: How Many Bits?
+      CSP Unit 1 Ch 2 MC internet layers:
+        " ": " "
+        DNS relies on TCP/IP: DNS relies on TCP/IP
+        HTTP relies on TCP/IP: HTTP relies on TCP/IP
+        Layers of Protocols: Layers of Protocols
+        TCP/IP relies on DNS: TCP/IP relies on DNS
+        TCP/IP relies on HTTP: TCP/IP relies on HTTP
+      CSP Unit 1 Ch 2 MC packets:
+        Messages are broken into packets to improve reliability of the internet: Messages are broken into packets to improve reliability of the internet
+        Packets: Packets
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets can be routed on different paths from sender to receiver.: Packets can be routed on different paths from sender to receiver.
+        TCP guarantees that no packets are ever dropped: TCP guarantees that no packets are ever dropped
+        Which of the following is NOT true about TCP/IP packets?: Which of the following is NOT true about TCP/IP packets?
+      CSP Unit 2 Ch 1 MC kilo v mega:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 metadata:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 2 MC IETF:
+        A collection of the leaders of the Tier 1 Internet service providers.: A collection of the leaders of the Tier 1 Internet service providers.
+        A loosely organized collection of citizens and engineers.: A loosely organized collection of citizens and engineers.
+        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
+        Political leaders and heads of state.: Political leaders and heads of state.
+        The IETF: The IETF
+        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
+      CSP Unit 2 Ch 2 MC data bias: {}
+      CSP Unit 2 Ch 2 MC google trends:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit 2 Ch 2 MC routing simple:
+        A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
+        Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
+        'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
+        ? Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        : Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        Routing: Routing
+        Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.: Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.
+      CSP Unit 2 Ch 2 MC worst viz:
+        " ": " "
+        Chart A (Line Chart): Chart A (Line Chart)
+        Chart B (Vertical Bar Chart): Chart B (Vertical Bar Chart)
+        Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
+        Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
+        Which is the Best?: Which is the Best?
+      CSP Unit 2 Ch2 MC data cleaning:
+        " ": " "
+        Data Cleaning: Data Cleaning
+        ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        : 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
+        Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
+        Translate all states into their two-letter state code: Translate all states into their two-letter state code
+      CSP Unit 2 ch 2 MC trends as predictors:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit2 Ch 1 MC hex rgb:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
+      CSP Unit2 Ch1 MC megabyte:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
@@ -3975,11 +3975,16 @@ en:
         right answer: right answer
         wrong answer: wrong answer
         you are so smart!: you are so smart!
-      PS U3 Q1-1:
-        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
-        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
-        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
-        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      PS MC test 7-22:
+        "<b>A.</b>  wrong answer": "<b>A.</b>  wrong answer"
+        "<b>B.</b> right answer": "<b>B.</b> right answer"
+        "<b>C.</b> another wrong answer": "<b>C.</b> another wrong answer"
+        "<b>D.</b>yet another wrong answer": "<b>D.</b>yet another wrong answer"
+        Here is a description: Here is a description
+        Here is a question.: Here is a question.
+        Here is a title: Here is a title
+        feedback for this wrong answer.: feedback for this wrong answer.
+      PS U3 Q1-1: {}
       PS U3 Q1-2:
         Robots in a grid of square Part 1: Robots in a grid of square Part 1
         https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png: https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png
@@ -4031,6 +4036,38 @@ en:
         description here: description here
         foo: foo
         title: title
+      PS pre-assessment q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
@@ -4070,14 +4107,7 @@ en:
         No, that is not even close.: No, that is not even close.
         What is 1 + 1?: What is 1 + 1?
         Yes, you are a genius!: Yes, you are a genius!
-      U1L07 Assessment 1:
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-        Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
-        Which one is the shortest path tree from the source node indicated?: Which one is the shortest path tree from the source node indicated?
+      U1L07 Assessment 1: {}
       U1L10 Assessment 1:
         2 bits: 2 bits
         3 bits: 3 bits
@@ -4095,20 +4125,14 @@ en:
         7 bits: 7 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
         ? |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
         : |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
-      U1L11 Assessment 1:
-        16 bits: 16 bits
-        24 bits: 24 bits
-        3 bits: 3 bits
-        32 bits: 32 bits
-        8 bits: 8 bits
-        'Assessment: Sending Numbers': 'Assessment: Sending Numbers'
+      U1L11 Assessment 1: {}
       U1L11 Assessment 2:
         041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
@@ -4116,7 +4140,7 @@ en:
         097 108 108 111 119: 097 108 108 111 119
         097 112 112 108 101: 097 112 112 108 101
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        'The word "Apple" translated into its ASCII number equivalent is:': 'The word "Apple" translated into its ASCII number equivalent is:'
+        'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
       U1L2 Multiple Choice Assessment Question:
         'A binary question is defined as:': 'A binary question is defined as:'
         A message which has two possible states: A message which has two possible states
@@ -4133,20 +4157,14 @@ en:
         'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex Messages'
         ? When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
         : When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
-      U1L4 Multiple Choice:
-        AAAA: AAAA
-        AABB: AABB
-        ABAB: ABAB
-        ABBB: ABBB
-        BBBB: BBBB
-        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination and Binary Messages'
+      U1L4 Multiple Choice: {}
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
         '4': '4'
         '6': '6'
         '8': '8'
-        If you just had a circle and a square, how many 3-shape permutations could you make?: If you just had a circle and a square, how many 3-shape permutations could you make?
+        If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?: If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
       U1L8 Multiple Choice:
         '10': '10'
@@ -4154,8 +4172,8 @@ en:
         '14': '14'
         '16': '16'
         'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
-        ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
-        : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+        ? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
+        : You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
       U2L01 Assessment 1:
         A loosely organized collection of citizens and engineers who communicate mostly by email.: A loosely organized collection of citizens and engineers who communicate mostly by email.
         An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
@@ -4173,190 +4191,44 @@ en:
         Restricted Fiduciary Contract: Restricted Fiduciary Contract
         'The Internet is for Everyone: Assessment 2': 'The Internet is for Everyone: Assessment 2'
         What is an RFC?: What is an RFC?
-      U2L01 Assessment 3:
-        'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:': 'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:'
-        'The Internet is for Everyone: Assessment 3': 'The Internet is for Everyone: Assessment 3'
-        connect the latest devices to the internet.: connect the latest devices to the internet.
-        get the best price for my cell phone plan.: get the best price for my cell phone plan.
-        make informed choices about my privacy on the internet.: make informed choices about my privacy on the internet.
-        'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
-        speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
-      U2L02 Assessment 3:
-        The Need For Addressing: The Need For Addressing
-        'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
-        algorithm: algorithm
-        encoding: encoding
-        heuristic: heuristic
-        protocol: protocol
-      U2L02 Assessment 4:
-        From: From
-        Grid Coordinates: Grid Coordinates
-        The Need For Addressing: The Need For Addressing
-        Time of Day: Time of Day
-        To: To
-        Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
-      U2L04 Assessment1:
-        Everyone is on the same router.: Everyone is on the same router.
-        'In the Internet Simulator, your router knows to send your message to a different router because:': 'In the Internet Simulator, your router knows to send your message to a different router because:'
-        Messages are routed over different paths.: Messages are routed over different paths.
-        'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
-        The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
-        You set the “other router” bit in the message.: You set the “other router” bit in the message.
-      U2L04 Assessment4:
-        ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
-        : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
-        Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.: Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.
-        One mailman would be responsible for delivering a letter from sender to receiver.: One mailman would be responsible for delivering a letter from sender to receiver.
-        'Routers and Redundancy: Question 2': 'Routers and Redundancy: Question 2'
-        The mailman would sometimes take a different path to deliver each letter to your home.: The mailman would sometimes take a different path to deliver each letter to your home.
-        Your mail could not be delivered if a road your mailman was planning to take were under construction.: Your mail could not be delivered if a road your mailman was planning to take were under construction.
-      U2L04 Assessment5:
-        ? A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
-        : A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
-        A packet travelling between two computers on the Internet may be rerouted many times along the way.: A packet travelling between two computers on the Internet may be rerouted many times along the way.
-        Information travelling between two computers over the Internet will always take the same path.: Information travelling between two computers over the Internet will always take the same path.
-        'Routers and Redundancy: Question 3': 'Routers and Redundancy: Question 3'
-        There is one router which receives and redirects all the traffic of the Internet.: There is one router which receives and redirects all the traffic of the Internet.
-        Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
-        Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
-      U2L05 Assessment 1:
-        'Packets and Making a Reliable Internet: Question 1': 'Packets and Making a Reliable Internet: Question 1'
-        ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
-        : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
-        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
-        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
-        TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
-        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP must account for the fact that packets may not arrive at a destination computer in the intended order
-      U2L05 Assessment 2:
-        A message sent across the Internet can always be contained in a single packet: A message sent across the Internet can always be contained in a single packet
-        'Packets and Making a Reliable Internet: Question 2': 'Packets and Making a Reliable Internet: Question 2'
-        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
-        Packets are routed on different paths from sender to receiver.: Packets are routed on different paths from sender to receiver.
-        The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
-        Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
-      'U2L06 - MC: Which is an MST?':
-        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-        Which one is the MST?: Which one is the MST?
-      'U2L06- MC: what is an MST?':
-        Minimum Spanning Trees: Minimum Spanning Trees
-        The fewest number and smallest total distance of connections necessary to connect all points in a graph: The fewest number and smallest total distance of connections necessary to connect all points in a graph
-        ? The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice
-        : The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice
-        The shortest path between any two points for all points in the graph: The shortest path between any two points for all points in the graph
-        The shortest path from a particular point in the graph to another point in the graph: The shortest path from a particular point in the graph to another point in the graph
-        What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
-        Whether or not the graph represents a network: Whether or not the graph represents a network
-      U2L07 Assessment2:
-        A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
-        ? |-
-          Both the minimum spanning tree algorithm you learned and the
-          shortest path algorithm you learned used a “greedy” approach,
-          choosing the smallest edge first or vertex with the smallest distance value first.
-        : |-
-          Both the minimum spanning tree algorithm you learned and the
-          shortest path algorithm you learned used a “greedy” approach,
-          choosing the smallest edge first or vertex with the smallest distance value first.
-        Question 2: Question 2
-        The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
-        The shortest path algorithm you learned visits each vertex and edge once.: The shortest path algorithm you learned visits each vertex and edge once.
-        'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:': 'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:'
-      U2L07 Assessment3:
-        Question 3: Question 3
-        The algorithm is correct.: The algorithm is correct.
-        The algorithm is efficient.: The algorithm is efficient.
-        The algorithm is short.: The algorithm is short.
-        The algorithm is understandable.: The algorithm is understandable.
-        Which of the following is NOT something we are concerned with when we write an algorithm?: Which of the following is NOT something we are concerned with when we write an algorithm?
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-        'Router Table: Assessment': 'Router Table: Assessment'
-      U2L09 Assessment1:
-        ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
-        : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
-        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
-        B. There are too few IP addresses to meet the current demand.: B. There are too few IP addresses to meet the current demand.
-        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
-        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
-        'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
-      U2L10 Assessment1:
-        A. Redundancy: A. Redundancy
-        Assessment Question 1: Assessment Question 1
-        B. Hierarchy: B. Hierarchy
-        C. Multiple servers: C. Multiple servers
-        D. Government control: D. Government control
-        What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
-      U2L10 Assessment2:
-        Assessment Question 2: Assessment Question 2
-        Censorship: Censorship
-        Hierarchy: Hierarchy
-        Redundancy: Redundancy
-        Spoofing: Spoofing
-        What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
-      U2L11 Assessment 1:
-        'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
-        'HTTP is considered to be a high level protocol because:': 'HTTP is considered to be a high level protocol because:'
-        HTTP messages can be either requests or responses.: HTTP messages can be either requests or responses.
-        HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
-        HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
-        HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
-      U2L11 Assessment 2:
-        An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
-        An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
-        'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
-        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
-        'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
-        HTTP requests and responses have identical formats.: HTTP requests and responses have identical formats.
-      U2L13 Assessment3:
-        A secret word only know by Caesar.: A secret word only know by Caesar.
-        'Assessment: Question 2': 'Assessment: Question 2'
-        The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
-        The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
-        The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
-        What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
-      U2L13 Assessment4:
-        '26': '26'
-        26 x 25: 26 x 25
-        26 × 25 × 24 ×···× 3 × 2 x 1: 26 × 25 × 24 ×···× 3 × 2 x 1
-        26^26: 26^26
-        'Assessment: Question 3': 'Assessment: Question 3'
-        The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
-      U2L14 Assessment3:
-        'Assessment: Question 4': 'Assessment: Question 4'
-        True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
-        'false': 'false'
-        'true': 'true'
-      U2L15 Assessment1:
-        A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
-        'Assessment: Question 1': 'Assessment: Question 1'
-        Long keys create exponential growth possibilities.: Long keys create exponential growth possibilities.
-        One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
-        The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
-        Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
-      U2L15 Assessment3:
-        'Assessment: Question 3': 'Assessment: Question 3'
-        Computers are faster than humans.: Computers are faster than humans.
-        Computers are smarter than humans.: Computers are smarter than humans.
-        The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
-        They are not - humans are better at breaking Vigenere encryptions than computers.: They are not - humans are better at breaking Vigenere encryptions than computers.
-        Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
-      U2L15 Assessment4:
-        8 random characters that include numbers and punctuation: 8 random characters that include numbers and punctuation
-        A 150 character password that is all the same character.: A 150 character password that is all the same character.
-        A 16 character password that is all letters of the alphabet: A 16 character password that is all letters of the alphabet
-        A 32 character password that is all letters of the alphabet: A 32 character password that is all letters of the alphabet
-        A word from the dictionary: A word from the dictionary
-        'Assessment: Question 4': 'Assessment: Question 4'
-        'Which makes for a password that is harder to crack:': 'Which makes for a password that is harder to crack:'
+      U2L01 Assessment 3: {}
+      U2L02 Assessment 3: {}
+      U2L02 Assessment 4: {}
+      U2L04 Assessment1: {}
+      U2L04 Assessment4: {}
+      U2L04 Assessment5: {}
+      U2L05 Assessment 1: {}
+      U2L05 Assessment 2: {}
+      'U2L06 - MC: Which is an MST?': {}
+      'U2L06- MC: what is an MST?': {}
+      U2L07 Assessment2: {}
+      U2L07 Assessment3: {}
+      U2L08 Assessment 1: {}
+      U2L09 Assessment1: {}
+      U2L10 Assessment1: {}
+      U2L10 Assessment2: {}
+      U2L11 Assessment 1: {}
+      U2L11 Assessment 2: {}
+      U2L13 Assessment3: {}
+      U2L13 Assessment4: {}
+      U2L13 Cleaning Data MC:
+        Cleaning and Filtering Data: Cleaning and Filtering Data
+        Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
+        Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
+        Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
+        Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
+        Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
+      U2L14 Assessment3: {}
+      U2L14 Summary Tables MC:
+        Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
+        Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
+        Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
+        What's it good for?: What's it good for?
+        Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
+      U2L15 Assessment1: {}
+      U2L15 Assessment3: {}
+      U2L15 Assessment4: {}
       U2L17 - One Way functions Def MC:
         Easy to create and easy to solve: Easy to create and easy to solve
         Easy to create and hard to solve: Easy to create and hard to solve
@@ -4364,22 +4236,8 @@ en:
         Hard to create and hard to solve: Hard to create and hard to solve
         One-Way Functions: One-Way Functions
         Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
-      U2L17 Free Responses Assessment 1:
-        Assessment 1: Assessment 1
-        Easy to create and easy to solve: Easy to create and easy to solve
-        Easy to create and hard to solve: Easy to create and hard to solve
-        Hard to create and easy to solve: Hard to create and easy to solve
-        Hard to create and hard to solve: Hard to create and hard to solve
-        Select the best answer.: Select the best answer.
-        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        1 4/13: 1 4/13
-        '13': '13'
-        '17': '17'
-        '4': '4'
-        Modulo Multiple Choice: Modulo Multiple Choice
-        'What is 13 MOD 17? ': 'What is 13 MOD 17? '
+      U2L17 Free Responses Assessment 1: {}
+      U2L19 multichoice 13 MOD 17: {}
       'U2L19 mutlichoice ':
         '0': '0'
         '1.5': '1.5'
@@ -4388,29 +4246,36 @@ en:
         '5': '5'
         Modulo Multiple Choice: Modulo Multiple Choice
         What is 20 MOD 15?: What is 20 MOD 15?
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
-        Modulo Multiple Choice: Modulo Multiple Choice
-        What is 20 MOD 15?: What is 20 MOD 15?
-      U2L3 Assessment 2:
-        12 users: 12 users
-        32 users: 32 users
-        6 users: 6 users
-        64 users: 64 users
-        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
-        IP Addresses and Bits: IP Addresses and Bits
-      U2L3 Assessment 3:
-        ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
-        : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
-        Invent an Addressing Protocol: Invent an Addressing Protocol
-        abstraction: abstraction
-        hierarchy: hierarchy
-        packet: packet
-        protocol: protocol
+      U2L19 mutlichoice 20 mod 15: {}
+      U2L3 Assessment 2: {}
+      U2L3 Assessment 3: {}
+      U2L5 Color Pixel MC Question:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
+      U2L8 google trends MC:
+        " ": " "
+        People like dogs more than cats: People like dogs more than cats
+        People search for "dogs" more frequently than "cats": People search for "dogs" more frequently than "cats"
+        The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
+        There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
+        What does the visualization actually show?: What does the visualization actually show?
+      U2L9 What is digital divide MC:
+        ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
+        ? "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        : "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        ? "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        : "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        What is the digital divide?: What is the digital divide?
+        ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+        : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -4420,50 +4285,12 @@ en:
         Spread 1 slice with jelly: Spread 1 slice with jelly
         Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
         Why Programming? Question 2: Why Programming? Question 2
-      U3L03 - multiselect - properties of functions:
-        'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
-        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
-        Functions in programming are named groupings of programming instructions.<br>: Functions in programming are named groupings of programming instructions.<br>
-        Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
-        Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
-        Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
-      U3L03 Assessment:
-        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
-        Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
-        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
-        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
-        'Multiple Choice: False Statements about Functions': 'Multiple Choice: False Statements about Functions'
-        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
-        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
-      U3L04 Assessment2:
-        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
-        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
-        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
-        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
-        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
-        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
-        Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
-      U3L06 Assessment2:
-        A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
-        A named memory location.: A named memory location.
-        A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
-        Another name for the purpose of a function.: Another name for the purpose of a function.
-        'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
-        'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
-      U3L06-API-multichoice:
-        Abstract Parameter Interface: Abstract Parameter Interface
-        Abstract Programming Inheritance: Abstract Programming Inheritance
-        Application Program Interface: Application Program Interface
-        Applied Power Implementation: Applied Power Implementation
-        Artificial Parameter Intelligence: Artificial Parameter Intelligence
-        'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-        Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
+      U3L03 - multiselect - properties of functions: {}
+      U3L03 Assessment: {}
+      U3L04 Assessment2: {}
+      U3L06 Assessment2: {}
+      U3L06-API-multichoice: {}
+      U3L07 - MC remove line of code loops: {}
       U3L07 Assessment2:
         APIs and Parameters Question 3: APIs and Parameters Question 3
         Left(45): Left(45)
@@ -4473,13 +4300,7 @@ en:
         forward100( ): forward100( )
         forward283( ): forward283( )
         forward50( ): forward50( )
-      U3L08 Assessment1:
-        'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
-        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
-        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
-        Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
-        'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
-        Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
+      U3L08 Assessment1: {}
       U3L08 Assessment3:
         'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
         There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
@@ -4503,14 +4324,7 @@ en:
         'When the "left" button is clicked: nothing will happen': 'When the "left" button is clicked: nothing will happen'
         'When the forward button is clicked: The turtle will move forward and turn left': 'When the forward button is clicked: The turtle will move forward and turn left'
         description here: description here
-      U3L13 debugging Multi:
-        A program that does not generate any error messages will run as intended.: A program that does not generate any error messages will run as intended.
-        Debugging is the process of locating and correcting errors in a program.: Debugging is the process of locating and correcting errors in a program.
-        Error messages help programmers identify problems in their code.: Error messages help programmers identify problems in their code.
-        It is common for programs to contain errors the first time they are written.: It is common for programs to contain errors the first time they are written.
-        'Multiple Choice: Debugging and Error Messages': 'Multiple Choice: Debugging and Error Messages'
-        Not all errors in a program will generate an error message.: Not all errors in a program will generate an error message.
-        Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
+      U3L13 debugging Multi: {}
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
         'Choose Two: Buttons and IDs': 'Choose Two: Buttons and IDs'
@@ -5139,6 +4953,233 @@ en:
         What is f(2)?: What is f(2)?
         f(x) = x + 3: f(x) = x + 3
         x: x
+      pre-assessment survey q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q10:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be better at computer science than most of the other kids at my school.: I think I will be better at computer science than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q11:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be  very good at computer science.: I think I will be  very good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q12:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.: I think I will be able to figure out how to solve the most difficult problems in my computer science class if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q13:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q14:
+        Agree: Agree
+        Disagree: Disagree
+        I think computer science is interesting.: I think computer science is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q15:
+        Agree: Agree
+        Disagree: Disagree
+        I like (or think I will like) doing computer science activities.: I like (or think I will like) doing computer science activities.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q17:
+        Agree: Agree
+        Disagree: Disagree
+        Kids like me do computer science.: Kids like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q18:
+        Agree: Agree
+        Disagree: Disagree
+        I like (or think I will like) computer science more than other kids at my school.: I like (or think I will like) computer science more than other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q19:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q20:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q21:
+        Agree: Agree
+        Disagree: Disagree
+        I use computer science skills in my daily life.: I use computer science skills in my daily life.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q22:
+        Agree: Agree
+        'Computer science applies to most aspects of real life. ': 'Computer science applies to most aspects of real life. '
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q23:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q24:
+        Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
+        'No': 'No'
+        'Yes': 'Yes'
+      pre-assessment survey q26:
+        ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        'No': 'No'
+        'Yes': 'Yes'
+      pre-assessment survey q27:
+        After school program at my school: After school program at my school
+        After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
+        ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        N/A: N/A
+        Online program: Online program
+        Other: Other
+        Summer program/camp: Summer program/camp
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Other
+        What grade are you in?: What grade are you in?
+      pre-assessment survey q29:
+        Female: Female
+        'I identify my gender as:': 'I identify my gender as:'
+        Male: Male
+        Other: Other
+        Prefer not to answer: Prefer not to answer
+      pre-assessment survey q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q30:
+        American Indian or Alaska Native: American Indian or Alaska Native
+        Asian: Asian
+        Black or African American: Black or African American
+        Hispanic or Latino/Latina: Hispanic or Latino/Latina
+        Native Hawaiian or Other Pacific Islander: Native Hawaiian or Other Pacific Islander
+        Other: Other
+        Prefer not to answer: Prefer not to answer
+        Two or more races: Two or more races
+        Which of the following best represents your racial and/or ethnic identity?: Which of the following best represents your racial and/or ethnic identity?
+        White: White
+      pre-assessment survey q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q5:
+        Agree: Agree
+        Disagree: Disagree
+        I like my schoolwork.: I like my schoolwork.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q6:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q7:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time at school.: I enjoy my time at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q8:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my school work.: It is important for me to be good at my school work.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      pre-assessment survey q9:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       sciPD PreQ 1:
         Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
         'No': 'No'
@@ -5370,13 +5411,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
-      Blocks to Math 1:
-        "(4+5)": "(4+5)"
-        4 + 5: 4 + 5
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Type the arithmetic expression here: Type the arithmetic expression here
+      Blocks to Math 1: {}
       Blocks to Math 2:
         "(7 * 6)": "(7 * 6)"
         7 * 6: 7 * 6
@@ -5437,13 +5472,8 @@ en:
       PS U3 Q1-7:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
-      U1L13 - Assess Text Compression reverse process:
-        Act as the computer!: Act as the computer!
-        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
-        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
-      U2L07 Assessment4:
-        '43': '43'
-        Question 4: Question 4
+      U1L13 - Assess Text Compression reverse process: {}
+      U2L07 Assessment4: {}
       text match test:
         "(9-3)+(4*7)": "(9-3)+(4*7)"
         "(9-3)+4*7": "(9-3)+4*7"

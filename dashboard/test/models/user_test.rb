@@ -56,7 +56,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create user with invalid email" do
-    user = User.create(@good_data.merge({email: 'foo@bar'}))
+    user = User.create(@good_data.merge({email: 'foo@bar@com'}))
     assert !user.valid?
     assert user.errors[:email].length == 1
   end
@@ -336,6 +336,36 @@ class UserTest < ActiveSupport::TestCase
                        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'script with inactive level completed is completed' do
+    user = create :user
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    script = create :script
+    script_level = create(:script_level, script: script,
+                          levels: [level, level2],
+                          properties: '{"maze 2": {"active": false}}')
+    create :user_script, user: user, script: script
+    UserLevel.create(user: user, level: script_level.levels[1], script: script,
+        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+
+    assert user.completed?(script)
+  end
+
+  test 'script with active level completed is completed' do
+    user = create :user
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    script = create :script
+    script_level = create(:script_level, script: script,
+                          levels: [level, level2],
+                          properties: '{"maze 2": {"active": false}}')
+    create :user_script, user: user, script: script
+    UserLevel.create(user: user, level: script_level.levels[0], script: script,
+        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+
+    assert user.completed?(script)
   end
 
   test 'user is created with secret picture and word' do
@@ -966,6 +996,32 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'sample answer', ul.level_source.data
   end
 
+  test 'track_level_progress_sync does not overwrite level_source_id with nil' do
+    script_level = create :script_level
+    user = create :user
+    level_source = create :level_source, data: 'sample answer'
+    create :user_level,
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id,
+      level_source_id: level_source.id
+
+    User.track_level_progress_sync(
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id,
+      level_source_id: nil,
+      new_result: 100,
+      submitted: false
+    )
+
+    assert_equal level_source.id, UserLevel.find_by(
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id
+    ).level_source_id
+  end
+
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
@@ -1165,6 +1221,11 @@ class UserTest < ActiveSupport::TestCase
     assert real_teacher.teacher?
     assert real_teacher.authorized_teacher?
 
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.authorized_teacher?
+
     # admins should be authorized teachers too
     admin = create :teacher
     admin.admin = true
@@ -1248,5 +1309,12 @@ class UserTest < ActiveSupport::TestCase
     another_teacher = create :teacher
     create :follower, user: another_teacher, student_user: follower.student_user
     assert_equal 1, follower.student_user.terms_version
+  end
+
+  test 'terms_of_service_version for students with deleted teachers' do
+    time_now = DateTime.now
+    follower = create :follower
+    follower.user.update(deleted_at: time_now, terms_of_service_version: 1)
+    assert_equal nil, follower.student_user.terms_version
   end
 end

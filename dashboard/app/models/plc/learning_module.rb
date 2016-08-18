@@ -31,7 +31,7 @@ class Plc::LearningModule < ActiveRecord::Base
   NONREQUIRED_MODULE_TYPES = MODULE_TYPES - [REQUIRED_MODULE]
 
   validates_presence_of :plc_course_unit_id
-  validates :module_type, inclusion: {in: MODULE_TYPES}
+  validates_inclusion_of :module_type, in: MODULE_TYPES
 
   attr_readonly :plc_course_unit_id
 
@@ -39,11 +39,11 @@ class Plc::LearningModule < ActiveRecord::Base
   scope :content, -> { where(module_type: CONTENT_MODULE) }
   scope :practice, -> { where(module_type: PRACTICE_MODULE) }
 
-  def is_required?
+  def required?
     module_type == REQUIRED_MODULE
   end
 
   def name_with_required_tag
-    "#{name}#{' - Required' if is_required?}"
+    "#{name}#{' - Required' if required?}"
   end
 end

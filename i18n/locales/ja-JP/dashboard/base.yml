@@ -125,6 +125,8 @@ ja:
     picture: あなたの秘密の画像を見つけてください
     words: あなたの秘密の言葉を入力してください
     login: ログイン
+    invalid_login: Invalid login, please try again
+    pair_programming: I have a partner at my computer
   password:
     reset_form:
       title: パスワードをお忘れですか？
@@ -247,6 +249,10 @@ ja:
       signin: ログイン
       signup: 入会
       already_registered: 既にアカウントをお持ちですか?
+      pair_programming: ペアプログラミング
+      team: Team
+      driver: Driver
+      navigator: Navigator
     popup:
       progress_for_user: '%{name} の進捗状況'
       progress: あなたの進捗状況
@@ -281,6 +287,7 @@ ja:
       example_with_number: '解答例 %{solution_number}'
       submitted_on: '提出日時:'
       unsubmit: 取り消す
+      worked_with: Worked With
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
     email_confirm_needed_required: 'あなたのメール アドレス %{email} はまだ確認されていません。'
@@ -341,12 +348,13 @@ ja:
     choose_next_course: Code Studio コースを以下のリストから一つ試す
     print_certificate: 証書を印刷
     announcement_title: Announcements
-    announcement_view_all: View all
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
+    announcement_learn_more_button: もっと詳しく知る
+    announcement_try_now_button: 今すぐ試す
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
+    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
     section_code_not_entered: Please provide current_section_code.
@@ -409,8 +417,6 @@ ja:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: もっと詳しく知る
   slow_loading: 通常よりも長くかかっている...
   try_reloading: ページを再読み込みする
@@ -522,6 +528,7 @@ ja:
     wrong_body: 回答していただきありがとうございました。
     correct_title: ありがとうございます
     correct_body: 回答していただきありがとうございました。
+    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
   level_group-submittable:
     wrong_title: ありがとうございます
     wrong_body: 回答していただきありがとうございました。
@@ -564,36 +571,6 @@ ja:
     hour: 1 時間
     day: 日
     week: 週
-  data:
-    script:
-      name:
-        20-hour:
-          title: コンピューター科学コース （15-25 時間）の入門編
-          description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-        Hour of Code:
-          title: Hour of Code 2013
-          description: ""
-        edit-code:
-          title: コードを編集します。
-          description: ""
-        events:
-          title: イベント
-          description: ""
-        builder:
-          title: ビルダー
-          description: ""
-        flappy:
-          title: Flappy Code
-          description: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
-        jigsaw:
-          title: ジグソーパズル
-          description: ""
-        step:
-          title: ステップ
-          description: ""
-        sample_level_builder:
-          title: レベルビルダーの例
-          description: ""
   age_interstitial:
     age: 年齢
     header: アカウント情報の更新
@@ -626,6 +603,7 @@ ja:
     share_title: プロジェクトを共有
     share_copy_link: 'リンクをコピー:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
     embed: Embed
     advanced_share: Show advanced options
     close: 閉じる
@@ -649,6 +627,7 @@ ja:
     edit_project: プロジェクトを編集します
     abuse:
       tos: "このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。"
+      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
       contact_us: "これがエラーであると思うなら、 <a href='https://code.org/contact'> こちらからお問い合わせ</a>ください。"
       go_to_code_studio: コードスタジオに行く
       report_abuse_form:
@@ -680,6 +659,14 @@ ja:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
   components:
     icon_library:
       search_placeholder_text: アイコンの検索..
@@ -698,8 +685,11 @@ ja:
     required: 概要
     content: Content
     practice: Teaching Practices
+    peer_review: Peer Review
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

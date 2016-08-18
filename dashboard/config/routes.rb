@@ -34,6 +34,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'maker/setup', to: 'maker#setup'
+
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
 
@@ -74,6 +76,7 @@ Dashboard::Application.routes.draw do
     passwords: 'passwords'
   }
   get 'discourse/sso' => 'discourse_sso#sso'
+  post '/auth/lti', to: 'lti_provider#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
@@ -294,7 +297,7 @@ Dashboard::Application.routes.draw do
           post :start
           post :end
         end
-        get :enrollments, action: 'index', controller: 'workshop_enrollments'
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
       end
@@ -353,8 +356,8 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
-      get 'test_logs/:branch/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
-      get 'test_logs/:branch/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+      get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 

@@ -2,8 +2,10 @@ if ENV['COVERAGE'] # set this environment variable when running tests if you wan
   require 'simplecov'
   SimpleCov.start :rails
 elsif ENV['CI'] # this is set by circle
-  require 'coveralls'
-  Coveralls.wear!('rails')
+  # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
+  # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
+  # require 'coveralls'
+  # Coveralls.wear!('rails')
 end
 
 require 'minitest/reporters'
@@ -205,7 +207,7 @@ end
 
 # Helpers for all controller test cases
 class ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
@@ -318,6 +320,8 @@ class ActionController::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     https!
   end
