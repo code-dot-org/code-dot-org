@@ -2,22 +2,19 @@
 #
 # Table name: pd_enrollments
 #
-#  id                  :integer          not null, primary key
-#  pd_workshop_id      :integer          not null
-#  name                :string(255)      not null
-#  email               :string(255)      not null
-#  created_at          :datetime
-#  updated_at          :datetime
-#  school              :string(255)
-#  code                :string(255)
-#  school_district_id  :integer
-#  school_zip          :integer
-#  school_type         :string(255)
-#  school_state        :string(255)
-#  user_id             :integer
-#  survey_sent_at      :datetime
-#  completed_survey_id :integer
-#  school_info_id     :integer
+#  id                 :integer          not null, primary key
+#  pd_workshop_id     :integer          not null
+#  name               :string(255)      not null
+#  email              :string(255)      not null
+#  created_at         :datetime
+#  updated_at         :datetime
+#  school             :string(255)
+#  code               :string(255)
+#  school_district_id :integer
+#  school_zip         :integer
+#  school_type        :string(255)
+#  school_state       :string(255)
+#  user_id            :integer
 #
 # Indexes
 #
@@ -28,13 +25,13 @@
 
 class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
-  belongs_to :school_info #, validates: true
+  belongs_to :school_info
   belongs_to :user
 
-  accepts_nested_attributes_for :school_info
+  accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates :name, :email, presence: true
+  validates :name, :email, :school, presence: true
   validates_confirmation_of :email
 
   def has_user?
@@ -61,6 +58,24 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # Teachers enrolled in the workshop are "students" in the section.
     self.workshop.section.students.exists?(user.id)
+  end
+
+  protected
+
+  # Returns true if the SchoolInfo already exists and we should reuse that.
+  # Returns false if the SchoolInfo is new and should be stored.
+  def check_school_info(school_info_attr)
+    if school_info = SchoolInfo.where(
+        school_type: school_info_attr['school_type'],
+        state: school_info_attr['state'],
+        school_district_id: school_info_attr['school_district_id'],
+        zip: school_info_attr['zip'],
+        school_district_other: school_info_attr['']).first
+
+      self.school_info = school_info
+      return true
+    end
+    return false
   end
 
   private

@@ -1,9 +1,16 @@
 - if @enrollment.errors.any?
   #error_explanation
-    %h2= "#{pluralize(@enrollment.errors.count, 'error')}:"
+    %h2 Error
     %ul
+      - school_info_error_shown = false
       - @enrollment.errors.each do |name, message|
-        %li= @enrollment.errors.full_message(name, message)
+        - if name.to_s.start_with?("school_info")
+          -# Just show one error for any errors inside the district dropdown.
+          - if !school_info_error_shown
+            %li= "District information required."
+            - school_info_error_shown = true
+        - else
+          %li= raw @enrollment.errors.full_message(name, message).html_safe
 
 =form_for @enrollment, url: {action: action} do |form|
   %div.control-group
@@ -33,6 +40,8 @@
   %div.control-group
     %label
       District
+      %span.form-required-field
+        *
     -# Manually wrap an error highlight around the entire district dropdown.
     - error_class = (@enrollment.errors.include?(:"school_info.school_district")) ? "field_with_errors_div" : ""
     #school_district.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
@@ -41,10 +50,10 @@
     %div{style: "clear: both"}
   %div.control-group
     %label
-      School
+      School Name
+      %span.form-required-field
+        *
     %div.controls
-      =fields_for :school_info do |school_info|
-        -# todo: get field_with_errors to wrap this when validation error
-        =school_info.text_field :name, class: 'span5'
+      =form.text_field :school, class: 'span5'
     %div.control-group
       = form.submit submit_text, class: 'btn'
