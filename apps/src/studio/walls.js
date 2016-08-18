@@ -1,10 +1,11 @@
 export default class Walls {
-  constructor(level, skin) {
+  constructor(level, skin, drawDebugRect) {
     this.gridAlignedMovement = level.gridAlignedMovement;
     this.wallCollisionRectOffsetX = skin.wallCollisionRectOffsetX;
     this.wallCollisionRectOffsetY = skin.wallCollisionRectOffsetY;
     this.wallCollisionRectWidth = skin.wallCollisionRectWidth;
     this.wallCollisionRectHeight = skin.wallCollisionRectHeight;
+    this.drawDebugRect = drawDebugRect;
   }
 
   setBackground(background) {
@@ -30,7 +31,7 @@ export default class Walls {
       height = this.wallCollisionRectHeight || height;
     }
 
-    Studio.drawDebugRect("avatarCollision", xCenter, yCenter, width, height);
+    this.drawDebugRect("avatarCollision", xCenter, yCenter, width, height);
     return this.willRectTouchWall(xCenter, yCenter, width, height);
   }
 

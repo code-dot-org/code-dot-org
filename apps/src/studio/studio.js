@@ -270,12 +270,14 @@ function loadLevel() {
 
 function loadWalls() {
   if (skin.customObstacleZones) {
-    return new ObstacleZoneWalls(level, skin);
+    return new ObstacleZoneWalls(level, skin, Studio.drawDebugRect);
+  } else if (skin.wallMaps) {
+    return new CollisionMaskWalls(level, skin, Studio.drawDebugRect,
+        Studio.drawDebugOverlay, Studio.MAZE_WIDTH, Studio.MAZE_HEIGHT);
+  } else {
+    return new TileWalls(level, skin, Studio.drawDebugRect, Studio.SQUARE_SIZE,
+        Studio.ROWS, Studio.COLS, Studio.getWallValue);
   }
-  if (skin.wallMaps) {
-    return new CollisionMaskWalls(level, skin);
-  }
-  return new TileWalls(level, skin);
 }
 
 /**
