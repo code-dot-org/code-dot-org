@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { stageShape } from './types';
 import StageProgress from './stage_progress';
 import TeacherStageInfo from './TeacherStageInfo';
+import { ViewType } from '../../stageLockRedux';
 import color from '../../../color';
 
 const styles = {
@@ -83,7 +84,7 @@ const CourseProgressRow = React.createClass({
   },
 
   render() {
-    const stage = this.props.stage;
+    const { stage } = this.props;
     if (this.props.stage.lockable && !this.props.lockableAuthorized) {
       return null;
     }
@@ -113,16 +114,8 @@ const CourseProgressRow = React.createClass({
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
         <div>
-          {/*
-            Eventually this will be lockable={!!stage.lockable}. Stage.lockable
-            won't be true until we do the work on the backend, but I want to
-            make that explicit by just setting to false for now
-          */}
           {this.props.showTeacherInfo &&
-            <TeacherStageInfo
-              lessonPlanUrl={stage.lesson_plan_html_url}
-              lockable={false}
-            />
+            <TeacherStageInfo stage={stage}/>
           }
           <StageProgress
             levels={stage.levels}
@@ -135,7 +128,8 @@ const CourseProgressRow = React.createClass({
 });
 
 export default connect(state => ({
-  showTeacherInfo: state.progress.showTeacherInfo,
+  showTeacherInfo: state.progress.showTeacherInfo &&
+    state.stageLock.viewAs !== ViewType.Student,
+  lockableAuthorized: state.progress.lockableAuthorized,
   changeFocusAreaPath: state.progress.changeFocusAreaPath,
-  lockableAuthorized: state.progress.lockableAuthorized
 }))(Radium(CourseProgressRow));
