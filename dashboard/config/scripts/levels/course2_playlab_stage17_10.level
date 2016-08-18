@@ -42,8 +42,8 @@
       "downButton",
       "upButton"
     ],
-    "contained_level_names": null,
-    "first_sprite_index": "0"
+    "first_sprite_index": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
