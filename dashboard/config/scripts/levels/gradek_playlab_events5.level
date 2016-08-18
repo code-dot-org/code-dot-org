@@ -36,8 +36,8 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null,
-    "first_sprite_index": "0"
+    "first_sprite_index": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "I made this level a Free Play so that students can show off their projects without worrying about running out of time. If you instead want it to have success/failure, can uncheck Free Play and add \r\nreturn Studio.eventHandlers.length > 3;\r\nto Success Conditions (checks to make sure all event handlers have some code written under them)",
