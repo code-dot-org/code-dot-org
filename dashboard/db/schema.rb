@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815010139) do
+ActiveRecord::Schema.define(version: 20160818224322) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -29,18 +29,6 @@ ActiveRecord::Schema.define(version: 20160815010139) do
 
   add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
   add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
-
-  create_table "activity_hints", force: :cascade do |t|
-    t.integer  "activity_id",          limit: 4, null: false
-    t.integer  "level_source_hint_id", limit: 4
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "hint_visibility",      limit: 4
-    t.integer  "ip_hash",              limit: 4
-  end
-
-  add_index "activity_hints", ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
-  add_index "activity_hints", ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
 
   create_table "authored_hint_view_requests", force: :cascade do |t|
     t.integer  "user_id",               limit: 4
