@@ -3,10 +3,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PublicKeyCryptographyWidget from './PublicKeyCryptographyWidget';
+import ModuloClockWidget from './ModuloClockWidget';
 
 function initialize() {
   ReactDOM.render(
-      <PublicKeyCryptographyWidget/>,
+      <ModuloClockWidget/>,
       document.getElementById('public-key-cryptography-mount'));
 }
 
