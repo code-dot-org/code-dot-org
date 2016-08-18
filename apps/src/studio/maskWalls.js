@@ -1,5 +1,5 @@
 import Walls from './walls';
-import {uriToImageData} from '../imageUtils';
+import {imageDataFromURI} from '../imageUtils';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
@@ -11,7 +11,7 @@ export default class MaskWalls extends Walls {
     this.bytesPerRow = Math.ceil(Studio.MAZE_WIDTH / BITS_PER_BYTE);
     this.wallMapLayers = {};
     for (const mapName in skin.wallMapLayers) {
-      uriToImageData(skin.wallMapLayers[mapName].srcUrl).then(imageData => {
+      imageDataFromURI(skin.wallMapLayers[mapName].srcUrl).then(imageData => {
         this.wallMapLayers[mapName] = {
           wallMap: this.wallMapFromImageData(imageData),
           srcUrl: skin.wallMapLayers[mapName].srcUrl
