@@ -30,7 +30,7 @@ const sliderImages = {
 let knobXMax = 135;
 const knobXMin = 15;
 const knobWidth = 16;
-let TRACK_LENGTH = knobXMax - knobXMin - 5;
+let trackLength = knobXMax - knobXMin - 5;
 
 /**
  * SpeedSlider for modifying a value.
@@ -88,7 +88,7 @@ const SpeedSlider = React.createClass({
   },
 
   svgPositionToValue(position) {
-    position = (position - knobXMin)/TRACK_LENGTH;
+    position = (position - knobXMin)/trackLength;
     return this.clampValue(position);
   },
 
@@ -120,7 +120,7 @@ const SpeedSlider = React.createClass({
   onMouseMove(event) {
     const mousePosition = this.mouseToSvg_(event);
     const mouseDelta = mousePosition.x - this.state.dragStart;
-    const valueDelta = mouseDelta / TRACK_LENGTH;
+    const valueDelta = mouseDelta / trackLength;
     const newValue = this.clampValue(this.state.valueStart + valueDelta);
     this.props.onChange(newValue);
   },
@@ -135,10 +135,10 @@ const SpeedSlider = React.createClass({
     const props = this.props;
     if (props.lineWidth) {
       knobXMax = props.lineWidth;
-      TRACK_LENGTH = knobXMax - knobXMin - 5;
+      trackLength = knobXMax - knobXMin - 5;
     }
     let clampedValue = this.clampValue(props.value);
-    let knobXPosition = knobXMin + TRACK_LENGTH*clampedValue - knobWidth/2;
+    let knobXPosition = knobXMin + trackLength*clampedValue - knobWidth/2;
     return (
       <div id="slider-cell" style={props.style}>
         <svg

@@ -114,17 +114,17 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
-  convertFrameRateTo01(frameRate) {
-    return frameRate/20;
+  convertFrameRateToFraction(frameRate) {
+    return frameRate / 20;
   },
 
-  convert01ToFrameRate(value) {
-    return value * 20;
+  convertFractionToFrameRate(fraction) {
+    return fraction * 20;
   },
 
-  setAnimationFrameRate(frameRate) {
-    let convertedValue = this.convert01ToFrameRate(frameRate);
-    this.setState({frameRate: convertedValue});
+  setAnimationFrameRate(sliderValue) {
+    let frameRate = this.convertFractionToFrameRate(sliderValue);
+    this.setState({frameRate: frameRate});
     this.debouncedFrameRate();
   },
 
@@ -165,7 +165,7 @@ const AnimationListItem = React.createClass({
             onFrameRateChanged={this.setAnimationFrameRate}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
-            frameRate={this.convertFrameRateTo01(this.state.frameRate)}
+            frameRate={this.convertFrameRateToFraction(this.state.frameRate)}
           />}
       </div>
     );
