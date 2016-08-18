@@ -8,11 +8,11 @@
 'use strict';
 
 import $ from 'jquery';
+import CollisionMaskWalls from './collisionMaskWalls';
+import ObstacleZoneWalls from './obstacleZoneWalls';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TileWalls from './tileWalls';
-import ObstacleZoneWalls from './obstacleZoneWalls';
-import MaskWalls from './maskWalls';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var studioMsg = require('./locale');
@@ -272,8 +272,8 @@ function loadWalls() {
   if (skin.customObstacleZones) {
     return new ObstacleZoneWalls(level, skin);
   }
-  if (skin.wallMapLayers) {
-    return new MaskWalls(level, skin);
+  if (skin.wallMaps) {
+    return new CollisionMaskWalls(level, skin);
   }
   return new TileWalls(level, skin);
 }
