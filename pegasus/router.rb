@@ -23,9 +23,8 @@ if rack_env?(:production)
   require 'newrelic_rpm'
   NewRelic::Agent.after_fork(force_reconnect: true)
   require 'newrelic_ignore_downlevel_browsers'
+  require 'honeybadger'
 end
-
-require 'honeybadger'
 
 require src_dir 'database'
 require src_dir 'forms'
@@ -63,6 +62,7 @@ class Documents < Sinatra::Base
     configs
   end
 
+  use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
@@ -95,6 +95,14 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
     set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
+
+    if rack_env?(:production)
+      Honeybadger.configure do |config|
+        config.api_key = CDO.pegasus_honeybadger_api_key
+        config.ignore << 'Sinatra::NotFound'
+        config.ignore << 'Table::NotFound'
+      end
+    end
   end
 
   before do
