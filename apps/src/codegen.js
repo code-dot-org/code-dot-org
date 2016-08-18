@@ -28,7 +28,7 @@ exports.evalWith = function (code, options, legacy) {
     // interpret the JS program all at once:
     myInterpreter.run();
   } else if (!legacy) {
-    new Interpreter(code, (interpreter, scope) => {
+    new Interpreter(`(function () { ${code} })()`, (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, options, 5, scope);
     }).run();
   } else {
