@@ -1,0 +1,38 @@
+.left {
+  float: left;
+}
+.right {
+  float: right;
+  margin-top: 10px;
+}
+.scroll-box {
+  overflow-y: scroll;
+  height: 400px;
+  border: 1px solid #bbb;
+  padding: 20px;
+}
+.scroll-box-header {
+  color: #5b6770;
+  font-size: 18px;
+  font-family: 'Gotham 4r', sans-serif;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.disabled-button {
+  background-color: #c6cacd;
+  border-color: #c6cacd;
+  color: #4d575f;
+}
+.secondary-button {
+  background-color: #0094ca;
+  border-color: #0094ca;
+}
+.no-top-margin {
+  margin-top: 0px;
+}
+.right-margin-5 {
+  margin-right: 5px;
+}
+.dismiss-link {
+  font-family: 'Gotham 4r', sans-serif;
+}
