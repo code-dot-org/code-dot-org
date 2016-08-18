@@ -4,7 +4,7 @@
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
 import {
-  fetchUrlAsBlob,
+  fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize
 } from '../imageUtils';
@@ -359,7 +359,7 @@ function loadAnimationFromSource(key, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key
     });
-    fetchUrlAsBlob(sourceUrl, (err, blob) => {
+    fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;

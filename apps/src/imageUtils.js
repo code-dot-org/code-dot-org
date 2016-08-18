@@ -1,4 +1,4 @@
-export function fetchUrlAsBlob(url, onComplete) {
+export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
   xhr.responseType = 'blob';
@@ -20,11 +20,12 @@ export function blobToDataURI(blob, onComplete) {
 }
 
 export function dataURIToSourceSize(dataURI) {
-  return uriToImage(dataURI).then(image => ({x: image.width, y: image.height}));
+  return imageFromURI(dataURI).then(
+      image => ({x: image.width, y: image.height}));
 }
 
-export function uriToImageData(uri) {
-  return uriToImage(uri).then(image => {
+export function imageDataFromURI(uri) {
+  return imageFromURI(uri).then(image => {
     const canvas = document.createElement('canvas');
     canvas.width = image.width;
     canvas.height = image.height;
@@ -34,7 +35,7 @@ export function uriToImageData(uri) {
   });
 }
 
-function uriToImage(uri) {
+function imageFromURI(uri) {
   return new Promise((resolve, reject) => {
     let image = new Image();
     image.onload = () => resolve(image);
