@@ -1,4 +1,3 @@
-/* global window */
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
 
@@ -35,7 +34,7 @@ $(document).ready(function () {
   };
   $('#level_makerlab_enabled').change(function () {
     if ($(this).is(':checked')) {
-      const editor = window.codeFunctionsEditor;
+      const editor = $('#level_code_functions').siblings().filter('.CodeMirror')[0].CodeMirror;
       const currentFunctions = JSON.parse(editor.getValue());
       const functionsWithMaker = Object.assign({}, currentFunctions, makerBlocks);
       editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
