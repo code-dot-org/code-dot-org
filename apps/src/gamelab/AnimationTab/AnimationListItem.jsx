@@ -90,7 +90,7 @@ const AnimationListItem = React.createClass({
 
   componentWillMount() {
     this.setState({frameRate: this.props.animationProps.frameRate});
-    this.debounced = _.debounce(() => {
+    this.debouncedFrameRate = _.debounce(() => {
       const latestFrameRate = this.state.frameRate;
       this.props.setAnimationFrameRate(this.props.animationKey, latestFrameRate);
     }, 200);
@@ -125,7 +125,7 @@ const AnimationListItem = React.createClass({
   setAnimationFrameRate(frameRate) {
     let convertedValue = this.convert01ToFrameRate(frameRate);
     this.setState({frameRate: convertedValue});
-    this.debounced();
+    this.debouncedFrameRate();
   },
 
   render() {
