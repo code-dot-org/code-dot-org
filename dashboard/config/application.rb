@@ -133,5 +133,9 @@ module Dashboard
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end
+
+    # TODO: Remove once this setting becomes default, after Rails 4.2
+    # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#error-handling-in-transaction-callbacks
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end
