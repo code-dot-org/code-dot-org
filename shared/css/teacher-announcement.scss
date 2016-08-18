@@ -1,6 +1,16 @@
 @import 'color';
 @import 'font';
 
+.accept-terms-reminder {
+  background-color: $lightest_orange;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Gotham 4r", sans-serif;
+  color: $dark_charcoal;
+  font-size: 14px;
+}
+
 .teacher-announce {
   position: relative;
   font-family: "Gotham 4r", sans-serif;
