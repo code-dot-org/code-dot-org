@@ -1745,6 +1745,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(312, 0.32, 0.62);
+      // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(
           opt => [opt[0], opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`]);
 
