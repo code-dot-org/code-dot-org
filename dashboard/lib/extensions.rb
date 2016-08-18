@@ -33,6 +33,12 @@ module CoreExtensions
         end
         false
       end
+
+      def strip_utf8mb4
+        chars.delete_if do |char|
+          char.bytes.length >= 4
+        end.join
+      end
     end
   end
 end
