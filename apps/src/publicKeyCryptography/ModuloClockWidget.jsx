@@ -51,7 +51,10 @@ const ModuloClockWidget = React.createClass({
           />
           <button>Go!</button>
         </div>
-        <ModuloClock modulus={modulus}/>
+        <ModuloClock
+          dividend={dividend}
+          modulus={modulus}
+        />
         <div style={{textAlign: 'center'}}>
           <IntegerDropdown
             value={speed}

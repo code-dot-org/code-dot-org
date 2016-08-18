@@ -20,11 +20,13 @@ const style = {
 
 const ModuloClock = React.createClass({
   propTypes: {
+    dividend: React.PropTypes.number,
     modulus: React.PropTypes.number
   },
 
   render() {
-    const {modulus} = this.props;
+    const {dividend, modulus} = this.props;
+    const result = dividend % modulus;
     return (
       <div style={style.root}>
         <svg viewBox="0 0 100 100" style={style.svg}>
@@ -37,7 +39,7 @@ const ModuloClock = React.createClass({
               x2="50"
               y2="5"
               transform={`rotate(${n * 360 / modulus} 50 50)`}
-              stroke={color.light_teal}
+              stroke={n <= result ? color.teal : color.white}
               strokeWidth="1"
             />
           ))}
