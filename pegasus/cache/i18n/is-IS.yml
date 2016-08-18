@@ -122,11 +122,11 @@
   third_party_price_299: 'Verð: $2,99/niðurhal'
   third_party_price_individual: 'Einstaklingsgjald: Frí prófun, síðan $25/mán.'
   third_party_price_school: 'Verð til skóla: Frí áætlanagerð & Pro á $2.500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
+  third_party_tynker_desc: Hið skapandi tölvunarumhverfi Tynker hjálpar börnum að
+    þróa tölvunarmiðaða hugsun og færni í forritun á skemmtilegan, aðgengilegan og
+    hugmyndaríkan hátt. Nýstárlegt, myndrænt forritunarmál, gagnvirk námskeið á eigin
+    hraða og leikjamiðuð forritunarverkefni kynna forritun á auðveldan hátt og efla
+    börn til að fara nýjar leiðir og til að skapa.
   third_party_tynker_btn_curriculum: Prófaðu námsefni Tynker fyrir byrjendur í lestri
   third_party_tynker_btn_site: Heimsækja Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
@@ -151,19 +151,19 @@
     basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
   third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_khan_desc: Lærðu að forrita teikningar, hreyfingar og leiki með JavaScript
+    og ProcessingJS eða lærðu að búa til vefsíður með HTML og CSS. Þú getur deilt
+    því sem þú býrð til, skoðað það sem aðrar hafa skapað og bæði lært af og kennt
+    öðrum!
+  third_party_khan_btn_learn: Læra tölvunarfræði með Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Spjall
+  third_party_appinv_desc: MIT App Inventor er forritunartól sem notar kubba og gerir
+    öllum, þ.á m. byrjendum kleift að byrja að forrita og búa til fyllilega nothæf
+    öpp fyrir Android tæki. Byrjendur í App Inventor geta verið komnir með keyrandi
+    app á innan við klukkutíma og geta forritað flóknari öpp á mun skemmri tíma en
+    það tæki með hefðbundari, skrifuðum forritunarmálum.
+  third_party_appinv_btn_curriculum: Hlaða niður App Inventor 2 kennsluefni
+  third_party_appinv_btn_forum: App Inventor 2 Spjall
   third_party_appinv_btn_site: Visit App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
@@ -887,7 +887,6 @@
   dashboard_faq: Algengar spurningar
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
-  dashboard_announce_view_all: Skoða allt
   dashboard_announce_message: Viltu hjálpa okkur að prófa nýjan eiginleika? Við vitum
     að það er mikilvægt að hvetja nemendur til að endurtaka og gera tilraunir og þess
     vegna ætlum við að bæta við eiginleikanum "ónotaður kóði" svo að nemendur geti
@@ -905,6 +904,8 @@
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Add your name
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Prófaðu núna
@@ -1751,5 +1752,4 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

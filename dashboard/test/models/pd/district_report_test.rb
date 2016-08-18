@@ -11,7 +11,8 @@ class Pd::DistrictReportTest < ActiveSupport::TestCase
     @district.users << @teacher1
     @district.users << @teacher2
 
-    @workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP, workshop_type: Pd::Workshop::TYPE_DISTRICT
+    @workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP,
+      workshop_type: Pd::Workshop::TYPE_DISTRICT, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
     @session1 = create :pd_session, workshop: @workshop, start: Time.zone.now, end: Time.zone.now + 5.hours
     @session2 = create :pd_session, workshop: @workshop, start: Time.zone.now + 1.day, end: Time.zone.now + 1.day + 6.hours
     @session3 = create :pd_session, workshop: @workshop, start: Time.zone.now + 2.days, end: Time.zone.now + 2.days + 8.hours
@@ -72,6 +73,7 @@ class Pd::DistrictReportTest < ActiveSupport::TestCase
 
   test 'not qualified' do
     @workshop.course = Pd::Workshop::COURSE_CSF
+    @workshop.subject = nil
     @workshop.save!
 
     report = Pd::DistrictReport.generate_district_report [@district]

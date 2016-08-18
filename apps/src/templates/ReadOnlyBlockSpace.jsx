@@ -14,7 +14,7 @@ var ReadOnlyBlockSpace = React.createClass({
 
   getInitialState: function () {
     return {
-      height: 10,
+      height: 100,
       blockSpace: undefined
     };
   },

@@ -748,7 +748,7 @@ class User < ActiveRecord::Base
       script = follower.section && follower.section.script
       next unless script
 
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         user_script.assigned_at = follower.created_at if
           follower.created_at &&
@@ -760,7 +760,7 @@ class User < ActiveRecord::Base
 
     # backfill progress in scripts
     Script.all.each do |script|
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         ul_map = user_levels_by_level(script)
         script.script_levels.each do |sl|
@@ -788,7 +788,7 @@ class User < ActiveRecord::Base
   end
 
   def self.track_script_progress(user_id, script_id)
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
       time_now = Time.now
 
@@ -808,7 +808,7 @@ class User < ActiveRecord::Base
       return
     end
 
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
       time_now = Time.now
       user_proficiency.last_progress_at = time_now
@@ -867,7 +867,7 @@ class User < ActiveRecord::Base
     new_level_perfected = false
 
     user_level = nil
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
@@ -888,7 +888,9 @@ class User < ActiveRecord::Base
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
-      user_level.level_source_id = level_source_id unless is_navigator
+      if level_source_id && !is_navigator
+        user_level.level_source_id = level_source_id
+      end
 
       user_level.save!
     end
@@ -905,7 +907,7 @@ class User < ActiveRecord::Base
           pairing_user_ids: nil,
           is_navigator: true
         )
-        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(
             navigator_user_level_id: navigator_user_level.id,
             driver_user_level_id: user_level.id
@@ -948,7 +950,7 @@ class User < ActiveRecord::Base
   end
 
   def assign_script(script)
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
       user_script.assigned_at = Time.now
 
@@ -1006,8 +1008,12 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
+    # As of August 2016, it may be the case that the `followed` exists but
+    # `followed.user` does not as the result of user deletion. In this case, we
+    # ignore any terms of service versions associated with deleted teacher
+    # accounts.
     followeds.
-      collect{|followed| followed.user.terms_of_service_version}.
+      collect{|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
   end
