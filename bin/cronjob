@@ -54,7 +54,7 @@ end
 #
 # honeybadger_notify - log an error to honeybadger.
 #
-def honeybadger_notify command, exitstatus, stdout, stderr
+def honeybadger_notify(command, exitstatus, stdout, stderr)
   Honeybadger.notify_command_error "cronjob #{command}", exitstatus, stdout, stderr
 end
 
