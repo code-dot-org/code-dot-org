@@ -15,39 +15,13 @@ exports.ForStatementMode = {
   UPDATE: 3
 };
 
-window.addEventListener('message', e => {
-  // Fix up arguments array.
-  const args = [];
-  for (var i in e.data.args) {
-    args[+i] = e.data.args[i];
-  }
-
-  if (messageHandlers[e.data.api] && messageHandlers[e.data.api][e.data.fn]) {
-    messageHandlers[e.data.api][e.data.fn].apply(null, args);
-  }
-});
-
-const messageHandlers = {};
-
-let frame = null;
-function runInFrame(code) {
-  if (frame) {
-    document.body.removeChild(frame);
-  }
-  frame = document.createElement('iframe');
-  frame.style.display = 'none';
-  frame.setAttribute('sandbox', 'allow-scripts');
-  frame.setAttribute('srcdoc', `<script>${code}</script>`);
-  document.body.appendChild(frame);
-}
-
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function (code, options, asyncCallback) {
   if (asyncCallback) {
     code += 'wrapper.done();';
-    options.wrapper = {done: () => null};
+    options.wrapper = {done: asyncCallback};
   }
 
   if (options.StudioApp && options.StudioApp.editCode) {
@@ -59,36 +33,9 @@ exports.evalWith = function (code, options, asyncCallback) {
     // interpret the JS program all at once:
     myInterpreter.run();
   } else if (asyncCallback) {
-
-    const mocks = [];
-    for (let api in options) {
-      const mock = {};
-      mocks.push(mock);
-      messageHandlers[api] = {};
-      for (let fn in options[api]) {
-        const f = options[api][fn];
-        if (typeof f !== 'function') {
-          // Only proxy functions.
-          continue;
-        }
-        messageHandlers[api][fn] = f.bind(options[api]);
-        mock[fn] = `function () {
-            window.parent.postMessage({
-              api: '${api}',
-              fn: '${fn}',
-              args: [].slice.call(arguments, 0)
-            }, '*');
-          }`;
-      }
-    }
-
-    // Override the `done` handler to hook program completion.
-    messageHandlers.wrapper = {done: asyncCallback};
-
-    const generatedApi = '[{' + mocks.map(m => Object.keys(m).map(k => `${k}:${m[k]}`).join(',')).join('},{') + '}]';
-    const fullCode = `(function (${Object.keys(options).join(',')}) { ${code} }).apply(null, ${generatedApi})`;
-
-    runInFrame(fullCode);
+    new Interpreter(code, (interpreter, scope) => {
+      marshalNativeToInterpreterObject(interpreter, options, 5, scope);
+    }).run();
   } else {
     // execute JS code "natively"
     var params = [];
