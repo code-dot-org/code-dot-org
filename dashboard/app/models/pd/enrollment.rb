@@ -66,11 +66,11 @@ class Pd::Enrollment < ActiveRecord::Base
   # Returns false if the SchoolInfo is new and should be stored.
   def check_school_info(school_info_attr)
     if school_info = SchoolInfo.where(
-        school_type: school_info_attr['school_type'],
-        state: school_info_attr['state'],
-        school_district_id: school_info_attr['school_district_id'],
-        zip: school_info_attr['zip'],
-        school_district_other: school_info_attr['']).first
+      school_type: school_info_attr['school_type'],
+      state: school_info_attr['state'],
+      school_district_id: school_info_attr['school_district_id'],
+      zip: school_info_attr['zip'],
+      school_district_other: school_info_attr['']).first
 
       self.school_info = school_info
       return true
