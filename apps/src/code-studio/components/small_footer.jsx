@@ -211,16 +211,18 @@ var SmallFooter = React.createClass({
               __html: decodeURIComponent(this.props.i18nDropdown)
             }}
           />
-          {this.renderPrivacy(styles)}
-          {this.renderCopyright()}
-          <a
-            className="more-link base-link"
-            href="javascript:void(0)"
-            onClick={this.clickBaseMenu}
-          >
-            {this.props.baseMoreMenuString + ' '}
-            <i className={caretIcon}/>
-          </a>
+          <small>
+            {this.renderPrivacy(styles)}
+            {this.renderCopyright()}
+            <a
+              className="more-link"
+              href="javascript:void(0)"
+              onClick={this.clickBaseMenu}
+            >
+              {this.props.baseMoreMenuString + ' '}
+              <i className={caretIcon}/>
+            </a>
+          </small>
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
@@ -242,7 +244,7 @@ var SmallFooter = React.createClass({
       return (
         <span>
           <a
-            className="privacy-link base-link"
+            className="privacy-link"
             href="https://code.org/privacy"
             target="_blank"
             style={styles.privacy}
@@ -261,7 +263,7 @@ var SmallFooter = React.createClass({
       return (
         <span>
           <a
-            className="copyright-link base-link"
+            className="copyright-link"
             href="#"
             onClick={this.clickBaseCopyright}
           >
