@@ -1579,7 +1579,7 @@ Studio.getWallValue = function (row, col) {
     return 0;
   }
 
-  if (Studio.wallMapLayers) {
+  if (skin.wallMaps) {
     // If we're using images to define walls, tiles aren't themselves walls
     return 0;
   }
@@ -4487,7 +4487,7 @@ Studio.setMap = function (opts) {
   }
 
   if (useMap !== null && !skin[useMap] &&
-      !(skin.wallMapLayers && skin.wallMapLayers[useMap])) {
+      !(skin.wallMaps && skin.wallMaps[useMap])) {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 

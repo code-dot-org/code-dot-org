@@ -23,27 +23,27 @@ export default class CollisionMaskWalls extends Walls {
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
     if (this.wallMaps[this.wallMapRequested]) {
       var wallMap = this.wallMaps[this.wallMapRequested].wallMap;
-      // Compare against a layout image
-
       Studio.drawDebugOverlay(this.wallMaps[this.wallMapRequested].srcUrl);
 
       const yTop = yCenter - collidableHeight / 2;
       const yBottom = yTop + collidableHeight;
       const xLeft = xCenter - collidableWidth / 2;
       const xRight = xLeft + collidableWidth;
-      const xStart = Math.floor(xLeft / BITS_PER_BYTE);
-      const xEnd = Math.floor((xRight - 1) / BITS_PER_BYTE);
+      const firstByteToCheck = Math.floor(xLeft / BITS_PER_BYTE);
+      const lastByteToCheck = Math.floor((xRight - 1) / BITS_PER_BYTE);
 
       for (let y = yTop; y < yBottom; y++) {
-        const rowStart = this.bytesPerRow * y;
-        for (let x = xStart; x <= xEnd; x++) {
-          if (wallMap[rowStart + x]) {
-            const start = Math.max(xLeft, Math.floor(x * BITS_PER_BYTE));
-            const end = Math.min(xRight, Math.floor((x + 1) * BITS_PER_BYTE));
-            for (let i = start; i < end; i++) {
-              if (wallMap[rowStart + x] & (1 << (i % BITS_PER_BYTE))) {
-                return true;
-              }
+        const firstByteInRow = this.bytesPerRow * y;
+        for (let x = firstByteToCheck; x <= lastByteToCheck; x++) {
+          if (wallMap[firstByteInRow + x]) {
+            // Check individual bits, starting from either the first bit in the
+            // byte, or the far left of the sprite's collision rect. End with
+            // the last bit or the far right of the collision rect.
+            const start = Math.max(xLeft, x * BITS_PER_BYTE);
+            const end = Math.min(xRight, (x + 1) * BITS_PER_BYTE);
+            const mask = ((1 << (end - start)) - 1) << (start % BITS_PER_BYTE);
+            if (wallMap[firstByteInRow + x] & mask) {
+              return true;
             }
           }
         }
@@ -52,9 +52,14 @@ export default class CollisionMaskWalls extends Walls {
     return false;
   }
 
+  /**
+   * Converts a black and white image representing walls (black) and open space
+   * (white) into a byte array with 1 bit per pixel, representing walls (1) or
+   * open space (0). There are Math.ceil(width/8) bytes per row of pixels, so
+   * each row starts on a new byte. The least significant bit corresponds to the
+   * leftmost of the 8 pixels stored in a byte.
+   */
   wallMapFromImageData(data) {
-    // Every row starts with a new byte to make some calculations simpler. The
-    // default width of 400 fits perfectly into 50 bytes anyway.
     const arr = new Uint8Array(Studio.MAZE_HEIGHT * this.bytesPerRow);
     for (let y = 0; y < Studio.MAZE_HEIGHT; y++) {
       for (let x = 0; x < Studio.MAZE_WIDTH; x += BITS_PER_BYTE) {
