@@ -4,6 +4,8 @@ theme: none
 content-type: text/ng-template
 ---
 .teacher-announcements
+  - unless dashboard_user[:terms_of_service_version] == 1
+    = view :accept_terms_reminder
   = view :teacher_announcements
 
 .ops-workshops
