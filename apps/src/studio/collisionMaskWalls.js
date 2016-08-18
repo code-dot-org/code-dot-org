@@ -5,7 +5,7 @@ const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
 
 export default class CollisionMaskWalls extends Walls {
-  constructor(level, skin, drawDebugRect, drawDebugOverlay, width, height) {
+  constructor(level, skin, drawDebugRect, drawDebugOverlay, width, height, onload) {
     super(level, skin, drawDebugRect);
 
     this.width = width;
@@ -13,16 +13,20 @@ export default class CollisionMaskWalls extends Walls {
     this.drawDebugOverlay = drawDebugOverlay;
     this.bytesPerRow = Math.ceil(width / BITS_PER_BYTE);
     this.wallMaps = {};
-    for (const mapName in skin.wallMaps) {
-      imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
+    Promise.all(Object.keys(skin.wallMaps).map(mapName => {
+      return imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
         this.wallMaps[mapName] = {
           wallMap: this.wallMapFromImageData(imageData),
           srcUrl: skin.wallMaps[mapName].srcUrl
         };
-      }).catch(err => {
-        console.error(err);
       });
-    }
+    })).then(() => {
+      if (onload) {
+        onload();
+      }
+    }).catch(err => {
+      console.error(err);
+    });
   }
 
   /**
