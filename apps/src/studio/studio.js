@@ -1517,7 +1517,7 @@ function checkForItemCollisions() {
     }
 
     if (level.wallMapCollisions) {
-      if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
+      if (Studio.walls.willCollidableTouchWall(item, next.x, next.y)) {
         Studio.currentEventParams = { eventObject: item };
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple items before executing the queue
@@ -1553,7 +1553,7 @@ function checkForItemCollisions() {
 Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
   var xCenter = xPos + sprite.width / 2;
   var yCenter = yPos + sprite.height / 2;
-  return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
+  return Studio.walls.willCollidableTouchWall(sprite, xCenter, yCenter);
 };
 
 /**
@@ -1579,25 +1579,11 @@ Studio.getWallValue = function (row, col) {
     return 0;
   }
 
-  if (skin.wallMaps) {
-    // If we're using images to define walls, tiles aren't themselves walls
-    return 0;
-  }
-
   if (Studio.wallMap) {
     return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
     return Studio.map[row][col].getTileType() & constants.WallAnyMask;
   }
-};
-
-/**
- * Test to see if a collidable will be touching a wall given particular X/Y
- * position coordinates (center)
- */
-
-Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
-  return Studio.walls.willCollidableTouchWall(collidable, xCenter, yCenter);
 };
 
 Studio.onSvgDrag = function (e) {
@@ -4071,7 +4057,7 @@ Studio.addItem = function (opts) {
 
     var numTries = 0;
     var minDistanceFromSprite = 100;
-    while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
+    while (Studio.walls.willCollidableTouchWall(item, item.x, item.y) ||
            Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
                               Studio.sprite[0].y + Studio.sprite[0].height/2,
                               item.x, item.y) < minDistanceFromSprite) {

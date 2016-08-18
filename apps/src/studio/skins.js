@@ -1453,9 +1453,6 @@ function loadStudio(skin, assetUrl) {
     blank: {
       srcUrl: skin.assetUrl('obstacle_blank.png'),
     },
-    testwall: {
-      srcUrl: skin.assetUrl('obstacle_testwall.png'),
-    },
     circle: {
       srcUrl: skin.assetUrl('obstacle_circle.png'),
     },

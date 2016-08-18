@@ -16,10 +16,15 @@ export default class CollisionMaskWalls extends Walls {
           wallMap: this.wallMapFromImageData(imageData),
           srcUrl: skin.wallMaps[mapName].srcUrl
         };
+      }).catch(err => {
+        console.error(err);
       });
     }
   }
 
+  /**
+   * @override
+   */
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
     if (this.wallMaps[this.wallMapRequested]) {
       var wallMap = this.wallMaps[this.wallMapRequested].wallMap;

@@ -15,6 +15,10 @@ export default class Walls {
     this.wallMapRequested = wallMapRequested;
   }
 
+  /**
+   * Test to see if a collidable will be touching a wall given particular X/Y
+   * position coordinates (center)
+   */
   willCollidableTouchWall(collidable, xCenter, yCenter) {
     var width = collidable.width;
     var height = collidable.height;
@@ -30,6 +34,9 @@ export default class Walls {
     return this.willRectTouchWall(xCenter, yCenter, width, height);
   }
 
+  /**
+   * Overriden in subclasses
+   */
   willRectTouchWall(xCenter, yCenter, width, height) {
     return false;
   }

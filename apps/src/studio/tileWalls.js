@@ -1,6 +1,9 @@
 import Walls from './walls';
 
 export default class TileWalls extends Walls {
+  /**
+   * @override
+   */
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
     var colsOffset = Math.floor(xCenter) + 1;
     var rowsOffset = Math.floor(yCenter) + 1;
