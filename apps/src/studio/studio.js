@@ -2177,6 +2177,7 @@ Studio.reset = function (first) {
   Studio.background = null;
   Studio.wallMap = null;
   Studio.wallMapRequested = null;
+  Studio.walls.setWallMapRequested(null);
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
