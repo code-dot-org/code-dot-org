@@ -135,7 +135,7 @@ gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error
 
 gem 'redcarpet', '~> 3.3.4'
 
-gem 'geocoder'
+gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
 gem 'rmagick'
 gem 'mini_magick'
