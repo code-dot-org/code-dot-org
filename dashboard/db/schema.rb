@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815010139) do
+ActiveRecord::Schema.define(version: 20160818190145) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -332,6 +332,7 @@ ActiveRecord::Schema.define(version: 20160815010139) do
     t.datetime "updated_at"
   end
 
+  add_index "pd_attendances", ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
 
   create_table "pd_course_facilitators", force: :cascade do |t|
