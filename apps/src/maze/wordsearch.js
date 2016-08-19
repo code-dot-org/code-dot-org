@@ -1,4 +1,5 @@
 import color from '../color';
+import Subtype from './subtype';
 import _ from 'lodash';
 import { cellId } from './mazeUtils';
 import { SquareType } from './tiles';
@@ -10,16 +11,25 @@ const SQUARE_SIZE = 50;
 /**
  * Create a new WordSearch.
  */
-export default class WordSearch {
-  constructor(goal, map) {
-    this.goal_ = goal;
+export default class WordSearch extends Subtype {
+  constructor(maze, studioApp, config) {
+    super(maze, studioApp, config);
+    this.goal_ = config.level.searchWord;
     this.visited_ = '';
-    this.map_ = map;
+    this.map_ = config.level.map;
+  }
+
+  /**
+   * @override
+   */
+  isWordSearch() {
+    return true;
   }
 
   /**
    * Generate random tiles for walls (with some restrictions) and draw them to
    * the svg.
+   * @override
    */
   drawMapTiles(svg) {
     let letter;
@@ -42,9 +52,17 @@ export default class WordSearch {
 
   /**
    * Returns true if we've spelled the right word.
+   * @override
    */
   finished() {
     return this.visited_ === this.goal_;
+  }
+
+  /**
+   * @override
+   */
+  shouldCheckSuccessOnMove() {
+    return false;
   }
 
   /**
@@ -136,6 +154,7 @@ export default class WordSearch {
 
   /**
    * Reset all tiles to beginning state
+   * @override
    */
   resetTiles() {
     for (let row = 0; row < this.map_.length; row++) {

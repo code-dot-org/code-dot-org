@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::ReportControllerBaseTest < ::ActionController::TestCase
+class Api::V1::Pd::CsvDownloadTest < ::ActionController::TestCase
   test 'generate_csv' do
     data = [
       {organizer_name: 'Organizer1', district: 'district1'},

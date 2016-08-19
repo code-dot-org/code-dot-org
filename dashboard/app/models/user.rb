@@ -492,6 +492,12 @@ class User < ActiveRecord::Base
                         level_id: level.id)
   end
 
+  def user_level_locked?(script_level, level)
+    return false unless script_level.stage.lockable?
+    user_level = user_level_for(script_level, level)
+    user_level.nil? || user_level.locked?(script_level.stage)
+  end
+
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
@@ -888,7 +894,9 @@ class User < ActiveRecord::Base
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
-      user_level.level_source_id = level_source_id unless is_navigator
+      if level_source_id && !is_navigator
+        user_level.level_source_id = level_source_id
+      end
 
       user_level.save!
     end
@@ -1006,9 +1014,19 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
+    # As of August 2016, it may be the case that the `followed` exists but
+    # `followed.user` does not as the result of user deletion. In this case, we
+    # ignore any terms of service versions associated with deleted teacher
+    # accounts.
     followeds.
-      collect{|followed| followed.user.terms_of_service_version}.
+      collect{|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
+  end
+
+  def should_see_inline_answer?(script_level)
+    script = script_level.try(:script)
+    authorized_teacher? && !script.try(:professional_course?) || (script_level &&
+      UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 end

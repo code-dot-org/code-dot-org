@@ -65,6 +65,8 @@ module ApplicationHelper
       'review_rejected'
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
       'review_accepted'
+    elsif user_level.try(:locked)
+      'locked'
     elsif user_level.try(:submitted)
       'submitted'
     elsif result.nil? || result == 0

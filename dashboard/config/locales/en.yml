@@ -128,7 +128,7 @@ en:
     field_is_required: "is required"
   signin_form:
     title: 'Have an account already? Sign in'
-    login: 'Email or username'
+    login: 'Email'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
@@ -147,8 +147,9 @@ en:
   password:
     reset_form:
       title: 'Forgot your password?'
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: 'Email address'
-      submit: "Send me reset password instructions"
+      submit: 'Submit'
     change_form:
       title: 'Change your password'
       new_password: 'New password'
@@ -265,7 +266,7 @@ en:
       prizes: 'Prizes'
       logout: 'Sign out'
       signin: 'Sign in'
-      signup: 'Sign up'
+      signup: 'Create an account'
       already_registered: 'Already registered?'
       pair_programming: 'Pair Programming'
       team: 'Team'
@@ -727,3 +728,4 @@ en:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
