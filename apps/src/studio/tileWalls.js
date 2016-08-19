@@ -9,35 +9,38 @@ export default class TileWalls extends Walls {
     this.columns = columns;
     this.getWallValue = getWallValue;
   }
+
   /**
    * @override
    */
   willRectTouchWall(xCenter, yCenter, collidableWidth, collidableHeight) {
-    var colsOffset = Math.floor(xCenter) + 1;
-    var rowsOffset = Math.floor(yCenter) + 1;
-    var xGrid = Math.floor(xCenter / this.squareSize);
-    var iYGrid = Math.floor(yCenter / this.squareSize);
-
+    const colsOffset = Math.floor(xCenter) + 1;
+    const rowsOffset = Math.floor(yCenter) + 1;
+    const xGrid = Math.floor(xCenter / this.squareSize);
+    const iYGrid = Math.floor(yCenter / this.squareSize);
 
     // Compare against regular wall tiles.
-    for (var col = Math.max(0, xGrid - colsOffset);
-         col < Math.min(this.columns, xGrid + colsOffset);
-         col++) {
-      for (var row = Math.max(0, iYGrid - rowsOffset);
-           row < Math.min(this.rows, iYGrid + rowsOffset);
-           row++) {
+    for (let col = Math.max(0, xGrid - colsOffset);
+        col < Math.min(this.columns, xGrid + colsOffset);
+        col++) {
+      for (let row = Math.max(0, iYGrid - rowsOffset);
+          row < Math.min(this.rows, iYGrid + rowsOffset);
+          row++) {
         if (this.getWallValue(row, col)) {
-          this.drawDebugRect("avatarCollision",
-                               (col + 0.5) * this.squareSize,
-                               (row + 0.5) * this.squareSize,
-                               this.squareSize,
-                               this.squareSize);
-          if (this.overlappingTest(xCenter,
-                                   (col + 0.5) * this.squareSize,
-                                   this.squareSize / 2 + collidableWidth / 2,
-                                   yCenter,
-                                   (row + 0.5) * this.squareSize,
-                                   this.squareSize / 2 + collidableHeight / 2)) {
+          this.drawDebugRect(
+              "avatarCollision",
+              (col + 0.5) * this.squareSize,
+              (row + 0.5) * this.squareSize,
+              this.squareSize,
+              this.squareSize);
+
+          if (this.overlappingTest(
+              xCenter,
+              (col + 0.5) * this.squareSize,
+              this.squareSize / 2 + collidableWidth / 2,
+              yCenter,
+              (row + 0.5) * this.squareSize,
+              this.squareSize / 2 + collidableHeight / 2)) {
             return true;
           }
         }
