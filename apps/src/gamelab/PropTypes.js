@@ -31,7 +31,7 @@ const Vector2 = React.PropTypes.shape({
  *   }
  *
  *  AnimationProps should include the actual spritesheet (as blob and dataURI),
- *  dimensions and frame dimensions, framerate, name, last save time, version IDs,
+ *  dimensions and frame dimensions, frameDelay, name, last save time, version IDs,
  *  URL to fetch the animation from the API, etc.
  *
  *  We serialize a smaller set of information {SerializedAnimationProps}.
@@ -54,7 +54,7 @@ export const AnimationKey = React.PropTypes.string;
  * @property {?string} sourceUrl
  * @property {Vector2} frameSize
  * @property {number} frameCount
- * @property {number} frameRate
+ * @property {number} frameDelay
  * @property {string} [version] - S3 version key
  */
 const serializedAnimationPropsShape = {
@@ -62,7 +62,7 @@ const serializedAnimationPropsShape = {
   sourceUrl: React.PropTypes.string,
   frameSize: Vector2.isRequired,
   frameCount: React.PropTypes.number.isRequired,
-  frameRate: React.PropTypes.number.isRequired,
+  frameDelay: React.PropTypes.number.isRequired,
   version: React.PropTypes.string
 };
 const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsShape);
@@ -76,7 +76,7 @@ const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsS
  *           and we look it up by key.
  * @property {Vector2} frameSize
  * @property {number} frameCount
- * @property {number} frameRate
+ * @property {number} frameDelay
  * @property {string} [version] - S3 version key
  *
  * @property {boolean} loadedFromSource - False at first, true after load successful.
@@ -111,7 +111,7 @@ function getSerializedAnimationProps(animation) {
     'sourceUrl',
     'frameSize',
     'frameCount',
-    'frameRate',
+    'frameDelay',
     'version'
   ]);
 }

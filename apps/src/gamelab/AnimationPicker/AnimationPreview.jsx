@@ -56,8 +56,8 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    // Never advance the frame if the frameRate is 0
-    if (this.props.animationProps.frameRate === 0) {
+    // Never advance the frame if the frameDelay is 0
+    if (this.props.animationProps.frameDelay === 0) {
       return;
     }
 
@@ -65,7 +65,8 @@ const AnimationPreview = React.createClass({
       currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animationProps.frameRate);
+    // 20 means that Game.frameDelay = 50;
+    this.timeout_ = setTimeout(this.advanceFrame, 33 * this.props.animationProps.frameDelay);
   },
 
   stopAndResetAnimation: function () {
