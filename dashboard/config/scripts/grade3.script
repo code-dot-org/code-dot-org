@@ -295,6 +295,7 @@ assessment 'K-1 Digital Footprint Multi 1'
 
 stage 'Build a Game'
 level 'grade3_playLab_fortuneFP'
+level 'grade3_playLab_buildGame_final'
 
 #stage 'Preview to What is Next'
 #level '2-3 Artist Nested Loops 1'
