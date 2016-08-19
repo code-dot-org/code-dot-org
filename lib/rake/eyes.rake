@@ -1,12 +1,14 @@
 require_relative '../../deployment'
-require 'cdo/rake_utils'
-require 'cdo/git_utils'
-require 'open-uri'
-require 'json'
-require 'fileutils'
-require 'gemoji'
-require 'eyes_selenium'
-require_relative '../../dashboard/test/ui/utils/selenium_browser'
+
+if rack_env?(:development) || rack_env?(:test)
+  require 'cdo/rake_utils'
+  require 'cdo/git_utils'
+  require 'open-uri'
+  require 'json'
+  require 'fileutils'
+  require 'eyes_selenium'
+  require_relative '../../dashboard/test/ui/utils/selenium_browser'
+end
 
 EYES_ACCESS_KEY_ENV_NAME = 'EYES_ACCESS_KEY'
 TMP_UTIL_DIR = '.tmputils'
