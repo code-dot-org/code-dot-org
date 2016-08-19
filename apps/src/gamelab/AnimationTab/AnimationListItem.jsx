@@ -6,7 +6,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameRate} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -76,7 +76,7 @@ const AnimationListItem = React.createClass({
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
-    setAnimationFrameRate: React.PropTypes.func.isRequired,
+    setAnimationFrameDelay: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   },
@@ -85,14 +85,14 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
-    this.setState({frameRate: nextProps.animationProps.frameRate});
+    this.setState({frameDelay: nextProps.animationProps.frameDelay});
   },
 
   componentWillMount() {
-    this.setState({frameRate: this.props.animationProps.frameRate});
-    this.debouncedFrameRate = _.debounce(() => {
-      const latestFrameRate = this.state.frameRate;
-      this.props.setAnimationFrameRate(this.props.animationKey, latestFrameRate);
+    this.setState({frameDelay: this.props.animationProps.frameDelay});
+    this.debouncedFrameDelay = _.debounce(() => {
+      const latestFrameDelay = this.state.frameDelay;
+      this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
     }, 200);
   },
 
@@ -114,18 +114,22 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
-  convertFrameRateToFraction(frameRate) {
-    return frameRate / 20;
+  convertFrameDelayToFraction(frameDelay) {
+    return 1 - (frameDelay / 60);
   },
 
-  convertFractionToFrameRate(fraction) {
-    return fraction * 20;
+  convertFractionToFrameDelay(fraction) {
+    fraction = 1 - fraction;
+    if (fraction === 0) {
+      return 1;
+    }
+    return Math.ceil(fraction * 60);
   },
 
-  setAnimationFrameRate(sliderValue) {
-    let frameRate = this.convertFractionToFrameRate(sliderValue);
-    this.setState({frameRate: frameRate});
-    this.debouncedFrameRate();
+  setAnimationFrameDelay(sliderValue) {
+    let frameDelay = this.convertFractionToFrameDelay(sliderValue);
+    this.setState({frameDelay: frameDelay});
+    this.debouncedFrameDelay();
   },
 
   render() {
@@ -156,16 +160,16 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={Object.assign({}, this.props.animationProps, {frameRate: this.state.frameRate})}
+          animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}
           isSelected={this.props.isSelected}
         />
         {animationName}
         {this.props.isSelected &&
           <ListItemButtons
-            onFrameRateChanged={this.setAnimationFrameRate}
+            onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
-            frameRate={this.convertFrameRateToFraction(this.state.frameRate)}
+            frameDelay={this.convertFrameDelayToFraction(this.state.frameDelay)}
           />}
       </div>
     );
@@ -187,8 +191,8 @@ export default connect(state => ({
     setAnimationName(animationKey, newName) {
       dispatch(setAnimationName(animationKey, newName));
     },
-    setAnimationFrameRate(animationKey, frameRate) {
-      dispatch(setAnimationFrameRate(animationKey, frameRate));
+    setAnimationFrameDelay(animationKey, frameDelay) {
+      dispatch(setAnimationFrameDelay(animationKey, frameDelay));
     }
   };
 })(Radium(AnimationListItem));
