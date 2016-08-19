@@ -285,9 +285,9 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_level_by_stage_and_position returns nil when not found' do
+  test 'get_script_level_by_url_param_and_position returns nil when not found' do
     artist = Script.find_by_name('artist')
-    assert artist.get_script_level_by_stage_and_position(11, 1).nil?
+    assert artist.get_script_level_by_url_param_and_position(11, 1, false).nil?
   end
 
   test 'gets script cache from memcached (or fake memcached)' do

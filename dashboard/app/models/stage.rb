@@ -28,7 +28,7 @@ class Stage < ActiveRecord::Base
   end
 
   def to_param
-    position.to_s
+    url_param
   end
 
   def unplugged?

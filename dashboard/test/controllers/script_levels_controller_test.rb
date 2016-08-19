@@ -19,8 +19,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script_level = @script.script_levels.fifth
 
     @custom_script = create(:script, :name => 'laurel')
-    @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', position: 1)
-    @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', position: 2)
+    @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', position: 1, url_param: '1')
+    @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', position: 2, url_param: '2')
     @custom_s1_l1 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_1, :position => 1)
     @custom_s2_l1 = create(:script_level, script: @custom_script,
@@ -106,7 +106,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     allthethings_script = Script.find_by_name('allthethings')
     netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
     netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
-    get :show, script_id: allthethings_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
+    get :show, script_id: allthethings_script, stage_id: netsim_script_level.stage.url_param, id: netsim_script_level.position
     assert_response :success
 
     assert_equal netsim_script_level, assigns(:script_level)

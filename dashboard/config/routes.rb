@@ -149,6 +149,16 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # /s/xxx/lockable/yyy/puzzle/zzz
+    resources :lockable_stages, only: [], path: "/lockable", format: false do
+      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+        member do
+          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+        end
+      end
+    end
+
     get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
 
