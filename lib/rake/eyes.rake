@@ -34,17 +34,27 @@ end
 
 def force_merge_eyes_baselines(branch, base)
   ensure_merge_util
-  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o -s #{branch} -t #{base}"
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o true -s #{branch} -t #{base}"
+end
+
+def copy_eyes_baselines(branch, base)
+  ensure_merge_util
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -c true -s #{branch} -t #{base}"
 end
 
 def force_copy_eyes_baselines(branch, base)
   ensure_merge_util
-  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o  -s #{branch} -t #{base}"
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o true -c true -s #{branch} -t #{base}"
 end
 
 def delete_eyes_branch(branch)
   ensure_merge_util
-  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{branch} -d"
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{branch} -d true"
+end
+
+def merge_delete_eyes_branch(branch, base)
+  ensure_merge_util
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{base} -d true"
 end
 
 def create_branch(branch)
@@ -67,8 +77,12 @@ namespace :eyes do
     HipChat.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
     force_merge_eyes_baselines(args[:branch], args[:base])
   end
+  task :copy, [:branch, :base] do |_, args|
+    HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Copying baselines #{args}"
+    copy_eyes_baselines(args[:branch], args[:base])
+  end
   task :force_copy, [:branch, :base] do |_, args|
-    HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
+    HipChat.log "#{Emoji.find_by_alias('muscle').raw}#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
     force_copy_eyes_baselines(args[:branch], args[:base])
   end
   task :create, [:branch] do |_, args|
@@ -78,5 +92,9 @@ namespace :eyes do
   task :delete, [:branch] do |_, args|
     HipChat.log "Deleting branch #{args}"
     delete_eyes_branch(args[:branch])
+  end
+  task :merge_delete, [:branch, :base] do |_, args|
+    HipChat.log "Deleting branch #{args}"
+    merge_delete_eyes_branch(args[:branch], args[:base])
   end
 end
