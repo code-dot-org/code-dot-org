@@ -92,7 +92,7 @@ July 7, 2016:
 
 August 18, 2016:
 
-- August Office Hours - [view video](/files/plp/August2016OfficeHours.mp4)
+- August Office Hours - [download video](http://videos.code.org/plp/august-2016-office-hours.mp4)
 - [August Office Hours - Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
 
 
