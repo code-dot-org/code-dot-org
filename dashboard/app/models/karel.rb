@@ -27,7 +27,7 @@ class Karel < Maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    %w(farmer farmer_night bee bee_night collector harvester)
+    %w(farmer farmer_night bee bee_night collector harvester planter)
   end
 
   # List of possible flower types
