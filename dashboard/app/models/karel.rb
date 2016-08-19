@@ -94,6 +94,11 @@ class Karel < Maze
       <block type="harvester_ifHasBean"></block>
       <block type="harvester_whileHasBean"></block>
     </category>
+    <category name="Planter">
+      <block type="planter_plant"></block>
+      <block type="planter_ifAtSoil"></block>
+      <block type="planter_ifAtSprout"></block>
+    </category>
     <category name="Bee">
       <block type="maze_nectar"></block>
       <block type="maze_honey"></block>
