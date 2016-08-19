@@ -6,10 +6,11 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameRate} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
+import _ from 'lodash';
 
 const styles = {
   tile: {
@@ -75,6 +76,7 @@ const AnimationListItem = React.createClass({
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
+    setAnimationFrameRate: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   },
@@ -83,6 +85,15 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
+    this.setState({frameRate: nextProps.animationProps.frameRate});
+  },
+
+  componentWillMount() {
+    this.setState({frameRate: this.props.animationProps.frameRate});
+    this.debouncedFrameRate = _.debounce(() => {
+      const latestFrameRate = this.state.frameRate;
+      this.props.setAnimationFrameRate(this.props.animationKey, latestFrameRate);
+    }, 200);
   },
 
   onSelect() {
@@ -101,6 +112,20 @@ const AnimationListItem = React.createClass({
 
   onNameChange(event) {
     this.props.setAnimationName(this.props.animationKey, event.target.value);
+  },
+
+  convertFrameRateToFraction(frameRate) {
+    return frameRate / 20;
+  },
+
+  convertFractionToFrameRate(fraction) {
+    return fraction * 20;
+  },
+
+  setAnimationFrameRate(sliderValue) {
+    let frameRate = this.convertFractionToFrameRate(sliderValue);
+    this.setState({frameRate: frameRate});
+    this.debouncedFrameRate();
   },
 
   render() {
@@ -131,14 +156,16 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={this.props.animationProps}
+          animationProps={Object.assign({}, this.props.animationProps, {frameRate: this.state.frameRate})}
           isSelected={this.props.isSelected}
         />
         {animationName}
         {this.props.isSelected &&
           <ListItemButtons
+            onFrameRateChanged={this.setAnimationFrameRate}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
+            frameRate={this.convertFrameRateToFraction(this.state.frameRate)}
           />}
       </div>
     );
@@ -146,17 +173,22 @@ const AnimationListItem = React.createClass({
 });
 export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
-}), dispatch => ({
-  cloneAnimation(animationKey) {
-    dispatch(cloneAnimation(animationKey));
-  },
-  deleteAnimation(animationKey) {
-    dispatch(deleteAnimation(animationKey));
-  },
-  selectAnimation(animationKey) {
-    dispatch(selectAnimation(animationKey));
-  },
-  setAnimationName(animationKey, newName) {
-    dispatch(setAnimationName(animationKey, newName));
-  }
-}))(Radium(AnimationListItem));
+}), dispatch => {
+  return {
+    cloneAnimation(animationKey) {
+      dispatch(cloneAnimation(animationKey));
+    },
+    deleteAnimation(animationKey) {
+      dispatch(deleteAnimation(animationKey));
+    },
+    selectAnimation(animationKey) {
+      dispatch(selectAnimation(animationKey));
+    },
+    setAnimationName(animationKey, newName) {
+      dispatch(setAnimationName(animationKey, newName));
+    },
+    setAnimationFrameRate(animationKey, frameRate) {
+      dispatch(setAnimationFrameRate(animationKey, frameRate));
+    }
+  };
+})(Radium(AnimationListItem));

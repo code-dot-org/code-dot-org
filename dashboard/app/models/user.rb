@@ -492,6 +492,12 @@ class User < ActiveRecord::Base
                         level_id: level.id)
   end
 
+  def user_level_locked?(script_level, level)
+    return false unless script_level.stage.lockable?
+    user_level = user_level_for(script_level, level)
+    user_level.nil? || user_level.locked?(script_level.stage)
+  end
+
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
@@ -1016,5 +1022,11 @@ class User < ActiveRecord::Base
       collect{|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
+  end
+
+  def should_see_inline_answer?(script_level)
+    script = script_level.try(:script)
+    authorized_teacher? && !script.try(:professional_course?) || (script_level &&
+      UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 end
