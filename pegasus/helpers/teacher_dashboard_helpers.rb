@@ -1,5 +1,6 @@
 def dashboard_admin?
-  dashboard_user.try{|u| u[:admin]}
+  return false unless dashboard_user
+  dashboard_user[:admin]
 end
 
 def can_see_pd_workshop_dashboard?
