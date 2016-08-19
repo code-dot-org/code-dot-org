@@ -1,17 +1,43 @@
 import $ from 'jquery';
 
 module.exports = {
-  getAudio: function (text, voice, config, callback) {
-    $.getJSON("http://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
-      cl_login: config.login,
-      cl_app: config.app,
-      cl_pwd: config.pwd,
-      req_voice: voice,
-      req_text: text
-    }, callback);
+  listenForGetAudio(config) {
+    $('button.tts').click(function () {
+      var sourceText;
+      switch (this.id) {
+        case 'tts-instructions':
+          sourceText = $("#level_tts_instructions_override").val() || $("#level_instructions").val();
+          break;
+        case 'tts-markdown-instructions':
+          sourceText = $("#level_tts_markdown_instructions_override").val() || $('#markdown-instructions-preview').text();
+          break;
+      }
+
+      $.getJSON("http://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
+        cl_login: config.login,
+        cl_app: config.app,
+        cl_pwd: config.pwd,
+        req_voice: $("#level_tts_voice").val(),
+        req_text: sourceText
+      }, function (data) {
+        $('#tts-error').hide();
+
+        if (data.err_msg) {
+          $('#alert-content').text(unescape(data.err_msg));
+          $('#tts-error').show();
+        }
+
+        if (data.snd_url) {
+          $("#tts-audio").attr({
+            src: data.snd_url,
+            controls: 'controls'
+          });
+        }
+      });
+    });
   },
 
-  populateVoicesList: function (target, config) {
+  populateVoicesList(config) {
     $.getJSON("http://vaas.acapela-group.com/Services/Voices.json?jsoncallback=?", {
       cl_login: config.login,
       cl_app: config.app,
@@ -40,8 +66,8 @@ module.exports = {
         return "<optgroup label='" + language + "'>" + options.join('') + "</optgroup>";
       });
 
-      target.html(optgroups.join(''));
-      target.find('option[value="sharon22k"]').attr("selected",true);
+      $('#level_tts_voice').html(optgroups.join(''));
+      $('#level_tts_voice').find('option[value="sharon22k"]').attr("selected",true);
     });
   }
 };

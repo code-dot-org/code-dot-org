@@ -20,43 +20,15 @@
     %div
       %audio#tts-audio
 
-:javascript
-  if (#{!!CDO.acapela_login}) {
-    const config = {
-      login: "#{CDO.acapela_login}",
-      app: "#{CDO.acapela_ephemeral_app}",
-      pwd: "#{CDO.acapela_ephemeral_password}",
-    };
+-if CDO.acapela_login
+  :javascript
+      const config = {
+        login: "#{CDO.acapela_login}",
+        app: "#{CDO.acapela_ephemeral_app}",
+        pwd: "#{CDO.acapela_ephemeral_password}",
+      };
 
-    $('button.tts').click(function () {
-      var sourceText;
-      switch (this.id) {
-        case 'tts-instructions':
-          sourceText = $("#level_tts_instructions_override").val() || $("#level_instructions").val();
-          break;
-        case 'tts-markdown-instructions':
-          sourceText = $("#level_tts_markdown_instructions_override").val() || $('#markdown-instructions-preview').text()
-          break;
-      }
-
-      levelbuilder.acapela.getAudio(sourceText, $("#level_tts_voice").val(), config, function (data) {
-        $('#tts-error').hide();
-
-        if (data.err_msg) {
-          $('#alert-content').text(unescape(data.err_msg));
-          $('#tts-error').show();
-        }
-
-        if (data.snd_url) {
-          $("#tts-audio").attr({
-            src: data.snd_url,
-            controls: 'controls'
-          });
-        }
+      $(document).ready(function () {
+        levelbuilder.acapela.populateVoicesList(config);
+        levelbuilder.acapela.listenForGetAudio(config);
       });
-    });
-
-    $(document).ready(function () {
-      levelbuilder.acapela.populateVoicesList($('#level_tts_voice'), config);
-    });
-  }
