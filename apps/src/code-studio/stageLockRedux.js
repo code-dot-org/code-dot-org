@@ -70,8 +70,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
       lockDialogStageId: null,
-      lockStatus: [],
-      saving: false
+      lockStatus: []
     });
   }
 
@@ -101,8 +100,10 @@ export default function reducer(state = initialState, action) {
 
     const nextState = _.cloneDeep(state);
     nextState.sections[selectedSection].stages[stageId] = nextStage;
-    nextState.lockStatus = nextLockStatus;
-    return nextState;
+    return Object.assign(nextState, {
+      lockStatus: nextLockStatus,
+      saving: false
+    });
   }
 
   return state;
