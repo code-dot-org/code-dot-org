@@ -80,22 +80,22 @@ namespace :eyes do
   end
   task :force_merge, [:branch, :base] do |_, args|
     check_eyes_set
-    HipChat.log "  Force merging baselines #{args}"
+    HipChat.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
     force_merge_eyes_baselines(args[:branch], args[:base])
   end
   task :copy, [:branch, :base] do |_, args|
     check_eyes_set
-    HipChat.log "  Copying baselines #{args}"
+    HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Copying baselines #{args}"
     copy_eyes_baselines(args[:branch], args[:base])
   end
   task :force_copy, [:branch, :base] do |_, args|
     check_eyes_set
-    HipChat.log "  Force copying baselines #{args}"
+    HipChat.log "#{Emoji.find_by_alias('muscle').raw}#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
     force_copy_eyes_baselines(args[:branch], args[:base])
   end
   task :create, [:branch] do |_, args|
     check_eyes_set
-    HipChat.log "  Creating branch #{args}"
+    HipChat.log "#{Emoji.find_by_alias('baby').raw}  Creating branch #{args}"
     create_branch(args[:branch])
   end
   task :delete, [:branch] do |_, args|
