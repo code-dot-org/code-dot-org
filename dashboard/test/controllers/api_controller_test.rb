@@ -6,11 +6,16 @@ def slog(h)
 end
 
 class ApiControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     @teacher = create(:teacher)
     sign_in @teacher
+
+    # make them an authorized_Teacher
+    cohort = create(:cohort)
+    cohort.teachers << @teacher
+    cohort.save!
 
     @teacher_other = create(:teacher)
 
@@ -25,6 +30,24 @@ class ApiControllerTest < ActionController::TestCase
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.backfill_user_scripts
     @student_flappy_1.reload
+  end
+
+  def create_script_with_lockable_stage
+    script = create :script
+
+    # Create a LevelGroup level.
+    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level.properties['submittable'] = true
+    level.save!
+
+    stage = create :stage, name: 'Stage1', script: script, lockable: true
+
+    # Create a ScriptLevel joining this level to the script.
+    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+
+    [script, level, stage]
   end
 
   def make_progress_in_section(script)
@@ -431,6 +454,311 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal script, assigns(:script)
+  end
+
+  test "should get lock state when no user_level" do
+    script, level, stage = create_script_with_lockable_stage
+
+    get :lockable_state, section_id: @section.id, script_id: script.id
+    assert_response :success
+    body = JSON.parse(response.body)
+
+    assert_equal [@section.id.to_s, @flappy_section.id.to_s], body.keys, "entry for each section"
+
+    # do a bunch of validation on our first section
+    section_response = body[@section.id.to_s]
+    assert_equal @section.id, section_response['section_id']
+    assert_equal @section.name, section_response['section_name']
+    assert_equal 1, section_response['stages'].length
+
+    stages_response = section_response['stages']
+    assert_equal 1, stages_response.keys.length, '1 stage in our script'
+    stage_response = stages_response[stage.id.to_s]
+    assert_equal 5, stage_response.length, "entry for each student in section"
+
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
+      student_response = stage_response[index]
+      assert_equal({
+        "user_id" => student.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      }, student_response['user_level_data'], 'user_id, level_id, and script_id for not yet existing user_level')
+      assert_equal student.name, student_response['name']
+      assert_equal true, student_response['locked'], 'starts out locked'
+      assert_equal false, student_response['readonly_answers']
+    end
+
+    # do a much more limited set of validation for the flappy section
+    flappy_section_response = body[@flappy_section.id.to_s]
+    assert_equal @flappy_section.id, flappy_section_response['section_id']
+    assert_equal 1, flappy_section_response['stages'][stage.id.to_s].length
+    assert_equal @student_flappy_1.name, flappy_section_response['stages'][stage.id.to_s][0]['name']
+  end
+
+  test "should get lock state when we have user_levels" do
+    script, level, stage = create_script_with_lockable_stage
+
+    # student_1 is unlocked
+    create :user_level, user: @student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+
+    # student_2 can view answers
+    create :user_level, user: @student_2, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: Time.now
+
+    # student_3 has a user_level, but is still locked
+    create :user_level, user: @student_3, script: script, level: level, submitted: true, readonly_answers: false
+
+    # student_4 got autolocked while editing
+    create :user_level, user: @student_4, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
+
+    # student_5 got autolocked while viewing answers
+    create :user_level, user: @student_5, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
+
+    get :lockable_state, section_id: @section.id, script_id: script.id
+    assert_response :success
+    body = JSON.parse(response.body)
+
+    student_responses = body[@section.id.to_s]['stages'][stage.id.to_s]
+    assert_equal 5, student_responses.length
+
+    # student_1 is unlocked
+    student_1_response = student_responses[0]
+    assert_equal({
+      "user_id" => @student_1.id,
+      "level_id" => level.id,
+      "script_id" => script.id
+    }, student_1_response['user_level_data'])
+    assert_equal false, student_1_response['locked']
+    assert_equal false, student_1_response['readonly_answers']
+
+    # student_2 is unlocked
+    student_2_response = student_responses[1]
+    assert_equal({
+      "user_id" => @student_2.id,
+      "level_id" => level.id,
+      "script_id" => script.id
+    }, student_2_response['user_level_data'])
+    assert_equal false, student_2_response['locked']
+    assert_equal true, student_2_response['readonly_answers']
+
+    # student_3 has a user_level, but is still locked
+    student_3_response = student_responses[2]
+    assert_equal({
+      "user_id" => @student_3.id,
+      "level_id" => level.id,
+      "script_id" => script.id
+    }, student_3_response['user_level_data'])
+    assert_equal true, student_3_response['locked']
+    assert_equal false, student_3_response['readonly_answers']
+
+    # student_4 got autolocked while editing
+    student_4_response = student_responses[3]
+    assert_equal({
+      "user_id" => @student_4.id,
+      "level_id" => level.id,
+      "script_id" => script.id
+    }, student_4_response['user_level_data'])
+    assert_equal true, student_4_response['locked']
+    assert_equal false, student_4_response['readonly_answers']
+
+    # student_5 got autolocked while viewing answers
+    student_5_response = student_responses[4]
+    assert_equal({
+      "user_id" => @student_5.id,
+      "level_id" => level.id,
+      "script_id" => script.id
+    }, student_5_response['user_level_data'])
+    assert_equal true, student_5_response['locked']
+    assert_equal false, student_5_response['readonly_answers']
+  end
+
+  test "should update lockable state for new user_levels" do
+    script, level, _ = create_script_with_lockable_stage
+
+    user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
+    user_level_data2 = {user_id: @student_2.id, level_id: level.id, script_id: script.id}
+
+    # unlock a user_level that does not yet exist
+    assert_equal nil, UserLevel.find_by(user_level_data)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: false,
+      readonly_answers: false
+    }]
+
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal false, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
+    assert_not_nil user_level.unlocked_at
+
+    # view_anwers for a user_level that does not yet exist
+    user_level.delete!
+    assert_equal nil, UserLevel.find_by(user_level_data)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: false,
+      readonly_answers: true
+    }]
+
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal true, user_level.submitted?
+    assert_equal true, user_level.readonly_answers?
+    assert_not_nil user_level.unlocked_at
+
+    # multiple updates at once
+    user_level.delete!
+    assert_equal nil, UserLevel.find_by(user_level_data)
+    assert_equal nil, UserLevel.find_by(user_level_data2)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: false,
+      readonly_answers: false
+    }, {
+      user_level_data: user_level_data2,
+      locked: false,
+      readonly_answers: false
+    }]
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal false, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
+    assert_not_nil user_level.unlocked_at
+
+    user_level2 = UserLevel.find_by(user_level_data2)
+    assert_equal false, user_level2.submitted?
+    assert_equal false, user_level2.readonly_answers?
+    assert_not_nil user_level2.unlocked_at
+  end
+
+  test "should update lockable state for existing levels" do
+    script, level, _ = create_script_with_lockable_stage
+
+    user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
+    user_level = create :user_level, user_level_data
+
+    # update from editable to locked
+    user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: true,
+      readonly_answers: false
+    }]
+
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal true, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
+    assert_equal nil, user_level.unlocked_at
+
+    # update from editable to readonly_answers
+    user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: false,
+      readonly_answers: true
+    }]
+
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal true, user_level.submitted?
+    assert_equal true, user_level.readonly_answers?
+    assert_not_nil user_level.unlocked_at
+
+    # update from readonly_answers to locked
+    user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: true,
+      readonly_answers: false
+    }]
+
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal true, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
+    assert_equal nil, user_level.unlocked_at
+
+    # update from readonly_answers to editable
+    user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+    updates = [{
+      user_level_data: user_level_data,
+      locked: false,
+      readonly_answers: false
+    }]
+
+    post :update_lockable_state, updates: updates
+    user_level = UserLevel.find_by(user_level_data)
+    assert_equal false, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
+    assert_not_nil user_level.unlocked_at
+  end
+
+  test "should fail to update lockable state if given bad data" do
+    script, level, _ = create_script_with_lockable_stage
+
+    user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
+    create :user_level, user_level_data
+
+    # fails if we don't provide all user_level_data
+    updates = [{
+      user_level_data: {
+        # missing user_id
+        level_id: level.id,
+        script_id: script.id
+      },
+      locked: true,
+      readonly_answers: false
+    }]
+    post :update_lockable_state, updates: updates
+    assert_response 400
+
+    updates = [{
+      user_level_data: {
+        user_id: @student_1.id,
+        # missing level_id
+        script_id: script.id
+      },
+      locked: true,
+      readonly_answers: false
+    }]
+    post :update_lockable_state, updates: updates
+    assert_response 400
+
+    updates = [{
+      user_level_data: {
+        user_id: @student_1.id,
+        level_id: level.id
+        # missing script_id
+      },
+      locked: true,
+      readonly_answers: false
+    }]
+    post :update_lockable_state, updates: updates
+    assert_response 400
+
+    # can't set to lockable and readonly_answers
+    updates = [{
+      user_level_data: user_level_data,
+      locked: true,
+      readonly_answers: true
+    }]
+    post :update_lockable_state, updates: updates
+    assert_response 400
+
+    # can't update students that dont belong to teacher
+    other_student = create :student
+    updates = [{
+      user_level_data: {
+        user_id: other_student.id,
+        level_id: level.id,
+        script_id: script.id
+      },
+      locked: true,
+      readonly_answers: false
+    }]
+    post :update_lockable_state, updates: updates
+    assert_response 403
   end
 
   test "should get user progress" do

@@ -36,7 +36,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "markdown_instructions": "This game is called \"Play Lab\".  \r\n\r\n<br/>\r\nSee if you can figure out what each block does.",
+    "markdown_instructions": "This game is called \"Play Lab\".\r\n\r\nSee if you can figure out what each block does.",
     "contained_level_names": null
   },
   "published": true,

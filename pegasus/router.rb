@@ -1,6 +1,6 @@
 require_relative 'src/env'
 require 'rack'
-require 'rack/contrib'
+require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'sinatra/verbs'
 require 'cdo/geocoder'

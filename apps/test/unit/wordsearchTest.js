@@ -59,7 +59,16 @@ describe("wordsearch: drawMapTiles", function () {
     // create our fake document
     setGlobals();
 
-    var wordSearch = new WordSearch('RUN', map);
+    var fakeMaze = undefined;
+    var fakeStudioApp = undefined;
+    var fakeConfig = {
+      level: {
+        searchWord: '',
+        map: map
+      }
+    };
+
+    var wordSearch = new WordSearch(fakeMaze, fakeStudioApp, fakeConfig);
     // Not currently doing any validation, so mostly just making sure no
     // exceptions are thrown.
     wordSearch.drawMapTiles(document.getElementById('svg'));
