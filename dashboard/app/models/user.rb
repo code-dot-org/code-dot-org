@@ -521,11 +521,13 @@ class User < ActiveRecord::Base
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
   end
 
-  # Returns the most recent (via created_at) user_level for the specified
+  # Returns the most recent (via updated_at) user_level for the specified
   # level.
   def last_attempt_for_any(levels)
     level_ids = levels.map(&:id)
-    UserLevel.where(user_id: self.id, level_id: level_ids).order('id desc').first
+    UserLevel.where(user_id: self.id, level_id: level_ids).
+      order('updated_at DESC').
+      first
   end
 
   def student?
