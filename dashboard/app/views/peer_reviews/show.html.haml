@@ -1,7 +1,20 @@
+- content_for(:head) do
+  =javascript_include_tag 'js/plc'
 .peer-review
   - reviewed = !!@peer_review.status
 
-  %h1 Peer Review
+  - if @peer_review.script.professional_learning_course?
+    #breadcrumb
+    - course_unit = @peer_review.script.plc_course_unit
+    - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.get_url_name), page_name: t('flex_category.peer_review')}
+    :javascript
+      ReactDOM.render(
+        React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
+        document.getElementById('breadcrumb')
+      );
+
+  %h1
+    =t('flex_category.peer_review')
 
   - unless reviewed
     %p Please review the peer submission in the grey box below.

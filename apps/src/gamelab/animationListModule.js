@@ -26,6 +26,8 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
+// Args: {AnimationKey} key, {number} frameRate
+const SET_ANIMATION_FRAME_RATE = 'AnimationList/SET_ANIMATION_FRAME_RATE';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
@@ -78,6 +80,7 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
+    case SET_ANIMATION_FRAME_RATE:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
@@ -115,6 +118,11 @@ function animationPropsReducer(state, action) {
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
         name: action.name
+      });
+
+    case SET_ANIMATION_FRAME_RATE:
+      return Object.assign({}, state, {
+        frameRate: action.frameRate
       });
 
     case START_LOADING_FROM_SOURCE:
@@ -295,6 +303,23 @@ export function setAnimationName(key, name) {
       type: SET_ANIMATION_NAME,
       key,
       name
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * Set the frameRate of the specified animation.
+ * @param {string} key
+ * @param {number} frameRate
+ * @returns {{type: ActionType, key: string, frameRate: number}}
+ */
+export function setAnimationFrameRate(key, frameRate) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_FRAME_RATE,
+      key,
+      frameRate
     });
     dashboard.project.projectChanged();
   };

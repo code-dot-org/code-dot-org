@@ -90,6 +90,12 @@ July 7, 2016:
 - [White House Fundraising Event Webinar](https://bluejeans.com/s/9Y8e/)<br/>
 - [Slide Deck](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
 
+August 18, 2016:
+
+- August Office Hours - [download video](http://videos.code.org/plp/august-2016-office-hours.mp4)
+- [August Office Hours - Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
+
+
 
 
 

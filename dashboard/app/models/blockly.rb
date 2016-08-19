@@ -298,6 +298,20 @@ class Blockly < Level
     options.freeze
   end
 
+  def localized_instructions
+    if self.custom?
+      loc_val = I18n.t("data.instructions").try(:[], "#{self.name}_instruction".to_sym)
+      unless I18n.en? || loc_val.nil?
+        return loc_val
+      end
+    else
+      val = [self.game.app, self.game.name].map { |name|
+        I18n.t("data.level.instructions").try(:[], "#{name}_#{self.level_num}".to_sym)
+      }.compact.first
+      return val unless val.nil?
+    end
+  end
+
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
