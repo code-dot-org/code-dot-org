@@ -8,33 +8,6 @@ export default class Gatherer extends Subtype {
   }
 
   /**
-   * @param {Number} row
-   * @param {Number} col
-   * @returns {Number} val
-   */
-  getValue(row, col) {
-    return this.getCell(row, col).getCurrentValue();
-  }
-
-  /**
-   * @param {Number} row
-   * @param {Number} col
-   * @param {Number} val
-   */
-  setValue(row, col, val) {
-    this.getCell(row, col).setCurrentValue(val);
-  }
-
-  /**
-   * @param {Number} row
-   * @param {Number} col
-   * @returns {Object} cell
-   */
-  getCell(row, col) {
-    return this.maze_.map.currentStaticGrid[row][col];
-  }
-
-  /**
    * @return {boolean}
    */
   collectedEverything() {
