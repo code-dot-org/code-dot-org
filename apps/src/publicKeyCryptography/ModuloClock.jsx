@@ -15,9 +15,10 @@ const WEDGE_OUTER_RADIUS = 48;
 const WEDGE_INNER_RADIUS = 25;
 
 const COLOR = {
-  clockFace: color.lightest_teal,
+  clockFace: color.lightest_cyan,
   emptyWedge: color.white,
-  fullWedge: color.teal,
+  fullWedge: color.cyan,
+  valueText: color.cyan
 };
 
 const style = {
@@ -34,12 +35,50 @@ const style = {
 
 const ModuloClock = React.createClass({
   propTypes: {
-    dividend: React.PropTypes.number,
     modulus: React.PropTypes.number
   },
 
+  getInitialState() {
+    return {
+      currentDividend: 0,
+      targetDividend: 0,
+      startTime: null,
+      interval: null
+    };
+  },
+
+  animateTo(dividend) {
+    this.setState({
+      currentDividend: 0,
+      targetDividend: dividend,
+      startTime: Date.now(),
+      interval: setInterval(this.tick, 33)
+    });
+  },
+
+  tick() {
+    const {startTime, targetDividend, interval} = this.state;
+
+    const duration = 5000;
+    const elapsedTime = Date.now() - startTime;
+    if (elapsedTime < duration) {
+      this.setState({
+        currentDividend: Math.floor(easeOutCircular(elapsedTime, 0, targetDividend, duration))
+      });
+    } else {
+      clearInterval(interval);
+      this.setState({
+        currentDividend: targetDividend,
+        startTime: null,
+        interval: null
+      });
+    }
+  },
+
   renderSegments() {
-    const {dividend, modulus} = this.props;
+    const {modulus} = this.props;
+    const {currentDividend} = this.state;
+    const dividend = currentDividend;
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
     const segmentGapRadians = segmentGapInDegrees * 2 * Math.PI / 360;
     const result = dividend % modulus;
@@ -76,11 +115,29 @@ const ModuloClock = React.createClass({
   },
 
   render() {
+    const {modulus} = this.props;
+    const {currentDividend, interval} = this.state;
+    const isRunning = !!interval;
     return (
       <div style={style.root}>
         <svg viewBox={`0 0 ${VIEWBOX_SIDE} ${VIEWBOX_SIDE}`} style={style.svg}>
-          <circle cx={VIEWBOX_SIDE / 2} cy={VIEWBOX_SIDE / 2} r={VIEWBOX_SIDE / 2} fill={COLOR.clockFace}/>
+          <circle
+            cx={VIEWBOX_SIDE / 2}
+            cy={VIEWBOX_SIDE / 2}
+            r={VIEWBOX_SIDE / 2}
+            fill={COLOR.clockFace}
+          />
           {this.renderSegments()}
+          <text
+            x={VIEWBOX_SIDE / 2}
+            y={VIEWBOX_SIDE / 2 + (isRunning ? 3 : 5)}
+            textAnchor="middle"
+            stroke={COLOR.valueText}
+            fill={COLOR.valueText}
+            style={{fontSize: isRunning ? 14 : 18}}
+          >
+            {currentDividend % modulus}
+          </text>
         </svg>
       </div>);
   }
@@ -105,7 +162,13 @@ function createWedgePath(arcRadians) {
   return `
       M ${x1} ${y1}
       A ${r1} ${r1}, 0, ${largeArc}, 1, ${x1 + r1 * Math.sin(t)} ${y1 + r1 * (1 - Math.cos(t))}
-      L ${x1 + r2 * Math.sin(t)} ${y2 + r2 * (1 - Math.cos(t))}    
+      L ${x1 + r2 * Math.sin(t)} ${y2 + r2 * (1 - Math.cos(t))}
       A ${r2} ${r2}, 0, ${largeArc}, 0, ${x1} ${y2}
       Z`;
+}
+
+function easeOutCircular(time, startValue, delta, duration) {
+  time /= duration;
+  time--;
+  return delta * Math.sqrt(1 - time*time) + startValue;
 }

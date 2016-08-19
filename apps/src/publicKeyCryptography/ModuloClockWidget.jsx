@@ -29,6 +29,10 @@ const ModuloClockWidget = React.createClass({
     this.setState({modulus});
   },
 
+  onGoClick() {
+    this.moduloClock.animateTo(this.state.dividend);
+  },
+
   onSpeedChange(speed) {
     this.setState({speed});
   },
@@ -49,10 +53,10 @@ const ModuloClockWidget = React.createClass({
             value={modulus}
             onChange={this.onModulusChange}
           />
-          <button>Go!</button>
+          <button onClick={this.onGoClick}>Go!</button>
         </div>
         <ModuloClock
-          dividend={dividend}
+          ref={x => this.moduloClock = x}
           modulus={modulus}
         />
         <div style={{textAlign: 'center'}}>
