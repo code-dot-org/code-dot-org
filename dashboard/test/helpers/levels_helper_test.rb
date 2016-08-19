@@ -374,4 +374,73 @@ class LevelsHelperTest < ActionView::TestCase
     sign_out user
     assert_not can_view_solution?
   end
+
+  test 'build_script_level_path differentiates lockable and non-lockable' do
+    # (position 1) Lockable 1
+    # (position 2) Non-Lockable 1
+    # (position 3) Lockable 2
+    # (position 4) Lockable 3
+    # (position 5) Non-Lockable 2
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1',
+        lockable: true;
+      assessment 'LockableAssessment1';
+
+      stage 'Nonockable1'
+      assessment 'NonLockableAssessment1';
+
+      stage 'Lockable2',
+        lockable: true;
+      assessment 'LockableAssessment2';
+
+      stage 'Lockable3',
+        lockable: true;
+      assessment 'LockableAssessment3';
+
+      stage 'Nonockable2'
+      assessment 'NonLockableAssessment2';
+    DSL
+
+    create :level, name: 'LockableAssessment1'
+    create :level, name: 'NonLockableAssessment1'
+    create :level, name: 'LockableAssessment2'
+    create :level, name: 'LockableAssessment3'
+    create :level, name: 'NonLockableAssessment2'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+
+    stage = script.stages[0]
+    assert_equal 1, stage.position
+    assert_equal '1', stage.url_param
+    assert_equal '/s/test_script/lockable/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[1]
+    assert_equal 2, stage.position
+    assert_equal '1', stage.url_param
+    assert_equal '/s/test_script/stage/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/stage/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[2]
+    assert_equal 3, stage.position
+    assert_equal '2', stage.url_param
+    assert_equal '/s/test_script/lockable/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[3]
+    assert_equal 4, stage.position
+    assert_equal '3', stage.url_param
+    assert_equal '/s/test_script/lockable/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.stages[4]
+    assert_equal 5, stage.position
+    assert_equal '2', stage.url_param
+    assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+  end
 end
