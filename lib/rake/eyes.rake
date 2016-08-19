@@ -7,6 +7,7 @@ if rack_env?(:development) || rack_env?(:test)
   require 'json'
   require 'fileutils'
   require 'eyes_selenium'
+  require 'gemoji'
   require_relative '../../dashboard/test/ui/utils/selenium_browser'
 end
 
