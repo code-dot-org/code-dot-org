@@ -73,7 +73,7 @@ def check_eyes_set
 end
 
 namespace :eyes do
-  task :merge, [:branch, :base] do |t, args|
+  task :merge, [:branch, :base] do |_, args|
     check_eyes_set
     HipChat.log "#{MERGE_EMOJI}  Merging baselines #{args}"
     merge_eyes_baselines(args[:branch], args[:base])
