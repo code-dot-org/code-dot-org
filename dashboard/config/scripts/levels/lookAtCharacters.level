@@ -6,11 +6,9 @@
   "user_id": 63,
   "properties": {
     "skin": "studio",
-    "maze_data": null,
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "true",
-    "contained_level_names": null,
     "maze": "[[{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":24},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "is_k1": "false",
@@ -36,12 +34,25 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"desert"</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Studio>
