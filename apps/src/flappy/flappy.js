@@ -754,7 +754,6 @@ Flappy.execute = function () {
                                     'flappy_whenClick');
   var whenClickFunc = codegen.functionFromCode(
                                       codeClick, {
-                                      StudioApp: studioApp,
                                       Flappy: api } );
 
   var codeCollideGround = Blockly.Generator.blockSpaceToCode(
@@ -762,7 +761,6 @@ Flappy.execute = function () {
                                     'flappy_whenCollideGround');
   var whenCollideGroundFunc = codegen.functionFromCode(
                                       codeCollideGround, {
-                                      StudioApp: studioApp,
                                       Flappy: api } );
 
   var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
@@ -770,7 +768,6 @@ Flappy.execute = function () {
                                     'flappy_whenEnterObstacle');
   var whenEnterObstacleFunc = codegen.functionFromCode(
                                       codeEnterObstacle, {
-                                      StudioApp: studioApp,
                                       Flappy: api } );
 
   var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
@@ -778,7 +775,6 @@ Flappy.execute = function () {
                                     'flappy_whenCollideObstacle');
   var whenCollideObstacleFunc = codegen.functionFromCode(
                                       codeCollideObstacle, {
-                                      StudioApp: studioApp,
                                       Flappy: api } );
 
   var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
@@ -786,7 +782,6 @@ Flappy.execute = function () {
                                     'when_run');
   var whenRunButtonFunc = codegen.functionFromCode(
                                       codeWhenRunButton, {
-                                      StudioApp: studioApp,
                                       Flappy: api } );
 
 
