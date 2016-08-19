@@ -1108,8 +1108,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
-    create :activity, user: @student, level_id: level.id,
-        level_source: create(:level_source, level: level, data: 'level source')
+    level_source = create :level_source, level: level, data: 'level source'
+    create :user_level, user: @student, level_id: level.id, attempts: 1,
+      level_source: level_source
 
     get_show_script_level_page(create(:script_level, levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'))
@@ -1120,10 +1121,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
-    create :activity, user: @student, level_id: level2.id,
-        level_source: create(:level_source, level: level2, data: 'level source')
-    create :activity, user: @student, level_id: level.id,
-        level_source: create(:level_source, level: level, data: 'level source')
+    level_source = create :level_source, level: level, data: 'level source'
+    level_source2 = create :level_source, level: level2, data: 'level source'
+    create :user_level, user: @student, level_id: level2.id, attempts: 1,
+      level_source: level_source2, updated_at: '2016-01-01'
+    create :user_level, user: @student, level_id: level.id, attempts: 1,
+      level_source: level_source, updated_at: '2016-01-02'
 
     get_show_script_level_page(create(:script_level, levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'))
