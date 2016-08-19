@@ -78,9 +78,6 @@ group :development, :test do
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
-
-  # for emoji in utility output
-  gem 'gemoji'
 end
 
 group :doc do
@@ -105,6 +102,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails', '~> 3.1.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
+
+# for emoji in utility output
+gem 'gemoji'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
