@@ -196,7 +196,6 @@ describe('reducer tests', () => {
       const nextState = reducer(state, action);
       assert.equal(nextState.lockDialogStageId, null);
       assert.deepEqual(nextState.lockStatus, []);
-      assert.equal(nextState.saving, false);
     });
   });
 
