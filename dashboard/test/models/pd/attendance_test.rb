@@ -58,4 +58,13 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert_equal 2, teachers.count
     assert_equal [@teacher1, @unrelated_teacher], teachers
   end
+
+  test 'unique constraint' do
+    attendance = create :pd_attendance
+    dupe = attendance.dup
+
+    assert_raises ActiveRecord::RecordNotUnique do
+      dupe.save!
+    end
+  end
 end
