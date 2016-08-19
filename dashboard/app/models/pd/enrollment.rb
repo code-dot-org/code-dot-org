@@ -2,19 +2,22 @@
 #
 # Table name: pd_enrollments
 #
-#  id                 :integer          not null, primary key
-#  pd_workshop_id     :integer          not null
-#  name               :string(255)      not null
-#  email              :string(255)      not null
-#  created_at         :datetime
-#  updated_at         :datetime
-#  school             :string(255)
-#  code               :string(255)
-#  school_district_id :integer
-#  school_zip         :integer
-#  school_type        :string(255)
-#  school_state       :string(255)
-#  user_id            :integer
+#  id                  :integer          not null, primary key
+#  pd_workshop_id      :integer          not null
+#  name                :string(255)      not null
+#  email               :string(255)      not null
+#  created_at          :datetime
+#  updated_at          :datetime
+#  school              :string(255)
+#  code                :string(255)
+#  school_district_id  :integer
+#  school_zip          :integer
+#  school_type         :string(255)
+#  school_state        :string(255)
+#  user_id             :integer
+#  survey_sent_at      :datetime
+#  completed_survey_id :integer
+#  school_info_id      :integer
 #
 # Indexes
 #
