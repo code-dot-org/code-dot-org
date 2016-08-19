@@ -2442,7 +2442,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
         StudioApp: studioApp,
         Studio: api,
         Globals: Studio.Globals
-      });
+      }, true);
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2671,7 +2671,7 @@ var defineProcedures = function (blockType) {
       StudioApp: studioApp,
       Studio: api,
       Globals: Studio.Globals
-    });
+    }, true);
   } catch (e) { }
 };
 

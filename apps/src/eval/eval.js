@@ -278,7 +278,7 @@ function evalCode(code) {
     codegen.evalWith(code, {
       StudioApp: studioApp,
       Eval: api
-    });
+    }, true);
 
     var object = Eval.displayedObject;
     Eval.displayedObject = null;
