@@ -25,6 +25,12 @@ import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 
+const styles = {
+  linkButton: {
+    color:'inherit'
+  }
+};
+
 const Workshop = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -92,6 +98,7 @@ const Workshop = React.createClass({
   },
 
   loadEnrollments() {
+    this.setState({loadingEnrollments: true});
     this.loadEnrollmentsRequest = $.ajax({
       method: "GET",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
@@ -107,6 +114,16 @@ const Workshop = React.createClass({
     });
   },
 
+  handleDeleteEnrollment(id) {
+    this.deleteEnrollmentRequest = $.ajax({
+      method: 'DELETE',
+      url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments/${id}`,
+      dataType: "json"
+    }).done(() => {
+      // reload
+      this.loadEnrollments();
+    });
+  },
 
   componentWillUnmount() {
     if (this.loadWorkshopRequest) {
@@ -114,6 +131,9 @@ const Workshop = React.createClass({
     }
     if (this.loadEnrollmentsRequest) {
       this.loadEnrollmentsRequest.abort();
+    }
+    if (this.deleteEnrollmentRequest) {
+      this.deleteEnrollmentRequest.abort();
     }
     if (this.startRequest) {
       this.startRequest.abort();
@@ -170,8 +190,14 @@ const Workshop = React.createClass({
     });
   },
 
-  handleTakeAttendanceClick(i) {
-    this.context.router.push(`/workshops/${this.props.params.workshopId}/attendance/${i}`);
+  getAttendanceUrl(index) {
+    return `/workshops/${this.props.params.workshopId}/attendance/${index}`;
+  },
+
+  handleTakeAttendanceClick(event) {
+    event.preventDefault();
+    const index = event.currentTarget.dataset.index;
+    this.context.router.push(this.getAttendanceUrl(index));
   },
 
   handleEditClick() {
@@ -195,7 +221,10 @@ const Workshop = React.createClass({
 
   handleEnrollmentRefreshClick() {
     this.loadEnrollments();
-    this.setState({loadingEnrollments: true});
+  },
+
+  handleEnrollmentDownloadClick() {
+    window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
   },
 
   getSectionUrl() {
@@ -337,7 +366,12 @@ const Workshop = React.createClass({
     const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
       const date = moment.utc(session.start).format(DATE_FORMAT);
       return (
-        <Button key={i} onClick={this.handleTakeAttendanceClick.bind(null,i)}>
+        <Button
+          key={i}
+          data-index={i}
+          href={this.context.router.createHref(this.getAttendanceUrl(i))}
+          onClick={this.handleTakeAttendanceClick}
+        >
           {date}
         </Button>
       );
@@ -453,8 +487,11 @@ const Workshop = React.createClass({
       <div>
         Workshop Enrollment:{' '}
         {this.state.workshop.enrolled_teacher_count}/{this.state.workshop.capacity}
-        <Button bsStyle="link" style={{color:'inherit'}} onClick={this.handleEnrollmentRefreshClick}>
+        <Button bsStyle="link" style={styles.linkButton} onClick={this.handleEnrollmentRefreshClick}>
           <i className="fa fa-refresh" />
+        </Button>
+        <Button bsStyle="link" style={styles.linkButton} onClick={this.handleEnrollmentDownloadClick}>
+          <i className="fa fa-arrow-circle-down" />
         </Button>
       </div>
     );
@@ -467,6 +504,7 @@ const Workshop = React.createClass({
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           enrollments={this.state.enrollments}
+          onDelete={this.handleDeleteEnrollment}
         />
       );
     }

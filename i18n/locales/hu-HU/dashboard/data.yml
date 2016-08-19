@@ -5,24 +5,24 @@ hu:
         'Unplug1': Bevezetés a számítástechnikába
         'Maze': A labirintus
         'Multi': Feleletválasztós anyagok
-        Unplug2: Számítógépes gondolkodás
-        Unplug3: Grafikus programozás
+        'Unplug2': Számítógépes gondolkodás
+        'Unplug3': Grafikus programozás
         'Artist': A művész
-        Unplug4: algoritmusok
+        'Unplug4': algoritmusok
         'Artist2': A művész 2
-        Unplug5: Függvények
+        'Unplug5': Függvények
         'Farmer': A Farmer
-        Unplug6: Feltételek
+        'Unplug6': Feltételek
         'Artist3': A művész 3
         'Unplug7': Dalírás
         'Farmer2': A Farmer 2
-        Unplug8: Változó
+        'Unplug8': Változó
         'Artist4': A művész 4
         'Unplug9': Váltó programozás
         'Farmer3': A Farmer 3
         'Unplug10': Az internet
         'Artist5': A Művész 5
-        Unplug11: Összefoglaló
+        'Unplug11': Összefoglaló
         'MazeEC': A labirintus
         'Bounce': Visszapattanós
         'Flappy': Flappy madár

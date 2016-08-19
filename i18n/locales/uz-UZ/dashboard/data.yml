@@ -5,24 +5,24 @@ uz:
         'Unplug1': Informatikaga kirish
         'Maze': Labirint
         'Multi': Turli variantlar tanlash
-        Unplug2: Dasturiy fikrlash
-        Unplug3: Katakchali varaqda dasturlash
+        'Unplug2': Dasturiy fikrlash
+        'Unplug3': Katakchali varaqda dasturlash
         'Artist': Rassom
-        Unplug4: Algoritmlar
+        'Unplug4': Algoritmlar
         'Artist2': Rassom 2
-        Unplug5: Funksiyalar
+        'Unplug5': Funksiyalar
         'Farmer': Fermer
-        Unplug6: Shart buyruqlari
+        'Unplug6': Shart buyruqlari
         'Artist3': Rassom 3
         'Unplug7': Musiqa yozish
         'Farmer2': Fermer 2
-        Unplug8: Abstraksiya
+        'Unplug8': Abstraksiya
         'Artist4': Rassom 4
         'Unplug9': Estafetali dasturlash
         'Farmer3': Fermer 3
         'Unplug10': Internet
         'Artist5': Rassom 5
-        Unplug11: Yakun
+        'Unplug11': Yakun
         'MazeEC': Labirint
         'Bounce': Sakrash
         'Flappy': Pirilloq qushcha

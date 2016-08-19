@@ -1,16 +1,14 @@
 name 'OPD-K5 Stage2Overview'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
-
-### CS FUNDAMENTALS > Stage overview
+# CS Fundamentals > Stage overview
 
 In Stage 1, you learned about this course and practiced using Code Studio. Now you're ready to dive into the real content.
-<br><br>
-Let's begin with some fundamentals.<br/><br/>
+
+Let's begin with some fundamentals.
+
 <img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
 
-<br><br>
 By completing Stage 2, you will:
 
 - Define "computer science" and review key vocabulary
@@ -19,7 +17,4 @@ By completing Stage 2, you will:
 - Explain the benefits of beginning to code using visual programming
 
 Plan to spend between 10-30 minutes completing this stage.
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

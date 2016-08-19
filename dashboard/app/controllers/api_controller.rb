@@ -11,6 +11,57 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
+  def update_lockable_state
+    updates = params.require(:updates)
+    updates.to_a.each do |item|
+      user_level_data = item[:user_level_data]
+
+      if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
+        # Must provide user, level, and script ids
+        return head :bad_request
+      end
+
+      if item[:locked] && item[:readonly_answers]
+        # Can not view answers while locked
+        return head :bad_request
+      end
+
+      unless User.find(user_level_data[:user_id]).teachers.include? current_user
+        # Can only update lockable state for user's students
+        return head :forbidden
+      end
+
+      UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
+        user_level_data[:script_id], item[:locked], item[:readonly_answers])
+    end
+    render json: {}
+  end
+
+  # For a given user, gets the lockable state for each student in each of their sections
+  def lockable_state
+    unless current_user
+      render json: {}
+      return
+    end
+
+    data = current_user.sections.each_with_object({}) do |section, section_hash|
+      next if section[:deleted_at]
+      @section = section
+      load_script
+
+      section_hash[section.id] = {
+        section_id: section.id,
+        section_name: section.name,
+        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+          stage_state = stage.lockable_state(section.students)
+          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        end
+      }
+    end
+
+    render json: data
+  end
+
   def section_progress
     load_section
     load_script
@@ -149,14 +200,14 @@ class ApiController < ApplicationController
       student_hash = {id: student.id, name: student.name}
 
       text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt(script_level.level)
+        last_attempt = student.last_attempt_for_any(script_level.levels)
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
-          question: script_level.level.properties['title'],
+          question: last_attempt.level.properties['title'],
           response: response,
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
         }
@@ -185,14 +236,15 @@ class ApiController < ApplicationController
         # Don't allow somebody to peek inside an anonymous survey using this API.
         next if script_level.anonymous?
 
-        last_attempt = student.last_attempt(script_level.level)
+        last_attempt = student.last_attempt_for_any(script_level.levels)
+        level_group = last_attempt.try(:level) || script_level.oldest_active_level
         response = last_attempt.try(:level_source).try(:data)
 
         next unless response
 
         response_parsed = JSON.parse(response)
 
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = student.user_level_for(script_level, level_group)
 
         # Summarize some key data.
         multi_count = 0
@@ -201,7 +253,7 @@ class ApiController < ApplicationController
         # And construct a listing of all the individual levels and their results.
         level_results = []
 
-        script_level.level.levels.each do |level|
+        level_group.levels.each do |level|
           if level.is_a? Multi
             multi_count += 1
           end
@@ -248,7 +300,7 @@ class ApiController < ApplicationController
           student: student_hash,
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
-          question: script_level.level.properties["title"],
+          question: level_group.properties["title"],
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,

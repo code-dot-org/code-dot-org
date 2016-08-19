@@ -406,8 +406,10 @@ en:
       Artist - Nested Loops 8_instruction: crwdns34192:0crwdne34192:0
       Artist - Nested Loops 9_instruction: crwdns30575:0crwdne30575:0
       Artist - Nested Loops Assessment 1_instruction: crwdns34193:0crwdne34193:0
+      Artist Inspiration_instruction: crwdns58049:0crwdne58049:0
       artistLoopsK1_instruction: crwdns57074:0crwdne57074:0
       artistLoopsK2_instruction: crwdns57075:0crwdne57075:0
+      artistLoopsK2gradek_artist_loops3_instruction: crwdns58050:0crwdne58050:0
       artistLoopsK3_instruction: crwdns57076:0crwdne57076:0
       artistLoopsK4_instruction: crwdns57077:0crwdne57077:0
       artistLoopsK5_instruction: crwdns57078:0crwdne57078:0
@@ -770,9 +772,29 @@ en:
       Course1MazeAssessment1_instruction: crwdns34446:0crwdne34446:0
       Course1MazeAssessment2_instruction: crwdns34447:0crwdne34447:0
       course2_playlab_stage17_1_instruction: crwdns57946:0crwdne57946:0
+      course2_playlab_stage17_10_instruction: crwdns58051:0crwdne58051:0
+      course2_playlab_stage17_11_instruction: crwdns58052:0crwdne58052:0
       course2_playlab_stage17_2_instruction: crwdns57947:0crwdne57947:0
       course2_playlab_stage17_3_instruction: crwdns57948:0crwdne57948:0
       course2_playlab_stage17_4_instruction: crwdns57949:0crwdne57949:0
+      course2_playlab_stage17_5_instruction: crwdns58053:0crwdne58053:0
+      course2_playlab_stage17_6_instruction: crwdns58054:0crwdne58054:0
+      course2_playlab_stage17_7_instruction: crwdns58055:0crwdne58055:0
+      course2_playlab_stage17_8_instruction: crwdns58056:0crwdne58056:0
+      course2_playlab_stage17_9_instruction: crwdns58057:0crwdne58057:0
+      course3_playlab_stage16_1_instruction: crwdns58058:0crwdne58058:0
+      course3_playlab_stage16_2_instruction: crwdns58059:0crwdne58059:0
+      course3_playlab_stage16_3_instruction: crwdns58060:0crwdne58060:0
+      course3_playlab_stage16_4_instruction: crwdns58061:0crwdne58061:0
+      course3_playlab_stage16_5_instruction: crwdns58062:0crwdne58062:0
+      course3_playlab_stage16_6_instruction: crwdns58063:0crwdne58063:0
+      course3_playlab_stage17_1_instruction: crwdns58064:0crwdne58064:0
+      course3_playlab_stage17_2_instruction: crwdns58065:0crwdne58065:0
+      course3_playlab_stage17_3_instruction: crwdns58066:0crwdne58066:0
+      course3_playlab_stage17_4_instruction: crwdns58067:0crwdne58067:0
+      course3_playlab_stage17_5_instruction: crwdns58068:0crwdne58068:0
+      course3_playlab_stage17_6_instruction: crwdns58069:0crwdne58069:0
+      course3_playlab_stage17_7_instruction: crwdns58070:0crwdne58070:0
       CSD Hackathon Pt 1_instruction: crwdns56227:0crwdne56227:0
       CSD Hackathon Pt 2_instruction: crwdns56228:0crwdne56228:0
       CSD Hackathon Week 1_instruction: crwdns56229:0crwdne56229:0
@@ -829,6 +851,7 @@ en:
       CSD U3 Variables2 expressions in commands_instruction: crwdns56567:0crwdne56567:0
       CSD U3 Variables2 expressions in variables_instruction: crwdns56568:0crwdne56568:0
       CSD U3 Variables2 expressions_instruction: crwdns56569:0crwdne56569:0
+      CSD U4 - Events Template_instruction: crwdns58071:0crwdne58071:0
       CSDU4 - AppLab - 1_instruction: crwdns56736:0crwdne56736:0
       CSDU4 - AppLab - 2_instruction: crwdns56737:0crwdne56737:0
       CSDU4 - AppLab - 3_instruction: crwdns56738:0crwdne56738:0
@@ -840,16 +863,13 @@ en:
       CSDU4 - Design Mode - 16_instruction: crwdns56744:0crwdne56744:0
       CSDU4 - Design Mode - 17_instruction: crwdns56745:0crwdne56745:0
       CSDU4 - Design Mode - 18_instruction: crwdns56746:0crwdne56746:0
-      CSDU4 - Design Mode - 19_instruction: crwdns56747:0crwdne56747:0
       CSDU4 - Design Mode - 2_instruction: crwdns56748:0crwdne56748:0
-      CSDU4 - Design Mode - 20_instruction: crwdns56749:0crwdne56749:0
       CSDU4 - Design Mode - 24_instruction: crwdns56750:0crwdne56750:0
       CSDU4 - Design Mode - 25_instruction: crwdns56751:0crwdne56751:0
       CSDU4 - Design Mode - 26_instruction: crwdns56752:0crwdne56752:0
       CSDU4 - Design Mode - 27_instruction: crwdns56753:0crwdne56753:0
       CSDU4 - Design Mode - 28_instruction: crwdns56754:0crwdne56754:0
       CSDU4 - Design Mode - 29_instruction: crwdns56755:0crwdne56755:0
-      CSDU4 - Design Mode - 3_instruction: crwdns56756:0crwdne56756:0
       CSDU4 - Design Mode - 30_instruction: crwdns56757:0crwdne56757:0
       CSDU4 - Design Mode - 31_instruction: crwdns56758:0crwdne56758:0
       CSDU4 - Design Mode - 32_instruction: crwdns56759:0crwdne56759:0
@@ -928,6 +948,8 @@ en:
       Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
       eventsIntro_instruction: crwdns57086:0crwdne57086:0
       Farmer for Authored Hint testing_instruction: crwdns55887:0crwdne55887:0
+      Food Fight!_instruction: crwdns58072:0crwdne58072:0
+      Food Fight_instruction: crwdns58073:0crwdne58073:0
       Frequency Analysis_instruction: crwdns49707:0crwdne49707:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
       frozen circle function with parameter_instruction: crwdns34504:0crwdne34504:0
@@ -949,6 +971,9 @@ en:
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
+      Geometric Pattern_instruction: crwdns58074:0crwdne58074:0
+      "Grade 4 Example PlayLab Project #1_instruction": crwdns58075:0crwdne58075:0
+      "Grade 4 Example PlayLab Project #2_instruction": crwdns58076:0crwdne58076:0
       grade1_artist_loops1_instruction: crwdns57424:0crwdne57424:0
       grade1_artist_loops2_instruction: crwdns57425:0crwdne57425:0
       grade1_artist_loops3_instruction: crwdns57426:0crwdne57426:0
@@ -988,12 +1013,17 @@ en:
       grade1_playlab_eventsFP_instruction: crwdns57460:0crwdne57460:0
       grade1_sequence_pre_instruction: crwdns57461:0crwdne57461:0
       grade1_video_frustrationRainbow_instruction: crwdns57462:0crwdne57462:0
+      grade2_CaringForNewPet_0_instruction: crwdns58077:0crwdne58077:0
       grade2_CaringForNewPet_1_instruction: crwdns57463:0crwdne57463:0
+      grade2_CaringForNewPet_10_instruction: crwdns58078:0crwdne58078:0
+      grade2_CaringForNewPet_11_instruction: crwdns58079:0crwdne58079:0
       grade2_CaringForNewPet_2_instruction: crwdns57464:0crwdne57464:0
       grade2_CaringForNewPet_3_instruction: crwdns57465:0crwdne57465:0
+      grade2_CaringForNewPet_3D_instruction: crwdns58080:0crwdne58080:0
       grade2_CaringForNewPet_4_instruction: crwdns57466:0crwdne57466:0
       grade2_CaringForNewPet_5_instruction: crwdns57467:0crwdne57467:0
       grade2_CaringForNewPet_6_instruction: crwdns57468:0crwdne57468:0
+      grade2_CaringForNewPet_7D_instruction: crwdns58081:0crwdne58081:0
       grade2_MakeDogTag_1_instruction: crwdns57469:0crwdne57469:0
       grade2_MakeDogTag_10_instruction: crwdns57470:0crwdne57470:0
       grade2_MakeDogTag_2_instruction: crwdns57471:0crwdne57471:0
@@ -1020,6 +1050,20 @@ en:
       grade3_AboutMyRobot_4_instruction: crwdns57953:0crwdne57953:0
       grade3_AboutMyRobot_5_instruction: crwdns57954:0crwdne57954:0
       grade3_AboutMyRobot_TeacherIDo_instruction: crwdns57955:0crwdne57955:0
+      grade3_bee_conditionals_new1a_instruction: crwdns58082:0crwdne58082:0
+      grade3_bee_conditionals_new1b_instruction: crwdns58083:0crwdne58083:0
+      grade3_bee_conditionals_new2_instruction: crwdns58084:0crwdne58084:0
+      grade3_bee_conditionals_new2a_instruction: crwdns58085:0crwdne58085:0
+      grade3_bee_conditionals_new2b_instruction: crwdns58086:0crwdne58086:0
+      grade3_bee_conditionals_new3a_instruction: crwdns58087:0crwdne58087:0
+      grade3_bee_conditionals_new3b_instruction: crwdns58088:0crwdne58088:0
+      grade3_bee_conditionals_new3c_instruction: crwdns58089:0crwdne58089:0
+      grade3_bee_Conditionals_new4_instruction: crwdns58090:0crwdne58090:0
+      grade3_bee_conditionals_quantum1_instruction: crwdns58091:0crwdne58091:0
+      grade3_bee_conditionals_quantum2_instruction: crwdns58092:0crwdne58092:0
+      grade3_bee_conditionals_quantum3_instruction: crwdns58093:0crwdne58093:0
+      grade3_bee_conditionals_quantum4_instruction: crwdns58094:0crwdne58094:0
+      grade3_bee_conditionals_quantum5_instruction: crwdns58095:0crwdne58095:0
       grade3_Conditionals_1 BAD_instruction: crwdns57489:0crwdne57489:0
       grade3_Conditionals_1_instruction: crwdns57490:0crwdne57490:0
       grade3_Conditionals_10 BAD_instruction: crwdns57491:0crwdne57491:0
@@ -1072,6 +1116,31 @@ en:
       grade3_Loops_8_instruction: crwdns57538:0crwdne57538:0
       grade3_Loops_9_instruction: crwdns57539:0crwdne57539:0
       grade3_Loops_TeacherIDo_instruction: crwdns57540:0crwdne57540:0
+      grade3_robotFarmer_ConditionalsIntro_1_instruction: crwdns58096:0crwdne58096:0
+      grade3_robotFarmer_ConditionalsIntro_10_instruction: crwdns58097:0crwdne58097:0
+      grade3_robotFarmer_ConditionalsIntro_11_instruction: crwdns58098:0crwdne58098:0
+      grade3_robotFarmer_ConditionalsIntro_2_instruction: crwdns58099:0crwdne58099:0
+      grade3_robotFarmer_ConditionalsIntro_3_instruction: crwdns58100:0crwdne58100:0
+      grade3_robotFarmer_ConditionalsIntro_4_instruction: crwdns58101:0crwdne58101:0
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: crwdns58102:0crwdne58102:0
+      grade3_robotFarmer_ConditionalsIntro_6_instruction: crwdns58103:0crwdne58103:0
+      grade3_robotFarmer_ConditionalsIntro_7_instruction: crwdns58104:0crwdne58104:0
+      grade3_robotFarmer_ConditionalsIntro_8_instruction: crwdns58105:0crwdne58105:0
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: crwdns58106:0crwdne58106:0
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: crwdns58107:0crwdne58107:0
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2_instruction: crwdns58108:0crwdne58108:0
+      grade3_RunningFarm_1_instruction: crwdns58109:0crwdne58109:0
+      grade3_RunningFarm_10_instruction: crwdns58110:0crwdne58110:0
+      grade3_RunningFarm_2_instruction: crwdns58111:0crwdne58111:0
+      grade3_RunningFarm_3_instruction: crwdns58112:0crwdne58112:0
+      grade3_RunningFarm_4_instruction: crwdns58113:0crwdne58113:0
+      grade3_RunningFarm_5_instruction: crwdns58114:0crwdne58114:0
+      grade3_RunningFarm_6_instruction: crwdns58115:0crwdne58115:0
+      grade3_RunningFarm_7_instruction: crwdns58116:0crwdne58116:0
+      grade3_RunningFarm_8_instruction: crwdns58117:0crwdne58117:0
+      grade3_RunningFarm_9_instruction: crwdns58118:0crwdne58118:0
+      grade3_RunningFarm_TeacherIDo_instruction: crwdns58119:0crwdne58119:0
+      grade3_RunningFarm_TeacherIDo2_instruction: crwdns58120:0crwdne58120:0
       grade4_arist_functions_star0_instruction: crwdns57541:0crwdne57541:0
       grade4_arist_nested_loop_circles1_instruction: crwdns57542:0crwdne57542:0
       grade4_arist_nested_loop_flags1_instruction: crwdns57543:0crwdne57543:0
@@ -1084,6 +1153,10 @@ en:
       grade4_arist_nested_loop_triangles5_instruction: crwdns57550:0crwdne57550:0
       grade4_arist_nested_loop_triangles6_instruction: crwdns57551:0crwdne57551:0
       grade4_artist_freeplay_instruction: crwdns57956:0crwdne57956:0
+      grade4_artist_functions1_instruction: crwdns58121:0crwdne58121:0
+      grade4_artist_functions2_instruction: crwdns58122:0crwdne58122:0
+      grade4_artist_functions_challenge_instruction: crwdns58123:0crwdne58123:0
+      grade4_artist_functions_freeplay_instruction: crwdns58124:0crwdne58124:0
       grade4_artist_functions_stars0_instruction: crwdns57552:0crwdne57552:0
       grade4_artist_functions_stars1_instruction: crwdns57553:0crwdne57553:0
       grade4_artist_functions_stars2_instruction: crwdns57554:0crwdne57554:0
@@ -1102,6 +1175,8 @@ en:
       grade4_artist_nested_loop_triangles4_instruction: crwdns57567:0crwdne57567:0
       grade4_artist_nested_loop_triangles5_instruction: crwdns57568:0crwdne57568:0
       grade4_artist_nested_loop_triangles6_instruction: crwdns57569:0crwdne57569:0
+      grade4_artist_nestedLoops_challenge_instruction: crwdns58125:0crwdne58125:0
+      grade4_artist_nestedLoops_challenge2_instruction: crwdns58126:0crwdne58126:0
       grade4_artist_parameters_squares1_instruction: crwdns57570:0crwdne57570:0
       grade4_artist_parameters_triangles1_instruction: crwdns57571:0crwdne57571:0
       grade4_artist_parameters_triangles2_instruction: crwdns57572:0crwdne57572:0
@@ -1123,6 +1198,14 @@ en:
       grade4_bee_conditionals_quantum4_instruction: crwdns57588:0crwdne57588:0
       grade4_bee_conditionals_quantum5_instruction: crwdns57589:0crwdne57589:0
       grade4_bee_functions_instruction: crwdns57590:0crwdne57590:0
+      grade4_bee_nestedLoops0_instruction: crwdns58127:0crwdne58127:0
+      grade4_bee_nestedLoops1_instruction: crwdns58128:0crwdne58128:0
+      grade4_bee_nestedLoops2_instruction: crwdns58129:0crwdne58129:0
+      grade4_bee_nestedLoops3_instruction: crwdns58130:0crwdne58130:0
+      grade4_bee_nestedLoops4_instruction: crwdns58131:0crwdne58131:0
+      grade4_bee_nestedLoops5_instruction: crwdns58132:0crwdne58132:0
+      grade4_bee_nestedLoops_assess_instruction: crwdns58133:0crwdne58133:0
+      grade4_designProcess_vid_instruction: crwdns58134:0crwdne58134:0
       grade4_farmer_functions1_instruction: crwdns57591:0crwdne57591:0
       grade4_frozen_freeplay_instruction: crwdns57592:0crwdne57592:0
       grade4_frozen_functions0_instruction: crwdns57593:0crwdne57593:0
@@ -1134,11 +1217,15 @@ en:
       grade4_frozen_nested_loop_diamonds1_instruction: crwdns57599:0crwdne57599:0
       grade4_frozen_nested_loop_diamonds2_instruction: crwdns57600:0crwdne57600:0
       grade4_frozen_nested_loop_diamonds3_instruction: crwdns57601:0crwdne57601:0
+      grade4_frozen_nested_loop_rectangle1_instruction: crwdns58135:0crwdne58135:0
       grade4_frozen_square_instruction: crwdns57602:0crwdne57602:0
       grade4_frozen_square_loop1_instruction: crwdns57603:0crwdne57603:0
       grade4_frozen_square_loop2_instruction: crwdns57604:0crwdne57604:0
       grade4_frozen_square_loop3_instruction: crwdns57605:0crwdne57605:0
       grade4_playlab_freeplay_instruction: crwdns57957:0crwdne57957:0
+      grade4_playLab_proj_example1_instruction: crwdns58136:0crwdne58136:0
+      grade4_playLab_proj_example1a_instruction: crwdns58137:0crwdne58137:0
+      grade4_playLab_proj_example2a_instruction: crwdns58138:0crwdne58138:0
       grade4_playlab_test_instruction: crwdns57606:0crwdne57606:0
       grade4_playlab_test2_instruction: crwdns57607:0crwdne57607:0
       grade4_prompt_test_instruction: crwdns57608:0crwdne57608:0
@@ -1148,6 +1235,10 @@ en:
       grade4_review_bee1_instruction: crwdns57612:0crwdne57612:0
       grade4_review_bee2_instruction: crwdns57613:0crwdne57613:0
       grade4_review_bee3_instruction: crwdns57614:0crwdne57614:0
+      grade4_scaffolded_project1_instruction: crwdns58139:0crwdne58139:0
+      grade4_scaffolded_project2_instruction: crwdns58140:0crwdne58140:0
+      grade4_scaffolded_project3_instruction: crwdns58141:0crwdne58141:0
+      grade4_scaffolded_project4_instruction: crwdns58142:0crwdne58142:0
       grade5_artist_binary1_instruction: crwdns57958:0crwdne57958:0
       grade5_artist_binary10_instruction: crwdns57959:0crwdne57959:0
       grade5_artist_binary11_instruction: crwdns57960:0crwdne57960:0
@@ -1161,6 +1252,8 @@ en:
       grade5_artist_binary9_instruction: crwdns57968:0crwdne57968:0
       grade5_artist_for_loops1_instruction: crwdns57615:0crwdne57615:0
       grade5_artist_for_loops10_instruction: crwdns57616:0crwdne57616:0
+      grade5_artist_for_loops1a_instruction: crwdns58143:0crwdne58143:0
+      grade5_artist_for_loops1b_instruction: crwdns58144:0crwdne58144:0
       grade5_artist_for_loops2_instruction: crwdns57617:0crwdne57617:0
       grade5_artist_for_loops3_instruction: crwdns57618:0crwdne57618:0
       grade5_artist_for_loops4_instruction: crwdns57619:0crwdne57619:0
@@ -1194,6 +1287,7 @@ en:
       grade5_artist_variables_freeplay16_instruction: crwdns57640:0crwdne57640:0
       grade5_artist_variables_hexagons1_instruction: crwdns57641:0crwdne57641:0
       grade5_artist_variables_letterT11_instruction: crwdns57642:0crwdne57642:0
+      grade5_artist_variables_new1_instruction: crwdns58145:0crwdne58145:0
       grade5_artist_variables_octagons13_instruction: crwdns57643:0crwdne57643:0
       grade5_artist_variables_pentagon8_instruction: crwdns57644:0crwdne57644:0
       grade5_artist_variables_pentagon9_instruction: crwdns57645:0crwdne57645:0
@@ -1245,7 +1339,22 @@ en:
       grade5_playlab_variables_freeplay_instruction: crwdns57673:0crwdne57673:0
       grade5_playlab_variables_jump1_instruction: crwdns57674:0crwdne57674:0
       grade5_prompt_test_instruction: crwdns57994:0crwdne57994:0
+      gradek_adventurer_loops1_instruction: crwdns58146:0crwdne58146:0
+      gradek_adventurer_loopsPre_instruction: crwdns58147:0crwdne58147:0
+      gradek_artist_loops1_instruction: crwdns58148:0crwdne58148:0
+      gradek_artist_loops2_instruction: crwdns58149:0crwdne58149:0
+      gradek_artist_loops3_instruction: crwdns58150:0crwdne58150:0
+      gradek_artist_loops4_instruction: crwdns58151:0crwdne58151:0
+      gradek_artist_loops5_instruction: crwdns58152:0crwdne58152:0
+      gradek_artist_loops6_instruction: crwdns58153:0crwdne58153:0
+      gradek_artist_loops7_instruction: crwdns58154:0crwdne58154:0
+      gradek_artist_loops8_instruction: crwdns58155:0crwdne58155:0
+      gradek_artist_loops9_instruction: crwdns58156:0crwdne58156:0
+      gradek_artist_loopsA_instruction: crwdns58157:0crwdne58157:0
+      gradek_artist_loopsFP_instruction: crwdns58158:0crwdne58158:0
+      gradek_artist_loopsPre_instruction: crwdns58159:0crwdne58159:0
       gradeK_sequence_4_instruction: crwdns57675:0crwdne57675:0
+      Guess The Number_instruction: crwdns58160:0crwdne58160:0
       Infinity_catch_instruction: crwdns35156:0crwdne35156:0
       Infinity_finale_instruction: crwdns34535:0crwdne34535:0
       Infinity_move_collide_instruction: crwdns35157:0crwdne35157:0
@@ -1259,6 +1368,17 @@ en:
       Infinity_touch_faster_instruction: crwdns34543:0crwdne34543:0
       Infinity_touch_four_instruction: crwdns34544:0crwdne34544:0
       Infinity_touch_score_instruction: crwdns36010:0crwdne36010:0
+      Inspirational Artwork_instruction: crwdns58161:0crwdne58161:0
+      "Internet Simulator: Broadcast Mode_instruction": crwdns58162:0crwdne58162:0
+      "Internet Simulator: Broadcast_instruction": crwdns58163:0crwdne58163:0
+      "Internet Simulator: DNS Mode_instruction": 'crwdns58164:0[hostname]crwdne58164:0'
+      "Internet Simulator: DNS_instruction": 'crwdns58165:0[hostname]crwdne58165:0'
+      "Internet Simulator: Packets_instruction": crwdns58166:0crwdne58166:0
+      "Internet Simulator: Routers_instruction": crwdns58167:0crwdne58167:0
+      "Internet Simulator: Sending Binary Messages 1_instruction": crwdns58168:0crwdne58168:0
+      "Internet Simulator: sending binary messages_instruction": crwdns58169:0crwdne58169:0
+      "Internet Simulator: sending numbers_instruction": crwdns58170:0crwdne58170:0
+      "Internet Simulator: sending text_instruction": crwdns58171:0crwdne58171:0
       jessie-test_instruction: crwdns43355:0crwdne43355:0
       Just for Testing_instruction: crwdns43315:0crwdne43315:0
       K-1 Artist 1 Assessment 1_instruction: crwdns34546:0crwdne34546:0
@@ -1404,7 +1524,6 @@ en:
       level 'grade3_Loops_7_instruction: crwdns57688:0crwdne57688:0
       level 'grade3_Loops_8_instruction: crwdns57689:0crwdne57689:0
       level 'grade3_Loops_9_instruction: crwdns57690:0crwdne57690:0
-      level 'grade4_bee_conditionals_new1'_instruction: crwdns57691:0crwdne57691:0
       level grade3_Loops_2_instruction: crwdns57692:0crwdne57692:0
       Limited Quantity of Blocks Test_instruction: crwdns57017:0crwdne57017:0
       love_spring_1_instruction: crwdns56176:0crwdne56176:0
@@ -1589,6 +1708,7 @@ en:
       Pixelation 4x4 Empty_instruction: crwdns45382:0crwdne45382:0
       Pixelation Bee_instruction: crwdns45383:0crwdne45383:0
       Pixelation Flappy_instruction: crwdns45384:0crwdne45384:0
+      Pizza on a Plate_instruction: crwdns58172:0crwdne58172:0
       Play Lab Rocket 1_instruction: crwdns38340:0crwdne38340:0
       Play Lab Rocket 2_instruction: crwdns34654:0crwdne34654:0
       Play Lab Rocket 2B_instruction: crwdns35188:0crwdne35188:0
@@ -1606,6 +1726,7 @@ en:
       playEventsK7_instruction: crwdns57699:0crwdne57699:0
       Poorva copy U3L2 Using Simple Commands_instruction: crwdns56766:0crwdne56766:0
       Poorva-test_instruction: crwdns55888:0crwdne55888:0
+      Prompt Test_instruction: crwdns58173:0crwdne58173:0
       PS copy 2-3 Bee Conditionals 5_instruction: crwdns57700:0crwdne57700:0
       PS FR test 7-25_instruction: crwdns57995:0crwdne57995:0
       PS Log test - Define and use turnAround_instruction: crwdns56269:0crwdne56269:0
@@ -2225,6 +2346,10 @@ en:
       Underground Mine in a Circle_instruction: crwdns54307:0crwdne54307:0
       Underground Mining Coal_instruction: crwdns54308:0crwdne54308:0
       Underground Test Level_instruction: crwdns54309:0crwdne54309:0
+      Unicorn Tag_instruction: crwdns58174:0crwdne58174:0
       Vigenere_instruction: crwdns49754:0crwdne49754:0
       WhileAdventure_instruction: crwdns56960:0crwdne56960:0
+      "Widget: Black and White Pixelation_instruction": crwdns58175:0crwdne58175:0
+      "Widget: Color Pixelation_instruction": crwdns58176:0crwdne58176:0
+      "Widget: Text Compression_instruction": crwdns58177:0crwdne58177:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

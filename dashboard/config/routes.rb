@@ -295,7 +295,7 @@ Dashboard::Application.routes.draw do
           post :start
           post :end
         end
-        get :enrollments, action: 'index', controller: 'workshop_enrollments'
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
       end
@@ -340,6 +340,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/:action', controller: 'api'
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
 
+  post '/api/lock_status', to: 'api#update_lockable_state'
+  get '/api/lock_status', to: 'api#lockable_state'
   get '/api/script_structure/:script_name', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'

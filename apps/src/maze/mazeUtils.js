@@ -25,3 +25,7 @@ exports.isCollectorSkin = function (skinId) {
 exports.isScratSkin = function (skinId) {
   return (/scrat/).test(skinId);
 };
+
+exports.isWordSearchSkin = function (skinId) {
+  return skinId === 'letters';
+};

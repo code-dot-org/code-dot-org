@@ -5,24 +5,24 @@ ja:
         'Unplug1': コンピューター・サイエンス入門
         'Maze': 迷路
         'Multi': 複数選択の項目
-        Unplug2: コンピュテーショナル・シンキング（コンピューターの様に考える）
-        Unplug3: プログラミングのグラフ用紙
+        'Unplug2': コンピュテーショナル・シンキング（コンピューターの様に考える）
+        'Unplug3': プログラミングのグラフ用紙
         'Artist': アーティスト
-        Unplug4: アルゴリズム
+        'Unplug4': アルゴリズム
         'Artist2': アーティスト 2
-        Unplug5: 機能
+        'Unplug5': 機能
         'Farmer': 農家
-        Unplug6: 条件
+        'Unplug6': 条件
         'Artist3': アーティスト 3
         'Unplug7': 作曲
         'Farmer2': 農家 2
-        Unplug8: 抽象化
+        'Unplug8': 抽象化
         'Artist4': アーティスト 4
         'Unplug9': プログラミングをリレーする
         'Farmer3': 農家 3
         'Unplug10': インターネット
         'Artist5': アーティスト 5
-        Unplug11: まとめ
+        'Unplug11': まとめ
         'MazeEC': 迷路
         'Bounce': はずむ
         'Flappy': フラッピーバード

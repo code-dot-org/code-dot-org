@@ -64,47 +64,33 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert enrollment.valid?
   end
 
-  test 'create_for_unenrolled_attendees' do
-    workshop = create :pd_workshop
-    workshop.section = create :section
-
-    enrolled_attendee = create :teacher
-    enrollment = create :pd_enrollment, workshop: workshop, name: enrolled_attendee.name, email: enrolled_attendee.email
-    workshop.section.add_student enrolled_attendee
-
-    unenrolled_attendee = create :teacher
-    workshop.section.add_student unenrolled_attendee
-
-    new_enrollments = Pd::Enrollment.create_for_unenrolled_attendees(workshop)
-    refute_nil new_enrollments
-    assert_equal 1, new_enrollments.length
-    assert_equal unenrolled_attendee, new_enrollments.first.user
-    assert_equal [enrollment.id, new_enrollments.first.id], workshop.enrollments.all.map(&:id)
-  end
-
-  test 'create_for_unenrolled_attendees with no email logs warning' do
-    workshop = create :pd_ended_workshop
-    workshop.sessions << create(:pd_session)
-
-    unenrolled_attendee_no_email = create :student
-    workshop.section.add_student unenrolled_attendee_no_email
-    create :pd_attendance, session: workshop.sessions.first, teacher: unenrolled_attendee_no_email
-
-    mock_logger = mock
-    mock_logger.expects(:warn).with(
-      "Unable to create an enrollment for workshop attendee with no email. User Id: #{unenrolled_attendee_no_email.id}"
-    )
-    CDO.expects(:log).returns(mock_logger)
-
-    Pd::Enrollment.create_for_unenrolled_attendees(workshop)
-  end
-
-  test 'emails are stored in lowercase' do
-    enrollment = build :pd_enrollment, email: 'MixedCase@Example.net'
+  test 'emails are stored in lowercase and stripped' do
+    enrollment = build :pd_enrollment, email: ' MixedCase@Example.net '
     assert_equal 'mixedcase@example.net', enrollment.email
 
     # Also accepts nil
     enrollment.email = nil
     assert_nil enrollment.email
+  end
+
+  test 'in_section?' do
+    workshop = create :pd_workshop
+    workshop.sessions << create(:pd_session, workshop: workshop)
+
+    # no section, no user: false
+    enrollment = create :pd_enrollment, workshop: workshop
+    refute enrollment.in_section?
+
+    # section, no user: false
+    workshop.start! # Start to create section.
+    refute enrollment.in_section?
+
+    # section with disconnected user: false
+    teacher = create :teacher, name: enrollment.name, email: enrollment.email
+    refute enrollment.in_section?
+
+    # in section: true
+    workshop.section.add_student teacher
+    assert enrollment.in_section?
   end
 end

@@ -160,18 +160,30 @@ export function getSerializedAnimationList(animationList) {
  * @throws {Error} if the list is not in a valid format.
  */
 export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
-  let validationResult = SerializedAnimationList.isRequired(
-      {serializedAnimationList},
-      'serializedAnimationList',
-      'Animation List JSON',
-      'prop');
-  if (validationResult instanceof Error) {
-    throw validationResult;
+  if (typeof serializedAnimationList !== 'object' || serializedAnimationList === null) {
+    throw new Error(`serializedAnimationList is not an object`);
+  }
+
+  const {orderedKeys, propsByKey} = serializedAnimationList;
+  if (!Array.isArray(orderedKeys)) {
+    throw new Error(`orderedKeys is not an array`);
+  }
+  if (typeof propsByKey !== 'object' || propsByKey === null) {
+    throw new Error(`propsByKey is not an object`);
+  }
+
+  // Check shape of propsByKey objects
+  for (const animationKey in propsByKey) {
+    ['name', 'frameSize', 'frameCount', 'frameRate'].forEach(requiredPropName => {
+      if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
+        throw new Error(`Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`);
+      }
+    });
   }
 
   // Check for duplicates in the orderedKeys array
   let knownKeys = {};
-  serializedAnimationList.orderedKeys.forEach(key => {
+  orderedKeys.forEach(key => {
     if (knownKeys.hasOwnProperty(key)) {
       throw new Error(`Key "${key}" appears more than once in orderedKeys`);
     }
@@ -180,8 +192,8 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
 
   // The ordered keys set and the keys from propsByKey should match (but can
   // be in a different order)
-  let orderedKeysNotInProps = serializedAnimationList.orderedKeys.slice();
-  let propsNotInOrderedKeys = Object.keys(serializedAnimationList.propsByKey);
+  let orderedKeysNotInProps = orderedKeys.slice();
+  let propsNotInOrderedKeys = Object.keys(propsByKey);
   for (let i = propsNotInOrderedKeys.length - 1; i >= 0; i--) {
     let j = orderedKeysNotInProps.indexOf(propsNotInOrderedKeys[i]);
     if (j !== -1) {
@@ -205,8 +217,8 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
 
   // Catch duplicate names (not a fatal problem, but not great either)
   let knownNames = {};
-  for (let key in serializedAnimationList.propsByKey) {
-    let name = serializedAnimationList.propsByKey[key].name;
+  for (let key in propsByKey) {
+    let name = propsByKey[key].name;
     if (knownNames.hasOwnProperty(name)) {
       throw new Error(`Name "${name}" appears more than once in propsByKey`);
     }

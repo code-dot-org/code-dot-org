@@ -981,6 +981,7 @@ en:
           Welcome!: crwdns43215:0crwdne43215:0
           The Design Recipe: crwdns43216:0crwdne43216:0
           Teaching with Puzzles: crwdns43217:0crwdne43217:0
+          Lesson Prep: crwdns58178:0crwdne58178:0
         sciencePD2b:
           title: crwdns43280:0crwdne43280:0
           description_short: crwdns43281:0crwdne43281:0
@@ -1703,6 +1704,7 @@ en:
           Draw Loop and Randomization: crwdns57712:0crwdne57712:0
           Variables Unplugged: crwdns57713:0crwdne57713:0
           Complex Sprite Movement: crwdns57714:0crwdne57714:0
+          Collisions: crwdns58179:0crwdne58179:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description_short: crwdns56471:0crwdne56471:0
@@ -1811,7 +1813,7 @@ en:
           title: crwdns56676:0crwdne56676:0
           description: crwdns56677:0crwdne56677:0
           netsim: crwdns56678:0crwdne56678:0
-        csp-facilitators :
+        'csp-facilitators ':
           title: crwdns56686:0crwdne56686:0
           description_short: crwdns56687:0crwdne56687:0
           description: crwdns56688:0crwdne56688:0
@@ -1883,6 +1885,13 @@ en:
           description: crwdns56822:0crwdne56822:0
           Headers and Lists: crwdns56967:0crwdne56967:0
           Introduction to HTML: crwdns56968:0crwdne56968:0
+          Quality Websites: crwdns58180:0crwdne58180:0
+          Designing Web Pages: crwdns58181:0crwdne58181:0
+          Describing Webpages: crwdns58182:0crwdne58182:0
+          Text on the Web: crwdns58183:0crwdne58183:0
+          Designing Code for Computers: crwdns58184:0crwdne58184:0
+          Digital Footprint: crwdns58185:0crwdne58185:0
+          Images on the Web: crwdns58186:0crwdne58186:0
         CSDU5-Draft:
           title: crwdns56823:0crwdne56823:0
           description_short: crwdns56824:0crwdne56824:0
@@ -1953,6 +1962,7 @@ en:
           Wrap-Up: crwdns57065:0crwdne57065:0
         kinderTest:
           Kindergarten Stage 1: crwdns57066:0crwdne57066:0
+          "Bee: Conditionals": crwdns58187:0crwdne58187:0
         gradeKinder:
           Debugging: crwdns57101:0crwdne57101:0
           Persistence & Frustration: crwdns57102:0crwdne57102:0
@@ -1970,6 +1980,7 @@ en:
           description_short: crwdns57717:0crwdne57717:0
           description: crwdns57718:0crwdne57718:0
           description_audience: crwdns57719:0crwdne57719:0
+          Loops Intro: crwdns58188:0crwdne58188:0
         grade4:
           title: crwdns57112:0crwdne57112:0
           description_short: crwdns57113:0crwdne57113:0
@@ -2001,6 +2012,14 @@ en:
           New Playlab Behaviors and Events Review: crwdns57999:0crwdne57999:0
           "Project 2: PlayLab Game (Events, Conditionals, Functions)": crwdns58000:0crwdne58000:0
           "Bee: Nested Loops": crwdns58001:0crwdne58001:0
+          "Final Project - Unplugged: Design Process": crwdns58189:0crwdne58189:0
+          "Final Project - Work Day: Build Project Online": crwdns58190:0crwdne58190:0
+          Final Project - Presentation Day: crwdns58191:0crwdne58191:0
+          More Programming with Scratch: crwdns58192:0crwdne58192:0
+          Explore project ideas: crwdns58193:0crwdne58193:0
+          Scaffolded Project Stage (Loops, Events, Conditionals, Functions): crwdns58194:0crwdne58194:0
+          Build a Star Wars Game!: crwdns58195:0crwdne58195:0
+          "Bee: Determine the Concept": crwdns58196:0crwdne58196:0
         grade1:
           Predicting & Debugging: crwdns57134:0crwdne57134:0
           Persistence & Frustration: crwdns57135:0crwdne57135:0
@@ -2045,6 +2064,14 @@ en:
           "Project 1: Choose Your Own Story App": crwdns58002:0crwdne58002:0
           "Project 2: For Loops with the Artist": crwdns58003:0crwdne58003:0
           "Project 3: Design your own App (PlayLab)": crwdns58004:0crwdne58004:0
+          Concept Script (All below this point): crwdns58197:0crwdne58197:0
+          "Final Project - Unplugged: Design Process": crwdns58198:0crwdne58198:0
+          "Final Project - Work Day: Build Project Online": crwdns58199:0crwdne58199:0
+          Final Project - Review/Revise Day: crwdns58200:0crwdne58200:0
+          Final Project - Presentation Day: crwdns58201:0crwdne58201:0
+          Try programming with Khan Academy: crwdns58202:0crwdne58202:0
+          Digital Citizenship: crwdns58203:0crwdne58203:0
+          Explore project ideas: crwdns58204:0crwdne58204:0
         ecs-unit1:
           title: crwdns57142:0crwdne57142:0
           description_short: crwdns57143:0crwdne57143:0
@@ -2142,6 +2169,9 @@ en:
           description_short: crwdns57810:0crwdne57810:0
           description: crwdns57811:0crwdne57811:0
           description_audience: crwdns57812:0crwdne57812:0
+          More Programming with Scratch: crwdns58205:0crwdne58205:0
+          More Programming with CS4FN: crwdns58206:0crwdne58206:0
+          Robot Farmer While: crwdns58207:0crwdne58207:0
         Test CPS PD:
           test Unit 1 required reading: crwdns56679:0crwdne56679:0
           test Unit 1 content module Alpha: crwdns56680:0crwdne56680:0
@@ -2206,10 +2236,13 @@ en:
           Puppy Loops: crwdns57863:0crwdne57863:0
           Puppy Event: crwdns57864:0crwdne57864:0
           More CS with Scratch: crwdns58005:0crwdne58005:0
+          More CS with Run Marco: crwdns58208:0crwdne58208:0
         transferring-over:
           20-hr Stage 9: crwdns58006:0crwdne58006:0
           20-hr Stage 2: crwdns58007:0crwdne58007:0
           Course 2 Stage 17: crwdns58008:0crwdne58008:0
+          Course 3 Stage 16: crwdns58209:0crwdne58209:0
+          Course 3 Stage 17: crwdns58210:0crwdne58210:0
         cspunit1assessment:
           title: crwdns58009:0crwdne58009:0
           description_short: crwdns58010:0crwdne58010:0
@@ -2225,3 +2258,39 @@ en:
           description_short: crwdns58018:0crwdne58018:0
           description: crwdns58019:0crwdne58019:0
           CS Principles Unit 2 Assessment: crwdns58020:0crwdne58020:0
+        k5concepts:
+          title: crwdns58211:0crwdne58211:0
+          Events: crwdns58212:0crwdne58212:0
+          Loops: crwdns58213:0crwdne58213:0
+          Nested Loops: crwdns58214:0crwdne58214:0
+          Conditionals: crwdns58215:0crwdne58215:0
+          While Loops: crwdns58216:0crwdne58216:0
+          Functions: crwdns58217:0crwdne58217:0
+          Variables: crwdns58218:0crwdne58218:0
+          For Loops: crwdns58219:0crwdne58219:0
+          Functions with Parameters: crwdns58220:0crwdne58220:0
+          Binary: crwdns58221:0crwdne58221:0
+        cspunit1ch1assessment:
+          CS Principles Unit 1 Ch 1 Assessment: crwdns58222:0crwdne58222:0
+          title: crwdns58223:0crwdne58223:0
+          description_short: crwdns58224:0crwdne58224:0
+          description: crwdns58225:0crwdne58225:0
+        cspunit1ch2assessment:
+          CS Principles Unit 1 Ch 2 Assessment: crwdns58226:0crwdne58226:0
+          title: crwdns58227:0crwdne58227:0
+          description_short: crwdns58228:0crwdne58228:0
+          description: crwdns58229:0crwdne58229:0
+        algebrapdnext:
+          title: crwdns58230:0crwdne58230:0
+          description_short: crwdns58231:0crwdne58231:0
+          description: crwdns58232:0crwdne58232:0
+          Welcome!: crwdns58233:0crwdne58233:0
+          Teaching with Puzzles: crwdns58234:0crwdne58234:0
+          Teaching with the Design Recipe: crwdns58235:0crwdne58235:0
+          The Design Recipe: crwdns58236:0crwdne58236:0
+          Teacher Dashboard: crwdns58237:0crwdne58237:0
+          Lesson Prep: crwdns58238:0crwdne58238:0
+        csp-pre-survey:
+          title: crwdns58239:0crwdne58239:0
+          Anonymous student survey 2: crwdns58240:0crwdne58240:0
+          Anonymous student pre-survey: crwdns58241:0crwdne58241:0

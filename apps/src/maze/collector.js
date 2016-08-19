@@ -10,6 +10,8 @@
 
 import { TestResults } from '../constants.js';
 
+import Subtype from './subtype';
+import CollectorDrawer from './collectorDrawer';
 import mazeMsg from './locale';
 import tiles from './tiles';
 
@@ -18,15 +20,34 @@ const COLLECTED_NOTHING = 1;
 const COLLECTED_SOME = 2;
 const COLLECTED_EVERYTHING = 3;
 
-export default class Collector {
+export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
-    this.maze_ = maze;
-    this.studioApp_ = studioApp;
-    this.skin_ = config.skin;
+    super(maze, studioApp, config);
 
     // Collector level types treat the "ideal" block count as a hard
     // requirement
     this.maxBlocks_ = config.level.ideal;
+  }
+
+  /**
+   * @override
+   */
+  isCollector() {
+    return true;
+  }
+
+  /**
+   * @override
+   */
+  shouldCheckSuccessOnMove() {
+    return false;
+  }
+
+  /**
+   * @override
+   */
+  createGridItemDrawer() {
+    return new CollectorDrawer(this.maze_.map, this.skin_.goal);
   }
 
   /**
@@ -64,15 +85,16 @@ export default class Collector {
 
   /**
    * @return {boolean} Has the user completed this level
+   * @override
    */
   finished() {
-    return this.getTotalCollected() > 0 &&
-        this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+    return false;
   }
 
   /**
    * Called after user's code has finished executing. Gives us a chance to
    * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @override
    */
   onExecutionFinish() {
     const executionInfo = this.maze_.executionInfo;
@@ -89,9 +111,17 @@ export default class Collector {
   }
 
   /**
+   * @override
+   */
+  hasMessage(testResults) {
+    return true;
+  }
+
+  /**
    * Get any app-specific message, based on the termination value,
    * or return null if none applies.
    * @return {string|null} message
+   * @override
    */
   getMessage(terminationValue) {
     switch (terminationValue) {
@@ -112,6 +142,7 @@ export default class Collector {
    * Get the test results based on the termination value.  If there is
    * no app-specific failure, this returns StudioApp.getTestResults().
    * @return {number} testResult
+   * @override
    */
   getTestResults(terminationValue) {
     switch (terminationValue) {
@@ -125,5 +156,12 @@ export default class Collector {
     }
 
     return this.studioApp_.getTestResults(false);
+  }
+
+  /**
+   * @override
+   */
+  getEmptyTile() {
+    return 'null0';
   }
 }

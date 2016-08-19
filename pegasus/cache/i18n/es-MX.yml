@@ -189,7 +189,7 @@
   third_party_curriculum: Currículum
   third_party_pricing: Precios
   third_party_cost_free: Gratis para los estudiantes y profesores
-  third_party_cost_5permonth: "$5USD al mes por cada clase"
+  third_party_cost_5permonth: "$5USD al mes por cada clas"
   third_party_cost_299: "$2.99USD por descarga"
   third_party_cost_free_399: Plazo Gratis, $399USD por salón
   third_party_cost_free_2: Plazo Gratis, $2USD por estudiante
@@ -914,7 +914,6 @@
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_view_all: Ver todo
   dashboard_announce_message: "<b>January 6, 2015</b> - Learn beyond one Hour of Code
     in your classroom. Start a new intro course and track student progress."
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
@@ -930,6 +929,8 @@
     se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para financiar
     en la educacion de K-12 informática.
   dashboard_announce_petition_button: Agrega tu nombre
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "¡La Hora del Código está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -1819,5 +1820,4 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates
