@@ -1,17 +1,18 @@
-require 'cdo/rake_utils'
-require 'cdo/git_utils'
-require 'open-uri'
-require 'json'
-require 'fileutils'
-require 'gemoji'
-require 'eyes_selenium'
-require_relative '../../dashboard/test/ui/utils/selenium_browser'
 require_relative '../../deployment'
+
+if rack_env?(:development) || rack_env?(:test)
+  require 'cdo/rake_utils'
+  require 'cdo/git_utils'
+  require 'open-uri'
+  require 'json'
+  require 'fileutils'
+  require 'eyes_selenium'
+  require 'gemoji'
+  require_relative '../../dashboard/test/ui/utils/selenium_browser'
+end
 
 EYES_ACCESS_KEY_ENV_NAME = 'EYES_ACCESS_KEY'
 TMP_UTIL_DIR = '.tmputils'
-
-raise "Must export env var $#{EYES_ACCESS_KEY_ENV_NAME} to run eyes commands." unless ENV[EYES_ACCESS_KEY_ENV_NAME]
 
 MERGE_UTIL_PATH = "#{TMP_UTIL_DIR}/applitools-merge.jar"
 REMOTE_JAR_SOURCE = 'https://s3.amazonaws.com/cdo-circle-utils/applitools-merge.jar'
@@ -34,17 +35,27 @@ end
 
 def force_merge_eyes_baselines(branch, base)
   ensure_merge_util
-  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o -s #{branch} -t #{base}"
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o true -s #{branch} -t #{base}"
+end
+
+def copy_eyes_baselines(branch, base)
+  ensure_merge_util
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -c true -s #{branch} -t #{base}"
 end
 
 def force_copy_eyes_baselines(branch, base)
   ensure_merge_util
-  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o  -s #{branch} -t #{base}"
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -o true -c true -s #{branch} -t #{base}"
 end
 
 def delete_eyes_branch(branch)
   ensure_merge_util
-  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{branch} -d"
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{branch} -d true"
+end
+
+def merge_delete_eyes_branch(branch, base)
+  ensure_merge_util
+  RakeUtils.system_stream_output "#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{base} -d true"
 end
 
 def create_branch(branch)
@@ -58,25 +69,44 @@ def create_branch(branch)
   driver.quit
 end
 
+def check_eyes_set
+  raise "Must export env var $#{EYES_ACCESS_KEY_ENV_NAME} to run eyes commands." unless ENV[EYES_ACCESS_KEY_ENV_NAME]
+end
+
 namespace :eyes do
-  task :merge, [:branch, :base] do |t, args|
+  task :merge, [:branch, :base] do |_, args|
+    check_eyes_set
     HipChat.log "#{MERGE_EMOJI}  Merging baselines #{args}"
     merge_eyes_baselines(args[:branch], args[:base])
   end
   task :force_merge, [:branch, :base] do |_, args|
+    check_eyes_set
     HipChat.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
     force_merge_eyes_baselines(args[:branch], args[:base])
   end
+  task :copy, [:branch, :base] do |_, args|
+    check_eyes_set
+    HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Copying baselines #{args}"
+    copy_eyes_baselines(args[:branch], args[:base])
+  end
   task :force_copy, [:branch, :base] do |_, args|
-    HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
+    check_eyes_set
+    HipChat.log "#{Emoji.find_by_alias('muscle').raw}#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
     force_copy_eyes_baselines(args[:branch], args[:base])
   end
   task :create, [:branch] do |_, args|
+    check_eyes_set
     HipChat.log "#{Emoji.find_by_alias('baby').raw}  Creating branch #{args}"
     create_branch(args[:branch])
   end
   task :delete, [:branch] do |_, args|
+    check_eyes_set
     HipChat.log "Deleting branch #{args}"
     delete_eyes_branch(args[:branch])
+  end
+  task :merge_delete, [:branch, :base] do |_, args|
+    check_eyes_set
+    HipChat.log "Deleting branch #{args}"
+    merge_delete_eyes_branch(args[:branch], args[:base])
   end
 end
