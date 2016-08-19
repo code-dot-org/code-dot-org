@@ -1,6 +1,8 @@
-import utils from '../utils';
+import { randomValue } from '../utils';
+import Subtype from './subtype';
 import mazeMsg from './locale';
 import BeeCell from './beeCell';
+import BeeItemDrawer from './beeItemDrawer';
 import { TestResults } from '../constants.js';
 import { BeeTerminationValue as TerminationValue } from '../constants.js';
 
@@ -10,11 +12,10 @@ const UNLIMITED_NECTAR = 99;
 const EMPTY_HONEY = -98; // Hive with 0 honey
 const EMPTY_NECTAR = 98; // flower with 0 honey
 
-export default class Bee {
+export default class Bee extends Subtype {
   constructor(maze, studioApp, config) {
-    this.maze_ = maze;
-    this.studioApp_ = studioApp;
-    this.skin_ = config.skin;
+    super(maze, studioApp, config);
+
     this.defaultFlowerColor_ = (config.level.flowerType === 'redWithNectar' ?
       'red' : 'purple');
     if (this.defaultFlowerColor_ === 'purple' &&
@@ -28,10 +29,34 @@ export default class Bee {
     // at each location, tracks whether user checked to see if it was a flower or
     // honeycomb using an if block
     this.userChecks_ = [];
+
+    this.overrideStepSpeed = 2;
+  }
+
+  /**
+   * @override
+   */
+  isBee() {
+    return true;
+  }
+
+  /**
+   * @override
+   */
+  getCellClass() {
+    return BeeCell;
+  }
+
+  /**
+   * @override
+   */
+  createGridItemDrawer() {
+    return new BeeItemDrawer(this.maze_.map, this.skin_, this);
   }
 
   /**
    * Resets current state, for easy reexecution of tests
+   * @override
    */
   reset() {
     this.honey_ = 0;
@@ -168,6 +193,7 @@ export default class Bee {
   /**
    * Get the test results based on the termination value.  If there is
    * no app-specific failure, this returns StudioApp.getTestResults().
+   * @override
    */
   getTestResults(terminationValue) {
     switch (terminationValue) {
@@ -197,8 +223,16 @@ export default class Bee {
   }
 
   /**
+   * @override
+   */
+  hasMessage(testResults) {
+    return testResults === TestResults.APP_SPECIFIC_FAIL;
+  }
+
+  /**
    * Get any app-specific message, based on the termination value,
    * or return null if none applies.
+   * @override
    */
   getMessage(terminationValue) {
     switch (terminationValue) {
@@ -462,6 +496,22 @@ export default class Bee {
     this.maze_.gridItemDrawer.updateItemImage(row, col, true);
 
     this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  }
+
+  /**
+   * @override
+   */
+  getEmptyTile(x, y, adjacentToPath, wallMap) {
+    // begin with three trees
+    var tileChoices = ['null3', 'null4', 'null0'];
+    var noTree = 'null1';
+    // want it to be more likely to have a tree when adjacent to path
+    var n = adjacentToPath ? tileChoices.length * 2 : tileChoices.length * 6;
+    for (var i = 0; i < n; i++) {
+      tileChoices.push(noTree);
+    }
+
+    return randomValue(tileChoices);
   }
 
 }

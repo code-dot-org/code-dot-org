@@ -96,7 +96,7 @@
     4
   congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
     Rapido
-  congrats_next_tutorials_title: Prova ora questi tutorial
+  congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
   get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
@@ -398,9 +398,9 @@
   homepage_banner_congress: Alcuni personaggi di spicco americani chiedono al Congresso
     di finanziare il programma d'informatica K-12.
   homepage_banner_congress_link: Aggiungi il tuo sostegno
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Stiamo facendo un cambiamento importante per tutelare
+    ancora di più la privacy degli studenti.
+  homepage_banner_emailprivacy_link: Ulteriori informazioni…
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
@@ -476,7 +476,7 @@
     stimolanti</a> fatti da celebrità e modelli di riferimento
   playlab_choose_theme: Scegli il tema del tuo Laboratorio
   playlab_classic_title: Classico
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Lo straordinario mondo di Gumball
   playlab_iceage_title: L'Era Glaciale - È in arrivo
   playlab_iceage_title_live: L'Era Glaciale
   starwars_subtitle: Costruisci una galassia con il codice
@@ -500,10 +500,11 @@
   watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
   speak_another_language: Parli un'altra lingua?
   help_translate: Aiutaci a tradurre.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  no_internet: Non hai Internet?
+  download_offline: Scarica la versione offline.
   are_you_teacher: Sei un insegnante?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Valuta il piano di lavoro della lezione e le altre risorse per
+    l’insegnante.
   volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
     del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
@@ -671,17 +672,19 @@
     professionali gratuiti e di elevata qualità: <a href="/professional-development-workshops">trovate
     quello più vicino a voi!</a>'
   dashboard_middle_courses: Corsi da 20 ore per la scuola secondaria di primo grado
-  dashboard_middle_courses_desc: Il nostro curriculum per la secondaria di primo grado
-    utilizza l'informatica e la programmazione all'interno della matematica e delle
-    scienze - come strumento per insegnare concetti matematici e scientifici. Per
-    iscriversi a seminari di sviluppo professionale, iscriversi a <a href="/educate/districts">
-    per un partenariato</a> con Code.org.
+  dashboard_middle_courses_desc: 'I nostri corsi per la scuola secondaria di primo
+    grado utilizzano l''informatica e la programmazione all''interno della matematica
+    e delle scienze - come strumento per insegnare concetti matematici e scientifici.
+    Per gli insegnanti in Italia: accedi a <a href="http://programmailfuturo.it">Programma
+    il Futuro</a> per avere assistenza specifica. Per gli insegnanti negli USA: iscriversi
+    al <a href="/educate/districts">partenariato</a> con Code.org.'
   dashboard_high_courses: Corsi di un anno per la scuola secondaria superiore
-  dashboard_high_courses_desc: Il programma della nostra scuola superiore aiuta i
-    distretti scolastici offrendo corsi di informatica per l'intero anno, preparando
-    i docenti ad ampliare l'offerta formativa in questo nuovo campo. Per iscriversi
-    ai seminari di sviluppo professionale, iscrivetevi a un <a href="/educate/districts">
-    per un partenariato</a> con Code.org.
+  dashboard_high_courses_desc: 'Il nostro programma per la scuola secondaria di secondo
+    grado offre corsi di informatica per l''intero anno, preparando i docenti ad ampliare
+    l''offerta formativa in questo nuovo campo. Per gli insegnanti in Italia: accedi
+    a <a href="http://programmailfuturo.it">Programma il Futuro</a> per avere assistenza
+    specifica. Per gli insegnanti negli USA: iscriversi al <a href="/educate/districts">partenariato</a>
+    con Code.org.'
   dashboard_course_csina: Informatica in Algebra
   dashboard_course_csina_desc: Code.org ha collaborato con Bootstrap per sviluppare
     un curriculum che insegni i concetti algebrici e geometrici attraverso la programmazione
@@ -721,7 +724,7 @@
   dashboard_assessments_summaries: Riassunti
   dashboard_assessments_answers: Tutte le risposte
   dashboard_surveys_answers: Sondaggi
-  dashboard_percent: Percent
+  dashboard_percent: Percento
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
   dashboard_download_csv: Scarica CSV
@@ -736,7 +739,7 @@
   dashboard_navigation_view_progress: Avanzamento
   dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Valutazioni/Sondaggi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -864,7 +867,7 @@
     grado
   dashboard_curriculum_high_title: Risorse per insegnanti della secondaria superiore
   dashboard_lesson_plans: Piano di lavoro delle lezioni
-  dashboard_view_all_lesson_plans: Scarica il curriculum completo per i corsi 1-3
+  dashboard_view_all_lesson_plans: Scarica il curriculum completo per i corsi 1-4
   dashboard_course1: 'Corso 1:'
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
@@ -920,7 +923,8 @@
   dashboard_sections_account_creation_question: Chi crea gli account per gli studenti?
   dashboard_sections_password_question: Che cosa usano gli studenti come password?
   dashboard_sections_picture_account_creation: Un immagine scelta da Code.org
-  dashboard_sections_word_account_creation: Una parola scelta da Code.org
+  dashboard_sections_word_account_creation: Una coppia di parole semplici scelte da
+    Code.org
   dashboard_sections_sign_in_question: Dove fanno accesso gli studenti?
   dashboard_sections_sign_in_unique: L'unica pagina Web elencata nella scheda "Gestisci
     i tuoi studenti"
@@ -931,7 +935,6 @@
   dashboard_faq: FAQ - Domande e risposte
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
-  dashboard_announce_view_all: Visualizza tutto
   dashboard_announce_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono
     una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato
     che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
@@ -951,6 +954,8 @@
     aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di
     informatica K-12.
   dashboard_announce_petition_button: Aggiungi il tuo nome
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1842,7 +1847,7 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Nascondi questo avviso
   compatibility_unsupported_browser: Il tuo browser non è supportato. Si prega di
     aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'>
     uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina,
@@ -1855,5 +1860,4 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

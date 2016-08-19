@@ -8,7 +8,6 @@ gem 'rails', '~> 4.2.6'
 gem 'responders', '~> 2.0'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'rack-contrib', '~> 1.1'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
@@ -104,12 +103,15 @@ gem 'jquery-rails', '~> 3.1.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
+# for emoji in utility output
+gem 'gemoji'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'devise_invitable', '~> 1.5.2'
+gem 'devise_invitable', '~> 1.6.0'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
@@ -127,7 +129,7 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11' # error monitoring
+gem 'honeybadger' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
@@ -193,7 +195,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
 
@@ -208,3 +209,4 @@ gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'
+gem 'bcrypt'

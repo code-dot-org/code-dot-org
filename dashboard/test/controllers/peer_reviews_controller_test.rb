@@ -66,4 +66,11 @@ class PeerReviewsControllerTest < ActionController::TestCase
     post :update, id: @peer_review.id, peer_review: {status: 'accepted', data: 'This is great'}
     assert_redirected_to script_path(@script)
   end
+
+  test 'Submitting a peer review with emojis strips out the emojis' do
+    @peer_review.update(reviewer_id: @user.id)
+    post :update, id: @peer_review.id, peer_review: {status: 'accepted', data: panda_panda}
+    @peer_review.reload
+    assert_equal 'Panda', @peer_review.data
+  end
 end

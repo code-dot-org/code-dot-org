@@ -47,7 +47,7 @@
     <recommended_blocks>
       <xml>
         <block type="maze_moveNorth"/>
-        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
         <block type="maze_moveSouth"/>
       </xml>
     </recommended_blocks>

@@ -66,34 +66,14 @@
         form_container: "#all_authored_hints_editor",
         wrapper: ".json_editor",
         onNewSpace: function (space) {
-          var editor = CodeMirror.fromTextArea(space.find(".hint_markdown").get(0), {
-            mode: 'markdown',
-            viewportMargin: Infinity,
-            lineWrapping: true
-          });
-
-          // TODO (elijah) move this into code-studio
-          inlineAttach.attachToCodeMirror(editor, {
-            uploadUrl: '/level_assets/upload',
-            uploadFieldName: 'file',
-            downloadFieldName: 'newAssetUrl',
-            allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
-            progressText: '![Uploading file...]()',
-            urlText: "![]({filename})", // `{filename}` tag gets replaced with URL
-            errorText: "Error uploading file",
-            extraHeaders: {
-              'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-            }
-          });
-
-          editor.on('change', function (editor, change) {
+          levelbuilder.initializeCodeMirror(space.find(".hint_markdown").get(0), 'markdown', function(editor, change) {
             space.find('.markdown_preview')
               .html(limitedMarked(editor.getValue()))
               .children('details').details();
 
             space.find(".hint_markdown").val(editor.getValue());
             space.find(".hint_markdown").trigger('change');
-          });
+          }, true);
         },
         model: {
           hint_class: "",

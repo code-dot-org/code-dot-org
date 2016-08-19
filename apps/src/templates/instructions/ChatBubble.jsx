@@ -9,7 +9,7 @@ import { shouldDisplayChatTips } from './utils';
 const craftStyle = {
   backgroundColor: '#3B3B3B',
   borderRadius: 4,
-  borderStyle: 'solid',
+  borderWidth: 0
 };
 
 const style = {

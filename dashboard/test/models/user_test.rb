@@ -56,7 +56,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create user with invalid email" do
-    user = User.create(@good_data.merge({email: 'foo@bar'}))
+    user = User.create(@good_data.merge({email: 'foo@bar@com'}))
     assert !user.valid?
     assert user.errors[:email].length == 1
   end
@@ -996,6 +996,32 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'sample answer', ul.level_source.data
   end
 
+  test 'track_level_progress_sync does not overwrite level_source_id with nil' do
+    script_level = create :script_level
+    user = create :user
+    level_source = create :level_source, data: 'sample answer'
+    create :user_level,
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id,
+      level_source_id: level_source.id
+
+    User.track_level_progress_sync(
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id,
+      level_source_id: nil,
+      new_result: 100,
+      submitted: false
+    )
+
+    assert_equal level_source.id, UserLevel.find_by(
+      user_id: user.id,
+      script_id: script_level.script_id,
+      level_id: script_level.level_id
+    ).level_source_id
+  end
+
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
@@ -1283,5 +1309,12 @@ class UserTest < ActiveSupport::TestCase
     another_teacher = create :teacher
     create :follower, user: another_teacher, student_user: follower.student_user
     assert_equal 1, follower.student_user.terms_version
+  end
+
+  test 'terms_of_service_version for students with deleted teachers' do
+    time_now = DateTime.now
+    follower = create :follower
+    follower.user.update(deleted_at: time_now, terms_of_service_version: 1)
+    assert_equal nil, follower.student_user.terms_version
   end
 end

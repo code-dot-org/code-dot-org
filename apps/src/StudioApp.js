@@ -1595,7 +1595,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -2194,6 +2194,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     try {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      // When adding content via setValue, the aceEditor cursor gets set to be
+      // at the end of the file. For mysterious reasons we've been unable to
+      // understand, we end up with some pretty funky render issues if the first
+      // time we switch to text mode the cursor is out of view beyond the bottom
+      // of the editor. Navigate to the start so that this doesn't happen.
+      this.editor.aceEditor.navigateFileStart();
     } catch (err) {
       // catch errors without blowing up entirely. we may still not be in a
       // great state
