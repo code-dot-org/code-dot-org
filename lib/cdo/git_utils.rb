@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 module GitUtils
   # Returns true if file is different from the committed version in git.
   def self.file_changed_from_git?(file)
@@ -47,6 +50,22 @@ module GitUtils
 
   def self.current_branch_base
     branch_to_base(current_branch)
+  end
+
+  def self.current_branch_base_no_origin
+    branch_to_base(current_branch).gsub('origin/', '')
+  end
+
+  def self.pr_base_branch_or_default_no_origin
+    circle_pr_branch_base_no_origin || current_branch_base_no_origin
+  end
+
+  def self.circle_pr_branch_base_no_origin
+    pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
+    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
+    pr_json['base']['ref']
+  rescue => _
+    nil
   end
 
   # Given a branch name, returns its likely base branch / merge destination

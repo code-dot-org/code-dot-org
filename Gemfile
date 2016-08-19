@@ -78,6 +78,9 @@ group :development, :test do
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
+
+  # for emoji in utility output
+  gem 'gemoji'
 end
 
 group :doc do
@@ -126,7 +129,7 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11' # error monitoring
+gem 'honeybadger' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
