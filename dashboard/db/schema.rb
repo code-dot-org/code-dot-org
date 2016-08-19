@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815010139) do
+ActiveRecord::Schema.define(version: 20160818232419) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -672,6 +672,7 @@ ActiveRecord::Schema.define(version: 20160815010139) do
     t.datetime "updated_at"
     t.string   "flex_category", limit: 255
     t.boolean  "lockable"
+    t.string   "url_param",     limit: 255, null: false
   end
 
   create_table "survey_results", force: :cascade do |t|
@@ -947,11 +948,6 @@ ActiveRecord::Schema.define(version: 20160815010139) do
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
-  add_foreign_key "authored_hint_view_requests", "levels"
-  add_foreign_key "authored_hint_view_requests", "scripts"
-  add_foreign_key "authored_hint_view_requests", "users"
-  add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_enrollments", "school_districts"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"

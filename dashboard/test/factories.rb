@@ -314,6 +314,10 @@ FactoryGirl.define do
     position do |stage|
       (stage.script.stages.maximum(:position) || 0) + 1
     end
+
+    url_param do |stage|
+      ((stage.script.stages.maximum(:position) || 0) + 1).to_s
+    end
   end
 
   factory :callout do

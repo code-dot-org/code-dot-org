@@ -292,10 +292,10 @@ class Script < ActiveRecord::Base
     self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
-  def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    stage_position ||= 1
+  def get_script_level_by_url_param_and_position(url_param, puzzle_position, lockable)
+    url_param ||= 1
     self.script_levels.to_a.find do |sl|
-      sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable && sl.stage.url_param == url_param.to_s && sl.position == puzzle_position.to_i
     end
   end
 
@@ -411,6 +411,8 @@ class Script < ActiveRecord::Base
     script_stages = []
     script_levels_by_stage = {}
     levels_by_key = script.levels.index_by(&:key)
+    lockable_count = 0
+    non_lockable_count = 0
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
@@ -491,8 +493,14 @@ class Script < ActiveRecord::Base
         stage = script.stages.detect{|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
-            script: script
-          )
+            script: script,
+          ) do |s|
+            if stage_lockable == true
+              s.url_param = (lockable_count += 1).to_s
+            else
+              s.url_param = (non_lockable_count += 1).to_s
+            end
+          end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
