@@ -46,6 +46,7 @@ class Level < ActiveRecord::Base
 
   include StiFactory
   include SerializedProperties
+  include TextToSpeech
 
   serialized_attrs %w(
     video_key
