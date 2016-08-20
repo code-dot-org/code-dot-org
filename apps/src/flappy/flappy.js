@@ -343,7 +343,7 @@ Flappy.activeTicks = function () {
  */
 Flappy.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Flappy, studioApp, api);
+    fn.call(Flappy, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {

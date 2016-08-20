@@ -460,7 +460,7 @@ var delegate = function (scope, func, data) {
  */
 Bounce.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Bounce, studioApp, api);
+    fn.call(Bounce, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {
