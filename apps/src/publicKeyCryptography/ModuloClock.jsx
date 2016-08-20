@@ -47,19 +47,24 @@ const ModuloClock = React.createClass({
     };
   },
 
-  animateTo(dividend) {
+  /**
+   * @param {number} dividend - The left-hand-side of the modulus operation
+   * @param {number} speed - A value from 1 to 10 where 10 is the fastest option
+   */
+  animateTo(dividend, speed) {
+    const MAXIMUM_TIME_PER_SEGMENT = 500 / speed;
+    const MAXIMUM_TOTAL_TIME = 8000 / speed + 2000;
     this.setState({
       currentDividend: 0,
       targetDividend: dividend,
       startTime: Date.now(),
+      duration: Math.min(MAXIMUM_TOTAL_TIME, dividend * MAXIMUM_TIME_PER_SEGMENT),
       interval: setInterval(this.tick, 33)
     });
   },
 
   tick() {
-    const {startTime, targetDividend, interval} = this.state;
-
-    const duration = 5000;
+    const {startTime, targetDividend, duration, interval} = this.state;
     const elapsedTime = Date.now() - startTime;
     if (elapsedTime < duration) {
       this.setState({
