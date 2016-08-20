@@ -690,10 +690,10 @@ Artist.prototype.evalCode = function (code) {
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
+    // stop further execution, animate what occurred before the infinite loop,
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
+    if (e !== 'Infinity') {
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
