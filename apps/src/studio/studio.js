@@ -814,6 +814,7 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           handler.func(studioApp, api, Studio.Globals);
         } catch (e) {
           // Do nothing
+          console.error(e);
         }
         Studio.currentCmdQueue = null;
       }
@@ -3786,6 +3787,22 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
       break;
+    case 'setSpritesWander':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesWander(cmd.opts);
+      break;
+    case 'setSpritesStop':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesStop(cmd.opts);
+      break;
+    case 'setSpritesChase':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesChase(cmd.opts);
+      break;
+    case 'setSpritesFlee':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesFlee(cmd.opts);
+      break;
     case 'addGoal':
       studioApp.highlight(cmd.id);
       Studio.addGoal(cmd.opts);
@@ -5188,6 +5205,19 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
+};
+
+// TODO(ram): implement group behavior
+Studio.setSpritesWander = function (opts) {
+};
+
+Studio.setSpritesStop = function (opts) {
+};
+
+Studio.setSpritesChase = function (opts) {
+};
+
+Studio.setSpritesFlee = function (opts) {
 };
 
 Studio.addGoal = function (opts) {
