@@ -4,6 +4,7 @@ import React from 'react';
 const IntegerTextbox = React.createClass({
   propTypes: {
     value: React.PropTypes.number,
+    disabled: React.PropTypes.bool,
     onChange: React.PropTypes.func.isRequired
   },
 
@@ -13,11 +14,11 @@ const IntegerTextbox = React.createClass({
   },
 
   render() {
-    let {value} = this.props;
+    let {value, disabled} = this.props;
     if (!Number.isInteger(value)) {
       value = '';
     }
-    return <input value={value} onChange={this.onChange}/>;
+    return <input value={value} disabled={disabled} onChange={this.onChange}/>;
   }
 });
 export default IntegerTextbox;

@@ -17,7 +17,8 @@ const ModuloClockWidget = React.createClass({
     return {
       dividend: 247,
       modulus: 37,
-      speed: 1
+      speed: 1,
+      animating: false
     };
   },
 
@@ -30,7 +31,10 @@ const ModuloClockWidget = React.createClass({
   },
 
   onGoClick() {
-    this.moduloClock.animateTo(this.state.dividend, this.state.speed);
+    this.setState({animating: true});
+    this.moduloClock.animateTo(this.state.dividend, this.state.speed, () => {
+      this.setState({animating: false});
+    });
   },
 
   onSpeedChange(speed) {
@@ -38,7 +42,7 @@ const ModuloClockWidget = React.createClass({
   },
 
   render() {
-    const {dividend, modulus, speed} = this.state;
+    const {dividend, modulus, speed, animating} = this.state;
     return (
       <div style={style.root}>
         <h1>The Modulo Clock</h1>
@@ -46,14 +50,21 @@ const ModuloClockWidget = React.createClass({
         <div style={{textAlign: 'center'}}>
           <IntegerTextbox
             value={dividend}
+            disabled={animating}
             onChange={this.onDividendChange}
           />
           MOD
           <IntegerTextbox
             value={modulus}
+            disabled={animating}
             onChange={this.onModulusChange}
           />
-          <button onClick={this.onGoClick}>Go!</button>
+          <button
+            disabled={animating}
+            onClick={this.onGoClick}
+          >
+            Go!
+          </button>
         </div>
         <ModuloClock
           ref={x => this.moduloClock = x}
@@ -62,8 +73,9 @@ const ModuloClockWidget = React.createClass({
         <div style={{textAlign: 'center'}}>
           <IntegerDropdown
             value={speed}
-            onChange={this.onSpeedChange}
             options={_.range(1, 10)}
+            disabled={animating}
+            onChange={this.onSpeedChange}
           />
         </div>
       </div>);
