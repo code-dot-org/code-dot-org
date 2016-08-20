@@ -750,7 +750,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
+    Activity.create!(level: level, user: @student, level_source: level_source)
+    UserLevel.create!(level: level, user: @student, level_source: level_source)
 
     get :show, script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position
     assert_equal last_attempt_data, assigns(:last_attempt)
@@ -763,8 +765,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    get :show, script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
+    level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
+    Activity.create!(level: level, user: @student, level_source: level_source)
+    UserLevel.create!(level: level, user: @student, level_source: level_source)
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.absolute_position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
 
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
