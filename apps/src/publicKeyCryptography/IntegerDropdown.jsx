@@ -10,8 +10,9 @@ import 'react-virtualized-select/styles.css';
 const IntegerDropdown = React.createClass({
   propTypes: {
     value: React.PropTypes.number,
-    onChange: React.PropTypes.func.isRequired,
-    options: React.PropTypes.arrayOf(React.PropTypes.number).isRequired
+    options: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    disabled: React.PropTypes.bool,
+    onChange: React.PropTypes.func.isRequired
   },
 
   onChange(selected) {
@@ -19,7 +20,7 @@ const IntegerDropdown = React.createClass({
   },
 
   render() {
-    let {value, options} = this.props;
+    let {value, options, disabled} = this.props;
     options = options.map(n => ({label: String(n), value: n}));
     return (
       <VirtualizedSelect
@@ -27,6 +28,7 @@ const IntegerDropdown = React.createClass({
         optionHeight={LINE_HEIGHT}
         options={options}
         value={value}
+        disabled={disabled}
         onChange={this.onChange}
       />);
   }
