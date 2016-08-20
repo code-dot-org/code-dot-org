@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Pd::EnrollmentTest < ActiveSupport::TestCase
-  include DistrictDropdownConstants
 
   test 'code' do
     enrollment1 = create :pd_enrollment
@@ -17,78 +16,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     found_enrollment = Pd::Enrollment.find_by(code: enrollment.code)
     assert_equal enrollment, found_enrollment
-  end
-
-  # charter + zip  --  success
-  test 'district by type charter and zip, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_CHARTER, school_zip: 98144, school_state: nil, school_district_id: nil
-    assert enrollment.valid?
-  end
-
-  # private + zip  --  success
-  test 'district by type private and zip, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_PRIVATE, school_zip: 98144, school_state: nil, school_district_id: nil
-    assert enrollment.valid?
-  end
-
-  # public + state "other"  --  success
-  test 'district by type public and state other, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_PUBLIC, school_state: SCHOOL_STATE_OTHER, school_district_id: nil
-    assert enrollment.valid?
-  end
-
-  # public + state + district  --  success
-  test 'district by type public and state and district, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: create(:school_district).id
-    assert enrollment.valid?
-  end
-
-  # public + state + district "other"  --  success
-  test 'district by type public and state and district other, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_other: true, school_district_id: nil
-    assert enrollment.valid?
-  end
-
-  # other + state "other"  --  success
-  test 'district by type other and state other, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_OTHER, school_state: SCHOOL_STATE_OTHER, school_district_id: nil
-    assert enrollment.valid?
-  end
-
-  # other + state + district  --  success
-  test 'district by type other and state and district, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: create(:school_district).id
-    assert enrollment.valid?
-  end
-
-  # other + state + district "other"  --  success
-  test 'district by type other and state and district other, validation succeeds' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_OTHER, school_state: "WA", school_district_other: true, school_district_id: nil
-    assert enrollment.valid?
-  end
-
-  # charter + no zip  --  fail
-  test 'district by type charter and no zip, validation fails' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_CHARTER, school_zip: nil, school_district_id: nil, school_district_other: nil, school_state: nil
-    refute enrollment.valid?  # Run the validations and set errors
-  end
-
-  # private + no zip  --  fail
-  test 'district by type private and no zip, validation fails' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_PRIVATE, school_zip: nil, school_state: nil, school_district_id: nil
-    refute enrollment.valid?  # Run the validations and set errors
-  end
-
-  # public + state "not other" + no district + no district "other"  --  fail
-  test 'district by type public and state but no district, validation fails' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: nil, school_district_other: false
-    refute enrollment.valid?  # Run the validations and set errors
-  end
-
-  # other + state "not other" + no district + no district "other"  --  fail
-  test 'district by type other and state but no district, validation fails' do
-    enrollment = build :pd_enrollment, school_type: SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: nil, school_district_other: false
-    refute enrollment.valid?  # Run the validations and set errors
   end
 
   test 'resolve_user' do
@@ -115,13 +42,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [
       'Name is required',
       'Email is required',
-      'School district is required'
+      'School is required'
     ], enrollment.errors.full_messages
 
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
-    enrollment.school_type = DistrictDropdownConstants::SCHOOL_TYPE_CHARTER
-    enrollment.school_zip = 98144
+    enrollment.school = 'test school'
     assert enrollment.valid?
   end
 
@@ -132,11 +58,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.valid?
     assert_equal [
       'Name is required',
-      'Email is required'
+      'Email is required',
+      'School is required'
     ], enrollment.errors.full_messages
 
     enrollment.name = teacher.name
     enrollment.email = teacher.email
+    enrollment.school = 'test school'
     assert enrollment.valid?
   end
 

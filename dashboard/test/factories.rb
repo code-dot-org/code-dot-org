@@ -533,8 +533,7 @@ FactoryGirl.define do
   end
 
   factory :school_info do
-    name {'Example School'}
-    school_type {DistrictDropdownConstants::SCHOOL_TYPE_PUBLIC}
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
     school_district_id {create(:school_district).id}
   end
@@ -544,6 +543,7 @@ FactoryGirl.define do
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     school_info_id {create(:school_info).id}
+    school {'Example School'}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

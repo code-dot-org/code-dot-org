@@ -85,7 +85,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'enrollments can be created' do
     assert_creates(Pd::Enrollment) do
-      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params
+      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params, school_info: school_info_params
     end
     enrollment = Pd::Enrollment.last
     refute_nil enrollment.code
@@ -141,7 +141,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       name: '',
       confirmation_email: nil
     })
-    post :create, workshop_id: @workshop.id, pd_enrollment: params
+    post :create, workshop_id: @workshop.id, pd_enrollment: params, school_info: school_info_params
     assert_template :new
   end
 
@@ -327,11 +327,17 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       name: name,
       email: email,
       email_confirmation: email,
-      school: 'test enrollment school',
+      school: 'test enrollment school'
+    }
+  end
+
+  def school_info_params
+    {
       school_type: 'public',
       school_state: 'WA',
       school_district_id: create(:school_district).id,
       school_district_other: false
     }
   end
+
 end
