@@ -7,7 +7,21 @@ import IntegerTextbox from './IntegerTextbox';
 
 const style = {
   root: {
+    display: 'block',
+    maxWidth: 800,
+    margin: 'auto',
     fontFamily: `"Gotham 4r", sans-serif`
+  },
+  h1: {
+    fontSize: 38.5
+  },
+  goButton: {
+    width: 60,
+  },
+  balancePadding: {
+    display: 'inline-block',
+    width: 60,
+    visibility: 'hidden'
   }
 };
 
@@ -45,21 +59,25 @@ const ModuloClockWidget = React.createClass({
     const {dividend, modulus, speed, animating} = this.state;
     return (
       <div style={style.root}>
-        <h1>The Modulo Clock</h1>
+        <h1 style={style.h1}>The Modulo Clock</h1>
         <p>Experiment with this "clock" and different numbers to see what happens.</p>
         <div style={{textAlign: 'center'}}>
+          <div style={style.balancePadding}>&nbsp;</div>
           <IntegerTextbox
             value={dividend}
             disabled={animating}
             onChange={this.onDividendChange}
           />
-          MOD
+          {' MOD '}
           <IntegerTextbox
             value={modulus}
             disabled={animating}
             onChange={this.onModulusChange}
           />
+          {' '}
           <button
+            className="primary"
+            style={style.goButton}
             disabled={animating}
             onClick={this.onGoClick}
           >
