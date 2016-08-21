@@ -221,7 +221,7 @@ ________________
 
 ## Georgia
 ### [Georgia Tech Center for Education Integrating Science, Mathematics, and Computing](https://www.ceismc.gatech.edu/)<br/>
-North Georgia<br/>
+Georgia<br/>
 
 **Programs**<br/>
 CS Principles<br/>
@@ -230,21 +230,10 @@ CS in Algebra<br/>
 
 **Contact Information**<br/>
 Chris Thompson	<br/>
-chris.thompson@ceismc.gatech.edu
+chris.thompson@ceismc.gatech.edu<br/>
 
-<br/>
-
-### [Savannah Campus of Georgia Tech CEISMC](https://www.ceismc.gatech.edu/ceismc-savannah)<br/>
-Middle Georgia
-
-**Programs**<Br/>
-CS Principles<br/>
-CS in Science<br/>
-
-
-**Contact Information**<br/>
-Chris Thompson<Br/>
-chris.thompson@ceismc.gatech.edu
+Tamara Pearson<br/>
+tamara.pearson@ceismc.gatech.edu
 
 <br/>
 
@@ -302,12 +291,13 @@ lucia@cdm.depaul.edu
 Chicago <br/>
 
 **Programs**<br/>
+CS Principles<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
-Angela Acevedo	<Br/>
-Aacevedo@Lumity.org
+Janet Morris	<Br/>
+jmorris@lumity.org
 
 <br/>
 
@@ -452,6 +442,11 @@ This includes communications/social media, recruitment of teacher participants, 
 
 
 **Contact Information** 
+Main Contact:
+Susan Boone<br/>
+susan.boone@rice.edu<br/>
+
+Additional Contacts:
 Alice Fisher<br/>
 afisher@rice.edu<br/>
 
@@ -461,8 +456,7 @@ apapa@rice.edu<br/>
 Richard Parr<br/>
 rparr@rice.edu<br/>
 
-Susan Boone<br/>
-susan.boone@rice.edu<br/>
+
 
 
 <br/>
@@ -482,8 +476,11 @@ Exploring Computer Science<br/>
 CS in Science<br/>
 
 **Contact Information**<br/>
-Sarah Young	/>
-sarah.young@schools.utah.gov
+Sarah Young	<br/>
+sarah.young@schools.utah.gov<br/>
+
+Vatsala Kaul<br/>
+vkaul@utah.gov<br/>
 
 <br/>
 

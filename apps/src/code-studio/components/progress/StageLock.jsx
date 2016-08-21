@@ -32,9 +32,10 @@ const StageLock = React.createClass({
     // redux provided
     sectionsLoaded: React.PropTypes.bool.isRequired,
     unlocked: React.PropTypes.bool.isRequired,
+    saving: React.PropTypes.bool.isRequired,
     openLockDialog: React.PropTypes.func.isRequired,
     closeLockDialog: React.PropTypes.func.isRequired,
-    lockStage: React.PropTypes.func.isRequired
+    lockStage: React.PropTypes.func.isRequired,
   },
 
   openLockDialog() {
@@ -51,15 +52,23 @@ const StageLock = React.createClass({
     }
     return (
       <div>
-        <button style={progressStyles.blueButton} onClick={this.openLockDialog}>
+        <button
+          style={progressStyles.blueButton}
+          onClick={this.openLockDialog}
+          disabled={this.props.saving}
+        >
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
-            {commonMsg.lockSettings()}
+            {this.props.saving ? commonMsg.saving() : commonMsg.lockSettings()}
           </span>
         </button>
         {this.props.unlocked &&
           <span>
-            <button style={progressStyles.orangeButton} onClick={this.lockStage}>
+            <button
+              style={progressStyles.orangeButton}
+              onClick={this.lockStage}
+              disabled={this.props.saving}
+            >
               {commonMsg.lockStage()}
             </button>
             <span style={styles.warning}>
@@ -77,7 +86,7 @@ const StageLock = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { sectionsLoaded, sections, selectedSection } = state.stageLock;
+  const { sectionsLoaded, sections, selectedSection, saving } = state.stageLock;
   let unlocked = false;
   if (sectionsLoaded) {
     const currentSection = sections[selectedSection];
@@ -89,7 +98,8 @@ export default connect((state, ownProps) => {
 
   return {
     unlocked,
-    sectionsLoaded
+    sectionsLoaded,
+    saving
   };
 }, dispatch => ({
   openLockDialog(stageId) {

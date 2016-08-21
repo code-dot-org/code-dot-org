@@ -89,5 +89,6 @@
   "whileTooltip": "Errepikatu barruko ekintzak bukaerako puntua eskuratu arte.",
   "word": "Bilatu hitza",
   "yes": "Bai",
-  "youSpelled": "Idatzi duzu"
+  "youSpelled": "Idatzi duzu",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

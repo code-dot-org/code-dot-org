@@ -89,5 +89,6 @@
   "whileTooltip": "しゅうてんに　たどりつくまで、かこってある　うごきを　くりかえし　やってください。",
   "word": "ことばを　みつけましょう",
   "yes": "はい",
-  "youSpelled": "あなたのスペル"
+  "youSpelled": "あなたのスペル",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

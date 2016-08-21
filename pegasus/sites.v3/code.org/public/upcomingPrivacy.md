@@ -8,7 +8,7 @@ We are planning updates to our Privacy Policy and Terms of Service as described 
 
 # Upcoming Privacy Policy - For Open Review
 
-Planning to update privacy policy: Aug 22, 2016
+Planning to update privacy policy: Aug 24, 2016
 
 
 ## About Code.org
@@ -151,7 +151,7 @@ For the purposes of testing our Website and services before releasing them into 
 
 Code.org does not directly collect or store payment instruments. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information). 
 
-<a id="#studentemails">
+<a id="studentemails">
 ## Student Email Addresses
 
 When students create accounts on Code Studio, Code.org does not store the email address provided by those Users in a retrievable format. Instead, we immediately create and store only a one-way hashed version of the email address (which cannot be converted back into the original address), and use it only for the purposes of login, account management, and password recovery. In fact, when creating a student account or during login, the actual account email address is never even transmitted to Code.org's servers. The only circumstance when Code.org's servers receive a student's Code Studio account email address is if the student forgets their password and asks to reset it. At that point, the student is prompted to enter their email, which is used to send them a password reset link.

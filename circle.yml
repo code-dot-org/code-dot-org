@@ -18,6 +18,8 @@ machine:
     - docker
 checkout:
   post:
+    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; esac:
+        parallel: true
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-base ;; esac:
         parallel: true
 dependencies:
@@ -63,8 +65,6 @@ database:
     - 'echo "Skipping database phase (already ran)."'
 test:
   override:
-    - case $CIRCLE_NODE_INDEX in 1) bundle exec rake circle:merge_eyes_baselines ;; esac:
-        parallel: true
     - bundle exec rake lint:javascript
     - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; 1) bundle exec rake circle:run_ui_tests ;; esac:
         parallel: true
