@@ -518,14 +518,16 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Returns the most recent (via created_at) activity for the specified level.
-  # TODO(asher): Change this to use UserLevel rather than Activity.
-  def last_attempt(level)
-    Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
-  end
-
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
+  def last_attempt(level)
+    UserLevel.where(user_id: self.id, level_id: level.id).
+      order('updated_at DESC').
+      first
+  end
+
+  # Returns the most recent (via updated_at) user_level for any of the specified
+  # levels.
   def last_attempt_for_any(levels)
     level_ids = levels.map(&:id)
     UserLevel.where(user_id: self.id, level_id: level_ids).
