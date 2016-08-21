@@ -4,10 +4,13 @@
     .row
       .span8{style: (full_width ? 'width: 560px;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; &nbsp; | &nbsp; &nbsp;'
-        = link_to t('footer.translate'), 'https://code.org/translate'
-        .dim
-          != piped_spaces
+        = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
+        .dim!= piped_spaces
+        = link_to t('footer.translate'), CDO.code_org_url('/translate')
+        .dim!= piped_spaces
         = link_to t('footer.support'), t('footer.support_url')
+        .dim!= piped_spaces
+        = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
         %br/
 
         %small.fineprint.dim
@@ -24,13 +27,4 @@
           = hidden_field_tag :return_to, request.url
           = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
         %small.dim
-          = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
-          - if full_width
-            |
-          - else
-            &nbsp; &nbsp; | &nbsp; &nbsp;
-          = link_to t('footer.privacy'), CDO.code_org_url('/privacy')
-          %br/
-          %br/
-          %br/
           !="&copy; Code.org, #{Time.now.year}"
