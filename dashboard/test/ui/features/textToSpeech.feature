@@ -1,6 +1,7 @@
 Feature: Text To Speech
 
-@no_ie
+# Fully skip, seeing intermittent failures on IE, Safari, possibly others on CircleCI
+@skip
 Scenario: Listen to TTS Audio
   Given I am on "http://learn.code.org/s/course1/stage/4/puzzle/1?noautoplay=true&enableExperiments=topInstructionsCSF,tts"
   And I rotate to landscape
