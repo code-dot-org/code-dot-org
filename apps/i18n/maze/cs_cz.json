@@ -89,5 +89,6 @@
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
   "word": "Najdi slovo",
   "yes": "Ano",
-  "youSpelled": "Vyhláskoval(a) jsi"
+  "youSpelled": "Vyhláskoval(a) jsi",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }
