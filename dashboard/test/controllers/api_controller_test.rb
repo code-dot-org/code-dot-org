@@ -1172,11 +1172,6 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'}
     )
 
-    assert_routing(
-      {method: "get", path: "/dashboardapi/whatevvv"},
-      {controller: "api", action: "whatevvv"}
-    )
-
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
@@ -1191,11 +1186,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_recognizes(
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
       {method: "get", path: "/api/student_progress/2/15"}
-    )
-
-    assert_recognizes(
-      {controller: "api", action: "whatevvv"},
-      {method: "get", path: "/api/whatevvv"}
     )
   end
 end
