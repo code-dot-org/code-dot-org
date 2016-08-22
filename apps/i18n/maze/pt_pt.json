@@ -89,5 +89,6 @@
   "whileTooltip": "Repete as ações seguintes até a condição de terminação ser alcançada.",
   "word": "Encontra a palavra",
   "yes": "Sim",
-  "youSpelled": "Tu escreveste"
+  "youSpelled": "Tu escreveste",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

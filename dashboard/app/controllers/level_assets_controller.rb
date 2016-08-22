@@ -1,6 +1,6 @@
 class LevelAssetsController < ApplicationController
-  before_filter :require_levelbuilder_mode
-  before_filter :authenticate_user!
+  before_action :require_levelbuilder_mode
+  before_action :authenticate_user!
 
   def upload
     authorize! :create, Level

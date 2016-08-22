@@ -89,5 +89,6 @@
   "whileTooltip": "חזור על שורת הפעולות עד שתגיע לנקודת הסיום.",
   "word": "מצא את המילה",
   "yes": "כן",
-  "youSpelled": "אייתת"
+  "youSpelled": "אייתת",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

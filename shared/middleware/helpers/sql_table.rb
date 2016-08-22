@@ -175,5 +175,4 @@ class SqlTable
     tables_from_metadata = PEGASUS_DB[:channel_table_metadata].where(app_id: channel_id, table_type: 'shared').group(:table_name).select_map(:table_name)
     tables_from_records.concat(tables_from_metadata).uniq
   end
-
 end

@@ -89,5 +89,6 @@
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
   "yes": "Yes",
-  "youSpelled": "You spelled"
+  "youSpelled": "You spelled",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

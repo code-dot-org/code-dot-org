@@ -520,7 +520,7 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
-  a:hover {
+  a:hover:not(.btn) {
     color: $red;
     background-color: $white;
   }

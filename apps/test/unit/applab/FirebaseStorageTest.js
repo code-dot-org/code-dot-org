@@ -40,6 +40,86 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  describe('deleteRecord', () => {
+    it('deletes a record', done => {
+      FirebaseStorage.createRecord(
+        'mytable',
+        {name: 'bob', age: 8},
+        deleteRecord,
+        error => {throw error;});
+
+      function deleteRecord(record) {
+        expect(record.id).to.equal(1);
+        FirebaseStorage.deleteRecord(
+          'mytable',
+          record,
+          handleDelete,
+          error => {throw error;});
+      }
+
+      function handleDelete(status) {
+        expect(status).to.equal(true);
+        getDatabase(Applab.channelId).child(`storage/tables/${'mytable'}/records`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.equal(null);
+            done();
+          });
+      }
+    });
+
+    it('deletes a record when row count is zero', done => {
+      FirebaseStorage.createRecord(
+        'mytable',
+        {name: 'bob', age: 8},
+        zeroRowCount,
+        error => {throw error;});
+
+      const rowCountRef = getDatabase(Applab.channelId)
+        .child(`counters/tables/${'mytable'}/rowCount`);
+
+
+      function zeroRowCount(record) {
+        rowCountRef.once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.equal(1);
+          }).then(() => {
+            return rowCountRef.set(0);
+          }).then(
+            () => deleteRecord(record),
+            error => {throw error;});
+      }
+
+      function deleteRecord(record) {
+        expect(record.id).to.equal(1);
+        FirebaseStorage.deleteRecord(
+          'mytable',
+          record,
+          handleDelete,
+          error => {throw error;});
+      }
+
+      function handleDelete(status) {
+        expect(status).to.equal(true);
+        getDatabase(Applab.channelId).child(`storage/tables/${'mytable'}/records`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.equal(null);
+            validateRowCount();
+          });
+      }
+
+      function validateRowCount() {
+        rowCountRef.once('value').then(snapshot => {
+          // MockFirebase doesn't enforce security rules, so explicitly verify that the
+          // row count is set to a legal value.
+          expect(snapshot.val()).to.equal(0);
+          done();
+        });
+      }
+    });
+  });
+
   describe('populateTable', () => {
     const EXISTING_TABLE_DATA = {
       cities: {

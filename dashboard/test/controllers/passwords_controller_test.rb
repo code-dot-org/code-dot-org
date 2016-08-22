@@ -58,5 +58,4 @@ class PasswordsControllerTest < ActionController::TestCase
 
     assert_equal ['Email is required'], assigns(:user).errors.full_messages
   end
-
 end
