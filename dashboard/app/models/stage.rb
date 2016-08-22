@@ -10,6 +10,7 @@
 #  updated_at    :datetime
 #  flex_category :string(255)
 #  lockable      :boolean
+#  url_param     :string(255)
 #
 
 # Ordered partitioning of script levels within a script
@@ -43,11 +44,7 @@ class Stage < ActiveRecord::Base
     return I18n.t("data.script.name.#{script.name}.#{name}") if lockable
 
     if script.stages.to_a.many?
-      # Because lockable stages aren't numbered, our stage number is actually our
-      # position, minus the number of lockable stages preceeding us
-      stage_number = position - script.stages.to_a[0, position].count(&:lockable)
-
-      I18n.t('stage_number', number: stage_number) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
+      I18n.t('stage_number', number: url_param) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name
       script.localized_title
     end
