@@ -179,6 +179,7 @@ function marshalNativeToInterpreterObject(
   }
   return retVal;
 }
+exports.marshalNativeToInterpreterObject = marshalNativeToInterpreterObject;
 
 function isCanvasImageData(nativeVar) {
   // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead

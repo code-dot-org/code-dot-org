@@ -1,3 +1,5 @@
+/* global Interpreter */
+
 /**
  * Blockly App: Flappy
  *
@@ -743,50 +745,40 @@ Flappy.execute = function () {
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
-  var codeClick = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenClick');
-  var whenClickFunc = codegen.functionFromCode(
-                                      codeClick, {
-                                      Flappy: api } );
+  const events = ['flappy_whenClick', 'flappy_whenCollideGround', 'flappy_whenEnterObstacle', 'flappy_whenCollideObstacle', 'when_run'];
 
-  var codeCollideGround = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenCollideGround');
-  var whenCollideGroundFunc = codegen.functionFromCode(
-                                      codeCollideGround, {
-                                      Flappy: api } );
+  // var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
+  //                                   'JavaScript',
+  //                                   'when_run');
+  // var whenRunButtonFunc = codegen.functionFromCode(
+  //                                     codeWhenRunButton, {
+  //                                     Flappy: api } );
 
-  var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenEnterObstacle');
-  var whenEnterObstacleFunc = codegen.functionFromCode(
-                                      codeEnterObstacle, {
-                                      Flappy: api } );
+  const code = events.map(event => {
+    const generated = Blockly.Generator.blockSpaceToCode('JavaScript', event);
+    return `function ${event} () {
+      ${generated}
+    }
+    `;
+  }).join('');
 
-  var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenCollideObstacle');
-  var whenCollideObstacleFunc = codegen.functionFromCode(
-                                      codeCollideObstacle, {
-                                      Flappy: api } );
-
-  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'when_run');
-  var whenRunButtonFunc = codegen.functionFromCode(
-                                      codeWhenRunButton, {
-                                      Flappy: api } );
-
+  Flappy.currentCallback = null;
+  Flappy.interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
+    codegen.marshalNativeToInterpreterObject(interpreter, {Flappy: api}, 5, scope);
+    interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+      Flappy.currentCallback = callback;
+    }));
+  });
+  Flappy.interpreter.run();
 
   studioApp.playAudio('start');
 
   // Set event handlers and start the onTick timer
-  Flappy.whenClick = whenClickFunc;
-  Flappy.whenCollideGround = whenCollideGroundFunc;
-  Flappy.whenEnterObstacle = whenEnterObstacleFunc;
-  Flappy.whenCollideObstacle = whenCollideObstacleFunc;
-  Flappy.whenRunButton = whenRunButtonFunc;
+  Flappy.whenClick = () => { console.log('flappy_whenClick'); Flappy.currentCallback('flappy_whenClick'); Flappy.interpreter.run(); };
+  Flappy.whenCollideGround = () => { console.log('flappy_whenCollideGround'); Flappy.currentCallback('flappy_whenCollideGround'); Flappy.interpreter.run(); };
+  Flappy.whenEnterObstacle = () => { console.log('flappy_whenEnterObstacle'); Flappy.currentCallback('flappy_whenEnterObstacle'); Flappy.interpreter.run(); };
+  Flappy.whenCollideObstacle = () => { console.log('flappy_whenCollideObstacle'); Flappy.currentCallback('flappy_whenCollideObstacle'); Flappy.interpreter.run(); };
+  Flappy.whenRunButton = () => { console.log('when_run'); Flappy.currentCallback('when_run'); Flappy.interpreter.run(); };
 
   Flappy.tickCount = 0;
   Flappy.firstActiveTick = -1;
