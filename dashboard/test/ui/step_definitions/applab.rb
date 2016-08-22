@@ -122,6 +122,7 @@ end
 And /^I append text to droplet "([^"]*)"$/ do |text|
   script = %Q{
     var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+    aceEditor.navigateFileEnd();
     aceEditor.textInput.focus();
     aceEditor.onTextInput("#{text}");
   }

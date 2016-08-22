@@ -882,7 +882,6 @@
   dashboard_faq: Gyakran ismételt kérdések
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Közlemények
-  dashboard_announce_view_all: "Összes megtekintése"
   dashboard_announce_message: Segíts egy új funkció tesztelésében. Fontosnak tartjuk,
     hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá
     tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket
@@ -899,6 +898,8 @@
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Add meg a nevedet
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Megkezdődött a Kódolás Órája - December 8-14.
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás
     hete keretében
@@ -1779,5 +1780,4 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

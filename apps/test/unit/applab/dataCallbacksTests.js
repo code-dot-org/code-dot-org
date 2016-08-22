@@ -9,11 +9,11 @@ var errorHandler = require('@cdo/apps/errorHandler');
 var AppStorage = require('@cdo/apps/applab/appStorage');
 
 // used in design mode
-window.Applab = {
+window.Applab = Object.assign({}, window.Applab, {
   appWidth: 320,
   appHeight: 480,
   storage: AppStorage
-};
+});
 
 
 describe('createRecord callbacks', function () {

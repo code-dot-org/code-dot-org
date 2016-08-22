@@ -1,6 +1,6 @@
 class LevelSourceHintsController < ApplicationController
   include LevelsHelper
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_level_source_hint, only: [:update]
   load_and_authorize_resource
   check_authorization

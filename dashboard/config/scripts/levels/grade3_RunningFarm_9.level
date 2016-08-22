@@ -6,7 +6,7 @@
   "user_id": 318,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}]]",
+    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -23,12 +23,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "1",
-    "step_mode": "1",
+    "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you help me plant and then collect 14 bundles of wheat in this field? I think the best way would be to use loops!",
+    "instructions": "Add Weeds element. Weeds start out in random spots in the field and spread more and more rapidly as time goes on.. This puzzle is the culminating game-like puzzle. Students should have the event blocks (up, down, left, right, spacebar) available in the toolbox to use if they want. The entire field should be planted randomly with mostly wheat, potatoes, and a few weeds.",
     "step_speed": "2",
-    "ideal": "22",
+    "markdown_instructions": "Can you help me one last time? I want to collect as many crops as I can before the weeds take over this field. How many do you think we can get?",
     "contained_level_names": null
   },
   "published": true,
@@ -56,107 +56,7 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">7</title>
-              <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="maze_fill"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
-                  <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                          <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">7</title>
-                              <statement name="DO">
-                                <block type="maze_fill">
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnRight</title>
-                                          <next>
-                                            <block type="controls_repeat">
-                                              <title name="TIMES">7</title>
-                                              <statement name="DO">
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
-                                                  <next>
-                                                    <block type="collector_collect"/>
-                                                  </next>
-                                                </block>
-                                              </statement>
-                                              <next>
-                                                <block type="maze_turn">
-                                                  <title name="DIR">turnRight</title>
-                                                  <next>
-                                                    <block type="maze_move">
-                                                      <title name="DIR">moveForward</title>
-                                                      <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnRight</title>
-                                                          <next>
-                                                            <block type="controls_repeat">
-                                                            <title name="TIMES">7</title>
-                                                            <statement name="DO">
-                                                            <block type="collector_collect">
-                                                            <next>
-                                                            <block type="maze_move">
-                                                            <title name="DIR">moveForward</title>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </statement>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </solution_blocks>
   </blocks>

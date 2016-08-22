@@ -32,5 +32,4 @@ class SecretPicture < ActiveRecord::Base
     # 0 <= random_number < n
     self.find(SecureRandom.random_number(self.count) + 1)
   end
-
 end

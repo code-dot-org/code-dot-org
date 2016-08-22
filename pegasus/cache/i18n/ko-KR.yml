@@ -422,7 +422,7 @@
   no_internet: "인터넷을 사용할 수 없습니까?"
   download_offline: "오프라인 버전 다운로드"
   are_you_teacher: "선생님이신가요?"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "수업 계획과 다른 자료들을 리뷰해주세요."
   volunteer_engineer_submission_title: "학생들과 자원봉사자들에게 꿈과 희망을 불어넣어 주세요."
   volunteer_engineer_submission_subtitle_generic: "올 해 12월7일-13일까지 100,000 명의 선생님들이
     수업 중에 Hour of Code 행사를 운영할 예정입니다. 선생님들은 여러분들의 도움이 필요합니다! "
@@ -608,7 +608,7 @@
   dashboard_navigation_view_progress: "진행도"
   dashboard_navigation_view_text_responses: "텍스트 응답"
   dashboard_navigation_view_assessments: "평가 점수"
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: "평가/조사"
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
   dashboard_navigation_lesson_plans_resources: "수업 계획 및 자료"
@@ -770,7 +770,6 @@
   dashboard_faq: "자주 묻는 질문"
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: "공시사항"
-  dashboard_announce_view_all: "모두 보기"
   dashboard_announce_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
     언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
     모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
@@ -784,6 +783,8 @@
     앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
     CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
   dashboard_announce_petition_button: "이름을 입력하세요"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: "지금 해보기"
@@ -1491,5 +1492,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

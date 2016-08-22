@@ -21,10 +21,20 @@ Scenario: Top Instructions
   Then I press "ani-gif-preview"
   And I see no difference for "maze ani gif dialog"
 
-  Then I close the dialog
+  Then I am on "http://learn.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true&enableExperiments=topInstructionsCSF"
   And I press "runButton"
   And I wait to see ".uitest-topInstructions-inline-feedback"
-  And I see no difference for "maze with hints"
+  And I see no difference for "farmer with hints"
+
+  Then I press "lightbulb"
+  And I see no difference for "farmer with hint prompt"
+
+  Then I resize top instructions to "200" pixels tall
+  And I see no difference for "farmer with expanded instructions"
+
+  Then I press ".csf-top-instructions button:contains('Yes')" using jQuery
+  And I wait to see ".block-space"
+  And I see no difference for "farmer with block hint"
 
   Then I am on "http://learn.code.org/s/course4/stage/19/puzzle/3?noautoplay=true&enableExperiments=topInstructionsCSF"
   And I see no difference for "Bee with starting hints"

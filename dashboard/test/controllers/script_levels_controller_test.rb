@@ -2,7 +2,7 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   include UsersHelper  # For user session state accessors.
   include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
@@ -887,7 +887,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script)
     level = create(:maze)
-    create(:script_level, script: script, stage: stage, level: level)
+    create(:script_level, script: script, stage: stage, levels: [level])
 
     script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
@@ -1108,8 +1108,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
-    create :activity, user: @student, level_id: level.id,
-        level_source: create(:level_source, level: level, data: 'level source')
+    level_source = create :level_source, level: level, data: 'level source'
+    create :user_level, user: @student, level_id: level.id, attempts: 1,
+      level_source: level_source
 
     get_show_script_level_page(create(:script_level, levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'))
@@ -1120,14 +1121,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
-    create :activity, user: @student, level_id: level2.id,
-        level_source: create(:level_source, level: level2, data: 'level source')
-    create :activity, user: @student, level_id: level.id,
-        level_source: create(:level_source, level: level, data: 'level source')
+    level_source = create :level_source, level: level, data: 'level source'
+    level_source2 = create :level_source, level: level2, data: 'level source'
+    create :user_level, user: @student, level_id: level2.id, attempts: 1,
+      level_source: level_source2, updated_at: '2016-01-01'
+    create :user_level, user: @student, level_id: level.id, attempts: 1,
+      level_source: level_source, updated_at: '2016-01-02'
 
     get_show_script_level_page(create(:script_level, levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'))
     assert_equal assigns(:level), level
   end
-
 end

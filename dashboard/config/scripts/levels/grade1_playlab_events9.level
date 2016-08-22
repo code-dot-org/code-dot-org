@@ -37,6 +37,7 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "timeout_failure_tick": "550",
+    "first_sprite_index": "0",
     "contained_level_names": null
   },
   "published": true,

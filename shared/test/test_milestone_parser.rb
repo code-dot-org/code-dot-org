@@ -3,10 +3,12 @@ require_relative 'test_helper'
 require 'cdo/analytics/milestone_parser'
 
 class MilestoneParser
-  # self.log_debug = true # Uncomment to show debug logs
-
   def stub_fetch(key, path, bytes)
     TestMilestoneParser.instance.fetch(key, path, bytes)
+  end
+
+  def debug(msg)
+    # CDO.log.info msg # Uncomment to show debug logs
   end
 end
 
@@ -38,7 +40,7 @@ class TestMilestoneParser < Minitest::Test
 
     @s3_client = Aws::S3::Client.new(stub_responses: true)
     @s3_client.stub_responses(:list_objects,
-      {common_prefixes: [{prefix: 'hosts/staging/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]},
+      {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]},
       {contents: [
         {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
         {key: 'hosts/folder_1/dashboard/milestone.log.gz', size: 20, etag: 'y'},
@@ -113,5 +115,16 @@ class TestMilestoneParser < Minitest::Test
     assert_equal 90, count
     assert_equal 1, @fetch_count
     assert_equal LOG_SIZE, @bytes_count
+  end
+
+  def test_error_handling
+    @s3_client.stub_responses(:list_objects,
+      {common_prefixes: [{prefix: 'hosts/folder_1/'}]},
+      {contents: [
+        {key: 'hosts/folder_1/dashboard/milestone.log.12345', size: LOG_SIZE, etag: 'x'}
+      ]}
+    )
+    count = MilestoneParser.new(@cache, @s3_client).count
+    assert_equal 0, count
   end
 end

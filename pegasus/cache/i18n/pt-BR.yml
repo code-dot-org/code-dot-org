@@ -913,7 +913,6 @@
   dashboard_faq: Tire suas dúvidas
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
-  dashboard_announce_view_all: Ver todos
   dashboard_announce_message: "<b>22 de abril de 2016</b> - Atividades offline são
     partes vitais do processo de aprendizagem, mas os professores nos disseram que
     encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você
@@ -932,6 +931,8 @@
     uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação
     de ciência de computador K-12.
   dashboard_announce_petition_button: Adicione o seu nome
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1831,5 +1832,4 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

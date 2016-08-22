@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class LevelsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -298,8 +298,7 @@ class LevelsControllerTest < ActionController::TestCase
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
     assert_response :unprocessable_entity
 
-    expected = {'code_functions' => ["JSON::ParserError: 757: unexpected token at '{,}'"]}
-    assert_equal expected, JSON.parse(@response.body)
+    assert_match /JSON::ParserError/, JSON.parse(@response.body)['code_functions'].first
   end
 
   test "should destroy level" do

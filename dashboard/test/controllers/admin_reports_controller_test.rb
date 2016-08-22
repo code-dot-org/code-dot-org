@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminReportsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     # Stub used by :admin_stats.
@@ -41,5 +41,4 @@ class AdminReportsControllerTest < ActionController::TestCase
     get :admin_progress
     assert_select 'h1', 'Admin progress'
   end
-
 end

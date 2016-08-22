@@ -889,7 +889,6 @@
   dashboard_faq: "Často kladené dotazy"
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
-  dashboard_announce_view_all: Zobrazit vše
   dashboard_announce_message: Chcete nám pomoci otestovat novou funkci? Víme, že je
     důležité podporovat studenty při opakování a experimentování, takže budeme přidávat
     funkci "nepoužívaný kód" umožňující studentům spuštění vlastního kódu, i v situaci,
@@ -908,6 +907,8 @@
     kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní
     docházky na základních i středních školách.
   dashboard_announce_petition_button: Přidej své jméno
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace
@@ -1743,5 +1744,4 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates

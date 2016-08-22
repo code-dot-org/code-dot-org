@@ -380,9 +380,9 @@
   homepage_banner_congress: "Американські лідери закликають Конгрес фінансувати інформатику
     в школі."
   homepage_banner_congress_link: "Підтримайте"
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: "Ми вносимо важливі зміни у підтриманні конфіденційності
+    учнів."
+  homepage_banner_emailprivacy_link: "Докладніше"
   homepage_slot_text_title_hoc: "Година коду"
   homepage_slot_text_blurb_hoc: "Кожен може навчитися. Почніть сьогодні"
   homepage_slot_text_link_hoc: "Спробуйте годину коду"
@@ -477,14 +477,13 @@
   mc_platformtext: "Сучасні браузери, смартфони, планшети"
   mc_specs: "Багато мов | Сучасні браузери та планшети| Вік 6-106"
   minecraft_subtitle: "Година коду від Майнкрафт"
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: "Перед початком роботи перегляньте ці відео для натхнення"
+  speak_another_language: "Інша мова?"
+  help_translate: "Допоможіть нам з перекладом."
+  no_internet: "Немає Інтернету?"
+  download_offline: "Завантажити автономну версію."
   are_you_teacher: "Ви вчитель?"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "Переглянути план уроку та інші ресурси вчителя."
   volunteer_engineer_submission_title: "Надихайте учнів та волонтерів на Годину коду."
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести
     Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
@@ -689,8 +688,8 @@
     учнів."
   dashboard_assessments_summaries: "Резюме"
   dashboard_assessments_answers: "Усі відповіді"
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: "Опитування"
+  dashboard_percent: "Відсотки"
   dashboard_filter_by_stage: "Фільтр за етапами:"
   dashboard_filter_all: "Все"
   dashboard_download_csv: "Завантажити CSV"
@@ -705,7 +704,7 @@
   dashboard_navigation_view_progress: "Прогрес"
   dashboard_navigation_view_text_responses: "Текстові відповіді"
   dashboard_navigation_view_assessments: "Завдання"
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: "Оцінки/Опитування"
   dashboard_navigation_add_students: "Додати учнів"
   dashboard_navigation_manage_students: "Керування учнями"
   dashboard_navigation_lesson_plans_resources: "Плани уроків та ресурси"
@@ -887,7 +886,6 @@
   dashboard_faq: "Запитання й відповіді"
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: "Оголошення"
-  dashboard_announce_view_all: "Переглянути всі"
   dashboard_announce_message: Хочете допомогти нам протестувати нові функції? Ми знаємо,
     що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож
     ми додамо функцію "код, який не використовується", щоб дозволити учням запускати
@@ -905,6 +903,8 @@
     великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування
     інформатичної освіти у школі."
   dashboard_announce_petition_button: "Додайте своє ім'я"
+  dashboard_announce_all: Keep up to date with new features and updates on our teacher
+    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: "Година коду вже тут - 8-14 грудня!"
   code_sign_up: "Зареєструватися для участі протягом тижня інформатики"
   learn_more: "Спробувати зараз"
@@ -1741,7 +1741,7 @@
   sphero_beyond_longdescription: "Чи ви є педагогом чи батьком, уроки SPRK пропонують
     цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
     та природничі знання та навики."
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: "Сховати попередження"
   compatibility_unsupported_browser: "Ваш браузер не підтримується. Оновіть свій браузер
     до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>.
     Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
@@ -1753,5 +1753,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "грати"
   artist_shortcode: art
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_action_print_certificates: Print certificates
