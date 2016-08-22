@@ -59,7 +59,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert_equal [@teacher1, @unrelated_teacher], teachers
   end
 
-  test 'unique constraint' do
+  test 'unique constraint on pd_session_id and teacher_id prevents duplicates' do
     attendance = create :pd_attendance
     dupe = attendance.dup
 
