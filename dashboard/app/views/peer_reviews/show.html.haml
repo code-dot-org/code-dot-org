@@ -37,7 +37,7 @@
             %li= msg
     .field
       %label
-        = f.radio_button :status, :accepted, disabled: reviewed, checked: [0, nil].include?(@peer_review.status)
+        = f.radio_button :status, :accepted, disabled: reviewed, checked: ['accepted', nil].include?(@peer_review.status)
         != t('peer_review.accepted.description')
       %label
         = f.radio_button :status, :rejected, disabled: reviewed
