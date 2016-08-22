@@ -1,7 +1,7 @@
 var React = require('react');
 var color = require('../../color');
 var rowStyle = require('./rowStyle');
-var applabMsg = require('../locale');
+var applabMsg = require('@cdo/applab/locale');
 
 var EventHeaderRow = module.exports = React.createClass({
   render: function () {

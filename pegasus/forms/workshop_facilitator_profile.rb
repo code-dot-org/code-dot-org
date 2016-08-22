@@ -1,5 +1,4 @@
 class WorkshopFacilitatorProfile
-
   def self.normalize(data)
     {}.tap do |result|
       result[:create_professional_development_workshop] = FieldError.new(nil, :required) unless have_permission?(:create_professional_development_workshop)
@@ -12,5 +11,4 @@ class WorkshopFacilitatorProfile
       end
     end
   end
-
 end

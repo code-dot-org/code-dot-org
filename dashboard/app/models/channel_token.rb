@@ -53,5 +53,4 @@ class ChannelToken < ActiveRecord::Base
     timestamp = Time.now
     storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), ip)
   end
-
 end
