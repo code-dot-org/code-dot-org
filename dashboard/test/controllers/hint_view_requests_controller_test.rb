@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class HintViewRequestsControllerTest < ActionController::TestCase
-
   setup do
     HintViewRequest.stubs(:enabled?).returns true
     @student = create :student

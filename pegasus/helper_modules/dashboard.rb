@@ -91,6 +91,5 @@ module Dashboard
       Dashboard.db[:sections].
         select(:id).where(user_id: id, deleted_at: nil).all
     end
-
   end
 end

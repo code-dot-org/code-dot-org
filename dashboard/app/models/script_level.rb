@@ -262,5 +262,4 @@ class ScriptLevel < ActiveRecord::Base
     # Everything else is okay.
     return true
   end
-
 end

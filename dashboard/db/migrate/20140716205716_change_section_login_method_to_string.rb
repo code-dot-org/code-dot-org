@@ -12,5 +12,4 @@ class ChangeSectionLoginMethodToString < ActiveRecord::Migration
       t.integer :login_method, default: 0
     end
   end
-
 end

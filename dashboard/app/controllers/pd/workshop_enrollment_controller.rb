@@ -1,5 +1,4 @@
 class Pd::WorkshopEnrollmentController < ApplicationController
-
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true)
