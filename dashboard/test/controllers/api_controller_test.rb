@@ -122,14 +122,22 @@ class ApiControllerTest < ActionController::TestCase
     end
 
     # student_1 has two answers
-    create(:activity, user: @student_1, level: level1,
-      level_source: create(:level_source, level: level1, data: 'Here is the answer'))
-    create(:activity, user: @student_1, level: level2,
-      level_source: create(:level_source, level: level2, data: 'another answer'))
+    level_source1a = create :level_source, level: level1,
+      data: 'Here is the answer 1a'
+    level_source1b = create :level_source, level: level2,
+      data: 'Here is the answer 1b'
+    create :activity, user: @student_1, level: level1, level_source: level_source1a
+    create :activity, user: @student_1, level: level2, level_source: level_source1b
+    create :user_level, user: @student_1, level: level1, script: script,
+      attempts: 1, level_source: level_source1a
+    create :user_level, user: @student_1, level: level2, script: script,
+      attempts: 1, level_source: level_source1b
 
     # student_2 has one answer
-    create(:activity, user: @student_2, level: level1,
-      level_source: create(:level_source, level: level1, data: 'answer for student 2'))
+    level_source2 = create :level_source, level: level2, data: 'Here is the answer 2'
+    create :activity, user: @student_2, level: level1, level_source: level_source2
+    create :user_level,user: @student_2, level: level1, script: script,
+      attempts: 1, level_source: level_source2
 
     get :section_text_responses, section_id: @section.id, script_id: script.id
     assert_response :success
@@ -138,27 +146,32 @@ class ApiControllerTest < ActionController::TestCase
 
     # all these are translation missing because we don't actually generate i18n files in tests
 
-    expected_response =
-      [
-       {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
+    expected_response = [
+      {
+        'student' => {'id' => @student_1.id, 'name' => @student_1.name},
         'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
         'puzzle' => 1,
         'question' => 'Text Match 1',
-        'response' => 'Here is the answer',
-        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
-       {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
+        'response' => 'Here is the answer 1a',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+      },
+      {
+        'student' => {'id' => @student_1.id, 'name' => @student_1.name},
         'stage' => "Stage 2: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[1].name}",
         'puzzle' => 1,
         'question' => 'Text Match 2',
-        'response' => 'another answer',
-        'url' => "http://test.host/s/#{script.name}/stage/2/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
-       {'student' => {'id' => @student_2.id, 'name' => @student_2.name},
+        'response' => 'Here is the answer 1b',
+        'url' => "http://test.host/s/#{script.name}/stage/2/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+      },
+      {
+        'student' => {'id' => @student_2.id, 'name' => @student_2.name},
         'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
         'puzzle' => 1,
         'question' => 'Text Match 1',
-        'response' => 'answer for student 2',
-        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_2.id}"},
-      ]
+        'response' => 'Here is the answer 2',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
+      }
+    ]
     assert_equal expected_response, JSON.parse(@response.body)
   end
 
@@ -179,31 +192,26 @@ class ApiControllerTest < ActionController::TestCase
     create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 has an assessment
-    create(
-      :activity,
-      user: @student_1,
+    level_source = create(
+      :level_source,
       level: level1,
-      level_source: create(
-        :level_source,
-        level: level1,
-        data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
-      )
+      data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
     )
+    create :activity, user: @student_1, level: level1,
+      level_source: level_source
 
     updated_at = Time.now
 
-    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
 
     get :section_assessments, section_id: @section.id, script_id: script.id
+
     assert_response :success
-
     assert_equal script, assigns(:script)
-
     # all these are translation missing because we don't actually generate i18n files in tests
-
-    expected_response =
-      [
-       {"student" => {"id" => @student_1.id, "name" => @student_1.name},
+    expected_response = [
+      {
+        "student" => {"id" => @student_1.id, "name" => @student_1.name},
         "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "puzzle" => 1,
         "question" => "Long assessment 1",
@@ -217,9 +225,10 @@ class ApiControllerTest < ActionController::TestCase
           {"student_result" => "A", "correct" => "correct"},
           {"student_result" => "B", "correct" => "incorrect"},
           {"student_result" => "", "correct" => "unsubmitted"},
-          {"correct" => "unsubmitted"}]
-        }
-      ]
+          {"correct" => "unsubmitted"}
+        ]
+      }
+    ]
     assert_equal expected_response, JSON.parse(@response.body)
   end
 
@@ -235,7 +244,11 @@ class ApiControllerTest < ActionController::TestCase
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] =  'Long assessment 1'
     level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.properties['pages'] = [
+      {levels: ['level_free_response', 'level_multi_unsubmitted']},
+      {levels: ['level_multi_correct', 'level_multi_incorrect']},
+      {levels: ['level_multi_unattempted']}
+    ]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -1172,11 +1185,6 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'}
     )
 
-    assert_routing(
-      {method: "get", path: "/dashboardapi/whatevvv"},
-      {controller: "api", action: "whatevvv"}
-    )
-
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
@@ -1191,11 +1199,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_recognizes(
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
       {method: "get", path: "/api/student_progress/2/15"}
-    )
-
-    assert_recognizes(
-      {controller: "api", action: "whatevvv"},
-      {method: "get", path: "/api/whatevvv"}
     )
   end
 end
