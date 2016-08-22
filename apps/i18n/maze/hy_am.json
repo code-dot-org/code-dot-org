@@ -89,5 +89,6 @@
   "whileTooltip": "Կրկնել կից գործողությունները, մինչեւ Սալոնի կետն է հասել:",
   "word": "Գտնել բառը",
   "yes": "այո",
-  "youSpelled": "Դուք ուղղագրությամբ."
+  "youSpelled": "Դուք ուղղագրությամբ.",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

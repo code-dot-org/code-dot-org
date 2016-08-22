@@ -89,5 +89,6 @@
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
   "word": "Sözü tap",
   "yes": "Bəli",
-  "youSpelled": "Açıqladınız"
+  "youSpelled": "Açıqladınız",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

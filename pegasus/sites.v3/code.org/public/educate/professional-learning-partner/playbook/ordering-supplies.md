@@ -26,7 +26,7 @@ Academic year supplies should be shipped/ordered by Program Managers as follows:
 Check these resources if you have questions about what to order, how many to order, or navigating the marketplace.
 
 
-- [Webinar Recording (Partial)](https://bluejeans.com/playback/s/ZzQZ9gCZnv5GCDcjptghUQOWKudzXaQfHO2feZ7bOPyCzVl01OxzLuQmmB6Xz31J)<br/>
+- [Webinar Recording (Partial)](http://videos.code.org/plp/supplies.mp4>
 - [Slides from Webinar](https://docs.google.com/presentation/d/1AtMDfpUClPUSa9Jz2nu27cXPELhGjc6UQY96j0Q43cc/edit#slide=id.gb846b8ce1_0_5)<br/>
 - [Marketplace Guidelines](https://docs.google.com/document/d/1yFyDAWesYQGxSaQQpI06leuLxvhXEa8HOCKEpAkG-JI/edit)<br/>
 

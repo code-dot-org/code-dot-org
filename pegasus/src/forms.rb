@@ -3,7 +3,6 @@ require 'cdo/regexp'
 require src_dir 'database'
 
 class FormError < ArgumentError
-
   def self.detect_errors(data)
     errors = {}
     data.each_pair do |key, value|
@@ -25,14 +24,12 @@ class FormError < ArgumentError
 end
 
 class FieldError
-
   attr_accessor :value, :message
 
   def initialize(value, message)
     @value = value
     @message = message
   end
-
 end
 
 # Load forms

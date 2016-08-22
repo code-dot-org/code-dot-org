@@ -165,6 +165,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     # Now when the third reviewer tries to pull, there are no reviews for them to do. So they should get a clone
     third_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
+    assert_equal 3, PeerReview.count
     assert_nil third_review.data
     assert_nil third_review.status
     assert_equal reviewer_3.id, third_review.reviewer_id

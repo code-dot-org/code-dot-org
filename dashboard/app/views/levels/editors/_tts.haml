@@ -1,0 +1,34 @@
+.field
+  = f.label :text_to_speech_overrides
+  %p By default, Text-to-Speech will use the Instructions and Markdown Instructions texts as its sources. You can override them individually here if you wish to tweak the pronunciation.
+  #tts-error.alert.alert-error{style: "display: none"}
+    #alert-content
+  .row
+    .span6
+      %h5 Instructions
+      = f.text_area :tts_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+    .span6
+      %h5 Markdown Instructions
+      = f.text_area :tts_markdown_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+  - if CDO.use_acapela
+    = f.label :voice
+    %div
+      %select#level_tts_voice
+    %div
+      %button.tts#tts-instructions{type: 'button'} Hear Instructions
+      %button.tts#tts-markdown-instructions{type: 'button'} Hear Markdown Instructions
+    %div
+      %audio#tts-audio
+
+-if CDO.acapela_login
+  :javascript
+      const config = {
+        login: "#{CDO.acapela_login}",
+        app: "#{CDO.acapela_ephemeral_app}",
+        pwd: "#{CDO.acapela_ephemeral_password}",
+      };
+
+      $(document).ready(function () {
+        levelbuilder.acapela.populateVoicesList(config);
+        levelbuilder.acapela.listenForGetAudio(config);
+      });
