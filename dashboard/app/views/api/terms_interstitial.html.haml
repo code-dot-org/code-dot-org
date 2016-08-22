@@ -1,22 +1,19 @@
 #terms-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none;'}
   .modal-dialog
     .modal-content.no-modal-icon{style: 'margin: 0 20px; padding: 0 15px;'}
-      %h2 Updated Terms of Service and Privacy Policy
-      We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 22, 2016.  The biggest change: we will
-      %i no longer store email addresses for student accounts on Code Studio.
-      This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We’ve sent you a summary of the other changes via email.
-
+      %h2= t('terms_interstitial.title')
+      = t('terms_interstitial.intro_desc')
       %br
       %br
-      You’ll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio.
+      = t('terms_interstitial.intro_instructions')
 
       %br
       %br
       .scroll-box
-        %h1.no-top-margin Terms of Service
+        %h1.no-top-margin= t('terms_interstitial.tos')
         = render partial: 'home/tos'
         %hr
-        %h1 Privacy Policy
+        %h1= t('terms_interstitial.privacy')
         = render partial: 'home/privacy'
 
       %br
@@ -31,9 +28,9 @@
             &nbsp;
             %button#print-button.secondary
               %i.fa.fa-print.right-margin-5
-              Print
+              = t('terms_interstitial.print')
       .right
-        %a#later-link.dismiss-link{href: '#'} Later
+        %a#later-link.dismiss-link{href: '#'}= t('terms_interstitial.later')
       %div{style: 'clear: both;'}
 
 %iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}

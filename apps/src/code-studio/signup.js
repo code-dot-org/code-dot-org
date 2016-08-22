@@ -50,14 +50,25 @@ window.SignupManager = function (options) {
     }
   });
 
+  $("#teacher-submit-button").click(function () {
+    $("#first_page").hide();
+    $("#second_page").fadeIn();
+
+    $("#overview_first_page").hide();
+    $("#overview_second_page").fadeIn();
+  });
+
   function showStudent() {
     // Show correct form elements.
     $("#age-block").fadeIn();
     $("#gender-block").fadeIn();
     $("#schoolname-block").hide();
 
+    // Show correct submit button.
+    $("#student-signup-button").fadeIn();
+    $("#teacher-submit-button").hide();
+
     // Show correct terms below form.
-    $("#teacher-terms").hide();
     $("#student-terms").fadeIn();
   }
 
@@ -67,9 +78,12 @@ window.SignupManager = function (options) {
     $("#gender-block").hide();
     $("#schoolname-block").fadeIn();
 
+    // Show correct submit button.
+    $("#student-signup-button").hide();
+    $("#teacher-submit-button").fadeIn();
+
     // Show correct terms below form.
     $("#student-terms").hide();
-    $("#teacher-terms").fadeIn();
   }
 
   function isTeacherSelected() {

@@ -748,6 +748,8 @@
   older_systems: "Partner tutorials that work on older systems"
   older_systems_subheading: "These should work on older Web browsers. To access all tutorials, upgrade to a <a href=\"http://browsehappy.com/\" target=\"_blank\">modern Web browser.</a>"
   mobile_devices: "Partner tutorials for mobile devices"
+  terms_reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated Terms.'
+  terms_review_terms: "Review updated terms"
   frozen_name: "Code with Anna and Elsa"
   starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: "Classic Maze"
