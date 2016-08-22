@@ -1,0 +1,46 @@
+%link{:href=>"/css/accept-terms-interstitial.css", :rel=>"stylesheet"}
+%script{type: "text/javascript", src: "/js/accept-terms-interstitial.js"}
+
+#terms-modal.modal.fade{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+  .modal-dialog
+    .modal-content.no-modal-icon{style: 'margin: 0; padding: 0 30px;'}
+      %h2{style: 'margin-top: 20px; margin-bottom: 20px;'} Updated Terms of Service and Privacy Policy
+      We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 22, 2016.  The biggest change: we will
+      %i no longer store email addresses for student accounts on Code Studio.
+      This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We’ve sent you a summary of the other changes via email.
+
+      %br
+      %br
+      You’ll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio.
+      
+      %br
+      %br
+      .scroll-box
+        %h1.no-top-margin Terms of Service
+        = view :tos
+        %hr
+        %h1 Privacy Policy
+        = view :privacy
+    
+      %br
+      .right
+        %a#later-link.dismiss-link{href: '#'} Later
+      .left
+        %form#accept-terms-form{role: 'form', onsubmit: 'event.preventDefault();'}
+          .form-group
+            .checkbox
+              %label
+                %input#accept-terms-checkbox{name: 'accept_terms_b', type: 'checkbox', value: '1'}/
+                I agree to the updated
+                %a{href: CDO.code_org_url('/tos'), target: '_blank'} Terms of Service
+                and
+                %a{href: CDO.code_org_url('/privacy'), target: '_blank'} Privacy Policy
+        %button#submit-button.primary.disabled-button Accept
+        &nbsp;
+        %button#print-button.secondary.secondary-button
+          %i.fa.fa-print.right-margin-5
+          Print
+      .clear
+      %br
+
+%iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}

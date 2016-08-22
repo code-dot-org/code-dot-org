@@ -219,5 +219,4 @@ Please contact Code.org with any questions or comments about this Privacy Notice
 <br />
 <br />
 
-<a href="http://studentprivacypledge.org/" target="_blank"><img src="/shared/images/student_privacy_pledge.png" width="200" target="_blank"></a>
-
+[<img src="/shared/images/student_privacy_pledge.png" width="200" target="_blank">](http://studentprivacypledge.org/)

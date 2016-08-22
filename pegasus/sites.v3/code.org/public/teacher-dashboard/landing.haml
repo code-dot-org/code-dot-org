@@ -6,6 +6,7 @@ content-type: text/ng-template
 .teacher-announcements
   - unless accepted_latest_terms?
     = view :accept_terms_reminder
+    = view :terms_interstitial
   = view :teacher_announcements
 
 .ops-workshops

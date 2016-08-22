@@ -1,10 +1,14 @@
 .accept-terms-reminder
   We have updated our
-  %a{href: CDO.code_org_url('/tos')} Terms of Service
+  %a{href: CDO.code_org_url('/tos'), target: '_blank'} Terms of Service
   and
-  %a{href: CDO.code_org_url('/privacy')} Privacy Policy.
+  %a{href: CDO.code_org_url('/privacy'), target: '_blank'} Privacy Policy.
   Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated Terms.
   %br
   %br
-  %a{href: CDO.code_org_url('/accept-terms')}
-    %button.primary Review updated terms
+  %button#review-terms.primary Review updated terms
+
+:javascript
+  $("#review-terms").click(function () {
+    $("#terms-modal").modal('show');
+  });

@@ -10,6 +10,10 @@ $(document).ready(function () {
       }
     });
   }
+
+  $('#later-link').click(function () {
+    $("#terms-modal").modal('hide');
+  });
 });
 
 $('#accept-terms-checkbox').change(function () {
