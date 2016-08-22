@@ -17,7 +17,7 @@
   "dirN": "T",
   "dirS": "D",
   "dirW": "I",
-  "doCode": "déan",
+  "doCode": " ",
   "elseCode": "i ngach cás eile",
   "fill": "líon 1",
   "fillN": "líon {shovelfuls} sluasaid",
@@ -89,5 +89,6 @@
   "whileTooltip": "Athdhéan na horduithe istigh go dtí go mbainfear an críochphointe amach.",
   "word": "Aimsigh an focal",
   "yes": "Tá",
-  "youSpelled": "Litrigh tú"
+  "youSpelled": "Litrigh tú",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

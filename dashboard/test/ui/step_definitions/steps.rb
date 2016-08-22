@@ -636,7 +636,7 @@ Given(/^I sign in as "([^"]*)"/) do |name|
     Then I click selector "#signin_button"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
-    And I click selector "input[type=submit][value='Sign in']"
+    And I click selector "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -682,12 +682,13 @@ And(/^I create a student named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up"
     And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
-    And I click selector "input[type=submit][value='Sign up']"
+    And I click selector "#signin-button"
     And I wait until I am on "http://studio.code.org/"
   }
 end
@@ -698,13 +699,12 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
-    And I select the "Teacher" option in dropdown "user_user_type"
     And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I click selector "input[type=submit][value='Sign up']"
+    And I click selector "#signin-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
 end

@@ -5,24 +5,24 @@ pl:
         'Unplug1': Wprowadzenie do informatyki
         'Maze': Labirynt
         'Multi': Wieloraki Wybór Rzeczy
-        Unplug2: Myślenie komputacyjne
-        Unplug3: Programowanie na papierze milimetrowym
+        'Unplug2': Myślenie komputacyjne
+        'Unplug3': Programowanie na papierze milimetrowym
         'Artist': Artysta
-        Unplug4: Algorytmy
+        'Unplug4': Algorytmy
         'Artist2': Artysta 2
-        Unplug5: Funkcje
+        'Unplug5': Funkcje
         'Farmer': Rolnik
-        Unplug6: Warunkowe
+        'Unplug6': Warunkowe
         'Artist3': Artysta 3
         'Unplug7': Pisanie piosenek
         'Farmer2': Rolnik 2
-        Unplug8: Abstrakcja
+        'Unplug8': Abstrakcja
         'Artist4': Artysta 4
         'Unplug9': Programowanie przekaźnika
         'Farmer3': Rolnik 3
         'Unplug10': Internet
         'Artist5': Artysta 5
-        Unplug11: Podsumowanie
+        'Unplug11': Podsumowanie
         'MazeEC': Labirynt
         'Bounce': Odbicie
         'Flappy': Flappy Bird

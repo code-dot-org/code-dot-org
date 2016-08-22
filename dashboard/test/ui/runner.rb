@@ -25,6 +25,8 @@ require 'open3'
 require 'parallel'
 require 'socket'
 
+require_relative './utils/selenium_browser'
+
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
@@ -176,12 +178,7 @@ $total_flaky_reruns = 0
 $failures = []
 
 if $options.local
-  # Verify that chromedriver is actually running
-  unless `ps`.include?('chromedriver')
-    puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
-chromedriver found at #{`which chromedriver`}"
-    system("chromedriver &")
-  end
+  SeleniumBrowser.ensure_chromedriver_running
   $browsers = [{:browser => "local"}]
 end
 
@@ -215,10 +212,10 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(arguments)
+def run_tests(env, arguments)
   start_time = Time.now
   puts "cucumber #{arguments}"
-  Open3.popen3("cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, "cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -284,17 +281,28 @@ def browser_name_or_unknown(browser)
   browser['name'] || 'UnknownBrowser'
 end
 
-def flakiness_for_browser_feature(browser_feature)
-  TestFlakiness.test_flakiness[test_run_identifier(browser_feature[0], browser_feature[1])] || 1.0
+$calculate_flakiness = true
+# Retrieves / calculates flakiness for given test run identifier, giving up for
+# the rest of this script execution if an error occurs during calculation.
+# returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
+def flakiness_for_test(test_run_identifier)
+  return nil unless $calculate_flakiness
+  TestFlakiness.test_flakiness[test_run_identifier]
+rescue Exception => e
+  puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
+  $calculate_flakiness = false
+  nil
 end
 
 # Sort by flakiness (most flaky at end of array, will get run first)
 browser_features.sort! do |browser_feature_a, browser_feature_b|
-  flakiness_for_browser_feature(browser_feature_b) <=>
-    flakiness_for_browser_feature(browser_feature_a)
+  (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
+    (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
 end
 
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
+# Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+parallel_config = ENV['CI'] ? {:in_threads => $options.parallel_limit} : {:in_processes => $options.parallel_limit}
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
 
@@ -318,21 +326,22 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   # HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
-  ENV['BROWSER_CONFIG'] = browser_name
+  run_environment = {}
+  run_environment['BROWSER_CONFIG'] = browser_name
 
-  ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
-  ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
-  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
-  ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
-  ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
-  ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
-  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
-  ENV['TEST_RUN_NAME'] = test_run_string
+  run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
+  run_environment['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
+  run_environment['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  run_environment['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
+  run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
+  run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
+  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['TEST_RUN_NAME'] = test_run_string
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
+  run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     if $options.out
@@ -392,8 +401,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
-      # ask saucelabs how flaky the test is
-      flakiness = TestFlakiness.test_flakiness[test_run_string]
+      flakiness = flakiness_for_test(test_run_string)
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
         return 1
@@ -433,7 +441,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   FileUtils.rm rerun_filename, force: true
 
   reruns = 0
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments)
   log_link = upload_log_and_get_public_link(html_output_filename, {
       commit: COMMIT_HASH,
       success: succeeded.to_s,
@@ -450,7 +458,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments)
     log_link = upload_log_and_get_public_link(html_output_filename, {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,
@@ -496,7 +504,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
-    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
+    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end

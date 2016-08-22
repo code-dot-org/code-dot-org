@@ -8,17 +8,26 @@ machine:
     version: 2.2.3
   node:
     version: 0.12.0
+  java:
+    version: openjdk8 # used for Applitools merge API tool
   environment:
     RAILS_ENV: test
     RACK_ENV: test
     SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 8G
   services:
     - docker
+checkout:
+  post:
+    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; esac:
+        parallel: true
+    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-base ;; esac:
+        parallel: true
 dependencies:
   cache_directories:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
+    - ".tmputils"
   override:
     - sudo apt-get install libicu-dev enscript
     - bundle install --without ''
@@ -40,7 +49,9 @@ dependencies:
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "sync_assets: false" >> locals.yml'
     # Run rake install
-    - bundle exec rake install
+    - bundle exec rake install:
+        environment:
+          RAKE_VERBOSE: true
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:

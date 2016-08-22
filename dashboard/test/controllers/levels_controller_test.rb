@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class LevelsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true

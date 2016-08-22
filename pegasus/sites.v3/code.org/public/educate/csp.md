@@ -111,7 +111,8 @@ Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
 - **New** [2016 AP Endorsed Syllabus and Overview](/files/CSPSyllabusApril2016.pdf)
-- [Professional development overview](/files/CSPPDoverview.pdf)
+- [Professional Development Overview](/files/CSPPDoverview.pdf)
+- [Course Materials List](#materials)
 
 ## <a name="lessons"></a>Lessons
 
@@ -147,6 +148,30 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 **_Note_** _that the forums still correspond to the '15-'16 curriculum, as our pilot group is still actively working through the materials_
 
 ## Frequently Asked Questions
+
+#### <a name="materials"></a>What materials do I need for this course?
+**Required Materials:**
+
+This course requires students have access to computers with a modern web browser. For more details, check out Code.org's techonology requirements, here. 
+
+Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following: 
+
+- Unit 1 Lesson 2 requires some craft materials for constructing physical devices. The lesson recommends items like cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue. 
+
+**Optional Materials**
+
+The following items are called for in lessons, but alternatives are offered below:
+
+- (Unit 3, Lesson 1) a handful of legos per 2-3 students. alternatives: post-it notes, contstruction paper
+- (Unit 3, Lesson 2 - 3) playing cards (1 deck per 6 students). alternatives: write numbers of post-it notes. 
+- (Unit 4, Lesson 8) clear dixie cups with beans. alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc) 
+
+The following supplies are completely optional but will be useful to have on hand for various lessons:
+
+- graph paper
+- chart paper 
+- markers
+- post it notes
 
 #### How can I access answer keys? 
 Any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.

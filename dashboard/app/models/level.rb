@@ -46,6 +46,7 @@ class Level < ActiveRecord::Base
 
   include StiFactory
   include SerializedProperties
+  include TextToSpeech
 
   serialized_attrs %w(
     video_key
@@ -230,6 +231,7 @@ class Level < ActiveRecord::Base
      'Applab', 'Gamelab', # all applab and gamelab are freeplay
      'EvaluationQuestion', # plc evaluation
      'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation',
+     'PublicKeyCryptography'
     ] # widgets
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 

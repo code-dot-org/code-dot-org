@@ -87,7 +87,7 @@ No return value. Modifies screen only.
 ### Tips
 
 - The default screenId is screen1.
-- It is important to use meaningful screen IDs, and meaningful anmd unique UI element IDs, so it is easy to tell which UI elements are on which screen.
+- It is important to use meaningful screen IDs, and meaningful and unique UI element IDs, so it is easy to tell which UI elements are on which screen.
 
 [/tips]
 

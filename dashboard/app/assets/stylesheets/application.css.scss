@@ -363,6 +363,12 @@ $small-footer-standard-width: 400px;
       }
     }
   }
+
+  @media screen and (max-width: 1150px) {
+    small {
+      font-size: 10px;
+    }
+  }
 }
 
 .small-footer-base {
@@ -514,7 +520,7 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
-  a:hover {
+  a:hover:not(.btn) {
     color: $red;
     background-color: $white;
   }
@@ -1330,9 +1336,38 @@ a.download-video {
     display: inline-block;
     width: 600px;
   }
+  .singleitemblock {
+    padding-left: 144px;
+    width: 364px;
+  }
   .labelblock {
     display: inline-block;
     width: 140px;
+  }
+  .rememberme {
+    font-size: 13px;
+    margin-bottom: 22px;
+
+    #user_remember_me {
+      margin-top: -2px;
+      margin-right: 3px;
+    }
+  }
+  button {
+    width: 220px;
+  }
+  #signin-button {
+    margin-bottom: 7px;
+  }
+  #signup-button {
+    margin-top: 4px;
+  }
+  .forgotpassword {
+    margin-bottom: 10px;
+  }
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid $dark_charcoal;
   }
 }
 
@@ -1377,9 +1412,6 @@ a.download-video {
 }
 
 #signup {
-  .signupblock {
-    background-color: $lightest_gray;
-  }
   .signupform {
     padding: 20px;
     margin-bottom: 0;
@@ -1408,10 +1440,16 @@ a.download-video {
   #usernamefield {
     vertical-align: top;
   }
+  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
+    width: 234px;
+  }
   #usernamemessage, #password_message, #password_message_confirmation {
     display: inline-block;
     max-width: 180px;
     vertical-align: top;
+  }
+  #password_confirmation-block {
+    margin-bottom: 20px;
   }
   .error_in_field {
     color: $red;
@@ -1435,6 +1473,14 @@ a.download-video {
     font-size: 16px;
     color: $charcoal;
     margin-top: 15px;
+  }
+  #user_type-block {
+    margin-bottom: 20px;
+  }
+  .devise_links {
+    padding-left: 20px;
+    margin-top: 20px;
+    border-left: 1px solid $black;
   }
 }
 
@@ -1601,6 +1647,10 @@ a.download-video {
     // to be selectable.
     @include selectable;
   }
+}
+
+.external .content-level {
+  overflow: hidden;
 }
 
 .peer-review input[type=radio] {

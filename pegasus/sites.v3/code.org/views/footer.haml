@@ -1,7 +1,8 @@
 %footer#pagefooter
   .content
-    %div{:style=>"float:left"}
-      
+    .left{:style=>"float:left; max-width: 80%;"}
+      %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"} Privacy Policy
+      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
       %a.whitefooterlink{:href=>"/about"} About
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
       %a.whitefooterlink{:href=>"/partners"} Partners
@@ -14,23 +15,24 @@
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
       %a.whitefooterlink{:href=>"http://support.code.org/"} Support
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"https://www.facebook.com/Code.org/", :target=>"_blank"} <i class="fa fa-facebook fa-lg"></i>
-      &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"https://twitter.com/codeorg", :target=>"_blank"} <i class="fa fa-twitter fa-lg"></i>
-      &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"https://www.instagram.com/codeorg/", :target=>"_blank"} <i class="fa fa-instagram fa-lg"></i>
-      &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"http://codeorg.tumblr.com", :target=>"_blank"} <i class="fa fa-tumblr fa-lg"></i>
-    %div{:style=>"float:right"}
-      =view :language
-    %div{:style=>"clear:both; float: left;"}
+      %a.whitefooterlink{:href=>"/tos"} Terms
       %small.dim
-        &copy; Code.org, 2015.  Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.
-    %div{:style=>"clear:both; float: left;"}
-      %small.dim
+        !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
+        %br
         Powered by Amazon Web Services
-    %div{:style=>"float:right"}
-      %small{:style=>"opacity:0.5"}
-        %a.whitefooterlink{:href=>"/tos", :style=>"font-size: 12px;"} Terms
-        &nbsp; &nbsp; | &nbsp; &nbsp;
-        %a.whitefooterlink{:href=>"/privacy", :style=>"font-size: 12px;"} Privacy Policy
+    .right{:style=>"float:right"}
+      .language-dropdown
+        =view :language
+      .social-media{:style=>"margin-top: 10px; margin-left: 10px;"}
+        %small
+          %a.whitefooterlink{:href=>"https://www.facebook.com/Code.org/", :target=>"_blank", :style=>'text-decoration: none;'}
+            %i.fa.fa-facebook.fa-lg
+            &nbsp; &nbsp;
+          %a.whitefooterlink{:href=>"https://twitter.com/codeorg", :target=>"_blank", :style=>'text-decoration: none;'}
+            %i.fa.fa-twitter.fa-lg
+            &nbsp; &nbsp;
+          %a.whitefooterlink{:href=>"https://www.instagram.com/codeorg/", :target=>"_blank", :style=>'text-decoration: none;'}
+            %i.fa.fa-instagram.fa-lg
+            &nbsp; &nbsp;
+          %a.whitefooterlink{:href=>"http://codeorg.tumblr.com", :target=>"_blank", :style=>'text-decoration: none;'}
+            %i.fa.fa-tumblr.fa-lg

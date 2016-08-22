@@ -178,6 +178,9 @@ var TopInstructions = React.createClass({
     ),
     noVisualization: React.PropTypes.bool.isRequired,
 
+    acapelaInstructionsSrc: React.PropTypes.string,
+    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
+
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -187,7 +190,7 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 0,
       promptForHint: false,
       displayScrollButtons: true
     };
@@ -200,7 +203,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 0;
     if (width !== this.state.rightColWidth) {
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -471,6 +474,8 @@ var TopInstructions = React.createClass({
 
     const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions);
+    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
+      this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ? processMarkdown(
@@ -489,6 +494,7 @@ var TopInstructions = React.createClass({
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - resizerHeight}
+          allowScrolling={!this.props.isMinecraft}
         >
           <div
             style={[
@@ -526,6 +532,7 @@ var TopInstructions = React.createClass({
                 <Instructions
                   ref="instructions"
                   renderedMarkdown={renderedMarkdown}
+                  acapelaSrc={acapelaSrc}
                   onResize={this.adjustMaxNeededHeight}
                   inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                   aniGifURL={this.props.aniGifURL}
@@ -587,6 +594,8 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
+    acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,

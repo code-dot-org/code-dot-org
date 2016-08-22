@@ -5,24 +5,24 @@ vi:
         'Unplug1': Giới thiệu về khoa học máy tính
         'Maze': mê cung
         'Multi': Các lựa chọn chất liệu
-        Unplug2: suy nghĩ máy móc
-        Unplug3: lập trình đồ thị trên giấy
+        'Unplug2': suy nghĩ máy móc
+        'Unplug3': lập trình đồ thị trên giấy
         'Artist': nghệ sĩ
-        Unplug4: các bước lập trình
+        'Unplug4': các bước lập trình
         'Artist2': Nghệ sĩ 2
-        Unplug5: Các hàm
+        'Unplug5': Các hàm
         'Farmer': người nông dân
-        Unplug6: Điều kiện
+        'Unplug6': Điều kiện
         'Artist3': nghệ sĩ 3
         'Unplug7': Viết nhạc
         'Farmer2': Người nông dân 2
-        Unplug8: Trừu tượng
+        'Unplug8': Trừu tượng
         'Artist4': nghệ sĩ 4
         'Unplug9': Chương trình chuyển tiếp
         'Farmer3': người nông dân 3
         'Unplug10': Internet
         'Artist5': Nghệ sĩ 5
-        Unplug11: Gói gọn
+        'Unplug11': Gói gọn
         'MazeEC': mê cung
         'Bounce': Bật lại
         'Flappy': Flappy Bird

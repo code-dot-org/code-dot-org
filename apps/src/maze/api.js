@@ -88,8 +88,8 @@ var move = function (direction, id) {
       break;
   }
   Maze.executionInfo.queueAction(command, id);
-  if (Maze.wordSearch) {
-    Maze.wordSearch.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
+  if (Maze.subtype.isWordSearch()) {
+    Maze.subtype.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
   }
   if (Maze.shouldCheckSuccessOnMove()) {
     Maze.checkSuccess();
@@ -259,43 +259,43 @@ exports.loopHighlight = API_FUNCTION(function (id) {
  * whether or not we're a Bee level
  */
 exports.getNectar = API_FUNCTION(function (id) {
-  Maze.bee.getNectar(id);
+  Maze.subtype.getNectar(id);
 });
 
 exports.makeHoney = API_FUNCTION(function (id) {
-  Maze.bee.makeHoney(id);
+  Maze.subtype.makeHoney(id);
 });
 
 exports.atFlower = API_FUNCTION(function (id) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
   Maze.executionInfo.queueAction("at_flower", id);
-  return Maze.bee.isFlower(row, col, true);
+  return Maze.subtype.isFlower(row, col, true);
 });
 
 exports.atHoneycomb = API_FUNCTION(function (id) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
   Maze.executionInfo.queueAction("at_honeycomb", id);
-  return Maze.bee.isHive(row, col, true);
+  return Maze.subtype.isHive(row, col, true);
 });
 
 exports.nectarRemaining = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("nectar_remaining", id);
-  return Maze.bee.nectarRemaining(true);
+  return Maze.subtype.nectarRemaining(true);
 });
 
 exports.honeyAvailable = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_available", id);
-  return Maze.bee.honeyAvailable();
+  return Maze.subtype.honeyAvailable();
 });
 
 exports.nectarCollected = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("nectar_collected", id);
-  return Maze.bee.nectars_.length;
+  return Maze.subtype.nectars_.length;
 });
 
 exports.honeyCreated = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_created", id);
-  return Maze.bee.honey_;
+  return Maze.subtype.honey_;
 });

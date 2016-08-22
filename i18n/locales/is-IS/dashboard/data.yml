@@ -5,24 +5,24 @@ is:
         'Unplug1': Kynning á tölvunarfræði
         'Maze': Völundarhúsið
         'Multi': Alls konar val
-        Unplug2: Tölvunarmiðuð hugsun
-        Unplug3: Forritun rúðublaða
+        'Unplug2': Tölvunarmiðuð hugsun
+        'Unplug3': Forritun rúðublaða
         'Artist': Listamaðurinn
-        Unplug4: Algrím
+        'Unplug4': Algrím
         'Artist2': Listamaðurinn 2
-        Unplug5: Föll
+        'Unplug5': Föll
         'Farmer': Bóndinn
-        Unplug6: Skilyrði
+        'Unplug6': Skilyrði
         'Artist3': Listamaðurinn 3
         'Unplug7': Lagasmíð
         'Farmer2': Bóndinn 2
-        Unplug8: Greining kjarna
+        'Unplug8': Greining kjarna
         'Artist4': Listamaðurinn 4
         'Unplug9': Boðhlaupsforritun
         'Farmer3': Bóndinn 3
         'Unplug10': Internetið
         'Artist5': Listamaðurinn 5
-        Unplug11: Samantekt
+        'Unplug11': Samantekt
         'MazeEC': Völundarhúsið
         'Bounce': Skopp
         'Flappy': Fuglinn Flappy

@@ -89,5 +89,6 @@
   "whileTooltip": "Ponavlja umetnute akcije dok se ne dosegne zadani cilj.",
   "word": "Pronađi riječ",
   "yes": "Da",
-  "youSpelled": "Napisao si"
+  "youSpelled": "Napisao si",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

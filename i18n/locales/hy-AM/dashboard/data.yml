@@ -5,24 +5,24 @@ hy:
         'Unplug1': Ներածություն համակարգչային գիտության
         'Maze': The Maze
         'Multi': Բազմակի ընտրություն stuffs
-        Unplug2: հաշվողական Մտածմունք
-        Unplug3: Գրաֆիկի Թուղթ Ծրագրավորում
+        'Unplug2': հաշվողական Մտածմունք
+        'Unplug3': Գրաֆիկի Թուղթ Ծրագրավորում
         'Artist': The Artist
-        Unplug4: ալգորիթմները
+        'Unplug4': ալգորիթմները
         'Artist2': The Artist 2
-        Unplug5: գործառույթները
+        'Unplug5': գործառույթները
         'Farmer': The Farmer
-        Unplug6: conditionals
+        'Unplug6': conditionals
         'Artist3': The Artist 3
         'Unplug7': Song Writing
         'Farmer2': Ագարակատեր 2
-        Unplug8: աբստրակցիա
+        'Unplug8': աբստրակցիա
         'Artist4': Նկարիչը 4
         'Unplug9': Relay Ծրագրավորում
         'Farmer3': Ագարակատեր 3
         'Unplug10': Համացանց
         'Artist5': The Artist 5
-        Unplug11: Փաթեթավորեք-up
+        'Unplug11': Փաթեթավորեք-up
         'MazeEC': The Maze
         'Bounce': Ցատկում
         'Flappy': Flappy թռչուն

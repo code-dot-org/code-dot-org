@@ -1,196 +1,196 @@
 fi:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Johdanto tietojenkäsittelyyn
         desc: Tällä oppitunnilla käydään läpi johdanto tietojenkäsittelytieteeseen ja selitetään, mitä tietotekniikan ammatilainen tekee. Oppitunti antaa myös oppilaille mahdollisuuden samaistua tietotekniikka-ammattilaisen rooliin. Suosittelemme, että tunnilla käydään läpi myös tietotekniikan sanastoa leikin ja hauskanpidon varjolla.
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Laskennallinen ajattelu
         desc: Vain paperia ja kyniä apuna käyttäen, oppilaat oppivat neljä askelta laskennalliseen ajatteluun. Lyhyen johdannon jälkeen, oppilaat jaetaan ryhmiin, joissa he luovat ohjeita muille oppilaille tietyn hirviön piirtämiseksi (esivalittujen hirviöiden valikoimasta). Aluksi tehtävä täytyy osittaa. Sitten tiimit analysoivat kaikki hirviöt valikoimassa yhteisten muotojen osalta, eristävät erilaiset yksityiskohdat hirviöistä ja käyttävät tätä tietoa luoden algoritmin (ohjeen) toiselle tiimille tietyn hirviön piirtämiseksi. Tiimit vaihtavat algoritmeja toisen ryhmän kanssa ja piirtävät hirviön algoritmiin perustuen. Vastaako kuva alkuperäisen tiimin tarkoittamaa?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Ruutupaperiohjelmointi
         desc: Ohjelmoimalla toisensa piirtämään kuvia, oppilaat alkavat ymmärtää, mistä ohjelmoinnissa on kyse. Tämä oppitunti alkaa oppilaiden neuvoessa toisiaan värittämään neliöitä piirturipaperille yrittäessään tehdä mallinmukaisen kuvan. Jos aikaa on, oppitunti voi päättyä kuviin, joita oppilaat ovat itse tehneet.
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritmit
         desc: Tällä oppitunnilla käsitellään algoritmeja. Hyödyntäen tangram-muotoja ja ruutupaperia, ensimmäiset harjoitukset osoittavat miten tärkeää on tehdä jokaisesta ohjeesta niin selkeä ja yksiselitteinen, kuin mahdollista. Tämän jälkeen oppilaat saavat tutkia, miten monella eri tavalla paperin voi taivutella suorakaiteen muotoiseksi ja samalla huomata, miten toiset tavat vaativat enemmän taitoksia, kuin toiset.
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funktiot
         desc: Tällä oppitunnilla oppilaat tekevät auringonkerääjän narusta, helmistä ja erityisestä koristeesta. Oppilaat seuraavat sarjan toistuvia vaiheita, jonka jälkeen heidät pyydetään tunnistamaan tiettyjä taitojoukkoja, joita toistetaan useita kertoja. Kun nuo taidot ovat määritelty, niitä kutsutaan pääohjelmasta ja koko kaunis luomisprosessi tallennetaan yhdelle paperiarkille. Lopullinen ohjelma suunnataan koko luokalle, riippumatta onko niiden tyyppi naru, helmi vai koriste. Tämän tehokkaaseen käyttöön oppilaiden täytyy yleistää materiaaliensa yksityiskohdat ja heidän täytyy luoda epämääräisiä ilmaisuja oppilaan tarvikkeisiin. Tämä yleisten paikannäyttäjien käyttö on loistava johdanto muuttujiin.
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Ehdot
         desc: Tämä on luokkapeli. Ehdollisuuden, ehtolausekkeiden ja silmukoiden ideoihin tutustumisen jälkeen, luokka voi harjoitella yhdessä käyttäen etukäteen valmistettua ohjelmaa, korttipakkaa ja arpaonnea.
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Sävellys
         desc: Laulujen sanojen lukeminen on intuitiivista useimmille opiskelijoille. Otamme toiminnon, joka on jo yleistä osaamista ja muunnamme sen vankaksi koulutukseksi funktioiden määrittämiseksi ja kutsumiseksi. Kun oppilaat ovat tutustuneet määritys/kutsu prosessiin, lisäämme uusia kyvykkyyksiä, joita saadaan parametrien välittämisessä funktiokutsuille.
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstraktio
         desc: Tämä toiminta yhdistää opiskelijoidesi jokapäiväiset rutiinit ja Mad-Lib tyyppisen ajatuspelin auttaen luokkaasi oppimaan abstraktioiden tehokkuuden.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Releohjelmointi
         desc: Oppitunti jatkaa edellisen toiminnon ideasta (4. Paperiohjelmointi) ja käyttää noita taitoja korostamaan tietyssä järjestyksessä toimivien ohjelmien viimeistelyn tärkeyttä ja kuinka ohjelmat pitää tarkastaa vikojen varalta.
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Internetti
         desc: Tällä tunnilla oppilaat teeskentelevät virtaavansa läpi internetin samalla oppien verkko-osoitteista, internet protokollista (IP) ja nimipalvelujärjestelmästä (DNS).
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Yhteenveto
         desc: Ensimmäisen 20 tunnin sarjan viimeinen kertaus auttaa luokkaa elämään uudestaan suosikkihetkensä, antaen heille seuraavia askeleita, joita he itse voivat ottaa jos he haluavat jatkaa ohjelmointimatkallaan.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Iloiset kartat
         desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja (sarja ohjeita).
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Liikuta, liikuta
         desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja (sarja ohjeita).
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Tosielämän algoritmit: kylvä siemen'
         desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä, käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Rakennetaan perustus
         desc: Opiskelijat kokoavat rakenteen käyttäen annettuja tarvikkeita. Rakenteiden täytyy suorittaa tehtävä (saavuttaa tietty korkeus tai kannattaa tietty paino) ja opiskelijat keskustelevat sitkeyden merkitystä, kun asioista tulee monimutkaisempia.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Mennään silmukoille
         desc: Tällä oppitunnilla tutustutetaan silmukoiden ohjelmointikonseptiin (toistuvat käskyt) tanssin kautta. Oppilaat oppivat yksinkertaisen koreografian, joka heidät opetetaan toistamaan.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Releohjelmointi
         desc: 'Opiskelijat juoksevat viestijuoksun, jossa he juoksevat pihan halki kirjoittaen algoritmin joka perustuu "paperiohjelmoinnin" kuvaan. He voivat kirjoittaa vain yhden ohjeen kerrallaan ja jos jossakin on virhe, heidän täytyy pyyhkiä kaikki siihen pisteeseen saakka.'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Ehtolausekkeet
         desc: 'Ehtolausekkeiden oppimiseksi opiskeliat pelaavat korttipeliä ja luovat sääntöjä kuten "Jos saan punaisen kortin, saan pisteen" ja "Jos saan mustan kortin, sinä saat pisteen."'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Suuri tapahtuma
         desc: 'Opiskelijat tutustutetaan "tapahtumien" ohjelmointikäsitteeseen, ne ovat toimenpiteitä, joita tietokone monitoroi koko ajan. Opettaja painelee paperisen kaukosäätimen nappuloita ja opiskelijat reagoivat riippuen mitä nappulaa painettiin.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Menossa turvallisesti
         desc: Internet on voimakas, mutta joskus vaarallinenkin paikka. Opettajat neuvovat kuinka pysyä turvassa internettiä selaillessa.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Ruutupaperiohjelmointi
         desc: Opiskelijat kirjoittavat algoritmin (käskyjen joukon) käyttäen tiettyjä ennaltamäärättyjä komentoja joilla ohjataan luokkakavereita piirroksen jäljentämisessä.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Tosielämän algoritmit: paperilentokoneet'
         desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme, esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Binäärikorut
         desc: Opiskelijat luovat rannekoruja nimensä ensimmäisen kirjaimen binäärimuodosta. Oppilaat oppivat, että tietoa voidaan esittää ja tallentaa useammalla kuin yhdellä tavalla.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Digitaalinen jalanjälkesi
         desc: 'Opettajat kertovat oppilailleen, että omien tietojensa lisääminen verkkoon luo digitaalisen jalanjäljen tai "polun" jolla on seurauksensa.'
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Laskennallinen ajattelu
         desc: Oppilaat käyttävät automatisointiajattelun vaiheita (osiin jakaminen, mallien havainnointi, abstraktio, algoritmi) päätelläkseen kuinka pelata peliä, jonka mukana ei tulekaan ohjeita.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Funktionaaliset auringonkerääjät
         desc: Opiskelijat luovat algoritmin muuttujilla ja funktioilla (koodipätkät joita haluat käyttää uudestaan ja uudestaan) luodakseen auringonkerääjän käyttäen narua ja helmiä.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Parametroitu sävellys
         desc: Opiskelijat käyttävät kuoron käsitettä oppiakseen muuttujien välityksestä (joilla voi muokata funktiota ilman että koko funktiota tarvitsee kirjoittaa uudestaan).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Tosielämän algoritmit: Noppakisa'
         desc: Tällä oppitunnilla havainnollistaan kuinka algoritmejä käytetään arkielämässämme. Oppilaat tunnistavat ja kirjoittavat algoritmin noppakisapelille.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Opiskelijat lähettävät viestejä, jotka esittävät lukuisia internetin siirtomenetelmiä käyttäen paperilappusia.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Joukkoistaminen
         desc: Opskelijat käyttävät joukkoistamista, tietojenkäsittelytieteessä yleistä ongelmanratkaisutekniikkaa, ratkaistakseen yhdessä luokkana tehtävän tehokkaammin kuin että yksi opiskelija yrittäisi sitä yksinään.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Digitaalinen kansalaisuus
         desc: Opiskelijat tutkivat yksityisen ja henkilökohtaisen tiedon eroa, erottaen mitä on ja mitä ei ole turvallista jakaa verkossa.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Tangram-algoritmit
         desc: Tämä oppitunti osoittaa meille jotakin tärkeää algoritmeistä. Jos pidät algoritmin yksinkertaisena niin sille löytyy monia käyttötapoja. Jos haluat, että kaikki päätyvät samaan lopputulokseen, niin algoritmisi tarvitsee enemmän yksityiskohtia.
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Kirjekuorimuuttujat
         desc: Muuttujat antavat vapautta ohjelmoinnissa. Tämä oppitunti selittää mitä muuttujat ovat ja kuinka voimme käyttää niitä monin eri tavoin. Käytä tätä toimintoa ennen (tai yhdessä) abstraktiotunnin kanssa, jotta idea tarttuu.
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Mad Glibs
         desc: Abstraktio on yksi tärkeimmistä tietojenkäsittelijän ymmärrettävistä taidoista. Tässä toiminnossa laitat opiskelijasi analysoimaan tarinoita erojen varalta jotta he voivat yleistää ne. Näistä abstraktoiduista tarinoista tulee malleja hauskoille ja hassuille uusille tarinoille.
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: Silmukkahupia
         desc: Tiedämme, että silmukat antavat meidän tehdä asioita uudestaan ja uudestaan, mutta nyt opimme kuinka käyttää silmukoita sisäänrakennettujen lisärakenteiden kanssa.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Parametroitu laulunkirjoitus
         desc: 'Eräs hienoimmista tietojenkäsittelytieteen rakenteista on funktio. Funktio (joita joskus kutsutaan proseduureiksi) ovat pienoisohjelmia, joita voit käyttää uudestaan ja uudestaan suuremman ohjelmasi sisältä. Tällä oppitunnilla opiskelijat intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi on niinkin kätevä käytäntö.  '
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: Binäärikuvat
         desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat kurssimme opettivat opiskelijoille, että informaatiota voidaan esittää monenlaisina binäärivaihtoehtoina. Tällä oppitunnilla viedään käsitettä askel pidemmälle, näyttäessään kuinka tietokone voi tallentaa jopa monimutkaisempaa informaatiota (kuen kuvia ja värejä) myös binäärisenä.
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Tietokonepelit ja koordinaattitasot
         desc: Tutustu miten rakastamasi videopelit perustuvat matematiikkaan. Tutki kuinka matemaattiset lausekkeet ja koordinaattitaso auttavat ymmärtämään videopelien toimintaa. Sitten voit alkaa suunnitella videopeliä, jonka tulet tekemään.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Sopimukset, lähtöjoukko ja maalijoukko
         desc: Sopimukset tarjoavat meille tavan ymmärtää funktioita ja keskustella niistä. Tässä oppitunnissa katsomme kuinka sopimukset auttavat meitä hahmottamaan uuden ohjelmointikielen tai funktion.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Suunnitteluresepti
         desc: 'Viimeisessä vaiheessa opiskelijat kirjoittivat joitain hyvin yksinkertaisia funktioita - kehittyneemmät funktiot vaativat syvällisempää lähestymistapaa. Suunnitteluresepti on rakenteellinen lähestymistapa funktioiden kirjoittamiseen. Se sisältää myös testitapausten kirjoittamista, joilla voidaan tutkia toimiiko funktio joillakin arvoilla odotetusti.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Totuusarvot ja logiikka
         desc: Totuusarvot ovat neljäs ja viimeinen tietotyyppi, jonka opit tällä kurssilla. Tässä harjoituksessa opit mitä totuusarvot ovat, ja kuinka ne auttavat kirjoittamaan loogisesti toimivia funktioita
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Ehtolauseet ja paloittaiset funktiot
         desc: Parametrit, joita välitämme funktiolle, aiheuttavat muutoksia saatavaan tulokseen, jotka riippuvat käytettävästä mallista. Oletetaan että haluamme joidenkin parametrin arvojen luovan tuloksen käyttäen yhtä mallia mutta muut arvot käyttävät toista mallia. Tämän aikaansamiseksi tarvitaan ehtolauseita...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Törmäyksentunnistus ja Pythagoraan lause
         desc: Näytöllä olevien kohteiden toisiinsa osumisen tunnistus on tärkeä osa useimmissa peleissä. Tällä oppitunnilla katsomme kuinka Pythagoraan lausetta ja etäisyysfunktiota voidaan käyttää mittaamaan kahden pisteen välinen etäisyys tasolla, ja sitten päätellä koskevatko nämä pisteet (tai pelin hahmot) toisiaan.
         video: alg_16_biggame_collision_detection

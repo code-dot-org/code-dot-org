@@ -89,5 +89,6 @@
   "whileTooltip": "Endurtaka aðgerðirnar í kubbnum þar til endamarki er náð.",
   "word": "Finna orðið",
   "yes": "Já",
-  "youSpelled": "Þú stafaðir"
+  "youSpelled": "Þú stafaðir",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }
