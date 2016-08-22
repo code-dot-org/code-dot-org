@@ -175,10 +175,12 @@ export function setInitialAnimationList(serializedAnimationList) {
   // Convert frameRates to frameDelays.
   for (let key in serializedAnimationList.propsByKey) {
     let animation = serializedAnimationList.propsByKey[key];
-    if (animation.frameDelay === undefined && animation.frameRate !== undefined) {
-      animation.frameDelay = Math.round(30 / animation.frameRate);
-    } if (animation.frameDelay === null) {
-      animation.frameDelay = 2;
+    if (!animation.frameDelay) {
+      if (typeof animation.frameRate === 'number' && !isNaN(animation.frameRate)) {
+        animation.frameDelay = Math.round(30 / animation.frameRate);
+      } else {
+        animation.frameDelay = 2;
+      }
     }
   }
 
