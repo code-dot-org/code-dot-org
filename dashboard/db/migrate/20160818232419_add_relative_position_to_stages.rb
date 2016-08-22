@@ -1,7 +1,7 @@
 class AddRelativePositionToStages < ActiveRecord::Migration
   def up
     rename_column :stages, :position, :absolute_position
-    add_column :stages, :relative_position, :string
+    add_column :stages, :relative_position, :integer
 
     Stage.reset_column_information
     # Go through each script, and calculate relative_position for lockable/unlockable
@@ -13,10 +13,10 @@ class AddRelativePositionToStages < ActiveRecord::Migration
       script.stages.each do |stage|
         if stage.lockable?
           lockable_count += 1
-          stage.update!(relative_position: lockable_count.to_s)
+          stage.update!(relative_position: lockable_count)
         else
           nonlockable_count += 1
-          stage.update!(relative_position: nonlockable_count.to_s)
+          stage.update!(relative_position: nonlockable_count)
         end
       end
     end
@@ -24,7 +24,7 @@ class AddRelativePositionToStages < ActiveRecord::Migration
     # cases just set relative_position to absolute_position
     Stage.all.each do |stage|
       if stage.relative_position.nil?
-        stage.update!(relative_position: stage.absolute_position.to_s)
+        stage.update!(relative_position: stage.absolute_position)
       end
     end
     change_column_null :stages, :relative_position, false
