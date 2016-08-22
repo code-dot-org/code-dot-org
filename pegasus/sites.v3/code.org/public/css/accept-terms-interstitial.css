@@ -11,6 +11,10 @@
   right: auto;
   height: 100%;
 }
+#terms-modal .modal-content {
+  margin: 0 !important;
+  padding: 0 30px !important;
+}
 #terms-modal .modal-content p {
   font-size: 12px;
   color: #333;
@@ -28,12 +32,22 @@
   border: 1px solid #bbb;
   padding: 20px;
 }
+#terms-modal .primary-button {
+  background-color: #ffa400;
+  border: 1px solid #ffa400;
+  color: white;
+  border-radius: 4px;
+  height: 34px;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: none;
+}
 #terms-modal .disabled-button {
   background-color: #c6cacd;
   border-color: #c6cacd;
   color: #4d575f;
 }
-#terms-modal .secondary-button {
+#terms-modal .secondary {
   background-color: #0094ca;
   border-color: #0094ca;
   color: white;
