@@ -104,5 +104,4 @@ class K5OnlineProfessionalDevelopmentPostSurvey
 
     result
   end
-
 end

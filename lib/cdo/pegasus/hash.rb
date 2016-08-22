@@ -1,5 +1,4 @@
 class Hash
-
   def slice_keys(*keys)
     h = {}
     each_pair do |key, value|
@@ -17,5 +16,4 @@ class Hash
     end
   end
   alias_method :to_query, :to_param unless method_defined?(:to_query)
-
 end

@@ -82,5 +82,4 @@ class RateLimiterTest < ActiveSupport::TestCase
     def handle(messages)
     end
   end
-
 end

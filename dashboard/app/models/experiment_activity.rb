@@ -10,7 +10,6 @@
 #
 
 class ExperimentActivity < ActiveRecord::Base
-
   belongs_to :activity
 
   # Experiments
