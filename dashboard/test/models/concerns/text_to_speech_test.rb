@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class TextToSpeechTest < ActiveSupport::TestCase
-
   setup do
     @level_without_instructions = Level.create
     @level_with_instructions = Level.create({

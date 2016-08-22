@@ -326,5 +326,4 @@ class Level < ActiveRecord::Base
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
-
 end

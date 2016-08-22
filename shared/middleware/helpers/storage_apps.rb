@@ -2,7 +2,6 @@
 # StorageApps
 #
 class StorageApps
-
   class NotFound < Sinatra::NotFound
   end
 

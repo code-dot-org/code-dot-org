@@ -152,17 +152,12 @@ CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information** <br/>
-Rebecca Malones<br/>
-rmalones@browardschools.com
 
-Ted Myers<Br/> 
-ted.myers@browardschools.com
+Lisa Milenkovic (Primary)<br/>
+lisa.milenkovic@browardschools.com<br/>
 
 Christine Semisch<br/>
 christine.semisch@browardschools.com<br/>
-
-Lisa Milenkovic<br/>
-lisa.milenkovic@browardschools.com<br/>
 
 
 <br/>
