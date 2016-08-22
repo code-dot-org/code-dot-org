@@ -25,28 +25,22 @@ class Pd::WorkshopAttendanceTest < ActionDispatch::IntegrationTest
   end
 
   test 'update is idempotent' do
-    @workshop.start!
-    @teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true
     assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)
+    login_as @organizer
 
     # Mark attended twice
-    login_as @organizer
-    patch attendance_url, attendance_params(true)
-    assert_response :success
-    assert_equal 1, Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop).count
-
-    patch attendance_url, attendance_params(true)
-    assert_response :success
-    assert_equal 1, Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop).count
+    2.times do
+      patch attendance_url, attendance_params(true)
+      assert_response :success
+      assert_equal 1, Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop).count
+    end
 
     # Mark unattended twice
-    patch attendance_url, attendance_params(false)
-    assert_response :success
-    assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)
-
-    patch attendance_url, attendance_params(false)
-    assert_response :success
-    assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)
+    2.times do
+      patch attendance_url, attendance_params(false)
+      assert_response :success
+      assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)
+    end
   end
 
   private
@@ -55,7 +49,7 @@ class Pd::WorkshopAttendanceTest < ActionDispatch::IntegrationTest
     "/api/v1/pd/workshops/#{@workshop.id}/attendance"
   end
 
-  def attendance_params(attended = true)
+  def attendance_params(attended)
     attendances = attended ? [{id: @teacher.id}] : []
     {
       pd_workshop: {
