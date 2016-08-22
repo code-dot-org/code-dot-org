@@ -144,7 +144,7 @@ const PiskelEditor = React.createClass({
       sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
       frameSize: {x: message.frameSizeX, y: message.frameSizeY},
       frameCount: message.frameCount,
-      frameDelay: message.frameDelay
+      frameDelay: message.frameRate
     });
   },
 
