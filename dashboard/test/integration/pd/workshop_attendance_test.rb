@@ -25,7 +25,6 @@ class Pd::WorkshopAttendanceTest < ActionDispatch::IntegrationTest
   end
 
   test 'update is idempotent' do
-    assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)
     login_as @organizer
 
     # Mark attended twice
