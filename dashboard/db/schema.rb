@@ -672,7 +672,7 @@ ActiveRecord::Schema.define(version: 20160818232419) do
     t.datetime "updated_at"
     t.string   "flex_category",     limit: 255
     t.boolean  "lockable"
-    t.string   "relative_position", limit: 255, null: false
+    t.integer  "relative_position", limit: 4,   null: false
   end
 
   create_table "survey_results", force: :cascade do |t|

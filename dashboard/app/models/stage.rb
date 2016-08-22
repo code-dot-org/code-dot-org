@@ -10,7 +10,7 @@
 #  updated_at        :datetime
 #  flex_category     :string(255)
 #  lockable          :boolean
-#  relative_position :string(255)
+#  relative_position :integer          not null
 #
 
 # Ordered partitioning of script levels within a script
@@ -19,6 +19,10 @@ class Stage < ActiveRecord::Base
   has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
+
+  # A stage has an absolute position and a relative position. The difference between the two is that relative_position
+  # only accounts for other stages that have the same lockable setting, so if we have two lockable stages followed
+  # by a non-lockable stage, the third stage will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :name, scope: :script_id
@@ -29,7 +33,7 @@ class Stage < ActiveRecord::Base
   end
 
   def to_param
-    relative_position
+    relative_position.to_s
   end
 
   def unplugged?

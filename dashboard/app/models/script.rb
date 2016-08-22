@@ -295,7 +295,7 @@ class Script < ActiveRecord::Base
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
     self.script_levels.to_a.find do |sl|
-      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_s && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_i && sl.position == puzzle_position.to_i
     end
   end
 
