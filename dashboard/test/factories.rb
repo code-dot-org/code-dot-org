@@ -311,12 +311,14 @@ FactoryGirl.define do
     sequence(:name) { |n| "Bogus Stage #{n}" }
     script
 
-    position do |stage|
-      (stage.script.stages.maximum(:position) || 0) + 1
+    absolute_position do |stage|
+      (stage.script.stages.maximum(:absolute_position) || 0) + 1
     end
 
-    url_param do |stage|
-      ((stage.script.stages.maximum(:position) || 0) + 1).to_s
+    # relative_position is actually the same as absolute_position in our factory
+    # (i.e. it doesnt try to count lockable/non-lockable)
+    relative_position do |stage|
+      ((stage.script.stages.maximum(:absolute_position) || 0) + 1).to_s
     end
   end
 

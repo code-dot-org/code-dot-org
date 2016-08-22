@@ -137,7 +137,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.position,
+        stage_position: @script_level.stage.absolute_position,
         level_position: @script_level.position
       )
     end
@@ -312,14 +312,14 @@ module LevelsHelper
       # puzzle-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
         puzzle: script_level.position
       }, default: nil)
 
       # stage-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
       }, default: nil) if enabled.nil?
 
       # script-specific

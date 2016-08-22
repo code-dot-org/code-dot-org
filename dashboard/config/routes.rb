@@ -140,7 +140,7 @@ Dashboard::Application.routes.draw do
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [], path: "/stage", format: false do
+    resources :stages, only: [], path: "/stage", param: 'position', format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
@@ -150,7 +150,7 @@ Dashboard::Application.routes.draw do
     end
 
     # /s/xxx/lockable/yyy/puzzle/zzz
-    resources :lockable_stages, only: [], path: "/lockable", format: false do
+    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp

@@ -82,9 +82,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Stage1', first.name
     assert_equal 'Stage2', second.name
     assert_equal 'Stage3', third.name
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    assert_equal 3, third.position
+    assert_equal 1, first.absolute_position
+    assert_equal 2, second.absolute_position
+    assert_equal 3, third.absolute_position
 
     # Reupload a script of the same filename / name, but lacking the middle stage.
     scripts,_ = Script.setup([script_file_middle_missing_reversed])
@@ -93,8 +93,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     first = scripts[0].stages[0]
     second = scripts[0].stages[1]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
+    assert_equal 1, first.absolute_position
+    assert_equal 2, second.absolute_position
     assert_equal 'Stage3', first.name
     assert_equal 'Stage1', second.name
   end
@@ -117,40 +117,40 @@ class ScriptTest < ActiveSupport::TestCase
 
     script.stages
 
-    assert_equal [1, 2, 3], script.stages.collect(&:position)
+    assert_equal [1, 2, 3], script.stages.collect(&:absolute_position)
   end
 
   test 'script_levels are in order' do
     script = create(:script)
 
-    s1 = create(:stage, script: script, position: 1)
+    s1 = create(:stage, script: script, absolute_position: 1)
     last = create(:script_level, script: script, stage: s1, chapter: 3)
     second = create(:script_level, script: script, stage: s1, chapter: 2)
     create(:script_level, script: script, stage: s1, chapter: 1)
     second.move_to_bottom
     last.move_to_bottom
 
-    s2 = create(:stage, script: script, position: 2)
+    s2 = create(:stage, script: script, absolute_position: 2)
     create(:script_level, script: script, stage: s2, chapter: 4)
     create(:script_level, script: script, stage: s2, chapter: 5)
 
-    s3 = create(:stage, script: script, position: 3)
+    s3 = create(:stage, script: script, absolute_position: 3)
     last = create(:script_level, script: script, stage: s3, chapter: 7)
     create(:script_level, script: script, stage: s3, chapter: 6)
     last.move_to_bottom
 
-    assert_equal [1, 2, 3], script.stages.collect(&:position)
+    assert_equal [1, 2, 3], script.stages.collect(&:absolute_position)
 
-    assert_equal [1, 1, 1, 2, 2, 3, 3], script.script_levels.collect(&:stage).collect(&:position)
+    assert_equal [1, 1, 1, 2, 2, 3, 3], script.script_levels.collect(&:stage).collect(&:absolute_position)
     assert_equal [1, 2, 3, 1, 2, 1, 2], script.script_levels.collect(&:position)
   end
 
   test 'calling next_level on last script_level points to next stage' do
     script = create(:script, name: 'test2')
-    first_stage = create(:stage, script: script, position: 1)
+    first_stage = create(:stage, script: script, absolute_position: 1)
 
     first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
-    second_stage = create(:stage, script: script, position: 2)
+    second_stage = create(:stage, script: script, absolute_position: 2)
     second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
     create(:script_level, script: script, stage: second_stage, position: 2)
 
@@ -285,9 +285,9 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_level_by_url_param_and_position returns nil when not found' do
+  test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
     artist = Script.find_by_name('artist')
-    assert artist.get_script_level_by_url_param_and_position(11, 1, false).nil?
+    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'gets script cache from memcached (or fake memcached)' do

@@ -4,7 +4,7 @@ module ScriptLevelsHelper
 
     if script_level.has_another_level_to_go_to?
       if script_level.end_of_stage?
-        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.position}}
+        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.absolute_position}}
 
         # End-of-Stage Experience is only enabled for:
         # stages except for the last stage of a script

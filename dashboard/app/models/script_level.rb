@@ -153,7 +153,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def report_bug_url(request)
-    message = "Bug in Course #{script.name} Stage #{stage.position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} Stage #{stage.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
@@ -201,8 +201,8 @@ class ScriptLevel < ActiveRecord::Base
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level
-      if previous_level.stage.position != stage.position
-        summary[:previous] = [previous_level.stage.position, previous_level.position]
+      if previous_level.stage.absolute_position != stage.absolute_position
+        summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
       end
     else
       # This is the first level in the script
@@ -212,7 +212,7 @@ class ScriptLevel < ActiveRecord::Base
     # Add a next pointer if it's not the obvious (level+1)
     if end_of_stage?
       if next_level
-        summary[:next] = [next_level.stage.position, next_level.position]
+        summary[:next] = [next_level.stage.absolute_position, next_level.position]
       else
         # This is the final level in the script
         summary[:next] = false
