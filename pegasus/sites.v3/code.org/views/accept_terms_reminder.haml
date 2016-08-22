@@ -1,3 +1,9 @@
+%link{:href=>"/css/accept-terms-interstitial.css", :rel=>"stylesheet"}
+
+#terms_interstitial
+  .container_responsive
+    #terms_interstitial
+
 .accept-terms-reminder
   We have updated our
   %a{href: CDO.code_org_url('/tos'), target: '_blank'} Terms of Service
@@ -10,5 +16,17 @@
 
 :javascript
   $("#review-terms").click(function () {
-    $('#terms-modal').modal('show')
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/terms_interstitial',
+      complete: function(data, status) {
+        if (data.responseText == "" || status !== "success") {
+          $('#terms_interstitial').css({display: "none"});
+          $("#terms-modal").modal('hide');
+        } else {
+          $('#terms_interstitial').html(data.responseText, status);
+          $("#terms-modal").modal('show');
+        }
+      }
+    });
   });
