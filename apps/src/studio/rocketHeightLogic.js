@@ -1,6 +1,5 @@
+import { Direction } from './constants';
 var CustomGameLogic = require('./customGameLogic');
-var studioConstants = require('./constants');
-var Direction = studioConstants.Direction;
 var codegen = require('../codegen');
 var api = require('./api');
 require('../utils'); // Provides Function.prototype.inherits

@@ -1,7 +1,5 @@
 var CustomGameLogic = require('./customGameLogic');
-var studioConstants = require('./constants');
-var Direction = studioConstants.Direction;
-var Position = studioConstants.Position;
+import {Direction, Position} from './constants';
 var codegen = require('../codegen');
 var api = require('./api');
 var utils = require('../utils'); // Provides Function.prototype.inherits
@@ -184,7 +182,7 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   // reinvertY
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
   if (this.staticPlayer) {
-    playerSprite.dir = studioConstants.Direction.NONE;
+    playerSprite.dir = Direction.NONE;
   }
 };
 
