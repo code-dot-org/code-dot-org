@@ -38,7 +38,6 @@ def http_vary_add_type(vary,type)
 end
 
 class Documents < Sinatra::Base
-
   def self.get_head_or_post(url,&block)
     get(url,&block)
     head(url,&block)
@@ -490,5 +489,4 @@ class Documents < Sinatra::Base
   end
 
   use CurriculumRouter
-
 end

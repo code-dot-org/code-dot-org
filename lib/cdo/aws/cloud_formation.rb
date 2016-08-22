@@ -13,7 +13,6 @@ require 'digest'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFormation
-
     # Hard-coded values for our CloudFormation template.
     TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
@@ -384,8 +383,6 @@ module AWS
         local_vars ||= @@local_variables
         ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_vars.instance_eval{binding})
       end
-
     end
-
   end
 end

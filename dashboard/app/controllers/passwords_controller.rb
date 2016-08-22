@@ -1,8 +1,8 @@
 class PasswordsController < Devise::PasswordsController
-  skip_before_filter :require_no_authentication
-  prepend_before_filter :require_no_or_admin_authentication
+  skip_before_action :require_no_authentication
+  prepend_before_action :require_no_or_admin_authentication
 
-  append_after_filter :show_reset_url_if_admin, only: :create
+  append_after_action :show_reset_url_if_admin, only: :create
 
   protected
 

@@ -12,7 +12,6 @@ require 'open-uri'
 require 'httparty'
 
 class Youtube
-
   # Process a video with a YouTube identifier.
   # If filename is provided, transcode the local file with ffmpeg.
   # If no filename is provided, download the transcoded video from YouTube.

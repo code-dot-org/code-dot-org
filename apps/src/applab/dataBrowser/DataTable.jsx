@@ -14,7 +14,7 @@ import { changeView } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../color';
 import { connect } from 'react-redux';
-import applabMsg from '../locale';
+import applabMsg from '@cdo/applab/locale';
 
 const MAX_TABLE_WIDTH = 970;
 
