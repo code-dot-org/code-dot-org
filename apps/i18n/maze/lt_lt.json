@@ -89,5 +89,6 @@
   "whileTooltip": "Pakartok sujungtus veiksmus, kol bus pasiektas finišas.",
   "word": "Surast žodį",
   "yes": "Taip",
-  "youSpelled": "Tu įvedei"
+  "youSpelled": "Tu įvedei",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

@@ -18,7 +18,6 @@
 require 'cdo/hip_chat'
 
 class FeatureModeManager
-
   # A map from mode symbol to gatekeeper and dcdo settings. The gatekeeper settings are
   # broken down into gatekeeper_general_settings (which apply to all tutorials) and
   # gatekeeper_hoc_tutorial_settings (which apply to high-scale HOC tutorials only).
@@ -152,5 +151,4 @@ class FeatureModeManager
       end
     end
   end
-
 end

@@ -89,5 +89,6 @@
   "whileTooltip": "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego.",
   "word": "Znajdź słowa",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś"
+  "youSpelled": "Przeliterowałeś",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

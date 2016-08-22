@@ -59,8 +59,8 @@
     "hide_animation_mode": "false",
     "start_blocks": "var redSprite = createSprite(50, 20);\r\nredSprite.shapeColor = \"red\";\r\nredSprite.velocityX = 1.5;\r\nredSprite.velocityY = 2;\r\nconsole.log(\"red sprite speed and direction:\");\r\nconsole.log(redSprite.getSpeed());\r\nconsole.log(redSprite.getDirection());\r\n\r\nvar blueSprite = createSprite(50, 230);\r\nblueSprite.shapeColor = \"blue\";\r\nblueSprite.velocityX = 1;\r\nblueSprite.velocityY = -0.4;\r\nconsole.log(\"blue sprite speed and direction:\");\r\nconsole.log(blueSprite.getSpeed());\r\nconsole.log(blueSprite.getDirection());\r\n\r\nvar greenSprite = createSprite(50, 380);\r\ngreenSprite.shapeColor = \"green\";\r\ngreenSprite.velocityX = 2;\r\ngreenSprite.velocityY = -2;\r\nconsole.log(\"green sprite speed and direction:\");\r\nconsole.log(greenSprite.getSpeed());\r\nconsole.log(greenSprite.getDirection());\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",
-    "contained_level_names": null,
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

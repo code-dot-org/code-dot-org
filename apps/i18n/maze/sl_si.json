@@ -89,5 +89,6 @@
   "whileTooltip": "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke.",
   "word": "Poišči besedo",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval"
+  "youSpelled": "Ti si črkoval",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

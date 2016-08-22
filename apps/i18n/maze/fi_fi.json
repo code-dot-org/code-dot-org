@@ -89,5 +89,6 @@
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
   "word": "Etsi sana",
   "yes": "Kyllä",
-  "youSpelled": "Kirjoitit"
+  "youSpelled": "Kirjoitit",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

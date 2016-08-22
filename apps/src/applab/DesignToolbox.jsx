@@ -1,6 +1,6 @@
 var React = require('react');
 var DesignToolboxElement = require('./DesignToolboxElement');
-var applabMsg = require('./locale');
+var applabMsg = require('@cdo/applab/locale');
 
 var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 

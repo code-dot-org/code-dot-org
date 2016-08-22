@@ -266,9 +266,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'no more debug' do
     # this action is now in AdminReportsController and requires admin privileges
-    assert_raises AbstractController::ActionNotFound do
+    assert_raises ActionController::UrlGenerationError do
       get :debug
     end
   end
-
 end
