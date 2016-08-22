@@ -14,7 +14,7 @@ var NextTurn = constants.NextTurn;
  * Note: x/y represent x/y of center in gridspace
  * @extends {Collidable}
  */
-export class Item extends Collidable {
+export default class Item extends Collidable {
   constructor(options) {
     // call collidable constructor
     super(options);
@@ -436,7 +436,7 @@ export class Item extends Collidable {
    * @override
    */
   startCollision(key) {
-    var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
+    var newCollisionStarted = super.startCollision.call(this, key);
     if (newCollisionStarted) {
       if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
         Studio.trackedBehavior.touchedHazardCount++;
