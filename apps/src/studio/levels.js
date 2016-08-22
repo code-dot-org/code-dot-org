@@ -1,9 +1,7 @@
+import {Direction, Emotions} from './constants';
 var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
-var constants = require('./constants');
-var Direction = constants.Direction;
-var Emotions = constants.Emotions;
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;

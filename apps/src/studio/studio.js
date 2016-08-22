@@ -8,13 +8,19 @@
 'use strict';
 
 import $ from 'jquery';
+import Collidable from './collidable';
+import * as constants from './constants';
+import Item from './Item';
+import _ from 'lodash';
+import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Sprite from './Sprite';
+import { GridMove, GridMoveAndCancel } from './spriteActions';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var studioMsg = require('./locale');
 var skins = require('../skins');
-var constants = require('./constants');
 var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -23,22 +29,16 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
 var dom = require('../dom');
-var Collidable = require('./collidable');
-var Sprite = require('./Sprite');
-var Projectile = require('./projectile');
-var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var Hammer = require('../hammer');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var annotationList = require('../acemode/annotationList');
-var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
@@ -5292,10 +5292,10 @@ Studio.moveSingle = function (opts) {
 
   if (level.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
-      sprite.addAction(new spriteActions.GridMoveAndCancel(
+      sprite.addAction(new GridMoveAndCancel(
           deltaX, deltaY, level.slowExecutionFactor));
     } else {
-      sprite.addAction(new spriteActions.GridMove(
+      sprite.addAction(new GridMove(
           deltaX, deltaY, level.slowExecutionFactor));
     }
 

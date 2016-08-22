@@ -1,6 +1,4 @@
-var studioConstants = require('./constants');
-var Direction = studioConstants.Direction;
-var Position = studioConstants.Position;
+import { Direction, Position } from './constants';
 var codegen = require('../codegen');
 var api = require('./api');
 
