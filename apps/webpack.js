@@ -11,6 +11,7 @@ var baseConfig = {
     alias: {
       '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
+      '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       repl: path.resolve(__dirname, 'src/noop'),
     }
@@ -108,6 +109,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'test', 'util', 'netsim', 'locale-do-not-import.js'),
+      '@cdo/applab/locale': path.resolve(__dirname, 'test', 'util', 'applab', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
     }),
   }),

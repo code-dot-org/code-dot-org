@@ -46,5 +46,4 @@ class SchoolDistrict < ActiveRecord::Base
       zip: row_data[CSV_HEADERS[:zip]]}
     SchoolDistrict.where(params).first_or_create!
   end
-
 end

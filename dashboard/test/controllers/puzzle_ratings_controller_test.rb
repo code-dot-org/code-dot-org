@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class PuzzleRatingsControllerTest < ActionController::TestCase
-
   setup do
     PuzzleRating.stubs(:enabled?).returns true
     @student = create :student
@@ -130,5 +129,4 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
 
     assert_response :unauthorized
   end
-
 end

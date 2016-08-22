@@ -1,5 +1,4 @@
 class Array
-
   # Return the array in http querystring/form format
   unless method_defined?(:to_query) # May be provided by Rails
     def to_query(key)
@@ -7,5 +6,4 @@ class Array
       collect { |value| value.to_query(prefix) }.join '&'
     end
   end
-
 end

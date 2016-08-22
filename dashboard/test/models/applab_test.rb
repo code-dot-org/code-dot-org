@@ -20,5 +20,4 @@ class ApplabTest < ActiveSupport::TestCase
       'applab/levels.js', 'applab.rb',
       "Ruby-JavaScript palette mismatch")
   end
-
 end
