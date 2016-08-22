@@ -27,7 +27,7 @@ class Script < ActiveRecord::Base
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :stages, -> { order('absolute_position ASC') }, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -292,10 +292,10 @@ class Script < ActiveRecord::Base
     self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
-  def get_script_level_by_url_param_and_position(url_param, puzzle_position, lockable)
-    url_param ||= 1
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+    relative_position ||= 1
     self.script_levels.to_a.find do |sl|
-      sl.stage.lockable? == lockable && sl.stage.url_param == url_param.to_s && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_s && sl.position == puzzle_position.to_i
     end
   end
 
@@ -496,9 +496,9 @@ class Script < ActiveRecord::Base
             script: script,
           ) do |s|
             if stage_lockable == true
-              s.url_param = (lockable_count += 1).to_s
+              s.relative_position = (lockable_count += 1).to_s
             else
-              s.url_param = (non_lockable_count += 1).to_s
+              s.relative_position = (non_lockable_count += 1).to_s
             end
           end
 
@@ -512,7 +512,7 @@ class Script < ActiveRecord::Base
         script_level.save! if script_level.changed?
         (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
-          stage.assign_attributes(position: (stage_position += 1))
+          stage.assign_attributes(absolute_position: (stage_position += 1))
           stage.save! if stage.changed?
           script_stages << stage
         end
