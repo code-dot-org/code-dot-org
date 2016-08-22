@@ -111,8 +111,7 @@ en:
     birthday: 'Birthday (optional)'
     age: 'Age'
     user_type: 'Are you a student or teacher?'
-    submit: 'Submit'
-    sign_up: 'Sign up'
+    submit: 'Sign up'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -604,7 +603,6 @@ en:
     later: "Later"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated Terms.'
     review_terms: "Review updated terms"
-    sign_up: "To create a Code Studio teacher account, you must first review and accept the Terms of Service and Privacy policy below."
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
     not_started: not started

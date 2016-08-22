@@ -16,93 +16,89 @@
     .span9
       %h1= t('signup_form.title')
       %p#overview_first_page= t('signup_form.overview').html_safe
-      %p#overview_second_page{style: 'display: none'}= t('terms_interstitial.sign_up')
 
   .row
     .span8.signupblock
 
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform'}) do |f|
-        #first_page
-          #user_type-block.itemblock
-            .labelblock= t('signup_form.user_type_label')
-            %select#user_user_type.fieldblock{name: "user[user_type]", type: "select"}
-              %option{value: "", selected: true, disabled: true}
-              %option{value: User::TYPE_STUDENT}= t('signup_form.user_type_student')
-              %option{value: User::TYPE_TEACHER}= t('signup_form.user_type_teacher')
-            .error_in_field= t('signup_form.field_is_required')
+        #user_type-block.itemblock
+          .labelblock= t('signup_form.user_type_label')
+          %select#user_user_type.fieldblock{name: "user[user_type]", type: "select"}
+            %option{value: "", selected: true, disabled: true}
+            %option{value: User::TYPE_STUDENT}= t('signup_form.user_type_student')
+            %option{value: User::TYPE_TEACHER}= t('signup_form.user_type_teacher')
+          .error_in_field= t('signup_form.field_is_required')
 
-          = signup_error_messages!
+        = signup_error_messages!
 
-          = f.hidden_field :locale, value: locale
-          = f.hidden_field :hashed_email
+        = f.hidden_field :locale, value: locale
+        = f.hidden_field :hashed_email
 
-          #email-block.itemblock
-            .labelblock= t('activerecord.attributes.user.email')
-            = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
+        #email-block.itemblock
+          .labelblock= t('activerecord.attributes.user.email')
+          = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
+          .error_in_field
+
+        - if f.object.password_required?
+          #password-block.itemblock
+            .labelblock= t('activerecord.attributes.user.password')
+            = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
-          - if f.object.password_required?
-            #password-block.itemblock
-              .labelblock= t('activerecord.attributes.user.password')
-              = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
-              .error_in_field
-
-            #password_confirmation-block.itemblock
-              .labelblock= t('activerecord.attributes.user.password_confirmation')
-              = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
-              .error_in_field
-
-          #name-block.itemblock
-            .labelblock= t('activerecord.attributes.user.name')
-            = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          #password_confirmation-block.itemblock
+            .labelblock= t('activerecord.attributes.user.password_confirmation')
+            = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
-          #schoolname-block.itemblock{style: "display: none"}
-            .labelblock= t('signup_form.school_name')
-            = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
-            .error_in_field
+        #name-block.itemblock
+          .labelblock= t('activerecord.attributes.user.name')
+          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          .error_in_field
 
-          #age-block.itemblock
-            .labelblock= t('signup_form.age')
-            %select#user_user_age.fieldblock{name: "user[age]", type: "select"}
-              %option{value: "", selected: true, disabled: true}
-              - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
-                %option{value: age_option}= age_option
-            .error_in_field
+        #schoolname-block.itemblock{style: "display: none"}
+          .labelblock= t('signup_form.school_name')
+          = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
+          .error_in_field
 
-          #gender-block.itemblock
-            .labelblock= t('signup_form.gender')
-            = f.select :gender, gender_options, {disabled: '', selected: ''}, {class: 'fieldblock'}
-            .error_in_field
+        #age-block.itemblock
+          .labelblock= t('signup_form.age')
+          %select#user_user_age.fieldblock{name: "user[age]", type: "select"}
+            %option{value: "", selected: true, disabled: true}
+            - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
+              %option{value: age_option}= age_option
+          .error_in_field
 
-          %br
-          %button#student-signup-button.primary= t('signup_form.sign_up')
-          %button#teacher-submit-button.secondary{style: "display: none;"}= t('signup_form.submit')
-          %br/
-          %br/
-          %br/
-          #student-terms!= t('signup_form.student_terms')
+        #gender-block.itemblock
+          .labelblock= t('signup_form.gender')
+          = f.select :gender, gender_options, {disabled: '', selected: ''}, {class: 'fieldblock'}
+          .error_in_field
 
-        #second_page{style: 'display: none'}
-          .scroll-box{style: 'overflow-y: scroll; height: 350px; border: 1px solid #bbb; padding: 20px;'}
-            %h1.no-top-margin= t('terms_interstitial.tos')
+        #teacher-terms{style: 'display: none'}
+          .right{style: 'float: right'}
+            %iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}
+            %a#print-terms{href: "#"}
+              %i.fa.fa-print.right-margin-5
+              = t('terms_interstitial.print')
+          .clear
+          #terms-box.scroll-box{style: 'overflow-y: scroll; height: 100px; border: 1px solid #bbb; padding: 20px; margin-top: 5px; resize: vertical; overflow: auto;'}
+            %h1{style: 'font-size: 14px; margin-top: -10px; margin-bottom: 10px;'}= t('terms_interstitial.tos')
             = render partial: 'home/tos'
             %hr
-            %h1= t('terms_interstitial.privacy')
+            %h1{style: 'font-size: 14px; margin-top: -10px; margin-bottom: 10px;'}= t('terms_interstitial.privacy')
             = render partial: 'home/privacy'
           %br
           #terms-block.itemblock
             = f.label :terms_of_service_version do
               = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, 1 # TODO: update to latest TOS
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
-          %br
-          %button#accept-terms-submit.primary= t('signup_form.sign_up')
-          &nbsp;
-          %button#print-button.secondary
-            %i.fa.fa-print.right-margin-5
-            = t('terms_interstitial.print')
+        %br
+        %button#student-signup-button.primary= t('signup_form.submit')
 
-          %iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}
+        #student-terms
+          %br/
+          %br/
+          %br/
+          != t('signup_form.student_terms')
 
     .span4
       .devise_links
@@ -126,22 +122,13 @@
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
       passwordMismatchString: "#{t('signup_form.mismatch_password')}"
     });
-
-    $("#user_terms_of_service_version").on('change', function(event) {
-      if ($(this).is(':checked')) {
-        $("#accept-terms-submit").prop('disabled', false).removeClass("disabled-button");
-      } else {
-        $("#accept-terms-submit").prop('disabled', true).addClass("disabled-button");
-      }
-    });
   });
 
   $(document).ready(function () {
-    var printButton = $('#print-button');
-    if (printButton) {
-      printButton.click(function () {
+    var printLink = $('#print-terms');
+    if (printLink) {
+      printLink.click(function () {
         var item = $("#print-frame")[0];
-        item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
         if (item.contentWindow.document.execCommand('print', false, null)) {
         } else {
           item.contentWindow.print();
