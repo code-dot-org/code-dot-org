@@ -65,7 +65,7 @@ const AnimationPreview = React.createClass({
       currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
     clearTimeout(this.timeout_);
-    // 20 means that Game.frameDelay = 50;
+    // 33 maps to a 30 fps frameRate
     this.timeout_ = setTimeout(this.advanceFrame, 33 * this.props.animationProps.frameDelay);
   },
 

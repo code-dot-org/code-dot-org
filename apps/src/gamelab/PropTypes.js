@@ -174,7 +174,7 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
 
   // Check shape of propsByKey objects
   for (const animationKey in propsByKey) {
-    ['name', 'frameSize', 'frameCount', 'frameRate'].forEach(requiredPropName => {
+    ['name', 'frameSize', 'frameCount', 'frameDelay'].forEach(requiredPropName => {
       if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
         throw new Error(`Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`);
       }
