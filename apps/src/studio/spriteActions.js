@@ -48,7 +48,7 @@ var utils = require('../utils');
  * @param {number} towardDeltaY
  * @param {number} totalSteps
  */
-class GridMove {
+export class GridMove {
   constructor(towardDeltaX, towardDeltaY, totalSteps) {
     this.towardDeltaX_ = towardDeltaX;
     this.towardDeltaY_ = towardDeltaY;
@@ -102,7 +102,7 @@ class GridMove {
    */
 }
 
-class GridMoveAndCancel {
+export class GridMoveAndCancel {
   constructor(towardDeltaX, towardDeltaY, totalSteps) {
     this.towardDeltaX_ = towardDeltaX;
     this.towardDeltaY_ = towardDeltaY;
@@ -171,7 +171,7 @@ function getDirection(x, y) {
  * @constructor
  * @implements {SpriteAction}
  */
-class FadeActor {
+export class FadeActor {
   constructor(fadeDuration) {
     /** @private {number} */
     this.startFadeTime_ = null;
@@ -213,7 +213,7 @@ class FadeActor {
  * @constructor
  * @implements {SpriteAction}
  */
-class ShakeActor {
+export class ShakeActor {
   constructor(shakeDuration) {
     /** @private {number} */
     this.startShakeTime_ = null;
