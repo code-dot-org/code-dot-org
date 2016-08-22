@@ -5,7 +5,7 @@
 
 import Radium from 'radium';
 import React from 'react';
-import applabMsg from '../locale';
+import applabMsg from '@cdo/applab/locale';
 
 import * as dataStyles from './dataStyles';
 
