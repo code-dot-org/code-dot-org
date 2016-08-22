@@ -405,33 +405,60 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'names stages appropriately when script has lockable stages' do
-    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
-    scripts,_ = Script.setup([script_file_3_stages])
-    first = scripts[0].stages[0]
-    second = scripts[0].stages[1]
-    third = scripts[0].stages[2]
+    create :level, name: 'LockableAssessment1'
+    create :level, name: 'NonLockableAssessment1'
+    create :level, name: 'NonLockableAssessment2'
+    create :level, name: 'NonLockableAssessment3'
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'NonLockable1'
+      assessment 'NonLockableAssessment1';
+      stage 'NonLockable2'
+      assessment 'NonLockableAssessment2';
+      stage 'NonLockable3'
+      assessment 'NonLockableAssessment3';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     # Everything has Stage <number> when nothing is lockable
-    assert /^Stage 1:/.match(first.localized_title)
-    assert /^Stage 2:/.match(second.localized_title)
-    assert /^Stage 3:/.match(third.localized_title)
+    assert /^Stage 1:/.match(script.stages[0].localized_title)
+    assert /^Stage 2:/.match(script.stages[1].localized_title)
+    assert /^Stage 3:/.match(script.stages[2].localized_title)
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1', lockable: true
+      assessment 'LockableAssessment1';
+      stage 'NonLockable1'
+      assessment 'NonLockableAssessment1';
+      stage 'NonLockable2'
+      assessment 'NonLockableAssessment2';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
-    first.lockable = true
-    first.save!
+    assert /^Stage/.match(script.stages[0].localized_title).nil?
+    assert /^Stage 1:/.match(script.stages[1].localized_title)
+    assert /^Stage 2:/.match(script.stages[2].localized_title)
 
-    assert /^Stage/.match(first.localized_title).nil?
-    assert /^Stage 1:/.match(second.localized_title)
-    assert /^Stage 2:/.match(third.localized_title)
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'NonLockable1'
+      assessment 'NonLockableAssessment1';
+      stage 'Lockable1', lockable: true
+      assessment 'LockableAssessment1';
+      stage 'NonLockable2'
+      assessment 'NonLockableAssessment2';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     # When only second stage is lockable, we count non-lockable stages appropriately
-    first.lockable = false
-    first.save!
-    second.lockable = true
-    second.save!
-
-    assert /^Stage 1:/.match(first.localized_title)
-    assert /^Stage/.match(second.localized_title).nil?
-    assert /^Stage 2:/.match(third.localized_title)
+    assert /^Stage 1:/.match(script.stages[0].localized_title)
+    assert /^Stage/.match(script.stages[1].localized_title).nil?
+    assert /^Stage 2:/.match(script.stages[2].localized_title)
   end
 end
