@@ -738,16 +738,10 @@ Flappy.onReportComplete = function (response) {
  * Execute the user's code.  Heaven help us...
  */
 Flappy.execute = function () {
-  var code;
   Flappy.result = ResultType.UNSET;
   Flappy.testResults = TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
   Flappy.response = null;
-
-  if (level.editCode) {
-    code = dropletUtils.generateCodeAliases(null, 'Flappy');
-    code += studioApp.editor.getValue();
-  }
 
   var codeClick = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
@@ -786,8 +780,6 @@ Flappy.execute = function () {
 
 
   studioApp.playAudio('start');
-
-  // studioApp.reset(false);
 
   // Set event handlers and start the onTick timer
   Flappy.whenClick = whenClickFunc;
