@@ -49,4 +49,8 @@ class HomeController < ApplicationController
   def certificate_link_test
     render 'certificate_link_test', formats: [:html]
   end
+
+  def terms_and_privacy
+    render partial: 'home/tos_and_privacy'
+  end
 end

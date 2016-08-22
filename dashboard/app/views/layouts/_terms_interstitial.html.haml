@@ -1,0 +1,87 @@
+#terms-modal.modal.fade{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+  .modal-dialog
+    .modal-content.no-modal-icon{style: 'margin: 0 20px; padding: 0 15px;'}
+      %h2 Updated Terms of Service and Privacy Policy
+      We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 22, 2016.  The biggest change: we will
+      %i no longer store email addresses for student accounts on Code Studio.
+      This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We’ve sent you a summary of the other changes via email.
+
+      %br
+      %br
+      You’ll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio.
+
+      %br
+      %br
+      .scroll-box
+        %h1.no-top-margin Terms of Service
+        = render partial: 'home/tos'
+        %hr
+        %h1 Privacy Policy
+        = render partial: 'home/privacy'
+
+      %br
+      .left
+        %form#accept-terms-form{role: 'form', onsubmit: 'event.preventDefault();'}
+          .form-group
+            .checkbox
+              %label
+                %input#accept-terms-checkbox{name: 'accept_terms_b', type: 'checkbox', value: '1'}/
+                I agree to the updated
+                %a{href: CDO.code_org_url('/tos'), target: '_blank'} Terms of Service
+                and
+                %a{href: CDO.code_org_url('/privacy'), target: '_blank'} Privacy Policy
+        %button#submit-button.primary.disabled-button Accept
+        &nbsp;
+        %button#print-button.secondary.secondary-button
+          %i.fa.fa-print.right-margin-5
+          Print
+
+      .right
+        %a#later-link.dismiss-link{href: '#'} Later
+
+%iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}
+
+%br
+%br
+
+:javascript
+  $(document).ready(function() {
+    $("#terms-modal").modal('show');
+
+    $( "#edit_user" ).submit(function( event ) {
+      event.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(data) {$("#age-modal").modal('hide');}
+      });
+    });
+
+    $('#later-link').click(function () {
+      $("#terms-modal").modal('hide');
+    });
+  });
+
+  $(document).ready(function () {
+    var printButton = $('#print-button');
+    if (printButton) {
+      printButton.click(function () {
+        var item = $("#print-frame")[0];
+        item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
+        if (item.contentWindow.document.execCommand('print', false, null)) {
+        } else {
+          item.contentWindow.print();
+        }
+      });
+    }
+  });
+
+  $('#accept-terms-checkbox').change(function () {
+    if ($(this).is(':checked')) {
+      $("#submit-button").prop('disabled', false).removeClass("disabled-button");
+    } else {
+      $("#submit-button").prop('disabled', true).addClass("disabled-button");
+    }
+  });

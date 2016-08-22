@@ -1,38 +1,50 @@
-.left {
+#terms-modal {
+  text-align: left;
+  top: -10px;
+  padding-bottom: 30px;
+}
+#terms-modal .modal-dialog {
+  width: 80%;
+  position: fixed;
+  margin-left: -280px;
+  left: 30%;
+  right: auto;
+  height: 100%;
+}
+#terms-modal .modal-content p {
+  font-size: 12px;
+  color: #333;
+  line-height: 18px;
+}
+#terms-modal .left {
   float: left;
 }
-.right {
+#terms-modal .right {
   float: right;
-  margin-top: 10px;
 }
-.scroll-box {
+#terms-modal .scroll-box {
   overflow-y: scroll;
-  height: 400px;
+  height: 350px;
   border: 1px solid #bbb;
   padding: 20px;
 }
-.scroll-box-header {
-  color: #5b6770;
-  font-size: 18px;
-  font-family: 'Gotham 4r', sans-serif;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-.disabled-button {
+#terms-modal .disabled-button {
   background-color: #c6cacd;
   border-color: #c6cacd;
   color: #4d575f;
 }
-.secondary-button {
+#terms-modal .secondary-button {
   background-color: #0094ca;
   border-color: #0094ca;
+  color: white;
 }
-.no-top-margin {
-  margin-top: 0px;
+#terms-modal .no-top-margin {
+  margin-top: 0;
 }
-.right-margin-5 {
+#terms-modal .right-margin-5 {
   margin-right: 5px;
 }
-.dismiss-link {
-  font-family: 'Gotham 4r', sans-serif;
+#terms-modal .dismiss-link {
+  font-size: 14px;
+  font-family: "Gotham 4r", sans-serif;
 }
