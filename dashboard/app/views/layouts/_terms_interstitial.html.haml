@@ -21,20 +21,17 @@
 
       %br
       .left
-        %form#accept-terms-form{role: 'form', onsubmit: 'event.preventDefault();'}
+        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
-            .checkbox
-              %label
-                %input#accept-terms-checkbox{name: 'accept_terms_b', type: 'checkbox', value: '1'}/
-                I agree to the updated
-                %a{href: CDO.code_org_url('/tos'), target: '_blank'} Terms of Service
-                and
-                %a{href: CDO.code_org_url('/privacy'), target: '_blank'} Privacy Policy
-        %button#submit-button.primary.disabled-button Accept
-        &nbsp;
-        %button#print-button.secondary.secondary-button
-          %i.fa.fa-print.right-margin-5
-          Print
+            = f.label :terms_of_service_version do
+              = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, current_user.latest_terms_version
+              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+          .form-group{style: 'margin-top: 10px;'}
+            = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
+            &nbsp;
+            %button#print-button.secondary
+              %i.fa.fa-print.right-margin-5
+              Print
 
       .right
         %a#later-link.dismiss-link{href: '#'} Later
@@ -48,6 +45,14 @@
   $(document).ready(function() {
     $("#terms-modal").modal('show');
 
+    $("#user_terms_of_service_version").on('change', function(event) {
+      if ($(this).is(':checked')) {
+        $("#accept-terms-submit").prop('disabled', false).removeClass("disabled-button");
+      } else {
+        $("#accept-terms-submit").prop('disabled', true).addClass("disabled-button");
+      }
+    });
+
     $( "#edit_user" ).submit(function( event ) {
       event.preventDefault();
       $.ajax({
@@ -55,7 +60,7 @@
         url: $(this).attr('action'),
         data: $(this).serialize(),
         dataType: 'json',
-        success: function(data) {$("#age-modal").modal('hide');}
+        success: function(data) {$("#terms-modal").modal('hide'); location.reload();}
       });
     });
 
@@ -75,13 +80,5 @@
           item.contentWindow.print();
         }
       });
-    }
-  });
-
-  $('#accept-terms-checkbox').change(function () {
-    if ($(this).is(':checked')) {
-      $("#submit-button").prop('disabled', false).removeClass("disabled-button");
-    } else {
-      $("#submit-button").prop('disabled', true).addClass("disabled-button");
     }
   });

@@ -26,15 +26,23 @@
   border: 1px solid $border_gray;
   padding: 20px;
 }
+#terms-modal .terms-checkbox {
+  margin: 0 5px 0 0;
+}
+#terms-modal .primary-button {
+  background-color: $orange;
+  border: 1px solid $orange;
+  color: $white;
+  border-radius: 4px;
+  height: 34px;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: none;
+}
 #terms-modal .disabled-button {
   background-color: $lighter_gray;
   border-color: $lighter_gray;
   color: $dark_charcoal;
-}
-#terms-modal .secondary-button {
-  background-color: $cyan;
-  border-color: $cyan;
-  color: $white;
 }
 #terms-modal .no-top-margin {
   margin-top: 0;

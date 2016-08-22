@@ -1025,4 +1025,9 @@ class User < ActiveRecord::Base
   def accepted_latest_terms?
     terms_of_service_version == TERMS_OF_SERVICE_VERSIONS.last
   end
+
+  # Returns the latest major version of the Terms of Service
+  def latest_terms_version
+    TERMS_OF_SERVICE_VERSIONS.last
+  end
 end
