@@ -133,8 +133,13 @@ class ScriptLevelsController < ApplicationController
   def load_script_level
     if params[:chapter]
       @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_id]
-      @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
+    elsif params[:lockable_stage_id] || params[:stage_id]
+      if params[:lockable_stage_id]
+        position = @script.lockable_position_to_position(params[:lockable_stage_id].to_i)
+      else
+        position = @script.non_lockable_position_to_position(params[:stage_id].to_i)
+      end
+      @script_level = @script.get_script_level_by_stage_and_position(position, params[:id])
     else
       @script_level = @script.get_script_level_by_id(params[:id])
     end

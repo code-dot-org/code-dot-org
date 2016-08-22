@@ -434,4 +434,50 @@ class ScriptTest < ActiveSupport::TestCase
     assert /^Stage/.match(second.localized_title).nil?
     assert /^Stage 2:/.match(third.localized_title)
   end
+
+  test 'accurately maps between position and lockable/non-lockable positions' do
+    script = create :script
+
+    # (position 1) Lockable 1
+    # (position 2) Non-Lockable 1
+    # (position 3) Lockable 2
+    # (position 4) Non-Lockable 2
+
+    stage = create :stage, name: 'LockableStage1', script: script, lockable: true
+    level = create :level, name: 'LockableStage1.1'
+    create :script_level, script: script, levels: [level], stage: stage
+
+    stage = create :stage, name: 'NonLockableStage1', script: script, lockable: false
+    level = create :level, name: 'NonLockableStage1.1'
+    create :script_level, script: script, levels: [level], stage: stage
+
+    stage = create :stage, name: 'LockableStage2', script: script, lockable: true
+    level = create :level, name: 'LockableStage2.1'
+    create :script_level, script: script, levels: [level], stage: stage
+
+    stage = create :stage, name: 'NonLockableStage2', script: script, lockable: false
+    level = create :level, name: 'NonLockableStage2.1'
+    create :script_level, script: script, levels: [level], stage: stage
+
+    assert_equal 1, script.position_to_non_lockable_position(2)
+    assert_equal 2, script.non_lockable_position_to_position(1)
+
+    assert_equal 2, script.position_to_non_lockable_position(4)
+    assert_equal 4, script.non_lockable_position_to_position(2)
+
+    assert_equal 1, script.position_to_lockable_position(1)
+    assert_equal 1, script.lockable_position_to_position(1)
+
+    assert_equal 2, script.position_to_lockable_position(3)
+    assert_equal 3, script.lockable_position_to_position(2)
+
+    # raise an exception if we specify a non-existent position
+    assert_raises(ActiveRecord::RecordNotFound) do
+      script.non_lockable_position_to_position(3)
+    end
+
+    assert_raises(ActiveRecord::RecordNotFound) do
+      script.lockable_position_to_position(3)
+    end
+  end
 end
