@@ -114,20 +114,60 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
-  convertFrameDelayToFraction(frameDelay) {
-    return 1 - (frameDelay / 60);
-  },
-
-  convertFractionToFrameDelay(fraction) {
-    fraction = 1 - fraction;
-    if (fraction === 0) {
+  convertFrameDelayToLockedValues(fraction) {
+    if (fraction >= 60) {
+      return 0;
+    } else if (fraction >= 45) {
+      return 0.1;
+    } else if (fraction >= 30) {
+      return 0.2;
+    } else if (fraction >= 20) {
+      return 0.3;
+    } else if (fraction >= 15) {
+      return 0.4;
+    } else if (fraction >= 10) {
+      return 0.5;
+    } else if (fraction >= 5) {
+      return 0.6;
+    } else if (fraction >= 4) {
+      return 0.7;
+    } else if (fraction >= 3) {
+      return 0.8;
+    } else if (fraction >= 2) {
+      return 0.9;
+    } else {
       return 1;
     }
-    return Math.ceil(fraction * 60);
+  },
+
+  convertLockedValueToFrameDelay(value) {
+    if (value >= 1) {
+      return 1;
+    } else if (value >= 0.9) {
+      return 2;
+    } else if (value >= 0.8) {
+      return 3;
+    } else if (value >= 0.7) {
+      return 4;
+    } else if (value >= 0.6) {
+      return 5;
+    } else if (value >= 0.5) {
+      return 10;
+    } else if (value >= 0.4) {
+      return 15;
+    } else if (value >= 0.3) {
+      return 20;
+    } else if (value >= 0.2) {
+      return 30;
+    } else if (value >= 0.1) {
+      return 45;
+    } else {
+      return 60;
+    }
   },
 
   setAnimationFrameDelay(sliderValue) {
-    let frameDelay = this.convertFractionToFrameDelay(sliderValue);
+    let frameDelay = this.convertLockedValueToFrameDelay(sliderValue);
     this.setState({frameDelay: frameDelay});
     this.debouncedFrameDelay();
   },
@@ -169,7 +209,7 @@ const AnimationListItem = React.createClass({
             onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
-            frameDelay={this.convertFrameDelayToFraction(this.state.frameDelay)}
+            frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
     );

@@ -176,9 +176,9 @@ export function setInitialAnimationList(serializedAnimationList) {
   for (let key in serializedAnimationList.propsByKey) {
     let animation = serializedAnimationList.propsByKey[key];
     if (animation.frameDelay === undefined && animation.frameRate !== undefined) {
-      animation.frameDelay = Math.round(60 / animation.frameRate);
+      animation.frameDelay = Math.round(30 / animation.frameRate);
     } if (animation.frameDelay === null) {
-      animation.frameDelay = 4;
+      animation.frameDelay = 2;
     }
   }
 
