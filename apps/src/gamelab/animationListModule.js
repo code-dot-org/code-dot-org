@@ -3,6 +3,11 @@
  */
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
+import {
+  fetchURLAsBlob,
+  blobToDataURI,
+  dataURIToSourceSize
+} from '../imageUtils';
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
@@ -26,6 +31,8 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
+// Args: {AnimationKey} key, {number} frameRate
+const SET_ANIMATION_FRAME_RATE = 'AnimationList/SET_ANIMATION_FRAME_RATE';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
@@ -78,6 +85,7 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
+    case SET_ANIMATION_FRAME_RATE:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
@@ -115,6 +123,11 @@ function animationPropsReducer(state, action) {
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
         name: action.name
+      });
+
+    case SET_ANIMATION_FRAME_RATE:
+      return Object.assign({}, state, {
+        frameRate: action.frameRate
       });
 
     case START_LOADING_FROM_SOURCE:
@@ -301,6 +314,23 @@ export function setAnimationName(key, name) {
 }
 
 /**
+ * Set the frameRate of the specified animation.
+ * @param {string} key
+ * @param {number} frameRate
+ * @returns {{type: ActionType, key: string, frameRate: number}}
+ */
+export function setAnimationFrameRate(key, frameRate) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_FRAME_RATE,
+      key,
+      frameRate
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
  * Modifies the animation props, capturing changes to its spritesheet.
  * @param {!AnimationKey} key
  * @param {object} props - needs a more detailed shape
@@ -354,7 +384,7 @@ function loadAnimationFromSource(key, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key
     });
-    fetchUrlAsBlob(sourceUrl, (err, blob) => {
+    fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;
@@ -380,36 +410,6 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
-}
-
-function fetchUrlAsBlob(url, onComplete) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'blob';
-  xhr.onload = e => {
-    if (e.target.status === 200) {
-      onComplete(null, e.target.response);
-    } else {
-      onComplete(new Error(`URL ${url} responded with code ${e.target.status}`));
-    }
-  };
-  xhr.onerror = e => onComplete(new Error(`Error ${e.target.status} occurred while receiving the document.`));
-  xhr.send();
-}
-
-function blobToDataURI(blob, onComplete) {
-  let fileReader = new FileReader();
-  fileReader.onload = e => onComplete(e.target.result);
-  fileReader.readAsDataURL(blob);
-}
-
-function dataURIToSourceSize(dataURI) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve({x: image.width, y: image.height});
-    image.onerror = err => reject(err);
-    image.src = dataURI;
-  });
 }
 
 /**

@@ -23,7 +23,6 @@
 #
 
 class LevelGroup < DSLDefined
-
   def dsl_default
     <<ruby
 name 'unique level name here'
@@ -168,7 +167,7 @@ ruby
   #
 
   def self.get_survey_results(script, section)
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     # Go through each anonymous long-assessment LevelGroup.
     level_group_script_levels.map do |script_level|
@@ -192,5 +191,4 @@ ruby
       end
     end.compact
   end
-
 end

@@ -404,6 +404,10 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
+    // This is necessary when loading images from image.code.org to
+    // request the image with ACAO headers so that canvas will not flag
+    // it as tainted
+    img.crossOrigin = "anonymous";
     img.src = filename.startsWith('http') ?
         filename :
         this.studioApp_.assetUrl('media/turtle/' + filename);

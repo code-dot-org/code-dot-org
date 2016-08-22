@@ -89,5 +89,6 @@
   "whileTooltip": "Bitiş noktasına ulaşana kadar blok içindeki işlemleri tekrarla.",
   "word": "Sözcüğü bul",
   "yes": "Evet",
-  "youSpelled": "Açıkladınız"
+  "youSpelled": "Açıkladınız",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

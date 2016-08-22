@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Pd::EnrollmentTest < ActiveSupport::TestCase
-
   test 'code' do
     enrollment1 = create :pd_enrollment
     enrollment2 = create :pd_enrollment
