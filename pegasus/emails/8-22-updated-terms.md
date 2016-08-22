@@ -3,7 +3,7 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "An important change in how we support student privacy"
 ---
 
-In preparation for the new school year, we’ve made  a number of changes to the Code.org [Terms of Service](http://code.org/tos) and [Privacy Policy](http://code.org/privacy).  The changes are effective as of today, August 22.  
+In preparation for the new school year, we’ve made  a number of changes to the Code.org [Terms of Service](http://code.org/tos) and [Privacy Policy](http://code.org/privacy).  The changes are effective as of today, August 24.  
 
 ### Taking an unusual step to delete data to protect privacy
 
@@ -23,13 +23,13 @@ This means we permanently lose the ability to email students based on their Code
 
 We’ll continue to maintain email addresses for you, our Code Studio teachers, and we rely more than ever on you to keep students engaged on our platform and in our courses. 
 
-###Our new App Lab and upcoming Game Lab tools
+### Our new App Lab and upcoming Game Lab tools
 
 In addition to the above, the other big change is to reflect that our Code Studio platform will now allow students to use our new [App Lab](https://code.org/educate/applab) tool and our upcoming Game Lab tool to create and share apps and games and projects, and that we store the data, code, and uploaded media files for these projects. 
 
 This works similarly to other educational coding platforms such as MIT’s Scratch or App Inventor. Because of Code Studio’s popularity, we are taking extra precaution: for students under the age of 13, we will only allow them access to these new capabilities if they are part of a classroom with a teacher who explicitly accepts our new terms of service and privacy policy.
 
-###A summary of the other changes to our policies and terms
+### A summary of the other changes to our policies and terms
 
 Some other changes are:
 
