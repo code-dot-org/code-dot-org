@@ -25,7 +25,7 @@ var styles = {
  * Simple icon that either points up or down, and supports onClick
  */
 var CollapserIcon = function (props) {
-  var iconClass = props.collapsed ? 'fa-chevron-circle-up' : 'fa-chevron-circle-down';
+  var iconClass = props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
 
   return (
     <i
