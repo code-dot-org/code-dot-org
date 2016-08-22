@@ -35,8 +35,8 @@ const MultiCheckboxSelector = Radium(React.createClass({
   propTypes: {
     header: React.PropTypes.node,
     selected: React.PropTypes.array,
-    items: React.PropTypes.array.isRequired,
-    onChange: React.PropTypes.func.isRequired,
+    items: React.PropTypes.array,
+    onChange: React.PropTypes.func,
     children: React.PropTypes.element,
     itemPropName: React.PropTypes.string,
     style: React.PropTypes.any,
@@ -46,6 +46,8 @@ const MultiCheckboxSelector = Radium(React.createClass({
     return {
       itemPropName: 'item',
       selected: [],
+      items: [],
+      onChange: function (){},
     };
   },
 
