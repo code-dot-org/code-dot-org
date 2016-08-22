@@ -8,7 +8,7 @@
       getResult: function () {
         var response = $('#level_#{level.id}').val();
         return {
-          response: response,
+          response: encodeURIComponent(response),
           valid: response.length > 0,
           result: true,
           testResult: #{ActivityConstants::FREE_PLAY_RESULT}
