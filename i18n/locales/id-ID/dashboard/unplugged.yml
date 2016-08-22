@@ -1,196 +1,196 @@
 id:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Perkenalan ilmu komputer
         desc: Pelajaran ini akan memperkenalkan konsep Ilmu Komputer dan menjelaskan pekerjaan seorang Ilmuwan Komputer. Pelajaran ini juga akan memberikan kesempatan kepada pelajar untuk berperan sebagai Ilmuwan Komputer. Di akhir kegiatan ini, setiap murid akan mendapatkan pekerjaan rumah untuk mengingat apa yang mereka telah pelajari. Mungkin Anda akan berusaha untuk melewatkan pengajaran kata-kata yang terkait dengan pelajaran ini kepada anak-anak kecil, tetapi menampilkannya dengan cara yang ringan dan mengasyikkan jauh lebih berguna daripada menunggu kesempatan yang lebih lanjut.
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Berpikir secara komputasi
         desc: Dengan hanya kertas dan spidol, para murid akan belajar 4 langkah berpikir secara komputasi. Setelah pengenalan singkat, mereka dapat dibagi menjadi beberapa grup di mana mereka harus memberikan arahan kepada murid lain untuk menggambar sebuah monster (dari sebuah katalog monster yang telah tersedia). Seluruh tugas harus diuraikan, lalu para tim akan meneliti semua monster di katalog untuk pola-pola, beberapa rincian soal monster-monster, lalu menggunakan informasi itu untuk membuat sebuah algoritma (arahan) kepada tim lain untuk membuat sebuah monster. Tim-tim kemudian berganti algoritma dengan grup lain dan menggambar monster sesuai dengan yang tertera pada algoritma. Apakah gambarnya sesuai dengan yang diinginkan tim awal?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Pemrograman grafis diatas kertas
         desc: Dengan memprogram satu sama lain untuk menggambar, murid-murid akan mengerti apakah pemrogaman sebenarnya itu. Kelas kan dimulai dengan mereka saling mengarahkan untuk menggambar persegi berwarna di kertas grafik dalam usaha membuat lagi gambar yang telah ada. Jika masih ada waktu, pelajaran dapat diakhiri dengan gambar-gambar yang mereka buat sendiri.
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritma
         desc: 'Pelajaran ini mencakup algoritma.  Menggunakan bentuk tangram dan kertas grafik, latihan pertama akan menunjukkan pentingnya membuat instruksi yang sejelas mungkin.  Selanjutnya, kelas akan menjelajahi berapa banyak cara Anda dapat melipat kertas menjadi persegi panjang, mencatat bagaimana beberapa metode dapat memerlukan lipatan yang lebih banyak atau lebih sedikit daripada yang lain.'
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: fungsi
         desc: 'Dalam pelajaran ini, siswa akan membuat suncatcher string, manik-manik, dan pesona khusus. Siswa akan mengikuti serangkaian langkah-langkah yang berulang-ulang, kemudian diminta untuk mengidentifikasi set "kemampuan" tertentu yang merupakan duplikasi beberapa kali. Setelah keterampilan-keterampilan ditentukan, mereka akan dipanggil dari program utama dan seluruh proses yang indah ciptaan akan disimpan pada selembar kertas. akhir program ini akan diarahkan kepada seluruh kelas, apa pun jenis string, manik-manik dan pesona mereka. Untuk mengefektifkan memungkinkan hal tersebut dilakukan, siswa akan perlu "abstrak keluar" rincian dari bahan-bahan mereka dan menciptakan istilah yang Samar untuk kebutuhan individu.Hal ini memanfaatkan penampung yang umum merupakan pengenalan yang indah untuk variabel.'
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Kondisi
         desc: 'Ini adalah permainan kelas.  Setelah memperkenalkan gagasan conditional, pernyataan if-else (jika-lain dari itu) dan loop (putaran), kelas dapat berlatih bersama-sama menggunakan program yang telah ditulis, setumpuk kartu, dan keberuntungan mengundi.'
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Menulis lagu
         desc: 'Membaca lirik adalah pengalaman yang cukup intuitif untuk sebagian besar siswa.  Kita akan mengambil suatu kegiatan yang sudah umum dan mengubahnya menjadi bahan edukasi dalam menjelaskan dan memanggil fungsi.  Setelah siswa terbiasa dengan proses mendefinisikan panggilan, kita akan menambahkan kemampuan tambahan yang datang bersama dengan melewati parameter dalam pemanggilan fungsi tersebut.'
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstraksi
         desc: Kegiatan ini menggabungkan rutinitas sehari-hari siswa Anda dan permainan pikiran seperti Mad-Lib untuk membantu kelas Anda belajar tentang efektivitas abstraksi.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Pemrograman relay
         desc: 'Pelajaran ini akan mengambil ide dari kegiatan sebelumnya (4. Kertas grafik pemrograman) dan menggunakan keterampilan mereka untuk menekankan pentingnya menyelesaikan program yang beroperasi dalam urutan dan sering memeriksa program untuk "bug".'
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Internet
         desc: Dalam pelajaran ini, siswa akan berpura-pura untuk mengalir di dalam Internet, sambil belajar tentang alamat web, IP (Protokol Internet) dan DNS (Sistem Penamaan Domain).
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Bungkus
         desc: Tahap terakhir dalam serial 20 jam pertama ini akan membantu kelas menghidupkan kembali semua momen-momen favorit mereka, sementara memberikan langkah-langkah selanjutnya yang mereka dapat ambil secara mandiri jika tertarik untuk melanjutkan perjalanan ilmu komputer mereka.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Happy Maps
         desc: Siswa membuat algoritma sederhana (satu set instruksi) untuk memindahkan sebuah karakter melalui labirin menggunakan satu perintah.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Move it, Move it
         desc: Siswa membuat algoritma sederhana (satu set instruksi) untuk memindahkan sebuah karakter melalui labirin menggunakan satu perintah.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
         desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Membangun dasar
         desc: Para siswa membangun sebuah struktur hanya dengan persediaan yang disediakan. Struktur tersebut harus memenuhi syarat (mencapai ketinggian tertentu atau menanggung berat tertentu), dan para siswa membahas gagasan menjadi gigih saat segala sesuatunya menjadi rumit.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Dapat berulang-ulang
         desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Pergantian Programming
         desc: 'Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar "Pemrograman kertas grafik". Mereka hanya dapat menulis satu instruksi pada satu waktu dan jika ada kesalahan di suatu tempat, mereka harus menghapus semua kembali ke instruksi itu.'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Kondisi
         desc: 'Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Acara besar
         desc: 'Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Pergi ke tempat dengan aman
         desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat navigasi Internet.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Pemrograman grafis diatas kertas
         desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Algoritma kehidupan nyata: Pesawat Kertas'
         desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Gelang biner
         desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Digital Footprint Kamu
         desc: 'Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.'
         video: C2_digital_footprint
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Berpikir secara komputasi
         desc: Siswa menggunakan langkah-langkah berpikir komputasi (penguraian, pencocokan pola, abstrak, algoritma) untuk menemukan bagaimana memainkan permainan yang tidak dilengkapi instruksi.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Fungsional Penangakap Matahari
         desc: Siswa membuat algoritma dengan variabel dan fungsi (potongan kode yang Anda ingin menggunakan lagi) untuk menciptakan suncatchers menggunakan string dan manik-manik.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Penulisan lagu dengan Parameter
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Algoritma kehidupan nyata: Dice Race'
         desc: Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan menuliskan algoritma untuk game balapan dadu.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Siswa mengirim pesan yang mewakili berbagai metode transmisi internet menggunakan potongan-potongan kertas.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Kerumunan
         desc: Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih efisien dibandingkan jika siswa berusaha sendiri.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Kewarganegaraaan Digital
         desc: Siswa mengeksplorasi perbedaan antara informasi pribadi dan informasi perorangan, yang membedakan faktor aman dan tidak aman untuk berbagi secara online.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Algoritma tangram
         desc: Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma. Jika Anda menyimpan sebuah algoritma sederhana, ada banyak cara untuk menggunakannya. Jika Anda ingin memastikan semua orang berakhir dengan hal yang sama, maka algoritma Anda membutuhkan perincian lebih mendalam.
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Sampul Variabel
         desc: Variabel memungkinkan adanya kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan apakah variabel itu dan cara menggunakan mereka dalam berbagai keadaan.
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Mad Glibs
         desc: 'Abstraksi adalah salah satu keterampilan yang paling penting bagi ilmuwan komputer untuk mengerti.  Kegiatan ini akan membuat siswa Anda menganalisis cerita tentang perbedaan sehingga siswa dapat mensarikan mereka. Cerita yang telah disarikan tersebut dijadikan kisah baru yang  asik dan gila.'
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: Untuk Loop Fun
         desc: Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Parameter penulis lagu
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: gambar Biner
         desc: 'Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.'
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Video game dan Bidang Koordinat
         desc: 'Ketahuilah bahwa video permainan yang anda suka sebenarnya bagian dari aljabar!   Dalami bagaimana fungsi aljabar dan koordinat pesawat dapat membantu kita mengerti cara kerja permainan video dan kemudian mulailah merencanakan video permainan apa yang akan anda ciptakan.'
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Kontrak, Domain dan Jangkauan
         desc: Kontrak memberi kita cara untuk memahami dan mendiskusikan fungsi. Dalam pelajaran ini kita akan melihat bagaimana Kontrak dapat membantu kita memahami bahasa pemrograman atau fungsi baru.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Resep desain
         desc: 'Pada tahap akhir, Para siswa menuliskan contoh dari fungsi-fungsi yang sangat sederhana - namun fungsi-fungsi permintaan tersebut lebih rumit dan melalui pendekatan yang masuk akal. Ini merupakan gambaran rumus yang disusun melalui pendekatan terstruktur untuk dapat menulis fungsi-fungsi termasuk penulisan studi kasus untuk memastikan bahwa fungsi bekerja seperti yang di harapkan.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Boolean dan logika
         desc: Booleans adalah tipe data yang ke-empat dan yang terakhir yang anda akan pelajari dalam kursus ini. Pada kegiatan ini, anda akan mempelajari tentang apa itu booleans, dan bagaimana booleans dapat membantu kita untuk menuliskan fungsi-fungsi secara logika
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Kondisional dan fungsi Piecewise
         desc: Parameter kami lolos ke fungsi menyebabkan output untuk bervariasi berdasarkan pola yang sangat kaku. Misalkan kita ingin parameter dengan beberapa nilai untuk membuat output menggunakan satu pola tetapi nilai-nilai lain untuk menggunakan pola yang berbeda. Di sinilah conditional diperlukan ...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Pendeteksian Benturan dan Teorema Pythagoras
         desc: Menentukan kapan objek pada layar sentuh merupakan aspek penting dari sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau karakter game) yang menyentuh.
         video: alg_16_biggame_collision_detection

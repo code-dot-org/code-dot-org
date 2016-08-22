@@ -89,5 +89,6 @@
   "whileTooltip": "Gjenta disse handlingene inntil målet er nådd.",
   "word": "Finn ordet",
   "yes": "Ja",
-  "youSpelled": "Du stavet"
+  "youSpelled": "Du stavet",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

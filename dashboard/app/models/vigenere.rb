@@ -23,7 +23,6 @@
 #
 
 class Vigenere < Widget
-
   before_validation do
     self.href = 'vigenere/vigenere.html'
   end

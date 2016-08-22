@@ -29,7 +29,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Switching Screens\r\n\r\nIn the last level you made two screens, a black one and a white one. However when you ran the app you probably noticed that you had no way to see the second screen. Let's fix that.\r\n\r\nIn order to switch between screens we have added a new command: `setScreen`. Read the documentation to figure out how this command works.\r\n\r\n# Do This\r\n\r\n* Drag out an `onEvent` block for each button you added in the last level. Select your button ID from the dropdown.\r\n* Place a `setScreen` block inside each of the `onEvent` callback functions.\r\n* Choose the appropriate screen from the dropdown of each `setScreen` block.\r\n* Test out your app to make sure you can switch back and forth between the two screens.",
+    "markdown_instructions": "# Switching Screens\r\n\r\nIn the last level you made two screens. However when you ran the app you probably noticed that you had no way to see the second screen. Let's fix that.\r\n\r\nIn order to switch between screens we have added a new command: `setScreen`. Read the documentation to figure out how this command works.\r\n\r\n# Do This\r\n\r\n* Drag out an `onEvent` block for each button you added in the last level. Select your button ID from the dropdown.\r\n* Place a `setScreen` block inside each of the `onEvent` callback functions.\r\n* Choose the appropriate screen from the dropdown of each `setScreen` block.\r\n* Test out your app to make sure you can switch back and forth between the two screens.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -4,7 +4,7 @@
 # models).
 
 class FollowersController < ApplicationController
-  before_filter :authenticate_user!, except: [:student_user_new, :student_register]
+  before_action :authenticate_user!, except: [:student_user_new, :student_register]
   before_action :load_section, only: [:create, :student_user_new, :student_register]
 
   # join a section as a logged in student
@@ -66,7 +66,7 @@ class FollowersController < ApplicationController
       @user.errors.add(:username, "Please signout before proceeding")
     else
       @user.user_type = user_type == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save
           @section.add_student(@user)
           sign_in(:user, @user)

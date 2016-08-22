@@ -15,7 +15,6 @@
 require 'redis'
 
 class RedisPropertyBag
-
   # A unique prefix for Redis property bag keys.
   PROPERTY_BAG_KEY_PREFIX = '__pbag__'
 
@@ -90,5 +89,4 @@ class RedisPropertyBag
   def increment_counter(name)
     @redis.hincrby(@key, name, 1)
   end
-
 end

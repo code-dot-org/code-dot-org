@@ -149,5 +149,4 @@ class HipChat
   def self.set_backoff_for_test(backoff)
     @@initial_backoff = backoff
   end
-
 end

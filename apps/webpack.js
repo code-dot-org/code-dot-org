@@ -108,6 +108,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'test', 'util', 'netsim', 'locale-do-not-import.js'),
+      'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
     }),
   }),
   externals: {

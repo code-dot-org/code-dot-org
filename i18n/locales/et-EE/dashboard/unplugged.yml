@@ -1,196 +1,196 @@
 et:
   data:
     unplugged:
-      Unplug1:
+      'Unplug1':
         title: Sissejuhatus arvutiõpetusse
         desc: See õppetund tutvustab mõistet arvutiteadus ja selgitab, millega It-spetsialist tegeleb. See annab samuti õpilastele võimaluse arvutiteadlase rolli proovida. Tegevuse lõpul saab iga õpilane kaasa midagi, mida ta sellest õppis. Teil võib tekkida kiusatus jätta vahele lastele õppetundidega seostatud sõnavara õpetamine, aga kui sõnavara õpetada lõbusal ja mängulisel viisil, siis on laste areng palju kiirem kui vastavate uuemate õppemeetodite ootamisega.
         pdfs:
           - unplug1
         video: Unplug1
-      Unplug2:
+      'Unplug2':
         title: Arvutuslik mõtlemine
         desc: Õpilased õpivad nelja sammuga arvutilist mõtlemist vaid paberit ja markereid kasutades. Pärast kerget tutvumist õpilased peaksid jaotuma gruppidesse, samal ajal nad peavad looma teisele õpilastele juhiseid, kuidas joonistada spetsiifilist koletist (eelnevalt kataloogist valitud koletiste hulgast). Kui terve ülesanne on koostatud, siis tiimid analüüsivad kõiki koletisi kataloogis ning otsivad mustreid ning võtavad välja erinevaid detaile koletistest ning siis kasutavad seda informatsiooni et saada algoritm (juhised), et järgmine tiim saaks joonistada kindla koletise. Seejärel tiimid vahetavad algoritme teise grupiga ja joonistavad koletised, selle järgi mida algoritm väljendab. Kas joonistus on sama, mis algsel tiimil?
         pdfs:
           - unplug2
         video: Unplug2
-      Unplug3:
+      'Unplug3':
         title: Millimeetripaberi programmeerimine
         desc: Programmeerimise abil teineteist piltide joonistamise abil hakkavad õpilased aru saama, mis programmeerimine tegelikult on. Tund algab sellega, kuidas õpilased tutvustavad teineteisele ruutude värvimist millimeetripaberil, lootuses jäljendada eesolevat pilti. Kui aega üle jääb, siis võib tunni lõpetada piltidega, mille õpilased ise tegid.
         pdfs:
           - unplug3
         video: Unplug3
-      Unplug4:
+      'Unplug4':
         title: Algoritmid
         desc: See tund katab algoritmide teema. Kasutades tangrami kujundeid ja millimeetripaberit, näitab esimene harjutus, kui tähtis on teha iga juhend nii selgeks kui võimalik. Pärast uurib klass, kui mitu võimalust on paberi voltimiseks ristkülikuks, pannes tähele, kuidas mõned meetodid võivad vajada rohkem voltimist kui teised.
         pdfs:
           - unplug4
         video: Unplug4
-      Unplug5:
+      'Unplug5':
         title: Funktsioonid
         desc: 'Selles tunnis valmistavad õpilased nöörist, helmestest ja erilisest ripatsist päikesepüüdja. Õpilased teevad läbi sarja korduvaid samme ja siis peavad nad tuvastama teatud "oskused", mida dubleeritakse mitu korda. Kui need oskused on määratletud, kutsutakse need põhiprogrammist ja kogu see imeline loomisprotsess jäädvustatakse ühele paberilehele. Viimane programm on mõeldud kogu klassi jaoks, olenemata nende nööri, helmeste ja ripatsi tüübist. Et seda efektiivselt teha, peavad õpilased "abstraheerima välja" oma konkreetse materjali üksikasjad ja looma ligikaudsed tingimused üksikisiku vahendite jaoks. Selline üldiste kohatäidete kasutamine on suurepärane sissejuhatus muutujate kasutamisse.'
         pdfs:
           - unplug5
         video: Unplug5
-      Unplug6:
+      'Unplug6':
         title: Tingimused
         desc: See mäng on klassis mängimiseks. Pärast tingimuslausete, kui-lausete ja korduste tutvustamisest saab klass üheskoos neid proovida ettevalmistatud programmi abi, mis kasutab kaardipakki ja juhust.
         pdfs:
           - unplug6
         video: Unplug6
-      Unplug7:
+      'Unplug7':
         title: Laulu kirjutamine
         desc: Laulusõnade lugemine on enamike õpilaste jaoks väga intuitiivne tegevus. Võtame sellise kõigile tuttava tegevuse ja teeme sellest selge õppetunni funktsioonide määratlemise ja kutsumise kohta. Kui õpilastele on määratlemise/kutsumise protsess selge, lisame täiendavad võimalused, mis kaasnevad parameetrite edastusega nendes funktsioonikutsetes.
         pdfs:
           - unplug7
         video: Unplug7
-      Unplug8:
+      'Unplug8':
         title: Abstraktsus
         desc: Selles tegevuses kombineeritakse õpilaste igapäevane rutiin ja Mad-Libi stiilis mõttemäng, et õpetada klassile abstraktsiooni tõhusust.
         pdfs:
           - unplug8
         video: Unplug8
-      Unplug9:
+      'Unplug9':
         title: Relee Programmeerimine
         desc: 'Selles õppetunnis võetakse idee ühest varasemast tegevusest (4. Millimeetripaberi programmeerimine) ja kasutatakse neid oskusi, et rõhutada, kui tähtis on luua programmid, mis töötavad järjekorras ja kontrollida sagedasti, et programmides poleks "vigu".'
         pdfs:
           - unplug9
         video: Unplug9
-      Unplug10:
+      'Unplug10':
         title: Internet
         desc: Selles õppetunnis mängivad õpilased, et nad voolavad läbi Interneti ja õpivad samal ajal tundma veebiaadresse, IP-aadresse ja DNS-i.
         pdfs:
           - unplug10
         video: Unplug10
-      Unplug11:
+      'Unplug11':
         title: Kokkuvõte
         desc: Esimese 20-tunnise sarja viimases kokkuvõttes aidatakse õpilastel elada uuesti läbi kõik oma lemmikhetked ja neile näidatakse ka järgmised sammud, mida nad saavad iseseisevalt astuda, kui tahavad arvutiteadusega edasi tegeleda.
         pdfs:
           - unplug11
         video: Unplug11
-      UnplugHappyMaps:
+      'UnplugHappyMaps':
         title: Happy Maps
         desc: Õpilased loovad lihtsaid algoritme (juhendite komplekte), et liigutada tegelast läbi labürindi kasutades ainult üht käsku.
         video: C1_happy_maps_unplugged
-      MoveIt:
+      'MoveIt':
         title: Liiguta, liiguta
         desc: Õpilased loovad lihtsaid algoritme (juhendite komplekte), et liigutada tegelast läbi labürindi kasutades ainult üht käsku.
         video: C1_moveitmoveit_unplugged
-      PlantASeed:
+      'PlantASeed':
         title: 'Päris elu algoritmid: Seemenda'
         desc: Selles õppetunnis näidatakse seemendamise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
         video: C1_planting_seed
-      BuildingAFoundation:
+      'BuildingAFoundation':
         title: Vundamendi ehitus
         desc: Õpilased panevad kokku struktuuri ainult käepärastest vahenditest. Struktuurid peavad täitma ülesande (ulatuma teatud kõrgusesse või kandma teatud raskust) ja kui asjad lähevad keeruliseks, arutavad õpilased püsivuse ideed.
         video: C1_building_foundation
-      GettingLoopy:
+      'GettingLoopy':
         title: Muutub tsükliliseks
         desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste) programmeerimismõistet. Õpilased õpivad ära lihtsa koreograafia, mida nad peavad siis kordama.
         video: C1_getting_loopy
-      RelayProgramming:
+      'RelayProgramming':
         title: Relee programmeerimine
         desc: 'Õpilased teevad releeralli, kus nad jooksevad üle õue, et kirjutada "Millimeetripaberi programmeerimise" pildi põhjal algoritm. Nad saavad kirjutada korraga ainult ühe juhise ja kui kuskil tekib viga, peavad nad kustutama kõik kuni selle punktini.'
         video: C2_relay_programming
-      Conditionals:
+      'Conditionals':
         title: Tingimuslaused
         desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta kaardi, saad sina punkti."'
         video: C2_conditionals_with_cards
-      BigEvent:
+      'BigEvent':
         title: Suursündmus
         desc: 'Õpilastele õpetatakse programmeerimismõistet "sündmused", need on tegevused, mida arvuti pidevalt jälgib. Õpetaja vajutab nuppe paberist kaugjuhtimispuldil ja õpilased reageerivad vastavalt sellele, millist nuppu vajutati.'
         video: C1_bigevent_unplugged
-      GoingPlacesSafely:
+      'GoingPlacesSafely':
         title: Läheb asukohta turvaliselt
         desc: Internet on võimas, kuid vahest ka ohtlik koht. Õpetajad õpetavad, kuidas end Internetis surfates kaitsta.
         video: C1_going_places_safely
-      GraphPaperProgramming:
+      'GraphPaperProgramming':
         title: Millimeetripaberi programmeerimine
         desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi (komplekti juhiseid), mis juhendab klassikaaslasi, kuidas joonistust kopeerida.
         video: C2_graph_paper
-      PaperPlanes:
+      'PaperPlanes':
         title: 'Päris elu algoritmid: paberlennukid'
         desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
         video: C2_paper_airplanes
-      BinaryBracelets:
+      'BinaryBracelets':
         title: Binaarsed käevõrud
         desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul. Õpilased õpivad, et andmeid saab salvestada mitmel kujul.
         video: C2_binary_bracelets
-      DigitalFootprint:
+      'DigitalFootprint':
         title: Sinu digitaalne jalajälg
         desc: 'Õpetajad selgitavad õpilastele ideed, et enda kohta teabe jätmine Internetti jätab digitaalse jalajälje või "jälje", millel on tagajärjed.'
         video: C2_digitaalne_jalajälg
-      ComputationalThinking:
+      'ComputationalThinking':
         title: Arvutuslik mõtlemine
         desc: Õpilased kasutavad arvutusliku mõtlemise samme (osakesteks lahutamine, kujuvõrdlus, abstraktsioon, algoritm), et õppida mängima mängu, millel pole juhiseid.
         video: C3_computational_thinking
-      FunctionalSuncatchers:
+      'FunctionalSuncatchers':
         title: Funktsionaalsed päikesepüüdjad
         desc: Õpilased koostavad algoritmi muutujate ja funktsioonidega (koodiosad, mida saab uuesti ja uuesti kasutada), et luua nöörist ja helmestest päikesepüüdjad.
         video: C3_functional_suncatchers
-      SongwritingParameters:
+      'SongwritingParameters':
         title: Laulukirjutamine parameetritega
         desc: Õpilased kasutavad laulu refrääni põhimõtet, et õppida parameetrite edastust (mis kohandab funktsiooni ilma, et oleks vaja kogu funktsioon ümber kirjutada).
         video: C3_songwriting_with_parameters
-      DiceRace:
+      'DiceRace':
         title: 'Päris elu algoritmid: täringuralli'
         desc: Selles õppetunnis tuuakse näiteid sellest, kuidas kasutame algoritme oma igapäevases elus. Õppetunnis õpilased tuvastavad ja kirjutavad üles algoritmi täringuralli mängu jaoks.
         video: C3_dice_race
-      Internet:
+      'Internet':
         title: Internet
         desc: Õpilased saadavad paberitükkidel sõnumeid, mis kujutavad erinevaid Internetiedastuse meetodeid.
         video: C3_internet
-      Crowdsourcing:
+      'Crowdsourcing':
         title: Ühistegevused
         desc: Õpilased kasutavad ühisloomet, mis on arvutiteaduses levinud võte probleemide lahendamiseks, et täita ülesanne kogu klassiga palju tõhusamalt kui üks õpilane seda ise suudaks.
         video: C3_crowdsourcing
-      DigitalCitizenship:
+      'DigitalCitizenship':
         title: Digitaalne kodakondsus
         desc: Õpilased õpivad, mis on privaatse informatsiooni ja isikliku informatsiooni vahe, mille jagamine internetis on turvaline ning mille mitte.
-      TangramAlgorithms:
+      'TangramAlgorithms':
         title: Tangrami algoritmid
         desc: 'See õppetund õpetab ühte olulist asja algoritmide kohta: kui algoritm on lihtne, saab seda kasutada paljudel eri viisidel. Selleks, et igaüks saaks kindlasti ühesuguse asja, peab algoritm olema palju üksikasjalikum.'
         video: C4_unplugged_algorithms
-      EnvelopeVariables:
+      'EnvelopeVariables':
         title: Ümbriku muutujad
         desc: Muutujad annavad arvutiteaduses palju vabadust. See tund aitab selgitada, mis on muutujad ja kuidas me saame neid erinevalt kasutada. Kasuta seda tegevust enne (või konjunktsioonis) abstraktsiooni tundi, et sellest ideest päriselt aru saada.
         video: C4_unplugged_variables
-      MadGlibs:
+      'MadGlibs':
         title: Mad Glibs
         desc: Abstraktsuse mõistmine on arvutiteadlase jaoks üks tähtsamaid oskusi. See tegevus aitab õpilastel analüüsida lugusid erinevuste suhtes, et neid abstraheerida. Nendest abstraheeritud lugudest saavad omakorda mallid lõbusate ja pööraste uute lugude jaoks.
         video: C4_unplugged_madlibs
-      ForLoopFun:
+      'ForLoopFun':
         title: For Loop Fun
         desc: Teame, et tsüklitega saab teha asju uuesti ja uuesti, aga nüüd õpime, kuidas kasutada tsükleid, millesse on lisastruktuur juba sisse ehitatud.
         video: C4_unplugged_forloops
-      SongwritingWithParameters:
+      'SongwritingWithParameters':
         title: Laulukirjutamine parameetritega
         desc: Üks võrratumaid struktuure arvutiteaduses on funktsioon. Funktsioonid (ka nn protseduurid) on miniprogrammid, mida saab kasutada suurema programmi sees uuesti ja uuesti. Selles õppetunnis aidatakse õpilastel intuitiivselt mõista, miks koodiosade kombineerimine funktsioonideks on nii kasulik meetod.
         video: C4_unplugged_parameters
-      BinaryImages:
+      'BinaryImages':
         title: Binaarsed pildid
         desc: Kuigi paljude inimeste jaoks on binaarandmed kõigest nullid ja ühed, õppisid õpilased eelmistel kursustel, et teavet saab esitada mitmel binaarsel kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse, kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks pilte ja värve).
         video: C4_unplugged_binary
-      VideoGamesCoordinatePlanes:
+      'VideoGamesCoordinatePlanes':
         title: Videomängud ja koordinaattasandid
         desc: Avasta, kuidas videomängud, mida sa armastad, on tegelikult algebrast inspireeritud! Uuri, kuidas algebralised avaldised ja koordinaattasand aitavad meil aru saada, kuidas videomängud töötavad ja siis alusta enda videomängu planeerimist.
         video: alg_11_coordinate_plane
-      Contracts:
+      'Contracts':
         title: Lepingud, domeenid ja vahemik
         desc: Lepingud annavad meile viisi funktsioonide mõistmiseks ja arutamiseks. Selles õppetunnis vaatame, kuidas lepingud aitavad meil mõista uut programmeerimiskeelt või funktsiooni.
         video: alg_5_contracts
-      DesignRecipe:
+      'DesignRecipe':
         title: Disaini retsept
         desc: 'Viimases astmes õpilased kirjutasid mõne väga lihtsa funktsiooni - aga keerulisemad funktsioonid nõuavad läbimõeldumat lähenemist. Disaini retsept on struktureeritud lähenemine funktsioonide kirjutamisele, mis sisaldab testimist, et kindlustada funktsiooni toimimine.'
         video: alg_8_design_recipe
-      Booleans:
+      'Booleans':
         title: Kahendmuutujad ja loogika
         desc: Kahendmuutujad on neljas ja viimane andmetüüp, mida sa õpid sellel kursusel. Selles tegevuses sa õpid, mis on kahendmuutujad ja kuidas need aitavad meil kirjutada funktsioone, mis mõtlevad loogiliselt
         video: alg_9_booleans
-      ConditionalsPiecewiseFunctions:
+      'ConditionalsPiecewiseFunctions':
         title: Tingimuslaused ja Piecewise funktsioonid
         desc: Parameetrid, mille me funktsioonidele anname, põhjustavad erineva väljundi, mis põhineb rangetel mustritel. Oletame, et me tahame parameetreid mõndade väärtustega, et muuta väljundit kasutades ühte mustrit, aga teiste väärtustega, et kasutada teist mustrit. See on olukord, kus on vaja tingimuslauseid...
         video: alg_10_conditionals
-      CollisionDetection:
+      'CollisionDetection':
         title: Kokkupõrke tuvastamine ja Pythagorase teoreem
         desc: Ekraanil olevate objektide teineteise puudutamise hetke välja selgitamine on tähtis aspekt enamuste mängude juures. Selles tunnis me vaatame, kuidas Pythagorase teoreemi ja kauguse valemit saab kasutada tasandil oleva kahe punkti kauguse mõõtmiseks ja seejärel saab otsustada, kas need kaks punkti (või mängu tegelast) puudutavad teineteist.
         video: alg_16_biggame_collision_detection

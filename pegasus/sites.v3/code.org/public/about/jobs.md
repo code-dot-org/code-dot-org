@@ -13,17 +13,14 @@ nav: about_nav
  	- [Controller](#controller)
 - **Fundraising**
  	- [Donor Relations Manager](#donor)
-- **Marketing**
- 	- [Marketing Associate](#market)
 - **Partnerships & Outreach**
- 	- [Regional Manager - Northeast, Southeast locations](#dcdm)
+ 	- [Regional Manager - Northeast](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#software)
 	- [UX / Visual Designer (Part time)](#design)
-- **Professional Learning & Community**
-	- [Training and Development Specialist](#train)
+	
 
 
 **[Working at Code.org](#info)**

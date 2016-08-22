@@ -10,7 +10,7 @@
   "collectorCollectedNothing": "Держите кодирования! Вам нужно собрать как многие из предметов, как вы можете.",
   "collectorCollectedSome": "Хорошая работа! Вы собрали {count} элементы!",
   "collectorTooManyBlocks": "Можно использовать только {blockLimit} блоков. Взгляните на ваш код и попробуйте еще раз!",
-  "didNotCollectEverything": "Убедитесь, что Вы не оставили нектар или мед позади!",
+  "didNotCollectEverything": "Убедитесь, что вы собрали весь мед и нектар!",
   "dig": "разбросать 1",
   "digTooltip": "разбросать 1 кучу земли",
   "dirE": "В",
@@ -89,5 +89,6 @@
   "whileTooltip": "Повторять указанные действия до конечной точки.",
   "word": "Найти слово",
   "yes": "Да",
-  "youSpelled": "Вы ввели"
+  "youSpelled": "Вы ввели",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

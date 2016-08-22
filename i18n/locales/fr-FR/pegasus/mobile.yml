@@ -368,7 +368,7 @@ fr-FR:
   no_internet: "Pas d'internet ?"
   download_offline: Télécharger la version hors ligne.
   are_you_teacher: Êtes-vous un enseignant?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Revoir le plan de la leçon et les autres ressources pour les enseignants.
   volunteer_engineer_submission_title: Inspirer les élèves et les bénévoles
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils ont besoin de votre aide ! '
   volunteer_engineer_submission_subtitle_specific: '% {num_teachers} enseignants ont besoin de bénévoles.<br>% {num_volunteers} bénévoles se sont inscrits. Rejoignez-les.'
@@ -518,7 +518,7 @@ fr-FR:
   dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: 'Root->dashboard_navigation_voir_text_réponses'
   dashboard_navigation_view_assessments: Évaluations
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Évaluations/Sondages
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -669,13 +669,13 @@ fr-FR:
   dashboard_faq: Foire aux Questions
   dashboard_faq_k5: Foire aux Questions CM2
   dashboard_announcements: Annonces
-  dashboard_announce_view_all: Tout voir
   dashboard_announce_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Pour en savoir plus
   dashboard_announce_try_now_button: Essaie maintenant
   dashboard_announce_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
   dashboard_announce_petition_button: Ajoutez votre nom
+  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: "L'Heure de Code est là — du 8 au 14 décembre&#160;!"
   code_sign_up: "Enregistrez-vous pour participer à la Semaine de l'enseignement de l'informatique."
   learn_more: En savoir plus

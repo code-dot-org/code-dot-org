@@ -404,7 +404,9 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
-    img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
+    img.src = filename.startsWith('http') ?
+        filename :
+        this.studioApp_.assetUrl('media/turtle/' + filename);
   }
 };
 

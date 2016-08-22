@@ -31,6 +31,10 @@ module RakeUtils
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
+  def self.restart_service(id)
+    sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
+  end
+
   def self.system_(*args)
     status, _ = system__(command_(*args))
     status
@@ -156,7 +160,7 @@ module RakeUtils
   # full revision history needed to find the original commit SHA.
   def self.git_folder_hash(dir)
     Dir.chdir(File.expand_path(dir)) do
-      Digest::SHA2.hexdigest(`git ls-tree -r HEAD`)
+      Digest::SHA2.hexdigest(`git ls-tree -r HEAD 2>/dev/null`)
     end
   end
 

@@ -1,7 +1,6 @@
 require 'cdo/date'
 
 class DistrictPartnerSubmission
-
   def self.normalize(data)
     result = {}
 
@@ -31,5 +30,4 @@ class DistrictPartnerSubmission
       'location_p' => data['location_p'] || geocode_address(main_district_address)
     }
   end
-
 end

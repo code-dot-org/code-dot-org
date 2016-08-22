@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ZendeskSessionControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   setup do
     @user = create(:student)
   end
@@ -38,5 +38,4 @@ class ZendeskSessionControllerTest < ActionController::TestCase
     assert_response :redirect
     assert_redirected_to "/users/sign_in"
   end
-
 end

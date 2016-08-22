@@ -3,7 +3,6 @@ require 'mini_magick/image'
 require 'test_helper'
 
 class ImageLibTest < ActiveSupport::TestCase
-
   def test_overlay_image
     bg_url =  test_image_path('blank_sharing_drawing_anna.png')
     fg_blob = test_image('foreground_overlay.png').to_blob
@@ -74,7 +73,7 @@ class ImageLibTest < ActiveSupport::TestCase
   # the ImageMagic compare tool.
   def images_equal?(image1, image2)
     result = capture_stderr do
-      MiniMagick::Tool::Compare.new(false) do |c|
+      MiniMagick::Tool::Compare.new(whiny: false) do |c|
         # Use the absolute error metric, which outputs non-zero to stderr
         # if images don't match.
         c.metric('ae')
@@ -101,5 +100,4 @@ class ImageLibTest < ActiveSupport::TestCase
   def test_image(name)
     MiniMagick::Image.open(test_image_path(name))
   end
-
 end

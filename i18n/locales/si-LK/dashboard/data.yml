@@ -5,24 +5,24 @@ si:
         'Unplug1': පරිඝණක විද්‍යාව හැදින්වීම
         'Maze': වංකගිරිය
         'Multi': බහු වරණ දේවල්
-        Unplug2: සංඛ්‍යාත්මක සිතීම
-        Unplug3: Graph Paper Programming
+        'Unplug2': සංඛ්‍යාත්මක සිතීම
+        'Unplug3': Graph Paper Programming
         'Artist': කලාකරුවා
-        Unplug4: ඇල්ගොරිතම්
+        'Unplug4': ඇල්ගොරිතම්
         'Artist2': කලාකරුවා 2
-        Unplug5: ශ්‍රිතයන්
+        'Unplug5': ශ්‍රිතයන්
         'Farmer': ගොවියා
-        Unplug6: කන්ඩිෂනලස්
+        'Unplug6': කන්ඩිෂනලස්
         'Artist3': කලාකරුවා 3
         'Unplug7': ගීත රචනය
         'Farmer2': ගොවියා 2
-        Unplug8: ඇබ්ස්ට්‍රැක්ෂන්
+        'Unplug8': ඇබ්ස්ට්‍රැක්ෂන්
         'Artist4': කලාකරුවා 4
         'Unplug9': ක්‍රමලේඛණය ප්‍රතිචාරණය
         'Farmer3': ගොවියා 3
         'Unplug10': අන්තර්ජාලය
         'Artist5': කලාකරුවා 5
-        Unplug11: වෙළනවා
+        'Unplug11': වෙළනවා
         'MazeEC': වංකගිරිය
         'Bounce': පොළා පනිනවා
         'Flappy': Flappy කුරුල්ලා

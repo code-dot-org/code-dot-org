@@ -2,7 +2,6 @@
 # PropertyBag
 #
 class PropertyBag
-
   class NotFound < Sinatra::NotFound
   end
 
@@ -72,7 +71,6 @@ end
 require 'aws-sdk'
 
 class DynamoPropertyBag
-
   class NotFound < Sinatra::NotFound
   end
 
@@ -160,5 +158,4 @@ class DynamoPropertyBag
   def name_exists(id)
     { "name" => { value: id, comparison_operator: 'EQ', } }
   end
-
 end
