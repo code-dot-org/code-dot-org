@@ -25,7 +25,7 @@ Code.org's year-long, high school Computer Science Principles course is designed
 </center>
 #### Students will study many "Big Ideas" of computing:
 <center>
-<img src="units-2016.png" style="width: 80%;"/>
+<img src="units-2016.png" style="width: 100%;"/>
 </center>
 
 ### With an online course, students are able to benefit from a truly modern educational experience. For example, Code Studio is able to:
