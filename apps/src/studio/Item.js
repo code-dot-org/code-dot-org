@@ -1,21 +1,13 @@
 import Collidable from './collidable';
-import {
-  DEFAULT_ITEM_ANIMATION_FRAME_DURATION,
-  DEFAULT_ITEM_SPEED,
-  Direction,
-  ITEM_FADE_TIME,
-  NextTurn,
-  TOUCH_HAZARD_EFFECT_TIME,
-  frameDirTableWalkingWithIdleClockwise,
-  frameDirTableWalkingWithIdleCounterclockwise,
-  getClosestDirection
-} from './constants';
+import * as constants from './constants';
 import _ from 'lodash';
 import { ShakeActor } from './spriteActions';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
 var studioMsg = require('./locale');
+var Direction = constants.Direction;
+var NextTurn = constants.NextTurn;
 
 /**
  * An Item is a type of Collidable.
@@ -44,13 +36,13 @@ export class Item extends Collidable {
      */
     this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
-    this.speed = options.speed || DEFAULT_ITEM_SPEED;
-    this.normalSpeed = options.normalSpeed || DEFAULT_ITEM_SPEED;
+    this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
+    this.normalSpeed = options.normalSpeed || constants.DEFAULT_ITEM_SPEED;
     this.normalFrameDuration = options.animationFrameDuration ||
-        DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
+        constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
     this.displayDir = Direction.SOUTH;
     this.startFadeTime = null;
-    this.fadeTime = ITEM_FADE_TIME;
+    this.fadeTime = constants.ITEM_FADE_TIME;
 
     /** @private {StudioAnimation} */
     this.animation_ = new StudioAnimation(Object.assign({}, options, {
@@ -94,8 +86,8 @@ export class Item extends Collidable {
     }
 
     var frameDirTable = this.spritesCounterclockwise ?
-      frameDirTableWalkingWithIdleCounterclockwise :
-      frameDirTableWalkingWithIdleClockwise;
+      constants.frameDirTableWalkingWithIdleCounterclockwise :
+      constants.frameDirTableWalkingWithIdleClockwise;
 
     return frameDirTable[this.displayDir];
   }
@@ -309,7 +301,7 @@ export class Item extends Collidable {
     var SQUARED_MINIMUM_DISTANCE = 25;
     if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
       Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
-      this.setDirection(getClosestDirection(deltaX, deltaY));
+      this.setDirection(constants.getClosestDirection(deltaX, deltaY));
     }
   }
 
@@ -450,7 +442,7 @@ export class Item extends Collidable {
         Studio.trackedBehavior.touchedHazardCount++;
         var actor = Studio.sprite[key];
         if (actor) {
-          actor.addAction(new ShakeActor(TOUCH_HAZARD_EFFECT_TIME));
+          actor.addAction(new ShakeActor(constants.TOUCH_HAZARD_EFFECT_TIME));
         }
       }
     }
