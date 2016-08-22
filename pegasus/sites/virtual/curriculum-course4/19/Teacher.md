@@ -50,6 +50,7 @@ Remind your students of the lessons that they have done with variables previousl
   - Can you use variables as numbers in math equations?
 
 - Next, remind your students that this stage is intended to be very difficult and most puzzles will take several attempts to solve.
+
 [/together]
 
 [together]
