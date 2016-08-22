@@ -1,18 +1,12 @@
+import * as constants from './constants';
 import Collidable from './collidable';
-import {
-  DEFAULT_ACTOR_FADE_TIME,
-  DEFAULT_SPRITE_ANIMATION_FRAME_DURATION,
-  DEFAULT_SPRITE_SPEED,
-  Direction,
-  Emotions,
-  NextTurn,
-  frameDirTableWalkingWithIdleClockwise,
-  frameDirTableWalkingWithIdleCounterclockwise
-} from './constants';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
 var studioMsg = require('./locale');
+var Direction = constants.Direction;
+var Emotions = constants.Emotions;
+var NextTurn = constants.NextTurn;
 
 /**
  * A Sprite is a type of Collidable.
@@ -31,7 +25,7 @@ export default class Sprite extends Collidable {
      */
     this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
-    this.speed = options.speed || DEFAULT_SPRITE_SPEED;
+    this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
     this.setNormalFrameDuration(options.animationFrameDuration);
     this.displayDir = options.displayDir || Direction.NONE;
     this.startFadeTime = null;
@@ -284,8 +278,8 @@ export default class Sprite extends Collidable {
   getDirectionFrame() {
 
     var frameDirTable = this.frameCounts.counterClockwise ?
-      frameDirTableWalkingWithIdleCounterclockwise :
-      frameDirTableWalkingWithIdleClockwise;
+      constants.frameDirTableWalkingWithIdleCounterclockwise :
+      constants.frameDirTableWalkingWithIdleClockwise;
 
     return frameDirTable[this.displayDir];
   }
@@ -331,7 +325,7 @@ export default class Sprite extends Collidable {
    */
   startFade(fadeTime) {
     this.startFadeTime = new Date().getTime();
-    this.fadeTime = valueOr(fadeTime, DEFAULT_ACTOR_FADE_TIME);
+    this.fadeTime = valueOr(fadeTime, constants.DEFAULT_ACTOR_FADE_TIME);
   }
 
   /**
@@ -353,7 +347,7 @@ export default class Sprite extends Collidable {
     if (this.dir === Direction.NONE) {
       return this.normalFrameDuration;
     } else {
-      return this.normalFrameDuration * DEFAULT_SPRITE_SPEED / this.speed;
+      return this.normalFrameDuration * constants.DEFAULT_SPRITE_SPEED / this.speed;
     }
   }
 
@@ -515,7 +509,7 @@ export default class Sprite extends Collidable {
    */
   setNormalFrameDuration(duration) {
     this.normalFrameDuration = duration ||
-        DEFAULT_SPRITE_ANIMATION_FRAME_DURATION;
+        constants.DEFAULT_SPRITE_ANIMATION_FRAME_DURATION;
     this.updateAnimationFrameDuration_();
   }
 
