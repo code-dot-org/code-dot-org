@@ -13,7 +13,13 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      if script_level.stage.lockable?
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      else
+        puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      end
+    elsif script_level.stage.lockable?
+      script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -131,7 +137,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.position,
+        stage_position: @script_level.stage.absolute_position,
         level_position: @script_level.position
       )
     end
@@ -306,14 +312,14 @@ module LevelsHelper
       # puzzle-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
         puzzle: script_level.position
       }, default: nil)
 
       # stage-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
       }, default: nil) if enabled.nil?
 
       # script-specific
