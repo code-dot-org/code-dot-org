@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class LevelGroupTest < ActiveSupport::TestCase
-
   # Create a multi with name "levelX" where X is passed in
   def get_multi_dsl(id)
     "
@@ -197,5 +196,4 @@ MARKDOWN
     assert plc_evaluation.plc_evaluation?
     assert_not non_plc_evaluation.plc_evaluation?
   end
-
 end

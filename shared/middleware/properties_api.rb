@@ -4,7 +4,6 @@ require 'cdo/rack/request'
 require 'json'
 
 class PropertiesApi < Sinatra::Base
-
   # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
   # items sized 4K and under. Due to the other metadata we store, the
   # largest observed property size (key.length + value.to_json.length) which stays under

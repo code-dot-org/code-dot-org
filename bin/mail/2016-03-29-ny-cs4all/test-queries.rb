@@ -5,7 +5,6 @@ require './generate-list-functions'
 # Execute via RAILS_ENV=test bundle exec ruby -Itest ./test-queries.rb
 
 class CS4AllTestCase < MailQueryTestCase
-
   def setup
     # K5 workshop:
     @k5_organizer_email = 'k5_organizer@example.net'

@@ -101,5 +101,4 @@ class LevelSourcesController < ApplicationController
   def level_source_params
     params.require(:level_source).permit(:hidden)
   end
-
 end

@@ -23,7 +23,6 @@
 #
 
 class LevelGroup < DSLDefined
-
   def dsl_default
     <<ruby
 name 'unique level name here'
@@ -192,5 +191,4 @@ ruby
       end
     end.compact
   end
-
 end
