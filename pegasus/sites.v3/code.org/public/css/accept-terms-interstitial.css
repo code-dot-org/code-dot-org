@@ -62,3 +62,57 @@
   font-size: 14px;
   font-family: "Gotham 4r", sans-serif;
 }
+
+@media screen and (min-width: 601px) and (max-width: 970px) {
+  #terms-modal .modal-dialog {
+    width: 600px;
+    left: 45%;
+  }
+
+  #terms-modal .scroll-box {
+    height: 130px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  #terms-modal {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  #terms-modal .modal-dialog {
+    width: 400px;
+    left: 65%;
+  }
+
+  #terms-modal .scroll-box {
+    height: 100px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #terms-modal {
+    width: 350px;
+    left: 75%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  #terms-modal .modal-dialog {
+    width: 350px;
+    left: 75%;
+  }
+
+  #terms-modal .scroll-box {
+    height: 100px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  #terms-modal h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
