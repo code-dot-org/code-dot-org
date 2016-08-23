@@ -63,14 +63,12 @@ const EditKeyRow = React.createClass({
           {
             this.state.isEditing ?
               <button
-                className="btn btn-primary"
-                style={dataStyles.editButton}
+                style={dataStyles.saveButton}
                 onClick={this.handleSave}
               >
                 Save
               </button> :
               <button
-                className="btn"
                 style={dataStyles.editButton}
                 onClick={this.handleEdit}
               >
@@ -79,8 +77,7 @@ const EditKeyRow = React.createClass({
           }
 
           <button
-            className="btn btn-danger"
-            style={dataStyles.button}
+            style={dataStyles.redButton}
             onClick={this.handleDelete}
           >
             Delete

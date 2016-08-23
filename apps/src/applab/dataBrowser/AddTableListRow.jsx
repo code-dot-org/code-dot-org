@@ -41,8 +41,7 @@ const AddTableListRow = React.createClass({
         </td>
         <td style={dataStyles.cell}>
           <button
-            className="btn btn-primary"
-            style={dataStyles.button}
+            style={dataStyles.blueButton}
             onClick={this.handleAdd}
           >
             Add
