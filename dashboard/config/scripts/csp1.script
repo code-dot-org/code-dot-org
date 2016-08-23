@@ -4,6 +4,9 @@ description_short "The Internet"
 login_required 'true'
 hidden 'false'
 
+stage 'CS Principles Pre-survey', lockable: true
+assessment 'CSP pre-assessment survey'
+
 stage "Personal Innovations"
 named_level 'CSP Pre-survey'
 level 'U1L1 Student Lesson Introduction'
@@ -54,6 +57,10 @@ assessment 'U1L11 Assessment 1'
 assessment 'U1L11 Assessment 2'
 assessment 'U1L11 Reflection Free Response'
 assessment 'U1L11 Collaboration Reflection'
+
+stage 'Unit 1 Chapter 1 Assessment', lockable:true
+#level 'csp_unit_assessment_overview'
+assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group'
 
 stage 'The Internet'
 level 'v2 U1 Internet is for Everyone Student Lesson Introduction'
@@ -109,3 +116,7 @@ assessment 'U2L11 Free Response'
 
 stage 'Practice PT - The Internet and Society'
 level 'v2 U1L14 Student Lesson Introduction'
+
+stage 'Unit 1 Chapter 2 Assessment', lockable:true
+#level 'csp_unit_assessment_overview'
+assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group'

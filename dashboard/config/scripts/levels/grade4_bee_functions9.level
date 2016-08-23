@@ -6,18 +6,18 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects nectar only from purple flowers that have nectar.",
+    "instructions": "Red flowers can have an unknown amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "2",
-    "flower_type": "purpleNectarHidden",
+    "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,2,0,0],[0,0,0,0,\"P\",1,0,0],[0,0,0,\"P\",1,0,0,0],[0,0,\"P\",1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,98,0,0,0],[0,0,0,1,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "10",
     "honey_goal": "0",
-    "markdown_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects nectar only from purple flowers that have nectar.",
+    "markdown_instructions": "Red flowers can have an unknown amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -33,11 +33,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "These flowers need to be red, not purple!",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -46,7 +46,7 @@
       <xml>
         <block type="procedures_defnoreturn" deletable="false" editable="false">
           <mutation/>
-          <title name="NAME">collect purple nectar</title>
+          <title name="NAME">collect all nectar</title>
         </block>
       </xml>
     </start_blocks>
@@ -66,20 +66,20 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="bee_ifNectarAmount">
+        <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
+          <title name="OP">==</title>
           <title name="ARG2">0</title>
         </block>
         <block type="procedures_callnoreturn">
-          <mutation name="collect purple nectar"/>
+          <mutation name="collect all nectar"/>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
         <block type="procedures_callnoreturn">
-          <mutation name="collect purple nectar"/>
+          <mutation name="collect all nectar"/>
         </block>
         <block type="bee_ifNectarAmount">
           <title name="ARG1">nectarRemaining</title>
@@ -93,7 +93,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">3</title>
+              <title name="TIMES">5</title>
               <statement name="DO">
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
@@ -105,7 +105,7 @@
                           <title name="DIR">moveForward</title>
                           <next>
                             <block type="procedures_callnoreturn">
-                              <mutation name="collect purple nectar"/>
+                              <mutation name="collect all nectar"/>
                               <next>
                                 <block type="maze_turn">
                                   <title name="DIR">turnLeft</title>
@@ -124,9 +124,9 @@
         </block>
         <block type="procedures_defnoreturn" deletable="false" editable="false">
           <mutation/>
-          <title name="NAME">collect purple nectar</title>
+          <title name="NAME">collect all nectar</title>
           <statement name="STACK">
-            <block type="bee_ifNectarAmount">
+            <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
               <title name="OP">&gt;</title>
               <title name="ARG2">0</title>

@@ -32,5 +32,4 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/hoc/1'
     assert_not_nil cookies['_learn_session_test']
   end
-
 end

@@ -12,24 +12,18 @@ nav: about_nav
  	- [Administrative Assistant](#admin)
  	- [Controller](#controller)
 - **Fundraising**
- 	- [Donor Relations Manager](#donor)
-- **Marketing**
- 	- [Marketing Associate](#market)
+ 	- [Major Gifts Manager](#donor)
 - **Partnerships & Outreach**
- 	- [Regional Manager - Northeast, Southeast locations](#dcdm)
+ 	- [Regional Manager - Northeast](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#software)
 	- [UX / Visual Designer (Part time)](#design)
-- **Professional Learning & Community**
-	- [Training and Development Specialist](#train)
+	
 
 
 **[Working at Code.org](#info)**
-
-
-
 
 
 ## <a name="admin"href="#admin">Administrative Assistant (Seattle, WA)</a>
@@ -111,10 +105,10 @@ Candidates must be extremely detail-oriented, possess exceptional written and in
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="donor"href="#donor">Donor Relations Manager (Seattle, WA)</a>
+## <a name="donor"href="#donor">Major Gifts Manager (Seattle, WA)</a>
 **Job Summary:**
 
-The Donor Relations Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. 
+The Major Gifts Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. 
 
 Responsibilities of the position include:
 
@@ -148,39 +142,8 @@ Please DO NOT apply for this position if you do not have experience in writing s
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="market"href="#market">Marketing Associate (Seattle, WA)</a>
-**Job Summary:**
 
-The Hour of Code initiative is a yearly campaign that encourages students to try computer science during Computer Science Education Week (Dec. 5-11). Since 2013, it has reached over 200M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting a temporary staff member to assist the Marketing team in the planning and execution of December’s Hour of Code campaign. The Marketing Associate will make essential contributions to a global and highly visible marketing effort, supporting social media and email outreach, live events, partnership cultivation, and more. 
-
-This is a full time, short term (July-December) staff position based in our Seattle office. 
-
-Duties of this role include: 
-
-- Assisting overall marketing efforts for the Hour of Code campaign
-- Managing partner commitments
-- Helping plan special events and maintain a database of key Hour of Code events
-- Supporting our community and field questions about the Hour of Code in a timely manner
-- Tracking social media and press coverage related to the campaign 
-- Spearheading special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Skills and Qualifications:**
-
-We are looking for a self-starter, experienced in communications and event planning, who can multi-task, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, tech-savvy, and able to swiftly prioritize duties as needed on multiple ongoing projects. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate has the following qualifications:
-
-- Degree in Marketing, Journalism, Communications or related field 
-- Excellent writing skills, with an interest in social media platforms and trends
-- Demonstrated experience with Google Drive (spreadsheets), Google Hangouts, Skype 
-- Experience with customer service, administration, or event planning preferred
-- Passion for technology and inspiring new students to try computer science
-
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast, Southeast locations (Boston, New York, Florida/Georgia)</a>
+## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast (Boston, New York)</a>
 
 **Job Summary:**
 
@@ -329,43 +292,6 @@ Additional desired skills include:
 Email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="train"href="#train">Training and Development Specialist (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a Training and Development Specialist for our Professional Learning & Community team. The specialist will be the coach and mentor for Code.org’s 200+ K-12 facilitators, who provide online and in-person training to over 10,000 K-12 teachers each year. This is a full time, exempt position based in our Seattle office. 
-
-
-Duties of this role include: 
-
-- Serve as the internal expert on facilitator development  and train-the-trainer
-- Draft agendas and deliver content for the annual Facilitator Development summit (2.5 days in May)
-- Work closely with the Facilitator Program Manager to ensure facilitator program cohesiveness
-- Host weekly office hours (or on an as needed basis) by curriculum program for facilitators to attend
-- Serve as a role model for excellent instructional facilitation and develop those capabilities in others.
-- Plan ongoing facilitator development activities, online and in person, throughout the school year
-- Monitor the Code.org facilitator online community and forums
-- Ensure a high level of quality for all Code.org PD sessions led by our facilitators
-- Identify, intervene and troubleshoot with facilitators who are struggling with performance
-- Develop tactics on improving facilitator practice for adult learning 
-- Track and recommend facilitator program content issues to the Teacher Experience Program Manager
-
- **Skills and Experience:**
-
-We are looking for a thought leader in the facilitation space who is highly respected by K-12 educators, and has expertise in coaching others to deliver high quality facilitation. 
-
-The ideal candidate has the following qualifications:
-
-- Strong instructional design and facilitation skills, and ability to support and mentor others in these domains.
-- Experience developing training materials/programs
-- Experience coaching participants in a train-the-trainer program
-- Strong attention to detail
-- Excellent written and verbal communication skills
-- Some knowledge of Computer Science
-- Bachelors degree or higher in Education or related field preferred 
-- 5-7 years related experience 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="info" href="#info">Working at Code.org</a>
 

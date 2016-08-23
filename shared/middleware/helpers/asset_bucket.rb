@@ -2,7 +2,6 @@
 # AssetBucket
 #
 class AssetBucket < BucketHelper
-
   def initialize
     super CDO.assets_s3_bucket, CDO.assets_s3_directory
   end
@@ -15,5 +14,4 @@ class AssetBucket < BucketHelper
   def cache_duration_seconds
     3600
   end
-
 end

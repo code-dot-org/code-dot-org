@@ -120,13 +120,6 @@ Style/ConditionalAssignment:
 Style/ConstantName:
   Enabled: false
 
-# Offense count: 274
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundClassBody:
-  Enabled: false
-
 # Offense count: 64
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -174,13 +167,6 @@ Style/Lambda:
 # Offense count: 110
 # Cop supports --auto-correct.
 Style/LeadingCommentSpace:
-  Enabled: false
-
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: require_parentheses, require_no_parentheses, require_no_parentheses_except_multiline
-Style/MethodDefParentheses:
   Enabled: false
 
 # Offense count: 7
@@ -285,13 +271,6 @@ Style/SpaceInsideBlockBraces:
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
 # SupportedStyles: space, no_space
 Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-# Offense count: 13953
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
   Enabled: false
 
 # Offense count: 30

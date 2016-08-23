@@ -52,5 +52,4 @@ class FeatureModeControllerTest < ActionController::TestCase
       assert_select '#normal[checked="checked"]'
     end
   end
-
 end
