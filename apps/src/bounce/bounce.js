@@ -1062,6 +1062,8 @@ Bounce.execute = function () {
   Bounce.waitingForReport = false;
   Bounce.response = null;
 
+  // Mapping of event handler hooks (e.g. Bounce.whenLeft) to the name of the
+  // block that should generate the corresponding code.
   const events = {
     whenWallCollided: 'bounce_whenWallCollided',
     whenBallInGoal: 'bounce_whenBallInGoal',

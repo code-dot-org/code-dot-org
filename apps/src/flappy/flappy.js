@@ -1,5 +1,3 @@
-/* global Interpreter */
-
 /**
  * Blockly App: Flappy
  *
@@ -745,6 +743,8 @@ Flappy.execute = function () {
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
+  // Mapping of event handler hooks (e.g. Flappy.whenClick) to the name of the
+  // block that should generate the corresponding code.
   const events = {
     whenClick: 'flappy_whenClick',
     whenCollideGround: 'flappy_whenCollideGround',

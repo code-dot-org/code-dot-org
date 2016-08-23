@@ -48,19 +48,25 @@ exports.evalWith = function (code, options, legacy) {
   }
 };
 
+/**
+ * Generate code for each of the given events, and evaluate it using the
+ * provided APIs as context.
+ * @param apis Context to be set as globals in the interpreted runtime.
+ * @param events Mapping of hook names to the corresponding blockly block name.
+ * @param generator Function for generating code for a given block name.
+ * @return {{}} Mapping of hook names to the corresponding event handler.
+ */
 exports.evalWithEvents = function (apis, events, generator) {
   let interpreter, currentCallback;
+  let code = '';
   const hooks = {};
-  const code = Object.keys(events).map(event => {
+  Object.keys(events).forEach(event => {
     hooks[event] = () => {
       currentCallback(event);
       interpreter.run();
     };
-    return `function ${event} () {
-      ${generator(events[event])}
-    }
-    `;
-  }).join('');
+    code += `function ${event}(){${generator(events[event])}};`;
+  });
 
   interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
