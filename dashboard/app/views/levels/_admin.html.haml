@@ -41,6 +41,7 @@
       - @level.script_levels.each do |script_level|
         %li
           = link_to script_level.script.name, script_level.script
+          = "(stage ID: #{script_level.stage_id})"
           as
           = link_to build_script_level_path(script_level), build_script_level_path(script_level)
     %br/

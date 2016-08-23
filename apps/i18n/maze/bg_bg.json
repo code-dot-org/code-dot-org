@@ -89,5 +89,6 @@
   "whileTooltip": "Повтори поставените в блока действия, докато целта не бъде достигната.",
   "word": "Намерете думата",
   "yes": "Да",
-  "youSpelled": "ти образува думи"
+  "youSpelled": "ти образува думи",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

@@ -7,9 +7,16 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
-import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
+import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { getStore } from './redux';
-
+import { setSections } from './stageLockRedux';
+import {
+  SUBMITTED_RESULT,
+  LOCKED_RESULT,
+  LevelStatus,
+  mergeActivityResult,
+  activityCssClass
+} from './activityUtils';
 import {
   initProgress,
   mergeProgress,
@@ -53,7 +60,11 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
-    { data: { user_id: clientState.queryParams('user_id') } }
+    {
+      data: {
+        user_id: clientState.queryParams('user_id')
+      }
+    }
   ).done(data => {
     data = data || {};
 
@@ -61,6 +72,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !currentLevelId) {
       store.dispatch(showTeacherInfo());
+      renderTeacherPanel(store, scriptData.id);
     }
 
     if (data.focusAreaPositions) {
@@ -74,10 +86,17 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
-      store.dispatch(mergeProgress(
-        _.mapValues(data.levels, level => level.result),
-        data.peerReviewsPerformed
-      ));
+      const levelProgress = _.mapValues(data.levels, level => {
+        if (level.status === LevelStatus.locked) {
+          return LOCKED_RESULT;
+        }
+        if (level.readonly_answers) {
+          return SUBMITTED_RESULT;
+        }
+
+        return level.result;
+      });
+      store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));
     }
   });
 
@@ -89,6 +108,34 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     mountPoint
   );
 };
+
+/**
+ * Query the server for progress of all students in section, and render this to
+ * our teacher panel.
+ */
+function renderTeacherPanel(store, scriptId) {
+  const div = document.createElement('div');
+  div.setAttribute('id', 'teacher-panel-container');
+  $.ajax(
+    '/api/lock_status',
+    {
+      data: {
+        user_id: clientState.queryParams('user_id'),
+        script_id: scriptId
+      }
+    }
+  ).done(data => {
+    store.dispatch(setSections(data));
+  });
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <ScriptTeacherPanel/>
+    </Provider>,
+    div
+  );
+  document.body.appendChild(div);
+}
 
 /**
  * Creates a redux store with our initial progress

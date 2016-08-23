@@ -19,6 +19,7 @@ const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
 const COLLECTED_SOME = 2;
 const COLLECTED_EVERYTHING = 3;
+const COLLECTED_TOO_MANY = 4;
 
 export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
@@ -48,6 +49,21 @@ export default class Collector extends Subtype {
    */
   createGridItemDrawer() {
     return new CollectorDrawer(this.maze_.map, this.skin_.goal);
+  }
+
+  /**
+   * @return {boolean} Did the user try to collect too many things from
+   * a space?
+   */
+  collectedTooMany() {
+    let tooMany = false;
+    this.maze_.map.forEachCell((cell, x, y) => {
+      if (cell.isDirt() &&
+          (cell.getCurrentValue() < 0 || isNaN(cell.getCurrentValue()))) {
+        tooMany = true;
+      }
+    });
+    return tooMany;
   }
 
   /**
@@ -101,6 +117,8 @@ export default class Collector extends Subtype {
 
     if (this.getTotalCollected() === 0) {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
+    } else if (this.collectedTooMany()) {
+      executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     } else if (this.studioApp_.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.collectedAll()) {
@@ -133,6 +151,8 @@ export default class Collector extends Subtype {
         return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
       case COLLECTED_EVERYTHING:
         return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
+      case COLLECTED_TOO_MANY:
+        return mazeMsg.collectorCollectedTooMany();
       default:
         return null;
     }
@@ -148,6 +168,7 @@ export default class Collector extends Subtype {
     switch (terminationValue) {
       case TOO_MANY_BLOCKS:
       case COLLECTED_NOTHING:
+      case COLLECTED_TOO_MANY:
         return TestResults.APP_SPECIFIC_FAIL;
       case COLLECTED_SOME:
         return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
@@ -156,5 +177,12 @@ export default class Collector extends Subtype {
     }
 
     return this.studioApp_.getTestResults(false);
+  }
+
+  /**
+   * @override
+   */
+  getEmptyTile() {
+    return 'null0';
   }
 }

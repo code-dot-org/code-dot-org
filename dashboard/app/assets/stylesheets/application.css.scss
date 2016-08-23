@@ -363,6 +363,12 @@ $small-footer-standard-width: 400px;
       }
     }
   }
+
+  @media screen and (max-width: 1150px) {
+    small {
+      font-size: 10px;
+    }
+  }
 }
 
 .small-footer-base {
@@ -514,7 +520,7 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
-  a:hover {
+  a:hover:not(.btn) {
     color: $red;
     background-color: $white;
   }

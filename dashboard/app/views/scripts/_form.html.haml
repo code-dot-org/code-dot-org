@@ -38,7 +38,7 @@
 - if @show_all_instructions
   - @script.stages.each do |stage|
     %br
-      %h1= "Stage #{stage.position}: #{stage.name}"
+      %h1= stage.localized_title
       %br
       - stage.script_levels.each do |sl|
         %div(style='padding-left:40px;')

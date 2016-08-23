@@ -141,5 +141,4 @@ XML
     level.destroy
     assert_equal xml, xml2
   end
-
 end
