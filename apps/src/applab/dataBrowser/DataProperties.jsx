@@ -60,7 +60,6 @@ const DataProperties = React.createClass({
           <span style={dataStyles.backLink}>
             <a
               id="propertiesBackToOverview"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
@@ -71,7 +70,6 @@ const DataProperties = React.createClass({
           <span style={dataStyles.debugLink}>
             <a
               id="tableDebugLink"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >

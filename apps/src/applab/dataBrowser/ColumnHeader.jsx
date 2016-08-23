@@ -14,7 +14,8 @@ const styles = {
     float: 'right'
   },
   icon: {
-    color: 'white'
+    color: 'white',
+    cursor: 'pointer',
   }
 };
 
