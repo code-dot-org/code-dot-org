@@ -25,10 +25,18 @@ var webpage = require('webpage');
 var page = require('webpage').create();
 
 // viewportSize being the actual size of the headless browser
-page.viewportSize = { width: 1024, height: 768 };
+page.viewportSize = {
+  width: 1024,
+  height: 768
+};
 
 // the clipRect is the portion of the page you are taking a screenshot of
-page.clipRect = { top: 0, left: 0, width: 1024, height: 768 };
+page.clipRect = {
+  top: 0,
+  left: 0,
+  width: 1024,
+  height: 768
+};
 
 /**
  * Repeatedly calls the given checker method until it returns a truthy
@@ -57,7 +65,7 @@ var waitUntil = function (checker, cb) {
 var closeDialog = function (p, cb) {
   waitUntil(dialogIsVisible.bind(p), function (rect) {
     if (rect) {
-      p.sendEvent('click', rect.left + (rect.width/2), rect.top + (rect.height/2));
+      p.sendEvent('click', rect.left + (rect.width / 2), rect.top + (rect.height / 2));
     }
     cb();
   });
@@ -82,7 +90,9 @@ var calloutsAreVisible = function () {
   return this.evaluate(function (s) {
     var elements = document.querySelectorAll(s);
     if (elements) {
-      return Array.prototype.map.call(elements, function (e) { return e.getBoundingClientRect();});
+      return Array.prototype.map.call(elements, function (e) {
+        return e.getBoundingClientRect();
+      });
     }
   }, '.tooltip-x-close');
 };
@@ -100,7 +110,7 @@ var closeCallouts = function (p, cb) {
   waitUntil(calloutsAreVisible.bind(p), function (rects) {
     if (rects) {
       rects.forEach(function (rect) {
-        p.sendEvent('click', rect.left + (rect.width/2), rect.top + (rect.height/2));
+        p.sendEvent('click', rect.left + (rect.width / 2), rect.top + (rect.height / 2));
       });
     }
     cb();
@@ -161,7 +171,12 @@ var generateClipRect = function (page) {
     drawGridLines(page);
     return clipRect;
   } else {
-    return { top: 0, left: 0, width: page.viewportSize.width, height: page.viewportSize.height };
+    return {
+      top: 0,
+      left: 0,
+      width: page.viewportSize.width,
+      height: page.viewportSize.height
+    };
   }
 };
 
@@ -208,4 +223,3 @@ page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function () {
 
   next();
 });
-
