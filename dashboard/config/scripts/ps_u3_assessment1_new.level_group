@@ -3,6 +3,7 @@ title 'Test Assessment 1'
 submittable 'true'
 
 page
+text 'csp_unit_assessment_overview' # external instructions
 level 'PS U3 Q1-1'
 level 'PS U3 Q1-2'
 level 'PS U3 Q1-3'
