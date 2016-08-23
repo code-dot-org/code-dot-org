@@ -745,17 +745,21 @@ Flappy.execute = function () {
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
-  const events = ['flappy_whenClick', 'flappy_whenCollideGround', 'flappy_whenEnterObstacle', 'flappy_whenCollideObstacle', 'when_run'];
+  const events = {
+    whenClick: 'flappy_whenClick',
+    whenCollideGround: 'flappy_whenCollideGround',
+    whenEnterObstacle: 'flappy_whenEnterObstacle',
+    whenCollideObstacle: 'flappy_whenCollideObstacle',
+    whenRunButton: 'when_run'
+  };
 
-  // var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
-  //                                   'JavaScript',
-  //                                   'when_run');
-  // var whenRunButtonFunc = codegen.functionFromCode(
-  //                                     codeWhenRunButton, {
-  //                                     Flappy: api } );
-
-  const code = events.map(event => {
-    const generated = Blockly.Generator.blockSpaceToCode('JavaScript', event);
+  const code = Object.keys(events).map(event => {
+    Flappy[event] = () => {
+      console.log(event);
+      Flappy.currentCallback(event);
+      Flappy.interpreter.run();
+    };
+    const generated = Blockly.Generator.blockSpaceToCode('JavaScript', events[event]);
     return `function ${event} () {
       ${generated}
     }
@@ -772,13 +776,6 @@ Flappy.execute = function () {
   Flappy.interpreter.run();
 
   studioApp.playAudio('start');
-
-  // Set event handlers and start the onTick timer
-  Flappy.whenClick = () => { console.log('flappy_whenClick'); Flappy.currentCallback('flappy_whenClick'); Flappy.interpreter.run(); };
-  Flappy.whenCollideGround = () => { console.log('flappy_whenCollideGround'); Flappy.currentCallback('flappy_whenCollideGround'); Flappy.interpreter.run(); };
-  Flappy.whenEnterObstacle = () => { console.log('flappy_whenEnterObstacle'); Flappy.currentCallback('flappy_whenEnterObstacle'); Flappy.interpreter.run(); };
-  Flappy.whenCollideObstacle = () => { console.log('flappy_whenCollideObstacle'); Flappy.currentCallback('flappy_whenCollideObstacle'); Flappy.interpreter.run(); };
-  Flappy.whenRunButton = () => { console.log('when_run'); Flappy.currentCallback('when_run'); Flappy.interpreter.run(); };
 
   Flappy.tickCount = 0;
   Flappy.firstActiveTick = -1;
@@ -966,24 +963,8 @@ Flappy.setGround = function (value) {
   }
 };
 
-var checkTickLimit = function () {
-  if (!level.tickLimit) {
-    return false;
-  }
-
-  if ((Flappy.tickCount - Flappy.firstActiveTick) >= level.tickLimit &&
-    (Flappy.gameState === Flappy.GameStates.ACTIVE ||
-    Flappy.gameState === Flappy.GameStates.OVER)) {
-    // We'll ignore tick limit if we're ending so that we fully finish ending
-    // sequence
-    return true;
-  }
-
-  return false;
-};
-
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
+  // if we have a success condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
     Flappy.result = ResultType.SUCCESS;
     return true;
