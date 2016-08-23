@@ -23,6 +23,11 @@ const styles = {
   addColumnHeader: [dataStyles.headerCell, {
     width: 19,
   }],
+  container: {
+    maxWidth: MAX_TABLE_WIDTH,
+    height: '100%',
+    overflowY: 'scroll',
+  },
   table: {
     clear: 'both',
     width: '100%'
@@ -206,10 +211,9 @@ const DataTable = React.createClass({
     }
 
     const visible = (DataView.TABLE === this.props.view);
-    const containerStyle = {
+    const containerStyle = [styles.container, {
       display: visible ? 'block' : 'none',
-      maxWidth: MAX_TABLE_WIDTH
-    };
+    }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
     }];
