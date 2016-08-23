@@ -1,4 +1,4 @@
-#!phantomjs
+/* eslint-env node, phantomjs */
 
 var system = require('system');
 var args = system.args;
@@ -120,8 +120,12 @@ var screenshot = function (url, cb) {
           puzzleNum = matches[3];
 
       // left-pad numbers so filenames are correctly ordered
-      if (stageNum.length < 2) stageNum = "0" + stageNum;
-      if (puzzleNum.length < 2) puzzleNum = "0" + puzzleNum;
+      if (stageNum.length < 2) {
+        stageNum = "0" + stageNum;
+      }
+      if (puzzleNum.length < 2) {
+        puzzleNum = "0" + puzzleNum;
+      }
 
       return course + "_stage_" + stageNum + "_puzzle_" + puzzleNum;
     });
