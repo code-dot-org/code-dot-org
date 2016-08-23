@@ -495,11 +495,7 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script,
           ) do |s|
-            if stage_lockable == true
-              s.relative_position = (lockable_count += 1).to_s
-            else
-              s.relative_position = (non_lockable_count += 1).to_s
-            end
+            s.relative_position = 0 # will be updated below, but cant be null
           end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
@@ -512,6 +508,11 @@ class Script < ActiveRecord::Base
         script_level.save! if script_level.changed?
         (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
+          if stage_lockable == true
+            stage.assign_attributes(relative_position: (lockable_count += 1))
+          else
+            stage.assign_attributes(relative_position: (non_lockable_count += 1))
+          end
           stage.assign_attributes(absolute_position: (stage_position += 1))
           stage.save! if stage.changed?
           script_stages << stage
