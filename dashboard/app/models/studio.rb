@@ -298,6 +298,22 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setSpritesWander" />
+  <block type="studio_setSpritesStop" />
+  <block type="studio_setSpritesChase">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_setSpritesFlee">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
