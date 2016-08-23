@@ -8,6 +8,7 @@ import { DataView } from '../constants';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
 import FirebaseStorage from '../firebaseStorage';
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
@@ -211,9 +212,8 @@ const DataTable = React.createClass({
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
-              Data
+              <FontAwesome icon="arrow-circle-left"/>&nbsp;Back to data
             </a>
-            &nbsp;&gt; {this.props.tableName}
           </span>
           <span style={dataStyles.debugLink}>
             <a
@@ -233,6 +233,7 @@ const DataTable = React.createClass({
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
+          tableName={this.props.tableName}
         />
 
         <div style={debugDataStyle}>
