@@ -89,5 +89,6 @@
   "whileTooltip": "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე.",
   "word": "იპოვეთ სიტყვა",
   "yes": "დიახ",
-  "youSpelled": "თქვენ შეიყვანეთ"
+  "youSpelled": "თქვენ შეიყვანეთ",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

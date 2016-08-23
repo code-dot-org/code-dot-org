@@ -89,5 +89,6 @@
   "whileTooltip": "Біріккен іс-әрекеттер аяқталғанша қайталаңыз.",
   "word": "Сөзді табу",
   "yes": "Иә",
-  "youSpelled": "Сіздің жазғаныңыз"
+  "youSpelled": "Сіздің жазғаныңыз",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

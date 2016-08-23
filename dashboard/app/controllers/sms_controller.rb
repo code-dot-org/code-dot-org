@@ -10,7 +10,7 @@ class SmsController < ApplicationController
       url = polymorphic_url(["#{params[:type]}_project_share", 'projects'], channel_id: params[:channel_id])
       send_sms(url, params[:phone])
     else
-      render status: :not_acceptable, nothing: true
+      head :not_acceptable
     end
   end
 

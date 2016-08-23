@@ -4,6 +4,9 @@ unless dry_run
   update_bootstrap_script.call
   update_certs.call unless cdn_enabled
 end
+commit = '521b9fa4942aded6733afd98bc17079d4c23c457'
+#commit = (ENV['COMMIT'] || `git ls-remote origin #{branch} | cut -f1`.strip)
+
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -66,23 +69,23 @@ Resources:
       AutoScalingGroupName: {Ref: WebServer}
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
-      EstimatedInstanceWarmup: 300
+      EstimatedInstanceWarmup: 600
       PolicyType: StepScaling
       StepAdjustments:
-        # 60-70% cpu, +20% instances
+        # 40-50% cpu, +20% instances
         - MetricIntervalLowerBound: 0
           MetricIntervalUpperBound: 10
           ScalingAdjustment: 20
-        # 70-80% cpu, +40% instances
+        # 50-60% cpu, +40% instances
         - MetricIntervalLowerBound: 10
           MetricIntervalUpperBound: 20
           ScalingAdjustment: 40
-        # 80-90% cpu, +60% instances
+        # 60-80% cpu, +60% instances
         - MetricIntervalLowerBound: 20
-          MetricIntervalUpperBound: 30
+          MetricIntervalUpperBound: 40
           ScalingAdjustment: 60
-        # 90-100% cpu, +80% instances
-        - MetricIntervalLowerBound: 30
+        # 80-100% cpu, +80% instances
+        - MetricIntervalLowerBound: 40
           ScalingAdjustment: 80
   ScaleDownPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
@@ -90,41 +93,57 @@ Resources:
       AdjustmentType: PercentChangeInCapacity
       AutoScalingGroupName: {Ref: WebServer}
       MetricAggregationType: Average
+      MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 300
       PolicyType: StepScaling
       StepAdjustments:
-        # 60-40% cpu, no adjustment
+        # 30-25% cpu, -10% instances
         - MetricIntervalUpperBound: 0
-          MetricIntervalLowerBound: -20
-          ScalingAdjustment: 0
-        # 40-30% cpu, -20% instances
-        - MetricIntervalUpperBound: -20
-          MetricIntervalLowerBound: -30
+          MetricIntervalLowerBound: -5
+          ScalingAdjustment: -10
+        # 25-20% cpu, -15% instances
+        - MetricIntervalUpperBound: -5
+          MetricIntervalLowerBound: -10
+          ScalingAdjustment: -15
+        # 20-15% cpu, -20% instances
+        - MetricIntervalUpperBound: -10
+          MetricIntervalLowerBound: -15
           ScalingAdjustment: -20
-        # 30-20% cpu, -30% instances
-        - MetricIntervalUpperBound: -30
-          MetricIntervalLowerBound: -40
-          ScalingAdjustment: -30
-        # 20-10% cpu, -40% instances
-        - MetricIntervalUpperBound: -40
-          MetricIntervalLowerBound: -50
+        # 15-10% cpu, -30% instances
+        - MetricIntervalUpperBound: -15
+          MetricIntervalLowerBound: -20
           ScalingAdjustment: -40
         # 10-0% cpu, -50% instances
-        - MetricIntervalUpperBound: -50
+        - MetricIntervalUpperBound: -20
           ScalingAdjustment: -50
   ScaleUpAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmDescription: Scale-up if average CPU is greater than 60% for 10 minutes
+      AlarmDescription: Scale-up if average CPU is greater than 40% for 10 minutes
       AlarmActions: [Ref: ScaleUpPolicy]
-      OKActions: [Ref: ScaleDownPolicy]
+#      OKActions: [Ref: ScaleDownPolicy]
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
       Period: 300
       EvaluationPeriods: 2
-      Threshold: 60
+      Threshold: 40
       ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: {Ref: WebServer}
+  ScaleDownAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Scale-down if average CPU is less than 30% for 10 minutes
+      AlarmActions: [Ref: ScaleDownPolicy]
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Statistic: Average
+      Period: 300
+      EvaluationPeriods: 2
+      Threshold: 30
+      ComparisonOperator: LessThanOrEqualToThreshold
       Dimensions:
         - Name: AutoScalingGroupName
           Value: {Ref: WebServer}
@@ -146,7 +165,7 @@ Resources:
           resource_id: 'WebServer',
           node_name: 'fe-${INSTANCE_ID}',
           run_list: ['role[front-end]'],
-          commit: `git ls-remote origin #{branch} | cut -f1`.strip )%>
+          commit: commit )%>
   WebServerHook:
     Type: AWS::AutoScaling::LifecycleHook
     Properties:
@@ -192,7 +211,7 @@ Resources:
       )%>
 <%   end -%>
 <% end -%>
-<% if cdn_enabled%>
+<% if cdn_enabled -%>
   OriginDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:

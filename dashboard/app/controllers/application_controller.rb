@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # this is needed to avoid devise breaking on email param
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  around_filter :with_locale
+  around_action :with_locale
 
   before_action :fix_crawlers_with_bad_accept_headers
 
@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
 
     if request.formats.include?("image/*") &&
         (request.user_agent.include?("Edmodo") || request.user_agent.include?("weebly-agent"))
-      request.formats.append Mime::HTML
+      request.formats.append Mime[:html]
     end
   end
 
@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
   if Rails.env.development?
     # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
     # pp='disabled' will disable it; any other value will enable it.
-    before_filter :maybe_enable_profiler
+    before_action :maybe_enable_profiler
     def maybe_enable_profiler
       pp = params['pp']
       if pp
@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    before_filter :configure_web_console
+    before_action :configure_web_console
     # Enable the Rails web console if params['dbg'] is set, or disable it
     # if params['dbg'] is 'off'.
     def configure_web_console

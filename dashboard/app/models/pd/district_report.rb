@@ -1,5 +1,4 @@
 class Pd::DistrictReport
-
   # Construct a report row for each teacher in the district
   def self.generate_district_report(districts)
     [].tap do |rows|
