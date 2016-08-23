@@ -31,15 +31,17 @@ const AddTableRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.addRow}>
+      <tr style={dataStyles.row}>
         {
           this.props.columnNames.map(columnName => (
             <td key={columnName} style={dataStyles.cell}>
               {
-                (columnName !== 'id') &&
+                (columnName === 'id') ?
+                  <span style={{color: 'darkgray'}}>#</span> :
                   <input
                     style={dataStyles.input}
                     value={displayValue(this.state.newRecord[columnName])}
+                    placeholder="enter text"
                     onChange={event => this.handleChange(columnName, event)}
                   />
               }
@@ -49,7 +51,7 @@ const AddTableRow = React.createClass({
 
         <td style={dataStyles.cell}/>
 
-        <td style={dataStyles.cell}>
+        <td style={dataStyles.buttonCell}>
           <button
             className="btn btn-primary"
             style={dataStyles.button}

@@ -30,7 +30,7 @@ const AddTableListRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.addRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}

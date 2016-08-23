@@ -32,11 +32,12 @@ const AddKeyRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.addRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}
             onChange={this.handleKeyChange}
+            placeholder="enter text"
             value={this.state.key}
           />
         </td>
@@ -44,10 +45,11 @@ const AddKeyRow = React.createClass({
           <input
             style={dataStyles.input}
             onChange={this.handleValueChange}
+            placeholder="enter text"
             value={this.state.value}
           />
         </td>
-        <td style={dataStyles.cell}>
+        <td style={dataStyles.buttonCell}>
           <button
             className="btn btn-primary"
             style={dataStyles.button}

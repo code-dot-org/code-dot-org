@@ -25,7 +25,7 @@ const EditTableListRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.editRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <EditLink name={this.props.tableName} onClick={this.handleEdit}/>
         </td>
