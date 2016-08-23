@@ -12,10 +12,11 @@ Software and technology are everywhere - in our computers, in our pockets, in ou
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a *blended learning model*, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
 
 This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles.
-
-<img src="/images/privacy-student-image1.png" width="33%"/>
-<img src="/images/privacy-student-image2.png" width="33%"/>
-<img src="/images/privacy-student-image3.png" width="33%"/>
+<center>
+<img src="/images/privacy-student-image1.png" width="30%"/>
+<img src="/images/privacy-student-image2.png" width="30%"/>
+<img src="/images/privacy-student-image3.png" width="30%"/>
+</center>
 
 ### Students will study topics such as:
 
@@ -40,7 +41,7 @@ Code.org assigns the utmost importance to student safety and security and has de
 
 The list below summarizes what student data is stored and protected by Code.org, and how it is used. You can find further details at http://code.org/privacy.
 
-### Data that is required for participation in the course:
+### Data that Code.org collects from students participating in the course:
 
 - Student display name (e.g. “John S” or “Cool coder”)
 - Age (to protect the privacy of the youngest learners)
@@ -49,18 +50,13 @@ The list below summarizes what student data is stored and protected by Code.org,
 
 ### Optional data:
 
-- Gender (to summarize aggregate participation by females and males)
-- Student email (to allow password-reset, and to send students new coursework when available).
-- Note: if a student creates an account directly (without a parent or teacher), the email address is required to enable password-reset. To further protect the privacy of children under 13, their email addresses are converted by Code.org into a “hashed” state, meaning that they are replaced with a series of numbers and cannot be converted back to the original email address.
+- Scrambled “hash” of email address. If a student creates an account directly (without a parent or teacher), they will login using their email address, but Code.org will never receive the actual email address, only a scrambled “hash” that can’t be converted back to the original. Learn more at http://code.org/emailprivacy. 
+- Gender or race (to anonymously summarize aggregate participation in computer science, to track progress towards increasing diversity in the field).
 
 For more information on Code.org and Code Studio, visit http://code.org.
 
 <br/>
-<br/>
-<br/>
 
 <center><img src="/images/privacy-student-codepartnership.png" width="20%"/></center>
 
-<br/>
-<br/>
 <br/>
