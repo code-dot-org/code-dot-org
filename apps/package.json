@@ -130,8 +130,10 @@
     "progress-bar-webpack-plugin": "^1.8.0",
     "radium": "0.18.1",
     "react": "15.3.0",
+    "react-addons-shallow-compare": "15.3.0",
     "react-addons-test-utils": "15.3.0",
     "react-bootstrap": "0.30.1",
+    "react-color": "2.2.2",
     "react-dom": "15.3.0",
     "react-redux": "4.4.5",
     "react-router": "2.6.0",
@@ -161,7 +163,6 @@
   "dependencies": {
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
-    "query-string": "4.1.0",
-    "react-color": "code-dot-org/react-color#65a688f0ed61da00acea95cb1c8aa0c691b3839e"
+    "query-string": "4.1.0"
   }
 }
