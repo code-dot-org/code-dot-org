@@ -29,6 +29,14 @@ const AddTableRow = React.createClass({
       msg => console.warn(msg));
   },
 
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleAdd();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
   render() {
     return (
       <tr style={dataStyles.row}>
@@ -43,6 +51,7 @@ const AddTableRow = React.createClass({
                     value={displayValue(this.state.newRecord[columnName])}
                     placeholder="enter text"
                     onChange={event => this.handleChange(columnName, event)}
+                    onKeyUp={this.handleKeyUp}
                   />
               }
             </td>

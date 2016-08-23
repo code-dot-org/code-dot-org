@@ -46,6 +46,14 @@ const EditKeyRow = React.createClass({
     FirebaseStorage.deleteKeyValue(this.props.keyName, undefined, msg => console.warn(msg));
   },
 
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleSave();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
   render() {
     return (
       <tr style={dataStyles.row}>
@@ -56,6 +64,7 @@ const EditKeyRow = React.createClass({
               style={dataStyles.input}
               value={displayValue(this.state.newValue)}
               onChange={this.handleChange}
+              onKeyUp={this.handleKeyUp}
             /> :
             JSON.stringify(this.props.value)}
         </td>
@@ -79,6 +88,7 @@ const EditKeyRow = React.createClass({
           <button
             style={dataStyles.redButton}
             onClick={this.handleDelete}
+            onKeyUp={this.handleKeyUp}
           >
             Delete
           </button>
