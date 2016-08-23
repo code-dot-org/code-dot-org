@@ -13,7 +13,8 @@ import {
 
 const Eve = React.createClass({
   propTypes: {
-    setPublicModulus: React.PropTypes.func.isRequired
+    setPublicModulus: React.PropTypes.func.isRequired,
+    runModuloClock: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -22,7 +23,11 @@ const Eve = React.createClass({
       publicKey: null,
       privateKey: null,
       publicNumber: null,
-      secretNumber: null
+      secretNumber: null,
+      checkingPrivateKey: false,
+      privateKeyEquationResult: null,
+      checkingSecretNumber: false,
+      secretNumberEquationResult: null
     };
   },
 
@@ -40,7 +45,26 @@ const Eve = React.createClass({
   },
 
   setPrivateKey(privateKey) {
+    const {runModuloClock} = this.props;
+    const {publicKey, publicModulus} = this.state;
     this.setState({privateKey});
+    if ([publicKey, privateKey, publicModulus].every(Number.isInteger)) {
+      const dividend = publicKey * privateKey;
+      const privateKeyEquationResult = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({
+          privateKeyEquationResult: currentDividend % publicModulus,
+          checkingPrivateKey: true
+        });
+      }, () => {
+        this.setState({
+          privateKeyEquationResult,
+          checkingPrivateKey: false
+        });
+      });
+    } else {
+      this.setState({privateKey: null, privateKeyEquationResult: null});
+    }
   },
 
   setPublicNumber(publicNumber) {
@@ -49,6 +73,26 @@ const Eve = React.createClass({
 
   setSecretNumber(secretNumber) {
     this.setState({secretNumber});
+    const {runModuloClock} = this.props;
+    const {publicKey, publicModulus} = this.state;
+    this.setState({secretNumber});
+    if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
+      const dividend = publicKey * secretNumber;
+      const secretNumberEquationResult = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({
+          secretNumberEquationResult: currentDividend % publicModulus,
+          checkingSecretNumber: true
+        });
+      }, () => {
+        this.setState({
+          secretNumberEquationResult,
+          checkingSecretNumber: false
+        });
+      });
+    } else {
+      this.setState({secretNumber: null, secretNumberEquationResult: null});
+    }
   },
 
   render() {
@@ -57,14 +101,12 @@ const Eve = React.createClass({
       publicKey,
       privateKey,
       publicNumber,
-      secretNumber
+      secretNumber,
+      checkingPrivateKey,
+      privateKeyEquationResult,
+      checkingSecretNumber,
+      secretNumberEquationResult
     } = this.state;
-    const privateKeyEquationResult = publicKey !== null && privateKey !== null && publicModulus !== null ?
-        (publicKey * privateKey) % publicModulus :
-        null;
-    const secretNumberEquationResult = publicKey !== null && secretNumber !== null && publicModulus !== null ?
-        (publicKey * secretNumber) % publicModulus :
-        null;
     return (
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
@@ -77,7 +119,14 @@ const Eve = React.createClass({
           <div>
             Crack Alice's private key:
             <div>
-              (<IntegerField value={publicKey}/> x <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>)MOD <IntegerField value={publicModulus}/> = 1 <ValidatorField value={privateKeyEquationResult} expectedValue={1}/>
+              {'('}
+              <IntegerField value={publicKey}/>
+              {' x '}
+              <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>
+              {') MOD '}
+              <IntegerField value={publicModulus}/> = 1
+              {' '}
+              <ValidatorField value={privateKeyEquationResult} expectedValue={1} shouldEvaluate={!checkingPrivateKey}/>
             </div>
           </div>
           <div>
@@ -86,7 +135,16 @@ const Eve = React.createClass({
           <div>
             Crack Bob's secret number:
             <div>
-              (<IntegerField value={publicKey}/> x <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>)MOD <IntegerField value={publicModulus}/>  = <IntegerField value={publicNumber}/> <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber}/>
+              {'('}
+              <IntegerField value={publicKey}/>
+              {' x '}
+              <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>
+              {') MOD '}
+              <IntegerField value={publicModulus}/>
+              {' = '}
+              <IntegerField value={publicNumber}/>
+              {' '}
+              <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber} shouldEvaluate={!checkingSecretNumber}/>
             </div>
           </div>
         </NumberedSteps>

@@ -10,7 +10,8 @@ import {computePublicKey} from './cryptographyMath';
 const Alice = React.createClass({
   propTypes: {
     setPublicModulus: React.PropTypes.func.isRequired,
-    setPublicKey: React.PropTypes.func.isRequired
+    setPublicKey: React.PropTypes.func.isRequired,
+    runModuloClock: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -54,10 +55,19 @@ const Alice = React.createClass({
   },
 
   computeSecretNumber() {
+    const {runModuloClock} = this.props;
     const {publicModulus, privateKey, publicNumber} = this.state;
-    const secretNumber = [publicModulus, privateKey, publicNumber].every(Number.isInteger) ?
-        (publicNumber * privateKey) % publicModulus : null;
-    this.setState({secretNumber});
+    if ([publicModulus, privateKey, publicNumber].every(Number.isInteger)) {
+      const dividend = publicNumber * privateKey;
+      const secretNumber = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({secretNumber: currentDividend % publicModulus});
+      }, () => {
+        this.setState({secretNumber});
+      });
+    } else {
+      this.clearSecretNumber();
+    }
   },
 
   clearSecretNumber() {
