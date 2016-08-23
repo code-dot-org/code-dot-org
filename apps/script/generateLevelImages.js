@@ -1,4 +1,4 @@
-#!phantomjs
+/* eslint-env node, phantomjs */
 
 var system = require('system');
 var args = system.args;
@@ -10,7 +10,7 @@ if (args.indexOf("--help") !== -1 || args.indexOf("-h") !== -1) {
   console.log("Options:");
   console.log("\t-h, --help\tprint this usage message");
   console.log("\t--grid-only\tgenerate only maze grid images for only those levels that have them");
-  phantom.exit(); // eslint-disable-line no-undef
+  phantom.exit();
 }
 
 var GRID_ONLY = false;
@@ -176,7 +176,7 @@ page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function () {
 
   var next = function () {
     if (finished === total) {
-      phantom.exit(); // eslint-disable-line no-undef
+      phantom.exit();
     }
     screenshot(pages[finished] + "?noautoplay=true", function () {
       finished++;
