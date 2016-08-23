@@ -5,7 +5,7 @@
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-
+import color from '../../color';
 import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
 
@@ -118,7 +118,7 @@ const ColumnHeader = React.createClass({
     };
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
-      backgroundColor: this.isInputValid() ? null : "#ffcccc",
+      backgroundColor: this.isInputValid() ? null : color.lightest_red,
     }];
     return (
       <th style={dataStyles.headerCell}>
