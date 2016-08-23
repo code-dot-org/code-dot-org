@@ -91,7 +91,7 @@
             .error_in_field{style: 'display: inline; padding-left: 0;'}
             %br
             = f.label :terms_of_service_version do
-              = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, 1 # TODO: update to get latest TOS instead of magic number
+              = f.check_box :terms_of_service_version, {class: 'terms-checkbox', :checked => true}, 1 # TODO: update to get latest TOS instead of magic number
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
 
         %br
