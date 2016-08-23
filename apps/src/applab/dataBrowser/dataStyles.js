@@ -74,7 +74,7 @@ export const viewHeader = {
 };
 
 export const backLink = {
-  fontSize: 17.5,
+  fontSize: 24,
 };
 
 export const debugLink = {

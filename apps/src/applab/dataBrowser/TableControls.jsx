@@ -11,7 +11,7 @@ import * as dataStyles from './dataStyles';
 
 const styles = {
   container: {
-    paddingTop: 10,
+    paddingTop: 0,
     paddingBottom: 10,
     paddingLeft: 0,
     paddingRight: 0,
@@ -22,6 +22,16 @@ const styles = {
   exportButton: [dataStyles.rightButton, {
     width: 120
   }],
+  tableName: {
+    fontSize: 18,
+  },
+  tableNameWrapper: {
+    alignItems: 'flex-end',
+    display: 'inline-flex',
+    height: '30px',
+    marginRight: 10,
+    verticalAlign: 'middle',
+  },
 };
 
 const TableControls = React.createClass({
@@ -30,6 +40,7 @@ const TableControls = React.createClass({
     clearTable: React.PropTypes.func.isRequired,
     exportCsv: React.PropTypes.func.isRequired,
     importCsv: React.PropTypes.func.isRequired,
+    tableName: React.PropTypes.string.isRequired,
   },
 
   handleSelectImportFile() {
@@ -51,6 +62,12 @@ const TableControls = React.createClass({
   render() {
     return (
       <div style={styles.container}>
+        <span style={styles.tableNameWrapper}>
+          <span style={styles.tableName}>
+            {this.props.tableName}&nbsp;
+          </span>
+        </span>
+
         <button className="btn" onClick={this.props.addColumn} style={dataStyles.button}>
           Add column
         </button>

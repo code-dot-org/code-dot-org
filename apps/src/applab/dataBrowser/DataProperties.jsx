@@ -6,11 +6,19 @@ import _ from 'lodash';
 import AddKeyRow from './AddKeyRow';
 import { DataView } from '../constants';
 import EditKeyRow from './EditKeyRow';
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
+
+const styles = {
+  tableName: {
+    fontSize: 18,
+    marginBottom: 10,
+  }
+};
 
 const DataProperties = React.createClass({
   propTypes: {
@@ -38,7 +46,6 @@ const DataProperties = React.createClass({
     return JSON.stringify(keyValueData, null, 2);
   },
 
-
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
     const keyValueDataStyle = {
@@ -57,9 +64,8 @@ const DataProperties = React.createClass({
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
-              Data
+              <FontAwesome icon="arrow-circle-left"/>&nbsp;Back to data
             </a>
-            &nbsp;&gt; Key/value pairs
           </span>
 
           <span style={dataStyles.debugLink}>
@@ -73,6 +79,10 @@ const DataProperties = React.createClass({
             </a>
 
           </span>
+        </div>
+
+        <div style={styles.tableName}>
+          Key/value pairs
         </div>
 
         <div style={debugDataStyle}>
