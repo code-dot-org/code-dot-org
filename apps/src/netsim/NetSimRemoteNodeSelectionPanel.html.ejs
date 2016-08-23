@@ -176,7 +176,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
     } else if (buttonType === 'accept-button') {
       button = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
     } else if (buttonType === 'cancel-button') {
-      button = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
+      button = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'netsim-button-secondary'], { 'data-node-id': row.nodeID });
     } else if (buttonType === 'full-button') {
       button = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
     }
@@ -268,7 +268,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         buttons.push(buttonMarkup(
             buttonText,
             'netsim-lobby-add-router',
-            ['secondary']
+            ['netsim-button-secondary']
         ));
       }
 
@@ -276,7 +276,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         buttons.push(buttonMarkup(
             i18n.logBrowserButton(),
             'show-router-log-modal',
-            ['secondary']
+            ['netsim-button-secondary']
         ));
       }
 
@@ -284,7 +284,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         buttons.push(buttonMarkup(
             i18n.teacherLogButton(),
             'show-teacher-log-modal',
-            ['secondary']
+            ['netsim-button-secondary']
         ));
       }
 
