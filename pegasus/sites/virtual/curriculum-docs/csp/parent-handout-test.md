@@ -37,9 +37,7 @@ Code.org's year-long, high school Computer Science Principles course is designed
 Because this is an online course, students can log in from outside the classroom - from a computer at home, or in the library.  For our classroom to participate in this course, students have created Code Studio accounts.
 
 ## Protecting student privacy
-Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy. The list below summarizes what student data is stored and protected by Code.org, and how it is used.
-<br>
-You can find further details at [https://code.org/privacy](https://code.org/privacy).
+Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy. The list below summarizes what student data is stored and protected by Code.org, and how it is used.  You can find further details at [https://code.org/privacy](https://code.org/privacy).
 
 ### Data that Code.org collects from students participating  in the course:
 * Student display name (e.g. “John S” or “Cool coder”)
