@@ -10,7 +10,7 @@ if (args.indexOf("--help") !== -1 || args.indexOf("-h") !== -1) {
   console.log("Options:");
   console.log("\t-h, --help\tprint this usage message");
   console.log("\t--grid-only\tgenerate only maze grid images for only those levels that have them");
-  phantom.exit();
+  phantom.exit(); // eslint-disable-line no-undef
 }
 
 var GRID_ONLY = false;
@@ -120,8 +120,12 @@ var screenshot = function (url, cb) {
           puzzleNum = matches[3];
 
       // left-pad numbers so filenames are correctly ordered
-      if (stageNum.length < 2) stageNum = "0" + stageNum;
-      if (puzzleNum.length < 2) puzzleNum = "0" + puzzleNum;
+      if (stageNum.length < 2) {
+        stageNum = "0" + stageNum;
+      }
+      if (puzzleNum.length < 2) {
+        puzzleNum = "0" + puzzleNum;
+      }
 
       return course + "_stage_" + stageNum + "_puzzle_" + puzzleNum;
     });
@@ -172,7 +176,7 @@ page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function () {
 
   var next = function () {
     if (finished === total) {
-      phantom.exit();
+      phantom.exit(); // eslint-disable-line no-undef
     }
     screenshot(pages[finished] + "?noautoplay=true", function () {
       finished++;
