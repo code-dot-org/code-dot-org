@@ -578,16 +578,28 @@ module LevelsHelper
   end
 
   # If this is a restricted level (i.e., applab), the user is under 13, and the
-  # user has not teacher that has accepted our (August 2016) terms of service,
+  # user has no teacher that has accepted our (August 2016) terms of service,
   # redirect with a flash alert.
+  # Also redirect if the user is pairing with a user who would receive a
+  # redirect.
+  # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Lab.
-    return unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
     end
+
+    pairings.each do |paired_user|
+      if paired_user.under_13? && paired_user.terms_version.nil?
+        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+        return true
+      end
+    end
+
+    false
   end
 
   def can_view_solution?
