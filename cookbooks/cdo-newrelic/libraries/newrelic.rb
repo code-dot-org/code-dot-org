@@ -6,7 +6,6 @@ require 'net/http'
 require 'pp'
 
 class NewRelicClient
-
   ENV_ATTRS = {
     'enabled_alert_policy_id' => ENV['ENABLED_ALERT_POLICY_ID'],
     'disabled_alert_policy_id' => ENV['DISABLED_ALERT_POLICY_ID'],
@@ -142,5 +141,4 @@ class NewRelicClient
       end
     end
   end
-
 end

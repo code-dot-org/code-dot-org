@@ -45,7 +45,7 @@ The final stage in this course is intended to test comprehension and transfer of
 
 ### <a name="GetStarted"></a> Introduction
 
-If your class has made it this far, their skills are probably already on point.  Now, it's time to 
+If your class has made it this far, their skills are probably already on point.  Now, it's time to test those skills!
 
 [/together]
 

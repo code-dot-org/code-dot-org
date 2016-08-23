@@ -48,6 +48,21 @@ module GitUtils
     `git log --format=%B -n 1 -1`.strip
   end
 
+  def self.get_latest_commit_merged_branch
+    get_branch_commit_merges(git_revision)
+  end
+
+  def self.git_revision
+    `git rev-parse HEAD`.strip
+  end
+
+  def self.get_branch_commit_merges(commit)
+    commit_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/commits/#{commit}").read)
+    commit_json['commit']['message'].match(/from code-dot-org\/(.*)\n\n/)[1]
+  rescue => _
+    nil
+  end
+
   def self.current_branch_base
     branch_to_base(current_branch)
   end

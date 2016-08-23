@@ -20,5 +20,4 @@ class GamelabTest < ActiveSupport::TestCase
       'gamelab/levels.js', 'gamelab.rb',
       "Ruby-JavaScript palette mismatch")
   end
-
 end

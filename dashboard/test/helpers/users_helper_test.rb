@@ -242,5 +242,4 @@ class UsersHelperTest < ActionView::TestCase
       "#{level.id}_1" => { submitted: true}
     }, summarize_user_progress(script, user)[:levels])
   end
-
 end

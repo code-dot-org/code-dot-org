@@ -38,10 +38,9 @@
     "soft_buttons": [
       "rightButton"
     ],
-    "contained_level_names": null,
-    "maze_data": null,
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
