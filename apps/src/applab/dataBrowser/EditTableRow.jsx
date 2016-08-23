@@ -69,6 +69,8 @@ const EditTableRow = React.createClass({
           ))
         }
 
+        <td style={dataStyles.cell}/>
+
         <td style={dataStyles.buttonCell}>
           {
             this.state.isEditing ?

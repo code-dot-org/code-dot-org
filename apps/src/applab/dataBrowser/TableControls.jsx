@@ -36,7 +36,6 @@ const styles = {
 
 const TableControls = React.createClass({
   propTypes: {
-    addColumn: React.PropTypes.func.isRequired,
     clearTable: React.PropTypes.func.isRequired,
     exportCsv: React.PropTypes.func.isRequired,
     importCsv: React.PropTypes.func.isRequired,
@@ -67,10 +66,6 @@ const TableControls = React.createClass({
             {this.props.tableName}&nbsp;
           </span>
         </span>
-
-        <button className="btn" onClick={this.props.addColumn} style={dataStyles.button}>
-          Add column
-        </button>
 
         <button
           className="btn"
