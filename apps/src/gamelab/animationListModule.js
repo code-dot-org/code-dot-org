@@ -31,8 +31,8 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
-// Args: {AnimationKey} key, {number} frameDelay
-const SET_ANIMATION_FRAME_DELAY = 'AnimationList/SET_ANIMATION_FRAME_DELAY';
+// Args: {AnimationKey} key, {number} frameRate
+const SET_ANIMATION_FRAME_RATE = 'AnimationList/SET_ANIMATION_FRAME_RATE';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
@@ -85,7 +85,7 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
-    case SET_ANIMATION_FRAME_DELAY:
+    case SET_ANIMATION_FRAME_RATE:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
@@ -125,9 +125,9 @@ function animationPropsReducer(state, action) {
         name: action.name
       });
 
-    case SET_ANIMATION_FRAME_DELAY:
+    case SET_ANIMATION_FRAME_RATE:
       return Object.assign({}, state, {
-        frameDelay: action.frameDelay
+        frameRate: action.frameRate
       });
 
     case START_LOADING_FROM_SOURCE:
@@ -177,18 +177,6 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
-  // Convert frameRates to frameDelays.
-  for (let key in serializedAnimationList.propsByKey) {
-    let animation = serializedAnimationList.propsByKey[key];
-    if (!animation.frameDelay) {
-      if (typeof animation.frameRate === 'number' && !isNaN(animation.frameRate) && animation.frameRate !== 0) {
-        animation.frameDelay = Math.round(30 / animation.frameRate);
-      } else {
-        animation.frameDelay = 2;
-      }
-    }
-  }
-
   try {
     throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
   } catch (err) {
@@ -222,7 +210,7 @@ export function addBlankAnimation() {
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
-        frameDelay: 4,
+        frameRate: 15,
         version: null,
         loadedFromSource: true,
         saved: false,
@@ -326,17 +314,17 @@ export function setAnimationName(key, name) {
 }
 
 /**
- * Set the frameDelay of the specified animation.
+ * Set the frameRate of the specified animation.
  * @param {string} key
- * @param {number} frameDelay
- * @returns {{type: ActionType, key: string, frameDelay: number}}
+ * @param {number} frameRate
+ * @returns {{type: ActionType, key: string, frameRate: number}}
  */
-export function setAnimationFrameDelay(key, frameDelay) {
+export function setAnimationFrameRate(key, frameRate) {
   return dispatch => {
     dispatch({
-      type: SET_ANIMATION_FRAME_DELAY,
+      type: SET_ANIMATION_FRAME_RATE,
       key,
-      frameDelay
+      frameRate
     });
     dashboard.project.projectChanged();
   };
