@@ -46,6 +46,9 @@ const AddTableRow = React.createClass({
             </td>
           ))
         }
+
+        <td style={dataStyles.cell}/>
+
         <td style={dataStyles.cell}>
           <button
             className="btn btn-primary"

@@ -20,10 +20,23 @@ import applabMsg from '@cdo/applab/locale';
 const MAX_TABLE_WIDTH = 970;
 
 const styles = {
+  addColumnHeader: [dataStyles.headerCell, {
+    width: 19,
+  }],
   table: {
     clear: 'both',
     width: '100%'
   },
+  plusIcon: {
+    alignItems: 'center',
+    borderRadius: 2,
+    backgroundColor: 'white',
+    color: color.teal,
+    display: 'inline-flex',
+    height: 18,
+    justifyContent: 'center',
+    width: 18,
+  }
 };
 
 const DataTable = React.createClass({
@@ -229,7 +242,6 @@ const DataTable = React.createClass({
 
         <TableControls
           columns={columnNames}
-          addColumn={this.addColumn}
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
@@ -257,7 +269,12 @@ const DataTable = React.createClass({
                 />
               ))
             }
-            <th style={dataStyles.headerCell}/>
+            <th style={styles.addColumnHeader}>
+              <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
+            </th>
+            <th style={dataStyles.headerCell}>
+              Actions
+            </th>
           </tr>
 
           <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
