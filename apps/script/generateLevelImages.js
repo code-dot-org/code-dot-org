@@ -9,14 +9,14 @@ if (args.indexOf("--help") !== -1 || args.indexOf("-h") !== -1) {
   console.log("");
   console.log("Options:");
   console.log("\t-h, --help\tprint this usage message");
-  console.log("\t--grid-only\tgenerate only maze grid images for only those levels that have them");
+  console.log("\t--visualization-only\tgenerate only level visualization images for only those levels that have them");
   phantom.exit();
 }
 
-var GRID_ONLY = false;
-if (args.indexOf("--grid-only") !== -1) {
-  GRID_ONLY = true;
-  args.splice(args.indexOf("--grid-only"), 1);
+var VISUALIZATION_ONLY = false;
+if (args.indexOf("--visualization-only") !== -1) {
+  VISUALIZATION_ONLY = true;
+  args.splice(args.indexOf("--visualization-only"), 1);
 }
 
 var COURSE = args[1] || 'course1';
@@ -107,55 +107,76 @@ var closeCallouts = function (p, cb) {
   });
 };
 
+var extractTitle = function (page) {
+  return page.evaluate(function () {
+    var titleRegex = /\/s\/([^\/]*)\/stage\/(\d*)\/puzzle\/(\d*)/;
+    // location.pathname should look something like
+    // '/s/course1/stage/2/puzzle/3'
+    var matches = titleRegex.exec(location.pathname);
+
+    var course = matches[1],
+        stageNum = matches[2],
+        puzzleNum = matches[3];
+
+    // left-pad numbers so filenames are correctly ordered
+    if (stageNum.length < 2) {
+      stageNum = "0" + stageNum;
+    }
+    if (puzzleNum.length < 2) {
+      puzzleNum = "0" + puzzleNum;
+    }
+
+    return course + "_stage_" + stageNum + "_puzzle_" + puzzleNum;
+  });
+};
+
+var drawGridLines = function (page) {
+  page.evaluate(function () {
+    var vis = document.getElementById('visualization');
+    var svg = document.getElementById('svgMaze');
+    var pegman = document.getElementById('pegman');
+    if (vis && svg && pegman) {
+      Array.prototype.filter.call(vis.getElementsByTagName('clipPath'), function (clipPath) {
+        return (clipPath.id && clipPath.id.startsWith('tile') && clipPath.childNodes.length);
+      }).map(function (tile) {
+        return tile.childNodes[0].cloneNode();
+      }).forEach(function (rect) {
+        rect.setAttribute('stroke', "white");
+        rect.setAttribute('fill-opacity', 0);
+        svg.insertBefore(rect, pegman);
+      });
+    }
+  });
+};
+
+var generateClipRect = function (page) {
+  if (VISUALIZATION_ONLY) {
+    var clipRect = page.evaluate(function () {
+      var vis = document.getElementById('visualization');
+      if (vis) {
+        return vis.getBoundingClientRect();
+      }
+    });
+
+    drawGridLines(page);
+    return clipRect;
+  } else {
+    return { top: 0, left: 0, width: page.viewportSize.width, height: page.viewportSize.height };
+  }
+};
+
 var screenshot = function (url, cb) {
   page.open(url, function () {
-    var title = page.evaluate(function () {
-      var titleRegex = /\/s\/([^\/]*)\/stage\/(\d*)\/puzzle\/(\d*)/;
-      // location.pathname should look something like
-      // '/s/course1/stage/2/puzzle/3'
-      var matches = titleRegex.exec(location.pathname);
-
-      var course = matches[1],
-          stageNum = matches[2],
-          puzzleNum = matches[3];
-
-      // left-pad numbers so filenames are correctly ordered
-      if (stageNum.length < 2) {
-        stageNum = "0" + stageNum;
-      }
-      if (puzzleNum.length < 2) {
-        puzzleNum = "0" + puzzleNum;
-      }
-
-      return course + "_stage_" + stageNum + "_puzzle_" + puzzleNum;
-    });
+    var title = extractTitle(page);
     console.log(title);
     closeDialog(page, function () {
       waitUntil(dialogIsGone.bind(page), function () {
-        if (GRID_ONLY) {
-          var clipRect = page.evaluate(function () {
-            var vis = document.getElementById('visualization');
-            var pegman = document.getElementById('pegman');
-            var svg = document.getElementById('svgMaze');
-            if (vis && pegman && svg) {
-              Array.prototype.filter.call(vis.getElementsByTagName('clipPath'), function (clipPath) {
-                return (clipPath.id && clipPath.id.startsWith('tile') && clipPath.childNodes.length);
-              }).map(function (tile) {
-                return tile.childNodes[0].cloneNode();
-              }).forEach(function (rect) {
-                rect.setAttribute('stroke', "white");
-                rect.setAttribute('fill-opacity', 0);
-                svg.insertBefore(rect, pegman);
-              });
-              return vis.getBoundingClientRect();
-            }
-          });
-          if (clipRect) {
-            page.clipRect = clipRect;
-            page.render(COURSE + '/' + title + '.png');
-          }
-        } else {
+        var clipRect = generateClipRect(page);
+        if (clipRect && clipRect.height && clipRect.width) {
+          page.clipRect = clipRect;
           page.render(COURSE + '/' + title + '.png');
+        } else {
+          console.log('no area to display; skipping');
         }
         cb();
       });
