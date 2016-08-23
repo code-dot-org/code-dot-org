@@ -2,7 +2,6 @@
 # BucketHelper
 #
 class BucketHelper
-
   def initialize(bucket, base_dir)
     @bucket = bucket
     @base_dir = base_dir
