@@ -13,6 +13,7 @@ import {
 
 const Eve = React.createClass({
   propTypes: {
+    disabled: React.PropTypes.bool,
     setPublicModulus: React.PropTypes.func.isRequired,
     runModuloClock: React.PropTypes.func.isRequired
   },
@@ -96,6 +97,7 @@ const Eve = React.createClass({
   },
 
   render() {
+    const {disabled} = this.props;
     const {
       publicModulus,
       publicKey,
@@ -111,10 +113,20 @@ const Eve = React.createClass({
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
           <div>
-            Set a public modulus: <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
+            Set a public modulus:
+            <PublicModulusDropdown
+              value={publicModulus}
+              onChange={this.onPublicModulusChange}
+              disabled={disabled}
+            />
           </div>
           <div>
-            Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
+            Enter Alice's public key:
+            <IntegerTextbox
+              value={publicKey}
+              onChange={this.setPublicKey}
+              disabled={disabled}
+            />
           </div>
           <div>
             Crack Alice's private key:
@@ -122,7 +134,12 @@ const Eve = React.createClass({
               {'('}
               <IntegerField value={publicKey}/>
               {' x '}
-              <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>
+              <PrivateKeyDropdown
+                publicModulus={publicModulus}
+                value={privateKey}
+                onChange={this.setPrivateKey}
+                disabled={disabled}
+              />
               {') MOD '}
               <IntegerField value={publicModulus}/> = 1
               {' '}
@@ -130,7 +147,12 @@ const Eve = React.createClass({
             </div>
           </div>
           <div>
-            Enter Bob's public number: <IntegerTextbox value={publicNumber} onChange={this.setPublicNumber}/>
+            Enter Bob's public number:
+            <IntegerTextbox
+              value={publicNumber}
+              onChange={this.setPublicNumber}
+              disabled={disabled}
+            />
           </div>
           <div>
             Crack Bob's secret number:
@@ -138,7 +160,12 @@ const Eve = React.createClass({
               {'('}
               <IntegerField value={publicKey}/>
               {' x '}
-              <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>
+              <SecretNumberDropdown
+                value={secretNumber}
+                onChange={this.setSecretNumber}
+                publicModulus={publicModulus}
+                disabled={disabled}
+              />
               {') MOD '}
               <IntegerField value={publicModulus}/>
               {' = '}

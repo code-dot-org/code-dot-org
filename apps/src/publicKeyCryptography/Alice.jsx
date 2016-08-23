@@ -9,6 +9,7 @@ import {computePublicKey} from './cryptographyMath';
 
 const Alice = React.createClass({
   propTypes: {
+    disabled: React.PropTypes.bool,
     setPublicModulus: React.PropTypes.func.isRequired,
     setPublicKey: React.PropTypes.func.isRequired,
     runModuloClock: React.PropTypes.func.isRequired
@@ -75,6 +76,7 @@ const Alice = React.createClass({
   },
 
   render() {
+    const {disabled} = this.props;
     const {
       publicModulus,
       privateKey,
@@ -88,22 +90,40 @@ const Alice = React.createClass({
         <NumberedSteps>
           <div>
             Enter public modulus:
-            <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
+            <PublicModulusDropdown
+              value={publicModulus}
+              onChange={this.onPublicModulusChange}
+              disabled={disabled}
+            />
           </div>
           <div>
             Set a private key:
-            <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.onPrivateKeyChange}/>
+            <PrivateKeyDropdown
+              publicModulus={publicModulus}
+              value={privateKey}
+              onChange={this.onPrivateKeyChange}
+              disabled={disabled}
+            />
             <div>Your computed public key is <IntegerField value={publicKey}/></div>
           </div>
           <div>
             Enter Bob's public number:
-            <IntegerTextbox value={publicNumber} onChange={this.setPublicNumber}/>
+            <IntegerTextbox
+              value={publicNumber}
+              onChange={this.setPublicNumber}
+              disabled={disabled}
+            />
           </div>
           <div>
             Calculate Bob's secret number.
             <div>
               (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/>
-              <button onClick={this.computeSecretNumber}>Go</button>
+              <button
+                onClick={this.computeSecretNumber}
+                disabled={disabled}
+              >
+                Go
+              </button>
             </div>
             <div>
               Bob's secret number is <IntegerField value={secretNumber}/>!
