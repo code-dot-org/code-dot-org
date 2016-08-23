@@ -1,5 +1,4 @@
 class PdWorkshopSurvey
-
   def self.normalize(data)
     result = {}
 

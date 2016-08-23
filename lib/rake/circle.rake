@@ -1,5 +1,7 @@
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'open-uri'
+require 'json'
 
 RUN_ALL_TESTS_TAG = '[test all]'
 

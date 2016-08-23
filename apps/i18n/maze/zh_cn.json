@@ -89,5 +89,6 @@
   "whileTooltip": "重复所包含的操作直到完成。",
   "word": "找到一个单词",
   "yes": "是",
-  "youSpelled": "你拼写的"
+  "youSpelled": "你拼写的",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

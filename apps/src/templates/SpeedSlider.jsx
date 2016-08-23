@@ -27,9 +27,10 @@ const sliderImages = {
   lightRabbit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAYAAAAPr1RWAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUCEjcsBQRNEAAAAX9JREFUOMuV0zFrVUEQBeBvwCJEEqukEeWhgiiCiIVYWATROqKFrUV6EfwH/gLbVBY2gpAilUQbCaKNRSQgGEnzCt8DwQRDurGZK5d4zbtv4LI7c3fP2Z09J/SMzHxY068R8bnPnhM9gc/X9ApWMhM+4DX8j6wXeETsZOZ8pXu4hZu4ivXM3IuInX/2mTLqFgMsFfgsXmHjKMHU4B1Ej3EZB3iJdxExmtiWzLyGO3hQpY9Yw27rlJtYwDesYJyZWxExmtTz+7jbym/Ut5+ZqxhjucAXas0SfmIUE6T3pGeH9mscYxVbEXEs+FvM9QSdwxs8L3V19zwzF3Gv0u84WfPZY0h+tGQ76tR5tWK5AA/qmms4izMlwSZ+13gO242hMnOxIYgq3K6Xbk75Hr9KAZu4hItFMo8vRXyhXDvAbtU3MIyIwwb8WeM2fMKwnCgiDjNzpkBPt1w6rHyA6+XaJtbxIlp6/gvYgHa8x8zR/+1akT3CKTyN9oIuwCkd2ybyB67+kmBPPxeyAAAAAElFTkSuQmCC"
 };
 
-const knobXMax = 135;
+let knobXMax = 135;
 const knobXMin = 15;
-const TRACK_LENGTH = knobXMax - knobXMin;
+const knobWidth = 16;
+let trackLength = knobXMax - knobXMin - 5;
 
 /**
  * SpeedSlider for modifying a value.
@@ -40,6 +41,7 @@ const SpeedSlider = React.createClass({
     hasFocus: React.PropTypes.bool,
     style: React.PropTypes.object,
     value: React.PropTypes.number.isRequired,
+    lineWidth: React.PropTypes.number,
     onChange: React.PropTypes.func.isRequired
   },
 
@@ -86,7 +88,7 @@ const SpeedSlider = React.createClass({
   },
 
   svgPositionToValue(position) {
-    position = (position - knobXMin)/TRACK_LENGTH;
+    position = (position - knobXMin)/trackLength;
     return this.clampValue(position);
   },
 
@@ -118,7 +120,7 @@ const SpeedSlider = React.createClass({
   onMouseMove(event) {
     const mousePosition = this.mouseToSvg_(event);
     const mouseDelta = mousePosition.x - this.state.dragStart;
-    const valueDelta = mouseDelta / TRACK_LENGTH;
+    const valueDelta = mouseDelta / trackLength;
     const newValue = this.clampValue(this.state.valueStart + valueDelta);
     this.props.onChange(newValue);
   },
@@ -130,14 +132,17 @@ const SpeedSlider = React.createClass({
   },
 
   render() {
-    const knobWidth = 16;
     const props = this.props;
+    if (props.lineWidth) {
+      knobXMax = props.lineWidth;
+      trackLength = knobXMax - knobXMin - 5;
+    }
     let clampedValue = this.clampValue(props.value);
-    let knobXPosition = knobXMin + TRACK_LENGTH*clampedValue - knobWidth/2;
+    let knobXPosition = knobXMin + trackLength*clampedValue - knobWidth/2;
     return (
       <div id="slider-cell" style={props.style}>
         <svg
-          width="150"
+          width={knobXMax + 10}
           height="35"
           ref={el => this.SVG_ = el}
         >
@@ -146,7 +151,7 @@ const SpeedSlider = React.createClass({
             <rect
               width={26}
               height={12}
-              x={5}
+              x={0}
               y={6}
             />
           </clipPath>
@@ -155,7 +160,7 @@ const SpeedSlider = React.createClass({
             xlinkHref={props.hasFocus ? sliderImages.lightTurtle : sliderImages.darkTurtle}
             height={12}
             width={22}
-            x={7}
+            x={2}
             y={6}
           />
           {/*<!-- Fast icon. -->*/}
@@ -163,7 +168,7 @@ const SpeedSlider = React.createClass({
             <rect
               width={26}
               height={16}
-              x={120}
+              x={knobXMax - 19}
               y={2}
             />
           </clipPath>
@@ -172,14 +177,14 @@ const SpeedSlider = React.createClass({
             xlinkHref={props.hasFocus ? sliderImages.lightRabbit : sliderImages.darkRabbit}
             height={15}
             width={23}
-            x={121}
+            x={knobXMax - 18}
             y={3}
           />
           <line
             style={style.sliderTrack}
-            x1="10"
+            x1="5"
             y1="25"
-            x2="140"
+            x2={knobXMax + 5}
             y2="25"
             ref={el => this.track_ = el}
           />

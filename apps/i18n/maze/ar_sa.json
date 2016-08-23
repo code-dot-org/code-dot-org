@@ -89,5 +89,6 @@
   "whileTooltip": "تكرار الإجراءات المغلقة حتى الوصول إلى نقطة النهاية.",
   "word": "ابحث عن الكلمة",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة"
+  "youSpelled": "قمت بكتابة",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

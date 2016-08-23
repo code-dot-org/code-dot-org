@@ -102,7 +102,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level
-    i = script.script_levels.index(self)
+    i = script.script_levels.find_index(self)
     return nil if i.nil? || i == script.script_levels.length
     script.script_levels[i + 1]
   end
@@ -122,7 +122,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def previous_level
-    i = script.script_levels.index(self)
+    i = script.script_levels.find_index(self)
     return nil if i.nil? || i == 0
     script.script_levels[i - 1]
   end
@@ -262,5 +262,4 @@ class ScriptLevel < ActiveRecord::Base
     # Everything else is okay.
     return true
   end
-
 end

@@ -5,7 +5,6 @@ require 'cdo/pegasus/graphics'
 require 'dynamic_config/dcdo'
 
 class SharedResources < Sinatra::Base
-
   use Sass::Plugin::Rack
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
@@ -104,5 +103,4 @@ class SharedResources < Sinatra::Base
     end
     nil
   end
-
 end

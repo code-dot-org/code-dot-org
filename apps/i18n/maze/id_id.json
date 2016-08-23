@@ -89,5 +89,6 @@
   "whileTooltip": "Ulangi aksi sampai tujuan tercapai.",
   "word": "Cari kata",
   "yes": "Ya",
-  "youSpelled": "Anda mengejanya"
+  "youSpelled": "Anda mengejanya",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }
