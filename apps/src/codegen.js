@@ -48,6 +48,31 @@ exports.evalWith = function (code, options, legacy) {
   }
 };
 
+exports.evalWithEvents = function (apis, events, generator) {
+  let interpreter, currentCallback;
+  const hooks = {};
+  const code = Object.keys(events).map(event => {
+    hooks[event] = () => {
+      currentCallback(event);
+      interpreter.run();
+    };
+    return `function ${event} () {
+      ${generator(events[event])}
+    }
+    `;
+  }).join('');
+
+  interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
+    marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
+    interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+      currentCallback = callback;
+    }));
+  });
+  interpreter.run();
+
+  return hooks;
+};
+
 /**
  * Returns a function based on a string of code parameterized with a dictionary.
  */
@@ -179,7 +204,6 @@ function marshalNativeToInterpreterObject(
   }
   return retVal;
 }
-exports.marshalNativeToInterpreterObject = marshalNativeToInterpreterObject;
 
 function isCanvasImageData(nativeVar) {
   // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
