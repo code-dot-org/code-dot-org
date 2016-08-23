@@ -494,6 +494,7 @@ class User < ActiveRecord::Base
 
   def user_level_locked?(script_level, level)
     return false unless script_level.stage.lockable?
+    return false if authorized_teacher?
     user_level = user_level_for(script_level, level)
     user_level.nil? || user_level.locked?(script_level.stage)
   end
