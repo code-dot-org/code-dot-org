@@ -23,6 +23,7 @@ const style = {
 const PublicKeyCryptographyWidget = React.createClass({
   getInitialState() {
     return {
+      animating: false,
       publicModulus: 1
     };
   },
@@ -49,7 +50,9 @@ const PublicKeyCryptographyWidget = React.createClass({
 
   runModuloClock(dividend, onStep, onComplete) {
     const speed = 7;
+    this.setState({animating: true});
     this.moduloClock.animateTo(dividend, speed, onStep, (finalValue) => {
+      this.setState({animating: false});
       onComplete(finalValue);
     });
   },
@@ -64,17 +67,20 @@ const PublicKeyCryptographyWidget = React.createClass({
         <EqualColumns intercolumnarDistance={20}>
           <Alice
             ref={x => this.alice = x}
+            disabled={this.state.animating}
             setPublicModulus={this.setPublicModulus}
             setPublicKey={this.setPublicKey}
             runModuloClock={this.runModuloClock}
           />
           <Eve
             ref={x => this.eve = x}
+            disabled={this.state.animating}
             setPublicModulus={this.setPublicModulus}
             runModuloClock={this.runModuloClock}
           />
           <Bob
             ref={x => this.bob = x}
+            disabled={this.state.animating}
             setPublicModulus={this.setPublicModulus}
             setPublicNumber={this.setPublicNumber}
             runModuloClock={this.runModuloClock}

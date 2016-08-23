@@ -8,6 +8,7 @@ import {PublicModulusDropdown, SecretNumberDropdown} from './cryptographyFields'
 
 const Bob = React.createClass({
   propTypes: {
+    disabled: React.PropTypes.bool,
     setPublicModulus: React.PropTypes.func.isRequired,
     setPublicNumber: React.PropTypes.func.isRequired,
     runModuloClock: React.PropTypes.func.isRequired
@@ -65,6 +66,7 @@ const Bob = React.createClass({
   },
 
   render() {
+    const {disabled} = this.props;
     const {
       publicModulus,
       publicKey,
@@ -75,19 +77,40 @@ const Bob = React.createClass({
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
           <div>
-            Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
+            Enter public modulus:
+            <PublicModulusDropdown
+              value={publicModulus}
+              onChange={this.onPublicModulusChange}
+              disabled={disabled}
+            />
           </div>
           <div>
-            Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
+            Enter Alice's public key:
+            <IntegerTextbox
+              value={publicKey}
+              onChange={this.setPublicKey}
+              disabled={disabled}
+            />
           </div>
           <div>
-            Pick your secret number: <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>
+            Pick your secret number:
+            <SecretNumberDropdown
+              value={secretNumber}
+              onChange={this.setSecretNumber}
+              publicModulus={publicModulus}
+              disabled={disabled}
+            />
           </div>
           <div>
             Calculate your public number:
             <div>
               (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
-              <button onClick={this.computePublicNumber}>Go</button>
+              <button
+                onClick={this.computePublicNumber}
+                disabled={disabled}
+              >
+                Go
+              </button>
             </div>
             <div>
               Your computed public number is <IntegerField value={publicNumber}/>
