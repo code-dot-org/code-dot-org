@@ -1,9 +1,12 @@
 /** @file Root component for Modulo Clock widget */
 import _ from 'lodash';
 import React from 'react';
+import color from '../color';
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
+import {GoButton} from './cryptographyFields';
+import {AnyChildren} from './types';
 
 const style = {
   root: {
@@ -15,13 +18,21 @@ const style = {
   h1: {
     fontSize: 38.5
   },
-  goButton: {
-    width: 60,
-  },
   balancePadding: {
     display: 'inline-block',
     width: 60,
     visibility: 'hidden'
+  },
+  LabelBelow: {
+    root: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      lineHeight: '30px'
+    },
+    label: {
+      color: color.charcoal,
+      textAlign: 'center'
+    }
   }
 };
 
@@ -63,40 +74,54 @@ const ModuloClockWidget = React.createClass({
         <p>Experiment with this "clock" and different numbers to see what happens.</p>
         <div style={{textAlign: 'center'}}>
           <div style={style.balancePadding}>&nbsp;</div>
-          <IntegerTextbox
-            value={dividend}
-            disabled={animating}
-            onChange={this.onDividendChange}
-          />
+          <LabelBelow label="Enter a number">
+            <IntegerTextbox
+              value={dividend}
+              disabled={animating}
+              onChange={this.onDividendChange}
+            />
+          </LabelBelow>
           {' MOD '}
-          <IntegerTextbox
-            value={modulus}
-            disabled={animating}
-            onChange={this.onModulusChange}
-          />
+          <LabelBelow label="Pick a clock size">
+            <IntegerTextbox
+              value={modulus}
+              disabled={animating}
+              onChange={this.onModulusChange}
+            />
+          </LabelBelow>
           {' '}
-          <button
-            className="primary"
-            style={style.goButton}
+          <GoButton
             disabled={animating}
             onClick={this.onGoClick}
-          >
-            Go!
-          </button>
+          />
         </div>
         <ModuloClock
           ref={x => this.moduloClock = x}
           modulus={modulus}
         />
         <div style={{textAlign: 'center'}}>
-          <IntegerDropdown
-            value={speed}
-            options={_.range(1, 10)}
-            disabled={animating}
-            onChange={this.onSpeedChange}
-          />
+          <LabelBelow label="Speed">
+            <IntegerDropdown
+              value={speed}
+              options={_.range(1, 10)}
+              disabled={animating}
+              onChange={this.onSpeedChange}
+            />
+          </LabelBelow>
         </div>
       </div>);
   }
 });
 export default ModuloClockWidget;
+
+function LabelBelow(props) {
+  return (
+    <div style={style.LabelBelow.root}>
+      {props.children}
+      <div style={style.LabelBelow.label}>{props.label}</div>
+    </div>);
+}
+LabelBelow.propTypes = {
+  label: React.PropTypes.string.isRequired,
+  children: AnyChildren
+};
