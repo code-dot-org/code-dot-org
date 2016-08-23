@@ -4,10 +4,6 @@
 #terms-modal {
   text-align: left;
   top: 20px;
-  padding-bottom: 30px;
-  width: 80%;
-  left: 30%;
-  right: auto;
 }
 #terms-modal .modal-content p {
   font-size: 12px;
@@ -21,10 +17,12 @@
   float: right;
 }
 #terms-modal .scroll-box {
-  overflow-y: scroll;
   height: 350px;
   border: 1px solid $border_gray;
   padding: 20px;
+  resize: vertical;
+  overflow: auto;
+  overflow-y: scroll;
 }
 #terms-modal .terms-checkbox {
   margin: 0 5px 0 0;
@@ -44,8 +42,8 @@
   border-color: $lighter_gray;
   color: $dark_charcoal;
 }
-#terms-modal .no-top-margin {
-  margin-top: 0;
+#terms-modal .custom-h1 {
+  margin-top: 25px;
 }
 #terms-modal .right-margin-5 {
   margin-right: 5px;
@@ -53,55 +51,16 @@
 #terms-modal .dismiss-link {
   font-size: 14px;
   font-family: $gotham-regular;
+  line-height: 20px;
 }
 
-@media screen and (min-width: 601px) and (max-width: 970px) {
-  #terms-modal {
-    width: 600px;
-    left: 45%;
-  }
-
-  #terms-modal .scroll-box {
-    height: 130px;
-  }
-}
-
-@media screen and (min-width: 401px) and (max-width: 600px) {
+@media (max-width: 600px) {
   #terms-modal {
     width: 400px;
-    left: 65%;
-    font-size: 12px;
-    line-height: 14px;
+    left: 70%;
   }
 
   #terms-modal .scroll-box {
-    height: 100px;
-    font-size: 10px;
-    line-height: 12px;
-  }
-
-  #terms-modal h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  #terms-modal {
-    width: 350px;
-    left: 75%;
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  #terms-modal .scroll-box {
-    height: 100px;
-    font-size: 10px;
-    line-height: 12px;
-  }
-
-  #terms-modal h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    height: 200px;
   }
 }

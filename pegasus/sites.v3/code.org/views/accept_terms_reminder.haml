@@ -1,8 +1,6 @@
 %link{:href=>"/css/accept-terms-interstitial.css", :rel=>"stylesheet"}
 
-#terms_interstitial
-  .container_responsive
-    #terms_interstitial
+#terms_interstitial{style: 'height: 0'}
 
 .accept-terms-reminder
   = I18n.t(:terms_reminder_desc, tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'))
@@ -15,14 +13,9 @@
     $.ajax({
       type: "GET",
       url: '/dashboardapi/terms_interstitial',
-      complete: function(data, status) {
-        if (data.responseText == "" || status !== "success") {
-          $('#terms_interstitial').css({display: "none"});
-          $("#terms-modal").modal('hide');
-        } else {
-          $('#terms_interstitial').html(data.responseText, status);
-          $("#terms-modal").modal('show');
-        }
+      success: function(data) {
+        $("#terms_interstitial").html(data);
+        $("#terms-modal").modal('show');
       }
     });
   });
