@@ -1920,7 +1920,7 @@ stage_331:
   updated_at: 2015-10-16 22:38:10.000000000 Z
 stage_332:
   id: 332
-  name: Online PD
+  name: Gamelab
   absolute_position: 19
   relative_position: 19
   script_id: 45
@@ -1928,7 +1928,7 @@ stage_332:
   updated_at: 2015-10-16 22:38:11.000000000 Z
 stage_333:
   id: 333
-  name: Markdown Details
+  name: Online PD
   absolute_position: 20
   relative_position: 20
   script_id: 45
