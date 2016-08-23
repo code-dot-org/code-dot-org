@@ -181,7 +181,7 @@ export function setInitialAnimationList(serializedAnimationList) {
   for (let key in serializedAnimationList.propsByKey) {
     let animation = serializedAnimationList.propsByKey[key];
     if (!animation.frameDelay) {
-      if (typeof animation.frameRate === 'number' && !isNaN(animation.frameRate)) {
+      if (typeof animation.frameRate === 'number' && !isNaN(animation.frameRate) && animation.frameRate !== 0) {
         animation.frameDelay = Math.round(30 / animation.frameRate);
       } else {
         animation.frameDelay = 2;
