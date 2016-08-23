@@ -256,7 +256,6 @@ class User < ActiveRecord::Base
 
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
-  # Also update in pegasus/helpers/teacher_dashboard_helpers.rb.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
   ]
