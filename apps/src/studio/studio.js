@@ -661,6 +661,9 @@ var cancelQueuedMovements = function (index, yAxis) {
 
 var getNextPosition = function (i, modifyQueues) {
   var delta = calcMoveDistanceFromQueues(i, modifyQueues);
+  if (delta.x === 0 && delta.y === 0) {
+    return Studio.sprite[i].getNextPosition();
+  }
   return {
     x: Studio.sprite[i].x + delta.x,
     y: Studio.sprite[i].y + delta.y
@@ -1476,6 +1479,9 @@ function updateItems() {
       Studio.items.splice(i, 1);
     }
   }
+  Studio.sprite.forEach(sprite => {
+    sprite.update();
+  });
 }
 
 function checkForItemCollisions() {
@@ -4623,6 +4629,7 @@ Studio.setSprite = function (opts) {
     return;
   }
 
+  sprite.imageName = spriteValue;
   sprite.frameCounts = skinSprite.frameCounts;
   sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
@@ -5209,6 +5216,9 @@ Studio.setSpriteXY = function (opts) {
 
 // TODO(ram): implement group behavior
 Studio.setSpritesWander = function (opts) {
+  const sprites = Studio.sprite.filter(
+      sprite => sprite.imageName === opts.spriteName && sprite.visible);
+  sprites.forEach(sprite => sprite.setActivity('roam'));
 };
 
 Studio.setSpritesStop = function (opts) {
