@@ -31,8 +31,7 @@ const EditTableListRow = React.createClass({
         </td>
         <td style={dataStyles.cell}>
           <button
-            className="btn btn-danger"
-            style={dataStyles.button}
+            style={dataStyles.redButton}
             onClick={this.handleDelete}
           >
             Delete

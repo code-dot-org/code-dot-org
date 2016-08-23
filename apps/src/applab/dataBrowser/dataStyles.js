@@ -35,24 +35,51 @@ export const link = {
   fontFamily: "'Gotham 7r', sans-serif",
 };
 
+// Override some styles set on button elements by dashboard stylesheets.
 export const button = {
-  margin: 0
-};
-
-export const editButton = {
+  backgroundPosition: 0,
+  boxShadow: 'none',
+  display: 'inline-block',
+  fontSize: 14,
+  lineHeight: '20px',
   marginTop: 0,
   marginLeft: 0,
   marginBottom: 0,
-  marginRight: 10,
-  width: 60
+  marginRight: 0,
+  padding: '4px 12px',
+  textAlign: 'center',
+  transition: 'none',
+  verticalAlign: 'middle',
 };
 
-export const rightButton = {
+export const whiteButton = [button, {
+  backgroundColor: 'white',
+  color: 'black',
+}];
+
+export const redButton = [button, {
+  backgroundColor: color.bootstrap_button_red,
+  color: 'white',
+}];
+
+export const blueButton = [button, {
+  backgroundColor: color.bootstrap_button_blue,
+  color: 'white',
+}];
+
+export const editButton = [whiteButton, {
+  marginRight: 10,
+  width: 60
+}];
+
+export const saveButton = [blueButton, {
+  marginRight: 10,
+  width: 60
+}];
+
+export const alignRight = {
   float: 'right',
-  marginTop: 0,
   marginLeft: 10,
-  marginBottom: 0,
-  marginRight: 0,
 };
 
 export const input = {

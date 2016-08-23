@@ -16,12 +16,13 @@ const styles = {
     paddingLeft: 0,
     paddingRight: 0,
   },
-  clearButton: [dataStyles.rightButton, {
+  clearButton: [dataStyles.redButton, dataStyles.alignRight, {
     width: 103,
   }],
-  exportButton: [dataStyles.rightButton, {
+  exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
     width: 120
   }],
+  importButton: [dataStyles.whiteButton, dataStyles.alignRight],
   tableName: {
     fontSize: 18,
   },
@@ -86,14 +87,13 @@ const TableControls = React.createClass({
           <button
             className="btn"
             onClick={() => this.importFileInput.click()}
-            style={dataStyles.rightButton}
+            style={styles.importButton}
           >
             Import csv
           </button>
         </span>
 
         <button
-          className="btn btn-danger"
           onClick={this.props.clearTable}
           style={styles.clearButton}
         >
