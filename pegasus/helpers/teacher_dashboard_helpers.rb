@@ -1,6 +1,7 @@
+require 'active_support/core_ext/object/try'
+
 def dashboard_admin?
-  return false unless dashboard_user
-  dashboard_user[:admin]
+  dashboard_user.try{|u| u[:admin]}
 end
 
 def can_see_pd_workshop_dashboard?
