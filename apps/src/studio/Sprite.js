@@ -1,4 +1,4 @@
-var Collidable = require('./collidable');
+var Item = require('./Item');
 var constants = require('./constants');
 var studioMsg = require('./locale');
 var spriteActions = require('./spriteActions');
@@ -10,13 +10,13 @@ var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 /**
- * A Sprite is a type of Collidable.
+ * A Sprite is a type of Item.
  * Note: x/y represent x/y of center in gridspace
- * @extends {Collidable}
+ * @extends {Item}
  */
 var Sprite = function (options) {
   // call collidable constructor
-  Collidable.apply(this, arguments);
+  Item.apply(this, arguments);
 
   /**
    * Rendering offset for item animation vs display position - applied as
@@ -41,7 +41,7 @@ var Sprite = function (options) {
 
   this.lastDrawPosition = { x: 0, y: 0 };
 };
-Sprite.inherits(Collidable);
+Sprite.inherits(Item);
 module.exports = Sprite;
 
 
@@ -315,6 +315,7 @@ Sprite.prototype.createElement = function (parentElement) {
 // TODO (cpirich): ensure that update is called for Sprite object
 
 Sprite.prototype.update = function () {
+  Item.prototype.update.call(this);
 
   // Draw the sprite's current location.
   Studio.drawDebugRect("spriteCenter", this.x, this.y, 3, 3);

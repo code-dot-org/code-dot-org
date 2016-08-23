@@ -151,9 +151,13 @@ Item.prototype.update = function () {
   // (There is a small margin of error to allow for per-update movements greater
   // than a single pixel.)
   var speed = utils.valueOr(this.speed, 0);
+  var dirUnit = Direction.getUnitVector(this.dir);
+  var destVector = {
+    x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - this.x,
+    y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - this.y
+  };
   if (this.destGridX !== undefined &&
-      (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed &&
-       Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed)) {
+      (dirUnit.x * destVector.x + dirUnit.y * destVector.y ) <= speed) {
     this.gridX = this.destGridX;
     this.gridY = this.destGridY;
     reachedDestinationGridPosition = true;
