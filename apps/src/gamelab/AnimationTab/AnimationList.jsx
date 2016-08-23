@@ -18,13 +18,6 @@ const styles = {
     borderLeft: 'solid thin ' + color.light_purple,
     borderRight: 'none',
     backgroundColor: color.white
-  },
-
-  previewRate: {
-    color: color.purple,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    padding: 3
   }
 };
 
@@ -41,7 +34,6 @@ const AnimationList = React.createClass({
   render() {
     return (
         <ScrollableList style={styles.root} className="animationList">
-          <div style={styles.previewRate}>Preview at 30fps</div>
           {this.props.animationList.orderedKeys.map(key =>
             <AnimationListItem
               key={key}
