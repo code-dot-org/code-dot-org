@@ -1,5 +1,3 @@
-var constants = require('./constants');
-
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.endGame = function (value) {

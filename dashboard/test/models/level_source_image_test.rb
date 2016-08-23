@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class LevelSourceTest < ActiveSupport::TestCase
-
   setup do
     # rubocop:disable Lint/Void
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
@@ -63,5 +62,4 @@ class LevelSourceTest < ActiveSupport::TestCase
     level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
     assert !level_source_image.save_to_s3('')
   end
-
 end

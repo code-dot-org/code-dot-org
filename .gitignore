@@ -3,6 +3,7 @@
 *~
 .DS_Store
 .dropbox
+.tmputils
 .idea/
 **/.bundle
 crowdin.yaml

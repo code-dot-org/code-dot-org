@@ -142,6 +142,51 @@ module.exports = {
       },
     },
 
+    {
+      description: "Data block palette without firebase",
+      editCode: true,
+      xml:``,
+
+      runBeforeClick: function (assert) {
+        $('.droplet-palette-group-header:contains(Data)').click();
+        const actualBlocks = $('.droplet-hover-div').map((i, el) => el.dataset.block).toArray();
+        const expectedBlocks = [
+          "startWebRequest", "setKeyValue", "getKeyValue", "createRecord", "readRecords",
+          "updateRecord", "deleteRecord", "getUserId", "drawChart",
+          "drawChartFromRecords"
+        ];
+        assert.deepEqual(actualBlocks, expectedBlocks);
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "Data block palette with firebase",
+      editCode: true,
+      useFirebase: true,
+      xml:``,
+
+      runBeforeClick: function (assert) {
+        $('.droplet-palette-group-header:contains(Data)').click();
+        const actualBlocks = $('.droplet-hover-div').map((i, el) => el.dataset.block).toArray();
+        const expectedBlocks = [
+          "startWebRequest", "setKeyValue", "getKeyValue", "createRecord", "readRecords",
+          "updateRecord", "deleteRecord", "onRecordEvent", "getUserId", "drawChart",
+          "drawChartFromRecords"
+        ];
+        assert.deepEqual(actualBlocks, expectedBlocks);
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors

@@ -436,5 +436,4 @@ class TablesTest < Minitest::Test
     url += "?overwrite=1" if overwrite
     post url, JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
-
 end

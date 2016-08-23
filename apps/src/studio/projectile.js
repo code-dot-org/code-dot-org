@@ -1,9 +1,11 @@
-var Collidable = require('./collidable');
-var Direction = require('./constants').Direction;
-var constants = require('./constants');
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var StudioAnimation = require('./StudioAnimation');
-var StudioSpriteSheet = require('./StudioSpriteSheet');
+import Collidable from './collidable';
+import StudioAnimation from './StudioAnimation';
+import StudioSpriteSheet from './StudioSpriteSheet';
+import {
+  Direction,
+  DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION,
+  DEFAULT_PROJECTILE_SPEED
+} from './constants';
 
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
@@ -96,138 +98,138 @@ OFFSET_CENTER[Direction.NORTHWEST] = {
  * Note: x/y represent x/y of center in gridspace
  * @extends {Collidable}
  */
-var Projectile = function (options) {
-  // call collidable constructor
-  Collidable.apply(this, arguments);
+export default class Projectile extends Collidable {
+  constructor(options) {
+    // call collidable constructor
+    super(options);
 
-  this.height = options.height || 50;
-  this.width = options.width || 50;
-  this.speed = options.speed || constants.DEFAULT_PROJECTILE_SPEED;
+    this.height = options.height || 50;
+    this.width = options.width || 50;
+    this.speed = options.speed || DEFAULT_PROJECTILE_SPEED;
 
-  // origin is at an offset from sprite location
-  this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
-            (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
-  this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
-            (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
+    // origin is at an offset from sprite location
+    this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
+              (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
+    this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
+              (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
 
-  /** @private {StudioSpriteSheet} */
-  this.spriteSheet_ = new StudioSpriteSheet({
-    frameWidth: options.spriteWidth,
-    frameHeight: options.spriteHeight,
-    defaultFramesPerAnimation: options.frames,
-    assetPath: options.image,
-    horizontalAnimation: true,
-    totalAnimations: 1
-  });
+    /** @private {StudioSpriteSheet} */
+    this.spriteSheet_ = new StudioSpriteSheet({
+      frameWidth: options.spriteWidth,
+      frameHeight: options.spriteHeight,
+      defaultFramesPerAnimation: options.frames,
+      assetPath: options.image,
+      horizontalAnimation: true,
+      totalAnimations: 1
+    });
 
-  /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation(Object.assign({}, options, {
-    spriteSheet: this.spriteSheet_,
-    animationFrameDuration: this.getAnimationFrameDuration()
-  }));
-};
-Projectile.inherits(Collidable);
-module.exports = Projectile;
-
-/** @returns {SVGImageElement} */
-Projectile.prototype.getElement = function () {
-  return this.animation_.getElement();
-};
-
-/**
- * Create an image element with a clip path
- */
-Projectile.prototype.createElement = function (parentElement) {
-  this.animation_.createElement(parentElement);
-};
-
-/**
- * Retrieve animation speed (frames per tick)
- */
-Projectile.prototype.getAnimationFrameDuration = function () {
-  return constants.DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION *
-      constants.DEFAULT_PROJECTILE_SPEED / this.speed;
-};
-
-/**
- * Remove our element/clipPath/animator
- */
-Projectile.prototype.removeElement = function () {
-  this.animation_.removeElement();
-};
-
-/**
- * Flip the direction of the projectile
- */
-Projectile.prototype.bounce = function () {
-  switch (this.dir) {
-    case Direction.NORTH:
-      this.dir = Direction.SOUTH;
-      break;
-    case Direction.WEST:
-      this.dir = Direction.EAST;
-      break;
-    case Direction.SOUTH:
-      this.dir = Direction.NORTH;
-      break;
-    case Direction.EAST:
-      this.dir = Direction.WEST;
-      break;
-    case Direction.NORTHEAST:
-      this.dir = Direction.SOUTHWEST;
-      break;
-    case Direction.SOUTHEAST:
-      this.dir = Direction.NORTHWEST;
-      break;
-    case Direction.SOUTHWEST:
-      this.dir = Direction.NORTHEAST;
-      break;
-    case Direction.NORTHWEST:
-      this.dir = Direction.SOUTHEAST;
-      break;
+    /** @private {StudioAnimation} */
+    this.animation_ = new StudioAnimation(Object.assign({}, options, {
+      spriteSheet: this.spriteSheet_,
+      animationFrameDuration: this.getAnimationFrameDuration()
+    }));
   }
-};
 
-/**
- * Display our projectile at it's current location, rotating as necessary
- */
-Projectile.prototype.display = function () {
-  var topLeft = {
-    x: this.x - this.width / 2,
-    y: this.y - this.height / 2
-  };
-
-  this.animation_.redrawCenteredAt({
-        x: this.x,
-        y: this.y
-      },
-      Studio.tickCount);
-
-  if (this.spriteSheet_.defaultFramesPerAnimation > 1) {
-    this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
-     ', ' + this.x + ', ' + this.y + ')');
+  /** @returns {SVGImageElement} */
+  getElement() {
+    return this.animation_.getElement();
   }
-};
 
-Projectile.prototype.getNextPosition = function () {
-  var unit = Direction.getUnitVector(this.dir);
-  return {
-    x: this.x + this.speed * unit.x,
-    y: this.y + this.speed * unit.y
-  };
-};
+  /**
+   * Create an image element with a clip path
+   */
+  createElement(parentElement) {
+    this.animation_.createElement(parentElement);
+  }
 
-Projectile.prototype.moveToNextPosition = function () {
-  var next = this.getNextPosition();
-  this.x = next.x;
-  this.y = next.y;
-};
+  /**
+   * Retrieve animation speed (frames per tick)
+   */
+  getAnimationFrameDuration() {
+    return DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION *
+        DEFAULT_PROJECTILE_SPEED / this.speed;
+  }
 
-/**
- * Change visible opacity of this projectile.
- * @param {number} newOpacity (between 0 and 1)
- * @override
- */
-Projectile.prototype.setOpacity = function (newOpacity) {
-  this.animation_.setOpacity(newOpacity);
-};
+  /**
+   * Remove our element/clipPath/animator
+   */
+  removeElement() {
+    this.animation_.removeElement();
+  }
+
+  /**
+   * Flip the direction of the projectile
+   */
+  bounce() {
+    switch (this.dir) {
+      case Direction.NORTH:
+        this.dir = Direction.SOUTH;
+        break;
+      case Direction.WEST:
+        this.dir = Direction.EAST;
+        break;
+      case Direction.SOUTH:
+        this.dir = Direction.NORTH;
+        break;
+      case Direction.EAST:
+        this.dir = Direction.WEST;
+        break;
+      case Direction.NORTHEAST:
+        this.dir = Direction.SOUTHWEST;
+        break;
+      case Direction.SOUTHEAST:
+        this.dir = Direction.NORTHWEST;
+        break;
+      case Direction.SOUTHWEST:
+        this.dir = Direction.NORTHEAST;
+        break;
+      case Direction.NORTHWEST:
+        this.dir = Direction.SOUTHEAST;
+        break;
+    }
+  }
+
+  /**
+   * Display our projectile at it's current location, rotating as necessary
+   */
+  display() {
+    var topLeft = {
+      x: this.x - this.width / 2,
+      y: this.y - this.height / 2
+    };
+
+    this.animation_.redrawCenteredAt({
+          x: this.x,
+          y: this.y
+        },
+        Studio.tickCount);
+
+    if (this.spriteSheet_.defaultFramesPerAnimation > 1) {
+      this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
+       ', ' + this.x + ', ' + this.y + ')');
+    }
+  }
+
+  getNextPosition() {
+    var unit = Direction.getUnitVector(this.dir);
+    return {
+      x: this.x + this.speed * unit.x,
+      y: this.y + this.speed * unit.y
+    };
+  }
+
+  moveToNextPosition() {
+    var next = this.getNextPosition();
+    this.x = next.x;
+    this.y = next.y;
+  }
+
+  /**
+   * Change visible opacity of this projectile.
+   * @param {number} newOpacity (between 0 and 1)
+   * @override
+   */
+  setOpacity(newOpacity) {
+    this.animation_.setOpacity(newOpacity);
+  }
+}

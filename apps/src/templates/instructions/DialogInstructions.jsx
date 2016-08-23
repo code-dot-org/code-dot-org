@@ -18,6 +18,8 @@ const DialogInstructions = React.createClass({
     aniGifURL: React.PropTypes.string,
     aniGifOnly: React.PropTypes.bool,
     hintsOnly: React.PropTypes.bool,
+    acapelaInstructionsSrc: React.PropTypes.string,
+    acapelaMarkdownInstructionsSrc:  React.PropTypes.string,
 
     // not redux
     authoredHints: React.PropTypes.element
@@ -25,6 +27,8 @@ const DialogInstructions = React.createClass({
   render() {
     const renderedMarkdown = this.props.longInstructions ?
       processMarkdown(this.props.longInstructions) : undefined;
+    const acapelaSrc = this.props.longInstructions ?
+      this.props.acapelaMarkdownInstructionsSrc : this.props.acapelaInstructionsSrc;
 
     const showInstructions = !(this.props.aniGifOnly || this.props.hintsOnly);
     const showAniGif = !this.props.hintsOnly;
@@ -35,6 +39,7 @@ const DialogInstructions = React.createClass({
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
+        acapelaSrc={showInstructions ? acapelaSrc : undefined}
         instructions={showInstructions ?  this.props.shortInstructions : undefined}
         instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
         renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
@@ -46,6 +51,8 @@ const DialogInstructions = React.createClass({
 });
 
 export default connect(state => ({
+  acapelaInstructionsSrc: state.pageConstants.acapelaInstructionsSrc,
+  acapelaMarkdownInstructionsSrc: state.pageConstants.acapelaMarkdownInstructionsSrc,
   puzzleNumber: state.pageConstants.puzzleNumber,
   stageTotal: state.pageConstants.stageTotal,
   shortInstructions: state.instructions.shortInstructions,

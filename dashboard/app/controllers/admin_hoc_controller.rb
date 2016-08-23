@@ -2,7 +2,7 @@ require 'cdo/env'
 
 # The controller for reports of HOC data.
 class AdminHocController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   before_action :require_admin
   check_authorization
 

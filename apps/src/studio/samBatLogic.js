@@ -1,10 +1,11 @@
-var CustomGameLogic = require('./customGameLogic');
-var studioConstants = require('./constants');
-var Direction = studioConstants.Direction;
-var Position = studioConstants.Position;
-var KeyCodes = require('../constants').KeyCodes;
-var codegen = require('../codegen');
-var api = require('./api');
+import {
+  Direction,
+  KeyCodes,
+  Position
+} from './constants';
+import CustomGameLogic from './customGameLogic';
+import codegen from '../codegen';
+import api from './api';
 require('../utils'); // Provides Function.prototype.inherits
 
 /**
