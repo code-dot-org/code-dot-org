@@ -7,6 +7,14 @@
 'use strict';
 /* global Studio */
 
+import _ from 'lodash';
+import codegen from '../codegen';
+import commonMsg from '@cdo/locale';
+import msg from './locale';
+import paramLists from './paramLists';
+import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
+import utils from '../utils';
+import { singleton as studioApp } from '../StudioApp';
 import {
   CardinalDirections,
   Direction,
@@ -17,14 +25,6 @@ import {
   RANDOM_VALUE,
   VISIBLE_VALUE
 } from './constants';
-var studioApp = require('../StudioApp').singleton;
-var msg = require('./locale');
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('@cdo/locale');
-var codegen = require('../codegen');
-var utils = require('../utils');
-var _ = require('lodash');
-var paramLists = require('./paramLists');
 
 
 // 9 possible positions in playspace (+ random):

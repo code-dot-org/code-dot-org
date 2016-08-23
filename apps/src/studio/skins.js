@@ -12,10 +12,10 @@ import {
   VISIBLE_VALUE,
   SpriteSpeed
 } from './constants';
-var skinsBase = require('../skins');
-var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-var studioApp = require('../StudioApp').singleton;
+import msg from './locale';
+import commonMsg from '@cdo/locale';
+import skinsBase from '../skins';
+import { singleton as StudioApp } from '../StudioApp';
 
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.

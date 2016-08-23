@@ -8,7 +8,7 @@ import {
   SHAKE_DEFAULT_DISTANCE,
   SHAKE_DEFAULT_DURATION
 } from './constants';
-var utils = require('../utils');
+import { valueOr } from '../utils';
 
 /**
  * Work/animation for a sprite to do that will require more than one tick/frame.
@@ -140,15 +140,16 @@ export class GridMoveAndCancel {
     return this.elapsedSteps_ >= this.totalSteps_;
   }
 
-  /**
-   * Given a 2D vector (x and y) provides the approximate animation direction
-   * given in our Direction enum.  Does not calculate 'closest' direction or
-   * anything like that - you'll always get a diagonal if both x and y are nonzero.
-   * @param {number} x
-   * @param {number} y
-   * @returns {Direction}
-   */
 }
+
+/**
+ * Given a 2D vector (x and y) provides the approximate animation direction
+ * given in our Direction enum.  Does not calculate 'closest' direction or
+ * anything like that - you'll always get a diagonal if both x and y are nonzero.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
 function getDirection(x, y) {
   var dir = Direction.NONE;
   if (x < 0) {
@@ -177,7 +178,7 @@ export class FadeActor {
     this.startFadeTime_ = null;
 
     /** @private {number} */
-    this.fadeDurationMs_ = utils.valueOr(fadeDuration, DEFAULT_ACTOR_FADE_TIME);
+    this.fadeDurationMs_ = valueOr(fadeDuration, DEFAULT_ACTOR_FADE_TIME);
   }
 
   /**
@@ -219,7 +220,7 @@ export class ShakeActor {
     this.startShakeTime_ = null;
 
     /** @private {number} How long to shake, in milliseconds */
-    this.shakeDurationMs_ = utils.valueOr(shakeDuration,
+    this.shakeDurationMs_ = valueOr(shakeDuration,
         SHAKE_DEFAULT_DURATION);
 
     /** @private {number} How many complete back-and-forth shakes occur */

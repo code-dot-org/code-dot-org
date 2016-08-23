@@ -2,7 +2,7 @@
  * given certain metadata about that spritesheet */
 'use strict';
 
-var utils = require('../utils');
+import { valueOr } from '../utils';
 
 /**
  * @typedef AnimationDescription
@@ -68,18 +68,18 @@ export default class StudioSpriteSheet {
       this.animationOffsets[this.animations[i].type] = this.packedSheetFrameCount ?
           totalFrames : totalAnimations;
       totalAnimations += this.animations[i].count;
-      var framesPerThisAnimationType = utils.valueOr(
+      var framesPerThisAnimationType = valueOr(
           this.animations[i].frames,
           this.defaultFramesPerAnimation);
       this.animationFrameCounts[this.animations[i].type] = framesPerThisAnimationType;
       totalFrames += framesPerThisAnimationType * this.animations[i].count;
     }
-    this.totalAnimations = utils.valueOr(options.totalAnimations, totalAnimations);
+    this.totalAnimations = valueOr(options.totalAnimations, totalAnimations);
     this.totalFrames = totalFrames ||
         (this.totalAnimations * this.defaultFramesPerAnimation);
 
     /** @type {boolean} Whether animation frames run in rows, not columns */
-    this.horizontalAnimation = utils.valueOr(options.horizontalAnimation, false);
+    this.horizontalAnimation = valueOr(options.horizontalAnimation, false);
 
     if (this.packedSheetFrameCount) {
       var framesOneSide = Math.ceil(this.totalFrames / this.packedSheetFrameCount);
@@ -106,7 +106,7 @@ export default class StudioSpriteSheet {
 
   /** @return {number} number of animation frames for a given type. */
   getAnimationFrameCount(animationType) {
-    return utils.valueOr(this.animationFrameCounts[animationType],
+    return valueOr(this.animationFrameCounts[animationType],
         this.defaultFramesPerAnimation);
   }
 

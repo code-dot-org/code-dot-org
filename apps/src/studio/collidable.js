@@ -8,20 +8,21 @@
 'use strict';
 
 import { Direction, SquareType } from './constants';
-var studioApp = require('../StudioApp').singleton;
+import { singleton as studioApp } from '../StudioApp';
 
 export default class Collidable {
   /**
    * Collidable constructor opts
    *
-   * opts.image (URL)
-   * opts.width (pixels)
-   * opts.height (pixels)
-   * opts.x
-   * opts.y
-   * opts.dir (direction)
-   * opts.speed (speed)
-   * opts.frames
+   * @param {Object} opts
+   * @param {String} opts.image - image url
+   * @param {Number} opts.width - width in pixels
+   * @param {Number} opts.height - height in pixels
+   * @param {Number} opts.x
+   * @param {Number} opts.y
+   * @param {Number} opts.dir
+   * @param {Number} opts.speed
+   * @param {Number} opts.frames
    */
   constructor(opts) {
     this.gridX = undefined;

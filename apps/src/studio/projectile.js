@@ -1,11 +1,11 @@
 import Collidable from './collidable';
+import StudioAnimation from './StudioAnimation';
+import StudioSpriteSheet from './StudioSpriteSheet';
 import {
   Direction,
   DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION,
   DEFAULT_PROJECTILE_SPEED
 } from './constants';
-import StudioAnimation from './StudioAnimation';
-import StudioSpriteSheet from './StudioSpriteSheet';
 
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
