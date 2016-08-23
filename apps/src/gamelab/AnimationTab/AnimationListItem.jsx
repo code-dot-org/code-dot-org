@@ -25,6 +25,9 @@ const styles = {
     paddingBottom: 4,
     marginBottom: 4,
 
+    // Allows looping button to display relative to whole card
+    position: 'relative',
+
     ':hover': {
       cursor: 'pointer',
       backgroundColor: color.lighter_purple
