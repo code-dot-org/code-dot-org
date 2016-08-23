@@ -4,7 +4,6 @@ require "net/http"
 require "pp"
 
 class NewRelicClient
-
   attr_reader :api_key
 
   # Base URL for the NewRelic V2 REST API
@@ -135,7 +134,6 @@ class NewRelicClient
       end
     end
   end
-
 end
 
 NewRelic = NewRelicClient.new

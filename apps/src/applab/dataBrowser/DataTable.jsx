@@ -12,8 +12,9 @@ import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
 import * as dataStyles from './dataStyles';
+import color from '../../color';
 import { connect } from 'react-redux';
-import applabMsg from '../locale';
+import applabMsg from '@cdo/applab/locale';
 
 const MAX_TABLE_WIDTH = 970;
 
@@ -21,7 +22,7 @@ const styles = {
   table: {
     clear: 'both',
     width: '100%'
-  }
+  },
 };
 
 const DataTable = React.createClass({
@@ -45,7 +46,8 @@ const DataTable = React.createClass({
   getInitialState() {
     return {
       newColumns: [],
-      editingColumn: null
+      editingColumn: null,
+      showDebugView: false,
     };
   },
 
@@ -163,6 +165,21 @@ const DataTable = React.createClass({
     }
   },
 
+  toggleDebugView() {
+    const showDebugView = !this.state.showDebugView;
+    this.setState({showDebugView});
+  },
+
+  getTableJson() {
+    const records = [];
+    // Cast Array to Object
+    const tableRecords = Object.assign({}, this.props.tableRecords);
+    for (const id in tableRecords) {
+      records.push(JSON.parse(tableRecords[id]));
+    }
+    return JSON.stringify(records, null, 2);
+  },
+
   render() {
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
@@ -178,18 +195,37 @@ const DataTable = React.createClass({
       display: visible ? 'block' : 'none',
       maxWidth: MAX_TABLE_WIDTH
     };
+    const tableDataStyle = [styles.table, {
+      display: this.state.showDebugView ? 'none' : ''
+    }];
+    const debugDataStyle = [dataStyles.debugData, {
+      display: this.state.showDebugView ? '' : 'none',
+  }];
     return (
       <div id="dataTable" style={containerStyle}>
-        <h4>
-          <a
-            href="#"
-            style={dataStyles.link}
-            onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
-          >
-            Data
-          </a>
-          &nbsp;&gt; {this.props.tableName}
-        </h4>
+        <div style={dataStyles.viewHeader}>
+          <span style={dataStyles.backLink}>
+            <a
+              id="tableBackToOverview"
+              href="#"
+              style={dataStyles.link}
+              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+            >
+              Data
+            </a>
+            &nbsp;&gt; {this.props.tableName}
+          </span>
+          <span style={dataStyles.debugLink}>
+            <a
+              id="tableDebugLink"
+              href="#"
+              style={dataStyles.link}
+              onClick={() => this.toggleDebugView()}
+            >
+              {this.state.showDebugView ? 'Table view' : 'Debug view'}
+            </a>
+          </span>
+        </div>
 
         <TableControls
           columns={columnNames}
@@ -199,7 +235,11 @@ const DataTable = React.createClass({
           exportCsv={this.exportCsv}
         />
 
-        <table style={styles.table}>
+        <div style={debugDataStyle}>
+          {this.getTableJson()}
+        </div>
+
+        <table style={tableDataStyle}>
           <tbody>
           <tr>
             {

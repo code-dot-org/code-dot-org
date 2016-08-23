@@ -9,7 +9,6 @@
  * not static but can in fact be randomized between runs.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
 import Cell from './cell';
 import tiles from './tiles';
 const SquareType = tiles.SquareType;
@@ -39,24 +38,6 @@ export default class BeeCell extends Cell {
      * @type {Number}
      */
     this.cloudType_ = cloudType;
-  }
-
-  /**
-   * Returns a new BeeCell that's an exact replica of this one
-   * @return {BeeCell}
-   * @override
-   */
-  clone() {
-    const newBeeCell = new BeeCell(
-      this.tileType_,
-      this.featureType_,
-      this.originalValue_,
-      this.cloudType_,
-      this.flowerColor_,
-      this.range_
-    );
-    newBeeCell.setCurrentValue(this.currentValue_);
-    return newBeeCell;
   }
 
   /**
@@ -158,14 +139,11 @@ export default class BeeCell extends Cell {
    * @override
    */
   serialize() {
-    return {
-      tileType: this.tileType_,
+    return Object.assign({}, super.serialize(), {
       featureType: this.featureType_,
-      value: this.originalValue_,
       cloudType: this.cloudType_,
       flowerColor: this.flowerColor_,
-      range: this.range_,
-    };
+    });
   }
 }
 

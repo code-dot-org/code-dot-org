@@ -66,4 +66,20 @@ MockFirebase.prototype.update = function (value, onComplete) {
   });
 };
 
+MockFirebase.prototype.originalTransaction = MockFirebase.prototype.transaction;
+
+MockFirebase.prototype.transaction = function (updateFunction, onComplete, applyLocally) {
+  if (onComplete) {
+    return this.originalTransaction(updateFunction, onComplete, applyLocally);
+  }
+  return new Promise((resolve, reject) => {
+    return this.originalTransaction(updateFunction, (error, committed, snapshot) => {
+      if (error) {
+        return reject(error);
+      }
+      return resolve({committed, snapshot});
+    }, applyLocally);
+  });
+};
+
 export default MockFirebase;

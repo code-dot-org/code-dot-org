@@ -45,6 +45,12 @@ class PeerReviewsController < ApplicationController
   private
 
   def peer_review_params
-    params.require(:peer_review).permit(:data, :status)
+    return_params = params.require(:peer_review).permit(:data, :status)
+
+    if return_params[:data]
+      return_params[:data] = return_params[:data].strip_utf8mb4
+    end
+
+    return_params
   end
 end

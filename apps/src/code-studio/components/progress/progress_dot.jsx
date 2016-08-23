@@ -6,6 +6,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../../color';
 import progressStyles, { createOutline } from './progressStyles';
+import { LevelStatus } from '../../activityUtils';
 
 const dotSize = 24;
 const styles = {
@@ -19,7 +20,8 @@ const styles = {
   },
   disabledLevel: {
     pointerEvents: 'none',
-    cursor: 'default'
+    cursor: 'default',
+    color: color.charcoal
   },
   dot: {
     common: {
@@ -163,9 +165,9 @@ export const ProgressDot = React.createClass({
   },
 
   getIconForLevelStatus(level) {
-    if (level.locked) {
+    if (level.locked || level.status === LevelStatus.locked) {
       return 'fa-lock';
-    } else if (level.status === 'perfect') {
+    } else if (level.status === LevelStatus.perfect) {
       return 'fa-check';
     } else {
       return null;
@@ -185,7 +187,9 @@ export const ProgressDot = React.createClass({
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
     const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
-    const levelUrl = level.locked ? undefined : level.url + location.search;
+    // Account for both the level based concept of locked, and the progress based concept.
+    const isLocked = level.locked || level.status === LevelStatus.locked;
+    const levelUrl = isLocked ? undefined : level.url + location.search;
 
     return (
       <a
@@ -195,7 +199,7 @@ export const ProgressDot = React.createClass({
         style={[
           styles.outer,
           (showLevelName || isPeerReview) && {display: 'table-row'},
-           level.locked && styles.disabledLevel
+          isLocked && styles.disabledLevel
          ]}
       >
         {(level.icon && !isPeerReview) ?
@@ -207,7 +211,7 @@ export const ProgressDot = React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
-              level.status && level.status !== 'not_tried' && styles.dot.icon_complete,
+              level.status && level.status !== LevelStatus.not_tried && styles.dot.icon_complete,
               outlineCurrent && {textShadow: createOutline(color.level_current)}
             ]}
           /> :
@@ -215,13 +219,13 @@ export const ProgressDot = React.createClass({
             className={`level-${level.id}${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
             style={[
               styles.dot.common,
-              level.locked ? styles.dot.lockedReview : styles.dot.puzzle,
+              isLocked ? styles.dot.lockedReview : styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
               smallDot && styles.dot.small,
               level.kind === 'assessment' && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
-              styles.status[level.status || 'not_tried'],
+              styles.status[level.status || LevelStatus.not_tried],
             ]}
           >
             <BubbleInterior
@@ -236,7 +240,7 @@ export const ProgressDot = React.createClass({
           showLevelName &&
             <span
               key="named_level"
-              style={[styles.levelName, level.locked && {color: color.charcoal}]}
+              style={[styles.levelName, isLocked && {color: color.charcoal}]}
             >
               {level.name}
             </span>

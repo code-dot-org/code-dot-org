@@ -1,5 +1,4 @@
 class VolunteerContact2015
-
   def self.normalize(data)
     result = {}
 
