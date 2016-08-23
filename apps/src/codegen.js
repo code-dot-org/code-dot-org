@@ -18,7 +18,7 @@ exports.ForStatementMode = {
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
-exports.evalWith = function (code, options) {
+exports.evalWith = function (code, options, legacy) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function (interpreter, scope) {
@@ -27,6 +27,10 @@ exports.evalWith = function (code, options) {
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
     myInterpreter.run();
+  } else if (!legacy) {
+    new Interpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+      marshalNativeToInterpreterObject(interpreter, options, 5, scope);
+    }).run();
   } else {
     // execute JS code "natively"
     var params = [];

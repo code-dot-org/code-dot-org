@@ -843,7 +843,7 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(studioApp, api, Studio.Globals);
+          handler.func(api, Studio.Globals);
         } catch (e) {
           // Do nothing
         }
@@ -2389,10 +2389,9 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
     if (exampleCode) {
       var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
-        StudioApp: studioApp,
         Studio: api,
         Globals: Studio.Globals
-      });
+      }, true);
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2517,7 +2516,6 @@ var registerEventHandler = function (handlers, name, func) {
 
 var registerHandlersForCode = function (handlers, blockName, code) {
   var func = codegen.functionFromCode(code, {
-    StudioApp: studioApp,
     Studio: api,
     Globals: Studio.Globals
   });
@@ -2618,10 +2616,9 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try {
     codegen.evalWith(code, {
-      StudioApp: studioApp,
       Studio: api,
       Globals: Studio.Globals
-    });
+    }, true);
   } catch (e) { }
 };
 

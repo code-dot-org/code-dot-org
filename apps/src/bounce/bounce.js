@@ -460,7 +460,7 @@ var delegate = function (scope, func, data) {
  */
 Bounce.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Bounce, studioApp, api);
+    fn.call(Bounce, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {
@@ -1077,7 +1077,6 @@ Bounce.execute = function () {
                                     'bounce_whenWallCollided');
   var whenWallCollidedFunc = codegen.functionFromCode(
                                      codeWallCollided, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeBallInGoal = Blockly.Generator.blockSpaceToCode(
@@ -1085,7 +1084,6 @@ Bounce.execute = function () {
                                     'bounce_whenBallInGoal');
   var whenBallInGoalFunc = codegen.functionFromCode(
                                      codeBallInGoal, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeBallMissesPaddle = Blockly.Generator.blockSpaceToCode(
@@ -1093,7 +1091,6 @@ Bounce.execute = function () {
                                     'bounce_whenBallMissesPaddle');
   var whenBallMissesPaddleFunc = codegen.functionFromCode(
                                      codeBallMissesPaddle, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codePaddleCollided = Blockly.Generator.blockSpaceToCode(
@@ -1101,7 +1098,6 @@ Bounce.execute = function () {
                                     'bounce_whenPaddleCollided');
   var whenPaddleCollidedFunc = codegen.functionFromCode(
                                      codePaddleCollided, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeLeft = Blockly.Generator.blockSpaceToCode(
@@ -1109,7 +1105,6 @@ Bounce.execute = function () {
                                     'bounce_whenLeft');
   var whenLeftFunc = codegen.functionFromCode(
                                      codeLeft, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeRight = Blockly.Generator.blockSpaceToCode(
@@ -1117,7 +1112,6 @@ Bounce.execute = function () {
                                     'bounce_whenRight');
   var whenRightFunc = codegen.functionFromCode(
                                      codeRight, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeUp = Blockly.Generator.blockSpaceToCode(
@@ -1125,7 +1119,6 @@ Bounce.execute = function () {
                                     'bounce_whenUp');
   var whenUpFunc = codegen.functionFromCode(
                                      codeUp, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeDown = Blockly.Generator.blockSpaceToCode(
@@ -1133,7 +1126,6 @@ Bounce.execute = function () {
                                     'bounce_whenDown');
   var whenDownFunc = codegen.functionFromCode(
                                      codeDown, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeGameStarts = Blockly.Generator.blockSpaceToCode(
@@ -1141,7 +1133,6 @@ Bounce.execute = function () {
                                     'when_run');
   var whenGameStartsFunc = codegen.functionFromCode(
                                      codeGameStarts, {
-                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');

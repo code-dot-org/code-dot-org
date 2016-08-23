@@ -55,7 +55,7 @@ CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
   result = codegen.evalWith(code, {
     Studio: api,
     Globals: Studio.Globals
-  });
+  }, true);
   return result;
 };
 
