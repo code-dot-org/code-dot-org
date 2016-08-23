@@ -4,7 +4,7 @@ import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {PrivateKeyDropdown, PublicModulusDropdown} from './cryptographyFields';
+import {PrivateKeyDropdown, PublicModulusDropdown, GoButton} from './cryptographyFields';
 import {computePublicKey} from './cryptographyMath';
 
 const Alice = React.createClass({
@@ -118,12 +118,10 @@ const Alice = React.createClass({
             Calculate Bob's secret number.
             <div>
               (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/>
-              <button
+              <GoButton
                 onClick={this.computeSecretNumber}
                 disabled={disabled}
-              >
-                Go
-              </button>
+              />
             </div>
             <div>
               Bob's secret number is <IntegerField value={secretNumber}/>!

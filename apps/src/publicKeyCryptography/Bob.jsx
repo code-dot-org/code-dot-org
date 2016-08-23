@@ -4,7 +4,7 @@ import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {PublicModulusDropdown, SecretNumberDropdown} from './cryptographyFields';
+import {PublicModulusDropdown, SecretNumberDropdown, GoButton} from './cryptographyFields';
 
 const Bob = React.createClass({
   propTypes: {
@@ -105,12 +105,10 @@ const Bob = React.createClass({
             Calculate your public number:
             <div>
               (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
-              <button
+              <GoButton
                 onClick={this.computePublicNumber}
                 disabled={disabled}
-              >
-                Go
-              </button>
+              />
             </div>
             <div>
               Your computed public number is <IntegerField value={publicNumber}/>
