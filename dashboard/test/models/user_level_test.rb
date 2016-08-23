@@ -133,4 +133,21 @@ class UserLevelTest < ActiveSupport::TestCase
     assert_equal [navigator], driver.navigator_user_levels
     assert_equal [driver], navigator.driver_user_levels
   end
+
+  test "authorized_teacher cant become locked" do
+    teacher = create :teacher
+    cohort = create :cohort
+    teacher.cohorts << cohort
+
+    stage = create :stage
+
+    stage.lockable = true
+    stage.save!
+
+    ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
+    ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
+
+    assert_equal true, ul_student.locked?(stage)
+    assert_equal false, ul_teacher.locked?(stage)
+  end
 end
