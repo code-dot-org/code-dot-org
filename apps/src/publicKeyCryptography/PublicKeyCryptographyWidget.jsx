@@ -88,7 +88,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         </EqualColumns>
         <ModuloClock
           ref={x => this.moduloClock = x}
-          modulus={this.state.publicModulus}
+          modulus={this.state.publicModulus || 1}
         />
       </div>);
   }
