@@ -753,27 +753,8 @@ Flappy.execute = function () {
     whenRunButton: 'when_run'
   };
 
-  const code = Object.keys(events).map(event => {
-    Flappy[event] = () => {
-      console.log(event);
-      Flappy.currentCallback(event);
-      Flappy.interpreter.run();
-    };
-    const generated = Blockly.Generator.blockSpaceToCode('JavaScript', events[event]);
-    return `function ${event} () {
-      ${generated}
-    }
-    `;
-  }).join('');
-
-  Flappy.currentCallback = null;
-  Flappy.interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
-    codegen.marshalNativeToInterpreterObject(interpreter, {Flappy: api}, 5, scope);
-    interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
-      Flappy.currentCallback = callback;
-    }));
-  });
-  Flappy.interpreter.run();
+  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+  Object.assign(Flappy, codegen.evalWithEvents({Flappy: api}, events, generator));
 
   studioApp.playAudio('start');
 
