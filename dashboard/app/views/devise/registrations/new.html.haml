@@ -87,10 +87,13 @@
             %h1{style: 'font-size: 14px; margin-top: -10px; margin-bottom: 10px;'}= t('terms_interstitial.privacy')
             = render partial: 'home/privacy'
           %br
-          #terms-block.itemblock
+          #terms_of_service_version-block.itemblock
+            .error_in_field{style: 'display: inline; padding-left: 0;'}
+            %br
             = f.label :terms_of_service_version do
-              = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, 1 # TODO: update to latest TOS
+              = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, 1 # TODO: update to get latest TOS instead of magic number
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+
         %br
         %button#student-signup-button.primary= t('signup_form.submit')
 
@@ -120,7 +123,8 @@
       returnToUrl: "#{return_to_url}",
       teacherDashboardUrl: "#{teacher_dashboard_url}",
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
-      passwordMismatchString: "#{t('signup_form.mismatch_password')}"
+      passwordMismatchString: "#{t('signup_form.mismatch_password')}",
+      acceptTermsString: "#{t('signup_form.accept_terms')}"
     });
   });
 

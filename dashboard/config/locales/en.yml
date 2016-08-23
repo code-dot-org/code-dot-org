@@ -126,6 +126,7 @@ en:
     user_type_teacher: "Teacher"
     user_type_student: "Student"
     field_is_required: "is required"
+    accept_terms: "You must agree to create an account"
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'
