@@ -4,6 +4,7 @@ var _ = require('lodash')
 var i18n = require('@cdo/netsim/locale');
 var NetSimGlobals = require('./NetSimGlobals');
 var NodeType = require('./NetSimConstants').NodeType;
+var areLobbyHintsEnabled = require('./netsimExperiments').areLobbyHintsEnabled;
 
 /** @type {function} */
 var getAssetUrl = NetSimGlobals.getAssetUrlFunction();
@@ -242,7 +243,11 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
     <%
       // Primary lobby list
       writeBeginTable("nomargin");
-      writeHeader(i18n.lobby());
+      if (areLobbyHintsEnabled()) {
+        writeHeader(i18n.lobbyForShard({shard: shardDisplayName}));
+      } else {
+        writeHeader(i18n.lobby());
+      }
       writeEndTable();
     %>
     <div id="netsim-scrolling-lobby">

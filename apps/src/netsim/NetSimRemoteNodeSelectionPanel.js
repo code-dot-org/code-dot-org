@@ -33,6 +33,7 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {Object} options
  * @param {DashboardUser} options.user
  * @param {string} options.shardID
+ * @param {string} options.shardDisplayName
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
@@ -64,6 +65,12 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @private
    */
   this.shardID_ = options.shardID;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.shardDisplayName_ = options.shardDisplayName;
 
   /**
    * @type {NetSimNode[]}
@@ -160,6 +167,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
+    shardDisplayName: this.shardDisplayName_,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
     remoteNode: this.remoteNode_,
