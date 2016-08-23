@@ -30,6 +30,14 @@ const AddKeyRow = React.createClass({
       msg => console.warn(msg));
   },
 
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleAdd();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
   render() {
     return (
       <tr style={dataStyles.row}>
@@ -37,6 +45,7 @@ const AddKeyRow = React.createClass({
           <input
             style={dataStyles.input}
             onChange={this.handleKeyChange}
+            onKeyUp={this.handleKeyUp}
             placeholder="enter text"
             value={this.state.key}
           />
@@ -45,6 +54,7 @@ const AddKeyRow = React.createClass({
           <input
             style={dataStyles.input}
             onChange={this.handleValueChange}
+            onKeyUp={this.handleKeyUp}
             placeholder="enter text"
             value={this.state.value}
           />

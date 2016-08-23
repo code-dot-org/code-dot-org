@@ -50,6 +50,14 @@ const EditTableRow = React.createClass({
     );
   },
 
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleSave();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
   render() {
     return (
       <tr style={dataStyles.row}>
@@ -62,6 +70,7 @@ const EditTableRow = React.createClass({
                     style={dataStyles.input}
                     value={displayValue(this.state.newRecord[columnName])}
                     onChange={event => this.handleChange(columnName, event)}
+                    onKeyUp={this.handleKeyUp}
                   /> :
                   JSON.stringify(this.props.record[columnName])
               }
