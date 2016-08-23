@@ -1,5 +1,6 @@
 \#*#
 *.pid
+*.pid.oldbin
 *~
 .DS_Store
 .dropbox
