@@ -344,5 +344,4 @@ class DynamoTable
 
     results.keys
   end
-
 end

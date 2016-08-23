@@ -98,5 +98,4 @@ class SingleSignOn
 
     Rack::Utils.build_query(payload)
   end
-
 end

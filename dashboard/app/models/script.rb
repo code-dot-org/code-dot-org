@@ -27,7 +27,7 @@ class Script < ActiveRecord::Base
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :stages, -> { order('absolute_position ASC') }, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -292,10 +292,10 @@ class Script < ActiveRecord::Base
     self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
-  def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    stage_position ||= 1
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+    relative_position ||= 1
     self.script_levels.to_a.find do |sl|
-      sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_i && sl.position == puzzle_position.to_i
     end
   end
 
@@ -411,6 +411,8 @@ class Script < ActiveRecord::Base
     script_stages = []
     script_levels_by_stage = {}
     levels_by_key = script.levels.index_by(&:key)
+    lockable_count = 0
+    non_lockable_count = 0
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
@@ -491,8 +493,14 @@ class Script < ActiveRecord::Base
         stage = script.stages.detect{|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
-            script: script
-          )
+            script: script,
+          ) do |s|
+            if stage_lockable == true
+              s.relative_position = (lockable_count += 1).to_s
+            else
+              s.relative_position = (non_lockable_count += 1).to_s
+            end
+          end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
@@ -504,7 +512,7 @@ class Script < ActiveRecord::Base
         script_level.save! if script_level.changed?
         (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
-          stage.assign_attributes(position: (stage_position += 1))
+          stage.assign_attributes(absolute_position: (stage_position += 1))
           stage.save! if stage.changed?
           script_stages << stage
         end

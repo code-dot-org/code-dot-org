@@ -1,0 +1,55 @@
+import {expect} from '../../util/configuredChai';
+import {testUtils} from '../../util/testUtils';
+import CollisionMaskWalls from '@cdo/apps/studio/collisionMaskWalls';
+
+
+describe("collisionMaskWalls", function () {
+
+  var walls;
+  beforeEach(function (done) {
+    const level = {gridAlignedMovement: false};
+    const skin = {
+      wallCollisionRectOffsetX: 0,
+      wallCollisionRectOffsetY: 0,
+      wallMaps: {
+        block: {
+          // This is a map with a 200x200 wall centered in the middle of the 400x400 map
+          srcUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAABmJLR0QA/wD/AP+gvaeTAAAFsElEQVR4nO3XsQ0CQRAEQQ59/ikvLu9BOwtSVQTjtebMzDwA4EvP7QEA/CcBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREACSa3sAd+ec7Qnws2ZmewJvPBAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAEgEBIBEQABIBASAREAASAQEgERAAkmt7AHczsz0B4CMeCACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAiYAAkAgIAImAAJAICACJgACQCAgAyQukmA0dlzDgswAAAABJRU5ErkJggg=='
+        }
+      }
+    };
+    const drawDebug = () => {};
+
+    walls = new CollisionMaskWalls(level, skin, drawDebug, drawDebug, 400, 400,
+        done);
+    walls.setWallMapRequested('block');
+  });
+
+  it("doesnt touch a 10x10 sprite in the top left", function () {
+    expect(walls.willRectTouchWall(5, 5, 10, 10)).to.be.false;
+  });
+
+  it("touches a 10x10 sprite in the middle of the map", function () {
+    expect(walls.willRectTouchWall(200, 200, 10, 10)).to.be.true;
+  });
+
+  it("touches with an overlap of 1 pixel", function () {
+    expect(walls.willRectTouchWall(96, 96, 10, 10)).to.be.true;
+  });
+
+  it("doesn't touch when the sprite is immediately above", function () {
+    expect(walls.willRectTouchWall(200, 95, 10, 10)).to.be.false;
+  });
+
+  it("doesn't touch when the sprite is immediately below", function () {
+    expect(walls.willRectTouchWall(200, 305, 10, 10)).to.be.false;
+  });
+
+  it("doesn't touch when the sprite is immediately to the left", function () {
+    expect(walls.willRectTouchWall(95, 200, 10, 10)).to.be.false;
+  });
+  it("doesn't touch when the sprite is immediately to the right", function () {
+    expect(walls.willRectTouchWall(200, 305, 10, 10)).to.be.false;
+  });
+
+});

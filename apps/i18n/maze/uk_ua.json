@@ -89,5 +89,6 @@
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
   "word": "Знайти слово",
   "yes": "Так",
-  "youSpelled": "Ви написали"
+  "youSpelled": "Ви написали",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

@@ -77,6 +77,5 @@ module Ops
       get :show, id: @segment.id
       assert_response :forbidden
     end
-
   end
 end
