@@ -3,6 +3,12 @@
     .modal-content.no-modal-icon{style: 'margin: 0 20px; padding: 0 15px;'}
       %h2.custom-h2= t('terms_interstitial.title')
 
+      .right{style: 'float: right'}
+        %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
+        %a#print-terms{href: "#"}
+          %i.fa.fa-print.right-margin-5
+          = t('terms_interstitial.print')
+      .clear
       .scroll-box
         = t('terms_interstitial.intro_desc').html_safe
         %br
@@ -23,15 +29,9 @@
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
           .form-group{style: 'margin-top: 10px;'}
             = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
-            &nbsp;
-            %button#print-button.secondary
-              %i.fa.fa-print.right-margin-5
-              = t('terms_interstitial.print')
       .right
         %a#later-link.dismiss-link{href: '#'}= t('terms_interstitial.later')
-      %div{style: 'clear: both;'}
-
-%iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}
+      .clear
 
 :javascript
   $(document).ready(function() {
@@ -60,14 +60,11 @@
   });
 
   $(document).ready(function () {
-    var printButton = $('#print-button');
-    if (printButton) {
-      printButton.click(function () {
+    var printLink = $('#print-terms');
+    if (printLink) {
+      printLink.click(function () {
         var item = $("#print-frame")[0];
-        if (item.contentWindow.document.execCommand('print', false, null)) {
-        } else {
-          item.contentWindow.print();
-        }
+        item.contentWindow.print();
       });
     }
   });
