@@ -2,6 +2,9 @@
 import React from 'react';
 import color from '../color';
 import {LINE_HEIGHT} from './style';
+import 'react-virtualized/styles.css';
+import 'react-select/dist/react-select.css';
+import 'react-virtualized-select/styles.css';
 
 const style = {
   root: {
