@@ -277,21 +277,9 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-dependent option
-    # Fetch localized strings
-    if l.custom?
-      loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.en? || loc_val.nil?
-        level_options['instructions'] = loc_val
-      end
-    else
-      %w(instructions).each do |label|
-        val = [l.game.app, l.game.name].map { |name|
-          data_t("level.#{label}", "#{name}_#{l.level_num}")
-        }.compact.first
-        level_options[label] ||= val unless val.nil?
-      end
-    end
+    # Locale-depdendant option
+    loc_instructions = l.localized_instructions
+    level_options['instructions'] = loc_instructions unless loc_instructions.nil?
 
     # Script-dependent option
     script = @script
@@ -352,6 +340,13 @@ module LevelsHelper
     if @level.game.uses_pusher?
       app_options['usePusher'] = CDO.use_pusher
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
+    end
+
+    # TTS
+    # TTS is currently only enabled for k1
+    if script && script.is_k1?
+      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
+      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
     end
 
     if @level.is_a? NetSim
@@ -515,7 +510,7 @@ module LevelsHelper
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
-  def instruction_gif_asset_path filename
+  def instruction_gif_asset_path(filename)
     File.join('/', instruction_gif_relative_path, filename)
   end
 

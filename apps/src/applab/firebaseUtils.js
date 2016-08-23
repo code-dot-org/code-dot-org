@@ -49,13 +49,15 @@ function handleLoadConfig(configData) {
  */
 function validateConfig(configData) {
   return (
+    configData &&
     configData.maxTableRows > 0 &&
     configData.maxRecordSize > 0 &&
     configData.maxPropertySize > 0 &&
+    configData.limits &&
     Object.keys(configData.limits).length > 0);
 }
 
-function getConfigRef() {
+export function getConfigRef() {
   return getFirebase().child('v3/config/channels');
 }
 

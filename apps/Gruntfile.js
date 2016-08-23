@@ -377,6 +377,7 @@ module.exports = function (grunt) {
         'levelbuilder_markdown': './src/code-studio/levelbuilder_markdown.js',
         'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
         'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
+        'levelbuilder_applab': './src/code-studio/levelbuilder_applab.js',
         'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
         'districtDropdown': './src/code-studio/districtDropdown.js',
         'signup': './src/code-studio/signup.js',
@@ -445,7 +446,7 @@ module.exports = function (grunt) {
     {
       uniqueName: 'publicKeyCryptography',
       entries: {
-        publicKeyCryptography: './src/publicKeyCryptography/publicKeyCryptography.js'
+        publicKeyCryptography: './src/publicKeyCryptography/main.js'
       },
       provides: ['react', 'react-dom', 'radium']
     }

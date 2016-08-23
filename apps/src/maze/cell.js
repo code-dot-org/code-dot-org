@@ -31,7 +31,10 @@ class Cell {
    * @return {Cell}
    */
   clone() {
-    const newCell = new Cell(this.tileType_, this.originalValue_, this.range_);
+    // serialization/deserialization captures the configuration
+    const newCell = this.constructor.deserialize(this.serialize());
+
+    // currentValue assignment captures the state
     newCell.setCurrentValue(this.currentValue_);
     return newCell;
   }

@@ -1,5 +1,4 @@
 class HocDownloadController < ApplicationController
-
   def index
     @product_name = params[:product]
 

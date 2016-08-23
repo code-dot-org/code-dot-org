@@ -30,7 +30,6 @@ class Activity < ActiveRecord::Base
   belongs_to :user
   belongs_to :level_source
   has_one :activity_hint
-  has_many :experiment_activities
 
   def self.best?(result)
     return false if result.nil?
@@ -109,5 +108,4 @@ class Activity < ActiveRecord::Base
   def self.progress_queue
     AsyncProgressHandler.progress_queue
   end
-
 end

@@ -3,7 +3,6 @@ require 'dynamic_config/datastore_cache'
 require 'dynamic_config/adapters/memory_adapter.rb'
 
 class DatastoreCacheTest < ActiveSupport::TestCase
-
   class FakeListener
     attr_reader :changed
 

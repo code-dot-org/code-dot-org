@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812010138) do
+ActiveRecord::Schema.define(version: 20160815010139) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -746,15 +746,17 @@ ActiveRecord::Schema.define(version: 20160812010138) do
   add_index "user_geos", ["user_id"], name: "index_user_geos_on_user_id", using: :btree
 
   create_table "user_levels", force: :cascade do |t|
-    t.integer  "user_id",         limit: 4,             null: false
-    t.integer  "level_id",        limit: 4,             null: false
-    t.integer  "attempts",        limit: 4, default: 0, null: false
+    t.integer  "user_id",          limit: 4,             null: false
+    t.integer  "level_id",         limit: 4,             null: false
+    t.integer  "attempts",         limit: 4, default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "best_result",     limit: 4
-    t.integer  "script_id",       limit: 4
-    t.integer  "level_source_id", limit: 4
+    t.integer  "best_result",      limit: 4
+    t.integer  "script_id",        limit: 4
+    t.integer  "level_source_id",  limit: 4
     t.boolean  "submitted"
+    t.boolean  "readonly_answers"
+    t.datetime "unlocked_at"
   end
 
   add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree

@@ -85,10 +85,20 @@ CS Expansion
 [Administrator and Counselor PD Overview - Slides](https://docs.google.com/presentation/d/1rgA370lNX2L88S5sew5ZWThbBwXOlzSUVjb2Dcx-I84/edit?usp=sharing)
 
 ## Virtual Trainings
+June 2016:
+
+- June Office Hours - [Video](http://videos.code.org/plp/june-2016-monthly-call.mp4)
+
 July 7, 2016:
  
-- [White House Fundraising Event Webinar](https://bluejeans.com/s/9Y8e/)<br/>
+- [White House Fundraising Event Webinar](http://videos.code.org/plp/september-event-guidelines.mp4)<br/>
 - [Slide Deck](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
+
+August 18, 2016:
+
+- August Office Hours - [Video](http://videos.code.org/plp/august-2016-office-hours.mp4)
+- [August Office Hours - Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
+
 
 
 

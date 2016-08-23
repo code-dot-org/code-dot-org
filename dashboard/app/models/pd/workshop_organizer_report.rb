@@ -1,5 +1,4 @@
 class Pd::WorkshopOrganizerReport
-
   # Construct a report row for each workshop for each organizer
   def self.generate_organizer_report(organizer)
     closed_workshops = Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED)
