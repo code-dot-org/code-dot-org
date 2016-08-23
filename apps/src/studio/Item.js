@@ -437,7 +437,7 @@ export default class Item extends Collidable {
    * @override
    */
   startCollision(key) {
-    var newCollisionStarted = super.call(key);
+    var newCollisionStarted = super.startCollision(key);
     if (newCollisionStarted) {
       if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
         Studio.trackedBehavior.touchedHazardCount++;
