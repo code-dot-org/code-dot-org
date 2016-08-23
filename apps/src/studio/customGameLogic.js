@@ -1,6 +1,6 @@
+import api from './api';
+import codegen from '../codegen';
 import { Direction, Position } from './constants';
-var codegen = require('../codegen');
-var api = require('./api');
 
 /**
  * Interface for a set of custom game logic for playlab

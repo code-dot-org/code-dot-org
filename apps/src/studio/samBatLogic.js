@@ -3,9 +3,9 @@ import {
   KeyCodes,
   Position
 } from './constants';
-var CustomGameLogic = require('./customGameLogic');
-var codegen = require('../codegen');
-var api = require('./api');
+import CustomGameLogic from './customGameLogic';
+import codegen from '../codegen';
+import api from './api';
 require('../utils'); // Provides Function.prototype.inherits
 
 /**

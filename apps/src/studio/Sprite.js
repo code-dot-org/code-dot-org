@@ -3,10 +3,11 @@ import Collidable from './collidable';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
-var studioMsg = require('./locale');
-var Direction = constants.Direction;
-var Emotions = constants.Emotions;
-var NextTurn = constants.NextTurn;
+import studioMsg from './locale';
+
+const Direction = constants.Direction;
+const Emotions = constants.Emotions;
+const NextTurn = constants.NextTurn;
 
 /**
  * A Sprite is a type of Collidable.

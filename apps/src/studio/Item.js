@@ -5,9 +5,10 @@ import { ShakeActor } from './spriteActions';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
-var studioMsg = require('./locale');
-var Direction = constants.Direction;
-var NextTurn = constants.NextTurn;
+import studioMsg from './locale';
+
+const Direction = constants.Direction;
+const NextTurn = constants.NextTurn;
 
 /**
  * An Item is a type of Collidable.
@@ -436,7 +437,7 @@ export default class Item extends Collidable {
    * @override
    */
   startCollision(key) {
-    var newCollisionStarted = super.startCollision.call(this, key);
+    var newCollisionStarted = super.call(key);
     if (newCollisionStarted) {
       if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
         Studio.trackedBehavior.touchedHazardCount++;

@@ -2,8 +2,8 @@
  * internally and exposes simple methods for rendering at the desired position. */
 'use strict';
 
-var utils = require('../utils');
-var SVG_NS = require('../constants').SVG_NS;
+import { valueOr } from '../utils';
+import { SVG_NS } from '../constants';
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -30,10 +30,10 @@ export default class StudioAnimation {
     this.spriteSheet_ = options.spriteSheet;
 
     /** @private {number} render scale */
-    this.renderScale_ = utils.valueOr(options.renderScale, 1);
+    this.renderScale_ = valueOr(options.renderScale, 1);
 
     /** @private {number} opacity on a scale of 0 (transparent) to 1 (opaque) */
-    this.opacity_ = utils.valueOr(options.opacity, 1);
+    this.opacity_ = valueOr(options.opacity, 1);
 
     /**
      * Which animation type (a group of columns in the sprite sheet) is currently
@@ -56,10 +56,10 @@ export default class StudioAnimation {
     this.currentAnimationIndex_ = 0;
 
     /** @private {boolean} whether the animation should loop automatically. */
-    this.loop_ = utils.valueOr(options.loop, false);
+    this.loop_ = valueOr(options.loop, false);
 
     /** @private {boolean} whether each animation should be uniquely skewed */
-    this.skewAnimations_ = utils.valueOr(options.skewAnimations, false);
+    this.skewAnimations_ = valueOr(options.skewAnimations, false);
 
     /** @private {SVGImageElement} */
     this.element_ = null;
