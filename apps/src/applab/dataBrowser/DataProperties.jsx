@@ -14,6 +14,10 @@ import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
 const styles = {
+  container: {
+    height: '100%',
+    overflowY: 'scroll',
+  },
   tableName: {
     fontSize: 18,
     marginBottom: 10,
@@ -48,6 +52,9 @@ const DataProperties = React.createClass({
 
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
+    const containerStyle = [styles.container, {
+      display: visible ? 'block' : 'none'
+    }];
     const keyValueDataStyle = {
       display: this.state.showDebugView ? 'none' : ''
     };
@@ -55,7 +62,7 @@ const DataProperties = React.createClass({
       display: this.state.showDebugView ? '' : 'none',
     }];
     return (
-      <div id="dataProperties" style={{display: visible ? 'block' : 'none'}}>
+      <div id="dataProperties" style={containerStyle}>
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
