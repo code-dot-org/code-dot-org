@@ -64,30 +64,26 @@ WebLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.reset = this.reset.bind(this);
 };
 
-window.getStartSources = function () {
-  return window.__mostRecentWebLabInstance.startSources;
-};
-
-window.projectChanged = function () {
-  dashboard.project.projectChanged();
-};
-
-var getBrambleCode = null;
-window.installGetBrambleCode = function (fnGetBrambleCode) {
-  getBrambleCode = fnGetBrambleCode;
-};
-
 /**
  * Initialize this WebLab instance.  Called on page load.
  */
+
+window.getWebLab = function () {
+  return window.__mostRecentWebLabInstance;
+};
+
 WebLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("WebLab requires a StudioApp");
   }
 
-  // BUGBUG use or remove skin
   this.skin = config.skin;
   this.level = config.level;
+
+  // BUGBUG
+  config.level.isProjectLevel = true;
+
+  this.brambleHost = null;
 
   if (this.level.lastAttempt) {
     this.startSources = this.level.lastAttempt;
@@ -112,7 +108,7 @@ WebLab.prototype.init = function (config) {
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
-  // BUGBUG what to do with this?
+  /*
   config.shareWarningInfo = {
     hasDataAPIs: function () {
       return this.hasDataStoreAPIs(this.studioApp_.getCode());
@@ -121,6 +117,7 @@ WebLab.prototype.init = function (config) {
       window.setTimeout(this.studioApp_.runButtonClick, 0);
     }.bind(this)
   };
+  */
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -148,7 +145,7 @@ WebLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
-          onMount={onMount}
+        onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));
@@ -158,8 +155,8 @@ WebLab.prototype.init = function (config) {
 
 WebLab.prototype.getCodeAsync = function () {
   return new Promise (function (resolve,reject) {
-    if (getBrambleCode !== null) {
-      getBrambleCode(function (code) {
+    if (this.brambleHost !== null) {
+      this.brambleHost.getBrambleCode(function (code) {
         resolve(code);
       });
     } else {
@@ -168,7 +165,21 @@ WebLab.prototype.getCodeAsync = function () {
       // fix by delaying events.appInitialized until after Bramble is loaded
       resolve("");
     }
-  });
+  }.bind(this));
+};
+
+WebLab.prototype.getStartSources = function () {
+  return this.startSources;
+};
+
+WebLab.prototype.onProjectChanged = function () {
+  // dashboard.project.projectChanged();
+  // $(window).trigger('appModeChanged');
+  dashboard.project.save();
+};
+
+WebLab.prototype.setBrambleHost = function (obj) {
+  this.brambleHost = obj;
 };
 
 /**

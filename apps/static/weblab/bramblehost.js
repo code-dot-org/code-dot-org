@@ -13,59 +13,55 @@
     var forceFiles = window.location.search.indexOf("forceFiles=1") > -1;
 
     var theBramble = null;
+    var webLab = null;
 
     // Default filesystem content
     var projectRoot = "/codedotorg/weblab";
 
-    if (parent.getStartSources) {
-        var startSources = parent.getStartSources();
+    if (parent.getWebLab) {
+        webLab = parent.getWebLab();
+    } else {
+        console.error("ERROR: getWebLab() method not found on parent");
+    }
 
-        /*
-        if (startSources && startSources.files) {
-            startSources.files.forEach(function (file) {
-                console.log("file name: " + file.name);
-                console.log("data: " + file.data);
+    var startSources = webLab.getStartSources();
+
+    var brambleHost = {
+        getBrambleCode: function (callback) {
+            var fs = theBramble.getFileSystem();
+            var sh = new fs.Shell();
+            var Path = theBramble.Filer.Path;
+
+            sh.ls(projectRoot, function (err, entries) {
+                if (err) {
+                    throw err;
+                }
+                var fileList = [];
+
+                function getFileData(i, callback) {
+                    if (i < entries.length) {
+                        var entry = entries[i];
+                        var path = Path.join(projectRoot, entry.path);
+                        fs.readFile(path, 'utf8', function (err, fileData) {
+                            if (err) {
+                                throw err;
+                            }
+                            var file = { name: entry.path, data: fileData};
+                            fileList.push(file);
+                            getFileData(i+1, callback);
+                        });
+                    } else {
+                        var code = { files: fileList };
+                        callback(code);
+                    }
+                }
+
+                getFileData(0,callback);
             });
         }
-        */
-    }
+    };
 
-    function getBrambleCode(callback) {
-        var fs = theBramble.getFileSystem();
-        var sh = new fs.Shell();
-        var Path = theBramble.Filer.Path;
-
-        sh.ls(projectRoot, function (err, entries) {
-            if (err) {
-                throw err;
-            }
-            var fileList = [];
-
-            function getFileData(i, callback) {
-                if (i < entries.length) {
-                    var entry = entries[i];
-                    var path = Path.join(projectRoot, entry.path);
-                    fs.readFile(path, 'utf8', function (err, fileData) {
-                        if (err) {
-                            throw err;
-                        }
-                        var file = { name: entry.path, data: fileData};
-                        fileList.push(file);
-                        getFileData(i+1, callback);
-                    });
-                } else {
-                    var code = { files: fileList };
-                    callback(code);
-                }
-            }
-
-            getFileData(0,callback);
-        });
-    }
-
-    if (parent.installGetBrambleCode){
-        parent.installGetBrambleCode(getBrambleCode);
-    }
+    webLab.setBrambleHost(brambleHost);
 
     function installDefaultFiles(Bramble, callback) {
         var fs = Bramble.getFileSystem();
@@ -137,22 +133,22 @@
 
             parentDocument.getElementById("undo-link").onclick = function () {
                 window.bramble.undo();
-                parent.projectChanged();
+                webLab.onProjectChanged();
             };
 
             parentDocument.getElementById("redo-link").onclick = function () {
                 window.bramble.redo();
-                parent.projectChanged();
+                webLab.onProjectChanged();
             };
 
             parentDocument.getElementById("preview-link").onclick = function () {
                 window.bramble.hideTutorial();
-                parent.projectChanged();
+                webLab.onProjectChanged();
             };
 
             parentDocument.getElementById("tutorial-link").onclick = function () {
                 window.bramble.showTutorial();
-                parent.projectChanged();
+                webLab.onProjectChanged();
             };
 
             parentDocument.getElementById("inspector-link").onclick = function () {
