@@ -35,7 +35,8 @@ export const headerCell = {
 
 export const link = {
   color: color.purple,
-  fontFamily: "'Gotham 7r', sans-serif"
+  cursor: 'pointer',
+  fontFamily: "'Gotham 7r', sans-serif",
 };
 
 export const button = {

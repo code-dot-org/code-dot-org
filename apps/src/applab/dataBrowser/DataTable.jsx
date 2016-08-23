@@ -32,6 +32,7 @@ const styles = {
     borderRadius: 2,
     backgroundColor: 'white',
     color: color.teal,
+    cursor: 'pointer',
     display: 'inline-flex',
     height: 18,
     justifyContent: 'center',
@@ -221,7 +222,6 @@ const DataTable = React.createClass({
           <span style={dataStyles.backLink}>
             <a
               id="tableBackToOverview"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
@@ -231,7 +231,6 @@ const DataTable = React.createClass({
           <span style={dataStyles.debugLink}>
             <a
               id="tableDebugLink"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
