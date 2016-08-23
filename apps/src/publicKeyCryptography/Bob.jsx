@@ -9,7 +9,8 @@ import {PublicModulusDropdown, SecretNumberDropdown} from './cryptographyFields'
 const Bob = React.createClass({
   propTypes: {
     setPublicModulus: React.PropTypes.func.isRequired,
-    setPublicNumber: React.PropTypes.func.isRequired
+    setPublicNumber: React.PropTypes.func.isRequired,
+    runModuloClock: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -38,17 +39,25 @@ const Bob = React.createClass({
   },
 
   setSecretNumber(secretNumber) {
-    const {publicKey, publicModulus} = this.state;
     this.setState({secretNumber});
     this.clearPublicNumber();
   },
 
   computePublicNumber() {
+    const {runModuloClock} = this.props;
     const {publicKey, secretNumber, publicModulus} = this.state;
-    const publicNumber = [publicKey, secretNumber, publicModulus].every(Number.isInteger) ?
-        ((publicKey * secretNumber) % publicModulus) : null;
-    this.setState({publicNumber});
-    this.props.setPublicNumber(publicNumber);
+    if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
+      const dividend = publicKey * secretNumber;
+      const publicNumber = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({publicNumber: currentDividend % publicModulus});
+      }, () => {
+        this.setState({publicNumber});
+        this.props.setPublicNumber(publicNumber);
+      });
+    } else {
+      this.clearPublicNumber();
+    }
   },
 
   clearPublicNumber() {

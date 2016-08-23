@@ -43,15 +43,20 @@ const ModuloClock = React.createClass({
       currentDividend: 0,
       targetDividend: 0,
       startTime: null,
-      interval: null
+      interval: null,
+      onStep: null,
+      onComplete: null
     };
   },
 
   /**
    * @param {number} dividend - The left-hand-side of the modulus operation
    * @param {number} speed - A value from 1 to 10 where 10 is the fastest option
+   * @param {function} onStep - callback called on each frame of animation,
+   *        which lets us sync other work to it.
+   * @param {function} onComplete - callback called at end of animation
    */
-  animateTo(dividend, speed, onComplete) {
+  animateTo(dividend, speed, onStep, onComplete) {
     const MAXIMUM_TIME_PER_SEGMENT = 500 / speed;
     const MAXIMUM_TOTAL_TIME = 8000 / speed + 2000;
     this.setState({
@@ -60,24 +65,26 @@ const ModuloClock = React.createClass({
       startTime: Date.now(),
       duration: Math.min(MAXIMUM_TOTAL_TIME, dividend * MAXIMUM_TIME_PER_SEGMENT),
       interval: setInterval(this.tick, 33),
-      onComplete
+      onStep: onStep || function () {},
+      onComplete: onComplete || function () {}
     });
   },
 
   tick() {
-    const {startTime, targetDividend, duration, interval, onComplete} = this.state;
+    const {startTime, targetDividend, duration, interval, onStep, onComplete} = this.state;
     const elapsedTime = Date.now() - startTime;
     if (elapsedTime < duration) {
-      this.setState({
-        currentDividend: Math.floor(easeOutCircular(elapsedTime, 0, targetDividend, duration))
-      });
+      const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, targetDividend, duration));
+      onStep(currentDividend);
+      this.setState({currentDividend});
     } else {
       clearInterval(interval);
-      onComplete();
+      onComplete(targetDividend);
       this.setState({
         currentDividend: targetDividend,
         startTime: null,
         interval: null,
+        onStep: null,
         onComplete: null
       });
     }
@@ -85,8 +92,7 @@ const ModuloClock = React.createClass({
 
   renderSegments() {
     const {modulus} = this.props;
-    const {currentDividend} = this.state;
-    const dividend = currentDividend;
+    const {currentDividend: dividend} = this.state;
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
     const segmentGapRadians = segmentGapInDegrees * 2 * Math.PI / 360;
     const result = dividend % modulus;

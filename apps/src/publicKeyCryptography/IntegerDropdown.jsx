@@ -1,7 +1,6 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
 import React from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
-import color from '../color';
 import {LINE_HEIGHT} from './style';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
