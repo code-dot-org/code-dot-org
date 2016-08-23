@@ -78,9 +78,7 @@
 
                 // Stick things in the project root
                 function writeProjectFile(path, data, callback) {
-                    console.log("writeProjectFile: " + path);
                     path = Path.join(projectRoot, path);
-
                     fs.writeFile(path, data, function (err) {
                         if (err) {
                             throw err;
@@ -123,7 +121,6 @@
 
         // Event listeners
         Bramble.on("ready", function (bramble) {
-            console.log("Bramble ready");
             // For debugging, attach to window.
             window.bramble = bramble;
 
@@ -152,10 +149,8 @@
             };
 
             parentDocument.getElementById("inspector-link").onclick = function () {
-                console.log("inspectorEnabled: " + inspectorEnabled);
                 inspectorEnabled = !inspectorEnabled;
                 if (inspectorEnabled) {
-                    console.log("enabling");
                     window.bramble.enableInspector();
                 } else {
                     window.bramble.disableInspector();
@@ -169,7 +164,7 @@
         });
 
         Bramble.on("readyStateChange", function (previous, current) {
-            console.log("Bramble readyStateChange", previous, current);
+
         });
 
         // Setup the filesystem while Bramble is loading
