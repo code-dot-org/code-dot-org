@@ -52,7 +52,7 @@ const EditTableRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.editRow}>
+      <tr style={dataStyles.row}>
         {
           this.props.columnNames.map(columnName => (
             <td key={columnName} style={dataStyles.cell}>

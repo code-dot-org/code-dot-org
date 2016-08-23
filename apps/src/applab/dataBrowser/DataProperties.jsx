@@ -92,7 +92,7 @@ const DataProperties = React.createClass({
             <tr>
               <th style={dataStyles.headerCell}>Key</th>
               <th style={dataStyles.headerCell}>Value</th>
-              <th style={dataStyles.headerCell}></th>
+              <th style={dataStyles.headerCell}>Actions</th>
             </tr>
 
             <AddKeyRow/>

@@ -8,13 +8,8 @@ const rowHeight = 45;
 const cellPadding = 10;
 const buttonCellWidth = 142;
 
-export const editRow = {
-  height: rowHeight
-};
-
-export const addRow = {
+export const row = {
   height: rowHeight,
-  backgroundColor: color.lighter_purple
 };
 
 export const cell = {
@@ -24,7 +19,8 @@ export const cell = {
 };
 
 export const buttonCell = [cell, {
-  width: buttonCellWidth
+  width: buttonCellWidth,
+  backgroundColor: color.lightest_teal,
 }];
 
 export const headerCell = {
