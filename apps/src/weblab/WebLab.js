@@ -142,6 +142,12 @@ WebLab.prototype.init = function (config) {
 //    webEditorWindow.postMessage(this.initialSource, "*");
   }.bind(this);
 
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config, {
+    channelId: config.channel,
+    isProjectLevel: !!config.level.isProjectLevel,
+  });
+
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
