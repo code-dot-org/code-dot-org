@@ -50,8 +50,8 @@ export default class Bee extends Subtype {
   /**
    * @override
    */
-  createGridItemDrawer() {
-    return new BeeItemDrawer(this.maze_.map, this.skin_, this);
+  createDrawer() {
+    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, this);
   }
 
   /**
@@ -522,8 +522,8 @@ export default class Bee extends Subtype {
 
     // Draw checkerboard
     if ((row + col) % 2 === 0) {
-      const isPath = !this.isWallOrOutOfBounds(col, row);
-      this.drawer.addCheckerboardTile(col, row, isPath);
+      const isPath = !this.isWallOrOutOfBounds_(col, row);
+      this.drawer.addCheckerboardTile(row, col, isPath);
     }
   }
 
