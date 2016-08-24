@@ -74,24 +74,24 @@
           .error_in_field
 
         #teacher-terms{style: 'display: none'}
-          .right{style: 'float: right'}
-            %iframe#print-frame{src: '/terms-and-privacy', style: 'display:none;'}
+          .right
+            %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
             %a#print-terms{href: "#"}
               %i.fa.fa-print.right-margin-5
               = t('terms_interstitial.print')
           .clear
-          #terms-box.scroll-box{style: 'overflow-y: scroll; height: 100px; border: 1px solid #bbb; padding: 20px; margin-top: 5px; resize: vertical; overflow: auto;'}
-            %h1{style: 'font-size: 14px; margin-top: -10px; margin-bottom: 10px;'}= t('terms_interstitial.tos')
+          .scroll-box
+            %h1.custom-h1= t('terms_interstitial.tos')
             = render partial: 'home/tos'
             %hr
-            %h1{style: 'font-size: 14px; margin-top: -10px; margin-bottom: 10px;'}= t('terms_interstitial.privacy')
+            %h1.custom-h1= t('terms_interstitial.privacy')
             = render partial: 'home/privacy'
           %br
           #terms_of_service_version-block.itemblock
-            .error_in_field{style: 'display: inline; padding-left: 0;'}
+            .error_in_field.checkbox-error
             %br
             = f.label :terms_of_service_version do
-              = f.check_box :terms_of_service_version, {class: 'terms-checkbox', :checked => true}, 1 # TODO: update to get latest TOS instead of magic number
+              = f.check_box :terms_of_service_version, {class: 'terms-checkbox', :checked => true}, User::TERMS_OF_SERVICE_VERSIONS.last
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
 
         %br
