@@ -1,7 +1,7 @@
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
-import { castValue, displayValue } from './dataUtils';
+import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const EditTableRow = React.createClass({
@@ -68,11 +68,11 @@ const EditTableRow = React.createClass({
                 (this.state.isEditing && columnName !== 'id') ?
                   <input
                     style={dataStyles.input}
-                    value={displayValue(this.state.newRecord[columnName])}
+                    value={editableValue(this.state.newRecord[columnName])}
                     onChange={event => this.handleChange(columnName, event)}
                     onKeyUp={this.handleKeyUp}
                   /> :
-                  JSON.stringify(this.props.record[columnName])
+                  displayableValue(this.props.record[columnName])
               }
             </td>
           ))
