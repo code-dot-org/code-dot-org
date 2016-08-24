@@ -364,9 +364,8 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
  *          to the shard right now.
  */
 NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function () {
-  const otherUserCount = this.nodesOnShard_.filter(node =>
-    node.getNodeType() === NodeType.CLIENT && !this.isMyNode(node)).length;
-  return otherUserCount === 0;
+  return !this.nodesOnShard_.some(node =>
+      !this.isMyNode(node) && node.getNodeType() === NodeType.CLIENT);
 };
 
 /**
