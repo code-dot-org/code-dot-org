@@ -21,7 +21,6 @@
     .span8.signupblock
 
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform'}) do |f|
-
         #user_type-block.itemblock
           .labelblock= t('signup_form.user_type_label')
           %select#user_user_type.fieldblock{name: "user[user_type]", type: "select"}
@@ -74,13 +73,35 @@
           = f.select :gender, gender_options, {disabled: '', selected: ''}, {class: 'fieldblock'}
           .error_in_field
 
-        %br/
-        %button#signin-button.primary= t('signup_form.submit')
-        %br/
-        %br/
-        %br/
-        #student-terms!= t('signup_form.student_terms')
-        #teacher-terms{style: "display: none"}!= t('signup_form.teacher_terms')
+        #teacher-terms{style: 'display: none'}
+          .right
+            %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
+            %a#print-terms{href: "#"}
+              %i.fa.fa-print.right-margin-5
+              = t('terms_interstitial.print')
+          .clear
+          .scroll-box
+            %h1.custom-h1= t('terms_interstitial.tos')
+            = render partial: 'home/tos'
+            %hr
+            %h1.custom-h1= t('terms_interstitial.privacy')
+            = render partial: 'home/privacy'
+          %br
+          #terms_of_service_version-block.itemblock
+            .error_in_field.checkbox-error
+            %br
+            = f.label :terms_of_service_version do
+              = f.check_box :terms_of_service_version, {class: 'terms-checkbox', :checked => true}, User::TERMS_OF_SERVICE_VERSIONS.last
+              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+
+        %br
+        %button#signup-button.primary= t('signup_form.submit')
+
+        #student-terms
+          %br/
+          %br/
+          %br/
+          != t('signup_form.student_terms')
 
     .span4
       .devise_links
@@ -96,13 +117,23 @@
 :javascript
 
   $(document).ready(function() {
-
     // Send through some values that the JavaScript will need.
     window.signupManager = new SignupManager({
       isTeacher: "#{resource.teacher?}",
       returnToUrl: "#{return_to_url}",
       teacherDashboardUrl: "#{teacher_dashboard_url}",
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
-      passwordMismatchString: "#{t('signup_form.mismatch_password')}"
+      passwordMismatchString: "#{t('signup_form.mismatch_password')}",
+      acceptTermsString: "#{t('signup_form.accept_terms')}"
     });
+  });
+
+  $(document).ready(function () {
+    var printLink = $('#print-terms');
+    if (printLink) {
+      printLink.click(function () {
+        var item = $("#print-frame")[0];
+        item.contentWindow.print();
+      });
+    }
   });
