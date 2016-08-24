@@ -14,9 +14,9 @@ export default class DirtDrawer extends Drawer {
     this.assetUnclippedWidth = SQUARE_SIZE * DIRT_COUNT;
   }
 
-  getAsset(row, col, prefix='') {
+  getAsset(prefix, row, col) {
     let val = this.map_.getValue(row, col) || 0;
-    return (val === 0) ? undefined : super.getAsset(row, col, prefix);
+    return (val === 0) ? undefined : super.getAsset(prefix, row, col);
   }
 
   /**
@@ -52,7 +52,7 @@ export default class DirtDrawer extends Drawer {
    */
   getOrCreateImage_(prefix, row, col) {
     let img = super.getOrCreateImage_(prefix, row, col);
-    img && img.setAttribute('width', this.assetUnclippedWidth);
+    img.setAttribute('width', this.assetUnclippedWidth);
     return img;
   }
 
