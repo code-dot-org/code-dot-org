@@ -21,7 +21,7 @@ export default class Drawer {
   /**
   * Generalized function for generating ids for cells in a table
   */
-  static cellId(row, col, prefix='') {
+  static cellId(prefix, row, col) {
     return prefix + '_' + row + '_' + col;
   }
 
@@ -33,7 +33,7 @@ export default class Drawer {
    * @param {number} col
    * @return {string} asset url
    */
-  getAsset(row, col, prefix='') {
+  getAsset(prefix, row, col) {
     return this.asset_;
   }
 
@@ -51,19 +51,19 @@ export default class Drawer {
    * @param {boolean} running
    */
   updateItemImage(row, col, running) {
-    return this.drawImage_(row, col);
+    return this.drawImage_('', row, col);
   }
 
   /**
    * Creates/Update the image at the given row,col with the given prefix
+   * @param {string} prefix
    * @param {number} row
    * @param {number} col
-   * @param {string} prefix
    * @return {Element} img
    */
-  drawImage_(row, col, prefix='') {
-    let img = document.getElementById(Drawer.cellId(row, col, prefix));
-    let href = this.getAsset(row, col, prefix);
+  drawImage_(prefix, row, col) {
+    let img = document.getElementById(Drawer.cellId(prefix, row, col));
+    let href = this.getAsset(prefix, row, col);
 
     // if we have not already created this image and don't want one,
     // return
@@ -74,7 +74,7 @@ export default class Drawer {
     // otherwise create the image if we don't already have one, update
     // the href to whatever we want it to be, and hide it if we don't
     // have one
-    img = this.getOrCreateImage_(row, col, prefix);
+    img = this.getOrCreateImage_(prefix, row, col);
     img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href || '');
     img.setAttribute('visibility', href ? 'visible' : 'hidden');
 
@@ -90,15 +90,15 @@ export default class Drawer {
    * @param {boolean} createClipPath
    * @return {Element} img
    */
-  getOrCreateImage_(row, col, prefix='', createClipPath=true) {
-    let href = this.getAsset(row, col, prefix);
+  getOrCreateImage_(prefix, row, col, createClipPath=true) {
+    let href = this.getAsset(prefix, row, col);
 
     // Don't create an empty image
     if (!href) {
       return;
     }
 
-    let imgId = Drawer.cellId(row, col, prefix);
+    let imgId = Drawer.cellId(prefix, row, col);
 
     // Don't create an image if one with this identifier already exists
     if (document.getElementById(imgId)) {
@@ -111,7 +111,7 @@ export default class Drawer {
     let clipId;
     // Create clip path.
     if (createClipPath) {
-      clipId = Drawer.cellId(row, col, prefix + 'Clip');
+      clipId = Drawer.cellId(prefix + 'Clip', row, col);
       let clip = document.createElementNS(SVG_NS, 'clipPath');
       clip.setAttribute('id', clipId);
       let rect = document.createElementNS(SVG_NS, 'rect');

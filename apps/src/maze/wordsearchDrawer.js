@@ -18,8 +18,8 @@ export default class WordSearchDrawer extends Drawer {
    * @override
    */
   drawTile(svg, letter, row, col) {
-    const backgroundId = Drawer.cellId(row, col, 'backgroundLetter');
-    const textId = Drawer.cellId(row, col, 'letter');
+    const backgroundId = Drawer.cellId('backgroundLetter', row, col);
+    const textId = Drawer.cellId('letter', row, col);
 
     const group = document.createElementNS(SVG_NS, 'g');
     const background = document.createElementNS(SVG_NS, 'rect');
@@ -57,8 +57,8 @@ export default class WordSearchDrawer extends Drawer {
     if (highlighted) {
       backColor = '#00b050';
     }
-    const backgroundId = Drawer.cellId(row, col, 'backgroundLetter');
-    const textId = Drawer.cellId(row, col, 'letter');
+    const backgroundId = Drawer.cellId('backgroundLetter', row, col);
+    const textId = Drawer.cellId('letter', row, col);
 
     document.getElementById(backgroundId).setAttribute('fill', backColor);
     const text = document.getElementById(textId);

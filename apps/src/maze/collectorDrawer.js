@@ -46,7 +46,7 @@ export default class CollectorDrawer extends Drawer {
     const prefix = 'counter';
     const counterText = this.map_.getValue(row, col) || null;
     // get or create the appropriate counter element
-    const counterElement = document.getElementById(Drawer.cellId(row, col, prefix))
+    const counterElement = document.getElementById(Drawer.cellId(prefix, row, col))
         || this.createText(prefix, row, col, counterText);
     counterElement.firstChild.nodeValue = counterText;
   }
@@ -70,7 +70,7 @@ export default class CollectorDrawer extends Drawer {
     // Position text just inside the bottom right corner.
     text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
     text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
-    text.setAttribute('id', Drawer.cellId(row, col, prefix));
+    text.setAttribute('id', Drawer.cellId(prefix, row, col));
     text.setAttribute('class', 'bee-counter-text');
     text.appendChild(document.createTextNode(counterText));
     svg.insertBefore(text, pegmanElement);
