@@ -17,7 +17,6 @@
 #
 
 class SchoolInfo < ActiveRecord::Base
-
   SCHOOL_TYPES = [
     SCHOOL_TYPE_CHARTER = "charter",
     SCHOOL_TYPE_PRIVATE = "private",
@@ -56,5 +55,4 @@ class SchoolInfo < ActiveRecord::Base
 
     errors.add(:school_district, "is required")
   end
-
 end

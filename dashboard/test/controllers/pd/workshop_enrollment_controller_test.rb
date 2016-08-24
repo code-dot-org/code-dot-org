@@ -339,5 +339,4 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       school_district_other: false
     }
   end
-
 end

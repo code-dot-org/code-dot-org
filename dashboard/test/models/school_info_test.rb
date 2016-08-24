@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SchoolInfoTest < ActiveSupport::TestCase
-
   # charter + zip  --  success
   test 'district by type charter and zip, validation succeeds' do
     school_info = build :school_info, school_type: SchoolInfo::SCHOOL_TYPE_CHARTER, school_zip: 98144, school_state: nil, school_district_id: nil
