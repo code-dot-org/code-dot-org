@@ -34,6 +34,7 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {DashboardUser} options.user
  * @param {string} options.shardID
  * @param {string} options.shardDisplayName
+ * @param {boolean} options.isUserInMultipleSections
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
@@ -71,6 +72,12 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @private
    */
   this.shardDisplayName_ = options.shardDisplayName;
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isUserInMultipleSections_ = !!options.isUserInMultipleSections;
 
   /**
    * @type {NetSimNode[]}
@@ -350,6 +357,23 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
   var showClients = levelConfig.showClientsInLobby;
   var showRouters = levelConfig.showRoutersInLobby;
   return (isClient && showClients) || (isRouter && showRouters);
+};
+
+/**
+ * @returns {boolean} TRUE if the current user is the only client node connected
+ *          to the shard right now.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function () {
+  const otherUserCount = this.nodesOnShard_.filter(node =>
+    node.getNodeType() === NodeType.CLIENT && !this.isMyNode(node)).length;
+  return otherUserCount === 0;
+};
+
+/**
+ * @returns {boolean} TRUE if the current user has a choice of sections to join.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isUserInMultipleSections = function () {
+  return this.isUserInMultipleSections_;
 };
 
 /**

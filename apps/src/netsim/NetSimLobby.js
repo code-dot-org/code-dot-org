@@ -211,6 +211,7 @@ NetSimLobby.prototype.render = function () {
           user: this.user_,
           shardID: this.shard_.id,
           shardDisplayName: this.shardDisplayNameFromID_(this.shard_.id),
+          isUserInMultipleSections: this.shardChoices_.length > 1,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,

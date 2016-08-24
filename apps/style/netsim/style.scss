@@ -1016,7 +1016,6 @@ $wide-column-width: 121px;
   .lobby-hint {
     display: block;
     padding: 20px 40px 40px 40px;
-    clear: both;
 
     .fa-info-circle {
       float: left;
@@ -1027,6 +1026,16 @@ $wide-column-width: 121px;
     p {
       margin-left: 80px;
     }
+
+    ul {
+      margin-left: 100px;
+    }
+  }
+  .netsim-shard-selection-panel .lobby-hint {
+    clear: both;
+  }
+  .netsim-lobby-panel .lobby-hint {
+    clear: right;
   }
 }
 
