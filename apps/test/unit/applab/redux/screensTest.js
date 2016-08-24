@@ -61,6 +61,8 @@ describe("Applab Screens Reducer", function () {
       sinon.stub(sourcesApi, 'withProjectId').returnsThis();
       sinon.stub(channelsApi, 'ajax');
       sinon.stub(channelsApi, 'withProjectId').returnsThis();
+      sinon.stub(assetsApi, 'ajax');
+      sinon.stub(assetsApi, 'withProjectId').returnsThis();
     });
 
     afterEach(() => {
@@ -68,6 +70,8 @@ describe("Applab Screens Reducer", function () {
       sourcesApi.withProjectId.restore();
       channelsApi.ajax.restore();
       channelsApi.withProjectId.restore();
+      assetsApi.ajax.restore();
+      assetsApi.withProjectId.restore();
     });
 
     describe("when given an invalid url", () => {
@@ -99,10 +103,15 @@ describe("Applab Screens Reducer", function () {
       });
 
       describe("and when sources and channels finish loading", () => {
-        var sourcesSuccess, sourcesFail, channelsSuccess, channelsFail;
+        var sourcesSuccess, sourcesFail,
+            channelsSuccess, channelsFail,
+            assetsSuccess, assetsFail,
+            existingAssetsSuccess, existingAssetsFail;
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
+          [, , existingAssetsSuccess, existingAssetsFail] = assetsApi.ajax.firstCall.args;
+          [, , assetsSuccess, assetsFail] = assetsApi.ajax.secondCall.args;
         });
 
         describe("and sources fail", () => {
@@ -119,16 +128,20 @@ describe("Applab Screens Reducer", function () {
             expect(store.getState().importProject.errorFetchingProject).to.be.true;
           });
         });
-        describe("and both sources and channels succeed", () => {
+        describe("and everything succeeds", () => {
           beforeEach(() => {
             channelsSuccess({response: '"bar"'});
             sourcesSuccess({response: '"foo"'});
+            assetsSuccess({response: '[]'});
+            existingAssetsSuccess({response: '[]'});
           });
           it("will set isFetchingProject=false and fetchedProject=the fetched results", () => {
             expect(store.getState().importProject.isFetchingProject).to.be.false;
             expect(store.getState().importProject.fetchedProject).to.deep.equal({
               channel: 'bar',
-              sources: 'foo'
+              sources: 'foo',
+              assets: [],
+              existingAssets: [],
             });
           });
         });
