@@ -26,7 +26,7 @@ export default class BeeItemDrawer extends Drawer {
   /**
    * @override
    */
-  getAsset(row, col, prefix='') {
+  getAsset(prefix, row, col) {
     switch (prefix) {
       case 'cloud':
         return this.skin_.cloud;
@@ -90,7 +90,7 @@ export default class BeeItemDrawer extends Drawer {
     }
 
     // Display the images.
-    let img = this.drawImage_(row, col, 'beeItem');
+    let img = this.drawImage_('beeItem', row, col);
     this.updateCounter_('counter', row, col, img ? counterText : '');
 
     if (isClouded) {
@@ -110,7 +110,7 @@ export default class BeeItemDrawer extends Drawer {
    * @param {string} counterText
    */
   updateCounter_(prefix, row, col, counterText) {
-    var counterElement = document.getElementById(Drawer.cellId(row, col, prefix));
+    var counterElement = document.getElementById(Drawer.cellId(prefix, row, col));
     if (!counterElement) {
       // we want an element, so let's create one
       counterElement = this.createText(prefix, row, col, counterText);
@@ -136,7 +136,7 @@ export default class BeeItemDrawer extends Drawer {
     // Position text just inside the bottom right corner.
     text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
     text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
-    text.setAttribute('id', Drawer.cellId(row, col, prefix));
+    text.setAttribute('id', Drawer.cellId(prefix, row, col));
     text.setAttribute('class', 'bee-counter-text');
     text.appendChild(document.createTextNode(counterText));
     svg.insertBefore(text, pegmanElement);
@@ -231,7 +231,7 @@ export default class BeeItemDrawer extends Drawer {
    * Show the cloud icon.
    */
   showCloud_(row, col) {
-    this.drawImage_(row, col, 'cloud');
+    this.drawImage_('cloud', row, col);
 
     // Make sure the animation is cached by the browser.
     this.displayCloudAnimation_(row, col, false /* animate */);
@@ -241,7 +241,7 @@ export default class BeeItemDrawer extends Drawer {
    * Hide the cloud icon, and display the cloud hiding animation.
    */
   hideCloud_(row, col) {
-    var cloudElement = document.getElementById(Drawer.cellId(row, col, 'cloud'));
+    var cloudElement = document.getElementById(Drawer.cellId('cloud', row, col));
     if (cloudElement) {
       cloudElement.setAttribute('visibility', 'hidden');
     }
@@ -253,9 +253,9 @@ export default class BeeItemDrawer extends Drawer {
    * Create the cloud animation element, and perform the animation if necessary
    */
   displayCloudAnimation_(row, col, animate) {
-    let id = Drawer.cellId(row, col, 'cloudAnimation');
+    let id = Drawer.cellId('cloudAnimation', row, col);
 
-    let cloudAnimation = this.getOrCreateImage_(row, col, 'cloudAnimation', false);
+    let cloudAnimation = this.getOrCreateImage_('cloudAnimation', row, col, false);
 
     // We want to create the element event if we're not animating yet so that we
     // can make sure it gets loaded.
