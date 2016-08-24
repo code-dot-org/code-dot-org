@@ -1,4 +1,4 @@
-@eyes
+@eyes @skip
 Feature: Public Key Cryptography Eyes
 
   Scenario: Modulo Clock Appearance
