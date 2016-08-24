@@ -1,4 +1,4 @@
-Date of Last Revision: April 4, 2016
+Date of Last Revision: August 24, 2016
 
 ## About Code.org
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -218,5 +218,4 @@ Please contact Code.org with any questions or comments about this Privacy Notice
 <br />
 <br />
 <br />
-
 [<img src="/shared/images/student_privacy_pledge.png" width="200" target="_blank">](http://studentprivacypledge.org/)
