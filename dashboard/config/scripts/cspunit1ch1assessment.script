@@ -1,9 +1,0 @@
-title 'CS Principles Unit 1 Ch 1 Assessment'
-description 'This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 1 Chapter 1 (Lessons 1-7)'
-description_short 'Unit 1.1 Assessment'
-login_required 'true'
-hidden 'true'
-
-stage 'CS Principles Unit 1 Ch 1 Assessment'
-level 'CSP_Final_instructions'
-assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group'
