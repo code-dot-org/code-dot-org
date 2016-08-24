@@ -1,8 +1,3 @@
----
-title: Privacy Policy
----
-
-# Privacy Policy
 Date of Last Revision: August 24, 2016
 
 ## About Code.org

@@ -1433,6 +1433,30 @@ a.download-video {
     display: table-cell;
     vertical-align: middle;
   }
+  .terms-checkbox {
+    margin: 0 5px 2px 0;
+  }
+  .right {
+    float: right;
+  }
+  .scroll-box {
+    height: 100px;
+    border: 1px solid $border_gray;
+    padding: 20px;
+    margin-top: 5px;
+    resize: vertical;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+  .custom-h1 {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .checkbox-error {
+    display: inline !important;
+    padding-left: 0 !important;
+  }
   #labelusername {
     vertical-align: top;
     padding-top: 7px;
