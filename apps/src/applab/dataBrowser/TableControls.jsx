@@ -29,7 +29,7 @@ const styles = {
   tableNameWrapper: {
     alignItems: 'flex-end',
     display: 'inline-flex',
-    height: '30px',
+    height: 30,
     marginRight: 10,
     verticalAlign: 'middle',
   },
@@ -64,7 +64,7 @@ const TableControls = React.createClass({
       <div style={styles.container}>
         <span style={styles.tableNameWrapper}>
           <span style={styles.tableName}>
-            {this.props.tableName}&nbsp;
+            {this.props.tableName}
           </span>
         </span>
 
