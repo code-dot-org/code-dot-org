@@ -4125,7 +4125,7 @@ Studio.setItemActivity = function (opts) {
     Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
       if (item.className === itemClass) {
-        item.setActivity(opts.type);
+        item.setActivity(opts.type, 0);
 
         // For verifying success, record this combination of activity type and
         // item type.
@@ -5190,20 +5190,29 @@ Studio.setSpriteXY = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
-// TODO(ram): implement group behavior
+function getSpritesByName(name) {
+  return Studio.sprite.filter(
+      sprite => sprite.imageName === name && sprite.visible);
+}
+
 Studio.setSpritesWander = function (opts) {
-  const sprites = Studio.sprite.filter(
-      sprite => sprite.imageName === opts.spriteName && sprite.visible);
-  sprites.forEach(sprite => sprite.setActivity('roam'));
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('roam'));
 };
 
 Studio.setSpritesStop = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('none'));
 };
 
 Studio.setSpritesChase = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('chase', opts.targetSpriteIndex));
 };
 
 Studio.setSpritesFlee = function (opts) {
+  getSpritesByName(opts.spriteName).forEach( sprite =>
+      sprite.setActivity('flee', opts.targetSpriteIndex));
 };
 
 Studio.addGoal = function (opts) {

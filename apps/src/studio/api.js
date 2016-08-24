@@ -111,14 +111,14 @@ exports.setSpritesStop = function (id, spriteName) {
   });
 };
 
-exports.setSpritesChase = function (id, spriteName, targetSpriteIndex) {
+exports.setSpritesChase = function (id, targetSpriteIndex, spriteName) {
   Studio.queueCmd(id, 'setSpritesChase', {
     'spriteName': spriteName,
     'targetSpriteIndex': targetSpriteIndex,
   });
 };
 
-exports.setSpritesFlee = function (id, spriteName, targetSpriteIndex) {
+exports.setSpritesFlee = function (id, targetSpriteIndex, spriteName) {
   Studio.queueCmd(id, 'setSpritesFlee', {
     'spriteName': spriteName,
     'targetSpriteIndex': targetSpriteIndex,

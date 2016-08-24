@@ -44,6 +44,7 @@ export default class Item extends Collidable {
     this.displayDir = Direction.SOUTH;
     this.startFadeTime = null;
     this.fadeTime = constants.ITEM_FADE_TIME;
+    this.targetSpriteIndex = 0;
 
     /** @private {StudioAnimation} */
     this.animation_ = new StudioAnimation(Object.assign({}, options, {
@@ -168,7 +169,7 @@ export default class Item extends Collidable {
     // If not, determine it.
     if (this.destGridX === undefined || reachedDestinationGridPosition) {
 
-      var sprite = Studio.sprite[0];
+      var sprite = Studio.sprite[this.targetSpriteIndex];
 
       var spriteX = sprite.x + sprite.width/2;
       var spriteY = sprite.y + sprite.height/2;
@@ -237,10 +238,7 @@ export default class Item extends Collidable {
       // cull candidates that won't be possible
       for (var i = candidates.length-1; i >= 0; i--) {
         var candidate = candidates[i];
-        var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
-                     candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
-        var hasWall = !atEdge && Studio.getWallValue(candidate.gridY, candidate.gridX);
-        if (atEdge || hasWall || candidate.score === 0) {
+        if (candidate.score === 0 || this.atEdge(candidate) || this.hasWall(candidate)) {
           candidates.splice(i, 1);
         }
       }
@@ -281,6 +279,15 @@ export default class Item extends Collidable {
     }
   }
 
+  atEdge(candidate) {
+    return candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
+        candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
+  }
+
+  hasWall(candidate) {
+    return Studio.getWallValue(candidate.gridY, candidate.gridX);
+  }
+
   /**
    * Isolated update logic for "watchActor" activity where the "item" keeps
    * turning to look at the actor with the given sprite index.
@@ -313,9 +320,13 @@ export default class Item extends Collidable {
   /**
    * Sets the activity property for this item.
    * @param {string} type Valid options are: none, watchActor, roam, chase, or flee
+   * @param {number} targetSpriteIndex optional target sprite used with chase and flee
    */
-  setActivity(type) {
+  setActivity(type, targetSpriteIndex) {
     this.activity = type;
+    if (targetSpriteIndex !== undefined) {
+      this.targetSpriteIndex = targetSpriteIndex;
+    }
   }
 
   /**
@@ -441,7 +452,7 @@ export default class Item extends Collidable {
    * @override
    */
   startCollision(key) {
-    var newCollisionStarted = super.call(key);
+    var newCollisionStarted = super.startCollision(key);
     if (newCollisionStarted) {
       if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
         Studio.trackedBehavior.touchedHazardCount++;

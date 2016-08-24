@@ -1757,6 +1757,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       name: 'setSpritesChase',
+      extraParams: getSpriteIndex(this),
     });
   };
 
@@ -1781,6 +1782,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       name: 'setSpritesFlee',
+      extraParams: getSpriteIndex(this),
     });
   };
 

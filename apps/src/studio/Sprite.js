@@ -311,7 +311,7 @@ export default class Sprite extends Item {
    * This function should be called every frame, and moves the sprite around.
    */
   update() {
-    super.call();
+    super.update();
 
     // Draw the sprite's current location.
     Studio.drawDebugRect("spriteCenter", this.x, this.y, 3, 3);
@@ -524,5 +524,12 @@ export default class Sprite extends Item {
     if (this.legacyAnimation_) {
       this.legacyAnimation_.setOpacity(newOpacity);
     }
+  }
+
+  atEdge(candidate) {
+    return candidate.gridX < 0 ||
+        (candidate.gridX * Studio.SQUARE_SIZE + this.width) >= Studio.MAZE_WIDTH ||
+        candidate.gridY < 0 ||
+        (candidate.gridY * Studio.SQUARE_SIZE + this.height) >= Studio.MAZE_HEIGHT;
   }
 }
