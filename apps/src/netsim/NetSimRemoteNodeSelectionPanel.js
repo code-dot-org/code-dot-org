@@ -15,7 +15,6 @@ var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
 var NetSimRouterNode = require('./NetSimRouterNode');
 require('../utils'); // Provides Function.prototype.inherits
-import experiments from '../experiments';
 
 /**
  * Apply a very small debounce to lobby buttons to avoid doing extra work
@@ -355,8 +354,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () 
 };
 
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ = function () {
-  return experiments.isEnabled('netsimNewLogBrowser') &&
-      NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
 };
 
 /**

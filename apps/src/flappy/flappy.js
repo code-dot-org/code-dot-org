@@ -405,7 +405,7 @@ Flappy.onTick = function () {
 
       if (!obstacle.hitAvatar && checkForObstacleCollision(obstacle)) {
         obstacle.hitAvatar = true;
-        try {Flappy.whenCollideObstacle(studioApp, api); } catch (e) { }
+        try {Flappy.whenCollideObstacle(api); } catch (e) { }
       }
 
       // If obstacle moves off left side, repurpose as a new obstacle to our right
