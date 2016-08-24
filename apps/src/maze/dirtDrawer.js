@@ -1,4 +1,5 @@
 import Drawer from './drawer';
+import { SQUARE_SIZE, SVG_NS } from './drawer';
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
 const DIRT_MAX = 10;
@@ -10,7 +11,7 @@ const DIRT_COUNT = DIRT_MAX * 2 + 2;
 export default class DirtDrawer extends Drawer {
   constructor(map, dirtAsset) {
     super(map, dirtAsset);
-    this.assetUnclippedWidth = Drawer.SQUARE_SIZE * DIRT_COUNT;
+    this.assetUnclippedWidth = SQUARE_SIZE * DIRT_COUNT;
   }
 
   getAsset(row, col, prefix='') {
@@ -40,7 +41,7 @@ export default class DirtDrawer extends Drawer {
     let hiddenImage = spriteIndex < 0;
     img.setAttribute('visibility', hiddenImage ? 'hidden' : 'visible');
     if (!hiddenImage) {
-      img.setAttribute('x', Drawer.SQUARE_SIZE * (col - spriteIndex));
+      img.setAttribute('x', SQUARE_SIZE * (col - spriteIndex));
     }
 
     return img;

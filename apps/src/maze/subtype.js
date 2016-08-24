@@ -36,8 +36,6 @@ export default class Subtype {
     this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
-
-    this.drawer = this.createGridItemDrawer();
   }
 
   finished() {
@@ -48,8 +46,8 @@ export default class Subtype {
     return Cell;
   }
 
-  createGridItemDrawer() {
-    return new DirtDrawer(this.maze_.map, this.skin_.dirt);
+  createDrawer() {
+    this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt);
   }
 
   shouldCheckSuccessOnMove() {
@@ -135,28 +133,26 @@ export default class Subtype {
     // Compute and draw the tile for each square.
     let tileId = 0;
     let tile, origTile;
-    for (let y = 0; y < this.maze_.map.ROWS; y++) {
-      for (let x = 0; x < this.maze_.map.COLS; x++) {
-        // Compute the tile index.
-        tile = this.isOnPathStr_(x, y) +
-          this.isOnPathStr_(x, y - 1) + // North.
-          this.isOnPathStr_(x + 1, y) + // West.
-          this.isOnPathStr_(x, y + 1) + // South.
-          this.isOnPathStr_(x - 1, y); // East.
+    this.maze_.map.forEachCell((cell, row, col) => {
+      // Compute the tile index.
+      tile = this.isOnPathStr_(col, row) +
+        this.isOnPathStr_(col, row - 1) + // North.
+        this.isOnPathStr_(col + 1, row) + // West.
+        this.isOnPathStr_(col, row + 1) + // South.
+        this.isOnPathStr_(col - 1, row); // East.
 
-        const adjacentToPath = (tile !== '00000');
+      const adjacentToPath = (tile !== '00000');
 
-        // Draw the tile.
-        if (!TILE_SHAPES[tile]) {
-          // We have an empty square. Handle it differently based on skin.
-          tile = this.getEmptyTile(x, y, adjacentToPath, wallMap);
-        }
-
-        this.drawTile(svg, TILE_SHAPES[tile], y, x, tileId);
-
-        tileId++;
+      // Draw the tile.
+      if (!TILE_SHAPES[tile]) {
+        // We have an empty square. Handle it differently based on skin.
+        tile = this.getEmptyTile(col, row, adjacentToPath, wallMap);
       }
-    }
+
+      this.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
+
+      tileId++;
+    });
   }
 
   /**
