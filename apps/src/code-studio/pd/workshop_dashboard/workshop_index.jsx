@@ -16,6 +16,7 @@ const WorkshopIndex = React.createClass({
   },
 
   render() {
+    const showOrganizer = window.dashboard.workshop.permission === "admin";
     return (
       <div>
         <h1>Your Workshops</h1>
@@ -28,6 +29,7 @@ const WorkshopIndex = React.createClass({
         <WorkshopTable
           queryUrl="/api/v1/pd/workshops/?state=In%20Progress"
           canDelete
+          showOrganizer={showOrganizer}
         />
         <h2>Upcoming</h2>
         <WorkshopTable
@@ -35,10 +37,12 @@ const WorkshopIndex = React.createClass({
           canEdit
           canDelete
           showSignupUrl
+          showOrganizer={showOrganizer}
         />
         <h2>Past</h2>
         <WorkshopTable
           queryUrl="/api/v1/pd/workshops/?state=Ended"
+          showOrganizer={showOrganizer}
         />
       </div>
     );
