@@ -15,62 +15,7 @@
     // Project root in file system
     var projectRoot = "/codedotorg/weblab";
 
-    // Get the WebLab object from our parent window
-    if (parent.getWebLab) {
-        webLab = parent.getWebLab();
-    } else {
-        console.error("ERROR: getWebLab() method not found on parent");
-    }
-
-    // expose object for parent window to talk to us through
-    var brambleHost = {
-        // return file data from the Bramble editor
-        getBrambleCode: function (callback) {
-
-            var fs = theBramble.getFileSystem();
-            var sh = new fs.Shell();
-            var Path = theBramble.Filer.Path;
-
-            // enumerate files in the file system off the project root
-            sh.ls(projectRoot, function (err, entries) {
-                if (err) {
-                    throw err;
-                }
-                var fileList = [];
-
-                // async-chained enumeration: get the file data for i-th file
-                function getFileData(i, callback) {
-                    if (i < entries.length) {
-                        var entry = entries[i];
-                        var path = Path.join(projectRoot, entry.path);
-                        // read file data
-                        fs.readFile(path, 'utf8', function (err, fileData) {
-                            if (err) {
-                                throw err;
-                            }
-                            // add file data to list that gets returned
-                            var file = { name: entry.path, data: fileData};
-                            fileList.push(file);
-                            // continue on to next item in list
-                            getFileData(i+1, callback);
-                        });
-                    } else {
-                        var code = { files: fileList };
-                        // end of list, call completion callback
-                        callback(code);
-                    }
-                }
-
-                // start an async-chained walk through the file list
-                getFileData(0,callback);
-            });
-        }
-    };
-
-    // Give our interface to our parent
-    webLab.setBrambleHost(brambleHost);
-
-    function loadFiles(Bramble, sources, callback) {
+    function putFilesInBramble(Bramble, sources, callback) {
         var fs = Bramble.getFileSystem();
         var sh = new fs.Shell();
         var Path = Bramble.Filer.Path;
@@ -109,6 +54,64 @@
             });
         });
     }
+
+    function getFilesFromBramble(callback) {
+
+        var fs = theBramble.getFileSystem();
+        var sh = new fs.Shell();
+        var Path = theBramble.Filer.Path;
+
+        // enumerate files in the file system off the project root
+        sh.ls(projectRoot, function (err, entries) {
+            if (err) {
+                throw err;
+            }
+            var fileList = [];
+
+            // async-chained enumeration: get the file data for i-th file
+            function getFileData(i, callback) {
+                if (i < entries.length) {
+                    var entry = entries[i];
+                    var path = Path.join(projectRoot, entry.path);
+                    // read file data
+                    fs.readFile(path, 'utf8', function (err, fileData) {
+                        if (err) {
+                            throw err;
+                        }
+                        // add file data to list that gets returned
+                        var file = { name: entry.path, data: fileData};
+                        fileList.push(file);
+                        // continue on to next item in list
+                        getFileData(i+1, callback);
+                    });
+                } else {
+                    var code = { files: fileList };
+                    // end of list, call completion callback
+                    callback(code);
+                }
+            }
+
+            // start an async-chained walk through the file list
+            getFileData(0,callback);
+        });
+    }
+
+
+    // Get the WebLab object from our parent window
+    if (parent.getWebLab) {
+        webLab = parent.getWebLab();
+    } else {
+        console.error("ERROR: getWebLab() method not found on parent");
+    }
+
+    // expose object for parent window to talk to us through
+    var brambleHost = {
+        // return file data from the Bramble editor
+        getBrambleCode: getFilesFromBramble
+    };
+
+    // Give our interface to our parent
+    webLab.setBrambleHost(brambleHost);
 
     var inspectorEnabled = false;
 
@@ -171,10 +174,9 @@
         // Get initial sources to put in file system
         var startSources = webLab.getStartSources();
 
-        // Setup the filesystem while Bramble is loading
-        loadFiles(Bramble, startSources, function () {
-            // Now that fs is setup, tell Bramble which root dir to mount
-            // and which file within that root to open on startup.
+        // put the source files into the Bramble file system
+        putFilesInBramble(Bramble, startSources, function () {
+            // tell Bramble which root dir to mount
             Bramble.mount(projectRoot);
         });
     }
