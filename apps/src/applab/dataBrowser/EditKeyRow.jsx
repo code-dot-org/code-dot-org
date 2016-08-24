@@ -9,7 +9,7 @@ import * as dataStyles from './dataStyles';
 const EditKeyRow = React.createClass({
   propTypes: {
     keyName: React.PropTypes.string.isRequired,
-    value: React.PropTypes.any.isRequired
+    value: React.PropTypes.any
   },
 
   getInitialState() {
