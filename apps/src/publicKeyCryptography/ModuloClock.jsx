@@ -40,12 +40,7 @@ const ModuloClock = React.createClass({
 
   getInitialState() {
     return {
-      currentDividend: 0,
-      targetDividend: 0,
-      startTime: null,
-      interval: null,
-      onStep: null,
-      onComplete: null
+      currentDividend: 0
     };
   },
 
@@ -59,34 +54,30 @@ const ModuloClock = React.createClass({
   animateTo(dividend, speed, onStep, onComplete) {
     const MAXIMUM_TIME_PER_SEGMENT = 500 / speed;
     const MAXIMUM_TOTAL_TIME = 8000 / speed + 2000;
-    this.setState({
-      currentDividend: 0,
-      targetDividend: dividend,
-      startTime: Date.now(),
-      duration: Math.min(MAXIMUM_TOTAL_TIME, dividend * MAXIMUM_TIME_PER_SEGMENT),
-      interval: setInterval(this.tick, 33),
-      onStep: onStep || function () {},
-      onComplete: onComplete || function () {}
-    });
+
+    this.targetDividend = dividend;
+    this.startTime = Date.now();
+    this.interval = setInterval(this.tick, 33);
+    this.onStep = onStep || function () {};
+    this.onComplete = onComplete || function () {};
+    this.duration = Math.min(MAXIMUM_TOTAL_TIME, dividend * MAXIMUM_TIME_PER_SEGMENT);
+    this.setState({currentDividend: 0});
   },
 
   tick() {
-    const {startTime, targetDividend, duration, interval, onStep, onComplete} = this.state;
-    const elapsedTime = Date.now() - startTime;
-    if (elapsedTime < duration) {
-      const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, targetDividend, duration));
-      onStep(currentDividend);
+    const elapsedTime = Date.now() - this.startTime;
+    if (elapsedTime < this.duration) {
+      const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration));
+      this.onStep(currentDividend);
       this.setState({currentDividend});
     } else {
-      clearInterval(interval);
-      onComplete(targetDividend);
-      this.setState({
-        currentDividend: targetDividend,
-        startTime: null,
-        interval: null,
-        onStep: null,
-        onComplete: null
-      });
+      clearInterval(this.interval);
+      this.onComplete(this.targetDividend);
+      this.setState({currentDividend: this.targetDividend});
+      this.interval = null;
+      this.startTime = null;
+      this.onStep = null;
+      this.onComplete = null;
     }
   },
 
@@ -130,8 +121,8 @@ const ModuloClock = React.createClass({
 
   render() {
     const {modulus} = this.props;
-    const {currentDividend, interval} = this.state;
-    const isRunning = !!interval;
+    const {currentDividend} = this.state;
+    const isRunning = !!this.interval;
     return (
       <div style={style.root}>
         <svg viewBox={`0 0 ${VIEWBOX_SIDE} ${VIEWBOX_SIDE}`} style={style.svg}>
