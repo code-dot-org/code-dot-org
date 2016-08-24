@@ -437,7 +437,7 @@ FeedbackUtils.prototype.getShareFailure_ = function (options) {
  */
 FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
-        options.response.design
+        options.response.design;
 };
 
 /**
