@@ -1,4 +1,4 @@
-class CreateProfessionalLearningTasks < ActiveRecord::Migration
+class CreateProfessionalLearningTasks < ActiveRecord::Migration[4.2]
   def change
     create_table :professional_learning_tasks do |t|
       t.string :name

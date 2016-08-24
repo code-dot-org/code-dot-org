@@ -1,4 +1,4 @@
-class AddModuleTypeToLearningModules < ActiveRecord::Migration
+class AddModuleTypeToLearningModules < ActiveRecord::Migration[4.2]
   def up
     add_column :plc_learning_modules, :module_type, :string
 

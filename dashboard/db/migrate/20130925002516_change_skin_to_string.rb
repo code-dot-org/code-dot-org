@@ -1,4 +1,4 @@
-class ChangeSkinToString < ActiveRecord::Migration
+class ChangeSkinToString < ActiveRecord::Migration[4.2]
   def change
     remove_column :levels, :skin
     add_column :levels, :skin, :string

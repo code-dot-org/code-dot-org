@@ -1,4 +1,4 @@
-class AddDeletedAtToUserIndexes < ActiveRecord::Migration
+class AddDeletedAtToUserIndexes < ActiveRecord::Migration[4.2]
   def change
     add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
     remove_index "users", ["confirmation_token"]

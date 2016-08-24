@@ -1,4 +1,4 @@
-class ConvertFromMazeToProperty < ActiveRecord::Migration
+class ConvertFromMazeToProperty < ActiveRecord::Migration[4.2]
   def change
     Level.all.each do |level|
       unless level.maze.nil?

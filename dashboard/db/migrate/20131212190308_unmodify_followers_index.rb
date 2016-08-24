@@ -1,4 +1,4 @@
-class UnmodifyFollowersIndex < ActiveRecord::Migration
+class UnmodifyFollowersIndex < ActiveRecord::Migration[4.2]
   def change
     c = Follower.connection
     c.execute('create temporary table temp_follower_dups (user_id int, student_user_id int, max_id int)')

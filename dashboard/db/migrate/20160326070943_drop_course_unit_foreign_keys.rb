@@ -1,4 +1,4 @@
-class DropCourseUnitForeignKeys < ActiveRecord::Migration
+class DropCourseUnitForeignKeys < ActiveRecord::Migration[4.2]
   def up
     remove_foreign_key_if_exists :plc_course_units, :plc_course_id
     remove_foreign_key_if_exists :plc_enrollment_unit_assignments, :plc_user_course_enrollment_id

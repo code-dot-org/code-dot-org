@@ -1,4 +1,4 @@
-class CreateTeacherBonusPrizes < ActiveRecord::Migration
+class CreateTeacherBonusPrizes < ActiveRecord::Migration[4.2]
   def change
     create_table :teacher_bonus_prizes do |t|
       t.references :prize_provider,   null: false, index: true

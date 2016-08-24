@@ -1,4 +1,4 @@
-class CreatePlcEnrollmentTaskAssignments < ActiveRecord::Migration
+class CreatePlcEnrollmentTaskAssignments < ActiveRecord::Migration[4.2]
   def change
     create_table :plc_enrollment_task_assignments do |t|
       t.string :status

@@ -1,4 +1,4 @@
-class AddTeacherColumnsToUsers < ActiveRecord::Migration
+class AddTeacherColumnsToUsers < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :user_type, :string, limit: 16, default: User::TYPE_STUDENT
     add_column :users, :school, :string

@@ -1,4 +1,4 @@
-class CreateUserProfessionalLearningCourseEnrollment < ActiveRecord::Migration
+class CreateUserProfessionalLearningCourseEnrollment < ActiveRecord::Migration[4.2]
   def change
     create_table :user_professional_learning_course_enrollments do |t|
       t.references :user, index: true, foreign_key: true

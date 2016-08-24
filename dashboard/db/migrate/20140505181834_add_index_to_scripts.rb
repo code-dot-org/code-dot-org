@@ -1,4 +1,4 @@
-class AddIndexToScripts < ActiveRecord::Migration
+class AddIndexToScripts < ActiveRecord::Migration[4.2]
   def change
     add_index :scripts, :name, unique: true
     # 'change_column_null' is not reversible prior to Rails 4.1.0: https://github.com/rails/rails/issues/13576

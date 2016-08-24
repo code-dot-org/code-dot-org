@@ -1,4 +1,4 @@
-class AddFollowers < ActiveRecord::Migration
+class AddFollowers < ActiveRecord::Migration[4.2]
   def change
     create_table :followers do |t|
       t.references :user, null: false

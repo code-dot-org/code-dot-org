@@ -1,4 +1,4 @@
-class FixScriptLevelPositions < ActiveRecord::Migration
+class FixScriptLevelPositions < ActiveRecord::Migration[4.2]
   def change
     # one time migration. not to be run again
 

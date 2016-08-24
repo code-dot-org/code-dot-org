@@ -1,4 +1,4 @@
-class AddScriptToUserLevels < ActiveRecord::Migration
+class AddScriptToUserLevels < ActiveRecord::Migration[4.2]
   def change
     # sql commands in comments for manual migration
     add_column :user_levels, :script_id, :integer, null: true

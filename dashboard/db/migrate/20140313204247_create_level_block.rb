@@ -1,4 +1,4 @@
-class CreateLevelBlock < ActiveRecord::Migration
+class CreateLevelBlock < ActiveRecord::Migration[4.2]
   def change
     create_table :level_blocks do |t|
       t.references :level, null: false, index: true
