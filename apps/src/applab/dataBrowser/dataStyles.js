@@ -35,10 +35,7 @@ export const link = {
   fontFamily: "'Gotham 7r', sans-serif",
 };
 
-// Override some styles set on button elements by dashboard stylesheets.
 export const button = {
-  backgroundPosition: 0,
-  boxShadow: 'none',
   display: 'inline-block',
   fontSize: 14,
   lineHeight: '20px',
@@ -48,7 +45,6 @@ export const button = {
   marginRight: 0,
   padding: '4px 12px',
   textAlign: 'center',
-  transition: 'none',
   verticalAlign: 'middle',
 };
 
