@@ -20,12 +20,16 @@ level 'SFLP - Web - Text on the Web'
 
 stage 'Designing Code for Computers'
 level 'SFLP - Web - Designing Code for Computers'
+level 'CSDU2 - Fundamentals Videos'
 
 stage 'Digital Footprint'
 level 'SFLP - Web - Digital Footprint'
 
 stage 'Images on the Web'
 level 'SFLP - Web - Images on the Web'
+
+stage 'Finalizing Website'
+level 'CSDU2 - further styling suggestions'
 
 
 #not in use
