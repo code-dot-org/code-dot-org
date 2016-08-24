@@ -5,16 +5,17 @@
 // background: Number of 400x400 background images. Randomly select one if
 // specified, otherwise, use background.png.
 
-var skinsBase = require('../skins');
-var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-var constants = require('./constants');
-var studioApp = require('../StudioApp').singleton;
-
-var RANDOM_VALUE = constants.RANDOM_VALUE;
-var HIDDEN_VALUE = constants.HIDDEN_VALUE;
-var CLICK_VALUE = constants.CLICK_VALUE;
-var VISIBLE_VALUE = constants.VISIBLE_VALUE;
+import {
+  CLICK_VALUE,
+  HIDDEN_VALUE,
+  RANDOM_VALUE,
+  VISIBLE_VALUE,
+  SpriteSpeed
+} from './constants';
+import msg from './locale';
+import commonMsg from '@cdo/locale';
+import skinsBase from '../skins';
+import { singleton as StudioApp } from '../StudioApp';
 
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.
@@ -634,13 +635,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -15}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -15}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y:  20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -20}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -10}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -15}, activity: 'roam',  speed: SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -15}, activity: 'chase', speed: SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y:  20}, activity: 'roam',  speed: SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -20}, activity: 'roam',  speed: SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -10}, activity: 'chase', speed: SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -20}, activity: 'flee',  speed: SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
@@ -1203,7 +1204,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.

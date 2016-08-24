@@ -1,8 +1,8 @@
-import constants from './constants';
+import { SpriteSize, SpriteSpeed } from './constants';
 import { randomValue } from '../utils';
 
-exports.SpriteSpeed = constants.SpriteSpeed;
-exports.SpriteSize = constants.SpriteSize;
+exports.SpriteSpeed = SpriteSpeed;
+exports.SpriteSize = SpriteSize;
 
 var SPEECH_BUBBLE_TIME = 3;
 
@@ -197,21 +197,21 @@ exports.setItemSpeed = function (id, className, speed) {
 exports.moveFast = function (id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
-    'speed': constants.SpriteSpeed.FAST
+    'speed': SpriteSpeed.FAST
   });
 };
 
 exports.moveNormal = function (id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
-    'speed': constants.SpriteSpeed.SLOW
+    'speed': SpriteSpeed.SLOW
   });
 };
 
 exports.moveSlow = function (id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
-    'speed': constants.SpriteSpeed.VERY_SLOW
+    'speed': SpriteSpeed.VERY_SLOW
   });
 };
 
