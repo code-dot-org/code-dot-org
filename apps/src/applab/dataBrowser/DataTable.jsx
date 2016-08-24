@@ -8,6 +8,7 @@ import { DataView } from '../constants';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
 import FirebaseStorage from '../firebaseStorage';
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
@@ -19,10 +20,29 @@ import applabMsg from '@cdo/applab/locale';
 const MAX_TABLE_WIDTH = 970;
 
 const styles = {
+  addColumnHeader: [dataStyles.headerCell, {
+    width: 19,
+  }],
+  container: {
+    maxWidth: MAX_TABLE_WIDTH,
+    height: '100%',
+    overflowY: 'scroll',
+  },
   table: {
     clear: 'both',
     width: '100%'
   },
+  plusIcon: {
+    alignItems: 'center',
+    borderRadius: 2,
+    backgroundColor: 'white',
+    color: color.teal,
+    cursor: 'pointer',
+    display: 'inline-flex',
+    height: 18,
+    justifyContent: 'center',
+    width: 18,
+  }
 };
 
 const DataTable = React.createClass({
@@ -191,10 +211,9 @@ const DataTable = React.createClass({
     }
 
     const visible = (DataView.TABLE === this.props.view);
-    const containerStyle = {
+    const containerStyle = [styles.container, {
       display: visible ? 'block' : 'none',
-      maxWidth: MAX_TABLE_WIDTH
-    };
+    }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
     }];
@@ -207,18 +226,15 @@ const DataTable = React.createClass({
           <span style={dataStyles.backLink}>
             <a
               id="tableBackToOverview"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
-              Data
+              <FontAwesome icon="arrow-circle-left"/>&nbsp;Back to data
             </a>
-            &nbsp;&gt; {this.props.tableName}
           </span>
           <span style={dataStyles.debugLink}>
             <a
               id="tableDebugLink"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
@@ -229,10 +245,10 @@ const DataTable = React.createClass({
 
         <TableControls
           columns={columnNames}
-          addColumn={this.addColumn}
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
+          tableName={this.props.tableName}
         />
 
         <div style={debugDataStyle}>
@@ -256,7 +272,12 @@ const DataTable = React.createClass({
                 />
               ))
             }
-            <th style={dataStyles.headerCell}/>
+            <th style={styles.addColumnHeader}>
+              <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
+            </th>
+            <th style={dataStyles.headerCell}>
+              Actions
+            </th>
           </tr>
 
           <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>

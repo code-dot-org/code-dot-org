@@ -46,7 +46,7 @@ const DataOverview = React.createClass({
 
         <table style={styles.table}>
           <tbody>
-          <tr style={dataStyles.editRow}>
+          <tr style={dataStyles.row}>
             <td style={dataStyles.cell}>
               <EditLink
                 name={msg.keyValuePairLink()}
