@@ -143,7 +143,7 @@ export default class WordSearch extends Subtype {
    * @param {boolean} animating True if this is while animating
    */
   markTileVisited(row, col, animating) {
-    const letterCell = document.getElementById(WordSearchDrawer.cellId(row, col, 'letter'));
+    const letterCell = document.getElementById(WordSearchDrawer.cellId('letter', row, col));
     this.visited_ += letterCell.textContent;
 
     if (animating) {
