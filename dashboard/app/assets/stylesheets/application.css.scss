@@ -1454,8 +1454,8 @@ a.download-video {
     margin-bottom: 10px;
   }
   .checkbox-error {
-    display: inline;
-    padding-left: 0;
+    display: inline !important;
+    padding-left: 0 !important;
   }
   #labelusername {
     vertical-align: top;
