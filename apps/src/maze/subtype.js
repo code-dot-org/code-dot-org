@@ -36,6 +36,8 @@ export default class Subtype {
     this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
+
+    this.drawer = this.createGridItemDrawer();
   }
 
   finished() {
@@ -107,13 +109,13 @@ export default class Subtype {
   }
 
   getEmptyTile(x, y, adjacentToPath, wallMap) {
-    var tile;
+    let tile;
     // Empty square.  Use null0 for large areas, with null1-4 for borders.
     if (!adjacentToPath && Math.random() > 0.3) {
       wallMap[y][x] = 0;
       tile = 'null0';
     } else {
-      var wallIdx = Math.floor(1 + Math.random() * 4);
+      const wallIdx = Math.floor(1 + Math.random() * 4);
       wallMap[y][x] = wallIdx;
       tile = 'null' + wallIdx;
     }
@@ -126,13 +128,15 @@ export default class Subtype {
     return tile;
   }
 
-  // Draw the tiles making up the maze map.
+  /**
+   * Draw the tiles making up the maze map.
+   */
   drawMapTiles(svg, wallMap) {
     // Compute and draw the tile for each square.
-    var tileId = 0;
-    var tile, origTile;
-    for (var y = 0; y < this.maze_.map.ROWS; y++) {
-      for (var x = 0; x < this.maze_.map.COLS; x++) {
+    let tileId = 0;
+    let tile, origTile;
+    for (let y = 0; y < this.maze_.map.ROWS; y++) {
+      for (let x = 0; x < this.maze_.map.COLS; x++) {
         // Compute the tile index.
         tile = this.isOnPathStr_(x, y) +
           this.isOnPathStr_(x, y - 1) + // North.
@@ -140,7 +144,7 @@ export default class Subtype {
           this.isOnPathStr_(x, y + 1) + // South.
           this.isOnPathStr_(x - 1, y); // East.
 
-        var adjacentToPath = (tile !== '00000');
+        const adjacentToPath = (tile !== '00000');
 
         // Draw the tile.
         if (!TILE_SHAPES[tile]) {
@@ -148,17 +152,18 @@ export default class Subtype {
           tile = this.getEmptyTile(x, y, adjacentToPath, wallMap);
         }
 
-        this.maze_.drawTile(svg, TILE_SHAPES[tile], y, x, tileId);
-
-        // Draw checkerboard for bee.
-        // TODO move this into bee class
-        if (this.isBee() && (x + y) % 2 === 0) {
-          var isPath = !/null/.test(tile);
-          this.maze_.gridItemDrawer.addCheckerboardTile(y, x, isPath);
-        }
+        this.drawTile(svg, TILE_SHAPES[tile], y, x, tileId);
 
         tileId++;
       }
     }
   }
+
+  /**
+   * Draw the given tile at row, col
+   */
+  drawTile(svg, tileSheetLocation, row, col, tileId) {
+    this.drawer.drawTile(svg, tileSheetLocation, row, col, tileId, this.skin_.tiles);
+  }
+
 }

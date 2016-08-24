@@ -1,7 +1,4 @@
 import Drawer from './drawer';
-import { SVG_NS } from '../constants';
-import { cellId } from './mazeUtils';
-const SQUARE_SIZE = 50;
 
 /**
  * Extends Drawer to draw flowers/honeycomb for bee.
@@ -28,10 +25,12 @@ export default class BeeItemDrawer extends Drawer {
   /**
    * @override
    */
-  getAsset(prefix, row, col) {
+  getAsset(row, col, prefix='') {
     switch (prefix) {
       case 'cloud':
         return this.skin_.cloud;
+      case 'cloudAnimation':
+        return this.skin_.cloudAnimation;
       case 'beeItem':
         if (this.bee_.isHive(row, col, false)) {
           return this.skin_.honey;
@@ -43,7 +42,7 @@ export default class BeeItemDrawer extends Drawer {
 
   /**
    * Generic reset function, shared by DirtDrawer so that we can call
-   * Maze.gridItemDrawer.reset() blindly.
+   * drawer.reset() blindly.
    * @override
    */
   reset() {
@@ -90,7 +89,7 @@ export default class BeeItemDrawer extends Drawer {
     }
 
     // Display the images.
-    let img = this.updateImageWithIndex_('beeItem', row, col);
+    let img = this.drawImage_(row, col, 'beeItem');
     this.updateCounter_('counter', row, col, img ? counterText : '');
 
     if (isClouded) {
@@ -110,7 +109,7 @@ export default class BeeItemDrawer extends Drawer {
    * @param {string} counterText
    */
   updateCounter_(prefix, row, col, counterText) {
-    var counterElement = document.getElementById(cellId(prefix, row, col));
+    var counterElement = document.getElementById(Drawer.cellId(row, col, prefix));
     if (!counterElement) {
       // we want an element, so let's create one
       counterElement = this.createText(prefix, row, col, counterText);
@@ -132,11 +131,11 @@ export default class BeeItemDrawer extends Drawer {
     // Create text.
     var hPadding = 2;
     var vPadding = 2;
-    var text = document.createElementNS(SVG_NS, 'text');
+    var text = document.createElementNS(Drawer.SVG_NS, 'text');
     // Position text just inside the bottom right corner.
-    text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
-    text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
-    text.setAttribute('id', cellId(prefix, row, col));
+    text.setAttribute('x', (col + 1) * Drawer.SQUARE_SIZE - hPadding);
+    text.setAttribute('y', (row + 1) * Drawer.SQUARE_SIZE - vPadding);
+    text.setAttribute('id', Drawer.cellId(row, col, prefix));
     text.setAttribute('class', 'bee-counter-text');
     text.appendChild(document.createTextNode(counterText));
     svg.insertBefore(text, pegmanElement);
@@ -146,11 +145,11 @@ export default class BeeItemDrawer extends Drawer {
 
   createCounterImage_(prefix, i, row, href) {
     var id = prefix + (i + 1);
-    var image = document.createElementNS(SVG_NS, 'image');
+    var image = document.createElementNS(Drawer.SVG_NS, 'image');
     image.setAttribute('id', id);
-    image.setAttribute('width', SQUARE_SIZE);
-    image.setAttribute('height', SQUARE_SIZE);
-    image.setAttribute('y', row * SQUARE_SIZE);
+    image.setAttribute('width', Drawer.SQUARE_SIZE);
+    image.setAttribute('height', Drawer.SQUARE_SIZE);
+    image.setAttribute('y', row * Drawer.SQUARE_SIZE);
 
     image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
 
@@ -171,9 +170,9 @@ export default class BeeItemDrawer extends Drawer {
           this.skin_.honey);
       }
 
-      var deltaX = SQUARE_SIZE;
+      var deltaX = Drawer.SQUARE_SIZE;
       if (honeyCount > 8) {
-        deltaX = (8 - 1) * SQUARE_SIZE / (honeyCount - 1);
+        deltaX = (8 - 1) * Drawer.SQUARE_SIZE / (honeyCount - 1);
       }
       this.honeyImages_[i].setAttribute('x', i * deltaX);
     }
@@ -193,9 +192,9 @@ export default class BeeItemDrawer extends Drawer {
         this.nectarImages_[i] = this.createCounterImage_('nectar', i, 0, href);
       }
 
-      var deltaX = SQUARE_SIZE;
+      var deltaX = Drawer.SQUARE_SIZE;
       if (nectarCount > 8) {
-        deltaX = (8 - 1) * SQUARE_SIZE / (nectarCount - 1);
+        deltaX = (8 - 1) * Drawer.SQUARE_SIZE / (nectarCount - 1);
       }
       this.nectarImages_[i].setAttribute('x', i * deltaX);
       this.nectarImages_[i].setAttributeNS('http://www.w3.org/1999/xlink',
@@ -231,7 +230,7 @@ export default class BeeItemDrawer extends Drawer {
    * Show the cloud icon.
    */
   showCloud_(row, col) {
-    this.updateImageWithIndex_('cloud', row, col);
+    this.drawImage_(row, col, 'cloud');
 
     // Make sure the animation is cached by the browser.
     this.displayCloudAnimation_(row, col, false /* animate */);
@@ -241,7 +240,7 @@ export default class BeeItemDrawer extends Drawer {
    * Hide the cloud icon, and display the cloud hiding animation.
    */
   hideCloud_(row, col) {
-    var cloudElement = document.getElementById(cellId('cloud', row, col));
+    var cloudElement = document.getElementById(Drawer.cellId(row, col, 'cloud'));
     if (cloudElement) {
       cloudElement.setAttribute('visibility', 'hidden');
     }
@@ -253,28 +252,13 @@ export default class BeeItemDrawer extends Drawer {
    * Create the cloud animation element, and perform the animation if necessary
    */
   displayCloudAnimation_(row, col, animate) {
-    var id = cellId('cloudAnimation', row, col);
+    let id = Drawer.cellId(row, col, 'cloudAnimation');
 
-    var cloudAnimation = document.getElementById(id);
-
-    if (!cloudAnimation) {
-      var pegmanElement = document.getElementsByClassName('pegman-location')[0];
-      var svg = document.getElementById('svgMaze');
-      cloudAnimation = document.createElementNS(SVG_NS, 'image');
-      cloudAnimation.setAttribute('id', id);
-      cloudAnimation.setAttribute('height', SQUARE_SIZE);
-      cloudAnimation.setAttribute('width', SQUARE_SIZE);
-      cloudAnimation.setAttribute('x', col * SQUARE_SIZE);
-      cloudAnimation.setAttribute('y', row * SQUARE_SIZE);
-      cloudAnimation.setAttribute('visibility', 'hidden');
-      svg.appendChild(cloudAnimation, pegmanElement);
-    }
+    let cloudAnimation = this.getOrCreateImage_(row, col, 'cloudAnimation', false);
 
     // We want to create the element event if we're not animating yet so that we
     // can make sure it gets loaded.
     cloudAnimation.setAttribute('visibility', animate ? 'visible' : 'hidden');
-    cloudAnimation.setAttributeNS('http://www.w3.org/1999/xlink',
-        'xlink:href', this.skin_.cloudAnimation);
   }
 
   /**
@@ -284,11 +268,11 @@ export default class BeeItemDrawer extends Drawer {
    */
   addCheckerboardTile(row, col, isPath) {
     var svg = document.getElementById('svgMaze');
-    var rect = document.createElementNS(SVG_NS, 'rect');
-    rect.setAttribute('width', SQUARE_SIZE);
-    rect.setAttribute('height', SQUARE_SIZE);
-    rect.setAttribute('x', col * SQUARE_SIZE);
-    rect.setAttribute('y', row * SQUARE_SIZE);
+    var rect = document.createElementNS(Drawer.SVG_NS, 'rect');
+    rect.setAttribute('width', Drawer.SQUARE_SIZE);
+    rect.setAttribute('height', Drawer.SQUARE_SIZE);
+    rect.setAttribute('x', col * Drawer.SQUARE_SIZE);
+    rect.setAttribute('y', row * Drawer.SQUARE_SIZE);
     rect.setAttribute('fill', '#78bb29');
     rect.setAttribute('opacity', isPath ? 0.2 : 0.5);
     if (isPath) {
