@@ -924,7 +924,6 @@ Maze.execute = function (stepMode) {
 
           // Run trial
           codegen.evalWith(code, {
-            StudioApp: studioApp,
             Maze: api,
             executionInfo: Maze.executionInfo
           });
@@ -957,7 +956,6 @@ Maze.execute = function (stepMode) {
       }
 
       codegen.evalWith(code, {
-        StudioApp: studioApp,
         Maze: api,
         executionInfo: Maze.executionInfo
       });

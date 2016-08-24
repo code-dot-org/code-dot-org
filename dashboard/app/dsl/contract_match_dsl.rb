@@ -16,5 +16,4 @@ class ContractMatchDSL < ContentDSL
 
     {@name => strings}
   end
-
 end

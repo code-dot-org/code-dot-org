@@ -56,6 +56,11 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
+    // Never advance the frame if the frameRate is 0
+    if (this.props.animationProps.frameRate === 0) {
+      return;
+    }
+
     this.setState({
       currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
@@ -121,8 +126,8 @@ const AnimationPreview = React.createClass({
       <div
         ref="root"
         style={containerStyle}
-        onMouseOver={this.onMouseOver}
-        onMouseOut={this.onMouseOut}
+        onMouseOver={!this.props.alwaysPlay ? this.onMouseOver : null}
+        onMouseOut={!this.props.alwaysPlay ? this.onMouseOut : null}
       >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>

@@ -11,6 +11,57 @@ class ApiController < ApplicationController
     head :not_found unless current_user
   end
 
+  def update_lockable_state
+    updates = params.require(:updates)
+    updates.to_a.each do |item|
+      user_level_data = item[:user_level_data]
+
+      if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
+        # Must provide user, level, and script ids
+        return head :bad_request
+      end
+
+      if item[:locked] && item[:readonly_answers]
+        # Can not view answers while locked
+        return head :bad_request
+      end
+
+      unless User.find(user_level_data[:user_id]).teachers.include? current_user
+        # Can only update lockable state for user's students
+        return head :forbidden
+      end
+
+      UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
+        user_level_data[:script_id], item[:locked], item[:readonly_answers])
+    end
+    render json: {}
+  end
+
+  # For a given user, gets the lockable state for each student in each of their sections
+  def lockable_state
+    unless current_user
+      render json: {}
+      return
+    end
+
+    data = current_user.sections.each_with_object({}) do |section, section_hash|
+      next if section[:deleted_at]
+      @section = section
+      load_script
+
+      section_hash[section.id] = {
+        section_id: section.id,
+        section_name: section.name,
+        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+          stage_state = stage.lockable_state(section.students)
+          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        end
+      }
+    end
+
+    render json: data
+  end
+
   def section_progress
     load_section
     load_script
@@ -174,7 +225,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
