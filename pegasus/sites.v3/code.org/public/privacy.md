@@ -2,12 +2,8 @@
 title: Privacy Policy
 ---
 
-We are updating our Privacy Policy and currently have an open review period. More information, including the draft of the updated Privacy Policy, can be found [here](http://blog.code.org/post/147243645493/supporting-student-privacy).
-
-- - - 
-
 # Privacy Policy
-Date of Last Revision: April 4, 2016
+Date of Last Revision: August 24, 2016
 
 ## About Code.org
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -227,4 +223,4 @@ Please contact Code.org with any questions or comments about this Privacy Notice
 <br />
 <br />
 <br />
-[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)
+[<img src="/shared/images/student_privacy_pledge.png" width="200" target="_blank">](http://studentprivacypledge.org/)
