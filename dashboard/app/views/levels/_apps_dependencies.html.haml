@@ -29,7 +29,7 @@
   = javascript_include_tag 'js/makerlab'
 
 -# Droplet script dependencies (all editCode - regardless of editor)
-- if use_droplet
+- if use_droplet || use_blockly
   %script{src: minifiable_asset_path('js/jsinterpreter/acorn.js')}
   %script{src: minifiable_asset_path('js/jsinterpreter/interpreter.js')}
 -# Droplet script dependencies (only when editor present)

@@ -111,7 +111,8 @@ class Stage < ActiveRecord::Base
         end
       end
 
-      if script.has_lesson_plan?
+      # Don't want lesson plans for lockable levels
+      if !lockable && script.has_lesson_plan?
         stage_data[:lesson_plan_html_url] = lesson_plan_html_url
         stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
