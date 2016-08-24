@@ -99,8 +99,7 @@ module.exports = function (app) {
         skins: require('@cdo/apps/gamelab/skins'),
         levels: {
           levels: require('@cdo/apps/gamelab/levels')
-        },
-        blocks: require('@cdo/apps/gamelab/blocks')
+        }
       };
     };
   }
