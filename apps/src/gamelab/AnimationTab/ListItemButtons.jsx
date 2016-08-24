@@ -55,7 +55,7 @@ var sliderStyle = {
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
-      <ItemLoopToggle style={styles.loopTogglePosition} onChange={props.onLoopAnimationChanged} loopAnimation={props.loopAnimation} />
+      <ItemLoopToggle style={styles.loopTogglePosition} onToggleChange={props.onLoopingChanged} looping={props.looping} />
       <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameRate} lineWidth={120} onChange={props.onFrameRateChanged}/>
       <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
       <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
@@ -67,7 +67,7 @@ ListItemButtons.propTypes = {
   onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
   onFrameRateChanged: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
   frameRate: React.PropTypes.number/*.isRequired as soon as everything is hooked up. */,
-  onLoopAnimationChanged: React.PropTypes.func,
-  loopAnimation: React.PropTypes.bool
+  onLoopingChanged: React.PropTypes.func,
+  looping: React.PropTypes.bool
 };
 module.exports = Radium(ListItemButtons);

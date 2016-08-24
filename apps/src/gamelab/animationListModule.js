@@ -33,6 +33,8 @@ export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
 // Args: {AnimationKey} key, {number} frameRate
 const SET_ANIMATION_FRAME_RATE = 'AnimationList/SET_ANIMATION_FRAME_RATE';
+// Args: {AnimationKey} key, {bool} looping
+const SET_ANIMATION_LOOPING = 'AnimationList/SET_ANIMATION_LOOPING';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
@@ -86,6 +88,7 @@ function propsByKey(state, action) {
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
     case SET_ANIMATION_FRAME_RATE:
+    case SET_ANIMATION_LOOPING:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
@@ -128,6 +131,11 @@ function animationPropsReducer(state, action) {
     case SET_ANIMATION_FRAME_RATE:
       return Object.assign({}, state, {
         frameRate: action.frameRate
+      });
+
+    case SET_ANIMATION_LOOPING:
+      return Object.assign({}, state, {
+        looping: action.looping
       });
 
     case START_LOADING_FROM_SOURCE:
@@ -211,6 +219,7 @@ export function addBlankAnimation() {
         frameSize: {x: 100, y: 100},
         frameCount: 1,
         frameRate: 15,
+        looping: true,
         version: null,
         loadedFromSource: true,
         saved: false,
@@ -325,6 +334,23 @@ export function setAnimationFrameRate(key, frameRate) {
       type: SET_ANIMATION_FRAME_RATE,
       key,
       frameRate
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * Set the looping value of the specified animation.
+ * @param {string} key
+ * @param {bool} looping
+ * @returns {{type: ActionType, key: string, looping: bool}}
+ */
+export function setAnimationLooping(key, looping) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_LOOPING,
+      key,
+      looping
     });
     dashboard.project.projectChanged();
   };

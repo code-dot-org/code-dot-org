@@ -6,7 +6,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameRate} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameRate, setAnimationLooping} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -80,6 +80,7 @@ const AnimationListItem = React.createClass({
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
     setAnimationFrameRate: React.PropTypes.func.isRequired,
+    setAnimationLooping: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   },
@@ -111,6 +112,10 @@ const AnimationListItem = React.createClass({
   deleteAnimation(evt) {
     this.props.deleteAnimation(this.props.animationKey);
     evt.stopPropagation();
+  },
+
+  setAnimationLooping(looping) {
+    this.props.setAnimationLooping(this.props.animationKey, looping);
   },
 
   onNameChange(event) {
@@ -169,6 +174,8 @@ const AnimationListItem = React.createClass({
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
             frameRate={this.convertFrameRateToFraction(this.state.frameRate)}
+            onLoopingChanged={this.setAnimationLooping}
+            looping={this.props.animationProps.looping}
           />}
       </div>
     );
@@ -192,6 +199,9 @@ export default connect(state => ({
     },
     setAnimationFrameRate(animationKey, frameRate) {
       dispatch(setAnimationFrameRate(animationKey, frameRate));
+    },
+    setAnimationLooping(animationKey, looping) {
+      dispatch(setAnimationLooping(animationKey, looping));
     }
   };
 })(Radium(AnimationListItem));
