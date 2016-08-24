@@ -126,7 +126,6 @@ function dotClicked(url, e) {
 
 export const BubbleInterior = React.createClass({
   propTypes: {
-    courseOverviewPage: React.PropTypes.bool,
     showingIcon: React.PropTypes.bool,
     showingLevelName: React.PropTypes.bool,
     title: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string])
@@ -135,14 +134,14 @@ export const BubbleInterior = React.createClass({
   render() {
     let bubbleInterior;
 
-    if (this.props.courseOverviewPage && this.props.showingLevelName) {
+    if (this.props.showingLevelName) {
       if (this.props.showingIcon) {
         bubbleInterior = '';
       } else {
         bubbleInterior = '\u00a0';
       }
-    } else {
-      bubbleInterior = !this.props.showingIcon && this.props.title;
+    } else if (!this.props.showingIcon) {
+      bubbleInterior = this.props.title;
     }
 
     return (
@@ -159,8 +158,10 @@ export const BubbleInterior = React.createClass({
 export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
-    currentLevelId: React.PropTypes.string,
     courseOverviewPage: React.PropTypes.bool,
+
+    // redux provdied
+    currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
   },
 
@@ -231,7 +232,6 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           >
             <BubbleInterior
-              courseOverviewPage={this.props.courseOverviewPage}
               showingIcon={!!iconForLevelStatus}
               showingLevelName={showLevelName}
               title={level.title || undefined}
