@@ -352,8 +352,14 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
+
+  api_methods = ApiController.instance_methods(false) +
+    Dir.glob(File.join(Rails.application.config.paths['app/views'].first, 'api/*')).map do |file|
+      File.basename(file).to_s.gsub(/\..*$/, '')
+    end
+
   namespace :dashboardapi, module: :api do
-    ApiController.instance_methods(false).each do |action|
+    api_methods.each do |action|
       get action, action: action
     end
   end
@@ -369,7 +375,7 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
-    ApiController.instance_methods(false).each do |action|
+    api_methods.each do |action|
       get action, action: action
     end
   end
