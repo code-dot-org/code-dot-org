@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/fbjs/.*
+.*/node_modules/react-color/.*
+.*/node_modules/radium/.*
+.*/node_modules/editions/.*
+.*/node_modules/cjson/.*
+<PROJECT_ROOT>/build/.*
+
+[include]
+
+[libs]
+
+[options]
+module.name_mapper='^@cdo/locale$' -> '<PROJECT_ROOT>/src/locale-do-not-import.js'
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
