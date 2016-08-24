@@ -559,7 +559,7 @@ Applab.init = function (config) {
   config.runButtonClickWrapper = runButtonClickWrapper;
 
   if (!config.level.editCode) {
-    throw 'Cannot use App Lab with Blockly';
+    throw 'App Lab requires Droplet';
   }
 
   if (!config.channel) {
