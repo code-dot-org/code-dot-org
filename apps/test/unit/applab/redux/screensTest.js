@@ -5,13 +5,17 @@ import sinon from 'sinon';
 import {
   sources as sourcesApi,
   channels as channelsApi,
+  assets as assetsApi,
 } from '@cdo/apps/clientApi';
 import {createStore} from '@cdo/apps/redux';
 import screensReducer, {
   toggleImportScreen,
   changeScreen,
-  fetchProject
+  fetchProject,
+  importIntoProject,
 } from '@cdo/apps/applab/redux/screens';
+import * as importFuncs from '@cdo/apps/applab/import';
+
 
 describe("Applab Screens Reducer", function () {
 
@@ -36,10 +40,10 @@ describe("Applab Screens Reducer", function () {
       store.dispatch(toggleImportScreen(true));
       const initialImportProject = store.getState().importProject;
       store.dispatch(fetchProject('invalid url'));
-      expect(store.getState().importProject).to.not.equal(initialImportProject);
+      expect(store.getState().importProject.equals(initialImportProject)).to.be.false;
 
       store.dispatch(toggleImportScreen(false));
-      expect(store.getState().importProject).to.equal(initialImportProject);
+      expect(store.getState().importProject.equals(initialImportProject)).to.be.true;
     });
   });
 
@@ -131,6 +135,65 @@ describe("Applab Screens Reducer", function () {
 
       });
     });
+  });
+
+  describe("the importIntoProject action", () => {
+
+    var designModeViz, resolve, reject;
+
+    beforeEach(() => {
+      sinon.stub(importFuncs, 'importScreensAndAssets').returns(
+        new Promise((_resolve, _reject) => {
+          resolve = _resolve;
+          reject = _reject;
+        })
+      );
+    });
+
+    afterEach(() => {
+      importFuncs.importScreensAndAssets.restore();
+    });
+
+    it("will set the isImportingProject flag to true at first", () => {
+      expect(store.getState().importProject.isImportingProject).to.be.false;
+      store.dispatch(importIntoProject('some-project', [], []));
+      expect(store.getState().importProject.isImportingProject).to.be.true;
+    });
+
+    it('will call importScreensAndAssets', () => {
+      expect(importFuncs.importScreensAndAssets).to.have.been.called;
+    });
+
+    describe('after importScreensAndAssets has been called', () => {
+      beforeEach(() => {
+        store.dispatch(importIntoProject('some-project', [], []));
+      });
+
+      it('will set the isImportingProject flag to false on success', (done) => {
+        resolve();
+        setTimeout(() => {
+          expect(store.getState().importProject.isImportingProject).to.be.false;
+          done();
+        }, 0);
+      });
+
+      it('will set the isImportingScreen flag to false on success', (done) => {
+        resolve();
+        setTimeout(() => {
+          expect(store.getState().isImportingScreen).to.be.false;
+          done();
+        }, 0);
+      });
+
+      it('will set the isImportingProject flag to false on failure', (done) => {
+        reject();
+        setTimeout(() => {
+          expect(store.getState().importProject.isImportingProject).to.be.false;
+          done();
+        }, 0);
+      });
+    });
+
   });
 
 });

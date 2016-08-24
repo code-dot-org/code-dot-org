@@ -1,16 +1,24 @@
+/* eslint no-unused-vars: "error" */
+
 import Immutable from 'immutable';
 import {
   sources as sourcesApi,
   channels as channelsApi,
 } from '../../clientApi';
+import * as importFuncs from '../import';
 
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 const TOGGLE_IMPORT_SCREEN = 'screens/TOGGLE_IMPORT_SCREEN';
 const IMPORT = {
-  IMPORT_PROJECT: {
+  PROJECT: {
     START_FETCHING: 'screens/importProject/START_FETCHING',
     FAILED_FETCHING: 'screens/importProject/FAILED_FETCHING',
     FINISHED_FETCHING: 'screens/importProject/FINISHED_FETCHING',
+  },
+  SCREENS: {
+    START_IMPORTING: 'screens/importScreens/START_IMPORTING',
+    FAILED_IMPORTING: 'screens/importScreens/FAILED_IMPORTING',
+    FINISHED_IMPORTING: 'screens/importScreens/FINISHED_IMPORTING',
   },
 };
 
@@ -18,45 +26,67 @@ var ImportProjectState = Immutable.Record({
   isFetchingProject: false,
   errorFetchingProject: false,
   fetchedProject: null,
+  isImportingProject: false,
+  errorImportingProject: false,
 });
 
 const ScreenState = Immutable.Record({
   currentScreenId: null,
   isImportingScreen: false,
-  importProject: new ImportProjectState(),
+  importProject: undefined,
 });
 
 const initialState = new ScreenState();
 
-export default function (state = initialState, action) {
+function screensReducer(state = initialState, action) {
   switch (action.type) {
     case CHANGE_SCREEN:
       return state.set('currentScreenId', action.screenId);
     case TOGGLE_IMPORT_SCREEN:
-      return state.merge({
-        isImportingScreen: action.importing,
-        importProject: initialState.importProject,
-      });
-    case IMPORT.IMPORT_PROJECT.START_FETCHING:
-      return state.setIn(['importProject', 'isFetchingProject'], true);
-    case IMPORT.IMPORT_PROJECT.FINISHED_FETCHING:
-      return state.update(
-        'importProject',
-        importProject => importProject.merge({
+      return state.set('isImportingScreen', action.importing);
+    case IMPORT.SCREENS.FINISHED_IMPORTING:
+      return state.set('isImportingScreen', false);
+    default:
+      return state;
+  }
+}
+
+function importReducer(state = new ImportProjectState(), action) {
+  switch (action.type) {
+    case TOGGLE_IMPORT_SCREEN:
+      return new ImportProjectState();
+    case IMPORT.PROJECT.START_FETCHING:
+      return state.set('isFetchingProject', true);
+    case IMPORT.PROJECT.FINISHED_FETCHING:
+      return state
+        .merge({
           isFetchingProject: false,
           errorFetchingProject: null,
-        }).set('fetchedProject', action.project)
-      );
-    case IMPORT.IMPORT_PROJECT.FAILED_FETCHING:
-      return state.mergeDeep({
-        importProject: {
-          isFetchingProject: false,
-          errorFetchingProject: true,
-        }
+        })
+        // use set instead of merge to keep it as a plain js object.
+        .set('fetchedProject', action.project);
+    case IMPORT.PROJECT.FAILED_FETCHING:
+      return state.merge({
+        isFetchingProject: false,
+        errorFetchingProject: true,
+      });
+    case IMPORT.SCREENS.START_IMPORTING:
+      return state.set('isImportingProject', true);
+    case IMPORT.SCREENS.FINISHED_IMPORTING:
+      return new ImportProjectState();
+    case IMPORT.SCREENS.FAILED_IMPORTING:
+      return state.merge({
+        isImportingProject: false,
+        errorImportingProject: true,
       });
     default:
       return state;
   }
+}
+
+export default function (state = initialState, action) {
+  state = screensReducer(state, action);
+  return state.set('importProject', importReducer(state.importProject, action));
 }
 
 /**
@@ -87,16 +117,16 @@ export function fetchProject(url) {
     var channel;
     var match = url.match(/projects\/applab\/([^\/]+)/);
     var onError = () => {
-      dispatch({type: IMPORT.IMPORT_PROJECT.FAILED_FETCHING, url});
+      dispatch({type: IMPORT.PROJECT.FAILED_FETCHING, url});
     };
     var onSuccess = () => {
       if (sources && channel) {
-        dispatch({type: IMPORT.IMPORT_PROJECT.FINISHED_FETCHING, url, project: {channel, sources}});
+        dispatch({type: IMPORT.PROJECT.FINISHED_FETCHING, url, project: {channel, sources}});
       }
     };
     if (match) {
       var projectId = match[1];
-      dispatch({type: IMPORT.IMPORT_PROJECT.START_FETCHING, url});
+      dispatch({type: IMPORT.PROJECT.START_FETCHING, url});
 
       channelsApi.withProjectId(projectId).ajax(
         'GET',
@@ -119,5 +149,16 @@ export function fetchProject(url) {
     } else {
       onError();
     }
+  };
+}
+
+
+export function importIntoProject(projectId, screens, assets) {
+  return dispatch => {
+    dispatch({type: IMPORT.SCREENS.START_IMPORTING, screens, assets});
+    importFuncs.importScreensAndAssets(projectId, screens, assets).then(
+      () => dispatch({type: IMPORT.SCREENS.FINISHED_IMPORTING}),
+      () => dispatch({type: IMPORT.SCREENS.FAILED_IMPORTING})
+    );
   };
 }
