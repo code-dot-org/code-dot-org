@@ -9,23 +9,20 @@
         baseUrl: '/blockly/js/bramble/'
     });
 
-    // Allow the user to override what we do with default files using `?forceFiles=1`
-    var forceFiles = window.location.search.indexOf("forceFiles=1") > -1;
-
     var theBramble = null;
     var webLab = null;
 
-    // Default filesystem content
+    // Project root in file system
     var projectRoot = "/codedotorg/weblab";
 
+    // Get the WebLab object from our parent window
     if (parent.getWebLab) {
         webLab = parent.getWebLab();
     } else {
         console.error("ERROR: getWebLab() method not found on parent");
     }
 
-    var startSources = webLab.getStartSources();
-
+    // expose object for parent window to talk to us through
     var brambleHost = {
         getBrambleCode: function (callback) {
             var fs = theBramble.getFileSystem();
@@ -61,9 +58,10 @@
         }
     };
 
+    // Give our interface to our parent
     webLab.setBrambleHost(brambleHost);
 
-    function installDefaultFiles(Bramble, callback) {
+    function installDefaultFiles(Bramble, sources, callback) {
         var fs = Bramble.getFileSystem();
         var sh = new fs.Shell();
         var Path = Bramble.Filer.Path;
@@ -87,26 +85,26 @@
                     });
                 }
 
-                function writeStartSource(i, callback) {
-                    if (i < startSources.files.length) {
-                        var file = startSources.files[i];
+                function writeStartSource(sources, i, callback) {
+                    if (i < sources.files.length) {
+                        var file = sources.files[i];
                         writeProjectFile(file.name, file.data, function () {
-                            writeStartSource(i + 1, callback);
+                            writeStartSource(sources, i + 1, callback);
                         });
                     } else {
                         callback();
                     }
                 }
 
-                writeStartSource(0, callback);
+                writeStartSource(sources, 0, callback);
             });
         });
     }
 
-    function ensureFiles(Bramble, callback) {
+    function ensureFiles(Bramble, sources, callback) {
         var fs = Bramble.getFileSystem();
 
-        return installDefaultFiles(Bramble, callback);
+        return installDefaultFiles(Bramble, sources, callback);
     }
 
     var inspectorEnabled = false;
@@ -167,8 +165,11 @@
 
         });
 
+        // Get initial sources to put in file system
+        var startSources = webLab.getStartSources();
+
         // Setup the filesystem while Bramble is loading
-        ensureFiles(Bramble, function () {
+        ensureFiles(Bramble, startSources, function () {
             // Now that fs is setup, tell Bramble which root dir to mount
             // and which file within that root to open on startup.
             Bramble.mount(projectRoot);
