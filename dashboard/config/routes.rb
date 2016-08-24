@@ -353,10 +353,12 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
 
-  api_methods = ApiController.instance_methods(false) +
+  # Wildcard routes for API controller: select all public instance methods in the controller,
+  # and all template names in `app/views/api/*`.
+  api_methods = (ApiController.instance_methods(false) +
     Dir.glob(File.join(Rails.application.config.paths['app/views'].first, 'api/*')).map do |file|
       File.basename(file).to_s.gsub(/\..*$/, '')
-    end
+    end).uniq
 
   namespace :dashboardapi, module: :api do
     api_methods.each do |action|
