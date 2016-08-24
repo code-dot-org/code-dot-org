@@ -69,7 +69,6 @@ const TableControls = React.createClass({
         </span>
 
         <button
-          className="btn"
           onClick={this.props.exportCsv}
           style={styles.exportButton}
         >
@@ -85,7 +84,6 @@ const TableControls = React.createClass({
             onChange={this.handleSelectImportFile}
           />
           <button
-            className="btn"
             onClick={() => this.importFileInput.click()}
             style={styles.importButton}
           >
