@@ -21,10 +21,25 @@ export function castValue(val) {
 }
 
 /**
- * Return the value as a string if it is defined, or return '' if it is undefined.
+ * Return the value as a string, or return '' if it is undefined or null.
  * @param {*} val
  * @returns {string}
  */
-export function displayValue(val) {
-  return String(valueOr(val, ''));
+export function editableValue(val) {
+  if (val === null || val === undefined) {
+    return '';
+  }
+  return String(val);
+}
+
+/**
+ * stringify the value, or replace it with "" if it is undefined or null.
+ * @param {*} val
+ * @returns {string}
+ */
+export function displayableValue(val) {
+  if (val === null || val === undefined || val === '') {
+    return '';
+  }
+  return JSON.stringify(val);
 }

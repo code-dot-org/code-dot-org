@@ -164,7 +164,7 @@ describe("ImportScreensDialog", () => {
     describe("the import button", () => {
       it("calls the onImport prop when clicked", () => {
         dialog.prop('onConfirm')();
-        expect(onImport.calledWith([], [])).to.be.true;
+        expect(onImport.calledWith('some-project', [], [])).to.be.true;
       });
 
       it("passes the selected screens to the onImport prop function", () => {
@@ -174,7 +174,7 @@ describe("ImportScreensDialog", () => {
         dialog.update();
 
         dialog.prop('onConfirm')();
-        expect(onImport.calledWith(newSelected, [])).to.be.true;
+        expect(onImport.calledWith('some-project', newSelected, [])).to.be.true;
       });
     });
 
@@ -224,13 +224,13 @@ describe("ImportScreensDialog", () => {
       checkboxSelector = dialog.find('MultiCheckboxSelector');
     });
 
-    it("the import button passes the selected screens to the onImport prop function", () => {
+    it("the import button passes the selected assets to the onImport prop function", () => {
       const newSelected = [checkboxSelector.prop('items')[0]];
       checkboxSelector.prop('onChange')(newSelected);
       dialog.update();
 
       dialog.prop('onConfirm')();
-      expect(onImport.calledWith([], newSelected)).to.be.true;
+      expect(onImport.calledWith('some-project', [], newSelected)).to.be.true;
     });
 
     describe("the asset list", () => {
