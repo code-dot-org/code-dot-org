@@ -291,6 +291,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'gets script cache from memcached (or fake memcached)' do
+    Script.stubs(:should_cache?).returns true
+
     Script.script_cache_to_cache # in test this is in non-distributed memory
 
     Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env

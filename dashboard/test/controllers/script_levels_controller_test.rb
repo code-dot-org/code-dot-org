@@ -866,7 +866,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     sign_in @teacher
 
-    get :show, script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position
+    get :show, params: {script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position}
 
     assert_select '.teacher-panel.hidden'
 
@@ -881,7 +881,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert script.pd?
     assert script.professional_course?
 
-    get :show, script_id: script, stage_position: 1, id: 1
+    get :show, params: {script_id: script, stage_position: 1, id: 1}
     assert_select '.teacher-panel', 0
 
     script = create(:script)
