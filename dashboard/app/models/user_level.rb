@@ -104,6 +104,7 @@ class UserLevel < ActiveRecord::Base
 
   def locked?(stage)
     return false unless stage.lockable?
+    return false if user.authorized_teacher?
     self.submitted? && !self.readonly_answers? || self.has_autolocked?(stage)
   end
 

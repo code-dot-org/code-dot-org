@@ -6,7 +6,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/netsim/locale';
-import experiments from '../experiments';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import NetSimLogEntry from './NetSimLogEntry';
 import Packet from './Packet';
@@ -21,7 +20,7 @@ var LOG_ENTRY_DATA_KEY = 'LogEntry';
 var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
 
 function usingNewLogBrowser() {
-  return experiments.isEnabled('netsimNewLogBrowser');
+  return true;
 }
 
 /**
