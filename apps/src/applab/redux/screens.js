@@ -4,6 +4,7 @@ import Immutable from 'immutable';
 import {
   sources as sourcesApi,
   channels as channelsApi,
+  assets as assetsApi,
 } from '../../clientApi';
 import * as importFuncs from '../import';
 
@@ -115,19 +116,48 @@ export function fetchProject(url) {
   return dispatch => {
     var sources;
     var channel;
+    var assets;
+    var existingAssets;
     var match = url.match(/projects\/applab\/([^\/]+)/);
     var onError = () => {
       dispatch({type: IMPORT.PROJECT.FAILED_FETCHING, url});
     };
     var onSuccess = () => {
-      if (sources && channel) {
-        dispatch({type: IMPORT.PROJECT.FINISHED_FETCHING, url, project: {channel, sources}});
+      if (sources && channel && assets && existingAssets) {
+        dispatch({
+          type: IMPORT.PROJECT.FINISHED_FETCHING,
+          url,
+          project: {
+            channel,
+            sources,
+            assets,
+            existingAssets,
+          }
+        });
       }
     };
     if (match) {
       var projectId = match[1];
       dispatch({type: IMPORT.PROJECT.START_FETCHING, url});
 
+      assetsApi.ajax(
+        'GET',
+        '',
+        xhr => {
+          existingAssets = JSON.parse(xhr.response);
+          onSuccess();
+        },
+        onError
+      );
+      assetsApi.withProjectId(projectId).ajax(
+        'GET',
+        '',
+        xhr => {
+          assets = JSON.parse(xhr.response);
+          onSuccess();
+        },
+        onError
+      );
       channelsApi.withProjectId(projectId).ajax(
         'GET',
         '',

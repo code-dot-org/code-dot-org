@@ -26,15 +26,17 @@ describe("The applab/import module", () => {
     assetsApi.copyAssets.restore();
   });
 
-  function getProjectWithHTML(toImport) {
+  function getProjectWithHTML(html) {
     return {
       channel: {
         name: 'Some Other Project!',
         id: 'some-other-project',
       },
       sources: {
-        html: `<div>${toImport}</div>`,
+        html: `<div>${html}</div>`,
       },
+      assets: [],
+      existingAssets: [],
     };
   }
 
@@ -97,6 +99,10 @@ describe("The applab/import module", () => {
         );
       });
 
+      it('should have an empty otherAssets', () => {
+        expect(importable.otherAssets).to.be.empty;
+      });
+
     });
 
     describe('When doing an import into a project with conflicting screens, the importable project', () => {
@@ -129,19 +135,36 @@ describe("The applab/import module", () => {
                  id="design_img1">
           </div>
         `);
-        importable = getImportableProject(
-          getProjectWithHTML(`
-            <div class="screen" id="screen1">
-              <img src="/v3/assets/some-other-project/asset1.png"
-                   data-canonical-image-url="asset1.png"
-                   id="img2">
-              <img src="/v3/assets/some-other-project/asset2.png"
-                   data-canonical-image-url="asset2.png"
-                   id="img3">
-            </div>
-            <div class="screen" id="screen2"></div>
-          `)
-        );
+        importable = getImportableProject({
+          channel: {
+            name: 'Some Other Project!',
+            id: 'some-other-project',
+          },
+          sources: {
+            html: `
+              <div>
+                <div class="screen" id="screen1">
+                  <img src="/v3/assets/some-other-project/asset1.png"
+                       data-canonical-image-url="asset1.png"
+                       id="img2">
+                  <img src="/v3/assets/some-other-project/asset2.png"
+                       data-canonical-image-url="asset2.png"
+                       id="img3">
+                </div>
+                <div class="screen" id="screen2"></div>
+              </div>`,
+          },
+          assets: [
+            {filename: 'asset1.png', category: 'image'},
+            {filename: 'asset2.png', category: 'image'},
+            {filename: 'asset3.png', category: 'image'},
+            {filename: 'asset4.png', category: 'image'},
+          ],
+          existingAssets: [
+            {filename: 'asset1.png', category: 'image'},
+            {filename: 'asset3.png', category: 'image'},
+          ]
+        });
       });
 
       it('should list the assets to replace', () => {
@@ -150,6 +173,16 @@ describe("The applab/import module", () => {
 
       it('should list the assets to import without replacing', () => {
         expect(importable.screens[0].assetsToImport).to.deep.equal(['asset2.png']);
+      });
+
+      it('should list the other assets not used in the screens', () => {
+        expect(importable.otherAssets).to.have.length(2);
+        expect(importable.otherAssets[0].filename).to.equal('asset3.png');
+        expect(importable.otherAssets[0].category).to.equal('image');
+        expect(importable.otherAssets[0].willReplace).to.be.true;
+        expect(importable.otherAssets[1].filename).to.equal('asset4.png');
+        expect(importable.otherAssets[1].category).to.equal('image');
+        expect(importable.otherAssets[1].willReplace).to.be.false;
       });
     });
 
