@@ -320,7 +320,8 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         in the class section.</li>
         <li><strong>Are you on the right level?</strong>
         You'll only be able to see other students in your class if you are on the
-        same simulator level.  Make sure everyone is on <%= window.location %></li>
+        same simulator level.  Make sure everyone is on
+        <pre><%= window.location %></pre></li>
         <% if (controller.isUserInMultipleSections()) { %>
           <li><strong>Are you in the right section?</strong>
           You were given a choice of class sections when you loaded this level.
