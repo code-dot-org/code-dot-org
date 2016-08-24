@@ -4,6 +4,7 @@
  * skin-specific functionality.
  */
 import Drawer from './drawer';
+import { SQUARE_SIZE, SVG_NS } from './drawer';
 import color from '../color';
 
 /**
@@ -20,24 +21,24 @@ export default class WordSearchDrawer extends Drawer {
     const backgroundId = Drawer.cellId(row, col, 'backgroundLetter');
     const textId = Drawer.cellId(row, col, 'letter');
 
-    const group = document.createElementNS(Drawer.SVG_NS, 'g');
-    const background = document.createElementNS(Drawer.SVG_NS, 'rect');
+    const group = document.createElementNS(SVG_NS, 'g');
+    const background = document.createElementNS(SVG_NS, 'rect');
     background.setAttribute('id', backgroundId);
-    background.setAttribute('width', Drawer.SQUARE_SIZE);
-    background.setAttribute('height', Drawer.SQUARE_SIZE);
-    background.setAttribute('x', col * Drawer.SQUARE_SIZE);
-    background.setAttribute('y', row * Drawer.SQUARE_SIZE);
+    background.setAttribute('width', SQUARE_SIZE);
+    background.setAttribute('height', SQUARE_SIZE);
+    background.setAttribute('x', col * SQUARE_SIZE);
+    background.setAttribute('y', row * SQUARE_SIZE);
     background.setAttribute('stroke', '#000000');
     background.setAttribute('stroke-width', 3);
     group.appendChild(background);
 
-    const text = document.createElementNS(Drawer.SVG_NS, 'text');
+    const text = document.createElementNS(SVG_NS, 'text');
     text.setAttribute('id', textId);
     text.setAttribute('class', 'search-letter');
-    text.setAttribute('width', Drawer.SQUARE_SIZE);
-    text.setAttribute('height', Drawer.SQUARE_SIZE);
-    text.setAttribute('x', (col + 0.5) * Drawer.SQUARE_SIZE);
-    text.setAttribute('y', (row + 0.5) * Drawer.SQUARE_SIZE);
+    text.setAttribute('width', SQUARE_SIZE);
+    text.setAttribute('height', SQUARE_SIZE);
+    text.setAttribute('x', (col + 0.5) * SQUARE_SIZE);
+    text.setAttribute('y', (row + 0.5) * SQUARE_SIZE);
     text.setAttribute('font-size', 32);
     text.setAttribute('text-anchor', 'middle');
     text.setAttribute('font-family', 'Verdana');
@@ -67,8 +68,8 @@ export default class WordSearchDrawer extends Drawer {
     if (text.getBBox) {
       // center text.
       const bbox = text.getBBox();
-      const heightDiff = Drawer.SQUARE_SIZE - bbox.height;
-      const targetTopY = row * Drawer.SQUARE_SIZE + heightDiff / 2;
+      const heightDiff = SQUARE_SIZE - bbox.height;
+      const targetTopY = row * SQUARE_SIZE + heightDiff / 2;
       const offset = targetTopY - bbox.y;
 
       text.setAttribute("transform", `translate(0, ${offset})`);

@@ -4,9 +4,8 @@
  * skin-specific functionality.
  */
 
-import { SVG_NS } from '../constants';
-
-const SQUARE_SIZE = 50;
+export const SQUARE_SIZE = 50;
+export const SVG_NS = 'http://www.w3.org/2000/svg';
 
 /**
  * @param {MaseMap} map The map from the maze, which shows the current
@@ -186,6 +185,3 @@ export default class Drawer {
     tileElement.appendChild(tileAnimation);
   }
 }
-
-Drawer.SVG_NS = SVG_NS;
-Drawer.SQUARE_SIZE = SQUARE_SIZE;

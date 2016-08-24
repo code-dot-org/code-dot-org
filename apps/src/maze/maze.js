@@ -449,6 +449,8 @@ Maze.init = function (config) {
 
     Maze.map.resetDirt();
 
+    Maze.subtype.createDrawer();
+
     drawMap();
 
     var stepButton = document.getElementById('stepButton');
