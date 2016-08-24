@@ -7,7 +7,9 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   end
 
   def district_name
-    object.school_district.try(:name)
+    school_district_id = object.try(:school_info).try(:school_district_id)
+    school_district = SchoolDistrict.find(school_district_id) if school_district_id
+    school_district.name if school_district
   end
 
   def in_section
