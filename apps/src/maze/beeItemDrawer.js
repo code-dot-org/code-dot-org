@@ -1,4 +1,5 @@
 import Drawer from './drawer';
+import { SQUARE_SIZE, SVG_NS } from './drawer';
 
 /**
  * Extends Drawer to draw flowers/honeycomb for bee.
@@ -131,10 +132,10 @@ export default class BeeItemDrawer extends Drawer {
     // Create text.
     var hPadding = 2;
     var vPadding = 2;
-    var text = document.createElementNS(Drawer.SVG_NS, 'text');
+    var text = document.createElementNS(SVG_NS, 'text');
     // Position text just inside the bottom right corner.
-    text.setAttribute('x', (col + 1) * Drawer.SQUARE_SIZE - hPadding);
-    text.setAttribute('y', (row + 1) * Drawer.SQUARE_SIZE - vPadding);
+    text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
+    text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
     text.setAttribute('id', Drawer.cellId(row, col, prefix));
     text.setAttribute('class', 'bee-counter-text');
     text.appendChild(document.createTextNode(counterText));
@@ -145,11 +146,11 @@ export default class BeeItemDrawer extends Drawer {
 
   createCounterImage_(prefix, i, row, href) {
     var id = prefix + (i + 1);
-    var image = document.createElementNS(Drawer.SVG_NS, 'image');
+    var image = document.createElementNS(SVG_NS, 'image');
     image.setAttribute('id', id);
-    image.setAttribute('width', Drawer.SQUARE_SIZE);
-    image.setAttribute('height', Drawer.SQUARE_SIZE);
-    image.setAttribute('y', row * Drawer.SQUARE_SIZE);
+    image.setAttribute('width', SQUARE_SIZE);
+    image.setAttribute('height', SQUARE_SIZE);
+    image.setAttribute('y', row * SQUARE_SIZE);
 
     image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
 
@@ -170,9 +171,9 @@ export default class BeeItemDrawer extends Drawer {
           this.skin_.honey);
       }
 
-      var deltaX = Drawer.SQUARE_SIZE;
+      var deltaX = SQUARE_SIZE;
       if (honeyCount > 8) {
-        deltaX = (8 - 1) * Drawer.SQUARE_SIZE / (honeyCount - 1);
+        deltaX = (8 - 1) * SQUARE_SIZE / (honeyCount - 1);
       }
       this.honeyImages_[i].setAttribute('x', i * deltaX);
     }
@@ -192,9 +193,9 @@ export default class BeeItemDrawer extends Drawer {
         this.nectarImages_[i] = this.createCounterImage_('nectar', i, 0, href);
       }
 
-      var deltaX = Drawer.SQUARE_SIZE;
+      var deltaX = SQUARE_SIZE;
       if (nectarCount > 8) {
-        deltaX = (8 - 1) * Drawer.SQUARE_SIZE / (nectarCount - 1);
+        deltaX = (8 - 1) * SQUARE_SIZE / (nectarCount - 1);
       }
       this.nectarImages_[i].setAttribute('x', i * deltaX);
       this.nectarImages_[i].setAttributeNS('http://www.w3.org/1999/xlink',
@@ -268,11 +269,11 @@ export default class BeeItemDrawer extends Drawer {
    */
   addCheckerboardTile(row, col, isPath) {
     var svg = document.getElementById('svgMaze');
-    var rect = document.createElementNS(Drawer.SVG_NS, 'rect');
-    rect.setAttribute('width', Drawer.SQUARE_SIZE);
-    rect.setAttribute('height', Drawer.SQUARE_SIZE);
-    rect.setAttribute('x', col * Drawer.SQUARE_SIZE);
-    rect.setAttribute('y', row * Drawer.SQUARE_SIZE);
+    var rect = document.createElementNS(SVG_NS, 'rect');
+    rect.setAttribute('width', SQUARE_SIZE);
+    rect.setAttribute('height', SQUARE_SIZE);
+    rect.setAttribute('x', col * SQUARE_SIZE);
+    rect.setAttribute('y', row * SQUARE_SIZE);
     rect.setAttribute('fill', '#78bb29');
     rect.setAttribute('opacity', isPath ? 0.2 : 0.5);
     if (isPath) {

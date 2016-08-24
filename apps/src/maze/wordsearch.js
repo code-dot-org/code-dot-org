@@ -25,8 +25,8 @@ export default class WordSearch extends Subtype {
   /**
    * @override
    */
-  createGridItemDrawer() {
-    return new WordSearchDrawer(this.maze_.map);
+  createDrawer() {
+    this.drawer = new WordSearchDrawer(this.maze_.map);
   }
 
   /**
