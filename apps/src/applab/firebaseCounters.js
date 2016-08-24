@@ -27,7 +27,7 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
         // Abort the transaction.
         return;
       }
-      tableData.rowCount = (tableData.rowCount || 0) + rowCountChange;
+      tableData.rowCount = Math.max(0, (tableData.rowCount || 0) + rowCountChange);
       return tableData;
     }).then(transactionData => {
       if (!transactionData.committed) {

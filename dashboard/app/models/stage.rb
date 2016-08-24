@@ -2,14 +2,15 @@
 #
 # Table name: stages
 #
-#  id            :integer          not null, primary key
-#  name          :string(255)      not null
-#  position      :integer
-#  script_id     :integer          not null
-#  created_at    :datetime
-#  updated_at    :datetime
-#  flex_category :string(255)
-#  lockable      :boolean
+#  id                :integer          not null, primary key
+#  name              :string(255)      not null
+#  absolute_position :integer
+#  script_id         :integer          not null
+#  created_at        :datetime
+#  updated_at        :datetime
+#  flex_category     :string(255)
+#  lockable          :boolean
+#  relative_position :integer          not null
 #
 
 # Ordered partitioning of script levels within a script
@@ -18,7 +19,11 @@ class Stage < ActiveRecord::Base
   has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
-  acts_as_list scope: :script
+
+  # A stage has an absolute position and a relative position. The difference between the two is that relative_position
+  # only accounts for other stages that have the same lockable setting, so if we have two lockable stages followed
+  # by a non-lockable stage, the third stage will have an absolute_position of 3 but a relative_position of 1
+  acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :name, scope: :script_id
 
@@ -28,7 +33,7 @@ class Stage < ActiveRecord::Base
   end
 
   def to_param
-    position.to_s
+    relative_position.to_s
   end
 
   def unplugged?
@@ -43,11 +48,7 @@ class Stage < ActiveRecord::Base
     return I18n.t("data.script.name.#{script.name}.#{name}") if lockable
 
     if script.stages.to_a.many?
-      # Because lockable stages aren't numbered, our stage number is actually our
-      # position, minus the number of lockable stages preceeding us
-      stage_number = position - script.stages.to_a[0, position].count(&:lockable)
-
-      I18n.t('stage_number', number: stage_number) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
+      I18n.t('stage_number', number: relative_position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name
       script.localized_title
     end
@@ -74,7 +75,7 @@ class Stage < ActiveRecord::Base
   end
 
   def lesson_plan_base_url
-    CDO.code_org_url "/curriculum/#{script.name}/#{position}"
+    CDO.code_org_url "/curriculum/#{script.name}/#{absolute_position}"
   end
 
   def summarize
@@ -85,7 +86,7 @@ class Stage < ActiveRecord::Base
           script_stages: script.stages.to_a.size,
           freeplay_links: script.freeplay_links,
           id: id,
-          position: position,
+          position: absolute_position,
           name: localized_name,
           title: localized_title,
           flex_category: localized_category,
@@ -110,7 +111,8 @@ class Stage < ActiveRecord::Base
         end
       end
 
-      if script.has_lesson_plan?
+      # Don't want lesson plans for lockable levels
+      if !lockable && script.has_lesson_plan?
         stage_data[:lesson_plan_html_url] = lesson_plan_html_url
         stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end

@@ -8,7 +8,8 @@ const style = {
     verticalAlign: 'top',
     // lineHeight does not get the automatic 'px' suffix
     // see https://facebook.github.io/react/tips/style-props-value-px.html
-    lineHeight: `${LINE_HEIGHT}px`
+    lineHeight: `${LINE_HEIGHT}px`,
+    paddingBottom: 8
   }
 };
 
