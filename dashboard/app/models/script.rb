@@ -536,6 +536,10 @@ class Script < ActiveRecord::Base
           raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
         end
       end
+
+      if stage.lockable && stage.script_levels.length > 1
+        raise 'Expect lockable stages to have a single script_level'
+      end
     end
 
     script.stages = script_stages
