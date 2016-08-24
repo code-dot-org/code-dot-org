@@ -518,8 +518,6 @@ Applab.onTick = function () {
 
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
-  } else {
-    throw 'Cannot use App Lab with Blockly';
   }
 
   if (checkFinished()) {
