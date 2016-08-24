@@ -62,7 +62,7 @@ window.SignupManager = function (options) {
     $("#student-terms").fadeIn();
     $("#teacher-terms").hide();
 
-    // Implicitly accept terms of service for students
+    // Implicitly accept terms of service for students.
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
@@ -76,7 +76,7 @@ window.SignupManager = function (options) {
     $("#student-terms").hide();
     $("#teacher-terms").fadeIn();
 
-    // Force teachers to explicitly accept terms of service
+    // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
   }
 

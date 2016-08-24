@@ -123,8 +123,8 @@ class User < ActiveRecord::Base
   belongs_to :invited_by, :polymorphic => true
 
   # TODO: I think we actually want to do this.
-  # you can be associated with distrits through cohorts
-  # has_many :districts, through: :cohorts
+  # You can be associated with districts through cohorts
+  # has_many :districts, through: :cohorts.
 
   def facilitator?
     permission? UserPermission::FACILITATOR
