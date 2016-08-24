@@ -36,7 +36,7 @@ class CreateSchoolInfos < ActiveRecord::Migration
   end
 
   def down
-    add_reference(:pd_enrollments, :school_info)
+    remove_reference(:pd_enrollments, :school_info)
     drop_table :school_infos
   end
 end
