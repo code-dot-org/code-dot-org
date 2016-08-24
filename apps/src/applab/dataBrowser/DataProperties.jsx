@@ -21,6 +21,7 @@ const styles = {
   tableName: {
     fontSize: 18,
     marginBottom: 10,
+    marginTop: 20,
   }
 };
 
