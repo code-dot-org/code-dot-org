@@ -1,5 +1,5 @@
 var React = require('react');
-var applabMsg = require('./locale');
+var applabMsg = require('@cdo/applab/locale');
 var DesignModeBox = require('./DesignModeBox');
 var DesignModeHeaders = require('./DesignModeHeaders');
 

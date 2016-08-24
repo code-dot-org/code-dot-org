@@ -37,8 +37,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "timeout_failure_tick": "150",
-    "contained_level_names": null,
-    "first_sprite_index": "0"
+    "first_sprite_index": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This level is marked as a success if there is some code written under all 4 event handlers when the program is run.\r\nHave not so far found a way to check whether 4th bird has been clicked.",

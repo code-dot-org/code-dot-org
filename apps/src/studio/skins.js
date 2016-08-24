@@ -1122,15 +1122,14 @@ function loadHoc2015(skin, assetUrl) {
   skin.playFinalGoalSound = true;
 
   // These are used by blocks.js to customize our dropdown blocks across skins
-  // NOTE: map names must have double quotes inside single quotes
   // NOTE: first item must be RANDOM_VALUE
   skin.mapChoices = [
     [msg.setMapRandom(), RANDOM_VALUE],
-    [msg.setMapBlank(), '"blank"'],
-    [msg.setMapCircle(), '"circle"'],
-    [msg.setMapHorizontal(), '"horizontal"'],
-    [msg.setMapGrid(), '"grid"'],
-    [msg.setMapBlobs(), '"blobs"']
+    [msg.setMapBlank(), 'blank'],
+    [msg.setMapCircle(), 'circle'],
+    [msg.setMapHorizontal(), 'horizontal'],
+    [msg.setMapGrid(), 'grid'],
+    [msg.setMapBlobs(), 'blobs']
     ];
 
   skin.backgroundChoices = [
@@ -1438,6 +1437,34 @@ function loadStudio(skin, assetUrl) {
   };
   skin.grid = {
     background: skin.assetUrl('background_grid.png'),
+  };
+
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), 'blank'],
+    [msg.setMapCircle(), 'circle'],
+    [msg.setMapHorizontal(), 'horizontal'],
+    [msg.setMapGrid(), 'grid'],
+    [msg.setMapBlobs(), 'blobs']
+  ];
+
+  skin.wallMaps = {
+    blank: {
+      srcUrl: skin.assetUrl('obstacle_blank.png'),
+    },
+    circle: {
+      srcUrl: skin.assetUrl('obstacle_circle.png'),
+    },
+    horizontal: {
+      srcUrl: skin.assetUrl('obstacle_horizontal.png'),
+    },
+    grid: {
+      srcUrl: skin.assetUrl('obstacle_grid.png'),
+    },
+    blobs: {
+      srcUrl: skin.assetUrl('obstacle_blobs.png'),
+    },
   };
 
   skin.avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus", "witch",

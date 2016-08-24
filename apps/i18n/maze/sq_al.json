@@ -89,5 +89,6 @@
   "whileTooltip": "Përsërit veprimet e brendshme derisa të arrihet pika e mbarimit.",
   "word": "Gjej fjalën",
   "yes": "Po",
-  "youSpelled": "Ti gërmëzove"
+  "youSpelled": "Ti gërmëzove",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect."
 }

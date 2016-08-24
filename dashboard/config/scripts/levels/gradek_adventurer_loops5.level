@@ -39,22 +39,22 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
+            <block type="controls_repeat_simplified_dropdown" movable="false">
               <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="maze_moveWest">
+                <block type="maze_moveWest" movable="false">
                   <next>
-                    <block type="collector_collect"/>
+                    <block type="collector_collect" movable="false"/>
                   </next>
                 </block>
               </statement>
               <next>
-                <block type="controls_repeat_simplified_dropdown">
+                <block type="controls_repeat_simplified_dropdown" movable="false">
                   <title name="TIMES" config="3-10">3</title>
                   <statement name="DO">
-                    <block type="maze_moveSouth">
+                    <block type="maze_moveSouth" movable="false">
                       <next>
-                        <block type="collector_collect"/>
+                        <block type="collector_collect" movable="false"/>
                       </next>
                     </block>
                   </statement>

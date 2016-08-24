@@ -7,7 +7,6 @@ require 'active_support/core_ext/numeric/time'
 # An object that dynamically updates the RackAttack configuration based on DCDO and CDO.
 # Callers should construct and instance and then call start.
 class RackAttackConfigUpdater
-
   def initialize
   end
 

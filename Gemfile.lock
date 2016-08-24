@@ -6,6 +6,13 @@ GIT
     active_model_serializers (0.10.0.pre)
       activemodel (>= 4.0)
 
+GIT
+  remote: git://github.com/wjordan/geocoder.git
+  revision: 2da20897188b57f777df89f90e45cf331c5b014f
+  ref: rack-request-fix
+  specs:
+    geocoder (1.3.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,7 +186,7 @@ GEM
     firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.0)
       railties (>= 3.2, < 5.1)
-    geocoder (1.3.7)
+    gemoji (2.1.0)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     gli (2.13.4)
@@ -223,8 +230,7 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
-    honeybadger (1.16.7)
-      json
+    honeybadger (2.6.0)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -607,7 +613,8 @@ DEPENDENCIES
   firebase
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
-  geocoder
+  gemoji
+  geocoder!
   google-api-client
   google_drive (~> 1.0.0)
   haml
@@ -615,7 +622,7 @@ DEPENDENCIES
   haml_lint
   heroku_rails_deflate
   highline (~> 1.6.21)
-  honeybadger (~> 1.11)
+  honeybadger
   httparty
   ims-lti (~> 1.1)
   jbuilder (~> 1.2)

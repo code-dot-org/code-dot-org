@@ -59,6 +59,7 @@
     "codemirror": "5.5",
     "connect-livereload": "0.5.3",
     "copy-webpack-plugin": "^3.0.0",
+    "css-loader": "^0.23.1",
     "csv-parse": "^1.1.7",
     "data-collection": "^1.1.6",
     "ejs": "0.8.4",
@@ -114,7 +115,7 @@
     "karma-webpack": "^1.7.0",
     "linklocal": "2.5.2",
     "load-grunt-tasks": "2.0.0",
-    "lodash": "4.13.1",
+    "lodash": "4.15.0",
     "loose-envify": "^1.1.0",
     "marked": "0.3.2",
     "messageformat": "0.2.2",
@@ -130,12 +131,17 @@
     "progress-bar-webpack-plugin": "^1.8.0",
     "radium": "0.18.1",
     "react": "15.3.0",
+    "react-addons-shallow-compare": "15.3.0",
     "react-addons-test-utils": "15.3.0",
     "react-bootstrap": "0.30.1",
+    "react-color": "2.2.2",
     "react-dom": "15.3.0",
     "react-redux": "4.4.5",
     "react-router": "2.6.0",
+    "react-select": "^1.0.0-beta14",
     "react-storybook-addon-add-stories-group": "0.1.0",
+    "react-virtualized": "^7.19.4",
+    "react-virtualized-select": "^1.3.0",
     "reactabular": "^1.0.0",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
@@ -148,6 +154,7 @@
     "sinon": "^2.0.0-pre",
     "sprintf-js": "^1.0.3",
     "stackblur": "^1.0.0",
+    "style-loader": "^0.13.1",
     "time-grunt": "^1.3.0",
     "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#c88a3793cf7953090f78fa36f0e991abdcd756da",
     "uglify-js": "2.4.24",
@@ -161,7 +168,6 @@
   "dependencies": {
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
-    "query-string": "4.1.0",
-    "react-color": "code-dot-org/react-color#65a688f0ed61da00acea95cb1c8aa0c691b3839e"
+    "query-string": "4.1.0"
   }
 }
