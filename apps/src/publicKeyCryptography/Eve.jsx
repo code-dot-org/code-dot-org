@@ -13,7 +13,9 @@ import {
 
 const Eve = React.createClass({
   propTypes: {
-    setPublicModulus: React.PropTypes.func.isRequired
+    disabled: React.PropTypes.bool,
+    setPublicModulus: React.PropTypes.func.isRequired,
+    runModuloClock: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -22,7 +24,11 @@ const Eve = React.createClass({
       publicKey: null,
       privateKey: null,
       publicNumber: null,
-      secretNumber: null
+      secretNumber: null,
+      checkingPrivateKey: false,
+      privateKeyEquationResult: null,
+      checkingSecretNumber: false,
+      secretNumberEquationResult: null
     };
   },
 
@@ -40,7 +46,26 @@ const Eve = React.createClass({
   },
 
   setPrivateKey(privateKey) {
+    const {runModuloClock} = this.props;
+    const {publicKey, publicModulus} = this.state;
     this.setState({privateKey});
+    if ([publicKey, privateKey, publicModulus].every(Number.isInteger)) {
+      const dividend = publicKey * privateKey;
+      const privateKeyEquationResult = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({
+          privateKeyEquationResult: currentDividend % publicModulus,
+          checkingPrivateKey: true
+        });
+      }, () => {
+        this.setState({
+          privateKeyEquationResult,
+          checkingPrivateKey: false
+        });
+      });
+    } else {
+      this.setState({privateKey: null, privateKeyEquationResult: null});
+    }
   },
 
   setPublicNumber(publicNumber) {
@@ -49,44 +74,104 @@ const Eve = React.createClass({
 
   setSecretNumber(secretNumber) {
     this.setState({secretNumber});
+    const {runModuloClock} = this.props;
+    const {publicKey, publicModulus} = this.state;
+    this.setState({secretNumber});
+    if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
+      const dividend = publicKey * secretNumber;
+      const secretNumberEquationResult = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({
+          secretNumberEquationResult: currentDividend % publicModulus,
+          checkingSecretNumber: true
+        });
+      }, () => {
+        this.setState({
+          secretNumberEquationResult,
+          checkingSecretNumber: false
+        });
+      });
+    } else {
+      this.setState({secretNumber: null, secretNumberEquationResult: null});
+    }
   },
 
   render() {
+    const {disabled} = this.props;
     const {
       publicModulus,
       publicKey,
       privateKey,
       publicNumber,
-      secretNumber
+      secretNumber,
+      checkingPrivateKey,
+      privateKeyEquationResult,
+      checkingSecretNumber,
+      secretNumberEquationResult
     } = this.state;
-    const privateKeyEquationResult = publicKey !== null && privateKey !== null && publicModulus !== null ?
-        (publicKey * privateKey) % publicModulus :
-        null;
-    const secretNumberEquationResult = publicKey !== null && secretNumber !== null && publicModulus !== null ?
-        (publicKey * secretNumber) % publicModulus :
-        null;
     return (
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
           <div>
-            Set a public modulus: <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
+            Set a public modulus:
+            <PublicModulusDropdown
+              value={publicModulus}
+              onChange={this.onPublicModulusChange}
+              disabled={disabled}
+            />
           </div>
           <div>
-            Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
+            Enter Alice's public key:
+            <IntegerTextbox
+              value={publicKey}
+              onChange={this.setPublicKey}
+              disabled={disabled}
+            />
           </div>
           <div>
             Crack Alice's private key:
             <div>
-              (<IntegerField value={publicKey}/> x <PrivateKeyDropdown publicModulus={publicModulus} value={privateKey} onChange={this.setPrivateKey}/>)MOD <IntegerField value={publicModulus}/> = 1 <ValidatorField value={privateKeyEquationResult} expectedValue={1}/>
+              {'('}
+              <IntegerField value={publicKey}/>
+              {' x '}
+              <PrivateKeyDropdown
+                publicModulus={publicModulus}
+                value={privateKey}
+                onChange={this.setPrivateKey}
+                disabled={disabled}
+              />
+              {') MOD '}
+              <IntegerField value={publicModulus}/> = 1
+              {' '}
+              <ValidatorField value={privateKeyEquationResult} expectedValue={1} shouldEvaluate={!checkingPrivateKey}/>
             </div>
           </div>
           <div>
-            Enter Bob's public number: <IntegerTextbox value={publicNumber} onChange={this.setPublicNumber}/>
+            Enter Bob's public number:
+            <IntegerTextbox
+              value={publicNumber}
+              onChange={this.setPublicNumber}
+              disabled={disabled}
+            />
           </div>
           <div>
             Crack Bob's secret number:
             <div>
-              (<IntegerField value={publicKey}/> x <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>)MOD <IntegerField value={publicModulus}/>  = <IntegerField value={publicNumber}/> <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber}/>
+              {'('}
+              <IntegerField value={publicKey}/>
+              {' x '}
+              <SecretNumberDropdown
+                value={secretNumber}
+                onChange={this.setSecretNumber}
+                publicModulus={publicModulus}
+                disabled={disabled}
+              />
+              {') MOD '}
+              <IntegerField value={publicModulus}/>
+              {' = '}
+              <IntegerField value={publicNumber}/>
+              {' '}
+              <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber} shouldEvaluate={!checkingSecretNumber}/>
             </div>
           </div>
         </NumberedSteps>
