@@ -132,7 +132,7 @@ class Documents < Sinatra::Base
   end
 
   # Language selection
-  get %r{^/lang/([^/]+)/?(.*)?$} do
+  get %r{/lang/([^/]+)/?(.*)?} do
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
     dont_cache
