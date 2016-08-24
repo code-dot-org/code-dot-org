@@ -1,4 +1,4 @@
-class CreateUserProficiencies < ActiveRecord::Migration
+class CreateUserProficiencies < ActiveRecord::Migration[4.2]
   def change
     create_table :user_proficiencies do |t|
       t.references :user, index: true, foreign_key: true, null: false

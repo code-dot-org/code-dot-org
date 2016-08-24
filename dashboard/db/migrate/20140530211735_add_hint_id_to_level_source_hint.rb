@@ -1,4 +1,4 @@
-class AddHintIdToLevelSourceHint < ActiveRecord::Migration
+class AddHintIdToLevelSourceHint < ActiveRecord::Migration[4.2]
   def change
     add_column :level_source_hints, :hint_id, :integer
 

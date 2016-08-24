@@ -2,7 +2,7 @@
 # table from soft-deleted rows to the survey_results table. Does NOT remove the
 # data from the users table.
 
-class MigrateDeletedUsersNetPromoterScore2015Data < ActiveRecord::Migration
+class MigrateDeletedUsersNetPromoterScore2015Data < ActiveRecord::Migration[4.2]
   def change
     reversible do |direction|
       # In the up direction, we create SurveyResult records for soft-deleted

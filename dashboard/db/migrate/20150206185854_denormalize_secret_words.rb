@@ -1,4 +1,4 @@
-class DenormalizeSecretWords < ActiveRecord::Migration
+class DenormalizeSecretWords < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :secret_words, :string
     execute <<SQL

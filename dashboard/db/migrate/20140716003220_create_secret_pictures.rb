@@ -1,4 +1,4 @@
-class CreateSecretPictures < ActiveRecord::Migration
+class CreateSecretPictures < ActiveRecord::Migration[4.2]
   def change
     create_table :secret_pictures do |t|
       t.string :name, null: false

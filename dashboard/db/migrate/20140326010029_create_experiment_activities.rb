@@ -1,4 +1,4 @@
-class CreateExperimentActivities < ActiveRecord::Migration
+class CreateExperimentActivities < ActiveRecord::Migration[4.2]
   def change
     create_table :experiment_activities do |t|
       t.references :activity, null: false

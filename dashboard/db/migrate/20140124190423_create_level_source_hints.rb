@@ -1,4 +1,4 @@
-class CreateLevelSourceHints < ActiveRecord::Migration
+class CreateLevelSourceHints < ActiveRecord::Migration[4.2]
   def change
     create_table :level_source_hints do |t|
       t.integer :level_source_id, index: true

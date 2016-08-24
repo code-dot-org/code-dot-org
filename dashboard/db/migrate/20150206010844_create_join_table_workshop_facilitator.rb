@@ -1,4 +1,4 @@
-class CreateJoinTableWorkshopFacilitator < ActiveRecord::Migration
+class CreateJoinTableWorkshopFacilitator < ActiveRecord::Migration[4.2]
   def change
     create_join_table :workshops, :facilitators do |t|
       t.references :workshops, index: true, null: false

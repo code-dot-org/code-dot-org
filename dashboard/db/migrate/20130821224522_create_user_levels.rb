@@ -1,4 +1,4 @@
-class CreateUserLevels < ActiveRecord::Migration
+class CreateUserLevels < ActiveRecord::Migration[4.2]
   def change
     create_table :user_levels do |t|
       t.references :user, null: false

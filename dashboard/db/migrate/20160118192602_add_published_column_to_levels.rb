@@ -1,4 +1,4 @@
-class AddPublishedColumnToLevels < ActiveRecord::Migration
+class AddPublishedColumnToLevels < ActiveRecord::Migration[4.2]
   def up
     add_column :levels, :published, :boolean, default: 0
 

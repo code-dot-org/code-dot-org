@@ -1,4 +1,4 @@
-class CreateGalleryActivities < ActiveRecord::Migration
+class CreateGalleryActivities < ActiveRecord::Migration[4.2]
   def change
     create_table :gallery_activities do |t|
       t.integer :user_id, null: false

@@ -1,4 +1,4 @@
-class FixFarmerLevels < ActiveRecord::Migration
+class FixFarmerLevels < ActiveRecord::Migration[4.2]
   def self.up
     Karel.all.each do |level|
       maze = level.properties["maze"]

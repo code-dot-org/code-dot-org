@@ -1,4 +1,4 @@
-class AddLevelsToScriptLevel < ActiveRecord::Migration
+class AddLevelsToScriptLevel < ActiveRecord::Migration[4.2]
   def up
     create_join_table :levels, :script_levels do |t|
       t.index :level_id

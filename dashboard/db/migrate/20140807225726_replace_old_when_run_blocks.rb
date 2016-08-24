@@ -1,4 +1,4 @@
-class ReplaceOldWhenRunBlocks < ActiveRecord::Migration
+class ReplaceOldWhenRunBlocks < ActiveRecord::Migration[4.2]
   def change
     if Game.where(:name => 'Flappy').first.nil?
       return

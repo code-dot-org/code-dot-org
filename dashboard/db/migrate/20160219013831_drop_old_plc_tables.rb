@@ -1,4 +1,4 @@
-class DropOldPlcTables < ActiveRecord::Migration
+class DropOldPlcTables < ActiveRecord::Migration[4.2]
   def up
     drop_table :professional_learning_courses if ActiveRecord::Base.connection.table_exists? :professional_learning_courses
     drop_table :professional_learning_modules if ActiveRecord::Base.connection.table_exists? :professional_learning_modules

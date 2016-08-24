@@ -1,4 +1,4 @@
-class AddCodeToSections < ActiveRecord::Migration
+class AddCodeToSections < ActiveRecord::Migration[4.2]
   def change
     add_column :sections, :code, :string
 

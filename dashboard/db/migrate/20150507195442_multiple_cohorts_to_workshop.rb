@@ -1,4 +1,4 @@
-class MultipleCohortsToWorkshop < ActiveRecord::Migration
+class MultipleCohortsToWorkshop < ActiveRecord::Migration[4.2]
   def change
     create_table :workshop_cohorts do |t|
       t.integer :workshop_id, null: false

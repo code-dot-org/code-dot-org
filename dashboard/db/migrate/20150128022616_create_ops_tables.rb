@@ -1,4 +1,4 @@
-class CreateOpsTables < ActiveRecord::Migration
+class CreateOpsTables < ActiveRecord::Migration[4.2]
   def change
     create_table :districts do |t|
       t.string :name, null: false

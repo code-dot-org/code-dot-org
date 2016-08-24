@@ -1,4 +1,4 @@
-class CreatePlcCourseUnits < ActiveRecord::Migration
+class CreatePlcCourseUnits < ActiveRecord::Migration[4.2]
   def change
     create_table :plc_course_units do |t|
       t.references :plc_course, index: true, foreign_key: true
