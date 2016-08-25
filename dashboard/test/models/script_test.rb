@@ -463,4 +463,19 @@ class ScriptTest < ActiveSupport::TestCase
     assert /^Stage/.match(script.stages[1].localized_title).nil?
     assert /^Stage 2:/.match(script.stages[2].localized_title)
   end
+
+  test 'Script DSL fails when creating invalid lockable stages' do
+    create :level, name: 'Level1'
+    create :level, name: 'LockableAssessment1'
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1', lockable: true
+      level 'Level1';
+      assessment 'LockableAssessment1';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+
+    assert_raises do
+      Script.add_script({name: 'test_script'}, script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    end
+  end
 end
