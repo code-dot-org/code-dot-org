@@ -218,8 +218,6 @@ Scenario Outline: Logged in simple page view without instructions dialog
 Examples:
   | url                                                               | test_name                  |
   | http://learn.code.org/projects/applab/new                         | new applab project         |
-  | http://hourofcode.com/us                                          | hourofcode.com us          |
-  | http://hourofcode.com/br                                          | hourofcode.com br          |
   | http://code.org/                                                  | code.org homepage          |
   | http://studio.code.org/                                           | logged in studio homepage  |
   | http://studio.code.org/s/allthethings                             | logged in script progress  |
@@ -237,8 +235,6 @@ Scenario Outline: Logged out simple page view without instructions dialog
   And I close my eyes
 Examples:
   | url                                                               | test_name                    |
-  | http://hourofcode.com/us                                          | logged out hourofcode.com us |
-  | http://hourofcode.com/br                                          | logged out hourofcode.com br |
   | http://studio.code.org/                                           | logged out studio homepage   |
   | http://studio.code.org/s/allthethings                             | logged out script progress   |
 
