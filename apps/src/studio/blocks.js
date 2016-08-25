@@ -8,12 +8,12 @@
 /* global Studio */
 
 import _ from 'lodash';
+import * as utils from '../utils';
 import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import msg from './locale';
 import paramLists from './paramLists';
 import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
-import utils from '../utils';
 import { singleton as studioApp } from '../StudioApp';
 import {
   CardinalDirections,
