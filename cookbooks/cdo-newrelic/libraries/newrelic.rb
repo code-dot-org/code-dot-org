@@ -47,7 +47,7 @@ class NewRelicClient
     rescue => e
       raise e if tries >= max_tries
       tries += 1
-      sleep (2 ** tries) # Exponential backoff
+      sleep (2**tries) # Exponential backoff
       retry
     end
 
