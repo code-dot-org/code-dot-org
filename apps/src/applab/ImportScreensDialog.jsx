@@ -12,7 +12,7 @@ import MultiCheckboxSelector, {
   styles as multiCheckboxStyles
 } from '../templates/MultiCheckboxSelector';
 import color from '../color';
-import {toggleImportScreen} from './redux/screens';
+import {toggleImportScreen, importIntoProject} from './redux/screens';
 import {
   getImportableProject,
   importableAssetShape,
@@ -187,7 +187,11 @@ export const ImportScreensDialog = React.createClass({
     const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
     let buttonProps = canImport ? {
       confirmText: "Import",
-      onConfirm: () => this.props.onImport(this.state.selectedScreens, this.state.selectedAssets),
+      onConfirm: () => this.props.onImport(
+        this.props.project.id,
+        this.state.selectedScreens,
+        this.state.selectedAssets
+      ),
     } : {
       onCancel: this.props.handleClose
     };
@@ -251,8 +255,8 @@ export default connect(
     project: getImportableProject(state.screens.importProject.fetchedProject),
   }),
   dispatch => ({
-    onImport() {
-      alert("The import button has not been implemented yet. sorry!");
+    onImport(projectId, screens, assets) {
+      dispatch(importIntoProject(projectId, screens, assets));
     },
     handleClose() {
       dispatch(toggleImportScreen(false));

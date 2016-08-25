@@ -210,6 +210,8 @@ NetSimLobby.prototype.render = function () {
         {
           user: this.user_,
           shardID: this.shard_.id,
+          shardDisplayName: this.shardDisplayNameFromID_(this.shard_.id),
+          isUserInMultipleSections: this.shardChoices_.length > 1,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
@@ -606,4 +608,13 @@ NetSimLobby.prototype.getShareLink = function () {
   }
 
   return '';
+};
+
+/**
+ * @param {string} shardID - ID of a shard available to the current user
+ * @returns {string} display name of the associated shard
+ * @private
+ */
+NetSimLobby.prototype.shardDisplayNameFromID_ = function (shardID) {
+  return _.find(this.shardChoices_, s => s.shardID === shardID).displayName;
 };
