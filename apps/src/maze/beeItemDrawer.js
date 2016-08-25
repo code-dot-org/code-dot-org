@@ -91,7 +91,7 @@ export default class BeeItemDrawer extends Drawer {
 
     // Display the images.
     let img = this.drawImage_('beeItem', row, col);
-    this.updateCounter_('counter', row, col, img ? counterText : '');
+    this.updateOrCreateText_('counter', row, col, img ? counterText : '');
 
     if (isClouded) {
       this.showCloud_(row, col);
@@ -103,45 +103,12 @@ export default class BeeItemDrawer extends Drawer {
   }
 
   /**
-   * Update the counter at the given row,col with the provided counterText.
-   * @param {string} prefix
-   * @param {number} row
-   * @param {number} col
-   * @param {string} counterText
+   * @override
    */
-  updateCounter_(prefix, row, col, counterText) {
-    var counterElement = document.getElementById(Drawer.cellId(prefix, row, col));
-    if (!counterElement) {
-      // we want an element, so let's create one
-      counterElement = this.createText(prefix, row, col, counterText);
-    }
-    counterElement.firstChild.nodeValue = counterText;
-  }
-
-  /**
-   * Create SVG text element for given cell
-   * @param {string} prefix
-   * @param {number} row
-   * @param {number} col
-   * @param {string} counterText
-   */
-  createText(prefix, row, col, counterText) {
-    var pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    var svg = document.getElementById('svgMaze');
-
-    // Create text.
-    var hPadding = 2;
-    var vPadding = 2;
-    var text = document.createElementNS(SVG_NS, 'text');
-    // Position text just inside the bottom right corner.
-    text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
-    text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
-    text.setAttribute('id', Drawer.cellId(prefix, row, col));
-    text.setAttribute('class', 'bee-counter-text');
-    text.appendChild(document.createTextNode(counterText));
-    svg.insertBefore(text, pegmanElement);
-
-    return text;
+  updateOrCreateText_(prefix, row, col, text) {
+    let textElement = super.updateOrCreateText_(prefix, row, col, text);
+    textElement.setAttribute('class', 'bee-counter-text');
+    return textElement;
   }
 
   createCounterImage_(prefix, i, row, href) {
