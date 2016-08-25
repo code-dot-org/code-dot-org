@@ -6,7 +6,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay, setAnimationLooping} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -24,6 +24,9 @@ const styles = {
     paddingTop: 4,
     paddingBottom: 4,
     marginBottom: 4,
+
+    // Allows looping button to display relative to whole card
+    position: 'relative',
 
     ':hover': {
       cursor: 'pointer',
@@ -76,6 +79,7 @@ const AnimationListItem = React.createClass({
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
+    setAnimationLooping: React.PropTypes.func.isRequired,
     setAnimationFrameDelay: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
@@ -108,6 +112,10 @@ const AnimationListItem = React.createClass({
   deleteAnimation(evt) {
     this.props.deleteAnimation(this.props.animationKey);
     evt.stopPropagation();
+  },
+
+  setAnimationLooping(looping) {
+    this.props.setAnimationLooping(this.props.animationKey, looping);
   },
 
   onNameChange(event) {
@@ -209,6 +217,8 @@ const AnimationListItem = React.createClass({
             onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
+            onLoopingChanged={this.setAnimationLooping}
+            looping={this.props.animationProps.looping}
             frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
@@ -230,6 +240,9 @@ export default connect(state => ({
     },
     setAnimationName(animationKey, newName) {
       dispatch(setAnimationName(animationKey, newName));
+    },
+    setAnimationLooping(animationKey, looping) {
+      dispatch(setAnimationLooping(animationKey, looping));
     },
     setAnimationFrameDelay(animationKey, frameDelay) {
       dispatch(setAnimationFrameDelay(animationKey, frameDelay));
