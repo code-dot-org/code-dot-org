@@ -83,7 +83,7 @@ export function getImportableProject(project) {
   if (!project) {
     return null;
   }
-  const {channel, sources} = project;
+  const {channel, sources, assets, existingAssets} = project;
   const screens = [];
   $(sources.html)
     .find('.screen')
@@ -92,11 +92,26 @@ export function getImportableProject(project) {
     .each((index, screen) => {
       screens.push(getImportableScreen(screen));
     });
+  const usedAssets = {};
+  screens.forEach(
+    screen => screen.assetsToImport.concat(screen.assetsToReplace).forEach(
+      asset => usedAssets[asset] = true
+    )
+  );
+  const existingAssetNames = {};
+  existingAssets.forEach(asset => existingAssetNames[asset.filename] = true);
+  var otherAssets = assets
+    .filter(asset => !usedAssets[asset.filename])
+    .map(asset => ({
+      filename: asset.filename,
+      category: asset.category,
+      willReplace: !!existingAssetNames[asset.filename],
+    }));
   return {
     id: channel.id,
     name: channel.name,
     screens,
-    otherAssets: [],
+    otherAssets,
   };
 }
 
