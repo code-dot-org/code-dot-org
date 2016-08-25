@@ -63,7 +63,7 @@ const serializedAnimationPropsShape = {
   sourceUrl: React.PropTypes.string,
   frameSize: Vector2.isRequired,
   frameCount: React.PropTypes.number.isRequired,
-  looping: React.PropTypes.bool,
+  looping: React.PropTypes.bool.isRequired,
   frameDelay: React.PropTypes.number.isRequired,
   version: React.PropTypes.string
 };
@@ -178,7 +178,7 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
 
   // Check shape of propsByKey objects
   for (const animationKey in propsByKey) {
-    ['name', 'frameSize', 'frameCount', 'frameDelay'].forEach(requiredPropName => {
+    ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(requiredPropName => {
       if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
         throw new Error(`Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`);
       }

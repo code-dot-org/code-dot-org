@@ -33,8 +33,8 @@ const ItemLoopToggle = React.createClass({
 
   propTypes: {
     style: React.PropTypes.object,
-    onToggleChange: React.PropTypes.func,
-    looping: React.PropTypes.bool
+    onToggleChange: React.PropTypes.func.isRequired,
+    looping: React.PropTypes.bool.isRequired
   },
 
   toggleClicked() {

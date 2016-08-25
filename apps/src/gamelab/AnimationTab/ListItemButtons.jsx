@@ -61,11 +61,11 @@ var ListItemButtons = function (props) {
   );
 };
 ListItemButtons.propTypes = {
-  onCloneClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  onLoopingChanged: React.PropTypes.func,
-  looping: React.PropTypes.bool,
-  onFrameDelayChanged: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  frameDelay: React.PropTypes.number/*.isRequired as soon as everything is hooked up. */
+  onCloneClick: React.PropTypes.func.isRequired,
+  onDeleteClick: React.PropTypes.func.isRequired,
+  onLoopingChanged: React.PropTypes.func.isRequired,
+  looping: React.PropTypes.bool.isRequired,
+  onFrameDelayChanged: React.PropTypes.func.isRequired,
+  frameDelay: React.PropTypes.number.isRequired
 };
 module.exports = Radium(ListItemButtons);
