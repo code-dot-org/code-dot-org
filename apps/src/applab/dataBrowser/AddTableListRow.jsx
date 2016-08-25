@@ -28,21 +28,29 @@ const AddTableListRow = React.createClass({
     this.setState({newTableName: event.target.value});
   },
 
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleAdd();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
   render() {
     return (
-      <tr style={dataStyles.addRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}
             placeholder={msg.dataTableNamePlaceholder()}
             value={this.state.newTableName}
             onChange={this.handleInputChange}
+            onKeyUp={this.handleKeyUp}
           />
         </td>
         <td style={dataStyles.cell}>
           <button
-            className="btn btn-primary"
-            style={dataStyles.button}
+            style={dataStyles.blueButton}
             onClick={this.handleAdd}
           >
             Add

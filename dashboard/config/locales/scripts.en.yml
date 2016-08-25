@@ -822,9 +822,9 @@ en:
           Practice PT - The Internet and Society: Practice PT - The Internet and Society
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
-          title: CS in Algebra Part 2
+          title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
-          description_short: Academic Year Support
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
           Defining Variables: Defining Variables
@@ -972,9 +972,9 @@ en:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: CS in Algebra Part 2
+          description: Academic Year Support
+          description_short: Academic Year Support
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1619,6 +1619,9 @@ en:
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: Practice PT - The Internet and Society
           Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+          CS Principles Pre-survey: CS Principles Pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
         csp2:
           title: CSP Unit 2 - Digital Information
           description_short: Explore how more complex digitial information is represented and manipulated through computation and visuzalization.
@@ -1638,6 +1641,8 @@ en:
           Cleaning Data: Cleaning Data
           Creating Summary Tables: Creating Summary Tables
           Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
+          Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
@@ -1918,6 +1923,7 @@ en:
           Designing Code for Computers: Designing Code for Computers
           Digital Footprint: Digital Footprint
           Images on the Web: Images on the Web
+          Finalizing Website: Finalizing Website
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
