@@ -1,8 +1,9 @@
 /** @file controls below an animation thumbnail */
-var React = require('react');
-var color = require('../../color');
-var Radium = require('radium');
-var SpeedSlider = require('../../templates/SpeedSlider');
+import React from 'react';
+import color from '../../color';
+import Radium from 'radium';
+import SpeedSlider from '../../templates/SpeedSlider';
+import ItemLoopToggle from './ItemLoopToggle';
 import * as PropTypes from '../PropTypes';
 
 var styles = {
@@ -31,6 +32,11 @@ var styles = {
   },
   trash: {
     marginRight: 12
+  },
+  loopTogglePosition: {
+    position: 'absolute',
+    top: 10,
+    right: 10
   }
 };
 
@@ -45,6 +51,7 @@ var sliderStyle = {
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
+      <ItemLoopToggle style={styles.loopTogglePosition} onToggleChange={props.onLoopingChanged} looping={props.looping} />
       <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
       <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
       <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
@@ -52,9 +59,11 @@ var ListItemButtons = function (props) {
   );
 };
 ListItemButtons.propTypes = {
-  onCloneClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  onFrameDelayChanged: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  frameDelay: React.PropTypes.number/*.isRequired as soon as everything is hooked up. */
+  onCloneClick: React.PropTypes.func.isRequired,
+  onDeleteClick: React.PropTypes.func.isRequired,
+  onLoopingChanged: React.PropTypes.func.isRequired,
+  looping: React.PropTypes.bool.isRequired,
+  onFrameDelayChanged: React.PropTypes.func.isRequired,
+  frameDelay: React.PropTypes.number.isRequired
 };
 module.exports = Radium(ListItemButtons);
