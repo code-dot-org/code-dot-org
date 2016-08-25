@@ -1786,6 +1786,33 @@ exports.install = function (blockly, blockInstallOptions) {
     });
   };
 
+  blockly.Blocks.studio_setSpritesSpeed = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(
+          spriteName => `${msg.setEvery()} ${spriteName} ${msg.speed()}`);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPEED')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteSpeedTooltip());
+    }
+  };
+
+  generator.studio_setSpritesSpeed = function () {
+    var speed = blockly.JavaScript.valueToCode(this, 'SPEED',
+      Blockly.JavaScript.ORDER_NONE);
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesSpeed',
+      extraParams: speed,
+    });
+  };
+
   /**
    * setBackground
    */
