@@ -111,8 +111,7 @@ const StageLockDialog = React.createClass({
   },
 
   viewSection() {
-    /// TODO - build a way to get code_org_url from dashboard
-    window.open(`http://localhost.code.org:3000/teacher-dashboard#/sections/${this.props.selectedSection}/assessments`, '_blank');
+    window.open(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.props.selectedSection}/assessments`, '_blank');
   },
 
   handleRadioChange(event) {
