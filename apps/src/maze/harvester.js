@@ -18,7 +18,7 @@ export default class Harvester extends Gatherer {
    * @override
    */
   createDrawer() {
-    this.drawer = HarvesterDrawer(this.maze_.map, this.skin_, this);
+    this.drawer = new HarvesterDrawer(this.maze_.map, this.skin_, this);
   }
 
   hasCorn(id) {
