@@ -12,7 +12,8 @@ var styles = {
     height: 30,
     backgroundColor: color.purple,
     borderRadius: '50%',
-    padding: 2
+    padding: 2,
+    cursor: 'pointer'
   },
   loopIconStyle: {
     paddingTop: 3,
