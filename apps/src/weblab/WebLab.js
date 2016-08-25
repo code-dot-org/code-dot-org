@@ -179,9 +179,7 @@ WebLab.prototype.getStartSources = function () {
 };
 
 WebLab.prototype.onProjectChanged = function () {
-  // dashboard.project.projectChanged();
-  // $(window).trigger('appModeChanged');
-  dashboard.project.save();
+  dashboard.project.projectChanged();
 };
 
 WebLab.prototype.setBrambleHost = function (obj) {
