@@ -63,6 +63,12 @@ dashboard_enable_pegasus: true
 #pusher_application_key: ''
 #pusher_application_secret: ''
 
+# Configuration options for Acapela-Group.com integration
+#acapela_storage_app: ''
+#acapela_storage_password: ''
+#acapela_ephemeral_app: ''
+#acapela_ephemeral_password: ''
+
 # Credentials for new relic logging. Used to log apps build times.
 # Log in to https://rpm.newrelic.com/accounts/501463 to get the key
 #new_relic_license_key: ''

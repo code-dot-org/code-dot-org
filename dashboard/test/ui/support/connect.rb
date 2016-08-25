@@ -4,19 +4,11 @@ require 'cgi'
 require 'httparty'
 require_relative '../../../../deployment'
 require 'active_support/core_ext/object/blank'
+require_relative '../utils/selenium_browser'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
-
-def local_browser
-  browser = Selenium::WebDriver.for :chrome, url: "http://127.0.0.1:9515"
-  if ENV['MAXIMIZE_LOCAL']
-    max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
-    browser.manage.window.resize_to(max_width, max_height)
-  end
-  browser
-end
 
 def slow_browser?
   ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
@@ -85,7 +77,7 @@ end
 def get_browser
   if ENV['TEST_LOCAL'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
-    local_browser
+    SeleniumBrowser.local_browser
   else
     saucelabs_browser
   end

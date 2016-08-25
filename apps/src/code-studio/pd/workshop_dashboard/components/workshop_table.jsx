@@ -13,14 +13,16 @@ const WorkshopTable = React.createClass({
     queryUrl: React.PropTypes.string.isRequired,
     canEdit: React.PropTypes.bool,
     canDelete: React.PropTypes.bool,
-    showSignupUrl: React.PropTypes.bool
+    showSignupUrl: React.PropTypes.bool,
+    showOrganizer: React.PropTypes.bool
   },
 
   getDefaultProps() {
     return {
       canEdit: false,
       canDelete: false,
-      showSignupUrl: false
+      showSignupUrl: false,
+      showOrganizer: false
     };
   },
 
@@ -83,11 +85,13 @@ const WorkshopTable = React.createClass({
           editUrl={this.props.canEdit ? `/workshops/${workshop.id}/edit` : null}
           onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
           showSignupUrl={this.props.showSignupUrl}
+          showOrganizer={this.props.showOrganizer}
         />
       );
     });
 
     const signupUrlHeader = this.props.showSignupUrl ? <th>Signup Url</th> : null;
+    const organizerHeader = this.props.showOrganizer ? <th>Organizer</th> : null;
     return (
       <Table striped bordered condensed hover>
         <thead>
@@ -97,6 +101,7 @@ const WorkshopTable = React.createClass({
           <th>Type</th>
           <th>Course</th>
           <th>Signups</th>
+          {organizerHeader}
           <th>Facilitators</th>
           <th>Current State</th>
           {signupUrlHeader}

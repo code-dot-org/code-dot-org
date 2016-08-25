@@ -1,6 +1,7 @@
 import { createStore } from '@cdo/apps/redux';
 import { combineReducers } from 'redux';
 import progress from './progressRedux';
+import stageLock from './stageLockRedux';
 
 /**
  * A module for maintaining the redux store used by code-studio
@@ -28,7 +29,8 @@ const createCodeStudioStore = () => {
   }
 
   const reducers = combineReducers({
-    progress
+    progress,
+    stageLock
   });
 
   reduxStore = createStore(reducers);

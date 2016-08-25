@@ -60,7 +60,8 @@ const AnimationPreview = React.createClass({
       currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animationProps.frameRate);
+    // 33 maps to a 30 fps frameRate
+    this.timeout_ = setTimeout(this.advanceFrame, 33 * this.props.animationProps.frameDelay);
   },
 
   stopAndResetAnimation: function () {
@@ -121,8 +122,8 @@ const AnimationPreview = React.createClass({
       <div
         ref="root"
         style={containerStyle}
-        onMouseOver={this.onMouseOver}
-        onMouseOut={this.onMouseOut}
+        onMouseOver={!this.props.alwaysPlay ? this.onMouseOver : null}
+        onMouseOut={!this.props.alwaysPlay ? this.onMouseOut : null}
       >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>

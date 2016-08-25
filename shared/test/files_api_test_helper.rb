@@ -148,5 +148,4 @@ class FilesApiTestHelper
   ensure
     flunk credentials_msg if credentials_missing
   end
-
 end
