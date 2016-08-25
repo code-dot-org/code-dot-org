@@ -58,11 +58,14 @@ class PeerReview < ActiveRecord::Base
         review_to_clone = get_potential_reviews(script, user).sample
 
         if review_to_clone
-          new_review = review_to_clone.clone
+          new_review = review_to_clone.dup
           new_review.update(reviewer: user, status: nil, data: nil)
+          new_review
+        else
+          # If we get here, it means that every review in the pool was either submitted by this user
+          # or has been reviewed by this user. Oh well, return nothing.
+          nil
         end
-
-        review_to_clone
       end
     end
   end
@@ -166,7 +169,7 @@ class PeerReview < ActiveRecord::Base
       PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
         if script.peer_reviews_to_complete &&
             reviews.size < script.peer_reviews_to_complete &&
-            PeerReview.get_review_for_user(script, user)
+            PeerReview.get_potential_reviews(script, user).any?
           reviews << {
               status: 'not_started',
               name: I18n.t('peer_review.review_new_submission'),

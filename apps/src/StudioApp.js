@@ -1339,15 +1339,21 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var playSpaceHeader = document.getElementById('playSpaceHeader');
-  var visualization = document.getElementById('visualization');
-  var gameButtons = document.getElementById('gameButtons');
-
   var top = 0;
-  if (playSpaceHeader) {
-    top += $(playSpaceHeader).outerHeight(true);
-  }
 
+  var possibleBelowVisualizationElements = [
+    'playSpaceHeader',
+    'spelling-table-wrapper',
+    'gameButtons'
+  ];
+  possibleBelowVisualizationElements.forEach(id => {
+    let element = document.getElementById(id);
+    if (element) {
+      top += $(element).outerHeight(true);
+    }
+  });
+
+  var visualization = document.getElementById('visualization');
   if (visualization) {
     var parent = $(visualization).parent();
     if (parent.attr('id') === 'phoneFrame') {
@@ -1358,10 +1364,6 @@ function resizePinnedBelowVisualizationArea() {
     } else {
       top += $(visualization).outerHeight(true);
     }
-  }
-
-  if (gameButtons) {
-    top += $(gameButtons).outerHeight(true);
   }
 
   var bottom = 0;
@@ -2081,6 +2083,22 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // (important because they can be different in our test environment)
   ace = window.ace;
 
+  // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
+  // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
+  // was initialized, so include it initially, and conditionally remove it here.
+  if (!window.dashboard.project.useFirebase()) {
+    // Remove onRecordEvent from the palette
+    delete config.level.codeFunctions.onRecordEvent;
+
+    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
+    const block = config.dropletConfig.blocks.find(block => {
+      return block.func === 'onRecordEvent';
+    });
+    if (block) {
+      block.noAutocomplete = true;
+    }
+  }
+
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
   this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
@@ -2194,6 +2212,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     try {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      // When adding content via setValue, the aceEditor cursor gets set to be
+      // at the end of the file. For mysterious reasons we've been unable to
+      // understand, we end up with some pretty funky render issues if the first
+      // time we switch to text mode the cursor is out of view beyond the bottom
+      // of the editor. Navigate to the start so that this doesn't happen.
+      this.editor.aceEditor.navigateFileStart();
     } catch (err) {
       // catch errors without blowing up entirely. we may still not be in a
       // great state
@@ -2908,6 +2932,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
+    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
+    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),

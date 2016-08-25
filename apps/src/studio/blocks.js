@@ -7,24 +7,25 @@
 'use strict';
 /* global Studio */
 
-var studioApp = require('../StudioApp').singleton;
-var msg = require('./locale');
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('@cdo/locale');
-var codegen = require('../codegen');
-var constants = require('./constants');
-var utils = require('../utils');
-var _ = require('lodash');
-var paramLists = require('./paramLists');
+import _ from 'lodash';
+import codegen from '../codegen';
+import commonMsg from '@cdo/locale';
+import msg from './locale';
+import paramLists from './paramLists';
+import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
+import utils from '../utils';
+import { singleton as studioApp } from '../StudioApp';
+import {
+  CardinalDirections,
+  Direction,
+  Emotions,
+  Position,
+  CLICK_VALUE,
+  HIDDEN_VALUE,
+  RANDOM_VALUE,
+  VISIBLE_VALUE
+} from './constants';
 
-var Direction = constants.Direction;
-var Position = constants.Position;
-var Emotions = constants.Emotions;
-
-var RANDOM_VALUE = constants.RANDOM_VALUE;
-var HIDDEN_VALUE = constants.HIDDEN_VALUE;
-var CLICK_VALUE = constants.CLICK_VALUE;
-var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 // 9 possible positions in playspace (+ random):
 var POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
@@ -1018,7 +1019,7 @@ exports.install = function (blockly, blockInstallOptions) {
         // a factor of sqrt(2), so that a move north followed by a move west
         // takes you to the same spot as a single move northwest.
         var defaultDistance =
-          constants.CardinalDirections.includes(directionConfig.studioValue) ?
+          CardinalDirections.includes(directionConfig.studioValue) ?
           SimpleMove.DEFAULT_MOVE_DISTANCE :
           SimpleMove.DEFAULT_MOVE_DISTANCE * Math.sqrt(2);
         var distance = this.getTitleValue('DISTANCE') || defaultDistance;
@@ -1745,9 +1746,11 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(312, 0.32, 0.62);
-      this.VALUES = skin.mapChoices;
+      // 'random' is a special value, don't put it in quotes
+      this.VALUES = skin.mapChoices.map(
+          opt => [opt[0], opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`]);
 
-      var dropdown = new blockly.FieldDropdown(skin.mapChoices);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);

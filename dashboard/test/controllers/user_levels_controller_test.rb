@@ -49,5 +49,4 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     assert user_level.submitted?
   end
-
 end

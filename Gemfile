@@ -103,6 +103,9 @@ gem 'jquery-rails', '~> 3.1.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
+# for emoji in utility output
+gem 'gemoji'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -126,13 +129,13 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11' # error monitoring
+gem 'honeybadger' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
-gem 'geocoder'
+gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
 gem 'rmagick'
 gem 'mini_magick'

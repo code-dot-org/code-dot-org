@@ -89,5 +89,21 @@
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
   "word": "சொல்லை கண்டறி",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்தது"
+  "youSpelled": "நீங்கள் உச்சரித்தது",
+  "at": "at",
+  "bean": "bean",
+  "beanTooltip": "Harvest a bean",
+  "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
+  "corn": "corn",
+  "cornTooltip": "Harvest some corn",
+  "didNotCollectAllCrops": "Make sure you don't leave any crops behind!",
+  "emptyCropError": "That crop is all gone.",
+  "has": "has",
+  "hasbean": "there are beans",
+  "hascorn": "there is corn",
+  "haspumpkin": "there are pumpkins",
+  "pick": "pick",
+  "pumpkin": "pumpkin",
+  "pumpkinTooltip": "Harvest a pumpkin",
+  "wrongCropError": "I can't harvest that crop from here."
 }

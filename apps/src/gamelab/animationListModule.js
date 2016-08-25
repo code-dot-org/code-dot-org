@@ -3,6 +3,11 @@
  */
 import {combineReducers} from 'redux';
 import {createUuid} from '../utils';
+import {
+  fetchURLAsBlob,
+  blobToDataURI,
+  dataURIToSourceSize
+} from '../imageUtils';
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
@@ -26,6 +31,10 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
+// Args: {AnimationKey} key, {bool} looping
+const SET_ANIMATION_LOOPING = 'AnimationList/SET_ANIMATION_LOOPING';
+// Args: {AnimationKey} key, {number} frameDelay
+const SET_ANIMATION_FRAME_DELAY = 'AnimationList/SET_ANIMATION_FRAME_DELAY';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
@@ -78,6 +87,8 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
+    case SET_ANIMATION_LOOPING:
+    case SET_ANIMATION_FRAME_DELAY:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
@@ -115,6 +126,16 @@ function animationPropsReducer(state, action) {
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
         name: action.name
+      });
+
+    case SET_ANIMATION_FRAME_DELAY:
+      return Object.assign({}, state, {
+        frameDelay: action.frameDelay
+      });
+
+    case SET_ANIMATION_LOOPING:
+      return Object.assign({}, state, {
+        looping: action.looping
       });
 
     case START_LOADING_FROM_SOURCE:
@@ -164,6 +185,21 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
+  // Convert frameRates to frameDelays.
+  for (let key in serializedAnimationList.propsByKey) {
+    let animation = serializedAnimationList.propsByKey[key];
+    if (!animation.frameDelay) {
+      if (typeof animation.frameRate === 'number' && !isNaN(animation.frameRate) && animation.frameRate !== 0) {
+        animation.frameDelay = Math.round(30 / animation.frameRate);
+      } else {
+        animation.frameDelay = 2;
+      }
+    }
+    if (animation.looping === undefined) {
+      animation.looping = true;
+    }
+  }
+
   try {
     throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
   } catch (err) {
@@ -197,7 +233,8 @@ export function addBlankAnimation() {
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
-        frameRate: 15,
+        looping: true,
+        frameDelay: 4,
         version: null,
         loadedFromSource: true,
         saved: false,
@@ -301,6 +338,40 @@ export function setAnimationName(key, name) {
 }
 
 /**
+ * Set the frameDelay of the specified animation.
+ * @param {string} key
+ * @param {number} frameDelay
+ * @returns {{type: ActionType, key: string, frameDelay: number}}
+ */
+export function setAnimationFrameDelay(key, frameDelay) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_FRAME_DELAY,
+      key,
+      frameDelay
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * Set the looping value of the specified animation.
+ * @param {string} key
+ * @param {bool} looping
+ * @returns {{type: ActionType, key: string, looping: bool}}
+ */
+export function setAnimationLooping(key, looping) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_LOOPING,
+      key,
+      looping
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
  * Modifies the animation props, capturing changes to its spritesheet.
  * @param {!AnimationKey} key
  * @param {object} props - needs a more detailed shape
@@ -354,7 +425,7 @@ function loadAnimationFromSource(key, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key
     });
-    fetchUrlAsBlob(sourceUrl, (err, blob) => {
+    fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;
@@ -380,36 +451,6 @@ function loadAnimationFromSource(key, callback) {
       });
     });
   };
-}
-
-function fetchUrlAsBlob(url, onComplete) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'blob';
-  xhr.onload = e => {
-    if (e.target.status === 200) {
-      onComplete(null, e.target.response);
-    } else {
-      onComplete(new Error(`URL ${url} responded with code ${e.target.status}`));
-    }
-  };
-  xhr.onerror = e => onComplete(new Error(`Error ${e.target.status} occurred while receiving the document.`));
-  xhr.send();
-}
-
-function blobToDataURI(blob, onComplete) {
-  let fileReader = new FileReader();
-  fileReader.onload = e => onComplete(e.target.result);
-  fileReader.readAsDataURL(blob);
-}
-
-function dataURIToSourceSize(dataURI) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve({x: image.width, y: image.height});
-    image.onerror = err => reject(err);
-    image.src = dataURI;
-  });
 }
 
 /**

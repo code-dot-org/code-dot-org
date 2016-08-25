@@ -1,5 +1,4 @@
 class Pd::WorkshopOrganizerPayment
-
   PAYMENT_CSF_PER_QUALIFIED_TEACHER = 50
 
   PAYMENT_PER_TEACHER_PER_DAY = 40

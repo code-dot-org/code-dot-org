@@ -8,6 +8,7 @@ window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
   initializeCodeMirror: require('./initializeCodeMirror'),
   jsonEditor: require('./jsonEditor'),
+  acapela: require('./acapela'),
   ajaxSubmit: require('./ajaxSubmit')
 });
 

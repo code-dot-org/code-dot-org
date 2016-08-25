@@ -77,6 +77,7 @@ class Applab < Blockly
     if self.code_functions.present? && self.code_functions.is_a?(String)
       self.code_functions = JSON.parse(self.code_functions)
     end
+    true
   rescue JSON::ParserError => e
     errors.add(:code_functions, "#{e.class.name}: #{e.message}")
     return false
@@ -87,6 +88,7 @@ class Applab < Blockly
     if value.present? && value.is_a?(String)
       self.properties[property_field] = JSON.parse value
     end
+    true
   rescue JSON::ParserError => e
     errors.add(property_field, "#{e.class.name}: #{e.message}")
     return false
@@ -162,6 +164,7 @@ class Applab < Blockly
         "readRecords": null,
         "updateRecord": null,
         "deleteRecord": null,
+        "onRecordEvent": null,
         "getUserId": null,
         "drawChart": null,
         "drawChartFromRecords": null,

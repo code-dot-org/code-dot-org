@@ -35,5 +35,4 @@ class TestTableLimits < Minitest::Test
     limits.set_approximate_row_count(10)
     assert_equal 10, limits2.get_approximate_row_count
   end
-
 end

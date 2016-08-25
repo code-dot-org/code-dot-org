@@ -5,31 +5,42 @@
 
 import Radium from 'radium';
 import React from 'react';
-import applabMsg from '../locale';
+import applabMsg from '@cdo/applab/locale';
 
 import * as dataStyles from './dataStyles';
 
 const styles = {
   container: {
-    paddingTop: 10,
+    paddingTop: 0,
     paddingBottom: 10,
     paddingLeft: 0,
     paddingRight: 0,
   },
-  clearButton: [dataStyles.rightButton, {
+  clearButton: [dataStyles.redButton, dataStyles.alignRight, {
     width: 103,
   }],
-  exportButton: [dataStyles.rightButton, {
+  exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
     width: 120
   }],
+  importButton: [dataStyles.whiteButton, dataStyles.alignRight],
+  tableName: {
+    fontSize: 18,
+  },
+  tableNameWrapper: {
+    alignItems: 'flex-end',
+    display: 'inline-flex',
+    height: 30,
+    marginRight: 10,
+    verticalAlign: 'middle',
+  },
 };
 
 const TableControls = React.createClass({
   propTypes: {
-    addColumn: React.PropTypes.func.isRequired,
     clearTable: React.PropTypes.func.isRequired,
     exportCsv: React.PropTypes.func.isRequired,
     importCsv: React.PropTypes.func.isRequired,
+    tableName: React.PropTypes.string.isRequired,
   },
 
   handleSelectImportFile() {
@@ -51,12 +62,13 @@ const TableControls = React.createClass({
   render() {
     return (
       <div style={styles.container}>
-        <button className="btn" onClick={this.props.addColumn} style={dataStyles.button}>
-          Add column
-        </button>
+        <span style={styles.tableNameWrapper}>
+          <span style={styles.tableName}>
+            {this.props.tableName}
+          </span>
+        </span>
 
         <button
-          className="btn"
           onClick={this.props.exportCsv}
           style={styles.exportButton}
         >
@@ -72,16 +84,14 @@ const TableControls = React.createClass({
             onChange={this.handleSelectImportFile}
           />
           <button
-            className="btn"
             onClick={() => this.importFileInput.click()}
-            style={dataStyles.rightButton}
+            style={styles.importButton}
           >
             Import csv
           </button>
         </span>
 
         <button
-          className="btn btn-danger"
           onClick={this.props.clearTable}
           style={styles.clearButton}
         >

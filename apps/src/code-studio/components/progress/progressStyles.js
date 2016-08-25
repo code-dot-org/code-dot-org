@@ -12,6 +12,15 @@ export const createOutline = color => {
     ${color} -1px 1px`;
 };
 
+const baseButtonStyle = {
+  fontSize: 14,
+  paddingTop: 5,
+  paddingBottom: 5,
+  paddingLeft: 10,
+  paddingRight: 10,
+  whiteSpace: 'nowrap'
+};
+
 const progressStyles = {
   dotIcon: {
     borderColor: 'transparent',
@@ -24,15 +33,14 @@ const progressStyles = {
       backgroundColor: 'transparent'
     }
   },
-  blueButton: {
-    fontSize: 14,
+  baseButton: baseButtonStyle,
+  blueButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.cyan,
+    color: color.white
+  }),
+  orangeButton: Object.assign({}, baseButtonStyle, {
+    backgroundColor: color.orange,
     color: color.white,
-    marginLeft: 0,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10
-  }
+  })
 };
 export default progressStyles;

@@ -34,7 +34,9 @@ const AnimationPreview = React.createClass({
 
   componentWillReceiveProps: function (nextProps) {
     this.precalculateRenderProps(nextProps);
-    if (nextProps.alwaysPlay && !this.timeout_) {
+    if (nextProps.animationProps.looping !== this.props.animationProps.looping) {
+      this.stopAndResetAnimation();
+    } if (nextProps.alwaysPlay && !this.timeout_) {
       this.advanceFrame();
     } else if (!nextProps.alwaysPlay && this.timeout_) {
       this.stopAndResetAnimation();
@@ -56,11 +58,17 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
+    // If the animation shouldn't loop, include a 2.5 second timeout after playing.
+    const {currentFrame} = this.state;
+    const {frameCount, looping, frameDelay} = this.props.animationProps;
     this.setState({
-      currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
+      currentFrame: (currentFrame + 1) % frameCount
     });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animationProps.frameRate);
+
+    const animationIsOver = !looping && currentFrame % frameCount === 0;
+    const timeoutDuration = animationIsOver ? 2500 : 33 * frameDelay;
+    this.timeout_ = setTimeout(this.advanceFrame, timeoutDuration);
   },
 
   stopAndResetAnimation: function () {
@@ -121,8 +129,8 @@ const AnimationPreview = React.createClass({
       <div
         ref="root"
         style={containerStyle}
-        onMouseOver={this.onMouseOver}
-        onMouseOut={this.onMouseOut}
+        onMouseOver={!this.props.alwaysPlay ? this.onMouseOver : null}
+        onMouseOut={!this.props.alwaysPlay ? this.onMouseOut : null}
       >
         <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>
