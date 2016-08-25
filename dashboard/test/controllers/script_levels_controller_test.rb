@@ -12,7 +12,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @young_student = create :young_student
     @teacher = create :teacher
     @admin = create :admin
-    @section = create :section, user_id: @teacher.id
+    @section = create :section
+    @section.users << @teacher
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
 
     @custom_script = create(:script, name: 'laurel', hideable_stages: true)
@@ -789,7 +790,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
-    create :section, user: @teacher
+    create :section, users: [@teacher]
 
     sign_in @teacher
 

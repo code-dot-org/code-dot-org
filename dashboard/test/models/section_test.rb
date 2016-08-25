@@ -147,5 +147,17 @@ class SectionTest < ActiveSupport::TestCase
 
     refute Section.new.workshop_section?
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
+
+  test 'has_coteacher? is true for a coteacher' do
+    section = create(:section)
+    teacher = create(:teacher)
+    section.add_teacher(teacher)
+    assert section.has_coteacher?(teacher)
+  end
+
+  test 'has_coteacher? is false for an unassociated teacher' do
+    section = create(:section)
+    teacher = create(:teacher)
+    refute section.has_coteacher?(teacher)
   end
 end

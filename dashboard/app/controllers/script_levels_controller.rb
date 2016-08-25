@@ -254,7 +254,7 @@ class ScriptLevelsController < ApplicationController
       section = Section.find(params[:section_id])
 
       # TODO: This should use cancan/authorize.
-      if section.user == current_user
+      if section.has_coteacher?(current_user)
         @section = section
       end
     elsif current_user.try(:sections) && current_user.sections.count == 1
