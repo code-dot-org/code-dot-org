@@ -3456,17 +3456,19 @@ Studio.displayVictoryText = function () {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
-  if (dom.isMobile() || dom.isWindowsTouch()) {
-    var resetTextA = document.getElementById('resetTextA');
-    var resetTextB = document.getElementById('resetTextB');
-    resetTextB.textContent = studioMsg.tapToReset();
-    resetTextA.setAttribute('visibility', 'hidden');
-    resetTextB.setAttribute('visibility', 'visible');
-    $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
-  } else {
-    var resetText = document.getElementById('resetText');
-    resetText.textContent = studioMsg.tapOrClickToReset();
-    resetText.setAttribute('visibility', 'visible');
+  if (level.tapSvgToRunAndReset) {
+    if (dom.isMobile() || dom.isWindowsTouch()) {
+      var resetTextA = document.getElementById('resetTextA');
+      var resetTextB = document.getElementById('resetTextB');
+      resetTextB.textContent = studioMsg.tapToReset();
+      resetTextA.setAttribute('visibility', 'hidden');
+      resetTextB.setAttribute('visibility', 'visible');
+      $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
+    } else {
+      var resetText = document.getElementById('resetText');
+      resetText.textContent = studioMsg.tapOrClickToReset();
+      resetText.setAttribute('visibility', 'visible');
+    }
   }
 };
 
