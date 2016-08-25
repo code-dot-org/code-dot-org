@@ -11,7 +11,7 @@ BATCH_SIZE = 1000
 
 def main
   time_now = DateTime.now
-  to_geolocate = PEGASUS_DB[:form_geos].where(indexed_at: nil).limit(1000)
+  to_geolocate = PEGASUS_DB[:form_geos].where(indexed_at: nil).limit(BATCH_SZE)
 
   to_geolocate.each do |form_geo|
     location = Geocoder.search(form_geo[:ip_address]).first
