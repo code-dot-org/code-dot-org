@@ -57,7 +57,10 @@ const TableControls = React.createClass({
           Export to csv
         </button>
 
-        <ConfirmImportButton importCsv={this.props.importCsv}/>
+        <ConfirmImportButton
+          importCsv={this.props.importCsv}
+          containerStyle={dataStyles.alignRight}
+        />
 
         <ConfirmDeleteButton
           body={applabMsg.confirmClearTable()}
