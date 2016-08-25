@@ -6,11 +6,24 @@ import _ from 'lodash';
 import AddKeyRow from './AddKeyRow';
 import { DataView } from '../constants';
 import EditKeyRow from './EditKeyRow';
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
+
+const styles = {
+  container: {
+    height: '100%',
+    overflowY: 'scroll',
+  },
+  tableName: {
+    fontSize: 18,
+    marginBottom: 10,
+    marginTop: 20,
+  }
+};
 
 const DataProperties = React.createClass({
   propTypes: {
@@ -38,9 +51,11 @@ const DataProperties = React.createClass({
     return JSON.stringify(keyValueData, null, 2);
   },
 
-
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
+    const containerStyle = [styles.container, {
+      display: visible ? 'block' : 'none'
+    }];
     const keyValueDataStyle = {
       display: this.state.showDebugView ? 'none' : ''
     };
@@ -48,24 +63,21 @@ const DataProperties = React.createClass({
       display: this.state.showDebugView ? '' : 'none',
     }];
     return (
-      <div id="dataProperties" style={{display: visible ? 'block' : 'none'}}>
+      <div id="dataProperties" style={containerStyle}>
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
               id="propertiesBackToOverview"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
-              Data
+              <FontAwesome icon="arrow-circle-left"/>&nbsp;Back to data
             </a>
-            &nbsp;&gt; Key/value pairs
           </span>
 
           <span style={dataStyles.debugLink}>
             <a
               id="tableDebugLink"
-              href="#"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
@@ -73,6 +85,10 @@ const DataProperties = React.createClass({
             </a>
 
           </span>
+        </div>
+
+        <div style={styles.tableName}>
+          Key/value pairs
         </div>
 
         <div style={debugDataStyle}>
@@ -84,7 +100,7 @@ const DataProperties = React.createClass({
             <tr>
               <th style={dataStyles.headerCell}>Key</th>
               <th style={dataStyles.headerCell}>Value</th>
-              <th style={dataStyles.headerCell}></th>
+              <th style={dataStyles.headerCell}>Actions</th>
             </tr>
 
             <AddKeyRow/>

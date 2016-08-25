@@ -7,6 +7,7 @@ class PusherApi
   Pusher.app_id = CDO.pusher_app_id
   Pusher.key = CDO.pusher_application_key
   Pusher.secret = CDO.pusher_application_secret
+  Pusher.timeout = 10 # seconds, as recommended by Pusher support
 
   # Publishes an event to a a channel using the Pub/Sub system.
   #

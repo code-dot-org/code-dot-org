@@ -92,6 +92,8 @@ level 'grade4_scaffolded_project1'
 level 'grade4_scaffolded_project2'
 level 'grade4_scaffolded_project3'
 level 'grade4_scaffolded_project4'
+level 'grade4_scaffolded_project5'
+level 'grade4_scaffolded_project6'
 
 stage 'Explore project ideas',
   flex_category: 'practice'
