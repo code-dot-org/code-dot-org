@@ -5,8 +5,6 @@
  * @see {GoogleChart}
  */
  /* global Promise */
-'use strict';
-
 var utils = require('../utils');
 var GoogleChart = require('./GoogleChart');
 

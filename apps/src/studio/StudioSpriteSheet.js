@@ -1,6 +1,5 @@
 /** @file A utility that can help find particular frames within a spritesheet,
  * given certain metadata about that spritesheet */
-'use strict';
 
 import { valueOr } from '../utils';
 

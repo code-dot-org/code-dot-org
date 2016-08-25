@@ -5,7 +5,6 @@
  *
  */
 
-'use strict';
 
 import $ from 'jquery';
 import * as constants from './constants';

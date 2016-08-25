@@ -1,6 +1,4 @@
 /** A single list item representing an animation. */
-'use strict';
-
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
