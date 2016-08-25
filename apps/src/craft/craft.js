@@ -673,7 +673,7 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
         blockType);
     }
-  });
+  }, true);
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     if (Craft.level.freePlay) {
       return;

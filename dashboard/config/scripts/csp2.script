@@ -9,7 +9,9 @@ level 'v2 U2L1 Student Lesson Introduction'
 assessment 'U1L12 Reflection Free Response'
 
 stage 'Text Compression'
+named_level 'Text Compression'
 level 'v2 U2L2 Student Lesson Summary'
+
 named_level 'Widget: Text Compression'
 assessment 'U1L13 - Assess Text Compression reverse process'
 assessment 'U1L13 Assess Text Compression amount'
@@ -26,6 +28,7 @@ assessment 'U1L14 - Assessment 2'
 
 stage 'Encoding Color Images'
 level 'v2 U2L4 Student Lesson Summary'
+named_level 'Images, Pixels, and RGB'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
 level 'Pixelation - Lesson 15 - Color Shades'
 level 'Pixelation - Lesson 15 - Color Shades 4x4'
@@ -33,7 +36,6 @@ level 'Pixelation Flappy'
 level 'Pixelation Bee'
 named_level 'Favicon Instructions'
 named_level 'Widget: Color Pixelation'
-named_level 'Images, Pixels, and RGB'
 assessment 'U2L5 Color Pixel MC Question'
 assessment 'U2L5 FR brighten darken image'
 
@@ -44,6 +46,9 @@ assessment 'U1L16 - Matching File Compression Types'
 
 stage 'Encode a Complex Thing'
 level 'v2 U2L6 Student Lesson Introduction'
+
+stage 'Unit 2 Chapter 1 Assessment', lockable:true
+assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC'
 
 stage 'Intro to Data'
 level 'v2 U2L7 Student Lesson Introduction'
@@ -96,3 +101,6 @@ assessment 'U2L14 Summary Tables MC'
 
 stage 'Practice PT - Tell a Data Story'
 level 'v2 U2L15 Student Lesson Introduction'
+
+stage 'Unit 2 Chapter 2 Assessment', lockable:true
+assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'
