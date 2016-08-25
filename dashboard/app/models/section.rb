@@ -96,6 +96,14 @@ class Section < ActiveRecord::Base
     user
   end
 
+  def has_coteacher?(user)
+    self.users.include?(user)
+  end
+
+  def add_teacher(user)
+    self.users << user
+  end
+
   private
 
   def unused_random_code
