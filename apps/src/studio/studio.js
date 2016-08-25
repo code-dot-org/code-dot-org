@@ -3783,6 +3783,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpritesFlee(cmd.opts);
       break;
+    case 'setSpritesSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesSpeed(cmd.opts);
+      break;
     case 'addGoal':
       studioApp.highlight(cmd.id);
       Studio.addGoal(cmd.opts);
@@ -5208,8 +5212,13 @@ Studio.setSpritesChase = function (opts) {
 };
 
 Studio.setSpritesFlee = function (opts) {
-  getSpritesByName(opts.spriteName).forEach( sprite =>
+  getSpritesByName(opts.spriteName).forEach(sprite =>
       sprite.setActivity('flee', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesSpeed = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.speed = opts.speed);
 };
 
 Studio.addGoal = function (opts) {

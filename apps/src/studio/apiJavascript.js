@@ -99,6 +99,13 @@ exports.setSpritesFlee = function (id, targetSpriteIndex, spriteName) {
   });
 };
 
+exports.setSpritesSpeed = function (id, speed, spriteName) {
+  Studio.queueCmd(id, 'setSpritesSpeed', {
+    'spriteName': spriteName,
+    'speed': speed,
+  });
+};
+
 exports.playSound = function (soundName) {
   Studio.queueCmd(null, 'playSound', {'soundName': soundName});
 };

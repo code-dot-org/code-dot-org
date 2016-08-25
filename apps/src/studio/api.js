@@ -125,6 +125,13 @@ exports.setSpritesFlee = function (id, targetSpriteIndex, spriteName) {
   });
 };
 
+exports.setSpritesSpeed = function (id, speed, spriteName) {
+  Studio.queueCmd(id, 'setSpritesSpeed', {
+    'spriteName': spriteName,
+    'speed': speed,
+  });
+};
+
 exports.addGoal = function (id, value) {
   Studio.queueCmd(id, 'addGoal', {
     'value': Number(value)
