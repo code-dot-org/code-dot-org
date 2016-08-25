@@ -153,7 +153,9 @@ class Script < ActiveRecord::Base
 
   # Caching is disabled when editing scripts and levels or running unit tests on CI.
   def self.should_cache?
-    !(Rails.application.config.levelbuilder_mode || ENV['CI'])
+    return false if Rails.application.config.levelbuilder_mode
+    return false if ENV['CI']
+    true
   end
 
   def self.script_cache_to_cache
