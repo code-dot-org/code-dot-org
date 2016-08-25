@@ -158,6 +158,9 @@ export default class Item extends Collidable {
       x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
       y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
     };
+    // Take the dot product of dirUnit and destVector to see if continuing to
+    // move in that direction will bring the item any closer to its
+    // destination.
     if (this.destGridX !== undefined &&
         (dirUnit.x * destVector.x + dirUnit.y * destVector.y ) <= speed) {
       this.gridX = this.destGridX;
