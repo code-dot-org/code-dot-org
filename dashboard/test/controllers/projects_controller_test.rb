@@ -102,7 +102,7 @@ class ProjectsControllerTest < ActionController::TestCase
   test 'applab and gamelab project levels gets redirected to edit if under 13 with tos teacher' do
     sign_in create(:young_student_with_tos_teacher)
 
-    [:applab, :gamelab].each do |lab|
+    %w(applab gamelab).each do |lab|
       get :load, key: lab
 
       assert @response.headers['Location'].ends_with? '/edit'
@@ -115,7 +115,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in @driver
     @controller.send :pairings=, [@navigator]
 
-    [:applab, :gamelab].each do |lab|
+    %w(applab gamelab).each do |lab|
       get :load, key: lab
 
       assert_redirected_to '/'
@@ -128,7 +128,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in @driver
     @controller.send :pairings=, [@navigator]
 
-    [:applab, :gamelab].each do |lab|
+    %w(applab gamelab).each do |lab|
       get :load, key: lab
 
       assert_redirected_to '/'
@@ -142,7 +142,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in @driver
     @controller.send :pairings=, [@navigator]
 
-    [:applab, :gamelab].each do |lab|
+    %w(applab gamelab).each do |lab|
       get :load, key: lab
 
       assert @response.headers['Location'].ends_with? '/edit'
