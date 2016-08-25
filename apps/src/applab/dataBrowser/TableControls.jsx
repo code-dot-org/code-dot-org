@@ -17,9 +17,6 @@ const styles = {
     paddingLeft: 0,
     paddingRight: 0,
   },
-  clearButton: [dataStyles.redButton, {
-    width: 103,
-  }],
   exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
     width: 120
   }],
@@ -94,9 +91,8 @@ const TableControls = React.createClass({
 
         <ConfirmDeleteButton
           body={applabMsg.confirmClearTable()}
-          buttonStyle={styles.clearButton}
           buttonText="Clear table"
-          containerStyle={{float: 'right'}}
+          containerStyle={{float: 'right', width: 103}}
           onConfirm={this.props.clearTable}
           title="Clear table"
         />
