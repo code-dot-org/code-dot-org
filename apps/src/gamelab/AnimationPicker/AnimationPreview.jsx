@@ -34,7 +34,9 @@ const AnimationPreview = React.createClass({
 
   componentWillReceiveProps: function (nextProps) {
     this.precalculateRenderProps(nextProps);
-    if (nextProps.alwaysPlay && !this.timeout_) {
+    if (nextProps.animationProps.looping !== this.props.animationProps.looping) {
+      this.stopAndResetAnimation();
+    } if (nextProps.alwaysPlay && !this.timeout_) {
       this.advanceFrame();
     } else if (!nextProps.alwaysPlay && this.timeout_) {
       this.stopAndResetAnimation();
@@ -58,6 +60,16 @@ const AnimationPreview = React.createClass({
   advanceFrame: function () {
     // Never advance the frame if the frameRate is 0
     if (this.props.animationProps.frameRate === 0) {
+      return;
+    }
+
+    // If the animation shouldn't loop, include a 2.5 second timeout after playing.
+    if (this.props.animationProps.looping === false && (this.state.currentFrame % this.props.animationProps.frameCount) === 0) {
+      this.setState({
+        currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
+      });
+      clearTimeout(this.timeout_);
+      this.timeout_ = setTimeout(this.advanceFrame, 2500);
       return;
     }
 
