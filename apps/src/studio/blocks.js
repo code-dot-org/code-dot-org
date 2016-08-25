@@ -1678,6 +1678,139 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   /**
+   * Blocks for managing a bunch of sprites as a group.
+   */
+  function createSpriteGroupDropdown(createMsg) {
+    const values = skin.spriteChoices.filter(
+        opt => opt[1] !== HIDDEN_VALUE && opt[1] !== RANDOM_VALUE
+    ).map(opt => {
+      const spriteName = opt[1].replace(/^"(.*)"$/, '$1');
+      return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
+    });
+    const dropdown = new blockly.FieldDropdown(values);
+    dropdown.setValue(values[0][1]);
+    return dropdown;
+  }
+
+  blockly.Blocks.studio_setSpritesWander = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameWander);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesWanderTooltip());
+    }
+  };
+
+  generator.studio_setSpritesWander = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesWander',
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesStop = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.stopEverySpriteName);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesStopTooltip());
+    }
+  };
+
+  generator.studio_setSpritesStop = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesStop',
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesChase = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameChaseActor);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesChaseTooltip());
+    }
+  };
+
+  generator.studio_setSpritesChase = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesChase',
+      extraParams: getSpriteIndex(this),
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesFlee = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameFleeActor);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesFleeTooltip());
+    }
+  };
+
+  generator.studio_setSpritesFlee = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesFlee',
+      extraParams: getSpriteIndex(this),
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesSpeed = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameSpeed);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPEED')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteSpeedTooltip());
+    }
+  };
+
+  generator.studio_setSpritesSpeed = function () {
+    var speed = blockly.JavaScript.valueToCode(this, 'SPEED',
+      Blockly.JavaScript.ORDER_NONE);
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesSpeed',
+      extraParams: speed,
+    });
+  };
+
+  /**
    * setBackground
    */
   blockly.Blocks.studio_setBackground = {
