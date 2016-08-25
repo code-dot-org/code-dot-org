@@ -173,7 +173,7 @@ NetSimPanel.prototype.addButton = function (buttonText, pressCallback, options) 
       .click(pressCallback);
 
   if (options.get('secondary', ArgumentUtils.isBoolean, true)) {
-    button.addClass('secondary');
+    button.addClass('netsim-button-secondary');
   }
 
   options.get('classes', ArgumentUtils.isArrayOfStrings(), [])

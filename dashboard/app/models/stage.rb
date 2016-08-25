@@ -75,7 +75,7 @@ class Stage < ActiveRecord::Base
   end
 
   def lesson_plan_base_url
-    CDO.code_org_url "/curriculum/#{script.name}/#{absolute_position}"
+    CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
   def summarize
