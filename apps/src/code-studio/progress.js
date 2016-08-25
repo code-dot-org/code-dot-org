@@ -21,9 +21,9 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo,
-  authorizeLockable
+  showTeacherInfo
 } from './progressRedux';
+import { authorizeLockable } from './stageLockRedux';
 
 var progress = module.exports;
 
