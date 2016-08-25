@@ -50,8 +50,6 @@ var sliderStyle = {
 /**
  * The delete and duplicate controls beneath an animation or frame thumbnail.
  */
-
- // other icon is stop-circle
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
