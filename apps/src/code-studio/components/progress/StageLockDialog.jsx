@@ -70,6 +70,7 @@ const StageLockDialog = React.createClass({
         lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
+    selectedSection: React.PropTypes.string.isRequired,
     saving: React.PropTypes.bool.isRequired,
     saveDialog: React.PropTypes.func.isRequired
   },
@@ -107,6 +108,11 @@ const StageLockDialog = React.createClass({
 
   showAnswers() {
     this.setAllLockStatus(LockStatus.ReadonlyAnswers);
+  },
+
+  viewSection() {
+    /// TODO - build a way to get code_org_url from dashboard
+    window.open(`http://localhost.code.org:3000/teacher-dashboard#/sections/${this.props.selectedSection}/assessments`, '_blank');
   },
 
   handleRadioChange(event) {
@@ -184,6 +190,17 @@ const StageLockDialog = React.createClass({
                     onClick={this.lockStage}
                   >
                     {commonMsg.relockStage()}
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>{commonMsg.reviewResponses()}</td>
+                <td>
+                  <button
+                    style={progressStyles.whiteButton}
+                    onClick={this.viewSection}
+                  >
+                    {commonMsg.viewSection()}
                   </button>
                 </td>
               </tr>
@@ -280,7 +297,8 @@ const StageLockDialog = React.createClass({
 export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
-  saving: state.stageLock.saving
+  saving: state.stageLock.saving,
+  selectedSection: state.stageLock.selectedSection
 }), dispatch => ({
   saveDialog(lockStatus) {
     dispatch(saveLockDialog(lockStatus));
