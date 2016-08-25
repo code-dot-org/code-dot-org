@@ -144,8 +144,13 @@ class UserLevelTest < ActiveSupport::TestCase
     stage.lockable = true
     stage.save!
 
+    script_level = create :script_level, levels: [@level], stage: stage
+
     ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
     ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
+
+    assert_equal true, @user.user_level_locked?(script_level, @level)
+    assert_equal false, teacher.user_level_locked?(script_level, @level)
 
     assert_equal true, ul_student.locked?(stage)
     assert_equal false, ul_teacher.locked?(stage)

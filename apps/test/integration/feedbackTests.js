@@ -539,25 +539,6 @@ describe("getMissingBlocks_ tests", function () {
     });
   }
 
-  // Hack to compile files into browserify. Don't call this function!
-  function ಠ_ಠ() {
-    require('@cdo/apps/maze/blocks');
-    require('@cdo/apps/flappy/blocks');
-    require('@cdo/apps/turtle/blocks');
-    require('@cdo/apps/eval/blocks');
-    require('@cdo/apps/studio/blocks');
-    require('@cdo/apps/calc/blocks');
-    require('@cdo/apps/bounce/blocks');
-    require('@cdo/apps/applab/blocks');
-
-    require('@cdo/apps/maze/skins');
-    require('@cdo/apps/flappy/skins');
-    require('@cdo/apps/turtle/skins');
-    require('@cdo/apps/studio/skins');
-    require('@cdo/apps/bounce/skins');
-    require('@cdo/apps/applab/skins');
-  }
-
   function validateMissingBlocksFromLevelTest(testCollection, testData, dataItem) {
     var level = testCollectionUtils.getLevelFromCollection(testCollection,
       testData, dataItem);

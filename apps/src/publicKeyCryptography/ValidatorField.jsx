@@ -36,11 +36,12 @@ export default function ValidatorField(props) {
 }
 ValidatorField.propTypes = {
   value: React.PropTypes.number,
-  expectedValue: React.PropTypes.number
+  expectedValue: React.PropTypes.number,
+  shouldEvaluate: React.PropTypes.bool
 };
 
-function statusFromProps({value, expectedValue}) {
-  if ([value, expectedValue].every(Number.isInteger)) {
+function statusFromProps({value, expectedValue, shouldEvaluate}) {
+  if (shouldEvaluate && [value, expectedValue].every(Number.isInteger)) {
     if (value === expectedValue) {
       return CORRECT;
     }

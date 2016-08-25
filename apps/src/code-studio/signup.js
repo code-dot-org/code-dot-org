@@ -26,14 +26,16 @@ window.SignupManager = function (options) {
 
   function formError(err) {
     // Define the fields that can have specific errors attached to them.
-    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "age", "gender"];
+    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "age", "gender", "terms_of_service_version"];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
       if (err.responseJSON.errors[field]) {
         var errorField = $(`#${field}-block .error_in_field`);
          // We have a custom inline message for user_type errors already set in the DOM.
-        if (field !== "user_type") {
+        if (field === "terms_of_service_version") {
+          errorField.text(self.options.acceptTermsString);
+        } else if (field !== "user_type") {
           errorField.text(err.responseJSON.errors[field][0]);
         }
         errorField.fadeTo("normal", 1);
@@ -57,8 +59,11 @@ window.SignupManager = function (options) {
     $("#schoolname-block").hide();
 
     // Show correct terms below form.
-    $("#teacher-terms").hide();
     $("#student-terms").fadeIn();
+    $("#teacher-terms").hide();
+
+    // Implicitly accept terms of service for students.
+    $("#user_terms_of_service_version").prop('checked', true);
   }
 
   function showTeacher() {
@@ -70,6 +75,9 @@ window.SignupManager = function (options) {
     // Show correct terms below form.
     $("#student-terms").hide();
     $("#teacher-terms").fadeIn();
+
+    // Force teachers to explicitly accept terms of service.
+    $("#user_terms_of_service_version").prop('checked', false);
   }
 
   function isTeacherSelected() {
