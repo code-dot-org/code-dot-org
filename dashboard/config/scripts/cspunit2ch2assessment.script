@@ -1,9 +1,0 @@
-title 'CS Principles Unit 2 Ch 2 Assessment'
-description 'This multiple choice assessment is similar in style to the AP CSP Exam and covers material from Unit 2 Chapter 2 (Lessons 7-15)'
-description_short 'Unit 2.2 Assessment'
-login_required 'true'
-hidden 'true'
-
-stage 'CS Principles Unit 2 Assessment'
-level 'CSP_Final_instructions'
-assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'

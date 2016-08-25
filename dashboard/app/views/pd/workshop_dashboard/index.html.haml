@@ -9,7 +9,8 @@
     TEACHER_DASHBOARD_URL: "#{CDO.code_org_url '/teacher-dashboard'}",
     TYPES: #{Pd::Workshop::TYPES},
     COURSES: #{Pd::Workshop::COURSES},
-    SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json}
+    SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json},
+    permission: "#{@permission}"
   }
 =javascript_include_tag 'js/pd'
 
