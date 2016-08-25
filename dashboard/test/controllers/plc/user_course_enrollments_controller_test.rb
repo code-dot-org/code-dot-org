@@ -97,6 +97,29 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'District managers can only view teachers they manage' do
+    district = create(:district, contact: @district_contact)
+    teacher1 = create(:teacher, name: 'Teacher 1')
+    create(:districts_users, user: teacher1, district: district)
+    teacher2 = create(:teacher, name: 'Teacher 2')
+    create(:districts_users, user: teacher2, district: district)
+    teacher3 = create(:teacher, name: 'Teacher 3')
+
+    [teacher1, teacher2, teacher3].each do |teacher|
+      create(:plc_user_course_enrollment, user: teacher, plc_course: @plc_course)
+    end
+
+    sign_out @user
+    sign_in @district_contact
+    get :index
+    assert_response :success
+    get :group_view
+    assert_response :success
+    assert_select 'table tbody tr', 2
+    get :manager_view, id: teacher1.plc_enrollments.first
+    assert_response :success
+  end
+
   test 'District managers cannot view teachers they do not manage' do
     sign_out @user
     sign_in @district_contact
