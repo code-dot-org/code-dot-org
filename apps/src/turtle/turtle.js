@@ -1507,7 +1507,7 @@ Artist.prototype.checkAnswer = function () {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_().split(',')[1];
+    reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
   }
 
   this.studioApp_.report(reportData);
