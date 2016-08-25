@@ -209,7 +209,7 @@ class Script < ActiveRecord::Base
   end
 
   # Find the script level with the given id from the cache, unless the level build mode
-  # is enabled in which case  it is always fetched from the database. If we need to fetch
+  # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
   # the cache), then an entry for the script is added to the cache.
   def self.cache_find_script_level(script_level_id)
@@ -369,9 +369,6 @@ class Script < ActiveRecord::Base
   def has_peer_reviews?
     peer_reviews_to_complete.try(:>, 0)
   end
-
-  SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
-  SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
   def self.setup(custom_files)
     transaction do
