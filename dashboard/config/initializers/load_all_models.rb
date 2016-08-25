@@ -9,7 +9,6 @@
  Concept,
  DSLDefined,
  Eval,
- ExperimentActivity,
  Follower,
  FrequentUnsuccessfulLevelSource,
  Game,
