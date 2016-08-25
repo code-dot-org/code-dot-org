@@ -114,6 +114,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
     @enrollment = get_workshop_user_enrollment
     @enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
+    @enrollment.school_info_attributes = school_info_params
 
     if @enrollment.valid? && Digest::MD5.hexdigest(@enrollment.email) != current_user.hashed_email
       @enrollment.errors[:email] = "must match your login. If you want to use this email instead, \

@@ -17,7 +17,6 @@
 #  user_id             :integer
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
-#  school_info_id      :integer
 #
 # Indexes
 #
@@ -67,17 +66,28 @@ class Pd::Enrollment < ActiveRecord::Base
 
   # Returns true if the SchoolInfo already exists and we should reuse that.
   # Returns false if the SchoolInfo is new and should be stored.
+  # Validates the SchoolInfo first so that we fall into the latter path in
+  # that case.
   def check_school_info(school_info_attr)
-    if school_info = SchoolInfo.where(
+    attr = {
       school_type: school_info_attr['school_type'],
-      state: school_info_attr['state'],
+      state: school_info_attr['school_state'],
       school_district_id: school_info_attr['school_district_id'],
-      zip: school_info_attr['zip'],
-      school_district_other: school_info_attr['']).first
+      zip: school_info_attr['school_zip'],
+      school_district_other: school_info_attr['school_district_other']
+    }
 
+    attr.delete_if { |_, e| e.blank? }
+
+    unless SchoolInfo.create(attr).valid?
+      return false
+    end
+
+    if school_info = SchoolInfo.where(attr).first
       self.school_info = school_info
       return true
     end
+
     return false
   end
 

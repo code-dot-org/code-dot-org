@@ -44,3 +44,13 @@
         %input#school-district-other{name: "#{form_name}[school_district_other]", type: "checkbox", style: "margin-top: 0px"}
         %span{style: "font-size: 12px"}
           Other district not listed above
+
+:javascript
+
+  $(document).ready(function() {
+    var options = #{existing_school_info.to_json};
+
+    // Send through some values that the JavaScript will need.
+    window.districtDropdownManager = new DistrictDropdownManager(options);
+  });
+
