@@ -194,7 +194,8 @@ export function setInitialAnimationList(serializedAnimationList) {
       } else {
         animation.frameDelay = 2;
       }
-    } if (animation.looping === undefined) {
+    }
+    if (animation.looping === undefined) {
       animation.looping = true;
     }
   }
