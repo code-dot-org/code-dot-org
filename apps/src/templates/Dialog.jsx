@@ -69,10 +69,13 @@ Body.propTypes = {
 };
 
 export function Confirm(props) {
-  return <Button type="primary" {...props}>{props.children || locale.dialogOK()}</Button>;
+  let {type, ...other} = props;
+  type = type || "primary";
+  return <Button type={type} {...other}>{props.children || locale.dialogOK()}</Button>;
 }
 Confirm.propTypes = {
   children: React.PropTypes.node,
+  type: React.PropTypes.string,
 };
 
 export function Cancel(props) {
@@ -138,6 +141,7 @@ const Dialog = React.createClass({
     onCancel: whenNoChildOfTypes(Buttons),
     confirmText: whenNoChildOfTypes(Buttons),
     onConfirm: whenNoChildOfTypes(Buttons),
+    confirmType: whenNoChildOfTypes(Buttons),
   }),
 
   render() {
@@ -153,13 +157,15 @@ const Dialog = React.createClass({
     }
     children = children.concat(this.props.children);
     if (this.props.cancelText || this.props.onCancel ||
-        this.props.confirmText || this.props.onConfirm) {
+        this.props.confirmText || this.props.onConfirm || this.props.confirmType) {
       var buttons = (
         <Buttons key="buttons">
           {this.props.onCancel &&
            <Cancel onClick={this.props.onCancel}>{this.props.cancelText}</Cancel>}
           {this.props.onConfirm &&
-           <Confirm onClick={this.props.onConfirm}>{this.props.confirmText}</Confirm>}
+           <Confirm onClick={this.props.onConfirm} type={this.props.confirmType}>
+             {this.props.confirmText}
+           </Confirm>}
         </Buttons>
       );
       const lastChild = children[children.length - 1];
@@ -269,6 +275,20 @@ if (BUILD_STYLEGUIDE) {
               title="A big decision"
               body="Do you want to go skydiving?"
               confirmText="Yes"
+              onCancel={storybook.action("cancel")}
+              onConfirm={storybook.action("confirm")}
+            />
+          )
+        }, {
+          name: 'alternate confirm button type',
+          description: 'This is how the dialog looks with confirm button of type "danger"',
+          story: () => (
+            <Dialog
+              hideBackdrop={true}
+              title="Delete table"
+              body="Are you sure you want to delete the table?"
+              confirmText="Delete"
+              confirmType="danger"
               onCancel={storybook.action("cancel")}
               onConfirm={storybook.action("confirm")}
             />
