@@ -134,7 +134,7 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, sections, selectedSection, sectionsLoaded } = state.stageLock;
+  const { viewAs, sections, selectedSection, sectionsLoaded, lockableAuthorized } = state.stageLock;
   const currentSection = sections[selectedSection];
   const stages = currentSection ? currentSection.stages : {};
 
@@ -149,7 +149,9 @@ export default connect((state, ownProps) => {
     stageNames[stage.id] = stage.name;
   });
 
-  const scriptHasLockedStages = state.progress.stages.some(stage => stage.lockable);
+  // Pretend we don't have lockable stages if we're not authorized to see them
+  const scriptHasLockedStages = lockableAuthorized &&
+    state.progress.stages.some(stage => stage.lockable);
 
   return {
     viewAs,
