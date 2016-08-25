@@ -70,7 +70,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
-    if (data.isTeacher && !currentLevelId) {
+    if (data.isTeacher && !data.professionalLearningCourse && !currentLevelId) {
       store.dispatch(showTeacherInfo());
       renderTeacherPanel(store, scriptData.id);
     }
@@ -90,7 +90,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
-        if (level.submitted || level.readonly_answers) {
+        if (level.readonly_answers) {
           return SUBMITTED_RESULT;
         }
 

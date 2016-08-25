@@ -3,6 +3,19 @@ import _ from 'lodash';
 import React from 'react';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
+import {LINE_HEIGHT} from './style';
+
+const BUTTON_VERTICAL_PADDING = 6;
+const BUTTON_HORIZONTAL_PADDING = 12;
+
+const style = {
+  GoButton: {
+    height: LINE_HEIGHT,
+    lineHeight: `${LINE_HEIGHT - 2 * BUTTON_VERTICAL_PADDING}px`,
+    padding: `${BUTTON_VERTICAL_PADDING}px ${BUTTON_HORIZONTAL_PADDING}px`,
+    marginLeft: 5
+  }
+};
 
 /**
  * Dropdown of possible private keys given a particular public modulus.
@@ -43,4 +56,23 @@ SecretNumberDropdown.propTypes = {
   publicModulus: React.PropTypes.number,
   value: React.PropTypes.number,
   onChange: React.PropTypes.func.isRequired
+};
+
+/**
+ * Button for kicking off a computation in the Cryptography widget.
+ * Used by Alice and Bob.
+ */
+export function GoButton(props) {
+  return (
+    <button
+      className="primary"
+      style={style.GoButton}
+      {...props}
+    >
+      Go
+    </button>);
+}
+GoButton.propTypes = {
+  onClick: React.PropTypes.func.isRequired,
+  disabled: React.PropTypes.bool
 };

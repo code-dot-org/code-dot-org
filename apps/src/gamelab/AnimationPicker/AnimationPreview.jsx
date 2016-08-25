@@ -56,16 +56,12 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    // Never advance the frame if the frameRate is 0
-    if (this.props.animationProps.frameRate === 0) {
-      return;
-    }
-
     this.setState({
       currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animationProps.frameRate);
+    // 33 maps to a 30 fps frameRate
+    this.timeout_ = setTimeout(this.advanceFrame, 33 * this.props.animationProps.frameDelay);
   },
 
   stopAndResetAnimation: function () {
