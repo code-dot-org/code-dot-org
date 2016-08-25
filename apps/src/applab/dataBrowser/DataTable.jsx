@@ -176,13 +176,11 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    if (confirm(applabMsg.confirmClearTable())) {
-      const newColumns = this.getColumnNames();
-      FirebaseStorage.deleteTable(
-        this.props.tableName,
-        () => this.setState({newColumns, editingColumn: null}),
-        msg => console.warn(msg));
-    }
+    const newColumns = this.getColumnNames();
+    FirebaseStorage.deleteTable(
+      this.props.tableName,
+      () => this.setState({newColumns, editingColumn: null}),
+      msg => console.warn(msg));
   },
 
   toggleDebugView() {

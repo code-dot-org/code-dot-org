@@ -3,6 +3,7 @@
  * import, export, adding a new column, and deleting the entire table.
  */
 
+import ConfirmDeleteButton from './ConfirmDeleteButton';
 import Radium from 'radium';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
@@ -16,7 +17,7 @@ const styles = {
     paddingLeft: 0,
     paddingRight: 0,
   },
-  clearButton: [dataStyles.redButton, dataStyles.alignRight, {
+  clearButton: [dataStyles.redButton, {
     width: 103,
   }],
   exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
@@ -91,12 +92,14 @@ const TableControls = React.createClass({
           </button>
         </span>
 
-        <button
-          onClick={this.props.clearTable}
-          style={styles.clearButton}
-        >
-          Clear table
-        </button>
+        <ConfirmDeleteButton
+          body={applabMsg.confirmClearTable()}
+          buttonStyle={styles.clearButton}
+          buttonText="Clear table"
+          containerStyle={{float: 'right'}}
+          onConfirm={this.props.clearTable}
+          title="Clear table"
+        />
 
         <div style={{clear: 'both'}}/>
       </div>
