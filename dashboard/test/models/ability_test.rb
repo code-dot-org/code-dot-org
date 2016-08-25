@@ -88,7 +88,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teachers read their Section' do
     teacher = create :teacher
     ability = Ability.new teacher
-    my_section = create :section, user_id: teacher.id
+    my_section = create :section, users: [teacher]
     not_my_section = create :section, user_id: create(:teacher).id
 
     # When checking a class, conditions are ignored.

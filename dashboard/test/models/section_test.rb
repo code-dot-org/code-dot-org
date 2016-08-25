@@ -160,4 +160,8 @@ class SectionTest < ActiveSupport::TestCase
     teacher = create(:teacher)
     refute section.has_coteacher?(teacher)
   end
+
+  test 'has_coteacher? is false for a nil user' do
+    refute section.has_coteacher?(nil)
+  end
 end
