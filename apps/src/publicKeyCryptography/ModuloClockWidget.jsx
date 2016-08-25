@@ -71,6 +71,7 @@ const ModuloClockWidget = React.createClass({
     return (
       <div style={style.root}>
         <h1 style={style.h1}>The Modulo Clock</h1>
+        <p>THIS EYES CHANGE INTENTIONAL</p>
         <p>Experiment with this "clock" and different numbers to see what happens.</p>
         <div style={{textAlign: 'center'}}>
           <div style={style.balancePadding}>&nbsp;</div>
