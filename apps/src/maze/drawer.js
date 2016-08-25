@@ -162,7 +162,7 @@ export default class Drawer {
       textElement.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
       textElement.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
       textElement.setAttribute('id', Drawer.cellId(prefix, row, col));
-      textElement.appendChild(document.createTextNode());
+      textElement.appendChild(document.createTextNode(''));
       svg.insertBefore(textElement, pegmanElement);
     }
 
