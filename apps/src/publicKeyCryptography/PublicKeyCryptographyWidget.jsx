@@ -21,11 +21,19 @@ const style = {
 
 /** Root component for Public Key Cryptography widget */
 const PublicKeyCryptographyWidget = React.createClass({
+  getInitialState() {
+    return {
+      animating: false,
+      publicModulus: 1
+    };
+  },
+
   setPublicModulus(publicModulus) {
     // Anyone can set the public modulus.  Inform everyone.
     this.alice.setPublicModulus(publicModulus);
     this.bob.setPublicModulus(publicModulus);
     this.eve.setPublicModulus(publicModulus);
+    this.setState({publicModulus});
   },
 
   setPublicKey(publicKey) {
@@ -40,6 +48,15 @@ const PublicKeyCryptographyWidget = React.createClass({
     this.eve.setPublicNumber(publicNumber);
   },
 
+  runModuloClock(dividend, onStep, onComplete) {
+    const speed = 7;
+    this.setState({animating: true});
+    this.moduloClock.animateTo(dividend, speed, onStep, (finalValue) => {
+      this.setState({animating: false});
+      onComplete(finalValue);
+    });
+  },
+
   render() {
     return (
       <div style={style.root}>
@@ -50,20 +67,29 @@ const PublicKeyCryptographyWidget = React.createClass({
         <EqualColumns intercolumnarDistance={20}>
           <Alice
             ref={x => this.alice = x}
+            disabled={this.state.animating}
             setPublicModulus={this.setPublicModulus}
             setPublicKey={this.setPublicKey}
+            runModuloClock={this.runModuloClock}
           />
           <Eve
             ref={x => this.eve = x}
+            disabled={this.state.animating}
             setPublicModulus={this.setPublicModulus}
+            runModuloClock={this.runModuloClock}
           />
           <Bob
             ref={x => this.bob = x}
+            disabled={this.state.animating}
             setPublicModulus={this.setPublicModulus}
             setPublicNumber={this.setPublicNumber}
+            runModuloClock={this.runModuloClock}
           />
         </EqualColumns>
-        <ModuloClock/>
+        <ModuloClock
+          ref={x => this.moduloClock = x}
+          modulus={this.state.publicModulus || 1}
+        />
       </div>);
   }
 });

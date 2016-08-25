@@ -25,14 +25,13 @@ const EditTableListRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.editRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <EditLink name={this.props.tableName} onClick={this.handleEdit}/>
         </td>
         <td style={dataStyles.cell}>
           <button
-            className="btn btn-danger"
-            style={dataStyles.button}
+            style={dataStyles.redButton}
             onClick={this.handleDelete}
           >
             Delete

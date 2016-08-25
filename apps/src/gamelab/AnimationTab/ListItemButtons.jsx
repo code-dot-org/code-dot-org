@@ -54,7 +54,7 @@ var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
       <ItemLoopToggle style={styles.loopTogglePosition} onToggleChange={props.onLoopingChanged} looping={props.looping} />
-      <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameRate} lineWidth={120} onChange={props.onFrameRateChanged}/>
+      <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
       <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
       <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
     </div>
@@ -63,9 +63,9 @@ var ListItemButtons = function (props) {
 ListItemButtons.propTypes = {
   onCloneClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
   onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  onFrameRateChanged: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  frameRate: React.PropTypes.number/*.isRequired as soon as everything is hooked up. */,
   onLoopingChanged: React.PropTypes.func,
-  looping: React.PropTypes.bool
+  looping: React.PropTypes.bool,
+  onFrameDelayChanged: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
+  frameDelay: React.PropTypes.number/*.isRequired as soon as everything is hooked up. */
 };
 module.exports = Radium(ListItemButtons);
