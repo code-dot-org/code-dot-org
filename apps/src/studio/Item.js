@@ -151,21 +151,22 @@ export default class Item extends Collidable {
     // Has the item reached its destination grid position?
     // (There is a small margin of error to allow for per-update movements greater
     // than a single pixel.)
-    var speed = valueOr(this.speed, 0);
-    var dirUnit = Direction.getUnitVector(this.dir);
-    var center = this.getCenterPos();
-    var destVector = {
-      x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
-      y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
-    };
-    // Take the dot product of dirUnit and destVector to see if continuing to
-    // move in that direction will bring the item any closer to its
-    // destination.
-    if (this.destGridX !== undefined &&
-        (dirUnit.x * destVector.x + dirUnit.y * destVector.y ) <= speed) {
-      this.gridX = this.destGridX;
-      this.gridY = this.destGridY;
-      reachedDestinationGridPosition = true;
+    if (this.destGridX !== undefined) {
+      var speed = valueOr(this.speed, 0);
+      var dirUnit = Direction.getUnitVector(this.dir);
+      var center = this.getCenterPos();
+      var destVector = {
+        x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
+        y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
+      };
+      // Take the dot product of dirUnit and destVector to see if continuing to
+      // move in that direction will bring the item any closer to its
+      // destination.
+      if (dirUnit.x * destVector.x + dirUnit.y * destVector.y <= speed) {
+        this.gridX = this.destGridX;
+        this.gridY = this.destGridY;
+        reachedDestinationGridPosition = true;
+      }
     }
 
     // Are we missing a destination location in grid coords?
