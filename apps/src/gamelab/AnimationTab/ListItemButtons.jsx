@@ -1,6 +1,4 @@
 /** @file controls below an animation thumbnail */
-'use strict';
-
 var React = require('react');
 var color = require('../../color');
 var Radium = require('radium');
