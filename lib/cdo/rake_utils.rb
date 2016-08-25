@@ -100,7 +100,7 @@ module RakeUtils
   end
 
   def self.nproc
-    # TODO replace with system processor count
+    # TODO: Replace with system processor count.
     1
   end
 
