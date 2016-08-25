@@ -767,7 +767,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = @custom_s1_l1.level
     level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
     Activity.create!(level: level, user: @student, level_source: level_source)
-    UserLevel.create!(level: level, user: @student, level_source: level_source)
+    UserLevel.create!(script: @custom_script, level: level, user: @student, level_source: level_source)
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.absolute_position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
 
