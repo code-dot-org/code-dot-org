@@ -63,7 +63,7 @@ const ScriptTeacherPanel = React.createClass({
     ).isRequired,
     selectedSection: React.PropTypes.string,
     sectionsLoaded: React.PropTypes.bool.isRequired,
-    scriptHasLockedStages: React.PropTypes.bool.isRequired,
+    scriptHasLockableStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     setViewType: React.PropTypes.func.isRequired,
     selectSection: React.PropTypes.func.isRequired,
@@ -80,7 +80,7 @@ const ScriptTeacherPanel = React.createClass({
       selectedSection,
       sectionsLoaded,
       setViewType,
-      scriptHasLockedStages,
+      scriptHasLockableStages,
       unlockedStageNames
     } = this.props;
     const hasSections = Object.keys(sections).length > 0;
@@ -90,7 +90,7 @@ const ScriptTeacherPanel = React.createClass({
         <div className="content">
           <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
           {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          {scriptHasLockedStages && hasSections &&
+          {scriptHasLockableStages && hasSections &&
             <select
               name="sections"
               style={styles.select}
@@ -104,7 +104,7 @@ const ScriptTeacherPanel = React.createClass({
               ))}
             </select>
           }
-          {scriptHasLockedStages && hasSections && this.props.viewAs === ViewType.Teacher &&
+          {scriptHasLockableStages && hasSections && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
                 {commonMsg.selectSection()}
@@ -150,7 +150,7 @@ export default connect((state, ownProps) => {
   });
 
   // Pretend we don't have lockable stages if we're not authorized to see them
-  const scriptHasLockedStages = lockableAuthorized &&
+  const scriptHasLockableStages = lockableAuthorized &&
     state.progress.stages.some(stage => stage.lockable);
 
   return {
@@ -158,7 +158,7 @@ export default connect((state, ownProps) => {
     sections,
     selectedSection,
     sectionsLoaded,
-    scriptHasLockedStages,
+    scriptHasLockableStages,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({
