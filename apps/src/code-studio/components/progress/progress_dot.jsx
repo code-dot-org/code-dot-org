@@ -252,7 +252,6 @@ export default connect(state => ({
 
 
 
-
 if (BUILD_STYLEGUIDE) {
   ProgressDot.styleGuideExamples = storybook => {
     storybook
@@ -651,7 +650,7 @@ if (BUILD_STYLEGUIDE) {
               }}
             />
           )
-        }
+        },
       ]);
   };
 }
