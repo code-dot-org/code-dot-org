@@ -7,10 +7,10 @@ class TransfersControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     sign_in(@teacher)
 
-    @word_section = create(:section, user: @teacher, login_type: 'word')
+    @word_section = create(:section, users: [@teacher], login_type: 'word')
     @word_user_1 = create(:follower, section: @word_section).student_user
 
-    @picture_section = create(:section, user: @teacher, login_type: 'picture')
+    @picture_section = create(:section, users: [@teacher], login_type: 'picture')
     @picture_user_1 = create(:follower, section: @word_section).student_user
   end
 
@@ -36,7 +36,7 @@ class TransfersControllerTest < ActionController::TestCase
 
   test "returns an error when stay_enrolled_in_current_section is not provided and a student is being transferred to another teacher" do
     new_teacher = create(:teacher)
-    new_section = create(:section, user: new_teacher, login_type: 'word')
+    new_section = create(:section, users: [new_teacher], login_type: 'word')
 
     post :create, new_section_code: new_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code
     assert_response 400
@@ -52,7 +52,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when one of the student_ids is invalid" do
-    new_section = create(:section, user: create(:teacher), login_type: 'word')
+    new_section = create(:section, users: [create(:teacher)], login_type: 'word')
     student_ids = [@word_user_1.id, -100].join(',')
     post :create, new_section_code: new_section.code, student_ids: student_ids, current_section_code: @word_section.code, stay_enrolled_in_current_section: true
     assert_response 404, json_response["error"]
@@ -80,6 +80,9 @@ class TransfersControllerTest < ActionController::TestCase
   test "when the new section belongs to a different teacher, students should stay enrolled in the current section if stay_enrolled_in_current_section is true" do
     new_section = create(:section, user: create(:teacher), login_type: 'word')
 
+  test "students should stay enrolled in the current section if stay_enrolled_in_current_section is true" do
+    new_section = create(:section, users: [create(:teacher)], login_type: 'word')
+
     post :create, new_section_code: new_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: true
     assert Follower.exists?(student_user: @word_user_1, section: @word_section)
   end
@@ -104,7 +107,7 @@ class TransfersControllerTest < ActionController::TestCase
 
   test "transferring to a new teacher causes a student to join the section" do
     new_teacher = create(:teacher)
-    new_word_section = create(:section, user: new_teacher, login_type: 'word')
+    new_word_section = create(:section, users: [new_teacher], login_type: 'word')
 
     post :create, new_section_code: new_word_section.code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: false
     assert Follower.exists?(student_user: @word_user_1, section: new_word_section)
@@ -112,7 +115,7 @@ class TransfersControllerTest < ActionController::TestCase
 
   test "transferring to a new teacher does not modify existing sections for a student" do
     new_teacher = create(:teacher)
-    new_word_section = create(:section, user: new_teacher, login_type: 'word')
+    new_word_section = create(:section, users: [new_teacher], login_type: 'word')
 
     post :create, new_section_code: new_word_section.code, student_ids: @word_user_1.id.to_s
 
@@ -130,7 +133,7 @@ class TransfersControllerTest < ActionController::TestCase
 
   test "all students can be transferred successfully" do
     new_teacher = create(:teacher)
-    new_section = create(:section, user: new_teacher, login_type: 'word')
+    new_section = create(:section, users: [new_teacher], login_type: 'word')
 
     new_student = create(:student)
     Follower.create!(user_id: @picture_section.user_id, student_user: new_student, section: @picture_section)
@@ -168,7 +171,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "current section must belong to current user" do
-    new_section = create(:section, user: create(:teacher), login_type: 'word')
+    new_section = create(:section, users: [create(:teacher)], login_type: 'word')
     new_student = create(:student)
 
     student_ids = [new_student].map(&:id).join(',')

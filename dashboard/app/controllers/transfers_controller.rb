@@ -41,7 +41,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    if current_section.user != current_user
+    unless current_section.has_coteacher?(current_user)
       render json: {
         error: I18n.t('move_students.students_not_yours')
       }, status: :forbidden
@@ -51,7 +51,7 @@ class TransfersController < ApplicationController
     # As of right now, this only applies to transfers to another teacher
     # When students are allowed to be in multiple sections, this will also be needed
     # for transfers between the current logged-in teacher
-    if new_section.user == current_user
+    if new_section.has_coteacher?(current_user)
       stay_enrolled_in_current_section = false
     elsif params.key?(:stay_enrolled_in_current_section)
       stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] && params[:stay_enrolled_in_current_section] != 'false'
@@ -87,7 +87,8 @@ class TransfersController < ApplicationController
       return
     end
 
-    if new_section.user != current_user
+    unless new_section.has_coteacher?(current_user)
+      # TODO: This needs to be fixed for coteachers
       new_section_teacher = new_section.user
       if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section_teacher.id)}
         render json: {
@@ -98,7 +99,7 @@ class TransfersController < ApplicationController
     end
 
     students.each do |student|
-      if new_section.user == current_user
+      if new_section.has_coteacher?(current_user)
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
         follower_same_user_teacher.update_attributes!(section_id: new_section.id)
       else

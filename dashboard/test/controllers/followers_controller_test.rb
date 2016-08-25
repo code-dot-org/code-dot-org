@@ -3,16 +3,16 @@ require 'test_helper'
 class FollowersControllerTest < ActionController::TestCase
   setup do
     @laurel = create(:teacher)
-    @laurel_section_1 = create(:section, user: @laurel)
-    @laurel_section_2 = create(:section, user: @laurel)
-    @laurel_section_script = create(:section, user: @laurel, script: Script.find_by_name('course1'))
+    @laurel_section_1 = create(:section, users: [@laurel])
+    @laurel_section_2 = create(:section, users: [@laurel])
+    @laurel_section_script = create(:section, users: [@laurel], script: Script.find_by_name('course1'))
 
     # add a few students to a section
     @laurel_student_1 = create(:follower, section: @laurel_section_1)
     @laurel_student_2 = create(:follower, section: @laurel_section_1)
 
     @chris = create(:teacher)
-    @chris_section = create(:section, user: @chris)
+    @chris_section = create(:section, users: [@chris])
 
     # student without section or teacher
     @student = create(:user)
