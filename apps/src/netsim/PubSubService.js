@@ -1,9 +1,9 @@
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
-/* global Pusher */
 'use strict';
 
+import Pusher from 'pusher-js';
 var PubSubChannel = require('./PubSubChannel');
 
 /**
