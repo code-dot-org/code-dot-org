@@ -776,6 +776,7 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
           props.frameCount
       );
       this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+      this.p5.projectAnimations[props.name].looping = props.looping;
       this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
     });
   });
