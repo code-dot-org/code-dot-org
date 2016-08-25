@@ -674,6 +674,9 @@ var cancelQueuedMovements = function (index, yAxis) {
 
 var getNextPosition = function (i, modifyQueues) {
   var delta = calcMoveDistanceFromQueues(i, modifyQueues);
+  if (delta.x === 0 && delta.y === 0) {
+    return Studio.sprite[i].getNextPosition();
+  }
   return {
     x: Studio.sprite[i].x + delta.x,
     y: Studio.sprite[i].y + delta.y
@@ -846,6 +849,7 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           handler.func(api, Studio.Globals);
         } catch (e) {
           // Do nothing
+          console.error(e);
         }
         Studio.currentCmdQueue = null;
       }
@@ -1507,6 +1511,9 @@ function updateItems() {
       Studio.items.splice(i, 1);
     }
   }
+  Studio.sprite.forEach(sprite => {
+    sprite.update();
+  });
 }
 
 function checkForItemCollisions() {
@@ -3762,6 +3769,26 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
       break;
+    case 'setSpritesWander':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesWander(cmd.opts);
+      break;
+    case 'setSpritesStop':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesStop(cmd.opts);
+      break;
+    case 'setSpritesChase':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesChase(cmd.opts);
+      break;
+    case 'setSpritesFlee':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesFlee(cmd.opts);
+      break;
+    case 'setSpritesSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesSpeed(cmd.opts);
+      break;
     case 'addGoal':
       studioApp.highlight(cmd.id);
       Studio.addGoal(cmd.opts);
@@ -4101,7 +4128,7 @@ Studio.setItemActivity = function (opts) {
     Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
       if (item.className === itemClass) {
-        item.setActivity(opts.type);
+        item.setActivity(opts.type, 0);
 
         // For verifying success, record this combination of activity type and
         // item type.
@@ -4581,6 +4608,7 @@ Studio.setSprite = function (opts) {
     return;
   }
 
+  sprite.imageName = spriteValue;
   sprite.frameCounts = skinSprite.frameCounts;
   sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
@@ -5163,6 +5191,36 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
+};
+
+function getSpritesByName(name) {
+  return Studio.sprite.filter(
+      sprite => sprite.imageName === name && sprite.visible);
+}
+
+Studio.setSpritesWander = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('roam'));
+};
+
+Studio.setSpritesStop = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('none'));
+};
+
+Studio.setSpritesChase = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('chase', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesFlee = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('flee', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesSpeed = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.speed = opts.speed);
 };
 
 Studio.addGoal = function (opts) {
