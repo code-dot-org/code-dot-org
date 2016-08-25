@@ -29,10 +29,12 @@
 
                 function writeFileData(path, data, callback) {
                     path = Path.join(projectRoot, path);
+                    // write the data
                     fs.writeFile(path, data, function (err) {
                         if (err) {
                             throw err;
                         }
+                        // call completion callback
                         callback();
                     });
                 }
@@ -41,7 +43,9 @@
                 function writeSourceFile(sources, i, callback) {
                     if (i < sources.files.length) {
                         var file = sources.files[i];
+                        // write file data into Bramble
                         writeFileData(file.name, file.data, function () {
+                            // continue on to the next item on the list
                             writeSourceFile(sources, i + 1, callback);
                         });
                     } else {
@@ -50,6 +54,7 @@
                     }
                 }
 
+                // start an async-chained enumeration through the file list
                 writeSourceFile(sources, 0, callback);
             });
         });
@@ -91,7 +96,7 @@
                 }
             }
 
-            // start an async-chained walk through the file list
+            // start an async-chained enumeration through the file list
             getFileData(0,callback);
         });
     }
