@@ -450,6 +450,15 @@ export default class Sprite extends Item {
     this.lastDrawPosition = drawPosition;
   }
 
+  // TODO(ram): make x and y props consistent with Item. In sprites they
+  // represent the top left corner, in items they're the center.
+  getCenterPos() {
+    return {
+      x: this.x + this.width / 2,
+      y: this.y + this.height / 2,
+    };
+  }
+
   getNextPosition() {
     var unit = Direction.getUnitVector(this.dir);
     var speed = this.speed;
@@ -528,8 +537,15 @@ export default class Sprite extends Item {
 
   atEdge(candidate) {
     return candidate.gridX < 0 ||
-        (candidate.gridX * Studio.SQUARE_SIZE + this.width) >= Studio.MAZE_WIDTH ||
+        (candidate.gridX * Studio.SQUARE_SIZE + this.width) > Studio.MAZE_WIDTH ||
         candidate.gridY < 0 ||
-        (candidate.gridY * Studio.SQUARE_SIZE + this.height) >= Studio.MAZE_HEIGHT;
+        (candidate.gridY * Studio.SQUARE_SIZE + this.height) > Studio.MAZE_HEIGHT;
+  }
+
+  hasWall(candidate) {
+    return Studio.willSpriteTouchWall(
+        this,
+        candidate.gridX * Studio.SQUARE_SIZE,
+        candidate.gridY * Studio.SQUARE_SIZE);
   }
 }

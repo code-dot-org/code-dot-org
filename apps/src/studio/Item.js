@@ -153,9 +153,10 @@ export default class Item extends Collidable {
     // than a single pixel.)
     var speed = valueOr(this.speed, 0);
     var dirUnit = Direction.getUnitVector(this.dir);
+    var center = this.getCenterPos();
     var destVector = {
-      x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - this.x,
-      y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - this.y
+      x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
+      y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
     };
     if (this.destGridX !== undefined &&
         (dirUnit.x * destVector.x + dirUnit.y * destVector.y ) <= speed) {
@@ -402,6 +403,13 @@ export default class Item extends Collidable {
           y: this.y + this.renderOffset.y
         },
         Studio.tickCount);
+  }
+
+  getCenterPos() {
+    return {
+      x: this.x,
+      y: this.y,
+    };
   }
 
   getNextPosition() {
