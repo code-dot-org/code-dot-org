@@ -1,48 +1,35 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
 import React from 'react';
-import color from '../color';
+import VirtualizedSelect from 'react-virtualized-select';
 import {LINE_HEIGHT} from './style';
-
-const style = {
-  root: {
-    width: 100,
-    height: Math.min(LINE_HEIGHT, 24),
-    // lineHeight does not get the automatic 'px' suffix
-    // see https://facebook.github.io/react/tips/style-props-value-px.html
-    lineHeight: `${LINE_HEIGHT}px`,
-    verticalAlign: 'middle',
-    marginBottom: 0,
-    paddingTop: 2,
-    paddingBottom: 2,
-    borderRadius: 4,
-    color: color.charcoal,
-    border: `1px solid ${color.lighter_gray}`,
-    backgroundColor: color.white
-  }
-};
+import 'react-virtualized/styles.css';
+import 'react-select/dist/react-select.css';
+import 'react-virtualized-select/styles.css';
 
 const IntegerDropdown = React.createClass({
   propTypes: {
     value: React.PropTypes.number,
-    onChange: React.PropTypes.func.isRequired,
-    options: React.PropTypes.arrayOf(React.PropTypes.number).isRequired
+    options: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    disabled: React.PropTypes.bool,
+    onChange: React.PropTypes.func.isRequired
   },
 
-  onChange(event) {
-    const value = parseInt(event.target.value, 10);
-    this.props.onChange(Number.isInteger(value) ? value : null);
+  onChange(selected) {
+    this.props.onChange(selected ? selected.value : null);
   },
 
   render() {
-    let {value, options} = this.props;
-    if (!Number.isInteger(value)) {
-      value = '';
-    }
+    let {value, options, disabled} = this.props;
+    options = options.map(n => ({label: String(n), value: n}));
     return (
-      <select style={style.root} value={value} onChange={this.onChange}>
-        <option key="empty" value=""/>
-        {options.map(n => <option key={n} value={n}>{n}</option>)}
-      </select>);
+      <VirtualizedSelect
+        className="integer-dropdown"
+        optionHeight={LINE_HEIGHT}
+        options={options}
+        value={value}
+        disabled={disabled}
+        onChange={this.onChange}
+      />);
   }
 });
 export default IntegerDropdown;

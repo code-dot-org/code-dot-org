@@ -78,7 +78,7 @@ class SectionTest < ActiveSupport::TestCase
       section.add_student student
     end
     assert section.students.exists?(student.id)
-    assert_equal 2, Follower.count(student_user_id: student.id)
+    assert_equal 2, Follower.where(student_user_id: student.id).count
   end
 
   test 'add_student in another section from the same teacher moves student' do

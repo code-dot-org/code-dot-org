@@ -31,5 +31,4 @@ class MatchDSL < ContentDSL
     end
     {@name => strings}
   end
-
 end

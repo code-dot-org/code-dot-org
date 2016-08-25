@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Api::V1::Pd::DistrictReportDataTableSerializerTest < ::ActionController::TestCase
-
   setup do
     @admin = create :admin
     @organizer = create :workshop_organizer

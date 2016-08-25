@@ -76,7 +76,7 @@ class CalloutsController < ApplicationController
   end
 
   # this is to fix a ForbiddenAttributesError cancan issue
-  prepend_before_filter do
+  prepend_before_action do
     params[:callout] &&= callout_params
   end
 end

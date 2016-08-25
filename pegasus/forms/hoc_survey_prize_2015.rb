@@ -1,5 +1,4 @@
 class HocSurveyPrize2015
-
   def self.normalize(data)
     result = {}
 

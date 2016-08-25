@@ -13,7 +13,13 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      if script_level.stage.lockable?
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      else
+        puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      end
+    elsif script_level.stage.lockable?
+      script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -131,7 +137,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.position,
+        stage_position: @script_level.stage.absolute_position,
         level_position: @script_level.position
       )
     end
@@ -277,21 +283,9 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-dependent option
-    # Fetch localized strings
-    if l.custom?
-      loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.en? || loc_val.nil?
-        level_options['instructions'] = loc_val
-      end
-    else
-      %w(instructions).each do |label|
-        val = [l.game.app, l.game.name].map { |name|
-          data_t("level.#{label}", "#{name}_#{l.level_num}")
-        }.compact.first
-        level_options[label] ||= val unless val.nil?
-      end
-    end
+    # Locale-depdendant option
+    loc_instructions = l.localized_instructions
+    level_options['instructions'] = loc_instructions unless loc_instructions.nil?
 
     # Script-dependent option
     script = @script
@@ -318,14 +312,14 @@ module LevelsHelper
       # puzzle-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
         puzzle: script_level.position
       }, default: nil)
 
       # stage-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
       }, default: nil) if enabled.nil?
 
       # script-specific
@@ -352,6 +346,13 @@ module LevelsHelper
     if @level.game.uses_pusher?
       app_options['usePusher'] = CDO.use_pusher
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
+    end
+
+    # TTS
+    # TTS is currently only enabled for k1
+    if script && script.is_k1?
+      app_options['acapelaInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_instructions_audio_file}"
+      app_options['acapelaMarkdownInstructionsSrc'] = "https://cdo-tts.s3.amazonaws.com/#{@level.tts_markdown_instructions_audio_file}"
     end
 
     if @level.is_a? NetSim
@@ -515,7 +516,7 @@ module LevelsHelper
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
-  def instruction_gif_asset_path filename
+  def instruction_gif_asset_path(filename)
     File.join('/', instruction_gif_relative_path, filename)
   end
 
@@ -577,16 +578,28 @@ module LevelsHelper
   end
 
   # If this is a restricted level (i.e., applab), the user is under 13, and the
-  # user has not teacher that has accepted our (August 2016) terms of service,
+  # user has no teacher that has accepted our (August 2016) terms of service,
   # redirect with a flash alert.
+  # Also redirect if the user is pairing with a user who would receive a
+  # redirect.
+  # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Lab.
-    return unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
     end
+
+    pairings.each do |paired_user|
+      if paired_user.under_13? && paired_user.terms_version.nil?
+        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+        return true
+      end
+    end
+
+    false
   end
 
   def can_view_solution?

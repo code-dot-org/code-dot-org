@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-var applabMsg = require('./locale');
+var applabMsg = require('@cdo/applab/locale');
 var color = require('../color');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');

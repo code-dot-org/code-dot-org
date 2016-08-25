@@ -12,7 +12,7 @@ import {isSubsequence} from './utils';
  *
  * Example:
  *   propTypes: {
- *     children: childrenOfType([Heading, Body])
+ *     children: childrenOfType(Heading, Body)
  *   }
  *
  * In this example, the prop type does not validate if there are more than
@@ -29,7 +29,10 @@ export function childrenOfType(...validChildrenTypes) {
       );
     }
     const prop = props[propName];
-    const actualChildrenTypes = React.Children.map(prop, el => el.type) || [];
+    if (!prop) {
+      return;
+    }
+    const actualChildrenTypes = React.Children.map(prop, el => el && el.type) || [];
     if (!isSubsequence(validChildrenTypes, actualChildrenTypes)) {
       return new Error(
         componentName +

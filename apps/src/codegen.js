@@ -18,7 +18,7 @@ exports.ForStatementMode = {
 /**
  * Evaluates a string of code parameterized with a dictionary.
  */
-exports.evalWith = function (code, options) {
+exports.evalWith = function (code, options, legacy) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function (interpreter, scope) {
@@ -27,6 +27,10 @@ exports.evalWith = function (code, options) {
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
     myInterpreter.run();
+  } else if (!legacy) {
+    new Interpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+      marshalNativeToInterpreterObject(interpreter, options, 5, scope);
+    }).run();
   } else {
     // execute JS code "natively"
     var params = [];
@@ -42,6 +46,37 @@ exports.evalWith = function (code, options) {
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
   }
+};
+
+/**
+ * Generate code for each of the given events, and evaluate it using the
+ * provided APIs as context.
+ * @param apis Context to be set as globals in the interpreted runtime.
+ * @param events Mapping of hook names to the corresponding blockly block name.
+ * @param generator Function for generating code for a given block name.
+ * @return {{}} Mapping of hook names to the corresponding event handler.
+ */
+exports.evalWithEvents = function (apis, events, generator) {
+  let interpreter, currentCallback;
+  let code = '';
+  const hooks = {};
+  Object.keys(events).forEach(event => {
+    hooks[event] = () => {
+      currentCallback(event);
+      interpreter.run();
+    };
+    code += `function ${event}(){${generator(events[event])}};`;
+  });
+
+  interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
+    marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
+    interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+      currentCallback = callback;
+    }));
+  });
+  interpreter.run();
+
+  return hooks;
 };
 
 /**

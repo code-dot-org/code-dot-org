@@ -1,6 +1,6 @@
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   before_action :require_admin
   check_authorization
 
