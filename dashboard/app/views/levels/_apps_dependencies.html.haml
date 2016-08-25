@@ -58,10 +58,6 @@
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
 %script{src: minifiable_asset_path("js/#{app}.js")}
 
--# NetSim external script dependencies
-- if use_netsim
-  %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
-
 -# Applab external script dependencies
 - if use_applab
   %script{src: 'https://www.google.com/jsapi'}

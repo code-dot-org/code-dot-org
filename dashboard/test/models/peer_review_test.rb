@@ -146,6 +146,8 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'pull review from the pool clones reviews if necessary' do
+    @script.update(peer_reviews_to_complete: 2)
+    Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
       3.times { teachers << create(:teacher) }
     end
@@ -163,7 +165,19 @@ class PeerReviewTest < ActiveSupport::TestCase
       review.update(status: 0, data: 'lgtm')
     end
 
-    # Now when the third reviewer tries to pull, there are no reviews for them to do. So they should get a clone
+    # When the third reviewer goes to the page, they should get a link
+    review_summary = PeerReview.get_peer_review_summaries(reviewer_3, @script_level.script)
+    expected_review = {
+      status: 'not_started',
+      name: I18n.t('peer_review.review_new_submission'),
+      result: ActivityConstants::UNSUBMITTED_RESULT,
+      icon: '',
+      locked: false
+    }
+
+    assert_equal expected_review, review_summary.first
+
+    # When the third reviewer tries to pull, there are no reviews for them to do. So they should get a clone
     third_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
     assert_equal 3, PeerReview.count
     assert_nil third_review.data
