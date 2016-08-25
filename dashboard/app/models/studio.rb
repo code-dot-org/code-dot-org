@@ -314,6 +314,13 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setSpritesSpeed">
+    <value name="SPEED">
+      <block type="math_number">
+        <title name="NUM">5</title>
+      </block>
+    </value>
+  </block>
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
