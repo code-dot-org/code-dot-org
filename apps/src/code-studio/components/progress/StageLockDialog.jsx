@@ -149,7 +149,7 @@ const StageLockDialog = React.createClass({
           <table>
             <tbody>
               <tr>
-                <td>{commonMsg.allowEditingInstructions()}</td>
+                <td>1. {commonMsg.allowEditingInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -160,7 +160,7 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.lockStageInstructions()}</td>
+                <td>2. {commonMsg.lockStageInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -171,7 +171,7 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.showAnswersInstructions()}</td>
+                <td>3. {commonMsg.showAnswersInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -182,7 +182,7 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.relockStageInstructions()}</td>
+                <td>4. {commonMsg.relockStageInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -193,7 +193,7 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.reviewResponses()}</td>
+                <td>5. {commonMsg.reviewResponses()}</td>
                 <td>
                   <button
                     style={progressStyles.whiteButton}
