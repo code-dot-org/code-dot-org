@@ -35,7 +35,7 @@ const ConfirmImportButton = React.createClass({
           ref={input => this.importFileInput = input}
           type="file"
           style={{display: 'none'}}
-          accept="csv"
+          accept="text/csv"
           onChange={this.handleSelectImportFile}
         />
         <button
