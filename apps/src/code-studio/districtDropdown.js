@@ -2,9 +2,10 @@ import $ from 'jquery';
 var selectize;
 var selected_state;
 
-$(function () {
-  var doneLoading = false;
+window.DistrictDropdownManager = function (existingOptions) {
 
+  var doneLoading = false;
+  var districtListLoaded = false;
   var districtElement = $('#school-district-id');
 
   function setupDistrictDropdown(stateCode) {
@@ -30,6 +31,7 @@ $(function () {
         type: 'GET',
         error: function () {
           callback();
+          districtListLoaded = true;
         },
         success: function (res) {
           var districts = [];
@@ -39,6 +41,14 @@ $(function () {
             districts.push({value: entry.id, text: entry.name});
           }
           callback(districts);
+
+          // Only do this first time we do a load of this dropdown content.
+          // The assumption is that if we had a valid school_district_id then
+          // we would hit this codepath immediately after page load.
+          if (!districtListLoaded && existingOptions && existingOptions.school_district_id) {
+            $('#school-district-id')[0].selectize.setValue(existingOptions.school_district_id);
+          }
+          districtListLoaded = true;
         }
       });
     });
@@ -103,7 +113,7 @@ $(function () {
   });
 
   $('#school-district-other').change(function () {
-    if ($(this).prop("checked")) {
+    if ($(this).prop('checked')) {
       // Disable districts.
       enableDistricts(false);
 
@@ -115,4 +125,24 @@ $(function () {
     }
   });
 
-});
+  // Now that all the handlers are set up, initialize the control with existing
+  // values if they were provided.
+
+  if (existingOptions) {
+    if (existingOptions.school_type) {
+      $('#school-type').val(existingOptions.school_type).change();
+    }
+
+    if (existingOptions.zip) {
+      $('#school-zipcode').val(existingOptions.zip).change();
+    }
+
+    if (existingOptions.state) {
+      $('#school-state').val(existingOptions.state).change();
+    }
+
+    if (existingOptions.school_district_other) {
+      $('#school-district-other').prop('checked', true).change();
+    }
+  }
+};
