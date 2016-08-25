@@ -90,7 +90,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       previous_level: build_script_level_path(@script_level_prev),
       total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
-      design: 'white_background',
     }.merge options
   end
 
@@ -99,7 +98,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       previous_level: build_script_level_path(@script_level_prev),
       message: 'try again',
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      design: 'white_background',
     }.merge options
   end
 
@@ -507,28 +505,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
-  end
-
-  test "logged in milestone not passing with hint" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    # set up hint
-    level_source = LevelSource.find_identical_or_create(@script_level.level, @milestone_params[:program])
-    hint = LevelSourceHint.create!(level_source_id: level_source.id, status: 'experiment', source: 'crowdsourced', hint: 'This is the hint')
-
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource, GalleryActivity) do
-        assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
-        end
-      end
-    end
-
-    assert_response :success
-
-    expected_response = build_try_again_response(hint: hint.hint)
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "logged in milestone with image not passing" do
