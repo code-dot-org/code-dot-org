@@ -68,8 +68,10 @@ class ApiController < ApplicationController
 
     # stage data
     stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
-      {length: levels.length,
-       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
+      {
+        length: levels.length,
+        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+      }
     end
 
     # student level completion data
@@ -81,20 +83,24 @@ class ApiController < ApplicationController
         paired = user_levels.any?(&:paired?)
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {class: level_class, title: title, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        {
+          class: level_class,
+          title: title,
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+        }
       end
       {id: student.id, levels: student_levels}
     end
 
     data = {
-            students: students,
-            script: {
-                     id: @script.id,
-                     name: data_t_suffix('script.name', @script.name, 'title'),
-                     levels_count: @script.script_levels.length,
-                     stages: stages
-                    }
-           }
+      students: students,
+      script: {
+        id: @script.id,
+        name: data_t_suffix('script.name', @script.name, 'title'),
+        levels_count: @script.script_levels.length,
+        stages: stages
+      }
+    }
 
     render json: data
   end
