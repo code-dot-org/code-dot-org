@@ -2,7 +2,6 @@
 require 'test_helper'
 
 class RegistrationsControllerTest < ActionController::TestCase
-
   setup do
     # stub properties so we don't try to hit pegasus db
     Properties.stubs(:get).returns nil

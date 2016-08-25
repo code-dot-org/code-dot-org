@@ -185,7 +185,9 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSDU2 - Fundamentals Videos: {}
       CSDU2 - Rating Quality Websites: {}
+      CSDU2 - further styling suggestions: {}
       CSDU2- home page examples: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
@@ -1525,6 +1527,9 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      csp_unit_assessment_overview:
+        description here: description here
+        title: title
       duino auduino:
         duino auduino: duino auduino
       duino battery led:

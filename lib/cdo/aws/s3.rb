@@ -31,6 +31,17 @@ module AWS
       raise NoSuchKey.new("No such key `#{key}'")
     end
 
+    # Returns true iff the specified S3 key exists in bucket
+    # @param [String] bucket
+    # @param [String] key
+    # @return [Boolean]
+    def self.exists_in_bucket(bucket, key)
+      create_client.get_object(bucket: bucket, key: key)
+      return true
+    rescue Aws::S3::Errors::NoSuchKey
+      return false
+    end
+
     # Sets the value of a key in the given S3 bucket.
     # The key name is derived from 'filename', prepending a random prefix
     # unless options[:no_random] is set.

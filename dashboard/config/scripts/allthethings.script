@@ -187,6 +187,7 @@ lockable: true
 assessment 'CSP pre-assessment survey'
 
 stage 'Public Key Cryptography'
+level 'AllTheThings Modulo Clock'
 level 'AllThethings Public Key Cryptography'
 
 stage 'Web Lab'

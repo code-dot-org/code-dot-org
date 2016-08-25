@@ -46,6 +46,7 @@ class Level < ActiveRecord::Base
 
   include StiFactory
   include SerializedProperties
+  include TextToSpeech
 
   serialized_attrs %w(
     video_key
@@ -325,5 +326,4 @@ class Level < ActiveRecord::Base
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
-
 end

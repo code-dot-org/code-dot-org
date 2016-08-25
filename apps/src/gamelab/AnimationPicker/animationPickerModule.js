@@ -140,7 +140,7 @@ function loadImageMetadata(sourceUrl, callback) {
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},
       frameCount: 1,
-      frameRate: 15
+      frameDelay: 4
     });
   });
   image.src = sourceUrl;

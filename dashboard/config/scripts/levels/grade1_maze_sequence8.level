@@ -39,13 +39,17 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveSouth">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveSouth">
+            <block type="maze_moveSouth" movable="false">
               <next>
-                <block type="maze_moveEast">
+                <block type="maze_moveSouth" movable="false">
                   <next>
-                    <block type="maze_moveNorth"/>
+                    <block type="maze_moveEast" deletable="false">
+                      <next>
+                        <block type="maze_moveNorth" deletable="false"/>
+                      </next>
+                    </block>
                   </next>
                 </block>
               </next>

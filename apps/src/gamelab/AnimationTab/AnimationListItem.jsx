@@ -6,10 +6,11 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
+import _ from 'lodash';
 
 const styles = {
   tile: {
@@ -75,6 +76,7 @@ const AnimationListItem = React.createClass({
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
+    setAnimationFrameDelay: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   },
@@ -83,6 +85,15 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
+    this.setState({frameDelay: nextProps.animationProps.frameDelay});
+  },
+
+  componentWillMount() {
+    this.setState({frameDelay: this.props.animationProps.frameDelay});
+    this.debouncedFrameDelay = _.debounce(() => {
+      const latestFrameDelay = this.state.frameDelay;
+      this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
+    }, 200);
   },
 
   onSelect() {
@@ -101,6 +112,64 @@ const AnimationListItem = React.createClass({
 
   onNameChange(event) {
     this.props.setAnimationName(this.props.animationKey, event.target.value);
+  },
+
+  convertFrameDelayToLockedValues(fraction) {
+    if (fraction >= 60) {
+      return 0;
+    } else if (fraction >= 45) {
+      return 0.1;
+    } else if (fraction >= 30) {
+      return 0.2;
+    } else if (fraction >= 20) {
+      return 0.3;
+    } else if (fraction >= 15) {
+      return 0.4;
+    } else if (fraction >= 10) {
+      return 0.5;
+    } else if (fraction >= 5) {
+      return 0.6;
+    } else if (fraction >= 4) {
+      return 0.7;
+    } else if (fraction >= 3) {
+      return 0.8;
+    } else if (fraction >= 2) {
+      return 0.9;
+    } else {
+      return 1;
+    }
+  },
+
+  convertLockedValueToFrameDelay(value) {
+    if (value >= 1) {
+      return 1;
+    } else if (value >= 0.9) {
+      return 2;
+    } else if (value >= 0.8) {
+      return 3;
+    } else if (value >= 0.7) {
+      return 4;
+    } else if (value >= 0.6) {
+      return 5;
+    } else if (value >= 0.5) {
+      return 10;
+    } else if (value >= 0.4) {
+      return 15;
+    } else if (value >= 0.3) {
+      return 20;
+    } else if (value >= 0.2) {
+      return 30;
+    } else if (value >= 0.1) {
+      return 45;
+    } else {
+      return 60;
+    }
+  },
+
+  setAnimationFrameDelay(sliderValue) {
+    let frameDelay = this.convertLockedValueToFrameDelay(sliderValue);
+    this.setState({frameDelay: frameDelay});
+    this.debouncedFrameDelay();
   },
 
   render() {
@@ -131,14 +200,16 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={this.props.animationProps}
+          animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}
           isSelected={this.props.isSelected}
         />
         {animationName}
         {this.props.isSelected &&
           <ListItemButtons
+            onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
+            frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
     );
@@ -146,17 +217,22 @@ const AnimationListItem = React.createClass({
 });
 export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
-}), dispatch => ({
-  cloneAnimation(animationKey) {
-    dispatch(cloneAnimation(animationKey));
-  },
-  deleteAnimation(animationKey) {
-    dispatch(deleteAnimation(animationKey));
-  },
-  selectAnimation(animationKey) {
-    dispatch(selectAnimation(animationKey));
-  },
-  setAnimationName(animationKey, newName) {
-    dispatch(setAnimationName(animationKey, newName));
-  }
-}))(Radium(AnimationListItem));
+}), dispatch => {
+  return {
+    cloneAnimation(animationKey) {
+      dispatch(cloneAnimation(animationKey));
+    },
+    deleteAnimation(animationKey) {
+      dispatch(deleteAnimation(animationKey));
+    },
+    selectAnimation(animationKey) {
+      dispatch(selectAnimation(animationKey));
+    },
+    setAnimationName(animationKey, newName) {
+      dispatch(setAnimationName(animationKey, newName));
+    },
+    setAnimationFrameDelay(animationKey, frameDelay) {
+      dispatch(setAnimationFrameDelay(animationKey, frameDelay));
+    }
+  };
+})(Radium(AnimationListItem));

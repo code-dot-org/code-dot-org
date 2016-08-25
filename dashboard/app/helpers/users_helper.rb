@@ -77,6 +77,7 @@ module UsersHelper
     return user_data unless user
 
     if script.professional_learning_course?
+      user_data[:professionalLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
         user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
@@ -93,11 +94,20 @@ module UsersHelper
           ul = uls.try(:[], level_id)
           completion_status = activity_css_class(ul)
           submitted = !!ul.try(:submitted)
-          if completion_status != 'not_tried'
+          readonly_answers = !!ul.try(:readonly_answers)
+          locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+
+          # for now, we don't allow authorized teachers to be "locked"
+          if locked && !user.authorized_teacher?
+            user_data[:levels][level_id] = {
+              status: 'locked'
+            }
+          elsif completion_status != 'not_tried'
             user_data[:levels][level_id] = {
                 status: completion_status,
                 result: ul.try(:best_result) || 0,
                 submitted: submitted ? true : nil,
+                readonly_answers: readonly_answers ? true : nil,
                 paired: ul.paired? ? true : nil
             }.compact
 
@@ -109,7 +119,8 @@ module UsersHelper
               pages_completed.each_with_index do |result, index|
                 user_data[:levels]["#{level_id}_#{index}"] = {
                   result: result,
-                  submitted: submitted ? true : nil
+                  submitted: submitted ? true : nil,
+                  readonly_answers: readonly_answers ? true : nil
                 }.compact
               end
             end
@@ -134,7 +145,7 @@ module UsersHelper
     if level.is_a? LevelGroup
       pages_completed = []
 
-      if user.last_attempt(level).level_source
+      if user.last_attempt(level).try(:level_source)
         last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
       end
 
