@@ -14,7 +14,6 @@ var Bee = require('@cdo/apps/maze/bee');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var BeeItemDrawer = require('@cdo/apps/maze/beeItemDrawer');
-var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
 
 function createFakeSkin() {
   // BeeItemDrawer takes a skin as an input. Rather than load the actual skin,
@@ -25,7 +24,8 @@ function createFakeSkin() {
     honey: 'honey.png',
     cloud: 'cloud.png',
     flowerComb: 'flowercomb.png',
-    numbers: 'numbers.png'
+    numbers: 'numbers.png',
+    cloudAnimation: 'cloudAnimation.png',
   };
 }
 
@@ -72,9 +72,9 @@ function validateImages(setup, defaultFlower) {
 
     drawer.updateItemImage(row, col, running);
 
-    var img = document.getElementById(cellId('beeItem', 0, col));
-    var counter = document.getElementById(cellId('counter', 0, col));
-    var cloud = document.getElementById(cellId('cloud', 0, col));
+    var img = document.getElementById(BeeItemDrawer.cellId('beeItem', 0, col));
+    var counter = document.getElementById(BeeItemDrawer.cellId('counter', 0, col));
+    var cloud = document.getElementById(BeeItemDrawer.cellId('cloud', 0, col));
 
     try {
       assert.equal(img === null, imgType === null);
