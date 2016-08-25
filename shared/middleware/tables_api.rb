@@ -47,7 +47,7 @@ class TablesApi < Sinatra::Base
   #
   # Returns all of the rows in the table.
   #
-  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
     rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
@@ -64,7 +64,7 @@ class TablesApi < Sinatra::Base
   #
   # Returns the metdata for the given table
   #
-  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
     table_metadata = TableType.new(channel_id, storage_id(endpoint), table_name).metadata
@@ -78,7 +78,7 @@ class TablesApi < Sinatra::Base
   #
   # Sets the metdata for the given table
   #
-  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
 
@@ -103,7 +103,7 @@ class TablesApi < Sinatra::Base
   #
   # Returns a single row by id.
   #
-  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)} do |endpoint, channel_id, table_name, id|
     dont_cache
     content_type :json
     TableType.new(channel_id, storage_id(endpoint), table_name).fetch(id.to_i).to_json
@@ -114,7 +114,7 @@ class TablesApi < Sinatra::Base
   #
   # Deletes a row by id.
   #
-  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)} do |endpoint, channel_id, table_name, id|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
 
@@ -191,7 +191,7 @@ class TablesApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete$} do |_endpoint, _channel_id, _table_name, _id|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete} do |_endpoint, _channel_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
@@ -209,7 +209,7 @@ class TablesApi < Sinatra::Base
   #
   # Insert a new row.
   #
-  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -238,7 +238,7 @@ class TablesApi < Sinatra::Base
   #
   # Update an existing row.
   #
-  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)} do |endpoint, channel_id, table_name, id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -259,11 +259,11 @@ class TablesApi < Sinatra::Base
     value.to_json
   end
 
-  patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
+  patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)} do |_endpoint, _channel_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
-  put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
+  put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)} do |_endpoint, _channel_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
@@ -272,7 +272,7 @@ class TablesApi < Sinatra::Base
   # Exports a csv file from a table where the first row is the column names
   # and additional rows are the column values.
   #
-  get %r{/v3/export-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+  get %r{/v3/export-(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
@@ -285,7 +285,7 @@ class TablesApi < Sinatra::Base
   # Exports a csv file from a table where the first row is the column names
   # and additional rows are the column values.
   #
-  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name|
+  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)} do |channel_id, table_name|
     dont_cache
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
@@ -298,7 +298,7 @@ class TablesApi < Sinatra::Base
   #
   # Imports a csv form post into a table, erasing previous contents.
   #
-  post %r{/v3/import-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+  post %r{/v3/import-(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
@@ -365,7 +365,7 @@ class TablesApi < Sinatra::Base
   # Coerces the contents of a particular column to a particular type,
   # ignoring values where it is unable to do so.
   #
-  post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+  post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     content_type :json
 
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
@@ -400,7 +400,7 @@ class TablesApi < Sinatra::Base
   #   }
   # Also creates metadata (if it doesn't already exist) based on any existing
   # data for each of the passed in tables.
-  post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
+  post %r{/v3/(shared|user)-tables/([^/]+)} do |endpoint, channel_id|
     begin
       json_data = JSON.parse(request.body.read)
     rescue => e

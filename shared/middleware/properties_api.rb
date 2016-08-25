@@ -32,7 +32,7 @@ class PropertiesApi < Sinatra::Base
   #
   # Returns all of the properties in the bag
   #
-  get %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
+  get %r{/v3/(shared|user)-properties/([^/]+)} do |endpoint, channel_id|
     dont_cache
     content_type :json
     not_authorized unless owns_channel? channel_id
@@ -45,7 +45,7 @@ class PropertiesApi < Sinatra::Base
   #
   # Returns a single value by name.
   #
-  get %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  get %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)} do |endpoint, channel_id, name|
     dont_cache
     content_type :json
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
@@ -57,7 +57,7 @@ class PropertiesApi < Sinatra::Base
   #
   # Deletes a value by name.
   #
-  delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)} do |endpoint, channel_id, name|
     dont_cache
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
     PropertyType.new(decrypted_channel_id, storage_id(endpoint)).delete(name)
@@ -69,7 +69,7 @@ class PropertiesApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |_endpoint, _channel_id, _name|
+  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
@@ -78,7 +78,7 @@ class PropertiesApi < Sinatra::Base
   #
   # Set a value by name.
   #
-  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)} do |endpoint, channel_id, name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -105,7 +105,7 @@ class PropertiesApi < Sinatra::Base
   #
   # Multi-set  values from request body
   #
-  post %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
+  post %r{/v3/(shared|user)-properties/([^/]+)} do |endpoint, channel_id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -137,10 +137,10 @@ class PropertiesApi < Sinatra::Base
   # to differentiate between create and update so we map all three verbs to "create or update"
   # behavior via the POST handler.
   #
-  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
+  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
-  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
+  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 end

@@ -83,7 +83,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Returns a channel by id.
   #
-  get %r{/v3/channels/([^/]+)$} do |id|
+  get %r{/v3/channels/([^/]+)} do |id|
     dont_cache
     content_type :json
     StorageApps.new(storage_id('user')).get(id).to_json
@@ -94,12 +94,12 @@ class ChannelsApi < Sinatra::Base
   #
   # Deletes a channel by id.
   #
-  delete %r{/v3/channels/([^/]+)$} do |id|
+  delete %r{/v3/channels/([^/]+)} do |id|
     dont_cache
     StorageApps.new(storage_id('user')).delete(id)
     no_content
   end
-  post %r{/v3/channels/([^/]+)/delete$} do |_name|
+  post %r{/v3/channels/([^/]+)/delete} do |_name|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
@@ -108,7 +108,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Update an existing channel.
   #
-  post %r{/v3/channels/([^/]+)$} do |id|
+  post %r{/v3/channels/([^/]+)} do |id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -122,10 +122,10 @@ class ChannelsApi < Sinatra::Base
     content_type :json
     value.to_json
   end
-  patch %r{/v3/channels/([^/]+)$} do |_id|
+  patch %r{/v3/channels/([^/]+)} do |_id|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
-  put %r{/v3/channels/([^/]+)$} do |_id|
+  put %r{/v3/channels/([^/]+)} do |_id|
     call(env.merge('REQUEST_METHOD' => 'PATCH'))
   end
 
@@ -148,7 +148,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Get an abuse score.
   #
-  get %r{/v3/channels/([^/]+)/abuse$} do |id|
+  get %r{/v3/channels/([^/]+)/abuse} do |id|
     dont_cache
     content_type :json
 
@@ -161,7 +161,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Increment an abuse score
   #
-  post %r{/v3/channels/([^/]+)/abuse$} do |id|
+  post %r{/v3/channels/([^/]+)/abuse} do |id|
     dont_cache
     content_type :json
 
@@ -174,7 +174,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Clear an abuse score. Admin only.
   #
-  delete %r{/v3/channels/([^/]+)/abuse$} do |id|
+  delete %r{/v3/channels/([^/]+)/abuse} do |id|
     not_authorized unless admin?
 
     dont_cache
@@ -183,7 +183,7 @@ class ChannelsApi < Sinatra::Base
     value = StorageApps.new(storage_id('user')).reset_abuse(id)
     {:abuse_score => value }.to_json
   end
-  post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
+  post %r{/v3/channels/([^/]+)/abuse/delete} do |_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 end
