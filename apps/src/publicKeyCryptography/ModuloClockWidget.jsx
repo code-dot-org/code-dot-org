@@ -36,6 +36,8 @@ const style = {
   }
 };
 
+// Unrelated change that will not affect eyes tests
+
 /** Root component for Public Key Cryptography widget */
 const ModuloClockWidget = React.createClass({
   getInitialState() {
