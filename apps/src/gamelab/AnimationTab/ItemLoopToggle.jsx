@@ -1,9 +1,7 @@
 /** @file controls below an animation looping toggle */
-'use strict';
-
-var React = require('react');
-var color = require('../../color');
-var Radium = require('radium');
+import React from 'react';
+import color from '../../color';
+import Radium from 'radium';
 import * as PropTypes from '../PropTypes';
 
 var styles = {
@@ -44,13 +42,11 @@ const ItemLoopToggle = React.createClass({
   },
 
   render() {
-    let iconImageSrc = "/blockly/media/gamelab/looping-one-time.png";
-    if (this.props.looping === true) {
-      iconImageSrc = "/blockly/media/gamelab/looping-continuous.png";
-    }
+    const iconImageName = this.props.looping ? 'looping-continuous' : 'looping-one-time';
+    const iconImageSrc = `/blockly/media/gamelab/${iconImageName}.png`;
     return (
-      <div style={[this.props.style, styles.loopToggleStyle]} onClick={this.toggleClicked}>
-        <img src={iconImageSrc} style={styles.loopIconStyle}></img>
+      <div style={[styles.loopToggleStyle, this.props.style]} onClick={this.toggleClicked}>
+        <img src={iconImageSrc} style={styles.loopIconStyle}/>
       </div>
     );
   }

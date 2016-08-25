@@ -1,11 +1,11 @@
 /** @file controls below an animation thumbnail */
 'use strict';
 
-var React = require('react');
-var color = require('../../color');
-var Radium = require('radium');
-var SpeedSlider = require('../../templates/SpeedSlider');
-var ItemLoopToggle = require('./ItemLoopToggle');
+import React from 'react';
+import color from '../../color';
+import Radium from 'radium';
+import SpeedSlider from '../../templates/SpeedSlider';
+import ItemLoopToggle from './ItemLoopToggle';
 import * as PropTypes from '../PropTypes';
 
 var styles = {
