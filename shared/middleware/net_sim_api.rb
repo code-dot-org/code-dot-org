@@ -58,7 +58,7 @@ class NetSimApi < Sinatra::Base
   #
   # Returns all of the rows in the table.
   #
-  get %r{/v3/netsim/([^/]+)/(\w+)} do |shard_id, table_name|
+  get %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
     get_table(shard_id, table_name).to_a.to_json
@@ -68,7 +68,7 @@ class NetSimApi < Sinatra::Base
   #
   # Returns all of the rows in the table with id >= min_id
   #
-  get %r{/v3/netsim/([^/]+)/(\w+)@([0-9]+)} do |shard_id, table_name, min_id|
+  get %r{/v3/netsim/([^/]+)/(\w+)@([0-9]+)$} do |shard_id, table_name, min_id|
     dont_cache
     content_type :json
     get_table(shard_id, table_name).to_a_from_min_id(min_id.to_i).to_json
@@ -79,7 +79,7 @@ class NetSimApi < Sinatra::Base
   #
   # Returns a single row by id.
   #
-  get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)} do |shard_id, table_name, id|
+  get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
     get_table(shard_id, table_name).fetch(id.to_i).to_json
@@ -90,7 +90,7 @@ class NetSimApi < Sinatra::Base
   # Fetches rows in multiple tables starting a given version for each table, specified
   # via query string parameters of the form "t[]=<table>@<min_id>"
   #
-  get %r{/v3/netsim/([^/]+)} do |shard_id|
+  get %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     content_type :json
     table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
@@ -102,7 +102,7 @@ class NetSimApi < Sinatra::Base
   #
   # Deletes a row by id.
   #
-  delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)} do |shard_id, table_name, id|
+  delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
     delete_many(shard_id, table_name, [id.to_i])
@@ -114,7 +114,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete} do |_shard_id, _table_name, _id|
+  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
@@ -123,7 +123,7 @@ class NetSimApi < Sinatra::Base
   #
   # Deletes multiple rows by id.
   #
-  delete %r{/v3/netsim/([^/]+)/(\w+)} do |shard_id, table_name|
+  delete %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
     ids = parse_ids_from_query_string(CGI.unescape(request.query_string))
@@ -136,7 +136,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/delete} do |_shard_id, _table_name|
+  post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |_shard_id, _table_name|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
@@ -145,7 +145,7 @@ class NetSimApi < Sinatra::Base
   #
   # Deletes the entire shard.
   #
-  delete %r{/v3/netsim/([^/]+)} do |shard_id|
+  delete %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     not_authorized unless allowed_to_delete_shard? shard_id
     RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
@@ -180,7 +180,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/delete} do |_shard_id|
+  post %r{/v3/netsim/([^/]+)/delete$} do |_shard_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
@@ -199,7 +199,7 @@ class NetSimApi < Sinatra::Base
   # POST "[{ 'name': 'nancy', 'male': false }, { 'name': 'drew', 'male': true }]"
   # -> 201 "[{ 'name': 'nancy', 'male': false, 'id': 2 }, { 'name': 'drew', 'male': true, 'id': 3 }]"
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)} do |shard_id, table_name|
+  post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     unsupported_media_type unless has_json_utf8_headers?(request)
 
@@ -318,7 +318,7 @@ class NetSimApi < Sinatra::Base
   #
   # Update an existing row.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)} do |shard_id, table_name, id|
+  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     unsupported_media_type unless has_json_utf8_headers?(request)
 
@@ -334,10 +334,10 @@ class NetSimApi < Sinatra::Base
     content_type :json
     value.to_json
   end
-  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)} do |_shard_id, _table_name, _id|
+  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
-  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)} do |_shard_id, _table_name, _id|
+  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 

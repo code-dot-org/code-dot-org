@@ -97,7 +97,7 @@ class FilesApi < Sinatra::Base
   #
   # List filenames and sizes.
   #
-  get %r{/v3/(animations|assets|sources)/([^/]+)} do |endpoint, encrypted_channel_id|
+  get %r{/v3/(animations|assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
     dont_cache
     content_type :json
 
@@ -109,7 +109,7 @@ class FilesApi < Sinatra::Base
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
 
@@ -202,7 +202,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
-  put %r{/v3/(sources)/([^/]+)/([^/]+)} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -220,7 +220,7 @@ class FilesApi < Sinatra::Base
   # Upload a new file. We use this method so that IE9 can still upload by
   # posting to an iframe.
   #
-  post %r{/v3/assets/([^/]+)/} do |encrypted_channel_id|
+  post %r{/v3/assets/([^/]+)/$} do |encrypted_channel_id|
     dont_cache
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have
@@ -241,7 +241,7 @@ class FilesApi < Sinatra::Base
   # Copy assets from another channel. Note that when specifying the src files, you must
   # json encode it
   #
-  post %r{/v3/copy-assets/([^/]+)} do |encrypted_channel_id|
+  post %r{/v3/copy-assets/([^/]+)$} do |encrypted_channel_id|
     dont_cache
     AssetBucket.new.copy_files(
       request['src_channel'],
@@ -255,7 +255,7 @@ class FilesApi < Sinatra::Base
   # Create or replace an animation. We use this method so that IE9 can still
   # upload by posting to an iframe.
   #
-  post %r{/v3/(animations)/([^/]+)/([^/]+)} do |endpoint, encrypted_channel_id, filename|
+  post %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have
@@ -275,7 +275,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace an animation.
   #
-  put %r{/v3/(animations)/([^/]+)/([^/]+)} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type 'text/plain'
     if request.content_type == 'image/png'
@@ -294,7 +294,7 @@ class FilesApi < Sinatra::Base
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources)/([^/]+)/} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(animations|assets|sources)/([^/]+)/$} do |endpoint, encrypted_channel_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']
@@ -316,7 +316,7 @@ class FilesApi < Sinatra::Base
   #
   # Delete a file.
   #
-  delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)} do |endpoint, encrypted_channel_id, filename|
+  delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
@@ -332,7 +332,7 @@ class FilesApi < Sinatra::Base
   # List versions of the given file.
   # NOTE: Not yet implemented for assets.
   #
-  get %r{/v3/(animations|sources)/([^/]+)/([^/]+)/versions} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|sources)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -345,7 +345,7 @@ class FilesApi < Sinatra::Base
   # Copies the given version of the file to make it the current revision.
   # NOTE: Not yet implemented for assets.
   #
-  put %r{/v3/(animations|sources)/([^/]+)/([^/]+)/restore} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(animations|sources)/([^/]+)/([^/]+)/restore$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
