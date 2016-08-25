@@ -4,6 +4,7 @@ import { SQUARE_SIZE, SVG_NS } from './drawer';
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
 const DIRT_MAX = 10;
 const DIRT_COUNT = DIRT_MAX * 2 + 2;
+const ASSET_UNCLIPPED_WIDTH = SQUARE_SIZE * DIRT_COUNT;
 
 /**
  * Extends Drawer to draw dirt piles for Farmer.
@@ -11,7 +12,6 @@ const DIRT_COUNT = DIRT_MAX * 2 + 2;
 export default class DirtDrawer extends Drawer {
   constructor(map, dirtAsset) {
     super(map, dirtAsset);
-    this.assetUnclippedWidth = SQUARE_SIZE * DIRT_COUNT;
   }
 
   getAsset(prefix, row, col) {
@@ -52,7 +52,7 @@ export default class DirtDrawer extends Drawer {
    */
   getOrCreateImage_(prefix, row, col) {
     let img = super.getOrCreateImage_(prefix, row, col);
-    img.setAttribute('width', this.assetUnclippedWidth);
+    img && img.setAttribute('width', ASSET_UNCLIPPED_WIDTH);
     return img;
   }
 

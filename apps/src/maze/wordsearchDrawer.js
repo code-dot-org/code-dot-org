@@ -19,10 +19,9 @@ export default class WordSearchDrawer extends Drawer {
    */
   drawTile(svg, letter, row, col) {
     const backgroundId = Drawer.cellId('backgroundLetter', row, col);
-    const textId = Drawer.cellId('letter', row, col);
-
     const group = document.createElementNS(SVG_NS, 'g');
     const background = document.createElementNS(SVG_NS, 'rect');
+
     background.setAttribute('id', backgroundId);
     background.setAttribute('width', SQUARE_SIZE);
     background.setAttribute('height', SQUARE_SIZE);
@@ -32,19 +31,25 @@ export default class WordSearchDrawer extends Drawer {
     background.setAttribute('stroke-width', 3);
     group.appendChild(background);
 
-    const text = document.createElementNS(SVG_NS, 'text');
-    text.setAttribute('id', textId);
-    text.setAttribute('class', 'search-letter');
-    text.setAttribute('width', SQUARE_SIZE);
-    text.setAttribute('height', SQUARE_SIZE);
-    text.setAttribute('x', (col + 0.5) * SQUARE_SIZE);
-    text.setAttribute('y', (row + 0.5) * SQUARE_SIZE);
-    text.setAttribute('font-size', 32);
-    text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('font-family', 'Verdana');
-    text.textContent = letter;
-    group.appendChild(text);
+    let textElement = this.updateOrCreateText_('letter', row, col, letter);
+    group.appendChild(textElement);
     svg.appendChild(group);
+  }
+
+  /**
+   * @override
+   */
+  updateOrCreateText_(prefix, row, col, text) {
+    let textElement = super.updateOrCreateText_(prefix, row, col, text);
+    textElement.setAttribute('class', 'search-letter');
+    textElement.setAttribute('width', SQUARE_SIZE);
+    textElement.setAttribute('height', SQUARE_SIZE);
+    textElement.setAttribute('x', (col + 0.5) * SQUARE_SIZE);
+    textElement.setAttribute('y', (row + 0.5) * SQUARE_SIZE);
+    textElement.setAttribute('font-size', 32);
+    textElement.setAttribute('text-anchor', 'middle');
+    textElement.setAttribute('font-family', 'Verdana');
+    return textElement;
   }
 
   /**

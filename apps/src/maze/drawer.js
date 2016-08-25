@@ -75,8 +75,10 @@ export default class Drawer {
     // the href to whatever we want it to be, and hide it if we don't
     // have one
     img = this.getOrCreateImage_(prefix, row, col);
-    img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href || '');
-    img.setAttribute('visibility', href ? 'visible' : 'hidden');
+    if (img) {
+      img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href || '');
+      img.setAttribute('visibility', href ? 'visible' : 'hidden');
+    }
 
     return img;
   }
@@ -93,16 +95,16 @@ export default class Drawer {
   getOrCreateImage_(prefix, row, col, createClipPath=true) {
     let href = this.getAsset(prefix, row, col);
 
-    // Don't create an empty image
-    if (!href) {
-      return;
-    }
-
     let imgId = Drawer.cellId(prefix, row, col);
 
     // Don't create an image if one with this identifier already exists
     if (document.getElementById(imgId)) {
       return document.getElementById(imgId);
+    }
+
+    // Don't create an empty image
+    if (!href) {
+      return;
     }
 
     let pegmanElement = document.getElementsByClassName('pegman-location')[0];
@@ -137,6 +139,35 @@ export default class Drawer {
     svg.insertBefore(img, pegmanElement);
 
     return img;
+  }
+
+  /**
+   * Create SVG text element for given cell
+   * @param {string} prefix
+   * @param {number} row
+   * @param {number} col
+   * @param {string} text
+   */
+  updateOrCreateText_(prefix, row, col, text) {
+    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    const svg = document.getElementById('svgMaze');
+    let textElement = document.getElementById(Drawer.cellId(prefix, row, col));
+
+    if (!textElement) {
+      // Create text.
+      const hPadding = 2;
+      const vPadding = 2;
+      textElement = document.createElementNS(SVG_NS, 'text');
+      // Position text just inside the bottom right corner.
+      textElement.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
+      textElement.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
+      textElement.setAttribute('id', Drawer.cellId(prefix, row, col));
+      textElement.appendChild(document.createTextNode());
+      svg.insertBefore(textElement, pegmanElement);
+    }
+
+    textElement.firstChild.nodeValue = text;
+    return textElement;
   }
 
   /**
