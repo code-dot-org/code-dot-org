@@ -25,8 +25,6 @@ gem 'parallel'
 
 gem 'google-api-client'
 
-#gem 'sprockets-derailleur', github: 'wjordan/sprockets-derailleur' # Multi-cpu assets precompile
-
 gem 'crowdin-cli'
 
 # CSRF protection for Sinatra.
@@ -45,6 +43,7 @@ group :development, :test do
   gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
+  # Ref: https://github.com/jfirebaugh/konacha/issues/230
   gem 'konacha', github: 'wjordan/konacha', ref: 'rails-5'  # Mocha + Chai JS testing in Rails
   gem 'poltergeist'  # Headless JS tests.p
 
@@ -121,7 +120,9 @@ gem 'cancancan', '~> 1.15.0'
 gem 'omniauth-facebook', '~> 4.0.0.rc1'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
 gem 'omniauth-windowslive', '~> 0.0.10'
+# Ref: https://github.com/Clever/omniauth-clever/pull/4
 gem 'omniauth-clever', '~> 1.2.1', github: 'wjordan/omniauth-clever'
+# Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
@@ -139,6 +140,7 @@ gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :production] # perf/error/etc
 
 gem 'redcarpet', '~> 3.3.4'
 
+# Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
 gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
 gem 'rmagick'
