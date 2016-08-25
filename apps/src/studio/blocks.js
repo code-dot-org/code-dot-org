@@ -1685,7 +1685,7 @@ exports.install = function (blockly, blockInstallOptions) {
         opt => opt[1] !== HIDDEN_VALUE && opt[1] !== RANDOM_VALUE
     ).map(opt => {
       const spriteName = opt[1].replace(/^"(.*)"$/, '$1');
-      return [createMsg(`${msg[spriteName]()}`), opt[1]];
+      return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
     });
     const dropdown = new blockly.FieldDropdown(values);
     dropdown.setValue(values[0][1]);
@@ -1696,8 +1696,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      const dropdown = createSpriteGroupDropdown(
-          spriteName => `${msg.setEvery()} ${spriteName} ${msg.toWander()}`);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameWander);
       this.appendDummyInput()
         .appendTitle(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -1718,8 +1717,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      const dropdown = createSpriteGroupDropdown(
-          spriteName => `${msg.stopEvery()} ${spriteName}`);
+      const dropdown = createSpriteGroupDropdown(msg.stopEverySpriteName);
       this.appendDummyInput()
         .appendTitle(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -1740,8 +1738,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      const dropdown = createSpriteGroupDropdown(
-          spriteName => `${msg.setEvery()} ${spriteName} ${msg.toChaseActor()}`);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameChaseActor);
       this.appendDummyInput()
         .appendTitle(dropdown, 'VALUE');
       this.appendValueInput('SPRITE')
@@ -1765,8 +1763,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      const dropdown = createSpriteGroupDropdown(
-          spriteName => `${msg.setEvery()} ${spriteName} ${msg.toFleeActor()}`);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameFleeActor);
       this.appendDummyInput()
         .appendTitle(dropdown, 'VALUE');
       this.appendValueInput('SPRITE')
@@ -1790,8 +1788,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      const dropdown = createSpriteGroupDropdown(
-          spriteName => `${msg.setEvery()} ${spriteName} ${msg.speed()}`);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameSpeed);
       this.appendDummyInput()
         .appendTitle(dropdown, 'VALUE');
       this.appendValueInput('SPEED')
