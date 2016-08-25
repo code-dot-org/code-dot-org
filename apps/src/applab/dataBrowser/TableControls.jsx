@@ -4,6 +4,7 @@
  */
 
 import ConfirmDeleteButton from './ConfirmDeleteButton';
+import ConfirmImportButton from './ConfirmImportButton';
 import Radium from 'radium';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
@@ -20,7 +21,6 @@ const styles = {
   exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
     width: 120
   }],
-  importButton: [dataStyles.whiteButton, dataStyles.alignRight],
   tableName: {
     fontSize: 18,
   },
@@ -41,22 +41,6 @@ const TableControls = React.createClass({
     tableName: React.PropTypes.string.isRequired,
   },
 
-  handleSelectImportFile() {
-    if (!this.importFileInput.value) {
-      return;
-    }
-    if (confirm(applabMsg.confirmImportOverwrite())) {
-      const file = this.importFileInput.files[0];
-      const reader = new FileReader();
-      reader.onload = e => {
-        this.props.importCsv(e.target.result);
-        // Make sure we get another change event if the same file is selected again.
-        this.importFileInput.value = "";
-      };
-      reader.readAsText(file);
-    }
-  },
-
   render() {
     return (
       <div style={styles.container}>
@@ -73,21 +57,7 @@ const TableControls = React.createClass({
           Export to csv
         </button>
 
-        <span>
-          <input
-            ref={input => this.importFileInput = input}
-            type="file"
-            style={{display: 'none'}}
-            accept="csv"
-            onChange={this.handleSelectImportFile}
-          />
-          <button
-            onClick={() => this.importFileInput.click()}
-            style={styles.importButton}
-          >
-            Import csv
-          </button>
-        </span>
+        <ConfirmImportButton importCsv={this.props.importCsv}/>
 
         <ConfirmDeleteButton
           body={applabMsg.confirmClearTable()}
