@@ -4,7 +4,6 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
 require 'digest'
-#require 'sprockets-derailleur'
 
 module RakeUtils
   def self.system__(command)
@@ -101,7 +100,7 @@ module RakeUtils
   end
 
   def self.nproc
-#    SprocketsDerailleur.worker_count
+    # TODO replace with system processor count
     1
   end
 
