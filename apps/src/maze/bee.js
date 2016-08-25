@@ -3,8 +3,10 @@ import Gatherer from './gatherer';
 import mazeMsg from './locale';
 import BeeCell from './beeCell';
 import BeeItemDrawer from './beeItemDrawer';
-import { TestResults } from '../constants.js';
-import { BeeTerminationValue as TerminationValue } from '../constants.js';
+import {
+  TestResults,
+  BeeTerminationValue as TerminationValue
+} from '../constants.js';
 
 const UNLIMITED_HONEY = -99;
 const UNLIMITED_NECTAR = 99;
