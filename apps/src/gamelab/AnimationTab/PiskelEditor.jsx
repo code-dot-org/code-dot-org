@@ -100,7 +100,7 @@ const PiskelEditor = React.createClass({
       this.piskel.createNewPiskel(
           animationProps.frameSize.x,
           animationProps.frameSize.y,
-          animationProps.frameRate,
+          animationProps.frameDelay,
           () => {
             this.loadedAnimation_ = key;
             this.isLoadingAnimation_ = false;
@@ -110,7 +110,7 @@ const PiskelEditor = React.createClass({
           animationProps.dataURI,
           animationProps.frameSize.x,
           animationProps.frameSize.y,
-          animationProps.frameRate,
+          animationProps.frameDelay,
           () => {
             this.loadedAnimation_ = key;
             this.isLoadingAnimation_ = false;
@@ -144,7 +144,7 @@ const PiskelEditor = React.createClass({
       sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
       frameSize: {x: message.frameSizeX, y: message.frameSizeY},
       frameCount: message.frameCount,
-      frameRate: message.frameRate
+      frameDelay: message.frameRate
     });
   },
 

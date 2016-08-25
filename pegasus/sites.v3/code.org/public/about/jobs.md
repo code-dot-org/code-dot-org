@@ -19,7 +19,8 @@ nav: about_nav
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#software)
-	- [UX / Visual Designer (Part time)](#design)
+- **Professional Learning & Community**
+	- [Program Manager, Teacher Development](#teacherpm)
 	
 
 
@@ -254,42 +255,35 @@ The ideal candidate has the following qualifications:
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
+
+## <a name="teacherpm"href="#teacherpm">Program Manager, Teacher Development (Seattle, WA)</a>
+
 **Job Summary:**
 
-Code.org is looking for an experienced, creative designer with the drive to own end-to-end design of a product with major impact.   
-You will own visual design across our website, marketing materials and education tutorials. These currently reach millions of people around the world. We have over 8 million students today and 10,000 new accounts created every day. 
+The Teacher Development Program Manager is an important lead role on Code.org’s Professional Learning & Community team. The PLC team is responsible for training over 30,000 K-12 teachers each year directly and via a network of highly-engaged facilitators and Professional Learning Partners. The Teacher Development PM will ensure that all of the activities and services we provide to teachers meet our mark of quality and effectiveness, and allow us to meet our goals for scale to ensure that every student in every US school has the opportunity to learn Computer Science.
 
-Areas of responsibility include:
+Responsibilities of the position include:
 
-- The website for Code.org and Hour of Code 
-- Tutorials to teach elementary students to code (examples: learning to draw with code or making a story with code)
-- Tools and a development environment for middle school and high school students to learn computer science 
-- Marketing materials and handouts that are used for schools, districts, and partnerships 
+- Serve as primary project manager for all of the major events and activities that serve teachers, especially our 5-day summer TeacherCons and 1-2 day workshops during the school year; continuously track program development against vision, and make corrections where needed; set reasonable timelines and help team members meet them. 
+- Work closely with Director of Research & Evaluation and other PLC leads to collect, analyze, and respond to data. Monitor success of our efforts and gaps in our offerings and work with team members to fill those gaps and improve quality. 
+- Work with Professional Learning & Community team, Outreach team, and Product PMs to identify efficiencies in how we track teachers through our systems so we can quickly and effectively look at the full experience teachers have in working with us. 
+- Lead internal communications so team members are continuously in the loop and able to continue moving forward. Ensure effective external communications so teachers always have the information they need to be successful.
+- Develop and implement a strategy to ensure that teachers nationwide feel that they are part of a community of excellent Computer Science educators focused on promoting equity and teaching high-quality courses. 
+- Develop and run the teacher application process for all programs.
 
-You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
 
- **Skills and Experience:**
+**Experience and Qualifications:**
 
-The ideal candidate has strong, flexible visual design skills and experience in app and/or web design. We are looking for a self-starter who is passionate about improving education.  
+We are looking for an experienced educator with a solid understanding of what teachers need to be successful in working with students, and a passion for ensuring equitable access to a high-quality education for all students. Candidate must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
 
-The candidate should have: 
+The ideal candidate has the following qualifications:
 
-- Experience with responsive design 
-- Graphic/print layout experience 
-- Proven ability to own end-to-end design for product, including style guides and design guidelines
+- Has a bachelor’s degree (Computer Science background/experience not required)
+- Minimum 4 years of experience as a teacher, teacher leader, or program manager in a school setting
+- Passion for Code.org’s mission 
+- Ability to travel 10% time 
 
-Additional desired skills include: 
-
-- Interest in education
-- Basic knowledge of computer science (taken any computer science course at some point - no active coding skill necessary)
-- CSS/HTML skills
-- Interaction design
-- Designing sprites, animations, etc. for sample video game assets
-- Bachelor's degree in graphics design, interaction design, fine arts, or a related discipline.
-- At least two years of relevant experience 
-
-Email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 

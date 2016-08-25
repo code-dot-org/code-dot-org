@@ -22,19 +22,25 @@ const WorkshopTableRow = React.createClass({
       enrolled_teacher_count: React.PropTypes.number.isRequired,
       capacity: React.PropTypes.number.isRequired,
       facilitators: React.PropTypes.array.isRequired,
-      state: React.PropTypes.string.isRequired
+      state: React.PropTypes.string.isRequired,
+      organizer: React.PropTypes.shape({
+        name: React.PropTypes.string.isRequired,
+        email: React.PropTypes.string.isRequired
+      }).isRequired
     }).isRequired,
     viewUrl: React.PropTypes.string.isRequired,
     editUrl: React.PropTypes.string,
     onDelete: React.PropTypes.func,
-    showSignupUrl: React.PropTypes.bool
+    showSignupUrl: React.PropTypes.bool,
+    showOrganizer: React.PropTypes.bool
   },
 
   getDefaultProps() {
     return {
       onEdit: null,
       onDelete: null,
-      showSignupUrl: false
+      showSignupUrl: false,
+      showOrganizer: false
     };
   },
 
@@ -107,6 +113,18 @@ const WorkshopTableRow = React.createClass({
     );
   },
 
+  renderOrganizerCell() {
+    if (!this.props.showOrganizer) {
+      return null;
+    }
+
+    return (
+      <td>
+        {`${this.props.workshop.organizer.name} (${this.props.workshop.organizer.email})`}
+      </td>
+    );
+  },
+
   renderSignupUrlCell() {
     if (!this.props.showSignupUrl) {
       return null;
@@ -140,6 +158,7 @@ const WorkshopTableRow = React.createClass({
         <td>
           {this.props.workshop.enrolled_teacher_count} / {this.props.workshop.capacity}
         </td>
+        {this.renderOrganizerCell()}
         <td>
           <FacilitatorsList facilitators={this.props.workshop.facilitators} />
         </td>
