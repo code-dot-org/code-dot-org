@@ -254,7 +254,7 @@ module LevelsHelper
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
     app_options[:app] = 'weblab'
-    app_options[:baseUrl] = '/weblab/' #BUGBUG - what should this be, how should it get set
+    app_options[:baseUrl] = Blockly.base_url
     app_options
   end
 

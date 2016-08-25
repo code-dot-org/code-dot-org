@@ -8,8 +8,6 @@ import ReactDOM from 'react-dom';
 // var commonMsg = require('../locale');
 // var msg = require('./locale');
 // var levels = require('./levels');
-// var api = require('./api');
-// var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
@@ -60,7 +58,6 @@ WebLab.prototype.log = function (object) {
  */
 WebLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  // BUGBUG - use or remove this
   this.studioApp_.reset = this.reset.bind(this);
 };
 
@@ -80,9 +77,6 @@ WebLab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  // BUGBUG
-  config.level.isProjectLevel = true;
-
   this.brambleHost = null;
 
   if (this.level.lastAttempt) {
@@ -95,29 +89,14 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  // BUGBUG use or remove this
   config.usesAssets = true;
 
-
-  // BUGBUG are the below correct?
-  // hide makeYourOwn on the share page
   config.makeYourOwn = false;
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
-
-  /*
-  config.shareWarningInfo = {
-    hasDataAPIs: function () {
-      return this.hasDataStoreAPIs(this.studioApp_.getCode());
-    }.bind(this),
-    onWarningsComplete: function () {
-      window.setTimeout(this.studioApp_.runButtonClick, 0);
-    }.bind(this)
-  };
-  */
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -127,19 +106,12 @@ WebLab.prototype.init = function (config) {
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
-    config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, false /* breakpointsEnabled */);
-
     // BUGBUG
     window.Blockly = null;
+
     // BUGBUG should we init here? (I had it commented out)
    // this.studioApp_.init(config);
 
-    var webEditorIFrame = document.getElementById('web-editor-iframe');
-//    var webEditorWindow = webEditorIFrame.contentWindow;
-//    frameSetStartSource(this.initialSource);
-//    webEditorWindow.setStartSource(this.initialSource);
-//    webEditorWindow.postMessage(this.initialSource, "*");
   }.bind(this);
 
   // Push initial level properties into the Redux store
@@ -174,14 +146,18 @@ WebLab.prototype.getCodeAsync = function () {
   }.bind(this));
 };
 
+// Called by Bramble to get source files to initialize with
 WebLab.prototype.getStartSources = function () {
   return this.startSources;
 };
 
+// Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function () {
+  // let dashboard project object know project has changed, which will trigger autosave
   dashboard.project.projectChanged();
 };
 
+// Called by Bramble host to set our reference to its interfaces
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
 };
@@ -203,58 +179,10 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
 };
 
 /**
- * Code called after the blockly div + blockly core is injected into the document
- */
-WebLab.prototype.afterInject_ = function (config) {
-
-};
-
-/**
- * Initialization to run after ace/droplet is initialized.
- * @param {!boolean} areBreakpointsEnabled
- * @private
- */
-WebLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
-
-};
-
-/**
- * Reset GameLab to its initial state.
+ * Reset WebLab to its initial state.
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
 WebLab.prototype.reset = function (ignore) {
-
-  /*
-  var divGameLab = document.getElementById('divGameLab');
-  while (divGameLab.firstChild) {
-    divGameLab.removeChild(divGameLab.firstChild);
-  }
-  */
-
-  /*
-  this.gameLabP5.resetExecution();
-
-  // Import to reset these after this.gameLabP5 has been reset
-  this.drawInProgress = false;
-  this.setupInProgress = false;
-  this.reportPreloadEventHandlerComplete_ = null;
-  this.globalCodeRunsDuringPreload = false;
-
-
-  // Soft buttons
-  var softButtonCount = 0;
-  for (var i = 0; i < this.level.softButtons.length; i++) {
-    document.getElementById(this.level.softButtons[i]).style.display = 'inline';
-    softButtonCount++;
-  }
-  if (softButtonCount) {
-    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
-  }
-
-  if (this.level.showDPad) {
-    $('#studio-dpad').removeClass('studio-dpad-none');
-    this.resetDPad();
-  }
-  */
+  // TODO - implement
 };
