@@ -1,5 +1,4 @@
 /** @file Runs a specular spotlight across the image from top-left to bottom-right. */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var color = require('../color');

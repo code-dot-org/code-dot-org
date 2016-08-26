@@ -1,5 +1,5 @@
 import * as constants from './constants';
-import Collidable from './collidable';
+import Item from './Item';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
@@ -10,11 +10,11 @@ const Emotions = constants.Emotions;
 const NextTurn = constants.NextTurn;
 
 /**
- * A Sprite is a type of Collidable.
+ * A Sprite is a type of Item.
  * Note: x/y represent x/y of center in gridspace
- * @extends {Collidable}
+ * @extends {Item}
  */
-export default class Sprite extends Collidable {
+export default class Sprite extends Item {
   constructor(options) {
     // call collidable constructor
     super(options);
@@ -310,10 +310,8 @@ export default class Sprite extends Collidable {
   /**
    * This function should be called every frame, and moves the sprite around.
    */
-
-  // TODO (cpirich): ensure that update is called for Sprite object
-
   update() {
+    super.update();
 
     // Draw the sprite's current location.
     Studio.drawDebugRect("spriteCenter", this.x, this.y, 3, 3);
@@ -452,6 +450,15 @@ export default class Sprite extends Collidable {
     this.lastDrawPosition = drawPosition;
   }
 
+  // TODO(ram): make x and y props consistent with Item. In sprites they
+  // represent the top left corner, in items they're the center.
+  getCenterPos() {
+    return {
+      x: this.x + this.width / 2,
+      y: this.y + this.height / 2,
+    };
+  }
+
   getNextPosition() {
     var unit = Direction.getUnitVector(this.dir);
     var speed = this.speed;
@@ -526,5 +533,19 @@ export default class Sprite extends Collidable {
     if (this.legacyAnimation_) {
       this.legacyAnimation_.setOpacity(newOpacity);
     }
+  }
+
+  atEdge(candidate) {
+    return candidate.gridX < 0 ||
+        (candidate.gridX * Studio.SQUARE_SIZE + this.width) > Studio.MAZE_WIDTH ||
+        candidate.gridY < 0 ||
+        (candidate.gridY * Studio.SQUARE_SIZE + this.height) > Studio.MAZE_HEIGHT;
+  }
+
+  hasWall(candidate) {
+    return Studio.willSpriteTouchWall(
+        this,
+        candidate.gridX * Studio.SQUARE_SIZE,
+        candidate.gridY * Studio.SQUARE_SIZE);
   }
 }

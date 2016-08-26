@@ -1,6 +1,4 @@
 /* global window */
-'use strict';
-
 var ObservableEvent = require('./ObservableEvent');
 
 // It is more accurate to use performance.now(), but we use Date.now()

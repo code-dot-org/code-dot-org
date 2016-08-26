@@ -1,4 +1,3 @@
-'use strict';
 /* global dashboard, Dialog, YT, YTConfig, trackEvent */
 
 import $ from 'jquery';

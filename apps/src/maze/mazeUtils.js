@@ -20,6 +20,10 @@ exports.isScratSkin = function (skinId) {
   return (/scrat/).test(skinId);
 };
 
+exports.isPlanterSkin = function (skinId) {
+  return (/planter/).test(skinId);
+};
+
 exports.isHarvesterSkin = function (skinId) {
   return (/harvester/).test(skinId);
 };
