@@ -1,1 +1,1 @@
-../../../blockly-core/build-output/blockly_uncompressed.js
+../../node_modules/@code-dot-org/blockly-core/build-output/blockly_uncompressed.js
