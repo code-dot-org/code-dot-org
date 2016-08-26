@@ -25,9 +25,13 @@ var BaseDialog = React.createClass({
     this.focusDialog();
   },
 
-  closeOnEscape: function (event) {
+  handleKeyDown: function (event) {
     if (event.key === 'Escape') {
       this.closeDialog();
+    } else if (event.key === 'Tab') {
+      // Don't allow tabbing to background elements. Keyboard users can already control
+      // the dialog via enter and escape.
+      event.preventDefault();
     }
   },
 
@@ -81,7 +85,7 @@ var BaseDialog = React.createClass({
         tabIndex="-1"
         className={modalClassNames}
         ref="dialog"
-        onKeyDown={this.closeOnEscape}
+        onKeyDown={this.handleKeyDown}
       >
         <div className={modalBodyClassNames}>
           {!this.props.uncloseable &&
