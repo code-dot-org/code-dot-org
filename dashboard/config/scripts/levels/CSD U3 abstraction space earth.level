@@ -24,7 +24,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Setting up your picture\r\n<img style=\"float: right; margin: 4px;\" src=\"https://images.code.org/b90748874dc9094386134be8ec1b95e5-image-1469228306235.png\">\r\nBefore you make anything move, you'll need to start all your sprites off in the right place.  The Earth has already been positioned for you.\r\n\r\n# Do This\r\n\r\nCreate sprites for the moon, spaceship, and satellite.  Use `setAnimation` to add a picture to each one, and use the `x` and `y` properties to put them in the right place on the screen.\r\n\r\n",
+    "markdown_instructions": "# Animate The Earth\r\n\r\n<img style=\"float:right\" src=\"https://images.code.org/d2ad362f37d0e5f9b98691654256d2fb-image-1469469372823.gif\">\r\n\r\nNow that everything is in the right place, you can make the sprites move using the properties and methods you have learned.  In this level, you can make the earth rotate.  If you want to animate another sprite, you can click on the following links:\r\n* [Animate the Comet](s/CSDU3-Draft/stage/12/puzzle/13)\r\n* [Animate the Spaceship](s/CSDU3-Draft/stage/12/puzzle/14)\r\n* [Animate the Satellite](s/CSDU3-Draft/stage/12/puzzle/15)\r\n\r\n# Do This\r\n\r\nUse the correct blocks to make the earth rotate as in the picture.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
