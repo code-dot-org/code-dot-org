@@ -3,7 +3,6 @@
  *           Differs from the bitrate slider in its scale and units.
  * @see NetSimBitRateControl
  */
-'use strict';
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');

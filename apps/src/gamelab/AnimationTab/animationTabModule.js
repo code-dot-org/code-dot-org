@@ -1,6 +1,4 @@
 /** @file Redux actions and reducer for the AnimationTab */
-'use strict';
-
 import { combineReducers } from 'redux';
 
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';

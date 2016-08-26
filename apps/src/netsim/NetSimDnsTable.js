@@ -1,8 +1,6 @@
 /**
  * @overview UI table of local subnet, displaying hostname => address map.
  */
-'use strict';
-
 import $ from 'jquery';
 var markup = require('./NetSimDnsTable.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;

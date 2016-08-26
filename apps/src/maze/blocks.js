@@ -21,8 +21,6 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
 var codegen = require('../codegen');

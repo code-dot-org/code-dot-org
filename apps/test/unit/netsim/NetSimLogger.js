@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
