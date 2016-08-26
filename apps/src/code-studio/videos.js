@@ -284,7 +284,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   // Swap current #video with new code
   $('#video').replaceWith(playerCode);
 
-  videojs.options.flash.swf = '/assets/video-js/video-js.swf';
+  videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
   videojs.options.techOrder = ["flash", "html5"];
 
   var videoPlayer = videojs(fallbackPlayerID, {}, function () {
