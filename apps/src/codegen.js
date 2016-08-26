@@ -52,13 +52,13 @@ exports.evalWith = function (code, options, legacy) {
  * Generate code for each of the given events, and evaluate it using the
  * provided APIs as context.
  * @param apis Context to be set as globals in the interpreted runtime.
- * @param events Mapping of hook names to the corresponding blockly block name.
- * @param generator Function for generating code for a given block name.
+ * @param events Mapping of hook names to the corresponding handler code.
+ * @param code Optional extra code to evaluate.
  * @return {{}} Mapping of hook names to the corresponding event handler.
  */
-exports.evalWithEvents = function (apis, events, generator) {
+exports.evalWithEvents = function (apis, events, code) {
   let interpreter, currentCallback;
-  let code = '';
+  code = code || '';
   const hooks = {};
   Object.keys(events).forEach(event => {
     hooks[event] = () => {
