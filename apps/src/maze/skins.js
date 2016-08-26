@@ -180,6 +180,10 @@ var CONFIGS = {
 CONFIGS.bee_night = CONFIGS.bee;
 CONFIGS.farmer_night = CONFIGS.farmer;
 
+CONFIGS.planter = Object.assign({}, CONFIGS.harvester, {
+  soil: 'soil.png',
+});
+
 /**
  * Given the mp3 sound, generates a list containing both the mp3 and ogg sounds
  */

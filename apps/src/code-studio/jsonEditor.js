@@ -1,4 +1,3 @@
-'use strict';
 import $ from 'jquery';
 var CodeMirror = require('codemirror');
 

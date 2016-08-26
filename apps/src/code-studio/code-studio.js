@@ -6,8 +6,6 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
-'use strict';
-
 // Require this first at each bundle entry point for full ES6 support.
 require("babel-polyfill");
 

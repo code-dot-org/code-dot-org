@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
