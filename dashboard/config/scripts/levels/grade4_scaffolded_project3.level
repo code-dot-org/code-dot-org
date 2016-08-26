@@ -39,8 +39,8 @@
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
     "markdown_instructions": "Now that your game has a hero, it's time to start adding other actors and assigning them behaviors. \r\n\r\nAdd two or more additional actors to your game and make them move. Do you want to have an actor patrol back and forth? Try using a these new blocks to bring these other components of your game to life!\r\n\r\n![](https://images.code.org/4cfffd476c6129891eb8bde246a711a8-image-1472065288448.00.42 PM.png)\r\n\r\n**NOTE:** Chasing and fleeing behavior commands are coming soon!",
-    "contained_level_names": null,
-    "failure_message_override": "You must add two or more new actors that move to your game."
+    "failure_message_override": "You must add two or more new actors that move to your game.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
