@@ -65,7 +65,7 @@ exports.evalWithEvents = function (apis, events, code) {
       currentCallback(event);
       interpreter.run();
     };
-    code += `function ${event}(){${generator(events[event])}};`;
+    code += `this['${event}']=function(){${events[event]}};`;
   });
 
   interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
