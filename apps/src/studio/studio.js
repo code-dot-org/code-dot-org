@@ -809,8 +809,8 @@ var setSvgText = function (opts) {
  * @param {string} name Name of the handler we want to call
  * @param {boolean} allowQueueExension When true, we allow additional cmds to
  *  be appended to the queue
- * @param {Array} extraArgs Additional arguments passed into the virtual
-*   JS machine for consumption by the student's event-handling code.
+ * @param {Array} extraArgs Additional arguments passed as an array into the
+ *  virtual JS machine for consumption by the student's event-handling code.
  */
 function callHandler(name, allowQueueExtension, extraArgs) {
   if (level.autoArrowSteer) {
@@ -845,7 +845,7 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(api, Studio.Globals);
+          handler.func(api, Studio.Globals, extraArgs);
         } catch (e) {
           // Do nothing
           console.error(e);
@@ -1511,7 +1511,7 @@ function updateItems() {
     }
   }
   Studio.sprite.forEach(sprite => {
-    sprite.update();
+    sprite.visible && sprite.update();
   });
 }
 
@@ -2521,11 +2521,8 @@ var registerEventHandler = function (handlers, name, func) {
 };
 
 var registerHandlersForCode = function (handlers, blockName, code) {
-  var func = codegen.functionFromCode(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  registerEventHandler(handlers, blockName, func);
+  registerEventHandler(handlers, blockName,
+      new Function('Studio', 'Globals', 'extraArgs', code));
 };
 
 var registerHandlers =
@@ -2609,6 +2606,19 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+  }
+};
+
+var registerHandlersWithSpriteAndGroupParams =
+    function (handlers, blockName, eventNameBase, blockParam1, blockParam2) {
+  var spriteNames = skin.spriteChoices.filter(opt =>
+      opt[1] !== constants.HIDDEN_VALUE && opt[1] !== constants.RANDOM_VALUE
+  ).map(opt => opt[1]);
+  for (var i = 0; i < Studio.spriteCount; i++) {
+    for (var j = 0; j < spriteNames.length; j++) {
+      registerHandlers(handlers, blockName, eventNameBase, blockParam1,
+          String(i), blockParam2, spriteNames[j]);
+    }
   }
 };
 
@@ -2889,6 +2899,13 @@ Studio.execute = function () {
                                      'whenSpriteCollided',
                                      'SPRITE1',
                                      'SPRITE2');
+    registerHandlersWithSpriteAndGroupParams(
+        handlers,
+        'studio_whenSpriteAndGroupCollide',
+        'whenSpriteCollided',
+        'SPRITE',
+        'SPRITENAME');
+
   }
 
   if (utils.valueOr(level.playStartSound, true)) {
@@ -3152,10 +3169,11 @@ Studio.drawTimeoutRect = function () {
 };
 
 /**
- * Draw an image with 0.5 opacity over the entire play area.
+ * Draw an image with 0.5 opacity over the entire play area. Only allow one
+ * at a time.
  */
 Studio.drawDebugOverlay = function (src) {
-  if (showDebugInfo) {
+  if (showDebugInfo && $(".debugImage").length === 0) {
     const svg = document.getElementById('svgStudio');
     const group = document.createElementNS(SVG_NS, 'g');
     group.setAttribute('class', "walls debugImage");
@@ -5072,6 +5090,8 @@ function handleCollision(src, target, allowQueueExtension) {
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
     callHandler(prefix + 'any_actor', allowQueueExtension);
+    callHandler(prefix + `"${Studio.sprite[target].imageName}"`, false,
+        [target]);
   } else if (isEdgeClass(target)) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
@@ -5114,6 +5134,9 @@ function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
 
   Studio.executeQueue(srcPrefix + target);
+  if (isActorClass(target)) {
+    Studio.executeQueue(srcPrefix + `"${Studio.sprite[target].imageName}"`);
+  }
 
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
