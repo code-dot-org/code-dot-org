@@ -1,8 +1,6 @@
 /**
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
-'use strict';
-
 import $ from 'jquery';
 var markup = require('./NetSimEncodingControl.html.ejs');
 var EncodingType = require('./NetSimConstants').EncodingType;

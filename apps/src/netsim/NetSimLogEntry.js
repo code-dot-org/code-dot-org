@@ -1,8 +1,6 @@
 /**
  * @overview Simulation entity for router log entries.
  */
-'use strict';
-
 var moment = require('moment');
 var utils = require('../utils'); // Provides Function.prototype.inherits
 var _ = require('lodash');

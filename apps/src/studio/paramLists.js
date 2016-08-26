@@ -1,4 +1,3 @@
-'use strict';
 
 var studioApp = require('../StudioApp').singleton;
 var utils = require('../utils');

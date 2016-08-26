@@ -1,6 +1,5 @@
 /** @file An animated image, which handles frame counts, rates and offsets
  * internally and exposes simple methods for rendering at the desired position. */
-'use strict';
 
 import { valueOr } from '../utils';
 import { SVG_NS } from '../constants';

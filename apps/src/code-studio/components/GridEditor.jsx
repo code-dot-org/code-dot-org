@@ -6,12 +6,14 @@
 /* global dashboard */
 import React from 'react';
 var HarvesterCell = require('@cdo/apps/maze/harvesterCell');
+var PlanterCell = require('@cdo/apps/maze/planterCell');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var Cell = require('@cdo/apps/maze/cell');
 var StudioCell = require('@cdo/apps/studio/cell');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 var HarvesterCellEditor = require('./HarvesterCellEditor');
+var PlanterCellEditor = require('./PlanterCellEditor');
 var BeeCellEditor = require('./BeeCellEditor');
 var CellEditor = require('./CellEditor');
 var StudioCellEditor = require('./StudioCellEditor');
@@ -81,6 +83,8 @@ var GridEditor = React.createClass({
       return BeeCell;
     } else if (mazeUtils.isHarvesterSkin(this.props.skin)) {
       return HarvesterCell;
+    } else if (mazeUtils.isPlanterSkin(this.props.skin)) {
+      return PlanterCell;
     }
     return Cell;
   },
@@ -92,6 +96,8 @@ var GridEditor = React.createClass({
       return BeeCellEditor;
     } else if (mazeUtils.isHarvesterSkin(this.props.skin)) {
       return HarvesterCellEditor;
+    } else if (mazeUtils.isPlanterSkin(this.props.skin)) {
+      return PlanterCellEditor;
     }
     return CellEditor;
   },
