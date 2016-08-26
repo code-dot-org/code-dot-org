@@ -5,8 +5,11 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import WorkshopTableRow from './workshop_table_row';
-import {Table} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import {Table, resolve} from 'reactabular';
+import SessionTimesList from './session_times_list';
+import FacilitatorsList from './facilitators_list';
+import WorkshopManagement from './workshop_management';
 
 const WorkshopTable = React.createClass({
   propTypes: {
@@ -32,18 +35,50 @@ const WorkshopTable = React.createClass({
     };
   },
 
+  formatSessions(sessions) {
+    return <SessionTimesList sessions={sessions}/>;
+  },
+
+  formatOrganizer(organizer) {
+    return `${organizer.name} (${organizer.email})`;
+  },
+
+  formatFacilitators(facilitators) {
+    return <FacilitatorsList facilitators={facilitators} />;
+  },
+
+  formatSignupUrl(workshopId) {
+    const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
+    return (
+      <a href={signupUrl} target="_blank">
+        {signupUrl}
+      </a>
+    );
+  },
+
+  formatManagement(workshopId) {
+    return (
+      <WorkshopManagement
+        workshopId={workshopId}
+        viewUrl={`/workshops/${workshopId}`}
+        editUrl={this.props.canEdit ? `/workshops/${workshopId}/edit` : null}
+        onDelete={this.props.canDelete ? this.handleDelete : null}
+      />
+    );
+  },
+
   componentDidMount() {
     this.loadRequest = $.ajax({
-        method: 'GET',
-        url: this.props.queryUrl,
-        dataType: 'json'
-      })
-      .done(data => {
-        this.setState({
-          loading: false,
-          workshops: data
-        });
+      method: 'GET',
+      url: this.props.queryUrl,
+      dataType: 'json'
+    })
+    .done(data => {
+      this.setState({
+        loading: false,
+        workshops: data
       });
+    });
   },
 
   componentWillUnmount() {
@@ -55,63 +90,120 @@ const WorkshopTable = React.createClass({
     }
   },
 
-  handleDelete(workshop_index, workshop) {
+  handleDelete(workshopId) {
     this.deleteRequest = $.ajax({
-        method: 'DELETE',
-        url: '/api/v1/pd/workshops/' + workshop.id
-      })
-      .done(() => {
-        const workshops = _.cloneDeep(this.state.workshops);
-        workshops.splice(workshop_index, 1);
-        this.setState({workshops: workshops});
-      });
+      method: 'DELETE',
+      url: '/api/v1/pd/workshops/' + workshopId
+    })
+    .done(() => {
+      const workshops = _.reject(_.cloneDeep(this.state.workshops), w => w.id === workshopId);
+      this.setState({workshops: workshops});
+    });
   },
 
   render() {
     if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <i className="fa fa-spinner fa-pulse fa-3x"/>;
     }
 
     if (this.state.workshops.length === 0) {
       return <p>None.</p>;
     }
 
-    const tableRows = this.state.workshops.map((workshop, i) => {
-      return (
-        <WorkshopTableRow
-          workshop={workshop}
-          key={workshop.id}
-          viewUrl={`/workshops/${workshop.id}`}
-          editUrl={this.props.canEdit ? `/workshops/${workshop.id}/edit` : null}
-          onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
-          showSignupUrl={this.props.showSignupUrl}
-          showOrganizer={this.props.showOrganizer}
-        />
-      );
+    const rows = _.map(_.cloneDeep(this.state.workshops),
+      row => _.merge(row, {
+        signups: `${row.enrolled_teacher_count} / ${row.capacity}`
+      })
+    );
+
+    let columns = [];
+    columns.push({
+      property: 'sessions',
+      header: {
+        label: 'Date and Time'
+      },
+      cell: {
+        format: this.formatSessions
+      }
+    }, {
+      property: 'location_name',
+      header: {
+        label: 'Location'
+      }
+    }, {
+      property: 'workshop_type',
+      header: {
+        label: 'Type'
+      }
+    }, {
+      property: 'course',
+      header: {
+        label: 'Course'
+      }
+    }, {
+      property: 'signups',
+      header: {
+        label: 'Signups'
+      }
     });
 
-    const signupUrlHeader = this.props.showSignupUrl ? <th>Signup Url</th> : null;
-    const organizerHeader = this.props.showOrganizer ? <th>Organizer</th> : null;
+    if (this.props.showOrganizer) {
+      columns.push({
+        property: 'organizer',
+        header: {
+          label: 'Organizer'
+        },
+        cell: {
+          format: this.formatOrganizer
+        }
+      });
+    }
+
+    columns.push({
+      property: 'facilitators',
+      header: {
+        label: 'Facilitators'
+      },
+      cell: {
+        format: this.formatFacilitators
+      }
+    }, {
+      property: 'state',
+      header: {
+        label: 'Current State'
+      }
+    });
+
+    if (this.props.showSignupUrl) {
+      columns.push({
+        property: 'id',
+        header: {
+          label: 'Signup Url'
+        },
+        cell: {
+          format: this.formatSignupUrl
+        }
+      });
+    }
+
+    columns.push({
+      property: 'id',
+      header: {
+        label: 'Manage'
+      },
+      cell: {
+        format: this.formatManagement
+      }
+    });
+
     return (
-      <Table striped bordered condensed hover>
-        <thead>
-        <tr>
-          <th>Date and Time</th>
-          <th>Location</th>
-          <th>Type</th>
-          <th>Course</th>
-          <th>Signups</th>
-          {organizerHeader}
-          <th>Facilitators</th>
-          <th>Current State</th>
-          {signupUrlHeader}
-          <th>Manage</th>
-        </tr>
-        </thead>
-        <tbody>
-        {tableRows}
-        </tbody>
-      </Table>
+      <Table.Provider
+        className="table table-striped table-condensed"
+        columns={columns}
+      >
+        <Table.Header />
+        <Table.Body rows={rows} rowKey="id"/>
+      </Table.Provider>
     );
   }
 });
