@@ -77,9 +77,14 @@ class Pd::Enrollment < ActiveRecord::Base
       school_district_other: school_info_attr['school_district_other']
     }
 
+    # Remove empty attributes.  Notably school_district_id can come through
+    # as an empty string when we don't want anything.
     attr.delete_if { |_, e| e.blank? }
 
-    unless SchoolInfo.create(attr).valid?
+    # The checkbox comes through as "true" when we really want true.
+    attr[:school_district_other] = true if attr[:school_district_other] == "true"
+
+    unless SchoolInfo.new(attr).valid?
       return false
     end
 
