@@ -1,7 +1,6 @@
 /**
  * @overview UI component displaying router stats on the "Router" tab.
  */
-'use strict';
 
 import $ from 'jquery';
 var markup = require('./NetSimRouterStatsTable.html.ejs');

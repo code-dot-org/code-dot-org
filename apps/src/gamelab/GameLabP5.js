@@ -1,4 +1,3 @@
-'use strict';
 var animationsApi = require('../clientApi').animations;
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');

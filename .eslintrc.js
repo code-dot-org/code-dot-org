@@ -60,6 +60,7 @@ module.exports = {
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }]
+    }],
+    "strict": "error",
   }
 };

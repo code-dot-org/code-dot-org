@@ -24,7 +24,6 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');

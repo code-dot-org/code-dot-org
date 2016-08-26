@@ -4,7 +4,6 @@
  * Copyright 2014 Code.org
  *
  */
-'use strict';
 /* global Studio */
 
 import _ from 'lodash';
