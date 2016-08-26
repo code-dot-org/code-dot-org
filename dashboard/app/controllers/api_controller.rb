@@ -167,13 +167,13 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      last_activity = current_user.last_attempt(level)
-      level_source = last_activity.try(:level_source).try(:data)
+      user_level = current_user.last_attempt(level)
+      level_source = user_level.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)
-      if last_activity
+      if user_level
         response[:lastAttempt] = {
-          timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
+          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
       end
