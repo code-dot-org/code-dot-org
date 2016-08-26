@@ -39,6 +39,8 @@ exports.install = function (blockly, blockInstallOptions) {
     require('./collectorBlocks').install(blockly, blockInstallOptions);
   } else if (mazeUtils.isHarvesterSkin(skin.id)) {
     require('./harvesterBlocks').install(blockly, blockInstallOptions);
+  } else if (mazeUtils.isPlanterSkin(skin.id)) {
+    require('./planterBlocks').install(blockly, blockInstallOptions);
   }
 
   var SimpleMove = {
