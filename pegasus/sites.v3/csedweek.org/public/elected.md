@@ -46,5 +46,4 @@ ages.
 - [Software jobs vs Students](http://www.ncwit.org/edjobsmap) - interactive map to compare the data in every state or congressional district
 - [1-pager: What is computer science, and how does it impact careers and other fields of study?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
 - [Infographic with more stats about the shortage of Computer Science education](http://code.org/stats)
-- Learn about [what Congress is doing for K-12 CS Education](http://www.computinginthecore.org/newsroom) nd how you can support the [Computer Science Education Act](http://www.computinginthecore.org/csea)
-
+- [Tell Congress you support](http://www.congressweb.com/code/21) K-12 Computer Science!
