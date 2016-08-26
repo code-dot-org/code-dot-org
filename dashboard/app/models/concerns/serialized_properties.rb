@@ -26,6 +26,13 @@ module SerializedProperties
     super
   end
 
+  def property_changed?(key)
+    changes = self.changed_attributes['properties']
+    return false if changes.nil?
+
+    changes[key] != self.properties[key]
+  end
+
   module ClassMethods
     def sti_hierarchy
       classes = []
@@ -86,8 +93,8 @@ module SerializedProperties
   end
 
   private
+
   def init_properties
     write_attribute('properties', {}) unless read_attribute('properties')
   end
-
 end

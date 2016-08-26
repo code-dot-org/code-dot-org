@@ -2,8 +2,10 @@ if ENV['COVERAGE'] # set this environment variable when running tests if you wan
   require 'simplecov'
   SimpleCov.start :rails
 elsif ENV['CI'] # this is set by circle
-  require 'coveralls'
-  Coveralls.wear!('rails')
+  # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
+  # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
+  # require 'coveralls'
+  # Coveralls.wear!('rails')
 end
 
 require 'minitest/reporters'
@@ -19,7 +21,7 @@ ENV["RACK_ENV"] = "test"
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
 CDO.rack_env = "test" if defined? CDO
-Rails.application.reload_routes! if defined? Rails
+Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
@@ -205,7 +207,7 @@ end
 
 # Helpers for all controller test cases
 class ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
@@ -215,7 +217,7 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    @html_document ||= if @response.content_type === Mime::XML
+    @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
                          Nokogiri::HTML::Document.parse(@response.body, &:strict)
@@ -318,6 +320,8 @@ class ActionController::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     https!
   end

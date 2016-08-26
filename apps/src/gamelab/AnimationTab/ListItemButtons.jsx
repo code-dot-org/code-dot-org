@@ -1,14 +1,15 @@
 /** @file controls below an animation thumbnail */
-'use strict';
-
-var React = require('react');
-var color = require('../../color');
-var Radium = require('radium');
+import React from 'react';
+import color from '../../color';
+import Radium from 'radium';
+import SpeedSlider from '../../templates/SpeedSlider';
+import ItemLoopToggle from './ItemLoopToggle';
+import * as PropTypes from '../PropTypes';
 
 var styles = {
   root: {
-    marginLeft: 4,
-    marginRight: 4,
+    marginRight: 6,
+    marginLeft: 6,
     marginTop: 6,
     textAlign: 'center',
     color: color.white,
@@ -31,7 +32,17 @@ var styles = {
   },
   trash: {
     marginRight: 12
+  },
+  loopTogglePosition: {
+    position: 'absolute',
+    top: 10,
+    right: 10
   }
+};
+
+var sliderStyle = {
+  float: 'none',
+  display: 'block'
 };
 
 /**
@@ -40,13 +51,19 @@ var styles = {
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
+      <ItemLoopToggle style={styles.loopTogglePosition} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+      <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
       <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
       <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
     </div>
   );
 };
 ListItemButtons.propTypes = {
-  onCloneClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
-  onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */
+  onCloneClick: React.PropTypes.func.isRequired,
+  onDeleteClick: React.PropTypes.func.isRequired,
+  onLoopingChanged: React.PropTypes.func.isRequired,
+  looping: React.PropTypes.bool.isRequired,
+  onFrameDelayChanged: React.PropTypes.func.isRequired,
+  frameDelay: React.PropTypes.number.isRequired
 };
 module.exports = Radium(ListItemButtons);

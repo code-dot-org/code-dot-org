@@ -4,7 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Latin America Partners
@@ -26,6 +25,14 @@ title: <%= hoc_s(:title_partners) %>
 # Australia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'cn' %>
+
+# China Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
 <% end %>
 
@@ -66,6 +73,14 @@ title: <%= hoc_s(:title_partners) %>
 # Japan Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
+<% if @country == 'nl' %>
+
+# Netherlands Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
 <% end %>
 
@@ -126,4 +141,3 @@ title: <%= hoc_s(:title_partners) %>
 # Autres partenaires
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-

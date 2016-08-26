@@ -1,7 +1,6 @@
 class Object
-
   # Returns true if nil or empty (string, array, hash)
-  def nil_or_empty?()
+  def nil_or_empty?
     self.nil? || self.empty?
   end
 
@@ -18,5 +17,4 @@ class Object
       "#{Rack::Utils.escape(key.to_param)}=#{Rack::Utils.escape(to_param.to_s)}"
     end
   end
-
 end

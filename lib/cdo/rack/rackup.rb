@@ -5,8 +5,8 @@ module Rack
 
     pid = 0
     Dir.chdir(dir) do
-      env = {'RACK_ENV'=>rack_env.to_s, 'RAILS_ENV'=>rack_env.to_s}
-      pid = Process.spawn(env, 'bundle', 'exec', 'rackup', '-p', "#{port}", 'config.ru', [:out, :err] => log)
+      env = {'RACK_ENV' => rack_env.to_s, 'RAILS_ENV' => rack_env.to_s}
+      pid = Process.spawn(env, 'bundle', 'exec', 'rackup', '-p', port.to_s, 'config.ru', [:out, :err] => log)
       sleep 5 # Give the process time to start.
     end
 

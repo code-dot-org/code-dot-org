@@ -102,7 +102,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level
-    i = script.script_levels.index(self)
+    i = script.script_levels.find_index(self)
     return nil if i.nil? || i == script.script_levels.length
     script.script_levels[i + 1]
   end
@@ -122,7 +122,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def previous_level
-    i = script.script_levels.index(self)
+    i = script.script_levels.find_index(self)
     return nil if i.nil? || i == 0
     script.script_levels[i - 1]
   end
@@ -144,12 +144,16 @@ class ScriptLevel < ActiveRecord::Base
     false
   end
 
+  def anonymous?
+    return assessment && level.properties["anonymous"] == "true"
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
 
   def report_bug_url(request)
-    message = "Bug in Course #{script.name} Stage #{stage.position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} Stage #{stage.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
@@ -178,8 +182,14 @@ class ScriptLevel < ActiveRecord::Base
       kind = 'puzzle'
     end
 
+    ids = level_ids
+
+    levels.each do |l|
+      ids << l.contained_levels.map(&:id)
+    end
+
     summary = {
-        ids: level_ids,
+        ids: ids,
         position: position,
         kind: kind,
         icon: level.icon,
@@ -187,12 +197,12 @@ class ScriptLevel < ActiveRecord::Base
         url: build_script_level_url(self)
     }
 
-    summary[:name] = level.name if script.professional_learning_course?
+    summary[:name] = level.name if kind == 'named_level'
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level
-      if previous_level.stage.position != stage.position
-        summary[:previous] = [previous_level.stage.position, previous_level.position]
+      if previous_level.stage.absolute_position != stage.absolute_position
+        summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
       end
     else
       # This is the first level in the script
@@ -202,7 +212,7 @@ class ScriptLevel < ActiveRecord::Base
     # Add a next pointer if it's not the obvious (level+1)
     if end_of_stage?
       if next_level
-        summary[:next] = [next_level.stage.position, next_level.position]
+        summary[:next] = [next_level.stage.absolute_position, next_level.position]
       else
         # This is the final level in the script
         summary[:next] = false
@@ -240,5 +250,16 @@ class ScriptLevel < ActiveRecord::Base
 
   def to_param
     position.to_s
+  end
+
+  # Given the signed-in user and an optional user that is being viewed
+  # (e.g. a student viewed by a teacher), tell us whether we are allowed
+  # to view their prior answer.
+  def can_view_last_attempt(user, viewed_user)
+    # If it's an anonymous survey, then teachers can't view student answers
+    return false if user && viewed_user && user != viewed_user && anonymous?
+
+    # Everything else is okay.
+    return true
   end
 end

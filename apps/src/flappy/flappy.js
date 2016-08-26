@@ -5,12 +5,10 @@
  *
  */
 
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -22,6 +20,7 @@ var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
+var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -342,7 +341,7 @@ Flappy.activeTicks = function () {
  */
 Flappy.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Flappy, studioApp, api);
+    fn.call(Flappy, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {
@@ -404,7 +403,7 @@ Flappy.onTick = function () {
 
       if (!obstacle.hitAvatar && checkForObstacleCollision(obstacle)) {
         obstacle.hitAvatar = true;
-        try {Flappy.whenCollideObstacle(studioApp, api); } catch (e) { }
+        try {Flappy.whenCollideObstacle(api); } catch (e) { }
       }
 
       // If obstacle moves off left side, repurpose as a new obstacle to our right
@@ -496,6 +495,7 @@ Flappy.init = function (config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = level.grayOutUndeletableBlocks;
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   loadLevel();
 
@@ -590,9 +590,9 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          isRtl={studioApp.isRtl()}
-          visualizationColumn={<FlappyVisualizationColumn/>}
-          onMount={onMount}
+        isRtl={studioApp.isRtl()}
+        visualizationColumn={<FlappyVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -736,68 +736,25 @@ Flappy.onReportComplete = function (response) {
  * Execute the user's code.  Heaven help us...
  */
 Flappy.execute = function () {
-  var code;
   Flappy.result = ResultType.UNSET;
   Flappy.testResults = TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
-  if (level.editCode) {
-    code = dropletUtils.generateCodeAliases(null, 'Flappy');
-    code += studioApp.editor.getValue();
-  }
+  // Mapping of event handler hooks (e.g. Flappy.whenClick) to the name of the
+  // block that should generate the corresponding code.
+  const events = {
+    whenClick: 'flappy_whenClick',
+    whenCollideGround: 'flappy_whenCollideGround',
+    whenEnterObstacle: 'flappy_whenEnterObstacle',
+    whenCollideObstacle: 'flappy_whenCollideObstacle',
+    whenRunButton: 'when_run'
+  };
 
-  var codeClick = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenClick');
-  var whenClickFunc = codegen.functionFromCode(
-                                      codeClick, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeCollideGround = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenCollideGround');
-  var whenCollideGroundFunc = codegen.functionFromCode(
-                                      codeCollideGround, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenEnterObstacle');
-  var whenEnterObstacleFunc = codegen.functionFromCode(
-                                      codeEnterObstacle, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'flappy_whenCollideObstacle');
-  var whenCollideObstacleFunc = codegen.functionFromCode(
-                                      codeCollideObstacle, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
-  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
-                                    'JavaScript',
-                                    'when_run');
-  var whenRunButtonFunc = codegen.functionFromCode(
-                                      codeWhenRunButton, {
-                                      StudioApp: studioApp,
-                                      Flappy: api } );
-
+  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+  Object.assign(Flappy, codegen.evalWithEvents({Flappy: api}, events, generator));
 
   studioApp.playAudio('start');
-
-  // studioApp.reset(false);
-
-  // Set event handlers and start the onTick timer
-  Flappy.whenClick = whenClickFunc;
-  Flappy.whenCollideGround = whenCollideGroundFunc;
-  Flappy.whenEnterObstacle = whenEnterObstacleFunc;
-  Flappy.whenCollideObstacle = whenCollideObstacleFunc;
-  Flappy.whenRunButton = whenRunButtonFunc;
 
   Flappy.tickCount = 0;
   Flappy.firstActiveTick = -1;
@@ -985,24 +942,8 @@ Flappy.setGround = function (value) {
   }
 };
 
-var checkTickLimit = function () {
-  if (!level.tickLimit) {
-    return false;
-  }
-
-  if ((Flappy.tickCount - Flappy.firstActiveTick) >= level.tickLimit &&
-    (Flappy.gameState === Flappy.GameStates.ACTIVE ||
-    Flappy.gameState === Flappy.GameStates.OVER)) {
-    // We'll ignore tick limit if we're ending so that we fully finish ending
-    // sequence
-    return true;
-  }
-
-  return false;
-};
-
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
+  // if we have a success condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
     Flappy.result = ResultType.SUCCESS;
     return true;

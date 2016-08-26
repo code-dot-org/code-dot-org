@@ -9,14 +9,34 @@
     "code_functions": {
       "moveForward": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "penWidth": null,
       "penColor": null,
-      "functionParams_none": null,
-      "callMyFunction": null,
+      "functionParams_none": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
       "comment": null
     },
     "edit_code": true,
@@ -25,7 +45,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.9",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -53,11 +73,75 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "encrypted_examples": "dNW+ovSP4l0S/a53Cn0cC/ttPVJIt5FmIA2y9U6ImSLBXFB6fOpcjSh87lCU\nfh/E\n",
-    "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of penColor() and dot() without any loops."
+      },
+      {
+        "entries": [
+          "penColor:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "To complete this task you need to set the pen color at least three times"
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "To complete this task you need to draw at least 3 dots"
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "To complete this task you don't need to move forward"
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "To complete this task you don't need to turn"
+      },
+      {
+        "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "To complete this task you don't need to turn"
+      },
+      {
+        "entries": [
+          "penColor:1",
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "App Lab is expecting that you'll set the pen color and draw a dot three times in order to make the bullseye."
+      }
+    ],
+    "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

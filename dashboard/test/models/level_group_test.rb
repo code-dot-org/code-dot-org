@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class LevelGroupTest < ActiveSupport::TestCase
-
   # Create a multi with name "levelX" where X is passed in
   def get_multi_dsl(id)
     "
@@ -43,7 +42,6 @@ MARKDOWN
 
   # Test that level.pages for a level_group has the correct offsets and page numbers.
   test 'get level group pages' do
-
     # DSL for the level_group.
     level_group_input_dsl = "
   name 'long assessment'
@@ -92,7 +90,6 @@ MARKDOWN
 
   # Test that a level_group can't be created if it has duplicate levels.
   test 'level group fail on duplicate levels' do
-
     # DSL for the level_group, with a duplicate level.
     level_group_input_dsl = "
   name 'long assessment'
@@ -126,7 +123,6 @@ MARKDOWN
 
   # Test that a level_group can't be created with an incorrect level type.
   test 'level group fail on wrong level type' do
-
     # DSL for the level_group, mentioning a contract-match level.
     level_group_input_dsl = "
   name 'long assessment'
@@ -200,5 +196,4 @@ MARKDOWN
     assert plc_evaluation.plc_evaluation?
     assert_not non_plc_evaluation.plc_evaluation?
   end
-
 end

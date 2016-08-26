@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ## メディアを Hour of Code イベントに惹きつけるには
 
 *報道・メディア関係のお問い合わせはすべて、<press@code.org>までご連絡ください。*
@@ -16,7 +15,7 @@ nav: promote_nav
   * イベントの2週間前にメールでメディアに連絡を取りましょう。もし最初の返事がなければメールや電話でフォローアップしましょう。
   * 学校の先生やボランティアの人に、写真をとってオンラインで共有したり報道機関に送ってもらうようお願いしましょう。
   * あなたのウェブサイトのトップページや学校新聞に Hour of Code について書いてみましょう。イベントの詳細や、学生の活動の写真を投稿しましょう。
-  * 12月7日~13日の間にFacebookやTwitterであなたのプランを投稿し、シェアしましょう。そして、あなたのイベントをアナウンスし写真をアップロードして下さい。また、その際に**#HourOfCode**のハッシュコードを使いましょう。 そうすれば Code.org はそれを見てあなたのイベントをプロモーションすることができます。
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### ステップ・バイ・ステップ ガイド:
 
@@ -36,7 +35,7 @@ nav: promote_nav
 
 **3. 地元のメディアに連絡する**
 
-一番の方法はメールです。 メールでは「なぜこのイベントが重要なのか？」をわかりやすく手短に説明してください。 連絡先には、このイベントを現場でサポートする人の情報(携帯電話の番号を含む)を含めます。 **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
+一番の方法はメールです。 メールでは「なぜこのイベントが重要なのか？」をわかりやすく手短に説明してください。 連絡先には、このイベントを現場でサポートする人の情報(携帯電話の番号を含む)を含めます。 **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
 **4. 学校のイベントへの質問に対して準備しましょう。例えば:**
 
@@ -44,15 +43,15 @@ nav: promote_nav
 
 今日の技術に満ちあふれた世界をどう生き抜てゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの教師はコンピューター科学の経験がなく、どこから始めればよいのか分かりません。 このイベントは私たち全てが「コンピューターサイエンスとはどのようなものか」を知る機会になるのです。
 
-私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 子供たちは、読み書きを覚える前にプログラミングの概念を習得できるという研究結果もあります。 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。
+私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 Research also shows that kids can pick up programming concepts before they know how to read and write. 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。
 
 *なぜこれが重要なのですか？*
 
-In China, every student takes computer science to graduate high school. 米国では、9割の学校がそれを教えてすらいません。 今こそ私たちは 21 世紀に追いつくべきです。 学生たちが大人になってどんな職業に就くかにかかわらず、医療や事業、政治、芸術のどの分野に進もうとも、技術の構築方法を知っていることで自信が得られ、成功の秘訣を手にするでしょう。
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **その他の引用句**
 
-Code.orgの創始者 兼 CEOである Hadi Partovi曰く、「Hour of Codeはコードが神秘的なものではなく、わかりやすいものだということを伝えるためのものです。コンピュータサイエンスは難しいものではなく、だれでも基本を学べるものなのです 「すでに1億人を超す世界中の学生が Hour of Codeを行いました。 地球上すべての国で、21世紀型のコンピュータサイエンス教育が求められています。」
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. 「すでに1億人を超す世界中の学生が Hour of Codeを行いました。 地球上すべての国で、21世紀型のコンピュータサイエンス教育が求められています。」
 
 **Code.org について**
 
@@ -60,4 +59,3 @@ Code.org は501(c)(3)法人です。コンピュータサイエンスに関わ�
 
   
 さらに多くの資料やサンプルメールを探すには以下を参照してください。 [here](<%= resolve_url('/promote') %>) .
-

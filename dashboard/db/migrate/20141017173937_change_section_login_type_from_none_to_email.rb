@@ -8,5 +8,4 @@ class ChangeSectionLoginTypeFromNoneToEmail < ActiveRecord::Migration
     Section.where(login_type: 'email').find_each {|s| s.update_attribute(:login_type, 'none')}
     change_column_default :sections, :login_type, 'none'
   end
-
 end

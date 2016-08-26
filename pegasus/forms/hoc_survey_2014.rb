@@ -1,5 +1,4 @@
 class HocSurvey2014
-
   def self.normalize(data)
     result = {}
 
@@ -45,11 +44,11 @@ class HocSurvey2014
     end
   end
 
-  def self.receipt()
+  def self.receipt
     'hoc_survey_2014_receipt'
   end
 
-  def self.teacher_descriptions()
+  def self.teacher_descriptions
     [
       'Computer Science teacher',
       'Classroom teacher (all subjects)',
@@ -67,7 +66,7 @@ class HocSurvey2014
     ]
   end
 
-  def self.event_location_types()
+  def self.event_location_types
     [
       'Public school',
       'Public charter school',
@@ -81,7 +80,7 @@ class HocSurvey2014
     ]
   end
 
-  def self.students_grade_levels()
+  def self.students_grade_levels
     [
       'Pre-kindergarten',
       'Kindergarten',
@@ -101,7 +100,7 @@ class HocSurvey2014
     ]
   end
 
-  def self.event_tutorials()
+  def self.event_tutorials
     [
       'Code with Anna and Elsa',
       'Code with Angry Birds',
@@ -131,7 +130,7 @@ class HocSurvey2014
     ]
   end
 
-  def self.event_technologies()
+  def self.event_technologies
     [
       'Each student had a device',
       'Pair programming, sharing a device',
@@ -140,7 +139,7 @@ class HocSurvey2014
     ]
   end
 
-  def self.event_experiences()
+  def self.event_experiences
     %w(
       Great
       Good
@@ -150,7 +149,7 @@ class HocSurvey2014
     )
   end
 
-  def self.teacher_how_heards()
+  def self.teacher_how_heards
     [
       'I read about it in the news or on TV',
       'Email from Code.org',
@@ -185,5 +184,4 @@ class HocSurvey2014
 
     DB[:hoc_survey_prizes].where(claimant: email).first[:value]
   end
-
 end

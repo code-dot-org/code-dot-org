@@ -7,9 +7,11 @@ class MediaProxyControllerTest < ActionController::TestCase
   IMAGE_DATA = 'JPG_\u0000\u00FF'.force_encoding(Encoding::BINARY)
 
   test "should fetch proxied media in all content types" do
-    content_types = ['image/bmp', 'image/x-windows-bmp', 'image/gif', 'image/jpeg', 'image/png',
-     'image/svg+xml', 'audio/basic', 'audio/mid', 'audio/mpeg', 'audio/mp4',
-     'audio/ogg', 'audio/vnd.wav']
+    content_types = [
+      'image/bmp', 'image/x-windows-bmp', 'image/gif', 'image/jpeg',
+      'image/png', 'image/svg+xml', 'audio/basic', 'audio/mid', 'audio/mpeg',
+      'audio/mp4', 'audio/ogg', 'audio/vnd.wav'
+    ]
 
     content_types.each do |content_type|
       stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: content_type})
@@ -52,12 +54,12 @@ class MediaProxyControllerTest < ActionController::TestCase
   test "should fail if too many redirects" do
     response = {body: 'Redirect', status: 302, headers: {location: IMAGE_URI}}
     stub_request(:get, IMAGE_URI).to_return(
-                           response,
-                           response,
-                           response,
-                           response,
-                           response,
-                           response)
+      response,
+      response,
+      response,
+      response,
+      response,
+      response)
     get :get, u: IMAGE_URI
     assert_response 500
   end

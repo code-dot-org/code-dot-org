@@ -54,7 +54,6 @@ class GatekeeperTest < ActiveSupport::TestCase
 
     Gatekeeper.delete(feature)
     assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
-
   end
 
   test 'get script and feature names' do
@@ -72,5 +71,4 @@ class GatekeeperTest < ActiveSupport::TestCase
     Gatekeeper.delete('hint_view_request')
     assert_equal Set.new(['postMilestone', 'shareEnabled']), Gatekeeper.feature_names
   end
-
 end

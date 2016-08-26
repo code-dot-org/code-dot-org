@@ -2,7 +2,7 @@ module EnvUtils
   SENSITIVE_KEYWORDS = %w[KEY PASSWORD SECRET]
   OBFUSCATION = '(HIDDEN)'
 
-  def EnvUtils.redact_sensitive_values(hash)
+  def self.redact_sensitive_values(hash)
     copy = hash.dup
     hash.each_key do |key|
       if SENSITIVE_KEYWORDS.any? {|sensitive_keyword| key.upcase.include? sensitive_keyword}
@@ -19,5 +19,4 @@ module EnvUtils
   def ENV.with_sensitive_values_redacted
     EnvUtils.redact_sensitive_values(ENV.to_h)
   end
-
 end

@@ -1,11 +1,9 @@
 /** @file Redux reducer functions for App Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-'use strict';
-
-var ActionType = require('./actions').ActionType;
-var constants = require('./constants');
-var ApplabInterfaceMode = constants.ApplabInterfaceMode;
-var screens = require('./redux/screens');
+import { ActionType } from './actions';
+import { ApplabInterfaceMode } from './constants';
+import data from './redux/data';
+import screens from './redux/screens';
 
 function interfaceMode(state, action) {
   state = state || ApplabInterfaceMode.CODE;
@@ -18,7 +16,8 @@ function interfaceMode(state, action) {
   }
 }
 
-module.exports = {
-  interfaceMode: interfaceMode,
-  screens: screens.default
+export {
+  data,
+  interfaceMode,
+  screens
 };

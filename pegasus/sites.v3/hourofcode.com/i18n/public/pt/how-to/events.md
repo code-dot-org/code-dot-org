@@ -6,10 +6,7 @@ nav: how_to_nav
 
 ---
 
-
 # Como organizar um evento da Hora do Código
-
-Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da Computação (<%= campaign_date('short') %>) para celebrar a ciência da computação e incentivar mais alunos a conhecê-la. Qualquer um, em qualquer lugar, pode organizar um evento da Hora do Código.
 
 ## 1) Prepare-se para seu evento
 
@@ -37,13 +34,13 @@ Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da
 
 ## Exemplo de Plano de Evento
 
-**Evento:** abertura da Semana da Educação em Ciência da Computação para toda a escola
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Data:** 7 de dezembro (início da Semana da Educação em Ciência da Computação)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Hora:** Durante o horário escolar. Preferência para o meio da manhã. Aproximadamente 1 hora de duração.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Local:** Espaço de eventos da escola (ex., teatro, ginásio, cafeteria)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -57,4 +54,3 @@ Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da
 | 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos. |
 | 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade offline para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                 |
 | 11h00 - 11h05 | O professor que ajudou a trazer o evento para a escola fará os comentários finais.                                                                             |
-

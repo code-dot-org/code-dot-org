@@ -3,11 +3,63 @@ class ApiController < ApplicationController
   include LevelsHelper
 
   def user_menu
+    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
     render partial: 'shared/user_header'
   end
 
   def user_hero
-    head :not_found if !current_user
+    head :not_found unless current_user
+  end
+
+  def update_lockable_state
+    updates = params.require(:updates)
+    updates.to_a.each do |item|
+      user_level_data = item[:user_level_data]
+
+      if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
+        # Must provide user, level, and script ids
+        return head :bad_request
+      end
+
+      if item[:locked] && item[:readonly_answers]
+        # Can not view answers while locked
+        return head :bad_request
+      end
+
+      unless User.find(user_level_data[:user_id]).teachers.include? current_user
+        # Can only update lockable state for user's students
+        return head :forbidden
+      end
+
+      UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
+        user_level_data[:script_id], item[:locked], item[:readonly_answers])
+    end
+    render json: {}
+  end
+
+  # For a given user, gets the lockable state for each student in each of their sections
+  def lockable_state
+    unless current_user
+      render json: {}
+      return
+    end
+
+    data = current_user.sections.each_with_object({}) do |section, section_hash|
+      next if section[:deleted_at]
+      @section = section
+      load_script
+
+      section_hash[section.id] = {
+        section_id: section.id,
+        section_name: section.name,
+        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+          stage_state = stage.lockable_state(section.students)
+          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        end
+      }
+    end
+
+    render json: data
   end
 
   def section_progress
@@ -16,30 +68,39 @@ class ApiController < ApplicationController
 
     # stage data
     stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
-      {length: levels.length,
-       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
+      {
+        length: levels.length,
+        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+      }
     end
 
     # student level completion data
     students = @section.students.map do |student|
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map{|id| level_map[id]}
+        user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
         level_class = best_activity_css_class user_levels
-        {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        paired = user_levels.any?(&:paired?)
+        level_class << ' paired' if paired
+        title = paired ? '' : script_level.position
+        {
+          class: level_class,
+          title: title,
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+        }
       end
       {id: student.id, levels: student_levels}
     end
 
     data = {
-            students: students,
-            script: {
-                     id: @script.id,
-                     name: data_t_suffix('script.name', @script.name, 'title'),
-                     levels_count: @script.script_levels.length,
-                     stages: stages
-                    }
-           }
+      students: students,
+      script: {
+        id: @script.id,
+        name: data_t_suffix('script.name', @script.name, 'title'),
+        levels_count: @script.script_levels.length,
+        stages: stages
+      }
+    }
 
     render json: data
   end
@@ -50,9 +111,6 @@ class ApiController < ApplicationController
     load_script
 
     progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: @student})
-    if @script.trophies
-      progress_html += render_to_string(partial: 'shared/concept_trophy_block', locals: {concept_progress: summarize_trophies(@script, @student), added_style: 'overflow: visible'})
-    end
 
     data = {
       student: {
@@ -122,6 +180,11 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+
+      recent_driver = UserLevel.most_recent_driver(script, level, current_user)
+      if recent_driver
+        response[:pairingDriver] = recent_driver
+      end
     end
 
     slog(tag: 'activity_start',
@@ -143,14 +206,14 @@ class ApiController < ApplicationController
       student_hash = {id: student.id, name: student.name}
 
       text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt(script_level.level)
+        last_attempt = student.last_attempt_for_any(script_level.levels)
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
-          question: script_level.level.properties['title'],
+          question: last_attempt.level.properties['title'],
           response: response,
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
         }
@@ -168,7 +231,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
@@ -176,14 +239,18 @@ class ApiController < ApplicationController
       level_group_script_levels.map do |script_level|
         next unless script_level.long_assessment?
 
-        last_attempt = student.last_attempt(script_level.level)
+        # Don't allow somebody to peek inside an anonymous survey using this API.
+        next if script_level.anonymous?
+
+        last_attempt = student.last_attempt_for_any(script_level.levels)
+        level_group = last_attempt.try(:level) || script_level.oldest_active_level
         response = last_attempt.try(:level_source).try(:data)
 
         next unless response
 
         response_parsed = JSON.parse(response)
 
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = student.user_level_for(script_level, level_group)
 
         # Summarize some key data.
         multi_count = 0
@@ -192,8 +259,7 @@ class ApiController < ApplicationController
         # And construct a listing of all the individual levels and their results.
         level_results = []
 
-        script_level.level.levels.each do |level|
-
+        level_group.levels.each do |level|
           if level.is_a? Multi
             multi_count += 1
           end
@@ -240,7 +306,7 @@ class ApiController < ApplicationController
           student: student_hash,
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
-          question: script_level.level.properties["title"],
+          question: level_group.properties["title"],
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
@@ -252,6 +318,16 @@ class ApiController < ApplicationController
     end.flatten
 
     render json: data
+  end
+
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  def section_surveys
+    load_section
+    load_script
+
+    render json: LevelGroup.get_survey_results(@script, @section)
   end
 
   private

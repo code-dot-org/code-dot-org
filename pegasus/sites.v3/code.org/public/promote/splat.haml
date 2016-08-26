@@ -10,10 +10,6 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-:javascript
-  var petitionIncluded = false;
-  var promoteIncluded = false;
-
 -state = File.basename(request.path_info)
 -facebook = {:u=>'https://code.org/promote' + (state != "thanks" ? "/" + state : "")}
 -twitter = {:url=>"https://code.org", :related=>'codeorg', :hashtags=>'CSforAll', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
@@ -39,8 +35,6 @@ social:
 
     #petition-section.section.clear
       = view :petition
-    :javascript
-      petitionIncluded = true;
 
     #tools-section.section.clear
       %h2 Tools to help you advocate locally
@@ -96,9 +90,7 @@ social:
   var petition;
   $(document).ready()
   {
-    if (petitionIncluded) {
-      petition = new Petition();
-    }
+    petition = new Petition();
     if (document.referrer.indexOf(location.host) !== -1) {
       $("#thank-you-box").show();
       $("#petition-section").hide();

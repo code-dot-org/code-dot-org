@@ -1,9 +1,7 @@
 /** @file Redux reducer functions for Game Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-'use strict';
-
 import {CHANGE_INTERFACE_MODE} from './actions';
-import animations from './animationModule';
+import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
@@ -24,7 +22,7 @@ function interfaceMode(state, action) {
 module.exports = {
   animationPicker,
   animationTab,
-  animations,
+  animationList,
   errorDialogStack,
   interfaceMode
 };

@@ -1,13 +1,10 @@
-'use strict';
-
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var msg = require('./locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
-var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -29,11 +26,13 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationMetadata} from './animationModule';
+import {setInitialAnimationList, saveAnimations} from './animationListModule';
+import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import {GAME_WIDTH} from './constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -79,10 +78,8 @@ var GameLab = function () {
   this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.preloadInProgress = false;
+  this.reportPreloadEventHandlerComplete_ = null;
   this.gameLabP5 = new GameLabP5();
-  this.api = api;
-  this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
 
@@ -123,18 +120,33 @@ GameLab.baseP5loadImage = null;
 
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
+ * @param {!AppOptionsConfig} config
+ * @param {!GameLabLevel} config.level
  */
 GameLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
 
+  if (!config.level.editCode) {
+    throw 'Game Lab requires Droplet';
+  }
+
   this.skin = config.skin;
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
+  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
+    try {
+      this.startAnimations = JSON.parse(this.level.startAnimations);
+    } catch (err) {
+      console.error("Unable to parse default animation list", err);
+    }
+  }
 
   config.usesAssets = true;
+
+  gameLabSprite.injectLevel(this.level);
 
   this.gameLabP5.init({
     gameLab: this,
@@ -145,6 +157,7 @@ GameLab.prototype.init = function (config) {
   });
 
   config.afterClearPuzzle = function () {
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -202,34 +215,36 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var showDebugButtons = (!config.hideSource &&
-                          config.level.editCode &&
-                          !config.level.debuggerDisabled);
-  var showDebugConsole = !config.hideSource && config.level.editCode;
+  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+  var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
   }
 
   this.studioApp_.setPageConstants(config, {
+    channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: true
+    showDebugWatch: true,
+    showAnimationMode: !config.level.hideAnimationMode
   });
 
   // Push project-sourced animation metadata into store
-  if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata));
-  }
+  const initialAnimationList = config.initialAnimationList || this.startAnimations;
+  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <GameLabView
-          showFinishButton={finishButtonFirstLine && showFinishButton}
-          onMount={onMount}
+        showFinishButton={finishButtonFirstLine && showFinishButton}
+        onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -361,7 +376,7 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.preloadInProgress = false;
+  this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
   if (this.debugger_) {
@@ -415,25 +430,29 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   // Stop everything on screen
   this.reset();
 
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
-    this.studioApp_.playAudio('win');
-  } else {
-    this.studioApp_.playAudio('failure');
-  }
-
   var program;
+  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
 
-  if (this.level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.message = containedLevelResultsInfo.feedback;
+  } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = this.studioApp_.getCode();
+    program = encodeURIComponent(this.studioApp_.getCode());
+    this.message = null;
+  }
+
+  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+    this.studioApp_.playAudio('win');
   } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
+    this.studioApp_.playAudio('failure');
   }
 
   this.waitingForReport = true;
@@ -445,8 +464,9 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
       result: levelComplete,
       testResult: this.testResults,
       submitted: submit,
-      program: encodeURIComponent(program),
+      program: program,
       image: this.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
     });
 
@@ -639,27 +659,6 @@ GameLab.prototype.onMouseUp = function (e) {
   this.resetDPad();
 };
 
-GameLab.prototype.evalCode = function (code) {
-  try {
-    codegen.evalWith(code, {
-      GameLab: this.api
-    });
-  } catch (e) {
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      window.alert(e);
-    }
-  }
-};
-
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -674,7 +673,7 @@ GameLab.prototype.execute = function () {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
-      (this.studioApp_.hasExtraTopBlocks() ||
+      (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
     this.onPuzzleComplete();
@@ -683,15 +682,10 @@ GameLab.prototype.execute = function () {
 
   this.gameLabP5.startExecution();
 
-  if (this.level.editCode) {
-    if (!this.JSInterpreter ||
-        !this.JSInterpreter.initialized() ||
-        this.executionError) {
-      return;
-    }
-  } else {
-    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
-    this.evalCode(this.code);
+  if (!this.JSInterpreter ||
+      !this.JSInterpreter.initialized() ||
+      this.executionError) {
+    return;
   }
 
   this.studioApp_.playAudio('start');
@@ -706,10 +700,6 @@ GameLab.prototype.execute = function () {
 };
 
 GameLab.prototype.initInterpreter = function () {
-  if (!this.level.editCode) {
-    return;
-  }
-
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var self = this;
@@ -798,38 +788,132 @@ GameLab.prototype.onP5ExecutionStarting = function () {
 };
 
 /**
- * This is called while this.gameLabP5 is in the preload phase. We initialize
- * the interpreter, start its execution, and call the user's preload function.
+ * This is called while this.gameLabP5 is in the preload phase. Do the following:
  *
- * @return {Boolean} whether or not the preload has completed
+ * - load animations into the P5 engine
+ * - initialize the interpreter
+ * - start its execution
+ * - (optional) execute global code
+ * - call the user's preload function
+ *
+ * @return {Boolean} FALSE so that P5 will internally increment a preload count;
+ *         calling notifyPreloadPhaseComplete is then necessary to continue
+ *         loading the game.
  */
 GameLab.prototype.onP5Preload = function () {
-  this.gameLabP5.preloadAnimations(this.getAnimationMetadata());
+  Promise.all([
+      this.preloadAnimations_(),
+      this.runPreloadEventHandler_()
+  ]).then(() => {
+    this.gameLabP5.notifyPreloadPhaseComplete();
+  });
+  return false;
+};
 
-  this.initInterpreter();
-  // And execute the interpreter for the first time:
-  if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-    // Start executing the interpreter's global code as long as a setup() method
-    // was provided. If not, we will skip running any interpreted code in the
-    // preload phase and wait until the setup phase.
-    this.preloadInProgress = true;
-    if (this.globalCodeRunsDuringPreload) {
-      this.JSInterpreter.executeInterpreter(true);
-      this.interpreterStarted = true;
-
-      // In addition, execute the global function called preload()
-      if (this.eventHandlers.preload) {
-        this.eventHandlers.preload.apply(null);
-      }
+/**
+ * Wait for animations to be loaded into memory and ready to use, then pass
+ * those animations to P5 to be loaded into the engine as animations.
+ * @returns {Promise} which resolves once animations are in memory in the redux
+ *          store and we've started loading them into P5.
+ *          Loading to P5 is also an async process but it has its own internal
+ *          effect on the P5 preloadCount, so we don't need to track it here.
+ * @private
+ */
+GameLab.prototype.preloadAnimations_ = function () {
+  let store = this.studioApp_.reduxStore;
+  return new Promise(resolve => {
+    if (this.areAnimationsReady_()) {
+      resolve();
     } else {
-      if (this.eventHandlers.preload) {
-        this.log("WARNING: preload() was ignored because setup() was not provided");
-        this.eventHandlers.preload = null;
-      }
+      // Watch store changes until all the animations are ready.
+      const unsubscribe = store.subscribe(() => {
+        if (this.areAnimationsReady_()) {
+          unsubscribe();
+          resolve();
+        }
+      });
     }
-    this.completePreloadIfPreloadComplete();
+  }).then(() => {
+    // Animations are ready - send them to p5 to be loaded into the engine.
+    this.gameLabP5.preloadAnimations(store.getState().animationList);
+  });
+};
+
+/**
+ * Check whether all animations in the project animation list have been loaded
+ * into memory and are ready to use.
+ * @returns {boolean}
+ * @private
+ */
+GameLab.prototype.areAnimationsReady_ = function () {
+  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  return animationList.orderedKeys.every(key => animationList.propsByKey[key].loadedFromSource);
+};
+
+/**
+ * Run the preload event handler, and optionally global code, and report when
+ * it is done by resolving a returned Promise.
+ * @returns {Promise} Which will resolve immediately if there is no code to run,
+ *          otherwise will resolve when the preload handler has completed.
+ * @private
+ */
+GameLab.prototype.runPreloadEventHandler_ = function () {
+  return new Promise(resolve => {
+    this.initInterpreter();
+    // Execute the interpreter for the first time:
+    if (this.JSInterpreter && this.JSInterpreter.initialized()) {
+      // Start executing the interpreter's global code as long as a setup() method
+      // was provided. If not, we will skip running any interpreted code in the
+      // preload phase and wait until the setup phase.
+      this.reportPreloadEventHandlerComplete_ = () => {
+        this.reportPreloadEventHandlerComplete_ = null;
+        resolve();
+      };
+      if (this.globalCodeRunsDuringPreload) {
+        this.JSInterpreter.executeInterpreter(true);
+        this.interpreterStarted = true;
+
+        // In addition, execute the global function called preload()
+        if (this.eventHandlers.preload) {
+          this.eventHandlers.preload.apply(null);
+        }
+      } else {
+        if (this.eventHandlers.preload) {
+          this.log("WARNING: preload() was ignored because setup() was not provided");
+          this.eventHandlers.preload = null;
+        }
+      }
+      this.completePreloadIfPreloadComplete();
+    } else {
+      // If we didn't run anything resolve now.
+      resolve();
+    }
+  });
+};
+
+/**
+ * Called on tick to check whether preload code is done running, and trigger
+ * the appropriate report of completion if it is.
+ */
+GameLab.prototype.completePreloadIfPreloadComplete = function () {
+  // This function will have been created in runPreloadEventHandler if we
+  // actually had an interpreter and might have run preload code.  It could
+  // be null if we didn't have an interpreter, or we've already called it.
+  if (typeof this.reportPreloadEventHandlerComplete_ !== 'function') {
+    return;
   }
-  return !this.preloadInProgress;
+
+  if (this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the preload phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.preload ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.reportPreloadEventHandlerComplete_();
+  }
 };
 
 /**
@@ -877,25 +961,6 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
       this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
     this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
-  }
-};
-
-GameLab.prototype.completePreloadIfPreloadComplete = function () {
-  if (!this.preloadInProgress) {
-    return;
-  }
-
-  if (this.globalCodeRunsDuringPreload &&
-      !this.JSInterpreter.startedHandlingEvents) {
-    // Global code should run during the preload phase, but global code hasn't
-    // completed.
-    return;
-  }
-
-  if (!this.eventHandlers.preload ||
-      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.gameLabP5.notifyPreloadPhaseComplete();
-    this.preloadInProgress = false;
   }
 };
 
@@ -968,17 +1033,21 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
- * @return {AnimationMetadata[]}
+ * @return {AnimationList}
  */
-GameLab.prototype.getAnimationMetadata = function () {
-  return this.studioApp_.reduxStore.getState().animations;
+GameLab.prototype.getSerializedAnimationList = function (callback) {
+  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
+    callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  }));
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
-  return this.getAnimationMetadata().map(function (animation) {
+  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  return animationList.orderedKeys.map(key => {
+    const name = animationList.propsByKey[key].name;
     return {
-      text: utils.quote(animation.name),
-      display: utils.quote(animation.name)
+      text: utils.quote(name),
+      display: utils.quote(name)
     };
   });
 };

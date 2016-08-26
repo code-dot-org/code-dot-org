@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
@@ -8,7 +7,6 @@ var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
 
 describe("NetSimEntity", function () {
   it("default entityID is undefined", function () {

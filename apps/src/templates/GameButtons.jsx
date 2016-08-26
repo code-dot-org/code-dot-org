@@ -1,5 +1,5 @@
 import React from 'react';
-import msg from '../locale';
+import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
@@ -29,17 +29,17 @@ const styles = {
 
 export const RunButton = Radium(props => (
   <button
-      id="runButton"
-      className={classNames(['launch', 'blocklyLaunch', props.hidden && 'invisible'])}
-      style={props.style}
+    id="runButton"
+    className={classNames(['launch', 'blocklyLaunch', props.hidden && 'invisible'])}
+    style={props.style}
   >
     <div>
       {msg.runProgram()}
     </div>
     <img
-        src="/blockly/media/1x1.gif"
-        style={[!props.isMinecraft && styles.runImage]}
-        className={classNames([props.isMinecraft && "run26"])}
+      src="/blockly/media/1x1.gif"
+      style={[!props.isMinecraft && styles.runImage]}
+      className={classNames([props.isMinecraft && "run26"])}
     />
   </button>
 ));
@@ -52,17 +52,17 @@ RunButton.propTypes = {
 
 export const ResetButton = Radium(props => (
   <button
-      id="resetButton"
-      className="launch blocklyLaunch"
-      style={[commonStyles.hidden, props.style]}
+    id="resetButton"
+    className="launch blocklyLaunch"
+    style={[commonStyles.hidden, props.style]}
   >
     <div>
       {!props.hideText && msg.resetProgram()}
     </div>
     <img
-        src="/blockly/media/1x1.gif"
-        style={[!props.isMinecraft && styles.resetImage, props.imageStyle]}
-        className={classNames([props.isMinecraft && "reset26"])}
+      src="/blockly/media/1x1.gif"
+      style={[!props.isMinecraft && styles.resetImage, props.imageStyle]}
+      className={classNames([props.isMinecraft && "reset26"])}
     />
   </button>
 ));
@@ -78,18 +78,19 @@ ResetButton.propTypes = {
  */
 const GameButtons = props => (
   <ProtectedStatefulDiv
-      id="gameButtons"
-      style={props.instructionsInTopPane ? styles.instructionsInTopPane : undefined}>
+    id="gameButtons"
+    style={props.instructionsInTopPane ? styles.instructionsInTopPane : undefined}
+  >
     {!props.playspacePhoneFrame &&
     <RunButton
-        hidden={props.hideRunButton}
-        isMinecraft={props.isMinecraft}
+      hidden={props.hideRunButton}
+      isMinecraft={props.isMinecraft}
     />
     }
     {!props.playspacePhoneFrame &&
     <ResetButton isMinecraft={props.isMinecraft}/>
     }
-    {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+    {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
     {props.children}
   </ProtectedStatefulDiv>
 );
@@ -97,7 +98,8 @@ GameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
   instructionsInTopPane: React.PropTypes.bool,
   isMinecraft: React.PropTypes.bool,
-  playspacePhoneFrame: React.PropTypes.bool
+  playspacePhoneFrame: React.PropTypes.bool,
+  children: React.PropTypes.node,
 };
 
 export default connect(state => ({
@@ -106,3 +108,25 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);
+
+
+if (BUILD_STYLEGUIDE) {
+  RunButton.displayName = 'RunButton';
+  ResetButton.displayName = 'ResetButton';
+  module.exports.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('RunButton', module)
+      .addWithInfo(
+        'The run button',
+        'This button is used for running programs',
+        () => <RunButton/>
+      );
+    storybook
+      .storiesOf('ResetButton', module)
+      .addWithInfo(
+        'The reset button',
+        'You have to explicitly set display: block to make this show up. It is hidden by default?!',
+        () => <ResetButton style={{display: 'block'}}/>
+      );
+  };
+}

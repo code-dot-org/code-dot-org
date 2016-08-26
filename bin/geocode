@@ -2,7 +2,7 @@
 require_relative '../deployment.rb'
 require 'cdo/geocoder'
 
-def main()
+def main
   address = Geocoder.search(ARGV.join(' ')).first
   puts address.address if address
 end

@@ -1,4 +1,3 @@
-'use strict';
 
 import React from 'react';
 import {connect} from 'react-redux';
@@ -22,14 +21,15 @@ export function isResponsiveFromState(state) {
  */
 const ProtectedVisualizationDiv = React.createClass({
   propTypes: {
-    isResponsive: React.PropTypes.bool.isRequired
+    isResponsive: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.node,
   },
 
   render() {
     return (
       <ProtectedStatefulDiv
-          id={VISUALIZATION_DIV_ID}
-          className={classNames({responsive: this.props.isResponsive})}
+        id={VISUALIZATION_DIV_ID}
+        className={classNames({responsive: this.props.isResponsive})}
       >
         {this.props.children}
       </ProtectedStatefulDiv>

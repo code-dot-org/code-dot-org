@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminHocControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     # Stub the DB[:forms] table (used by :event_signups).

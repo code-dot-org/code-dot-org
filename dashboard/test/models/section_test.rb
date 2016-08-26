@@ -66,4 +66,61 @@ class SectionTest < ActiveSupport::TestCase
 
     assert !Section.exists?(section.id)
   end
+
+  test 'add_student adds student to section' do
+    section = create :section
+    student = create :student
+
+    # even when the student is in another section from a different teacher
+    create(:section).add_student student
+
+    assert_creates(Follower) do
+      section.add_student student
+    end
+    assert section.students.exists?(student.id)
+    assert_equal 2, Follower.where(student_user_id: student.id).count
+  end
+
+  test 'add_student in another section from the same teacher moves student' do
+    teacher = create :teacher
+    student = create :student
+    original_section = create :section, user: teacher
+    original_section.add_student student
+    new_section = create :section, user: teacher
+
+    # Initially, student is in original_section
+    assert original_section.students.exists?(student.id)
+    refute new_section.students.exists?(student.id)
+
+    assert_does_not_create(Follower) do
+      new_section.add_student student
+    end
+
+    # Verify student has been moved to new_section
+    refute original_section.students.exists?(student.id)
+    assert new_section.students.exists?(student.id)
+  end
+
+  test 'add_student with move_for_same_teacher: false does not move student' do
+    # This option is used for pd-workshop sections.
+    # A workshop attendee, unlike students in a classroom section, can remain enrolled
+    # in multiple sections owned by the same user (i.e. workshop organizer).
+    organizer = create :teacher
+    attendee = create :teacher
+    original_section = create :section, user: organizer
+    original_section.add_student attendee
+    new_section = create :section, user: organizer
+
+    # Initially, student is in original_section
+    assert original_section.students.exists?(attendee.id)
+    refute new_section.students.exists?(attendee.id)
+
+    assert_creates(Follower) do
+      new_section.add_student attendee, move_for_same_teacher: false
+    end
+
+    # Verify student is in both sections
+    assert original_section.students.exists?(attendee.id)
+    assert new_section.students.exists?(attendee.id)
+  end
 end

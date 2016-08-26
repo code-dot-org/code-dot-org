@@ -13,7 +13,7 @@ class PDFMergerTest < Minitest::Test
 
   def setup
     @output = File.expand_path('../fixtures/output/out.pdf', __FILE__)
-    @remote_collate_output_file =  File.expand_path('../fixtures/output/remote_files.pdf', __FILE__)
+    @remote_collate_output_file = File.expand_path('../fixtures/output/remote_files.pdf', __FILE__)
     @local_collate_output_file =  File.expand_path('../fixtures/output/local_files.pdf', __FILE__)
     @numbered_collate_output_file =  File.expand_path('../fixtures/output/numbered_files.pdf', __FILE__)
     @temp_generated_unnumbered_pdf = "#{@numbered_collate_output_file}.not_numbered.pdf"
@@ -24,7 +24,7 @@ class PDFMergerTest < Minitest::Test
     @local_pdf2 = File.expand_path('../fixtures/pdfs/2.pdf', __FILE__)
     @remote_pdf1 = 'http://code.org/curriculum/docs/k-5/tableofcontents.pdf'
     @remote_pdf2 = 'https://code.org/curriculum/docs/k-5/tableofcontents.pdf'
-    @remote_collate_file =  File.expand_path('../fixtures/remote_files.collate', __FILE__)
+    @remote_collate_file = File.expand_path('../fixtures/remote_files.collate', __FILE__)
     @local_collate_file =  File.expand_path('../fixtures/local_files.collate', __FILE__)
     @numbered_collate_file = File.expand_path('../fixtures/numbered_files.collate', __FILE__)
   end
@@ -87,6 +87,7 @@ class PDFMergerTest < Minitest::Test
   end
 
   private
+
   def merge_all_file_pdfs(glob)
     Dir.glob(glob).each do |file|
       merge_file_pdfs(file, file.sub('.collate', '.pdf'))

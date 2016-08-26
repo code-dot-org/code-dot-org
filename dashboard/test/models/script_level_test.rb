@@ -60,14 +60,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, stage: sl.stage, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/1$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal 'puzzle', summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/2$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal 'puzzle', summary[:kind]
@@ -99,7 +99,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level when next level is unplugged skips the level' do
     script = create(:script, name: 's1')
-    stage = create(:stage, script: script, position: 1)
+    stage = create(:stage, script: script, absolute_position: 1)
     script_level_first = create(:script_level, script: script, stage: stage, position: 1)
     create(:script_level, levels: [create(:unplugged)], script: script, stage: stage, position: 2)
     script_level_after = create(:script_level, script: script, stage: stage, position: 3)
@@ -109,15 +109,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level when next level is unplugged skips the entire unplugged stage' do
     script = create(:script, name: 's1')
-    first_stage = create(:stage, script: script, position: 1)
+    first_stage = create(:stage, script: script, absolute_position: 1)
     script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
 
-    unplugged_stage = create(:stage, script: script, position: 2)
+    unplugged_stage = create(:stage, script: script, absolute_position: 2)
     create(:script_level, levels: [create(:unplugged)], script: script, stage: unplugged_stage, position: 1, chapter: 2)
     create(:script_level, levels: [create(:match)], script: script, stage: unplugged_stage, position: 2, chapter: 3)
     create(:script_level, levels: [create(:match)], script: script, stage: unplugged_stage, position: 3, chapter: 4)
 
-    plugged_stage = create(:stage, script: script, position: 3)
+    plugged_stage = create(:stage, script: script, absolute_position: 3)
     script_level_after = create(:script_level, script: script, stage: plugged_stage, position: 1, chapter: 5)
 
     # make sure everything is in the order we want it to be
@@ -131,7 +131,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level on an unplugged level works' do
     script = create(:script, name: 's1')
-    stage = create(:stage, script: script, position: 1)
+    stage = create(:stage, script: script, absolute_position: 1)
     script_level_unplugged = create(:script_level, levels: [create(:unplugged)], script: script, stage: stage, position: 1, chapter: 1)
     script_level_after = create(:script_level, script: script, stage: stage, position: 2, chapter: 2)
 
@@ -179,11 +179,72 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
   end
 
+  test 'can view my last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can view other user last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    teacher = create :teacher
+    student = create :student
+
+    assert script_level.can_view_last_attempt(teacher, student)
+  end
+
+  test 'can view my last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can not view other user last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+    teacher = create :teacher
+
+    assert_not script_level.can_view_last_attempt(teacher, student)
+  end
+
   private
+
   def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
-    @plc_script.update(professional_learning_course: true)
+    @plc_script.update(professional_learning_course: 'My course name')
     @stage = create(:stage)
     @level1 = create(:maze)
     evaluation_multi = create(:evaluation_multi, name: 'Evaluation Multi')

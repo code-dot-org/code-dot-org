@@ -4,13 +4,11 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-Mēs vēlētos, lai iegūstat daudz aizraujošas iespējas, taču svarīgākais ir palielināt pieredzi skolēniem un skolotājiem, kam datorzinātne ir kas jauns. Lūdzu izmanto šo dokumentu tā, lai jūsu veiktās darbības būtu vērstas uz tiem, kuriem nav priekšzināšanu kodēšanā, programmēšanā un datorzinātnēs.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -66,15 +64,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## Kā apmācibas tiks novērtētas
 
-Datorzinātņu pedagogu komiteja novērtēs iesniegumus, ņemot vērā to kvalitāti un kvantitāti, tiks iekļauti arī citu pedagogu pārskata rezultāti.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Nodarbība tiks vērtēta augstāk, ja tā būs:**
+**Tutorials will be listed higher if they are:**
 
   * augstas kvalitātes
   * designed for beginners - among students AND teachers
@@ -87,7 +85,7 @@ Datorzinātņu pedagogu komiteja novērtēs iesniegumus, ņemot vērā to kvalit
   * promote learning by all demographic groups (esp. under-represented groups)
   * Ne tikai HTML un CSS web dizaina fokuss ( mūsu mērķis ir datorzinātne ne tikai HTML programmēšana)
 
-**Nodarbība tiks vērtēta zemāk ja tā būt:**
+**Tutorials will be listed lower if they are:**
 
   * zemas kvalitātes
   * mācīs augstākā līmenī (nebūs piemērota iesācējiem)
@@ -96,7 +94,7 @@ Datorzinātņu pedagogu komiteja novērtēs iesniegumus, ņemot vērā to kvalit
   * reinforce stereotypes that hinder participation by under-represented student groups
   * kalpo kā reklāma maksas apmācības platformai
 
-**Nodarbība netiks ieskaitīta, ja tā:**
+**Tutorials will NOT be listed if they:**
 
   * nav paredzēti (aptuveni) vienas stundas nodarbībai
   * nepieciešams reģistrēties 
@@ -107,9 +105,9 @@ Datorzinātņu pedagogu komiteja novērtēs iesniegumus, ņemot vērā to kvalit
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-Galu galā, "Programmēšanas stundas" galvenais mērķis ir iesaistīt skolēnus un skolotājus datorzinātnēs, un palīdzēt tiem parādīt, ka datorzinātnes ir pieejamas visiem un tās ir "vienkāršākas nekā tu domā". Daudzejādā ziņā, šo mērķi ir vieglāk sasniegt, dodot skolēniem un skolotājiem mazākas un vieglākas izvēles, ar mērķi, lai pirmreizējam lietotajam tiktu sniegtas augstākas rezultātus iespējas. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +115,7 @@ Galu galā, "Programmēšanas stundas" galvenais mērķis ir iesaistīt skolēnu
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**Kas tev būs nepieciešams:**
+**What you’ll need:**
 
   * Tavs vārds, logo (jpg, png, etc.)
   * Ekrānuzņēmuma URL vai HoC aktivitātes mārketinga attēls. Attēliem/ekrānuzņēmumiem vajadzētu būt tieši 446X335 izmērā. Ja nepieciešamais attēls netiks nodrošināts, mēs izmantosim savu ekrānuzņēmumu no jūsu apmācībām VAI mēs varam to neizmantot.
@@ -165,7 +163,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
@@ -204,7 +202,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -222,7 +220,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names.
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
@@ -241,27 +239,25 @@ Example tracking pixels for AppInventor:
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Veiciniet savu mācību laiku datorzinātnes un izglītības nedēļā un "Programmēšanas stundā"
 
-Mēs visiem lūdzam, lai tie lietotajiem aizsūtītu pašizveidotas vienas stundas pamācības. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Popularizē Programmēšanas skolu tradicionālajos un sociālajos medijos, e-pastu listēs u.c., izmanto haštagu (mirkļbirku) **#HourOfCode** (ar lielajiem burtiem H, O, C)
   * Vadi vietējo notikumu vai palūdz saviem darbiniekiem to darīt tuvējās skolās vai komūnās.
   * Iepazīstieties ar mūsu resursu materiāliem (drīzumā).
 
-[**Atgriezties sākumā**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Īpaša piezīme skolēniem ar īpašām vajadzībām
 
-Ja izveido pamācību, kas paredzēta tiem, kam ir redzes traucējumi, mēs labprāt vēlētos izcelt to skatītājiem ar ekrāna lasītājiem. Mēs vēl neesam saņēmuši šādu pamācību un labprāt iekļaut šādu iespēju šiem studentiem.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Atgriezties sākumā**](#top)
-
-<%= view :signup_button %>
+[**Back to the top**](#top)

@@ -1,6 +1,4 @@
 /** @file Redux actions and reducer for the Error Dialog Stack component */
-'use strict';
-
 var REPORT_ERROR = 'ErrorDialogStack/REPORT_ERROR';
 var DISMISS_ERROR = 'ErrorDialogStack/DISMISS_ERROR';
 

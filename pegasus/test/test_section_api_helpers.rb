@@ -12,7 +12,6 @@ def remove_dates(string)
 end
 
 class SectionApiHelperTest < Minitest::Test
-
   describe SectionHelpers do
     describe 'random code' do
       it 'does not generate the same code twice' do
@@ -96,15 +95,12 @@ class SectionApiHelperTest < Minitest::Test
         DashboardSection.create(params)
         assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
-
     end
   end
 
   describe DashboardStudent do
-
   end
 
   describe DashboardUserScript do
-
   end
 end

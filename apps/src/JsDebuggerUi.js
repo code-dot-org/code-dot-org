@@ -1,6 +1,4 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-'use strict';
-
 var CommandHistory = require('./CommandHistory');
 var constants = require('./constants');
 var DebugArea = require('./DebugArea');
@@ -9,6 +7,7 @@ var JSInterpreter = require('./JSInterpreter');
 var Observer = require('./Observer');
 var Slider = require('./slider');
 var utils = require('./utils');
+import {setStepSpeed} from './redux/runState';
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
@@ -31,9 +30,10 @@ var WATCH_VALUE_NOT_RUNNING = "undefined";
  * App Lab, Game Lab, etc.
  * @param {!function} runApp - callback for "launching" the app, which is used
  *        by the "Step In" button when the app isn't running.
+ * @param {!Store} reduxStore
  * @constructor
  */
-var JsDebuggerUi = module.exports = function (runApp) {
+var JsDebuggerUi = module.exports = function (runApp, reduxStore) {
   /**
    * Reference to currently attached JSInterpreter, null if unattached.
    * @private {JSInterpreter}
@@ -49,6 +49,12 @@ var JsDebuggerUi = module.exports = function (runApp) {
    * @private {function}
    */
   this.runApp_ = runApp;
+
+  /**
+   * Reference to application Redux store.
+   * @private {ReduxStore}
+   */
+  this.reduxStore_ = reduxStore;
 
   /**
    * Browseable history of commands entered into the debug console.
@@ -150,19 +156,9 @@ JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
       this.rootDiv_,
       document.getElementById('codeTextbox'));
 
-  // Initialize debug speed slider
-  var slider = this.rootDiv_.querySelector('#speed-slider');
-  if (slider) {
-    var sliderXOffset = 10,
-        sliderYOffset = 22,
-        sliderWidth = 130;
-    this.speedSlider_ = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
-        slider);
-
-    // Change default speed (eg Speed up levels that have lots of steps).
-    if (options.defaultStepSpeed) {
-      this.setStepSpeed(options.defaultStepSpeed);
-    }
+  // Change default speed (eg Speed up levels that have lots of steps).
+  if (options.defaultStepSpeed) {
+    this.setStepSpeed(options.defaultStepSpeed);
   }
 
   // Attach keydown handler for debug console input area
@@ -221,10 +217,7 @@ JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
  * @return {number|undefined}
  */
 JsDebuggerUi.prototype.getStepDelay = function () {
-  if (this.speedSlider_) {
-    return JsDebuggerUi.stepDelayFromStepSpeed(this.speedSlider_.getValue());
-  }
-  return undefined;
+  return JsDebuggerUi.stepDelayFromStepSpeed(this.reduxStore_.getState().runState.stepSpeed);
 };
 
 /**
@@ -232,9 +225,7 @@ JsDebuggerUi.prototype.getStepDelay = function () {
  * @param {!number} speed - in range 0..1
  */
 JsDebuggerUi.prototype.setStepSpeed = function (speed) {
-  if (this.speedSlider_) {
-    this.speedSlider_.setValue(speed);
-  }
+  this.reduxStore_.dispatch(setStepSpeed(speed));
 };
 
 /**

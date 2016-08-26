@@ -1,5 +1,4 @@
 class PdWorkshopSurvey
-
   def self.normalize(data)
     result = {}
 
@@ -74,6 +73,17 @@ class PdWorkshopSurvey
     end
 
     result
+  end
+
+  def self.process_(form)
+    # Save this form id in the relevant dashboard pd_enrollment row
+    id = form[:id]
+    data = JSON.load(form[:data])
+    enrollment_id = data['enrollment_id_i']
+    DASHBOARD_DB[:pd_enrollments].where(id: enrollment_id).update(completed_survey_id: id)
+
+    # We don't actually need to save any processed data with the form, so return an empty hash.
+    {}
   end
 
   def self.get_source_id(data)

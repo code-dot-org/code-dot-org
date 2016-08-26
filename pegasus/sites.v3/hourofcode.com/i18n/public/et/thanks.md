@@ -1,42 +1,42 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
+  title: <%= hoc_s(:title_signup_thanks) %>
+  layout: wide
+  nav: how_to_nav
 
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  social:
+    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "og:image:width": 1440
+    "og:image:height": 900
+    "og:url": "http://<%=request.host%>"
 
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
----
+    "twitter:card": player
+    "twitter:site": "@codeorg"
+    "twitter:url": "http://<%=request.host%>"
+    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Thanks for signing up to host an Hour of Code!
+# Täname, et ühinesite Hour of Code'iga!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Mida saaksite nüüd teha?
 
-## 1. Spread the word
+## 1. Jaga sõnum laiali
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Leia lähedal paiknev vabatahtlik, kes aitaks sind sinu üritusega.
 
 [Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 

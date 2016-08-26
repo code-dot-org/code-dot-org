@@ -30,7 +30,10 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The largest polygon has 19 sides.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_Challenge_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each polygon is incomplete, with one side fewer than it should have.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_Challenge_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The largest polygon has 19 sides.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_Challenge_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each polygon is incomplete, with one side fewer than it should have.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_Challenge_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "permitted_errors": "0",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This is a challenge level and we could go one of two ways. \r\n\r\n1)  Treat it like a regular level, but harder\r\n2) Not offer suggestions, just let them solve it any way they can (remove the ideal block count) and gather data later on whether or not people use the ideal techniques.\r\n\r\nSince we're looking at roughly 5% of users that make it to this point, I'm going with #2.  \r\nIdeal blocks was 15.",

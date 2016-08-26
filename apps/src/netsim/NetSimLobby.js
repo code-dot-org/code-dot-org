@@ -5,12 +5,10 @@
  * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
  *      lobby table.
  */
-'use strict';
-
 import $ from 'jquery';
 var utils = require('../utils');
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimAlert = require('./NetSimAlert');
@@ -36,12 +34,14 @@ var NetSimGlobals = require('./NetSimGlobals');
  * Generator and controller for lobby/connection controls.
  *
  * @param {jQuery} rootDiv
- * @param {NetSim} connection - The shard connection that this
+ * @param {NetSim} netsim - The shard connection that this
  *        lobby control will manipulate.
  * @param {Object} options
  * @param {DashboardUser} options.user
  * @param {string} options.levelKey
  * @param {string} options.sharedShardSeed
+ * @param {function} options.showRouterLogCallback
+ * @param {function} options.showTeacherLogCallback
  * @constructor
  * @augments NetSimPanel
  */
@@ -147,6 +147,18 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
    */
   this.disableEverythingKeys_ = {};
 
+  /**
+   * Function to call when we want to display the router log.
+   * @private {function}
+   */
+  this.showRouterLogCallback_ = options.showRouterLogCallback;
+
+  /**
+   * Function to call when we want to display the teacher view.
+   * @private {function}
+   */
+  this.showTeacherLogCallback_ = options.showTeacherLogCallback;
+
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
@@ -196,6 +208,8 @@ NetSimLobby.prototype.render = function () {
         {
           user: this.user_,
           shardID: this.shard_.id,
+          shardDisplayName: this.shardDisplayNameFromID_(this.shard_.id),
+          isUserInMultipleSections: this.shardChoices_.length > 1,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
@@ -206,7 +220,9 @@ NetSimLobby.prototype.render = function () {
           addRouterCallback: this.addRouterToLobby.bind(this),
           cancelButtonCallback: this.onCancelButtonClick_.bind(this),
           joinButtonCallback: this.onJoinButtonClick_.bind(this),
-          resetShardCallback: this.onResetShardButtonClick_.bind(this)
+          resetShardCallback: this.onResetShardButtonClick_.bind(this),
+          showRouterLogCallback: this.showRouterLogCallback_,
+          showTeacherLogCallback: this.showTeacherLogCallback_
         });
 
   }
@@ -590,4 +606,13 @@ NetSimLobby.prototype.getShareLink = function () {
   }
 
   return '';
+};
+
+/**
+ * @param {string} shardID - ID of a shard available to the current user
+ * @returns {string} display name of the associated shard
+ * @private
+ */
+NetSimLobby.prototype.shardDisplayNameFromID_ = function (shardID) {
+  return _.find(this.shardChoices_, s => s.shardID === shardID).displayName;
 };

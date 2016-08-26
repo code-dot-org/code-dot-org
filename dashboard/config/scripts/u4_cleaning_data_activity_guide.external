@@ -11,9 +11,9 @@ markdown <<MARKDOWN
 
 Before analyzing a dataset you'll want to familiarize yourself with the data. Computational tools like a spreadsheet make it easy to quickly get a sense of what your data looks like.
 
-<hr>
+---
 
-# Make a copy of the data
+## Make a copy of the data
 
 You will need to get your own copy of the data to clean. If your data is currently in a Google Sheet you'll need to "Make a copy" of the data, as shown below.
 
@@ -23,9 +23,9 @@ You will need to get your own copy of the data to clean. If your data is current
 
 *Making a copy of the dataset*
 
-<hr>
+---
 
-# Filtering Your Data
+## Filtering Your Data
 
 Your data may be too large to look at all at once. One way to address this problem is to **filter the data** so that you are only looking at some of the rows. Here's how you can do it in Google Sheets.
 
@@ -35,9 +35,9 @@ Your data may be too large to look at all at once. One way to address this probl
 
 *Filtering the dataset so that only rows in which a person slept for 7 hours are shown.*
 
-<hr>
+---
 
-# More Complex Filtering
+## More Complex Filtering
 
 Filters may include more than one value, just check all the values you'd like to include. You can even use a conditional statement as a filter. For example, you can make a filter that will only show values if the value is less than some number you specify. It's also possible to filter on multiple columns at the same time. More complex filters help refine how you look at your data.
 
@@ -47,9 +47,9 @@ Filters may include more than one value, just check all the values you'd like to
 
 *Filtering to include people who feel "Good" or "Great" and who slept 7 hours or more.*
 
-<hr>
+---
 
-# Sorting Data
+## Sorting Data
 
 **Sorting will reorder your rows of data by one of the columns**. This makes it easy to see the smallest or largest value in each column. You may also notice patterns in your data once it is in sorted order.
 
@@ -59,7 +59,7 @@ Filters may include more than one value, just check all the values you'd like to
 
 *Sorting the dataset by number of hours worked, both from smallest to largest and from largest to smallest*
 
-<hr>
+---
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

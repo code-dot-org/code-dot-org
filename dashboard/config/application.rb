@@ -21,7 +21,6 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
@@ -99,7 +98,6 @@ module Dashboard
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
     config.assets.paths << Rails.root.join('./public/blockly')
-    config.assets.paths << Rails.root.join('./public/code-studio')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
@@ -108,6 +106,7 @@ module Dashboard
       css/*.css
       assets/**/*
       angularProjects.js
+      browser-detector.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js
@@ -133,5 +132,9 @@ module Dashboard
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end
+
+    # TODO: Remove once this setting becomes default, after Rails 4.2
+    # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#error-handling-in-transaction-callbacks
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end

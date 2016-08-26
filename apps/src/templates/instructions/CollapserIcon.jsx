@@ -1,4 +1,3 @@
-'use strict';
 
 var React = require('react');
 var Radium = require('radium');
@@ -25,12 +24,14 @@ var styles = {
  * Simple icon that either points up or down, and supports onClick
  */
 var CollapserIcon = function (props) {
-  var iconClass = props.collapsed ? 'fa-chevron-circle-up' : 'fa-chevron-circle-down';
+  var iconClass = props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
 
   return (
-    <i style={styles.showHideButton}
-        onClick={props.onClick}
-        className={iconClass + " fa"}/>
+    <i
+      style={styles.showHideButton}
+      onClick={props.onClick}
+      className={iconClass + " fa"}
+    />
   );
 };
 

@@ -3,7 +3,7 @@ require 'test_helper'
 class ScriptTest < ActiveSupport::TestCase
   def setup
     @game = create(:game)
-    @script_file = File.join(self.class.fixture_path, "test_fixture.script")
+    @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
     @levels = (1..5).map { |n| create(:level, :name => "Level #{n}", :game => @game) }
 
@@ -52,8 +52,8 @@ class ScriptTest < ActiveSupport::TestCase
     # Set different level name in tested script
     parsed_script[4][:levels][0]['name'] = "Level 1"
 
-    # Set different 'trophies' and 'hidden' options from defaults in Script.setup
-    options = {name: File.basename(@script_file, ".script"), trophies: true, hidden: false}
+    # Set different 'hidden' option from defaults in Script.setup
+    options = {name: File.basename(@script_file, ".script"), hidden: false}
     script = Script.add_script(options, parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
@@ -65,15 +65,15 @@ class ScriptTest < ActiveSupport::TestCase
 
     # Reupload a script of the same filename / name, but lacking the second stage.
     stage = scripts[0].stages.last
-    script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
+    script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
     scripts,_ = Script.setup([script_file_empty_stage])
     assert_equal 1, scripts[0].stages.count
     assert_not Stage.exists?(stage.id)
   end
 
   test 'should remove empty stages, reordering stages' do
-    script_file_3_stages = File.join(self.class.fixture_path, "test_fixture_3_stages.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture_3_stages.script")
+    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
+    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
     scripts,_ = Script.setup([script_file_3_stages])
     assert_equal 3, scripts[0].stages.count
     first = scripts[0].stages[0]
@@ -82,9 +82,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Stage1', first.name
     assert_equal 'Stage2', second.name
     assert_equal 'Stage3', third.name
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    assert_equal 3, third.position
+    assert_equal 1, first.absolute_position
+    assert_equal 2, second.absolute_position
+    assert_equal 3, third.absolute_position
 
     # Reupload a script of the same filename / name, but lacking the middle stage.
     scripts,_ = Script.setup([script_file_middle_missing_reversed])
@@ -93,16 +93,16 @@ class ScriptTest < ActiveSupport::TestCase
 
     first = scripts[0].stages[0]
     second = scripts[0].stages[1]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
+    assert_equal 1, first.absolute_position
+    assert_equal 2, second.absolute_position
     assert_equal 'Stage3', first.name
     assert_equal 'Stage1', second.name
   end
 
   test 'should not create two scripts with same name' do
-    create(:script, :name => 'script')
+    create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
-      create(:script, :name => 'Script')
+      create(:script, name: 'Script', skip_name_format_validation: true)
     end
     assert_equal 'Validation failed: Name has already been taken', raise.message
   end
@@ -117,40 +117,40 @@ class ScriptTest < ActiveSupport::TestCase
 
     script.stages
 
-    assert_equal [1, 2, 3], script.stages.collect(&:position)
+    assert_equal [1, 2, 3], script.stages.collect(&:absolute_position)
   end
 
   test 'script_levels are in order' do
     script = create(:script)
 
-    s1 = create(:stage, script: script, position: 1)
+    s1 = create(:stage, script: script, absolute_position: 1)
     last = create(:script_level, script: script, stage: s1, chapter: 3)
     second = create(:script_level, script: script, stage: s1, chapter: 2)
     create(:script_level, script: script, stage: s1, chapter: 1)
     second.move_to_bottom
     last.move_to_bottom
 
-    s2 = create(:stage, script: script, position: 2)
+    s2 = create(:stage, script: script, absolute_position: 2)
     create(:script_level, script: script, stage: s2, chapter: 4)
     create(:script_level, script: script, stage: s2, chapter: 5)
 
-    s3 = create(:stage, script: script, position: 3)
+    s3 = create(:stage, script: script, absolute_position: 3)
     last = create(:script_level, script: script, stage: s3, chapter: 7)
     create(:script_level, script: script, stage: s3, chapter: 6)
     last.move_to_bottom
 
-    assert_equal [1, 2, 3], script.stages.collect(&:position)
+    assert_equal [1, 2, 3], script.stages.collect(&:absolute_position)
 
-    assert_equal [1, 1, 1, 2, 2, 3, 3], script.script_levels.collect(&:stage).collect(&:position)
+    assert_equal [1, 1, 1, 2, 2, 3, 3], script.script_levels.collect(&:stage).collect(&:absolute_position)
     assert_equal [1, 2, 3, 1, 2, 1, 2], script.script_levels.collect(&:position)
   end
 
   test 'calling next_level on last script_level points to next stage' do
     script = create(:script, name: 'test2')
-    first_stage = create(:stage, script: script, position: 1)
+    first_stage = create(:stage, script: script, absolute_position: 1)
 
     first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
-    second_stage = create(:stage, script: script, position: 2)
+    second_stage = create(:stage, script: script, absolute_position: 2)
     second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
     create(:script_level, script: script, stage: second_stage, position: 2)
 
@@ -164,7 +164,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     promoted_level = second.level
-    script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
+    script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
 
     scripts,_ = Script.setup([script_file_remove_level])
     new_first_script_level = ScriptLevel.joins(:levels).where(script: scripts[0], levels: {id: promoted_level}).first
@@ -191,106 +191,88 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'unplugged in script' do
-    @script_file = File.join(self.class.fixture_path, 'test_unplugged.script')
+    @script_file = File.join(self.class.fixture_path, 'test-unplugged.script')
     scripts, _ = Script.setup([@script_file])
     assert_equal 'Unplugged', scripts[0].script_levels[1].level['type']
   end
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-                     "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
+      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
-                               script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
-  test 'forbid applab levels in public scripts' do
-    assert_raises_matching /Applab levels can only be added to scripts that are hidden or require login/ do
+  test 'forbid applab and gamelab levels in public scripts' do
+    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
-          {name: 'test script', hidden: false},
-          [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+        {name: 'test script', hidden: false},
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
       )
     end
-  end
 
-  test 'allow applab levels in hidden scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab levels in login_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, login_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab levels in student_of_admin_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, student_of_admin_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab levels in admin_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, admin_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'forbid gamelab levels in public scripts' do
-    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
+    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
-          {name: 'test script', hidden: false},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
-  test 'forbid gamelab levels in hidden scripts' do
-    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
-      Script.add_script(
-          {name: 'test script', hidden: true},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
-  test 'forbid gamelab levels in login_required scripts' do
-    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
-      Script.add_script(
-          {name: 'test script', hidden: false, login_required: true},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
-  test 'allow gamelab levels in student_of_admin_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, student_of_admin_required: true},
+        {name: 'test script', hidden: false},
         [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      )
+    end
+  end
+
+  test 'allow applab and gamelab levels in hidden scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
-  test 'allow gamelab levels in admin_required scripts' do
+  test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
-        {name: 'test script', hidden: false, admin_required: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in student_of_admin_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in admin_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist
-      course1 course2 course3 course4 frozen hourofcode algebra
-      cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6
-      starwarsblocks}.
-      map{|s| Script.find_by_name(s)}
+    visible_scripts = %w{
+      20-hour flappy playlab infinity artist course1 course2 course3 course4
+      frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
+      cspunit6 starwarsblocks
+    }.map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
       assert !s.hidden?, "#{s.name} is hidden when it should not be"
@@ -303,9 +285,9 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_level_by_stage_and_position returns nil when not found' do
+  test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
     artist = Script.find_by_name('artist')
-    assert artist.get_script_level_by_stage_and_position(11, 1).nil?
+    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'gets script cache from memcached (or fake memcached)' do
@@ -362,7 +344,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should summarize script' do
-    script = create(:script, name: 'Single Stage Script')
+    script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
@@ -370,13 +352,15 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should generate PLC objects' do
-    script_file = File.join(self.class.fixture_path, 'test_plc.script')
+    script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     script = scripts.first
     script.save! # Need to trigger an update because i18n strings weren't loaded
-    assert script.professional_learning_course
+    assert script.professional_learning_course?
+    assert_equal 'Test plc course', script.professional_learning_course
+    assert_equal 42, script.peer_reviews_to_complete
 
     unit = script.plc_course_unit
     assert_equal 'PLC Test', unit.unit_name
@@ -395,9 +379,101 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'expect error on bad module types' do
-    script_file = File.join(self.class.fixture_path, 'test_bad_plc_module.script')
+    script_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
     assert_raises ActiveRecord::RecordInvalid do
       Script.setup([script_file])
+    end
+  end
+
+  test 'script name format validation' do
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'abc 123'
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'TestScript1'
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'a_b_c'
+    end
+  end
+
+  test 'can edit existing script with invalid name' do
+    script = create :script, name: 'Invalid Name', skip_name_format_validation: true
+    script.update!(login_required: true)
+  end
+
+  test 'names stages appropriately when script has lockable stages' do
+    create :level, name: 'LockableAssessment1'
+    create :level, name: 'NonLockableAssessment1'
+    create :level, name: 'NonLockableAssessment2'
+    create :level, name: 'NonLockableAssessment3'
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'NonLockable1'
+      assessment 'NonLockableAssessment1';
+      stage 'NonLockable2'
+      assessment 'NonLockableAssessment2';
+      stage 'NonLockable3'
+      assessment 'NonLockableAssessment3';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+
+    # Everything has Stage <number> when nothing is lockable
+    assert /^Stage 1:/.match(script.stages[0].localized_title)
+    assert /^Stage 2:/.match(script.stages[1].localized_title)
+    assert /^Stage 3:/.match(script.stages[2].localized_title)
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1', lockable: true
+      assessment 'LockableAssessment1';
+      stage 'NonLockable1'
+      assessment 'NonLockableAssessment1';
+      stage 'NonLockable2'
+      assessment 'NonLockableAssessment2';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+
+    # When first stage is lockable, it has no stage number, and the next stage starts at 1
+    assert /^Stage/.match(script.stages[0].localized_title).nil?
+    assert /^Stage 1:/.match(script.stages[1].localized_title)
+    assert /^Stage 2:/.match(script.stages[2].localized_title)
+
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'NonLockable1'
+      assessment 'NonLockableAssessment1';
+      stage 'Lockable1', lockable: true
+      assessment 'LockableAssessment1';
+      stage 'NonLockable2'
+      assessment 'NonLockableAssessment2';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    script = Script.add_script({name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+
+    # When only second stage is lockable, we count non-lockable stages appropriately
+    assert /^Stage 1:/.match(script.stages[0].localized_title)
+    assert /^Stage/.match(script.stages[1].localized_title).nil?
+    assert /^Stage 2:/.match(script.stages[2].localized_title)
+  end
+
+  test 'Script DSL fails when creating invalid lockable stages' do
+    create :level, name: 'Level1'
+    create :level, name: 'LockableAssessment1'
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1', lockable: true
+      level 'Level1';
+      assessment 'LockableAssessment1';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+
+    assert_raises do
+      Script.add_script({name: 'test_script'}, script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
     end
   end
 end

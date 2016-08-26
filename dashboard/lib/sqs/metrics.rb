@@ -1,5 +1,4 @@
 module SQS
-
   # A collection of Counters for the queue processor.
   class Metrics
     attr_accessor :successes, :failures
@@ -23,12 +22,10 @@ module SQS
     def to_s
       as_json.to_json
     end
-
   end
 
   # A thread safe counter.
   class Counter
-
     def initialize
       @lock = Mutex.new
       reset
@@ -60,5 +57,4 @@ module SQS
       value
     end
   end
-
 end

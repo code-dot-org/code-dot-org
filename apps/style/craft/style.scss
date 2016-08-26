@@ -419,6 +419,11 @@ $height-to-width: 434 / 477;
     font-size: 30px;
   }
 
+  #getting-started-header {
+    margin-left: 125px;
+    margin-bottom: 25px;
+  }
+
   #select-house-text {
     line-height: 50px;
     font-size: 22px;
@@ -929,6 +934,8 @@ $height-to-width: 434 / 477;
 }
 
 // Overrides style in application.css.scss from dashboard
-.instructions-markdown p {
-  color: $white;
+.csf-top-instructions, .instructions-markdown {
+  p {
+    color: $white;
+  }
 }

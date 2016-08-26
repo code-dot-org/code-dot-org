@@ -12,7 +12,8 @@ require 'minitest/autorun'
 class CSVTest < Minitest::Test
   def test_cdo_donors_csv
     donors_csv = CSV.read('./data/cdo-donors.csv')
-    max_donor_weight = donors_csv.last[4]
+    column = donors_csv.first.find_index('weight_f')
+    max_donor_weight = donors_csv.last[column]
     assert_equal max_donor_weight.to_f, 1.0
   end
 

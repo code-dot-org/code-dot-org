@@ -1,5 +1,4 @@
 class VolunteerTranslator
-
   def self.normalize(data)
     result = {}
 
@@ -16,7 +15,7 @@ class VolunteerTranslator
     result
   end
 
-  def self.languages()
+  def self.languages
     [
       'Afrikaans',
       'Albanian',
@@ -74,7 +73,7 @@ class VolunteerTranslator
     ]
   end
 
-  def self.receipt()
+  def self.receipt
     'volunteer_translator_notice'
   end
 
@@ -83,5 +82,4 @@ class VolunteerTranslator
     data['language_ss'].concat(data['language_other_ss'] || []).sort.uniq
     data
   end
-
 end

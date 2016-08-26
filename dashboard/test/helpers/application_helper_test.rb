@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ApplicationHelperTest < ActionView::TestCase
-
   # Stub current_user
   def current_user
   end
@@ -130,9 +129,9 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '37', cookies[:lines]
     assert_nil session[:lines]
 
-    script = create :script, name: 'progress_test'
+    script = create :script, name: 'progress-test'
     sl = create(:script_level, script: script)
-    data = {'progress_test' => {sl.level_id => 100}}
+    data = {'progress-test' => {sl.level_id => 100}}
     session[:progress] = data
     assert_equal 100, client_state.level_progress(sl)
     assert_equal data.to_json, cookies[:progress]
@@ -181,10 +180,10 @@ class ApplicationHelperTest < ActionView::TestCase
     sl = create :script_level
     cookies[:progress] = '&*%$% mangled #$#$$'
     assert_equal 0, client_state.level_progress(sl),
-                 'Invalid cookie should show no progress'
+      'Invalid cookie should show no progress'
     client_state.set_level_progress(sl, 20)
     assert_equal 20, client_state.level_progress(sl),
-                 'Should be able to overwrite invalid cookie state'
+      'Should be able to overwrite invalid cookie state'
   end
 
   test 'meta_image_url for level' do
@@ -252,6 +251,7 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   private
+
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
   end

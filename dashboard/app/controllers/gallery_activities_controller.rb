@@ -1,5 +1,5 @@
 class GalleryActivitiesController < ApplicationController
-  before_filter :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: :index
   load_and_authorize_resource
   check_authorization
 
@@ -37,7 +37,7 @@ class GalleryActivitiesController < ApplicationController
   # POST /gallery_activities
   # POST /gallery_activities.json
   def create
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       @gallery_activity = GalleryActivity.where(gallery_activity_params).first_or_initialize
       @gallery_activity.autosaved = false
       authorize! :save_to_gallery, @gallery_activity.activity

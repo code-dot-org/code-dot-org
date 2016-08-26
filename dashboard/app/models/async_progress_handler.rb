@@ -2,11 +2,10 @@
 # include activities, user_level, and user_proficiencies updates.
 
 class AsyncProgressHandler
-
   # Returns a thread-local SQS queue for handle asynchronous user progress operations
   # (Activity, UserLevel, and UserProficiency updates.) The queue is
   # thread-local because the SQS client is not thread-safe.
-  def AsyncProgressHandler.progress_queue
+  def self.progress_queue
     Thread.current['progress_queue'] ||=
       SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.activity_queue_url)
   end
@@ -26,5 +25,4 @@ class AsyncProgressHandler
       end
     end
   end
-
 end

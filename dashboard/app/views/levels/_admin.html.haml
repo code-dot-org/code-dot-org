@@ -1,8 +1,8 @@
 - content_for(:head) do
   = javascript_include_tag 'js/levelbuilder'
 
-- if current_user && current_user.admin?
-  = render layout: 'shared/admin' do
+- if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+  = render layout: 'shared/extra_links' do
     %strong= @level.name
     %ul
       %li= link_to level_path(@level), @level
@@ -41,6 +41,7 @@
       - @level.script_levels.each do |script_level|
         %li
           = link_to script_level.script.name, script_level.script
+          = "(stage ID: #{script_level.stage_id})"
           as
           = link_to build_script_level_path(script_level), build_script_level_path(script_level)
     %br/

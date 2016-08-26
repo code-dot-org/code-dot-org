@@ -44,7 +44,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       // customValidator: function () {
-      //   return Maze.bee.nectars_.length === 2 && Maze.bee.honey_ === 2;
+      //   return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 2;
       // },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

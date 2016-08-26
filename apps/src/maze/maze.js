@@ -21,12 +21,10 @@
  * @fileoverview JavaScript for Blockly's Maze application.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -39,19 +37,18 @@ var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
-var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
-var Bee = require('./bee');
-var Cell = require('./cell');
-var BeeCell = require('./beeCell');
-var WordSearch = require('./wordsearch');
-var scrat = require('./scrat');
 
-var DirtDrawer = require('./dirtDrawer');
-var BeeItemDrawer = require('./beeItemDrawer');
+import Bee from './bee';
+import Collector from './collector';
+import WordSearch from './wordsearch';
+import Scrat from './scrat';
+import Farmer from './farmer';
+import Harvester from './harvester';
+import Planter from './planter';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -97,9 +94,9 @@ var loadLevel = function () {
   // and only exists for backwards compatibility for not-yet-updated
   // levels.
   if (level.serializedMaze) {
-    Maze.map = MazeMap.deserialize(level.serializedMaze, Maze.cellClass);
+    Maze.map = MazeMap.deserialize(level.serializedMaze, Maze.subtype.getCellClass());
   } else {
-    Maze.map = MazeMap.parseFromOldValues(level.map, level.initialDirt, Maze.cellClass);
+    Maze.map = MazeMap.parseFromOldValues(level.map, level.initialDirt, Maze.subtype.getCellClass());
   }
 
   Maze.startDirection = level.startDirection;
@@ -150,32 +147,6 @@ var initWallMap = function () {
  */
 var timeoutList = require('../timeoutList');
 
-// Map each possible shape to a sprite.
-// Input: Binary string representing Centre/North/West/South/East squares.
-// Output: [x, y] coordinates of each tile's sprite in tiles.png.
-var TILE_SHAPES = {
-  '10010': [4, 0], // Dead ends
-  '10001': [3, 3],
-  '11000': [0, 1],
-  '10100': [0, 2],
-  '11010': [4, 1], // Vertical
-  '10101': [3, 2], // Horizontal
-  '10110': [0, 0], // Elbows
-  '10011': [2, 0],
-  '11001': [4, 2],
-  '11100': [2, 3],
-  '11110': [1, 1], // Junctions
-  '10111': [1, 0],
-  '11011': [2, 1],
-  '11101': [1, 2],
-  '11111': [2, 2], // Cross
-  'null0': [4, 3], // Empty
-  'null1': [3, 0],
-  'null2': [3, 1],
-  'null3': [0, 3],
-  'null4': [1, 3],
-};
-
 function drawMap() {
   var svg = document.getElementById('svgMaze');
   var x, y, k, tile;
@@ -208,7 +179,7 @@ function drawMap() {
     svg.appendChild(tile);
   }
 
-  drawMapTiles(svg);
+  Maze.subtype.drawMapTiles(svg, Maze.wallMap);
 
   // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
   var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
@@ -363,86 +334,6 @@ function drawMap() {
   }
 }
 
-// Returns true if the tile at x,y is either a wall or out of bounds
-function isWallOrOutOfBounds(col, row) {
-  return Maze.map.getTile(row, col) === SquareType.WALL ||
-      Maze.map.getTile(row, col) === undefined;
-}
-
-// Return a value of '0' if the specified square is wall or out of bounds '1'
-// otherwise (empty, obstacle, start, finish).
-function isOnPathStr(x, y) {
-  return isWallOrOutOfBounds(x, y) ? "0" : "1";
-}
-
-// Draw the tiles making up the maze map.
-function drawMapTiles(svg) {
-  if (Maze.wordSearch) {
-    return Maze.wordSearch.drawMapTiles(svg);
-  } else if (mazeUtils.isScratSkin(skin.id)) {
-    return scrat.drawMapTiles(svg);
-  }
-
-  // Compute and draw the tile for each square.
-  var tileId = 0;
-  var tile, origTile;
-  for (var y = 0; y < Maze.map.ROWS; y++) {
-    for (var x = 0; x < Maze.map.COLS; x++) {
-      // Compute the tile index.
-      tile = isOnPathStr(x, y) +
-        isOnPathStr(x, y - 1) + // North.
-        isOnPathStr(x + 1, y) + // West.
-        isOnPathStr(x, y + 1) + // South.
-        isOnPathStr(x - 1, y); // East.
-
-      var adjacentToPath = (tile !== '00000');
-
-      // Draw the tile.
-      if (!TILE_SHAPES[tile]) {
-        // We have an empty square. Handle it differently based on skin.
-        if (mazeUtils.isBeeSkin(skin.id)) {
-          // begin with three trees
-          var tileChoices = ['null3', 'null4', 'null0'];
-          var noTree = 'null1';
-          // want it to be more likely to have a tree when adjacent to path
-          var n = adjacentToPath ? tileChoices.length * 2 : tileChoices.length * 6;
-          for (var i = 0; i < n; i++) {
-            tileChoices.push(noTree);
-          }
-
-          tile = _.sample(tileChoices);
-        } else {
-          // Empty square.  Use null0 for large areas, with null1-4 for borders.
-          if (!adjacentToPath && Math.random() > 0.3) {
-            Maze.wallMap[y][x] = 0;
-            tile = 'null0';
-          } else {
-            var wallIdx = Math.floor(1 + Math.random() * 4);
-            Maze.wallMap[y][x] = wallIdx;
-            tile = 'null' + wallIdx;
-          }
-
-          // For the first 3 levels in maze, only show the null0 image.
-          if (level.id === '2_1' || level.id === '2_2' || level.id === '2_3') {
-            Maze.wallMap[y][x] = 0;
-            tile = 'null0';
-          }
-        }
-      }
-
-      Maze.drawTile(svg, TILE_SHAPES[tile], y, x, tileId);
-
-      // Draw checkerboard for bee.
-      if (Maze.gridItemDrawer instanceof BeeItemDrawer && (x + y) % 2 === 0) {
-        var isPath = !/null/.test(tile);
-        Maze.gridItemDrawer.addCheckerboardTile(y, x, isPath);
-      }
-
-      tileId++;
-    }
-  }
-}
-
 /**
  * Draw the given tile at row, col
  */
@@ -518,16 +409,23 @@ Maze.init = function (config) {
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
-    Maze.bee = new Bee(Maze, studioApp, config);
-    // Override default stepSpeed
-    Maze.scale.stepSpeed = 2;
-  } else if (config.skinId === 'letters') {
-    Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-  }
-  if (mazeUtils.isBeeSkin(config.skinId)) {
-    Maze.cellClass = BeeCell;
+    Maze.subtype = new Bee(Maze, studioApp, config);
+  } else if (mazeUtils.isCollectorSkin(config.skinId)) {
+    Maze.subtype = new Collector(Maze, studioApp, config);
+  } else if (mazeUtils.isWordSearchSkin(config.skinId)) {
+    Maze.subtype = new WordSearch(Maze, studioApp, config);
+  } else if (mazeUtils.isScratSkin(config.skinId)) {
+    Maze.subtype = new Scrat(Maze, studioApp, config);
+  } else if (mazeUtils.isHarvesterSkin(config.skinId)) {
+    Maze.subtype = new Harvester(Maze, studioApp, config);
+  } else if (mazeUtils.isPlanterSkin(config.skinId)) {
+    Maze.subtype = new Planter(Maze, studioApp, config);
   } else {
-    Maze.cellClass = Cell;
+    Maze.subtype = new Farmer(Maze, studioApp, config);
+  }
+
+  if (Maze.subtype.overrideStepSpeed) {
+    Maze.scale.stepSpeed = Maze.subtype.overrideStepSpeed;
   }
 
   loadLevel();
@@ -555,6 +453,9 @@ Maze.init = function (config) {
     if (skin.dirtSound) {
       studioApp.loadAudio(skin.fillSound, 'fill');
       studioApp.loadAudio(skin.digSound, 'dig');
+    }
+    if (skin.harvestSound) {
+      studioApp.loadAudio(skin.harvestSound, 'harvest');
     }
     if (skin.beeSound) {
       studioApp.loadAudio(skin.nectarSound, 'nectar');
@@ -596,11 +497,7 @@ Maze.init = function (config) {
 
     Maze.map.resetDirt();
 
-    if (mazeUtils.isBeeSkin(config.skinId)) {
-      Maze.gridItemDrawer = new BeeItemDrawer(Maze.map, skin, Maze.bee);
-    } else {
-      Maze.gridItemDrawer = new DirtDrawer(Maze.map, skin.dirt);
-    }
+    Maze.gridItemDrawer = Maze.subtype.createGridItemDrawer();
 
     drawMap();
 
@@ -633,8 +530,8 @@ Maze.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={visualizationColumn}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -750,10 +647,7 @@ var updatePegmanAnimation = function (options) {
  * @param {boolean} first True if an opening animation is to be played.
  */
 Maze.reset = function (first) {
-  if (Maze.bee) {
-    // Bee needs to reset itself and still run studioApp.reset logic
-    Maze.bee.reset();
-  }
+  Maze.subtype.reset();
 
   var i;
   // Kill all tasks.
@@ -849,8 +743,8 @@ Maze.reset = function (first) {
     }
   }
 
-  if (Maze.wordSearch) {
-    Maze.wordSearch.resetTiles();
+  if (Maze.subtype.resetTiles) {
+    Maze.subtype.resetTiles();
   } else {
     resetTiles();
   }
@@ -939,14 +833,15 @@ var displayFeedback = function () {
     response: Maze.response,
     level: level
   };
-  // If there was an app-specific error (currently only possible for Bee),
+  // If there was an app-specific error
   // add it to the options passed to studioApp.displayFeedback().
-  if (Maze.testResults === TestResults.APP_SPECIFIC_FAIL &&
-      Maze.bee) {
-    var message = Maze.bee.getMessage(Maze.executionInfo.terminationValue());
-    if (message) {
-      options.message = message;
-    }
+  let message;
+  if (Maze.subtype.hasMessage(Maze.testResults)) {
+    message = Maze.subtype.getMessage(Maze.executionInfo.terminationValue());
+  }
+
+  if (message) {
+    options.message = message;
   }
   studioApp.displayFeedback(options);
 };
@@ -1018,7 +913,7 @@ Maze.execute = function (stepMode) {
 
     if (runCode) {
       if (Maze.map.hasMultiplePossibleGrids()) {
-        // If this level is a Bee level with multiple possible grids, we
+        // If this level is a level with multiple possible grids, we
         // need to run against all grids and sort them into successes
         // and failures
         var successes = [];
@@ -1026,13 +921,10 @@ Maze.execute = function (stepMode) {
 
         Maze.map.staticGrids.forEach(function (grid, i) {
           Maze.map.useGridWithId(i);
-          if (Maze.bee) {
-            Maze.bee.reset();
-          }
+          Maze.subtype.reset();
 
           // Run trial
           codegen.evalWith(code, {
-            StudioApp: studioApp,
             Maze: api,
             executionInfo: Maze.executionInfo
           });
@@ -1056,15 +948,15 @@ Maze.execute = function (stepMode) {
         // failures, randomly select one of the failing grids to be the
         // "real" state of the map. If all grids are successful,
         // randomly select any one of them.
-        var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
+        var i = (failures.length > 0) ?
+            utils.randomValue(failures) :
+            utils.randomValue(successes);
+
         Maze.map.useGridWithId(i);
-        if (Maze.bee) {
-          Maze.bee.reset();
-        }
+        Maze.subtype.reset();
       }
 
       codegen.evalWith(code, {
-        StudioApp: studioApp,
         Maze: api,
         executionInfo: Maze.executionInfo
       });
@@ -1096,10 +988,8 @@ Maze.execute = function (stepMode) {
       default:
         // App-specific failure.
         Maze.result = ResultType.ERROR;
-        if (Maze.bee) {
-          Maze.testResults = Maze.bee.getTestResults(
-            Maze.executionInfo.terminationValue());
-        }
+        Maze.testResults = Maze.subtype.getTestResults(
+          Maze.executionInfo.terminationValue());
         break;
     }
   } catch (e) {
@@ -1344,10 +1234,22 @@ function animateAction(action, spotlightBlocks, timePerStep) {
       Maze.scheduleDig();
       break;
     case 'nectar':
-      Maze.bee.animateGetNectar();
+      Maze.subtype.animateGetNectar();
       break;
     case 'honey':
-      Maze.bee.animateMakeHoney();
+      Maze.subtype.animateMakeHoney();
+      break;
+    case 'get_corn':
+      Maze.subtype.animateGetCorn();
+      break;
+    case 'get_pumpkin':
+      Maze.subtype.animateGetPumpkin();
+      break;
+    case 'get_bean':
+      Maze.subtype.animateGetBean();
+      break;
+    case 'plant':
+      Maze.subtype.animatePlant();
       break;
     default:
       // action[0] is null if generated by studioApp.checkTimeout().
@@ -1423,8 +1325,8 @@ function scheduleMove(endX, endY, timeForAnimation) {
       movePegmanIcon.setAttribute('visibility', 'hidden');
       pegmanIcon.setAttribute('visibility', 'visible');
       Maze.displayPegman(endX, endY, tiles.directionToFrame(direction));
-      if (Maze.wordSearch) {
-        Maze.wordSearch.markTileVisited(endY, endX, true);
+      if (Maze.subtype.isWordSearch()) {
+        Maze.subtype.markTileVisited(endY, endX, true);
       }
     }, timePerFrame * numFrames);
   } else {
@@ -1681,8 +1583,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin(skin.id)) {
-    scrat.scheduleDance(victoryDance, timeAlloted, skin);
+  if (Maze.subtype.scheduleDance) {
+    Maze.subtype.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 
@@ -1724,7 +1626,7 @@ function scheduleDance(victoryDance, timeAlloted) {
       setTileTransparent();
     }
 
-    if (Maze.wordSearch) {
+    if (Maze.subtype.isWordSearch()) {
       setPegmanTransparent();
     }
   }, danceSpeed * 5);
@@ -1838,16 +1740,17 @@ function atFinish() {
       (Maze.pegmanX === Maze.finish_.x && Maze.pegmanY === Maze.finish_.y);
 }
 
-function isDirtCorrect() {
-  for (var row = 0; row < Maze.map.ROWS; row++) {
-    for (var col = 0; col < Maze.map.COLS; col++) {
-      if (Maze.map.isDirt(row, col) && Maze.map.getValue(row, col) !== 0) {
-        return false;
-      }
-    }
+/**
+ * Certain Maze types - namely, WordSearch, Collector, and any Maze with
+ * Quantum maps, don't want to check for success until the user's code
+ * has finished running completely.
+ */
+Maze.shouldCheckSuccessOnMove = function () {
+  if (Maze.map.hasMultiplePossibleGrids()) {
+    return false;
   }
-  return true;
-}
+  return Maze.subtype.shouldCheckSuccessOnMove();
+};
 
 /**
  * Check whether all goals have been accomplished
@@ -1856,12 +1759,8 @@ Maze.checkSuccess = function () {
   var finished;
   if (!atFinish()) {
     finished = false;
-  } else if (Maze.bee) {
-    finished = Maze.bee.finished();
-  } else if (Maze.wordSearch) {
-    finished = Maze.wordSearch.finished();
   } else {
-    finished = isDirtCorrect();
+    finished = Maze.subtype.finished();
   }
 
   if (finished) {
@@ -1883,7 +1782,5 @@ Maze.onExecutionFinish = function () {
     Maze.checkSuccess();
   }
 
-  if (Maze.bee) {
-    Maze.bee.onExecutionFinish();
-  }
+  Maze.subtype.onExecutionFinish();
 };

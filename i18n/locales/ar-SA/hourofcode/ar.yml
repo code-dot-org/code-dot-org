@@ -8,15 +8,18 @@ ar:
   campaign_date_start_long: 7 كانون الأول/ديسمبر
   campaign_date_short: 7-13 كانون الأول/ديسمبر
   campaign_date_full: 7-13 كانون الأول/ديسمبر
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: انضم إلى أكبر حدث تعليمي في التاريخ، 7-13 ديسمبر، 2015
   front_intro_default: '"ساعة البرمجة" هي حمله عالمية تسعى للوصول إلى عشرات الملايين من الطلاب ، في أكثر من 180 دولة. ويمكن لأي شخص وفي أي مكان تنظيم حدث "ساعة البرمجة". تتوفر دروس مدتها ساعة واحدة بأكثر من 40 لغة. <strong> لمن تتراوح أعمارهم ما بين 4 و104.</strong> ولا يشترط وجود خبرة في البرمجة'
   front_watch_video: شاهد الفيديو الجديد
   front_watch_regular_video: مشاهدة الفيديو
   front_volunteers: Technical volunteers wanted
-  header_menu_resources: الموارد
+  front_start_learning: Start learning
+  header_menu_resources: مصادر
   header_menu_faq: الأسئلة المتداولة
   header_menu_prizes: الجوائز
-  header_menu_how_to: How-To
+  header_menu_how_to: كيف
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
@@ -172,9 +175,11 @@ ar:
   prizes_nav_brilliant: $2,000 Brilliant Labs project
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
+  prizes_header: جوائز لكل معلم
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: 'سوف يتلقى <i>كل</i> منظم <b>10 دولارات لاستخدامها فى Amazon.com، أي تيونز أو متجر Windows</b> كهدية شكر!'
+  prizes_more: More exciting prizes
   whats_next_header: ما هي الخطوة التالية؟
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: |-
@@ -196,23 +201,23 @@ ar:
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: انضم إلينا
   front_what_is_hoc: ما هي ساعة البرمجة؟
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
-  front_join_us_volunteer_header: Volunteers for the Hour of Code
+  front_join_us_header: أي شخص يمكنه تعلم أساسيات البرمجة، والاستمتاع بتعلمها!
+  front_join_us_volunteer_header: متطوعي ساعة البرمجة
   front_join_us_teacher: هل أنت معلم؟
   front_join_us_inspire: الهام الطلاب مع
   front_join_us_inspire_link: an Hour of Code in the classroom.
   front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
-  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
+  front_join_us_teacher_volunteer: البحث عن متطوعين في نفس نطاقك الجغرافي والذين يمكنهم زيارة فصلك الدراسي أو إلهام طلابك عن بعد (عن طريق الإنترنت)
   front_join_us_parent: هل انت أب أو أم؟
   front_join_us_ask_link: اسأل المدرسة الموجودة بمنطقتك
   front_join_us_ask: لاستضافة ساعة من البرمجة.
   front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: هل تحب علوم الحاسوب؟
-  front_join_us_cs_volunteer: Passionate about computer science education?
+  front_join_us_cs_volunteer: متحمساً لتدريس علوم الحاسب؟
   front_join_us_spread: أنشر كلمة.
   front_join_us_spread_word: Spread the word in your community
   front_join_us_spread_word_work: Spread the word in your community or workplace
-  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
+  front_join_us_sign_up_volunteer: قم بالتسجيل للتطوع في أحد الفصول القريبة منك جغرافياً أو من خلال محادثة فيديو
   front_join_us_organize: أو نظم حدث ساعة من البرمجة بنفسك.
   front_join_us_how_to_run: إليك كيفية تنظيم ساعة من البرمجة
   front_join_us_help_promote: 'ساعد على الترويج لساعة من  البرمجة'
@@ -226,7 +231,7 @@ ar:
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
   front_join_us_n_students_served: '# served'
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
+  signup_header: 'قم بتنظيم ساعة برمجة في الفترة %{campaign_date}، وسَجِّلها هنا.'
   signup_name_label: اسمُكَ
   signup_email_label: بريدك الإلكتروني
   signup_organization_name_label: اسم المدرسة أو المنظمة
@@ -239,12 +244,12 @@ ar:
   signup_send_posters_address_label: عنوان المدرسة أو المنظمة
   signup_whole_school_flag_label: هذا الحدث لمدرسة كاملة
   signup_your_event: سجل وشارك الحدث الخاص بك
-  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_match_volunteer: أرجو مساعدتي في العثور على مهندس برمجيات في نفس نطاقي الجغرافي ليساعدني في إلهام طلابي
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: اسمُك
   signup_email_placeholder: بريدك الإلكتروني
   signup_organization_name_placeholder: على سبيل المثال ، مدرسة لينكولن الثانوية
-  signup_event_location_placeholder: "الرمز البريدي والبلد أو العنوان الكامل.\r\n(سوف نستعمل هذا العنوان لوضع دبوس على الخريطة)"
+  signup_event_location_placeholder: "الرمز البريدي والبلد أو العنوان الكامل.\\r\n(سوف نستعمل هذا العنوان لوضع دبوس على الخريطة)"
   signup_special_event_details_placeholder: صِف ما يجعل هذا الحدث مميزاً
   signup_send_posters_address_placeholder: لن تتم مشاركة هذا العنوان على خارطتنا
   signup_event_type_in_school: في مدرسة
@@ -253,11 +258,12 @@ ar:
   signup_submit_error_message: حدث خطأ ما. رجاءً تأكد أنه قد تم ملء كل الحقول المطلوبة بشكل صحيح.
   signup_thank_you_header: 'شكرا لك على الاشتراك لاستضافة حدث "ساعة من الكود البرمجي".'
   signup_thank_you_message: أرسلنا لك رسالة تأكيد بالبريد الإلكتروني مع معلومات لمساعدتك على البدء.
+  map_title: Hour of Code map
   map_header: 'أحداث #ساعة من البرمجة حول العالم'
   see_all_events: See all events
   map_header_company: '# by company organizers'
-  map_header_country: '# in %{country}'
-  map_search_placeholder: Search for Hour of Code events
+  map_header_country: '# في %{country}'
+  map_search_placeholder: 'البحث عن فعاليات "ساعة البرمجة"'
   map_search_search: Search
   map_search_reset: Reset
   map_legend_title: Legend
@@ -292,46 +298,47 @@ ar:
   hardware_prizes_form_submit_label: أرسل
   hoc_faq_title: الأسئلة المتكررة
   hoc_faq_what_is_hoc_q: ما هي ساعة البرمجة؟
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
-  hoc_faq_last_year: Try the tutorials
+  hoc_faq_what_is_hoc_a: "ساعة البرمجة هي مقدمة في علوم الحاسب مدتها ساعة واحدة، تم إعدادها بهدف تسهيل تَعلُّم البرمجة وإثبات أن أي شخص يمكنه تَعلُّم أساسيات البرمجة. <a href='%{codeorg_url}'>تفقَّد هذه الدروس</a>."
+  hoc_faq_last_year: قُم بتجربة هذه الدروس
   hoc_faq_when_is_hoc_q: متى تقام ساعة البرمجة؟
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: لماذا علوم الحاسوب؟
-  hoc_faq_why_cs_a: "ينبغي على<i>كل</i> طالب الحصول على الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي خلال القرن الحادي والعشرين. راجع إحصائيات أكثر في <a href='http://code.org'> Code.org</a>."
+  hoc_faq_why_cs_a: "يجب أن يحصُل <i>كل</i> طالب على فرصة لتعلم علوم الحاسب. فذلك يساعد على تنمية مهارات حل المشكلات والمنطق والإبداع. وبالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي من تلك التي يوفرها القرن الحادي والعشرين. شاهد المزيد من الإحصائيات على <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: كيفية القيام بالمشاركة في ساعة البرمجة؟
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: من يقف وراء ساعة البرمجة؟
   hoc_faq_behind_hoc_a: "ساعة البرمجة تنظمه <a href='http://code.org'> Code.org</a>، و هي منظمة عامة تتبع نظام 501c3  غير هادفة للربح تهدف لتوسيع نطاق المشاركة في علوم الحاسوب بجعلها متاحة في أكبر عدد من المدارس، وزيادة مشاركة النساء والطلاب من الاقليات.  <a href='http://code.org/about/partners'> تحالف لم يسبق له مثيل من الشركاء</a> بدعم حدث ساعة البرمجة، أيضا &mdash; بما في ذلك Microsoft، أبل، الأمازون، أندية الفتية و الفتيات في أمريكا ومجلس الكلية."
   hoc_faq_host_q: أنا لا أعرف أي شيء حول البرمجة. هل يمكن ان استضيف حدثاً؟
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
-  hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_q: ما هي الأجهزة التي يجب أن استخدمها مع الطلاَّب؟
+  hoc_faq_devices_a: "الدروس المقدمة من Code.org تعمل على جميع الأجهزة ومتصفحات الإنترنت. يمكن التعرف على المتطلبات التقنية لدروس Code.org من هنا <a href='%{codeorg_url}/educate/it'>. والمتطلبات التقنية للدروس الأخرى (التي لا تخص Code.org) متاحة هنا <a href=''%{codeorg_url}/learn'> من خلال الشرح الخاص بكل درس. ولا تنسوا أننا نقدم أيضاً أنشطة لا تتطلب الاتصال بالإنترنت في حال تعذر على مدرستكم استضافة الدروس!"
   hoc_faq_need_computers_q: هل احتاج إلى جهاز حاسوب لكل مشارك؟
   hoc_faq_need_computers_a: "كلا. لدينا انشطة تعمل على أجهزة الكمبيوتر والهواتف الذكية واللوحات الرقمية، وبعضها لا تتطلب حاسوبا على الإطلاق! يمكنك الانضمام إلى أينما كنت، مع كل ما لديك. <p><i>هنا هي عدد قليل من الخيارات:</i> <br><ul><li><b>العمل في أزواج.</b> تبين الابحاث ان تعلم الطلاب أفضل في<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> اطار مجموعات من شخصين</a>، المشاركة في حاسوب واحد والعمل معا. شجع الطلاب على التعاون. <li><b>استخدام عرض الشاشة على الجميع.</b> إذا كان لديك جهاز العرض و حاسوب متصل بشبكة الإنترنت، المجموعة بأكملها يمكنها القيام بساعة البرمجة معا. شاهدوا أجزاء الفيديو معا، ثم اترك الطلاب يتناوبون على حل الألغاز أو الإجابة على الأسئلة. <li><b>الانشطة الغير موصولة.</b> نحن نقدم الدروس التي تتطلب لا كمبيوتر على الإطلاق. </ul>"
-  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
+  hoc_faq_international_q: 'أنا أعيش في <country>. كيف يمكنني المشاركة دولياً؟'
+  hoc_faq_international_a: |-
+    يمكن لأي شخص تنظيم "ساعة البرمجة"، في أي مكان في العالم. في العام الماضي، اجتمع الطلاب من جميع أنحاء العالم للمشاركة في "ساعة البرمجة". تعرف على المزيد <a href='/promote'>هنا</a>.
   hoc_faq_tutorial_q: كيف يمكنني ان انجز درسا لساعة البرمجة؟
   hoc_faq_tutorial_a: "إذا كنت ترغب في أن تصبح شريكا في انجاز الانشطة، <a href='/tutorial-guidelines'> راجع المبادئ التوجيهية والتعليمات</a>. نود أن تستضيف مجموعة متنوعة من خيارات جذابة، ولكن الهدف الأساسي هو تحسين الخبرة للطلاب والمدرسين الذين هم مبتدؤون في علوم الحاسوب."
   hoc_faq_account_q: Do students need to log on using an account?
   hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>."
-  hoc_faq_frozen_q: Where can I find new tutorials featuring Star Wars, Minecraft and Anna and Elsa from Frozen?
-  hoc_faq_frozen_a: "They are now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy them!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Our new Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
   hoc_faq_map_q: "Why don't I see my dot on the map?"
   hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
-  hoc_faq_one_hour_q: How much can one learn in an hour?
-  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_one_hour_q: ما مقدار ما يمكن للفرد أن يتعلمه في ساعة واحدة؟
+  hoc_faq_one_hour_a: 'الهدف من"ساعة البرمجة" ليس تعليم أي شخص كيف يصبح خبيراً في علوم الحاسب خلال ساعة واحدة. وإنما هذه الساعة  كفيلة بأن تخبرنا أن علوم الكمبيوتر ممتعة وبها قدر كبير من الإبداع، وأنه يمكن تَعلُّمها في أي مرحلة عمرية، لجميع الطلاب، بغض النظر عن خلفيتهم الدراسية. مقياس نجاح هذه الحملة ليس في كم ما يتعلمه الطلاب من علوم الحاسب - ولكن النجاح يتمثل في مدى المشاركة على نطاق واسع من الجنسين ومن مختلف الجماعات العرقية والاجتماعية والاقتصادية، وما ينتج عنه من إقبال متزايد على التسجيل والمشاركة في دورات علوم الحاسب في جميع المراحل الدراسية. وقد قرر الملايين من المعلمين والطلاب المشاركين تجاوز الساعة الواحدة - لتصل ليوم كامل أو أسبوع كامل أو أكثر، بل وقد قرر العديد من الطلاب الالتحاق بدوره دراسية كاملة (أو اتخاذ علوم الحاسب مجالاً لدراستهم الجامعية) كنتيجة لدروس الساعة الواحدة. <br/><br/> وإلى جانب الطلاب، فهناك "متعلم" آخر وهو المعلم الذي بعد ساعة واحدة يكتسب الثقة في قدرته على تدريس علوم الحاسب، على الرغم من عدم حصوله على شهادة جامعية في تلك العلوم. عشرات الآلاف من المعلمين قرروا مواصلة مسيرتهم مع علوم الحاسب، إما بأن يلتحقوا بدورات تدريبية لتطوير مهاراتهم أو الاستمرار في تقديم دروس في البرمجة عبر الإنترنت، أو كليهما. وهذا ينطبق أيضا على مديري المدارس، والذين يدركون أن علوم الحاسب هي شيء يريده الطلَّاب ومدرسيهم قادرون على تدريسه. <br/><br/> والأهم من ذلك كله، أن ما يمكن أن يتعلمه جميع المشاركين في هذه الساعة أننا جميعاً قادرون على القيام بذلك.'
   hoc_faq_more_questions_q: لديك المزيد من الأسئلة؟
   hoc_faq_more_questions_a: "حاول أن تعثر على الإجابة في  <a href='http://support.code.org'>منتدى الدعم</a>."
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
-  hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_q: كيف يمكنني طباعة الشهادات التي سأقدمها للطلاب؟
+  hoc_faq_certificates_a: "من خلال <a href='%{codeorg_url}/certificates'>صفحة الشهادات</a> يمكنك طباعة شهادات جميع الطلاب قبل البدء في التدريب."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: 'إحصائيات عن "ساعة من الكود البرمجي" الذي حدث في عام 2013'
   stats_growth: كان الأسرع للوصول ل 15 مليون مستخدم.
   stats_i18n: الطلاب يتعلمون بأكثر من 40 لغة
@@ -341,8 +348,8 @@ ar:
   stats_pinterest: 'بينتيريست: 2 سنة'
   stats_instagram: 'انستاغرام: 14 شهراً'
   stats_hoc: 'ساعة البرمجة: 5 أيام'
-  stats_global: 'قام أكثر من 100 مليون طالب بتجربة "ساعة من البرمجة"'
-  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_global: 'قام أكثر من 100 مليون طالب بتجربة "ساعة البرمجة"'
+  stats_girls_more: تقوم المزيد من الفتيات بتجربة علوم الحاسوب بنسبة أكبر مقارنة بالـ 70 سنة الماضية
   stats_nina: 'خلال كل يوم توصلنا لنفس النتائج &mdash;   مائة بالمائة من الالتزام - نينا نيكولس بيري، معلمة'
   stats_student: '"كنت أعرف ان  هذا كان فرصة <b>وحيدة العمر</b> ."-ماريانا الزاتي، الصف الخامس'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
@@ -357,7 +364,7 @@ ar:
   resources_videos: مقاطع فيديو
   resources_banners: اللافتات
   resources_emails: نموذج رسائل البريد الإلكتروني
-  resources_logo: Hour of Code logo
+  resources_logo: شعار ساعة البرمجة
   resources_stats: Stats and blurbs
   resources_press_kit: مواد صحفية
   resources_social: اجتماعي
@@ -365,7 +372,7 @@ ar:
   resources_stickers: ملصقات
   resources_how_to_guides: أدلة إرشادية
   resources_promote: Promote
-  resources_nav_tutorials: Try the tutorials
+  resources_nav_tutorials: قُم بتجربة هذه الدروس
   resources_nav_promote: Spread the word
   resources_nav_spread_word: كيفية المشاركة
   resources_banner_promote_text: Promote
@@ -416,6 +423,9 @@ ar:
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: حدث
   events: أحداث
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: حقوق الطبع والنشر Code.org عام 2015. جميع الحقوق محفوظة.
   footer_trademark_message: إن ™Hour of Code هي علامة تجارية لصالح Code.org.
   footer_menu_partners: الشركاء

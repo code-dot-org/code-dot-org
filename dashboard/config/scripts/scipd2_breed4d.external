@@ -1,0 +1,17 @@
+name 'sciPD2 breed4d'
+title 'Reviewing StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+# Sharing Your Extensions
+
+Great work &mdash; now it's time to share! Make sure your project is **added to your public gallery**.  Post your answers to the following questions on the forum page for this discussion.  
+Access the forum <a href="http://forum.code.org/t/phase-2b-epidemic-model-extensions/4292"> HERE</a>.
+
+1. What modifications did you make and why?
+2. URL for public link.
+3. What did you struggle with the most?
+4. Is there anything else you need help with?
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

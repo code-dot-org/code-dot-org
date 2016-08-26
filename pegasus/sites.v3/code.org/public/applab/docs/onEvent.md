@@ -23,7 +23,7 @@ Executes the *callback* function code when a specific event *type* occurs for th
 
 [/short_description]
 
-Interactive apps need both UI elements ([button()](/applab/docs/button), [textInput()](/applab/docs/textInput), [textLabel()](/applab/docs/textLabel), [dropDown()](/applab/docs/dropDown), [checkBox()](/applab/docs/checkBox), [radioButton()](/applab/docs/radioButton), [image()](/applab/docs/image)), and event handlers for those UI elements and each type of user interaction needed. The UI element, with unique id, must exist before the onEvent function can be used.
+Interactive apps need both UI elements ([button()](/applab/docs/button), [textInput()](/applab/docs/textInput), [textLabel()](/applab/docs/textLabel), [dropDown()](/applab/docs/dropdown), [checkBox()](/applab/docs/checkbox), [radioButton()](/applab/docs/radioButton), [image()](/applab/docs/image)), and event handlers for those UI elements and each type of user interaction needed. The UI element, with unique id, must exist before the onEvent function can be used.
 
 [/description]
 
@@ -176,7 +176,7 @@ No return value, callback function executed.
 ### Tips
 - The UI element must be defined in your code before the matching onEvent() event handler.
 - The callback function receives an event object as its parameter, which can be used to gain more information about the event. You can ignore the App Lab warning *event is defined but not called in your program*.
-- The preferred placement in yoru code is screen elements at the top, event handlers in middle, other code/functions at end.
+- The preferred placement in your code is screen elements at the top, event handlers in middle, other code/functions at end.
 
 [/tips]
 

@@ -1,9 +1,7 @@
 require 'json'
 
 module Solr
-
   class Server
-
     def initialize(params={})
       @host, @port = params[:host].to_s.split(':').map(&:strip)
       @port ||= '8983'
@@ -36,15 +34,15 @@ module Solr
       def initialize(http, params)
         @http = http
         @params = params.dup
-        @start, @count, @docs = fetch(params[:start]||0)
+        @start, @count, @docs = fetch(params[:start] || 0)
       end
 
-      def count()
+      def count
         @count
       end
 
       def each(&block)
-        while(@start < @count)
+        while @start < @count
           @start, @count, @docs = fetch(@start) if @docs.empty?
           yield(@docs.shift)
           @start += 1

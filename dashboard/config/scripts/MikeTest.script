@@ -2,11 +2,29 @@ title 'MikeTest'
 description_short "Just a script for playing around"
 description "Trying not to break anything"
 description_audience "Ages 8-98"
+professional_learning_course "Other plc course"
 
 stage 'Sample Stage'
 level 'MikeTest1'
 level 'MikeTest2'
 level 'MikeTest3'
 assessment 'MikeAssessment1'
+
 stage 'Artist Functions'
 level '2-3 Artist Functions 12 Mike'
+level '2-3 Artist Free Play'
+level 'Mike Pair Programming'
+level 'MikeTest3'
+level '2-3 Artist Free Play'
+
+stage 'The same thing with named levels'
+level '2-3 Artist Functions 12 Mike'
+level '2-3 Artist Free Play'
+named_level 'Mike Pair Programming'
+level 'MikeTest3'
+level '2-3 Artist Free Play'
+
+stage 'You are a coding STAR'
+level 'MikeStarNested'
+level 'MikeStarHard'
+level 'MikeStar'

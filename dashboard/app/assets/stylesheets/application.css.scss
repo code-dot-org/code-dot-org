@@ -24,6 +24,7 @@
  *= require user-menu
  *= require user-progress
  *= require user-hero
+ *= require teacher-announcement
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -33,8 +34,6 @@
  *= require selectize.default
  */
 
-// TODO: Move into code-studio.scss when it exists.
-@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
@@ -54,8 +53,8 @@ p,pre,span {
 
 body {
   @include unselectable;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  padding: 0px;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
   font-style: normal;
 }
 
@@ -70,12 +69,21 @@ body.pin_bottom {
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+  font-size: 32px;
   color: $purple;
 }
 
 h2 {
+  margin: 25px 0 10px 0;
   font-family: $gotham-bold;
   font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: $teal;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 hr {
@@ -85,8 +93,8 @@ hr {
 
 th {
   background-color: $charcoal;
-  color: white;
-  border: 1px solid white;
+  color: $white;
+  border: 1px solid $white;
   text-align: left;
   font-size: 120%;
   font-family: $gotham-bold;
@@ -131,27 +139,15 @@ img.video_thumbnail {
   margin-bottom: 30px;
 }
 
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
-}
-
 .report_cell {
   text-align: center;
-  color: white;
-  border: 1px solid black;
+  color: $white;
+  border: 1px solid $black;
 }
 
 .report_row {
   height: 26px;
-  border-top: 1px solid black;
+  border-top: 1px solid $black;
 }
 
 .report_key {
@@ -161,7 +157,7 @@ img.video_thumbnail {
   float: left;
   clear: left;
   width: 23px;
-  border: 1px solid lightgray;
+  border: 1px solid $light_gray;
   margin: 5px;
   vertical-align: middle;
 }
@@ -187,7 +183,8 @@ img.video_thumbnail {
     left: 97px;
 
     .learnmore {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
     }
   }
 }
@@ -198,8 +195,12 @@ img.video_thumbnail {
   height: 44px;
   background-color: $bkgnd_color;
   color: $header_text;
-  a:link {color:$header_text;}
-  a:visited {color:$header_text;}
+  a:link {
+    color: $header_text;
+  }
+  a:visited {
+    color: $header_text;
+  }
 
   .small_font_on_tablet {
     @media screen and (max-width: 1024px) {
@@ -210,7 +211,16 @@ img.video_thumbnail {
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+  @media screen and (max-device-width: 500px) {
+    display: none;
+  }
+}
+
+.sign_in.show_only_on_mobile {
+  float: right;
+  margin-bottom: 10px;
+
+  @media screen and (min-device-width: 501px) {
     display: none;
   }
 }
@@ -242,11 +252,18 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
-  a:visited {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
-  a:hover {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
-  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
+  a:link, a:visited, a:hover, a:active {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $cyan;
+    background-color: transparent;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
+    font-family: FontAwesome;
+  }
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
@@ -278,21 +295,26 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  a:link, a:visited, a:hover, a:active {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: $white;
+    background-color: transparent;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
   select {
     width: auto;
-    font-size:11px;
+    font-size: 11px;
     height: 18px;
-    margin-bottom: 4px
+    margin-bottom: 4px;
     }
   .fineprint {
-    a:link {font-family: $gotham-bold; font-weight: normal;}
-    a:visited {font-family: $gotham-bold; font-weight: normal;}
-    a:hover {font-family: $gotham-bold; font-weight: normal;}
-    a:active {font-family: $gotham-bold; font-weight: normal;}
+    a:link, a:visited, a:hover, a:active {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
   }
   .dim {
     display: inline-block;
@@ -307,7 +329,7 @@ $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #copyright-flyout, #more-menu {
-  background-color: #ddd; /* Matches blockly flyout */
+  background-color: $blockly_flyout_gray; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
   a {
@@ -322,12 +344,12 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
     &:hover {
-      color:$dark_charcoal;
+      color: $dark_charcoal;
       background-color: transparent;
       text-decoration: underline;
     }
     &:active {
-      color:$light_gray;
+      color: $light_gray;
       background-color: transparent;
       text-decoration: none;
     }
@@ -337,8 +359,14 @@ $small-footer-standard-width: 400px;
     background-color: $dark-charcoal;
     a {
       &:hover {
-        color: $lightest_gray
+        color: $lightest_gray;
       }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    small {
+      font-size: 10px;
     }
   }
 }
@@ -363,7 +391,7 @@ $small-footer-standard-width: 400px;
 
   select {
     width: 80px;
-    font-size:11px;
+    font-size: 11px;
     height: 18px;
     margin-bottom: 0;
   }
@@ -441,16 +469,27 @@ $small-footer-standard-width: 400px;
 
 .user_options, .project_more_popup {
   display: none;
-  background-color: white;
-  a:link {color:black;}
-  a:visited {color:black;}
-  a:hover { color:white; background-color: $dark_color; text-decoration: none; }
-  a:active { color:white; background-color: $dark_color; }
-  border: 1px solid black;
+  background-color: $white;
+  a:link {
+    color: $black;
+  }
+  a:visited {
+    color: $black;
+  }
+  a:hover {
+    color: $white;
+    background-color: $dark_color;
+    text-decoration: none;
+  }
+  a:active {
+    color: $white;
+    background-color: $dark_color;
+  }
+  border: 1px solid $black;
   z-index: 100001;
   text-align: left;
   white-space: nowrap;
-  color: black;
+  color: $black;
   position: absolute;
   right: 0;
   padding: 10px;
@@ -459,15 +498,20 @@ $small-footer-standard-width: 400px;
 }
 
 .user_options a {
-  color: black;
+  color: $black;
+}
+
+.user_options .pairing_summary {
+  font-size: 0.8em;
+  line-height: 1.6em;
 }
 
 .full_container {
-  padding: 0px 25px 25px 25px;
+  padding: 0 25px 25px 25px;
 }
 body.embedded_iframe {
   .full_container {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 
@@ -476,7 +520,10 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
-  a:hover {color:$red; background-color: white; }
+  a:hover:not(.btn) {
+    color: $red;
+    background-color: $white;
+  }
 
   &#block-documentation-lightbox {
     width: 80% !important;
@@ -524,7 +571,7 @@ $default-modal-width: 640px;
 }
 
 .btn#dataConfirmOK:hover {
-  color: white;
+  color: $white;
   background-color: $orange;
 }
 
@@ -548,7 +595,7 @@ $default-modal-width: 640px;
     padding: 5px;
 
     a {
-      color: white;
+      color: $white;
     }
   }
 }
@@ -580,7 +627,7 @@ $default-modal-width: 640px;
   z-index: 1;
   margin-top: -24px;
   padding-top: 14px;
-  min-width: 0px;
+  min-width: 0;
   max-width: 55px;
   width: 55px;
 
@@ -607,7 +654,7 @@ $default-modal-width: 640px;
     font-family: $gotham-extra-bold;
     font-size: 20px;
     line-height: 20px;
-    color: #fff176;
+    color: $droplet_yellow;
   }
 }
 
@@ -639,13 +686,18 @@ $default-modal-width: 640px;
   .social-buttons a {
     display: inline-block;
     background: $purple;
-    color: white;
+    color: $white;
     border-radius: 5px;
     margin-right: 8px;
     font-size: larger;
     &:hover, & {
       text-decoration: none;
     }
+
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
+
     i {
       border-radius: 5px;
       width: 45px;
@@ -654,15 +706,12 @@ $default-modal-width: 640px;
       text-align: center;
       vertical-align: middle;
       font-size: 24pt;
-      &:hover {
-        box-shadow: 2px 2px 5px $light_gray;
-      }
 
       &.fa-facebook {
-        background-color: #3b5998;
+        background-color: $facebook_blue;
       }
       &.fa-twitter {
-        background-color: #00aced;
+        background-color: $twitter_blue;
       }
     }
     span {
@@ -753,7 +802,7 @@ input.header_input {
   border-bottom: 5px;
   border-radius: 0 0 6px 6px;
   z-index: 1050;
-  background-color: white;
+  background-color: $white;
   overflow: hidden;
 }
 
@@ -810,10 +859,6 @@ input.header_input {
   cursor: pointer;
 }
 
-.header_trophy_link {
-  cursor: pointer;
-}
-
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
@@ -840,11 +885,6 @@ input.header_input {
   color: $header_text;
   display: inline-block;
   line-height: 20px;
-}
-
-.trophy_image {
-  width: 45px;
-  height: 45px;
 }
 
 #alert {
@@ -883,7 +923,7 @@ input.header_input {
 
   &.centered_embed {
     position: relative;
-    top: 0px;
+    top: 0;
     left: auto;
     right: auto;
     margin-top: 10px;
@@ -956,7 +996,7 @@ input.header_input {
 
       a {
         background: $dark_color;
-        color: white;
+        color: $white;
         &:hover {
           color: $green;
         }
@@ -972,7 +1012,7 @@ input.header_input {
 
     li.ui-state-active {
       a {
-        background: white;
+        background: $white;
         color: $orange;
         &:hover {
           color: $orange;
@@ -1043,7 +1083,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: white;
+  background-color: $white;
   color: $charcoal;
   border: 1px solid $charcoal;
   border-radius: 8px;
@@ -1085,13 +1125,16 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-family: $gotham-regular; font-weight: normal; }
+  a:link {
+    font-family: $gotham-regular;
+    font-weight: normal;
+  }
 }
 
 .fixed_width_cell {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   padding-left: 5px;
 }
 
@@ -1101,7 +1144,7 @@ a.download-video {
     border-radius: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: white;
+    color: $white;
     overflow: hidden;
   }
 
@@ -1120,15 +1163,15 @@ a.download-video {
 
   .lines_of_code_header {
     width: 100%;
-    color: white;
+    color: $white;
     padding-left: 30px;
-    padding-top: 0px;
+    padding-top: 0;
     font-size: 24px;
     line-height: 34px;
   }
 
   a.lines_of_code_link {
-    color: white;
+    color: $white;
     text-decoration: none;
     font-family: $gotham-bold;
     font-weight: normal;
@@ -1144,11 +1187,12 @@ a.download-video {
 
   .row#continue {
     background-color: $teal;
-    color: white;
+    color: $white;
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: $gotham-extra-bold; font-weight: normal;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1158,60 +1202,6 @@ a.download-video {
 
   #welcome h2 {
     font-size: 18px;
-  }
-
-  #teacher_announcement {
-    margin-top: 10px;
-  }
-
-  .teacher-announce {
-    position: relative;
-    font-size: 14px;
-  }
-  .teacher-announce .announce-heading {
-    background-color: $purple;
-    border-radius: 4px;
-    color: white;
-    height: 20px;
-    overflow: hidden;
-    padding: 10px;
-    text-transform: uppercase;
-  }
-  .teacher-announce .announce-heading .heading-view-all {
-    float: right;
-  }
-  .teacher-announce .announce-content {
-    background-color: $lightest_purple;
-    border-radius: 4px;
-    margin-top: 3px;
-    overflow: hidden;
-    padding: 10px;
-  }
-  .teacher-announce .announce-content .content-img-container {
-    float: left;
-  }
-  .teacher-announce .announce-content .content-img {
-    border-radius: 4px;
-    height: 108px;
-  }
-  .teacher-announce .announce-content .content-text {
-    color: $charcoal;
-    float: left;
-    max-height: 90px;
-    overflow: hidden;
-    padding-left: 10px;
-    line-height: 18px;
-    width: 610px;
-  }
-  .teacher-announce .announce-content .content-text b {
-    font-family: 'Gotham 5r', sans-serif;
-  }
-  .teacher-announce .announce-learn-more {
-    float: right;
-    margin-top: 25px;
-  }
-  .teacher-announce a {
-    text-decoration: none;
   }
 
   .gallery {
@@ -1238,14 +1228,14 @@ a.download-video {
       width: 154px;
       img {
         border: 2px solid $lighter_gray;
-        background-color: white;
+        background-color: $white;
       }
     }
   }
 
   h3.whitetext {
     a, a:link, a:hover, a:visited {
-      color: white;
+      color: $white;
       text-decoration: none;
       cursor: pointer;
     }
@@ -1264,39 +1254,42 @@ a.download-video {
     }
 
     li.active a, li.active a:hover, li.active a:link {
-      background-color: white;
+      background-color: $white;
       color: $purple;
       border: 2px solid $purple;
     }
     li a:hover, a:focus {
       text-decoration: none;
-      background-color: white;
+      background-color: $white;
     }
   }
 
   .padtopbottom {
-    padding-top:10px; padding-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #signup {
-    padding-top:10px;
+    padding-top: 10px;
     .medium-size-text {
-      font-size:18px; line-height:30px;
+      font-size: 18px;
+      line-height: 30px;
     }
     #maintext {
-      text-align:left; padding-left:20px; color:$charcoal;
+      text-align: left;
+      padding-left: 20px;
+      color: $charcoal;
     }
     #helptext {
-      text-align:right; padding-right:20px; color:$light_gray;
+      text-align: right;
+      padding-right: 20px;
+      color: $light_gray;
     }
   }
 
   #lesson {
     #heading {
       width: 700px;
-      h2 {
-        margin-top: 0;
-      }
     }
     #trynow {
       float: right;
@@ -1332,24 +1325,57 @@ a.download-video {
 
 #signin {
   .tryfirst {
-    margin-bottom:10px;
+    margin-bottom: 10px;
     a {
-      font-size:18px;
+      font-size: 18px;
       font-family: $gotham-regular;
       font-weight: normal;
     }
   }
   .itemblock {
-    display:inline-block;
-    width:600px
+    display: inline-block;
+    width: 600px;
+  }
+  .singleitemblock {
+    padding-left: 144px;
+    width: 364px;
   }
   .labelblock {
-    display:inline-block;
-    width:140px
+    display: inline-block;
+    width: 140px;
+  }
+  .rememberme {
+    font-size: 13px;
+    margin-bottom: 22px;
+
+    #user_remember_me {
+      margin-top: -2px;
+      margin-right: 3px;
+    }
+  }
+  button {
+    width: 220px;
+  }
+  #signin-button {
+    margin-bottom: 7px;
+  }
+  #signup-button {
+    margin-top: 4px;
+  }
+  .forgotpassword {
+    margin-bottom: 10px;
+  }
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid $dark_charcoal;
   }
 }
 
 #signinsection {
+  ul.students, ul.pictures {
+    margin-left: 0;
+  }
+
   ul.students li,
   ul.pictures li {
     list-style-type: none;
@@ -1371,26 +1397,35 @@ a.download-video {
   ul.pictures li.selected {
     background-color: $yellow;
   }
+
+  #pairing_checkbox {
+    margin: 5px 0;
+    label {
+      font-size: 17.5px;
+    }
+    label, input {
+      margin: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 }
 
 #signup {
-  .signupblock {
-    background-color: $lightest_gray;
-  }
   .signupform {
-    padding:20px;
-    margin-bottom:0px
+    padding: 20px;
+    margin-bottom: 0;
   }
   .itemblock {
-    display:table;
+    display: table;
   }
   .labelblock {
-    display:table-cell;
-    width:140px
+    display: table-cell;
+    width: 140px;
   }
   .fieldblock {
-    width:220px;
-    vertical-align:top;
+    width: 220px;
+    vertical-align: top;
     margin-bottom: 5px;
     margin-top: 5px;
   }
@@ -1398,40 +1433,78 @@ a.download-video {
     display: table-cell;
     vertical-align: middle;
   }
+  .terms-checkbox {
+    margin: 0 5px 2px 0;
+  }
+  .right {
+    float: right;
+  }
+  .scroll-box {
+    height: 100px;
+    border: 1px solid $border_gray;
+    padding: 20px;
+    margin-top: 5px;
+    resize: vertical;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+  .custom-h1 {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .checkbox-error {
+    display: inline !important;
+    padding-left: 0 !important;
+  }
   #labelusername {
-    vertical-align:top;
-    padding-top:7px
+    vertical-align: top;
+    padding-top: 7px;
   }
   #usernamefield {
-    vertical-align:top
+    vertical-align: top;
+  }
+  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
+    width: 234px;
   }
   #usernamemessage, #password_message, #password_message_confirmation {
-    display:inline-block;
-    max-width:180px;
-    vertical-align:top
+    display: inline-block;
+    max-width: 180px;
+    vertical-align: top;
+  }
+  #password_confirmation-block {
+    margin-bottom: 20px;
   }
   .error_in_field {
-    color: red;
+    color: $red;
     opacity: 0;
     display: table-cell;
     padding-left: 10px;
     vertical-align: middle;
   }
   select {
-    width:234px
+    width: 234px;
   }
   .field_with_errors {
-    display:inline-block
+    display: inline-block;
   }
   button {
-    font-size:16px;
-    height:40px;
+    font-size: 16px;
+    height: 40px;
   }
   .registertext {
-    display:inline-block;
-    font-size:16px;
-    color:$charcoal;
-    margin-top:15px;
+    display: inline-block;
+    font-size: 16px;
+    color: $charcoal;
+    margin-top: 15px;
+  }
+  #user_type-block {
+    margin-bottom: 20px;
+  }
+  .devise_links {
+    padding-left: 20px;
+    margin-top: 20px;
+    border-left: 1px solid $black;
   }
 }
 
@@ -1458,7 +1531,7 @@ a.download-video {
 
 .match {
   .mainblock {
-    margin-left: 0px;
+    margin-left: 0;
   }
   .column {
     width: 260px;
@@ -1485,17 +1558,17 @@ a.download-video {
     padding-left: 4px;
     padding-right: 4px;
     width: 220px;
-    margin-top:2px;
-    margin-bottom:2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     border-style: solid;
     border-color: transparent;
     border-width: 6px;
   }
   #questions {
     list-style-type: none;
-    margin-left:0px;
+    margin-left: 0;
     li {
-      background-color: white;
+      background-color: $white;
       border-color: $lighter_gray;
     }
   }
@@ -1504,14 +1577,15 @@ a.download-video {
   }
   #slots {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: 0;
     .emptyslot {
       background-color: $lightest_gray;
       border-color: $lightest_gray;
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: $gotham-bold; font-weight: normal;
+          font-family: $gotham-bold;
+          font-weight: normal;
         }
       }
     }
@@ -1524,7 +1598,7 @@ a.download-video {
     }
   }
   .answer {
-    background-color: white;
+    background-color: $white;
     border-color: $lighter_cyan;
   }
   .answer.ui-draggable:hover {
@@ -1543,7 +1617,7 @@ a.download-video {
   }
   #answers {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: 0;
   }
   .answerslot {
     h4 {
@@ -1552,20 +1626,19 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #correctmarkscolumn
-  {
+  #correctmarkscolumn {
     width: 20px;
-    padding-right:20px;
+    padding-right: 20px;
   }
   #correctmarks {
-    margin-left: 0px;
+    margin-left: 0;
   }
   .correctmark {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: 0;
     width: 30px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     background-color: transparent;
   }
 }
@@ -1580,6 +1653,10 @@ a.download-video {
 
 .level-group-content {
   overflow: hidden;
+
+  .external, .free-response {
+    margin-left: 0;
+  }
 }
 
 .text-match, .free-response, .peer-review {
@@ -1596,12 +1673,16 @@ a.download-video {
   }
 }
 
+.external .content-level {
+  overflow: hidden;
+}
+
 .peer-review input[type=radio] {
   margin: 0 3px 3px 5px;
 }
 
 .peer-review-content {
-  background: #fff;
+  background: $white;
   border: 1px solid $light_gray;
   border-radius: 5px;
   padding: 10px;
@@ -1623,6 +1704,28 @@ a.download-video {
   }
 }
 
+.external-link-icon {
+  margin: 0 0.33em 0 20px;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 40px 0 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,
@@ -1641,12 +1744,46 @@ a.download-video {
     h3 {
       padding: 5px;
       font-size: 18px;
-      font-family: $gotham-extra-bold; font-weight: normal;
-      color: white;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+      color: $white;
       background: $cyan;
       margin: 0;
     }
   }
+
+  blockquote {
+    padding: 15px 20px;
+    background: $lightest_purple;
+    border: 0;
+    border-radius: 10px;
+    clear: both;
+    p {
+      margin-bottom: 10px;
+    }
+    h2:first-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.level-image {
+  width: 380px;
+  float: right;
+  margin: 20px 0 30px 30px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px $shadow;
+  border: 1px solid $lighter_gray;
+}
+
+.external, .free-response {
+  max-width: 970px;
+  margin: auto;
+}
+
+.free-response .response {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .standalone-video {
@@ -1689,7 +1826,7 @@ a.download-video {
   height: 800px;
 }
 #script_name {
-  margin: 0px 10px 0px 0px;
+  margin: 0 10px 0 0;
 }
 #edit-script-nav {
   a {
@@ -1724,7 +1861,7 @@ div.gallery_activity {
   img {
     width: $img_size;
     height: $img_size;
-    border: $img_border_size groove lightgray;
+    border: $img_border_size groove $light_gray;
   }
   .caption {
     color: $charcoal;
@@ -1744,17 +1881,17 @@ div.mini_gallery_activity {
   $img_total_size: $img_size + 2 * $img_border_size;
   float: left;
   width: $img_total_size;
-  margin: 0px 5px;
+  margin: 0 5px;
   img {
     width: $img_size;
     height: $img_size;
-    border: $img_border_size groove lightgray;
+    border: $img_border_size groove $light_gray;
   }
 }
 
 .infobox {
   background-color: $charcoal;
-  color: white;
+  color: $white;
   font-size: 13px;
   padding-right: 10px;
   font-family: $gotham-regular;
@@ -1767,17 +1904,10 @@ div.mini_gallery_activity {
 }
 
 .buttons.submittable {
-  .submitButton {
+  .submitButton, .unsubmitButton {
     border-color: $purple;
     background-color: $purple;
-    color: white;
-    background-image: none;
-  }
-
-  .unsubmitButton {
-    border-color: $light_purple;
-    background-color: $light_purple;
-    color: white;
+    color: $white;
     background-image: none;
   }
 }
@@ -1795,7 +1925,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
   margin: auto;
-  h2 {
+  h1 {
     text-align: center;
   }
   p {
@@ -1803,6 +1933,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
     line-height: 24px;
   }
   $multi-left-margin: 50px;
+
+  .answerbutton {
+    &.lock-answers {
+      pointer-events: none;
+      color: $light_gray;
+    }
+  }
 
   // The tight layout is designed for a full-width layout that tends to
   // vertically stack every element, rather than going for side-by-side elements.
@@ -1914,7 +2051,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 
   .mainblock {
-    margin-left: 0px;
+    margin-left: 0;
     img {
       max-height: 100%;
     }
@@ -1993,7 +2130,7 @@ $modal-no-icon-gap: 22px;
 
   .aniGif {
     display: block;
-    margin: 0px auto 6px;
+    margin: 0 auto 6px auto;
     position: relative;
     z-index: -1;
   }
@@ -2003,8 +2140,8 @@ $modal-no-icon-gap: 22px;
     height: auto;
     margin: 0 15px 0 0;
     float: left;
-    border: lightgrey;
-    border-style: solid
+    border: $light_gray;
+    border-style: solid;
   }
 
   .feedback-links {
@@ -2042,7 +2179,7 @@ $modal-no-icon-gap: 22px;
     font-size: 20px;
     line-height: normal;
     color: $charcoal;
-    margin: 0 0 8px;
+    margin: 0 0 8px 0;
   }
 
   .instructions-container {
@@ -2065,12 +2202,12 @@ $modal-no-icon-gap: 22px;
 #ok-button {
   background-color: $orange;
   border: 1px solid $orange;
-  color: white;
+  color: $white;
   min-width: 100px;
 }
 
 .lightbulb-button {
-  background-color: white;
+  background-color: $white;
   font-family: $gotham-bold;
   border: 1px solid $charcoal;
   color: $charcoal;
@@ -2081,15 +2218,15 @@ $modal-no-icon-gap: 22px;
 
 #again-button, #cancel-button {
   background-color: $green;
-  color: white;
-  margin-left: 0px;
+  color: $white;
+  margin-left: 0;
   margin-right: 10px;
 }
 
 #continue-button {
   background-color: $orange;
-  color: white;
-  margin-left: 0px;
+  color: $white;
+  margin-left: 0;
   margin-right: 10px;
 }
 
@@ -2120,8 +2257,8 @@ $modal-no-icon-gap: 22px;
   /*margin-top: 10px;*/
   margin-bottom: 15px;
   float: left;
-  padding: 0 0 15px;
-  background-color: white;
+  padding: 0 0 15px 0;
+  background-color: $white;
   $outside-margin-side: 15px;
   width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
@@ -2134,17 +2271,31 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-.instructions-markdown {
-  padding-top: 19px;
+.csf-top-instructions {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
     color: $black;
   }
 
+  .secondary-instructions p {
+    font-size: 14px;
+    color: $charcoal;
+  }
+
   strong {
     font-family: $gotham-bold;
   }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
 }
 
 .markdown-level-header-text {
@@ -2153,7 +2304,7 @@ $modal-no-icon-gap: 22px;
   font-weight: normal;
   line-height: 27px;
   font-size: 24px;
-  color: #7665a0;
+  color: $purple;
 
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
@@ -2172,7 +2323,7 @@ $modal-no-icon-gap: 22px;
   border: none;
 }
 
-#feedbackButtons:after {
+#feedbackButtons::after {
   content: '';
   display: inline-block;
   width: 100%;
@@ -2187,7 +2338,7 @@ $modal-no-icon-gap: 22px;
 
 .exclamation-abuse {
   a, a:hover {
-    color: white;
+    color: $white;
     text-decoration: underline;
   }
 }
@@ -2201,15 +2352,15 @@ button {
   border: 1px solid $lightest_gray;
   font-size: large;
   background-color: $lightest_gray;
-  color: #000;
+  color: $black;
 }
 button.launch {
   border: 1px solid $orange;
   background-color: $orange;
-  color: white;
+  color: $white;
   font-size: large;
   min-width: 96px;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
@@ -2250,7 +2401,7 @@ button.notext {
 }
 
 @mixin bottom-shadow {
-  @include box-shadow(0px 10px 13px -11px black);
+  @include box-shadow(0 10px 13px -11px $black);
 }
 
 @mixin rounded-border {
@@ -2338,7 +2489,7 @@ $width: 400px;
   }
 }
 
-div#main-logo {
+#main-logo {
   padding: 10px 15px;
   display: inline-block;
   top: 10px;
@@ -2349,15 +2500,15 @@ div#main-logo {
   z-index: 1000;
 
   a {
-    color: #949ca2;
+    color: $light_gray;
     &:hover {
       text-decoration: none;
     }
   }
 
-  div#logo-container {
-    padding: 4px 4px;
-    background-color: #949ca2;
+  #logo-container {
+    padding: 4px;
+    background-color: $light_gray;
     width: 60px;
     border-radius: 5px;
     margin-bottom: 4px;
@@ -2369,10 +2520,10 @@ div#main-logo {
   position: fixed;
   top: 0;
   right: 0;
-  color: white;
+  color: $white;
   background-color: $light_purple;
   padding: 3px;
   z-index: 100;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0 0 7px 2px $shadow;
 }

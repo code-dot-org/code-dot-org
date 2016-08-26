@@ -16,7 +16,7 @@ require 'json'
 require 'set'
 require 'thread'
 
-CHEF_VERSION='12.7.2'
+CHEF_VERSION = '12.7.2'
 
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
@@ -98,11 +98,9 @@ def determine_frontend_instance_distribution
 
   frontend_instances.flatten!
 
-  instance_distribution = frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
+  frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
     instance_distribution[instance.placement.availability_zone] += 1
   }
-
-  instance_distribution
 end
 
 # Return an array of objects that have the names and zones of instances to create
@@ -114,7 +112,7 @@ def create_instance_provisioning_infos
   instance_distribution = determine_frontend_instance_distribution
   instances_to_provision = @options['count']
 
-  instances_to_provision_for_zones = Hash.new()
+  instances_to_provision_for_zones = Hash.new
 
   instance_distribution.keys.each do |zone|
     instances_to_provision_for_zones[zone] = (instances_to_provision / instance_distribution.keys.count)

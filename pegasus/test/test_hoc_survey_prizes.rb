@@ -3,7 +3,6 @@ require_relative '../../pegasus/helpers/prize_helpers'
 require 'securerandom'
 
 class HocSurveyPrizeTest < SequelTestCase
-
   TYPE1 = 'apple'
   TYPE2 = 'orange'
   USER1 = 'user1@code.org'
@@ -62,7 +61,6 @@ class HocSurveyPrizeTest < SequelTestCase
     assert_equal expected(TYPE1,1), claim2
     assert_equal expected(TYPE1,2), claim3
     assert_equal claim2, claim4
-
   end
 
   private
@@ -78,7 +76,6 @@ class HocSurveyPrizeTest < SequelTestCase
         generate_code type
       end
     end
-
   end
 
   # Generates a random code of the specified type, adds it to the DB, and appends to an array in @codes, keyed by the type

@@ -1,5 +1,4 @@
 class HocHardwarePrizes2014
-
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]
@@ -17,7 +16,7 @@ class HocHardwarePrizes2014
     result
   end
 
-  def self.receipt()
+  def self.receipt
   end
 
   def self.process(data)

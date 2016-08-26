@@ -7,48 +7,23 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "drawSprites": {
-        "category": ""
-      },
-      "keyDown": {
-        "category": ""
-      },
-      "var sprite = createSprite": {
-        "category": ""
-      },
-      "x": {
-        "category": ""
-      },
-      "y": {
-        "category": ""
-      },
-      "background": {
-        "category": ""
-      },
-      "addOperator": {
-        "category": ""
-      },
-      "subtractOperator": {
-        "category": ""
-      },
-      "ifBlock": {
-        "category": ""
-      },
-      "comment": {
-        "category": ""
-      },
-      "console.log": {
-        "category": ""
-      },
-      "setAnimation": {
-        "category": ""
-      }
+      "drawSprites": null,
+      "keyDown": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "background": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "ifBlock": null,
+      "comment": null,
+      "console.log": null,
+      "setAnimation": null
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\nWe've pre-loaded the Animations tab with these four images for you to use.\r\n\r\n# Do This\r\nUsing the provided program and images, change to the correct image when the corresponding key is pressed.\r\n\r\n- The up arrow should switch to \"player_up.png\"\r\n- The down arrow should switch to \"player_down.png\"\r\n- The left arrow should switch to \"player_left.png\"\r\n- The right arrow should switch to \"player_right.png\"\r\n\r\n**Challenge** Can you make your program default to \"player_down.png\" if none of the arrow keys are pressed?",
-    "start_blocks": "var sprite = createSprite(200, 200, 30, 30);\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  // Change the sprite's image to match the direction it's moving\r\n  if (keyDown(\"up\")) {\r\n    sprite.y = sprite.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    sprite.y = sprite.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    sprite.x = sprite.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    sprite.x = sprite.x + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
+    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\n# Do This\r\nUsing the provided program and images.\r\n\r\n- Clone the bug image you are using so that you have 4 different copies of it\r\n- Make each copy face a different way and give it a good descriptive name\r\n- Set up the code to show the correct bug image at the correct time\r\n\t- The up arrow should switch to up facing bug\r\n\t- The down arrow should switch to down facing bug\r\n\t- The left arrow should switch to left facing bug\r\n\t- The right arrow should switch to right facing bug",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -71,7 +46,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "project_template_level_name": "CSD U3- arrows template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

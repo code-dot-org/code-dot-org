@@ -12,7 +12,6 @@ require 'open-uri'
 require 'httparty'
 
 class Youtube
-
   # Process a video with a YouTube identifier.
   # If filename is provided, transcode the local file with ffmpeg.
   # If no filename is provided, download the transcoded video from YouTube.
@@ -20,7 +19,7 @@ class Youtube
   # When downloading from YouTube, an HTTP head request will first check the absence of the file.
   # If `force`==true, the head request will be skipped.
   def self.process(id, filename=nil, force=false)
-    raise RuntimeError, 'Invalid YouTube ID' unless id =~ /^#{Video::YOUTUBE_ID_REGEX}$/
+    raise 'Invalid YouTube ID' unless id =~ /^#{Video::YOUTUBE_ID_REGEX}$/
     if filename.nil? && !force
       thumbnail_url = "https:#{CDO.videos_url}/youtube/#{id}.jpg"
       response = HTTParty.head(thumbnail_url).response
@@ -52,14 +51,14 @@ class Youtube
       end
 
       IO.popen(cmd) { |output| output.each { |line| CDO.log.info('[Youtube] ' + line.chomp) } }
-      raise RuntimeError, 'Video processing command exited with an error' unless $?.success?
+      raise 'Video processing command exited with an error' unless $?.success?
       file = Dir.glob("#{dir}/*").first
-      raise RuntimeError, 'Video not available in correct format' unless file && File.extname(file) == '.mp4'
+      raise 'Video not available in correct format' unless file && File.extname(file) == '.mp4'
       video_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.mp4", File.open(file), acl: 'public-read', no_random: true, content_type: 'video/mp4')
       CDO.log.info "https:#{CDO.videos_url}/#{video_filename}"
 
       thumbnail_file = "https://i.ytimg.com/vi/#{id}/0.jpg"
-      thumbnail = open(thumbnail_file) || raise(RuntimeError, 'Could not retrieve thumbnail for video')
+      thumbnail = open(thumbnail_file) || raise('Could not retrieve thumbnail for video')
       thumbnail_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.jpg", thumbnail, acl: 'public-read', no_random: true)
       CDO.log.info "https:#{CDO.videos_url}/#{thumbnail_filename}"
     end

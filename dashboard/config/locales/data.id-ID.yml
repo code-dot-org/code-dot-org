@@ -1,76 +1,5 @@
 "id":
   data:
-    script:
-      name:
-        20-hour:
-          desc: Kursus Perkenalan ilmu komputer untuk siswa tingkat sekolah dasar
-            dan menengah
-          Unplug1: Tahap 1
-          Maze: Tahap 2
-          Unplug2: Tahap 3
-          Unplug3: Tahap 4
-          Artist: Tahap 5
-          Unplug4: Tahap 6
-          Artist2: Tahap 7
-          Unplug5: Tahap 8
-          Farmer: Tahap 9
-          Unplug6: Tahap 10
-          Artist3: Tahap 11
-          Unplug7: Tahap 12
-          Farmer2: Tahap 13
-          Unplug8: Tahap 14
-          Artist4: Tahap 15
-          Unplug9: Tahap 16
-          Farmer3: Tahap 17
-          Unplug10: Tahap 18
-          Artist5: Tahap 19
-          Unplug11: Tahap 20
-        Hour of Code:
-          desc: Jam kode
-          Maze: Tahap 1
-        Edit Code:
-          desc: Edit kode (beta)
-          MazeEC: Tahap 1
-        2014 Levels:
-          desc: Memantul (beta)
-          Bounce: Tahap 1
-        Builder Levels:
-          desc: Teka-teki buatan pengguna (beta)
-          Custom: Tahap 1
-        Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Tahap 1
-        Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Tahap 1
-        Step Levels:
-          desc: Labirin (beta)
-          MazeStep: Tahapan
-        edit-code:
-          desc: Edit kode (beta)
-          MazeEC: Tahap 1
-          Applab: Tahap 2
-          ArtistEC: Tahap 3
-          StudioEC: Tahap 4
-        events:
-          desc: Memantul (beta)
-          Bounce: Tahap 1
-          Studio: Tahap 2
-        builder:
-          desc: Teka-teki dari pengguna (beta)
-          Custom: Tahap 1
-        flappy:
-          desc: Burung Flappy
-          Flappy: Tahap 1
-        jigsaw:
-          desc: Teka-teki (beta)
-          Jigsaw: Tahap 1
-        step:
-          desc: Labirin (beta)
-          MazeStep: Tahapan
-        wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Tahap 1
     game:
       name:
         Unplug1: Pengantar Ilmu Komputer
@@ -809,6 +738,7 @@
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'

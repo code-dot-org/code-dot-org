@@ -1,15 +1,26 @@
 name 'unique level name here'
 title 'title'
 description 'description here'
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# What happened on the last level?
+## Overview:
+You and a partner will work together to rate seven additional websites on how “good” they are.  The challenge this time, however, is to identify with your partner some specific features of each website that collectively make it “good” or “bad”.  For this activity, you and your partner will share one computer while analyzing each website’s features.  
+## Directions:
+For each of the websites below, you and your partner will together do the following:
 
-<img src="https://images.code.org/af52f10dffc8980e9b291b42057d9f8c-image-1445006639426.png" style="width: 250px; border: solid 1px black">
+1. Click on the link to the website.
+2. Spend one minute exploring the website with your partner.
+3. Decide together how you would rate the website.
+4. Circle your chosen ratings in the spaces provided
+4. Identify at least 3 features of the website that support your rating, and record those features in the blank space provided.
 
-Step | Memory Before | Memory After
--- | -- | --
-<img src="https://images.code.org/ea0eb0595929c5fb8bcfc199b254840e-image-1445007367058.png" style="width: 150px; border: solid 1px black">  | <img src="https://images.code.org/1ac4d58ff165e29d4a20e7e955308841-image-1445006717460.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/7e55d6fa399c613424b76587f7c225b2-image-1445006715257.png" style="width: 150px; border: solid 1px black">
-<img src="https://images.code.org/91447282489a0bcd7e7905394e608ada-image-1445007368831.png" style="width: 150px; border: solid 1px black">  | <img src="https://images.code.org/7e55d6fa399c613424b76587f7c225b2-image-1445006715257.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/8219a8e2c0c311359600dc13d52c3e69-image-1445006646134.png" style="width: 150px; border: solid 1px black">
-<img src="https://images.code.org/738fff341d21e2b4235271ea137a1016-image-1445007370615.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/8219a8e2c0c311359600dc13d52c3e69-image-1445006646134.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/68c3c077d22bc13165f2edc83a96a1a2-image-1445006648296.png" style="width: 150px; border: solid 1px black">
-<img src="https://images.code.org/4b0faa246754583696c4c0132277bda8-image-1445007372291.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/68c3c077d22bc13165f2edc83a96a1a2-image-1445006648296.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/68c3c077d22bc13165f2edc83a96a1a2-image-1445006648296.png" style="width: 150px; border: solid 1px black">
+## Websites
+
+1. <a href="https://en.wikipedia.org/wiki/Wikipedia">Wikipedia</a> 
+2. <a href="http://www.msy.com.au">MSY Technology Website</a> 
+3. <a href="http://paradisewithaview.com/">Paradise with a View Website</a> 
+4. <a href="http://www.isbe.net/">Illinois State Board of Education Website</a> 
+5. <a href="http://foremanhs.org/">Foreman College and Career Academy</a> 
+6. <a href="http://art.yale.edu/">Yale University School of Art Website</a> 
+7. <a href="http://whitehouse.gov">White House Website</a>
 MARKDOWN

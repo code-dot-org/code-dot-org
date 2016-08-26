@@ -4,19 +4,18 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 10 - Encoding and Sending Text
-# Background
+# Unit 1: Lesson 10 - Encoding and Sending Text
 
+## Background
 
 Since all information sent by a computer is encoded in bits, we need protocols to help us interpret these bits as meaningful information. In previous lessons we learned how to use the binary number system to allow us to represent numbers in bits. We now address the challenge of encoding text in bits and find that we can reuse and build upon much of the work we did to encode numbers. This pattern of reusing solutions to other problems arises frequently in computer science and allows the development of more complex systems.
 
-# Lesson
+## Lesson
 
 * Create a protocol for sending text messages
 * Use the protocol to send a message with the Internet Simulator
 
-
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1cEdRy-VYx6eM_o_QzYT44-eDtmqGoKVOF0TQxSSq0dI/edit?usp=sharing"target="_blank">Encoding and Sending Text</a>
 * Rubric: <a href="https://docs.google.com/document/d/1MctmH5qXEKgF9ylX9duw5MUwU1XBSKh0pbxrc9cpamE/edit?usp=sharing"target="_blank">Encoding and Sending Text</a>

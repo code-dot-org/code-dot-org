@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -207,15 +208,9 @@
             <mutation name="get 3 nectar"/>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_set" inline="false">
-            <title name="VAR">left</title>
-          </block>
+        <category name="Variables ">
           <block type="variables_get">
             <title name="VAR">left</title>
-          </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">right</title>
           </block>
           <block type="variables_get">
             <title name="VAR">right</title>

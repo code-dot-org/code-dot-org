@@ -1,13 +1,15 @@
 @import "color";
 
 .projects-page {
-  h1 {text-align: center;}
+  h1 {
+    text-align: center;
+  }
   .level_link,.level_link:link, .level_link:visited {
     background-color: $purple;
     border-color: $purple;
     font-size: 14px;
     padding: 5px 10px;
-    color: white;
+    color: $white;
     &:hover {
       background-color: $level_current;
       border-color: $level_current;
@@ -30,11 +32,11 @@ $projects-table-width: 850px;
   th {
     padding: 10px;
     background-color: $bkgnd_color;
-    color: white;
+    color: $white;
     text-align: left;
 
     a, a:hover, a:link, a:visited {
-      color: white !important;
+      color: $white !important;
     }
   }
   tr {
@@ -42,7 +44,7 @@ $projects-table-width: 850px;
   }
   td {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid $lighter_gray;
   }
   .name {
     font-size: 1.5em;
@@ -63,7 +65,7 @@ $projects-table-width: 850px;
     border-color: $purple;
     font-size: 14px;
     padding: 5px 10px;
-    color: white;
+    color: $white;
     &:hover {
       background-color: $level_current;
       border-color: $level_current;

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class UserLevelTest < ActiveSupport::TestCase
   setup do
     @user = create(:user)
     @level = create(:level)
@@ -114,5 +114,45 @@ class UserTest < ActiveSupport::TestCase
     ul = UserLevel.create(user: @user, level: @level, attempts: 0, submitted: true, best_result: Activity::REVIEW_REJECTED_RESULT)
     ul.update! submitted: false
     assert_equal Activity::UNSUBMITTED_RESULT, ul.best_result
+  end
+
+  test "driver and navigator user levels" do
+    student1 = create :student
+    student2 = create :student
+
+    level = create :level
+    script = create :script
+    driver = create :user_level, user: student1, level: level, script: script
+    navigator = create :user_level, user: student2, level: level, script: script
+
+    driver.navigator_user_levels << navigator
+
+    driver.reload
+    navigator.reload
+
+    assert_equal [navigator], driver.navigator_user_levels
+    assert_equal [driver], navigator.driver_user_levels
+  end
+
+  test "authorized_teacher cant become locked" do
+    teacher = create :teacher
+    cohort = create :cohort
+    teacher.cohorts << cohort
+
+    stage = create :stage
+
+    stage.lockable = true
+    stage.save!
+
+    script_level = create :script_level, levels: [@level], stage: stage
+
+    ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
+    ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
+
+    assert_equal true, @user.user_level_locked?(script_level, @level)
+    assert_equal false, teacher.user_level_locked?(script_level, @level)
+
+    assert_equal true, ul_student.locked?(stage)
+    assert_equal false, ul_teacher.locked?(stage)
   end
 end

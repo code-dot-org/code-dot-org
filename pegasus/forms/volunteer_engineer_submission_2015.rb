@@ -1,7 +1,6 @@
 require pegasus_dir 'forms/volunteer_engineer_submission'
 
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
-
   # Ability for volunteers to have a custom unsubscribe preference from teacher
   # requests was added during HoC 2015. They had two options to unsubscribe: until the
   # following year or to unsubscribe from teacher requests forever. Language was later
@@ -34,7 +33,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result
   end
 
-  def self.commitments()
+  def self.commitments
     (@commitments ||= {})[I18n.locale] ||= commitments_with_i18n_labels(
       'annually',
       'monthly',
@@ -43,14 +42,14 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.locations()
-    (@locations ||= {})[I18n.locale] ||=  locations_with_i18n_labels(
+  def self.locations
+    (@locations ||= {})[I18n.locale] ||= locations_with_i18n_labels(
       'onsite',
       'remote',
     )
   end
 
-  def self.experiences()
+  def self.experiences
     (@experiences ||= {})[I18n.locale] ||= experiences_with_i18n_labels(
       'unspecified',
       'tech_company',
@@ -59,9 +58,9 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.distances()
+  def self.distances
     # distance is in km
-    (@distances ||= {})[I18n.locale] ||=  distances_with_i18n_labels(
+    (@distances ||= {})[I18n.locale] ||= distances_with_i18n_labels(
       '8',
       '16',
       '24',
@@ -69,7 +68,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.num_volunteers()
+  def self.num_volunteers
     (@num_volunteers ||= {})[I18n.locale] ||= num_volunteers_with_i18n_labels(
       '5',
       '10',
@@ -136,7 +135,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       fq: fq,
       fl: fl,
       facet: true,
-      'facet.field'=>['location_flexibility_ss', 'experience_s'],
+      'facet.field' => ['location_flexibility_ss', 'experience_s'],
       rows: rows,
       sort: "random_#{SecureRandom.random_number(10**8)} asc"
     }

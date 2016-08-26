@@ -64,6 +64,7 @@ class CalloutsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_callout
     @callout = Callout.find(params[:id])
@@ -75,7 +76,7 @@ class CalloutsController < ApplicationController
   end
 
   # this is to fix a ForbiddenAttributesError cancan issue
-  prepend_before_filter do
+  prepend_before_action do
     params[:callout] &&= callout_params
   end
 end

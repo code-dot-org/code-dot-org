@@ -1,3 +1,3 @@
 default['cdo-secrets'] = {
-  'words'=>['test']
+  'words' => ['test']
 }

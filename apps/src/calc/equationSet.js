@@ -231,6 +231,16 @@ EquationSet.prototype.hasDivZero = function () {
 };
 
 /**
+ * @returns {boolean} true if evaluating our EquationSet would result in
+ *   dividing by zero.
+ */
+EquationSet.prototype.hasImaginary = function () {
+  var evaluation = this.evaluate();
+  return evaluation.err &&
+    evaluation.err instanceof ExpressionNode.ImaginaryNumberError;
+};
+
+/**
  * Evaluate the EquationSet's compute expression in the context of its equations
  */
 EquationSet.prototype.evaluate = function () {
@@ -281,6 +291,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         evaluation = equation.expression.evaluate(testMapping);
         if (evaluation.err) {
           if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+              evaluation.err instanceof ExpressionNode.ImaginaryNumberError ||
               utils.isInfiniteRecursionError(evaluation.err)) {
             return { err: evaluation.err };
           }
@@ -296,7 +307,8 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
       } else if (mapping[equation.name] === undefined) {
         evaluation = equation.expression.evaluate(mapping);
         if (evaluation.err) {
-          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+              evaluation.err instanceof ExpressionNode.ImaginaryNumberError) {
             return { err: evaluation.err };
           }
         } else {

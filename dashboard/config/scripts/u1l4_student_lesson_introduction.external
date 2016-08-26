@@ -5,96 +5,27 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 4 - Sending Binary Messages with the Internet Simulator
+# Unit 1: Lesson 4 - Sending Binary Messages with the Internet Simulator
 
-# Background
+## Background
 Now that you have learned what binary messages are, we are going to investigate how binary messages are sent over the internet. You will get to experience some of the challenges the original creators of the internet had to solve. Using the Internet Simulator you can solve the problem of how to coordinate sending messages between two devices more quickly.
 
-# Vocabulary
+## Vocabulary
 
 * Bit Rate: The speed at which a system is able to transmit bits.
 
-# Lesson
+## Lesson
 
-* Use the “Internet Simulator” to send bits between two points. 
+* Use the “Internet Simulator” to send bits between two points.
 * Create a protocol for encoding messages to be sent using the widget.
 * Interpret the bits as they are received by the widget.
 
 
-# Resources
+## Resources
 
 <!-- * [Bit Sending Widget](http://bit.ly/sendingBits_AB -->
 <!-- * Video [Demonstration of the Widget](http://youtu.be/dubPPv_ECPA)  -->
 * Student Activity: <a href="https://docs.google.com/document/d/1Oyfk9VC9ymoDTCG-Z5pC95zupRI4FBTttO2rqvCUlcs/edit?usp=sharing" target=_blank>Sending Binary Messags with the Internet Simulator</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

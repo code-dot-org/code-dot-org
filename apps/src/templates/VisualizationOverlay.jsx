@@ -14,7 +14,8 @@ export let VisualizationOverlay = React.createClass({
   propTypes: {
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
-    areOverlaysVisible: React.PropTypes.bool.isRequired
+    areOverlaysVisible: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState: () => ({
@@ -81,15 +82,14 @@ export let VisualizationOverlay = React.createClass({
   render() {
     return (
       <svg
-          ref="root"
-          id="visualizationOverlay"
-          version="1.1"
-          baseProfile="full"
-          xmlns="http://www.w3.org/2000/svg"
-          width={this.props.width}
-          height={this.props.height}
-          viewBox={"0 0 " + this.props.width + " " + this.props.height}
-          pointerEvents="none"
+        ref="root"
+        id="visualizationOverlay"
+        version="1.1"
+        baseProfile="full"
+        width={this.props.width}
+        height={this.props.height}
+        viewBox={"0 0 " + this.props.width + " " + this.props.height}
+        pointerEvents="none"
       >
         {this.props.areOverlaysVisible && this.renderOverlays()}
       </svg>

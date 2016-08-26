@@ -14,7 +14,6 @@ apt_package 'zsh'
 # For each user defined in cdo-users, ensure there is a basic home folder.
 #
 node['cdo-users'].each_pair do |user_name, user_data|
-
   home_directory = user_data['home'] || "/home/#{user_name}"
 
   # Create the user's account.
@@ -42,7 +41,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
     '.inputrc',
     '.profile',
   ].each do |dotfile|
-    template File.join(home_directory, "#{dotfile}") do
+    template File.join(home_directory, dotfile) do
       action :create_if_missing
       source "#{dotfile[1..-1]}.erb"
       #variables( )
@@ -141,7 +140,6 @@ node['cdo-users'].each_pair do |user_name, user_data|
     group user_name
     mode '0600'
   end
-
 end
 
 # Create the user's group

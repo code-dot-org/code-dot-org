@@ -1,8 +1,10 @@
 \#*#
 *.pid
+*.pid.oldbin
 *~
 .DS_Store
 .dropbox
+.tmputils
 .idea/
 **/.bundle
 crowdin.yaml
@@ -45,3 +47,4 @@ crowdin.yaml
 /coverage
 /apps/coverage
 /apps/test/entry-tests.js
+/dashboard/public/styleguide

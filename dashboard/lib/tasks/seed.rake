@@ -15,8 +15,8 @@ namespace :seed do
       LevelSourceHint.delete_all(['source=?', source_name])
       CSV.read(STANFORD_HINTS_FILE, { col_sep: "\t" }).each do |row|
         LevelSourceHint.create!(
-            level_source_id: row[0], hint: row[1],
-            status: 'experiment', source: source_name)
+          level_source_id: row[0], hint: row[1],
+          status: 'experiment', source: source_name)
       end
     end
     touch STANFORD_HINTS_IMPORTED
@@ -119,31 +119,23 @@ namespace :seed do
     end
   end
 
-  task trophies: :environment do
-    # code in user.rb assumes that broze id: 1, silver id: 2 and gold id: 3.
-    Trophy.transaction do
-      Trophy.reset_db
-      %w(Bronze Silver Gold).each_with_index do |trophy, id|
-        Trophy.create!(id: id + 1, name: trophy, image_name: "#{trophy.downcase}trophy.png")
-      end
-    end
-  end
-
   task prize_providers: :environment do
     PrizeProvider.transaction do
       PrizeProvider.reset_db
       # placeholder data - id's are assumed to start at 1 so prizes below can be loaded properly
-      [{name: 'Apple iTunes', description_token: 'apple_itunes', url: 'http://www.apple.com/itunes/', image_name: 'itunes_card.jpg'},
-      {name: 'Dropbox', description_token: 'dropbox', url: 'http://www.dropbox.com/', image_name: 'dropbox_card.jpg'},
-      {name: 'Valve Portal', description_token: 'valve', url: 'http://www.valvesoftware.com/games/portal.html', image_name: 'portal2_card.png'},
-      {name: 'EA Origin Bejeweled 3', description_token: 'ea_bejeweled', url: 'https://www.origin.com/en-us/store/buy/181609/mac-pc-download/base-game/standard-edition-ANW.html', image_name: 'bejeweled_card.jpg'},
-      {name: 'EA Origin FIFA Soccer 13', description_token: 'ea_fifa', url: 'https://www.origin.com/en-us/store/buy/fifa-2013/pc-download/base-game/standard-edition-ANW.html', image_name: 'fifa_card.jpg'},
-      {name: 'EA Origin SimCity 4 Deluxe', description_token: 'ea_simcity', url: 'https://www.origin.com/en-us/store/buy/sim-city-4/pc-download/base-game/deluxe-edition-ANW.html', image_name: 'simcity_card.jpg'},
-      {name: 'EA Origin Plants vs. Zombies', description_token: 'ea_pvz', url: 'https://www.origin.com/en-us/store/buy/plants-vs-zombies/mac-pc-download/base-game/standard-edition-ANW.html', image_name: 'pvz_card.jpg'},
-      {name: 'DonorsChoose.org $750', description_token: 'donors_choose', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
-      {name: 'DonorsChoose.org $250', description_token: 'donors_choose_bonus', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
-      {name: 'Skype', description_token: 'skype', url: 'http://www.skype.com/', image_name: 'skype_card.jpg'}].each_with_index do |pp, id|
-        PrizeProvider.create!(pp.merge!({:id=>id + 1}))
+      [
+        {name: 'Apple iTunes', description_token: 'apple_itunes', url: 'http://www.apple.com/itunes/', image_name: 'itunes_card.jpg'},
+        {name: 'Dropbox', description_token: 'dropbox', url: 'http://www.dropbox.com/', image_name: 'dropbox_card.jpg'},
+        {name: 'Valve Portal', description_token: 'valve', url: 'http://www.valvesoftware.com/games/portal.html', image_name: 'portal2_card.png'},
+        {name: 'EA Origin Bejeweled 3', description_token: 'ea_bejeweled', url: 'https://www.origin.com/en-us/store/buy/181609/mac-pc-download/base-game/standard-edition-ANW.html', image_name: 'bejeweled_card.jpg'},
+        {name: 'EA Origin FIFA Soccer 13', description_token: 'ea_fifa', url: 'https://www.origin.com/en-us/store/buy/fifa-2013/pc-download/base-game/standard-edition-ANW.html', image_name: 'fifa_card.jpg'},
+        {name: 'EA Origin SimCity 4 Deluxe', description_token: 'ea_simcity', url: 'https://www.origin.com/en-us/store/buy/sim-city-4/pc-download/base-game/deluxe-edition-ANW.html', image_name: 'simcity_card.jpg'},
+        {name: 'EA Origin Plants vs. Zombies', description_token: 'ea_pvz', url: 'https://www.origin.com/en-us/store/buy/plants-vs-zombies/mac-pc-download/base-game/standard-edition-ANW.html', image_name: 'pvz_card.jpg'},
+        {name: 'DonorsChoose.org $750', description_token: 'donors_choose', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
+        {name: 'DonorsChoose.org $250', description_token: 'donors_choose_bonus', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
+        {name: 'Skype', description_token: 'skype', url: 'http://www.skype.com/', image_name: 'skype_card.jpg'}
+      ].each_with_index do |pp, id|
+        PrizeProvider.create!(pp.merge!({:id => id + 1}))
       end
     end
   end
@@ -188,12 +180,12 @@ namespace :seed do
   task :import_users, [:file] => :environment do |_t, args|
     CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
       User.create!(
-          provider: User::PROVIDER_MANUAL,
-          name: row['Name'],
-          username: row['Username'],
-          password: row['Password'],
-          password_confirmation: row['Password'],
-          birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday']))
+        provider: User::PROVIDER_MANUAL,
+        name: row['Name'],
+        username: row['Username'],
+        password: row['Password'],
+        password_confirmation: row['Password'],
+        birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday']))
     end
   end
 
@@ -265,10 +257,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
+  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
 end

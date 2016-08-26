@@ -22,7 +22,6 @@ require_relative 'queue_processor_config'
 require_relative 'rate_limiter'
 
 module SQS
-
   # A class for processing an SQS queue using a pool of worker threads, each of which
   # does long polling against the queue.
   class QueueProcessor
@@ -92,7 +91,9 @@ module SQS
                 # pause even if the handler failed because we don't want to exceed the configured rate
                 # even when failures are occuring.
                 delay = rate_limiter.inter_batch_delay(
-                    batch_size: batch_size, elapsed_time_sec: Time.now.to_f - start_time_sec)
+                  batch_size: batch_size,
+                  elapsed_time_sec: Time.now.to_f - start_time_sec
+                )
                 sleep(delay) if delay > 0
 
                 # Tell SQS to resend the batch if it failed.

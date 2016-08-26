@@ -21,7 +21,6 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     @unrelated_teacher = create :teacher
     create :pd_attendance, session: @another_workshop.sessions[0], teacher: @unrelated_teacher
     create :districts_users, district: @district, user: @unrelated_teacher
-
   end
 
   test 'for_teacher for_workshop' do
@@ -58,5 +57,14 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     teachers = Pd::Attendance.for_district(@district).distinct_teachers
     assert_equal 2, teachers.count
     assert_equal [@teacher1, @unrelated_teacher], teachers
+  end
+
+  test 'unique constraint on pd_session_id and teacher_id prevents duplicates' do
+    attendance = create :pd_attendance
+    dupe = attendance.dup
+
+    assert_raises ActiveRecord::RecordNotUnique do
+      dupe.save!
+    end
   end
 end

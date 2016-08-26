@@ -2,7 +2,7 @@
 require File.expand_path('../../deployment', __FILE__)
 require 'cdo/db'
 
-def main()
+def main
   ARGV.each do |csv_file|
     extname = File.extname(csv_file)
     unless extname == '.csv'

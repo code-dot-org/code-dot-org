@@ -1,7 +1,7 @@
 module Ops
   class WorkshopsController < OpsControllerBase
-    before_filter :convert_cohorts, only: [:create, :update]
-    after_filter :notify_ops, only: [:update]
+    before_action :convert_cohorts, only: [:create, :update]
+    after_action :notify_ops, only: [:update]
 
     load_and_authorize_resource
 
@@ -67,8 +67,8 @@ module Ops
     def workshop_params
       # This is necessary because rails turns empty arrays into nil
       if params[:workshop]
-        params[:workshop][:facilitators] ||= [] if params[:workshop].has_key?(:facilitators)
-        params[:workshop][:unexpected_teachers] ||= [] if params[:workshop].has_key?(:unexpected_teachers)
+        params[:workshop][:facilitators] ||= [] if params[:workshop].key?(:facilitators)
+        params[:workshop][:unexpected_teachers] ||= [] if params[:workshop].key?(:unexpected_teachers)
       end
 
       params.fetch(:workshop, {}).permit(

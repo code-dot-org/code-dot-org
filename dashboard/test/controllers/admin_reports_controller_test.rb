@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminReportsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   setup do
     # Stub used by :admin_stats.
@@ -12,7 +12,7 @@ class AdminReportsControllerTest < ActionController::TestCase
 
     @not_admin = create(:user, username: 'notadmin')
 
-    @script = create(:script, name: 'Report Script')
+    @script = create(:script, name: 'report-script')
     @stage = create(:stage, script: @script, name: 'Report Stage 1')
     @stage2 = create(:stage, script: @script, name: 'Report Stage 2')
     @script_level = create(:script_level, script: @script, stage: @stage)
@@ -41,5 +41,4 @@ class AdminReportsControllerTest < ActionController::TestCase
     get :admin_progress
     assert_select 'h1', 'Admin progress'
   end
-
 end

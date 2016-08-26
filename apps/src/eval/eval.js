@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-'use strict';
-
 var Eval = module.exports;
 
 /**
@@ -24,7 +22,7 @@ var Eval = module.exports;
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
@@ -156,8 +154,8 @@ Eval.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<EvalVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={<EvalVisualizationColumn/>}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -276,9 +274,8 @@ Eval.resetButtonClick = function () {
 function evalCode(code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: studioApp,
       Eval: api
-    });
+    }, true);
 
     var object = Eval.displayedObject;
     Eval.displayedObject = null;
@@ -508,6 +505,12 @@ Eval.execute = function () {
   }
 
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
+
+  if (!Eval.result && level.isProjectLevel) {
+    // In projects mode, report callback is never called. In the case of a
+    // failure, immediately display any feedback.
+    displayFeedback();
+  }
 };
 
 Eval.checkExamples_ = function (resetPlayspace) {

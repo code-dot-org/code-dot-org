@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Preparat per al teu esdeveniment
 
@@ -36,13 +32,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Exemple d'un pla pel teu esdeveniment
 
-**Esdeveniment:** Assamblea per començar una setmana d'educació en informàtica per a tota l'escola
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Temps:** Durant la jornada escolar. Preferentment esdeveniment de mig matí. Aproximadament 1 hora.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Ubicació:** Sala d'actes de l'escola (per exemple, teatre, gimnàs, cafeteria)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | Els estudiants mostres una activitat desendollada i com es pot ensenyarinformàtica sense utilitzar ordinadors.                                  |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-
-<%= view :signup_button %>
