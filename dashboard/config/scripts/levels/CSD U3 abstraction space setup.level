@@ -52,8 +52,8 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\"earth\", \"moon\",\"satellite\",\"spaceship\" ],\r\n  \"propsByKey\": {\r\n    \"earth\": {\r\n      \"name\": \"earth\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/earthbig.png\",\r\n      \"sourceSize\": {\"x\":500, \"y\": 500},\r\n      \"frameSize\": {\"x\":500, \"y\": 500},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"moon\": {\r\n      \"name\": \"moon\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/moon.png\",\r\n      \"sourceSize\": {\"x\":100, \"y\": 100},\r\n      \"frameSize\": {\"x\":100, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"satellite\": {\r\n      \"name\": \"satellite\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/satellite.png\",\r\n      \"sourceSize\": {\"x\":100, \"y\": 100},\r\n      \"frameSize\": {\"x\":100, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"spaceship\": {\r\n      \"name\": \"spaceship\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/spaceship.png\",\r\n      \"sourceSize\": {\"x\":100, \"y\": 100},\r\n      \"frameSize\": {\"x\":100, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}\r\n",
     "project_template_level_name": "CSD U3 abstraction space template",
     "palette_category_at_start": "sprites",
-    "contained_level_names": null,
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
