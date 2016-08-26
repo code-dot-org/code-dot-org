@@ -1,7 +1,5 @@
 /** @file Redux reducer functions for Game Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-'use strict';
-
 import {CHANGE_INTERFACE_MODE} from './actions';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';

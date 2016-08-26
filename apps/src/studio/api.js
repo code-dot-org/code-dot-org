@@ -99,6 +99,39 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   });
 };
 
+exports.setSpritesWander = function (id, spriteName) {
+  Studio.queueCmd(id, 'setSpritesWander', {
+    'spriteName': spriteName
+  });
+};
+
+exports.setSpritesStop = function (id, spriteName) {
+  Studio.queueCmd(id, 'setSpritesStop', {
+    'spriteName': spriteName
+  });
+};
+
+exports.setSpritesChase = function (id, targetSpriteIndex, spriteName) {
+  Studio.queueCmd(id, 'setSpritesChase', {
+    'spriteName': spriteName,
+    'targetSpriteIndex': targetSpriteIndex,
+  });
+};
+
+exports.setSpritesFlee = function (id, targetSpriteIndex, spriteName) {
+  Studio.queueCmd(id, 'setSpritesFlee', {
+    'spriteName': spriteName,
+    'targetSpriteIndex': targetSpriteIndex,
+  });
+};
+
+exports.setSpritesSpeed = function (id, speed, spriteName) {
+  Studio.queueCmd(id, 'setSpritesSpeed', {
+    'spriteName': spriteName,
+    'speed': speed,
+  });
+};
+
 exports.addGoal = function (id, value) {
   Studio.queueCmd(id, 'addGoal', {
     'value': Number(value)

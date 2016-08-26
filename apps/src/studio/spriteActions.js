@@ -1,5 +1,4 @@
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
-'use strict';
 
 import {
   Direction,

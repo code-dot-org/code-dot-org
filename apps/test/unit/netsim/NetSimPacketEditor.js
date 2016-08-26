@@ -1,5 +1,4 @@
 /** @file Tests for NetSimPacketEditor */
-'use strict';
 import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');

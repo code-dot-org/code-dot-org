@@ -5,7 +5,6 @@
 /* global -Blockly */
 /* global dashboard */
 /* global confirm */
-'use strict';
 
 import $ from 'jquery';
 import React from 'react';

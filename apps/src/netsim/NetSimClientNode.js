@@ -1,8 +1,6 @@
 /**
  * @overview Simulated client node.
  */
-'use strict';
-
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
 var NodeType = require('./NetSimConstants').NodeType;

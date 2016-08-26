@@ -44,6 +44,7 @@ export default class Item extends Collidable {
     this.displayDir = Direction.SOUTH;
     this.startFadeTime = null;
     this.fadeTime = constants.ITEM_FADE_TIME;
+    this.targetSpriteIndex = 0;
 
     /** @private {StudioAnimation} */
     this.animation_ = new StudioAnimation(Object.assign({}, options, {
@@ -150,13 +151,22 @@ export default class Item extends Collidable {
     // Has the item reached its destination grid position?
     // (There is a small margin of error to allow for per-update movements greater
     // than a single pixel.)
-    var speed = valueOr(this.speed, 0);
-    if (this.destGridX !== undefined &&
-        (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed &&
-         Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed)) {
-      this.gridX = this.destGridX;
-      this.gridY = this.destGridY;
-      reachedDestinationGridPosition = true;
+    if (this.destGridX !== undefined) {
+      var speed = valueOr(this.speed, 0);
+      var dirUnit = Direction.getUnitVector(this.dir);
+      var center = this.getCenterPos();
+      var destVector = {
+        x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
+        y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
+      };
+      // Take the dot product of dirUnit and destVector to see if continuing to
+      // move in that direction will bring the item any closer to its
+      // destination.
+      if (dirUnit.x * destVector.x + dirUnit.y * destVector.y <= speed) {
+        this.gridX = this.destGridX;
+        this.gridY = this.destGridY;
+        reachedDestinationGridPosition = true;
+      }
     }
 
     // Are we missing a destination location in grid coords?
@@ -164,7 +174,7 @@ export default class Item extends Collidable {
     // If not, determine it.
     if (this.destGridX === undefined || reachedDestinationGridPosition) {
 
-      var sprite = Studio.sprite[0];
+      var sprite = Studio.sprite[this.targetSpriteIndex];
 
       var spriteX = sprite.x + sprite.width/2;
       var spriteY = sprite.y + sprite.height/2;
@@ -233,10 +243,7 @@ export default class Item extends Collidable {
       // cull candidates that won't be possible
       for (var i = candidates.length-1; i >= 0; i--) {
         var candidate = candidates[i];
-        var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
-                     candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
-        var hasWall = !atEdge && Studio.getWallValue(candidate.gridY, candidate.gridX);
-        if (atEdge || hasWall || candidate.score === 0) {
+        if (candidate.score === 0 || this.atEdge(candidate) || this.hasWall(candidate)) {
           candidates.splice(i, 1);
         }
       }
@@ -277,6 +284,15 @@ export default class Item extends Collidable {
     }
   }
 
+  atEdge(candidate) {
+    return candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
+        candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
+  }
+
+  hasWall(candidate) {
+    return Studio.getWallValue(candidate.gridY, candidate.gridX);
+  }
+
   /**
    * Isolated update logic for "watchActor" activity where the "item" keeps
    * turning to look at the actor with the given sprite index.
@@ -309,9 +325,13 @@ export default class Item extends Collidable {
   /**
    * Sets the activity property for this item.
    * @param {string} type Valid options are: none, watchActor, roam, chase, or flee
+   * @param {number} targetSpriteIndex optional target sprite used with chase and flee
    */
-  setActivity(type) {
+  setActivity(type, targetSpriteIndex) {
     this.activity = type;
+    if (targetSpriteIndex !== undefined) {
+      this.targetSpriteIndex = targetSpriteIndex;
+    }
   }
 
   /**
@@ -387,6 +407,13 @@ export default class Item extends Collidable {
           y: this.y + this.renderOffset.y
         },
         Studio.tickCount);
+  }
+
+  getCenterPos() {
+    return {
+      x: this.x,
+      y: this.y,
+    };
   }
 
   getNextPosition() {
