@@ -2,7 +2,6 @@
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.
  */
-'use strict';
 
 var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('@cdo/netsim/locale');

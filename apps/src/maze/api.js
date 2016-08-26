@@ -339,3 +339,19 @@ exports.hasPumpkin = API_FUNCTION(function (id) {
 exports.hasBean = API_FUNCTION(function (id) {
   return Maze.subtype.hasBean(id);
 });
+
+/**
+ * Planter
+ */
+
+exports.plant = API_FUNCTION(function (id) {
+  Maze.subtype.plant(id);
+});
+
+exports.atSoil = API_FUNCTION(function (id) {
+  return Maze.subtype.atSoil(id);
+});
+
+exports.atSprout = API_FUNCTION(function (id) {
+  return Maze.subtype.atSprout(id);
+});

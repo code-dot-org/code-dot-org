@@ -3,7 +3,6 @@
  * available in all browsers.  Also makes it easy to turn logging on and off
  * in tests.
  */
-'use strict';
 
 /**
  * Logging API to control log levels and support different browsers
