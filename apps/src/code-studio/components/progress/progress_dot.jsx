@@ -439,6 +439,81 @@ if (BUILD_STYLEGUIDE) {
           )
         },
         {
+          name: 'rejected peer review in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [1073563865, []],
+                position: 7,
+                kind: "named_level",
+                icon: null,
+                title: 7,
+                url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
+                name: "Peer Review Level 1 - Tuesday Report",
+                status: "review_rejected"
+              }}
+            />
+          )
+        },
+        {
+          name: 'accepted peer review in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [1073563865, []],
+                position: 7,
+                kind: "named_level",
+                icon: null,
+                title: 7,
+                url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
+                name: "Peer Review Level 1 - Tuesday Report",
+                status: "review_accepted"
+              }}
+            />
+          )
+        },
+        {
+          name: 'submitted but unreviewed peer review in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [1073563865, []],
+                position: 7,
+                kind: "named_level",
+                icon: null,
+                title: 7,
+                url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
+                name: "Peer Review Level 1 - Tuesday Report",
+                status: "submitted"
+              }}
+            />
+          )
+        },
+        {
+          name: 'locked peer review in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [0],
+                kind: "peer_review",
+                title: "",
+                url: "",
+                name: "Reviews unavailable at this time",
+                icon: "fa-lock",
+                locked: true
+              }}
+            />
+          )
+        },
+        {
           name: 'named video level in course overview with no icon',
           story: () => (
             <ProgressDot
@@ -538,7 +613,7 @@ if (BUILD_STYLEGUIDE) {
               }}
             />
           )
-        },
+        }
       ]);
   };
 }
