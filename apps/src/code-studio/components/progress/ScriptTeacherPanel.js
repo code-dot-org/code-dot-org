@@ -63,6 +63,7 @@ const ScriptTeacherPanel = React.createClass({
     ).isRequired,
     selectedSection: React.PropTypes.string,
     sectionsLoaded: React.PropTypes.bool.isRequired,
+    scriptHasLockableStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     setViewType: React.PropTypes.func.isRequired,
     selectSection: React.PropTypes.func.isRequired,
@@ -79,6 +80,7 @@ const ScriptTeacherPanel = React.createClass({
       selectedSection,
       sectionsLoaded,
       setViewType,
+      scriptHasLockableStages,
       unlockedStageNames
     } = this.props;
     const hasSections = Object.keys(sections).length > 0;
@@ -88,7 +90,7 @@ const ScriptTeacherPanel = React.createClass({
         <div className="content">
           <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
           {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          {hasSections &&
+          {scriptHasLockableStages && hasSections &&
             <select
               name="sections"
               style={styles.select}
@@ -102,7 +104,7 @@ const ScriptTeacherPanel = React.createClass({
               ))}
             </select>
           }
-          {hasSections && this.props.viewAs === ViewType.Teacher &&
+          {scriptHasLockableStages && hasSections && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
                 {commonMsg.selectSection()}
@@ -132,7 +134,7 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, sections, selectedSection, sectionsLoaded } = state.stageLock;
+  const { viewAs, sections, selectedSection, sectionsLoaded, lockableAuthorized } = state.stageLock;
   const currentSection = sections[selectedSection];
   const stages = currentSection ? currentSection.stages : {};
 
@@ -147,11 +149,16 @@ export default connect((state, ownProps) => {
     stageNames[stage.id] = stage.name;
   });
 
+  // Pretend we don't have lockable stages if we're not authorized to see them
+  const scriptHasLockableStages = lockableAuthorized &&
+    state.progress.stages.some(stage => stage.lockable);
+
   return {
     viewAs,
     sections,
     selectedSection,
     sectionsLoaded,
+    scriptHasLockableStages,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 }, dispatch => ({

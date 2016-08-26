@@ -49,4 +49,10 @@ class HomeController < ApplicationController
   def certificate_link_test
     render 'certificate_link_test', formats: [:html]
   end
+
+  # This static page combines TOS and Privacy partials all in one page
+  # for easy printing.
+  def terms_and_privacy
+    render partial: 'home/tos_and_privacy'
+  end
 end

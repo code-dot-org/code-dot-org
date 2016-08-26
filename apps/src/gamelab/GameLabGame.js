@@ -1,5 +1,3 @@
-'use strict';
-
 var GameLabGame = function (p5Inst) {
   this.p5Inst = p5Inst;
 };

@@ -29,7 +29,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       attending_user_ids = []
       supplied_attendances.each do |attendance|
         if attendance[:id]
-          attending_user_ids << attendance[:id]
+          attending_user_ids << attendance[:id].to_i
         elsif attendance[:email]
           teacher = create_teacher attendance[:email]
 
@@ -44,7 +44,9 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       no_longer_attending = existing_user_ids - attending_user_ids
 
       new_attendees.each do |user_id|
-        Pd::Attendance.create session: session, teacher: User.find_by_id!(user_id)
+        Retryable.retryable(tries: 2, on: ActiveRecord::RecordNotUnique) do
+          Pd::Attendance.find_or_create_by! session: session, teacher: User.find_by_id!(user_id)
+        end
       end
       no_longer_attending.each do |user_id|
         session.attendances.find_by(teacher_id: user_id).destroy

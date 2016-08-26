@@ -332,7 +332,7 @@ ActiveRecord::Schema.define(version: 20160824002113) do
     t.datetime "updated_at"
   end
 
-  add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
+  add_index "pd_attendances", ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
 
   create_table "pd_course_facilitators", force: :cascade do |t|
     t.integer "facilitator_id", limit: 4,   null: false
@@ -678,13 +678,14 @@ ActiveRecord::Schema.define(version: 20160824002113) do
   add_index "segments", ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
 
   create_table "stages", force: :cascade do |t|
-    t.string   "name",          limit: 255, null: false
-    t.integer  "position",      limit: 4
-    t.integer  "script_id",     limit: 4,   null: false
+    t.string   "name",              limit: 255, null: false
+    t.integer  "absolute_position", limit: 4
+    t.integer  "script_id",         limit: 4,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "flex_category", limit: 255
+    t.string   "flex_category",     limit: 255
     t.boolean  "lockable"
+    t.integer  "relative_position", limit: 4,   null: false
   end
 
   create_table "survey_results", force: :cascade do |t|

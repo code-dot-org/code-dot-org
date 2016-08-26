@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+/* eslint no-unused-vars: "error" */
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -11,9 +12,13 @@ import MultiCheckboxSelector, {
   styles as multiCheckboxStyles
 } from '../templates/MultiCheckboxSelector';
 import color from '../color';
-import designMode from './designMode';
-import * as elementUtils from './designElements/elementUtils';
-import {toggleImportScreen} from './redux/screens';
+import {toggleImportScreen, importIntoProject} from './redux/screens';
+import {
+  getImportableProject,
+  importableAssetShape,
+  importableScreenShape,
+  importableProjectShape
+} from './import';
 
 const SCALE = 0.1;
 const MARGIN = 10;
@@ -84,32 +89,9 @@ const styles = {
   },
 };
 
-const importableScreenShape = React.PropTypes.shape({
-  id: React.PropTypes.string.isRequired,
-  willReplace: React.PropTypes.bool.isRequired,
-  assetsToReplace: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  conflictingIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  html: React.PropTypes.string.isRequired,
-  canBeImported: React.PropTypes.bool.isRequired,
-});
-
-const importableAssetShape = React.PropTypes.shape({
-  filename: React.PropTypes.string.isRequired,
-  category: React.PropTypes.string.isRequired,
-  willReplace: React.PropTypes.bool.isRequired,
-});
-
-const importableProjectShape = React.PropTypes.shape({
-  id: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  screens: React.PropTypes.arrayOf(importableScreenShape).isRequired,
-  otherAssets: React.PropTypes.arrayOf(importableAssetShape).isRequired,
-});
-
-
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
-const AssetListItem = Radium(React.createClass({
+export const AssetListItem = Radium(React.createClass({
   propTypes: {
     asset: importableAssetShape,
   },
@@ -166,16 +148,16 @@ export const ScreenListItem = Radium(React.createClass({
            <p style={styles.warning}>
              Importing this will replace your existing screen: "{screen.id}".
            </p>}
-           {screen.assetsToReplace.length > 0 &&
-            <p style={styles.warning}>
-              Importing this will replace your existing
-              assets: {quotedCommaJoin(screen.assetsToReplace)}.
-            </p>
-           }
-            {screen.conflictingIds.length > 0 &&
-             <p style={styles.warning}>
-               Uses existing element IDs: {quotedCommaJoin(screen.conflictingIds)}.
-             </p>}
+          {screen.assetsToReplace.length > 0 &&
+           <p style={styles.warning}>
+             Importing this will replace your existing
+             assets: {quotedCommaJoin(screen.assetsToReplace)}.
+           </p>
+          }
+          {screen.conflictingIds.length > 0 &&
+           <p style={styles.warning}>
+             Uses existing element IDs: {quotedCommaJoin(screen.conflictingIds)}.
+           </p>}
         </div>
       </div>
     );
@@ -205,7 +187,11 @@ export const ImportScreensDialog = React.createClass({
     const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
     let buttonProps = canImport ? {
       confirmText: "Import",
-      onConfirm: () => this.props.onImport(this.state.selectedScreens, this.state.selectedAssets),
+      onConfirm: () => this.props.onImport(
+        this.props.project.id,
+        this.state.selectedScreens,
+        this.state.selectedAssets
+      ),
     } : {
       onCancel: this.props.handleClose
     };
@@ -263,71 +249,14 @@ export const ImportScreensDialog = React.createClass({
   }
 });
 
-/**
- * Helper function that takes a dom node and returns an object that conforms
- * to an importableScreenShape, checking for assets, and conflicting ids.
- */
-function getImportableScreen(dom) {
-  const id = dom.id;
-  const willReplace = designMode.getAllScreenIds().includes(id);
-  const conflictingIds = [];
-  Array.from(dom.children).forEach(child => {
-    if (!elementUtils.isIdAvailable(child.id)) {
-      var existingElement = elementUtils.getPrefixedElementById(child.id);
-      if (existingElement && elementUtils.getId(existingElement.parentNode) !== id) {
-        conflictingIds.push(child.id);
-      }
-    }
-  });
-
-  // TODO: filter out assets that will just be imported without replacing anything.
-  const assetsToReplace = $('[data-canonical-image-url]', dom)
-    .toArray()
-    .map(n => $(n).attr('data-canonical-image-url'));
-
-  return {
-    id,
-    willReplace,
-    assetsToReplace,
-    conflictingIds,
-    html: dom.outerHTML,
-    canBeImported: conflictingIds.length === 0,
-  };
-}
-
-/**
- * Helper function that takes a project object and returns an object that conforms to
- * importableProjectShape.
- */
-function getImportableProject(project) {
-  if (!project) {
-    return null;
-  }
-  const {channel, sources} = project;
-  const screens = [];
-  $(sources.html)
-    .find('.screen')
-    .css('position', 'inherit')
-    .css('display', 'block')
-    .each((index, screen) => {
-      screens.push(getImportableScreen(screen));
-    });
-  return {
-    id: 'foo',
-    name: channel.name,
-    screens,
-    otherAssets: [],
-  };
-}
-
 export default connect(
   state => ({
     isOpen: state.screens.isImportingScreen && state.screens.importProject.fetchedProject,
     project: getImportableProject(state.screens.importProject.fetchedProject),
   }),
   dispatch => ({
-    onImport() {
-      alert("The import button has not been implemented yet. sorry!");
+    onImport(projectId, screens, assets) {
+      dispatch(importIntoProject(projectId, screens, assets));
     },
     handleClose() {
       dispatch(toggleImportScreen(false));

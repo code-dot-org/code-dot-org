@@ -1,6 +1,4 @@
 /** List item placeholder for adding a new item */
-'use strict';
-
 var React = require('react');
 var color = require('../../color');
 var Radium = require('radium');

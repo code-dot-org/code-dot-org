@@ -88,13 +88,13 @@ const NetSimLogBrowserTable = React.createClass({
     let columns = [];
 
     columns.push({
+      property: 'timestamp',
       header: {
         label: 'Time',
         transforms: [sortable],
         props: {style: style.nowrap}
       },
       cell: {
-        property: 'timestamp',
         format: timeFormatter,
         props: {style: style.nowrapTd}
       }
@@ -102,73 +102,80 @@ const NetSimLogBrowserTable = React.createClass({
 
     if (this.props.teacherView) {
       columns.push({
+        property: 'sent-by',
         header: {
           label: 'Sent By',
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'sent-by', props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}}
       });
     }
 
     columns.push({
+      property: 'logged-by',
       header: {
         label: 'Logged By',
         transforms: [sortable],
         props: {style: style.nowrap}
       },
-      cell: {property: 'logged-by', props: {style: style.nowrapTd}}
+      cell: {props: {style: style.nowrapTd}}
     });
 
     columns.push({
+      property: 'status',
       header: {
         label: 'Status',
         transforms: [sortable],
         props: {style: style.nowrap}
       },
-      cell: {property: 'status', props: {style: style.nowrapTd}}
+      cell: {props: {style: style.nowrapTd}}
     });
 
     if (showFromAddress) {
       columns.push({
+        property: 'from-address',
         header: {
           label: 'From',
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'from-address', props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}}
       });
     }
 
     if (showToAddress) {
       columns.push({
+        property: 'to-address',
         header: {
           label: 'To',
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'to-address', props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}}
       });
     }
 
     if (showPacketInfo) {
       columns.push({
+        property: 'packet-info',
         header: {
           label: 'Packet',
           transforms: [sortable],
           props: {style: style.nowrap}
         },
-        cell: {property: 'packet-info', props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}}
       });
     }
 
     columns.push({
+      property: 'message',
       header: {
         label: 'Message',
         transforms: [sortable],
         props: {style: style.nowrap}
       },
-      cell: {property: 'message', props: {style: style.prewrapTd}}
+      cell: {props: {style: style.prewrapTd}}
     });
 
     const {logRows} = this.props;
