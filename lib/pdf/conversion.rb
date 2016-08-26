@@ -1,7 +1,6 @@
 require 'phantomjs'
 
 module PDF
-
   def self.generate_from_url(url, outpath, options={})
     cmd = [
         Phantomjs.path,
@@ -18,5 +17,4 @@ module PDF
     @result = `#{cmd}`
     puts "  #{@result}" if options[:verbose]
   end
-
 end

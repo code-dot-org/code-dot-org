@@ -3,7 +3,6 @@ require_relative 'env'
 
 # Honeybadger extensions for command error logging
 module Honeybadger
-
   # notify_command_error - log an error from an executed command to honeybadger.
   #   Attempts to parse the underlying exception from stderr,
   #   and logs captured stdout and environment variables (with sensitive values hidden) in the context.
@@ -14,6 +13,14 @@ module Honeybadger
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
     return if stderr.to_s.empty? && status == 0
+    ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
+
+    # Configure and start Honeybadger
+    honeybadger_config = Honeybadger::Config.new(
+      env: ENV['RACK_ENV'],
+      api_key: CDO.cronjobs_honeybadger_api_key
+    )
+    Honeybadger.start(honeybadger_config)
 
     error_message, backtrace = parse_exception_dump stderr
 
@@ -56,5 +63,4 @@ module Honeybadger
 
     [error_message, error_lines]
   end
-
 end

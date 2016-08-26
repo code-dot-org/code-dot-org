@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 var React = require('react');
 var ReadOnlyBlockSpace = require('../ReadOnlyBlockSpace');
 

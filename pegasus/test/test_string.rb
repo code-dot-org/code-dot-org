@@ -2,7 +2,7 @@ require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 
 class StringTest < Minitest::Test
-  def test_end_with()
+  def test_end_with
     assert 'hello world'.end_with?('hello world')
     assert 'hello world'.end_with?('')
     assert 'hello world'.end_with?('world')

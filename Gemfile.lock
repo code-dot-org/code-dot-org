@@ -6,6 +6,13 @@ GIT
     active_model_serializers (0.10.0.pre)
       activemodel (>= 4.0)
 
+GIT
+  remote: git://github.com/wjordan/geocoder.git
+  revision: 2da20897188b57f777df89f90e45cf331c5b014f
+  ref: rack-request-fix
+  specs:
+    geocoder (1.3.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,12 +76,12 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    aws-sdk (2.2.28)
-      aws-sdk-resources (= 2.2.28)
-    aws-sdk-core (2.2.28)
+    aws-sdk (2.5.3)
+      aws-sdk-resources (= 2.5.3)
+    aws-sdk-core (2.5.3)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.2.28)
-      aws-sdk-core (= 2.2.28)
+    aws-sdk-resources (2.5.3)
+      aws-sdk-core (= 2.5.3)
     bcrypt (3.1.10)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -138,15 +145,14 @@ GEM
     daemons (1.2.3)
     dalli (2.7.4)
     debug_inspector (0.0.2)
-    devise (3.5.1)
+    devise (4.2.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
+      railties (>= 4.1.0, < 5.1)
       responders
-      thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise_invitable (1.5.2)
-      actionmailer (>= 3.2.6, < 5)
+    devise_invitable (1.6.0)
+      actionmailer (>= 3.2.6)
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -161,10 +167,10 @@ GEM
       oily_png (>= 1.2)
       oj
       selenium-webdriver (>= 2.45.0)
-    factory_girl (4.5.0)
+    factory_girl (4.7.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
-      factory_girl (~> 4.5.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
     fake_sqs (0.3.1)
       builder
@@ -174,10 +180,13 @@ GEM
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
+    firebase (0.2.6)
+      httpclient
+      json
     firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.0)
       railties (>= 3.2, < 5.1)
-    geocoder (1.2.11)
+    gemoji (2.1.0)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     gli (2.13.4)
@@ -221,8 +230,7 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
-    honeybadger (1.16.7)
-      json
+    honeybadger (2.6.0)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -235,13 +243,14 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.6.0.1)
     i18n (0.7.0)
+    ims-lti (1.1.10)
+      builder
+      oauth (~> 0.4.5)
     io-like (0.3.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jmespath (1.1.3)
-    jquery-cookie-rails (1.3.1.1)
-      railties (>= 3.2.0, < 5.0)
+    jmespath (1.3.1)
     jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -287,7 +296,7 @@ GEM
     marked-rails (0.3.2.0)
     metaclass (0.0.4)
     mime-types (2.99.1)
-    mini_magick (4.3.3)
+    mini_magick (4.5.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     minitest-around (0.3.2)
@@ -305,6 +314,7 @@ GEM
     multipart-post (2.0.0)
     mysql2 (0.3.20)
     naturally (1.3.0)
+    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -327,7 +337,7 @@ GEM
       rack (>= 1.0, < 3)
     omniauth-clever (1.2.1)
       omniauth-oauth2 (~> 1.1.1)
-    omniauth-facebook (1.6.0)
+    omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.1)
     omniauth-google-oauth2 (0.2.5)
       omniauth (> 1.0)
@@ -372,8 +382,6 @@ GEM
       rack
     rack-cache (1.5.1)
       rack (>= 0.4)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
     rack-mini-profiler (0.9.7)
       rack (>= 1.1.3)
     rack-protection (1.5.3)
@@ -427,7 +435,7 @@ GEM
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
     retriable (1.4.1)
-    retryable (1.3.5)
+    retryable (2.0.4)
     rmagick (2.15.4)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -455,12 +463,16 @@ GEM
       sexp_processor (~> 4.1)
     rubyzip (1.2.0)
     safe_yaml (1.0.4)
-    sass (3.2.19)
-    sass-rails (4.0.5)
+    sass (3.4.22)
+    sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2.2)
-      sprockets (~> 2.8, < 3.0)
-      sprockets-rails (~> 2.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
+    scss_lint (0.49.0)
+      rake (>= 0.9, < 12)
+      sass (~> 3.4.20)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -493,7 +505,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
-    spring (1.3.6)
+    spring (1.7.2)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
     sprockets (2.12.4)
@@ -577,6 +589,7 @@ DEPENDENCIES
   acts_as_list
   annotate (~> 2.6.6)
   aws-sdk (~> 2)
+  bcrypt
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
@@ -591,15 +604,17 @@ DEPENDENCIES
   daemons
   dalli
   devise
-  devise_invitable (~> 1.5.2)
+  devise_invitable (~> 1.6.0)
   execjs
   eyes_selenium (~> 2.28.0)
   factory_girl_rails
   fake_sqs
   fakeredis
+  firebase
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
-  geocoder
+  gemoji
+  geocoder!
   google-api-client
   google_drive (~> 1.0.0)
   haml
@@ -607,10 +622,10 @@ DEPENDENCIES
   haml_lint
   heroku_rails_deflate
   highline (~> 1.6.21)
-  honeybadger (~> 1.11)
+  honeybadger
   httparty
+  ims-lti (~> 1.1)
   jbuilder (~> 1.2)
-  jquery-cookie-rails
   jquery-rails (~> 3.1.0)
   jquery-ui-rails (~> 5.0.3)
   jwt
@@ -627,6 +642,7 @@ DEPENDENCIES
   mocha
   mysql2 (~> 0.3.13)
   naturally
+  net-http-persistent
   net-scp
   net-ssh
   newrelic_rpm (~> 3.10.0.279)
@@ -647,7 +663,6 @@ DEPENDENCIES
   quiet_assets
   rack-attack (~> 4.4)
   rack-cache
-  rack-contrib (~> 1.1)
   rack-mini-profiler
   rack-ssl-enforcer
   rack_csrf
@@ -662,7 +677,8 @@ DEPENDENCIES
   rspec
   rubocop (= 0.37.2)
   ruby-prof
-  sass-rails (~> 4.0.0)
+  sass-rails
+  scss_lint
   sdoc
   seamless_database_pool
   selectize-rails
@@ -689,4 +705,4 @@ DEPENDENCIES
   youtube-dl.rb
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

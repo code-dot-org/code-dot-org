@@ -1,4 +1,3 @@
-'use strict';
 
 var React = require('react');
 var RotateContainer = require('../templates/RotateContainer');
@@ -12,7 +11,8 @@ var StudioAppWrapper = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired
+    isShareView: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.node,
   },
 
   requiresLandscape: function () {

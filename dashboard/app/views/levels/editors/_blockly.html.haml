@@ -150,8 +150,21 @@
       levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 -if @level.game.uses_droplet?
   .field
+    = f.label :palette_category_at_start
+    = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
+  .field
     = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
     = boolean_check_box f, :droplet_tooltips_disabled
   .field
     = f.label :lock_zero_param_functions, "Don't allow parameters to be added to user-defined functions with no parameters"
     = boolean_check_box f, :lock_zero_param_functions
+.field
+  = f.label :contained_level_names, 'Contained Level Names'
+  %p Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+  - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
+  - @level.contained_level_names.each do |level_name|
+    = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
+  #plusanswer
+    %i.fa.fa-plus-circle
+  :javascript
+    $("#plusanswer").on("click", function () { $("#plusanswer").prev().clone().insertBefore("#plusanswer") });

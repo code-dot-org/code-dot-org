@@ -4,8 +4,9 @@
 - download_path ||= nil
 - caption ||= nil
 - width ||= '100%'
-- image ||= "//i.ytimg.com/vi/#{video_code}/0.jpg"
 - play_button ||= 'center' # 'center' or 'caption'
+- letterbox ||= 'true'
+- image = letterbox == 'true' ? "//i.ytimg.com/vi/#{video_code}/0.jpg" : "//i.ytimg.com/vi/#{video_code}/mqdefault.jpg"
 
 :scss
   .videothumbnail {

@@ -14,10 +14,22 @@ theme: pdf
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
+- require 'state_abbr'
 - splat = request.splat_path_info[1..-1].split("/")
 - state = splat.last
 - state_param = state.upcase
 - state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
+- pass unless STATE_ABBR_WITH_DC_HASH.key? state_param.to_sym
+
+:css
+  .together {
+    display: inline-block;
+  }
+  .together:after {
+    display: block;
+    height: 0px;
+    visibility: hidden;
+  }
 
 .state-fact-sheet
   %h1
@@ -39,7 +51,7 @@ theme: pdf
       %img{src: "/images/charts/facts-sheet-top-stats.png", width: "100%"}
 
   %div
-    %h2
+    %h2.together
       Computer science in
       = state_info[:state_name_s]
     %ul
@@ -106,15 +118,33 @@ theme: pdf
           - if state_info[:ap_hispanic_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_hispanic_i])
+            - if state_info[:ap_hispanic_i] == 1
+              student was 
+            - else 
+              students were 
           - else
-            none
-          were Hispanic;
+            no students were 
+          Hispanic;
           - if state_info[:ap_black_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_black_i])
+            - if state_info[:ap_black_i] == 1
+              student was
+            - else
+              students were 
           - else
-            none
-          were black.
+            no students were 
+          black;
+          - if state_info[:ap_native_american_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_native_american_i])
+            - if state_info[:ap_native_american_i] == 1
+              student was
+            - else
+              students were
+          - else
+            no students were
+          Native American.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -141,7 +171,7 @@ theme: pdf
     %img.chart{src: "/images/charts/learn_teach.png"}
 
     .improve-edu
-      %h2.improve-edu-h2 What can you do to improve K-12 CS education?
+      %h2.improve-edu-h2.together What can you do to improve K-12 CS education?
       %ol
         %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
@@ -159,7 +189,7 @@ theme: pdf
           to join 100,000 Americans asking Congress to support computer science.
 
   %div.clear-both
-    %h2.no-margin-bottom
+    %h2.no-margin-bottom.together
       Code.org's Impact in
       = state_info[:state_name_s]
     %p.larger
@@ -171,9 +201,14 @@ theme: pdf
       = succeed '.' do
         = state_info[:state_name_s]
     %ul
+      - if state_info[:professional_learning_partners_t] != 'none'
+        %li
+          Code.org's professional learning partner(s) is/are:
+          = succeed '.' do
+            = state_info[:professional_learning_partners_t]
       - if state_info[:school_district_partners_t] != 'no school districts in the state'
         %li
-          Code.org has partnered with
+          Code.org has partnered with the following school district(s):
           = succeed '.' do
             = state_info[:school_district_partners_t]
       - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
@@ -233,14 +268,14 @@ theme: pdf
     %p — Steve Jobs
 
   %div
-    %h2 What can the federal government do to support computer science in grades K-12?
+    %h2.together What can the federal government do to support computer science in grades K-12?
     Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at 
     = succeed "." do
       %a{href: "www.change.org/computerscience"} www.change.org/computerscience
 
   %div
     %p
-      %h2 What can your state do to improve computer science education?
+      %h2.together What can your state do to improve computer science education?
       States and local school districts need to adopt a broad policy framework to provide all students with access to computer science. The following eight recommendations are a menu of best practices that states can choose from to support and expand computer science. Not all states will be in a position to adopt all of the policies, and no state has accomplished all 8 yet. Read more about these 8 policy ideas at
       = succeed "." do
         %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf
@@ -261,7 +296,6 @@ theme: pdf
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_1_t]
 
       %div.policy-item
@@ -278,8 +312,7 @@ theme: pdf
             provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
-            %i.fa.fa-square-o
-            = state_info[:state_name_s]
+            %i.fa.fa-check-square-o
             = state_info[:policy_2_t]
 
       %div.policy-item
@@ -297,7 +330,6 @@ theme: pdf
         - elsif state_info[:cs_teacher_cert_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_3_t]
 
       %div.policy-item
@@ -315,7 +347,6 @@ theme: pdf
         - elsif state_info[:pre_service_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_4_t]
 
       %div.policy-item
@@ -333,7 +364,6 @@ theme: pdf
         - elsif state_info[:state_position_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_5_t]
 
       %div.policy-item
@@ -351,7 +381,6 @@ theme: pdf
         - elsif state_info[:require_hs_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_6_t]
 
       %div.policy-item
@@ -375,7 +404,6 @@ theme: pdf
         - elsif state_info[:cs_counts_t] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_7_t]
             Find out how other states allow computer science to count towards graduation at
             = succeed "." do
@@ -396,7 +424,6 @@ theme: pdf
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:state_name_s]
             = state_info[:policy_8_t]
 
   %div

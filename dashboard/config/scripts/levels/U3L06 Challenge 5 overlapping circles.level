@@ -10,8 +10,18 @@
       "moveForward": null,
       "moveBackward": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "penWidth": null,
@@ -19,6 +29,10 @@
       "arcLeft": null,
       "arcRight": null,
       "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
         "params": [
           "0",
           "0",
@@ -42,7 +56,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.5",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -70,10 +84,69 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "encrypted_examples": "b7beInscIUpPOSy/abrlSHYIZJeaBRfAbjrsHHHd9x6Qy8tHvYnVnEoJQKxz\n6z9N\n",
-    "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem"
+      },
+      {
+        "entries": [
+          "penRGB:4"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to set the pen color using the 4-param version of penRGB(r,g,b,a) at least twice."
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to draw at least 2 dots."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "To complete this task you need to move forward at least once."
+      },
+      {
+        "entries": [
+          "penRGB:4",
+          "dot:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "App Lab is expecting you to set the pen color and then draw a dot with that new color, twice."
+      },
+      {
+        "entries": [
+          "dot:1",
+          "moveForward:1",
+          "dot:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to move between drawing dots."
+      }
+    ],
+    "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

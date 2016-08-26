@@ -27,8 +27,7 @@ Blockly.BlockSvgFramed.prototype.initChildren = function () {
   this.frameClipRect_ = Blockly.createSvgElement('rect', {
     x: -FRAME_MARGIN_SIDE,
     y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
-    height: FRAME_HEADER_HEIGHT,
-    width: '100%'
+    height: FRAME_HEADER_HEIGHT
   }, clip);
   this.frameBase_ = Blockly.createSvgElement('rect', {
     x: -FRAME_MARGIN_SIDE,
@@ -73,6 +72,7 @@ Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
   var groupRect = this.svgPath_.getBoundingClientRect();
   var width = groupRect.width + 2 * FRAME_MARGIN_SIDE;
   var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
+  this.frameClipRect_.setAttribute('width', width);
   this.frameBase_.setAttribute('width', width);
   this.frameBase_.setAttribute('height', height);
   this.frameHeader_.setAttribute('width', width);

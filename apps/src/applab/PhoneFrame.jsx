@@ -67,6 +67,7 @@ const PhoneFrame = React.createClass({
     showSelector: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   render: function () {
@@ -74,17 +75,17 @@ const PhoneFrame = React.createClass({
     return (
       <span id="phoneFrame">
         <div
-            style={[
-              styles.phoneFrame,
-              styles.phoneFrameTop,
-              isDark && styles.phoneFrameDark
-            ]}
+          style={[
+            styles.phoneFrame,
+            styles.phoneFrameTop,
+            isDark && styles.phoneFrameDark
+          ]}
         >
           {showSelector &&
           <div style={styles.screenSelector}>
             <ScreenSelector
-                screenIds={screenIds}
-                onCreate={onScreenCreate}
+              screenIds={screenIds}
+              onCreate={onScreenCreate}
             />
             </div>
           }
@@ -97,11 +98,11 @@ const PhoneFrame = React.createClass({
         </div>
         {this.props.children}
         <div
-            style={[
-              styles.phoneFrame,
-              styles.phoneFrameBottom,
-              isDark && styles.phoneFrameDark,
-            ]}
+          style={[
+            styles.phoneFrame,
+            styles.phoneFrameBottom,
+            isDark && styles.phoneFrameDark
+          ]}
         >
           <div style={styles.centeredInFrame}>
             <RunButton hidden={false} style={styles.buttonMinWidth}/>

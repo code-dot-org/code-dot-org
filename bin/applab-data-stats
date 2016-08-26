@@ -29,10 +29,10 @@ consumed_capacity = 0
 
 begin
   response = db.scan(
-      table_name: CDO.dynamo_tables_table,
-      attributes_to_get: ['channel_id', 'hash'],
-      exclusive_start_key: last_evaluated_key,
-      return_consumed_capacity: 'TOTAL'
+    table_name: CDO.dynamo_tables_table,
+    attributes_to_get: ['channel_id', 'hash'],
+    exclusive_start_key: last_evaluated_key,
+    return_consumed_capacity: 'TOTAL'
   )
   consumed_capacity += response.consumed_capacity.capacity_units
   page = response.first
@@ -130,16 +130,16 @@ hash_map.keys.each_with_index do |hash, table_id|
   value_size = 0
   begin
     response = db.query(
-        table_name: CDO.dynamo_tables_table,
-        exclusive_start_key: last_evaluated_key,
-        return_consumed_capacity: 'TOTAL',
-        attributes_to_get: ['channel_id', 'hash', 'table_name', 'value'],
-        key_conditions: {
-            "hash" => {
-                attribute_value_list: [hash],
-                comparison_operator: "EQ",
-            },
-        },
+      table_name: CDO.dynamo_tables_table,
+      exclusive_start_key: last_evaluated_key,
+      return_consumed_capacity: 'TOTAL',
+      attributes_to_get: ['channel_id', 'hash', 'table_name', 'value'],
+      key_conditions: {
+          "hash" => {
+              attribute_value_list: [hash],
+              comparison_operator: "EQ",
+          },
+      },
 
     )
     consumed_capacity += response.consumed_capacity.capacity_units

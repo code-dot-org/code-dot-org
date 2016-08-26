@@ -20,7 +20,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Ordering Supplies', description_t: "Click here for access to the Marketplace and resources for ordering workshop supplies.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/ordering-supplies"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Click here to learn more about our other Professional Larning Partners and their regions of service.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/directory"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
 
@@ -28,8 +28,8 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "These resources will help you provide support to the teachers enrolled in the Professional Learning Program", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Training Materials', description_t: "Resources from the Facilitation Summit", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/training-materials"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Training Materials', description_t: "Resources from the Facilitation Summit, TeacherCon and Virtual Trainings", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/training-materials"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Information on how to use the workshop organizer dashboard.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/workshop-dashboard"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "A guide to everything you'll need to take care of to make sure your summer workshops are a success", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "A guide of everything you'll need to make sure your workshops are a success - agendas, logistics, etc.", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>

@@ -85,7 +85,7 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_under_13(@script_level.level)
+    return if redirect_under_13_without_tos_teacher(@script_level.level)
 
     present_level
   end
@@ -133,8 +133,10 @@ class ScriptLevelsController < ApplicationController
   def load_script_level
     if params[:chapter]
       @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_id]
-      @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
+    elsif params[:stage_position]
+      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lockable_stage_position]
+      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
     else
       @script_level = @script.get_script_level_by_id(params[:id])
     end
@@ -160,10 +162,14 @@ class ScriptLevelsController < ApplicationController
 
       user_level = current_user.user_level_for(@script_level, @level)
       if user_level && user_level.submitted?
-        level_view_options(submitted: true)
-        level_view_options(unsubmit_url: url_for(user_level))
+        level_view_options(
+          @level.id,
+          submitted: true,
+          unsubmit_url: url_for(user_level)
+        )
         readonly_view_options
       end
+      readonly_view_options if user_level && user_level.readonly_answers?
     end
 
     level_source.try(:replace_old_when_run_blocks)
@@ -246,14 +252,16 @@ class ScriptLevelsController < ApplicationController
       script_level_id: @script_level.id,
       level_id: @level.id)
 
-    @sublevel_callback = milestone_script_level_url(
-      user_id: current_user.try(:id) || 0,
-      script_level_id: @script_level.id,
-      level_id: '') if @level.game.level_group?
+    if @level.game.level_group? || @level.try(:contained_levels).present?
+      @sublevel_callback = milestone_script_level_url(
+        user_id: current_user.try(:id) || 0,
+        script_level_id: @script_level.id,
+        level_id: '')
+    end
 
     view_options(
       full_width: true,
-      small_footer: @game.uses_small_footer? || enable_scrolling?,
+      small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?
     )
 
@@ -269,5 +277,4 @@ class ScriptLevelsController < ApplicationController
   def protect_against_forgery?
     return false
   end
-
 end

@@ -1,5 +1,6 @@
 = form_tag(action: 'create') do
-  %p#notice= params[:notice]
+  %div#notice{style: '-webkit-user-select: initial'}
+    = params[:notice].try(:html_safe)
 
   .field
     = label_tag :user_email_addresses

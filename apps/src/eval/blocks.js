@@ -21,10 +21,8 @@
  * @fileoverview Demonstration of Blockly: Eval Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
 var msg = require('./locale');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');

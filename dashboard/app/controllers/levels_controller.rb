@@ -6,18 +6,22 @@ EMPTY_XML = '<xml></xml>'
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_filter :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
-  before_filter :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
-  skip_before_filter :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
+  before_action :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
+  before_action :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
+  skip_before_action :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
+  LEVELS_PER_PAGE = 100
+
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.all
+    levels = Level.order(updated_at: :desc)
+    levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/1
@@ -29,9 +33,9 @@ class LevelsController < ApplicationController
     end
 
     view_options(
-        full_width: true,
-        small_footer: @game.uses_small_footer? || enable_scrolling?,
-        has_i18n: @game.has_i18n?
+      full_width: true,
+      small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
+      has_i18n: @game.has_i18n?
     )
   end
 
@@ -65,6 +69,7 @@ class LevelsController < ApplicationController
     end
 
     level_view_options(
+      @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
@@ -75,7 +80,10 @@ class LevelsController < ApplicationController
     @callback = level_update_blocks_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
-    level_view_options(success_condition: 'function () { return true; }') if @level.is_a? Studio
+    level_view_options(
+      @level.id,
+      success_condition: 'function () { return true; }'
+    ) if @level.is_a? Studio
 
     show
     render :show
@@ -101,9 +109,7 @@ class LevelsController < ApplicationController
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       render json: @level.errors, status: :unprocessable_entity
-      return
-    end
-    if @level.update(level_params)
+    elsif @level.update(level_params)
       render json: { redirect: level_url(@level, show_callouts: 1) }
     else
       render json: @level.errors, status: :unprocessable_entity
@@ -113,11 +119,11 @@ class LevelsController < ApplicationController
   # POST /levels
   # POST /levels.json
   def create
-    authorize! :create, :level
+    authorize! :create, Level
     type_class = level_params[:type].constantize
 
     # Set some defaults.
-    params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
+    params[:level][:skin] ||= type_class.skins.first if type_class <= Blockly
     if type_class <= Grid
       default_tile = type_class == Karel ? {"tileType": 0} : 0
       start_tile = type_class == Karel ? {"tileType": 2} : 2
@@ -153,8 +159,8 @@ class LevelsController < ApplicationController
   end
 
   def new
-    authorize! :create, :level
-    if params.has_key? :type
+    authorize! :create, Level
+    if params.key? :type
       @type_class = params[:type].constantize
       if @type_class == Artist
         @game = Game.custom_artist
@@ -222,11 +228,12 @@ class LevelsController < ApplicationController
     @level = Level.find(params[:level_id])
     @game = @level.game
     level_view_options(
+      @level.id,
       embed: true,
       share: false,
       skip_instructions_popup: true
     )
-    view_options full_width: true
+    view_options(full_width: true)
     render 'levels/show'
   end
 
@@ -258,6 +265,7 @@ class LevelsController < ApplicationController
       {concept_ids: []},
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
+      {contained_level_names: []},
       {examples: []}
     ]
 

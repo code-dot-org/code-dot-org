@@ -4,6 +4,7 @@ src/lodash.js
 src/canvg/*.js
 src/calc/js-numbers/js-numbers.js
 src/ResizeSensor.js
+src/code-studio/vendor/
 
 lib
 build

@@ -53,6 +53,8 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     'kl_vkbd_parsed', // Possibly from Kaspersky Labs password manager.
     'kl_virtual_keyboard_secure_input', // Possibly from Kaspersky Labs password manager.
     'vk_16761',       // Origin unknown.
+    'vk_19391',       // Origin unknown.
+    'vk_197cd',       // Origin unknown.
     '_vkenabled',     // Origin unknown.
     'abp'             // adblock plus plugin.
   ];
@@ -122,7 +124,9 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
 
   // Define tags with a standard set of allowed attributes
 
-  var standardAttributes = ['id', 'class', 'data-*', 'height', 'style',  'title', 'width'];
+  var standardAttributes = [
+    'id', 'class', 'data-*', 'height', 'spellcheck', 'style',  'title', 'width'
+  ];
   // <i> could allow people to covertly specify font awesome icons, which seems ok
   var tagsWithStandardAttributes = [
     'b', 'br', 'canvas', 'em', 'font', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',

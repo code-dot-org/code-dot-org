@@ -1,7 +1,6 @@
 require pegasus_dir('router')
 
 class PegasusSites
-
   def initialize(app=nil, params={})
     @app = app
 
@@ -33,5 +32,4 @@ class PegasusSites
       @app.call(env)
     end
   end
-
 end

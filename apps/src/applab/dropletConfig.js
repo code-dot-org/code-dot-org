@@ -8,6 +8,8 @@ var ChartApi = require('./ChartApi');
 var elementUtils = require('./designElements/elementUtils');
 var setPropertyDropdown = require('./setPropertyDropdown').setPropertyDropdown;
 
+const studioApp = require('../StudioApp').singleton;
+
 var applabConstants = require('./constants');
 
 var DEFAULT_WIDTH = "320";
@@ -15,7 +17,7 @@ var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter);
+  dashboard.assets.showAssetManager(callback, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
 }
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -121,7 +123,7 @@ module.exports.blocks = [
   {func: 'readRecords', parent: api, category: 'Data', paletteParams: ['table','terms','callback'], params: ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {func: 'updateRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1, name:'Bob'}", "function(record, success) {\n  \n}"] },
   {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function(success) {\n  \n}"] },
-  {func: 'onRecordEvent', parent: api, category: 'Data', paletteParams: ['table','callback'], params: ['"mytable"', "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"], noAutocomplete: true },
+  {func: 'onRecordEvent', parent: api, category: 'Data', paletteParams: ['table','callback'], params: ['"mytable"', "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"] },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value' },
   {func: 'drawChart', parent: api, category: 'Data', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['chartId', 'chartType', 'chartData'], params: ['"chartId"', '"bar"', '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
   {func: 'drawChartFromRecords', parent: api, category: 'Data', paramButtons: { minArgs: 4, maxArgs: 6 }, paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
@@ -178,26 +180,31 @@ module.exports.blocks = [
 
 module.exports.categories = {
   'UI controls': {
+    id: 'uicontrols',
     color: 'yellow',
     rgb: COLOR_YELLOW,
     blocks: []
   },
   Canvas: {
+    id: 'canvas',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Data: {
+    id: 'data',
     color: 'lightgreen',
     rgb: COLOR_LIGHT_GREEN,
     blocks: []
   },
   Turtle: {
+    id: 'turtle',
     color: 'cyan',
     rgb: COLOR_CYAN,
     blocks: []
   },
   Advanced: {
+    id: 'advanced',
     color: 'blue',
     rgb: COLOR_BLUE,
     blocks: []

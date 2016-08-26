@@ -9,7 +9,6 @@
  Concept,
  DSLDefined,
  Eval,
- ExperimentActivity,
  Follower,
  FrequentUnsuccessfulLevelSource,
  Game,
@@ -35,10 +34,8 @@
  TeacherBonusPrize,
  TeacherPrize,
  TextMatch,
- Trophy,
  Unplugged,
  User,
  UserLevel,
  UserScript,
- UserTrophy,
  Video].each(&:new) if Dashboard::Application.config.eager_load

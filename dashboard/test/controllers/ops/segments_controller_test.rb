@@ -1,7 +1,7 @@
 require 'test_helper'
 module Ops
   class SegmentsControllerTest < ::ActionController::TestCase
-    include Devise::TestHelpers
+    include Devise::Test::ControllerHelpers
     API = ::OPS::API
 
     setup do
@@ -77,6 +77,5 @@ module Ops
       get :show, id: @segment.id
       assert_response :forbidden
     end
-
   end
 end

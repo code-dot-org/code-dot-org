@@ -1,5 +1,4 @@
 class HocSignup2014
-
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]
@@ -18,7 +17,7 @@ class HocSignup2014
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'hoc_signup_2014_receipt'
   end
 

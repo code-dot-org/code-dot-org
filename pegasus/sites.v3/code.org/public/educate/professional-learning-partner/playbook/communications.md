@@ -8,6 +8,7 @@ nav: plp_playbook_nav
 
 ## Table of contents
 
+- [Weekly Newsletter Archive](#archive)
 - [Communication to teachers from Code.org](#code.org)
 - [Workshop communications](#workshop)
 - [Email templates](#templates)
@@ -15,11 +16,20 @@ nav: plp_playbook_nav
 - [Branding guidelines](#branding)
 
 ________________
+<a id="archive"></a>
+<br/>
+<br/>
+
+## PLP Weekly Update Emails
+Each week we send out an email with important action items, new collateral, CS Education news, etc. You can see an [archive of all weekly emails here](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing).
+
+<br/>
+________________
 <a id="code.org"></a>
 <br/>
 <br/>
 ## Communications to Teachers from Code.org
-Code.org sends emails directly to teachers regarding information about any Code.org products, programs, or resources. **Click the links below for an example of these emails.** 
+Code.org sends emails directly to teachers regarding information about any Code.org products, programs, or resources. **Click the links below for an example of these emails.**
 
 - [**Professional Learning Program Updates**](http://us9.campaign-archive2.com/?u=dc783682a08c5eb6dfe447070&id=7f8734bcaa) 
 	- These emails include updates about the curriculum and online modules, Code Studio tools and resources, and other items related to the Code.org Professional Learning Program. 

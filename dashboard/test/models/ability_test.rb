@@ -13,10 +13,6 @@ class AbilityTest < ActiveSupport::TestCase
     @student_of_admin_script = create(:script, student_of_admin_required: true).tap do |script|
       @student_of_admin_script_level = create(:script_level, script: script)
     end
-
-    @admin_script = create(:script, admin_required: true).tap do |script|
-      @admin_script_level = create(:script_level, script: script)
-    end
   end
 
   test "as guest" do
@@ -30,18 +26,18 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
 
+    assert !ability.can?(:read, Section)
+
     assert !ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_script)
     assert !ability.can?(:read, @login_required_script)
     assert !ability.can?(:read, @student_of_admin_script)
-    assert !ability.can?(:read, @admin_script)
 
     assert ability.can?(:read, @public_script_level)
     assert !ability.can?(:read, @login_required_script_level)
     assert !ability.can?(:read, @student_of_admin_script_level)
-    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as member" do
@@ -55,6 +51,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
 
+    assert !ability.can?(:read, Section)
+
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
 
@@ -64,12 +62,10 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
     assert !ability.can?(:read, @student_of_admin_script)
-    assert !ability.can?(:read, @admin_script)
 
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @login_required_script_level)
     assert !ability.can?(:read, @student_of_admin_script_level)
-    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as student of admin" do
@@ -83,6 +79,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
 
+    assert !ability.can?(:read, Section)
+
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
 
@@ -92,38 +90,37 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @student_of_admin_script)
-    assert !ability.can?(:read, @admin_script)
 
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @login_required_script_level)
     assert ability.can?(:read, @student_of_admin_script_level)
-    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as admin" do
     ability = Ability.new(create(:admin))
 
-    assert ability.can?(:read, Game)
-    assert ability.can?(:read, Level)
-    assert ability.can?(:read, Activity)
+    assert ability.cannot?(:read, Activity)
+    assert ability.cannot?(:read, Game)
+    assert ability.cannot?(:read, Level)
+    assert ability.cannot?(:read, Script)
+    assert ability.cannot?(:read, ScriptLevel)
+    assert ability.cannot?(:read, UserLevel)
+    assert ability.cannot?(:read, UserScript)
 
-    assert ability.can?(:destroy, Game)
-    # Can only destroy custom levels
-    assert ability.can?(:destroy, Level.where.not(user_id: nil).first)
-    assert ability.can?(:destroy, Activity)
+    assert ability.cannot?(:destroy, Game)
+    assert ability.cannot?(:destroy, Level)
+    assert ability.cannot?(:destroy, Activity)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.cannot?(:read, Script.find_by_name('ECSPD'))
+    assert ability.cannot?(:read, Script.find_by_name('flappy'))
 
-    assert ability.can?(:read, @public_script)
-    assert ability.can?(:read, @login_required_script)
-    assert ability.can?(:read, @student_of_admin_script)
-    assert ability.can?(:read, @admin_script)
+    assert ability.cannot?(:read, @public_script)
+    assert ability.cannot?(:read, @login_required_script)
+    assert ability.cannot?(:read, @student_of_admin_script)
 
-    assert ability.can?(:read, @public_script_level)
-    assert ability.can?(:read, @login_required_script_level)
-    assert ability.can?(:read, @student_of_admin_script_level)
-    assert ability.can?(:read, @admin_script_level)
+    assert ability.cannot?(:read, @public_script_level)
+    assert ability.cannot?(:read, @login_required_script_level)
+    assert ability.cannot?(:read, @student_of_admin_script_level)
   end
 
   test 'with hint_access manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
@@ -139,6 +136,23 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:manage, LevelSourceHint)
     assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'teachers read their Section' do
+    teacher = create :teacher
+    ability = Ability.new teacher
+    my_section = create :section, user_id: teacher.id
+    not_my_section = create :section, user_id: create(:teacher).id
+
+    # When checking a class, conditions are ignored.
+    # See https://github.com/ryanb/cancan/wiki/checking-abilities#checking-with-class
+    assert ability.can? :read, Section
+
+    # A teacher can read their own section.
+    assert ability.can? :read, my_section
+
+    # A teacher cannot read another teacher's section.
+    assert ability.cannot? :read, not_my_section
   end
 
   test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
@@ -183,6 +197,7 @@ class AbilityTest < ActiveSupport::TestCase
       user_id: user.id, permission: UserPermission::LEVELBUILDER)
     ability = Ability.new user
 
+    assert ability.can?(:manage, Game)
     assert ability.can?(:manage, Level)
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, ScriptLevel)

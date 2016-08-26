@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ### 아래는 컴퓨터과학교육주간 행사를 지원하는 예시 결의안으로, 주요 목표들은 주의원이나 지역국회의원들에 의해 활용될 수 있습니다.
 
   
@@ -16,7 +15,7 @@ nav: promote_nav
 
 [DATE]
 
-컴퓨팅 기술들은, 문화의 집약적인 한 부분이며, 살아가는 삶을 둘러싼 모든 것들과 인터랙티브하게 상호작용할 수 있도록 하면서 사람들을 연결시키고 변화시키고 있습니다;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 컴퓨터과학(정보과학)은 산업을 변화시키고, 새로운 상업적 영역들을 만들어내고, 모든 과학분야에 혁신을 가져오고, 기존의 경제 영역에서의 생산성을 강화시키고 있습니다;
 
@@ -26,7 +25,7 @@ nav: promote_nav
 
 정보 기술 분야는 새로운 혁신 기술들의 연구와 개발을 통한 경제적 회복에 독특한 위치를 차지하고 있습니다;
 
-컴퓨터과학 분야의 관점은 미국의 STEM 관련 일자리들과, 컴퓨팅 직업들에서 유망합니다;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 학생들에게 높은 수준의 컴퓨터과학 활동들에 참여할 수 있도록 하는 기회들을 주는 것은, 전체 삶을 살아가는데 있어서 매우 중요한 생각하는 방법과 기술들을 배울 수 있는 풍부한 기회들을 주는 것입니다;
 
@@ -53,4 +52,3 @@ nav: promote_nav
 (4) 다른 수학이나 과학과 마찬가지로 컴퓨터과학(정보과학) 수업들도, 졸업 이수 조건으로 반영 할 수 있도록, 장애 요건들을 제거해 주기를 정책입안자들에게 요청합니다.
 
 (5) 교육받을 수 있는 많은 기회들을 권장합니다. 현재 운영되고 있는 교육 프로그램들에서도 여성들과 소수자들이 컴퓨터과학 분야에 참여할 수 있도록 하는 것을 포함합니다.
-

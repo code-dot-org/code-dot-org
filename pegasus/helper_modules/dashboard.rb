@@ -3,7 +3,6 @@
 # authentication state, and other DASHBOARD_DB access.
 #
 module Dashboard
-
   # Get the dashboard database
   # The static constant is wrapped here so it's easy to stub for tests.
   # @returns [Database]
@@ -13,6 +12,11 @@ module Dashboard
 
   def self.admin?(user_id)
     !!db[:users][id: user_id, admin: true]
+  end
+
+  def self.hidden_script_access?(user_id)
+    user = User.get(user_id)
+    user && (user.admin? || user.has_permission?('hidden_script_access'))
   end
 
   class User
@@ -55,7 +59,7 @@ module Dashboard
     end
 
     # @returns [Hash] dashboard DB row for this user as a hash
-    def to_hash()
+    def to_hash
       @row.to_hash
     end
 
@@ -63,7 +67,7 @@ module Dashboard
     def select(*keys)
       {}.tap do |result|
         keys.each do |key|
-          result[key] = if @row.has_key? key
+          result[key] = if @row.key? key
                           @row[key]
                         elsif respond_to? key
                           send(key)
@@ -76,7 +80,7 @@ module Dashboard
 
     def followed_by?(other_user_id)
       Dashboard.db[:followers].
-        join(:users, :id=>:followers__student_user_id).
+        join(:users, :id => :followers__student_user_id).
         where(followers__student_user_id: other_user_id).
         where(followers__user_id: id).
         where(users__deleted_at: nil, followers__deleted_at: nil).
@@ -87,7 +91,5 @@ module Dashboard
       Dashboard.db[:sections].
         select(:id).where(user_id: id, deleted_at: nil).all
     end
-
   end
-
 end

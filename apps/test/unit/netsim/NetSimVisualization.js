@@ -1,4 +1,3 @@
-'use strict';
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
@@ -18,7 +17,6 @@ var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
 
 describe("NetSimVisualization", function () {
 

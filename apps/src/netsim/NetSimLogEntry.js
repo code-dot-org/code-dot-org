@@ -1,12 +1,10 @@
 /**
  * @overview Simulation entity for router log entries.
  */
-'use strict';
-
 var moment = require('moment');
 var utils = require('../utils'); // Provides Function.prototype.inherits
 var _ = require('lodash');
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
@@ -27,6 +25,7 @@ var logger = NetSimLogger.getSingleton();
  *           student.  May contain headers of its own.
  * @property {NetSimLogEntry.LogStatus} status
  * @property {number} timestamp
+ * @property {string} sentBy
  */
 
 /**
@@ -85,6 +84,12 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
    * @type {number}
    */
   this.timestamp = (row.timestamp !== undefined) ? row.timestamp : Date.now();
+
+  /**
+   * Display name of the sender (for the teacher view)
+   * @type {string}
+   */
+  this.sentBy = utils.valueOr(row.sentBy, '');
 };
 NetSimLogEntry.inherits(NetSimEntity);
 
@@ -114,7 +119,8 @@ NetSimLogEntry.prototype.buildRow = function () {
     nodeID: this.nodeID,
     base64Binary: binaryToBase64(this.binary),
     status: this.status,
-    timestamp: this.timestamp
+    timestamp: this.timestamp,
+    sentBy: this.sentBy
   };
 };
 
@@ -125,14 +131,16 @@ NetSimLogEntry.prototype.buildRow = function () {
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} binary - log contents
  * @param {NetSimLogEntry.LogStatus} status
+ * @param {!string} sentBy - display name of sender
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
+NetSimLogEntry.create = function (shard, nodeID, binary, status, sentBy, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.binary = binary;
   entity.status = status;
   entity.timestamp = Date.now();
+  entity.sentBy = sentBy;
   entity.getTable().create(entity.buildRow(), function (err, result) {
     if (err) {
       onComplete(err, null);

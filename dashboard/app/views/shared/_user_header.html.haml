@@ -1,12 +1,32 @@
 - if current_user
   .header_button.header_user.user_menu
-    %span= t('nav.user.label', username: h(current_user.short_name))
+    - if session[:pairings].present?
+      %i.fa.fa-users
+      %span= t('nav.user.label', username: t('nav.user.team'))
+    - else
+      %span= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
       &#x25BC;
     %div{style: 'position: relative; top: 3px;'}
       .user_options{style: 'display: none;'}
         - if current_user.teacher?
           = link_to t('nav.user.classroom'), teacher_dashboard_url
+        - if current_user.can_pair?
+          - if session[:pairings].present?
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = t('nav.user.pair_programming')
+              .pairing_summary
+                #{t('nav.user.driver')}:
+                = h(current_user.short_name)
+                - session[:pairings].map do |id|
+                  %br
+                  #{t('nav.user.navigator')}:
+                  = h(User.find(id).short_name)
+          - else
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = t('nav.user.pair_programming')
         = link_to t('nav.user.stats'), root_url
         - if current_user.can_edit_account?
           = link_to t('nav.user.settings'), edit_user_registration_url
@@ -41,3 +61,7 @@
       dashboard.clientState.reset();
     }
   });
+
+  if (typeof dashboard !== 'undefined') {
+    dashboard.pairing.init('#{pairing_url}', hideUserOptions, #{@show_pairing_dialog});
+  }

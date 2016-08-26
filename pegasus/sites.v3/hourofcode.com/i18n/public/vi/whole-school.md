@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Kêu gọi cả trường bạn tham gia
 
-Thông tin về việc kêu gọi toàn trường tham gia Giờ Mã sẽ đến đây.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

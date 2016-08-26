@@ -43,7 +43,7 @@ module Ops
         # ?by_teacher=1 to index the results by teacher_id
         by_teacher = workshop.segments.inject({}) do |hash, s|
           attendance = s.attendances.as_json(include: :segment).group_by { |a| a['teacher_id'] }
-          hash.merge(attendance){|_,a,b| a+b}
+          hash.merge(attendance){|_,a,b| a + b}
         end
         respond_with by_teacher
       else
@@ -114,7 +114,7 @@ module Ops
           format_teachers_for_csv(@workshop.teachers, teacher_info)
           format_teachers_for_csv(@workshop.unexpected_teachers, teacher_info)
 
-          render text: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher }}
+          render plain: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher }}
         end
       end
     end
@@ -131,7 +131,7 @@ module Ops
             find_or_create_by(teacher_id: id, segment_id: @segment.id).
             update!(status: status, notes: notes)
       end
-      render text: 'OK'
+      render plain: 'OK'
     end
 
     # POST /ops/segments/1/attendance
@@ -159,18 +159,19 @@ module Ops
     # DELETE /ops/attendance/1
     def destroy
       @workshop_attendance.destroy
-      render text: 'OK'
+      render plain: 'OK'
     end
 
     private
+
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def workshop_attendance_params
       params.require(:workshop_attendance).permit(
-          :teacher_id,
-          :segment_id,
-          :status,
-          :notes
+        :teacher_id,
+        :segment_id,
+        :status,
+        :notes
       )
     end
   end

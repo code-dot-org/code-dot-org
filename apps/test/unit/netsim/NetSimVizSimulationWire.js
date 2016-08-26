@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
@@ -12,7 +11,6 @@ var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire'
 
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
 
 describe("NetSimVizSimulationWire", function () {
   var vizWire, vizLocalNode, vizRemoteNode,

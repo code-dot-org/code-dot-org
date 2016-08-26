@@ -6,28 +6,28 @@ def trans_dir(*dirs)
   pegasus_dir('sites.v3','translate.hourofcode.com', *dirs)
 end
 
-def hoc_load_countries()
+def hoc_load_countries
   JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
 end
-HOC_COUNTRIES = hoc_load_countries()
+HOC_COUNTRIES = hoc_load_countries
 
-def hoc_load_i18n()
+def hoc_load_i18n
   i18n = {}
   Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
     i18n.merge!(YAML.load_file(string_file))
   end
   i18n
 end
-HOC_I18N = hoc_load_i18n()
+HOC_I18N = hoc_load_i18n
 
-def trans_load_i18n()
+def trans_load_i18n
   i18n = {}
   Dir.glob(trans_dir('i18n/*.yml')).each do |string_file|
     i18n.merge!(YAML.load_file(string_file))
   end
   i18n
 end
-TRANS_I18N = trans_load_i18n()
+TRANS_I18N = trans_load_i18n
 
 def hoc_s(id)
   id = id.to_s
@@ -54,12 +54,12 @@ def hoc_canonicalized_i18n_path(uri)
       path = File.join([possible_language, path].select{|i| !i.nil_or_empty?})
     end
   else
-    @country = hoc_detect_country()
+    @country = hoc_detect_country
     path = File.join([possible_country_or_company, possible_language, path].select{|i| !i.nil_or_empty?})
   end
 
   country_language = HOC_COUNTRIES[@country]['default_language']
-  @language = @user_language || country_language || hoc_detect_language()
+  @language = @user_language || country_language || hoc_detect_language
 
   canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}",path].select{|i| !i.nil_or_empty?})]
   canonical_urls << File.join(["/#{(@company || @country)}",path].select{|i| !i.nil_or_empty?}) if @language == country_language
@@ -74,7 +74,7 @@ def hoc_canonicalized_i18n_path(uri)
   return "/#{path}"
 end
 
-def hoc_detect_country()
+def hoc_detect_country
   location = Geocoder.search(request.ip).first
   return 'us' unless location
 
@@ -85,7 +85,7 @@ def hoc_detect_country()
   country_code
 end
 
-def hoc_detect_language()
+def hoc_detect_language
   language = request.env['rack.locale']
   return language if HOC_I18N.keys.include?(language)
   language = language[0..1]
@@ -97,7 +97,7 @@ def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].select{|i| !i.nil_or_empty?})
 end
 
-def codeorg_url()
+def codeorg_url
   if @country == 'ar'
     return 'ar.code.org'
   elsif @country == 'br'
@@ -145,6 +145,10 @@ def campaign_date(format)
     return HOC_COUNTRIES[@country]['campaign_date_short']
   when "full"
     return HOC_COUNTRIES[@country]['campaign_date_full']
+  when "year"
+    return HOC_COUNTRIES[@country]['campaign_date_year']
+  when "full-year"
+    return HOC_COUNTRIES[@country]['campaign_date_full_year']
   else
     return HOC_COUNTRIES[@country]['campaign_date_full']
   end

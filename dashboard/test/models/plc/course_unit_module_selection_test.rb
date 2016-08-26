@@ -85,6 +85,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     @evaluation = LevelGroup.create_from_level_builder({name: 'evaluation'}, {dsl_text: levelgroup_dsl})
     create(:script_level, script: @course_unit.script, levels: [@evaluation])
     @activity = create(:activity, user: @user, level: @evaluation)
+    @user_level = create(:user_level, user: @user, level: @evaluation)
   end
 
   test 'submit evaluation enrolls user in appropriate modules' do
@@ -120,7 +121,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
   end
 
   def get_preferred_modules_for_answers(answers_map)
-    answers_data = Hash.new()
+    answers_data = Hash.new
 
     answers_map.each do |evaluation_multi, answer|
       answers_data[evaluation_multi.id] = {'result': evaluation_multi.answers.find_index {|x| x['text'] == answer}.to_s}
@@ -128,6 +129,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     level_source = create(:level_source, level: @evaluation, data: answers_data.to_json)
     @activity.update(level_source: level_source)
+    @user_level.update(level_source: level_source)
     @course_unit.determine_preferred_learning_modules @user
   end
 end

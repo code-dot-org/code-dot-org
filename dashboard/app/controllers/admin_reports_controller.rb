@@ -2,7 +2,7 @@ require 'cdo/env'
 
 # The controller for reports of internal admin-only data.
 class AdminReportsController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   before_action :require_admin
   check_authorization
 
@@ -302,6 +302,7 @@ class AdminReportsController < ApplicationController
   end
 
   private
+
   # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
   # a slice across the hash arrays.
   # Returns nil if the hash is blank.
@@ -379,7 +380,7 @@ class AdminReportsController < ApplicationController
   def diversity_survey_csv
     send_data(
       CSV.generate do |csv|
-        diversity_survey_raw_responses().each do |response|
+        diversity_survey_raw_responses.each do |response|
           csv << response
         end
         csv

@@ -4,7 +4,7 @@
 require 'securerandom' unless defined?(SecureRandom)
 
 class ZendeskSessionController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   SECRET = Dashboard::Application.config.zendesk_secret
   SUBDOMAIN = Dashboard::Application.config.zendesk_subdomain
@@ -40,7 +40,7 @@ class ZendeskSessionController < ApplicationController
 
   def zendesk_sso_url(payload)
     url = "https://#{SUBDOMAIN}.zendesk.com/access/jwt?jwt=#{payload}"
-    url += "&return_to=#{URI.escape(params["return_to"])}" if params["return_to"].present?
+    url += "&return_to=#{URI.escape(params['return_to'])}" if params["return_to"].present?
     url
   end
 end

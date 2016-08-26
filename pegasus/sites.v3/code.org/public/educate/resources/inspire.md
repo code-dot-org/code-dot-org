@@ -1,6 +1,7 @@
 ---
 title: Inspire students
 nav: educate_nav
+video_player: true
 ---
 
 

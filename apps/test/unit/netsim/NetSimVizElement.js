@@ -1,9 +1,7 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 
-testUtils.setupLocale('netsim');
 
 describe("NetSimVizElement", function () {
 

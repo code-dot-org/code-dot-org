@@ -1,6 +1,6 @@
 module Ops
   class CohortsController < OpsControllerBase
-    after_filter :notify_district_contact, only: [:update, :destroy_teacher]
+    after_action :notify_district_contact, only: [:update, :destroy_teacher]
 
     load_and_authorize_resource except: [:index, :create]
 
@@ -68,6 +68,7 @@ module Ops
     end
 
     private
+
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def cohort_params
@@ -135,9 +136,6 @@ module Ops
           @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
 
           # cannoy modify districts
-        else
-          # weird.
-          # don't do anything
         end
       end
     end

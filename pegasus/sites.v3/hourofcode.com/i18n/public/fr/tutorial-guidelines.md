@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-
 # Instructions pour Hour of Code™ et la semaine de l'apprentissage des sciences informatiques
 
 Code.org hébergera de nombreuses d'activités Une Heure de Code sur les sites Code.org, Hour of Code et CSEdWeek. La liste actuelle est disponible sur [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
@@ -214,13 +213,13 @@ Après le succès de la campagne 2013, nous avons mis en place des règles pour 
 
 C'est pour protéger la marque « Une Heure de Code » et Hour of Code et éviter toute confusion. Beaucoup de partenaires pour les tutoriels ont utilisé « Une Heure de Code » sur leurs sites web. Nous ne voulons pas empêcher cette utilisation, mais nous voulons nous assurez que son utilisation prend en compte quelques règles :
 
-  1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Mauvais exemple : « Essayez Hour of Code par ACME Corp ».
+  2. Placez un exposant « TM » aux emplacements principaux dans lesquels vous mentionnez « Hour of Code », aussi bien sur votre site web que dans les descriptions d'application.
   3. Inclure la langue dans la page (ou en pied de page), y compris des liens vers les sites web CSEdWeek et Code.org, en indiquant ce qui suit :
     
     *« Une Heure de Code ™ est une initiative nationale organisée durant la semaine d'éducation aux Sciences Informatiques [csedweek.org] et Code.org[code.org] pour initier des millions d'étudiants à une heure d'informatique et à la programmation informatique. »*
 
-  4. No use of "Hour of Code" in app names.
+  4. « Hour of Code » de doit pas être utilisé dans des noms d'application.
 
 [**Retour en début de page**](#top)
 
@@ -263,4 +262,3 @@ Nous demandons à tout le monde de promouvoir leur tutoriel d'une heure à leurs
 Si vous créez un tutoriel qui est conçu pour les malvoyants, nous aimerions surligner cette information pour les participants avec des lecteurs d'écran. Nous n'avez pas encore reçu ce type de tutoriels et nous aimerions beaucoup inclure une option pour ces élèves.
 
 [**Retour en début de page**](#top)
-

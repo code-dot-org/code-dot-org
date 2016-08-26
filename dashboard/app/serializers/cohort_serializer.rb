@@ -51,10 +51,10 @@ class CohortSerializer < ActiveModel::Serializer
   def cutoff_date
     object.cutoff_date.try(:strftime, '%Y-%m-%d')
   end
+
   private
 
   def district_contact?
     scope && !scope.admin? && scope.district_contact?
   end
-
 end

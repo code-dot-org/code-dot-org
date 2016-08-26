@@ -3,6 +3,9 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
+- if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
+  = render partial: 'layouts/terms_interstitial'
+
 = render partial: 'home/survey'
 = render partial: 'devise/confirmations/alert'
 
@@ -10,6 +13,10 @@
   .row
     .span12
       - unless current_user
+        .row
+          .sign_in.show_only_on_mobile
+            %a{href: CDO.studio_url('/users/sign_in')}
+              %button.primary= t('nav.user.signin')
         #welcome_hero.welcome
           .row
             .welcomeleft.span2
@@ -30,6 +37,8 @@
   - if current_user
     - if current_user.teacher?
       #teacher_announcement
+        - unless current_user.accepted_latest_terms?
+          = render template: 'api/accept_terms_reminder'
         = render template: 'api/teacher_announcement'
 
     #user_hero

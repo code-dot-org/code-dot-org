@@ -8,7 +8,6 @@ gem 'rails', '~> 4.2.6'
 gem 'responders', '~> 2.0'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'rack-contrib', '~> 1.1'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
@@ -66,6 +65,7 @@ group :development, :test do
   # for ui testing
   gem 'cucumber'
   gem 'selenium-webdriver', '~> 2.45.0'
+  gem 'net-http-persistent'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -93,7 +93,7 @@ gem 'unicorn', '~> 4.8.2'
 gem 'chronic', '~> 0.10.2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -103,18 +103,22 @@ gem 'jquery-rails', '~> 3.1.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
+# for emoji in utility output
+gem 'gemoji'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'devise_invitable', '~> 1.5.2'
+gem 'devise_invitable', '~> 1.6.0'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-windowslive', '~> 0.0.9'
 gem 'omniauth-clever', '~> 1.2.1'
+gem 'ims-lti', '~> 1.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -125,13 +129,13 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11' # error monitoring
+gem 'honeybadger' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
-gem 'geocoder'
+gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
 gem 'rmagick'
 gem 'mini_magick'
@@ -170,8 +174,12 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', '0.37.2', require: false, group: [:development, :staging]
-gem 'haml_lint', require: false, group: [:development, :staging]
+# Lint tools
+group :development, :staging do
+  gem 'rubocop', '0.37.2', require: false
+  gem 'haml_lint', require: false
+  gem 'scss_lint', require: false
+end
 
 # Reduce volume of production logs
 gem 'lograge'
@@ -187,7 +195,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
 
@@ -198,6 +205,8 @@ gem 'rack-attack', '~> 4.4'
 # Generate SSL certificates
 gem 'acmesmith'
 
+gem 'firebase'
 gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'
+gem 'bcrypt'

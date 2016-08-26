@@ -66,4 +66,5 @@ Code.
 - 1-pager: [What is computer science, and how does it impact careers and other fields of study?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
 - [Infographic with more stats about the shortage of Computer Science education](http://code.org/stats)
 - [NCWIT outreach guide for introducing students to computer science](http://www.ncwit.org/resources/outreach-box-discovering-it) and [fact-sheet about participation by women](http://www.ncwit.org/infographic/3435)
-- Learn about [what Congress is doing for K-12 CS Education](http://www.computinginthecore.org/newsroom) and how you can support the [Computer Science Education Act](http://www.computinginthecore.org/csea)
+- [Tell Congress](http://www.congressweb.com/code/21) you support K-12 Computer Science!
+

@@ -1,19 +1,13 @@
 name 'CSPPD2 chunk 3'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-### Chunk 3:  Encoding and Sending Text > Overview of the Lessons
+# Chunk 3:  Encoding and Sending Text > Overview of the Lessons
 
 <img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/c5hMX9V0GB352Lg/Screen%20Shot%202015-07-18%20at%2012.02.54%20AM.png" width=“70%” style="float:left; margin-right:30px">
-<br>
-<br>
+
 In the third chunk of lessons students build on their experience with encoding numbers and begin experimenting with representing text. In the first lesson of the chunk, students develop a protocol for sending a text message over the internet simulator, a task that calls for students to figure out how to encode the letters a-z in binary. Next, students learn about the ASCII protocol for encoding letters and layer on formatting so their protocols can include information about how the text looks (things like fonts, color, etc).  
-<br>
 
 On the next page we'll look at the one-page overview from each lesson, but remember that you can always see the [entire unit on Code Studio](https://studio.code.org/s/cspunit1/). 
-<br><br>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

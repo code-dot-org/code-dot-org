@@ -1,20 +1,18 @@
 name 'U3L21 Student Lesson Introduction v2'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 21 - Digital Assistant Project
+# Unit 3: Lesson 21 - Digital Assistant Project
 
-# Background
+## Background
 
 You've added a lot of functionality to the Movie Bot digital assistant, allowing it to respond to an increasingly complex combination of user inputs. Now it's time to create a digital assistant of your own. Select a topic, choose the keywords, and apply your new skills with string functions and conditional logic to design an "intelligent" program.
 
-# Lesson
+## Lesson
 
 * Design your own digital assistant.
 
-# Resources
-* Activity Guide: <a href="https://docs.google.com/document/d/1xvZpBXE-WhEf020DEKtIA3LP_i-3xjHPcL8SltRLAzw/edit?usp=sharing" target="_blank">
-Digital Assistant
-</a>
+## Resources
+* Activity Guide: <a href="https://docs.google.com/document/d/1xvZpBXE-WhEf020DEKtIA3LP_i-3xjHPcL8SltRLAzw/edit?usp=sharing" target="_blank">Digital Assistant</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

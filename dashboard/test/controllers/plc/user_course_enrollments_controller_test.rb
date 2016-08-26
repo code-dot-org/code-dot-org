@@ -18,10 +18,10 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
   test 'invalid email address' do
     post :create, user_emails: 'invalid', plc_course_id: @plc_course.id
-    assert_redirected_to action: :new, notice: 'Unknown users invalid'
+    assert_redirected_to action: :new, notice: 'The following users did not exist <li>invalid</li><br/>'
 
-    post :create, user_emails: "invalid\r\n#{@user.email}"
-    assert_redirected_to action: :new, notice: 'Unknown users invalid'
+    post :create, user_emails: "invalid\r\n#{@user.email}", plc_course_id: @plc_course.id
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>The following users did not exist <li>invalid</li><br/>"
   end
 
   test 'validation failed' do
@@ -37,13 +37,13 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       post :create, user_emails: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for #{@user.email}"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
 
     user2 = create :teacher
     user3 = create :teacher
 
     post :create, user_emails: "#{user2.email}\r\n#{user3.email}", plc_course_id: @plc_course.id
-    assert_redirected_to action: :new, notice: "Enrollments created for #{user2.email}, #{user3.email}"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{user2.email}</li><li>#{user3.email}</li><br/>"
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user2, plc_course: @plc_course).count
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user3, plc_course: @plc_course).count
 
@@ -51,7 +51,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       post :create, user_emails: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for #{@user.email}"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
   end
 
   test 'Enrollment is viewable in all possible enrollment states' do
@@ -95,29 +95,6 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_response :forbidden
     get :manager_view, id: @user_course_enrollment
     assert_response :forbidden
-  end
-
-  test 'District managers can only view teachers they manage' do
-    district = create(:district, contact: @district_contact)
-    teacher1 = create(:teacher, name: 'Teacher 1')
-    create(:districts_users, user: teacher1, district: district)
-    teacher2 = create(:teacher, name: 'Teacher 2')
-    create(:districts_users, user: teacher2, district: district)
-    teacher3 = create(:teacher, name: 'Teacher 3')
-
-    [teacher1, teacher2, teacher3].each do |teacher|
-      create(:plc_user_course_enrollment, user: teacher, plc_course: @plc_course)
-    end
-
-    sign_out @user
-    sign_in @district_contact
-    get :index
-    assert_response :success
-    get :group_view
-    assert_response :success
-    assert_select 'table tbody tr', 2
-    get :manager_view, id: teacher1.plc_enrollments.first
-    assert_response :success
   end
 
   test 'District managers cannot view teachers they do not manage' do

@@ -26,7 +26,7 @@ class SolutionBlocksTest < ActiveSupport::TestCase
 </xml>
 XML
 
-    @simple_level =  Level.create(instructions: 'test', type: 'Karel', solution_blocks: @simple_solution_blocks)
+    @simple_level = Level.create(instructions: 'test', type: 'Karel', solution_blocks: @simple_solution_blocks)
 
     @simple_flattened_blocks = [
       '<block type="when_run"/>',
@@ -122,7 +122,7 @@ XML
 </xml>
 XML
 
-    @function_level =  Level.create(instructions: 'test', type: 'Artist', solution_blocks: @function_solution_blocks)
+    @function_level = Level.create(instructions: 'test', type: 'Artist', solution_blocks: @function_solution_blocks)
 
     @function_flattened_blocks = [
       "<block type=\"procedures_defnoreturn\">\n  <mutation/>\n</block>",

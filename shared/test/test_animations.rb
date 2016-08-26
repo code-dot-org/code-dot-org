@@ -2,7 +2,6 @@ require_relative 'files_api_test_base' # Must be required first to establish loa
 require_relative 'files_api_test_helper'
 
 class AnimationsTest < FilesApiTestBase
-
   def setup
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'animations', @channel_id)
@@ -41,7 +40,7 @@ class AnimationsTest < FilesApiTestBase
     response = @api.post_file(cat_image_filename, cat_image_body, 'image/png')
     actual_cat_image_info = JSON.parse(response)
     expected_cat_image_info = {
-      'filename' =>  cat_image_filename,
+      'filename' => cat_image_filename,
       'category' => 'image',
       'size' => cat_image_body.length
     }
@@ -216,5 +215,4 @@ class AnimationsTest < FilesApiTestBase
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
-
 end

@@ -1,5 +1,4 @@
 class VolunteerContact2015
-
   def self.normalize(data)
     result = {}
 
@@ -25,11 +24,11 @@ class VolunteerContact2015
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'volunteer_contact_2015_receipt'
   end
 
-  def self.type_tasks()
+  def self.type_tasks
     (@type_tasks ||= {})[I18n.locale] ||= type_tasks_with_i18n_labels(
       'onsite',
       'remote',

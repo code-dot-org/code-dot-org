@@ -2,11 +2,10 @@
  * @overview UI component: The small expandable box above the visualization,
  *           used to show debug and diagnostic information.
  */
-'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
-var i18n = require('./locale');
+var i18n = require('@cdo/netsim/locale');
 var markup = require('./NetSimStatusPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel.js');
 var NetSimUtils = require('./NetSimUtils');

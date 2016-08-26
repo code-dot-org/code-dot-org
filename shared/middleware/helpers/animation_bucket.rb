@@ -2,7 +2,6 @@
 # AnimationBucket
 #
 class AnimationBucket < BucketHelper
-
   def initialize
     super CDO.animations_s3_bucket, CDO.animations_s3_directory
   end
@@ -16,5 +15,4 @@ class AnimationBucket < BucketHelper
   def cache_duration_seconds
     3600
   end
-
 end

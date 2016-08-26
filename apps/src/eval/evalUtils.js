@@ -2,7 +2,7 @@ var CustomEvalError = require('./evalError');
 var _ = require('lodash');
 
 /**
- * Throws an expection if val is not of the expected type. Type is either a
+ * Throws an exception if val is not of the expected type. Type is either a
  * string (like "number" or "string") or an object (Like EvalImage).
  */
 module.exports.ensureString = function (val) {
@@ -22,7 +22,7 @@ module.exports.ensureStyle = function (val) {
     if (opacity >= 0 && opacity <= 1.0) {
       return;
     }
-  } if (_.contains(['outline', 'solid'], val)) {
+  } if (_.includes(['outline', 'solid'], val)) {
     return;
   }
   throw new CustomEvalError(CustomEvalError.Type.BadStyle, val);

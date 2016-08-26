@@ -4,8 +4,6 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var _ = require('lodash');
@@ -17,7 +15,8 @@ var ResizablePanes = React.createClass({
   propTypes: {
     style: React.PropTypes.object,
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    onChange: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -99,10 +98,10 @@ var ResizablePanes = React.createClass({
   getResizer: function (index) {
     return (
       <div
-          key={"resizer-" + index}
-          data-resizer-index={index}
-          className="resizer"
-          onMouseDown={this.onResizerMouseDown}
+        key={"resizer-" + index}
+        data-resizer-index={index}
+        className="resizer"
+        onMouseDown={this.onResizerMouseDown}
       />
     );
   },
@@ -129,7 +128,7 @@ var ResizablePanes = React.createClass({
     };
 
     return (
-      <div className='resizable-panes' style={styles.root}>
+      <div className="resizable-panes" style={styles.root}>
         {this.getChildren()}
       </div>
     );

@@ -23,5 +23,6 @@ class GeocoderTest < Minitest::Test
     assert_nil(Geocoder.find_potential_street_address('400'))
     assert_nil(Geocoder.find_potential_street_address('1500000000'))
     assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
+    assert_nil(Geocoder.find_potential_street_address('1_Counter'))
   end
 end

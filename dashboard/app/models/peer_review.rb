@@ -41,6 +41,43 @@ class PeerReview < ActiveRecord::Base
     escalated: 2
   }
 
+  def self.pull_review_from_pool(script, user)
+    # Find the first review such that meets these criteria
+    # Review is for this script
+    # I am not the submitter X
+    # Review status is nil
+    # Reviewer is nil or it has been assigned for more than a day
+    # Reviewer is not currently reviewing this level source
+    transaction do
+      peer_review = get_review_for_user(script, user)
+
+      if peer_review
+        peer_review.update!(reviewer: user)
+        peer_review
+      else
+        review_to_clone = get_potential_reviews(script, user).sample
+
+        if review_to_clone
+          new_review = review_to_clone.dup
+          new_review.update(reviewer: user, status: nil, data: nil)
+          new_review
+        else
+          # If we get here, it means that every review in the pool was either submitted by this user
+          # or has been reviewed by this user. Oh well, return nothing.
+          nil
+        end
+      end
+    end
+  end
+
+  def self.get_review_for_user(script, user)
+    PeerReview.get_potential_reviews(script, user).where(
+      status: nil
+    ).where(
+      'reviewer_id is null or created_at < now() - interval 1 day'
+    ).take
+  end
+
   def mark_user_level
     user_level = UserLevel.find_by!(user: submitter, level: level)
 
@@ -68,12 +105,12 @@ class PeerReview < ActiveRecord::Base
     # Need at least `REVIEWS_FOR_CONSENSUS` reviews to accept/reject
     return unless reviews.size >= REVIEWS_FOR_CONSENSUS
 
+    # TODO: Add an else clause with find_or_create PeerReview assigned to the
+    # instructor.
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
-    else
-      # TODO: find_or_create PeerReview assigned to the instructor
     end
   end
 
@@ -106,5 +143,61 @@ class PeerReview < ActiveRecord::Base
         )
       end
     end
+  end
+
+  def self.get_review_completion_status(user, script)
+    if user &&
+        script.has_peer_reviews? &&
+        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+      reviews_done = PeerReview.where(reviewer: user, script: script, status: PeerReview.statuses.values).size
+
+      if reviews_done >= script.peer_reviews_to_complete
+        Plc::EnrollmentModuleAssignment::COMPLETED
+      elsif reviews_done > 0
+        Plc::EnrollmentModuleAssignment::IN_PROGRESS
+      else
+        Plc::EnrollmentModuleAssignment::NOT_STARTED
+      end
+    end
+  end
+
+  def self.get_peer_review_summaries(user, script)
+    if user &&
+        script.has_peer_reviews? &&
+        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+
+      PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
+        if script.peer_reviews_to_complete &&
+            reviews.size < script.peer_reviews_to_complete &&
+            PeerReview.get_potential_reviews(script, user).any?
+          reviews << {
+              status: 'not_started',
+              name: I18n.t('peer_review.review_new_submission'),
+              result: ActivityConstants::UNSUBMITTED_RESULT,
+              icon: '',
+              locked: false
+          }
+        end
+      end
+    end
+  end
+
+  def summarize
+    return {
+      id: id,
+      status: status.nil? ? 'not_started' : 'perfect',
+      name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
+      result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
+      locked: false
+    }
+  end
+
+  def self.get_potential_reviews(script, user)
+    where(
+      script: script,
+    ).where.not(
+      submitter: user,
+      level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+    )
   end
 end

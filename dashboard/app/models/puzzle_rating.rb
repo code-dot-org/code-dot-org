@@ -28,7 +28,7 @@ class PuzzleRating < ActiveRecord::Base
 
   validates_uniqueness_of :user_id, :scope => [:script_id, :level_id], :allow_nil => true
 
-  def PuzzleRating.enabled?(script = nil)
+  def self.enabled?(script = nil)
     if script
       Gatekeeper.allows('puzzle_rating', where: { script_name: script.name }, default: true)
     else
@@ -40,7 +40,7 @@ class PuzzleRating < ActiveRecord::Base
   # If the user is not logged in, they can always rate
   # If the user is logged in, they can only rate if
   #   they haven't rated before
-  def PuzzleRating.can_rate?(script, level, user)
+  def self.can_rate?(script, level, user)
     return false unless enabled?(script)
     return true unless user
     !PuzzleRating.exists?(script: script, level: level, user: user)

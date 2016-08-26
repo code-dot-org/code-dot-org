@@ -6,7 +6,6 @@ require_relative '../deployment'
 DashboardDbUri = URI.parse CDO.dashboard_db_reader
 
 class DB < ActiveRecord::Base
-
   establish_connection(
     adapter:  'mysql2',
     host:     DashboardDbUri.host,
@@ -15,10 +14,9 @@ class DB < ActiveRecord::Base
     database: DashboardDbUri.path[1..-1],
     strict:   true
   )
-
 end
 
-def main()
+def main
   q = ARGV.join(' ').strip
   return if q.empty?
 

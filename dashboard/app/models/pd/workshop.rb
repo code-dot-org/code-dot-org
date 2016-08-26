@@ -17,6 +17,7 @@
 #  ended_at           :datetime
 #  created_at         :datetime
 #  updated_at         :datetime
+#  processed_at       :datetime
 #
 # Indexes
 #
@@ -64,6 +65,12 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study',
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1',
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
+    ],
+    COURSE_CSP => [
+      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
+      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
+      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
+      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'
     ]
   }
 
@@ -116,6 +123,10 @@ class Pd::Workshop < ActiveRecord::Base
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).distinct
   end
 
+  def self.find_by_section_code(section_code)
+    joins(:section).find_by(sections: {code: section_code})
+  end
+
   def self.in_state(state)
     case state
       when STATE_NOT_STARTED
@@ -142,7 +153,8 @@ class Pd::Workshop < ActiveRecord::Base
     self.started_at = Time.zone.now
     self.section = Section.create!(
       name: friendly_name,
-      user_id: self.organizer_id
+      user_id: self.organizer_id,
+      section_type: Section::TYPE_PD_WORKSHOP
     )
     self.save!
     self.section
@@ -196,6 +208,8 @@ class Pd::Workshop < ActiveRecord::Base
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
+
+    workshop.update!(processed_at: Time.zone.now)
   end
 
   def send_exit_surveys
@@ -204,17 +218,13 @@ class Pd::Workshop < ActiveRecord::Base
       enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
     end
 
-    Pd::Enrollment.create_for_unenrolled_attendees(self)
-
     # Send the emails
     self.enrollments.reload.each do |enrollment|
       next unless enrollment.user
 
-      # Make sure every enrolled user is a teacher and has an exposed email
-      # because some teachers accidentally create student accounts
-      enrollment.user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email) unless enrollment.user.teacher?
+      # Make sure user joined the section
+      next unless section.students.exists?(enrollment.user.id)
 
-      next unless Pd::Attendance.for_workshop(self).for_teacher(enrollment.user).any?
       Pd::WorkshopMailer.exit_survey(self, enrollment.user, enrollment).deliver_now
     end
   end

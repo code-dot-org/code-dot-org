@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
@@ -13,7 +12,6 @@ var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;

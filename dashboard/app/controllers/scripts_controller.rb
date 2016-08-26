@@ -1,6 +1,6 @@
 class ScriptsController < ApplicationController
-  before_filter :require_levelbuilder_mode, except: :show
-  before_filter :authenticate_user!, except: :show
+  before_action :require_levelbuilder_mode, except: :show
+  before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
   authorize_resource
@@ -11,7 +11,6 @@ class ScriptsController < ApplicationController
       redirect_to canonical_path, status: :moved_permanently
       return
     end
-
   end
 
   def index
@@ -89,5 +88,4 @@ class ScriptsController < ApplicationController
   def script_params
     params.require(:script).permit(:name)
   end
-
 end

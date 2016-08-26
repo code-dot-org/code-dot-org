@@ -17,11 +17,11 @@
     "step_mode": "1",
     "nectar_goal": "13",
     "flower_type": "redWithNectar",
-    "ideal": "47",
-    "instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? Try adding a new parameter to your function called \"nectar units\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
+    "ideal": "42",
+    "instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function? Try adding a new parameter to your function called \"nectar units\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "markdown_instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? \r\n\r\n<br/>\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
+    "markdown_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function? \r\n\r\n<br/>\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "fast_get_nectar_animation": "true"
+    "fast_get_nectar_animation": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -41,7 +42,7 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
+    <initialization_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
@@ -65,6 +66,10 @@
             </block>
           </next>
         </block>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="maze_move">
@@ -318,28 +323,6 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
-          <next>
-            <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">left</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">right</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="maze_move">

@@ -8,9 +8,13 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
+  resource :pairing, only: [:show, :update]
+
   resources :user_levels, only: [:update]
 
   get '/download/:product', to: 'hoc_download#index'
+
+  get '/terms-and-privacy', to: 'home#terms_and_privacy'
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -32,6 +36,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'maker/setup', to: 'maker#setup'
+
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
 
@@ -48,10 +54,10 @@ Dashboard::Application.routes.draw do
   post '/api/sections/transfers', to: 'transfers#create'
 
   get '/sh/:id', to: redirect('/c/%{id}')
-  get '/sh/:id/:action', to: redirect('/c/%{id}/%{action}')
+  get '/sh/:id/:action_id', to: redirect('/c/%{id}/%{action_id}')
 
   get '/u/:id', to: redirect('/c/%{id}')
-  get '/u/:id/:action', to: redirect('/c/%{id}/%{action}')
+  get '/u/:id/:action_id', to: redirect('/c/%{id}/%{action_id}')
 
   resources :level_sources, path: '/c/', only: [:show, :edit, :update] do
     member do
@@ -72,11 +78,16 @@ Dashboard::Application.routes.draw do
     passwords: 'passwords'
   }
   get 'discourse/sso' => 'discourse_sso#sso'
+  post '/auth/lti', to: 'lti_provider#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
-  get '/home/:action', controller: 'home'
+  namespace :home do
+    HomeController.instance_methods(false).each do |action|
+      get action, action: action
+    end
+  end
 
   resources :p, path: '/p/', only: [:index] do
     collection do
@@ -135,7 +146,17 @@ Dashboard::Application.routes.draw do
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [], path: "/stage", format: false do
+    resources :stages, only: [], path: "/stage", param: 'position', format: false do
+      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+        member do
+          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+        end
+      end
+    end
+
+    # /s/xxx/lockable/yyy/puzzle/zzz
+    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
@@ -146,6 +167,8 @@ Dashboard::Application.routes.draw do
 
     get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+    get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
   get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
@@ -213,10 +236,11 @@ Dashboard::Application.routes.draw do
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
+  get '/admin/styleguide', :to => redirect('/styleguide/')
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-  get '/admin/:action', controller: 'reports', as: 'reports'
 
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
@@ -286,7 +310,7 @@ Dashboard::Application.routes.draw do
           post :start
           post :end
         end
-        get :enrollments, action: 'index', controller: 'workshop_enrollments'
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
       end
@@ -312,6 +336,9 @@ Dashboard::Application.routes.draw do
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+    get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
+    post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+    patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
     # This is a developer aid that allows previewing rendered mail views with fixed test data.
     # The route is restricted so it only exists in development mode.
@@ -323,10 +350,17 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
+  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
-  get '/dashboardapi/:action', controller: 'api'
+  namespace :dashboardapi, module: :api do
+    ApiController.instance_methods(false).each do |action|
+      get action, action: action
+    end
+  end
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
 
+  post '/api/lock_status', to: 'api#update_lockable_state'
+  get '/api/lock_status', to: 'api#lockable_state'
   get '/api/script_structure/:script_name', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
@@ -334,11 +368,19 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
-  get '/api/:action', controller: 'api'
+  namespace :api do
+    ApiController.instance_methods(false).each do |action|
+      get action, action: action
+    end
+  end
 
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+
+      # Routes used by UI test status pages
+      get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 

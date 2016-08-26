@@ -24,12 +24,11 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');
 var color = require('../color');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
@@ -47,6 +46,7 @@ var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var experiments = require('../experiments');
+var constants = require('../constants');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -223,8 +223,8 @@ Artist.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+        visualizationColumn={visualizationColumn}
+        onMount={this.studioApp_.init.bind(this.studioApp_, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -363,15 +363,11 @@ Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   var code;
   if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    code = Blockly.Generator.xmlToCode('JavaScript', domBlocks);
   } else {
     code = blocksOrCode;
   }
   this.evalCode(code);
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.clear();
-  }
   this.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -407,7 +403,13 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
-    img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
+    // This is necessary when loading images from image.code.org to
+    // request the image with ACAO headers so that canvas will not flag
+    // it as tainted
+    img.crossOrigin = "anonymous";
+    img.src = filename.startsWith('http') ?
+        filename :
+        this.studioApp_.assetUrl('media/turtle/' + filename);
   }
 };
 
@@ -693,10 +695,10 @@ Artist.prototype.evalCode = function (code) {
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
+    // stop further execution, animate what occurred before the infinite loop,
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
+    if (e !== 'Infinity') {
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
@@ -751,7 +753,7 @@ Artist.prototype.execute = function () {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks() ||
+  if (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
@@ -986,6 +988,17 @@ Artist.prototype.step = function (command, values, options) {
       this.setHeading_(heading);
       this.moveForward_(result.distance);
       break;
+    case 'JT':  // Jump To Location
+      this.jumpTo_(values[0]);
+      break;
+    case 'MD':  // Move diagonally (use longer steps if showing joints)
+      distance = values[0];
+      heading = values[1];
+      result = this.calculateSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      this.setHeading_(heading);
+      this.moveForward_(result.distance, true);
+      break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
@@ -1105,6 +1118,18 @@ Artist.prototype.setPattern = function (pattern) {
   }
 };
 
+Artist.prototype.jumpTo_ = function (pos) {
+  let x, y;
+  if (Array.isArray(pos)) {
+    [x, y] = pos;
+  } else {
+    x = utils.xFromPosition(pos, CANVAS_WIDTH);
+    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
+  }
+  this.x = Number(x);
+  this.y = Number(y);
+};
+
 Artist.prototype.jumpForward_ = function (distance) {
   this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
   this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
@@ -1151,7 +1176,7 @@ Artist.prototype.constrainDegrees_ = function (degrees) {
   return degrees;
 };
 
-Artist.prototype.moveForward_ = function (distance) {
+Artist.prototype.moveForward_ = function (distance, isDiagonal) {
   if (!this.penDownValue) {
     this.jumpForward_(distance);
     return;
@@ -1165,33 +1190,37 @@ Artist.prototype.moveForward_ = function (distance) {
     }
   }
 
-  this.drawForward_(distance);
+  this.drawForward_(distance, isDiagonal);
 };
 
-Artist.prototype.drawForward_ = function (distance) {
+Artist.prototype.drawForward_ = function (distance, isDiagonal) {
   if (this.shouldDrawJoints_()) {
-    this.drawForwardWithJoints_(distance);
+    this.drawForwardWithJoints_(distance, isDiagonal);
   } else {
     this.drawForwardLine_(distance);
   }
 };
 
 /**
- * Draws a line of length `distance`, adding joint knobs along the way
+ * Draws a line of length `distance`, adding joint knobs along the way at
+ * intervals of `JOINT_SEGMENT_LENGTH` if `isDiagonal` is false, or
+ * `JOINT_SEGMENT_LENGTH * sqrt(2)` if `isDiagonal` is true.
  * @param distance
+ * @param isDiagonal
  */
-Artist.prototype.drawForwardWithJoints_ = function (distance) {
+Artist.prototype.drawForwardWithJoints_ = function (distance, isDiagonal) {
   var remainingDistance = distance;
+  var segmentLength = JOINT_SEGMENT_LENGTH * (isDiagonal ? Math.sqrt(2) : 1);
+
+  if (remainingDistance >= segmentLength) {
+    this.drawJointAtTurtle_();
+  }
 
   while (remainingDistance > 0) {
-    var enoughForFullSegment = remainingDistance >= JOINT_SEGMENT_LENGTH;
-    var currentSegmentLength = enoughForFullSegment ? JOINT_SEGMENT_LENGTH : remainingDistance;
+    var enoughForFullSegment = remainingDistance >= segmentLength;
+    var currentSegmentLength = enoughForFullSegment ? segmentLength : remainingDistance;
 
     remainingDistance -= currentSegmentLength;
-
-    if (enoughForFullSegment) {
-      this.drawJointAtTurtle_();
-    }
 
     this.drawForwardLine_(currentSegmentLength);
 
@@ -1477,7 +1506,7 @@ Artist.prototype.checkAnswer = function () {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_().split(',')[1];
+    reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
   }
 
   this.studioApp_.report(reportData);

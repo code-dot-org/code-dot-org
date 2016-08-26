@@ -5,20 +5,16 @@
  *
  */
 /* global dashboard */
-
-'use strict';
 import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
-var applabMsg = require('./locale');
+var commonMsg = require('@cdo/locale');
+var applabMsg = require('@cdo/applab/locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
-var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
-var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
@@ -30,6 +26,7 @@ var dropletConfig = require('./dropletConfig');
 var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
 var FirebaseStorage = require('./firebaseStorage');
+import { getDatabase } from './firebaseUtils';
 var constants = require('../constants');
 var experiments = require('../experiments');
 var _ = require('lodash');
@@ -50,7 +47,6 @@ var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 var Exporter = require('./Exporter');
 
-var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
@@ -59,15 +55,15 @@ var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
-var applabConstants = require('./constants');
+import applabConstants, { ApplabInterfaceMode, DataView }  from './constants';
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import { addTableName, deleteTableName, updateTableRecords, updateKeyValueData } from './redux/data';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
-var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
  * Create a namespace for the application.
@@ -366,12 +362,24 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+/**
+ * @returns the absolute url to the root of this project without a trailing slash.
+ *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
+ */
+function getProjectUrl() {
+  const match = location.href.match(PROJECT_URL_PATTERN);
+  if (match) {
+    return match[1];
+  }
+  return location.href; // i give up. Let's try this?
+}
+
 function renderFooterInSharedGame() {
   var divApplab = document.getElementById('divApplab');
   var footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
-
   var menuItems = [
     {
       text: commonMsg.reportAbuse(),
@@ -385,7 +393,7 @@ function renderFooterInSharedGame() {
     },
     {
       text: commonMsg.openWorkspace(),
-      link: location.href + '/view'
+      link: getProjectUrl() + '/view',
     },
     {
       text: commonMsg.copyright(),
@@ -447,7 +455,6 @@ Applab.setStepSpeed = function (speed) {
 function getCurrentTickLength() {
   var debugStepDelay;
   if (debuggerUi) {
-    // debugStepDelay will be undefined if no speed slider is present
     debugStepDelay = debuggerUi.getStepDelay();
   }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
@@ -509,18 +516,10 @@ Applab.onTick = function () {
 
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
-  } else {
-    Applab.executeNativeJS();
   }
 
   if (checkFinished()) {
     Applab.onPuzzleFinish();
-  }
-};
-
-Applab.executeNativeJS = function () {
-  if (Applab.tickCount === 1) {
-    try { Applab.whenRunFunc(studioApp, apiBlockly, Applab.Globals); } catch (e) { }
   }
 };
 
@@ -557,10 +556,21 @@ Applab.init = function (config) {
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
+  if (!config.level.editCode) {
+    throw 'App Lab requires Droplet';
+  }
+
+  if (!config.channel) {
+    throw new Error('Cannot initialize App Lab without a channel id. ' +
+      'You may need to sign in to your code studio account first.');
+  }
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
+  // Persist the useFirebaseForNewProject experiment from the url path to local storage
+  experiments.isEnabled('useFirebaseForNewProject');
+  var useFirebase = window.dashboard.project.useFirebase() || false;
+  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -596,12 +606,9 @@ Applab.init = function (config) {
 
   adjustAppSizeStyles(document.getElementById(config.containerId));
 
-  var showSlider = !config.hideSource && config.level.editCode;
-  var showDebugButtons = (!config.hideSource &&
-                          config.level.editCode &&
-                          !config.level.debuggerDisabled);
+  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
-  var showDebugConsole = !config.hideSource && config.level.editCode;
+  var showDebugConsole = !config.hideSource;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -609,7 +616,7 @@ Applab.init = function (config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick, studioApp.reduxStore);
   }
 
   config.loadAudio = function () {
@@ -643,7 +650,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (studioApp.reduxStore.getState().pageConstants.isDesignModeHidden) {
+    if (!studioApp.reduxStore.getState().pageConstants.hasDesignMode) {
       config.level.levelHtml = '';
     }
 
@@ -739,29 +746,29 @@ Applab.init = function (config) {
       dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
     }
 
-    if (level.editCode) {
-      setupReduxSubscribers(studioApp.reduxStore);
+    setupReduxSubscribers(studioApp.reduxStore);
 
-      designMode.addKeyboardHandlers();
+    designMode.addKeyboardHandlers();
+    designMode.renderDesignWorkspace();
+    designMode.loadDefaultScreen();
 
-      designMode.renderDesignWorkspace();
+    studioApp.reduxStore.dispatch(changeInterfaceMode(
+      Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-      designMode.loadDefaultScreen();
+    designMode.configureDragAndDrop();
 
-      designMode.toggleDesignMode(Applab.startInDesignMode());
-
-      designMode.configureDragAndDrop();
-
-      var designModeViz = document.getElementById('designModeViz');
-      designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
-    }
+    var designModeViz = document.getElementById('designModeViz');
+    designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }.bind(this);
 
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
+    playspacePhoneFrame: !config.share,
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    isDesignModeHidden: !!config.level.hideDesignMode,
+    hasDataMode: useFirebase,
+    hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     isProjectLevel: !!config.level.isProjectLevel,
@@ -769,8 +776,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: false,
-    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+    showDebugWatch: false
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -783,7 +789,14 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  studioApp.notifyInitialRenderComplete(config);
 };
+
+function changedToDataMode(state, lastState) {
+  return state.interfaceMode !== lastState.interfaceMode &&
+      state.interfaceMode === ApplabInterfaceMode.DATA;
+}
 
 /**
  * Subscribe to state changes on the store.
@@ -801,10 +814,31 @@ function setupReduxSubscribers(store) {
       onInterfaceModeChange(state.interfaceMode);
     }
 
+    // Simulate a data view change when switching into data mode.
+    const view = state.data && state.data.view;
+    const lastView = lastState.data && lastState.data.view;
+    const isDataMode = (state.interfaceMode === ApplabInterfaceMode.DATA);
+    if ((isDataMode && view !== lastView) || changedToDataMode(state, lastState)) {
+      onDataViewChange(state.data.view, lastState.data.tableName, state.data.tableName);
+    }
+
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       Applab.onIsRunningChange();
     }
   });
+
+  if (store.getState().pageConstants.hasDataMode) {
+    // Initialize redux's list of tables from firebase, and keep it up to date as
+    // new tables are added and removed. This strategy reads all existing table
+    // data only once.
+    const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+    tablesRef.on('child_added', snapshot => {
+      store.dispatch(addTableName(snapshot.key()));
+    });
+    tablesRef.on('child_removed', snapshot => {
+      store.dispatch(deleteTableName(snapshot.key()));
+    });
+  }
 }
 
 Applab.onIsRunningChange = function () {
@@ -1033,6 +1067,8 @@ Applab.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+    // adding finish button changes layout. force a resize
+    studioApp.onResize();
   }
 
   if (studioApp.editor) {
@@ -1086,24 +1122,6 @@ Applab.onReportComplete = function (response) {
   displayFeedback();
 };
 
-//
-// Generates code with user-generated function definitions and evals that code
-// so these can be called from event handlers. This should be called for each
-// block type that defines functions.
-//
-
-var defineProcedures = function (blockType) {
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
-  // TODO: handle editCode JS interpreter
-  try {
-    codegen.evalWith(code, {
-      studioApp: studioApp,
-      Applab: apiBlockly,
-      Globals: Applab.Globals
-    });
-  } catch (e) { }
-};
-
 /**
  * Execute the app
  */
@@ -1121,68 +1139,49 @@ Applab.execute = function () {
   // Set event handlers and start the onTick timer
 
   var codeWhenRun;
-  if (level.editCode) {
-    codeWhenRun = studioApp.getCode();
-    Applab.currentExecutionLog = [];
-  } else {
-    // Define any top-level procedures the user may have created
-    // (must be after reset(), which resets the Applab.Globals namespace)
-    defineProcedures('procedures_defreturn');
-    defineProcedures('procedures_defnoreturn');
+  codeWhenRun = studioApp.getCode();
+  Applab.currentExecutionLog = [];
 
-    var blocks = Blockly.mainBlockSpace.getTopBlocks();
-    for (var x = 0; blocks[x]; x++) {
-      var block = blocks[x];
-      if (block.type === 'when_run') {
-        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [block]);
-        break;
-      }
-    }
-  }
   if (codeWhenRun) {
-    if (level.editCode) {
-      // Create a new interpreter for this run
-      Applab.JSInterpreter = new JSInterpreter({
-        studioApp: studioApp,
-        logExecution: !!level.logConditions,
-        shouldRunAtMaxSpeed: function () { return getCurrentTickLength() === 0; },
-        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
-      });
+    // Create a new interpreter for this run
+    Applab.JSInterpreter = new JSInterpreter({
+      studioApp: studioApp,
+      logExecution: !!level.logConditions,
+      shouldRunAtMaxSpeed: function () { return getCurrentTickLength() === 0; },
+      maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
+    });
 
-      // Register to handle interpreter events
-      Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
-      if (jsInterpreterLogger) {
-        jsInterpreterLogger.attachTo(Applab.JSInterpreter);
-      }
-      if (debuggerUi) {
-        debuggerUi.attachTo(Applab.JSInterpreter);
-      }
+    // Register to handle interpreter events
+    Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
+    if (jsInterpreterLogger) {
+      jsInterpreterLogger.attachTo(Applab.JSInterpreter);
+    }
+    if (debuggerUi) {
+      debuggerUi.attachTo(Applab.JSInterpreter);
+    }
 
-      // Initialize the interpreter and parse the student code
-      Applab.JSInterpreter.parse({
-        code: codeWhenRun,
-        blocks: level.levelBlocks,
-        blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-        enableEvents: true
-      });
-      // Maintain a reference here so we can still examine this after we
-      // discard the JSInterpreter instance during reset
-      Applab.currentExecutionLog = Applab.JSInterpreter.executionLog;
-      if (!Applab.JSInterpreter.initialized()) {
-        return;
-      }
-    } else {
-      Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-        StudioApp: studioApp,
-        Applab: apiBlockly,
-        Globals: Applab.Globals
-      });
+    // Initialize the interpreter and parse the student code
+    Applab.JSInterpreter.parse({
+      code: codeWhenRun,
+      blocks: level.levelBlocks,
+      blockFilter: level.executePaletteApisOnly && level.codeFunctions,
+      enableEvents: true
+    });
+    // Maintain a reference here so we can still examine this after we
+    // discard the JSInterpreter instance during reset
+    Applab.currentExecutionLog = Applab.JSInterpreter.executionLog;
+    if (!Applab.JSInterpreter.initialized()) {
+      return;
     }
   }
 
   if (Applab.makerlabController) {
     Applab.makerlabController
         .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .catch((error) => {
+          studioApp.displayPlayspaceAlert("error",
+              <div>{`Board connection error: ${error}`}</div>);
+        })
         .then(Applab.beginVisualizationRun);
   } else {
     Applab.beginVisualizationRun();
@@ -1209,10 +1208,13 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
+  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  Applab.toggleDivApplab(showDivApplab);
+
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
   } else if (mode === ApplabInterfaceMode.CODE) {
-    utils.fireResizeEvent();
+    setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
@@ -1221,6 +1223,38 @@ function onInterfaceModeChange(mode) {
     } else {
       Applab.activeScreen().focus();
     }
+  }
+}
+
+/**
+ * Handle a view change within data mode.
+ * @param {DataView} view
+ */
+function onDataViewChange(view, oldTableName, newTableName) {
+  if (!studioApp.reduxStore.getState().pageConstants.hasDataMode) {
+    throw new Error('onDataViewChange triggered without data mode enabled');
+  }
+  const storageRef = getDatabase(Applab.channelId).child('storage');
+
+  // Unlisten from previous data view. This should not interfere with events listened to
+  // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
+  // only unlistening from 'value' events here.
+  storageRef.child('keys').off('value');
+  storageRef.child(`tables/${oldTableName}/records`).off('value');
+
+  switch (view) {
+    case DataView.PROPERTIES:
+      storageRef.child('keys').on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateKeyValueData(snapshot.val()));
+      });
+      return;
+    case DataView.TABLE:
+      storageRef.child(`tables/${newTableName}/records`).on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateTableRecords(newTableName, snapshot.val()));
+      });
+      return;
+    default:
+      return;
   }
 }
 
@@ -1346,8 +1380,14 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
+  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
 
-  if (level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    Applab.testResults = studioApp.TestResults.ALL_PASS;
+    Applab.message = containedLevelResultsInfo.feedback;
+  } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1355,9 +1395,6 @@ Applab.onPuzzleComplete = function (submit) {
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
     program = studioApp.getCode();
-  } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
   }
 
   Applab.waitingForReport = true;
@@ -1371,6 +1408,7 @@ Applab.onPuzzleComplete = function (submit) {
       submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };
@@ -1478,7 +1516,8 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designWorkspace').is(':visible');
+  const mode = studioApp.reduxStore.getState().interfaceMode;
+  return ApplabInterfaceMode.DESIGN === mode;
 };
 
 function quote(str) {

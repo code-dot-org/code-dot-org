@@ -1,5 +1,5 @@
 <%
-  var i18n = require('./locale');
+  var i18n = require('@cdo/netsim/locale');
 %>
 <div class="content-wrap">
   <div class="field-box display-name-control">
@@ -33,5 +33,25 @@
       <% } %>
     </div>
   <% } %>
+
+  <div class="lobby-hint">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <% if (displayName.length === 0) { %>
+      <p>
+        You're not currently signed in. If you are trying to use the simulator
+        with your class, please <a href="/users/sign_in">sign in</a> and then return
+        to this page.
+      </p>
+    <% } else { %>
+      <p>
+        It looks like you are a member of more than one class section.  To make
+        sure you can connect to your classmates, please use the dropdown
+        above to select the class section that is currently doing the
+        Internet Simulator activity, then click "<%= i18n.joinSection() %>" to
+        proceed.
+      </p>
+    <% } %>
+  </div>
+
   <div class="clearfix"></div>
 </div>

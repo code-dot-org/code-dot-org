@@ -1,16 +1,15 @@
 class BringToSchool2013
-
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]
     result[:name_s] = nil_if_empty stripped data[:name_s]
     result[:school_s] = nil_if_empty stripped data[:school_s]
     result[:role_s] = nil_if_empty downcased stripped data[:role_s]
-    result[:grades_ss] = nil_if_empty (data[:grades_ss]||[]).map(&:downcase)
+    result[:grades_ss] = nil_if_empty (data[:grades_ss] || []).map(&:downcase)
     result[:size_s] = nil_if_empty stripped data[:size_s]
     result[:labs_s] = nil_if_empty downcased stripped data[:labs_s]
     result[:internet_s] = nil_if_empty downcased stripped data[:internet_s]
-    result[:interests_ss] = nil_if_empty (data[:interests_ss]||[]).map(&:downcase)
+    result[:interests_ss] = nil_if_empty (data[:interests_ss] || []).map(&:downcase)
 
     location = data[:zip_code_s].to_s.strip
     zip_code = zip_code_from_code(location)
@@ -26,5 +25,4 @@ class BringToSchool2013
 
     result
   end
-
 end

@@ -21,11 +21,11 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
   else
     # Recursive merge for subtree.
     new_translation.each_key do |key|
-      if en_translation.has_key?(key) && prev_translation.has_key?(key)
+      if en_translation.key?(key) && prev_translation.key?(key)
         new_translation[key] =
           merge_translation_tree(en_translation[key],
-                                 new_translation[key],
-                                 prev_translation[key])
+            new_translation[key],
+            prev_translation[key])
       end
     end
   end
@@ -51,8 +51,8 @@ if file_type == "yml"
   # Get new translation
   new_translation[new_translation.keys[0]] =
     merge_translation_tree(en_translation.values[0],
-                           new_translation.values[0],
-                           prev_translation.values[0])
+      new_translation.values[0],
+      prev_translation.values[0])
 
   File.open(prev_translation_path, 'w+') do |f|
     f.write(new_translation.to_yaml)
@@ -64,8 +64,8 @@ else
 
   # Get new translation
   new_translation = merge_translation_tree(en_translation,
-                                           new_translation,
-                                           prev_translation)
+    new_translation,
+    prev_translation)
 
   File.open(prev_translation_path, 'w+') do |f|
     f.write(JSON.pretty_generate(new_translation))

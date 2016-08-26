@@ -1,9 +1,16 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
+
   setup do
     sign_in create(:user)
+
+    @driver = create :user
+    @navigator = create :user
+    section = create :section
+    section.add_student @driver
+    section.add_student @navigator
   end
 
   test "get index" do
@@ -89,6 +96,56 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'applab and gamelab project levels gets redirected to edit if under 13 with tos teacher' do
+    sign_in create(:young_student_with_tos_teacher)
+
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+
+      assert @response.headers['Location'].ends_with? '/edit'
+    end
+  end
+
+  test 'applab and gamelab project levels get redirected if under 13 with over 13 pair' do
+    @driver.update(age: 10)
+    @navigator.update(age: 18)
+    sign_in @driver
+    @controller.send :pairings=, [@navigator]
+
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+
+      assert_redirected_to '/'
+    end
+  end
+
+  test 'applab and gamelab project levels get redirected if over 13 with under 13 pair' do
+    @driver.update(age: 18)
+    @navigator.update(age: 10)
+    sign_in @driver
+    @controller.send :pairings=, [@navigator]
+
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+
+      assert_redirected_to '/'
+    end
+  end
+
+  test 'applab and gamelab project levels gets redirected to edit if over 13 with under 13 with tos teacher pair' do
+    @driver.update(age: 18)
+    @navigator.update(age: 10)
+    create :follower, user: (create :terms_of_service_teacher), student_user: @navigator
+    sign_in @driver
+    @controller.send :pairings=, [@navigator]
+
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+
+      assert @response.headers['Location'].ends_with? '/edit'
+    end
+  end
+
   test 'shared applab and gamelab project does get redirected if under 13' do
     sign_in create(:young_student)
 
@@ -96,6 +153,16 @@ class ProjectsControllerTest < ActionController::TestCase
       get :show, key: lab, share: true, channel_id: 'my_channel_id'
 
       assert_redirected_to '/'
+    end
+  end
+
+  test 'shared applab and gamelab project level gets redirected to edit if under 13 with tos teacher' do
+    sign_in create(:young_student_with_tos_teacher)
+
+    [:applab, :gamelab].each do |lab|
+      get :load, key: lab
+
+      assert @response.headers['Location'].ends_with? '/edit'
     end
   end
 

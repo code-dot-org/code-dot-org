@@ -4,7 +4,6 @@ require 'cdo/rack/request'
 require 'json'
 
 class PropertiesApi < Sinatra::Base
-
   # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
   # items sized 4K and under. Due to the other metadata we store, the
   # largest observed property size (key.length + value.to_json.length) which stays under
@@ -71,7 +70,7 @@ class PropertiesApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |_endpoint, _channel_id, _name|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -123,9 +122,9 @@ class PropertiesApi < Sinatra::Base
     bag = PropertyType.new(decrypted_channel_id, storage_id(endpoint))
     bag_hash = nil
     json_data.each do |k, v|
-      if !overwrite
+      unless overwrite
         bag_hash ||= bag.to_hash
-        next if bag_hash.has_key? k
+        next if bag_hash.key? k
       end
       bag.set(k, v, request.ip)
     end
@@ -139,9 +138,9 @@ class PropertiesApi < Sinatra::Base
   # behavior via the POST handler.
   #
   patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
   put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 end

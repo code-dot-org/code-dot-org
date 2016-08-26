@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ### 下面是支援電腦科學教育周的示例和其目標是可利用國家和地方立法者。
 
   
@@ -16,7 +15,7 @@ nav: promote_nav
 
 [DATE]
 
-而計算技術是文化的其中組成部分，轉變人們如何與其他人和周圍的世界反應；
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 而電腦科學正在改變工業，創建商務上的新領域，引領在各個領域上的科學革命，推動創新和促進在既定經濟部門的生產力;
 
@@ -26,7 +25,7 @@ nav: promote_nav
 
 而資訊科技部門其獨特的優勢，通過研究和開發新的創新技術，來幫助經濟復蘇;
 
-而電腦科學就業前景一片光明，在每兩個重要崗位就有一個在該國從事計算職位;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 而為學生提供機會參與高品質的電腦科學活動發掘他們在豐富的領域提供的機會，並提供批判性思維能力使他們在他們的一生受用;
 
@@ -53,4 +52,3 @@ Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper
 (4) 鼓勵政策制定者消除障礙，防止電腦科學課程被算作數學或科學的學分畢業要求;
 
 (5) 鼓勵包括通過現有的程式，為女性和任職人數偏低的少數民族在電腦科學中的機會。
-

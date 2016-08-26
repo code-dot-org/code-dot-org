@@ -1,0 +1,6 @@
+name 'MarbleMaze2'
+title 'Marble Maze 2'
+description 'Second Marble Maze K Activity'
+markdown <<MARKDOWN
+![](https://images.code.org/ce14ea38d3cb3f62ce8050f36ceb6b1c-image-1471298614104.00.30 PM.png)
+MARKDOWN

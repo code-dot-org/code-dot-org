@@ -51,9 +51,9 @@ levelbuilder:
 test:
   adapter: mysql2
   encoding: utf8
-  username: 'root'
+  username: <%= writer.user || 'root' %>
+  password: <%= writer.password || '' %>
   host: 'localhost'
-  password: ''
   pool: 5
   database: 'dashboard_test'
 

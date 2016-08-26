@@ -26,7 +26,8 @@
       "ellipse": null,
       "text": null,
       "textSize": null,
-      "textAlign": null
+      "textAlign": null,
+      "randomNumber_min_max": null
     },
     "show_d_pad": "false",
     "edit_code": true,
@@ -55,7 +56,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "project_template_level_name": "CSD U3 Sprites Template Race"
+    "project_template_level_name": "CSD U3 Sprites Template Race",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

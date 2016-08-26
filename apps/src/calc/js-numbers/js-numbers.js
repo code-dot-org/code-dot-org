@@ -27,7 +27,6 @@ module.exports = jsnums;
 
 
 (function() {
-    'use strict';
     // Abbreviation
     var Numbers = jsnums;
 

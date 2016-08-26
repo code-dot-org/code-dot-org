@@ -1,0 +1,30 @@
+name 'CSP Unit 1 Cumulative Assessment MC'
+title 'CS Principles Unit 1 Assessment MC'
+submittable 'true'
+anonymous 'false'
+
+#chapter 1
+page
+level 'CSPFinal_Question_7'
+level 'CSPFinal_Question_9'
+level 'CSPFinal_Question_8'
+level 'CB_Question_3'
+level 'CB_Question_1'
+level 'CSPFinal_Question_1'
+level 'CSPFinal_Question_2'
+level 'CSP Unit 1 Ch 1 MC bits to make 512'
+level 'CSP Unit 1 Ch 1 MC binary def'
+level 'CSP Unit 1 Ch 1 MC binary to dec simple'
+
+#chapter 2
+page
+level 'CSPFinal_Question_23'
+level 'CSPFinal_Question_12'
+level 'CB_Question_20'
+level 'CSPFinal_Question_6'
+level 'CSPFinal_Question_3'
+level 'CSPFinal_Question_4'
+level 'CSP Unit 1 Ch 2 MC packets'
+level 'CSP Unit 1 Ch 2 MC internet layers'
+level 'CSP Unit 2 Ch 2 MC IETF'
+level 'CSP Unit 2 Ch 2 MC routing simple'

@@ -8,7 +8,6 @@ require_relative '../middleware/helpers/redis_property_bag'
 require_relative 'fake_redis_client'
 
 class RedisPropertyBagTest < Minitest::Test
-
   def setup
     # Create a redis client.
     # If the USE_REAL_REDIS environment variable is true, creates a real client
@@ -51,13 +50,13 @@ class RedisPropertyBagTest < Minitest::Test
 
     # Test deletes.
     assert_equal true, bag1.delete('foo'),
-                 'Deleting existing item should return true'
+      'Deleting existing item should return true'
     assert_equal({'added' => 'added value'}, bag1.to_hash)
     assert_equal true, bag1.delete('added')
     assert_equal(empty_hash, bag1.to_hash)
 
     assert_equal false, bag1.delete('added'),
-                 'Deleting non existent item should return false'
+      'Deleting non existent item should return false'
 
     # Test the delete all functionality.
     bag1.delete_all
@@ -96,7 +95,6 @@ class RedisPropertyBagTest < Minitest::Test
     # Clean up
     bag1.delete_all
     bag2.delete_all
-
   end
 
   def test_expire
@@ -178,5 +176,4 @@ class RedisPropertyBagTest < Minitest::Test
       @redis.time_travel seconds
     end
   end
-
 end

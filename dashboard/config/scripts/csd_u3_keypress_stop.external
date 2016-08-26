@@ -4,13 +4,7 @@ markdown <<MARKDOWN
 
 # Stop and Discuss
 
-We're going to do the next secution together. Click the Continue button only when your teacher says to.
-
-While you wait:
-
-* Do this
-* Or that
-* Or the other
+We're going to do the next section together. Click the Continue button only when your teacher says to.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

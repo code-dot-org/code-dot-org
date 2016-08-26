@@ -1,5 +1,4 @@
 namespace :adhoc do
-
   task :environment do
     require_relative '../../deployment'
     CDO.chef_local_mode = !ENV['CHEF_SERVER']
@@ -11,7 +10,6 @@ namespace :adhoc do
   end
 
   namespace :start do
-
     task default: :environment do
       AWS::CloudFormation.create_or_update
     end
@@ -22,10 +20,9 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
       ENV['CDN_ENABLED'] = '1'
       AWS::CloudFormation.create_or_update
     end
-
   end
 
-  desc 'Launch an adhoc server.
+  desc 'Launch/update an adhoc server.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
   task start: ['start:default']
 
@@ -38,5 +35,4 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   task validate: :environment do
     AWS::CloudFormation.validate
   end
-
 end

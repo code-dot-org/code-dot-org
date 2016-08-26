@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
@@ -42,6 +41,9 @@ describe("NetSimLogEntry", function () {
 
     assert.property(row, 'timestamp');
     assert.closeTo(row.timestamp, Date.now(), 10);
+
+    assert.property(row, 'sentBy');
+    assert.equal(row.sentBy, '');
   });
 
   it("initializes from row", function () {
@@ -53,7 +55,8 @@ describe("NetSimLogEntry", function () {
         len: 7
       },
       status: NetSimLogEntry.LogStatus.DROPPED,
-      timestamp: 52000
+      timestamp: 52000,
+      sentBy: 'Test User'
     };
     var logEntry = new NetSimLogEntry(testShard, row);
 
@@ -62,6 +65,7 @@ describe("NetSimLogEntry", function () {
     assert.equal(logEntry.binary, '1001001');
     assert.equal(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
     assert.equal(logEntry.timestamp, 52000);
+    assert.equal(logEntry.sentBy, 'Test User');
   });
 
   it("gracefully converts a malformed base64Payload to empty string", function () {
@@ -78,7 +82,7 @@ describe("NetSimLogEntry", function () {
     it("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
 
-      NetSimLogEntry.create(testShard, null, '10100101', null, function () {});
+      NetSimLogEntry.create(testShard, null, '10100101', null, '', function () {});
 
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -87,8 +91,9 @@ describe("NetSimLogEntry", function () {
       var nodeID = 1;
       var binary = '1001010100101';
       var status = NetSimLogEntry.LogStatus.SUCCESS;
+      var sentBy = 'Fake User';
 
-      NetSimLogEntry.create(testShard, nodeID, binary, status, function () {});
+      NetSimLogEntry.create(testShard, nodeID, binary, status, sentBy, function () {});
 
       testShard.logTable.refresh(function (err, rows) {
         var row = rows[0];
@@ -96,12 +101,13 @@ describe("NetSimLogEntry", function () {
         assert.equal(row.nodeID, nodeID);
         assert.equal(rowBinary, binary);
         assert.equal(row.status, status);
+        assert.equal(row.sentBy, sentBy);
         assert.closeTo(row.timestamp, Date.now(), 10);
       });
     });
 
     it("Returns log and no error on success", function () {
-      NetSimLogEntry.create(testShard, null, '10101010', null, function (err, result) {
+      NetSimLogEntry.create(testShard, null, '10101010', null, '', function (err, result) {
         assert.isNull(err, "Error is null on success");
         assert.instanceOf(result, NetSimLogEntry, "Result is a NetSimLogEntry");
       });

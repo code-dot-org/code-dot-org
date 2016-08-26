@@ -4,6 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 # How-to Guide for Volunteers
+ 
 
 ## 1. Sign up to volunteer
 Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
@@ -13,8 +14,7 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 | Date | Time | Link to info session |
 | ------------ | ------------- | ------------- |
-| November 16 | 1:00pm - 1:30pm PST | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| December 3 | 11:00am - 11:30am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0) |
+| **Sessions to be announced! Stay tuned!** |
 
 ## 3. Spend 30 minutes trying the tutorials beforehand
 Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn).  Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
@@ -28,15 +28,17 @@ Tell your friends and co-workers about the Hour of Code. We have thousands of te
 
 If you remember your very first line of code, you know it shaped the rest of your life. 
 
-That’s what the Hour of Code is all about. In the last two years, the movement has shattered stereotypes of what it’s like to code and helped more than 100 million students in 180 countries try computer science for the first time.
+That’s what the Hour of Code is all about. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**I signed up to volunteer in local classroom** <br/>
-7,098 teachers have already asked for help. Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code. 
+**I signed up to volunteer in a local classroom, and you can, too!** <br/>
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code. 
 
-Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.* Can’t volunteer? [Help spread the word about the Hour of Code](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form. 
+
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
 **Your experience matters**<br/>
-Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is a chance to inspire at least one young person in your area. 
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area. 
 
 **[Sign up to volunteer](https://code.org/volunteer/engineer)**
 
@@ -48,7 +50,8 @@ Most schools still don’t teach computer science. Most students don’t know th
 ## 6. Promote the Hour of Code in your community
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
+## 7. Prepare before you visit a classroom.
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Agenda for Volunteering in a Classroom
 

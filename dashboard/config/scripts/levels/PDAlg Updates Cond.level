@@ -9,7 +9,7 @@
     "use_contract_editor": "true",
     "embed": "false",
     "instructions": "When you went to PD in the summer, the Conditional block that you were introduced to was black and allowed any data type to be used. This proved to be confusing, given that every other function we've seen always produces the same type of data. To help make conditionals clearer and more consistent we've replaced the single black block with a separate block for each data type.",
-    "markdown_instructions": "When you went to PD in the summer, the **Conditional** block that you were introduced to was black and allowed any data type to be used. This proved to be confusing, given that every other function we've seen always produces the same type of data. To help make conditionals clearer and more consistent we've replaced the single black block with a separate block for each data type.\r\n\r\n![conditional blocks](https://staging-studio.code.org/script_assets/pd/newcond.png)",
+    "markdown_instructions": "When you went to PD in the summer, the **Conditional** block that you were introduced to was black and allowed any data type to be used. This proved to be confusing, given that every other function we've seen always produces the same type of data. To help make conditionals clearer and more consistent we've replaced the single black block with a separate block for each data type.\r\n\r\n![conditional blocks](//studio.code.org/script_assets/pd/newcond.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

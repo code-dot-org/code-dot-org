@@ -10,14 +10,14 @@ module BlocklyHelpers
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"#{to}\").offset().left - $(\"#{from}\").offset().left;" +
-        "var drag_dy = $(\"#{to}\").offset().top  - $(\"#{from}\").offset().top;" +
+    "var drag_dx = $(\"#{to}\").offset().left - $(\"#{from}\").offset().left;" \
+        "var drag_dy = $(\"#{to}\").offset().top  - $(\"#{from}\").offset().top;" \
         "$(\"#{from}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def generate_begin_to_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"[block-id='#{to}']\").offset().left - $(\"[block-id='#{from}']\").offset().left;" +
-        "var drag_dy = $(\"[block-id='#{to}']\").offset().top  - $(\"[block-id='#{from}']\").offset().top;" +
+    "var drag_dx = $(\"[block-id='#{to}']\").offset().left - $(\"[block-id='#{from}']\").offset().left;" \
+        "var drag_dy = $(\"[block-id='#{to}']\").offset().top  - $(\"[block-id='#{from}']\").offset().top;" \
         "$(\"[block-id='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
@@ -40,7 +40,7 @@ module BlocklyHelpers
   # Get the block ID for a given alias
   # Callers expect the returned block ID value to be a string
   def get_block_id(alias_or_id)
-    if @block_aliases && @block_aliases.has_key?(alias_or_id)
+    if @block_aliases && @block_aliases.key?(alias_or_id)
       return @block_aliases[alias_or_id]
     end
     alias_or_id

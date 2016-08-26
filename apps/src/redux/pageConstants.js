@@ -4,9 +4,14 @@ var utils = require('../utils');
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 
 var ALLOWED_KEYS = utils.makeEnum(
+  'skinId',
+  'showNextHint',
+  'acapelaInstructionsSrc',
+  'acapelaMarkdownInstructionsSrc',
   'assetUrl',
   'channelId',
-  'isDesignModeHidden',
+  'hasDataMode',
+  'hasDesignMode',
   'isEmbedView',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
@@ -16,12 +21,15 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isSubmitted',
   'isViewDataButtonHidden',
   'instructionsInTopPane',
+  'noInstructionsWhenCollapsed',
+  'hasInlineImages',
   'puzzleNumber',
   'stageTotal',
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
   'localeDirection',
+  'hasContainedLevels',
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
@@ -32,11 +40,15 @@ var ALLOWED_KEYS = utils.makeEnum(
   'pinWorkspaceToBottom',
   'smallStaticAvatar',
   'aniGifURL',
-  'inputOutputTable'
+  'inputOutputTable',
+  'showAnimationMode',
+  'nonResponsiveVisualizationColumnWidth',
+  'is13Plus',
+  'isSignedIn'
 );
 
 const initialState = {
-  assertUrl() {
+  assetUrl() {
   }
 };
 

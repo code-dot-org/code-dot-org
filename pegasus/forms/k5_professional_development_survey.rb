@@ -1,13 +1,12 @@
 class K5ProfessionalDevelopmentSurvey
-
   AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
   SCALE_ANSWERS = (1..10).map(&:to_s)
   SIMPLE_ANSWERS = %w(
     yes
     no
   )
-  DEGREE_TYPE = (
-    ['art',
+  DEGREE_TYPE = [
+    'art',
     'business',
     'computer science',
     'education',
@@ -19,8 +18,7 @@ class K5ProfessionalDevelopmentSurvey
     'science',
     'social science',
     'other',
-    ]
-  )
+  ]
 
   def self.normalize(data)
     result = {}
@@ -202,7 +200,5 @@ class K5ProfessionalDevelopmentSurvey
     end
 
     result
-
   end
-
 end

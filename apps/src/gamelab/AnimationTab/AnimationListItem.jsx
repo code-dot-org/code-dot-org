@@ -1,15 +1,14 @@
 /** A single list item representing an animation. */
-'use strict';
-
 import React from 'react';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import color from '../../color';
-import * as actions from '../animationModule';
-import { METADATA_SHAPE } from '../animationMetadata';
-import { selectAnimation } from './animationTabModule';
+import * as PropTypes from '../PropTypes';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay, setAnimationLooping} from '../animationListModule';
+import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
+import _ from 'lodash';
 
 const styles = {
   tile: {
@@ -23,6 +22,9 @@ const styles = {
     paddingTop: 4,
     paddingBottom: 4,
     marginBottom: 4,
+
+    // Allows looping button to display relative to whole card
+    position: 'relative',
 
     ':hover': {
       cursor: 'pointer',
@@ -68,50 +70,130 @@ const styles = {
 const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    animationKey: PropTypes.AnimationKey.isRequired,
+    animationProps: PropTypes.AnimationProps.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
-    setAnimationName: React.PropTypes.func.isRequired
+    setAnimationName: React.PropTypes.func.isRequired,
+    setAnimationLooping: React.PropTypes.func.isRequired,
+    setAnimationFrameDelay: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
+    style: React.PropTypes.object,
   },
 
   componentWillReceiveProps(nextProps) {
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
+    this.setState({frameDelay: nextProps.animationProps.frameDelay});
+  },
+
+  componentWillMount() {
+    this.setState({frameDelay: this.props.animationProps.frameDelay});
+    this.debouncedFrameDelay = _.debounce(() => {
+      const latestFrameDelay = this.state.frameDelay;
+      this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
+    }, 200);
   },
 
   onSelect() {
-    this.props.selectAnimation(this.props.animation.key);
+    this.props.selectAnimation(this.props.animationKey);
   },
 
-  cloneAnimation() {
-    this.props.cloneAnimation(this.props.animation.key);
+  cloneAnimation(evt) {
+    this.props.cloneAnimation(this.props.animationKey);
+    evt.stopPropagation();
   },
 
-  deleteAnimation() {
-    this.props.deleteAnimation(this.props.animation.key);
+  deleteAnimation(evt) {
+    this.props.deleteAnimation(this.props.animationKey);
+    evt.stopPropagation();
+  },
+
+  setAnimationLooping(looping) {
+    this.props.setAnimationLooping(this.props.animationKey, looping);
   },
 
   onNameChange(event) {
-    this.props.setAnimationName(this.props.animation.key, event.target.value);
+    this.props.setAnimationName(this.props.animationKey, event.target.value);
+  },
+
+  convertFrameDelayToLockedValues(fraction) {
+    if (fraction >= 60) {
+      return 0;
+    } else if (fraction >= 45) {
+      return 0.1;
+    } else if (fraction >= 30) {
+      return 0.2;
+    } else if (fraction >= 20) {
+      return 0.3;
+    } else if (fraction >= 15) {
+      return 0.4;
+    } else if (fraction >= 10) {
+      return 0.5;
+    } else if (fraction >= 5) {
+      return 0.6;
+    } else if (fraction >= 4) {
+      return 0.7;
+    } else if (fraction >= 3) {
+      return 0.8;
+    } else if (fraction >= 2) {
+      return 0.9;
+    } else {
+      return 1;
+    }
+  },
+
+  convertLockedValueToFrameDelay(value) {
+    if (value >= 1) {
+      return 1;
+    } else if (value >= 0.9) {
+      return 2;
+    } else if (value >= 0.8) {
+      return 3;
+    } else if (value >= 0.7) {
+      return 4;
+    } else if (value >= 0.6) {
+      return 5;
+    } else if (value >= 0.5) {
+      return 10;
+    } else if (value >= 0.4) {
+      return 15;
+    } else if (value >= 0.3) {
+      return 20;
+    } else if (value >= 0.2) {
+      return 30;
+    } else if (value >= 0.1) {
+      return 45;
+    } else {
+      return 60;
+    }
+  },
+
+  setAnimationFrameDelay(sliderValue) {
+    let frameDelay = this.convertLockedValueToFrameDelay(sliderValue);
+    this.setState({frameDelay: frameDelay});
+    this.debouncedFrameDelay();
   },
 
   render() {
+    const name = this.props.animationProps.name;
     var animationName;
     if (this.props.isSelected) {
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
-              type="text"
-              style={styles.nameInput}
-              value={this.props.animation.name}
-              onChange={this.onNameChange} />
+            type="text"
+            style={styles.nameInput}
+            value={name}
+            onChange={this.onNameChange}
+          />
         </div>
       );
     } else {
-      animationName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
+      animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
     var tileStyle = [
@@ -123,31 +205,45 @@ const AnimationListItem = React.createClass({
     return (
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
-            ref="thumbnail"
-            animation={this.props.animation}
-            isSelected={this.props.isSelected}
+          ref="thumbnail"
+          animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}
+          isSelected={this.props.isSelected}
         />
         {animationName}
-        {this.props.isSelected && <ListItemButtons
+        {this.props.isSelected &&
+          <ListItemButtons
+            onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
-            onDeleteClick={this.deleteAnimation} />}
+            onDeleteClick={this.deleteAnimation}
+            onLoopingChanged={this.setAnimationLooping}
+            looping={this.props.animationProps.looping}
+            frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
+          />}
       </div>
     );
   }
 });
 export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
-}), dispatch => ({
-  cloneAnimation(animationKey) {
-    dispatch(actions.cloneAnimation(animationKey));
-  },
-  deleteAnimation(animationKey) {
-    dispatch(actions.deleteAnimation(animationKey));
-  },
-  selectAnimation(animationKey) {
-    dispatch(selectAnimation(animationKey));
-  },
-  setAnimationName(animationKey, newName) {
-    dispatch(actions.setAnimationName(animationKey, newName));
-  }
-}))(Radium(AnimationListItem));
+}), dispatch => {
+  return {
+    cloneAnimation(animationKey) {
+      dispatch(cloneAnimation(animationKey));
+    },
+    deleteAnimation(animationKey) {
+      dispatch(deleteAnimation(animationKey));
+    },
+    selectAnimation(animationKey) {
+      dispatch(selectAnimation(animationKey));
+    },
+    setAnimationName(animationKey, newName) {
+      dispatch(setAnimationName(animationKey, newName));
+    },
+    setAnimationLooping(animationKey, looping) {
+      dispatch(setAnimationLooping(animationKey, looping));
+    },
+    setAnimationFrameDelay(animationKey, frameDelay) {
+      dispatch(setAnimationFrameDelay(animationKey, frameDelay));
+    }
+  };
+})(Radium(AnimationListItem));

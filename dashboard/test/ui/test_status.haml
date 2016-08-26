@@ -1,0 +1,47 @@
+%head
+  %title= "#{type} Test Status"
+  %link{:rel => :stylesheet, :type => :"text/css", :href => "test_status.css"}
+  %script{src: 'https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js'}
+%body
+  .centered-column
+    %div#refresh-controls
+      %span#last-refresh-time
+      %button#refresh-button Refresh
+      %button#auto-refresh-button Pause Auto-Refresh
+      %button#hide-succeeded-button Hide Succeeded
+    %h1= "#{type} Test Status"
+    %h2
+      %a#git-branch{href: "https://github.com/code-dot-org/code-dot-org/tree/#{git_branch}", data: {branch: git_branch}}= git_branch
+      |
+      %a#commit-hash{href: "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}", data: {hash: commit_hash}}= commit_hash[0..7]
+      |
+      %span#start-time= start_time
+    %div#total-progress
+      %div.progress-text
+      %div.progress-bar
+        %div.success.bar
+        %div.failure.bar
+        %div.pending.bar
+        %div.clear-both
+    - browsers.sort.map do |browser|
+      %h3= browser
+      %div{id: "#{browser}-progress"}
+        %div.progress-text
+        %div.progress-bar
+          %div.success.bar
+          %div.failure.bar
+          %div.pending.bar
+          %div.clear-both
+      %table
+        %tbody
+          - features.sort.map do |feature|
+            %tr{data:{browser: browser, feature: feature}}
+              %td= browser
+              %td= feature.sub(/features\//, '')
+              %td.status
+              %td.log-link
+  %input#test-type{type: 'hidden', value: type}
+  %input#api-origin{type: 'hidden', value: api_origin}
+  %input#s3-bucket{type: 'hidden', value: s3_bucket}
+  %input#s3-prefix{type: 'hidden', value: s3_prefix}
+  %script{src: 'test_status.js'}

@@ -4,8 +4,34 @@ description_short 'Web Development'
 login_required 'true'
 hidden 'true'
 
-stage 'Introduction to HTML'
-level 'CSD - Headers and Lists - Hobbies Project'
-level 'CSD - Headers and Lists - Recipe Project'
+stage 'Quality Websites'
+level 'SFLP - Web - Quality Websites'
+level 'CSDU2 - Rating Quality Websites'
 
+stage 'Designing Web Pages'
+level 'SFLP - Web - Designing Webpages'
+level 'CSDU2- home page examples'
+
+stage 'Describing Webpages'
+level 'SFLP - Web - Describing Webpages'
+
+stage 'Text on the Web'
+level 'SFLP - Web - Text on the Web'
+
+stage 'Designing Code for Computers'
+level 'SFLP - Web - Designing Code for Computers'
+level 'CSDU2 - Fundamentals Videos'
+
+stage 'Digital Footprint'
+level 'SFLP - Web - Digital Footprint'
+
+stage 'Images on the Web'
+level 'SFLP - Web - Images on the Web'
+
+stage 'Finalizing Website'
+level 'CSDU2 - further styling suggestions'
+
+
+#not in use
+stage 'Introduction to HTML'
 stage 'Headers and Lists'
