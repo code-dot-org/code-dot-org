@@ -836,24 +836,9 @@ function callHandler(name, allowQueueExtension, extraArgs) {
   }
 
   Studio.eventHandlers.forEach(function (handler) {
-    if (studioApp.isUsingBlockly()) {
-      // Note: we skip executing the code if we have not completed executing
-      // the cmdQueue on this handler (checking for non-zero length)
-      if (handler.name === name &&
-          (allowQueueExtension || (0 === handler.cmdQueue.length))) {
-        Studio.currentCmdQueue = handler.cmdQueue;
-        try {
-          handler.func(api, Studio.Globals);
-        } catch (e) {
-          // Do nothing
-        }
-        Studio.currentCmdQueue = null;
-      }
-    } else {
-      // TODO (cpirich): support events with parameters
-      if (handler.name === name) {
-        handler.func.apply(null, extraArgs);
-      }
+    // TODO (cpirich): support events with parameters
+    if (handler.name === name) {
+      handler.func.apply(null, extraArgs);
     }
   });
 }
@@ -2515,11 +2500,7 @@ var registerEventHandler = function (handlers, name, func) {
 };
 
 var registerHandlersForCode = function (handlers, blockName, code) {
-  var func = codegen.functionFromCode(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  registerEventHandler(handlers, blockName, func);
+  Studio.interpretedHandlers[blockName] = code;
 };
 
 var registerHandlers =
@@ -2827,6 +2808,8 @@ Studio.execute = function () {
       return Studio.onPuzzleComplete();
     }
 
+    Studio.interpretedHandlers = {};
+
     if (studioApp.initializationCode) {
       registerHandlersForCode(handlers, 'whenGameStarts', studioApp.initializationCode);
     }
@@ -2917,9 +2900,18 @@ Studio.execute = function () {
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
-    defineProcedures('procedures_defreturn');
-    defineProcedures('procedures_defnoreturn');
-    defineProcedures('functional_definition');
+    var generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+    const code = [
+      'procedures_defreturn',
+      'procedures_defnoreturn',
+      'functional_definition'
+    ].map(p => generator(p)).join(';');
+
+    const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+
+    Object.keys(hooks).forEach(hook => {
+      registerEventHandler(handlers, hook, hooks[hook]);
+    });
 
     // Set event handlers and start the onTick timer
     Studio.eventHandlers = handlers;
