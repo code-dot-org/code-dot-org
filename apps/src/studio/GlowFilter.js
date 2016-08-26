@@ -1,5 +1,4 @@
 /** @file Filter that adds a white glowing outline to an image. */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var color = require('../color');

@@ -1,5 +1,4 @@
 /** @file A three-part loopable audio effect (start-loop-end). */
-'use strict';
 
 var utils = require('../utils');
 

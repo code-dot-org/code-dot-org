@@ -2,7 +2,6 @@
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 import $ from 'jquery';

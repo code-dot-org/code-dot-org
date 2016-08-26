@@ -2,8 +2,7 @@ import Gatherer from './gatherer';
 import HarvesterCell from './harvesterCell';
 import HarvesterDrawer from './harvesterDrawer';
 import mazeMsg from './locale';
-import { HarvesterTerminationValue } from '../constants.js';
-import { TestResults } from '../constants.js';
+import { HarvesterTerminationValue, TestResults } from '../constants.js';
 
 export default class Harvester extends Gatherer {
 
