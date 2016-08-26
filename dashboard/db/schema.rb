@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818232419) do
+ActiveRecord::Schema.define(version: 20160818234153) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -166,13 +166,6 @@ ActiveRecord::Schema.define(version: 20160818232419) do
 
   add_index "districts_users", ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
   add_index "districts_users", ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
-
-  create_table "experiment_activities", force: :cascade do |t|
-    t.integer  "activity_id",     limit: 4,   null: false
-    t.string   "feedback_design", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "facilitators_workshops", id: false, force: :cascade do |t|
     t.integer "workshop_id",    limit: 4, null: false
