@@ -9,7 +9,7 @@ import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { getStore } from './redux';
-import { setSections } from './stageLockRedux';
+import { authorizeLockable, setSections } from './stageLockRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -21,8 +21,7 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo,
-  authorizeLockable
+  showTeacherInfo
 } from './progressRedux';
 
 var progress = module.exports;
@@ -70,7 +69,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
-    if (data.isTeacher && !currentLevelId) {
+    if (data.isTeacher && !data.professionalLearningCourse && !currentLevelId) {
       store.dispatch(showTeacherInfo());
       renderTeacherPanel(store, scriptData.id);
     }
@@ -90,7 +89,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
-        if (level.submitted || level.readonly_answers) {
+        if (level.readonly_answers) {
           return SUBMITTED_RESULT;
         }
 

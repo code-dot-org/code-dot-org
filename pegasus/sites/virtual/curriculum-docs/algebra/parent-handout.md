@@ -44,16 +44,15 @@ Code.org assigns the utmost importance to student safety and security and has de
 
 The list below summarizes what student data is stored and protected by Code.org, and how it is used. You can find further details at [https://code.org/privacy](https://code.org/privacy).
 
-### Data that is required for participation in the course:
+### Data that Code.org collects from students participating in the course:
 * Student display name (e.g. “John S” or “Cool coder”)
 * Age (to protect the privacy of the youngest learners)
-* Progress in the course (to display reports for students and teachers)
 * Login date/time and other technical information (for debugging purposes)
+* Progress in the course, including code written to solve programming activities, and written responses to educational prompts (to display reports for students and teachers)
 
 ### Optional data:
-* Gender (to summarize aggregate participation by females and males)
-* Student email (to allow password-reset, and to send students new coursework when available).
-* Note: if a student creates an account directly (without a parent or teacher), the email address is required to enable password-reset. To further protect the privacy of children under 13, their email addresses are converted by Code.org into a “hashed” sate, meaning that they are replaced with a series of numbers and cannot be converted back to the original email address.
+* Scrambled “hash” of email address.  If a student creates an account directly (without a parent or teacher), they will  login using their email address, but Code.org will never receive the actual email address, only a scrambled “hash” that can’t be converted back to the original. Learn more at [http://code.org/emailprivacy](http://code.org/emailprivacy). 
+* Gender or race (to anonymously summarize aggregate participation in computer science, to track progress towards increasing diversity in the field)
 
 For more information on Code.org and Code Studio, visit [https://code.org](https://code.org).
 

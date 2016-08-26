@@ -5,7 +5,6 @@
 /* global -Blockly */
 /* global dashboard */
 /* global confirm */
-'use strict';
 
 import $ from 'jquery';
 import React from 'react';
@@ -530,6 +529,9 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
+  // Attempt to unsubscribe from Pusher as we navigate away
+  this.shard_.disconnect();
+  this.shard_ = null;
   // Don't notify observers, this should only be used when navigating away
   // from the page.
 };

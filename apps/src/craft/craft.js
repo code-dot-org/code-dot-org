@@ -1,6 +1,4 @@
 /* global trackEvent */
-
-'use strict';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -673,7 +671,7 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.placeInFront(studioApp.highlight.bind(studioApp, blockID),
         blockType);
     }
-  });
+  }, true);
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     if (Craft.level.freePlay) {
       return;

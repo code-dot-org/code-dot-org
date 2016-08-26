@@ -32,6 +32,7 @@ var baseConfig = {
     loaders: [
       {test: /\.json$/, loader: 'json'},
       {test: /\.ejs$/, loader: 'ejs-compiled'},
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
     ],
     preLoaders: [
       {

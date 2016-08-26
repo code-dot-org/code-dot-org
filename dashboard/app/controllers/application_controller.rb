@@ -102,7 +102,7 @@ class ApplicationController < ActionController::Base
   PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,
                            :locale, :gender, :login,
                            :remember_me, :age, :school, :full_address, :user_type,
-                           :hashed_email]
+                           :hashed_email, :terms_of_service_version]
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
@@ -178,25 +178,6 @@ class ApplicationController < ActionController::Base
         response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
       end
     end
-
-    unless options[:solved?]
-      # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity.determine_hint({
-                                                         level_source: options[:level_source],
-                                                         current_user: current_user,
-                                                         enable_external_hints: Rails.env.production?,
-                                                         ip: request.remote_ip,
-                                                         uri: request.referer,
-                                                         activity: options[:activity]})
-      response[:hint] = hint_details[:hint] if hint_details[:hint]
-      response[:hint_request_placement] = hint_details[:hint_request_placement] if
-        hint_details[:hint_request_placement]
-      response[:hint_requested_url] =
-        activity_hint_path(hint_details[:activity_hint]) if hint_details[:activity_hint]
-    end
-
-    # Set up the background design
-    response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE
 
     response[:activity_id] = options[:activity] && options[:activity].id
 

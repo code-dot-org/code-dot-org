@@ -5,50 +5,49 @@
  *
  */
 
-'use strict';
 
 import $ from 'jquery';
+import * as constants from './constants';
+import * as utils from '../utils';
+import _ from 'lodash';
+import AppView from '../templates/AppView';
+import BigGameLogic from './bigGameLogic';
+import Collidable from './collidable';
 import CollisionMaskWalls from './collisionMaskWalls';
+import Hammer from '../hammer';
+import ImageFilterFactory from './ImageFilterFactory';
+import InputPrompt from '../templates/InputPrompt';
+import Item from './Item';
+import JSInterpreter from '../JSInterpreter';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';
+import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RocketHeightLogic from './rocketHeightLogic';
+import SamBatLogic from './samBatLogic';
+import Sprite from './Sprite';
+import StudioVisualizationColumn from './StudioVisualizationColumn';
+import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
-var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var studioMsg = require('./locale');
-var skins = require('../skins');
-var constants = require('./constants');
-var sharedConstants = require('../constants');
-var codegen = require('../codegen');
-var api = require('./api');
-var blocks = require('./blocks');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var StudioVisualizationColumn = require('./StudioVisualizationColumn');
-var dom = require('../dom');
-var Collidable = require('./collidable');
-var Sprite = require('./Sprite');
-var Projectile = require('./projectile');
-var Item = require('./Item');
-var BigGameLogic = require('./bigGameLogic');
-var RocketHeightLogic = require('./rocketHeightLogic');
-var SamBatLogic = require('./samBatLogic');
-var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
-var _ = require('lodash');
-var dropletConfig = require('./dropletConfig');
-var Hammer = require('../hammer');
-var JSInterpreter = require('../JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
-var annotationList = require('../acemode/annotationList');
-var spriteActions = require('./spriteActions');
-var ImageFilterFactory = require('./ImageFilterFactory');
-var ThreeSliceAudio = require('./ThreeSliceAudio');
-var MusicController = require('../MusicController');
-var paramLists = require('./paramLists.js');
-var experiments = require('../experiments');
-var InputPrompt = require('../templates/InputPrompt');
-var studioCell = require('./cell');
+import annotationList from '../acemode/annotationList';
+import api from './api';
+import blocks from './blocks';
+import codegen from '../codegen';
+import commonMsg from '@cdo/locale';
+import dom from '../dom';
+import dropletConfig from './dropletConfig';
+import dropletUtils from '../dropletUtils';
+import experiments from '../experiments';
+import paramLists from './paramLists.js';
+import sharedConstants from '../constants';
+import skins from '../skins';
+import studioCell from './cell';
+import studioMsg from './locale';
+import { GridMove, GridMoveAndCancel } from './spriteActions';
+import { Provider } from 'react-redux';
+import { singleton as studioApp } from '../StudioApp';
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -674,6 +673,9 @@ var cancelQueuedMovements = function (index, yAxis) {
 
 var getNextPosition = function (i, modifyQueues) {
   var delta = calcMoveDistanceFromQueues(i, modifyQueues);
+  if (delta.x === 0 && delta.y === 0) {
+    return Studio.sprite[i].getNextPosition();
+  }
   return {
     x: Studio.sprite[i].x + delta.x,
     y: Studio.sprite[i].y + delta.y
@@ -843,9 +845,10 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(studioApp, api, Studio.Globals);
+          handler.func(api, Studio.Globals);
         } catch (e) {
           // Do nothing
+          console.error(e);
         }
         Studio.currentCmdQueue = null;
       }
@@ -1507,6 +1510,9 @@ function updateItems() {
       Studio.items.splice(i, 1);
     }
   }
+  Studio.sprite.forEach(sprite => {
+    sprite.update();
+  });
 }
 
 function checkForItemCollisions() {
@@ -2389,10 +2395,9 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
     if (exampleCode) {
       var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
-        StudioApp: studioApp,
         Studio: api,
         Globals: Studio.Globals
-      });
+      }, true);
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2517,7 +2522,6 @@ var registerEventHandler = function (handlers, name, func) {
 
 var registerHandlersForCode = function (handlers, blockName, code) {
   var func = codegen.functionFromCode(code, {
-    StudioApp: studioApp,
     Studio: api,
     Globals: Studio.Globals
   });
@@ -2618,10 +2622,9 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try {
     codegen.evalWith(code, {
-      StudioApp: studioApp,
       Studio: api,
       Globals: Studio.Globals
-    });
+    }, true);
   } catch (e) { }
 };
 
@@ -3452,17 +3455,19 @@ Studio.displayVictoryText = function () {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
-  if (dom.isMobile() || dom.isWindowsTouch()) {
-    var resetTextA = document.getElementById('resetTextA');
-    var resetTextB = document.getElementById('resetTextB');
-    resetTextB.textContent = studioMsg.tapToReset();
-    resetTextA.setAttribute('visibility', 'hidden');
-    resetTextB.setAttribute('visibility', 'visible');
-    $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
-  } else {
-    var resetText = document.getElementById('resetText');
-    resetText.textContent = studioMsg.tapOrClickToReset();
-    resetText.setAttribute('visibility', 'visible');
+  if (level.tapSvgToRunAndReset) {
+    if (dom.isMobile() || dom.isWindowsTouch()) {
+      var resetTextA = document.getElementById('resetTextA');
+      var resetTextB = document.getElementById('resetTextB');
+      resetTextB.textContent = studioMsg.tapToReset();
+      resetTextA.setAttribute('visibility', 'hidden');
+      resetTextB.setAttribute('visibility', 'visible');
+      $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
+    } else {
+      var resetText = document.getElementById('resetText');
+      resetText.textContent = studioMsg.tapOrClickToReset();
+      resetText.setAttribute('visibility', 'visible');
+    }
   }
 };
 
@@ -3762,6 +3767,26 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteXY':
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
+      break;
+    case 'setSpritesWander':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesWander(cmd.opts);
+      break;
+    case 'setSpritesStop':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesStop(cmd.opts);
+      break;
+    case 'setSpritesChase':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesChase(cmd.opts);
+      break;
+    case 'setSpritesFlee':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesFlee(cmd.opts);
+      break;
+    case 'setSpritesSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesSpeed(cmd.opts);
       break;
     case 'addGoal':
       studioApp.highlight(cmd.id);
@@ -4102,7 +4127,7 @@ Studio.setItemActivity = function (opts) {
     Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
       if (item.className === itemClass) {
-        item.setActivity(opts.type);
+        item.setActivity(opts.type, 0);
 
         // For verifying success, record this combination of activity type and
         // item type.
@@ -4582,6 +4607,7 @@ Studio.setSprite = function (opts) {
     return;
   }
 
+  sprite.imageName = spriteValue;
   sprite.frameCounts = skinSprite.frameCounts;
   sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
@@ -5166,6 +5192,36 @@ Studio.setSpriteXY = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
+function getSpritesByName(name) {
+  return Studio.sprite.filter(
+      sprite => sprite.imageName === name && sprite.visible);
+}
+
+Studio.setSpritesWander = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('roam'));
+};
+
+Studio.setSpritesStop = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('none'));
+};
+
+Studio.setSpritesChase = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('chase', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesFlee = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('flee', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesSpeed = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.speed = opts.speed);
+};
+
 Studio.addGoal = function (opts) {
   if (opts.value) {
     var sprite = {
@@ -5268,10 +5324,10 @@ Studio.moveSingle = function (opts) {
 
   if (level.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
-      sprite.addAction(new spriteActions.GridMoveAndCancel(
+      sprite.addAction(new GridMoveAndCancel(
           deltaX, deltaY, level.slowExecutionFactor));
     } else {
-      sprite.addAction(new spriteActions.GridMove(
+      sprite.addAction(new GridMove(
           deltaX, deltaY, level.slowExecutionFactor));
     }
 

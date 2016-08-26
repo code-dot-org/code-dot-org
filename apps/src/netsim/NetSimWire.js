@@ -2,7 +2,6 @@
  * @overview Simulation Entity: A connection between two nodes and related
  *           metadata.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimEntity = require('./NetSimEntity');

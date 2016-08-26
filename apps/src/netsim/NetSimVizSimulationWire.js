@@ -1,7 +1,6 @@
 /**
  * @overview Wires in the visualization that map to simulation entities.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimGlobals = require('./NetSimGlobals');
