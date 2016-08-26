@@ -87,17 +87,15 @@ const DataTable = React.createClass({
   },
 
   deleteColumn(columnToRemove) {
-    if (confirm('Are you sure you want to delete this entire column? You cannot undo this action.')) {
-      this.setState({
-        newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
-      });
-      FirebaseStorage.deleteColumn(
-        this.props.tableName,
-        columnToRemove,
-        () => {},
-        error => console.warn(error)
-      );
-    }
+    this.setState({
+      newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
+    });
+    FirebaseStorage.deleteColumn(
+      this.props.tableName,
+      columnToRemove,
+      () => {},
+      error => console.warn(error)
+    );
   },
 
   /**
