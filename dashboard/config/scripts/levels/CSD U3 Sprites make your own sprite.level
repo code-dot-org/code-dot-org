@@ -18,8 +18,8 @@
       },
       "x": null,
       "y": null,
-      "width": null,
-      "height": null,
+      "sprite.width": null,
+      "sprite.height": null,
       "shapeColor": null,
       "background": null,
       "comment": null,
@@ -53,7 +53,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_animation_mode": "false",
+    "pause_animations_by_default": "false"
   },
   "published": true,
   "notes": "",
