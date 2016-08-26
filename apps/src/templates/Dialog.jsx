@@ -85,23 +85,34 @@ Cancel.propTypes = {
   children: React.PropTypes.node,
 };
 
-export function Buttons({children}) {
-  children = React.Children.toArray(children);
-  var leftChildren = children.slice(0, children.length-1);
-  var rightChild = children[children.length - 1];
-  return (
-    <div style={styles.buttons}>
-      <div style={styles.rightButton}>
-        {rightChild}
+export const Buttons = React.createClass({
+  getConfirmButton() {
+    return this.refs.buttons.getElementsByClassName('confirmButton')[0];
+  },
+
+  getCancelButton() {
+    return this.refs.buttons.getElementsByClassName('cancelButton')[0];
+  },
+
+  render() {
+    const children = React.Children.toArray(this.props.children);
+    var leftChildren = children.slice(0, children.length-1);
+    var rightChild = children[children.length - 1];
+    return (
+      <div style={styles.buttons} ref="buttons">
+        <div style={styles.rightButton}>
+          {rightChild}
+        </div>
+        {leftChildren}
+        <div style={styles.buttonClear}/>
       </div>
-      {leftChildren}
-      <div style={styles.buttonClear}/>
-    </div>
-  );
-}
-Buttons.propTypes = {
-  children: childrenOfType(Cancel, Confirm),
-};
+    );
+  },
+
+  propTypes: {
+    children: childrenOfType(Cancel, Confirm),
+  },
+});
 
 export function Footer({children}) {
   return (
@@ -144,6 +155,21 @@ const Dialog = React.createClass({
     confirmType: whenNoChildOfTypes(Buttons),
   }),
 
+  handleKeyDown(event) {
+    // Always focus the Cancel or Confirm button when tab is pressed, to prevent the
+    // user from selecting elements outside of the dialog.
+    if (event.key === 'Tab') {
+      const cancelButton = this.refs.buttons.getCancelButton();
+      const confirmButton = this.refs.buttons.getConfirmButton();
+      if ((document.activeElement === cancelButton)) {
+        confirmButton && confirmButton.focus();
+      } else {
+        cancelButton && cancelButton.focus();
+      }
+      event.preventDefault();
+    }
+  },
+
   render() {
     var children = [];
     if (this.props.icon) {
@@ -159,11 +185,11 @@ const Dialog = React.createClass({
     if (this.props.cancelText || this.props.onCancel ||
         this.props.confirmText || this.props.onConfirm || this.props.confirmType) {
       var buttons = (
-        <Buttons key="buttons">
+        <Buttons key="buttons" ref="buttons">
           {this.props.onCancel &&
-           <Cancel onClick={this.props.onCancel}>{this.props.cancelText}</Cancel>}
+           <Cancel onClick={this.props.onCancel} className="cancelButton">{this.props.cancelText}</Cancel>}
           {this.props.onConfirm &&
-           <Confirm onClick={this.props.onConfirm} type={this.props.confirmType}>
+           <Confirm onClick={this.props.onConfirm} className="confirmButton" type={this.props.confirmType}>
              {this.props.confirmText}
            </Confirm>}
         </Buttons>
@@ -179,7 +205,7 @@ const Dialog = React.createClass({
       children.push(<Footer key="footer">{this.props.footer}</Footer>);
     }
     return (
-      <BaseDialog {...this.props}>
+      <BaseDialog {...this.props} handleKeyDown={this.handleKeyDown}>
         {children}
       </BaseDialog>
     );
