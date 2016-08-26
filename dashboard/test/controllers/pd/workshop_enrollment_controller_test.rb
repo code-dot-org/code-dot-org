@@ -249,7 +249,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     create :pd_enrollment, name: teacher.name, email: teacher.email
 
     assert_creates(Follower) do
-      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
     end
 
     # Make sure the new follower is for our expected teacher and workshop section
@@ -265,7 +265,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in teacher
 
     assert_creates(Pd::Enrollment, Follower) do
-      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
     end
     enrollment = Pd::Enrollment.last
     assert_equal teacher.id, enrollment.user_id
@@ -285,7 +285,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in student
 
     assert_creates(Pd::Enrollment, Follower) do
-      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params, school_info: school_info_params
     end
 
     student.reload
@@ -301,7 +301,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in create(:teacher)
 
     params = enrollment_test_params.merge({email: 'mismatched_email@example.net'})
-    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
+    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params, school_info: school_info_params
     assert_template :join_section
   end
 
@@ -309,7 +309,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     # start to create section
     @workshop.start!
     sign_in create(:teacher)
-    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: {email: nil}
+    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: {email: nil}, school_info: school_info_params
     assert_template :join_section
   end
 

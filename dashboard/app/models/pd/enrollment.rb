@@ -17,6 +17,7 @@
 #  user_id             :integer
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
+#  school_info_id      :integer
 #
 # Indexes
 #
