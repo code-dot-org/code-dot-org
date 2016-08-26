@@ -15,7 +15,7 @@ const styles = {
     marginLeft: 20,
     marginRight: 20,
     color: color.charcoal,
-    maxHeight: 600,
+    // maxHeight provided in render method based on window size
     overflowY: 'scroll'
   },
   title: {
@@ -134,12 +134,15 @@ const StageLockDialog = React.createClass({
   },
 
   render() {
+    const responsiveHeight = {
+      maxHeight: window.innerHeight * 0.8 - 100
+    };
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
       >
-        <div style={styles.main}>
+        <div style={[styles.main, responsiveHeight]}>
           <div style={styles.title}>{commonMsg.assessmentSteps()}</div>
           <table>
             <tbody>
