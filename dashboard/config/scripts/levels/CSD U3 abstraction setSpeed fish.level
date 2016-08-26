@@ -69,7 +69,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [ \"orange_fish\", \"shark\"],\r\n  \"propsByKey\": {\r\n    \"orange_fish\": {\r\n      \"name\": \"orange_fish\",\r\n      \"sourceUrl\": \"https://images.code.org/c7a3e614952f7b31f19137b5bed3e38e-image-1469222676407.png\",\r\n      \"frameSize\": {\"x\":135, \"y\": 88},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"shark\": {\r\n      \"name\": \"shark\",\r\n      \"sourceUrl\": \"https://images.code.org/b63256ffb19a98d9d20f3b3b79364006-image-1471467188241.png\",\r\n      \"frameSize\": {\"x\":200, \"y\": 86},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n    \"orderedKeys\": [\n        \"orange_fish\",\n        \"shark\"\n    ],\n    \"propsByKey\": {\n        \"orange_fish\": {\n            \"name\": \"orange_fish\",\n            \"sourceUrl\": \"https://images.code.org/c7a3e614952f7b31f19137b5bed3e38e-image-1469222676407.png\",\n            \"frameSize\": {\n                \"x\": 135,\n                \"y\": 88\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"shark\": {\n            \"name\": \"shark\",\n            \"sourceUrl\": \"https://images.code.org/b63256ffb19a98d9d20f3b3b79364006-image-1471467188241.png\",\n            \"frameSize\": {\n                \"x\": 200,\n                \"y\": 86\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "contained_level_names": null
   },
   "published": true,
