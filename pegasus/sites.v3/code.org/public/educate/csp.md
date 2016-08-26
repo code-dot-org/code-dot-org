@@ -138,14 +138,10 @@ All lessons are available at [curriculum.code.org/csp](https://curriculum.code.o
 We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
 
 * [General CSP forum](http://forum.code.org/c/csp)
-* [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp-unit1)
-* [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp-unit2)
-* [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp-unit3)
-* [Unit 4 Lesson-Specific Forums](http://forum.code.org/c/csp-unit4)
-* [Unit 5 Lesson-Specific Forums](http://forum.code.org/c/csp-unit5)
-* [Post-AP Stage-Specific Forums](http://forum.code.org/c/csp-post-ap)
-
-**_Note_** _that the forums still correspond to the '15-'16 curriculum, as our pilot group is still actively working through the materials_
+* [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp1)
+* [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp2)
+* [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp3)
+* Forums for Unit 4 and 5 will be re-released when we update those units. View the '15-'16 forums for [Unit 4](http://forum.code.org/c/csp-unit4) and [Unit 5](http://forum.code.org/c/csp-unit5)
 
 ## Frequently Asked Questions
 

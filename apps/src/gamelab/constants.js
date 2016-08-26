@@ -1,6 +1,4 @@
 /** @file Game Lab constants */
-'use strict';
-
 var utils = require('../utils');
 
 /** @enum {string} */

@@ -1,5 +1,3 @@
-'use strict';
-
 // Tests whether the browser can access an image URL.
 // Useful as a workaround for CORS security to test access to an origin.
 function testImageAccess(url, successCallback, failureCallback, timeoutMs) {

@@ -1,8 +1,6 @@
 /**
  * Defines blocks useful in multiple blockly apps
  */
-'use strict';
-
 var commonMsg = require('@cdo/locale');
 
 /**

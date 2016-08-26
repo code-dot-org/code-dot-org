@@ -159,12 +159,9 @@
     "start_blocks": "var add = 7 + 3;\r\nvar sub = 7 - 3;\r\nvar mult = 7 * 3;\r\nvar div = 7 / 3;\r\nvar paren = (83 + 92 + 86 + 94) / 4;\r\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
