@@ -2545,10 +2545,10 @@ var registerHandlers =
       if (code) {
         var eventName = eventNameBase;
         if (nameParam1) {
-          eventName += '-' + matchParam1Val;
+          eventName += '-' + utils.stripQuotes(matchParam1Val);
         }
         if (nameParam2) {
-          eventName += '-' + matchParam2Val;
+          eventName += '-' + utils.stripQuotes(matchParam2Val);
         }
         registerHandlersForCode(handlers, eventName, code);
       }
@@ -5090,7 +5090,7 @@ function handleCollision(src, target, allowQueueExtension) {
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
     callHandler(prefix + 'any_actor', allowQueueExtension);
-    callHandler(prefix + `"${Studio.sprite[target].imageName}"`, false,
+    callHandler(prefix + Studio.sprite[target].imageName, false,
         [target]);
   } else if (isEdgeClass(target)) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
@@ -5135,7 +5135,7 @@ function executeCollision(src, target) {
 
   Studio.executeQueue(srcPrefix + target);
   if (isActorClass(target)) {
-    Studio.executeQueue(srcPrefix + `"${Studio.sprite[target].imageName}"`);
+    Studio.executeQueue(srcPrefix + Studio.sprite[target].imageName);
   }
 
   // src is always an actor
