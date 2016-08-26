@@ -5,7 +5,7 @@ login_required 'true'
 hidden 'true'
 
 stage 'Quality Websites'
-level 'SFLP - Web - Quality Websites'
+level 'U2 - Website Comparison'
 level 'CSDU2 - Rating Quality Websites'
 
 stage 'Designing Web Pages'
