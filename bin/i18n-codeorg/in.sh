@@ -51,7 +51,7 @@ done
 
 ### Blockly Core
 
-orig_dir=blockly-core/i18n/locales/en-US
+orig_dir=apps/node_modules/@code-dot-org/blockly-core/i18n/locales/en-US
 loc_dir=i18n/locales/source/blockly-core
 mkdir -p $loc_dir
 
