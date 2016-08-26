@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 

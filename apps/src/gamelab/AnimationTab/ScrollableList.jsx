@@ -1,6 +1,4 @@
 /** @file Vertical scrolling list */
-'use strict';
-
 var React = require('react');
 var Radium = require('radium');
 

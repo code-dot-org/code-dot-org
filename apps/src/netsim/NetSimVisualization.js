@@ -1,7 +1,6 @@
 /**
  * @overview Top-level controller for the network visualization.
  */
-'use strict';
 
 import $ from 'jquery';
 var _ = require('lodash');

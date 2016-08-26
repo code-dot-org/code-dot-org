@@ -24,6 +24,18 @@ class MazeMap {
     });
   }
 
+  /**
+   * Returns a flattened list of all cells in this map. Good for
+   * situations where we want to map or reduce the cells without caring
+   * about their position
+   * @return {Cell[]}
+   */
+  getAllCells() {
+    return this.currentStaticGrid.reduce(
+      (prev, curr) => prev.concat(curr), []
+    );
+  }
+
   getCell(x, y) {
     return this.currentStaticGrid[x] && this.currentStaticGrid[x][y];
   }
