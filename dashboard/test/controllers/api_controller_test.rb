@@ -30,9 +30,6 @@ class ApiControllerTest < ActionController::TestCase
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.backfill_user_scripts
     @student_flappy_1.reload
-
-    # Seed the RNG deterministically.
-    srand 1
   end
 
   def create_script_with_lockable_stage
@@ -236,6 +233,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get surveys for section with script with anonymous level_group assessment" do
+    # Seed the RNG deterministically so we get the same "random" shuffling of results.
+    srand 1
+
     script = create :script
 
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
