@@ -7,7 +7,6 @@
 /* global Studio */
 
 import _ from 'lodash';
-import * as utils from '../utils';
 import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import msg from './locale';
