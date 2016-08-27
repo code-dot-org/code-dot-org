@@ -26,6 +26,8 @@ class SchoolInfo < ActiveRecord::Base
 
   SCHOOL_STATE_OTHER = "other"
 
+  belongs_to :school_district
+
   # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
   def school_zip=(input)
     self.zip = input

@@ -53,23 +53,27 @@ class SchoolInfoTest < ActiveSupport::TestCase
   test 'district by type charter and no zip, validation fails' do
     school_info = build :school_info, school_type: SchoolInfo::SCHOOL_TYPE_CHARTER, school_zip: nil, school_district_id: nil, school_district_other: nil, school_state: nil
     refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   # private + no zip  --  fail
   test 'district by type private and no zip, validation fails' do
     school_info = build :school_info, school_type: SchoolInfo::SCHOOL_TYPE_PRIVATE, school_zip: nil, school_state: nil, school_district_id: nil
     refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   # public + state "not other" + no district + no district "other"  --  fail
   test 'district by type public and state but no district, validation fails' do
     school_info = build :school_info, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: nil, school_district_other: false
     refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   # other + state "not other" + no district + no district "other"  --  fail
   test 'district by type other and state but no district, validation fails' do
     school_info = build :school_info, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: nil, school_district_other: false
     refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 end
