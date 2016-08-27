@@ -4,13 +4,11 @@ var selected_state;
 
 window.DistrictDropdownManager = function (existingOptions) {
 
-  var doneLoading = false;
-  var districtListLoaded = false;
+  var districtListFirstLoad = true;
+
   var districtElement = $('#school-district-id');
 
   function setupDistrictDropdown(stateCode) {
-    doneLoading = false;
-
     var selectize = districtElement[0].selectize;
     if (selectize) {
       selectize.clear();
@@ -31,7 +29,7 @@ window.DistrictDropdownManager = function (existingOptions) {
         type: 'GET',
         error: function () {
           callback();
-          districtListLoaded = true;
+          districtListFirstLoad = false;
         },
         success: function (res) {
           var districts = [];
@@ -45,10 +43,10 @@ window.DistrictDropdownManager = function (existingOptions) {
           // Only do this first time we do a load of this dropdown content.
           // The assumption is that if we had a valid school_district_id then
           // we would hit this codepath immediately after page load.
-          if (!districtListLoaded && existingOptions && existingOptions.school_district_id) {
+          if (districtListFirstLoad && existingOptions && existingOptions.school_district_id) {
             $('#school-district-id')[0].selectize.setValue(existingOptions.school_district_id);
           }
-          districtListLoaded = true;
+          districtListFirstLoad = false;
         }
       });
     });

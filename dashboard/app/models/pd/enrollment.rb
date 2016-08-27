@@ -85,9 +85,7 @@ class Pd::Enrollment < ActiveRecord::Base
     # The checkbox comes through as "true" when we really want true.
     attr[:school_district_other] = true if attr[:school_district_other] == "true"
 
-    unless SchoolInfo.new(attr).valid?
-      return false
-    end
+    return false unless SchoolInfo.new(attr).valid?
 
     if school_info = SchoolInfo.where(attr).first
       self.school_info = school_info
