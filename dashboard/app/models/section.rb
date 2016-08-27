@@ -18,8 +18,7 @@
 #
 # Indexes
 #
-#  index_sections_on_code     (code) UNIQUE
-#  index_sections_on_user_id  (user_id)
+#  index_sections_on_code  (code) UNIQUE
 #
 
 require 'cdo/section_helpers'
