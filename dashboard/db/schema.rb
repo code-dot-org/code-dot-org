@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818234153) do
+ActiveRecord::Schema.define(version: 20160827042254) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -148,6 +148,16 @@ ActiveRecord::Schema.define(version: 20160818234153) do
   add_index "concepts_levels", ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
   add_index "concepts_levels", ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
 
+  create_table "coteachers", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "section_id", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "coteachers", ["section_id"], name: "index_coteachers_on_section_id", using: :btree
+  add_index "coteachers", ["user_id"], name: "index_coteachers_on_user_id", using: :btree
+
   create_table "districts", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
     t.string   "location",   limit: 255
@@ -173,7 +183,6 @@ ActiveRecord::Schema.define(version: 20160818234153) do
   end
 
   create_table "followers", force: :cascade do |t|
-    t.integer  "user_id",         limit: 4, null: false
     t.integer  "student_user_id", limit: 4, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -183,7 +192,7 @@ ActiveRecord::Schema.define(version: 20160818234153) do
 
   add_index "followers", ["section_id"], name: "index_followers_on_section_id", using: :btree
   add_index "followers", ["student_user_id"], name: "index_followers_on_student_user_id", using: :btree
-  add_index "followers", ["user_id", "student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
+  add_index "followers", ["student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
 
   create_table "frequent_unsuccessful_level_sources", force: :cascade do |t|
     t.integer  "level_source_id", limit: 4,                 null: false
@@ -628,7 +637,6 @@ ActiveRecord::Schema.define(version: 20160818234153) do
   add_index "secret_words", ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
 
   create_table "sections", force: :cascade do |t|
-    t.integer  "user_id",      limit: 4,                     null: false
     t.string   "name",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -643,7 +651,6 @@ ActiveRecord::Schema.define(version: 20160818234153) do
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
-  add_index "sections", ["user_id"], name: "index_sections_on_user_id", using: :btree
 
   create_table "segments", force: :cascade do |t|
     t.integer  "workshop_id", limit: 4, null: false
