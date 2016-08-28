@@ -7,6 +7,7 @@
 
 require_relative 'test_helper'
 require 'fakeredis' unless ENV['USE_REAL_REDIS']
+require 'redis-slave-read'
 require 'net_sim_api'
 require_relative 'spy_pub_sub_api'
 
@@ -28,7 +29,7 @@ class NetSimApiTest < Minitest::Test
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
 
     # Redis - delete everything before each test
-    test_redis = Redis.new({host: 'localhost'})
+    test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: Redis.new({host: 'localhost'}))
     test_redis.flushall
     NetSimApi.override_redis_for_test(test_redis)
 
@@ -78,6 +79,50 @@ class NetSimApiTest < Minitest::Test
     delete_record(record_id || 1)
     delete_record(record_id2 || 2)
     assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  def test_distribute_reads
+    master = MiniTest::Mock.new
+    slave1 = MiniTest::Mock.new
+    slave2 = MiniTest::Mock.new
+    test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
+    NetSimApi.override_redis_for_test(test_redis)
+
+    # Operations distribute evenly across all three nodes
+    master.expect :hgetall, {}, [String]
+    slave1.expect :hgetall, {}, [String]
+    slave2.expect :hgetall, {}, [String]
+
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
+    master.verify
+    slave1.verify
+    slave2.verify
+  end
+
+  def test_not_distribute_writes
+    master = MiniTest::Mock.new
+    slave1 = MiniTest::Mock.new
+    slave2 = MiniTest::Mock.new
+    test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
+    NetSimApi.override_redis_for_test(test_redis)
+
+    # All operations go to master node
+    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :multi, []
+    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :multi, []
+    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :multi, []
+
+    create_record([{name: 'alice', age: 7, male: false}])
+    create_record([{name: 'alice', age: 7, male: false}])
+    create_record([{name: 'alice', age: 7, male: false}])
+
+    master.verify
+    slave1.verify
+    slave2.verify
   end
 
   def test_create_multiple_records
@@ -140,6 +185,7 @@ class NetSimApiTest < Minitest::Test
     assert_equal 200, @net_sim_api.last_response.status
 
     result = JSON.parse(@net_sim_api.last_response.body)
+    result['table1']['rows'].sort! {|a, b| a['id'] <=> b['id']}
     assert_equal(
       {'table1' => {'rows' => [t1_row1, t1_row2]},
        'table2' => {'rows' => [t2_row2]},
