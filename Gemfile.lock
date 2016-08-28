@@ -175,8 +175,8 @@ GEM
     fake_sqs (0.3.1)
       builder
       sinatra
-    fakeredis (0.5.0)
-      redis (~> 3.0)
+    fakeredis (0.6.0)
+      redis (~> 3.2)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
@@ -424,7 +424,7 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     redcarpet (3.3.4)
-    redis (3.1.0)
+    redis (3.3.1)
     ref (2.0.0)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
@@ -668,7 +668,7 @@ DEPENDENCIES
   rack_csrf
   rails (~> 4.2.6)
   redcarpet (~> 3.3.4)
-  redis (~> 3.1.0)
+  redis (~> 3.3.1)
   rerun (~> 0.10.0)
   responders (~> 2.0)
   rest-client (~> 1.8)
