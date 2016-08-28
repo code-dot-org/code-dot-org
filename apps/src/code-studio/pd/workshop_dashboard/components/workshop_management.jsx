@@ -19,7 +19,7 @@ const WorkshopManagement = React.createClass({
 
   getDefaultProps() {
     return {
-      onEdit: null,
+      editUrl: null,
       onDelete: null
     };
   },
