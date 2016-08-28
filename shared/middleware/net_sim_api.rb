@@ -3,6 +3,7 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
+require 'redis-slave-read'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
 
@@ -363,7 +364,11 @@ class NetSimApi < Sinatra::Base
   #
   # @return [Redis]
   def get_redis_client
-    @@overridden_redis || Redis.new(url: redis_url)
+    return @@overridden_redis unless @@overridden_redis.nil?
+    Redis::SlaveRead::Interface::Hiredis.new({
+        master: Redis.new(url: redis_url),
+        slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
+                                            })
   end
 
   # Returns the URL (configuration string) of the redis service in the current
@@ -373,6 +378,18 @@ class NetSimApi < Sinatra::Base
   # @return [String]
   def redis_url
     CDO.geocoder_redis_url || 'redis://localhost:6379'
+  end
+
+  # Returns an array of URLs for the redis read replicas in the current
+  # configuration.  Returns an empty array if no read replicas are
+  # available.
+  #
+  # @return [Array]
+  def redis_read_replica_urls
+    urls = []
+    urls.push(CDO.geocoder_read_replica_1) unless CDO.geocoder_read_replica_1.nil?
+    urls.push(CDO.geocoder_read_replica_2) unless CDO.geocoder_read_replica_2.nil?
+    urls
   end
 
   # Get the Pub/Sub API interface for the current configuration
