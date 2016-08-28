@@ -1,6 +1,13 @@
+# Unit tests for NetSimApi
+# This uses a fake Redis service by default, but can be configured to use a
+# real instance on localhost by setting the USE_REAL_REDIS environment variable;
+# e.g. "USE_REAL_REDIS=true ruby test_redis_property_bag.rb".
+# Caution: This test is destructive, clears the whole Redis instance between
+# tests, so be careful when using real redis.
+
 require_relative 'test_helper'
+require 'fakeredis' unless ENV['USE_REAL_REDIS']
 require 'net_sim_api'
-require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
 class NetSimApiTest < Minitest::Test
@@ -20,8 +27,10 @@ class NetSimApiTest < Minitest::Test
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
 
-    # Always use a fake Redis.
-    NetSimApi.override_redis_for_test(FakeRedisClient.new)
+    # Redis - delete everything before each test
+    test_redis = Redis.new({host: 'localhost'})
+    test_redis.flushall
+    NetSimApi.override_redis_for_test(test_redis)
 
     # Every test should start with an empty table.
     assert read_records.first.nil?, 'Table did not begin empty'
