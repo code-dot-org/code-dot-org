@@ -59,7 +59,7 @@ class ActivitiesController < ApplicationController
     if current_user && @script_level && @script_level.stage.lockable?
       user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if user_level.nil? || user_level.locked?(@script_level.stage)
+      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
         return head 403
       end
     end
