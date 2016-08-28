@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/islemaster/redis-slave-read.git
+  revision: 5b4532aff91cd914a6347103f9b0252fdf9c82e5
+  ref: master
+  specs:
+    redis-slave-read (0.2.1)
+      connection_pool
+      redis
+
+GIT
   remote: git://github.com/rails-api/active_model_serializers.git
   revision: 2962f3f64e7c672bfb5a13a8f739b5db073e5473
   ref: 2962f3f64e7c672bfb5a13a8f739b5db073e5473
@@ -117,6 +126,7 @@ GEM
       railties (>= 3.0, < 5)
     coderay (1.1.0)
     colorize (0.7.7)
+    connection_pool (2.2.0)
     coveralls (0.8.9)
       json (~> 1.8)
       rest-client (>= 1.6.8, < 2)
@@ -669,6 +679,7 @@ DEPENDENCIES
   rails (~> 4.2.6)
   redcarpet (~> 3.3.4)
   redis (~> 3.3.1)
+  redis-slave-read!
   rerun (~> 0.10.0)
   responders (~> 2.0)
   rest-client (~> 1.8)
