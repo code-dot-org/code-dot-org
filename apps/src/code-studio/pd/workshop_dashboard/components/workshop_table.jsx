@@ -2,20 +2,36 @@
  * Table displaying workshop summaries based on a supplied query.
  */
 
-import $ from 'jquery';
-import _ from 'lodash';
+import _, {orderBy} from 'lodash';
 import React from 'react';
 import {Button} from 'react-bootstrap';
-import {Table, resolve} from 'reactabular';
+import {Table, sort} from 'reactabular';
+import color from '../../../../color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
+import wrappedSortable from '../../../../templates/tables/wrapped_sortable';
 
 const WorkshopTable = React.createClass({
   propTypes: {
-    queryUrl: React.PropTypes.string.isRequired,
+    workshops: React.PropTypes.arrayOf(
+      React.PropTypes.shape({
+        id: React.PropTypes.number.isRequired,
+        sessions: React.PropTypes.array.isRequired,
+        location_name: React.PropTypes.string.isRequired,
+        workshop_type: React.PropTypes.string.isRequired,
+        course: React.PropTypes.string.isRequired,
+        enrolled_teacher_count: React.PropTypes.number.isRequired,
+        capacity: React.PropTypes.number.isRequired,
+        facilitators: React.PropTypes.array.isRequired,
+        organizer: React.PropTypes.shape({
+          name: React.PropTypes.string.isRequired,
+          email: React.PropTypes.string.isRequired
+        }).isRequired
+      })
+    ),
     canEdit: React.PropTypes.bool,
-    canDelete: React.PropTypes.bool,
+    onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
     showOrganizer: React.PropTypes.bool
   },
@@ -23,7 +39,7 @@ const WorkshopTable = React.createClass({
   getDefaultProps() {
     return {
       canEdit: false,
-      canDelete: false,
+      onDelete: null,
       showSignupUrl: false,
       showOrganizer: false
     };
@@ -31,12 +47,40 @@ const WorkshopTable = React.createClass({
 
   getInitialState() {
     return {
-      loading: true
+      sortingColumns: {
+        0: {
+          direction: 'asc',
+          position: 0
+        }
+      }
     };
   },
 
-  formatSessions(sessions) {
-    return <SessionTimesList sessions={sessions}/>;
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  },
+
+  onSort(selectedColumn) {
+    const sortingColumns = sort.byColumn({
+      sortingColumns: this.state.sortingColumns,
+      // Custom sortingOrder removes 'no-sort' from the cycle
+      sortingOrder: {
+        FIRST: 'asc',
+        asc: 'desc',
+        desc: 'asc'
+      },
+      selectedColumn
+    });
+
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns
+      })
+    });
+  },
+
+  formatSessions(_ignored, {rowData}) {
+    return <SessionTimesList sessions={rowData.sessions}/>;
   },
 
   formatOrganizer(organizer) {
@@ -62,65 +106,33 @@ const WorkshopTable = React.createClass({
         workshopId={workshopId}
         viewUrl={`/workshops/${workshopId}`}
         editUrl={this.props.canEdit ? `/workshops/${workshopId}/edit` : null}
-        onDelete={this.props.canDelete ? this.handleDelete : null}
+        onDelete={this.props.onDelete}
       />
     );
   },
 
-  componentDidMount() {
-    this.loadRequest = $.ajax({
-      method: 'GET',
-      url: this.props.queryUrl,
-      dataType: 'json'
-    })
-    .done(data => {
-      this.setState({
-        loading: false,
-        workshops: data
-      });
-    });
-  },
-
-  componentWillUnmount() {
-    if (this.loadRequest) {
-      this.loadRequest.abort();
-    }
-    if (this.deleteRequest) {
-      this.deleteRequest.abort();
-    }
-  },
-
-  handleDelete(workshopId) {
-    this.deleteRequest = $.ajax({
-      method: 'DELETE',
-      url: '/api/v1/pd/workshops/' + workshopId
-    })
-    .done(() => {
-      const workshops = _.reject(_.cloneDeep(this.state.workshops), w => w.id === workshopId);
-      this.setState({workshops: workshops});
-    });
-  },
-
   render() {
-    if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x"/>;
-    }
-
-    if (this.state.workshops.length === 0) {
-      return <p>None.</p>;
-    }
-
-    const rows = _.map(_.cloneDeep(this.state.workshops),
+    const rows = _.map(this.props.workshops,
       row => _.merge(row, {
-        signups: `${row.enrolled_teacher_count} / ${row.capacity}`
+        signups: `${row.enrolled_teacher_count} / ${row.capacity}`,
+        firstSessionStart: row.sessions[0].start
       })
+    );
+
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      {
+        default: {color: color.light_gray}
+      }
     );
 
     let columns = [];
     columns.push({
-      property: 'sessions',
+      property: 'firstSessionStart', // for sorting
       header: {
-        label: 'Date and Time'
+        label: 'Date and Time',
+        transforms: [sortable]
       },
       cell: {
         format: this.formatSessions
@@ -128,22 +140,26 @@ const WorkshopTable = React.createClass({
     }, {
       property: 'location_name',
       header: {
-        label: 'Location'
+        label: 'Location',
+        transforms: [sortable]
       }
     }, {
       property: 'workshop_type',
       header: {
-        label: 'Type'
+        label: 'Type',
+        transforms: [sortable]
       }
     }, {
       property: 'course',
       header: {
-        label: 'Course'
+        label: 'Course',
+        transforms: [sortable]
       }
     }, {
       property: 'signups',
       header: {
-        label: 'Signups'
+        label: 'Signups',
+        transforms: [sortable]
       }
     });
 
@@ -151,7 +167,8 @@ const WorkshopTable = React.createClass({
       columns.push({
         property: 'organizer',
         header: {
-          label: 'Organizer'
+          label: 'Organizer',
+          transforms: [sortable]
         },
         cell: {
           format: this.formatOrganizer
@@ -162,15 +179,11 @@ const WorkshopTable = React.createClass({
     columns.push({
       property: 'facilitators',
       header: {
-        label: 'Facilitators'
+        label: 'Facilitators',
+        transforms: [sortable]
       },
       cell: {
         format: this.formatFacilitators
-      }
-    }, {
-      property: 'state',
-      header: {
-        label: 'Current State'
       }
     });
 
@@ -196,13 +209,20 @@ const WorkshopTable = React.createClass({
       }
     });
 
+    const {sortingColumns} = this.state;
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy
+    })(rows);
+
     return (
       <Table.Provider
         className="table table-striped table-condensed"
         columns={columns}
       >
         <Table.Header />
-        <Table.Body rows={rows} rowKey="id"/>
+        <Table.Body rows={sortedRows} rowKey="id"/>
       </Table.Provider>
     );
   }
