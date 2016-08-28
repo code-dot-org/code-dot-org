@@ -40,7 +40,7 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "This was used when the fish was used both for setting velocityX the first time and then incrementing it.  It's not used anymore, because the fish aren't used to increment velocityX.",
   "level_concept_difficulty": {
   }
 }]]></config>
