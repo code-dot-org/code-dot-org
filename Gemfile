@@ -15,6 +15,7 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.3.1'
+gem 'redis-slave-read', require: false, github: 'islemaster/redis-slave-read', ref: 'master'
 gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'parallel'
