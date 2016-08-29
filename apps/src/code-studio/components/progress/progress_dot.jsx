@@ -342,6 +342,25 @@ if (BUILD_STYLEGUIDE) {
           )
         },
         {
+          name: 'imperfect completed puzzle in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [2288, []],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 6,
+                status: 'passed',
+                title: 6,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
+              }}
+            />
+          )
+        },
+        {
           name: 'completed puzzle in course overview',
           story: () => (
             <ProgressDot
@@ -354,6 +373,25 @@ if (BUILD_STYLEGUIDE) {
                 next: [2, 1],
                 position: 6,
                 status: 'perfect',
+                title: 6,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
+              }}
+            />
+          )
+        },
+        {
+          name: 'current puzzle in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              currentLevelId="2288"
+              level={{
+                icon: null,
+                ids: [2288, []],
+                kind: 'puzzle',
+                position: 6,
+                status: 'not_tried',
                 title: 6,
                 url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
               }}
@@ -595,7 +633,7 @@ if (BUILD_STYLEGUIDE) {
           )
         },
         {
-          name: 'current leve puzzle in header',
+          name: 'current level puzzle in header',
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
