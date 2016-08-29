@@ -7,7 +7,7 @@ describe("JSInterpreter", function () {
 
   // Setup up window.Interpreter.
   window.acorn = require('../../lib/jsinterpreter/acorn');
-  require('../../lib/jsinterpreter/interpreter');
+  window.Interpreter = require('../../lib/jsinterpreter/interpreter').Interpreter;
 
   function initWithCode(code) {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
