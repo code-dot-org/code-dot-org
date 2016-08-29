@@ -23,6 +23,67 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  describe('setKeyValue', () => {
+    it('sets a string value', done => {
+      FirebaseStorage.setKeyValue(
+        'key',
+        'val',
+        verifyStringValue,
+        error => console.warn(error));
+
+      function verifyStringValue() {
+        getDatabase(Applab.channelId).child(`storage/keys`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({'key': '"val"'});
+            done();
+          });
+      }
+    });
+
+    it('sets a number value', done => {
+      FirebaseStorage.setKeyValue(
+        'key',
+        7,
+        verifyNumberValue,
+        error => console.warn(error));
+
+      function verifyNumberValue() {
+        getDatabase(Applab.channelId).child(`storage/keys`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({'key': '7'});
+            done();
+          });
+      }
+    });
+
+    it('sets and gets an undefined value', done => {
+      FirebaseStorage.setKeyValue(
+        'key',
+        undefined,
+        verifySetKeyValue,
+        error => console.warn(error));
+
+      function verifySetKeyValue() {
+        getDatabase(Applab.channelId).child(`storage/keys`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.equal(null);
+            FirebaseStorage.getKeyValue(
+              'key',
+              verifyGetKeyValue,
+              error => console.warn(error));
+          });
+      }
+
+      function verifyGetKeyValue(actualValue) {
+        expect(actualValue).to.equal(undefined);
+        done();
+      }
+    });
+  });
+
   describe('createRecord', () => {
     it('creates a record', done => {
       FirebaseStorage.createRecord(
