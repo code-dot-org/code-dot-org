@@ -2,7 +2,6 @@
  * @overview Component for adding a new column to the specified table.
  */
 
-import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
@@ -35,7 +34,6 @@ const ColumnHeader = React.createClass({
     return {
       newName: undefined,
       hasEnteredText: false,
-      isDialogOpen: false,
     };
   },
 
@@ -69,12 +67,7 @@ const ColumnHeader = React.createClass({
     });
   },
 
-  handleClose() {
-    this.setState({isDialogOpen: false});
-  },
-
-  handleConfirmDelete() {
-    this.setState({isDialogOpen: false});
+  handleDelete() {
     this.props.deleteColumn(this.props.columnName);
   },
 
@@ -143,24 +136,13 @@ const ColumnHeader = React.createClass({
                 </a>
               </li>
               <li>
-                <a onClick={() => this.setState({isDialogOpen: true})}>
+                <a onClick={this.handleDelete}>
                  Delete
                 </a>
               </li>
             </ul>
           </span>
         </div>
-        <Dialog
-          body="Are you sure you want to delete this entire column? You cannot undo this action."
-          cancelText="Cancel"
-          confirmText="Delete"
-          confirmType="danger"
-          isOpen={this.state.isDialogOpen}
-          handleClose={this.handleClose}
-          onCancel={this.handleClose}
-          onConfirm={this.handleConfirmDelete}
-          title="Delete column"
-        />
         <input
           ref={input => this.input = input}
           style={inputStyle}

@@ -1267,7 +1267,9 @@ Blockly.BlockSvg.prototype.initChildren = function() {
   }
   this.svgPathLight_ = Blockly.createSvgElement("path", {"class":"blocklyPathLight"}, this.svgGroup_);
   this.svgPath_.tooltip = this.block_;
-  Blockly.Tooltip.bindMouseEvents(this.svgPath_);
+  if(!this.block_.blockSpace.blockSpaceEditor.disableTooltip) {
+    Blockly.Tooltip.bindMouseEvents(this.svgPath_)
+  }
   this.updateMovable()
 };
 Blockly.BlockSvg.DISABLED_COLOUR = "#808080";
@@ -6423,7 +6425,7 @@ Blockly.BlockSpace.createReadOnlyBlockSpace = function(container, xml, opt_optio
     return metrics
   }, setMetrics:function(xyRatio) {
     Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio)
-  }, hideTrashRect:true, readOnly:true, noScrolling:opt_options.noScrolling});
+  }, hideTrashRect:true, readOnly:true, disableTooltip:true, noScrolling:opt_options.noScrolling});
   var blockSpace = blockSpaceEditor.blockSpace;
   Blockly.Xml.domToBlockSpace(blockSpace, xml);
   return blockSpace
@@ -14648,7 +14650,9 @@ Blockly.FieldLabel.prototype.init = function(block) {
   this.sourceBlock_ = block;
   block.getSvgRoot().appendChild(this.textElement_);
   this.textElement_.tooltip = this.sourceBlock_;
-  Blockly.Tooltip && Blockly.Tooltip.bindMouseEvents(this.textElement_)
+  if(!this.sourceBlock_.blockSpace.blockSpaceEditor.disableTooltip) {
+    Blockly.Tooltip && Blockly.Tooltip.bindMouseEvents(this.textElement_)
+  }
 };
 Blockly.FieldLabel.prototype.getSize = function() {
   if(!this.size_.width && !this.forceWidth_) {
@@ -19979,6 +19983,9 @@ Blockly.BlockSpaceEditor = function(container, opt_options) {
   if(opt_options.hideTrashRect) {
     this.hideTrashRect_ = opt_options.hideTrashRect
   }
+  if(opt_options.disableTooltip) {
+    this.disableTooltip = opt_options.disableTooltip
+  }
   this.readOnly_ = !!opt_options.readOnly;
   this.noScrolling_ = !!opt_options.noScrolling;
   this.blockSpace = new Blockly.BlockSpace(this, goog.bind(this.getBlockSpaceMetrics_, this), goog.bind(this.setBlockSpaceMetrics_, this), container);
@@ -20052,7 +20059,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
       }
     }
   };
-  svg.appendChild(Blockly.Tooltip.createDom());
+  if(!this.disableTooltip) {
+    svg.appendChild(Blockly.Tooltip.createDom())
+  }
   this.svgResize();
   if(!Blockly.WidgetDiv.DIV) {
     Blockly.WidgetDiv.DIV = goog.dom.createDom("div", "blocklyWidgetDiv");
