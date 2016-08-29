@@ -118,6 +118,7 @@ const CourseProgressRow = React.createClass({
             <TeacherStageInfo stage={stage}/>
           }
           <StageProgress
+            stageId={stage.id.toString()}
             levels={stage.levels}
             courseOverviewPage={true}
           />
