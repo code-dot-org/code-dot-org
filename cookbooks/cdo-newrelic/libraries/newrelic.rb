@@ -36,8 +36,8 @@ class NewRelicClient
   def assign_alert_policy(policy_id, server_name)
     policy = alert_policy(policy_id)
 
-    # Wait/retry up to 30 seconds for a new server ID to be registered by NewRelic.
-    max_tries = 10
+    # Wait/retry up to ~4 minutes for a new server ID to be registered by NewRelic.
+    max_tries = 7
     tries = 0
     begin
       map = server_name_to_id_map
@@ -47,7 +47,7 @@ class NewRelicClient
     rescue => e
       raise e if tries >= max_tries
       tries += 1
-      sleep 3
+      sleep (2**tries) # Exponential backoff
       retry
     end
 
