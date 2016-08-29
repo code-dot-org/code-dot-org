@@ -3,8 +3,7 @@
  * Farmer, Collector). Intended to be inherited from to provide
  * skin-specific functionality.
  */
-import Drawer from './drawer';
-import { SQUARE_SIZE, SVG_NS } from './drawer';
+import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
 import color from '../color';
 
 /**
