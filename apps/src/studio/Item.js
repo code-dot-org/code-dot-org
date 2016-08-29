@@ -130,11 +130,15 @@ export default class Item extends Collidable {
     // update logic (facing the actor is handled every frame in display())
     if (this.activity === 'watchActor') {
       return;
-    } else if (this.activity === 'none') {
+    }
+    if (this.activity === 'none') {
       this.setDirection(Direction.NONE);
 
       this.destGridX = undefined;
       this.destGridY = undefined;
+      return;
+    }
+    if (!this.visible) {
       return;
     }
 
