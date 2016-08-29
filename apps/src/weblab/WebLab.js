@@ -106,9 +106,10 @@ WebLab.prototype.init = function (config) {
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
-    // BUGBUG should we init here? (I had it commented out)
-   // this.studioApp_.init(config);
-
+    // TODO: understand if we need to call studioApp
+    // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
+    // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
+    // this.studioApp_.init(config);
   }.bind(this);
 
   // Push initial level properties into the Redux store
