@@ -69,13 +69,10 @@ Body.propTypes = {
 };
 
 export function Confirm(props) {
-  let {type, ...other} = props;
-  type = type || "primary";
-  return <Button type={type} {...other}>{props.children || locale.dialogOK()}</Button>;
+  return <Button type="primary" {...props}>{props.children || locale.dialogOK()}</Button>;
 }
 Confirm.propTypes = {
   children: React.PropTypes.node,
-  type: React.PropTypes.string,
 };
 
 export function Cancel(props) {
@@ -85,34 +82,23 @@ Cancel.propTypes = {
   children: React.PropTypes.node,
 };
 
-export const Buttons = React.createClass({
-  getConfirmButton() {
-    return this.refs.buttons.getElementsByClassName('confirmButton')[0];
-  },
-
-  getCancelButton() {
-    return this.refs.buttons.getElementsByClassName('cancelButton')[0];
-  },
-
-  render() {
-    const children = React.Children.toArray(this.props.children);
-    var leftChildren = children.slice(0, children.length-1);
-    var rightChild = children[children.length - 1];
-    return (
-      <div style={styles.buttons} ref="buttons">
-        <div style={styles.rightButton}>
-          {rightChild}
-        </div>
-        {leftChildren}
-        <div style={styles.buttonClear}/>
+export function Buttons({children}) {
+  children = React.Children.toArray(children);
+  var leftChildren = children.slice(0, children.length-1);
+  var rightChild = children[children.length - 1];
+  return (
+    <div style={styles.buttons}>
+      <div style={styles.rightButton}>
+        {rightChild}
       </div>
-    );
-  },
-
-  propTypes: {
-    children: childrenOfType(Cancel, Confirm),
-  },
-});
+      {leftChildren}
+      <div style={styles.buttonClear}/>
+    </div>
+  );
+}
+Buttons.propTypes = {
+  children: childrenOfType(Cancel, Confirm),
+};
 
 export function Footer({children}) {
   return (
@@ -152,23 +138,7 @@ const Dialog = React.createClass({
     onCancel: whenNoChildOfTypes(Buttons),
     confirmText: whenNoChildOfTypes(Buttons),
     onConfirm: whenNoChildOfTypes(Buttons),
-    confirmType: whenNoChildOfTypes(Buttons),
   }),
-
-  handleKeyDown(event) {
-    // Always focus the Cancel or Confirm button when tab is pressed, to prevent the
-    // user from selecting elements outside of the dialog.
-    if (event.key === 'Tab') {
-      const cancelButton = this.refs.buttons.getCancelButton();
-      const confirmButton = this.refs.buttons.getConfirmButton();
-      if ((document.activeElement === cancelButton)) {
-        confirmButton && confirmButton.focus();
-      } else {
-        cancelButton && cancelButton.focus();
-      }
-      event.preventDefault();
-    }
-  },
 
   render() {
     var children = [];
@@ -183,15 +153,13 @@ const Dialog = React.createClass({
     }
     children = children.concat(this.props.children);
     if (this.props.cancelText || this.props.onCancel ||
-        this.props.confirmText || this.props.onConfirm || this.props.confirmType) {
+        this.props.confirmText || this.props.onConfirm) {
       var buttons = (
-        <Buttons key="buttons" ref="buttons">
+        <Buttons key="buttons">
           {this.props.onCancel &&
-           <Cancel onClick={this.props.onCancel} className="cancelButton">{this.props.cancelText}</Cancel>}
+           <Cancel onClick={this.props.onCancel}>{this.props.cancelText}</Cancel>}
           {this.props.onConfirm &&
-           <Confirm onClick={this.props.onConfirm} className="confirmButton" type={this.props.confirmType}>
-             {this.props.confirmText}
-           </Confirm>}
+           <Confirm onClick={this.props.onConfirm}>{this.props.confirmText}</Confirm>}
         </Buttons>
       );
       const lastChild = children[children.length - 1];
@@ -205,7 +173,7 @@ const Dialog = React.createClass({
       children.push(<Footer key="footer">{this.props.footer}</Footer>);
     }
     return (
-      <BaseDialog {...this.props} handleKeyDown={this.handleKeyDown}>
+      <BaseDialog {...this.props}>
         {children}
       </BaseDialog>
     );
@@ -301,20 +269,6 @@ if (BUILD_STYLEGUIDE) {
               title="A big decision"
               body="Do you want to go skydiving?"
               confirmText="Yes"
-              onCancel={storybook.action("cancel")}
-              onConfirm={storybook.action("confirm")}
-            />
-          )
-        }, {
-          name: 'alternate confirm button type',
-          description: 'This is how the dialog looks with confirm button of type "danger"',
-          story: () => (
-            <Dialog
-              hideBackdrop={true}
-              title="Delete table"
-              body="Are you sure you want to delete the table?"
-              confirmText="Delete"
-              confirmType="danger"
               onCancel={storybook.action("cancel")}
               onConfirm={storybook.action("confirm")}
             />
