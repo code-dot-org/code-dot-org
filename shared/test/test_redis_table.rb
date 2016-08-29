@@ -5,8 +5,8 @@
 # Caution: This test is destructive to the Redis instance it runs against,
 # use caution when running against real redis.
 
-require 'fakeredis' unless ENV['USE_REAL_REDIS']
 require_relative 'test_helper'
+require 'fakeredis' unless use_real_redis?
 require 'helpers/null_pub_sub_api'
 require 'helpers/redis_table'
 require_relative 'spy_pub_sub_api'
