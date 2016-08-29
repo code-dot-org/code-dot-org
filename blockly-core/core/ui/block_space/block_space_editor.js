@@ -50,6 +50,8 @@ goog.require('goog.style');
  *      readOnly mode. All Blockly elements that are (or can be) aware of this
  *      BlockSpaceEditor will consider Blockly to be in readOnly mode if this
  *      BlockSpaceEditor.readOnly OR Blockly.readOnly are true
+ * @param {boolean} opt_options.disableTooltip whether or not to disable tooltips for this
+ *      blockSpace. It is recommended that only one blockSpace per page allow tooltips.
  */
 Blockly.BlockSpaceEditor = function(container, opt_options) {
   opt_options = opt_options || {};
@@ -62,6 +64,9 @@ Blockly.BlockSpaceEditor = function(container, opt_options) {
   }
   if (opt_options.hideTrashRect) {
     this.hideTrashRect_ = opt_options.hideTrashRect;
+  }
+  if (opt_options.disableTooltip) {
+    this.disableTooltip = opt_options.disableTooltip;
   }
 
   this.readOnly_ = !!opt_options.readOnly;
@@ -297,7 +302,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     }
   };
 
-  svg.appendChild(Blockly.Tooltip.createDom());
+  if (!this.disableTooltip) {
+    svg.appendChild(Blockly.Tooltip.createDom());
+  }
   this.svgResize();
 
   // Create an HTML container for popup overlays (e.g. editor widgets).
