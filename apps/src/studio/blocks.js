@@ -1844,7 +1844,7 @@ exports.install = function (blockly, blockInstallOptions) {
         Blockly.JavaScript.ORDER_NONE);
     // Sprite index vars need to be 1-indexed, but the callback arg will be
     // 0-indexed, so add 1.
-    return `${varName} = extraArgs[0] + 1;\n`;
+    return `${varName} = touchedSpriteIndex + 1;\n`;
   };
 
 
