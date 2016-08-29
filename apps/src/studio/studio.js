@@ -809,10 +809,10 @@ var setSvgText = function (opts) {
  * @param {string} name Name of the handler we want to call
  * @param {boolean} allowQueueExension When true, we allow additional cmds to
  *  be appended to the queue
- * @param {Array} extraArgs Additional arguments passed as an array into the
- *  virtual JS machine for consumption by the student's event-handling code.
+ * @param {Array} extraArgs Additional arguments passed into the virtual JS
+ *  machine for consumption by the student's event-handling code.
  */
-function callHandler(name, allowQueueExtension, extraArgs) {
+function callHandler(name, allowQueueExtension, extraArgs = []) {
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
@@ -845,7 +845,7 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(api, Studio.Globals, extraArgs);
+          handler.func(api, Studio.Globals, ...extraArgs);
         } catch (e) {
           // Do nothing
           console.error(e);
@@ -2520,15 +2520,16 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
-var registerHandlersForCode = function (handlers, blockName, code) {
+var registerHandlersForCode = function (handlers, blockName, code, argNames = []) {
   registerEventHandler(handlers, blockName,
-      new Function('Studio', 'Globals', 'extraArgs', code));
+      new Function('Studio', 'Globals', ...argNames, code));
 };
 
 var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
-                nameParam2, matchParam2Val) {
+                nameParam2, matchParam2Val,
+                argNames) {
   var blocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var x = 0; blocks[x]; x++) {
     var block = blocks[x];
@@ -2550,7 +2551,7 @@ var registerHandlers =
         if (nameParam2) {
           eventName += '-' + utils.stripQuotes(matchParam2Val);
         }
-        registerHandlersForCode(handlers, eventName, code);
+        registerHandlersForCode(handlers, eventName, code, argNames);
       }
     }
   }
@@ -2609,15 +2610,20 @@ var registerHandlersWithMultipleSpriteParams =
   }
 };
 
-var registerHandlersWithSpriteAndGroupParams =
-    function (handlers, blockName, eventNameBase, blockParam1, blockParam2) {
+var registerHandlersWithSpriteAndGroupParams = function (
+    handlers,
+    blockName,
+    eventNameBase,
+    blockParam1,
+    blockParam2,
+    argNames) {
   var spriteNames = skin.spriteChoices.filter(opt =>
       opt[1] !== constants.HIDDEN_VALUE && opt[1] !== constants.RANDOM_VALUE
   ).map(opt => opt[1]);
   for (var i = 0; i < Studio.spriteCount; i++) {
     for (var j = 0; j < spriteNames.length; j++) {
       registerHandlers(handlers, blockName, eventNameBase, blockParam1,
-          String(i), blockParam2, spriteNames[j]);
+          String(i), blockParam2, spriteNames[j], argNames);
     }
   }
 };
@@ -2904,7 +2910,8 @@ Studio.execute = function () {
         'studio_whenSpriteAndGroupCollide',
         'whenSpriteCollided',
         'SPRITE',
-        'SPRITENAME');
+        'SPRITENAME',
+        ['touchedSpriteIndex']);
 
   }
 
