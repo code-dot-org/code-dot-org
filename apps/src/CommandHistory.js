@@ -1,5 +1,4 @@
 /** @file Provide browsable command history to a textbox with limited depth. */
-'use strict';
 
 var CommandHistory = module.exports = function () {
   /**

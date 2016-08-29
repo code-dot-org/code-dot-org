@@ -2,8 +2,6 @@
  * @file Helper functions for accessing client state. This state is stored in a
  *       combination of cookies and HTML5 web storage.
  */
-'use strict';
-
 import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 

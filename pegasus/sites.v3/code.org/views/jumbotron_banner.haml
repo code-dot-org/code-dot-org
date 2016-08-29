@@ -1,3 +1,4 @@
+- specs ||= nil
 - url ||= nil
 - cta ||= nil
 - photo_cred ||= nil
@@ -16,7 +17,8 @@
       .jumbo-tutorial-info
         %h1.jumbo-h1-second-box= title
         %p.jumbo-tutorial-description= desc
-        %p.jumbo-tutorial-specs= specs
+        - unless specs.nil?
+          %p.jumbo-tutorial-specs= specs
       - unless url.nil? || cta.nil?
         %a{:href=>url, :target=>'_self'}
           %button= cta

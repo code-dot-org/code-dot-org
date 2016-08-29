@@ -3,7 +3,6 @@
  *           which is used to transmit packets.
  * @see NetSimPacketEditor which is used extensively here.
  */
-'use strict';
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides Function.prototype.inherits

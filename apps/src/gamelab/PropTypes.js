@@ -31,7 +31,7 @@ const Vector2 = React.PropTypes.shape({
  *   }
  *
  *  AnimationProps should include the actual spritesheet (as blob and dataURI),
- *  dimensions and frame dimensions, frameDelay, name, last save time, version IDs,
+ *  dimensions and frame dimensions, frameDelay, looping, name, last save time, version IDs,
  *  URL to fetch the animation from the API, etc.
  *
  *  We serialize a smaller set of information {SerializedAnimationProps}.
@@ -54,6 +54,7 @@ export const AnimationKey = React.PropTypes.string;
  * @property {?string} sourceUrl
  * @property {Vector2} frameSize
  * @property {number} frameCount
+ * @property {bool} looping
  * @property {number} frameDelay
  * @property {string} [version] - S3 version key
  */
@@ -62,6 +63,7 @@ const serializedAnimationPropsShape = {
   sourceUrl: React.PropTypes.string,
   frameSize: Vector2.isRequired,
   frameCount: React.PropTypes.number.isRequired,
+  looping: React.PropTypes.bool.isRequired,
   frameDelay: React.PropTypes.number.isRequired,
   version: React.PropTypes.string
 };
@@ -76,6 +78,7 @@ const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsS
  *           and we look it up by key.
  * @property {Vector2} frameSize
  * @property {number} frameCount
+ * @property {bool} looping
  * @property {number} frameDelay
  * @property {string} [version] - S3 version key
  *
@@ -111,6 +114,7 @@ function getSerializedAnimationProps(animation) {
     'sourceUrl',
     'frameSize',
     'frameCount',
+    'looping',
     'frameDelay',
     'version'
   ]);
@@ -174,7 +178,7 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
 
   // Check shape of propsByKey objects
   for (const animationKey in propsByKey) {
-    ['name', 'frameSize', 'frameCount', 'frameDelay'].forEach(requiredPropName => {
+    ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(requiredPropName => {
       if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
         throw new Error(`Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`);
       }

@@ -6,6 +6,7 @@ export default [
     sourceSize: {x:396, y: 378},
     frameSize: {x:132, y: 126},
     frameCount: 9,
+    looping: true,
     frameDelay: 2,
   },
   {
@@ -14,6 +15,7 @@ export default [
     sourceSize: {x:684, y: 474},
     frameSize: {x:171, y: 158},
     frameCount: 11,
+    looping: true,
     frameDelay: 2,
   },
   {
@@ -22,6 +24,7 @@ export default [
     sourceSize: {x:396, y: 126},
     frameSize: {x:132, y: 126},
     frameCount: 3,
+    looping: true,
     frameDelay: 2,
   },
   {
@@ -30,6 +33,7 @@ export default [
     sourceSize: {x:432, y: 432},
     frameSize: {x:144, y: 144},
     frameCount: 8,
+    looping: true,
     frameDelay: 2,
   },
   {
@@ -38,6 +42,7 @@ export default [
     sourceSize: {x:198, y: 118},
     frameSize: {x:66, y: 118},
     frameCount: 3,
+    looping: true,
     frameDelay: 2,
   },
   {
@@ -46,6 +51,7 @@ export default [
     sourceSize: {x:82, y: 520},
     frameSize: {x:82, y: 130},
     frameCount: 4,
+    looping: true,
     frameDelay: 4,
   },
   {
@@ -54,6 +60,7 @@ export default [
     sourceSize: {x:504, y: 158},
     frameSize: {x:72, y: 158},
     frameCount: 7,
+    looping: true,
     frameDelay: 2,
   },
   {
@@ -62,6 +69,7 @@ export default [
     sourceSize: {x:200, y: 219},
     frameSize: {x:200, y: 73},
     frameCount: 3,
+    looping: true,
     frameDelay: 2,
   }
 ];

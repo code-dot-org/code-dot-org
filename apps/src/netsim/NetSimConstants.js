@@ -2,7 +2,6 @@
  * @overview Constants and enums used across Internet Simulator.
  */
 /* global exports */
-'use strict';
 
 /**
  * @type {number}

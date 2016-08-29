@@ -1,6 +1,5 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
-'use strict';
 import $ from 'jquery';
 
 /** @enum {string} */
