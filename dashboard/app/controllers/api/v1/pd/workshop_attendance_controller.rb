@@ -3,6 +3,11 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   include CsvDownload
   load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
+  before_action :authorize_manage_attendance, only: [:update]
+  def authorize_manage_attendance
+    authorize! :manage_attendance, @workshop
+  end
+
   # GET /api/v1/pd/workshops/1/attendance
   def show
     respond_to do |format|
