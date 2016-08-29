@@ -62,7 +62,7 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders title if not showing level name nor level icon', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={false} showingLevelName={false} />
+      <BubbleInterior title={level.title} showingIcon={false} showingLevelName={false} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('1');
@@ -70,7 +70,7 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders nothing for named levels with icons', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={true} showingLevelName={true} />
+      <BubbleInterior title={level.title} showingIcon={true} showingLevelName={true} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('');
@@ -78,7 +78,7 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders &nbsp for named levels without icons', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={false} showingLevelName={true} />
+      <BubbleInterior title={level.title} showingIcon={false} showingLevelName={true} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('&nbsp;');
