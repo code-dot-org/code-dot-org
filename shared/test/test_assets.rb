@@ -5,7 +5,6 @@ require 'helpers/asset_bucket'
 require_relative 'spy_newrelic_agent'
 
 class AssetsTest < FilesApiTestBase
-
   def setup
     # Ensure the s3 path starts empty.
     delete_all_assets('assets_test/1/1')

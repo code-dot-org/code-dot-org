@@ -1339,15 +1339,21 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var playSpaceHeader = document.getElementById('playSpaceHeader');
-  var visualization = document.getElementById('visualization');
-  var gameButtons = document.getElementById('gameButtons');
-
   var top = 0;
-  if (playSpaceHeader) {
-    top += $(playSpaceHeader).outerHeight(true);
-  }
 
+  var possibleBelowVisualizationElements = [
+    'playSpaceHeader',
+    'spelling-table-wrapper',
+    'gameButtons'
+  ];
+  possibleBelowVisualizationElements.forEach(id => {
+    let element = document.getElementById(id);
+    if (element) {
+      top += $(element).outerHeight(true);
+    }
+  });
+
+  var visualization = document.getElementById('visualization');
   if (visualization) {
     var parent = $(visualization).parent();
     if (parent.attr('id') === 'phoneFrame') {
@@ -1358,10 +1364,6 @@ function resizePinnedBelowVisualizationArea() {
     } else {
       top += $(visualization).outerHeight(true);
     }
-  }
-
-  if (gameButtons) {
-    top += $(gameButtons).outerHeight(true);
   }
 
   var bottom = 0;
@@ -2080,6 +2082,22 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
   ace = window.ace;
+
+  // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
+  // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
+  // was initialized, so include it initially, and conditionally remove it here.
+  if (!window.dashboard.project.useFirebase()) {
+    // Remove onRecordEvent from the palette
+    delete config.level.codeFunctions.onRecordEvent;
+
+    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
+    const block = config.dropletConfig.blocks.find(block => {
+      return block.func === 'onRecordEvent';
+    });
+    if (block) {
+      block.noAutocomplete = true;
+    }
+  }
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);

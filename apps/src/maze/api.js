@@ -299,3 +299,59 @@ exports.honeyCreated = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_created", id);
   return Maze.subtype.honey_;
 });
+
+/**
+ * Harvester
+ */
+
+exports.getCorn = API_FUNCTION(function (id) {
+  Maze.subtype.getCorn(id);
+});
+
+exports.getPumpkin = API_FUNCTION(function (id) {
+  Maze.subtype.getPumpkin(id);
+});
+
+exports.getBean = API_FUNCTION(function (id) {
+  Maze.subtype.getBean(id);
+});
+
+exports.atCorn = API_FUNCTION(function (id) {
+  return Maze.subtype.atCorn(id);
+});
+
+exports.atPumpkin = API_FUNCTION(function (id) {
+  return Maze.subtype.atPumpkin(id);
+});
+
+exports.atBean = API_FUNCTION(function (id) {
+  return Maze.subtype.atBean(id);
+});
+
+exports.hasCorn = API_FUNCTION(function (id) {
+  return Maze.subtype.hasCorn(id);
+});
+
+exports.hasPumpkin = API_FUNCTION(function (id) {
+  return Maze.subtype.hasPumpkin(id);
+});
+
+exports.hasBean = API_FUNCTION(function (id) {
+  return Maze.subtype.hasBean(id);
+});
+
+/**
+ * Planter
+ */
+
+exports.plant = API_FUNCTION(function (id) {
+  Maze.subtype.plant(id);
+});
+
+exports.atSoil = API_FUNCTION(function (id) {
+  return Maze.subtype.atSoil(id);
+});
+
+exports.atSprout = API_FUNCTION(function (id) {
+  return Maze.subtype.atSprout(id);
+});

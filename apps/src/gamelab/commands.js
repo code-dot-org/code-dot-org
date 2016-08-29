@@ -1,6 +1,4 @@
 /** @file Non-p5 GameLab commands */
-'use strict';
-
 var assetPrefix = require('../assetManagement/assetPrefix');
 var studioApp = require('../StudioApp').singleton;
 

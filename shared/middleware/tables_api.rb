@@ -7,7 +7,6 @@ require_relative './helpers/table_coerce'
 require_relative './helpers/table_limits'
 
 class TablesApi < Sinatra::Base
-
   DEFAULT_MAX_TABLE_ROWS = 1000
 
   # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for

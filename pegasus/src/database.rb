@@ -2,7 +2,6 @@ require 'cdo/db'
 require 'cdo/properties'
 
 class Tutorials
-
   def initialize(table)
     @table = table
     @contents = DB[@table].all
@@ -89,7 +88,6 @@ require 'securerandom'
 require 'json'
 
 class Form2 < OpenStruct
-
   def initialize(params={})
     params = params.dup
     params[:data] = JSON.load(params[:data])
@@ -101,5 +99,4 @@ class Form2 < OpenStruct
     return nil unless row
     self.new row
   end
-
 end

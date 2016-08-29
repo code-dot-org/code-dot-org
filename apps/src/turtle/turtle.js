@@ -24,7 +24,6 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -404,6 +403,10 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
+    // This is necessary when loading images from image.code.org to
+    // request the image with ACAO headers so that canvas will not flag
+    // it as tainted
+    img.crossOrigin = "anonymous";
     img.src = filename.startsWith('http') ?
         filename :
         this.studioApp_.assetUrl('media/turtle/' + filename);
@@ -692,10 +695,10 @@ Artist.prototype.evalCode = function (code) {
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
+    // stop further execution, animate what occurred before the infinite loop,
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
+    if (e !== 'Infinity') {
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
@@ -1503,7 +1506,7 @@ Artist.prototype.checkAnswer = function () {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_().split(',')[1];
+    reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
   }
 
   this.studioApp_.report(reportData);

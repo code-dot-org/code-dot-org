@@ -133,8 +133,10 @@ class ScriptLevelsController < ApplicationController
   def load_script_level
     if params[:chapter]
       @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_id]
-      @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
+    elsif params[:stage_position]
+      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lockable_stage_position]
+      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
     else
       @script_level = @script.get_script_level_by_id(params[:id])
     end
@@ -150,6 +152,8 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
+      # TODO(asher): Determine if the ordering of level_source and @user_level
+      # assignment can be reversed to make level_source rely on @user_level.
       level_source = @user.last_attempt(@level).try(:level_source)
       @user_level = @user.user_level_for(@script_level, @level)
       readonly_view_options
@@ -275,5 +279,4 @@ class ScriptLevelsController < ApplicationController
   def protect_against_forgery?
     return false
   end
-
 end

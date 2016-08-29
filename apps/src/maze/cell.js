@@ -49,6 +49,13 @@ class Cell {
   /**
    * @return {boolean}
    */
+  hasValue() {
+    return this.currentValue_ !== undefined;
+  }
+
+  /**
+   * @return {boolean}
+   */
   isDirt() {
     return this.currentValue_ !== undefined;
   }

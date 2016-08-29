@@ -4,7 +4,6 @@ require 'rspec/expectations'
 require 'rspec/mocks'
 
 class DeploymentTest < Minitest::Test
-
   # Use rspec-style mocks in Minitest.
   include ::RSpec::Mocks::ExampleMethods
 

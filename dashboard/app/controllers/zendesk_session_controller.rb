@@ -4,7 +4,7 @@
 require 'securerandom' unless defined?(SecureRandom)
 
 class ZendeskSessionController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   SECRET = Dashboard::Application.config.zendesk_secret
   SUBDOMAIN = Dashboard::Application.config.zendesk_subdomain

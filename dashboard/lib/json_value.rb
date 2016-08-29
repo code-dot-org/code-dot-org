@@ -31,5 +31,4 @@ class JSONValue
   def self.boolean_string_false
     'false'
   end
-
 end

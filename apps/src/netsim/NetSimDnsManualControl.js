@@ -1,8 +1,6 @@
 /**
  * @overview UI button used become the current DNS node in manual DNS mode.
  */
-'use strict';
-
 import $ from 'jquery';
 var markup = require('./NetSimDnsManualControl.html.ejs');
 

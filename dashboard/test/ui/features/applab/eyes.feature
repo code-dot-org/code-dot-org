@@ -113,9 +113,9 @@ Scenario: Applab Instructions in Top Pane
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on standard level"
-  Then I click selector ".fa-chevron-circle-down"
-  And I see no difference for "top instructions collapsed"
   Then I click selector ".fa-chevron-circle-up"
+  And I see no difference for "top instructions collapsed"
+  Then I click selector ".fa-chevron-circle-down"
   And I see no difference for "top instructions uncollapsed"
   Then I click selector "#hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
@@ -172,5 +172,25 @@ Scenario: Drag to delete
   When I drag element "#design_button1" 100 horizontally and 100 vertically
   And I wait until element "#design_button1" is gone
   Then I see no difference for "dragging out of app deletes button"
+
+  And I close my eyes
+
+Scenario: Data Browser
+  Given I open my eyes to test "Applab Data Browser"
+
+  When I start a new Applab project with Firebase
+  Then I see no difference for "initial load"
+
+  When I switch to data mode
+  Then I see no difference for "data overview"
+
+  When I press keys "foo" for element "#dataOverview input"
+  And I click selector "#dataOverview button:contains(Add)"
+  And I wait until element "#dataTable" is visible
+  Then I see no difference for "data table"
+
+  When I click selector "#dataTable button:contains(Clear table)"
+  And I wait until element "#dataTable .modal-body" is visible
+  Then I see no difference for "clear table confirmation dialog"
 
   And I close my eyes

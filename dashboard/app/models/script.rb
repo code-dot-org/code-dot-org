@@ -27,7 +27,7 @@ class Script < ActiveRecord::Base
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :stages, -> { order('absolute_position ASC') }, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -209,7 +209,7 @@ class Script < ActiveRecord::Base
   end
 
   # Find the script level with the given id from the cache, unless the level build mode
-  # is enabled in which case  it is always fetched from the database. If we need to fetch
+  # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
   # the cache), then an entry for the script is added to the cache.
   def self.cache_find_script_level(script_level_id)
@@ -292,10 +292,10 @@ class Script < ActiveRecord::Base
     self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
 
-  def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    stage_position ||= 1
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+    relative_position ||= 1
     self.script_levels.to_a.find do |sl|
-      sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_i && sl.position == puzzle_position.to_i
     end
   end
 
@@ -370,9 +370,6 @@ class Script < ActiveRecord::Base
     peer_reviews_to_complete.try(:>, 0)
   end
 
-  SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
-  SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
-
   def self.setup(custom_files)
     transaction do
       scripts_to_add = []
@@ -411,6 +408,8 @@ class Script < ActiveRecord::Base
     script_stages = []
     script_levels_by_stage = {}
     levels_by_key = script.levels.index_by(&:key)
+    lockable_count = 0
+    non_lockable_count = 0
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
@@ -491,8 +490,10 @@ class Script < ActiveRecord::Base
         stage = script.stages.detect{|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
-            script: script
-          )
+            script: script,
+          ) do |s|
+            s.relative_position = 0 # will be updated below, but cant be null
+          end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
@@ -504,7 +505,12 @@ class Script < ActiveRecord::Base
         script_level.save! if script_level.changed?
         (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
-          stage.assign_attributes(position: (stage_position += 1))
+          if stage_lockable == true
+            stage.assign_attributes(relative_position: (lockable_count += 1))
+          else
+            stage.assign_attributes(relative_position: (non_lockable_count += 1))
+          end
+          stage.assign_attributes(absolute_position: (stage_position += 1))
           stage.save! if stage.changed?
           script_stages << stage
         end
@@ -526,6 +532,10 @@ class Script < ActiveRecord::Base
         if !script_level.end_of_stage? && script_level.long_assessment?
           raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
         end
+      end
+
+      if stage.lockable && stage.script_levels.length > 1
+        raise 'Expect lockable stages to have a single script_level'
       end
     end
 

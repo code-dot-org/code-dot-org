@@ -1,4 +1,4 @@
-var msg = require('./locale');
+var msg = require('@cdo/applab/locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
@@ -98,6 +98,7 @@ levels.custom = {
     "readRecords": null,
     "updateRecord": null,
     "deleteRecord": null,
+    "onRecordEvent": null,
     "getUserId": null,
     "drawChart": null,
     "drawChartFromRecords": null,

@@ -13,7 +13,13 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      if script_level.stage.lockable?
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      else
+        puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      end
+    elsif script_level.stage.lockable?
+      script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -131,7 +137,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.position,
+        stage_position: @script_level.stage.absolute_position,
         level_position: @script_level.position
       )
     end
@@ -306,14 +312,14 @@ module LevelsHelper
       # puzzle-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
         puzzle: script_level.position
       }, default: nil)
 
       # stage-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-        stage: script_level.stage.position,
+        stage: script_level.stage.absolute_position,
       }, default: nil) if enabled.nil?
 
       # script-specific
@@ -510,7 +516,7 @@ module LevelsHelper
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
-  def instruction_gif_asset_path filename
+  def instruction_gif_asset_path(filename)
     File.join('/', instruction_gif_relative_path, filename)
   end
 
@@ -572,16 +578,28 @@ module LevelsHelper
   end
 
   # If this is a restricted level (i.e., applab), the user is under 13, and the
-  # user has not teacher that has accepted our (August 2016) terms of service,
+  # user has no teacher that has accepted our (August 2016) terms of service,
   # redirect with a flash alert.
+  # Also redirect if the user is pairing with a user who would receive a
+  # redirect.
+  # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Lab.
-    return unless level.game == Game.applab || level.game == Game.gamelab
+    return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
     end
+
+    pairings.each do |paired_user|
+      if paired_user.under_13? && paired_user.terms_version.nil?
+        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+        return true
+      end
+    end
+
+    false
   end
 
   def can_view_solution?
