@@ -561,6 +561,10 @@ class User < ActiveRecord::Base
     followeds.find_by_user_id(teacher.id).present?
   end
 
+  def student_of_any_teacher?
+    teachers.any?
+  end
+
   def locale
     read_attribute(:locale).try(:to_sym)
   end

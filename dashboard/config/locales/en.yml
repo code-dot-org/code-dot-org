@@ -23,7 +23,9 @@ en:
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
-      too_young: 'Your teacher must accept the updated Terms of Service before you can access this content. Your teacher can do this by logging into Code Studio and clicking the "Review Updated Terms" button near the top of Code Studio homepage.'
+      too_young: 'This content has age restrictions in place and is not available for younger students.'
+      teacher_must_accept_terms: 'Your teacher must accept the updated Terms of Service before you can access this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
       messages:
