@@ -1511,7 +1511,9 @@ function updateItems() {
     }
   }
   Studio.sprite.forEach(sprite => {
-    sprite.visible && sprite.update();
+    if (sprite.visible) {
+      sprite.update();
+    }
   });
 }
 
@@ -3173,10 +3175,10 @@ Studio.drawTimeoutRect = function () {
  * at a time.
  */
 Studio.drawDebugOverlay = function (src) {
-  if (showDebugInfo && $(".debugImage").length === 0) {
+  if (showDebugInfo && $('.debugImage').length === 0) {
     const svg = document.getElementById('svgStudio');
     const group = document.createElementNS(SVG_NS, 'g');
-    group.setAttribute('class', "walls debugImage");
+    group.setAttribute('class', 'walls debugImage');
     const mapImage = document.createElementNS(SVG_NS, 'image');
     mapImage.setAttribute('width', Studio.MAZE_WIDTH);
     mapImage.setAttribute('height', Studio.MAZE_HEIGHT);
@@ -3194,9 +3196,9 @@ Studio.drawDebugOverlay = function (src) {
  */
 
 Studio.clearDebugElements = function () {
-  $(".debugRect").remove();
-  $(".debugLine").remove();
-  $(".debugImage").remove();
+  $('.debugRect').remove();
+  $('.debugLine').remove();
+  $('.debugImage').remove();
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
