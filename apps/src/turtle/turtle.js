@@ -763,13 +763,12 @@ Artist.prototype.execute = function () {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    this.code = '';
-
-    if (this.studioApp_.initializationCode) {
-      this.code += this.studioApp_.initializationCode;
+    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    if (this.studioApp_.initializationBlocks) {
+      codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
     }
 
-    this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     this.evalCode(this.code);
   }
 
