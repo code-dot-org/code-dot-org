@@ -106,9 +106,6 @@ WebLab.prototype.init = function (config) {
   var onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
-    // BUGBUG
-    window.Blockly = null;
-
     // BUGBUG should we init here? (I had it commented out)
    // this.studioApp_.init(config);
 

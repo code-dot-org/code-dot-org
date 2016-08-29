@@ -220,7 +220,7 @@ module LevelsHelper
     use_gamelab = @level.game == Game.gamelab
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim
+    use_blockly = !use_droplet && !use_netsim && !use_weblab
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
            locals: {
