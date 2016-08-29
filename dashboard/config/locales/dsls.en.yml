@@ -1839,6 +1839,27 @@ en:
         Timeline of PD Phases: Timeline of PD Phases
       sciPD2 wiggle:
         Walk with a Wiggle: Walk with a Wiggle
+      sciPD2Part4_S1_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S1_L3:
+        description here: description here
+        title: title
+      sciPD2Part4_S2_L1:
+        description here: description here
+        title: title
+      sciPD2Part4_S2_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L1:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L3:
+        description here: description here
+        title: title
       sciPD2b end:
         Thank You!: Thank You!
       sciPD2b intro:
@@ -1900,6 +1921,9 @@ en:
       sciPD3pre1 thanks:
         Thank You: Thank You
         Thanks for your time: Thanks for your time
+      sciPDpart4_S1_L1:
+        description here: description here
+        title: title
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
       seqAlg:
@@ -3637,6 +3661,31 @@ en:
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_8update:
+        'BIN: 10001, BIN: 00001, BIN: 1110': 'BIN: 10001, BIN: 00001, BIN: 1110'
+        'BIN: 10001, BIN: 1110, BIN: 00001': 'BIN: 10001, BIN: 1110, BIN: 00001'
+        'BIN: 1110, BIN: 00001, BIN: 10001': 'BIN: 1110, BIN: 00001, BIN: 10001'
+        'BIN: 1110, BIN: 10001, BIN: 00001': 'BIN: 1110, BIN: 10001, BIN: 00001'
+        ? |-
+          Consider the following numbers given in Binary (BIN) representations:
+
+          BIN: 1110
+
+          BIN: 00001
+
+          BIN: 10001
+
+          Which of the following lists the numbers in order from least to greatest?
+        : |-
+          Consider the following numbers given in Binary (BIN) representations:
+
+          BIN: 1110
+
+          BIN: 00001
+
+          BIN: 10001
+
+          Which of the following lists the numbers in order from least to greatest?
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
