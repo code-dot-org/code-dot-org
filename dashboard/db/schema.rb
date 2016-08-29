@@ -535,17 +535,16 @@ ActiveRecord::Schema.define(version: 20160824002113) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "school_infos", force: :cascade do |t|
+  create_table "school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_type"
     t.integer  "zip"
     t.string   "state"
     t.integer  "school_district_id"
-    t.boolean  "school_district_other",             default: false
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+    t.boolean  "school_district_other", default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
   end
-
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "level_id"
