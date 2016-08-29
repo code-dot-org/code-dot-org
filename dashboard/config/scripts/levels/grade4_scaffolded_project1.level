@@ -39,8 +39,7 @@
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
     "markdown_instructions": "It is amazing how much you have learned! Let's put them together to make a game, step by step.\r\nTo start, let's set up your game's space and actor. We've put these blocks in your tool box. Choose a background and map, and pick an actor to be your game's hero.\r\n\r\n![](https://images.code.org/745931ce34b3c47de19c36009e4a9c48-image-1471464938470.14.47 PM.png)",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

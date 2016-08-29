@@ -9,7 +9,7 @@ import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { getStore } from './redux';
-import { setSections } from './stageLockRedux';
+import { authorizeLockable, setSections } from './stageLockRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -21,8 +21,7 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showTeacherInfo,
-  authorizeLockable
+  showTeacherInfo
 } from './progressRedux';
 
 var progress = module.exports;

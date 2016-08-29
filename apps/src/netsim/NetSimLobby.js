@@ -5,8 +5,6 @@
  * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
  *      lobby table.
  */
-'use strict';
-
 import $ from 'jquery';
 var utils = require('../utils');
 var _ = require('lodash');

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818232419) do
+ActiveRecord::Schema.define(version: 20160824002113) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -152,13 +152,6 @@ ActiveRecord::Schema.define(version: 20160818232419) do
     t.integer "district_id", null: false
     t.index ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
     t.index ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
-  end
-
-  create_table "experiment_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "activity_id",     null: false
-    t.string   "feedback_design"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -338,6 +331,7 @@ ActiveRecord::Schema.define(version: 20160818232419) do
     t.integer  "user_id"
     t.datetime "survey_sent_at"
     t.integer  "completed_survey_id"
+    t.integer  "school_info_id"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
     t.index ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
@@ -540,6 +534,18 @@ ActiveRecord::Schema.define(version: 20160818232419) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "school_infos", force: :cascade do |t|
+    t.string   "school_type"
+    t.integer  "zip"
+    t.string   "state"
+    t.integer  "school_district_id"
+    t.boolean  "school_district_other",             default: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
+  end
+
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "level_id"
@@ -899,6 +905,7 @@ ActiveRecord::Schema.define(version: 20160818232419) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
+  add_foreign_key "school_infos", "school_districts"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
