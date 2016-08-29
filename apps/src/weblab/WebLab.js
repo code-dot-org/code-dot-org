@@ -169,9 +169,7 @@ WebLab.prototype.getCodeAsync = function () {
         resolve(code);
       });
     } else {
-      console.warn("getCodeAsync called before Bramble installed");
-      // BUGBUG for the moment return empty string - if we return null autosave will never work
-      // fix by delaying events.appInitialized until after Bramble is loaded
+      // Bramble not installed yet - we have no code to return
       resolve("");
     }
   }.bind(this));
