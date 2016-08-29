@@ -17,13 +17,12 @@ The CS Principles professional learning program is open to teachers in partner d
 
 ## Teach in a partner district?
 
-You can apply to the Professional Learning Program for CS Principles if you are a teacher from districts or regions that have partnerships with Code.org, shown in the map above. If you do not see your district on the application click on your district's pin on the map to find the appropriate form.
+We're so excited that you're interested in applying for our Professional Learning Program! We are at capacity for the 16-17 school year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
 
-[<button>Apply now</button>](/educate/professional-learning/cs-principles-application)
+[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
 
 ## Don't teach in a partner district?
 
-We will open the CSP Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers who are selected from the wait-list will need to demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2016-17 school year by having a slot on their school's master schedule.
+We will open the CSP Professional Learning Program to teachers from non-partner districts if there is space available.  We are at capacity for the 16-17 school year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
 
-[<button>Join the wait list</button>](https://form.jotform.com/53365196731157) &nbsp;&nbsp;
-
+[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
