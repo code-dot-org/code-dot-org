@@ -9,8 +9,12 @@
         baseUrl: '/blockly/js/bramble/'
     });
 
-    var theBramble = null;
-    var webLab = null;
+    // the main Bramble object -- used to access file system
+    var bramble_ = null;
+    // the Bramble proxy object -- used to access methods on the Bramble UI frame
+    var brambleProxy_ = null;
+    // interface to Web Lab host in Code Studio
+    var webLab_ = null;
 
     // Project root in file system
     var projectRoot = "/codedotorg/weblab";
@@ -62,9 +66,9 @@
 
     function getFilesFromBramble(callback) {
 
-        var fs = theBramble.getFileSystem();
+        var fs = bramble_.getFileSystem();
         var sh = new fs.Shell();
-        var Path = theBramble.Filer.Path;
+        var Path = bramble_.Filer.Path;
 
         // enumerate files in the file system off the project root
         sh.ls(projectRoot, function (err, entries) {
@@ -101,10 +105,34 @@
         });
     }
 
+    function undo() {
+        brambleProxy_.undo();
+    }
+
+    function redo() {
+        brambleProxy_.redo();
+    }
+
+    function hideTutorial() {
+        brambleProxy_.hideTutorial();
+    }
+
+    function showTutorial() {
+        brambleProxy_.showTutorial();
+    }
+
+    function enableInspector() {
+        brambleProxy_.enableInspector();
+    }
+
+    function disableInspector() {
+        brambleProxy_.disableInspector();
+    }
+
 
     // Get the WebLab object from our parent window
     if (parent.getWebLab) {
-        webLab = parent.getWebLab();
+        webLab_ = parent.getWebLab();
     } else {
         console.error("ERROR: getWebLab() method not found on parent");
     }
@@ -112,16 +140,22 @@
     // expose object for parent window to talk to us through
     var brambleHost = {
         // return file data from the Bramble editor
-        getBrambleCode: getFilesFromBramble
+        getBrambleCode: getFilesFromBramble,
+        undo: undo,
+        redo: redo,
+        hideTutorial: hideTutorial,
+        showTutorial: showTutorial,
+        enableInspector: enableInspector,
+        disableInspector: disableInspector
     };
 
     // Give our interface to our parent
-    webLab.setBrambleHost(brambleHost);
+    webLab_.setBrambleHost(brambleHost);
 
     var inspectorEnabled = false;
 
     function load(Bramble) {
-        theBramble = Bramble;
+        bramble_ = Bramble;
 
         Bramble.load("#bramble",{
             url: "../blockly/js/bramble/index.html",
@@ -130,41 +164,9 @@
 
         // Event listeners
         Bramble.on("ready", function (bramble) {
-            // For debugging, attach to window.
-            window.bramble = bramble;
 
-            bramble.showTutorial();
-
-            var parentDocument = parent.document;
-
-            parentDocument.getElementById("undo-link").onclick = function () {
-                window.bramble.undo();
-                webLab.onProjectChanged();
-            };
-
-            parentDocument.getElementById("redo-link").onclick = function () {
-                window.bramble.redo();
-                webLab.onProjectChanged();
-            };
-
-            parentDocument.getElementById("preview-link").onclick = function () {
-                window.bramble.hideTutorial();
-                webLab.onProjectChanged();
-            };
-
-            parentDocument.getElementById("tutorial-link").onclick = function () {
-                window.bramble.showTutorial();
-                webLab.onProjectChanged();
-            };
-
-            parentDocument.getElementById("inspector-link").onclick = function () {
-                inspectorEnabled = !inspectorEnabled;
-                if (inspectorEnabled) {
-                    window.bramble.enableInspector();
-                } else {
-                    window.bramble.disableInspector();
-                }
-            };
+            brambleProxy_ = bramble;
+            brambleProxy_.showTutorial();
         });
 
         Bramble.once("error", function (err) {
@@ -177,7 +179,7 @@
         });
 
         // Get initial sources to put in file system
-        var startSources = webLab.getStartSources();
+        var startSources = webLab_.getStartSources();
 
         // put the source files into the Bramble file system
         putFilesInBramble(Bramble, startSources, function () {

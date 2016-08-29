@@ -120,9 +120,40 @@ WebLab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  function onUndo() {
+      this.brambleHost.undo();
+  }
+
+  function onRedo() {
+    this.brambleHost.redo();
+  }
+
+  function onShowPreview() {
+    this.brambleHost.hideTutorial();
+  }
+
+  function onShowTutorial() {
+    this.brambleHost.showTutorial();
+  }
+
+  var inspectorOn = false;
+  function onToggleInspector() {
+    inspectorOn = !inspectorOn;
+    if (inspectorOn) {
+      this.brambleHost.enableInspector();
+    } else {
+      this.brambleHost.disableInspector();
+    }
+  }
+
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
       <WebLabView
+        onUndo={onUndo.bind(this)}
+        onRedo={onRedo.bind(this)}
+        onShowPreview={onShowPreview.bind(this)}
+        onShowTutorial={onShowTutorial.bind(this)}
+        onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />
     </Provider>
