@@ -1,5 +1,4 @@
-import Drawer from './drawer';
-import { SQUARE_SIZE, SVG_NS } from './drawer';
+import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
 
 /**
  * Extends Drawer to draw flowers/honeycomb for bee.
