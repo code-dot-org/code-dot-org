@@ -66,3 +66,9 @@ module SetupTest
     end
   end
 end
+
+# Decide whether we may use real Redis in tests.
+# Disallow in environments other than dev/test to safeguard production data.
+def use_real_redis?
+  ENV['USE_REAL_REDIS'] && [:develpoment, :test].include?(rack_env)
+end
