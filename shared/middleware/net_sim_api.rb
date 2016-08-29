@@ -389,6 +389,9 @@ class NetSimApi < Sinatra::Base
     urls = []
     urls.push(CDO.geocoder_read_replica_1) unless CDO.geocoder_read_replica_1.nil?
     urls.push(CDO.geocoder_read_replica_2) unless CDO.geocoder_read_replica_2.nil?
+    urls.push(CDO.geocoder_read_replica_3) unless CDO.geocoder_read_replica_3.nil?
+    urls.push(CDO.geocoder_read_replica_4) unless CDO.geocoder_read_replica_4.nil?
+    urls.push(CDO.geocoder_read_replica_5) unless CDO.geocoder_read_replica_5.nil?
     urls
   end
 
