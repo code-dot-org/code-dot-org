@@ -11,6 +11,7 @@ var BaseDialog = React.createClass({
     isOpen: React.PropTypes.bool,
     handleClose: React.PropTypes.func,
     uncloseable: React.PropTypes.bool,
+    handleKeyDown: React.PropTypes.func,
     hideBackdrop: React.PropTypes.bool,
     fullWidth: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
@@ -25,10 +26,11 @@ var BaseDialog = React.createClass({
     this.focusDialog();
   },
 
-  closeOnEscape: function (event) {
+  handleKeyDown: function (event) {
     if (event.key === 'Escape') {
       this.closeDialog();
     }
+    this.props.handleKeyDown && this.props.handleKeyDown(event);
   },
 
   closeDialog: function () {
@@ -81,7 +83,7 @@ var BaseDialog = React.createClass({
         tabIndex="-1"
         className={modalClassNames}
         ref="dialog"
-        onKeyDown={this.closeOnEscape}
+        onKeyDown={this.handleKeyDown}
       >
         <div className={modalBodyClassNames}>
           {!this.props.uncloseable &&
