@@ -1511,9 +1511,7 @@ function updateItems() {
     }
   }
   Studio.sprite.forEach(sprite => {
-    if (sprite.visible) {
-      sprite.update();
-    }
+    sprite.update();
   });
 }
 
