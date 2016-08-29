@@ -2,8 +2,6 @@
  * @file JavaScript loaded in all Widget-type levels.
  */
 /* global apps, appOptions, dashboard */
-'use strict';
-
 import $ from 'jquery';
 var _ = require('lodash');
 

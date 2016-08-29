@@ -1,5 +1,4 @@
 /** @file Hidden file input with interface for handling uploads. */
-'use strict';
 import $ from 'jquery';
 var React = require('react');
 

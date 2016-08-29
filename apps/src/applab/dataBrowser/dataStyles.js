@@ -8,13 +8,8 @@ const rowHeight = 45;
 const cellPadding = 10;
 const buttonCellWidth = 142;
 
-export const editRow = {
-  height: rowHeight
-};
-
-export const addRow = {
+export const row = {
   height: rowHeight,
-  backgroundColor: color.lighter_purple
 };
 
 export const cell = {
@@ -24,7 +19,8 @@ export const cell = {
 };
 
 export const buttonCell = [cell, {
-  width: buttonCellWidth
+  width: buttonCellWidth,
+  backgroundColor: color.lightest_teal,
 }];
 
 export const headerCell = {
@@ -35,27 +31,51 @@ export const headerCell = {
 
 export const link = {
   color: color.purple,
-  fontFamily: "'Gotham 7r', sans-serif"
+  cursor: 'pointer',
+  fontFamily: "'Gotham 7r', sans-serif",
 };
 
 export const button = {
-  margin: 0
-};
-
-export const editButton = {
+  display: 'inline-block',
+  fontSize: 14,
+  lineHeight: '20px',
   marginTop: 0,
   marginLeft: 0,
   marginBottom: 0,
-  marginRight: 10,
-  width: 60
+  marginRight: 0,
+  padding: '4px 12px',
+  textAlign: 'center',
+  verticalAlign: 'middle',
 };
 
-export const rightButton = {
+export const whiteButton = [button, {
+  backgroundColor: 'white',
+  color: 'black',
+}];
+
+export const redButton = [button, {
+  backgroundColor: color.bootstrap_button_red,
+  color: 'white',
+}];
+
+export const blueButton = [button, {
+  backgroundColor: color.bootstrap_button_blue,
+  color: 'white',
+}];
+
+export const editButton = [whiteButton, {
+  marginRight: 10,
+  width: 60
+}];
+
+export const saveButton = [blueButton, {
+  marginRight: 10,
+  width: 60
+}];
+
+export const alignRight = {
   float: 'right',
-  marginTop: 0,
   marginLeft: 10,
-  marginBottom: 0,
-  marginRight: 0,
 };
 
 export const input = {
@@ -74,7 +94,7 @@ export const viewHeader = {
 };
 
 export const backLink = {
-  fontSize: 17.5,
+  fontSize: 24,
 };
 
 export const debugLink = {

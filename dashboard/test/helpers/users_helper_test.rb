@@ -104,13 +104,13 @@ class UsersHelperTest < ActionView::TestCase
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true
 
-    # Create a UserLevel joining this level to the user.
-    ul = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script
-
     # The Activity record will point at a LevelSource with JSON data in which
     # page one has all valid answers and page two has no valid answers.
     level_source = create :level_source,
       data: "{\"#{sub_level1.id}\":{\"valid\":true},\"#{sub_level2.id}\":{\"valid\":true},\"#{sub_level3.id}\":{\"valid\":false},\"#{sub_level4.id}\":{\"valid\":false}}"
+
+    # Create a UserLevel joining this level to the user.
+    ul = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, level_source: level_source
 
     # And now create the Activity record.
     create :activity, level_id: level.id,
@@ -242,5 +242,4 @@ class UsersHelperTest < ActionView::TestCase
       "#{level.id}_1" => { submitted: true}
     }, summarize_user_progress(script, user)[:levels])
   end
-
 end

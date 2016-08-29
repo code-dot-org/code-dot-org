@@ -2,7 +2,6 @@
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 import $ from 'jquery';
@@ -15,7 +14,6 @@ var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
 var NetSimRouterNode = require('./NetSimRouterNode');
 require('../utils'); // Provides Function.prototype.inherits
-import experiments from '../experiments';
 
 /**
  * Apply a very small debounce to lobby buttons to avoid doing extra work
@@ -34,6 +32,8 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {Object} options
  * @param {DashboardUser} options.user
  * @param {string} options.shardID
+ * @param {string} options.shardDisplayName
+ * @param {boolean} options.isUserInMultipleSections
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
@@ -65,6 +65,18 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @private
    */
   this.shardID_ = options.shardID;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.shardDisplayName_ = options.shardDisplayName;
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isUserInMultipleSections_ = !!options.isUserInMultipleSections;
 
   /**
    * @type {NetSimNode[]}
@@ -161,6 +173,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
+    shardDisplayName: this.shardDisplayName_,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
     remoteNode: this.remoteNode_,
@@ -346,6 +359,22 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 };
 
 /**
+ * @returns {boolean} TRUE if the current user is the only client node connected
+ *          to the shard right now.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function () {
+  return !this.nodesOnShard_.some(node =>
+      !this.isMyNode(node) && node.getNodeType() === NodeType.CLIENT);
+};
+
+/**
+ * @returns {boolean} TRUE if the current user has a choice of sections to join.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isUserInMultipleSections = function () {
+  return this.isUserInMultipleSections_;
+};
+
+/**
  * @returns {boolean} TRUE if we expect the current user to have permission to
  *          perform a shard reset.  Only governs display of shard reset button,
  *          actual reset is authenticated on the server.
@@ -355,8 +384,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () 
 };
 
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ = function () {
-  return experiments.isEnabled('netsimNewLogBrowser') &&
-      NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
 };
 
 /**

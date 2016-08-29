@@ -1,5 +1,4 @@
 class HocSurvey2014
-
   def self.normalize(data)
     result = {}
 
@@ -185,5 +184,4 @@ class HocSurvey2014
 
     DB[:hoc_survey_prizes].where(claimant: email).first[:value]
   end
-
 end

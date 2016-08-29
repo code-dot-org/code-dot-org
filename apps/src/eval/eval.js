@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-'use strict';
-
 var Eval = module.exports;
 
 /**
@@ -276,9 +274,8 @@ Eval.resetButtonClick = function () {
 function evalCode(code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: studioApp,
       Eval: api
-    });
+    }, true);
 
     var object = Eval.displayedObject;
     Eval.displayedObject = null;

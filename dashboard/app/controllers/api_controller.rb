@@ -68,33 +68,40 @@ class ApiController < ApplicationController
 
     # stage data
     stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
-      {length: levels.length,
-       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
+      {
+        length: levels.length,
+        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+      }
     end
 
     # student level completion data
     students = @section.students.map do |student|
       level_map = student.user_levels_by_level(@script)
+      paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
       student_levels = @script.script_levels.map do |script_level|
         user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
         level_class = best_activity_css_class user_levels
-        paired = user_levels.any?(&:paired?)
+        paired = (paired_user_level_ids & user_levels).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {class: level_class, title: title, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        {
+          class: level_class,
+          title: title,
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+        }
       end
       {id: student.id, levels: student_levels}
     end
 
     data = {
-            students: students,
-            script: {
-                     id: @script.id,
-                     name: data_t_suffix('script.name', @script.name, 'title'),
-                     levels_count: @script.script_levels.length,
-                     stages: stages
-                    }
-           }
+      students: students,
+      script: {
+        id: @script.id,
+        name: data_t_suffix('script.name', @script.name, 'title'),
+        levels_count: @script.script_levels.length,
+        stages: stages
+      }
+    }
 
     render json: data
   end
@@ -161,13 +168,13 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      last_activity = current_user.last_attempt(level)
-      level_source = last_activity.try(:level_source).try(:data)
+      user_level = current_user.last_attempt(level)
+      level_source = user_level.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)
-      if last_activity
+      if user_level
         response[:lastAttempt] = {
-          timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
+          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
       end
@@ -225,7 +232,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}

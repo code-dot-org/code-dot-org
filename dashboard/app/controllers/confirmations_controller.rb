@@ -1,5 +1,4 @@
 class ConfirmationsController < Devise::ConfirmationsController
-
   protected
 
   # The path used after resending confirmation instructions.
