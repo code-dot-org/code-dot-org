@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818234153) do
+ActiveRecord::Schema.define(version: 20160824002113) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -358,6 +358,7 @@ ActiveRecord::Schema.define(version: 20160818234153) do
     t.integer  "user_id",             limit: 4
     t.datetime "survey_sent_at"
     t.integer  "completed_survey_id", limit: 4
+    t.integer  "school_info_id",      limit: 4
   end
 
   add_index "pd_enrollments", ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
@@ -577,6 +578,18 @@ ActiveRecord::Schema.define(version: 20160818234153) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "school_infos", force: :cascade do |t|
+    t.string   "school_type",           limit: 255
+    t.integer  "zip",                   limit: 4
+    t.string   "state",                 limit: 255
+    t.integer  "school_district_id",    limit: 4
+    t.boolean  "school_district_other",             default: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+  end
+
+  add_index "school_infos", ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
 
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",    limit: 4
@@ -955,6 +968,7 @@ ActiveRecord::Schema.define(version: 20160818234153) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
+  add_foreign_key "school_infos", "school_districts"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
