@@ -10,7 +10,7 @@ import color from '../../../../color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
-import wrappedSortable from '../../../../templates/tables/wrapped_sortable';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const WorkshopTable = React.createClass({
   propTypes: {
