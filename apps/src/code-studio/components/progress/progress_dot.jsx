@@ -156,7 +156,7 @@ export const BubbleInterior = React.createClass({
 /**
  * Stage progress component used in level header and course overview.
  */
-export const ProgressDot = React.createClass({
+export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
     currentLevelId: React.PropTypes.string,
@@ -188,9 +188,9 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = !isUnplugged && showLevelName && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = level.locked || level.status === LevelStatus.locked;
+    const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
     const levelUrl = isLocked ? undefined : level.url + location.search;
 
     return (
@@ -250,9 +250,9 @@ export const ProgressDot = React.createClass({
       </a>
     );
   }
-});
+}));
 
 export default connect(state => ({
   currentLevelId: state.progress.currentLevelId,
   saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
-}))(Radium(ProgressDot));
+}))(ProgressDot);
