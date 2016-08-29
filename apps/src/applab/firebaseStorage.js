@@ -51,13 +51,14 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   const keyRef = getKeysRef(Applab.channelId).child(key);
-  // Store the value as a string representing a JSON value. For compatibility with parsers
+  // Store the value as a string representing a JSON value, or delete the key if the
+  // value is undefined. For compatibility with parsers
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
   // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
-  const jsonValue = JSON.stringify(value);
+  const jsonValue = (value === undefined) ? null : JSON.stringify(value);
 
   loadConfig().then(config => {
-    if (jsonValue.length > config.maxPropertySize) {
+    if (jsonValue && jsonValue.length > config.maxPropertySize) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
