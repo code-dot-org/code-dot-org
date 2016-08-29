@@ -5,7 +5,6 @@
  *
  */
 
-'use strict';
 
 import { Direction, SquareType } from './constants';
 import { singleton as studioApp } from '../StudioApp';

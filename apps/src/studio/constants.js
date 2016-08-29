@@ -1,4 +1,3 @@
-'use strict';
 
 export const SpriteSpeed = {
   VERY_SLOW: 2,

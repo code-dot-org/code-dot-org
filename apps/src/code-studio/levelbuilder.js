@@ -1,7 +1,6 @@
 /**
  * @file Main entry point for scripts used on all level editing pages.
  */
-'use strict';
 var _ = require('lodash');
 
 window.levelbuilder = window.levelbuilder || {};

@@ -5,7 +5,6 @@
  * @see NetSimRouterTab
  * @see NetSimDnsTab
  */
-'use strict';
 
 import $ from 'jquery';
 var buildMarkup = require('./NetSimTabsComponent.html.ejs');

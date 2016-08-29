@@ -31,6 +31,8 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
+// Args: {AnimationKey} key, {bool} looping
+const SET_ANIMATION_LOOPING = 'AnimationList/SET_ANIMATION_LOOPING';
 // Args: {AnimationKey} key, {number} frameDelay
 const SET_ANIMATION_FRAME_DELAY = 'AnimationList/SET_ANIMATION_FRAME_DELAY';
 // Args: {AnimationKey} key
@@ -85,6 +87,7 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
+    case SET_ANIMATION_LOOPING:
     case SET_ANIMATION_FRAME_DELAY:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
@@ -128,6 +131,11 @@ function animationPropsReducer(state, action) {
     case SET_ANIMATION_FRAME_DELAY:
       return Object.assign({}, state, {
         frameDelay: action.frameDelay
+      });
+
+    case SET_ANIMATION_LOOPING:
+      return Object.assign({}, state, {
+        looping: action.looping
       });
 
     case START_LOADING_FROM_SOURCE:
@@ -187,6 +195,9 @@ export function setInitialAnimationList(serializedAnimationList) {
         animation.frameDelay = 2;
       }
     }
+    if (animation.looping === undefined) {
+      animation.looping = true;
+    }
   }
 
   try {
@@ -222,6 +233,7 @@ export function addBlankAnimation() {
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
+        looping: true,
         frameDelay: 4,
         version: null,
         loadedFromSource: true,
@@ -337,6 +349,23 @@ export function setAnimationFrameDelay(key, frameDelay) {
       type: SET_ANIMATION_FRAME_DELAY,
       key,
       frameDelay
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * Set the looping value of the specified animation.
+ * @param {string} key
+ * @param {bool} looping
+ * @returns {{type: ActionType, key: string, looping: bool}}
+ */
+export function setAnimationLooping(key, looping) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_LOOPING,
+      key,
+      looping
     });
     dashboard.project.projectChanged();
   };

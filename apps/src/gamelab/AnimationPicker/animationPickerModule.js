@@ -1,6 +1,4 @@
 /** @file Redux reducer and actions for the Animation Picker */
-'use strict';
-
 import _ from 'lodash';
 import {addBlankAnimation, addAnimation, addLibraryAnimation} from '../animationListModule';
 import { makeEnum } from '../../utils';

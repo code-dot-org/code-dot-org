@@ -1,5 +1,4 @@
 /** @file Increases the brightness of the image up to pure white and back. */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var SVG_NS = require('../constants').SVG_NS;
