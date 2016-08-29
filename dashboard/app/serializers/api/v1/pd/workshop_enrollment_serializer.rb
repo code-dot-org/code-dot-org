@@ -7,7 +7,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   end
 
   def district_name
-    object.school_district.try(:name)
+    object.try(:school_info).try(:school_district).try(:name)
   end
 
   def in_section

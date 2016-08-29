@@ -196,6 +196,7 @@ Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml, opt_opti
     },
     hideTrashRect: true,
     readOnly: true,
+    disableTooltip: true,
     noScrolling: opt_options.noScrolling
   });
 

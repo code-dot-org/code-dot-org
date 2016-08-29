@@ -23,11 +23,13 @@ const AddKeyRow = React.createClass({
   },
 
   handleAdd() {
-    FirebaseStorage.setKeyValue(
-      this.state.key,
-      castValue(this.state.value),
-      () => this.setState(this.getInitialState()),
-      msg => console.warn(msg));
+    if (this.state.key) {
+      FirebaseStorage.setKeyValue(
+        this.state.key,
+        castValue(this.state.value),
+        () => this.setState(this.getInitialState()),
+        msg => console.warn(msg));
+    }
   },
 
   handleKeyUp(event) {
