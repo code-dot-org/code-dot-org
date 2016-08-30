@@ -47,6 +47,39 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_response :success
   end
 
+  test 'facilitators can see, but cannot manage, attendance for ended workshops' do
+    @workshop.start!
+    @workshop.end!
+    sign_in @facilitator
+
+    get :show, workshop_id: @workshop.id
+    assert_response :success
+
+    patch :update, workshop_id: @workshop.id, pd_workshop: params
+    assert_response :forbidden
+  end
+
+  test 'organizers can see, but cannot manage, attendance for ended workshops' do
+    @workshop.start!
+    @workshop.end!
+    sign_in @organizer
+
+    get :show, workshop_id: @workshop.id
+    assert_response :success
+
+    patch :update, workshop_id: @workshop.id, pd_workshop: params
+    assert_response :forbidden
+  end
+
+  test 'admins can manage attendance for ended workshops' do
+    @workshop.start!
+    @workshop.end!
+    sign_in create(:admin)
+
+    patch :update, workshop_id: @workshop.id, pd_workshop: params
+    assert_response :success
+  end
+
   test 'facilitators cannot see attendance for workshops they are not facilitating' do
     sign_in @facilitator
     get_attendance @other_workshop.id
@@ -66,18 +99,6 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     sign_in @teacher
     get_attendance @workshop.id
     assert_response :forbidden
-  end
-
-  test 'admins get admin actions' do
-    sign_in create(:admin)
-    get_attendance @workshop.id
-    assert JSON.parse(@response.body)['admin_actions']
-  end
-
-  test 'non-admins do not get admin actions' do
-    sign_in @organizer
-    get_attendance @workshop.id
-    refute JSON.parse(@response.body)['admin_actions']
   end
 
   test 'see enrolled teachers' do

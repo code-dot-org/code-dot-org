@@ -41,6 +41,7 @@ var styles = {
     borderTopStyle: 'solid',
     borderTopColor: '#ddd',
     overflow: 'hidden',
+    zIndex: 0
   },
   noVisualization: {
     // Overrides left set in css
