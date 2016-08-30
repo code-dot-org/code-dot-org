@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import {Button} from 'react-bootstrap';
-import WorkshopTable from './components/workshop_table';
+import WorkshopTableLoader from './components/workshop_table_loader';
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
@@ -26,13 +26,13 @@ const WorkshopIndex = React.createClass({
           </Button>
         </p>
         <h2>In Progress</h2>
-        <WorkshopTable
+        <WorkshopTableLoader
           queryUrl="/api/v1/pd/workshops/?state=In%20Progress"
           canDelete
           showOrganizer={showOrganizer}
         />
         <h2>Upcoming</h2>
-        <WorkshopTable
+        <WorkshopTableLoader
           queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
           canEdit
           canDelete
@@ -40,7 +40,7 @@ const WorkshopIndex = React.createClass({
           showOrganizer={showOrganizer}
         />
         <h2>Past</h2>
-        <WorkshopTable
+        <WorkshopTableLoader
           queryUrl="/api/v1/pd/workshops/?state=Ended"
           showOrganizer={showOrganizer}
         />

@@ -1,7 +1,6 @@
 /**
  * @overview Router log table UI component on the "Router" tab.
  */
-'use strict';
 
 import $ from 'jquery';
 var markup = require('./NetSimRouterLogTable.html.ejs');

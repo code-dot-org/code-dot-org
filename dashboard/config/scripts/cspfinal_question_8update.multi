@@ -1,0 +1,14 @@
+name 'CSPFinal_Question_8update'
+question 'Consider the following numbers given in Binary (BIN) representations:
+
+BIN: 1110
+
+BIN: 00001
+
+BIN: 10001
+
+Which of the following lists the numbers in order from least to greatest?'
+wrong 'BIN: 1110, BIN: 00001, BIN: 10001'
+right 'BIN: 10001, BIN: 1110, BIN: 00001'
+wrong 'BIN: 10001, BIN: 00001, BIN: 1110'
+wrong 'BIN: 1110, BIN: 10001, BIN: 00001'

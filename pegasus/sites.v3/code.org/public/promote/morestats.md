@@ -41,7 +41,7 @@ We are interested in seeing what's happening in computer science education inter
 
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education"
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
-- [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report by](http://burning-glass.com/research/coding-skills/) by Burning Glass.
+- [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report](http://burning-glass.com/research/coding-skills/) by Burning Glass.
 - 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html). 
 - BSA released a report on the [economic impact of software](http://softwareimpact.bsa.org/). 
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.

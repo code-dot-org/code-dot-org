@@ -21,7 +21,6 @@
  * @fileoverview Sample answers for Turtle levels. Used for prompts and marking.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var ArtistAPI = require('./api');
 var api = new ArtistAPI();

@@ -1,6 +1,4 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-'use strict';
-
 var CommandHistory = require('./CommandHistory');
 var constants = require('./constants');
 var DebugArea = require('./DebugArea');
