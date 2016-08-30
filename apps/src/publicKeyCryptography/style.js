@@ -6,8 +6,8 @@ export const LINE_HEIGHT = 30;
 
 export const COLORS = {
   publicModulus: color.lightest_cyan,
-  publicKey: color.lightest_teal,
+  publicKey: color.lighter_teal,
   privateKey: color.lightest_purple,
   publicNumber: color.lightest_yellow,
-  privateNumber: color.lightest_orange
+  secretNumber: color.lighter_orange
 };

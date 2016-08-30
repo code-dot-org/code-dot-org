@@ -9,7 +9,11 @@ import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
   SecretNumberDropdown,
-  KeywordPublicModulus
+  KeywordPublicModulus,
+  KeywordPublicKey,
+  KeywordPrivateKey,
+  KeywordPublicNumber,
+  KeywordSecretNumber
 } from './cryptographyFields';
 
 const Eve = React.createClass({
@@ -122,7 +126,7 @@ const Eve = React.createClass({
             />
           </div>
           <div>
-            Enter Alice's public key:
+            Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
               onChange={this.setPublicKey}
@@ -130,7 +134,7 @@ const Eve = React.createClass({
             />
           </div>
           <div>
-            Crack Alice's private key:
+            Crack Alice's <KeywordPrivateKey/>:
             <div>
               {'('}
               <IntegerField value={publicKey}/>
@@ -148,7 +152,7 @@ const Eve = React.createClass({
             </div>
           </div>
           <div>
-            Enter Bob's public number:
+            Enter Bob's <KeywordPublicNumber/>:
             <IntegerTextbox
               value={publicNumber}
               onChange={this.setPublicNumber}
@@ -156,7 +160,7 @@ const Eve = React.createClass({
             />
           </div>
           <div>
-            Crack Bob's secret number:
+            Crack Bob's <KeywordSecretNumber/>:
             <div>
               {'('}
               <IntegerField value={publicKey}/>

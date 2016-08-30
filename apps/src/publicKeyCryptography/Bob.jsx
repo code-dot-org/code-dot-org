@@ -8,7 +8,11 @@ import {
   PublicModulusDropdown,
   SecretNumberDropdown,
   GoButton,
-  KeywordPublicModulus
+  KeywordPublicModulus,
+  KeywordPublicKey,
+  KeywordPrivateKey,
+  KeywordPublicNumber,
+  KeywordSecretNumber
 } from './cryptographyFields';
 
 const Bob = React.createClass({
@@ -90,7 +94,7 @@ const Bob = React.createClass({
             />
           </div>
           <div>
-            Enter Alice's public key:
+            Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
               onChange={this.setPublicKey}
@@ -98,7 +102,7 @@ const Bob = React.createClass({
             />
           </div>
           <div>
-            Pick your secret number:
+            Pick your <KeywordSecretNumber/>:
             <SecretNumberDropdown
               value={secretNumber}
               onChange={this.setSecretNumber}
@@ -107,7 +111,7 @@ const Bob = React.createClass({
             />
           </div>
           <div>
-            Calculate your public number:
+            Calculate your <KeywordPublicNumber/>:
             <div>
               (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
               <GoButton
@@ -116,7 +120,7 @@ const Bob = React.createClass({
               />
             </div>
             <div>
-              Your computed public number is <IntegerField value={publicNumber}/>
+              Your computed <KeywordPublicNumber/> is <IntegerField value={publicNumber}/>
             </div>
           </div>
         </NumberedSteps>
