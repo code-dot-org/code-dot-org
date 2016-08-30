@@ -13,7 +13,7 @@ function resizeScrollable() {
   $('.scrollable-wrapper').css('max-height', newHeight);
 }
 
-$(document).ready(() => {
+export function onReady() {
   $(window).resize(debounce(resizeScrollable, 250));
 
   resizeScrollable();
@@ -37,4 +37,4 @@ $(document).ready(() => {
       location.reload();
     });
   });
-});
+}

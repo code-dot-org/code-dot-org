@@ -48,6 +48,7 @@ window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
 window.dashboard.assets = require('./assets');
 window.dashboard.pairing = require('./pairing');
+window.dashboard.teacher = require('./teacher');
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
