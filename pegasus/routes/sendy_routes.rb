@@ -1,6 +1,6 @@
 get '/sendy/*' do |uri|
   extname = File.extname(uri)
-  pass unless ['.html','.txt'].include?(extname)
+  pass unless ['.html', '.txt'].include?(extname)
 
   pass unless path = resolve_document("/sendy/#{uri[0..-(extname.length + 1)]}")
   src = document(path)

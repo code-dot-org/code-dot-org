@@ -324,6 +324,7 @@ class ActionDispatch::IntegrationTest
 
   setup do
     https!
+    host! CDO.canonical_hostname('studio.code.org')
   end
 end
 
