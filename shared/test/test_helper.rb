@@ -55,9 +55,9 @@ module SetupTest
     # VCR (record/replay HTTP interactions)
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
-    VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_','')}") do
+    VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}") do
       PEGASUS_DB.transaction(rollback: :always) do
-        AWS::S3.stub(:random,Proc.new{random.bytes(16).unpack('H*')[0]}, &block)
+        AWS::S3.stub(:random, Proc.new{random.bytes(16).unpack('H*')[0]}, &block)
       end
     end
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
@@ -65,4 +65,10 @@ module SetupTest
       PEGASUS_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
     end
   end
+end
+
+# Decide whether we may use real Redis in tests.
+# Disallow in environments other than dev/test to safeguard production data.
+def use_real_redis?
+  ENV['USE_REAL_REDIS'] && [:develpoment, :test].include?(rack_env)
 end

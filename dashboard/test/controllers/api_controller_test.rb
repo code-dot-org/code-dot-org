@@ -136,7 +136,7 @@ class ApiControllerTest < ActionController::TestCase
     # student_2 has one answer
     level_source2 = create :level_source, level: level2, data: 'Here is the answer 2'
     create :activity, user: @student_2, level: level1, level_source: level_source2
-    create :user_level,user: @student_2, level: level1, script: script,
+    create :user_level, user: @student_2, level: level1, script: script,
       attempts: 1, level_source: level_source2
 
     get :section_text_responses, section_id: @section.id, script_id: script.id
@@ -603,7 +603,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
@@ -618,7 +618,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # multiple updates at once
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     assert_equal nil, UserLevel.find_by(user_level_data2)
     updates = [{

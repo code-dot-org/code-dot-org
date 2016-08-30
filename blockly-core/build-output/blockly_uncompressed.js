@@ -15841,12 +15841,12 @@ Blockly.Block.prototype.setIsUnused = function(isUnused) {
   if(isUnused === undefined) {
     isUnused = this.previousConnection !== null && (this.isUserVisible() && (this.type !== "functional_definition" && (Blockly.mainBlockSpace && (Blockly.mainBlockSpace.isReadOnly() === false && Blockly.mainBlockSpace.isTopBlock(this)))))
   }
-  if(Blockly.showUnusedBlocks) {
-    this.svg_.setIsUnused(isUnused)
+  if(Blockly.showUnusedBlocks && isUnused !== this.svg_.isUnused()) {
+    this.svg_.setIsUnused(isUnused);
+    this.childBlocks_.forEach(function(block) {
+      block.setIsUnused(false)
+    })
   }
-  this.childBlocks_.forEach(function(block) {
-    block.setIsUnused(false)
-  })
 };
 Blockly.Block.prototype.setFunctional = function(isFunctional, options) {
   this.blockSvgClass_ = isFunctional ? Blockly.BlockSvgFunctional : Blockly.BlockSvg;
@@ -25377,10 +25377,13 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   return code
 };
 Blockly.Generator.xmlToCode = function(name, xml) {
+  var blocks = Blockly.Generator.xmlToBlocks(name, xml);
+  return Blockly.Generator.blocksToCode(name, blocks)
+};
+Blockly.Generator.xmlToBlocks = function(name, xml) {
   var div = document.createElement("div");
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
-  var blocks = blockSpace.getTopBlocks(true);
-  return Blockly.Generator.blocksToCode(name, blocks)
+  return blockSpace.getTopBlocks(true)
 };
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;

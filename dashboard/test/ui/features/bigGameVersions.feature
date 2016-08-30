@@ -10,6 +10,7 @@ Feature: Big Game Versions
     And I close the React alert
     And element "#runButton" is visible
 
+  @no_safari
   @no_mobile
   Scenario: Big Game Versions
 
