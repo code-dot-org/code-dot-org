@@ -16,18 +16,20 @@ var baseConfig = {
       repl: path.resolve(__dirname, 'src/noop'),
     }
   },
-  externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
-    "marked": "var marked",
-    "blockly": "this Blockly",
-    "react": "var React",
-    "react-dom": "var ReactDOM",
-    "jquery": "var $",
-    "radium": "var Radium",
-    "bindings": true
-  },
+  externals: [
+    {
+      "johnny-five": "var JohnnyFive",
+      "playground-io": "var PlaygroundIO",
+      "chrome-serialport": "var ChromeSerialport",
+      "marked": "var marked",
+      "blockly": "this Blockly",
+      "react": "var React",
+      "react-dom": "var ReactDOM",
+      "jquery": "var $",
+      "radium": "var Radium",
+      "bindings": true
+    }
+  ],
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json'},
@@ -153,6 +155,8 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {string} options.piskelDevMode
  * @param {string[]} options.provides - list of "external" modules that this
  *   bundle actually provides (and thus should not be external here)
+ * @param {Array} options.plugins - list of additional plugins to use
+ * @param {Array} options.externals - list of webpack externals
  */
 function create(options) {
   var uniqueName = options.uniqueName;
@@ -163,6 +167,8 @@ function create(options) {
   var watch = options.watch;
   var piskelDevMode = options.piskelDevMode;
   var provides = options.provides;
+  var plugins = options.plugins;
+  var externals = options.externals;
 
   // Note: In a world where we have a single webpack config instead of an array
   // of them, this becomes unnecessary.
@@ -180,6 +186,7 @@ function create(options) {
     },
     devtool: options.minify ? 'source-map' : 'inline-source-map',
     entry: entries,
+    externals: externals,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
@@ -188,7 +195,7 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
-    ],
+    ].concat(plugins),
     watch: watch,
     keepalive: watch,
     failOnError: !watch
@@ -202,12 +209,12 @@ function create(options) {
   }
 
   if (commonFile) {
-    config.plugins = config.plugins.concat(
+    config.plugins = config.plugins.concat([
       new webpack.optimize.CommonsChunkPlugin({
         name: commonFile,
         minChunks: 2
-      })
-    );
+      }),
+    ]);
   }
 
   if (minify) {
@@ -216,7 +223,8 @@ function create(options) {
         compressor: {
           warnings: false
         }
-      })
+      }),
+      new webpack.optimize.OccurrenceOrderPlugin()
     );
   }
 
