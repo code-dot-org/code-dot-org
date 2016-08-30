@@ -73,9 +73,6 @@
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
         - if current_user.sections.many?
           = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
-          -# React renders stage locking button into this container. Eventually it would be great if this entire
-          -# haml file took advantage of TeacherPanel.jsx
-          #lock-stage-container
       - if @section
         .scrollable-wrapper
           %table.section-students
