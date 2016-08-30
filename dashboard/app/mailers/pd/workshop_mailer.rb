@@ -93,7 +93,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
       CDO.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{enrollment.id}"
       return
     end
-    # Skip school validation to allow legacy enrollments before those fields were required to update.
+    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
     enrollment.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
 
     @workshop = workshop
