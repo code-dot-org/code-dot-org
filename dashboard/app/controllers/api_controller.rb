@@ -253,6 +253,8 @@ class ApiController < ApplicationController
 
         user_level = student.user_level_for(script_level, level_group)
 
+        next unless user_level
+
         # Summarize some key data.
         multi_count = 0
         multi_count_correct = 0
