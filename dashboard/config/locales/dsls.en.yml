@@ -1527,9 +1527,7 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
-      csp_unit_assessment_overview:
-        description here: description here
-        title: title
+      csp_unit_assessment_overview: {}
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -1927,9 +1925,7 @@ en:
       v2 U1L4 Student Lesson Introduction:
         description here: description here
         title: title
-      v2 U1L5 Student Lesson Introduction:
-        description here: description here
-        title: title
+      v2 U1L5 Student Lesson Introduction: {}
       v2 U1L6 Student Lesson Introduction:
         Sending Numbers: Sending Numbers
         description here: description here
