@@ -1,31 +1,26 @@
-'use strict';
-
 /* global dashboard */
 
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-// var commonMsg = require('../locale');
-// var msg = require('./locale');
-// var levels = require('./levels');
-var consoleApi = require('../consoleApi');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var utils = require('../utils');
-var _ = require('lodash');
-var assetPrefix = require('../assetManagement/assetPrefix');
-var errorHandler = require('../errorHandler');
-var outputError = errorHandler.outputError;
-var ErrorLevel = errorHandler.ErrorLevel;
-var dom = require('../dom');
-var experiments = require('../experiments');
-
-var WebLabView = require('./WebLabView');
-var Provider = require('react-redux').Provider;
+import consoleApi from '../consoleApi';
+import utils from '../utils';
+import _ from 'lodash';
+import assetPrefix from '../assetManagement/assetPrefix';
+import errorHandler from '../errorHandler';
+import dom from '../dom';
+import experiments from '../experiments';
+import WebLabView from './WebLabView';
+import { Provider } from 'react-redux';
 
 /**
  * An instantiable WebLab class
  */
-var WebLab = function () {
+
+// Global singleton
+let webLab_ = null;
+
+let WebLab = function () {
   this.skin = null;
   this.level = null;
 
@@ -39,11 +34,9 @@ var WebLab = function () {
   consoleApi.setLogMethod(this.log.bind(this));
   errorHandler.setLogMethod(this.log.bind(this));
 
-  /** Expose for testing **/
-  window.__mostRecentWebLabInstance = this;
+  // store reference to singleton
+  webLab_ = this;
 };
-
-module.exports = WebLab;
 
 /**
  * Forward a log message to both logger objects.
@@ -62,13 +55,16 @@ WebLab.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Initialize this WebLab instance.  Called on page load.
+ * Returns the global singleton. For use by Bramble host to get the Web Lab interface.
+ * Set on the window object so that Bramble host can get to it from inside its iframe.
  */
-
 window.getWebLab = function () {
-  return window.__mostRecentWebLabInstance;
+  return webLab_;
 };
 
+/**
+ * Initialize this WebLab instance.  Called on page load.
+ */
 WebLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("WebLab requires a StudioApp");
@@ -103,7 +99,7 @@ WebLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  var onMount = function () {
+  let onMount = function () {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
     // TODO: understand if we need to call studioApp
@@ -134,7 +130,7 @@ WebLab.prototype.init = function (config) {
     this.brambleHost.showTutorial();
   }
 
-  var inspectorOn = false;
+  let inspectorOn = false;
   function onToggleInspector() {
     inspectorOn = !inspectorOn;
     if (inspectorOn) {
@@ -194,9 +190,9 @@ WebLab.prototype.setBrambleHost = function (obj) {
  * @param {!Store} store
  */
 WebLab.prototype.setupReduxSubscribers = function (store) {
-  var state = {};
+  let state = {};
   store.subscribe(() => {
-    var lastState = state;
+    let lastState = state;
     state = store.getState();
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
@@ -213,3 +209,5 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
 WebLab.prototype.reset = function (ignore) {
   // TODO - implement
 };
+
+export default WebLab;
