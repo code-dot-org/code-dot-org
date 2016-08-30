@@ -17,7 +17,7 @@ gem 'os'
 gem 'redis', '~> 3.3.1'
 # Using own fork until upstream publishes new version with multi return value fix
 # See https://github.com/cheald/redis-slave-read/pull/2
-gem 'redis-slave-read', require: false, github: 'islemaster/redis-slave-read', ref: 'master'
+gem 'redis-slave-read', require: false, github: 'islemaster/redis-slave-read', ref: 'start-with-random-node'
 gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'parallel'
