@@ -560,10 +560,6 @@ class User < ActiveRecord::Base
     self.user_type == TYPE_TEACHER
   end
 
-  def student_of_admin?
-    teachers.any?(&:admin?)
-  end
-
   def authorized_teacher?
     # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
     admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
