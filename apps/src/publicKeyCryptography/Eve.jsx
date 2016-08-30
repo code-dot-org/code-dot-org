@@ -15,6 +15,7 @@ import {
   KeywordPublicNumber,
   KeywordSecretNumber
 } from './cryptographyFields';
+import {COLORS} from './style';
 
 const Eve = React.createClass({
   propTypes: {
@@ -131,6 +132,7 @@ const Eve = React.createClass({
               value={publicKey}
               onChange={this.setPublicKey}
               disabled={disabled}
+              color={COLORS.publicKey}
             />
           </div>
           <div>
@@ -157,6 +159,7 @@ const Eve = React.createClass({
               value={publicNumber}
               onChange={this.setPublicNumber}
               disabled={disabled}
+              color={COLORS.publicNumber}
             />
           </div>
           <div>

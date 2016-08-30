@@ -14,6 +14,7 @@ import {
   KeywordPublicNumber,
   KeywordSecretNumber
 } from './cryptographyFields';
+import {COLORS} from './style';
 
 const Bob = React.createClass({
   propTypes: {
@@ -99,6 +100,7 @@ const Bob = React.createClass({
               value={publicKey}
               onChange={this.setPublicKey}
               disabled={disabled}
+              color={COLORS.publicKey}
             />
           </div>
           <div>
