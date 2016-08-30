@@ -109,13 +109,13 @@ class UserProficiency < ActiveRecord::Base
     end
     # The loops meta-concept.
     if get_level_count('repeat_loops', 3) >= 3 ||
-       get_level_count('repeat_until_while', 3) >= 3 ||
-       get_level_count('for_loops', 3) >= 3
+        get_level_count('repeat_until_while', 3) >= 3 ||
+        get_level_count('for_loops', 3) >= 3
       concept_proficiency_count += 1
     end
     # The functions meta-concept.
     if get_level_count('functions', 3) >= 3 ||
-       get_level_count('functions_with_params', 3) >= 3
+        get_level_count('functions_with_params', 3) >= 3
       concept_proficiency_count += 1
     end
 

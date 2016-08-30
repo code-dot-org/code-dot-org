@@ -64,39 +64,39 @@ class Karel < Maze
     <category name="Functions" custom="PROCEDURE"></category>
     <category name="Common">' +
       common_blocks(type) +
-    '</category>
-    <category name="Farmer">
-      <block type="maze_dig"></block>
-      <block type="maze_fill"></block>
-      <block type="karel_if"></block>
-      <block type="maze_untilBlocked"></block>
-      <block type="maze_untilBlockedOrNotClear"></block>
-      <block type="maze_forever"></block>
-    </category>
-    <category name="Bee">
-      <block type="maze_nectar"></block>
-      <block type="maze_honey"></block>
-      <block type="bee_ifNectarAmount"></block>
-      <block type="bee_ifelseNectarAmount"></block>
-      <block type="bee_ifTotalNectar"></block>
-      <block type="bee_ifelseTotalNectar"></block>
-      <block type="bee_ifOnlyFlower"></block>
-      <block type="bee_ifFlower"></block>
-      <block type="bee_ifElseFlower"></block>
-      <block type="bee_whileNectarAmount"></block>
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </category>
-    <category name="Collector">
-      <block type="collector_collect"></block>
-      <block type="collector_ifCollectible"></block>
-      <block type="collector_whileCollectible"></block>
-    </category>
-    <category name="Variables" custom="VARIABLE">
-    </category>
-    <category name="Picker">
-      <block type="pick_one"></block>
-    </category>'
+      '</category>
+      <category name="Farmer">
+        <block type="maze_dig"></block>
+        <block type="maze_fill"></block>
+        <block type="karel_if"></block>
+        <block type="maze_untilBlocked"></block>
+        <block type="maze_untilBlockedOrNotClear"></block>
+        <block type="maze_forever"></block>
+      </category>
+      <category name="Bee">
+        <block type="maze_nectar"></block>
+        <block type="maze_honey"></block>
+        <block type="bee_ifNectarAmount"></block>
+        <block type="bee_ifelseNectarAmount"></block>
+        <block type="bee_ifTotalNectar"></block>
+        <block type="bee_ifelseTotalNectar"></block>
+        <block type="bee_ifOnlyFlower"></block>
+        <block type="bee_ifFlower"></block>
+        <block type="bee_ifElseFlower"></block>
+        <block type="bee_whileNectarAmount"></block>
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </category>
+      <category name="Collector">
+        <block type="collector_collect"></block>
+        <block type="collector_ifCollectible"></block>
+        <block type="collector_whileCollectible"></block>
+      </category>
+      <category name="Variables" custom="VARIABLE">
+      </category>
+      <category name="Picker">
+        <block type="pick_one"></block>
+      </category>'
   end
 end

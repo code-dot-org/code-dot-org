@@ -132,8 +132,8 @@ class ExperimentActivity < ActiveRecord::Base
 
     # Get a level-specific hint, if one exists.
     specific_hint = options[:level_source] &&
-        (options[:level_source].get_crowdsourced_hint ||
-         (options[:enable_external_hints] && options[:level_source].get_external_hint))
+      (options[:level_source].get_crowdsourced_hint ||
+       (options[:enable_external_hints] && options[:level_source].get_external_hint))
 
     in_hint_experiment = false
 

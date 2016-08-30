@@ -164,8 +164,8 @@ def determine_unique_name_for_instance_zone(ssh_username, frontend_name, determi
 
       # Match sure there are not hits against Chef node or client names.
       is_duplicate = aws_instance_names.include?(name) ||
-          ssh.exec!("knife node list | egrep \'^#{name}$\'") ||
-          ssh.exec!("knife client list | egrep \'^#{name}$\'")
+        ssh.exec!("knife node list | egrep \'^#{name}$\'") ||
+        ssh.exec!("knife client list | egrep \'^#{name}$\'")
       if is_duplicate
         print "Name #{name} is already in use, trying new index.\n"
         sleep(rand(4))  # Back off a random amount.
@@ -361,10 +361,10 @@ environment = @options['environment']
 raise OptionParser::MissingArgument, 'Environment is required' if environment.nil?
 
 raise OptionParser::MissingArgument, 'Name is required when creating one new instance' if @options['count'].nil? &&
-  @options['name'].nil?
+    @options['name'].nil?
 
 raise OptionParser::MissingArgument, 'Prefix is required when creating multiple instances' if !@options['count'].nil? &&
-  @options['prefix'].nil?
+    @options['prefix'].nil?
 
 role = @options['role'] || ROLE_MAP[environment]
 raise "Unsupported environment #{environment}" unless role

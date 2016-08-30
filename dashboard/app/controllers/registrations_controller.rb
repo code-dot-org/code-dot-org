@@ -55,6 +55,6 @@ class RegistrationsController < Devise::RegistrationsController
   # extend this as needed
   def needs_password?(user, params)
     params[:user][:email].present? && user.email != params[:user][:email] ||
-        params[:user][:password].present?
+      params[:user][:password].present?
   end
 end

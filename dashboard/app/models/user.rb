@@ -752,7 +752,7 @@ class User < ActiveRecord::Base
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         user_script.assigned_at = follower.created_at if
           follower.created_at &&
-          (!user_script.assigned_at || follower.created_at < user_script.assigned_at)
+              (!user_script.assigned_at || follower.created_at < user_script.assigned_at)
 
         user_script.save! if user_script.changed? && !user_script.empty?
       end
@@ -769,12 +769,12 @@ class User < ActiveRecord::Base
           # is this the first level we started?
           user_script.started_at = ul.created_at if
             ul.created_at &&
-            (!user_script.started_at || ul.created_at < user_script.started_at)
+                (!user_script.started_at || ul.created_at < user_script.started_at)
 
           # is this the last level we worked on?
           user_script.last_progress_at = ul.updated_at if
             ul.updated_at &&
-            (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
+                (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
         end
 
         # backfill completed scripts
@@ -873,20 +873,20 @@ class User < ActiveRecord::Base
         first_or_create!
 
       new_level_completed = true if !user_level.passing? &&
-        Activity.passing?(new_result)
+          Activity.passing?(new_result)
       new_level_perfected = true if !user_level.perfect? &&
-        new_result == 100 &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+          new_result == 100 &&
+          HintViewRequest.
+            where(user_id: user_id, script_id: script_id, level_id: level_id).
+            empty? &&
+          AuthoredHintViewRequest.
+            where(user_id: user_id, script_id: script_id, level_id: level_id).
+            empty?
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
+          new_result > user_level.best_result
       user_level.submitted = submitted
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id

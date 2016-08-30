@@ -15,7 +15,7 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
     # Leaf node, a translation.
     # New translation equals to English, and old translation already exists
     if !prev_translation.nil? && new_translation == en_translation &&
-       new_translation != prev_translation
+        new_translation != prev_translation
       new_translation = prev_translation
     end
   else

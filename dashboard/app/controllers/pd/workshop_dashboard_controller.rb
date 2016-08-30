@@ -4,9 +4,9 @@ module Pd
 
     def index
       unless current_user.admin? ||
-        current_user.district_contact? ||
-        current_user.workshop_organizer? ||
-        current_user.facilitator?
+          current_user.district_contact? ||
+          current_user.workshop_organizer? ||
+          current_user.facilitator?
 
         render_404
         return

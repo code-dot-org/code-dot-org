@@ -26,6 +26,9 @@ Style/EmptyLineBetweenDefs:
 Style/FirstParameterIndentation:
   EnforcedStyle: consistent
 
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Style/NumericLiterals:
   MinDigits: 7
 
