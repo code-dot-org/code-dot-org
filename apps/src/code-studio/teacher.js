@@ -3,6 +3,7 @@
  * JS used by _teacher.html.haml
  */
 import $ from 'jquery';
+import debounce from 'lodash/debounce';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
@@ -13,7 +14,7 @@ function resizeScrollable() {
 }
 
 $(document).ready(() => {
-  $(window).resize(dashboard.utils.debounce(resizeScrollable, 250));
+  $(window).resize(debounce(resizeScrollable, 250));
 
   resizeScrollable();
 

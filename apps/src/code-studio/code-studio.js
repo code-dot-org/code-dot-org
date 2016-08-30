@@ -44,10 +44,6 @@ window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
-window.dashboard.utils = {
-  debounce: _.debounce,
-  throttle: _.throttle
-};
 window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
 window.dashboard.assets = require('./assets');
