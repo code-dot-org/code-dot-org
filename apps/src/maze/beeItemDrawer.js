@@ -1,4 +1,7 @@
-import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
+import Drawer from './drawer';
+import { SVG_NS } from '../constants';
+import { cellId } from './mazeUtils';
+const SQUARE_SIZE = 50;
 
 /**
  * Extends Drawer to draw flowers/honeycomb for bee.
@@ -29,8 +32,6 @@ export default class BeeItemDrawer extends Drawer {
     switch (prefix) {
       case 'cloud':
         return this.skin_.cloud;
-      case 'cloudAnimation':
-        return this.skin_.cloudAnimation;
       case 'beeItem':
         if (this.bee_.isHive(row, col, false)) {
           return this.skin_.honey;
@@ -42,7 +43,7 @@ export default class BeeItemDrawer extends Drawer {
 
   /**
    * Generic reset function, shared by DirtDrawer so that we can call
-   * drawer.reset() blindly.
+   * Maze.gridItemDrawer.reset() blindly.
    * @override
    */
   reset() {
@@ -89,8 +90,8 @@ export default class BeeItemDrawer extends Drawer {
     }
 
     // Display the images.
-    let img = this.drawImage_('beeItem', row, col);
-    this.updateOrCreateText_('counter', row, col, img ? counterText : '');
+    let img = this.updateImageWithIndex_('beeItem', row, col);
+    this.updateCounter_('counter', row, col, img ? counterText : '');
 
     if (isClouded) {
       this.showCloud_(row, col);
@@ -102,12 +103,45 @@ export default class BeeItemDrawer extends Drawer {
   }
 
   /**
-   * @override
+   * Update the counter at the given row,col with the provided counterText.
+   * @param {string} prefix
+   * @param {number} row
+   * @param {number} col
+   * @param {string} counterText
    */
-  updateOrCreateText_(prefix, row, col, text) {
-    let textElement = super.updateOrCreateText_(prefix, row, col, text);
-    textElement.setAttribute('class', 'bee-counter-text');
-    return textElement;
+  updateCounter_(prefix, row, col, counterText) {
+    var counterElement = document.getElementById(cellId(prefix, row, col));
+    if (!counterElement) {
+      // we want an element, so let's create one
+      counterElement = this.createText(prefix, row, col, counterText);
+    }
+    counterElement.firstChild.nodeValue = counterText;
+  }
+
+  /**
+   * Create SVG text element for given cell
+   * @param {string} prefix
+   * @param {number} row
+   * @param {number} col
+   * @param {string} counterText
+   */
+  createText(prefix, row, col, counterText) {
+    var pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    var svg = document.getElementById('svgMaze');
+
+    // Create text.
+    var hPadding = 2;
+    var vPadding = 2;
+    var text = document.createElementNS(SVG_NS, 'text');
+    // Position text just inside the bottom right corner.
+    text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
+    text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
+    text.setAttribute('id', cellId(prefix, row, col));
+    text.setAttribute('class', 'bee-counter-text');
+    text.appendChild(document.createTextNode(counterText));
+    svg.insertBefore(text, pegmanElement);
+
+    return text;
   }
 
   createCounterImage_(prefix, i, row, href) {
@@ -197,7 +231,7 @@ export default class BeeItemDrawer extends Drawer {
    * Show the cloud icon.
    */
   showCloud_(row, col) {
-    this.drawImage_('cloud', row, col);
+    this.updateImageWithIndex_('cloud', row, col);
 
     // Make sure the animation is cached by the browser.
     this.displayCloudAnimation_(row, col, false /* animate */);
@@ -207,7 +241,7 @@ export default class BeeItemDrawer extends Drawer {
    * Hide the cloud icon, and display the cloud hiding animation.
    */
   hideCloud_(row, col) {
-    var cloudElement = document.getElementById(Drawer.cellId('cloud', row, col));
+    var cloudElement = document.getElementById(cellId('cloud', row, col));
     if (cloudElement) {
       cloudElement.setAttribute('visibility', 'hidden');
     }
@@ -219,13 +253,28 @@ export default class BeeItemDrawer extends Drawer {
    * Create the cloud animation element, and perform the animation if necessary
    */
   displayCloudAnimation_(row, col, animate) {
-    let id = Drawer.cellId('cloudAnimation', row, col);
+    var id = cellId('cloudAnimation', row, col);
 
-    let cloudAnimation = this.getOrCreateImage_('cloudAnimation', row, col, false);
+    var cloudAnimation = document.getElementById(id);
+
+    if (!cloudAnimation) {
+      var pegmanElement = document.getElementsByClassName('pegman-location')[0];
+      var svg = document.getElementById('svgMaze');
+      cloudAnimation = document.createElementNS(SVG_NS, 'image');
+      cloudAnimation.setAttribute('id', id);
+      cloudAnimation.setAttribute('height', SQUARE_SIZE);
+      cloudAnimation.setAttribute('width', SQUARE_SIZE);
+      cloudAnimation.setAttribute('x', col * SQUARE_SIZE);
+      cloudAnimation.setAttribute('y', row * SQUARE_SIZE);
+      cloudAnimation.setAttribute('visibility', 'hidden');
+      svg.appendChild(cloudAnimation, pegmanElement);
+    }
 
     // We want to create the element event if we're not animating yet so that we
     // can make sure it gets loaded.
     cloudAnimation.setAttribute('visibility', animate ? 'visible' : 'hidden');
+    cloudAnimation.setAttributeNS('http://www.w3.org/1999/xlink',
+        'xlink:href', this.skin_.cloudAnimation);
   }
 
   /**

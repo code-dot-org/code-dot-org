@@ -92,13 +92,13 @@ def storage_id_for_user
 
     # Only take ownership if the storage id doesn't already have an owner - it shouldn't but
     # there is a race condition (addressed below)
-    rows_updated = user_storage_ids_table.where(id: storage_id,user_id: nil).update(user_id: request.user_id)
+    rows_updated = user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: request.user_id)
     return storage_id if rows_updated > 0
 
     # We couldn't claim the storage. The most likely cause is that another request (by this
     # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
     # id is either invalid or it belongs to another user (both addressed below)
-    return storage_id if user_storage_ids_table.where(id: storage_id,user_id: request.user_id).first
+    return storage_id if user_storage_ids_table.where(id: storage_id, user_id: request.user_id).first
   end
 
   # We don't have any existing storage id we can associate with this user, so create a new one

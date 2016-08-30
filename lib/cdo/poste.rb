@@ -66,7 +66,7 @@ module Poste
   end
 
   def self.template_extnames
-    ['.md','.haml','.html']
+    ['.md', '.haml', '.html']
   end
 
   # Unsubscribes the specified hashed email.
