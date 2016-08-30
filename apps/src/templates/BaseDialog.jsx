@@ -40,8 +40,8 @@ var BaseDialog = React.createClass({
   },
 
   /** @returns {Array.<Element>} */
-  getButtons() {
-    return [].slice.call(this.refs.dialog.getElementsByTagName('button'));
+  getTabbableElements() {
+    return [].slice.call(this.refs.dialog.querySelectorAll('a,button,input'));
   },
 
   focusDialog: function () {
