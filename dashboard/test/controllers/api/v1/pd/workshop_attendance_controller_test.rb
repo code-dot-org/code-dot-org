@@ -52,10 +52,10 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @workshop.end!
     sign_in @facilitator
 
-    get "#{API}/#{@workshop.id}"
+    get_attendance @workshop.id
     assert_response :success
 
-    patch "#{API}/#{@workshop.id}", params: {pd_workshop: params}
+    update_attendance @workshop.id, params
     assert_response :forbidden
   end
 
@@ -64,10 +64,10 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @workshop.end!
     sign_in @organizer
 
-    get "#{API}/#{@workshop.id}"
+    get_attendance @workshop.id
     assert_response :success
 
-    patch "#{API}/#{@workshop.id}", params: {pd_workshop: params}
+    update_attendance @workshop.id, params
     assert_response :forbidden
   end
 
