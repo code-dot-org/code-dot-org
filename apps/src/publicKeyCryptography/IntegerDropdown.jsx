@@ -10,6 +10,7 @@ const IntegerDropdown = React.createClass({
   propTypes: {
     value: React.PropTypes.number,
     options: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    style: React.PropTypes.object,
     disabled: React.PropTypes.bool,
     onChange: React.PropTypes.func.isRequired
   },
@@ -19,7 +20,7 @@ const IntegerDropdown = React.createClass({
   },
 
   render() {
-    let {value, options, disabled} = this.props;
+    let {value, options, style, disabled} = this.props;
     options = options.map(n => ({label: String(n), value: n}));
     return (
       <VirtualizedSelect
@@ -27,6 +28,7 @@ const IntegerDropdown = React.createClass({
         optionHeight={LINE_HEIGHT}
         options={options}
         value={value}
+        style={style}
         disabled={disabled}
         onChange={this.onChange}
       />);

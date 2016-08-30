@@ -4,7 +4,12 @@ import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {PrivateKeyDropdown, PublicModulusDropdown, GoButton} from './cryptographyFields';
+import {
+  PrivateKeyDropdown,
+  PublicModulusDropdown,
+  GoButton,
+  KeywordPublicModulus
+} from './cryptographyFields';
 import {computePublicKey} from './cryptographyMath';
 
 const Alice = React.createClass({
@@ -89,7 +94,7 @@ const Alice = React.createClass({
       <CollapsiblePanel title="Alice">
         <NumberedSteps>
           <div>
-            Enter public modulus:
+            Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}

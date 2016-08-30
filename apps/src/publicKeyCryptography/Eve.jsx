@@ -8,7 +8,8 @@ import ValidatorField from './ValidatorField';
 import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
-  SecretNumberDropdown
+  SecretNumberDropdown,
+  KeywordPublicModulus
 } from './cryptographyFields';
 
 const Eve = React.createClass({
@@ -113,7 +114,7 @@ const Eve = React.createClass({
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
           <div>
-            Set a public modulus:
+            Set a <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
