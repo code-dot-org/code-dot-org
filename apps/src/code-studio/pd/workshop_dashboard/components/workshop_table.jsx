@@ -2,17 +2,36 @@
  * Table displaying workshop summaries based on a supplied query.
  */
 
-import $ from 'jquery';
-import _ from 'lodash';
+import _, {orderBy} from 'lodash';
 import React from 'react';
-import WorkshopTableRow from './workshop_table_row';
-import {Table} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import {Table, sort} from 'reactabular';
+import color from '../../../../color';
+import SessionTimesList from './session_times_list';
+import FacilitatorsList from './facilitators_list';
+import WorkshopManagement from './workshop_management';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const WorkshopTable = React.createClass({
   propTypes: {
-    queryUrl: React.PropTypes.string.isRequired,
+    workshops: React.PropTypes.arrayOf(
+      React.PropTypes.shape({
+        id: React.PropTypes.number.isRequired,
+        sessions: React.PropTypes.array.isRequired,
+        location_name: React.PropTypes.string.isRequired,
+        workshop_type: React.PropTypes.string.isRequired,
+        course: React.PropTypes.string.isRequired,
+        enrolled_teacher_count: React.PropTypes.number.isRequired,
+        capacity: React.PropTypes.number.isRequired,
+        facilitators: React.PropTypes.array.isRequired,
+        organizer: React.PropTypes.shape({
+          name: React.PropTypes.string.isRequired,
+          email: React.PropTypes.string.isRequired
+        }).isRequired
+      })
+    ),
     canEdit: React.PropTypes.bool,
-    canDelete: React.PropTypes.bool,
+    onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
     showOrganizer: React.PropTypes.bool
   },
@@ -20,7 +39,7 @@ const WorkshopTable = React.createClass({
   getDefaultProps() {
     return {
       canEdit: false,
-      canDelete: false,
+      onDelete: null,
       showSignupUrl: false,
       showOrganizer: false
     };
@@ -28,90 +47,183 @@ const WorkshopTable = React.createClass({
 
   getInitialState() {
     return {
-      loading: true
+      sortingColumns: {
+        0: {
+          direction: 'asc',
+          position: 0
+        }
+      }
     };
   },
 
-  componentDidMount() {
-    this.loadRequest = $.ajax({
-        method: 'GET',
-        url: this.props.queryUrl,
-        dataType: 'json'
-      })
-      .done(data => {
-        this.setState({
-          loading: false,
-          workshops: data
-        });
-      });
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
   },
 
-  componentWillUnmount() {
-    if (this.loadRequest) {
-      this.loadRequest.abort();
-    }
-    if (this.deleteRequest) {
-      this.deleteRequest.abort();
-    }
+  onSort(selectedColumn) {
+    const sortingColumns = sort.byColumn({
+      sortingColumns: this.state.sortingColumns,
+      // Custom sortingOrder removes 'no-sort' from the cycle
+      sortingOrder: {
+        FIRST: 'asc',
+        asc: 'desc',
+        desc: 'asc'
+      },
+      selectedColumn
+    });
+
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns
+      })
+    });
   },
 
-  handleDelete(workshop_index, workshop) {
-    this.deleteRequest = $.ajax({
-        method: 'DELETE',
-        url: '/api/v1/pd/workshops/' + workshop.id
-      })
-      .done(() => {
-        const workshops = _.cloneDeep(this.state.workshops);
-        workshops.splice(workshop_index, 1);
-        this.setState({workshops: workshops});
-      });
+  formatSessions(_ignored, {rowData}) {
+    return <SessionTimesList sessions={rowData.sessions}/>;
+  },
+
+  formatOrganizer(organizer) {
+    return `${organizer.name} (${organizer.email})`;
+  },
+
+  formatFacilitators(facilitators) {
+    return <FacilitatorsList facilitators={facilitators} />;
+  },
+
+  formatSignupUrl(workshopId) {
+    const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
+    return (
+      <a href={signupUrl} target="_blank">
+        {signupUrl}
+      </a>
+    );
+  },
+
+  formatManagement(workshopId) {
+    return (
+      <WorkshopManagement
+        workshopId={workshopId}
+        viewUrl={`/workshops/${workshopId}`}
+        editUrl={this.props.canEdit ? `/workshops/${workshopId}/edit` : null}
+        onDelete={this.props.onDelete}
+      />
+    );
   },
 
   render() {
-    if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
-    }
+    const rows = _.map(this.props.workshops,
+      row => _.merge(row, {
+        signups: `${row.enrolled_teacher_count} / ${row.capacity}`,
+        firstSessionStart: row.sessions[0].start
+      })
+    );
 
-    if (this.state.workshops.length === 0) {
-      return <p>None.</p>;
-    }
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      {
+        default: {color: color.light_gray}
+      }
+    );
 
-    const tableRows = this.state.workshops.map((workshop, i) => {
-      return (
-        <WorkshopTableRow
-          workshop={workshop}
-          key={workshop.id}
-          viewUrl={`/workshops/${workshop.id}`}
-          editUrl={this.props.canEdit ? `/workshops/${workshop.id}/edit` : null}
-          onDelete={this.props.canDelete ? this.handleDelete.bind(this, i) : null}
-          showSignupUrl={this.props.showSignupUrl}
-          showOrganizer={this.props.showOrganizer}
-        />
-      );
+    let columns = [];
+    columns.push({
+      property: 'firstSessionStart', // for sorting
+      header: {
+        label: 'Date and Time',
+        transforms: [sortable]
+      },
+      cell: {
+        format: this.formatSessions
+      }
+    }, {
+      property: 'location_name',
+      header: {
+        label: 'Location',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'workshop_type',
+      header: {
+        label: 'Type',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'course',
+      header: {
+        label: 'Course',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'signups',
+      header: {
+        label: 'Signups',
+        transforms: [sortable]
+      }
     });
 
-    const signupUrlHeader = this.props.showSignupUrl ? <th>Signup Url</th> : null;
-    const organizerHeader = this.props.showOrganizer ? <th>Organizer</th> : null;
+    if (this.props.showOrganizer) {
+      columns.push({
+        property: 'organizer',
+        header: {
+          label: 'Organizer',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatOrganizer
+        }
+      });
+    }
+
+    columns.push({
+      property: 'facilitators',
+      header: {
+        label: 'Facilitators',
+        transforms: [sortable]
+      },
+      cell: {
+        format: this.formatFacilitators
+      }
+    });
+
+    if (this.props.showSignupUrl) {
+      columns.push({
+        property: 'id',
+        header: {
+          label: 'Signup Url'
+        },
+        cell: {
+          format: this.formatSignupUrl
+        }
+      });
+    }
+
+    columns.push({
+      property: 'id',
+      header: {
+        label: 'Manage'
+      },
+      cell: {
+        format: this.formatManagement
+      }
+    });
+
+    const {sortingColumns} = this.state;
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy
+    })(rows);
+
     return (
-      <Table striped bordered condensed hover>
-        <thead>
-        <tr>
-          <th>Date and Time</th>
-          <th>Location</th>
-          <th>Type</th>
-          <th>Course</th>
-          <th>Signups</th>
-          {organizerHeader}
-          <th>Facilitators</th>
-          <th>Current State</th>
-          {signupUrlHeader}
-          <th>Manage</th>
-        </tr>
-        </thead>
-        <tbody>
-        {tableRows}
-        </tbody>
-      </Table>
+      <Table.Provider
+        className="table table-striped table-condensed"
+        columns={columns}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id"/>
+      </Table.Provider>
     );
   }
 });
