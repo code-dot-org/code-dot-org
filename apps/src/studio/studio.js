@@ -2833,8 +2833,11 @@ Studio.execute = function () {
       return Studio.onPuzzleComplete();
     }
 
-    if (studioApp.initializationCode) {
-      registerHandlersForCode(handlers, 'whenGameStarts', studioApp.initializationCode);
+    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    if (studioApp.initializationBlocks) {
+      let initializationCode = Blockly.Generator.blocksToCode('JavaScript',
+          studioApp.initializationBlocks);
+      registerHandlersForCode(handlers, 'whenGameStarts', initializationCode);
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
