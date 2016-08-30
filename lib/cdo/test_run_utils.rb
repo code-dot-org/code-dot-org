@@ -53,7 +53,14 @@ module TestRunUtils
   def self.run_dashboard_tests
     Dir.chdir(dashboard_dir) do
       with_hipchat_logging('dashboard tests') do
-        RakeUtils.rake_stream_output 'test'
+        # Parallel tests will use separate databases ('1', '2', ..etc) from the main 'test' DB ('')
+        parallel_env = 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true'
+        # In CircleCI, force 4 parallel instances -- parallel_tests otherwise
+        # detects an unreasonable amount of CPU cores, resulting in memory over-use)
+        is_circle = ENV['CIRCLECI']
+        circle_parallel_tests = 8
+        RakeUtils.rake_stream_output "#{parallel_env} parallel:rake[db:test:prepare#{is_circle ? ",#{circle_parallel_tests}" : ''}]"
+        RakeUtils.rake_stream_output "#{parallel_env} parallel:test#{is_circle ? "[#{circle_parallel_tests}]" : ''}"
         RakeUtils.rake_stream_output 'konacha:run'
       end
     end

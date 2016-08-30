@@ -55,7 +55,7 @@ test:
   password: <%= writer.password || '' %>
   host: 'localhost'
   pool: 5
-  database: 'dashboard_test'
+  database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
 
 production:
   <<: *mysql_defaults
