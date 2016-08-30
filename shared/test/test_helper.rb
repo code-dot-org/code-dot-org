@@ -55,9 +55,9 @@ module SetupTest
     # VCR (record/replay HTTP interactions)
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
-    VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_','')}") do
+    VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}") do
       PEGASUS_DB.transaction(rollback: :always) do
-        AWS::S3.stub(:random,Proc.new{random.bytes(16).unpack('H*')[0]}, &block)
+        AWS::S3.stub(:random, Proc.new{random.bytes(16).unpack('H*')[0]}, &block)
       end
     end
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.

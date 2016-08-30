@@ -44,7 +44,7 @@ class LevelLoader
     # Unplugged level data is specified in 'unplugged.en.yml' file
     unplugged = I18n.t('data.unplugged')
     unplugged_game = Game.find_by(name: 'Unplugged')
-    unplugged.map do |name,_|
+    unplugged.map do |name, _|
       Level.where(name: name).first_or_create.update(
         type: 'Unplugged',
         game: unplugged_game
