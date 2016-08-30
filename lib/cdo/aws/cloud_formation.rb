@@ -366,7 +366,7 @@ module AWS
         custom_resource = {
           Type: properties.delete('Type') || "Custom::#{custom_type || function_name}",
           Properties: {
-            ServiceToken: {'Fn::Join' => [':',[
+            ServiceToken: {'Fn::Join' => [':', [
               'arn:aws:lambda',
               {Ref: 'AWS::Region'},
               {Ref: 'AWS::AccountId'},
