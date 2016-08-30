@@ -28,7 +28,7 @@ class RegistrationsController < Devise::RegistrationsController
         format.html do
           set_flash_message :notice, @user.pending_reconfirmation? ? :update_needs_confirmation : :updated
           begin
-            redirect_to :back
+            redirect_back fallback_location: after_update_path_for(@user)
           rescue ActionController::RedirectBackError
             redirect_to after_update_path_for(@user)
           end

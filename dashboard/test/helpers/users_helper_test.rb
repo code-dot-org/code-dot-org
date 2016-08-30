@@ -161,7 +161,7 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({}, summarize_user_progress(script, user)[:levels], 'No level progress since we dont have a result')
 
     # put in in "view answers" mode
-    user_level.delete!
+    user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: Time.now, readonly_answers: true, submitted: true
     assert_equal({
       level.id => { status: 'submitted', submitted: true, readonly_answers: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
@@ -170,14 +170,14 @@ class UsersHelperTest < ActionView::TestCase
     }, summarize_user_progress(script, user)[:levels], 'level shows as locked again')
 
     # now lock it by submitting it (even though we don't have a level source attached)
-    user_level.delete!
+    user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: true
     assert_equal({
       level.id => { status: 'locked' }
     }, summarize_user_progress(script, user)[:levels], 'level shows as locked again')
 
     # unlock it again
-    user_level.delete!
+    user_level.delete
     level_source = create :level_source, data: "{}"
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: Time.now, readonly_answers: false, submitted: false, level_source: level_source
     assert_equal({
@@ -187,7 +187,7 @@ class UsersHelperTest < ActionView::TestCase
     }, summarize_user_progress(script, user)[:levels], 'level still shows as locked')
 
     # now unlock it with a submission
-    user_level.delete!
+    user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: false
     assert_equal({
       level.id => { status: 'attempted', result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil] },
@@ -196,7 +196,7 @@ class UsersHelperTest < ActionView::TestCase
     }, summarize_user_progress(script, user)[:levels], 'level shows attempted now')
 
     # auto-locked while viewing answers
-    user_level.delete!
+    user_level.delete
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: 2.days.ago, readonly_answers: true, submitted: true
     assert_equal({
       level.id => { status: 'locked' }
@@ -234,7 +234,7 @@ class UsersHelperTest < ActionView::TestCase
     }, summarize_user_progress(script, user)[:levels])
 
     # now create a submitted user level
-    user_level.delete!
+    user_level.delete
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: nil, submitted: true
     assert_equal({
       level.id => { status: 'submitted', submitted: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },

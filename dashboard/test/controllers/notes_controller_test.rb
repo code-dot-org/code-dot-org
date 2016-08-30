@@ -11,8 +11,9 @@ class NotesControllerTest < ActionController::TestCase
     with_default_locale('he-IL') do
       get :index, key: 'flappy_intro'
       assert_not_nil assigns(:slides)
+      assets = Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application)
       assigns(:slides).values.each do |slide|
-        assert_not_nil Rails.application.assets.find_asset(slide[:image])
+        assert_not_nil assets.find_asset(slide[:image])
       end
     end
   end

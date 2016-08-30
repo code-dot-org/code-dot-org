@@ -5,7 +5,7 @@ module CsvDownload
   extend ActiveSupport::Concern
 
   included do
-    before_filter :default_to_json
+    before_action :default_to_json
   end
   def default_to_json
     request.format = :json unless request.format.csv?
