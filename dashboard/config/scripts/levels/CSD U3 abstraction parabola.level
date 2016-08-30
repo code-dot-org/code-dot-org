@@ -65,8 +65,8 @@
     "markdown_instructions": "# Basketball\r\n\r\nHere's a basketball that's thrown up, then falls back down.  Can you use the `velocityX` block to make it go through the hoop?\r\n\r\n\r\n# Do This\r\n\r\nUse the `velocityX` block outside the draw loop to make the ball move to the right by 3 each time. [Show me where](#triggercallout=code_triggered)\r\n\r\n[//]: #(https://images.code.org/119358fc8705640a24d2138439ea7cc1-image-1472496770816.png)",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S13_C1\",\r\n  \"callout_text\": \"Add your block here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"basketball.velocityY =  -10;\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S13_C1\",\r\n  \"callout_text\": \"Add your block here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"basketball.velocityY =  -10;\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
