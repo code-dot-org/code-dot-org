@@ -1,5 +1,6 @@
 /** @file The Eve character from the cryptography widget */
 import React from 'react';
+import color from '../color';
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
@@ -139,7 +140,7 @@ const Eve = React.createClass({
             Crack Alice's <KeywordPrivateKey/>:
             <div>
               {'('}
-              <IntegerField value={publicKey}/>
+              <IntegerField color={COLORS.publicKey} value={publicKey}/>
               {' x '}
               <PrivateKeyDropdown
                 publicModulus={publicModulus}
@@ -148,7 +149,9 @@ const Eve = React.createClass({
                 disabled={disabled}
               />
               {') MOD '}
-              <IntegerField value={publicModulus}/> = 1
+              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+              {' = '}
+              <IntegerField color={color.white} value={1}/>
               {' '}
               <ValidatorField value={privateKeyEquationResult} expectedValue={1} shouldEvaluate={!checkingPrivateKey}/>
             </div>
@@ -166,7 +169,7 @@ const Eve = React.createClass({
             Crack Bob's <KeywordSecretNumber/>:
             <div>
               {'('}
-              <IntegerField value={publicKey}/>
+              <IntegerField color={COLORS.publicKey} value={publicKey}/>
               {' x '}
               <SecretNumberDropdown
                 value={secretNumber}
@@ -175,9 +178,9 @@ const Eve = React.createClass({
                 disabled={disabled}
               />
               {') MOD '}
-              <IntegerField value={publicModulus}/>
+              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
               {' = '}
-              <IntegerField value={publicNumber}/>
+              <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
               {' '}
               <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber} shouldEvaluate={!checkingSecretNumber}/>
             </div>
