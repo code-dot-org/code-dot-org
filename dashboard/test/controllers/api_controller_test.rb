@@ -136,7 +136,7 @@ class ApiControllerTest < ActionController::TestCase
     # student_2 has one answer
     level_source2 = create :level_source, level: level2, data: 'Here is the answer 2'
     create :activity, user: @student_2, level: level1, level_source: level_source2
-    create :user_level,user: @student_2, level: level1, script: script,
+    create :user_level, user: @student_2, level: level1, script: script,
       attempts: 1, level_source: level_source2
 
     get :section_text_responses, section_id: @section.id, script_id: script.id

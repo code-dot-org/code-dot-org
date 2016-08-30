@@ -68,7 +68,7 @@ module CDO
 git config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$' || \
 git config --get remote.#{remote}.fetch '^\\+refs/heads/\*:refs/remotes/#{remote}/\*$'
         BASH
-        ref_exists = shell_out!(ref_exists_cmd, run_options(cwd: cwd, returns: [0,1])).exitstatus == 0
+        ref_exists = shell_out!(ref_exists_cmd, run_options(cwd: cwd, returns: [0, 1])).exitstatus == 0
 
         unless ref_exists
           converge_by("Updating fetch refs for #{remote}/#{branch}") do
