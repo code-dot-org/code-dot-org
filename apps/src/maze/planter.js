@@ -50,8 +50,8 @@ export default class Planter extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new PlanterDrawer(this.maze_.map, this.skin_, this);
+  createGridItemDrawer() {
+    return new PlanterDrawer(this.maze_.map, this.skin_, this);
   }
 
   atSprout(id) {
@@ -98,7 +98,7 @@ export default class Planter extends Subtype {
     }
 
     cell.setFeatureType(PlanterCell.FeatureType.SPROUT);
-    this.drawer.updateItemImage(row, col, true);
+    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
   }
 
   /**
