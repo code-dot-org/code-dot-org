@@ -44,8 +44,8 @@ module Ops
     def district_params
       # create/find/upgrade district contact user when adding or changing district contact email
       if params[:district][:contact] &&
-          params[:district][:contact][:email] &&
-          params[:district][:contact][:email] != @district.try(:contact).try(:email)
+         params[:district][:contact][:email] &&
+         params[:district][:contact][:email] != @district.try(:contact).try(:email)
         # adding/changing district contact
         params[:district][:contact_id] =
           User.find_or_create_district_contact(contact_params(params[:district].delete(:contact)), current_user).id

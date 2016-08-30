@@ -30,19 +30,19 @@ def query_teachers_with_location(city, state)
     '(kind_s:BringToSchool2013 && role_s:teacher) || ' +
 
       # Petition teachers
-      '(kind_s:Petition && role_s:educator) || ' +
+    '(kind_s:Petition && role_s:educator) || ' +
 
       # Past 2013 organizers
-      '(kind_s:CSEdWeekEvent2013 && role_s:teacher) || ' +
+    '(kind_s:CSEdWeekEvent2013 && role_s:teacher) || ' +
 
       # Past 2014 organizers
-      'kind_s:HocSignup2014 || ' +
+    'kind_s:HocSignup2014 || ' +
 
       # HOC 2015 organizers
-      'kind_s:HocSignup2015 || ' +
+    'kind_s:HocSignup2015 || ' +
 
       # Code studio teachers
-      '(kind_s:user && role_s:teacher)'
+    '(kind_s:user && role_s:teacher)'
 
   query_with_location(base_query, city, state)
 end

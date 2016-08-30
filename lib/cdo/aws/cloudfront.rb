@@ -356,7 +356,7 @@ module AWS
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
-        (s3 ? S3_FORWARD_HEADERS : ['Host'])
+                (s3 ? S3_FORWARD_HEADERS : ['Host'])
       behavior = {# required
         target_origin_id: (s3 ? behavior_config[:proxy] : 'cdo'), # required
         forwarded_values: {# required
@@ -396,7 +396,7 @@ module AWS
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
-        (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
+                (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'whitelist',

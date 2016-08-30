@@ -49,7 +49,7 @@ class TestFlakiness
 
   def self.cache_test_flakiness
     if File.exist?(CACHE_FILENAME) &&
-        (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
+       (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
       return JSON.parse(File.read(CACHE_FILENAME))
     end
 

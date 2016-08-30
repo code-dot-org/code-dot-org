@@ -337,7 +337,7 @@ class User < ActiveRecord::Base
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
-        other_user != self
+       other_user != self
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -839,7 +839,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+         user_proficiency.basic_proficiency?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -891,20 +891,20 @@ class User < ActiveRecord::Base
         first_or_create!
 
       new_level_completed = true if !user_level.passing? &&
-        Activity.passing?(new_result)
+                                    Activity.passing?(new_result)
       new_level_perfected = true if !user_level.perfect? &&
-        new_result == 100 &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+                                    new_result == 100 &&
+                                    HintViewRequest.
+                                      where(user_id: user_id, script_id: script_id, level_id: level_id).
+                                      empty? &&
+                                    AuthoredHintViewRequest.
+                                      where(user_id: user_id, script_id: script_id, level_id: level_id).
+                                      empty?
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
+                                             new_result > user_level.best_result
       user_level.submitted = submitted
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id

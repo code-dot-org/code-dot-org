@@ -180,13 +180,6 @@ Style/MultilineBlockChain:
 Style/MultilineMethodCallIndentation:
   Enabled: false
 
-# Offense count: 80
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
-# SupportedStyles: aligned, indented
-Style/MultilineOperationIndentation:
-  Enabled: false
-
 # Offense count: 20
 Style/MultilineTernaryOperator:
   Enabled: false
