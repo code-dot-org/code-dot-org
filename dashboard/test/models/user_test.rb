@@ -797,9 +797,10 @@ class UserTest < ActiveSupport::TestCase
 
     assert student.encrypted_password.blank?
 
+    name = "Some Student"
     assert student.update_with_password(
-      name: "JADENDUMPLING",
-      email: "jaden.ke1@education.nsw.gov.au",
+      name: name,
+      email: "student@example.com",
       password: "[FILTERED]",
       password_confirmation: "[FILTERED]",
       current_password: "",
@@ -808,7 +809,7 @@ class UserTest < ActiveSupport::TestCase
       age: "10"
     )
 
-    assert_equal "JADENDUMPLING", student.name
+    assert_equal name, student.name
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do
