@@ -124,10 +124,10 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.persisted?  # logged in, not admin, is student of admin
+    if user.persisted?
       can :read, Script
       can :read, ScriptLevel
-    else # not logged in
+    else
       can :read, Script do |script|
         !script.login_required?
       end
