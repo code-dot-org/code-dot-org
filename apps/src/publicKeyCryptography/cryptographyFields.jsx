@@ -23,7 +23,12 @@ const style = {
  */
 export function PrivateKeyDropdown(props) {
   const {publicModulus, ...rest} = props;
-  return <IntegerDropdown options={privateKeyList(publicModulus)} {...rest}/>;
+  return (
+    <IntegerDropdown
+      options={privateKeyList(publicModulus)}
+      style={{backgroundColor: COLORS.privateKey}}
+      {...rest}
+    />);
 }
 PrivateKeyDropdown.propTypes = {
   publicModulus: React.PropTypes.number,
@@ -55,7 +60,12 @@ PublicModulusDropdown.propTypes = {
  */
 export function SecretNumberDropdown(props) {
   const {publicModulus, ...rest} = props;
-  return <IntegerDropdown options={_.range(0, publicModulus)} {...rest}/>;
+  return (
+    <IntegerDropdown
+      options={_.range(0, publicModulus)}
+      style={{backgroundColor: COLORS.secretNumber}}
+      {...rest}
+    />);
 }
 SecretNumberDropdown.propTypes = {
   publicModulus: React.PropTypes.number,
@@ -97,4 +107,20 @@ Keyword.propTypes = {
 
 export function KeywordPublicModulus() {
   return <Keyword color={COLORS.publicModulus}>public modulus</Keyword>;
+}
+
+export function KeywordPublicKey() {
+  return <Keyword color={COLORS.publicKey}>public key</Keyword>;
+}
+
+export function KeywordPrivateKey() {
+  return <Keyword color={COLORS.privateKey}>private key</Keyword>;
+}
+
+export function KeywordPublicNumber() {
+  return <Keyword color={COLORS.publicNumber}>public number</Keyword>;
+}
+
+export function KeywordSecretNumber() {
+  return <Keyword color={COLORS.secretNumber}>secret number</Keyword>;
 }
