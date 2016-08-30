@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React from 'react';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
-import {LINE_HEIGHT} from './style';
+import {LINE_HEIGHT, COLORS} from './style';
 
 const BUTTON_VERTICAL_PADDING = 6;
 const BUTTON_HORIZONTAL_PADDING = 12;
@@ -36,7 +36,12 @@ PrivateKeyDropdown.propTypes = {
  * numbers in the range [3..10000).  Used by all three characters.
  */
 export function PublicModulusDropdown(props) {
-  return <IntegerDropdown options={primesInRange(3, 10000)} {...props}/>;
+  return (
+    <IntegerDropdown
+      options={primesInRange(3, 10000)}
+      style={{backgroundColor: COLORS.publicModulus}}
+      {...props}
+    />);
 }
 PublicModulusDropdown.propTypes = {
   value: React.PropTypes.number,
@@ -76,3 +81,20 @@ GoButton.propTypes = {
   onClick: React.PropTypes.func.isRequired,
   disabled: React.PropTypes.bool
 };
+
+function Keyword(props) {
+  const keywordStyle = {
+    backgroundColor: props.color,
+    fontWeight: 'bold',
+    padding: 3
+  };
+  return <span style={keywordStyle}>{props.children}</span>;
+}
+Keyword.propTypes = {
+  color: React.PropTypes.string.isRequired,
+  children: React.PropTypes.string.isRequired
+};
+
+export function KeywordPublicModulus() {
+  return <Keyword color={COLORS.publicModulus}>public modulus</Keyword>;
+}

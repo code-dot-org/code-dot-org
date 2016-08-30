@@ -4,7 +4,12 @@ import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {PublicModulusDropdown, SecretNumberDropdown, GoButton} from './cryptographyFields';
+import {
+  PublicModulusDropdown,
+  SecretNumberDropdown,
+  GoButton,
+  KeywordPublicModulus
+} from './cryptographyFields';
 
 const Bob = React.createClass({
   propTypes: {
@@ -77,7 +82,7 @@ const Bob = React.createClass({
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
           <div>
-            Enter public modulus:
+            Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
