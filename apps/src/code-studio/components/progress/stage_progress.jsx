@@ -25,7 +25,7 @@ const styles = {
  */
 const StageProgress = React.createClass({
   propTypes: {
-    stageId: React.PropTypes.string,
+    stageId: React.PropTypes.number,
     levels: stageProgressShape,
     courseOverviewPage: React.PropTypes.bool
   },

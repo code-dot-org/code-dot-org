@@ -153,7 +153,7 @@ export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
     courseOverviewPage: React.PropTypes.bool,
-    stageId: React.PropTypes.string.isRequired,
+    stageId: React.PropTypes.number.isRequired,
 
     // redux provdied
     overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
