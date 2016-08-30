@@ -7,6 +7,8 @@ if ENV['CI']
   system('git config --global user.name "CircleCI"')
 end
 
+puts "Merging base branch #{GitUtils.pr_base_branch_or_default_no_origin}"
+
 system("git merge --no-edit origin/#{GitUtils.pr_base_branch_or_default_no_origin}")
 
 exit($?.exitstatus)
