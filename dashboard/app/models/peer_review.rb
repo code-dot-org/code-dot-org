@@ -147,8 +147,8 @@ class PeerReview < ActiveRecord::Base
 
   def self.get_review_completion_status(user, script)
     if user &&
-        script.has_peer_reviews? &&
-        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+       script.has_peer_reviews? &&
+       Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
       reviews_done = PeerReview.where(reviewer: user, script: script, status: PeerReview.statuses.values).size
 
       if reviews_done >= script.peer_reviews_to_complete
@@ -163,13 +163,13 @@ class PeerReview < ActiveRecord::Base
 
   def self.get_peer_review_summaries(user, script)
     if user &&
-        script.has_peer_reviews? &&
-        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+       script.has_peer_reviews? &&
+       Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
 
       PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
         if script.peer_reviews_to_complete &&
-            reviews.size < script.peer_reviews_to_complete &&
-            PeerReview.get_potential_reviews(script, user).any?
+           reviews.size < script.peer_reviews_to_complete &&
+           PeerReview.get_potential_reviews(script, user).any?
           reviews << {
               status: 'not_started',
               name: I18n.t('peer_review.review_new_submission'),

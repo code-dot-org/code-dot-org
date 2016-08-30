@@ -247,7 +247,7 @@ class AdminReportsController < ApplicationController
     SeamlessDatabasePool.use_persistent_read_connection do
       @all_scripts_names_ids = Script.order(:id).pluck(:name, :id).to_h
       selected_scripts_names = params[:selected_scripts_names] ||
-        ["20-hour", "course1", "course2", "course3", "course4"]
+                               ["20-hour", "course1", "course2", "course3", "course4"]
       @selected_scripts_names_ids = @all_scripts_names_ids.select{|name, _id| selected_scripts_names.include? name}
 
       # Get the cached retention_stats from the DB, trimming those stats to only the selected

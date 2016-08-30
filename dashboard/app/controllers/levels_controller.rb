@@ -61,7 +61,7 @@ class LevelsController < ApplicationController
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
     can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
-        @level.properties['solution_blocks']
+                              @level.properties['solution_blocks']
     should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
@@ -104,8 +104,8 @@ class LevelsController < ApplicationController
   # PATCH/PUT /levels/1.json
   def update
     if level_params[:name] &&
-        @level.name != level_params[:name] &&
-        @level.name.downcase == level_params[:name].downcase
+       @level.name != level_params[:name] &&
+       @level.name.downcase == level_params[:name].downcase
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       render json: @level.errors, status: :unprocessable_entity

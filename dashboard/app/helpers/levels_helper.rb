@@ -67,7 +67,7 @@ module LevelsHelper
 
   def use_firebase
     !!@level.game.use_firebase_for_new_project? ||
-        !!(request.parameters && request.parameters['useFirebase'])
+      !!(request.parameters && request.parameters['useFirebase'])
   end
 
   def select_and_track_autoplay_video
@@ -415,7 +415,7 @@ module LevelsHelper
 
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+                                (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share

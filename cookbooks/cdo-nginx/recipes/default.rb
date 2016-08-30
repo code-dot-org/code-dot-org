@@ -21,7 +21,7 @@ end
 # Otherwise, create a self-signed certificate.
 node.default['ssl_certificate']['service']['compatibility'] = 'modern'
 ssl_cert_provided = node['cdo-nginx']['ssl_key']['content'] != '' &&
-  node['cdo-nginx']['ssl_cert']['content'] != ''
+                    node['cdo-nginx']['ssl_cert']['content'] != ''
 
 cert = ssl_certificate 'cdo-nginx' do
   namespace node['cdo-nginx']

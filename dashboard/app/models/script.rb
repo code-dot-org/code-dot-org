@@ -488,12 +488,12 @@ class Script < ActiveRecord::Base
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect{|s| s.name == stage_name} ||
-          Stage.find_or_create_by(
-            name: stage_name,
-            script: script,
-          ) do |s|
-            s.relative_position = 0 # will be updated below, but cant be null
-          end
+                Stage.find_or_create_by(
+                  name: stage_name,
+                  script: script,
+                ) do |s|
+                  s.relative_position = 0 # will be updated below, but cant be null
+                end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?

@@ -20,10 +20,10 @@ def analyze_day_fast(date)
   weighted_count = "SUM(" \
     " IF(session REGEXP '^_.*_'," +
     # Parses the session weight 'xyz' from the session '_xyz_abcdefghijk'.
-    "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
+                   "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
     # The session does not specify the session weight, default to one.
-    "   1)" \
-    " ) AS count"
+                   "   1)" \
+                   " ) AS count"
   from_where = "FROM hoc_activity" \
     " WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" \
     "   OR (pixel_started_at >= '#{day}' AND pixel_started_at < '#{next_day}')"

@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
 
     if request.formats.include?("image/*") &&
-        (request.user_agent.include?("Edmodo") || request.user_agent.include?("weebly-agent"))
+       (request.user_agent.include?("Edmodo") || request.user_agent.include?("weebly-agent"))
       request.formats.append Mime[:html]
     end
   end
@@ -172,9 +172,9 @@ class ApplicationController < ActionController::Base
       # additional logic in the blockly code because blockly owns
       # which levels are worth saving)
       if options[:level_source].try(:id) &&
-          options[:solved?] &&
-          options[:activity] &&
-          options[:level_source_image]
+         options[:solved?] &&
+         options[:activity] &&
+         options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
       end
     end

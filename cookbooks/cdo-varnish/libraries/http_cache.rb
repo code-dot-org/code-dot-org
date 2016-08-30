@@ -67,15 +67,15 @@ class HttpCache
               /private*
             ) +
             # TODO: Collapse these paths into /private to simplify Pegasus caching config.
-            %w(
-              /create-company-profile*
-              /edit-company-profile*
-              /teacher-dashboard*
-              /manage-professional-development-workshops*
-              /professional-development-workshop-surveys*
-              /ops-dashboard*
-              /poste*
-            ),
+              %w(
+                /create-company-profile*
+                /edit-company-profile*
+                /teacher-dashboard*
+                /manage-professional-development-workshops*
+                /professional-development-workshop-surveys*
+                /ops-dashboard*
+                /poste*
+              ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },

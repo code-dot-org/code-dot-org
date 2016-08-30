@@ -18,13 +18,13 @@ def build_demographic_breakdowns(baseline)
   comparison = baseline.where("current_sign_in_at - created_at > ?", "interval '30 days'")
   students = comparison.count.to_f / [1, baseline.count].max.to_f
   female_students = comparison.where(gender: 'f').count.to_f /
-    [1, baseline.where(gender: 'f').count].max.to_f
+                    [1, baseline.where(gender: 'f').count].max.to_f
   male_students = comparison.where(gender: 'm').count.to_f /
-    [1, baseline.where(gender: 'm').count].max.to_f
+                  [1, baseline.where(gender: 'm').count].max.to_f
   us_students = comparison.where(locale: 'en-us').count.to_f /
-    [1, baseline.where(locale: 'en-us').count].max.to_f
+                [1, baseline.where(locale: 'en-us').count].max.to_f
   non_us_students = comparison.exclude(locale: 'en-us').count.to_f /
-    [1, baseline.exclude(locale: 'en-us').count].max.to_f
+                    [1, baseline.exclude(locale: 'en-us').count].max.to_f
   return {
     students: students,
     female_students: female_students,
