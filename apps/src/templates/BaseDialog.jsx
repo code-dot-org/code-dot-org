@@ -39,6 +39,11 @@ var BaseDialog = React.createClass({
     }
   },
 
+  /** @returns {Array.<Element>} */
+  getButtons() {
+    return [].slice.call(this.refs.dialog.getElementsByTagName('button'));
+  },
+
   focusDialog: function () {
     // Don't steal focus if the active element is already a descendant of the
     // dialog - prevents focus loss on updates of open BaseDialog components.
