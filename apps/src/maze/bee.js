@@ -52,8 +52,8 @@ export default class Bee extends Gatherer {
   /**
    * @override
    */
-  createGridItemDrawer() {
-    return new BeeItemDrawer(this.maze_.map, this.skin_, this);
+  createDrawer() {
+    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, this);
   }
 
   /**
@@ -74,9 +74,9 @@ export default class Bee extends Gatherer {
         };
       }
     }
-    if (this.maze_.gridItemDrawer) {
-      this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
-      this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+    if (this.drawer) {
+      this.drawer.updateNectarCounter(this.nectars_);
+      this.drawer.updateHoneyCounter(this.honey_);
     }
     super.reset();
   }
@@ -439,8 +439,8 @@ export default class Bee extends Gatherer {
     this.playAudio_('nectar');
     this.gotNectarAt(row, col);
 
-    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
-    this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
+    this.drawer.updateItemImage(row, col, true);
+    this.drawer.updateNectarCounter(this.nectars_);
   }
 
   animateMakeHoney() {
@@ -455,9 +455,9 @@ export default class Bee extends Gatherer {
     this.playAudio_('honey');
     this.madeHoneyAt(row, col);
 
-    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
+    this.drawer.updateItemImage(row, col, true);
 
-    this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+    this.drawer.updateHoneyCounter(this.honey_);
   }
 
   /**
@@ -474,6 +474,19 @@ export default class Bee extends Gatherer {
     }
 
     return randomValue(tileChoices);
+  }
+
+  /**
+   * @override
+   */
+  drawTile(svg, tileSheetLocation, row, col, tileId) {
+    super.drawTile(svg, tileSheetLocation, row, col, tileId);
+
+    // Draw checkerboard
+    if ((row + col) % 2 === 0) {
+      const isPath = !this.isWallOrOutOfBounds_(col, row);
+      this.drawer.addCheckerboardTile(row, col, isPath);
+    }
   }
 
 }

@@ -25377,10 +25377,13 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   return code
 };
 Blockly.Generator.xmlToCode = function(name, xml) {
+  var blocks = Blockly.Generator.xmlToBlocks(name, xml);
+  return Blockly.Generator.blocksToCode(name, blocks)
+};
+Blockly.Generator.xmlToBlocks = function(name, xml) {
   var div = document.createElement("div");
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
-  var blocks = blockSpace.getTopBlocks(true);
-  return Blockly.Generator.blocksToCode(name, blocks)
+  return blockSpace.getTopBlocks(true)
 };
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;

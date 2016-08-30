@@ -100,19 +100,31 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
 };
 
 /**
- * Generate code for all blocks defined by the given xml. Creates a
- * temporary readOnly BlockSpace to load the blocks into.
+ * Generate code for all blocks defined by the given xml.
+ * @see Blockly.Generator.xmlToBlocks
  * @param {string} name Language name (e.g. 'JavaScript').
  * @param {!Element} xml XML block
  *   blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string} Generated code.
  */
 Blockly.Generator.xmlToCode = function(name, xml) {
+  var blocks = Blockly.Generator.xmlToBlocks(name, xml);
+  return Blockly.Generator.blocksToCode(name, blocks);
+};
+
+/**
+ * Generate all blocks defined by the given xml. Creates a
+ * temporary readOnly BlockSpace to load the blocks into.
+ * @param {string} name Language name (e.g. 'JavaScript').
+ * @param {!Element} xml XML block
+ *   blocks, defaults to true. Nested blocks always inherit visibility.
+ * @return {string} Generated code.
+ */
+Blockly.Generator.xmlToBlocks = function(name, xml) {
   var div = document.createElement('div');
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
-  var blocks = blockSpace.getTopBlocks(true);
-  return Blockly.Generator.blocksToCode(name, blocks);
-}
+  return blockSpace.getTopBlocks(true);
+};
 
 /**
  * Generate code for all blocks in the blockSpace to the specified language.
