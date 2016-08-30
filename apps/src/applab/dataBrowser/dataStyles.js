@@ -6,7 +6,8 @@ import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
-const buttonCellWidth = 142;
+const addButtonCellWidth = 92;
+const editButtonCellWidth = 142;
 
 export const row = {
   height: rowHeight,
@@ -18,9 +19,16 @@ export const cell = {
   fontSize: 14
 };
 
-export const buttonCell = [cell, {
-  width: buttonCellWidth,
+export const addButtonCell = [cell, {
+  minWidth: addButtonCellWidth,
   backgroundColor: color.lightest_teal,
+  width: addButtonCellWidth,
+}];
+
+export const editButtonCell = [cell, {
+  minWidth: editButtonCellWidth,
+  backgroundColor: color.lightest_teal,
+  width: editButtonCellWidth,
 }];
 
 export const headerCell = {
