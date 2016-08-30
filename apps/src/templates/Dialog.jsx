@@ -145,15 +145,15 @@ const Dialog = React.createClass({
   }),
 
   handleKeyDown(event) {
-    // Focus the next button when tab is pressed, to prevent the
+    // Focus the next button, input or link when tab is pressed, to prevent the
     // user from selecting elements outside of the dialog.
     if (event.key === 'Tab') {
-      const buttons = this.refs.baseDialog.getButtons();
-      if (buttons.length) {
-        // Focus the next button, or the first button if none is focused.
-        const curIndex = buttons.findIndex(btn => btn === document.activeElement);
-        const nextIndex = (curIndex + 1) % buttons.length;
-        buttons[nextIndex].focus();
+      const elements = this.baseDialog.getTabbableElements();
+      if (elements.length) {
+        // Focus the next element, or the first element if none is focused.
+        const curIndex = elements.findIndex(btn => btn === document.activeElement);
+        const nextIndex = (curIndex + 1) % elements.length;
+        elements[nextIndex].focus();
       }
       event.preventDefault();
     }
@@ -194,7 +194,11 @@ const Dialog = React.createClass({
       children.push(<Footer key="footer">{this.props.footer}</Footer>);
     }
     return (
-      <BaseDialog {...this.props} ref="baseDialog" handleKeyDown={this.handleKeyDown}>
+      <BaseDialog
+        {...this.props}
+        ref={baseDialog => this.baseDialog = baseDialog}
+        handleKeyDown={this.handleKeyDown}
+      >
         {children}
       </BaseDialog>
     );
