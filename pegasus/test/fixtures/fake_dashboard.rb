@@ -2,6 +2,26 @@ require 'active_support'
 require 'active_record'
 require 'sequel'
 
+# Monkey-patch the SQLite connection adapter to ignore MySQL-specific schema creation statements.
+module ActiveRecord
+  module ConnectionAdapters
+    module SQLite3
+      class SchemaCreation < AbstractAdapter::SchemaCreation
+        private
+
+        def add_table_options!(create_sql, options)
+          if (options_sql = options[:options])
+            options_sql.gsub!(/ENGINE=\w+/, '')
+            options_sql.gsub!(/DEFAULT CHARSET=\w+/, '')
+            options_sql.gsub!(/COLLATE=\w+/, '')
+            create_sql << " #{options_sql}"
+          end
+        end
+      end
+    end
+  end
+end
+
 #
 # Provides a fake Dashboard database with some fake data to test against.
 #

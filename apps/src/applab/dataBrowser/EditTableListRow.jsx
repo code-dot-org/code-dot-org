@@ -1,4 +1,3 @@
-import ConfirmDeleteButton from './ConfirmDeleteButton';
 import { DataView } from '../constants';
 import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
@@ -18,8 +17,10 @@ const EditTableListRow = React.createClass({
   },
 
   handleDelete() {
-    this.props.onTableDelete(this.props.tableName);
-    FirebaseStorage.deleteTable(this.props.tableName);
+    if (confirm('Do you really want to delete this entire table? You cannot undo this action.')) {
+      this.props.onTableDelete(this.props.tableName);
+      FirebaseStorage.deleteTable(this.props.tableName);
+    }
   },
 
   render() {
@@ -29,13 +30,12 @@ const EditTableListRow = React.createClass({
           <EditLink name={this.props.tableName} onClick={this.handleEdit}/>
         </td>
         <td style={dataStyles.cell}>
-          <ConfirmDeleteButton
-            title="Delete table"
-            body="Do you really want to delete this entire table? You cannot undo this action."
-            buttonText="Delete"
-            containerStyle={{width: 103}}
-            onConfirm={this.handleDelete}
-          />
+          <button
+            style={dataStyles.redButton}
+            onClick={this.handleDelete}
+          >
+            Delete
+          </button>
         </td>
       </tr>
     );

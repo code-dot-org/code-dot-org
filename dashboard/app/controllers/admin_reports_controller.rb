@@ -155,7 +155,7 @@ class AdminReportsController < ApplicationController
       metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
       filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
       if params[:filter].present?
-        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_', '/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
 
@@ -308,7 +308,7 @@ class AdminReportsController < ApplicationController
   # Returns nil if the hash is blank.
   def build_row_arrays(count_stats)
     # Determine the number of final number of rows, being the maximum array size in the hash.
-    array_length = count_stats.max_by{|_k,v| v.size}[1].size
+    array_length = count_stats.max_by{|_k, v| v.size}[1].size
 
     # Initialize and construct the row_arrays.
     row_arrays = Array.new(array_length) {Array.new(count_stats.size + 1, 0)}

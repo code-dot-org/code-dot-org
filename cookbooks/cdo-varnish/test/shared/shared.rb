@@ -75,7 +75,7 @@ module Cdo
           request: {
             method: method,
             url: url,
-            headers: Hash[*request_headers.map{|k, v| [k,{equalTo: v}]}.flatten]
+            headers: Hash[*request_headers.map{|k, v| [k, {equalTo: v}]}.flatten]
           },
           response: {
             status: 200,
@@ -96,7 +96,7 @@ module Cdo
 
       def _request(url, headers={}, cookies={}, method='GET')
         header_string = headers.map { |key, value| "-H \"#{key}: #{value}\"" }.join(' ')
-        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k,v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
+        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k, v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
         `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap{assert_equal 0, $?.exitstatus, "bad url:#{url}"}
       end
 
@@ -211,7 +211,7 @@ module HttpCacheIntegrationTest
       include helpers
       before { init(cloudfront) }
       it 'redirects HTTP to HTTPS' do
-        response = proxy_request('/https',{'X-Forwarded-Proto' => 'none'})
+        response = proxy_request('/https', {'X-Forwarded-Proto' => 'none'})
         assert_equal 301, code(response)
         location = /Location: ([^\s]+)/.match(response)[1]
         assert_match /https:\/\/.*\/https/, location

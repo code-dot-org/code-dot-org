@@ -44,6 +44,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render :full
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
+
+      @enrollment.school_info_attributes = school_info_params
+
       if @enrollment.update enrollment_params
         Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
@@ -111,6 +114,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
     @enrollment = get_workshop_user_enrollment
     @enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
+    @enrollment.school_info_attributes = school_info_params
 
     if @enrollment.valid? && Digest::MD5.hexdigest(@enrollment.email) != current_user.hashed_email
       @enrollment.errors[:email] = "must match your login. If you want to use this email instead, \
@@ -164,11 +168,17 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :name,
       :email,
       :email_confirmation,
+      :school
+    )
+  end
+
+  def school_info_params
+    params.require(:school_info).permit(
       :school_type,
       :school_state,
       :school_district_id,
       :school_zip,
-      :school
+      :school_district_other
     )
   end
 end
