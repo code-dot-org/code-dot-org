@@ -19,7 +19,8 @@ import reducer, {
   lockStage,
   BEGIN_SAVE,
   FINISH_SAVE,
-  CLOSE_LOCK_DIALOG
+  CLOSE_LOCK_DIALOG,
+  fullyLockedStageMapping
 } from '@cdo/apps/code-studio/stageLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
@@ -365,5 +366,119 @@ describe('saveLockDialog', () => {
 
     assert.equal(firstAction.type, BEGIN_SAVE);
     assert.equal(secondAction.type, FINISH_SAVE);
+  });
+});
+
+describe('fullyLockedStageMapping', () => {
+  const sections = {
+    // all stages fully locked
+    "11": {
+      section_id: 11,
+      section_name: "fully locked",
+      stages: {
+        "1360": [{
+          // Note: Actual state has more fields, I've filtered to just those
+          // that we care about, for simplicity
+          name: 'student1',
+          locked: true
+        }, {
+          name: 'student2',
+          locked: true
+        }],
+        "1361": [{
+          name: 'student1',
+          locked: true
+        }, {
+          name: 'student2',
+          locked: true
+        }],
+      }
+    },
+    // no stages fully locked
+    "12": {
+      section_id: 12,
+      section_name: "not fully locked",
+      stages: {
+        // some students are locked, others arent
+        "1360": [{
+          name: 'student1',
+          locked: false
+        }, {
+          name: 'student2',
+          locked: true
+        }],
+        // entirely unlocked
+        "1361": [{
+          name: 'student1',
+          locked: false
+        }, {
+          name: 'student2',
+          locked: false
+        }]
+      }
+    },
+    // mix of fully locked stages and not
+    "13": {
+      section_id: 12,
+      section_name: "not fully locked",
+      stages: {
+        "1360": [{
+          name: 'student1',
+          locked: true
+        }, {
+          name: 'student2',
+          locked: true
+        }],
+        // entirely unlocked
+        "1361": [{
+          name: 'student1',
+          locked: true
+        }, {
+          name: 'student2',
+          locked: false
+        }]
+      }
+    }
+  };
+
+  it('maps to true for fully locked stages', () => {
+    const state = {
+      sections: sections,
+      selectedSection: "11"
+    };
+    assert.deepEqual(fullyLockedStageMapping(state), {
+      "1360": true,
+      "1361": true
+    });
+  });
+
+  it('maps to false for non-fully locked stages', () => {
+    const state = {
+      sections: sections,
+      selectedSection: "12"
+    };
+    assert.deepEqual(fullyLockedStageMapping(state), {
+      "1360": false,
+      "1361": false
+    });
+  });
+
+  it('works when some of our stages are locked and others arent', () => {
+    const state = {
+      sections: sections,
+      selectedSection: "13"
+    };
+    assert.deepEqual(fullyLockedStageMapping(state), {
+      "1360": true,
+      "1361": false
+    });
+  });
+
+  it('returns an empty object if no selectedSection', () => {
+    const state = {
+      sections: sections,
+      selectedSection: undefined
+    };
+    assert.deepEqual(fullyLockedStageMapping(state), {});
   });
 });
