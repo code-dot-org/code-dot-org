@@ -2608,22 +2608,6 @@ var registerHandlersWithMultipleSpriteParams =
   }
 };
 
-//
-// Generates code with user-generated function definitions and evals that code
-// so these can be called from event handlers. This should be called for each
-// block type that defines functions.
-//
-
-var defineProcedures = function (blockType) {
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
-  try {
-    codegen.evalWith(code, {
-      Studio: api,
-      Globals: Studio.Globals
-    }, true);
-  } catch (e) { }
-};
-
 /**
  * Looks for failures that should prevent execution in blockly mode.
  * @returns {boolean} True if we have a pre-execution failure
