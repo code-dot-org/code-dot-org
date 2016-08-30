@@ -1,6 +1,3 @@
-- content_for :head do
-  = javascript_include_tag 'js/teacher'
-
 - if current_user.try(:teacher?) && @script_level
 
   .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] ? '' : 'hidden'}
@@ -96,3 +93,5 @@
                     = student.name
                     - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
                       %i.fa.fa-users.pair-programming-icon
+  :javascript
+    $(document).ready(window.dashboard.teacher.onReady);

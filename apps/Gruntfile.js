@@ -451,13 +451,6 @@ module.exports = function (grunt) {
       },
       provides: ['react', 'react-dom', 'radium']
     },
-
-    {
-      uniqueName: 'teacher',
-      entries: {
-        teacher: './src/code-studio/teacher.js'
-      }
-    }
   ];
 
   // Create a config for each of our bundles
