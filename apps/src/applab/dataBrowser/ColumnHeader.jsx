@@ -119,6 +119,7 @@ const ColumnHeader = React.createClass({
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
+      minWidth: 80,
     }];
     return (
       <th style={dataStyles.headerCell}>
