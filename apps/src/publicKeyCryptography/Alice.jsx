@@ -15,6 +15,7 @@ import {
   KeywordSecretNumber
 } from './cryptographyFields';
 import {computePublicKey} from './cryptographyMath';
+import {COLORS} from './style';
 
 const Alice = React.createClass({
   propTypes: {
@@ -121,6 +122,7 @@ const Alice = React.createClass({
               value={publicNumber}
               onChange={this.setPublicNumber}
               disabled={disabled}
+              color={COLORS.publicNumber}
             />
           </div>
           <div>
