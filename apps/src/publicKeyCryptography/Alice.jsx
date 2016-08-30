@@ -114,7 +114,7 @@ const Alice = React.createClass({
               onChange={this.onPrivateKeyChange}
               disabled={disabled}
             />
-            <div>Your computed <KeywordPublicKey/> is <IntegerField value={publicKey}/></div>
+            <div>Your computed <KeywordPublicKey/> is <IntegerField color={COLORS.publicKey} value={publicKey}/></div>
           </div>
           <div>
             Enter Bob's <KeywordPublicNumber/>:
@@ -128,14 +128,19 @@ const Alice = React.createClass({
           <div>
             Calculate Bob's <KeywordSecretNumber/>.
             <div>
-              (<IntegerField value={publicNumber}/> x <IntegerField value={privateKey}/>) MOD <IntegerField value={publicModulus}/>
+              (
+              <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
+              {' x '}
+              <IntegerField color={COLORS.privateKey} value={privateKey}/>
+              {') MOD '}
+              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
               <GoButton
                 onClick={this.computeSecretNumber}
                 disabled={disabled}
               />
             </div>
             <div>
-              Bob's <KeywordSecretNumber/> is <IntegerField value={secretNumber}/>!
+              Bob's <KeywordSecretNumber/> is <IntegerField color={COLORS.secretNumber} value={secretNumber}/>!
             </div>
           </div>
         </NumberedSteps>

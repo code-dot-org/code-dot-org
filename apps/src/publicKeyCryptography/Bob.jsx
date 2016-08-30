@@ -115,14 +115,19 @@ const Bob = React.createClass({
           <div>
             Calculate your <KeywordPublicNumber/>:
             <div>
-              (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
+              (
+              <IntegerField color={COLORS.publicKey} value={publicKey}/>
+              {' x '}
+              <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+              {') MOD '}
+              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
               <GoButton
                 onClick={this.computePublicNumber}
                 disabled={disabled}
               />
             </div>
             <div>
-              Your computed <KeywordPublicNumber/> is <IntegerField value={publicNumber}/>
+              Your computed <KeywordPublicNumber/> is <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
             </div>
           </div>
         </NumberedSteps>
