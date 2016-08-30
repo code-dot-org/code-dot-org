@@ -301,7 +301,7 @@ class ApiController < ApplicationController
           level_results << level_result
         end
 
-        submitted = user_level.try(:submitted)
+        submitted = user_level[:submitted]
 
         timestamp = user_level[:updated_at].to_formatted_s
 
