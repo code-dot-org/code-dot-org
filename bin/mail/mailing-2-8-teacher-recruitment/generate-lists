@@ -87,7 +87,7 @@ REGIONS.each do |region_name, region|
     region_results.merge! query_teachers_with_location(entry[:city], entry[:state])
   end
   initial_count = region_results.length
-  region_results.reject! {|email,_| EXCLUDED_EMAILS.include? email}
+  region_results.reject! {|email, _| EXCLUDED_EMAILS.include? email}
   final_count = region_results.length
 
   region[:counts] = {final: final_count, excluded: initial_count - final_count}

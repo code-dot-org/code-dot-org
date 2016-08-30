@@ -365,10 +365,6 @@ FactoryGirl.define do
     sequence(:hint) { |n| "Hint #{n}" }
   end
 
-  factory :activity_hint do
-    activity
-  end
-
   factory :user_level do
     user {create :student}
     level {create :applab}

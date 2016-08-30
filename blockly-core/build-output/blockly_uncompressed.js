@@ -1267,7 +1267,9 @@ Blockly.BlockSvg.prototype.initChildren = function() {
   }
   this.svgPathLight_ = Blockly.createSvgElement("path", {"class":"blocklyPathLight"}, this.svgGroup_);
   this.svgPath_.tooltip = this.block_;
-  Blockly.Tooltip.bindMouseEvents(this.svgPath_);
+  if(!this.block_.blockSpace.blockSpaceEditor.disableTooltip) {
+    Blockly.Tooltip.bindMouseEvents(this.svgPath_)
+  }
   this.updateMovable()
 };
 Blockly.BlockSvg.DISABLED_COLOUR = "#808080";
@@ -6423,7 +6425,7 @@ Blockly.BlockSpace.createReadOnlyBlockSpace = function(container, xml, opt_optio
     return metrics
   }, setMetrics:function(xyRatio) {
     Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio)
-  }, hideTrashRect:true, readOnly:true, noScrolling:opt_options.noScrolling});
+  }, hideTrashRect:true, readOnly:true, disableTooltip:true, noScrolling:opt_options.noScrolling});
   var blockSpace = blockSpaceEditor.blockSpace;
   Blockly.Xml.domToBlockSpace(blockSpace, xml);
   return blockSpace
@@ -14648,7 +14650,9 @@ Blockly.FieldLabel.prototype.init = function(block) {
   this.sourceBlock_ = block;
   block.getSvgRoot().appendChild(this.textElement_);
   this.textElement_.tooltip = this.sourceBlock_;
-  Blockly.Tooltip && Blockly.Tooltip.bindMouseEvents(this.textElement_)
+  if(!this.sourceBlock_.blockSpace.blockSpaceEditor.disableTooltip) {
+    Blockly.Tooltip && Blockly.Tooltip.bindMouseEvents(this.textElement_)
+  }
 };
 Blockly.FieldLabel.prototype.getSize = function() {
   if(!this.size_.width && !this.forceWidth_) {
@@ -15837,12 +15841,12 @@ Blockly.Block.prototype.setIsUnused = function(isUnused) {
   if(isUnused === undefined) {
     isUnused = this.previousConnection !== null && (this.isUserVisible() && (this.type !== "functional_definition" && (Blockly.mainBlockSpace && (Blockly.mainBlockSpace.isReadOnly() === false && Blockly.mainBlockSpace.isTopBlock(this)))))
   }
-  if(Blockly.showUnusedBlocks) {
-    this.svg_.setIsUnused(isUnused)
+  if(Blockly.showUnusedBlocks && isUnused !== this.svg_.isUnused()) {
+    this.svg_.setIsUnused(isUnused);
+    this.childBlocks_.forEach(function(block) {
+      block.setIsUnused(false)
+    })
   }
-  this.childBlocks_.forEach(function(block) {
-    block.setIsUnused(false)
-  })
 };
 Blockly.Block.prototype.setFunctional = function(isFunctional, options) {
   this.blockSvgClass_ = isFunctional ? Blockly.BlockSvgFunctional : Blockly.BlockSvg;
@@ -19979,6 +19983,9 @@ Blockly.BlockSpaceEditor = function(container, opt_options) {
   if(opt_options.hideTrashRect) {
     this.hideTrashRect_ = opt_options.hideTrashRect
   }
+  if(opt_options.disableTooltip) {
+    this.disableTooltip = opt_options.disableTooltip
+  }
   this.readOnly_ = !!opt_options.readOnly;
   this.noScrolling_ = !!opt_options.noScrolling;
   this.blockSpace = new Blockly.BlockSpace(this, goog.bind(this.getBlockSpaceMetrics_, this), goog.bind(this.setBlockSpaceMetrics_, this), container);
@@ -20052,7 +20059,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
       }
     }
   };
-  svg.appendChild(Blockly.Tooltip.createDom());
+  if(!this.disableTooltip) {
+    svg.appendChild(Blockly.Tooltip.createDom())
+  }
   this.svgResize();
   if(!Blockly.WidgetDiv.DIV) {
     Blockly.WidgetDiv.DIV = goog.dom.createDom("div", "blocklyWidgetDiv");
@@ -25368,10 +25377,13 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   return code
 };
 Blockly.Generator.xmlToCode = function(name, xml) {
+  var blocks = Blockly.Generator.xmlToBlocks(name, xml);
+  return Blockly.Generator.blocksToCode(name, blocks)
+};
+Blockly.Generator.xmlToBlocks = function(name, xml) {
   var div = document.createElement("div");
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
-  var blocks = blockSpace.getTopBlocks(true);
-  return Blockly.Generator.blocksToCode(name, blocks)
+  return blockSpace.getTopBlocks(true)
 };
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;

@@ -19,7 +19,7 @@ class SharedResources < Sinatra::Base
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
 
-    set :image_extnames, ['.png','.jpeg','.jpg','.gif']
+    set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :javascript_extnames, ['.js']
     set_max_age :image, ONE_HOUR * 10
     set_max_age :image_proxy, ONE_HOUR * 5

@@ -8,13 +8,6 @@ import ReactTestUtils from 'react-addons-test-utils';
 import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/progress_dot';
 import color from '@cdo/apps/color';
 
-/**
- * Combine the given styles array like Radium.
- */
-function radiumHelper(styles) {
-  return Object.assign({}, ...styles);
-}
-
 describe('ProgressDot component tests', () => {
   let renderer, level;
 
@@ -48,7 +41,7 @@ describe('ProgressDot component tests', () => {
 
     const result = renderer.getRenderOutput();
     expect(result.props.onClick).to.not.be.a('function');
-    expect(radiumHelper(result.props.children[0].props.style).borderColor).to.equal(color.level_current);
+    expect(result.props.children[0].props.style.borderColor).to.equal(color.level_current);
   });
 
   it('does not highlight the current level in single-stage view', () => {
@@ -57,20 +50,12 @@ describe('ProgressDot component tests', () => {
     );
 
     const result = renderer.getRenderOutput();
-    expect(radiumHelper(result.props.children[0].props.style).borderColor).to.equal(color.lighter_gray);
-  });
-
-  it('bubble interior renders level title if not on overview page and not showing an icon', () => {
-    const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={false} showingIcon={false} showingLevelName={true} />
-    );
-
-    expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('1');
+    expect(result.props.children[0].props.style.borderColor).to.equal(color.lighter_gray);
   });
 
   it('bubble interior renders title if not showing level name nor level icon', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={false} showingLevelName={false} />
+      <BubbleInterior title={level.title} showingIcon={false} showingLevelName={false} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('1');
@@ -78,7 +63,7 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders nothing for named levels with icons', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={true} showingLevelName={true} />
+      <BubbleInterior title={level.title} showingIcon={true} showingLevelName={true} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('');
@@ -86,7 +71,7 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders &nbsp for named levels without icons', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={false} showingLevelName={true} />
+      <BubbleInterior title={level.title} showingIcon={false} showingLevelName={true} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('&nbsp;');
