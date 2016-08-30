@@ -230,11 +230,6 @@ Style/RegexpLiteral:
 Style/RescueModifier:
   Enabled: false
 
-# Offense count: 180
-# Cop supports --auto-correct.
-Style/SpaceAfterComma:
-  Enabled: false
-
 # Offense count: 197
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.

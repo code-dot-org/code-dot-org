@@ -23,7 +23,7 @@ class String
 
   # Returns each instance of left concatted with each instance of right.
   # So: ['a','b'], ['c','d'] becomes ['ac', 'ad', 'bc', 'bd']
-  def self.multiply_concat(left,right)
+  def self.multiply_concat(left, right)
     left = [left] unless left.is_a?(Enumerable)
     right = [right] unless right.is_a?(Enumerable)
     left.map{|l| right.map{|r| l.to_s + r.to_s}}.flatten

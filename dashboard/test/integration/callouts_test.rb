@@ -2,6 +2,7 @@ require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
+    Script.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @maze_data = {game_id: 25, user_id: 1, name: '__bob4', level_num: 'custom', skin: 'birds', instructions: 'sdfdfs'}
     @level = Maze.create(@maze_data)
@@ -30,7 +31,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
   end
 
   def got_callouts(callouts)
-    assert_equal (callouts ? @expected_callouts : []), assigns(:view_options).try(:[],:callouts)
+    assert_equal (callouts ? @expected_callouts : []), assigns(:view_options).try(:[], :callouts)
   end
 
   test 'remember that we saw callouts in script_levels/show' do
