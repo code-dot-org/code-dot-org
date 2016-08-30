@@ -180,7 +180,7 @@ def query_all_emails_at_domain(domain)
   puts "Emails at #{domain}"
 
   {}.tap do |results|
-    DB[:contacts].where(Sequel.ilike(:email,"%@#{domain}")).distinct.select(:name, :email).each do |contact|
+    DB[:contacts].where(Sequel.ilike(:email, "%@#{domain}")).distinct.select(:name, :email).each do |contact|
       contact[:international] = false
       email = contact[:email]
       results[email] = contact unless UNSUBSCRIBERS[email] || ALL[email] # don't override duplicates

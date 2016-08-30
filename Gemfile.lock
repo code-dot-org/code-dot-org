@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/islemaster/redis-slave-read.git
-  revision: 5b4532aff91cd914a6347103f9b0252fdf9c82e5
-  ref: master
+  revision: 8be4014cf7c9d2ea09ac479979cb5396e74835dc
+  ref: start-with-random-node
   specs:
     redis-slave-read (0.2.1)
       connection_pool

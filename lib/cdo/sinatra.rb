@@ -9,7 +9,7 @@ class Sinatra::Base
     Mustermann.new(path, opts)
   end
 
-  def self.get_or_post(url,&block)
+  def self.get_or_post(url, &block)
     get(url, &block)
     post(url, &block)
   end
