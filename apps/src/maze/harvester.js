@@ -16,8 +16,8 @@ export default class Harvester extends Gatherer {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new HarvesterDrawer(this.maze_.map, this.skin_, this);
+  createGridItemDrawer() {
+    return new HarvesterDrawer(this.maze_.map, this.skin_, this);
   }
 
   hasCorn(id) {
@@ -131,7 +131,7 @@ export default class Harvester extends Gatherer {
     this.playAudio_('harvest');
     this.gotCropAt(row, col);
 
-    this.drawer.updateItemImage(row, col, true);
+    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
   }
 
   /**
