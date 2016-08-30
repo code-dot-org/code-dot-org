@@ -96,4 +96,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop.section.add_student teacher
     assert enrollment.in_section?
   end
+
+  test 'skip_school_validation' do
+    enrollment = create :pd_enrollment
+
+    enrollment.school = nil
+    enrollment.school_info = nil
+    refute enrollment.valid?
+    assert 2, enrollment.errors.count
+
+    enrollment.skip_school_validation = true
+    assert enrollment.valid?
+  end
 end

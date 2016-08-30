@@ -31,10 +31,16 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :school_info
   belongs_to :user
 
+  # Allow overriding the school and school_info requirements.
+  attr_accessor :skip_school_validation
+
+  validates_presence_of :school, unless: :skip_school_validation
+  validates_presence_of :school_info, unless: :skip_school_validation
+
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates :name, :email, :school, presence: true
+  validates :name, :email, presence: true
   validates_confirmation_of :email
 
   def has_user?
