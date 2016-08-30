@@ -43,7 +43,7 @@ class SingleSignOn
       sso.send("#{k}=", val)
     end
 
-    decoded_hash.each do |k,v|
+    decoded_hash.each do |k, v|
       # 1234567
       # custom.
       #
@@ -91,7 +91,7 @@ class SingleSignOn
     end
 
     if @custom_fields
-      @custom_fields.each do |k,v|
+      @custom_fields.each do |k, v|
         payload["custom.#{k}"] = v.to_s
       end
     end
