@@ -8,10 +8,10 @@ stage 'CS Principles Pre-survey', lockable: true
 assessment 'CSP pre-assessment survey'
 
 stage "Personal Innovations"
-named_level 'CSP Pre-survey'
+#named_level 'CSP Pre-survey'
 level 'U1L1 Student Lesson Introduction'
 named_level 'Computer Science is Changing Everything'
-level 'U1L1 - FR computer science word association'
+# level 'U1L1 - FR computer science word association'
 
 stage "Sending Binary Messages"
 level 'v2 U1L2 Student Lesson Introduction'

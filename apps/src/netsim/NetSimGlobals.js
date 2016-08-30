@@ -6,8 +6,6 @@
  *           Access to environment-specific asset URLs.
  *           Reproducible random number functions for easy testing.
  */
-'use strict';
-
 var seedrandom = require('seedrandom');
 
 /**

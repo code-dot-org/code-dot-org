@@ -1,5 +1,4 @@
 /** @file font-awesome helper component. */
-'use strict';
 
 import React from 'react';
 import _ from 'lodash';

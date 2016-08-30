@@ -15,7 +15,6 @@ const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
-const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 const initialState = {
   currentLevelId: null,
@@ -28,8 +27,6 @@ const initialState = {
   peerReviewsRequired: {},
   peerReviewsPerformed: [],
   showTeacherInfo: false,
-  // whether user is allowed to see lockable stages
-  lockableAuthorized: false
 };
 
 /**
@@ -87,12 +84,6 @@ export default function reducer(state = initialState, action) {
   if (action.type === SHOW_TEACHER_INFO) {
     return Object.assign({}, state, {
       showTeacherInfo: true
-    });
-  }
-
-  if (action.type === AUTHORIZE_LOCKABLE) {
-    return Object.assign({}, state, {
-      lockableAuthorized: true
     });
   }
 
@@ -156,11 +147,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
 });
 
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
-
-/**
- * Authorizes the user to be able to see lockable stages
- */
-export const authorizeLockable = () => ({ type: AUTHORIZE_LOCKABLE });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

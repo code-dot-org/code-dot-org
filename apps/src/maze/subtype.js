@@ -42,12 +42,39 @@ export default class Subtype {
     return true;
   }
 
+  /**
+   * @param {Number} row
+   * @param {Number} col
+   * @returns {Number} val
+   */
+  getValue(row, col) {
+    return this.getCell(row, col).getCurrentValue();
+  }
+
+  /**
+   * @param {Number} row
+   * @param {Number} col
+   * @param {Number} val
+   */
+  setValue(row, col, val) {
+    this.getCell(row, col).setCurrentValue(val);
+  }
+
+  /**
+   * @param {Number} row
+   * @param {Number} col
+   * @returns {Object} cell
+   */
+  getCell(row, col) {
+    return this.maze_.map.currentStaticGrid[row][col];
+  }
+
   getCellClass() {
     return Cell;
   }
 
-  createGridItemDrawer() {
-    return new DirtDrawer(this.maze_.map, this.skin_.dirt);
+  createDrawer() {
+    this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt);
   }
 
   shouldCheckSuccessOnMove() {
@@ -107,13 +134,13 @@ export default class Subtype {
   }
 
   getEmptyTile(x, y, adjacentToPath, wallMap) {
-    var tile;
+    let tile;
     // Empty square.  Use null0 for large areas, with null1-4 for borders.
     if (!adjacentToPath && Math.random() > 0.3) {
       wallMap[y][x] = 0;
       tile = 'null0';
     } else {
-      var wallIdx = Math.floor(1 + Math.random() * 4);
+      const wallIdx = Math.floor(1 + Math.random() * 4);
       wallMap[y][x] = wallIdx;
       tile = 'null' + wallIdx;
     }
@@ -126,39 +153,40 @@ export default class Subtype {
     return tile;
   }
 
-  // Draw the tiles making up the maze map.
+  /**
+   * Draw the tiles making up the maze map.
+   */
   drawMapTiles(svg, wallMap) {
     // Compute and draw the tile for each square.
-    var tileId = 0;
-    var tile, origTile;
-    for (var y = 0; y < this.maze_.map.ROWS; y++) {
-      for (var x = 0; x < this.maze_.map.COLS; x++) {
-        // Compute the tile index.
-        tile = this.isOnPathStr_(x, y) +
-          this.isOnPathStr_(x, y - 1) + // North.
-          this.isOnPathStr_(x + 1, y) + // West.
-          this.isOnPathStr_(x, y + 1) + // South.
-          this.isOnPathStr_(x - 1, y); // East.
+    let tileId = 0;
+    let tile, origTile;
+    this.maze_.map.forEachCell((cell, row, col) => {
+      // Compute the tile index.
+      tile = this.isOnPathStr_(col, row) +
+        this.isOnPathStr_(col, row - 1) + // North.
+        this.isOnPathStr_(col + 1, row) + // West.
+        this.isOnPathStr_(col, row + 1) + // South.
+        this.isOnPathStr_(col - 1, row); // East.
 
-        var adjacentToPath = (tile !== '00000');
+      const adjacentToPath = (tile !== '00000');
 
-        // Draw the tile.
-        if (!TILE_SHAPES[tile]) {
-          // We have an empty square. Handle it differently based on skin.
-          tile = this.getEmptyTile(x, y, adjacentToPath, wallMap);
-        }
-
-        this.maze_.drawTile(svg, TILE_SHAPES[tile], y, x, tileId);
-
-        // Draw checkerboard for bee.
-        // TODO move this into bee class
-        if (this.isBee() && (x + y) % 2 === 0) {
-          var isPath = !/null/.test(tile);
-          this.maze_.gridItemDrawer.addCheckerboardTile(y, x, isPath);
-        }
-
-        tileId++;
+      // Draw the tile.
+      if (!TILE_SHAPES[tile]) {
+        // We have an empty square. Handle it differently based on skin.
+        tile = this.getEmptyTile(col, row, adjacentToPath, wallMap);
       }
-    }
+
+      this.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
+
+      tileId++;
+    });
   }
+
+  /**
+   * Draw the given tile at row, col
+   */
+  drawTile(svg, tileSheetLocation, row, col, tileId) {
+    this.drawer.drawTile(svg, tileSheetLocation, row, col, tileId, this.skin_.tiles);
+  }
+
 }

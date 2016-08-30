@@ -85,6 +85,8 @@ var CONFIGS = {
   },
 
   harvester: {
+    obstacleIdle: 'obstacle.png',
+
     corn: 'corn.png',
     pumpkin: 'pumpkin.png',
     sprout: 'sprout.png',
@@ -179,6 +181,10 @@ var CONFIGS = {
 // in their respective folders blockly/static/skins/<skin name>
 CONFIGS.bee_night = CONFIGS.bee;
 CONFIGS.farmer_night = CONFIGS.farmer;
+
+CONFIGS.planter = Object.assign({}, CONFIGS.harvester, {
+  soil: 'soil.png',
+});
 
 /**
  * Given the mp3 sound, generates a list containing both the mp3 and ogg sounds

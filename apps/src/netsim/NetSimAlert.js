@@ -2,7 +2,6 @@
  * @overview Controller for creating growl-style Bootstrap alerts
  */
 /* global setTimeout */
-'use strict';
 
 import $ from 'jquery';
 var markup = require('./NetSimAlert.html.ejs');

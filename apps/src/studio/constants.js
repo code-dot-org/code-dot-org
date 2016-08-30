@@ -1,6 +1,5 @@
-'use strict';
 
-exports.SpriteSpeed = {
+export const SpriteSpeed = {
   VERY_SLOW: 2,
   SLOW: 3,
   LITTLE_SLOW: 4,
@@ -10,7 +9,7 @@ exports.SpriteSpeed = {
   VERY_FAST: 12,
 };
 
-exports.SpriteSize = {
+export const SpriteSize = {
   VERY_SMALL: 0.5,
   SMALL: 0.75,
   NORMAL: 1,
@@ -18,7 +17,7 @@ exports.SpriteSize = {
   VERY_LARGE: 2
 };
 
-exports.Direction = {
+export const Direction = {
   NONE: 0,
   NORTH: 1,
   EAST: 2,
@@ -30,13 +29,13 @@ exports.Direction = {
   NORTHWEST: 9
 };
 
-var Dir = exports.Direction;
+const Dir = Direction;
 
 /**
  * Mapping number of steps away from north to direction enum.
  * @type {Direction[]}
  */
-exports.ClockwiseDirectionsFromNorth = [
+export const ClockwiseDirectionsFromNorth = [
   Dir.NORTH,
   Dir.NORTHEAST,
   Dir.EAST,
@@ -50,7 +49,7 @@ exports.ClockwiseDirectionsFromNorth = [
 /**
  * List of cardinal directions
  */
-exports.CardinalDirections = [
+export const CardinalDirections = [
   Dir.NORTH,
   Dir.SOUTH,
   Dir.EAST,
@@ -64,17 +63,17 @@ exports.CardinalDirections = [
  * @param {number} y
  * @returns {Direction}
  */
-exports.getClosestDirection = function (x, y) {
+export const getClosestDirection = function (x, y) {
   // Y is inverted between our playlab coordinate space and what atan2 expects.
-  var radiansFromNorth = Math.atan2(x, -y);
-  var stepRadians = Math.PI / 4;
+  const radiansFromNorth = Math.atan2(x, -y);
+  const stepRadians = Math.PI / 4;
   // Snap positive index of nearest 45° where 0 is North, 1 is NE, etc...
-  var stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
+  const stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
   // At this point we should have an int between 0 and 7
-  return exports.ClockwiseDirectionsFromNorth[stepsFromNorth];
+  return ClockwiseDirectionsFromNorth[stepsFromNorth];
 };
 
-var frameDirTable = {};
+export const frameDirTable = {};
 frameDirTable[Dir.SOUTHEAST]  = 0;
 frameDirTable[Dir.EAST]       = 1;
 frameDirTable[Dir.NORTHEAST]  = 2;
@@ -83,9 +82,7 @@ frameDirTable[Dir.NORTHWEST]  = 4;
 frameDirTable[Dir.WEST]       = 5;
 frameDirTable[Dir.SOUTHWEST]  = 6;
 
-exports.frameDirTable = frameDirTable;
-
-var frameDirTableWalking = {};
+export const frameDirTableWalking = {};
 frameDirTableWalking[Dir.NONE]       = 0;
 frameDirTableWalking[Dir.SOUTH]      = 0;
 frameDirTableWalking[Dir.SOUTHEAST]  = 1;
@@ -96,11 +93,9 @@ frameDirTableWalking[Dir.NORTHWEST]  = 5;
 frameDirTableWalking[Dir.WEST]       = 6;
 frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
-exports.frameDirTableWalking = frameDirTableWalking;
-
 
 // Forward-to-left (clockwise)
-var frameDirTableWalkingWithIdleClockwise = {};
+export const frameDirTableWalkingWithIdleClockwise = {};
 frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
 frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
@@ -111,10 +106,8 @@ frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
 frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
 frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
 
-exports.frameDirTableWalkingWithIdleClockwise = frameDirTableWalkingWithIdleClockwise;
-
 // Forward-to-right (counter-clockwise)
-var frameDirTableWalkingWithIdleCounterclockwise = {};
+export const frameDirTableWalkingWithIdleCounterclockwise = {};
 frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
 frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
@@ -125,12 +118,10 @@ frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
 frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
 frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
 
-exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithIdleCounterclockwise;
-
 /**
  * Given a direction, returns the unit vector for it.
  */
-var UNIT_VECTOR = {};
+export const UNIT_VECTOR = {};
 UNIT_VECTOR[Dir.NONE] =  { x: 0, y: 0};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
@@ -140,12 +131,12 @@ UNIT_VECTOR[Dir.NORTHEAST] = { x: 1, y:-1};
 UNIT_VECTOR[Dir.SOUTHEAST] = { x: 1, y: 1};
 UNIT_VECTOR[Dir.SOUTHWEST] = { x:-1, y: 1};
 UNIT_VECTOR[Dir.NORTHWEST] = { x:-1, y:-1};
-exports.Direction.getUnitVector = function (dir) {
+Dir.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
 
 
-exports.Position = {
+export const Position = {
   OUTTOPOUTLEFT:    1,
   OUTTOPLEFT:       2,
   OUTTOPCENTER:     3,
@@ -177,108 +168,108 @@ exports.Position = {
 // Turn state machine, use as NextTurn[fromDir][toDir]
 //
 
-exports.NextTurn = {};
+export const NextTurn = {};
 
-exports.NextTurn[Dir.NORTH] = {};
-exports.NextTurn[Dir.NORTH][Dir.NORTH] = Dir.NORTH;
-exports.NextTurn[Dir.NORTH][Dir.EAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.SOUTH] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.NONE] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.WEST] = Dir.NORTHWEST;
-exports.NextTurn[Dir.NORTH][Dir.NORTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.SOUTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.SOUTHWEST] = Dir.NORTHWEST;
-exports.NextTurn[Dir.NORTH][Dir.NORTHWEST] = Dir.NORTHWEST;
+NextTurn[Dir.NORTH] = {};
+NextTurn[Dir.NORTH][Dir.NORTH] = Dir.NORTH;
+NextTurn[Dir.NORTH][Dir.EAST] = Dir.NORTHEAST;
+NextTurn[Dir.NORTH][Dir.SOUTH] = Dir.NORTHEAST;
+NextTurn[Dir.NORTH][Dir.NONE] = Dir.NORTHEAST;
+NextTurn[Dir.NORTH][Dir.WEST] = Dir.NORTHWEST;
+NextTurn[Dir.NORTH][Dir.NORTHEAST] = Dir.NORTHEAST;
+NextTurn[Dir.NORTH][Dir.SOUTHEAST] = Dir.NORTHEAST;
+NextTurn[Dir.NORTH][Dir.SOUTHWEST] = Dir.NORTHWEST;
+NextTurn[Dir.NORTH][Dir.NORTHWEST] = Dir.NORTHWEST;
 
-exports.NextTurn[Dir.EAST] = {};
-exports.NextTurn[Dir.EAST][Dir.NORTH] = Dir.NORTHEAST;
-exports.NextTurn[Dir.EAST][Dir.EAST] = Dir.EAST;
-exports.NextTurn[Dir.EAST][Dir.SOUTH] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.NONE] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.WEST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.NORTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.EAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.SOUTHWEST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.NORTHWEST] = Dir.NORTHEAST;
+NextTurn[Dir.EAST] = {};
+NextTurn[Dir.EAST][Dir.NORTH] = Dir.NORTHEAST;
+NextTurn[Dir.EAST][Dir.EAST] = Dir.EAST;
+NextTurn[Dir.EAST][Dir.SOUTH] = Dir.SOUTHEAST;
+NextTurn[Dir.EAST][Dir.NONE] = Dir.SOUTHEAST;
+NextTurn[Dir.EAST][Dir.WEST] = Dir.SOUTHEAST;
+NextTurn[Dir.EAST][Dir.NORTHEAST] = Dir.NORTHEAST;
+NextTurn[Dir.EAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+NextTurn[Dir.EAST][Dir.SOUTHWEST] = Dir.SOUTHEAST;
+NextTurn[Dir.EAST][Dir.NORTHWEST] = Dir.NORTHEAST;
 
-exports.NextTurn[Dir.SOUTH] = {};
-exports.NextTurn[Dir.SOUTH][Dir.NORTH] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.EAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTH][Dir.NONE] = Dir.NONE;
-exports.NextTurn[Dir.SOUTH][Dir.WEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.SOUTH][Dir.NORTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.SOUTH][Dir.NORTHWEST] = Dir.SOUTHWEST;
+NextTurn[Dir.SOUTH] = {};
+NextTurn[Dir.SOUTH][Dir.NORTH] = Dir.SOUTHEAST;
+NextTurn[Dir.SOUTH][Dir.EAST] = Dir.SOUTHEAST;
+NextTurn[Dir.SOUTH][Dir.SOUTH] = Dir.SOUTH;
+NextTurn[Dir.SOUTH][Dir.NONE] = Dir.NONE;
+NextTurn[Dir.SOUTH][Dir.WEST] = Dir.SOUTHWEST;
+NextTurn[Dir.SOUTH][Dir.NORTHEAST] = Dir.SOUTHEAST;
+NextTurn[Dir.SOUTH][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+NextTurn[Dir.SOUTH][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+NextTurn[Dir.SOUTH][Dir.NORTHWEST] = Dir.SOUTHWEST;
 
-exports.NextTurn[Dir.WEST] = {};
-exports.NextTurn[Dir.WEST][Dir.NORTH] = Dir.NORTHWEST;
-exports.NextTurn[Dir.WEST][Dir.EAST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.SOUTH] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.NONE] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.WEST] = Dir.WEST;
-exports.NextTurn[Dir.WEST][Dir.NORTHEAST] = Dir.NORTHWEST;
-exports.NextTurn[Dir.WEST][Dir.SOUTHEAST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.NORTHWEST] = Dir.NORTHWEST;
+NextTurn[Dir.WEST] = {};
+NextTurn[Dir.WEST][Dir.NORTH] = Dir.NORTHWEST;
+NextTurn[Dir.WEST][Dir.EAST] = Dir.SOUTHWEST;
+NextTurn[Dir.WEST][Dir.SOUTH] = Dir.SOUTHWEST;
+NextTurn[Dir.WEST][Dir.NONE] = Dir.SOUTHWEST;
+NextTurn[Dir.WEST][Dir.WEST] = Dir.WEST;
+NextTurn[Dir.WEST][Dir.NORTHEAST] = Dir.NORTHWEST;
+NextTurn[Dir.WEST][Dir.SOUTHEAST] = Dir.SOUTHWEST;
+NextTurn[Dir.WEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+NextTurn[Dir.WEST][Dir.NORTHWEST] = Dir.NORTHWEST;
 
-exports.NextTurn[Dir.NORTHEAST] = {};
-exports.NextTurn[Dir.NORTHEAST][Dir.NORTH] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHEAST][Dir.EAST] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.SOUTH] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.NONE] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.WEST] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHEAST][Dir.NORTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHEAST] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHWEST] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.NORTHWEST] = Dir.NORTH;
+NextTurn[Dir.NORTHEAST] = {};
+NextTurn[Dir.NORTHEAST][Dir.NORTH] = Dir.NORTH;
+NextTurn[Dir.NORTHEAST][Dir.EAST] = Dir.EAST;
+NextTurn[Dir.NORTHEAST][Dir.SOUTH] = Dir.EAST;
+NextTurn[Dir.NORTHEAST][Dir.NONE] = Dir.EAST;
+NextTurn[Dir.NORTHEAST][Dir.WEST] = Dir.NORTH;
+NextTurn[Dir.NORTHEAST][Dir.NORTHEAST] = Dir.NORTHEAST;
+NextTurn[Dir.NORTHEAST][Dir.SOUTHEAST] = Dir.EAST;
+NextTurn[Dir.NORTHEAST][Dir.SOUTHWEST] = Dir.EAST;
+NextTurn[Dir.NORTHEAST][Dir.NORTHWEST] = Dir.NORTH;
 
-exports.NextTurn[Dir.SOUTHEAST] = {};
-exports.NextTurn[Dir.SOUTHEAST][Dir.NORTH] = Dir.EAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.EAST] = Dir.EAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.NONE] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.WEST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHEAST] = Dir.EAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHWEST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHWEST] = Dir.SOUTH;
+NextTurn[Dir.SOUTHEAST] = {};
+NextTurn[Dir.SOUTHEAST][Dir.NORTH] = Dir.EAST;
+NextTurn[Dir.SOUTHEAST][Dir.EAST] = Dir.EAST;
+NextTurn[Dir.SOUTHEAST][Dir.SOUTH] = Dir.SOUTH;
+NextTurn[Dir.SOUTHEAST][Dir.NONE] = Dir.SOUTH;
+NextTurn[Dir.SOUTHEAST][Dir.WEST] = Dir.SOUTH;
+NextTurn[Dir.SOUTHEAST][Dir.NORTHEAST] = Dir.EAST;
+NextTurn[Dir.SOUTHEAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+NextTurn[Dir.SOUTHEAST][Dir.SOUTHWEST] = Dir.SOUTH;
+NextTurn[Dir.SOUTHEAST][Dir.NORTHWEST] = Dir.SOUTH;
 
-exports.NextTurn[Dir.SOUTHWEST] = {};
-exports.NextTurn[Dir.SOUTHWEST][Dir.NORTH] = Dir.WEST;
-exports.NextTurn[Dir.SOUTHWEST][Dir.EAST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.NONE] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.WEST] = Dir.WEST;
-exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHEAST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHEAST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHWEST] = Dir.WEST;
+NextTurn[Dir.SOUTHWEST] = {};
+NextTurn[Dir.SOUTHWEST][Dir.NORTH] = Dir.WEST;
+NextTurn[Dir.SOUTHWEST][Dir.EAST] = Dir.SOUTH;
+NextTurn[Dir.SOUTHWEST][Dir.SOUTH] = Dir.SOUTH;
+NextTurn[Dir.SOUTHWEST][Dir.NONE] = Dir.SOUTH;
+NextTurn[Dir.SOUTHWEST][Dir.WEST] = Dir.WEST;
+NextTurn[Dir.SOUTHWEST][Dir.NORTHEAST] = Dir.SOUTH;
+NextTurn[Dir.SOUTHWEST][Dir.SOUTHEAST] = Dir.SOUTH;
+NextTurn[Dir.SOUTHWEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+NextTurn[Dir.SOUTHWEST][Dir.NORTHWEST] = Dir.WEST;
 
-exports.NextTurn[Dir.NORTHWEST] = {};
-exports.NextTurn[Dir.NORTHWEST][Dir.NORTH] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHWEST][Dir.EAST] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHWEST][Dir.SOUTH] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.NONE] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.WEST] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.NORTHEAST] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHEAST] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHWEST] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.NORTHWEST] = Dir.NORTHWEST;
+NextTurn[Dir.NORTHWEST] = {};
+NextTurn[Dir.NORTHWEST][Dir.NORTH] = Dir.NORTH;
+NextTurn[Dir.NORTHWEST][Dir.EAST] = Dir.NORTH;
+NextTurn[Dir.NORTHWEST][Dir.SOUTH] = Dir.WEST;
+NextTurn[Dir.NORTHWEST][Dir.NONE] = Dir.WEST;
+NextTurn[Dir.NORTHWEST][Dir.WEST] = Dir.WEST;
+NextTurn[Dir.NORTHWEST][Dir.NORTHEAST] = Dir.NORTH;
+NextTurn[Dir.NORTHWEST][Dir.SOUTHEAST] = Dir.WEST;
+NextTurn[Dir.NORTHWEST][Dir.SOUTHWEST] = Dir.WEST;
+NextTurn[Dir.NORTHWEST][Dir.NORTHWEST] = Dir.NORTHWEST;
 
-exports.NextTurn[Dir.NONE] = {};
-exports.NextTurn[Dir.NONE][Dir.NORTH] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.NONE][Dir.EAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.NONE][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.NONE][Dir.NONE] = Dir.NONE;
-exports.NextTurn[Dir.NONE][Dir.WEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.NONE][Dir.NORTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.NONE][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.NONE][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.NONE][Dir.NORTHWEST] = Dir.SOUTHWEST;
+NextTurn[Dir.NONE] = {};
+NextTurn[Dir.NONE][Dir.NORTH] = Dir.SOUTHEAST;
+NextTurn[Dir.NONE][Dir.EAST] = Dir.SOUTHEAST;
+NextTurn[Dir.NONE][Dir.SOUTH] = Dir.SOUTH;
+NextTurn[Dir.NONE][Dir.NONE] = Dir.NONE;
+NextTurn[Dir.NONE][Dir.WEST] = Dir.SOUTHWEST;
+NextTurn[Dir.NONE][Dir.NORTHEAST] = Dir.SOUTHEAST;
+NextTurn[Dir.NONE][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+NextTurn[Dir.NONE][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+NextTurn[Dir.NONE][Dir.NORTHWEST] = Dir.SOUTHWEST;
 
-exports.Emotions = {
+export const Emotions = {
   NORMAL: 0,
   HAPPY: 1,
   ANGRY: 2,
@@ -286,18 +277,18 @@ exports.Emotions = {
 };
 
 // scale the collision bounding box to make it so they need to overlap a touch:
-exports.FINISH_COLLIDE_DISTANCE_SCALING = 0.75;
-exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
+export const FINISH_COLLIDE_DISTANCE_SCALING = 0.75;
+export const SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
 
-exports.DEFAULT_SPRITE_SPEED = exports.SpriteSpeed.NORMAL;
-exports.DEFAULT_SPRITE_SIZE = 1;
-exports.DEFAULT_SPRITE_ANIMATION_FRAME_DURATION = 6;
+export const DEFAULT_SPRITE_SPEED = SpriteSpeed.NORMAL;
+export const DEFAULT_SPRITE_SIZE = 1;
+export const DEFAULT_SPRITE_ANIMATION_FRAME_DURATION = 6;
 
-exports.DEFAULT_PROJECTILE_SPEED = exports.SpriteSpeed.SLOW;
-exports.DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION = 1.5;
+export const DEFAULT_PROJECTILE_SPEED = SpriteSpeed.SLOW;
+export const DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION = 1.5;
 
-exports.DEFAULT_ITEM_SPEED = exports.SpriteSpeed.SLOW;
-exports.DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
+export const DEFAULT_ITEM_SPEED = SpriteSpeed.SLOW;
+export const DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
 
 
 /**
@@ -305,7 +296,7 @@ exports.DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
  * as a 2D array of SquareType values.
  * @enum {number}
  */
-exports.SquareType = {
+export const SquareType = {
   OPEN:         0,
   SPRITEFINISH: 1,
   NOT_USED_2:   2,
@@ -326,88 +317,88 @@ exports.SquareType = {
   // Walls specifically retrieved from an 16x16 grid are stored in bits 16-27.
 };
 
-exports.SquareItemClassMask =
-  exports.SquareType.ITEM_CLASS_0 |
-  exports.SquareType.ITEM_CLASS_1 |
-  exports.SquareType.ITEM_CLASS_2 |
-  exports.SquareType.ITEM_CLASS_3 |
-  exports.SquareType.ITEM_CLASS_4 |
-  exports.SquareType.ITEM_CLASS_5 |
-  exports.SquareType.ITEM_CLASS_6 |
-  exports.SquareType.ITEM_CLASS_7;
+export const SquareItemClassMask =
+  SquareType.ITEM_CLASS_0 |
+  SquareType.ITEM_CLASS_1 |
+  SquareType.ITEM_CLASS_2 |
+  SquareType.ITEM_CLASS_3 |
+  SquareType.ITEM_CLASS_4 |
+  SquareType.ITEM_CLASS_5 |
+  SquareType.ITEM_CLASS_6 |
+  SquareType.ITEM_CLASS_7;
 
-exports.SquareItemClassShift = 5;
+export const SquareItemClassShift = 5;
 
-exports.squareHasItemClass = function (itemClassIndex, squareValue) {
-  var classesEnabled =
-    (squareValue & exports.SquareItemClassMask) >>> exports.SquareItemClassShift;
+export function squareHasItemClass(itemClassIndex, squareValue) {
+  const classesEnabled =
+    (squareValue & SquareItemClassMask) >>> SquareItemClassShift;
   return Math.pow(2, itemClassIndex) & classesEnabled;
-};
+}
 
 /**
  * The types of walls in the maze.
  * @enum {number}
  */
-exports.WallType = {
+export const WallType = {
   NORMAL_SIZE: 0,
   DOUBLE_SIZE: 1,
   JUMBO_SIZE: 2
 };
 
-exports.WallTypeMask     = 0x0F000000;
-exports.WallCoordRowMask = 0x00F00000;
-exports.WallCoordColMask = 0x000F0000;
+export const WallTypeMask     = 0x0F000000;
+export const WallCoordRowMask = 0x00F00000;
+export const WallCoordColMask = 0x000F0000;
 
-exports.WallCoordsMask =
-  exports.WallTypeMask | exports.WallCoordRowMask | exports.WallCoordColMask;
-exports.WallCoordsShift = 16;
-exports.WallCoordColShift  = exports.WallCoordsShift;
-exports.WallCoordRowShift  = exports.WallCoordsShift + 4;
-exports.WallTypeShift      = exports.WallCoordsShift + 8;
-exports.WallCoordMax = 16; // indicates a 16x16 grid, which requires 8 bits
-exports.WallRandomCoordMax = 2; // how many rows/cols we randomly select tiles from
+export const WallCoordsMask =
+  WallTypeMask | WallCoordRowMask | WallCoordColMask;
+export const WallCoordsShift = 16;
+export const WallCoordColShift  = WallCoordsShift;
+export const WallCoordRowShift  = WallCoordsShift + 4;
+export const WallTypeShift      = WallCoordsShift + 8;
+export const WallCoordMax = 16; // indicates a 16x16 grid, which requires 8 bits
+export const WallRandomCoordMax = 2; // how many rows/cols we randomly select tiles from
 
-exports.WallAnyMask = exports.WallCoordsMask | exports.SquareType.WALL;
+export const WallAnyMask = WallCoordsMask | SquareType.WALL;
 
 // Floating score: change opacity and Y coordinate by these values each tick.
-exports.floatingScoreChangeOpacity = -0.025;
-exports.floatingScoreChangeY = -1;
+export const floatingScoreChangeOpacity = -0.025;
+export const floatingScoreChangeY = -1;
 
-exports.RANDOM_VALUE = 'random';
-exports.HIDDEN_VALUE = '"hidden"';
-exports.CLICK_VALUE = '"click"';
-exports.VISIBLE_VALUE = '"visible"';
+export const RANDOM_VALUE = 'random';
+export const HIDDEN_VALUE = '"hidden"';
+export const CLICK_VALUE = '"click"';
+export const VISIBLE_VALUE = '"visible"';
 
 // Number of extra ticks between the last time the sprite moved and when we
 // reset them to face south.
-exports.IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
+export const IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 /** @type {number} animation rate in frames per second. */
-exports.DEFAULT_ANIMATION_RATE = 20;
+export const DEFAULT_ANIMATION_RATE = 20;
 
 // Fade durations (in milliseconds)
-exports.GOAL_FADE_TIME = 200;
-exports.ITEM_FADE_TIME = 200;
-exports.DEFAULT_ACTOR_FADE_TIME = 1000;
-exports.TOUCH_HAZARD_EFFECT_TIME = 1500;
+export const GOAL_FADE_TIME = 200;
+export const ITEM_FADE_TIME = 200;
+export const DEFAULT_ACTOR_FADE_TIME = 1000;
+export const TOUCH_HAZARD_EFFECT_TIME = 1500;
 
 // Other defaults for actions
-exports.SHAKE_DEFAULT_DURATION = 1000;
-exports.SHAKE_DEFAULT_CYCLES = 6;
-exports.SHAKE_DEFAULT_DISTANCE = 5;
+export const SHAKE_DEFAULT_DURATION = 1000;
+export const SHAKE_DEFAULT_CYCLES = 6;
+export const SHAKE_DEFAULT_DISTANCE = 5;
 
 // Maximum number of clouds that can be displayed.
-exports.MAX_NUM_CLOUDS = 2;
+export const MAX_NUM_CLOUDS = 2;
 
 // Width & height of a cloud.
-exports.CLOUD_SIZE = 300;
+export const CLOUD_SIZE = 300;
 
 // The opacity of a cloud.
-exports.CLOUD_OPACITY = 0.7;
+export const CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
-exports.SOUND_THROTTLE_TIME = 200;
+export const SOUND_THROTTLE_TIME = 200;
 
 // How many milliseconds to throttle between whenTouchObstacle events when
 // blockMovingIntoWalls is enabled.
-exports.TOUCH_OBSTACLE_THROTTLE_TIME = 330;
+export const TOUCH_OBSTACLE_THROTTLE_TIME = 330;

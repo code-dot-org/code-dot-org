@@ -24,7 +24,9 @@ export const LevelStatus = makeEnum(
   'locked',
   'perfect',
   'passed',
-  'attempted'
+  'attempted',
+  'review_accepted',
+  'review_rejected'
 );
 
 /**

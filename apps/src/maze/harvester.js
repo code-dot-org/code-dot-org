@@ -2,8 +2,7 @@ import Gatherer from './gatherer';
 import HarvesterCell from './harvesterCell';
 import HarvesterDrawer from './harvesterDrawer';
 import mazeMsg from './locale';
-import { HarvesterTerminationValue } from '../constants.js';
-import { TestResults } from '../constants.js';
+import { HarvesterTerminationValue, TestResults } from '../constants.js';
 
 export default class Harvester extends Gatherer {
 
@@ -17,8 +16,8 @@ export default class Harvester extends Gatherer {
   /**
    * @override
    */
-  createGridItemDrawer() {
-    return new HarvesterDrawer(this.maze_.map, this.skin_, this);
+  createDrawer() {
+    this.drawer = new HarvesterDrawer(this.maze_.map, this.skin_, this);
   }
 
   hasCorn(id) {
@@ -132,7 +131,7 @@ export default class Harvester extends Gatherer {
     this.playAudio_('harvest');
     this.gotCropAt(row, col);
 
-    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
+    this.drawer.updateItemImage(row, col, true);
   }
 
   /**

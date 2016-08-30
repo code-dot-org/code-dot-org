@@ -4,9 +4,6 @@
  * Copyright 2013 Code.org
  *
  */
-
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;

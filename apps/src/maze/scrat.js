@@ -1,5 +1,4 @@
-import {SquareType} from './tiles';
-import {Direction} from './tiles';
+import {SquareType, Direction} from './tiles';
 import _ from 'lodash';
 
 import Subtype from './subtype';
