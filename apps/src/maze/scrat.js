@@ -91,7 +91,7 @@ export default class Scrat extends Subtype {
             tile = 'empty';
           }
         }
-        this.maze_.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
+        this.drawer.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
         tileId++;
       }
     }
