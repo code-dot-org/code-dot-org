@@ -296,7 +296,6 @@ const DataTable = React.createClass({
             </tbody>
           </table>
         </div>
-        <div id="dataTableFooter" style={dataStyles.clearfix}/>
       </div>
     );
   }
