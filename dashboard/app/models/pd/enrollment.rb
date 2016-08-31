@@ -18,15 +18,19 @@
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
 #  school_info_id      :integer
+#  deleted_at          :datetime
 #
 # Indexes
 #
 #  index_pd_enrollments_on_code                (code) UNIQUE
+#  index_pd_enrollments_on_deleted_at          (deleted_at)
 #  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
 #  index_pd_enrollments_on_school_district_id  (school_district_id)
 #
 
 class Pd::Enrollment < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user

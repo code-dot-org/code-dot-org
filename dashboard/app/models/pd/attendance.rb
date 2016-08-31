@@ -7,13 +7,17 @@
 #  teacher_id    :integer          not null
 #  created_at    :datetime
 #  updated_at    :datetime
+#  deleted_at    :datetime
 #
 # Indexes
 #
+#  index_pd_attendances_on_deleted_at                    (deleted_at)
 #  index_pd_attendances_on_pd_session_id_and_teacher_id  (pd_session_id,teacher_id) UNIQUE
 #
 
 class Pd::Attendance < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
   belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
 

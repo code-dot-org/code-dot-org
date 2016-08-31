@@ -18,13 +18,17 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  processed_at       :datetime
+#  deleted_at         :datetime
 #
 # Indexes
 #
+#  index_pd_workshops_on_deleted_at    (deleted_at)
 #  index_pd_workshops_on_organizer_id  (organizer_id)
 #
 
 class Pd::Workshop < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   TYPES = [
     TYPE_PUBLIC = 'Public',
     TYPE_PRIVATE = 'Private',

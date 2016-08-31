@@ -96,4 +96,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop.section.add_student teacher
     assert enrollment.in_section?
   end
+
+  test 'soft delete' do
+    enrollment = create :pd_enrollment
+    enrollment.destroy!
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+  end
 end

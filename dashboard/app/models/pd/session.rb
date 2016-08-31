@@ -8,13 +8,17 @@
 #  end            :datetime         not null
 #  created_at     :datetime
 #  updated_at     :datetime
+#  deleted_at     :datetime
 #
 # Indexes
 #
+#  index_pd_sessions_on_deleted_at      (deleted_at)
 #  index_pd_sessions_on_pd_workshop_id  (pd_workshop_id)
 #
 
 class Pd::Session < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id'
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: 'pd_session_id', dependent: :destroy
 

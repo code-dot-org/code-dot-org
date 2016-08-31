@@ -225,6 +225,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_nil Pd::Workshop.find_by_section_code('nonsense code')
   end
 
+  test 'soft delete' do
+    session = create :pd_session, workshop: @workshop
+    enrollment = create :pd_enrollment, workshop: @workshop
+    @workshop.reload.destroy!
+
+    assert @workshop.reload.deleted?
+    refute Pd::Workshop.exists? @workshop.attributes
+    assert Pd::Workshop.with_deleted.exists? @workshop.attributes
+
+    # Make sure dependent sessions and enrollments are also soft-deleted.
+    assert session.reload.deleted?
+    refute Pd::Session.exists? session.attributes
+    assert Pd::Session.with_deleted.exists? session.attributes
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+  end
+
   private
 
   def session_on_day(day_offset)
