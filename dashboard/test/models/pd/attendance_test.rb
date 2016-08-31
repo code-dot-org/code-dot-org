@@ -67,4 +67,13 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
       dupe.save!
     end
   end
+
+  test 'soft delete' do
+    attendance = create :pd_attendance
+    attendance.reload.destroy!
+
+    assert attendance.reload.deleted?
+    refute Pd::Attendance.exists? attendance.attributes
+    assert Pd::Attendance.with_deleted.exists? attendance.attributes
+  end
 end
