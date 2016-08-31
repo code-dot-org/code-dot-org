@@ -349,7 +349,7 @@ begin
         db_proficiency.conditionals_d4_count += proficiency[49]
         db_proficiency.conditionals_d5_count += proficiency[50]
 
-        db_proficiency.last_progress_at = proficiency[51] unless db.last_progress_at
+        db_proficiency.last_progress_at = proficiency[51] unless db_proficiency.last_progress_at
         db_proficiency.basic_proficiency_at = proficiency[52] if proficiency[52]
 
         db_proficiency.save!
