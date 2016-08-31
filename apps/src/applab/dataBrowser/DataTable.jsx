@@ -205,8 +205,8 @@ const DataTable = React.createClass({
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
 
-    // Always show at least one column for empty tables.
-    if (Object.keys(this.props.tableRecords).length === 0 && columnNames.length === 1) {
+    // Always show at least one column.
+    if (columnNames.length === 1) {
       editingColumn = this.getNextColumnName();
       columnNames.push(editingColumn);
     }
