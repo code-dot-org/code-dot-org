@@ -300,7 +300,7 @@ en:
     user_not_found: 'The teacher could not be found.'
     student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
-      answer_viewer: 'Answer Viewer'
+      answer_viewer: 'Teacher Panel'
       student: 'Student'
       viewing_solution: 'Viewing Solution'
       try_it_yourself: 'Try it yourself'
