@@ -3,6 +3,8 @@
  * import, export, adding a new column, and deleting the entire table.
  */
 
+import ConfirmDeleteButton from './ConfirmDeleteButton';
+import ConfirmImportButton from './ConfirmImportButton';
 import Radium from 'radium';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
@@ -27,16 +29,10 @@ const styles = {
     // make the buttons align right usually, but align left if they
     // are forced to wrap onto the next line by a very long table name.
     textAlign: 'justify',
-},
-  clearButton: [dataStyles.redButton, {
-    width: 103,
-  }],
+  },
   exportButton: [dataStyles.whiteButton, {
     marginLeft: 10,
     width: 120
-  }],
-  importButton: [dataStyles.whiteButton, {
-    marginLeft: 10,
   }],
   tableName: {
     fontSize: 18,
@@ -58,22 +54,6 @@ const TableControls = React.createClass({
     tableName: React.PropTypes.string.isRequired,
   },
 
-  handleSelectImportFile() {
-    if (!this.importFileInput.value) {
-      return;
-    }
-    if (confirm(applabMsg.confirmImportOverwrite())) {
-      const file = this.importFileInput.files[0];
-      const reader = new FileReader();
-      reader.onload = e => {
-        this.props.importCsv(e.target.result);
-        // Make sure we get another change event if the same file is selected again.
-        this.importFileInput.value = "";
-      };
-      reader.readAsText(file);
-    }
-  },
-
   render() {
     return (
       <div style={styles.container}>
@@ -83,27 +63,22 @@ const TableControls = React.createClass({
           </span>
         </div>
         {" "}
-        <div style={styles.buttonWrapper} id="myButtonWrapper">
-          <button onClick={this.props.clearTable} style={styles.clearButton}>
-            Clear table
-          </button>
-
-          <span>
-            <input
-              ref={input => this.importFileInput = input}
-              type="file"
-              style={{display: 'none'}}
-              accept="csv"
-              onChange={this.handleSelectImportFile}
-            />
-            <button onClick={() => this.importFileInput.click()} style={styles.importButton}>
-              Import csv
-            </button>
-          </span>
-
+        <div style={styles.buttonWrapper}>
           <button onClick={this.props.exportCsv} style={styles.exportButton}>
             Export to csv
           </button>
+          <ConfirmImportButton
+            importCsv={this.props.importCsv}
+            containerStyle={{marginLeft: 10}}
+          />
+
+          <ConfirmDeleteButton
+            body={applabMsg.confirmClearTable()}
+            buttonText="Clear table"
+            containerStyle={{width: 103}}
+            onConfirm={this.props.clearTable}
+            title="Clear table"
+          />
         </div>
 
         {/* help make the "text-align: justify;" trick work */}

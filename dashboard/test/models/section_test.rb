@@ -101,6 +101,20 @@ class SectionTest < ActiveSupport::TestCase
     assert new_section.students.exists?(student.id)
   end
 
+  test 'add_student is idempotent' do
+    section = create :section
+    student1 = create :student
+    student2 = create :student
+
+    2.times do
+      section.add_student student1, move_for_same_teacher: true
+      section.add_student student2, move_for_same_teacher: false
+    end
+
+    assert_equal 2, section.followers.count
+    assert_equal [student1.id, student2.id], section.followers.all.map(&:student_user_id)
+  end
+
   test 'add_student with move_for_same_teacher: false does not move student' do
     # This option is used for pd-workshop sections.
     # A workshop attendee, unlike students in a classroom section, can remain enrolled
