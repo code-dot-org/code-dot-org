@@ -14,10 +14,31 @@ const STATUS_TEXT = {
   [CORRECT]: 'You got it!'
 };
 
+const FIELD_COLORS = {
+  [UNKNOWN]: color.light_gray,
+  [INCORRECT]: color.red,
+  [CORRECT]: color.green
+};
+
 const FIELD_STYLES = {
-  [UNKNOWN]: {backgroundColor: color.light_gray},
-  [INCORRECT]: {backgroundColor: color.red},
-  [CORRECT]: {backgroundColor: color.green}
+  [UNKNOWN]: {
+    color: color.white,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.black,
+  },
+  [INCORRECT]: {
+    color: color.white,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.black,
+  },
+  [CORRECT]: {
+    color: color.white,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.black,
+  }
 };
 
 const TEXT_STYLES = {
@@ -30,7 +51,12 @@ export default function ValidatorField(props) {
   const status = statusFromProps(props);
   return (
     <span>
-      <IntegerField value={props.value} style={FIELD_STYLES[status]}/>
+      <IntegerField
+        value={props.value}
+        color={FIELD_COLORS[status]}
+        style={FIELD_STYLES[status]}
+      />
+      {' '}
       <span style={TEXT_STYLES[status]}>{STATUS_TEXT[status]}</span>
     </span>);
 }
