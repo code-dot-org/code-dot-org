@@ -24,14 +24,17 @@ const styles = {
     width: 19,
   }],
   container: {
+    flexDirection: 'column',
     height: '100%',
     minWidth: MIN_TABLE_WIDTH,
-    overflow: 'scroll',
     maxWidth: '100%',
   },
   table: {
-    clear: 'both',
     minWidth: MIN_TABLE_WIDTH,
+  },
+  scrollWrapper: {
+    flexGrow: 1,
+    overflow: 'scroll',
   },
   plusIcon: {
     alignItems: 'center',
@@ -213,7 +216,7 @@ const DataTable = React.createClass({
 
     const visible = (DataView.TABLE === this.props.view);
     const containerStyle = [styles.container, {
-      display: visible ? 'inline-block' : 'none',
+      display: visible ? 'inline-flex' : 'none',
     }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
@@ -252,49 +255,52 @@ const DataTable = React.createClass({
           tableName={this.props.tableName}
         />
 
-        <div style={debugDataStyle}>
-          {this.getTableJson()}
-        </div>
+        <div style={styles.scrollWrapper}>
+          <div style={debugDataStyle}>
+            {this.getTableJson()}
+          </div>
 
-        <table style={tableDataStyle}>
-          <tbody>
-          <tr>
+          <table style={tableDataStyle}>
+            <tbody>
+            <tr>
+              {
+                columnNames.map(columnName => (
+                  <ColumnHeader
+                    key={columnName}
+                    columnName={columnName}
+                    columnNames={columnNames}
+                    deleteColumn={this.deleteColumn}
+                    editColumn={this.editColumn}
+                    isEditable={columnName !== 'id'}
+                    isEditing={editingColumn === columnName}
+                    renameColumn={this.renameColumn}
+                  />
+                ))
+              }
+              <th style={styles.addColumnHeader}>
+                <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
+              </th>
+              <th style={dataStyles.headerCell}>
+                Actions
+              </th>
+            </tr>
+
+            <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
+
             {
-              columnNames.map(columnName => (
-                <ColumnHeader
-                  key={columnName}
-                  columnName={columnName}
+              Object.keys(this.props.tableRecords).map(id => (
+                <EditTableRow
                   columnNames={columnNames}
-                  deleteColumn={this.deleteColumn}
-                  editColumn={this.editColumn}
-                  isEditable={columnName !== 'id'}
-                  isEditing={editingColumn === columnName}
-                  renameColumn={this.renameColumn}
+                  tableName={this.props.tableName}
+                  record={JSON.parse(this.props.tableRecords[id])}
+                  key={id}
                 />
               ))
             }
-            <th style={styles.addColumnHeader}>
-              <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
-            </th>
-            <th style={dataStyles.headerCell}>
-              Actions
-            </th>
-          </tr>
-
-          <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
-
-          {
-            Object.keys(this.props.tableRecords).map(id => (
-              <EditTableRow
-                columnNames={columnNames}
-                tableName={this.props.tableName}
-                record={JSON.parse(this.props.tableRecords[id])}
-                key={id}
-              />
-            ))
-          }
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
+        <div id="dataTableFooter" style={dataStyles.clearfix}/>
       </div>
     );
   }
