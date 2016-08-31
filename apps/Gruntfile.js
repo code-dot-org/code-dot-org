@@ -420,11 +420,7 @@ module.exports = function (grunt) {
           minChunks: 2,
           chunks: [
             'plc',
-            'embedVideo',
-            'embedBlocks',
-            'makerlab',
             'pd',
-            'publicKeyCryptography',
             'code-studio-common',
           ]
         }),
