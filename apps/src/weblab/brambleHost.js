@@ -5,7 +5,8 @@
 (function () {
     "use strict";
 
-    require.config({
+    // for some reaosn, if we don't prepend with window here, webpack strips this
+    window.requirejs.config({
         baseUrl: '/blockly/js/bramble/'
     });
 
@@ -189,7 +190,7 @@
     }
 
     // Load bramble.js
-    require(["bramble"], function (Bramble) {
+    requirejs(["bramble"], function (Bramble) {
         load(Bramble);
     });
 }());
