@@ -83,7 +83,7 @@ const TableControls = React.createClass({
         </div>
 
         {/* help make the "text-align: justify;" trick work */}
-        <div id="myClearFix" style={dataStyles.clearfix}/>
+        <div style={dataStyles.clearfix}/>
       </div>
     );
   }
