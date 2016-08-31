@@ -16,7 +16,15 @@ import {
   KeywordPublicNumber,
   KeywordSecretNumber
 } from './cryptographyFields';
-import {COLORS} from './style';
+import {COLORS, LINE_HEIGHT} from './style';
+
+const tdEquationStyleRHS = {
+  lineHeight: LINE_HEIGHT + 'px',
+  verticalAlign: 'top'
+};
+const tdEquationStyleLHS = Object.assign({}, tdEquationStyleRHS, {
+  whiteSpace: 'nowrap'
+});
 
 const Eve = React.createClass({
   propTypes: {
@@ -138,23 +146,35 @@ const Eve = React.createClass({
           </div>
           <div>
             Crack Alice's <KeywordPrivateKey/>:
-            <div>
-              {'('}
-              <IntegerField color={COLORS.publicKey} value={publicKey}/>
-              {' x '}
-              <PrivateKeyDropdown
-                publicModulus={publicModulus}
-                value={privateKey}
-                onChange={this.setPrivateKey}
-                disabled={disabled}
-              />
-              {') MOD '}
-              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
-              {' = '}
-              <IntegerField color={color.white} value={1}/>
-              {' '}
-              <ValidatorField value={privateKeyEquationResult} expectedValue={1} shouldEvaluate={!checkingPrivateKey}/>
-            </div>
+            <PrivateKeyDropdown
+              publicModulus={publicModulus}
+              value={privateKey}
+              onChange={this.setPrivateKey}
+              disabled={disabled}
+            />
+            <table>
+              <tbody>
+                <tr style={{height: LINE_HEIGHT}}>
+                  <td width="1%" style={tdEquationStyleLHS}>
+                    {'('}
+                    <IntegerField color={COLORS.publicKey} value={publicKey}/>
+                    {' x '}
+                    <IntegerField color={COLORS.privateKey} value={privateKey}/>
+                    {') MOD '}
+                    <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+                  </td>
+                  <td style={tdEquationStyleRHS}>
+                    {' = '}
+                    <IntegerField color={color.white} value={1}/>
+                    <ValidatorField
+                      value={privateKeyEquationResult}
+                      expectedValue={1}
+                      shouldEvaluate={!checkingPrivateKey}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div>
             Enter Bob's <KeywordPublicNumber/>:
@@ -167,23 +187,35 @@ const Eve = React.createClass({
           </div>
           <div>
             Crack Bob's <KeywordSecretNumber/>:
-            <div>
-              {'('}
-              <IntegerField color={COLORS.publicKey} value={publicKey}/>
-              {' x '}
-              <SecretNumberDropdown
-                value={secretNumber}
-                onChange={this.setSecretNumber}
-                publicModulus={publicModulus}
-                disabled={disabled}
-              />
-              {') MOD '}
-              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
-              {' = '}
-              <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
-              {' '}
-              <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber} shouldEvaluate={!checkingSecretNumber}/>
-            </div>
+            <SecretNumberDropdown
+              value={secretNumber}
+              onChange={this.setSecretNumber}
+              publicModulus={publicModulus}
+              disabled={disabled}
+            />
+            <table>
+              <tbody>
+                <tr style={{height: LINE_HEIGHT}}>
+                  <td width="1%" style={tdEquationStyleLHS}>
+                    {'('}
+                    <IntegerField color={COLORS.publicKey} value={publicKey}/>
+                    {' x '}
+                    <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+                    {') MOD '}
+                    <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+                  </td>
+                  <td style={tdEquationStyleRHS}>
+                    {' = '}
+                    <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
+                    <ValidatorField
+                      value={secretNumberEquationResult}
+                      expectedValue={publicNumber}
+                      shouldEvaluate={!checkingSecretNumber}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </NumberedSteps>
       </CollapsiblePanel>);

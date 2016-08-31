@@ -42,20 +42,23 @@ const FIELD_STYLES = {
 };
 
 const TEXT_STYLES = {
-  [UNKNOWN]: {},
-  [INCORRECT]: {color: color.red},
-  [CORRECT]: {color: color.realgreen}
+  [UNKNOWN]: {whiteSpace: 'nowrap'},
+  [INCORRECT]: {whiteSpace: 'nowrap', color: color.red},
+  [CORRECT]: {whiteSpace: 'nowrap', color: color.realgreen}
 };
 
 export default function ValidatorField(props) {
   const status = statusFromProps(props);
   return (
     <span>
-      <IntegerField
-        value={props.value}
-        color={FIELD_COLORS[status]}
-        style={FIELD_STYLES[status]}
-      />
+      <span style={{whiteSpace: 'nowrap'}}>
+        {' = '}
+        <IntegerField
+          value={props.value}
+          color={FIELD_COLORS[status]}
+          style={FIELD_STYLES[status]}
+        />
+      </span>
       {' '}
       <span style={TEXT_STYLES[status]}>{STATUS_TEXT[status]}</span>
     </span>);
