@@ -5,6 +5,7 @@
 %head
   = stylesheet_link_tag    '/assets/video-js/video-js', media: 'all'
   = render partial: 'layouts/analytics'
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
   %script{src: minifiable_asset_path('js/embedVideo.js')}
 %html{:dir => locale_dir}
   :css
