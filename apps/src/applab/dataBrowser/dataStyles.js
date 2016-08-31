@@ -81,11 +81,6 @@ export const saveButton = [blueButton, {
   width: 60
 }];
 
-export const alignRight = {
-  float: 'right',
-  marginLeft: 10,
-};
-
 export const input = {
   width: 'calc(100% - 14px)',
   height: 20,
@@ -116,4 +111,13 @@ export const debugData = {
   fontFamily: 'monospace',
   padding: 10,
   whiteSpace: 'pre-wrap',
+};
+
+export const clearfix = {
+  content: '',
+  display: 'inline-block',
+  width: '100%',
+  height: 0,
+  fontSize:0,
+  lineHeight:0,
 };

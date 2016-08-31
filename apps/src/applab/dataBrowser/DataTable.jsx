@@ -17,20 +17,21 @@ import color from '../../color';
 import { connect } from 'react-redux';
 import applabMsg from '@cdo/applab/locale';
 
-const MAX_TABLE_WIDTH = 970;
+const MIN_TABLE_WIDTH = 600;
 
 const styles = {
   addColumnHeader: [dataStyles.headerCell, {
     width: 19,
   }],
   container: {
-    maxWidth: MAX_TABLE_WIDTH,
     height: '100%',
-    overflowY: 'scroll',
+    minWidth: MIN_TABLE_WIDTH,
+    overflow: 'scroll',
+    maxWidth: '100%',
   },
   table: {
     clear: 'both',
-    width: '100%'
+    minWidth: MIN_TABLE_WIDTH,
   },
   plusIcon: {
     alignItems: 'center',
@@ -212,7 +213,7 @@ const DataTable = React.createClass({
 
     const visible = (DataView.TABLE === this.props.view);
     const containerStyle = [styles.container, {
-      display: visible ? 'block' : 'none',
+      display: visible ? 'inline-block' : 'none',
     }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
