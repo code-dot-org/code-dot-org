@@ -8,6 +8,6 @@ class NullPubSubApi
   # @param [String] channel a single channel name that the event is to be published on
   # @param [String] event - the name of the event to be triggered
   # @param [Hash] data - the data to be sent with the event
-  def self.publish(channel, event, data)
+  def publish(channel, event, data)
   end
 end
