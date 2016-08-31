@@ -4,7 +4,17 @@ import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {PublicModulusDropdown, SecretNumberDropdown, GoButton} from './cryptographyFields';
+import {
+  PublicModulusDropdown,
+  SecretNumberDropdown,
+  GoButton,
+  KeywordPublicModulus,
+  KeywordPublicKey,
+  KeywordPrivateKey,
+  KeywordPublicNumber,
+  KeywordSecretNumber
+} from './cryptographyFields';
+import {COLORS} from './style';
 
 const Bob = React.createClass({
   propTypes: {
@@ -77,7 +87,7 @@ const Bob = React.createClass({
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
           <div>
-            Enter public modulus:
+            Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -85,15 +95,16 @@ const Bob = React.createClass({
             />
           </div>
           <div>
-            Enter Alice's public key:
+            Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
               onChange={this.setPublicKey}
               disabled={disabled}
+              color={COLORS.publicKey}
             />
           </div>
           <div>
-            Pick your secret number:
+            Pick your <KeywordSecretNumber/>:
             <SecretNumberDropdown
               value={secretNumber}
               onChange={this.setSecretNumber}
@@ -102,16 +113,21 @@ const Bob = React.createClass({
             />
           </div>
           <div>
-            Calculate your public number:
+            Calculate your <KeywordPublicNumber/>:
             <div>
-              (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
+              (
+              <IntegerField color={COLORS.publicKey} value={publicKey}/>
+              {' x '}
+              <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+              {') MOD '}
+              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
               <GoButton
                 onClick={this.computePublicNumber}
                 disabled={disabled}
               />
             </div>
             <div>
-              Your computed public number is <IntegerField value={publicNumber}/>
+              Your computed <KeywordPublicNumber/> is <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
             </div>
           </div>
         </NumberedSteps>
