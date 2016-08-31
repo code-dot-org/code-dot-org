@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, setViewType, selectSection } from '../../stageLockRedux';
+import { ViewType, setViewType, selectSection, fullyLockedStageMapping } from '../../stageLockRedux';
 import commonMsg from '@cdo/locale';
 
 const styles = {
@@ -138,11 +138,8 @@ export default connect((state, ownProps) => {
   const currentSection = sections[selectedSection];
   const stages = currentSection ? currentSection.stages : {};
 
-  const unlockedStageIds = Object.keys(stages).filter(stageId => {
-    // filter to only stages that are unlocked
-    const stageStudents = currentSection.stages[stageId];
-    return stageStudents.some(student => !student.locked);
-  });
+  const fullyLocked = fullyLockedStageMapping(state.stageLock);
+  const unlockedStageIds = Object.keys(stages).filter(stageId => !fullyLocked[stageId]);
 
   let stageNames = {};
   state.progress.stages.forEach(stage => {

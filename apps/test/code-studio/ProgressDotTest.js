@@ -76,4 +76,29 @@ describe('ProgressDot component tests', () => {
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('&nbsp;');
   });
+
+  it('provides a lock icon for a lockable assessment', () => {
+    const component = (
+      <ProgressDot
+        courseOverviewPage={true}
+        saveAnswersBeforeNavigation={false}
+        level={{
+          icon: null,
+          ids: [5275, []],
+          kind: 'assessment',
+          next: [2, 1],
+          position: 1,
+          previous: false,
+          status: 'locked',
+          title: 1,
+          uid: '5275_0',
+          url: '/test-url'
+        }}
+      />
+    );
+
+    const result = ReactTestUtils.renderIntoDocument(component);
+    const node = ReactDOM.findDOMNode(result);
+    expect(node.children[0].getAttribute('class')).to.match(/fa-lock/);
+  });
 });

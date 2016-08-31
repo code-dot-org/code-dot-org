@@ -3,6 +3,8 @@
  * import, export, adding a new column, and deleting the entire table.
  */
 
+import ConfirmDeleteButton from './ConfirmDeleteButton';
+import ConfirmImportButton from './ConfirmImportButton';
 import Radium from 'radium';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
@@ -16,13 +18,9 @@ const styles = {
     paddingLeft: 0,
     paddingRight: 0,
   },
-  clearButton: [dataStyles.redButton, dataStyles.alignRight, {
-    width: 103,
-  }],
   exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
     width: 120
   }],
-  importButton: [dataStyles.whiteButton, dataStyles.alignRight],
   tableName: {
     fontSize: 18,
   },
@@ -43,22 +41,6 @@ const TableControls = React.createClass({
     tableName: React.PropTypes.string.isRequired,
   },
 
-  handleSelectImportFile() {
-    if (!this.importFileInput.value) {
-      return;
-    }
-    if (confirm(applabMsg.confirmImportOverwrite())) {
-      const file = this.importFileInput.files[0];
-      const reader = new FileReader();
-      reader.onload = e => {
-        this.props.importCsv(e.target.result);
-        // Make sure we get another change event if the same file is selected again.
-        this.importFileInput.value = "";
-      };
-      reader.readAsText(file);
-    }
-  },
-
   render() {
     return (
       <div style={styles.container}>
@@ -75,28 +57,18 @@ const TableControls = React.createClass({
           Export to csv
         </button>
 
-        <span>
-          <input
-            ref={input => this.importFileInput = input}
-            type="file"
-            style={{display: 'none'}}
-            accept="csv"
-            onChange={this.handleSelectImportFile}
-          />
-          <button
-            onClick={() => this.importFileInput.click()}
-            style={styles.importButton}
-          >
-            Import csv
-          </button>
-        </span>
+        <ConfirmImportButton
+          importCsv={this.props.importCsv}
+          containerStyle={dataStyles.alignRight}
+        />
 
-        <button
-          onClick={this.props.clearTable}
-          style={styles.clearButton}
-        >
-          Clear table
-        </button>
+        <ConfirmDeleteButton
+          body={applabMsg.confirmClearTable()}
+          buttonText="Clear table"
+          containerStyle={{float: 'right', width: 103}}
+          onConfirm={this.props.clearTable}
+          title="Clear table"
+        />
 
         <div style={{clear: 'both'}}/>
       </div>

@@ -9,6 +9,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
+      "keyDown": null,
+      "keyWentDown": null,
+      "keyWentUp": null,
       "comment_GameLab": null,
       "background": null,
       "fill": null,

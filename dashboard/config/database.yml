@@ -10,6 +10,7 @@ reader = URI.parse(CDO.dashboard_reporting_db_reader) if CDO.dashboard_reporting
 
 mysql_defaults: &mysql_defaults
   adapter: seamless_database_pool
+  prepared_statements: false
   pool_adapter: mysql2
   encoding: utf8
   pool: 5
