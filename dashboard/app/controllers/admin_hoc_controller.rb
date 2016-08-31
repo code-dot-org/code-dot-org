@@ -18,14 +18,14 @@ class AdminHocController < ApplicationController
                   group(:name, :email).
                   # TODO(asher): Is this clumsy notation really necessary? Is Sequel
                   # really this stupid? Also below.
-                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date), :created_at_day)).
                   order(:created_at_day).
                   all.
                   map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
       data_2015 = DB[:forms].
                   where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
                   group(:name, :email).
-                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date), :created_at_day)).
                   order(:created_at_day).
                   all.
                   map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
