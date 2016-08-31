@@ -16,7 +16,9 @@ export const row = {
 export const cell = {
   padding: cellPadding,
   border: '1px solid gray',
-  fontSize: 14
+  fontSize: 14,
+  maxWidth: 350,
+  overflow: 'hidden',
 };
 
 export const addButtonCell = [cell, {
@@ -108,7 +110,9 @@ export const debugData = {
   backgroundColor: color.lightest_gray,
   borderRadius: 10,
   border: `1px solid ${color.light_gray}`,
+  flexGrow: 1,
   fontFamily: 'monospace',
+  overflow: 'scroll',
   padding: 10,
   whiteSpace: 'pre-wrap',
 };
