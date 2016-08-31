@@ -1062,15 +1062,15 @@ Bounce.execute = function () {
   // Map event handler hooks (e.g. Bounce.whenLeft) to the generated code.
   const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
   const events = {
-    whenWallCollided: generator('bounce_whenWallCollided'),
-    whenBallInGoal: generator('bounce_whenBallInGoal'),
-    whenBallMissesPaddle: generator('bounce_whenBallMissesPaddle'),
-    whenPaddleCollided: generator('bounce_whenPaddleCollided'),
-    whenLeft: generator('bounce_whenLeft'),
-    whenRight: generator('bounce_whenRight'),
-    whenUp: generator('bounce_whenUp'),
-    whenDown: generator('bounce_whenDown'),
-    whenGameStarts: generator('when_run')
+    whenWallCollided: {code: generator('bounce_whenWallCollided')},
+    whenBallInGoal: {code: generator('bounce_whenBallInGoal')},
+    whenBallMissesPaddle: {code: generator('bounce_whenBallMissesPaddle')},
+    whenPaddleCollided: {code: generator('bounce_whenPaddleCollided')},
+    whenLeft: {code: generator('bounce_whenLeft')},
+    whenRight: {code: generator('bounce_whenRight')},
+    whenUp: {code: generator('bounce_whenUp')},
+    whenDown: {code: generator('bounce_whenDown')},
+    whenGameStarts: {code: generator('when_run')}
   };
 
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');

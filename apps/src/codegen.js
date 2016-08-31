@@ -53,22 +53,28 @@ exports.evalWith = function (code, options, legacy) {
  * provided APIs as context.
  * @param apis Context to be set as globals in the interpreted runtime.
  * @param events Mapping of hook names to the corresponding handler code.
- * @param code Optional extra code to evaluate.
+ * @param evalCode Optional extra code to evaluate.
  * @return {{}} Mapping of hook names to the corresponding event handler.
  */
-exports.evalWithEvents = function (apis, events, code) {
+exports.evalWithEvents = function (apis, events, evalCode = '') {
   let interpreter, currentCallback;
-  code = code || '';
   const hooks = {};
   Object.keys(events).forEach(event => {
-    hooks[event] = () => {
-      currentCallback(event);
+    hooks[event] = function () {
+      const eventArgs = {name: event, args: [].slice.call(arguments)};
+      currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
       interpreter.run();
     };
-    code += `this['${event}']=function(){${events[event]}};`;
+    const {code, args} = events[event];
+    evalCode += `this['${event}']=function(${args ? args.join() : ''}){${code}};`;
   });
 
-  interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
+  // The event loop pauses the interpreter until the native async function
+  // `currentCallback` returns a value. The value contains the name of the event
+  // to call, and any arguments.
+  const eventLoop = ';while(true){var event=wait();this[event.name].apply(null,event.args);}';
+
+  interpreter = new Interpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
