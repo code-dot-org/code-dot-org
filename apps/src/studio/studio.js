@@ -809,10 +809,10 @@ var setSvgText = function (opts) {
  * @param {string} name Name of the handler we want to call
  * @param {boolean} allowQueueExension When true, we allow additional cmds to
  *  be appended to the queue
- * @param {Array} extraArgs Additional arguments passed into the virtual
-*   JS machine for consumption by the student's event-handling code.
+ * @param {Array} extraArgs Additional arguments passed into the virtual JS
+ *  machine for consumption by the student's event-handling code.
  */
-function callHandler(name, allowQueueExtension, extraArgs) {
+function callHandler(name, allowQueueExtension, extraArgs = []) {
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
@@ -845,7 +845,7 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(api, Studio.Globals);
+          handler.func(api, Studio.Globals, ...extraArgs);
         } catch (e) {
           // Do nothing
           console.error(e);
@@ -2520,14 +2520,15 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
-var registerHandlersForCode = function (handlers, blockName, code) {
-  Studio.interpretedHandlers[blockName] = code;
+var registerHandlersForCode = function (handlers, blockName, code, args = []) {
+  Studio.interpretedHandlers[blockName] = {code, args};
 };
 
 var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
-                nameParam2, matchParam2Val) {
+                nameParam2, matchParam2Val,
+                argNames) {
   var blocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var x = 0; blocks[x]; x++) {
     var block = blocks[x];
@@ -2544,12 +2545,12 @@ var registerHandlers =
       if (code) {
         var eventName = eventNameBase;
         if (nameParam1) {
-          eventName += '-' + matchParam1Val;
+          eventName += '-' + utils.stripQuotes(matchParam1Val);
         }
         if (nameParam2) {
-          eventName += '-' + matchParam2Val;
+          eventName += '-' + utils.stripQuotes(matchParam2Val);
         }
-        registerHandlersForCode(handlers, eventName, code);
+        registerHandlersForCode(handlers, eventName, code, argNames);
       }
     }
   }
@@ -2605,6 +2606,24 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+  }
+};
+
+var registerHandlersWithSpriteAndGroupParams = function (
+    handlers,
+    blockName,
+    eventNameBase,
+    blockParam1,
+    blockParam2,
+    argNames) {
+  var spriteNames = skin.spriteChoices.filter(opt =>
+      opt[1] !== constants.HIDDEN_VALUE && opt[1] !== constants.RANDOM_VALUE
+  ).map(opt => opt[1]);
+  for (var i = 0; i < Studio.spriteCount; i++) {
+    for (var j = 0; j < spriteNames.length; j++) {
+      registerHandlers(handlers, blockName, eventNameBase, blockParam1,
+          String(i), blockParam2, spriteNames[j], argNames);
+    }
   }
 };
 
@@ -2874,6 +2893,14 @@ Studio.execute = function () {
                                      'whenSpriteCollided',
                                      'SPRITE1',
                                      'SPRITE2');
+    registerHandlersWithSpriteAndGroupParams(
+        handlers,
+        'studio_whenSpriteAndGroupCollide',
+        'whenSpriteCollided',
+        'SPRITE',
+        'SPRITENAME',
+        ['touchedSpriteIndex']);
+
   }
 
   if (utils.valueOr(level.playStartSound, true)) {
@@ -3146,13 +3173,14 @@ Studio.drawTimeoutRect = function () {
 };
 
 /**
- * Draw an image with 0.5 opacity over the entire play area.
+ * Draw an image with 0.5 opacity over the entire play area. Only allow one
+ * at a time.
  */
 Studio.drawDebugOverlay = function (src) {
-  if (showDebugInfo) {
+  if (showDebugInfo && $('.debugImage').length === 0) {
     const svg = document.getElementById('svgStudio');
     const group = document.createElementNS(SVG_NS, 'g');
-    group.setAttribute('class', "walls debugImage");
+    group.setAttribute('class', 'walls debugImage');
     const mapImage = document.createElementNS(SVG_NS, 'image');
     mapImage.setAttribute('width', Studio.MAZE_WIDTH);
     mapImage.setAttribute('height', Studio.MAZE_HEIGHT);
@@ -3170,9 +3198,9 @@ Studio.drawDebugOverlay = function (src) {
  */
 
 Studio.clearDebugElements = function () {
-  $(".debugRect").remove();
-  $(".debugLine").remove();
-  $(".debugImage").remove();
+  $('.debugRect').remove();
+  $('.debugLine').remove();
+  $('.debugImage').remove();
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
@@ -5066,6 +5094,8 @@ function handleCollision(src, target, allowQueueExtension) {
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
     callHandler(prefix + 'any_actor', allowQueueExtension);
+    callHandler(prefix + Studio.sprite[target].imageName, false,
+        [target]);
   } else if (isEdgeClass(target)) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
@@ -5108,6 +5138,9 @@ function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
 
   Studio.executeQueue(srcPrefix + target);
+  if (isActorClass(target)) {
+    Studio.executeQueue(srcPrefix + Studio.sprite[target].imageName);
+  }
 
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
