@@ -32,7 +32,7 @@ const styles = {
   table: {
     minWidth: MIN_TABLE_WIDTH,
   },
-  scrollWrapper: {
+  tableWrapper: {
     flexGrow: 1,
     overflow: 'scroll',
   },
@@ -251,11 +251,11 @@ const DataTable = React.createClass({
           tableName={this.props.tableName}
         />
 
-        <div style={styles.scrollWrapper}>
-          <div style={debugDataStyle}>
-            {this.getTableJson()}
-          </div>
+        <div style={debugDataStyle}>
+          {this.getTableJson()}
+        </div>
 
+        <div style={styles.tableWrapper}>
           <table style={tableDataStyle}>
             <tbody>
             <tr>
