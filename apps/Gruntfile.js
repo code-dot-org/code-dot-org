@@ -403,7 +403,11 @@ module.exports = function (grunt) {
           publicKeyCryptography: './src/publicKeyCryptography/main.js',
         }
       ),
-      externals: [],
+      externals: [
+        {
+          'jquery': 'var $',
+        }
+      ],
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
           name: 'common',
