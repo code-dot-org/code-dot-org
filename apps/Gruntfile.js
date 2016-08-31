@@ -378,14 +378,6 @@ module.exports = function (grunt) {
         appsEntries,
         codeStudioEntries,
         {
-          minimal: [
-            'marked',
-            'jquery',
-            'react',
-            'react-dom',
-            'radium',
-          ],
-
           plc: './src/code-studio/plc/plc.js',
 
 
@@ -414,22 +406,27 @@ module.exports = function (grunt) {
       externals: [],
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-          name: 'minimal',
-          minChunks: Infinity
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name: 'code-studio-common',
-          chunks: _.keys(codeStudioEntries).concat(['apps-common']),
-          minChunks: 2
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name: 'apps-common',
+          name: 'common',
           chunks: _.keys(appsEntries),
           minChunks: 2
         }),
-        new ChunkManifestPlugin({
-          filename: 'apps-chunk-manifest.json',
-          manifestVariable: 'appsWebpackManifest'
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'code-studio-common',
+          chunks: _.keys(codeStudioEntries).concat(['common']),
+          minChunks: 2
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'minimal',
+          minChunks: 2,
+          chunks: [
+            'plc',
+            'embedVideo',
+            'embedBlocks',
+            'makerlab',
+            'pd',
+            'publicKeyCryptography',
+            'code-studio-common',
+          ]
         }),
       ],
     },
@@ -448,21 +445,15 @@ module.exports = function (grunt) {
     var watch = options.watch;
 
     return bundles.map(function (bundle) {
-      var uniqueName = bundle.uniqueName;
-      var entries = bundle.entries;
-      var commonFile = bundle.commonFile;
-      var provides = bundle.provides;
-      var plugins = bundle.plugins;
-
       return webpackConfig.create({
         uniqueName: bundle.uniqueName,
         output: path.resolve(__dirname, OUTPUT_DIR),
-        entries: entries,
+        entries: bundle.entries,
         externals: bundle.externals,
         thirdParty: bundle.thirdParty,
-        commonFile: commonFile,
-        plugins: plugins,
-        provides: provides,
+        commonFile: bundle.commonFile,
+        plugins: bundle.plugins,
+        provides: bundle.provides,
         minify: minify,
         watch: watch,
         piskelDevMode: PISKEL_DEVELOPMENT_MODE
@@ -659,15 +650,14 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'prebuild',
-    'webpack:build'
-  ].concat([
+    'webpack:build',
     'notify:js-build',
     // Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'webpack:uglify',
     // Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
-    'postbuild'
-  ]));
+    'postbuild',
+  ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
