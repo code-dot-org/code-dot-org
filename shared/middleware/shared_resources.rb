@@ -1,11 +1,11 @@
 require 'sinatra/base'
 require 'erb'
-require 'sass/plugin/rack'
+require 'sass/plugin'
 require 'cdo/pegasus/graphics'
 require 'dynamic_config/dcdo'
 
 class SharedResources < Sinatra::Base
-  use Sass::Plugin::Rack
+#  use Sass::Plugin::Rack
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
