@@ -64,14 +64,6 @@ const TableControls = React.createClass({
         </div>
         {" "}
         <div style={styles.buttonWrapper}>
-          <button onClick={this.props.exportCsv} style={styles.exportButton}>
-            Export to csv
-          </button>
-          <ConfirmImportButton
-            importCsv={this.props.importCsv}
-            containerStyle={{marginLeft: 10}}
-          />
-
           <ConfirmDeleteButton
             body={applabMsg.confirmClearTable()}
             buttonText="Clear table"
@@ -79,6 +71,15 @@ const TableControls = React.createClass({
             onConfirm={this.props.clearTable}
             title="Clear table"
           />
+
+          <ConfirmImportButton
+            importCsv={this.props.importCsv}
+            containerStyle={{marginLeft: 10}}
+          />
+
+          <button onClick={this.props.exportCsv} style={styles.exportButton}>
+            Export to csv
+          </button>
         </div>
 
         {/* help make the "text-align: justify;" trick work */}
