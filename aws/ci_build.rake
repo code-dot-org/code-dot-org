@@ -321,7 +321,7 @@ task :dashboard_unit_tests do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:test:prepare'
-      RakeUtils.rake 'test'
+      RakeUtils.bundle_exec 'rails', 'test'
       RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
