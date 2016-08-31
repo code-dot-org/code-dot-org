@@ -845,7 +845,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(api, Studio.Globals, ...extraArgs);
+          handler.func(...extraArgs);
         } catch (e) {
           // Do nothing
           console.error(e);
