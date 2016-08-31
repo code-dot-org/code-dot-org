@@ -234,6 +234,9 @@ function loadLevel() {
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
+  Studio.legacyRuntime = Studio.customLogic;
+
+
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
   } else {
@@ -845,7 +848,11 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(...extraArgs);
+          if (Studio.legacyRuntime) {
+            handler.func(api, Studio.Globals, ...extraArgs);
+          } else {
+            handler.func(...extraArgs);
+          }
         } catch (e) {
           // Do nothing
           console.error(e);
@@ -2521,7 +2528,12 @@ var registerEventHandler = function (handlers, name, func) {
 };
 
 var registerHandlersForCode = function (handlers, blockName, code, args = []) {
-  Studio.interpretedHandlers[blockName] = {code, args};
+  if (Studio.legacyRuntime) {
+    registerEventHandler(handlers, blockName,
+      new Function('Studio', 'Globals', ...args, code));
+  } else {
+    Studio.interpretedHandlers[blockName] = {code, args};
+  }
 };
 
 var registerHandlers =
@@ -2625,6 +2637,22 @@ var registerHandlersWithSpriteAndGroupParams = function (
           String(i), blockParam2, spriteNames[j], argNames);
     }
   }
+};
+
+//
+// Generates code with user-generated function definitions and evals that code
+// so these can be called from event handlers. This should be called for each
+// block type that defines functions.
+//
+
+var defineProcedures = function (blockType) {
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
+  try {
+    codegen.evalWith(code, {
+      Studio: api,
+      Globals: Studio.Globals
+    }, true);
+  } catch (e) { }
 };
 
 /**
@@ -2935,18 +2963,24 @@ Studio.execute = function () {
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
-    var generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
-    const code = [
-      'procedures_defreturn',
-      'procedures_defnoreturn',
-      'functional_definition'
-    ].map(p => generator(p)).join(';');
+    if (Studio.legacyRuntime) {
+      defineProcedures('procedures_defreturn');
+      defineProcedures('procedures_defnoreturn');
+      defineProcedures('functional_definition');
+    } else {
+      var generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+      const code = [
+        'procedures_defreturn',
+        'procedures_defnoreturn',
+        'functional_definition'
+      ].map(p => generator(p)).join(';');
 
-    const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+      const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
 
-    Object.keys(hooks).forEach(hook => {
-      registerEventHandler(handlers, hook, hooks[hook]);
-    });
+      Object.keys(hooks).forEach(hook => {
+        registerEventHandler(handlers, hook, hooks[hook]);
+      });
+    }
 
     // Set event handlers and start the onTick timer
     Studio.eventHandlers = handlers;
