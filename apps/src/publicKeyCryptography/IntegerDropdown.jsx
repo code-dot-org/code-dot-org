@@ -25,6 +25,7 @@ const IntegerDropdown = React.createClass({
     return (
       <VirtualizedSelect
         className="integer-dropdown"
+        clearable={false}
         optionHeight={LINE_HEIGHT}
         options={options}
         value={value}
