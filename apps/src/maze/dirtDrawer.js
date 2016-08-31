@@ -1,10 +1,9 @@
-import Drawer from './drawer';
+import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
 const DIRT_MAX = 10;
 const DIRT_COUNT = DIRT_MAX * 2 + 2;
-
-const SQUARE_SIZE = 50;
+const ASSET_UNCLIPPED_WIDTH = SQUARE_SIZE * DIRT_COUNT;
 
 /**
  * Extends Drawer to draw dirt piles for Farmer.
@@ -12,7 +11,6 @@ const SQUARE_SIZE = 50;
 export default class DirtDrawer extends Drawer {
   constructor(map, dirtAsset) {
     super(map, dirtAsset);
-    this.assetUnclippedWidth = SQUARE_SIZE * DIRT_COUNT;
   }
 
   getAsset(prefix, row, col) {
@@ -24,6 +22,12 @@ export default class DirtDrawer extends Drawer {
    * @override
    */
   updateItemImage(row, col, running) {
+    let img = super.updateItemImage(row, col, running);
+
+    if (!img) {
+      return;
+    }
+
     let val = this.map_.getValue(row, col) || 0;
 
     // If the cell is a variable cell and we are not currently running,
@@ -32,32 +36,22 @@ export default class DirtDrawer extends Drawer {
       val = (val < 0) ? -11 : 11;
     }
 
-    this.updateImageWithIndex_('dirt', row, col, DirtDrawer.spriteIndexForDirt(val));
-  }
-
-  /**
-   * @override
-   */
-  updateImageWithIndex_(prefix, row, col, spriteIndex) {
-    let img = super.updateImageWithIndex_(prefix, row, col);
-    if (!img) {
-      return;
-    }
-
+    let spriteIndex = DirtDrawer.spriteIndexForDirt(val);
     let hiddenImage = spriteIndex < 0;
     img.setAttribute('visibility', hiddenImage ? 'hidden' : 'visible');
     if (!hiddenImage) {
       img.setAttribute('x', SQUARE_SIZE * (col - spriteIndex));
     }
+
     return img;
   }
 
   /**
    * @override
    */
-  createImage_(prefix, row, col) {
-    let img = super.createImage_(prefix, row, col);
-    img.setAttribute('width', this.assetUnclippedWidth);
+  getOrCreateImage_(prefix, row, col) {
+    let img = super.getOrCreateImage_(prefix, row, col);
+    img && img.setAttribute('width', ASSET_UNCLIPPED_WIDTH);
     return img;
   }
 
