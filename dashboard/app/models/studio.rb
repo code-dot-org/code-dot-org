@@ -125,6 +125,13 @@ class Studio < Grid
   <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
+  <block type="studio_whenSpriteAndGroupCollide">
+    <value name="GROUPMEMBER">
+      <block type="variables_get">
+        <title name="VAR">actor</title>
+      </block>
+    </value>
+  </block>
 </category>
 <category name="Actions">
   <block type="studio_setSprite" />
