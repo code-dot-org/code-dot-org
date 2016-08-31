@@ -60,8 +60,8 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
   let interpreter, currentCallback;
   const hooks = {};
   Object.keys(events).forEach(event => {
-    hooks[event] = function () {
-      const eventArgs = {name: event, args: [].slice.call(arguments)};
+    hooks[event] = (...args) => {
+      const eventArgs = {name: event, args: args};
       currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
       interpreter.run();
     };
