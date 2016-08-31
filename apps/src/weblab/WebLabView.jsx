@@ -1,20 +1,16 @@
 /** @file Top-level view for GameLab */
 /* global dashboard */
-'use strict';
 
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import React from 'react';
-var _ = require('lodash');
-var StudioAppWrapper = require('../templates/StudioAppWrapper');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import CodeWorkspace from '../templates/CodeWorkspace';
+import _ from 'lodash';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
 
 /**
  * Top-level React wrapper for WebLab
  */
-var WebLabView = React.createClass({
+const WebLabView = React.createClass({
   propTypes: {
     onUndo: React.PropTypes.func.isRequired,
     onRedo: React.PropTypes.func.isRequired,
@@ -37,7 +33,6 @@ var WebLabView = React.createClass({
 
   shouldShowHeader: function () {
     return true;
-    // return !(this.props.isEmbedView || this.props.isShareView);
   },
 
   render: function () {

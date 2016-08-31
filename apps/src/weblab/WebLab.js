@@ -20,16 +20,12 @@ import { Provider } from 'react-redux';
 // Global singleton
 let webLab_ = null;
 
-let WebLab = function () {
+const WebLab = function () {
   this.skin = null;
   this.level = null;
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
-
-  this.eventHandlers = {};
-  this.Globals = {};
-  this.reportPreloadEventHandlerComplete_ = null;
 
   consoleApi.setLogMethod(this.log.bind(this));
   errorHandler.setLogMethod(this.log.bind(this));
@@ -99,14 +95,14 @@ WebLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  let onMount = function () {
+  const onMount = () => {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
     // TODO: understand if we need to call studioApp
     // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
     // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
     // this.studioApp_.init(config);
-  }.bind(this);
+  };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
@@ -115,7 +111,7 @@ WebLab.prototype.init = function (config) {
   });
 
   function onUndo() {
-      this.brambleHost.undo();
+    this.brambleHost.undo();
   }
 
   function onRedo() {
@@ -124,10 +120,14 @@ WebLab.prototype.init = function (config) {
 
   function onShowPreview() {
     this.brambleHost.hideTutorial();
+    // temporarily, register a "change" when the preview or tutorial buttons are pressed. TODO: hook up onProjectChanged to Bramble
+    this.onProjectChanged();
   }
 
   function onShowTutorial() {
     this.brambleHost.showTutorial();
+    // temporarily, register a "change" when the preview or tutorial buttons are pressed. TODO: hook up onProjectChanged to Bramble
+    this.onProjectChanged();
   }
 
   let inspectorOn = false;
@@ -157,7 +157,7 @@ WebLab.prototype.init = function (config) {
 };
 
 WebLab.prototype.getCodeAsync = function () {
-  return new Promise (function (resolve,reject) {
+  return new Promise((resolve,reject) => {
     if (this.brambleHost !== null) {
       this.brambleHost.getBrambleCode(function (code) {
         resolve(code);
@@ -166,7 +166,7 @@ WebLab.prototype.getCodeAsync = function () {
       // Bramble not installed yet - we have no code to return
       resolve("");
     }
-  }.bind(this));
+  });
 };
 
 // Called by Bramble to get source files to initialize with

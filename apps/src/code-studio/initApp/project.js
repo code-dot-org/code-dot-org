@@ -352,7 +352,7 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          this.sourceHandler.getLevelSource(currentSources.source).then(function (response) {
+          this.sourceHandler.getLevelSource(currentSources.source).then(response => {
             currentSources.source = response;
           });
         }.bind(this));
@@ -464,11 +464,10 @@ var projects = module.exports = {
       callback = args[0];
       forceNewVersion = args[1];
       this.sourceHandler.getAnimationList(animations => {
-        var thisProject = this;
-        this.sourceHandler.getLevelSource().then(function (response) {
+        this.sourceHandler.getLevelSource().then(response => {
           const source = response;
-          const html = thisProject.sourceHandler.getLevelHtml();
-          thisProject.save({source, html, animations}, callback, forceNewVersion);
+          const html = this.sourceHandler.getLevelHtml();
+          this.save({source, html, animations}, callback, forceNewVersion);
         });
       });
       return;
@@ -542,17 +541,16 @@ var projects = module.exports = {
     }
 
     this.sourceHandler.getAnimationList(animations => {
-      var thisProject = this;
-      this.sourceHandler.getLevelSource().then(function (response) {
+      this.sourceHandler.getLevelSource().then(response => {
         const source = response;
-        const html = thisProject.sourceHandler.getLevelHtml();
+        const html = this.sourceHandler.getLevelHtml();
         const newSources = {source, html, animations};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
           return;
         }
 
-        thisProject.save(newSources, () => {
+        this.save(newSources, () => {
           hasProjectChanged = false;
         });
       });
