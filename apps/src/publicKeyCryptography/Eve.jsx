@@ -1,5 +1,6 @@
 /** @file The Eve character from the cryptography widget */
 import React from 'react';
+import color from '../color';
 import CollapsiblePanel from './CollapsiblePanel';
 import NumberedSteps from './NumberedSteps';
 import IntegerField from './IntegerField';
@@ -8,8 +9,22 @@ import ValidatorField from './ValidatorField';
 import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
-  SecretNumberDropdown
+  SecretNumberDropdown,
+  KeywordPublicModulus,
+  KeywordPublicKey,
+  KeywordPrivateKey,
+  KeywordPublicNumber,
+  KeywordSecretNumber
 } from './cryptographyFields';
+import {COLORS, LINE_HEIGHT} from './style';
+
+const tdEquationStyleRHS = {
+  lineHeight: LINE_HEIGHT + 'px',
+  verticalAlign: 'top'
+};
+const tdEquationStyleLHS = Object.assign({}, tdEquationStyleRHS, {
+  whiteSpace: 'nowrap'
+});
 
 const Eve = React.createClass({
   propTypes: {
@@ -113,7 +128,7 @@ const Eve = React.createClass({
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
           <div>
-            Set a public modulus:
+            Set a <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -121,58 +136,86 @@ const Eve = React.createClass({
             />
           </div>
           <div>
-            Enter Alice's public key:
+            Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
               onChange={this.setPublicKey}
               disabled={disabled}
+              color={COLORS.publicKey}
             />
           </div>
           <div>
-            Crack Alice's private key:
-            <div>
-              {'('}
-              <IntegerField value={publicKey}/>
-              {' x '}
-              <PrivateKeyDropdown
-                publicModulus={publicModulus}
-                value={privateKey}
-                onChange={this.setPrivateKey}
-                disabled={disabled}
-              />
-              {') MOD '}
-              <IntegerField value={publicModulus}/> = 1
-              {' '}
-              <ValidatorField value={privateKeyEquationResult} expectedValue={1} shouldEvaluate={!checkingPrivateKey}/>
-            </div>
+            Crack Alice's <KeywordPrivateKey/>:
+            <PrivateKeyDropdown
+              publicModulus={publicModulus}
+              value={privateKey}
+              onChange={this.setPrivateKey}
+              disabled={disabled}
+            />
+            <table>
+              <tbody>
+                <tr style={{height: LINE_HEIGHT}}>
+                  <td width="1%" style={tdEquationStyleLHS}>
+                    {'('}
+                    <IntegerField color={COLORS.publicKey} value={publicKey}/>
+                    {' x '}
+                    <IntegerField color={COLORS.privateKey} value={privateKey}/>
+                    {') MOD '}
+                    <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+                  </td>
+                  <td style={tdEquationStyleRHS}>
+                    {' = '}
+                    <IntegerField color={color.white} value={1}/>
+                    <ValidatorField
+                      value={privateKeyEquationResult}
+                      expectedValue={1}
+                      shouldEvaluate={!checkingPrivateKey}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div>
-            Enter Bob's public number:
+            Enter Bob's <KeywordPublicNumber/>:
             <IntegerTextbox
               value={publicNumber}
               onChange={this.setPublicNumber}
               disabled={disabled}
+              color={COLORS.publicNumber}
             />
           </div>
           <div>
-            Crack Bob's secret number:
-            <div>
-              {'('}
-              <IntegerField value={publicKey}/>
-              {' x '}
-              <SecretNumberDropdown
-                value={secretNumber}
-                onChange={this.setSecretNumber}
-                publicModulus={publicModulus}
-                disabled={disabled}
-              />
-              {') MOD '}
-              <IntegerField value={publicModulus}/>
-              {' = '}
-              <IntegerField value={publicNumber}/>
-              {' '}
-              <ValidatorField value={secretNumberEquationResult} expectedValue={publicNumber} shouldEvaluate={!checkingSecretNumber}/>
-            </div>
+            Crack Bob's <KeywordSecretNumber/>:
+            <SecretNumberDropdown
+              value={secretNumber}
+              onChange={this.setSecretNumber}
+              publicModulus={publicModulus}
+              disabled={disabled}
+            />
+            <table>
+              <tbody>
+                <tr style={{height: LINE_HEIGHT}}>
+                  <td width="1%" style={tdEquationStyleLHS}>
+                    {'('}
+                    <IntegerField color={COLORS.publicKey} value={publicKey}/>
+                    {' x '}
+                    <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+                    {') MOD '}
+                    <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+                  </td>
+                  <td style={tdEquationStyleRHS}>
+                    {' = '}
+                    <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
+                    <ValidatorField
+                      value={secretNumberEquationResult}
+                      expectedValue={publicNumber}
+                      shouldEvaluate={!checkingSecretNumber}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </NumberedSteps>
       </CollapsiblePanel>);
