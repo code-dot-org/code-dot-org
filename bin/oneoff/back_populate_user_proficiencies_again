@@ -170,7 +170,7 @@ SUFFIXES = %w(
   _2016_05
   _2016_06
   _2016_07
-  _2016_08_partial
+  _2016_08
 ).freeze
 
 # @param line [Array] an array giving UserProficiency values
@@ -224,15 +224,16 @@ end
 def increment_user_proficiency(historical_line, incremental_line)
   sum = historical_line.clone
 
+  # Add the incremental level counts to the historical level counts.
   (1..50).each do |index|
     sum[index] += incremental_line[index]
   end
-
+  # Update last_progress_at, if there was progress in the incremental.
   unless incremental_line[51].nil?
     sum[51] = incremental_line[51]
   end
-
-  if sum[52] && sum.proficient?
+  # Update basic_proficiency_at, if we became proficient via the incremental.
+  if sum[52].nil? && proficient?(sum)
     sum[52] = incremental_line[51]
   end
 
@@ -274,84 +275,90 @@ SUFFIXES.each do |suffix|
     user_proficiency_hash[user_id] = increment_user_proficiency(historical, line)
   end
 
-  puts "PROCESSED #{filename}..."
+  puts "PROCESSED #{filename}."
 end
 
-hash_count = 0
+slice_count = 0
 puts "UPDATING DB..."
 # Update the DB with the data in user_proficiency_hash.
-user_proficiency_hash.each do |user_id, proficiency|
-  if hash_count % 100_000 == 0
-    puts "  HASH_COUNT: #{hash_count}..."
+begin
+  user_proficiency_hash.values.each_slice(1000) do |slice|
+    puts "  SLICE_COUNT: #{slice_count}..."
+
+    ActiveRecord::Base.transaction do
+      slice.each do |proficiency|
+        db_proficiency = UserProficiency.find_or_create_by(user_id: proficiency[0])
+
+        db_proficiency.sequencing_d1_count += proficiency[1]
+        db_proficiency.sequencing_d2_count += proficiency[2]
+        db_proficiency.sequencing_d3_count += proficiency[3]
+        db_proficiency.sequencing_d4_count += proficiency[4]
+        db_proficiency.sequencing_d5_count += proficiency[5]
+
+        db_proficiency.debugging_d1_count += proficiency[6]
+        db_proficiency.debugging_d2_count += proficiency[7]
+        db_proficiency.debugging_d3_count += proficiency[8]
+        db_proficiency.debugging_d4_count += proficiency[9]
+        db_proficiency.debugging_d5_count += proficiency[10]
+
+        db_proficiency.repeat_loops_d1_count += proficiency[11]
+        db_proficiency.repeat_loops_d2_count += proficiency[12]
+        db_proficiency.repeat_loops_d3_count += proficiency[13]
+        db_proficiency.repeat_loops_d4_count += proficiency[14]
+        db_proficiency.repeat_loops_d5_count += proficiency[15]
+
+        db_proficiency.repeat_until_while_d1_count += proficiency[16]
+        db_proficiency.repeat_until_while_d2_count += proficiency[17]
+        db_proficiency.repeat_until_while_d3_count += proficiency[18]
+        db_proficiency.repeat_until_while_d4_count += proficiency[19]
+        db_proficiency.repeat_until_while_d5_count += proficiency[20]
+
+        db_proficiency.for_loops_d1_count += proficiency[21]
+        db_proficiency.for_loops_d2_count += proficiency[22]
+        db_proficiency.for_loops_d3_count += proficiency[23]
+        db_proficiency.for_loops_d4_count += proficiency[24]
+        db_proficiency.for_loops_d5_count += proficiency[25]
+
+        db_proficiency.events_d1_count += proficiency[26]
+        db_proficiency.events_d2_count += proficiency[27]
+        db_proficiency.events_d3_count += proficiency[28]
+        db_proficiency.events_d4_count += proficiency[29]
+        db_proficiency.events_d5_count += proficiency[30]
+
+        db_proficiency.variables_d1_count += proficiency[31]
+        db_proficiency.variables_d2_count += proficiency[32]
+        db_proficiency.variables_d3_count += proficiency[33]
+        db_proficiency.variables_d4_count += proficiency[34]
+        db_proficiency.variables_d5_count += proficiency[35]
+
+        db_proficiency.functions_d1_count += proficiency[36]
+        db_proficiency.functions_d2_count += proficiency[37]
+        db_proficiency.functions_d3_count += proficiency[38]
+        db_proficiency.functions_d4_count += proficiency[39]
+        db_proficiency.functions_d5_count += proficiency[40]
+
+        db_proficiency.functions_with_params_d1_count += proficiency[41]
+        db_proficiency.functions_with_params_d2_count += proficiency[42]
+        db_proficiency.functions_with_params_d3_count += proficiency[43]
+        db_proficiency.functions_with_params_d4_count += proficiency[44]
+        db_proficiency.functions_with_params_d5_count += proficiency[45]
+
+        db_proficiency.conditionals_d1_count += proficiency[46]
+        db_proficiency.conditionals_d2_count += proficiency[47]
+        db_proficiency.conditionals_d3_count += proficiency[48]
+        db_proficiency.conditionals_d4_count += proficiency[49]
+        db_proficiency.conditionals_d5_count += proficiency[50]
+
+        db_proficiency.last_progress_at = proficiency[51] unless db.last_progress_at
+        db_proficiency.basic_proficiency_at = proficiency[52] if proficiency[52]
+
+        db_proficiency.save!
+      end
+    end
+    slice_count += 1
   end
-
-  db_proficiency = UserProficiency.find_or_create_by(user_id: user_id)
-
-  db_proficiency.sequencing_d1_count += proficiency[1]
-  db_proficiency.sequencing_d2_count += proficiency[2]
-  db_proficiency.sequencing_d3_count += proficiency[3]
-  db_proficiency.sequencing_d4_count += proficiency[4]
-  db_proficiency.sequencing_d5_count += proficiency[5]
-
-  db_proficiency.debugging_d1_count += proficiency[6]
-  db_proficiency.debugging_d2_count += proficiency[7]
-  db_proficiency.debugging_d3_count += proficiency[8]
-  db_proficiency.debugging_d4_count += proficiency[9]
-  db_proficiency.debugging_d5_count += proficiency[10]
-
-  db_proficiency.repeat_loops_d1_count += proficiency[11]
-  db_proficiency.repeat_loops_d2_count += proficiency[12]
-  db_proficiency.repeat_loops_d3_count += proficiency[13]
-  db_proficiency.repeat_loops_d4_count += proficiency[14]
-  db_proficiency.repeat_loops_d5_count += proficiency[15]
-
-  db_proficiency.repeat_until_while_d1_count += proficiency[16]
-  db_proficiency.repeat_until_while_d2_count += proficiency[17]
-  db_proficiency.repeat_until_while_d3_count += proficiency[18]
-  db_proficiency.repeat_until_while_d4_count += proficiency[19]
-  db_proficiency.repeat_until_while_d5_count += proficiency[20]
-
-  db_proficiency.for_loops_d1_count += proficiency[21]
-  db_proficiency.for_loops_d2_count += proficiency[22]
-  db_proficiency.for_loops_d3_count += proficiency[23]
-  db_proficiency.for_loops_d4_count += proficiency[24]
-  db_proficiency.for_loops_d5_count += proficiency[25]
-
-  db_proficiency.events_d1_count += proficiency[26]
-  db_proficiency.events_d2_count += proficiency[27]
-  db_proficiency.events_d3_count += proficiency[28]
-  db_proficiency.events_d4_count += proficiency[29]
-  db_proficiency.events_d5_count += proficiency[30]
-
-  db_proficiency.variables_d1_count += proficiency[31]
-  db_proficiency.variables_d2_count += proficiency[32]
-  db_proficiency.variables_d3_count += proficiency[33]
-  db_proficiency.variables_d4_count += proficiency[34]
-  db_proficiency.variables_d5_count += proficiency[35]
-
-  db_proficiency.functions_d1_count += proficiency[36]
-  db_proficiency.functions_d2_count += proficiency[37]
-  db_proficiency.functions_d3_count += proficiency[38]
-  db_proficiency.functions_d4_count += proficiency[39]
-  db_proficiency.functions_d5_count += proficiency[40]
-
-  db_proficiency.functions_with_params_d1_count += proficiency[41]
-  db_proficiency.functions_with_params_d2_count += proficiency[42]
-  db_proficiency.functions_with_params_d3_count += proficiency[43]
-  db_proficiency.functions_with_params_d4_count += proficiency[44]
-  db_proficiency.functions_with_params_d5_count += proficiency[45]
-
-  db_proficiency.conditionals_d1_count += proficiency[46]
-  db_proficiency.conditionals_d2_count += proficiency[47]
-  db_proficiency.conditionals_d3_count += proficiency[48]
-  db_proficiency.conditionals_d4_count += proficiency[49]
-  db_proficiency.conditionals_d5_count += proficiency[50]
-
-  db_proficiency.last_progress_at = proficiency[51] unless db.last_progress_at
-  db_proficiency.basic_proficiency_at = proficiency[52] if proficiency[52]
-
-  db_proficiency.save!
-
-  hash_count += 1
+rescue Exception => e
+  puts "EXCEPTION: PROCESSING #{slice_count}..."
+  raise e
 end
-puts "UPDATED DB..."
+puts "UPDATED DB."
