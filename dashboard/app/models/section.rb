@@ -74,7 +74,7 @@ class Section < ActiveRecord::Base
       # new one
       follower.update_attributes!(section: self)
     else
-      follower = Follower.create!(user_id: self.user_id, student_user: student, section: self)
+      follower = Follower.find_or_create_by!(user_id: self.user_id, student_user: student, section: self)
     end
     follower
   end

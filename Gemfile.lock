@@ -52,6 +52,14 @@ GIT
     omniauth-clever (1.2.1)
       omniauth-oauth2 (>= 1.1.1)
 
+GIT
+  remote: git://github.com/wjordan/seamless_database_pool.git
+  revision: 2bf241ef117e388cc30ed3b71f07868ee4d59e83
+  ref: rails_5_migration_fix
+  specs:
+    seamless_database_pool (1.0.18)
+      activerecord (>= 3.0.20)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -527,8 +535,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    seamless_database_pool (1.0.18)
-      activerecord (>= 3.0.20)
     securecompare (1.0.0)
     selectize-rails (0.12.2)
     selenium-webdriver (2.45.0)
@@ -725,7 +731,7 @@ DEPENDENCIES
   sass-rails
   scss_lint
   sdoc
-  seamless_database_pool
+  seamless_database_pool!
   selectize-rails
   selenium-webdriver (~> 2.45.0)
   sequel (~> 4.10)
