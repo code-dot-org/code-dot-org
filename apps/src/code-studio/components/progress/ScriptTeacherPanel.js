@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
+import SectionSelector from './SectionSelector';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, setViewType, selectSection, fullyLockedStageMapping } from '../../stageLockRedux';
+import { ViewType, setViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import commonMsg from '@cdo/locale';
 
 const styles = {
@@ -13,10 +14,6 @@ const styles = {
   },
   toggleGroup: {
     margin: 10
-  },
-  select: {
-    margin: 10,
-    width: 180
   },
   text: {
     margin: 10
@@ -61,23 +58,16 @@ const ScriptTeacherPanel = React.createClass({
         section_name: React.PropTypes.string.isRequired
       })
     ).isRequired,
-    selectedSection: React.PropTypes.string,
     sectionsLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     setViewType: React.PropTypes.func.isRequired,
-    selectSection: React.PropTypes.func.isRequired,
-  },
-
-  handleSelectChange(event) {
-    this.props.selectSection(event.target.value);
   },
 
   render() {
     const {
       viewAs,
       sections,
-      selectedSection,
       sectionsLoaded,
       setViewType,
       scriptHasLockableStages,
@@ -90,20 +80,7 @@ const ScriptTeacherPanel = React.createClass({
         <div className="content">
           <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
           {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          {scriptHasLockableStages && hasSections &&
-            <select
-              name="sections"
-              style={styles.select}
-              value={selectedSection}
-              onChange={this.handleSelectChange}
-            >
-              {Object.keys(sections).map(id => (
-                <option key={id} value={id}>
-                  {sections[id].section_name}
-                </option>
-              ))}
-            </select>
-          }
+          {scriptHasLockableStages && hasSections && <SectionSelector/>}
           {scriptHasLockableStages && hasSections && this.props.viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
@@ -153,7 +130,6 @@ export default connect((state, ownProps) => {
   return {
     viewAs,
     sections,
-    selectedSection,
     sectionsLoaded,
     scriptHasLockableStages,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
@@ -161,8 +137,5 @@ export default connect((state, ownProps) => {
 }, dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));
-  },
-  selectSection(sectionId) {
-    dispatch(selectSection(sectionId));
   }
 }))(ScriptTeacherPanel);
