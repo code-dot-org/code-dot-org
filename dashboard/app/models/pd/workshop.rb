@@ -22,7 +22,6 @@
 #
 # Indexes
 #
-#  index_pd_workshops_on_deleted_at    (deleted_at)
 #  index_pd_workshops_on_organizer_id  (organizer_id)
 #
 
