@@ -21,17 +21,17 @@ export const cell = {
   overflow: 'hidden',
 };
 
-export const addButtonCell = [cell, {
+export const addButtonCell = Object.assign({}, cell, {
   minWidth: addButtonCellWidth,
   backgroundColor: color.lightest_teal,
   width: addButtonCellWidth,
-}];
+});
 
-export const editButtonCell = [cell, {
+export const editButtonCell = Object.assign({}, cell, {
   minWidth: editButtonCellWidth,
   backgroundColor: color.lightest_teal,
   width: editButtonCellWidth,
-}];
+});
 
 export const headerCell = {
   padding: '6px 10px',
@@ -58,30 +58,30 @@ export const button = {
   verticalAlign: 'middle',
 };
 
-export const whiteButton = [button, {
+export const whiteButton = Object.assign({}, button, {
   backgroundColor: 'white',
   color: 'black',
-}];
+});
 
-export const redButton = [button, {
+export const redButton = Object.assign({}, button, {
   backgroundColor: color.bootstrap_button_red,
   color: 'white',
-}];
+});
 
-export const blueButton = [button, {
+export const blueButton = Object.assign({}, button, {
   backgroundColor: color.bootstrap_button_blue,
   color: 'white',
-}];
+});
 
-export const editButton = [whiteButton, {
+export const editButton = Object.assign({}, whiteButton, {
   marginRight: 10,
   width: 60
-}];
+});
 
-export const saveButton = [blueButton, {
+export const saveButton = Object.assign({}, blueButton, {
   marginRight: 10,
   width: 60
-}];
+});
 
 export const input = {
   width: 'calc(100% - 14px)',
@@ -122,6 +122,6 @@ export const clearfix = {
   display: 'inline-block',
   width: '100%',
   height: 0,
-  fontSize:0,
-  lineHeight:0,
+  fontSize: 0,
+  lineHeight: 0,
 };
