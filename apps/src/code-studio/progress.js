@@ -7,9 +7,8 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
-import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { getStore } from './redux';
-import { authorizeLockable, setSections } from './stageLockRedux';
+import { authorizeLockable } from './stageLockRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -23,6 +22,7 @@ import {
   updateFocusArea,
   showTeacherInfo
 } from './progressRedux';
+import { renderTeacherPanel } from './teacher';
 
 var progress = module.exports;
 
@@ -107,34 +107,6 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     mountPoint
   );
 };
-
-/**
- * Query the server for progress of all students in section, and render this to
- * our teacher panel.
- */
-function renderTeacherPanel(store, scriptId) {
-  const div = document.createElement('div');
-  div.setAttribute('id', 'teacher-panel-container');
-  $.ajax(
-    '/api/lock_status',
-    {
-      data: {
-        user_id: clientState.queryParams('user_id'),
-        script_id: scriptId
-      }
-    }
-  ).done(data => {
-    store.dispatch(setSections(data));
-  });
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <ScriptTeacherPanel/>
-    </Provider>,
-    div
-  );
-  document.body.appendChild(div);
-}
 
 /**
  * Creates a redux store with our initial progress
