@@ -2532,7 +2532,16 @@ var registerHandlersForCode = function (handlers, blockName, code, args = []) {
     registerEventHandler(handlers, blockName,
       new Function('Studio', 'Globals', ...args, code));
   } else {
-    Studio.interpretedHandlers[blockName] = {code, args};
+    const event = Studio.interpretedHandlers[blockName];
+    if (event) {
+      if (!_.isEqual(event.args, args)) {
+        throw "Can't register two event handlers that take different arguments.";
+      }
+      // Combine code with the existing event.
+      Studio.interpretedHandlers[blockName] = {code: event.code + code, args};
+    } else {
+      Studio.interpretedHandlers[blockName] = {code, args};
+    }
   }
 };
 
