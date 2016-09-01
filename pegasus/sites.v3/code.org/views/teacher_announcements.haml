@@ -1,18 +1,21 @@
-- csp_widgets_url = "http://teacherblog.code.org/post/148059231974/explore-cs-concepts-in-any-classroom-with-these-4"
+- pp_url = 'http://teacherblog.code.org/post/147349807334/try-pair-programmingtrack-the-progress-of'
+- csp_widgets_url = 'http://teacherblog.code.org/post/148059231974/explore-cs-concepts-in-any-classroom-with-these-4'
+- unused_code_url = 'http://teacherblog.code.org/post/145866947074/help-test-our-new-unused-code-feature'
+- teacher_blog_url = 'http://teacherblog.code.org/'
 
 .teacher-announce
   .announce-heading
     = I18n.t(:dashboard_announcements)
   .announce-content
-    %a{href: csp_widgets_url, target: '_blank'}
+    %a{href: teacher_blog_url, target: '_blank'}
       .content-img-container
-        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/csp-widgets.png'), width: '200px'}
+        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/summer-features.jpg'), width: '200px'}
     .content-text
-      = I18n.t(:dashboard_announce_csp_widgets_message)
+      = I18n.t(:dashboard_announce_message, pp_url: pp_url, csp_widgets_url: csp_widgets_url, unused_code_url: unused_code_url)
     .announce-learn-more
-      %a{href: csp_widgets_url, target: '_blank'}
-        %button.primary= I18n.t(:dashboard_announce_try_now_button)  
+      %a{href: teacher_blog_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_learn_more_button) 
   .mini-announcement
     .content-text
       %i.fa.fa-hand-o-right
-      = I18n.t('dashboard_announce_all', teacher_blog_url: 'http://teacherblog.code.org/')
+      = I18n.t(:dashboard_announce_all, teacher_blog_url: teacher_blog_url)
