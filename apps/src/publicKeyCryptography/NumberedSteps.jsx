@@ -31,7 +31,7 @@ NumberedSteps.propTypes = {
  * If any of those values are falsy, the step will be faded out.
  */
 export function Step(props) {
-  const isStepEnabled = (props.requires || []).every(x => x);
+  const isStepEnabled = props.hasOwnProperty('requires') ? props.requires : true;
   const trStyle = {
     transition: 'opacity 0.5s',
     opacity: isStepEnabled ? 1 : 0.2
@@ -43,13 +43,12 @@ export function Step(props) {
     </tr>);
 }
 Step.propTypes = {
-  index: React.PropTypes.number.isRequired,
+  index: React.PropTypes.number,
   children: AnyChildren,
-  requires: React.PropTypes.arrayOf(React.PropTypes.any)
+  requires: React.PropTypes.bool
 };
 Step.defaultProps = {
-  index: 0,
-  requires: []
+  index: 0
 };
 
 if (BUILD_STYLEGUIDE) {
@@ -64,10 +63,10 @@ if (BUILD_STYLEGUIDE) {
           opacity.`,
           story: () => (
             <NumberedSteps>
-              <Step requires={['something', 'something else']}>
+              <Step requires={['something', 'something else'].every(s => typeof s === 'string')}>
                 Step with all requirements met.
               </Step>
-              <Step requires={[true, true, null]}>
+              <Step requires={[true, true, false].every(x => x)}>
                 Step with an unmet requirement
               </Step>
             </NumberedSteps>)
@@ -82,38 +81,33 @@ if (BUILD_STYLEGUIDE) {
               },
 
               onToggleStep1() {
-                this.setState({
-                  step1Done: this.state.step1Done ? null : true
-                });
+                this.setState({step1Done: !this.state.step1Done});
               },
 
               onToggleStep2() {
-                this.setState({
-                  step2Done: this.state.step2Done ? null : true
-                });
+                this.setState({step2Done: !this.state.step2Done});
               },
 
               onToggleStep3() {
-                this.setState({
-                  step3Done: this.state.step3Done ? null : true
-                });
+                this.setState({step3Done: !this.state.step3Done});
               },
 
               render() {
+                const {step1Done, step2Done, step3Done} = this.state;
                 return (
                   <NumberedSteps>
                     <Step>
-                      Click to complete this step: <a href="#" onClick={this.onToggleStep1}>{this.state.step1Done ? '' : 'Not'} Done</a>
+                      Click to complete this step: <a href="#" onClick={this.onToggleStep1}>{step1Done ? '' : 'Not'} Done</a>
                     </Step>
-                    <Step requires={[this.state.step1Done]}>
+                    <Step requires={step1Done}>
                       This step depends only on step one.
-                      <br/>Click to complete this step: <a href="#" onClick={this.onToggleStep2}>{this.state.step2Done ? '' : 'Not'} Done</a>
+                      <br/>Click to complete this step: <a href="#" onClick={this.onToggleStep2}>{step2Done ? '' : 'Not'} Done</a>
                     </Step>
-                    <Step requires={[this.state.step2Done]}>
+                    <Step requires={step2Done}>
                       This step depends only on step two.
-                      <br/>Click to complete this step: <a href="#" onClick={this.onToggleStep3}>{this.state.step3Done ? '' : 'Not'} Done</a>
+                      <br/>Click to complete this step: <a href="#" onClick={this.onToggleStep3}>{step3Done ? '' : 'Not'} Done</a>
                     </Step>
-                    <Step requires={[this.state.step1Done, this.state.step2Done, this.state.step3Done]}>
+                    <Step requires={step1Done && step2Done && step3Done}>
                       This step depends on all preceding steps.
                     </Step>
                   </NumberedSteps>);

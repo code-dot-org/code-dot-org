@@ -106,7 +106,7 @@ const Alice = React.createClass({
               disabled={disabled}
             />
           </Step>
-          <Step requires={[publicModulus].map(Number.isInteger)}>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
             Set a <KeywordPrivateKey/>:
             <PrivateKeyDropdown
               publicModulus={publicModulus}
@@ -116,7 +116,7 @@ const Alice = React.createClass({
             />
             <div>Your computed <KeywordPublicKey/> is <IntegerField color={COLORS.publicKey} value={publicKey}/></div>
           </Step>
-          <Step requires={[publicModulus, privateKey].map(Number.isInteger)}>
+          <Step requires={[publicModulus, privateKey].every(Number.isInteger)}>
             Enter Bob's <KeywordPublicNumber/>:
             <IntegerTextbox
               value={publicNumber}
@@ -125,7 +125,7 @@ const Alice = React.createClass({
               color={COLORS.publicNumber}
             />
           </Step>
-          <Step requires={[publicModulus, privateKey, publicNumber].map(Number.isInteger)}>
+          <Step requires={[publicModulus, privateKey, publicNumber].every(Number.isInteger)}>
             Calculate Bob's <KeywordSecretNumber/>.
             <div>
               (
