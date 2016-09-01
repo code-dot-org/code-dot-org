@@ -36,10 +36,29 @@ Given /^I start a new Applab project$/ do
   STEPS
 end
 
+Given /^I start a new Applab project with Firebase$/ do
+  steps <<-STEPS
+    And I am on "http://learn.code.org/projects/applab/new?useFirebase=1"
+    And I rotate to landscape
+    And I wait to see "#runButton"
+    And element "#runButton" is visible
+    And element "#codeModeButton" is visible
+    And element "#designModeButton" is visible
+    And element "#dataModeButton" is visible
+  STEPS
+end
+
 When /^I switch to design mode$/ do
   steps <<-STEPS
     When I press "designModeButton"
     And I wait to see Applab design mode
+  STEPS
+end
+
+When /^I switch to data mode$/ do
+  steps <<-STEPS
+    When I press "dataModeButton"
+    And I wait to see Applab data mode
   STEPS
 end
 
@@ -60,6 +79,11 @@ end
 And /^I wait to see Applab design mode$/ do
   wait = Selenium::WebDriver::Wait.new(:timeout => 10)
   wait.until { @browser.execute_script("return $('#designWorkspace').css('display') == 'block';") }
+end
+
+And /^I wait to see Applab data mode$/ do
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  wait.until { @browser.execute_script("return $('#dataWorkspaceWrapper').css('display') == 'block';") }
 end
 
 And /^I wait to see Applab code mode$/ do

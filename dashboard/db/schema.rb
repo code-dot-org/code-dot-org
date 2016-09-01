@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,946 +12,883 @@
 
 ActiveRecord::Schema.define(version: 20160824002113) do
 
-  create_table "activities", force: :cascade do |t|
-    t.integer  "user_id",         limit: 4
-    t.integer  "level_id",        limit: 4
-    t.string   "action",          limit: 255
-    t.string   "url",             limit: 255
+  create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.integer  "level_id"
+    t.string   "action"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "attempt",         limit: 4
-    t.integer  "time",            limit: 4
-    t.integer  "test_result",     limit: 4
-    t.integer  "level_source_id", limit: 4
-    t.integer  "lines",           limit: 4,   default: 0, null: false
+    t.integer  "attempt"
+    t.integer  "time"
+    t.integer  "test_result"
+    t.integer  "level_source_id"
+    t.integer  "lines",           default: 0, null: false
+    t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
+    t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
   end
 
-  add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
-  add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
-
-  create_table "activity_hints", force: :cascade do |t|
-    t.integer  "activity_id",          limit: 4, null: false
-    t.integer  "level_source_hint_id", limit: 4
+  create_table "activity_hints", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "activity_id",          null: false
+    t.integer  "level_source_hint_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "hint_visibility",      limit: 4
-    t.integer  "ip_hash",              limit: 4
+    t.integer  "hint_visibility"
+    t.integer  "ip_hash"
+    t.index ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
+    t.index ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
   end
 
-  add_index "activity_hints", ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
-  add_index "activity_hints", ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
-
-  create_table "authored_hint_view_requests", force: :cascade do |t|
-    t.integer  "user_id",               limit: 4
-    t.integer  "script_id",             limit: 4
-    t.integer  "level_id",              limit: 4
-    t.string   "hint_id",               limit: 255
-    t.string   "hint_class",            limit: 255
-    t.string   "hint_type",             limit: 255
-    t.integer  "prev_time",             limit: 4
-    t.integer  "prev_attempt",          limit: 4
-    t.integer  "prev_test_result",      limit: 4
-    t.integer  "prev_activity_id",      limit: 4
-    t.integer  "prev_level_source_id",  limit: 4
-    t.integer  "next_time",             limit: 4
-    t.integer  "next_attempt",          limit: 4
-    t.integer  "next_test_result",      limit: 4
-    t.integer  "next_activity_id",      limit: 4
-    t.integer  "next_level_source_id",  limit: 4
-    t.integer  "final_time",            limit: 4
-    t.integer  "final_attempt",         limit: 4
-    t.integer  "final_test_result",     limit: 4
-    t.integer  "final_activity_id",     limit: 4
-    t.integer  "final_level_source_id", limit: 4
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+  create_table "authored_hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.integer  "script_id"
+    t.integer  "level_id"
+    t.string   "hint_id"
+    t.string   "hint_class"
+    t.string   "hint_type"
+    t.integer  "prev_time"
+    t.integer  "prev_attempt"
+    t.integer  "prev_test_result"
+    t.integer  "prev_activity_id"
+    t.integer  "prev_level_source_id"
+    t.integer  "next_time"
+    t.integer  "next_attempt"
+    t.integer  "next_test_result"
+    t.integer  "next_activity_id"
+    t.integer  "next_level_source_id"
+    t.integer  "final_time"
+    t.integer  "final_attempt"
+    t.integer  "final_test_result"
+    t.integer  "final_activity_id"
+    t.integer  "final_level_source_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["level_id"], name: "fk_rails_8f51960e09", using: :btree
+    t.index ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id", using: :btree
+    t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
+    t.index ["user_id"], name: "index_authored_hint_view_requests_on_user_id", using: :btree
   end
 
-  add_index "authored_hint_view_requests", ["level_id"], name: "fk_rails_8f51960e09", using: :btree
-  add_index "authored_hint_view_requests", ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id", using: :btree
-  add_index "authored_hint_view_requests", ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
-  add_index "authored_hint_view_requests", ["user_id"], name: "index_authored_hint_view_requests_on_user_id", using: :btree
-
-  create_table "callouts", force: :cascade do |t|
+  create_table "callouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "element_id",       limit: 1024,  null: false
     t.string   "localization_key", limit: 1024,  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "script_level_id",  limit: 4
+    t.integer  "script_level_id"
     t.text     "qtip_config",      limit: 65535
-    t.string   "on",               limit: 255
-    t.string   "callout_text",     limit: 255
+    t.string   "on"
+    t.string   "callout_text"
   end
 
-  create_table "channel_tokens", force: :cascade do |t|
-    t.string   "channel",    limit: 255, null: false
-    t.integer  "user_id",    limit: 4,   null: false
-    t.integer  "level_id",   limit: 4,   null: false
+  create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "channel",    null: false
+    t.integer  "user_id",    null: false
+    t.integer  "level_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
-  add_index "channel_tokens", ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
-
-  create_table "cohorts", force: :cascade do |t|
+  create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",         limit: 255
-    t.string   "program_type", limit: 255
+    t.string   "name"
+    t.string   "program_type"
     t.datetime "cutoff_date"
-    t.integer  "script_id",    limit: 4
+    t.integer  "script_id"
+    t.index ["name"], name: "index_cohorts_on_name", using: :btree
+    t.index ["program_type"], name: "index_cohorts_on_program_type", using: :btree
   end
 
-  add_index "cohorts", ["name"], name: "index_cohorts_on_name", using: :btree
-  add_index "cohorts", ["program_type"], name: "index_cohorts_on_program_type", using: :btree
-
-  create_table "cohorts_deleted_users", id: false, force: :cascade do |t|
-    t.integer "user_id",   limit: 4, null: false
-    t.integer "cohort_id", limit: 4, null: false
+  create_table "cohorts_deleted_users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",   null: false
+    t.integer "cohort_id", null: false
+    t.index ["cohort_id", "user_id"], name: "index_cohorts_deleted_users_on_cohort_id_and_user_id", using: :btree
+    t.index ["user_id", "cohort_id"], name: "index_cohorts_deleted_users_on_user_id_and_cohort_id", using: :btree
   end
 
-  add_index "cohorts_deleted_users", ["cohort_id", "user_id"], name: "index_cohorts_deleted_users_on_cohort_id_and_user_id", using: :btree
-  add_index "cohorts_deleted_users", ["user_id", "cohort_id"], name: "index_cohorts_deleted_users_on_user_id_and_cohort_id", using: :btree
-
-  create_table "cohorts_districts", force: :cascade do |t|
-    t.integer "cohort_id",    limit: 4, null: false
-    t.integer "district_id",  limit: 4, null: false
-    t.integer "max_teachers", limit: 4
+  create_table "cohorts_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "cohort_id",    null: false
+    t.integer "district_id",  null: false
+    t.integer "max_teachers"
+    t.index ["cohort_id", "district_id"], name: "index_cohorts_districts_on_cohort_id_and_district_id", using: :btree
+    t.index ["district_id", "cohort_id"], name: "index_cohorts_districts_on_district_id_and_cohort_id", using: :btree
   end
 
-  add_index "cohorts_districts", ["cohort_id", "district_id"], name: "index_cohorts_districts_on_cohort_id_and_district_id", using: :btree
-  add_index "cohorts_districts", ["district_id", "cohort_id"], name: "index_cohorts_districts_on_district_id_and_cohort_id", using: :btree
-
-  create_table "cohorts_users", id: false, force: :cascade do |t|
-    t.integer "user_id",   limit: 4, null: false
-    t.integer "cohort_id", limit: 4, null: false
+  create_table "cohorts_users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",   null: false
+    t.integer "cohort_id", null: false
+    t.index ["cohort_id", "user_id"], name: "index_cohorts_users_on_cohort_id_and_user_id", using: :btree
+    t.index ["user_id", "cohort_id"], name: "index_cohorts_users_on_user_id_and_cohort_id", using: :btree
   end
 
-  add_index "cohorts_users", ["cohort_id", "user_id"], name: "index_cohorts_users_on_cohort_id_and_user_id", using: :btree
-  add_index "cohorts_users", ["user_id", "cohort_id"], name: "index_cohorts_users_on_user_id_and_cohort_id", using: :btree
-
-  create_table "concepts", force: :cascade do |t|
-    t.string   "name",       limit: 255
+  create_table "concepts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "video_id",   limit: 4
+    t.integer  "video_id"
+    t.index ["video_id"], name: "index_concepts_on_video_id", using: :btree
   end
 
-  add_index "concepts", ["video_id"], name: "index_concepts_on_video_id", using: :btree
-
-  create_table "concepts_levels", force: :cascade do |t|
-    t.integer "concept_id", limit: 4
-    t.integer "level_id",   limit: 4
+  create_table "concepts_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "concept_id"
+    t.integer "level_id"
+    t.index ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
+    t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
   end
 
-  add_index "concepts_levels", ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
-  add_index "concepts_levels", ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
-
-  create_table "districts", force: :cascade do |t|
-    t.string   "name",       limit: 255, null: false
-    t.string   "location",   limit: 255
-    t.integer  "contact_id", limit: 4
+  create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",       null: false
+    t.string   "location"
+    t.integer  "contact_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["contact_id"], name: "index_districts_on_contact_id", using: :btree
+    t.index ["name"], name: "index_districts_on_name", using: :btree
   end
 
-  add_index "districts", ["contact_id"], name: "index_districts_on_contact_id", using: :btree
-  add_index "districts", ["name"], name: "index_districts_on_name", using: :btree
-
-  create_table "districts_users", id: false, force: :cascade do |t|
-    t.integer "user_id",     limit: 4, null: false
-    t.integer "district_id", limit: 4, null: false
+  create_table "districts_users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",     null: false
+    t.integer "district_id", null: false
+    t.index ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
+    t.index ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
   end
 
-  add_index "districts_users", ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
-  add_index "districts_users", ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
-
-  create_table "facilitators_workshops", id: false, force: :cascade do |t|
-    t.integer "workshop_id",    limit: 4, null: false
-    t.integer "facilitator_id", limit: 4, null: false
+  create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "workshop_id",    null: false
+    t.integer "facilitator_id", null: false
   end
 
-  create_table "followers", force: :cascade do |t|
-    t.integer  "user_id",         limit: 4, null: false
-    t.integer  "student_user_id", limit: 4, null: false
+  create_table "followers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",         null: false
+    t.integer  "student_user_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "section_id",      limit: 4
+    t.integer  "section_id"
     t.datetime "deleted_at"
+    t.index ["section_id"], name: "index_followers_on_section_id", using: :btree
+    t.index ["student_user_id"], name: "index_followers_on_student_user_id", using: :btree
+    t.index ["user_id", "student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
   end
 
-  add_index "followers", ["section_id"], name: "index_followers_on_section_id", using: :btree
-  add_index "followers", ["student_user_id"], name: "index_followers_on_student_user_id", using: :btree
-  add_index "followers", ["user_id", "student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
-
-  create_table "frequent_unsuccessful_level_sources", force: :cascade do |t|
-    t.integer  "level_source_id", limit: 4,                 null: false
-    t.boolean  "active",                    default: false, null: false
-    t.integer  "level_id",        limit: 4,                 null: false
-    t.integer  "num_of_attempts", limit: 4
+  create_table "frequent_unsuccessful_level_sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "level_source_id",                 null: false
+    t.boolean  "active",          default: false, null: false
+    t.integer  "level_id",                        null: false
+    t.integer  "num_of_attempts"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "gallery_activities", force: :cascade do |t|
-    t.integer  "user_id",     limit: 4,                      null: false
-    t.integer  "activity_id", limit: 4,                      null: false
+  create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                        null: false
+    t.integer  "activity_id",                    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "autosaved"
-    t.string   "app",         limit: 255, default: "turtle", null: false
+    t.string   "app",         default: "turtle", null: false
+    t.index ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
+    t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
+    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
   end
 
-  add_index "gallery_activities", ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
-  add_index "gallery_activities", ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
-  add_index "gallery_activities", ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
-
-  create_table "games", force: :cascade do |t|
-    t.string   "name",           limit: 255
+  create_table "games", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "app",            limit: 255
-    t.integer  "intro_video_id", limit: 4
+    t.string   "app"
+    t.integer  "intro_video_id"
+    t.index ["intro_video_id"], name: "index_games_on_intro_video_id", using: :btree
   end
 
-  add_index "games", ["intro_video_id"], name: "index_games_on_intro_video_id", using: :btree
-
-  create_table "hint_view_requests", force: :cascade do |t|
-    t.integer  "user_id",       limit: 4
-    t.integer  "script_id",     limit: 4
-    t.integer  "level_id",      limit: 4
-    t.integer  "feedback_type", limit: 4
+  create_table "hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.integer  "script_id"
+    t.integer  "level_id"
+    t.integer  "feedback_type"
     t.text     "feedback_xml",  limit: 65535
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.index ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id", using: :btree
+    t.index ["user_id"], name: "index_hint_view_requests_on_user_id", using: :btree
   end
 
-  add_index "hint_view_requests", ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id", using: :btree
-  add_index "hint_view_requests", ["user_id"], name: "index_hint_view_requests_on_user_id", using: :btree
-
-  create_table "level_concept_difficulties", force: :cascade do |t|
-    t.integer  "level_id",              limit: 4
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.integer  "sequencing",            limit: 4
-    t.integer  "debugging",             limit: 4
-    t.integer  "repeat_loops",          limit: 4
-    t.integer  "repeat_until_while",    limit: 4
-    t.integer  "for_loops",             limit: 4
-    t.integer  "events",                limit: 4
-    t.integer  "variables",             limit: 4
-    t.integer  "functions",             limit: 4
-    t.integer  "functions_with_params", limit: 4
-    t.integer  "conditionals",          limit: 4
+  create_table "level_concept_difficulties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "level_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "sequencing"
+    t.integer  "debugging"
+    t.integer  "repeat_loops"
+    t.integer  "repeat_until_while"
+    t.integer  "for_loops"
+    t.integer  "events"
+    t.integer  "variables"
+    t.integer  "functions"
+    t.integer  "functions_with_params"
+    t.integer  "conditionals"
+    t.index ["level_id"], name: "index_level_concept_difficulties_on_level_id", using: :btree
   end
 
-  add_index "level_concept_difficulties", ["level_id"], name: "index_level_concept_difficulties_on_level_id", using: :btree
-
-  create_table "level_source_hints", force: :cascade do |t|
-    t.integer  "level_source_id", limit: 4
+  create_table "level_source_hints", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "level_source_id"
     t.text     "hint",            limit: 65535
-    t.integer  "times_proposed",  limit: 4
+    t.integer  "times_proposed"
     t.float    "priority",        limit: 24
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id",         limit: 4
-    t.string   "status",          limit: 255
-    t.string   "source",          limit: 255
+    t.integer  "user_id"
+    t.string   "status"
+    t.string   "source"
+    t.index ["level_source_id"], name: "index_level_source_hints_on_level_source_id", using: :btree
   end
 
-  add_index "level_source_hints", ["level_source_id"], name: "index_level_source_hints_on_level_source_id", using: :btree
-
-  create_table "level_source_images", force: :cascade do |t|
-    t.integer  "level_source_id", limit: 4
+  create_table "level_source_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "level_source_id"
     t.binary   "image",           limit: 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["level_source_id"], name: "index_level_source_images_on_level_source_id", using: :btree
   end
 
-  add_index "level_source_images", ["level_source_id"], name: "index_level_source_images_on_level_source_id", using: :btree
-
-  create_table "level_sources", force: :cascade do |t|
-    t.integer  "level_id",   limit: 4
+  create_table "level_sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "level_id"
     t.string   "md5",        limit: 32,                    null: false
     t.string   "data",       limit: 20000,                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "hidden",                   default: false
+    t.index ["level_id", "md5"], name: "index_level_sources_on_level_id_and_md5", using: :btree
   end
 
-  add_index "level_sources", ["level_id", "md5"], name: "index_level_sources_on_level_id_and_md5", using: :btree
-
-  create_table "levels", force: :cascade do |t|
-    t.integer  "game_id",                  limit: 4
-    t.string   "name",                     limit: 255,                   null: false
+  create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "game_id"
+    t.string   "name",                                                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "level_num",                limit: 255
-    t.integer  "ideal_level_source_id",    limit: 4
-    t.integer  "solution_level_source_id", limit: 4
-    t.integer  "user_id",                  limit: 4
+    t.string   "level_num"
+    t.integer  "ideal_level_source_id"
+    t.integer  "solution_level_source_id"
+    t.integer  "user_id"
     t.text     "properties",               limit: 65535
-    t.string   "type",                     limit: 255
-    t.string   "md5",                      limit: 255
+    t.string   "type"
+    t.string   "md5"
     t.boolean  "published",                              default: false, null: false
     t.text     "notes",                    limit: 65535
+    t.index ["game_id"], name: "index_levels_on_game_id", using: :btree
   end
 
-  add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
-
-  create_table "levels_script_levels", id: false, force: :cascade do |t|
-    t.integer "level_id",        limit: 4, null: false
-    t.integer "script_level_id", limit: 4, null: false
+  create_table "levels_script_levels", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "level_id",        null: false
+    t.integer "script_level_id", null: false
+    t.index ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
+    t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
   end
 
-  add_index "levels_script_levels", ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
-  add_index "levels_script_levels", ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
-
-  create_table "paired_user_levels", force: :cascade do |t|
-    t.integer  "driver_user_level_id",    limit: 4
-    t.integer  "navigator_user_level_id", limit: 4
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+  create_table "paired_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "driver_user_level_id"
+    t.integer  "navigator_user_level_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
+    t.index ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
   end
 
-  add_index "paired_user_levels", ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
-  add_index "paired_user_levels", ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
-
-  create_table "pd_attendances", force: :cascade do |t|
-    t.integer  "pd_session_id", limit: 4, null: false
-    t.integer  "teacher_id",    limit: 4, null: false
+  create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_session_id", null: false
+    t.integer  "teacher_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
 
-  add_index "pd_attendances", ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
-
-  create_table "pd_course_facilitators", force: :cascade do |t|
-    t.integer "facilitator_id", limit: 4,   null: false
-    t.string  "course",         limit: 255, null: false
+  create_table "pd_course_facilitators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "facilitator_id", null: false
+    t.string  "course",         null: false
+    t.index ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
   end
 
-  add_index "pd_course_facilitators", ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
-
-  create_table "pd_district_payment_terms", force: :cascade do |t|
-    t.integer "district_id", limit: 4
-    t.string  "course",      limit: 255,                         null: false
-    t.string  "rate_type",   limit: 255,                         null: false
-    t.decimal "rate",                    precision: 8, scale: 2, null: false
+  create_table "pd_district_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "district_id"
+    t.string  "course",                              null: false
+    t.string  "rate_type",                           null: false
+    t.decimal "rate",        precision: 8, scale: 2, null: false
+    t.index ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
   end
 
-  add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
-
-  create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id",      limit: 4,   null: false
-    t.string   "name",                limit: 255, null: false
-    t.string   "email",               limit: 255, null: false
+  create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_workshop_id",      null: false
+    t.string   "name",                null: false
+    t.string   "email",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "school",              limit: 255
-    t.string   "code",                limit: 255
-    t.integer  "school_district_id",  limit: 4
-    t.integer  "school_zip",          limit: 4
-    t.string   "school_type",         limit: 255
-    t.string   "school_state",        limit: 255
-    t.integer  "user_id",             limit: 4
+    t.string   "school"
+    t.string   "code"
+    t.integer  "school_district_id"
+    t.integer  "school_zip"
+    t.string   "school_type"
+    t.string   "school_state"
+    t.integer  "user_id"
     t.datetime "survey_sent_at"
-    t.integer  "completed_survey_id", limit: 4
-    t.integer  "school_info_id",      limit: 4
+    t.integer  "completed_survey_id"
+    t.integer  "school_info_id"
+    t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+    t.index ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
   end
 
-  add_index "pd_enrollments", ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
-  add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
-  add_index "pd_enrollments", ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
-
-  create_table "pd_sessions", force: :cascade do |t|
-    t.integer  "pd_workshop_id", limit: 4
-    t.datetime "start",                    null: false
-    t.datetime "end",                      null: false
+  create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_workshop_id"
+    t.datetime "start",          null: false
+    t.datetime "end",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
   end
 
-  add_index "pd_sessions", ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
-
-  create_table "pd_workshops", force: :cascade do |t|
-    t.string   "workshop_type",      limit: 255,   null: false
-    t.integer  "organizer_id",       limit: 4,     null: false
-    t.string   "location_name",      limit: 255
-    t.string   "location_address",   limit: 255
+  create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "workshop_type",                    null: false
+    t.integer  "organizer_id",                     null: false
+    t.string   "location_name"
+    t.string   "location_address"
     t.text     "processed_location", limit: 65535
-    t.string   "course",             limit: 255,   null: false
-    t.string   "subject",            limit: 255
-    t.integer  "capacity",           limit: 4,     null: false
+    t.string   "course",                           null: false
+    t.string   "subject"
+    t.integer  "capacity",                         null: false
     t.text     "notes",              limit: 65535
-    t.integer  "section_id",         limit: 4
+    t.integer  "section_id"
     t.datetime "started_at"
     t.datetime "ended_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "processed_at"
+    t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
   end
 
-  add_index "pd_workshops", ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
-
-  create_table "pd_workshops_facilitators", id: false, force: :cascade do |t|
-    t.integer "pd_workshop_id", limit: 4, null: false
-    t.integer "user_id",        limit: 4, null: false
+  create_table "pd_workshops_facilitators", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "pd_workshop_id", null: false
+    t.integer "user_id",        null: false
+    t.index ["pd_workshop_id"], name: "index_pd_workshops_facilitators_on_pd_workshop_id", using: :btree
+    t.index ["user_id"], name: "index_pd_workshops_facilitators_on_user_id", using: :btree
   end
 
-  add_index "pd_workshops_facilitators", ["pd_workshop_id"], name: "index_pd_workshops_facilitators_on_pd_workshop_id", using: :btree
-  add_index "pd_workshops_facilitators", ["user_id"], name: "index_pd_workshops_facilitators_on_user_id", using: :btree
-
-  create_table "peer_reviews", force: :cascade do |t|
-    t.integer  "submitter_id",    limit: 4
-    t.integer  "reviewer_id",     limit: 4
+  create_table "peer_reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "submitter_id"
+    t.integer  "reviewer_id"
     t.boolean  "from_instructor",               default: false, null: false
-    t.integer  "script_id",       limit: 4,                     null: false
-    t.integer  "level_id",        limit: 4,                     null: false
-    t.integer  "level_source_id", limit: 4,                     null: false
+    t.integer  "script_id",                                     null: false
+    t.integer  "level_id",                                      null: false
+    t.integer  "level_source_id",                               null: false
     t.text     "data",            limit: 65535
-    t.integer  "status",          limit: 4
+    t.integer  "status"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
+    t.index ["level_id"], name: "index_peer_reviews_on_level_id", using: :btree
+    t.index ["level_source_id"], name: "index_peer_reviews_on_level_source_id", using: :btree
+    t.index ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id", using: :btree
+    t.index ["script_id"], name: "index_peer_reviews_on_script_id", using: :btree
+    t.index ["submitter_id"], name: "index_peer_reviews_on_submitter_id", using: :btree
   end
 
-  add_index "peer_reviews", ["level_id"], name: "index_peer_reviews_on_level_id", using: :btree
-  add_index "peer_reviews", ["level_source_id"], name: "index_peer_reviews_on_level_source_id", using: :btree
-  add_index "peer_reviews", ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id", using: :btree
-  add_index "peer_reviews", ["script_id"], name: "index_peer_reviews_on_script_id", using: :btree
-  add_index "peer_reviews", ["submitter_id"], name: "index_peer_reviews_on_submitter_id", using: :btree
-
-  create_table "plc_course_units", force: :cascade do |t|
-    t.integer  "plc_course_id",    limit: 4
-    t.string   "unit_name",        limit: 255
-    t.string   "unit_description", limit: 255
-    t.integer  "unit_order",       limit: 4
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
-    t.integer  "script_id",        limit: 4
-    t.boolean  "started",                      default: false, null: false
+  create_table "plc_course_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "plc_course_id"
+    t.string   "unit_name"
+    t.string   "unit_description"
+    t.integer  "unit_order"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "script_id"
+    t.boolean  "started",          default: false, null: false
+    t.index ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
+    t.index ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
   end
 
-  add_index "plc_course_units", ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
-  add_index "plc_course_units", ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
-
-  create_table "plc_courses", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+  create_table "plc_courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "plc_enrollment_module_assignments", force: :cascade do |t|
-    t.integer  "plc_enrollment_unit_assignment_id", limit: 4
-    t.integer  "plc_learning_module_id",            limit: 4
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.integer  "user_id",                           limit: 4
+  create_table "plc_enrollment_module_assignments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "plc_enrollment_unit_assignment_id"
+    t.integer  "plc_learning_module_id"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "user_id"
+    t.index ["plc_enrollment_unit_assignment_id"], name: "module_assignment_enrollment_index", using: :btree
+    t.index ["plc_learning_module_id"], name: "module_assignment_lm_index", using: :btree
+    t.index ["user_id"], name: "index_plc_enrollment_module_assignments_on_user_id", using: :btree
   end
 
-  add_index "plc_enrollment_module_assignments", ["plc_enrollment_unit_assignment_id"], name: "module_assignment_enrollment_index", using: :btree
-  add_index "plc_enrollment_module_assignments", ["plc_learning_module_id"], name: "module_assignment_lm_index", using: :btree
-  add_index "plc_enrollment_module_assignments", ["user_id"], name: "index_plc_enrollment_module_assignments_on_user_id", using: :btree
-
-  create_table "plc_enrollment_unit_assignments", force: :cascade do |t|
-    t.integer  "plc_user_course_enrollment_id", limit: 4
-    t.integer  "plc_course_unit_id",            limit: 4
-    t.string   "status",                        limit: 255
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.integer  "user_id",                       limit: 4
+  create_table "plc_enrollment_unit_assignments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "plc_user_course_enrollment_id"
+    t.integer  "plc_course_unit_id"
+    t.string   "status"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "user_id"
+    t.index ["plc_course_unit_id"], name: "enrollment_unit_assignment_course_unit_index", using: :btree
+    t.index ["plc_user_course_enrollment_id"], name: "enrollment_unit_assignment_course_enrollment_index", using: :btree
+    t.index ["user_id"], name: "index_plc_enrollment_unit_assignments_on_user_id", using: :btree
   end
 
-  add_index "plc_enrollment_unit_assignments", ["plc_course_unit_id"], name: "enrollment_unit_assignment_course_unit_index", using: :btree
-  add_index "plc_enrollment_unit_assignments", ["plc_user_course_enrollment_id"], name: "enrollment_unit_assignment_course_enrollment_index", using: :btree
-  add_index "plc_enrollment_unit_assignments", ["user_id"], name: "index_plc_enrollment_unit_assignments_on_user_id", using: :btree
-
-  create_table "plc_evaluation_answers", force: :cascade do |t|
-    t.string   "answer",                     limit: 255
-    t.integer  "plc_evaluation_question_id", limit: 4
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
-    t.integer  "plc_learning_module_id",     limit: 4
-    t.integer  "weight",                     limit: 4,   default: 1, null: false
+  create_table "plc_evaluation_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "answer"
+    t.integer  "plc_evaluation_question_id"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "plc_learning_module_id"
+    t.integer  "weight",                     default: 1, null: false
+    t.index ["plc_evaluation_question_id"], name: "index_plc_evaluation_answers_on_plc_evaluation_question_id", using: :btree
+    t.index ["plc_learning_module_id"], name: "index_plc_evaluation_answers_on_plc_learning_module_id", using: :btree
   end
 
-  add_index "plc_evaluation_answers", ["plc_evaluation_question_id"], name: "index_plc_evaluation_answers_on_plc_evaluation_question_id", using: :btree
-  add_index "plc_evaluation_answers", ["plc_learning_module_id"], name: "index_plc_evaluation_answers_on_plc_learning_module_id", using: :btree
-
-  create_table "plc_evaluation_questions", force: :cascade do |t|
-    t.string   "question",           limit: 255
-    t.integer  "plc_course_unit_id", limit: 4
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+  create_table "plc_evaluation_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "question"
+    t.integer  "plc_course_unit_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["plc_course_unit_id"], name: "index_plc_evaluation_questions_on_plc_course_unit_id", using: :btree
   end
 
-  add_index "plc_evaluation_questions", ["plc_course_unit_id"], name: "index_plc_evaluation_questions_on_plc_course_unit_id", using: :btree
-
-  create_table "plc_learning_modules", force: :cascade do |t|
-    t.string   "name",               limit: 255
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.integer  "plc_course_unit_id", limit: 4,   null: false
-    t.string   "module_type",        limit: 255
-    t.integer  "stage_id",           limit: 4
+  create_table "plc_learning_modules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "plc_course_unit_id", null: false
+    t.string   "module_type"
+    t.integer  "stage_id"
+    t.index ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
+    t.index ["stage_id"], name: "index_plc_learning_modules_on_stage_id", using: :btree
   end
 
-  add_index "plc_learning_modules", ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
-  add_index "plc_learning_modules", ["stage_id"], name: "index_plc_learning_modules_on_stage_id", using: :btree
-
-  create_table "plc_learning_modules_tasks", id: false, force: :cascade do |t|
-    t.integer "plc_learning_module_id", limit: 4, null: false
-    t.integer "plc_task_id",            limit: 4, null: false
+  create_table "plc_learning_modules_tasks", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "plc_learning_module_id", null: false
+    t.integer "plc_task_id",            null: false
+    t.index ["plc_learning_module_id"], name: "index_plc_learning_modules_tasks_on_plc_learning_module_id", using: :btree
+    t.index ["plc_task_id"], name: "index_plc_learning_modules_tasks_on_plc_task_id", using: :btree
   end
 
-  add_index "plc_learning_modules_tasks", ["plc_learning_module_id"], name: "index_plc_learning_modules_tasks_on_plc_learning_module_id", using: :btree
-  add_index "plc_learning_modules_tasks", ["plc_task_id"], name: "index_plc_learning_modules_tasks_on_plc_task_id", using: :btree
-
-  create_table "plc_tasks", force: :cascade do |t|
-    t.string   "name",            limit: 255
+  create_table "plc_tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
-    t.string   "type",            limit: 255,   default: "Plc::Task", null: false
+    t.string   "type",                          default: "Plc::Task", null: false
     t.text     "properties",      limit: 65535
-    t.integer  "script_level_id", limit: 4
+    t.integer  "script_level_id"
+    t.index ["script_level_id"], name: "index_plc_tasks_on_script_level_id", using: :btree
   end
 
-  add_index "plc_tasks", ["script_level_id"], name: "index_plc_tasks_on_script_level_id", using: :btree
-
-  create_table "plc_user_course_enrollments", force: :cascade do |t|
-    t.string   "status",        limit: 255
-    t.integer  "plc_course_id", limit: 4
-    t.integer  "user_id",       limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+  create_table "plc_user_course_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "status"
+    t.integer  "plc_course_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id", using: :btree
+    t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true, using: :btree
   end
 
-  add_index "plc_user_course_enrollments", ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id", using: :btree
-  add_index "plc_user_course_enrollments", ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true, using: :btree
-
-  create_table "prize_providers", force: :cascade do |t|
-    t.string   "name",              limit: 255
-    t.string   "url",               limit: 255
-    t.string   "description_token", limit: 255
-    t.string   "image_name",        limit: 255
+  create_table "prize_providers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "description_token"
+    t.string   "image_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "prizes", force: :cascade do |t|
-    t.integer  "prize_provider_id", limit: 4,   null: false
-    t.string   "code",              limit: 255, null: false
-    t.integer  "user_id",           limit: 4
+  create_table "prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "prize_provider_id", null: false
+    t.string   "code",              null: false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
+    t.index ["user_id"], name: "index_prizes_on_user_id", using: :btree
   end
 
-  add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
-  add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
-
-  create_table "professional_learning_partners", force: :cascade do |t|
-    t.string  "name",       limit: 255, null: false
-    t.integer "contact_id", limit: 4,   null: false
+  create_table "professional_learning_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string  "name",       null: false
+    t.integer "contact_id", null: false
     t.boolean "urban"
+    t.index ["name"], name: "index_professional_learning_partners_on_name", using: :btree
   end
 
-  add_index "professional_learning_partners", ["name"], name: "index_professional_learning_partners_on_name", using: :btree
-
-  create_table "puzzle_ratings", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "script_id",  limit: 4
-    t.integer  "level_id",   limit: 4
-    t.integer  "rating",     limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+  create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.integer  "script_id"
+    t.integer  "level_id"
+    t.integer  "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
+    t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
-  add_index "puzzle_ratings", ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
-  add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
-
-  create_table "school_districts", force: :cascade do |t|
-    t.string   "name",       limit: 255, null: false
-    t.string   "city",       limit: 255, null: false
-    t.string   "state",      limit: 255, null: false
-    t.string   "zip",        limit: 255, null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+  create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",       null: false
+    t.string   "city",       null: false
+    t.string   "state",      null: false
+    t.string   "zip",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "school_infos", force: :cascade do |t|
-    t.string   "school_type",           limit: 255
-    t.integer  "zip",                   limit: 4
-    t.string   "state",                 limit: 255
-    t.integer  "school_district_id",    limit: 4
-    t.boolean  "school_district_other",             default: false
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+  create_table "school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "school_type"
+    t.integer  "zip"
+    t.string   "state"
+    t.integer  "school_district_id"
+    t.boolean  "school_district_other", default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
   end
 
-  add_index "school_infos", ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
-
-  create_table "script_levels", force: :cascade do |t|
-    t.integer  "level_id",    limit: 4
-    t.integer  "script_id",   limit: 4,     null: false
-    t.integer  "chapter",     limit: 4
+  create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "level_id"
+    t.integer  "script_id",                 null: false
+    t.integer  "chapter"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "stage_id",    limit: 4
-    t.integer  "position",    limit: 4
+    t.integer  "stage_id"
+    t.integer  "position"
     t.boolean  "assessment"
     t.text     "properties",  limit: 65535
     t.boolean  "named_level"
+    t.index ["level_id"], name: "index_script_levels_on_level_id", using: :btree
+    t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
+    t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end
 
-  add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree
-  add_index "script_levels", ["script_id"], name: "index_script_levels_on_script_id", using: :btree
-  add_index "script_levels", ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
-
-  create_table "scripts", force: :cascade do |t|
-    t.string   "name",            limit: 255,                   null: false
+  create_table "scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",                                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "wrapup_video_id", limit: 4
+    t.integer  "wrapup_video_id"
     t.boolean  "hidden",                        default: false, null: false
-    t.integer  "user_id",         limit: 4
+    t.integer  "user_id"
     t.boolean  "login_required",                default: false, null: false
     t.text     "properties",      limit: 65535
+    t.index ["name"], name: "index_scripts_on_name", unique: true, using: :btree
+    t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id", using: :btree
   end
 
-  add_index "scripts", ["name"], name: "index_scripts_on_name", unique: true, using: :btree
-  add_index "scripts", ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id", using: :btree
-
-  create_table "secret_pictures", force: :cascade do |t|
-    t.string   "name",       limit: 255, null: false
-    t.string   "path",       limit: 255, null: false
+  create_table "secret_pictures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",       null: false
+    t.string   "path",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["name"], name: "index_secret_pictures_on_name", unique: true, using: :btree
+    t.index ["path"], name: "index_secret_pictures_on_path", unique: true, using: :btree
   end
 
-  add_index "secret_pictures", ["name"], name: "index_secret_pictures_on_name", unique: true, using: :btree
-  add_index "secret_pictures", ["path"], name: "index_secret_pictures_on_path", unique: true, using: :btree
-
-  create_table "secret_words", force: :cascade do |t|
-    t.string   "word",       limit: 255, null: false
+  create_table "secret_words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "word",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
   end
 
-  add_index "secret_words", ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
-
-  create_table "sections", force: :cascade do |t|
-    t.integer  "user_id",      limit: 4,                     null: false
-    t.string   "name",         limit: 255
+  create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                        null: false
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "code",         limit: 255
-    t.integer  "script_id",    limit: 4
-    t.string   "grade",        limit: 255
-    t.string   "admin_code",   limit: 255
-    t.string   "login_type",   limit: 255, default: "email", null: false
+    t.string   "code"
+    t.integer  "script_id"
+    t.string   "grade"
+    t.string   "admin_code"
+    t.string   "login_type",   default: "email", null: false
     t.datetime "deleted_at"
-    t.boolean  "stage_extras",             default: false,   null: false
-    t.string   "section_type", limit: 255
+    t.boolean  "stage_extras", default: false,   null: false
+    t.string   "section_type"
+    t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
+    t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
-  add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
-  add_index "sections", ["user_id"], name: "index_sections_on_user_id", using: :btree
-
-  create_table "segments", force: :cascade do |t|
-    t.integer  "workshop_id", limit: 4, null: false
-    t.datetime "start",                 null: false
+  create_table "segments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "workshop_id", null: false
+    t.datetime "start",       null: false
     t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["end"], name: "index_segments_on_end", using: :btree
+    t.index ["start"], name: "index_segments_on_start", using: :btree
+    t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
   end
 
-  add_index "segments", ["end"], name: "index_segments_on_end", using: :btree
-  add_index "segments", ["start"], name: "index_segments_on_start", using: :btree
-  add_index "segments", ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
-
-  create_table "stages", force: :cascade do |t|
-    t.string   "name",              limit: 255, null: false
-    t.integer  "absolute_position", limit: 4
-    t.integer  "script_id",         limit: 4,   null: false
+  create_table "stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",              null: false
+    t.integer  "absolute_position"
+    t.integer  "script_id",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "flex_category",     limit: 255
+    t.string   "flex_category"
     t.boolean  "lockable"
-    t.integer  "relative_position", limit: 4,   null: false
+    t.integer  "relative_position", null: false
   end
 
-  create_table "survey_results", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.string   "kind",       limit: 255
+  create_table "survey_results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.string   "kind"
     t.text     "properties", limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.index ["kind"], name: "index_survey_results_on_kind", using: :btree
+    t.index ["user_id"], name: "index_survey_results_on_user_id", using: :btree
   end
 
-  add_index "survey_results", ["kind"], name: "index_survey_results_on_kind", using: :btree
-  add_index "survey_results", ["user_id"], name: "index_survey_results_on_user_id", using: :btree
-
-  create_table "teacher_bonus_prizes", force: :cascade do |t|
-    t.integer  "prize_provider_id", limit: 4,   null: false
-    t.string   "code",              limit: 255, null: false
-    t.integer  "user_id",           limit: 4
+  create_table "teacher_bonus_prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "prize_provider_id", null: false
+    t.string   "code",              null: false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["prize_provider_id"], name: "index_teacher_bonus_prizes_on_prize_provider_id", using: :btree
+    t.index ["user_id"], name: "index_teacher_bonus_prizes_on_user_id", using: :btree
   end
 
-  add_index "teacher_bonus_prizes", ["prize_provider_id"], name: "index_teacher_bonus_prizes_on_prize_provider_id", using: :btree
-  add_index "teacher_bonus_prizes", ["user_id"], name: "index_teacher_bonus_prizes_on_user_id", using: :btree
-
-  create_table "teacher_prizes", force: :cascade do |t|
-    t.integer  "prize_provider_id", limit: 4,   null: false
-    t.string   "code",              limit: 255, null: false
-    t.integer  "user_id",           limit: 4
+  create_table "teacher_prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "prize_provider_id", null: false
+    t.string   "code",              null: false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["prize_provider_id"], name: "index_teacher_prizes_on_prize_provider_id", using: :btree
+    t.index ["user_id"], name: "index_teacher_prizes_on_user_id", using: :btree
   end
 
-  add_index "teacher_prizes", ["prize_provider_id"], name: "index_teacher_prizes_on_prize_provider_id", using: :btree
-  add_index "teacher_prizes", ["user_id"], name: "index_teacher_prizes_on_user_id", using: :btree
-
-  create_table "unexpected_teachers_workshops", id: false, force: :cascade do |t|
-    t.integer "workshop_id",           limit: 4, null: false
-    t.integer "unexpected_teacher_id", limit: 4, null: false
+  create_table "unexpected_teachers_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "workshop_id",           null: false
+    t.integer "unexpected_teacher_id", null: false
+    t.index ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
+    t.index ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
   end
 
-  add_index "unexpected_teachers_workshops", ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
-  add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
-
-  create_table "user_geos", force: :cascade do |t|
-    t.integer  "user_id",     limit: 4,                           null: false
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+  create_table "user_geos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                             null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.datetime "indexed_at"
-    t.string   "ip_address",  limit: 255
-    t.string   "city",        limit: 255
-    t.string   "state",       limit: 255
-    t.string   "country",     limit: 255
-    t.string   "postal_code", limit: 255
-    t.decimal  "latitude",                precision: 8, scale: 6
-    t.decimal  "longitude",               precision: 9, scale: 6
+    t.string   "ip_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "postal_code"
+    t.decimal  "latitude",    precision: 8, scale: 6
+    t.decimal  "longitude",   precision: 9, scale: 6
+    t.index ["indexed_at"], name: "index_user_geos_on_indexed_at", using: :btree
+    t.index ["user_id"], name: "index_user_geos_on_user_id", using: :btree
   end
 
-  add_index "user_geos", ["indexed_at"], name: "index_user_geos_on_indexed_at", using: :btree
-  add_index "user_geos", ["user_id"], name: "index_user_geos_on_user_id", using: :btree
-
-  create_table "user_levels", force: :cascade do |t|
-    t.integer  "user_id",          limit: 4,             null: false
-    t.integer  "level_id",         limit: 4,             null: false
-    t.integer  "attempts",         limit: 4, default: 0, null: false
+  create_table "user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                      null: false
+    t.integer  "level_id",                     null: false
+    t.integer  "attempts",         default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "best_result",      limit: 4
-    t.integer  "script_id",        limit: 4
-    t.integer  "level_source_id",  limit: 4
+    t.integer  "best_result"
+    t.integer  "script_id"
+    t.integer  "level_source_id"
     t.boolean  "submitted"
     t.boolean  "readonly_answers"
     t.datetime "unlocked_at"
+    t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
   end
 
-  add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
-
-  create_table "user_module_task_assignments", force: :cascade do |t|
-    t.integer "user_enrollment_module_assignment_id", limit: 4
-    t.integer "professional_learning_task_id",        limit: 4
-    t.string  "status",                               limit: 255
+  create_table "user_module_task_assignments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_enrollment_module_assignment_id"
+    t.integer "professional_learning_task_id"
+    t.string  "status"
+    t.index ["professional_learning_task_id"], name: "task_assignment_to_task_index", using: :btree
+    t.index ["user_enrollment_module_assignment_id"], name: "task_assignment_to_module_assignment_index", using: :btree
   end
 
-  add_index "user_module_task_assignments", ["professional_learning_task_id"], name: "task_assignment_to_task_index", using: :btree
-  add_index "user_module_task_assignments", ["user_enrollment_module_assignment_id"], name: "task_assignment_to_module_assignment_index", using: :btree
-
-  create_table "user_permissions", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4,   null: false
-    t.string   "permission", limit: 255, null: false
+  create_table "user_permissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",    null: false
+    t.string   "permission", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
   end
 
-  add_index "user_permissions", ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
-
-  create_table "user_proficiencies", force: :cascade do |t|
-    t.integer  "user_id",                        limit: 4,             null: false
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
+  create_table "user_proficiencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                                    null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.datetime "last_progress_at"
-    t.integer  "sequencing_d1_count",            limit: 4, default: 0
-    t.integer  "sequencing_d2_count",            limit: 4, default: 0
-    t.integer  "sequencing_d3_count",            limit: 4, default: 0
-    t.integer  "sequencing_d4_count",            limit: 4, default: 0
-    t.integer  "sequencing_d5_count",            limit: 4, default: 0
-    t.integer  "debugging_d1_count",             limit: 4, default: 0
-    t.integer  "debugging_d2_count",             limit: 4, default: 0
-    t.integer  "debugging_d3_count",             limit: 4, default: 0
-    t.integer  "debugging_d4_count",             limit: 4, default: 0
-    t.integer  "debugging_d5_count",             limit: 4, default: 0
-    t.integer  "repeat_loops_d1_count",          limit: 4, default: 0
-    t.integer  "repeat_loops_d2_count",          limit: 4, default: 0
-    t.integer  "repeat_loops_d3_count",          limit: 4, default: 0
-    t.integer  "repeat_loops_d4_count",          limit: 4, default: 0
-    t.integer  "repeat_loops_d5_count",          limit: 4, default: 0
-    t.integer  "repeat_until_while_d1_count",    limit: 4, default: 0
-    t.integer  "repeat_until_while_d2_count",    limit: 4, default: 0
-    t.integer  "repeat_until_while_d3_count",    limit: 4, default: 0
-    t.integer  "repeat_until_while_d4_count",    limit: 4, default: 0
-    t.integer  "repeat_until_while_d5_count",    limit: 4, default: 0
-    t.integer  "for_loops_d1_count",             limit: 4, default: 0
-    t.integer  "for_loops_d2_count",             limit: 4, default: 0
-    t.integer  "for_loops_d3_count",             limit: 4, default: 0
-    t.integer  "for_loops_d4_count",             limit: 4, default: 0
-    t.integer  "for_loops_d5_count",             limit: 4, default: 0
-    t.integer  "events_d1_count",                limit: 4, default: 0
-    t.integer  "events_d2_count",                limit: 4, default: 0
-    t.integer  "events_d3_count",                limit: 4, default: 0
-    t.integer  "events_d4_count",                limit: 4, default: 0
-    t.integer  "events_d5_count",                limit: 4, default: 0
-    t.integer  "variables_d1_count",             limit: 4, default: 0
-    t.integer  "variables_d2_count",             limit: 4, default: 0
-    t.integer  "variables_d3_count",             limit: 4, default: 0
-    t.integer  "variables_d4_count",             limit: 4, default: 0
-    t.integer  "variables_d5_count",             limit: 4, default: 0
-    t.integer  "functions_d1_count",             limit: 4, default: 0
-    t.integer  "functions_d2_count",             limit: 4, default: 0
-    t.integer  "functions_d3_count",             limit: 4, default: 0
-    t.integer  "functions_d4_count",             limit: 4, default: 0
-    t.integer  "functions_d5_count",             limit: 4, default: 0
-    t.integer  "functions_with_params_d1_count", limit: 4, default: 0
-    t.integer  "functions_with_params_d2_count", limit: 4, default: 0
-    t.integer  "functions_with_params_d3_count", limit: 4, default: 0
-    t.integer  "functions_with_params_d4_count", limit: 4, default: 0
-    t.integer  "functions_with_params_d5_count", limit: 4, default: 0
-    t.integer  "conditionals_d1_count",          limit: 4, default: 0
-    t.integer  "conditionals_d2_count",          limit: 4, default: 0
-    t.integer  "conditionals_d3_count",          limit: 4, default: 0
-    t.integer  "conditionals_d4_count",          limit: 4, default: 0
-    t.integer  "conditionals_d5_count",          limit: 4, default: 0
+    t.integer  "sequencing_d1_count",            default: 0
+    t.integer  "sequencing_d2_count",            default: 0
+    t.integer  "sequencing_d3_count",            default: 0
+    t.integer  "sequencing_d4_count",            default: 0
+    t.integer  "sequencing_d5_count",            default: 0
+    t.integer  "debugging_d1_count",             default: 0
+    t.integer  "debugging_d2_count",             default: 0
+    t.integer  "debugging_d3_count",             default: 0
+    t.integer  "debugging_d4_count",             default: 0
+    t.integer  "debugging_d5_count",             default: 0
+    t.integer  "repeat_loops_d1_count",          default: 0
+    t.integer  "repeat_loops_d2_count",          default: 0
+    t.integer  "repeat_loops_d3_count",          default: 0
+    t.integer  "repeat_loops_d4_count",          default: 0
+    t.integer  "repeat_loops_d5_count",          default: 0
+    t.integer  "repeat_until_while_d1_count",    default: 0
+    t.integer  "repeat_until_while_d2_count",    default: 0
+    t.integer  "repeat_until_while_d3_count",    default: 0
+    t.integer  "repeat_until_while_d4_count",    default: 0
+    t.integer  "repeat_until_while_d5_count",    default: 0
+    t.integer  "for_loops_d1_count",             default: 0
+    t.integer  "for_loops_d2_count",             default: 0
+    t.integer  "for_loops_d3_count",             default: 0
+    t.integer  "for_loops_d4_count",             default: 0
+    t.integer  "for_loops_d5_count",             default: 0
+    t.integer  "events_d1_count",                default: 0
+    t.integer  "events_d2_count",                default: 0
+    t.integer  "events_d3_count",                default: 0
+    t.integer  "events_d4_count",                default: 0
+    t.integer  "events_d5_count",                default: 0
+    t.integer  "variables_d1_count",             default: 0
+    t.integer  "variables_d2_count",             default: 0
+    t.integer  "variables_d3_count",             default: 0
+    t.integer  "variables_d4_count",             default: 0
+    t.integer  "variables_d5_count",             default: 0
+    t.integer  "functions_d1_count",             default: 0
+    t.integer  "functions_d2_count",             default: 0
+    t.integer  "functions_d3_count",             default: 0
+    t.integer  "functions_d4_count",             default: 0
+    t.integer  "functions_d5_count",             default: 0
+    t.integer  "functions_with_params_d1_count", default: 0
+    t.integer  "functions_with_params_d2_count", default: 0
+    t.integer  "functions_with_params_d3_count", default: 0
+    t.integer  "functions_with_params_d4_count", default: 0
+    t.integer  "functions_with_params_d5_count", default: 0
+    t.integer  "conditionals_d1_count",          default: 0
+    t.integer  "conditionals_d2_count",          default: 0
+    t.integer  "conditionals_d3_count",          default: 0
+    t.integer  "conditionals_d4_count",          default: 0
+    t.integer  "conditionals_d5_count",          default: 0
     t.datetime "basic_proficiency_at"
+    t.index ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
   end
 
-  add_index "user_proficiencies", ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
-
-  create_table "user_scripts", force: :cascade do |t|
-    t.integer  "user_id",          limit: 4, null: false
-    t.integer  "script_id",        limit: 4, null: false
+  create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",          null: false
+    t.integer  "script_id",        null: false
     t.datetime "started_at"
     t.datetime "completed_at"
     t.datetime "assigned_at"
     t.datetime "last_progress_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["script_id"], name: "index_user_scripts_on_script_id", using: :btree
+    t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true, using: :btree
   end
 
-  add_index "user_scripts", ["script_id"], name: "index_user_scripts_on_script_id", using: :btree
-  add_index "user_scripts", ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true, using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                      limit: 255,   default: "",      null: false
-    t.string   "encrypted_password",         limit: 255,   default: ""
-    t.string   "reset_password_token",       limit: 255
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",                                    default: "",      null: false
+    t.string   "encrypted_password",                       default: ""
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",              limit: 4,     default: 0
+    t.integer  "sign_in_count",                            default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",         limit: 255
-    t.string   "last_sign_in_ip",            limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",                   limit: 255
-    t.string   "provider",                   limit: 255
-    t.string   "uid",                        limit: 255
+    t.string   "username"
+    t.string   "provider"
+    t.string   "uid"
     t.boolean  "admin"
     t.string   "gender",                     limit: 1
-    t.string   "name",                       limit: 255
+    t.string   "name"
     t.string   "locale",                     limit: 10,    default: "en-US", null: false
     t.date     "birthday"
     t.string   "user_type",                  limit: 16
-    t.string   "school",                     limit: 255
+    t.string   "school"
     t.string   "full_address",               limit: 1024
-    t.integer  "total_lines",                limit: 4,     default: 0,       null: false
+    t.integer  "total_lines",                              default: 0,       null: false
     t.boolean  "prize_earned",                             default: false
-    t.integer  "prize_id",                   limit: 4
+    t.integer  "prize_id"
     t.boolean  "teacher_prize_earned",                     default: false
-    t.integer  "teacher_prize_id",           limit: 4
+    t.integer  "teacher_prize_id"
     t.boolean  "teacher_bonus_prize_earned",               default: false
-    t.integer  "teacher_bonus_prize_id",     limit: 4
-    t.string   "confirmation_token",         limit: 255
+    t.integer  "teacher_bonus_prize_id"
+    t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email",          limit: 255
-    t.integer  "prize_teacher_id",           limit: 4
-    t.integer  "secret_picture_id",          limit: 4
+    t.string   "unconfirmed_email"
+    t.integer  "prize_teacher_id"
+    t.integer  "secret_picture_id"
     t.boolean  "active",                                   default: true,    null: false
-    t.string   "hashed_email",               limit: 255
+    t.string   "hashed_email"
     t.datetime "deleted_at"
-    t.string   "secret_words",               limit: 255
+    t.string   "secret_words"
     t.text     "properties",                 limit: 65535
-    t.string   "invitation_token",           limit: 255
+    t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
-    t.integer  "invitation_limit",           limit: 4
-    t.integer  "invited_by_id",              limit: 4
-    t.string   "invited_by_type",            limit: 255
-    t.integer  "invitations_count",          limit: 4,     default: 0
-    t.integer  "terms_of_service_version",   limit: 4
+    t.integer  "invitation_limit"
+    t.integer  "invited_by_id"
+    t.string   "invited_by_type"
+    t.integer  "invitations_count",                        default: 0
+    t.integer  "terms_of_service_version"
+    t.index ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
+    t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
+    t.index ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
+    t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
+    t.index ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
+    t.index ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
+    t.index ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
+    t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
+    t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
+    t.index ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
+    t.index ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
+    t.index ["unconfirmed_email", "deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
+    t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
   end
 
-  add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
-  add_index "users", ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
-  add_index "users", ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
-  add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
-  add_index "users", ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
-  add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
-  add_index "users", ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
-  add_index "users", ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
-  add_index "users", ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
-  add_index "users", ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
-  add_index "users", ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
-  add_index "users", ["unconfirmed_email", "deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
-  add_index "users", ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
-
-  create_table "videos", force: :cascade do |t|
-    t.string   "key",          limit: 255
-    t.string   "youtube_code", limit: 255
+  create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key"
+    t.string   "youtube_code"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "download",     limit: 255
+    t.string   "download"
   end
 
-  create_table "workshop_attendance", force: :cascade do |t|
-    t.integer  "teacher_id", limit: 4,     null: false
-    t.integer  "segment_id", limit: 4,     null: false
-    t.string   "status",     limit: 255
+  create_table "workshop_attendance", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "teacher_id",               null: false
+    t.integer  "segment_id",               null: false
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "notes",      limit: 65535
+    t.index ["segment_id"], name: "index_workshop_attendance_on_segment_id", using: :btree
+    t.index ["teacher_id"], name: "index_workshop_attendance_on_teacher_id", using: :btree
   end
 
-  add_index "workshop_attendance", ["segment_id"], name: "index_workshop_attendance_on_segment_id", using: :btree
-  add_index "workshop_attendance", ["teacher_id"], name: "index_workshop_attendance_on_teacher_id", using: :btree
-
-  create_table "workshop_cohorts", force: :cascade do |t|
-    t.integer  "workshop_id", limit: 4, null: false
-    t.integer  "cohort_id",   limit: 4, null: false
+  create_table "workshop_cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "workshop_id", null: false
+    t.integer  "cohort_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "workshops", force: :cascade do |t|
-    t.string   "name",         limit: 255
-    t.string   "program_type", limit: 255,  null: false
+  create_table "workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "program_type",              null: false
     t.string   "location",     limit: 1000
     t.string   "instructions", limit: 1000
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "phase",        limit: 4
+    t.integer  "phase"
+    t.index ["name"], name: "index_workshops_on_name", using: :btree
+    t.index ["program_type"], name: "index_workshops_on_program_type", using: :btree
   end
-
-  add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
-  add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"

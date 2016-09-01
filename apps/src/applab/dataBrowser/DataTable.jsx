@@ -17,20 +17,24 @@ import color from '../../color';
 import { connect } from 'react-redux';
 import applabMsg from '@cdo/applab/locale';
 
-const MAX_TABLE_WIDTH = 970;
+const MIN_TABLE_WIDTH = 600;
 
 const styles = {
   addColumnHeader: [dataStyles.headerCell, {
     width: 19,
   }],
   container: {
-    maxWidth: MAX_TABLE_WIDTH,
+    flexDirection: 'column',
     height: '100%',
-    overflowY: 'scroll',
+    minWidth: MIN_TABLE_WIDTH,
+    maxWidth: '100%',
   },
   table: {
-    clear: 'both',
-    width: '100%'
+    minWidth: MIN_TABLE_WIDTH,
+  },
+  tableWrapper: {
+    flexGrow: 1,
+    overflow: 'scroll',
   },
   plusIcon: {
     alignItems: 'center',
@@ -87,17 +91,15 @@ const DataTable = React.createClass({
   },
 
   deleteColumn(columnToRemove) {
-    if (confirm('Are you sure you want to delete this entire column? You cannot undo this action.')) {
-      this.setState({
-        newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
-      });
-      FirebaseStorage.deleteColumn(
-        this.props.tableName,
-        columnToRemove,
-        () => {},
-        error => console.warn(error)
-      );
-    }
+    this.setState({
+      newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
+    });
+    FirebaseStorage.deleteColumn(
+      this.props.tableName,
+      columnToRemove,
+      () => {},
+      error => console.warn(error)
+    );
   },
 
   /**
@@ -176,13 +178,11 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    if (confirm(applabMsg.confirmClearTable())) {
-      const newColumns = this.getColumnNames();
-      FirebaseStorage.deleteTable(
-        this.props.tableName,
-        () => this.setState({newColumns, editingColumn: null}),
-        msg => console.warn(msg));
-    }
+    const newColumns = this.getColumnNames();
+    FirebaseStorage.deleteTable(
+      this.props.tableName,
+      () => this.setState({newColumns, editingColumn: null}),
+      msg => console.warn(msg));
   },
 
   toggleDebugView() {
@@ -204,15 +204,15 @@ const DataTable = React.createClass({
     let columnNames = this.getColumnNames();
     let editingColumn = this.state.editingColumn;
 
-    // Always show at least one column for empty tables.
-    if (Object.keys(this.props.tableRecords).length === 0 && columnNames.length === 1) {
+    // Always show at least one column.
+    if (columnNames.length === 1) {
       editingColumn = this.getNextColumnName();
       columnNames.push(editingColumn);
     }
 
     const visible = (DataView.TABLE === this.props.view);
     const containerStyle = [styles.container, {
-      display: visible ? 'block' : 'none',
+      display: visible ? '' : 'none',
     }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
@@ -221,7 +221,7 @@ const DataTable = React.createClass({
       display: this.state.showDebugView ? '' : 'none',
   }];
     return (
-      <div id="dataTable" style={containerStyle}>
+      <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
@@ -255,45 +255,47 @@ const DataTable = React.createClass({
           {this.getTableJson()}
         </div>
 
-        <table style={tableDataStyle}>
-          <tbody>
-          <tr>
+        <div style={styles.tableWrapper}>
+          <table style={tableDataStyle}>
+            <tbody>
+            <tr>
+              {
+                columnNames.map(columnName => (
+                  <ColumnHeader
+                    key={columnName}
+                    columnName={columnName}
+                    columnNames={columnNames}
+                    deleteColumn={this.deleteColumn}
+                    editColumn={this.editColumn}
+                    isEditable={columnName !== 'id'}
+                    isEditing={editingColumn === columnName}
+                    renameColumn={this.renameColumn}
+                  />
+                ))
+              }
+              <th style={styles.addColumnHeader}>
+                <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
+              </th>
+              <th style={dataStyles.headerCell}>
+                Actions
+              </th>
+            </tr>
+
+            <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
+
             {
-              columnNames.map(columnName => (
-                <ColumnHeader
-                  key={columnName}
-                  columnName={columnName}
+              Object.keys(this.props.tableRecords).map(id => (
+                <EditTableRow
                   columnNames={columnNames}
-                  deleteColumn={this.deleteColumn}
-                  editColumn={this.editColumn}
-                  isEditable={columnName !== 'id'}
-                  isEditing={editingColumn === columnName}
-                  renameColumn={this.renameColumn}
+                  tableName={this.props.tableName}
+                  record={JSON.parse(this.props.tableRecords[id])}
+                  key={id}
                 />
               ))
             }
-            <th style={styles.addColumnHeader}>
-              <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
-            </th>
-            <th style={dataStyles.headerCell}>
-              Actions
-            </th>
-          </tr>
-
-          <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
-
-          {
-            Object.keys(this.props.tableRecords).map(id => (
-              <EditTableRow
-                columnNames={columnNames}
-                tableName={this.props.tableName}
-                record={JSON.parse(this.props.tableRecords[id])}
-                key={id}
-              />
-            ))
-          }
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }

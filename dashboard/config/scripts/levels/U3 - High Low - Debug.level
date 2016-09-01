@@ -65,9 +65,9 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "w6AGaFEDxPuV5vunHjxCr0aKFlZFsI+sXT8/grC0WylC9eCYGL5pE9kzyjNg\nYMP+\n",
-    "contained_level_names": null,
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
