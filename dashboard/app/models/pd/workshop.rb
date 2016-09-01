@@ -218,7 +218,8 @@ class Pd::Workshop < ActiveRecord::Base
   def send_exit_surveys
     # Update enrollments with resolved users.
     self.enrollments.each do |enrollment|
-      enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
+      # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
+      enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
     end
 
     # Send the emails
