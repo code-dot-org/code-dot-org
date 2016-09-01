@@ -462,6 +462,12 @@ body.embedded_iframe {
   -webkit-user-select: auto !important;
 }
 
+.inline-flex {
+  /* PhantomJS 2.1.1 requires the webkit prefix */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
 // TODO(dave): move these styles into DesignToolboxElement
 // once we are done experimenting with them.
 .design-element-image {

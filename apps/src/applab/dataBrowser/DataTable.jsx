@@ -212,7 +212,7 @@ const DataTable = React.createClass({
 
     const visible = (DataView.TABLE === this.props.view);
     const containerStyle = [styles.container, {
-      display: visible ? 'inline-flex' : 'none',
+      display: visible ? '' : 'none',
     }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
@@ -221,7 +221,7 @@ const DataTable = React.createClass({
       display: this.state.showDebugView ? '' : 'none',
   }];
     return (
-      <div id="dataTable" style={containerStyle}>
+      <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
