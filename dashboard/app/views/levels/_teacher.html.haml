@@ -80,7 +80,7 @@
                 - status = activity_css_class(user_level)
                 %td
                   .level_link{class: status}
-                    - if user_level.level.unplugged?
+                    - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
                       %span.puzzle-named
                         Unplugged
                     - elsif status == 'passed' || status == 'perfect'
