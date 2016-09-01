@@ -6,14 +6,22 @@ module.exports = {
   buttonStyle: {
     display: 'inline-block',
     verticalAlign: 'top',
-    border: '1px solid ' + color.light_gray,
+    borderStyle: 'solid',
+    borderColor: color.light_gray,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
     margin: '0 0 8px 0',
     padding: '2px 6px',
     fontSize: 14
   },
   toggleButtonStyle: {
     borderRightWidth: '0 !important',
-    borderRadius: 0
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
+    borderBottomLeftRadius: 0,
   },
   firstButtonStyle: {
     borderBottomLeftRadius: 4,

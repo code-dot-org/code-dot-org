@@ -82,8 +82,9 @@ describe('Level tests', function () {
   var originalRender;
   var clock, tickInterval;
 
-  // Don't expect console.error to be used during any level test
+  // Don't expect console.error or console.warn to be used during any level test
   testUtils.throwOnConsoleErrors();
+  testUtils.throwOnConsoleWarnings();
 
   before(function (done) {
     this.timeout(15000);
