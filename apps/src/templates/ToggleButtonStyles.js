@@ -13,7 +13,10 @@ module.exports = {
   },
   toggleButtonStyle: {
     borderRightWidth: '0 !important',
-    borderRadius: 0
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
+    borderBottomLeftRadius: 0,
   },
   firstButtonStyle: {
     borderBottomLeftRadius: 4,
