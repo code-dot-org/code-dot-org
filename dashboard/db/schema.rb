@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830235908) do
+ActiveRecord::Schema.define(version: 20160901180359) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -26,17 +26,6 @@ ActiveRecord::Schema.define(version: 20160830235908) do
     t.integer  "lines",           default: 0, null: false
     t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
-  end
-
-  create_table "activity_hints", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "activity_id",          null: false
-    t.integer  "level_source_hint_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "hint_visibility"
-    t.integer  "ip_hash"
-    t.index ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
-    t.index ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
   end
 
   create_table "authored_hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
