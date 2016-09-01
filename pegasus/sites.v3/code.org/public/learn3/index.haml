@@ -1,0 +1,38 @@
+---
+title: Learn
+theme: responsive
+social:
+  "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
+  "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
+  "og:image:width": 520
+  "og:image:height": 391
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+
+= view 'mobilecheck.js'
+
+%script{src: CDO.studio_url('/assets/js/tutorialExplorer.js')}
+
+- tutorials = Tutorials.new(:tutorials)
+- filters = []
+- filters << {name: "grade", entries: [{name: "pre"}, {name: "k-5"}, {name: "6-8"}, {name: "9+"}]}
+- filters << {name: "platform", entries: [{name: "web"}, {name: "ipad"}, {name: "android"}, {name: "iphone"}]}
+
+= tutorials.to_json
+
+#tutorials
+
+:javascript
+
+  $(document).ready(function() {
+    // Send through some values that the JavaScript will need.
+    window.tutorialExplorerManager = new TutorialExplorerManager({
+      tutorials: #{tutorials.to_json},
+      filters: #{filters.to_json}
+      }
+    );
+  });

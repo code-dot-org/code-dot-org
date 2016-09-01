@@ -417,7 +417,6 @@ module.exports = function (grunt) {
       },
       provides: ['jquery']
     },
-
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amound of stuff we need when loading blocks
     // in an iframe.
@@ -428,7 +427,14 @@ module.exports = function (grunt) {
       },
       provides: ['react', 'react-dom', 'radium']
     },
-
+    // tutorialExplorer for code.org/learn 2016 edition.
+    {
+      uniqueName: 'tutorialExplorer',
+      entries: {
+        tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
+    },
     {
       uniqueName: 'makerlabDependencies',
       entries: {
