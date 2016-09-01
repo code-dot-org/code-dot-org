@@ -23,7 +23,6 @@
 # Indexes
 #
 #  index_pd_enrollments_on_code                (code) UNIQUE
-#  index_pd_enrollments_on_deleted_at          (deleted_at)
 #  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
 #  index_pd_enrollments_on_school_district_id  (school_district_id)
 #

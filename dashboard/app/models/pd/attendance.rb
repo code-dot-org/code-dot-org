@@ -11,7 +11,6 @@
 #
 # Indexes
 #
-#  index_pd_attendances_on_deleted_at                    (deleted_at)
 #  index_pd_attendances_on_pd_session_id_and_teacher_id  (pd_session_id,teacher_id) UNIQUE
 #
 

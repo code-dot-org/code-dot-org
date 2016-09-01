@@ -4,22 +4,18 @@ class AddDeletedAtToPdWorkshopModels < ActiveRecord::Migration[5.0]
   def change
     change_table :pd_workshops do |t|
       t.column :deleted_at, :datetime, null: true
-      t.index :deleted_at
     end
 
     change_table :pd_enrollments do |t|
       t.column :deleted_at, :datetime, null: true
-      t.index :deleted_at
     end
 
     change_table :pd_sessions do |t|
       t.column :deleted_at, :datetime, null: true
-      t.index :deleted_at
     end
 
     change_table :pd_attendances do |t|
       t.column :deleted_at, :datetime, null: true
-      t.index :deleted_at
     end
   end
 end

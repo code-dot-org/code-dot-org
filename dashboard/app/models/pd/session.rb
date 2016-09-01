@@ -12,7 +12,6 @@
 #
 # Indexes
 #
-#  index_pd_sessions_on_deleted_at      (deleted_at)
 #  index_pd_sessions_on_pd_workshop_id  (pd_workshop_id)
 #
 
