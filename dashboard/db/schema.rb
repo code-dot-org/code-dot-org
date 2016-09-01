@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824002113) do
+ActiveRecord::Schema.define(version: 20160830235908) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -299,6 +299,7 @@ ActiveRecord::Schema.define(version: 20160824002113) do
     t.integer  "teacher_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
 
@@ -332,6 +333,7 @@ ActiveRecord::Schema.define(version: 20160824002113) do
     t.datetime "survey_sent_at"
     t.integer  "completed_survey_id"
     t.integer  "school_info_id"
+    t.datetime "deleted_at"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
     t.index ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
@@ -343,6 +345,7 @@ ActiveRecord::Schema.define(version: 20160824002113) do
     t.datetime "end",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
   end
 
@@ -362,6 +365,7 @@ ActiveRecord::Schema.define(version: 20160824002113) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "processed_at"
+    t.datetime "deleted_at"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
   end
 
