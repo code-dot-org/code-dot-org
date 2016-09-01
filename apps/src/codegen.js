@@ -68,7 +68,7 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
       interpreter.run();
     };
     const {code, args} = events[event];
-    evalCode += `this['${event}']=function(${args.join()}){${code}};`;
+    evalCode += `this['${event}']=function(${args ? args.join() : ''}){${code}};`;
   });
 
   // The event loop pauses the interpreter until the native async function
