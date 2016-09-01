@@ -34,7 +34,7 @@ export const editButtonCell = [cell, {
 }];
 
 export const headerCell = {
-  padding: cellPadding,
+  padding: '6px 10px',
   border: '1px solid gray',
   backgroundColor: color.teal
 };
