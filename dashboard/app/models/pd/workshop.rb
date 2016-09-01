@@ -74,18 +74,18 @@ class Pd::Workshop < ActiveRecord::Base
     ]
   }
 
-  COURSE_SHORT_NAME_MAP = {
-    COURSE_CSF => 'csf',
-    COURSE_CSP => 'csp',
-    COURSE_ECS => 'ecs',
-    COURSE_CS_IN_A => 'CSinA',
-    COURSE_CS_IN_S => 'CSinS',
-    COURSE_CSD => 'csd',
-    COURSE_COUNSELOR => 'ca',
-    COURSE_ADMIN => 'ca'
-  }
-
-  SECTION_TYPES = COURSE_SHORT_NAME_MAP.values.uniq.map{|name| "#{name}_workshop"}.freeze
+  # Section types by course
+  SECTION_TYPE_MAP = {
+    COURSE_CSF => 'csf_workshop',
+    COURSE_CSP => 'csp_workshop',
+    COURSE_ECS => 'ecs_workshop',
+    COURSE_CS_IN_A => 'csina_workshop',
+    COURSE_CS_IN_S => 'csins_workshop',
+    COURSE_CSD => 'csd_workshop',
+    COURSE_COUNSELOR => 'counselor_workshop',
+    COURSE_ADMIN => 'admin_workshop'
+  }.freeze
+  SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
 
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
@@ -121,7 +121,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def section_type
-    "#{COURSE_SHORT_NAME_MAP[course]}_workshop"
+    SECTION_TYPE_MAP[self.course]
   end
 
   def self.organized_by(organizer)
