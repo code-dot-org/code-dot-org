@@ -33,7 +33,7 @@ function saveAnswers(completeFn, beforeHook, subLevelId) {
     var results = window.getResult();
     var response = results.response;
     var result = results.result;
-    var submitted = appOptions.submitted;
+    var submitted = appOptions.submitted || false;
 
     window.dashboard.reporting.sendReport({
       program: response,
