@@ -381,8 +381,7 @@ class User < ActiveRecord::Base
         user.age = 21
       else
         # student or unspecified type
-        age_in_years = ((DateTime.now - Date.parse(auth.info.dob, '%Y-%m-%d')) / 365).floor
-        user.age = age_in_years
+        user.age = ((Date.today - auth.info.dob) / 365).floor if auth.info.dob
       end
       user.gender = normalize_gender auth.info.gender
     end
