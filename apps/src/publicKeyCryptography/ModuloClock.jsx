@@ -81,9 +81,7 @@ const ModuloClock = React.createClass({
     }
   },
 
-  renderSegments() {
-    const {modulus} = this.props;
-    const {currentDividend: dividend} = this.state;
+  renderSegments(dividend, modulus) {
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
     const segmentGapRadians = segmentGapInDegrees * 2 * Math.PI / 360;
     const result = dividend % modulus;
@@ -120,7 +118,7 @@ const ModuloClock = React.createClass({
   },
 
   render() {
-    const {modulus} = this.props;
+    const modulus = Math.max(1, this.props.modulus);
     const {currentDividend} = this.state;
     const isRunning = !!this.interval;
     return (
@@ -132,7 +130,7 @@ const ModuloClock = React.createClass({
             r={VIEWBOX_SIDE / 2}
             fill={COLOR.clockFace}
           />
-          {this.renderSegments()}
+          {this.renderSegments(currentDividend, modulus)}
           <text
             x={VIEWBOX_SIDE / 2}
             y={VIEWBOX_SIDE / 2 + (isRunning ? 3 : 5)}
