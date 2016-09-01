@@ -41,10 +41,13 @@ class Section < ActiveRecord::Base
   LOGIN_TYPE_WORD = 'word'
 
   TYPES = [
-    TYPE_CSF_WORKSHOP = 'csf_workshop',
-    TYPE_PD_WORKSHOP = 'pd_workshop'
-  ]
+    # Insert non-workshop section types here.
+  ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  def workshop_section?
+    Pd::Workshop::SECTION_TYPES.include? self.section_type
+  end
 
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER

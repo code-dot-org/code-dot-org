@@ -102,7 +102,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
-    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.section_type
+    assert @workshop.section.workshop_section?
+    assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
@@ -223,6 +224,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_workshop, section: section
     assert_equal workshop, Pd::Workshop.find_by_section_code(section.code)
     assert_nil Pd::Workshop.find_by_section_code('nonsense code')
+  end
+
+  test 'section_types' do
+    expected_types = %w(
+      csf_workshop
+      csp_workshop
+      ecs_workshop
+      CSinA_workshop
+      CSinS_workshop
+      csd_workshop
+      ca_workshop
+    )
+
+    assert_equal expected_types, Pd::Workshop::SECTION_TYPES
   end
 
   private
