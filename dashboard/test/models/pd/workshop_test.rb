@@ -226,20 +226,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_nil Pd::Workshop.find_by_section_code('nonsense code')
   end
 
-  test 'section_types' do
-    expected_types = %w(
-      csf_workshop
-      csp_workshop
-      ecs_workshop
-      CSinA_workshop
-      CSinS_workshop
-      csd_workshop
-      ca_workshop
-    )
-
-    assert_equal expected_types, Pd::Workshop::SECTION_TYPES
-  end
-
   private
 
   def session_on_day(day_offset)
