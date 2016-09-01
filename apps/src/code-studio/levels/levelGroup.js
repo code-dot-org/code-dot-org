@@ -1,6 +1,7 @@
 /* global appOptions, Dialog */
 
 import $ from 'jquery';
+import throttle from 'lodash/throttle';
 require('./multi.js');
 require('./textMatch.js');
 var saveAnswers = require('./saveAnswers.js').saveAnswers;
@@ -63,8 +64,11 @@ window.initLevelGroup = function (
     }
   }
 
-  var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {'leading': true, 'trailing': true});
+  var throttledSaveAnswers = throttle(
+    saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {
+      leading: true,
+      trailing: true
+    });
 
   var lastResponse = window.getResult().response;
 

@@ -60,7 +60,7 @@ const AddTableRow = React.createClass({
 
         <td style={dataStyles.cell}/>
 
-        <td style={dataStyles.buttonCell}>
+        <td style={dataStyles.addButtonCell}>
           <button
             style={dataStyles.blueButton}
             onClick={this.handleAdd}

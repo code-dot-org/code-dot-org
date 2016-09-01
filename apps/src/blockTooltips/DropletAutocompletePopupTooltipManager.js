@@ -111,7 +111,7 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
       // Important this binds to mouseDown/touchDown rather than click, needs to
       // happen before `blur` which triggers the ace editor completer popup
       // hide which in turn would hide the link and not show the docs.
-      dom.addClickTouchEvent(seeExamplesLink, function (event) {
+      dom.addMouseDownTouchEvent(seeExamplesLink, function (event) {
         this.dropletTooltipManager.showDocFor(funcName);
         event.stopPropagation();
       }.bind(this));

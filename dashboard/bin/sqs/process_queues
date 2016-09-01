@@ -109,7 +109,7 @@ class QueueProcessorManager
       else
         puts unless last_changed
         last_changed = true
-        metrics_map.each do |k,v|
+        metrics_map.each do |k, v|
           logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"
         end
         old_metrics_json = metrics_map.to_json

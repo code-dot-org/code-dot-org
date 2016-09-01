@@ -6,7 +6,7 @@ require 'test_helper'
 # rejected before attempting to read or write them from the db.
 class CharsetTest < ActionDispatch::IntegrationTest
   def setup
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    Script.stubs(:should_cache?).returns true
   end
 
   def no_database

@@ -116,7 +116,7 @@ class ProfessionalDevelopmentWorkshop
       kind_s: self.name,
       type_s: 'Public',
       first_date_dt: '[NOW TO *]',
-    }.map{|key,value| "#{key}:#{value}"}.join(' AND ')
+    }.map{|key, value| "#{key}:#{value}"}.join(' AND ')
 
     fl = 'location_p,location_name_p,location_name_s,dates_ss,id'
 
