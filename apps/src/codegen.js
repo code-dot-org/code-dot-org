@@ -59,14 +59,16 @@ exports.evalWith = function (code, options, legacy) {
 exports.evalWithEvents = function (apis, events, evalCode = '') {
   let interpreter, currentCallback;
   const hooks = {};
+
   Object.keys(events).forEach(event => {
+    // Create a hook that triggers an event inside the interpreter.
     hooks[event] = (...args) => {
-      const eventArgs = {name: event, args: args};
+      const eventArgs = {name: event, args};
       currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
       interpreter.run();
     };
     const {code, args} = events[event];
-    evalCode += `this['${event}']=function(${args ? args.join() : ''}){${code}};`;
+    evalCode += `this['${event}']=function(${args.join()}){${code}};`;
   });
 
   // The event loop pauses the interpreter until the native async function

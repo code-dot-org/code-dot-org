@@ -234,8 +234,8 @@ function loadLevel() {
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
+  // Custom game logic doesn't work yet in the interpreter.
   Studio.legacyRuntime = Studio.customLogic;
-
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -2968,12 +2968,12 @@ Studio.execute = function () {
       defineProcedures('procedures_defnoreturn');
       defineProcedures('functional_definition');
     } else {
-      var generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+      const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
       const code = [
         'procedures_defreturn',
         'procedures_defnoreturn',
         'functional_definition'
-      ].map(p => generator(p)).join(';');
+      ].map(generator).join(';');
 
       const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
 
