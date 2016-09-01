@@ -135,7 +135,7 @@ const Eve = React.createClass({
               disabled={disabled}
             />
           </Step>
-          <Step requires={[publicModulus]}>
+          <Step requires={[publicModulus].map(Number.isInteger)}>
             Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
@@ -144,7 +144,7 @@ const Eve = React.createClass({
               color={COLORS.publicKey}
             />
           </Step>
-          <Step requires={[publicModulus, publicKey]}>
+          <Step requires={[publicModulus, publicKey].map(Number.isInteger)}>
             Crack Alice's <KeywordPrivateKey/>:
             <PrivateKeyDropdown
               publicModulus={publicModulus}
@@ -176,7 +176,7 @@ const Eve = React.createClass({
               </tbody>
             </table>
           </Step>
-          <Step requires={[publicModulus]}>
+          <Step requires={[publicModulus].map(Number.isInteger)}>
             Enter Bob's <KeywordPublicNumber/>:
             <IntegerTextbox
               value={publicNumber}
@@ -185,7 +185,7 @@ const Eve = React.createClass({
               color={COLORS.publicNumber}
             />
           </Step>
-          <Step requires={[publicModulus, publicKey, publicNumber]}>
+          <Step requires={[publicModulus, publicKey, publicNumber].map(Number.isInteger)}>
             Crack Bob's <KeywordSecretNumber/>:
             <SecretNumberDropdown
               value={secretNumber}
