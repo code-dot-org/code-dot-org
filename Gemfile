@@ -14,7 +14,8 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
 gem 'mysql2', '~> 0.3.13'
-gem 'seamless_database_pool'
+# Ref: https://github.com/bdurand/seamless_database_pool/issues/28
+gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'rails_5_migration_fix'
 
 gem 'le', '~> 2.2'
 gem 'os'

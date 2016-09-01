@@ -7,6 +7,7 @@ import progressStyles from './progressStyles';
 import { LockStatus, saveLockDialog } from '../../stageLockRedux';
 import color from '../../../color';
 import commonMsg from '@cdo/locale';
+import SectionSelector from './SectionSelector';
 
 const styles = {
   main: {
@@ -148,7 +149,10 @@ const StageLockDialog = React.createClass({
         handleClose={this.props.handleClose}
       >
         <div style={[styles.main, responsiveHeight]}>
-          <div style={styles.title}>{commonMsg.assessmentSteps()}</div>
+          <div>
+            <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+            <SectionSelector/>
+          </div>
           <table>
             <tbody>
               <tr>
