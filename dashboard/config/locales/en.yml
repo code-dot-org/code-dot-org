@@ -310,6 +310,7 @@ en:
       submitted_on: 'Submitted on:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
+      update_lock_settings: 'Update lock settings here.'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
