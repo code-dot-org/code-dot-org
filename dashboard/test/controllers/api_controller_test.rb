@@ -136,7 +136,7 @@ class ApiControllerTest < ActionController::TestCase
     # student_2 has one answer
     level_source2 = create :level_source, level: level2, data: 'Here is the answer 2'
     create :activity, user: @student_2, level: level1, level_source: level_source2
-    create :user_level,user: @student_2, level: level1, script: script,
+    create :user_level, user: @student_2, level: level1, script: script,
       attempts: 1, level_source: level_source2
 
     get :section_text_responses, section_id: @section.id, script_id: script.id
@@ -233,6 +233,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get surveys for section with script with anonymous level_group assessment" do
+    # Seed the RNG deterministically so we get the same "random" shuffling of results.
+    srand 1
+
     script = create :script
 
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -252,52 +255,47 @@ class ApiControllerTest < ActionController::TestCase
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
-    # student_1 did the survey
-    create(:activity, user: @student_1, level: level1, level_source: create(:level_source, level: level1))
-
-    create(:activity, user: @student_1, level: sub_level1,
-      level_source: create(:level_source, level: sub_level1, data: "This is a free response"))
-    create(:activity, user: @student_1, level: sub_level2,
-      level_source: create(:level_source, level: sub_level2, data: "0"))
-    create(:activity, user: @student_1, level: sub_level3,
-      level_source: create(:level_source, level: sub_level3, data: "1"))
-    create(:activity, user: @student_1, level: sub_level4,
-      level_source: create(:level_source, level: sub_level4, data: "-1"))
-
-    # student_2 also did the survey
-    create(:activity, user: @student_2, level: level1, level_source: create(:level_source, level: level1))
-
-    create(:activity, user: @student_2, level: sub_level1,
-      level_source: create(:level_source, level: sub_level1, data: "This is a different free response"))
-    create(:activity, user: @student_2, level: sub_level2,
-      level_source: create(:level_source, level: sub_level2, data: "-1"))
-    create(:activity, user: @student_2, level: sub_level3,
-      level_source: create(:level_source, level: sub_level3, data: "2"))
-    create(:activity, user: @student_2, level: sub_level4,
-      level_source: create(:level_source, level: sub_level4, data: "3"))
-
-    # student_3 through student_5 also did the survey, just submitting a free response.
-    [@student_3, @student_4, @student_5].each_with_index do |student, student_index|
-      create(:activity, user: student, level: level1, level_source: create(:level_source, level: level1))
-
-      create(:activity, user: student, level: sub_level1,
-        level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}"))
-      create(:activity, user: student, level: sub_level2,
-        level_source: create(:level_source, level: sub_level2, data: "-1"))
-      create(:activity, user: student, level: sub_level3,
-        level_source: create(:level_source, level: sub_level3, data: "-1"))
-      create(:activity, user: student, level: sub_level4,
-        level_source: create(:level_source, level: sub_level4, data: "-1"))
-    end
-
     updated_at = Time.now
 
+    # All students did the LevelGroup.
     [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
-      create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+      create :user_level, user: student, script: script, level: level1,
+        level_source: create(:level_source, level: level1), best_result: 100,
+        submitted: true, updated_at: updated_at
     end
 
-    # Seed the RNG with the same thing so we get the same "random" shuffling of results.
-    srand 1
+    # student_1 did the survey.
+    create :user_level, user: @student_1, script: script, level: sub_level1,
+      level_source: create(:level_source, level: sub_level1, data: "This is a free response")
+    create :user_level, user: @student_1, script: script, level: sub_level2,
+      level_source: create(:level_source, level: sub_level2, data: "0")
+    create :user_level, user: @student_1, script: script, level: sub_level3,
+      level_source: create(:level_source, level: sub_level3, data: "1")
+    create :user_level, user: @student_1, script: script, level: sub_level4,
+      level_source: create(:level_source, level: sub_level4, data: "-1")
+
+    # student_2 did the survey.
+    create :user_level, user: @student_2, script: script, level: sub_level1,
+      level_source: create(:level_source, level: sub_level1, data: "This is a different free response")
+    create :user_level, user: @student_2, script: script, level: sub_level2,
+      level_source: create(:level_source, level: sub_level2, data: "-1")
+    create :user_level, user: @student_2, script: script, level: sub_level3,
+      level_source: create(:level_source, level: sub_level3, data: "2")
+    create :user_level, user: @student_2, script: script, level: sub_level4,
+      level_source: create(:level_source, level: sub_level4, data: "3")
+
+    # student_3, student_4, and student_5 did only the free response part of the
+    # survey....
+    [@student_3, @student_4, @student_5].each_with_index do |student, student_index|
+      create :user_level, user: student, script: script, level: sub_level1,
+        level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}")
+      create :user_level, user: student, script: script, level: sub_level2,
+        level_source: create(:level_source, level: sub_level2, data: "-1")
+      create :user_level, user: student, script: script, level: sub_level3,
+        level_source: create(:level_source, level: sub_level3, data: "-1")
+      create :user_level, user: student, script: script, level: sub_level4,
+        level_source: create(:level_source, level: sub_level4, data: "-1")
+    end
 
     get :section_surveys, section_id: @section.id, script_id: script.id
     assert_response :success
@@ -605,7 +603,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
@@ -620,7 +618,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # multiple updates at once
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     assert_equal nil, UserLevel.find_by(user_level_data2)
     updates = [{
@@ -811,10 +809,11 @@ class ApiControllerTest < ActionController::TestCase
 
     script_level = script.script_levels[0]
     level = script_level.level
-    create :user_level, user: user, best_result: 100, script: script, level: level
+    level_source = create :level_source, level: level, data: 'level source'
 
-    create(:activity, user: user, level: level,
-           level_source: create(:level_source, level: level, data: 'level source'))
+    create :user_level, user: user, best_result: 100, script: script,
+      level: level, level_source: level_source
+    create :activity, user: user, level: level, level_source: level_source
 
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
@@ -895,17 +894,10 @@ class ApiControllerTest < ActionController::TestCase
     stage = create :stage, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
+    level_source = create :level_source, level: level1a, data: 'level source'
     create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
-    create(
-      :activity,
-      user: @student_1,
-      level: level1a,
-      level_source: create(
-        :level_source,
-        level: level1a,
-        data: 'level source'
-      )
-    )
+    create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
+    create :activity, user: @student_1, level: level1a, level_source: level_source
 
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1, level: level1a.id
     body = JSON.parse(response.body)

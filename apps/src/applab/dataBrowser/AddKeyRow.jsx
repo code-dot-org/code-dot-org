@@ -23,11 +23,13 @@ const AddKeyRow = React.createClass({
   },
 
   handleAdd() {
-    FirebaseStorage.setKeyValue(
-      this.state.key,
-      castValue(this.state.value),
-      () => this.setState(this.getInitialState()),
-      msg => console.warn(msg));
+    if (this.state.key) {
+      FirebaseStorage.setKeyValue(
+        this.state.key,
+        castValue(this.state.value),
+        () => this.setState(this.getInitialState()),
+        msg => console.warn(msg));
+    }
   },
 
   handleKeyUp(event) {
@@ -59,7 +61,7 @@ const AddKeyRow = React.createClass({
             value={this.state.value}
           />
         </td>
-        <td style={dataStyles.buttonCell}>
+        <td style={dataStyles.addButtonCell}>
           <button
             style={dataStyles.blueButton}
             onClick={this.handleAdd}

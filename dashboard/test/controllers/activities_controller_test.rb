@@ -1171,7 +1171,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 
-  test "milestone fails to update locked level" do
+  test "milestone fails to update locked/readonly level" do
     teacher = create(:teacher)
 
     # make them an authorized_teacher
@@ -1226,6 +1226,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert user_level.locked?(stage)
 
     # milestone post should also fail when we have an existing user_level that is locked
+    post :milestone, milestone_params
+    assert_response 403
+
+    user_level.delete
+    # explicity create a user_level that is readonly_answers
+    create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, milestone_params
     assert_response 403
   end

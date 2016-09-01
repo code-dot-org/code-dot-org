@@ -12,7 +12,7 @@ Sequel.migration do
       DateTime :updated_at, null: false
       String :updated_ip, size: 39, null: false
 
-      index [:app_id,:storage_id,:name], unique: true
+      index [:app_id, :storage_id, :name], unique: true
     end
   end
 

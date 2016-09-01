@@ -14,8 +14,10 @@ class ApiController < ApplicationController
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
-      user_level_data = item[:user_level_data]
+      # Convert string-boolean parameters to boolean
+      %i(locked readonly_answers).each{|val| item[val] = JSONValue.value(item[val])}
 
+      user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
         return head :bad_request
@@ -30,7 +32,6 @@ class ApiController < ApplicationController
         # Can only update lockable state for user's students
         return head :forbidden
       end
-
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
         user_level_data[:script_id], item[:locked], item[:readonly_answers])
     end
@@ -77,10 +78,11 @@ class ApiController < ApplicationController
     # student level completion data
     students = @section.students.map do |student|
       level_map = student.user_levels_by_level(@script)
+      paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
       student_levels = @script.script_levels.map do |script_level|
         user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
         level_class = best_activity_css_class user_levels
-        paired = user_levels.any?(&:paired?)
+        paired = (paired_user_level_ids & user_levels).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
         {
@@ -167,13 +169,13 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      last_activity = current_user.last_attempt(level)
-      level_source = last_activity.try(:level_source).try(:data)
+      user_level = current_user.last_attempt(level)
+      level_source = user_level.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)
-      if last_activity
+      if user_level
         response[:lastAttempt] = {
-          timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
+          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
       end

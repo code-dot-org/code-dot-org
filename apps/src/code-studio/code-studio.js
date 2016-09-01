@@ -6,8 +6,6 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
-'use strict';
-
 // Require this first at each bundle entry point for full ES6 support.
 require("babel-polyfill");
 
@@ -46,14 +44,11 @@ window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
-window.dashboard.utils = {
-  debounce: _.debounce,
-  throttle: _.throttle
-};
 window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
 window.dashboard.assets = require('./assets');
 window.dashboard.pairing = require('./pairing');
+window.dashboard.teacher = require('./teacher');
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio

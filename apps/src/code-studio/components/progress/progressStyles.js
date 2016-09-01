@@ -41,6 +41,11 @@ const progressStyles = {
   orangeButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.orange,
     color: color.white,
-  })
+  }),
+  whiteButton: Object.assign({}, baseButtonStyle, {
+    backgroundColor: color.white,
+    color: color.dark_charcoal,
+    borderColor: color.lighter_gray
+  }),
 };
 export default progressStyles;

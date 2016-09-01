@@ -2,6 +2,7 @@
  * @overview Component for adding a new column to the specified table.
  */
 
+import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
@@ -34,6 +35,7 @@ const ColumnHeader = React.createClass({
     return {
       newName: undefined,
       hasEnteredText: false,
+      isDialogOpen: false,
     };
   },
 
@@ -67,7 +69,12 @@ const ColumnHeader = React.createClass({
     });
   },
 
-  handleDelete() {
+  handleClose() {
+    this.setState({isDialogOpen: false});
+  },
+
+  handleConfirmDelete() {
+    this.setState({isDialogOpen: false});
     this.props.deleteColumn(this.props.columnName);
   },
 
@@ -114,11 +121,13 @@ const ColumnHeader = React.createClass({
       display: this.props.isEditable ? null : 'none',
     }];
     const containerStyle = {
-      display: this.props.isEditing ? 'none' : null
+      display: this.props.isEditing ? 'none' : null,
+      padding: '6px 0',
     };
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
+      minWidth: 80,
     }];
     return (
       <th style={dataStyles.headerCell}>
@@ -136,13 +145,24 @@ const ColumnHeader = React.createClass({
                 </a>
               </li>
               <li>
-                <a onClick={this.handleDelete}>
+                <a onClick={() => this.setState({isDialogOpen: true})}>
                  Delete
                 </a>
               </li>
             </ul>
           </span>
         </div>
+        <Dialog
+          body="Are you sure you want to delete this entire column? You cannot undo this action."
+          cancelText="Cancel"
+          confirmText="Delete"
+          confirmType="danger"
+          isOpen={this.state.isDialogOpen}
+          handleClose={this.handleClose}
+          onCancel={this.handleClose}
+          onConfirm={this.handleConfirmDelete}
+          title="Delete column"
+        />
         <input
           ref={input => this.input = input}
           style={inputStyle}

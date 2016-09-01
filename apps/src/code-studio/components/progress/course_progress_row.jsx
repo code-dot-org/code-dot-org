@@ -118,6 +118,7 @@ const CourseProgressRow = React.createClass({
             <TeacherStageInfo stage={stage}/>
           }
           <StageProgress
+            stageId={stage.id}
             levels={stage.levels}
             courseOverviewPage={true}
           />
@@ -130,6 +131,6 @@ const CourseProgressRow = React.createClass({
 export default connect(state => ({
   showTeacherInfo: state.progress.showTeacherInfo &&
     state.stageLock.viewAs !== ViewType.Student,
-  lockableAuthorized: state.progress.lockableAuthorized,
+  lockableAuthorized: state.stageLock.lockableAuthorized,
   changeFocusAreaPath: state.progress.changeFocusAreaPath,
 }))(Radium(CourseProgressRow));

@@ -144,7 +144,7 @@ def complete_tutorial_pixel(tutorial={})
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
 
-def launch_tutorial(tutorial,params={})
+def launch_tutorial(tutorial, params={})
   unless settings.read_only || unsampled_session?
     create_session_row_unless_unsampled(
       referer: request.referer_site_with_port,

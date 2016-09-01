@@ -1859,7 +1859,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
-    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+    this.initializationBlocks = Blockly.Generator.xmlToBlocks('JavaScript', xml);
   }
 
   // enableShowCode defaults to true if not defined

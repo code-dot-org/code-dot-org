@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::IntegrationTest
   freeze_time
 
   setup do
@@ -19,33 +19,76 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     @teacher.save!
   end
 
+  API = '/api/v1/pd/workshops'
+
+  def get_attendance(workshop_id)
+    get "#{API}/#{workshop_id}/attendance"
+  end
+
+  def update_attendance(workshop_id, params)
+    patch "#{API}/#{workshop_id}/attendance", params: {pd_workshop: params}, as: :json
+  end
+
   test 'facilitators can manage attendance for their workshops' do
     sign_in @facilitator
-    get :show, workshop_id: @workshop.id
+    get_attendance @workshop.id
     assert_response :success
 
-    patch :update, workshop_id: @workshop.id, pd_workshop: params
+    update_attendance @workshop.id, params
     assert_response :success
   end
 
   test 'workshop organizers can manage attendance for their workshops' do
     sign_in @organizer
-    get :show, workshop_id: @workshop.id
+    get_attendance @workshop.id
     assert_response :success
 
-    patch :update, workshop_id: @workshop.id, pd_workshop: params
+    update_attendance @workshop.id, params
+    assert_response :success
+  end
+
+  test 'facilitators can see, but cannot manage, attendance for ended workshops' do
+    @workshop.start!
+    @workshop.end!
+    sign_in @facilitator
+
+    get_attendance @workshop.id
+    assert_response :success
+
+    update_attendance @workshop.id, params
+    assert_response :forbidden
+  end
+
+  test 'organizers can see, but cannot manage, attendance for ended workshops' do
+    @workshop.start!
+    @workshop.end!
+    sign_in @organizer
+
+    get_attendance @workshop.id
+    assert_response :success
+
+    update_attendance @workshop.id, params
+    assert_response :forbidden
+  end
+
+  test 'admins can manage attendance for ended workshops' do
+    @workshop.start!
+    @workshop.end!
+    sign_in create(:admin)
+
+    patch "#{API}/#{@workshop.id}", params: {pd_workshop: params}
     assert_response :success
   end
 
   test 'facilitators cannot see attendance for workshops they are not facilitating' do
     sign_in @facilitator
-    get :show, workshop_id: @other_workshop.id
+    get_attendance @other_workshop.id
     assert_response :forbidden
   end
 
   test 'organizers cannot see attendance for workshops they are not organizing' do
     sign_in @organizer
-    get :show, workshop_id: @other_workshop.id
+    get_attendance @other_workshop.id
     assert_response :forbidden
   end
 
@@ -54,27 +97,15 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     create :pd_attendance, session: @session, teacher: @teacher
 
     sign_in @teacher
-    get :show, workshop_id: @workshop.id
+    get_attendance @workshop.id
     assert_response :forbidden
-  end
-
-  test 'admins get admin actions' do
-    sign_in create(:admin)
-    get :show, workshop_id: @workshop.id
-    assert JSON.parse(@response.body)['admin_actions']
-  end
-
-  test 'non-admins do not get admin actions' do
-    sign_in @organizer
-    get :show, workshop_id: @workshop.id
-    refute JSON.parse(@response.body)['admin_actions']
   end
 
   test 'see enrolled teachers' do
     create :pd_enrollment, workshop: @workshop, name: @teacher.name, email: @teacher.email
 
     sign_in @facilitator
-    get :show, workshop_id: @workshop.id
+    get_attendance @workshop.id
     response = JSON.parse(@response.body)
     assert_equal 1, response['session_attendances'].length
 
@@ -94,7 +125,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     @workshop.section.add_student @teacher
 
     sign_in @facilitator
-    get :show, workshop_id: @workshop.id
+    get_attendance @workshop.id
     response = JSON.parse(@response.body)
     assert_equal 1, response['session_attendances'].length
 
@@ -117,7 +148,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     create :pd_attendance, session: @session, teacher: @teacher
 
     sign_in @facilitator
-    get :show, workshop_id: @workshop.id
+    get_attendance @workshop.id
     response = JSON.parse(@response.body)
     assert_equal 1, response['session_attendances'].length
 
@@ -141,12 +172,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
 
     # Mark attended
     sign_in @facilitator
-    patch :update, workshop_id: @workshop.id, pd_workshop: params
+    update_attendance @workshop.id, params
     assert_response :success
     assert_equal 1, Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop).count
 
     # Mark not attended
-    patch :update, workshop_id: @workshop.id, pd_workshop: params(false)
+    update_attendance @workshop.id, params(false)
     assert_response :success
     assert_empty Pd::Attendance.for_teacher(@teacher).for_workshop(@workshop)
   end
@@ -161,7 +192,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     create :pd_enrollment, workshop: @workshop, email: email
 
     assert_creates(User) do
-      patch :update, workshop_id: @workshop.id, pd_workshop: create_user_params(email)
+      update_attendance @workshop.id, create_user_params(email)
       assert_response :success
     end
     assert_equal 1, Pd::Attendance.for_teacher(User.last).for_workshop(@workshop).count
@@ -172,9 +203,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     sign_in create(:admin)
     email = "new_teacher#{SecureRandom.hex(4)}@example.net"
 
-    assert_raises(ActiveRecord::RecordNotFound) do
-      patch :update, workshop_id: @workshop.id, pd_workshop: create_user_params(email)
-    end
+    update_attendance @workshop.id, create_user_params(email)
+    assert_response :not_found
   end
 
   test 'non-admins cannot create new users' do
@@ -182,7 +212,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
     email = "new_teacher#{SecureRandom.hex(4)}@example.net"
     create :pd_enrollment, workshop: @workshop, email: email
 
-    patch :update, workshop_id: @workshop.id, pd_workshop: create_user_params(email)
+    update_attendance @workshop.id, create_user_params(email)
     assert_response :forbidden
   end
 

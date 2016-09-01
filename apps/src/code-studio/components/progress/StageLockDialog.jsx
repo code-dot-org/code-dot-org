@@ -7,6 +7,7 @@ import progressStyles from './progressStyles';
 import { LockStatus, saveLockDialog } from '../../stageLockRedux';
 import color from '../../../color';
 import commonMsg from '@cdo/locale';
+import SectionSelector from './SectionSelector';
 
 const styles = {
   main: {
@@ -15,7 +16,7 @@ const styles = {
     marginLeft: 20,
     marginRight: 20,
     color: color.charcoal,
-    maxHeight: 600,
+    // maxHeight provided in render method based on window size
     overflowY: 'scroll'
   },
   title: {
@@ -70,6 +71,7 @@ const StageLockDialog = React.createClass({
         lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
+    selectedSection: React.PropTypes.string.isRequired,
     saving: React.PropTypes.bool.isRequired,
     saveDialog: React.PropTypes.func.isRequired
   },
@@ -109,6 +111,10 @@ const StageLockDialog = React.createClass({
     this.setAllLockStatus(LockStatus.ReadonlyAnswers);
   },
 
+  viewSection() {
+    window.open(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.props.selectedSection}/assessments`, '_blank');
+  },
+
   handleRadioChange(event) {
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
@@ -134,17 +140,23 @@ const StageLockDialog = React.createClass({
   },
 
   render() {
+    const responsiveHeight = {
+      maxHeight: window.innerHeight * 0.8 - 100
+    };
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
       >
-        <div style={styles.main}>
-          <div style={styles.title}>{commonMsg.assessmentSteps()}</div>
+        <div style={[styles.main, responsiveHeight]}>
+          <div>
+            <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+            <SectionSelector/>
+          </div>
           <table>
             <tbody>
               <tr>
-                <td>{commonMsg.allowEditingInstructions()}</td>
+                <td>1. {commonMsg.allowEditingInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -155,7 +167,7 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.lockStageInstructions()}</td>
+                <td>2. {commonMsg.lockStageInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -166,7 +178,7 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.showAnswersInstructions()}</td>
+                <td>3. {commonMsg.showAnswersInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
@@ -177,13 +189,24 @@ const StageLockDialog = React.createClass({
                 </td>
               </tr>
               <tr>
-                <td>{commonMsg.relockStageInstructions()}</td>
+                <td>4. {commonMsg.relockStageInstructions()}</td>
                 <td>
                   <button
                     style={progressStyles.orangeButton}
                     onClick={this.lockStage}
                   >
                     {commonMsg.relockStage()}
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>5. {commonMsg.reviewResponses()}</td>
+                <td>
+                  <button
+                    style={progressStyles.whiteButton}
+                    onClick={this.viewSection}
+                  >
+                    {commonMsg.viewSection()}
                   </button>
                 </td>
               </tr>
@@ -280,7 +303,8 @@ const StageLockDialog = React.createClass({
 export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
-  saving: state.stageLock.saving
+  saving: state.stageLock.saving,
+  selectedSection: state.stageLock.selectedSection
 }), dispatch => ({
   saveDialog(lockStatus) {
     dispatch(saveLockDialog(lockStatus));
