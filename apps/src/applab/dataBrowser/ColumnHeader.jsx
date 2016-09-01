@@ -121,7 +121,8 @@ const ColumnHeader = React.createClass({
       display: this.props.isEditable ? null : 'none',
     }];
     const containerStyle = {
-      display: this.props.isEditing ? 'none' : null
+      display: this.props.isEditing ? 'none' : null,
+      padding: '6px 0',
     };
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
