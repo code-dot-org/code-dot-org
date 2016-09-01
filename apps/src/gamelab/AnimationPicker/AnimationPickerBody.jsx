@@ -1,6 +1,4 @@
 /** Body of the animation picker dialog */
-'use strict';
-
 import React from 'react';
 import Radium from 'radium';
 import color from '../../color';

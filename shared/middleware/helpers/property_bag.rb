@@ -89,7 +89,7 @@ class DynamoPropertyBag
     begin
       db.delete_item(
         table_name: CDO.dynamo_properties_table,
-        key: {'hash' => @hash,name: name},
+        key: {'hash' => @hash, name: name},
         expected: name_exists(name),
       )
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException

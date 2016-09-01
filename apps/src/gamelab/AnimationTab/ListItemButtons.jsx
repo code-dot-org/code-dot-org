@@ -1,6 +1,4 @@
 /** @file controls below an animation thumbnail */
-'use strict';
-
 import React from 'react';
 import color from '../../color';
 import Radium from 'radium';

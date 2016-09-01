@@ -69,7 +69,7 @@ end
 # C. Hour of Code teachers who aren't on Code Studio.
 def query_hoc_organizers_no_code_studio
   hoc_organizer_query = 'kind_s:HocSignup2015 || kind_s:HocSignup2014 || kind_s:CSEdWeekEvent2013'
-  hoc_organizers = query_subscribed_contacts(q: hoc_organizer_query).select do |email,_|
+  hoc_organizers = query_subscribed_contacts(q: hoc_organizer_query).select do |email, _|
     email.end_with? '@schools.nyc.gov'
   end
   puts "#{hoc_organizers.length} total @schools.nyc.gov hoc organizers (including code studio users)."

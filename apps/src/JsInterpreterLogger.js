@@ -1,6 +1,4 @@
 /** @file Observes a JSInterpreter and logs to the designated browser console. */
-'use strict';
-
 var Observer = require('./Observer');
 
 /**

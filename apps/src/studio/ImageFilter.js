@@ -1,5 +1,4 @@
 /** @file Wrapper for an SVG filter definition with animation capabilities */
-'use strict';
 
 var SVG_NS = require('../constants').SVG_NS;
 var utils = require('../utils');

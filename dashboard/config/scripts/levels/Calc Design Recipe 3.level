@@ -24,8 +24,8 @@
     "disable_examples": "false",
     "markdown_instructions": "Write the function `sales` which takes in the number of cookies sold, and produces the amount of money customers spent to buy those cookies (each cookie is sold at $1.50).\r\n\r\n_Test your function by calculating the sales for 135 cookies_",
     "examples_required": "true",
-    "contained_level_names": null,
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

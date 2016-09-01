@@ -1,7 +1,6 @@
 /**
  * @overview Static helper methods for NetSim.
  */
-'use strict';
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides String.prototype.repeat

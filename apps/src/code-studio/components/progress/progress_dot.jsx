@@ -7,6 +7,7 @@ import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../../color';
 import progressStyles, { createOutline } from './progressStyles';
 import { LevelStatus } from '../../activityUtils';
+import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 
 const dotSize = 24;
 const styles = {
@@ -114,7 +115,7 @@ const styles = {
     },
     review_accepted: {
       color: color.white,
-      backgroundColor: color.level_review_accepted
+      backgroundColor: color.level_perfect
     }
   }
 };
@@ -126,49 +127,47 @@ function dotClicked(url, e) {
 
 export const BubbleInterior = React.createClass({
   propTypes: {
-    courseOverviewPage: React.PropTypes.bool,
     showingIcon: React.PropTypes.bool,
     showingLevelName: React.PropTypes.bool,
     title: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string])
   },
 
   render() {
-    let bubbleInterior;
-
-    if (this.props.courseOverviewPage && this.props.showingLevelName) {
-      if (this.props.showingIcon) {
-        bubbleInterior = '';
+    if (!this.props.showingIcon) {
+      if (this.props.showingLevelName) {
+        // nbsp
+        return <span>{'\u00a0'}</span>;
       } else {
-        bubbleInterior = '\u00a0';
+        return <span>{this.props.title}</span>;
       }
-    } else {
-      bubbleInterior = !this.props.showingIcon && this.props.title;
     }
-
-    return (
-      <span>
-        {bubbleInterior}
-      </span>
-    );
+    // Icon is shown via parent div's className. No need to do anything here
+    return <span/>;
   }
 });
 
 /**
  * Stage progress component used in level header and course overview.
  */
-export const ProgressDot = React.createClass({
+export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
-    currentLevelId: React.PropTypes.string,
     courseOverviewPage: React.PropTypes.bool,
+    stageId: React.PropTypes.number.isRequired,
+
+    // redux provdied
+    overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
+    currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
   },
 
-  getIconForLevelStatus(level) {
-    if (level.locked || level.status === LevelStatus.locked) {
+  getIconForLevelStatus(levelStatus, isLocked) {
+    if (isLocked) {
       return 'fa-lock';
-    } else if (level.status === LevelStatus.perfect) {
+    } else if (levelStatus === LevelStatus.perfect || levelStatus === LevelStatus.review_accepted) {
       return 'fa-check';
+    } else if (levelStatus === LevelStatus.review_rejected) {
+      return 'fa-exclamation';
     } else {
       return null;
     }
@@ -176,6 +175,7 @@ export const ProgressDot = React.createClass({
 
   render() {
     const level = this.props.level;
+    const levelStatus = this.props.overrideLevelStatus || level.status;
     const onCurrent = this.props.currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
         level.uid === this.props.currentLevelId);
@@ -186,9 +186,10 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
     // Account for both the level based concept of locked, and the progress based concept.
-    const isLocked = level.locked || level.status === LevelStatus.locked;
+    const isLocked = level.locked || levelStatus === LevelStatus.locked;
+    const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
+      this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
     const levelUrl = isLocked ? undefined : level.url + location.search;
 
     return (
@@ -211,7 +212,7 @@ export const ProgressDot = React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
-              level.status && level.status !== LevelStatus.not_tried && styles.dot.icon_complete,
+              levelStatus && levelStatus !== LevelStatus.not_tried && styles.dot.icon_complete,
               outlineCurrent && {textShadow: createOutline(color.level_current)}
             ]}
           /> :
@@ -225,11 +226,10 @@ export const ProgressDot = React.createClass({
               level.kind === 'assessment' && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
-              styles.status[level.status || LevelStatus.not_tried],
+              styles.status[levelStatus || LevelStatus.not_tried],
             ]}
           >
             <BubbleInterior
-              courseOverviewPage={this.props.courseOverviewPage}
               showingIcon={!!iconForLevelStatus}
               showingLevelName={showLevelName}
               title={level.title || undefined}
@@ -248,9 +248,433 @@ export const ProgressDot = React.createClass({
       </a>
     );
   }
-});
+}));
 
-export default connect(state => ({
-  currentLevelId: state.progress.currentLevelId,
-  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
-}))(Radium(ProgressDot));
+export default connect((state, ownProps) => {
+  // If we're a teacher viewing as a student, we want to render lockable stages
+  // to have a lockable item only if the stage is fully locked.
+  // Do this by providing an overrideLevelStatus, which will take precedence
+  // over level.status
+  const stageId = ownProps.stageId;
+  let overrideLevelStatus;
+  const fullyLocked = fullyLockedStageMapping(state.stageLock);
+  if (state.stageLock.viewAs === ViewType.Student && !!fullyLocked[stageId]) {
+    overrideLevelStatus = LevelStatus.locked;
+  }
+  return {
+    currentLevelId: state.progress.currentLevelId,
+    saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation,
+    overrideLevelStatus
+  };
+})(ProgressDot);
+
+
+
+
+if (BUILD_STYLEGUIDE) {
+  ProgressDot.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('ProgressDot', module)
+      .addStoryTable([
+        {
+          name: 'assessment in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275, []],
+                kind: 'assessment',
+                next: [2, 1],
+                position: 1,
+                previous: false,
+                status: 'not_tried',
+                title: 1,
+                uid: '5275_0',
+                url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'locked assessment in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275, []],
+                kind: 'assessment',
+                next: [2, 1],
+                position: 1,
+                previous: false,
+                status: 'locked',
+                title: 1,
+                uid: '5275_0',
+                url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'submitted assessment in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275, []],
+                kind: 'assessment',
+                next: [2, 1],
+                position: 1,
+                previous: false,
+                status: 'submitted',
+                title: 1,
+                uid: '5275_0',
+                url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'attempted puzzle in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275, []],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 1,
+                previous: [7,15],
+                status: 'attempted',
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'imperfect completed puzzle in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [2288, []],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 6,
+                status: 'passed',
+                title: 6,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
+              }}
+            />
+          )
+        },
+        {
+          name: 'completed puzzle in course overview',
+          description: 'Note: Center of the circle should be a number rather than an checkmark',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [2288, []],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 6,
+                status: 'perfect',
+                title: 6,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
+              }}
+            />
+          )
+        },
+        {
+          name: 'current puzzle in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              currentLevelId="2288"
+              level={{
+                icon: null,
+                ids: [2288, []],
+                kind: 'puzzle',
+                position: 6,
+                status: 'not_tried',
+                title: 6,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
+              }}
+            />
+          )
+        },
+        {
+          name: 'unlplugged puzzle in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [2094, []],
+                kind: 'unplugged',
+                previous: [1, 2],
+                position: 1,
+                status: 'not_tried',
+                title: 'Unplugged Activity',
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/2/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'puzzle with icon in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: 'fa-file-text',
+                ids: [1379, []],
+                kind: 'puzzle',
+                name: 'CSP Pre-survey',
+                position: 2,
+                status: 'not_tried',
+                title: 2,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/2'
+              }}
+            />
+          )
+        },
+        {
+          name: 'named level in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: 'fa-file-text',
+                ids: [5442, []],
+                kind: 'named_level',
+                name: 'CSP Pre-survey',
+                position: 1,
+                previous: [1,1],
+                status: 'not_tried',
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'completed named video level in course overview',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: 'fa-video-camera',
+                ids: [5078, []],
+                kind: 'named_level',
+                name: 'Computer Science is Changing Everything',
+                position: 3,
+                previous: [1,1],
+                status: 'perfect',
+                title: 3,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/3'
+              }}
+            />
+          )
+        },
+        {
+          name: 'rejected peer review in course overview',
+          description: 'Note: Center of circle should have an exclamation point',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [1073563865, []],
+                position: 7,
+                kind: "named_level",
+                icon: null,
+                title: 7,
+                url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
+                name: "Peer Review Level 1 - Tuesday Report",
+                status: "review_rejected"
+              }}
+            />
+          )
+        },
+        {
+          name: 'accepted peer review in course overview',
+          description: 'Note: Center of circle should have a checkmark',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [1073563865, []],
+                position: 7,
+                kind: "named_level",
+                icon: null,
+                title: 7,
+                url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
+                name: "Peer Review Level 1 - Tuesday Report",
+                status: "review_accepted"
+              }}
+            />
+          )
+        },
+        {
+          name: 'submitted but unreviewed peer review in course overview',
+          description: 'Note: Center of circle should have no icon',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [1073563865, []],
+                position: 7,
+                kind: "named_level",
+                icon: null,
+                title: 7,
+                url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
+                name: "Peer Review Level 1 - Tuesday Report",
+                status: "submitted"
+              }}
+            />
+          )
+        },
+        {
+          name: 'locked peer review in course overview',
+          description: 'Note: Center of circle should have a locked icon',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                ids: [0],
+                kind: "peer_review",
+                title: "",
+                url: "",
+                name: "Reviews unavailable at this time",
+                icon: "fa-lock",
+                locked: true
+              }}
+            />
+          )
+        },
+        {
+          name: 'named video level in course overview with no icon',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5096, []],
+                kind: 'named_level',
+                name: 'Internet Simulator: sending binary messages',
+                position: 2,
+                status: 'not_tried',
+                title: 2,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/3/puzzle/2'
+              }}
+            />
+          )
+        },
+        {
+          name: 'small named level in header',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={false}
+              currentLevelId="1379"
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: 'fa-file-text',
+                ids: [5442, []],
+                kind: 'named_level',
+                name: 'CSP Pre-survey',
+                position: 1,
+                previous: [1,1],
+                status: 'not_tried',
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'completed small named video level in header',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={false}
+              currentLevelId="1379"
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: 'fa-video-camera',
+                ids: [5078, []],
+                kind: 'named_level',
+                name: 'Computer Science is Changing Everything',
+                position: 3,
+                previous: [1,1],
+                status: 'perfect',
+                title: 3,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/3'
+              }}
+            />
+          )
+        },
+        {
+          name: 'small puzzle in header',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={false}
+              currentLevelId="1379"
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [2049, []],
+                kind: 'puzzle',
+                position: 4,
+                next: [3,1],
+                status: 'not_tried',
+                title: 4,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/4'
+              }}
+            />
+          )
+        },
+        {
+          name: 'current level puzzle in header',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={false}
+              currentLevelId="2049"
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [2049, []],
+                kind: 'puzzle',
+                position: 4,
+                next: [3,1],
+                status: 'not_tried',
+                title: 4,
+                url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/4'
+              }}
+            />
+          )
+        },
+      ]);
+  };
+}

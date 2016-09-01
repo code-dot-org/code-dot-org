@@ -365,10 +365,6 @@ FactoryGirl.define do
     sequence(:hint) { |n| "Hint #{n}" }
   end
 
-  factory :activity_hint do
-    activity
-  end
-
   factory :user_level do
     user {create :student}
     level {create :applab}
@@ -538,14 +534,18 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
+  factory :school_info do
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    school_district_id {create(:school_district).id}
+  end
+
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    school_info_id {create(:school_info).id}
     school {'Example School'}
-    school_type {'public'}
-    school_state {'WA'}
-    school_district_id {create(:school_district).id}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
