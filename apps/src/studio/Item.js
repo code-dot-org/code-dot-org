@@ -130,11 +130,15 @@ export default class Item extends Collidable {
     // update logic (facing the actor is handled every frame in display())
     if (this.activity === 'watchActor') {
       return;
-    } else if (this.activity === 'none') {
+    }
+    if (this.activity === 'none') {
       this.setDirection(Direction.NONE);
 
       this.destGridX = undefined;
       this.destGridY = undefined;
+      return;
+    }
+    if (!this.visible) {
       return;
     }
 
@@ -147,6 +151,7 @@ export default class Item extends Collidable {
         Studio.SQUARE_SIZE,
         Studio.SQUARE_SIZE);
     }
+    var center = this.getCenterPos();
 
     // Has the item reached its destination grid position?
     // (There is a small margin of error to allow for per-update movements greater
@@ -154,7 +159,6 @@ export default class Item extends Collidable {
     if (this.destGridX !== undefined) {
       var speed = valueOr(this.speed, 0);
       var dirUnit = Direction.getUnitVector(this.dir);
-      var center = this.getCenterPos();
       var destVector = {
         x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
         y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
@@ -201,30 +205,30 @@ export default class Item extends Collidable {
         if (this.activity === "roam") {
           candidate.score ++;
         } else if (this.activity === "chase") {
-          if (candidateY === this.gridY - 1 && spriteY < this.y - bufferDistance) {
+          if (candidateY === this.gridY - 1 && spriteY < center.y - bufferDistance) {
             candidate.score += 2;
-          } else if (candidateY === this.gridY + 1 && spriteY > this.y + bufferDistance) {
+          } else if (candidateY === this.gridY + 1 && spriteY > center.y + bufferDistance) {
             candidate.score += 2;
           } else {
             candidate.score += 1;
           }
 
-          if (candidateX === this.gridX - 1 && spriteX < this.x - bufferDistance) {
+          if (candidateX === this.gridX - 1 && spriteX < center.x - bufferDistance) {
             candidate.score ++;
-          } else if (candidateX === this.gridX + 1 && spriteX > this.x + bufferDistance) {
+          } else if (candidateX === this.gridX + 1 && spriteX > center.x + bufferDistance) {
             candidate.score ++;
           }
         } else if (this.activity === "flee") {
           candidate.score = 1;
-          if (candidateY === this.gridY - 1 && spriteY > this.y - bufferDistance) {
+          if (candidateY === this.gridY - 1 && spriteY > center.y - bufferDistance) {
             candidate.score ++;
-          } else if (candidateY === this.gridY + 1 && spriteY < this.y + bufferDistance) {
+          } else if (candidateY === this.gridY + 1 && spriteY < center.y + bufferDistance) {
             candidate.score ++;
           }
 
-          if (candidateX === this.gridX - 1 && spriteX > this.x - bufferDistance) {
+          if (candidateX === this.gridX - 1 && spriteX > center.x - bufferDistance) {
             candidate.score ++;
-          } else if (candidateX === this.gridX + 1 && spriteX < this.x + bufferDistance) {
+          } else if (candidateX === this.gridX + 1 && spriteX < center.x + bufferDistance) {
             candidate.score ++;
           }
         }

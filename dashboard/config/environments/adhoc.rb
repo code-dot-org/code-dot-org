@@ -20,8 +20,8 @@ Dashboard::Application.configure do
   config.assets.digest = true
 
   config.action_controller.perform_caching = true
-  config.serve_static_files = true
-  config.static_cache_control = "public, max-age=86400, s-maxage=43200"
+  config.public_file_server.enabled = true
+  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=86400, s-maxage=43200" }
 
   # Set to :debug to see everything in the log.
   config.log_level = :info

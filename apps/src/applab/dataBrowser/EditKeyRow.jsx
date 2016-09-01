@@ -68,7 +68,7 @@ const EditKeyRow = React.createClass({
             /> :
             displayableValue(this.props.value)}
         </td>
-        <td style={dataStyles.buttonCell}>
+        <td style={dataStyles.editButtonCell}>
           {
             this.state.isEditing ?
               <button

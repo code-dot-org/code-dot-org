@@ -603,7 +603,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
@@ -618,7 +618,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.unlocked_at
 
     # multiple updates at once
-    user_level.delete!
+    user_level.delete
     assert_equal nil, UserLevel.find_by(user_level_data)
     assert_equal nil, UserLevel.find_by(user_level_data2)
     updates = [{

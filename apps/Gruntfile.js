@@ -457,7 +457,7 @@ module.exports = function (grunt) {
         publicKeyCryptography: './src/publicKeyCryptography/main.js'
       },
       provides: ['react', 'react-dom', 'radium']
-    }
+    },
   ];
 
   // Create a config for each of our bundles

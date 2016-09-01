@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CalloutTest < ActiveSupport::TestCase
+  include ActiveSupport::Testing::Stream
+
   setup do
     @level = create(:level, :blockly, :level_num => 'level1_2_3')
     @script = create(:script, :id => 333)

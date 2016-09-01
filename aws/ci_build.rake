@@ -321,8 +321,14 @@ task :dashboard_unit_tests do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:test:prepare'
-      RakeUtils.rake 'test'
-      RakeUtils.rake "seed:all"
+      ENV['DISABLE_SPRING'] = '1'
+      ENV['UNIT_TEST'] = '1'
+      RakeUtils.bundle_exec 'rails', 'test'
+      ENV.delete 'UNIT_TEST'
+    end
+    with_hipchat_logging('re-seeding database') do
+      # Reset and re-seed the database after unit tests have completed.
+      RakeUtils.rake 'db:reset seed:all'
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end
