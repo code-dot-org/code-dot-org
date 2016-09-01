@@ -62,7 +62,5 @@ const WebLabView = React.createClass({
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
-  return {
-  };
-})(WebLabView);
+
+export default WebLabView;
