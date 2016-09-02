@@ -40,14 +40,14 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
+            <block type="maze_moveForward" deletable="false">
               <next>
-                <block type="maze_turn">
+                <block type="maze_turn" deletable="false">
                   <title name="DIR">turnRight</title>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_moveForward" deletable="false">
                       <next>
-                        <block type="maze_turn">
+                        <block type="maze_turn" deletable="false">
                           <title name="DIR">turnLeft</title>
                         </block>
                       </next>
@@ -62,7 +62,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" limit="2"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
