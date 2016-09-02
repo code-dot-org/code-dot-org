@@ -2984,7 +2984,17 @@ Studio.execute = function () {
         'functional_definition'
       ].map(generator).join(';');
 
+      if (level.goal.fn_successCondition) {
+        Studio.interpretedHandlers['checkSuccessHandler'] = {code: `return (${level.goal.fn_successCondition})();`};
+      }
+      if (level.goal.fn_failureCondition) {
+        Studio.interpretedHandlers['checkFailureHandler'] = {code: `return (${level.goal.fn_failureCondition})();`};
+      }
+
       const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+
+      level.goal.successCondition = hooks.checkSuccessHandler;
+      level.goal.failureCondition = hooks.checkFailureHandler;
 
       Object.keys(hooks).forEach(hook => {
         registerEventHandler(handlers, hook, hooks[hook]);
