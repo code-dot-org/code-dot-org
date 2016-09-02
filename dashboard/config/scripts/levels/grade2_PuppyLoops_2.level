@@ -38,28 +38,12 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveForward">
-          <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="maze_moveForward"/>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" limit="1"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>

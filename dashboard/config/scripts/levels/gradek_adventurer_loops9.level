@@ -27,6 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Help me get all of the gold from this cave.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.\",\r\n  \"hint_id\": \"gradek_adventurer_loops9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "10",
     "contained_level_names": null
   },
   "published": true,

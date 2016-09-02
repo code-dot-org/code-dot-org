@@ -28,8 +28,7 @@
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're stuck, try drawing the image on paper to see how the bird should move.\",\r\n  \"hint_id\": \"K2.0_sequence_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "Solve this level and get me to the pig!\r\n\r\n![](https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif)",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -23,10 +23,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Add to the code from the last puzzle to get all of the gold. ",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using more than one loop to get the job done.\",\r\n  \"hint_id\": \"grade1_adventurer_loops4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "9",
     "contained_level_names": null
   },
   "published": true,
@@ -42,9 +44,9 @@
             <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="maze_moveEast">
+                <block type="maze_moveEast" deletable="false">
                   <next>
-                    <block type="collector_collect"/>
+                    <block type="collector_collect" deletable="false"/>
                   </next>
                 </block>
               </statement>
@@ -53,9 +55,9 @@
                   <next>
                     <block type="collector_collect">
                       <next>
-                        <block type="maze_moveEast">
+                        <block type="maze_moveEast" deletable="false">
                           <next>
-                            <block type="collector_collect"/>
+                            <block type="collector_collect" deletable="false"/>
                           </next>
                         </block>
                       </next>
