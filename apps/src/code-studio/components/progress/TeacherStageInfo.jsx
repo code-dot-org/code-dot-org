@@ -61,6 +61,7 @@ const TeacherStageInfo = React.createClass({
     stage: stageShape,
 
     // redux provided
+    isHidden: React.PropTypes.bool.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
   },
 
@@ -90,7 +91,7 @@ const TeacherStageInfo = React.createClass({
           }
           {lockable && <StageLock stage={stage}/>}
           <div style={styles.toggle}>
-            <HiddenStageToggle/>
+            <HiddenStageToggle hidden={this.props.isHidden}/>
           </div>
         </div>
       </div>
@@ -98,7 +99,11 @@ const TeacherStageInfo = React.createClass({
   }
 });
 
-export default connect(state => ({
-  hasNoSections: state.stageLock.sectionsLoaded &&
-    Object.keys(state.stageLock.sections).length === 0
-}))(Radium(TeacherStageInfo));
+export default connect((state, ownProps) => {
+  const isHidden = state.hiddenStage[ownProps.stage.id];
+  return {
+    isHidden,
+    hasNoSections: state.stageLock.sectionsLoaded &&
+      Object.keys(state.stageLock.sections).length === 0
+    };
+})(Radium(TeacherStageInfo));
