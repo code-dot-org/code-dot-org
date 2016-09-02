@@ -129,6 +129,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email) if current_user.email.blank?
 
       @workshop.section.add_student current_user, move_for_same_teacher: false
+
+      # Automatically mark attendance for one-day workshops
+      mark_attended(current_user.id, @workshop.sessions.first.id) if @workshop.sessions.count == 1
+
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @workshop.section.name)
     else
       render :join_section
@@ -136,6 +140,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   end
 
   private
+
+  def mark_attended(user_id, session_id)
+    Pd::Attendance.create(teacher_id: user_id, pd_session_id: session_id)
+  end
 
   def workshop_closed?
     @workshop.state == ::Pd::Workshop::STATE_ENDED
