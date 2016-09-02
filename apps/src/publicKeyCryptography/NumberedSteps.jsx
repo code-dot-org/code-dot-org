@@ -27,8 +27,8 @@ NumberedSteps.propTypes = {
 
 /**
  * Replacement for a 'div' in a NumberedSteps list.
- * Accepts a 'requires' prop that takes an array of values.
- * If any of those values are falsy, the step will be faded out.
+ * Accepts a 'requires' prop that takes a value - if falsy, the step will
+ * be faded out.
  */
 export function Step(props) {
   const isStepEnabled = props.hasOwnProperty('requires') ? props.requires : true;
