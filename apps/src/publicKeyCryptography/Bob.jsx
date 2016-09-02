@@ -1,7 +1,7 @@
 /** @file The Bob character panel from the crypto widget */
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps from './NumberedSteps';
+import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
 import {
@@ -86,15 +86,15 @@ const Bob = React.createClass({
     return (
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
-          <div>
+          <Step>
             Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
               disabled={disabled}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
             Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
@@ -102,8 +102,8 @@ const Bob = React.createClass({
               disabled={disabled}
               color={COLORS.publicKey}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
             Pick your <KeywordSecretNumber/>:
             <SecretNumberDropdown
               value={secretNumber}
@@ -111,8 +111,8 @@ const Bob = React.createClass({
               publicModulus={publicModulus}
               disabled={disabled}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus, publicKey, secretNumber].every(Number.isInteger)}>
             Calculate your <KeywordPublicNumber/>:
             <div>
               (
@@ -129,7 +129,7 @@ const Bob = React.createClass({
             <div>
               Your computed <KeywordPublicNumber/> is <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
             </div>
-          </div>
+          </Step>
         </NumberedSteps>
       </CollapsiblePanel>);
   }
