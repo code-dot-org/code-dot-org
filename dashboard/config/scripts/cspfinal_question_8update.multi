@@ -1,18 +1,21 @@
 name 'CSPFinal_Question_8update'
-question 'Which is in order?'
-wrong '1110 ,  00001 , 10001'
-right '10001 , 1110, 00001'
-wrong '10001 , 00001 , 1110'
-wrong '1110 , 10001 , 00001'
+question ' '
+
+wrong ‘b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+right 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+wrong ‘a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+wrong ‘c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>’
 
 markdown <<MARKDOWN
-Consider the following numbers given in Binary representation:
+Consider the following three binary numbers:
 
-<pre>
-1110
-00001
-10001
-</pre>
+a. <code style="color: black">01010</code>
 
-Which of the following lists the numbers in order from greatest to least?
+b. <code style="color: black">010000</code>
+
+c. <code style="color: black">1110</code>
+
+**NOTICE** values have different numbers of bits
+
+Which of the following lists the numbers in order from **least to greatest**?
 MARKDOWN
