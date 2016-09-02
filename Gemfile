@@ -84,7 +84,7 @@ group :development, :test do
   gem 'eyes_selenium', '~> 2.28.0'
 
   # for GitHub commenting when certain things happen
-  gem 'octokit ', '~> 4.0'
+  gem 'octokit', '~> 4.0'
 
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
