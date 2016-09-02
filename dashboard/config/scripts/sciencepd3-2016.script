@@ -1,0 +1,19 @@
+title 'CS in Science PD3 Before 1st In-Person'
+description "Phase 3: Academic Year Development (Segment One)"
+description_short "Phase 3: Academic Year Development Pre 1"
+login_required 'true'
+pd 'true'
+
+stage 'Welcome Back!'
+level 'sciPDpart4_S1_L1'
+level 'sciPD2Part4_S1_L2'
+level 'sciPD2Part4_S1_L3'
+
+stage 'The TLO'
+level 'sciPD2Part4_S2_L1'
+level 'sciPD2Part4_S2_L2'
+
+stage 'Prep With Your Modules'
+level 'sciPD2Part4_S3_L1'
+level 'sciPD2Part4_S3_L2'
+level 'sciPD2Part4_S3_L3'
