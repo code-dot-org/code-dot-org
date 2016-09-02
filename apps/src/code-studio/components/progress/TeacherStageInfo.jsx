@@ -10,6 +10,7 @@ import color from '../../../color';
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
 import { toggleHidden } from '../../hiddenStageRedux';
+import experiments from '@cdo/apps/experiments';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -41,6 +42,7 @@ const styles = {
       textDecoration: 'underline',
     },
     marginTop: 5,
+    marginBottom: 5,
     display: 'inline-block'
   },
   lessonPlanText: {
@@ -96,12 +98,13 @@ const TeacherStageInfo = React.createClass({
             </span>
           }
           {lockable && <StageLock stage={stage}/>}
-          <div style={styles.toggle}>
+          {experiments.isEnabled('hiddenStages') && <div style={styles.toggle}>
             <HiddenStageToggle
               hidden={this.props.isHidden}
               onChange={this.onClickHiddenToggle}
             />
           </div>
+          }
         </div>
       </div>
     );

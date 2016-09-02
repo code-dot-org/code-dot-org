@@ -4,8 +4,11 @@
  */
 
 import { INIT_PROGRESS } from './progressRedux';
+import experiments from '@cdo/apps/experiments';
 
 export const TOGGLE_HIDDEN = 'hiddenStage/TOGGLE_HIDDEN';
+
+const hiddenStagesEnabled = experiments.isEnabled('hiddenStages');
 
 /**
  * hidden stage reducer
@@ -17,7 +20,7 @@ export default function reducer(state = {}, action) {
       ...state,
       ...action.stages.reduce((obj, stage) => ({
         ...obj,
-        [stage.id]: stage.hidden
+        [stage.id]: hiddenStagesEnabled ? !!stage.hidden : false
       }), {})
     };
   }
@@ -27,7 +30,8 @@ export default function reducer(state = {}, action) {
     if (state[stageId] !== hidden) {
       return {
         ...state,
-        [stageId]: hidden
+        // never hide unless isEnabled
+        [stageId]: hiddenStagesEnabled ? hidden : false
       };
     }
   }
