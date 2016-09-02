@@ -27,6 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Help me get the gold from this deep valley.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out where to put the loops, try writing the code out step-by-step and look for a pattern.\",\r\n  \"hint_id\": \"gradek_adventurer_loops8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "10",
     "contained_level_names": null
   },
   "published": true,
