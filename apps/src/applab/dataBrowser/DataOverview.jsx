@@ -12,7 +12,7 @@ import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import msg from '@cdo/locale';
-import { changeView } from '../redux/data';
+import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
@@ -34,6 +34,7 @@ const DataOverview = React.createClass({
     view: React.PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
+    onShowWarning: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired
   },
 
@@ -41,7 +42,13 @@ const DataOverview = React.createClass({
     FirebaseStorage.createTable(
       tableName,
       () => this.props.onViewChange(DataView.TABLE, tableName),
-      error => console.warn(error));
+      error => {
+        if (typeof error === 'string' && error.indexOf('maximum number of tables') !== -1) {
+          this.props.onShowWarning(error);
+        } else {
+           console.warn(error);
+        }
+      });
   },
 
   render() {
@@ -90,6 +97,9 @@ export default connect(state => ({
   view: state.data.view,
   tableListMap: state.data.tableListMap || {}
 }), dispatch => ({
+  onShowWarning(warningMsg, warningTitle) {
+    dispatch(showWarning(warningMsg, warningTitle));
+  },
   onViewChange(view, tableName) {
     dispatch(changeView(view, tableName));
   },
