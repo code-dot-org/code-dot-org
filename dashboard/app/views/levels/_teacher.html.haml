@@ -70,6 +70,11 @@
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
         - if current_user.sections.many?
           = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
+          - if @section && @script_level.stage.lockable?
+            %div{:style => "margin: 10px"}
+              #stage-locked-text
+              %div
+              = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
       - if @section
         .scrollable-wrapper
           %table.section-students

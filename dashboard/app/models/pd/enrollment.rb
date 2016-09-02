@@ -18,6 +18,7 @@
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
 #  school_info_id      :integer
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -27,6 +28,8 @@
 #
 
 class Pd::Enrollment < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
