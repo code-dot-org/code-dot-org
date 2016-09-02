@@ -57,7 +57,7 @@ exports.evalWith = function (code, options, legacy) {
  * @return {{}} Mapping of hook names to the corresponding event handler.
  */
 exports.evalWithEvents = function (apis, events, evalCode = '') {
-  let interpreter, currentCallback;
+  let interpreter, currentCallback, lastReturnValue;
   const hooks = {};
 
   Object.keys(events).forEach(event => {
@@ -66,6 +66,7 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
       const eventArgs = {name: event, args};
       currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
       interpreter.run();
+      return lastReturnValue;
     };
     const {code, args} = events[event];
     evalCode += `this['${event}']=function(${args ? args.join() : ''}){${code}};`;
@@ -74,12 +75,15 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
   // The event loop pauses the interpreter until the native async function
   // `currentCallback` returns a value. The value contains the name of the event
   // to call, and any arguments.
-  const eventLoop = ';while(true){var event=wait();this[event.name].apply(null,event.args);}';
+  const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
   interpreter = new Interpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
+    }));
+    interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
+      lastReturnValue = exports.marshalInterpreterToNative(interpreter, returnValue);
     }));
   });
   interpreter.run();
