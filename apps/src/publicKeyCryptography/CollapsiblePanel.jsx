@@ -33,17 +33,19 @@ const CollapsiblePanel = React.createClass({
   },
 
   render() {
+    const collapsed = this.state.collapsed;
+
     const chevronStyle = {
       float: 'right',
       transition: 'transform 0.5s',
-      transform: `scaleY(${this.state.collapsed ? 1 : -1})`
+      transform: `scaleY(${collapsed ? 1 : -1})`
     };
 
     const bodyStyle = {
       transition: 'max-height 0.5s, opacity 0.5s',
-      overflow: 'hidden',
-      maxHeight: this.state.collapsed ? 0 : 500,
-      opacity: this.state.collapsed ? 0 : 1
+      overflow: collapsed ? 'hidden' : 'inherit',
+      maxHeight: collapsed ? 0 : 500,
+      opacity: collapsed ? 0 : 1
     };
 
     return (

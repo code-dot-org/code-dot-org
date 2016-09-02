@@ -39,6 +39,9 @@
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
         <block type="maze_moveWest"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>

@@ -1,7 +1,7 @@
 /** @file The Alice character panel from the crypto widget */
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps from './NumberedSteps';
+import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
 import {
@@ -98,15 +98,15 @@ const Alice = React.createClass({
     return (
       <CollapsiblePanel title="Alice">
         <NumberedSteps>
-          <div>
+          <Step>
             Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
               disabled={disabled}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
             Set a <KeywordPrivateKey/>:
             <PrivateKeyDropdown
               publicModulus={publicModulus}
@@ -115,8 +115,8 @@ const Alice = React.createClass({
               disabled={disabled}
             />
             <div>Your computed <KeywordPublicKey/> is <IntegerField color={COLORS.publicKey} value={publicKey}/></div>
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus, privateKey].every(Number.isInteger)}>
             Enter Bob's <KeywordPublicNumber/>:
             <IntegerTextbox
               value={publicNumber}
@@ -124,8 +124,8 @@ const Alice = React.createClass({
               disabled={disabled}
               color={COLORS.publicNumber}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus, privateKey, publicNumber].every(Number.isInteger)}>
             Calculate Bob's <KeywordSecretNumber/>.
             <div>
               (
@@ -142,7 +142,7 @@ const Alice = React.createClass({
             <div>
               Bob's <KeywordSecretNumber/> is <IntegerField color={COLORS.secretNumber} value={secretNumber}/>!
             </div>
-          </div>
+          </Step>
         </NumberedSteps>
       </CollapsiblePanel>);
   }

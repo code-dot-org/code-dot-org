@@ -23,7 +23,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Eureka!  Collect as much gold as you can!",

@@ -1,9 +1,15 @@
 /* globals dashboard  */
-/**
- * JS used by _teacher.html.haml
- */
+
 import $ from 'jquery';
 import debounce from 'lodash/debounce';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { getStore } from './redux';
+import clientState from './clientState';
+import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
+import { setSections, fullyLockedStageMapping } from './stageLockRedux';
+import commonMsg from '@cdo/locale';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
@@ -36,5 +42,71 @@ export function onReady() {
       // Let's just refresh so that the dots are correct, etc.
       location.reload();
     });
+  });
+
+  setStageLockedText();
+}
+
+/**
+ * Query the server for lock status of this teacher's students
+ * @returns {Promise} when finished
+ */
+function queryLockStatus(store, scriptId) {
+  return new Promise((resolve, reject) => {
+    $.ajax(
+      '/api/lock_status',
+      {
+        data: {
+          user_id: clientState.queryParams('user_id'),
+          script_id: scriptId
+        }
+      }
+    ).done(data => {
+      store.dispatch(setSections(data));
+      resolve();
+    });
+  });
+}
+
+/**
+ * Render our teacher panel that shows up on our course overview page.
+ */
+export function renderTeacherPanel(store, scriptId) {
+  const div = document.createElement('div');
+  div.setAttribute('id', 'teacher-panel-container');
+  queryLockStatus(store, scriptId);
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <ScriptTeacherPanel/>
+    </Provider>,
+    div
+  );
+  document.body.appendChild(div);
+}
+
+/**
+ * On puzzle page, update text in teacher panel (which is not a React component)
+ * stating whether this stage is locked for all students or not.
+ */
+function setStageLockedText() {
+  const element = $('#stage-locked-text');
+  if (element.length === 0) {
+    return;
+  }
+
+  const store = getStore();
+  const scriptId = store.getState().progress.stages[0].script_id;
+  queryLockStatus(store, scriptId).then(() => {
+    const state = store.getState();
+
+    const { currentStageId } = state.progress;
+    const fullyLocked = fullyLockedStageMapping(state.stageLock);
+
+    if (fullyLocked[currentStageId]) {
+      element.text(commonMsg.stageLocked());
+    } else {
+      element.text(commonMsg.stageNotFullyLocked());
+    }
   });
 }
