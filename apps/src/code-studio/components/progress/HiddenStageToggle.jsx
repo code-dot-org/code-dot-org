@@ -1,21 +1,17 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '../../../color';
 
-const styles = {
-  main: {
-    // float: 'right'
-    // marginTop: 10
-  }
-};
-
 const HiddenStageToggle = React.createClass({
+  propTypes: {
+    hidden: PropTypes.bool.isRequired
+  },
   render() {
     return (
-      <span style={styles.main}>
+      <span>
         <ToggleGroup
-          selected="visible"
+          selected={this.props.hidden ? "hidden" : "visible"}
           activeColor={color.cyan}
           onChange={() => console.log('todo')}
         >
