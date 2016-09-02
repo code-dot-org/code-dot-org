@@ -3,6 +3,7 @@
  * the course overview page, and the stage locking dialog.
  */
 
+import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
