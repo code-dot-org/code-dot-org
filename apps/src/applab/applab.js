@@ -366,19 +366,6 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
-
 function renderFooterInSharedGame() {
   var divApplab = document.getElementById('divApplab');
   var footerDiv = document.createElement('div');
@@ -389,15 +376,6 @@ function renderFooterInSharedGame() {
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
-    },
-    {
-      text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab/new',
-      hideOnMobile: true
-    },
-    {
-      text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
     },
     {
       text: commonMsg.copyright(),

@@ -26,7 +26,7 @@ var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
-var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
+var WireframeButtons = require('./templates/WireframeButtons');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
@@ -2010,9 +2010,17 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         $(vizColumn).addClass('wireframeShare');
 
         var div = document.createElement('div');
+        div.className = 'WireframeButtons_container';
+        document.body.insertBefore(div, document.body.firstChild);
+        var div = document.createElement('div');
+        div.className = 'WireframeButtons_container';
+        var appDiv = document.getElementsByClassName('wrapper')[0];
+        if (appDiv) {
+          appDiv.className = 'wrapper withWireframeButtons';
+        }
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+          ReactDOM.render(React.createElement(WireframeButtons, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
           }), div);

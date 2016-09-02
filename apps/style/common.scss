@@ -1554,13 +1554,50 @@ $see-examples-thick-underline-color: $yellow;
   max-width: 100% !important;
 }
 
-a.WireframeSendToPhone_send-to-phone-link {
+.wrapper.withWireframeButtons {
+  float: left;
+}
+
+.WireframeButtons_container {
+  float:left;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-right: 20px;
+  width: calc(50% - 230px);
+}
+
+a.WireframeButtons_button {
+  background-color: $purple;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8em;
+  line-height: 3;
+  margin: 5px;
+  padding: 8px;
   text-decoration: none;
-  color: $light-gray;
-  &:hover {
-    color: $lightest-gray;
-    text-decoration: underline;
-  }
+  white-space: nowrap;
+}
+
+a.WireframeButtons_active {
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+div.WireframeButtons_active {
+  cursor: default;
+  display: inline-block;
+}
+
+a.WireframeButtons_active, div.WireframeButtons_active {
+  background-color: $lightest-purple;
+  border-radius: 5px;
+  color: $dark-charcoal;
+  font-size: 0.8em;
+  line-height: 3;
+  margin: 5px;
+  padding: 8px;
 }
 
 #visualizationColumn.wireframeShare {
