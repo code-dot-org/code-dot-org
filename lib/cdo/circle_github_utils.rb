@@ -6,8 +6,7 @@ require_relative './github_utils'
 
 module CircleGitHubUtils
   def self.add_current_pr_comment(github_markdown_body)
-    client = Octokit::Client.new(:access_token => ENV['GITHUB_PR_COMMENT_TOKEN'])
-    client.add_comment('code-dot-org/code-dot-org', circle_github_pr, github_markdown_body)
+    GitHubUtils.add_pr_comment(circle_github_pr, github_markdown_body)
   end
 
   def self.pr_base_branch_or_default_no_origin

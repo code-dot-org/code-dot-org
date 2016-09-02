@@ -15,7 +15,7 @@ begin
     puts 'Latest commit does not appear to be a merge commit, not performing any baseline copying.'
   end
 rescue => e
-  puts "Eyes baseline not merged: #{e.message}"
+  GitHubUtils.add_pr_comment(GitHubUtils.get_latest_commit_merged_pr, "Eyes baseline not merged: #{e.message}")
 end
 
 exit(0)
