@@ -14,8 +14,10 @@ class ApiController < ApplicationController
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
-      user_level_data = item[:user_level_data]
+      # Convert string-boolean parameters to boolean
+      %i(locked readonly_answers).each{|val| item[val] = JSONValue.value(item[val])}
 
+      user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
         return head :bad_request
@@ -30,7 +32,6 @@ class ApiController < ApplicationController
         # Can only update lockable state for user's students
         return head :forbidden
       end
-
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
         user_level_data[:script_id], item[:locked], item[:readonly_answers])
     end

@@ -3,8 +3,8 @@ require 'cdo/rack/request'
 require 'cdo/yaml'
 require 'json'
 
-def http_content_type(type,params={})
-  params = params.map { |k,v| "#{k}=#{v}" }.join('; ')
+def http_content_type(type, params={})
+  params = params.map { |k, v| "#{k}=#{v}" }.join('; ')
   params.empty? ? type : [type, params].join('; ')
 end
 
@@ -16,7 +16,7 @@ def http_expires_in(seconds)
   http_expires_at(Time.now + seconds)
 end
 
-def http_host_and_port(host,port=80)
+def http_host_and_port(host, port=80)
   return host if port == 80
   "#{host}:#{port}"
 end
@@ -58,7 +58,7 @@ class HttpDocument
     @status = status
   end
 
-  def self.from_file(path,headers={}, status=200)
+  def self.from_file(path, headers={}, status=200)
     content_type = content_type_from_path(path)
     self.new(IO.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
@@ -163,12 +163,12 @@ class HttpDocument
     'utf-8'
   end
 
-  def resolve_template(site,view)
+  def resolve_template(site, view)
     FileUtility.find_first_existing(
       String.multiply_concat([
         sites_dir("#{site}/views/#{view}"),
         sites_dir("all/views/#{view}"),
-      ],[
+      ], [
         '.haml',
       ])
     )
@@ -212,7 +212,7 @@ module Pegasus
       settings.set :document_max_age, rack_env?(:staging) ? 0 : 3600
       settings.set :image_max_age, rack_env?(:staging) ? 0 : 36000
 
-      settings.set :image_extnames, ['.png','.jpeg','.jpg','.gif']
+      settings.set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
       settings.set :template_extnames, ['.haml', '.md']
 
       settings.set :blacklist, {}
@@ -239,14 +239,14 @@ module Pegasus
       end
     end
 
-    def self.get_head_or_post(url,&block)
-      get(url,&block)
-      head(url,&block)
-      post(url,&block)
+    def self.get_head_or_post(url, &block)
+      get(url, &block)
+      head(url, &block)
+      post(url, &block)
     end
 
     def apply_vary_header
-      settings.vary.each_pair do |header,pages|
+      settings.vary.each_pair do |header, pages|
         headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
       end
     end
@@ -262,7 +262,7 @@ module Pegasus
       body([document.body])
     end
 
-    def deliver_manipulated_image(path,format,mode,width,height=nil)
+    def deliver_manipulated_image(path, format, mode, width, height=nil)
       content_type format.to_sym
       cache_control :public, :must_revalidate, :max_age => settings.image_max_age
 
@@ -275,13 +275,13 @@ module Pegasus
       end
     end
 
-    def http_vary_add_type(vary,type)
+    def http_vary_add_type(vary, type)
       types = vary.to_s.split(',').map(&:strip)
       return vary if types.include?('*') || types.include?(type)
       types.push(type).join(',')
     end
 
-    def render(document,locals={})
+    def render(document, locals={})
       document.to_html!(locals.merge({
         settings: settings,
         request: request,
@@ -292,11 +292,11 @@ module Pegasus
       deliver(document)
     end
 
-    def resolve_document(root,uri,headers={})
-      base = File.join(root,uri)
+    def resolve_document(root, uri, headers={})
+      base = File.join(root, uri)
 
       extnames = settings.template_extnames
-      indexes = ['index','_all']
+      indexes = ['index', '_all']
 
       headers = {
         'Cache-Control'   => "max-age=#{settings.document_max_age}, public, must-revalidate",
@@ -305,12 +305,12 @@ module Pegasus
 
       extnames.each do |extname|
         if File.file?(path = "#{base}#{extname}")
-          return HttpDocument.from_file(path,headers)
+          return HttpDocument.from_file(path, headers)
         end
 
         indexes.each do |index|
-          if File.file?(path = File.join(base,"#{index}#{extname}"))
-            return HttpDocument.from_file(path,headers)
+          if File.file?(path = File.join(base, "#{index}#{extname}"))
+            return HttpDocument.from_file(path, headers)
           end
         end
       end
@@ -320,7 +320,7 @@ module Pegasus
 
         extnames.each do |extname|
           if File.file?(path = "#{parent}/_all#{extname}")
-            return HttpDocument.from_file(path,headers.merge({
+            return HttpDocument.from_file(path, headers.merge({
               'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
             }))
           end
