@@ -29,8 +29,7 @@
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"K2.0_sequence_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need to go three different directions to solve this puzzle.\",\r\n  \"hint_id\": \"K2.0_sequence_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "**Challenge:** Go around the TNT to get me to the pig!\r\n\r\n![](https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif)",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
