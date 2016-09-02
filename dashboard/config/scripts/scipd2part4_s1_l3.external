@@ -5,7 +5,14 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # What's next? 
 
+<img src="https://doc-0g-8g-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ofr7kf15rrpvlue00bod47tfi1hgeqfa/1472680800000/01001389365567981546/*/0B--TC7osb5N6QnZya0FheTVTeGM" class="level-image" />
+
+<br>
+<br>
+
 Now you're going to dive into a Mystery Model and make some observations, inferences, and predictions.  All of this will be done while thinking in terms of agent-based modeling and complex adaptive systems (CAS).  Click "Continue" to go ahead to the next stage and get started!
+
+<br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
