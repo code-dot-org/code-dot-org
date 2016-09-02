@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLock from './StageLock';
+import HiddenStageToggle from './HiddenStageToggle';
 import color from '../../../color';
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
@@ -30,18 +31,27 @@ const styles = {
     paddingBottom: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    maxWidth: '90%'
+    maxWidth: '90%',
+    whiteSpace: 'nowrap'
   },
   lessonPlan: {
     ':hover': {
       cursor: 'pointer',
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
+    marginTop: 5,
+    display: 'inline-block'
   },
   lessonPlanText: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
     marginLeft: 10
+  },
+  toggle: {
+    marginLeft: 15,
+    marginTop: 5,
+    display: 'inline-block',
+    verticalAlign: 'top',
   },
   dotIcon: progressStyles.dotIcon
 };
@@ -79,6 +89,9 @@ const TeacherStageInfo = React.createClass({
             </span>
           }
           {lockable && <StageLock stage={stage}/>}
+          <div style={styles.toggle}>
+            <HiddenStageToggle/>
+          </div>
         </div>
       </div>
     );
