@@ -6,7 +6,7 @@ require_relative './github_utils'
 
 module CircleGitHubUtils
   def self.add_current_pr_comment(github_markdown_body)
-    GitHubUtils.add_pr_comment(circle_github_pr, github_markdown_body)
+    GitHubUtils.add_pr_comment(circle_pr_number, github_markdown_body)
   end
 
   def self.pr_base_branch_or_default_no_origin
@@ -14,8 +14,11 @@ module CircleGitHubUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    pr_number = circle_github_pr.gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
-    GitHubUtils.base_for_pr(pr_number)
+    GitHubUtils.base_for_pr(circle_pr_number)
+  end
+
+  def self.circle_pr_number
+    circle_github_pr.gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
   end
 
   def self.circle_github_pr
