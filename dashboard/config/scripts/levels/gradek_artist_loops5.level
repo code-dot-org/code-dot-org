@@ -31,8 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.\",\r\n  \"hint_id\": \"gradek_artist_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nLet's put a nice hill in the back.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/8c2820a8c7910bd0f97d225fd84fa718-image-1470786904541.gif\" width=\"300\"/>\r\n",
+    "ideal": "3",
     "contained_level_names": null
   },
   "published": true,
@@ -59,10 +60,8 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="simple_move_right"/>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">8</title>
-        </block>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_right"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>

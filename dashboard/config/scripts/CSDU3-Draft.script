@@ -220,7 +220,7 @@ level 'CSD U3 collisions car'
 level 'CSD U3 collisions open'
 
 stage 'Collisions'
-level 'CSD U3 collisions STOP isTouching'
+#level 'CSD U3 collisions STOP isTouching'
 level 'CSD U3 collisions displace y'
 level 'CSD U3 collisions displace x'
 level 'CSD U3 collisions displace intro'

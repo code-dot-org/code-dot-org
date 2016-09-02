@@ -33,7 +33,8 @@
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This challenge uses FOUR loops, one right after another!\",\r\n  \"hint_id\": \"grade1_artist_loops6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that every loop makes a stair pattern that travels in a different direction.\\n\\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)\",\r\n  \"hint_id\": \"grade1_artist_loops6_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The loops should do this:\\n- Loop 1\\n  - Right\\n  - Down\\n  \\n- Loop 2\\n  - Right\\n  - Up\\n\\n- Loop 3\\n  - Left\\n  - Up\\n\\n- Loop 4\\n  - Left\\n  - Down\",\r\n  \"hint_id\": \"grade1_artist_loops6_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "ideal": "13"
   },
   "published": true,
   "notes": "",
@@ -45,7 +46,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
+            <block type="controls_repeat_simplified_dropdown" deletable="false">
               <title name="TIMES" config="3-10">3</title>
               <statement name="DO">
                 <block type="simple_move_right">
@@ -55,7 +56,7 @@
                 </block>
               </statement>
               <next>
-                <block type="controls_repeat_simplified_dropdown">
+                <block type="controls_repeat_simplified_dropdown" deletable="false">
                   <title name="TIMES" config="3-10">3</title>
                   <statement name="DO">
                     <block type="simple_move_right">
@@ -69,10 +70,10 @@
             </block>
           </next>
         </block>
-        <block type="controls_repeat_simplified_dropdown" y="150px" x="250px">
+        <block type="controls_repeat_simplified_dropdown" deletable="false">
           <title name="TIMES" config="3-10">3</title>
         </block>
-        <block type="controls_repeat_simplified_dropdown" y="250px" x="350px">
+        <block type="controls_repeat_simplified_dropdown" deletable="false">
           <title name="TIMES" config="3-10">3</title>
         </block>
       </xml>

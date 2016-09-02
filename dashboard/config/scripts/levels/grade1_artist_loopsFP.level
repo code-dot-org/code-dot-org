@@ -55,6 +55,10 @@
         <block type="controls_repeat_simplified">
           <title name="TIMES">5</title>
         </block>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_left"/>
+        <block type="simple_move_down_right"/>
         <block type="simple_jump_up"/>
         <block type="simple_jump_left"/>
         <block type="simple_jump_right"/>
