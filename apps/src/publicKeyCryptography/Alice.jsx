@@ -34,6 +34,10 @@ const Alice = React.createClass({
     };
   },
 
+  startOver() {
+    this.setState(this.getInitialState());
+  },
+
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setPrivateKey(null);
