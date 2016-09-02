@@ -7,13 +7,13 @@
 /* global Studio */
 
 import _ from 'lodash';
-import * as utils from '../utils';
 import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import msg from './locale';
 import paramLists from './paramLists';
 import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
 import { singleton as studioApp } from '../StudioApp';
+import { stripQuotes, valueOr } from '../utils';
 import {
   CardinalDirections,
   Direction,
@@ -1245,12 +1245,12 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    var lowercaseSound = utils.stripQuotes(soundValue).toLowerCase().trim();
+    var lowercaseSound = stripQuotes(soundValue).toLowerCase().trim();
 
     if (lowercaseSound === RANDOM_VALUE) {
       return;
     }
-    var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+    var skinSoundMetadata = valueOr(skin.soundMetadata, []);
     var playbackOptions = Object.assign({
       volume: 1.0
     }, _.find(skinSoundMetadata, function (metadata) {
@@ -1679,14 +1679,14 @@ exports.install = function (blockly, blockInstallOptions) {
   /**
    * Blocks for managing a bunch of sprites as a group.
    */
-  function createSpriteGroupDropdown(createMsg) {
+  function createSpriteGroupDropdown(createMsg, changeCallback) {
     const values = skin.spriteChoices.filter(
         opt => opt[1] !== HIDDEN_VALUE && opt[1] !== RANDOM_VALUE
     ).map(opt => {
-      const spriteName = opt[1].replace(/^"(.*)"$/, '$1');
+      const spriteName = stripQuotes(opt[1]);
       return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
     });
-    const dropdown = new blockly.FieldDropdown(values);
+    const dropdown = new blockly.FieldDropdown(values, changeCallback);
     dropdown.setValue(values[0][1]);
     return dropdown;
   }
@@ -1808,6 +1808,45 @@ exports.install = function (blockly, blockInstallOptions) {
       extraParams: speed,
     });
   };
+
+  blockly.Blocks.studio_whenSpriteAndGroupCollide = {
+    // Block to handle event when the Left arrow button is pressed.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+
+      var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var dropdown2 = createSpriteGroupDropdown(
+          msg.collidesWithAnySpriteName,
+          value => endLabel.setText(msg.toTouchedSpriteName(
+              {spriteName: stripQuotes(value)})));
+      this.appendDummyInput()
+          .appendTitle(dropdown1, 'SPRITE')
+          .appendTitle(dropdown2, 'SPRITENAME');
+      this.appendDummyInput();
+      this.appendValueInput('GROUPMEMBER')
+          .setInline(true)
+          .appendTitle(msg.set());
+      var endLabel = new Blockly.FieldLabel(msg.toTouchedSpriteName(
+              {spriteName: stripQuotes(dropdown2.getValue())}));
+      this.appendDummyInput()
+          .setInline(true)
+          .appendTitle(endLabel);
+
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+    },
+  };
+
+  generator.studio_whenSpriteAndGroupCollide = function () {
+    var varName = Blockly.JavaScript.valueToCode(this, 'GROUPMEMBER',
+        Blockly.JavaScript.ORDER_NONE);
+    // Sprite index vars need to be 1-indexed, but the callback arg will be
+    // 0-indexed, so add 1.
+    return `${varName} = touchedSpriteIndex + 1;\n`;
+  };
+
 
   /**
    * setBackground

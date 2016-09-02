@@ -588,13 +588,14 @@ module LevelsHelper
     return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
-      redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+      error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
+      redirect_to '/', :flash => { :alert => error_message }
       return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.pair_programmer") }
         return true
       end
     end

@@ -8,7 +8,6 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
-  skip_before_action :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
 

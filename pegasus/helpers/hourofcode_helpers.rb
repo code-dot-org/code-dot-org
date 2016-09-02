@@ -1,9 +1,9 @@
 def hoc_dir(*dirs)
-  pegasus_dir('sites.v3','hourofcode.com', *dirs)
+  pegasus_dir('sites.v3', 'hourofcode.com', *dirs)
 end
 
 def trans_dir(*dirs)
-  pegasus_dir('sites.v3','translate.hourofcode.com', *dirs)
+  pegasus_dir('sites.v3', 'translate.hourofcode.com', *dirs)
 end
 
 def hoc_load_countries
@@ -38,7 +38,7 @@ def hoc_s(id)
 end
 
 def hoc_canonicalized_i18n_path(uri)
-  _, possible_country_or_company, possible_language, path = uri.split('/',4)
+  _, possible_country_or_company, possible_language, path = uri.split('/', 4)
 
   if HOC_COUNTRIES[possible_country_or_company]
     @country = possible_country_or_company
@@ -61,8 +61,8 @@ def hoc_canonicalized_i18n_path(uri)
   country_language = HOC_COUNTRIES[@country]['default_language']
   @language = @user_language || country_language || hoc_detect_language
 
-  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}",path].select{|i| !i.nil_or_empty?})]
-  canonical_urls << File.join(["/#{(@company || @country)}",path].select{|i| !i.nil_or_empty?}) if @language == country_language
+  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].select{|i| !i.nil_or_empty?})]
+  canonical_urls << File.join(["/#{(@company || @country)}", path].select{|i| !i.nil_or_empty?}) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
     redirect canonical_urls.last

@@ -98,7 +98,8 @@ class Applab < Blockly
     palette_result = update_palette
     log_conditions_result = parse_json_property_field('log_conditions')
 
-    return palette_result && log_conditions_result
+    success = palette_result && log_conditions_result
+    throw :abort unless success
   end
 
   def self.palette

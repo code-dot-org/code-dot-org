@@ -2,9 +2,9 @@
 
 require_relative '../../lib/cdo/git_utils'
 
-`git config --global user.email "circleci-github@example.com"`
-`git config --global user.name "CircleCI"`
+system('git config --global user.email "circleci-github@example.com"')
+system('git config --global user.name "CircleCI"')
 
-`git merge origin/#{GitUtils.pr_base_branch_or_default_no_origin}`
+system("git merge --no-edit origin/#{GitUtils.pr_base_branch_or_default_no_origin}")
 
 exit($?.exitstatus)

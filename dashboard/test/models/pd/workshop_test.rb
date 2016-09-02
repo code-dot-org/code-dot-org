@@ -102,7 +102,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
-    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.section_type
+    assert @workshop.section.workshop_section?
+    assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
@@ -223,6 +224,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_workshop, section: section
     assert_equal workshop, Pd::Workshop.find_by_section_code(section.code)
     assert_nil Pd::Workshop.find_by_section_code('nonsense code')
+  end
+
+  test 'soft delete' do
+    session = create :pd_session, workshop: @workshop
+    enrollment = create :pd_enrollment, workshop: @workshop
+    @workshop.reload.destroy!
+
+    assert @workshop.reload.deleted?
+    refute Pd::Workshop.exists? @workshop.attributes
+    assert Pd::Workshop.with_deleted.exists? @workshop.attributes
+
+    # Make sure dependent sessions and enrollments are also soft-deleted.
+    assert session.reload.deleted?
+    refute Pd::Session.exists? session.attributes
+    assert Pd::Session.with_deleted.exists? session.attributes
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
   end
 
   private

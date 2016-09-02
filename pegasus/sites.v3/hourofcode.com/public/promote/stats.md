@@ -3,6 +3,7 @@ title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
 ---
+<a id="blurb"></a>
 
 <%= view :signup_button %>
 
@@ -14,7 +15,7 @@ With technology changing every industry on the planet, computing knowledge  has 
 
 The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at [http://HourofCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
-
+<a id="infographics"></a>
 ## Infographics
 
 <%= view :stats_carousel %>

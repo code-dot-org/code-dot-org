@@ -6,6 +6,7 @@ import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
 import {GoButton} from './cryptographyFields';
+import WidgetContinueButton from '../templates/WidgetContinueButton';
 import {AnyChildren} from './types';
 
 const style = {
@@ -109,6 +110,7 @@ const ModuloClockWidget = React.createClass({
             />
           </LabelBelow>
         </div>
+        <WidgetContinueButton/>
       </div>);
   }
 });

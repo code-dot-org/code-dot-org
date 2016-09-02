@@ -12,6 +12,7 @@ nav: educate_nav
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
 | [Code Studio](/educate/k5)  (Code.org)| 4 courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
+| [Kodable](Kodable.com) | 10 5-lesson modules. Basic Curriculum, FREE, Advanced Curriculum, $5/student, $1250/site | Online or in-person included with student or site plan | 
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
@@ -26,7 +27,7 @@ nav: educate_nav
 |--------------|------------|---------------|--------------------------|------|
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP CS Principles/AP CS A course. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
-| [Code.org](/educate) | 20-lesson CS in Algebra and CS in Science modules for math and science classes, FREE  | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
+| [Code.org](/educate) | Semester or year-long CS Discoveries intro course is under development to be launched Summer 2017. 20-lesson CS in Algebra and CS in Science modules for math and science classes, FREE  | In-person and online workshops available to partner districts, FREE, Portion of teacher stipends covered by Code.org on partner by partner basis |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway/gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
@@ -44,7 +45,7 @@ nav: educate_nav
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP CS Principles/AP CS A course. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
-| [Code.org](/educate) | Year-long AP Computer Science Principles course, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
+| [Code.org](/educate) | Semester or year-long CS Discoveries intro course is under development to be launched Summer 2017. Year-long AP Computer Science Principles course, FREE | In-person and online workshops available to partner districts, FREE, Portion of teacher stipends covered by Code.org on partner by partner basis |
 | [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available|
