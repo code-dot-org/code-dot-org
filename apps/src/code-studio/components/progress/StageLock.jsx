@@ -51,7 +51,7 @@ const StageLock = React.createClass({
       return <div>{commonMsg.loading()}</div>;
     }
     return (
-      <div>
+      <div style={{display: 'inline-block'}}>
         <button
           style={progressStyles.blueButton}
           onClick={this.openLockDialog}

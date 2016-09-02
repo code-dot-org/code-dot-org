@@ -9,6 +9,7 @@ const ToggleButton = React.createClass({
     active: React.PropTypes.bool.isRequired,
     first: React.PropTypes.bool,
     last: React.PropTypes.bool,
+    activeColor: React.PropTypes.string,
     onClick: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
   },
@@ -36,6 +37,9 @@ const ToggleButton = React.createClass({
       styles.buttonStyle,
       styles.toggleButtonStyle,
       this.props.active ? styles.activeStyle : styles.inactiveStyle,
+      this.props.active && this.props.activeColor && {
+        backgroundColor: this.props.activeColor
+      },
       this.props.first ? styles.firstButtonStyle: null,
       this.props.last ? styles.lastButtonStyle : null);
   }
