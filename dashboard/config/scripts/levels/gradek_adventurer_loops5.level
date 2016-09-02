@@ -27,6 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "What should you add to this code to get all of the gold?",
+    "ideal": "10",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out what comes next, try running the code to see where Laurel ends up.\",\r\n  \"hint_id\": \"gradek_adventurer_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,

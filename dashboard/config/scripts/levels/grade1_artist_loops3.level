@@ -32,6 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
+    "ideal": "4",
     "contained_level_names": null
   },
   "published": true,
@@ -44,10 +45,10 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
+            <block type="controls_repeat_simplified_dropdown" deletable="false">
               <title name="TIMES" config="3-10">3</title>
               <statement name="DO">
-                <block type="simple_jump_right"/>
+                <block type="simple_jump_right" deletable="false"/>
               </statement>
             </block>
           </next>
