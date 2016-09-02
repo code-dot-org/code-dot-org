@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
 require_relative '../../lib/cdo/git_utils'
+require_relative '../../lib/cdo/circle_github_utils'
 
 system('git config --global user.email "circleci-github@example.com"')
 system('git config --global user.name "CircleCI"')
 
-system("git merge --no-edit origin/#{GitUtils.pr_base_branch_or_default_no_origin}")
+system("git merge --no-edit origin/#{CircleGitHubUtils.pr_base_branch_or_default_no_origin}")
 
 exit($?.exitstatus)
