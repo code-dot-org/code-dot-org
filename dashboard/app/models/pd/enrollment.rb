@@ -18,6 +18,7 @@
 #  survey_sent_at      :datetime
 #  completed_survey_id :integer
 #  school_info_id      :integer
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -27,15 +28,23 @@
 #
 
 class Pd::Enrollment < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
 
+  # Allow overriding the school and school_info requirements.
+  attr_accessor :skip_school_validation
+
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates :name, :email, :school, presence: true
+  validates :name, :email, presence: true
   validates_confirmation_of :email
+
+  validates_presence_of :school, unless: :skip_school_validation
+  validates_presence_of :school_info, unless: :skip_school_validation
 
   def has_user?
     self.user_id
