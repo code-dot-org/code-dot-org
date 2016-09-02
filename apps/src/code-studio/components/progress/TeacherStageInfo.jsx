@@ -9,6 +9,7 @@ import HiddenStageToggle from './HiddenStageToggle';
 import color from '../../../color';
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
+import { toggleHidden } from '../../hiddenStageRedux';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -63,6 +64,11 @@ const TeacherStageInfo = React.createClass({
     // redux provided
     isHidden: React.PropTypes.bool.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
+    toggleHidden: React.PropTypes.func.isRequired
+  },
+
+  onClickHiddenToggle(value) {
+    this.props.toggleHidden(this.props.stage.id, value === 'hidden');
   },
 
   clickLessonPlan() {
@@ -91,7 +97,10 @@ const TeacherStageInfo = React.createClass({
           }
           {lockable && <StageLock stage={stage}/>}
           <div style={styles.toggle}>
-            <HiddenStageToggle hidden={this.props.isHidden}/>
+            <HiddenStageToggle
+              hidden={this.props.isHidden}
+              onChange={this.onClickHiddenToggle}
+            />
           </div>
         </div>
       </div>
@@ -106,4 +115,8 @@ export default connect((state, ownProps) => {
     hasNoSections: state.stageLock.sectionsLoaded &&
       Object.keys(state.stageLock.sections).length === 0
     };
-})(Radium(TeacherStageInfo));
+}, dispatch => ({
+  toggleHidden(stageId, hidden) {
+    dispatch(toggleHidden(stageId, hidden));
+  }
+}))(Radium(TeacherStageInfo));

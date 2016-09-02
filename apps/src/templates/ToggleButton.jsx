@@ -10,6 +10,7 @@ const ToggleButton = React.createClass({
     first: React.PropTypes.bool,
     last: React.PropTypes.bool,
     activeColor: React.PropTypes.string,
+    title: React.PropTypes.string,
     onClick: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
   },
@@ -20,6 +21,7 @@ const ToggleButton = React.createClass({
         id={this.props.id}
         style={this.getStyle()}
         className="no-outline"
+        title={this.props.title}
         onClick={this.props.onClick}
       >
         {this.props.children}

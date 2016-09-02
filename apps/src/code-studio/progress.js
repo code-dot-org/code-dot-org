@@ -8,7 +8,7 @@ import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import { getStore } from './redux';
-import { authorizeLockable } from './stageLockRedux';
+import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -75,6 +75,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && !currentLevelId) {
       store.dispatch(showTeacherInfo());
+      store.dispatch(setViewType(ViewType.Teacher));
       renderTeacherPanel(store, scriptData.id);
     }
 
