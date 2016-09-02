@@ -1,3 +1,6 @@
+require 'json_value'
+require 'encryption'
+
 # Defines methods to access properties in a property bag via a serialized_attrs declaration
 module SerializedProperties
   extend ActiveSupport::Concern

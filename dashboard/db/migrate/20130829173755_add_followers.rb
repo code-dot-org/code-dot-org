@@ -7,7 +7,7 @@ class AddFollowers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :followers, [:user_id,:student_user_id], unique: true
+    add_index :followers, [:user_id, :student_user_id], unique: true
     add_index :followers, :student_user_id
   end
 end

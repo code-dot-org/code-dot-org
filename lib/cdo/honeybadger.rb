@@ -55,7 +55,7 @@ module Honeybadger
     # Honeybadger::Backtrace::Line fails to parse the first line due to the message
     #   See regex here: https://github.com/honeybadger-io/honeybadger-ruby/blob/2072d85532b7effd8032707faa01b5ac83d9f36d/lib/honeybadger/backtrace.rb#L9
     # The following addition will parse the message from the end of the first line
-    corrected_input_format = Regexp.new(Honeybadger::Backtrace::Line::INPUT_FORMAT.source.sub(/\$$/,'(?:: (.+))?$')).freeze
+    corrected_input_format = Regexp.new(Honeybadger::Backtrace::Line::INPUT_FORMAT.source.sub(/\$$/, '(?:: (.+))?$')).freeze
 
     error_lines = error.lines.map &:strip
     _, _file, _number, _method, error_message = error_lines[0].match(corrected_input_format).to_a

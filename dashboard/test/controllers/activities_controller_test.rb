@@ -1229,7 +1229,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, milestone_params
     assert_response 403
 
-    user_level.delete!
+    user_level.delete
     # explicity create a user_level that is readonly_answers
     create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, milestone_params

@@ -40,7 +40,7 @@ class JoinTest < ActionDispatch::IntegrationTest
   end
 
   test '/join with code in query param for workshop section redirects to workshop_enrollments#join_section' do
-    section = create :section, section_type: Section::TYPE_PD_WORKSHOP
+    section = create :section, section_type: Pd::Workshop::SECTION_TYPE_MAP[Pd::Workshop::COURSE_CSF]
 
     join_url = "/join?utf8=%E2%9C%93&section_code=#{section.code}&commit=Go"
     assert_recognizes(
@@ -53,7 +53,7 @@ class JoinTest < ActionDispatch::IntegrationTest
   end
 
   test '/join with code in url for workshop section redirects to workshop_enrollments#join_section' do
-    section = create :section, section_type: Section::TYPE_PD_WORKSHOP
+    section = create :section, section_type: Pd::Workshop::SECTION_TYPE_MAP[Pd::Workshop::COURSE_CSF]
 
     join_url = "/join/#{section.code}"
     assert_recognizes(

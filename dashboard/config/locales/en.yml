@@ -23,7 +23,9 @@ en:
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
-      too_young: 'Your teacher must accept the updated Terms of Service before you can access this content. Your teacher can do this by logging into Code Studio and clicking the "Review Updated Terms" button near the top of Code Studio homepage.'
+      too_young: 'This content has age restrictions in place and is not available for younger students.'
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
       messages:
@@ -298,7 +300,7 @@ en:
     user_not_found: 'The teacher could not be found.'
     student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
-      answer_viewer: 'Answer Viewer'
+      answer_viewer: 'Teacher Panel'
       student: 'Student'
       viewing_solution: 'Viewing Solution'
       try_it_yourself: 'Try it yourself'
@@ -308,6 +310,7 @@ en:
       submitted_on: 'Submitted on:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
+      update_lock_settings: 'Update lock settings here.'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -366,7 +369,7 @@ en:
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
     announcement_title: "Announcements"
-    announcement_message: "<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools."
+    announcement_message: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Learn more"
     announcement_try_now_button: "Try now"

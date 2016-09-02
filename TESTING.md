@@ -50,19 +50,18 @@ Worth noting:
 * `rake test:changed:apps` - runs apps tests if sub-project folder has changed
 
 ### Apps Tests
-`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory.
+`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.
 
-You can also run these steps individually with `npm run lint`, `npm run test:unit` and `npm run test:integration`.
+It's also possible to run a subset of tests:
 
-To run a subset of tests, you can run 
-`grunt [test|unitTest|integrationTest] --grep "Interesting Test Name"` - Run all tests with a given string in the description
-`grunt [test|unitTest|integrationTest] --grep filename` - Run all tests in a given filename. Filename doesn't have to be the full path to the file, just the filename is sufficient
-You can append `--fast` if you don't want to test turtle/maze levels and want the tests to go faster (integration tests only)
+* `npm run lint`
+* `npm run test:unit`
+* `npm run test:integration`
+* `npm run test:entry -- --entry ./test/unit/gridUtilsTest.js`
 
-Use the `--entry` option for fastest iteration.
-`grunt unitTest --entry ./test/utilityTests.js` - Only bundle what's needed to run the tests in utilityTests.js; should take seconds.
+To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 
-You can expect a full test run to take about 5-10 minutes.
+See [the apps readme](./apps/README.md) for more details.
 
 ### Konacha Tests
 `cd dashboard && bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.
