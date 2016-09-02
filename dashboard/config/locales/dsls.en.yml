@@ -147,6 +147,9 @@ en:
         title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD U1 Input Output C1:
+        Challenge 1: Challenge 1
+        description here: description here
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -205,6 +208,9 @@ en:
       CSP U4 - Basic Terms: {}
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
+        description here: description here
+      CSP assessment Hex interstitial:
+        Hexadecimal: Hexadecimal
         description here: description here
       CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
