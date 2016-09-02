@@ -8,7 +8,7 @@ import experiments from '@cdo/apps/experiments';
 
 export const TOGGLE_HIDDEN = 'hiddenStage/TOGGLE_HIDDEN';
 
-const hiddenStagesEnabled = experiments.isEnabled('hiddenStages');
+const hiddenStagesEnabled = experiments.isEnabled('hiddenStages') || IN_UNIT_TEST;
 
 /**
  * hidden stage reducer
