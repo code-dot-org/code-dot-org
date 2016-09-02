@@ -5,17 +5,40 @@ require_relative '../../lib/cdo/github_utils'
 require_relative '../../lib/cdo/circle_github_utils'
 require_relative '../../lib/cdo/eyes_utils'
 
+# e.g. "my-feature-branch into staging"
+merge_direction_string = nil
+
 begin
   commit_merges_branch = GitHubUtils.get_latest_commit_merged_branch
   if commit_merges_branch
-    puts "Commit appears to merge #{commit_merges_branch} into #{GitUtils.current_branch}"
-    puts "Attempting to merge eyes baselines from #{commit_merges_branch} into #{GitUtils.current_branch}"
+    merge_direction_string = "#{commit_merges_branch} into #{GitUtils.current_branch}"
+    puts "Commit appears to merge #{merge_direction_string}"
+    puts "Attempting to merge eyes baselines from #{merge_direction_string}"
     EyesUtils.merge_eyes_baselines(commit_merges_branch, GitUtils.current_branch)
   else
     puts 'Latest commit does not appear to be a merge commit, not performing any baseline copying.'
   end
 rescue => e
-  GitHubUtils.add_pr_comment(GitHubUtils.get_latest_commit_merged_pr, "Eyes baseline not merged: #{e.message}")
+  gh_message_markdown = <<-MD
+:mega: :eyes: :ear:
+
+> Hi there! It's me, EyeBot, your friendly neighborhood Applitools Eyes Helper Bot. (cc @bcjordan)
+
+> It looks to me like you merged #{merge_direction_string}, and I attempted to automatically merge them as part of a CircleCI step in [this `staging` CircleCI build #234234]() . The merge failed (full error message: `#{e.message}`). These failures are often due to a merge conflict (this can happen if you e.g. accepted a baseline change in your branch).
+
+> If you did accept a new baseline change, please monitor the [`staging` build #234234]() for completion. At the bottom of the build in container 1 there may be a failing Eyes test. To accept the baseline change during this run on staging:
+
+1. Open the Cucumber output link (bottom of container 1's UI test step)
+2. Find the failing step, and open the Applitools baseline link.
+3. Accept that new baseline.
+4. (for extra confirmation) Re-run the build and confirm it now passes.
+
+> Perhaps someday these conflicts won't happen :v:, until then, thanks for being my hands. :wave:
+
+:mega: :eyes: :ear:
+
+MD
+  GitHubUtils.add_pr_comment(GitHubUtils.get_latest_commit_merged_pr, gh_message_markdown)
 end
 
 exit(0)
