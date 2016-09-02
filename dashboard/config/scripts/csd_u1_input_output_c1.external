@@ -1,0 +1,23 @@
+name 'CSD U1 Input Output C1'
+title 'Challenge 1'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Challenge 1
+
+
+This piece of software tells you whether or not it’s Halloween.
+
+Look at the possible information that you can input to your app, and decide which ones your app needs to work.  Remember, you can use the phone to get information that is specific to the user, and use the Internet to get general information about the world.
+
+Once you have the information that you need as input, decide what your app will output.
+
+<details>
+<summary><span style="font-weight:bold; font-size: 14px; background-color: #7665a0; color: white;">Input from the phone</span></summary>
+</details>
+<br />
+<details>
+<summary><span style="font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the Internet</span></summary>
+</details>
+
+MARKDOWN
