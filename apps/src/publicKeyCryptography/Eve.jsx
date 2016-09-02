@@ -47,6 +47,10 @@ const Eve = React.createClass({
     };
   },
 
+  startOver() {
+    this.setState(this.getInitialState());
+  },
+
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
   },
