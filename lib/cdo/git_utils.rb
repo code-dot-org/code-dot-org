@@ -76,11 +76,15 @@ module GitUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
+    pr_number = circle_pr.gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
     pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
     pr_json['base']['ref']
   rescue => _
     nil
+  end
+
+  def self.circle_pr
+    ENV['CI_PULL_REQUEST']
   end
 
   # Given a branch name, returns its likely base branch / merge destination
