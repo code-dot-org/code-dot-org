@@ -31,8 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out how to draw a line?  Start dragging blocks into the workspace to see what happens.\",\r\n  \"hint_id\": \"gradek_artist_loops1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "Help the artist draw this line two times forward.\r\n\r\n![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)",
+    "ideal": "3",
     "contained_level_names": null
   },
   "published": true,

@@ -31,8 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try running the code to see what has been written for you.\",\r\n  \"hint_id\": \"gradek_artist_loops7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"How would you loop the code that has been given to you?\",\r\n  \"hint_id\": \"gradek_artist_loops7_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"What does the code do?  \\nWhat is it supposed to do?  \\nWhat does that tell you?\",\r\n  \"hint_id\": \"gradek_artist_loops7_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nWe need a ladder up to the boat.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/6e4dc767e55d11400f35c6680bbfe1e3-image-1470788284437.gif\" width=\"300\"/>",
+    "ideal": "5",
     "contained_level_names": null
   },
   "published": true,

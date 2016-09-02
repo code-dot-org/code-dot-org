@@ -27,6 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Write the code to get all of this gold.",
+    "ideal": "10",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.\",\r\n  \"hint_id\": \"gradek_adventurer_loops6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,

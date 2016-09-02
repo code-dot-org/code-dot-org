@@ -3659,6 +3659,15 @@ en:
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
       CSPFinal_Question_8update:
+        '': ''
+        01110 ,  00001 , 10001: 01110 ,  00001 , 10001
+        01110 , 10001 , 00001: 01110 , 10001 , 00001
+        10001 , 00001 , 01110: 10001 , 00001 , 01110
+        10001 , 00001 , 1110: 10001 , 00001 , 1110
+        10001 , 01110, 00001: 10001 , 01110, 00001
+        10001 , 1110, 00001: 10001 , 1110, 00001
+        1110 ,  00001 , 10001: 1110 ,  00001 , 10001
+        1110 , 10001 , 00001: 1110 , 10001 , 00001
         'BIN: 10001, BIN: 00001, BIN: 1110': 'BIN: 10001, BIN: 00001, BIN: 1110'
         'BIN: 10001, BIN: 1110, BIN: 00001': 'BIN: 10001, BIN: 1110, BIN: 00001'
         'BIN: 1110, BIN: 00001, BIN: 10001': 'BIN: 1110, BIN: 00001, BIN: 10001'
@@ -3683,6 +3692,8 @@ en:
           BIN: 10001
 
           Which of the following lists the numbers in order from least to greatest?
+        Put these numbers in order: Put these numbers in order
+        Which is in order?: Which is in order?
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.

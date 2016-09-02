@@ -1,14 +1,18 @@
 name 'CSPFinal_Question_8update'
-question 'Consider the following numbers given in Binary (BIN) representations:
+question 'Which is in order?'
+wrong '1110 ,  00001 , 10001'
+right '10001 , 1110, 00001'
+wrong '10001 , 00001 , 1110'
+wrong '1110 , 10001 , 00001'
 
-BIN: 1110
+markdown <<MARKDOWN
+Consider the following numbers given in Binary representation:
 
-BIN: 00001
+<pre>
+1110
+00001
+10001
+</pre>
 
-BIN: 10001
-
-Which of the following lists the numbers in order from least to greatest?'
-wrong 'BIN: 1110, BIN: 00001, BIN: 10001'
-right 'BIN: 10001, BIN: 1110, BIN: 00001'
-wrong 'BIN: 10001, BIN: 00001, BIN: 1110'
-wrong 'BIN: 1110, BIN: 10001, BIN: 00001'
+Which of the following lists the numbers in order from greatest to least?
+MARKDOWN
