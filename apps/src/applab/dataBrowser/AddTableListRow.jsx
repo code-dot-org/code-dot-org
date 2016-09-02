@@ -7,7 +7,6 @@ import * as dataStyles from './dataStyles';
 const AddTableListRow = React.createClass({
   propTypes: {
     onTableAdd: React.PropTypes.func.isRequired,
-    onViewChange: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -19,7 +18,6 @@ const AddTableListRow = React.createClass({
   handleAdd() {
     if (this.state.newTableName) {
       this.props.onTableAdd(this.state.newTableName);
-      this.props.onViewChange(DataView.TABLE, this.state.newTableName);
       this.setState(this.getInitialState());
     }
   },

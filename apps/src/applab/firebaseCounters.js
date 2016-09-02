@@ -3,6 +3,18 @@
 import Firebase from 'firebase';
 import { loadConfig, getDatabase } from './firebaseUtils';
 
+export function enforceTableCount(config, tableName) {
+  const tablesRef = getDatabase(Applab.channelId).child(`counters/tables`);
+  return tablesRef.once('value').then(snapshot => {
+    if (snapshot.numChildren() >= config.maxTableCount &&
+      snapshot.child(tableName).val() === null) {
+      return Promise.reject(`Table '${tableName}' cannot be written to because the ` +
+        `maximum number of tables (${config.maxTableCount}) has been exceeded.`);
+    }
+    return Promise.resolve(config);
+  });
+}
+
 /**
  * Updates per-table counters associated with a table write.
  * @param {string} tableName Name of the table to update.
@@ -14,6 +26,11 @@ import { loadConfig, getDatabase } from './firebaseUtils';
  */
 export function updateTableCounters(tableName, rowCountChange, updateNextId) {
   return loadConfig().then(config => {
+    if (rowCountChange > 0) {
+      return enforceTableCount(config, tableName);
+    }
+    return Promise.resolve(config);
+  }).then(config => {
     const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
     return tableRef.transaction(tableData => {
       tableData = tableData || {};

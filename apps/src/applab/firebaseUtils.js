@@ -50,6 +50,7 @@ function handleLoadConfig(configData) {
 function validateConfig(configData) {
   return (
     configData &&
+    configData.maxTableCount > 0 &&
     configData.maxTableRows > 0 &&
     configData.maxRecordSize > 0 &&
     configData.maxPropertySize > 0 &&
