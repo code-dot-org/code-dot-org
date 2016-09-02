@@ -10,9 +10,8 @@ assessment 'U1L12 Reflection Free Response'
 assessment 'CSP_U2_Shakespeare_Question'
 
 stage 'Text Compression'
-named_level 'Text Compression'
 level 'v2 U2L2 Student Lesson Summary'
-
+named_level 'Text Compression'
 named_level 'Widget: Text Compression'
 assessment 'U1L13 - Assess Text Compression reverse process'
 assessment 'U1L13 Assess Text Compression amount'
