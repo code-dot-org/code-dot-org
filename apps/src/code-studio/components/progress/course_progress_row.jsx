@@ -25,6 +25,9 @@ const styles = {
     width: '100%'
   },
   hiddenStage: {
+    display: 'none'
+  },
+  transparentStage: {
     opacity: 0.5,
   },
   focusAreaRow: {
@@ -84,6 +87,7 @@ const CourseProgressRow = React.createClass({
 
     // redux provided
     isHidden: React.PropTypes.bool,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     showTeacherInfo: React.PropTypes.bool,
     lockableAuthorized: React.PropTypes.bool.isRequired,
     changeFocusAreaPath: React.PropTypes.string,
@@ -101,7 +105,8 @@ const CourseProgressRow = React.createClass({
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
           this.props.isFocusArea && styles.focusAreaRow,
-          this.props.isHidden && styles.hiddenStage
+          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenStage,
+          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.transparentStage
         ]}
       >
         {this.props.isFocusArea && [
@@ -121,7 +126,7 @@ const CourseProgressRow = React.createClass({
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
         <div>
-          {this.props.showTeacherInfo &&
+          {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
             <TeacherStageInfo stage={stage}/>
           }
           <StageProgress
@@ -139,8 +144,8 @@ export default connect((state, ownProps) => {
   const isHidden = state.hiddenStage[ownProps.stage.id];
   return {
     isHidden,
-    showTeacherInfo: state.progress.showTeacherInfo &&
-      state.stageLock.viewAs !== ViewType.Student,
+    showTeacherInfo: state.progress.showTeacherInfo,
+    viewAs: state.stageLock.viewAs,
     lockableAuthorized: state.stageLock.lockableAuthorized,
     changeFocusAreaPath: state.progress.changeFocusAreaPath,
   };

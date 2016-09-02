@@ -21,7 +21,7 @@ export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
 const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 export const initialState = {
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Student,
   sections: {},
   selectedSection: null,
   sectionsLoaded: false,

@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 import sinon from 'sinon';
 
 import { initProgress } from '@cdo/apps/code-studio/progressRedux';
-import reducer from '@cdo/apps/code-studio/hiddenStageRedux';
+import reducer, { toggleHidden } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 describe('reducer tests', () => {
   it('initializes based on initProgress', () => {
@@ -31,6 +31,32 @@ describe('reducer tests', () => {
     assert.deepEqual(state, {
       123: false,
       345: true
+    });
+  });
+
+  it('can toggle hidden state', () => {
+    const startState = {
+      123: false,
+      345: true
+    };
+
+    let nextState;
+    nextState = reducer(startState, toggleHidden(123, true));
+    assert.deepEqual(nextState, {
+      123: true,
+      345: true
+    });
+
+    nextState = reducer(startState, toggleHidden(123, false));
+    assert.deepEqual(nextState, {
+      123: false,
+      345: true
+    });
+
+    nextState = reducer(startState, toggleHidden(345, false));
+    assert.deepEqual(nextState, {
+      123: false,
+      345: false
     });
   });
 });

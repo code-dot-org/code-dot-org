@@ -5,7 +5,8 @@ import color from '../../../color';
 
 const HiddenStageToggle = React.createClass({
   propTypes: {
-    hidden: PropTypes.bool.isRequired
+    hidden: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired
   },
   render() {
     return (
@@ -13,12 +14,12 @@ const HiddenStageToggle = React.createClass({
         <ToggleGroup
           selected={this.props.hidden ? "hidden" : "visible"}
           activeColor={color.cyan}
-          onChange={() => console.log('todo')}
+          onChange={this.props.onChange}
         >
-          <button value="visible">
+          <button value="visible" title="Visible">
             <FontAwesome icon="eye"/>
           </button>
-          <button value="hidden">
+          <button value="hidden" title="Hidden">
             <FontAwesome icon="eye-slash"/>
           </button>
         </ToggleGroup>
