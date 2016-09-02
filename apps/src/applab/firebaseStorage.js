@@ -331,7 +331,11 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
  */
 FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
   const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
-  tableRef.set(null).then(onSuccess, onError);
+  tableRef.set(null).then(() => {
+    const rowCountRef = getDatabase(Applab.channelId)
+      .child(`counters/tables/${tableName}/rowCount`);
+    return rowCountRef.set(0);
+  }).then(onSuccess, onError);
 };
 
 /**
