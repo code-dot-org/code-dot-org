@@ -10,9 +10,10 @@ export default function IntegerField(props) {
     fontWeight: 'bold'
   }, props.style);
   const displayValue = Number.isInteger(props.value) ? props.value : '??';
-  return <span style={style}>{displayValue}</span>;
+  return <span className={props.className} style={style}>{displayValue}</span>;
 }
 IntegerField.propTypes = {
+  className: React.PropTypes.string,
   value: React.PropTypes.number,
   color: React.PropTypes.string,
   style: React.PropTypes.object

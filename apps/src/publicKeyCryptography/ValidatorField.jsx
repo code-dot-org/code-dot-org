@@ -50,7 +50,7 @@ const TEXT_STYLES = {
 export default function ValidatorField(props) {
   const status = statusFromProps(props);
   return (
-    <span>
+    <span className={props.className}>
       <span style={{whiteSpace: 'nowrap'}}>
         {' = '}
         <IntegerField
@@ -64,6 +64,7 @@ export default function ValidatorField(props) {
     </span>);
 }
 ValidatorField.propTypes = {
+  className: React.PropTypes.string,
   value: React.PropTypes.number,
   expectedValue: React.PropTypes.number,
   shouldEvaluate: React.PropTypes.bool
