@@ -316,7 +316,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test 'joining a pd workshop session redirects to the workshop enrollment controller' do
-    section = create :section, section_type: Section::TYPE_PD_WORKSHOP
+    section = create :section, section_type: Pd::Workshop::SECTION_TYPE_MAP[Pd::Workshop::COURSE_CSF]
 
     # with and without sign-in
     get :student_user_new, section_code: section.code
