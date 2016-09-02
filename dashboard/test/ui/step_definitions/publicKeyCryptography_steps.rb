@@ -12,11 +12,7 @@ Given /^I am on the (\d+)(?:st|nd|rd|th)? Public Key Cryptography test level$/ d
 end
 
 When /^I set the modulo clock speed to ([1-9])$/ do |speed|
-  react_select = @browser.find_element(:css, '.speed-dropdown')
-  react_select.click
-  react_select_input = react_select.find_element(:css, 'input')
-  react_select_input.send_keys(speed.to_s)
-  react_select_input.send_key(:return)
+  set_react_select(@browser.find_element(:css, '.speed-dropdown'), speed)
 end
 
 When /^I set the clock size to (\d+)$/ do |clock_size|
@@ -34,6 +30,68 @@ When /^I set the dividend to (\d+)$/ do |dividend|
 end
 
 When /^I run the modulo clock$/ do
-  go_button = @browser.find_element(:css, '.go-button')
-  go_button.click
+  @browser.find_element(:css, '.go-button').click
+end
+
+When /^I (?:hide|show) Eve's panel$/ do
+  @browser.find_element(:xpath, "//div[text()='Eve']").click
+  sleep 0.5
+end
+
+When /^I click the start over button$/ do
+  @browser.find_element(:xpath, "//button[text()='Start Over']").click
+end
+
+When /^I click the OK button in the dialog$/ do
+  @browser.find_element(:xpath, "//button[text()='OK']").click
+end
+
+When /^I set the public modulus to (\d+)$/ do |modulus|
+  set_react_select(@browser.find_element(:css, '.panel-eve .public-modulus-dropdown'), modulus)
+end
+
+When /^Alice sets her private key to (\d+)$/ do |private_key|
+  set_react_select(@browser.find_element(:css, '.panel-alice .private-key-dropdown'), private_key)
+end
+
+When /^Bob sets his secret number to (\d+)$/ do |value|
+  set_react_select(@browser.find_element(:css, '.panel-bob .secret-number-dropdown'), value)
+end
+
+When /^Eve sets Bob's secret number to (\d+)$/ do |value|
+  set_react_select(@browser.find_element(:css, '.panel-eve .secret-number-dropdown'), value)
+  sleep 6
+end
+
+When /^I calculate Bob's public number$/ do
+  @browser.find_element(:css, '.panel-bob button').click
+  sleep 6
+end
+
+When /^Alice decodes Bob's secret number$/ do
+  @browser.find_element(:css, '.panel-alice button').click
+  sleep 6
+end
+
+Then /^(Alice|Bob|Eve)'s ([\w\s]+) is (\d+)$/ do |character, field_name, value|
+  expect(@browser.find_element(:css, ".panel-#{character.downcase} .#{field_name.downcase.gsub(/\s+/, '-')}").text).to eq(value)
+end
+
+Then /^Alice knows Bob's secret number is (\d+)$/ do |value|
+  expect(@browser.find_element(:css, '.panel-alice .secret-number').text).to eq(value)
+end
+
+Then /^Eve is wrong about Bob's secret number$/ do
+  expect(@browser.find_element(:css, '.panel-eve .secret-number-validator').text).to include('Try again')
+end
+
+Then /^Eve is right about Bob's secret number$/ do
+  expect(@browser.find_element(:css, '.panel-eve .secret-number-validator').text).to include('You got it!')
+end
+
+def set_react_select(root_element, value)
+  root_element.click
+  wrapped_input = root_element.find_element(:css, 'input')
+  wrapped_input.send_keys(value.to_s)
+  wrapped_input.send_key(:return)
 end

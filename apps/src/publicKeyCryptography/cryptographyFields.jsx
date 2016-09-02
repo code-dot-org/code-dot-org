@@ -26,6 +26,7 @@ export function PrivateKeyDropdown(props) {
   const {publicModulus, ...rest} = props;
   return (
     <IntegerDropdown
+      className="private-key-dropdown"
       options={privateKeyList(publicModulus)}
       style={{backgroundColor: COLORS.privateKey}}
       {...rest}
@@ -44,6 +45,7 @@ PrivateKeyDropdown.propTypes = {
 export function PublicModulusDropdown(props) {
   return (
     <IntegerDropdown
+      className="public-modulus-dropdown"
       options={primesInRange(3, 10000)}
       style={{backgroundColor: COLORS.publicModulus}}
       {...props}
@@ -63,6 +65,7 @@ export function SecretNumberDropdown(props) {
   const {publicModulus, ...rest} = props;
   return (
     <IntegerDropdown
+      className="secret-number-dropdown"
       options={_.range(0, publicModulus)}
       style={{backgroundColor: COLORS.secretNumber}}
       {...rest}
