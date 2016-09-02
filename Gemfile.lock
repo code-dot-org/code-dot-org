@@ -6,6 +6,14 @@ GIT
       omniauth-oauth2 (~> 1.1)
 
 GIT
+  remote: git://github.com/aoby/seamless_database_pool.git
+  revision: 5ee6f3f33349df38215d6d178fd126a7a51fc804
+  ref: rails_5_migration_fix
+  specs:
+    seamless_database_pool (1.0.18)
+      activerecord (>= 3.0.20)
+
+GIT
   remote: git://github.com/islemaster/redis-slave-read.git
   revision: 8be4014cf7c9d2ea09ac479979cb5396e74835dc
   ref: start-with-random-node
@@ -63,14 +71,6 @@ GIT
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-
-GIT
-  remote: git://github.com/wjordan/seamless_database_pool.git
-  revision: 2bf241ef117e388cc30ed3b71f07868ee4d59e83
-  ref: rails_5_migration_fix
-  specs:
-    seamless_database_pool (1.0.18)
-      activerecord (>= 3.0.20)
 
 GEM
   remote: https://rubygems.org/
