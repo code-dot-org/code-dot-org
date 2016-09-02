@@ -44,7 +44,7 @@ function getProjectUrl() {
  */
 function appendUrl(url, fragment) {
   var queryIndex = url.indexOf('?');
-  if (queryIndex == -1) {
+  if (queryIndex === -1) {
     return url + fragment;
   }
   return url.substring(0, queryIndex) + fragment + url.substring(queryIndex);
@@ -97,7 +97,7 @@ module.exports = React.createClass({
   renderSendToPhone: function () {
     if (this.state.clickedSendToPhone) {
       return (
-        <div className='WireframeButtons_active'>
+        <div className="WireframeButtons_active">
           <SendToPhone
             styles={styles.sendToPhone}
             channelId={this.props.channelId}

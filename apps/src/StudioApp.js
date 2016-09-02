@@ -2009,15 +2009,21 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
+        // Create an empty div on the left for padding
         var div = document.createElement('div');
         div.className = 'WireframeButtons_container';
         document.body.insertBefore(div, document.body.firstChild);
-        var div = document.createElement('div');
-        div.className = 'WireframeButtons_container';
-        var appDiv = document.getElementsByClassName('wrapper')[0];
-        if (appDiv) {
-          appDiv.className = 'wrapper withWireframeButtons';
+
+        // Add 'withWireframeButtons' class to top level div that wraps app.
+        // This will add necessary styles.
+        div = document.getElementsByClassName('wrapper')[0];
+        if (div) {
+          div.className = 'wrapper withWireframeButtons';
         }
+
+        // Create div for buttons on the right
+        div = document.createElement('div');
+        div.className = 'WireframeButtons_container';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
           ReactDOM.render(React.createElement(WireframeButtons, {
