@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Is something not quite right?  Use the \\\"Step\\\" button to see where things go wrong.\",\r\n  \"hint_id\": \"gradek_artist_loops2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\r\n\r\n![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)",
     "contained_level_names": null
   },

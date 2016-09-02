@@ -31,8 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.\",\r\n  \"hint_id\": \"gradek_artist_loops6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nUse the `repeat` loop to add waves to the water.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/06a1120e0b2da4dbcf960a22c3abc248-image-1470787144854.gif\" width=\"300\"/>\r\n",
+    "ideal": "4",
     "contained_level_names": null
   },
   "published": true,
