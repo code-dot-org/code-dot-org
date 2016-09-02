@@ -275,7 +275,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
                             ],
                         })
 
-  instance_info = @ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+  instance_info = @ec2client.describe_instances({instance_ids: [instance_id]}).reservations[0].instances[0]
   private_dns_name = instance_info.private_dns_name
   public_dns_name = instance_info.public_dns_name
   instance_provisioning_info.private_dns = private_dns_name

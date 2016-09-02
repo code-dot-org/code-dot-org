@@ -78,7 +78,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   encoded = File.basename(filename, extname)
   data = JSON.parse(Base64.urlsafe_decode64(encoded))
 
-  extnames = ['.jpg','.jpeg','.png']
+  extnames = ['.jpg', '.jpeg', '.png']
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
@@ -100,7 +100,7 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   encoded = File.basename(filename, extname)
   label = Base64.urlsafe_decode64(encoded)
 
-  extnames = ['.jpg','.jpeg','.png']
+  extnames = ['.jpg', '.jpeg', '.png']
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]

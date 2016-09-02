@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'cgi'
@@ -400,7 +401,7 @@ class NetSimApi < Sinatra::Base
   # @return [PusherApi]
   def get_pub_sub_api
     return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
-    CDO.use_pusher ? PusherApi : NullPubSubApi
+    CDO.use_pusher ? PusherApi.new : NullPubSubApi.new
   end
 
   # Return true if the request's content type is application/json and charset

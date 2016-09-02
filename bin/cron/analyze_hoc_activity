@@ -115,7 +115,7 @@ def main
     # hoping for success.
     3.times do
       # Note that by executing via backticks, the global variable $? is set to a Process::Status object.
-      lines_of_code_from_milestone = `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.lines.last.to_i
+      lines_of_code_from_milestone = `#{deploy_dir('bin', 'count-lines-of-code-from-milestone-logs_v2')}`.lines.last.to_i
       if $?.exited?
         if lines_of_code_from_milestone >= DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
           # If we received a real number (larger than from 2016-01-04) and a proper

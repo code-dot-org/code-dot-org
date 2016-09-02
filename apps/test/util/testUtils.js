@@ -261,3 +261,15 @@ export function throwOnConsoleErrors() {
     console.error.restore();
   });
 }
+
+export function throwOnConsoleWarnings() {
+  before(function () {
+    sinon.stub(console, 'warn', msg => {
+      throw new Error(msg);
+    });
+  });
+
+  after(function () {
+    console.warn.restore();
+  });
+}

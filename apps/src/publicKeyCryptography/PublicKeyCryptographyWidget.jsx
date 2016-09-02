@@ -6,6 +6,7 @@ import Alice from './Alice';
 import Bob from './Bob';
 import Eve from './Eve';
 import ModuloClock from './ModuloClock';
+import WidgetContinueButton from '../templates/WidgetContinueButton';
 
 const style = {
   root: {
@@ -90,6 +91,7 @@ const PublicKeyCryptographyWidget = React.createClass({
           ref={x => this.moduloClock = x}
           modulus={this.state.publicModulus || 1}
         />
+        <WidgetContinueButton/>
       </div>);
   }
 });

@@ -1,3 +1,5 @@
+require 'addressable'
+
 #
 # BucketHelper
 #
@@ -188,6 +190,6 @@ class BucketHelper
   protected
 
   def s3_path(owner_id, channel_id, filename = nil)
-    "#{@base_dir}/#{owner_id}/#{channel_id}/#{filename}"
+    "#{@base_dir}/#{owner_id}/#{channel_id}/#{Addressable::URI.unencode(filename)}"
   end
 end

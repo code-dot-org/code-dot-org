@@ -61,7 +61,7 @@ const AddKeyRow = React.createClass({
             value={this.state.value}
           />
         </td>
-        <td style={dataStyles.buttonCell}>
+        <td style={dataStyles.addButtonCell}>
           <button
             style={dataStyles.blueButton}
             onClick={this.handleAdd}

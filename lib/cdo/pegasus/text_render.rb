@@ -22,7 +22,7 @@ module TextRender
       search_bases << sites_dir(@locals[:request].site, 'images', 'avatars', basename) if @locals.key?(:request)
       search_bases << sites_dir('all', 'images', 'avatars', basename)
 
-      search_extnames = ['.png','.jpeg','.jpg','.gif']
+      search_extnames = ['.png', '.jpeg', '.jpg', '.gif']
 
       path = FileUtility.find_first_existing(String.multiply_concat(search_bases, search_extnames))
       return nil if path.nil?
@@ -40,18 +40,18 @@ module TextRender
 
       search_extnames = ['.haml', '.html', '.md', '.txt']
 
-      path = FileUtility.find_first_existing(String.multiply_concat(search_bases,search_extnames))
+      path = FileUtility.find_first_existing(String.multiply_concat(search_bases, search_extnames))
       return "Partial not found: '#{uri}'" if path.nil?
 
       TextRender.file(path, locals)
     end
   end
 
-  def self.r(engine,template,locals={})
+  def self.r(engine, template, locals={})
     engine.new(template).result(Locals.new(locals).instance_eval{binding})
   end
 
-  def self.f(engine,path,locals={})
+  def self.f(engine, path, locals={})
     r(engine, IO.read(path), locals)
   end
 
@@ -197,7 +197,7 @@ module TextRender
   #
   # General
   #
-  def self.file(path,locals={})
+  def self.file(path, locals={})
     engine = {
       '.haml' => HamlEngine,
       '.html' => ErbEngine,

@@ -18,6 +18,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  processed_at       :datetime
+#  deleted_at         :datetime
 #
 # Indexes
 #
@@ -25,6 +26,8 @@
 #
 
 class Pd::Workshop < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   TYPES = [
     TYPE_PUBLIC = 'Public',
     TYPE_PRIVATE = 'Private',
@@ -74,6 +77,19 @@ class Pd::Workshop < ActiveRecord::Base
     ]
   }
 
+  # Section types by course
+  SECTION_TYPE_MAP = {
+    COURSE_CSF => 'csf_workshop',
+    COURSE_CSP => 'csp_workshop',
+    COURSE_ECS => 'ecs_workshop',
+    COURSE_CS_IN_A => 'csina_workshop',
+    COURSE_CS_IN_S => 'csins_workshop',
+    COURSE_CSD => 'csd_workshop',
+    COURSE_COUNSELOR => 'counselor_workshop',
+    COURSE_ADMIN => 'admin_workshop'
+  }.freeze
+  SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -105,6 +121,10 @@ class Pd::Workshop < ActiveRecord::Base
     unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
     end
+  end
+
+  def section_type
+    SECTION_TYPE_MAP[self.course]
   end
 
   def self.organized_by(organizer)
@@ -154,7 +174,7 @@ class Pd::Workshop < ActiveRecord::Base
     self.section = Section.create!(
       name: friendly_name,
       user_id: self.organizer_id,
-      section_type: Section::TYPE_PD_WORKSHOP
+      section_type: self.section_type
     )
     self.save!
     self.section
@@ -215,7 +235,8 @@ class Pd::Workshop < ActiveRecord::Base
   def send_exit_surveys
     # Update enrollments with resolved users.
     self.enrollments.each do |enrollment|
-      enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
+      # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
+      enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
     end
 
     # Send the emails

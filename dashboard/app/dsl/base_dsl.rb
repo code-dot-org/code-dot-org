@@ -53,7 +53,7 @@ class BaseDSL
 
   def self.boolean(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::Type::Boolean.new.type_cast_from_database(val)
+      instance_variable_set "@#{name}", ActiveModel::Type::Boolean.new.deserialize(val)
     end
   end
 
@@ -65,7 +65,7 @@ class BaseDSL
 
   def self.integer(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::Type::Integer.new.type_cast_from_database(val)
+      instance_variable_set "@#{name}", ActiveModel::Type::Integer.new.deserialize(val)
     end
   end
 end

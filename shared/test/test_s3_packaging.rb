@@ -180,7 +180,7 @@ class S3PackagingTest < Minitest::Test
     end
     @packager.send(:upload_package, package)
     # Stub blank AWS credentials in packager's S3 client
-    @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil,nil)))
+    @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil, nil)))
     downloaded = @packager.send(:download_package)
     assert @packager.send(:packages_equivalent, package, downloaded)
   end
