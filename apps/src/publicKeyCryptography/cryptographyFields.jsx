@@ -1,6 +1,7 @@
 /** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
 import React from 'react';
+import classNames from 'classnames';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
 import {LINE_HEIGHT, COLORS} from './style';
@@ -78,16 +79,18 @@ SecretNumberDropdown.propTypes = {
  * Used by Alice and Bob.
  */
 export function GoButton(props) {
+  const {className, ...rest} = props;
   return (
     <button
-      className="primary"
+      className={classNames('primary', className)}
       style={style.GoButton}
-      {...props}
+      {...rest}
     >
       Go
     </button>);
 }
 GoButton.propTypes = {
+  className: React.PropTypes.string,
   onClick: React.PropTypes.func.isRequired,
   disabled: React.PropTypes.bool
 };

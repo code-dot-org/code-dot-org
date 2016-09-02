@@ -77,6 +77,7 @@ const ModuloClockWidget = React.createClass({
           <div style={style.balancePadding}>&nbsp;</div>
           <LabelBelow label="Enter a number">
             <IntegerTextbox
+              className="dividend-textbox"
               value={dividend}
               disabled={animating}
               onChange={this.onDividendChange}
@@ -85,6 +86,7 @@ const ModuloClockWidget = React.createClass({
           {' MOD '}
           <LabelBelow label="Pick a clock size">
             <IntegerTextbox
+              className="modulus-textbox"
               value={modulus}
               disabled={animating}
               onChange={this.onModulusChange}
@@ -92,6 +94,7 @@ const ModuloClockWidget = React.createClass({
           </LabelBelow>
           {' '}
           <GoButton
+            className="go-button"
             disabled={animating}
             onClick={this.onGoClick}
           />
@@ -103,6 +106,7 @@ const ModuloClockWidget = React.createClass({
         <div style={{textAlign: 'center'}}>
           <LabelBelow label="Speed">
             <IntegerDropdown
+              className="speed-dropdown"
               value={speed}
               options={_.range(1, 10)}
               disabled={animating}
