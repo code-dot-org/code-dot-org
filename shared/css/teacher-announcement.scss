@@ -54,6 +54,10 @@
       line-height: 20px;
       width: 590px;
 
+      a {
+        color: $cyan;
+      }
+
       b {
         font-family: $gotham-bold;
       }
@@ -81,7 +85,6 @@
       width: 900px;
 
       a {
-        text-decoration: none;
         color: $cyan;
       }
 
