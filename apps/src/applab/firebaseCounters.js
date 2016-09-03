@@ -3,6 +3,14 @@
 import Firebase from 'firebase';
 import { loadConfig, getDatabase } from './firebaseUtils';
 
+/**
+ * Ensure that creating the table will not bring this app over the maximum
+ * table count.
+ * @param {Object} config
+ * @param {number} config.maxTableCount The maximum number of tables allowed per app.
+ * @param {string} tableName Table to add.
+ * @returns {Promise}
+ */
 export function enforceTableCount(config, tableName) {
   const tablesRef = getDatabase(Applab.channelId).child(`counters/tables`);
   return tablesRef.once('value').then(snapshot => {
