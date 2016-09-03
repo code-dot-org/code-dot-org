@@ -33,6 +33,10 @@ const Bob = React.createClass({
     };
   },
 
+  startOver() {
+    this.setState(this.getInitialState());
+  },
+
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setSecretNumber(null);
@@ -127,7 +131,13 @@ const Bob = React.createClass({
               />
             </div>
             <div>
-              Your computed <KeywordPublicNumber/> is <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
+              Your computed <KeywordPublicNumber/>
+              {' is '}
+              <IntegerField
+                className="public-number"
+                color={COLORS.publicNumber}
+                value={publicNumber}
+              />
             </div>
           </Step>
         </NumberedSteps>

@@ -4,8 +4,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   setup do
     @organizer = create :workshop_organizer
-    @workshop = create :pd_workshop, organizer: @organizer
-    @workshop.sessions << create(:pd_session)
+    @workshop = create :pd_workshop, organizer: @organizer, num_sessions: 1
     @facilitator = create :facilitator
     @workshop.facilitators << @facilitator
 
@@ -311,6 +310,30 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in create(:teacher)
     post :confirm_join, section_code: @workshop.section.code, pd_enrollment: {email: nil}, school_info: school_info_params
     assert_template :join_section
+  end
+
+  test 'confirm_join for a single-day workshop also marks attendance' do
+    @workshop.start!
+    teacher = create(:teacher)
+    sign_in teacher
+
+    assert_creates Pd::Attendance do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
+    end
+    assert Pd::Attendance.for_workshop(@workshop).for_teacher(teacher).exists?
+  end
+
+  test 'confirm_join for a multi-day workshop does not mark attendance' do
+    @workshop.sessions << create(:pd_session, start: Date.today + 1.day)
+    @workshop.start!
+
+    teacher = create(:teacher)
+    sign_in teacher
+
+    assert_does_not_create Pd::Attendance do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
+    end
+    refute Pd::Attendance.for_workshop(@workshop).for_teacher(teacher).exists?
   end
 
   private

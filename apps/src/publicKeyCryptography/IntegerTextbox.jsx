@@ -4,6 +4,7 @@ import color from '../color';
 
 const IntegerTextbox = React.createClass({
   propTypes: {
+    className: React.PropTypes.string,
     value: React.PropTypes.number,
     disabled: React.PropTypes.bool,
     color: React.PropTypes.string,
@@ -16,7 +17,7 @@ const IntegerTextbox = React.createClass({
   },
 
   render() {
-    let {value, disabled, color: backgroundColor} = this.props;
+    let {className, value, disabled, color: backgroundColor} = this.props;
     if (!Number.isInteger(value)) {
       value = '';
     }
@@ -33,6 +34,7 @@ const IntegerTextbox = React.createClass({
 
     return (
       <input
+        className={className}
         style={style}
         value={value}
         disabled={disabled}
