@@ -95,6 +95,7 @@ def load_configuration
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
+    'firebase_max_table_count'    => 10,
     'firebase_max_table_rows'     => 1000,
     'firebase_max_record_size'    => 4096,
     'firebase_max_property_size'  => 4096,
