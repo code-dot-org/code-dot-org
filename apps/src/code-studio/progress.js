@@ -28,7 +28,9 @@ var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
     currentLevelId, saveAnswersBeforeNavigation) {
-  const store = initializeStoreWithProgress({
+  const store = getStore();
+
+  initializeStoreWithProgress(store, {
     name: scriptName,
     stages: [stageData]
   }, currentLevelId, saveAnswersBeforeNavigation);
@@ -54,7 +56,9 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
  *   dropdown vs. the course progress page
  */
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  const store = initializeStoreWithProgress(scriptData, currentLevelId);
+  const store = getStore();
+  initializeStoreWithProgress(store, scriptData, currentLevelId);
+
   var mountPoint = document.createElement('div');
 
   $.ajax(
@@ -109,16 +113,14 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 };
 
 /**
- * Creates a redux store with our initial progress
+ * Initializes our redux store with initial progress
+ * @param {object} store - Our redux store
  * @param scriptData
  * @param currentLevelId
  * @param saveAnswersBeforeNavigation
- * @returns {object} The created redux store
  */
-function initializeStoreWithProgress(scriptData, currentLevelId,
+function initializeStoreWithProgress(store, scriptData, currentLevelId,
     saveAnswersBeforeNavigation = false) {
-  const store = getStore();
-
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
@@ -140,6 +142,4 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
       clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
     });
   }
-
-  return store;
 }

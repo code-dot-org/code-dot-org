@@ -34,6 +34,10 @@ const Alice = React.createClass({
     };
   },
 
+  startOver() {
+    this.setState(this.getInitialState());
+  },
+
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setPrivateKey(null);
@@ -114,7 +118,11 @@ const Alice = React.createClass({
               onChange={this.onPrivateKeyChange}
               disabled={disabled}
             />
-            <div>Your computed <KeywordPublicKey/> is <IntegerField color={COLORS.publicKey} value={publicKey}/></div>
+            <div>
+              Your computed <KeywordPublicKey/>
+              {' is '}
+              <IntegerField className="public-key" color={COLORS.publicKey} value={publicKey}/>
+            </div>
           </Step>
           <Step requires={[publicModulus, privateKey].every(Number.isInteger)}>
             Enter Bob's <KeywordPublicNumber/>:
@@ -140,7 +148,13 @@ const Alice = React.createClass({
               />
             </div>
             <div>
-              Bob's <KeywordSecretNumber/> is <IntegerField color={COLORS.secretNumber} value={secretNumber}/>!
+              Bob's <KeywordSecretNumber/>
+              {' is '}
+              <IntegerField
+                className="secret-number"
+                color={COLORS.secretNumber}
+                value={secretNumber}
+              />!
             </div>
           </Step>
         </NumberedSteps>
