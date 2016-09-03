@@ -276,6 +276,8 @@
   "unsubmitYourProjectConfirm": "Unsubmitting your project will reset the submitted date, really unsubmit?",
   "showAnswers": "Show answers",
   "showAnswersInstructions": "\"Show answers\" to put the assessment into a read-only mode.",
+  "stageLocked": "Stage is locked.",
+  "stageNotFullyLocked": "Stage is not locked for all.",
   "student": "Student",
   "studentControl": "Individual student control",
   "subtitle": "a visual programming environment",

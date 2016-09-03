@@ -37,6 +37,7 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "first_sprite_index": "0",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If this seems like too much to do, try breaking it down into steps:\\n\\n1)  Have the actor change to a random size on click.\\n2) Play a random sound when you click the actor.\\n\\nNow, make sure both of those actions are attached underneath the same event!\",\r\n  \"hint_id\": \"gradek_playlab_eventsA_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -48,15 +49,9 @@
     <start_blocks>
       <xml>
         <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">0</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">5</title>
-              <title name="DIR">1</title>
-            </block>
-          </next>
+          <title name="SPRITE">2</title>
         </block>
-        <block type="studio_whenSpriteClicked">
+        <block type="studio_whenSpriteClicked" x="250px">
           <title name="SPRITE">4</title>
           <next>
             <block type="studio_move">
@@ -65,7 +60,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteClicked">
+        <block type="studio_whenSpriteClicked" x="250px">
           <title name="SPRITE">1</title>
           <next>
             <block type="studio_move">
@@ -74,7 +69,16 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteClicked">
+        <block type="studio_whenSpriteClicked" x="250px">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">5</title>
+              <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked" x="250px">
           <title name="SPRITE">3</title>
           <next>
             <block type="studio_move">
@@ -82,9 +86,6 @@
               <title name="DIR">2</title>
             </block>
           </next>
-        </block>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">2</title>
         </block>
       </xml>
     </start_blocks>

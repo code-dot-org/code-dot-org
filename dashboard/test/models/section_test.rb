@@ -137,4 +137,28 @@ class SectionTest < ActiveSupport::TestCase
     assert original_section.students.exists?(attendee.id)
     assert new_section.students.exists?(attendee.id)
   end
+
+  test 'section_type validation' do
+    section = create :section
+    section.section_type = 'invalid_section_type'
+
+    refute section.valid?
+    assert_equal 1, section.errors.count
+    assert_equal 'Section type is not included in the list', section.errors.full_messages.first
+
+    section.section_type = Section::TYPES.first
+    assert section.valid?
+
+    section.section_type = nil
+    assert section.valid?
+  end
+
+  test 'workshop_section?' do
+    Pd::Workshop::SECTION_TYPES.each do |type|
+      assert Section.new(section_type: type).workshop_section?
+    end
+
+    refute Section.new.workshop_section?
+    refute Section.new(section_type: 'not_a_workshop').workshop_section?
+  end
 end
