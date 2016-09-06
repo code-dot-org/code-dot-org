@@ -3,7 +3,7 @@ import {assert} from '../util/configuredChai';
 var WordSearch = require('@cdo/apps/maze/wordsearch');
 
 function setGlobals() {
-  document.body.innerHTML = '<svg id="svg"></svg>';
+  document.body.innerHTML = '<svg id="svgMaze"></svg>';
 }
 
 describe("wordsearch: letterValue", function () {
@@ -59,19 +59,25 @@ describe("wordsearch: drawMapTiles", function () {
     // create our fake document
     setGlobals();
 
-    var fakeMaze = undefined;
+    var fakeMaze = {
+      map: map
+    };
     var fakeStudioApp = undefined;
     var fakeConfig = {
       level: {
         searchWord: '',
         map: map
+      },
+      skin: {
+        tiles: 'tiles.png'
       }
     };
 
     var wordSearch = new WordSearch(fakeMaze, fakeStudioApp, fakeConfig);
+    wordSearch.createDrawer();
     // Not currently doing any validation, so mostly just making sure no
     // exceptions are thrown.
-    wordSearch.drawMapTiles(document.getElementById('svg'));
+    wordSearch.drawMapTiles(document.getElementById('svgMaze'));
   });
 
 });

@@ -1,7 +1,4 @@
 import Drawer from './drawer';
-import { cellId } from './mazeUtils';
-import { SVG_NS } from '../constants';
-const SQUARE_SIZE = 50;
 
 export default class HarvesterDrawer extends Drawer {
   constructor(map, skin, subtype) {
@@ -54,7 +51,8 @@ export default class HarvesterDrawer extends Drawer {
     // Counter
     if (running) {
       if (cell.getCurrentValue() > 0) {
-        this.updateCounter(row, col, cell.getCurrentValue());
+        this.updateOrCreateText_('counter', row, col, cell.getCurrentValue());
+        this.show('counter', row, col);
       } else {
         this.hide('counter', row, col);
       }
@@ -62,57 +60,23 @@ export default class HarvesterDrawer extends Drawer {
       if (cell.startsHidden()) {
         this.hide('counter', row, col);
       } else if (variableCell.isVariableRange()) {
-        this.updateCounter(row, col, '?');
+        this.updateOrCreateText_('counter', row, col, '?');
+        this.show('counter', row, col);
       } else {
-        this.updateCounter(row, col, cell.getOriginalValue());
+        this.updateOrCreateText_('counter', row, col, cell.getCurrentValue());
+        this.show('counter', row, col);
       }
     }
   }
 
   hide(prefix, row, col) {
-    var element = document.getElementById(cellId(prefix, row, col));
+    let element = document.getElementById(Drawer.cellId(prefix, row, col));
     if (element) {
       element.setAttribute('visibility', 'hidden');
     }
   }
 
   show(prefix, row, col) {
-    this.updateImageWithIndex_(prefix, row, col);
+    this.drawImage_(prefix, row, col);
   }
-
-  /**
-   * @override
-   */
-  updateCounter(row, col, counterText) {
-    var counterElement = document.getElementById(cellId('counter', row, col));
-    if (!counterElement) {
-      // we want an element, so let's create one
-      counterElement = this.createText('counter', row, col, counterText);
-    }
-    counterElement.firstChild.nodeValue = counterText;
-    counterElement.setAttribute('visibility', 'visible');
-  }
-
-  /**
-   * @override
-   */
-  createText(prefix, row, col, counterText) {
-    var pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    var svg = document.getElementById('svgMaze');
-
-    // Create text.
-    var hPadding = 2;
-    var vPadding = 2;
-    var text = document.createElementNS(SVG_NS, 'text');
-    // Position text just inside the bottom right corner.
-    text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
-    text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
-    text.setAttribute('id', cellId('counter', row, col));
-    text.setAttribute('class', 'bee-counter-text');
-    text.appendChild(document.createTextNode(counterText));
-    svg.insertBefore(text, pegmanElement);
-
-    return text;
-  }
-
 }
