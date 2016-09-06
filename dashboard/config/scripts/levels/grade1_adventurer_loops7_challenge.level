@@ -27,9 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Challenge: The gold goes all the way down these stairs!  Write the code to help me get it all.",
-    "contained_level_names": null,
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out where to put the repeat loops, program it out step-by-step and look for a pattern. \",\r\n  \"hint_id\": \"grade1_adventurer_loops7_challenge_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

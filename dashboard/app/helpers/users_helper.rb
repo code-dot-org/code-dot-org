@@ -140,7 +140,7 @@ module UsersHelper
   # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
   # (though not necessarily correct) answer has been given for each level embedded on a given page.
   def get_pages_completed(user, sl)
-    level = sl.level
+    level = user.last_attempt_for_any(sl.levels).try(:level) || sl.oldest_active_level
 
     if level.is_a? LevelGroup
       pages_completed = []

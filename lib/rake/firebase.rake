@@ -42,7 +42,8 @@ namespace :firebase do
             },
             maxRecordSize: CDO.firebase_max_record_size,
             maxPropertySize: CDO.firebase_max_property_size,
-            maxTableRows: CDO.firebase_max_table_rows
+            maxTableRows: CDO.firebase_max_table_rows,
+            maxTableCount: CDO.firebase_max_table_count
           }
         }
         RakeUtils.system("curl -X PUT -d '#{config.to_json}' '#{url}'")

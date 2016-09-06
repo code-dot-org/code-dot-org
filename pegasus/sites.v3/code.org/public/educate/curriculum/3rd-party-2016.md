@@ -11,8 +11,8 @@ nav: educate_nav
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
-| [Code Studio](/educate/k5)  (Code.org)| 4 courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
-| [Kodable](Kodable.com) | 10 5-lesson modules. Basic Curriculum, FREE, Advanced Curriculum, $5/student, $1250/site | Online or in-person included with student or site plan | 
+| [Code Studio](/educate/k5)  (Code.org)| 4 20-hour courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
+| [Kodable](Kodable.com) | 38 lesson plans that blend online independent practice with "unplugged" activities. 8 Lessons, FREE, Full curriculum, $15/student, $1950/site | Online or in-person PD included for paying schools | 
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
