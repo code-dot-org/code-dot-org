@@ -28,8 +28,44 @@ social:
 - entries << {name: "2-5", text: "2-5"}
 - entries << {name: "6-8", text: "6-8"}
 - entries << {name: "9+", text: "9+"}
-
+-
 - filters << {name: "grade", text: "Grades", entries: entries}
+
+- entries = []
+- entries << {name: "beginner", text: "Beginner"}
+- entries << {name: "comfortable", text: "Comfortable"}
+- entries << {name: "experienced", text: "Experienced"}
+-
+- filters << {name: "teacher_experience", text: "Educator experience", entries: entries}
+
+- entries = []
+- entries << {name: "beginner", text: "Beginner"}
+- entries << {name: "experienced", text: "Experienced"}
+-
+- filters << {name: "student_experience", text: "Student experience", entries: entries}
+
+- entries = []
+- entries << {name: "puzzle", text: "Puzzles"}
+- entries << {name: "open-ended", text: "Open-ended"}
+- entries << {name: "sandbox", text: "Sandbox"}
+- entries << {name: "lesson-plan", text: "Lesson plan"}
+- entries << {name: "unplugged", text: "unplugged"}
+- entries << {name: "maker", text: "Maker"}
+-
+- filters << {name: "activity_type", text: "Activity type", entries: entries}
+
+- entries = []
+- entries << {name: "cs", text: "Computer Science"}
+- entries << {name: "science", text: "Science"}
+- entries << {name: "math", text: "Math"}
+- entries << {name: "history", text: "Social Studies, History"}
+- entries << {name: "la", text: "Language Arts"}
+- entries << {name: "language", text: "World language"}
+- entries << {name: "art", text: "Art, design, media"}
+- entries << {name: "music", text: "Music"}
+- entries << {name: "other", text: "Other"}
+-
+- filters << {name: "subject", text: "Subject", entries: entries}
 
 - entries = []
 - entries << {name: "browser", text: "Cross platform (browsers)"}
@@ -40,8 +76,15 @@ social:
 - entries << {name: "windows", text: "Windows"}
 - entries << {name: "mac", text: "Mac"}
 - entries << {name: "unplugged", text: "None (Unplugged lessons)"}
-
+-
 - filters << {name: "platform", text: "Platform", entries: entries}
+
+- entries = []
+- entries << {name: "1hour", text: "One hour"}
+- entries << {name: "1hour-follow", text: "One hour with follow-on"}
+- entries << {name: "fewhours", text: "A few hours"}
+-
+- filters << {name: "length", text: "Length", entries: entries}
 
 - entries = []
 - entries << {name: "blocks", text: "Blocks"}
@@ -50,7 +93,7 @@ social:
 - entries << {name: "coffeescript", text: "CoffeeScript"}
 - entries << {name: "java", text: "Java"}
 - entries << {name: "c", text: "C/C++"}
-
+-
 - filters << {name: "programming_language", text: "Programming language", entries: entries}
 
 -# = tutorials.contents[0].to_json
