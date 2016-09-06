@@ -302,7 +302,7 @@ end
 
 # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
 parallel_config = ENV['CI'] ? {:in_threads => $options.parallel_limit} : {:in_processes => $options.parallel_limit}
-Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
+run_results = Parallel.map(lambda { browser_features.pop || Parallel::Stop }, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
 
@@ -534,7 +534,9 @@ EOS
   end
 
   [succeeded, message, reruns]
-end.each do |succeeded, message, reruns|
+end
+
+run_results.each do |succeeded, message, reruns|
   $total_flaky_reruns += reruns
   if succeeded
     $suite_success_count += 1
