@@ -38,6 +38,7 @@
   "published": true,
   "notes": "Replaces the kite level that required turning in the beginning with one in which the artist is facing the right way.  Swapped in on 7/26 - Ryan",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

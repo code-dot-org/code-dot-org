@@ -37,6 +37,7 @@
   "published": true,
   "notes": "This was created to replace 2-3 Artist 9 and to test the level-swapping feature. The original had bad fun-o-meter scores and low completion stats.",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>
