@@ -14,7 +14,7 @@ mysql_defaults: &mysql_defaults
   pool_adapter: mysql2
   encoding: utf8
   collation: utf8_unicode_ci
-  pool: 10
+  pool: 5
   master:
     username: <%= writer.user || 'root' %>
     password: <%= writer.password || '' %>
@@ -57,7 +57,7 @@ test:
   username: <%= writer.user || 'root' %>
   password: <%= writer.password || '' %>
   host: 'localhost'
-  pool: 5
+  pool: <%= ENV['CI'] ? 10 : 5 %>
   database: 'dashboard_test'
 
 production:
