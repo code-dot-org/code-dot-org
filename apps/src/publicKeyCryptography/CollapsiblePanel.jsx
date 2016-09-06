@@ -49,7 +49,7 @@ const CollapsiblePanel = React.createClass({
     };
 
     return (
-      <div>
+      <div className={`panel-${this.props.title.toLowerCase().replace(/\s+/g, '-')}`}>
         <div style={style.header} onClick={this.onHeaderClick}>
           <FontAwesome icon="chevron-circle-down" className="fa-fw" style={chevronStyle} />
           {this.props.title}

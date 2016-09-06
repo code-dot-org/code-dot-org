@@ -137,7 +137,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           },
           maxRecordSize: 100,
           maxPropertySize: 100,
-          maxTableRows: 20
+          maxTableRows: 20,
+          maxTableCount: 10,
         });
         timeout = 500;
       }
