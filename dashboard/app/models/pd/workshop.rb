@@ -77,6 +77,19 @@ class Pd::Workshop < ActiveRecord::Base
     ]
   }
 
+  # Section types by course
+  SECTION_TYPE_MAP = {
+    COURSE_CSF => 'csf_workshop',
+    COURSE_CSP => 'csp_workshop',
+    COURSE_ECS => 'ecs_workshop',
+    COURSE_CS_IN_A => 'csina_workshop',
+    COURSE_CS_IN_S => 'csins_workshop',
+    COURSE_CSD => 'csd_workshop',
+    COURSE_COUNSELOR => 'counselor_workshop',
+    COURSE_ADMIN => 'admin_workshop'
+  }.freeze
+  SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -108,6 +121,10 @@ class Pd::Workshop < ActiveRecord::Base
     unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
     end
+  end
+
+  def section_type
+    SECTION_TYPE_MAP[self.course]
   end
 
   def self.organized_by(organizer)
@@ -157,7 +174,7 @@ class Pd::Workshop < ActiveRecord::Base
     self.section = Section.create!(
       name: friendly_name,
       user_id: self.organizer_id,
-      section_type: Section::TYPE_PD_WORKSHOP
+      section_type: self.section_type
     )
     self.save!
     self.section

@@ -26,6 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Use the \\\"Step\\\" button to go through the program block-by-block. Do you see where it goes wrong?\",\r\n  \"hint_id\": \"grade2_CaringForNewPet_3D_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -38,16 +39,16 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
+            <block type="maze_moveForward" deletable="false">
               <next>
-                <block type="maze_moveForward">
+                <block type="maze_moveForward" deletable="false">
                   <next>
                     <block type="maze_turn">
                       <title name="DIR">turnRight</title>
                       <next>
-                        <block type="maze_moveForward">
+                        <block type="maze_moveForward" deletable="false">
                           <next>
-                            <block type="maze_moveForward"/>
+                            <block type="maze_moveForward" deletable="false"/>
                           </next>
                         </block>
                       </next>
