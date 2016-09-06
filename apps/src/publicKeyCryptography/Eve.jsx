@@ -47,6 +47,10 @@ const Eve = React.createClass({
     };
   },
 
+  startOver() {
+    this.setState(this.getInitialState());
+  },
+
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
   },
@@ -208,6 +212,7 @@ const Eve = React.createClass({
                     {' = '}
                     <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
                     <ValidatorField
+                      className="secret-number-validator"
                       value={secretNumberEquationResult}
                       expectedValue={publicNumber}
                       shouldEvaluate={!checkingSecretNumber}

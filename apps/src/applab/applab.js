@@ -829,9 +829,8 @@ function setupReduxSubscribers(store) {
 
   if (store.getState().pageConstants.hasDataMode) {
     // Initialize redux's list of tables from firebase, and keep it up to date as
-    // new tables are added and removed. This strategy reads all existing table
-    // data only once.
-    const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+    // new tables are added and removed.
+    const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
     tablesRef.on('child_added', snapshot => {
       store.dispatch(addTableName(snapshot.key()));
     });
