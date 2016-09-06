@@ -33,8 +33,8 @@
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Remember to use a `repeat` loop for better code!\",\r\n  \"hint_id\": \"grade1_artist_loops2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "ideal": "3",
-    "contained_level_names": null,
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade1_artist_loops2_1\",\r\n  \"callout_text\": \"There is only one of these blocks in the toolbox.  How will you use it?\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 10,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade1_artist_loops2_1\",\r\n  \"callout_text\": \"There is only one of these blocks in the toolbox.  How will you use it?\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 10,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

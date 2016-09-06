@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
-#
+
 # This script incrementally populates the pegasus form_geos table using
-# geolocation of the existing ip_address.
+# geolocation of the ip_address.
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'active_support'
+require 'active_support/core_ext/object/blank'
 require 'cdo/db'
 require 'cdo/geocoder'
 
@@ -11,7 +13,7 @@ BATCH_SIZE = 1000
 
 def main
   time_now = DateTime.now
-  to_geolocate = PEGASUS_DB[:form_geos].where(indexed_at: nil).limit(BATCH_SZE)
+  to_geolocate = PEGASUS_DB[:form_geos].where(indexed_at: nil).limit(BATCH_SIZE)
 
   to_geolocate.each do |form_geo|
     location = Geocoder.search(form_geo[:ip_address]).first

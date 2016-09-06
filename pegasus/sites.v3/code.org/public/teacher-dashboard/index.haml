@@ -492,7 +492,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.getStayEnrolledInCurrentSection = function() {
-      if ($scope.selectedSectionCode == $scope.manuallySelectedSectionCode) {
+      if ($scope.selectedSectionCode == $scope.otherTeacher) {
         return $scope.stayEnrolledInCurrentSection;
       } else {
         return false;

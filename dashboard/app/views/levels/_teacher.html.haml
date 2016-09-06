@@ -81,11 +81,11 @@
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - user_level = student.user_level_for(@script_level, @level)
+                - user_level = student.last_attempt_for_any(@script_level.levels)
                 - status = activity_css_class(user_level)
                 %td
                   .level_link{class: status}
-                    - if @level.unplugged?
+                    - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
                       %span.puzzle-named
                         Unplugged
                     - elsif status == 'passed' || status == 'perfect'

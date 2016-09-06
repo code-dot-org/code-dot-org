@@ -81,8 +81,9 @@ class ScriptDSL < BaseDSL
 
   string :prompt
 
-  def assessment(name)
-    level(name, {assessment: true})
+  def assessment(name, properties = {})
+    properties[:assessment] = true
+    level(name, properties)
   end
 
   def named_level(name)

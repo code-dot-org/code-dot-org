@@ -32,8 +32,8 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "contained_level_names": null,
-    "ideal": "4"
+    "ideal": "4",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
