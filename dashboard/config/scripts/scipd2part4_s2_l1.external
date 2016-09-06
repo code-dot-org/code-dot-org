@@ -5,7 +5,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Model Observation
 
-<img src="https://doc-08-8g-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/4o7lc9t9v62tq0b79226qlbdk8o7mfrm/1472421600000/15672831278833080076/*/0B-e9VtHzCjSHSm1hbVR6bWdVOVU" width="600px">  
+<img src="https://s17.postimg.io/c4u1op0of/mysterymodel.png" class="level-image">  
 
 <br>
 <br>
@@ -15,19 +15,20 @@ On the next page you will be given a link to a Mystery Model in StarLogo Nova.
 Access the Model Observation Form <a href="https://docs.google.com/document/d/1yf7spad-dRGijwdbAvAOwTFfaADdww4U1vk2qrC9HSI/edit?usp=sharing"> HERE </a> and make a copy to add to your own Google Drive.  You will be using the form to--you guessed it--make observations of the Mystery Model.  Later, you will be asked to share your Model Observation Form on our forum.
 
 <br>
-<br>
 
-There are a few things to make sure you do in order to get the most out of the experience:
+<b>There are a few things to make sure you do in order to get the most out of the experience:</b>
 
 ## Quick Guide to Exploring the Mystery Model
 
 1. Don't look at the code (yet)!  You will have an opportunity to do this later--after you have formed predictions.
 2. Change the slider values--what happens when you change just one value?  What happens when you change them all? Play around    with it!
 3. Run the model several times with the different slider values.  The more you run it, the more info you'll have!
-4. Observe the agents, the World, and the databoxes.  Looking at it from all angles will give you a bigger picture.
+4. Observe the agents, the World, and the data-boxes.  Looking at it from all angles will give you a bigger picture.
 5. Don't be afraid to be wrong--making mistakes at this phase in encouraged!  
 
 You can also download a Microsoft Word version of the Model Observation form, and other forms, from the Project GUTS DropBox folder <a href="https://www.dropbox.com/sh/agw766n18ruft8a/AADtnFH48iZGVeseaSEQUZxNa?dl=0"> HERE</a>.
+
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
