@@ -27,9 +27,9 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Challenge: Try this staircase now! It has an extra spike at the end you'll have to climb.",
-    "contained_level_names": null,
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Can you find a pattern in the steps?  Where can you use a repeat?\",\r\n  \"hint_id\": \"grade1_adventurer_loops8_challenge_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "ideal": "10"
+    "ideal": "10",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
