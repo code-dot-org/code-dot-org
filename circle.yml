@@ -21,8 +21,6 @@ checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) bundle install --without '' ;; esac:
         parallel: true
-    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/test-add-circle-github-pr-comment ;; esac:
-        parallel: true
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; esac:
         parallel: true
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-base ;; esac:

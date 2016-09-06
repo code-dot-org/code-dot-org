@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../../lib/cdo/circle_github_utils'
-
-# TODO(bjordan): Remove!
-CircleGitHubUtils.add_current_pr_comment('@bcjordan @islemaster ahoy! Testing comment from CircleCI. :tada:')
-
-exit(0)
