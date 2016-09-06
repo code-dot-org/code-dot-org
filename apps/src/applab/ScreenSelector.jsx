@@ -86,6 +86,7 @@ var ScreenSelector = React.createClass({
         {options}
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
         {experiments.isEnabled('applab-import') &&
+         canAddScreen &&
          <option>{constants.IMPORT_SCREEN}</option>}
       </select>
     );
