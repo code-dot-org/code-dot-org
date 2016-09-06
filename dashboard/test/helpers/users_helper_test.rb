@@ -268,7 +268,8 @@ class UsersHelperTest < ActionView::TestCase
       101 => {
         status: 'perfect',
         result: ActivityConstants::BEST_PASS_RESULT,
-        pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
+        pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]
+      },
       "101_0" => {result: ActivityConstants::FREE_PLAY_RESULT},
       "101_1" => {}
     }
