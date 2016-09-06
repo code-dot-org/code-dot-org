@@ -158,7 +158,7 @@ class ActivitiesController < ApplicationController
       @new_level_completed = current_user.track_level_progress_async(
         script_level: @script_level,
         new_result: test_result,
-        submitted: params[:submitted],
+        submitted: params[:submitted] == "true",
         level_source_id: @level_source.try(:id),
         level: @level,
         pairings: pairings
