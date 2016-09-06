@@ -873,10 +873,11 @@
   dashboard_faq: Frequently Asked Questions
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
-  dashboard_announce_message: Want to help us test a new feature? We know it’s important
-    to encourage students to iterate and experiment, so we'll be adding an "unused
-    code" feature to allow students to run their code even when there are unattached
-    blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
+    announcing a one month period to review changes to our privacy policy and to provide
+    feedback. The biggest change is a redesigned login that enables us to delete all
+    email addresses for Code Studio student accounts. The other big change involves
+    access to our app-creation tools."
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -1013,11 +1014,11 @@
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
@@ -1731,3 +1732,11 @@
   playlab_shortcode: "Пушти"
   artist_shortcode: art
   dashboard_action_print_certificates: Print certificates
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
