@@ -27,9 +27,9 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Help me get all of the gold from this cave.",
-    "contained_level_names": null,
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You'll need three `repeat` loops to solve this puzzle.\",\r\n  \"hint_id\": \"grade1_adventurer_loops10_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "ideal": "10"
+    "ideal": "10",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

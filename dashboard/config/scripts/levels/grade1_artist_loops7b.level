@@ -32,8 +32,8 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"How many times should you repeat the pattern to make the ladder?\",\r\n  \"hint_id\": \"grade1_artist_loops7b_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "ideal": "6"
+    "ideal": "6",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -26,10 +26,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
     "markdown_instructions": "**Challenge:** Guide me to the green evilness! (Watch out for TNT)",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You don't have to code the whole solution at once!  Try running the code as you go to make sure it works at each step.\",\r\n  \"hint_id\": \"grade2_CaringForNewPet_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
