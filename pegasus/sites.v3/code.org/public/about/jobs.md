@@ -1,9 +1,33 @@
 ---
 title: Jobs at Code.org
 nav: about_nav
+video_player: true
 ---
 
 # Job Openings at Code.org
+
+[col-50]
+
+<% facebook = {:u=>'https://www.youtube.com/watch?t=66&v=mTGSiB4kB18'} %>
+<% twitter = {:url=>'https://www.youtube.com/watch?t=66&v=mTGSiB4kB18', :related=>'codeorg', :text=>'Anybody can learn computer science @codeorg #CSforAll'} %>
+
+<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false" %>
+
+[/col-50]
+
+[col-50]
+
+<div style="margin-left: 20px;">
+
+Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra. Join our team to help make this a reality.
+
+</div>
+
+[/col-50]
+
+<div style="clear: both;"></div>
+
+<br/>
 
 **We are currently hiring for:**
 
