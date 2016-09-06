@@ -27,9 +27,9 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Help me get the gold from this deep valley.",
-    "contained_level_names": null,
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Does this seem too hard?  Break it up into 4 little problems to make it feel easier.\\n\",\r\n  \"hint_id\": \"grade1_adventurer_loops9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "ideal": "12"
+    "ideal": "12",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

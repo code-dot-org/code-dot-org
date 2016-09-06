@@ -26,9 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Don't forget to use the \\\"Step\\\" button to go through block by block and look for errors.\",\r\n  \"hint_id\": \"grade2_CaringForNewPet_7D_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
