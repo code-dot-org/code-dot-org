@@ -1,7 +1,7 @@
 <FreeResponse>
   <config><![CDATA[{
   "game_id": 52,
-  "created_at": "2016-08-30T13:12:05.989Z",
+  "created_at": "2016-08-30T13:12:05.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -13,6 +13,8 @@
     "skip_sound": true
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

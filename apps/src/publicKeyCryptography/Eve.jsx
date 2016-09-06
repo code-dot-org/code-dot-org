@@ -2,7 +2,7 @@
 import React from 'react';
 import color from '../color';
 import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps from './NumberedSteps';
+import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
 import ValidatorField from './ValidatorField';
@@ -45,6 +45,10 @@ const Eve = React.createClass({
       checkingSecretNumber: false,
       secretNumberEquationResult: null
     };
+  },
+
+  startOver() {
+    this.setState(this.getInitialState());
   },
 
   setPublicModulus(publicModulus) {
@@ -127,15 +131,15 @@ const Eve = React.createClass({
     return (
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
-          <div>
+          <Step>
             Set a <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
               disabled={disabled}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
             Enter Alice's <KeywordPublicKey/>:
             <IntegerTextbox
               value={publicKey}
@@ -143,8 +147,8 @@ const Eve = React.createClass({
               disabled={disabled}
               color={COLORS.publicKey}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
             Crack Alice's <KeywordPrivateKey/>:
             <PrivateKeyDropdown
               publicModulus={publicModulus}
@@ -175,8 +179,8 @@ const Eve = React.createClass({
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
             Enter Bob's <KeywordPublicNumber/>:
             <IntegerTextbox
               value={publicNumber}
@@ -184,8 +188,8 @@ const Eve = React.createClass({
               disabled={disabled}
               color={COLORS.publicNumber}
             />
-          </div>
-          <div>
+          </Step>
+          <Step requires={[publicModulus, publicKey, publicNumber].every(Number.isInteger)}>
             Crack Bob's <KeywordSecretNumber/>:
             <SecretNumberDropdown
               value={secretNumber}
@@ -208,6 +212,7 @@ const Eve = React.createClass({
                     {' = '}
                     <IntegerField color={COLORS.publicNumber} value={publicNumber}/>
                     <ValidatorField
+                      className="secret-number-validator"
                       value={secretNumberEquationResult}
                       expectedValue={publicNumber}
                       shouldEvaluate={!checkingSecretNumber}
@@ -216,7 +221,7 @@ const Eve = React.createClass({
                 </tr>
               </tbody>
             </table>
-          </div>
+          </Step>
         </NumberedSteps>
       </CollapsiblePanel>);
   }

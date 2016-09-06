@@ -70,17 +70,22 @@
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
         - if current_user.sections.many?
           = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
+          - if @section && @script_level.stage.lockable?
+            %div{:style => "margin: 10px"}
+              #stage-locked-text
+              %div
+              = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
       - if @section
         .scrollable-wrapper
           %table.section-students
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - user_level = student.user_level_for(@script_level, @level)
+                - user_level = student.last_attempt_for_any(@script_level.levels)
                 - status = activity_css_class(user_level)
                 %td
                   .level_link{class: status}
-                    - if @level.unplugged?
+                    - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
                       %span.puzzle-named
                         Unplugged
                     - elsif status == 'passed' || status == 'perfect'

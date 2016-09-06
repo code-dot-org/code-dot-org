@@ -146,6 +146,12 @@ en:
         title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD U1 Input Output C1:
+        Challenge 1: Challenge 1
+        description here: description here
+      CSD U1 Input Output C2:
+        description here: description here
+        title: title
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -204,6 +210,9 @@ en:
       CSP U4 - Basic Terms: {}
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
+        description here: description here
+      CSP assessment Hex interstitial:
+        Hexadecimal: Hexadecimal
         description here: description here
       CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
@@ -2011,6 +2020,7 @@ en:
       name:
         CSP Culminating Assessment: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
@@ -3106,29 +3116,132 @@ en:
         <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
         <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
         <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
-      CB_Question_1: {}
-      CB_Question_10: {}
-      CB_Question_11: {}
-      CB_Question_12: {}
-      CB_Question_13: {}
-      CB_Question_14: {}
-      CB_Question_15: {}
-      CB_Question_16: {}
-      CB_Question_17: {}
-      CB_Question_18: {}
-      CB_Question_19: {}
-      CB_Question_2: {}
-      CB_Question_20: {}
-      CB_Question_21: {}
-      CB_Question_22: {}
-      CB_Question_3: {}
-      CB_Question_4: {}
-      CB_Question_5: {}
-      CB_Question_6: {}
-      CB_Question_7: {}
-      CB_Question_8: {}
-      CB_Question_9: {}
-      CPS Unit2 Ch 1 MC lossless compression: {}
+      CB_Question_1:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
+      CB_Question_10:
+        Better late than never.: Better late than never.
+        Hello. Better late than never.: Hello. Better late than never.
+        Hello. Is anyone there?: Hello. Is anyone there?
+        Is anyone there?: Is anyone there?
+      CB_Question_11:
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+      CB_Question_12:
+        I and II: I and II
+        I only: I only
+        II only: II only
+        Neither I nor II: Neither I nor II
+      CB_Question_13:
+        Algorithm A always calculates the correct average, but Algorithm B does not.: Algorithm A always calculates the correct average, but Algorithm B does not.
+        Algorithm B always calculates the correct average, but Algorithm A does not.: Algorithm B always calculates the correct average, but Algorithm A does not.
+        Both Algorithm A and Algorithm B always calculate the correct average.: Both Algorithm A and Algorithm B always calculate the correct average.
+        Neither Algorithm A nor Algorithm B calculates the correct average.: Neither Algorithm A nor Algorithm B calculates the correct average.
+      CB_Question_14:
+        <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">: <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">
+        <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">: <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">
+        <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">: <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">
+        <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">: <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">
+      CB_Question_15:
+        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
+        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
+        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
+        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
+      CB_Question_16:
+        <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">: <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">
+        <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">: <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">
+        <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">: <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">
+        <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">: <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">
+      CB_Question_17:
+        Nothing is displayed; the program results in an infinite loop.: Nothing is displayed; the program results in an infinite loop.
+        The number 0 is displayed.: The number 0 is displayed.
+        The number 10 is displayed.: The number 10 is displayed.
+        The number 6 is displayed.: The number 6 is displayed.
+      CB_Question_18:
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+      CB_Question_19:
+        "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
+        "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
+        "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
+        "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+      CB_Question_2:
+        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+      CB_Question_20:
+        about.example.com: about.example.com
+        example.co.uk: example.co.uk
+        example.com.org: example.com.org
+        example.org: example.org
+      CB_Question_21:
+        An algorithm that, given a list of integers, displays only the negative integers in the list: An algorithm that, given a list of integers, displays only the negative integers in the list
+        An algorithm that, given a list of integers, displays the number of even integers in the list: An algorithm that, given a list of integers, displays the number of even integers in the list
+        An algorithm that, given a list of integers, displays the sum of the integers in the list: An algorithm that, given a list of integers, displays the sum of the integers in the list
+        An algorithm that, given two integers, displays the greater of the two integers: An algorithm that, given two integers, displays the greater of the two integers
+      CB_Question_22:
+        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>
+        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
+        <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
+        <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
+      CB_Question_3:
+        A: A
+        L: L
+        V: V
+        Y: Y
+      CB_Question_3update:
+        'ASCII Character: <code> A </code>': 'ASCII Character: <code> A </code>'
+        'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
+        'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
+        The table does not contain the value represented by the binary number <code>0100  0010</code>: The table does not contain the value represented by the binary number <code>0100  0010</code>
+      CB_Question_4:
+        Input A can be either true or false: Input A can be either true or false
+        Input A must be false: Input A must be false
+        Input A must be true: Input A must be true
+        There is no possible value of input A that will cause the circuit to have the output true.: There is no possible value of input A that will cause the circuit to have the output true.
+      CB_Question_5:
+        <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">: <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">
+        <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">: <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">
+        <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">: <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">
+        <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">: <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">
+      CB_Question_6:
+        Computer simulations can only be built after the real-world object or system has been created.: Computer simulations can only be built after the real-world object or system has been created.
+        Computer simulations only run on very powerful computers that are not available to the public.: Computer simulations only run on very powerful computers that are not available to the public.
+        Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.: Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.
+        It is difficult to change input parameters or conditions when using computer simulations.: It is difficult to change input parameters or conditions when using computer simulations.
+      CB_Question_7:
+        To determine the time of day that the site is most active: To determine the time of day that the site is most active
+        To determine the topics that many users are posting about: To determine the topics that many users are posting about
+        To determine the users who post messages most frequently: To determine the users who post messages most frequently
+        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
+      CB_Question_8:
+        <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">: <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">
+        <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">: <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">
+        <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">: <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">
+        <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">: <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">
+      CB_Question_9:
+        Backing up data: Backing up data
+        Deleting entries from data: Deleting entries from data
+        Searching through data: Searching through data
+        Sorting data: Sorting data
+      CPS Unit2 Ch 1 MC lossless compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossy compression:
         " ": " "
         Compression: Compression
@@ -3436,30 +3549,15 @@ en:
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
       CSPFinal_Question_8update:
-        'BIN: 10001, BIN: 00001, BIN: 1110': 'BIN: 10001, BIN: 00001, BIN: 1110'
-        'BIN: 10001, BIN: 1110, BIN: 00001': 'BIN: 10001, BIN: 1110, BIN: 00001'
-        'BIN: 1110, BIN: 00001, BIN: 10001': 'BIN: 1110, BIN: 00001, BIN: 10001'
-        'BIN: 1110, BIN: 10001, BIN: 00001': 'BIN: 1110, BIN: 10001, BIN: 00001'
-        ? |-
-          Consider the following numbers given in Binary (BIN) representations:
-
-          BIN: 1110
-
-          BIN: 00001
-
-          BIN: 10001
-
-          Which of the following lists the numbers in order from least to greatest?
-        : |-
-          Consider the following numbers given in Binary (BIN) representations:
-
-          BIN: 1110
-
-          BIN: 00001
-
-          BIN: 10001
-
-          Which of the following lists the numbers in order from least to greatest?
+        " ": " "
+        ? 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+        : 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+        ? 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+        : 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+        ? 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+        : 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+        ? 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
+        : 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -3469,6 +3567,14 @@ en:
         : Hexadecimal is used to represent digital data because hexadecimal representation uses only 1 digit to represent groups of 4 binary digits.
         ? 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
         : 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
+      CSPFinal_Question_9update:
+        ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
+        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
       CSPPD2 pixel video 1:
         How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
         four: four

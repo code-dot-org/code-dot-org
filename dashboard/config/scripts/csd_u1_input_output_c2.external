@@ -1,0 +1,105 @@
+name 'CSD U1 Input Output C2'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Challenge 2
+
+
+This app addresses the problem of someone’s cell phone ringing in class.  It should be able to figure out when the phone is at a school, and turn the ringer off during that time, but turn it back on when the user leaves school.
+
+Look at the possible information that you can input to your app, and decide which ones your app needs to work.  Remember, you can use the phone to get information that is specific to the user, and use the Internet to get general information about the world.
+
+Once you have the information that you need as input, decide what your app will output.
+
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the phone</summary>
+<div style="margin: 3px 15px;">
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Sensor Input</summary>
+<div style="margin: 3px 15px;">
+Here are some phone sensors that your program can use to get input.
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Microphone</summary>
+There is a lot of loud talking in the environment.
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Location (GPS)</summary>
+B, 2
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Motion Senson</summary>
+The phone is moving quickly.
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Camera</summary>
+The image from the camera is all black.
+</details>
+</div>
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">User Input</summary>
+<div style="margin: 3px 15px;">
+Here is some information that the user can input.
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Name</summary>
+Arik
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">School Mascot</summary>
+Tiger</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Grade Level</summary>
+8th grade
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Class</summary>
+Science
+</details>
+</div>
+</details>
+</div>
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the Internet</summary>
+<div style="margin: 3px 15px;">
+Here is some information that the program can get from the Internet.
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Locations of Schools in the Area</summary>
+3rd Street Elementary School: D, 3<br />
+Edison Middle School: B, 2<br />
+City High School: A, 5<br />
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">List of Major Holidays</summary>
+New Year's Day<br />
+Martin Luther King Day<br />
+President's Day<br />
+Memorial Day<br />
+Independence Day<br />
+Labor Day<br />
+Veterans Day<br />
+Thanksgiving<br />
+Christmas<br />
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Temperature Anywhere in the World</summary>
+Shanghai: 77F<br />
+Adelaide: 54F<br />
+Paris: 75F<br />
+Cairo: 79F<br />
+Buenos Aires: 52F<br />
+Boston: 66F<br />
+Vancouver: 63F<br />
+Guam: 84F<br />
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Phone Numbers of Schools in the Area</summary>
+3rd Street Elementary School: 123-123-1234<br />
+Edison Middle School: 123-123-4321<br />
+City High School: 123-123-7890<br />
+</details>
+</div>	
+</details>
+
+MARKDOWN

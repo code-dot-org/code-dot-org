@@ -1,6 +1,7 @@
 /** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
 import React from 'react';
+import classNames from 'classnames';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
 import {LINE_HEIGHT, COLORS} from './style';
@@ -25,6 +26,7 @@ export function PrivateKeyDropdown(props) {
   const {publicModulus, ...rest} = props;
   return (
     <IntegerDropdown
+      className="private-key-dropdown"
       options={privateKeyList(publicModulus)}
       style={{backgroundColor: COLORS.privateKey}}
       {...rest}
@@ -43,6 +45,7 @@ PrivateKeyDropdown.propTypes = {
 export function PublicModulusDropdown(props) {
   return (
     <IntegerDropdown
+      className="public-modulus-dropdown"
       options={primesInRange(3, 10000)}
       style={{backgroundColor: COLORS.publicModulus}}
       {...props}
@@ -62,6 +65,7 @@ export function SecretNumberDropdown(props) {
   const {publicModulus, ...rest} = props;
   return (
     <IntegerDropdown
+      className="secret-number-dropdown"
       options={_.range(0, publicModulus)}
       style={{backgroundColor: COLORS.secretNumber}}
       {...rest}
@@ -78,16 +82,18 @@ SecretNumberDropdown.propTypes = {
  * Used by Alice and Bob.
  */
 export function GoButton(props) {
+  const {className, ...rest} = props;
   return (
     <button
-      className="primary"
+      className={classNames('primary', className)}
       style={style.GoButton}
-      {...props}
+      {...rest}
     >
       Go
     </button>);
 }
 GoButton.propTypes = {
+  className: React.PropTypes.string,
   onClick: React.PropTypes.func.isRequired,
   disabled: React.PropTypes.bool
 };
