@@ -235,7 +235,7 @@ function loadLevel() {
   blocks.registerCustomGameLogic(Studio.customLogic);
 
   // Custom game logic doesn't work yet in the interpreter.
-  Studio.legacyRuntime = Studio.customLogic;
+  Studio.legacyRuntime = !!Studio.customLogic;
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
