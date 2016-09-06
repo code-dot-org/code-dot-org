@@ -70,7 +70,7 @@ group :development, :test do
   gem 'fakeredis', require: false
 
   # for ui testing
-  gem 'cucumber'
+  gem 'cucumber', '~> 2.0.2'
   gem 'selenium-webdriver', '~> 2.45.0'
   gem 'net-http-persistent'
   gem 'rspec'
@@ -125,8 +125,8 @@ gem 'cancancan', '~> 1.15.0'
 gem 'omniauth-facebook', '~> 4.0.0.rc1'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
 gem 'omniauth-windowslive', '~> 0.0.10'
-# Ref: https://github.com/Clever/omniauth-clever/pull/4
-gem 'omniauth-clever', '~> 1.2.1', github: 'wjordan/omniauth-clever'
+# Ref: https://github.com/Clever/omniauth-clever/pull/7
+gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 
