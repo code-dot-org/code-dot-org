@@ -58,11 +58,8 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div>
-          <div style={{position: 'fixed'}}>
-            {this.props.filterGroups.map(item => <FilterGroup name={item.name} text={item.text} filterEntries={item.entries} onUserInput={this.props.onUserInput} selection={this.props.selection[item.name]} key={item.name}/>)}
-          </div>
           <div className='col-25'>
-            &nbsp;
+            {this.props.filterGroups.map(item => <FilterGroup name={item.name} text={item.text} filterEntries={item.entries} onUserInput={this.props.onUserInput} selection={this.props.selection[item.name]} key={item.name}/>)}
           </div>
         </div>
       )
@@ -100,8 +97,9 @@ window.TutorialExplorerManager = function (options) {
         // No filters set for a category, then show everything that might match.
         // Tutorial has no tags, then it'll show.
         // But if we actually have filters for a category, and the tutorial does too,
-        // then each filter must have a tag.
-        // If there are any misses, then the tutorial is hidden.
+        // then at least one filter must have a tag.
+        //   e.g. if the user chooses two platforms, then at least one of the
+        //   platforms must match the tutorial.
 
       function filterFn(tutorial, index, array) {
         //console.log("filterFn", tutorial, index, this.props.filters);
