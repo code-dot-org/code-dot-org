@@ -1,0 +1,85 @@
+name 'CSD U1 Input Output C1'
+title 'Challenge 1'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Challenge 1
+
+
+This piece of software tells you whether or not it’s Halloween.
+
+Look at the possible information that you can input to your app, and decide which ones your app needs to work.  Remember, you can use the phone to get information that is specific to the user, and use the Internet to get general information about the world.
+
+Once you have the information that you need as input, decide what your app will output.
+
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the phone</summary>
+<div style="margin: 3px 15px;">
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Sensor Input</summary>
+<div style="margin: 3px 15px;">
+Here are some phone sensors that your program can use to get input.
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Date (Clock)</summary>
+September 5
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Location (GPS)</summary>
+A, 3
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Light Sensor</summary>
+Very bright
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Motion Sensor</summary>
+Not moving
+</details>
+</div>
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">User Input</summary>
+<div style="margin: 3px 15px;">
+Here is some information that the user can input.
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Birthday</summary>
+January 7
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Holiday</summary>
+St. Patrick's Day</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Flavor of Ice Cream</summary>
+Neopolitan
+</details>
+</div>
+</details>
+</div>
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the Internet</summary>
+<div style="margin: 3px 15px;">
+Here is some information that the program can get from the Internet.
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Date of Halloween</summary>
+October 31
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Temperature Anywhere in the World</summary>
+Shanghai: 77F<br />
+Adelaide: 54F<br />
+Paris: 75F<br />
+Cairo: 79F<br />
+Buenos Aires: 52F<br />
+Boston: 66F<br />
+Vancouver: 63F<br />
+Guam: 84F<br />
+</details>
+<details>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Most Popular Song This Week</summary>
+"Closer"
+</details>
+</div>	
+</details>
+
+MARKDOWN
