@@ -28,7 +28,9 @@
       "rect": null,
       "fill": null,
       "draw": null,
-      "color": null
+      "color": null,
+      "addOperator": null,
+      "subtractOperator": null
     },
     "show_d_pad": "false",
     "edit_code": true,
@@ -57,6 +59,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
+    "hide_animation_mode": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

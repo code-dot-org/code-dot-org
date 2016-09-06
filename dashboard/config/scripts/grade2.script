@@ -20,10 +20,12 @@ level 'blockly:Jigsaw:12'
 #stage 'Build A Block'
 #level 'grade2_unplugged_buildAblock'
 
-stage 'Caring for My New Pet'
-level 'grade2_unplugged_rlAlgorithms'
+stage 'Exploring the Neighborhood'
+level 'grade2_unplugged_neighborhood'
+
 
 stage 'New Home for My Pet'
+level 'grade2_maze_debuggingPre'
 level 'grade2_CaringForNewPet_0'
 level 'grade2_CaringForNewPet_1'
 level 'grade2_CaringForNewPet_2'
@@ -35,10 +37,10 @@ level 'grade2_CaringForNewPet_7D'
 level 'grade2_CaringForNewPet_6'
 level 'grade2_CaringForNewPet_10'
 level 'grade2_CaringForNewPet_11'
-#level 'comingSoon'
+level 'grade2_maze_debuggingFP'
 
-stage 'Exploring the Neighborhood'
-level 'grade2_unplugged_neighborhood'
+stage 'Caring for My New Pet'
+level 'grade2_unplugged_rlAlgorithms'
 
 stage 'At The Dog Park'
 skin 'letters'

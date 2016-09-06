@@ -23,10 +23,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "How can Laurel collect all five piles of gold using only one `move forward` block?",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using a `repeat` block to collect your gold.\",\r\n  \"hint_id\": \"grade1_adventurer_loops2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "4",
     "contained_level_names": null
   },
   "published": true,
