@@ -43,8 +43,7 @@
       "upButton"
     ],
     "first_sprite_index": "0",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

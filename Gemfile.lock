@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Clever/omniauth-clever.git
+  revision: b15a87fde9dec2658e9c131c95c6890b145f8060
+  specs:
+    omniauth-clever (1.2.1)
+      omniauth-oauth2 (~> 1.1)
+
+GIT
   remote: git://github.com/islemaster/redis-slave-read.git
   revision: 8be4014cf7c9d2ea09ac479979cb5396e74835dc
   ref: start-with-random-node
@@ -44,13 +51,6 @@ GIT
       sprockets (>= 2, < 4)
       sprockets-rails (>= 2, < 4)
       tilt
-
-GIT
-  remote: git://github.com/wjordan/omniauth-clever.git
-  revision: ee8020834ef922f952cc217bb19fbfea5b1b675b
-  specs:
-    omniauth-clever (1.2.1)
-      omniauth-oauth2 (>= 1.1.1)
 
 GIT
   remote: git://github.com/wjordan/sass-rails.git
