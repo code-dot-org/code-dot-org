@@ -1,11 +1,11 @@
+/* global requirejs */
+
 /**
  * JS to communicate between Bramble and Code Studio
  */
 
 (function () {
-    "use strict";
-
-    require.config({
+    window.requirejs.config({
         baseUrl: '/blockly/js/bramble/'
     });
 
@@ -189,7 +189,7 @@
     }
 
     // Load bramble.js
-    require(["bramble"], function (Bramble) {
+    requirejs(["bramble"], function (Bramble) {
         load(Bramble);
     });
 }());

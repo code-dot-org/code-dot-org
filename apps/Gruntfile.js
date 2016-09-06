@@ -458,6 +458,13 @@ module.exports = function (grunt) {
       },
       provides: ['react', 'react-dom', 'radium']
     },
+
+    {
+      uniqueName: 'brambleHost',
+      entries: {
+        brambleHost: './src/weblab/brambleHost.js'
+      },
+    }
   ];
 
   // Create a config for each of our bundles
