@@ -2989,7 +2989,10 @@ Studio.execute = function () {
       const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
 
       // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
-      Object.defineProperty(Studio, 'Globals', {get: hooks.getGlobals, set: () => {}});
+      Object.defineProperty(Studio, 'Globals', {
+        get: () => {return hooks.getGlobals() || {};},
+        set: () => {}
+      });
 
       Object.keys(hooks).forEach(hook => {
         registerEventHandler(handlers, hook, hooks[hook]);
