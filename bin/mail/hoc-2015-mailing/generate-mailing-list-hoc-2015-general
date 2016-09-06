@@ -5,6 +5,8 @@ require src_dir 'database'
 
 SOLR = Solr::Server.new(host: CDO.solr_server)
 
+# rubocop:disable Style/MultilineBlockChain
+
 def export_contacts_to_csv(contacts, path)
   columns = nil
 
@@ -93,3 +95,5 @@ puts "#{TEACHERS.count} teachers loaded."
 all.merge! TEACHERS
 p all.count
 export_contacts_to_csv all, "hoc-2015-general.csv"
+
+# rubocop:enable Style/MultilineBlockChain

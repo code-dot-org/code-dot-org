@@ -1,8 +1,9 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-var React = require('react');
-var styles = require('./ToggleButtonStyles');
+import React from 'react';
+import Radium from 'radium';
+import styles from './ToggleButtonStyles';
 
-var ToggleButton = React.createClass({
+const ToggleButton = React.createClass({
   propTypes: {
     id: React.PropTypes.string,
     active: React.PropTypes.bool.isRequired,
@@ -12,7 +13,7 @@ var ToggleButton = React.createClass({
     children: React.PropTypes.node,
   },
 
-  render: function () {
+  render() {
     return (
       <button
         id={this.props.id}
@@ -25,8 +26,13 @@ var ToggleButton = React.createClass({
     );
   },
 
-  getStyle: function () {
+  getStyle() {
     return Object.assign({},
+      {
+        ':focus': {
+          outline: 'none'
+        }
+      },
       styles.buttonStyle,
       styles.toggleButtonStyle,
       this.props.active ? styles.activeStyle : styles.inactiveStyle,
@@ -34,4 +40,4 @@ var ToggleButton = React.createClass({
       this.props.last ? styles.lastButtonStyle : null);
   }
 });
-module.exports = ToggleButton;
+export default Radium(ToggleButton);

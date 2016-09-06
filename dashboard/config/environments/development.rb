@@ -42,6 +42,8 @@ Dashboard::Application.configure do
   # number of complex assets.
 #  config.assets.debug = true
 
+  config.assets.digest = false
+
   config.assets.quiet = true
 
   # Whether or not to display pretty apps (formerly called blockly).

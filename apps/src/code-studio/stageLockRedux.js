@@ -63,9 +63,19 @@ export default function reducer(state = initialState, action) {
     if (!state.sections[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
-    return Object.assign({}, state, {
+    const nextState = {
+      ...state,
       selectedSection: sectionId,
-    });
+    };
+
+    // If we have a lockStatus (i.e. from an open dialog) we need to update
+    // it with the new section
+    const { lockDialogStageId, lockStatus } = state;
+    return {
+      ...nextState,
+      lockStatus: lockDialogStageId ?
+        lockStatusForStage(nextState, lockDialogStageId) : lockStatus
+    };
   }
 
   if (action.type === OPEN_LOCK_DIALOG) {

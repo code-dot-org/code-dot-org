@@ -155,7 +155,7 @@ class AdminReportsController < ApplicationController
       metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
       filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
       if params[:filter].present?
-        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_', '/')}"
+        filter += ";ga:eventLabel=@#{params[:filter].to_s.tr('_', '/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
 

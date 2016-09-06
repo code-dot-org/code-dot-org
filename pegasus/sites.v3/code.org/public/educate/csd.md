@@ -25,8 +25,38 @@ CS Discoveries aims to introduce students to tools and programming languages tha
 ### <a name="flexible"></a>Designed for flexible implementation options
 CS Discoveries will be designed primarily for students in grades 7-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
+<hr/>
+
+[col-33]
+
+<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%"></center>
+
+<div style="margin-top: 5px;">Daily lesson plans come with detailed instructions, activity guides, and assessments</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/tennis_jump.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in Game Lab</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and App Lab</div>
+
+[/col-33]
+
+<p style="clear:both"></p>
+
+<hr/>
+
 ## <a name="content"></a>Course Overview
-Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
+Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
 ### Semester 1: CS Discoveries: Exploration and Expression
 

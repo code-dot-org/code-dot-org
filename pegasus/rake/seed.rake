@@ -5,7 +5,7 @@ class CsvToSqlTable
   def initialize(path, params={})
     @db = params[:db] || DB
     @path = path
-    @table = File.basename(@path, File.extname(@path)).gsub('-', '_').to_sym
+    @table = File.basename(@path, File.extname(@path)).tr('-', '_').to_sym
   end
 
   def up_to_date?

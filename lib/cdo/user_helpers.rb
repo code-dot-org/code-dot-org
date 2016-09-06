@@ -7,7 +7,7 @@ module UserHelpers
   USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
 
   def self.generate_username(queryable, name)
-    prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
+    prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.tr(' ', '_')
 
     if prefix.empty? || prefix == ''
       prefix = 'coder' + (rand(900000) + 100000).to_s

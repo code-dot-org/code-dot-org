@@ -14,7 +14,8 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
 gem 'mysql2', '~> 0.3.13'
-gem 'seamless_database_pool'
+# Ref: https://github.com/bdurand/seamless_database_pool/issues/28
+gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'rails_5_migration_fix'
 
 gem 'le', '~> 2.2'
 gem 'os'
@@ -69,7 +70,7 @@ group :development, :test do
   gem 'fakeredis', require: false
 
   # for ui testing
-  gem 'cucumber'
+  gem 'cucumber', '~> 2.0.2'
   gem 'selenium-webdriver', '~> 2.45.0'
   gem 'net-http-persistent'
   gem 'rspec'
@@ -99,7 +100,8 @@ gem 'unicorn', '~> 5.1.0'
 gem 'chronic', '~> 0.10.2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+# Ref: https://github.com/rails/sass-rails/pull/386
+gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -123,8 +125,8 @@ gem 'cancancan', '~> 1.15.0'
 gem 'omniauth-facebook', '~> 4.0.0.rc1'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
 gem 'omniauth-windowslive', '~> 0.0.10'
-# Ref: https://github.com/Clever/omniauth-clever/pull/4
-gem 'omniauth-clever', '~> 1.2.1', github: 'wjordan/omniauth-clever'
+# Ref: https://github.com/Clever/omniauth-clever/pull/7
+gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 
