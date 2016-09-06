@@ -272,7 +272,7 @@ if $options.with_status_page
 end
 
 def test_run_identifier(browser, feature)
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
+  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
   "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 end
