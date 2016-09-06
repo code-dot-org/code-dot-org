@@ -10,7 +10,7 @@ const staticStyles = {
     position: 'relative',
     imageRendering: 'pixelated',
     backgroundColor: 'white',
-    borderRadius: 9,
+    borderRadius: 10,
     marginLeft: 4,
     marginRight: 4
   },
@@ -84,7 +84,7 @@ const ListItemThumbnail = React.createClass({
   render() {
     var styles = _.merge({}, staticStyles, {
       root: {
-        border: 'solid 2px ' + (this.props.isSelected ? color.purple : color.light_purple)
+        border: 'solid 2px ' + (this.props.isSelected ? color.purple : color.light_gray)
       }
     });
 
