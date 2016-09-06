@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Clever/omniauth-clever.git
+  revision: b15a87fde9dec2658e9c131c95c6890b145f8060
+  specs:
+    omniauth-clever (1.2.1)
+      omniauth-oauth2 (~> 1.1)
+
+GIT
   remote: git://github.com/islemaster/redis-slave-read.git
   revision: 8be4014cf7c9d2ea09ac479979cb5396e74835dc
   ref: start-with-random-node
@@ -46,11 +53,16 @@ GIT
       tilt
 
 GIT
-  remote: git://github.com/wjordan/omniauth-clever.git
-  revision: ee8020834ef922f952cc217bb19fbfea5b1b675b
+  remote: git://github.com/wjordan/sass-rails.git
+  revision: 06e833d92d083fbcb137364ffebc597b2577db23
+  ref: frozen-array-fix
   specs:
-    omniauth-clever (1.2.1)
-      omniauth-oauth2 (>= 1.1.1)
+    sass-rails (5.0.6)
+      railties (>= 4.0.0, < 6)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
 
 GIT
   remote: git://github.com/wjordan/seamless_database_pool.git
@@ -185,17 +197,15 @@ GEM
       gli (~> 2.9)
       i18n (~> 0.7, >= 0.7.0)
       rubyzip (~> 1.0)
-    cucumber (2.4.0)
+    cucumber (2.0.2)
       builder (>= 2.1.2)
-      cucumber-core (~> 1.5.0)
-      cucumber-wire (~> 0.0.1)
+      cucumber-core (~> 1.2.0)
       diff-lcs (>= 1.1.3)
-      gherkin (~> 4.0)
+      gherkin (~> 2.12)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    cucumber-core (1.5.0)
-      gherkin (~> 4.0)
-    cucumber-wire (0.0.1)
+    cucumber-core (1.2.0)
+      gherkin (~> 2.12.0)
     daemons (1.2.3)
     dalli (2.7.6)
     debug_inspector (0.0.2)
@@ -241,7 +251,8 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     gemoji (2.1.0)
-    gherkin (4.0.0)
+    gherkin (2.12.2)
+      multi_json (~> 1.3)
     gli (2.14.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -523,12 +534,6 @@ GEM
     rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
-    sass-rails (5.0.5)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
     scss_lint (0.49.0)
       rake (>= 0.9, < 12)
       sass (~> 3.4.20)
@@ -651,7 +656,7 @@ DEPENDENCIES
   colorize
   coveralls
   crowdin-cli
-  cucumber
+  cucumber (~> 2.0.2)
   daemons
   dalli
   devise
@@ -728,7 +733,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.37.2)
   ruby-prof
-  sass-rails
+  sass-rails!
   scss_lint
   sdoc
   seamless_database_pool!

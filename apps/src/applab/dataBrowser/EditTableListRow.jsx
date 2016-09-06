@@ -8,7 +8,6 @@ import * as dataStyles from './dataStyles';
 
 const EditTableListRow = React.createClass({
   propTypes: {
-    onTableDelete: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired,
     tableName: React.PropTypes.string.isRequired
   },
@@ -18,7 +17,6 @@ const EditTableListRow = React.createClass({
   },
 
   handleDelete() {
-    this.props.onTableDelete(this.props.tableName);
     FirebaseStorage.deleteTable(this.props.tableName);
   },
 

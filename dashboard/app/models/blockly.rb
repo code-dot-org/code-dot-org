@@ -170,7 +170,7 @@ class Blockly < Level
       end
     end
     default_category.remove if default_category.element_children.empty?
-    xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
   def self.convert_category_to_toolbox(xml_string)
@@ -188,7 +188,7 @@ class Blockly < Level
       xml << category.children
       #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
-    xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
   # for levels with solutions

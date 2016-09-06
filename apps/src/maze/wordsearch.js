@@ -1,12 +1,8 @@
-import color from '../color';
 import Subtype from './subtype';
+import WordSearchDrawer from './wordsearchDrawer';
 import _ from 'lodash';
-import { cellId } from './mazeUtils';
 import { SquareType } from './tiles';
-import { SVG_NS } from '../constants';
-
-// this should match with Maze.SQUARE_SIZE
-const SQUARE_SIZE = 50;
+import { randomValue } from '../utils';
 
 /**
  * Create a new WordSearch.
@@ -27,27 +23,10 @@ export default class WordSearch extends Subtype {
   }
 
   /**
-   * Generate random tiles for walls (with some restrictions) and draw them to
-   * the svg.
    * @override
    */
-  drawMapTiles(svg) {
-    let letter;
-    let restricted;
-
-    for (let row = 0; row < this.map_.length; row++) {
-      for (let col = 0; col < this.map_[row].length; col++) {
-        const mapVal = this.map_[row][col];
-        if (mapVal === WordSearch.EMPTY_CHAR) {
-          restricted = this.restrictedValues_(row, col);
-          letter = WordSearch.randomLetter(restricted);
-        } else {
-          letter = WordSearch.letterValue(mapVal, true);
-        }
-
-        this.drawTile_(svg, letter, row, col);
-      }
-    }
+  createDrawer() {
+    this.drawer = new WordSearchDrawer(this.maze_.map);
   }
 
   /**
@@ -120,36 +99,27 @@ export default class WordSearch extends Subtype {
   }
 
   /**
-   * Draw a given tile.  Overrides the logic of Maze.drawTile
+   * Generate random tiles for walls (with some restrictions) and draw them to
+   * the svg.
+   * @override
    */
-  drawTile_(svg, letter, row, col) {
-    const backgroundId = cellId('backgroundLetter', row, col);
-    const textId = cellId('letter', row, col);
+  drawMapTiles(svg) {
+    let letter;
+    let restricted;
 
-    const group = document.createElementNS(SVG_NS, 'g');
-    const background = document.createElementNS(SVG_NS, 'rect');
-    background.setAttribute('id', backgroundId);
-    background.setAttribute('width', SQUARE_SIZE);
-    background.setAttribute('height', SQUARE_SIZE);
-    background.setAttribute('x', col * SQUARE_SIZE);
-    background.setAttribute('y', row * SQUARE_SIZE);
-    background.setAttribute('stroke', '#000000');
-    background.setAttribute('stroke-width', 3);
-    group.appendChild(background);
+    for (let row = 0; row < this.map_.length; row++) {
+      for (let col = 0; col < this.map_[row].length; col++) {
+        const mapVal = this.map_[row][col];
+        if (mapVal === WordSearch.EMPTY_CHAR) {
+          restricted = this.restrictedValues_(row, col);
+          letter = WordSearch.randomLetter(restricted);
+        } else {
+          letter = WordSearch.letterValue(mapVal, true);
+        }
 
-    const text = document.createElementNS(SVG_NS, 'text');
-    text.setAttribute('id', textId);
-    text.setAttribute('class', 'search-letter');
-    text.setAttribute('width', SQUARE_SIZE);
-    text.setAttribute('height', SQUARE_SIZE);
-    text.setAttribute('x', (col + 0.5) * SQUARE_SIZE);
-    text.setAttribute('y', (row + 0.5) * SQUARE_SIZE);
-    text.setAttribute('font-size', 32);
-    text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('font-family', 'Verdana');
-    text.textContent = letter;
-    group.appendChild(text);
-    svg.appendChild(group);
+        this.drawTile(svg, letter, row, col);
+      }
+    }
   }
 
   /**
@@ -159,40 +129,11 @@ export default class WordSearch extends Subtype {
   resetTiles() {
     for (let row = 0; row < this.map_.length; row++) {
       for (let col = 0; col < this.map_[row].length; col++) {
-        this.updateTileHighlight_(row, col, false);
+        this.drawer.updateTileHighlight(row, col, false);
       }
     }
     document.getElementById('currentWordContents').textContent = '';
     this.visited_ = '';
-  }
-
-  /**
-   * Update a tile's highlighting. If we've flown over it, it should be green.
-   * Otherwise we have a checkboard approach.
-   */
-  updateTileHighlight_(row, col, highlighted) {
-    let backColor = (row + col) % 2 === 0 ? '#dae3f3' : '#ffffff';
-    const textColor = highlighted ? color.white : color.black;
-    if (highlighted) {
-      backColor = '#00b050';
-    }
-    const backgroundId = cellId('backgroundLetter', row, col);
-    const textId = cellId('letter', row, col);
-
-    document.getElementById(backgroundId).setAttribute('fill', backColor);
-    const text = document.getElementById(textId);
-    text.setAttribute('fill', textColor);
-
-    // should only be false in unit tests
-    if (text.getBBox) {
-      // center text.
-      const bbox = text.getBBox();
-      const heightDiff = SQUARE_SIZE - bbox.height;
-      const targetTopY = row * SQUARE_SIZE + heightDiff / 2;
-      const offset = targetTopY - bbox.y;
-
-      text.setAttribute("transform", `translate(0, ${offset})`);
-    }
   }
 
   /**
@@ -202,14 +143,15 @@ export default class WordSearch extends Subtype {
    * @param {boolean} animating True if this is while animating
    */
   markTileVisited(row, col, animating) {
-    const letter = document.getElementById(cellId('letter', row, col)).textContent;
-    this.visited_ += letter;
+    const letterCell = document.getElementById(WordSearchDrawer.cellId('letter', row, col));
+    this.visited_ += letterCell.textContent;
 
     if (animating) {
-      this.updateTileHighlight_(row, col, true);
+      this.drawer.updateTileHighlight(row, col, true);
       document.getElementById('currentWordContents').textContent = this.visited_;
     }
   }
+
 }
 
 WordSearch.START_CHAR = '-';
@@ -243,15 +185,11 @@ WordSearch.letterValue = function (val) {
  * Return a random uppercase letter that isn't in the list of restrictions
  */
 WordSearch.randomLetter = function (restrictions) {
-  let letterPool;
+  let letterPool = WordSearch.ALL_CHARS;
   if (restrictions) {
-    // args consists of ALL_CHARS followed by the set of restricted letters
-    const args = restrictions || [];
-    args.unshift(WordSearch.ALL_CHARS);
-    letterPool = _.without.apply(null, args);
-  } else {
-    letterPool = WordSearch.ALL_CHARS;
+    restrictions = new Set(restrictions);
+    letterPool = letterPool.filter(c => !restrictions.has(c));
   }
 
-  return _.sample(letterPool);
+  return randomValue(letterPool);
 };
