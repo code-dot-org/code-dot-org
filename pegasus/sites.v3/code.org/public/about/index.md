@@ -1,6 +1,7 @@
 ---
 title: About Us
 nav: about_nav
+video_player: true
 ---
 
 <%
@@ -9,7 +10,26 @@ nav: about_nav
 
 # About Us
 
+[col-50]
+
+<% facebook = {:u=>'https://www.youtube.com/watch?t=66&v=mTGSiB4kB18'} %>
+<% twitter = {:url=>'https://www.youtube.com/watch?t=66&v=mTGSiB4kB18', :related=>'codeorg', :text=>'Anybody can learn computer science @codeorg #CSforAll'} %>
+
+<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false" %>
+
+[/col-50]
+
+[col-50]
+
+<div style="margin-left: 20px;">
+
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
+
+</div>
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 ## Diversity of students in our courses
 ![image](/images/infographics/fit-800/diversity-courses.png)
@@ -18,24 +38,21 @@ Code.org increases diversity in computer science by reaching students of all bac
 
 <br />
 
-[col-50]
+<div style="float: left; width: 50%; padding: 10px;">
 
-**Code.org's work covered by CBS This Morning:**
+<%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
-<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
+</div>
 
-[/col-50]
+<div style="float: left; width: 50%; padding: 10px;">
 
-[col-50]
+<%=view :display_video_thumbnail, id: "obama_hour_of_code", video_code: "AI_dayIQWV4", caption: "President Obama does the Hour of Code. Hour of Code has won the support of both <a href='https://www.youtube.com/watch?v=Vgn_YbSmHnw'>Republicans and Democrats</a>, and <a href='https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_'>many celebrities</a>", play_button: "center", letterbox: "false" %>
 
-**President Obama does the Hour of Code:**
+</div>
 
-<iframe width="375" height="210" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
-Hour of Code has won the support of both [Republicans and Democrats](https://www.youtube.com/watch?v=Vgn_YbSmHnw), and [many celebrities](https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_)
+<div style="clear: both;"></div>
 
 <br/><br/>
-
-[/col-50]
 
 ## Our goals and metrics
 
