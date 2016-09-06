@@ -2984,17 +2984,12 @@ Studio.execute = function () {
         'functional_definition'
       ].map(generator).join(';');
 
-      if (level.goal.fn_successCondition) {
-        Studio.interpretedHandlers['checkSuccessHandler'] = {code: `return (${level.goal.fn_successCondition})();`};
-      }
-      if (level.goal.fn_failureCondition) {
-        Studio.interpretedHandlers['checkFailureHandler'] = {code: `return (${level.goal.fn_failureCondition})();`};
-      }
+      Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
       const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
 
-      level.goal.successCondition = hooks.checkSuccessHandler;
-      level.goal.failureCondition = hooks.checkFailureHandler;
+      // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
+      Object.defineProperty(Studio, 'Globals', {get: hooks.getGlobals, set: () => {}});
 
       Object.keys(hooks).forEach(hook => {
         registerEventHandler(handlers, hook, hooks[hook]);
