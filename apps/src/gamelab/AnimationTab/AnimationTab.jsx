@@ -21,13 +21,13 @@ const styles = {
   animationsColumn: {
     display: 'flex',
     flexDirection: 'column',
-    minWidth: 150,
+    minWidth: 170,
     maxWidth: 300
   },
   editorColumn: {
     display: 'flex',
     flexDirection: 'column',
-    border: 'solid thin ' + color.light_purple
+    border: 'solid thin ' + color.light_gray
   }
 };
 
