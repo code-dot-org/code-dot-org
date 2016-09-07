@@ -50,10 +50,13 @@ function getImportableScreen(dom) {
   });
 
   const assetsToReplace = [];
-  const assetsToImport = $('[data-canonical-image-url]', dom)
+  let assetsToImport = $('[data-canonical-image-url]', dom)
     .toArray()
-    .map(n => $(n).attr('data-canonical-image-url'))
-    .filter(asset => {
+    .map(n => $(n).attr('data-canonical-image-url'));
+  if ($(dom).is('[data-canonical-image-url]')) {
+    assetsToImport.push($(dom).attr('data-canonical-image-url'));
+  }
+  assetsToImport = assetsToImport.filter(asset => {
       if ($(`#designModeViz [data-canonical-image-url="${asset}"]`).length > 0) {
         // this will replace an existing asset
         // so move it to the assetsToReplace list
