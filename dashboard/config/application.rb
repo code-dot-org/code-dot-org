@@ -128,7 +128,7 @@ module Dashboard
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
 
-    if Rails.env.production?
+    if CDO.newrelic_logging
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end

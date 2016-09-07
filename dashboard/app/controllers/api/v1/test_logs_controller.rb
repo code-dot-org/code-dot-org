@@ -10,14 +10,14 @@ class Api::V1::TestLogsController < ApplicationController
     boundary_time = Time.at(params[:time].to_i)
     bucket = Aws::S3::Bucket.new('cucumber-logs')
     objects = bucket.objects({prefix: "#{params[:prefix]}/"})
-    render json: objects.select {|summary|
-      boundary_time <= summary.last_modified
-    }.map {|summary|
+    objects_to_render = objects.select {|summary| boundary_time <= summary.last_modified}
+    json_result = objects_to_render.map do |summary|
       {
         key: summary.key,
         last_modified: summary.last_modified
       }
-    }
+    end
+    render json: json_result
   end
 
   # GET /api/v1/test_logs/<*prefix>/<log-name>
