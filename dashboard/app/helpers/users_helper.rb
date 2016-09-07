@@ -142,11 +142,12 @@ module UsersHelper
   def get_pages_completed(user, sl)
     # Since we only swap LevelGroups with other levelgroups, just check levels[0]
     if sl.levels[0].is_a? LevelGroup
-      level = user.last_attempt_for_any(sl.levels).try(:level) || sl.oldest_active_level
+      last_user_level = user.last_attempt_for_any(sl.levels)
+      level = last_user_level.try(:level) || sl.oldest_active_level
       pages_completed = []
 
-      if user.last_attempt(level).try(:level_source)
-        last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
+      if last_user_level.try(:level_source)
+        last_attempt = JSON.parse(last_user_level.level_source.data)
       end
 
       # Go through each page.
