@@ -3,6 +3,7 @@
 import { castValue } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
+import { logDataTransfer } from './firebaseLogging';
 import { enforceTableCount, updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
@@ -62,7 +63,9 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
-  }).then(() => keyRef.set(jsonValue)).then(onSuccess, onError);
+  }).then(() => keyRef.set(jsonValue))
+    .then(() => logDataTransfer(key.length + jsonValue.length))
+    .then(onSuccess, onError);
 };
 
 /**
@@ -73,7 +76,7 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
  */
 FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
   const keyRef = getKeysRef(Applab.channelId).child(key);
-  keyRef.set(null).then(onSuccess, onError);
+  keyRef.set(null).then(() => logDataTransfer(0)).then(onSuccess, onError);
 };
 
 /**
@@ -110,7 +113,9 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
       record.id = nextId;
       const recordRef = getDatabase(Applab.channelId)
         .child(`storage/tables/${tableName}/records/${record.id}`);
-      return recordRef.set(JSON.stringify(record));
+      const recordJson = JSON.stringify(record);
+      logDataTransfer(recordJson.length);
+      return recordRef.set(recordJson);
     }).then(() => onSuccess(record), onError);
 };
 
@@ -205,6 +210,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
+          .then(() => logDataTransfer(recordJson.length))
           .then(() => onComplete(record, true), onError);
       }
     });
@@ -235,6 +241,7 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
         .then(() => incrementRateLimitCounters())
         .then(() => updateTableCounters(tableName, -1))
         .then(() => recordRef.set(null))
+        .then(() => logDataTransfer(0))
         .then(() => onComplete(true), onError);
     }
   });
