@@ -175,7 +175,7 @@ module UsersHelper
 
       # The page is considered complete if there was a valid result for each
       # embedded level.
-      if page_valid_result_count == 0
+      if page_valid_result_count.zero?
         page_completed_value = nil
       elsif page_valid_result_count == page["levels"].length
         page_completed_value = ActivityConstants::FREE_PLAY_RESULT
