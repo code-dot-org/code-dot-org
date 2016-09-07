@@ -84,13 +84,19 @@ function initProjects() {
         options.projectData = levelSource;
       },
       getLevelSource: function () {
-        // Store the source in whichever format the level specifies.
-        if (isHexSelected()) {
-          var hexCode = pixel_data.value.replace(/[^0-9A-F]/gi, "");
-          return isHexLevel() ? hexCode : hexToBinPvt(hexCode);
-        } else {
-          var binCode = pixel_data.value.replace(/[^01]/gi, "");
-          return isHexLevel() ? binToHexPvt(binCode) : binCode;
+        return {
+          // this method is expected to return a Promise. Since this file does not go through our
+          // pipeline and can't be ES6, return a "then" method with a Promise-like interface
+          then: function(callback) {
+            // Store the source in whichever format the level specifies.
+            if (isHexSelected()) {
+              var hexCode = pixel_data.value.replace(/[^0-9A-F]/gi, "");
+              callback(isHexLevel() ? hexCode : hexToBinPvt(hexCode));
+            } else {
+              var binCode = pixel_data.value.replace(/[^01]/gi, "");
+              callback(isHexLevel() ? binToHexPvt(binCode) : binCode);
+            }
+          }
         }
       }
     };
