@@ -59,7 +59,7 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div>
-          <div className='col-25'>
+          <div className='col-20'>
             {this.props.filterGroups.map(item => <FilterGroup name={item.name} text={item.text} filterEntries={item.entries} onUserInput={this.props.onUserInput} selection={this.props.selection[item.name]} key={item.name}/>)}
           </div>
         </div>
@@ -74,9 +74,9 @@ window.TutorialExplorerManager = function (options) {
 
   render() {
       return (
-        <div style={{width: '25%', float: 'left', padding: '2px'}}>
+        <div className='col-33' style={{float: 'left', padding: '2px'}}>
           <div style={{backgroundColor: 'grey', color: 'white', padding: '5px'}}>
-            <img src={this.props.item.image} style={{width: '100%'}}/>
+            <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
             {this.props.item.code}
           </div>
         </div>
@@ -103,8 +103,6 @@ window.TutorialExplorerManager = function (options) {
         //   platforms must match the tutorial.
 
       function filterFn(tutorial, index, array) {
-        //console.log("filterFn", tutorial, index, this.props.filters);
-
         var filterMiss = false;
 
         for (var filterGroupName in this.props.filters) {
@@ -112,31 +110,30 @@ window.TutorialExplorerManager = function (options) {
           var tutorialTags = tutorial["tags_" + filterGroupName];
 
           if (tutorialTags && tutorialTags.length > 0) {
-            console.log("  filterGroupName - ", filterGroupName, " - for tutorial - ", tutorial["tags_" + filterGroupName]);
+            //console.log("  filterGroupName - ", filterGroupName, " - for tutorial - ", tutorial["tags_" + filterGroupName]);
 
             var tutorialTagsSplit = tutorialTags.split(',');
-            console.log("  tutorialTagsSplit", tutorialTagsSplit);
+            //console.log("  tutorialTagsSplit", tutorialTagsSplit);
 
             // now check all the filter group's tags
 
             var filterGroup = this.props.filters[filterGroupName];
-            console.log("      filterGroup", filterGroup);
+            //console.log("      filterGroup", filterGroup);
 
             // For this filter group, we've not yet found a matching tag between
             // user selected otions and tutorial tags.
             var filterGroupHit = false;
 
             for (var filterName of filterGroup) {
-              console.log("        filterName", filterName);
+              //console.log("        filterName", filterName);
 
               if (tutorialTagsSplit.includes(filterName)) {
-                console.log("          tutorial tag match");
+                //console.log("          tutorial tag match");
 
                 // The tutorial had a matching tag.
                 filterGroupHit = true;
               } else {
-                console.log("          tutorial tag MISS");
-                //filterMiss = true;
+                //console.log("          tutorial tag MISS");
               }
             }
 
@@ -152,7 +149,7 @@ window.TutorialExplorerManager = function (options) {
       }
 
       return (
-        <div style={{width: '75%', float: 'left'}}>
+        <div className='col-80' style={{float: 'left'}}>
           {this.props.tutorials.filter(filterFn, this).map(item => <Tutorial item={item} filters={this.props.filters} key={item.code}/>)}
         </div>
       )
@@ -182,7 +179,7 @@ window.TutorialExplorerManager = function (options) {
       } else {
         var itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
 
-        console.log("Removing value ", filterEntry, "at index", itemIndex, "from", this.state.filters[filterGroup]);
+        //console.log("Removing value ", filterEntry, "at index", itemIndex, "from", this.state.filters[filterGroup]);
 
         // Find and remove specific value from array.
         filterEntryChange["$splice"] = [[itemIndex, 1]];
@@ -197,7 +194,7 @@ window.TutorialExplorerManager = function (options) {
 
       var newState = update(this.state, stateChange);
 
-      console.log("new state", newState);
+      //console.log("new state", newState);
 
       this.setState(newState);
     },
