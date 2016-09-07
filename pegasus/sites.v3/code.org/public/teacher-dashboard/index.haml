@@ -492,7 +492,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.getStayEnrolledInCurrentSection = function() {
-      if ($scope.selectedSectionCode == $scope.manuallySelectedSectionCode) {
+      if ($scope.selectedSectionCode == $scope.otherTeacher) {
         return $scope.stayEnrolledInCurrentSection;
       } else {
         return false;
@@ -936,7 +936,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                 if ("answer_index" in sublevelResult) {
                   var answerIndex = sublevelResult.answer_index;
                   multiResults[answerIndex].count ++;
-                  multiResults[answerIndex].percent = (Math.round(1 / resultsLength * 100)) + "%";
+                  multiResults[answerIndex].percent =
+                    (Math.round(multiResults[answerIndex].count / resultsLength * 100)) + "%";
                 }
               });
 

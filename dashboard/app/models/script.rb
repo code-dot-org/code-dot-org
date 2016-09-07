@@ -151,10 +151,10 @@ class Script < ActiveRecord::Base
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
-  # Caching is disabled when editing scripts and levels or running unit tests on CI.
+  # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
-    return false if ENV['CI']
+    return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
 
@@ -164,8 +164,8 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     Script.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
+    [ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly].
+      each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 

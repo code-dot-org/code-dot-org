@@ -352,7 +352,9 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          currentSources.source = this.sourceHandler.getLevelSource(currentSources.source);
+          this.sourceHandler.getLevelSource(currentSources.source).then(response => {
+            currentSources.source = response;
+          });
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -414,6 +416,8 @@ var projects = module.exports = {
           return null;
         }
         return 'playlab';
+      case 'weblab':
+        return 'weblab';
       default:
         return null;
     }
@@ -460,9 +464,11 @@ var projects = module.exports = {
       callback = args[0];
       forceNewVersion = args[1];
       this.sourceHandler.getAnimationList(animations => {
-        const source = this.sourceHandler.getLevelSource();
-        const html = this.sourceHandler.getLevelHtml();
-        this.save({source, html, animations}, callback, forceNewVersion);
+        this.sourceHandler.getLevelSource().then(response => {
+          const source = response;
+          const html = this.sourceHandler.getLevelHtml();
+          this.save({source, html, animations}, callback, forceNewVersion);
+        });
       });
       return;
     }
@@ -535,16 +541,18 @@ var projects = module.exports = {
     }
 
     this.sourceHandler.getAnimationList(animations => {
-      const source = this.sourceHandler.getLevelSource();
-      const html = this.sourceHandler.getLevelHtml();
-      const newSources = {source, html, animations};
-      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-        hasProjectChanged = false;
-        return;
-      }
+      this.sourceHandler.getLevelSource().then(response => {
+        const source = response;
+        const html = this.sourceHandler.getLevelHtml();
+        const newSources = {source, html, animations};
+        if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+          hasProjectChanged = false;
+          return;
+        }
 
-      this.save(newSources, () => {
-        hasProjectChanged = false;
+        this.save(newSources, () => {
+          hasProjectChanged = false;
+        });
       });
     });
   },
@@ -612,7 +620,8 @@ var projects = module.exports = {
         this.setName('Big Game Template');
       } else if (url === '/projects/applab' ||
           url === '/projects/makerlab' ||
-          url === '/projects/gamelab') {
+          url === '/projects/gamelab' ||
+          url === '/projects/weblab') {
         this.setName('My Project');
       }
     }

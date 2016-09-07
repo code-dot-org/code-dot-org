@@ -1,11 +1,14 @@
 /** @file Root component for Public Key Cryptography widget */
 import React from 'react';
+import i18n from '@cdo/locale';
 import {AnyChildren} from './types';
 import EqualColumns from './EqualColumns';
 import Alice from './Alice';
 import Bob from './Bob';
 import Eve from './Eve';
 import ModuloClock from './ModuloClock';
+import Dialog from '../templates/Dialog';
+import WidgetContinueButton from '../templates/WidgetContinueButton';
 
 const style = {
   root: {
@@ -24,7 +27,7 @@ const PublicKeyCryptographyWidget = React.createClass({
   getInitialState() {
     return {
       animating: false,
-      publicModulus: 1
+      publicModulus: null
     };
   },
 
@@ -55,6 +58,13 @@ const PublicKeyCryptographyWidget = React.createClass({
       this.setState({animating: false});
       onComplete(finalValue);
     });
+  },
+
+  onStartOverClick() {
+    this.alice.startOver();
+    this.bob.startOver();
+    this.eve.startOver();
+    this.setState({publicModulus: null});
   },
 
   render() {
@@ -90,6 +100,8 @@ const PublicKeyCryptographyWidget = React.createClass({
           ref={x => this.moduloClock = x}
           modulus={this.state.publicModulus || 1}
         />
+        <WidgetContinueButton/>
+        <StartOverButton onClick={this.onStartOverClick}/>
       </div>);
   }
 });
@@ -109,3 +121,46 @@ function HyperlinksList(props) {
 HyperlinksList.propTypes = {
   children: AnyChildren
 };
+
+const StartOverButton = React.createClass({
+  propTypes: {
+    onClick: React.PropTypes.func.isRequired
+  },
+
+  getInitialState() {
+    return {confirming: false};
+  },
+
+  confirm() {
+    this.setState({confirming: true});
+  },
+
+  onConfirm() {
+    this.props.onClick();
+    this.setState({confirming: false});
+  },
+
+  onCancel() {
+    this.setState({confirming: false});
+  },
+
+  render() {
+    return (
+      <span>
+        <button
+          className="btn btn-info pull-right"
+          onClick={this.confirm}
+        >
+          {i18n.clearPuzzle()}
+        </button>
+        <Dialog
+          isOpen={this.state.confirming}
+          uncloseable
+          title={i18n.clearPuzzle()}
+          body={i18n.clearPuzzleConfirmHeader()}
+          onConfirm={this.onConfirm}
+          onCancel={this.onCancel}
+        />
+      </span>);
+  }
+});

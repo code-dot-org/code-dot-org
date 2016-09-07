@@ -183,6 +183,8 @@ module LevelsHelper
 
     if @level.is_a? Blockly
       @app_options = blockly_options
+    elsif @level.is_a? Weblab
+      @app_options = weblab_options
     elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
       @app_options = question_options
     elsif @level.is_a? Widget
@@ -216,8 +218,9 @@ module LevelsHelper
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
+    use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim
+    use_blockly = !use_droplet && !use_netsim && !use_weblab
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
            locals: {
@@ -227,6 +230,7 @@ module LevelsHelper
                use_blockly: use_blockly,
                use_applab: use_applab,
                use_gamelab: use_gamelab,
+               use_weblab: use_weblab,
                use_phaser: use_phaser,
                use_makerlab: use_makerlab,
                hide_source: hide_source,
@@ -240,6 +244,17 @@ module LevelsHelper
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  # Options hash for Weblab
+  def weblab_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options[:app] = 'weblab'
+    app_options[:baseUrl] = Blockly.base_url
     app_options
   end
 
@@ -588,13 +603,14 @@ module LevelsHelper
     return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
-      redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+      error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
+      redirect_to '/', :flash => { :alert => error_message }
       return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.pair_programmer") }
         return true
       end
     end

@@ -829,9 +829,8 @@ function setupReduxSubscribers(store) {
 
   if (store.getState().pageConstants.hasDataMode) {
     // Initialize redux's list of tables from firebase, and keep it up to date as
-    // new tables are added and removed. This strategy reads all existing table
-    // data only once.
-    const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+    // new tables are added and removed.
+    const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
     tablesRef.on('child_added', snapshot => {
       store.dispatch(addTableName(snapshot.key()));
     });
@@ -1405,7 +1404,7 @@ Applab.onPuzzleComplete = function (submit) {
       level: level.id,
       result: levelComplete,
       testResult: Applab.testResults,
-      submitted: submit,
+      submitted: !!submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
       containedLevelResultsInfo: containedLevelResultsInfo,
@@ -1638,6 +1637,12 @@ Applab.showRateLimitAlert = function () {
   } else {
     studioApp.displayWorkspaceAlert("error", alert);
   }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!studioApp.share,
+  });
 };
 
 Applab.getAppReducers = function () {
