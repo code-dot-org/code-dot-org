@@ -51,7 +51,7 @@ export const ImportProjectDialog = React.createClass({
           <p style={styles.instructions}>
             Copy the share link of the app you would like to import screens
             from. Paste in the URL of that app below and click "Next."
-            {' '}<a href="#">Learn More</a>
+            {' '}<a href={`${window.dashboard.CODE_ORG_URL}/applab/docs/import`} target="_blank">Learn More</a>
           </p>
           <div style={styles.urlInputWrapper}>
             <input
