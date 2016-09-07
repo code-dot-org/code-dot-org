@@ -291,7 +291,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    self.script_levels.find { |sl| sl.id == script_level_id.to_i }
+    self.script_levels.where(id: script_level_id.to_i).limit(1).first
   end
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
