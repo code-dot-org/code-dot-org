@@ -33,7 +33,7 @@ def copy_untranslated_apps
   Languages.get_locale.each do |prop|
     if prop[:locale_s] != 'en-US'
       untranslated_apps.each do |app|
-        app_locale = prop[:locale_s].gsub('-', '_').downcase!
+        app_locale = prop[:locale_s].tr('-', '_').downcase!
         FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
       end
     end

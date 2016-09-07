@@ -20,7 +20,7 @@ module LocaleHelper
 
   # String representing the Locale code for the Blockly client code.
   def js_locale
-    locale.to_s.downcase.gsub('-', '_')
+    locale.to_s.downcase.tr('-', '_')
   end
 
   def options_for_locale_select
