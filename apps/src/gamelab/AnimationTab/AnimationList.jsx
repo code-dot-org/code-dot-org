@@ -11,11 +11,13 @@ import ScrollableList from './ScrollableList';
 const styles = {
   root: {
     flex: '1 0 0',
-    borderTop: 'solid thin ' + color.light_purple,
-    borderBottom: 'solid thin ' + color.light_purple,
-    borderLeft: 'solid thin ' + color.light_purple,
+    borderTop: 'solid thin ' + color.light_gray,
+    borderBottom: 'solid thin ' + color.light_gray,
+    borderLeft: 'solid thin ' + color.light_gray,
     borderRight: 'none',
-    backgroundColor: color.white
+    backgroundColor: color.lightest_gray,
+    paddingRight: 10,
+    paddingLeft: 10
   },
 
   previewRate: {
