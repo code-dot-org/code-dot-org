@@ -276,14 +276,6 @@ NetSim.prototype.tick = function (clock) {
 };
 
 /**
- * Pull an identifier from the URL that separates this level's shard from others.
- * @returns {string}
- */
-NetSim.prototype.getUniqueLevelKey = function () {
-  return location.pathname.substr(1).replace(/\W/g, '-');
-};
-
-/**
  * Extracts query parameters from a full URL and returns them as a simple
  * object.
  * @returns {*}
@@ -369,7 +361,7 @@ NetSim.prototype.initWithUser_ = function (user) {
       $('.lobby-panel'),
       this, {
         user: user,
-        levelKey: this.getUniqueLevelKey(),
+        levelKey: NetSimUtils.getUniqueLevelKeyFromLocation(location),
         sharedShardSeed: this.getOverrideShardID(),
         showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false),
         showTeacherLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, true)

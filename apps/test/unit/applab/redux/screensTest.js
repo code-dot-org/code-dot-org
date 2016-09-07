@@ -143,6 +143,7 @@ describe("Applab Screens Reducer", function () {
               assets: [],
               existingAssets: [],
             });
+            expect(store.getState().importProject.importableProject).not.to.be.null;
           });
         });
 

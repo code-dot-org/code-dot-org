@@ -48,7 +48,7 @@ ________________
 <a id="roadmap"></a>
 <br/>
 ### **Professional Learning Partner Roadmap**
-Lots of resources coming soon!!!
+The roadmap is one of the tools you will use to self-evaluate and improve in the 5 main categories for success as a Professional Learning Partner. [Click here](https://docs.google.com/document/d/1e352PvR0NG0VLmrLg1i3o7AEHeysmohwqPtXGAqZLXA/edit?usp=sharing) to view the Professional Learning Partner Roadmap.
 
 <br/>
 [**Back to the top**](#top)

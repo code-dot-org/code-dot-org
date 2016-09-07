@@ -58,7 +58,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       levelProgress: newLevelProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        if (stage.lockable && newLevelProgress[level.ids[0]] === LOCKED_RESULT) {
+        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
           return Object.assign({}, level, { status: LevelStatus.locked });
         }
 
