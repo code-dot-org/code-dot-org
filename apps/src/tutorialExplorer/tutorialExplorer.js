@@ -7,6 +7,7 @@ window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
 var update = require('react-addons-update');
+var BaseDialog = require('@cdo/apps/templates/BaseDialog');
 
 window.TutorialExplorerManager = function (options) {
   this.options = options;
@@ -67,17 +68,68 @@ window.TutorialExplorerManager = function (options) {
     }
   });
 
+  var TutorialDetail = React.createClass({
+    render: function() {
+      if (!this.props.showing) {
+        return null;
+      }
+
+      return (
+        <div id="tutorialPopupFullWidth" style={{position: 'absolute', left: 0, top: 0, width: '100%'}}>
+          <div className="modal xfade" id="tutorialPopup" style={{display: 'block'}}>
+            <div className="modal-dialog modal-lg">
+              <div className="modal-content">
+                <div className="modal-header" style={{borderBottomWidth: 0, paddingTop: 0, paddingBottom: 4, height: 48}}>
+                  <button className="close" data-dismiss="modal" style={{height: 48}} type="button" onClick={this.props.closeClicked}>
+                    <span aria-hidden="true" style={{fontSize: 48}}>×</span>
+                    <span className="sr-only">Close</span>
+                  </button>
+                  <div style={{clear: 'both'}} />
+                </div>
+                <div className="modal-body" style={{paddingTop: 0, overflow: 'hidden'}}>
+                  <div className="col-50">
+                    <img src={this.props.item.image} style={{height: 420}}/>
+                  </div>
+                  <div className="col-50">
+                    {this.props.item.code}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  });
+
   const Tutorial = React.createClass({
     propTypes: {
       item: React.PropTypes.object.isRequired
     },
 
-  render() {
+    getInitialState: function() {
+      return {
+        showingDetail: false
+      };
+    },
+
+    tutorialClicked: function() {
+      this.setState({showingDetail: true});
+    },
+
+    tutorialDetailClosed: function() {
+      this.setState({showingDetail: false});
+    },
+
+    render() {
       return (
-        <div className='col-33' style={{float: 'left', padding: '2px'}}>
-          <div style={{backgroundColor: 'grey', color: 'white', padding: '5px'}}>
-            <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
-            {this.props.item.code}
+        <div>
+          <TutorialDetail showing={this.state.showingDetail} item={this.props.item} closeClicked={this.tutorialDetailClosed}/>
+          <div className='col-33' style={{float: 'left', padding: '2px'}} onClick={this.tutorialClicked}>
+            <div style={{backgroundColor: 'grey', color: 'white', padding: '5px'}}>
+              <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
+              {this.props.item.code}
+            </div>
           </div>
         </div>
       )
