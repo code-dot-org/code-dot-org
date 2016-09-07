@@ -2,7 +2,7 @@
   site_name: 'HOUR of CODE'
   hour_of_code: 'Hour of Code'
   language: 'English'
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
 
@@ -13,7 +13,7 @@
   campaign_date_year: "2016"
   campaign_date_full_year: "December 5-11, 2016"
 
-  front_header_banner: 'Join the largest learning event in history, Dec 7-13, 2015'
+  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
@@ -164,7 +164,7 @@
   how_to_nav_volunteers: "For volunteers"
 
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
@@ -229,6 +229,7 @@
   signup_send_posters_address_label: 'Address of school or organization'
   signup_whole_school_flag_label: 'This event is for a whole school'
   signup_your_event: 'Sign up your event'
+  signup_host_an_hour: 'Host an hour'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
 
@@ -401,7 +402,7 @@
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
 
-  footer_copyright_message: 'Copyright 2015 Code.org. All rights reserved.'
+  footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
 
   footer_menu_partners: 'Partners'
