@@ -35,7 +35,7 @@ class Pd::AsyncWorkshopHandler
   # The queue is thread-local because the SQS client is not thread-safe.
   def self.workshop_queue
     Thread.current['pd_workshop_queue'] ||=
-      SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.pd_workshop_queue_url)
+      ::SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.pd_workshop_queue_url)
   end
 
   def self.handle_operation(op)
