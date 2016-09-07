@@ -676,6 +676,34 @@ def generate_user(name)
   return email, password
 end
 
+And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "Teacher_#{name}"
+    Then I am on "http://code.org/teacher-dashboard#/sections"
+    And I wait to see ".jumbotron"
+    And I click selector ".close"
+    And I click selector ".btn-white:contains('New section')"
+    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
+    Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
+    And I click selector ".btn-primary:contains('Save')"
+    And I wait for 2 seconds
+    And I click selector "a:contains('Manage Students')"
+    And I save the section url
+    Then I sign out
+    And I navigate to the section url
+    And I wait to see "#user_name"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_age"
+    And I click selector "input[type=submit]"
+    And I wait until I am on "http://studio.code.org/"
+  }
+end
+
 And(/^I create a student named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
@@ -707,6 +735,22 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
     And I wait until current URL contains "http://code.org/teacher-dashboard"
+  }
+end
+
+And(/^I save the section url$/) do
+  # additional wait so that we have time to fill the jumbotron
+  steps %Q{
+    And I wait to see ".jumbotron"
+    And I wait for 1 seconds
+  }
+  @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
+end
+
+And(/^I navigate to the section url$/) do
+  puts @section_url
+  steps %Q{
+    Given I am on "#{@section_url}"
   }
 end
 
