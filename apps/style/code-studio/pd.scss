@@ -1,5 +1,6 @@
 @import "color";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
+@import "mixins";
 
 @mixin buttons() {
   .btn-primary {
@@ -16,6 +17,7 @@
 #workshop-container {
   @import "bootstrap-sass/assets/stylesheets/bootstrap";
   @include buttons();
+  @include user-selects(auto);
 
   a:not(.btn) {
     color: $purple;
