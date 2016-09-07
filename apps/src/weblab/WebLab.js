@@ -157,7 +157,7 @@ WebLab.prototype.init = function (config) {
 };
 
 WebLab.prototype.getCodeAsync = function () {
-  return new Promise((resolve,reject) => {
+  return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
       this.brambleHost.getBrambleCode(function (code) {
         resolve(code);

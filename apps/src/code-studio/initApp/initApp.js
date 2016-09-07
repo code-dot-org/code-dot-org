@@ -242,8 +242,8 @@ window.apps = {
     },
     // returns a Promise to the level source
     getLevelSource: function (currentLevelSource) {
-      return new Promise (function (resolve,reject) {
-        var source;
+      return new Promise((resolve, reject) => {
+        let source;
         if (window.Blockly) {
           // If we're readOnly, source hasn't changed at all
           source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
@@ -253,7 +253,7 @@ window.apps = {
           source = appOptions.getCode();
           resolve(source);
         } else if (appOptions.getCodeAsync) {
-          appOptions.getCodeAsync().then(function (source) {
+          appOptions.getCodeAsync().then(() => {
             resolve(source);
           });
         }
