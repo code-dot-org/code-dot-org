@@ -10,24 +10,20 @@ video_player: true
 
 # About Us
 
-[col-50]
+<div style="float: left; width: 280px;">
 
-<% facebook = {:u=>'https://www.youtube.com/watch?t=66&v=mTGSiB4kB18'} %>
-<% twitter = {:url=>'https://www.youtube.com/watch?t=66&v=mTGSiB4kB18', :related=>'codeorg', :text=>'Anybody can learn computer science @codeorg #CSforAll'} %>
+<% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
+<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>'Meet the team at @codeorg and see how much they’ve done in just a few years!'} %>
 
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false" %>
 
-[/col-50]
+</div>
 
-[col-50]
-
-<div style="margin-left: 20px;">
+<div style="margin-left: 300px;">
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
 
 </div>
-
-[/col-50]
 
 <div style="clear: both;"></div>
 
@@ -38,21 +34,22 @@ Code.org increases diversity in computer science by reaching students of all bac
 
 <br />
 
-<div style="float: left; width: 50%; padding: 10px;">
+## Code.org in the News
+See all past [news and announcements](/about/news).
+
+<div style="float: left; width: 50%; padding-right: 10px;">
 
 <%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
 </div>
 
-<div style="float: left; width: 50%; padding: 10px;">
+<div style="float: left; width: 50%; padding-left: 10px;">
 
 <%=view :display_video_thumbnail, id: "obama_hour_of_code", video_code: "AI_dayIQWV4", caption: "President Obama does the Hour of Code. Hour of Code has won the support of both <a href='https://www.youtube.com/watch?v=Vgn_YbSmHnw'>Republicans and Democrats</a>, and <a href='https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_'>many celebrities</a>", play_button: "center", letterbox: "false" %>
 
 </div>
 
 <div style="clear: both;"></div>
-
-<br/><br/>
 
 ## Our goals and metrics
 
