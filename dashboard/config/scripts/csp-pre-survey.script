@@ -5,10 +5,9 @@ assessment 'CSP pre-assessment survey'
 
 stage 'Unit 1 Chapter 1 Assessment', lockable:true
 variants
-level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group',active:false
-level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2',active:true
+assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2',active:true
+assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group',active:false
 endvariants
-
 
 stage 'NEW Unit 1 Chapter 1 Assessment', lockable:true
 assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2'
