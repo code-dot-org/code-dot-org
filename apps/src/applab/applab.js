@@ -1637,6 +1637,12 @@ Applab.showRateLimitAlert = function () {
   } else {
     studioApp.displayWorkspaceAlert("error", alert);
   }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!studioApp.share,
+  });
 };
 
 Applab.getAppReducers = function () {
