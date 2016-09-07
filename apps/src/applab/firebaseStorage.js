@@ -571,9 +571,21 @@ function overwriteTableData(tableName, recordsData) {
     });
 }
 
+function getRecordsDataSize(recordsData) {
+  let sum = 0;
+  for (let recordId in recordsData) {
+    sum += recordsData[recordId].length;
+  }
+  return sum;
+}
+
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {
   parseRecordsDataFromCsv(tableDataCsv)
     .then(recordsData => validateRecordsData(recordsData))
+    .then(recordsData => {
+      logDataTransfer(getRecordsDataSize(recordsData));
+      return recordsData;
+    })
     .then(recordsData => overwriteTableData(tableName, recordsData))
     .then(onSuccess, onError);
 };
