@@ -4,7 +4,7 @@ import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import applabConstants from './constants';
-import Dialog, {Body} from '../templates/Dialog';
+import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
 import AssetThumbnail, {
   styles as assetThumbnailStyles
 } from '../code-studio/components/AssetThumbnail';
@@ -14,7 +14,6 @@ import MultiCheckboxSelector, {
 import color from '../color';
 import {toggleImportScreen, importIntoProject} from './redux/screens';
 import {
-  getImportableProject,
   importableAssetShape,
   importableScreenShape,
   importableProjectShape
@@ -169,7 +168,14 @@ export const ImportScreensDialog = React.createClass({
   propTypes: Object.assign({}, Dialog.propTypes, {
     project: importableProjectShape,
     onImport: React.PropTypes.func.isRequired,
+    isImporting: React.PropTypes.bool,
   }),
+
+  getDefaultProps() {
+    return {
+      isImporting: false,
+    };
+  },
 
   getInitialState() {
     return {
@@ -185,20 +191,30 @@ export const ImportScreensDialog = React.createClass({
     const nonImportableScreens = this.props.project.screens.filter(s => !s.canBeImported);
     const importableScreens = this.props.project.screens.filter(s => s.canBeImported);
     const canImport = importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
-    let buttonProps = canImport ? {
-      confirmText: "Import",
-      onConfirm: () => this.props.onImport(
-        this.props.project.id,
-        this.state.selectedScreens,
-        this.state.selectedAssets
-      ),
-    } : {
-      onCancel: this.props.handleClose
-    };
+    const buttons = canImport ? (
+      <Buttons>
+        <Confirm
+          onClick={() => this.props.onImport(
+              this.props.project.id,
+              this.state.selectedScreens,
+              this.state.selectedAssets
+            )}
+          disabled={this.props.isImporting}
+        >
+          {this.props.isImporting && <span className="fa fa-spin fa-spinner" />}
+          {this.props.isImporting && ' '}
+          Import
+        </Confirm>
+      </Buttons>
+    ) : (
+      <Buttons>
+        <Cancel onClick={this.props.handleClose}/>
+      </Buttons>
+    );
+
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
-        {...buttonProps}
         {...this.props}
       >
         <Body>
@@ -210,6 +226,7 @@ export const ImportScreensDialog = React.createClass({
              selected={this.state.selectedScreens}
              onChange={selectedScreens => this.setState({selectedScreens})}
              itemPropName="screen"
+             disabled={this.props.isImporting}
            >
              <ScreenListItem />
            </MultiCheckboxSelector>}
@@ -221,6 +238,7 @@ export const ImportScreensDialog = React.createClass({
              selected={this.state.selectedAssets}
              onChange={selectedAssets => this.setState({selectedAssets})}
              itemPropName="asset"
+             disabled={this.props.isImporting}
            >
              <AssetListItem/>
            </MultiCheckboxSelector>}
@@ -244,6 +262,7 @@ export const ImportScreensDialog = React.createClass({
              </ul>
            </div>}
         </Body>
+        {buttons}
       </Dialog>
     );
   }
@@ -252,7 +271,7 @@ export const ImportScreensDialog = React.createClass({
 export default connect(
   state => ({
     isOpen: state.screens.isImportingScreen && state.screens.importProject.fetchedProject,
-    project: getImportableProject(state.screens.importProject.fetchedProject),
+    project: state.screens.importProject.importableProject,
   }),
   dispatch => ({
     onImport(projectId, screens, assets) {
@@ -448,6 +467,30 @@ if (BUILD_STYLEGUIDE) {
                       {filename: 'bar.mp3', category: "audio", willReplace: true},
                     ],
                   }}
+            />
+          )
+        }, {
+          name: 'when importing',
+          description: `When the import is actually taking place (which might take some time)
+                        we disable on the input buttons`,
+          story: () => (
+            <ImportScreensDialog
+              hideBackdrop
+              isImporting={true}
+              onImport={storybook.action('onImport')}
+              handleClose={storybook.action('handleClose')}
+              project={{
+                  id: 'poke-the-pig',
+                  name: 'Poke the Pig',
+                  screens: [newScreen],
+                  otherAssets: [
+                    {filename: 'foo.png', category: "image", willReplace: false},
+                    {filename: 'bar.mov', category: "video", willReplace: true},
+                    {filename: 'bar.pdf', category: "pdf", willReplace: true},
+                    {filename: 'bar.doc', category: "doc", willReplace: true},
+                    {filename: 'bar.mp3', category: "audio", willReplace: true},
+                  ],
+                }}
             />
           )
         },
