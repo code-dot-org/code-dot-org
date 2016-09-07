@@ -5470,16 +5470,17 @@ Studio.allWhenRunBlocksComplete = function () {
   return true;
 };
 
+function noEventQueues() {
+  return Studio.eventHandlers.every(h => /whenGameStarts|getGlobals/.test(h.name));
+}
+
 Studio.timedOut = function () {
   if (level.timeoutAfterWhenRun) {
     if (level.editCode) {
       // If the interpreter has started handling events, the main body of the
       // program is complete:
       return Studio.JSInterpreter && Studio.JSInterpreter.startedHandlingEvents;
-    } else if (Studio.eventHandlers.length === 0 ||
-               (Studio.eventHandlers.length === 1 &&
-                  Studio.eventHandlers[0].name === 'whenGameStarts' &&
-                  Studio.allWhenRunBlocksComplete())) {
+    } else if (noEventQueues() && Studio.allWhenRunBlocksComplete()) {
       // If the only event block that had children is when_run, and those commands
       // are finished executing, don't wait for the timeout.
       // If we have additional event blocks that DO have children, we don't timeout
