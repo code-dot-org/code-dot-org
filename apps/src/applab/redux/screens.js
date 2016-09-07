@@ -27,6 +27,7 @@ var ImportProjectState = Immutable.Record({
   isFetchingProject: false,
   errorFetchingProject: false,
   fetchedProject: null,
+  importableProject: null,
   isImportingProject: false,
   errorImportingProject: false,
 });
@@ -65,7 +66,8 @@ function importReducer(state = new ImportProjectState(), action) {
           errorFetchingProject: null,
         })
         // use set instead of merge to keep it as a plain js object.
-        .set('fetchedProject', action.project);
+        .set('fetchedProject', action.project)
+        .set('importableProject', importFuncs.getImportableProject(action.project));
     case IMPORT.PROJECT.FAILED_FETCHING:
       return state.merge({
         isFetchingProject: false,

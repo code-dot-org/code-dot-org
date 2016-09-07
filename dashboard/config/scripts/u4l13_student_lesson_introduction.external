@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-# Unit 4: Lesson 13 - The Cost of Free
+# Unit 4: Lesson 4 - The Cost of Free
 
 ## Background
 
@@ -12,14 +12,17 @@ Why is so much of the stuff you use online free? Who is paying for it? Many peop
 
 ## Lesson
 
-* Video - The Future of Big Data
+* Video: The Future of Big Data
 * What do you know about data collected about you every day?
 * Reading: Wall Street Journal: Users Get as Much as They Give
 * Read a real data privacy policy
 
 ## Resources
 
-* Video: <a href="http://www.fwthinking.com/video/clips/future-big-data-video/">The Future of Big Data</a>
+* Video: 
+	* External Link: <a href="http://www.fwthinking.com/video/clips/future-big-data-video/">The Future of Big Data</a>
+    * Video is also embeded in code studio (just click *Continue* below)
+    
 * Article: **Wall Street Journal: Users Get as Much as They Give** 
  * <a href="https://docs.google.com/document/d/1IM0rBFF1CP4icPU6pmPrXXStYWwQ1gURtvFoJsbFV1A">[Anotated Version]</a>
  * <a href="http://www.wsj.com/articles/SB10001424052748703748904575411530096840958">[Original version WSJ.com]</a>
