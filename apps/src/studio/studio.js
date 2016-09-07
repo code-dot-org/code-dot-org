@@ -4924,7 +4924,28 @@ Studio.askForInput = function (question, callback) {
 
     let handlerName = `askCallback${Studio.askCallbackIndex}`;
     Studio.askCallbackIndex++;
-    registerEventHandler(Studio.eventHandlers, handlerName, callback.bind(null, value || ''));
+    // Shift a CallExpression node on the stack that already has its func_,
+    // arguments, and other state populated:
+    const intArgs = [codegen.interpreter.createPrimitive(value || '')];
+    var state = {
+      node: {
+        type: 'CallExpression',
+        arguments: intArgs /* this just needs to be an array of the same size */
+      },
+      doneCallee_: true,
+      func_: callback,
+      arguments: intArgs,
+      n_: intArgs.length
+    };
+
+    registerEventHandler(Studio.eventHandlers, handlerName, () => {
+      const depth = codegen.interpreter.stateStack.unshift(state);
+      codegen.interpreter.paused_ = false;
+      while (codegen.interpreter.stateStack.length >= depth) {
+        codegen.interpreter.step();
+      }
+      codegen.interpreter.paused_ = true;
+    });
     callHandler(handlerName);
   }
 
