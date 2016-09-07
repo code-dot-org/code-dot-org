@@ -64,7 +64,7 @@ const TeacherStageInfo = React.createClass({
     stage: stageShape,
 
     // redux provided
-    isHidden: React.PropTypes.bool.isRequired,
+    hiddenStageMap: React.PropTypes.object.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
     toggleHidden: React.PropTypes.func.isRequired
   },
@@ -78,10 +78,11 @@ const TeacherStageInfo = React.createClass({
   },
 
   render() {
-    const { stage } = this.props;
+    const { stage, hiddenStageMap, hasNoSections } = this.props;
+    const isHidden = hiddenStageMap[stage.id];
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
-    const lockable = stage.lockable && !this.props.hasNoSections;
+    const lockable = stage.lockable && !hasNoSections;
     if (!lockable && !lessonPlanUrl) {
       return null;
     }
@@ -100,7 +101,7 @@ const TeacherStageInfo = React.createClass({
           {lockable && <StageLock stage={stage}/>}
           {experiments.isEnabled('hiddenStages') && <div style={styles.toggle}>
             <HiddenStageToggle
-              hidden={this.props.isHidden}
+              hidden={isHidden}
               onChange={this.onClickHiddenToggle}
             />
           </div>
@@ -111,10 +112,9 @@ const TeacherStageInfo = React.createClass({
   }
 });
 
-export default connect((state, ownProps) => {
-  const isHidden = state.hiddenStage[ownProps.stage.id];
+export default connect(state => {
   return {
-    isHidden,
+    hiddenStageMap: state.hiddenStage,
     hasNoSections: state.stageLock.sectionsLoaded &&
       Object.keys(state.stageLock.sections).length === 0
     };
