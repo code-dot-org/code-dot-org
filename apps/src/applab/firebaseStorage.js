@@ -57,14 +57,15 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
   // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
   const jsonValue = (value === undefined) ? null : JSON.stringify(value);
+  const valueLength = jsonValue ? jsonValue.length : 0;
 
   loadConfig().then(config => {
-    if (jsonValue && jsonValue.length > config.maxPropertySize) {
+    if (valueLength > config.maxPropertySize) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
   }).then(() => keyRef.set(jsonValue))
-    .then(() => logDataTransfer(key.length + jsonValue.length))
+    .then(() => logDataTransfer(key.length + valueLength))
     .then(onSuccess, onError);
 };
 
