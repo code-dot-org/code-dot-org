@@ -12,7 +12,8 @@ window.TutorialExplorerManager = function (options) {
   this.options = options;
   var self = this;
 
-  options.tutorials.contents = options.tutorials.contents.splice(0,5);
+  // Uncomment if we just want five items.
+  //options.tutorials.contents = options.tutorials.contents.splice(0,5);
 
   const FilterChoice = React.createClass({
     handleChange: function() {
@@ -24,13 +25,13 @@ window.TutorialExplorerManager = function (options) {
 
     render() {
       return (
-        <div>
+        <div  style={{userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', MsUserSelect: 'none'}}>
           <label>
             <input
-              type="checkbox"
+              type='checkbox'
               value={this.props.value}
               checked={this.props.selected}
-              ref="isCheckedInput"
+              ref='isCheckedInput'
               onChange={this.handleChange}
               style={{marginRight: '5px'}}
             />
