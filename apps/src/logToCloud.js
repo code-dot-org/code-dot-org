@@ -3,6 +3,7 @@ var utils = require('./utils');
 var PageAction = utils.makeEnum(
   'DropletTransitionError',
   'FirebaseRateLimitExceeded',
+  'FirebaseDataTransferConsumed',
   'SanitizedLevelHtml',
   'UserJavaScriptError',
   'RunButtonClick',
