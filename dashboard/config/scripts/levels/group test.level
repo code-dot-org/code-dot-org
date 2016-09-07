@@ -346,7 +346,15 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">any_actor</title>
         </block>
-        <block type="when_run"/>
+        <block type="studio_whenSpriteAndGroupCollide" inline="false">
+          <title name="SPRITE">0</title>
+          <title name="SPRITENAME">"witch"</title>
+          <value name="GROUPMEMBER">
+            <block type="variables_get">
+              <title name="VAR">actor</title>
+            </block>
+          </value>
+        </block>
         <block type="studio_addGoal">
           <title name="VALUE">7</title>
         </block>
@@ -363,6 +371,14 @@
           <value name="YPOS">
             <block type="math_number">
               <title name="NUM">200</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_setSpriteEmotionParams" inline="true">
+          <title name="VALUE">0</title>
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
             </block>
           </value>
         </block>

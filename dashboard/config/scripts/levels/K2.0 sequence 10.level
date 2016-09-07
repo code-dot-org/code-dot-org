@@ -28,8 +28,7 @@
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"K2.0_sequence_10_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": null,\r\n  \"hint_markdown\": \"You will need three different kinds of arrows to solve this puzzle.\",\r\n  \"hint_id\": \"K2.0_sequence_10_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "**Challenge:** Move me around the TNT to get to the pig.\r\n\r\n![](https://images.code.org/4873075cd34a942f5006d59b05422bd0-image-1467932801138.gif)",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

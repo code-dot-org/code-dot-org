@@ -329,6 +329,9 @@ $dpad-red: #F78183;
   min-width: 204px;
 }
 
+/* Set z-index to zero here so that .droplet-dropdown (z-index 10000) appears in front of
+ * other droplet elements, but behind anything with z-index > 1 outside of #codeTextbox,
+ * such as dialogs. */
 #codeTextbox {
   position: absolute;
   left: 0px;
@@ -339,6 +342,7 @@ $dpad-red: #F78183;
   overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
   direction: ltr;
+  z-index: 0;
 }
 
 #codeTextbox.pin_bottom {

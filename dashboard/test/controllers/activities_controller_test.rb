@@ -755,6 +755,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  test "logged in milestone with undefined submitted" do
+    post :milestone, @milestone_params.merge(submitted: 'undefined')
+    assert_response :success
+
+    assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
+  end
+
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     post :milestone, @milestone_params

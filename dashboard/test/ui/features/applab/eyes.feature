@@ -174,3 +174,23 @@ Scenario: Drag to delete
   Then I see no difference for "dragging out of app deletes button"
 
   And I close my eyes
+
+Scenario: Data Browser
+  Given I open my eyes to test "Applab Data Browser"
+
+  When I start a new Applab project with Firebase
+  Then I see no difference for "initial load"
+
+  When I switch to data mode
+  Then I see no difference for "data overview"
+
+  When I press keys "foo" for element "#dataOverview input"
+  And I click selector "#dataOverview button:contains(Add)"
+  And I wait until element "#dataTable" is visible
+  Then I see no difference for "data table"
+
+  When I click selector "#dataTable button:contains(Clear table)"
+  And I wait until element "#dataTable .modal-body" is visible
+  Then I see no difference for "clear table confirmation dialog"
+
+  And I close my eyes

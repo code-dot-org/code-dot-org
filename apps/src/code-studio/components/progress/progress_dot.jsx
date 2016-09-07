@@ -7,6 +7,7 @@ import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../../color';
 import progressStyles, { createOutline } from './progressStyles';
 import { LevelStatus } from '../../activityUtils';
+import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 
 const dotSize = 24;
 const styles = {
@@ -152,18 +153,20 @@ export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
     courseOverviewPage: React.PropTypes.bool,
+    stageId: React.PropTypes.number.isRequired,
 
     // redux provdied
+    overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
     currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
   },
 
-  getIconForLevelStatus(level) {
-    if (level.locked || level.status === LevelStatus.locked) {
+  getIconForLevelStatus(levelStatus, isLocked) {
+    if (isLocked) {
       return 'fa-lock';
-    } else if (level.status === LevelStatus.perfect || level.status === LevelStatus.review_accepted) {
+    } else if (levelStatus === LevelStatus.perfect || levelStatus === LevelStatus.review_accepted) {
       return 'fa-check';
-    } else if (level.status === LevelStatus.review_rejected) {
+    } else if (levelStatus === LevelStatus.review_rejected) {
       return 'fa-exclamation';
     } else {
       return null;
@@ -172,6 +175,7 @@ export const ProgressDot = Radium(React.createClass({
 
   render() {
     const level = this.props.level;
+    const levelStatus = this.props.overrideLevelStatus || level.status;
     const onCurrent = this.props.currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
         level.uid === this.props.currentLevelId);
@@ -183,8 +187,9 @@ export const ProgressDot = Radium(React.createClass({
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
     // Account for both the level based concept of locked, and the progress based concept.
-    const isLocked = level.locked || level.status === LevelStatus.locked;
-    const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const isLocked = level.locked || levelStatus === LevelStatus.locked;
+    const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
+      this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
     const levelUrl = isLocked ? undefined : level.url + location.search;
 
     return (
@@ -207,7 +212,7 @@ export const ProgressDot = Radium(React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
-              level.status && level.status !== LevelStatus.not_tried && styles.dot.icon_complete,
+              levelStatus && levelStatus !== LevelStatus.not_tried && styles.dot.icon_complete,
               outlineCurrent && {textShadow: createOutline(color.level_current)}
             ]}
           /> :
@@ -221,7 +226,7 @@ export const ProgressDot = Radium(React.createClass({
               level.kind === 'assessment' && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
-              styles.status[level.status || LevelStatus.not_tried],
+              styles.status[levelStatus || LevelStatus.not_tried],
             ]}
           >
             <BubbleInterior
@@ -245,10 +250,23 @@ export const ProgressDot = Radium(React.createClass({
   }
 }));
 
-export default connect(state => ({
-  currentLevelId: state.progress.currentLevelId,
-  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
-}))(ProgressDot);
+export default connect((state, ownProps) => {
+  // If we're a teacher viewing as a student, we want to render lockable stages
+  // to have a lockable item only if the stage is fully locked.
+  // Do this by providing an overrideLevelStatus, which will take precedence
+  // over level.status
+  const stageId = ownProps.stageId;
+  let overrideLevelStatus;
+  const fullyLocked = fullyLockedStageMapping(state.stageLock);
+  if (state.stageLock.viewAs === ViewType.Student && !!fullyLocked[stageId]) {
+    overrideLevelStatus = LevelStatus.locked;
+  }
+  return {
+    currentLevelId: state.progress.currentLevelId,
+    saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation,
+    overrideLevelStatus
+  };
+})(ProgressDot);
 
 
 
@@ -362,6 +380,7 @@ if (BUILD_STYLEGUIDE) {
         },
         {
           name: 'completed puzzle in course overview',
+          description: 'Note: Center of the circle should be a number rather than an checkmark',
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
@@ -478,6 +497,7 @@ if (BUILD_STYLEGUIDE) {
         },
         {
           name: 'rejected peer review in course overview',
+          description: 'Note: Center of circle should have an exclamation point',
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
@@ -497,6 +517,7 @@ if (BUILD_STYLEGUIDE) {
         },
         {
           name: 'accepted peer review in course overview',
+          description: 'Note: Center of circle should have a checkmark',
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
@@ -516,6 +537,7 @@ if (BUILD_STYLEGUIDE) {
         },
         {
           name: 'submitted but unreviewed peer review in course overview',
+          description: 'Note: Center of circle should have no icon',
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
@@ -535,6 +557,7 @@ if (BUILD_STYLEGUIDE) {
         },
         {
           name: 'locked peer review in course overview',
+          description: 'Note: Center of circle should have a locked icon',
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
@@ -651,7 +674,7 @@ if (BUILD_STYLEGUIDE) {
               }}
             />
           )
-        }
+        },
       ]);
   };
 }

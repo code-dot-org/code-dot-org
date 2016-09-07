@@ -101,6 +101,20 @@ class SectionTest < ActiveSupport::TestCase
     assert new_section.students.exists?(student.id)
   end
 
+  test 'add_student is idempotent' do
+    section = create :section
+    student1 = create :student
+    student2 = create :student
+
+    2.times do
+      section.add_student student1, move_for_same_teacher: true
+      section.add_student student2, move_for_same_teacher: false
+    end
+
+    assert_equal 2, section.followers.count
+    assert_equal [student1.id, student2.id], section.followers.all.map(&:student_user_id)
+  end
+
   test 'add_student with move_for_same_teacher: false does not move student' do
     # This option is used for pd-workshop sections.
     # A workshop attendee, unlike students in a classroom section, can remain enrolled
@@ -122,5 +136,29 @@ class SectionTest < ActiveSupport::TestCase
     # Verify student is in both sections
     assert original_section.students.exists?(attendee.id)
     assert new_section.students.exists?(attendee.id)
+  end
+
+  test 'section_type validation' do
+    section = create :section
+    section.section_type = 'invalid_section_type'
+
+    refute section.valid?
+    assert_equal 1, section.errors.count
+    assert_equal 'Section type is not included in the list', section.errors.full_messages.first
+
+    section.section_type = Section::TYPES.first
+    assert section.valid?
+
+    section.section_type = nil
+    assert section.valid?
+  end
+
+  test 'workshop_section?' do
+    Pd::Workshop::SECTION_TYPES.each do |type|
+      assert Section.new(section_type: type).workshop_section?
+    end
+
+    refute Section.new.workshop_section?
+    refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 end

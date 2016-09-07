@@ -1,5 +1,6 @@
 /* globals dashboard  */
 import $ from 'jquery';
+import debounce from 'lodash/debounce';
 
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
@@ -94,7 +95,7 @@ var Dialog = module.exports = function (options) {
     var scrollableElement = this.div.find(options.autoResizeScrollableElement);
     scrollableElement.css('overflow-y', 'auto');
 
-    resizeCallback = dashboard.utils.debounce(function () {
+    resizeCallback = debounce(function () {
       if (!this.isVisible) {
         return;
       }

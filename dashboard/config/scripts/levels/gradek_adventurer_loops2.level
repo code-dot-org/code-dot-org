@@ -27,8 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "How can Laurel collect all five piles of gold using only one --> block?",
-    "contained_level_names": null,
-    "ideal": "4"
+    "ideal": "4",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -186,9 +186,8 @@ CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
-Isabel Leeder<br/>
-ileeder@frostscience.org 
-
+Lindsay Bartholomew<br/>
+lbartholomew@frostscience.org
 <br/>
 
 ### [Orlando Science Center](https://www.osc.org/)<br/>

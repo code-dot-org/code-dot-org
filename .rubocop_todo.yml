@@ -45,11 +45,6 @@ Lint/UnusedMethodArgument:
 Performance/Casecmp:
   Enabled: false
 
-# Offense count: 13
-# Cop supports --auto-correct.
-Performance/StringReplacement:
-  Enabled: false
-
 # Offense count: 2
 Performance/TimesMap:
   Enabled: false
@@ -167,10 +162,6 @@ Style/Lambda:
 # Offense count: 110
 # Cop supports --auto-correct.
 Style/LeadingCommentSpace:
-  Enabled: false
-
-# Offense count: 7
-Style/MultilineBlockChain:
   Enabled: false
 
 # Offense count: 136
