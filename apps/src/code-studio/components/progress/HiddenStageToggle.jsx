@@ -2,30 +2,28 @@ import React, { PropTypes } from 'react';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '../../../color';
+import commonMsg from '@cdo/locale';
 
-const HiddenStageToggle = React.createClass({
-  propTypes: {
-    hidden: PropTypes.bool.isRequired,
-    onChange: PropTypes.func.isRequired
-  },
-  render() {
-    return (
-      <span>
-        <ToggleGroup
-          selected={this.props.hidden ? "hidden" : "visible"}
-          activeColor={color.cyan}
-          onChange={this.props.onChange}
-        >
-          <button value="visible" title="Visible">
-            <FontAwesome icon="eye"/>
-          </button>
-          <button value="hidden" title="Hidden">
-            <FontAwesome icon="eye-slash"/>
-          </button>
-        </ToggleGroup>
-      </span>
-    );
-  }
-});
+export default function HiddenStageToggle({hidden, onChange}) {
+  return (
+    <span>
+      <ToggleGroup
+        selected={hidden ? "hidden" : "visible"}
+        activeColor={color.cyan}
+        onChange={onChange}
+      >
+        <button value="visible" title={commonMsg.visible()}>
+          <FontAwesome icon="eye"/>
+        </button>
+        <button value="hidden" title={commonMsg.hidden()}>
+          <FontAwesome icon="eye-slash"/>
+        </button>
+      </ToggleGroup>
+    </span>
+  );
+}
 
-export default HiddenStageToggle;
+HiddenStageToggle.propTypes = {
+  hidden: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired
+};

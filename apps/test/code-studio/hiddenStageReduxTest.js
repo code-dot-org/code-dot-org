@@ -5,8 +5,13 @@ import sinon from 'sinon';
 
 import { initProgress } from '@cdo/apps/code-studio/progressRedux';
 import reducer, { toggleHidden } from '@cdo/apps/code-studio/hiddenStageRedux';
+import experiments from '@cdo/apps/experiments';
 
 describe('reducer tests', () => {
+  before(() => {
+    experiments.setEnabled('hiddenStages', true);
+  });
+
   it('initializes based on initProgress', () => {
     const action = initProgress({
       currentLevelId: null,

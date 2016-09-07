@@ -8,7 +8,7 @@ import experiments from '@cdo/apps/experiments';
 
 export const TOGGLE_HIDDEN = 'hiddenStage/TOGGLE_HIDDEN';
 
-const hiddenStagesEnabled = experiments.isEnabled('hiddenStages') || IN_UNIT_TEST;
+export const hiddenStagesEnabled = () => experiments.isEnabled('hiddenStages');
 
 /**
  * hidden stage reducer
@@ -20,7 +20,7 @@ export default function reducer(state = {}, action) {
       ...state,
       ...action.stages.reduce((obj, stage) => ({
         ...obj,
-        [stage.id]: hiddenStagesEnabled ? !!stage.hidden : false
+        [stage.id]: hiddenStagesEnabled() ? !!stage.hidden : false
       }), {})
     };
   }
@@ -31,7 +31,7 @@ export default function reducer(state = {}, action) {
       return {
         ...state,
         // never hide unless isEnabled
-        [stageId]: hiddenStagesEnabled ? hidden : false
+        [stageId]: hiddenStagesEnabled() ? hidden : false
       };
     }
   }
