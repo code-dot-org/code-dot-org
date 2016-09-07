@@ -253,7 +253,7 @@ window.apps = {
           source = appOptions.getCode();
           resolve(source);
         } else if (appOptions.getCodeAsync) {
-          appOptions.getCodeAsync().then(() => {
+          appOptions.getCodeAsync().then((source) => {
             resolve(source);
           });
         }
