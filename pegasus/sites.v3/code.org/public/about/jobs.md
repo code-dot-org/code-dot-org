@@ -11,7 +11,7 @@ video_player: true
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>'Meet the team at @codeorg and see how much they’ve done in just a few years!'} %>
 
-<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false" %>
+<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
 
 </div>
 
