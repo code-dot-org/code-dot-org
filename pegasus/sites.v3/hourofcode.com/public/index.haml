@@ -1,6 +1,6 @@
 ---
 layout: wide_index
-title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short')) %>"
+title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
@@ -75,9 +75,7 @@ social:
           #textbacking
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
               %h4
-                =hoc_s(:front_join_us_heading)
-              %div.students-served
-                =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+                =hoc_s(:front_join_us_anybody_can_learn)
             %div.ctabuttongroup
               %div#tryittext.ctatext
                 %a#tryitbutton.ctabuttonatag{href: resolve_url('#join')}
@@ -87,8 +85,6 @@ social:
               %div.watch-video-small{onclick: "return startVideo();"}
                 =hoc_s(:front_watch_regular_video)
                 %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
-              %div#volunteer-signup
-                %a{href: "https://code.org/volunteer"}= hoc_s('front_volunteers')
 
           %br/
           %br/
@@ -111,8 +107,9 @@ social:
 
   -# Map
 
-  #maparea
-    =view :map
+  - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
+    #maparea
+      =view :map
 
   -# Highlights
 
@@ -120,36 +117,36 @@ social:
 
   .row
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-girls2.jpg", style: "width: 100%;"}
+      %img{src: "/images/fill-600x400/highlight-girl-hawaii.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-nba.jpg", style: "width: 100%;"}
+      %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%;"}
+      %img{src: "/images/fill-600x400/highlight-girl-purple.jpg", style: "width: 100%;"}
 
   .gap{style: "height:30px"}
 
   .row
     .col-xs-6.col-sm-4
       .hidden-xs
-        %img{src: "/images/fill-600x400/highlight-pakistan.jpg", style: "width: 100%; padding-bottom:30px"}
-      %img{src: "/images/fill-600x400/highlight-pair.jpg", style: "width: 100%;"}
+        %img{src: "/images/fill-600x400/highlight-india.jpg", style: "width: 100%; padding-bottom:30px"}
+      %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-8
-      %img{src: localized_image("/images/fill-800x543/highlight-selfie.jpg"), style: "width: 100%;"}
+      %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
 
   .gap{style: "height:30px"}
 
   .row
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%;"}
+      %img{src: "/images/fill-600x400/highlight-stickers.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-girls.jpg", style: "width: 100%;"}
+      %img{src: "/images/fill-600x400/highlight-girl-star-wars.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-certificates.jpg", style: "width: 100%;"}
+      %img{src: "/images/fill-600x400/highlight-kids-certificates.jpg", style: "width: 100%;"}
 
 
   -# Stats
@@ -228,7 +225,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/Ofze6CWUCx8?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();
