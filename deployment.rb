@@ -52,7 +52,7 @@ def load_configuration
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' => '00000000',
-    'dashboard_host'              => 'localhost',
+    'dashboard_host'              => '0.0.0.0',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
     'dashboard_enable_pegasus'    => rack_env == :development,
