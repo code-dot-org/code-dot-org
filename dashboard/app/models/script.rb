@@ -164,8 +164,8 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     Script.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
+    [ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly].
+      each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 

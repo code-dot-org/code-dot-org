@@ -57,7 +57,7 @@ test:
   username: <%= writer.user || 'root' %>
   password: <%= writer.password || '' %>
   host: 'localhost'
-  pool: 5
+  pool: <%= ENV['CI'] ? 20 : 5 %>
   database: 'dashboard_test'
 
 production:

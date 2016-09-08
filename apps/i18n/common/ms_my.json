@@ -279,6 +279,7 @@
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "dontForget": "Don't forget",
   "editable": "Editable",
+  "hidden": "hidden",
   "loading": "Loading...",
   "locked": "Locked",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
@@ -302,5 +303,6 @@
   "studentControl": "Individual student control",
   "teacher": "Teacher",
   "viewPageAs": "View page as:",
-  "viewSection": "View section"
+  "viewSection": "View section",
+  "visible": "Visible"
 }
