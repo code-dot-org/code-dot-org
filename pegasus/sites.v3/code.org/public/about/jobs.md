@@ -38,7 +38,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Program Coordinator](#coord)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
- 	- [Advocacy Intern](#advintern)	
+ 	- [State Policy Intern](#advintern)	
 
 **[Working at Code.org](#info)**
 
