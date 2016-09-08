@@ -9,8 +9,6 @@
 # single command.  This is preferred (and default) in development mode.
 dashboard_enable_pegasus: true
 
-# Allows localhost-studio.code.org:3000 proxy for local development.
-dashboard_host: 0.0.0.0
 
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
