@@ -1154,7 +1154,7 @@ $(document).ready(function () {
 
   // When we switch back to shift mode, force an alphabetic order
   $("a[href='#shift']").click(function () {
-    $("#sort-toggle button[value=alphabetic]").trigger('click');
+    $("#sort-toggle button[value='alphabetic']").trigger('click');
   });
 
 });
