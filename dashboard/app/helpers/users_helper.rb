@@ -93,7 +93,9 @@ module UsersHelper
         sl.level_ids.each do |level_id|
           ul = uls.try(:[], level_id)
           completion_status = activity_css_class(ul)
-          submitted = !!ul.try(:submitted)
+          # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+          submitted = !!ul.try(:submitted) &&
+              !(ul.level.try(:peer_reviewable) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
           readonly_answers = !!ul.try(:readonly_answers)
           locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
 

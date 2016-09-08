@@ -286,10 +286,6 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:minecraft, self.name)
   end
 
-  def find_script_level(level_id)
-    self.script_levels.detect { |sl| sl.level_id == level_id }
-  end
-
   def get_script_level_by_id(script_level_id)
     self.script_levels.find { |sl| sl.id == script_level_id.to_i }
   end
