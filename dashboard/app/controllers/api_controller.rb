@@ -248,7 +248,7 @@ class ApiController < ApplicationController
         # any script in which they have encountered that level.
         last_attempt = student.last_attempt_for_any(script_level.levels)
 
-        # Get the Level itself.
+        # Get the LevelGroup itself.
         level_group = last_attempt.try(:level) || script_level.oldest_active_level
 
         # Get the response which will be stringified JSON.
