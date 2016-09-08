@@ -9,6 +9,7 @@ import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import { getStore } from './redux';
 import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
+import { getHiddenStages } from './hiddenStageRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -61,6 +62,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   initializeStoreWithProgress(store, scriptData, currentLevelId);
 
   var mountPoint = document.createElement('div');
+
+  store.dispatch(getHiddenStages(scriptData.name));
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
