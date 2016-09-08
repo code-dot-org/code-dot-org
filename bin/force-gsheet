@@ -16,7 +16,7 @@ def main
       next
     end
 
-    table_name = File.basename(csv_file, File.extname(csv_file)).gsub('-', '_')
+    table_name = File.basename(csv_file, File.extname(csv_file)).tr('-', '_')
 
     system "touch #{csv_file}"
     PEGASUS_DB[:seed_info].where(table: table_name).delete

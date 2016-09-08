@@ -43,8 +43,6 @@ var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, a
 
   this.submitAllowed = true;
 
-  this.forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
-
   $(document).ready($.proxy(function () {
     this.ready();
   }, this));

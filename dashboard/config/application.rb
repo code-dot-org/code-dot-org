@@ -128,7 +128,11 @@ module Dashboard
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
 
-    if Rails.env.production?
+    # Make sure dependency auto loading is enabled across all environments.
+    # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
+    config.enable_dependency_loading = true
+
+    if CDO.newrelic_logging
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end
