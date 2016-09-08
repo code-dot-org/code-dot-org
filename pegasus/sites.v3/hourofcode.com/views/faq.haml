@@ -4,7 +4,7 @@
 %div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/%{tutorials}/, resolve_url('https://code.org/learn')).gsub(/%{partners}/, resolve_url('/partners'))
 
 %br/
-%a{href: resolve_url('#join')}
+%a{onclick: "adjustScroll('join');"}
   %button
     =hoc_s(:signup_host_an_hour)
 
