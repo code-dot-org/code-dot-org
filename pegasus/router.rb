@@ -407,6 +407,8 @@ class Documents < Sinatra::Base
         e.set_backtrace e.backtrace.unshift("#{path}:#{e.line}")
       end
       raise e
+    rescue => e
+      raise "Error rendering #{path}: #{e}"
     end
 
     def render_(body, extname, locals={})
