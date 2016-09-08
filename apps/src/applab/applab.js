@@ -1404,7 +1404,7 @@ Applab.onPuzzleComplete = function (submit) {
       level: level.id,
       result: levelComplete,
       testResult: Applab.testResults,
-      submitted: submit,
+      submitted: !!submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
       containedLevelResultsInfo: containedLevelResultsInfo,
@@ -1637,6 +1637,12 @@ Applab.showRateLimitAlert = function () {
   } else {
     studioApp.displayWorkspaceAlert("error", alert);
   }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!studioApp.share,
+  });
 };
 
 Applab.getAppReducers = function () {

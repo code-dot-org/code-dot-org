@@ -13,32 +13,18 @@ Look at the possible information that you can input to your app, and decide whic
 Once you have the information that you need as input, decide what your app will output.
 
 <details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the phone</summary>
-<div style="margin: 3px 15px;">
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Sensor Input</summary>
-<div style="margin: 3px 15px;">
-Here are some phone sensors that your program can use to get input.
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Microphone</summary>
-There is a lot of loud talking in the environment.
+<summary>Input from the Phone Sensors</summary>
+
+Sensor | Input Information
+------|--------
+**Microphone**: | There is a lot of talking in the environment
+**GPS Location** | B, 2
+**Motion Sensor** | The phone is moving quickly
+**Camera** | The image from the camera is all black
+
 </details>
 <details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Location (GPS)</summary>
-B, 2
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Motion Senson</summary>
-The phone is moving quickly.
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Camera</summary>
-The image from the camera is all black.
-</details>
-</div>
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">User Input</summary>
+<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the User</summary>
 <div style="margin: 3px 15px;">
 Here is some information that the user can input.
 <details>
@@ -55,8 +41,6 @@ Tiger</details>
 <details>
 <summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Class</summary>
 Science
-</details>
-</div>
 </details>
 </div>
 </details>

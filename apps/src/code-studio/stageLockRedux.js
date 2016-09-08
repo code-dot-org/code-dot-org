@@ -3,6 +3,7 @@
  * the course overview page, and the stage locking dialog.
  */
 
+import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
@@ -20,7 +21,7 @@ export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
 const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 export const initialState = {
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Student,
   sections: {},
   selectedSection: null,
   sectionsLoaded: false,

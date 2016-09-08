@@ -143,7 +143,11 @@ describe("The applab/import module", () => {
           sources: {
             html: `
               <div>
-                <div class="screen" id="screen1">
+                <div
+                  class="screen"
+                  id="screen1"
+                  data-canonical-image-url="background-asset.png"
+                  style="background-image: url("/v2/assets/some-other-project/background-asset.png")">
                   <img src="/v3/assets/some-other-project/asset1.png"
                        data-canonical-image-url="asset1.png"
                        id="img2">
@@ -159,6 +163,7 @@ describe("The applab/import module", () => {
             {filename: 'asset2.png', category: 'image'},
             {filename: 'asset3.png', category: 'image'},
             {filename: 'asset4.png', category: 'image'},
+            {filename: 'background-asset.png', category: 'image'},
           ],
           existingAssets: [
             {filename: 'asset1.png', category: 'image'},
@@ -172,7 +177,10 @@ describe("The applab/import module", () => {
       });
 
       it('should list the assets to import without replacing', () => {
-        expect(importable.screens[0].assetsToImport).to.deep.equal(['asset2.png']);
+        expect(importable.screens[0].assetsToImport).to.deep.equal([
+          'asset2.png',
+          'background-asset.png',
+        ]);
       });
 
       it('should list the other assets not used in the screens', () => {

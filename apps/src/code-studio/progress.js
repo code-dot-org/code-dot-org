@@ -8,7 +8,7 @@ import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import { getStore } from './redux';
-import { authorizeLockable } from './stageLockRedux';
+import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -35,7 +35,8 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
     stages: [stageData]
   }, currentLevelId, saveAnswersBeforeNavigation);
 
-  store.dispatch(mergeProgress(_.mapValues(progressData.levels, level => level.result)));
+  store.dispatch(mergeProgress(_.mapValues(progressData.levels,
+    level => level.submitted ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
@@ -75,6 +76,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && !currentLevelId) {
       store.dispatch(showTeacherInfo());
+      store.dispatch(setViewType(ViewType.Teacher));
       renderTeacherPanel(store, scriptData.id);
     }
 
@@ -93,7 +95,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
-        if (level.readonly_answers) {
+        if (level.submitted || level.readonly_answers) {
           return SUBMITTED_RESULT;
         }
 
