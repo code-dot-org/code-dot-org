@@ -559,7 +559,7 @@ $suite_duration = Time.now - $suite_start_time
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
   "Test count: #{($suite_success_count + $suite_fail_count)}. " \
   "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}." \
+  "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
   "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
