@@ -3,7 +3,6 @@
  */
 
 import {
-  SUBMITTED_RESULT,
   LOCKED_RESULT,
   LevelStatus,
   mergeActivityResult,
