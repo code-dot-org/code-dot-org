@@ -7,7 +7,6 @@ window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
 var update = require('react-addons-update');
-var BaseDialog = require('@cdo/apps/templates/BaseDialog');
 
 window.TutorialExplorerManager = function (options) {
   this.options = options;
@@ -71,8 +70,13 @@ window.TutorialExplorerManager = function (options) {
   var TutorialDetail = React.createClass({
     render: function() {
       if (!this.props.showing) {
+        // Disable body scrolling.
+        $('body').css('overflow', 'auto');
         return null;
       }
+
+      // Enable body scrolling.
+      $('body').css('overflow', 'hidden');
 
       return (
         <div id="tutorialPopupFullWidth" style={{position: 'absolute', left: 0, top: 0, width: '100%'}}>
