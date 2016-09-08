@@ -5,6 +5,7 @@ import ToggleButton from './ToggleButton';
 const ToggleGroup = React.createClass({
   propTypes: {
     selected: React.PropTypes.string.isRequired,
+    activeColor: React.PropTypes.string,
     onChange: React.PropTypes.func.isRequired,
     children(props, propName, componentName) {
       const prop = props[propName];
@@ -46,6 +47,8 @@ const ToggleGroup = React.createClass({
           active={child.props.value === this.props.selected}
           first={index === 0}
           last={index === children.length - 1}
+          activeColor={this.props.activeColor}
+          title={child.props.title}
           onClick={this.setSelected.bind(this, child.props.value)}
         >
           {child.props.children}

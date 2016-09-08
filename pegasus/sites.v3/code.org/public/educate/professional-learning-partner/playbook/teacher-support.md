@@ -70,8 +70,8 @@ ________________
 
 Click on the links below to see a list of classroom supplies your teacher will need to teach the course.
 
-- [CS Principles]() - Coming Soon!
-- [Exploring Computer Science]() - Coming Soon!
+- [CS Principles](https://code.org/educate/csp#materials)
+- [Exploring Computer Science](http://www.exploringcs.org/curriculum)
 - [CS in Science]() - Coming Soon!
 - [CS in Algebra]() - Coming Soon!
 

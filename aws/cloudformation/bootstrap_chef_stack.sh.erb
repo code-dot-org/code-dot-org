@@ -47,7 +47,7 @@ OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIR
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
 
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
-[ ${STATUS} = 'SUCCESS' ] && LIFECYCLE_RESULT=CONTINUE || LIFECYCLE=ABANDON
+[ ${STATUS} = 'SUCCESS' ] && LIFECYCLE_RESULT=CONTINUE || LIFECYCLE_RESULT=ABANDON
 
 # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
 LIFECYCLE_HOOK=$(ref WebServerHook)
