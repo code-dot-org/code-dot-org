@@ -53,6 +53,15 @@ GIT
       tilt
 
 GIT
+  remote: git://github.com/wjordan/omniauth-windowslive.git
+  revision: 7aa075a631ab56b3929f93bf03a5d7e54e024eed
+  ref: cdo
+  specs:
+    omniauth-windowslive (0.0.11)
+      multi_json (>= 1.0.3)
+      omniauth-oauth2 (~> 1.4)
+
+GIT
   remote: git://github.com/wjordan/sass-rails.git
   revision: 06e833d92d083fbcb137364ffebc597b2577db23
   ref: frozen-array-fix
@@ -415,9 +424,6 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    omniauth-windowslive (0.0.10)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.0)
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (0.9.6)
@@ -706,7 +712,7 @@ DEPENDENCIES
   omniauth-clever (~> 1.2.1)!
   omniauth-facebook (~> 4.0.0.rc1)
   omniauth-google-oauth2 (~> 0.3.1)
-  omniauth-windowslive (~> 0.0.10)
+  omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
   parallel
