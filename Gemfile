@@ -124,7 +124,9 @@ gem 'cancancan', '~> 1.15.0'
 
 gem 'omniauth-facebook', '~> 4.0.0.rc1'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
-gem 'omniauth-windowslive', '~> 0.0.10'
+# Ref: https://github.com/joel/omniauth-windowslive/pull/16
+# Ref: https://github.com/joel/omniauth-windowslive/pull/17
+gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -141,7 +143,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 

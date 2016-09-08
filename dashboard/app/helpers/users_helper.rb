@@ -93,7 +93,9 @@ module UsersHelper
         sl.level_ids.each do |level_id|
           ul = uls.try(:[], level_id)
           completion_status = activity_css_class(ul)
-          submitted = !!ul.try(:submitted)
+          # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+          submitted = !!ul.try(:submitted) &&
+              !(ul.level.try(:peer_reviewable) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
           readonly_answers = !!ul.try(:readonly_answers)
           locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
 
@@ -140,51 +142,52 @@ module UsersHelper
   # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
   # (though not necessarily correct) answer has been given for each level embedded on a given page.
   def get_pages_completed(user, sl)
-    level = user.last_attempt_for_any(sl.levels).try(:level) || sl.oldest_active_level
+    # Since we only swap LevelGroups with other LevelGroups, just check levels[0]
+    return nil unless sl.levels[0].is_a? LevelGroup
 
-    if level.is_a? LevelGroup
-      pages_completed = []
+    last_user_level = user.last_attempt_for_any(sl.levels)
+    level = last_user_level.try(:level) || sl.oldest_active_level
+    pages_completed = []
 
-      if user.last_attempt(level).try(:level_source)
-        last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
-      end
-
-      # Go through each page.
-      level.properties["pages"].each do |page|
-        page_valid_result_count = 0
-
-        # Construct an array of the embedded level names used on the page.
-        embedded_level_names = []
-        page["levels"].each do |level_name|
-          embedded_level_names << level_name
-        end
-
-        # Retrieve the level information for those embedded levels.  These results
-        # won't necessarily match the order of level names as requested, but
-        # fortunately we are just accumulating a count and don't mind the order.
-        Level.where(name: embedded_level_names).each do |embedded_level|
-          level_id = embedded_level.id
-
-          # Do we have a valid result for this level in the LevelGroup last_attempt?
-          if last_attempt && last_attempt.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
-            page_valid_result_count += 1
-          end
-        end
-
-        # The page is considered complete if there was a valid result for each
-        # embedded level.
-        if page_valid_result_count == 0
-          page_completed_value = nil
-        elsif page_valid_result_count == page["levels"].length
-          page_completed_value = ActivityConstants::FREE_PLAY_RESULT
-        else
-          page_completed_value = ActivityConstants::UNSUBMITTED_RESULT
-        end
-        pages_completed << page_completed_value
-      end
-
-      pages_completed
+    if last_user_level.try(:level_source)
+      last_attempt = JSON.parse(last_user_level.level_source.data)
     end
+
+    # Go through each page.
+    level.properties["pages"].each do |page|
+      page_valid_result_count = 0
+
+      # Construct an array of the embedded level names used on the page.
+      embedded_level_names = []
+      page["levels"].each do |level_name|
+        embedded_level_names << level_name
+      end
+
+      # Retrieve the level information for those embedded levels.  These results
+      # won't necessarily match the order of level names as requested, but
+      # fortunately we are just accumulating a count and don't mind the order.
+      Level.where(name: embedded_level_names).each do |embedded_level|
+        level_id = embedded_level.id
+
+        # Do we have a valid result for this level in the LevelGroup last_attempt?
+        if last_attempt && last_attempt.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
+          page_valid_result_count += 1
+        end
+      end
+
+      # The page is considered complete if there was a valid result for each
+      # embedded level.
+      if page_valid_result_count.zero?
+        page_completed_value = nil
+      elsif page_valid_result_count == page["levels"].length
+        page_completed_value = ActivityConstants::FREE_PLAY_RESULT
+      else
+        page_completed_value = ActivityConstants::UNSUBMITTED_RESULT
+      end
+      pages_completed << page_completed_value
+    end
+
+    pages_completed
   end
 
   def percent_complete(script, user = current_user)

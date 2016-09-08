@@ -157,16 +157,18 @@ module AWS
     # Returns the distribution ID for a given hostname.
     # Uses cached id-to-hostname mappings if cached=true.
     def self.get_distribution_id(cached, cloudfront, hostname)
-      mapping =
-        # Use cached value first if available.
-        cached && File.file?(alias_cache) && JSON.parse(IO.read(alias_cache)) ||
-        # Fallback to API call.
-        cloudfront.list_distributions.distribution_list.items.map do |dist|
+      # Use cached value first if available.
+      mapping = JSON.parse(IO.read(alias_cache)) if cached && File.file?(alias_cache)
+      # Otherwise fall back to API call.
+      unless mapping
+        dists = cloudfront.list_distributions.distribution_list.items.map do |dist|
           [dist.id, dist.aliases.items]
-        end.to_h.tap do |out|
+        end
+        mapping = dists.to_h.tap do |out|
           # Write result to cache.
           IO.write(alias_cache, JSON.pretty_generate(out))
         end
+      end
       mapping.select{ |_, v| v.include? hostname }.keys.first
     end
 

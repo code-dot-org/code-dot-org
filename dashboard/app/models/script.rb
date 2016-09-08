@@ -164,8 +164,8 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     Script.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
+    [ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly].
+      each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 
@@ -284,10 +284,6 @@ class Script < ActiveRecord::Base
 
   def minecraft?
     ScriptConstants.script_in_category?(:minecraft, self.name)
-  end
-
-  def find_script_level(level_id)
-    self.script_levels.detect { |sl| sl.level_id == level_id }
   end
 
   def get_script_level_by_id(script_level_id)

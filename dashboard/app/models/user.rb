@@ -381,7 +381,7 @@ class User < ActiveRecord::Base
         user.age = 21
       else
         # student or unspecified type
-        user.birthday = auth.info.dob
+        user.age = ((Date.today - auth.info.dob) / 365).floor if auth.info.dob
       end
       user.gender = normalize_gender auth.info.gender
     end
@@ -528,9 +528,14 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
-  def last_attempt_for_any(levels)
+  def last_attempt_for_any(levels, script_id: nil)
     level_ids = levels.map(&:id)
-    UserLevel.where(user_id: self.id, level_id: level_ids).
+    conditions = {
+      user_id: self.id,
+      level_id: level_ids
+    }
+    conditions[:script_id] = script_id unless script_id.nil?
+    UserLevel.where(conditions).
       order('updated_at DESC').
       first
   end
