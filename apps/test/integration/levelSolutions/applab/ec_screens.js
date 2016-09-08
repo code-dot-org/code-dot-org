@@ -25,6 +25,9 @@ function validateElementSelect(expected, assert) {
   assert.deepEqual(actual, expected);
 }
 
+const orange = 'rgb(255, 164, 0)';
+const white = 'rgb(255, 255, 255)';
+
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -56,8 +59,6 @@ module.exports = {
         $(designModeButton).click();
         assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
 
-        var orange = 'rgb(255, 160, 0)';
-        var white = 'rgb(255, 255, 255)';
         assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button (active) to have orange background.');
         assert.equal(white, $("#codeModeButton").css('background-color'),
@@ -313,8 +314,6 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $("#designModeButton").click();
-        var orange = 'rgb(255, 160, 0)';
-        var white = 'rgb(255, 255, 255)';
         assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button (active) to have orange background.');
         assert.equal(white, $("#codeModeButton").css('background-color'),
@@ -377,8 +376,6 @@ module.exports = {
         assert.equal($('#divApplab #screen2')[0].style.display === 'none', true, 'screen 2 hidden');
 
         // design toggle row still shows design mode
-        var orange = 'rgb(255, 160, 0)';
-        var white = 'rgb(255, 255, 255)';
         assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button (active) to have orange background.');
         assert.equal(white, $("#codeModeButton").css('background-color'),

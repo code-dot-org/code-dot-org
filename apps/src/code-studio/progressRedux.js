@@ -1,7 +1,7 @@
 /**
  * Reducer and actions for progress
  */
-
+import _ from 'lodash';
 import {
   LOCKED_RESULT,
   LevelStatus,
@@ -10,7 +10,7 @@ import {
 } from './activityUtils';
 
 // Action types
-const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
@@ -41,7 +41,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages,
+      stages: action.stages.map(stage => _.omit(stage, 'hidden')),
       currentStageId
     });
   }
