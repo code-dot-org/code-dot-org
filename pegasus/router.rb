@@ -19,6 +19,7 @@ require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
+require 'active_support/core_ext/hash'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -409,7 +410,7 @@ class Documents < Sinatra::Base
     end
 
     def render_(body, extname, locals={})
-      locals = @locals.merge(locals)
+      locals = @locals.merge(locals).symbolize_keys
       case extname
       when '.erb', '.html'
         erb body, locals: locals
