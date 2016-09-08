@@ -90,6 +90,18 @@ class ScriptLevelsController < ApplicationController
     present_level
   end
 
+  # Get a list of hidden stages for the current users section
+  def hidden
+    authorize! :read, ScriptLevel
+
+    if current_user.nil?
+      render json: []
+      return
+    end
+
+    render json: [920]
+  end
+
   private
 
   # Configure http caching for the given script. Caching is disabled unless the
