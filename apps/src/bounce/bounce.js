@@ -1059,25 +1059,24 @@ Bounce.execute = function () {
   Bounce.waitingForReport = false;
   Bounce.response = null;
 
-  // Mapping of event handler hooks (e.g. Bounce.whenLeft) to the name of the
-  // block that should generate the corresponding code.
+  // Map event handler hooks (e.g. Bounce.whenLeft) to the generated code.
+  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
   const events = {
-    whenWallCollided: 'bounce_whenWallCollided',
-    whenBallInGoal: 'bounce_whenBallInGoal',
-    whenBallMissesPaddle: 'bounce_whenBallMissesPaddle',
-    whenPaddleCollided: 'bounce_whenPaddleCollided',
-    whenLeft: 'bounce_whenLeft',
-    whenRight: 'bounce_whenRight',
-    whenUp: 'bounce_whenUp',
-    whenDown: 'bounce_whenDown',
-    whenGameStarts: 'when_run'
+    whenWallCollided: generator('bounce_whenWallCollided'),
+    whenBallInGoal: generator('bounce_whenBallInGoal'),
+    whenBallMissesPaddle: generator('bounce_whenBallMissesPaddle'),
+    whenPaddleCollided: generator('bounce_whenPaddleCollided'),
+    whenLeft: generator('bounce_whenLeft'),
+    whenRight: generator('bounce_whenRight'),
+    whenUp: generator('bounce_whenUp'),
+    whenDown: generator('bounce_whenDown'),
+    whenGameStarts: generator('when_run')
   };
 
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp.reset(false);
 
-  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
-  Object.assign(Bounce, codegen.evalWithEvents({Bounce: api}, events, generator));
+  Object.assign(Bounce, codegen.evalWithEvents({Bounce: api}, events));
 
   Bounce.tickCount = 0;
   Bounce.intervalId = window.setInterval(Bounce.onTick, Bounce.scale.stepSpeed);
