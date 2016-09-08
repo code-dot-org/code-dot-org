@@ -296,14 +296,13 @@ class CDOImpl < OpenStruct
   # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    return super unless CDO.chef_managed
-    require 'cdo/rake_utils'
-    servers = RakeUtils.with_bundle_dir(cookbooks_dir) do
-      knife_cmd = "knife search node 'roles:front-end AND chef_environment:#{rack_env}' --format json --attribute cloud_v2"
-      JSON.parse(`#{knife_cmd}`)['rows'].map do |key|
-        [key.keys.first, key.values.first['cloud_v2']['local_hostname']]
-      end.to_h
-    end
+    return super unless CDO.chef_managed && rack_env?(:production)
+    require 'aws-sdk'
+    servers = Aws::EC2::Client.new.describe_instances(filters: [
+        { name: 'tag:aws:cloudformation:stack-name', values: ['autoscale-prod'] },
+        { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
+        { name: 'instance-state-name', values: ['running']}
+    ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
     servers.merge(super)
   end
 end

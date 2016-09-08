@@ -10,4 +10,4 @@ assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group',active:false
 endvariants
 
 stage 'NEW Unit 1 Chapter 1 Assessment', lockable:true
-assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2'
+assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'
