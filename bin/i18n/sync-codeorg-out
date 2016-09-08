@@ -59,7 +59,7 @@ def cleanup_portuguese_codes
 end
 
 def rebuild_blockly_js_files
-  exec "apps/node_modules/@code-dot-org/blockly-core/i18n/codeorg-messages.sh"
+  exec "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
 end
 
 push_out_translated_files

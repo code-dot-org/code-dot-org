@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Pulls in all strings that need to be translated. Pulls source
-# files from blockly-core, apps, pegasus, and dashboard and
+# files from blockly, apps, pegasus, and dashboard and
 # collects them to the single source folder i18n/locales/source.
 
 set -e
@@ -51,7 +51,7 @@ done
 
 ### Blockly Core
 
-orig_dir=apps/node_modules/@code-dot-org/blockly-core/i18n/locales/en-US
+orig_dir=apps/node_modules/@code-dot-org/blockly/i18n/locales/en-US
 loc_dir=i18n/locales/source/blockly-core
 mkdir -p $loc_dir
 
