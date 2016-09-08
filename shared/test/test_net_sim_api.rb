@@ -85,6 +85,9 @@ class NetSimApiTest < Minitest::Test
     master = MiniTest::Mock.new
     slave1 = MiniTest::Mock.new
     slave2 = MiniTest::Mock.new
+    master_client = MiniTest::Mock.new
+    slave1_client = MiniTest::Mock.new
+    slave2_client = MiniTest::Mock.new
     test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
     NetSimApi.override_redis_for_test(test_redis)
 
@@ -93,18 +96,35 @@ class NetSimApiTest < Minitest::Test
     slave1.expect :hgetall, {}, [String]
     slave2.expect :hgetall, {}, [String]
 
+    # Also expect each node to get one disconnect call per request
+    [[master, master_client],
+     [slave1, slave1_client],
+     [slave2, slave2_client]
+    ].each do |node, client|
+      3.times do
+        node.expect :client, client, []
+        client.expect :disconnect, 'OK', []
+      end
+    end
+
     @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
     @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
     @net_sim_api.get "/v3/netsim/#{@shard_id}/n/1"
     master.verify
     slave1.verify
     slave2.verify
+    master_client.verify
+    slave1_client.verify
+    slave2_client.verify
   end
 
   def test_not_distribute_writes
     master = MiniTest::Mock.new
     slave1 = MiniTest::Mock.new
     slave2 = MiniTest::Mock.new
+    master_client = MiniTest::Mock.new
+    slave1_client = MiniTest::Mock.new
+    slave2_client = MiniTest::Mock.new
     test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
     NetSimApi.override_redis_for_test(test_redis)
 
@@ -116,6 +136,17 @@ class NetSimApiTest < Minitest::Test
     master.expect :hincrby, 1, [String, String, Fixnum]
     master.expect :multi, []
 
+    # Also expect each node to get one disconnect call per request
+    [[master, master_client],
+     [slave1, slave1_client],
+     [slave2, slave2_client]
+    ].each do |node, client|
+      3.times do
+        node.expect :client, client, []
+        client.expect :disconnect, 'OK', []
+      end
+    end
+
     create_record([{name: 'alice', age: 7, male: false}])
     create_record([{name: 'alice', age: 7, male: false}])
     create_record([{name: 'alice', age: 7, male: false}])
@@ -123,6 +154,9 @@ class NetSimApiTest < Minitest::Test
     master.verify
     slave1.verify
     slave2.verify
+    master_client.verify
+    slave1_client.verify
+    slave2_client.verify
   end
 
   def test_create_multiple_records
