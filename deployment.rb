@@ -296,7 +296,7 @@ class CDOImpl < OpenStruct
   # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    return super unless CDO.chef_managed
+    return super unless CDO.chef_managed && rack_env?(:production)
     require 'aws-sdk'
     servers = Aws::EC2::Client.new.describe_instances(filters: [
         { name: 'tag:aws:cloudformation:stack-name', values: ['autoscale-prod'] },
