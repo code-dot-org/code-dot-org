@@ -437,7 +437,11 @@ class TablesTest < Minitest::Test
   end
 
   def export_firebase
-    get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+    CDO.stub(:firebase_name, 'my-firebase-name') do
+      CDO.stub(:firebase_secret, 'my-firebase-secret') do
+        get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+      end
+    end
   end
 
   def delete_column(column)
