@@ -1153,8 +1153,8 @@ $(document).ready(function () {
   $("#sort-toggle button").click(bg.handleSortChange.bind(bg));
 
   // When we switch back to shift mode, force an alphabetic order
-  $("a[href=#shift]").click(function () {
-    $("#sort-toggle button[value=alphabetic]").trigger('click');
+  $("a[href='#shift']").click(function () {
+    $("#sort-toggle button[value='alphabetic']").trigger('click');
   });
 
 });
