@@ -5,9 +5,12 @@ import { connect } from 'react-redux';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLock from './StageLock';
+import HiddenStageToggle from './HiddenStageToggle';
 import color from '../../../color';
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
+import { toggleHidden } from '../../hiddenStageRedux';
+import experiments from '@cdo/apps/experiments';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -30,18 +33,28 @@ const styles = {
     paddingBottom: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    maxWidth: '90%'
+    maxWidth: '90%',
+    whiteSpace: 'nowrap'
   },
   lessonPlan: {
     ':hover': {
       cursor: 'pointer',
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
+    marginTop: 5,
+    marginBottom: 5,
+    display: 'inline-block'
   },
   lessonPlanText: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
     marginLeft: 10
+  },
+  toggle: {
+    marginLeft: 15,
+    marginTop: 5,
+    display: 'inline-block',
+    verticalAlign: 'top',
   },
   dotIcon: progressStyles.dotIcon
 };
@@ -51,7 +64,13 @@ const TeacherStageInfo = React.createClass({
     stage: stageShape,
 
     // redux provided
+    hiddenStageMap: React.PropTypes.object.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
+    toggleHidden: React.PropTypes.func.isRequired
+  },
+
+  onClickHiddenToggle(value) {
+    this.props.toggleHidden(this.props.stage.id, value === 'hidden');
   },
 
   clickLessonPlan() {
@@ -59,10 +78,11 @@ const TeacherStageInfo = React.createClass({
   },
 
   render() {
-    const { stage } = this.props;
+    const { stage, hiddenStageMap, hasNoSections } = this.props;
+    const isHidden = hiddenStageMap[stage.id];
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
-    const lockable = stage.lockable && !this.props.hasNoSections;
+    const lockable = stage.lockable && !hasNoSections;
     if (!lockable && !lessonPlanUrl) {
       return null;
     }
@@ -79,13 +99,27 @@ const TeacherStageInfo = React.createClass({
             </span>
           }
           {lockable && <StageLock stage={stage}/>}
+          {experiments.isEnabled('hiddenStages') && <div style={styles.toggle}>
+            <HiddenStageToggle
+              hidden={isHidden}
+              onChange={this.onClickHiddenToggle}
+            />
+          </div>
+          }
         </div>
       </div>
     );
   }
 });
 
-export default connect(state => ({
-  hasNoSections: state.stageLock.sectionsLoaded &&
-    Object.keys(state.stageLock.sections).length === 0
+export default connect(state => {
+  return {
+    hiddenStageMap: state.hiddenStage,
+    hasNoSections: state.stageLock.sectionsLoaded &&
+      Object.keys(state.stageLock.sections).length === 0
+    };
+}, dispatch => ({
+  toggleHidden(stageId, hidden) {
+    dispatch(toggleHidden(stageId, hidden));
+  }
 }))(Radium(TeacherStageInfo));
