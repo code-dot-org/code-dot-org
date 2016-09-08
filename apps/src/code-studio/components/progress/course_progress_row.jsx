@@ -24,6 +24,12 @@ const styles = {
     padding: 10,
     width: '100%'
   },
+  hiddenStage: {
+    display: 'none'
+  },
+  transparentStage: {
+    opacity: 0.5,
+  },
   focusAreaRow: {
     height: 110,
     borderWidth: 3,
@@ -75,12 +81,16 @@ const styles = {
  */
 const CourseProgressRow = React.createClass({
   propTypes: {
-    showTeacherInfo: React.PropTypes.bool,
+    stage: stageShape,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
-    stage: stageShape,
+
+    // redux provided
+    isHidden: React.PropTypes.bool,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    showTeacherInfo: React.PropTypes.bool,
+    lockableAuthorized: React.PropTypes.bool.isRequired,
     changeFocusAreaPath: React.PropTypes.string,
-    lockableAuthorized: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -94,7 +104,9 @@ const CourseProgressRow = React.createClass({
         style={[
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
-          this.props.isFocusArea && styles.focusAreaRow
+          this.props.isFocusArea && styles.focusAreaRow,
+          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenStage,
+          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.transparentStage
         ]}
       >
         {this.props.isFocusArea && [
@@ -114,7 +126,7 @@ const CourseProgressRow = React.createClass({
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
         <div>
-          {this.props.showTeacherInfo &&
+          {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
             <TeacherStageInfo stage={stage}/>
           }
           <StageProgress
@@ -128,9 +140,13 @@ const CourseProgressRow = React.createClass({
   }
 });
 
-export default connect(state => ({
-  showTeacherInfo: state.progress.showTeacherInfo &&
-    state.stageLock.viewAs !== ViewType.Student,
-  lockableAuthorized: state.stageLock.lockableAuthorized,
-  changeFocusAreaPath: state.progress.changeFocusAreaPath,
-}))(Radium(CourseProgressRow));
+export default connect((state, ownProps) => {
+  const isHidden = state.hiddenStage[ownProps.stage.id];
+  return {
+    isHidden,
+    showTeacherInfo: state.progress.showTeacherInfo,
+    viewAs: state.stageLock.viewAs,
+    lockableAuthorized: state.stageLock.lockableAuthorized,
+    changeFocusAreaPath: state.progress.changeFocusAreaPath,
+  };
+})(Radium(CourseProgressRow));
