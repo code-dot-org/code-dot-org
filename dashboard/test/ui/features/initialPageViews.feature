@@ -45,13 +45,27 @@ Feature: Looking at a few things with Applitools Eyes
     Examples:
       | url                                                               | test_name                  |
       | http://learn.code.org/projects/applab/new                         | new applab project         |
-      | http://code.org/                                                  | code.org homepage          |
       | http://studio.code.org/                                           | logged in studio homepage  |
       | http://studio.code.org/s/allthethings                             | logged in script progress  |
-      | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
       | http://learn.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |
       | http://learn.code.org/s/mc/stage/1/puzzle/6                       | minecraft house dialog     |
       | http://learn.code.org/s/allthethings/stage/18/puzzle/14           | embed video |
+
+  @no_circle
+  @dashboard_db_access
+  Scenario Outline: Temporarily circle disabled simple page view without instructions dialog
+    Given I am on "http://learn.code.org/"
+    And I am a student
+    When I open my eyes to test "<test_name>"
+    And I am on "<url>"
+    When I rotate to landscape
+    Then I see no difference for "initial load"
+    And I close my eyes
+    And I sign out
+    Examples:
+      | url                                                               | test_name                  |
+      | http://code.org/                                                  | code.org homepage          |
+      | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
 
   Scenario Outline: Logged out simple page view without instructions dialog
     Given I am on "http://learn.code.org/"
