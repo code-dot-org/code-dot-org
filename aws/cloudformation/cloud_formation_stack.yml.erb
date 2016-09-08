@@ -53,7 +53,7 @@ Resources:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
-      MaxSize: 12
+      MaxSize: 20
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
