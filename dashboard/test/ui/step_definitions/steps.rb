@@ -739,19 +739,20 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
 end
 
 And(/^I save the section url$/) do
-  # additional wait so that we have time to fill the jumbotron
+  wait_with_short_timeout.until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
   steps %Q{
     And I wait to see ".jumbotron"
     And I wait for 1 seconds
   }
   @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
+  expect(@section_url).to be_truthy
 end
 
 And(/^I navigate to the section url$/) do
-  puts @section_url
   steps %Q{
     Given I am on "#{@section_url}"
   }
+  wait_with_short_timeout.until { /^\/join/.match(@browser.execute_script("return location.pathname")) }
 end
 
 # TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
