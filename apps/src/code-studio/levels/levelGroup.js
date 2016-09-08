@@ -109,8 +109,6 @@ window.initLevelGroup = function (
       }
     }
 
-    var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
-
     var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
@@ -118,7 +116,7 @@ window.initLevelGroup = function (
       "response": encodeURIComponent(JSON.stringify(lastAttempt)),
       "result": true,
       "errorType": null,
-      "submitted": window.appOptions.level.submittable || forceSubmittable,
+      "submitted": window.appOptions.level.submittable,
       "showConfirmationDialog": showConfirmationDialog,
       "beforeProcessResultsHook": submitSublevelResults
     };
