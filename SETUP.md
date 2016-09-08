@@ -122,6 +122,8 @@ The default dashboard install uses a static build of JS, but if you want to make
 
 1. Run `rake package` for the changes to take effect.
 
+This configures dashboard to rebuild apps whenever you run `rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
+
 If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
 
     new_relic_license_key: <license key here>
