@@ -11,7 +11,7 @@ describe 'NewRelicClient' do
       expect(Kernel).to receive(:sleep).exactly(Math.log2(timeout).floor).times {|wait| sleep_total += wait}
       expect do
         NewRelicClient.new.retry_with_timeout(timeout) do
-          raise RuntimeError.new('nope')
+          raise 'nope'
         end
       end.to raise_error(RuntimeError)
       expect(sleep_total).to equal(timeout)
