@@ -150,7 +150,7 @@
   third_party_desc_25to40_3to12: "針對小學三年級～高中三年級的25~40個課程"
   third_party_desc_20_2to8: "針對小學二年級~國中二年級的約20個課程"
   third_party_desc_7to22_5to12: "針對小學五年級~高中三年級的7~22個課程"
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_20_4to12: "擁有超過20種的課程, 適合對於幼兒園到8年級的學生(幼兒園到國中2年級)"
   enter_valid_age: "請選擇一個有效的年齡"
   enter_valid_email: "請輸入一個有效的電子郵件信箱"
   get_a_certificate_message: "我們將會寄送給您一份證書，以及有關<a href='/learn/beyond'>一小時課程後的學習</a>的相關訊息。"
@@ -198,15 +198,16 @@
   learn_next_level: "繼續到下一級別"
   learn_online: "嘗試其他線上課程"
   learn_classes: "尋找當地的教室"
-  hoc_is_here: "#HourOfCode 已經開始了，讓我們一起試試吧！ @codeorg"
+  hoc_is_here: "學習電腦科學。它改變了一切。 Https://youtu.be/xJqSu1IbcHg。"
   just_did_hoc: "我已經完成了 #HourOfCode - 快來看看吧！ @codeorg"
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: "為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/
-    了解更多。"
+  just_did_course1: "我完成課程 1-快來瞧瞧 ！@codeorg"
+  just_did_course2: "我完成課程 2-快來瞧瞧 ！@codeorg"
+  just_did_course3: "我完成課程 3-快來瞧瞧 ！@codeorg"
+  just_did_course4: "我完成課程 4-快來瞧瞧 ！@codeorg"
+  just_did_accelerated: "我剛剛完成加速課程-快來瞧瞧 ！@codeorg"
+  twitter_teach_cs: |
+    每10人中就有9人同意，學校應該教電腦科學。Http://youtu.be/nKIu9yen5nc。
+    訪問 Https://code.org/。
   learn_hoc: "學習一小時的程式設計"
   beyond_hoc: "一小時後的學習課程"
   what_gender: "您的性別是？"
@@ -285,15 +286,12 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "瞭解更多資訊"
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: "兩萬名老師經​​過訓練後，正在課堂上傳授計算機科學。"
   homepage_banner_20k_teachers_link: "瞭解更多資訊"
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_congress: "美國領導人正在呼籲國會撥款給 幼兒園-12年級 的計算機科學課程。"
+  homepage_banner_congress_link: "添加您的支援"
+  homepage_banner_emailprivacy: "我們正在對如何支援學生隱私做重要改變。"
+  homepage_banner_emailprivacy_link: "閱讀更多"
   homepage_slot_text_title_hoc: "一小時的程式課程"
   homepage_slot_text_blurb_hoc: "任何人都可以學習。從今天開始"
   homepage_slot_text_link_hoc: "試試一小時的程式設計課程"
@@ -302,13 +300,13 @@
   homepage_solot_text_link_volunteer: "在「一小時程式學習」活動中擔任志工"
   homepage_slot_text_title_students: "學生"
   homepage_slot_text_blurb_students: "瀏覽所有教學課程"
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: "探索我們的課程"
   homepage_slot_text_link_codestudio: "試試 Code Studio"
   homepage_slot_text_link_local: "尋找地區性課程"
   homepage_slot_text_link_othercourses: "其他線上課程"
   homepage_slot_text_title_educators: "教育工作者"
   homepage_slot_text_blurb_educators: "教您的學生。"
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: "小學"
   homepage_slot_text_link_middle: "中學"
   homepage_slot_text_link_high: "高中"
   homepage_slot_text_link_k5: K-5 年級課程
@@ -319,7 +317,7 @@
   homepage_slot_text_link_stats: "瞭解統計資訊"
   homepage_slot_text_link_buy: "參與"
   homepage_slot_text_link_donate: "捐款"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T 恤、 帽子，與更多
   homepage_header_codestudio: Code Studio 學生的作品
   homepage_header_donors: Code.org 感謝所有的支持者
   homepage_donors_seall: "全部顯示"
@@ -383,14 +381,13 @@
   mc_platformtext: "瀏覽器, 智慧手機, 平板"
   mc_specs: "多種語言│現代瀏覽器和平板電腦│適合6-106歲"
   minecraft_subtitle: Minecraft 程式碼時間
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: "在開始之前，先來看看一支鼓舞人心的視頻"
+  speak_another_language: "使用另一種語言?"
+  help_translate: "協助我們翻譯"
+  no_internet: "沒有網路嗎？"
+  download_offline: "下載的離線版本。"
   are_you_teacher: "你是老師嗎？"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "審查課程計畫和其他教師資源。"
   volunteer_engineer_submission_title: "激勵學生和志工參與一個小時的程式課程"
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour
     of Code，他們需要你的幫忙! '
@@ -417,8 +414,7 @@
   volunteer_engineer_submission_field_location_placeholder: "郵遞區號，城市和州/國家，或街道住址"
   volunteer_engineer_submission_field_location_flexibility: "我可以幫忙Hour of Code......(請選擇選項)"
   volunteer_engineer_submission_checkbox_after_hoc: "我對Hour of Code的志願工作有興趣"
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+  volunteer_engineer_submission_field_time_commitment: "編程一小時活動之後能貢獻的時間"
   volunteer_engineer_submission_field_linkedin: LinkedIn 個人檔案
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook的個人資料
@@ -474,7 +470,7 @@
   dashboard_landing_new_beta: "新課程！請嘗試我們設計給五年級學生的 Beta 測試版課程。"
   dashboard_landing_new_k5courses: "新課程！請嘗試我們設計給五年級學生的課程。"
   dashboard_landing_useful_links: "其他有用的連結 （僅有英文本）"
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: "你的教室的資源"
   dashboard_landing_office_hours: "面對面提問！請訪問我們每月的視頻辦公時間。"
   dashboard_landing_print_certificates: "為完成此課程的學生列印證書"
   dashboard_landing_educator_blog: "在Educator Blog閱讀我們的最新資訊"
@@ -483,49 +479,37 @@
   dashboard_landing_progress_title: "主要課程進度"
   dashboard_landing_progress_biggest: "這是您最大的分區進度"
   dashboard_landing_view_progress: "查看%{biggest_section}的進度"
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: "列印的進展"
   dashboard_landing_available_title: "可用課程"
   dashboard_landing_available_courses: "這是目前可供您及您的學生們的課程。"
   dashboard_landing_more_tutorials: "想看更多教程嗎?"
   dashboard_landing_more_tutorials_desc: 我們的合作夥伴提供更多教程 <a href="/learn/beyond">。</a>學會用機器人程式設計，
     製造網上頁面，製造你自己的應用程式，或探討其他電腦程式設計語言如C++、Ruby或Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: "用海報、 視頻和更多方式激勵你的學生。"
+  dashboard_landing_video_library: "使用從計算機科學概念的視頻庫裡的視頻。"
+  dashboard_landing_report_bug: "請求一個特性或報告一個漏洞。"
+  dashboard_landing_teacher_forum: "加入專業學習共同體。"
   dashboard_hoc_courses: "適合所有年齡層的一個小時程式設計課程"
   dashboard_hoc_courses_desc: "和您的學生一起試試這不超過一小時的課程！"
   dashboard_hoc_courses_desc_and_cta: 跟您的學生一起試試這短短的、不超過一小時的課程。在電腦科學教育週<a href="https://hourofcode.com">加入Hour
     of Code的活動</a>。
   dashboard_k5_courses: "給五年級學生的 20 小時課程"
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
+  dashboard_k5_courses_desc: 這些課程有可以讓學生自學並自己控制進度的網上教程，也有根本不需要電腦的“脫機”教程。每一個課程都大約有20節課，可能會分為幾個章節和單元。即使是幼兒園的學齡前學生都可以參加。我們在美國各地提供了專業、高質量的免費學習研討會。
+    <a href="/professional-development-workshops">看看你附近的課程吧！ </a>
   dashboard_middle_courses: 20 小時中學課程
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_middle_courses_desc: 在中學數學和理科範圍內，我們中學課程使用計算機科學及編程，作為一種工具來教導數學和科學理念。註冊開發專業研討會，申請與
+    Code.org <a href="/educate/districts"> 建立全區合作夥伴關係</a>。
   dashboard_high_courses: "為期一年的高中課程"
   dashboard_high_courses_desc: 我們的高中課程計劃介由現有的教師提供教學資源，提供學校一學年完整的電腦科學課程。若要報名參加此專業發展課程的討論，請至
     Code.org 的<a href="/educate/districts">區域合作</a>。
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csina_desc: Code.org 與Bootstrap教程合作，開發一套通過計算機編程教授代數和幾何概念的課程。
   dashboard_course_csins: "在科學中的電腦科學"
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csins_desc: Code.org 與GUTS項目合作交付計算機科學概念導論，範圍包括建模與仿真。
   dashboard_course_ecs: "探索電腦科學"
   dashboard_course_ecs_desc: "「探索電腦科學」是為期一年的課程，大致包括6個單元：人與電腦的互動、解決問題、網頁設計、程式語言、計算數據分析和機器。"
   dashboard_course_csp: "電腦科學原則"
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_csp_desc: Code.org 設計了嚴謹、 緊密和容易接受的課程，專門探索計算相關的基本思想。
   dashboard_landing_loading: "載入中..."
   dashboard_action_edit: "编辑"
   dashboard_action_save: "儲存"
@@ -539,20 +523,17 @@
   dashboard_action_remove_confirm: "刪除？"
   dashboard_action_done: "完成"
   dashboard_action_required: "必須的"
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_action_print_certificates: "列印證書"
+  dashboard_assessments_view: "查看評價："
+  dashboard_assessments_none: 大多數教師衡量學生的進展情況使用"查看進度"選項卡。如果你有興趣在給你的學生額外的評估，你可以在課程計畫找到推薦的問題和領域。這些都是在代碼工作室外完成的。
+  dashboard_assessments_none_part2: "如果你在教中學或高中課程，我們代碼工作室提供的部分評估問題可幫助你的學生用於準備 AP 考試。若要使用這些評估，首先將課程分配到課堂，然後上面的下拉列表中選擇課程，你將會在此處看到學生的答案。"
+  dashboard_assessments_summaries: "評估摘要"
+  dashboard_assessments_answers: "所有評價答案"
   dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_percent: "%"
+  dashboard_filter_by_stage: "按階段篩選︰"
+  dashboard_filter_all: "所有"
+  dashboard_download_csv: "下載CSV"
   dashboard_navigation_home_page: "教師主頁"
   dashboard_navigation_section_student_progress: "學生戶口及進度"
   dashboard_navigation_section_teacher_progress: "您的課程進度"
@@ -562,13 +543,13 @@
   dashboard_navigation_section_speakers: "電腦科學 <br/> 特邀演講者"
   dashboard_navigation_all_sections: "學生帳戶及學習進度"
   dashboard_navigation_view_progress: "進展"
-  dashboard_navigation_view_text_responses: "觀看文字回應"
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_text_responses: "文字回應"
+  dashboard_navigation_view_assessments: "評估"
+  dashboard_navigation_view_assessments_surveys: "評估/調查"
   dashboard_navigation_add_students: "新增學生"
   dashboard_navigation_manage_students: "管理學生們"
   dashboard_navigation_lesson_plans_resources: "教案和資源"
-  dashboard_navigation_view_stats: "檢視統計資料"
+  dashboard_navigation_view_stats: "統計資料"
   dashboard_navigation_section: "分區： %{section_name}"
   dashboard_navigation_student: "學生： %{student_name}"
   dashboard_progress_not_started: "未開始"
@@ -578,11 +559,10 @@
   dashboard_progress_completed_perfect: "完美完成"
   dashboard_progress_furthest_level_attempted: "嘗試到的最遠關卡"
   dashboard_progress_submitted: "已提交"
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: 'View text responses in:'
+  dashboard_progress_view: "查看進度:"
+  dashboard_progress_student_in_script: "%{student_name} 的進度信息在 %{script_name}"
+  dashboard_progress_pair_programming: "結對程式設計"
+  dashboard_responses_view: "觀看文字回應:"
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "新增一堂課"
   dashboard_sections_jumbotron_instruction: "建立新課程區段，並新增學生資料。課程區段可協助您將學生分成更小的群組，以便您可以追蹤他們的進度和管理他們的帳戶。"
@@ -590,7 +570,7 @@
   dashboard_sections_table_secret: "登入方式"
   dashboard_sections_table_grade: "年級"
   dashboard_sections_table_course: "課程"
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: "此階段的額外資源"
   dashboard_sections_table_students: "學生"
   dashboard_sections_table_code: "班級代碼"
   dashboard_sections_name: "班別名稱"
@@ -602,25 +582,18 @@
   dashboard_sections_print_secrets: "您可以列印一張包含各帳戶資訊的小卡，再個別分發給學生。"
   dashboard_sections_switch_section: "切換課程區段："
   dashboard_sections_close: "退出"
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_sections_move_students_desc: "選擇學生轉到新的章節。轉移的學生不會清除他們的進展。"
+  dashboard_sections_one_per_teacher: "對每一位老師來說，學生僅能在一個學習小組中。你的學生想加入一個新的學習小組，他就要離開原來的小組。"
+  dashboard_sections_move_to_section: "將移動到節︰"
+  dashboard_sections_enter_code: "輸入此節代碼︰"
+  dashboard_sections_code_placeholder: 6 個字元的代碼 (ABCDEF)
+  dashboard_sections_other_section: "其他的老師"
+  dashboard_sections_both_sections: "你想要學生兩個部分都參加嗎？"
+  dashboard_sections_yes_both: "是的，我想要復制學生到本章節和新章節中。"
+  dashboard_sections_no_move: "不，我想移動學生到新章節中。"
+  dashboard_sections_move_students: "管理學生們"
+  dashboard_error_none_selected: "您沒有選擇任何學生要移動。請選擇至少一名學生。"
+  dashboard_error_other_section: "如果你要在自己管理的單元中調整學生，可以從下拉菜單選擇你要調的單元。如果你要將學生調整到其他教師負責的單元，請選擇”其它單元”。"
   dashboard_students_add_student: "新增學生"
   dashboard_students_add_students: "增加多名學生"
   dashboard_students_add_multiple: "輸入或貼上您的學生姓名，一位學生一行："
@@ -667,8 +640,7 @@
   dashboard_course2: "課程 2："
   dashboard_course3: "課程 3："
   dashboard_course4: "課程 4 (測試版):"
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_unplugged: "如果你沒有電腦，可以在你的教室<a href='%{unplugged_url}'>試試這些離線的教程。 </a>"
   dashboard_curriculum: "課程"
   dashboard_curriculum_overview: "五年級課程概述"
   dashboard_overview: "概觀"
@@ -696,18 +668,18 @@
   dashboard_puzzle: "關卡"
   dashboard_question: "問題 "
   dashboard_response: "回應"
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: "正確性"
+  dashboard_correctness_free_response: "自由回應"
+  dashboard_correctness_unsubmitted: "未提交"
   dashboard_correctness_correct: "正確"
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: "不正確"
+  dashboard_submission_submitted: "提交"
+  dashboard_submission_in_progress: "進行中"
+  dashboard_status: "状态"
+  dashboard_multi_correct: "# 多項選擇正確"
+  dashboard_multi_count: "# 多選題"
+  dashboard_multi_correct_percent: "%多選題正確"
+  dashboard_submission_timestamp: "提交時間戳記"
   stats_hoc_2013_heading: "去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內："
   stats_hoc_2013_image_alt: "統計來自2013的Hour of Code"
   dashboard_teacher: "教師"
@@ -725,40 +697,40 @@
   dashboard_faq: "常見問題集"
   dashboard_faq_k5: "五年級課程的常見問題"
   dashboard_announcements: "公告"
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "瞭解更多資訊"
   dashboard_announce_try_now_button: "快來試試"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、
+    28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
   dashboard_announce_petition_button: "新增你的名字"
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}'
+    target='_blank'> 看過去的公告。</a>"
   code_hoc_coming: "代碼小時就在這裡 — — 12 月 8-14 ！"
   code_sign_up: "註冊參與電腦科學教育週"
   learn_more: "快來試試"
   learn_sign_up_description: "在 CS 教育週期間報名參加一小時的程式碼課程"
   learn_sign_up_button: "註冊帳號"
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: "在課堂上觀看這段鼓舞人心的視頻"
+  learn_videos_show: "在你的課堂上播放這段鼓舞人心的視頻"
+  learn_videos_before_hoc: "在你啟動編程一小時代碼小時活動之前觀看一段勵志視頻"
   learn_educator_resources_description: "學習如何教導一個小時的程式碼課程"
   learn_educator_resources_button: "教育資源"
   learn_are_you_educator: 你是教育工作者嗎？學習<a href="http://hourofcode.com/resources/how-to">如何教導一個小時的程式碼課程</a>
   learn_find_volunteer: 在您程式設計課程的期間<a href="https://code.org/volunteer/local">尋找當地的志工</a>
     來協助您。
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
+  learn_teacher_led_lesson_plans: 得到 <a href="https://code.org/teacher-led"> 發起編程一小時教案的老師給你的</a>
+    啟發
   learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
     for teaching one Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">知道更多</a> 關於教師的獎勵。
@@ -1378,10 +1350,8 @@
     解決問題技巧和電腦程式設計。"
   sphero_beyond_longdescription: "無論你是一位教育家或父母， SPRK 給孩子一個有趣速成的機器人程式設計課程，並同時磨練孩子的數學和科學的技能。"
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: "您的瀏覽器不支持瀏覽本網頁。請升級您的瀏覽器至<a href='%{supported_browsers_url}',
+    target='_blank'>我們支持的瀏覽器之一</a>。您可以嘗試訪問此網頁，但無法獲得期望的效果。"
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1390,12 +1360,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

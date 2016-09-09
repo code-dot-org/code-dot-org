@@ -671,6 +671,7 @@
   dashboard_action_remove_confirm: "মুছে ফেলবো?"
   dashboard_action_done: "হয়ে গেছে"
   dashboard_action_required: "প্রয়োজনীয়"
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: "মূল্যায়ন দেখুন:"
   dashboard_assessments_none: "মূল্যায়ন নাই"
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -876,11 +877,14 @@
   dashboard_faq: "বহুবার আলোচিত প্রশ্ন সমূহ"
   dashboard_faq_k5: K-5 বহুল জিজ্ঞাসিত প্রশ্নসমূহ
   dashboard_announcements: "ঘোষণা"
-  dashboard_announce_message: "<b>২৯ ফেব্রুয়ারি, ২০১৬</b>- কর্মশালায় অংশগ্রহণকারীদের
-    ৯০% আমাদের প্রোগ্রামকে সবচেয়ে ভাল পেশাদারী উন্নয়ন কর্মশালা বলেছেন। চাহিদার কারণে,
-    আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি
-    সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে
-    আবেদন করুন।"
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -1750,12 +1754,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

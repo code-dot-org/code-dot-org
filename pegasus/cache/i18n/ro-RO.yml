@@ -690,6 +690,7 @@
   dashboard_action_remove_confirm: "Șterge?"
   dashboard_action_done: Gata
   dashboard_action_required: necesar
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -904,11 +905,14 @@
   dashboard_faq: "Întrebări frecvente"
   dashboard_faq_k5: "Întrebări frecvente - clasele primare"
   dashboard_announcements: Anunțuri
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -920,9 +924,10 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_petition_button: Adaugă-ți numele
+  dashboard_announce_all: Fii la curent cu noutățile si actualizarie pe blogul cadrelor
+    noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea anunturile
+    vechi.</a>
   code_hoc_coming: 'Ora de Programare este aici: 8-14 decembrie!'
   code_sign_up: "Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna
     Informaticii în Educaţie”)"
@@ -1819,12 +1824,3 @@
   infinity_shortcode: inf
   playlab_shortcode: joacă
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
