@@ -215,18 +215,18 @@
           sa vyhnúť krave a odstrániť hromadu. Vlož všetky svoje bloky do novej funkcie.
         maze_karel_2_8: Použi túto novú funkciu "vyhni sa krave a odstráň 1", aby
           si mi pomohol odstrániť všetky hromady.
-        maze_karel_2_9: Ok, here's a function that removes 4 different piles of dirt
-          in a vertical column. Try putting this function inside a loop, so that you
-          remove all the piles of dirt using only a few new blocks.
-        maze_karel_2_10: Move me across the field, and use these two functions to
-          help me remove all the piles and fill all the holes.
-        turtle_3_1: This puzzle shows you how the "draw a square" and "draw a circle"
-          functions are defined.  Defining a function doesn't run its blocks.  You
-          have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: Using the "draw a square" function as an example, create a "draw
-          a triangle" function and use it.
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around
-          the cow.  Tip: test the program as you go along.'
+        maze_karel_2_9: Ok, tu je funkcia, ktorá odstraňuje 4 rôzne hromady špiny
+          v zvislom stĺpci. Skús vložiť túto funkciu do vnútra slučky, aby si tak
+          odstránil/a všetky hromady špiny použitím len pár nových blokov.
+        maze_karel_2_10: Presuň ma cez polia a použi tieto dve funkcie na odstránenie
+          všetkých hromád a na vyplnenie všetkých dier.
+        turtle_3_1: Toto puzzle ti ukazuje ako sú funkcie "nakresli štvorec" a "nakresli
+          kruh" definované. Definovanie funkcie neznamená, že sa aj spustí. Aby sa
+          ti štvorec nakreslil musíš použiť blok "nakresli štvorec" na ploche.
+        turtle_3_2: Použitím funkcie "nakresli štvorec" ako predlohy, vytvor funkciu
+          "nakresli trojuholník" a použi ju.
+        turtle_3_3: 'Nakresli trojuholníkový plot okolo mačiek a štvorcový plot okolo
+          kravy. Tip: priebežne testuj program.'
         turtle_3_4: See if you can figure out how to use "draw a square" and "draw
           a triangle" (and some other blocks) to draw a house around the lion.
         turtle_3_5: 'Now create a new "draw a house" function and use it to house
@@ -637,7 +637,7 @@
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For Loops
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binary
         frozen_intro: "Úvod do Hodiny kódu"
         frozen_loops: "Úvod do cyklov"
@@ -828,9 +828,9 @@
         Infinity_move_collide_callout: Play a sound when this event occurs.
         Infinity_repeat_callout: Place Move blocks inside here
         craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
-        craft_drag_block_callout: Potiahni "Posunúť vpred()" blok a zasuň ho pod iný
+        craft_drag_block_callout: Potiahni "posunúť vpred()" blok a zapoj ho pod iný
           blok
-        craft_callout_preplaced: Umiestnili sem nejaké bloky aby si mohol začať
+        craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
         craft_inside_repeat: Opakuj akcie umiestnením blokov tu
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to
           dokončiť?

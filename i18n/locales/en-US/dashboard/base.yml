@@ -2,7 +2,9 @@ en:
   errors:
     messages:
       not_saved: crwdns27834:0crwdne27834:0
-      too_young: crwdns45344:0crwdne45344:0
+      too_young: crwdns58492:0crwdne58492:0
+      teacher_must_accept_terms: crwdns58493:0crwdne58493:0
+      pair_programmer: crwdns58494:0crwdne58494:0
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ en:
   signup_form:
     student_count: 'crwdns37544:0%{count}crwdne37544:0'
     teacher_count: 'crwdns37545:0%{count}crwdne37545:0'
-    overview_student: crwdns9000:0crwdne9000:0
-    overview_teacher: crwdns9001:0crwdne9001:0
-    no_signup_message: crwdns4055:0crwdne4055:0
+    overview: crwdns58495:0crwdne58495:0
     teacher_educator_guide: crwdns4058:0crwdne4058:0
-    teacher_pitch: crwdns4886:0crwdne4886:0
-    teacher_title: crwdns3898:0crwdne3898:0
-    student_pitch: crwdns4887:0crwdne4887:0
-    student_title: crwdns4632:0crwdne4632:0
-    signup_title: crwdns56992:0crwdne56992:0
+    title: crwdns58496:0crwdne58496:0
     school_name: crwdns2940:0crwdne2940:0
     school_address: crwdns3037:0crwdne3037:0
     address_placeholder: crwdns2942:0crwdne2942:0
@@ -103,15 +99,17 @@ en:
     valid_password: crwdns3713:0crwdne3713:0
     invalid_password: crwdns3714:0crwdne3714:0
     mismatch_password: crwdns3715:0crwdne3715:0
-    student_terms: crwdns9002:0crwdne9002:0
-    teacher_terms: crwdns7339:0crwdne7339:0
+    student_terms: crwdns58497:0crwdne58497:0
+    teacher_terms: crwdns58498:0crwdne58498:0
     additional_information: crwdns7492:0crwdne7492:0
     user_type_label: crwdns56993:0crwdne56993:0
     user_type_teacher: crwdns56994:0crwdne56994:0
     user_type_student: crwdns56995:0crwdne56995:0
+    field_is_required: crwdns58499:0crwdne58499:0
+    accept_terms: crwdns58500:0crwdne58500:0
   signin_form:
     title: crwdns4520:0crwdne4520:0
-    login: crwdns2948:0crwdne2948:0
+    login: crwdns58501:0crwdne58501:0
     password: crwdns2949:0crwdne2949:0
     remember: crwdns2950:0crwdne2950:0
     submit: crwdns2951:0crwdne2951:0
@@ -130,8 +128,9 @@ en:
   password:
     reset_form:
       title: crwdns2952:0crwdne2952:0
+      instructions: crwdns58502:0crwdne58502:0
       email: crwdns2953:0crwdne2953:0
-      submit: crwdns2954:0crwdne2954:0
+      submit: crwdns58503:0crwdne58503:0
     change_form:
       title: crwdns2955:0crwdne2955:0
       new_password: crwdns2956:0crwdne2956:0
@@ -240,7 +239,7 @@ en:
       prizes: crwdns2964:0crwdne2964:0
       logout: crwdns2965:0crwdne2965:0
       signin: crwdns2597:0crwdne2597:0
-      signup: crwdns2598:0crwdne2598:0
+      signup: crwdns58504:0crwdne58504:0
       already_registered: crwdns8813:0crwdne8813:0
       pair_programming: crwdns57402:0crwdne57402:0
       team: crwdns57403:0crwdne57403:0
@@ -271,7 +270,7 @@ en:
     user_not_found: crwdns55874:0crwdne55874:0
     student_teacher_disassociated: 'crwdns55875:0%{teacher_name}crwdne55875:0'
     panel:
-      answer_viewer: crwdns38278:0crwdne38278:0
+      answer_viewer: crwdns58505:0crwdne58505:0
       student: crwdns38279:0crwdne38279:0
       viewing_solution: crwdns39079:0crwdne39079:0
       try_it_yourself: crwdns38280:0crwdne38280:0
@@ -281,6 +280,7 @@ en:
       submitted_on: crwdns49667:0crwdne49667:0
       unsubmit: crwdns49668:0crwdne49668:0
       worked_with: crwdns57406:0crwdne57406:0
+      update_lock_settings: crwdns58506:0crwdne58506:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
@@ -339,7 +339,7 @@ en:
     choose_next_course: crwdns43451:0crwdne43451:0
     print_certificate: crwdns41905:0crwdne41905:0
     announcement_title: crwdns56513:0crwdne56513:0
-    announcement_message: crwdns56515:0crwdne56515:0
+    announcement_message_fall2016_features: 'crwdns58507:0%{pp_url}crwdnd58507:0%{csp_widgets_url}crwdnd58507:0%{unused_code_url}crwdne58507:0'
     announcement_csp_widgets_message: crwdns57910:0crwdne57910:0
     announcement_learn_more_button: crwdns57407:0crwdne57407:0
     announcement_try_now_button: crwdns57911:0crwdne57911:0
@@ -565,6 +565,19 @@ en:
     header: crwdns7664:0crwdne7664:0
     message: crwdns7665:0crwdne7665:0
     sign_out: 'crwdns7666:0%{url}crwdne7666:0'
+  terms_interstitial:
+    title: crwdns58508:0crwdne58508:0
+    intro_desc: crwdns58509:0crwdne58509:0
+    intro_instructions: crwdns58510:0crwdne58510:0
+    tos: crwdns58511:0crwdne58511:0
+    privacy: crwdns58512:0crwdne58512:0
+    privacy_notice: crwdns58513:0crwdne58513:0
+    accept_label: 'crwdns58514:0%{tos_url}crwdnd58514:0%{privacy_url}crwdne58514:0'
+    accept: crwdns58515:0crwdne58515:0
+    print: crwdns58516:0crwdne58516:0
+    later: crwdns58517:0crwdne58517:0
+    reminder_desc: 'crwdns58518:0%{tos_url}crwdnd58518:0%{privacy_url}crwdne58518:0'
+    review_terms: crwdns58519:0crwdne58519:0
   zendesk_too_young_message: crwdns8502:0crwdne8502:0
   progress:
     not_started: crwdns35032:0crwdne35032:0
@@ -702,3 +715,4 @@ en:
       choose_different_focus_area: crwdns57000:0crwdne57000:0
       other_focus_areas_available: crwdns57001:0crwdne57001:0
       confirm_focus_areas: crwdns57002:0crwdne57002:0
+  locked_stage: crwdns58520:0crwdne58520:0

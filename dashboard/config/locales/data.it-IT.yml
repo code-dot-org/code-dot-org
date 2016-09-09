@@ -479,7 +479,7 @@
         studio_c3_game_6: Aggiungi dei blocchi per cambiare lo sfondo e la velocità
           del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
         studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: Il pinguino vuole dire "ciao" - puoi aiutarlo?
         studio_playlab_2: Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio
           2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il
@@ -504,7 +504,7 @@
           velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare
           fino all'alieno ed avvisare tutti.
         studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_iceage_hello1: Sid vuole riunire tutti per una nuova avventura. Puoi
           aiutarlo a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area
           di lavoro e digitando la parola "Ciao" al suo interno?
@@ -542,9 +542,9 @@
           la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid
           (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore
           della Nonnina a felice quando viene colpita dai cuori.
-        studio_iceage_free_play: "È il momento di creare un gioco o una storia per
-          conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco
-          ai tuoi amici sui loro smartphone, tablet o computer!"
+        studio_iceage_free_play: È il momento di creare un gioco o una storia per
+          conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco
+          ai tuoi amici sui loro smartphone, tablet o computer!
         studio_gumball_hello1: Anais vuole farsi nuovi amici. Puoi aiutarla a dire
           "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro
           e digitando la parola "Ciao" al suo interno?
@@ -587,10 +587,10 @@
           (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore
           di Anton ad arrabbiato quando viene colpito.
         studio_gumball_free_play: Crea un gioco o una storia per conto tuo. Quando
-          hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui
-          loro smartphone, tablet o computer!
+          hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici
+          sui loro smartphone, tablet o computer!
         studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
-          su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+          su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: Riesci a far dire a questo cane "Ciao a tutti"?
         studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
@@ -624,7 +624,7 @@
           idee divertenti: una figura stilizzata, un fiocco di neve o una spirale.
           Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!'
         studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
     video:
       name:
         maze_intro: Introduzione a "Il Labirinto"

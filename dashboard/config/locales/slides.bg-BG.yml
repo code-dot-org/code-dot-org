@@ -1137,12 +1137,12 @@
           добре,\nзащото в нета дебнат опасности и страхове!\n"
       5:
         image: notes/C2_digital_footprint_5.png
-        text: So think with your head, and feel with your heart, balance with your
-          arms, listen to your gut, online. Use your legs to run and kick, and to
-          jump and bounce on a pogo stick, and to dance around the block, and to skip
-          along in your smelly socks. Use your legs when you're online, to stand up
-          to bullies who cross the line, and remember to stand tall, be nice to creatures
-          great and small.
+        text: И така, мисли с главата си и чувствай със сърцето си, балансирай с ръцете
+          и слушай с интуицията си - онлайн. Използвай краката си за да тичаш и риташ,
+          и да скачаш, и подскачаш с "пого стик", и да танцуваш около блока, и да
+          си подскачаш с миризливите чорапи. Използвай краката си докато си онлайн,
+          за да се изправиш срещу побойниците, които прекаляват. И запомни бъди горд
+          и бъди дружелюбен със създания малки и създания големи.
       6:
         image: notes/C2_digital_footprint_6.png
         text: "От главата до пръстите на краката, пауза, мисли за това. От краката
@@ -1582,11 +1582,12 @@
           направим и без да мислим за тях."
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program
-          is the actual instructions given to the computer to make it happen. An algorithm
-          has to be translated into a program before a computer can run it. Breaking
-          a task into steps called an algorithm is sometimes difficult. But like any
-          new skill, it gets easier and easier with practice.
+        text: Алгоритъмът - това е мисълта за това какво трябва да се случи, докато
+          програмата са конкретните инструкции дадени на компютъра, за да го направят
+          да се случи. Алгоритмите трябва да бъдат "преведени" в програма, преди компютъра
+          да може да ги изпълни. Разделянето на дадена задача на малки стъпки, наречени
+          алгоритъм понякога е трудна задача. Но като всяко ново умение, с практиката
+          става все по-лесно.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
@@ -1619,32 +1620,33 @@
           използваме различни цветни мъниста."
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the
-          beads as variables which is a word that means a placeholder for information
-          that can change. Have fun creating beautiful suncatchers using functions
-          and variables!
+        text: "Вашият слънцеотрозител ще бъде уникален, когато се научите да мислите
+          за мънистата като за променливи, които са контейнери за информация, която
+          може да променяме. Забавлявайте се докато създавате красиви слънцеотразители,
+          използвайки функции и променливи!"
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place
-          and similar to this busy road. Messages like cars are zooming along to get
-          to their destinations. Messages move through the internet very quickly.
+        text: "В този урок става въпрос за интернет. Интернет е много оживено място
+          и наподобява на този оживен път. Съобщенията са като автомобилите, които
+          се стремят да стигнат до техните дестинации. Съобщенията се движат през
+          интернет много бързо."
       2:
         image: notes/C3_internet_2.png
-        text: Acting out how the internet works will help you understand what's happening
-          when you use the internet. You'll learn how messages get from your computer
-          to a favorite website or from a friend to an email inbox. Just like it's
-          easier to navigate busy roads when you know the roads and can read the signs,
-          traveling the internet is not so complicated when you know what goes on
-          behind the scenes.
+        text: "Представата как работи интернет ще ви помогне да разберете какво се
+          случва, когато го използвате. Ще научите как съобщенията от вашия компютър
+          достигат до любимите уеб сайтове или до приятел по електронната поща. Точно
+          както е по-лесно да избягвате задръстванията, когато знаете пътищата, така
+          и пътуването в интернет не е толкова сложно, когато знаете какво се случва
+          зад кулисите."
       3:
         image: notes/C3_internet_3.png
-        text: Sending messages on the internet is a little bit like sending messages
-          in the mail but with a few differences. I'm here at Google.com. The IP address
-          for this website is this number. You can think of an IP address as your
-          return address in the mail. Let's imagine that I want to send a message
-          in the mail to someone in the office down the there. Do you see URL and
-          the IP address on that door? I've written this message and hit send.
+        text: "Изпращането на съобщения по интернет наподобява изпращане на писмо
+          по пощата, но с няколко различия. Аз съм тук в Google.com. IP адресът за
+          този сайт е този номер. Може да мислите за IP адреса като обратен адрес
+          по пощата. Представете си, че аз искам да изпратя съобщение по пощата някой
+          в офиса там долу. Виждате ли URL и IP адреса на тази врата? Аз съм пиша
+          съобщението и натискам Изпрати."
       4:
         image: notes/C3_internet_4.png
         text: "За разлика от пощенските услуги първото нещо, което се случва е, че

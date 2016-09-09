@@ -3,7 +3,7 @@ vi:
     script:
       name:
         course1:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Ghép hình: Tìm hiểu để kéo và thả'
           "Maze: Sequence": 'Mê cung: Trình tự'
           "Maze: Debugging": 'Mê cung: Hiệu chỉnh'
           "Artist 1: Intro": 'Nghệ sĩ 1: giới thiệu'
@@ -889,6 +889,8 @@ vi:
           Gamelab: Gamelab
           Anonymous student survey: Anonymous student survey
           Anonymous student survey 2: Anonymous student survey 2
+          Public Key Cryptography: Public Key Cryptography
+          Web Lab: Web Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -979,7 +981,7 @@ vi:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
+          title: CS in Algebra Part 2
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Course Overview: Course Overview
@@ -1626,6 +1628,9 @@ vi:
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
           Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+          CS Principles Pre-survey: CS Principles Pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
         csp2:
           title: 'CSP Unit 2 - Digital Information'
           description_short: Explore how more complex digitial information is represented and manipulated through computation and visuzalization.
@@ -1645,6 +1650,8 @@ vi:
           Cleaning Data: Cleaning Data
           Creating Summary Tables: Creating Summary Tables
           Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
+          Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
         csp3:
           title: 'CSP Unit 3 - Intro to Programming'
           description_short: Lập trình
@@ -1735,6 +1742,8 @@ vi:
           Variables Unplugged: Variables Unplugged
           Complex Sprite Movement: Complex Sprite Movement
           Collisions: Collisions
+          Sprite Movement Methods: Sprite Movement Methods
+          Collision Detection: Collision Detection
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1909,6 +1918,7 @@ vi:
           title: ' TEMP CSD Unit 1'
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
+          Processing Information: Processing Information
         CSDU2-Draft:
           title: ' TEMP CSD Unit 2'
           description_short: Web Development
@@ -1922,6 +1932,7 @@ vi:
           Designing Code for Computers: Designing Code for Computers
           Digital Footprint: Digital Footprint
           Images on the Web: Images on the Web
+          Finalizing Website: Finalizing Website
         CSDU5-Draft:
           title: ' TEMP CSD Unit 5'
           description_short: Data
@@ -1997,7 +2008,7 @@ vi:
           Debugging: Debugging
           Persistence & Frustration: 'Persistence & Frustration'
           Sequences & Algorithms: 'Sequences & Algorithms'
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Ghép hình: Tìm hiểu để kéo và thả'
           Programming: Lập trình
           Being Safe Online: Being Safe Online
           Loops: Vòng lặp
@@ -2050,11 +2061,16 @@ vi:
           Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
           Build a Star Wars Game!: Build a Star Wars Game!
           "Bee: Determine the Concept": 'Bee: Determine the Concept'
+          "Bee: Functions (Course 3)": 'Bee: Functions (Course 3)'
+          "Unplugged: Kinesthetic Functions": 'Unplugged: Kinesthetic Functions'
+          "Farmer: Functions (New)": 'Farmer: Functions (New)'
+          Determine the Concept Part 2: Determine the Concept Part 2
+          "Unplugged: Funky Functions": 'Unplugged: Funky Functions'
         grade1:
           Predicting & Debugging: 'Predicting & Debugging'
           Persistence & Frustration: 'Persistence & Frustration'
           Sequences & Algorithms: 'Sequences & Algorithms'
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Ghép hình: Tìm hiểu để kéo và thả'
           Debugging: Debugging
           Programming Unplugged: Programming Unplugged
           Programming: Lập trình
@@ -2068,6 +2084,7 @@ vi:
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
@@ -2206,6 +2223,16 @@ vi:
           More Programming with Scratch: More Programming with Scratch
           More Programming with CS4FN: More Programming with CS4FN
           Robot Farmer While: Robot Farmer While
+          Bounce: Bật lại
+          Artist Debugging: Nghệ sĩ gỡ lỗi
+          "Farmer: While Loops": 'Nông dân - trong các vòng'
+          " Bee: Conditionals": ' Bee: Conditionals'
+          "Maze: Conditionals with Loops": 'Maze: Conditionals with Loops'
+          Build a Game: Build a Game
+          "Artist: Loops": 'Nghệ sĩ: vòng'
+          "Maze: Nested Loops": 'Maze: Nested Loops'
+          "Artist: Nested Loops": 'Nghệ sĩ: các vòng lồng vào nhau'
+          Bee Debugging: 'Ong: sửa lỗi'
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2328,3 +2355,12 @@ vi:
           title: CS Principles Pre-Survey
           Anonymous student survey 2: Anonymous student survey 2
           Anonymous student pre-survey: Anonymous student pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
+        sciencepd3-2016:
+          title: CS in Science PD3 Before 1st In-Person
+          description_short: 'Phase 3: Academic Year Development Pre 1'
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules
