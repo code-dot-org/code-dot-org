@@ -136,12 +136,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    if assessment
-      if level.properties["pages"] && level.properties["pages"].length > 1
-        return true
-      end
-    end
-    false
+    return false unless assessment
+    level.properties["pages"] && level.properties["pages"].length > 1
   end
 
   def anonymous?
