@@ -45,7 +45,7 @@ Feature: Looking at a few things with Applitools Eyes
     Examples:
       | url                                                               | test_name                  |
       | http://learn.code.org/projects/applab/new                         | new applab project         |
-      | http://code.org/                                                  | code.org homepage          |
+      | http://code.org/?lock-hero=true                                   | code.org homepage          |
       | http://studio.code.org/                                           | logged in studio homepage  |
       | http://studio.code.org/s/allthethings                             | logged in script progress  |
       | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
@@ -75,4 +75,4 @@ Feature: Looking at a few things with Applitools Eyes
     And I close my eyes
     Examples:
       | url                                                               | test_name                    |
-      | http://code.org/                                                  | logged out code.org homepage |
+      | http://code.org/?lock-hero=true                                   | logged out code.org homepage |
