@@ -54,10 +54,14 @@
       %input#totm-teacher-link.form-control{name: "teacher_link_s", type: "url"}/
   .form-group
     %label.control-label{for: "totm-message"}
-      And, the most important part: tell us a brief story.
-      %br
-      How is this teacher changing the face of computer science?
+      And, the most important part: tell us a brief story by answering the following questions.
       %span.form-required-field *
+      %br
+      %ol
+        %li Why are you nominating this teacher?
+        %li Has this teacher overcome any challenges?
+        %li What's something exceptional this teacher has done in their classroom, school, or district?
+        %li (optional) Does this teacher help contribute to diversity in computer science (this can include helping others or increasing inclusivity)?
     %div
       %textarea#totm-message.form-control{name: "message_s", required: "", rows: "12"}
   .form-group.submit-btn
