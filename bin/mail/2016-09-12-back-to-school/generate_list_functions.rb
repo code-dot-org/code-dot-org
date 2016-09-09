@@ -3,6 +3,14 @@ require_relative '../mailing-common/mailing-list-utils'
 require 'active_support'
 require 'active_support/core_ext/object/blank'
 
+ALL_EMAILS = Set.new
+
+def dedupe(contacts)
+  contacts.except! *ALL_EMAILS
+  ALL_EMAILS.merge contacts.keys
+  contacts
+end
+
 def query_dashboard_teachers(query)
   {}.tap do |results|
     DASHBOARD_DB.fetch(query).each do |teacher|
@@ -12,14 +20,39 @@ def query_dashboard_teachers(query)
   end
 end
 
-def query_workshop_section_ids
-  DASHBOARD_DB.fetch("SELECT id FROM sections WHERE section_type LIKE '%workshop'").map(:id)
+def query_k5_workshop_section_ids
+  DASHBOARD_DB.fetch(
+    "SELECT id FROM sections WHERE section_type = 'csf_workshop'"
+  ).map(:id)
+end
+
+def query_6_12_workshop_section_ids
+  DASHBOARD_DB.fetch(
+    "SELECT id FROM sections WHERE section_type LIKE '%workshop' AND section_type <> 'csf_workshop'"
+  ).map(:id)
+end
+
+def query_teachers_from_pd_sections(section_ids)
+  query_dashboard_teachers <<-SQL
+    SELECT DISTINCT users.id, users.email, users.name
+    FROM sections
+    INNER JOIN followers ON followers.section_id = sections.id
+    INNER JOIN users ON users.id = followers.student_user_id
+    WHERE sections.id IN (#{section_ids.join(',')})
+      AND users.email IS NOT NULL AND users.email <> ''
+  SQL
 end
 
 # PD comes in 3 forms: old ops workshops, old K5 workshops, and new pd_workshops.
+# K5 teachers from both the old K5 workshops and the new workshops can be tracked through
+# csf_workshop section membership.
+def query_k5_pd_teachers
+  query_teachers_from_pd_sections query_k5_workshop_section_ids
+end
+
 # The old ops workshop attendance is tracked in teacher_attendance.
-# For the old K5 and all the new workshops, we can track teachers through section membership.
-def query_all_pd_teachers
+# For new workshops, we can track teachers through section membership.
+def query_6_12_pd_teachers
   ops_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT users.id, users.email, users.name
     FROM users
@@ -29,17 +62,9 @@ def query_all_pd_teachers
     WHERE users.email IS NOT NULL AND users.email <> ''
   SQL
 
-  section_ids = query_workshop_section_ids
-  section_based_pd_teachers = query_dashboard_teachers <<-SQL
-    SELECT DISTINCT users.id, users.email, users.name
-    FROM sections
-    INNER JOIN followers ON followers.section_id = sections.id
-    INNER JOIN users ON users.id = followers.student_user_id
-    WHERE sections.id IN (#{section_ids.join(',')})
-      AND users.email IS NOT NULL AND users.email <> ''
-  SQL
+  section_based_pd_teachers = query_teachers_from_pd_sections query_6_12_workshop_section_ids
 
-  # Merge the hashes, which will dedupe since email is they key
+  # Merge the hashes, which will dedupe since email is the key
   section_based_pd_teachers.merge ops_pd_teachers
 end
 
