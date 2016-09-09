@@ -1135,4 +1135,135 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         properties: '{"maze 1": {"active": false}}'))
     assert_equal assigns(:level), level
   end
+
+  def put_student_in_section(student, teacher, script)
+    section = create :section, user_id: teacher.id, script_id: script.id
+    Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+    section
+  end
+
+  def get_hidden(script)
+    response = get :hidden, script_id: script.name
+    assert_response :success
+    response
+  end
+
+  test "user in two sections, both attached to course" do
+    student = create :student
+    sign_in student
+
+    section1 = put_student_in_section(student, @teacher, @script)
+    section2 = put_student_in_section(student, @teacher, @script)
+
+    stage1 = @script.stages[0]
+    stage2 = @script.stages[1]
+    stage3 = @script.stages[2]
+
+    # stage 1 hidden in both sections
+    HiddenStage.create(section_id: section1.id, stage_id: stage1.id)
+    HiddenStage.create(section_id: section2.id, stage_id: stage1.id)
+
+    # stage 2 hidden in section 1
+    HiddenStage.create(section_id: section1.id, stage_id: stage2.id)
+
+    # stage 3 hidden in section 2
+    HiddenStage.create(section_id: section2.id, stage_id: stage3.id)
+
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    # when attached to course, we should hide if hidden in any section
+    assert_equal [stage1.id.to_s, stage2.id.to_s, stage3.id.to_s], hidden
+  end
+
+  test "user in two sections, neither attached to course" do
+    student = create :student
+    sign_in student
+
+    section1 = put_student_in_section(student, @teacher, @custom_script)
+    section2 = put_student_in_section(student, @teacher, @custom_script)
+
+    stage1 = @script.stages[0]
+    stage2 = @script.stages[1]
+    stage3 = @script.stages[2]
+
+    # stage 1 hidden in both sections
+    HiddenStage.create(section_id: section1.id, stage_id: stage1.id)
+    HiddenStage.create(section_id: section2.id, stage_id: stage1.id)
+
+    # stage 2 hidden in section 1
+    HiddenStage.create(section_id: section1.id, stage_id: stage2.id)
+
+    # stage 3 hidden in section 2
+    HiddenStage.create(section_id: section2.id, stage_id: stage3.id)
+
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    # when not-attached to course, we should only hide when hidden across all
+    # sections
+    assert_equal [stage1.id.to_s], hidden
+  end
+
+  test "user in two sections, one attached to course one not" do
+    student = create :student
+    sign_in student
+
+    attached_section = put_student_in_section(student, @teacher, @script)
+    unattached_section = put_student_in_section(student, @teacher, @custom_script)
+
+    stage1 = @script.stages[0]
+    stage2 = @script.stages[1]
+    stage3 = @script.stages[2]
+
+    # stage 1 hidden in both sections
+    HiddenStage.create(section_id: attached_section.id, stage_id: stage1.id)
+    HiddenStage.create(section_id: unattached_section.id, stage_id: stage1.id)
+
+    # stage 2 hidden only in attached section
+    HiddenStage.create(section_id: attached_section.id, stage_id: stage2.id)
+
+    # stage 3 hidden only in unattached section
+    HiddenStage.create(section_id: unattached_section.id, stage_id: stage3.id)
+
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    # only the stages hidden in the attached section are considered hidden
+    assert_equal [stage1.id.to_s, stage2.id.to_s], hidden
+  end
+
+  test "user not signed in or in no sections" do
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    assert_equal [], hidden
+
+    student = create :student
+    sign_in student
+
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    assert_equal [], hidden
+  end
+
+  test "teacher gets hidden stages for sections they own" do
+    teacher = create :teacher
+    teacher_teacher = create :teacher
+    student = create :student
+    sign_in teacher
+
+    teacher_owner_section = put_student_in_section(student, teacher, @script)
+    teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
+
+    stage1 = @script.stages[0]
+    stage2 = @script.stages[1]
+
+    # stage 1 is hidden in the section owned by the teacher
+    HiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
+
+    # stage 2 is hidden in the section in which the teacher is a member
+    HiddenStage.create(section_id: teacher_member_section.id, stage_id: stage2.id)
+
+    response = get_hidden(@script)
+    hidden = JSON.parse(response.body)
+    # only the stages hidden in the owned section are considered hidden
+    assert_equal [stage1.id.to_s], hidden
+  end
 end
