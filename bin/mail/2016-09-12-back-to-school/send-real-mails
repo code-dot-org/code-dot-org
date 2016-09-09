@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# 39574 pd_teachers
+../send-to-mailing-list --limit 40000 2016-09-12-back-to-school-pd.md ./pd_teachers.csv
+
+# 307742 no_pd_teachers
+../send-to-mailing-list --limit 308000 2016-09-12-back-to-school-no-pd.md ./no_pd_teachers.csv
+
+# 206230 non_us_teachers
+../send-to-mailing-list --limit 207000 2016-09-12-back-to-school-non-us.md ./non_us_teachers.csv
