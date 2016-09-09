@@ -1,4 +1,4 @@
-class AddSeveralFieldsToUsers < ActiveRecord::Migration
+class AddSeveralFieldsToUsers < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :gender, :string, limit: 1
     add_column :users, :name, :string

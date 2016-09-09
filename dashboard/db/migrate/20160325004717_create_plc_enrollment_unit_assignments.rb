@@ -1,4 +1,4 @@
-class CreatePlcEnrollmentUnitAssignments < ActiveRecord::Migration
+class CreatePlcEnrollmentUnitAssignments < ActiveRecord::Migration[4.2]
   def change
     Plc::UserCourseEnrollment.delete_all
     Plc::EnrollmentModuleAssignment.destroy_all

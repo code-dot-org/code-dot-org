@@ -1,4 +1,4 @@
-class MakeWorkshopSectionTypeMoreGranular < ActiveRecord::Migration
+class MakeWorkshopSectionTypeMoreGranular < ActiveRecord::Migration[4.2]
   def up
     Section.where(section_type: 'pd_workshop').each do |section|
       workshop = Pd::Workshop.find_by(section_id: section.id)
