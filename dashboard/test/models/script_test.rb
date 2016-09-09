@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.stubs(:should_cache?).returns true
     Script.script_cache_to_cache
     Script.script_cache_from_cache
-    Script.connection.disconnect!
+    ActiveRecord::Base.connection.disconnect!
   end
 
   test 'login required setting in script file' do
