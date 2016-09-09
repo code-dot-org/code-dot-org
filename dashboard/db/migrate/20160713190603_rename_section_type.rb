@@ -1,4 +1,4 @@
-class RenameSectionType < ActiveRecord::Migration
+class RenameSectionType < ActiveRecord::Migration[4.2]
   # Columns named 'type' are reserved for single table inheritance (STI).
   # This is for a string representing the type of section, but not STI,
   # so renaming to section_type.
