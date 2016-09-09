@@ -1,4 +1,4 @@
-scss_files: 'dashboard/app/**/*.css.scss'
+scss_files: 'dashboard/app/**/*.scss'
 
 linters:
   LeadingZero:
