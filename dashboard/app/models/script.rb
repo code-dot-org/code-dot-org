@@ -164,8 +164,9 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     Script.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly].
-      each(&:new) # make sure all possible loaded objects are completely loaded
+    [
+      LevelsScriptLevel, ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
+    ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 
@@ -186,7 +187,7 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
-  # Returns a cached map from script level id to id, or nil if in level_builder mode
+  # Returns a cached map from script level id to script_level, or nil if in level_builder mode
   # which disables caching.
   def self.script_level_cache
     return nil unless self.should_cache?
@@ -197,7 +198,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Returns a cached map from level id to id, or nil if in level_builder mode
+  # Returns a cached map from level id to level, or nil if in level_builder mode
   # which disables caching.
   def self.level_cache
     return nil unless self.should_cache?
@@ -206,6 +207,17 @@ class Script < ActiveRecord::Base
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
+      end
+    end
+  end
+
+  # Returns a cached map from script_level id to an array of level ids, or nil
+  # if in level_builder mode which disables caching.
+  def self.levels_script_level_cache
+    return nil unless self.should_cache?
+    @@levels_script_level_cache ||= {}.tap do |cache|
+      script_level_cache.values.each do |script_level|
+        cache[script_level.id] = script_level.levels.pluck(:id)
       end
     end
   end
@@ -240,6 +252,15 @@ class Script < ActiveRecord::Base
       @@level_cache[level_id] = level if level && self.should_cache?
     end
     level
+  end
+
+  def self.cache_find_levels_from_script_level(script_level_id)
+    # If appropriate and in the cache, return the cached values.
+    levels = levels_script_level_cache[script_level_id] if self.should_cache?
+    return levels.map {|level_id| cache_find_level(level_id)}  unless levels.nil?
+    # There was a cache miss or we are in no-cache mode, so we hit the DB.
+    levels = ScriptLevel.find_by_id(script_level_id).levels.pluck(:id)
+    return levels
   end
 
   def cached

@@ -303,6 +303,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'anna', Script.get_from_cache('frozen').script_levels[5].level.skin
   end
 
+  test 'levels_script_level_cache populates cache' do
+    Script.stubs(:should_cache?).returns true
+    # TODO(asher)
+  end
+
   test 'banner image' do
     assert_equal nil, Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
