@@ -23,19 +23,20 @@ def query_all_pd_teachers
   ops_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT users.id, users.email, users.name
     FROM users
-    JOIN workshop_attendance ON (workshop_attendance.teacher_id = users.id)
-    JOIN segments ON (segments.id = workshop_attendance.segment_id)
-    JOIN workshops ON (workshops.id = segments.workshop_id)
-    WHERE users.user_type = 'teacher'
+    INNER JOIN workshop_attendance ON workshop_attendance.teacher_id = users.id
+    INNER JOIN segments ON segments.id = workshop_attendance.segment_id
+    INNER JOIN workshops ON workshops.id = segments.workshop_id
+    WHERE users.email IS NOT NULL AND users.email <> ''
   SQL
 
   section_ids = query_workshop_section_ids
   section_based_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT users.id, users.email, users.name
     FROM sections
-    JOIN followers ON (followers.section_id = sections.id)
-    JOIN users ON (users.id = followers.student_user_id)
-    WHERE sections.id IN (#{section_ids.join(',')}) AND users.user_type = 'teacher'
+    INNER JOIN followers ON followers.section_id = sections.id
+    INNER JOIN users ON users.id = followers.student_user_id
+    WHERE sections.id IN (#{section_ids.join(',')})
+      AND users.email IS NOT NULL AND users.email <> ''
   SQL
 
   # Merge the hashes, which will dedupe since email is they key
