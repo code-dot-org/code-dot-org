@@ -94,12 +94,31 @@ class ScriptLevelsController < ApplicationController
   def hidden
     authorize! :read, ScriptLevel
 
-    if current_user.nil?
+    if current_user.try(:teacher?)
+      sections = current_user.sections.select{|s| s.deleted_at.nil?}
+    elsif current_user.try(:student?)
+      sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
+    end
+
+    if sections.nil? || sections.empty?
       render json: []
       return
     end
 
-    render json: [920]
+    script_sections = sections.select{|s| s.script.name == params[:script_id]}
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
+      # hides the stage
+      stage_ids = script_sections.map(&:hidden_stages).flatten.map(&:stage_id).uniq
+    else
+      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
+      # of th sections the student belongs to
+      all_ids = sections.map(&:hidden_stages).flatten.map(&:stage_id)
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      stage_ids = counts.select{|_, val| val == sections.length}.keys
+    end
+
+    render json: stage_ids
   end
 
   private
