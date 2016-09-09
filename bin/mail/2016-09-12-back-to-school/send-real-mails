@@ -1,10 +1,13 @@
 #!/bin/sh
 
-# 39574 pd_teachers
-../send-to-mailing-list --limit 40000 2016-09-12-back-to-school-pd.md ./pd_teachers.csv
+# 36871 pd_k5_teachers
+../send-to-mailing-list --limit 37000 2016-09-12-back-to-school-k5.md ./pd_k5_teachers.csv
 
-# 307742 no_pd_teachers
+# 2702 pd_6_12_teachers
+../send-to-mailing-list --limit 3000 2016-09-12-back-to-school-6-12.md ./pd_6_12_teachers.csv
+
+# 307806 no_pd_teachers
 ../send-to-mailing-list --limit 308000 2016-09-12-back-to-school-no-pd.md ./no_pd_teachers.csv
 
-# 206230 non_us_teachers
+# 206250 non_us_teachers
 ../send-to-mailing-list --limit 207000 2016-09-12-back-to-school-non-us.md ./non_us_teachers.csv
