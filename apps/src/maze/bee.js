@@ -1,10 +1,12 @@
 import { randomValue } from '../utils';
-import Subtype from './subtype';
+import Gatherer from './gatherer';
 import mazeMsg from './locale';
 import BeeCell from './beeCell';
 import BeeItemDrawer from './beeItemDrawer';
-import { TestResults } from '../constants.js';
-import { BeeTerminationValue as TerminationValue } from '../constants.js';
+import {
+  TestResults,
+  BeeTerminationValue as TerminationValue
+} from '../constants.js';
 
 const UNLIMITED_HONEY = -99;
 const UNLIMITED_NECTAR = 99;
@@ -12,7 +14,7 @@ const UNLIMITED_NECTAR = 99;
 const EMPTY_HONEY = -98; // Hive with 0 honey
 const EMPTY_NECTAR = 98; // flower with 0 honey
 
-export default class Bee extends Subtype {
+export default class Bee extends Gatherer {
   constructor(maze, studioApp, config) {
     super(maze, studioApp, config);
 
@@ -50,8 +52,8 @@ export default class Bee extends Subtype {
   /**
    * @override
    */
-  createGridItemDrawer() {
-    return new BeeItemDrawer(this.maze_.map, this.skin_, this);
+  createDrawer() {
+    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, this);
   }
 
   /**
@@ -72,34 +74,17 @@ export default class Bee extends Subtype {
         };
       }
     }
-    if (this.maze_.gridItemDrawer) {
-      this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
-      this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+    if (this.drawer) {
+      this.drawer.updateNectarCounter(this.nectars_);
+      this.drawer.updateHoneyCounter(this.honey_);
     }
-    this.maze_.map.resetDirt();
-  }
-
-  /**
-   * @param {Number} row
-   * @param {Number} col
-   * @returns {Number} val
-   */
-  getValue(row, col) {
-    return this.maze_.map.currentStaticGrid[row][col].getCurrentValue();
-  }
-
-  /**
-   * @param {Number} row
-   * @param {Number} col
-   * @param {Number} val
-   */
-  setValue(row, col, val) {
-    this.maze_.map.currentStaticGrid[row][col].setCurrentValue(val);
+    super.reset();
   }
 
   /**
    * Did we reach our total nectar/honey goals?
    * @return {boolean}
+   * @override
    */
   finished() {
     // nectar/honey goals
@@ -111,15 +96,11 @@ export default class Bee extends Subtype {
       return false;
     }
 
-    if (!this.collectedEverything()) {
-      return false;
-    }
-
-    return true;
+    return super.finished();
   }
 
   /**
-   * @return {boolean}
+   * @override
    */
   collectedEverything() {
     // quantum maps implicity require "collect everything", non-quantum
@@ -128,11 +109,7 @@ export default class Bee extends Subtype {
       return true;
     }
 
-    const missedSomething = this.maze_.map.currentStaticGrid.some(
-      row => row.some(cell => cell.isDirt() && cell.getCurrentValue() > 0)
-    );
-
-    return !missedSomething;
+    return super.collectedEverything();
   }
 
   /**
@@ -220,13 +197,6 @@ export default class Bee extends Subtype {
     }
 
     return this.studioApp_.getTestResults(false);
-  }
-
-  /**
-   * @override
-   */
-  hasMessage(testResults) {
-    return testResults === TestResults.APP_SPECIFIC_FAIL;
   }
 
   /**
@@ -457,14 +427,6 @@ export default class Bee extends Subtype {
     return this.hiveRemainingCapacity(row, col);
   }
 
-  // ANIMATIONS
-  playAudio_(sound) {
-    // Check for StudioApp, which will often be undefined in unit tests
-    if (this.studioApp_) {
-      this.studioApp_.playAudio(sound);
-    }
-  }
-
   animateGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
@@ -477,8 +439,8 @@ export default class Bee extends Subtype {
     this.playAudio_('nectar');
     this.gotNectarAt(row, col);
 
-    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
-    this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
+    this.drawer.updateItemImage(row, col, true);
+    this.drawer.updateNectarCounter(this.nectars_);
   }
 
   animateMakeHoney() {
@@ -493,9 +455,9 @@ export default class Bee extends Subtype {
     this.playAudio_('honey');
     this.madeHoneyAt(row, col);
 
-    this.maze_.gridItemDrawer.updateItemImage(row, col, true);
+    this.drawer.updateItemImage(row, col, true);
 
-    this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+    this.drawer.updateHoneyCounter(this.honey_);
   }
 
   /**
@@ -512,6 +474,19 @@ export default class Bee extends Subtype {
     }
 
     return randomValue(tileChoices);
+  }
+
+  /**
+   * @override
+   */
+  drawTile(svg, tileSheetLocation, row, col, tileId) {
+    super.drawTile(svg, tileSheetLocation, row, col, tileId);
+
+    // Draw checkerboard
+    if ((row + col) % 2 === 0) {
+      const isPath = !this.isWallOrOutOfBounds_(col, row);
+      this.drawer.addCheckerboardTile(row, col, isPath);
+    }
   }
 
 }

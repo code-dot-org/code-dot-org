@@ -3,8 +3,6 @@
  *           encodings at once and lives inside the send panel.
  * @see NetSimSendPanel for how this is used.
  */
-'use strict';
-
 import $ from 'jquery';
 var netsimMsg = require('@cdo/netsim/locale');
 var markup = require('./NetSimPacketEditor.html.ejs');

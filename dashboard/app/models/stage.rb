@@ -75,7 +75,7 @@ class Stage < ActiveRecord::Base
   end
 
   def lesson_plan_base_url
-    CDO.code_org_url "/curriculum/#{script.name}/#{absolute_position}"
+    CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
   def summarize
@@ -136,13 +136,13 @@ class Stage < ActiveRecord::Base
     end
     script_level = self.script_levels[0]
     return students.map do |student|
-      user_level = UserLevel.find_by(user_id: student.id, level: script_level.level, script_id: self.script.id)
+      user_level = student.last_attempt_for_any script_level.levels, script_id: self.script.id
       # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
       # don't yet have a user_level, and need to provide enough data to create one
       {
         user_level_data: {
           user_id: student.id,
-          level_id: script_level.level.id,
+          level_id: user_level.try(:level).try(:id) || script_level.oldest_active_level.id,
           script_id: script_level.script.id
         },
         name: student.name,

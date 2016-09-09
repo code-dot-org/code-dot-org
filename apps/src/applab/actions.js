@@ -1,7 +1,5 @@
 /** @file Redux action-creators for App Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
-'use strict';
-
 var utils = require('../utils');
 
 /** @enum {string} */

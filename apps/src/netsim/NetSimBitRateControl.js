@@ -3,8 +3,6 @@
  *           Differs from the pulse rate slider in scale and units.
  * @see NetSimPulseRateControl
  */
-'use strict';
-
 // Utils required only for Function.prototype.inherits()
 require('../utils');
 var NetSimUtils = require('./NetSimUtils');

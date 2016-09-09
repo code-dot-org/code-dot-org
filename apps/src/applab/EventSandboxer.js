@@ -1,6 +1,4 @@
 /** @file Helper that generates sanitized, standardized event objects. */
-'use strict';
-
 var keyEvent = require('./keyEvent');
 
 /**

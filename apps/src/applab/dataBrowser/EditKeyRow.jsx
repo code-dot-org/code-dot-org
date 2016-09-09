@@ -3,13 +3,13 @@
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
-import { castValue, displayValue } from './dataUtils';
+import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const EditKeyRow = React.createClass({
   propTypes: {
     keyName: React.PropTypes.string.isRequired,
-    value: React.PropTypes.any.isRequired
+    value: React.PropTypes.any
   },
 
   getInitialState() {
@@ -46,31 +46,38 @@ const EditKeyRow = React.createClass({
     FirebaseStorage.deleteKeyValue(this.props.keyName, undefined, msg => console.warn(msg));
   },
 
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleSave();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
   render() {
     return (
-      <tr style={dataStyles.editRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>{this.props.keyName}</td>
         <td style={dataStyles.cell}>
           {this.state.isEditing ?
             <input
               style={dataStyles.input}
-              value={displayValue(this.state.newValue)}
+              value={editableValue(this.state.newValue)}
               onChange={this.handleChange}
+              onKeyUp={this.handleKeyUp}
             /> :
-            JSON.stringify(this.props.value)}
+            displayableValue(this.props.value)}
         </td>
-        <td style={dataStyles.buttonCell}>
+        <td style={dataStyles.editButtonCell}>
           {
             this.state.isEditing ?
               <button
-                className="btn btn-primary"
-                style={dataStyles.editButton}
+                style={dataStyles.saveButton}
                 onClick={this.handleSave}
               >
                 Save
               </button> :
               <button
-                className="btn"
                 style={dataStyles.editButton}
                 onClick={this.handleEdit}
               >
@@ -79,9 +86,9 @@ const EditKeyRow = React.createClass({
           }
 
           <button
-            className="btn btn-danger"
-            style={dataStyles.button}
+            style={dataStyles.redButton}
             onClick={this.handleDelete}
+            onKeyUp={this.handleKeyUp}
           >
             Delete
           </button>

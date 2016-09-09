@@ -1,0 +1,16 @@
+name 'sciPD2Part4_S3_L3'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Thank You!
+
+<img src="https://images.code.org/e2cb7907fd5cd39d2469c446cd059497-image-1440792473998.jpg" width="600px" class="level-image">
+
+<br>
+Thank you for completing your model observation and decoding.  <b>In your next in-person workshop</b>, you'll gain more valuable experience in teaching the modules and well as building those StarLogo Nova skills--<b>we look forward to seeing you soon</b>!
+<br>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

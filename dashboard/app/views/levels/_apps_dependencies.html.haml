@@ -6,6 +6,7 @@
 - use_netsim ||= false
 - use_applab ||= false
 - use_gamelab ||= false
+- use_weblab ||= false
 - hide_source ||= false
 - use_phaser ||= false
 - use_makerlab ||= false
@@ -57,10 +58,6 @@
 -# common_locale is included in application.html.haml
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
 %script{src: minifiable_asset_path("js/#{app}.js")}
-
--# NetSim external script dependencies
-- if use_netsim
-  %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
 
 -# Applab external script dependencies
 - if use_applab

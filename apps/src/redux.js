@@ -1,8 +1,6 @@
-var experiments = require('./experiments');
-
 /** @file Code.org configured store-creation method.
  *  @see http://redux.js.org/docs/api/createStore.html */
-'use strict';
+var experiments = require('./experiments');
 
 var redux = require('redux');
 var reduxThunk = require('redux-thunk').default;

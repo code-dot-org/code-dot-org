@@ -27,6 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Use what you learned to get all of the coins.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.\",\r\n  \"hint_id\": \"gradek_adventurer_loops4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "6",
     "contained_level_names": null
   },
   "published": true,

@@ -1,0 +1,48 @@
+---
+title: Careers in Tech
+theme: responsive
+video_player: true
+---
+
+%link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
+
+= view :jumbotron_banner, img: CDO.code_org_url("/images/girls-trying-vr.png"), title: "Careers in Tech", desc: "Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Explore the videos and resources below to meet some of the people who are tackling big problems in creative ways.", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Video Library', url: '#videos'}]
+
+#resources.responsive-body
+  .col-50.soft-padding
+    %h2 What Most Schools Don't Teach
+    = view :display_video_thumbnail, id: "what_most_schools_dont_teach", video_code: "nKIu9yen5nc", play_button: 'center'
+  .col-50.soft-padding
+    %h2 CS is Changing Everything
+    = view :display_video_thumbnail, id: "cs_changing_everything", video_code: "xJqSu1IbcHg", play_button: 'center'
+  .clear
+
+#videos
+  %h1.responsive-body Video library
+  .col-33.soft-padding
+    %h2 Jasmine from Zillow
+    = view :display_video_thumbnail, id: 'jasmine_zillow', video_code: 'i2KHYUhtOlM', caption: 'Meet Jasmine: Jasmine is a security software engineer at Zillow, a website that helps people buy and sell houses.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .col-33.soft-padding
+    %h2 Jerome from Microsoft
+    = view :display_video_thumbnail, id: 'jerome_microsoft', video_code: 'G8hfAk4PfOM', caption: 'Meet Jerome: Jerome is a Program Manager at Microsoft and works on Windows.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .col-33.soft-padding
+    %h2 Brendan from Code.org
+    = view :display_video_thumbnail, id: 'brendan_codeorg', video_code: 'RQ6GJt9f2vg', caption: 'Meet Brendan: Brendan is a designer at Code.org. As a designer, Brendan helps define the look and feel of the site.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .clear
+
+  .col-33.soft-padding
+    %h2 Vida from UCSF
+    = view :display_video_thumbnail, id: 'vida_ucsf', video_code: 'bMrDHtGHFR4', caption: 'Meet Vida: Vida is a researcher at the University of California San Francisco and uses computer science to study malaria through gene sequencing.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .col-33.soft-padding
+    %h2 Lynn from Spotify
+    = view :display_video_thumbnail, id: 'lynn_spotify', video_code: 'AYdF7b3nMto', caption: 'Meet Lynn: Lynn is a software engineer who works on the music streaming service, Spotify.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .col-33.soft-padding
+    %h2 Mia from Dept. of Defense
+    = view :display_video_thumbnail, id: 'mia_dept_defense', video_code: 'ZghMPWGXexs', caption: 'Meet Mia: Works on national security as an employee of the Department of Defense.', play_button: 'center'
+    %a{href: '#'} Learn more
+  .clear

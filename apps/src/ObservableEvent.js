@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * A subscription/notification atom, used to cleanly hook up callbacks
  * without attaching anything to the DOM or other global scope.

@@ -21,7 +21,6 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var Colours = require('./colours');
 var msg = require('./locale');

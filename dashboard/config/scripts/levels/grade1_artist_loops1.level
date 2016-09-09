@@ -32,6 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you want the loop to repeat more than 4 times, you can change the number at the top of the block.\",\r\n  \"hint_id\": \"grade1_artist_loops1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "4",
     "contained_level_names": null
   },
   "published": true,

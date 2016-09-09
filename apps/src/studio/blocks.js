@@ -4,27 +4,27 @@
  * Copyright 2014 Code.org
  *
  */
-'use strict';
 /* global Studio */
 
-var studioApp = require('../StudioApp').singleton;
-var msg = require('./locale');
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('@cdo/locale');
-var codegen = require('../codegen');
-var constants = require('./constants');
-var utils = require('../utils');
-var _ = require('lodash');
-var paramLists = require('./paramLists');
+import _ from 'lodash';
+import codegen from '../codegen';
+import commonMsg from '@cdo/locale';
+import msg from './locale';
+import paramLists from './paramLists';
+import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
+import { singleton as studioApp } from '../StudioApp';
+import { stripQuotes, valueOr } from '../utils';
+import {
+  CardinalDirections,
+  Direction,
+  Emotions,
+  Position,
+  CLICK_VALUE,
+  HIDDEN_VALUE,
+  RANDOM_VALUE,
+  VISIBLE_VALUE
+} from './constants';
 
-var Direction = constants.Direction;
-var Position = constants.Position;
-var Emotions = constants.Emotions;
-
-var RANDOM_VALUE = constants.RANDOM_VALUE;
-var HIDDEN_VALUE = constants.HIDDEN_VALUE;
-var CLICK_VALUE = constants.CLICK_VALUE;
-var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 // 9 possible positions in playspace (+ random):
 var POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
@@ -1018,7 +1018,7 @@ exports.install = function (blockly, blockInstallOptions) {
         // a factor of sqrt(2), so that a move north followed by a move west
         // takes you to the same spot as a single move northwest.
         var defaultDistance =
-          constants.CardinalDirections.includes(directionConfig.studioValue) ?
+          CardinalDirections.includes(directionConfig.studioValue) ?
           SimpleMove.DEFAULT_MOVE_DISTANCE :
           SimpleMove.DEFAULT_MOVE_DISTANCE * Math.sqrt(2);
         var distance = this.getTitleValue('DISTANCE') || defaultDistance;
@@ -1245,12 +1245,12 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    var lowercaseSound = utils.stripQuotes(soundValue).toLowerCase().trim();
+    var lowercaseSound = stripQuotes(soundValue).toLowerCase().trim();
 
     if (lowercaseSound === RANDOM_VALUE) {
       return;
     }
-    var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+    var skinSoundMetadata = valueOr(skin.soundMetadata, []);
     var playbackOptions = Object.assign({
       volume: 1.0
     }, _.find(skinSoundMetadata, function (metadata) {
@@ -1675,6 +1675,178 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'Studio.setSpriteSize(\'block_id_' + this.id + '\', ' +
         spriteParam + ',' + valueParam + ');\n';
   };
+
+  /**
+   * Blocks for managing a bunch of sprites as a group.
+   */
+  function createSpriteGroupDropdown(createMsg, changeCallback) {
+    const values = skin.spriteChoices.filter(
+        opt => opt[1] !== HIDDEN_VALUE && opt[1] !== RANDOM_VALUE
+    ).map(opt => {
+      const spriteName = stripQuotes(opt[1]);
+      return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
+    });
+    const dropdown = new blockly.FieldDropdown(values, changeCallback);
+    dropdown.setValue(values[0][1]);
+    return dropdown;
+  }
+
+  blockly.Blocks.studio_setSpritesWander = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameWander);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesWanderTooltip());
+    }
+  };
+
+  generator.studio_setSpritesWander = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesWander',
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesStop = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.stopEverySpriteName);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesStopTooltip());
+    }
+  };
+
+  generator.studio_setSpritesStop = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesStop',
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesChase = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameChaseActor);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesChaseTooltip());
+    }
+  };
+
+  generator.studio_setSpritesChase = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesChase',
+      extraParams: getSpriteIndex(this),
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesFlee = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown =
+          createSpriteGroupDropdown(msg.setEverySpriteNameFleeActor);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritesFleeTooltip());
+    }
+  };
+
+  generator.studio_setSpritesFlee = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesFlee',
+      extraParams: getSpriteIndex(this),
+    });
+  };
+
+  blockly.Blocks.studio_setSpritesSpeed = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameSpeed);
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SPEED')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteSpeedTooltip());
+    }
+  };
+
+  generator.studio_setSpritesSpeed = function () {
+    var speed = blockly.JavaScript.valueToCode(this, 'SPEED',
+      Blockly.JavaScript.ORDER_NONE);
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpritesSpeed',
+      extraParams: speed,
+    });
+  };
+
+  blockly.Blocks.studio_whenSpriteAndGroupCollide = {
+    // Block to handle event when the Left arrow button is pressed.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+
+      var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var dropdown2 = createSpriteGroupDropdown(
+          msg.collidesWithAnySpriteName,
+          value => endLabel.setText(msg.toTouchedSpriteName(
+              {spriteName: stripQuotes(value)})));
+      this.appendDummyInput()
+          .appendTitle(dropdown1, 'SPRITE')
+          .appendTitle(dropdown2, 'SPRITENAME');
+      this.appendDummyInput();
+      this.appendValueInput('GROUPMEMBER')
+          .setInline(true)
+          .appendTitle(msg.set());
+      var endLabel = new Blockly.FieldLabel(msg.toTouchedSpriteName(
+              {spriteName: stripQuotes(dropdown2.getValue())}));
+      this.appendDummyInput()
+          .setInline(true)
+          .appendTitle(endLabel);
+
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+    },
+  };
+
+  generator.studio_whenSpriteAndGroupCollide = function () {
+    var varName = Blockly.JavaScript.valueToCode(this, 'GROUPMEMBER',
+        Blockly.JavaScript.ORDER_NONE);
+    // Sprite index vars need to be 1-indexed, but the callback arg will be
+    // 0-indexed, so add 1.
+    return `${varName} = touchedSpriteIndex + 1;\n`;
+  };
+
 
   /**
    * setBackground

@@ -23,20 +23,32 @@ const AddKeyRow = React.createClass({
   },
 
   handleAdd() {
-    FirebaseStorage.setKeyValue(
-      this.state.key,
-      castValue(this.state.value),
-      () => this.setState(this.getInitialState()),
-      msg => console.warn(msg));
+    if (this.state.key) {
+      FirebaseStorage.setKeyValue(
+        this.state.key,
+        castValue(this.state.value),
+        () => this.setState(this.getInitialState()),
+        msg => console.warn(msg));
+    }
+  },
+
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.handleAdd();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
   },
 
   render() {
     return (
-      <tr style={dataStyles.addRow}>
+      <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}
             onChange={this.handleKeyChange}
+            onKeyUp={this.handleKeyUp}
+            placeholder="enter text"
             value={this.state.key}
           />
         </td>
@@ -44,13 +56,14 @@ const AddKeyRow = React.createClass({
           <input
             style={dataStyles.input}
             onChange={this.handleValueChange}
+            onKeyUp={this.handleKeyUp}
+            placeholder="enter text"
             value={this.state.value}
           />
         </td>
-        <td style={dataStyles.cell}>
+        <td style={dataStyles.addButtonCell}>
           <button
-            className="btn btn-primary"
-            style={dataStyles.button}
+            style={dataStyles.blueButton}
             onClick={this.handleAdd}
           >
             Add pair

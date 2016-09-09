@@ -28,8 +28,6 @@
       = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
-    - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
-      = render partial: 'layouts/terms_interstitial'
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]

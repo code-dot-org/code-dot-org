@@ -52,7 +52,7 @@ SeamlessDatabasePool.use_persistent_read_connection do
           level_hash[level.id.to_s] = %w(perfect passed).include?(progress.try(:[], :status)) ? '1' : '0'
         end
         row.merge!(level_hash)
-        row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
+        row.merge!({:"Stage #{stage.absolute_position} Percent Complete" => percent[stage.absolute_position - 1].to_s})
       end
       row[:'Script Percent Complete'] = percent_complete_total(script, user).to_s
       headers ||= row.keys

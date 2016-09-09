@@ -169,7 +169,7 @@ class PeerReview < ActiveRecord::Base
       PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
         if script.peer_reviews_to_complete &&
             reviews.size < script.peer_reviews_to_complete &&
-            PeerReview.get_review_for_user(script, user)
+            PeerReview.get_potential_reviews(script, user).any?
           reviews << {
               status: 'not_started',
               name: I18n.t('peer_review.review_new_submission'),

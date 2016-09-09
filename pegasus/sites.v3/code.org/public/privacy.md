@@ -8,7 +8,7 @@ Date of Last Revision: August 24, 2016
 
 
 ## About Code.org
-Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
+Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
 Please read this Privacy Policy carefully before accessing or using the Website.
 
@@ -19,7 +19,7 @@ Our Privacy Policy is fueled by our commitment to the following Privacy Principl
 1. We’re deeply committed to creating a safe and secure learning environment for our students and teachers. We take the protection of this information seriously.
 2. We do not require you to provide any Personal Information in order to try our tutorials, most of which are accessible without a user account. However, learning progress or code creations won't be saved without creating an account. 
 3. The only reason we collect any data from students or teachers is to better succeed at our mission of providing a great computer science education for every student who wants it.
-4. We do not sell your Personal Information or exploit it for financial gain; we do not sell ads. We are a charitable 501c3 nonprofit and our revenue comes from donations. We established ourselves as a nonprofit so our mission and your trust will not be in conflict with a for-profit motive.
+4. We do not sell your Personal Information or exploit it for financial gain; we do not sell ads. We are a charitable 501(c)(3) nonprofit and our revenue comes from donations. We established ourselves as a nonprofit so our mission and your trust will not be in conflict with a for-profit motive.
 5. Any student academic data provided by us or by our school district partners to third party evaluators for the purpose of evaluating our courses in meeting our mission will be anonymous / de-identified (per standard industry practice). 
 6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
 7. When student Personal Information is provided to Code.org by a school or school district, Code.org agrees to retain such information as directed by the school or school district.
@@ -29,7 +29,7 @@ Our Privacy Policy is fueled by our commitment to the following Privacy Principl
 ## Privacy Policy
 We are committed to creating a safe and secure environment for learners of all ages on our websites located at [https://code.org](https://code.org), [https://studio.code.org](https://studio.code.org), [https://csedweek.org](https://csedweek.org), [https://hourofcode.com](https://hourofcode.com), other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. As a not-for-profit, 501(c)(3) organization, we use the data we receive only insofar as it helps our mission of providing a great computer science education for every student who wants it. We established ourselves as a not-for-profit organization so that a for-profit motive will not interfere with our mission of providing a trusted educational resource.
 
-Our Privacy Policy describes what information we gather from our Users, how we use that information, and what we do to protect it. Your use of the Website and any information you provide on the Website are subject to the terms of this Privacy Policy, which is incorporated into and subject to our Terms of Service. Any capitalized terms used but not defined within this Privacy Policy have the meaning given to them in our [Terms of Service](/upcomingTOS). By visiting or using our Website, you expressly consent to the information handling practices described in this Privacy Policy.
+Our Privacy Policy describes what information we gather from our Users, how we use that information, and what we do to protect it. Your use of the Website and any information you provide on the Website are subject to the terms of this Privacy Policy, which is incorporated into and subject to our Terms of Service. Any capitalized terms used but not defined within this Privacy Policy have the meaning given to them in our [Terms of Service](/tos). By visiting or using our Website, you expressly consent to the information handling practices described in this Privacy Policy.
 
 From time to time our Privacy Policy will change. Code.org will notify Users of any change to our Privacy Policy by posting the revised Privacy Policy with an updated date of revision on our Website. If we make any significant changes to the policy these will be called out with a short notice of the revision conspicuously posted on the Website homepage. We may also contact Users and notify them of the changes if required by law. We stand behind the promises we make, and will not change how we use any Personal Information we have already collected from Users in any material way without also providing notice of the change via email, through this Website, or through other means, and obtaining consent via your continued use to any new policies. We take the Personal Information you provide to us very seriously, and we strive to put you in control of decisions around your Personal Information.
 
@@ -172,7 +172,7 @@ To participate in the evaluation, these school districts are asked provide stude
 
 ## Limitations on Access to your Personal Information by Employees and Authorized Parties
 
-Code.org’s officers, directors,employees, agents and contractors must have a legitimate business reason (related directly to furthering our charitable, non-profit education-focused mission) to access Personal Information you provide to Code.org, for example to assist in product support. Code.org will require our officers, directors, employees, agents, and contractors to comply with this Privacy Policy, and to treat any Personal Information of Code.org Users as confidential information.
+Code.org’s officers, directors,employees, agents and contractors must have a legitimate business reason (related directly to furthering our charitable, nonprofit education-focused mission) to access Personal Information you provide to Code.org, for example to assist in product support. Code.org will require our officers, directors, employees, agents, and contractors to comply with this Privacy Policy, and to treat any Personal Information of Code.org Users as confidential information.
 
 <a id="sharedata"></a>
 ## How We Share or Transfer Data

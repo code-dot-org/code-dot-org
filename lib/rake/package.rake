@@ -17,7 +17,7 @@ namespace :package do
       task 'update' do
         require 'cdo/aws/s3_packaging'
 
-        package_dash = package.to_s.gsub('_', '-')
+        package_dash = package.to_s.tr('_', '-')
         # never download if we build our own
         next if CDO["use_my_#{package}"]
 
@@ -27,7 +27,7 @@ namespace :package do
       end
       desc "Update Dashboard symlink for #{package} package."
       task 'symlink' do
-        package_dash = package.to_s.gsub('_', '-')
+        package_dash = package.to_s.tr('_', '-')
         Dir.chdir(method("#{package}_dir").call) do
           target = CDO["use_my_#{package}"] ? PACKAGES[package][:target] : "#{package_dash}-package"
           RakeUtils.ln_s target, dashboard_dir('public', PACKAGES[package][:symlink_name])

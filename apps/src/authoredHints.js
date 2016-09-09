@@ -14,7 +14,6 @@ var authoredHintUtils = require('./authoredHintUtils');
 var Lightbulb = require('./templates/Lightbulb');
 
 import { setHasAuthoredHints } from './redux/instructions';
-import authoredHintsReducer from './redux/authoredHints';
 import {
   enqueueHints,
   showNextHint,

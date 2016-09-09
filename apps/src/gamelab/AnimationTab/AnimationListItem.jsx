@@ -1,12 +1,10 @@
 /** A single list item representing an animation. */
-'use strict';
-
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameRate} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay, setAnimationLooping} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -24,6 +22,9 @@ const styles = {
     paddingTop: 4,
     paddingBottom: 4,
     marginBottom: 4,
+
+    // Allows looping button to display relative to whole card
+    position: 'relative',
 
     ':hover': {
       cursor: 'pointer',
@@ -58,6 +59,16 @@ const styles = {
     textAlign: 'center',
     border: 'none',
     borderRadius: 9
+  },
+  rightArrow: {
+    width: 0,
+    height: 0,
+    borderTop: '10px solid transparent',
+    borderBottom: '10px solid transparent',
+    borderLeft: '10px solid ' + color.purple,
+    position: 'absolute',
+    right: '-10px',
+    top: 80
   }
 };
 
@@ -76,7 +87,8 @@ const AnimationListItem = React.createClass({
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired,
-    setAnimationFrameRate: React.PropTypes.func.isRequired,
+    setAnimationLooping: React.PropTypes.func.isRequired,
+    setAnimationFrameDelay: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   },
@@ -85,14 +97,14 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
-    this.setState({frameRate: nextProps.animationProps.frameRate});
+    this.setState({frameDelay: nextProps.animationProps.frameDelay});
   },
 
   componentWillMount() {
-    this.setState({frameRate: this.props.animationProps.frameRate});
-    this.debouncedFrameRate = _.debounce(() => {
-      const latestFrameRate = this.state.frameRate;
-      this.props.setAnimationFrameRate(this.props.animationKey, latestFrameRate);
+    this.setState({frameDelay: this.props.animationProps.frameDelay});
+    this.debouncedFrameDelay = _.debounce(() => {
+      const latestFrameDelay = this.state.frameDelay;
+      this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
     }, 200);
   },
 
@@ -110,22 +122,70 @@ const AnimationListItem = React.createClass({
     evt.stopPropagation();
   },
 
+  setAnimationLooping(looping) {
+    this.props.setAnimationLooping(this.props.animationKey, looping);
+  },
+
   onNameChange(event) {
     this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
-  convertFrameRateToFraction(frameRate) {
-    return frameRate / 20;
+  convertFrameDelayToLockedValues(fraction) {
+    if (fraction >= 60) {
+      return 0;
+    } else if (fraction >= 45) {
+      return 0.1;
+    } else if (fraction >= 30) {
+      return 0.2;
+    } else if (fraction >= 20) {
+      return 0.3;
+    } else if (fraction >= 15) {
+      return 0.4;
+    } else if (fraction >= 10) {
+      return 0.5;
+    } else if (fraction >= 5) {
+      return 0.6;
+    } else if (fraction >= 4) {
+      return 0.7;
+    } else if (fraction >= 3) {
+      return 0.8;
+    } else if (fraction >= 2) {
+      return 0.9;
+    } else {
+      return 1;
+    }
   },
 
-  convertFractionToFrameRate(fraction) {
-    return fraction * 20;
+  convertLockedValueToFrameDelay(value) {
+    if (value >= 1) {
+      return 1;
+    } else if (value >= 0.9) {
+      return 2;
+    } else if (value >= 0.8) {
+      return 3;
+    } else if (value >= 0.7) {
+      return 4;
+    } else if (value >= 0.6) {
+      return 5;
+    } else if (value >= 0.5) {
+      return 10;
+    } else if (value >= 0.4) {
+      return 15;
+    } else if (value >= 0.3) {
+      return 20;
+    } else if (value >= 0.2) {
+      return 30;
+    } else if (value >= 0.1) {
+      return 45;
+    } else {
+      return 60;
+    }
   },
 
-  setAnimationFrameRate(sliderValue) {
-    let frameRate = this.convertFractionToFrameRate(sliderValue);
-    this.setState({frameRate: frameRate});
-    this.debouncedFrameRate();
+  setAnimationFrameDelay(sliderValue) {
+    let frameDelay = this.convertLockedValueToFrameDelay(sliderValue);
+    this.setState({frameDelay: frameDelay});
+    this.debouncedFrameDelay();
   },
 
   render() {
@@ -152,20 +212,25 @@ const AnimationListItem = React.createClass({
         this.props.style
     ];
 
+    var arrowStyle = [this.props.isSelected && styles.rightArrow];
+
     return (
       <div style={tileStyle} onClick={this.onSelect}>
+        <div style={arrowStyle}></div>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={Object.assign({}, this.props.animationProps, {frameRate: this.state.frameRate})}
+          animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}
           isSelected={this.props.isSelected}
         />
         {animationName}
         {this.props.isSelected &&
           <ListItemButtons
-            onFrameRateChanged={this.setAnimationFrameRate}
+            onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
-            frameRate={this.convertFrameRateToFraction(this.state.frameRate)}
+            onLoopingChanged={this.setAnimationLooping}
+            looping={this.props.animationProps.looping}
+            frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
     );
@@ -187,8 +252,11 @@ export default connect(state => ({
     setAnimationName(animationKey, newName) {
       dispatch(setAnimationName(animationKey, newName));
     },
-    setAnimationFrameRate(animationKey, frameRate) {
-      dispatch(setAnimationFrameRate(animationKey, frameRate));
+    setAnimationLooping(animationKey, looping) {
+      dispatch(setAnimationLooping(animationKey, looping));
+    },
+    setAnimationFrameDelay(animationKey, frameDelay) {
+      dispatch(setAnimationFrameDelay(animationKey, frameDelay));
     }
   };
 })(Radium(AnimationListItem));

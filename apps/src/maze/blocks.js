@@ -21,8 +21,6 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
 var codegen = require('../codegen');
@@ -39,6 +37,10 @@ exports.install = function (blockly, blockInstallOptions) {
     require('./beeBlocks').install(blockly, blockInstallOptions);
   } else if (mazeUtils.isCollectorSkin(skin.id)) {
     require('./collectorBlocks').install(blockly, blockInstallOptions);
+  } else if (mazeUtils.isHarvesterSkin(skin.id)) {
+    require('./harvesterBlocks').install(blockly, blockInstallOptions);
+  } else if (mazeUtils.isPlanterSkin(skin.id)) {
+    require('./planterBlocks').install(blockly, blockInstallOptions);
   }
 
   var SimpleMove = {

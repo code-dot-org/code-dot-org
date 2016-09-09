@@ -8,10 +8,11 @@ import AddTableListRow from './AddTableListRow';
 import { DataView } from '../constants';
 import EditLink from './EditLink';
 import EditTableListRow from './EditTableListRow';
+import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import msg from '@cdo/locale';
-import { addTableName, changeView, deleteTableName } from '../redux/data';
+import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
@@ -33,9 +34,21 @@ const DataOverview = React.createClass({
     view: React.PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
-    onTableAdd: React.PropTypes.func.isRequired,
-    onTableDelete: React.PropTypes.func.isRequired,
+    onShowWarning: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired
+  },
+
+  onTableAdd(tableName) {
+    FirebaseStorage.createTable(
+      tableName,
+      () => this.props.onViewChange(DataView.TABLE, tableName),
+      error => {
+        if (typeof error === 'string' && error.indexOf('maximum number of tables') !== -1) {
+          this.props.onShowWarning(error);
+        } else {
+           console.warn(error);
+        }
+      });
   },
 
   render() {
@@ -46,7 +59,7 @@ const DataOverview = React.createClass({
 
         <table style={styles.table}>
           <tbody>
-          <tr style={dataStyles.editRow}>
+          <tr style={dataStyles.row}>
             <td style={dataStyles.cell}>
               <EditLink
                 name={msg.keyValuePairLink()}
@@ -69,14 +82,10 @@ const DataOverview = React.createClass({
                 key={tableName}
                 tableName={tableName}
                 onViewChange={this.props.onViewChange}
-                onTableDelete={this.props.onTableDelete}
               />
             ))
           }
-          <AddTableListRow
-            onTableAdd={this.props.onTableAdd}
-            onViewChange={this.props.onViewChange}
-          />
+          <AddTableListRow onTableAdd={this.onTableAdd}/>
           </tbody>
         </table>
       </div>
@@ -88,21 +97,10 @@ export default connect(state => ({
   view: state.data.view,
   tableListMap: state.data.tableListMap || {}
 }), dispatch => ({
+  onShowWarning(warningMsg, warningTitle) {
+    dispatch(showWarning(warningMsg, warningTitle));
+  },
   onViewChange(view, tableName) {
     dispatch(changeView(view, tableName));
   },
-  onTableAdd(tableName) {
-    // Add the table name to the model even though it doesn't exist in the database yet,
-    // so that it appears in the overview even if we don't create a record in it.
-    // addTableName() is idempotent, so we won't double-count the table name later
-    // when the the first record is added to it.
-    dispatch(addTableName(tableName));
-  },
-  onTableDelete(tableName) {
-    // Explicitly remove the table from the model to make sure it disappears from the
-    // list, since we won't receive a delete event from the database if the table did
-    // not exist in the database. This could happen when deleting a table after adding it
-    // without adding any records to it.
-    dispatch(deleteTableName(tableName));
-  }
 }))(Radium(DataOverview));

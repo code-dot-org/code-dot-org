@@ -1,5 +1,4 @@
 /** @file Test of progress.js. */
-'use strict';
 
 var assert = require('assert');
 var progress = require('@cdo/apps/code-studio/progress');

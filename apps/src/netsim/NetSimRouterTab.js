@@ -1,7 +1,6 @@
 /**
  * @overview UI controller for the "Router" tab in the left column.
  */
-'use strict';
 
 import $ from 'jquery';
 var markup = require('./NetSimRouterTab.html.ejs');

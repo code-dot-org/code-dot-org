@@ -1,5 +1,3 @@
-'use strict';
-
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -7,7 +5,6 @@ var commonMsg = require('@cdo/locale');
 var msg = require('./locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
-var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -83,8 +80,6 @@ var GameLab = function () {
   this.setupInProgress = false;
   this.reportPreloadEventHandlerComplete_ = null;
   this.gameLabP5 = new GameLabP5();
-  this.api = api;
-  this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
 
@@ -131,6 +126,10 @@ GameLab.baseP5loadImage = null;
 GameLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
+  }
+
+  if (!config.level.editCode) {
+    throw 'Game Lab requires Droplet';
   }
 
   this.skin = config.skin;
@@ -216,10 +215,8 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var showDebugButtons = (!config.hideSource &&
-                          config.level.editCode &&
-                          !config.level.debuggerDisabled);
-  var showDebugConsole = !config.hideSource && config.level.editCode;
+  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+  var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
@@ -441,7 +438,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     // shows Continue (the proper results will be reported to the service)
     this.testResults = this.studioApp_.TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
-  } else if (this.level.editCode) {
+  } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -449,10 +446,6 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
     program = encodeURIComponent(this.studioApp_.getCode());
-    this.message = null;
-  } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = encodeURIComponent(Blockly.Xml.domToText(xml));
     this.message = null;
   }
 
@@ -666,27 +659,6 @@ GameLab.prototype.onMouseUp = function (e) {
   this.resetDPad();
 };
 
-GameLab.prototype.evalCode = function (code) {
-  try {
-    codegen.evalWith(code, {
-      GameLab: this.api
-    });
-  } catch (e) {
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      window.alert(e);
-    }
-  }
-};
-
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -710,15 +682,10 @@ GameLab.prototype.execute = function () {
 
   this.gameLabP5.startExecution();
 
-  if (this.level.editCode) {
-    if (!this.JSInterpreter ||
-        !this.JSInterpreter.initialized() ||
-        this.executionError) {
-      return;
-    }
-  } else {
-    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
-    this.evalCode(this.code);
+  if (!this.JSInterpreter ||
+      !this.JSInterpreter.initialized() ||
+      this.executionError) {
+    return;
   }
 
   this.studioApp_.playAudio('start');
@@ -733,10 +700,6 @@ GameLab.prototype.execute = function () {
 };
 
 GameLab.prototype.initInterpreter = function () {
-  if (!this.level.editCode) {
-    return;
-  }
-
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var self = this;

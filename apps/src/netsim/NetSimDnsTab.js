@@ -1,8 +1,6 @@
 /**
  * @overview UI controller for the DNS tab in the left column.
  */
-'use strict';
-
 import $ from 'jquery';
 var markup = require('./NetSimDnsTab.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;

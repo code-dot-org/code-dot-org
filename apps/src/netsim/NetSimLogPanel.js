@@ -6,8 +6,6 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimBitLogPanel for the component used in bit-sending mode.
  */
-'use strict';
-
 import $ from 'jquery';
 var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('@cdo/netsim/locale');

@@ -21,8 +21,6 @@
  * @fileoverview JavaScript for Blockly's Maze application.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
@@ -49,6 +47,8 @@ import Collector from './collector';
 import WordSearch from './wordsearch';
 import Scrat from './scrat';
 import Farmer from './farmer';
+import Harvester from './harvester';
+import Planter from './planter';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -335,59 +335,12 @@ function drawMap() {
 }
 
 /**
- * Draw the given tile at row, col
- */
-Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
-  var left = tileSheetLocation[0];
-  var top = tileSheetLocation[1];
-
-  var tileSheetWidth = Maze.SQUARE_SIZE * 5;
-  var tileSheetHeight = Maze.SQUARE_SIZE * 4;
-
-  // Tile's clipPath element.
-  var tileClip = document.createElementNS(SVG_NS, 'clipPath');
-  tileClip.setAttribute('id', 'tileClipPath' + tileId);
-  var tileClipRect = document.createElementNS(SVG_NS, 'rect');
-  tileClipRect.setAttribute('width', Maze.SQUARE_SIZE);
-  tileClipRect.setAttribute('height', Maze.SQUARE_SIZE);
-
-  tileClipRect.setAttribute('x', col * Maze.SQUARE_SIZE);
-  tileClipRect.setAttribute('y', row * Maze.SQUARE_SIZE);
-  tileClip.appendChild(tileClipRect);
-  svg.appendChild(tileClip);
-
-  // Tile sprite.
-  var tileElement = document.createElementNS(SVG_NS, 'image');
-  tileElement.setAttribute('id', 'tileElement' + tileId);
-  tileElement.setAttributeNS('http://www.w3.org/1999/xlink',
-                             'xlink:href',
-                             skin.tiles);
-  tileElement.setAttribute('height', tileSheetHeight);
-  tileElement.setAttribute('width', tileSheetWidth);
-  tileElement.setAttribute('clip-path',
-                           'url(#tileClipPath' + tileId + ')');
-  tileElement.setAttribute('x', (col - left) * Maze.SQUARE_SIZE);
-  tileElement.setAttribute('y', (row - top) * Maze.SQUARE_SIZE);
-  svg.appendChild(tileElement);
-  // Tile animation
-  var tileAnimation = document.createElementNS(SVG_NS, 'animate');
-  tileAnimation.setAttribute('id', 'tileAnimation' + tileId);
-  tileAnimation.setAttribute('attributeType', 'CSS');
-  tileAnimation.setAttribute('attributeName', 'opacity');
-  tileAnimation.setAttribute('from', 1);
-  tileAnimation.setAttribute('to', 0);
-  tileAnimation.setAttribute('dur', '1s');
-  tileAnimation.setAttribute('begin', 'indefinite');
-  tileElement.appendChild(tileAnimation);
-};
-
-/**
  * Redraw all dirt images
  * @param {boolean} running Whether or not user program is currently running
  */
 function resetDirtImages(running) {
   Maze.map.forEachCell(function (cell, row, col) {
-    Maze.gridItemDrawer.updateItemImage(row, col, running);
+    Maze.subtype.drawer.updateItemImage(row, col, running);
   });
 }
 
@@ -416,6 +369,10 @@ Maze.init = function (config) {
     Maze.subtype = new WordSearch(Maze, studioApp, config);
   } else if (mazeUtils.isScratSkin(config.skinId)) {
     Maze.subtype = new Scrat(Maze, studioApp, config);
+  } else if (mazeUtils.isHarvesterSkin(config.skinId)) {
+    Maze.subtype = new Harvester(Maze, studioApp, config);
+  } else if (mazeUtils.isPlanterSkin(config.skinId)) {
+    Maze.subtype = new Planter(Maze, studioApp, config);
   } else {
     Maze.subtype = new Farmer(Maze, studioApp, config);
   }
@@ -449,6 +406,9 @@ Maze.init = function (config) {
     if (skin.dirtSound) {
       studioApp.loadAudio(skin.fillSound, 'fill');
       studioApp.loadAudio(skin.digSound, 'dig');
+    }
+    if (skin.harvestSound) {
+      studioApp.loadAudio(skin.harvestSound, 'harvest');
     }
     if (skin.beeSound) {
       studioApp.loadAudio(skin.nectarSound, 'nectar');
@@ -490,7 +450,7 @@ Maze.init = function (config) {
 
     Maze.map.resetDirt();
 
-    Maze.gridItemDrawer = Maze.subtype.createGridItemDrawer();
+    Maze.subtype.createDrawer();
 
     drawMap();
 
@@ -875,11 +835,12 @@ Maze.execute = function (stepMode) {
 
   var code = '';
   if (studioApp.isUsingBlockly()) {
-    if (studioApp.initializationCode) {
-      code += studioApp.initializationCode;
+    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    if (studioApp.initializationBlocks) {
+      codeBlocks = studioApp.initializationBlocks.concat(codeBlocks);
     }
 
-    code += Blockly.Generator.blockSpaceToCode('JavaScript');
+    code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   } else {
     code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
@@ -920,7 +881,7 @@ Maze.execute = function (stepMode) {
           codegen.evalWith(code, {
             Maze: api,
             executionInfo: Maze.executionInfo
-          });
+          }, true);
 
           // Sort static grids based on trial result
           Maze.onExecutionFinish();
@@ -931,7 +892,7 @@ Maze.execute = function (stepMode) {
           }
 
           // Reset for next trial
-          Maze.gridItemDrawer.reset();
+          Maze.subtype.drawer.reset();
           Maze.prepareForExecution();
           studioApp.reset(false);
         });
@@ -952,7 +913,7 @@ Maze.execute = function (stepMode) {
       codegen.evalWith(code, {
         Maze: api,
         executionInfo: Maze.executionInfo
-      });
+      }, true);
     }
 
     Maze.onExecutionFinish();
@@ -1231,6 +1192,18 @@ function animateAction(action, spotlightBlocks, timePerStep) {
       break;
     case 'honey':
       Maze.subtype.animateMakeHoney();
+      break;
+    case 'get_corn':
+      Maze.subtype.animateGetCorn();
+      break;
+    case 'get_pumpkin':
+      Maze.subtype.animateGetPumpkin();
+      break;
+    case 'get_bean':
+      Maze.subtype.animateGetBean();
+      break;
+    case 'plant':
+      Maze.subtype.animatePlant();
       break;
     default:
       // action[0] is null if generated by studioApp.checkTimeout().
@@ -1638,7 +1611,7 @@ var scheduleDirtChange = function (options) {
   var previousValue = Maze.map.getValue(row, col) || 0;
 
   Maze.map.setValue(row, col, previousValue + options.amount);
-  Maze.gridItemDrawer.updateItemImage(row, col, true);
+  Maze.subtype.drawer.updateItemImage(row, col, true);
   studioApp.playAudio(options.sound);
 };
 

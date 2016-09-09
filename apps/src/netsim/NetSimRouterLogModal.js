@@ -2,26 +2,17 @@
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
  */
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/netsim/locale';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import NetSimLogEntry from './NetSimLogEntry';
 import Packet from './Packet';
-import markup from './NetSimRouterLogModal.html.ejs';
 import NetSimGlobals from './NetSimGlobals';
 import {doesUserOwnShard} from './NetSimUtils';
 
-/** @const {string} */
-var LOG_ENTRY_DATA_KEY = 'LogEntry';
-
 /** @const {number} */
 var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
-
-function usingNewLogBrowser() {
-  return true;
-}
 
 /**
  * Generator and controller for contents of modal dialog that reveals
@@ -38,9 +29,6 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
    * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
-  if (!usingNewLogBrowser()) {
-    this.rootDiv_.addClass('old-router-log-modal modal fade');
-  }
 
   /**
    * @private {DashboardUser}
@@ -52,12 +40,6 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
    * @private {boolean}
    */
   this.isVisible_ = false;
-
-  if (!usingNewLogBrowser()) {
-    // Attach handlers for showing and hiding the modal
-    this.rootDiv_.on('shown.bs.modal', this.onShow_.bind(this));
-    this.rootDiv_.on('hidden.bs.modal', this.onHide_.bind(this));
-  }
 
   /**
    * @private {NetSimShard}
@@ -202,24 +184,16 @@ NetSimRouterLogModal.prototype.show = function (teacherView=false) {
   // Extra check for setting teacherView here - must own the shard
   this.teacherView_ = teacherView &&
       (this.shard_ && doesUserOwnShard(this.user_, this.shard_.id));
-  if (usingNewLogBrowser()) {
-    this.onShow_();
-  } else {
-    this.rootDiv_.modal('show');
-  }
+  this.onShow_();
 };
 
 NetSimRouterLogModal.prototype.hide = function () {
-  if (usingNewLogBrowser()) {
-    this.onHide_();
-    this.render();
-  } else {
-    this.rootDiv_.modal('hide');
-  }
+  this.onHide_();
+  this.render();
 };
 
 /**
- * State changes that occur when shoing the log.
+ * State changes that occur when showing the log.
  * @private
  */
 NetSimRouterLogModal.prototype.onShow_ = function () {
@@ -252,14 +226,6 @@ NetSimRouterLogModal.prototype.isVisible = function () {
  * Fill the root div with new elements reflecting the current state
  */
 NetSimRouterLogModal.prototype.render = function () {
-  if (usingNewLogBrowser()) {
-    this.newRender_();
-  } else {
-    this.oldRender_();
-  }
-};
-
-NetSimRouterLogModal.prototype.newRender_ = function () {
   const getOriginNodeName = entry => {
     const originNode = entry.getOriginNode();
     return originNode ? originNode.getDisplayName() : entry.nodeID;
@@ -296,107 +262,6 @@ NetSimRouterLogModal.prototype.newRender_ = function () {
   );
 };
 
-NetSimRouterLogModal.prototype.oldRender_ = function () {
-  if (!this.isVisible()) {
-    return;
-  }
-
-  // Re-render entire log browser UI
-  var renderedMarkup = $(markup({
-    isAllRouterLogMode: this.isAllRouterLogMode_,
-    canSetRouterLogMode: this.canSetRouterLogMode_(),
-    currentTrafficFilter: this.currentTrafficFilter_,
-    localAddress: this.localNode_ ? this.localNode_.getAddress() : undefined,
-    sortBy: this.sortBy_,
-    sortDescending: this.sortDescending_
-  }));
-  this.rootDiv_.html(renderedMarkup);
-
-  // Add input handlers
-  this.getRouterLogModeDropdown().one('change', (evt) => {
-    this.setRouterLogMode_(evt.target.value);
-    this.render();
-  });
-
-  this.getTrafficFilterCycleDropdown().one('change', (evt) => {
-    this.setTrafficFilterMode_(evt.target.value);
-    this.render();
-  });
-
-  this.rootDiv_.find('th').click(function (event) {
-    this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
-  }.bind(this));
-
-  // Add rows to the table
-  var rows = this.getSortedFilteredLogEntries(this.logEntries_)
-    .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
-    .map(this.makeTableRow_.bind(this));
-  this.rootDiv_.find('tbody').append(rows);
-
-  if (rows.length === MAXIMUM_ROWS_IN_FULL_RENDER) {
-    var maxRenderedWarning = document.createElement('div');
-    maxRenderedWarning.className = 'log-browser-limit-message';
-    maxRenderedWarning.textContent = i18n.showingFirstXLogEntries({
-      x: MAXIMUM_ROWS_IN_FULL_RENDER
-    });
-    this.rootDiv_.find('table').after(maxRenderedWarning);
-  }
-};
-
-/**
- * Convert the given set of log entries to table rows and insert them
- * into the DOM, instead of re-rendering the whole table.
- * @param {!NetSimLogEntry[]} newEntries
- * @private
- */
-NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
-  // Be lazy, don't render at all if not visible.
-  if (!this.isVisible() || newEntries.length === 0) {
-    return;
-  }
-
-  /** @type {jQuery} Table body element. */
-  var tbody = this.rootDiv_.find('tbody');
-
-  // Get existing table row elements, which are already sorted and filtered.
-  var oldRows = tbody.find('tr');
-
-  // Sort and filter the new entries, and generate DOM rows for them.
-  newEntries = this.getSortedFilteredLogEntries(newEntries);
-  var newRows = $(newEntries.map(this.makeTableRow_.bind(this)));
-
-  // Walk both collections to merge new rows into the DOM
-  var nextOld = getNextInfo(oldRows, 0);
-  var nextNew = getNextInfo(newRows, 0);
-  var comparator = this.getSortComparator_();
-  while (nextNew.index < newRows.length && nextOld.index < oldRows.length) {
-    if (comparator(nextNew.logEntry, nextOld.logEntry) <= 0) {
-      nextNew.tableRow.insertBefore(nextOld.tableRow);
-      nextNew = getNextInfo(newRows, nextNew.index + 1);
-    } else {
-      nextOld = getNextInfo(oldRows, nextOld.index + 1);
-    }
-  }
-
-  // Put whatever's left on the end of the table
-  tbody.append(newRows.slice(nextNew.index));
-};
-
-/**
- * Generates a helper object for performing the log row merge.
- * @param {jQuery} rows - Wrapped collection of table rows.
- * @param {!number} atIndex - Index into `rows` at which info should be generated.
- * @returns {{index: number, tableRow: jQuery, logEntry: NetSimLogEntry}}
- */
-function getNextInfo(rows, atIndex) {
-  var row = rows.eq(atIndex);
-  return {
-    index: atIndex,
-    tableRow: row,
-    logEntry: row.length > 0 ? row.data(LOG_ENTRY_DATA_KEY) : {}
-  };
-}
-
 /**
  * @param {!NetSimLogEntry[]} logEntries
  * @returns {NetSimLogEntry[]} subset of logEntries, sorted and filtered
@@ -428,85 +293,6 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
   return logEntries
       .filter(e => filterPredicates.every(p => p(e)))
       .sort(this.getSortComparator_());
-};
-
-/**
- * Given a log entry, generate a table row that can be added to the log modal.
- * @param {!NetSimLogEntry} logEntry
- * @returns {Element} a tr element.
- * @private
- */
-NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
-  var headerFields = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
-
-  var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
-
-  var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
-
-  var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
-      headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
-
-  var originNode = logEntry.getOriginNode();
-
-  var row = document.createElement('tr');
-
-  // Store the actual logEntry on the row for sorting/merging later.
-  $(row).data(LOG_ENTRY_DATA_KEY, logEntry);
-
-  row.appendChild(makeCell(logEntry.getTimeString()));
-
-  row.appendChild(makeCell(originNode ?
-      originNode.getDisplayName() : logEntry.nodeID));
-
-  row.appendChild(makeCell(logEntry.getLocalizedStatus()));
-
-  if (showFromAddress) {
-    row.appendChild(makeCell(logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS)));
-  }
-
-  if (showToAddress) {
-    row.appendChild(makeCell(logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS)));
-  }
-
-  if (showPacketInfo) {
-    row.appendChild(makeCell(logEntry.getLocalizedPacketInfo()));
-  }
-
-  var tdMessageBody = makeCell(logEntry.getMessageAscii());
-  tdMessageBody.className = 'message';
-  row.appendChild(tdMessageBody);
-
-  return row;
-};
-
-/**
- * @param {!string} text
- * @returns {HTMLElement} the new TD element.
- */
-function makeCell(text) {
-  var td = document.createElement('td');
-  td.style.whiteSpace = 'nowrap';
-  td.textContent = text;
-  return td;
-}
-
-/**
- * Change the sort settings and re-render the log table.
- * @param {!string} sortKey
- * @private
- */
-NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
-  if (!sortKey) {
-    return;
-  }
-
-  if (this.sortBy_ === sortKey) {
-    this.sortDescending_ = !this.sortDescending_;
-  } else {
-    this.sortBy_ = sortKey;
-    this.sortDescending_ = false;
-  }
-  this.render();
 };
 
 /**
@@ -566,7 +352,7 @@ NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
  */
 NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
   this.isAllRouterLogMode_ = mode === 'all';
-  usingNewLogBrowser() && this.render();
+  this.render();
 };
 
 
@@ -577,25 +363,7 @@ NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
  */
 NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
   this.currentTrafficFilter_ = newMode;
-  usingNewLogBrowser() && this.render();
-};
-
-/**
- * Finds the dropdown used to change router log modes
- * @returns {jQuery}
- * @private
- */
-NetSimRouterLogModal.prototype.getRouterLogModeDropdown = function () {
-  return this.rootDiv_.find('select#routerlog-mode');
-};
-
-/**
- * Finds the dropdown used to change traffic filter modes
- * @returns {jQuery}
- * @private
- */
-NetSimRouterLogModal.prototype.getTrafficFilterCycleDropdown = function () {
-  return this.rootDiv_.find('select#traffic-filter');
+  this.render();
 };
 
 /**
@@ -647,9 +415,5 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
     }
   });
 
-  if (usingNewLogBrowser()) {
-    this.render();
-  } else {
-    this.renderNewLogEntries_(newLogEntries);
-  }
+  this.render();
 };

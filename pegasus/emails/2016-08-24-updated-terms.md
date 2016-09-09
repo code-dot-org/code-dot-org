@@ -37,7 +37,7 @@ Some other changes are:
 * We collect additional information on how students are solving puzzles (e.g. by using hints) in order to help us improve our course effectiveness. Our new Privacy Policy reflects that we will store attendance, participation, and progress information for teachers attending our professional learning workshops or taking our professional learning online courses. 
 * Twilio, the third party provider of our “send to phone” feature for sending student apps to phones (via text message) will no longer store phone numbers. Again, data that isn’t stored can’t be stolen.
 
-**I welcome you to review our new Terms of Service and Privacy Policy.** I personally review every change, to make sure our policy is easy to read and not full of vague assurances or complex or confusing legalese. We’ve also updated our course handouts for parents to explain this as well. (See parent handouts for [CS Fundamentals](https://code.org/privacy/student-privacy), [CS Principles](https://code.org/curriculum/docs/csp/parent-handout), and [CS in Algebra](https://code.org/curriculum/docs/algebra/parent-handout)). 
+**I welcome you to review our new Terms of Service and Privacy Policy.** I personally review every change, to make sure our policy is easy to read and not full of vague assurances or complex or confusing legalese. We’ve also updated our course handouts for parents to explain this as well. (See parent handouts for [CS Fundamentals](https://code.org/curriculum/docs/k-5/parent-handout), [CS Principles](https://code.org/curriculum/docs/csp/parent-handout), and [CS in Algebra](https://code.org/curriculum/docs/algebra/parent-handout)). 
 
 
 <br/>

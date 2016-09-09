@@ -1,6 +1,5 @@
 /** @file Tests for clientState.js */
 
-'use strict';
 
 var assert = require('assert');
 var cookies = require('js-cookie');

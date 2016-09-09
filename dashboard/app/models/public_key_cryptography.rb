@@ -24,6 +24,10 @@
 
 # Level type for standalone widget teaching public key cryptography
 class PublicKeyCryptography < Widget
+  serialized_attrs %w(
+    cryptography_widget_view
+  )
+
   before_validation do
     self.href = 'public_key_cryptography/public_key_cryptography.html'
   end

@@ -1,5 +1,3 @@
-/* global TEACHER_DASHBOARD_URL */
-
 /**
  * Workshop view / edit. Displays and optionally edits details for a workshop.
  * Routes:
@@ -228,7 +226,7 @@ const Workshop = React.createClass({
   },
 
   getSectionUrl() {
-    return `${window.dashboard.workshop.TEACHER_DASHBOARD_URL}#/sections/${this.state.workshop.section_id}/manage`;
+    return `${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.state.workshop.section_id}/manage`;
   },
 
   renderSignupPanel() {

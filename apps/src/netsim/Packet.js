@@ -1,7 +1,6 @@
 /**
  * @overview Utility class for encoding and decoding simulated packets.
  */
-'use strict';
 
 var NetSimUtils = require('./NetSimUtils');
 var DataConverters = require('./DataConverters');

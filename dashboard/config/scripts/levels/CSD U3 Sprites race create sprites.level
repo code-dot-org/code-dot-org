@@ -35,7 +35,9 @@
       "ellipse": null,
       "text": null,
       "textSize": null,
-      "textAlign": null
+      "textAlign": null,
+      "addOperator": null,
+      "subtractOperator": null
     },
     "show_d_pad": "false",
     "edit_code": true,
@@ -65,6 +67,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "project_template_level_name": "CSD U3 Sprites Template Race",
+    "hide_animation_mode": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

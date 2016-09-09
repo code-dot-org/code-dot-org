@@ -1,6 +1,4 @@
 /** @file Shared styles for the animation picker dialog. */
-'use strict';
-
 var color = require('../../color');
 
 module.exports = {

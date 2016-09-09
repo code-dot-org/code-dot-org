@@ -151,9 +151,11 @@ class Script < ActiveRecord::Base
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
-  # Caching is disabled when editing scripts and levels.
+  # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
-    !Rails.application.config.levelbuilder_mode
+    return false if Rails.application.config.levelbuilder_mode
+    return false if ENV['UNIT_TEST'] || ENV['CI']
+    true
   end
 
   def self.script_cache_to_cache
@@ -162,8 +164,9 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     Script.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
+    [
+      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
+    ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 
@@ -184,7 +187,7 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
-  # Returns a cached map from script level id to id, or nil if in level_builder mode
+  # Returns a cached map from script level id to script_level, or nil if in level_builder mode
   # which disables caching.
   def self.script_level_cache
     return nil unless self.should_cache?
@@ -195,7 +198,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Returns a cached map from level id to id, or nil if in level_builder mode
+  # Returns a cached map from level id to level, or nil if in level_builder mode
   # which disables caching.
   def self.level_cache
     return nil unless self.should_cache?
@@ -209,7 +212,7 @@ class Script < ActiveRecord::Base
   end
 
   # Find the script level with the given id from the cache, unless the level build mode
-  # is enabled in which case  it is always fetched from the database. If we need to fetch
+  # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
   # the cache), then an entry for the script is added to the cache.
   def self.cache_find_script_level(script_level_id)
@@ -282,10 +285,6 @@ class Script < ActiveRecord::Base
 
   def minecraft?
     ScriptConstants.script_in_category?(:minecraft, self.name)
-  end
-
-  def find_script_level(level_id)
-    self.script_levels.detect { |sl| sl.level_id == level_id }
   end
 
   def get_script_level_by_id(script_level_id)
@@ -369,9 +368,6 @@ class Script < ActiveRecord::Base
   def has_peer_reviews?
     peer_reviews_to_complete.try(:>, 0)
   end
-
-  SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
-  SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
   def self.setup(custom_files)
     transaction do
@@ -535,6 +531,10 @@ class Script < ActiveRecord::Base
         if !script_level.end_of_stage? && script_level.long_assessment?
           raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
         end
+      end
+
+      if stage.lockable && stage.script_levels.length > 1
+        raise 'Expect lockable stages to have a single script_level'
       end
     end
 
