@@ -9,8 +9,11 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     @level2 = create :maze
     @level3 = create :applab
     @level4 = create :external
+    @level5 = create :free_response
+    @level6 = create :free_response
+    @level6.update(peer_reviewable: true)
 
-    [@level1, @level2, @level3, @level4].each do |level|
+    [@level1, @level2, @level3, @level4, @level5, @level6].each do |level|
       create(:script_level, script: @course_unit.script, stage: learning_module.stage, levels: [level])
     end
 
@@ -27,26 +30,36 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     assert_equal @user, module_assignment.user
     assert_equal Plc::EnrollmentModuleAssignment::NOT_STARTED, module_assignment.status
 
-    User.track_level_progress_sync(
-      user_id: @user.id,
-      level_id: @level2.id,
-      script_id: @course_unit.script.id,
-      new_result: ActivityConstants::MINIMUM_PASS_RESULT,
-      submitted: true,
-      level_source_id: nil,
-      pairing_user_ids: nil
-    )
+    track_progress_for_level(@level2, ActivityConstants::MINIMUM_PASS_RESULT)
     assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, module_assignment.status
 
-    User.track_level_progress_sync(
-      user_id: @user.id,
-      level_id: @level3.id,
-      script_id: @course_unit.script.id,
-      new_result: ActivityConstants::BEST_PASS_RESULT,
-      submitted: true,
-      level_source_id: nil,
-      pairing_user_ids: nil
-    )
+    track_progress_for_level(@level3, ActivityConstants::BEST_PASS_RESULT)
+    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, module_assignment.status
+
+    track_progress_for_level(@level5, ActivityConstants::BEST_PASS_RESULT)
+    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, module_assignment.status
+
+    track_progress_for_level(@level6, ActivityConstants::UNREVIEWED_SUBMISSION_RESULT)
+    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, module_assignment.status
+
+    track_progress_for_level(@level6, ActivityConstants::REVIEW_REJECTED_RESULT)
+    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, module_assignment.status
+
+    track_progress_for_level(@level6, ActivityConstants::REVIEW_ACCEPTED_RESULT)
     assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, module_assignment.status
+  end
+
+  private
+
+  def track_progress_for_level(level, result)
+    User.track_level_progress_sync(
+        user_id: @user.id,
+        level_id: level.id,
+        script_id: @course_unit.script.id,
+        new_result: result,
+        submitted: true,
+        level_source_id: nil,
+        pairing_user_ids: nil
+    )
   end
 end
