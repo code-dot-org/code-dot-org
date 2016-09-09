@@ -121,6 +121,24 @@ class ScriptLevelsController < ApplicationController
     render json: stage_ids
   end
 
+  def toggle_hidden
+    section_id = params[:section_id]
+    stage_id = params[:stage_id]
+    should_hide = params[:hidden] == "true"
+
+    section = Section.find(section_id)
+    authorize! :read, section
+
+    hidden_stage = HiddenStage.find_by(stage_id: stage_id, section_id: section_id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      HiddenStage.create(stage_id: stage_id, section_id: section_id)
+    end
+
+    render json: []
+  end
+
   private
 
   # Configure http caching for the given script. Caching is disabled unless the
