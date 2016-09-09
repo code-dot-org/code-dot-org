@@ -1,0 +1,5 @@
+#!/bin/sh
+
+../send-to-mailing-list 2016-09-12-back-to-school-pd.md ../mailing-common/test-params-us.csv
+../send-to-mailing-list 2016-09-12-back-to-school-no-pd.md ../mailing-common/test-params-us.csv
+../send-to-mailing-list 2016-09-12-back-to-school-non-us.md ../mailing-common/test-params-international.csv
