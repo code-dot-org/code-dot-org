@@ -53,13 +53,13 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
 
   def track_progress_for_level(level, result)
     User.track_level_progress_sync(
-        user_id: @user.id,
-        level_id: level.id,
-        script_id: @course_unit.script.id,
-        new_result: result,
-        submitted: true,
-        level_source_id: nil,
-        pairing_user_ids: nil
+      user_id: @user.id,
+      level_id: level.id,
+      script_id: @course_unit.script.id,
+      new_result: result,
+      submitted: true,
+      level_source_id: create(:level_source, level: level).id,
+      pairing_user_ids: nil
     )
   end
 end
