@@ -54,7 +54,7 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/omniauth-windowslive.git
-  revision: 7aa075a631ab56b3929f93bf03a5d7e54e024eed
+  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
   ref: cdo
   specs:
     omniauth-windowslive (0.0.11)
