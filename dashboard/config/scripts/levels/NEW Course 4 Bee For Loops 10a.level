@@ -30,7 +30,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "step_speed": "1",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nReady for a challenge?  Take what you've learned about loops and try to solve this problem. \r\n\r\nRemember: You may have to run through solutions multiple times before you figure out all of the steps.\r\n",
+    "markdown_instructions": "Ready for a challenge?  Take what you've learned about loops and try to solve this problem. \r\n\r\nRemember: You may have to run through solutions multiple times before you figure out all of the steps.\r\n",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can you find a pattern between the number of steps you need to take and the number of nectars to gather?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_10a_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You'll need to have 2 repeats, one will use a math block.\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_10a_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false"
