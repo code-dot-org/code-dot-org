@@ -23,14 +23,29 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'formatted_date' do
-    session = build :pd_session, start: DateTime.new(2016,3,1,9).in_time_zone
+    session = build :pd_session, start: DateTime.new(2016, 3, 1, 9).in_time_zone
     assert_equal '03/01/2016', session.formatted_date
   end
 
   test 'formatted_date_with_start_and_end_times' do
-    session = create(:pd_session, start: DateTime.new(2016,3,1,9).in_time_zone,
-      end: DateTime.new(2016,3,1,17).in_time_zone)
+    session = create(:pd_session, start: DateTime.new(2016, 3, 1, 9).in_time_zone,
+      end: DateTime.new(2016, 3, 1, 17).in_time_zone)
 
     assert_equal '03/01/2016, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
+  end
+
+  test 'soft delete' do
+    session = create :pd_session
+    attendance = create :pd_attendance, session: session
+    session.reload.destroy!
+
+    assert session.reload.deleted?
+    refute Pd::Session.exists? session.attributes
+    assert Pd::Session.with_deleted.exists? session.attributes
+
+    # Make sure dependent attendances are also soft-deleted.
+    assert attendance.reload.deleted?
+    refute Pd::Attendance.exists? attendance.attributes
+    assert Pd::Attendance.with_deleted.exists? attendance.attributes
   end
 end

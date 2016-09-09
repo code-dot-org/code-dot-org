@@ -2,8 +2,6 @@
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.
  */
-'use strict';
-
 var i18n = require('@cdo/netsim/locale');
 var NetSimSlider = require('./NetSimSlider');
 require('../utils'); // Provides Function.prototype.inherits

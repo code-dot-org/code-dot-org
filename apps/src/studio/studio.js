@@ -5,50 +5,49 @@
  *
  */
 
-'use strict';
 
 import $ from 'jquery';
+import * as constants from './constants';
+import * as utils from '../utils';
+import _ from 'lodash';
+import AppView from '../templates/AppView';
+import BigGameLogic from './bigGameLogic';
+import Collidable from './collidable';
 import CollisionMaskWalls from './collisionMaskWalls';
+import Hammer from '../hammer';
+import ImageFilterFactory from './ImageFilterFactory';
+import InputPrompt from '../templates/InputPrompt';
+import Item from './Item';
+import JSInterpreter from '../JSInterpreter';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';
+import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RocketHeightLogic from './rocketHeightLogic';
+import SamBatLogic from './samBatLogic';
+import Sprite from './Sprite';
+import StudioVisualizationColumn from './StudioVisualizationColumn';
+import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
-var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var studioMsg = require('./locale');
-var skins = require('../skins');
-var constants = require('./constants');
-var sharedConstants = require('../constants');
-var codegen = require('../codegen');
-var api = require('./api');
-var blocks = require('./blocks');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var StudioVisualizationColumn = require('./StudioVisualizationColumn');
-var dom = require('../dom');
-var Collidable = require('./collidable');
-var Sprite = require('./Sprite');
-var Projectile = require('./projectile');
-var Item = require('./Item');
-var BigGameLogic = require('./bigGameLogic');
-var RocketHeightLogic = require('./rocketHeightLogic');
-var SamBatLogic = require('./samBatLogic');
-var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
-var _ = require('lodash');
-var dropletConfig = require('./dropletConfig');
-var Hammer = require('../hammer');
-var JSInterpreter = require('../JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
-var annotationList = require('../acemode/annotationList');
-var spriteActions = require('./spriteActions');
-var ImageFilterFactory = require('./ImageFilterFactory');
-var ThreeSliceAudio = require('./ThreeSliceAudio');
-var MusicController = require('../MusicController');
-var paramLists = require('./paramLists.js');
-var experiments = require('../experiments');
-var InputPrompt = require('../templates/InputPrompt');
-var studioCell = require('./cell');
+import annotationList from '../acemode/annotationList';
+import api from './api';
+import blocks from './blocks';
+import codegen from '../codegen';
+import commonMsg from '@cdo/locale';
+import dom from '../dom';
+import dropletConfig from './dropletConfig';
+import dropletUtils from '../dropletUtils';
+import experiments from '../experiments';
+import paramLists from './paramLists.js';
+import sharedConstants from '../constants';
+import skins from '../skins';
+import studioCell from './cell';
+import studioMsg from './locale';
+import { GridMove, GridMoveAndCancel } from './spriteActions';
+import { Provider } from 'react-redux';
+import { singleton as studioApp } from '../StudioApp';
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -674,6 +673,9 @@ var cancelQueuedMovements = function (index, yAxis) {
 
 var getNextPosition = function (i, modifyQueues) {
   var delta = calcMoveDistanceFromQueues(i, modifyQueues);
+  if (delta.x === 0 && delta.y === 0) {
+    return Studio.sprite[i].getNextPosition();
+  }
   return {
     x: Studio.sprite[i].x + delta.x,
     y: Studio.sprite[i].y + delta.y
@@ -807,10 +809,10 @@ var setSvgText = function (opts) {
  * @param {string} name Name of the handler we want to call
  * @param {boolean} allowQueueExension When true, we allow additional cmds to
  *  be appended to the queue
- * @param {Array} extraArgs Additional arguments passed into the virtual
-*   JS machine for consumption by the student's event-handling code.
+ * @param {Array} extraArgs Additional arguments passed into the virtual JS
+ *  machine for consumption by the student's event-handling code.
  */
-function callHandler(name, allowQueueExtension, extraArgs) {
+function callHandler(name, allowQueueExtension, extraArgs = []) {
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
@@ -843,9 +845,10 @@ function callHandler(name, allowQueueExtension, extraArgs) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(api, Studio.Globals);
+          handler.func(api, Studio.Globals, ...extraArgs);
         } catch (e) {
           // Do nothing
+          console.error(e);
         }
         Studio.currentCmdQueue = null;
       }
@@ -1507,6 +1510,9 @@ function updateItems() {
       Studio.items.splice(i, 1);
     }
   }
+  Studio.sprite.forEach(sprite => {
+    sprite.update();
+  });
 }
 
 function checkForItemCollisions() {
@@ -2514,18 +2520,16 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
-var registerHandlersForCode = function (handlers, blockName, code) {
-  var func = codegen.functionFromCode(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  registerEventHandler(handlers, blockName, func);
+var registerHandlersForCode = function (handlers, blockName, code, argNames = []) {
+  registerEventHandler(handlers, blockName,
+      new Function('Studio', 'Globals', ...argNames, code));
 };
 
 var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
-                nameParam2, matchParam2Val) {
+                nameParam2, matchParam2Val,
+                argNames) {
   var blocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var x = 0; blocks[x]; x++) {
     var block = blocks[x];
@@ -2542,12 +2546,12 @@ var registerHandlers =
       if (code) {
         var eventName = eventNameBase;
         if (nameParam1) {
-          eventName += '-' + matchParam1Val;
+          eventName += '-' + utils.stripQuotes(matchParam1Val);
         }
         if (nameParam2) {
-          eventName += '-' + matchParam2Val;
+          eventName += '-' + utils.stripQuotes(matchParam2Val);
         }
-        registerHandlersForCode(handlers, eventName, code);
+        registerHandlersForCode(handlers, eventName, code, argNames);
       }
     }
   }
@@ -2603,6 +2607,24 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+  }
+};
+
+var registerHandlersWithSpriteAndGroupParams = function (
+    handlers,
+    blockName,
+    eventNameBase,
+    blockParam1,
+    blockParam2,
+    argNames) {
+  var spriteNames = skin.spriteChoices.filter(opt =>
+      opt[1] !== constants.HIDDEN_VALUE && opt[1] !== constants.RANDOM_VALUE
+  ).map(opt => opt[1]);
+  for (var i = 0; i < Studio.spriteCount; i++) {
+    for (var j = 0; j < spriteNames.length; j++) {
+      registerHandlers(handlers, blockName, eventNameBase, blockParam1,
+          String(i), blockParam2, spriteNames[j], argNames);
+    }
   }
 };
 
@@ -2827,8 +2849,11 @@ Studio.execute = function () {
       return Studio.onPuzzleComplete();
     }
 
-    if (studioApp.initializationCode) {
-      registerHandlersForCode(handlers, 'whenGameStarts', studioApp.initializationCode);
+    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    if (studioApp.initializationBlocks) {
+      let initializationCode = Blockly.Generator.blocksToCode('JavaScript',
+          studioApp.initializationBlocks);
+      registerHandlersForCode(handlers, 'whenGameStarts', initializationCode);
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
@@ -2883,6 +2908,14 @@ Studio.execute = function () {
                                      'whenSpriteCollided',
                                      'SPRITE1',
                                      'SPRITE2');
+    registerHandlersWithSpriteAndGroupParams(
+        handlers,
+        'studio_whenSpriteAndGroupCollide',
+        'whenSpriteCollided',
+        'SPRITE',
+        'SPRITENAME',
+        ['touchedSpriteIndex']);
+
   }
 
   if (utils.valueOr(level.playStartSound, true)) {
@@ -3146,13 +3179,14 @@ Studio.drawTimeoutRect = function () {
 };
 
 /**
- * Draw an image with 0.5 opacity over the entire play area.
+ * Draw an image with 0.5 opacity over the entire play area. Only allow one
+ * at a time.
  */
 Studio.drawDebugOverlay = function (src) {
-  if (showDebugInfo) {
+  if (showDebugInfo && $('.debugImage').length === 0) {
     const svg = document.getElementById('svgStudio');
     const group = document.createElementNS(SVG_NS, 'g');
-    group.setAttribute('class', "walls debugImage");
+    group.setAttribute('class', 'walls debugImage');
     const mapImage = document.createElementNS(SVG_NS, 'image');
     mapImage.setAttribute('width', Studio.MAZE_WIDTH);
     mapImage.setAttribute('height', Studio.MAZE_HEIGHT);
@@ -3170,9 +3204,9 @@ Studio.drawDebugOverlay = function (src) {
  */
 
 Studio.clearDebugElements = function () {
-  $(".debugRect").remove();
-  $(".debugLine").remove();
-  $(".debugImage").remove();
+  $('.debugRect').remove();
+  $('.debugLine').remove();
+  $('.debugImage').remove();
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
@@ -3449,17 +3483,19 @@ Studio.displayVictoryText = function () {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
-  if (dom.isMobile() || dom.isWindowsTouch()) {
-    var resetTextA = document.getElementById('resetTextA');
-    var resetTextB = document.getElementById('resetTextB');
-    resetTextB.textContent = studioMsg.tapToReset();
-    resetTextA.setAttribute('visibility', 'hidden');
-    resetTextB.setAttribute('visibility', 'visible');
-    $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
-  } else {
-    var resetText = document.getElementById('resetText');
-    resetText.textContent = studioMsg.tapOrClickToReset();
-    resetText.setAttribute('visibility', 'visible');
+  if (level.tapSvgToRunAndReset) {
+    if (dom.isMobile() || dom.isWindowsTouch()) {
+      var resetTextA = document.getElementById('resetTextA');
+      var resetTextB = document.getElementById('resetTextB');
+      resetTextB.textContent = studioMsg.tapToReset();
+      resetTextA.setAttribute('visibility', 'hidden');
+      resetTextB.setAttribute('visibility', 'visible');
+      $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
+    } else {
+      var resetText = document.getElementById('resetText');
+      resetText.textContent = studioMsg.tapOrClickToReset();
+      resetText.setAttribute('visibility', 'visible');
+    }
   }
 };
 
@@ -3759,6 +3795,26 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteXY':
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
+      break;
+    case 'setSpritesWander':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesWander(cmd.opts);
+      break;
+    case 'setSpritesStop':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesStop(cmd.opts);
+      break;
+    case 'setSpritesChase':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesChase(cmd.opts);
+      break;
+    case 'setSpritesFlee':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesFlee(cmd.opts);
+      break;
+    case 'setSpritesSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setSpritesSpeed(cmd.opts);
       break;
     case 'addGoal':
       studioApp.highlight(cmd.id);
@@ -4099,7 +4155,7 @@ Studio.setItemActivity = function (opts) {
     Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
       if (item.className === itemClass) {
-        item.setActivity(opts.type);
+        item.setActivity(opts.type, 0);
 
         // For verifying success, record this combination of activity type and
         // item type.
@@ -4579,6 +4635,7 @@ Studio.setSprite = function (opts) {
     return;
   }
 
+  sprite.imageName = spriteValue;
   sprite.frameCounts = skinSprite.frameCounts;
   sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
@@ -5043,6 +5100,8 @@ function handleCollision(src, target, allowQueueExtension) {
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
     callHandler(prefix + 'any_actor', allowQueueExtension);
+    callHandler(prefix + Studio.sprite[target].imageName, false,
+        [target]);
   } else if (isEdgeClass(target)) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
@@ -5085,6 +5144,9 @@ function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
 
   Studio.executeQueue(srcPrefix + target);
+  if (isActorClass(target)) {
+    Studio.executeQueue(srcPrefix + Studio.sprite[target].imageName);
+  }
 
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
@@ -5161,6 +5223,36 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
+};
+
+function getSpritesByName(name) {
+  return Studio.sprite.filter(
+      sprite => sprite.imageName === name && sprite.visible);
+}
+
+Studio.setSpritesWander = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('roam'));
+};
+
+Studio.setSpritesStop = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('none'));
+};
+
+Studio.setSpritesChase = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('chase', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesFlee = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.setActivity('flee', opts.targetSpriteIndex));
+};
+
+Studio.setSpritesSpeed = function (opts) {
+  getSpritesByName(opts.spriteName).forEach(sprite =>
+      sprite.speed = opts.speed);
 };
 
 Studio.addGoal = function (opts) {
@@ -5265,10 +5357,10 @@ Studio.moveSingle = function (opts) {
 
   if (level.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
-      sprite.addAction(new spriteActions.GridMoveAndCancel(
+      sprite.addAction(new GridMoveAndCancel(
           deltaX, deltaY, level.slowExecutionFactor));
     } else {
-      sprite.addAction(new spriteActions.GridMove(
+      sprite.addAction(new GridMove(
           deltaX, deltaY, level.slowExecutionFactor));
     }
 

@@ -5,7 +5,6 @@
 /* global -Blockly */
 /* global dashboard */
 /* global confirm */
-'use strict';
 
 import $ from 'jquery';
 import React from 'react';
@@ -277,14 +276,6 @@ NetSim.prototype.tick = function (clock) {
 };
 
 /**
- * Pull an identifier from the URL that separates this level's shard from others.
- * @returns {string}
- */
-NetSim.prototype.getUniqueLevelKey = function () {
-  return location.pathname.substr(1).replace(/\W/g, '-');
-};
-
-/**
  * Extracts query parameters from a full URL and returns them as a simple
  * object.
  * @returns {*}
@@ -370,7 +361,7 @@ NetSim.prototype.initWithUser_ = function (user) {
       $('.lobby-panel'),
       this, {
         user: user,
-        levelKey: this.getUniqueLevelKey(),
+        levelKey: NetSimUtils.getUniqueLevelKeyFromLocation(location),
         sharedShardSeed: this.getOverrideShardID(),
         showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, false),
         showTeacherLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_, true)
@@ -530,6 +521,9 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
+  // Attempt to unsubscribe from Pusher as we navigate away
+  this.shard_.disconnect();
+  this.shard_ = null;
   // Don't notify observers, this should only be used when navigating away
   // from the page.
 };

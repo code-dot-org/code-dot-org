@@ -1,6 +1,4 @@
 /* global ace */
-'use strict';
-
 var _ = require('lodash');
 
 /**

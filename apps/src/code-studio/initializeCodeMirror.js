@@ -2,7 +2,6 @@
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */
 /* global inlineAttach */
-'use strict';
 import $ from 'jquery';
 var CodeMirror = require('codemirror');
 require("codemirror/mode/markdown/markdown");

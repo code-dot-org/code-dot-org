@@ -23,10 +23,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "What should you add to this code to get all of the gold?",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\r\n  \"hint_id\": \"grade1_adventurer_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ideal": "9",
     "contained_level_names": null
   },
   "published": true,
@@ -39,12 +41,12 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
+            <block type="controls_repeat_simplified_dropdown" deletable="false">
               <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="maze_moveEast">
+                <block type="maze_moveEast" deletable="false">
                   <next>
-                    <block type="collector_collect"/>
+                    <block type="collector_collect" deletable="false"/>
                   </next>
                 </block>
               </statement>
@@ -52,9 +54,9 @@
                 <block type="controls_repeat_simplified_dropdown">
                   <title name="TIMES" config="3-10">3</title>
                   <statement name="DO">
-                    <block type="maze_moveSouth">
+                    <block type="maze_moveSouth" deletable="false">
                       <next>
-                        <block type="collector_collect"/>
+                        <block type="collector_collect" deletable="false"/>
                       </next>
                     </block>
                   </statement>

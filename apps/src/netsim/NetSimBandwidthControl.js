@@ -1,8 +1,6 @@
 /**
  * @overview UI Slider control used for changing simulated router bandwidth.
  */
-'use strict';
-
 // Utils required only for Function.prototype.inherits()
 require('../utils');
 var NetSimConstants = require('./NetSimConstants');

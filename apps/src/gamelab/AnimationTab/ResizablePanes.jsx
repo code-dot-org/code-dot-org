@@ -4,8 +4,6 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-'use strict';
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var _ = require('lodash');

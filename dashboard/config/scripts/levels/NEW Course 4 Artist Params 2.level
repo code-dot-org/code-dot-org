@@ -33,7 +33,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -105,7 +107,7 @@
     <recommended_blocks>
       <xml>
         <block type="procedures_callnoreturn">
-          <mutation name="draw a triangle"/>
+          <mutation name="draw triangle"/>
         </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">

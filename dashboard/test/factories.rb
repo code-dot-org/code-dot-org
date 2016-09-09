@@ -305,6 +305,17 @@ FactoryGirl.define do
     position do |script_level|
       (script_level.stage.script_levels.maximum(:position) || 0) + 1 if script_level.stage
     end
+
+    properties do |script_level|
+      # If multiple levels are specified, mark all but the first as inactive
+      if script_level.levels.length > 1
+        props = {}
+        script_level.levels[1..-1].each do |level|
+          props[level.name] = {active: false}
+        end
+        props.to_json
+      end
+    end
   end
 
   factory :stage do
@@ -363,10 +374,6 @@ FactoryGirl.define do
   factory :level_source_hint do
     level_source
     sequence(:hint) { |n| "Hint #{n}" }
-  end
-
-  factory :activity_hint do
-    activity
   end
 
   factory :user_level do
@@ -478,9 +485,20 @@ FactoryGirl.define do
     name "MyString"
   end
 
-  factory :level_group do
+  factory :level_group, class: LevelGroup do
     game {create(:game, app: "level_group")}
-    properties{{title: 'title', anonymous: 'false', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
+    transient do
+      title 'title'
+      submittable false
+    end
+    properties do
+      {
+        title: title,
+        anonymous: false,
+        submittable: submittable,
+        pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]
+      }
+    end
   end
 
   factory :survey_result do
@@ -538,14 +556,18 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
+  factory :school_info do
+    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    school_district_id {create(:school_district).id}
+  end
+
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    school_info_id {create(:school_info).id}
     school {'Example School'}
-    school_type {'public'}
-    school_state {'WA'}
-    school_district_id {create(:school_district).id}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

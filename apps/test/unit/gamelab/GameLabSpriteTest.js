@@ -2,8 +2,7 @@
 /* global p5 */
 import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
-import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
+import createGameLabP5, {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabSprite', function () {
   let gameLabP5, createSprite;

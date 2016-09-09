@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Class which allows callers to listen to changes to data tables. This is currently
  * done by polling. Some modest rate-limiting is achieved by waiting for one second

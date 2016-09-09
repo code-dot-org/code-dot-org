@@ -24,7 +24,6 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -764,13 +763,12 @@ Artist.prototype.execute = function () {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    this.code = '';
-
-    if (this.studioApp_.initializationCode) {
-      this.code += this.studioApp_.initializationCode;
+    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    if (this.studioApp_.initializationBlocks) {
+      codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
     }
 
-    this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     this.evalCode(this.code);
   }
 
@@ -1507,7 +1505,7 @@ Artist.prototype.checkAnswer = function () {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_().split(',')[1];
+    reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
   }
 
   this.studioApp_.report(reportData);

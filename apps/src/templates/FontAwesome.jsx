@@ -1,5 +1,4 @@
 /** @file font-awesome helper component. */
-'use strict';
 
 import React from 'react';
 import _ from 'lodash';
@@ -11,7 +10,7 @@ import _ from 'lodash';
  */
 export default function FontAwesome({icon, className, ...props}) {
   const newProps = _.assign({}, props, {
-    className: `fa fa-${icon} ${className}`
+    className: `fa fa-${icon} ${className ? className : ''}`
   });
   return <i {...newProps} />;
 }

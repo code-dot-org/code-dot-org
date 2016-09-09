@@ -10,6 +10,13 @@ class ScriptTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
+  def populate_cache_and_disconnect_db
+    Script.stubs(:should_cache?).returns true
+    Script.script_cache_to_cache
+    Script.script_cache_from_cache
+    ActiveRecord::Base.connection.disconnect!
+  end
+
   test 'login required setting in script file' do
     file = File.join(self.class.fixture_path, "login_required.script")
 
@@ -37,13 +44,13 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = script.script_levels[4].script_id
     script_level_id = script.script_levels[4].id
 
-    scripts,_ = Script.setup([@script_file])
+    scripts, _ = Script.setup([@script_file])
     assert_equal script_id, scripts[0].script_levels[4].script_id
     assert_equal script_level_id, scripts[0].script_levels[4].id
   end
 
   test 'should not change Script ID when changing script levels and options' do
-    scripts,_ = Script.setup([@script_file])
+    scripts, _ = Script.setup([@script_file])
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
@@ -60,13 +67,13 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should remove empty stages' do
-    scripts,_ = Script.setup([@script_file])
+    scripts, _ = Script.setup([@script_file])
     assert_equal 2, scripts[0].stages.count
 
     # Reupload a script of the same filename / name, but lacking the second stage.
     stage = scripts[0].stages.last
     script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-    scripts,_ = Script.setup([script_file_empty_stage])
+    scripts, _ = Script.setup([script_file_empty_stage])
     assert_equal 1, scripts[0].stages.count
     assert_not Stage.exists?(stage.id)
   end
@@ -74,7 +81,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'should remove empty stages, reordering stages' do
     script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
     script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
-    scripts,_ = Script.setup([script_file_3_stages])
+    scripts, _ = Script.setup([script_file_3_stages])
     assert_equal 3, scripts[0].stages.count
     first = scripts[0].stages[0]
     second = scripts[0].stages[1]
@@ -87,7 +94,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 3, third.absolute_position
 
     # Reupload a script of the same filename / name, but lacking the middle stage.
-    scripts,_ = Script.setup([script_file_middle_missing_reversed])
+    scripts, _ = Script.setup([script_file_middle_missing_reversed])
     assert_equal 2, scripts[0].stages.count
     assert_not Stage.exists?(second.id)
 
@@ -158,7 +165,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'script_level positions should reset' do
-    scripts,_ = Script.setup([@script_file])
+    scripts, _ = Script.setup([@script_file])
     first = scripts[0].stages[0].script_levels[0]
     second = scripts[0].stages[0].script_levels[1]
     assert_equal 1, first.position
@@ -166,13 +173,13 @@ class ScriptTest < ActiveSupport::TestCase
     promoted_level = second.level
     script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
 
-    scripts,_ = Script.setup([script_file_remove_level])
+    scripts, _ = Script.setup([script_file_remove_level])
     new_first_script_level = ScriptLevel.joins(:levels).where(script: scripts[0], levels: {id: promoted_level}).first
     assert_equal 1, new_first_script_level.position
   end
 
   test 'script import is idempotent w.r.t. positions and count' do
-    scripts,_ = Script.setup([@script_file])
+    scripts, _ = Script.setup([@script_file])
     original_count = ScriptLevel.count
     first = scripts[0].stages[0].script_levels[0]
     second = scripts[0].stages[0].script_levels[1]
@@ -180,7 +187,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
-    scripts,_ = Script.setup([@script_file])
+    scripts, _ = Script.setup([@script_file])
     first = scripts[0].stages[0].script_levels[0]
     second = scripts[0].stages[0].script_levels[1]
     third = scripts[0].stages[0].script_levels[2]
@@ -290,15 +297,46 @@ class ScriptTest < ActiveSupport::TestCase
     assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
-  test 'gets script cache from memcached (or fake memcached)' do
-    Script.script_cache_to_cache # in test this is in non-distributed memory
+  test 'get_from_cache uses cache' do
+    # We test the cache using name lookups...
+    flappy = Script.find_by_name('flappy')
+    frozen = Script.find_by_name('frozen')
+    # ...and ID lookups.
+    flappy_id = flappy.id
+    frozen_id = frozen.id
 
-    Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env
+    populate_cache_and_disconnect_db
 
-    Script.connection.disconnect!     # we don't need no stinkin db
+    assert_equal flappy, Script.get_from_cache('flappy')
+    assert_equal flappy, Script.get_from_cache(flappy_id)
+    assert_equal frozen, Script.get_from_cache('frozen')
+    assert_equal frozen, Script.get_from_cache(frozen_id)
+  end
 
-    assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name
-    assert_equal 'anna', Script.get_from_cache('frozen').script_levels[5].level.skin
+  test 'cache_find_script_level uses cache' do
+    script_level = Script.first.script_levels.first
+
+    populate_cache_and_disconnect_db
+
+    assert_equal script_level, Script.cache_find_script_level(script_level.id)
+  end
+
+  test 'level uses cache' do
+    script_level = Script.first.script_levels.first
+    expected_level = script_level.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected_level,
+      Script.cache_find_script_level(script_level.id).level
+  end
+
+  test 'get_without_cache raises exception for bad id' do
+    bad_id = Script.last.id + 1
+
+    assert_raises(ActiveRecord::RecordNotFound) do
+      Script.get_from_cache(bad_id)
+    end
   end
 
   test 'banner image' do
@@ -460,5 +498,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert /^Stage 1:/.match(script.stages[0].localized_title)
     assert /^Stage/.match(script.stages[1].localized_title).nil?
     assert /^Stage 2:/.match(script.stages[2].localized_title)
+  end
+
+  test 'Script DSL fails when creating invalid lockable stages' do
+    create :level, name: 'Level1'
+    create :level, name: 'LockableAssessment1'
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Lockable1', lockable: true
+      level 'Level1';
+      assessment 'LockableAssessment1';
+    DSL
+    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+
+    assert_raises do
+      Script.add_script({name: 'test_script'}, script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    end
   end
 end

@@ -1,7 +1,6 @@
 /**
  * @overview Static helper methods for NetSim.
  */
-'use strict';
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides String.prototype.repeat
@@ -402,4 +401,17 @@ exports.doesUserOwnShard = function (user, shardID) {
   // matches[1] is the first capture group (\d+), the numeric section ID.
   var sectionID = parseInt(matches[1], 10);
   return user.ownsSection(sectionID);
+};
+
+/**
+ * Given a location (e.g. `window.location`), create a URL-friendly
+ * level 'slug' that we can use as part of the shard ID.
+ * @param {!Location|HTMLHyperlinkElementUtils} loc
+ * @return {string} a level 'slug' like 's-csp1-stage-3-puzzle-2'
+ */
+exports.getUniqueLevelKeyFromLocation = function (loc) {
+  return loc.pathname     // something like '/s/csp1/stage/3/puzzle/2'
+    .replace(/^\//, '')   // Strip leading slash from pathname
+    .replace(/\/$/, '')   // Strip trailing slash (if it exists)
+    .replace(/\W/g, '-'); // Replace non-word characters with dashes
 };

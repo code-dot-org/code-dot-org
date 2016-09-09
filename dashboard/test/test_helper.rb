@@ -324,6 +324,7 @@ class ActionDispatch::IntegrationTest
 
   setup do
     https!
+    host! CDO.canonical_hostname('studio.code.org')
   end
 end
 
@@ -386,4 +387,19 @@ end
 
 def json_response
   JSON.parse @response.body
+end
+
+# Increase the 2-second hardcoded start timeout for FakeSQS::TestIntegration to 30 seconds.
+# With the original timeout we were getting periodic "FakeSQS didn't start in time" errors.
+# See https://github.com/iain/fake_sqs/blob/master/lib/fake_sqs/test_integration.rb#L89
+module FakeSQS
+  module TestIntegrationExtensions
+    def wait_until_up(deadline = Time.now + 30)
+      super(deadline)
+    end
+  end
+
+  class TestIntegration
+    prepend TestIntegrationExtensions
+  end
 end

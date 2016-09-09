@@ -1,5 +1,4 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
-'use strict';
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');

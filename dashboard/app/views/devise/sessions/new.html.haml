@@ -49,8 +49,7 @@
         = t('auth.notyet_signedup')
       - if devise_mapping.registerable?
         .singleitemblock
-          = link_to new_user_registration_path do
-            %button#signup-button.secondary{type: 'button'}= t('nav.user.signup')
+          %button#signup-button.secondary{type: 'button'}= t('nav.user.signup')
 
   .span4
     .sidebar= render "devise/shared/links"
@@ -85,4 +84,9 @@
     });
 
     dashboard.clientState.reset();
+  });
+
+  $("#signup-button").click(function (e) {
+    window.location.href = "#{new_user_registration_path}";
+    return false;
   });

@@ -82,7 +82,8 @@
             "sourceUrl": "/blockly/media/gamelab/library/asterisk_circle.png",
             "frameSize": {"x":132, "y": 126},
             "frameCount": 9,
-            "frameRate": 15
+            "frameDelay": 2,
+            "looping": true
           }
         }
       }
@@ -90,13 +91,14 @@
     Some considerations:
   %ul
     %li <tt>orderedKeys</tt> defines the order the animations are listed in the animation tab, and each key must reference a set of props in <tt>propsByKey</tt>
-    %li <tt>name</tt>, <tt>sourceUrl</tt>, <tt>frameSize</tt>, <tt>frameCount</tt> and <tt>frameRate</tt> are all required.
+    %li <tt>name</tt>, <tt>sourceUrl</tt>, <tt>frameSize</tt>, <tt>frameCount</tt>, <tt>frameDelay</tt>, and <tt>looping</tt> are all required.
     %li <tt>name</tt> is used to refer to the animation in code; the "animation key" is never visible to the student.
     %li
       <tt>sourceUrl</tt> can take absolute URLs (which will run through our media proxy, so you can refer to almost anything)
       or domain-relative URLs for the limited set of animations in the current library,
       <a href="https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/gamelab/animationLibrary.js">which you can find here.</a>
       The sourceUrl should point to an image or spritesheet - not an animated gif.
-    %li <tt>frameRate</tt> is given in frames per second.
+    %li <tt>frameDelay</tt> can be from slowest to fastest: 60, 45, 30, 20, 15, 10, 5, 4, 3, 2, 1.
+    %li <tt>looping</tt> is true is if the animation plays repeatedly or false if it plays once.
   = f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
   #level-start-animations-validation

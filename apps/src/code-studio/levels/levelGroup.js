@@ -1,6 +1,7 @@
 /* global appOptions, Dialog */
 
 import $ from 'jquery';
+import throttle from 'lodash/throttle';
 require('./multi.js');
 require('./textMatch.js');
 var saveAnswers = require('./saveAnswers.js').saveAnswers;
@@ -63,8 +64,11 @@ window.initLevelGroup = function (
     }
   }
 
-  var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {'leading': true, 'trailing': true});
+  var throttledSaveAnswers = throttle(
+    saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {
+      leading: true,
+      trailing: true
+    });
 
   var lastResponse = window.getResult().response;
 
@@ -105,8 +109,6 @@ window.initLevelGroup = function (
       }
     }
 
-    var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
-
     var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
@@ -114,7 +116,7 @@ window.initLevelGroup = function (
       "response": encodeURIComponent(JSON.stringify(lastAttempt)),
       "result": true,
       "errorType": null,
-      "submitted": window.appOptions.level.submittable || forceSubmittable,
+      "submitted": window.appOptions.level.submittable,
       "showConfirmationDialog": showConfirmationDialog,
       "beforeProcessResultsHook": submitSublevelResults
     };

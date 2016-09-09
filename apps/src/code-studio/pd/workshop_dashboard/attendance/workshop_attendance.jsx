@@ -50,11 +50,18 @@ const WorkshopAttendance = React.createClass({
       loading: true,
       workshopState: undefined,
       sessionAttendances: undefined,
-      adminActions: undefined,
       adminOverride: false,
       saving: false,
       isModified: false
     };
+  },
+
+  isAdmin() {
+    return window.dashboard.workshop.permission === "admin";
+  },
+
+  hasWorkshopEnded() {
+    return this.state.workshopState === 'Ended';
   },
 
   componentDidMount() {
@@ -72,8 +79,7 @@ const WorkshopAttendance = React.createClass({
       this.setState({
         loading: false,
         workshopState: data.state,
-        sessionAttendances: data.session_attendances,
-        adminActions: data.admin_actions
+        sessionAttendances: data.session_attendances
       });
     });
   },
@@ -156,7 +162,7 @@ const WorkshopAttendance = React.createClass({
   },
 
   renderAdminControls() {
-    if (!this.state.adminActions) {
+    if (!this.isAdmin()) {
       return null;
     }
     const toggleClass = this.state.adminOverride ? "fa fa-toggle-on fa-lg" : "fa fa-toggle-off fa-lg";
@@ -182,7 +188,7 @@ const WorkshopAttendance = React.createClass({
       return <i className="fa fa-spinner fa-pulse fa-3x" />;
     }
 
-    const isReadOnly = this.state.workshopState === 'Ended';
+    const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin();
     const sessionTabs = this.state.sessionAttendances.map((sessionAttendance, i) => {
       const session = sessionAttendance.session;
       return (
@@ -203,6 +209,13 @@ const WorkshopAttendance = React.createClass({
       intro = (
         <p>
           This workshop has ended. The attendance view is now read-only.
+        </p>
+      );
+    } else if (this.hasWorkshopEnded() && this.isAdmin()) {
+      intro = (
+        <p>
+          This workshop has ended. As an admin, you can still update attendance.
+          Note this will not be reflected in the payment report if it's already gone out.
         </p>
       );
     }

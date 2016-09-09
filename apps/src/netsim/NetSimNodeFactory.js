@@ -2,8 +2,6 @@
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
  */
-'use strict';
-
 var NetSimConstants = require('./NetSimConstants');
 
 var NodeType = NetSimConstants.NodeType;

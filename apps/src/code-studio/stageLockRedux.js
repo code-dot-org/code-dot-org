@@ -3,6 +3,7 @@
  * the course overview page, and the stage locking dialog.
  */
 
+import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 
@@ -17,22 +18,31 @@ const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
 export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
 export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
+const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 export const initialState = {
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Student,
   sections: {},
   selectedSection: null,
   sectionsLoaded: false,
   lockDialogStageId: null,
   // The locking info for the currently selected section/stage
   lockStatus: [],
-  saving: false
+  saving: false,
+  // whether user is allowed to see lockable stages
+  lockableAuthorized: false
 };
 
 /**
  * Stage lock reducer
  */
 export default function reducer(state = initialState, action) {
+  if (action.type === AUTHORIZE_LOCKABLE) {
+    return Object.assign({}, state, {
+      lockableAuthorized: true
+    });
+  }
+
   if (action.type === SET_VIEW_TYPE) {
     return Object.assign({}, state, {
       viewAs: action.viewAs
@@ -54,9 +64,19 @@ export default function reducer(state = initialState, action) {
     if (!state.sections[sectionId]) {
       throw new Error(`Unknown sectionId ${sectionId}`);
     }
-    return Object.assign({}, state, {
+    const nextState = {
+      ...state,
       selectedSection: sectionId,
-    });
+    };
+
+    // If we have a lockStatus (i.e. from an open dialog) we need to update
+    // it with the new section
+    const { lockDialogStageId, lockStatus } = state;
+    return {
+      ...nextState,
+      lockStatus: lockDialogStageId ?
+        lockStatusForStage(nextState, lockDialogStageId) : lockStatus
+    };
   }
 
   if (action.type === OPEN_LOCK_DIALOG) {
@@ -110,6 +130,12 @@ export default function reducer(state = initialState, action) {
 }
 
 // Action creators
+
+/**
+ * Authorizes the user to be able to see lockable stages
+ */
+export const authorizeLockable = () => ({ type: AUTHORIZE_LOCKABLE });
+
 export const setViewType = viewType => {
   if (!ViewType[viewType]) {
     throw new Error('unknown ViewType: ' + viewType);
@@ -207,21 +233,6 @@ export const closeLockDialog = () => ({
 });
 
 // Helpers
-
-/**
- * Given the info for a particular section, find the set of stages that are not
- * fully locked (i.e. there is at least one student who is not locked), and
- * return their ids.
- */
-const unlockedStages = (section) => {
-  if (!section) {
-    return [];
-  }
-  return _.toPairs(section.stages).filter(([stageId, students]) => {
-    return students.some(student => !student.locked);
-  }).map(([stageId, stage]) => parseInt(stageId, 10));
-};
-
 const lockStatusForStage = (state, stageId) => {
   const { sections, selectedSection } = state;
 
@@ -232,4 +243,29 @@ const lockStatusForStage = (state, stageId) => {
     lockStatus: student.locked ? LockStatus.Locked : (
       student.readonly_answers ? LockStatus.ReadonlyAnswers : LockStatus.Editable)
   }));
+};
+
+/**
+ * Helper that returns a mapping of stageId to whether or not it is fully locked
+ * in the current section. A stage is fully locked if and only if it is locked
+ * for all of the students in the section
+ */
+export const fullyLockedStageMapping = (state) => {
+  const { sections, selectedSection }  = state;
+
+  if (!selectedSection) {
+    return {};
+  }
+
+  const section = sections[selectedSection];
+  const stageIds = Object.keys(section.stages);
+
+  return stageIds.reduce((obj, stageId) => {
+    const students = section.stages[stageId];
+    const fullyLocked = !students.some(student => !student.locked);
+    return {
+      ...obj,
+      [stageId]: fullyLocked
+    };
+  }, {});
 };

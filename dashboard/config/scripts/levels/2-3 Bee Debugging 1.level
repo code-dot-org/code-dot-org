@@ -33,13 +33,15 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?\",\r\n  \"hint_id\": \"2-3_Bee_Debugging_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?\",\r\n  \"hint_id\": \"2-3_Bee_Debugging_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
     "sequencing": 2,
-    "debugging": 2
+    "debugging": 2,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>

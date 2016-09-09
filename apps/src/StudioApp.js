@@ -1339,15 +1339,21 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
-  var playSpaceHeader = document.getElementById('playSpaceHeader');
-  var visualization = document.getElementById('visualization');
-  var gameButtons = document.getElementById('gameButtons');
-
   var top = 0;
-  if (playSpaceHeader) {
-    top += $(playSpaceHeader).outerHeight(true);
-  }
 
+  var possibleBelowVisualizationElements = [
+    'playSpaceHeader',
+    'spelling-table-wrapper',
+    'gameButtons'
+  ];
+  possibleBelowVisualizationElements.forEach(id => {
+    let element = document.getElementById(id);
+    if (element) {
+      top += $(element).outerHeight(true);
+    }
+  });
+
+  var visualization = document.getElementById('visualization');
   if (visualization) {
     var parent = $(visualization).parent();
     if (parent.attr('id') === 'phoneFrame') {
@@ -1358,10 +1364,6 @@ function resizePinnedBelowVisualizationArea() {
     } else {
       top += $(visualization).outerHeight(true);
     }
-  }
-
-  if (gameButtons) {
-    top += $(gameButtons).outerHeight(true);
   }
 
   var bottom = 0;
@@ -1857,7 +1859,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
-    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+    this.initializationBlocks = Blockly.Generator.xmlToBlocks('JavaScript', xml);
   }
 
   // enableShowCode defaults to true if not defined

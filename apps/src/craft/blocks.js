@@ -1,5 +1,3 @@
-'use strict';
-
 var i18n = require('./locale');
 
 var blocksToDisplayText = {

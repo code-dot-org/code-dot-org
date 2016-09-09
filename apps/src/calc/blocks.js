@@ -21,8 +21,6 @@
  * @fileoverview Demonstration of Blockly: Calc Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
 

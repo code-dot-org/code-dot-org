@@ -1,8 +1,6 @@
 /**
  * @overview UI controller for the "My Device" tab in the left column.
  */
-'use strict';
-
 import $ from 'jquery';
 var markup = require('./NetSimMyDeviceTab.html.ejs');
 var NetSimBitRateControl = require('./NetSimBitRateControl');

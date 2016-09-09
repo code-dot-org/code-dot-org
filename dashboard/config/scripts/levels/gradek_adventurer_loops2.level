@@ -26,7 +26,8 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "How can Laurel collect all five piles of gold using only one `move forward` block?",
+    "instructions": "How can Laurel collect all five piles of gold using only one --> block?",
+    "ideal": "4",
     "contained_level_names": null
   },
   "published": true,

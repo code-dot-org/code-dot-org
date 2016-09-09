@@ -1,7 +1,6 @@
 /**
  * @overview Nodes in the visualization.
  */
-'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimConstants = require('./NetSimConstants');

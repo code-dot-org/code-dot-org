@@ -56,7 +56,8 @@ module.exports = function (grunt) {
     'eval',
     'netsim',
     'craft',
-    'gamelab'
+    'gamelab',
+    'weblab'
   ];
 
   if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
@@ -175,6 +176,12 @@ module.exports = function (grunt) {
           cwd: piskelRoot,
           src: '**',
           dest: 'build/package/js/piskel/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/@code-dot-org/bramble/dist',
+          src: ['**'],
+          dest: 'build/package/js/bramble/'
         },
         {
           expand: true,
@@ -450,6 +457,13 @@ module.exports = function (grunt) {
         publicKeyCryptography: './src/publicKeyCryptography/main.js'
       },
       provides: ['react', 'react-dom', 'radium']
+    },
+
+    {
+      uniqueName: 'brambleHost',
+      entries: {
+        brambleHost: './src/weblab/brambleHost.js'
+      },
     }
   ];
 

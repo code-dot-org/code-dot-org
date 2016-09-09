@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Constants for cardinal directions.  Subsequent code assumes these are
  * in the range 0..3 and that opposites have an absolute difference of 2.

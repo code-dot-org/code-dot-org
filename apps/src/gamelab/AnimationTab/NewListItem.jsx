@@ -1,6 +1,4 @@
 /** List item placeholder for adding a new item */
-'use strict';
-
 var React = require('react');
 var color = require('../../color');
 var Radium = require('radium');
@@ -26,27 +24,25 @@ var styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    borderRadius: 9,
-    border: 'dashed 4px ' + color.light_purple,
+    borderRadius: 10,
+    border: 'dashed 2px ' + color.light_gray,
     textAlign: 'center',
     paddingTop: '50%'
   },
   dottedBorderHovered: {
-    backgroundColor: color.lightest_purple
+    backgroundColor: color.lighter_purple
   },
   addButton: {
-    color: color.light_purple,
-    fontSize: 48,
-    marginTop: '-50%'
+    color: color.light_gray,
+    fontSize: 60,
+    marginTop: '-32px'
   },
   animationName: {
-    marginLeft: 4,
-    marginRight: 4,
     marginTop: 4,
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    fontStyle: 'italic'
+    color: color.light_gray
   }
 };
 
@@ -66,7 +62,7 @@ var NewListItem = React.createClass({
       <div style={styles.tile} onClick={this.props.onClick} className="newListItem">
         <div style={styles.wrapper}>
           <div style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}>
-            <i className="fa fa-plus" style={styles.addButton}></i>
+            <i className="fa fa-plus-circle" style={styles.addButton}></i>
           </div>
         </div>
         <div className="animation-name" style={styles.animationName}>

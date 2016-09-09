@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   /**
    * Gets the URL querystring params.

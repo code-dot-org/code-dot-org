@@ -87,6 +87,12 @@ exports.BeeTerminationValue = {
   DID_NOT_COLLECT_EVERYTHING: 9 // For quantum levels, didn't try to collect all available honey/nectar
 };
 
+exports.HarvesterTerminationValue = {
+  WRONG_CROP : 1,
+  EMPTY_CROP : 2,
+  DID_NOT_COLLECT_EVERYTHING: 3
+};
+
 exports.KeyCodes = {
   BACKSPACE: 8,
   ENTER: 13,

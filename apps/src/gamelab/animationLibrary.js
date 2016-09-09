@@ -6,7 +6,8 @@ export default [
     sourceSize: {x:396, y: 378},
     frameSize: {x:132, y: 126},
     frameCount: 9,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   },
   {
     name: 'asterisk_explode',
@@ -14,7 +15,8 @@ export default [
     sourceSize: {x:684, y: 474},
     frameSize: {x:171, y: 158},
     frameCount: 11,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   },
   {
     name: 'asterisk_normal',
@@ -22,7 +24,8 @@ export default [
     sourceSize: {x:396, y: 126},
     frameSize: {x:132, y: 126},
     frameCount: 3,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   },
   {
     name: 'asterisk_stretching',
@@ -30,7 +33,8 @@ export default [
     sourceSize: {x:432, y: 432},
     frameSize: {x:144, y: 144},
     frameCount: 8,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   },
   {
     name: 'box',
@@ -38,7 +42,8 @@ export default [
     sourceSize: {x:198, y: 118},
     frameSize: {x:66, y: 118},
     frameCount: 3,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   },
   {
     name: 'bubbly',
@@ -46,7 +51,8 @@ export default [
     sourceSize: {x:82, y: 520},
     frameSize: {x:82, y: 130},
     frameCount: 4,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 4,
   },
   {
     name: 'ghost_standing',
@@ -54,7 +60,8 @@ export default [
     sourceSize: {x:504, y: 158},
     frameSize: {x:72, y: 158},
     frameCount: 7,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   },
   {
     name: 'platform',
@@ -62,6 +69,7 @@ export default [
     sourceSize: {x:200, y: 219},
     frameSize: {x:200, y: 73},
     frameCount: 3,
-    frameRate: 15,
+    looping: true,
+    frameDelay: 2,
   }
 ];

@@ -1,4 +1,3 @@
-'use strict';
 import {assert} from '../../util/configuredChai';
 var ChartApi = require('@cdo/apps/applab/ChartApi');
 var GoogleChart = require('@cdo/apps/applab/GoogleChart');

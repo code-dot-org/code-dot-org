@@ -1,12 +1,17 @@
+/* eslint no-unused-vars: "error" */
+
 import {PropTypes} from 'react';
 import $ from 'jquery';
 import designMode from './designMode';
 import * as elementUtils from './designElements/elementUtils';
+import applabConstants from './constants';
+import {assets as assetsApi} from '../clientApi';
 
 export const importableScreenShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   willReplace: PropTypes.bool.isRequired,
   assetsToReplace: PropTypes.arrayOf(PropTypes.string).isRequired,
+  assetsToImport: PropTypes.arrayOf(PropTypes.string).isRequired,
   conflictingIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   html: PropTypes.string.isRequired,
   canBeImported: PropTypes.bool.isRequired,
@@ -44,15 +49,29 @@ function getImportableScreen(dom) {
     }
   });
 
-  // TODO: filter out assets that will just be imported without replacing anything.
-  const assetsToReplace = $('[data-canonical-image-url]', dom)
+  const assetsToReplace = [];
+  let assetsToImport = $('[data-canonical-image-url]', dom)
     .toArray()
     .map(n => $(n).attr('data-canonical-image-url'));
+  if ($(dom).is('[data-canonical-image-url]')) {
+    assetsToImport.push($(dom).attr('data-canonical-image-url'));
+  }
+  assetsToImport = assetsToImport.filter(asset => {
+      if ($(`#designModeViz [data-canonical-image-url="${asset}"]`).length > 0) {
+        // this will replace an existing asset
+        // so move it to the assetsToReplace list
+        assetsToReplace.push(asset);
+        return false;
+      }
+      return true;
+    });
+
 
   return {
     id,
     willReplace,
     assetsToReplace,
+    assetsToImport,
     conflictingIds,
     html: dom.outerHTML,
     canBeImported: conflictingIds.length === 0,
@@ -67,7 +86,7 @@ export function getImportableProject(project) {
   if (!project) {
     return null;
   }
-  const {channel, sources} = project;
+  const {channel, sources, assets, existingAssets} = project;
   const screens = [];
   $(sources.html)
     .find('.screen')
@@ -76,10 +95,78 @@ export function getImportableProject(project) {
     .each((index, screen) => {
       screens.push(getImportableScreen(screen));
     });
+  const usedAssets = {};
+  screens.forEach(
+    screen => screen.assetsToImport.concat(screen.assetsToReplace).forEach(
+      asset => usedAssets[asset] = true
+    )
+  );
+  const existingAssetNames = {};
+  existingAssets.forEach(asset => existingAssetNames[asset.filename] = true);
+  var otherAssets = assets
+    .filter(asset => !usedAssets[asset.filename])
+    .map(asset => ({
+      filename: asset.filename,
+      category: asset.category,
+      willReplace: !!existingAssetNames[asset.filename],
+    }));
   return {
-    id: 'foo',
+    id: channel.id,
     name: channel.name,
     screens,
-    otherAssets: [],
+    otherAssets,
   };
+}
+
+/**
+ * @param {string} projectId
+ * @param {Array<importableScreenShape>} screens
+ * @param {Array<importableAssetShape>} assets
+ * @returns {Promise}
+ */
+export function importScreensAndAssets(projectId, screens, assets) {
+  return new Promise((resolve, reject) => {
+    var allAssetsToCopy = {};
+    assets.forEach(asset => allAssetsToCopy[asset.filename] = true);
+
+    screens.forEach(importableScreen => {
+      var newScreen = importableScreen.html;
+
+      // ugh, we have to pull this out before we attach the new one
+      // in case it exists and needs to be deleted.
+      // If we delete it first, then design mode will try to load the
+      // "default" screen. If this screen we are deleting is the only screen
+      // then loading the "default" screen will create a new one!
+      var deleteAfterAdd = elementUtils.getPrefixedElementById(importableScreen.id);
+      designMode.attachElement(
+        designMode.parseScreenFromLevelHtml(
+          newScreen,
+          true,
+          applabConstants.DESIGN_ELEMENT_ID_PREFIX
+        )
+      );
+      if (deleteAfterAdd) {
+        designMode.onDeletePropertiesButton(deleteAfterAdd);
+      }
+      importableScreen.assetsToReplace.forEach(asset => allAssetsToCopy[asset] = true);
+      importableScreen.assetsToImport.forEach(asset => allAssetsToCopy[asset] = true);
+    });
+
+    allAssetsToCopy = Object.keys(allAssetsToCopy);
+    if (allAssetsToCopy.length > 0) {
+      assetsApi.copyAssets(
+        projectId,
+        allAssetsToCopy,
+        xhr => {
+          resolve(xhr);
+        },
+        xhr => {
+          console.error("Failed to copy assets:", xhr);
+          reject(xhr);
+        }
+      );
+    } else {
+      resolve();
+    }
+  });
 }

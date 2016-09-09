@@ -1745,12 +1745,12 @@ Blockly.Block.prototype.setIsUnused = function(isUnused) {
         Blockly.mainBlockSpace.isReadOnly() === false &&
         Blockly.mainBlockSpace.isTopBlock(this);
   }
-  if (Blockly.showUnusedBlocks) {
+  if (Blockly.showUnusedBlocks && isUnused !== this.svg_.isUnused()) {
     this.svg_.setIsUnused(isUnused);
+    this.childBlocks_.forEach(function (block) {
+      block.setIsUnused(false);
+    });
   }
-  this.childBlocks_.forEach(function (block) {
-    block.setIsUnused(false);
-  });
 };
 
 /**

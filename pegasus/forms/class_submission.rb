@@ -62,7 +62,7 @@ class ClassSubmission
 
   def self.formats_with_i18n_labels(groups)
     results = {}
-    groups.each_pair do |key,group|
+    groups.each_pair do |key, group|
       results[key] = {'label' => I18n.t("class_submission_#{key}"), 'children' => {}}
       group.each do |format|
         format = "#{key}_#{format}"

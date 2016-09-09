@@ -1,8 +1,6 @@
 /**
  * @overview UI slider used to change maximum packet length.
  */
-'use strict';
-
 var i18n = require('@cdo/netsim/locale');
 var NetSimSlider = require('./NetSimSlider');
 require('../utils'); // Provides Function.prototype.inherits

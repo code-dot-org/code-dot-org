@@ -185,4 +185,19 @@
       }
       $('.video-dropdown').change(updateVideoPreview);
       updateVideoPreview();
+
+      var inputs = $('.edit_level *[id]:visible');
+      var form_values = {};
+      for (var i = 0; i < inputs.length; i++) {
+        form_values[inputs[i].id] = inputs[i].value;
+      }
+
+      $(window).bind('beforeunload', function () {
+        for (var i = 0; i < inputs.length; i++) {
+          if (inputs[i].value !== form_values[inputs[i].id]) {
+            // prompt before navigating away
+            return "You have unsaved changes, are you sure you want to leave?";
+          }
+        }
+      });
     });

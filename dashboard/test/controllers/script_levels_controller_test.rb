@@ -750,7 +750,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
+    UserLevel.create!(level: level, user: @student, level_source: level_source)
 
     get :show, script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position
     assert_equal last_attempt_data, assigns(:last_attempt)
@@ -763,7 +764,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
+    UserLevel.create!(script: @custom_script, level: level, user: @student, level_source: level_source)
+
     get :show, script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
 
     assert_equal last_attempt_data, assigns(:last_attempt)
@@ -866,7 +869,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     sign_in @teacher
 
-    get :show, script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position
+    get :show, params: {script_id: @custom_script, stage_position: @custom_stage_1.absolute_position, id: @custom_s1_l1.position}
 
     assert_select '.teacher-panel.hidden'
 
@@ -881,7 +884,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert script.pd?
     assert script.professional_course?
 
-    get :show, script_id: script, stage_position: 1, id: 1
+    get :show, params: {script_id: script, stage_position: 1, id: 1}
     assert_select '.teacher-panel', 0
 
     script = create(:script)

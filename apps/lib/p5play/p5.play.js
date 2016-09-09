@@ -1037,6 +1037,22 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this._internalHeight = _h;
 
+  /*
+   * _internalWidth and _internalHeight are used for all p5.play
+   * calculations, but width and height can be extended. For example,
+   * you may want users to always get and set a scaled width:
+      Object.defineProperty(this, 'width', {
+        enumerable: true,
+        configurable: true,
+        get: function() {
+          return this._internalWidth * this.scale;
+        },
+        set: function(value) {
+          this._internalWidth = value / this.scale;
+        }
+      });
+   */
+
   /**
   * Width of the sprite's current image.
   * If no images or animations are set it's the width of the
@@ -1177,23 +1193,21 @@ function Sprite(pInst, _x, _y, _w, _h) {
     //the animation wasn't loaded. if the animation is not a 1x1 image
     //it means it just finished loading
     if(this.colliderType === 'default' &&
-      animations[currentAnimation].getWidth() !== 1 &&
-       animations[currentAnimation].getHeight() !== 1
-      )
+      animations[currentAnimation].getWidth() !== 1 && animations[currentAnimation].getHeight() !== 1)
     {
-    this.collider = this.getBoundingBox();
-    this.colliderType = 'image';
-    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
-    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
-    //quadTree.insert(this);
+      this.collider = this.getBoundingBox();
+      this.colliderType = 'image';
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+      //quadTree.insert(this);
     }
 
     //update size and collider
     if(animations[currentAnimation].frameChanged || this.width === undefined || this.height === undefined)
     {
-    //this.collider = this.getBoundingBox();
-    this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
-    this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
+      //this.collider = this.getBoundingBox();
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this._getScaleX());
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this._getScaleY());
     }
   };
 
@@ -1423,7 +1437,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
           else
             print('Warning: onMousePressed should be a function');
 
-        if(mouseWasPressed && !this.mouseIsPressed && this.onMouseReleased !== undefined)
+        if(mouseWasPressed && !pInst.mouseIsPressed && !this.mouseIsPressed && this.onMouseReleased !== undefined)
           if(typeof(this.onMouseReleased) === 'function')
             this.onMouseReleased.call(this, this);
           else
@@ -3499,7 +3513,7 @@ function Animation(pInst) {
   else if (frameArguments.length === 1 && (frameArguments[0] instanceof SpriteSheet))
   {
     this.spriteSheet = frameArguments[0];
-    this.images = this.spriteSheet.frames.map(function (f) {
+    this.images = this.spriteSheet.frames.map( function(f) {
       return f.frame;
     });
   }

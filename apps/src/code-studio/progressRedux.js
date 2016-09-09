@@ -1,9 +1,8 @@
 /**
  * Reducer and actions for progress
  */
-
+import _ from 'lodash';
 import {
-  SUBMITTED_RESULT,
   LOCKED_RESULT,
   LevelStatus,
   mergeActivityResult,
@@ -11,11 +10,10 @@ import {
 } from './activityUtils';
 
 // Action types
-const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
-const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
 
 const initialState = {
   currentLevelId: null,
@@ -28,8 +26,6 @@ const initialState = {
   peerReviewsRequired: {},
   peerReviewsPerformed: [],
   showTeacherInfo: false,
-  // whether user is allowed to see lockable stages
-  lockableAuthorized: false
 };
 
 /**
@@ -45,7 +41,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages,
+      stages: action.stages.map(stage => _.omit(stage, 'hidden')),
       currentStageId
     });
   }
@@ -61,7 +57,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       levelProgress: newLevelProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        if (stage.lockable && newLevelProgress[level.ids[0]] === LOCKED_RESULT) {
+        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
           return Object.assign({}, level, { status: LevelStatus.locked });
         }
 
@@ -87,12 +83,6 @@ export default function reducer(state = initialState, action) {
   if (action.type === SHOW_TEACHER_INFO) {
     return Object.assign({}, state, {
       showTeacherInfo: true
-    });
-  }
-
-  if (action.type === AUTHORIZE_LOCKABLE) {
-    return Object.assign({}, state, {
-      lockableAuthorized: true
     });
   }
 
@@ -156,11 +146,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
 });
 
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
-
-/**
- * Authorizes the user to be able to see lockable stages
- */
-export const authorizeLockable = () => ({ type: AUTHORIZE_LOCKABLE });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

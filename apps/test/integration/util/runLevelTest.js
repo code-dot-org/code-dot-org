@@ -92,22 +92,6 @@ StubDialog.prototype.show = function () {
 StubDialog.prototype.hide = function () {
 };
 
-// Hack to compile files into browserify. Don't call this function!
-// TODO (brent) : this can probably be replaced using require-globify and/or
-// making use of data.js
-function ಠ_ಠ() {
-  require('@cdo/apps/maze/main');
-  require('@cdo/apps/flappy/main');
-  require('@cdo/apps/turtle/main');
-  require('@cdo/apps/eval/main');
-  require('@cdo/apps/studio/main');
-  require('@cdo/apps/calc/main');
-  require('@cdo/apps/bounce/main');
-  require('@cdo/apps/applab/main');
-  require('@cdo/apps/gamelab/main');
-  require('@cdo/apps/craft/main');
-}
-
 function runLevel(app, skinId, level, onAttempt, testData) {
   require('@cdo/apps/' + app + '/main');
 
@@ -153,7 +137,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           },
           maxRecordSize: 100,
           maxPropertySize: 100,
-          maxTableRows: 20
+          maxTableRows: 20,
+          maxTableCount: 10,
         });
         timeout = 500;
       }

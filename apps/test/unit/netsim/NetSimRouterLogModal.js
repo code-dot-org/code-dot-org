@@ -1,5 +1,4 @@
 /** @file Tests for NetSimRouterLogModal */
-'use strict';
 import $ from 'jquery';
 import {assert, expect} from '../../util/configuredChai';
 var NetSimLocalClientNode = require("@cdo/apps/netsim/NetSimLocalClientNode");
@@ -13,13 +12,11 @@ var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var fakeShard = NetSimTestUtils.fakeShard;
 
 describe("NetSimRouterLogModal", function () {
-  const useNewLogBrowser = true;
-
   beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
-  describe(`Log Mode (${useNewLogBrowser ? 'new' : 'old'} mode)`, function () {
+  describe(`Log Mode`, function () {
     var modal, rootDiv, testShard, router, levelConfig;
 
     beforeEach(function () {
@@ -73,7 +70,7 @@ describe("NetSimRouterLogModal", function () {
 
   });
 
-  describe(`Traffic filtering modes (${useNewLogBrowser ? 'new' : 'old'} mode)`, function () {
+  describe(`Traffic filtering modes`, function () {
     var modal, rootDiv, testShard, localNode, router, levelConfig;
 
     beforeEach(function () {

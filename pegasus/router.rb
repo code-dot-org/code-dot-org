@@ -3,6 +3,7 @@ require 'rack'
 require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'sinatra/verbs'
+require 'cdo/sinatra'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
@@ -18,6 +19,7 @@ require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
+require 'active_support/core_ext/hash'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -31,17 +33,17 @@ require src_dir 'database'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 
-def http_vary_add_type(vary,type)
+def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
   types.push(type).join(',')
 end
 
 class Documents < Sinatra::Base
-  def self.get_head_or_post(url,&block)
-    get(url,&block)
-    head(url,&block)
-    post(url,&block)
+  def self.get_head_or_post(url, &block)
+    get(url, &block)
+    head(url, &block)
+    post(url, &block)
   end
 
   def self.load_config_in(dir)
@@ -80,7 +82,7 @@ class Documents < Sinatra::Base
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
-    set :image_extnames, ['.png','.jpeg','.jpg','.gif']
+    set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :exclude_extnames, ['.collate']
     set_max_age :document, ONE_HOUR * 4
     set_max_age :document_proxy, ONE_HOUR * 2
@@ -89,9 +91,9 @@ class Documents < Sinatra::Base
     set_max_age :static, ONE_HOUR * 10
     set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
-    set :not_found_extnames, ['.not_found','.404']
-    set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
-    set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
+    set :not_found_extnames, ['.not_found', '.404']
+    set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
+    set :template_extnames, ['.erb', '.fetch', '.haml', '.html', '.md', '.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
     set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
   end
@@ -169,7 +171,7 @@ class Documents < Sinatra::Base
   get '/style.css' do
     content_type :css
     css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
+    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles/*.css')).sort.map do |i|
       css_last_modified = [css_last_modified, File.mtime(i)].max
       IO.read(i)
     end.join("\n\n")
@@ -405,10 +407,12 @@ class Documents < Sinatra::Base
         e.set_backtrace e.backtrace.unshift("#{path}:#{e.line}")
       end
       raise e
+    rescue => e
+      raise "Error rendering #{path}: #{e}"
     end
 
     def render_(body, extname, locals={})
-      locals = @locals.merge(locals)
+      locals = @locals.merge(locals).symbolize_keys
       case extname
       when '.erb', '.html'
         erb body, locals: locals

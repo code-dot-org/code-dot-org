@@ -10,6 +10,7 @@
 
 require_relative 'redis_property_bag'
 require 'securerandom' unless defined?(SecureRandom)
+require 'sinatra/base'
 
 class RedisTable
   # Suffix appended to special row id columns.

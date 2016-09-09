@@ -1012,5 +1012,30 @@ $wide-column-width: 121px;
     color: black;
     font-weight:bold;
   }
+
+  .lobby-hint {
+    display: block;
+    padding: 20px 40px 40px 40px;
+
+    .fa-info-circle {
+      float: left;
+      margin: 0 20px;
+      font-size: 40px;
+    }
+
+    p {
+      margin-left: 80px;
+    }
+
+    ul {
+      margin-left: 100px;
+    }
+  }
+  .netsim-shard-selection-panel .lobby-hint {
+    clear: both;
+  }
+  .netsim-lobby-panel .lobby-hint {
+    clear: right;
+  }
 }
 

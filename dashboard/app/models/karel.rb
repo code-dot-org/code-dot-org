@@ -27,7 +27,7 @@ class Karel < Maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    %w(farmer farmer_night bee bee_night collector)
+    %w(farmer farmer_night bee bee_night collector harvester planter)
   end
 
   # List of possible flower types
@@ -72,6 +72,32 @@ class Karel < Maze
       <block type="maze_untilBlocked"></block>
       <block type="maze_untilBlockedOrNotClear"></block>
       <block type="maze_forever"></block>
+    </category>
+    <category name="Harvester">
+      <block type="harvester_ifAtCrop"></block>
+      <block type="harvester_ifAtCropElse"></block>
+      <block type="harvester_ifHasCrop"></block>
+      <block type="harvester_whileHasCrop"></block>
+      <block type="harvester_corn"></block>
+      <block type="harvester_pumpkin"></block>
+      <block type="harvester_bean"></block>
+      <block type="harvester_ifAtCorn"></block>
+      <block type="harvester_ifAtCornElse"></block>
+      <block type="harvester_ifHasCorn"></block>
+      <block type="harvester_whileHasCorn"></block>
+      <block type="harvester_ifAtPumpkin"></block>
+      <block type="harvester_ifAtPumpkinElse"></block>
+      <block type="harvester_ifHasPumpkin"></block>
+      <block type="harvester_whileHasPumpkin"></block>
+      <block type="harvester_ifAtBean"></block>
+      <block type="harvester_ifAtBeanElse"></block>
+      <block type="harvester_ifHasBean"></block>
+      <block type="harvester_whileHasBean"></block>
+    </category>
+    <category name="Planter">
+      <block type="planter_plant"></block>
+      <block type="planter_ifAtSoil"></block>
+      <block type="planter_ifAtSprout"></block>
     </category>
     <category name="Bee">
       <block type="maze_nectar"></block>

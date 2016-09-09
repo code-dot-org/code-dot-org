@@ -4,13 +4,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
-var HINT_REQUEST_PLACEMENT = {
-  NONE: 0,  // This value must not be changed.
-  LEFT: 1,  // Hint request button is on left.
-  RIGHT: 2  // Hint request button is on right.
-};
-
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
@@ -437,8 +430,7 @@ FeedbackUtils.prototype.getShareFailure_ = function (options) {
  */
 FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
-        options.response.design &&
-        options.response.hint;
+        options.response.design;
 };
 
 /**
@@ -446,11 +438,10 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  * The message will be one of the following, from highest to lowest precedence:
  * 0. Failure override message specified on level (options.level.failureMessageOverride)
  * 1. Message passed in by caller (options.message).
- * 2. Message from dashboard database (options.response.hint).
- * 3. Header message due to dashboard text check fail (options.response.share_failure).
- * 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+ * 2. Header message due to dashboard text check fail (options.response.share_failure).
+ * 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
  *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
- * 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+ * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
  *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * @return {string} message
  */
@@ -465,9 +456,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
     message = options.message;
   } else if (options.response && options.response.share_failure) {
     message = msg.shareFailure();
-  } else if (options.response && options.response.hint) {
-    // Otherwise, if there's a dashboard database hint, use that.
-    message = options.response.hint;
   } else {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {

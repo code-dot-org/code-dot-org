@@ -56,6 +56,7 @@ $hdr_color:   $purple;
 
 // Some extra colors.
 $red: #c00;
+$lightest_red: #fcc;
 $realgreen: #008000;
 $realyellow: #ff0;
 $mustardyellow: #efcd1c;
@@ -84,6 +85,8 @@ $link_color: #0596CE;
 $shadow: rgba(0, 0, 0, 0.3);
 
 // Colors that are taken from bootstrap, and not necessarily part of our core theme.
+$bootstrap_button_blue: #337ab7;
+$bootstrap_button_red: #d9534f;
 $bootstrap_error_background: #f2dede;
 $bootstrap_error_text: #b94a48;
 $bootstrap_error_border: #ebccd1;

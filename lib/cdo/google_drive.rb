@@ -4,7 +4,7 @@ require 'cdo/hip_chat'
 module Google
   class Drive
     class File
-      def initialize(session,file)
+      def initialize(session, file)
         @session = session
         @file = file
         $log.debug "Google Drive file opened (key: #{@file.key})"
@@ -29,7 +29,7 @@ module Google
       def spreadsheet_csv
         # Workaround to export spreadsheet csv through the Drive API
         # See issue: https://code.google.com/a/google.com/p/apps-api-issues/issues/detail?id=3240
-        csv_uri = raw_file.export_links['application/pdf'].gsub(/pdf$/,'csv')
+        csv_uri = raw_file.export_links['application/pdf'].gsub(/pdf$/, 'csv')
         @session.execute!(uri: csv_uri).body
       end
     end

@@ -1,12 +1,11 @@
-var msg = require('./locale');
-var utils = require('../utils');
-var blockUtils = require('../block_utils');
-var constants = require('./constants');
-var Direction = constants.Direction;
-var Emotions = constants.Emotions;
-var tb = blockUtils.createToolbox;
-var blockOfType = blockUtils.blockOfType;
-var createCategory = blockUtils.createCategory;
+import {Direction, Emotions} from './constants';
+import msg from './locale';
+import { extend } from '../utils';
+import blockUtils from '../block_utils';
+
+const tb = blockUtils.createToolbox;
+const blockOfType = blockUtils.blockOfType;
+const createCategory = blockUtils.createCategory;
 
 /**
  * Constructs a required block definition to match "Say [sprite] [text]" blocks
@@ -218,13 +217,13 @@ levels.dog_hello = {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
-levels.k1_1 = utils.extend(levels.dog_hello,  {
+levels.k1_1 = extend(levels.dog_hello,  {
   'isK1': true,
   'toolbox': tb(blockOfType('studio_saySprite'))
 });
-levels.c2_1 = utils.extend(levels.dog_hello);
-levels.c3_story_1 = utils.extend(levels.dog_hello);
-levels.playlab_1 = utils.extend(levels.dog_hello, {
+levels.c2_1 = extend(levels.dog_hello);
+levels.c3_story_1 = extend(levels.dog_hello);
+levels.playlab_1 = extend(levels.dog_hello, {
   background: 'winter',
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
@@ -242,11 +241,11 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
-levels.iceage_hello1 = utils.extend(levels.playlab_1, {
+levels.iceage_hello1 = extend(levels.playlab_1, {
   background: 'icy5',
   firstSpriteIndex: 1,
 });
-levels.gumball_hello1 = utils.extend(levels.playlab_1, {
+levels.gumball_hello1 = extend(levels.playlab_1, {
   background: 'dots',
   firstSpriteIndex: 0,
 });
@@ -289,13 +288,13 @@ levels.dog_and_cat_hello =  {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
-levels.k1_2 = utils.extend(levels.dog_and_cat_hello, {
+levels.k1_2 = extend(levels.dog_and_cat_hello, {
   'isK1': true,
   'toolbox': tb(blockOfType('studio_saySprite'))
 });
-levels.c2_2 = utils.extend(levels.dog_and_cat_hello, {});
-levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
-levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
+levels.c2_2 = extend(levels.dog_and_cat_hello, {});
+levels.c3_story_2 = extend(levels.dog_and_cat_hello, {});
+levels.playlab_2 = extend(levels.dog_and_cat_hello, {
   background: 'desert',
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
@@ -328,11 +327,11 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_hello2 = utils.extend(levels.playlab_2, {
+levels.iceage_hello2 = extend(levels.playlab_2, {
   background: 'icy1',
   firstSpriteIndex: 0,
 });
-levels.gumball_hello2 = utils.extend(levels.playlab_2, {
+levels.gumball_hello2 = extend(levels.playlab_2, {
   background: 'dots',
   firstSpriteIndex: 3,
   defaultEmotion: Emotions.NORMAL,
@@ -370,7 +369,7 @@ levels.dog_move_cat =  {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
-levels.k1_3 = utils.extend(levels.dog_move_cat,  {
+levels.k1_3 = extend(levels.dog_move_cat,  {
   'isK1': true,
   'requiredBlocks': [
     [{
@@ -381,8 +380,8 @@ levels.k1_3 = utils.extend(levels.dog_move_cat,  {
   ],
   'toolbox': tb(moveDistanceNSEW + blockOfType('studio_saySprite')),
 });
-levels.c2_3 = utils.extend(levels.dog_move_cat, {});
-levels.c3_story_3 = utils.extend(levels.dog_move_cat, {});
+levels.c2_3 = extend(levels.dog_move_cat, {});
+levels.c3_story_3 = extend(levels.dog_move_cat, {});
 
 levels.playlab_3 = {
   ideal: 2,
@@ -419,11 +418,11 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
-levels.iceage_move_to_flag = utils.extend(levels.playlab_3, {
+levels.iceage_move_to_flag = extend(levels.playlab_3, {
   background: 'icy3',
   firstSpriteIndex: 2,
 });
-levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
+levels.gumball_move_to_flag = extend(levels.playlab_3, {
   background: 'clouds',
   firstSpriteIndex: 2,
 });
@@ -466,7 +465,7 @@ levels.dog_move_cat_hello =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block> \
     <block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>'
 };
-levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
+levels.k1_4 = extend(levels.dog_move_cat_hello,  {
   'isK1': true,
   'requiredBlocks': [
     [{
@@ -492,8 +491,8 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
     '<block type="when_run" deletable="false" x="20" y="20"></block> \
      <block type="studio_whenSpriteCollided" deletable="false" x="20" y="140"></block>'
 });
-levels.c2_4 = utils.extend(levels.dog_move_cat_hello, {});
-levels.c3_story_4 = utils.extend(levels.dog_move_cat_hello, {});
+levels.c2_4 = extend(levels.dog_move_cat_hello, {});
+levels.c3_story_4 = extend(levels.dog_move_cat_hello, {});
 
 levels.playlab_4 = {
   ideal: 4,
@@ -545,11 +544,11 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
-levels.iceage_move_to_actor = utils.extend(levels.playlab_4, {
+levels.iceage_move_to_actor = extend(levels.playlab_4, {
   background: 'icy3',
   avatarList: ['diego', 'manny']
 });
-levels.gumball_move_to_actor = utils.extend(levels.playlab_4, {
+levels.gumball_move_to_actor = extend(levels.playlab_4, {
   background: 'space',
   avatarList: ['gumball', 'darwin'],
   defaultEmotion: Emotions.NORMAL,
@@ -612,9 +611,9 @@ levels.click_hello =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block> \
     <block type="studio_whenSpriteClicked" deletable="false" x="20" y="120"></block>'
 };
-levels.c2_5 = utils.extend(levels.click_hello, {});
-levels.c3_game_1 = utils.extend(levels.click_hello, {});
-levels.playlab_5 = utils.extend(levels.click_hello, {
+levels.c2_5 = extend(levels.click_hello, {});
+levels.c3_game_1 = extend(levels.click_hello, {});
+levels.playlab_5 = extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
@@ -623,7 +622,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
-levels.iceage_click_hello = utils.extend(levels.playlab_5, {
+levels.iceage_click_hello = extend(levels.playlab_5, {
   background: 'icy4',
   firstSpriteIndex: 1,
 });
@@ -660,11 +659,11 @@ levels.octopus_happy =  {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
-levels.k1_5 = utils.extend(levels.octopus_happy,  {
+levels.k1_5 = extend(levels.octopus_happy,  {
   'isK1': true,
   'toolbox': tb(moveDistanceNSEW + blockOfType('studio_setSpriteEmotion'))
 });
-levels.c3_story_5 = utils.extend(levels.octopus_happy, {});
+levels.c3_story_5 = extend(levels.octopus_happy, {});
 
 // Create your own story. When you're done, click Finish to let friends try your
 // story on their phones.
@@ -748,9 +747,9 @@ levels.move_penguin =  {
     <block type="studio_whenUp" deletable="false" x="20" y="120"></block> \
     <block type="studio_whenDown" deletable="false" x="180" y="120"></block>'
 };
-levels.c2_6 = utils.extend(levels.move_penguin, {});
-levels.c3_game_2 = utils.extend(levels.move_penguin, {});
-levels.playlab_6 = utils.extend(levels.move_penguin, {
+levels.c2_6 = extend(levels.move_penguin, {});
+levels.c3_game_2 = extend(levels.move_penguin, {});
+levels.playlab_6 = extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
   goalOverride: {
@@ -777,18 +776,18 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_move_events = utils.extend(levels.playlab_6, {
+levels.iceage_move_events = extend(levels.playlab_6, {
   background: 'icy5',
   firstSpriteIndex: 2,
   goalOverride: {} // This prevents the override from original playlab from being used
 });
 
-levels.gumball_click_hello = utils.extend(levels.playlab_5, {
+levels.gumball_click_hello = extend(levels.playlab_5, {
   background: 'characters',
   firstSpriteIndex: 1, // sid
 });
 
-levels.gumball_move_events = utils.extend(levels.playlab_6, {
+levels.gumball_move_events = extend(levels.playlab_6, {
   background: 'cornered',
   firstSpriteIndex: 3, // diego
   goalOverride: {}, // This prevents the override from original playlab from being used
@@ -852,8 +851,8 @@ levels.dino_up_and_down =  {
       </next></block> \
     <block type="studio_repeatForever" deletable="false" x="20" y="540"></block>'
 };
-levels.c2_7 = utils.extend(levels.dino_up_and_down, {});
-levels.c3_game_3 = utils.extend(levels.dino_up_and_down, {});
+levels.c2_7 = extend(levels.dino_up_and_down, {});
+levels.c3_game_3 = extend(levels.dino_up_and_down, {});
 
 levels.playlab_7 = {
   ideal: 3,
@@ -913,7 +912,7 @@ levels.playlab_7 = {
     }]
   ],
 };
-levels.iceage_repeat = utils.extend(levels.playlab_7, {
+levels.iceage_repeat = extend(levels.playlab_7, {
   background: 'icy1',
   firstSpriteIndex: 4,
   map: [
@@ -927,7 +926,7 @@ levels.iceage_repeat = utils.extend(levels.playlab_7, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.gumball_repeat = utils.extend(levels.playlab_7, {
+levels.gumball_repeat = extend(levels.playlab_7, {
   background: 'dots',
   firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
@@ -1016,8 +1015,8 @@ levels.penguin_ouch =  {
     </statement></block> \
     <block type="studio_whenSpriteCollided" deletable="false" x="20" y="730"></block>'
 };
-levels.c2_8 = utils.extend(levels.penguin_ouch, {});
-levels.c3_game_4 = utils.extend(levels.penguin_ouch, {});
+levels.c2_8 = extend(levels.penguin_ouch, {});
+levels.c3_game_4 = extend(levels.penguin_ouch, {});
 
 // Can you add a block to score a point when the penguin runs into the octopus,
 // and then move him with the arrows until you score?
@@ -1096,8 +1095,8 @@ levels.penguin_touch_octopus = {
     <block type="studio_whenSpriteCollided" deletable="false" x="20" y="860"> \
      <title name="SPRITE2">2</title></block>'
 };
-levels.c2_9 = utils.extend(levels.penguin_touch_octopus, {});
-levels.c3_game_5 = utils.extend(levels.penguin_touch_octopus, {});
+levels.c2_9 = extend(levels.penguin_touch_octopus, {});
+levels.c3_game_5 = extend(levels.penguin_touch_octopus, {});
 
 levels.playlab_8 = {
   background: 'rainbow',
@@ -1163,11 +1162,11 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
-levels.iceage_sound_and_points = utils.extend(levels.playlab_8, {
+levels.iceage_sound_and_points = extend(levels.playlab_8, {
   background: 'icy2',
   avatarList: ['sid', 'granny']
 });
-levels.gumball_sound_and_points = utils.extend(levels.playlab_8, {
+levels.gumball_sound_and_points = extend(levels.playlab_8, {
   background: 'wood',
   avatarList: ['bananajoe', 'anton'],
   'delayCompletion': 500,
@@ -1266,8 +1265,8 @@ levels.change_background_and_speed =  {
       '</next>' +
     '</block>'
 };
-levels.c2_10 = utils.extend(levels.change_background_and_speed, {});
-levels.c3_game_6 = utils.extend(levels.change_background_and_speed, {});
+levels.c2_10 = extend(levels.change_background_and_speed, {});
+levels.c3_game_6 = extend(levels.change_background_and_speed, {});
 
 levels.playlab_9 = {
   background: 'black',
@@ -1356,7 +1355,7 @@ levels.playlab_9 = {
     '</block>'
 };
 
-levels.iceage_warn_ice_age = utils.extend(levels.playlab_9, {
+levels.iceage_warn_ice_age = extend(levels.playlab_9, {
   background: 'ground',
   toolbox:
     tb(
@@ -1416,7 +1415,7 @@ levels.iceage_warn_ice_age = utils.extend(levels.playlab_9, {
     '</block>'
 });
 
-levels.gumball_warn_food_fight = utils.extend(levels.playlab_9, {
+levels.gumball_warn_food_fight = extend(levels.playlab_9, {
   background: 'dots',
   'delayCompletion': 500,
   defaultEmotion: Emotions.NORMAL,
@@ -1520,7 +1519,7 @@ levels.gumball_join_food_fight = {
   ]
 };
 
-levels.iceage_throw_hearts = utils.extend(levels.gumball_join_food_fight, {
+levels.iceage_throw_hearts = extend(levels.gumball_join_food_fight, {
   background: 'icy3',
   avatarList: ['sid', 'granny'],
 });
@@ -1579,19 +1578,19 @@ levels.sandbox =  {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
-levels.c2_11 = utils.extend(levels.sandbox, {});
-levels.c3_game_7 = utils.extend(levels.sandbox, {});
-levels.playlab_10 = utils.extend(levels.sandbox, {
+levels.c2_11 = extend(levels.sandbox, {});
+levels.c3_game_7 = extend(levels.sandbox, {});
+levels.playlab_10 = extend(levels.sandbox, {
   appStringsFunctions: {
     continueText: msg.playlab_lastLevel_continueText
   },
 });
-levels.iceage_free_play = utils.extend(levels.playlab_10, {
+levels.iceage_free_play = extend(levels.playlab_10, {
   appStringsFunctions: {
     continueText: msg.playlab_lastLevel_continueText
   },
 });
-levels.gumball_free_play = utils.extend(levels.playlab_10, {
+levels.gumball_free_play = extend(levels.playlab_10, {
   appStringsFunctions: {
     continueText: msg.playlab_lastLevel_continueText
   },
@@ -1638,7 +1637,7 @@ levels.k1_6 = {
       </next></block>'
 };
 
-levels.k1_block_test = utils.extend(levels['99'], {
+levels.k1_block_test = extend(levels['99'], {
   'toolbox':
     tb(
       blockOfType('studio_setSprite') +
@@ -1812,9 +1811,9 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
+levels.full_sandbox_infinity = extend(levels.full_sandbox, {});
 
-levels.ec_sandbox = utils.extend(levels.sandbox, {
+levels.ec_sandbox = extend(levels.sandbox, {
   'editCode': true,
   'map': [
     [0,16, 0, 0, 0,16, 0, 0],
@@ -3215,7 +3214,7 @@ levels.js_hoc2015_event_free = {
   playStartSound: false
 };
 
-levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
+levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right,  {
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3244,7 +3243,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
   ],
 });
 
-levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
+levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down,  {
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3255,7 +3254,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_backtrack,  {
+levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack,  {
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3266,7 +3265,7 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   ],
 });
 
-levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_diagonal,  {
+levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
   enableShowCode: true,
   callouts: null,
@@ -3278,7 +3277,7 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   ],
 });
 
-levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
+levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around,  {
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3291,7 +3290,7 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
   callouts: []
 });
 
-levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
+levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale,  {
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveSouth,
@@ -3304,7 +3303,7 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   ],
 });
 
-levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
+levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items,  {
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
@@ -3351,7 +3350,7 @@ levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
   ]
 });
 
-levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
+levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items,  {
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
@@ -3364,7 +3363,7 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
   ],
 });
 
-levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
+levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score,  {
   editCode: false,
   msgStringOverrides: {
     whenTouchGoal: 'whenGetCharacterRebelPilot'
@@ -3411,7 +3410,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   ],
 });
 
-levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
+levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
   startBlocks: '',
   toolbox:
@@ -3426,7 +3425,7 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   ],
 });
 
-levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
+levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -3479,7 +3478,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   ],
 });
 
-levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
+levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -3541,7 +3540,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   ]
 });
 
-levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_multiply_characters,  {
+levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters,  {
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -3580,7 +3579,7 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_multiply_characters, 
   ]
 });
 
-levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
+levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -3634,7 +3633,7 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   ],
 });
 
-levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
+levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free,  {
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'

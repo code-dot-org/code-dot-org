@@ -46,18 +46,6 @@
                   .timestamp= @user_level.updated_at.iso8601
                   %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
                     = t('teacher.panel.unsubmit')
-                  :javascript
-                    $(function() {
-                      var submittedTimestamp = $('#submitted .timestamp');
-                      submittedTimestamp.text((new Date(submittedTimestamp.text())).toLocaleString());
-                    });
-                    $('#unsubmit').click(function(ev) {
-                      $.post($(ev.target).attr('data-user-level-url'), {"_method": 'PUT', user_level: {best_result: 1, submitted: false}}, function( data ) {
-                        // Let's just refresh so that the dots are correct, etc.
-                        location.reload();
-                      });
-                    });
-
         .level
           - if @level && @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
             - if @ideal_level_source
@@ -82,21 +70,22 @@
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
         - if current_user.sections.many?
           = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
-          :javascript
-            $('select#sections').change(function(ev) {
-              window.location.href = ev.target.value;
-            });
+          - if @section && @script_level.stage.lockable?
+            %div{:style => "margin: 10px"}
+              #stage-locked-text
+              %div
+              = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
       - if @section
         .scrollable-wrapper
           %table.section-students
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - user_level = student.user_level_for(@script_level, @level)
+                - user_level = student.last_attempt_for_any(@script_level.levels)
                 - status = activity_css_class(user_level)
                 %td
                   .level_link{class: status}
-                    - if @level.unplugged?
+                    - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
                       %span.puzzle-named
                         Unplugged
                     - elsif status == 'passed' || status == 'perfect'
@@ -110,12 +99,4 @@
                     - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
                       %i.fa.fa-users.pair-programming-icon
   :javascript
-    function resizeScrollable() {
-      var newHeight = $('.teacher-panel').innerHeight() -
-          $('.teacher-panel h3').outerHeight() -
-          15 - // magic..
-          $('.non-scrollable-wrapper').outerHeight();
-      $('.scrollable-wrapper').css('max-height', newHeight);
-    }
-    $(document).ready(resizeScrollable);
-    $(window).resize(dashboard.utils.debounce(resizeScrollable, 250));
+    $(document).ready(window.dashboard.teacher.onReady);

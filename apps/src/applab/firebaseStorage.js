@@ -3,7 +3,7 @@
 import { castValue } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
-import { updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
+import { enforceTableCount, updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -51,13 +51,14 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   const keyRef = getKeysRef(Applab.channelId).child(key);
-  // Store the value as a string representing a JSON value. For compatibility with parsers
+  // Store the value as a string representing a JSON value, or delete the key if the
+  // value is undefined. For compatibility with parsers
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
   // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
-  const jsonValue = JSON.stringify(value);
+  const jsonValue = (value === undefined) ? null : JSON.stringify(value);
 
   loadConfig().then(config => {
-    if (jsonValue.length > config.maxPropertySize) {
+    if (jsonValue && jsonValue.length > config.maxPropertySize) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
@@ -282,6 +283,33 @@ FirebaseStorage.resetRecordListener = function () {
 };
 
 /**
+ * Adds an entry for the table in Firebase under counters/tables, making the table
+ * show up in the data browser and also count toward the table count limit.
+ * @param {string} tableName
+ * @param {function()} onSuccess
+ * @param {function(string)} onError
+ */
+FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
+  return loadConfig().then(config => {
+    return enforceTableCount(config, tableName);
+  }).then(() => {
+    const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+    countersRef.transaction(countersData => {
+      if (countersData === null) {
+        return {lastId: 0, rowCount: 0};
+      }
+      return countersData;
+    }).then(transactionData => {
+      const {committed} = transactionData;
+      if (!committed) {
+        return Promise.reject(`Unexpected error creating table "${tableName}"`);
+      }
+      return Promise.resolve();
+    });
+  }).then(onSuccess, onError);
+};
+
+/**
  * Delete an entire table from firebase storage, then reset its lastId and rowCount.
  * @param {string} tableName
  * @param {function ()} onSuccess
@@ -293,6 +321,21 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   tableRef.set(null)
     .then(() => countersRef.set(null))
     .then(onSuccess, onError);
+};
+
+/**
+ * Delete all the rows from a table.
+ * @param {string} tableName
+ * @param {function ()} onSuccess
+ * @param {function (string)} onError
+ */
+FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
+  const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
+  tableRef.set(null).then(() => {
+    const rowCountRef = getDatabase(Applab.channelId)
+      .child(`counters/tables/${tableName}/rowCount`);
+    return rowCountRef.set(0);
+  }).then(onSuccess, onError);
 };
 
 /**

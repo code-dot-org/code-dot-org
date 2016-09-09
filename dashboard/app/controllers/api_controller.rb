@@ -14,8 +14,10 @@ class ApiController < ApplicationController
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
-      user_level_data = item[:user_level_data]
+      # Convert string-boolean parameters to boolean
+      %i(locked readonly_answers).each{|val| item[val] = JSONValue.value(item[val])}
 
+      user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
         return head :bad_request
@@ -30,7 +32,6 @@ class ApiController < ApplicationController
         # Can only update lockable state for user's students
         return head :forbidden
       end
-
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
         user_level_data[:script_id], item[:locked], item[:readonly_answers])
     end
@@ -68,33 +69,40 @@ class ApiController < ApplicationController
 
     # stage data
     stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
-      {length: levels.length,
-       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
+      {
+        length: levels.length,
+        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+      }
     end
 
     # student level completion data
     students = @section.students.map do |student|
       level_map = student.user_levels_by_level(@script)
+      paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
       student_levels = @script.script_levels.map do |script_level|
         user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
         level_class = best_activity_css_class user_levels
-        paired = user_levels.any?(&:paired?)
+        paired = (paired_user_level_ids & user_levels).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {class: level_class, title: title, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        {
+          class: level_class,
+          title: title,
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+        }
       end
       {id: student.id, levels: student_levels}
     end
 
     data = {
-            students: students,
-            script: {
-                     id: @script.id,
-                     name: data_t_suffix('script.name', @script.name, 'title'),
-                     levels_count: @script.script_levels.length,
-                     stages: stages
-                    }
-           }
+      students: students,
+      script: {
+        id: @script.id,
+        name: data_t_suffix('script.name', @script.name, 'title'),
+        levels_count: @script.script_levels.length,
+        stages: stages
+      }
+    }
 
     render json: data
   end
@@ -161,13 +169,13 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      last_activity = current_user.last_attempt(level)
-      level_source = last_activity.try(:level_source).try(:data)
+      user_level = current_user.last_attempt(level)
+      level_source = user_level.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)
-      if last_activity
+      if user_level
         response[:lastAttempt] = {
-          timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
+          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
       end
@@ -236,15 +244,21 @@ class ApiController < ApplicationController
         # Don't allow somebody to peek inside an anonymous survey using this API.
         next if script_level.anonymous?
 
+        # Get the UserLevel for the last attempt.  This approach does not check
+        # for the script and so it'll find the student's attempt at this level for
+        # any script in which they have encountered that level.
         last_attempt = student.last_attempt_for_any(script_level.levels)
+
+        # Get the LevelGroup itself.
         level_group = last_attempt.try(:level) || script_level.oldest_active_level
+
+        # Get the response which will be stringified JSON.
         response = last_attempt.try(:level_source).try(:data)
 
         next unless response
 
+        # Parse the response string into an object.
         response_parsed = JSON.parse(response)
-
-        user_level = student.user_level_for(script_level, level_group)
 
         # Summarize some key data.
         multi_count = 0
@@ -292,9 +306,8 @@ class ApiController < ApplicationController
           level_results << level_result
         end
 
-        submitted = user_level.try(:submitted)
-
-        timestamp = user_level[:updated_at].to_formatted_s
+        submitted = last_attempt[:submitted]
+        timestamp = last_attempt[:updated_at].to_formatted_s
 
         {
           student: student_hash,

@@ -1,5 +1,3 @@
-var constants = require('./constants');
-
 var Cell = function (tileType, speed, size, direction, emotion, sprite) {
 
   /**

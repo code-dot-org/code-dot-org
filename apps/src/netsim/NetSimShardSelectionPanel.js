@@ -3,7 +3,6 @@
  *           section.
  * @see NetSimLobby for usage.
  */
-'use strict';
 
 import $ from 'jquery';
 var utils = require('../utils'); // Provides Function.prototype.inherits

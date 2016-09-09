@@ -1,15 +1,27 @@
 /** @file The Bob character panel from the crypto widget */
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps from './NumberedSteps';
+import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
-import {PublicModulusDropdown, SecretNumberDropdown} from './cryptographyFields';
+import {
+  PublicModulusDropdown,
+  SecretNumberDropdown,
+  GoButton,
+  KeywordPublicModulus,
+  KeywordPublicKey,
+  KeywordPrivateKey,
+  KeywordPublicNumber,
+  KeywordSecretNumber
+} from './cryptographyFields';
+import {COLORS} from './style';
 
 const Bob = React.createClass({
   propTypes: {
+    disabled: React.PropTypes.bool,
     setPublicModulus: React.PropTypes.func.isRequired,
-    setPublicNumber: React.PropTypes.func.isRequired
+    setPublicNumber: React.PropTypes.func.isRequired,
+    runModuloClock: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -19,6 +31,10 @@ const Bob = React.createClass({
       secretNumber: null,
       publicNumber: null
     };
+  },
+
+  startOver() {
+    this.setState(this.getInitialState());
   },
 
   setPublicModulus(publicModulus) {
@@ -38,17 +54,25 @@ const Bob = React.createClass({
   },
 
   setSecretNumber(secretNumber) {
-    const {publicKey, publicModulus} = this.state;
     this.setState({secretNumber});
     this.clearPublicNumber();
   },
 
   computePublicNumber() {
+    const {runModuloClock} = this.props;
     const {publicKey, secretNumber, publicModulus} = this.state;
-    const publicNumber = [publicKey, secretNumber, publicModulus].every(Number.isInteger) ?
-        ((publicKey * secretNumber) % publicModulus) : null;
-    this.setState({publicNumber});
-    this.props.setPublicNumber(publicNumber);
+    if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
+      const dividend = publicKey * secretNumber;
+      const publicNumber = dividend % publicModulus;
+      runModuloClock(dividend, currentDividend => {
+        this.setState({publicNumber: currentDividend % publicModulus});
+      }, () => {
+        this.setState({publicNumber});
+        this.props.setPublicNumber(publicNumber);
+      });
+    } else {
+      this.clearPublicNumber();
+    }
   },
 
   clearPublicNumber() {
@@ -56,6 +80,7 @@ const Bob = React.createClass({
   },
 
   render() {
+    const {disabled} = this.props;
     const {
       publicModulus,
       publicKey,
@@ -65,25 +90,56 @@ const Bob = React.createClass({
     return (
       <CollapsiblePanel title="Bob">
         <NumberedSteps>
-          <div>
-            Enter public modulus: <PublicModulusDropdown value={publicModulus} onChange={this.onPublicModulusChange}/>
-          </div>
-          <div>
-            Enter Alice's public key: <IntegerTextbox value={publicKey} onChange={this.setPublicKey}/>
-          </div>
-          <div>
-            Pick your secret number: <SecretNumberDropdown value={secretNumber} onChange={this.setSecretNumber} publicModulus={publicModulus}/>
-          </div>
-          <div>
-            Calculate your public number:
+          <Step>
+            Enter <KeywordPublicModulus/>:
+            <PublicModulusDropdown
+              value={publicModulus}
+              onChange={this.onPublicModulusChange}
+              disabled={disabled}
+            />
+          </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
+            Enter Alice's <KeywordPublicKey/>:
+            <IntegerTextbox
+              value={publicKey}
+              onChange={this.setPublicKey}
+              disabled={disabled}
+              color={COLORS.publicKey}
+            />
+          </Step>
+          <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
+            Pick your <KeywordSecretNumber/>:
+            <SecretNumberDropdown
+              value={secretNumber}
+              onChange={this.setSecretNumber}
+              publicModulus={publicModulus}
+              disabled={disabled}
+            />
+          </Step>
+          <Step requires={[publicModulus, publicKey, secretNumber].every(Number.isInteger)}>
+            Calculate your <KeywordPublicNumber/>:
             <div>
-              (<IntegerField value={publicKey}/> x <IntegerField value={secretNumber}/>)MOD <IntegerField value={publicModulus}/>
-              <button onClick={this.computePublicNumber}>Go</button>
+              (
+              <IntegerField color={COLORS.publicKey} value={publicKey}/>
+              {' x '}
+              <IntegerField color={COLORS.secretNumber} value={secretNumber}/>
+              {') MOD '}
+              <IntegerField color={COLORS.publicModulus} value={publicModulus}/>
+              <GoButton
+                onClick={this.computePublicNumber}
+                disabled={disabled}
+              />
             </div>
             <div>
-              Your computed public number is <IntegerField value={publicNumber}/>
+              Your computed <KeywordPublicNumber/>
+              {' is '}
+              <IntegerField
+                className="public-number"
+                color={COLORS.publicNumber}
+                value={publicNumber}
+              />
             </div>
-          </div>
+          </Step>
         </NumberedSteps>
       </CollapsiblePanel>);
   }
