@@ -52,10 +52,14 @@
       %input#sotw-student-link.form-control{name: "student_link_s", type: "url"}/
   .form-group
     %label.control-label{for: "sotw-message"}
-      And, the most important part: tell us a brief story.
-      %br
-      How is this student changing the face of computer science?
+      And, the most important part: tell us a brief story by answering the following questions.
       %span.form-required-field *
+      %br
+      %ol
+        %li Why are you nominating this student?
+        %li Has this student overcome any challenges?
+        %li Has this student made any projects as part of their coursework or outside of their coursework that we can share? If so, include a link to an app, project, or website as something we could potentially share. Some creations might include a fun artist drawing from a 3rd grader, an interesting app in Scratch from a 5th grader, a website created by an 8th grader, or a high school student's app in App Lab.
+        %li (optional) Does your student help contribute to diversity in computer science (this can include helping others or increasing inclusivity)?
     %div
       %textarea#sotw-message.form-control{name: "message_s", required: "", rows: "12"}
   .form-group.submit-btn
