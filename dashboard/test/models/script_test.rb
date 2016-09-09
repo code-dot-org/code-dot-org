@@ -10,6 +10,13 @@ class ScriptTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
+  def populate_cache_and_disconnect_db
+    Script.stubs(:should_cache?).returns true
+    Script.script_cache_to_cache
+    Script.script_cache_from_cache
+    Script.connection.disconnect!
+  end
+
   test 'login required setting in script file' do
     file = File.join(self.class.fixture_path, "login_required.script")
 
@@ -290,17 +297,46 @@ class ScriptTest < ActiveSupport::TestCase
     assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
-  test 'gets script cache from memcached (or fake memcached)' do
-    Script.stubs(:should_cache?).returns true
+  test 'get_from_cache uses cache' do
+    # We test the cache using name lookups...
+    flappy = Script.find_by_name('flappy')
+    frozen = Script.find_by_name('frozen')
+    # ...and ID lookups.
+    flappy_id = flappy.id
+    frozen_id = frozen.id
 
-    Script.script_cache_to_cache # in test this is in non-distributed memory
+    populate_cache_and_disconnect_db
 
-    Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env
+    assert_equal flappy, Script.get_from_cache('flappy')
+    assert_equal flappy, Script.get_from_cache(flappy_id)
+    assert_equal frozen, Script.get_from_cache('frozen')
+    assert_equal frozen, Script.get_from_cache(frozen_id)
+  end
 
-    Script.connection.disconnect!     # we don't need no stinkin db
+  test 'cache_find_script_level uses cache' do
+    script_level = Script.first.script_levels.first
 
-    assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name
-    assert_equal 'anna', Script.get_from_cache('frozen').script_levels[5].level.skin
+    populate_cache_and_disconnect_db
+
+    assert_equal script_level, Script.cache_find_script_level(script_level.id)
+  end
+
+  test 'level uses cache' do
+    script_level = Script.first.script_levels.first
+    expected_level = script_level.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected_level,
+      Script.cache_find_script_level(script_level.id).level
+  end
+
+  test 'get_without_cache raises exception for bad id' do
+    bad_id = Script.last.id + 1
+
+    assert_raises(ActiveRecord::RecordNotFound) do
+      Script.get_from_cache(bad_id)
+    end
   end
 
   test 'banner image' do
