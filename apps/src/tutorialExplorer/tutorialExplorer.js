@@ -147,8 +147,8 @@ window.TutorialExplorerManager = function (options) {
 
       return (
         <div id="tutorialPopupFullWidth" style={{position: 'absolute', left: 0, top: 0, width: '100%'}}>
-          <div className="modal xfade" id="tutorialPopup" style={{display: 'block'}}>
-            <div className="modal-dialog modal-lg">
+          <div className="modal" id="tutorialPopup" style={{display: 'block'}} onClick={this.props.closeClicked}>
+            <div className="modal-dialog modal-lg" onClick={(e) => e.stopPropagation()}>
               <div className="modal-content">
                 <div className="modal-header" style={{borderBottomWidth: 0, paddingTop: 0, paddingBottom: 4, height: 48}}>
                   <button className="close" data-dismiss="modal" style={{height: 48}} type="button" onClick={this.props.closeClicked}>
