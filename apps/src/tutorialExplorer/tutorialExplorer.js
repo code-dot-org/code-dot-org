@@ -84,7 +84,12 @@ window.TutorialExplorerManager = function (options) {
       teacher_experience_beginner: "Beginner",
       student_experience_expert: "Expert",
       student_experience_beginner: "Beginner",
-      activity_type_programming: "Programming tutorial"
+      activity_type_programming: "Programming tutorial",
+      pre: "Pre",
+      "2-5": "2-5",
+      "6-8": "6-8",
+      "javascript": "JavaScript",
+      c: "C",
     }
 
     return tagString.split(',').map(tag => tagToString[tag]).join(', ');
@@ -127,8 +132,11 @@ window.TutorialExplorerManager = function (options) {
                     <img src={this.props.item.image} style={{width: '100%'}}/>
                   </div>
                   <div className="col-50" style={{paddingLeft: 20}}>
-                    <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 22, paddingBottom: 20}}>
+                    <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 22}}>
                       {this.props.item.name}
+                    </div>
+                    <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
+                      {getTagString(this.props.item.tags_grade)} | {getTagString(this.props.item.tags_programming_language)}
                     </div>
                     <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 14}}>
                       {this.props.item.longdescription}
@@ -186,6 +194,9 @@ window.TutorialExplorerManager = function (options) {
               <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
               <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 15, textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}}>
                 {this.props.item.name}
+              </div>
+              <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
+                {getTagString(this.props.item.tags_grade)} | {getTagString(this.props.item.tags_programming_language)}
               </div>
             </div>
           </div>
