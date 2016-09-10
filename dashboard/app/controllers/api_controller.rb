@@ -14,8 +14,10 @@ class ApiController < ApplicationController
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
-      user_level_data = item[:user_level_data]
+      # Convert string-boolean parameters to boolean
+      %i(locked readonly_answers).each{|val| item[val] = JSONValue.value(item[val])}
 
+      user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
         return head :bad_request
@@ -30,7 +32,6 @@ class ApiController < ApplicationController
         # Can only update lockable state for user's students
         return head :forbidden
       end
-
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
         user_level_data[:script_id], item[:locked], item[:readonly_answers])
     end
@@ -243,15 +244,21 @@ class ApiController < ApplicationController
         # Don't allow somebody to peek inside an anonymous survey using this API.
         next if script_level.anonymous?
 
+        # Get the UserLevel for the last attempt.  This approach does not check
+        # for the script and so it'll find the student's attempt at this level for
+        # any script in which they have encountered that level.
         last_attempt = student.last_attempt_for_any(script_level.levels)
+
+        # Get the LevelGroup itself.
         level_group = last_attempt.try(:level) || script_level.oldest_active_level
+
+        # Get the response which will be stringified JSON.
         response = last_attempt.try(:level_source).try(:data)
 
         next unless response
 
+        # Parse the response string into an object.
         response_parsed = JSON.parse(response)
-
-        user_level = student.user_level_for(script_level, level_group)
 
         # Summarize some key data.
         multi_count = 0
@@ -299,9 +306,8 @@ class ApiController < ApplicationController
           level_results << level_result
         end
 
-        submitted = user_level.try(:submitted)
-
-        timestamp = user_level[:updated_at].to_formatted_s
+        submitted = last_attempt[:submitted]
+        timestamp = last_attempt[:updated_at].to_formatted_s
 
         {
           student: student_hash,

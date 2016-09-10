@@ -45,11 +45,6 @@ Lint/UnusedMethodArgument:
 Performance/Casecmp:
   Enabled: false
 
-# Offense count: 13
-# Cop supports --auto-correct.
-Performance/StringReplacement:
-  Enabled: false
-
 # Offense count: 2
 Performance/TimesMap:
   Enabled: false
@@ -169,10 +164,6 @@ Style/Lambda:
 Style/LeadingCommentSpace:
   Enabled: false
 
-# Offense count: 7
-Style/MultilineBlockChain:
-  Enabled: false
-
 # Offense count: 136
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -228,11 +219,6 @@ Style/RegexpLiteral:
 # Offense count: 25
 # Cop supports --auto-correct.
 Style/RescueModifier:
-  Enabled: false
-
-# Offense count: 180
-# Cop supports --auto-correct.
-Style/SpaceAfterComma:
   Enabled: false
 
 # Offense count: 197

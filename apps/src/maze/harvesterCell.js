@@ -17,8 +17,9 @@ export default class HarvesterCell extends Cell {
   constructor(tileType, value, range, possibleFeatures, startsHidden) {
 
     // possible features should default to an array containing
-    // FeatureType.NONE
-    if (possibleFeatures === undefined) {
+    // FeatureType.NONE, and should only be allowed to be anything else
+    // if this is an Open tile.
+    if (possibleFeatures === undefined || tileType !== SquareType.OPEN) {
       possibleFeatures = [FeatureType.NONE];
     }
 

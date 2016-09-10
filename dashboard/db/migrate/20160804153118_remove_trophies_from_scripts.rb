@@ -1,4 +1,4 @@
-class RemoveTrophiesFromScripts < ActiveRecord::Migration
+class RemoveTrophiesFromScripts < ActiveRecord::Migration[4.2]
   def change
     reversible do |dir|
       dir.down do

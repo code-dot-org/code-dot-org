@@ -2,6 +2,8 @@ name 'CSDU2 - Rating Quality Websites'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
+# Website Rating
+
 ## Overview:
 You and a partner will work together to rate seven additional websites on how “good” they are.  The challenge this time, however, is to identify with your partner some specific features of each website that collectively make it “good” or “bad”.  For this activity, you and your partner will share one computer while analyzing each website’s features.  
 ## Directions:
@@ -15,11 +17,30 @@ For each of the websites below, you and your partner will together do the follow
 
 ## Websites
 
-1. <a href="https://en.wikipedia.org/wiki/Wikipedia">Wikipedia</a> 
-2. <a href="http://www.msy.com.au">MSY Technology Website</a> 
-3. <a href="http://paradisewithaview.com/">Paradise with a View Website</a> 
-4. <a href="http://www.isbe.net/">Illinois State Board of Education Website</a> 
-5. <a href="http://foremanhs.org/">Foreman College and Career Academy</a> 
-6. <a href="http://art.yale.edu/">Yale University School of Art Website</a> 
-7. <a href="http://whitehouse.gov">White House Website</a>
+TBD Which websites work best for this lesson?
+
+Recommended
+
+1. <a href="https://en.wikipedia.org/wiki/Wikipedia" target="_blank">Wikipedia</a> 
+1. <a href="http://www.creativewithak.com/" target="_blank">Creative with a K</a>
+1. <a href="http://www.apple.com/" target="_blank">Apple</a>
+1. <a href="https://seattle.craigslist.org/" target="_blank">Craigslist</a>
+1. <a href="http://www.thesecretlifeofpets.com/index.php" target="_blank">The Secret Life of Pets</a> - not future proof?
+1. <a href="http://www.007museum.com/" target="_blank">007 Museum</a> - too boy?
+1. <a href="http://whitehouse.gov" target="_blank">White House Website</a>
+
+Alternatives
+
+1. <a href="http://www.msy.com.au" target="_blank">MSY Technology Website</a> 
+1. <a href="http://paradisewithaview.com/" target="_blank">Paradise with a View Website</a>  
+1. <a href="http://art.yale.edu/" target="_blank">Yale University School of Art Website</a> 
+1. <a href="http://motionographer.com/" target="_blank">Motion Grapher</a>
+1. <a href="http://www.mwmgraphics.com/" target="_blank">MW Graphics</a>
+1. <a href="https://dribbble.com/" target="_blank">Dribble</a>
+1. <a href="https://www.warbyparker.com/" target="_blank">Warby Parker</a>
+1. <a href="https://www.musicbed.com/" target="_blank">Music Bed</a>
+1. <a href="http://www.espn.com/" target="_blank">ESPN</a>
+1. <a href="http://www.sephora.com/" target="_blank">Sephora</a>
+1. <a href="http://www.gatesnfences.com/" target="_blank">Gates n Fences</a> 
+1. <a href="https://medium.com/" target="_blank"> Medium</a>
 MARKDOWN

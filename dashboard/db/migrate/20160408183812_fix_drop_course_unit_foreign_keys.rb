@@ -1,4 +1,4 @@
-class FixDropCourseUnitForeignKeys < ActiveRecord::Migration
+class FixDropCourseUnitForeignKeys < ActiveRecord::Migration[4.2]
   def change
     remove_foreign_key_if_exists :plc_learning_modules, :plc_course_unit_id
   end

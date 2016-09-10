@@ -34,36 +34,20 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment_with_no_user.resolve_user
   end
 
-  # For enrollment form: user-supplied fields without an account.
-  test 'validations without user' do
+  test 'required field validations' do
     enrollment = Pd::Enrollment.new
     refute enrollment.valid?
     assert_equal [
       'Name is required',
       'Email is required',
-      'School is required'
+      'School is required',
+      'School info is required'
     ], enrollment.errors.full_messages
 
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
     enrollment.school = 'test school'
-    assert enrollment.valid?
-  end
-
-  # For automatic enrollments for unenrolled attendees with a user account.
-  test 'validations with user' do
-    teacher = create :teacher
-    enrollment = Pd::Enrollment.new user: teacher
-    refute enrollment.valid?
-    assert_equal [
-      'Name is required',
-      'Email is required',
-      'School is required'
-    ], enrollment.errors.full_messages
-
-    enrollment.name = teacher.name
-    enrollment.email = teacher.email
-    enrollment.school = 'test school'
+    enrollment.school_info = create(:school_info)
     assert enrollment.valid?
   end
 
@@ -95,5 +79,26 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # in section: true
     workshop.section.add_student teacher
     assert enrollment.in_section?
+  end
+
+  test 'skip_school_validation' do
+    enrollment = create :pd_enrollment
+
+    enrollment.school = nil
+    enrollment.school_info = nil
+    refute enrollment.valid?
+    assert 2, enrollment.errors.count
+
+    enrollment.skip_school_validation = true
+    assert enrollment.valid?
+  end
+
+  test 'soft delete' do
+    enrollment = create :pd_enrollment
+    enrollment.destroy!
+
+    assert enrollment.reload.deleted?
+    refute Pd::Enrollment.exists? enrollment.attributes
+    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
   end
 end

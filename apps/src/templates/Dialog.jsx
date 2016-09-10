@@ -85,34 +85,23 @@ Cancel.propTypes = {
   children: React.PropTypes.node,
 };
 
-export const Buttons = React.createClass({
-  getConfirmButton() {
-    return this.refs.buttons.getElementsByClassName('confirmButton')[0];
-  },
-
-  getCancelButton() {
-    return this.refs.buttons.getElementsByClassName('cancelButton')[0];
-  },
-
-  render() {
-    const children = React.Children.toArray(this.props.children);
-    var leftChildren = children.slice(0, children.length-1);
-    var rightChild = children[children.length - 1];
-    return (
-      <div style={styles.buttons} ref="buttons">
-        <div style={styles.rightButton}>
-          {rightChild}
-        </div>
-        {leftChildren}
-        <div style={styles.buttonClear}/>
+export function Buttons({children}) {
+  children = React.Children.toArray(children);
+  var leftChildren = children.slice(0, children.length-1);
+  var rightChild = children[children.length - 1];
+  return (
+    <div style={styles.buttons}>
+      {leftChildren}
+      <div style={styles.rightButton}>
+        {rightChild}
       </div>
-    );
-  },
-
-  propTypes: {
-    children: childrenOfType(Cancel, Confirm),
-  },
-});
+      <div style={styles.buttonClear}/>
+    </div>
+  );
+}
+Buttons.propTypes = {
+  children: childrenOfType(Cancel, Confirm),
+};
 
 export function Footer({children}) {
   return (
@@ -156,15 +145,15 @@ const Dialog = React.createClass({
   }),
 
   handleKeyDown(event) {
-    // Always focus the Cancel or Confirm button when tab is pressed, to prevent the
+    // Focus the next button, input or link when tab is pressed, to prevent the
     // user from selecting elements outside of the dialog.
     if (event.key === 'Tab') {
-      const cancelButton = this.refs.buttons.getCancelButton();
-      const confirmButton = this.refs.buttons.getConfirmButton();
-      if ((document.activeElement === cancelButton)) {
-        confirmButton && confirmButton.focus();
-      } else {
-        cancelButton && cancelButton.focus();
+      const elements = this.baseDialog.getTabbableElements();
+      if (elements.length) {
+        // Focus the next element, or the first element if none is focused.
+        const curIndex = elements.findIndex(btn => btn === document.activeElement);
+        const nextIndex = (curIndex + 1) % elements.length;
+        elements[nextIndex].focus();
       }
       event.preventDefault();
     }
@@ -185,11 +174,11 @@ const Dialog = React.createClass({
     if (this.props.cancelText || this.props.onCancel ||
         this.props.confirmText || this.props.onConfirm || this.props.confirmType) {
       var buttons = (
-        <Buttons key="buttons" ref="buttons">
+        <Buttons key="buttons">
           {this.props.onCancel &&
-           <Cancel onClick={this.props.onCancel} className="cancelButton">{this.props.cancelText}</Cancel>}
+           <Cancel onClick={this.props.onCancel}>{this.props.cancelText}</Cancel>}
           {this.props.onConfirm &&
-           <Confirm onClick={this.props.onConfirm} className="confirmButton" type={this.props.confirmType}>
+           <Confirm onClick={this.props.onConfirm} type={this.props.confirmType}>
              {this.props.confirmText}
            </Confirm>}
         </Buttons>
@@ -205,7 +194,11 @@ const Dialog = React.createClass({
       children.push(<Footer key="footer">{this.props.footer}</Footer>);
     }
     return (
-      <BaseDialog {...this.props} handleKeyDown={this.handleKeyDown}>
+      <BaseDialog
+        {...this.props}
+        ref={baseDialog => this.baseDialog = baseDialog}
+        handleKeyDown={this.handleKeyDown}
+      >
         {children}
       </BaseDialog>
     );

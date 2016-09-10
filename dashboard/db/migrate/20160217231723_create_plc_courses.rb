@@ -1,4 +1,4 @@
-class CreatePlcCourses < ActiveRecord::Migration
+class CreatePlcCourses < ActiveRecord::Migration[4.2]
   def change
     create_table :plc_courses do |t|
       t.string :name

@@ -41,6 +41,7 @@ class Game < ActiveRecord::Base
   STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   GAMELAB = 'gamelab'
+  WEBLAB = 'weblab'
   NETSIM = 'netsim'
   CRAFT = 'craft'
   MAZE = 'maze'
@@ -76,6 +77,10 @@ class Game < ActiveRecord::Base
 
   def self.gamelab
     @@game_gamelab ||= find_by_name("Gamelab")
+  end
+
+  def self.weblab
+    @@game_weblab ||= find_by_name("Weblab")
   end
 
   def self.netsim
@@ -163,7 +168,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB || app == WEBLAB
   end
 
   # True if the app takes responsibility for showing footer info
@@ -242,6 +247,7 @@ class Game < ActiveRecord::Base
         ExternalLink:external_link
         EvaluationMulti:evaluation_multi
         PublicKeyCryptography:public_key_cryptography
+        Weblab:weblab
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

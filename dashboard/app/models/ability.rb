@@ -36,7 +36,6 @@ class Ability
       Plc::CourseUnit,
       # PD models
       Pd::Workshop,
-      Pd::Attendance,
       Pd::DistrictPaymentTerm,
       Pd::DistrictReport,
       Pd::WorkshopOrganizerReport,
@@ -91,7 +90,7 @@ class Ability
           workshop.facilitators.include? user
         end
         can [:read, :start, :end], Pd::Workshop, facilitators: {id: user.id}
-        can :manage, Pd::Attendance, workshop: {facilitators: {id: user.id}}
+        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
       end
 
       if user.district_contact?
@@ -111,8 +110,8 @@ class Ability
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can :manage, Pd::Workshop, organizer_id: user.id
-        can :manage, Pd::Attendance, workshop: {organizer_id: user.id}
+        can [:read, :start, :end, :update, :destroy], Pd::Workshop, organizer_id: user.id
+        can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::WorkshopOrganizerReport
         can :read, Pd::TeacherProgressReport
         can :read, Pd::CourseFacilitator

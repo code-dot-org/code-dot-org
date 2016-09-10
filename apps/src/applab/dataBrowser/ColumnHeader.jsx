@@ -121,11 +121,13 @@ const ColumnHeader = React.createClass({
       display: this.props.isEditable ? null : 'none',
     }];
     const containerStyle = {
-      display: this.props.isEditing ? 'none' : null
+      display: this.props.isEditing ? 'none' : null,
+      padding: '6px 0',
     };
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
+      minWidth: 80,
     }];
     return (
       <th style={dataStyles.headerCell}>

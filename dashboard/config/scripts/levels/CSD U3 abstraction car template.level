@@ -32,7 +32,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\"red_car\"],\r\n  \"propsByKey\": {\r\n    \"red_car\": {\r\n      \"name\": \"red_car\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\r\n      \"frameSize\": {\"x\":170, \"y\": 76},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n    \"orderedKeys\": [\n        \"red_car\"\n    ],\n    \"propsByKey\": {\n        \"red_car\": {\n            \"name\": \"red_car\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\n            \"frameSize\": {\n                \"x\": 170,\n                \"y\": 76\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "start_blocks": "var car = createSprite(70,300);\r\ncar.setAnimation(\"red_car\");\r\n\r\nfunction draw() {\r\n  background(\"green\");\r\n  stroke(\"gray\");\r\n  strokeWeight(70);\r\n  line(0, 335, 400, 185);\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(0, 370, 400, 220);\r\n  line(0, 300, 400, 150);\r\n  line(0, 335, 80, 305);\r\n  line(160, 275, 240, 245);\r\n  line(320, 215, 400, 185);\r\n  drawSprites();\r\n}\r\n",
     "project_template_level_name": "car velocity",
     "markdown_instructions": "# Moving at an Angle\r\n\r\nIf you use `velocityX` and `velocityY` at the same time, you can move your sprite at an angle.  See if you can keep the car on the road by using these two properties.\r\n\r\n# Do This\r\n\r\nUse `velocityX` and `velocityY` to make the car move along the road.",

@@ -8,6 +8,7 @@ text 'csp_unit_assessment_overview' #external instructions
 level 'CSP Unit 1 Ch 1 MC binary def'
 level 'CSP Unit 1 Ch 1 MC binary to dec simple'
 level 'CSPFinal_Question_7'
+text 'CSP assessment Hex interstitial'
 level 'CSPFinal_Question_9'
 level 'CSPFinal_Question_8'
 
@@ -15,6 +16,7 @@ page
 level 'CSPFinal_Question_1'
 level 'CSPFinal_Question_2'
 level 'CSP Unit 1 Ch 1 MC bits to make 512'
+text 'CSP assessment Hex interstitial'
 level 'CB_Question_3'
 level 'CB_Question_1'
 

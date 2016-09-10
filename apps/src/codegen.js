@@ -52,20 +52,20 @@ exports.evalWith = function (code, options, legacy) {
  * Generate code for each of the given events, and evaluate it using the
  * provided APIs as context.
  * @param apis Context to be set as globals in the interpreted runtime.
- * @param events Mapping of hook names to the corresponding blockly block name.
- * @param generator Function for generating code for a given block name.
+ * @param events Mapping of hook names to the corresponding handler code.
+ * @param code Optional extra code to evaluate.
  * @return {{}} Mapping of hook names to the corresponding event handler.
  */
-exports.evalWithEvents = function (apis, events, generator) {
+exports.evalWithEvents = function (apis, events, code) {
   let interpreter, currentCallback;
-  let code = '';
+  code = code || '';
   const hooks = {};
   Object.keys(events).forEach(event => {
     hooks[event] = () => {
       currentCallback(event);
       interpreter.run();
     };
-    code += `function ${event}(){${generator(events[event])}};`;
+    code += `this['${event}']=function(){${events[event]}};`;
   });
 
   interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
@@ -77,30 +77,6 @@ exports.evalWithEvents = function (apis, events, generator) {
   interpreter.run();
 
   return hooks;
-};
-
-/**
- * Returns a function based on a string of code parameterized with a dictionary.
- */
-exports.functionFromCode = function (code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function () {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor();
-  }
 };
 
 //

@@ -24,7 +24,7 @@
     "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server .",
     "build:log": "grunt logBuildTimes",
     "build:stats": "node ./script/build-stats.js",
-    "prestorybook": "curl -o build/package/css/application.css http://localhost-studio.code.org:3000/assets/application.css",
+    "prestorybook": "curl -o build/package/css/application.css http://localhost:3000/assets/application.css",
     "storybook": "start-storybook -p 9001 -s build/package/",
     "storybook:deploy": "./script/deploy-storybook.sh"
   },
@@ -33,7 +33,8 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/piskel": "0.4.0",
+    "@code-dot-org/piskel": "0.8.2",
+    "@code-dot-org/bramble": "0.1.1",
     "@kadira/react-storybook-addon-info": "^3.0.4",
     "@kadira/storybook": "^1.41.0",
     "Base64": "0.3.0",

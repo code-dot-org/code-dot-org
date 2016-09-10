@@ -110,11 +110,23 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :step_mode => 1, :type => 'Maze', :is_k1 => false}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+      post :create, params: {
+        level: {
+          name: "NewCustomLevel",
+          instructions: "Some Instructions",
+          step_mode: 1,
+          type: 'Maze',
+          is_k1: false
+        },
+        game_id: game.id,
+        program: @program,
+        maze_source: maze,
+        size: 8
+      }, as: :json
     end
 
     assert assigns(:level)
-    assert !assigns(:level).is_k1
+    assert assigns(:level).is_k1 == 'false'
   end
 
   test "should not create invalid maze level" do
@@ -286,7 +298,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update level" do
-    patch :update, id: @level, level: {  }
+    patch :update, params: {id: @level, level: {stub: nil}}
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
     assert_response :success
   end
@@ -294,7 +306,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "update sends JSON::ParserError to user" do
     level = create(:applab)
     invalid_json = "{,}"
-    patch :update, id: level, level: {"code_functions" => invalid_json}
+    patch :update, id: level, level: {'code_functions' => invalid_json}
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
     assert_response :unprocessable_entity
 

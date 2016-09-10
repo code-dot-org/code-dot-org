@@ -1,4 +1,4 @@
-class CreatePairedUserLevels < ActiveRecord::Migration
+class CreatePairedUserLevels < ActiveRecord::Migration[4.2]
   def change
     create_table :paired_user_levels do |t|
       t.integer :driver_user_level_id

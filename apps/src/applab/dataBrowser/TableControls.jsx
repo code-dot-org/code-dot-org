@@ -12,13 +12,26 @@ import applabMsg from '@cdo/applab/locale';
 import * as dataStyles from './dataStyles';
 
 const styles = {
+  buttonWrapper: {
+    display: 'inline-block',
+    marginBottom: 10,
+    marginTop: 10,
+  },
   container: {
+    // subtract the height of the clearfix element
+    marginBottom: -28,
+    // subtract the top margin of the buttonWrapper
+    marginTop: -10,
     paddingTop: 0,
     paddingBottom: 10,
     paddingLeft: 0,
     paddingRight: 0,
+    // make the buttons align right usually, but align left if they
+    // are forced to wrap onto the next line by a very long table name.
+    textAlign: 'justify',
   },
-  exportButton: [dataStyles.whiteButton, dataStyles.alignRight, {
+  exportButton: [dataStyles.whiteButton, {
+    marginLeft: 10,
     width: 120
   }],
   tableName: {
@@ -44,33 +57,33 @@ const TableControls = React.createClass({
   render() {
     return (
       <div style={styles.container}>
-        <span style={styles.tableNameWrapper}>
+        <div style={styles.tableNameWrapper}>
           <span style={styles.tableName}>
             {this.props.tableName}
           </span>
-        </span>
+        </div>
+        {" "}
+        <div style={styles.buttonWrapper}>
+          <ConfirmDeleteButton
+            body={applabMsg.confirmClearTable()}
+            buttonText="Clear table"
+            containerStyle={{width: 103}}
+            onConfirm={this.props.clearTable}
+            title="Clear table"
+          />
 
-        <button
-          onClick={this.props.exportCsv}
-          style={styles.exportButton}
-        >
-          Export to csv
-        </button>
+          <ConfirmImportButton
+            importCsv={this.props.importCsv}
+            containerStyle={{marginLeft: 10}}
+          />
 
-        <ConfirmImportButton
-          importCsv={this.props.importCsv}
-          containerStyle={dataStyles.alignRight}
-        />
+          <button onClick={this.props.exportCsv} style={styles.exportButton}>
+            Export to csv
+          </button>
+        </div>
 
-        <ConfirmDeleteButton
-          body={applabMsg.confirmClearTable()}
-          buttonText="Clear table"
-          containerStyle={{float: 'right', width: 103}}
-          onConfirm={this.props.clearTable}
-          title="Clear table"
-        />
-
-        <div style={{clear: 'both'}}/>
+        {/* help make the "text-align: justify;" trick work */}
+        <div style={dataStyles.clearfix}/>
       </div>
     );
   }

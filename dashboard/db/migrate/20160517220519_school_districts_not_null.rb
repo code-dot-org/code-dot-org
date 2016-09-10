@@ -1,4 +1,4 @@
-class SchoolDistrictsNotNull < ActiveRecord::Migration
+class SchoolDistrictsNotNull < ActiveRecord::Migration[4.2]
   def change
     change_column :school_districts, :name, :string, null: false
     change_column :school_districts, :city, :string, null: false

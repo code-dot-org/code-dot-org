@@ -1,4 +1,4 @@
-class ChangeNameOfLevels < ActiveRecord::Migration
+class ChangeNameOfLevels < ActiveRecord::Migration[4.2]
   OLD_TO_NEW = {
                 "Edit Code" => 'edit-code',
                 "2014 Levels" => 'events',

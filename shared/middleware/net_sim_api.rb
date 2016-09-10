@@ -1,8 +1,10 @@
 require 'sinatra/base'
+require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
+require 'redis-slave-read'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
 
@@ -363,7 +365,11 @@ class NetSimApi < Sinatra::Base
   #
   # @return [Redis]
   def get_redis_client
-    @@overridden_redis || Redis.new(url: redis_url)
+    return @@overridden_redis unless @@overridden_redis.nil?
+    Redis::SlaveRead::Interface::Hiredis.new({
+        master: Redis.new(url: redis_url),
+        slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
+                                            })
   end
 
   # Returns the URL (configuration string) of the redis service in the current
@@ -375,12 +381,27 @@ class NetSimApi < Sinatra::Base
     CDO.geocoder_redis_url || 'redis://localhost:6379'
   end
 
+  # Returns an array of URLs for the redis read replicas in the current
+  # configuration.  Returns an empty array if no read replicas are
+  # available.
+  #
+  # @return [Array]
+  def redis_read_replica_urls
+    urls = []
+    urls.push(CDO.geocoder_read_replica_1) unless CDO.geocoder_read_replica_1.nil?
+    urls.push(CDO.geocoder_read_replica_2) unless CDO.geocoder_read_replica_2.nil?
+    urls.push(CDO.geocoder_read_replica_3) unless CDO.geocoder_read_replica_3.nil?
+    urls.push(CDO.geocoder_read_replica_4) unless CDO.geocoder_read_replica_4.nil?
+    urls.push(CDO.geocoder_read_replica_5) unless CDO.geocoder_read_replica_5.nil?
+    urls
+  end
+
   # Get the Pub/Sub API interface for the current configuration
   #
   # @return [PusherApi]
   def get_pub_sub_api
     return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
-    CDO.use_pusher ? PusherApi : NullPubSubApi
+    CDO.use_pusher ? PusherApi.new : NullPubSubApi.new
   end
 
   # Return true if the request's content type is application/json and charset
@@ -418,13 +439,12 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_wires_for_nodes(shard_id, node_ids)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wire_ids = wire_table.to_a.select {|wire|
+    wires = wire_table.to_a.select {|wire|
       node_ids.any? { |node_id|
         wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
       }
-    }.map {|wire|
-      wire['id']
     }
+    wire_ids = wires.map {|wire| wire['id']}
     wire_table.delete(wire_ids) unless wire_ids.empty?
   end
 
@@ -435,11 +455,10 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_messages_for_nodes(shard_id, node_ids)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
-    message_ids = message_table.to_a.select {|message|
+    messages = message_table.to_a.select {|message|
       node_ids.member? message['simulatedBy']
-    }.map {|message|
-      message['id']
     }
+    message_ids = messages.map {|message| message['id']}
     message_table.delete(message_ids) unless message_ids.empty?
   end
 end

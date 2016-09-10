@@ -97,6 +97,6 @@ def add_hashes(h1, h2)
   (h1.keys + h2.keys).uniq.each { |key| unsorted[key] = h1[key].to_i + h2[key].to_i }
 
   sorted = {}
-  unsorted.keys.sort { |a,b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }
+  unsorted.keys.sort { |a, b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }
   sorted
 end

@@ -7,8 +7,8 @@ worker_processes CDO.dashboard_workers
 pid "#{File.expand_path(__FILE__)}.pid"
 timeout 60
 preload_app true
-stderr_path dashboard_dir('log','unicorn_stderr.log')
-stdout_path dashboard_dir('log','unicorn_stdout.log')
+stderr_path dashboard_dir('log', 'unicorn_stderr.log')
+stdout_path dashboard_dir('log', 'unicorn_stdout.log')
 working_directory deploy_dir('dashboard')
 #logger $log
 

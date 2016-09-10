@@ -11,6 +11,14 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)
 
+# Computer Science Fundamentals - Accelerated
+
+<img src="/images/code20hr.jpg">
+
+Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a middle school after-school program or as a unit in a technology or programming class.
+
+[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+
 # Computer Science in Science
 
 <img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
@@ -27,23 +35,12 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](<%= CDO.code_org_url('/curriculum/science') %>) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
 
-# Computer Science in Algebra
 
-<img src="<%= CDO.shared_image_url("courses/logo_algebra.png") %>">
+# For Algebra Classrooms
 
-Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool. 
+<br>
 
-<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/cs-in-algebra-testimonial.png") %>">
-
-[<button>Learn more about curriculum</button>](/educate/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
-
-# Computer Science Fundamentals - Accelerated
-
-<img src="/images/code20hr.jpg">
-
-Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a middle school after-school program or as a unit in a technology or programming class.
-
-[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
 # 3rd Party resources for middle school CS
 
