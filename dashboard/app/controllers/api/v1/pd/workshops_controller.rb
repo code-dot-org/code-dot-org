@@ -10,8 +10,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
 
+  # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
     @workshops = Pd::Workshop.where(
+      started_at: nil,
       course: Pd::Workshop::COURSE_CSF,
       workshop_type: Pd::Workshop::TYPE_PUBLIC
     ).where.not(processed_location: nil)
