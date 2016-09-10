@@ -28,6 +28,11 @@
   color: $charcoal !important;
 }
 
+.level_link.locked, .level_link.locked:link, .level_link.locked:visited {
+  background-color: $level_not_tried;
+  color: $charcoal !important;
+}
+
 a.level_link.not_tried:hover,
 a.level_link.attempted:hover,
 a.level_link.perfect:hover,
