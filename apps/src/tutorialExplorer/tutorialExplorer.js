@@ -14,9 +14,6 @@ window.TutorialExplorerManager = function (options) {
   this.options = options;
   var self = this;
 
-  // Uncomment if we just want five items.
-  //options.tutorials.contents = options.tutorials.contents.splice(0,5);
-
   const FilterChoice = React.createClass({
     propTypes: {
       onUserInput: React.PropTypes.func,
@@ -249,14 +246,13 @@ window.TutorialExplorerManager = function (options) {
 
     render() {
       // Should we show this item based on current filter settings?
-
       // Go through all active filter categories.
-        // No filters set for a category, then show everything that might match.
-        // Tutorial has no tags, then it'll show.
-        // But if we actually have filters for a category, and the tutorial does too,
-        // then at least one filter must have a tag.
-        //   e.g. if the user chooses two platforms, then at least one of the
-        //   platforms must match the tutorial.
+      // No filters set for a category, then show everything that might match.
+      // Tutorial has no tags, then it'll show.
+      // But if we actually have filters for a category, and the tutorial does too,
+      // then at least one filter must have a tag.
+      //   e.g. if the user chooses two platforms, then at least one of the
+      //   platforms must match the tutorial.
 
       function filterFn(tutorial, index, array) {
 
@@ -273,49 +269,37 @@ window.TutorialExplorerManager = function (options) {
           }
         }
 
-        var filterMiss = false;
+        // If we miss any filter group, then we don't show the tutorial.
+        var filterGroupMiss = false;
 
         for (var filterGroupName in this.props.filters) {
-
           var tutorialTags = tutorial["tags_" + filterGroupName];
-
           if (tutorialTags && tutorialTags.length > 0) {
-            //console.log("  filterGroupName - ", filterGroupName, " - for tutorial - ", tutorial["tags_" + filterGroupName]);
-
             var tutorialTagsSplit = tutorialTags.split(',');
-            //console.log("  tutorialTagsSplit", tutorialTagsSplit);
 
             // now check all the filter group's tags
-
             var filterGroup = this.props.filters[filterGroupName];
-            //console.log("      filterGroup", filterGroup);
 
             // For this filter group, we've not yet found a matching tag between
             // user selected otions and tutorial tags.
-            var filterGroupHit = false;
+            var filterHit = false;
 
             for (var filterName of filterGroup) {
-              //console.log("        filterName", filterName);
-
               if (tutorialTagsSplit.includes(filterName)) {
-                //console.log("          tutorial tag match");
-
                 // The tutorial had a matching tag.
-                filterGroupHit = true;
-              } else {
-                //console.log("          tutorial tag MISS");
+                filterHit = true;
               }
             }
 
-            // Each filter group needs at least one user-selected filter to hit
+            // The filter group needs at least one user-selected filter to hit
             // on the tutorial.
-            if (filterGroup.length !== 0 && !filterGroupHit) {
-              filterMiss = true;
+            if (filterGroup.length !== 0 && !filterHit) {
+              filterGroupMiss = true;
             }
           }
         }
 
-        return !filterMiss;
+        return !filterGroupMiss;
       }
 
       return (
@@ -355,12 +339,9 @@ window.TutorialExplorerManager = function (options) {
       } else {
         var itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
 
-        //console.log("Removing value ", filterEntry, "at index", itemIndex, "from", this.state.filters[filterGroup]);
-
         // Find and remove specific value from array.
         filterEntryChange["$splice"] = [[itemIndex, 1]];
       }
-
 
       var filterGroupChange = {};
       filterGroupChange[filterGroup] = filterEntryChange;
@@ -369,8 +350,6 @@ window.TutorialExplorerManager = function (options) {
       stateChange["filters"] = filterGroupChange;
 
       var newState = update(this.state, stateChange);
-
-      //console.log("new state", newState);
 
       this.setState(newState);
     },
