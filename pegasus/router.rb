@@ -181,7 +181,7 @@ class Documents < Sinatra::Base
   end
 
   # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
 
   # Manipulated images
