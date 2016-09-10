@@ -9,7 +9,7 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should get show for logged in user' do
-    xhr :get, :show
+    get :show, xhr: true
     assert_response :success
 
     expected_response = {'pairings' => [], 'sections' => []}
@@ -20,7 +20,7 @@ class PairingsControllerTest < ActionController::TestCase
     section_1 = create(:follower, student_user: @user).section
     section_2 = create(:follower, student_user: @user).section
 
-    xhr :get, :show
+    get :show, xhr: true
     assert_response :success
 
     expected_response = {
@@ -38,7 +38,7 @@ class PairingsControllerTest < ActionController::TestCase
     classmate = create(:follower, section: section).student_user
     session[:pairings] = [classmate.id]
 
-    xhr :get, :show
+    get :show, xhr: true
     assert_response :success
 
     expected_response = {
@@ -57,7 +57,7 @@ class PairingsControllerTest < ActionController::TestCase
     classmate_1 = create(:follower, section: section).student_user
     classmate_2 = create(:follower, section: section).student_user
 
-    xhr :put, :update, pairings: [{id: classmate_1.id}, {id: classmate_2.id}]
+    put :update, xhr: true, params: {pairings: [{id: classmate_1.id}, {id: classmate_2.id}]}
 
     assert_response :success
     assert_equal [classmate_1.id, classmate_2.id], session[:pairings]
@@ -68,7 +68,7 @@ class PairingsControllerTest < ActionController::TestCase
     classmate = create(:follower, section: section).student_user
     invalid_user = create(:student)
 
-    xhr :put, :update, pairings: [{id: classmate.id}, {id: invalid_user.id}]
+    put :update, xhr: true, params: {pairings: [{id: classmate.id}, {id: invalid_user.id}]}
 
     assert_response :success
     # the invalid user is silently rejected
@@ -80,7 +80,7 @@ class PairingsControllerTest < ActionController::TestCase
     classmate = create(:follower, section: section).student_user
     session[:pairings] = [classmate.id]
 
-    xhr :put, :update, pairings: []
+    put :update, xhr: true, params: {pairings: []}
 
     assert_response :success
     assert_equal [], session[:pairings]

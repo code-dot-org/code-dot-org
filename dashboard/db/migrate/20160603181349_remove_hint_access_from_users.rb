@@ -1,4 +1,4 @@
-class RemoveHintAccessFromUsers < ActiveRecord::Migration
+class RemoveHintAccessFromUsers < ActiveRecord::Migration[4.2]
   # In the up direction, create a UserPermission entry for anyone having
   # hint_access, followed by removing the hint_access column.
   def up

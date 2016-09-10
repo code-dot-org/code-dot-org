@@ -64,6 +64,7 @@ var HarvesterCellEditor = React.createClass({
           <option value={SquareType.WALL}>wall</option>
           <option value={SquareType.OPEN}>open</option>
           <option value={SquareType.START}>start</option>
+          <option value={SquareType.OBSTACLE}>obstacle</option>
         </select>
 
         <label htmlFor="possibleFeatures">Possible Features:</label>

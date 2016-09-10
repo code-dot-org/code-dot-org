@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'json'

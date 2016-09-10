@@ -609,10 +609,12 @@ Craft.executeUserCode = function () {
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
-  if (studioApp.initializationCode) {
-    code += studioApp.initializationCode;
+  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  if (studioApp.initializationBlocks) {
+    codeBlocks = studioApp.initializationBlocks.concat(codeBlocks);
   }
-  code += Blockly.Generator.blockSpaceToCode('JavaScript');
+
+  code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   codegen.evalWith(code, {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));

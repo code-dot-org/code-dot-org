@@ -755,6 +755,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  test "logged in milestone with undefined submitted" do
+    post :milestone, @milestone_params.merge(submitted: 'undefined')
+    assert_response :success
+
+    assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
+  end
+
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     post :milestone, @milestone_params
@@ -1229,7 +1236,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, milestone_params
     assert_response 403
 
-    user_level.delete!
+    user_level.delete
     # explicity create a user_level that is readonly_answers
     create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, milestone_params

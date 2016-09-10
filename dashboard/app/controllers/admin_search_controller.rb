@@ -93,8 +93,8 @@ class AdminSearchController < ApplicationController
       # Remove newlines from the full_address field, replacing them with spaces.
       @teachers.each do |teacher|
         if teacher[3].present?
-          teacher[3].gsub!("\r", ' ')
-          teacher[3].gsub!("\n", ' ')
+          teacher[3].tr!("\r", ' ')
+          teacher[3].tr!("\n", ' ')
         end
       end
     end

@@ -2,3 +2,4 @@
 api_key: <%=CDO.dashboard_honeybadger_api_key%>
 exceptions:
   ignore: <%= %w(Sinatra StorageApps DynamoTable PropertyBag).map{|x| "#{x}::NotFound"}.to_json%>
+  notify_at_exit: false

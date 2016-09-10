@@ -1,4 +1,4 @@
-class AddKindToSurveyResults < ActiveRecord::Migration
+class AddKindToSurveyResults < ActiveRecord::Migration[4.2]
   def change
     # The `kind` column will be used to store the kind of survey, e.g.,
     # DiversityYYYY, NetPromoterScoreYYYY, etc.

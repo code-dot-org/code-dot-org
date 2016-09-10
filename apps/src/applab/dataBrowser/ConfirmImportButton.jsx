@@ -46,7 +46,7 @@ const ConfirmImportButton = React.createClass({
 
   render() {
     return (
-      <span style={this.props.containerStyle}>
+      <span style={[{display: 'inline-block'}, this.props.containerStyle]}>
         <input
           ref={input => this.importFileInput = input}
           type="file"

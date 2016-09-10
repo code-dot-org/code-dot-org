@@ -46,17 +46,14 @@ Resources:
         Timeout: 300
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
-    UpdatePolicy:
-      AutoScalingReplacingUpdate:
-        WillReplace: true
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT25M
+        Timeout: PT50M
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
-      MaxSize: 12
+      MaxSize: 20
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
@@ -172,10 +169,32 @@ Resources:
       AutoScalingGroupName: {Ref: WebServer}
       LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
       DefaultResult: ABANDON
-      HeartbeatTimeout: 1800 # seconds = 30 minutes
+      HeartbeatTimeout: 3000 # seconds = 50 minutes
       NotificationTargetARN: {Ref: WebServerHookTopic}
       RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
   WebServerHookTopic: {Type: 'AWS::SNS::Topic'}
+
+  # Scale up min instances at 4AM PDT (=11:00 UTC)
+  ClassroomTrafficBegin:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      MinSize: 5
+      Recurrence: "0 11 * * MON-FRI"
+  # Scale down min instances at 1PM PDT (=20:00 UTC)
+  ClassroomTrafficEnd:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      MinSize: 3
+      Recurrence: "0 20 * * MON-FRI"
+  # Further scale down min instances at 8PM PDT (=3:00+1day UTC)
+  Overnight:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      MinSize: 2
+      Recurrence: "0 3 * * TUE-SAT"
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
