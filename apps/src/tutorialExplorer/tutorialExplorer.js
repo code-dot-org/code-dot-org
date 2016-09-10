@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.
@@ -16,9 +18,20 @@ window.TutorialExplorerManager = function (options) {
   //options.tutorials.contents = options.tutorials.contents.splice(0,5);
 
   const FilterChoice = React.createClass({
-    handleChange: function() {
+    propTypes: {
+      onUserInput: React.PropTypes.func,
+      groupName: React.PropTypes.string,
+      name: React.PropTypes.string,
+      isCheckedInput: React.PropTypes.bool,
+      value: React.PropTypes.string,
+      selected: React.PropTypes.bool,
+      text: React.PropTypes.string
+    },
+
+    handleChange: function () {
       this.props.onUserInput(
-        this.props.groupName, this.props.name,
+        this.props.groupName,
+        this.props.name,
         this.refs.isCheckedInput.checked
       );
     },
@@ -26,23 +39,31 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div  style={{userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', MsUserSelect: 'none'}}>
-          <label style={{fontFamily: '"Gotham 4r", sans-serif', fontSize: 13, paddingBottom: 0, marginBottom: 0}}>
+          <label style={{fontFamily: "\"Gotham 4r\", sans-serif", fontSize: 13, paddingBottom: 0, marginBottom: 0}}>
             <input
-              type='checkbox'
+              type="checkbox"
               value={this.props.value}
               checked={this.props.selected}
-              ref='isCheckedInput'
+              ref="isCheckedInput"
               onChange={this.handleChange}
-              style={{marginRight: '5px'}}
+              style={{marginRight: 5}}
             />
             {this.props.text}
           </label>
         </div>
-      )
+      );
     }
   });
 
   const FilterGroup = React.createClass({
+    propTypes: {
+      name: React.PropTypes.string,
+      text: React.PropTypes.string,
+      filterEntries: React.PropTypes.array,
+      selection: React.PropTypes.array,
+      onUserInput: React.PropTypes.func
+    },
+
     render() {
       return (
         <div style={{paddingTop: 20, paddingRight: 40}}>
@@ -51,22 +72,28 @@ window.TutorialExplorerManager = function (options) {
           </div>
           {this.props.filterEntries.map(item => <FilterChoice groupName={this.props.name} name={item.name} text={item.text} selected={this.props.selection && this.props.selection.includes(item.name)} onUserInput={this.props.onUserInput} key={item.name}/>)}
         </div>
-      )
+      );
     }
   });
 
   const FilterSet = React.createClass({
+    propTypes: {
+      filterGroups: React.PropTypes.array,
+      onUserInput: React.PropTypes.func,
+      selection: React.PropTypes.object
+    },
+
     render() {
       return (
         <div>
-          <div className='col-20'>
+          <div className="col-20">
             <div style={{fontSize: 16}}>
               Filter By
             </div>
             {this.props.filterGroups.map(item => <FilterGroup name={item.name} text={item.text} filterEntries={item.entries} onUserInput={this.props.onUserInput} selection={this.props.selection[item.name]} key={item.name}/>)}
           </div>
         </div>
-      )
+      );
     }
   });
 
@@ -90,13 +117,19 @@ window.TutorialExplorerManager = function (options) {
       "grade_6-8": "6-8",
       programming_language_javascript: "JavaScript",
       programming_language_c: "C",
-    }
+    };
 
     return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
   }
 
   var TutorialDetail = React.createClass({
-    render: function() {
+    propTypes: {
+      showing: React.PropTypes.bool,
+      item: React.PropTypes.object,
+      closeClicked: React.PropTypes.func,
+    },
+
+    render: function () {
       if (!this.props.showing) {
         // Disable body scrolling.
         $('body').css('overflow', 'auto');
@@ -171,17 +204,17 @@ window.TutorialExplorerManager = function (options) {
       item: React.PropTypes.object.isRequired
     },
 
-    getInitialState: function() {
+    getInitialState: function () {
       return {
         showingDetail: false
       };
     },
 
-    tutorialClicked: function() {
+    tutorialClicked: function () {
       this.setState({showingDetail: true});
     },
 
-    tutorialDetailClosed: function() {
+    tutorialDetailClosed: function () {
       this.setState({showingDetail: false});
     },
 
@@ -189,7 +222,7 @@ window.TutorialExplorerManager = function (options) {
       return (
         <div>
           <TutorialDetail showing={this.state.showingDetail} item={this.props.item} closeClicked={this.tutorialDetailClosed}/>
-          <div className='col-33' style={{float: 'left', padding: '2px'}} onClick={this.tutorialClicked}>
+          <div className="col-33" style={{float: 'left', padding: '2px'}} onClick={this.tutorialClicked}>
             <div style={{padding: '5px'}}>
               <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
               <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 15, textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}}>
@@ -201,7 +234,7 @@ window.TutorialExplorerManager = function (options) {
             </div>
           </div>
         </div>
-      )
+      );
     }
   });
 
@@ -209,7 +242,9 @@ window.TutorialExplorerManager = function (options) {
     propTypes: {
       tutorials: React.PropTypes.arrayOf(
         React.PropTypes.object
-      ).isRequired
+      ).isRequired,
+      filters: React.PropTypes.object,
+      locale: React.PropTypes.string
     },
 
     render() {
@@ -224,6 +259,20 @@ window.TutorialExplorerManager = function (options) {
         //   platforms must match the tutorial.
 
       function filterFn(tutorial, index, array) {
+
+        // First check that the tutorial language doesn't exclude it immediately.
+        // If the tags contain some languages, and we don't have a match, then
+        // hide the tutorial.
+        if (tutorial.languages_supported) {
+          var languageTags = tutorial.languages_supported.split(',');
+          var currentLocale = this.props.locale;
+          if (languageTags.length > 0 &&
+            !languageTags.includes(currentLocale) &&
+            !languageTags.includes(currentLocale.substring(0,2))) {
+            return false;
+          }
+        }
+
         var filterMiss = false;
 
         for (var filterGroupName in this.props.filters) {
@@ -270,15 +319,21 @@ window.TutorialExplorerManager = function (options) {
       }
 
       return (
-        <div className='col-80' style={{float: 'left'}}>
+        <div className="col-80" style={{float: 'left'}}>
           {this.props.tutorials.filter(filterFn, this).map(item => <Tutorial item={item} filters={this.props.filters} key={item.code}/>)}
         </div>
-      )
+      );
     }
   });
 
   const TutorialExplorer = React.createClass({
-    getInitialState: function() {
+    propTypes: {
+      filterGroups: React.PropTypes.array,
+      tutorials: React.PropTypes.array,
+      locale: React.PropTypes.string
+    },
+
+    getInitialState: function () {
       var filters = {};
 
       for (let filterGroup of this.props.filterGroups) {
@@ -290,7 +345,7 @@ window.TutorialExplorerManager = function (options) {
       };
     },
 
-    handleUserInput: function(filterGroup, filterEntry, value) {
+    handleUserInput: function (filterGroup, filterEntry, value) {
       var filterEntryChange = {};
 
       if (value) {
@@ -324,14 +379,14 @@ window.TutorialExplorerManager = function (options) {
       return (
         <div>
           <FilterSet filterGroups={this.props.filterGroups} onUserInput={this.handleUserInput} selection={this.state.filters}/>
-          <TutorialSet tutorials={this.props.tutorials} filters={this.state.filters}/>
+          <TutorialSet tutorials={this.props.tutorials} filters={this.state.filters} locale={this.props.locale}/>
         </div>
-      )
+      );
     }
   });
 
   window.ReactDOM.render(
-    <TutorialExplorer filterGroups={options.filters} tutorials={options.tutorials.contents}/>,
+    <TutorialExplorer filterGroups={options.filters} tutorials={options.tutorials.contents} locale={options.locale}/>,
     document.getElementById('tutorials')
   );
 
