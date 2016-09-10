@@ -71,7 +71,7 @@ window.TutorialExplorerManager = function (options) {
   });
 
   // For a string of tags, generate a string of their friendly names.
-  function getTagString(tagString) {
+  function getTagString(prefix, tagString) {
     if (!tagString) {
       return "";
     }
@@ -85,14 +85,14 @@ window.TutorialExplorerManager = function (options) {
       student_experience_expert: "Expert",
       student_experience_beginner: "Beginner",
       activity_type_programming: "Programming tutorial",
-      pre: "Pre",
-      "2-5": "2-5",
-      "6-8": "6-8",
-      "javascript": "JavaScript",
-      c: "C",
+      grade_pre: "Pre",
+      "grade_2-5": "2-5",
+      "grade_6-8": "6-8",
+      programming_language_javascript: "JavaScript",
+      programming_language_c: "C",
     }
 
-    return tagString.split(',').map(tag => tagToString[tag]).join(', ');
+    return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
   }
 
   var TutorialDetail = React.createClass({
@@ -107,12 +107,12 @@ window.TutorialExplorerManager = function (options) {
       $('body').css('overflow', 'hidden');
 
       var tableEntries = [
-        {key: 0, title: "Length",                  body: getTagString(this.props.item.tags_length)},
-        {key: 1, title: "Subjects",                body: getTagString(this.props.item.tags_subject)},
-        {key: 2, title: "Educator Experience",     body: getTagString(this.props.item.tags_teacher_experience)},
-        {key: 3, title: "Student Experience",      body: getTagString(this.props.item.tags_student_experience)},
-        {key: 4, title: "Type of Activity",        body: getTagString(this.props.item.tags_activity_type)},
-        {key: 5, title: "International Languages", body: getTagString(this.props.item.tags_international_languages)},
+        {key: 0, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
+        {key: 1, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
+        {key: 2, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
+        {key: 3, title: "Student Experience",      body: getTagString("student_experience", this.props.item.tags_student_experience)},
+        {key: 4, title: "Type of Activity",        body: getTagString("activity_type", this.props.item.tags_activity_type)},
+        {key: 5, title: "International Languages", body: getTagString("international_languages", this.props.item.tags_international_languages)},
       ];
 
       return (
@@ -136,7 +136,7 @@ window.TutorialExplorerManager = function (options) {
                       {this.props.item.name}
                     </div>
                     <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
-                      {getTagString(this.props.item.tags_grade)} | {getTagString(this.props.item.tags_programming_language)}
+                      {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
                     </div>
                     <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 14}}>
                       {this.props.item.longdescription}
@@ -196,7 +196,7 @@ window.TutorialExplorerManager = function (options) {
                 {this.props.item.name}
               </div>
               <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
-                {getTagString(this.props.item.tags_grade)} | {getTagString(this.props.item.tags_programming_language)}
+                {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
               </div>
             </div>
           </div>
