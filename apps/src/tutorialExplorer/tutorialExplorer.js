@@ -70,6 +70,26 @@ window.TutorialExplorerManager = function (options) {
     }
   });
 
+  // For a string of tags, generate a string of their friendly names.
+  function getTagString(tagString) {
+    if (!tagString) {
+      return "";
+    }
+
+    var tagToString = {
+      length_1_hour: "One hour",
+      subject_english: "English",
+      subject_history: "History",
+      teacher_experience_expert: "Expert",
+      teacher_experience_beginner: "Beginner",
+      student_experience_expert: "Expert",
+      student_experience_beginner: "Beginner",
+      activity_type_programming: "Programming tutorial"
+    }
+
+    return tagString.split(',').map(tag => tagToString[tag]).join(', ');
+  }
+
   var TutorialDetail = React.createClass({
     render: function() {
       if (!this.props.showing) {
@@ -82,8 +102,12 @@ window.TutorialExplorerManager = function (options) {
       $('body').css('overflow', 'hidden');
 
       var tableEntries = [
-        {key: 1, title: "hi", body: "there"},
-        {key: 2, title: "oh", body: "my"}
+        {key: 0, title: "Length",                  body: getTagString(this.props.item.tags_length)},
+        {key: 1, title: "Subjects",                body: getTagString(this.props.item.tags_subject)},
+        {key: 2, title: "Educator Experience",     body: getTagString(this.props.item.tags_teacher_experience)},
+        {key: 3, title: "Student Experience",      body: getTagString(this.props.item.tags_student_experience)},
+        {key: 4, title: "Type of Activity",        body: getTagString(this.props.item.tags_activity_type)},
+        {key: 5, title: "International Languages", body: getTagString(this.props.item.tags_international_languages)},
       ];
 
       return (
@@ -98,7 +122,7 @@ window.TutorialExplorerManager = function (options) {
                   </button>
                   <div style={{clear: 'both'}} />
                 </div>
-              <div className="modal-body" style={{paddingTop: 0, overflow: 'hidden', textAlign: 'left'}}>
+                <div className="modal-body" style={{paddingTop: 0, overflow: 'hidden', textAlign: 'left'}}>
                   <div className="col-50">
                     <img src={this.props.item.image} style={{width: '100%'}}/>
                   </div>
@@ -113,18 +137,9 @@ window.TutorialExplorerManager = function (options) {
                   <div style={{clear: 'both'}}/>
                   <table style={{marginTop: 20, width: '100%'}}>
                     <tbody>
-                      <tr>
-                        <td style={{padding: 5, width: '40%'}}>
-                          Length
-                        </td>
-                        <td style={{padding: 5}}>
-                          1 hour
-                        </td>
-                      </tr>
-
                       {tableEntries.map(item =>
                         <tr key={item.key}>
-                          <td style={{padding: 5, width: '40%'}}>
+                          <td style={{padding: 5, width: '40%', fontFamily: '"Gotham 5r", sans-serif'}}>
                             {item.title}
                           </td>
                           <td style={{padding: 5}}>
