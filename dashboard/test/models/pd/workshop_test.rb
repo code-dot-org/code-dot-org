@@ -245,6 +245,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
   end
 
+  test 'date filters' do
+    pivot_date = Date.today
+    workshop_before = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
+    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date)]
+    workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
+
+    # on or before
+    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+      Pd::Workshop.start_on_or_before(pivot_date).pluck(:id).sort
+
+    # on or after
+    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+      Pd::Workshop.start_on_or_after(pivot_date).pluck(:id).sort
+
+    # combined
+    assert_equal [workshop_pivot.id],
+      Pd::Workshop.start_on_or_after(pivot_date).start_on_or_before(pivot_date).pluck(:id)
+  end
+
   private
 
   def session_on_day(day_offset)
