@@ -26,7 +26,7 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div  style={{userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', MsUserSelect: 'none'}}>
-          <label>
+          <label style={{fontFamily: '"Gotham 4r", sans-serif', fontSize: 13, paddingBottom: 0, marginBottom: 0}}>
             <input
               type='checkbox'
               value={this.props.value}
@@ -45,8 +45,8 @@ window.TutorialExplorerManager = function (options) {
   const FilterGroup = React.createClass({
     render() {
       return (
-        <div style={{paddingBottom: '20px'}}>
-          <div>
+        <div style={{paddingTop: 20, paddingRight: 40}}>
+          <div style={{fontFamily: '"Gotham 5r", sans-serif', borderBottom: 'solid grey 1px'}}>
             {this.props.text}
           </div>
           {this.props.filterEntries.map(item => <FilterChoice groupName={this.props.name} name={item.name} text={item.text} selected={this.props.selection && this.props.selection.includes(item.name)} onUserInput={this.props.onUserInput} key={item.name}/>)}
@@ -60,6 +60,9 @@ window.TutorialExplorerManager = function (options) {
       return (
         <div>
           <div className='col-20'>
+            <div style={{fontSize: 16}}>
+              Filter By
+            </div>
             {this.props.filterGroups.map(item => <FilterGroup name={item.name} text={item.text} filterEntries={item.entries} onUserInput={this.props.onUserInput} selection={this.props.selection[item.name]} key={item.name}/>)}
           </div>
         </div>
@@ -78,6 +81,11 @@ window.TutorialExplorerManager = function (options) {
       // Enable body scrolling.
       $('body').css('overflow', 'hidden');
 
+      var tableEntries = [
+        {key: 1, title: "hi", body: "there"},
+        {key: 2, title: "oh", body: "my"}
+      ];
+
       return (
         <div id="tutorialPopupFullWidth" style={{position: 'absolute', left: 0, top: 0, width: '100%'}}>
           <div className="modal xfade" id="tutorialPopup" style={{display: 'block'}}>
@@ -90,13 +98,42 @@ window.TutorialExplorerManager = function (options) {
                   </button>
                   <div style={{clear: 'both'}} />
                 </div>
-                <div className="modal-body" style={{paddingTop: 0, overflow: 'hidden'}}>
+              <div className="modal-body" style={{paddingTop: 0, overflow: 'hidden', textAlign: 'left'}}>
                   <div className="col-50">
-                    <img src={this.props.item.image} style={{height: 420}}/>
+                    <img src={this.props.item.image} style={{width: '100%'}}/>
                   </div>
-                  <div className="col-50">
-                    {this.props.item.code}
+                  <div className="col-50" style={{paddingLeft: 20}}>
+                    <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 22, paddingBottom: 20}}>
+                      {this.props.item.name}
+                    </div>
+                    <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 14}}>
+                      {this.props.item.longdescription}
+                    </div>
                   </div>
+                  <div style={{clear: 'both'}}/>
+                  <table style={{marginTop: 20, width: '100%'}}>
+                    <tbody>
+                      <tr>
+                        <td style={{padding: 5, width: '40%'}}>
+                          Length
+                        </td>
+                        <td style={{padding: 5}}>
+                          1 hour
+                        </td>
+                      </tr>
+
+                      {tableEntries.map(item =>
+                        <tr key={item.key}>
+                          <td style={{padding: 5, width: '40%'}}>
+                            {item.title}
+                          </td>
+                          <td style={{padding: 5}}>
+                            {item.body}
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -130,9 +167,11 @@ window.TutorialExplorerManager = function (options) {
         <div>
           <TutorialDetail showing={this.state.showingDetail} item={this.props.item} closeClicked={this.tutorialDetailClosed}/>
           <div className='col-33' style={{float: 'left', padding: '2px'}} onClick={this.tutorialClicked}>
-            <div style={{backgroundColor: 'grey', color: 'white', padding: '5px'}}>
+            <div style={{padding: '5px'}}>
               <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
-              {this.props.item.code}
+              <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 15, textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}}>
+                {this.props.item.name}
+              </div>
             </div>
           </div>
         </div>
