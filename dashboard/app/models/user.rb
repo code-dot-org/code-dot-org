@@ -126,25 +126,42 @@ class User < ActiveRecord::Base
   # You can be associated with districts through cohorts
   # has_many :districts, through: :cohorts.
 
+  # @param permission [UserPermission] the permission to query.
+  # @return [Boolean] whether the User has permission granted.
+  # TODO(asher): Determine whether request level caching is sufficient, or
+  #   whether a memcache or otherwise should be employed.
+  def permission_from_cache?(permission)
+    # Default to using the value cached in the instance variable, if present.
+    unless @permissions.nil?
+      return @permissions.include? permission
+    end
+    # The user's permissions were not cached, so query DB and save to instance
+    # variable.
+    @permissions = UserPermission.where(user_id: id).pluck(:permission)
+    return @permissions.include? permission
+  end
+
   def facilitator?
-    permission? UserPermission::FACILITATOR
+    permission_from_cache?(UserPermission::FACILITATOR)
   end
 
   def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
+    permission_from_cache?(UserPermission::WORKSHOP_ORGANIZER)
   end
 
   def delete_permission(permission)
+    @permissions = nil
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission
   end
 
   def permission=(permission)
+    @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
 
   def permission?(permission)
-    permissions.exists?(permission: permission)
+    permission_from_cache?(permission)
   end
 
   def district_contact?
