@@ -91,11 +91,11 @@ class User < ActiveRecord::Base
 
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
 
-  # :user_type is locked/deprecated. Use the :permissions property for more granular user permissions.
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
@@ -528,14 +528,9 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
-  def last_attempt_for_any(levels, script_id: nil)
+  def last_attempt_for_any(levels)
     level_ids = levels.map(&:id)
-    conditions = {
-      user_id: self.id,
-      level_id: level_ids
-    }
-    conditions[:script_id] = script_id unless script_id.nil?
-    UserLevel.where(conditions).
+    UserLevel.where(user_id: self.id, level_id: level_ids).
       order('updated_at DESC').
       first
   end

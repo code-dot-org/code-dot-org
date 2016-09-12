@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T18:42:36.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Debug\r\n\r\nMistakes happen when you are programming. The great thing is that these mistakes help your code get better and you become a better developer as you learn how to find the mistakes. Mistakes in code are called **bugs** and the process of fixing the bugs is called **debugging**. \r\n\r\n# Do This\r\nUncle Joe’s website is getting better, but he’s still having trouble. Debug this page so that in matches the picture of the desired website below.\r\nSpecifically, look at\r\n* header elements\r\n* list elements\r\n* list item elements\r\n\r\n# Desired Website\r\n\r\n<img src=\"https://images.code.org/e735466ee1cec1ba23c5c78430cf467c-image-1473446776297.45.11 PM.png\">",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h3>Cat Supplies</h3> \\n \\n\r\n  \r\n<h2>Toys</h2> \\n\r\n<ul> \\n\r\n  <li>Plush Toys</li> \\n\r\n  <li>Balls and Chasers</li> \\n\r\n</ul>  \\n\r\n<h2>Food</h2> \\n\r\n  <h4>Regular</h4> \\n\r\n  <ul> \\n\r\n    <li>Wet</li> \\n\r\n    <li>Dry</li> \\n\r\n  </ul> \\n \\n\r\n  \r\n  Organic \\n\r\n  <ol> \\n\r\n    <li>Grain-Free</li> \\n\r\n    <li>Sensitive Stomach</li> \\n\r\n  </ol> \\n \\n\r\n\r\n<h2>Health and Wellness</h2>  \\n \r\n  <ul> \\n\r\n    <li>Flea Care</li> \\n\r\n    Hairball Control \\n\r\n    <li>Dental, Ear, Vision</li> \\n\r\n  </ul>  \\n \\n\r\n\r\n<h4>Can't find it?</h4>  \\n\r\nWe apologize that we can't meet your request online - we'd like to remind you of three additional options. \\n\r\n  <ul> \\n\r\n    <li>Call us - 867-5309</li> \\n\r\n    <li>Email us - joe@petemporium.com </li> \\n\r\n    <li>Visit us - 452 Main St. </li> \\n\r\n  </ul> \\n\r\n \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
