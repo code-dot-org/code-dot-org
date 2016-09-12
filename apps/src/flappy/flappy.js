@@ -751,7 +751,9 @@ Flappy.execute = function () {
     whenRunButton: {code: generator('when_run')}
   };
 
-  Object.assign(Flappy, codegen.evalWithEvents({Flappy: api}, events));
+  codegen.evalWithEvents({Flappy: api}, events).forEach(hook => {
+    Flappy[hook.name] = hook.func;
+  });
 
   studioApp.playAudio('start');
 

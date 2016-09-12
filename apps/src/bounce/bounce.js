@@ -1076,7 +1076,9 @@ Bounce.execute = function () {
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp.reset(false);
 
-  Object.assign(Bounce, codegen.evalWithEvents({Bounce: api}, events));
+  codegen.evalWithEvents({Bounce: api}, events).forEach(hook => {
+    Bounce[hook.name] = hook.func;
+  });
 
   Bounce.tickCount = 0;
   Bounce.intervalId = window.setInterval(Bounce.onTick, Bounce.scale.stepSpeed);
