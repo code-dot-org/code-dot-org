@@ -15,10 +15,8 @@ class AdminReportsControllerTest < ActionController::TestCase
     @script = create(:script, name: 'report-script')
     @stage = create(:stage, script: @script, name: 'Report Stage 1')
     @stage2 = create(:stage, script: @script, name: 'Report Stage 2')
-    @script_level = create(:script_level, script: @script, stage: @stage)
-    @script_level2 = create(:script_level, script: @script, stage: @stage2)
-    @script_level.move_to_bottom
-    @script_level2.move_to_bottom
+    @script_level = create(:script_level, script: @script, stage: @stage, position: 1)
+    @script_level2 = create(:script_level, script: @script, stage: @stage2, position: 2)
 
     @teacher = create(:teacher)
     @teacher_section = create(:section, :user => @teacher)

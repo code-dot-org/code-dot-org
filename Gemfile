@@ -15,7 +15,8 @@ gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
 gem 'mysql2', '~> 0.3.13'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/28
-gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'rails_5_migration_fix'
+# Ref: https://github.com/bdurand/seamless_database_pool/issues/31
+gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'le', '~> 2.2'
 gem 'os'
@@ -37,13 +38,13 @@ gem 'rack_csrf'
 group :development do
   gem 'annotate'
   gem 'rack-mini-profiler'
-  gem 'rerun', '~> 0.10.0'
-  gem 'shotgun'
   gem 'thin'
   gem 'web-console'
 end
 
 group :development, :test do
+  gem 'rerun', '~> 0.10.0'
+  gem 'shotgun'
   gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
