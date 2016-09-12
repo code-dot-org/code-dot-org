@@ -112,6 +112,9 @@ describe("ScreenListItem", () => {
     );
     expect(item.text()).to.contain('main_screen');
     expect(item.text()).to.contain('Uses existing element IDs: "input1", "input2".');
+    // we don't want to show other errors related to importing.
+    expect(item.text()).not.to.contain('Importing this will replace your existing assets');
+    expect(item.text()).not.to.contain('Importing this will replace your existing screen');
   });
 
 });
