@@ -528,14 +528,9 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
-  def last_attempt_for_any(levels, script_id: nil)
+  def last_attempt_for_any(levels)
     level_ids = levels.map(&:id)
-    conditions = {
-      user_id: self.id,
-      level_id: level_ids
-    }
-    conditions[:script_id] = script_id unless script_id.nil?
-    UserLevel.where(conditions).
+    UserLevel.where(user_id: self.id, level_id: level_ids).
       order('updated_at DESC').
       first
   end
