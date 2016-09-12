@@ -1,4 +1,4 @@
-class AddProcessedLocationToPdWorkshops < ActiveRecord::Migration
+class AddProcessedLocationToPdWorkshops < ActiveRecord::Migration[4.2]
   def up
     add_column :pd_workshops, :processed_location, :text, after: :location_address
 

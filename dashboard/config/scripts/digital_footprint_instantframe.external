@@ -1,0 +1,5 @@
+name 'Digital Footprint instantframe'
+title 'instantframe - johnsnow'
+markdown <<MARKDOWN
+<iframe src="https://thimbleprojects.org/mrjoshida/98193/" width="960px" height="1200px" />
+MARKDOWN

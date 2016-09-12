@@ -1,4 +1,4 @@
-class CreateCallouts < ActiveRecord::Migration
+class CreateCallouts < ActiveRecord::Migration[4.2]
   def change
     create_table :callouts do |t|
       t.string :element_id, null: false, limit: 1024
