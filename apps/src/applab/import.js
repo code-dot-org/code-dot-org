@@ -43,8 +43,11 @@ function getImportableScreen(dom) {
   Array.from(dom.children).forEach(child => {
     if (!elementUtils.isIdAvailable(child.id)) {
       var existingElement = elementUtils.getPrefixedElementById(child.id);
-      if (existingElement && elementUtils.getId(existingElement.parentNode) !== id) {
-        conflictingIds.push(child.id);
+      if (existingElement) {
+        const existingElementScreen = $(existingElement).parents('.screen')[0];
+        if (elementUtils.getId(existingElementScreen) !== id) {
+          conflictingIds.push(child.id);
+        }
       }
     }
   });
@@ -57,14 +60,14 @@ function getImportableScreen(dom) {
     assetsToImport.push($(dom).attr('data-canonical-image-url'));
   }
   assetsToImport = assetsToImport.filter(asset => {
-      if ($(`#designModeViz [data-canonical-image-url="${asset}"]`).length > 0) {
-        // this will replace an existing asset
-        // so move it to the assetsToReplace list
-        assetsToReplace.push(asset);
-        return false;
-      }
-      return true;
-    });
+    if ($(`#designModeViz [data-canonical-image-url="${asset}"]`).length > 0) {
+      // this will replace an existing asset
+      // so move it to the assetsToReplace list
+      assetsToReplace.push(asset);
+      return false;
+    }
+    return true;
+  });
 
 
   return {

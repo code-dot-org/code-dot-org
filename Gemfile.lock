@@ -75,8 +75,8 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/seamless_database_pool.git
-  revision: 2bf241ef117e388cc30ed3b71f07868ee4d59e83
-  ref: rails_5_migration_fix
+  revision: eb56c376e54d7bb745f43ac2a791d76efec010f9
+  ref: cdo
   specs:
     seamless_database_pool (1.0.18)
       activerecord (>= 3.0.20)
