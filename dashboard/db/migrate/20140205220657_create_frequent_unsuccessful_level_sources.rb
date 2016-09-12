@@ -1,4 +1,4 @@
-class CreateFrequentUnsuccessfulLevelSources < ActiveRecord::Migration
+class CreateFrequentUnsuccessfulLevelSources < ActiveRecord::Migration[4.2]
   def change
     create_table :frequent_unsuccessful_level_sources do |t|
       t.integer :level_source_id, index: true, null: false
