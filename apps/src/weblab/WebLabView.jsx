@@ -7,7 +7,6 @@ import React from 'react';
 import _ from 'lodash';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import CodeWorkspace from '../templates/CodeWorkspace';
 
 /**
  * Top-level React wrapper for WebLab
