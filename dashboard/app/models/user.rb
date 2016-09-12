@@ -131,13 +131,12 @@ class User < ActiveRecord::Base
   # TODO(asher): Determine whether request level caching is sufficient, or
   #   whether a memcache or otherwise should be employed.
   def permission_from_cache?(permission)
-    # Default to using the value cached in the instance variable, if present.
-    unless @permissions.nil?
-      return @permissions.include? permission
+    if @permissions.nil?
+      # The user's permissions have not yet been cached, so do the DB query,
+      # caching the results.
+      @permissions = UserPermission.where(user_id: id).pluck(:permission)
     end
-    # The user's permissions were not cached, so query DB and save to instance
-    # variable.
-    @permissions = UserPermission.where(user_id: id).pluck(:permission)
+    # Return the cached results.
     return @permissions.include? permission
   end
 
