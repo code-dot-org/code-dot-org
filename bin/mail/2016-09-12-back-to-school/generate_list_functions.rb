@@ -68,11 +68,10 @@ def query_6_12_pd_teachers
   section_based_pd_teachers.merge ops_pd_teachers
 end
 
-def query_us_teachers_and_hoc_organizers
+def query_us_teachers
   query = <<-SOLR
     (
-      (kind_s:user && role_s:teacher) ||
-      kind_s:(HocSignup2016 OR HocSignup2015 OR HocSignup2014 OR CSEdWeekEvent2013)
+      kind_s:user && role_s:teacher
     ) && (
       create_ip_country_s: "United States" ||
       hoc_country_s: "us" ||
@@ -83,11 +82,10 @@ def query_us_teachers_and_hoc_organizers
   query_subscribed_contacts q: query
 end
 
-def query_international_teachers_and_hoc_organizers
+def query_international_teachers
   query = <<-SOLR
     (
-      (kind_s:user && role_s:teacher) ||
-      kind_s:(HocSignup2016 OR HocSignup2015 OR HocSignup2014 OR CSEdWeekEvent2013)
+      kind_s:user && role_s:teacher
     ) && NOT (
       create_ip_country_s: "United States" ||
       hoc_country_s: "us" ||
