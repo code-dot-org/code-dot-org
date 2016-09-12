@@ -14,25 +14,20 @@ Today, we [announced a big milestone](http://blog.code.org/post/150312492108/the
 
 ### New Code Studio features for your classroom, thanks to *your* feedback.
 
+### For middle and high school classrooms
+- **App Lab**, our online programming environment, is a powerful tool for middle and high school students to create and share *real working apps*. If you teach middle or high school and are new to App Lab, [start learning](https://code.org/applab)—and tell other teachers, too! If you’re already using App Lab, check out all our [feature updates](http://teacherblog.code.org/tagged/applab). 
+
+- **The best interactive tools** from our CS Principles course are now available as [stand-alone tools](https://code.org/widgets) to teach computer science concepts such as encryption or compression in any middle or high school classroom. 
+
+[![Check out App Lab](http://66.media.tumblr.com/0663724dae21139fab0a47190cd119c0/tumblr_inline_ocsyy6D4Vl1s7qct1_540.gif)](https://code.org/applab)
+
 ### For *any* classroom
 - Encourage **pair programming** in your classroom! We improved the way Code Studio tracks student progress, even if 2 students use the same computer! [Check it out](http://teacherblog.code.org/post/147349807334/try-pair-programmingtrack-the-progress-of) and let us know how it’s working in your classroom. 
 
 - Keep your CS Fundamentals class on track with ["Stage Extras"](http://teacherblog.code.org/post/149328400419/allow-your-students-to-keep-learning-without), so no one gets too far ahead or too behind. 
 
-### For middle and high school classrooms
-- **App Lab**, our online programming environment, is a powerful tool for middle and high school students to create and share *real working apps*. If you teach middle or high school and are new to App Lab, [start learning](https://code.org/applab)—and tell other teachers, too! If you’re already using App Lab, check out all our [feature updates](http://teacherblog.code.org/tagged/applab). 
-
-- **The best interactive tools** from our CS Principles course are now available as [stand-alone tools](https://code.org/widgets) to teach computer science concepts such as encryption or compression in any middle or high school classroom.  
-
-[![Check out App Lab](http://66.media.tumblr.com/0663724dae21139fab0a47190cd119c0/tumblr_inline_ocsyy6D4Vl1s7qct1_540.gif)](https://code.org/applab)
-
 <h3>Join me in a back-to-school live stream conversation.</h3>
 On September 22nd 7pmET/4pmPT, I’ll be hosting a back-to-school live stream, along with Alice Steinglass, VP of product and engineering, who will demo the features above. I hope to see you there. :-)
-
-<h3>Amazing (and free) weekend workshops for K-5 classroom teachers</h3>
-We offer free, one-day professional learning workshops to help elementary school teachers integrate computer science in their classroom. Tens of thousands of past attendees have rated this their “best PD experience ever,” so we hope you consider [finding a workshop near you.](https://code.org/professional-development-workshops) 
-
-[![image](https://staging.code.org/images/k5-workshop-map.png)](https://code.org/professional-development-workshops)
 
 <h3>Last but not least: the Hour of Code 2016 is coming! Sign up your classroom.</h3>
 Join the biggest learning event in history this **CS Education Week, December 5-11**. Last year, 200,000 educators hosted an Hour of Code event—and together we reached every single country on the globe. Help us reach *every student* this year. [Sign up early](https://hourofcode.com/us#join) to receive a free inspiration kit with posters for your class showing role models in tech, and more!
