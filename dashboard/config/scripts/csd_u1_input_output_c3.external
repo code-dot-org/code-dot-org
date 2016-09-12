@@ -1,0 +1,71 @@
+name 'CSD U1 Input Output C3'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Challenge 3
+
+
+This app helps the user figure out what to wear in the morning.
+
+Look at the possible information that you can input to your app, and decide which ones your app needs to work.
+
+Once you have the information that you need as input, decide what your app will output.
+
+## Input from Phone Sensors
+
+Sensor | Input Information
+------|--------
+**Microphone**: | The environment is quiet
+**GPS Location** | C,4
+**Motion Sensor** | The phone is not moving
+**Camera** | The image from the camera is all black
+
+
+## User Input
+
+User Prompt | User Information
+------|--------
+**Name** | Arik
+**Grade Level** | 8th grade
+**Favorite Color** | Science
+**Outfits** |
+**Planned Activities for the Day** |
+
+
+## Input from the Internet
+
+????? | Information
+------|--------
+**List of Major Holidays** | 
+ |New Year's Day  
+ |Martin Luther King Day  
+ |President's Day  
+ |Memorial Day  
+ |Independence Day  
+ |Labor Day  
+ |Veterans Day  
+ |Thanksgiving  
+ |Christmas  
+**The Temperature Anywhere in the World** | 
+ |Shanghai: 77F  
+ |Adelaide: 54F  
+ |Paris: 75F  
+ |Cairo: 79F  
+ |Buenos Aires: 52F  
+ |Boston: 66F  
+ |Vancouver: 63F  
+ |Guam: 84F  
+ | 
+**The Time Anywhere in the World** | 
+ |3rd Street Elementary School: 123-123-1234  
+ |Edison Middle School: 123-123-4321  
+ |City High School: 123-123-7890  
+**List of Top Tourist Attractions** | Grand Bazaar, Istanbul
+ | The Zócalo, Mexico City
+ | Times Square, New York City
+ | Meiji Jingu Shrine, Tokyo
+ | Niagara Falls
+ | Forbidden City, Beijing
+**List of Local Restaurants** | 
+MARKDOWN
