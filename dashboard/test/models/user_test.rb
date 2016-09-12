@@ -1319,35 +1319,35 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, follower.student_user.terms_version
   end
 
-  test 'permission_from_cache? returns true when permission exists' do
+  test 'permission? returns true when permission exists' do
     user = create :user
     UserPermission.create(
       user_id: user.id, permission: UserPermission::FACILITATOR
     )
 
-    assert user.permission_from_cache?(UserPermission::FACILITATOR)
+    assert user.permission?(UserPermission::FACILITATOR)
   end
 
-  test 'permission_from_cache? returns false when permission does not exist' do
+  test 'permission? returns false when permission does not exist' do
     user = create :user
     UserPermission.create(
       user_id: user.id, permission: UserPermission::FACILITATOR
     )
 
-    assert !user.permission_from_cache?(UserPermission::LEVELBUILDER)
+    assert !user.permission?(UserPermission::LEVELBUILDER)
   end
 
-  test 'permission_from_cache? caches all permissions' do
+  test 'permission? caches all permissions' do
     user = create :user
     UserPermission.create(
       user_id: user.id, permission: UserPermission::FACILITATOR
     )
 
-    user.permission_from_cache?(UserPermission::LEVELBUILDER)
+    user.permission?(UserPermission::LEVELBUILDER)
 
     ActiveRecord::Base.connection.disconnect!
 
-    assert user.permission_from_cache?(UserPermission::FACILITATOR)
-    assert !user.permission_from_cache?(UserPermission::LEVELBUILDER)
+    assert user.permission?(UserPermission::FACILITATOR)
+    assert !user.permission?(UserPermission::LEVELBUILDER)
   end
 end
