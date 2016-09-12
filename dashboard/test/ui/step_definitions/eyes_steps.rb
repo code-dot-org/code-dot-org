@@ -22,7 +22,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     @eyes.parent_branch_name = pr_base
   else
     fallback_branch = GitUtils.current_branch_base_no_origin
-    puts "No PR for eyes branch: #{GitUtils.current_branch}, using fallback branch #{fallback_branch}"
+    puts "No PR for eyes branch: #{GitUtils.current_branch}, using fallback parent branch #{fallback_branch}"
     @eyes.parent_branch_name = fallback_branch
   end
 
