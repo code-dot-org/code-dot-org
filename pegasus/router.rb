@@ -19,6 +19,7 @@ require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
+require 'active_support/core_ext/hash'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -180,7 +181,7 @@ class Documents < Sinatra::Base
   end
 
   # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
 
   # Manipulated images
@@ -406,10 +407,12 @@ class Documents < Sinatra::Base
         e.set_backtrace e.backtrace.unshift("#{path}:#{e.line}")
       end
       raise e
+    rescue => e
+      raise "Error rendering #{path}: #{e}"
     end
 
     def render_(body, extname, locals={})
-      locals = @locals.merge(locals)
+      locals = @locals.merge(locals).symbolize_keys
       case extname
       when '.erb', '.html'
         erb body, locals: locals

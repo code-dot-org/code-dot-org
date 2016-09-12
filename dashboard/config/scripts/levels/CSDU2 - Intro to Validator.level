@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T19:12:11.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Validator\r\n\r\nThe validator is a tool that allows you to check if a page is following good HTML fundamentals. \r\nTo use the validator, it’s important to work on it one error at a time.\r\n\r\n# Do This\r\n\r\n* In a new tab, open up the <a href=\"https://validator.w3.org/\">W3 validator</a>.\r\n* Click Validate by Direct Input\r\n* Copy and paste the contents of index.html into the box.\r\n* Click “Check”\r\n* Read the first error message\r\n* Fix the error in your index.html file in Web Lab\r\n\r\nShould get can't figure out parse mode error\r\nfix - add doctype and html tag",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1> Header </h1> \\n  A bunch of text about something. \\n <h4> Sub Header </h4> \\n  Some more text about something.  <h6> List </h6>  <ol>\\n  <li> thing 1 </li>\\n  <li> thing 2 </li>\\n  <li> thing 3 </li>\\n  </ol>\r\n \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -30,7 +30,6 @@ class ScriptLevel < ActiveRecord::Base
   has_and_belongs_to_many :levels
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
-  acts_as_list scope: :stage
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
@@ -136,12 +135,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    if assessment
-      if level.properties["pages"] && level.properties["pages"].length > 1
-        return true
-      end
-    end
-    false
+    return false unless assessment
+    level.properties["pages"] ? level.properties["pages"].length > 1 : false
   end
 
   def anonymous?

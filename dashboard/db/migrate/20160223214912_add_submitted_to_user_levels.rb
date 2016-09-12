@@ -1,4 +1,4 @@
-class AddSubmittedToUserLevels < ActiveRecord::Migration
+class AddSubmittedToUserLevels < ActiveRecord::Migration[4.2]
   def up
     execute('ALTER IGNORE TABLE user_levels add submitted tinyint(1)')
     execute('UPDATE user_levels SET submitted = true, best_result = 30 WHERE best_result = 1000')

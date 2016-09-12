@@ -1,4 +1,4 @@
-class RemovePlcForeignKeys < ActiveRecord::Migration
+class RemovePlcForeignKeys < ActiveRecord::Migration[4.2]
   def up
     remove_foreign_key_if_exists :professional_learning_tasks, :professional_learning_module_id
     remove_foreign_key_if_exists :user_professional_learning_course_enrollments, :user_id

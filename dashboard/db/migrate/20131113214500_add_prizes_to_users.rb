@@ -1,4 +1,4 @@
-class AddPrizesToUsers < ActiveRecord::Migration
+class AddPrizesToUsers < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :prize_earned, :boolean,               default: false
     add_reference :users, :prize

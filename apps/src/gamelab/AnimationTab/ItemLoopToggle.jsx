@@ -6,17 +6,18 @@ import * as PropTypes from '../PropTypes';
 
 var styles = {
   loopToggleStyle: {
-    width: 30,
-    height: 30,
-    backgroundColor: color.purple,
-    borderRadius: '50%',
-    padding: 2,
-    cursor: 'pointer'
+    backgroundColor: color.light_purple,
+    paddingTop: 5,
+    cursor: 'pointer',
+    color: '#fff',
+    fontSize: 12,
+    height: 25,
+    borderRadius: 3,
+    marginBottom: 4
   },
-  loopIconStyle: {
-    paddingTop: 3,
-    paddingLeft: 3,
-    position: 'relative'
+  checkboxStyle: {
+    marginTop: 0,
+    marginRight: 4
   }
 };
 
@@ -45,8 +46,8 @@ const ItemLoopToggle = React.createClass({
     const iconImageName = this.props.looping ? 'looping-continuous' : 'looping-one-time';
     const iconImageSrc = `/blockly/media/gamelab/${iconImageName}.png`;
     return (
-      <div style={[styles.loopToggleStyle, this.props.style]} onClick={this.toggleClicked}>
-        <img src={iconImageSrc} style={styles.loopIconStyle}/>
+      <div style={[styles.loopToggleStyle, this.props.style]}>
+        <label><input style={styles.checkboxStyle} type={"checkbox"} checked={this.props.looping} onChange={this.toggleClicked}/>Loop forever</label>
       </div>
     );
   }
