@@ -32,11 +32,6 @@ var styles = {
   },
   trash: {
     marginRight: 12
-  },
-  loopTogglePosition: {
-    position: 'absolute',
-    top: 10,
-    right: 10
   }
 };
 
@@ -51,7 +46,7 @@ var sliderStyle = {
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
-      <ItemLoopToggle style={styles.loopTogglePosition} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+      <ItemLoopToggle onToggleChange={props.onLoopingChanged} looping={props.looping} />
       <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
       <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
       <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />

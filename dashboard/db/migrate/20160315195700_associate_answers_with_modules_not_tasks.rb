@@ -1,4 +1,4 @@
-class AssociateAnswersWithModulesNotTasks < ActiveRecord::Migration
+class AssociateAnswersWithModulesNotTasks < ActiveRecord::Migration[4.2]
   def change
     #At the time this migration was written there were no Evaluation Answers in production, so it's safe to blow
     #everything up

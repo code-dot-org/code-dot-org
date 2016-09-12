@@ -12,5 +12,6 @@ Scenario: Submittable level
   And I click selector ".submitButton"
 
   Then I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/3?noautoplay=true"
+  And I wait until element ".unsubmitButton" is visible
   And I see no difference for "submitted puzzle"
   And I close my eyes

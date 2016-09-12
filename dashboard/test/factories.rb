@@ -305,17 +305,6 @@ FactoryGirl.define do
     position do |script_level|
       (script_level.stage.script_levels.maximum(:position) || 0) + 1 if script_level.stage
     end
-
-    properties do |script_level|
-      # If multiple levels are specified, mark all but the first as inactive
-      if script_level.levels.length > 1
-        props = {}
-        script_level.levels[1..-1].each do |level|
-          props[level.name] = {active: false}
-        end
-        props.to_json
-      end
-    end
   end
 
   factory :stage do
@@ -485,20 +474,9 @@ FactoryGirl.define do
     name "MyString"
   end
 
-  factory :level_group, class: LevelGroup do
+  factory :level_group do
     game {create(:game, app: "level_group")}
-    transient do
-      title 'title'
-      submittable false
-    end
-    properties do
-      {
-        title: title,
-        anonymous: false,
-        submittable: submittable,
-        pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]
-      }
-    end
+    properties{{title: 'title', anonymous: 'false', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
   end
 
   factory :survey_result do
