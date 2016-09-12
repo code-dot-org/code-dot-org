@@ -92,18 +92,30 @@ const styles = {
 
 };
 
+const shapes = {
+  tutorial: React.PropTypes.shape({
+    tags_length: React.PropTypes.string,
+    tags_subject: React.PropTypes.string,
+    tags_teacher_experience: React.PropTypes.string,
+    tags_student_experience: React.PropTypes.string,
+    tags_activity_type: React.PropTypes.string,
+    tags_international_languages: React.PropTypes.string,
+    tags_grade: React.PropTypes.string,
+    tags_programming_language: React.PropTypes.string
+  })
+};
+
+
 window.TutorialExplorerManager = function (options) {
   this.options = options;
 
   const FilterChoice = React.createClass({
     propTypes: {
-      onUserInput: React.PropTypes.func,
-      groupName: React.PropTypes.string,
-      name: React.PropTypes.string,
-      isCheckedInput: React.PropTypes.bool,
-      value: React.PropTypes.string,
-      selected: React.PropTypes.bool,
-      text: React.PropTypes.string
+      onUserInput: React.PropTypes.func.isRequired,
+      groupName: React.PropTypes.string.isRequired,
+      name: React.PropTypes.string.isRequired,
+      selected: React.PropTypes.bool.isRequired,
+      text: React.PropTypes.string.isRequired
     },
 
     handleChange: function () {
@@ -120,7 +132,6 @@ window.TutorialExplorerManager = function (options) {
           <label style={styles.filterChoiceLabel}>
             <input
               type="checkbox"
-              value={this.props.value}
               checked={this.props.selected}
               ref="isCheckedInput"
               onChange={this.handleChange}
@@ -135,11 +146,11 @@ window.TutorialExplorerManager = function (options) {
 
   const FilterGroup = React.createClass({
     propTypes: {
-      name: React.PropTypes.string,
-      text: React.PropTypes.string,
-      filterEntries: React.PropTypes.array,
-      selection: React.PropTypes.array,
-      onUserInput: React.PropTypes.func
+      name: React.PropTypes.string.isRequired,
+      text: React.PropTypes.string.isRequired,
+      filterEntries: React.PropTypes.array.isRequired,
+      selection: React.PropTypes.array.isRequired,
+      onUserInput: React.PropTypes.func.isRequired
     },
 
     render() {
@@ -165,9 +176,9 @@ window.TutorialExplorerManager = function (options) {
 
   const FilterSet = React.createClass({
     propTypes: {
-      filterGroups: React.PropTypes.array,
-      onUserInput: React.PropTypes.func,
-      selection: React.PropTypes.object
+      filterGroups: React.PropTypes.array.isRequired,
+      onUserInput: React.PropTypes.func.isRequired,
+      selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired
     },
 
     render() {
@@ -199,7 +210,7 @@ window.TutorialExplorerManager = function (options) {
       return "";
     }
 
-    var tagToString = {
+    const tagToString = {
       length_1_hour: "One hour",
       subject_english: "English",
       subject_history: "History",
@@ -218,11 +229,11 @@ window.TutorialExplorerManager = function (options) {
     return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).join(', ');
   }
 
-  var TutorialDetail = React.createClass({
+  const TutorialDetail = React.createClass({
     propTypes: {
-      showing: React.PropTypes.bool,
-      item: React.PropTypes.object,
-      closeClicked: React.PropTypes.func,
+      showing: React.PropTypes.bool.isRequired,
+      item: shapes.tutorial.isRequired,
+      closeClicked: React.PropTypes.func.isRequired,
     },
 
     render: function () {
@@ -331,7 +342,7 @@ window.TutorialExplorerManager = function (options) {
 
   const Tutorial = React.createClass({
     propTypes: {
-      item: React.PropTypes.object.isRequired
+      item: shapes.tutorial.isRequired
     },
 
     getInitialState: function () {
@@ -385,77 +396,75 @@ window.TutorialExplorerManager = function (options) {
 
   const TutorialSet = React.createClass({
     propTypes: {
-      tutorials: React.PropTypes.arrayOf(
-        React.PropTypes.object
-      ).isRequired,
-      filters: React.PropTypes.object,
-      locale: React.PropTypes.string
+      tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
+      filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
+      locale: React.PropTypes.string.isRequired
+    },
+
+    // Should we show this item based on current filter settings?
+    // Go through all active filter categories.
+    // No filters set for a category, then show everything that might match.
+    // Tutorial has no tags, then it'll show.
+    // But if we actually have filters for a category, and the tutorial does too,
+    // then at least one filter must have a tag.
+    //   e.g. if the user chooses two platforms, then at least one of the
+    //   platforms must match the tutorial.
+
+    filterFn: function (tutorial, index, array) {
+
+      // First check that the tutorial language doesn't exclude it immediately.
+      // If the tags contain some languages, and we don't have a match, then
+      // hide the tutorial.
+      if (tutorial.languages_supported) {
+        var languageTags = tutorial.languages_supported.split(',');
+        var currentLocale = this.props.locale;
+        if (languageTags.length > 0 &&
+          !languageTags.includes(currentLocale) &&
+          !languageTags.includes(currentLocale.substring(0,2))) {
+          return false;
+        }
+      }
+
+      // If we miss any filter group, then we don't show the tutorial.
+      var filterGroupMiss = false;
+
+      for (var filterGroupName in this.props.filters) {
+        var tutorialTags = tutorial["tags_" + filterGroupName];
+        if (tutorialTags && tutorialTags.length > 0) {
+          var tutorialTagsSplit = tutorialTags.split(',');
+
+          // now check all the filter group's tags
+          var filterGroup = this.props.filters[filterGroupName];
+
+          // For this filter group, we've not yet found a matching tag between
+          // user selected otions and tutorial tags.
+          var filterHit = false;
+
+          for (var filterName of filterGroup) {
+            if (tutorialTagsSplit.includes(filterName)) {
+              // The tutorial had a matching tag.
+              filterHit = true;
+            }
+          }
+
+          // The filter group needs at least one user-selected filter to hit
+          // on the tutorial.
+          if (filterGroup.length !== 0 && !filterHit) {
+            filterGroupMiss = true;
+          }
+        }
+      }
+
+      return !filterGroupMiss;
     },
 
     render() {
-      // Should we show this item based on current filter settings?
-      // Go through all active filter categories.
-      // No filters set for a category, then show everything that might match.
-      // Tutorial has no tags, then it'll show.
-      // But if we actually have filters for a category, and the tutorial does too,
-      // then at least one filter must have a tag.
-      //   e.g. if the user chooses two platforms, then at least one of the
-      //   platforms must match the tutorial.
-
-      function filterFn(tutorial, index, array) {
-
-        // First check that the tutorial language doesn't exclude it immediately.
-        // If the tags contain some languages, and we don't have a match, then
-        // hide the tutorial.
-        if (tutorial.languages_supported) {
-          var languageTags = tutorial.languages_supported.split(',');
-          var currentLocale = this.props.locale;
-          if (languageTags.length > 0 &&
-            !languageTags.includes(currentLocale) &&
-            !languageTags.includes(currentLocale.substring(0,2))) {
-            return false;
-          }
-        }
-
-        // If we miss any filter group, then we don't show the tutorial.
-        var filterGroupMiss = false;
-
-        for (var filterGroupName in this.props.filters) {
-          var tutorialTags = tutorial["tags_" + filterGroupName];
-          if (tutorialTags && tutorialTags.length > 0) {
-            var tutorialTagsSplit = tutorialTags.split(',');
-
-            // now check all the filter group's tags
-            var filterGroup = this.props.filters[filterGroupName];
-
-            // For this filter group, we've not yet found a matching tag between
-            // user selected otions and tutorial tags.
-            var filterHit = false;
-
-            for (var filterName of filterGroup) {
-              if (tutorialTagsSplit.includes(filterName)) {
-                // The tutorial had a matching tag.
-                filterHit = true;
-              }
-            }
-
-            // The filter group needs at least one user-selected filter to hit
-            // on the tutorial.
-            if (filterGroup.length !== 0 && !filterHit) {
-              filterGroupMiss = true;
-            }
-          }
-        }
-
-        return !filterGroupMiss;
-      }
-
       return (
         <div
           className="col-80"
           style={{float: 'left'}}
         >
-          {this.props.tutorials.filter(filterFn, this).map(item => (
+          {this.props.tutorials.filter(this.filterFn, this).map(item => (
             <Tutorial
               item={item}
               filters={this.props.filters}
@@ -469,9 +478,9 @@ window.TutorialExplorerManager = function (options) {
 
   const TutorialExplorer = React.createClass({
     propTypes: {
-      filterGroups: React.PropTypes.array,
-      tutorials: React.PropTypes.array,
-      locale: React.PropTypes.string
+      filterGroups: React.PropTypes.array.isRequired,
+      tutorials: React.PropTypes.array.isRequired,
+      locale: React.PropTypes.string.isRequired
     },
 
     getInitialState: function () {
