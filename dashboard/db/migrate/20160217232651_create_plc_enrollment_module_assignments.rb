@@ -1,4 +1,4 @@
-class CreatePlcEnrollmentModuleAssignments < ActiveRecord::Migration
+class CreatePlcEnrollmentModuleAssignments < ActiveRecord::Migration[4.2]
   def change
     create_table :plc_enrollment_module_assignments do |t|
       t.references :plc_user_course_enrollment, index: {name: 'module_assignment_enrollment_index'}
