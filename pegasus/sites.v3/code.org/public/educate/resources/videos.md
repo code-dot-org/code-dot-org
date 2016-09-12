@@ -37,6 +37,14 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/Dxcc6ycZ73M'} %>
+<% twitter = {:url=>'https://youtu.be/Dxcc6ycZ73M', :related=>'codeorg', :text=>'What is the internet? @codeorg'} %>
+<%=view :display_video_thumbnail, id: "WHATINTERNET", video_code: "Dxcc6ycZ73M", caption: "What is the internet?", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/what_is_the_internet.mp4"%>
+
+</div>
+
 <div style="clear: both;"></div>
 
 ## How the internet works
