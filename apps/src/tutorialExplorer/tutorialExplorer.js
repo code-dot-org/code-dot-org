@@ -10,9 +10,90 @@ window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
 var update = require('react-addons-update');
 
+const styles = {
+  filterChoiceOuter: {
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    MsUserSelect: 'none'
+  },
+  filterChoiceLabel: {
+    fontFamily: "\"Gotham 4r\", sans-serif",
+    fontSize: 13,
+    paddingBottom: 0,
+    marginBottom: 0,
+    cursor: 'pointer'
+  },
+  filterGroupOuter: {
+    paddingTop: 20,
+    paddingRight: 40
+  },
+  filterGroupText: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    borderBottom: 'solid grey 1px'
+  },
+  tutorialDetailModalHeader: {
+    borderBottomWidth: 0,
+    paddingTop: 0,
+    paddingBottom: 4,
+    height: 48
+  },
+  tutorialDetailModalBody: {
+    paddingTop: 0,
+    overflow: 'hidden',
+    textAlign: 'left'
+  },
+  popupFullWidth: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%'
+  },
+  tutorialDetailName: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 22
+  },
+  tutorialDetailSub: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 12,
+    paddingBottom: 20
+  },
+  tutorialDetailDescription: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 14
+  },
+  tutorialDetailsTable: {
+    marginTop: 20,
+    width: '100%'
+  },
+  tutorialDetailsTableTitle: {
+    padding: 5,
+    width: '40%',
+    fontFamily: '"Gotham 5r", sans-serif',
+    border: '1px solid lightgrey'
+  },
+  tutorialDetailsTableBody: {
+    padding: 5,
+    border: '1px solid lightgrey'
+  },
+  tutorialName: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
+  },
+  tutorialSub: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 12,
+    paddingBottom: 20
+  },
+
+
+};
+
 window.TutorialExplorerManager = function (options) {
   this.options = options;
-  var self = this;
 
   const FilterChoice = React.createClass({
     propTypes: {
@@ -35,8 +116,8 @@ window.TutorialExplorerManager = function (options) {
 
     render() {
       return (
-        <div  style={{userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', MsUserSelect: 'none'}}>
-          <label style={{fontFamily: "\"Gotham 4r\", sans-serif", fontSize: 13, paddingBottom: 0, marginBottom: 0, cursor: 'pointer'}}>
+        <div style={styles.filterChoiceOuter}>
+          <label style={styles.filterChoiceLabel}>
             <input
               type="checkbox"
               value={this.props.value}
@@ -63,11 +144,20 @@ window.TutorialExplorerManager = function (options) {
 
     render() {
       return (
-        <div style={{paddingTop: 20, paddingRight: 40}}>
-          <div style={{fontFamily: '"Gotham 5r", sans-serif', borderBottom: 'solid grey 1px'}}>
+        <div style={styles.filterGroupOuter}>
+          <div style={styles.filterGroupText}>
             {this.props.text}
           </div>
-          {this.props.filterEntries.map(item => <FilterChoice groupName={this.props.name} name={item.name} text={item.text} selected={this.props.selection && this.props.selection.includes(item.name)} onUserInput={this.props.onUserInput} key={item.name}/>)}
+          {this.props.filterEntries.map(item => (
+            <FilterChoice
+              groupName={this.props.name}
+              name={item.name}
+              text={item.text}
+              selected={this.props.selection && this.props.selection.includes(item.name)}
+              onUserInput={this.props.onUserInput}
+              key={item.name}
+            />
+          ))}
         </div>
       );
     }
@@ -87,7 +177,16 @@ window.TutorialExplorerManager = function (options) {
             <div style={{fontSize: 16}}>
               Filter By
             </div>
-            {this.props.filterGroups.map(item => <FilterGroup name={item.name} text={item.text} filterEntries={item.entries} onUserInput={this.props.onUserInput} selection={this.props.selection[item.name]} key={item.name}/>)}
+            {this.props.filterGroups.map(item => (
+              <FilterGroup
+                name={item.name}
+                text={item.text}
+                filterEntries={item.entries}
+                onUserInput={this.props.onUserInput}
+                selection={this.props.selection[item.name]}
+                key={item.name}
+              />
+            ))}
           </div>
         </div>
       );
@@ -146,41 +245,75 @@ window.TutorialExplorerManager = function (options) {
       ];
 
       return (
-        <div id="tutorialPopupFullWidth" style={{position: 'absolute', left: 0, top: 0, width: '100%'}}>
-          <div className="modal" id="tutorialPopup" style={{display: 'block'}} onClick={this.props.closeClicked}>
-            <div className="modal-dialog modal-lg" onClick={(e) => e.stopPropagation()}>
+        <div
+          id="tutorialPopupFullWidth"
+          style={styles.popupFullWidth}
+        >
+          <div
+            className="modal"
+            id="tutorialPopup"
+            style={{display: 'block'}}
+            onClick={this.props.closeClicked}
+          >
+            <div
+              className="modal-dialog modal-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="modal-content">
-                <div className="modal-header" style={{borderBottomWidth: 0, paddingTop: 0, paddingBottom: 4, height: 48}}>
-                  <button className="close" data-dismiss="modal" style={{height: 48}} type="button" onClick={this.props.closeClicked}>
-                    <span aria-hidden="true" style={{fontSize: 48}}>×</span>
+                <div
+                  className="modal-header"
+                  style={styles.tutorialDetailModalHeader}
+                >
+                  <button
+                    className="close"
+                    data-dismiss="modal"
+                    style={{height: 48}}
+                    type="button"
+                    onClick={this.props.closeClicked}
+                  >
+                    <span
+                      aria-hidden="true"
+                      style={{fontSize: 48}}
+                    >
+                      ×
+                    </span>
                     <span className="sr-only">Close</span>
                   </button>
                   <div style={{clear: 'both'}} />
                 </div>
-                <div className="modal-body" style={{paddingTop: 0, overflow: 'hidden', textAlign: 'left'}}>
+                <div
+                  className="modal-body"
+                  style={styles.tutorialDetailModalBody}
+                >
                   <div className="col-50">
-                    <img src={this.props.item.image} style={{width: '100%'}}/>
+                    <img
+                      src={this.props.item.image}
+                      style={{width: '100%'}}
+                    />
                   </div>
-                  <div className="col-50" style={{paddingLeft: 20}}>
-                    <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 22}}>
+                  <div
+                    className="col-50"
+                    style={{paddingLeft: 20}}
+                  >
+                    <div style={styles.tutorialDetailName}>
                       {this.props.item.name}
                     </div>
-                    <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
+                    <div style={styles.tutorialDetailSub}>
                       {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
                     </div>
-                    <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 14}}>
+                    <div style={styles.tutorialDetailDescription}>
                       {this.props.item.longdescription}
                     </div>
                   </div>
                   <div style={{clear: 'both'}}/>
-                  <table style={{marginTop: 20, width: '100%'}}>
+                  <table style={styles.tutorialDetailsTable}>
                     <tbody>
                       {tableEntries.map(item =>
                         <tr key={item.key}>
-                          <td style={{padding: 5, width: '40%', fontFamily: '"Gotham 5r", sans-serif', border: '1px solid lightgrey'}}>
+                          <td style={styles.tutorialDetailsTableTitle}>
                             {item.title}
                           </td>
-                          <td style={{padding: 5, border: '1px solid lightgrey'}}>
+                          <td style={styles.tutorialDetailsTableBody}>
                             {item.body}
                           </td>
                         </tr>
@@ -218,15 +351,28 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div>
-          <TutorialDetail showing={this.state.showingDetail} item={this.props.item} closeClicked={this.tutorialDetailClosed}/>
-          <div className="col-33" style={{float: 'left', padding: 2}}>
+          <TutorialDetail
+            showing={this.state.showingDetail}
+            item={this.props.item}
+            closeClicked={this.tutorialDetailClosed}
+          />
+          <div
+            className="col-33"
+            style={{float: 'left', padding: 2}}
+          >
             <div style={{padding: 5}}>
-              <div style={{cursor: 'pointer'}} onClick={this.tutorialClicked}>
-                <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
-                <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 15, textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}}>
+              <div
+                style={{cursor: 'pointer'}}
+                onClick={this.tutorialClicked}
+              >
+                <img
+                  src={this.props.item.image}
+                  style={{width: '100%', height: 180}}
+                />
+                <div style={styles.tutorialName}>
                   {this.props.item.name}
                 </div>
-                <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
+                <div style={styles.tutorialSub}>
                   {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
                 </div>
               </div>
@@ -305,8 +451,17 @@ window.TutorialExplorerManager = function (options) {
       }
 
       return (
-        <div className="col-80" style={{float: 'left'}}>
-          {this.props.tutorials.filter(filterFn, this).map(item => <Tutorial item={item} filters={this.props.filters} key={item.code}/>)}
+        <div
+          className="col-80"
+          style={{float: 'left'}}
+        >
+          {this.props.tutorials.filter(filterFn, this).map(item => (
+            <Tutorial
+              item={item}
+              filters={this.props.filters}
+              key={item.code}
+            />
+          ))}
         </div>
       );
     }
@@ -324,7 +479,6 @@ window.TutorialExplorerManager = function (options) {
 
       for (let filterGroup of this.props.filterGroups) {
         filters[filterGroup.name] = [];
-
       }
       return {
         filters: filters
@@ -359,16 +513,27 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div>
-          <FilterSet filterGroups={this.props.filterGroups} onUserInput={this.handleUserInput} selection={this.state.filters}/>
-          <TutorialSet tutorials={this.props.tutorials} filters={this.state.filters} locale={this.props.locale}/>
+          <FilterSet
+            filterGroups={this.props.filterGroups}
+            onUserInput={this.handleUserInput}
+            selection={this.state.filters}
+          />
+          <TutorialSet
+            tutorials={this.props.tutorials}
+            filters={this.state.filters}
+            locale={this.props.locale}
+          />
         </div>
       );
     }
   });
 
   window.ReactDOM.render(
-    <TutorialExplorer filterGroups={options.filters} tutorials={options.tutorials.contents} locale={options.locale}/>,
+    <TutorialExplorer
+      filterGroups={options.filters}
+      tutorials={options.tutorials.contents}
+      locale={options.locale}
+    />,
     document.getElementById('tutorials')
   );
-
 };
