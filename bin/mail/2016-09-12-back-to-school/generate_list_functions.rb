@@ -3,11 +3,11 @@ require_relative '../mailing-common/mailing-list-utils'
 require 'active_support'
 require 'active_support/core_ext/object/blank'
 
-ALL_EMAILS = Set.new
+@all_emails = Set.new
 
 def dedupe(contacts)
-  contacts.except! *ALL_EMAILS
-  ALL_EMAILS.merge contacts.keys
+  contacts.except! *@all_emails
+  @all_emails.merge contacts.keys
   contacts
 end
 
