@@ -1,4 +1,4 @@
-class DropPlcEnrollmentTaskAssignments < ActiveRecord::Migration
+class DropPlcEnrollmentTaskAssignments < ActiveRecord::Migration[4.2]
   def up
     drop_table :plc_enrollment_task_assignments
   end

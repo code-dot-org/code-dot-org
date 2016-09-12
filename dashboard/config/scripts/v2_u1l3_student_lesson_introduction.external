@@ -16,6 +16,8 @@ Now that you have learned what binary messages are, we are going to investigate 
 * **Bit** - A contraction of &quot;Binary Digit&quot;.  A bit is the single unit of information in a computer, typically represented as a 0 or 1.
 * **Bit rate** - (sometimes written bitrate) the number of bits that are conveyed or processed per unit of time. e.g. 8 bits/sec.
 * **Protocol** - A set of rules governing the exchange or transmission of data between devices.
+* **Bandwidth** - Transmission capacity measure by bit rate
+* **Latency** - Time it takes for a bit to travel from its sender to its receiver.
 
 ## Lesson
 
