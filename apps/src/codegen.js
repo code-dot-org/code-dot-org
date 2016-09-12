@@ -65,15 +65,16 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
     if (typeof code === 'string') {
       code = [code];
     }
-    code.forEach(c => {
+    code.forEach((c, index) => {
+      const eventId = `${event}-${index}`;
       // Create a hook that triggers an event inside the interpreter.
       hooks.push({name: event, func: (...args) => {
-        const eventArgs = {name: event, args};
+        const eventArgs = {name: eventId, args};
         currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
         interpreter.run();
         return lastReturnValue;
       }});
-      evalCode += `this['${event}']=function(${args ? args.join() : ''}){${c}};`;
+      evalCode += `this['${eventId}']=function(${args ? args.join() : ''}){${c}};`;
     });
   });
 
