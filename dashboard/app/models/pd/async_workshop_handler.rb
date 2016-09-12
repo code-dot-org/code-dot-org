@@ -1,3 +1,5 @@
+require 'sqs/sqs_queue'
+
 # An SQS messages handler for asynchronous workshop jobs,
 # notably wrapping up a workshop when it ends (sending emails, generating reports, etc.)
 class Pd::AsyncWorkshopHandler

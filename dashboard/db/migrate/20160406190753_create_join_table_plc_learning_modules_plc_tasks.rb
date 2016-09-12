@@ -1,4 +1,4 @@
-class CreateJoinTablePlcLearningModulesPlcTasks < ActiveRecord::Migration
+class CreateJoinTablePlcLearningModulesPlcTasks < ActiveRecord::Migration[4.2]
   def up
     create_join_table :plc_learning_modules, :plc_tasks do |t|
       t.index :plc_learning_module_id

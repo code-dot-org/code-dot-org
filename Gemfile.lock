@@ -53,6 +53,15 @@ GIT
       tilt
 
 GIT
+  remote: git://github.com/wjordan/omniauth-windowslive.git
+  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
+  ref: cdo
+  specs:
+    omniauth-windowslive (0.0.11)
+      multi_json (>= 1.0.3)
+      omniauth-oauth2 (~> 1.4)
+
+GIT
   remote: git://github.com/wjordan/sass-rails.git
   revision: 06e833d92d083fbcb137364ffebc597b2577db23
   ref: frozen-array-fix
@@ -66,8 +75,8 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/seamless_database_pool.git
-  revision: 2bf241ef117e388cc30ed3b71f07868ee4d59e83
-  ref: rails_5_migration_fix
+  revision: eb56c376e54d7bb745f43ac2a791d76efec010f9
+  ref: cdo
   specs:
     seamless_database_pool (1.0.18)
       activerecord (>= 3.0.20)
@@ -415,9 +424,6 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    omniauth-windowslive (0.0.10)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.0)
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (0.9.6)
@@ -706,7 +712,7 @@ DEPENDENCIES
   omniauth-clever (~> 1.2.1)!
   omniauth-facebook (~> 4.0.0.rc1)
   omniauth-google-oauth2 (~> 0.3.1)
-  omniauth-windowslive (~> 0.0.10)
+  omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
   parallel

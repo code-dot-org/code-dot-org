@@ -20,6 +20,7 @@ require_relative 'messages_handler'
 require_relative 'metrics'
 require_relative 'queue_processor_config'
 require_relative 'rate_limiter'
+require_relative 'message'
 
 module SQS
   # A class for processing an SQS queue using a pool of worker threads, each of which

@@ -1,4 +1,4 @@
-class ChangeStarsToBestResult < ActiveRecord::Migration
+class ChangeStarsToBestResult < ActiveRecord::Migration[4.2]
   def change
     remove_column :activities, :stars
     remove_column :user_levels, :stars
