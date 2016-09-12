@@ -2987,15 +2987,16 @@ Studio.execute = function () {
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
       const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
-
-      // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
-      Object.defineProperty(Studio, 'Globals', {
-        get: () => {return hooks.getGlobals() || {};},
-        set: () => {}
-      });
-
-      Object.keys(hooks).forEach(hook => {
-        registerEventHandler(handlers, hook, hooks[hook]);
+      hooks.forEach(hook => {
+        if (hook.name === 'getGlobals') {
+          // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
+          Object.defineProperty(Studio, 'Globals', {
+            get: () => {return hook.func() || {};},
+            set: () => {}
+          });
+        } else {
+          registerEventHandler(handlers, hook.name, hook.func);
+        }
       });
     }
 
