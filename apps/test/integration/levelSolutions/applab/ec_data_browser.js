@@ -2,6 +2,8 @@ import tickWrapper from '../../util/tickWrapper';
 import { TestResults } from '@cdo/apps/constants';
 import ReactTestUtils from 'react-addons-test-utils';
 
+const enterKeyEvent = {key: "Enter", keyCode: 13, which: 13};
+
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -96,7 +98,6 @@ module.exports = {
             const column1NameInput = dataTable.find('th > input[value="column1"]');
             assert.equal(column1NameInput.is(':visible'), true, 'column1 name input is visible');
             ReactTestUtils.Simulate.change(column1NameInput[0], { target: { value: 'firstname' } });
-            const enterKeyEvent = {key: "Enter", keyCode: 13, which: 13};
             ReactTestUtils.Simulate.keyUp(column1NameInput[0], enterKeyEvent);
             assert.equal(column1NameInput.is(':visible'), false, 'column1 name input is hidden');
             assert.equal(dataTable.find('th > div:contains(firstname)').is(':visible'), true, 'column1 renamed to firstname');
@@ -192,7 +193,6 @@ module.exports = {
           const ageInput = record1Row.find('input')[1];
           assert.equal(ageInput.value, '7', 'age input cell value in edit row');
           ReactTestUtils.Simulate.change(ageInput, { target: { value: '9' } });
-          const enterKeyEvent = {key: "Enter", keyCode: 13, which: 13};
           ReactTestUtils.Simulate.keyUp(ageInput, enterKeyEvent);
           setTimeout(() => {
             editButton = record1Row.find('button:contains(Edit)');
@@ -216,6 +216,90 @@ module.exports = {
       },
     },
 
+    {
+      description: "Data Browser can rename or delete table columns",
+      editCode: true,
+      useFirebase: true,
+      xml:`
+        createRecord('mytable', {oldName:'Alice', age:7, male:false}, function () {
+          console.log('created record');
+        });
+        onRecordEvent("mytable", function(record, eventType) {
+          if (eventType === 'update') {
+            console.log('record updated: ' + JSON.stringify(record));
+          }
+        });`,
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, function () {
+          // Overview
+          $("#dataModeButton").click();
+          const dataOverview = $('#dataOverview');
+          assert.equal(dataOverview.is(':visible'), true, 'dataOverview is visible');
+          const tableLink = dataOverview.find('a:contains(mytable)');
+          assert.equal(tableLink.is(':visible'), true, 'table link is visible');
+
+          // view table
+          ReactTestUtils.Simulate.click(tableLink[0]);
+          const dataTable = $('#dataTable');
+          assert.equal(dataTable.is(':visible'), true, 'dataTable is visible');
+          const record1Row = dataTable.find('tr:contains(Alice)');
+          assert.equal(record1Row.is(':visible'), true, 'record 1 appears in the grid');
+
+          // rename column
+          const nameHeader = dataTable.find('th:contains(oldName)');
+          assert.equal(nameHeader.is(':visible'), true, 'Name header is visible');
+          const gearIcon = nameHeader.find('.fa-cog');
+          ReactTestUtils.Simulate.click(gearIcon[0]);
+          const renameLink = nameHeader.find('a:contains(Rename)');
+          assert.equal(renameLink.is(':visible'), true, 'Rename link is visible');
+          ReactTestUtils.Simulate.click(renameLink[0]);
+          const columnInput = nameHeader.find('input');
+          assert.equal(columnInput.is(':visible'), true, 'column input is visible');
+          ReactTestUtils.Simulate.change(columnInput[0], { target: { value: 'newName' } });
+          ReactTestUtils.Simulate.keyUp(columnInput[0], enterKeyEvent);
+          setTimeout(() => {
+            const newTitle = dataTable.find('th > div:contains(newName)');
+            assert.equal(newTitle.is(':visible'), true, 'name header is visible');
+
+            // delete column
+            let genderHeader = dataTable.find('th:contains(male)');
+            assert.equal(genderHeader.is(':visible'), true, 'Gender header is visible');
+            const gearIcon = genderHeader.find('.fa-cog');
+            ReactTestUtils.Simulate.click(gearIcon[0]);
+            const deleteLink = genderHeader.find('a:contains(Delete)');
+            assert.equal(deleteLink.is(':visible'), true, 'Delete link is visible');
+            ReactTestUtils.Simulate.click(deleteLink[0]);
+
+            // confirm delete
+            const confirmDeleteButton = genderHeader.find('button:contains(Delete)');
+            assert.equal(confirmDeleteButton.is(':visible'), true, 'Confirm delete button is visible');
+            ReactTestUtils.Simulate.click(confirmDeleteButton[0]);
+            setTimeout(() => {
+              genderHeader = dataTable.find('th:contains(male)');
+              assert.equal(genderHeader.length, 0, 'gender header is gone');
+
+              Applab.onPuzzleComplete();
+            }, 100);
+          }, 100);
+        });
+      },
+      customValidator: function (assert) {
+        // Verify that onRecordEvent was called with the correct data
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent,
+          'created record\n' +
+          'record updated: {"newName":"Alice","age":7,"male":false,"id":1}\n' +
+          'record updated: {"newName":"Alice","age":7,"id":1}'
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
 
     // The data browser uses Firebase.off() somewhat broadly in order to stop
     // listening for data changes as you switch between data browser views. This
