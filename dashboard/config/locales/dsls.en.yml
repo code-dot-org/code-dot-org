@@ -153,6 +153,15 @@ en:
       CSD U1 Input Output C2:
         description here: description here
         title: title
+      CSD U1 Input Output C3:
+        description here: description here
+        title: title
+      CSD U1 Input Output C4:
+        description here: description here
+        title: title
+      CSD U1 Input Output Intro:
+        description here: description here
+        title: title
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -196,6 +205,7 @@ en:
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
       CSDU2- home page examples: {}
+      CSDU2L04 - Stop: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -392,6 +402,12 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Digital Footprint Chirpr johnsnow:
+        Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint FaceSpace John:
+        FaceSpace - John T: FaceSpace - John T
+      Digital Footprint instantframe:
+        instantframe - johnsnow: instantframe - johnsnow
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -618,6 +634,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD-unit2 What is the Challenge: {}
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
       ECSPD1 Code Studio:
@@ -1407,6 +1424,12 @@ en:
         description here: description here
         title: title
       U4 Inspirational Data Video: {}
+      U4 caesar cipher interstitial:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      U4 how to crack substitution cipher:
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       U4L01 Student Lesson Introduction:
         description here: description here
         title: title
