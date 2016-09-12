@@ -162,7 +162,6 @@ function load(Bramble) {
   Bramble.on("ready", function (bramble) {
 
     brambleProxy_ = bramble;
-    brambleProxy_.showTutorial();
   });
 
   Bramble.once("error", function (err) {
