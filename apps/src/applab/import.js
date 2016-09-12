@@ -155,21 +155,24 @@ export function importScreensAndAssets(projectId, screens, assets) {
       importableScreen.assetsToImport.forEach(asset => allAssetsToCopy[asset] = true);
     });
 
+    function finishImporting(xhr) {
+      designMode.resetPropertyTab();
+      resolve(xhr);
+    }
+
     allAssetsToCopy = Object.keys(allAssetsToCopy);
     if (allAssetsToCopy.length > 0) {
       assetsApi.copyAssets(
         projectId,
         allAssetsToCopy,
-        xhr => {
-          resolve(xhr);
-        },
+        finishImporting,
         xhr => {
           console.error("Failed to copy assets:", xhr);
           reject(xhr);
         }
       );
     } else {
-      resolve();
+      finishImporting();
     }
   });
 }
