@@ -13,7 +13,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
     @workshops = Pd::Workshop.start_on_or_after(Date.today.beginning_of_day).where(
-      started_at: nil,
       course: Pd::Workshop::COURSE_CSF,
       workshop_type: Pd::Workshop::TYPE_PUBLIC
     ).where.not(processed_location: nil)
