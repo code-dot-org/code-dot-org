@@ -36,7 +36,7 @@ window.TutorialExplorerManager = function (options) {
     render() {
       return (
         <div  style={{userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', MsUserSelect: 'none'}}>
-          <label style={{fontFamily: "\"Gotham 4r\", sans-serif", fontSize: 13, paddingBottom: 0, marginBottom: 0}}>
+          <label style={{fontFamily: "\"Gotham 4r\", sans-serif", fontSize: 13, paddingBottom: 0, marginBottom: 0, cursor: 'pointer'}}>
             <input
               type="checkbox"
               value={this.props.value}
@@ -177,10 +177,10 @@ window.TutorialExplorerManager = function (options) {
                     <tbody>
                       {tableEntries.map(item =>
                         <tr key={item.key}>
-                          <td style={{padding: 5, width: '40%', fontFamily: '"Gotham 5r", sans-serif'}}>
+                          <td style={{padding: 5, width: '40%', fontFamily: '"Gotham 5r", sans-serif', border: '1px solid lightgrey'}}>
                             {item.title}
                           </td>
-                          <td style={{padding: 5}}>
+                          <td style={{padding: 5, border: '1px solid lightgrey'}}>
                             {item.body}
                           </td>
                         </tr>
@@ -219,14 +219,16 @@ window.TutorialExplorerManager = function (options) {
       return (
         <div>
           <TutorialDetail showing={this.state.showingDetail} item={this.props.item} closeClicked={this.tutorialDetailClosed}/>
-          <div className="col-33" style={{float: 'left', padding: '2px'}} onClick={this.tutorialClicked}>
-            <div style={{padding: '5px'}}>
-              <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
-              <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 15, textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}}>
-                {this.props.item.name}
-              </div>
-              <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
-                {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
+          <div className="col-33" style={{float: 'left', padding: 2}}>
+            <div style={{padding: 5}}>
+              <div style={{cursor: 'pointer'}} onClick={this.tutorialClicked}>
+                <img src={this.props.item.image} style={{width: '100%', height: 180}}/>
+                <div style={{fontFamily: '"Gotham 5r", sans-serif', fontSize: 15, textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}}>
+                  {this.props.item.name}
+                </div>
+                <div style={{fontFamily: '"Gotham 3r", sans-serif', fontSize: 12, paddingBottom: 20}}>
+                  {getTagString("grade", this.props.item.tags_grade)} | {getTagString("programming_language", this.props.item.tags_programming_language)}
+                </div>
               </div>
             </div>
           </div>
