@@ -38,13 +38,13 @@ gem 'rack_csrf'
 group :development do
   gem 'annotate'
   gem 'rack-mini-profiler'
-  gem 'rerun', '~> 0.10.0'
-  gem 'shotgun'
   gem 'thin'
   gem 'web-console'
 end
 
 group :development, :test do
+  gem 'rerun', '~> 0.10.0'
+  gem 'shotgun'
   gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
