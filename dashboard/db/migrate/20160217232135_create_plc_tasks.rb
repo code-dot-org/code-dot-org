@@ -1,4 +1,4 @@
-class CreatePlcTasks < ActiveRecord::Migration
+class CreatePlcTasks < ActiveRecord::Migration[4.2]
   def change
     create_table :plc_tasks do |t|
       t.string :name

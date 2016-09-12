@@ -1,0 +1,66 @@
+@import "color";
+
+body {
+  background-color: $white;
+  color: $default_text;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: $lightest_gray;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: $realgreen;
+}
+
+.field_with_errors label {
+  color: $red;
+  display: inline-block;
+}
+
+.field_with_errors input {
+  background-color: $realyellow;
+}
+
+.field_with_errors_div {
+  background-color: $realyellow;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid $red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: $white;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: $red;
+    color: $white;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+    padding: 5px 0;
+  }
+}

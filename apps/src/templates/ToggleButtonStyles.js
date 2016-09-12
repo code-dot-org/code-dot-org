@@ -33,12 +33,12 @@ module.exports = {
     borderTopRightRadius: 4
   },
   activeStyle: {
-    backgroundColor: '#ffa000',
-    color: '#fff',
+    backgroundColor: color.orange,
+    color: color.white,
     boxShadow: '2px 2px 5px ' + color.shadow + ' inset'
   },
   inactiveStyle: {
-    backgroundColor: '#fff',
+    backgroundColor: color.white,
     color: color.light_gray,
     boxShadow: '0px 1px 5px ' + color.shadow
   },

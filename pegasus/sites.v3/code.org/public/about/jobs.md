@@ -28,105 +28,26 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 
-- **Finance and Administration**
- 	- [Administrative Assistant](#admin)
- 	- [Controller](#controller)
 - **Fundraising**
  	- [Major Gifts Manager](#donor)
-- **Partnerships & Outreach**
- 	- [Regional Manager - Northeast](#dcdm)
 - **Product**
-	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#software)
 - **Professional Learning & Community**
 	- [Program Manager, Teacher Development](#teacherpm)
-	
-
+	- [Program Coordinator](#coord)
+- **Internships**
+ 	- [Curriculum Team Intern](#edintern)
+ 	- [State Policy Intern](#advintern)	
 
 **[Working at Code.org](#info)**
 
+**Don't see a good fit? Drop us a line and a resume and let us know why you want to work for us and what you would bring to our team.**
 
-## <a name="admin"href="#admin">Administrative Assistant (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is seeking an experienced Administrative Assistant to join our administrative team. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
-
-High ­level responsibilities include: 
-
-- Managing a variety of administrative tasks and projects 
-- Increasing office productivity by overseeing smooth and efficient office administration
-- Supporting VP level staff
-- Event planning, coordinating, and logistics  
-
-**Duties and Responsibilities:**
-
-- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs 
-- Coordinate travel and manage select Leadership Team individual calendars
-- Support discrete strategic and tactical projects with data entry, analysis, drafting communications, or logistics.
-- Troubleshoot basic technology issues (printers, videoconferencing system)
-Coordinate events (office, social, and corporate) and visitor logistics
-- Other duties, as assigned 
-
-
-**Skills and Qualifications:**
-
-We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team. You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Experience in a start up environment and/or with events planning a plus. 
-
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communications skills 
-- Strong attention to detail 
-- Experience learning and using modern tech tools
-- 2-5 years experience in administrative support, event planning, or office management preferred 
-- Bachelor’s degree preferred 
-
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="controller"href="#controller">Controller (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for an experienced Controller to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures. 
-
-Responsibilities of the position include:
-
-- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting
-- Assisting in the preparation of the annual budget and periodic financial forecasts and performing variance analysis and trend reporting
-- Performing ad hoc analyses in the areas of cash flow, income planning, programmatic expenses, and metrics
-- Providing data modeling expertise to determine potential financial impact of organizational decisions
-- Supervising the month, quarter, and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
-- Analyzing complex account reconciliations for inventory, accruals, and allocations
-- Overseeing the preparation and distribution of timely internal financial statements
-- Preparing quarterly Board of Directors’ financial presentation
-- Supporting the external audit of the company’s financial statements, including preparation of audit schedules and responding to auditor questions and requests
-- Managing and complying with local, state, and federal government reporting requirements and tax filings
-- Proactively identifying issues and areas for improvement with the close process and implementing process improvements 
-- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
-
-**Skills and Qualifications:**
-
-The ideal candidate has at least a Bachelor’s degree in Business Administration, Accounting, or related field and possesses the following skills:
-
-- 5+ years experience in a finance and/or accounting management role 
-- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
-- Advanced experience in Quickbooks Online
-- Advanced or expert user of spreadsheets
-- Experience and aptitude for managing complex projects and reports 
-- Advanced analytical, organizational and problem solving skills
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
-- Non-profit accounting experience a plus
-- CPA preferred
-
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="donor"href="#donor">Major Gifts Manager (Seattle, WA)</a>
+
 **Job Summary:**
 
 The Major Gifts Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. 
@@ -141,7 +62,7 @@ Responsibilities of the position include:
 - Working with the Fundraising Associate on prospect research, maintaining grant files, CRM database, fundraising materials, and donor acknowledgements
 - Other duties, as assigned
 
-**Skills and Qualifications:**
+**Experience and Qualifications:**
 
 A minimum of 5 years of relevant experience is required. 
 
@@ -164,76 +85,6 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 
 
-## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast (Boston, New York)</a>
-
-**Job Summary:**
-
-Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Professional Learning Partners. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
-
-Responsibilities of the position include:
-
-Outreach
-
-- Recruit Professional Learning Partners to partner with Code.org and school districts to teach Computer Science in K-12 schools.
-- Present Code.org partnership model
-- Negotiate Code.org agreements
-- Track partnership status
-
-Manage and support implementation for all partners in region at K-12 grade levels
-
-- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
-- Implement partnership model
-- Assist regional partners in district, school, and teacher recruitment/selection/retention
-- Troubleshoot regional partnership issues
-- Work with Professional Learning & Community team to coordinate regional professional learning workshops for teachers
-
-Market and support the program in the region
-
-Represent Code.org and present the partnership model at conferences and other venues, as needed
-
-Ability and willingness to travel up to 25% of the time is required.
-
-**Skills and Qualifications:**
-
-The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
-
-- Demonstrated ability to pitch the Code.org educational model to potential partners
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
-- Advanced organizational and problem solving skills
-- Understanding of and passion for equity in computer science and K-12 education
-
-Additional desired strengths include:
-
-- Experience working with school districts in a project implementation capacity
-- Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
-
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="backend" href="#backend">Senior Backend Engineer / Infrastructure Lead (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-As Senior Backend Engineer / Infrastructure Lead, you’ll be responsible for building Code.org to scale for our tens millions of users in over 180 countries. You’ll ensure that our amazing annual Hour of Code event scales to nearly 100 million users worldwide. You’ll own infrastructure and related tools, write product code, and work to increase team-wide effectiveness. Someone successful in this role will be able to collaborate, but also work independently and drive infrastructure and scale work to completion.
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Bachelor’s degree with a major in Computer Science
-- 5-10 years as a software engineer 
-- Experience in a fast growth start-up environment desired
-- Experience scaling web services 
-- Experience building developer infrastructure
-- Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 ## <a name="senior" href="#senior">Senior Software Engineer (Seattle, WA)</a>
 
 **Job Summary:**
@@ -242,7 +93,7 @@ Code.org is transforming computer science education and changing the world. Work
 
 As Senior Software Engineer at Code.org, you’ll be a key contributor in delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
 
-**Skills and Qualifications:**
+**Experience and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
@@ -263,7 +114,7 @@ Code.org is transforming computer science education and changing the world. Work
 
 As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
 
-**Skills and Qualifications:**
+**Experience and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
@@ -305,7 +156,80 @@ The ideal candidate has the following qualifications:
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
 
+**Job Summary:**
+Code.org is looking for an Program Coordinator to join Code.org’s Professional Learning & Community team. Our PLC team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. 
+
+Duties of this role may include: 
+
+- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
+- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
+- Updating and managing event attendee lists
+- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Experience and Qualifications:**
+
+We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate also has the following qualifications:
+
+- Has a bachelors degree (Computer Science background/experience not required)
+- Ability to travel 10% time 
+
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
+
+**Internship Summary:**
+
+We are looking for an intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+
+Responsibilities of the may position include: 
+
+- Working closely with the Curriculum team to assist in designing, developing, and writing original curricular materials:lesson plans, formative/summative assessments, videos, answer keys, project exemplars
+- Using in-house content management tools to structure resources
+
+
+**Experience and Qualifications:**
+
+The ideal candidate has experience in computer science and a background in education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
+
+The candidate should also: 
+
+- Have basic to comprehensive knowledge of computer science (required) 
+- Have some prior curriculum writing experience / activity design experience (required)
+- Proficiency in working with Microsoft Office and Google Docs (required) 
+- Be working to obtain a Bachelor’s degree or higher in Education or Computer Science (preferred)
+
+
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="policyintern"href="#policyintern">State Policy Intern (Seattle, WA)</a>
+
+**Internship Summary:**
+
+Code.org is looking for a State Policy Intern to support our state-by-state advocacy efforts to expand K-12 access to computer science education. The State Policy Intern will gain a deep understanding of state policy in our target states and will broaden her/his networks in education policy. This position reports to the Director of State Government Affairs.
+
+Responsibilities of the role include: 
+
+- Researching state education policy and synthesizing information for the government affairs team
+- Helping execute our state policy agenda.
+
+
+**Experience and Qualifications:**
+
+We are looking for a self-starter and multi-tasker, who excels under pressure and successfully works independently with a geographically dispersed team. 
+
+The candidate should also: 
+
+- Be pursuing a degree in public policy, public administration, political science, or education (post-graduate preferred) 
+- Have prior experience in education or public policy (preferred) 
+
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="info" href="#info">Working at Code.org</a>
 
@@ -332,3 +256,7 @@ We offer a comprehensive employee benefits package that includes:
 **Must be a U.S. Citizen or Permanent Resident and be capable of passing a pre-employment background check**
 
 No relocation packages
+
+**Don't see a good fit? Drop us a line and a resume and let us know why you want to work for us and what you would bring to our team.**
+
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
