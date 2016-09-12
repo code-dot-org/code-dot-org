@@ -108,7 +108,6 @@ class CachingTest < ActionDispatch::IntegrationTest
   #   assert_response 200
   # end
 
-  # course1 is not caching yet
   test "should get show of course1 level 1 twice" do
     get '/s/course1/stage/3/puzzle/1'
     assert_response :success
