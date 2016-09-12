@@ -1,4 +1,4 @@
-class CreateSurveyResults < ActiveRecord::Migration
+class CreateSurveyResults < ActiveRecord::Migration[4.2]
   def change
     create_table :survey_results do |t|
       t.references :user, index: true, foreign_key: true
