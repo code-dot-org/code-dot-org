@@ -759,15 +759,17 @@ en:
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Wrap-Up
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
-          new stage: new stage
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           Welcome: Welcome
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
           Discussion Forums: Discussion Forums
+          Welcome Back!: Welcome Back!
+          Mystery Model: Mystery Model
+          Decode and Share: Decode and Share
         Testing:
           Testing: Testing
           title: Testing
