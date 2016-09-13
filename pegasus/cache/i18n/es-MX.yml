@@ -689,6 +689,7 @@
   dashboard_action_remove_confirm: "¿Eliminar?"
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Mayoría de los maestros medir el progreso de sus estudiantes
     usando la pestaña de "Ver avances". Si usted está interesado en dar a sus estudiantes
@@ -914,8 +915,14 @@
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_message: "<b>January 6, 2015</b> - Learn beyond one Hour of Code
-    in your classroom. Start a new intro course and track student progress."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -1820,12 +1827,3 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

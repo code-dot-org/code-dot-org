@@ -327,7 +327,7 @@
   "TEXT_CHANGECASE_TOOLTIP": "Metnin bir kopyasını farklı bir harf durumunda (HEPSİ BÜYÜK - hepsi küçük) getirir.",
   "TEXT_CHARAT_FIRST": "İlk harfini al",
   "TEXT_CHARAT_FROM_END": "sondan # harfini al",
-  "TEXT_CHARAT_FROM_START": "#. harfi al",
+  "TEXT_CHARAT_FROM_START": "# harfini al",
   "TEXT_CHARAT_HELPURL": "https://code.google.com/p/blockly/wiki/Text#Extracting_text",
   "TEXT_CHARAT_INPUT_INTEXT": "metinde",
   "TEXT_CHARAT_LAST": "son harfi al",

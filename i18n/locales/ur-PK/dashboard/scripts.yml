@@ -36,9 +36,9 @@ ur:
           description_audience: Ages 4-6
           description_short: Start with Course 1 for early readers.
         course2:
-          The Maze: The Maze
+          The Maze: بھول بھلیا
           Suzi: Suzi
-          The Artist: The Artist
+          The Artist: مصور
           Artist Debugging: Artist Debugging
           Bounce: Bounce
           "Studio: Create a Story": 'Play Lab: Create a Story'
@@ -56,7 +56,7 @@ ur:
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Conditionals
+          Conditionals: شرائط
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -75,9 +75,9 @@ ur:
           description_audience: Ages 6-18
           description_short: Start with Course 2 for students who can read.
         course3:
-          The Maze: The Maze
+          The Maze: بھول بھلیا
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: The Artist
+          The Artist: مصور
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -222,7 +222,7 @@ ur:
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": Conditionals
+          "Eval: Conditionals": شرائط
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
@@ -306,16 +306,16 @@ ur:
           description_audience: Ages 10-18
           description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
-          Introduction to Computer Science: Introduction to Computer Science
-          The Maze: The Maze
+          Introduction to Computer Science: کمپیوٹر سائنس کا تعارف
+          The Maze: بھول بھلیا
           Computational Thinking: Computational Thinking
           Graph Paper Programming: Graph Paper Programming
-          The Artist: The Artist
+          The Artist: مصور
           Algorithms: Algorithms
           The Artist 2: The Artist 2
           Functions: Functions
-          The Farmer: The Farmer
-          Conditionals: Conditionals
+          The Farmer: کسان
+          Conditionals: شرائط
           The Artist 3: The Artist 3
           Song Writing: Song Writing
           The Farmer 2: The Farmer 2
@@ -330,9 +330,9 @@ ur:
           title: Edit Code
           description: Edit Code
           description_short: Edit Code
-          The Maze: The Maze
+          The Maze: بھول بھلیا
           Applab: Applab
-          The Artist: The Artist
+          The Artist: مصور
           Play Lab: Play Lab
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
@@ -879,6 +879,8 @@ ur:
           Gamelab: Gamelab
           Anonymous student survey: Anonymous student survey
           Anonymous student survey 2: Anonymous student survey 2
+          Public Key Cryptography: Public Key Cryptography
+          Web Lab: Web Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -969,9 +971,9 @@ ur:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: CS in Algebra Part 2
+          description: Academic Year Support
+          description_short: Academic Year Support
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1616,6 +1618,9 @@ ur:
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
           Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+          CS Principles Pre-survey: CS Principles Pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
         csp2:
           title: 'CSP Unit 2 - Digital Information'
           description_short: Explore how more complex digitial information is represented and manipulated through computation and visuzalization.
@@ -1635,6 +1640,8 @@ ur:
           Cleaning Data: Cleaning Data
           Creating Summary Tables: Creating Summary Tables
           Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
+          Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
         csp3:
           title: 'CSP Unit 3 - Intro to Programming'
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
@@ -1725,6 +1732,8 @@ ur:
           Variables Unplugged: Variables Unplugged
           Complex Sprite Movement: Complex Sprite Movement
           Collisions: Collisions
+          Sprite Movement Methods: Sprite Movement Methods
+          Collision Detection: Collision Detection
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1899,6 +1908,7 @@ ur:
           title: ' TEMP CSD Unit 1'
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
+          Processing Information: Processing Information
         CSDU2-Draft:
           title: ' TEMP CSD Unit 2'
           description_short: Web Development
@@ -1912,6 +1922,7 @@ ur:
           Designing Code for Computers: Designing Code for Computers
           Digital Footprint: Digital Footprint
           Images on the Web: Images on the Web
+          Finalizing Website: Finalizing Website
         CSDU5-Draft:
           title: ' TEMP CSD Unit 5'
           description_short: Data
@@ -2007,7 +2018,7 @@ ur:
           description: Planning Script for CSF 2.0
           description_audience: Ages 9-99
           "Mixed Review #1 (Ramp Up)": 'Mixed Review #1 (Ramp Up)'
-          Conditionals: Conditionals
+          Conditionals: شرائط
           "Bee: Conditionals": 'Bee: Conditionals'
           "PlayLab: Conditionals": 'PlayLab: Conditionals'
           Songwriting: Songwriting
@@ -2040,6 +2051,11 @@ ur:
           Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
           Build a Star Wars Game!: Build a Star Wars Game!
           "Bee: Determine the Concept": 'Bee: Determine the Concept'
+          "Bee: Functions (Course 3)": 'Bee: Functions (Course 3)'
+          "Unplugged: Kinesthetic Functions": 'Unplugged: Kinesthetic Functions'
+          "Farmer: Functions (New)": 'Farmer: Functions (New)'
+          Determine the Concept Part 2: Determine the Concept Part 2
+          "Unplugged: Funky Functions": 'Unplugged: Funky Functions'
         grade1:
           Predicting & Debugging: 'Predicting & Debugging'
           Persistence & Frustration: 'Persistence & Frustration'
@@ -2058,6 +2074,7 @@ ur:
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
@@ -2196,6 +2213,16 @@ ur:
           More Programming with Scratch: More Programming with Scratch
           More Programming with CS4FN: More Programming with CS4FN
           Robot Farmer While: Robot Farmer While
+          Bounce: Bounce
+          Artist Debugging: Artist Debugging
+          "Farmer: While Loops": 'Farmer: While Loops'
+          " Bee: Conditionals": ' Bee: Conditionals'
+          "Maze: Conditionals with Loops": 'Maze: Conditionals with Loops'
+          Build a Game: Build a Game
+          "Artist: Loops": 'Artist: Loops'
+          "Maze: Nested Loops": 'Maze: Nested Loops'
+          "Artist: Nested Loops": 'Artist: Nested Loops'
+          Bee Debugging: Bee Debugging
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2287,7 +2314,7 @@ ur:
           Events: Events
           Loops: لوپس
           Nested Loops: Nested Loops
-          Conditionals: Conditionals
+          Conditionals: شرائط
           While Loops: While Loops
           Functions: Functions
           Variables: متغیرات
@@ -2318,3 +2345,12 @@ ur:
           title: CS Principles Pre-Survey
           Anonymous student survey 2: Anonymous student survey 2
           Anonymous student pre-survey: Anonymous student pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
+        sciencepd3-2016:
+          title: CS in Science PD3 Before 1st In-Person
+          description_short: 'Phase 3: Academic Year Development Pre 1'
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

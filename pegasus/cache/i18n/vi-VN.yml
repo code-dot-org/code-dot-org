@@ -4,10 +4,10 @@
   'yes': "Đồng ý"
   'no': Không
   select_language: Vui lòng chọn ngôn ngữ của bạn
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org sẽ sớm loại bỏ hỗ trợ cho Internet Explorer 8, 9 và
+    10. Xin vui lòng cập nhật lên một trình duyệt ổn định hơn.
+  upgrade_ie_message_csedweek: CSEdWeek.org sẽ sớm loại bỏ hỗ trợ cho Internet Explorer
+    8, 9 và 10. Xin vui lòng cập nhật lên một trình duyệt ổn định hơn.
   upgrade_ie_link: Tìm hiểu thêm
   en: Khoa học máy tính
   computer_science_edweek: Tuần giáo dục khoa học máy tính
@@ -694,6 +694,7 @@
   dashboard_action_remove_confirm: Loại bỏ?
   dashboard_action_done: Hoàn thành
   dashboard_action_required: yêu cầu
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -901,11 +902,14 @@
   dashboard_faq: Câu hỏi thường gặp
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -1769,12 +1773,3 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

@@ -10,7 +10,8 @@ Thanks to educators like you, computer science is experiencing [record growth in
 Today, we [announced a big milestone](http://blog.code.org/post/150312492108/the-biggest-year-yet-for-computer-science): a total of **43,700 teachers** have gone through our professional learning programs to begin teaching computer science—including **1,000 high school teachers** who attended workshops this summer. 500 of these educators are teaching our new AP Computer Science Principles course this fall, and we expect over 12,000 students enrolled, with record diversity. 
 
 [![image](http://66.media.tumblr.com/409af714aaebd5356707c3fc849a8ee4/tumblr_inline_oddbrrunXc1s7qct1_540.jpg)](https://code.org/educate)
-</br>*Photo: Attendees to our recent TeacherCon in Chicago for high school educators*
+<br/>
+*Photo: Attendees to our recent TeacherCon in Chicago for high school educators*
 
 ### New Code Studio features for your classroom, thanks to *your* feedback.
 
@@ -27,23 +28,25 @@ Today, we [announced a big milestone](http://blog.code.org/post/150312492108/the
 - Keep your CS Fundamentals class on track with ["Stage Extras"](http://teacherblog.code.org/post/149328400419/allow-your-students-to-keep-learning-without), so no one gets too far ahead or too behind. 
 
 <h3>Join me in a back-to-school live stream conversation.</h3>
-On September 22nd 7pmET/4pmPT, I’ll be hosting a back-to-school live stream, along with Alice Steinglass, VP of product and engineering, who will demo the features above. I hope to see you there. :-)
+On September 22nd 7pmET/4pmPT, I’ll be hosting a [back-to-school live stream](https://www.youtube.com/watch?v=nViUAehcYQI), along with Alice Steinglass, VP of product and engineering, who will demo the features above. I hope to see you there. :-)
 
 <h3>Last but not least: the Hour of Code 2016 is coming! Sign up your classroom.</h3>
-Join the biggest learning event in history this **CS Education Week, December 5-11**. Last year, 200,000 educators hosted an Hour of Code event—and together we reached every single country on the globe. Help us reach *every student* this year. [Sign up early](https://hourofcode.com/us#join) to receive a free inspiration kit with posters for your class showing role models in tech, and more!
+Join the biggest learning event in history this **CS Education Week, December 5-11**. Last year, 200,000 educators hosted an Hour of Code event—and together we reached over 180 countries. Help us reach *every student* this year. 
+
+[Sign up early](https://hourofcode.com/us#join) to receive a free inspiration kit with posters for your class showing role models in tech, and more!
 
 On a personal note, thank you for all you do to give our children the opportunity to build their future. The K-12 computer science movement is one of the best stories in the world today. It's unfolding right before our eyes, and it's thanks to you, the heroes of the movement.
 
 Your support and the work you do every day in classrooms inspires all of us. 
-</br>
-</br>
+<br/>
+<br/>
 Hadi Partovi <br/>
 Founder, Code.org
 
 <p>
 <hr/>
 <small>
-Code.org is a 501c3 non-profit located at 1501 4th Avenue, Suite 900, Seattle, WA, 98101. You’re receiving this email because you have used <a href="https://studio.code.org">Code Studio</a> as a teacher or have hosted an <a href="https://hourofcode.com/">Hour of Code</a>. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
+Code.org is a 501c3 non-profit located at 1501 4th Avenue, Suite 900, Seattle, WA, 98101. You’re receiving this email because you attended a Code.org professional development workshop. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
 </small></p>
 
 ![](<%= tracking_pixel %>)
