@@ -9,7 +9,7 @@ az:
         video: Unplug1
       'Unplug2':
         title: Hesablama təfəkkürü
-        desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
+        desc: Yanlız kağız və keçəli qələm ilə şagirdlər hesablayıcı fikirləşmənin dörd addımını öyrənəcək. qısa başlanğıcdan sonra şagirdlər qruplara paylana bilər haradaki onlar başqa şagirdlərin müəyyən canavarı çəkməsi üçün(qabaqcadan secilmiş canavarların kataloqundan) istiqamət yaratmalı olacaqlar. bütün tapşırıq çürümüş olmalıdır, sonra komandalar canavarlardan mücərrəd muxtəlif detalları, nümunə üçün kataloqdakı bütün canavarları analiz edecek, sonra həmin informasiyani başqa bir komandanın müəyyən canavarı çəkməsi üçün alqoritm (istiqamət) yaratmağa istifadə edəcək. komandalar sonra alqoritmləri başqa bir qrup ilə döndərəcək və alqoritmin bildirişindən qaynaqlanan canavarı çəkəcək. şəkil əsl komandanın hədəflədiyidir?
         pdfs:
           - unplug2
         video: Unplug2
@@ -21,7 +21,7 @@ az:
         video: Unplug3
       'Unplug4':
         title: Alqoritmlər
-        desc: 'This lesson covers algorithms.  Using tangram shapes and graph paper, the first exercise will show how important it is to make each instruction as clear and unambiguous as possible.  Afterward, the class will explore how many ways you can fold paper into a rectangle, noting how some methods can take more or fewer folds than others.'
+        desc: 'Bu dərs alqoritmləri əhatə edir. Tangram şəkilləri və qrafik kağızdan istifadə edərək birinci çalışma hər təlimin mümkün olduğu qədər aydın və dəqiq olaraq istifadə edilə bilərliyinin nə qədər mühüm olduğunu göstərir. sonra isə, sinif  bir kağızı tetraedr olaraq qatlayabilmənin neçə yolu olduğunu kəşfetməyə çalışır, necə bəzi metodların digərlərindən daha çox və ya daha az qatlamalı olduğunu incələyir.'
         pdfs:
           - unplug4
         video: Unplug4

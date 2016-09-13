@@ -99,7 +99,7 @@
   congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
-  get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
+  get_a_certificate_of_achievement: Ottieni un attestato dei risultati ottenuti
   view_course: Visualizza il corso
   view_unit: Guarda unità
   make_app: Fai un'app
@@ -215,15 +215,17 @@
   third_party_desc_20_4to12: Più di 20 lezioni, per ragazzi dai 9 ai 18 anni
   enter_valid_age: Si prega di indicare una età valida
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
-  get_a_certificate_message: Ti manderemo un certificato e le informazioni su come
-    <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
-  get_a_certificate_message_after: Clicca sul certificato per scaricarlo o stamparlo.
-    Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre
-    possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
+  get_a_certificate_message: Ti manderemo un attestato e le informazioni su come <a
+    href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
+  get_a_certificate_message_after: |
+    Clicca sull'attestato per scaricarlo o stamparlo. Se sei un insegnante della scuola italiana scarica gli attestati dal sito di <a href="http://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">Programma il Futuro</a>.<br><br>
+    Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   thanks_for_submitting: Grazie per l'invio!
   if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
     che tutto il mondo impari.
-  personalize_certificate: Personalizza il tuo certificato
+  personalize_certificate: Personalizza il tuo attestato<br>(se sei nella scuola italiana
+    usa l'attestato di <a href="http://www.programmailfuturo.it/come/attestati-personalizzati"
+    target="_blank">Programma il Futuro</a>)
   share_achievement: Condividi il tuo successo
   beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
     o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
@@ -298,7 +300,7 @@
     Alzate, 5a Elementare'
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti
     di imparare." - Michael Clark, Insegnante'
-  studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
+  studiobar_title: Esplora la <a href='http://studio.code.org'>Galleria del Codice</a>
   studiobar_title_nolink: Esplora l'Officina del Codice
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
@@ -630,7 +632,7 @@
   dashboard_landing_classroom_resources: Risorse per la tua classe
   dashboard_landing_office_hours: Fai una domanda di persona! Visita il nostro ufficio
     di assistenza. L'assistenza viene fornita in inglese dal personale di code.org.
-  dashboard_landing_print_certificates: Stampa il certificato per gli studenti che
+  dashboard_landing_print_certificates: Stampa gli attestati per gli studenti che
     completano questo corso
   dashboard_landing_educator_blog: Leggi notizie e aggiornamenti relativi al nostro
     materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
@@ -660,30 +662,31 @@
     da un'ora!
   dashboard_hoc_courses_desc_and_cta: 'Prova con i tuoi studenti uno di questi corsi
     da un''ora. <a href="https://hourofcode.com">Aderisci all''Ora del Codice</a>
-    durante la Settimana di Educazione all''Informatica. Per gli insegnanti in Italia:
-    aderisci attraverso <a href="http://programmailfuturo.it">Programma il Futuro</a>.'
+    durante la Settimana di Educazione all''Informatica. Per gli insegnanti della
+    scuola italiana: aderisci attraverso <a href="http://programmailfuturo.it">Programma
+    il Futuro</a>.'
   dashboard_k5_courses: Corsi da 20 ore
   dashboard_k5_courses_desc: 'Questi corsi uniscono attività on line, tutorial autoguidati
     e adatti al vostro ritmo, anche con attività da svolgere senza essere connessi
     (attività tradizionali o "unplugged"). Ogni corso è composto da circa 20 lezioni
     che possono essere svolte tutte di seguito o durante l''anno. Per gli insegnanti
-    in Italia: accedi a <a href="http://programmailfuturo.it">Programma il Futuro</a>
-    per avere assistenza specifica. Per gli insegnanti negli USA offriamo dei laboratori/workshop
-    professionali gratuiti e di elevata qualità: <a href="/professional-development-workshops">trovate
+    della scuola italiana: accedi a <a href="http://programmailfuturo.it">Programma
+    il Futuro</a> per avere assistenza specifica. Per gli insegnanti negli USA offriamo
+    dei laboratori/workshop professionali gratuiti e di elevata qualità: <a href="/professional-development-workshops">trovate
     quello più vicino a voi!</a>'
   dashboard_middle_courses: Corsi da 20 ore per la scuola secondaria di primo grado
   dashboard_middle_courses_desc: 'I nostri corsi per la scuola secondaria di primo
     grado utilizzano l''informatica e la programmazione all''interno della matematica
     e delle scienze - come strumento per insegnare concetti matematici e scientifici.
-    Per gli insegnanti in Italia: accedi a <a href="http://programmailfuturo.it">Programma
-    il Futuro</a> per avere assistenza specifica. Per gli insegnanti negli USA: iscriversi
-    al <a href="/educate/districts">partenariato</a> con Code.org.'
+    Per gli insegnanti della scuola italiana: accedi a <a href="http://programmailfuturo.it">Programma
+    il Futuro</a> per avere assistenza specifica. Altrimenti iscriviti al <a href="/educate/districts">partenariato</a>
+    con Code.org.'
   dashboard_high_courses: Corsi di un anno per la scuola secondaria superiore
   dashboard_high_courses_desc: 'Il nostro programma per la scuola secondaria di secondo
     grado offre corsi di informatica per l''intero anno, preparando i docenti ad ampliare
-    l''offerta formativa in questo nuovo campo. Per gli insegnanti in Italia: accedi
-    a <a href="http://programmailfuturo.it">Programma il Futuro</a> per avere assistenza
-    specifica. Per gli insegnanti negli USA: iscriversi al <a href="/educate/districts">partenariato</a>
+    l''offerta formativa in questo nuovo campo. Per gli insegnanti della scuola italiana:
+    accedi a <a href="http://programmailfuturo.it">Programma il Futuro</a> per avere
+    assistenza specifica. Altrimenti iscriviti al <a href="/educate/districts">partenariato</a>
     con Code.org.'
   dashboard_course_csina: Informatica in Algebra
   dashboard_course_csina_desc: Code.org ha collaborato con Bootstrap per sviluppare
@@ -714,20 +717,27 @@
   dashboard_action_remove_confirm: Eliminare?
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
-  dashboard_assessments_view: 'Mostra valutazioni in:'
-  dashboard_assessments_none: Nessuna valutazione
-  dashboard_assessments_none_part2: Se state insegnando in un corso al liceo o alle
-    scuole medie, abbiamo domande di valutazione disponibili come parte del Code Studio
-    per aiutare gli studenti a prepararsi per il test di AP. Per utilizzare queste
-    valutazioni, in primo luogo assegnare il corso per la classe e poi scegliere il
-    corso dal menu a tendina qui sopra per vedere le risposte degli studenti.
-  dashboard_assessments_summaries: Riassunti
-  dashboard_assessments_answers: Tutte le risposte
+  dashboard_action_print_certificates: Stampa gli attestati
+  dashboard_assessments_view: 'Mostra risultati in:'
+  dashboard_assessments_none: 'La maggior parte degli insegnanti misura i progressi
+    degli studenti utilizzando la scheda "Avanzamento": clicca sul link "Avanzamento"
+    sotto il nome della classe nella sezione "Gestione delle classi e degli studenti".
+    Se sei interessato ad effettuare ulteriori valutazioni dei tuoi studenti, puoi
+    trovare argomenti e domande consigliate nei piani di attività di ogni lezione.
+    Dovrai però gestire queste valutazioni al di fuori di questo cruscotto di controllo.'
+  dashboard_assessments_none_part2: Se stai insegnando informatica nella scuola secondaria
+    utilizzando il nostro corso <i>CS Principles</i>, ci sono domande di valutazione
+    disponibili per aiutare gli studenti a prepararsi per l'esame finale. Per utilizzare
+    queste domande, assegna alla classe uno dei corsi disponibili nella sezione <i>CS
+    Principles and Practice Test</i> e poi scegli il corso dal menu a tendina qui
+    sopra per vedere le risposte degli studenti.
+  dashboard_assessments_summaries: Sintesi dei risultati
+  dashboard_assessments_answers: Risultati in dettaglio
   dashboard_surveys_answers: Sondaggi
   dashboard_percent: Percento
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
-  dashboard_download_csv: Scarica CSV
+  dashboard_download_csv: Scarica foglio elettronico (formato CSV)
   dashboard_navigation_home_page: Cruscotto di Controllo dell'insegnante
   dashboard_navigation_section_student_progress: Gestione delle classi e degli studenti
   dashboard_navigation_section_teacher_progress: I tuoi progressi
@@ -737,9 +747,9 @@
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Avanzamento
-  dashboard_navigation_view_text_responses: Risultati del test
-  dashboard_navigation_view_assessments: Valutazioni
-  dashboard_navigation_view_assessments_surveys: Valutazioni/Sondaggi
+  dashboard_navigation_view_text_responses: Risposte a testo libero
+  dashboard_navigation_view_assessments: Risultati dei test
+  dashboard_navigation_view_assessments_surveys: Risultati dei test
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -773,39 +783,43 @@
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
   dashboard_sections_choose_secret: Se vuoi creare tu gli account per i tuoi studenti,
-    scegli un tipo di password <b>parola</b> o <b>immagine</b> per quella classe.
+    scegli un tipo di accesso <b>parola</b> o <b>immagine</b> per quella classe.
   dashboard_sections_secret_word: Una <b>parola</b> ti permette di impostare come
     password una parola segreta per ogni studente.
   dashboard_sections_secret_picture: Un'<b>immagine</b> ti permette di impostare come
     password un'immagine segreta per ogni studente. È la scelta ideale per gli studenti
     più piccoli che ancora non sanno digitare sulla tastiera.
-  dashboard_sections_secret_none: Se vuoi che i tuoi studenti gestiscano i propri
-    account, anche scegliendo la propria password, imposta il tipo di password a <b>email</b>.
+  dashboard_sections_secret_none: Se vuoi che i tuoi studenti gestiscano da soli i
+    propri account, scegliendo anche la propria password, imposta il tipo di accesso
+    a <b>email</b>.
   dashboard_sections_print_secrets: Dopo puoi stampare un insieme di schede contenenti
     le informazioni degli account di ognuno dei tuoi studenti.
   dashboard_sections_switch_section: 'Cambia classe:'
   dashboard_sections_close: Chiudi
-  dashboard_sections_move_students_desc: Seleziona gli studenti da spostare in una
-    nuova sezione. Spostare gli studenti non eliminerà i loro progressi.
-  dashboard_sections_one_per_teacher: Gli studenti possono trovarsi solo in una sezione
-    per ogni insegnante. I tuoi studenti verranno assegnati a questa nuova sezione
-    e lasceranno la precedente.
-  dashboard_sections_move_to_section: 'Spostati alla sezione:'
-  dashboard_sections_enter_code: 'Inserisci il codice di sezione:'
+  dashboard_sections_move_students_desc: |
+    Seleziona gli studenti da spostare in una nuova classe. Spostare gli studenti non eliminerà i loro progressi.<br><br>
+    Se alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda "Avanzamento" dovrai selezionare dal menù a tendina il corso che avevano nella classe da cui provengono.<br><br>
+    Inoltre, se la classe in cui vengono inseriti ha un diverso <i>tipo di accesso</i> rispetto alla classe da cui provengono, gli studenti riceveranno delle nuove password.
+  dashboard_sections_one_per_teacher: Gli studenti possono trovarsi in una sola delle
+    classi di uno stesso insegnante. I tuoi studenti verranno quindi assegnati alla
+    nuova classe e lasceranno la precedente.
+  dashboard_sections_move_to_section: 'Sposta nella classe:'
+  dashboard_sections_enter_code: 'Inserisci il codice della classe:'
   dashboard_sections_code_placeholder: Codice di 6 caratteri (ABCDEF)
-  dashboard_sections_other_section: Altra Sezione
-  dashboard_sections_both_sections: Vorresti che lo/gli studente/i si trovi/trovino
-    in entrambe le sezioni?
-  dashboard_sections_yes_both: Sì, vorrei che lo/gli studente/i si trovasse/trovassero
-    sia in questa sezione, sia in quella nuova
-  dashboard_sections_no_move: No, vorrei che lo/gli studente/i si trovasse/trovassero
-    solo nella nuova sezione.
+  dashboard_sections_other_section: Altro insegnante
+  dashboard_sections_both_sections: Vuoi che gli studenti appartengano ad entrambe
+    le classi?
+  dashboard_sections_yes_both: Sì, voglio <b><u>copiare</u></b> gli studenti nella
+    nuova classe <b><u>mantenendoli</u></b> anche in quella attuale.
+  dashboard_sections_no_move: No, voglio <b><u>spostare</u></b> gli studenti nella
+    nuova classe <b><u>togliendoli</u></b> da quella attuale.
   dashboard_sections_move_students: Sposta gli studenti
-  dashboard_error_none_selected: Non hai selezionato nessuno studente. Per favore,
+  dashboard_error_none_selected: Non hai selezionato alcuno studente. Per favore,
     scegli almeno uno studente.
-  dashboard_error_other_section: Se stai spostando degli studenti tra le tue stesse
-    sezioni, selezionane una dal menù a tendina. Scegli "Altra Sezione" solo se devi
-    spostare degli studenti nella sezione di un altro insegnante.
+  dashboard_error_other_section: Se stai spostando degli studenti tra le tue classi,
+    selezionane una dal primo menù a tendina. Scegli "<b>Altro insegnante</b>" in
+    tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di
+    un <b>altro<b> insegnante.
   dashboard_students_add_student: Aggiungi uno studente
   dashboard_students_add_students: Aggiungi più studenti
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno
@@ -832,30 +846,33 @@
   dashboard_students_reset_password: Reimposta la password
   dashboard_students_share_section: 'Condividi la pagina di accesso di questa classe
     con i tuoi studenti:'
-  dashboard_students_print_info: Stampa le schede con le informazioni di login dei
+  dashboard_students_print_info: Stampa le schede con le informazioni di accesso dei
     tuoi studenti.
   dashboard_students_secret_picture_title: Immagine segreta
-  dashboard_students_secret_picture: Questa sezione utilizza un'<b>immagine</b> come
-    informazione segreta.  Vuol dire che ognuno dei tuoi studenti ha un'immagine segreta,
-    che usa come password per accedere.  Gli studenti dovrebbero usare l'indirizzo
-    web indicato in precedenza per l'accesso.
+  dashboard_students_secret_picture: Questa classe utilizza un'<b>immagine</b> come
+    tipo di accesso.  Vuol dire che ognuno dei tuoi studenti ha un'immagine segreta,
+    che usa come password per accedere.  Gli studenti devono prima accedere alla pagina
+    web sopra indicata, poi selezionare il proprio nome ed infine scegliere la loro
+    immagine segreta.
   dashboard_students_reset_picture: Puoi reimpostare l'immagine segreta di uno studente
     in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
     la password</b>. Una nuova immagine segreta verrà generata come password per quello
     studente, da usare per l'accesso.
   dashboard_students_secret_word_title: Parola segreta
-  dashboard_students_secret_word: Questa sezione utilizza una <b>parola</b> come informazione
-    segreta.  Vuol dire che ognuno dei tuoi studenti ha una parola segreta, che usa
-    come password per accedere.  Gli studenti dovrebbero usare l'indirizzo web indicato
-    in precedenza per l'accesso.
-  dashboard_students_reset_word: 'Puoi reimpostare la parola segreta di uno studente
-    in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
-    la password</b>. Una nuova parola segreta verrà generata come password per quello
-    studente da utilizzare quando accede. '
-  dashboard_students_join_link: Dì agli studenti di creare i propri account e di collegarsi
-    alla tua sezione a
+  dashboard_students_secret_word: Questa classe utilizza una <b>parola</b> come tipo
+    di accesso.  Vuol dire che ognuno dei tuoi studenti ha una coppia di parole segrete,
+    che usa come password per accedere. Gli studenti devono prima accedere alla pagina
+    web sopra indicata, poi selezionare il proprio nome ed infine scrivere la loro
+    coppia di parole segrete.
+  dashboard_students_reset_word: Puoi reimpostare la coppia di parole segrete di uno
+    studente in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
+    la password</b>. Una nuova coppia di parole segrete verrà generata come password
+    per quello studente, da usare per l'accesso.
+  dashboard_students_join_link: I tuoi studenti possono partecipare a questa classe
+    creando il loro account (se sei in Italia faglielo creare attraverso <a href="http://programmailfuturo.it/chi/iscrizione-per-studenti/"
+    target="_blank">Programma il Futuro</a>) e poi accedendo alla pagina
   dashboard_students_no_email: Se i tuoi studenti non hanno indirizzi di posta elettronica,
-    o tu vuoi creare gli account per loro, imposta il tipo di password di questa classe
+    o tu vuoi creare gli account per loro, imposta il tipo di accesso di questa classe
     a <b>parola</b> o <b>immagine</b>.
   dashboard_students_print_page: Stampa questa pagina
   dashboard_students_url: URL
@@ -901,18 +918,18 @@
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
   dashboard_response: Risposta
-  dashboard_correctness: Correttezza
+  dashboard_correctness: Valutazione
   dashboard_correctness_free_response: Risposta aperta
-  dashboard_correctness_unsubmitted: Non Inviato
-  dashboard_correctness_correct: Molto bene!
-  dashboard_correctness_incorrect: Errato
-  dashboard_submission_submitted: Inviato
+  dashboard_correctness_unsubmitted: Non risposto
+  dashboard_correctness_correct: Corretta
+  dashboard_correctness_incorrect: Sbagliata
+  dashboard_submission_submitted: Risposte inviate
   dashboard_submission_in_progress: In corso
   dashboard_status: Stato
-  dashboard_multi_correct: "# risposta multipla corrette"
+  dashboard_multi_correct: "# risposte corrette"
   dashboard_multi_count: "# risposta multipla"
-  dashboard_multi_correct_percent: "% risposta multipla corrette"
-  dashboard_submission_timestamp: Marca temporale della presentazione
+  dashboard_multi_correct_percent: "% risposte corrette"
+  dashboard_submission_timestamp: Data e ora dell'invio
   stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
     anno. In una settimana soltanto:'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013
@@ -930,16 +947,20 @@
     i tuoi studenti"
   dashboard_sections_sign_in_main: http://code.org e clicca su "Accedi"
   dashboard_sections_password_account_creation: Password testuale creata dallo studente
-  dashboard_sections_login_type_explanation: Questa tabella aiuta a spiegare quale
-    tipo di accesso, <b>immagine, parola o e-mail</b>, scegliere per una classe.
+  dashboard_sections_login_type_explanation: 'Questa tabella aiuta a spiegare quale
+    tipo di accesso: <b>immagine</b>, <b>parola</b> oppure <b>e-mail</b>, scegliere
+    per una classe.'
   dashboard_faq: FAQ - Domande e risposte
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
-  dashboard_announce_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono
-    una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato
-    che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
-    Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
-    pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -954,8 +975,9 @@
     aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di
     informatica K-12.
   dashboard_announce_petition_button: Aggiungi il tuo nome
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Rimani aggiornato sulle nuove caratteristiche dei corsi
+    di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli
+    insegnanti (in inglese)</a>.
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1277,7 +1299,7 @@
   kodableunplugged_shortdescription: Un divertente esercizio tradizionale
   projguts_shortdescription: Prova a modellare e simulare usando il gioco sasso/carta/forbici
   hourofcode_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
-  frozen_shortdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre
+  frozen_shortdescription: Usa la programmazione per unirti ad Anna ed Elsa mentre
     esplorano la magia e la bellezza del ghiaccio.
   starwars_shortdescription: Impara a programmare i droidi e crea la tua versione
     di Guerre Stellari, in una galassia lontana lontana...
@@ -1464,7 +1486,7 @@
     studenti a diverse versioni del gioco sasso/carta/forbici e vedendo i risultati
     come diversi esperimenti di modellazione.
   hourofcode_longdescription: Segnaposto per il nuovo code.org/hoc
-  frozen_longdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre
+  frozen_longdescription: Usa la programmazione per unirti ad Anna ed Elsa mentre
     esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai
     sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi
     condividere con i tuoi amici!
@@ -1860,12 +1882,3 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

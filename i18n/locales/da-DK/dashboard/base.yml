@@ -2,7 +2,9 @@ da:
   errors:
     messages:
       not_saved: 'Ret venligst følgende fejl:'
-      too_young: Dette indhold har aldersbegrænsning og er ikke tilgængelig for yngrer studerende
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ da:
   signup_form:
     student_count: '%{count} elever har allerede tilmeldt sig.'
     teacher_count: '%{count} lærere har allerede tilmeldt sig.'
-    overview_student: 'Tilmeld dig en konto for at spore dine fremskridt. Din email bruges primært til at tillade log ind og til gendannelse af din adgangskode. For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.'
-    overview_teacher: 'Undervis i programmering i din klasse ved at oprette en konto. <p/> Så kan du tilføje dine elever og følge deres fremskridt.'
-    no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">gennemse de forskellige trin og øvelser</a>, men du bliver nødt til at tilmelde dig for at gemme dine fremskridt.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Se lærerens guide
-    teacher_pitch: Lærertilmelding til Code.org
-    teacher_title: Lærer-tilmelding
-    student_pitch: Elev tilmelding til Code.org
-    student_title: Tilmelding for elever
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Skolens navn (valgfrit)
     school_address: Skolens adresse (valgfri)
     address_placeholder: adresse, by, postnummer
@@ -103,15 +99,17 @@ da:
     valid_password: Gyldig adgangskode!
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
-    student_terms: "Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>. Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For brugere under 13, er e-mail-adresser ikke gemt i en form, der tillader os at kontakte dem."
-    teacher_terms: "Jeg accepterer <a href='http://code.org/tos'> Servicevilkårene</a> for code.org."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig.
     user_type_label: Account Type
     user_type_teacher: Lærer
     user_type_student: Elev
+    field_is_required: krævet
+    accept_terms: You must agree to create an account
   signin_form:
     title: Har du allerede en konto? Log på
-    login: Email eller Brugernavn
+    login: E-mail
     password: Adgangskode
     remember: Husk mig
     submit: Log ind
@@ -130,8 +128,9 @@ da:
   password:
     reset_form:
       title: Glemt din adgangskode?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: Email adresse
-      submit: Send mig nulstil adgangskode instruktioner
+      submit: Indsend
     change_form:
       title: Skift din adgangskode
       new_password: Ny adgangskode
@@ -247,7 +246,7 @@ da:
       prizes: Præmier
       logout: Log ud
       signin: Log ind
-      signup: Tilmeld
+      signup: Create an account
       already_registered: Allerede registreret?
       pair_programming: Par programmering
       team: Team
@@ -278,7 +277,7 @@ da:
     user_not_found: Læreren kunne ikke findes.
     student_teacher_disassociated: 'Du har fjernet %{teacher_name} som din lærer.'
     panel:
-      answer_viewer: Svar Viser
+      answer_viewer: Lærerpanel
       student: Elev
       viewing_solution: Vis løsningsforslag
       try_it_yourself: Prøv selv
@@ -288,6 +287,7 @@ da:
       submitted_on: 'Indsendt den %{date}'
       unsubmit: Fortryd indsendelse
       worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -346,7 +346,8 @@ da:
     choose_next_course: Prøv en Code Studio kursus ved at vælge en nedenfor
     print_certificate: Udskriv certifikat
     announcement_title: Meddelelser
-    announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Lær mere
     announcement_try_now_button: Prøv nu
@@ -572,6 +573,19 @@ da:
     header: Opdater konto oplysninger
     message: 'Vi er i færd med at opdatere vores erfaring for at give dig endnu større privat beskyttelse. For at gøre dette, har vi brug for at eksisterende brugere indtaster deres alder her. <br/>Som altid, vil code.org aldrig leje, sælge eller dele disse oplysninger med tredjepart.'
     sign_out: 'Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Termer
+    privacy: Privatlivspolitik
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Udskriv
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'
   progress:
     not_started: ikke startet
@@ -709,3 +723,4 @@ da:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.

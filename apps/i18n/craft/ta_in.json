@@ -1,5 +1,5 @@
 {
-  "blockDestroyBlock": "destroy block",
+  "blockDestroyBlock": "பலகையை ஒழி",
   "blockIf": "இருந்தால்",
   "blockIfLavaAhead": "எரிமலைக்குழம்பு முன்னாடி இருந்தால்",
   "blockMoveForward": "முன்னோக்கி நகர்த்த",
@@ -13,7 +13,7 @@
   "blockTurnLeft": "இடதுபுறம் திரும்பவும்",
   "blockTurnRight": "வலதுபுறம் திரும்பவும்",
   "blockTypeBedrock": "bedrock",
-  "blockTypeBricks": "bricks",
+  "blockTypeBricks": "செங்கற்கள்",
   "blockTypeClay": "களிமண்",
   "blockTypeClayHardened": "இருகப்பட்ட களிமண்",
   "blockTypeCobblestone": "cobblestone",
