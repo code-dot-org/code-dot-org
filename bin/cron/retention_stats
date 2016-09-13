@@ -92,7 +92,7 @@ def main
   stage_level_counts = get_cumulatives(stage_level_counts)
 
   # Write the values to the Properties table in the Pegasus DB.
-  Properties.set(:retention_stats, {
+  Properties.set(:temp_retention_stats, {
     script_starts: script_starts,
     script_finishes: script_finishes,
     script_level_counts: script_level_counts,
