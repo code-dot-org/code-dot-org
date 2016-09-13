@@ -71,7 +71,8 @@ const TeacherStageInfo = React.createClass({
   },
 
   onClickHiddenToggle(value) {
-    this.props.toggleHidden(this.props.stage.id, value === 'hidden');
+    // TODO
+    this.props.toggleHidden('csp1', this.props.stage.id, value === 'hidden');
   },
 
   clickLessonPlan() {
@@ -122,7 +123,7 @@ export default connect(state => {
       Object.keys(state.stageLock.sections).length === 0
     };
 }, dispatch => ({
-  toggleHidden(stageId, hidden) {
-    dispatch(toggleHidden(stageId, hidden));
+  toggleHidden(scriptName, stageId, hidden) {
+    dispatch(toggleHidden(scriptName, stageId, hidden));
   }
 }))(Radium(TeacherStageInfo));
