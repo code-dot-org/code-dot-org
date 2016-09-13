@@ -301,6 +301,86 @@ module.exports = {
       },
     },
 
+    {
+      description: "Data Browser can delete records and clear tables",
+      editCode: true,
+      useFirebase: true,
+      xml:`
+        createRecord('mytable', {oldName:'Alice', age:7, male:false}, function (record) {
+          console.log('created record ' + record.id);
+          createRecord('mytable', {oldName:'Bob', age:8, male:true}, function (record) {
+            console.log('created record ' + record.id);
+          });
+        });
+        onRecordEvent('mytable', function(record, eventType) {
+          if (eventType === 'delete') {
+            console.log('deleted record ' + record.id);
+          }
+        });`,
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, function () {
+          // Overview
+          $("#dataModeButton").click();
+          const dataOverview = $('#dataOverview');
+          assert.equal(dataOverview.is(':visible'), true, 'dataOverview is visible');
+          const tableLink = dataOverview.find('a:contains(mytable)');
+          assert.equal(tableLink.is(':visible'), true, 'table link is visible');
+
+          // view table
+          ReactTestUtils.Simulate.click(tableLink[0]);
+          const dataTable = $('#dataTable');
+          assert.equal(dataTable.is(':visible'), true, 'dataTable is visible');
+          let record1Row = dataTable.find('tr:contains(Alice)');
+          assert.equal(record1Row.is(':visible'), true, 'record 1 appears in the grid');
+          let record2Row = dataTable.find('tr:contains(Bob)');
+          assert.equal(record2Row.is(':visible'), true, 'record 2 appears in the grid');
+
+          // delete record
+          let deleteRowButton = record1Row.find('button:contains(Delete)');
+          assert.equal(deleteRowButton.is(':visible'), true, 'delete row button visible');
+          ReactTestUtils.Simulate.click(deleteRowButton[0]);
+          setTimeout(() => {
+            record1Row = dataTable.find('tr:contains(Alice)');
+            assert.equal(record1Row.length, 0, 'record 1 no longer exists');
+
+            // clear table
+            const clearTableButton = $('#clearTableButton');
+            assert.equal(clearTableButton.is(':visible'), true, 'Clear table button is visible');
+            ReactTestUtils.Simulate.click(clearTableButton[0]);
+
+            // confirm delete
+            const confirmDeleteButton = clearTableButton.parent().find('button:contains(Delete)');
+            assert.equal(confirmDeleteButton.is(':visible'), true, 'Confirm delete button is visible');
+            ReactTestUtils.Simulate.click(confirmDeleteButton[0]);
+            setTimeout(() => {
+              assert.equal($('#dataTable').is(':visible'), true, 'dataTable is still visible');
+              record2Row = dataTable.find('tr:contains(Bob)');
+              assert.equal(record2Row.length, 0, 'record 2 no longer exists');
+
+              Applab.onPuzzleComplete();
+            }, 100);
+          }, 100);
+        });
+      },
+      customValidator: function (assert) {
+        // Verify that onRecordEvent was called with the correct data
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent,
+          'created record 1\n' +
+          'created record 2\n' +
+          'deleted record 1\n' +
+          'deleted record 2'
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
     // The data browser uses Firebase.off() somewhat broadly in order to stop
     // listening for data changes as you switch between data browser views. This
     // could potentially interfere with the listeners used by the onRecordEvent
