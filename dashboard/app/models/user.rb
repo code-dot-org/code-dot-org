@@ -490,10 +490,19 @@ class User < ActiveRecord::Base
       )
   end
 
+  # cache user levels for this user by script. The cache lifetime is the current HTTP request.
+  def cached_user_levels_by_script(script_id)
+    @user_level_cache_by_script ||= {}
+    if @user_level_cache_by_script[script_id].nil?
+      # make a database dip to get user_levels
+      @user_level_cache_by_script[script_id] =
+        user_levels.where(script_id: script_id).index_by(&:level_id)
+    end
+    @user_level_cache_by_script[script_id]
+  end
+
   def user_levels_by_level(script)
-    user_levels.
-      where(script_id: script.id).
-      index_by(&:level_id)
+    cached_user_levels_by_script(script.id)
   end
 
   def user_progress_by_stage(stage)
@@ -502,8 +511,8 @@ class User < ActiveRecord::Base
   end
 
   def user_level_for(script_level, level)
-    user_levels.find_by(script_id: script_level.script_id,
-                        level_id: level.id)
+    user_levels_for_script = cached_user_levels_by_script(script_level.script_id)
+    user_levels_for_script[level.id]
   end
 
   def user_level_locked?(script_level, level)
