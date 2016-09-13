@@ -162,7 +162,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
-    "Workshop #{start_time} at #{location_name}"
+    course_subject = subject ? "#{course} #{subject}" : course
+
+    # Limit the friendly name to 255 chars so it can be used as Section.name (which is itself limited) in #start!
+    "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
   end
 
   # Puts workshop in 'In Progress' state, creates a section and returns the section.
