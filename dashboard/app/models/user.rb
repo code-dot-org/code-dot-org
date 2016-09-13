@@ -135,16 +135,28 @@ class User < ActiveRecord::Base
   end
 
   def delete_permission(permission)
+    @permissions = nil
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission
   end
 
   def permission=(permission)
+    @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
 
+  # @param permission [UserPermission] the permission to query.
+  # @return [Boolean] whether the User has permission granted.
+  # TODO(asher): Determine whether request level caching is sufficient, or
+  #   whether a memcache or otherwise should be employed.
   def permission?(permission)
-    permissions.exists?(permission: permission)
+    if @permissions.nil?
+      # The user's permissions have not yet been cached, so do the DB query,
+      # caching the results.
+      @permissions = UserPermission.where(user_id: id).pluck(:permission)
+    end
+    # Return the cached results.
+    return @permissions.include? permission
   end
 
   def district_contact?
