@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-13T02:21:32.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Debugging\r\n\r\n\r\n\r\n# Do This\r\n\r\n* Find and fix all bugs in the starting HTML\r\nDescribe each bug in one sentence (e.g. “This tag was located in the wrong spot.”) in Activity Guide\r\nYou know you’ve found all of the bugs when your page match’s the target page \r\n\r\n\r\n",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE HTML>\r\n<html>\r\n  <head>\r\n    <title>  \r\n      Debugging 1\r\n    </title>\r\n  </head>\r\n  \r\n    <body>\r\n\r\n</h1>Cat Supplies\r\n\r\n        <h2>Cat Toys\r\n  </h1>\r\n       \r\n\r\n        </body> </h3>\r\n    We've got everything you need to keep your cat entertained for hours, including lasers, catnip toys and kitty chew toys\r\n          <h3>   \r\n\r\n</html> \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

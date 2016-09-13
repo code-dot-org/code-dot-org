@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-13T02:22:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Debugging\r\n\r\n\r\n\r\n# Do This\r\n\r\n* Find and fix all bugs in the starting HTML\r\nDescribe each bug in one sentence (e.g. “This tag was located in the wrong spot.”) in Activity Guide\r\nYou know you’ve found all of the bugs when your page match’s the target page \r\n\r\n\r\n",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
