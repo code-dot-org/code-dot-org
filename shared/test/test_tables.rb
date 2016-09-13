@@ -283,6 +283,27 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_firebase_export
+    create_channel
+
+    records_data = {
+      '1' => '{"id":1,"name":"alice","age":7,"male":false}',
+      '2' => '{"id":2,"name":"bob","age":8,"male":true}'
+    }
+
+    response = MiniTest::Mock.new
+    response.expect(:body, records_data)
+
+    firebase_path = "/v3/channels/#{@channel_id}/storage/tables/#{@table_name}/records"
+    Firebase::Client.any_instance.expects(:get).with(firebase_path).returns(response)
+
+    expected_csv_data = "id,name,age,male\n1,alice,7,false\n2,bob,8,true\n"
+
+    assert_equal export_firebase.body, expected_csv_data
+
+    delete_channel
+  end
+
   def test_table_names
     create_channel
 
@@ -413,6 +434,14 @@ class TablesTest < Minitest::Test
 
   def export
     get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
+  end
+
+  def export_firebase
+    CDO.stub(:firebase_name, 'my-firebase-name') do
+      CDO.stub(:firebase_secret, 'my-firebase-secret') do
+        get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+      end
+    end
   end
 
   def delete_column(column)

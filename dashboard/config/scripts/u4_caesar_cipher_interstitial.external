@@ -1,0 +1,30 @@
+name 'U4 caesar cipher interstitial'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Pause!
+
+Now that you've had a little practice cracking a an alphabetic shift cipher (pretty easy, huh?) let's try something more difficult.
+
+### New Problem
+
+Instead of the secret message being encoded with a simple alphabetic shift let's encode the message with **random substitution** of letters.  This is much harder to crack and requires a more sophisticated tool, so...
+
+### New version of the tool
+
+When you click continue, you'll see a new, more sophisticated version of the encryption tool.
+
+But what it does is bit of a mystery!  
+
+### Your job:
+
+ * Figure out what information is being represented
+ * Figure out what the the tool let's you do
+ * If you figure it out you might be able to crack a message encoded with random substitution.
+ 
+ After some time playing with it, you should get together with someone - partner, small group, whole class - to discuss what you found and verify that you know what's going on and the various ways you can use the tool.
+ 
+ <a class="btn-primary large">Continue</a>
+
+MARKDOWN

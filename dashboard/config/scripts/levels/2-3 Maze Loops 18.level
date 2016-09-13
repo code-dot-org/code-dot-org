@@ -12,7 +12,7 @@
     "skip_instructions_popup": "false",
     "start_direction": "2",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,3,4,1,2,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,4,4,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "5",
+    "ideal": "6",
     "markdown_instructions": "Get me to the sunflower using the fewest blocks possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down on the amount of code you need.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -27,7 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_18_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_18_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
