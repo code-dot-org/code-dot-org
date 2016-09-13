@@ -124,10 +124,13 @@ class ScriptLevelsController < ApplicationController
   def toggle_hidden
     section_id = params.require(:section_id).to_i
     stage_id = params.require(:stage_id)
-    should_hide = params.require(:hidden) == true
+    # this is "true" in tests but true in non-test requests
+    should_hide = params.require(:hidden) == "true" || params.require(:hidden) == true
 
     section = Section.find(section_id)
     authorize! :read, section
+
+    return head :forbidden unless Stage.find(stage_id).try(:script).try(:hideable_stages)
 
     hidden_stage = HiddenStage.find_by(stage_id: stage_id, section_id: section_id)
     if hidden_stage && !should_hide

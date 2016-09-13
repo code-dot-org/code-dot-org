@@ -453,4 +453,19 @@ DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
   end
+
+  test 'can set hideable_stages' do
+    input_dsl = <<DSL
+title 'Script title'
+description 'script description'
+hideable_stages 'true'
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:hideable_stages]
+  end
 end
