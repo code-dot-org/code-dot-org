@@ -180,7 +180,7 @@ class ScriptLevel < ActiveRecord::Base
     ids = level_ids
 
     levels.each do |l|
-      ids << l.contained_levels.map(&:id)
+      ids.concat(l.contained_levels.map(&:id))
     end
 
     summary = {
