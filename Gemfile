@@ -16,6 +16,7 @@ gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 gem 'mysql2', '~> 0.3.13'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/28
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/31
+# Ref: https://github.com/bdurand/seamless_database_pool/pull/33
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'le', '~> 2.2'
