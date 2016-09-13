@@ -4,10 +4,8 @@
 if (CDO.skip_locales || Rails.env.development?) && (!CDO.load_locales)
   dev_locales = ["es-ES", "en"]
   suffixes = dev_locales.map { |x| "#{x}.yml" }
-  locale_paths = Dashboard::Application.paths['config/locales'].expanded.select{|x| x.end_with?(*suffixes)}
-  # Changed from railties_load_path for Rail5 compat.
-  # Ref: https://github.com/rails/rails/issues/21228
-  Dashboard::Application.config.i18n.load_path = locale_paths
+  locale_paths = Dashboard::Application.paths['config/locales'].select{|x| x.end_with?(*suffixes)}
+  Dashboard::Application.config.i18n.railties_load_path = locale_paths
 end
 
 # Preload translations (before application fork, after i18n_railtie initializer)
