@@ -744,14 +744,16 @@ Flappy.execute = function () {
   // Map event handler hooks (e.g. Flappy.whenClick) to the generated code.
   const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
   const events = {
-    whenClick: generator('flappy_whenClick'),
-    whenCollideGround: generator('flappy_whenCollideGround'),
-    whenEnterObstacle: generator('flappy_whenEnterObstacle'),
-    whenCollideObstacle: generator('flappy_whenCollideObstacle'),
-    whenRunButton: generator('when_run')
+    whenClick: {code: generator('flappy_whenClick')},
+    whenCollideGround: {code: generator('flappy_whenCollideGround')},
+    whenEnterObstacle: {code: generator('flappy_whenEnterObstacle')},
+    whenCollideObstacle: {code: generator('flappy_whenCollideObstacle')},
+    whenRunButton: {code: generator('when_run')}
   };
 
-  Object.assign(Flappy, codegen.evalWithEvents({Flappy: api}, events));
+  codegen.evalWithEvents({Flappy: api}, events).forEach(hook => {
+    Flappy[hook.name] = hook.func;
+  });
 
   studioApp.playAudio('start');
 
