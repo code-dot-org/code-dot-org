@@ -189,13 +189,6 @@ ActiveRecord::Schema.define(version: 20160913230138) do
     t.index ["intro_video_id"], name: "index_games_on_intro_video_id", using: :btree
   end
 
-  create_table "hidden_stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "section_id"
-    t.integer "stage_id"
-    t.index ["section_id"], name: "index_hidden_stages_on_section_id", using: :btree
-    t.index ["stage_id"], name: "index_hidden_stages_on_stage_id", using: :btree
-  end
-
   create_table "hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "script_id"

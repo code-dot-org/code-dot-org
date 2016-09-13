@@ -109,11 +109,11 @@ class ScriptLevelsController < ApplicationController
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
       # hides the stage
-      stage_ids = script_sections.map(&:hidden_stages).flatten.map(&:stage_id).uniq
+      stage_ids = script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
     else
       # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
       # of th sections the student belongs to
-      all_ids = sections.map(&:hidden_stages).flatten.map(&:stage_id)
+      all_ids = sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       stage_ids = counts.select{|_, val| val == sections.length}.keys
     end
@@ -130,13 +130,14 @@ class ScriptLevelsController < ApplicationController
     section = Section.find(section_id)
     authorize! :read, section
 
+    # TODO(asher): change this to use a cache
     return head :forbidden unless Stage.find(stage_id).try(:script).try(:hideable_stages)
 
-    hidden_stage = HiddenStage.find_by(stage_id: stage_id, section_id: section_id)
+    hidden_stage = SectionHiddenStage.find_by(stage_id: stage_id, section_id: section_id)
     if hidden_stage && !should_hide
       hidden_stage.delete
     elsif hidden_stage.nil? && should_hide
-      HiddenStage.create(stage_id: stage_id, section_id: section_id)
+      SectionHiddenStage.create(stage_id: stage_id, section_id: section_id)
     end
 
     render json: []

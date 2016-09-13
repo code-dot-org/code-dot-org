@@ -43,6 +43,7 @@ class DslTest < ActiveSupport::TestCase
       student_of_admin_required: false,
       professional_learning_course: nil,
       pd: false,
+      hideable_stages: false,
       peer_reviews_to_complete: nil
     }
 
@@ -70,6 +71,7 @@ class DslTest < ActiveSupport::TestCase
       student_of_admin_required: false,
       professional_learning_course: nil,
       pd: false,
+      hideable_stages: false,
       peer_reviews_to_complete: nil
     }
 
@@ -92,6 +94,7 @@ class DslTest < ActiveSupport::TestCase
       student_of_admin_required: false,
       professional_learning_course: nil,
       pd: false,
+      hideable_stages: false,
       peer_reviews_to_complete: nil
     }
 
@@ -114,6 +117,7 @@ class DslTest < ActiveSupport::TestCase
       student_of_admin_required: true,
       professional_learning_course: nil,
       pd: false,
+      hideable_stages: false,
       peer_reviews_to_complete: nil
     }
 
@@ -136,6 +140,7 @@ class DslTest < ActiveSupport::TestCase
       student_of_admin_required: true,
       professional_learning_course: nil,
       pd: false,
+      hideable_stages: false,
       peer_reviews_to_complete: nil
     }
 
@@ -171,6 +176,7 @@ level 'Level 3'
       login_required: false,
       admin_required: false,
       pd: false,
+      hideable_stages: false,
       student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -232,6 +238,7 @@ level 'Level 3'
       login_required: false,
       admin_required: false,
       pd: false,
+      hideable_stages: false,
       student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -289,6 +296,7 @@ level 'Level 3'
       login_required: false,
       admin_required: false,
       pd: false,
+      hideable_stages: false,
       student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -406,6 +414,7 @@ DSL
       login_required: false,
       admin_required: false,
       pd: false,
+      hideable_stages: false,
       student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -445,6 +454,7 @@ DSL
       login_required: false,
       admin_required: false,
       pd: false,
+      hideable_stages: false,
       student_of_admin_required: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil

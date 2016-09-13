@@ -42,7 +42,6 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: action.stages.map(stage => _.omit(stage, 'hidden')),
-      // TODO - might make sense to split of some state that isnt actually specific to progress
       scriptName: action.scriptName,
       currentStageId
     });

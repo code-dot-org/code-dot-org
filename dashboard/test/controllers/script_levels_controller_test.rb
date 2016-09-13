@@ -1160,14 +1160,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage3 = @script.stages[2]
 
     # stage 1 hidden in both sections
-    HiddenStage.create(section_id: section1.id, stage_id: stage1.id)
-    HiddenStage.create(section_id: section2.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: section1.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: section2.id, stage_id: stage1.id)
 
     # stage 2 hidden in section 1
-    HiddenStage.create(section_id: section1.id, stage_id: stage2.id)
+    SectionHiddenStage.create(section_id: section1.id, stage_id: stage2.id)
 
     # stage 3 hidden in section 2
-    HiddenStage.create(section_id: section2.id, stage_id: stage3.id)
+    SectionHiddenStage.create(section_id: section2.id, stage_id: stage3.id)
 
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
@@ -1187,14 +1187,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage3 = @script.stages[2]
 
     # stage 1 hidden in both sections
-    HiddenStage.create(section_id: section1.id, stage_id: stage1.id)
-    HiddenStage.create(section_id: section2.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: section1.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: section2.id, stage_id: stage1.id)
 
     # stage 2 hidden in section 1
-    HiddenStage.create(section_id: section1.id, stage_id: stage2.id)
+    SectionHiddenStage.create(section_id: section1.id, stage_id: stage2.id)
 
     # stage 3 hidden in section 2
-    HiddenStage.create(section_id: section2.id, stage_id: stage3.id)
+    SectionHiddenStage.create(section_id: section2.id, stage_id: stage3.id)
 
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
@@ -1215,14 +1215,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage3 = @script.stages[2]
 
     # stage 1 hidden in both sections
-    HiddenStage.create(section_id: attached_section.id, stage_id: stage1.id)
-    HiddenStage.create(section_id: unattached_section.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: attached_section.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: unattached_section.id, stage_id: stage1.id)
 
     # stage 2 hidden only in attached section
-    HiddenStage.create(section_id: attached_section.id, stage_id: stage2.id)
+    SectionHiddenStage.create(section_id: attached_section.id, stage_id: stage2.id)
 
     # stage 3 hidden only in unattached section
-    HiddenStage.create(section_id: unattached_section.id, stage_id: stage3.id)
+    SectionHiddenStage.create(section_id: unattached_section.id, stage_id: stage3.id)
 
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
@@ -1230,11 +1230,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [stage1.id.to_s, stage2.id.to_s], hidden
   end
 
-  test "user not signed in or in no sections" do
+  test "user not signed in" do
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
     assert_equal [], hidden
+  end
 
+  test "user in no sections" do
     student = create :student
     sign_in student
 
@@ -1256,10 +1258,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage2 = @script.stages[1]
 
     # stage 1 is hidden in the section owned by the teacher
-    HiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
+    SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: stage1.id)
 
     # stage 2 is hidden in the section in which the teacher is a member
-    HiddenStage.create(section_id: teacher_member_section.id, stage_id: stage2.id)
+    SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: stage2.id)
 
     response = get_hidden(@script)
     hidden = JSON.parse(response.body)
@@ -1277,14 +1279,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert @custom_script.hideable_stages
 
     # start with no hidden stages
-    assert_equal 0, HiddenStage.where(section_id: section.id).length
+    assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
 
     post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: true
     assert_response :success
-    assert_equal 1, HiddenStage.where(section_id: section.id).length
+    assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
 
     post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: false
-    assert_equal 0, HiddenStage.where(section_id: section.id).length
+    assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
   end
 
   test "teacher can't hide stages if script has hideable_stages false" do
@@ -1298,10 +1300,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: true
     assert_response 403
-    assert_equal 0, HiddenStage.where(section_id: section.id).length
+    assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
   end
 
-  test "teacher can't hide or un  hide stages in sections they don't own" do
+  test "teacher can't hide or unhide stages in sections they don't own" do
     teacher = create :teacher
     other_teacher = create :teacher
     student = create :student
@@ -1314,13 +1316,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: "true"
     assert_response 403
 
-    # add a HiddenStage directly
-    HiddenStage.create(stage_id: stage1.id, section_id: section.id)
+    # add a SectionHiddenStage directly
+    SectionHiddenStage.create(stage_id: stage1.id, section_id: section.id)
 
     # try to unhide
     post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: "false"
     assert_response 403
 
-    assert_equal 1, HiddenStage.where(section_id: section.id).length
+    assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
   end
 end
