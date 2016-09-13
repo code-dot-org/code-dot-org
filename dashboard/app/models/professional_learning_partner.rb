@@ -9,7 +9,7 @@
 #
 # Indexes
 #
-#  index_professional_learning_partners_on_name  (name)
+#  index_professional_learning_partners_on_name  (name) UNIQUE
 #
 
 class ProfessionalLearningPartner < ActiveRecord::Base
