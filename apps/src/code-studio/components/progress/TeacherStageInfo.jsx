@@ -66,13 +66,14 @@ const TeacherStageInfo = React.createClass({
     // redux provided
     hiddenStagesInitialized: React.PropTypes.bool.isRequired,
     hiddenStageMap: React.PropTypes.object.isRequired,
+    scriptName: React.PropTypes.string.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
     toggleHidden: React.PropTypes.func.isRequired
   },
 
   onClickHiddenToggle(value) {
-    // TODO
-    this.props.toggleHidden('csp1', this.props.stage.id, value === 'hidden');
+    this.props.toggleHidden(this.props.scriptName,
+      this.props.stage.id, value === 'hidden');
   },
 
   clickLessonPlan() {
@@ -119,6 +120,7 @@ export default connect(state => {
   return {
     hiddenStagesInitialized: state.hiddenStage.initialized,
     hiddenStageMap: state.hiddenStage,
+    scriptName: state.progress.scriptName,
     hasNoSections: state.stageLock.sectionsLoaded &&
       Object.keys(state.stageLock.sections).length === 0
     };
