@@ -2,7 +2,9 @@ uk:
   errors:
     messages:
       not_saved: 'Виправ ці помилки:'
-      too_young: Цей вміст має вікові обмеження і недоступний для молодших школярів
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ uk:
   signup_form:
     student_count: '%{count} учнів вже зареєструвались.'
     teacher_count: '%{count} вчителів вже зареєструвались.'
-    overview_student: 'Зареєструйтесь для відстеження свого навчання. Ваша скринька буде використовуватись для входу на сайт та відновлення забутого паролю. Більше інформації у <a href="http://code.org/privacy">Політиці конфіденційності</a>.'
-    overview_teacher: 'Використовуйте обліковий запис для проведення уроків.<p/> Ви зможете додавати учнів у групи та слідкувати за їхньою успішністю.'
-    no_signup_message: 'Ви можете <a target="_blank" href="http://learn.code.org">переглянути різні рівні та завдання</a>, але для збереження результатів потрібно реєструватись.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Переглянути посібник для вчителя
-    teacher_pitch: Реєстрація для вчителя на Code.org
-    teacher_title: Реєстрація вчителя
-    student_pitch: Реєстрація для учня на Code.org
-    student_title: Реєстрація учнів
-    signup_title: Реєстрація на Code.org
+    title: Sign up for Code.org
     school_name: "Назва навчального закладу (необов'язково)"
     school_address: "Адреса школи (необов'язково)"
     address_placeholder: адреса, місто, штат, індекс
@@ -103,15 +99,17 @@ uk:
     valid_password: Вірний пароль!
     invalid_password: 'Пароль має складатися хоча б із %d символів'
     mismatch_password: Введені вами паролі не збігаються
-    student_terms: "Я погоджуюсь із <a href='http://code.org/tos'>умовами надання послуг</a> Code.org. Якщо мені менше 13 років, надсилаючи цю форму, я підтверджую наявність дозволу батьків або юридичних опікунів на користування послугами Code.org.<br/><br/> Для користувачів, молодших за 13 років, електронні скриньки зберігаються без можливості надсилання їм повідомлень."
-    teacher_terms: "Я погоджуюсь з <a href='http://code.org/tos'>умовами надання послуг Code.org </a>."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Нам потрібна додаткова інформація, щоб продовжити реєстрацію.
     user_type_label: Тип облікового запису
     user_type_teacher: Вчитель
     user_type_student: учень
+    field_is_required: необхідне
+    accept_terms: You must agree to create an account
   signin_form:
     title: Вже маєте обліковий запис? Увійдіть
-    login: "Електронної пошти або ім'я користувача"
+    login: Електронна пошта
     password: Пароль
     remember: "Запам'ятати мене"
     submit: Вхід
@@ -130,8 +128,9 @@ uk:
   password:
     reset_form:
       title: Забули пароль?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: Адреса електронної пошти
-      submit: Надіслати мені вказівки для відновлення паролю
+      submit: Надіслати
     change_form:
       title: Змінити пароль
       new_password: Новий пароль
@@ -247,7 +246,7 @@ uk:
       prizes: Призи
       logout: Вийти
       signin: Вхід
-      signup: Зареєструватися
+      signup: Create an account
       already_registered: Вже зареєстровані?
       pair_programming: Парне програмування
       team: Команда
@@ -278,7 +277,7 @@ uk:
     user_not_found: Такого вчителя не знайдено.
     student_teacher_disassociated: 'Ви видалили %{teacher_name} як свого вчителя.'
     panel:
-      answer_viewer: Перегляд відповідей
+      answer_viewer: Teacher Panel
       student: учень
       viewing_solution: Перегляд рішення
       try_it_yourself: Спробуйте самі
@@ -288,6 +287,7 @@ uk:
       submitted_on: 'Надіслано:'
       unsubmit: Відкликати
       worked_with: У співпраці з
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -346,7 +346,8 @@ uk:
     choose_next_course: Спробуйте курс Студії коду, обравши один з варіантів
     print_certificate: Друкувати сертифікат
     announcement_title: Оголошення
-    announcement_message: 'Хочете допомогти нам протестувати нові функції? Ми знаємо, що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж оприлюднити цю функцію.'
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Дізнайтеся більше
     announcement_try_now_button: Спробувати
@@ -572,6 +573,19 @@ uk:
     header: Оновити відомості про обліковий запис
     message: 'Ми в процесі оновлення для надання ретельнішого захисту Вашої конфіденційності та безпеки. З цією метою існуючі користувачі повинні вказати свій вік.<br/> Як і раніше, code.org ніколи не надаватиме, не продаватиме і не ділитиметься цією інформацією з третіми особами.'
     sign_out: 'Якщо Ви не бажаєте надавати інформацію про свій вік, Ви можете <a href="%{url}">вийти з системи</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Умови надання послуг
+    privacy: Політика конфіденційності
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Друк
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: |-
     На жаль, молодші користувачі не можуть входити на цей сайт підтримки. Ви можете користуватись <a href="http://support.code.org">support.code.org</a> не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв'язатися з нами.
   progress:
@@ -711,3 +725,4 @@ uk:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.

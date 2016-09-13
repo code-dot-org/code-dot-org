@@ -105,7 +105,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-source-map',
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
