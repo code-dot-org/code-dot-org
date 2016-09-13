@@ -274,7 +274,12 @@ const DataTable = React.createClass({
                 ))
               }
               <th style={styles.addColumnHeader}>
-                <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
+                <FontAwesome
+                  id="addColumnButton"
+                  icon="plus"
+                  style={styles.plusIcon}
+                  onClick={this.addColumn}
+                />
               </th>
               <th style={dataStyles.headerCell}>
                 Actions
