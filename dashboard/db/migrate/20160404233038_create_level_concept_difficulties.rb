@@ -1,4 +1,4 @@
-class CreateLevelConceptDifficulties < ActiveRecord::Migration
+class CreateLevelConceptDifficulties < ActiveRecord::Migration[4.2]
   def change
     create_table :level_concept_difficulties do |t|
       t.references :level, index: true, foreign_key: true

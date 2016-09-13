@@ -499,6 +499,7 @@ bn-BD:
   dashboard_action_remove_confirm: মুছে ফেলবো?
   dashboard_action_done: হয়ে গেছে
   dashboard_action_required: প্রয়োজনীয়
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'মূল্যায়ন দেখুন:'
   dashboard_assessments_none: মূল্যায়ন নাই
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
@@ -669,7 +670,8 @@ bn-BD:
   dashboard_faq: বহুবার আলোচিত প্রশ্ন সমূহ
   dashboard_faq_k5: K-5 বহুল জিজ্ঞাসিত প্রশ্নসমূহ
   dashboard_announcements: ঘোষণা
-  dashboard_announce_message: '<b>২৯ ফেব্রুয়ারি, ২০১৬</b>- কর্মশালায় অংশগ্রহণকারীদের ৯০% আমাদের প্রোগ্রামকে সবচেয়ে ভাল পেশাদারী উন্নয়ন কর্মশালা বলেছেন। চাহিদার কারণে, আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে আবেদন করুন।'
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: আরও জানুন
   dashboard_announce_try_now_button: এখন চেষ্টা করুন
@@ -785,11 +787,11 @@ bn-BD:
   course3_name: কোর্স ২
   course4_name: কোর্স ৪
   accelerated_name: Accelerated Course
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
+  cspunit1_name: '(old) Unit 1: Digital Information'
+  cspunit2_name: '(old) Unit 2: The Internet'
   cspunit3_name: সিএস এর মূলনীতি ইউনিট ৩
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit4_name: '(old) Unit 4: Data'
+  cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'

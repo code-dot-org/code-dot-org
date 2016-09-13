@@ -21,7 +21,7 @@ for locale in $locales; do
   if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
     ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $loc_dir/base.yml $orig_dir/$locale.yml
   else
-    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $loc_dir/base.yml $orig_dir/$locale.yml
+    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/base.yml $loc_dir/base.yml $orig_dir/$locale.yml
   fi
   perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/$locale.yml
 

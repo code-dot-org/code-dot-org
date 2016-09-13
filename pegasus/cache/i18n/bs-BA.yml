@@ -54,7 +54,7 @@
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Sat Kodiranja događaj
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: Registruj se
+  cded_sign_up: Prijava
   cded_try_it: Isprobaj
   try_now: Probaj sad
   california_heading: Pitaj svoju školu da predaje računarske nauke
@@ -346,7 +346,7 @@
   homepage_action_text_hoc: Sat Kodiranja za svakog učenika.
   homepage_action_text_num_served: "# posluženo"
   homepage_action_text_join_us: Pridruži nam se
-  homepage_action_text_sign_up: Registruj se
+  homepage_action_text_sign_up: Prijava
   homepage_action_text_try_it: Isprobaj
   homepage_action_text_volunteers: Tražimo tehničke volontere
   homepage_action_text_codevideo: Pogledaj video
@@ -667,6 +667,7 @@
   dashboard_action_remove_confirm: Ukloniti?
   dashboard_action_done: Završeno
   dashboard_action_required: neophodno
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -873,11 +874,14 @@
   dashboard_faq: "Često Postavljana Pitanja"
   dashboard_faq_k5: "Česta pitanja za mlađi uzrast (do petog razreda)"
   dashboard_announcements: Objave
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -897,7 +901,7 @@
   learn_more: 'Nauči još '
   learn_sign_up_description: Prijavi se u Sat Kodiranja tokom Edukacijske Sedmice
     Računarstva
-  learn_sign_up_button: Registruj se
+  learn_sign_up_button: Prijava
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1744,12 +1748,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

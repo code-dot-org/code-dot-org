@@ -91,11 +91,11 @@ class User < ActiveRecord::Base
 
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
 
-  # :user_type is locked/deprecated. Use the :permissions property for more granular user permissions.
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
@@ -135,16 +135,28 @@ class User < ActiveRecord::Base
   end
 
   def delete_permission(permission)
+    @permissions = nil
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission
   end
 
   def permission=(permission)
+    @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
 
+  # @param permission [UserPermission] the permission to query.
+  # @return [Boolean] whether the User has permission granted.
+  # TODO(asher): Determine whether request level caching is sufficient, or
+  #   whether a memcache or otherwise should be employed.
   def permission?(permission)
-    permissions.exists?(permission: permission)
+    if @permissions.nil?
+      # The user's permissions have not yet been cached, so do the DB query,
+      # caching the results.
+      @permissions = UserPermission.where(user_id: id).pluck(:permission)
+    end
+    # Return the cached results.
+    return @permissions.include? permission
   end
 
   def district_contact?
@@ -381,7 +393,7 @@ class User < ActiveRecord::Base
         user.age = 21
       else
         # student or unspecified type
-        user.age = ((Date.today - auth.info.dob) / 365).floor if auth.info.dob
+        user.birthday = auth.info.dob
       end
       user.gender = normalize_gender auth.info.gender
     end
@@ -528,14 +540,9 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
-  def last_attempt_for_any(levels, script_id: nil)
+  def last_attempt_for_any(levels)
     level_ids = levels.map(&:id)
-    conditions = {
-      user_id: self.id,
-      level_id: level_ids
-    }
-    conditions[:script_id] = script_id unless script_id.nil?
-    UserLevel.where(conditions).
+    UserLevel.where(user_id: self.id, level_id: level_ids).
       order('updated_at DESC').
       first
   end

@@ -692,6 +692,7 @@
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Féach measúnuithe i:'
   dashboard_assessments_none: Baineann go leor múinteoirí úsáid as an gcluaisín "Féach
     Dul Chun Cinn" le dul chun cinn a gcuid daltaí a leanúint. Má tá tú ag iarraidh
@@ -916,11 +917,14 @@
   dashboard_faq: Ceisteanna Coitianta
   dashboard_faq_k5: 'Bunscoil: Ceisteanna Coitianta'
   dashboard_announcements: Fógraí
-  dashboard_announce_message: Ar mhaith leat cabhrú linn chun gné nua a thástáil?
-    Tuigimid go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail,
-    mar sin beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta
-    a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh
-    do chuid aiseolais sula gcraolfaimid an gné go poiblí.
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -934,8 +938,9 @@
     is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na
     Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
   dashboard_announce_petition_button: Cuir d'ainm leis
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár
+    mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
+    ar fhógraí roimhe seo.</a>
   code_hoc_coming: Tá an Uair Chódála anseo - 8-14 Nollaig!
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_more: Bain triail as anois
@@ -1842,12 +1847,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

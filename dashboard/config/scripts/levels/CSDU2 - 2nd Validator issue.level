@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T20:27:03.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Validator Continued\r\n\r\nLet's continue working with the validator.\r\n\r\n# Do This\r\n\r\n* In a new tab, open up the <a href=\"https://validator.w3.org/\">W3 validator</a>.\r\n* Click Validate by Direct Input\r\n* Copy and paste the contents of index.html into the box.\r\n* Click “Check”\r\n* Read the first error message\r\n* Fix the error in your index.html file in Web Lab\r\n\r\nShould get Element head is missing a required\r\ninstance of child element title.\r\nfix - add head and child",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1> Header </h1> \\n  A bunch of text about something. \\n <h4> Sub Header </h4> \\n  Some more text about something.  <h6> List </h6>  <ol>\\n  <li> thing 1 </li>\\n  <li> thing 2 </li>\\n  <li> thing 3 </li>\\n  </ol>\r\n \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

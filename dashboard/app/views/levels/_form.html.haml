@@ -49,12 +49,33 @@
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
+  var saving = false;
   $(document).ready(function () {
     $('#saveProgress').click(function() {
+      saving = true;
       $('#level_published').val(false);
     });
 
     $('#publishLevel').click(function() {
+      saving = true;
       $('#level_published').val(true);
     });
+  });
+
+  var inputs = $('.edit_level *[id]:visible');
+  var form_values = {};
+  for (var i = 0; i < inputs.length; i++) {
+    form_values[inputs[i].id] = inputs[i].value;
+  }
+
+  $(window).bind('beforeunload', function () {
+    if (saving) {
+      return;
+    }
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].value !== form_values[inputs[i].id]) {
+        // prompt before navigating away
+        return "You have unsaved changes, are you sure you want to leave?";
+      }
+    }
   });

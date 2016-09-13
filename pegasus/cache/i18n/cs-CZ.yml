@@ -673,6 +673,7 @@
   dashboard_action_remove_confirm: Odstranit?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadováno
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Zobrazit hodnocení v:'
   dashboard_assessments_none: Většina učitelů měří studentům pokrok pomocí karty "Zobrazit
     pokrok". Pokud chcete dát svým studentům podrobnější hodnocení, najdete doporučené
@@ -889,11 +890,14 @@
   dashboard_faq: "Často kladené dotazy"
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
-  dashboard_announce_message: Chcete nám pomoci otestovat novou funkci? Víme, že je
-    důležité podporovat studenty při opakování a experimentování, takže budeme přidávat
-    funkci "nepoužívaný kód" umožňující studentům spuštění vlastního kódu, i v situaci,
-    kdy obsahuje nezapojené bloky. Uvítáme vaši zpětnou vazbu ještě před zveřejněním
-    této funkce všem.
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -907,8 +911,8 @@
     kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní
     docházky na základních i středních školách.
   dashboard_announce_petition_button: Přidej své jméno
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Udržuj krok s novými funkcemi a aktualizacemi na našem blogu
+    učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé oznámení.</a>
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace
@@ -1744,12 +1748,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

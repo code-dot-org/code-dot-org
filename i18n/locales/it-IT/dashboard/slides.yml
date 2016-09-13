@@ -38,7 +38,7 @@ it:
         text: "Per fare più di un'azione, sposta più blocchi nell'area di lavoro e attaccali uno sotto l'altro. L'uccello eseguirà le istruzioni associate ai blocchi procedendo dall'alto verso il basso."
       12:
         image: notes/hoc1_12.jpg
-        text: 'Se dopo aver eseguito un programma vuoi cambiarlo ed eseguirlo di nuovo, premi "Riprova".'
+        text: 'Se dopo aver eseguito un programma vuoi cambiarlo ed eseguirlo di nuovo, clicca su "Riprova".'
       13:
         image: notes/hoc1_13.jpg
         text: Andiamo a prendere quei maiali!

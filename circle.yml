@@ -19,9 +19,9 @@ machine:
     - docker
 checkout:
   post:
-    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; esac:
+    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
         parallel: true
-    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-base ;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) echo "Skipping step." ;; *) ./bin/circle/merge-base ;; esac:
         parallel: true
 dependencies:
   cache_directories:
@@ -48,6 +48,12 @@ dependencies:
     - 'echo "build_apps: true" >> locals.yml'
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "sync_assets: false" >> locals.yml'
+    - 'echo "dashboard_enable_pegasus: true" >> locals.yml'
+    - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "use_dynamo_tables: false" >> locals.yml ;; esac'
+    - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "use_dynamo_properties: false" >> locals.yml ;; esac'
+    - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "no_https_store: true" >> locals.yml ;; esac'
+    - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_dashboard: \"localhost-studio.code.org:3000\"" >> locals.yml ;; esac'
+    - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_pegasus: \"localhost.code.org:3000\"" >> locals.yml ;; esac'
     # Run rake install
     - bundle exec rake install:
         environment:
@@ -60,7 +66,7 @@ database:
 test:
   override:
     - bundle exec rake lint:javascript
-    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; 1) bundle exec rake circle:run_ui_tests ;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; *) bundle exec rake circle:run_ui_tests ;; esac:
         parallel: true
         timeout:
             7200

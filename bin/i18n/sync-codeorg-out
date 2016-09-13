@@ -28,7 +28,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(applab calc eval gamelab netsim)
+  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
 
   Languages.get_locale.each do |prop|
     if prop[:locale_s] != 'en-US'

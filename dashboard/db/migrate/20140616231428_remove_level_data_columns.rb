@@ -1,5 +1,5 @@
 # Moves all level column data to corresponding field in 'properties' column
-class RemoveLevelDataColumns < ActiveRecord::Migration
+class RemoveLevelDataColumns < ActiveRecord::Migration[4.2]
   def change
     columns = %w(
       level_url:string skin:string instructions:string maze:string x:integer
