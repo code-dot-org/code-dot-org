@@ -26,6 +26,10 @@ end
 LOG_FILE = "#{Dir.tmpdir}/dotd.log"
 LOGGER = Logger.new(LOG_FILE, 'daily')
 
+LOGGER.formatter = proc do |_serverity, time, _progname, msg|
+  "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
+end
+
 def ask_for_name
   name = ''
   until name != ''
@@ -42,7 +46,7 @@ def should_i(question)
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
     if 'yes'.start_with?(response) # also catches blank/return ;)
-      LOGGER.info("[#{Time.new.strftime('%I:%M %p')}]: #{question}")
+      LOGGER.info(question)
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)

@@ -439,4 +439,93 @@ describe('FirebaseStorage', () => {
         });
     });
   });
+
+  describe('importCsv', () => {
+    const csvData =
+      'id,name,age,male\n' +
+      '4,alice,7,false\n' +
+      '5,bob,8,true\n' +
+      '6,charlie,9,true\n';
+
+    const expectedTableData = {
+      1: '{"id":1,"name":"alice","age":7,"male":false}',
+      2: '{"id":2,"name":"bob","age":8,"male":true}',
+      3: '{"id":3,"name":"charlie","age":9,"male":true}'
+    };
+
+    it('imports a valid csv', done => {
+      FirebaseStorage.importCsv(
+        'mytable',
+        csvData,
+        validateTableData,
+        error => {throw error;});
+
+      function validateTableData() {
+        const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+        rowCountRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.equal(3);
+          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          return recordsRef.once('value');
+        }).then(snapshot => {
+          expect(snapshot.val()).to.deep.equal(expectedTableData);
+          done();
+        });
+      }
+    });
+
+    it('overwrites existing data', done => {
+      FirebaseStorage.createRecord(
+        'mytable',
+        {name:"eve", age:11, male:false},
+        doImport,
+        error => {throw error;});
+
+      function doImport() {
+        FirebaseStorage.importCsv(
+        'mytable',
+        csvData,
+        validateTableData,
+        error => {throw error;});
+      }
+
+      function validateTableData() {
+        const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+        rowCountRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.equal(3);
+          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          return recordsRef.once('value');
+        }).then(snapshot => {
+          expect(snapshot.val()).to.deep.equal(expectedTableData);
+          done();
+        });
+      }
+    });
+
+    it('rejects long inputs', done => {
+      const name150 = 'abcdefghij'.repeat(15);
+      expect(name150.length).to.equal(150);
+      const longCsvData = `name\n${name150}\n`;
+      FirebaseStorage.importCsv(
+        'mytable',
+        longCsvData,
+        () => { throw 'expected import to fail on large record'; },
+        error => {
+          expect(error).to.contain('one of of the records is too large');
+          done();
+        });
+    });
+
+    it('rejects too many rows', done => {
+      const longCsvData = 'name\n' + 'bob\n'.repeat(25);
+      FirebaseStorage.importCsv(
+        'mytable',
+        longCsvData,
+        () => { throw 'expected import to fail on large table'; },
+        error => {
+          expect(error).to.contain('the data is too large');
+          done();
+        });
+    });
+
+  });
 });
