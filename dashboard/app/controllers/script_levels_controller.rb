@@ -122,9 +122,9 @@ class ScriptLevelsController < ApplicationController
   end
 
   def toggle_hidden
-    section_id = params[:section_id]
-    stage_id = params[:stage_id]
-    should_hide = params[:hidden] == "true"
+    section_id = params.require(:section_id).to_i
+    stage_id = params.require(:stage_id)
+    should_hide = params.require(:hidden) == true
 
     section = Section.find(section_id)
     authorize! :read, section

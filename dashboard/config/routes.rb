@@ -139,6 +139,7 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
     get 'hidden_stages', to: 'script_levels#hidden'
+    post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
