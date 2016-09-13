@@ -37,6 +37,8 @@ class Section < ActiveRecord::Base
 
   belongs_to :script
 
+  has_many :hidden_stages
+
   LOGIN_TYPE_PICTURE = 'picture'
   LOGIN_TYPE_WORD = 'word'
 
