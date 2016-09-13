@@ -2,7 +2,7 @@ class AddUniqueConstraintToProfessionalLearningPartners < ActiveRecord::Migratio
   def change
     change_table :professional_learning_partners do |t|
       t.remove_index column: :name
-      t.index :name, unique: true
+      t.index [:name, :contact_id], unique: true
     end
   end
 end
