@@ -1,5 +1,9 @@
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :section_hidden_stage do
+    section nil
+    stage nil
+  end
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}

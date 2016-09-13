@@ -94,10 +94,8 @@ export function getHiddenStages(scriptName) {
     }).done(hiddenStageIds => {
       // send updates for all stageIds, setting hidden to true
       const updates = hiddenStageIds.reduce((obj, id) => {
-        return {
-          ...obj,
-          [id]: true
-        };
+        obj[id] = true;
+        return obj;
       }, {});
       dispatch(updateHiddenStages(updates));
       dispatch(allowHideable());

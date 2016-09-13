@@ -80,12 +80,12 @@ class Script < ActiveRecord::Base
   end
 
   serialized_attrs %w(
+    admin_required
     hideable_stages
     pd
-    admin_required
+    peer_reviews_to_complete
     professional_learning_course
     student_of_admin_required
-    peer_reviews_to_complete
   )
 
   def self.twenty_hour_script
