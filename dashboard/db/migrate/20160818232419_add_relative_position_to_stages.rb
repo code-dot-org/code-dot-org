@@ -1,4 +1,4 @@
-class AddRelativePositionToStages < ActiveRecord::Migration
+class AddRelativePositionToStages < ActiveRecord::Migration[4.2]
   def up
     rename_column :stages, :position, :absolute_position
     add_column :stages, :relative_position, :integer

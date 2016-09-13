@@ -46,17 +46,14 @@ Resources:
         Timeout: 300
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
-    UpdatePolicy:
-      AutoScalingReplacingUpdate:
-        WillReplace: true
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT25M
+        Timeout: PT50M
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
-      MaxSize: 12
+      MaxSize: 20
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]

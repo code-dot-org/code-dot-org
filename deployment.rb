@@ -92,6 +92,8 @@ def load_configuration
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'firebase_name'               => nil,
+    'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
     'firebase_max_table_count'    => 10,

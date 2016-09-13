@@ -1,4 +1,4 @@
-class AddScriptLoginMethodGradeAdminCodeToSection < ActiveRecord::Migration
+class AddScriptLoginMethodGradeAdminCodeToSection < ActiveRecord::Migration[4.2]
   def change
     add_column :sections, :script_id, :integer
     add_column :sections, :login_method, :integer, default: 0
