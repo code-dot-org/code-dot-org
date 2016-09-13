@@ -67,6 +67,9 @@ dependencies:
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done:
         timeout: 840
+    # Update firebase security rules and config params. If these security rules change in a
+    # non-backward-compatible way, this may cause a new test run to make an older one fail.
+    - rake firebase_task --rakefile aws/build.rake
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
