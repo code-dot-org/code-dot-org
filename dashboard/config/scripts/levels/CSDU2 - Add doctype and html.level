@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-12T19:46:16.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Doctype and HTML tag\r\n\r\nExplain &lt;!DOCTYPE html&gt;\r\n\r\nThe &lt;!DOCTYPE html&gt; declaration must be the very first thing in your HTML document, before the &lt;html&gt; tag.\r\n\r\nThe &lt;!DOCTYPE html&gt; declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.\r\n\r\nAlways add the <!DOCTYPE> declaration to your HTML documents, so that the browser knows what type of document to expect.\r\n\r\nExplain &lt;html&gt;\r\n\r\nThe  &lt;html&gt; tag tells the browser that this is an HTML document.\r\n\r\nThe  &lt;html&gt; tag represents the root of an HTML document.\r\n\r\nThe  &lt;html&gt; tag is the container for all other HTML elements (except for the &lt;!DOCTYPE html&gt; tag).\r\n\r\n# Do This\r\n\r\n* Add &lt;!DOCTYPE html&gt; at the top of your index.html file\r\n* Add &lt;html&gt; right underneath &lt;!DOCTYPE html&gt; and add a closing &lt;/html&gt; tag at the end of index.html\r\n* Once you have done this return to the <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/3\">validator level</a>",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1> Header </h1> \\n  A bunch of text about something. \\n <h4> Sub Header </h4> \\n  Some more text about something.  <h6> List </h6>  <ol>\\n  <li> thing 1 </li>\\n  <li> thing 2 </li>\\n  <li> thing 3 </li>\\n  </ol>\r\n \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

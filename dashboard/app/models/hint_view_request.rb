@@ -39,7 +39,7 @@ class HintViewRequest < ActiveRecord::Base
   def self.milestone_response(script, level, user)
     return [] unless enabled?
     HintViewRequest.
-      where(script: script, level: level, user: user).
+      where(user: user, script: script, level: level).
       pluck(:feedback_type, :feedback_xml).
       map do |feedback_type, feedback_xml|
         {feedback_type: feedback_type, feedback_xml: feedback_xml}

@@ -257,7 +257,7 @@ it:
         'studio_c3_game_4': 'Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono di "un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?'
         'studio_c3_game_5': Aggiungi un blocco che segna un punto quando il pinguino sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai un punto.
         'studio_c3_game_6': Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
-        'studio_c3_game_7': Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        'studio_c3_game_7': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
         'studio_playlab_1': 'Il pinguino vuole dire "ciao" - puoi aiutarlo?'
         'studio_playlab_2': 'Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio 2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il personaggio ... dice"?'
         'studio_playlab_3': Puoi aiutare la tennista a raggiungere la bandierina?
@@ -267,7 +267,7 @@ it:
         'studio_playlab_7': 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il mago in continuazione a destra e a sinistra?'
         'studio_playlab_8': "Aggiungi dei blocchi in modo che quando l'unicorno incontra il mago si segna un punto e si riproduce un suono. Poi usa le frecce per spostare l'unicorno fino a che fai un punto."
         'studio_playlab_9': "Imposta lo sfondo per questa invasione aliena e aiuta il robot spaziale a raggiungere più velocemente l'alieno modificando la propria velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare fino all'alieno ed avvisare tutti."
-        'studio_playlab_10': Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        'studio_playlab_10': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
         'studio_iceage_hello1': |-
           Sid vuole riunire tutti per una nuova avventura. Puoi aiutarlo a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro e digitando la parola "Ciao" al suo interno?
         'studio_iceage_hello2': |-
@@ -285,7 +285,7 @@ it:
           Tutti devono muoversi più velocemente perché l'era glaciale sta arrivando! Cambia lo sfondo impostando uno sfondo con ghiaccio e imposta la velocità di Sid a veloce, quindi premi "Esegui" per farlo correre da Diego ad avvertirlo.
         'studio_iceage_throw_hearts': |-
           Sid vuol far sapere a sua nonna, la Nonnina, che la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore della Nonnina a felice quando viene colpita dai cuori.
-        'studio_iceage_free_play': È il momento di creare un gioco o una storia per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!
+        'studio_iceage_free_play': 'È il momento di creare un gioco o una storia per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!'
         'studio_gumball_hello1': |-
           Anais vuole farsi nuovi amici. Puoi aiutarla a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro e digitando la parola "Ciao" al suo interno?
         'studio_gumball_hello2': 'Darwin (personaggio 1) e suo fratello Gumball (personaggio 2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il blocco "il personaggio ... dice"?'
@@ -301,8 +301,8 @@ it:
         'studio_gumball_warn_food_fight': 'Darwin è appena sfuggito a una battaglia del cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad avvertirla.'
         'studio_gumball_join_food_fight': |-
           Unisciti alla battaglia del cibo! Usa l'istruzione "il personaggio lancia l'oggetto a destra" per far buttare a Banana Joe (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore di Anton ad arrabbiato quando viene colpito.
-        'studio_gumball_free_play': Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!
-        'studio_full_sandbox': Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        'studio_gumball_free_play': 'Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!'
+        'studio_full_sandbox': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
         'studio_k1_1': 'Riesci a far dire a questo cane "Ciao a tutti"?'
         'studio_k1_2': Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
         'studio_k1_3': Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
@@ -323,7 +323,7 @@ it:
         'turtle_ec_1_2': 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore preferito scegliendolo col nuovo blocco "imposta colore".'
         'turtle_ec_1_10': |-
           Ce l'hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune idee divertenti: una figura stilizzata, un fiocco di neve o una spirale. Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!
-        'studio_ec_sandbox': Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        'studio_ec_sandbox': 'Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.'
     video:
       name:
         'maze_intro': 'Introduzione a "Il Labirinto"'

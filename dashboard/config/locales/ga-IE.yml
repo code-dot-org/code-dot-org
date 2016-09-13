@@ -3,6 +3,14 @@
     messages:
       not_saved: 'Ceartaigh na hearráidí seo a leanas:'
       too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -83,22 +91,11 @@
   signup_form:
     student_count: Tá %{count} dalta cláraithe cheana.
     teacher_count: Tá %{count} múinteoir cláraithe cheana.
-    overview_student: Cruthaigh cuntas le do dhul chun cinn a shábháil. Baintear úsáid
-      as do sheoladh ríomhphoist nuair a dhéanann tú logáil isteach, agus chun focal
-      faire a athshocrú. Chun tuilleadh eolais a fháil, féach an <a href="http://code.org/privacy">Polasaí
-      Príobháideachais</a>.
-    overview_teacher: Cruthaigh do chuntas féin agus múin an ríomheolaíocht i do sheomra
-      ranga.<p/> Beidh tú in ann do chuid daltaí a chur le do rang agus an dul chun
-      cinn atá déanta acu a leanúint.
-    no_signup_message: Tá fáilte romhat <a target="_blank" href="http://learn.code.org">na
-      céimeanna agus na dúshláin éagsúla a bhrabhsáil</a>, ach caithfidh tú clárú
-      chun do dhul chun cinn a shábháil.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Féach an lámhleabhar do mhúinteoirí
-    teacher_pitch: Cláraigh le Code.org mar mhúinteoir
-    teacher_title: Clárú mar mhúinteoir
-    student_pitch: Cláraigh le Code.org mar dhalta
-    student_title: Clárú mar dhalta
-    signup_title: Cláraigh le Code.org
+    title: Sign up for Code.org
     school_name: Ainm do Scoile (roghnach)
     school_address: Seoladh do Scoile (roghnach)
     address_placeholder: seoladh, cathair, stát, cód poist
@@ -126,9 +123,11 @@
     user_type_label: Sórt cuntais
     user_type_teacher: Múinteoir
     user_type_student: Dalta
+    field_is_required: riachtanach
+    accept_terms: You must agree to create an account
   signin_form:
     title: An bhfuil cuntas agat cheana? Logáil isteach
-    login: Seoladh ríomhphoist nó ainm úsáideora
+    login: Seoladh ríomhphoist
     password: Focal faire
     remember: Cuimhnigh orm
     submit: Logáil isteach
@@ -147,8 +146,10 @@
   password:
     reset_form:
       title: Focal faire dearmadta?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: Seoladh ríomhphoist
-      submit: Seol treoracha chugam maidir le hathshocrú m'fhocail faire
+      submit: Seol
     change_form:
       title: Athraigh d'fhocal faire
       new_password: Focal faire nua
@@ -336,6 +337,7 @@
       submitted_on: 'Seolta:'
       unsubmit: Dísheol
       worked_with: In éineacht le
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
@@ -407,12 +409,14 @@
     choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
     print_certificate: Priontáil Teastas
     announcement_title: Fógraí
-    announcement_message: "<b>Athrú tábhachtach ar an gcaoi a gcosnaímid príobháideachas
-      na ndaltaí</b><br/>Táimid ag fógairt tréimhse míosa chun athruithe ar ár bpolasaí
-      príobháideachais a athbhreithniú agus aiseolas a thabhairt dúinn. An t-athrú
-      is mó atá ann ná córas úrnua logáil isteach a ligfidh dúinn na seoltaí ríomhphoist
-      go léir a scriosadh ó chuntais dalta sa Stiúideo Códála. Baineann an dara hathrú
-      mór le rochtain ar na huirlisí forbartha aipeanna atá againn."
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -426,8 +430,9 @@
       is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil
       na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
     announcement_petition_button: Cuir d'ainm leis
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag
+      le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
+      ar fhógraí roimhe seo.</a>
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.
@@ -716,6 +721,34 @@
       an fhaisnéis seo le haon tríú páirtí, ná í a chur ar cíos.
     sign_out: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat <a href="%{url}">logáil
       amach</a> anois.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Téarmaí Seirbhíse
+    privacy: Polasaí Príobháideachais
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Priontáil
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
     isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a>
     gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
@@ -890,3 +923,6 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
