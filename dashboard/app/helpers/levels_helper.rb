@@ -252,9 +252,16 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+
+    # ScriptLevel-dependent option
+    script_level = @script_level
+    app_options[:level]['puzzle_number'] = script_level ? script_level.position : 1
+    app_options[:level]['stage_total'] = script_level ? script_level.stage_total : 1
+
     app_options.merge! view_options.camelize_keys
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
+
     app_options
   end
 

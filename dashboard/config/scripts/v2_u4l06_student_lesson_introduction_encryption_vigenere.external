@@ -1,0 +1,42 @@
+name 'v2 U4L06 Student Lesson Introduction Encryption Vigenere'
+title 'Cracking the Code'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 4: Lesson 06 - Cracking the Code
+
+## Background
+
+There are situations in which cracking a code is ethical and important.  Character frequency analysis can sometimes be used to reveal an encoded message. More difficult encryption algorithms require more elaborate heuristics to solve and sometimes cannot be solved efficiently with computers.
+
+## Vocabulary
+
+* **Character frequency analysis**: a system of decrypting letter substitution encryptions that is based  upon the likely occurrence of various letters in a message. The distribution of letters is roughly the same for almost all samples of a language. In English, ETAOIN SHRDLU are the most commonly used letters.
+* **Heuristic**:  technique used to find an approximate solution when typical methods fail to find an exact solution.
+
+## Lesson
+
+* Try your hand at decrypting cryptoquips. 
+* Create a decryption algorithm for a computer to follow. 
+* Explore the limitations of what computers can do in a reasonable time.
+
+## Resources
+
+* Activity Guide: <a href ="https://docs.google.com/document/d/12oIFv1zbJZgA8FeEr9KkyjYgnTNXm-AYyNMDtYebAf0/edit" target="_blank"> Cracking Random Substitution</a>
+* Activity Guide: <a href ="https://docs.google.com/document/d/1dfbHwojluP5NNaOqcrZPnECRP5-3sRPHN_Mwm_MQKo8/edit#heading=h.8d9n45i3q3kh" target="_blank"> The Vigenere Cipher</a>
+* Reading: <a href ="http://www.google.com/url?q=http%3A%2F%2Fwww.bitsbook.com%2Fwp-content%2Fuploads%2F2008%2F12%2Fchapter5.pdf&sa=D&sntz=1&usg=AFQjCNFlwUTQTxeZ_TyR1brGDslVNaFMCg" target="_blank"> Blown To Bits Ch. 5 pp. 169</a>
+* Widget: <a href ="https://studio.code.org/s/cspunit2/stage/14/puzzle/2" target="_blank"> Frequency Analysis </a>
+* Widget: <a href ="https://studio.code.org/s/cspunit2/stage/14/puzzle/3" target="_blank"> Vigenere Cipher</a>
+* Resource: <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html#intro" target="_blank">Crypto Corner</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1fOzGUsjYTRzthGYlNIMkqoOq2HMqAha8PRFzM_qx4XI" target="_blank">KEY: Cracking Random Substitution Cipher</a>
+
+* <a href="https://docs.google.com/document/d/1PnzOvWMYNwwOrN7cO1wKAn6OnX3za35llYZcC3XmZJs" target="_blank">KEY: Exploring the Vigenere Cipher</a>
+
+MARKDOWN

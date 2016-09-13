@@ -27,7 +27,9 @@ def main
         # As it is an error to delete a message being processed, we pass them
         # by, allowing them to be deleted after being processed, as part of
         # another execution of this script.
-        if %w(accepted queued sending receiving).include? message.status
+        # Per customer ticket #712102, it is also an error to delete a message
+        # in state sent, despite not seeing public documentation of this.
+        if %w(accepted queued sending sent receiving).include? message.status
           next
         end
 
