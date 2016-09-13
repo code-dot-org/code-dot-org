@@ -39,6 +39,8 @@ dependencies:
     - 'echo "applitools_eyes_api_key: $APPLITOOLS_KEY" >> locals.yml'
     - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
+    - 'echo "firebase_name: $FIREBASE_NAME" >> locals.yml'
+    - 'echo "firebase_secret: $FIREBASE_SECRET" >> locals.yml'
     - 'echo "use_my_apps: true" >> locals.yml'
     - 'echo "use_my_shared_js: true" >> locals.yml'
     - 'echo "use_my_code_studio: true" >> locals.yml'
