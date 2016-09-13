@@ -1,14 +1,12 @@
-import React from 'react';
-
 /**
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.
  */
 require('babel-polyfill');
-window.React = require('react');
-window.ReactDOM = require('react-dom');
-window.Radium = require('radium');
-var update = require('react-addons-update');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
+import update from 'react-addons-update';
 
 const styles = {
   filterChoiceOuter: {
@@ -246,7 +244,7 @@ window.TutorialExplorerManager = function (options) {
       // Enable body scrolling.
       $('body').css('overflow', 'hidden');
 
-      var tableEntries = [
+      const tableEntries = [
         {key: 0, title: "Length",                  body: getTagString("length", this.props.item.tags_length)},
         {key: 1, title: "Subjects",                body: getTagString("subject", this.props.item.tags_subject)},
         {key: 2, title: "Educator Experience",     body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
@@ -416,8 +414,8 @@ window.TutorialExplorerManager = function (options) {
       // If the tags contain some languages, and we don't have a match, then
       // hide the tutorial.
       if (tutorial.languages_supported) {
-        var languageTags = tutorial.languages_supported.split(',');
-        var currentLocale = this.props.locale;
+        const languageTags = tutorial.languages_supported.split(',');
+        const currentLocale = this.props.locale;
         if (languageTags.length > 0 &&
           !languageTags.includes(currentLocale) &&
           !languageTags.includes(currentLocale.substring(0,2))) {
@@ -426,21 +424,21 @@ window.TutorialExplorerManager = function (options) {
       }
 
       // If we miss any filter group, then we don't show the tutorial.
-      var filterGroupMiss = false;
+      let filterGroupMiss = false;
 
-      for (var filterGroupName in this.props.filters) {
-        var tutorialTags = tutorial["tags_" + filterGroupName];
+      for (const filterGroupName in this.props.filters) {
+        const tutorialTags = tutorial["tags_" + filterGroupName];
         if (tutorialTags && tutorialTags.length > 0) {
-          var tutorialTagsSplit = tutorialTags.split(',');
+          const tutorialTagsSplit = tutorialTags.split(',');
 
           // now check all the filter group's tags
-          var filterGroup = this.props.filters[filterGroupName];
+          const filterGroup = this.props.filters[filterGroupName];
 
           // For this filter group, we've not yet found a matching tag between
           // user selected otions and tutorial tags.
-          var filterHit = false;
+          let filterHit = false;
 
-          for (var filterName of filterGroup) {
+          for (const filterName of filterGroup) {
             if (tutorialTagsSplit.includes(filterName)) {
               // The tutorial had a matching tag.
               filterHit = true;
@@ -484,9 +482,9 @@ window.TutorialExplorerManager = function (options) {
     },
 
     getInitialState: function () {
-      var filters = {};
+      let filters = {};
 
-      for (let filterGroup of this.props.filterGroups) {
+      for (const filterGroup of this.props.filterGroups) {
         filters[filterGroup.name] = [];
       }
       return {
@@ -495,26 +493,26 @@ window.TutorialExplorerManager = function (options) {
     },
 
     handleUserInput: function (filterGroup, filterEntry, value) {
-      var filterEntryChange = {};
+      let filterEntryChange = {};
 
       if (value) {
         // Add value to end of array.
         filterEntryChange["$push"] = [filterEntry];
 
       } else {
-        var itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
+        const itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
 
         // Find and remove specific value from array.
         filterEntryChange["$splice"] = [[itemIndex, 1]];
       }
 
-      var filterGroupChange = {};
-      filterGroupChange[filterGroup] = filterEntryChange;
+      const stateChange = {
+        filters: {
+          [filterGroup]: filterEntryChange
+        }
+      };
 
-      var stateChange = {};
-      stateChange["filters"] = filterGroupChange;
-
-      var newState = update(this.state, stateChange);
+      const newState = update(this.state, stateChange);
 
       this.setState(newState);
     },
@@ -537,7 +535,7 @@ window.TutorialExplorerManager = function (options) {
     }
   });
 
-  window.ReactDOM.render(
+  ReactDOM.render(
     <TutorialExplorer
       filterGroups={options.filters}
       tutorials={options.tutorials.contents}
