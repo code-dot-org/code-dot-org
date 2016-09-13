@@ -42,6 +42,8 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: action.stages.map(stage => _.omit(stage, 'hidden')),
+      // TODO - might make sense to split of some state that isnt actually specific to progress
+      scriptName: action.scriptName,
       currentStageId
     });
   }
@@ -124,12 +126,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewsRequired}) => ({
+    saveAnswersBeforeNavigation, stages, scriptName, peerReviewsRequired}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  scriptName,
   peerReviewsRequired
 });
 
