@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-12T20:45:53.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Images\r\n\r\nThe &lt;img&gt; tag allows you to show images on your web page. In order to tell the browser which file to use, extra information, called an **attribute**, is added to the &lt;img&gt; tag. The attribute “src” stand for source and the value is the name of the image file. An &lt;img&gt; tag is an example of a  **void element** because it starts and closes in one tag. To mark this we put the / which usually goes in the close tag at the end of the image tag.\r\nIn addition to have the src attribute, image elements also have the “alt” attribute which describe the image.\r\nThis is important in case the image doesn’t load or for people who have trouble with their eyesight.\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre>\r\n\r\nImage files can be many different  file types. Common extensions are:\r\n.jpg/.jpeg - prefered format, supports almost 17 million colors\r\n.gif - good for simple images, support 256 colors and animation\r\n.png  - an alternative to GIF, supports more colors but not animation\r\n\r\n# Do This\r\n* Use an image tag to add the retro-mag.png picture right below the &lt;h1&gt; element.",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <!DOCTYPE html>\r\n<html>\r\n  <head>\r\n    <title>Title</title>\r\n  </head>\r\n\r\n    <h1>Header </h1>\r\n    <img src=>\r\n\r\n    <h2>Sub Header</h2>\r\n    <ol>\r\n      <li>Leashes, Collars & Harnesses</li>\r\n    <!--finish the value of the src attribute so that the image of the leash appears here-->\r\n      <img src=\"dog-img/_____\">\r\n      <li>Food & Treats</li>\r\n      <!--add the full img tag for either dog crate, includin the src attribute and alt attribute-->\r\n      <li>Beds & Blankets</li>\r\n    <!--one of the dog bed pictures should go below this comment-->\r\n      <li>Crates & Carriers</li>\r\n    <!--add one more picture -this time of a dog crate-->\r\n    </ol>\r\n\r\n</html>\"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
