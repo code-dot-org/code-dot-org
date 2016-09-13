@@ -370,9 +370,15 @@ module.exports = function (grunt) {
     'levels/dialogHelper': './src/code-studio/levels/dialogHelper.js',
     'initApp/initApp': './src/code-studio/initApp/initApp.js'
   };
-  var bundles = [
-    {
+
+  // Create a config for each of our bundles
+  function createConfig(options) {
+    var minify = options.minify;
+    var watch = options.watch;
+
+    return webpackConfig.create({
       uniqueName: 'apps',
+      output: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.extend(
         {},
         appsEntries,
@@ -431,43 +437,24 @@ module.exports = function (grunt) {
           ]
         }),
       ],
-    },
-  ];
-
-  // Create a config for each of our bundles
-  function createConfigs(bundles, options) {
-    var minify = options.minify;
-    var watch = options.watch;
-
-    return bundles.map(function (bundle) {
-      return webpackConfig.create({
-        uniqueName: bundle.uniqueName,
-        output: path.resolve(__dirname, OUTPUT_DIR),
-        entries: bundle.entries,
-        externals: bundle.externals,
-        thirdParty: bundle.thirdParty,
-        commonFile: bundle.commonFile,
-        plugins: bundle.plugins,
-        provides: bundle.provides,
-        minify: minify,
-        watch: watch,
-        piskelDevMode: PISKEL_DEVELOPMENT_MODE
-      });
+      minify: minify,
+      watch: watch,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
   }
 
   config.webpack = {
-    build: createConfigs(bundles, {
+    build: createConfig({
       minify: false,
       watch: false,
     }),
 
-    uglify: createConfigs(bundles, {
+    uglify: createConfig({
       minify: true,
       watch: false
     }),
 
-    watch: createConfigs(bundles, {
+    watch: createConfig({
       minify: false,
       watch: true
     })

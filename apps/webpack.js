@@ -149,12 +149,9 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
- * @param {string} commonFile
  * @param {bool} options.minify
  * @param {bool} options.watch
  * @param {string} options.piskelDevMode
- * @param {string[]} options.provides - list of "external" modules that this
- *   bundle actually provides (and thus should not be external here)
  * @param {Array} options.plugins - list of additional plugins to use
  * @param {Array} options.externals - list of webpack externals
  */
@@ -162,11 +159,9 @@ function create(options) {
   var uniqueName = options.uniqueName;
   var outputDir = options.output;
   var entries = options.entries;
-  var commonFile = options.commonFile;
   var minify = options.minify;
   var watch = options.watch;
   var piskelDevMode = options.piskelDevMode;
-  var provides = options.provides;
   var plugins = options.plugins;
   var externals = options.externals;
 
@@ -200,22 +195,6 @@ function create(options) {
     keepalive: watch,
     failOnError: !watch
   });
-
-  if (provides) {
-    config.externals = _.clone(baseConfig.externals);
-    provides.forEach(function (providedModule) {
-      delete config.externals[providedModule];
-    });
-  }
-
-  if (commonFile) {
-    config.plugins = config.plugins.concat([
-      new webpack.optimize.CommonsChunkPlugin({
-        name: commonFile,
-        minChunks: 2
-      }),
-    ]);
-  }
 
   if (minify) {
     config.plugins = config.plugins.concat(
