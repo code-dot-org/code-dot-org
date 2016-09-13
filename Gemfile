@@ -15,7 +15,8 @@ gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
 gem 'mysql2', '~> 0.3.13'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/28
-gem 'seamless_database_pool', github: 'aoby/seamless_database_pool', ref: 'rails_5_migration_fix'
+# Ref: https://github.com/bdurand/seamless_database_pool/issues/31
+gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'le', '~> 2.2'
 gem 'os'
@@ -37,13 +38,13 @@ gem 'rack_csrf'
 group :development do
   gem 'annotate'
   gem 'rack-mini-profiler'
-  gem 'rerun', '~> 0.10.0'
-  gem 'shotgun'
   gem 'thin'
   gem 'web-console'
 end
 
 group :development, :test do
+  gem 'rerun', '~> 0.10.0'
+  gem 'shotgun'
   gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -124,7 +125,9 @@ gem 'cancancan', '~> 1.15.0'
 
 gem 'omniauth-facebook', '~> 4.0.0.rc1'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
-gem 'omniauth-windowslive', '~> 0.0.10'
+# Ref: https://github.com/joel/omniauth-windowslive/pull/16
+# Ref: https://github.com/joel/omniauth-windowslive/pull/17
+gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -141,7 +144,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 

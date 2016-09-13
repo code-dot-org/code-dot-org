@@ -1,4 +1,4 @@
-class CreatePuzzleRatings < ActiveRecord::Migration
+class CreatePuzzleRatings < ActiveRecord::Migration[4.2]
   def change
     create_table :puzzle_ratings do |t|
       t.references :user

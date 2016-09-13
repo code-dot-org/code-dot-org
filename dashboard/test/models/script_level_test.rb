@@ -15,12 +15,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_not_nil @script_level.level
   end
 
-  test "should get position when assigned to stage" do
-    @script_level.update(stage: @stage)
-    @script_level.move_to_bottom
-    assert_equal 1, @script_level.position
-  end
-
   test "should destroy when all related levels are destroyed" do
     @script_level = create(:script_level)
     @script_level.levels << create(:level)
