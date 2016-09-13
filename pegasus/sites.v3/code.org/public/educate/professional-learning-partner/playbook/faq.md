@@ -21,6 +21,7 @@ Still have questions? See below for answers to commonly asked questions or email
 - [Does my organization need to provide facilitators for CS Principles?](#facilitators)
 - [Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?](#recruit)
 - [What is counselor/administrator professional development?](#ca)
+- [What are the technology requirements for Code.org tutorials?](#it)
 
 **Questions about the budget:**<br/>
 
@@ -77,10 +78,18 @@ ______________________________
 <a id="ca"></a>
 <br/>
 <br/>
-
 ### **What is counselor/administrator professional development?**
 
 Code.org has computer science workshops designed for Counselors and Administrators to provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. <a href="https://docs.google.com/document/d/1cRCVJSqDT3VLA5u17osE914WYTtIijxyKx5Z_uSYe3Y/edit?usp=sharing" target=_blank>Click here</a> for an overview of this professional development session.
+
+[**Back to the top**](#top)
+<br/>
+______________________________
+<a id="it"></a>
+<br/>
+<br/>
+### **What are the technology requirements for Code.org tutorials?**
+You can find our technology requirements [here](https://code.org/educate/it).
 
 [**Back to the top**](#top)
 <br/>
