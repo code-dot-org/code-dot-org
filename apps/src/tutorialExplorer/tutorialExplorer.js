@@ -202,7 +202,16 @@ window.TutorialExplorerManager = function (options) {
     }
   });
 
-  // For a string of tags, generate a string of their friendly names.
+  /**
+   * For a comma-separated string of tags, generate a comma-separated string of their friendly
+   * names.
+   * e.g. Given a prefix of "subject_" and a string of tags of "history,science",
+   * generate the readable string "History, Science".  These friendly strings are
+   * stored in the string table as "subject_history" and "subject_science".
+   *
+   * @param {string} prefix - The prefix applied to the tag in the string table.
+   * @param {string} tagString - Comma-separated tags, no spaces.
+   */
   function getTagString(prefix, tagString) {
     if (!tagString) {
       return "";
@@ -399,16 +408,21 @@ window.TutorialExplorerManager = function (options) {
       locale: React.PropTypes.string.isRequired
     },
 
-    // Should we show this item based on current filter settings?
-    // Go through all active filter categories.
-    // No filters set for a category, then show everything that might match.
-    // Tutorial has no tags, then it'll show.
-    // But if we actually have filters for a category, and the tutorial does too,
-    // then at least one filter must have a tag.
-    //   e.g. if the user chooses two platforms, then at least one of the
-    //   platforms must match the tutorial.
-
-    filterFn: function (tutorial, index, array) {
+    /**
+     * Returns true if we should show this item based on current filter settings.
+     * It goes through all active filter categories.  If no filters are set for
+     * a filter group, then that item will default to showing, so long as no other
+     * filter group prevents it from showing.
+     * But if we do have a filter set for a filter group, and the tutorial is tagged
+     * for that filter group, then at least one of the active filters must match a tag.
+     * e.g. If the user chooses two platforms, then at least one of the platforms
+     * must match a platform tag on the tutorial.
+     * A similar check for language is done first.
+     *
+     * @param {object} tutorial - Single tutorial, containing a variety of
+     *   strings, each of which is a list of tags separated by commas, no spaces.
+     */
+    filterFn: function (tutorial) {
 
       // First check that the tutorial language doesn't exclude it immediately.
       // If the tags contain some languages, and we don't have a match, then
@@ -431,7 +445,7 @@ window.TutorialExplorerManager = function (options) {
         if (tutorialTags && tutorialTags.length > 0) {
           const tutorialTagsSplit = tutorialTags.split(',');
 
-          // now check all the filter group's tags
+          // Now check all the filter group's tags.
           const filterGroup = this.props.filters[filterGroupName];
 
           // For this filter group, we've not yet found a matching tag between
@@ -492,6 +506,14 @@ window.TutorialExplorerManager = function (options) {
       };
     },
 
+    /**
+     * Called when a filter in a filter group has its checkbox
+     * checked or unchecked.  Updates the filters in state.
+     *
+     * @param {string} filterGroup - The name of the filter group.
+     * @param {string} filterEntry - The name of the filter entry.
+     * @param {bool} value - Whether the entry was checked or not.
+     */
     handleUserInput: function (filterGroup, filterEntry, value) {
       let filterEntryChange = {};
 
