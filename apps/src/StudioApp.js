@@ -586,24 +586,7 @@ StudioApp.prototype.init = function (config) {
     }).bind(this));
   }
 
-  // Bind listener to 'Version History' button
-  var versionsHeader = document.getElementById('versions-header');
-  if (versionsHeader) {
-    dom.addClickTouchEvent(versionsHeader, (function () {
-      var codeDiv = document.createElement('div');
-      var dialog = this.createModalDialog({
-        Dialog: this.Dialog,
-        contentDiv: codeDiv,
-        defaultBtnSelector: 'again-button',
-        id: 'showVersionsModal'
-      });
-      ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
-      }), codeDiv);
-
-      dialog.show();
-    }).bind(this));
-  }
+  this.initVersionHistoryUI(config);
 
   if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
@@ -626,6 +609,27 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.initVersionHistoryUI = function (config) {
+  // Bind listener to 'Version History' button
+  var versionsHeader = document.getElementById('versions-header');
+  if (versionsHeader) {
+    dom.addClickTouchEvent(versionsHeader, (function () {
+      var codeDiv = document.createElement('div');
+      var dialog = this.createModalDialog({
+        Dialog: this.Dialog,
+        contentDiv: codeDiv,
+        defaultBtnSelector: 'again-button',
+        id: 'showVersionsModal'
+      });
+      ReactDOM.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
+
+      dialog.show();
+    }).bind(this));
   }
 };
 
@@ -2947,6 +2951,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
+    versionHistoryInInstructionsHeader: config.versionHistoryInInstructionsHeader,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,

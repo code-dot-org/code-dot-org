@@ -87,6 +87,7 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.versionHistoryInInstructionsHeader = true;
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
@@ -112,6 +113,9 @@ WebLab.prototype.init = function (config) {
     bodyElement.style.overflow = "hidden";
     bodyElement.className = bodyElement.className + " pin_bottom";
     container.className = container.className + " pin_bottom";
+
+    // NOTE: if we called studioApp_.init(), this call would not be needed...
+    this.studioApp_.initVersionHistoryUI(config);
   };
 
   // Push initial level properties into the Redux store
@@ -179,6 +183,7 @@ WebLab.prototype.onProjectChanged = function () {
 // Called by Bramble host to set our reference to its interfaces
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
+  this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
 };
 
 /**
