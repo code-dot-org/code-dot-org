@@ -3,6 +3,14 @@
     messages:
       not_saved: "請修正下列錯誤："
       too_young: "這是大哥哥用的，小朋友不許偷用"
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -33,7 +41,7 @@
   done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: OK！
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (%{y} 第%{x} 頁)"
   add_teacher_form:
     code:
       label: "增加一位老師："
@@ -79,15 +87,11 @@
   signup_form:
     student_count: "%{count} 學生已經註冊。"
     teacher_count: "%{count} 教師已經註冊。"
-    overview_student: 註冊一個帳戶可以保存您的進度。您的電子郵件是主要用來讓您登錄和重設密碼。請參閱我們的 <a href="HTTP://code.org/privacy">隱私政策</a>說明以取得更多詳情。
-    overview_teacher: "通過註冊帳號開始在您的教室裡教資訊科學。 <p/>您將能夠將學生加入，並追蹤他們的學習進度。"
-    no_signup_message: 您可以從 <a target="_blank"href="HTTP://learn.code.org"> 瀏覽各個階段和關卡</a>，但您需要註冊一個帳號來保存您的進度。
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: "請參閱教師指南"
-    teacher_pitch: "教師註冊Code.org"
-    teacher_title: "教師註冊"
-    student_pitch: "學生註冊Code.org"
-    student_title: "學生註冊"
-    signup_title: Code.org 建立帳號
+    title: Sign up for Code.org
     school_name: "學校名稱 （選填）"
     school_address: "學校地址 （選填）"
     address_placeholder: "地址、 城市、 州、 郵遞區號"
@@ -110,9 +114,11 @@
     user_type_label: "帳戶類型"
     user_type_teacher: "教師"
     user_type_student: "學生 "
+    field_is_required: "必要的"
+    accept_terms: You must agree to create an account
   signin_form:
     title: "你已經有一個帳號了嗎？請登入"
-    login: "電子郵件或使用者名稱"
+    login: "電子郵件"
     password: "密碼"
     remember: "記住密碼"
     submit: "登入"
@@ -131,8 +137,10 @@
   password:
     reset_form:
       title: "忘記了您的密碼嗎？"
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: "電子郵件地址"
-      submit: "將重設密碼的操作說明寄送給我"
+      submit: "送出"
     change_form:
       title: "更改您的密碼"
       new_password: "新密碼"
@@ -258,8 +266,8 @@
       already_registered: "已經註冊了嗎？"
       pair_programming: "配對程式設計"
       team: "團隊"
-      driver: Driver
-      navigator: Navigator
+      driver: "驅動"
+      navigator: "導覽"
     popup:
       progress_for_user: "%{name} 的進度"
       progress: "您的進度"
@@ -295,6 +303,7 @@
       submitted_on: "提交時間："
       unsubmit: "不提交"
       worked_with: "共事"
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: "電子郵件地址尚未被確認："
     email_confirm_needed_required: "您的電子位址 %{email} 尚未被確認："
@@ -353,38 +362,36 @@
     choose_next_course: "從下方課程中選擇一個進行體驗"
     print_certificate: "列印證書"
     announcement_title: "公告"
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "瞭解更多資訊"
     announcement_try_now_button: "快來試試"
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、
+      28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
     announcement_petition_button: "新增你的名字"
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
+      看過去的公告。</a>"
   move_students:
     new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
     section_code_not_entered: "請提供現在的區間代碼"
     section_code_cant_be_current_section: "現在所使用的區間不能和新的區間相同"
     current_section_dne: "抱歉，但區間 %{current_section_code} 並不存在。請輸入一個不同的區間代碼。"
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    students_not_yours: "您不能移動不屬於您這一段的學生。"
+    stay_enrolled_not_entered: "請提供 stay_enrolled_in_current_section。"
     student_ids_not_entered: "請提供 student_ids。"
     student_not_found: "找不到一個或多個學生。"
     all_students_must_be_in_current_section: "所有的學生都必須修讀您的部分。"
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: "您無法移動這些學生，因為有老師在另外的課程中有了這些學生。"
   share:
     title: "在程式碼工作室中學習"
     description: "任何人都可以學習電腦科學並透過程式碼來設計遊戲、app及藝術創作。"
@@ -416,7 +423,7 @@
       %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰僵屍 Plants vs. Zombies &#8482;
       &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball
       商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。"
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+    code_from_html: Code.org使用p5.play遊戲資源庫，根據r <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
     powered_by_aws: "由亞馬遜網路服務系統提供服務"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
@@ -451,10 +458,8 @@
     download: "下載影片"
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: "您的瀏覽器不支持瀏覽本網頁。請升級您的瀏覽器至<a href='%{supported_browsers_url}',
+        target='_blank'>我們支持的瀏覽器之一</a>。您可以嘗試訪問此網頁，但無法獲得期望的效果。"
       link: "瞭解更多資訊"
   slow_loading: "請再等等，這次讀取的時間比較久一點......."
   try_reloading: "請嘗試重新載入網頁"
@@ -522,22 +527,19 @@
       title: "當個創世神"
       body: "使用程式來探索創世神的世界"
     unplugged:
-      title: Unplugged Lessons
+      title: "離線課程"
       audience: 4歲以上
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body: |
+        我們已經編譯拔出經驗教訓，為您在您的課堂中使用的列表。現在你可以教計算機科學基礎是否你有電腦在你的教室或不 ！嘗試利用這些經驗教訓，作為一門獨立的課程或互補借鑒任何計算機科學課程。
+        我們做了一套離線課程在課堂上使用。現在，你即使沒有電腦，也可以教授計算機科學的基礎。嘗試使用這些教材，作為一門獨立課程或借鑒任何計算機科學課程。
+      body_short: "如果你沒有電腦，可以在你的教室試試這些離線的教程。"
   gallery:
     students_drew_these_with_code: "學生用程式畫出這些圖案 ！"
     students_made_these_with_code: "學生們使用程式碼做了這些內容！"
     picture_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式畫了 <b>%{count}</b> 張圖片。點擊圖片觀看每個程式是如何運作。"
     activity_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個app以及圖畫。點擊圖片及螢幕截圖來觀看每個程式是如何運作。"
     want_to_make_your_own: "想要做您自已的嗎？"
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: 在這些教程的最後一個級別，單擊"完成"和"保存"以在畫廊裡保存您的作品。
     more: "更多 &rarr;"
     caption_by_name_age: "%{name}, %{age} 歲"
     caption_time_ago: "%{time_ago} 前"
@@ -571,23 +573,20 @@
     wrong_body: "感謝您提交的答案"
     correct_title: "謝謝"
     correct_body: "感謝您提交的答案"
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: |
+      這個調查是匿名的。請訪問教導面板以查詢結果匯總。
+      注意，只有至少五個學生提交了調查報告結果才會可見。
   level_group-submittable:
     wrong_title: "謝謝"
     wrong_body: "感謝您提交的答案"
     correct_title: "謝謝"
     correct_body: "感謝您提交的答案"
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
+    unsubmit-title: "撤回您的評估。"
+    unsubmit-body: "撤銷您的評估將會重置提交時間和日期，您確定要這樣做嗎？"
     submit-incomplete-title: "提交您的習題"
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
+    submit-incomplete-body: "您有未完成問題，提交評估之後您將無法編輯它，您確定要這麼做嗎？"
     submit-complete-title: "提交您的習題"
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    submit-complete-body: "提交後您不能編輯您的評估。是否確定？"
   match:
     wrong_title: "不正確的解決方案"
     wrong_body: "您的解決方案不正確。請再試一次 ！"
@@ -622,6 +621,34 @@
     header: "帳戶資訊更新"
     message: "為了讓使用者有更好的體驗，以及更好的隱私權保護。我們需要現有的使用者在這裡輸入他們的年齡。<br/>和往常一樣，code.org將永遠不會將這些資料以任何形式與其它夥伴共享。"
     sign_out: 如果您不願意提供您的年齡，您可以選擇<a href="%{url}">登出</a>。
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: "服務條款"
+    privacy: "隱私權政策"
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: "列印"
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: 對不起，過度年輕的使用者無法登入到我們支援的網站。您可以瀏覽無須登入的網頁 <a href="HTTP://support.code.org">
     support.code.org</a> 或請您的父母或老師聯繫我們。
   progress:
@@ -650,8 +677,7 @@
     share_title: "分享專案"
     share_copy_link: "複製連結："
     share_embed_description: "您可以插入的代碼貼到 HTML 頁面，就可以在另一個網頁上顯示專案。"
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_u13_warning: "在分享之前問問你的老師。只和你學校裡的其他人分享。"
     embed: "插入"
     advanced_share: "顯示進階選項"
     close: "退出"
@@ -675,8 +701,7 @@
     edit_project: "編輯專案"
     abuse:
       tos: "這個專案被回報為違反 Code.org 的<a href='http://code.org/tos'>服務條款</a>因此不能跟其它人進行分享。"
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "這個項目包含了不能和他人分享的數據。請聯繫應用程序的主人以修復他們的應用內容。"
       contact_us: "如果你認為這是一個錯誤，請與我們 <a href='HTTPs://code.org/contact'> 聯繫</a>。"
       go_to_code_studio: "前往程式碼工作室"
       report_abuse_form:
@@ -699,18 +724,16 @@
   peer_review:
     accepted:
       name: "接受"
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      description: "<strong>是的</strong> 這個提交 <strong>符合</strong> 要求"
     rejected:
       name: "已拒絕"
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      description: "<strong>否決</strong>，這個提交，<strong>不能滿足</strong> 要求"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: "升級"
+      description: "我想老師來審查此提交"
+    instructor_feedback: "教師回饋"
+    peer_feedback: "同伴反馈"
+    outdated: "這個反饋是添加給以前提交的版本"
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -726,44 +749,36 @@
       no_icons_found: "找不到圖示"
     playzone:
       artist_description: "和小畫家一起畫圖和設計!"
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: "新的繪圖"
+      continue_button: "去下一階段"
       playlab_description: "創建一個故事或做遊戲玩實驗室！"
       playlab_title: "新的應用程式"
       primary_header: "恭喜你 ！你完成 %{stageName} 了 ！"
-      projects_description: Revisit one of your existing projects.
+      projects_description: "重新審視你現有的專案之一。"
       projects_title: "打開一個專案"
       secondary_header: "詢問你的老師要下一步該做什麼"
   flex_category:
     required: "概觀"
-    content: Content
+    content: "內容"
     practice: "老師的做法"
-    peer_review: Peer Review
+    peer_review: "同儕審查"
   external_links:
     disclaimer: "免責聲明"
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    leaving_domain: "你現在正在離開code.org，訪問一個不由我們創建的站點。"
+    disclaimer_text: "這個站點可能包含與Code.org不同的隱私策略。我們選擇了這些第三方資源，因為我們認為他們對你有幫助。我們並不直接對該網站的內容負責，如果你發現了讓你感到反感的內容，或這個鏈接指向的站點已不再可用，請通過<a
+      href='%{support_url}'>和支持部門聯繫。 </a>"
   hoc_download:
-    title: Hour of Code downloads
+    title: "編程一小時項目下載"
     capsule_title: "你有連上網際網路嗎？"
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    capsule_desc: 使用在線、 基於 web 的 <a href="%{url}">%{app_name}</a>。
     instructions_headline: "沒有與網際網路連線嗎？"
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
+    instructions: 指導教師︰ 如果你有互聯網服務差，這些代碼小時教程都是可用於下載和安裝供脫機使用。選擇您的語言和平台、 下載和安裝在你的教室裡所有的計算機上。你可能想要使用
+      USB 驅動器一次下載並安裝在所有計算機上。注︰ 學生將不能登錄到代碼工作室、 保存進度，或打印證書。教師可打印證書提前 <a href="%{url}">
+      在這裡</a>。
     minecraft_name: "當個創世神 一小時寫程式"
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_blocks_name: "星球大戰: 用代碼構建一個星系-JavaScript"
     starwars_javascript_name: "星球大戰: 用程式代碼(JavaScript) 建立一個銀河系"
-    download_message: Download %{app_name} for offline use (136MB)
+    download_message: "下載 %{app_name}，供離線使用 (136MB)"
     download_in_english: "下載英文版"
     download_in_spanish: "下載西班牙文版"
     windows: Windows
@@ -781,3 +796,6 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.

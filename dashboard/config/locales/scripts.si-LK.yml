@@ -7,7 +7,7 @@
           'Maze: Sequence': 'Maze: Sequence'
           'Maze: Debugging': "නි‍දොස් කිරීම"
           'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          Artists 2: "කලාකරුවන් 2"
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'Bee 1: Intro'
@@ -17,8 +17,8 @@
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
           title: "පාඨමාලා අංක 1"
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
+          Artist 2: "කලාකරු 2"
+          Happy Maps: "සතුටු සිතියම්"
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -37,7 +37,7 @@
           'Bee: Loops': 'Bee: Loops'
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4-6
+          description_audience: "වයස් 4-6"
           description_short: Start with Course 1 for early readers.
         course2:
           The Maze: "වංකගිරිය"
@@ -56,7 +56,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: "ප්‍රස්තාර රටා වැඩසටහන්"
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
@@ -85,7 +85,7 @@
           The Maze: "වංකගිරිය"
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: "කලාකරුවා"
-          title: Course 3
+          title: "පාඨමාලාව 3"
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
@@ -102,7 +102,7 @@
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
-          Internet: Internet
+          Internet: "අන්තර්ජාලය"
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: Farmer - While Loops
@@ -113,7 +113,7 @@
             with anyone. Recommended for grades 4-5.
           'Studio: Create a Game': 'Play Lab: Create a Game'
           Maze: Maze
-          Artist: Artist
+          Artist: "කලාකරු"
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -142,9 +142,9 @@
           Play Lab: Play Lab
           description_short: Create a story or make a game with Play Lab!
         artist:
-          title: Artist
+          title: "කලාකරු"
           description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
+          Artist: "කලාකරු"
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: Maze
@@ -157,7 +157,7 @@
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          Artist: "කලාකරු"
           description_short: Let's use code to join Anna and Elsa as they explore
             the magic and beauty of ice.
         course4:
@@ -180,7 +180,7 @@
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Artist: Functions'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
+          Artist: "කලාකරු"
           Bee: Bee
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
@@ -223,7 +223,7 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: "විචල්‍යන්"
           For Loops: For Loops
-          Binary: Binary
+          Binary: "ද්විමය"
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -300,8 +300,8 @@
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
           Internet Simulator: "අන්තර්ජාල සමාකෘතිය"
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Unit 1: "ඒකකය 1"
+          Unit 2: "ඒකකය 2"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -345,7 +345,7 @@
           Introduction to Computer Science: "පරිඝණක විද්‍යාව හැදින්වීම"
           The Maze: "වංකගිරිය"
           Computational Thinking: "සංඛ්‍යාත්මක සිතීම"
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: "ප්‍රස්තාර රටා වැඩසටහන්"
           The Artist: "කලාකරුවා"
           Algorithms: "ඇල්ගොරිතම්"
           The Artist 2: "කලාකරුවා 2"
@@ -393,15 +393,15 @@
           Jigsaw: "පින්තූර ප්‍රෙහේලිකාව"
         step:
           title: "පියවර"
-          description: Step tutorial
-          description_short: Step tutorial
+          description: "පියවර නිබන්ධනය"
+          description_short: "පියවර නිබන්ධනය"
           Step: "පියවර"
         Hour of Code:
-          title: Hour of Code 2013
+          title: "පැයේ කේතය 2013"
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: "පැයේ කේතය 2013"
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -829,13 +829,13 @@
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Review StarLogo Nova: Review StarLogo Nova
           Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
           Revisiting Agent Movement: Revisiting Agent Movement
           Epidemic Model Extensions: Epidemic Model Extensions
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -922,18 +922,18 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: "නොමිලේ ක්‍රීඩා කිරීම"
         allthethings:
           Jigsaw: "පින්තූර ප්‍රෙහේලිකාව"
           Maze: Maze
-          Artist: Artist
+          Artist: "කලාකරු"
           Bee: Bee
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
           Bounce: "පොළා පනිනවා"
-          Multi: Multi
-          Match: Match
+          Multi: "බහුවිධ"
+          Match: "ගළපන්න"
           TextMatch: TextMatch
           CSinA: CSinA
           Netsim: Netsim
@@ -954,7 +954,7 @@
           Studio: Studio
           Long assessment: Long assessment
           Star wars: Star wars
-          Minecraft: Minecraft
+          Minecraft: "මයින්ක්‍රාෆ්ට්"
           Rich long assessment: Rich long assessment
           Free Response: Free Response
           Game Lab: Game Lab
@@ -963,6 +963,8 @@
           Gamelab: Gamelab
           Anonymous student survey: Anonymous student survey
           Anonymous student survey 2: Anonymous student survey 2
+          Public Key Cryptography: Public Key Cryptography
+          Web Lab: Web Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -991,7 +993,7 @@
           App Lab: "මෘදුකාංග විද්‍යාගාරය"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -1014,7 +1016,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1087,7 +1089,7 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
           Lesson Prep: Lesson Prep
@@ -1095,8 +1097,8 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          Welcome!: "ආයුබෝවන්!"
+          Wrap-Up: "අවසන් කරන්න"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1112,13 +1114,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1130,7 +1132,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1139,12 +1141,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1168,7 +1170,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1228,10 +1230,10 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: "සතුටු සිතියම්"
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: "ප්‍රස්තාර රටා වැඩසටහන්"
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
@@ -1282,7 +1284,7 @@
           description: Refer to this online professional development content throughout
             the 2015-16 school year as you plan, deliver and reflect on Unit 2 of
             the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1317,7 +1319,7 @@
           description: Refer to this online professional development content throughout
             the 2015-16 school year as you plan, deliver and reflect on Unit 3 of
             the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1354,7 +1356,7 @@
           description: Refer to this online professional development content throughout
             the 2015-16 school year as you plan, deliver and reflect on Unit 4 of
             the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1389,7 +1391,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1402,7 +1404,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1429,7 +1431,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: "රහස්‍යතා ප්‍රතිපත්තිය"
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1477,11 +1479,11 @@
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1499,7 +1501,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1597,20 +1599,20 @@
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: "පැයක කේතය 2015"
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: "පැයක කේතය 2015"
         mc:
           title: Minecraft Hour of Code
           description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          Hour of Code 2015: Hour of Code 2015
+          description: "මෙම මයින්ක්‍රාෆ්ට් ලෝකය හරහා දුෂ්කර වූ ක්‍රියාවක් මත ස්ටීව්
+            හෝ ඇලෙක්ස් රැඟෙන යාමට කේත කොටස් භාවිතා කරන්න"
+          Hour of Code 2015: "පැයක කේතය 2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1622,9 +1624,9 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
           Assessing Computer Models: Assessing Computer Models
           "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
             Refresh your connection to Complex Adaptive Systems"
@@ -1755,7 +1757,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
         gamelab-hackathon:
-          Middle_School_Hackathon: Middle_School_Hackathon
+          Middle_School_Hackathon: "මධ්‍යම_පාසල්_හැකතනය"
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -1811,6 +1813,9 @@
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: Practice PT - The Internet and Society
           Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+          CS Principles Pre-survey: CS Principles Pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
         csp2:
           title: CS Principles Unit 2 - Digital Information
           description_short: Digital Information
@@ -1837,6 +1842,8 @@
           Cleaning Data: Cleaning Data
           Creating Summary Tables: Creating Summary Tables
           Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
+          Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
         csp3:
           title: CSP Unit 3 - Programming
           description_short: Programming
@@ -1914,7 +1921,7 @@
           Explore PT: Explore PT
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description_short: Programming
+          description_short: "ක්‍රමලේඛනය"
           description: Temp place to work on U3 of Disco
           Drawing in Game Lab: Drawing in Game Lab
           Animation: "සජීවීකරණය"
@@ -1940,6 +1947,8 @@
           Variables Unplugged: Variables Unplugged
           Complex Sprite Movement: Complex Sprite Movement
           Collisions: Collisions
+          Sprite Movement Methods: Sprite Movement Methods
+          Collision Detection: Collision Detection
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1961,7 +1970,7 @@
           Post-Survey: Post-Survey
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description_short: Programming
+          description_short: "ක්‍රමලේඛනය"
           description: ''
           Drawing in Game Lab: Drawing in Game Lab
         CSF_Secret_Sample:
@@ -2140,6 +2149,7 @@
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
+          Processing Information: Processing Information
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
           description_short: Web Development
@@ -2153,6 +2163,7 @@
           Designing Code for Computers: Designing Code for Computers
           Digital Footprint: Digital Footprint
           Images on the Web: Images on the Web
+          Finalizing Website: Finalizing Website
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2186,13 +2197,13 @@
           title: Computer Science in Science PD Phase 2b 2016-2017
           description_short: Phase 2 Online Blended Summer Study
           description: Phase 2 Online Blended Summer Study
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
         teachercon:
           title: TeacherCon Supports
           description_short: We will use this during TeacherCon to deliver supports
@@ -2216,13 +2227,13 @@
           title: Computer Science in Science PD Phase 2b 2016 2017
           description_short: Phase 2 Online Blended Summer Study
           description: Phase 2 Online Blended Summer Study
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "අවසන් කරන්න"
         kinderTest:
           Kindergarten Stage 1: Kindergarten Stage 1
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -2231,7 +2242,7 @@
           Persistence & Frustration: Persistence & Frustration
           Sequences & Algorithms: Sequences & Algorithms
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          Programming: Programming
+          Programming: "ක්‍රමලේඛනය"
           Being Safe Online: Being Safe Online
           Loops: "ලූපයන්"
           Programming Unplugged: Programming Unplugged
@@ -2265,7 +2276,7 @@
           'New Artist: Functions': 'New Artist: Functions'
           'Project #2': 'Project #2'
           'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
-          Internet: Internet
+          Internet: "අන්තර්ජාලය"
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           'Unplugged: Conditionals with Cards': 'Unplugged: Conditionals with Cards'
@@ -2291,6 +2302,11 @@
             Project Stage (Loops, Events, Conditionals, Functions)
           Build a Star Wars Game!: Build a Star Wars Game!
           'Bee: Determine the Concept': 'Bee: Determine the Concept'
+          'Bee: Functions (Course 3)': 'Bee: Functions (Course 3)'
+          'Unplugged: Kinesthetic Functions': 'Unplugged: Kinesthetic Functions'
+          'Farmer: Functions (New)': 'Farmer: Functions (New)'
+          Determine the Concept Part 2: Determine the Concept Part 2
+          'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2298,7 +2314,7 @@
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
           Debugging: Debugging
           Programming Unplugged: Programming Unplugged
-          Programming: Programming
+          Programming: "ක්‍රමලේඛනය"
           Being Safe Online: Being Safe Online
           Loops Unplugged: Loops Unplugged
           Loops: "ලූපයන්"
@@ -2309,6 +2325,7 @@
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
@@ -2351,7 +2368,7 @@
           title: ECS Part 1
           description_short: 'Unit 1: Human-Computer Interaction'
           description: 'Unit 1: Human-Computer Interaction'
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -2462,6 +2479,16 @@
           More Programming with Scratch: More Programming with Scratch
           More Programming with CS4FN: More Programming with CS4FN
           Robot Farmer While: Robot Farmer While
+          Bounce: "පොළා පනිනවා"
+          Artist Debugging: Artist Debugging
+          'Farmer: While Loops': 'Farmer: While Loops'
+          " Bee: Conditionals": " Bee: Conditionals"
+          'Maze: Conditionals with Loops': 'Maze: Conditionals with Loops'
+          Build a Game: Build a Game
+          'Artist: Loops': 'Artist: Loops'
+          'Maze: Nested Loops': 'Maze: Nested Loops'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          Bee Debugging: Bee Debugging
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2490,7 +2517,7 @@
           Balancing Teachers and Tools: Balancing Teachers and Tools
         csd3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description_short: Programming
+          description_short: "ක්‍රමලේඛනය"
           description: Temp place to work on U3 of Disco
           Drawing in Game Lab: Drawing in Game Lab
           Draw Loop and Randomization: Draw Loop and Randomization
@@ -2565,7 +2592,7 @@
           Variables: "විචල්‍යන්"
           For Loops: For Loops
           Functions with Parameters: Functions with Parameters
-          Binary: Binary
+          Binary: "ද්විමය"
         cspunit1ch1assessment:
           CS Principles Unit 1 Ch 1 Assessment: CS Principles Unit 1 Ch 1 Assessment
           title: CS Principles Unit 1 Ch 1 Assessment
@@ -2582,7 +2609,7 @@
           title: Computer Science in Algebra PD Phase 2
           description_short: "\\tPhase 3: School Year Support"
           description: Teach Algebra through Functional Programming
-          Welcome!: Welcome!
+          Welcome!: "ආයුබෝවන්!"
           Teaching with Puzzles: Teaching with Puzzles
           Teaching with the Design Recipe: Teaching with the Design Recipe
           The Design Recipe: The Design Recipe
@@ -2592,3 +2619,12 @@
           title: CS Principles Pre-Survey
           Anonymous student survey 2: Anonymous student survey 2
           Anonymous student pre-survey: Anonymous student pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
+        sciencepd3-2016:
+          title: CS in Science PD3 Before 1st In-Person
+          description_short: 'Phase 3: Academic Year Development Pre 1'
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

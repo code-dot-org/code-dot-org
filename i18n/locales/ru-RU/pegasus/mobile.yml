@@ -367,7 +367,7 @@ ru-RU:
   no_internet: У Вас нет интернета?
   download_offline: Скачайте оффлайн версию.
   are_you_teacher: Вы учитель?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Просмотрите план урока и другие ресурсы учителя.
   volunteer_engineer_submission_title: Вдохновляйте учеников и волонтеров
   volunteer_engineer_submission_subtitle_generic: '100&#160;000 учителей собираются провести час кода в своих классах в этом году 7-13 декабря 2015 г. Им нужна ваша помощь! '
   volunteer_engineer_submission_subtitle_specific: 'Количество учителей, которым нужны волонтеры: %{num_teachers}.<br>Количество зарегистрированных волонтеров: %{num_volunteers}. Присоединиться к ним.'
@@ -491,6 +491,7 @@ ru-RU:
   dashboard_action_remove_confirm: Удалить?
   dashboard_action_done: Готово
   dashboard_action_required: необходимо
+  dashboard_action_print_certificates: Распечатать сертификаты
   dashboard_assessments_view: 'Просмотреть оценки в:'
   dashboard_assessments_none: Нет отценок
   dashboard_assessments_none_part2: Если Вы преподаете в средних или старших классах школы, то в рамках Студии Кода найдете контрольные вопросы, которые могут помочь Вашим ученикам подготовиться к тесту AP. Чтобы использовать результаты ответов на эти вопросы, сначала назначьте своему классу курс, а затем из выпадающего меню выберите его, после чего увидите здесь ответы Ваших учеников.
@@ -512,7 +513,7 @@ ru-RU:
   dashboard_navigation_view_progress: Прогресс
   dashboard_navigation_view_text_responses: Текстовые ответы
   dashboard_navigation_view_assessments: оценки
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Тесты/Опросы
   dashboard_navigation_add_students: Добавить учеников
   dashboard_navigation_manage_students: Управление учениками
   dashboard_navigation_lesson_plans_resources: Планы уроков и ресурсы
@@ -660,7 +661,8 @@ ru-RU:
   dashboard_faq: Часто задаваемые вопросы
   dashboard_faq_k5: 'K-5: часто задаваемые вопросы'
   dashboard_announcements: Объявления
-  dashboard_announce_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Узнать больше
   dashboard_announce_try_now_button: Попробуйте сейчас
@@ -806,7 +808,7 @@ ru-RU:
   csp17_category_name: '«16 - 17» Основы информатики'
   cspexams_category_name: Практический тест по основам информатики
   applab_name: Лаборатория приложений
-  applab_gradelevel: Для возрастов 13+
+  applab_gradelevel: Возраст 13+
   applab_shortdescription_congrats: App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри, как он работает, а затем моментально поделись этим приложением
   codeorg_gradelevel: Возраст 4-10
   codeintl_gradelevel: Возраст 4-104

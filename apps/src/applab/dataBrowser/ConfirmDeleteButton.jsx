@@ -7,6 +7,7 @@ const ConfirmDeleteButton = React.createClass({
   propTypes: {
     title: React.PropTypes.string.isRequired,
     body: React.PropTypes.string.isRequired,
+    buttonId: React.PropTypes.string,
     buttonText: React.PropTypes.string.isRequired,
     confirmText: React.PropTypes.string,
     containerStyle: React.PropTypes.any,
@@ -44,6 +45,7 @@ const ConfirmDeleteButton = React.createClass({
           {...otherProps}
         />
         <button
+          id={this.props.buttonId}
           onClick={() => this.setState({open: true})}
           style={dataStyles.redButton}
         >

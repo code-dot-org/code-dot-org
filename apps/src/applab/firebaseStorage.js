@@ -290,7 +290,7 @@ FirebaseStorage.resetRecordListener = function () {
  * @param {function(string)} onError
  */
 FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
-  return loadConfig().then(config => {
+  return incrementRateLimitCounters().then(loadConfig).then(config => {
     return enforceTableCount(config, tableName);
   }).then(() => {
     const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
