@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901180359) do
+ActiveRecord::Schema.define(version: 20160912174004) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 20160901180359) do
     t.index ["level_id"], name: "fk_rails_8f51960e09", using: :btree
     t.index ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id", using: :btree
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
-    t.index ["user_id"], name: "index_authored_hint_view_requests_on_user_id", using: :btree
   end
 
   create_table "callouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
