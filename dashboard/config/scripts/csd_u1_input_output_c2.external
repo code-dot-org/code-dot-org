@@ -12,8 +12,7 @@ Look at the possible information that you can input to your app, and decide whic
 
 Once you have the information that you need as input, decide what your app will output.
 
-<details>
-<summary>Input from the Phone Sensors</summary>
+## Input from Phone Sensors
 
 Sensor | Input Information
 ------|--------
@@ -22,68 +21,48 @@ Sensor | Input Information
 **Motion Sensor** | The phone is moving quickly
 **Camera** | The image from the camera is all black
 
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the User</summary>
-<div style="margin: 3px 15px;">
-Here is some information that the user can input.
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Name</summary>
-Arik
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">School Mascot</summary>
-Tiger</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Grade Level</summary>
-8th grade
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Class</summary>
-Science
-</details>
-</div>
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the Internet</summary>
-<div style="margin: 3px 15px;">
-Here is some information that the program can get from the Internet.
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Locations of Schools in the Area</summary>
-3rd Street Elementary School: D, 3<br />
-Edison Middle School: B, 2<br />
-City High School: A, 5<br />
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">List of Major Holidays</summary>
-New Year's Day<br />
-Martin Luther King Day<br />
-President's Day<br />
-Memorial Day<br />
-Independence Day<br />
-Labor Day<br />
-Veterans Day<br />
-Thanksgiving<br />
-Christmas<br />
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Temperature Anywhere in the World</summary>
-Shanghai: 77F<br />
-Adelaide: 54F<br />
-Paris: 75F<br />
-Cairo: 79F<br />
-Buenos Aires: 52F<br />
-Boston: 66F<br />
-Vancouver: 63F<br />
-Guam: 84F<br />
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Phone Numbers of Schools in the Area</summary>
-3rd Street Elementary School: 123-123-1234<br />
-Edison Middle School: 123-123-4321<br />
-City High School: 123-123-7890<br />
-</details>
-</div>	
-</details>
+## User Input
+
+User Prompt | User Information
+------|--------
+**Name** | Arik
+**School Mascot** | Tiger
+**Grade Level** | 8th grade
+**Favorite Class** | Science
+
+
+## Input from the Internet
+
+????? | Information
+------|--------
+**Locations of Schools in the Area** | 
+ |3rd Street Elementary School: D, 3  
+ |Edison Middle School: B, 2  
+ |City High School: A, 5  
+**List of Major Holidays** | 
+ |New Year's Day  
+ |Martin Luther King Day  
+ |President's Day  
+ |Memorial Day  
+ |Independence Day  
+ |Labor Day  
+ |Veterans Day  
+ |Thanksgiving  
+ |Christmas  
+  |  
+**The Temperature Anywhere in the World** |Shanghai: 77F  
+ |Adelaide: 54F  
+ |Paris: 75F  
+ |Cairo: 79F  
+ |Buenos Aires: 52F  
+ |Boston: 66F  
+ |Vancouver: 63F  
+ |Guam: 84F  
+ | 
+**Phone Numbers of Schools in the Area** | 
+ |3rd Street Elementary School: 123-123-1234  
+ |Edison Middle School: 123-123-4321  
+ |City High School: 123-123-7890  
+
 
 MARKDOWN

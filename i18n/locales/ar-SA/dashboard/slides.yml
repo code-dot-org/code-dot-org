@@ -573,7 +573,7 @@ ar:
         text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: لمعرفة المزيد حول تصحيح الأخطاء، نبدأ مع مجموعة من القطع فعلا في المرحلة. ستلاحظ أن هذه الكتل لن تحصل على الهدف. نحن بحاجة إلى تصحيح الحل وإصلاحه. ما هو الخطأ؟ ستلاحظ أن كنت في حاجة للحفاظ على الذهاب الغرب كتلة واحدة أكثر.
       4:
         image: notes/C1_maze_debugging_4.png
         text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"

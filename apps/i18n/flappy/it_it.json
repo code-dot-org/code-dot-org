@@ -33,7 +33,7 @@
   "playSoundSplash": "riproduci il suono di un tuffo nell'acqua",
   "playSoundLaser": "riproduci il suono di un raggio laser",
   "playSoundTooltip": "Riproduce il suono scelto.",
-  "reinfFeedbackMsg": "Premi \"Riprova\" per ricominciare a giocare.",
+  "reinfFeedbackMsg": "Clicca su \"Riprova\" per tornare a giocare.",
   "scoreText": "Punteggio: {playerScore}",
   "setBackground": "imposta la scena",
   "setBackgroundRandom": "imposta una scena scelta a caso",

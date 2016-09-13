@@ -142,7 +142,7 @@ class Stage < ActiveRecord::Base
       {
         user_level_data: {
           user_id: student.id,
-          level_id: user_level.try(:level).try(:id) || script_level.oldest_active_level.id,
+          level_id: script_level.level.id,
           script_id: script_level.script.id
         },
         name: student.name,

@@ -4,7 +4,12 @@ get '/:short_code' do |short_code|
   short_code = 'mchoc' if short_code == 'MC'
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten
   pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
-  pass unless tutorial = DB[:tutorials].where(short_code: short_code).first
+  tutorial = begin
+    DB[:tutorials].where(short_code: short_code).first
+  rescue Sequel::DatabaseError
+    nil
+  end
+  pass unless tutorial
   launch_tutorial(tutorial)
 end
 

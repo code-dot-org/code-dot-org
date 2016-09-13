@@ -4,10 +4,11 @@
   'yes': Po
   'no': Jo
   select_language: Ju lutem zgjedheni gjuhën tuaj
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org së shpejti do të largoj mbështetjen për Internet Explorer
+    8, 9, dhe 10. Ju lutemi merrni një browser më modern (Google Chrome ose Firefox).
+  upgrade_ie_message_csedweek: CSEdWeek.org së shpejti do të largoj mbështetjen për
+    Internet Explorer 8, 9, dhe 10. Ju lutemi merrni një browser më modern (Google
+    Chrome ose Firefox).
   upgrade_ie_link: Mëso më shumë
   en: Shkencat Kompjuterike
   computer_science_edweek: Java Arsimuese per Shkencat Kompjuterike
@@ -37,8 +38,8 @@
   twentyhours_text: E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë
     për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim.
   og_title: "Çdo fëmijë meriton mundësinë"
-  og_description: "Çdo nxënës në çdo shkollë meriton mundësinë të mësojë shkencën
-    kompjuterike."
+  og_description: "Çdo student në çdo shkollë e meriton të ketë mundësinë për të studiuar
+    shkenca kompjuterike. Po ndryshon gjithçka."
   hoc2014_heading: Bashkohuni në <a href="http://hourofcode.com"> Orën e Kodimit</a><br/>8-14
     Dhjetor, 2014<br/>
   hoc2014_students: Studentët
@@ -53,7 +54,7 @@
   csedweek_map_search_placeholder: Kërko ngjarjet Hour of Code
   csedweek_map_search_search: Kërko
   csedweek_map_search_reset: Rivendosni
-  csedweek_map_legend_title: Legend
+  csedweek_map_legend_title: Legjend
   csedweek_map_legend_event: Ngjarje e Orës së Kodimit
   csedweek_map_legend_cs_tech_jam: Ngjarje speciale
   cded_sign_up: Rregjistrohu
@@ -85,40 +86,40 @@
   congratulations_volunteer: 'Përgëzime: Tani pasiqë keni provuar Orën e Kodimit,
     <a href="https://code.org/volunteer">regjistrohu të bëhesh vullnetarë në një klasë</a>
     dhe ndihmo nxënësit të mësojnë një Orë të Kodimit!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Urime në përfundimin e Kursit 1
+  congratulations_on_completing_course2: Urime në përfundimin e Kursit 2
+  congratulations_on_completing_course3: Urime në përfundimin e Kursit 3
+  congratulations_on_completing_course4: Urime në përfundimin e Kursit 4
+  congratulations_on_completing_accelerated: Urime që përfunduat Kursin e Shpejtuar
   congrats_next_tutorials_title: Më pas provoni këto tutoriale
   congrats_next_tutorials_desc: Provoni këto tutoriale 1 orëshe, më të shkurtrat ose
     provoni <a href="%{current_path}/next">/next"> tutorialin partner</a>.
   get_a_certificate_of_achievement: Merr një certifikatë të arritjes
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
+  view_course: Shiko kursin
+  view_unit: Shiko njësinë
+  make_app: Bëj një aplikacion
+  congrats_guest_speaker_title: Gjeje një folës mysafir për klasën tuaj
+  congrats_guest_speaker_desc: Tani që studentët tuaj kanë përfunduar një kurs të
+    shkencave kompjuterike, konsideroni të festoni dhe t'i lidhni me gjëra që mund
+    t'i ndërtojnë në jetë reale duke ftuar një folës mysafir në klasë tuaj. Ju mund
+    të përdorni hartën e vullentarve që të kontaktoni vullentar lokal për të vizituar
+    klasën tuaj, ose të kërkoni në ndonjë qytet për të gjetur studenta të shkencave
+    kompjuterike ose profesionista teknikal të cilët janë gati të frymëzojnë studentët
+    tuaj nga distanca, përmes bisedës me video.
+  congrats_guest_speaker_cta: Gjeje një folës mysafir
+  congrats_third_party_title: Përdori aftësitë tua në këto webfaqe dhe aplikacione
+  third_party_gradelevel_kto8: Klasat ParaShk-8
+  third_party_gradelevel_kto2: Klasat ParaShk-2
+  third_party_gradelevel_2to8: Klasat 2-8
+  third_party_gradelevel_4to12: Klasat 4-12
+  third_party_gradelevel_5to12: Klasat 5-12
+  third_party_gradelevel_6plus: Klasat 6+
+  third_party_gradelevel_8plus: Klasat 8+
+  third_party_platform_all: 'Platforma: Web, iPad & Android'
+  third_party_platform_mobile: 'Platforma: iPad & Android'
+  third_party_platform_web: 'Platforma: Web'
+  third_party_price_varies: "Çmimi: Planet ndryshojnë"
+  third_party_price_free: "Çmimi: Falas"
   third_party_price_299: 'Price: $2.99/download'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
@@ -671,6 +672,7 @@
   dashboard_action_remove_confirm: Heqje?
   dashboard_action_done: Përfunduar
   dashboard_action_required: e domosdoshme
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -888,11 +890,14 @@
   dashboard_faq: Pyetjet më të shpeshta
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_announcements: Announcements
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -1019,7 +1024,7 @@
   infinity_name: Laboratori i Pafundmë
   artist_name: Artisti
   monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  allcancode_name: Vrapo Marko!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
@@ -1769,12 +1774,3 @@
   infinity_shortcode: inf
   playlab_shortcode: luaj
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

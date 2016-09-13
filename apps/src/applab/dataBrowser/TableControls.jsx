@@ -68,6 +68,7 @@ const TableControls = React.createClass({
             body={applabMsg.confirmClearTable()}
             buttonText="Clear table"
             containerStyle={{width: 103}}
+            buttonId="clearTableButton"
             onConfirm={this.props.clearTable}
             title="Clear table"
           />
