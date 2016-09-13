@@ -401,6 +401,8 @@ module.exports = function (grunt) {
           pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
           publicKeyCryptography: './src/publicKeyCryptography/main.js',
+
+          brambleHost: './src/weblab/brambleHost.js',
         }
       ),
       externals: [
@@ -430,13 +432,6 @@ module.exports = function (grunt) {
         }),
       ],
     },
-
-    {
-      uniqueName: 'brambleHost',
-      entries: {
-        brambleHost: './src/weblab/brambleHost.js'
-      },
-    }
   ];
 
   // Create a config for each of our bundles
