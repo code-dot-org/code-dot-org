@@ -171,6 +171,6 @@
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
     "query-string": "4.1.0",
-    "react-addons-update": "^15.3.0"
+    "react-addons-update": "15.3.0"
   }
 }
