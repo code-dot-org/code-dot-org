@@ -296,6 +296,29 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script_level, Script.cache_find_script_level(script_level.id)
   end
 
+  test 'cache_find_level uses cache with ID lookup' do
+    level = Script.first.script_levels.first.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal level, Script.cache_find_level(level.id)
+  end
+
+  test 'cache_find_level uses cache with name lookup' do
+    level = Script.first.script_levels.first.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal level, Script.cache_find_level(level.name)
+  end
+
+  test 'cache_find_level returns nil on bad ID and bad name' do
+    populate_cache_and_disconnect_db
+
+    assert_equal nil, Script.cache_find_level(-314)
+    assert_equal nil, Script.cache_find_level('not a level name')
+  end
+
   test 'level uses cache' do
     script_level = Script.first.script_levels.first
     expected_level = script_level.level
