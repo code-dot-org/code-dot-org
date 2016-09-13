@@ -93,7 +93,7 @@ social:
 
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
-    window.tutorialExplorerManager = new TutorialExplorerManager({
+    var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials.to_json},
       filters: #{filters.to_json},
       locale: "#{request.locale}"
