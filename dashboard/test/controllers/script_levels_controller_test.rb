@@ -18,7 +18,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script = Script.twenty_hour_script
     @script_level = @script.script_levels.fifth
 
-    @custom_script = create(:script, :name => 'laurel')
+    @custom_script = create(:script, :name => 'laurel', hideable_stages: true)
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
     @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
     @custom_s1_l1 = create(:script_level, script: @custom_script,
@@ -1272,40 +1272,55 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @script)
-    stage1 = @script.stages[0]
+    section = put_student_in_section(student, teacher, @custom_script)
+    stage1 = @custom_script.stages[0]
+    assert @custom_script.hideable_stages
 
     # start with no hidden stages
     assert_equal 0, HiddenStage.where(section_id: section.id).length
 
-    post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: "true"
+    post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: true
+    assert_response :success
     assert_equal 1, HiddenStage.where(section_id: section.id).length
 
-    post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: "false"
+    post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: false
     assert_equal 0, HiddenStage.where(section_id: section.id).length
   end
 
-  test "teacher can't hide or unhide stages in sections they don't own" do
+  test "teacher can't hide stages if script has hideable_stages false" do
+    teacher = create :teacher
+    student = create :student
+    sign_in teacher
+
+    section = put_student_in_section(student, teacher, @script)
+    stage1 = @script.stages[0]
+    assert !@script.hideable_stages
+
+    post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: true
+    assert_response 403
+    assert_equal 0, HiddenStage.where(section_id: section.id).length
+  end
+
+  test "teacher can't hide or un  hide stages in sections they don't own" do
     teacher = create :teacher
     other_teacher = create :teacher
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @script)
-    stage1 = @script.stages[0]
+    section = put_student_in_section(student, other_teacher, @custom_script)
+    stage1 = @custom_script.stages[0]
+    assert @custom_script.hideable_stages
 
-    post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: "true"
+    post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: "true"
     assert_response 403
 
     # add a HiddenStage directly
     HiddenStage.create(stage_id: stage1.id, section_id: section.id)
 
     # try to unhide
-    post :toggle_hidden, script_id: @script.id, stage_id: stage1.id, section_id: section.id, hidden: "false"
+    post :toggle_hidden, script_id: @custom_script.id, stage_id: stage1.id, section_id: section.id, hidden: "false"
     assert_response 403
 
     assert_equal 1, HiddenStage.where(section_id: section.id).length
   end
-
-  # TODO: test hiding stages in scripts that dont support it
 end

@@ -7,7 +7,7 @@ import { INIT_PROGRESS } from './progressRedux';
 import experiments from '@cdo/apps/experiments';
 
 export const UPDATE_HIDDEN_STAGES = 'hiddenStage/UPDATE_HIDDEN_STAGES';
-export const HIDDEN_INITIALIZED = 'hiddenStage/HIDDEN_INITIALIZED';
+export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
 
 export const hiddenStagesEnabled = () => experiments.isEnabled('hiddenStages');
 
@@ -23,7 +23,6 @@ const initialState = {
  * Mapping of stage ids to bools indicating whether it's locked or not
  */
 export default function reducer(state = initialState, action) {
-  // TODO - make sure things still work when using via UI and not just tests
   if (action.type === UPDATE_HIDDEN_STAGES) {
     return {
       ...state,
@@ -31,7 +30,7 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === HIDDEN_INITIALIZED) {
+  if (action.type === ALLOW_HIDEABLE) {
     return {
       ...state,
       initialized: true
@@ -74,9 +73,9 @@ export function toggleHidden(scriptName, stageId, hidden) {
   };
 }
 
-function hiddenInitialized() {
+export function allowHideable() {
   return {
-    type: HIDDEN_INITIALIZED
+    type: ALLOW_HIDEABLE
   };
 }
 
@@ -101,7 +100,7 @@ export function getHiddenStages(scriptName) {
         };
       }, {});
       dispatch(updateHiddenStages(updates));
-      dispatch(hiddenInitialized());
+      dispatch(allowHideable());
     }).fail(err => {
       console.error(err);
     });
