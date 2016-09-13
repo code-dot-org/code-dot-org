@@ -143,7 +143,11 @@ describe("The applab/import module", () => {
           sources: {
             html: `
               <div>
-                <div class="screen" id="screen1">
+                <div
+                  class="screen"
+                  id="screen1"
+                  data-canonical-image-url="background-asset.png"
+                  style="background-image: url("/v2/assets/some-other-project/background-asset.png")">
                   <img src="/v3/assets/some-other-project/asset1.png"
                        data-canonical-image-url="asset1.png"
                        id="img2">
@@ -159,6 +163,7 @@ describe("The applab/import module", () => {
             {filename: 'asset2.png', category: 'image'},
             {filename: 'asset3.png', category: 'image'},
             {filename: 'asset4.png', category: 'image'},
+            {filename: 'background-asset.png', category: 'image'},
           ],
           existingAssets: [
             {filename: 'asset1.png', category: 'image'},
@@ -172,7 +177,10 @@ describe("The applab/import module", () => {
       });
 
       it('should list the assets to import without replacing', () => {
-        expect(importable.screens[0].assetsToImport).to.deep.equal(['asset2.png']);
+        expect(importable.screens[0].assetsToImport).to.deep.equal([
+          'asset2.png',
+          'background-asset.png',
+        ]);
       });
 
       it('should list the other assets not used in the screens', () => {
@@ -218,7 +226,7 @@ describe("The applab/import module", () => {
 
       it('should include the list of conflicting element ids.', () => {
         // note that screen2 has conflicting ids, even though in theory
-        // screen1 resolves that conflict since it replaces the destinate screen causing
+        // screen1 resolves that conflict since it replaces the destination screen causing
         // the conflict. We explicitly choose not to handle that logic automatically.
         expect(importable.screens[0].conflictingIds).to.deep.equal([]);
         expect(importable.screens[1].conflictingIds).to.deep.equal(['input2']);
@@ -265,6 +273,50 @@ describe("The applab/import module", () => {
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be.null;
+    });
+
+    it("can run through the same import twice without getting conflicts", () => {
+      setExistingHTML(`
+        <div class="screen" id="design_screen1">
+          <input id="design_input1">
+        </div>
+      `);
+      var project = getImportableProject(
+        getProjectWithHTML(`
+          <div class="screen" id="screen1">
+            <input id="importedInput">
+          </div>
+          <div class="screen" id="screen2">
+            <input id="importedInput2">
+            <input id="importedInput3">
+          </div>
+        `)
+      );
+      expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
+      expect(elementUtils.getPrefixedElementById('input1')).not.to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput')).to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput2')).to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput3')).to.be.null;
+      importScreensAndAssets(project.id, [project.screens[0], project.screens[1]], []);
+      expect(designMode.getAllScreenIds()).to.deep.equal(['screen1', 'screen2']);
+      expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput2')).not.to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput3')).not.to.be.null;
+
+      project = getImportableProject(
+        getProjectWithHTML(`
+          <div class="screen" id="screen1">
+            <input id="importedInput">
+          </div>
+          <div class="screen" id="screen2">
+            <input id="importedInput2">
+            <input id="importedInput3">
+          </div>
+        `)
+      );
+      expect(project.screens[0].conflictingIds).to.deep.equal([]);
+      expect(project.screens[1].conflictingIds).to.deep.equal([]);
     });
 
     describe('when replacing assets in imported screens', () => {
@@ -332,8 +384,6 @@ describe("The applab/import module", () => {
       });
 
     });
-
-
 
   });
 

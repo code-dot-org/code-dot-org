@@ -164,8 +164,9 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     Script.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
+    [
+      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
+    ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 
@@ -186,7 +187,7 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
-  # Returns a cached map from script level id to id, or nil if in level_builder mode
+  # Returns a cached map from script level id to script_level, or nil if in level_builder mode
   # which disables caching.
   def self.script_level_cache
     return nil unless self.should_cache?
@@ -197,7 +198,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Returns a cached map from level id to id, or nil if in level_builder mode
+  # Returns a cached map from level id to level, or nil if in level_builder mode
   # which disables caching.
   def self.level_cache
     return nil unless self.should_cache?
@@ -284,10 +285,6 @@ class Script < ActiveRecord::Base
 
   def minecraft?
     ScriptConstants.script_in_category?(:minecraft, self.name)
-  end
-
-  def find_script_level(level_id)
-    self.script_levels.detect { |sl| sl.level_id == level_id }
   end
 
   def get_script_level_by_id(script_level_id)

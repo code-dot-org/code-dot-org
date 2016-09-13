@@ -1,12 +1,10 @@
 @no_mobile
-@as_student
+@as_taught_student
 @no_circle
 Feature: Submittable multi
 
 Background:
-  # Ideally we would create a student account that has a teacher so that we don't need
-  # force_submittable to be passed through.
-  Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/3?noautoplay=true&force_submittable=true"
+  Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/3?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible

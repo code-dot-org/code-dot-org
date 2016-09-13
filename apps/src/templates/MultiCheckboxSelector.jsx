@@ -40,6 +40,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
     children: React.PropTypes.element,
     itemPropName: React.PropTypes.string,
     style: React.PropTypes.any,
+    disabled: React.PropTypes.bool,
   },
 
   getDefaultProps() {
@@ -48,6 +49,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
       selected: [],
       items: [],
       onChange: function (){},
+      disabled: false,
     };
   },
 
@@ -85,6 +87,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
             style={[styles.checkbox, styles.selectAllCheckbox]}
             checked={this.areAllSelected()}
             onChange={this.toggleSelectAll}
+            disabled={this.props.disabled}
           />
           {this.props.header}
         </h2>
@@ -96,6 +99,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
                  type="checkbox"
                  checked={this.props.selected.includes(item)}
                  onChange={() => this.toggle(item)}
+                 disabled={this.props.disabled}
                />
                {React.cloneElement(this.props.children, {[this.props.itemPropName]:item})}
              </li>
@@ -170,6 +174,19 @@ if (BUILD_STYLEGUIDE) {
               onChange={storybook.action("onChange")}
             >
               <ComplexItemComponent style={{border: '1px solid black', padding: 10}} />
+            </MultiCheckboxSelector>
+          )
+        }, {
+          name: 'disabled',
+          story: () => (
+            <MultiCheckboxSelector
+              header="Some Items"
+              items={["one", "two", "three"]}
+              selected={["two"]}
+              onChange={storybook.action("onChange")}
+              disabled={true}
+            >
+              <ItemComponent />
             </MultiCheckboxSelector>
           )
         },

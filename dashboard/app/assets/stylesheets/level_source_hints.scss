@@ -1,0 +1,18 @@
+// Place all the styles related to the LevelSourceHints controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.level_source_hint_radio_button {
+
+  label {
+    float: left;
+    clear: right;
+    display: block;
+    padding: 2px 1em 0 0;
+  }
+  input[type=radio], input.radio {
+    float: left;
+    clear: left;
+    margin: 2px 0 0 2px;
+  }
+}

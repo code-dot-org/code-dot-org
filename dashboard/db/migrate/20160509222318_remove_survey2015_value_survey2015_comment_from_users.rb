@@ -1,4 +1,4 @@
-class RemoveSurvey2015ValueSurvey2015CommentFromUsers < ActiveRecord::Migration
+class RemoveSurvey2015ValueSurvey2015CommentFromUsers < ActiveRecord::Migration[4.2]
   def change
     reversible do |direction|
       # The up direction clears the survey2015_value and survey2015_comment

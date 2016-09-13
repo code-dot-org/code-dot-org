@@ -1,4 +1,4 @@
-class AddPdWorkshopTables < ActiveRecord::Migration
+class AddPdWorkshopTables < ActiveRecord::Migration[4.2]
   def change
     create_table :pd_workshops do |t|
       t.string :workshop_type, null: false

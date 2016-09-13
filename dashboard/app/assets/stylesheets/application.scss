@@ -1,0 +1,2529 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ * Gem assets
+ *= require jquery-ui
+ *
+ * Vendor assets
+ *= require add2home
+ *= require gotham-font
+ *= require jquery.qtip.min
+ *
+ * Application assets
+ *= require_self
+ *= require_directory .
+ *
+ * Shared
+ *= require user-menu
+ *= require user-progress
+ *= require user-hero
+ *= require teacher-announcement
+ *= require buttons
+ *= require course-blocks
+ *= require details-polyfill
+ *= require warning-banner
+ *
+ *= require selectize
+ *= require selectize.default
+ */
+
+@import "color";
+@import "font";
+@import "mixins";
+
+$baseFontFamily: $gotham-regular;
+$headingsFontWeight: normal;
+$btnPrimaryBackground: $orange;
+$btnPrimaryBackgroundHighlight: $orange;
+
+@import "bootstrap";
+// Font-awesome 4.6.3
+@import "font-awesome";
+
+p,pre,span {
+  @include selectable;
+}
+
+body {
+  @include unselectable;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  font-style: normal;
+}
+
+body.pin_bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+h1 {
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
+  font-size: 32px;
+  color: $purple;
+}
+
+h2 {
+  margin: 25px 0 10px 0;
+  font-family: $gotham-bold;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: $teal;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+hr {
+  border-color: $teal;
+  border-bottom: none;
+}
+
+th {
+  background-color: $charcoal;
+  color: $white;
+  border: 1px solid $white;
+  text-align: left;
+  font-size: 120%;
+  font-family: $gotham-bold;
+  font-weight: normal;
+  padding: 5px;
+}
+
+strong {
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
+}
+
+em {
+  font-family: $gotham-italics;
+  font-style: normal;
+}
+
+strong em,
+em strong {
+  font-family: $gotham-extra-bold-italics;
+}
+
+a.video_link {
+  /* IE9 CSS hack */
+  max-width: 100%\9;
+}
+
+img.video_thumbnail {
+  width: 183px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.report_cell {
+  text-align: center;
+  color: $white;
+  border: 1px solid $black;
+}
+
+.report_row {
+  height: 26px;
+  border-top: 1px solid $black;
+}
+
+.report_key {
+  height: 16px;
+  border-radius: 5px;
+  display: block;
+  float: left;
+  clear: left;
+  width: 23px;
+  border: 1px solid $light_gray;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.report_key_cell {
+  padding: 3px;
+  visibility: middle;
+}
+
+.report_tall_row {
+  height: 35px;
+}
+
+.header-wrapper {
+  padding-top: 15px;
+  min-height: 70px;
+  position: relative;
+
+  #progresswarning {
+    position: absolute;
+    font-size: 10px;
+    top: -1px;
+    left: 97px;
+
+    .learnmore {
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
+    }
+  }
+}
+
+.header {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 44px;
+  background-color: $bkgnd_color;
+  color: $header_text;
+  a:link {
+    color: $header_text;
+  }
+  a:visited {
+    color: $header_text;
+  }
+
+  .small_font_on_tablet {
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.header.hide_on_mobile,
+.header-wrapper.hide_on_mobile {
+  @media screen and (max-device-width: 500px) {
+    display: none;
+  }
+}
+
+.sign_in.show_only_on_mobile {
+  float: right;
+  margin-bottom: 10px;
+
+  @media screen and (min-device-width: 501px) {
+    display: none;
+  }
+}
+
+.header_status_bar {
+  background-color: $dark_color;
+  border-radius: 5px;
+  min-width: 20px;
+  padding: 3px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+a.header_status_bar:hover {
+  background-color: $orange;
+}
+
+.header_text {
+  font-size: 16px;
+  display: inline-block;
+}
+
+#betainfo {
+  position: absolute;
+  font-size: 10px;
+  top: -1px;
+  right: 33px;
+}
+
+.main {
+  padding: 10px;
+  a:link, a:visited, a:hover, a:active {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $cyan;
+    background-color: transparent;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
+    font-family: FontAwesome;
+  }
+}
+
+/* This styling helps to push the footer to the bottom of a page. */
+$footer_height: 165px;
+$footer_padding-top: 20px;
+$footer_padding-bottom: 20px;
+$footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  .legacy-share-view & {
+    position: relative;
+  }
+}
+.push {
+  height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
+}
+.legacy-share-view .push {
+  display: none;
+}
+
+.footer {
+  height: $footer_height;                 /* A height is required to push this footer to the bottom of the page. */
+  padding-top: $footer_padding-top;
+  padding-bottom: $footer_padding-bottom;
+  font-size: 14px;
+  background-color: $dark_color;
+  color: $header_text;
+  a:link, a:visited, a:hover, a:active {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: $white;
+    background-color: transparent;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  select {
+    width: auto;
+    font-size: 11px;
+    height: 18px;
+    margin-bottom: 4px;
+    }
+  .fineprint {
+    a:link, a:visited, a:hover, a:active {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+  }
+  .dim {
+    display: inline-block;
+    opacity: 0.5;
+  }
+}
+
+/* Styling that keeps the small footer consistent with other page elements */
+$codeApp-left-margin: 25px;
+$small-footer-horizontal-margin: 15px;
+$small-footer-standard-width: 400px;
+
+/* Shared styles so flyout looks like footer */
+.small-footer-base, #copyright-flyout, #more-menu {
+  background-color: $blockly_flyout_gray; /* Matches blockly flyout */
+  color: $light_gray;
+  font-size: 14px;
+  a {
+    font-family: $gotham-bold;
+    font-weight: normal;
+    &:link {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $dark_charcoal;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    &:active {
+      color: $light_gray;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+
+  .dark & {
+    background-color: $dark-charcoal;
+    a {
+      &:hover {
+        color: $lightest_gray;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    small {
+      font-size: 10px;
+    }
+  }
+}
+
+.small-footer-base {
+  position: absolute;
+  bottom: 0;
+  width: $small-footer-standard-width;
+  overflow: hidden;
+  padding-left: $codeApp-left-margin;
+
+  /*
+   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+   * fit between the visualization above and the .small-footer
+   */
+  margin-top: 5px;
+
+  form {
+    float: left;
+    margin-right: $small-footer-horizontal-margin;
+  }
+
+  select {
+    width: 80px;
+    font-size: 11px;
+    height: 18px;
+    margin-bottom: 0;
+  }
+
+  small {
+    display: block;
+    float: right;
+    margin-right: $small-footer-horizontal-margin;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+}
+
+#more-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* Prevent default unordered-list style */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > li > a {
+    display: block;
+    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    border-bottom: solid thin $lightest_gray;
+
+    &:hover {
+      background-color: $dark_charcoal;
+      color: $lightest_gray;
+      text-decoration: none;
+    }
+  }
+
+  .dark & {
+    & > li > a {
+      &:hover {
+        background-color: $lightest_gray;
+        color: $dark_charcoal;
+      }
+    }
+  }
+}
+
+/* All three major components of .small-footer are stacked:
+   Need to have this reasonably, high since some of our elements (such as
+   applab editor) have higher values
+*/
+#more-menu {
+  z-index: 998;
+}
+#copyright-flyout {
+  z-index: 999;
+}
+.small-footer-base {
+  z-index: 1000;
+}
+
+#locale {
+  font-family: sans-serif;
+  height: 24px;
+}
+
+.header_separator {
+  padding-left: 2px;
+  margin-bottom: -18px;
+  margin-top: -8px;
+  margin-right: 2px;
+  height: 42px;
+  border-right: 1px solid $inset_color;
+  border-right-style: inset;
+  display: inline-block;
+}
+
+.user_options, .project_more_popup {
+  display: none;
+  background-color: $white;
+  a:link {
+    color: $black;
+  }
+  a:visited {
+    color: $black;
+  }
+  a:hover {
+    color: $white;
+    background-color: $dark_color;
+    text-decoration: none;
+  }
+  a:active {
+    color: $white;
+    background-color: $dark_color;
+  }
+  border: 1px solid $black;
+  z-index: 100001;
+  text-align: left;
+  white-space: nowrap;
+  color: $black;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  left: auto;
+  bottom: auto;
+}
+
+.user_options a {
+  color: $black;
+}
+
+.user_options .pairing_summary {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+.full_container {
+  padding: 0 25px 25px 25px;
+}
+body.embedded_iframe {
+  .full_container {
+    padding-left: 0;
+  }
+}
+
+
+
+$default-modal-width: 640px;
+
+.modal {
+  a:hover:not(.btn) {
+    color: $red;
+    background-color: $white;
+  }
+
+  &#block-documentation-lightbox {
+    width: 80% !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .markdown {
+    .modal-image {
+      margin-top: -100px;
+      float: left;
+      position: relative;
+    }
+  }
+}
+
+.auto-resize-scrollable {
+  &.modal {
+    position: absolute;
+    top: 50px; // top of the dialog
+
+    width: $default-modal-width;
+    margin-left: -($default-modal-width / 2);
+
+    // margin-bottom is reused in JavaScript to determine
+    // how close to get to the bottom of the viewport.
+    margin-bottom: 25px;
+
+    z-index: 1050;
+  }
+}
+
+.modal-body {
+  max-height: none;
+}
+
+.dash_modal {
+  width: $default-modal-width;
+  margin-left: -($default-modal-width / 2);
+}
+
+.dash_modal_body {
+  padding-right: 25px;
+}
+
+.btn#dataConfirmOK:hover {
+  color: $white;
+  background-color: $orange;
+}
+
+#video {
+  padding: 0;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.fallback-video-player-failed {
+  video, div {
+    visibility: hidden;
+  }
+  p {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 5px;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.video-modal {
+  z-index: 10000;
+
+  .ui-tabs {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.header_left {
+  position: absolute;
+  left: 25px;
+  z-index: 2;
+  .header_button, .header_input, .header_text {
+    margin-left: 10px;
+  }
+}
+
+.header_left, .header_right {
+  margin-top: 5px;
+}
+
+.header_logo {
+  float: left;
+  z-index: 1;
+  margin-top: -24px;
+  padding-top: 14px;
+  min-width: 0;
+  max-width: 55px;
+  width: 55px;
+
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+
+.project_info {
+  .header_text, .header_button {
+    float: left;
+  }
+  .project_name_wrapper .header_text {
+    float: left;
+    clear: left;
+  }
+  // TODO: Remove when Game Lab is no longer in beta
+  .beta-notice {
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 7px 0;
+    font-family: $gotham-extra-bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: $droplet_yellow;
+  }
+}
+
+.project_name {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.project_updated_at {
+  font-size: 10px;
+}
+
+.project_save[disabled] {
+  background: $light_gray;
+}
+
+#project-share {
+
+  .export-button {
+    color: $dark_color;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .social-buttons a {
+    display: inline-block;
+    background: $purple;
+    color: $white;
+    border-radius: 5px;
+    margin-right: 8px;
+    font-size: larger;
+    &:hover, & {
+      text-decoration: none;
+    }
+
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
+
+    i {
+      border-radius: 5px;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24pt;
+
+      &.fa-facebook {
+        background-color: $facebook_blue;
+      }
+      &.fa-twitter {
+        background-color: $twitter_blue;
+      }
+    }
+    span {
+      padding-right: 10px;
+    }
+  }
+}
+
+.header_middle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  .header_button {
+    margin-top: 3px;
+  }
+}
+
+.header_level_container {
+  display: inline-block;
+}
+
+.header_level {
+  padding-top: 2px;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 150%;
+  cursor: default;
+  white-space: nowrap;
+
+  .progress_container {
+    display: inline-block;
+  }
+}
+
+.header_right {
+  position: absolute;
+  float: left;
+  right: 25px;
+}
+
+.freeplay_links {
+  display: inline-block;
+  text-align: center;
+}
+
+.header_button {
+  &.header_button_light {
+    background-color: $lightish_teal;
+  }
+  display: inline-block;
+  background-color: $orange;
+  border-radius: 5px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  a:hover {
+    text-decoration: none;
+    background-color: $orange;
+  }
+}
+
+input.header_input {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.header_user {
+  text-align: right;
+  margin-left: 5px;
+}
+
+.header_popup {
+  display: none;
+  position: absolute;
+  // Set to exactly line up with the bottom of the header
+  top: 44px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  // margin-bottom is reused in JavaScript to determine how close to get to the bottom of the viewport.
+  margin-bottom: 20px;
+  width: 635px;
+  border: 8px solid $bkgnd_color;
+  border-top: 5px;
+  border-bottom: 5px;
+  border-radius: 0 0 6px 6px;
+  z-index: 1050;
+  background-color: $white;
+  overflow: hidden;
+}
+
+.header_popup_scrollable {
+  max-height: 560px;
+  overflow-y: auto;
+}
+
+.header_popup_header {
+  padding: 12px 15px;
+  margin-bottom: 0;
+  text-align: left;
+  color: $header_text;
+  background-color: $hdr_color;
+  font-size: 22px;
+  cursor: pointer;
+
+  span {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.header_popup_body {
+  position: relative;
+  padding: 0 2px;
+  display: block;
+  color: $charcoal;
+
+  .loading {
+    height: 400px;
+    margin: 20px;
+    background: image-url("spinner-big.gif") no-repeat center center;
+  }
+}
+
+.header_popup_footer {
+  height: 20px;
+  padding: 7px 3px;
+  margin-bottom: 0;
+  text-align: right;
+  color: $header_text;
+  background-color: $bkgnd_color;
+  cursor: pointer;
+}
+
+.header_popup_link {
+  min-width: 40px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 26px;
+  cursor: pointer;
+}
+
+.header_finished_link {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.header_finished_link:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.header_popup_link:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.header_popup_link_glyph {
+  font-size: 22px;
+  color: $orange;
+  line-height: 10px;
+}
+
+.header_popup_link_text {
+  font-size: 10px;
+  color: $header_text;
+  display: inline-block;
+  line-height: 20px;
+}
+
+#alert {
+  color: $red;
+  font-size: 130%;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+}
+
+#codeApp {
+  position: relative;
+
+  .loading {
+    height: 520px;
+    background: image-url("spinner-big.gif") no-repeat center center;
+  }
+
+  .slow_load {
+    display: none;
+    text-align: center;
+    position: relative;
+    top: -230px;
+  }
+}
+
+#codeApp.pin_bottom {
+  position: absolute;
+  top: 85px;
+  left: $codeApp-left-margin;
+  right: 25px;
+  bottom: 10px;
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+    top: 10px;
+  }
+
+  &.centered_embed {
+    position: relative;
+    top: 0;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
+  }
+}
+
+.reference_area {
+  margin-top: 20px;
+
+  .help_title {
+    color: $dark_charcoal;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    font-size: 17.5px;
+    display: inline-block;
+  }
+
+  .solution_link {
+    font-size: 17.5px;
+    padding-bottom: 4px;
+  }
+
+  .video_link {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  .video_name {
+    text-align: center;
+  }
+
+  .help_subtitle {
+    display: inline-block;
+  }
+}
+
+#notes-outer {
+  overflow-y: scroll;
+  padding: 0;
+}
+#notes {
+  .note {
+    padding-bottom: 10px;
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      padding-right: 30px;
+    }
+    img {
+      float: left;
+      width: 450px;
+      height: auto;
+      padding-right: 30px;
+    }
+  }
+}
+
+// Tabs
+
+.video-modal {
+  .modal-body {
+    padding: 0;
+  }
+  .ui-tabs-nav {
+    background: $light_gray;
+
+    li {
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+
+      a {
+        background: $dark_color;
+        color: $white;
+        &:hover {
+          color: $green;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      html[dir=rtl] & {
+        float: right;
+      }
+    }
+
+    li.ui-state-active {
+      a {
+        background: $white;
+        color: $orange;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+@mixin close-button($cornerOffset) {
+  $startWidth: 61px;
+  $startHeight: 59px;
+  $growth: 3px;
+  $movement: 1px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  background: image-url("x_button.png") no-repeat center center;
+  background-size: 100% auto;
+
+  top: $cornerOffset;
+  right: $cornerOffset;
+  width: $startWidth;
+  height: $startHeight;
+  &:hover {
+    top: $cornerOffset - $movement;
+    right: $cornerOffset - $movement;
+    width: $startWidth + $growth;
+    height: $startHeight + $growth;
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: $cornerOffset;
+  }
+  html[dir=rtl] &:hover, .flip-x-close &:hover {
+    right: auto;
+    left: $cornerOffset - $movement;
+  }
+
+  html[dir=rtl] .flip-x-close & {
+    left: auto;
+    right: $cornerOffset;
+  }
+
+  html[dir=rtl] .flip-x-close &:hover {
+    left: auto;
+    right: $cornerOffset - $movement;
+  }
+}
+
+.x-close {
+  @include close-button($cornerOffset: -20px);
+}
+
+.qtip-content {
+  font-size: 20px;
+  line-height: 28px;
+  color: $purple;
+  font-family: $gotham-bold;
+  font-weight: normal;
+}
+
+html[dir=rtl] .qtip-content {
+  direction: rtl;
+  text-align: right;
+}
+
+.qtip-default {
+  background-color: $white;
+  color: $charcoal;
+  border: 1px solid $charcoal;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px $shadow;
+  padding: 10px;
+}
+
+.no-tip .qtip-tip {
+  visibility: hidden;
+}
+
+.cdo-qtips {
+  z-index: 1;
+}
+
+.tooltip-x-close.qtip-icon {
+  @include close-button($cornerOffset: -20px);
+}
+
+a.download-video {
+  z-index: 1;
+  cursor: pointer;
+  width: 40px;
+  height: 36px;
+  &:hover {
+    background: none;
+  }
+  img {
+    width: 40px;
+    height: 41px;
+    margin-top: -3px;
+    margin-bottom: -2px;
+  }
+  img:hover {
+    width: 41px;
+    height: 42px;
+    margin-bottom: -3px;
+  }
+}
+
+.quiet_links {
+  a:link {
+    font-family: $gotham-regular;
+    font-weight: normal;
+  }
+}
+
+.fixed_width_cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+}
+
+#landingpage {
+  .welcome {
+    background-color: $light_purple;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $white;
+    overflow: hidden;
+  }
+
+  .welcomeleft {
+    float: left;
+    text-align: center;
+    img {
+      padding-left: 65px;
+    }
+  }
+
+  .welcomeright {
+    float: left;
+    text-align: center;
+  }
+
+  .lines_of_code_header {
+    width: 100%;
+    color: $white;
+    padding-left: 30px;
+    padding-top: 0;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  a.lines_of_code_link {
+    color: $white;
+    text-decoration: none;
+    font-family: $gotham-bold;
+    font-weight: normal;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .row#continue {
+    background-color: $teal;
+    color: $white;
+    font-size: 24.5px;
+    padding: 5px 0;
+    #puzzle {
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+    }
+    .btn {
+      height: 32px;
+      margin: 0 5px;
+    }
+  }
+
+  #welcome h2 {
+    font-size: 18px;
+  }
+
+  .gallery {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 890px;
+
+    .pagination {
+      float: left;
+      font-size: 30px;
+      line-height: 154px;
+      margin: 10px 5px;
+      width: 25px;
+      text-align: center;
+      a:hover {
+        text-decoration: none;
+      }
+    }
+
+    .gallery_activity {
+      margin: 10px 5px;
+      box-sizing: border-box;
+      height: 154px;
+      width: 154px;
+      img {
+        border: 2px solid $lighter_gray;
+        background-color: $white;
+      }
+    }
+  }
+
+  h3.whitetext {
+    a, a:link, a:hover, a:visited {
+      color: $white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .row.navcontainer {
+    margin: 30px 0 10px -20px;
+    background-color: $lightest_gray;
+  }
+
+  ul.nav.nav-pills {
+    text-transform: uppercase;
+    padding: 10px;
+    li {
+      margin-right: 10px;
+    }
+
+    li.active a, li.active a:hover, li.active a:link {
+      background-color: $white;
+      color: $purple;
+      border: 2px solid $purple;
+    }
+    li a:hover, a:focus {
+      text-decoration: none;
+      background-color: $white;
+    }
+  }
+
+  .padtopbottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #signup {
+    padding-top: 10px;
+    .medium-size-text {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    #maintext {
+      text-align: left;
+      padding-left: 20px;
+      color: $charcoal;
+    }
+    #helptext {
+      text-align: right;
+      padding-right: 20px;
+      color: $light_gray;
+    }
+  }
+
+  #lesson {
+    #heading {
+      width: 700px;
+    }
+    #trynow {
+      float: right;
+      text-align: right;
+      .biggerbutton {
+        font-size: 20px;
+        height: 40px;
+      }
+      .button_to {
+        margin-bottom: 5px;
+      }
+    }
+    .betatext {
+      background: $white;
+      color: $cyan;
+      padding: 2px 4px;
+      border: 1px solid $cyan;
+    }
+  }
+
+  #edit_teachers {
+    background-color: $lightest_gray;
+    margin: 20px 0 20px -20px;
+    form {
+      margin: 0;
+    }
+  }
+}
+
+.course_progress {
+  margin: 10px 0;
+}
+
+#signin {
+  .tryfirst {
+    margin-bottom: 10px;
+    a {
+      font-size: 18px;
+      font-family: $gotham-regular;
+      font-weight: normal;
+    }
+  }
+  .itemblock {
+    display: inline-block;
+    width: 600px;
+  }
+  .singleitemblock {
+    padding-left: 144px;
+    width: 364px;
+  }
+  .labelblock {
+    display: inline-block;
+    width: 140px;
+  }
+  .rememberme {
+    font-size: 13px;
+    margin-bottom: 22px;
+
+    #user_remember_me {
+      margin-top: -2px;
+      margin-right: 3px;
+    }
+  }
+  button {
+    width: 220px;
+  }
+  #signin-button {
+    margin-bottom: 7px;
+  }
+  #signup-button {
+    margin-top: 4px;
+  }
+  .forgotpassword {
+    margin-bottom: 10px;
+  }
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid $dark_charcoal;
+  }
+}
+
+#signinsection {
+  ul.students, ul.pictures {
+    margin-left: 0;
+  }
+
+  ul.students li,
+  ul.pictures li {
+    list-style-type: none;
+    border: 1px solid $lighter_gray;
+    border-radius: 5px;
+    background-color: $lightest_gray;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  ul.students li:hover,
+  ul.pictures li:hover {
+    background-color: $light_yellow;
+  }
+
+  ul.students li.selected,
+  ul.pictures li.selected {
+    background-color: $yellow;
+  }
+
+  #pairing_checkbox {
+    margin: 5px 0;
+    label {
+      font-size: 17.5px;
+    }
+    label, input {
+      margin: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+#signup {
+  .signupform {
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  .itemblock {
+    display: table;
+  }
+  .labelblock {
+    display: table-cell;
+    width: 140px;
+  }
+  .fieldblock {
+    width: 220px;
+    vertical-align: top;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .labelblock {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .terms-checkbox {
+    margin: 0 5px 2px 0;
+  }
+  .right {
+    float: right;
+  }
+  .scroll-box {
+    height: 100px;
+    border: 1px solid $border_gray;
+    padding: 20px;
+    margin-top: 5px;
+    resize: vertical;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+  .custom-h1 {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .checkbox-error {
+    display: inline !important;
+    padding-left: 0 !important;
+  }
+  #labelusername {
+    vertical-align: top;
+    padding-top: 7px;
+  }
+  #usernamefield {
+    vertical-align: top;
+  }
+  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
+    width: 234px;
+  }
+  #usernamemessage, #password_message, #password_message_confirmation {
+    display: inline-block;
+    max-width: 180px;
+    vertical-align: top;
+  }
+  #password_confirmation-block {
+    margin-bottom: 20px;
+  }
+  .error_in_field {
+    color: $red;
+    opacity: 0;
+    display: table-cell;
+    padding-left: 10px;
+    vertical-align: middle;
+  }
+  select {
+    width: 234px;
+  }
+  .field_with_errors {
+    display: inline-block;
+  }
+  button {
+    font-size: 16px;
+    height: 40px;
+  }
+  .registertext {
+    display: inline-block;
+    font-size: 16px;
+    color: $charcoal;
+    margin-top: 15px;
+  }
+  #user_type-block {
+    margin-bottom: 20px;
+  }
+  .devise_links {
+    padding-left: 20px;
+    margin-top: 20px;
+    border-left: 1px solid $black;
+  }
+}
+
+#hoc_download {
+  color: $charcoal;
+  .capsule {
+    background-color: $lightest_gray;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+  .indent {
+    margin-left: 20px;
+  }
+}
+
+@mixin yTranslation($offset) {
+  -webkit-transform: translateY($offset);
+  -ms-transform: translateY($offset);
+  transform: translateY($offset);
+}
+
+.match {
+  .mainblock {
+    margin-left: 0;
+  }
+  .column {
+    width: 260px;
+    float: left;
+    img {
+      position: relative;
+      top: 50%;
+      @include yTranslation(-50%);
+      height: auto;
+      width: auto;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .draggablecolumn {
+    cursor: default;
+    touch-action: none;
+    -ms-touch-action: none;
+  }
+  li {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: $lighter_gray;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 220px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 6px;
+  }
+  #questions {
+    list-style-type: none;
+    margin-left: 0;
+    li {
+      background-color: $white;
+      border-color: $lighter_gray;
+    }
+  }
+  li {
+    text-align: center;
+  }
+  #slots {
+    list-style-type: none;
+    margin-left: 0;
+    .emptyslot {
+      background-color: $lightest_gray;
+      border-color: $lightest_gray;
+      .giantmark {
+        .text {
+          opacity: 0.8;
+          font-family: $gotham-bold;
+          font-weight: normal;
+        }
+      }
+    }
+    .active {
+      border-style: dotted;
+      border-color: $light_yellow;
+    }
+    .active.emptyslot {
+      background-color: $lighter_yellow;
+    }
+  }
+  .answer {
+    background-color: $white;
+    border-color: $lighter_cyan;
+  }
+  .answer.ui-draggable:hover {
+    border-color: $light_green;
+    cursor: move;
+  }
+  #answerdest {
+    width: 240px;
+  }
+  .answerlist {
+    h4 {
+      position: relative;
+      top: 25%;
+      @include yTranslation(-50%);
+    }
+  }
+  #answers {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  .answerslot {
+    h4 {
+      position: relative;
+      top: 25%;
+      @include yTranslation(-50%);
+    }
+  }
+  #correctmarkscolumn {
+    width: 20px;
+    padding-right: 20px;
+  }
+  #correctmarks {
+    margin-left: 0;
+  }
+  .correctmark {
+    list-style-type: none;
+    margin-left: 0;
+    width: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+  }
+}
+
+.level-group-number {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  float: left;
+  width: 30px;
+}
+
+.level-group-content {
+  overflow: hidden;
+
+  .external, .free-response {
+    margin-left: 0;
+  }
+}
+
+.text-match, .free-response, .peer-review {
+  p, label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #markdown {
+    // By default, nothing in the page body is selectable.
+    // On text-match levels there may be a reason to paste part of the
+    // level markdown (the question) into the answer box, so we want it
+    // to be selectable.
+    @include selectable;
+  }
+}
+
+.external .content-level {
+  overflow: hidden;
+}
+
+.peer-review input[type=radio] {
+  margin: 0 3px 3px 5px;
+}
+
+.peer-review-content {
+  background: $white;
+  border: 1px solid $light_gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1em;
+  &.outdated {
+    color: $light_gray;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .peer-review-title {
+    margin: 0;
+  }
+  .peer-review-status {
+    font-size: 1em;
+    & > strong {
+      font-family: inherit;
+    }
+  }
+}
+
+.external-link-icon {
+  margin: 0 0.33em 0 20px;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 40px 0 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+.external,
+.text-match,
+.free-response,
+.standalone-video,
+.multi,
+.match {
+  #markdown.teacher {
+    max-width: 800px;
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    border-radius: 5px;
+    margin: 10px auto;
+    .content {
+      padding: 10px;
+    }
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+      color: $white;
+      background: $cyan;
+      margin: 0;
+    }
+  }
+
+  blockquote {
+    padding: 15px 20px;
+    background: $lightest_purple;
+    border: 0;
+    border-radius: 10px;
+    clear: both;
+    p {
+      margin-bottom: 10px;
+    }
+    h2:first-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.level-image {
+  width: 380px;
+  float: right;
+  margin: 20px 0 30px 30px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px $shadow;
+  border: 1px solid $lighter_gray;
+}
+
+.external, .free-response {
+  max-width: 970px;
+  margin: auto;
+}
+
+.free-response .response {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.standalone-video {
+  width: 853px;
+  margin: auto;
+}
+
+.multi #markdown.teacher {
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 100%;
+}
+
+.text-match #markdown.teacher, .free-response #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#free-response-upload {
+  overflow: hidden;
+}
+
+#current-script-levels, #all-levels {
+  min-height: 50px;
+  li {
+    list-style-type: none;
+  }
+}
+#script-updated {
+  color: $green;
+  display: none;
+}
+#edit-script-content {
+  float: left;
+  width: 25%;
+}
+
+#blockly-frame {
+  width: 70%;
+  height: 800px;
+}
+#script_name {
+  margin: 0 10px 0 0;
+}
+#edit-script-nav {
+  a {
+    display: block;
+    padding: 2px;
+    color: $dark_color;
+    font-size: 125%;
+  }
+}
+.edit_level {
+  .field {
+    margin-bottom: 10px;
+    border-top: 2px solid $lightest_gray;
+    padding-top: 10px;
+  }
+
+  #toolbox_name {
+    display: block;
+  }
+  .block-checkbox {
+    float: left;
+  }
+}
+
+div.gallery_activity {
+  $img_size: 154px;
+  $img_border_size: 10px;
+  $img_total_size: $img_size + 2 * $img_border_size;
+  float: left;
+  width: $img_total_size;
+  margin: 10px 5px;
+  img {
+    width: $img_size;
+    height: $img_size;
+    border: $img_border_size groove $light_gray;
+  }
+  .caption {
+    color: $charcoal;
+    margin: 0 auto;
+    clear: both;
+    max-width: $img_size;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
+
+div.mini_gallery_activity {
+  $img_size: 54px;
+  $img_border_size: 4px;
+  $img_total_size: $img_size + 2 * $img_border_size;
+  float: left;
+  width: $img_total_size;
+  margin: 0 5px;
+  img {
+    width: $img_size;
+    height: $img_size;
+    border: $img_border_size groove $light_gray;
+  }
+}
+
+.infobox {
+  background-color: $charcoal;
+  color: $white;
+  font-size: 13px;
+  padding-right: 10px;
+  font-family: $gotham-regular;
+  font-weight: normal;
+  padding: 10px;
+}
+
+.previousPageButton {
+  margin-right: 5px;
+}
+
+.buttons.submittable {
+  .submitButton, .unsubmitButton {
+    border-color: $purple;
+    background-color: $purple;
+    color: $white;
+    background-image: none;
+  }
+}
+
+.submitted_readonly {
+  background-color: $lightest_gray;
+}
+
+/* multiple choice */
+
+$information-phone-narrow: "only screen and  (max-width: 320px)";
+$information-phone-wide: "only screen and (min-width: 321px) and (max-width: 767px)";
+$information-tablet-tall: "only screen and (min-width: 768px) and (max-width: 1023px)";
+$information-desktop: "only screen and (min-width: 1024px)";
+
+.multi {
+  margin: auto;
+  h1 {
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  $multi-left-margin: 50px;
+
+  .answerbutton {
+    &.lock-answers {
+      pointer-events: none;
+      color: $light_gray;
+    }
+  }
+
+  // The tight layout is designed for a full-width layout that tends to
+  // vertically stack every element, rather than going for side-by-side elements.
+  &.tight {
+
+    // A piece of instructional content (image, text, markdown)
+    .question .content {
+      float: left;
+      clear: both;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 55%;
+      }
+      @media #{$information-desktop} {
+        width: 55%;
+      }
+    }
+
+    // A plain-text question.
+    .multi-question {
+      float: left;
+      width: calc(100% - #{$multi-left-margin});
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    // The block of answers.
+    .answers {
+      float: left;
+      clear: both;
+      width: calc(100% - #{$multi-left-margin});
+      &.question-content-blank {
+        width: calc(100% - #{$multi-left-margin});
+      }
+    }
+
+    // A single answer button.
+    .answerbutton {
+      clear: both;
+      margin-left: $multi-left-margin;
+    }
+  }
+
+  // The default layout is designed to fit a single multi with a side-by-side
+  // layout when the screen is wide, and then stacking vertically for narrow
+  // devices.
+  &.default {
+
+    // The block containing all instructional content (image, text, markdown).
+    .question {
+      float: left;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 35%;
+      }
+      @media #{$information-desktop} {
+        width: 35%;
+      }
+    }
+
+    // A plain-text question.
+    .multi-question {
+      float: left;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media #{$information-tablet-tall} {
+        margin-left: $multi-left-margin;
+      }
+      @media #{$information-desktop} {
+        margin-left: $multi-left-margin;
+      }
+    }
+
+    // The block of answers.
+    .answers {
+      float: left;
+      margin-left: $multi-left-margin;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 55%;
+      }
+      @media #{$information-desktop} {
+        width: 55%;
+      }
+      &.question-content-blank {
+        width: calc(100% - #{$multi-left-margin});
+      }
+    }
+
+    // A single answer button.
+    .answerbutton {
+      margin-top: 15px;
+      margin-right: 15px;
+      padding-left: 10px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .mainblock {
+    margin-left: 0;
+    img {
+      max-height: 100%;
+    }
+  }
+  .item {
+    padding: 10px;
+    float: left;
+  }
+  input {
+    margin-top: 12px;
+  }
+  .answerbutton {
+    white-space: nowrap;
+  }
+  .item-radio {
+    display: inline-block;
+    float: left;
+    width: 32px;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    @include yTranslation(-35%);
+  }
+  .item-mark {
+    display: inline-block;
+    text-align: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: 21px;
+    width: 30px;
+  }
+  .item-label {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    label {
+      font-size: 14px;
+    }
+  }
+  .item-answer-letter {
+    font-family: $gotham-bold;
+  }
+}
+
+$modal-image-width: 100px;
+$modal-image-margin-gap: 10px;
+$modal-no-icon-gap: 22px;
+
+.modal-content {
+  margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+
+  p, pre {
+    line-height: 27px;
+    font-size: 24px;
+    color: $purple;
+  }
+
+  .congrats {
+    font-size: 27px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .instructions2 {
+    font-size: 18px;
+    color: $charcoal;
+  }
+
+  .aniGif {
+    display: block;
+    margin: 0 auto 6px auto;
+    position: relative;
+    z-index: -1;
+  }
+
+  .feedback-image {
+    width: 180px;
+    height: auto;
+    margin: 0 15px 0 0;
+    float: left;
+    border: $light_gray;
+    border-style: solid;
+  }
+
+  .feedback-links {
+    margin-top: 15px;
+  }
+
+  .feedback-callout {
+    border: solid;
+    border-radius: 10px;
+    border-color: $red;
+
+    p {
+      margin: 15px;
+      color: $red;
+      padding-right: 20%;
+    }
+
+    .congrats {
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    .hint-header {
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+    }
+
+    .hint-image {
+      float: right;
+      width: 20%;
+    }
+  }
+
+  .lines-of-code-message {
+    font-size: 20px;
+    line-height: normal;
+    color: $charcoal;
+    margin: 0 0 8px 0;
+  }
+
+  .instructions-container {
+    .authored-hints {
+      p, pre {
+        font-size: 18px;
+        line-height: normal;
+        color: $charcoal;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.dialog-title {
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
+}
+
+#ok-button {
+  background-color: $orange;
+  border: 1px solid $orange;
+  color: $white;
+  min-width: 100px;
+}
+
+.lightbulb-button {
+  background-color: $white;
+  font-family: $gotham-bold;
+  border: 1px solid $charcoal;
+  color: $charcoal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#again-button, #cancel-button {
+  background-color: $green;
+  color: $white;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+#continue-button {
+  background-color: $orange;
+  color: $white;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.modal-image {
+  width: $modal-image-width;
+  height: auto;
+  margin-top: -75px;
+  position: absolute;
+  html[dir=rtl] & {
+    float: right;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+}
+.modal-header {
+  border: none;
+  height: 20px;
+}
+.modal-body {
+  height: 100%;
+  overflow: visible;
+}
+
+.modal-content.markdown-instructions-container {
+  margin-left: $modal-no-icon-gap;
+  margin-right: $modal-no-icon-gap;
+  /*margin-top: 10px;*/
+  margin-bottom: 15px;
+  float: left;
+  padding: 0 0 15px 0;
+  background-color: $white;
+  $outside-margin-side: 15px;
+  width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
+}
+
+.modal-content.instructions-container {
+  margin: 15px 10px 20px 20px;
+
+  button {
+    margin: 0;
+  }
+}
+
+.csf-top-instructions {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.csf-top-instructions, .instructions-markdown {
+  p {
+    line-height: 25px;
+    font-size: 16px;
+    color: $black;
+  }
+
+  .secondary-instructions p {
+    font-size: 14px;
+    color: $charcoal;
+  }
+
+  strong {
+    font-family: $gotham-bold;
+  }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
+}
+
+.markdown-level-header-text {
+  margin-left: $modal-image-width + $modal-image-margin-gap;
+  margin-top: 15px;
+  font-weight: normal;
+  line-height: 27px;
+  font-size: 24px;
+  color: $purple;
+
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+}
+
+#levelgroup-submit-incomplete-dialogcontent,
+#levelgroup-submit-complete-dialogcontent,
+#unsubmit-dialogcontent {
+  overflow: hidden;
+}
+
+#feedbackBlocks {
+  margin-left: 50px;
+  height: 100px;
+  border: none;
+}
+
+#feedbackButtons::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.farSide {
+  text-align: right;
+  html[dir=rtl] & {
+    text-align: left;
+  }
+}
+
+.exclamation-abuse {
+  a, a:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+/* Buttons from apps */
+
+button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid $lightest_gray;
+  font-size: large;
+  background-color: $lightest_gray;
+  color: $black;
+}
+button.launch {
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: $white;
+  font-size: large;
+  min-width: 96px;
+  margin-left: 0;
+  margin-right: 10px;
+  /* Can't use "text-align: start" due to IE. */
+  text-align: left;
+}
+html[dir="RTL"] button.launch {
+  text-align: right;
+}
+button.launch>img {
+  opacity: 1;
+  vertical-align: text-bottom;
+}
+button>img {
+  opacity: 0.6;
+  vertical-align: text-bottom;
+}
+button:hover>img {
+  opacity: 1;
+}
+button:active {
+  border: 1px solid $light_gray !important;
+}
+button:hover {
+  @include box-shadow(2px 2px 5px $shadow);
+}
+button.disabled, button[disabled=disabled] {
+  border: 1px solid $lighter_gray;
+  background-color: $lighter_gray;
+  @include box-shadow(none);
+}
+button.disabled:hover>img {
+  opacity: 0.6;
+}
+button.disabled {
+  display: none;
+}
+button.notext {
+  font-size: 10%;
+}
+
+@mixin bottom-shadow {
+  @include box-shadow(0 10px 13px -11px $black);
+}
+
+@mixin rounded-border {
+  border: 2px solid $light_gray;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.example-image {
+  @include bottom-shadow;
+  @include rounded-border;
+}
+
+/*
+ * The following responsive styles are designed to match behavior
+ * with the vizualizationColumn styles
+ * defined in apps/style/common.scss, so that the columns in the
+ * header line up with the columns below them.
+ */
+
+$width: 400px;
+#visualizationColumnHeader {
+  max-width: $width;
+  float: left;
+}
+#visualizationEditorHeader {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
+#visualizationEditor.responsive {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  $width: 200px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
+}
+
+#main-logo {
+  padding: 10px 15px;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  font-size: 1.275em;
+  position: fixed;
+  z-index: 1000;
+
+  a {
+    color: $light_gray;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  #logo-container {
+    padding: 4px;
+    background-color: $light_gray;
+    width: 60px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+  }
+}
+
+
+#environment_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+  background-color: $light_purple;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0 0 7px 2px $shadow;
+}

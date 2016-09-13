@@ -234,6 +234,9 @@ function loadLevel() {
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
+  // Custom game logic doesn't work yet in the interpreter.
+  Studio.legacyRuntime = !!Studio.customLogic;
+
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
   } else {
@@ -845,7 +848,11 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(api, Studio.Globals, ...extraArgs);
+          if (Studio.legacyRuntime) {
+            handler.func(api, Studio.Globals, ...extraArgs);
+          } else {
+            handler.func(...extraArgs);
+          }
         } catch (e) {
           // Do nothing
           console.error(e);
@@ -2520,9 +2527,22 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
-var registerHandlersForCode = function (handlers, blockName, code, argNames = []) {
-  registerEventHandler(handlers, blockName,
-      new Function('Studio', 'Globals', ...argNames, code));
+var registerHandlersForCode = function (handlers, blockName, code, args = []) {
+  if (Studio.legacyRuntime) {
+    registerEventHandler(handlers, blockName,
+      new Function('Studio', 'Globals', ...args, code));
+  } else {
+    const event = Studio.interpretedHandlers[blockName];
+    if (event) {
+      if (!_.isEqual(event.args, args)) {
+        throw "Can't register two event handlers that take different arguments.";
+      }
+      // Combine code with the existing event.
+      Studio.interpretedHandlers[blockName].code.push(code);
+    } else {
+      Studio.interpretedHandlers[blockName] = {code: [code], args};
+    }
+  }
 };
 
 var registerHandlers =
@@ -2849,6 +2869,8 @@ Studio.execute = function () {
       return Studio.onPuzzleComplete();
     }
 
+    Studio.interpretedHandlers = {};
+
     let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
     if (studioApp.initializationBlocks) {
       let initializationCode = Blockly.Generator.blocksToCode('JavaScript',
@@ -2950,9 +2972,33 @@ Studio.execute = function () {
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
-    defineProcedures('procedures_defreturn');
-    defineProcedures('procedures_defnoreturn');
-    defineProcedures('functional_definition');
+    if (Studio.legacyRuntime) {
+      defineProcedures('procedures_defreturn');
+      defineProcedures('procedures_defnoreturn');
+      defineProcedures('functional_definition');
+    } else {
+      const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+      const code = [
+        'procedures_defreturn',
+        'procedures_defnoreturn',
+        'functional_definition'
+      ].map(generator).join(';');
+
+      Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
+
+      const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+      hooks.forEach(hook => {
+        if (hook.name === 'getGlobals') {
+          // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
+          Object.defineProperty(Studio, 'Globals', {
+            get: () => {return hook.func() || {};},
+            set: () => {}
+          });
+        } else {
+          registerEventHandler(handlers, hook.name, hook.func);
+        }
+      });
+    }
 
     // Set event handlers and start the onTick timer
     Studio.eventHandlers = handlers;
@@ -4879,7 +4925,28 @@ Studio.askForInput = function (question, callback) {
 
     let handlerName = `askCallback${Studio.askCallbackIndex}`;
     Studio.askCallbackIndex++;
-    registerEventHandler(Studio.eventHandlers, handlerName, callback.bind(null, value || ''));
+    // Shift a CallExpression node on the stack that already has its func_,
+    // arguments, and other state populated:
+    const intArgs = [codegen.interpreter.createPrimitive(value || '')];
+    var state = {
+      node: {
+        type: 'CallExpression',
+        arguments: intArgs /* this just needs to be an array of the same size */
+      },
+      doneCallee_: true,
+      func_: callback,
+      arguments: intArgs,
+      n_: intArgs.length
+    };
+
+    registerEventHandler(Studio.eventHandlers, handlerName, () => {
+      const depth = codegen.interpreter.stateStack.unshift(state);
+      codegen.interpreter.paused_ = false;
+      while (codegen.interpreter.stateStack.length >= depth) {
+        codegen.interpreter.step();
+      }
+      codegen.interpreter.paused_ = true;
+    });
     callHandler(handlerName);
   }
 

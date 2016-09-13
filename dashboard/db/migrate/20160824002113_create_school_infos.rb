@@ -1,4 +1,4 @@
-class CreateSchoolInfos < ActiveRecord::Migration
+class CreateSchoolInfos < ActiveRecord::Migration[4.2]
   def up
     ActiveRecord::Base.transaction do
       create_table :school_infos do |t|
@@ -11,7 +11,7 @@ class CreateSchoolInfos < ActiveRecord::Migration
         t.timestamps null: false
       end
 
-      Pd::Enrollment.all.each do |e|
+      Pd::Enrollment.with_deleted.all.each do |e|
         attributes = {
           school_type: e.school_type,
           zip: e.school_zip,

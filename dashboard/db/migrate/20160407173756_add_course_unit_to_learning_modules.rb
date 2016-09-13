@@ -1,4 +1,4 @@
-class AddCourseUnitToLearningModules < ActiveRecord::Migration
+class AddCourseUnitToLearningModules < ActiveRecord::Migration[4.2]
   def up
     add_reference :plc_learning_modules, :plc_course_unit, index: true, foreign_key: true
 

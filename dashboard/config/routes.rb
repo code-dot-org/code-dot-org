@@ -183,6 +183,8 @@ Dashboard::Application.routes.draw do
   get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
+  get '/weblab/host', to: 'weblab_host#index'
+
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 

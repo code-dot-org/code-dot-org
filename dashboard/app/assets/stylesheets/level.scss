@@ -1,0 +1,44 @@
+@import "mixins";
+
+li.level_name {
+  @include selectable;
+}
+
+.new_level {
+  input, textarea {
+    display: block;
+    margin: 20px 0;
+  }
+}
+
+.ani-gif-dropdown {
+  min-width: 450px;
+}
+
+.video-dropdown {
+  min-width: 450px;
+}
+
+// CSS tricks for preserving aspect ratio for iframe div
+.aspect-ratio iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  // Fill parent.
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.aspect-ratio {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  position: relative;
+  min-width: 280px;
+}
+.aspect-ratio::after {
+  padding-top: 120.25%;
+  display: block;
+  content: '';
+}

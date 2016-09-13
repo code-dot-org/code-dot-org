@@ -131,6 +131,7 @@ describe('Level tests', function () {
       var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
       StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
+      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true});
     }
 
     // Recreate our redux store so that we have a fresh copy
