@@ -36,7 +36,7 @@
         %li (Cannot edit)
 
     %br/
-    This level is in #{@level.script_levels.count} scripts:
+    This level is in #{@level.script_levels.to_a.count} scripts:
     %ul
       - @level.script_levels.each do |script_level|
         %li
