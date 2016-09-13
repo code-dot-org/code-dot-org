@@ -727,12 +727,6 @@ class User < ActiveRecord::Base
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
-  def completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
-    scripts.where('user_scripts.completed_at is not null').map(&:cached)
-  end
-
   def working_on_user_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
