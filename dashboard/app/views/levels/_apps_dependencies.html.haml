@@ -38,13 +38,13 @@
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}
   %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
   %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
-  %script{src: asset_path('js/droplet/droplet-full.js')}
-  %script{src: asset_path('js/tooltipster/jquery.tooltipster.js')}
-  %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
-  %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+  %script{src: minifiable_asset_path('js/droplet/droplet-full.js')}
+  %script{src: minifiable_asset_path('js/tooltipster/jquery.tooltipster.js')}
+  %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}
+  %script{src: minifiable_asset_path('js/fileupload/jquery.fileupload.js')}
 
 - if use_phaser
-  %script{src: asset_path('js/phaser/phaser.js')}
+  %script{src: minifiable_asset_path('js/phaser/phaser.js')}
 
 -# Blockly script dependencies
 - if use_blockly
@@ -52,7 +52,7 @@
   %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
 
 -# Common script dependencies
-%script{src: asset_path('js/marked/marked.js')}
+%script{src: minifiable_asset_path('js/marked/marked.js')}
 %script{src: minifiable_asset_path('js/initApp/initApp.js')}
 %script{src: minifiable_asset_path('js/common.js')}
 -# common_locale is included in application.html.haml
