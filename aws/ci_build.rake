@@ -267,7 +267,6 @@ end
 
 $websites = build_task('websites', [
   deploy_dir('rebuild'),
-  BLOCKLY_CORE_TASK,
   :apps_task,
   :firebase_task,
   :code_studio_task,
