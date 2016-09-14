@@ -394,8 +394,12 @@ export function editAnimation(key, props) {
  * @returns {function}
  */
 export function deleteAnimation(key) {
-  return dispatch => {
-    dispatch(selectAnimation(null));
+  return (dispatch, getState) => {
+    const orderedKeys = getState().animationList.orderedKeys;
+    const currentSelectionIndex = orderedKeys.indexOf(key);
+    let keyToSelect = (currentSelectionIndex === 0) ? 1: (currentSelectionIndex - 1);
+    dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
+
     dispatch({type: DELETE_ANIMATION, key});
     dashboard.project.projectChanged();
     animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {

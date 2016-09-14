@@ -3,7 +3,8 @@ import sinon from 'sinon';
 import reducer, {
     START_LOADING_FROM_SOURCE,
     DONE_LOADING_FROM_SOURCE,
-    setInitialAnimationList
+    setInitialAnimationList,
+    deleteAnimation
 } from '@cdo/apps/gamelab/animationListModule';
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
@@ -141,6 +142,97 @@ describe('animationListModule', function () {
       let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
       expect(store.getState().animationTab.selectedAnimation).to.be.null;
+    });
+  });
+
+  describe('action: delete animation', function () {
+    let oldWindowDashboard, server;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('deleting an animation reselects another animation in the animationList', function () {
+      const key0 = 'anim0';
+      const key1 = 'anim1';
+      let animationList = {
+        orderedKeys: [key0, key1],
+        propsByKey: {
+          [key0]: {
+            name: 'New animation 0',
+            sourceUrl: null,
+            frameSize: {x: 100, y: 100},
+            frameCount: 1,
+            looping: true,
+            frameDelay: 4,
+            version: null,
+            loadedFromSource: true,
+            saved: false,
+            blob: null,
+            dataURI: null,
+            hasNewVersionThisSession: false
+          },
+          [key1]: {
+            name: 'New animation 1',
+            sourceUrl: null,
+            frameSize: {x: 100, y: 100},
+            frameCount: 1,
+            looping: true,
+            frameDelay: 4,
+            version: null,
+            loadedFromSource: true,
+            saved: false,
+            blob: null,
+            dataURI: null,
+            hasNewVersionThisSession: false
+          }
+        }
+      };
+
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(deleteAnimation(key0));
+      expect(store.getState().animationTab.selectedAnimation).to.equal(key1);
+    });
+
+    it('deleting an animation deselects when there are no other animations in the animationList', function () {
+      const key0 = 'anim0';
+      let animationList = {
+        orderedKeys: [key0],
+        propsByKey: {
+          [key0]: {
+            name: 'New animation',
+            sourceUrl: null,
+            frameSize: {x: 100, y: 100},
+            frameCount: 1,
+            looping: true,
+            frameDelay: 4,
+            version: null,
+            loadedFromSource: true,
+            saved: false,
+            blob: null,
+            dataURI: null,
+            hasNewVersionThisSession: false
+          }
+        }
+      };
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(deleteAnimation(key0));
+      expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
   });
 
