@@ -77,31 +77,31 @@ title: "Professional Development Workshop Survey"
         = local_view :yes_no_select,
           name: 'will_teach_b',
           label: "Will you be teaching/are you teaching #{course} #{subject} in the 2016-17 school year?"
-        %div{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'will_not_teach_explanation_s'}
-            %em{style: 'font-weight: normal;'} Please explain why not.
-          %div
-            %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
+      .form-group{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
+        %label.control-label{for: 'will_not_teach_explanation_s'}
+          %em{style: 'font-weight: normal;'} Please explain why not.
+        %div
+          %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
 
       .form-group
         = local_view :multi_select,
           name: 'reason_for_attending_ss[]',
           label: 'Reason for attending? (select all that apply)'
-        %div{id: 'reason-for-attending-other-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'reason_for_attending_other_s'}
-            %em{style: 'font-weight: normal;'} Other reason?
-          %div
-            %input.form-control{name: 'reason_for_attending_other_s', placeholder: 'Other', type: 'text'}
+      .form-group{id: 'reason-for-attending-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: 'reason_for_attending_other_s'}
+          %em{style: 'font-weight: normal;'} Other reason?
+        %div
+          %input.form-control{name: 'reason_for_attending_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
         = local_view :multi_select,
           name: 'how_heard_ss[]',
           label: 'How did you hear about this workshop? (select all that apply)'
-        %div{id: 'how-heard-other-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'how-heard-other'}<
-            %em{style: 'font-weight: normal;'} Other source?
-          %div
-            %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
+      .form-group{id: 'how-heard-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: 'how-heard-other'}<
+          %em{style: 'font-weight: normal;'} Other source?
+        %div
+          %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
         = local_view :single_select,
@@ -244,11 +244,11 @@ title: "Professional Development Workshop Survey"
         = local_view :yes_no_select,
           name: 'willing_to_talk_b',
           label: 'Would you be willing to talk to someone at Code.org about your PD experiences?'
-        %div{id: 'willing-to-talk-contact-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'how_to_contact_s'}
-            %em{style: 'font-weight: normal;'} Please provide the best method for contacting you.
-          %div
-            %input.form-control{name: 'how_to_contact_s', placeholder: 'Contact Information', type: 'text'}
+      .form-group{id: 'willing-to-talk-contact-wrapper', style: 'display: none;'}
+        %label.control-label{for: 'how_to_contact_s'}
+          %em{style: 'font-weight: normal;'} Please provide the best method for contacting you.
+        %div
+          %input.form-control{name: 'how_to_contact_s', placeholder: 'Contact Information', type: 'text'}
 
       - if is_first_survey
         .form-group
