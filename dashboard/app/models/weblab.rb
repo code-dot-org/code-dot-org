@@ -24,6 +24,7 @@
 
 class Weblab < Level
   serialized_attrs %w(
+    project_template_level_name
     start_sources
   )
 
