@@ -6,6 +6,7 @@ import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
+const editButtonCellWidth = 142;
 export const maxCellWidth = 350;
 
 export const row = {
@@ -29,6 +30,7 @@ export const addButtonCell = {
 export const editButtonCell = {
   ...cell,
   backgroundColor: color.lightest_teal,
+  width: editButtonCellWidth,
 };
 
 export const headerCell = {
@@ -78,11 +80,13 @@ export const blueButton = {
 export const editButton = {
   ...whiteButton,
   marginRight: 10,
+  minWidth: 60
 };
 
 export const saveButton = {
   ...blueButton,
   marginRight: 10,
+  minWidth: 60
 };
 
 export const input = {
