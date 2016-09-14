@@ -129,10 +129,18 @@ const ColumnHeader = React.createClass({
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
       minWidth: 80,
     }];
+    const columnNameStyle = {
+      display: 'inline-block',
+      maxWidth: dataStyles.maxCellWidth,
+      overflow: 'hidden',
+      whiteSpace: 'nowrap',
+    };
     return (
       <th style={dataStyles.headerCell}>
         <div style={containerStyle}>
-          {this.props.columnName}
+          <div style={columnNameStyle}>
+            {this.props.columnName}
+          </div>
           {/* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */}
           <span className="dropdown pull-right" style={menuStyle}>
             <a className="dropdown-toggle" data-toggle="dropdown">

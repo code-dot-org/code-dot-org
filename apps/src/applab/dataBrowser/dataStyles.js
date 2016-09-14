@@ -6,6 +6,7 @@ import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
+export const maxCellWidth = 350;
 
 export const row = {
   height: rowHeight,
@@ -15,7 +16,7 @@ export const cell = {
   padding: cellPadding,
   border: '1px solid gray',
   fontSize: 14,
-  maxWidth: 350,
+  maxWidth: maxCellWidth,
   overflow: 'hidden',
   whiteSpace: 'nowrap',
 };
@@ -31,9 +32,10 @@ export const editButtonCell = {
 };
 
 export const headerCell = {
-  padding: '6px 10px',
+  backgroundColor: color.teal,
   border: '1px solid gray',
-  backgroundColor: color.teal
+  maxWidth: maxCellWidth,
+  padding: '6px 10px',
 };
 
 export const link = {
