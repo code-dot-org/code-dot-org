@@ -59,12 +59,14 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * There are many more topical guides in the [docs](./docs) folder.
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
+  * [blockly-core/README](./blockly-core/README.md)
   * [code-studio/README](./code-studio/README.md)
 
 ### Everything else
 
 * **aws**: Configuration and scripts that manage our deployments.
 * **bin**: Developer utilties.
+* **blockly-core**: Our custom version of [Google Blockly](https://developers.google.com/blockly/), the visual programming language used for many of our interactive tutorials.
 * **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.
