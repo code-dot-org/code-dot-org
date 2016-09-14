@@ -699,6 +699,7 @@ en:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
+          logo_image: nextech_logo.png
           stage:
             Growth Mindset: Growth Mindset
             Impact of Computer Science: Impact of Computer Science
@@ -706,11 +707,11 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
-            logo_image: nextech_logo.png
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
+          logo_image: izone_logo.png
           stage:
             Growth Mindset: Growth Mindset
             Impact of Computer Science: Impact of Computer Science
@@ -718,11 +719,11 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teaching Strategies: Teaching Strategies
             What is ECS?: What is ECS?
-            logo_image: izone_logo.png
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
+          logo_image: nextech_logo.png
           stage:
             Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
@@ -731,11 +732,11 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
-            logo_image: nextech_logo.png
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
+          logo_image: izone_logo.png
           stage:
             Computer Science Pedagogy: Computer Science Pedagogy
             Course Overview: Course Overview
@@ -744,11 +745,11 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
-            logo_image: izone_logo.png
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
+          logo_image: nextech_logo.png
           stage:
             Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
             Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
@@ -762,11 +763,11 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
-            logo_image: nextech_logo.png
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
+          logo_image: izone_logo.png
           stage:
             Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
             Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
@@ -780,7 +781,6 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
-            logo_image: izone_logo.png
         sciencePD2:
           title: 'CS in Science: Part 2'
           description: Phase 2 Online Blended Summer Study
