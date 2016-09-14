@@ -28,7 +28,7 @@ Controlling tests:
 
 * CI can be skipped for a given commit by including the text `[ci skip]` in the commit message
 * By default, tests are only run for sub-projects which have been changed in your given branch. You can force-run all tests for a given commit by including the text `[test all]` in your commit message.
-* UI tests are run automatically. They can be disabled for a given run by including `[test ui]` in your commit message
+* UI tests are run automatically. They can be disabled for a given run by including `[skip ui]` in your commit message
 * Tests can be re-run with the "Rebuild" button on CircleCI.
 * Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
 
