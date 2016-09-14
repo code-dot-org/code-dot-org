@@ -315,8 +315,6 @@ class ScriptTest < ActiveSupport::TestCase
   test 'cache_find_level returns nil on bad ID and bad name' do
     bad_id = Level.last.id + 1
 
-    populate_cache_and_disconnect_db
-
     assert_raises(ActiveRecord::RecordNotFound) do
       Script.cache_find_level(bad_id)
     end
