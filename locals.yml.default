@@ -14,6 +14,10 @@ dashboard_enable_pegasus: true
 #levelbuilder_mode: true
 
 
+# Whether rake:build should rebuild the blockly-core package
+#build_blockly_core: true
+
+
 # Whether rake:build should rebuild the apps package
 #build_apps: true
 
