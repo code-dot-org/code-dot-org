@@ -148,11 +148,8 @@
           description_short: "讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。"
         course4:
           description_short: "完成課程 2 和課程 3 後，可以進入課程 4"
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description: "課程4是設計給完成課程 2 和3的學生 。隨著難度增加，學生在解決謎題時也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函數。建議為
+            4-8 年級。"
           'Artist: Variables': "小畫家: 變數"
           'Bee: For Loops': "蜜蜂： For 迴圈"
           title: "課程 4"
@@ -184,10 +181,8 @@
           Extreme Challenge - Comprehensive: "終極挑戰：綜合題"
         Course4pre:
           title: "課程四 先決條件"
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
+          description_short: "對還沒學習課程 2 和 3 的學生簡短概念。"
+          description: "對還沒學習課程 2 和 3 的學生簡短概念。"
           Course 4 Prerequisite: "課程四 先決條件"
           'Maze: Sequence': "迷宮: 序列"
           'Artist: Sequence': "小畫家: 次序"
@@ -212,8 +207,7 @@
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': "讓我們開始: 電玩遊戲和座標平面"
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
           'Eval: Strings and Images': "字串和圖像"
           'Unplugged: Contracts': 'Unplugged: Contracts'
@@ -222,7 +216,7 @@
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': "讓我們開始︰ 設計程式"
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
@@ -230,8 +224,7 @@
           'Eval: Boolean Operators': "布林運算子"
           'Play Lab: Booleans': 'Play Lab: Booleans'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
+          'Unplugged: Conditionals and Piecewise Functions': "讓我們開始︰ 條件和分段函數"
           'Eval: Conditionals': "流程類別"
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
@@ -393,10 +386,8 @@
           Puzzles: Puzzles
         course4pre:
           title: "課程四 先決條件"
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
+          description_short: "對還沒學習課程 2 和 3 的學生簡短概念。"
+          description: "對還沒學習課程 2 和 3 的學生簡短概念。"
           Course 4 Prerequisite: "課程四 先決條件"
           'Maze: Sequence': "迷宮: 序列"
           'Artist: Sequence': "小畫家: 次序"
@@ -452,8 +443,7 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': "讓我們開始: 電玩遊戲和座標平面"
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
           'Eval: Strings and Images': 'Eval: Strings and Images'
           'Unplugged: Contracts': 'Unplugged: Contracts'
@@ -462,7 +452,7 @@
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': "讓我們開始︰ 設計程式"
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
@@ -470,8 +460,7 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           'Play Lab: Booleans': 'Play Lab: Booleans'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
+          'Unplugged: Conditionals and Piecewise Functions': "讓我們開始︰ 條件和分段函數"
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
@@ -935,6 +924,8 @@
           Gamelab: Gamelab
           Anonymous student survey: Anonymous student survey
           Anonymous student survey 2: Anonymous student survey 2
+          Public Key Cryptography: Public Key Cryptography
+          Web Lab: Web Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1689,7 +1680,7 @@
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': "讓我們開始︰ 設計程式"
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
@@ -1697,8 +1688,7 @@
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
           description: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': "讓我們開始: 電玩遊戲和座標平面"
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
@@ -1706,8 +1696,7 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           'Play Lab: Booleans': 'Play Lab: Booleans'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
+          'Unplugged: Conditionals and Piecewise Functions': "讓我們開始︰ 條件和分段函數"
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
@@ -1770,6 +1759,9 @@
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: Practice PT - The Internet and Society
           Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+          CS Principles Pre-survey: CS Principles Pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          Unit 1 Chapter 2 Assessment: Unit 1 Chapter 2 Assessment
         csp2:
           title: CS Principles Unit 2 - Digital Information
           description_short: Digital Information
@@ -1796,6 +1788,8 @@
           Cleaning Data: Cleaning Data
           Creating Summary Tables: Creating Summary Tables
           Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          Unit 2 Chapter 1 Assessment: Unit 2 Chapter 1 Assessment
+          Unit 2 Chapter 2 Assessment: Unit 2 Chapter 2 Assessment
         csp3:
           title: CSP Unit 3 - Programming
           description_short: Programming
@@ -1899,6 +1893,8 @@
           Variables Unplugged: Variables Unplugged
           Complex Sprite Movement: Complex Sprite Movement
           Collisions: Collisions
+          Sprite Movement Methods: Sprite Movement Methods
+          Collision Detection: Collision Detection
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2099,6 +2095,7 @@
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
+          Processing Information: Processing Information
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
           description_short: Web Development
@@ -2112,6 +2109,7 @@
           Designing Code for Computers: Designing Code for Computers
           Digital Footprint: Digital Footprint
           Images on the Web: Images on the Web
+          Finalizing Website: Finalizing Website
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2250,6 +2248,11 @@
             Project Stage (Loops, Events, Conditionals, Functions)
           Build a Star Wars Game!: Build a Star Wars Game!
           'Bee: Determine the Concept': 'Bee: Determine the Concept'
+          'Bee: Functions (Course 3)': 'Bee: Functions (Course 3)'
+          'Unplugged: Kinesthetic Functions': 'Unplugged: Kinesthetic Functions'
+          'Farmer: Functions (New)': 'Farmer: Functions (New)'
+          Determine the Concept Part 2: Determine the Concept Part 2
+          'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration
@@ -2268,6 +2271,7 @@
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 5-18
+          Loops Intro: Loops Intro
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
@@ -2421,6 +2425,16 @@
           More Programming with Scratch: More Programming with Scratch
           More Programming with CS4FN: More Programming with CS4FN
           Robot Farmer While: Robot Farmer While
+          Bounce: "彈跳"
+          Artist Debugging: "畫家：除錯"
+          'Farmer: While Loops': "農夫： ｢當｣迴圈　"
+          " Bee: Conditionals": " Bee: Conditionals"
+          'Maze: Conditionals with Loops': 'Maze: Conditionals with Loops'
+          Build a Game: Build a Game
+          'Artist: Loops': "小畫家: 迴圈"
+          'Maze: Nested Loops': 'Maze: Nested Loops'
+          'Artist: Nested Loops': "畫家： 嵌套的迴圈"
+          Bee Debugging: "蜜蜂：除錯"
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2551,3 +2565,12 @@
           title: CS Principles Pre-Survey
           Anonymous student survey 2: Anonymous student survey 2
           Anonymous student pre-survey: Anonymous student pre-survey
+          Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
+          NEW Unit 1 Chapter 1 Assessment: NEW Unit 1 Chapter 1 Assessment
+        sciencepd3-2016:
+          title: CS in Science PD3 Before 1st In-Person
+          description_short: 'Phase 3: Academic Year Development Pre 1'
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

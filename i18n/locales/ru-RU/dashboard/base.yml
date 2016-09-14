@@ -2,7 +2,9 @@ ru:
   errors:
     messages:
       not_saved: 'Исправьте следующие ошибки:'
-      too_young: Этот урок имеет возрастные ограничения и не подходит для учеников младшего возраста
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -24,7 +26,7 @@ ru:
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
   your_professional_learning_plan: Ваш профессиональный план обучения
-  see_your_learning_plan: Смотреть свой план обучения
+  see_your_learning_plan: Просмотреть свой план обучения
   submit: Отправить
   unsubmit: Не отправлять
   previous_page: Предыдущая страница
@@ -79,15 +81,9 @@ ru:
   signup_form:
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
-    overview_student: 'Зарегистрироваться для учетной записи, чтобы отслеживать свои успехи. Ваш электронный адрес используется, главным образом, для входа в систему и восстановления пароля. Дополнительную информацию смотрите в нашей <a href="http://code.org/privacy">Политике конфиденциальности</a>.'
-    overview_teacher: 'Зарегистрируйтесь для преподавания информатики в своем классе. <p/> Вы сможете добавлять своих учеников и отслеживать их результаты.'
-    no_signup_message: 'Вы можете <a target="_blank" href="http://learn.code.org"> просматривать различные этапы и головоломки</a>, но для сохранения результатов необходимо зарегистрироваться.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: Смотрите руководство для учителя
-    teacher_pitch: Регистрация на code.org для учителей
-    teacher_title: Регистрация учителя
-    student_pitch: Регистрация на code.org для учеников
-    student_title: Регистрация ученика
-    signup_title: Регистрация на code.org
+    title: Sign up for Code.org
     school_name: Название школы (не обязательно)
     school_address: Адрес школы (не обязательно)
     address_placeholder: адрес, город, область, индекс
@@ -103,15 +99,17 @@ ru:
     valid_password: Действительный пароль!
     invalid_password: Пароль должен содержать не менее 6 символов
     mismatch_password: Введенные пароли не совпадают
-    student_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org. Если мне меньше 13 лет, отправляя эту форму, я подтверждаю, что у меня есть разрешение моих родителей или законного опекуна на пользование услугами Code.org. <br/>Для пользователей младше 13 лет адреса электронной почты не хранятся в форме, которая позволяет нам связаться с ними."
-    teacher_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная информация.
-    user_type_label: Тип Аккаунта
+    user_type_label: Тип Учётной Записи
     user_type_teacher: Учитель
     user_type_student: Ученик
+    field_is_required: требуется
+    accept_terms: You must agree to create an account
   signin_form:
     title: Уже зарегистрированы? Вход
-    login: Адрес электронной почты или имя пользователя
+    login: Электронная почта
     password: Пароль
     remember: Запомнить меня
     submit: Вход
@@ -130,8 +128,9 @@ ru:
   password:
     reset_form:
       title: Забыли Ваш пароль?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: Адрес электронной почты
-      submit: Отправить мне инструкцию по смене пароля
+      submit: Отправить
     change_form:
       title: Смена пароля
       new_password: Новый пароль
@@ -235,7 +234,7 @@ ru:
       sign_in_to_save: Войдите для сохранения результатов
       free_play:
         playlab: Создать приложение
-        artist: Нарисовать что-нибудь
+        artist: Нарисуйте что-нибудь
         calculate: Calculate something
         applab: Создать приложение
     user:
@@ -247,7 +246,7 @@ ru:
       prizes: Подарки
       logout: Выйти
       signin: Вход
-      signup: Регистрация
+      signup: Create an account
       already_registered: Уже зарегистрированы?
       pair_programming: Программирование в парах
       team: Команда
@@ -278,16 +277,17 @@ ru:
     user_not_found: Не удалось найти учителя.
     student_teacher_disassociated: 'Вы удалили %{teacher_name} из списка своих учителей.'
     panel:
-      answer_viewer: Просмотр ответов
+      answer_viewer: Teacher Panel
       student: Ученик
       viewing_solution: Просмотр решения
       try_it_yourself: Попробуйте сами
       section: Раздел
       example: Пример решения
       example_with_number: 'Пример решения %{solution_number}'
-      submitted_on: 'Отправлено %{date}'
+      submitted_on: 'Отправлено:'
       unsubmit: Не отправлять
       worked_with: Работал с
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтвержден:'
@@ -346,7 +346,8 @@ ru:
     choose_next_course: Попробуйте курс студии кода, выбрав один из вариантов ниже
     print_certificate: Распечатать сертификат
     announcement_title: Объявления
-    announcement_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Узнать больше
     announcement_try_now_button: Попробуйте сейчас
@@ -356,14 +357,14 @@ ru:
   move_students:
     new_section_dne: 'Извините, но раздел %{new_section_code} не существует. Пожалуйста, введите другой раздел кода.'
     section_code_not_entered: Просьба представить current_section_code.
-    section_code_cant_be_current_section: Текущий раздел не может быть таким же, как новый раздел.
-    current_section_dne: 'Извините, но раздел %{current_section_code} не существует. Пожалуйста, введите код другого раздела.'
+    section_code_cant_be_current_section: Текущая группа не может быть такой же, как и новая группа.
+    current_section_dne: 'Извините, но группа %{current_section_code} не существует. Пожалуйста, введите код другогой группы.'
     students_not_yours: Вы не можете переместить студентов из раздела, который не принадлежит вам.
-    stay_enrolled_not_entered: Пожалуйста оставайтесь stay_enrolled_in_current_section.
+    stay_enrolled_not_entered: Пожалуйста представьте stay_enrolled_in_current_section.
     student_ids_not_entered: Просьба предоставить student_ids.
-    student_not_found: Один или несколько студентов не могут быть найдены.
-    all_students_must_be_in_current_section: Все студенты должны быть зачислены в настоящее время в вашу группу.
-    already_enrolled_in_new_section: Вы не можете переместить этих студентов, потому что этот учитель уже взял их в другую группу.
+    student_not_found: Один или несколько учеников не могут быть найдены.
+    all_students_must_be_in_current_section: Все ученики должны быть зачислены в вашу группу.
+    already_enrolled_in_new_section: Вы не можете переместить этих учеников, потому что этот учитель зарегистрировал их в другой группе.
   share:
     title: Учиться в студии кода
     description: Каждый может изучать информатику. Создавайте игры, приложения и произведения искусства с помощью программирования.
@@ -453,7 +454,7 @@ ru:
       title: Лаборатория приложений
       body: App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.
       body_short: Разрабатывайте программу, программируйте ее блоками или JavaScript, а затем поделитесь ею с другими в считанные секунды.
-      audience: Для возрастов 13+
+      audience: Возраст 13+
       cta: Узнать подробности
     hoc:
       title: Классический лабиринт
@@ -485,7 +486,7 @@ ru:
       title: Уроки без компьютера
       audience: Возраст 6+
       body: Мы сделали набор офлайн уроков для использования в классе. Теперь, вы можете преподавать основы компьютерных наук даже без компьютеров! Попробуйте использовать эти уроки как отдельно, так и в дополнение к любому курсу по компьютерным наукам.
-      body_short: Если у вас нет компьютеров, попробуйте эти оффлайн уроки в вашем классе.
+      body_short: Если у вас нет компьютеров, попробуйте эти уроки без компьютера в вашем классе.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -572,6 +573,19 @@ ru:
     header: Обновление информации учетной записи
     message: 'Мы продолжаем совершенствовать приобретенный опыт для еще более надежной защиты вашей личной информации. Для этого нужно, чтобы пользователи ввели здесь свой возраст.<br/>Как обычно, code.org обязуется не сдавать в аренду, не продавать и не сообщать эту информацию третьим лицам.'
     sign_out: 'Если вы не хотите указывать свой возраст, вы можете <a href="%{url}"> выйти из системы</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Условия предоставления услуг
+    privacy: Политика конфиденциальности
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Печать
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Извините, но пользователи твоего возраста не могут авторизоваться на нашем сайте поддержки. Вы можете зайти на страницу <a href="http://support.code.org">support.code.org</a> без авторизации или попросить своих родителей или учителя связаться с нами за тебя.'
   progress:
     not_started: не начато
@@ -601,7 +615,7 @@ ru:
     share_embed_description: Вы можете вставить код в HTML-страницы для отображения проекта на веб-странице.
     share_u13_warning: Попросите вашего учителя перед предоставлением общего доступа. Только поделиться с другими в вашей школе.
     embed: Код для вставки
-    advanced_share: Показать дополнительные опции
+    advanced_share: Показать дополнительные настройки
     close: Закрыть
     more: Ещё
     name: Имя
@@ -709,3 +723,4 @@ ru:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.

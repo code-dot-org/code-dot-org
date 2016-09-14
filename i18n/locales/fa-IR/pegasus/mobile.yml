@@ -517,6 +517,7 @@ fa-IR:
   dashboard_action_remove_confirm: حذف شود؟
   dashboard_action_done: انجام شد
   dashboard_action_required: اجباری
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
@@ -687,7 +688,8 @@ fa-IR:
   dashboard_faq: پرسش و پاسخ‌های متداول
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_announcements: اطلاعیه‌ها
-  dashboard_announce_message: میخواهید به ما در بررسی یک ویژگی جدید کمک کنید؟ما میدانیم که تشویق دانش آموزان به تکرار کردن و آزمایش کردن امر مهمی است٫بنابراین ما میخواهیم ویژگی کد های استفاده نشده را اضافه کنیم تا دانش آموزان اجازه داشته باشند تا کد های خودشان را اجرا کنندحتی زمانی که بلوک های آزاد وجود دارند. ماقبل از انتشار عمومی این ویژگی از نظرات شما استقبال می کنیم.
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: بیشتر بیاموزید
   dashboard_announce_try_now_button: هم اکنون شروع کنید
@@ -803,11 +805,11 @@ fa-IR:
   course3_name: دورۀ 3
   course4_name: دوره 4
   accelerated_name: دوره های سریع
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit1_name: '(old) Unit 1: Digital Information'
+  cspunit2_name: '(old) Unit 2: The Internet'
+  cspunit3_name: '(old) Unit 3: Programming'
+  cspunit4_name: '(old) Unit 4: Data'
+  cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'

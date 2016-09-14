@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "pvz",
+    "skin": "birds",
     "instructions": "Loops even work with more than one block inside!  Can you loop this sequence to get the zombie to the sunflower?",
     "start_direction": "1",
     "step_mode": "1",

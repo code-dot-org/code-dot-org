@@ -1538,19 +1538,19 @@ sk:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: Moje meno je Jens Bergensten ale som lepšie známy ako Jeb. Som vedúci vývojár Minecraftu, tu v Mojangu v Štokholme. Myslím, že mi bolo jedenásť alebo možno dvanásť keď som začal programovať, pretože som chcel vyrábať hry. Jeden z mojich otcových kamarátov mi povedal, že v prvom rade sa treba naučiť programovať. A tak som začal. Mám rád navrhovanie a riešenie architektúry hier. To je to, čo mám naozaj rád na Minecrafte.
+        text: Moje meno je Jens Bergensten, ale som lepšie známy ako Jeb. Som vedúci vývojár Minecraftu, tu v Mojangu v Štokholme. Myslím, že mi bolo jedenásť alebo možno dvanásť, keď som začal programovať, pretože som chcel vyrábať hry. Jeden z mojich otcových kamarátov mi povedal, že v prvom rade sa treba naučiť programovať. A tak som začal. Mám rád navrhovanie a riešenie architektúry hier. To je to, čo mám naozaj rád na Minecrafte.
       2:
         image: notes/mc_intro_2.JPG
-        text: Počas nasledujúcej hodiny sa budeš učiť základy počítačovej vedy programovaním Alex alebo Steva k pohybu cez simulovaný kus sveta Minecraftu.
+        text: Počas nasledujúcej hodiny sa budeš učiť základy počítačovej vedy programovaním Alex alebo Steva pohybom cez simulovaný kus sveta Minecraftu.
       3:
         image: notes/mc_intro_3.JPG
-        text: Tradičné programovanie je zvyčajne v textovej forme ale dnes budeme používať Blockly. Je to systém, ktorý používa vizuálne bloky a možnosť chytiť a pustiť, aby sme napísali programy. V pozadí podstate vytvárame Javascriptový kód.
+        text: Tradičné programovanie je zvyčajne v textovej forme, ale dnes budeme používať Blockly. Je to systém, ktorý používa vizuálne bloky a možnosť chytiť a pustiť, aby sme napísali programy. V pozadí podstate vytvárame Javascriptový kód.
       4:
         image: notes/mc_intro_4.JPG
-        text: Koncepty, ktoré sa budeš učiť sú to, čo počítačoví programátori používajú každý deň a sú to základy do počítačovej vedy. Tu na Mojangu používame tieto rovnaké koncepty aby sme sfunkčnili Minecraft.
+        text: Koncepty, ktoré sa budeš učiť sú to, čo počítačoví programátori používajú každý deň a sú to základy počítačovej vedy. Tu v Mojangu používame tieto rovnaké koncepty, aby sme sfunkčnili Minecraft.
       5:
         image: notes/mc_intro_5.JPG
-        text: Predtým než začneš si vyberieš svoju postavu. Ja si vyberiem Alex. Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke.
+        text: Predtým než začneš, vyberieš si svoju postavu. Ja si vyberiem Alex. Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke.
       6:
         image: notes/mc_intro_6.JPG
         text: Tvoja obrazovka je rozdelená do troch hlavných častí. Naľavo je Minecraftový hrací priestor, kde bude bežať tvoj program. Pokyny pre každý level sú napísané nižšie.
@@ -1571,7 +1571,7 @@ sk:
         text: Ak chceš odstrániť blok, tak ho len presuň zo zásobníka späť do panela nástrojov.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'Keď chceš vrátiť svoje zmeny a vrátiť sa späť tam, kde začal level, použi tlačidlo Začať Znova v pravom hornom rohu pracovného prostredia. Ešte jedna vec: vidíš malý trojuholník na bloku otoč? Kedykoľvek, keď vidíš tieto trojuholníky znamená, že môžeš vybrať inú možnosť. Poďme začať kódovať!'
+        text: 'Keď chceš vrátiť svoje zmeny a vrátiť sa späť tam, kde začal level, použi tlačidlo Začať znova v pravom hornom rohu pracovného prostredia. Ešte jedna vec: vidíš malý trojuholník na bloku otoč? Kedykoľvek, keď vidíš tieto trojuholníky znamená, že môžeš vybrať inú možnosť. Poďme začať kódovať!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
@@ -1590,7 +1590,7 @@ sk:
         text: Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho.
       6:
         image: notes/mc_repeat_6.JPG
-        text: Aby sme postavili stenu nášho domu, môžeme buď povedať Alex pohybVpred(); a umiestniť dosky štyri krát, alebo jej môžeme povedať pohybVpred(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacero krát. Teraz klikneme na blok opakovania a povieme jej, koľko krát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým než príde noc! Zabav sa.
+        text: Aby sme postavili stenu nášho domu, môžeme buď povedať Alex pohybVpred(); a umiestniť dosky štyrikrát, alebo jej môžeme povedať pohybVpred(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým, než príde noc! Bav sa.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
@@ -1600,13 +1600,13 @@ sk:
         text: Všetky počítače používajú rozhodnutia ak, dokonca aj môj telefón. Napríklad ak odomknem môj telefón, spustí sa kód, ktorý hovorí, že ak vložím správne heslo, tak sa odomkne mobil. Inak sa zjaví chybové hlásenie.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: Vo svojom kóde môžeš použiť rozhodnutia ak, aby si nechal Steva a Alice reagovať na to čo vidia vo svete. Napríklad ak je pre nimi kameň, môžu sa otočiť vľavo. Alebo otočiť vpravo ak narazia do stromu.
+        text: Vo svojom kóde môžeš použiť rozhodnutia ak, aby si nechal Steva a Alice reagovať na to, čo vidia vo svete. Napríklad ak je pre nimi kameň, môžu sa otočiť vľavo. Alebo otočiť vpravo ak narazia do stromu.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: V tomto prípade nechceme padnúť do lávy. Pre lávu je to jednoduché. Môžeme ju vidieť na obrazovke. Ale čo láva, ktorú nemôžeme vidieť pod kameňom?
+        text: V tomto prípade nechceme spadnúť do lávy. Je jednoduché pripraviť sa na lávu. Môžeme ju vidieť na obrazovke. Ale čo láva, ktorú nemôžeme vidieť pod kameňom?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: Ak vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva predtým než sa pohneme vpred. Ak tam láva je potrebujeme umiestniť kameň pred našu postavu, než sa pohneme vpred. Týmto spôsobom sa môžeme bezpečne pohnúť vpred. Je čas na ťaženie! A nezabudni použiť rozhodnutie ak na sledovanie svojho kroku.
+        text: Potom čo vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva skôr, než sa pohneme vpred. Ak tam láva je potrebujeme umiestniť kameň pred našu postavu, než sa pohneme vpred. Týmto spôsobom sa môžeme bezpečne pohnúť vpred. Je čas na ťaženie! A nezabudni použiť rozhodnutie ak, aby si si dal pri pohybe pozor.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
@@ -1616,10 +1616,10 @@ sk:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tvorby. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Dostaneš na výber.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L s pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!'
+        text: '[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L z pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: Ak si dokončil svoj výtvor, vyber akciu zdieľaj, aby si dostal link a ukázal im svoj výtvor. Zabav sa!
+        text: Ak si dokončil svoj výtvor, vyber možnosť zdieľať, aby si získal odkaz a ukázal kamarátom svoj výtvor. Zabav sa!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
@@ -1629,10 +1629,10 @@ sk:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tvorby. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Dostaneš na výber.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L s pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!'
+        text: '[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L z pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Teraz dokážeš vytvoriť čokoľvek chceš. Zabav sa!
+        text: Teraz dokážeš vytvoriť hocičo čo chceš. Zabav sa!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG

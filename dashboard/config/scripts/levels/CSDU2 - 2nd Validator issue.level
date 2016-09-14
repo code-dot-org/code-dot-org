@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T20:27:03.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Add head and title tags\r\n\r\n&lt;head&gt;\r\n* contains all the information about the page that does not show on the page itself\r\n\r\n&lt;title&gt;\r\n* needs to not be blank\r\n* Shows up in the tab when you open a web page\r\n\r\n# Do This\r\n\r\n* Add a &lt;head&gt; tag above the first content in your page\r\n* Add a &lt;title&gt; tag inside the &lt;head&gt; tag. Makes sure to give your page a title\r\n* Once you have done this return to the <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/3\">validator level</a>",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1> Header </h1> \\n  A bunch of text about something. \\n <h4> Sub Header </h4> \\n  Some more text about something.  <h6> List </h6>  <ol>\\n  <li> thing 1 </li>\\n  <li> thing 2 </li>\\n  <li> thing 3 </li>\\n  </ol>\r\n \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
