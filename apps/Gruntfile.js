@@ -8,7 +8,6 @@ var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
-var ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
