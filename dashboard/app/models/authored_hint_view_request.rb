@@ -32,7 +32,6 @@
 #  fk_rails_8f51960e09                                          (level_id)
 #  index_authored_hint_view_requests_on_all_related_ids         (user_id,script_id,level_id,hint_id)
 #  index_authored_hint_view_requests_on_script_id_and_level_id  (script_id,level_id)
-#  index_authored_hint_view_requests_on_user_id                 (user_id)
 #
 
 require 'dynamic_config/gatekeeper'
