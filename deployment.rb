@@ -43,6 +43,7 @@ def load_configuration
     'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
+    'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_code_studio'           => false,
@@ -335,6 +336,10 @@ end
 
 def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
+end
+
+def blockly_core_dir(*dirs)
+  deploy_dir('blockly-core', *dirs)
 end
 
 def cookbooks_dir(*dirs)
