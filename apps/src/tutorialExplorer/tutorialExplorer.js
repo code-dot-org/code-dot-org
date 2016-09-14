@@ -73,12 +73,14 @@ window.TutorialExplorerManager = function (options) {
     }
   });
 
-  ReactDOM.render(
-    <TutorialExplorer
-      filterGroups={options.filters}
-      tutorials={options.tutorials.contents}
-      locale={options.locale}
-    />,
-    document.getElementById('tutorials')
-  );
+  this.renderToElement = function (element) {
+    ReactDOM.render(
+      <TutorialExplorer
+        filterGroups={options.filters}
+        tutorials={options.tutorials.contents}
+        locale={options.locale}
+      />,
+      element
+    );
+  };
 };
