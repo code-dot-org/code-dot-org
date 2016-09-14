@@ -205,6 +205,14 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
+  def self.start_on_or_before(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
+  end
+
+  def self.start_on_or_after(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+  end
+
   def self.start_in_days(days)
     Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
   end
