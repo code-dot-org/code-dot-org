@@ -147,6 +147,10 @@ en:
         title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Design Instructions Site: {}
+      CSD Hobbies Example: {}
+      CSD L04 Wrap Up Debug Example: {}
+      CSD Recipe Stop: {}
       CSD U1 Input Output C1:
         Challenge 1: Challenge 1
         description here: description here
@@ -205,6 +209,10 @@ en:
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
       CSDU2- home page examples: {}
+      CSDU2L01 SFLP:
+        description here: description here
+        title: title
+      CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
@@ -1528,6 +1536,9 @@ en:
         description here: description here
         title: title
       U4L24 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L5 random subst challenge page:
         description here: description here
         title: title
       U5 - Create PT - Student Introduction:
@@ -3393,6 +3404,17 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CSD Headers Prediction:
+        ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        Option 1: Option 1
+        'Option 2 ': 'Option 2 '
+        Option 3: Option 3
+        Option 4: Option 4
+      CSD Prediction Header Size:
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -5885,6 +5907,12 @@ en:
         Neutral: Neutral
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      test me:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -5894,10 +5922,18 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
+        '<img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px"> ': '<img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px"> '
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
         Answer 1: Answer 1
         'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
         Make a prediction and hit run: Make a prediction and hit run
         Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
