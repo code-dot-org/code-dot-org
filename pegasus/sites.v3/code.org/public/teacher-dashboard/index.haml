@@ -160,6 +160,16 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
+    // Get the category from a course, but fake the name of one of our courses
+    // to ensure that it gets sorted last
+    $scope.sortableCategory = function (course) {
+      var category = course.category;
+      if (category === "'15-'16 CS Principles") {
+        category = "ZZZ" + category;
+      }
+      return category;
+    };
+
     $scope.sections = sectionsService.query();
 
     $scope.sections.$promise.then(function( sections ){
