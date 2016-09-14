@@ -35,6 +35,7 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
   "BV" => "Bouvet Island",
   "BW" => "Botswana",
   "BY" => "Belarus",
+  "BZ" => "Belize",
   "CA" => "Canada",
   "CC" => "Cocos (Keeling) Islands",
   "CD" => "Democratic Republic of Congo",
