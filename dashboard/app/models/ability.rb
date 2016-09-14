@@ -94,7 +94,7 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
-        can [:read, :start, :end], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :start, :end, :workshop_survey], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
       end
 
