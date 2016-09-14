@@ -30,11 +30,11 @@ const FilterChoice = React.createClass({
     text: React.PropTypes.string.isRequired
   },
 
-  handleChange: function () {
+  handleChange(event) {
     this.props.onUserInput(
       this.props.groupName,
       this.props.name,
-      this.refs.isCheckedInput.checked
+      event.target.checked
     );
   },
 
@@ -45,7 +45,6 @@ const FilterChoice = React.createClass({
           <input
             type="checkbox"
             checked={this.props.selected}
-            ref="isCheckedInput"
             onChange={this.handleChange}
             style={{marginRight: 5}}
           />

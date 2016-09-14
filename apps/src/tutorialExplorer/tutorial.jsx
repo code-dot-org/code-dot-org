@@ -27,17 +27,17 @@ const Tutorial = React.createClass({
     item: shapes.tutorial.isRequired
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       showingDetail: false
     };
   },
 
-  tutorialClicked: function () {
+  tutorialClicked() {
     this.setState({showingDetail: true});
   },
 
-  tutorialDetailClosed: function () {
+  tutorialDetailClosed() {
     this.setState({showingDetail: false});
   },
 

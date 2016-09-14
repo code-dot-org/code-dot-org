@@ -1,7 +1,6 @@
 /* A pop-up modal displaying information about a single tutorial in TutorialExplorer.
  */
 
-require('babel-polyfill');
 import React from 'react';
 import shapes from './shapes';
 import getTagString from './util';
@@ -60,7 +59,7 @@ const TutorialDetail = React.createClass({
     closeClicked: React.PropTypes.func.isRequired,
   },
 
-  render: function () {
+  render() {
     if (!this.props.showing) {
       // Disable body scrolling.
       $('body').css('overflow', 'auto');

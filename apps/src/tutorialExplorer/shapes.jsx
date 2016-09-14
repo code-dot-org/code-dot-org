@@ -1,7 +1,6 @@
 /* Common shapes used for React prop validation.
  */
 
-require('babel-polyfill');
 import React from 'react';
 
 const shapes = {
