@@ -240,6 +240,16 @@ title: "Professional Development Workshop Survey"
           Is there anything else you’d like to tell us about your experience at this workshop?
         %textarea.form-control{name: 'anything_else_s', rows: 4, type: 'text'}
 
+      .form-group
+        = local_view :yes_no_select,
+          name: 'willing_to_talk_b',
+          label: 'Would you be willing to talk to someone at Code.org about your PD experiences?'
+        %div{id: 'willing-to-talk-contact-wrapper', style: 'display: none;'}
+          %label.control-label{for: 'how_to_contact_s'}
+            %em{style: 'font-weight: normal;'} Please provide the best method for contacting you.
+          %div
+            %input.form-control{name: 'how_to_contact_s', placeholder: 'Contact Information', type: 'text'}
+
       - if is_first_survey
         .form-group
           = local_view :single_select,
