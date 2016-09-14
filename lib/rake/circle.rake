@@ -36,5 +36,8 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb --eyes -f #{eyes_features.join(',')} -c ChromeLatestWin7,iPhone -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
       end
     end
+    # Kill Sauce Connect tunnel
+    RakeUtils.system_stream_output 'killall sc'
+    RakeUtils.system_stream_output 'sleep 10'
   end
 end
