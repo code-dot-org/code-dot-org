@@ -1,6 +1,7 @@
 /** @overview Component for editing a key/value pair row. */
 
 import FirebaseStorage from '../firebaseStorage';
+import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import { castValue, displayableValue, editableValue } from './dataUtils';
@@ -15,6 +16,7 @@ const EditKeyRow = React.createClass({
   getInitialState() {
     return {
       isEditing: false,
+      isSaving: false,
       newValue: undefined
     };
   },
@@ -31,6 +33,7 @@ const EditKeyRow = React.createClass({
   },
 
   handleSave() {
+    this.setState({isSaving: true});
     FirebaseStorage.setKeyValue(
       this.props.keyName,
       this.state.newValue,
@@ -39,7 +42,7 @@ const EditKeyRow = React.createClass({
   },
 
   handleSaveComplete() {
-    this.setState({isEditing: false});
+    this.setState(this.getInitialState());
   },
 
   handleDelete() {
@@ -73,9 +76,16 @@ const EditKeyRow = React.createClass({
             this.state.isEditing ?
               <button
                 style={dataStyles.saveButton}
-                onClick={this.handleSave}
+                onClick={!this.state.isSaving && this.handleSave}
               >
-                Save
+                {
+                  this.state.isSaving ?
+                  <span>
+                    Saving...&nbsp;
+                    <FontAwesome icon="spinner" className="fa-spin"/>
+                  </span> :
+                  'Save'
+                }
               </button> :
               <button
                 style={dataStyles.editButton}

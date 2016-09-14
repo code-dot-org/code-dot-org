@@ -6,8 +6,6 @@ import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
-const addButtonCellWidth = 92;
-const editButtonCellWidth = 142;
 
 export const row = {
   height: rowHeight,
@@ -19,20 +17,17 @@ export const cell = {
   fontSize: 14,
   maxWidth: 350,
   overflow: 'hidden',
+  whiteSpace: 'nowrap',
 };
 
 export const addButtonCell = {
   ...cell,
-  minWidth: addButtonCellWidth,
   backgroundColor: color.lightest_teal,
-  width: addButtonCellWidth,
 };
 
 export const editButtonCell = {
   ...cell,
-  minWidth: editButtonCellWidth,
   backgroundColor: color.lightest_teal,
-  width: editButtonCellWidth,
 };
 
 export const headerCell = {
@@ -81,13 +76,11 @@ export const blueButton = {
 export const editButton = {
   ...whiteButton,
   marginRight: 10,
-  width: 60
 };
 
 export const saveButton = {
   ...blueButton,
   marginRight: 10,
-  width: 60
 };
 
 export const input = {
