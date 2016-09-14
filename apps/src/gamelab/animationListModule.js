@@ -22,7 +22,7 @@ import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
-const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
+export const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {AnimationProps} props
 export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
 // Args: {number} index, {AnimationKey} key, {AnimationProps} props
@@ -212,6 +212,7 @@ export function setInitialAnimationList(serializedAnimationList) {
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
+    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || null));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
