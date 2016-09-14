@@ -540,9 +540,14 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
-  def last_attempt_for_any(levels)
+  def last_attempt_for_any(levels, script_id: nil)
     level_ids = levels.map(&:id)
-    UserLevel.where(user_id: self.id, level_id: level_ids).
+    conditions = {
+      user_id: self.id,
+      level_id: level_ids
+    }
+    conditions[:script_id] = script_id unless script_id.nil?
+    UserLevel.where(conditions).
       order('updated_at DESC').
       first
   end
@@ -737,12 +742,6 @@ class User < ActiveRecord::Base
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
     scripts.where('user_scripts.completed_at is null').map(&:cached)
-  end
-
-  def completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
-    scripts.where('user_scripts.completed_at is not null').map(&:cached)
   end
 
   def working_on_user_scripts

@@ -121,7 +121,7 @@ BigGameLogic.prototype.reset = function () {
  * When game starts logic
  */
 BigGameLogic.prototype.onFirstTick_ = function () {
-  var func = function (StudioApp, Studio, Globals) {
+  var func = function (Studio, Globals) {
     Studio.setBackground(null, this.getVar_('background'));
     Studio.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
     Studio.setSprite(null, this.playerSpriteIndex, this.getVar_('player'));
