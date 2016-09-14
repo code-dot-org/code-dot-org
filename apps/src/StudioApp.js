@@ -783,8 +783,10 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
  * Reset the puzzle back to its initial state.
  * Search aliases: "Start Over", startOver
  * @param {AppOptionsConfig}- same config object passed to studioApp.init().
+ * @return {Promise} to express that the async operation is complete.
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
+  var promise;
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
@@ -794,7 +796,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
-  } else {
+  } else if (this.editCode) {
     var resetValue = '';
     if (config.level.startBlocks) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
@@ -811,8 +813,15 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     annotationList.clearRuntimeAnnotations();
   }
   if (config.afterClearPuzzle) {
-    config.afterClearPuzzle();
+    promise = config.afterClearPuzzle(config);
   }
+  if (!promise) {
+    // If a promise wasn't returned from config.afterClearPuzzle(), we create
+    // on here that returns immediately since the operation must have completed
+    // synchronously.
+    promise = new Promise(function (resolve, reject) { resolve(); });
+  }
+  return promise;
 };
 
 /**

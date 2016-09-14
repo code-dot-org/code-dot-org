@@ -133,6 +133,14 @@ function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
 
+function loadStartSources(callback) {
+  // Get initial sources to put in file system
+  const startSources = webLab_.getStartSources();
+
+  // put the source files into the Bramble file system
+  putFilesInBramble(bramble_, startSources, callback);
+}
+
 // Get the WebLab object from our parent window
 if (parent.getWebLab) {
   webLab_ = parent.getWebLab();
@@ -150,7 +158,8 @@ const brambleHost = {
   showTutorial: showTutorial,
   enableInspector: enableInspector,
   disableInspector: disableInspector,
-  onProjectChanged: onProjectChanged
+  onProjectChanged: onProjectChanged,
+  loadStartSources: loadStartSources
 };
 
 // Give our interface to our parent
@@ -208,11 +217,7 @@ function load(Bramble) {
 
   });
 
-  // Get initial sources to put in file system
-  const startSources = webLab_.getStartSources();
-
-  // put the source files into the Bramble file system
-  putFilesInBramble(Bramble, startSources, function () {
+  loadStartSources(function () {
     // tell Bramble which root dir to mount
     Bramble.mount(projectRoot);
   });
