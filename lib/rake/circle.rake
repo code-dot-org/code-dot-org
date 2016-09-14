@@ -23,7 +23,7 @@ namespace :circle do
     RakeUtils.system_stream_output 'tar -xzf sc-4.4.0-rc2-linux.tar.gz'
     Dir.chdir(Dir.glob('sc-*-linux')[0]) do
       # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
-      RakeUtils.exec_in_background 'for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM-$CIRCLE_NODE_INDEX --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done'
+      RakeUtils.exec_in_background 'for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM --tunnel-domains localhost-studio.code.org,localhost.code.org --wait-tunnel-shutdown --no-remove-colliding-tunnels && break; done'
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
