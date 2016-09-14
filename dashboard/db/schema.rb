@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912174004) do
+ActiveRecord::Schema.define(version: 20160913230138) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -504,7 +504,7 @@ ActiveRecord::Schema.define(version: 20160912174004) do
     t.string  "name",       null: false
     t.integer "contact_id", null: false
     t.boolean "urban"
-    t.index ["name"], name: "index_professional_learning_partners_on_name", using: :btree
+    t.index ["name", "contact_id"], name: "index_professional_learning_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -581,6 +581,13 @@ ActiveRecord::Schema.define(version: 20160912174004) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
+  end
+
+  create_table "section_hidden_stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "section_id", null: false
+    t.integer "stage_id",   null: false
+    t.index ["section_id"], name: "index_section_hidden_stages_on_section_id", using: :btree
+    t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id", using: :btree
   end
 
   create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

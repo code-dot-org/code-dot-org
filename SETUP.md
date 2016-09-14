@@ -118,11 +118,14 @@ The default dashboard install uses a static build of JS, but if you want to make
    # These enable the local apps build
    build_apps: true
    use_my_apps: true
+
+   # This enables the local blockly-core build
+   build_blockly_core: true
    ```
 
 1. Run `rake package` for the changes to take effect.
 
-This configures dashboard to rebuild apps whenever you run `rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
+This configures dashboard to rebuild apps/blockly-core whenever you run `rake build` and to use the versions that you built yourself.  See the documentation in those directories for faster ways to build and iterate.
 
 If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
 
