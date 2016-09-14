@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T18:08:12.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Orderd Lists\r\n\r\nThere is another type of list, ordered lists. To make an ordered list you use the tag &lt;ol&gt; instead of &lt;ul&gt;\r\nJust like &lt;ul&gt;, each item in the list should be surrounded by the list item tags.\r\n\r\nExample:\r\n<pre>\r\n&lt;ol&gt;\r\n     &lt;li&gt;Step 1 &lt;/li&gt;\r\n     &lt;li&gt;Step 2 &lt;/li&gt;\r\n     &lt;li&gt;Step 3 &lt;/li&gt;\r\n&lt;/ol&gt;\r\n</pre>\r\n\r\nResult:\r\n\r\n<img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\">\r\n\r\n# Do This\r\nUnder your directions header create a list of direction.\r\n\r\n* Create an ordered list &lt;ol&gt; for each step in your recipe",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" \"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

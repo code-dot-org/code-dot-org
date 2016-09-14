@@ -143,11 +143,11 @@ export const ScreenListItem = Radium(React.createClass({
         </div>
         <div>
           {screen.id}
-          {screen.willReplace &&
+          {screen.conflictingIds.length === 0 && screen.willReplace &&
            <p style={styles.warning}>
              Importing this will replace your existing screen: "{screen.id}".
            </p>}
-          {screen.assetsToReplace.length > 0 &&
+          {screen.conflictingIds.length === 0 && screen.assetsToReplace.length > 0 &&
            <p style={styles.warning}>
              Importing this will replace your existing
              assets: {quotedCommaJoin(screen.assetsToReplace)}.

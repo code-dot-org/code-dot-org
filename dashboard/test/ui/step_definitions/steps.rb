@@ -648,12 +648,16 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   }
 end
 
-Given(/^I am enrolled in a plc course$/) do
+def enroll_in_plc_course(user_email)
   require_rails_env
-  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  user = User.find_by_email_or_hashed_email(user_email)
   course = Plc::Course.find_by(name: 'All The PLC Things')
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+end
+
+Given(/^I am enrolled in a plc course$/) do
+  enroll_in_plc_course(@users.first[1][:email])
 end
 
 Then(/^I fake completion of the assessment$/) do
@@ -681,14 +685,21 @@ And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
 
   steps %Q{
     Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email])
+
+  steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
     And I click selector ".close"
+    And I wait for 3 seconds
     And I click selector ".btn-white:contains('New section')"
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
     And I click selector ".btn-primary:contains('Save')"
-    And I wait for 2 seconds
+    And I wait for 3 seconds
     And I click selector "a:contains('Manage Students')"
     And I save the section url
     Then I sign out
@@ -742,10 +753,10 @@ And(/^I save the section url$/) do
   wait_with_short_timeout.until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
   steps %Q{
     And I wait to see ".jumbotron"
-    And I wait for 1 seconds
+    And I wait for 2 seconds
   }
   @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
-  expect(@section_url).to be_truthy
+  expect(@section_url).not_to eq('')
 end
 
 And(/^I navigate to the section url$/) do
@@ -924,4 +935,9 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   unless ENV['TEST_LOCAL'] == 'true'
     @browser.file_detector = nil
   end
+end
+
+Then /^I scroll our lockable stage into view$/ do
+  wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
 end

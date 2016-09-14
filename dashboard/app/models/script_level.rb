@@ -135,12 +135,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    if assessment
-      if level.properties["pages"] && level.properties["pages"].length > 1
-        return true
-      end
-    end
-    false
+    return false unless assessment
+    level.properties["pages"] ? level.properties["pages"].length > 1 : false
   end
 
   def anonymous?
@@ -184,7 +180,7 @@ class ScriptLevel < ActiveRecord::Base
     ids = level_ids
 
     levels.each do |l|
-      ids << l.contained_levels.map(&:id)
+      ids.concat(l.contained_levels.map(&:id))
     end
 
     summary = {

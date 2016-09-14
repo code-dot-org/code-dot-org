@@ -759,15 +759,17 @@ en:
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Wrap-Up
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
-          new stage: new stage
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           Welcome: Welcome
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
           Discussion Forums: Discussion Forums
+          Welcome Back!: Welcome Back!
+          Mystery Model: Mystery Model
+          Decode and Share: Decode and Share
         Testing:
           Testing: Testing
           title: Testing
@@ -1925,6 +1927,16 @@ en:
           Digital Footprint: Digital Footprint
           Images on the Web: Images on the Web
           Finalizing Website: Finalizing Website
+          Clean Code and Debugging: Clean Code and Debugging
+          Introduction to Styling with CSS: Introduction to Styling with CSS
+          'Personal Website: Connecting Pages': 'Personal Website: Connecting Pages'
+          Classes and External Style Sheets: Classes and External Style Sheets
+          Box Model and Page Layout: Box Model and Page Layout
+          'Personal Website: Midway Check': 'Personal Website: Midway Check'
+          Publishing a Website: Publishing a Website
+          Sources and Search Engines: Sources and Search Engines
+          Intellectual Property: Intellectual Property
+          'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
