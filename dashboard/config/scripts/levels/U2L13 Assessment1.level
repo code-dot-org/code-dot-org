@@ -6,11 +6,17 @@
   "user_id": 0,
   "properties": {
     "title": "Assessment: Question 1",
-    "markdown_instructions": "What is a Caesar cipher?\n",
-    "encrypted_solution": "ZD8piRdjpCDCjzKBEBL6CINGrLOKNyAmAIRvgXg4pXm6mpktBqj/r9LuWzUz\nQAa7eKvkLC4KxEx1UuM8RZ/KJkL27jhrXmHP4XvHc5M3iFRBo44i/GaINaK3\nBI8U3X6vZjN7xgSirdL4DVXdDXxq/gYc5Q7ulzSZ4rOQl5SWJYStjKIYMm9p\n/LkzV8FgDng688+eTe8ZepoUGXltZ8wBPZkV0UDA3EYis+mDWP3Xdbbx9QOI\nQc38MUGFjFGDed+VwewzbUy1/I05TnDS9rtoXLau4h4zh5piQ0X2hBZqdbHN\nMEZToCAhgiqLXLVfqEmx\n",
+    "markdown_instructions": "What is a Caesar cipher?  As part of your answer demonstrate encrypting the plaintext messages: `CS IS COOL` with a caesar cipher.\r\n",
+    "encrypted_solution": "uXxx1JJgtYx/kEEnV3qs9VeHuYt5er2a2Z7lcyxTssB9p6alS2Umvw4hKGNU\no/qqXQI6cv3+Zb7CUvN8b1J/cv0caJtMlS1iKfwLtPsPCkCoyQ8Vi6eQJKzI\nsPU2fd9C5WqOKj9NTwWhOacGrX8VfbNxxPcuDy3+WOsV6n44L0DCsMzld28d\nEBqoM9akytU7P0QFPK7R4ax+Emmg86BorDBaSKqhElu9fd0c+nmj06ZZJqzV\n9eTVV+k5578y4hJmJUfsPHBnD22+zt7caU9AalwPXJjQgz/bgNZASFJj/C+L\nP2uUkVcMr7F7lJjWjg3LEBrwsdq3mNclB1z60HpkeAmq6Ra7ueC8hXxXQ4Tz\nPeSRZZZjLP/4q69zbjBBZUHJ8N3B4FSECSwFZLnIQ+PbPYcnqYecAxBTwf9h\nHzApGoJZER1pgVfvoKYluEqQ6nUriTJJBrYo9bNjNbkfHQhlRjkWHkqALth7\nfKIvMcRxuVMfkoLYXMiEoI9aFJtFwNllWBf+8XE6ZU0MGX25L7nFHA==\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

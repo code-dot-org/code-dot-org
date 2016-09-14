@@ -75,7 +75,7 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/seamless_database_pool.git
-  revision: eb56c376e54d7bb745f43ac2a791d76efec010f9
+  revision: 7c7db3d4672c50c46d02e04db68d09758bbca62e
   ref: cdo
   specs:
     seamless_database_pool (1.0.18)

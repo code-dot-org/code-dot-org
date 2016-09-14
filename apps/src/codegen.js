@@ -53,25 +53,43 @@ exports.evalWith = function (code, options, legacy) {
  * provided APIs as context.
  * @param apis Context to be set as globals in the interpreted runtime.
  * @param events Mapping of hook names to the corresponding handler code.
- * @param code Optional extra code to evaluate.
+ * @param evalCode Optional extra code to evaluate.
  * @return {{}} Mapping of hook names to the corresponding event handler.
  */
-exports.evalWithEvents = function (apis, events, code) {
-  let interpreter, currentCallback;
-  code = code || '';
-  const hooks = {};
+exports.evalWithEvents = function (apis, events, evalCode = '') {
+  let interpreter, currentCallback, lastReturnValue;
+  const hooks = [];
+
   Object.keys(events).forEach(event => {
-    hooks[event] = () => {
-      currentCallback(event);
-      interpreter.run();
-    };
-    code += `this['${event}']=function(){${events[event]}};`;
+    let {code, args} = events[event];
+    if (typeof code === 'string') {
+      code = [code];
+    }
+    code.forEach((c, index) => {
+      const eventId = `${event}-${index}`;
+      // Create a hook that triggers an event inside the interpreter.
+      hooks.push({name: event, func: (...args) => {
+        const eventArgs = {name: eventId, args};
+        currentCallback(exports.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
+        interpreter.run();
+        return lastReturnValue;
+      }});
+      evalCode += `this['${eventId}']=function(${args ? args.join() : ''}){${c}};`;
+    });
   });
 
-  interpreter = new Interpreter(`${code} while (true) this[wait()]();`, (interpreter, scope) => {
+  // The event loop pauses the interpreter until the native async function
+  // `currentCallback` returns a value. The value contains the name of the event
+  // to call, and any arguments.
+  const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
+
+  interpreter = exports.interpreter = new Interpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
+    }));
+    interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
+      lastReturnValue = exports.marshalInterpreterToNative(interpreter, returnValue);
     }));
   });
   interpreter.run();
