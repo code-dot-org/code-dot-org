@@ -27,7 +27,7 @@
 
 -# Gamelab script dependencies
 - if use_makerlab
-  = javascript_include_tag 'js/makerlab'
+  %script{src: minifiable_asset_path('js/makerlab.js')}
 
 -# Droplet script dependencies (all editCode - regardless of editor)
 - if use_droplet || use_blockly
@@ -53,7 +53,7 @@
 
 -# Common script dependencies
 %script{src: asset_path('js/marked/marked.js')}
-%script{src: asset_path('js/initApp/initApp.js')}
+%script{src: minifiable_asset_path('js/initApp/initApp.js')}
 %script{src: minifiable_asset_path('js/common.js')}
 -# common_locale is included in application.html.haml
 %script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
