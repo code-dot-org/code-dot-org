@@ -38,7 +38,7 @@ block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
 block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
 block_advocates,block,homepage_slot_text_title_advocates,homepage_slot_text_blurb_advocates,"185, 191, 21","209, 213, 103",/promote,,/shared/images/courses/logo_tall_map.jpg,code.org,show,en
-blocklink_hoc,blocklink,block_hoc,homepage_slot_text_link_hoc,/learn,,,,,code.org,show,en
+blocklink_hoc,blocklink,block_hoc,homepage_slot_text_link_hoc,https://hourofcode.com/,,,,,code.org,show,en
 blocklink_host,blocklink,block_hoc,homepage_slot_text_link_host,https://hourofcode.com/how-to,,,,,code.org,show,en
 blocklink_hocserved,blocklink,block_hoc,homepage_slot_text_link_hocserved,/leaderboards,,,,,code.org,show,en
 blocklink_codestudio,blocklink,block_students,homepage_slot_text_link_codestudio,http://studio.code.org/,,,,,code.org,show,en
