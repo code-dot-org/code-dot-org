@@ -241,12 +241,11 @@ class Script < ActiveRecord::Base
     level = level_cache[level_identifier] if self.should_cache?
     return level unless level.nil?
 
-    # If the cache missed or we're in levelbuilder mode, fetch the level from the db.
-    level = if level_identifier.is_a? Integer
-              Level.find_by!(id: level_identifier)
-            else
-              Level.find_by!(name: level_identifier)
-            end
+    # If the cache missed or we're in levelbuilder mode, fetch the level from
+    # the db. Note the field trickery is to allow passing an ID as a string,
+    # which some tests rely on (unsure about non-tests).
+    field = (level_identifier.to_i.to_s == level_identifier.to_s) ? :id : :name
+    level = Level.find_by!(field => level_identifier)
     # Cache the level by ID and by name, unless it wasn't found.
     @@level_cache[level.id] = level if level && self.should_cache?
     @@level_cache[level.name] = level if level && self.should_cache?

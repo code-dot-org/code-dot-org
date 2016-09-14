@@ -312,7 +312,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal level, Script.cache_find_level(level.name)
   end
 
-  test 'cache_find_level returns nil on bad ID and bad name' do
+  test 'cache_find_level raises exception on bad ID and bad name' do
     bad_id = Level.last.id + 1
 
     assert_raises(ActiveRecord::RecordNotFound) do
