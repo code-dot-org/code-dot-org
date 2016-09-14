@@ -4,6 +4,7 @@ import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
+import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
@@ -74,19 +75,13 @@ const EditKeyRow = React.createClass({
         <td style={dataStyles.editButtonCell}>
           {
             this.state.isEditing ?
-              <button
+              <PendingButton
+                defaultText="Save"
+                isPending={this.state.isSaving}
+                onClick={this.handleSave}
+                pendingText="Saving..."
                 style={dataStyles.saveButton}
-                onClick={!this.state.isSaving && this.handleSave}
-              >
-                {
-                  this.state.isSaving ?
-                  <span>
-                    Saving...&nbsp;
-                    <FontAwesome icon="spinner" className="fa-spin"/>
-                  </span> :
-                  'Save'
-                }
-              </button> :
+              /> :
               <button
                 style={dataStyles.editButton}
                 onClick={this.handleEdit}
@@ -95,13 +90,17 @@ const EditKeyRow = React.createClass({
               </button>
           }
 
-          <button
-            style={dataStyles.redButton}
-            onClick={this.handleDelete}
-            onKeyUp={this.handleKeyUp}
-          >
-            Delete
-          </button>
+          {
+            !this.state.isSaving && (
+              <button
+                style={dataStyles.redButton}
+                onClick={this.handleDelete}
+                onKeyUp={this.handleKeyUp}
+              >
+                Delete
+              </button>
+            )
+          }
         </td>
       </tr>
     );

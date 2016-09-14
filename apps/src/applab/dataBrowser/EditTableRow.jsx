@@ -1,6 +1,7 @@
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
+import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
@@ -14,6 +15,7 @@ const EditTableRow = React.createClass({
   getInitialState() {
     return {
       isEditing: false,
+      isSaving: false,
       newRecord: {}
     };
   },
@@ -26,12 +28,17 @@ const EditTableRow = React.createClass({
   },
 
   handleSave() {
+    this.setState({isSaving: true});
     FirebaseStorage.updateRecord(
       this.props.tableName,
       this.state.newRecord,
-      () => this.setState({ isEditing: false }),
+      this.handleSaveComplete,
       msg => console.warn(msg)
     );
+  },
+
+  handleSaveComplete() {
+    this.setState(this.getInitialState());
   },
 
   handleEdit() {
@@ -83,26 +90,31 @@ const EditTableRow = React.createClass({
         <td style={dataStyles.editButtonCell}>
           {
             this.state.isEditing ?
-            <button
-              style={dataStyles.saveButton}
-              onClick={this.handleSave}
-            >
-              Save
-            </button> :
-            <button
-              style={dataStyles.editButton}
-              onClick={this.handleEdit}
-            >
-              Edit
-            </button>
+              <PendingButton
+                defaultText="Save"
+                isPending={this.state.isSaving}
+                onClick={this.handleSave}
+                pendingText="Saving..."
+                style={dataStyles.saveButton}
+              /> :
+              <button
+                style={dataStyles.editButton}
+                onClick={this.handleEdit}
+              >
+                Edit
+              </button>
           }
 
-          <button
-            style={dataStyles.redButton}
-            onClick={this.handleDelete}
-          >
-            Delete
-          </button>
+          {
+            !this.state.isSaving && (
+              <button
+                style={dataStyles.redButton}
+                onClick={this.handleDelete}
+              >
+                Delete
+              </button>
+            )
+          }
         </td>
       </tr>
     );
