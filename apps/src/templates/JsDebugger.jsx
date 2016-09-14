@@ -10,6 +10,7 @@ var i18n = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+var DebugWatch = require('./DebugWatch');
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
@@ -111,22 +112,6 @@ var DebugButtons = function () {
       </div>
     </div>
   );
-};
-
-/**
- * A watch window for our debugger.
- */
-var DebugWatch = function (props) {
-  var classes = 'debug-watch';
-  if (!props.debugButtons) {
-    classes += 'no-commands';
-  }
-  return (
-    <div id="debug-watch" className={classes}/>
-  );
-};
-DebugWatch.propTypes = {
-  debugButtons: React.PropTypes.bool,
 };
 
 /**
