@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912174004) do
+ActiveRecord::Schema.define(version: 20160913212311) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -504,7 +504,7 @@ ActiveRecord::Schema.define(version: 20160912174004) do
     t.string  "name",       null: false
     t.integer "contact_id", null: false
     t.boolean "urban"
-    t.index ["name"], name: "index_professional_learning_partners_on_name", using: :btree
+    t.index ["name", "contact_id"], name: "index_professional_learning_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

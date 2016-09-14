@@ -57,7 +57,7 @@ plp_list.each do |plp|
   user.permission = UserPermission::WORKSHOP_ORGANIZER
   user.save!
 
-  ProfessionalLearningPartner.create!(contact_id: user.id, name: plp[:plp_name], urban: plp[:urban])
+  ProfessionalLearningPartner.find_or_create_by!(contact_id: user.id, name: plp[:plp_name], urban: plp[:urban])
 end
 
 puts "#{plp_list.length} Professional Learning Partners Imported."
