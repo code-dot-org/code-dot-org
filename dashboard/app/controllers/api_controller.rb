@@ -99,7 +99,7 @@ class ApiController < ApplicationController
       script: {
         id: @script.id,
         name: data_t_suffix('script.name', @script.name, 'title'),
-        levels_count: @script.script_levels.length,
+        levels_count: @script.script_levels.to_a.size,
         stages: stages
       }
     }
