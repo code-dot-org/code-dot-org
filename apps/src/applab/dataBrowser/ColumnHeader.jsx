@@ -146,7 +146,7 @@ const ColumnHeader = React.createClass({
             <a className="dropdown-toggle" data-toggle="dropdown">
               <FontAwesome icon="cog" style={styles.icon}/>
             </a>
-            <ul className="dropdown-menu dropdown-menu-right">
+            <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
               <li>
                 <a onClick={this.handleRename}>
                  Rename
