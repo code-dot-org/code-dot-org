@@ -236,15 +236,16 @@ class Script < ActiveRecord::Base
   # @param level_identifier [Integer | String] the level ID or level name to
   #   fetch
   # @return [Level] the (possibly cached) level
+  # @raises [ActiveRecord::RecordNotFound] if the level cannot be found
   def self.cache_find_level(level_identifier)
     level = level_cache[level_identifier] if self.should_cache?
     return level unless level.nil?
 
     # If the cache missed or we're in levelbuilder mode, fetch the level from the db.
     level = if level_identifier.is_a? Integer
-              Level.find(level_identifier)
+              Level.find_by!(id: level_identifier)
             else
-              Level.find_by_name(level_identifier)
+              Level.find_by!(name: level_identifier)
             end
     # Cache the level by ID and by name, unless it wasn't found.
     @@level_cache[level.id] = level if level && self.should_cache?
