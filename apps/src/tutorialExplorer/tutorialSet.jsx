@@ -27,7 +27,7 @@ const TutorialSet = React.createClass({
    * @param {object} tutorial - Single tutorial, containing a variety of
    *   strings, each of which is a list of tags separated by commas, no spaces.
    */
-  filterFn: function (tutorial) {
+  filterFn(tutorial) {
 
     // First check that the tutorial language doesn't exclude it immediately.
     // If the tags contain some languages, and we don't have a match, then
