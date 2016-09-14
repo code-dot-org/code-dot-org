@@ -67,9 +67,9 @@ const AnimationTab = React.createClass({
   },
 
   render() {
-    let shouldHidePiskel = {visibility: 'visible'};
+    let hidePiskelStyle = {visibility: 'visible'};
     if (this.props.selectedAnimation) {
-      shouldHidePiskel = {visibility: 'hidden'};
+      hidePiskelStyle = {visibility: 'hidden'};
     }
     return (
       <div>
@@ -84,7 +84,7 @@ const AnimationTab = React.createClass({
           </div>
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl}/>
-            <div style={[shouldHidePiskel, styles.emptyPiskelEl]}>
+            <div style={[hidePiskelStyle, styles.emptyPiskelEl]}>
               <div style={styles.helpText}>
                 Add a new sequence on the left to begin
               </div>
