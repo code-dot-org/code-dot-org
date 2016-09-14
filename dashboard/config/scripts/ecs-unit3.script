@@ -25,8 +25,6 @@ level 'ECSPD jsfiddle'
 level 'ECSPD Unit 3 Strategy Review'
 level 'ECSPD strategies'
 
-
-
 stage 'Unit 3 Day-by-Day'
 level 'ECSPD Unit 3 Stage 6 Overview'
 level 'ECSPD U3 D 1-2 Intro'
@@ -42,14 +40,17 @@ level 'ECSPD U3 D 20-21 Intro'
 level 'ECSPD U3 D 22-25 Intro'
 
 stage 'Unit 3 Challenge'
-level 'ECSPD U3 Challenges'
-level 'ECSPD U3 Challenge Decision'
-level 'ECSPD unit 3 Pick Challenge'
-level 'ECSU3 Challenge Submission'
+level 'ECSPD-unit2 What is the Challenge'
+level  'ECSPD U3 Challenges'
+named_level ‘ECS Unit 3 Challenge Selection’
+level 'ECSD3-u5 do the challenge’
+level 'CSPPD3-u2 create your extension'
+level 'CSPPD3-u2 reflect on challenge'
+level 'CSPPD3-u2 expectations'
+named_level ‘ECS Unit 3 Challenge Submission’
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
-level 'Unit 3 Survey 2'
 
 
-stage 'Unit 3 Challenge Preview'
+

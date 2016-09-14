@@ -4,6 +4,14 @@
       not_saved: 'Zuzendu hurrengo akatsak mesedez:'
       too_young: Eduki honek adin murriztapenak ditu eta ikasle gazteenentzat ez dago
         eskuragarri
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -82,21 +90,11 @@
   signup_form:
     student_count: "%{count} ikasleek izena eman dute."
     teacher_count: "%{count} irakaslek izena eman dute."
-    overview_student: Zure aurrerapena jarraitzeko ireki kontu bat. Zure email helbidea
-      batez ere saioa hasteko eta pasahitza berreskuratzeko erabiliko dugu. Informazio
-      gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun
-      Araua</a>.
-    overview_teacher: Irakats ezazu informatika zure ikasgelan kontu bat irekita.
-      <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal izango duzu.
-    no_signup_message: <a target="_blank" href="http://learn.code.org">en ikastaro
-      eta ariketa desberdinak egin ditzakezu</a>, baina izena eman beharko duzu zure
-      aurrerapenak gordetzeko.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Ikusi hezitzailearen gida
-    teacher_pitch: Irakasleen sarbidea Code.org-rako
-    teacher_title: Irakasle bezala sartu
-    student_pitch: Ikasle bezala sartu Code.org-n
-    student_title: Ikasle bezala sartu
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: Ikastetxearen izena (aukerakoa)
     school_address: Ikastetxearen helbidea (aukerakoa)
     address_placeholder: Helbidea, hiria, herrialdea, posta kodea
@@ -123,9 +121,11 @@
     user_type_label: Account Type
     user_type_teacher: Irakaslea
     user_type_student: Ikaslea
+    field_is_required: beharrezkoa da
+    accept_terms: You must agree to create an account
   signin_form:
     title: Kontua daukazu? Hasi saioa
-    login: Emaila edo erabiltzailea
+    login: E-posta
     password: Pasahitza
     remember: Kontua daukazu? Hasi saioa
     submit: Hasi saioa
@@ -144,8 +144,10 @@
   password:
     reset_form:
       title: Pasahitza ahaztu duzu?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: Email helbidea
-      submit: Bidal iezazkidazue pasahitza berrezartzeko argibideak
+      submit: Bidali
     change_form:
       title: Aldatu zure pasahitza
       new_password: Pasahitz berria
@@ -329,6 +331,7 @@
       submitted_on: "%{date}-n bidalia"
       unsubmit: Bidalketa ezeztatu
       worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Email helbidea ez da baieztatu:'
     email_confirm_needed_required: "%{email} zure emaila ez da baieztatu:"
@@ -400,11 +403,14 @@
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
     announcement_title: Berriak
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -704,6 +710,34 @@
       code.org-ek ez die sekula informazio hori bitartekoei alokatuko, ez salduko
       eta ez konpartituko.
     sign_out: Zure adina eman nahi ez baduzu <a href="%{url}">deskonektatu</a> zaitezke.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Erabilera baldintzak
+    privacy: Pribatutasun politika
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Inprimatu
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen
     lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu
     dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan
@@ -819,8 +853,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Ikono bat bilatu...
+      no_icons_found: Ez da ikonorik aurkitu
     playzone:
       artist_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
       artist_title: New Drawing
@@ -878,3 +912,6 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
