@@ -21,6 +21,7 @@ namespace :circle do
   task :run_ui_tests do
     if GitUtils.circle_commit_contains?(SKIP_UI_TESTS_TAG)
       HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{SKIP_UI_TESTS_TAG}, skipping UI tests for this run."
+      return
     end
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
     RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.0-rc2-linux.tar.gz'
