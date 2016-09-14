@@ -485,5 +485,95 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
+
+    {
+      description: "Data Browser can add/edit/delete key value pairs",
+      editCode: true,
+      useFirebase: true,
+
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          // Overview
+          $("#dataModeButton").click();
+          const dataOverview = $('#dataOverview');
+          assert.equal(dataOverview.is(':visible'), true, 'dataOverview is visible');
+          const keyValueLink = dataOverview.find('a:contains(Key/value pairs)');
+          assert.equal(keyValueLink.is(':visible'), true, 'key/value pairs link is visible');
+
+          // Properties view
+          ReactTestUtils.Simulate.click(keyValueLink[0]);
+          const dataProperties = $('#dataProperties');
+          assert.equal(dataProperties.is(':visible'), true, 'dataProperties is visible');
+
+          // add key/value pair via enter key
+          const addRow = dataProperties.find('tr:contains(Add pair)');
+          ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'key1' } });
+          ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: 'value1' } });
+          ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+          setTimeout(() => {
+            let keyValueRow1 = dataProperties.find('tr:contains(key1)');
+            assert.equal(keyValueRow1.is(':visible'), true, 'key1 appears in the grid');
+            assert.equal(keyValueRow1.is(':visible'), true, 'key2 appears in the grid');
+            assert.equal(keyValueRow1.find('td:contains("value1")').length, 1, 'value1 appears in key1 row');
+
+            // add key/value pair via button click
+            ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'key2' } });
+            ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '123' } });
+            const addPairButton = dataProperties.find('button:contains(Add pair)');
+            assert.equal(addPairButton.is(':visible'), true, 'Add pair button is visible');
+            ReactTestUtils.Simulate.click(addPairButton[0]);
+            setTimeout(() => {
+              let keyValueRow2 = dataProperties.find('tr:contains(key2)');
+              assert.equal(keyValueRow2.is(':visible'), true, 'key2 appears in the grid');
+              assert.equal(keyValueRow2.find('td:contains(123)').length, 1, '123 appears in key2 row');
+
+              // edit row1
+              let editButton = keyValueRow1.find('button:contains(Edit)');
+              assert.equal(editButton.is(':visible'), true, 'edit row button visible');
+              ReactTestUtils.Simulate.click(editButton[0]);
+              const saveButton = keyValueRow1.find('button:contains(Save)');
+              editButton = keyValueRow1.find('button:contains(Edit)');
+              assert.equal(editButton.is(':visible'), false, 'edit row button hidden');
+              assert.equal(saveButton.is(':visible'), true, 'save row button visible');
+
+              // save new row1 value
+              const valueInput = keyValueRow1.find('input')[0];
+              assert.equal(valueInput.value, 'value1', 'row1 input initial value');
+              ReactTestUtils.Simulate.change(valueInput, { target: { value: 'value2' } });
+              ReactTestUtils.Simulate.keyUp(valueInput, enterKeyEvent);
+              setTimeout(() => {
+                editButton = keyValueRow1.find('button:contains(Edit)');
+                assert.equal(editButton.is(':visible'), true, 'edit row button visible');
+                const ageCell = keyValueRow1.find('td')[1];
+                assert.equal(ageCell.innerHTML, '"value2"', 'row1 value updated');
+
+                // delete key2
+                let deleteRowButton = keyValueRow2.find('button:contains(Delete)');
+                assert.equal(deleteRowButton.is(':visible'), true, 'delete row button visible');
+                ReactTestUtils.Simulate.click(deleteRowButton[0]);
+                setTimeout(() => {
+                  keyValueRow1 = dataProperties.find('tr:contains(key1)');
+                  assert.equal(keyValueRow1.length, 1, 'key1 row still exists');
+                  keyValueRow2 = dataProperties.find('tr:contains(key2)');
+                  assert.equal(keyValueRow2.length, 0, 'key2 row no longer exists');
+
+                  Applab.onPuzzleComplete();
+                }, 100);
+              }, 100);
+            }, 100);
+          }, 100);
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };
