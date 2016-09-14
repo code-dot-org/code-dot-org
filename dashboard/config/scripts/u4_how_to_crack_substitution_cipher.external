@@ -27,7 +27,12 @@ The tool shows you how the frequency of letters in the encrypted text (orange) c
 3. After finding only a handful of hard-fought letters, the rest will tumble quickly.
 4. Comparing the frequencies of letters gives good insight for making sensible guesses.
 
-The animation below shows someone getting started.  They first sort the characters by frequency. Then they identify a group of characters that they think maps to the word `the`.  It's a good start!
+### Try this:
+The animation below shows someone getting started.  Here's what they tried
+
+* First sort the characters by frequency. 
+* Identify a group of characters that might map to the word `the`.  
+It's a good start!
 
 ![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
 
