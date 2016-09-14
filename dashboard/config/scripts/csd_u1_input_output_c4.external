@@ -32,12 +32,12 @@ User Prompt | User Information
 **Favorite Books** | Science
 **Favorite Movies** | Science
 **Contact List** |
-**Planned Activities for the Day |
+**Planned Activities for the Day** |
 
 
 ## Input from the Internet
 
-????? | Information
+Information Type | Information
 ------|--------
 **List of Major Holidays** | 
  |New Year's Day  
@@ -58,11 +58,15 @@ User Prompt | User Information
  |Boston: 66F  
  |Vancouver: 63F  
  |Guam: 84F  
-**Movie Reviews**
-**Movie Schedules**
-**Time Anywhere in the World**
-**Cinema Locations**
-**Restaurant Locations**
+**Movie Reviews** | 
+**Movie Schedules** | 
+**Time Anywhere in the World** |
+**Cinema Locations** |
+**Restaurant Locations** |
+
+## App Improvement
+
+Compare your method, and the inputs it needed, to another group’s method.  What are the advantages and disadvantages of each?  How might you combine your ideas to make a better app?
 
 
 MARKDOWN

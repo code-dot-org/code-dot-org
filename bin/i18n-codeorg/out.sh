@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Distribute downloaded translations from i18n/locales
-# back to blockly, apps, pegasus, and dashboard.
+# back to blockly-core, apps, pegasus, and dashboard.
 
 set -e
 
@@ -55,7 +55,7 @@ for locale in $locales; do
 
 
   ### Blockly Core
-  orig_dir=apps/node_modules/@code-dot-org/blockly/i18n/locales/$locale
+  orig_dir=blockly-core/i18n/locales/$locale
   loc_dir=i18n/locales/$locale/blockly-core
   en_dir=i18n/locales/source/blockly-core
   mkdir -p $orig_dir

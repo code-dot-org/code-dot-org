@@ -16,31 +16,7 @@ Messages encrypted with the **Caesar cipher** are very easy to crack, especially
 * **Cracking encryption** - When you attempt to decode a secret message *without* knowing all the specifics of the cipher, you are trying to **crack** the encryption. 
 
 
+Click Continue to see the **Next Challenge**...
 
-
-### New Challenge: Crack a Random Substitution Cipher...with a new widget
-
-What if instead of shifting the whole alphabet, we mapped every letter of the alphabet to a random different letter of the alphabet? This is called a **random substitution cipher.**
-
-Now, instead of the secret message being encoded with a simple alphabetic shift, you'll face messages encoded with **random substitution**.  This is much harder to crack and requires a more sophisticated tool, so...
-
-When you click continue, you'll see a **new, more sophisticated version of the encryption tool** that shows you lots of different stuff.
-
-But what it does is bit of a mystery!  
-
-### Your Task:
-
- * Figure out what is going on in this new version of the tool
- * What information is being presented to you?
- * Figure out what the the tool let's you do
- * As usual: you can't break it.  So click on things, poke around.
- * If you figure it out you might be able to crack a message encoded with random substitution.
- 
-### Hint
-
-* Did you know that 'e' is the most common letter used in English?
-
-### Reconvene and Discuss
- After some time playing with it, you should get together with someone - partner, small group, whole class - to discuss what you found and verify that you know what's going on and the various ways you can use the tool.
  
 MARKDOWN
