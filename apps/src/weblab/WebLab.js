@@ -89,6 +89,17 @@ WebLab.prototype.init = function (config) {
   config.noHowItWorks = true;
   config.versionHistoryInInstructionsHeader = true;
 
+  config.afterClearPuzzle = (config) => {
+    return new Promise((resolve, reject) => {
+      // Reset startSources to the original value (ignoring lastAttempt)
+      this.startSources = JSON.parse(this.level.startSources);
+      // Force brambleHost to reload based on startSources
+      this.brambleHost.loadStartSources(() => {
+        resolve();
+      });
+    });
+  };
+
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
   // Provide a way for us to have top pane instructions disabled by default, but
