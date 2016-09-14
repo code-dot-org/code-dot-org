@@ -3,8 +3,8 @@
 # Table name: section_hidden_stages
 #
 #  id         :integer          not null, primary key
-#  section_id :integer
-#  stage_id   :integer
+#  section_id :integer          not null
+#  stage_id   :integer          not null
 #
 # Indexes
 #
