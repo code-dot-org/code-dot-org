@@ -6,6 +6,7 @@
 require('babel-polyfill');
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Immutable from 'immutable';
 import update from 'react-addons-update';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
@@ -40,28 +41,18 @@ window.TutorialExplorerManager = function (options) {
      * @param {bool} value - Whether the entry was checked or not.
      */
     handleUserInput: function (filterGroup, filterEntry, value) {
-      let filterEntryChange = {};
+      const state = Immutable.fromJS(this.state);
 
+      let newState = {};
       if (value) {
         // Add value to end of array.
-        filterEntryChange["$push"] = [filterEntry];
-
+        newState = state.updateIn(['filters', filterGroup], arr => arr.push(filterEntry));
       } else {
-        const itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
-
         // Find and remove specific value from array.
-        filterEntryChange["$splice"] = [[itemIndex, 1]];
+        const itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
+        newState = state.updateIn(['filters', filterGroup], arr => arr.splice(itemIndex, 1));
       }
-
-      const stateChange = {
-        filters: {
-          [filterGroup]: filterEntryChange
-        }
-      };
-
-      const newState = update(this.state, stateChange);
-
-      this.setState(newState);
+      this.setState(newState.toJS());
     },
 
     render() {

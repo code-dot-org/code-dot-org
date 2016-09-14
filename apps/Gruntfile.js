@@ -440,7 +440,7 @@ module.exports = function (grunt) {
       entries: {
         tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
       },
-      provides: ['react', 'react-dom', 'radium']
+      provides: ['react', 'react-dom']
     },
     {
       uniqueName: 'makerlabDependencies',
