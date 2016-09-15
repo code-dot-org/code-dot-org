@@ -2774,6 +2774,10 @@ en:
       U2L14 Assessment:
         'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Vigenere Cipher: Vigenere Cipher
+        an algorithm that cannot be solved in a reasonable amount of time: an algorithm that cannot be solved in a reasonable amount of time
+        an problem that cannot be solved in a reasonable amount of time: an problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
         character frequency: character frequency
         cipher: cipher
@@ -2781,6 +2785,10 @@ en:
         encrypt: encrypt
         encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption scheme that uses a different alphabetic shift for each character: encryption scheme that uses a different alphabetic shift for each character
+        encryption that shifts the alphabet differently for each character: encryption that shifts the alphabet differently for each character
+        encryption that uses a different alphabetic shift for each character: encryption that uses a different alphabetic shift for each character
         heuristic: heuristic
         random substitution cipher: random substitution cipher
         technique used to find an approximate solution: technique used to find an approximate solution
