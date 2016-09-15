@@ -1675,6 +1675,7 @@ en:
           Public Key Crypto: Public Key Crypto
           Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
+          Simple Encryption: Simple Encryption
         csp5:
           title: CSP Unit 5 - Building Apps
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
@@ -1913,6 +1914,7 @@ en:
           description_short: Problem Solving
           description: Temp place to work on U1 of Disco
           Processing Information: Processing Information
+          Exploring Apps: Exploring Apps
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
           description_short: Web Development
