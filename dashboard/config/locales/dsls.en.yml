@@ -2318,12 +2318,7 @@ en:
         "&lt;head&gt;": "&lt;head&gt;"
         "&lt;html&gt;": "&lt;html&gt;"
         "&lt;title&gt;": "&lt;title&gt;"
-        "<!DOCTYPE html>": "<!DOCTYPE html>"
-        "<head>": "<head>"
-        "<html>": "<html>"
-        "<title>": "<title>"
         Defines high level information about web page: Defines high level information about web page
-        Match the HTML elements which are fundamentals of web pages to their purpose.: Match the HTML elements which are fundamentals of web pages to their purpose.
         'Matching: Web Page Fundamentals': 'Matching: Web Page Fundamentals'
         Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.: Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
@@ -2775,24 +2770,16 @@ en:
         'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
         Computationally Hard: Computationally Hard
-        Vigenere Cipher: Vigenere Cipher
-        an algorithm that cannot be solved in a reasonable amount of time: an algorithm that cannot be solved in a reasonable amount of time
+        Vigenère Cipher: Vigenère Cipher
         an problem that cannot be solved in a reasonable amount of time: an problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
         encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
-        encryption scheme that uses a different alphabetic shift for each character: encryption scheme that uses a different alphabetic shift for each character
         encryption that shifts the alphabet differently for each character: encryption that shifts the alphabet differently for each character
-        encryption that uses a different alphabetic shift for each character: encryption that uses a different alphabetic shift for each character
-        heuristic: heuristic
         random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
@@ -2989,17 +2976,6 @@ en:
         Where is Brendan from?: Where is Brendan from?
         blue: blue
         salt: salt
-      unique level name here:
-        "<!DOCTYPE html>": "<!DOCTYPE html>"
-        "<head>": "<head>"
-        "<html>": "<html>"
-        "<title>": "<title>"
-        Defines high level information about web page: Defines high level information about web page
-        Shows the name of the page in a new tab: Shows the name of the page in a new tab
-        Starts and ends the HTML document: Starts and ends the HTML document
-        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
-        description here: description here
-        title: title
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -5966,14 +5942,9 @@ en:
         "<html>": "<html>"
         "<title>": "<title>"
         Defines high level information about web page: Defines high level information about web page
-        Question: Question
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

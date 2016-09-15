@@ -12,6 +12,7 @@ nav: educate_nav
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
 | [Code Studio](/educate/k5)  (Code.org)| 4 20-hour courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
+| [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee | 
 | [Kodable](Kodable.com) | 38 lesson plans that blend online independent practice with "unplugged" activities. 8 Lessons, FREE, Full curriculum, $15/student, $1950/site | Online or in-person PD included for paying schools | 
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
@@ -98,6 +99,7 @@ Check out one-hour, teacher-led lesson and activity plans designed for different
 
 <br/><br/>
 ## Other lists of resources for curriculum or PD
+- CSForAll's [Member List](http://www.csforall.org/members/)
 - AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
 - [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 
