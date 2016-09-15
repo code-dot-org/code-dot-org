@@ -7,6 +7,10 @@ class Tutorials
     @contents = DB[@table].all
   end
 
+  def contents
+    @contents
+  end
+
   def launch_url_for(code, domain)
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
