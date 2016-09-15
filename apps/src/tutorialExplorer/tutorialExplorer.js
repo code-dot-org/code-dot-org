@@ -6,7 +6,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
-import update from 'react-addons-update';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 
