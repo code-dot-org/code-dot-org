@@ -144,7 +144,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def name
-    stage.localized_name
+    I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
 
   def report_bug_url(request)
