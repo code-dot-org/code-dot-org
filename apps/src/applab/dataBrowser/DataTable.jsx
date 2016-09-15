@@ -71,6 +71,9 @@ const DataTable = React.createClass({
     return {
       newColumns: [],
       editingColumn: null,
+      pendingAdd: false,
+      // The old name of the column currently being renamed or deleted.
+      pendingColumn: null,
       showDebugView: false,
     };
   },
@@ -84,22 +87,35 @@ const DataTable = React.createClass({
 
   addColumn() {
     const columnName = this.getNextColumnName();
-    this.setState({
-      newColumns: this.state.newColumns.concat(columnName),
-      editingColumn: columnName,
-    });
+    const newColumns = this.state.newColumns.concat(columnName);
+    this.setState({pendingAdd: true});
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      this.setState({
+        newColumns,
+        editingColumn: columnName,
+        pendingAdd: false,
+      });
+    }, 0);
   },
 
   deleteColumn(columnToRemove) {
     this.setState({
-      newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
+      pendingColumn: columnToRemove,
     });
-    FirebaseStorage.deleteColumn(
-      this.props.tableName,
-      columnToRemove,
-      () => {},
-      error => console.warn(error)
-    );
+    const newColumns = this.state.newColumns.filter(column => column !== columnToRemove);
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      FirebaseStorage.deleteColumn(
+        this.props.tableName,
+        columnToRemove,
+        () => this.resetColumnState(newColumns),
+        error => {
+          console.warn(error);
+          this.resetColumnState(newColumns);
+        }
+      );
+    }, 0);
   },
 
   /**
@@ -118,18 +134,33 @@ const DataTable = React.createClass({
       newColumns.push(newName);
     }
     this.setState({
-      newColumns,
-      editingColumn: null
+      editingColumn: null,
     });
     if (oldName !== newName) {
-      FirebaseStorage.renameColumn(
-        this.props.tableName,
-        oldName,
-        newName,
-        () => {},
-        error => console.warn(error)
-      );
+      this.setState({
+        pendingColumn: oldName,
+      });
+      // Show the spinner icon before updating the data.
+      setTimeout(() => {
+        FirebaseStorage.renameColumn(
+          this.props.tableName,
+          oldName,
+          newName,
+          () => this.resetColumnState(newColumns),
+          error => {
+            console.warn(error);
+            this.resetColumnState(newColumns);
+          }
+        );
+      }, 0);
     }
+  },
+
+  resetColumnState(newColumns) {
+    this.setState({
+      newColumns,
+      pendingColumn: null
+    });
   },
 
   getColumnNames() {
@@ -267,19 +298,29 @@ const DataTable = React.createClass({
                     columnNames={columnNames}
                     deleteColumn={this.deleteColumn}
                     editColumn={this.editColumn}
-                    isEditable={columnName !== 'id'}
+                    /* hide gear icon if an operation is pending on another column */
+                    isEditable={
+                      columnName !== 'id' &&
+                      !(this.state.pendingColumn && this.state.pendingColumn !== columnName) &&
+                      !this.state.pendingAdd
+                    }
                     isEditing={editingColumn === columnName}
+                    isPending={this.state.pendingColumn === columnName}
                     renameColumn={this.renameColumn}
                   />
                 ))
               }
               <th style={styles.addColumnHeader}>
-                <FontAwesome
-                  id="addColumnButton"
-                  icon="plus"
-                  style={styles.plusIcon}
-                  onClick={this.addColumn}
-                />
+                {
+                  this.state.pendingAdd ?
+                    <FontAwesome icon="spinner" className="fa-spin"/> :
+                    <FontAwesome
+                      id="addColumnButton"
+                      icon="plus"
+                      style={styles.plusIcon}
+                      onClick={this.addColumn}
+                    />
+                }
               </th>
               <th style={dataStyles.headerCell}>
                 Actions
