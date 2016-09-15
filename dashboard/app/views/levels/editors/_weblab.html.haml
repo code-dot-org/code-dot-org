@@ -3,3 +3,11 @@
   %p
     Sources
 = f.text_area :start_sources, placeholder: 'Starting sources', rows: 40, class: "input-block-level", value: @level.start_sources
+.field
+  = f.label :project_template_level_name, 'Project Template Level Name'
+  %p What this does:
+  %ul
+    %li if Starting Sources are defined in the project template level, use those instead of the Starting Sources for this level
+    %li autocreate a project that is shared with all levels with the same project template level
+  %p (Leave blank if you do not want all of this)
+  = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
