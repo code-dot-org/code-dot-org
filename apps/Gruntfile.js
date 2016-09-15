@@ -376,7 +376,6 @@ module.exports = function (grunt) {
     var watch = options.watch;
 
     return webpackConfig.create({
-      uniqueName: 'apps',
       output: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.extend(
         {},
