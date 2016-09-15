@@ -17,7 +17,7 @@ social:
 -# Not ideal but we can pull the undigested file from /blockly.
 %script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
 
-- tutorials = Tutorials.new(:tutorials).contents
+- tutorialsContents = Tutorials.new(:tutorials).contents
 
 - filters = []
 
@@ -95,7 +95,7 @@ social:
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorials.to_json},
+      tutorials: #{tutorialsContents.to_json},
       filters: #{filters.to_json},
       locale: "#{request.locale}"
       }
