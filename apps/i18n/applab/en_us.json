@@ -184,7 +184,7 @@
   "dropletBlock_onRecordEvent_description": "Executes the callback function code when a create, update, or delete event occurs inside the specified table.",
   "dropletBlock_onRecordEvent_param0_description": "The name of the table to which this event handler applies.",
   "dropletBlock_onRecordEvent_param1_description": "The callback function executed in response to a create, update, or delete event in the specified table.",
-  "dropletBlock_onRecordEvent_param2_description": "Optional. Specifies whether the create event should fire for all existing records.",
+  "dropletBlock_onRecordEvent_param2_description": "Optional. Specifies whether a create event should also fire for each record that is already in the table.",
   "dropletBlock_penColor_description": "Sets the color of the pen used by the turtle for drawing lines and dots.",
   "dropletBlock_penColor_param0_description": "The color of the line left behind the turtle as it moves.",
   "dropletBlock_penDown_description": "Puts the pen down so the turtle draws a line behind it as it moves.",
