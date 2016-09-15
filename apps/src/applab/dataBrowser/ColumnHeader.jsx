@@ -11,8 +11,19 @@ import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
 
 const styles = {
-  menu: {
-    float: 'right'
+  columnName: {
+    display: 'inline-block',
+    maxWidth: dataStyles.maxCellWidth,
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  container: {
+    justifyContent: 'space-between',
+    padding: '6px 0',
+  },
+  iconWrapper: {
+    alignSelf: 'flex-end',
+    paddingLeft: 5,
   },
   icon: {
     color: 'white',
@@ -118,9 +129,9 @@ const ColumnHeader = React.createClass({
   },
 
   getDropdownMenu(isEditable) {
-    const menuStyle = [styles.menu, {
-      display: isEditable ? null : 'none',
-    }];
+    const menuStyle = {
+      visibility: isEditable ? null : 'hidden',
+    };
     /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
     return (
       <span className="dropdown pull-right" style={menuStyle}>
@@ -128,12 +139,12 @@ const ColumnHeader = React.createClass({
           <FontAwesome icon="cog" style={styles.icon}/>
         </a>
         <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
-          <li>
+          <li style={{cursor: 'pointer'}}>
             <a onClick={this.handleRename}>
               Rename
             </a>
           </li>
-          <li>
+          <li style={{cursor: 'pointer'}}>
             <a onClick={() => this.setState({isDialogOpen: true})}>
               Delete
             </a>
@@ -144,35 +155,28 @@ const ColumnHeader = React.createClass({
   },
 
   render() {
-    const containerStyle = {
+    const containerStyle = [styles.container, {
       display: this.props.isEditing ? 'none' : null,
-      padding: '6px 0',
-    };
+    }];
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
       minWidth: 80,
     }];
-    const columnNameStyle = {
-      display: 'inline-block',
-      maxWidth: dataStyles.maxCellWidth,
-      overflow: 'hidden',
-      whiteSpace: 'nowrap',
-    };
     return (
       <th style={dataStyles.headerCell}>
-        <div style={containerStyle}>
-          <div style={columnNameStyle}>
+        <div style={containerStyle} className="flex">
+          <div style={styles.columnName}>
             {this.props.columnName}
           </div>
-          {
-            this.props.isPending ?
-              <span style={{float: 'right'}}>
-                &nbsp;
-                <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/>
-              </span> :
-              this.getDropdownMenu(this.props.isEditable)
-          }
+          <div style={styles.iconWrapper}>
+            {
+              this.props.isPending ?
+                <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/> :
+                this.getDropdownMenu(this.props.isEditable)
+            }
+
+          </div>
         </div>
         <Dialog
           body="Are you sure you want to delete this entire column? You cannot undo this action."
