@@ -212,7 +212,7 @@ export function setInitialAnimationList(serializedAnimationList) {
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
-    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || null));
+    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
@@ -397,7 +397,7 @@ export function deleteAnimation(key) {
   return (dispatch, getState) => {
     const orderedKeys = getState().animationList.orderedKeys;
     const currentSelectionIndex = orderedKeys.indexOf(key);
-    let keyToSelect = (currentSelectionIndex === 0) ? 1: (currentSelectionIndex - 1);
+    let keyToSelect = (currentSelectionIndex === 0) ? 1 : (currentSelectionIndex - 1);
     dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
 
     dispatch({type: DELETE_ANIMATION, key});

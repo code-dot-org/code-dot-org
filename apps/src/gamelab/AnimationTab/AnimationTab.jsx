@@ -60,9 +60,9 @@ const styles = {
 const AnimationTab = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
-    columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
     onColumnWidthsChange: React.PropTypes.func.isRequired,
     // Provided by Redux
+    columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
     selectedAnimation: PropTypes.AnimationKey
   },
 

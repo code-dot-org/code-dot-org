@@ -87,8 +87,29 @@ describe('animationListModule', function () {
     });
   });
 
+  let createAnimationList = function (count) {
+    let orderedKeys = [];
+    let propsByKey = {};
+    let baseKey = 'anim';
+    for (let i = 0; i < count; i++) {
+      let key = baseKey + i;
+      orderedKeys.push(key);
+
+      propsByKey[key] = {
+        name: key,
+        sourceUrl: null,
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 4,
+        version: null
+      };
+    }
+    return {orderedKeys: orderedKeys, propsByKey: propsByKey};
+  };
+
   describe('action: set initial animationList', function () {
-    let oldWindowDashboard, server;
+    let oldWindowDashboard, server, store;
     beforeEach(function () {
       oldWindowDashboard = window.dashboard;
       window.dashboard = {
@@ -96,9 +117,9 @@ describe('animationListModule', function () {
           getCurrentId() {return '';}
         }
       };
-
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
+      store = createStore(combineReducers({animationList: reducer, animationTab}), {});
     });
 
     afterEach(function () {
@@ -108,40 +129,28 @@ describe('animationListModule', function () {
 
     it('when animationList has 1 item, selectedAnimation should be the animation', function () {
       const key0 = 'anim0';
-      let animationList = {
-        orderedKeys: [key0],
-        propsByKey: {
-          [key0]: {
-            name: 'New animation',
-            sourceUrl: null,
-            frameSize: {x: 100, y: 100},
-            frameCount: 1,
-            looping: true,
-            frameDelay: 4,
-            version: null,
-            loadedFromSource: true,
-            saved: false,
-            blob: null,
-            dataURI: null,
-            hasNewVersionThisSession: false
-          }
-        }
-      };
+      let animationList = createAnimationList(1);
 
-      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
       expect(store.getState().animationTab.selectedAnimation).to.equal(key0);
     });
 
-    it('when animationList has 0 items, selectedAnimation should be null', function () {
+    it('when animationList has multiple items, selectedAnimation should be the first animation', function () {
+      const key0 = 'anim0';
+      let animationList = createAnimationList(2);
+
+      store.dispatch(setInitialAnimationList(animationList));
+      expect(store.getState().animationTab.selectedAnimation).to.equal(key0);
+    });
+
+    it('when animationList has 0 items, selectedAnimation should be the empty string', function () {
       const key0 = 'anim0';
       let animationList = {
         orderedKeys: [],
         propsByKey: {}
       };
-      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
-      expect(store.getState().animationTab.selectedAnimation).to.be.null;
+      expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
   });
 
@@ -165,42 +174,10 @@ describe('animationListModule', function () {
       window.dashboard = oldWindowDashboard;
     });
 
-    it('deleting an animation reselects another animation in the animationList', function () {
+    it('deleting the first animation reselects the next animation in the animationList', function () {
       const key0 = 'anim0';
       const key1 = 'anim1';
-      let animationList = {
-        orderedKeys: [key0, key1],
-        propsByKey: {
-          [key0]: {
-            name: 'New animation 0',
-            sourceUrl: null,
-            frameSize: {x: 100, y: 100},
-            frameCount: 1,
-            looping: true,
-            frameDelay: 4,
-            version: null,
-            loadedFromSource: true,
-            saved: false,
-            blob: null,
-            dataURI: null,
-            hasNewVersionThisSession: false
-          },
-          [key1]: {
-            name: 'New animation 1',
-            sourceUrl: null,
-            frameSize: {x: 100, y: 100},
-            frameCount: 1,
-            looping: true,
-            frameDelay: 4,
-            version: null,
-            loadedFromSource: true,
-            saved: false,
-            blob: null,
-            dataURI: null,
-            hasNewVersionThisSession: false
-          }
-        }
-      };
+      let animationList = createAnimationList(2);
 
       let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
@@ -208,27 +185,20 @@ describe('animationListModule', function () {
       expect(store.getState().animationTab.selectedAnimation).to.equal(key1);
     });
 
+    it('deleting an animation reselects the previous animation in the animationList', function () {
+      const key0 = 'anim0';
+      const key1 = 'anim1';
+      let animationList = createAnimationList(2);
+
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(deleteAnimation(key1));
+      expect(store.getState().animationTab.selectedAnimation).to.equal(key0);
+    });
+
     it('deleting an animation deselects when there are no other animations in the animationList', function () {
       const key0 = 'anim0';
-      let animationList = {
-        orderedKeys: [key0],
-        propsByKey: {
-          [key0]: {
-            name: 'New animation',
-            sourceUrl: null,
-            frameSize: {x: 100, y: 100},
-            frameCount: 1,
-            looping: true,
-            frameDelay: 4,
-            version: null,
-            loadedFromSource: true,
-            saved: false,
-            blob: null,
-            dataURI: null,
-            hasNewVersionThisSession: false
-          }
-        }
-      };
+      let animationList = createAnimationList(1);
       let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0));
