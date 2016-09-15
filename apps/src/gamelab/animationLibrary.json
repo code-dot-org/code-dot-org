@@ -12,7 +12,11 @@
       "frameCount": 9,
       "looping": true,
       "frameDelay": 2,
-      "version": "392jYP3kyaZjdyAJeZ9Mc2DBKm.iOE0m"
+      "version": "392jYP3kyaZjdyAJeZ9Mc2DBKm.iOE0m",
+      "sourceSize": {
+        "x": 396,
+        "y": 378
+      }
     },
     "asterisk_explode": {
       "name": "asterisk_explode",
@@ -26,7 +30,11 @@
       "frameCount": 11,
       "looping": true,
       "frameDelay": 2,
-      "version": "BHA4WPmE52PjXKwtkb_2mQyFj5sd6Iyr"
+      "version": "BHA4WPmE52PjXKwtkb_2mQyFj5sd6Iyr",
+      "sourceSize": {
+        "x": 684,
+        "y": 474
+      }
     },
     "asterisk_normal": {
       "name": "asterisk_normal",
@@ -40,7 +48,11 @@
       "frameCount": 3,
       "looping": true,
       "frameDelay": 2,
-      "version": "jFUWP0rasB.wZ0bsPLr8IcPgNl0feI0d"
+      "version": "jFUWP0rasB.wZ0bsPLr8IcPgNl0feI0d",
+      "sourceSize": {
+        "x": 396,
+        "y": 126
+      }
     },
     "asterisk_stretching": {
       "name": "asterisk_stretching",
@@ -54,7 +66,11 @@
       "frameCount": 8,
       "looping": true,
       "frameDelay": 2,
-      "version": "79x0SO_sD9sBgCoZJxNIXGJwNhUuijZP"
+      "version": "79x0SO_sD9sBgCoZJxNIXGJwNhUuijZP",
+      "sourceSize": {
+        "x": 432,
+        "y": 432
+      }
     },
     "box": {
       "name": "box",
@@ -68,7 +84,11 @@
       "frameCount": 3,
       "looping": true,
       "frameDelay": 2,
-      "version": "Y4JZe0kz5HgrQEkM2FzLujXxqRJLuPFg"
+      "version": "Y4JZe0kz5HgrQEkM2FzLujXxqRJLuPFg",
+      "sourceSize": {
+        "x": 198,
+        "y": 118
+      }
     },
     "bubbly": {
       "name": "bubbly",
@@ -82,7 +102,11 @@
       "frameCount": 4,
       "looping": true,
       "frameDelay": 4,
-      "version": "NON__6_syACb5bq6crhXqh1yArHBcy5O"
+      "version": "NON__6_syACb5bq6crhXqh1yArHBcy5O",
+      "sourceSize": {
+        "x": 82,
+        "y": 520
+      }
     },
     "ghost_standing": {
       "name": "ghost_standing",
@@ -96,7 +120,11 @@
       "frameCount": 7,
       "looping": true,
       "frameDelay": 2,
-      "version": "bsPQ1dVzEpXey4z7U34gVs_aJ4CmMlyr"
+      "version": "bsPQ1dVzEpXey4z7U34gVs_aJ4CmMlyr",
+      "sourceSize": {
+        "x": 504,
+        "y": 158
+      }
     },
     "platform": {
       "name": "platform",
@@ -110,7 +138,11 @@
       "frameCount": 3,
       "looping": true,
       "frameDelay": 2,
-      "version": "nZXoIMRM6WfMyEV_Azq7Kw4_5MDE7JUp"
+      "version": "nZXoIMRM6WfMyEV_Azq7Kw4_5MDE7JUp",
+      "sourceSize": {
+        "x": 200,
+        "y": 219
+      }
     }
   },
   "aliases": {
