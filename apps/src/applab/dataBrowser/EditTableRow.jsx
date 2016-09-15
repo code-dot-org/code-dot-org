@@ -15,6 +15,7 @@ const EditTableRow = React.createClass({
 
   getInitialState() {
     return {
+      isDeleting: false,
       isEditing: false,
       isSaving: false,
       newRecord: {}
@@ -40,12 +41,12 @@ const EditTableRow = React.createClass({
     FirebaseStorage.updateRecord(
       this.props.tableName,
       this.state.newRecord,
-      this.handleSaveComplete,
+      this.resetState,
       msg => console.warn(msg)
     );
   },
 
-  handleSaveComplete() {
+  resetState() {
     this.setState(this.getInitialState());
   },
 
@@ -57,10 +58,11 @@ const EditTableRow = React.createClass({
   },
 
   handleDelete() {
+    this.setState({isDeleting: true});
     FirebaseStorage.deleteRecord(
       this.props.tableName,
       this.props.record,
-      () => {},
+      this.resetState,
       msg => console.warn(msg)
     );
   },
@@ -97,30 +99,34 @@ const EditTableRow = React.createClass({
 
         <td style={dataStyles.editButtonCell}>
           {
-            this.state.isEditing ?
-              <PendingButton
-                defaultText="Save"
-                isPending={this.state.isSaving}
-                onClick={this.handleSave}
-                pendingText="Saving..."
-                style={dataStyles.saveButton}
-              /> :
-              <button
-                style={dataStyles.editButton}
-                onClick={this.handleEdit}
-              >
-                Edit
-              </button>
+            !this.state.isDeleting && (
+              this.state.isEditing ?
+                <PendingButton
+                  defaultText="Save"
+                  isPending={this.state.isSaving}
+                  onClick={this.handleSave}
+                  pendingText="Saving..."
+                  style={dataStyles.saveButton}
+                /> :
+                <button
+                  style={dataStyles.editButton}
+                  onClick={this.handleEdit}
+                >
+                  Edit
+                </button>
+            )
           }
 
           {
             !this.state.isSaving && (
-              <button
-                style={dataStyles.redButton}
+              <PendingButton
+                defaultText="Delete"
+                isPending={this.state.isDeleting}
                 onClick={this.handleDelete}
-              >
-                Delete
-              </button>
+                pendingStyle={{float: 'right'}}
+                pendingText="Deleting..."
+                style={dataStyles.redButton}
+              />
             )
           }
         </td>
