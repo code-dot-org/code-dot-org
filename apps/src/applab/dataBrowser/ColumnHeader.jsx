@@ -28,6 +28,7 @@ const ColumnHeader = React.createClass({
     editColumn: React.PropTypes.func.isRequired,
     isEditable: React.PropTypes.bool.isRequired,
     isEditing: React.PropTypes.bool.isRequired,
+    isPending: React.PropTypes.bool.isRequired,
     renameColumn: React.PropTypes.func.isRequired,
   },
 
@@ -116,10 +117,33 @@ const ColumnHeader = React.createClass({
     return this.props.columnName === newName || !this.props.columnNames.includes(newName);
   },
 
-  render() {
+  getDropdownMenu(isEditable) {
     const menuStyle = [styles.menu, {
-      display: this.props.isEditable ? null : 'none',
+      display: isEditable ? null : 'none',
     }];
+    /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
+    return (
+      <span className="dropdown pull-right" style={menuStyle}>
+        <a className="dropdown-toggle" data-toggle="dropdown">
+          <FontAwesome icon="cog" style={styles.icon}/>
+        </a>
+        <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
+          <li>
+            <a onClick={this.handleRename}>
+              Rename
+            </a>
+          </li>
+          <li>
+            <a onClick={() => this.setState({isDialogOpen: true})}>
+              Delete
+            </a>
+          </li>
+        </ul>
+      </span>
+    );
+  },
+
+  render() {
     const containerStyle = {
       display: this.props.isEditing ? 'none' : null,
       padding: '6px 0',
@@ -141,24 +165,14 @@ const ColumnHeader = React.createClass({
           <div style={columnNameStyle}>
             {this.props.columnName}
           </div>
-          {/* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */}
-          <span className="dropdown pull-right" style={menuStyle}>
-            <a className="dropdown-toggle" data-toggle="dropdown">
-              <FontAwesome icon="cog" style={styles.icon}/>
-            </a>
-            <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
-              <li>
-                <a onClick={this.handleRename}>
-                 Rename
-                </a>
-              </li>
-              <li>
-                <a onClick={() => this.setState({isDialogOpen: true})}>
-                 Delete
-                </a>
-              </li>
-            </ul>
-          </span>
+          {
+            this.props.isPending ?
+              <span style={{float: 'right'}}>
+                &nbsp;
+                <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/>
+              </span> :
+              this.getDropdownMenu(this.props.isEditable)
+          }
         </div>
         <Dialog
           body="Are you sure you want to delete this entire column? You cannot undo this action."
