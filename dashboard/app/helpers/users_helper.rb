@@ -87,6 +87,7 @@ module UsersHelper
 
     unless exclude_level_progress
       uls = user.user_levels_by_level(script)
+      paired_uls = PairedUserLevel.pairs(uls.keys)
       script_levels = script.script_levels
       user_data[:levels] = {}
       script_levels.each do |sl|
@@ -110,7 +111,7 @@ module UsersHelper
                 result: ul.try(:best_result) || 0,
                 submitted: submitted ? true : nil,
                 readonly_answers: readonly_answers ? true : nil,
-                paired: ul.paired? ? true : nil
+                paired: (paired_uls.include? ul.try(:id)) ? true : nil
             }.compact
 
             # Just in case this level has multiple pages, in which case we add an additional
