@@ -18,48 +18,29 @@ import experiments from '@cdo/apps/experiments';
  */
 
 const styles = {
-  container: {
-    marginBottom: 5,
-    marginLeft: 5
-  },
   main: {
     display: 'inline-block',
     backgroundColor: color.lightest_cyan,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: color.cyan,
-    borderRadius: 10,
     borderStyle: 'solid',
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    maxWidth: '90%',
-    whiteSpace: 'nowrap'
+    borderTopRightRadius: 5,
+    borderBottomRightRadius: 5,
+    width: 240,
+    textAlign: 'center',
+    height: '100%',
   },
-  lessonPlan: {
-    ':hover': {
-      cursor: 'pointer',
-      textDecoration: 'underline',
-    },
-    marginTop: 5,
-    marginBottom: 5,
-    display: 'inline-block'
+  inner: {
+    marginTop: 20,
+    marginBottom: 20
   },
+  lessonPlanButton: progressStyles.blueButton,
   lessonPlanText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
     marginLeft: 10
-  },
-  toggle: {
-    marginLeft: 15,
-    marginTop: 5,
-    display: 'inline-block',
-    verticalAlign: 'top',
-  },
-  dotIcon: progressStyles.dotIcon
+  }
 };
 
-const TeacherStageInfo = React.createClass({
+const TeacherStageInfo = Radium(React.createClass({
   propTypes: {
     stage: stageShape,
 
@@ -91,19 +72,19 @@ const TeacherStageInfo = React.createClass({
     }
 
     return (
-      <div style={styles.container}>
-        <div style={styles.main}>
+      <div style={styles.main}>
+        <div style={styles.inner}>
           {lessonPlanUrl &&
-            <span style={styles.lessonPlan} onClick={this.clickLessonPlan}>
-              <FontAwesome icon="file-text" style={styles.dotIcon}/>
+            <button style={styles.lessonPlanButton} onClick={this.clickLessonPlan}>
+              <FontAwesome icon="file-text"/>
               <span style={styles.lessonPlanText}>
                 {dashboard.i18n.t('view_lesson_plan')}
               </span>
-            </span>
+            </button>
           }
           {lockable && <StageLock stage={stage}/>}
           {experiments.isEnabled('hiddenStages') && hiddenStagesInitialized &&
-            <div style={styles.toggle}>
+            <div>
               <HiddenStageToggle
                 hidden={!!isHidden}
                 onChange={this.onClickHiddenToggle}
@@ -114,7 +95,7 @@ const TeacherStageInfo = React.createClass({
       </div>
     );
   }
-});
+}));
 
 export default connect(state => {
   return {
@@ -128,4 +109,4 @@ export default connect(state => {
   toggleHidden(scriptName, stageId, hidden) {
     dispatch(toggleHidden(scriptName, stageId, hidden));
   }
-}))(Radium(TeacherStageInfo));
+}))(TeacherStageInfo);
