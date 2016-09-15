@@ -4,6 +4,7 @@ require 'open-uri'
 require 'json'
 
 RUN_ALL_TESTS_TAG = '[test all]'
+SKIP_UI_TESTS_TAG = '[skip ui]'
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
@@ -18,6 +19,10 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task :run_ui_tests do
+    if GitUtils.circle_commit_contains?(SKIP_UI_TESTS_TAG)
+      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{SKIP_UI_TESTS_TAG}, skipping UI tests for this run."
+      next
+    end
     RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
     RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.0-rc2-linux.tar.gz'
     RakeUtils.system_stream_output 'tar -xzf sc-4.4.0-rc2-linux.tar.gz'
