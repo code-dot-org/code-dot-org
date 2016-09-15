@@ -209,6 +209,9 @@ en:
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
+      CSDU2 IP Fair Use:
+        Fair Use: Fair Use
+        description here: description here
       CSDU2- home page examples: {}
       CSDU2L01 SFLP:
         description here: description here
@@ -804,6 +807,9 @@ en:
         description here: description here
         title: title
       Hour of Code test content: {}
+      How Secure Is Your Password?:
+        description here: description here
+        title: title
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -1430,9 +1436,6 @@ en:
         description here: description here
         title: title
       U4 Cleaning Data Activity Guide Pt3:
-        description here: description here
-        title: title
-      U4 How Secure Is Password?:
         description here: description here
         title: title
       U4 Inspirational Data Video: {}
@@ -2767,35 +2770,35 @@ en:
         Node: Node
         Weight: Weight
       U2L14 Assessment:
-        'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
         Computationally Hard: Computationally Hard
+        Terminology Matching: Terminology Matching
         Vigenère Cipher: Vigenère Cipher
-        an problem that cannot be solved in a reasonable amount of time: an problem that cannot be solved in a reasonable amount of time
+        a problem that cannot be solved in a reasonable amount of time: a problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
         encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
-        encryption that shifts the alphabet differently for each character: encryption that shifts the alphabet differently for each character
+        encryption that shifts the alphabet differently per character: encryption that shifts the alphabet differently per character
         random substitution cipher: random substitution cipher
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
-        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
-        'Assessment: Question 5': 'Assessment: Question 5'
-        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
-        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
         ? |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         : |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         Random Substitution Cipher: Random Substitution Cipher
-        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
+        SECRFULF_UGEUHWN: SECRFULF_UGEUHWN
+        SSSSFFFFXXXXTTTT: SSSSFFFFXXXXTTTT
+        TTTTUUUUVVVVWWWW: TTTTUUUUVVVVWWWW
+        The Caesar Cipher: The Caesar Cipher
         Vigenere Cipher: Vigenere Cipher
+        Which encryption technique?: Which encryption technique?
       U2L17 - Vocabulary matching:
         " <br>Brute force": " <br>Brute force"
         "<br>Computationally hard": "<br>Computationally hard"
@@ -4744,10 +4747,10 @@ en:
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
-        'Assessment: Question 1': 'Assessment: Question 1'
-        Long keys create exponential growth possibilities.: Long keys create exponential growth possibilities.
         One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
         The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        The key length is variable and potentially very long: The key length is variable and potentially very long
+        Vigenere Cipher: Vigenere Cipher
         Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
       U2L15 Assessment3:
         'Assessment: Question 3': 'Assessment: Question 3'
