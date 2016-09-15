@@ -77,11 +77,11 @@ const ConfirmImportButton = React.createClass({
           title="Overwrite existing data"
         />
         <PendingButton
-          defaultText="Import csv"
           isPending={this.state.isImporting}
           onClick={() => this.importFileInput.click()}
           pendingText="Importing..."
           style={dataStyles.whiteButton}
+          text="Import csv"
         />
       </span>
     );

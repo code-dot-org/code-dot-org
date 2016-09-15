@@ -102,11 +102,11 @@ const EditTableRow = React.createClass({
             !this.state.isDeleting && (
               this.state.isEditing ?
                 <PendingButton
-                  defaultText="Save"
                   isPending={this.state.isSaving}
                   onClick={this.handleSave}
                   pendingText="Saving..."
                   style={dataStyles.saveButton}
+                  text="Save"
                 /> :
                 <button
                   style={dataStyles.editButton}
@@ -120,12 +120,12 @@ const EditTableRow = React.createClass({
           {
             !this.state.isSaving && (
               <PendingButton
-                defaultText="Delete"
                 isPending={this.state.isDeleting}
                 onClick={this.handleDelete}
                 pendingStyle={{float: 'right'}}
                 pendingText="Deleting..."
                 style={dataStyles.redButton}
+                text="Delete"
               />
             )
           }
