@@ -6,11 +6,17 @@
   "user_id": 0,
   "properties": {
     "title": "Cracking the Code: Getting Started",
-    "markdown_instructions": "What do you think the difference is between “cracking” a code and “decrypting” a message?\n",
-    "encrypted_solution": "O958azioDS+oyCvl/wB0XTz6qgW7UuwJw3czu/hjVHBOTHEHBQtnAYPxRv7J\nJdrFNFCHuR/tbFMg7jmmyig0cOFsbmcVXRjULi9fK4QLqTC0l0f4xC7gmlRG\ngjKlAtdyI9CErnbiWxkdq7nDBPLBXk1V/TOj5ayi7Qi/AQzmw/5SKUC6B8mL\nQRX7sWpmZHuKWl03vU0YTiNHSr62NZo5q85kYBG4N7G9d4uga9LAGD4eyQf8\n2jAL2w95YK2Hwk9xGcsF+l4v1qx7PB6uNRGlYcPQfugHikd+18YazBdrtR8d\nWZRzm3qlLbd1CykfN9ZKqW6GDYgYf8TPsDJgxYk/spZ8UTQurp/P6JdNlXlA\nQvUFWBKM6jz5+FZukYSxyOKSDMaklJpW/kqIFv6dwG0IGzdO3iinKeEn2qbQ\nGhWzQCfn5xdRWy2tHbVoSi+7pKPZoLiktHvRS2xtZYZcVDCFZOI6ZfEZUWkd\nVOeeTehEaMrLAET1FHhvQfzd2c+M9Z6kUKEr15t0ZGvXPP2iWyDwKIfHm+gW\nZx75F5wHJh48gO3Vs1tb5ffVrIIf4f12T/i7jU1F93geD9PGqi+8wZJdeX8x\ncCub6Y5dgdpAe5AyG+7u3y6Nmf+A+C626v355IMDPefLUgTYn6PMoXpV4NuS\nTzAwpV6goH7JHnpLyHhrkR9a/TccixLKLv5ZJ2/IfMyH\n",
+    "markdown_instructions": "What is the difference is between “cracking” a code and “decrypting” a message?\r\n",
+    "encrypted_solution": "+DQbNUyWToQHfQZQon0lWSbrcx2oUJcdXpHaTT4tInvCKt4aXOCiSGK4bM+E\npnZ/7xctWlAxIDArpNgelE2xvZUa4fzpcT+JM/VLlMKE9U4mIzVR9Voz2E6D\ncIRGp4PffGiTGtTR3WoO/2pUGWK/wBVD1FsNcNCTyVL5frhyKJBdGLxYXZQv\nhtteX5LbcY8xq1K2dvwBdqCYykEJ42fglbadfoFC+IqiZ/bpmEGVFyBiPLc1\npOthj+Ag89zSdipVvgPbJG+Ow1jFZQ2IqlS4Ik+RkKnAK83ErkNdB1FSA7Mv\nfkbxrg62VcmWZxl2F9b0AB4TLuAZShRMa/T/U5Xd5w/ea/WgxIn8wik5fosK\nfNVH/hZShBLDdC4euV6uk5EthP4U2invKus0n/5FTD15c+d5yjCwOZdraXS/\nSHQXS1hbAdnH2iGo1MUDgVt2jh3KHO1/C/i14BjcuZNKWajwh6DpE2YUkImo\n96fN8iM7iyLWrtJ0f86/xuBVTbdok0NjVamFbyvDf865ecpBMZcvE2lE/eXe\nT4nTC3dQrAajVWKUgiZT571JnOuIbIHATerMXlOebNbaS6ZvLM3gQ7gyjYwI\nFbjQPXOcfHmxOT1/r1aJ0I6aMiExibbVt3kkv6fzZdk2IPHxJJQBwWJfNMjX\nbkcfPqbvbxd4QUzuk+UhNwWoxevQx32kx35IyjdJPRfuEzJjE9gJpvfAJTaQ\nsx7RWQ==\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

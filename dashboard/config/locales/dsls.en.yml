@@ -200,6 +200,7 @@ en:
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -1431,6 +1432,9 @@ en:
       U4 Cleaning Data Activity Guide Pt3:
         description here: description here
         title: title
+      U4 How Secure Is Password?:
+        description here: description here
+        title: title
       U4 Inspirational Data Video: {}
       U4 caesar cipher interstitial:
         That was easy, what's next?: That was easy, what's next?
@@ -2309,6 +2313,17 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD validator Matching:
+        "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
+        "&lt;head&gt;": "&lt;head&gt;"
+        "&lt;html&gt;": "&lt;html&gt;"
+        "&lt;title&gt;": "&lt;title&gt;"
+        Defines high level information about web page: Defines high level information about web page
+        'Matching: Web Page Fundamentals': 'Matching: Web Page Fundamentals'
+        Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.: Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2754,17 +2769,17 @@ en:
       U2L14 Assessment:
         'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Vigenère Cipher: Vigenère Cipher
+        an problem that cannot be solved in a reasonable amount of time: an problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
-        heuristic: heuristic
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently for each character: encryption that shifts the alphabet differently for each character
         random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
@@ -5922,11 +5937,14 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
+        "<!DOCTYPE html>": "<!DOCTYPE html>"
+        "<head>": "<head>"
+        "<html>": "<html>"
+        "<title>": "<title>"
+        Defines high level information about web page: Defines high level information about web page
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
