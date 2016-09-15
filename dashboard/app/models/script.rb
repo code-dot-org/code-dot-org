@@ -173,7 +173,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, stages: [:script_levels]]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -259,7 +259,10 @@ class Script < ActiveRecord::Base
   def self.get_from_cache(id)
     return get_without_cache(id) unless self.should_cache?
 
-    self.script_cache[id.to_s] || get_without_cache(id)
+    self.script_cache.fetch(id.to_s) do
+      # Populate cache on miss.
+      script_cache[id.to_s] = get_without_cache(id)
+    end
   end
 
   def to_param

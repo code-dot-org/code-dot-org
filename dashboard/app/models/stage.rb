@@ -154,6 +154,6 @@ class Stage < ActiveRecord::Base
 
   # Ensures we get the cached ScriptLevels, vs hitting the db.
   def cached_script_levels
-    script.script_levels.to_a.select{|sl| sl.stage_id == id}
+    script_levels.map{|sl| Script.cache_find_script_level(sl.id)}
   end
 end
