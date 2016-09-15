@@ -60,6 +60,9 @@ class PdWorkshopSurvey
       result[:things_you_would_change_s] = stripped data[:things_you_would_change_s]
       result[:anything_else_s] = stripped data[:anything_else_s]
 
+      result[:willing_to_talk_b] = required data[:willing_to_talk_b]
+      result[:how_to_contact_s] = required stripped data[:how_to_contact_s] if result[:willing_to_talk_b] == '1'
+
       if result[:include_demographics_b] == '1'
         result[:gender_s] = required_enum data, :gender_s
         result[:race_ss] = required_multi_enum data, :race_ss
