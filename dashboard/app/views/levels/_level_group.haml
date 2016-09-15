@@ -52,7 +52,7 @@
         -# Show any text from an external level.
         - if data["texts"]
           - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
-            - text_level = Level.find_by_name(text_level_info["level_name"])
+            - text_level = Script.cache_find_level(text_level_info["level_name"])
             .level-group-content
               = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
 
