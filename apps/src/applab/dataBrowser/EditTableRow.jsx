@@ -4,6 +4,7 @@ import React from 'react';
 import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
+import _ from 'lodash';
 
 const EditTableRow = React.createClass({
   propTypes: {
@@ -18,6 +19,13 @@ const EditTableRow = React.createClass({
       isSaving: false,
       newRecord: {}
     };
+  },
+
+  // Optimization: skip rendering when nothing has changed.
+  shouldComponentUpdate(nextProps, nextState) {
+    const propsChanged = !_.isEqual(this.props, nextProps);
+    const stateChanged = !_.isEqual(this.state, nextState);
+    return propsChanged || stateChanged;
   },
 
   handleChange(columnName, event) {
