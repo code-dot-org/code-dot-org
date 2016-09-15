@@ -144,8 +144,6 @@ var karmaConfig = _.extend({}, baseConfig, {
 /**
  * Generate the appropriate webpack config based off of our base config and
  * some input options
- * @param {string} uniqueName - Unique name for the bundle. Used by a webpack
- *   option to make sure our different bundles don't end up sharing webpack runtimes
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
@@ -156,7 +154,6 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {Array} options.externals - list of webpack externals
  */
 function create(options) {
-  var uniqueName = options.uniqueName;
   var outputDir = options.output;
   var entries = options.entries;
   var minify = options.minify;
@@ -165,19 +162,10 @@ function create(options) {
   var plugins = options.plugins;
   var externals = options.externals;
 
-  // Note: In a world where we have a single webpack config instead of an array
-  // of them, this becomes unnecessary.
-  if (!uniqueName) {
-    throw new Error('Must specify uniqueName for bundle');
-  }
-
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       filename: "[name]." + (minify ? "min." : "") + "js",
-      // This option is needed so that if we have two different bundles included
-      // on one page, they're smart enough to differentiate themselves
-      jsonpFunction: 'jsonp_' + uniqueName
     },
     devtool: options.minify ? 'source-map' : 'inline-source-map',
     entry: entries,
