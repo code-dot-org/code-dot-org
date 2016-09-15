@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "asterisk_circle": {
+      "name": "asterisk_circle",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 132,
+        "y": 126
+      },
+      "frameCount": 9,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "392jYP3kyaZjdyAJeZ9Mc2DBKm.iOE0m"
+    },
+    "asterisk_explode": {
+      "name": "asterisk_explode",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 171,
+        "y": 158
+      },
+      "frameCount": 11,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "BHA4WPmE52PjXKwtkb_2mQyFj5sd6Iyr"
+    },
+    "asterisk_normal": {
+      "name": "asterisk_normal",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 132,
+        "y": 126
+      },
+      "frameCount": 3,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "jFUWP0rasB.wZ0bsPLr8IcPgNl0feI0d"
+    },
+    "asterisk_stretching": {
+      "name": "asterisk_stretching",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 144,
+        "y": 144
+      },
+      "frameCount": 8,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "79x0SO_sD9sBgCoZJxNIXGJwNhUuijZP"
+    },
+    "box": {
+      "name": "box",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 66,
+        "y": 118
+      },
+      "frameCount": 3,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "Y4JZe0kz5HgrQEkM2FzLujXxqRJLuPFg"
+    },
+    "bubbly": {
+      "name": "bubbly",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 82,
+        "y": 130
+      },
+      "frameCount": 4,
+      "looping": true,
+      "frameDelay": 4,
+      "version": "NON__6_syACb5bq6crhXqh1yArHBcy5O"
+    },
+    "ghost_standing": {
+      "name": "ghost_standing",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 72,
+        "y": 158
+      },
+      "frameCount": 7,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "bsPQ1dVzEpXey4z7U34gVs_aJ4CmMlyr"
+    },
+    "platform": {
+      "name": "platform",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 73
+      },
+      "frameCount": 3,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "nZXoIMRM6WfMyEV_Azq7Kw4_5MDE7JUp"
+    }
+  },
+  "aliases": {
+    "asterisk_circle": [
+      "asterisk_circle"
+    ],
+    "p5.play": [
+      "asterisk_circle",
+      "asterisk_explode",
+      "asterisk_normal",
+      "asterisk_stretching",
+      "box",
+      "bubbly",
+      "ghost_standing",
+      "platform"
+    ],
+    "asterisk_explode": [
+      "asterisk_explode"
+    ],
+    "asterisk_normal": [
+      "asterisk_normal"
+    ],
+    "asterisk_stretching": [
+      "asterisk_stretching"
+    ],
+    "box": [
+      "box"
+    ],
+    "bubbly": [
+      "bubbly"
+    ],
+    "ghost_standing": [
+      "ghost_standing"
+    ],
+    "platform": [
+      "platform"
+    ]
+  }
+}
