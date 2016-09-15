@@ -6,12 +6,12 @@ import React from 'react';
 
 const PendingButton = React.createClass({
   propTypes: {
-    defaultText: React.PropTypes.string.isRequired,
     isPending: React.PropTypes.bool.isRequired,
     onClick: React.PropTypes.func.isRequired,
     pendingStyle: React.PropTypes.any,
     pendingText: React.PropTypes.string.isRequired,
     style: React.PropTypes.any,
+    text: React.PropTypes.string.isRequired,
   },
 
   render() {
@@ -29,7 +29,7 @@ const PendingButton = React.createClass({
               {this.props.pendingText}&nbsp;
               <FontAwesome icon="spinner" className="fa-spin"/>
             </span> :
-            this.props.defaultText
+            this.props.text
         }
       </button>
     );
