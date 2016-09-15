@@ -42,6 +42,7 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: action.stages.map(stage => _.omit(stage, 'hidden')),
+      scriptName: action.scriptName,
       currentStageId
     });
   }
@@ -57,7 +58,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       levelProgress: newLevelProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        if (stage.lockable && newLevelProgress[level.ids[0]] === LOCKED_RESULT) {
+        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
           return Object.assign({}, level, { status: LevelStatus.locked });
         }
 
@@ -124,12 +125,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewsRequired}) => ({
+    saveAnswersBeforeNavigation, stages, scriptName, peerReviewsRequired}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  scriptName,
   peerReviewsRequired
 });
 

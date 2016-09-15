@@ -679,6 +679,7 @@
   dashboard_action_remove_confirm: "Премахване?"
   dashboard_action_done: "Готово"
   dashboard_action_required: "изисквания"
+  dashboard_action_print_certificates: "Печат на сертификати"
   dashboard_assessments_view: "Виж оценките в:"
   dashboard_assessments_none: "Няма оценки"
   dashboard_assessments_none_part2: "Ако вие преподавате в курс, имаме нужда от оценъчни
@@ -894,11 +895,14 @@
   dashboard_faq: "Често задавани въпроси"
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: "Съобщения"
-  dashboard_announce_message: "<b>22 април 2016</b> - Дейностите без компютър са важна
-    част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите
-    може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
-    всички ресурси без компютър на една целева страница. Свържете уроците с всеки
-    Кн клас, или използвайте самостоятелно като независим курс."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -912,8 +916,9 @@
     зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
     образование."
   dashboard_announce_petition_button: "Добавете името си"
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: "Получавайте информация за нови функции и актуализации на
+    нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните
+    съобщения.</a>"
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
   learn_more: "Научете повече"
@@ -1775,12 +1780,13 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Learn more
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-13T01:55:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Debug\r\n\r\n\r\n\r\n# Do This\r\n* Look through at the src attribute and determine the cause. \r\n* Your goal is to have an HTML page that displays 5 images. \r\n* Notice that the “alt” attribute serves as a placeholder in case the image doesn’t load\r\n* It’s also helpful to know what the picture should be about in case there’s a problem with the file path",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <!DOCTYPE html>\r\n<html>\r\n<head>\r\n  <title>Crazy Houses</title>\r\n  <link rel=\"stylesheet\" href=\"style.css\">\r\n</head>\r\n  <h1>Crazy Houses</h1>\r\n  <h3>Upside Down House</h3>\r\n  <img src=houses2/upsidedown.jpg alt=\"large-brown-house-built-to-appear-inverted\"/>\r\n  <h3>UFO House</h3>\r\n  <img src=uo.jpg alt=\"round-ufo-on-top-of-house\"/>\r\n  <h3>Island House</h3>\r\n  <img src=island-house.jpg alt=\"multi-layered-house-on-thin-land\"/>\r\n  <h3>Tree House</h3>\r\n  <img src=trees.jpg alt=\"two-houses-in-trees-with-bridge\"/>\r\n  <h3>Old Mother Hubbard House</h3>\r\n  <img src=houses2/hubbard.jpg alt=\"shoe-shaped-house-with-yellow-door\"/>\r\n\r\n</html>\"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -135,16 +135,28 @@ class User < ActiveRecord::Base
   end
 
   def delete_permission(permission)
+    @permissions = nil
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission
   end
 
   def permission=(permission)
+    @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
 
+  # @param permission [UserPermission] the permission to query.
+  # @return [Boolean] whether the User has permission granted.
+  # TODO(asher): Determine whether request level caching is sufficient, or
+  #   whether a memcache or otherwise should be employed.
   def permission?(permission)
-    permissions.exists?(permission: permission)
+    if @permissions.nil?
+      # The user's permissions have not yet been cached, so do the DB query,
+      # caching the results.
+      @permissions = UserPermission.where(user_id: id).pluck(:permission)
+    end
+    # Return the cached results.
+    return @permissions.include? permission
   end
 
   def district_contact?
@@ -528,9 +540,14 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
-  def last_attempt_for_any(levels)
+  def last_attempt_for_any(levels, script_id: nil)
     level_ids = levels.map(&:id)
-    UserLevel.where(user_id: self.id, level_id: level_ids).
+    conditions = {
+      user_id: self.id,
+      level_id: level_ids
+    }
+    conditions[:script_id] = script_id unless script_id.nil?
+    UserLevel.where(conditions).
       order('updated_at DESC').
       first
   end
@@ -725,12 +742,6 @@ class User < ActiveRecord::Base
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
     scripts.where('user_scripts.completed_at is null').map(&:cached)
-  end
-
-  def completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
-    scripts.where('user_scripts.completed_at is not null').map(&:cached)
   end
 
   def working_on_user_scripts

@@ -1,7 +1,19 @@
+// This gets replaced by karma webpack with the updated files on rebuild
+import 'babel-polyfill';
+var __karmaWebpackManifest__ = [];
+
+function inManifest(path) {
+  return __karmaWebpackManifest__.indexOf(path) >= 0;
+}
+
+
 var testsContext = require.context("./unit", true, /\.js$/);
-testsContext.keys()
-  .filter(
-    key => !process.env.mocha_entry ||
-        ('./test/unit'+key.slice(1)).indexOf(process.env.mocha_entry) >= 0
-  )
-  .forEach(testsContext);
+
+var runnable = testsContext.keys().filter(inManifest);
+
+// Run all tests if we didn't find any changes
+if (!runnable.length) {
+  runnable = testsContext.keys();
+}
+
+runnable.forEach(testsContext);
