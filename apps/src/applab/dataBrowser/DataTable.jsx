@@ -194,12 +194,18 @@ const DataTable = React.createClass({
     return `column${i}`;
   },
 
-  importCsv(csvData) {
+  importCsv(csvData, onComplete) {
     FirebaseStorage.importCsv(
       this.props.tableName,
       csvData,
-      () => this.setState(this.getInitialState()),
-      msg => console.warn(msg));
+      () => {
+        this.setState(this.getInitialState());
+        onComplete();
+      },
+      msg => {
+        console.warn(msg);
+        onComplete();
+      });
   },
 
   exportCsv() {
