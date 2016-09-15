@@ -64,7 +64,12 @@ class ManifestBuilder
       json_response = objects['json'].get
       metadata = JSON.parse(json_response.body.read)
       # TODO: Validate metadata, ensure it has everything it needs
+      # Record target version in the metadata, so environments (and projects)
+      # consistently reference the version they originally imported.
       metadata['version'] = objects['png'].object.version_id
+
+      # Generate appropriate sourceUrl pointing to the animation library API
+      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
 
       # Populate sourceSize if not already present
       unless metadata.key?('sourceSize')
