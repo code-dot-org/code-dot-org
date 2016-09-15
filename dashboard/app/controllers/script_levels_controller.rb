@@ -90,6 +90,59 @@ class ScriptLevelsController < ApplicationController
     present_level
   end
 
+  # Get a list of hidden stages for the current users section
+  def hidden
+    authorize! :read, ScriptLevel
+
+    if current_user.try(:teacher?)
+      sections = current_user.sections.select{|s| s.deleted_at.nil?}
+    elsif current_user.try(:student?)
+      sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
+    end
+
+    if sections.nil? || sections.empty?
+      render json: []
+      return
+    end
+
+    script_sections = sections.select{|s| s.script.name == params[:script_id]}
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
+      # hides the stage
+      stage_ids = script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
+    else
+      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
+      # of th sections the student belongs to
+      all_ids = sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      stage_ids = counts.select{|_, val| val == sections.length}.keys
+    end
+
+    render json: stage_ids
+  end
+
+  def toggle_hidden
+    section_id = params.require(:section_id).to_i
+    stage_id = params.require(:stage_id)
+    # this is "true" in tests but true in non-test requests
+    should_hide = params.require(:hidden) == "true" || params.require(:hidden) == true
+
+    section = Section.find(section_id)
+    authorize! :read, section
+
+    # TODO(asher): change this to use a cache
+    return head :forbidden unless Stage.find(stage_id).try(:script).try(:hideable_stages)
+
+    hidden_stage = SectionHiddenStage.find_by(stage_id: stage_id, section_id: section_id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenStage.create(stage_id: stage_id, section_id: section_id)
+    end
+
+    render json: []
+  end
+
   private
 
   # Configure http caching for the given script. Caching is disabled unless the

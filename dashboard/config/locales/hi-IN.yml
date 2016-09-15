@@ -4,6 +4,14 @@
       not_saved: "कृपया निम्न गलतिया सुधारें:"
       too_young: "यह सामग्री आयु प्रतिबंधित है और युवा छात्रों के लिए उपलब्ध नहीं
         है"
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -82,22 +90,11 @@
   signup_form:
     student_count: "%{count} छात्रों जिनहोने पहले ही साइन अप किया हैं"
     teacher_count: "%{count} शिक्षकों जिनहोने पहले ही साइन अप किया हैं"
-    overview_student: अपनी प्रगति को मापने के लिए एक खाते के लिए साइन अप करें. आपका
-      ईमेल मुख्य रूप से आप में और पासवर्ड वसूली के लिए लॉग इन करने की अनुमति देने
-      के लिए प्रयोग किया जाता है. अधिक जानकारी के लिए, देखिए हमारी <a href="http://code.org/privacy">गोपनीयता
-      नीति</a>.
-    overview_teacher: "एक खाते के लिए साइन अप करने से अपनी कक्षा में कंप्यूटर विज्ञान
-      पढाईए ।<p/> आप अपने छात्रों को जोड़ने और उनकी प्रगति को मापने में सक्षम हो सकते
-      हैं ।"
-    no_signup_message: आप <a target="_blank" href="http://learn.code.org">विभिन्न
-      चरणों और पहेली ब्राउज़ कर सकते हैं</a>, लेकिन अगर आप अपनी प्रगति बचाना चाहते
-      हो, तो साइन अप करने की आवश्यकता होगी ।
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: "शिक्षक मार्गदर्शिका देखें"
-    teacher_pitch: "कोड.ऑर्ग साइन अप शिक्षक के लिए"
-    teacher_title: "शिक्षक के लिए साइन अप"
-    student_pitch: "कोड.ऑर्ग साइन अप छात्र के लिए"
-    student_title: "छात्र के लिए साइन अप"
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: "स्कूल का नाम (यदि आप चाहते हैं)"
     school_address: "स्कूल का पता (यदि आप चाहते हैं)"
     address_placeholder: "पता, शहर, राज्य, पिन"
@@ -126,9 +123,11 @@
     user_type_label: Account Type
     user_type_teacher: Teacher
     user_type_student: "छात्र"
+    field_is_required: "की आवश्यकता है"
+    accept_terms: You must agree to create an account
   signin_form:
     title: "एक खाता पहले से ही है ? साइन इन करें"
-    login: "ईमेल या उपयोगकर्ता का नाम"
+    login: "ईमेल"
     password: "पासवर्ड"
     remember: "मुझे याद रखना"
     submit: Sign in
@@ -147,8 +146,10 @@
   password:
     reset_form:
       title: "अपना पासवर्ड भूल गए?"
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: "ईमेल पता"
-      submit: "मुझे पासवर्ड निर्देश रीसेट करें भेजें"
+      submit: "सबमिट करें"
     change_form:
       title: "अपना पासवर्ड परिवर्तित करें"
       new_password: "नया पासवर्ड"
@@ -329,6 +330,7 @@
       submitted_on: Submitted on %{date}
       unsubmit: Unsubmit
       worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -399,11 +401,14 @@
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
     announcement_title: "घोषणाएँ"
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -692,6 +697,34 @@
       with any third parties.
     sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
       out</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Terms of Service
+    privacy: Privacy Policy
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Print
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
@@ -865,3 +898,6 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.

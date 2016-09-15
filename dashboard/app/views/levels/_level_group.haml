@@ -65,6 +65,28 @@
           - if ['multi', 'evaluation_multi'].include? level_class
             -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
             - unless current_user.try(:should_see_inline_answer?, @script_level)
+
+              / temporary debug information 2
+              - unless @script_level.nil?
+                .answer_hidden_2{style: "display: none"}
+                  .script_level
+                    = @script_level.to_json
+                  - if current_user
+                    .current_user_id
+                      = current_user.id
+                    .authorized_teacher
+                      = current_user.authorized_teacher?.to_json
+                    - script = @script_level.try(:script)
+                    .script
+                      = script.to_json
+                    .professional_course
+                      = script.try(:professional_course?).to_json
+                    .userlevel
+                      = UserLevel.find_by(user: current_user, level: @script_level.level).to_json
+                    .readonly_answers
+                      = UserLevel.find_by(user: current_user, level: @script_level.level).try(:readonly_answers).to_json
+              / end temporary debug information 2
+
               - level.properties['answers'].each { |answer| answer['correct'] = false }
             = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
           - elsif level_class == "text_match"

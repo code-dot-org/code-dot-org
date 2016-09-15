@@ -17,12 +17,14 @@ describe("The applab/import module", () => {
     designModeViz.id = "designModeViz";
     document.body.appendChild(designModeViz);
     sinon.stub(designMode, 'changeScreen');
+    sinon.stub(designMode, 'resetPropertyTab');
     sinon.stub(assetsApi, 'copyAssets');
   });
 
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
     designMode.changeScreen.restore();
+    designMode.resetPropertyTab.restore();
     assetsApi.copyAssets.restore();
   });
 

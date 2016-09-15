@@ -95,6 +95,8 @@ WebLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
+  config.pinWorkspaceToBottom = true;
+
   const onMount = () => {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
@@ -102,6 +104,14 @@ WebLab.prototype.init = function (config) {
     // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
     // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
     // this.studioApp_.init(config);
+
+    // NOTE: if we called studioApp_.init(), the code here would be executed
+    // automatically since pinWorkspaceToBottom is true...
+    var container = document.getElementById(config.containerId);
+    var bodyElement = document.body;
+    bodyElement.style.overflow = "hidden";
+    bodyElement.className = bodyElement.className + " pin_bottom";
+    container.className = container.className + " pin_bottom";
   };
 
   // Push initial level properties into the Redux store
@@ -116,18 +126,6 @@ WebLab.prototype.init = function (config) {
 
   function onRedo() {
     this.brambleHost.redo();
-  }
-
-  function onShowPreview() {
-    this.brambleHost.hideTutorial();
-    // temporarily, register a "change" when the preview or tutorial buttons are pressed. TODO: hook up onProjectChanged to Bramble
-    this.onProjectChanged();
-  }
-
-  function onShowTutorial() {
-    this.brambleHost.showTutorial();
-    // temporarily, register a "change" when the preview or tutorial buttons are pressed. TODO: hook up onProjectChanged to Bramble
-    this.onProjectChanged();
   }
 
   let inspectorOn = false;
@@ -145,8 +143,6 @@ WebLab.prototype.init = function (config) {
       <WebLabView
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
-        onShowPreview={onShowPreview.bind(this)}
-        onShowTutorial={onShowTutorial.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />
@@ -199,6 +195,9 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
       this.onIsRunningChange(state.runState.isRunning);
     }
   });
+};
+
+WebLab.prototype.onIsRunningChange = function () {
 };
 
 /**

@@ -103,6 +103,13 @@ module ScriptConstants
     minecraft: [MINECRAFT_NAME]
   }
 
+  # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
+  # This can be used to override that, with lower numbers ordered sooner, and higher numbers
+  # ordered later.
+  CATEGORY_ORDERING_PRIORITY = {
+    csp: 1,
+  }
+
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
@@ -114,6 +121,10 @@ module ScriptConstants
 
   def self.position_in_category(script, category)
     CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
+  end
+
+  def self.category_priority(category)
+    CATEGORY_ORDERING_PRIORITY[category.to_sym] || 0
   end
 
   def self.teacher_dashboard_name(script)
