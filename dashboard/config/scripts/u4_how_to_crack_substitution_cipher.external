@@ -3,22 +3,42 @@ title 'How to crack a substitution cipher'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Break a random substitution cipher!
+# Cracking Substitution Ciphers
 
-Messages encrypted with the **Caesar cipher** are very easy to crack. What if instead of shifting the whole alphabet, we mapped every letter of the alphabet to a random different letter of the alphabet? This is called a **random substitution cipher**.
+The best technique for cracking a random substitution cipher is known as **frequency analysis** 
 
-In this version of the tool, you'll be interacting more with the graphs that show letter frequency. By analyzing the frequency of the letters in the encrypted message compared to the frequency of letters in a typical piece of English prose, you can start to narrow in on what some of the letter mappings might be. Did you know that *'E'* is the most common letter used in the English language? Maybe the most common letter in your encrypted text maps to the letter *'E'*, but maybe not! You'll have to do a bit of guess and check to see if that substitution makes sense.
+Paraphrased from: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+* **Frequency analysis** is a technique that is based on how *frequently* certain letters appear in English versus others.
+* For instance, given a section of English text, *E*, *T*, *A* and *O* are the most common, while *Z*, *Q* and *X* are rare. Likewise, *TH*, *ER*, *ON*, and *AN* are the most common pairs of letters that occur next to each other.
+* In fact, the distribution of letters is roughly the same for almost *all* samples of English text. 
 
 
-# Do this
-- Load the **Sample message (hard)** from the message dropdown. This will load a message that has been encrypted with a random substitution cipher.  
-![](https://images.code.org/04c6230c9607110126581c298bc09183-image-1443569176380.gif)
+The version of the widget on the previous page is intended to help you **crack a substitution cipher through frequency analysis**.
 
-- You will crack the message by guessing what each letter of the alphabet contained in the original ciphertext should be changed to. You can do so by dragging the blue letters of the alphabet directly underneath the orange letter you want changed in the original ciphertext. Letters that have been changed using your guesses will no longer be highlighted orange in the message window on the left.
-![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+By analyzing the frequency of the letters in the encrypted message compared to the frequency of letters in a typical piece of English prose, you can start to narrow in on what some of the letter mappings might be. 
 
-- Play with some of the sorting options available in the Random substitution cipher tab to get different views on the letter frequencies in the input text as well as standard English text.
-![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+The tool shows you how the frequency of letters in the encrypted text (orange) compares with frequencies from typical english (blue).
 
-See how long it takes you to crack the cipher! Is this a good method of encrypting secret data?
+### Hint: Where to start?
+
+1. Find the short words and "crack" them first.  How many one-letter words do you know? ("a").  A very common 3-letter word is "the".
+2. Once you've done that, you have substitions for some of the most common letters.  You should be able to use intuition to look at other words with these partial subsititions and make good guesses.
+3. After finding only a handful of hard-fought letters, the rest will tumble quickly.
+4. Comparing the frequencies of letters gives good insight for making sensible guesses.
+
+### Try this:
+The animation below shows someone getting started.  Here's what they tried
+
+* First sort the characters by frequency. 
+* Identify a group of characters that might map to the word `the`.  
+It's a good start!
+
+![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+## Is random substitution good?
+* After a little practice, how long does it take you to crack a random substitution cipher?
+* Is this good or not?
+
+
 MARKDOWN

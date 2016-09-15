@@ -189,7 +189,11 @@ export function importIntoProject(projectId, screens, assets) {
   return dispatch => {
     dispatch({type: IMPORT.SCREENS.START_IMPORTING, screens, assets});
     importFuncs.importScreensAndAssets(projectId, screens, assets).then(
-      () => dispatch({type: IMPORT.SCREENS.FINISHED_IMPORTING}),
+      () => {
+        dispatch({type: IMPORT.SCREENS.FINISHED_IMPORTING});
+        const lastScreen = screens[screens.length - 1];
+        dispatch(changeScreen(lastScreen.id));
+      },
       () => dispatch({type: IMPORT.SCREENS.FAILED_IMPORTING})
     );
   };

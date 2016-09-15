@@ -12,7 +12,7 @@ namespace :seed do
   file STANFORD_HINTS_IMPORTED => [STANFORD_HINTS_FILE, :environment] do
     LevelSourceHint.transaction do
       source_name = LevelSourceHint::STANFORD
-      LevelSourceHint.delete_all(['source=?', source_name])
+      LevelSourceHint.where(source: source_name).delete_all
       CSV.read(STANFORD_HINTS_FILE, { col_sep: "\t" }).each do |row|
         LevelSourceHint.create!(
           level_source_id: row[0], hint: row[1],
