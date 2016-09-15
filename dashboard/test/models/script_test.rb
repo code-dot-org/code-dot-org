@@ -296,6 +296,33 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script_level, Script.cache_find_script_level(script_level.id)
   end
 
+  test 'cache_find_level uses cache with ID lookup' do
+    level = Script.first.script_levels.first.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal level, Script.cache_find_level(level.id)
+  end
+
+  test 'cache_find_level uses cache with name lookup' do
+    level = Script.first.script_levels.first.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal level, Script.cache_find_level(level.name)
+  end
+
+  test 'cache_find_level raises exception on bad ID and bad name' do
+    bad_id = Level.last.id + 1
+
+    assert_raises(ActiveRecord::RecordNotFound) do
+      Script.cache_find_level(bad_id)
+    end
+    assert_raises(ActiveRecord::RecordNotFound) do
+      Script.cache_find_level('not a level name')
+    end
+  end
+
   test 'level uses cache' do
     script_level = Script.first.script_levels.first
     expected_level = script_level.level
