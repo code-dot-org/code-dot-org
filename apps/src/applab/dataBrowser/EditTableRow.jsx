@@ -13,6 +13,14 @@ const EditTableRow = React.createClass({
     record: React.PropTypes.object.isRequired
   },
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  },
+
   getInitialState() {
     return {
       isDeleting: false,
@@ -47,7 +55,10 @@ const EditTableRow = React.createClass({
   },
 
   resetState() {
-    this.setState(this.getInitialState());
+    // Deleting a row may have caused this component to become unmounted.
+    if (this.isMounted_) {
+      this.setState(this.getInitialState());
+    }
   },
 
   handleEdit() {

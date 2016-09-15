@@ -23,6 +23,14 @@ const EditKeyRow = React.createClass({
     };
   },
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  },
+
   handleChange(event) {
     this.setState({newValue: castValue(event.target.value)});
   },
@@ -44,7 +52,10 @@ const EditKeyRow = React.createClass({
   },
 
   resetState() {
-    this.setState(this.getInitialState());
+    // Deleting a key/value pair could cause this component to become unmounted.
+    if (this.isMounted_) {
+      this.setState(this.getInitialState());
+    }
   },
 
   handleDelete() {
