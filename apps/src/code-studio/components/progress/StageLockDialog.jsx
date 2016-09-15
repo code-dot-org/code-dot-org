@@ -16,6 +16,7 @@ const styles = {
     marginLeft: 20,
     marginRight: 20,
     color: color.charcoal,
+    whiteSpace: 'normal',
     // maxHeight provided in render method based on window size
     overflowY: 'scroll'
   },
