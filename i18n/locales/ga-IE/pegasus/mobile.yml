@@ -532,6 +532,7 @@ ga-IE:
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Féach measúnuithe i:'
   dashboard_assessments_none: 'Baineann go leor múinteoirí úsáid as an gcluaisín "Féach Dul Chun Cinn" le dul chun cinn a gcuid daltaí a leanúint. Má tá tú ag iarraidh measúnuithe sa bhreis a dhéanamh, gheobhaidh tú ceisteanna agus réimsí molta sna pleananna ceachta. Déantar iad seo lasmuigh den Stiúideo Códála.'
   dashboard_assessments_none_part2: Má tá tú ag múineadh cúrsa ag an dara leibhéal, tá ceisteanna measúnaithe againn mar chuid den Stiúideo Códála mar acmhainn do dhaltaí a dhéanfaidh an scrúdú AP. Chun na measúnuithe seo a úsáid, tabhair an cúrsa do do rang, ansin roghnaigh an cúrsa ón roghchlár anuas agus feicfidh tú freagraí do chuid daltaí anseo.
@@ -702,13 +703,14 @@ ga-IE:
   dashboard_faq: Ceisteanna Coitianta
   dashboard_faq_k5: 'Bunscoil: Ceisteanna Coitianta'
   dashboard_announcements: Fógraí
-  dashboard_announce_message: 'Ar mhaith leat cabhrú linn chun gné nua a thástáil? Tuigimid go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail, mar sin beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh do chuid aiseolais sula gcraolfaimid an gné go poiblí.'
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Tuilleadh eolais
   dashboard_announce_try_now_button: Bain triail as anois
   dashboard_announce_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim. Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo, tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
   dashboard_announce_petition_button: "Cuir d'ainm leis"
-  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+  dashboard_announce_all: "Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach ar fhógraí roimhe seo.</a>"
   code_hoc_coming: 'Tá an Uair Chódála anseo - 8-14 Nollaig!'
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_more: Bain triail as anois

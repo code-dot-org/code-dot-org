@@ -389,7 +389,7 @@
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: Lees meer
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
@@ -404,7 +404,7 @@
   homepage_slot_text_link_othercourses: Andere online cursussen
   homepage_slot_text_title_educators: Educatoren
   homepage_slot_text_blurb_educators: Leer het je leerlingen
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Basisschool
   homepage_slot_text_link_middle: Middelbare school
   homepage_slot_text_link_high: Middelbare school
   homepage_slot_text_link_k5: Lessen voor kleuters
@@ -415,7 +415,7 @@
   homepage_slot_text_link_stats: Bekijk de statistieken
   homepage_slot_text_link_buy: Doe mee
   homepage_slot_text_link_donate: Doneer
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-shirts, hoeden, & meer
   homepage_header_codestudio: Creaties van Code Studio leerlingen
   homepage_header_donors: Code.org dankt zijn aanhangers
   homepage_donors_seall: Alles weergeven
@@ -487,9 +487,9 @@
   minecraft_subtitle: Minecraft Uur Code
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
+  speak_another_language: Spreek je een andere taal?
+  help_translate: Help ons met vertalen.
+  no_internet: Heeft u geen Internet?
   download_offline: Download the offline version.
   are_you_teacher: Bent u een leraar?
   review_lesson_plan: Review the lesson plan and other teacher resources.
@@ -685,6 +685,7 @@
   dashboard_action_remove_confirm: Verwijder?
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -694,10 +695,10 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Enquêtes
+  dashboard_percent: Percentage
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_all: Alle
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Startpagina voor de leerkracht
   dashboard_navigation_section_student_progress: Leerlingaccounts en vooruitgang
@@ -714,7 +715,7 @@
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
   dashboard_navigation_lesson_plans_resources: Lesplan en middelen
-  dashboard_navigation_view_stats: Statistieken Bekijken
+  dashboard_navigation_view_stats: Statistieken
   dashboard_navigation_section: 'groep: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: niet gestart
@@ -862,12 +863,12 @@
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
   dashboard_response: Antwoord
-  dashboard_correctness: Correctness
+  dashboard_correctness: Juistheid
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Juist
   dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
+  dashboard_submission_submitted: Ingediend
   dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
@@ -894,11 +895,14 @@
   dashboard_faq: Veelgestelde Vragen
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -1046,8 +1050,8 @@
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  cspexam1-mWU7ilDYM9_name: Test deel 1-25 vragen
+  cspexam2-AKwgAh1ac5_name: Test deel 2 -25 vragen
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1787,12 +1791,13 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Learn more
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.

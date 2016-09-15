@@ -490,6 +490,7 @@
   dashboard_action_remove_confirm: crwdns27795:0crwdne27795:0
   dashboard_action_done: crwdns7793:0crwdne7793:0
   dashboard_action_required: crwdns7794:0crwdne7794:0
+  dashboard_action_print_certificates: crwdns58278:0crwdne58278:0
   dashboard_assessments_view: crwdns56489:0crwdne56489:0
   dashboard_assessments_none: crwdns56490:0crwdne56490:0
   dashboard_assessments_none_part2: crwdns56924:0crwdne56924:0
@@ -659,7 +660,7 @@
   dashboard_faq: crwdns23313:0crwdne23313:0
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
-  dashboard_announce_message: crwdns57071:0crwdne57071:0
+  dashboard_announce_message_fall2016_features: 'crwdns58393:0%{pp_url}crwdnd58393:0%{csp_widgets_url}crwdnd58393:0%{unused_code_url}crwdne58393:0'
   dashboard_announce_csp_widgets_message: crwdns57874:0crwdne57874:0
   dashboard_announce_learn_more_button: crwdns57875:0crwdne57875:0
   dashboard_announce_try_now_button: crwdns57876:0crwdne57876:0

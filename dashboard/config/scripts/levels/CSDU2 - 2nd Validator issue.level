@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Validator Continued\r\n\r\nLet's continue working with the validator.\r\n\r\n# Do This\r\n\r\n* In a new tab, open up the <a href=\"https://validator.w3.org/\">W3 validator</a>.\r\n* Click Validate by Direct Input\r\n* Copy and paste the contents of index.html into the box.\r\n* Click “Check”\r\n* Read the first error message\r\n* Fix the error in your index.html file in Web Lab\r\n\r\nShould get Element head is missing a required\r\ninstance of child element title.\r\nfix - add head and child",
+    "markdown_instructions": "# Add head and title tags\r\n\r\n&lt;head&gt;\r\n* contains all the information about the page that does not show on the page itself\r\n\r\n&lt;title&gt;\r\n* needs to not be blank\r\n* Shows up in the tab when you open a web page\r\n\r\n# Do This\r\n\r\n* Add a &lt;head&gt; tag above the first content in your page\r\n* Add a &lt;title&gt; tag inside the &lt;head&gt; tag. Makes sure to give your page a title\r\n* Once you have done this return to the <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/3\">validator level</a>",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1> Header </h1> \\n  A bunch of text about something. \\n <h4> Sub Header </h4> \\n  Some more text about something.  <h6> List </h6>  <ol>\\n  <li> thing 1 </li>\\n  <li> thing 2 </li>\\n  <li> thing 3 </li>\\n  </ol>\r\n \"\r\n    }\r\n  ]\r\n}"
   },
   "published": true,

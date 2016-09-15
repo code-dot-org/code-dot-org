@@ -874,6 +874,8 @@ en:
           Gamelab: crwdns57709:0crwdne57709:0
           Anonymous student survey: crwdns57710:0crwdne57710:0
           Anonymous student survey 2: crwdns57711:0crwdne57711:0
+          Public Key Cryptography: crwdns58276:0crwdne58276:0
+          Web Lab: crwdns58360:0crwdne58360:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1596,6 +1598,9 @@ en:
           HTTP and Abstraction: crwdns56353:0crwdne56353:0
           Practice PT - The Internet and Society: crwdns56354:0crwdne56354:0
           Encoding and Sending Formatted Text: crwdns56599:0crwdne56599:0
+          CS Principles Pre-survey: crwdns58361:0crwdne58361:0
+          Unit 1 Chapter 1 Assessment: crwdns58362:0crwdne58362:0
+          Unit 1 Chapter 2 Assessment: crwdns58363:0crwdne58363:0
         csp2:
           title: crwdns56355:0crwdne56355:0
           description_short: crwdns56356:0crwdne56356:0
@@ -1615,6 +1620,8 @@ en:
           Cleaning Data: crwdns56370:0crwdne56370:0
           Creating Summary Tables: crwdns56371:0crwdne56371:0
           Practice PT - Tell a Data Story: crwdns56372:0crwdne56372:0
+          Unit 2 Chapter 1 Assessment: crwdns58364:0crwdne58364:0
+          Unit 2 Chapter 2 Assessment: crwdns58365:0crwdne58365:0
         csp3:
           title: crwdns56373:0crwdne56373:0
           description_short: crwdns56374:0crwdne56374:0
@@ -1705,6 +1712,8 @@ en:
           Variables Unplugged: crwdns57713:0crwdne57713:0
           Complex Sprite Movement: crwdns57714:0crwdne57714:0
           Collisions: crwdns58179:0crwdne58179:0
+          Sprite Movement Methods: crwdns58366:0crwdne58366:0
+          Collision Detection: crwdns58367:0crwdne58367:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description_short: crwdns56471:0crwdne56471:0
@@ -1879,6 +1888,7 @@ en:
           title: crwdns56817:0crwdne56817:0
           description_short: crwdns56818:0crwdne56818:0
           description: crwdns56819:0crwdne56819:0
+          Processing Information: crwdns58368:0crwdne58368:0
         CSDU2-Draft:
           title: crwdns56820:0crwdne56820:0
           description_short: crwdns56821:0crwdne56821:0
@@ -1892,6 +1902,7 @@ en:
           Designing Code for Computers: crwdns58184:0crwdne58184:0
           Digital Footprint: crwdns58185:0crwdne58185:0
           Images on the Web: crwdns58186:0crwdne58186:0
+          Finalizing Website: crwdns58369:0crwdne58369:0
         CSDU5-Draft:
           title: crwdns56823:0crwdne56823:0
           description_short: crwdns56824:0crwdne56824:0
@@ -2020,6 +2031,11 @@ en:
           Scaffolded Project Stage (Loops, Events, Conditionals, Functions): crwdns58194:0crwdne58194:0
           Build a Star Wars Game!: crwdns58195:0crwdne58195:0
           "Bee: Determine the Concept": crwdns58196:0crwdne58196:0
+          "Bee: Functions (Course 3)": crwdns58370:0crwdne58370:0
+          "Unplugged: Kinesthetic Functions": crwdns58371:0crwdne58371:0
+          "Farmer: Functions (New)": crwdns58372:0crwdne58372:0
+          Determine the Concept Part 2: crwdns58373:0crwdne58373:0
+          "Unplugged: Funky Functions": crwdns58374:0crwdne58374:0
         grade1:
           Predicting & Debugging: crwdns57134:0crwdne57134:0
           Persistence & Frustration: crwdns57135:0crwdne57135:0
@@ -2038,6 +2054,7 @@ en:
           description_short: crwdns57734:0crwdne57734:0
           description: crwdns57735:0crwdne57735:0
           description_audience: crwdns57736:0crwdne57736:0
+          Loops Intro: crwdns58277:0crwdne58277:0
         grade5:
           title: crwdns57138:0crwdne57138:0
           description_short: crwdns57139:0crwdne57139:0
@@ -2172,6 +2189,16 @@ en:
           More Programming with Scratch: crwdns58205:0crwdne58205:0
           More Programming with CS4FN: crwdns58206:0crwdne58206:0
           Robot Farmer While: crwdns58207:0crwdne58207:0
+          Bounce: crwdns58375:0crwdne58375:0
+          Artist Debugging: crwdns58376:0crwdne58376:0
+          "Farmer: While Loops": crwdns58377:0crwdne58377:0
+          " Bee: Conditionals": crwdns58378:0crwdne58378:0
+          "Maze: Conditionals with Loops": crwdns58379:0crwdne58379:0
+          Build a Game: crwdns58380:0crwdne58380:0
+          "Artist: Loops": crwdns58381:0crwdne58381:0
+          "Maze: Nested Loops": crwdns58382:0crwdne58382:0
+          "Artist: Nested Loops": crwdns58383:0crwdne58383:0
+          Bee Debugging: crwdns58384:0crwdne58384:0
         Test CPS PD:
           test Unit 1 required reading: crwdns56679:0crwdne56679:0
           test Unit 1 content module Alpha: crwdns56680:0crwdne56680:0
@@ -2294,3 +2321,12 @@ en:
           title: crwdns58239:0crwdne58239:0
           Anonymous student survey 2: crwdns58240:0crwdne58240:0
           Anonymous student pre-survey: crwdns58241:0crwdne58241:0
+          Unit 1 Chapter 1 Assessment: crwdns58385:0crwdne58385:0
+          NEW Unit 1 Chapter 1 Assessment: crwdns58386:0crwdne58386:0
+        sciencepd3-2016:
+          title: crwdns58387:0crwdne58387:0
+          description_short: crwdns58388:0crwdne58388:0
+          description: crwdns58389:0crwdne58389:0
+          Welcome Back!: crwdns58390:0crwdne58390:0
+          The TLO: crwdns58391:0crwdne58391:0
+          Prep With Your Modules: crwdns58392:0crwdne58392:0

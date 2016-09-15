@@ -505,13 +505,13 @@ zh:
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: 這一課叫做移動它，移動它。我們將一起寫一個程式來讓我們的朋友從開始的指南針到目標的笑臉。
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: 但是笑臉是臉朝下，只有一個人知道怎麼去到那裡。讓我們開始這個程式吧。
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: 程序是一個機器可以運行的算法編碼。我們大多數人認為程序是我們寫給電腦的東西。程序很好的地方在於它們可以對其他地方很有幫助。你可以編一個屬於自己的遊戲或者讓一個機器人為你效勞。
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png

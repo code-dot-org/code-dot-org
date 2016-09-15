@@ -14,7 +14,7 @@ class PeerReviewsController < ApplicationController
   end
 
   def pull_review
-    script = Script.find_by_name(params[:script_id])
+    script = Script.get_from_cache(params[:script_id])
 
     # If the user is not enrolled in this script, don't let them pull a review
     unless Plc::EnrollmentUnitAssignment.exists?(user: current_user, plc_course_unit: script.plc_course_unit)

@@ -136,7 +136,7 @@ class Stage < ActiveRecord::Base
     end
     script_level = self.script_levels[0]
     return students.map do |student|
-      user_level = UserLevel.find_by(user_id: student.id, level: script_level.level, script_id: self.script.id)
+      user_level = student.last_attempt_for_any script_level.levels, script_id: self.script.id
       # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
       # don't yet have a user_level, and need to provide enough data to create one
       {

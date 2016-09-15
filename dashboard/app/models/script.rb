@@ -79,7 +79,14 @@ class Script < ActiveRecord::Base
     end
   end
 
-  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required peer_reviews_to_complete)
+  serialized_attrs %w(
+    admin_required
+    hideable_stages
+    pd
+    peer_reviews_to_complete
+    professional_learning_course
+    student_of_admin_required
+  )
 
   def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -646,6 +653,7 @@ class Script < ActiveRecord::Base
       id: id,
       name: name,
       plc: professional_learning_course?,
+      hideable_stages: hideable_stages?,
       stages: summarized_stages,
       peerReviewsRequired: peer_reviews_to_complete || 0
     }
@@ -664,6 +672,7 @@ class Script < ActiveRecord::Base
 
   def self.build_property_hash(script_data)
     {
+      hideable_stages: script_data[:hideable_stages] || false, # default false
       pd: script_data[:pd] || false, # default false
       admin_required: script_data[:admin_required] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false

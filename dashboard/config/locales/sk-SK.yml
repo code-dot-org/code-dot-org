@@ -4,6 +4,14 @@
       not_saved: 'Opravte prosím nasledujúce chyby:'
       too_young: Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších
         študentov
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -30,7 +38,7 @@
   unsubmit: Neodoslať
   previous_page: Predchádzajúca strana
   next_page: Nasledujúca strana
-  next_resource: Next resource
+  next_resource: "Ďalší zdroj"
   done_with_module: Done with this Learning Module
   cancel: Zrušiť
   okay: Dobre
@@ -82,19 +90,11 @@
   signup_form:
     student_count: "%{count} študentov sa už zaregistrovalo."
     teacher_count: "%{count} učitelov sa už zaregistrovalo."
-    overview_student: Vytvor si účet a sleduj ako postupuješ. Tvoj email sa používa
-      hlavne na prihlásenie a na získanie zabudnutého hesla. Viac informácií nájdeš
-      na našej stránke zásad <a href="http://code.org/privacy">Ochrany súkromia</a>.
-    overview_teacher: Učte informatiku vo Vašej triede.<p/> Po prihlásení na účet
-      budete mať možnosť pridávať svojich študentov a sledovať ich pokrok.
-    no_signup_message: Môžete <a target="_blank" href="http://learn.code.org">prehliadať
-      rôzne úrovne a hádanky</a>, ale pre uloženie Vášho postupu je nutné prihlásenie.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Pozrieť príručku učiteľa
-    teacher_pitch: Prihlásiť sa do Code.org ako učiteľ
-    teacher_title: Prihlásiť sa ako učiteľ
-    student_pitch: Prihlásiť sa do Code.org ako študent/žiak
-    student_title: Prihlásiť sa ako študent/žiak
-    signup_title: Prihlásiť sa do Code.org
+    title: Sign up for Code.org
     school_name: Názov školy (voliteľné)
     school_address: Adresa školy (voliteľné)
     address_placeholder: adresa, mesto, štát, PSČ
@@ -121,9 +121,11 @@
     user_type_label: Typ účtu
     user_type_teacher: Učiteľ
     user_type_student: "Študent"
+    field_is_required: sa vyžaduje
+    accept_terms: You must agree to create an account
   signin_form:
     title: Máte už vytvorený účet? Prihláste sa
-    login: E-mail alebo užívateľské meno
+    login: E-mail
     password: Heslo
     remember: Zapamätať prihlásenie
     submit: Prihlásiť sa
@@ -137,13 +139,15 @@
     picture: Teraz nájdite Váš tajný obrázok
     words: Teraz zadajte vaše tajné slová
     login: Prihlásiť sa
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Neplatné prihlasovacie meno, prosím, skús to ešte raz
+    pair_programming: Mám partnera pri počítači
   password:
     reset_form:
       title: Zabudli ste heslo?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: E-mailová adresa
-      submit: Pošlite mi pokyny na obnovenie hesla
+      submit: Odoslať
     change_form:
       title: Zmeňte Vaše heslo
       new_password: Nové heslo
@@ -288,9 +292,9 @@
       signup: Zaregistrovať sa
       already_registered: Ste už zaregistrovaný?
       pair_programming: Pair Programming
-      team: Team
+      team: Tím
       driver: Driver
-      navigator: Navigator
+      navigator: Navigátor
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
       progress: Váš pokrok
@@ -325,7 +329,8 @@
       example_with_number: Príklad riešenia %{solution_number}
       submitted_on: 'Dátum odoslania:'
       unsubmit: Neodoslať
-      worked_with: Worked With
+      worked_with: Pracoval/a s
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'
@@ -396,22 +401,26 @@
     choose_next_course: Vyskúšajte Code Studio kurz výberom niektorého z nižsie uvedených
     print_certificate: Vytlačiť certifikát
     announcement_title: Oznámenia
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Dozvedieť sa viac
     announcement_try_now_button: Skús teraz
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition: Ako učiteľ patríte medzi propagátorov hnutia za to, aby
+      každý študent v každej škole dostal príležitosť učiť sa informatiku. A teraz
+      je čas, aby si vaši zástupcovia vypočuli Váš názor. Tento týždeň sa zástupcovia
+      učiteľov, 28 guvernérov a generálni riaditelia najväčších amerických spoločností
+      spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku
+      informatiky v rámci celej školskej dochádzky na základných i stredných školách.
     announcement_petition_button: Pridaj svoje meno
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
@@ -692,6 +701,34 @@
       ich vek. <br/> Ako vždy, code.org nikdy neprenajme, nepredá alebo nezdieľa tieto
       informácie s tretími stranami.
     sign_out: Ak si neželáte poskytnúť váš vek môže sa <a href="%{url}"> odhlásiť</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Podmienky
+    privacy: Zásady ochrany súkromia
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Tlačiť
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu
     stránku podpory. Môžeš si prezerať <a href="http://support.code.org">support.code.org</a>
     bez prihlásenia, prípadne požiadať tvojich rodičov alebo učiteľov, aby nás za
@@ -789,9 +826,9 @@
     escalated:
       name: Vyriešené
       description: Inštruktor by mohol preskúmať tento návrh
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: Spätná väzba inštruktora
+    peer_feedback: Spätná väzba spoluriešiteľa
+    outdated: Táto spätná väzba bola pridaná k predchádzajúcej verzii
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -807,14 +844,14 @@
       no_icons_found: Nenašli sa žiadne ikony
     playzone:
       artist_description: Draw cool pictures and designs with the Artist!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Nová kresba
+      continue_button: Choď na ďalšiu fázu
       playlab_description: Create a story or make a game with Play Lab!
-      playlab_title: New App
+      playlab_title: Nová aplikácia
       primary_header: Gratulujem! Dokončil si %{stageName}!
       projects_description: Revisit one of your existing projects.
       projects_title: Otvoriť projekt
-      secondary_header: Ask your teacher what to do next
+      secondary_header: Spýtaj sa učiteľa, čo máš robiť ďalej
   flex_category:
     required: Prehľad
     content: Obsah
@@ -830,10 +867,10 @@
       please <a href='%{support_url}'>contact support</a> if you find the content
       objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
+    title: Hodina kódu - súbory na stiahnutie
     capsule_title: Máte prístup na internet?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
+    capsule_desc: Používaj online webovú aplikáciu <a href="%{url}">%{app_name}</a>.
+    instructions_headline: "Žiadny internet?"
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers
@@ -841,12 +878,12 @@
       on all computers. Note: students will not be able to log into Code Studio, save
       progress, or print certificates. Teachers may print certificates ahead of time
       <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
+    minecraft_name: Hodina kódu Minecraft
+    starwars_blocks_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (bloky)'
+    starwars_javascript_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)'
+    download_message: Stiahnuť %{app_name} na použitie v offline móde (136MB)
     download_in_english: 'Stiahnúť v angličtine:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_spanish: 'Stiahnuť s španielštine:'
     windows: Windows
     mac: Mac OS X
   plc:
@@ -862,3 +899,6 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.

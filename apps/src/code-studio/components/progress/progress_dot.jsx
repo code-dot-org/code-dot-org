@@ -284,7 +284,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [5275, []],
+                ids: [5275],
                 kind: 'assessment',
                 next: [2, 1],
                 position: 1,
@@ -305,7 +305,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [5275, []],
+                ids: [5275],
                 kind: 'assessment',
                 next: [2, 1],
                 position: 1,
@@ -326,7 +326,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [5275, []],
+                ids: [5275],
                 kind: 'assessment',
                 next: [2, 1],
                 position: 1,
@@ -347,7 +347,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [5275, []],
+                ids: [5275],
                 kind: 'puzzle',
                 next: [2, 1],
                 position: 1,
@@ -367,7 +367,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [2288, []],
+                ids: [2288],
                 kind: 'puzzle',
                 next: [2, 1],
                 position: 6,
@@ -387,7 +387,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [2288, []],
+                ids: [2288],
                 kind: 'puzzle',
                 next: [2, 1],
                 position: 6,
@@ -407,7 +407,7 @@ if (BUILD_STYLEGUIDE) {
               currentLevelId="2288"
               level={{
                 icon: null,
-                ids: [2288, []],
+                ids: [2288],
                 kind: 'puzzle',
                 position: 6,
                 status: 'not_tried',
@@ -425,7 +425,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [2094, []],
+                ids: [2094],
                 kind: 'unplugged',
                 previous: [1, 2],
                 position: 1,
@@ -444,7 +444,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
-                ids: [1379, []],
+                ids: [1379],
                 kind: 'puzzle',
                 name: 'CSP Pre-survey',
                 position: 2,
@@ -463,7 +463,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
-                ids: [5442, []],
+                ids: [5442],
                 kind: 'named_level',
                 name: 'CSP Pre-survey',
                 position: 1,
@@ -483,7 +483,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-video-camera',
-                ids: [5078, []],
+                ids: [5078],
                 kind: 'named_level',
                 name: 'Computer Science is Changing Everything',
                 position: 3,
@@ -503,7 +503,7 @@ if (BUILD_STYLEGUIDE) {
               courseOverviewPage={true}
               saveAnswersBeforeNavigation={false}
               level={{
-                ids: [1073563865, []],
+                ids: [1073563865],
                 position: 7,
                 kind: "named_level",
                 icon: null,
@@ -523,7 +523,7 @@ if (BUILD_STYLEGUIDE) {
               courseOverviewPage={true}
               saveAnswersBeforeNavigation={false}
               level={{
-                ids: [1073563865, []],
+                ids: [1073563865],
                 position: 7,
                 kind: "named_level",
                 icon: null,
@@ -543,7 +543,7 @@ if (BUILD_STYLEGUIDE) {
               courseOverviewPage={true}
               saveAnswersBeforeNavigation={false}
               level={{
-                ids: [1073563865, []],
+                ids: [1073563865],
                 position: 7,
                 kind: "named_level",
                 icon: null,
@@ -582,7 +582,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [5096, []],
+                ids: [5096],
                 kind: 'named_level',
                 name: 'Internet Simulator: sending binary messages',
                 position: 2,
@@ -602,7 +602,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
-                ids: [5442, []],
+                ids: [5442],
                 kind: 'named_level',
                 name: 'CSP Pre-survey',
                 position: 1,
@@ -623,7 +623,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-video-camera',
-                ids: [5078, []],
+                ids: [5078],
                 kind: 'named_level',
                 name: 'Computer Science is Changing Everything',
                 position: 3,
@@ -644,7 +644,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [2049, []],
+                ids: [2049],
                 kind: 'puzzle',
                 position: 4,
                 next: [3,1],
@@ -664,7 +664,7 @@ if (BUILD_STYLEGUIDE) {
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
-                ids: [2049, []],
+                ids: [2049],
                 kind: 'puzzle',
                 position: 4,
                 next: [3,1],

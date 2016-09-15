@@ -84,7 +84,7 @@ describe('ProgressDot component tests', () => {
         saveAnswersBeforeNavigation={false}
         level={{
           icon: null,
-          ids: [5275, []],
+          ids: [5275],
           kind: 'assessment',
           next: [2, 1],
           position: 1,
