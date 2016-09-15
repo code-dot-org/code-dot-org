@@ -1780,6 +1780,7 @@ en:
             Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
             Public Key Crypto: Public Key Crypto
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
+            Simple Encryption: Simple Encryption
             Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
             The Cost of Free: The Cost of Free
             What is Big Data?: What is Big Data?
@@ -2042,6 +2043,7 @@ en:
           description: Temp place to work on U1 of Disco
           description_short: Problem Solving
           stage:
+            Exploring Apps: Exploring Apps
             Processing Information: Processing Information
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
