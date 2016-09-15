@@ -52,10 +52,12 @@ const StageLock = React.createClass({
     }
     return (
       <div style={{display: 'inline-block'}}>
+        /* className used only for purposes of uitest */
         <button
           style={progressStyles.blueButton}
           onClick={this.openLockDialog}
           disabled={this.props.saving}
+          className="uitest-locksettings"
         >
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
