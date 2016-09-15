@@ -14,7 +14,8 @@ social:
 
 = view 'mobilecheck.js'
 
-%script{src: CDO.studio_url('/assets/js/tutorialExplorer.js')}
+-# Not ideal but we can pull the undigested file from /blockly.
+%script{src: CDO.studio_url('/blockly/js/tutorialExplorer.js')}
 
 - tutorials = Tutorials.new(:tutorials)
 
