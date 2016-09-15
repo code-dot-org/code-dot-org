@@ -19,7 +19,7 @@ stage 'The Cost of Free'
 level 'U4L13 Student Lesson Introduction'
 level 'U4 - Privacy Abandoned - Hot On Your Trail Video'
 
-stage 'Tell Me a Secret - Encrypting Text'
+stage 'Simple Encryption'
 level 'v2 U4L05 Student Lesson Intro Encryption Caesar'
 named_level 'Crack a Caesar Cipher'
 level 'U4 caesar cipher interstitial'
@@ -34,21 +34,23 @@ assessment 'U2L13 Free Response Wrap Up'
 
 stage 'Cracking the Code'
 level 'v2 U4L06 Student Lesson Introduction Encryption Vigenere'
+named_level 'The Vigenere Cipher Widget'
+named_level 'U4 How Secure Is Password?'
+named_level 'Video - Encryption and Public Keys'
 
-level 'U2 vigenere cipher'
 assessment 'U2L14 Free Response Getting Started'
 assessment 'U2L14 Assessment'
 assessment 'U2L14 Free Response Wrap Up'
 assessment 'U2L14 Assessment2'
 assessment 'U2L14 Assessment3'
 assessment 'U2L14 Assessment4'
-
-stage 'Encryption Algorithms'
-level 'U2L15 Student Lesson Introduction'
 assessment 'U2L15 Assessment1'
 assessment 'U2L15 Assessment2'
 assessment 'U2L15 Assessment3'
 assessment 'U2L15 Assessment4'
+
+#level 'U2L15 Student Lesson Introduction'
+
 
 stage 'Alice and Bob and Asymmetric Keys'
 level 'U2L16 Student Lesson Introduction'
@@ -72,3 +74,7 @@ stage 'Practice PT - Cybersecurity Innovations'
 level 'U2L20 Student Lesson Introduction'
 level 'U2 The Internet: Cybersecurity and Crime - Video'
 level 'U2 Encryption and Public Keys - Video'
+
+# Turds
+stage 'Tell Me a Secret - Encrypting Text'
+stage 'Encryption Algorithms'

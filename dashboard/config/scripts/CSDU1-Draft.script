@@ -4,6 +4,13 @@ description_short 'Problem Solving'
 login_required 'true'
 hidden 'true'
 
+stage 'Exploring Apps'
+level 'CSD U1 Input Output Intro'
+level 'CSD U1 Input Output C1'
+level 'CSD U1 Input Output C2'
+level 'CSD U1 Input Output C3'
+level 'CSD U1 Input Output C4'
+
 stage 'Processing Information'
 level 'CSD U1 - PixFilter 1x1 intro'
 level 'CSD U1 - PixFilter Filter Intro'
