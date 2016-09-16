@@ -99,40 +99,44 @@ module.exports = {
             assert.equal(column1NameInput.is(':visible'), true, 'column1 name input is visible');
             ReactTestUtils.Simulate.change(column1NameInput[0], { target: { value: 'firstname' } });
             ReactTestUtils.Simulate.keyUp(column1NameInput[0], enterKeyEvent);
-            assert.equal(column1NameInput.is(':visible'), false, 'column1 name input is hidden');
-            assert.equal(dataTable.find('th > div:contains(firstname)').is(':visible'), true, 'column1 renamed to firstname');
-
-            // add new column
-            ReactTestUtils.Simulate.click($('#addColumnButton')[0]);
             setTimeout(() => {
-              const column2NameInput = dataTable.find('th > input[value="column2"]');
-              assert.equal(column2NameInput.is(':visible'), true, 'column2 name input is visible');
-              ReactTestUtils.Simulate.change(column2NameInput[0], { target: { value: 'age' } });
-              ReactTestUtils.Simulate.keyUp(column2NameInput[0], enterKeyEvent);
-              assert.equal(dataTable.find('th > div:contains(age)').is(':visible'), true, 'column1 renamed to age');
+              assert.equal(column1NameInput.is(':visible'), false, 'column1 name input is hidden');
+              assert.equal(dataTable.find('th > div:contains(firstname)').is(':visible'), true, 'column1 renamed to firstname');
 
-              // add new row
-              const addRow = $('#dataTable').find('tr:contains(Add Row)');
-              ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'bob' } });
-              ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '8' } });
-              ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+              // add new column
+              ReactTestUtils.Simulate.click($('#addColumnButton')[0]);
               setTimeout(() => {
-                const dataRow1 = $('#dataTable').find('tr:contains(Edit)');
-                assert.equal(dataRow1.find('td')[0].innerHTML, '1', 'id cell value');
-                assert.equal(dataRow1.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
-                assert.equal(dataRow1.find('td')[2].innerHTML, '8', 'age cell value');
-
-                // add another row
-                ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'charlie' } });
-                ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '9' } });
-                ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+                const column2NameInput = dataTable.find('th > input[value="column2"]');
+                assert.equal(column2NameInput.is(':visible'), true, 'column2 name input is visible');
+                ReactTestUtils.Simulate.change(column2NameInput[0], { target: { value: 'age' } });
+                ReactTestUtils.Simulate.keyUp(column2NameInput[0], enterKeyEvent);
                 setTimeout(() => {
-                  const dataRow2 = $('#dataTable').find('tr:contains(Edit)');
-                  assert.equal(dataRow2.find('td')[0].innerHTML, '1', 'id cell value');
-                  assert.equal(dataRow2.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
-                  assert.equal(dataRow2.find('td')[2].innerHTML, '8', 'age cell value');
+                  assert.equal(dataTable.find('th > div:contains(age)').is(':visible'), true, 'column1 renamed to age');
 
-                  Applab.onPuzzleComplete();
+                  // add new row
+                  const addRow = $('#dataTable').find('tr:contains(Add Row)');
+                  ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'bob' } });
+                  ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '8' } });
+                  ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+                  setTimeout(() => {
+                    const dataRow1 = $('#dataTable').find('tr:contains(Edit)');
+                    assert.equal(dataRow1.find('td')[0].innerHTML, '1', 'id cell value');
+                    assert.equal(dataRow1.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
+                    assert.equal(dataRow1.find('td')[2].innerHTML, '8', 'age cell value');
+
+                    // add another row
+                    ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'charlie' } });
+                    ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '9' } });
+                    ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+                    setTimeout(() => {
+                      const dataRow2 = $('#dataTable').find('tr:contains(Edit)');
+                      assert.equal(dataRow2.find('td')[0].innerHTML, '1', 'id cell value');
+                      assert.equal(dataRow2.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
+                      assert.equal(dataRow2.find('td')[2].innerHTML, '8', 'age cell value');
+
+                      Applab.onPuzzleComplete();
+                    }, 100);
+                  }, 100);
                 }, 100);
               }, 100);
             }, 100);
