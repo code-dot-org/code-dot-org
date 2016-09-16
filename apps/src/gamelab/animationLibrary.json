@@ -114,6 +114,120 @@
         "y": 520
       }
     },
+    "bunny1_hurt": {
+      "name": "bunny1_hurt",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 150,
+        "y": 174
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "NxqzDhUroICD2hoNjtcp66vJftM1UNOB",
+      "sourceUrl": "/api/v1/animation-library/NxqzDhUroICD2hoNjtcp66vJftM1UNOB/bunny1_hurt.png",
+      "sourceSize": {
+        "x": 150,
+        "y": 174
+      }
+    },
+    "bunny1_jump": {
+      "name": "bunny1_jump",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 150,
+        "y": 181
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "c6MHZzWKhi9EDFjottMRSXar_64_7olE",
+      "sourceUrl": "/api/v1/animation-library/c6MHZzWKhi9EDFjottMRSXar_64_7olE/bunny1_jump.png",
+      "sourceSize": {
+        "x": 150,
+        "y": 181
+      }
+    },
+    "bunny1_ready": {
+      "name": "bunny1_ready",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 191
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "bHuAAcEnoZi32fMO4YotvbwsYJXVDxlp",
+      "sourceUrl": "/api/v1/animation-library/bHuAAcEnoZi32fMO4YotvbwsYJXVDxlp/bunny1_ready.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 191
+      }
+    },
+    "bunny1_stand": {
+      "name": "bunny1_stand",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 201
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fiS3z042HzgVG4_tW.7DkMHXthq_gTd1",
+      "sourceUrl": "/api/v1/animation-library/fiS3z042HzgVG4_tW.7DkMHXthq_gTd1/bunny1_stand.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 201
+      }
+    },
+    "bunny1_walk1": {
+      "name": "bunny1_walk1",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 201
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "homcthRNfapnn_m1rpoSxAYz.EbovQOZ",
+      "sourceUrl": "/api/v1/animation-library/homcthRNfapnn_m1rpoSxAYz.EbovQOZ/bunny1_walk1.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 201
+      }
+    },
+    "bunny1_walk2": {
+      "name": "bunny1_walk2",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 207
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Fda2FKgUXm1D3onUruFgxV17ozDgTY.1",
+      "sourceUrl": "/api/v1/animation-library/Fda2FKgUXm1D3onUruFgxV17ozDgTY.1/bunny1_walk2.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 207
+      }
+    },
     "ghost_standing": {
       "name": "ghost_standing",
       "aliases": [
@@ -181,6 +295,32 @@
     ],
     "bubbly": [
       "bubbly"
+    ],
+    "bunny1_hurt": [
+      "bunny1_hurt"
+    ],
+    "jumper": [
+      "bunny1_hurt",
+      "bunny1_jump",
+      "bunny1_ready",
+      "bunny1_stand",
+      "bunny1_walk1",
+      "bunny1_walk2"
+    ],
+    "bunny1_jump": [
+      "bunny1_jump"
+    ],
+    "bunny1_ready": [
+      "bunny1_ready"
+    ],
+    "bunny1_stand": [
+      "bunny1_stand"
+    ],
+    "bunny1_walk1": [
+      "bunny1_walk1"
+    ],
+    "bunny1_walk2": [
+      "bunny1_walk2"
     ],
     "ghost_standing": [
       "ghost_standing"
