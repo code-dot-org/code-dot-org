@@ -6,7 +6,7 @@
   "user_id": 155,
   "properties": {
     "markdown_instructions": "# Finishing Recipe Page\r\n\r\nIn the last two levels, you created an unordered list of ingredients and an ordered list of recipe instructions. Now its time to finish off your Recipe Page.\r\n\r\nIf you want to learn more about lists check out <a href=\"http://www.w3schools.com/html/html_lists.asp\"> W3 Schools - Lists</a>\r\n\r\n# Do This\r\n\r\n* Add any more information to your recipe page you think would be helpful such as how long it takes to make or what meal of the day you usually eat it.\r\n* Finalize your Recipe Page. Use the Checklist below to make sure your page is complete.\r\n\r\n# Checklist\r\n\r\n* Unordered list of ingredients\r\n* Ordered list of directions\r\n* Description of the dish\r\n* Headers for each section\r\n* Title header at the top of the page",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" \"\r\n    }\r\n  ]\r\n}"
+    "project_template_level_name": "CSDU2 - Recipe Template"
   },
   "published": true,
   "notes": "",
