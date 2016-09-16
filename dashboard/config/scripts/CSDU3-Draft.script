@@ -236,17 +236,3 @@ level 'CSD U3 collisions pirate'
 level 'CSD U3 collisions obstacle'
 level 'CSD U3 collisions tennis' # bounceOff
 level 'CSD U3 collisions bumper' # bounce
-
-
-# Not In Use
-stage 'Proposed Sprites and Props'
-stage 'Conditionals Update'
-stage 'Animations'
-stage 'SFLP'
-stage 'Sprite Properties and Mod'
-stage 'Expressions and Reassignment'
-stage 'Expressions'
-stage 'Counting with Variables'
-stage 'Draw Loop and Random'
-stage 'Variables'
-

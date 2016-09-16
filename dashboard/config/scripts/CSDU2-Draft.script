@@ -57,11 +57,11 @@ level 'CSDU2 - Debugging 1'
 level 'CSDU2 - Debugging 2'
 level 'CSDU2 - Debugging 3'
 
-stage 'Introduction to Styling with CSS'
-stage 'Personal Website: Connecting Pages'
-stage 'Classes and External Style Sheets'
-stage 'Box Model and Page Layout'
-stage 'Personal Website: Midway Check'
+#stage 'Introduction to Styling with CSS'
+#stage 'Personal Website: Connecting Pages'
+#stage 'Classes and External Style Sheets'
+#stage 'Box Model and Page Layout'
+#stage 'Personal Website: Midway Check'
 
 stage 'Digital Footprint'
 level 'SFLP - Web - Digital Footprint'
@@ -69,15 +69,9 @@ level 'Digital Footprint FaceSpace John'
 level 'Digital Footprint Chirpr johnsnow'
 level 'Digital Footprint instantframe'
 
-stage 'Publishing a Website'
-stage 'Sources and Search Engines'
-stage 'Intellectual Property'
+#stage 'Publishing a Website'
+#stage 'Sources and Search Engines'
+#stage 'Intellectual Property'
 
 stage 'Personal Website: Finalizing Site'
 level 'CSDU2 - further styling suggestions'
-
-
-#not in use
-stage 'Introduction to HTML'
-stage 'Headers and Lists'
-stage 'Designing Web Pages'
