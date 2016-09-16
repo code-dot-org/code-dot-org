@@ -247,13 +247,6 @@ Style/MutableConstant:
 Style/Next:
   Enabled: false
 
-# Offense count: 86
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: predicate, comparison
-Style/NumericPredicate:
-  Enabled: false
-
 # Offense count: 7
 # Cop supports --auto-correct.
 Style/Proc:
