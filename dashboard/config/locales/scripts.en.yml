@@ -1047,6 +1047,7 @@ en:
             Share out and Submit: Share out and Submit
             Unit 2 Overview: Unit 2 Overview
         duino:
+          title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
           stage:
             Basic Circuits: Basic Circuits
@@ -1508,6 +1509,7 @@ en:
             Supporting Peer Learning: Supporting Peer Learning
             'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
         test-teaching-ap-cs-unit-1:
+          title: Test CPS PD
           stage:
             test Unit 1 content module Alpha: test Unit 1 content module Alpha
             test Unit 1 content module Bravo: test Unit 1 content module Bravo

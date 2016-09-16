@@ -141,15 +141,3 @@ assessment 'U3L33 Free Response Getting Started'
 stage 'Practice PT: Create'
 level 'U3L34 Student Lesson Introduction'
 level 'U3 - Practice Create Performance Task'
-
-
-# Not Using (turds)
-stage 'Arrays_ Photo Album'
-stage 'Images are Arrays'
-stage 'Arrays and Loops_ Hidden Images'
-stage 'While Loop Basics'
-stage 'While Loops_ Counting Flips'
-stage 'Arrays_ Intro'
-stage 'Key Events with Image Scroller'
-stage 'Arrays and Loops_ Altering Images'
-stage 'Practice Create Performance Task'
