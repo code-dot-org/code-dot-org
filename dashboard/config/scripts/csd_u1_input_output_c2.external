@@ -72,3 +72,11 @@ The advanced version is more specific.  It should be able to figure out when the
 Do you need any new inputs to the advanced program?  If so, what are they?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+For the initial app, the inputs are the location of the phone (from the GPS) and the locations of schools in the area (from the Internet).  Note that students do not need a map because the process is only to check whether there is a match in location.  At this point, the output is a command to turn the ringer off, because the phone is located at a school.
+
+For the improved app, students should also take in the noise level from the microphone and the movement from the accelerometer.  At this point, the output is to leave the ringer on, because the noise and movement levels indicate that the user is not in class.
+
+Students may also suggest that the phone use time of day, calendar, and bell schedule to determine whether class is in session at the time.  These are all good ideas for how to improve this app.
+MARKDOWN

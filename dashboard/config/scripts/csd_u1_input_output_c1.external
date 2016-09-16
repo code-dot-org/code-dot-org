@@ -53,3 +53,9 @@ The advanced version will tell the user how many days there are until Halloween.
 Do you need any new inputs to the advanced program?  If so, what are they?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students should note that the app only needs to pieces of information to work: the current date and the date of Halloween.  The current date, in this activity, comes from the clock, but students may note that it's possible to get the date from the Internet as well.  The date of Halloween, in this activity, comes from the Internet, but students may note that this information could also be stored in the phone, because it doesn't change between uses of the app.
+
+For the improved version of the app, the inputs are the same (current date and the date of Halloween), but the students must process the information differently.  Rather than simply check whether the two dates are the same, students will need to calculate the numbers of days between them.
+MARKDOWN
