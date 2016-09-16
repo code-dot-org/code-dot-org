@@ -127,6 +127,15 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
+  def instructions
+    require_levelbuilder_mode
+    authorize! :read, ScriptLevel
+
+    script = Script.get_from_cache(params[:script_id])
+
+    render 'levels/instructions', locals: { stages: script.stages }
+  end
+
   private
 
   # Configure http caching for the given script. Caching is disabled unless the
