@@ -21,6 +21,7 @@
 require 'aws-sdk'
 require 'ruby-progressbar'
 require 'optparse'
+require 'parallel'
 require_relative '../../deployment'
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'
@@ -57,10 +58,11 @@ class ManifestBuilder
 
     info "Found #{animations_by_name.size} animations."
 
-    animation_metadata_by_name = {}
+    # Parallelize metadata construction because some objects will require an
+    # extra S3 request to get version IDs or image dimensions.
     info "Building animation metadata..."
     metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
-    animations_by_name.each do |name, objects|
+    animation_metadata_by_name = Hash[Parallel.map(animations_by_name) do |name, objects|
       # TODO: Validate that every JSON is paired with a PNG and vice-versa
       # Actually download the JSON from S3
       json_response = objects['json'].get
@@ -79,14 +81,14 @@ class ManifestBuilder
         metadata['sourceSize'] = dimensions_from_png(png_body)
       end
 
-      animation_metadata_by_name[name] = metadata
       verbose <<-EOS
 #{bold name} @ #{metadata['version']}
 #{JSON.pretty_generate metadata}
       EOS
 
       metadata_progress_bar.increment unless @options[:verbose] || @options[:quiet]
-    end
+      [name, metadata]
+    end]
     metadata_progress_bar.finish unless @options[:verbose] || @options[:quiet]
 
     info "Metadata built for #{animation_metadata_by_name.size} animations."
