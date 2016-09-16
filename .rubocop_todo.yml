@@ -252,13 +252,6 @@ Style/MutableConstant:
 Style/Next:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedOctalStyle, SupportedOctalStyles.
-# SupportedOctalStyles: zero_with_o, zero_only
-Style/NumericLiteralPrefix:
-  Enabled: false
-
 # Offense count: 86
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
