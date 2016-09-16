@@ -304,5 +304,6 @@
   "when": "wanneer",
   "whenRun": "als gestart",
   "workspaceHeaderShort": "Werkplaats: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "assessmentSettings": "Assessment Settings"
 }

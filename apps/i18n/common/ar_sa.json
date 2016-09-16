@@ -304,5 +304,6 @@
   "when": "عندما",
   "whenRun": "عند التشغيل",
   "workspaceHeaderShort": "مساحة العمل: ",
-  "yes": "نعم"
+  "yes": "نعم",
+  "assessmentSettings": "Assessment Settings"
 }

@@ -304,5 +304,6 @@
   "when": "amikor",
   "whenRun": "futtatáskor",
   "workspaceHeaderShort": "Munkaterület: ",
-  "yes": "Igen"
+  "yes": "Igen",
+  "assessmentSettings": "Assessment Settings"
 }

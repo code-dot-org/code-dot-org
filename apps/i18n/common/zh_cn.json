@@ -304,5 +304,6 @@
   "when": "当",
   "whenRun": "当运行时",
   "workspaceHeaderShort": "工作区域",
-  "yes": "是"
+  "yes": "是",
+  "assessmentSettings": "Assessment Settings"
 }

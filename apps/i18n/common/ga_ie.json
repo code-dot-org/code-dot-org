@@ -304,5 +304,6 @@
   "when": "nuair",
   "whenRun": "nuair a ritear é",
   "workspaceHeaderShort": "Spás oibre: ",
-  "yes": "Tá"
+  "yes": "Tá",
+  "assessmentSettings": "Assessment Settings"
 }
