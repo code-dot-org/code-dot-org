@@ -1,4 +1,5 @@
 import FirebaseStorage from '../firebaseStorage';
+import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
 import React from 'react';
 import { castValue, editableValue } from './dataUtils';
@@ -11,7 +12,10 @@ const AddTableRow = React.createClass({
   },
 
   getInitialState() {
-    return { newRecord: {} };
+    return {
+      isAdding: false,
+      newRecord: {},
+    };
   },
 
   handleChange(columnName, event) {
@@ -22,6 +26,7 @@ const AddTableRow = React.createClass({
   },
 
   handleAdd() {
+    this.setState({isAdding: true});
     FirebaseStorage.createRecord(
       this.props.tableName,
       this.state.newRecord,
@@ -61,12 +66,13 @@ const AddTableRow = React.createClass({
         <td style={dataStyles.cell}/>
 
         <td style={dataStyles.addButtonCell}>
-          <button
-            style={dataStyles.blueButton}
+          <PendingButton
+            isPending={this.state.isAdding}
             onClick={this.handleAdd}
-          >
-            Add Row
-          </button>
+            pendingText="Adding..."
+            style={dataStyles.blueButton}
+            text="Add Row"
+          />
         </td>
       </tr>
     );

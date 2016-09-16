@@ -19,7 +19,7 @@ Category: Data
 
 [short_description]
 
-Executes the *callback* function code when a create, update, or delete event occurs (remotely, for any reason) inside the specified table. In other words, *onRecordEvent* is a way for any and all instances of an app to be notified in real time if any changes to the underlying table are made.  The *eventType* (create, update, delete) is passed to the callback function.  By default, the event will only fire if it occurred while the app was running.  If *includeAll* is set to true, however, a create event will fire for all existing records.
+Executes the *callback* function code when a create, update, or delete event occurs (remotely, for any reason) inside the specified table. In other words, *onRecordEvent* is a way for any and all instances of an app to be notified in real time if any changes to the underlying table are made.  The *eventType* (create, update, delete) is passed to the callback function.  By default, the event will only fire if it occurred while the app was running.  If *includeAll* is set to true, however, a create event will also fire for each record that is already in the table.  
 
 [/short_description]
 
@@ -96,7 +96,7 @@ onRecordEvent(table, function(record, eventType) {
 |-----------------|------|-----------|-------------|
 | table | string | Yes | The name of the table to which this event handler applies. |
 | callback | function | Yes | The callback function executed in response to a create, update, or delete event in the specified table. |
-| includeAll | boolean | No | Optional parameter that specifies whether the create event should fire for all existing records (even before the app was run).  False by default.  |
+| includeAll | boolean | No | Optional parameter that specifies whether a create event should also fire for each record that is already in the table. Defaults to false.|
 
 <br>
 
