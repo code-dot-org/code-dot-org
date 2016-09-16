@@ -44,7 +44,7 @@ const AddTableRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} id="addDataTableRow">
         {
           this.props.columnNames.map(columnName => (
             <td key={columnName} style={dataStyles.cell}>
