@@ -1,4 +1,9 @@
 {
+  "//": [
+    "Animation Library Manifest",
+    "GENERATED FILE: DO NOT MODIFY DIRECTLY",
+    "See tools/scripts/rebuildAnimationLibraryManifest.rb for more information."
+  ],
   "metadata": {
     "asterisk_circle": {
       "name": "asterisk_circle",

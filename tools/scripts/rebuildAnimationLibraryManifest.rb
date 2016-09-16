@@ -111,6 +111,11 @@ class ManifestBuilder
     # Write result to file
     File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
       file.write(JSON.pretty_generate({
+          '//': [
+              'Animation Library Manifest',
+              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
+          ],
           'metadata': animation_metadata_by_name,
           'aliases': alias_map
       }))
