@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
-var processMarkdown = require('marked');
+import processMarkdown from '../../MarkdownRenderer';
 
 /**
  * Component for displaying our instructions in the context of a modal dialog

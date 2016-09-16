@@ -23,4 +23,4 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 // TODO: Remove when global `CodeMirror` is no longer required.
 window.CodeMirror = require('codemirror');
 // TODO: Remove when global `marked` is no longer required.
-window.marked = require('marked');
+window.marked = require('../MarkdownRenderer');
