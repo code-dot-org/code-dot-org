@@ -6,7 +6,7 @@
   "user_id": 155,
   "properties": {
     "markdown_instructions": "# Headers\r\n\r\nEvery web page is made up of many elements. One common element is headers. Headers are the different sized titles throughout a web page. Headers help to break up a webpage so it’s easier for a user to read.\r\n\r\nYou can make something a header element by surrounding it by header tags.  For example:\r\n<code> &lt;h1&gt; Header Text &lt;/h1&gt; </code>\r\n\r\nNotice how there is a the opening tag (&lt;h1&gt;) and closing tag (&lt;/h1&gt;). The closing tag is the same as the opening tag except it has `/` after the opening angle bracket. The text you want to show as the header goes in the middle of the two tags.\r\n\r\n# Do This\r\nYou are going to create a webpage that lists your hobbies. You will do this in a few steps. Here are the first steps.\r\n\r\n* Change content of the &lt;h1&gt; header tag  \"Welcome to Web Lab”  to \"My Hobbies\" or something similar.",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1> Welcome to Web Lab!</h1> \\n  <!--You can type in this section to create amazing web pages! Try typing below this line -->  \\n \"\r\n    }\r\n  ]\r\n}"
+    "project_template_level_name": "CSDU2 - Hobbies Template"
   },
   "published": true,
   "notes": "",

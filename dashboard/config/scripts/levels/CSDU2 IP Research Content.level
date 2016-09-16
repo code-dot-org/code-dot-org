@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "markdown_instructions": "# Adding Your Content\r\n\r\nYou should now have found a handful of website that you can use to help make your case for the cause you've chosen. If not, keep on researching!\r\n\r\nNow it's time to start structuring the content of your page.\r\n\r\n# Do This\r\n\r\nThe specifics of your page layout will depend on your topics and goals, but in general you should create the following structure\r\n\r\n* A first level header with a catchy title for your page\r\n* A second level header for each separate argument of goal area\r\n* Paragraphs of content under each second level header\r\n* A link to the appropriate site where you need to cite outside sources\r\n\r\nAttribution links can take many forms, for example\r\n\r\n* According to the [ASPCA](http://www.aspca.org/animal-homelessness) only 10% of animals entering shelters have been spayed or neutered.\r\n* Kill shelters euthanize 2.7 million animals per year ([ASPCA](http://www.aspca.org/animal-homelessness)).",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1>A Thing that I Care About</h1> \\n \"\r\n    }\r\n  ]\r\n}"
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1>A Thing that I Care About</h1> \\n \"\r\n    }\r\n  ]\r\n}",
+    "project_template_level_name": "CSDU2 IP Project Template"
   },
   "published": true,
   "notes": "",
