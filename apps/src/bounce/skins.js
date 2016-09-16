@@ -17,6 +17,12 @@ var CONFIGS = {
     markerWidth: 50
   },
 
+  basketball: {
+    goalSuccess: 'goal.png',
+    paddle: 'hand_1.png',
+    markerHeight: 61,
+    markerWidth: 54,
+  }
 };
 
 exports.load = function (assetUrl, id) {
