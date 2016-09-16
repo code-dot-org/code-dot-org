@@ -360,8 +360,3 @@ Style/TrivialAccessors:
 # Cop supports --auto-correct.
 Style/UnneededPercentQ:
   Enabled: false
-
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/ZeroLengthPredicate:
-  Enabled: false
