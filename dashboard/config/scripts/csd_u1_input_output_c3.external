@@ -28,9 +28,12 @@ User Prompt | User Information
 ------|--------
 **Name** | Arik
 **Grade Level** | 8th grade
-**Favorite Color** | Science
+**Favorite Color** | Orange
 **Outfits** |
 **Planned Activities for the Day** |
+ | Field trip to Power Station
+ | Soccer Practice
+ | Dinner with Grandparents
 
 
 ## Input from the Internet
@@ -48,6 +51,7 @@ User Prompt | User Information
  |Thanksgiving  
  |Christmas  
 **The Temperature Anywhere in the World** | 
+ |Guam: 84F  
  |Shanghai: 77F  
  |Adelaide: 54F  
  |Paris: 75F  
@@ -55,19 +59,28 @@ User Prompt | User Information
  |Buenos Aires: 52F  
  |Boston: 66F  
  |Vancouver: 63F  
- |Guam: 84F  
- | 
 **The Time Anywhere in the World** | 
- |3rd Street Elementary School: 123-123-1234  
- |Edison Middle School: 123-123-4321  
- |City High School: 123-123-7890  
-**List of Top Tourist Attractions** | Grand Bazaar, Istanbul
+ |Guam: 7:17 AM
+ |Shanghai: 5:17 AM
+ |Adelaide: 6:47 AM
+ |Paris: 11:17 PM
+ |Cairo: 11:17 PM 
+ |Buenos Aires: 6:17 PM
+ |Boston: 5:17 PM
+ |Vancouver: 2:17 PM
+**List of Top Tourist Attractions** | 
+ | Grand Bazaar, Istanbul
  | The Zócalo, Mexico City
  | Times Square, New York City
  | Meiji Jingu Shrine, Tokyo
  | Niagara Falls
  | Forbidden City, Beijing
 **List of Local Restaurants** | 
+ | Skyline Diner
+ | The Sizzling Griddle
+ | Grandma's Kitchen
+ | Machos Tacos
+ | Pizzazilla
 
 
 

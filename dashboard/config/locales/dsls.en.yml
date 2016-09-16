@@ -202,6 +202,15 @@ en:
         description here: description here
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
+      CSD-U1-SFLP Exploring Problem Solving: {}
+      CSD-U1-SFLP Human vs. Computer Processing: {}
+      CSD-U1-SFLP Intro to Problem Solving: {}
+      CSD-U1-SFLP Processing Bits: {}
+      CSD-U1-SFLP Processing with Apps: {}
+      CSD-U1-SFLP Project Apps and Problem Solving: {}
+      CSD-U1-SFLP Representing Information: {}
+      CSD-U1-SFLP The Problem Solving Process: {}
+      CSD-U1-SFLP What is a Computer?: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
@@ -419,6 +428,7 @@ en:
         Chirpr - @johnsnow: Chirpr - @johnsnow
       Digital Footprint FaceSpace John:
         FaceSpace - John T: FaceSpace - John T
+      Digital Footprint FaceSpace Soleil: {}
       Digital Footprint instantframe:
         instantframe - johnsnow: instantframe - johnsnow
       Downloading the Data Set: {}
