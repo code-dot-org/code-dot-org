@@ -304,5 +304,6 @@
   "when": "kun",
   "whenRun": "suoritettaessa",
   "workspaceHeaderShort": "Työtila: ",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "assessmentSettings": "Assessment Settings"
 }

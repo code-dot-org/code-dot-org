@@ -3,15 +3,14 @@
     messages:
       not_saved: 'Opravte prosím nasledujúce chyby:'
       too_young: Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších
-        študentov
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+        študentov.
+      teacher_must_accept_terms: Tento obsah má vekové obmedzenia a nie je dostupný
+        pre mladších študentov. Požiadaj svojho učiteľa, aby aktualizoval "Podmienky
+        Služieb" a umožnil ti prístup k tomuto obsahu. Tvoj učiteľ to môže spraviť
+        prihlásením do Kódového Štúdia a kliknutím na tlačítko "Kontrola aktualizovaných
+        služieb" v hornej časti domovskej stránky Kód Štúdio.
+      pair_programmer: Aktuálne si spárovaný so študentom, ktorý nemá prístup do tohto
+        obsahu. K prístup do tohto obsahu, stopni párovanie a skús to znova.
   activerecord:
     errors:
       messages:
@@ -90,11 +89,12 @@
   signup_form:
     student_count: "%{count} študentov sa už zaregistrovalo."
     teacher_count: "%{count} učitelov sa už zaregistrovalo."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Prihlás sa na účet, aby si mohol sledovať svoj pokroky alebo spravovať
+      svoju triedu. <a href="/">Môžeš prechádzať jednotlivé stupne a skladačky</a>
+      aj bez účtu, ale ak budeš chcieť uložiť svoje pokroky alebo projekty, musíš
+      sa Zaregistrovať.
     teacher_educator_guide: Pozrieť príručku učiteľa
-    title: Sign up for Code.org
+    title: Zaregistruj sa na Code.org
     school_name: Názov školy (voliteľné)
     school_address: Adresa školy (voliteľné)
     address_placeholder: adresa, mesto, štát, PSČ
@@ -110,19 +110,22 @@
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovať aspoň 6 znakov
     mismatch_password: Zadané dve heslá sa nezhodujú
-    student_terms: Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>.
-      Ak mám menej než 13 rokov, odoslaním tohoto formulára zároveň potvrdzujem že
-      mám oprávnenie od mojich rodičov alebo zákonného zástupcu na používanie služby
-      Code.org. <br/>Pre používateľov mladších ako 13 rokov nie sú e-mailové adresy
-      uložené vo forme, ktorá umožnuje ich kontaktovanie.
-    teacher_terms: Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>.
+    student_terms: Súhlasím, že budem dodržiavať <a href='http://code.org/tos'>Podmienky
+      Služieb</a>. Ak som mladší ako 13 rokov, dám si potvrdiť predložený formulár
+      môjmu zákonnému zástupcovi, aby som mohol využívať služby Code.org.<br/><br/>Emailové
+      adresy nie sú uložené a nekontaktujú študentov. Študenti nebudú dostávať emaily
+      od Code.org okrem obnovenia hesla. Pre viac informácií <a href='http://code.org/privacy'>
+      Zásady ochrany osobných údajov</a>.
+    teacher_terms: Súhlasím, že budem dodržiavať Podmienky služieb. Pre viac informácií
+      o súkromí, nájdete na <a href='http://code.org/privacy'> Zásady ochrany osobných
+      údajov</a>.
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie
       vášho prihlásenia/registrácie.
     user_type_label: Typ účtu
     user_type_teacher: Učiteľ
     user_type_student: "Študent"
     field_is_required: sa vyžaduje
-    accept_terms: You must agree to create an account
+    accept_terms: Musíte súhlasiť s vytvorením účtu
   signin_form:
     title: Máte už vytvorený účet? Prihláste sa
     login: E-mail
@@ -144,8 +147,8 @@
   password:
     reset_form:
       title: Zabudli ste heslo?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Potvrď svoju emailovú adresu nižšie a my vám pošleme pokyny pre
+        obnovenie hesla.
       email: E-mailová adresa
       submit: Odoslať
     change_form:
@@ -289,11 +292,11 @@
       prizes: Ceny
       logout: Odhlásiť sa
       signin: Prihlásiť sa
-      signup: Zaregistrovať sa
+      signup: Vytvoriť účet
       already_registered: Ste už zaregistrovaný?
       pair_programming: Pair Programming
       team: Tím
-      driver: Driver
+      driver: Ovládač
       navigator: Navigátor
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
@@ -330,7 +333,7 @@
       submitted_on: 'Dátum odoslania:'
       unsubmit: Neodoslať
       worked_with: Pracoval/a s
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Tu aktualizujte nastavenie zámku.
   user:
     email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'
@@ -422,8 +425,8 @@
       spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku
       informatiky v rámci celej školskej dochádzky na základných i stredných školách.
     announcement_petition_button: Pridaj svoje meno
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom blogu.
+      <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
   move_students:
     new_section_dne: Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje.
       Zadajte kód inej sekcie.
@@ -511,10 +514,9 @@
     download: Stiahnuť video
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: Váš prehliadač internetu nepodporujeme. Prosím aktualizujte
+        si váš prehliadač internetu, <a href='%{supported_browsers_url}', target='_blank'>podporované
+        prehliadače</a>. Skúste obnoviť stránku.
       link: Dozvedieť sa viac
   slow_loading: Trvá to dlhšie než zvyčajne...
   try_reloading: Skúste načítať stránku znovu
@@ -902,3 +904,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

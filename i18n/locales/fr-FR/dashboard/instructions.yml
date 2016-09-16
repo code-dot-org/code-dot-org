@@ -1407,6 +1407,8 @@ fr:
       course3_playlab_stage17_5_instruction: "Peux-tu ajouter un bloc qui marque un point lorsque Waddles touche la pieuvre, puis déplaces le avec les flèches jusqu'à ce que tu marques ?"
       course3_playlab_stage17_6_instruction: "Peux-tu ajouter des blocs pour changer l'arrière-plan et la vitesse de Waddles, puis déplaces-le avec les flèches jusqu'à ce que tu marques?"
       course3_playlab_stage17_7_instruction: Créer ta propre histoire. Quand tu as fini, cliques sur «Terminer» pour que tes amis essayent ton histoire sur leurs téléphones.
+      Crack a Caesar Cipher_instruction: Consignes
+      Crack Random Substitution_instruction: Consignes
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
@@ -4155,6 +4157,8 @@ fr:
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: Consignes
+      The Vigenere Cipher_instruction: Consignes
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -5825,6 +5829,7 @@ fr:
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: Consignes
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full

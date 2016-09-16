@@ -937,3 +937,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

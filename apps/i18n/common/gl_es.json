@@ -304,5 +304,6 @@
   "when": "cando",
   "whenRun": "cando se executa",
   "workspaceHeaderShort": "Espazo de traballo: ",
-  "yes": "Si"
+  "yes": "Si",
+  "assessmentSettings": "Assessment Settings"
 }

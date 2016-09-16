@@ -84,6 +84,11 @@ CS Expansion
 
 [Administrator and Counselor PD Overview - Slides](https://docs.google.com/presentation/d/1rgA370lNX2L88S5sew5ZWThbBwXOlzSUVjb2Dcx-I84/edit?usp=sharing)
 
+## Program Manager Summit
+- [Funding Worksheet](https://docs.google.com/document/d/1LnSNDbN44JuD6hXkaRnrDexQUQJiSJPI6f0Jg6JyeJc/edit)
+- [Roadmap Overview](https://docs.google.com/document/d/19Y3Fe_5ugdG62Ew_azv00ZbuWATD9JMLHUDDl55A4KY/edit)
+
+
 ## Virtual Trainings
 June 2016:
 
@@ -97,7 +102,7 @@ July 7, 2016:
 August 18, 2016:
 
 - August Office Hours - [Video](http://videos.code.org/plp/august-2016-office-hours.mp4)
-- [August Office Hours - Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
+- August Office Hours - [Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
 
 
 

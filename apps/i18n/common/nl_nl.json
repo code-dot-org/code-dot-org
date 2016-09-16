@@ -1,11 +1,11 @@
 {
-  "allowEditing": "Allow editing",
-  "allowEditingInstructions": "\"Allow editing\" while students should be taking the assessment.",
+  "allowEditing": "Bewerken toestaan",
+  "allowEditingInstructions": "\"Bewerken toestaan\" zolang de studenten de test doen.",
   "and": "en",
   "animationMode": "Animatie",
-  "answersVisible": "Answers visible (read-only)",
+  "answersVisible": "Antwoorden zichtbaar (alleen lezen)",
   "assessmentSteps": "Steps to give assessment for",
-  "autolock": "Note: Stage auto-locks after 24 hours.",
+  "autolock": "Niveau wordt automatisch afgesloten na 24 uur.",
   "backToPreviousLevel": "Terug naar het vorige niveau",
   "blocklyMessage": "Blockly",
   "blocks": "blokken",
@@ -52,7 +52,7 @@
   "directionNortheastLetter": "NO",
   "directionSouthwestLetter": "ZW",
   "directionSoutheastLetter": "SO",
-  "dontForget": "Don't forget",
+  "dontForget": "Vergeet niet",
   "dropletBlock_addOperator_description": "Twee getallen optellen",
   "dropletBlock_addOperator_signatureOverride": "Optel operator",
   "dropletBlock_andOperator_description": "Geeft waar als resultaat indien beide voorwaarden waar zijn en onwaar indien dit niet het geval is",
@@ -304,5 +304,6 @@
   "when": "wanneer",
   "whenRun": "als gestart",
   "workspaceHeaderShort": "Werkplaats: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "assessmentSettings": "Assessment Settings"
 }

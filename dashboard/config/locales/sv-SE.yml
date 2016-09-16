@@ -32,17 +32,17 @@
           future: kan inte vara i framtiden
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Din professionella utbildningsplan
+  see_your_learning_plan: Se din utbildningsplan
   submit: Skicka in
   unsubmit: "Ångra Inlämnad"
-  previous_page: Previous page
-  next_page: Next page
-  next_resource: Next resource
+  previous_page: Föregående sida
+  next_page: Nästa sida
+  next_resource: Nästa resurs
   done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: Okej
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (sida %{x} av %{y})"
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
@@ -94,7 +94,7 @@
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Se pedagogguiden
-    title: Sign up for Code.org
+    title: Skapa konto på Code.org
     school_name: Skolans namn (valfritt)
     school_address: Skolans adress (valfritt)
     address_placeholder: adress, stad, län, postnummer
@@ -119,11 +119,11 @@
       användarvillkor</a>.
     additional_information: Vi behöver  ytterligare information att fortsätta registrera
       dig.
-    user_type_label: Account Type
+    user_type_label: Kontotyp
     user_type_teacher: Lärare
     user_type_student: Student
     field_is_required: krävs
-    accept_terms: You must agree to create an account
+    accept_terms: Du måste godkänna för att skapa ett konto
   signin_form:
     title: Har du redan ett konto? Logga in
     login: E-post
@@ -140,8 +140,8 @@
     picture: Hitta din hemliga bild
     words: Skriv dina hemliga ord
     login: Logga in
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Ogiltig inloggning, försök igen
+    pair_programming: Jag har en partner vid min dator
   password:
     reset_form:
       title: Glömt ditt lösenord?
@@ -283,7 +283,7 @@
       prizes: Priser
       logout: Logga ut
       signin: Logga in
-      signup: Registrera dig
+      signup: Skapa ett konto
       already_registered: Redan registrerad?
       pair_programming: Par-programmering
       team: Team
@@ -323,7 +323,7 @@
       example_with_number: Exempel lösning %{solution_number}
       submitted_on: 'Inlämnad den %{date} '
       unsubmit: "Ångra Inlämnad"
-      worked_with: Worked With
+      worked_with: Arbetat med
       update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
@@ -415,7 +415,7 @@
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition_button: Ange ditt namn
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   move_students:
@@ -545,8 +545,8 @@
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      audience: "Ålder 13+"
+      cta: Läs mer
     hoc:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
@@ -580,7 +580,7 @@
       body: Utforska en Minecraft värld med kod.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: "Ålder 4+"
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -893,3 +893,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

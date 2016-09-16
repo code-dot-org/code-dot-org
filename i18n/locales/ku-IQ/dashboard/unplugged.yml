@@ -2,7 +2,7 @@ ku:
   data:
     unplugged:
       'Unplug1':
-        title: Introduction to Computer Science
+        title: پێسەكی زانستی كۆمپیتەر
         desc: ئەم وانەیە پێشەکییەکت پێدەدات لەبارەی تێگەیشتنی زانستی کۆمپیوتەر و بۆتی روون دەکاتەوە زانستی کۆمپیوتەر چی دەکات. هەروەها دەرفەتێک بە قوتابیان دەدات بۆ ئەوەی بزانن کاریگەری زانستی کۆمپیوتەر چییە، لە کۆتایی چالاکییەکە هەر قوتابییەک ئەرکێکی وەبیرهێنانەی پێدەدرێت بۆ ئەوەی لە ماڵەوەی ئەنجامی بدات سەبارەت بەو شتەی فێری بووە. لەوانەیە تۆش حەز بکەیت منداڵە بچووکان قێری وشەی تایبەت بە کۆمپیوتەر بکەیت، بەڵام دەبێت ئاگادار بیت بە شێوازێک ئەم کارە بکەیت کە چێژ و خۆشیان پێ ببەخشیت بۆ ئەوەی زیاتر لەوەی چاوەڕوان دەکەیت هەڵی زیاتر ببەخشیت.
         pdfs:
           - unplug1
@@ -39,7 +39,7 @@ ku:
           - unplug6
         video: Unplug6
       'Unplug7':
-        title: Song Writing
+        title: گۆرانی نووسین
         desc: "Reading lyrics is a pretty intuitive venture for most students.  We'll take an activity that's already common knowledge and shift it into a solid education on defining and calling functions. Once students are familiar with the define/call process, we will add the extra capabilities that come along with passing parameters within those function calls."
         pdfs:
           - unplug7
@@ -57,7 +57,7 @@ ku:
           - unplug9
         video: Unplug9
       'Unplug10':
-        title: The Internet
+        title: ئینترنێت
         desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
         pdfs:
           - unplug10
@@ -69,7 +69,7 @@ ku:
           - unplug11
         video: Unplug11
       'UnplugHappyMaps':
-        title: Happy Maps
+        title: نەخشەی دڵخۆش
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       'MoveIt':

@@ -5,7 +5,7 @@ nl-NL:
   "no": Nee
   select_language: Kies de gewenste taal
   upgrade_ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8, 9 en 10. Probeer te upgraden naar een moderne browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org geeft binnenkort geen support meer voor Internet Explorer 8, 9 en 10. Neem een moderne browser a.u.b.
   upgrade_ie_link: Leer meer
   en: informatica
   computer_science_edweek: Week van het Informaticaonderwijs
@@ -103,7 +103,8 @@ nl-NL:
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Bezoek Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_desc: |-
+    In Lightbot moeten leerlingen een robot programmeren met opdrachten voor het oplossen van puzzels. Leerlingen kunnen het spel spelen in de Browser (Flash Player vereist), of op Android of iOS apparaten. Leerlingen spelen de eerste reeks voor "Basic" levels in de Lightbot. Ze leren hoe ze een computer moeten vertellen wat te doen met een aantal basiscommando's en ze leren het algemene proces waarbij computerprogramma's worden geschreven.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
   third_party_lightbot_btn_site: Bezoek Lightbot
   third_party_khan_desc: "Leer hoe je tekeningen, animaties en games moet programmeren met behulp van JavaScript & ProcessingJS, of leer hoe je webpagina's maakt met HTML & CSS. U kan alles delen wat u maakt, ontdek wat anderen hebben gecreëerd en leer van elkaar!"
@@ -297,6 +298,8 @@ nl-NL:
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
   homepage_banner_emailprivacy_link: Lees meer
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Leer meer
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
@@ -700,6 +703,9 @@ nl-NL:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Probeer nu
   learn_sign_up_description: Meld je aan om deel te nemen in het Uur Code tijdens de week van het informaticaonderwijs
   learn_sign_up_button: Aanmelden

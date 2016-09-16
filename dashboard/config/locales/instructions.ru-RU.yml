@@ -2161,20 +2161,20 @@
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig."
-      course2_playlab_stage17_1_instruction: |
-        Can you make Jorge the Dog (actor 1)
-        say "Hi"?
+      course2_playlab_stage17_1_instruction: "Можешь сделать так, чтобы собака (исполнитель
+        1) сказала «Привет»?"
       course2_playlab_stage17_10_instruction: "Можешь ли ты добавлять блоки, чтобы
         изменить фон и скорость Пингвина, и потом перетащить его с помощью стрелок,
         чтобы заработать очки?"
       course2_playlab_stage17_11_instruction: Создай свою историю. После завершения
         нажми "Готово", чтобы друзья смогли испытать твою историю на своих телефонах.
       course2_playlab_stage17_2_instruction: "Можешь сделать так, чтобы сначала заговорила
-        собака, а потом и кошка?"
+        собака (исполнитель 1), а потом и кошка (исполнитель 2)?"
       course2_playlab_stage17_3_instruction: "Можешь написать программу, чтобы собака
-        двигалась к коту?"
+        (исполнитель 1) двигалась к коту?"
       course2_playlab_stage17_4_instruction: "Можешь написать программу, чтобы собака
-        подошла к коту и сказала «привет»?"
+        (исполнитель 1) пошла к коту, и когда собака бы подошла вплотную, кот бы сказал
+        «Привет»?"
       course2_playlab_stage17_5_instruction: Можешь ли ты написать свою программу,
         чтобы осьминог сказал "Привет" при нажатии на него?
       course2_playlab_stage17_6_instruction: "Вы можете написать программу, чтобы
@@ -2222,6 +2222,8 @@
         чтобы заработать очки?"
       course3_playlab_stage17_7_instruction: Создай свою историю. После завершения
         нажми "Готово", чтобы друзья смогли испытать твою историю на своих телефонах.
+      Crack a Caesar Cipher_instruction: "Инструкции"
+      Crack Random Substitution_instruction: "Инструкции"
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -5538,6 +5540,8 @@
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: "Инструкции"
+      The Vigenere Cipher_instruction: "Инструкции"
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -7258,6 +7262,7 @@
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: "Инструкции"
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"

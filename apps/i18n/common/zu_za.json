@@ -304,5 +304,6 @@
   "when": "nini",
   "whenRun": "when run",
   "workspaceHeaderShort": "indawo yokusebenzela: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "assessmentSettings": "Assessment Settings"
 }
