@@ -169,7 +169,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "../blockly/js/bramble/index.html",
+    url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true
   });
 
