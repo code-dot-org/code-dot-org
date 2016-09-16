@@ -59,7 +59,7 @@ class ManifestBuilder
 
     animation_metadata_by_name = {}
     info "Building animation metadata..."
-    metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose]
+    metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
     animations_by_name.each do |name, objects|
       # TODO: Validate that every JSON is paired with a PNG and vice-versa
       # Actually download the JSON from S3
@@ -85,14 +85,14 @@ class ManifestBuilder
 #{JSON.pretty_generate metadata}
       EOS
 
-      metadata_progress_bar.increment unless @options[:verbose]
+      metadata_progress_bar.increment unless @options[:verbose] || @options[:quiet]
     end
-    metadata_progress_bar.finish unless @options[:verbose]
+    metadata_progress_bar.finish unless @options[:verbose] || @options[:quiet]
 
     info "Metadata built for #{animation_metadata_by_name.size} animations."
 
     info "Building alias map..."
-    alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size)
+    alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size) unless @options[:quiet]
     alias_map = {}
     animation_metadata_by_name.each do |name, metadata|
       aliases = [name] + (metadata['aliases'] || [])
@@ -100,9 +100,9 @@ class ManifestBuilder
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = ((alias_map[aliaz] || []) + [name]).uniq.sort
       end
-      alias_progress_bar.increment
+      alias_progress_bar.increment unless @options[:quiet]
     end
-    alias_progress_bar.finish
+    alias_progress_bar.finish unless @options[:quiet]
 
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
 
