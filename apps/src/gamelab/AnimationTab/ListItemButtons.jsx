@@ -1,5 +1,6 @@
 /** @file controls below an animation thumbnail */
 import React from 'react';
+import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import color from '../../color';
 import Radium from 'radium';
 import SpeedSlider from '../../templates/SpeedSlider';
@@ -36,7 +37,7 @@ var styles = {
   },
   looping: {
     marginRight: 10,
-    marginTop: 3
+    marginTop: 6
   },
   previewControls: {
     height: 32,
@@ -53,13 +54,19 @@ var sliderStyle = {
  * The delete and duplicate controls beneath an animation or frame thumbnail.
  */
 var ListItemButtons = function (props) {
+  const trashTooltip = (<Tooltip id={0}>Delete</Tooltip>);
+  const cloneTooltip = (<Tooltip id={0}>Duplicate</Tooltip>);
   return (
     <div style={styles.root}>
       <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
       <div style={styles.previewControls}>
         <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
-        <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
-        <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
+        <OverlayTrigger overlay={trashTooltip} placement="bottom" delayShow={500}>
+          <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
+        </OverlayTrigger>
+        <OverlayTrigger overlay={cloneTooltip} placement="bottom" delayShow={500}>
+          <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
+        </OverlayTrigger>
       </div>
     </div>
   );
