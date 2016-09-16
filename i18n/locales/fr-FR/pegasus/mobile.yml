@@ -274,6 +274,8 @@ fr-FR:
   homepage_banner_congress_link: Ajouter votre support
   homepage_banner_emailprivacy: "Nous faisons un changement majeur sur comment nous soutenons la confidentialité de l'étudiant."
   homepage_banner_emailprivacy_link: Lire la suite
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
   homepage_slot_text_link_hoc: "Essayer l'Heure de Code"
@@ -681,6 +683,9 @@ fr-FR:
   dashboard_announce_all: "Tenu à jour avec de nouvelles fonctionnalités et mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir les anciennes annonces.</a>"
   code_hoc_coming: "L'Heure de Code est là — du 8 au 14 décembre&#160;!"
   code_sign_up: "Enregistrez-vous pour participer à la Semaine de l'enseignement de l'informatique."
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: En savoir plus
   learn_sign_up_description: "Enregistrez-vous pour participer à l'Heure de Code pendant la Semaine de l'enseignement de l'informatique."
   learn_sign_up_button: Inscription

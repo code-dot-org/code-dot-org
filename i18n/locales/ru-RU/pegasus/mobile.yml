@@ -116,7 +116,7 @@ ru-RU:
   third_party_codehs_desc: CodeHS вводит в строительные блоки программирования с короткими видео, примерами кода, и много упражнений по программированию, которые делают кодинг веселым и доступным для начинающих. Для школ и учителей CodeHS обеспечивает учебный план, инструменты для учителей и профессиональной разработки. Для отдельных учащихся, вы сможете получить необходимую вам помощь по сети наставников.
   third_party_codehs_btn_try: Введение в CS узнать больше для школ
   third_party_codecademy_desc: 'Мы пересматриваем образование сверху внизу. Технология веб переосмыслила почти все - коммерция, социальные сети, здравоохранение и многое другое. Мы строим образование в котором нуждается мир - первое по-настоящему чистое и естественное образование.'
-  third_party_codecademy_btn_curriculum: Скачать Codecademy учебный план
+  third_party_codecademy_btn_curriculum: Скачать учебный план Codecademy
   third_party_codecademy_btn_site: Посетить Codecademy
   third_party_organization: Организация
   third_party_curriculum: Учебная программа
@@ -273,6 +273,8 @@ ru-RU:
   homepage_banner_congress_link: Помогите
   homepage_banner_emailprivacy: Мы вносим важное изменение в то, как мы поддерживаем студенческую частную жизнь.
   homepage_banner_emailprivacy_link: Подробнее
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Узнать больше
   homepage_slot_text_title_hoc: Час кода
   homepage_slot_text_blurb_hoc: Каждый может учиться. Начните сегодня
   homepage_slot_text_link_hoc: Попробуйте Час кода
@@ -526,7 +528,7 @@ ru-RU:
   dashboard_progress_completed_too_many_blocks: Завершено, слишком много блоков
   dashboard_progress_completed_perfect: Завершено, отлично
   dashboard_progress_furthest_level_attempted: запрошен слишком высокий уровень
-  dashboard_progress_submitted: Представленный
+  dashboard_progress_submitted: отправлен
   dashboard_progress_view: 'Просмотр прогресса в:'
   dashboard_progress_student_in_script: 'Информация о прогрессе для %{student_name} в %{script_name}'
   dashboard_progress_pair_programming: Парное программирование
@@ -661,8 +663,7 @@ ru-RU:
   dashboard_faq: Часто задаваемые вопросы
   dashboard_faq_k5: 'K-5: часто задаваемые вопросы'
   dashboard_announcements: Объявления
-  dashboard_announce_message_fall2016_features: |-
-    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
+  dashboard_announce_message_fall2016_features: 'Мы провели лето, превращая ваши отзывы в новые возможности. Теперь можно <a href="%{pp_url}" target="_blank"> отслеживать прогресс нескольких студентов</a> даже если они программируют в паре на одном устройстве. Вы можете использовать <a href="%{csp_widgets_url}" target="_blank"> лучшие интерактивные инструменты</a> из нашего курса CS Principles в <i>любом</i> классе. Также ваши студенты могут <a href="%{unused_code_url}" target="_blank">хранить неиспользуемый код</a> в своей рабочей области воодушевляя себя на эксперименты! Проверьте наши новые возможности и дайте знать, что вы оба этом думаете.'
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Узнать больше
   dashboard_announce_try_now_button: Попробуйте сейчас
@@ -671,6 +672,9 @@ ru-RU:
   dashboard_announce_all: "Будьте в курсе новых функций и обновлений нашего блога учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: Зарегистрируйтесь для участия в неделе информатики
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Подробнее
   learn_sign_up_description: Зарегистрируйтесь, чтобы участвовать в часе кода во время недели образования CS
   learn_sign_up_button: Зарегистрироваться
@@ -1204,7 +1208,7 @@ ru-RU:
   alice_beyond_longdescription: Используя инновационную среду программирования для создания 3D-анимации, проект Alice предлагает инструменты и учебные материалы для обучения вычислительному мышлению, навыкам решения задач и программированию для учеников разного возраста и уровней.
   sphero_beyond_longdescription: Неважно, являетесь ли вы педагогом или родителем, уроки SPRK позволят детишкам пройти интенсивный курс по программированию роботов, одновременно улучшая их навыки в математике и точных науках.
   compatibility_hide_this_warning: Скрыть это предупреждение
-  compatibility_unsupported_browser: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'> одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницы, но ожидаемая функциональность может быть повреждена."
+  compatibility_unsupported_browser: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'>одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницу, но будьте готовы к тому, что функциональность может быть нарушена."
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

@@ -52,7 +52,7 @@ const StageLock = React.createClass({
     }
     return (
       <div style={{display: 'inline-block'}}>
-        /* className used only for purposes of uitest */
+        {/* className used only for purposes of uitest */}
         <button
           style={progressStyles.blueButton}
           onClick={this.openLockDialog}

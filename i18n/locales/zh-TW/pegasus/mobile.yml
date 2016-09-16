@@ -275,6 +275,8 @@ zh-TW:
   homepage_banner_congress_link: 添加您的支援
   homepage_banner_emailprivacy: 我們正在對如何支援學生隱私做重要改變。
   homepage_banner_emailprivacy_link: 閱讀更多
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: 瞭解更多資訊
   homepage_slot_text_title_hoc: 一小時的程式課程
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
@@ -673,6 +675,9 @@ zh-TW:
   dashboard_announce_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看過去的公告。</a>"
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: 快來試試
   learn_sign_up_description: 在 CS 教育週期間報名參加一小時的程式碼課程
   learn_sign_up_button: 註冊帳號
