@@ -12,7 +12,7 @@ var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var processMarkdown = require('marked');
+var processMarkdown = require('../../MarkdownRenderer');
 
 var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');

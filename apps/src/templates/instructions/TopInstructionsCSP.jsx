@@ -4,13 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
+import processMarkdown from '../../MarkdownRenderer';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
-
-var processMarkdown = require('marked');
 
 var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 var Instructions = require('./Instructions');
