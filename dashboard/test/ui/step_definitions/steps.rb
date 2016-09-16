@@ -945,3 +945,10 @@ Then /^I open the stage lock dialog$/ do
   wait_with_short_timeout.until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
   @browser.execute_script("$('.uitest-locksettings').click()")
 end
+
+Then /^I unlock the stage for students$/ do
+  # allow editing
+  @browser.execute_script("$('.modal-body button').first().click()")
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+end
