@@ -18,7 +18,8 @@ const styles = {
     color: color.charcoal,
     whiteSpace: 'normal',
     // maxHeight provided in render method based on window size
-    overflowY: 'scroll'
+    overflowY: 'scroll',
+    textAlign: 'left'
   },
   title: {
     color: color.teal,
