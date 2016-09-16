@@ -45,7 +45,6 @@ Feature: Looking at a few things with Applitools Eyes
     Examples:
       | url                                                               | test_name                  |
       | http://learn.code.org/projects/applab/new                         | new applab project         |
-      | http://code.org/                                                  | code.org homepage          |
       | http://studio.code.org/                                           | logged in studio homepage  |
       | http://studio.code.org/s/allthethings                             | logged in script progress  |
       | http://learn.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |

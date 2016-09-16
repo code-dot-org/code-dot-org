@@ -31,7 +31,7 @@ const EditTableListRow = React.createClass({
             title="Delete table"
             body="Do you really want to delete this entire table? You cannot undo this action."
             buttonText="Delete"
-            containerStyle={{width: 103}}
+            containerStyle={{whiteSpace: 'normal', width: 103}}
             onConfirm={this.handleDelete}
           />
         </td>

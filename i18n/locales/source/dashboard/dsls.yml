@@ -147,6 +147,25 @@ en:
         title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Design Instructions Site: {}
+      CSD Hobbies Example: {}
+      CSD L04 Wrap Up Debug Example: {}
+      CSD Recipe Stop: {}
+      CSD U1 Input Output C1:
+        Challenge 1: Challenge 1
+        description here: description here
+      CSD U1 Input Output C2:
+        description here: description here
+        title: title
+      CSD U1 Input Output C3:
+        description here: description here
+        title: title
+      CSD U1 Input Output C4:
+        description here: description here
+        title: title
+      CSD U1 Input Output Intro:
+        description here: description here
+        title: title
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -175,15 +194,27 @@ en:
       CSD U3 abstraction intro:
         description here: description here
         title: title
+      CSD U3 collisions STOP isTouching:
+        STOP: STOP
+        description here: description here
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSDU2 - Fundamentals Videos: {}
       CSDU2 - Rating Quality Websites: {}
+      CSDU2 - further styling suggestions: {}
+      CSDU2- home page examples: {}
+      CSDU2L01 SFLP:
+        description here: description here
+        title: title
+      CSDU2L02 SFLP: {}
+      CSDU2L04 - Stop: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -199,6 +230,9 @@ en:
       CSP U4 - Basic Terms: {}
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
+        description here: description here
+      CSP assessment Hex interstitial:
+        Hexadecimal: Hexadecimal
         description here: description here
       CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
@@ -377,6 +411,12 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Digital Footprint Chirpr johnsnow:
+        Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint FaceSpace John:
+        FaceSpace - John T: FaceSpace - John T
+      Digital Footprint instantframe:
+        instantframe - johnsnow: instantframe - johnsnow
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -603,6 +643,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD-unit2 What is the Challenge: {}
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
       ECSPD1 Code Studio:
@@ -1137,6 +1178,7 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U2 - Website Comparison: {}
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1390,7 +1432,16 @@ en:
       U4 Cleaning Data Activity Guide Pt3:
         description here: description here
         title: title
+      U4 How Secure Is Password?:
+        description here: description here
+        title: title
       U4 Inspirational Data Video: {}
+      U4 caesar cipher interstitial:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      U4 how to crack substitution cipher:
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       U4L01 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1491,6 +1542,9 @@ en:
       U4L24 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L5 random subst challenge page:
+        description here: description here
+        title: title
       U5 - Create PT - Student Introduction:
         description here: description here
         title: title
@@ -1550,6 +1604,9 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      csp_unit_assessment_overview:
+        description here: description here
+        title: title
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -1623,6 +1680,9 @@ en:
       grade4_project_presentation:
         description here: description here
         title: title
+      grade4_unplugged_FunkyFunctions:
+        Funky Functions: Funky Functions
+        Illustrate the power of functions: Illustrate the power of functions
       grade5_project_design:
         description here: description here
         title: title
@@ -1826,6 +1886,25 @@ en:
         Timeline of PD Phases: Timeline of PD Phases
       sciPD2 wiggle:
         Walk with a Wiggle: Walk with a Wiggle
+      sciPD2Part4_S1_L2: {}
+      sciPD2Part4_S1_L3:
+        description here: description here
+        title: title
+      sciPD2Part4_S2_L1:
+        description here: description here
+        title: title
+      sciPD2Part4_S2_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L1:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L2:
+        description here: description here
+        title: title
+      sciPD2Part4_S3_L3:
+        description here: description here
+        title: title
       sciPD2b end:
         Thank You!: Thank You!
       sciPD2b intro:
@@ -1887,6 +1966,9 @@ en:
       sciPD3pre1 thanks:
         Thank You: Thank You
         Thanks for your time: Thanks for your time
+      sciPDpart4_S1_L1:
+        description here: description here
+        title: title
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
       seqAlg:
@@ -1918,9 +2000,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -2022,12 +2101,18 @@ en:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: description here
+        title: title
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: Cracking the Code
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
       name:
         CSP Culminating Assessment: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
@@ -2228,6 +2313,17 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD validator Matching:
+        "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
+        "&lt;head&gt;": "&lt;head&gt;"
+        "&lt;html&gt;": "&lt;html&gt;"
+        "&lt;title&gt;": "&lt;title&gt;"
+        Defines high level information about web page: Defines high level information about web page
+        'Matching: Web Page Fundamentals': 'Matching: Web Page Fundamentals'
+        Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.: Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2673,17 +2769,17 @@ en:
       U2L14 Assessment:
         'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Vigenère Cipher: Vigenère Cipher
+        an problem that cannot be solved in a reasonable amount of time: an problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
-        heuristic: heuristic
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently for each character: encryption that shifts the alphabet differently for each character
         random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
@@ -3274,6 +3370,11 @@ en:
         L: L
         V: V
         Y: Y
+      CB_Question_3update:
+        'ASCII Character: <code> A </code>': 'ASCII Character: <code> A </code>'
+        'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
+        'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
+        The table does not contain the value represented by the binary number <code>0100  0010</code>: The table does not contain the value represented by the binary number <code>0100  0010</code>
       CB_Question_4:
         Input A can be either true or false: Input A can be either true or false
         Input A must be false: Input A must be false
@@ -3318,6 +3419,17 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CSD Headers Prediction:
+        ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        Option 1: Option 1
+        'Option 2 ': 'Option 2 '
+        Option 3: Option 3
+        Option 4: Option 4
+      CSD Prediction Header Size:
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -3600,6 +3712,14 @@ en:
         It displays the smallest number in the list.: It displays the smallest number in the list.
         Which of the following best describes the result after the program is executed on a given list?: Which of the following best describes the result after the program is executed on a given list?
       CSPFinal_Question_4:
+        ? 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        : 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
+        IPv4 proved unreliable in some cases where network redundancy could not be ensured: IPv4 proved unreliable in some cases where network redundancy could not be ensured
+        IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
+        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+      CSPFinal_Question_4_original:
         'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
         'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
         'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)': 'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)'
@@ -3624,6 +3744,16 @@ en:
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_8update:
+        " ": " "
+        ? 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+        : 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
+        ? 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+        : 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
+        ? 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+        : 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
+        ? 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
+        : 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -3633,6 +3763,14 @@ en:
         : Hexadecimal is used to represent digital data because hexadecimal representation uses only 1 digit to represent groups of 4 binary digits.
         ? 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
         : 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
+      CSPFinal_Question_9update:
+        ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
+        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
       CSPPD2 pixel video 1:
         How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
         four: four
@@ -4350,11 +4488,11 @@ en:
         7 bits: 7 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
         ? |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
         : |-
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
       U1L11 Assessment 1:
@@ -4371,7 +4509,7 @@ en:
         097 108 108 111 119: 097 108 108 111 119
         097 112 112 108 101: 097 112 112 108 101
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        'The word "Apple" translated into its ASCII number equivalent is:': 'The word "Apple" translated into its ASCII number equivalent is:'
+        'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
       U1L2 Multiple Choice Assessment Question:
         'A binary question is defined as:': 'A binary question is defined as:'
         A message which has two possible states: A message which has two possible states
@@ -4401,7 +4539,7 @@ en:
         '4': '4'
         '6': '6'
         '8': '8'
-        If you just had a circle and a square, how many 3-shape permutations could you make?: If you just had a circle and a square, how many 3-shape permutations could you make?
+        If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?: If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
       U1L8 Multiple Choice:
         '10': '10'
@@ -4409,8 +4547,8 @@ en:
         '14': '14'
         '16': '16'
         'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
-        ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
-        : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+        ? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
+        : You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
       U2L01 Assessment 1:
         A loosely organized collection of citizens and engineers who communicate mostly by email.: A loosely organized collection of citizens and engineers who communicate mostly by email.
         An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
@@ -5784,6 +5922,12 @@ en:
         Neutral: Neutral
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      test me:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -5793,10 +5937,14 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        Answer 1: Answer 1
-        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
-        Make a prediction and hit run: Make a prediction and hit run
-        Question: Question
+        "<!DOCTYPE html>": "<!DOCTYPE html>"
+        "<head>": "<head>"
+        "<html>": "<html>"
+        "<title>": "<title>"
+        Defines high level information about web page: Defines high level information about web page
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

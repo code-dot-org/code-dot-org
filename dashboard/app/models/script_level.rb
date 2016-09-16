@@ -144,7 +144,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def name
-    I18n.t("data.script.name.#{script.name}.#{stage.name}")
+    stage.localized_name
   end
 
   def report_bug_url(request)
@@ -180,7 +180,7 @@ class ScriptLevel < ActiveRecord::Base
     ids = level_ids
 
     levels.each do |l|
-      ids << l.contained_levels.map(&:id)
+      ids.concat(l.contained_levels.map(&:id))
     end
 
     summary = {

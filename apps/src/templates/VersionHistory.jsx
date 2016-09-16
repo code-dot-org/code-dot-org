@@ -77,10 +77,11 @@ var VersionHistory = React.createClass({
 
   onClearPuzzle: function () {
     this.setState({showSpinner: true});
-    this.props.handleClearPuzzle();
-    dashboard.project.save(function () {
-      location.reload();
-    }, true);
+    this.props.handleClearPuzzle().then(() => {
+      dashboard.project.save(function () {
+        location.reload();
+      }, true);
+    });
   },
 
   render: function () {

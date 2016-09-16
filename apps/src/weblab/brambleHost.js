@@ -14,6 +14,8 @@ let bramble_ = null;
 let brambleProxy_ = null;
 // interface to Web Lab host in Code Studio
 let webLab_ = null;
+// the registered onProjectChanged callback function
+let onProjectChangedCallback_ = null;
 
 // Project root in file system
 const projectRoot = "/codedotorg/weblab";
@@ -127,6 +129,17 @@ function disableInspector() {
   brambleProxy_.disableInspector();
 }
 
+function onProjectChanged(callback) {
+  onProjectChangedCallback_ = callback;
+}
+
+function loadStartSources(callback) {
+  // Get initial sources to put in file system
+  const startSources = webLab_.getStartSources();
+
+  // put the source files into the Bramble file system
+  putFilesInBramble(bramble_, startSources, callback);
+}
 
 // Get the WebLab object from our parent window
 if (parent.getWebLab) {
@@ -144,7 +157,9 @@ const brambleHost = {
   hideTutorial: hideTutorial,
   showTutorial: showTutorial,
   enableInspector: enableInspector,
-  disableInspector: disableInspector
+  disableInspector: disableInspector,
+  onProjectChanged: onProjectChanged,
+  loadStartSources: loadStartSources
 };
 
 // Give our interface to our parent
@@ -159,10 +174,38 @@ function load(Bramble) {
   });
 
   // Event listeners
-  Bramble.on("ready", function (bramble) {
+  Bramble.once("ready", function (bramble) {
+
+    function handleFileChange(path) {
+      if (onProjectChangedCallback_) {
+        onProjectChangedCallback_();
+      }
+    }
+
+    function handleFileDelete(path) {
+      if (onProjectChangedCallback_) {
+        onProjectChangedCallback_();
+      }
+    }
+
+    function handleFileRename(oldFilename, newFilename) {
+      if (onProjectChangedCallback_) {
+        onProjectChangedCallback_();
+      }
+    }
+
+    function handleFolderRename(paths) {
+      if (onProjectChangedCallback_) {
+        onProjectChangedCallback_();
+      }
+    }
+
+    bramble.on("fileChange", handleFileChange);
+    bramble.on("fileDelete", handleFileDelete);
+    bramble.on("fileRename", handleFileRename);
+    bramble.on("folderRename", handleFolderRename);
 
     brambleProxy_ = bramble;
-    brambleProxy_.showTutorial();
   });
 
   Bramble.once("error", function (err) {
@@ -174,11 +217,7 @@ function load(Bramble) {
 
   });
 
-  // Get initial sources to put in file system
-  const startSources = webLab_.getStartSources();
-
-  // put the source files into the Bramble file system
-  putFilesInBramble(Bramble, startSources, function () {
+  loadStartSources(function () {
     // tell Bramble which root dir to mount
     Bramble.mount(projectRoot);
   });

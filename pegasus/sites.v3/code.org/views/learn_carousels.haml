@@ -45,10 +45,9 @@
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-  - if variation == 'learn'
-    = view :learn_teacher_banner
-
 - if request.locale == "en-US"
+  %br
+  %br
   .footer-banner
     = I18n.t(:learn_footer_all_tutorials)
   %br

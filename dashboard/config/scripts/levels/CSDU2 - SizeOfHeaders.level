@@ -1,0 +1,15 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-09T14:45:51.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Size of Headers\r\n\r\nThere are different sized headers which are marked by the number next to the h in the header tag. They go from &lt;h1&gt; to &lt;h6&gt; .\r\n\r\n| Example | Result |\r\n| ------- | ------ |\r\n| <pre>&lt;h1&gt; Shoulders &lt;/h1&gt; <br> &lt;h2&gt; Knees &lt;/h2&gt; <br> &lt;h3&gt; Toes &lt;/h3&gt;</pre> | <img src=\"https://images.code.org/4f252e3dce84a14e1bfdab373d3edbad-image-1473432674187.50.43 AM.png\" style=\"width:200px\"> |\r\n\r\n# Do This\r\n* Predict what the result of the code in the index.html file will look like. Pick from one of the 4 options below.\r\n\r\n| Option 1 | Option 2 | Option 3 | Option 4 |\r\n| -------- | -------- | -------- | -------- |\r\n| <img src=\"https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png\" style=\"width:200px\"> | <img src=\"https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png\" style=\"width:200px\"> | <img src=\"https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png\" style=\"width:200px\"> | <img src=\"https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png\" style=\"width:200px\"> |"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
