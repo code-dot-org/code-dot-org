@@ -45,7 +45,7 @@ const AddKeyRow = React.createClass({
 
   render() {
     return (
-      <tr id="addKeyValuePairRow" style={dataStyles.row}>
+      <tr id="uitest-addKeyValuePairRow" style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}
