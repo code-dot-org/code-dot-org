@@ -8,9 +8,11 @@ nav: plp_playbook_nav
 Use the links below to find our program curriculum guides.
 
 ### CS Principles
-
 [AP CS Principles Curriculum (Web)](/educate/csp#lessons)<br/>
 [Overview of Code.org's Professional Learning Program](https://code.org/educate/professional-learning/cs-principles) 
+
+### Computer Science Discoveries
+[What is CS Discoveries?](/educate/csd)
 
 ### Exploring Computer Science
 [Exploring Computer Science Version 5 Curriculum (PDF)](https://www.dropbox.com/s/v248jgfym29t4ya/ExploringComputerScience-v5.0.pdf?dl=0)<br/>

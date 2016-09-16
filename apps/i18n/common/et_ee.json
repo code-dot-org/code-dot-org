@@ -304,5 +304,6 @@
   "when": "kui",
   "whenRun": "pärast käivitamist",
   "workspaceHeaderShort": "Tööruum: ",
-  "yes": "Jah"
+  "yes": "Jah",
+  "assessmentSettings": "Assessment Settings"
 }

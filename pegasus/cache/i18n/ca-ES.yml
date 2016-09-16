@@ -374,6 +374,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
@@ -914,6 +916,14 @@
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: L'hora del Codi és aquí - 8-14 de desembre!
   code_sign_up: Inscriure's a participar durant la setmana de l'educació CS
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Més informació
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -1796,13 +1806,3 @@
   infinity_shortcode: inf
   playlab_shortcode: reprodueix
   artist_shortcode: art
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: Learn more
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.

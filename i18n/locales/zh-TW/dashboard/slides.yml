@@ -553,7 +553,7 @@ zh:
         text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: 電腦可以非常聰明，但你得精準地一步一步的告訴他們你的想法， 他們才能明白。演算法偉大地方, 是如果你按順序跟從指示, 你可以做到一些你不知道如何提前處理的事。就像使用一個配方似的。
       3:
         image: notes/C1_planting_seed_3.png
         text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
@@ -631,7 +631,7 @@ zh:
         text: This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites.
+        text: '二進制是使用兩個選項來對資料表達的一種方式。有些人以為它只是”1”或是”0”。其實你可以運用一些組合來表達, 例如: 開、關; 上、下; 進、出; 又或者其他一些相對的組合。'
       3:
         image: notes/C2_binary_bracelets_3.png
         text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
@@ -697,7 +697,7 @@ zh:
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?
+        text: 當你每一次上線, 你也會留下足跡, 可能是查找、複製、分享、廣播, 而且更是永久性的。那些類型的數碼足跡你留下了呢? 那些類型的數碼足跡是你想留下的呢?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png

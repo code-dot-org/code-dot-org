@@ -280,7 +280,7 @@ zh:
     user_not_found: 教師不能被找到
     student_teacher_disassociated: '你已移除 %{teacher_name} 當作你的教師.'
     panel:
-      answer_viewer: Teacher Panel
+      answer_viewer: 導老師控制台
       student: '學生 '
       viewing_solution: 查看解答
       try_it_yourself: 自己試試
@@ -731,3 +731,5 @@ zh:
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

@@ -75,7 +75,7 @@ window.TutorialExplorerManager = function (options) {
     ReactDOM.render(
       <TutorialExplorer
         filterGroups={options.filters}
-        tutorials={options.tutorials.contents}
+        tutorials={options.tutorials}
         locale={options.locale}
       />,
       element

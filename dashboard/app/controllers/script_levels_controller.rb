@@ -64,6 +64,12 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
+    if stage_hidden?(current_user, @script_level)
+      view_options(full_width: true)
+      render 'levels/hidden_stage'
+      return
+    end
+
     # In the case of the puzzle_page, send it through to be included in the
     # generation of the script level path.
     extra_params = {}
@@ -94,29 +100,7 @@ class ScriptLevelsController < ApplicationController
   def hidden
     authorize! :read, ScriptLevel
 
-    if current_user.try(:teacher?)
-      sections = current_user.sections.select{|s| s.deleted_at.nil?}
-    elsif current_user.try(:student?)
-      sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
-    end
-
-    if sections.nil? || sections.empty?
-      render json: []
-      return
-    end
-
-    script_sections = sections.select{|s| s.script.name == params[:script_id]}
-    if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
-      # hides the stage
-      stage_ids = script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
-    else
-      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of th sections the student belongs to
-      all_ids = sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
-      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      stage_ids = counts.select{|_, val| val == sections.length}.keys
-    end
+    stage_ids = get_hidden_stage_ids(current_user, params[:script_id])
 
     render json: stage_ids
   end
@@ -326,6 +310,57 @@ class ScriptLevelsController < ApplicationController
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
     render 'levels/show', formats: [:html]
+  end
+
+  # Returns a set of sections for the current user, and a filter set of which of
+  # those sections use the given script_id. For teachers, looks at sections they
+  # teacher, for students it's sections they are in.
+  def user_sections(script_id)
+    if current_user.try(:teacher?)
+      sections = current_user.sections.select{|s| s.deleted_at.nil?}
+    elsif current_user.try(:student?)
+      sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
+    end
+
+    if sections.nil? || sections.empty?
+      return [[], []]
+    end
+
+    script_sections = sections.select{|s| s.script.try(:name) == script_id}
+    [sections, script_sections]
+  end
+
+  def stage_hidden?(current_user, script_level)
+    sections, script_sections = user_sections(script_level.script.id)
+    return false if sections.empty?
+
+    if script_sections.empty?
+      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
+      # of the sections the student belongs to
+      sections.all?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+    else
+      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
+      # hides the stage
+      script_sections.any?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+    end
+  end
+
+  def get_hidden_stage_ids(current_user, script_id)
+    sections, script_sections = user_sections(script_id)
+
+    return [] if sections.empty?
+
+    if script_sections.empty?
+      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
+      # of the sections the student belongs to
+      all_ids = sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      counts.select{|_, val| val == sections.length}.keys
+    else
+      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
+      # hides the stage
+      script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
+    end
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.

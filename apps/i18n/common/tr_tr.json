@@ -304,5 +304,6 @@
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
   "workspaceHeaderShort": "Çalışma alanı: ",
-  "yes": "Evet"
+  "yes": "Evet",
+  "assessmentSettings": "Assessment Settings"
 }

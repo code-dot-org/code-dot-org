@@ -322,7 +322,7 @@
     user_not_found: "Такого вчителя не знайдено."
     student_teacher_disassociated: "Ви видалили %{teacher_name} як свого вчителя."
     panel:
-      answer_viewer: "Перегляд відповідей"
+      answer_viewer: "Панель вчителя"
       student: "учень"
       viewing_solution: "Перегляд рішення"
       try_it_yourself: "Спробуйте самі"
@@ -906,3 +906,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview
