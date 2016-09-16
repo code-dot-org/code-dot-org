@@ -16,6 +16,7 @@ var styles = {
     fontSize: 24
   },
   icon: {
+    float: 'left',
     padding: 2,
     borderWidth: 1,
     borderRadius: 4,
@@ -32,6 +33,14 @@ var styles = {
   },
   trash: {
     marginRight: 12
+  },
+  looping: {
+    marginRight: 10,
+    marginTop: 3
+  },
+  previewControls: {
+    height: 32,
+    display: 'inline-block'
   }
 };
 
@@ -46,10 +55,12 @@ var sliderStyle = {
 var ListItemButtons = function (props) {
   return (
     <div style={styles.root}>
-      <ItemLoopToggle onToggleChange={props.onLoopingChanged} looping={props.looping} />
       <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
-      <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
-      <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
+      <div style={styles.previewControls}>
+        <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+        <i key="trash" className="fa fa-trash-o" style={[styles.icon, styles.trash]} onClick={props.onDeleteClick} />
+        <i key="clone" className="fa fa-clone" style={styles.icon} onClick={props.onCloneClick} />
+      </div>
     </div>
   );
 };
