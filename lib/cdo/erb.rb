@@ -12,5 +12,5 @@ end
 def erb_file_to_file(template_path, out_path, locals)
   content = erb_file_to_string(template_path, locals)
   IO.write(out_path, content)
-  File.chmod(0755, out_path) if File.executable?(template_path)
+  File.chmod(0o755, out_path) if File.executable?(template_path)
 end
