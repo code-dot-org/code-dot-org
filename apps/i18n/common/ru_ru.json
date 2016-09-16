@@ -304,5 +304,6 @@
   "when": "когда",
   "whenRun": "при запуске",
   "workspaceHeaderShort": "Место сбора блоков: ",
-  "yes": "Да"
+  "yes": "Да",
+  "assessmentSettings": "Assessment Settings"
 }

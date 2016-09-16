@@ -304,5 +304,6 @@
   "when": "kada",
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radna površina: ",
-  "yes": "Da"
+  "yes": "Da",
+  "assessmentSettings": "Assessment Settings"
 }

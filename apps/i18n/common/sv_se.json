@@ -304,5 +304,6 @@
   "when": "när",
   "whenRun": "vid start",
   "workspaceHeaderShort": "Arbetsyta: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "assessmentSettings": "Assessment Settings"
 }

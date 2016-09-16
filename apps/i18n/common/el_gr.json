@@ -304,5 +304,6 @@
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
   "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "assessmentSettings": "Assessment Settings"
 }

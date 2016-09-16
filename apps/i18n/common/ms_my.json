@@ -304,5 +304,6 @@
   "when": "apabila",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Ya"
+  "yes": "Ya",
+  "assessmentSettings": "Assessment Settings"
 }

@@ -304,5 +304,6 @@
   "when": "कब",
   "whenRun": "जब चलाएँ",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "हाँ"
+  "yes": "हाँ",
+  "assessmentSettings": "Assessment Settings"
 }
