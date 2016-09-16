@@ -133,11 +133,15 @@ const DataTable = React.createClass({
     if (newColumns.indexOf(newName) === -1) {
       newColumns.push(newName);
     }
-    this.setState({
-      editingColumn: null,
-    });
-    if (oldName !== newName) {
+
+    if (oldName === newName) {
       this.setState({
+        newColumns,
+        editingColumn: null,
+      });
+    } else {
+      this.setState({
+        editingColumn: null,
         pendingColumn: oldName,
       });
       // Show the spinner icon before updating the data.
