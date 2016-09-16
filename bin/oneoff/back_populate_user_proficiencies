@@ -78,7 +78,7 @@ require_relative '../../dashboard/config/environment'
 
 TIME_NOW = DateTime.now.freeze
 # The time at which we started tracking incremental user proficiency.
-TIME_CUTOFF = DateTime.new(2016, 04, 27).freeze
+TIME_CUTOFF = DateTime.new(2016, 4, 27).freeze
 
 # @param proficiency [UserProficiency] a UserProficiency populated with level
 #   counts
