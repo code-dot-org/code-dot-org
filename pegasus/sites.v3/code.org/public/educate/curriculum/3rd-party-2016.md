@@ -47,7 +47,6 @@ nav: educate_nav
 |--------------|------------|---------------|--------------------------|------|
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
-| [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP CS Principles/AP CS A course. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | Semester or year-long CS Discoveries intro course is under development to be launched Summer 2017. Year-long AP Computer Science Principles course, FREE | In-person and online workshops available to partner districts, FREE, Portion of teacher stipends covered by Code.org on partner by partner basis |
 | [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
@@ -84,6 +83,9 @@ Create games on the PC and XBox via a simple visual programming language. Can be
 
 ### [Pencil Code](//pencilcode.net)
 Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
+
+### [Codecademy](https://www.codecademy.com/learn)
+Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages 
 
 ### [CS Unplugged](http://csunplugged.org/)
 Fun classroom exercises to teach computer science principles, no computers needed!

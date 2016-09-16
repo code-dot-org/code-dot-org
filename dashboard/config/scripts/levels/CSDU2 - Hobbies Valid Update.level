@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Update Hobbies\r\n\r\nSince you now know 4 tags that are good practice to include in your website you should now add them to your pages.\r\n\r\n# Do This\r\n\r\n* Add &lt;!Doctype&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; tags to your Hobbies page. ",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}"
+    "markdown_instructions": "# Update Hobbies\r\n\r\nSince you now know 4 tags that are good practice to include in your website you should now add them to your pages.\r\n\r\n# Do This\r\n\r\n* Add &lt;!Doctype&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; tags to your Hobbies page.\r\n* Run your web page through <a href=\"https://validator.w3.org/\" target=\"_blank\">W3 validator</a> to check that you updated it correctly.",
+    "project_template_level_name": "CSDU2 - Hobbies Template"
   },
   "published": true,
   "notes": "",

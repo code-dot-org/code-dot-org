@@ -21,7 +21,7 @@ const styles = {
   animationsColumn: {
     display: 'flex',
     flexDirection: 'column',
-    minWidth: 170,
+    minWidth: 190,
     maxWidth: 300
   },
   editorColumn: {
