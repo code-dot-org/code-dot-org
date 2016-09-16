@@ -7,7 +7,7 @@ ku-TR:
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: زیاتر فێرببە
-  en: Computer Science
+  en: زانستی كۆپیتەر
   computer_science_edweek: هەفتەی فێربوونی زانستی کۆمپیوتەر
   csedweek_dates: لە ٨ تا ١٤ ی مانگی ١٢ ساڵی ٢٠١٢
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">یەك کاژێری کۆد نووسی</a> نزیك بوەتەوە. , بانگەشەیەك بۆ هەموو مامۆستا و رێکخەران<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">پلانی یەك کاتژێری کۆدنووسی خۆت داڕێژە</a>'
@@ -313,6 +313,8 @@ ku-TR:
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: زیاتر فێرببە
   homepage_slot_text_title_hoc: كاژێری كۆدنووسی
   homepage_slot_text_blurb_hoc: هەموو کەسێک دەتوانێت فێربێت. ئەمڕۆ دەستپێبکە
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -712,6 +714,9 @@ ku-TR:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: زیاتر فێرببە
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: خۆتۆمارکردن
@@ -901,7 +906,7 @@ ku-TR:
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
-  course1_gradelevel: Ages 4-6
+  course1_gradelevel: تەمەنی ٤-٦
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18

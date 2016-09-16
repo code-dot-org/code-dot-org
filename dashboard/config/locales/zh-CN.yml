@@ -3,11 +3,7 @@
     messages:
       not_saved: "请更正以下错误:"
       too_young: "此内容有年龄限制，不适合低龄的学生。"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+      teacher_must_accept_terms: 此内容有年龄限制，对于低年级的学生不可用。问你的老师以接受更新的服务条款给你访问此内容。你的老师通过登录到代码工作室并单击代码工作室主页顶部附近的"审查更新条款"按钮来做这件事。
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -91,7 +87,7 @@
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
     teacher_educator_guide: "请参阅教师指南"
-    title: Sign up for Code.org
+    title: "注册 Code.org"
     school_name: "学校名称 （可选）"
     school_address: "学校地址 （可选）"
     address_placeholder: "地址、 省市、 邮编"
@@ -109,7 +105,8 @@
     mismatch_password: "您输入的两个密码不匹配"
     student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用
       Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
-    teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
+    teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'>
+      隐私政策</a>。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
     user_type_label: "账户种类"
     user_type_teacher: "老师"
@@ -263,7 +260,7 @@
       prizes: "奖品"
       logout: "注销"
       signin: "登录"
-      signup: "登录"
+      signup: "创建一个账户"
       already_registered: "已经注册了？"
       pair_programming: "结对编程"
       team: "团队"
@@ -294,7 +291,7 @@
     user_not_found: "不能找到老师"
     student_teacher_disassociated: "你已经移除了老师：%{teacher_name}。"
     panel:
-      answer_viewer: "答案查看器"
+      answer_viewer: "导师面板"
       student: "学生"
       viewing_solution: "查看解决方案"
       try_it_yourself: "自己试一试"
@@ -796,3 +793,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

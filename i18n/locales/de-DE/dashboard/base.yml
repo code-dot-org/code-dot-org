@@ -280,7 +280,7 @@ de:
       answer_viewer: Teacher Panel
       student: Schüler
       viewing_solution: Lösung anzeigen
-      try_it_yourself: Probieren Sie es selbst
+      try_it_yourself: Versuche es selbst
       section: Lerngruppe
       example: Lösungsbeispiel
       example_with_number: 'Lösungsbeispiel %{solution_number}'
@@ -298,7 +298,7 @@ de:
     delete: Account löschen
     delete_text: Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen Ihres Accounts löscht nicht die Accounts Ihrer Schüler.'
-    delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
+    delete_confirm: Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -724,3 +724,5 @@ de:
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

@@ -1325,6 +1325,8 @@
       course3_playlab_stage17_5_instruction: "添加一个模块，在企鹅碰到章鱼时计一分。然​​后试玩一下，用箭头移动企鹅直到得分。"
       course3_playlab_stage17_6_instruction: "你能否通过添加模块来改变背景和Waddles的速度，然后将它按箭头移动而最终得分？"
       course3_playlab_stage17_7_instruction: "创建你自己的游戏。当游戏创建好后，单击完成，让朋友们在他们手机上试试你的游戏。"
+      Crack a Caesar Cipher_instruction: "说明"
+      Crack Random Substitution_instruction: "说明"
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "（点击以查看完整的说明）"
       CSD Hackathon Week 1_instruction: "（点击以查看完整的说明）"
@@ -4197,6 +4199,8 @@
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: "说明"
+      The Vigenere Cipher_instruction: "说明"
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -5917,6 +5921,7 @@
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: "说明"
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"

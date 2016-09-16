@@ -329,7 +329,7 @@
     user_not_found: Esse professor não pôde ser encontrado.
     student_teacher_disassociated: Você removeu %{teacher_name} como seu professor.
     panel:
-      answer_viewer: Visualizador de resposta
+      answer_viewer: Painel do professor
       student: Estudante
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
@@ -929,3 +929,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview
