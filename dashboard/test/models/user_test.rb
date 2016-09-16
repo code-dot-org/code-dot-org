@@ -1048,60 +1048,99 @@ class UserTest < ActiveSupport::TestCase
     create(:user, name: 'Same Name')
   end
 
-  test 'generate username' do
-    def create_user_with_username(username)
-      user = create(:user)
-      user.update_attribute(:username, username)
-    end
-    # username regex: /\A[a-z0-9\-\_\.]+\z/
+  # TODO(asher): The create_user_with_username helper method and the
+  # subsequent tests test the method UserHelpers.generate_username in
+  # lib/cdo/user_helpers. Move these tests to a more appropriate location.
+  def create_user_with_username(username)
+    user = create(:user)
+    user.update_attribute(:username, username)
+  end
 
-    # new name
-    assert_equal 'captain_picard', UserHelpers.generate_username(User, "Captain Picard")
+  test 'generate_username for new username' do
+    # A new username should not receive a suffix.
+    assert_equal 'captain_picard',
+      UserHelpers.generate_username(User, 'Captain Picard')
+  end
 
-    # first prefix
+  test 'generate_username for different usernames' do
+    # Different usernames do not generate spurious collisions.
     create_user_with_username 'captain_picard'
-    assert_equal 'captain_picard1', UserHelpers.generate_username(User, "Captain Picard")
+    assert_equal 'captain', UserHelpers.generate_username(User, 'Captain')
+    assert_equal 'captain_p', UserHelpers.generate_username(User, 'Captain   P')
+  end
 
-    # collisions are not numeric
-    assert_equal 'captain', UserHelpers.generate_username(User, "Captain")
-    assert_equal 'captain_p', UserHelpers.generate_username(User, "Captain    P")
+  test 'generate_username for existing username via dart throwing' do
+    create_user_with_username 'captain_picard'
 
-    create_user_with_username 'captain'
-    create_user_with_username 'captain1'
-    create_user_with_username 'captain2'
-    create_user_with_username 'captain55'
+    # An existing username attempts the username, fails, and receives '6'.
+    srand 0
+    assert_equal 'captain_picard6',
+      UserHelpers.generate_username(User, 'Captain Picard')
+    create_user_with_username 'captain_picard6'
 
-    assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
+    # The next Captain Picard attempts '6', fails, and receives '1'
+    srand 0
+    assert_equal 'captain_picard1',
+      UserHelpers.generate_username(User, 'Captain Picard')
+    create_user_with_username 'captain_picard1'
 
-    assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
+    # The next Captain Picard attempts '6', fails, attempts '1', fails, and
+    # receives '4'.
+    srand 0
+    assert_equal 'captain_picard4',
+      UserHelpers.generate_username(User, 'Captain Picard')
+    create_user_with_username 'captain_picard4'
 
-    create_user_with_username 'coder'
-    create_user_with_username 'coder1'
-    create_user_with_username 'coder99'
-    create_user_with_username 'coder556'
-    assert_equal "coder5561", UserHelpers.generate_username(User, 'coder556')
+    # The next Captain Picard attempts '6', fails, attempts '1', fails,
+    # attempts '4', fails, and receives '77'.
+    srand 0
+    assert_equal 'captain_picard77',
+      UserHelpers.generate_username(User, 'Captain Picard')
+  end
 
-    # short names
+  test 'generate_username for existing username via fallback' do
+    ['', '6', '1', '4', '77', '19', '93'].each do |suffix|
+      create_user_with_username "captain_picard#{suffix}"
+    end
+
+    srand 0
+    assert_equal 'captain_picard94',
+      UserHelpers.generate_username(User, 'Captain Picard')
+  end
+
+  test 'generate_username for long names' do
+    assert_equal 'this_is_a_really',
+      UserHelpers.generate_username(
+        User, 'This is a really long name' + ' blah' * 10
+      )
+  end
+
+  test 'generate_username for short names' do
     assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
+  end
 
-    # long names
-    assert_equal "this_is_a_really", UserHelpers.generate_username(User, 'This is a really long name' + ' blah' * 10)
+  test 'generate_username for parentheses and apostrophes' do
+    assert_equal 'kermit_the_frog',
+      UserHelpers.generate_username(User, 'Kermit (the frog)')
+    assert_equal 'd_andre_means',
+      UserHelpers.generate_username(User, "D'Andre Means")
+  end
 
-    # parens
-    assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
-
-    # non-ascii names
+  test 'generate_username for non-ascii names' do
     assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, '樊瑞')
     assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, 'فاطمة بنت أسد')
   end
 
-  test 'generates usernames' do
+  test 'generate_username' do
     names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = %w(coder_a coder_b captain_picard captain_picard1 captain_picard2 this_is_a_really)
+    expected_usernames = %w(coder_a coder_b captain_picard captain_picard6 captain_picard1 this_is_a_really)
 
     i = 0
     users = names.map do |name|
-      User.create!(@good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")) # use real create method not the factory
+      srand 0
+      User.create!(
+        @good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")
+      )
     end
 
     assert_equal expected_usernames, users.collect(&:username)
