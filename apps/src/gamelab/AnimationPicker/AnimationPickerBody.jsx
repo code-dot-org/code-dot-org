@@ -26,8 +26,8 @@ const AnimationPickerBody = React.createClass({
     };
   },
 
-  onSearchQueryChange(evt) {
-    this.setState({searchQuery: evt.target.value});
+  onSearchQueryChange(value) {
+    this.setState({searchQuery: value});
   },
 
   render() {
