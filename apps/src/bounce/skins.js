@@ -10,11 +10,12 @@
 var skinsBase = require('../skins');
 
 var CONFIGS = {
-
   bounce: {
     nonDisappearingPegmanHittingObstacle: true,
-    ballYOffset: 10
-  }
+    ballYOffset: 10,
+    markerHeight: 43,
+    markerWidth: 50
+  },
 
 };
 
@@ -31,25 +32,27 @@ exports.load = function (assetUrl, id) {
   };
 
   // Images
-  skin.tiles = skin.assetUrl('tiles_wall.png');
-  skin.goalTiles = skin.assetUrl('tiles_goal.png');
-  skin.goal = skin.assetUrl('goal.png');
-  skin.goalSuccess = skin.assetUrl('goal_success.png');
-  skin.ball = skin.assetUrl('ball.png');
-  skin.paddle = skin.assetUrl('paddle.png');
-  skin.obstacle = skin.assetUrl('obstacle.png');
-  if (config.nonDisappearingPegmanHittingObstacle) {
-    skin.nonDisappearingPegmanHittingObstacle = true;
-  } else {
-    skin.nonDisappearingPegmanHittingObstacle = false;
-  }
+  skin.tiles = skin.assetUrl(config.tiles ||'tiles_wall.png');
+  skin.goalTiles = skin.assetUrl(config.goalTiles ||'tiles_goal.png');
+  skin.goal = skin.assetUrl(config.goal ||'goal.png');
+  skin.goalSuccess = skin.assetUrl(config.goalSuccess ||'goal_success.png');
+  skin.ball = skin.assetUrl(config.ball ||'ball.png');
+  skin.paddle = skin.assetUrl(config.paddle ||'paddle.png');
+  skin.obstacle = skin.assetUrl(config.obstacle ||'obstacle.png');
+  skin.background = skin.assetUrl(config.background || 'background.png');
+
+  skin.nonDisappearingPegmanHittingObstacle =
+      !!config.nonDisappearingPegmanHittingObstacle;
+
   skin.obstacleScale = config.obstacleScale || 1.0;
+
   skin.largerObstacleAnimationTiles =
       skin.assetUrl(config.largerObstacleAnimationTiles);
   skin.hittingWallAnimation =
       skin.assetUrl(config.hittingWallAnimation);
   skin.approachingGoalAnimation =
       skin.assetUrl(config.approachingGoalAnimation);
+
   // Sounds
   skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
   skin.flagSound = [skin.assetUrl('win_goal.mp3'),
@@ -76,16 +79,11 @@ exports.load = function (assetUrl, id) {
   skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
                    skin.assetUrl('2_wall_bounce.ogg')];
 
-  // Settings
-  if (config.background !== undefined) {
-    var index = Math.floor(Math.random() * config.background);
-    skin.background = skin.assetUrl('background' + index + '.png');
-  } else {
-    skin.background = skin.assetUrl('background.png');
-  }
   skin.pegmanHeight = config.pegmanHeight || 52;
   skin.pegmanWidth = config.pegmanWidth || 49;
   skin.ballYOffset = config.ballYOffset || 0;
   skin.paddleYOffset = config.paddleYOffset || 0;
+  skin.markerHeight = config.markerHeight || 50;
+  skin.markerWidth = config.markerWidth || 50;
   return skin;
 };
