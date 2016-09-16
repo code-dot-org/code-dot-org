@@ -3,7 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../../color';
-import gamelabMsg from '../locale';
+import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
