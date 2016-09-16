@@ -85,6 +85,7 @@ WarningLabel.propTypes = {
  * Given a search query, generate a results list of animationProps objects that
  * can be displayed and used to add an animation to the project.
  * @param {string} searchQuery - text entered by the user to find an animation
+ * @return {Array.<SerializedAnimationProps>} - roughly
  */
 function searchAnimations(searchQuery) {
   // Make sure to generate the search regex in advance, only once.
@@ -108,5 +109,6 @@ function searchAnimations(searchQuery) {
   return resultSet
       .sort()
       .slice(0, MAX_SEARCH_RESULTS)
-      .map(result => animationLibrary.metadata[result]);
+      .map(result => animationLibrary.metadata[result])
+      .toArray();
 }
