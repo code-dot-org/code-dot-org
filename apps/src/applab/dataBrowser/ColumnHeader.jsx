@@ -11,8 +11,19 @@ import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
 
 const styles = {
-  menu: {
-    float: 'right'
+  columnName: {
+    display: 'inline-block',
+    maxWidth: dataStyles.maxCellWidth,
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  container: {
+    justifyContent: 'space-between',
+    padding: '6px 0',
+  },
+  iconWrapper: {
+    alignSelf: 'flex-end',
+    paddingLeft: 5,
   },
   icon: {
     color: 'white',
@@ -28,6 +39,7 @@ const ColumnHeader = React.createClass({
     editColumn: React.PropTypes.func.isRequired,
     isEditable: React.PropTypes.bool.isRequired,
     isEditing: React.PropTypes.bool.isRequired,
+    isPending: React.PropTypes.bool.isRequired,
     renameColumn: React.PropTypes.func.isRequired,
   },
 
@@ -116,14 +128,36 @@ const ColumnHeader = React.createClass({
     return this.props.columnName === newName || !this.props.columnNames.includes(newName);
   },
 
-  render() {
-    const menuStyle = [styles.menu, {
-      display: this.props.isEditable ? null : 'none',
-    }];
-    const containerStyle = {
-      display: this.props.isEditing ? 'none' : null,
-      padding: '6px 0',
+  getDropdownMenu(isEditable) {
+    const menuStyle = {
+      visibility: isEditable ? null : 'hidden',
     };
+    /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
+    return (
+      <span className="dropdown pull-right" style={menuStyle}>
+        <a className="dropdown-toggle" data-toggle="dropdown">
+          <FontAwesome icon="cog" style={styles.icon}/>
+        </a>
+        <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
+          <li style={{cursor: 'pointer'}}>
+            <a onClick={this.handleRename}>
+              Rename
+            </a>
+          </li>
+          <li style={{cursor: 'pointer'}}>
+            <a onClick={() => this.setState({isDialogOpen: true})}>
+              Delete
+            </a>
+          </li>
+        </ul>
+      </span>
+    );
+  },
+
+  render() {
+    const containerStyle = [styles.container, {
+      display: this.props.isEditing ? 'none' : null,
+    }];
     const inputStyle = [dataStyles.input, {
       display: this.props.isEditing ? null : 'none',
       backgroundColor: this.isInputValid() ? null : color.lightest_red,
@@ -131,26 +165,18 @@ const ColumnHeader = React.createClass({
     }];
     return (
       <th style={dataStyles.headerCell}>
-        <div style={containerStyle}>
-          {this.props.columnName}
-          {/* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */}
-          <span className="dropdown pull-right" style={menuStyle}>
-            <a className="dropdown-toggle" data-toggle="dropdown">
-              <FontAwesome icon="cog" style={styles.icon}/>
-            </a>
-            <ul className="dropdown-menu dropdown-menu-right">
-              <li>
-                <a onClick={this.handleRename}>
-                 Rename
-                </a>
-              </li>
-              <li>
-                <a onClick={() => this.setState({isDialogOpen: true})}>
-                 Delete
-                </a>
-              </li>
-            </ul>
-          </span>
+        <div style={containerStyle} className="flex">
+          <div style={styles.columnName}>
+            {this.props.columnName}
+          </div>
+          <div style={styles.iconWrapper}>
+            {
+              this.props.isPending ?
+                <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/> :
+                this.getDropdownMenu(this.props.isEditable)
+            }
+
+          </div>
         </div>
         <Dialog
           body="Are you sure you want to delete this entire column? You cannot undo this action."
