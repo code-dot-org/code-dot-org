@@ -275,7 +275,7 @@ const DataTable = React.createClass({
           </span>
           <span style={dataStyles.debugLink}>
             <a
-              id="tableDebugLink"
+              id="uitest-tableDebugLink"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
