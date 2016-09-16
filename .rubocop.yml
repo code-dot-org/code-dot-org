@@ -72,6 +72,9 @@ Style/IdenticalConditionalBranches:
 Style/IfInsideElse:
   Enabled: false
 
+Style/NumericPredicate:
+  Enabled: false
+
 Style/RedundantReturn:
   Enabled: false
 

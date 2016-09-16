@@ -23,8 +23,8 @@ These guidelines will give your facilitators the space they need to run a succes
 
 **Supplies**<br/>
 
-- How to Order Supplies - More details coming soon!
-- Supplies List
+Both printed materials and swag should be ordered through [Mimeo](marketplace.mimeo.com/codeorgworkshop). Office supplies were shipped along with your academic year workshop supplies for other programs.
+
 
 **Catering** <br/>
 

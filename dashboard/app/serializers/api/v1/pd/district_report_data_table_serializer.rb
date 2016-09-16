@@ -20,7 +20,7 @@ class Api::V1::Pd::DistrictReportDataTableSerializer < ::Api::V1::DataTableSeria
       {key: :days, type: 'number'}
     ].tap do |definitions|
       if scope.admin?
-        definitions.push *[
+        definitions.concat [
           {key: :payment_type, format: ->(value) {value || 'N/A'}},
           {key: :payment_rate, type: 'number', format: ->(value) {value || 'N/A'}},
           {key: :qualified, type: 'boolean', format: ->(value) {value ? 'TRUE' : 'FALSE'}},

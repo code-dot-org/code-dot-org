@@ -39,6 +39,8 @@ ________________
 - [Facilitator Playbook](https://docs.google.com/document/d/1d3wFP0K-Hd6CGTYgg17pI5TxzpmMUb_UlGiiC3JsvKg/edit) - Toolkit for facilitators of all programs
 - [Guidelines to ECS Phase 2 Workshops](https://docs.google.com/document/d/1mFq3eC1tKpaC7fjd90Gy4NrGlrvGPRhqKfat-BSdLyc/edit) - Instructions for ECS facilitators on how to run Phase 2 Workshop
 - [CSP Facilitation Summit Notes](https://docs.google.com/document/d/1QawlAmavjg1FU3xtjqQGBLaC3i5_iIxLYGS5bl5ubZA/view)
+- [CS in Algebra Phase 3 Agenda](https://docs.google.com/document/d/1S-nexox0U80Pp8rRyfW-PkBCNkJ-vwckJVTqRmLo-Fc/edit#)
+- [CS in Algebra Phase 3 Template Slide Deck](https://docs.google.com/presentation/d/1Jbf0VuTAJnzFgDRODVH9PyUy099w7Bl2l5oG8bzGb28/edit#slide=id.g13d52b2d7c_0_54)
 
 [**Back to the top**](#top)
 ________________

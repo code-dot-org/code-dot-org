@@ -10,7 +10,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    birthday Date.new(1991, 03, 14)
+    birthday Date.new(1991, 3, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
     password "00secret"
     locale 'en-US'
@@ -32,7 +32,7 @@ FactoryGirl.define do
 
     factory :teacher do
       user_type User::TYPE_TEACHER
-      birthday Date.new(1980, 03, 14)
+      birthday Date.new(1980, 3, 14)
       admin false
       factory :admin_teacher do
         admin true
