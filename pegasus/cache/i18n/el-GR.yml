@@ -402,6 +402,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "Μάθετε περισσότερα"
   homepage_slot_text_title_hoc: "Η Ώρα του Κώδικα"
   homepage_slot_text_blurb_hoc: "Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα"
   homepage_slot_text_link_hoc: "Δοκίμασε την Ώρα του Κώδικα"
@@ -972,6 +974,14 @@
   code_hoc_coming: "Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!"
   code_sign_up: "Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "Δοκιμάστε τώρα"
   learn_sign_up_description: "Εγγραφείτε για να συμμετάσχετε στην Ώρα του Κώδικα κατά
     τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη Υπολογιστών"
@@ -1914,13 +1924,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: Learn more
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.

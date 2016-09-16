@@ -372,6 +372,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Ikasi gehiago
   homepage_slot_text_title_hoc: Kode Ordua
   homepage_slot_text_blurb_hoc: Edonork ikasi dezake. Gaurtik hasi
   homepage_slot_text_link_hoc: Probatu Kode Ordua
@@ -906,6 +908,14 @@
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
   code_sign_up: Izena eman Informatikaren Ikaskuntzaren Astean parte hartzeko
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Gehiago ikasi
   learn_sign_up_description: Eman izena Kode Orduan parte hartzeko, Informatikaren
     Ikaskuntzaren Astearen barruan
@@ -1764,13 +1774,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: Learn more
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.

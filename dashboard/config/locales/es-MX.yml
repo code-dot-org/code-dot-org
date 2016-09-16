@@ -327,7 +327,7 @@
     user_not_found: El maestro no púdo ser allado.
     student_teacher_disassociated: "ústed a quitado %{teacher_name} como su maestró."
     panel:
-      answer_viewer: Ver respuesta
+      answer_viewer: Panel de maestro
       student: estudiante
       viewing_solution: Visualizando la Solución
       try_it_yourself: Inténtalo tú mismo
@@ -926,3 +926,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

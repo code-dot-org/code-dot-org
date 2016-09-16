@@ -312,6 +312,8 @@ az-AZ:
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Daha ətraflı
   homepage_slot_text_title_hoc: Kod Saatı
   homepage_slot_text_blurb_hoc: Hər kəs öyrənə bilər. Elə bu gün başlayın
   homepage_slot_text_link_hoc: Kod Saatında özünüzü sınayın
@@ -711,6 +713,9 @@ az-AZ:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'Kod Saatı artıq buradadır - 8-14 dekabr!'
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Elə indi sınaqdan keçirin
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: Qeydiyyatdan keçin

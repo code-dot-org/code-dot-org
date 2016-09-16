@@ -36,8 +36,8 @@
   see_your_learning_plan: See your learning plan
   submit: "بنێرە"
   unsubmit: Unsubmit
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: "لاپەرەی پێشوو"
+  next_page: "لاپەرەی دواتر"
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: Cancel
@@ -69,7 +69,7 @@
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Continue
+  continue: "بەردەوام بە"
   prize: prize
   more_info: "زانیاری زیاتر"
   auth:
@@ -751,7 +751,7 @@
     delete: "بسڕەوە"
     exit: Return to Course
     my_projects: My Projects
-    share: Share
+    share: "بڵاوكەوە"
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     share_embed_description: You can paste the embed code into an HTML page to display
@@ -902,3 +902,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview
