@@ -1,6 +1,7 @@
 /** @overview Component for adding a key/value pair row. */
 
 import FirebaseStorage from '../firebaseStorage';
+import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
 import React from 'react';
 import { castValue } from './dataUtils';
@@ -9,6 +10,7 @@ import * as dataStyles from './dataStyles';
 const AddKeyRow = React.createClass({
   getInitialState() {
     return {
+      isAdding: false,
       key: '',
       value: ''
     };
@@ -24,6 +26,7 @@ const AddKeyRow = React.createClass({
 
   handleAdd() {
     if (this.state.key) {
+      this.setState({isAdding: true});
       FirebaseStorage.setKeyValue(
         this.state.key,
         castValue(this.state.value),
@@ -42,7 +45,7 @@ const AddKeyRow = React.createClass({
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr id="uitest-addKeyValuePairRow" style={dataStyles.row}>
         <td style={dataStyles.cell}>
           <input
             style={dataStyles.input}
@@ -62,12 +65,13 @@ const AddKeyRow = React.createClass({
           />
         </td>
         <td style={dataStyles.addButtonCell}>
-          <button
-            style={dataStyles.blueButton}
+          <PendingButton
+            isPending={this.state.isAdding}
             onClick={this.handleAdd}
-          >
-            Add pair
-          </button>
+            pendingText="Adding"
+            style={dataStyles.blueButton}
+            text="Add pair"
+          />
         </td>
       </tr>
     );

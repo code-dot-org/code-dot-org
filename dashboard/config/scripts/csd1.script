@@ -1,0 +1,7 @@
+title 'CSD Unit 1 - Problem Solving: Computers and Logic'
+description 'U1 of Discoveries'
+description_short 'Problem Solving'
+login_required 'true'
+hidden 'true'
+
+stage 'Intro to Problem Solving'

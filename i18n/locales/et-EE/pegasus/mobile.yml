@@ -273,6 +273,8 @@ et-EE:
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Lisateave
   homepage_slot_text_title_hoc: KoodiTund
   homepage_slot_text_blurb_hoc: Kõik suudavad õppida. Alusta täna
   homepage_slot_text_link_hoc: Proovi KoodiTundi
@@ -491,6 +493,7 @@ et-EE:
   dashboard_action_remove_confirm: Eemaldan?
   dashboard_action_done: Valmis
   dashboard_action_required: nõutud
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
@@ -661,7 +664,8 @@ et-EE:
   dashboard_faq: Korduma kippuvad küsimused
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
-  dashboard_announce_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Lisateave
   dashboard_announce_try_now_button: Proovi nüüd
@@ -670,6 +674,9 @@ et-EE:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'KoodiTund on siin - 8.-14. detsember!'
   code_sign_up: Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Lisateave
   learn_sign_up_description: Liitu, et osaleda KoodiTunnis arvutiteaduse nädala raames
   learn_sign_up_button: Liitu
@@ -777,11 +784,11 @@ et-EE:
   course3_name: Kursus 3
   course4_name: Kursus 4
   accelerated_name: Kiirendatud kursus
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit1_name: '(old) Unit 1: Digital Information'
+  cspunit2_name: '(old) Unit 2: The Internet'
+  cspunit3_name: '(old) Unit 3: Programming'
+  cspunit4_name: '(old) Unit 4: Data'
+  cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'

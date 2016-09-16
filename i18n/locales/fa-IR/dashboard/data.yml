@@ -311,7 +311,7 @@ fa:
         'Unplug6': مشروط
         'Unplug7': ترانه سرایی
         'Unplug8': انتزاع
-        'Unplug9': برنامه نویسی رله
+        'Unplug9': برنامه نویسی دست به دست
         'Unplug10': اینترنت
         'Unplug11': خلاصه
         'C1_happy_maps_unplugged': نقشه های شاد
@@ -329,8 +329,8 @@ fa:
         'C1_maze_loops': حلقه های هزارتو
         'C1_playlab_storytelling': 'آزمایشگاه بازی - یک بازی بسازید'
         'C1_planting_seed': کاشتن یک بذر
-        'C1_building_foundation': ساختن یک بنیان
-        'C1_going_places_safely': با امنیت رفتن
+        'C1_building_foundation': ساختن بنیان
+        'C1_going_places_safely': با خیال راحت سفرکردن
         'C2_maze_intro': معرفی پیچ و خم
         'C2_artist_intro': معرفی هنرمند
         'C2_zuck_repeat_loop': حلقه های هزارتو

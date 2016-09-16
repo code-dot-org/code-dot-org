@@ -1,4 +1,4 @@
-name 'Test CPS PD'
+title 'Test CPS PD'
 
 stage 'test Unit 1 required reading',
   flex_category: 'required'

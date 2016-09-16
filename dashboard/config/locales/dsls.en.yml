@@ -147,10 +147,23 @@ en:
         title: title
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Design Instructions Site: {}
+      CSD Hobbies Example: {}
+      CSD L04 Wrap Up Debug Example: {}
+      CSD Recipe Stop: {}
       CSD U1 Input Output C1:
         Challenge 1: Challenge 1
         description here: description here
       CSD U1 Input Output C2:
+        description here: description here
+        title: title
+      CSD U1 Input Output C3:
+        description here: description here
+        title: title
+      CSD U1 Input Output C4:
+        description here: description here
+        title: title
+      CSD U1 Input Output Intro:
         description here: description here
         title: title
       CSD U3 - Booleans - 1: {}
@@ -187,6 +200,7 @@ en:
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -195,7 +209,16 @@ en:
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
+      CSDU2 IP Fair Use:
+        Fair Use: Fair Use
+        description here: description here
+      CSDU2 images stop level: {}
       CSDU2- home page examples: {}
+      CSDU2L01 SFLP:
+        description here: description here
+        title: title
+      CSDU2L02 SFLP: {}
+      CSDU2L04 - Stop: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -392,6 +415,12 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Digital Footprint Chirpr johnsnow:
+        Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint FaceSpace John:
+        FaceSpace - John T: FaceSpace - John T
+      Digital Footprint instantframe:
+        instantframe - johnsnow: instantframe - johnsnow
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -618,6 +647,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD-unit2 What is the Challenge: {}
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
       ECSPD1 Code Studio:
@@ -778,6 +808,9 @@ en:
         description here: description here
         title: title
       Hour of Code test content: {}
+      How Secure Is Your Password?:
+        description here: description here
+        title: title
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -1407,6 +1440,12 @@ en:
         description here: description here
         title: title
       U4 Inspirational Data Video: {}
+      U4 caesar cipher interstitial:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      U4 how to crack substitution cipher:
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       U4L01 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1505,6 +1544,9 @@ en:
         description here: description here
         title: title
       U4L24 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L5 random subst challenge page:
         description here: description here
         title: title
       U5 - Create PT - Student Introduction:
@@ -1962,9 +2004,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -2066,6 +2105,11 @@ en:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: description here
+        title: title
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: Cracking the Code
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -2273,6 +2317,17 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD validator Matching:
+        "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
+        "&lt;head&gt;": "&lt;head&gt;"
+        "&lt;html&gt;": "&lt;html&gt;"
+        "&lt;title&gt;": "&lt;title&gt;"
+        Defines high level information about web page: Defines high level information about web page
+        'Matching: Web Page Fundamentals': 'Matching: Web Page Fundamentals'
+        Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.: Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2716,35 +2771,35 @@ en:
         Node: Node
         Weight: Weight
       U2L14 Assessment:
-        'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Terminology Matching: Terminology Matching
+        Vigenère Cipher: Vigenère Cipher
+        a problem that cannot be solved in a reasonable amount of time: a problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
-        heuristic: heuristic
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently per character: encryption that shifts the alphabet differently per character
         random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
-        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
-        'Assessment: Question 5': 'Assessment: Question 5'
-        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
-        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
         ? |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         : |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         Random Substitution Cipher: Random Substitution Cipher
-        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
+        SECRFULF_UGEUHWN: SECRFULF_UGEUHWN
+        SSSSFFFFXXXXTTTT: SSSSFFFFXXXXTTTT
+        TTTTUUUUVVVVWWWW: TTTTUUUUVVVVWWWW
+        The Caesar Cipher: The Caesar Cipher
         Vigenere Cipher: Vigenere Cipher
+        Which encryption technique?: Which encryption technique?
       U2L17 - Vocabulary matching:
         " <br>Brute force": " <br>Brute force"
         "<br>Computationally hard": "<br>Computationally hard"
@@ -3368,6 +3423,40 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CSD Header Size Prediction:
+        ? |2-
+           Predict what the result of the code in the following code will be.  <pre> &lt;h3&gt; Eggs &lt;/h3&gt; <br>
+          &lt;h1&gt; Bacon &lt;/h1&gt; <br>
+          &lt;h6&gt; Waffles &lt;/h6&gt; <br> </pre>  Pick from one of the 4 options below.
+        : |2-
+           Predict what the result of the code in the following code will be.  <pre> &lt;h3&gt; Eggs &lt;/h3&gt; <br>
+          &lt;h1&gt; Bacon &lt;/h1&gt; <br>
+          &lt;h6&gt; Waffles &lt;/h6&gt; <br> </pre>  Pick from one of the 4 options below.
+        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt; <br> &lt;h1&gt; Bacon &lt;/h1&gt; <br> &lt;h6&gt; Waffles &lt;/h6&gt; <br> </pre>  Pick from one of the 4 options below."
+        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt; <br> &lt;h1&gt; Bacon &lt;/h1&gt; <br> &lt;h6&gt; Waffles &lt;/h6&gt; <br> </pre>  Pick from one of the 4 options below."
+        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        " Predict what the result of the code in the following code will be. \\n <pre> code </pre>  Pick from one of the 4 options below.": " Predict what the result of the code in the following code will be. \\n <pre> code </pre>  Pick from one of the 4 options below."
+        " Predict what the result of the code in the index.html file will look like. Pick from one of the 4 options below.": " Predict what the result of the code in the index.html file will look like. Pick from one of the 4 options below."
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
+        Option 1: Option 1
+        Option 2: Option 2
+        Option 3: Option 3
+        Option 4: Option 4
+      CSD Headers Prediction:
+        ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        Option 1: Option 1
+        'Option 2 ': 'Option 2 '
+        Option 3: Option 3
+        Option 4: Option 4
+      CSD Prediction Header Size:
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -4682,10 +4771,10 @@ en:
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
-        'Assessment: Question 1': 'Assessment: Question 1'
-        Long keys create exponential growth possibilities.: Long keys create exponential growth possibilities.
         One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
         The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        The key length is variable and potentially very long: The key length is variable and potentially very long
+        Vigenere Cipher: Vigenere Cipher
         Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
       U2L15 Assessment3:
         'Assessment: Question 3': 'Assessment: Question 3'
@@ -5860,6 +5949,12 @@ en:
         Neutral: Neutral
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      test me:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -5869,10 +5964,14 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        Answer 1: Answer 1
-        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
-        Make a prediction and hit run: Make a prediction and hit run
-        Question: Question
+        "<!DOCTYPE html>": "<!DOCTYPE html>"
+        "<head>": "<head>"
+        "<html>": "<html>"
+        "<title>": "<title>"
+        Defines high level information about web page: Defines high level information about web page
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

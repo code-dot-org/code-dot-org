@@ -2,7 +2,9 @@ zh:
   errors:
     messages:
       not_saved: '请更正以下错误:'
-      too_young: 此内容有年龄限制，不适合低龄的学生。
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: '此内容有年龄限制，对于低年级的学生不可用。问你的老师以接受更新的服务条款给你访问此内容。你的老师通过登录到代码工作室并单击代码工作室主页顶部附近的"审查更新条款"按钮来做这件事。'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ zh:
   signup_form:
     student_count: '%{count} 位学生已经注册。'
     teacher_count: '%{count} 位教师已经注册。'
-    overview_student: '注册一个帐户来记录你的进度. 您的电子邮件是主要用来让您登录和恢复密码. 欲了解更多信息，请参阅我们的 <a href="http://code.org/privacy"> 隐私政策</a>.'
-    overview_teacher: '通过注册一个帐号来在你的教室教计算机科学. <p/>你将能够添加你的学生，并跟踪其进度.'
-    no_signup_message: '您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要登录以保存您的进度。'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: 请参阅教师指南
-    teacher_pitch: Code.org 老师注册
-    teacher_title: 老师注册
-    student_pitch: Code.org 学生注册
-    student_title: 学生注册
-    signup_title: 注册Code.org
+    title: 注册 Code.org
     school_name: 学校名称 （可选）
     school_address: 学校地址 （可选）
     address_placeholder: 地址、 省市、 邮编
@@ -103,15 +99,17 @@ zh:
     valid_password: 有效的密码 ！
     invalid_password: 密码必须至少为 6 个字符
     mismatch_password: 您输入的两个密码不匹配
-    student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用 Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
-    teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'> 隐私政策</a>。"
     additional_information: 我们需要一些额外的信息来继续为你注册.
     user_type_label: 账户种类
     user_type_teacher: 老师
     user_type_student: 学生
+    field_is_required: 必填
+    accept_terms: You must agree to create an account
   signin_form:
     title: 已经有账号了？登录
-    login: 电子邮件或用户名
+    login: 电子邮件
     password: '密码:'
     remember: 记住我
     submit: 登录
@@ -130,8 +128,9 @@ zh:
   password:
     reset_form:
       title: 忘记了您的密码吗？
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: 电子邮件地址
-      submit: 发送给我重置密码的指令
+      submit: 提交
     change_form:
       title: 更换密码
       new_password: 新密码
@@ -244,7 +243,7 @@ zh:
       prizes: 奖品
       logout: 注销
       signin: 登录
-      signup: 登录
+      signup: 创建一个账户
       already_registered: 已经注册了？
       pair_programming: 结对编程
       team: 团队
@@ -275,7 +274,7 @@ zh:
     user_not_found: 不能找到老师
     student_teacher_disassociated: '你已经移除了老师：%{teacher_name}。'
     panel:
-      answer_viewer: 答案查看器
+      answer_viewer: 导师面板
       student: 学生
       viewing_solution: 查看解决方案
       try_it_yourself: 自己试一试
@@ -285,6 +284,7 @@ zh:
       submitted_on: 已提交于：
       unsubmit: 未提交
       worked_with: 一起工作
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 电子邮件地址尚未被确认：
     email_confirm_needed_required: '你的电子邮件地址%{email} 尚未被确认：'
@@ -343,13 +343,14 @@ zh:
     choose_next_course: 从下面代码工作室的课程中选一个体验
     print_certificate: 打印证书
     announcement_title: 公告
-    announcement_message: '想要帮助我们测试新的功能？我们知道它是重要的是鼓励学生以迭代和实验，所以我们将添加"未使用的代码"功能，让学生来运行他们的代码，即使有独立的块。我们公开发布该功能之前，我们欢迎您的反馈意见。'
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: 了解详情
     announcement_try_now_button: 现在就试试
     announcement_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
     announcement_petition_button: 添加您的姓名
-    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看以前的公告。</a>"
   move_students:
     new_section_dne: '抱歉，但分段 %{new_section_code} 并不存在。请输入一个不同的分段代码。'
     section_code_not_entered: 请提供 current_section_code。
@@ -573,6 +574,19 @@ zh:
     header: 帐户信息更新
     message: '我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄.<br/>一如往常，code.org 将永远不会出租、 出售或与任何第三方共享此信息。'
     sign_out: '如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: 条目
+    privacy: 隐私政策
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: 打印
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: '对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org"> support.code.org</a> 或让你的父母或老师来联系我们。'
   progress:
     not_started: 未开始
@@ -667,7 +681,7 @@ zh:
   components:
     icon_library:
       search_placeholder_text: 查询图标
-      no_icons_found: 找不到该图标
+      no_icons_found: 找不到图标
     playzone:
       artist_description: 和小艺术家一起设计出很酷的图形！
       artist_title: 新的绘图
@@ -710,3 +724,6 @@ zh:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

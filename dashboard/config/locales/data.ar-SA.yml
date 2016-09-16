@@ -438,10 +438,10 @@
           مرتين.'
         studio_iceage_move_to_flag: سكارت يبحث عن ثمرة البلوط الخاصة به! ساعده على
           قطع 200 بكسل الأخيرة باستخدام قطعة "تحرك".
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
+        studio_iceage_move_to_actor: ديقو (شخصية 1) يبحث عن ماني (شخصية 2). ساعد ديقو
+          في التحرك 200 نقطة (بكسل ) للأسفل إلى ماني مستخدماً "حرك الممثل" قطعة. بعد
+          ذلك، قم بتوصيل القطعة حدث "حينما تصل الشخصية" إصدر صوتاً وقم بالعثور على
+          الآخر.
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
@@ -614,7 +614,7 @@
         C4_variables_playlab: "المتغيرات - مختبر اللعب"
         C4_for_loops: "للحلقات"
         C4_for_loops_bee: "للحلقات"
-        C4_for_loops_no_bee: For Loops
+        C4_for_loops_no_bee: "للحلقات"
         C4_math_artist: "برمجة الفنان مع الرياضيات"
         C4_function_edit: "تغيير الدوال"
         C4_function_create: "إضافة الدوال"

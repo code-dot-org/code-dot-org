@@ -344,6 +344,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "もっと詳しく知る"
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
@@ -606,6 +608,7 @@
   dashboard_action_remove_confirm: "削除しますか？"
   dashboard_action_done: "完了"
   dashboard_action_required: "必須"
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -790,11 +793,14 @@
   dashboard_faq: "よくある質問"
   dashboard_faq_k5: "よくある質問（幼稚園/小学生対象コース）"
   dashboard_announcements: Announcements
-  dashboard_announce_message: "<b>An important change to how we support student privacy</b><br/>We’re
-    announcing a one month period to review changes to our privacy policy and to provide
-    feedback. The biggest change is a redesigned login that enables us to delete all
-    email addresses for Code Studio student accounts. The other big change involves
-    access to our app-creation tools."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -811,6 +817,14 @@
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
   code_sign_up: "コンピュタサイエンス教育週間の間に参加する"
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "今すぐ試す"
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -1447,12 +1461,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

@@ -1,0 +1,72 @@
+name 'CSD U1 Input Output C4'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Challenge 4
+
+
+This piece of software helps the user decide what movie to go to.
+
+Look at the possible information that you can input to your app, and decide which ones your app needs to work.  Remember, you can use the phone to get information that is specific to the user, and use the Internet to get general information about the world.
+
+Once you have the information that you need as input, decide what your app will output.
+
+## Input from Phone Sensors
+
+Sensor | Input Information
+------|--------
+**Microphone**: | There is a lot of talking in the environment
+**GPS Location** | B, 2
+**Motion Sensor** | The phone is moving quickly
+**Camera** | The image from the camera is all black
+
+## User Input
+
+User Prompt | User Information
+------|--------
+**Name** | Arik
+**School Mascot** | Tiger
+**Grade Level** | 8th grade
+**Favorite TV Shows** | Science
+**Favorite Books** | Science
+**Favorite Movies** | Science
+**Contact List** |
+**Planned Activities for the Day** |
+
+
+## Input from the Internet
+
+Information Type | Information
+------|--------
+**List of Major Holidays** | 
+ |New Year's Day  
+ |Martin Luther King Day  
+ |President's Day  
+ |Memorial Day  
+ |Independence Day  
+ |Labor Day  
+ |Veterans Day  
+ |Thanksgiving  
+ |Christmas  
+**The Temperature Anywhere in the World** | 
+ |Shanghai: 77F  
+ |Adelaide: 54F  
+ |Paris: 75F  
+ |Cairo: 79F  
+ |Buenos Aires: 52F  
+ |Boston: 66F  
+ |Vancouver: 63F  
+ |Guam: 84F  
+**Movie Reviews** | 
+**Movie Schedules** | 
+**Time Anywhere in the World** |
+**Cinema Locations** |
+**Restaurant Locations** |
+
+## App Improvement
+
+Compare your method, and the inputs it needed, to another group’s method.  What are the advantages and disadvantages of each?  How might you combine your ideas to make a better app?
+
+
+MARKDOWN

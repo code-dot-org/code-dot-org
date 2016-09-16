@@ -456,8 +456,8 @@
         C2_binary_bracelets: 2진 팔찌
         C2_relay_programming: "릴레이 프로그래밍"
         C2_paper_airplanes: "종이 비행기"
-        C2_digital_footprint: "당신의 디지털 흔적"
-        C2_digital_footprint_v2: "당신의 디지털 흔적"
+        C2_digital_footprint: "디지털 개인정보 흔적"
+        C2_digital_footprint_v2: "디지털 개인정보 흔적"
         C3_maze_level_4: "미로 반복"
         C3_artist_intro: "예술가 퍼즐 소개"
         C3_artist_functions: "예술가 함수"

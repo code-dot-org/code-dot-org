@@ -87,6 +87,18 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.versionHistoryInInstructionsHeader = true;
+
+  config.afterClearPuzzle = (config) => {
+    return new Promise((resolve, reject) => {
+      // Reset startSources to the original value (ignoring lastAttempt)
+      this.startSources = JSON.parse(this.level.startSources);
+      // Force brambleHost to reload based on startSources
+      this.brambleHost.loadStartSources(() => {
+        resolve();
+      });
+    });
+  };
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
@@ -95,6 +107,8 @@ WebLab.prototype.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
+  config.pinWorkspaceToBottom = true;
+
   const onMount = () => {
     this.setupReduxSubscribers(this.studioApp_.reduxStore);
 
@@ -102,6 +116,17 @@ WebLab.prototype.init = function (config) {
     // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
     // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
     // this.studioApp_.init(config);
+
+    // NOTE: if we called studioApp_.init(), the code here would be executed
+    // automatically since pinWorkspaceToBottom is true...
+    var container = document.getElementById(config.containerId);
+    var bodyElement = document.body;
+    bodyElement.style.overflow = "hidden";
+    bodyElement.className = bodyElement.className + " pin_bottom";
+    container.className = container.className + " pin_bottom";
+
+    // NOTE: if we called studioApp_.init(), this call would not be needed...
+    this.studioApp_.initVersionHistoryUI(config);
   };
 
   // Push initial level properties into the Redux store
@@ -116,18 +141,6 @@ WebLab.prototype.init = function (config) {
 
   function onRedo() {
     this.brambleHost.redo();
-  }
-
-  function onShowPreview() {
-    this.brambleHost.hideTutorial();
-    // temporarily, register a "change" when the preview or tutorial buttons are pressed. TODO: hook up onProjectChanged to Bramble
-    this.onProjectChanged();
-  }
-
-  function onShowTutorial() {
-    this.brambleHost.showTutorial();
-    // temporarily, register a "change" when the preview or tutorial buttons are pressed. TODO: hook up onProjectChanged to Bramble
-    this.onProjectChanged();
   }
 
   let inspectorOn = false;
@@ -145,8 +158,6 @@ WebLab.prototype.init = function (config) {
       <WebLabView
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
-        onShowPreview={onShowPreview.bind(this)}
-        onShowTutorial={onShowTutorial.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />
@@ -183,6 +194,7 @@ WebLab.prototype.onProjectChanged = function () {
 // Called by Bramble host to set our reference to its interfaces
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
+  this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
 };
 
 /**
@@ -199,6 +211,9 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
       this.onIsRunningChange(state.runState.isRunning);
     }
   });
+};
+
+WebLab.prototype.onIsRunningChange = function () {
 };
 
 /**

@@ -4,7 +4,7 @@ fr-FR:
   "yes": Oui
   "no": Non
   select_language: Veuillez sélectionner votre langue
-  upgrade_ie_message: Code.org supprimera bientôt son support pour Internet Explorer 8, 9 et 10. Merci de passer à un navigateur actuel.
+  upgrade_ie_message: Code.org supprimera bientôt son support pour Internet Explorer 8, 9 et 10. Merci de passer à un navigateur plus récent.
   upgrade_ie_message_csedweek: CSEdWeek.org supprimera bientôt son support pour Internet Explorer 8, 9 et 10. Merci de passer à un navigateur actuel.
   upgrade_ie_link: Pour en savoir plus
   en: Informatique/Sciences informatiques
@@ -103,7 +103,7 @@ fr-FR:
   third_party_scratch_desc: "Avec Scratch, tu peux programmer tes propres histoires, jeux et animations interactifs, et partager tes créations avec les autres dans la communauté en ligne. Scratch permet aux jeunes d'apprendre à penser avec créativité, à raisonner en termes de systèmes, et à travailler en collaboration — des compétences essentielles pour la vie au XXIe siècle."
   third_party_scratch_btn_curriculum: Télécharger le cours Scratch
   third_party_scratch_btn_forum: Forum des éducateurs de Scratch
-  third_party_scratch_btn_site: Visitez Scratch
+  third_party_scratch_btn_site: Visiter Scratch
   third_party_lightbot_desc: "Dans Lightbot, les élèves doivent programmer un robot avec des commandes pour résoudre des puzzles. Les élèves peuvent jouer au jeu dans le navigateur (ce qui nécessite Flash Player), ou sur les appareils Android et iOS. Les élèves jouent à l'ensemble initial de niveaux « basiques » dans Lightbot. Ils apprendront comment dire à l'ordinateur ce qu'il doit faire avec une suite de commandes basiques et découvriront ainsi comment les programmes informatiques sont écrits."
   third_party_lightbot_btn_curriculum: Télécharger le cours Lightbot
   third_party_lightbot_btn_site: Voir Lightbot
@@ -274,6 +274,8 @@ fr-FR:
   homepage_banner_congress_link: Ajouter votre support
   homepage_banner_emailprivacy: "Nous faisons un changement majeur sur comment nous soutenons la confidentialité de l'étudiant."
   homepage_banner_emailprivacy_link: Lire la suite
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
   homepage_slot_text_link_hoc: "Essayer l'Heure de Code"
@@ -362,9 +364,9 @@ fr-FR:
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
   minecraft_subtitle: Une Heure de Code Minecraft
-  watch_inspirational_videos: "Avant que tu commences, regardes une de ces vidéos pour l'inspiration"
-  speak_another_language: "Parle d'autres langues?"
-  help_translate: Aides-nous a traduire.
+  watch_inspirational_videos: "Avant de commencer, regarde une de ces vidéos pour t'inspirer"
+  speak_another_language: "Parles-tu d'autres langues ?"
+  help_translate: Aidez-nous a traduire.
   no_internet: "Pas d'internet ?"
   download_offline: Télécharger la version hors ligne.
   are_you_teacher: Êtes-vous un enseignant?
@@ -461,7 +463,7 @@ fr-FR:
   dashboard_landing_more_tutorials_desc: |-
     Il y a plus de tutoriels <a href="/learn/beyond">offerts par nos partenaires.</a> Apprendre à programmer avec des robots, créer des pages web ou une application personnalisée, ou explorer d'autres langages tels que C++, Ruby ou Python !
   dashboard_landing_inspire: Inspirer vos élèves avec des affiches, des vidéos et plus encore.
-  dashboard_landing_video_library: Utilisez une vidéo de la bibliothèque vidéo des concepts de science informatique.
+  dashboard_landing_video_library: Utilisez une vidéo de la vidéothèque des concepts de science informatique.
   dashboard_landing_report_bug: Demander une fonctionnalité ou signaler un bug.
   dashboard_landing_teacher_forum: "Rejoignez la communauté d'apprentissage professionnel."
   dashboard_hoc_courses: "L'Heure de Code pour tous les âges"
@@ -497,9 +499,10 @@ fr-FR:
   dashboard_action_remove_confirm: 'Enlever&#160;?'
   dashboard_action_done: Terminé
   dashboard_action_required: obligatoire
+  dashboard_action_print_certificates: Imprimer les certificats
   dashboard_assessments_view: 'Afficher les évaluations dans :'
   dashboard_assessments_none: "Pas d'évaluation"
-  dashboard_assessments_none_part2: "Si vous enseignez au collège ou au lycée, nous avons des questions d'évaluation disponibles dans le cadre du Code Studio pour aider vos élèves à se préparer pour le test d'AP. Pour utiliser ces évaluations, assignez d'abord le cours à la classe puis sélectionnez le cours depuis menu déroulant au dessus et vous y verrez les réponses de vos élèves."
+  dashboard_assessments_none_part2: "Si vous enseignez au collège ou au lycée, nous avons des questions d'évaluation disponibles dans le cadre du Code Studio pour aider vos élèves à se préparer pour le test d'AP. Pour utiliser ces évaluations, assignez d'abord le cours à la classe puis sélectionnez le cours depuis menu déroulant au-dessus et vous y verrez les réponses de vos élèves."
   dashboard_assessments_summaries: Résumés
   dashboard_assessments_answers: Toutes les réponses
   dashboard_surveys_answers: Sondages
@@ -516,13 +519,13 @@ fr-FR:
   dashboard_navigation_section_speakers: 'Informatique/Sciences informatiques <br/> Conférenciers invités'
   dashboard_navigation_all_sections: "Comptes et progression de l'élève"
   dashboard_navigation_view_progress: Progression
-  dashboard_navigation_view_text_responses: 'Root->dashboard_navigation_voir_text_réponses'
+  dashboard_navigation_view_text_responses: Réponses écrites
   dashboard_navigation_view_assessments: Évaluations
   dashboard_navigation_view_assessments_surveys: Évaluations/Sondages
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
-  dashboard_navigation_view_stats: 'Root -> dashboard_navigation_view_stats'
+  dashboard_navigation_view_stats: Statistiques
   dashboard_navigation_section: 'Section&#160;: %{section_name}'
   dashboard_navigation_student: 'Élève&#160;: %{student_name}'
   dashboard_progress_not_started: pas commencé
@@ -562,7 +565,7 @@ fr-FR:
   dashboard_sections_move_to_section: 'Déplacer vers la section :'
   dashboard_sections_enter_code: 'Entrez le code de la section :'
   dashboard_sections_code_placeholder: Code de 6 caractères (ABCDEF)
-  dashboard_sections_other_section: Autre section
+  dashboard_sections_other_section: Autre enseignant
   dashboard_sections_both_sections: Souhaitez-vous que le ou les élève(s) soient dans les deux sections ?
   dashboard_sections_yes_both: "Oui, je veux copier le/les élève(s) afin qu'ils figurent dans l'actuelle section ET la nouvelle section"
   dashboard_sections_no_move: "Non, je veux déplacer le/les élève(s) afin qu'ils ne se trouvent que dans la nouvelle section."
@@ -612,7 +615,8 @@ fr-FR:
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
   dashboard_course4: 'Cours 4 (bêta) : '
-  dashboard_unplugged: "Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez ces leçons sans électronique</a> dans votre salle de classe."
+  dashboard_unplugged: |-
+    Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez ces leçons en mode "déconnecté" </a> dans votre classe.
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
   dashboard_overview: Aperçu
@@ -669,15 +673,19 @@ fr-FR:
   dashboard_faq: Foire aux Questions
   dashboard_faq_k5: Foire aux Questions CM2
   dashboard_announcements: Annonces
-  dashboard_announce_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Pour en savoir plus
   dashboard_announce_try_now_button: Essaie maintenant
   dashboard_announce_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
   dashboard_announce_petition_button: Ajoutez votre nom
-  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+  dashboard_announce_all: "Tenu à jour avec de nouvelles fonctionnalités et mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir les anciennes annonces.</a>"
   code_hoc_coming: "L'Heure de Code est là — du 8 au 14 décembre&#160;!"
   code_sign_up: "Enregistrez-vous pour participer à la Semaine de l'enseignement de l'informatique."
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: En savoir plus
   learn_sign_up_description: "Enregistrez-vous pour participer à l'Heure de Code pendant la Semaine de l'enseignement de l'informatique."
   learn_sign_up_button: Inscription

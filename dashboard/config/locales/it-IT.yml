@@ -4,6 +4,14 @@
       not_saved: 'Per favore correggi i seguenti errori:'
       too_young: Questo contenuto ha attivi dei limiti di età e non è disponibile
         per gli studenti più giovani
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -27,7 +35,7 @@
   your_professional_learning_plan: Il tuo piano di apprendimento professionale
   see_your_learning_plan: Guarda il tuo piano di apprendimento
   submit: Invia
-  unsubmit: Annulla l'invio
+  unsubmit: Annulla l'invio delle risposte
   previous_page: Pagina precedente
   next_page: Pagina successiva
   next_resource: Risorsa successiva
@@ -84,25 +92,11 @@
   signup_form:
     student_count: "%{count} studenti si sono già iscritti."
     teacher_count: "%{count} insegnanti si sono già iscritti."
-    overview_student: Iscriviti per avere un account che ti permetta di tener traccia
-      dei tuoi progressi. Il tuo indirizzo di posta elettronica verrà usato soprattutto
-      per accedere e recuperare la tua password. Per maggiori informazioni, consulta
-      la nostra <a href="http://code.org/privacy">Informativa sulla Privacy</a> (in
-      inglese).
-    overview_teacher: 'Insegna l''informatica nella tua classe iscrivendoti al nostro
-      sito.<p/> Potrai aggiungere i tuoi studenti e tener traccia dei loro progressi.<1/>ATTENZIONE:
-      Se sei italiano iscriviti attraverso <a href="http://programmailfuturo.it">il
-      sito italiano di supporto</a>.'
-    no_signup_message: 'Puoi <a target="_blank" href="http://learn.code.org">sfogliare
-      le varie lezioni e gli esercizi</a>, ma devi iscriverti per salvare i tuoi progressi.
-      <1/>ATTENZIONE: Se sei italiano iscriviti attraverso <a href="http://programmailfuturo.it">il
-      sito italiano di supporto</a>.'
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Vedi la guida per l'insegnante
-    teacher_pitch: Iscrizione dell'insegnante a Code.org
-    teacher_title: Iscrizione dell'insegnante
-    student_pitch: Iscrizione dello studente a Code.org
-    student_title: Iscrizione dello studente
-    signup_title: Iscriviti a Code.org
+    title: Sign up for Code.org
     school_name: Nome della scuola (facoltativo)
     school_address: Indirizzo della scuola (facoltativo)
     address_placeholder: Indirizzo, città, stato, CAP
@@ -131,9 +125,11 @@
     user_type_label: Tipo di account
     user_type_teacher: Insegnante
     user_type_student: Studente
+    field_is_required: "è un dato obbligatorio"
+    accept_terms: You must agree to create an account
   signin_form:
     title: Sei già iscritto con un account? Accedi
-    login: Indirizzo di posta elettronica o nome utente
+    login: Indirizzo di posta elettronica
     password: password
     remember: Ricorda le mie credenziali di accesso
     submit: Accedi
@@ -152,8 +148,10 @@
   password:
     reset_form:
       title: Hai dimenticato la tua password?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: Indirizzo di posta elettronica
-      submit: Mandami le istruzioni per reimpostare la password
+      submit: Invia
     change_form:
       title: Cambia la tua password
       new_password: Nuova password
@@ -339,10 +337,11 @@
       try_it_yourself: Ok, provo da solo
       section: Classe
       example: Esempio di soluzione
-      example_with_number: Esempio di soluzione numero %{solution_number}
-      submitted_on: Inserito il %{date}
-      unsubmit: Annulla l'invio
+      example_with_number: Esempio di soluzione n. %{solution_number}
+      submitted_on: 'Risposte inviate:'
+      unsubmit: Annulla l'invio delle risposte
       worked_with: Ha lavorato in coppia con
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}
@@ -377,7 +376,7 @@
     teacher_student_count: Hai %{count} studenti.
     teacher_averages: In media i tuoi studenti hanno guadagnato %{trophy_average}
       trofei su %{trophy_max} in "Padronanza dei concetti".
-    teacher_print_certificates: Stampa il certificato per gli studenti che completano
+    teacher_print_certificates: Stampa gli attestati per gli studenti che completano
       questo corso
     teacher_read_blog: Leggi notizie e aggiornamenti relativi al nostro materiale
       didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
@@ -417,13 +416,16 @@
     your_gallery: La tua collezione
     no_primary_course: Prova un corso di Code Studio
     choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
-    print_certificate: Stampa il certificato
+    print_certificate: Stampa l'attestato
     announcement_title: Annunci
-    announcement_message: <b>Un cambiamento importante nella nostra politica di privacy.</b><br
-      />A partire dal 22 agosto 2016 non conserveremo più "in chiaro" gli indirizzi
-      di posta elettronica degli studenti che si iscrivono a Code.org con la loro
-      e-mail. <a target="_blank" href="http://blog.code.org/post/147243645493/supporting-student-privacy">Leggi
-      tutti i dettagli</a> (in inglese).
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -438,26 +440,26 @@
       una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il
       programma di informatica K-12.
     announcement_petition_button: Aggiungi il tuo nome
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_all: Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org
+      attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti
+      (in inglese)</a>.
   move_students:
-    new_section_dne: Ci dispiace, ma non esiste la sezione %{new_section_code}. Inserisci
-      un codice di sezione diverso.
-    section_code_not_entered: Si prega di fornire il codice di sezione attuale.
-    section_code_cant_be_current_section: La sezione attuale non può avere lo stesso
-      nome di quella nuova.
-    current_section_dne: Ci dispiace, ma non esiste la sezione %{current_section_code}.
-      Inserisci un codice di sezione diverso.
-    students_not_yours: Non è possibile spostare gli studenti da una sezione che non
+    new_section_dne: Ci dispiace, la classe col codice %{new_section_code} non esiste.
+      Inserisci un codice di classe esistente.
+    section_code_not_entered: Inserisci il codice di classe.
+    section_code_cant_be_current_section: La nuova classe non può essere la stessa.
+    current_section_dne: Ci dispiace, la classe col codice %{current_section_code}
+      non esiste. Inserisci un codice di classe esistente.
+    students_not_yours: Non è possibile spostare gli studenti da una classe che non
       appartiene a te.
-    stay_enrolled_not_entered: Si prega di fornire "rimani iscritto nella sezione
-      attuale".
-    student_ids_not_entered: Si prega di fornire l'identiificativo dello studente.
+    stay_enrolled_not_entered: Indica per piacere se vuoi che gli studenti appartengano
+      ad entrambe le classi oppure no.
+    student_ids_not_entered: Inserisci per piacere l'identificativo dello studente.
     student_not_found: Non sono stati trovati uno o più studenti.
-    all_students_must_be_in_current_section: Attualmente, tutti gli studenti devono
-      essere iscritti nella tua sezione.
-    already_enrolled_in_new_section: Non è possibile spostare questi studenti perché
-      questo insegnante li ha già in un'altra sezione.
+    all_students_must_be_in_current_section: Tutti gli studenti da spostare devono
+      appartenere alla tua classe.
+    already_enrolled_in_new_section: Non puoi spostare questi studenti perché appartengono
+      già ad una classe di questo insegnante.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -618,16 +620,16 @@
     unplugged:
       title: Lezioni Tradizionali
       audience: Età 4+
-      body: Abbiamo preparato delle lezioni (<i>lezioni tradizionali</>) da usare
-        nella tua classe senza utilizzare un computer. Potrai quindi insegnare le
-        basi dell'informatica anche senza avere un computer! Puoi usare queste lezioni
-        tradizionali sia come un corso a sé stante che come complemento agli altri
-        corsi.
+      body: Abbiamo preparato delle lezioni (chiamate <i>lezioni tradizionali</>)
+        da usare nella tua classe senza utilizzare un computer. Potrai quindi insegnare
+        le basi dell'informatica anche senza avere un computer! Puoi usare queste
+        lezioni tradizionali sia come un corso a sé stante che come complemento agli
+        altri corsi.
       body_short: Se i computers non sono disponibili, prova queste lezioni tradizionali
         in classe.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
-    students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
+    students_made_these_with_code: Gli studenti li hanno creati scrivendo del codice!
     picture_count: Nei <b>%{days}</b> giorni passati, gli studenti hanno realizzato
       <b>%{count}</b> disegni scrivendo da soli i programmi per disegnarli. Clicca
       sulle immagini per vedere ogni programma in azione.
@@ -642,7 +644,7 @@
     caption_time_ago: "%{time_ago} fa"
     header: La tua collezione
     header_playlab: Laboratorio
-    header_artist: 'Artista: Sequenze e Cicli'
+    header_artist: Artista
     report_abuse: Segnala un abuso
   landing:
     prerelease: Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa
@@ -681,14 +683,14 @@
     wrong_body: Grazie per aver inviato delle risposte.
     correct_title: Grazie!
     correct_body: Grazie per aver inviato delle risposte.
-    unsubmit-title: Ritira la tua valutazione
-    unsubmit-body: Ritirare la tua valutazione cancellerà la data e l'ora che hai
-      dichiarato. Sei sicuro?
-    submit-incomplete-title: Invia la tua valutazione
-    submit-incomplete-body: Hai lasciato alcune domande incomplete.  Non è possibile
-      modificare la tua valutazione dopo averla sottoposta.  Sei sicuro?
-    submit-complete-title: Invia la tua valutazione
-    submit-complete-body: Non puoi modificare la tua valutazione dopo averla sottoposta.  Sei
+    unsubmit-title: Annulla l'invio delle tue risposte
+    unsubmit-body: Annullare l'invio delle tue risposte cancellerà la data e l'ora
+      di invio. Sei sicuro?
+    submit-incomplete-title: Invia le tue risposte
+    submit-incomplete-body: Non hai risposto a tutte le domande. Non è possibile modificare
+      le tue risposte dopo averle inviate.  Sei sicuro di volerle inviare?
+    submit-complete-title: Invia le tue risposte
+    submit-complete-body: Non puoi modificare la tue risposte dopo averle inviate.  Sei
       sicuro?
   match:
     wrong_title: Riprova!
@@ -730,6 +732,34 @@
       utenti già iscritti inseriscano qui la loro età. <br/>Come sempre, code.org
       non affitterà, venderà o condividerà mai queste informazioni con terze parti.
     sign_out: Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Termini di servizio
+    privacy: Informativa sulla privacy
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Stampa
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Siamo spiacenti, gli utenti più giovani non possono accedere
     al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su
     <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai
@@ -881,14 +911,10 @@
     capsule_title: Avete Internet?
     capsule_desc: Utilizzare <a href="%{url}">%{app_name}</a> online, basata sul web.
     instructions_headline: Niente internet?
-    instructions: 'Istruzioni per gli insegnanti: se si dispone di servizio Internet
-      scadente, queste esercitazioni per l’Ora di Codice sono disponibili da scaricare
-      e installare per l''utilizzo offline. Scegli la tua lingua e la piattaforma,
-      scaricale e installale su tutti i computer in classe. È possibile utilizzare
-      un''unità USB per scaricarle una sola volta e installarle su tutti i computer.
-      Nota: gli studenti non saranno in grado di accedere al Code Studio, salvare
-      i progressi o stampare i certificati. Gli insegnanti possono stampare certificati
-      prima del tempo <a href="%{url}"> qui</a>.'
+    instructions: |
+      Nota per gli insegnanti: se la connessione ad Internet è scadente, puoi scaricare e installare in locale queste esercitazioni per l’Ora di Codice. Scegli la tua lingua e la piattaforma, scaricale e installale su tutti i computer della classe. È possibile utilizzare un'unità USB per scaricarle una sola volta e installarle su tutti i computer.<br><br>
+      Attenzione: usando queste installazioni in locale gli studenti non potranno accedere a studio.code.org, salvare i progressi o stampare gli attestati.<br><br>
+      Se sei un insegnante della scuola italiana scarica gli attestati dal sito di <a href="http://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">Programma il Futuro</a>. Altrimenti puoi stampare gli attestati da <a href="%{url}">qui</a>.
     minecraft_name: L'Ora del Codice con Minecraft
     starwars_blocks_name: 'Guerre Stellari: Costruisci una galassia con il codice
       (Blocchi)'
@@ -912,3 +938,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

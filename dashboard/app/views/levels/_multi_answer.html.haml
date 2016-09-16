@@ -1,31 +1,36 @@
 / Show the correct answer to authorized teachers
 
 / temporary debug information
-.answer_hidden{style: "display: none"}
-  .script_level
-    = @script_level.to_json
-  - if current_user
-    .current_user_id
-      = current_user.id
-    .authorized_teacher
-      = current_user.authorized_teacher?.to_json
-    - script = @script_level.try(:script)
-    .script
-      = script.to_json
-    .professional_course
-      = script.try(:professional_course?).to_json
-    .userlevel
-      = UserLevel.find_by(user: current_user, level: @script_level.level).to_json
-    .readonly_answers
-      = UserLevel.find_by(user: current_user, level: @script_level.level).try(:readonly_answers).to_json
+- unless @script_level.nil?
+  .answer_hidden{style: "display: none"}
+    .script_level
+      = @script_level.to_json
+    - if current_user
+      .current_user_id
+        = current_user.id
+      .authorized_teacher
+        = current_user.authorized_teacher?.to_json
+      - script = @script_level.try(:script)
+      .script
+        = script.to_json
+      .professional_course
+        = script.try(:professional_course?).to_json
+      .userlevel
+        = UserLevel.find_by(user: current_user, level: @script_level.level).to_json
+      .readonly_answers
+        = UserLevel.find_by(user: current_user, level: @script_level.level).try(:readonly_answers).to_json
 / end temporary debug information
 
 - if current_user.try(:should_see_inline_answer?, @script_level)
+  .answers_hidden_data{style: "display: none"}
+    = data.to_json if data
   - correct_answers = data['answers'].each_with_index.map do |answer, index|
     - next unless answer['correct']
     - letter = standalone ? nil : Multi.value_to_letter(index)
     - {text: answer['text'], index: index, letter: letter}
   - end.compact
+  .correct_answers_hidden{style: "display: none"}
+    = correct_answers.to_json
   - unless correct_answers.empty?
     #markdown.teacher
       %h3= t('teacher.answer')

@@ -2,7 +2,9 @@ ko:
   errors:
     messages:
       not_saved: '다음 오류를 수정해주세요:'
-      too_young: 이 내용은 연령 제한이 있어서 사용할 수 없습니다.
+      too_young: This content has age restrictions in place and is not available for younger students.
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ ko:
   signup_form:
     student_count: '%{count} 학생 들은 이미 가입했습니다.'
     teacher_count: '%{count} 선생님들은 이미 가입했습니다.'
-    overview_student: '진도를 확인하기 위해서 로그인하세요. 이메일 주소는 비밀번호 복구를 위해 사용됩니다. <a href="http://code.org/privacy">개인정보보호 정책</a>.'
-    overview_teacher: 계정을 이용해 로그인하고 수업에서 컴퓨터과학(정보과학)을 교육하세요. 학생들을 추가하고 진도를 확인할 수 있습니다.
-    no_signup_message: '여러 개의 단계로 이루어진 퍼즐들을 살펴보세요. <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a> 해결한 퍼즐을 저장하려면 가입해야 합니다.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
     teacher_educator_guide: 교육자 가이드
-    teacher_pitch: 선생님 가입(Code.org)
-    teacher_title: 선생님 가입
-    student_pitch: 학생 가입(Code.org)
-    student_title: 학생 가입
-    signup_title: Code.org 회원가입
+    title: Sign up for Code.org
     school_name: 학교 이름 (옵션)
     school_address: 학교 주소 (옵션)
     address_placeholder: 주소, 군구, 시도, 우편번호
@@ -103,15 +99,17 @@ ko:
     valid_password: 사용 가능한 비밀번호!
     invalid_password: 비밀번호는 최소 6 문자 이상이어야 합니다
     mismatch_password: 입력한 비밀번호가 일치하지 않습니다.
-    student_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과  약관</a>에 동의합니다. 13세 미만인 경우에는 부모님 또는 보호자의 허락하에 Code.org의 서비스를 사용합니다. 13세 미만의 이메일 주소는 저장되지 않습니다."
-    teacher_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과 약관</a>에 동의합니다."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
     user_type_label: 계좌 타자
     user_type_teacher: 선생님
     user_type_student: student
+    field_is_required: 이(가) 필요합니다.
+    accept_terms: You must agree to create an account
   signin_form:
     title: 계정이 있으면? 로그인
-    login: 이메일 또는 아이디
+    login: 이메일
     password: 비밀번호
     remember: 아이디 기억하기
     submit: 로그인
@@ -130,8 +128,9 @@ ko:
   password:
     reset_form:
       title: 비밀번호를 잊으셨나요?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: 이메일
-      submit: 비밀번호 변경하기
+      submit: 제출하기
     change_form:
       title: 비밀번호 변경
       new_password: 새 비밀번호
@@ -247,7 +246,7 @@ ko:
       prizes: 상품
       logout: 로그아웃
       signin: 로그인
-      signup: 가입하기
+      signup: Create an account
       already_registered: 이미 등록하였나요?
       pair_programming: 페어 프로그래밍
       team: 팀
@@ -278,7 +277,7 @@ ko:
     user_not_found: 선생님을 찾을 수 없습니다.
     student_teacher_disassociated: '%{teacher_name} 선생님을 삭제하였습니다.'
     panel:
-      answer_viewer: 답변 뷰어
+      answer_viewer: Teacher Panel
       student: student
       viewing_solution: 솔루션 살펴보기
       try_it_yourself: 혼자 힘으로 해보세요
@@ -288,6 +287,7 @@ ko:
       submitted_on: '제출:'
       unsubmit: 제출 취소
       worked_with: ~와 협력합니다.
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'
@@ -346,13 +346,14 @@ ko:
     choose_next_course: 아래의 Code Studio 과정을 해보세요.
     print_certificate: 인증서 인쇄
     announcement_title: 공시사항
-    announcement_message: '<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은 언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서 모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요.'
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: 더 알아보기
     announcement_try_now_button: 지금 해보기
     announcement_petition: 교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다.
     announcement_petition_button: 이름을 입력하세요
-    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    announcement_all: "교사 블로그에서 새로운 내용이나 추가사항을 확인할 수 있습니다. <a href='%{teacher_blog_url}' target='_blank'>지난 공지사항 보기</a>"
   move_students:
     new_section_dne: '죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요.'
     section_code_not_entered: Current_section_code를 입력 하십시오.
@@ -572,6 +573,19 @@ ko:
     header: 계정 정보 업데이트
     message: '개인 정보 보호 정책에 따라 서비스를 제공합니다. 나이를 입력해 주세요.<br/> code.org 는 제출한 정보를 제3자에게 대여/판매/공유하지 않습니다.'
     sign_out: '나이 정보를 제출하기 원하지 않으시면 <a href="%{url}">탈퇴</a>를 하실 수 있습니다.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: 이용 약관
+    privacy: 개인정보보호 정책
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: 인쇄
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
   progress:
     not_started: 시작 안됨
@@ -709,3 +723,6 @@ ko:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview
