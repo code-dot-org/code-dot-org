@@ -2,26 +2,26 @@ ku:
   data:
     game:
       name:
-        'Unplug1': Introduction to Computer Science
+        'Unplug1': پێسەكی زانستی كۆمپیتەر
         'Maze': The Maze
         'Multi': Multiple Choice Stuffs
         'Unplug2': Computational Thinking
         'Unplug3': Graph Paper Programming
-        'Artist': The Artist
+        'Artist': هونەرەكە
         'Unplug4': Algorithms
-        'Artist2': The Artist 2
+        'Artist2': هونەرەكە ٢
         'Unplug5': Functions
-        'Farmer': The Farmer
+        'Farmer': جوتیارەكە
         'Unplug6': Conditionals
-        'Artist3': The Artist 3
-        'Unplug7': Song Writing
+        'Artist3': هونەرەكە ٣
+        'Unplug7': گۆرانی نووسین
         'Farmer2': The Farmer 2
         'Unplug8': Abstraction
-        'Artist4': The Artist 4
+        'Artist4': هونەرەكە ٤
         'Unplug9': Relay Programming
-        'Farmer3': The Farmer 3
-        'Unplug10': The Internet
-        'Artist5': The Artist 5
+        'Farmer3': جووتیارەكە ٣
+        'Unplug10': ئینترنێت
+        'Artist5': هونەرەكە ٥
         'Unplug11': Wrap-up
         'MazeEC': The Maze
         'Bounce': Bounce
@@ -30,7 +30,7 @@ ku:
         'MazeStep': Maze Step Mode
         'Wordsearch': Wordsearch
         'Webapp': App Lab
-        'ArtistEC': The Artist
+        'ArtistEC': هونەرەكە
         'TextMatch': Text Match
         'StudioEC': Play Lab
         'Applab': App Lab
@@ -331,7 +331,7 @@ ku:
         'Unplug9': Relay programming
         'Unplug10': Internet
         'Unplug11': Wrap-up
-        'C1_happy_maps_unplugged': Happy Maps
+        'C1_happy_maps_unplugged': نەخشەی دڵخۆش
         'C1_moveitmoveit_unplugged': Move It, Move It
         'C1_bigevent_unplugged': The Big Event
         'C1_getting_loopy': Getting Loopy

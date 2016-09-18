@@ -29,6 +29,7 @@
     "instructions": "Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?",
     "markdown_instructions": "Uh oh, I lost my map and can't remember what I planted! Every sprout could grow up to be **corn** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png) , **beans** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png) , or **pumpkins** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png) . Can you write some code to pick all the crops, no matter what they are?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What kind of block can I use to check something and make a decision?\",\r\n  \"hint_id\": \"pointer_harvester_test\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "step_speed": "1",
     "contained_level_names": null
   },
   "published": true,

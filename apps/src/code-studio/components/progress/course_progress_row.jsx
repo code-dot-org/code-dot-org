@@ -14,15 +14,14 @@ const styles = {
   row: {
     position: 'relative',
     boxSizing: 'border-box',
-    margin: '2px 0',
+    margin: '14px 0',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     borderRadius: 5,
     background: color.lightest_gray,
-    display: 'table',
-    padding: 10,
-    width: '100%'
+    width: '100%',
+    display: 'table'
   },
   hiddenStage: {
     display: 'none'
@@ -41,7 +40,7 @@ const styles = {
     display: 'table-cell',
     width: 200,
     verticalAlign: 'middle',
-    paddingRight: 10
+    padding: 10
   },
   ribbonWrapper: {
     position: 'absolute',
@@ -73,6 +72,16 @@ const styles = {
   changeFocusAreaIcon: {
     fontSize: '1.2em',
     marginRight: 6
+  },
+  stageProgress: {
+    display: 'table-cell',
+    padding: 10,
+    verticalAlign: 'middle'
+  },
+  teacherInfo: {
+    display: 'table-cell',
+    verticalAlign: 'top',
+    width: 240,
   }
 };
 
@@ -125,16 +134,18 @@ const CourseProgressRow = React.createClass({
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
-        <div>
-          {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
-            <TeacherStageInfo stage={stage}/>
-          }
+        <div style={styles.stageProgress}>
           <StageProgress
             stageId={stage.id}
             levels={stage.levels}
             courseOverviewPage={true}
           />
         </div>
+        {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
+          <div style={styles.teacherInfo}>
+            <TeacherStageInfo stage={stage}/>
+          </div>
+        }
       </div>
     );
   }

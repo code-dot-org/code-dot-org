@@ -2,7 +2,7 @@
   errors:
     messages:
       not_saved: 'Ceartaigh na hearráidí seo a leanas:'
-      too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga
+      too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -95,7 +95,7 @@
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Féach an lámhleabhar do mhúinteoirí
-    title: Sign up for Code.org
+    title: Cláraigh le Code.org
     school_name: Ainm do Scoile (roghnach)
     school_address: Seoladh do Scoile (roghnach)
     address_placeholder: seoladh, cathair, stát, cód poist
@@ -113,18 +113,20 @@
     mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
     student_terms: Glacaim le <a href='http://code.org/tos'>téarmaí seirbhíse</a>
       Code.org. Má tá mé níos óige ná 13 bliain d'aois, deimhním gur thug tuismitheoir
-      nó caomhnóir cead dom seirbhísí Code.org a úsáid.<br/>Má tá úsáideoir níos óige
-      ná 13 bliain d'aois, ní stórálaimid a s(h)eoladh ríomhphoist in aon fhoirm a
-      ligfeadh dúinn dul i dteagmháil leis nó léi.
-    teacher_terms: Glacaim le <a href='http://code.org/tos'>téarmaí seirbhíse</a>
-      Code.org.
+      nó caomhnóir cead dom seirbhísí Code.org a úsáid.<br/><br/>Ní stórálaimid seoltaí
+      ríomhphoist in aon fhoirm a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh
+      daltaí ríomhphost ó Code.org seachas teachtaireachtaí chun focal faire a athshocrú.
+      Léigh an <a href='http://code.org/privacy'>polasaí príobháideachais</a> chun
+      tuilleadh eolais a fháil.
+    teacher_terms: Glacaim le téarmaí seirbhíse Code.org. Féach an <a href='http://code.org/privacy'>polasaí
+      príobháideachais</a> chun tuilleadh eolais a fháil.
     additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
       a chlárú.
     user_type_label: Sórt cuntais
     user_type_teacher: Múinteoir
     user_type_student: Dalta
     field_is_required: riachtanach
-    accept_terms: You must agree to create an account
+    accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
   signin_form:
     title: An bhfuil cuntas agat cheana? Logáil isteach
     login: Seoladh ríomhphoist
@@ -296,7 +298,7 @@
       prizes: Duaiseanna
       logout: Logáil amach
       signin: Logáil isteach
-      signup: Cláraigh
+      signup: Cruthaigh cuntas
       already_registered: Cláraithe cheana?
       pair_programming: Códáil Bheirte
       team: Foireann
@@ -327,7 +329,7 @@
     user_not_found: Níor aimsíodh an múinteoir seo.
     student_teacher_disassociated: Ní hé/hí %{teacher_name} do mhúinteoir a thuilleadh.
     panel:
-      answer_viewer: Amharcán Freagraí
+      answer_viewer: Painéal an Mhúinteora
       student: Dalta
       viewing_solution: Réiteach á Thaispeáint
       try_it_yourself: Bain triail as
@@ -337,7 +339,7 @@
       submitted_on: 'Seolta:'
       unsubmit: Dísheol
       worked_with: In éineacht le
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Athraigh na socruithe glasála anseo.
   user:
     email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
@@ -722,7 +724,7 @@
     sign_out: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat <a href="%{url}">logáil
       amach</a> anois.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
+    title: Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua
     intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
       The changes are effective as of August 24, 2016.  The biggest change: we will
       <i>no longer store email addresses for student accounts on Code Studio.</i>
@@ -737,18 +739,19 @@
       educational programs such as Code Studio.
     tos: Téarmaí Seirbhíse
     privacy: Polasaí Príobháideachais
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: Polasaí Príobháideachais
+    accept_label: Glacaim leis na <a href="%{tos_url}" target="_blank">Téarmaí Seirbhíse</a>
+      nua agus leis <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>
+      nua
+    accept: Glacaim Leo
     print: Priontáil
-    later: Later
+    later: Níos Déanaí
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: Léigh na téarmaí seirbhíse nua
   zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
     isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a>
     gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
@@ -926,3 +929,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

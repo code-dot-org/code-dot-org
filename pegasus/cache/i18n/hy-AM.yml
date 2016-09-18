@@ -384,7 +384,9 @@
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: "Կարդալ ավելին"
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: "Սովորել ավելին"
   homepage_slot_text_title_hoc: "Կոդի ժամ"
   homepage_slot_text_blurb_hoc: "Յուրաքանչյուրը կարող է սովորել. Սկսիր այսօր."
   homepage_slot_text_link_hoc: "Փորձիր Կոդի Ժամը"
@@ -480,10 +482,10 @@
   minecraft_subtitle: Minecraft Hour of Code
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  speak_another_language: "Խոսում եք այլ լեզվո՞վ:"
+  help_translate: "Օգնեք թարգմանել:"
+  no_internet: "Չունե՞ք ինտերնետ:"
+  download_offline: "Ներբեռնել անցանց տարբերակը:"
   are_you_teacher: "Դուք ուսուցիչ եք?"
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer
@@ -677,7 +679,7 @@
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: "Տպել վկայականը"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
@@ -687,8 +689,8 @@
     students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: "Հարցումներ"
+  dashboard_percent: "Տոկոս"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -701,13 +703,13 @@
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: Progress
-  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_text_responses: "Տեքստային պատասխաններ"
   dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: "Թեստեր/Հարցումներ"
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: Stats
+  dashboard_navigation_view_stats: "Վիճակագրություն"
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: "չի սկսվել"
@@ -912,6 +914,14 @@
     blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: "Սովորել ավելին"
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -1736,7 +1746,7 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: "Թաքցնել այս նախազգուշացումը"
   compatibility_unsupported_browser: Your browser is not supported. Please upgrade
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality

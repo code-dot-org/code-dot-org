@@ -304,5 +304,6 @@
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
   "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "yes": "ใช่"
+  "yes": "ใช่",
+  "assessmentSettings": "Assessment Settings"
 }

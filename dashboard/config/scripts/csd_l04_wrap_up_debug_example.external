@@ -1,0 +1,9 @@
+name 'CSD L04 Wrap Up Debug Example'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Debugged Cat Supply Page
+
+This page shows the result the designer of the Cat Supply Store website was looking for. Work on the previous level to get the code there to create a page that looks like this.
+
+<iframe src="https://thimbleprojects.org/danimcavoy/100063" width="960px" height="1200px" />
+MARKDOWN

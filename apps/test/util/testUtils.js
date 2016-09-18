@@ -253,6 +253,13 @@ function zeroPadLeft(string, desiredWidth) {
 export function throwOnConsoleErrors() {
   before(function () {
     sinon.stub(console, 'error', msg => {
+      // Generate a stack trace
+      try {
+        throw new Error();
+      } catch (e) {
+        console.log('Unexpected call to console.error: ' + msg);
+        console.log(e.stack);
+      }
       throw new Error(msg);
     });
   });
@@ -265,6 +272,13 @@ export function throwOnConsoleErrors() {
 export function throwOnConsoleWarnings() {
   before(function () {
     sinon.stub(console, 'warn', msg => {
+      // Generate a stack trace
+      try {
+        throw new Error();
+      } catch (e) {
+        console.log('Unexpected call to console.warn: ' + msg);
+        console.log(e.stack);
+      }
       throw new Error(msg);
     });
   });

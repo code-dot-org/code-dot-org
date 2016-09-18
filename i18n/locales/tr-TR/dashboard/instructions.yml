@@ -1380,6 +1380,8 @@ tr:
       course3_playlab_stage17_5_instruction: Paytağı oklarla hareket ettirip sayı almasını ve ahtapota değince sayı almasını sağlayacak bloğu ekleyebilir misin?
       course3_playlab_stage17_6_instruction: Pengueni oklarla hareket ettirip sayı almasını ve arkaplan ile paytağın hızını değiştirmesini sağlayacak bloğu ekleyebilir misin?
       course3_playlab_stage17_7_instruction: 'Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine bas, hikayeni arkadaşlarının telefonlarında denemelerine izin ver.'
+      Crack a Caesar Cipher_instruction: Talimatlar
+      Crack Random Substitution_instruction: Talimatlar
       CSD Hackathon Pt 1_instruction: (Click to see full instructions)
       CSD Hackathon Pt 2_instruction: (Tüm talimatları için tıklayınız)
       CSD Hackathon Week 1_instruction: (Tüm talimatları için tıklayınız)
@@ -4107,6 +4109,8 @@ tr:
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      The Vigenere Cipher Widget_instruction: Talimatlar
+      The Vigenere Cipher_instruction: Talimatlar
       Total Artist Clone Me_instruction: |
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -5777,6 +5781,7 @@ tr:
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 vigenere cipher 2_instruction: Talimatlar
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full

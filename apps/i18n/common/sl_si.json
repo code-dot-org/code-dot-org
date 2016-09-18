@@ -304,5 +304,6 @@
   "when": "ko",
   "whenRun": "ob zagonu",
   "workspaceHeaderShort": "Delovni prostor: ",
-  "yes": "Da"
+  "yes": "Da",
+  "assessmentSettings": "Assessment Settings"
 }

@@ -674,8 +674,8 @@
         C2_zuck_repeat_loop: Labyrinthe et boucles
         C2_artist_loops: Boucles d'artiste
         C2_artist_debugging: Débogage de l’artiste
-        C2_bee_loops: Boucles de l'abeille
-        C2_bee_debugging: Débogage de l’abeille
+        C2_bee_loops: Abeilles et boucles
+        C2_bee_debugging: Abeilles et debugging
         C2_bee_conditionals: Abeilles et instructions conditionnelles
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
@@ -685,7 +685,7 @@
         C2_paper_airplanes: Avions en papier
         C2_digital_footprint: Ton empreinte numérique
         C2_digital_footprint_v2: Ton empreinte numérique
-        C3_maze_level_4: Les boucles du labyrinthe
+        C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: Introduction à l'Artiste
         C3_artist_functions: 'Artiste : les fonctions'
         C3_bee_functions: Abeilles et fonctions
@@ -705,7 +705,7 @@
         C3_songwriting_with_parameters: Composition de chansons avec des paramètres
         C4_intro: Introduction
         C4_loops_zombie: Boucles
-        C4_bee_conditional: Instructions conditionnelles de l’abeille
+        C4_bee_conditional: Abeilles et instructions conditionnelles
         C4_variables_artist: Variables - Artiste
         C4_variables_playlab: Variables - Labo de jeux
         C4_for_loops: Boucles « Pour »

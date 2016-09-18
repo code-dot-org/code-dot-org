@@ -627,7 +627,7 @@
         C1_maze_loops: 'Labirynt: Pętle'
         C1_playlab_storytelling: Play Lab - Utwórz opowieść
         C1_planting_seed: Sadzenie nasiona
-        C1_building_foundation: Budowanie solidnych podstaw
+        C1_building_foundation: Kładąc podwaliny (Building a Foundation)
         C1_going_places_safely: Bezpiecznie dotrzeć na miejsce
         C2_maze_intro: Labirynt - wprowadzenie
         C2_artist_intro: Artysta - wprowadzenie
@@ -635,7 +635,7 @@
         C2_artist_loops: 'Artysta: Pętle'
         C2_artist_debugging: 'Artysta: Debugowanie'
         C2_bee_loops: 'Pszczółka: Pętle'
-        C2_bee_debugging: 'Pszczółka: Debugowanie'
+        C2_bee_debugging: Debugowanie Pszczoły
         C2_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
         C2_playlab_createstory: Play Lab - Utwórz opowieść
         C2_graph_paper: Programowanie na papierze milimetrowym
@@ -669,8 +669,8 @@
         C4_variables_artist: Zmienne - Artysta
         C4_variables_playlab: Zmienne - Play Lab
         C4_for_loops: Pętle dla (for)
-        C4_for_loops_bee: Pętle "dla" (for)
-        C4_for_loops_no_bee: Pętle "dla" (for)
+        C4_for_loops_bee: Pętle dla (for)
+        C4_for_loops_no_bee: Pętle dla (for)
         C4_math_artist: Programowanie Artysty z pomocą matematyki
         C4_function_edit: Edytowanie Funkcji
         C4_function_create: Tworzenie Funkcji

@@ -654,7 +654,7 @@ Artist.prototype.display = function () {
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxDisplay.globalAlpha = 0.4;
   } else {
-    this.ctxDisplay.globalAlpha = 0.15;
+    this.ctxDisplay.globalAlpha = 0.3;
   }
   this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
   this.ctxDisplay.globalAlpha = 1;

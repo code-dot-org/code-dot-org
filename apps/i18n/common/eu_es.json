@@ -304,5 +304,6 @@
   "when": "-enean",
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
-  "yes": "Bai"
+  "yes": "Bai",
+  "assessmentSettings": "Assessment Settings"
 }

@@ -65,4 +65,10 @@ User Prompt | User Information
  |City High School: 123-123-7890  
 
 
+## App Improvement
+
+The advanced version is more specific.  It should be able to figure out when the phone is at a school, but it should only turn off the ringer when the user is quiet and not moving.  If the user is moving around or making a lot of noise, it will assume that it is not class time and keep the ringer on.
+
+Do you need any new inputs to the advanced program?  If so, what are they?
+
 MARKDOWN

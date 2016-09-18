@@ -23,6 +23,7 @@ class Ability
       Follower,
       PeerReview,
       Section,
+      SectionHiddenStage,
       # Ops models
       District,
       Workshop,
@@ -56,6 +57,7 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
+      can :read, SectionHiddenStage
 
       if user.teacher? || (user.persisted? && user.permission?(UserPermission::HINT_ACCESS))
         can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
@@ -74,6 +76,9 @@ class Ability
         can :manage, Pd::Enrollment, teacher_id: user.id
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
+        end
+        can :manage, SectionHiddenStage do |hidden_stage|
+          userid == hidden_stage.section.user_id
         end
       end
 

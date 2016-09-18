@@ -304,5 +304,6 @@
   "when": "quan",
   "whenRun": "quan s'executa",
   "workspaceHeaderShort": "Zona de treball: ",
-  "yes": "Sí"
+  "yes": "Sí",
+  "assessmentSettings": "Assessment Settings"
 }

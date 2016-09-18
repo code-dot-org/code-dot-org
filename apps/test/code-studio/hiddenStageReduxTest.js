@@ -3,65 +3,94 @@ import { createStore } from '@cdo/apps/redux';
 import { combineReducers } from 'redux';
 import sinon from 'sinon';
 
-import { initProgress } from '@cdo/apps/code-studio/progressRedux';
-import reducer, { toggleHidden } from '@cdo/apps/code-studio/hiddenStageRedux';
+import reducer, { toggleHidden, getHiddenStages } from '@cdo/apps/code-studio/hiddenStageRedux';
 import experiments from '@cdo/apps/experiments';
 
-describe('reducer tests', () => {
+function fakeStageLockReducer(state, action) {
+  return {
+    selectedSection: 1
+  };
+}
+
+describe('hiddenStage reducer tests', () => {
+  let xhr;
+  let lastRequest;
+  let store;
+  let reducerSpy;
+
   before(() => {
     experiments.setEnabled('hiddenStages', true);
   });
 
-  it('initializes based on initProgress', () => {
-    const action = initProgress({
-      currentLevelId: null,
-      professionalLearningCourse: false,
-      saveAnswersBeforeNavigation: false,
-      peerReviewsRequired: 0,
-      stages: [
-        {
-          id: 123,
-          name: 'Stage 123',
-          hidden: false
-        },
-        {
-          id: 345,
-          name: 'Stage 345',
-          hidden: true
-        }
-      ]
-    });
-    const state = reducer(undefined, action);
+  // Intercept all XHR requests, storing the last one
+  beforeEach(() => {
+    xhr = sinon.useFakeXMLHttpRequest();
+    xhr.onCreate = req => {
+      lastRequest = req;
+    };
+    reducerSpy = sinon.spy(reducer);
+    store = createStore(combineReducers({
+      hiddenStage: reducerSpy,
+      stageLock: fakeStageLockReducer
+    }));
+  });
 
+  afterEach(() => {
+    lastRequest = null;
+    xhr.restore();
+  });
+
+  it('initializes with server results after calling getHiddenStages', () => {
+    const state = store.getState().hiddenStage;
     assert.deepEqual(state, {
-      123: false,
-      345: true
+      initialized: false
+    });
+
+    const action = getHiddenStages('scriptName');
+    store.dispatch(action);
+
+    lastRequest.respond(200, { "Content-Type": "application/json" }, JSON.stringify([123, 456]));
+
+    const nextState = store.getState().hiddenStage;
+    assert.deepEqual(nextState, {
+      initialized: true,
+      123: true,
+      456: true
     });
   });
 
   it('can toggle hidden state', () => {
-    const startState = {
-      123: false,
-      345: true
-    };
-
-    let nextState;
-    nextState = reducer(startState, toggleHidden(123, true));
-    assert.deepEqual(nextState, {
-      123: true,
-      345: true
+    const state = store.getState().hiddenStage;
+    assert.deepEqual(state, {
+      initialized: false
     });
 
-    nextState = reducer(startState, toggleHidden(123, false));
+    let action, nextState;
+
+    action = toggleHidden('scriptName', 123, true);
+    store.dispatch(action);
+    nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState, {
-      123: false,
-      345: true
+      initialized: false,
+      123: true
     });
 
-    nextState = reducer(startState, toggleHidden(345, false));
+    action = toggleHidden('scriptName', 123, false);
+    store.dispatch(action);
+    nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState, {
+      initialized: false,
+      123: false
+    });
+
+    action = toggleHidden('scriptName', 345, true);
+    store.dispatch(action);
+    nextState = store.getState().hiddenStage;
+    console.log(nextState);
+    assert.deepEqual(nextState, {
+      initialized: false,
       123: false,
-      345: false
+      345: true
     });
   });
 });

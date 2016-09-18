@@ -2,15 +2,15 @@
   errors:
     messages:
       not_saved: 'Vinsamlegast leiðréttu eftirfarandi villur:'
-      too_young: "Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: "Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum."
+      teacher_must_accept_terms: Þetta efni er með aldurstakmarkanir og er ekki tiltækt
+        yngri nemendum. Biddu kennarann þinn að samþykkja Þjónustuskilmálana svo þú
+        fáir aðgang að þessu efni. Kennarinn þinn getur gert þetta með því að skrá
+        sig inn í Kóðastúdíóið og smella á hnappinn "Sjá uppfærða skilmála" ofarlega
+        á heimasíðu Kóðastúdíósins.
+      pair_programmer: "Þú ert nú í félagaforritun með nemanda sem hefur ekki aðgang
+        að þessu efni. Til að fá aðgang þarft þú að hætta í félagaforritun og reyna
+        svo aftur."
   activerecord:
     errors:
       messages:
@@ -89,11 +89,11 @@
   signup_form:
     student_count: "%{count} nemendur hafa þegar skráð sig."
     teacher_count: "%{count} kennarar hafa þegar skráð sig."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með
+      nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að
+      skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.
     teacher_educator_guide: Sjá leiðarvísi kennara
-    title: Sign up for Code.org
+    title: Nýskrá á Code.org
     school_name: Nafn skóla (valfrjálst)
     school_address: Heimilisfang skóla (valfrjálst)
     address_placeholder: götuheiti, borg, fylki, póstfang
@@ -110,10 +110,12 @@
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
     student_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a>
-      Code.org. Ef ég er yngri en 13 ára, staðfesti ég með því að senda inn þetta
-      form að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu
-      Code.org.<br/>Ef notendur eru yngri en 13 ára, eru netföng þeirra ekki geymd
-      á þann hátt að hægt sé að hafa samband við þá."
+      Code.org. Ef ég er yngri en 13 ára, staðfest ég með því að senda inn þetta form
+      að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu Code.org.<br/><br/>Netföng
+      eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur.
+      Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð.
+      Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a>
+      okkar."
     teacher_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a>
       Code.org."
     additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram
@@ -324,7 +326,7 @@
     student_teacher_disassociated: "Þú hefur fjarlægt %{teacher_name} sem kennara
       þinn."
     panel:
-      answer_viewer: Skoða svör
+      answer_viewer: Kennaraborðið
       student: nemandi
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
@@ -917,3 +919,6 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

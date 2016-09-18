@@ -84,7 +84,7 @@ const DataProperties = React.createClass({
 
           <span style={dataStyles.debugLink}>
             <a
-              id="tableDebugLink"
+              id="uitest-propertiesDebugLink"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >

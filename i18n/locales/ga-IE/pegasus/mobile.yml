@@ -313,6 +313,8 @@ ga-IE:
   homepage_banner_congress_link: Cuir do chuid tacaíochta leis seo
   homepage_banner_emailprivacy: Seo é athrú tábhachtach ar an gcaoi a gcosnaímid príobháideachas na ndaltaí.
   homepage_banner_emailprivacy_link: Tuilleadh eolais
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Tuilleadh eolais
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
@@ -532,7 +534,7 @@ ga-IE:
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: Priontáil teastais
   dashboard_assessments_view: 'Féach measúnuithe i:'
   dashboard_assessments_none: 'Baineann go leor múinteoirí úsáid as an gcluaisín "Féach Dul Chun Cinn" le dul chun cinn a gcuid daltaí a leanúint. Má tá tú ag iarraidh measúnuithe sa bhreis a dhéanamh, gheobhaidh tú ceisteanna agus réimsí molta sna pleananna ceachta. Déantar iad seo lasmuigh den Stiúideo Códála.'
   dashboard_assessments_none_part2: Má tá tú ag múineadh cúrsa ag an dara leibhéal, tá ceisteanna measúnaithe againn mar chuid den Stiúideo Códála mar acmhainn do dhaltaí a dhéanfaidh an scrúdú AP. Chun na measúnuithe seo a úsáid, tabhair an cúrsa do do rang, ansin roghnaigh an cúrsa ón roghchlár anuas agus feicfidh tú freagraí do chuid daltaí anseo.
@@ -713,6 +715,9 @@ ga-IE:
   dashboard_announce_all: "Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach ar fhógraí roimhe seo.</a>"
   code_hoc_coming: 'Tá an Uair Chódála anseo - 8-14 Nollaig!'
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Bain triail as anois
   learn_sign_up_description: Cláraigh chun páirt a ghlacadh san Uair Chódála le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_sign_up_button: Cláraigh

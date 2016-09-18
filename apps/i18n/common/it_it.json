@@ -1,5 +1,5 @@
 {
-  "allowEditing": "Allow editing",
+  "allowEditing": "Consenti la modifica",
   "allowEditingInstructions": "\"Allow editing\" while students should be taking the assessment.",
   "and": "e",
   "animationMode": "Animazione",
@@ -304,5 +304,6 @@
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
   "workspaceHeaderShort": "Area di lavoro: ",
-  "yes": "Sì"
+  "yes": "Sì",
+  "assessmentSettings": "Assessment Settings"
 }
