@@ -111,9 +111,9 @@ export default {
       xml:`
         createRecord("mytable", {name:'Alice'}, function(record) {
           var includeAll = true;
-          onRecordEvent("mytable", function(record, eventType, includeAll) {
+          onRecordEvent("mytable", function(record, eventType) {
             console.log(eventType + ' ' + record.id)
-          });
+          }, includeAll);
           createRecord("mytable", {name:'Alice'}, function(record) {
             updateRecord("mytable", {id:1, name:'Bob'}, function(record, success) {
               deleteRecord("mytable", {id:1}, function(success) {
@@ -136,6 +136,40 @@ export default {
           'create 2\n' +
           'update 1\n' +
           'delete 1');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "onRecordEvent includeAll race condition",
+      editCode: true,
+      useFirebase: true,
+      xml:`
+        createRecord("table1", {name:'Alice'}, function(record) {
+          createRecord("table1", {name:'Alice'}, function(record) {
+            onRecordEvent("table1", function(record, eventType) {
+              console.log('table1 ' + eventType + ' ' + record.id)
+            });
+            onRecordEvent("table2", function(record, eventType) {
+              console.log('table2 ' + eventType + ' ' + record.id)
+            });
+          });
+        });`,
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 100, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // Verify that onRecordEvent was called with the correct data
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
         return true;
       },
       expected: {

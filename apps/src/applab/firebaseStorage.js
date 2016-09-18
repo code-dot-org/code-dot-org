@@ -3,7 +3,7 @@
 import { castValue } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
-import { enforceTableCount, updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
+import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -241,6 +241,11 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
 };
 
 /**
+ * @type {{}} Map from table name to the firebase callback which is listening to that table.
+ */
+const tableListeners = {};
+
+/**
  * Listens to tableName for any changes to the data it contains, and calls
  * onRecord with the record and eventType as follows:
  * - for 'create' events, returns the new record
@@ -252,7 +257,7 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  */
-FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
+FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeAll) {
   if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
@@ -261,20 +266,27 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
     return;
   }
 
+  getLastRecordId(tableName).then(lastId => {
+    const recordsRef = getRecordsRef(Applab.channelId, tableName);
+    // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
+
+    recordsRef.on('child_added', childSnapshot => {
+      const record = JSON.parse(childSnapshot.val());
   let recordsRef = getRecordsRef(Applab.channelId, tableName);
-  // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
+      if (includeAll || (record.id > lastId)) {
+        onRecord(record, 'create');
+      }
+    });
 
-  recordsRef.on('child_added', childSnapshot => {
-    onRecord(JSON.parse(childSnapshot.val()), 'create');
-  });
+    recordsRef.on('child_changed', childSnapshot => {
+      onRecord(JSON.parse(childSnapshot.val()), 'update');
+    });
 
-  recordsRef.on('child_changed', childSnapshot => {
-    onRecord(JSON.parse(childSnapshot.val()), 'update');
-  });
+    recordsRef.on('child_removed', oldChildSnapshot => {
+      var record = JSON.parse(oldChildSnapshot.val());
+      onRecord({id: record.id}, 'delete');
+    });
 
-  recordsRef.on('child_removed', oldChildSnapshot => {
-    var record = JSON.parse(oldChildSnapshot.val());
-    onRecord({id: record.id}, 'delete');
   });
 };
 
