@@ -47,6 +47,14 @@ $(document).ready(function () {
     }
   });
 
+  $("input[name=willing_to_talk_b]:radio").change(function () {
+    if ($("input[name=willing_to_talk_b][value=1]").is(":checked")) {
+      $('#willing-to-talk-contact-wrapper').show();
+    } else {
+      $('#willing-to-talk-contact-wrapper').hide();
+    }
+  });
+
   $(".agree-scale").tooltip();
 });
 

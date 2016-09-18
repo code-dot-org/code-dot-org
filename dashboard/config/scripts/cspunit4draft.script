@@ -252,29 +252,3 @@ level 'U3L17 - getKeyValue'
 assessment 'U3L22 Free Response Getting Started'
 assessment 'U3L22 Assessment'
 assessment 'U3L22 Reflection'
-
-
-# not used stages
-stage 'Data is the Secret Ingredient'
-stage 'Finding Data'
-stage 'Building Apps Using Structured Data'
-stage 'Data App Part 1: Brainstorm'
-stage 'APIs and Access to Large Data Sets'
-stage 'Structuring Data with JSON'
-stage 'Data App Part 2: Data Design'
-stage 'Data App Part 3: Code'
-stage 'Identifying People with Data'
-stage 'Collecting Personal Information'
-stage 'Privacy Policy'
-#do not use this stage vvv
-stage 'Debate: Privacy vs. Utility'
-#do not use this stage ^^^
-stage 'Debate: Privacy vs Utility'
-stage 'Data App Part 4: App Permissions'
-stage 'Data App Part 5: Clean Data'
-stage 'Reading Data'
-stage 'Sorting'
-stage 'Searching'
-stage 'Data App Part 6: Sort and Search'
-stage 'Data App Part 7: Read Data'
-

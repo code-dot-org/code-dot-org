@@ -41,5 +41,5 @@ Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
 end
 
 Then /^I see (\d+) animations in the animation column$/ do |num_animations|
-  expect(@browser.execute_script('return $(".animationList>div>div").not(".newListItem").length - 1')).to eq num_animations.to_i
+  expect(@browser.execute_script('return $(".animationList>div>div").not(".newListItem").length')).to eq num_animations.to_i
 end
