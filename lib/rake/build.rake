@@ -19,12 +19,6 @@ namespace :build do
     end
   end
 
-  task :core_and_apps_dev do
-    Dir.chdir(apps_dir) do
-      RakeUtils.system './build_with_core.sh debug'
-    end
-  end
-
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
