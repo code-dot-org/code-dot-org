@@ -257,6 +257,8 @@ let listenedTables = [];
  * @param {function (string)} onWarning Callback to call with an warning to show to the user.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
+ * @param {boolean} includeAll Optional Whether to include child_added events for records
+ * which were in the table before onRecordEvent was called. Default: false.
  */
 FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onError, includeAll) {
   if (typeof onError !== 'function') {
@@ -267,15 +269,14 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onErro
     return;
   }
   if (listenedTables.includes(tableName)) {
-    onWarning(`onRecordEvent was already called for table "${tableName}". To avoid 
-unexpected behavior in your program, you should only call onRecordEvent once 
-per table and use if/else statements to handle the different event types.`);
+    onWarning(`onRecordEvent was already called for table "${tableName}". To avoid ` +
+    'unexpected behavior in your program, you should only call onRecordEvent once ' +
+    'per table, and use if/else statements to handle the different event types.');
   }
   listenedTables.push(tableName);
 
   getLastRecordId(tableName).then(lastId => {
     const recordsRef = getRecordsRef(Applab.channelId, tableName);
-    // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
 
     recordsRef.on('child_added', childSnapshot => {
       const record = JSON.parse(childSnapshot.val());
