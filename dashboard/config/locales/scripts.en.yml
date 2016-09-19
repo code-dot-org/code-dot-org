@@ -1592,6 +1592,16 @@ en:
             Text on the Web: Text on the Web
             Website Design: Website Design
             Intellectual Property: Intellectual Property
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            'Personal Website: Connecting Pages': 'Personal Website: Connecting Pages'
+            Classes and External Style Sheets: Classes and External Style Sheets
+            Box Model and Page Layout: Box Model and Page Layout
+            'Personal Website: Midway Check': 'Personal Website: Midway Check'
+            Publishing a Website: Publishing a Website
+            Sources and Search Engines: Sources and Search Engines
+            Introduction to HTML: Introduction to HTML
+            Headers and Lists: Headers and Lists
+            Designing Web Pages: Designing Web Pages
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -1925,3 +1935,33 @@ en:
           description: U1 of Discoveries
           stage:
             Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs. Computer Processing: Human vs. Computer Processing
+            Processing with Apps: Processing with Apps
+            'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
+            Human vs Computer Processing: Human vs Computer Processing
+        csp-online-test:
+          title: test space for csp online support
+          description_short: This is a sample course for testing csp online pd
+          description: This is a test space for online pd. Enrollment in this course does nothing.
+          stage:
+            Unit 1 Overview: Unit 1 Overview
+            'Lessons 2-3: Binary Messages': 'Lessons 2-3: Binary Messages'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            'Lessons 4-6: Encoding and Sending Numbers': 'Lessons 4-6: Encoding and Sending Numbers'
+            'Lesson 7: Encoding and Sending Text': 'Lesson 7: Encoding and Sending Text'
+            'lessons 9: Internet Addressing': 'lessons 9: Internet Addressing'
+            'lessons 10: Routers and Redundancy': 'lessons 10: Routers and Redundancy'
+            'lessons 11-12: Protocols and Abstraction': 'lessons 11-12: Protocols and Abstraction'
+            'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
+            'Lessons 4 - 6: Encoding and Sending Numbers': 'Lessons 4 - 6: Encoding and Sending Numbers'
+            'Lesson 9: Internet Addressing': 'Lesson 9: Internet Addressing'
+            'Lessons 10 - 11: Redundancy and Packets': 'Lessons 10 - 11: Redundancy and Packets'
+            'Lessons 12 - 13: Abstraction on the Internet': 'Lessons 12 - 13: Abstraction on the Internet'

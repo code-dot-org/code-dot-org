@@ -1,0 +1,5 @@
+name 'CSDU2 L07 SFLP'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Update This
+MARKDOWN
