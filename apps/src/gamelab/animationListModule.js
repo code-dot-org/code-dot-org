@@ -163,6 +163,38 @@ function animationPropsReducer(state, action) {
   }
 }
 
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+function generateAnimationName(baseName, getState) {
+  const animationList = getState().animationList.propsByKey;
+  let unavailableNumbers = [];
+  for (let animation in animationList) {
+    let existingName = animationList[animation].name;
+    let lastUnderscore = existingName.lastIndexOf("_");
+    let lastDigits = existingName.substring(lastUnderscore + 1);
+    let existingBaseName = existingName;
+    if (/^\+?(0|[1-9]\d*)$/.test(lastDigits)) {
+      existingBaseName = existingName.substring(0, lastUnderscore);
+      if (existingBaseName === baseName) {
+        unavailableNumbers.push(parseInt(lastDigits));
+      }
+    }
+  }
+  unavailableNumbers.sort(compareNumbers);
+  console.log(unavailableNumbers);
+  let availableNumber = 1;
+  for (let i = 0; i < unavailableNumbers.length; i++) {
+    if (availableNumber === unavailableNumbers[i]) {
+      availableNumber++;
+    } else {
+      break;
+    }
+  }
+  return baseName + '_' + availableNumber.toString();
+}
+
 /**
  * @param {!SerializedAnimationList} serializedAnimationList
  * @returns {function()}
@@ -221,7 +253,7 @@ export function setInitialAnimationList(serializedAnimationList) {
 
 export function addBlankAnimation() {
   const key = createUuid();
-  return dispatch => {
+  return (dispatch, getState) => {
     // Special behavior here:
     // By pushing an animation that is "loadedFromSource" but has a null
     // blob and dataURI, Piskel will know to create a new document with
@@ -230,7 +262,7 @@ export function addBlankAnimation() {
       type: ADD_ANIMATION,
       key,
       props: {
-        name: 'New animation', // TODO: Better generated name?
+        name: generateAnimationName('animation', getState), // TODO: Better generated name?
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
@@ -257,7 +289,7 @@ export function addBlankAnimation() {
 export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch({
       type: ADD_ANIMATION,
       key,
@@ -266,6 +298,8 @@ export function addAnimation(key, props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
+    let name = generateAnimationName(props.name, getState);
+    dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
 }
@@ -275,7 +309,7 @@ export function addAnimation(key, props) {
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props) {
-  return dispatch => {
+  return (dispatch, getState) => {
     const key = createUuid();
     dispatch({
       type: ADD_ANIMATION,
@@ -285,6 +319,8 @@ export function addLibraryAnimation(props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
+    let name = generateAnimationName(props.name, getState);
+    dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
 }

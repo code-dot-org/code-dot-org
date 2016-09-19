@@ -86,7 +86,7 @@ const AnimationTab = React.createClass({
             <PiskelEditor style={styles.piskelEl}/>
             <div style={[hidePiskelStyle, styles.emptyPiskelEl]}>
               <div style={styles.helpText}>
-                Add a new sequence on the left to begin
+                Add a new animation on the left to begin
               </div>
             </div>
           </div>
