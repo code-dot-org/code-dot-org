@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-17T23:55:19.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# About Me Page\r\n\r\nThere are many CSS properties and values that can be applied to HTML elements in order to change their style. Use the checklist below to add style to the text, image, and body elements.\r\n\r\nRemember to think about how your styling choices will impact users view of the web page.\r\n\r\n# Do This\r\n\r\n* Add styling to your About Me Page\r\n\r\n# Checklist\r\n\r\n* Paragraph tags added around the image explanations\r\n* At least 5 of the following CSS Properties are used:\r\n\r\n| Text Properties | Images Properties |\r\n| --------------- | ----------------- |\r\n| text-align <br> color <br> text-decoration <br> font-family <br> font-size | height <br> width <br> border |\r\n\r\nIf you’ve used at least 5 of the properties from the checklist, you can explore some additional text and image CSS properties to add to your About Me page.",
+    "project_template_level_name": "CSDU2 About Me Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

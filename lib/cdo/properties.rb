@@ -1,15 +1,21 @@
 require 'cdo/db'
 DB = PEGASUS_DB
 
+# A wrapper class around the PEGASUS_DB[:properties] table.
 class Properties
   @@table = DB[:properties]
 
+  # @param key [String] the key to retrieve the value of.
+  # @return [JSON] the value associated with key, nil if key does not exist.
   def self.get(key)
     i = @@table.where(key: key.to_s).first
     return nil unless i
     JSON.load(StringIO.new(i[:value]))
   end
 
+  # @param key [String] the key to insert
+  # @param value [String] the string to insert as JSON
+  # @return [String] the value parameter
   def self.set(key, value)
     key = key.to_s
 
@@ -21,6 +27,12 @@ class Properties
     end
 
     value
+  end
+
+  # @param key [String] the key to delete.
+  # @return [Integer] the number of rows deleted.
+  def self.delete(key)
+    @@table.where(key: key).delete
   end
 
   def self.get_user_metrics
