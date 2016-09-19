@@ -230,4 +230,11 @@ class ApplicationController < ActionController::Base
 
     User.find(session[:pairings])
   end
+
+  # @return [Array of Integers] an array of user IDs of users paired with the
+  #   current user.
+  def pairing_user_ids
+    # TODO(asher): Determine whether we need to guard against it being nil.
+    session[:pairings].nil ? [] : session[:pairings]
+  end
 end
