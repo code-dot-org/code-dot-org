@@ -22,6 +22,7 @@ Scenario: Initial animations are usable with no animation tab
   When I run the game
   Then I do not see "Unable to find an animation" in the Game Lab console
 
+@no_circle
 Scenario: Initial animations show up in the animation tab
   Given I am on the 2nd Game Lab test level
   When I switch to the animation tab
