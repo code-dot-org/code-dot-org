@@ -186,6 +186,38 @@ export default {
     },
 
     {
+      description: "multiple calls to onRecordEvent on the same table give a warning",
+      editCode: true,
+      useFirebase: true,
+      xml:`
+        onRecordEvent("mytable", function(record, eventType) {
+          console.log(eventType + ' ' + record.id)
+        });
+        onRecordEvent("mytable", function(record, eventType) {
+          console.log(eventType + ' ' + record.id)
+        });`,
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 100, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // Verify that onRecordEvent prints a warning
+        const debugOutput = document.getElementById('debug-output');
+        const msg = 'WARNING: Line: 5: onRecordEvent was already called for table "mytable"';
+        assert.equal(String(debugOutput.textContent).includes(msg), true,
+          'correct warning message is shown');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+
+    {
       description: "Data block palette without firebase",
       editCode: true,
       xml:``,

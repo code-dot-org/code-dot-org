@@ -241,9 +241,9 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
 };
 
 /**
- * @type {{}} Map from table name to the firebase callback which is listening to that table.
+ * @type {Array.<string>} List of tables we are listening to.
  */
-const tableListeners = {};
+let listenedTables = [];
 
 /**
  * Listens to tableName for any changes to the data it contains, and calls
@@ -254,10 +254,11 @@ const tableListeners = {};
  * @param {string} tableName Table to listen to.
  * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
+ * @param {function (string)} onWarning Callback to call with an warning to show to the user.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  */
-FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeAll) {
+FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onError, includeAll) {
   if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
@@ -265,6 +266,12 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
     onError('Error listening for record events: missing required parameter "tableName"', 400);
     return;
   }
+  if (listenedTables.includes(tableName)) {
+    onWarning(`onRecordEvent was already called for table "${tableName}". To avoid 
+unexpected behavior in your program, you should only call onRecordEvent once 
+per table and use if/else statements to handle the different event types.`);
+  }
+  listenedTables.push(tableName);
 
   getLastRecordId(tableName).then(lastId => {
     const recordsRef = getRecordsRef(Applab.channelId, tableName);
@@ -291,6 +298,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
 };
 
 FirebaseStorage.resetRecordListener = function () {
+  listenedTables = [];
   getDatabase(Applab.channelId).off();
 };
 
