@@ -1656,8 +1656,9 @@ applabCommands.handleDeleteRecord = function (opts, success) {
 applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
+  apiValidateType(opts, 'onRecordEvent', 'includeAll', opts.includeAll, 'boolean', OPTIONAL);
   var onError = errorHandler.handleError.bind(this, opts);
-  Applab.storage.onRecordEvent(opts.table, opts.onRecord, onError);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, outputWarning, onError, opts.includeAll);
 };
 
 applabCommands.getUserId = function (opts) {
