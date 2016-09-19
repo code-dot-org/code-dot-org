@@ -96,6 +96,17 @@
 
 -# Don't operate if we're a LevelGroup with a /level/ URL.
 - if standalone || contained_mode || @script_level
+
+  - if data['type'] == 'EvaluationMulti'
+    - answers = answers_feedback = []
+  - else
+    - if current_user.try(:should_see_inline_answer?, @script_level)
+      - answers = data['answers'].map {|answer| answer['correct'] || false}
+    - else
+      -# For students (or teachers doing PD), set all answers, so we don't give anything away, even if viewing page source.
+      - answers = data['answers'].map {|answer| false}
+    - answers_feedback = data['answers'].map {|answer| answer['feedback']}
+
   :javascript
     window.levelGroup.levels[#{level.id}] = new Multi(
       #{level.id},
@@ -103,8 +114,8 @@
       "#{app}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
-      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map{|answer| answer['feedback']}.to_json},
+      #{answers},
+      #{answers_feedback.to_json},
       #{last_attempt.to_json},
       #{contained_mode}
     );
