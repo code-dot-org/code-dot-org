@@ -305,5 +305,6 @@
   "whenRun": "nuair a ritear é",
   "workspaceHeaderShort": "Spás oibre: ",
   "yes": "Tá",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

@@ -305,5 +305,6 @@
   "whenRun": "când rulezi",
   "workspaceHeaderShort": "Spaţiu de lucru: ",
   "yes": "Da",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

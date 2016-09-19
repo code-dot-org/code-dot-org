@@ -305,5 +305,6 @@
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
   "yes": "Yes",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

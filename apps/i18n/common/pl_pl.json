@@ -305,5 +305,6 @@
   "whenRun": "po uruchomieniu",
   "workspaceHeaderShort": "Obszar roboczy: ",
   "yes": "Tak",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

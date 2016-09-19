@@ -305,5 +305,6 @@
   "whenRun": "جب رن ہو تو",
   "workspaceHeaderShort": "ورک اسپیس ",
   "yes": "جی",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

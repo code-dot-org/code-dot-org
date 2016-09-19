@@ -305,5 +305,6 @@
   "whenRun": "実行した時",
   "workspaceHeaderShort": "ワークスペース：",
   "yes": "はい",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

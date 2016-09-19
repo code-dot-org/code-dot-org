@@ -305,5 +305,6 @@
   "whenRun": "Çalıştığı zaman",
   "workspaceHeaderShort": "Çalışma alanı: ",
   "yes": "Evet",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

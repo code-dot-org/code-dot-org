@@ -305,5 +305,6 @@
   "whenRun": "התחל ריצה",
   "workspaceHeaderShort": "סביבת העבודה: ",
   "yes": "כן",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

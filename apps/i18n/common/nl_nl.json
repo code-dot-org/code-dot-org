@@ -305,5 +305,6 @@
   "whenRun": "als gestart",
   "workspaceHeaderShort": "Werkplaats: ",
   "yes": "Ja",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }
