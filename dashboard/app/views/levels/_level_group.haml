@@ -2,7 +2,7 @@
 - data = @level.properties
 
 - content_for(:head) do
-  =javascript_include_tag 'js/levels/levelGroup'
+  %script{src: minifiable_asset_path('js/levels/levelGroup.js')}
 
 :javascript
   window.levelData = #{data.to_json};
