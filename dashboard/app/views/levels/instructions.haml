@@ -5,7 +5,7 @@
 - stages = local_assigns[:stages]
 
 - stages.each_with_index do |stage, index|
-  %h1{:style => "margin-top: 30px"}= "Stage #{(index + 1)}: #{stage.name}"
+  %h1{:style => "margin-top: 30px"}= stage.localized_title
   - stage.script_levels.each do |script_level|
     - level = script_level.level
     %div{:style => "border: 1px dashed black; padding: 10px"}
@@ -13,8 +13,8 @@
       %div= "type: #{script_level.level.class}"
       - levels = level.is_a?(LevelGroup) ? level.levels : [level]
       - levels.each do |level|
-        - if level.class == External
-          = render partial: 'levels/content', locals: {app: 'external', data: level.properties}
+        - if level.is_a?(External)
+          =render partial: 'levels/content', locals: {app: 'external', data: level.properties}
         - if level.properties['title']
           %div= "Title: #{level.properties['title']}"
         - if level.properties['markdown_instructions']
