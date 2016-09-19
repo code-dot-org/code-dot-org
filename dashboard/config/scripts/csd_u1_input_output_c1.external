@@ -17,7 +17,7 @@ Once you have the information that you need as input, decide what your app will 
 Sensor | Input Information
 ------|--------
 **Date (Clock)** | September 5
-**Location (GPS)** | A, 3
+**Location (GPS)** | N 41&deg; 15' 1" ; W 101&deg; 18' 32"
 **Light Sensor** | Very bright
 **Motion Sensor** | Not moving
 
@@ -32,7 +32,7 @@ User Prompt | User Information
 
 ## Input from the Internet
 
-????? | Information
+Request | Information
 ------|--------
 **The Date of Halloween** | October 31
   |  

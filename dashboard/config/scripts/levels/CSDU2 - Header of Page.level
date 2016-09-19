@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:08:09.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Header Area\r\n\r\nWebsites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site. \r\n\r\nTo do this you need to add the div containing the header to all the pages.  \r\n\r\nIn addition copy over any styling of the div you did - this may not work out perfectly - we will discuss in the next lesson how to improve the styling on a website!\r\n\r\n# Do This\r\n\r\nCopy the div for the header onto all the pages\r\nCopy the styling for the header div onto all the pages",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

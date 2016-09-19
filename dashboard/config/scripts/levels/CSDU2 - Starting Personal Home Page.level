@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T00:40:12.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Starting Your Home Page\r\n\r\n\r\n# Do This\r\n\r\nUsing your sketch of your personal home page as a guide. Add as many of the features you had originally wished to have on your personal home page.  Consider all the HTML elements and CSS properties you have learned so far\r\n\r\nHTML Elements\r\nDoctype\r\nHtml \r\nHead\r\nTitle\r\nP\r\nLists - ul/ol/li\r\nComments\r\nImage: Img\r\nheaders : h1 to h6\r\n\r\nCSS \r\nStyling by selector\r\nCSS Properties\r\nFont-family\r\nborder\r\nColor\r\nBackground-color\r\nText-align\r\ntext-decoration\r\nFont-size\r\nheight , width",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:30:12.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Separate Content and Style\r\n\r\nIn clean code, we want to separate the style from the content. To do this, all style should come from an externally linked style sheet. \r\n\r\nComplete this level by cutting the rules from all the index.html page into the external style sheet.\r\n\r\n# Do This\r\n\r\nAdd a link element to the “index.html” page.\r\n\r\n<pre>\r\n&lt;head&gt;\r\n\t&lt;title&gt; OSS&lt;/title&gt;\r\n    &lt;link href=\"style.css\" rel=\"stylesheet\"/&gt;\r\n    \r\n    &lt;style&gt;\r\n      img {\r\n        border: solid dodgerblue 10px;\r\n        height: 200px;\r\n      }\r\n      h1 {\r\n        color:dodgerblue\r\n      }\r\n    &lt;/style&gt;\r\n    \r\n&lt;/head&gt;\r\n</pre>\r\n\r\nNotice how the page now has 3 style rules, the body rule from “style.css” and the h1 and img rules from the <style> element within the head.\r\n\r\nMove all of the rules to the external style sheet- using the cut and paste keyboard shortcuts. \r\n\r\nTo cut and paste:\r\nSelect the style element by dragging your cursor across lines 5-13\r\n\r\nUse “Ctrl” + “X” to cut the selected text. \r\n\r\nClick inside the style.css file in the location where you wish to paste the code\r\n\r\nUse “Ctrl” + “V” to paste the code into “style.css”\r\n\r\nDelete the &lt;style&gt; tags, they aren’t needed since the entire file is a style sheet\r\n\r\nClick on houses.html, and observe how the images and h1 tags are styled. They are following the rules from style.css.",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
