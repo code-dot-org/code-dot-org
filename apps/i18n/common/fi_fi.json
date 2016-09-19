@@ -305,5 +305,6 @@
   "whenRun": "suoritettaessa",
   "workspaceHeaderShort": "Työtila: ",
   "yes": "Kyllä",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

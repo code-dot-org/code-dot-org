@@ -305,5 +305,6 @@
   "whenRun": "þegar keyrt",
   "workspaceHeaderShort": "Vinnusvæði: ",
   "yes": "Já",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

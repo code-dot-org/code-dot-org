@@ -305,5 +305,6 @@
   "whenRun": "දුවන විට",
   "workspaceHeaderShort": "වැඩ අවකාශය: ",
   "yes": "ඔව්",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

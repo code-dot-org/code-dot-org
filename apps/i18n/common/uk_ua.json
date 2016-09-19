@@ -305,5 +305,6 @@
   "whenRun": "коли гра починається",
   "workspaceHeaderShort": "Робоча область: ",
   "yes": "Так",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

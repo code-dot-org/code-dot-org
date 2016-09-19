@@ -305,5 +305,6 @@
   "whenRun": "เมื่อเรียกให้ทำงาน",
   "workspaceHeaderShort": "พื้นที่ทำงาน: ",
   "yes": "ใช่",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

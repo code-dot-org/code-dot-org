@@ -305,5 +305,6 @@
   "whenRun": "quando executar",
   "workspaceHeaderShort": "Área de trabalho: ",
   "yes": "Sim",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }
