@@ -1,9 +1,15 @@
 - content_for(:head) do
   = javascript_include_tag 'js/blockly'
   - if @level.game && @level.game.app
+    = javascript_include_tag "js/en_us/blockly_locale"
+    = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
     :javascript
         Blockly.Css.styleSheet_ = goog.cssom.addCssText(Blockly.Css.CONTENT.join("\n")).sheet
+        Blockly.assetUrl = function (path) {
+          return '/assets/' + path;
+        };
+
         levelbuilder.installBlocks("#{@level.game.app}", Blockly, {
           skin: {id: "#{@level.skin}"},
           isK1: "#{@level.try(:isK1)}",
