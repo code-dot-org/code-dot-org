@@ -137,3 +137,15 @@ function getCurrentTime() {
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
   });
 }
+
+/**
+ * @param {string} tableName
+ * @returns {Promise} Promise returning a number indicating the last_id for the
+ * current table, or 0 if no rows exist in the table or the table does not exist.
+ */
+export function getLastRecordId(tableName) {
+  const lastIdRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}/lastId`);
+  return lastIdRef.once('value').then(snapshot => {
+    return snapshot.val() || 0;
+  });
+}
