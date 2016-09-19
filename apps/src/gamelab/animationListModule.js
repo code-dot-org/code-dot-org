@@ -22,7 +22,7 @@ import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
-const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
+export const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {AnimationProps} props
 export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
 // Args: {number} index, {AnimationKey} key, {AnimationProps} props
@@ -212,6 +212,7 @@ export function setInitialAnimationList(serializedAnimationList) {
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
+    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
@@ -393,8 +394,12 @@ export function editAnimation(key, props) {
  * @returns {function}
  */
 export function deleteAnimation(key) {
-  return dispatch => {
-    dispatch(selectAnimation(null));
+  return (dispatch, getState) => {
+    const orderedKeys = getState().animationList.orderedKeys;
+    const currentSelectionIndex = orderedKeys.indexOf(key);
+    let keyToSelect = (currentSelectionIndex === 0) ? 1 : (currentSelectionIndex - 1);
+    dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
+
     dispatch({type: DELETE_ANIMATION, key});
     dashboard.project.projectChanged();
     animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {

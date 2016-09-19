@@ -41,7 +41,6 @@ dependencies:
     - 'echo "use_my_apps: true" >> locals.yml'
     - 'echo "use_my_shared_js: true" >> locals.yml'
     - 'echo "use_my_code_studio: true" >> locals.yml'
-    - 'echo "build_blockly_core: true" >> locals.yml'
     - 'echo "build_code_studio: true" >> locals.yml'
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
