@@ -60,7 +60,8 @@
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
-          - correct = answer['correct']
+          -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
+          - correct = (standalone || current_user.try(:should_see_inline_answer?, @script_level)) ? answer['correct'] : false
           - answer_class = "answerbutton " + (use_tight_layout ? "" : "btn")
           %div{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
@@ -100,10 +101,10 @@
   - if data['type'] == 'EvaluationMulti'
     - answers = answers_feedback = []
   - else
-    - if current_user.try(:should_see_inline_answer?, @script_level)
+    - if standalone || current_user.try(:should_see_inline_answer?, @script_level)
       - answers = data['answers'].map {|answer| answer['correct'] || false}
     - else
-      -# For students (or teachers doing PD), set all answers, so we don't give anything away, even if viewing page source.
+      -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
       - answers = data['answers'].map {|answer| false}
     - answers_feedback = data['answers'].map {|answer| answer['feedback']}
 
