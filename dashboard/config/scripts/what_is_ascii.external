@@ -1,0 +1,23 @@
+name 'What is ASCII?'
+markdown <<MARKDOWN
+# What is ASCII?
+
+The American Standard Code for Information Interchange (generally abbreviated ASCII) is a protocol for encoding standard text in binary. It was developed in the early 1960s to provide a standard way for computers and other devices to store and transmit text. Letters, digits, and special characters are mapped onto a set of numbers, and each of these numbers is represented in binary to encode a text. Most modern character encodings (such as Unicode) are based on ASCII, though they may support more characters.
+
+<br>
+The image below shows a fragment of the ASCII table, including the encodings of some upper and lower case letters. The full ASCII table can be found <a href="https://upload.wikimedia.org/wikipedia/commons/d/dd/ASCII-Table.svg" target=_blank>here.</a> 
+<br><br>
+
+![](https://images.code.org/ca74f11f09ed78d3da91700d337dcb74-image-1474246195695.28.43 PM.png)
+
+<br><br>
+To encode the word Computer in ASCII, we would first consult the table above and note which number each letter maps to. A capital “C” is encoded by the number 67, a lower case “o” by the number 111, and so on. Noting each number gives us the sequence: `67 111 109 112 117 116 101 114`
+
+<br>
+Next we translate each of the numbers in this sequence to its binary representation, this gives us the binary sequence: `01000011 01101111 01101101 01110000 01110101 01110100 01100101 01110010`
+
+<br>
+ASCII encoding gives us a standard way of converting text to binary and vice versa. Because of this, more advanced protocols like HTTP (web traffic) and SMTP (email) can be specified in human readable text, which is then further encoded in ASCII for transmission or storage.
+
+
+MARKDOWN

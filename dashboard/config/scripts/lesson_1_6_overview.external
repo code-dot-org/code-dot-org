@@ -1,0 +1,16 @@
+name 'Lesson 1.6 Overview'
+markdown <<MARKDOWN
+## Lesson 6: Sending Numbers
+<img src="https://images.code.org/d72b103091ceb716f114859c4a4ff0d0-image-1474226071524.png" style="float:right; margin-left:30px; width:200px">
+
+Internet Simulator | Group Problem Solving
+
+In this lesson students will return to the Internet Simulator in order to send a simple line drawing to a classmate. Students will be presented a grid on which they will draw an image (connecting 3-7 dots with straight lines). They must develop a protocol which will allow them to send any image they might create on their grids, paying particular attention to how many bits are used to represent each binary number. Students will therefore have additional practice encoding and decoding binary numbers and develop further intuitions about the properties of binary numbers in a hands-on way. The lesson concludes by testing protocols using a teacher-supplied test-image to transmit.
+
+
+<h2>
+<a href= "https://curriculum.code.org/csp/unit1/6" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+</h2>
+
+<br><br>
+MARKDOWN

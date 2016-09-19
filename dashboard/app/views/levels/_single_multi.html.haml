@@ -60,7 +60,8 @@
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
-          - correct = answer['correct']
+          -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
+          - correct = include_multi_answers?(standalone) ? answer['correct'] : false
           - answer_class = "answerbutton " + (use_tight_layout ? "" : "btn")
           %div{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
@@ -96,6 +97,17 @@
 
 -# Don't operate if we're a LevelGroup with a /level/ URL.
 - if standalone || contained_mode || @script_level
+
+  - if data['type'] == 'EvaluationMulti'
+    - answers = answers_feedback = []
+  - else
+    - if include_multi_answers?(standalone)
+      - answers = data['answers'].map {|answer| answer['correct'] || false}
+    - else
+      -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
+      - answers = data['answers'].map {|answer| false}
+    - answers_feedback = data['answers'].map {|answer| answer['feedback']}
+
   :javascript
     window.levelGroup.levels[#{level.id}] = new Multi(
       #{level.id},
@@ -103,8 +115,8 @@
       "#{app}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
-      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map{|answer| answer['feedback']}.to_json},
+      #{answers},
+      #{answers_feedback.to_json},
       #{last_attempt.to_json},
       #{contained_mode}
     );
