@@ -1,7 +1,42 @@
 title 'CSD Unit 1 - Problem Solving: Computers and Logic'
-description 'U1 of Discoveries'
+description 'Unit 1 of CS Discoveries'
 description_short 'Problem Solving'
 login_required 'true'
-hidden 'true'
 
 stage 'Intro to Problem Solving'
+level 'CSD-U1-SFLP Intro to Problem Solving'
+
+stage 'The Problem Solving Process'
+level 'CSD-U1-SFLP The Problem Solving Process'
+
+stage 'Exploring Problem Solving'
+level 'CSD-U1-SFLP Exploring Problem Solving'
+
+stage 'What is a Computer?'
+level 'CSD-U1-SFLP What is a Computer?'
+
+stage 'Representing Information'
+level 'CSD-U1-SFLP Representing Information'
+
+stage 'Processing with Bits'
+level 'CSD-U1-SFLP Processing Bits'
+level 'CSD U1 - PixFilter 1x1 intro'
+level 'CSD U1 - PixFilter Filter Intro'
+level 'CSD U1 - PixFilter Mushroom'
+level 'CSD U1 - PixFilter Filter Revisit'
+level 'CSD U1 - PixFilter Mario'
+level 'CSD U1 - PixFilter UnFilter'
+level 'CSD U1 - PixFilter FreePlay'
+
+stage 'Human vs Computer Processing'
+level 'CSD-U1-SFLP Human vs. Computer Processing'
+
+stage 'Processing with Apps'
+level 'CSD-U1-SFLP Processing with Apps'
+
+stage 'Project: Apps and Problem Solving'
+level 'CSD-U1-SFLP Project Apps and Problem Solving'
+
+
+# Graveyard
+stage 'Human vs. Computer Processing'

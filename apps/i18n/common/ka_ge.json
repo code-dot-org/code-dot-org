@@ -305,5 +305,6 @@
   "whenRun": "გაშვებისას",
   "workspaceHeaderShort": "სამუშაო სივრცე: ",
   "yes": "დიახ",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

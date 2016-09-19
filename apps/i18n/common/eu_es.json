@@ -305,5 +305,6 @@
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
   "yes": "Bai",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-17T23:07:50.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Paragraph Element\r\n\r\nIn order to style the rest of the text, you will have to put them into a paragraph element. The paragraph element is marked by opening and closing &lt;p&gt; tags.  It is always best practice to close all text in some kind of element: header, list or paragraph.\r\n\r\n# Do This\r\n\r\n* Add the opening and closing paragraph tags to the three large blocks of text describing the records\r\n* Style the paragraph element by adding a new rule that will turn all of the paragraphs a color other than black",
+    "project_template_level_name": "CSDU2 - Guinness Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

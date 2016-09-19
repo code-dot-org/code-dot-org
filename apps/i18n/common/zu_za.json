@@ -305,5 +305,6 @@
   "whenRun": "when run",
   "workspaceHeaderShort": "indawo yokusebenzela: ",
   "yes": "Yes",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

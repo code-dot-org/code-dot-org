@@ -305,5 +305,6 @@
   "whenRun": "இயங்கும் போது",
   "workspaceHeaderShort": "பணிவெளி: ",
   "yes": "ஆம்",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

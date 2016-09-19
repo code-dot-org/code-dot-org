@@ -305,5 +305,6 @@
   "whenRun": "når den køyrer",
   "workspaceHeaderShort": "Arbeidsområde: ",
   "yes": "Ja",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

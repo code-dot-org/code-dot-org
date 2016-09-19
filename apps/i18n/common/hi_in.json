@@ -305,5 +305,6 @@
   "whenRun": "जब चलाएँ",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "हाँ",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

@@ -305,5 +305,6 @@
   "whenRun": "при запуске",
   "workspaceHeaderShort": "Место сбора блоков: ",
   "yes": "Да",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

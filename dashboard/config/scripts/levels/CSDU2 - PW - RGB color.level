@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-19T15:51:49.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# RGB Color\r\n\r\nNew Content Introduced:\r\nIn these next few levels, you will style some of the elements on your portfolio’s recipe page in order to give the appearance of a notecard. \r\n\r\nIn order to get a nice “fake” notecard color, you will have out break out from the named color values given in Web App.Instead, you will be using the RGB function, which takes three values, the amount of red, green and blue you want in  your color.\r\n\r\nEach color can have a value of 0 up to 255\r\n0 - color is not present, dark\r\n255 - fully present, bright\r\nThe syntax for an rgb color is\r\n\r\nrgb(red_value, green_value, blue_value)\r\n\r\n\r\nFor more information, read the documentation and explore colors at w3 Schools.\r\n\r\n\r\n\r\n# Do This\r\n\r\n??? This could be a perdiction level or a play around level",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

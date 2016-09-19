@@ -305,5 +305,6 @@
   "whenRun": "kad izpilda",
   "workspaceHeaderShort": "Darba virsma: ",
   "yes": "Jā",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

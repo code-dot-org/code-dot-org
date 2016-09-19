@@ -305,5 +305,6 @@
   "whenRun": "kapag tumakbo",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "Oo",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

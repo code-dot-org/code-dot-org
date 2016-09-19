@@ -305,5 +305,6 @@
   "whenRun": "실행하면",
   "workspaceHeaderShort": "작업 영역: ",
   "yes": "예",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

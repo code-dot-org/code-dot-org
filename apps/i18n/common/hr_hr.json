@@ -305,5 +305,6 @@
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radna površina: ",
   "yes": "Da",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T00:58:26.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Body Element\r\n\r\nBody element\r\n\r\nbackground-color\r\n\r\n# Do This\r\n\r\n* Add body element around all the content\r\n* Use a selector for the body element to set the background color of the page to something other than white",
+    "project_template_level_name": "CSDU2 - Guinness Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

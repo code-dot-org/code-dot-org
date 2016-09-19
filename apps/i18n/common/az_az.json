@@ -305,5 +305,6 @@
   "whenRun": "icra etdikdə",
   "workspaceHeaderShort": "iş sahəsi: ",
   "yes": "Bəli",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

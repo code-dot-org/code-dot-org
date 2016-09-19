@@ -54,12 +54,15 @@ dependencies:
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "no_https_store: true" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_dashboard: \"localhost-studio.code.org:3000\"" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_pegasus: \"localhost.code.org:3000\"" >> locals.yml ;; esac'
+    # For install and build, increase default 10 minute timeout to 14 minutes (840s)
     # Run rake install
     - bundle exec rake install:
         environment:
           RAKE_VERBOSE: true
+        timeout: 840
     # Run rake build (twice in case of intermittent test failures within rake build)
-    - for i in 1 2; do bundle exec rake build && break; done
+    - for i in 1 2; do bundle exec rake build && break; done:
+        timeout: 840
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
