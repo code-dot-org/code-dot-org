@@ -21,9 +21,7 @@
     %td
       %h4 Levels by name:
       %ul
-        - levels = Level.where.not(user_id: nil).select(:id, :name)
-        - levels = Naturally.sort_by(levels, :name)
-        - levels.each do |level|
+        - Naturally.sort_by(Level.where.not(user_id: nil).select(:id, :name), :name).each do |level|
           %li.level_name
             = "'#{level.name}'"
             %a{href: edit_level_path(level)}
@@ -31,8 +29,7 @@
     %td
       %h4 Most recently updated levels:
       %ul
-        - levels = Level.where.not(user_id: nil).order('updated_at desc').select(:id, :name).to_a
-        - levels.each do |level|
+        - Level.where.not(user_id: nil).order('updated_at desc').select(:id, :name).each do |level|
           %li.level_name
             = "'#{level.name}'"
             %a{href: edit_level_path(level)}
