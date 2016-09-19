@@ -203,7 +203,7 @@ module ApplicationHelper
   end
 
   def minifiable_asset_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs or params[:pretty_sharedjs]
+    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs || params[:pretty_sharedjs]
     asset_path(path)
   end
 
