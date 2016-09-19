@@ -1,7 +1,6 @@
 import tickWrapper from '../../util/tickWrapper';
 import { TestResults } from '@cdo/apps/constants';
 
-
 export default {
   app: "applab",
   skinId: "applab",
@@ -18,15 +17,15 @@ export default {
             ' age: ' + record.age);
         });`,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 200, function () {
+        tickWrapper.runOnAppTick(Applab, 200, () => {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator(assert) {
         // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
+        const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
           "record created with id: 1 name: Alice age: 7");
         return true;
@@ -47,15 +46,15 @@ export default {
             ' age: ' + record.age);
         });`,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 200, function () {
+        tickWrapper.runOnAppTick(Applab, 200, () => {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator(assert) {
         // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
+        const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
           "record created with id: 1 name: Alice age: 7");
         return true;
@@ -83,15 +82,15 @@ export default {
           });
         });`,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, function () {
+        tickWrapper.runOnAppTick(Applab, 100, () => {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator(assert) {
         // Verify that onRecordEvent was called with the correct data
-        var debugOutput = document.getElementById('debug-output');
+        const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
           'create 2\n' +
           'update 1\n' +
@@ -122,15 +121,15 @@ export default {
           });
         });`,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, function () {
+        tickWrapper.runOnAppTick(Applab, 100, () => {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator(assert) {
         // Verify that onRecordEvent was called with the correct data
-        var debugOutput = document.getElementById('debug-output');
+        const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
           'create 1\n' +
           'create 2\n' +
@@ -164,15 +163,15 @@ export default {
           });
         });`,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, function () {
+        tickWrapper.runOnAppTick(Applab, 100, () => {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator(assert) {
         // Verify that onRecordEvent was called with the correct data
-        var debugOutput = document.getElementById('debug-output');
+        const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
           'create 2\n' +
           'update 1\n' +
@@ -196,13 +195,13 @@ export default {
         onRecordEvent("mytable", function(record, eventType) {
           console.log(eventType + ' ' + record.id)
         });`,
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, function () {
+        tickWrapper.runOnAppTick(Applab, 100, () => {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator(assert) {
         // Verify that onRecordEvent prints a warning
         const debugOutput = document.getElementById('debug-output');
         const msg = 'WARNING: Line: 5: onRecordEvent was already called for table "mytable"';
@@ -216,13 +215,12 @@ export default {
       },
     },
 
-
     {
       description: "Data block palette without firebase",
       editCode: true,
       xml:``,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         $('.droplet-palette-group-header:contains(Data)').click();
         const actualBlocks = $('.droplet-hover-div').map((i, el) => el.dataset.block).toArray();
         const expectedBlocks = [
@@ -245,7 +243,7 @@ export default {
       useFirebase: true,
       xml:``,
 
-      runBeforeClick: function (assert) {
+      runBeforeClick(assert) {
         $('.droplet-palette-group-header:contains(Data)').click();
         const actualBlocks = $('.droplet-hover-div').map((i, el) => el.dataset.block).toArray();
         const expectedBlocks = [
