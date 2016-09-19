@@ -76,7 +76,7 @@ const StageLock = React.createClass({
               onClick={this.lockStage}
               disabled={this.props.saving}
             >
-              {commonMsg.lockStage()}
+              {commonMsg.lockAssessment()}
             </button>
             <div style={styles.warning}>
               <FontAwesome icon="exclamation-triangle" style={styles.warnIcon}/>
