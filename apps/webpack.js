@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 // Our base config, on which other configs are derived
 var baseConfig = {
@@ -186,12 +187,14 @@ function create(options) {
 
   if (minify) {
     config.plugins = config.plugins.concat(
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
-      new webpack.optimize.OccurrenceOrderPlugin()
+      [
+        new webpack.optimize.UglifyJsPlugin({
+          compressor: {
+            warnings: false
+          }
+        }),
+        new UnminifiedWebpackPlugin(),
+      ]
     );
   }
 
