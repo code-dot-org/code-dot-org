@@ -1,0 +1,7 @@
+name 'Stop: External Style Sheets'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Wait for instructions from your teacher on what to do next.
+MARKDOWN
