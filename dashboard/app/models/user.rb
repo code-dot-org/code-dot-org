@@ -490,7 +490,8 @@ class User < ActiveRecord::Base
       )
   end
 
-  # cache user levels for this user by script. The cache lifetime is the current HTTP request.
+  # cache and return (from cache, if present) all user levels for this script for this user.
+  # The cache lifetime is the current HTTP request.
   def cached_user_levels_by_script(script_id)
     @user_level_cache_by_script ||= {}
     if @user_level_cache_by_script[script_id].nil?
@@ -499,6 +500,16 @@ class User < ActiveRecord::Base
         user_levels.where(script_id: script_id).index_by(&:level_id)
     end
     @user_level_cache_by_script[script_id]
+  end
+
+  # returns if all user levels for this script have been cached
+  def user_levels_cached_for_script?(script_id)
+    @user_level_cache_by_script[script_id].nil? ? false : true
+  end
+
+  # returns specified user level from cache, if present
+  def user_level_from_cache(script_id, level_id)
+    @user_level_cache_by_script.try(:[], script_id).try(:[], level_id)
   end
 
   def user_levels_by_level(script)
@@ -511,8 +522,18 @@ class User < ActiveRecord::Base
   end
 
   def user_level_for(script_level, level)
-    user_levels_for_script = cached_user_levels_by_script(script_level.script_id)
-    user_levels_for_script[level.id]
+    # see if we have cached all user levels for this script
+    if user_levels_cached_for_script?(script_level.script_id)
+      # if so, return from cache. Note that nil is a possible return value from cache
+      # (which means specified saved user level does not exist). We deliberately don't fall through
+      # to a database dip if nil.
+      return user_level_from_cache(script_level.script_id, level.id)
+    end
+
+    # Do a database query to get the user_level. We deliberately do not try to further cache this
+    # result.
+    user_levels.find_by(script_id: script_level.script_id,
+      level_id: level.id)
   end
 
   def user_level_locked?(script_level, level)
