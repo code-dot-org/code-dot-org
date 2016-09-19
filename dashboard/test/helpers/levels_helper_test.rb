@@ -443,4 +443,32 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
+
+  test 'standalone multi should include answers for student' do
+    sign_in create(:student)
+
+    @script = create(:script)
+    @level = create :multi
+    @stage = create :stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
+
+    @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
+
+    standalone = true
+    assert include_multi_answers?(standalone)
+  end
+
+  test 'non-standalone multi should not include answers for student' do
+    sign_in create(:student)
+
+    @script = create(:script)
+    @level = create :multi
+    @stage = create :stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
+
+    @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
+
+    standalone = false
+    assert_not include_multi_answers?(standalone)
+  end
 end
