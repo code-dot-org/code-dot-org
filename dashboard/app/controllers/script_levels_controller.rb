@@ -155,7 +155,7 @@ class ScriptLevelsController < ApplicationController
           name: level.name
         }
 
-        %w(title questions answers instructions markdown_instructions markdown pages).each do |key|
+        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
           level_json[key] = level.properties[key] if level.properties[key]
         end
         if level.video_key
