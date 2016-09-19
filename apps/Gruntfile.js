@@ -630,10 +630,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'prebuild',
-    'webpack:build',
+    envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
-    // Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'webpack:uglify',
     // Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     'postbuild',
