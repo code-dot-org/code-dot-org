@@ -305,5 +305,6 @@
   "whenRun": "pärast käivitamist",
   "workspaceHeaderShort": "Tööruum: ",
   "yes": "Jah",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

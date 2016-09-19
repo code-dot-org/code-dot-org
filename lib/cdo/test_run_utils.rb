@@ -42,14 +42,6 @@ module TestRunUtils
     end
   end
 
-  def self.run_blockly_core_tests
-    Dir.chdir(blockly_core_dir) do
-      with_hipchat_logging('blockly core tests') do
-        RakeUtils.system './test.sh'
-      end
-    end
-  end
-
   def self.run_dashboard_tests
     Dir.chdir(dashboard_dir) do
       with_hipchat_logging('dashboard tests') do

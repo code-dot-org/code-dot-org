@@ -305,5 +305,6 @@
   "whenRun": "kur vrapon",
   "workspaceHeaderShort": "Vendi i punës: ",
   "yes": "Po",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

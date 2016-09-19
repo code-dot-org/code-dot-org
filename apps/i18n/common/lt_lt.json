@@ -305,5 +305,6 @@
   "whenRun": "paleidus",
   "workspaceHeaderShort": "Darbo laukas: ",
   "yes": "Taip",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }
