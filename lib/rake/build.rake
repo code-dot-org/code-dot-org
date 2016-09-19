@@ -19,26 +19,6 @@ namespace :build do
     end
   end
 
-  desc 'Builds blockly core.'
-  task :blockly_core do
-    Dir.chdir(blockly_core_dir) do
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>blockly-core</b> debug...'
-      RakeUtils.system './deploy.sh', 'debug'
-
-      HipChat.log 'Building <b>blockly-core</b>...'
-      RakeUtils.system './deploy.sh'
-    end
-  end
-  task :'blockly-core' => :blockly_core
-
-  task :core_and_apps_dev do
-    Dir.chdir(apps_dir) do
-      RakeUtils.system './build_with_core.sh debug'
-    end
-  end
-
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
@@ -191,7 +171,6 @@ namespace :build do
 
   tasks = []
   tasks << :configure
-  tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
