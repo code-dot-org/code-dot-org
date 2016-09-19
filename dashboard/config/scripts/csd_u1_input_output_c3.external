@@ -17,7 +17,7 @@ Once you have the information that you need as input, decide what your app will 
 Sensor | Input Information
 ------|--------
 **Microphone**: | The environment is quiet
-**GPS Location** | C,4
+**GPS Location** | N 41&deg; 15' 1" ; W 101&deg; 18' 32"
 **Motion Sensor** | The phone is not moving
 **Camera** | The image from the camera is all black
 
@@ -29,16 +29,19 @@ User Prompt | User Information
 **Name** | Arik
 **Grade Level** | 8th grade
 **Favorite Color** | Orange
-**Outfits** |
+**Outfits** | Sunglasses, Orange T-Shirt, Red Shorts, Sandals
+ | White Polo Shirt, Khaki Slacks, Dress Shoes
+ | Knit Cap, Scarf, Red Sweater, Jeans, Boots
+ | Orange T-Shirt, Jeans, Sneakers
 **Planned Activities for the Day** |
  | Field trip to Power Station
- | Soccer Practice
+ | Drama Club
  | Dinner with Grandparents
 
 
 ## Input from the Internet
 
-????? | Information
+Request | Information
 ------|--------
 **List of Major Holidays** | 
  |New Year's Day  
@@ -81,10 +84,18 @@ User Prompt | User Information
  | Grandma's Kitchen
  | Machos Tacos
  | Pizzazilla
+**Local Weather Report** | 
+ | Sunny, 45&deg; F
 
 
 
 ## App Improvement
 
 How could you improve this app?  What new inputs would you need to do so?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In the initial app, the inputs are the weather report and the planned activities for the day.
+
+For the improved app, there is no "correct" answer, and students may choose to make any reasonable improvement.  For example, the app may remind the user to take a change of clothes for an activity later in the day.  The app could also take into account holidays, or school dress code requirements.
 MARKDOWN

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:02:20.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Link Element\r\n\r\nWhat is the feature that allows you to get between pages on a website? Navigation Bar!\r\n\r\nIn order to start adding a navigation bar we need to start adding the elements which link between pages. These are called link tags!\r\n\r\n< a href=”title.html”> Name of Link </a>\r\n\r\nAttribute - href - the location of the thing linking to\r\n\r\nTo link to the page we need to find the file path just like we had to do for images.  For example to add a link to the home page you would do\r\n\r\n<a href=”index.html”>Home Page</a>\r\n\r\n# Do This\r\n\r\nAdd four link tags to your index page one for each page you will link to as well as one for the home page\r\nIn each href put the correct file path\r\nTest it out\r\nStyle your link elements",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
