@@ -14,7 +14,7 @@ const styles = {
   row: {
     position: 'relative',
     boxSizing: 'border-box',
-    margin: '14px 0',
+    margin: '2px 0',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
@@ -23,11 +23,15 @@ const styles = {
     width: '100%',
     display: 'table'
   },
-  hiddenStage: {
+  teacherRow: {
+    margin: '14px 0'
+  },
+  hiddenRow: {
     display: 'none'
   },
-  transparentStage: {
-    opacity: 0.5,
+  teacherHiddenRow: {
+    background: 'white',
+    borderStyle: 'dashed'
   },
   focusAreaRow: {
     height: 110,
@@ -114,8 +118,9 @@ const CourseProgressRow = React.createClass({
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
           this.props.isFocusArea && styles.focusAreaRow,
-          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenStage,
-          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.transparentStage
+          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenRow,
+          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.teacherHiddenRow,
+          this.props.viewAs === ViewType.Teacher && styles.teacherRow
         ]}
       >
         {this.props.isFocusArea && [

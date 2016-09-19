@@ -305,5 +305,6 @@
   "whenRun": "όταν εκτελείται",
   "workspaceHeaderShort": "Χώρος εργασίας: ",
   "yes": "Ναι",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

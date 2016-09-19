@@ -305,5 +305,6 @@
   "whenRun": "երբ կսկսի",
   "workspaceHeaderShort": "խաղային տարածք",
   "yes": "այո",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

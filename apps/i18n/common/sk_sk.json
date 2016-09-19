@@ -305,5 +305,6 @@
   "whenRun": "pri spustení",
   "workspaceHeaderShort": "Pracovná plocha: ",
   "yes": "Áno",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

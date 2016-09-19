@@ -305,5 +305,6 @@
   "whenRun": "ketika dijalankan",
   "workspaceHeaderShort": "Area kerja: ",
   "yes": "Ya",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

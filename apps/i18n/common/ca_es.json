@@ -305,5 +305,6 @@
   "whenRun": "quan s'executa",
   "workspaceHeaderShort": "Zona de treball: ",
   "yes": "Sí",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }
