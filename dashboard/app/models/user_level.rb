@@ -33,6 +33,7 @@ class UserLevel < ActiveRecord::Base
   belongs_to :level_source
 
   before_save :handle_unsubmit
+  after_save :clear_user_level_cache
 
   validate :readonly_requires_submitted
 
@@ -95,6 +96,11 @@ class UserLevel < ActiveRecord::Base
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
+  end
+
+  # clear the per-request cache when user levels are saved or updated
+  def clear_user_level_cache
+    user.clear_user_level_cache unless user.nil
   end
 
   def has_autolocked?(stage)
