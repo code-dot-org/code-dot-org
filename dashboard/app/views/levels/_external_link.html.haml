@@ -15,7 +15,7 @@
   - if @script_level
     -# Temporary hack - explicitly include the dialog helper so this submit button will post milestone
     -# Long term plan is to have a footer section that will include these buttons
-    = javascript_include_tag 'js/levels/dialogHelper'
+    %script{src: minifiable_asset_path('js/levels/dialogHelper.js')}
     :javascript
       function getResult() {
         return {
