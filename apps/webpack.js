@@ -17,20 +17,6 @@ var baseConfig = {
       repl: path.resolve(__dirname, 'src/noop'),
     }
   },
-  externals: [
-    {
-      "johnny-five": "var JohnnyFive",
-      "playground-io": "var PlaygroundIO",
-      "chrome-serialport": "var ChromeSerialport",
-      "marked": "var marked",
-      "blockly": "this Blockly",
-      "react": "var React",
-      "react-dom": "var ReactDOM",
-      "jquery": "var $",
-      "radium": "var Radium",
-      "bindings": true
-    }
-  ],
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json'},
