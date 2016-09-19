@@ -17,7 +17,7 @@ Once you have the information that you need as input, decide what your app will 
 Sensor | Input Information
 ------|--------
 **Microphone**: | The environment is quiet
-**GPS Location** | C,4
+**GPS Location** | N 41&deg; 15' 1" ; W 101&deg; 18' 32"
 **Motion Sensor** | The phone is not moving
 **Camera** | The image from the camera is all black
 
@@ -28,14 +28,20 @@ User Prompt | User Information
 ------|--------
 **Name** | Arik
 **Grade Level** | 8th grade
-**Favorite Color** | Science
-**Outfits** |
+**Favorite Color** | Orange
+**Outfits** | Sunglasses, Orange T-Shirt, Red Shorts, Sandals
+ | White Polo Shirt, Khaki Slacks, Dress Shoes
+ | Knit Cap, Scarf, Red Sweater, Jeans, Boots
+ | Orange T-Shirt, Jeans, Sneakers
 **Planned Activities for the Day** |
+ | Field trip to Power Station
+ | Drama Club
+ | Dinner with Grandparents
 
 
 ## Input from the Internet
 
-????? | Information
+Request | Information
 ------|--------
 **List of Major Holidays** | 
  |New Year's Day  
@@ -48,6 +54,7 @@ User Prompt | User Information
  |Thanksgiving  
  |Christmas  
 **The Temperature Anywhere in the World** | 
+ |Guam: 84F  
  |Shanghai: 77F  
  |Adelaide: 54F  
  |Paris: 75F  
@@ -55,23 +62,40 @@ User Prompt | User Information
  |Buenos Aires: 52F  
  |Boston: 66F  
  |Vancouver: 63F  
- |Guam: 84F  
- | 
 **The Time Anywhere in the World** | 
- |3rd Street Elementary School: 123-123-1234  
- |Edison Middle School: 123-123-4321  
- |City High School: 123-123-7890  
-**List of Top Tourist Attractions** | Grand Bazaar, Istanbul
+ |Guam: 7:17 AM
+ |Shanghai: 5:17 AM
+ |Adelaide: 6:47 AM
+ |Paris: 11:17 PM
+ |Cairo: 11:17 PM 
+ |Buenos Aires: 6:17 PM
+ |Boston: 5:17 PM
+ |Vancouver: 2:17 PM
+**List of Top Tourist Attractions** | 
+ | Grand Bazaar, Istanbul
  | The Zócalo, Mexico City
  | Times Square, New York City
  | Meiji Jingu Shrine, Tokyo
  | Niagara Falls
  | Forbidden City, Beijing
 **List of Local Restaurants** | 
+ | Skyline Diner
+ | The Sizzling Griddle
+ | Grandma's Kitchen
+ | Machos Tacos
+ | Pizzazilla
+**Local Weather Report** | 
+ | Sunny, 45&deg; F
 
 
 
 ## App Improvement
 
 How could you improve this app?  What new inputs would you need to do so?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In the initial app, the inputs are the weather report and the planned activities for the day.
+
+For the improved app, there is no "correct" answer, and students may choose to make any reasonable improvement.  For example, the app may remind the user to take a change of clothes for an activity later in the day.  The app could also take into account holidays, or school dress code requirements.
 MARKDOWN

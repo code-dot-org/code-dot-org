@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-19T15:56:05.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Classes Across Personal Website\r\n\r\nIn the last level,  you used classes to help style common elements on the same page. In this lesson you will add classes to elements to style them across pages.\r\n\r\n# Do This\r\n\r\nAdd a class, “header” to the first div on the index.html page\r\nAdd a rule for this class in the external style sheet and style the div and it’s child elements.\r\nAdd this class to all of your portfolio pages. \r\n\r\nExtension\r\nIf you finish this level early you can continue to add and style classes of elements on your site.\r\nOptions include\r\nAdding a footer\r\nChanging Image properties\r\nChanging Text properties\r\nImproving the color",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

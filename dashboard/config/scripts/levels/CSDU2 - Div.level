@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:06:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Div Element\r\n\r\n<div> Content </div>\r\n\r\nA div is just a container for putting other elements in so they are all grouped together. \r\n\r\nAllows you to put style on a group of things\r\n\r\nGroup all of the navigation elements together and header of the page together with a div\r\n\r\nStyle it\r\n\r\n# Do This\r\n\r\nAdd two link tags to your index page one for each page you will link to\r\nIn each href put the correct file path\r\nTest it out",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
