@@ -145,17 +145,21 @@ export default {
     },
 
     {
-      description: "onRecordEvent includeAll race condition",
+      description: "additional calls to onRecordEvent do not interfere with existing ones",
       editCode: true,
       useFirebase: true,
       xml:`
-        createRecord("table1", {name:'Alice'}, function(record) {
-          createRecord("table1", {name:'Alice'}, function(record) {
-            onRecordEvent("table1", function(record, eventType) {
-              console.log('table1 ' + eventType + ' ' + record.id)
-            });
-            onRecordEvent("table2", function(record, eventType) {
-              console.log('table2 ' + eventType + ' ' + record.id)
+        createRecord("mytable", {name:'Alice'}, function(record) {
+          onRecordEvent("mytable", function(record, eventType) {
+            console.log(eventType + ' ' + record.id)
+          });
+          onRecordEvent("other table", function(record, eventType) {
+            console.log(eventType + ' ' + record.id)
+          });
+          createRecord("mytable", {name:'Alice'}, function(record) {
+            updateRecord("mytable", {id:1, name:'Bob'}, function(record, success) {
+              deleteRecord("mytable", {id:1}, function(success) {
+              });
             });
           });
         });`,
@@ -169,7 +173,10 @@ export default {
       customValidator: function (assert) {
         // Verify that onRecordEvent was called with the correct data
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, '');
+        assert.equal(debugOutput.textContent,
+          'create 2\n' +
+          'update 1\n' +
+          'delete 1');
         return true;
       },
       expected: {
