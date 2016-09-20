@@ -6,7 +6,7 @@ function update(blockSpace, container, editor) {
     // typing out the new content. Because of that and the fact that
     // this is simply an informative but not functional view, we simply
     // catch and ignore all errors.
-    var xml = $.parseXML(editor.getValue()).childNodes[0];
+    var xml = Blockly.Xml.textToDom(editor.getValue());
     blockSpace.clear();
     Blockly.Xml.domToBlockSpace(blockSpace, xml);
   } catch (e) {
@@ -20,7 +20,7 @@ function update(blockSpace, container, editor) {
 }
 
 module.exports = function (editor, container) {
-  var xml = $.parseXML(editor.getValue() || "<xml></xml>").childNodes[0];
+  var xml = Blockly.Xml.textToDom(editor.getValue() || "<xml></xml>");
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
     noScrolling: true
   });
