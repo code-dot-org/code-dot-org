@@ -128,6 +128,9 @@ const ColumnHeader = React.createClass({
     }
   },
 
+  /**
+   * @param {ColumnType} type
+   */
   coerceColumn(type) {
     this.props.coerceColumn(this.props.columnName, type);
   },

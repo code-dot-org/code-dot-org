@@ -1,6 +1,14 @@
 /** @file Utility functions for the data browser. */
 
-import { valueOr } from '../../utils';
+/**
+ * Types which a column can be coerced to.
+ * @enum {string}
+ */
+export const ColumnType = {
+  STRING: 'string',
+  NUMBER: 'number',
+  BOOLEAN: 'boolean'
+};
 
 /**
  * @param {*} val

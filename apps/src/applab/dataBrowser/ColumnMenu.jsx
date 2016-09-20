@@ -2,6 +2,7 @@
  * @overview Component for the dropdown menu and icon in the column header.
  */
 
+import { ColumnType } from './dataUtils';
 import FontAwesome from '../../templates/FontAwesome';
 import React from 'react';
 
@@ -42,17 +43,17 @@ const ColumnMenu = React.createClass({
             </a>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn('string')}>
+            <a onClick={() => this.props.coerceColumn(ColumnType.STRING)}>
               Convert to string
             </a>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn('number')}>
+            <a onClick={() => this.props.coerceColumn(ColumnType.NUMBER)}>
               Convert to number
             </a>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn('boolean')}>
+            <a onClick={() => this.props.coerceColumn(ColumnType.BOOLEAN)}>
               Convert to boolean
             </a>
           </li>
