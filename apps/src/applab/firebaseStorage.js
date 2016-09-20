@@ -254,12 +254,13 @@ let listenedTables = [];
  * @param {string} tableName Table to listen to.
  * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
+ * @param {function (string)} onWarning Callback to call with an warning to show to the user.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  * @param {boolean} includeAll Optional Whether to include child_added events for records
  * which were in the table before onRecordEvent was called. Default: false.
  */
-FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeAll) {
+FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onError, includeAll) {
   if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
@@ -268,7 +269,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
     return;
   }
   if (listenedTables.includes(tableName)) {
-    onError(`onRecordEvent was already called for table "${tableName}". To avoid ` +
+    onWarning(`onRecordEvent was already called for table "${tableName}". To avoid ` +
     'unexpected behavior in your program, you should only call onRecordEvent once ' +
     'per table, and use if/else statements to handle the different event types.');
   }
