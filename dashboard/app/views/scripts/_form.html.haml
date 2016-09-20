@@ -18,18 +18,10 @@
           = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
         .actions
           = f.submit
-    %td
-      %h4 Levels by name:
-      %ul
-        - Naturally.sort_by(Level.where.not(user_id: nil).select(:id, :name), :name).each do |level|
-          %li.level_name
-            = "'#{level.name}'"
-            %a{href: edit_level_path(level)}
-              %i.fa.fa-pencil-square-o
-    %td
+    %td(style='vertical-align: top;padding-left: 20px')
       %h4 Most recently updated levels:
       %ul
-        - Level.where.not(user_id: nil).order('updated_at desc').select(:id, :name).each do |level|
+        - Level.where.not(user_id: nil).order('updated_at desc').select(:id, :name).take(50).each do |level|
           %li.level_name
             = "'#{level.name}'"
             %a{href: edit_level_path(level)}
