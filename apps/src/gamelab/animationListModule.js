@@ -163,10 +163,28 @@ function animationPropsReducer(state, action) {
   }
 }
 
+/**
+ * Used to order numbers for sort()
+ */
 function compareNumbers(a, b) {
   return a - b;
 }
 
+/**
+ * Given a name and an animationList, determine if the name is unique.
+ */
+function isNameUnique(name, animationList) {
+  for (let animation in animationList) {
+    if (animationList[animation].name === name) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Given a baseName and a state, provide a unique name
+ */
 function generateAnimationName(baseName, getState) {
   const animationList = getState().animationList.propsByKey;
   let unavailableNumbers = [];
@@ -364,7 +382,7 @@ export function cloneAnimation(key) {
  * @returns {{type: ActionType, key: string, name: string}}
  */
 export function setAnimationName(key, name) {
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch({
       type: SET_ANIMATION_NAME,
       key,

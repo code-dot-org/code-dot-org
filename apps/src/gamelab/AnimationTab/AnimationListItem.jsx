@@ -82,6 +82,7 @@ const AnimationListItem = React.createClass({
     isSelected: React.PropTypes.bool,
     animationKey: PropTypes.AnimationKey.isRequired,
     animationProps: PropTypes.AnimationProps.isRequired,
+    animationList: PropTypes.AnimationList.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
@@ -93,11 +94,22 @@ const AnimationListItem = React.createClass({
     style: React.PropTypes.object,
   },
 
+  getInitialState: function () {
+    return {
+      frameDelay: this.props.animationProps.frameDelay,
+      name: this.props.animationProps.name,
+      isNameValid: true
+    };
+  },
+
   componentWillReceiveProps(nextProps) {
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
     this.setState({frameDelay: nextProps.animationProps.frameDelay});
+    if (this.props.isSelected && !nextProps.isSelected) {
+      this.setState({name: this.props.animationProps.name, isNameValid: true});
+    }
   },
 
   componentWillMount() {
@@ -126,8 +138,27 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationLooping(this.props.animationKey, looping);
   },
 
+  /**
+   * Given a name and an animationList, determine if the name is unique.
+   */
+  isNameUnique(name, animationList) {
+    for (let animation in animationList) {
+      if (animationList[animation].name === name) {
+        return false;
+      }
+    }
+    return true;
+  },
+
   onNameChange(event) {
-    this.props.setAnimationName(this.props.animationKey, event.target.value);
+    const newName = event.target.value;
+    this.setState({name: newName});
+    if (this.isNameUnique(newName, this.props.animationList.propsByKey)) {
+      this.setState({isNameValid: true});
+      this.props.setAnimationName(this.props.animationKey, newName);
+    } else {
+      this.setState({isNameValid: false});
+    }
   },
 
   convertFrameDelayToLockedValues(fraction) {
@@ -192,18 +223,19 @@ const AnimationListItem = React.createClass({
     const name = this.props.animationProps.name;
     var animationName;
     if (this.props.isSelected) {
+      let inValidNameStyle = this.state.isNameValid ? {} : {backgroundColor: '#ffcccc'};
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
             type="text"
-            style={styles.nameInput}
-            value={name}
+            style={[styles.nameInput, inValidNameStyle]}
+            value={this.state.name}
             onChange={this.onNameChange}
           />
         </div>
       );
     } else {
-      animationName = <div style={styles.nameLabel}>{name}</div>;
+      animationName = <div style={styles.nameLabel}>{this.state.name}</div>;
     }
 
     var tileStyle = [
