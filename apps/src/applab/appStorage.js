@@ -269,10 +269,11 @@ var recordListener = new RecordListener();
  * @param {string} tableName Table to listen to.
  * @param {function(Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
+ * @param {function(string)} onWarning. Callback to call with a warning.
  * @param {function(string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  */
-AppStorage.onRecordEvent = function (tableName, onRecord, onError) {
+AppStorage.onRecordEvent = function (tableName, onRecord, onWarning, onError) {
   if (!onError || typeof onError !== 'function') {
     throw new Error('onError is a required parameter to AppStorage.onRecordEvent');
   }

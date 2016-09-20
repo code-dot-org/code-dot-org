@@ -11,7 +11,7 @@
     SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json},
     permission: "#{@permission}"
   }
-=javascript_include_tag 'js/pd'
+%script{src: minifiable_asset_path('js/pd.js')}
 
 :javascript
   window.ReactDOM.render(window.WorkshopDashboard, document.getElementById('workshop-container'));

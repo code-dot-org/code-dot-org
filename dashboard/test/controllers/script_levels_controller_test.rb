@@ -807,7 +807,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, script_id: script_level.script, stage_position: script_level.stage, id: script_level.position, user_id: @teacher.id
 
-    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab.min')
   end
 
   test 'excludes makerlab javascript dependencies when applab level' do
