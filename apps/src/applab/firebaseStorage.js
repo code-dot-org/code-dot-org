@@ -1,6 +1,6 @@
 /* global Applab */
 
-import { castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
+import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { enforceTableCount, updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
@@ -491,16 +491,6 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
     })
     .then(recordsData => recordsRef.set(recordsData))
     .then(onSuccess, onError);
-};
-
-/**
- * Types which a column can be coerced to.
- * @enum {string}
- */
-const ColumnType = {
-  STRING: 'string',
-  NUMBER: 'number',
-  BOOLEAN: 'boolean'
 };
 
 /**
