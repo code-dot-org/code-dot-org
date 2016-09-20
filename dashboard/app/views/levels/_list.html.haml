@@ -1,5 +1,5 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder'
+  %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
 %h1 Levels
 = form_tag levels_path, method: :get do
