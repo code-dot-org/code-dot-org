@@ -1087,6 +1087,7 @@ en:
       PDSci commitment:
         CS in Science PD commitments: CS in Science PD commitments
         overview of program commitments: overview of program commitments
+      PLC- check your progress: {}
       Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
@@ -1516,6 +1517,9 @@ en:
       U4L07 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L08 - mod clock instructions:
+        description here: description here
+        title: title
       U4L08 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1616,6 +1620,15 @@ en:
         description here: description here
         title: title
       Understanding Communication Protocols: {}
+      Unit 1 Lesson 1 Overview: {}
+      Unit 1 Lesson 2 Overview: {}
+      Unit 1 Lesson 3 Overview: {}
+      Unit 1 Lesson 4 Overview: {}
+      Unit 1 Lesson 5 Overview: {}
+      Unit 1 Lesson 6 Overview: {}
+      Unit 1 Lesson 7 Overview: {}
+      Unit 1 Lesson 8 Overview: {}
+      Unit 1 Lesson 9 Overview: {}
       Unit 1 Overview: {}
       Unit 1 Teaching Philosophy and Commentary: {}
       Unit 2 Lesson 1 Overview: {}
@@ -1723,6 +1736,9 @@ en:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
       grade1_unplugged_behavingInLab: {}
+      grade2_maze_intro1:
+        description here: description here
+        title: title
       grade2_unplugged_bigEvent: {}
       grade2_unplugged_buildAblock:
         Build a Block: Build a Block
