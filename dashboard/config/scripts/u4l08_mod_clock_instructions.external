@@ -1,0 +1,54 @@
+name 'U4L08 - mod clock instructions'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+
+# Clock Arithmetic (Modulo) 
+
+“Clock Arithmetic” (officially known as “modular arithmetic”) is a one-way function because you can’t tell what the input number was, just by looking at the clock face.
+
+For example: If it's 2:00 right now, and at some point in the future the clock reads 3:00, it could mean that 1 hour has passed, or 13 hours, or 25 hours, or 37 hours, and so on.  
+
+So if you use a clock for arithmetic, and you want to add some number of hours to the current hour, the result will always be some value between 1 and 12, no matter how big or small the number you put into the clock was.  
+
+We can count this way with any size “clock” and any number.
+
+# Do this: Experiment with the “Modulo Clock”
+
+* First thing to do is to get familiar with the modulo operation by experimenting with the “Modulo Clock”.  The widget helps you visualize the result of modular arithmetic and experiment with different clock sizes and numbers.
+
+* Click continue to see the Modulo clock.
+
+* Experiment with different numbers and clock sizes.
+
+--- Instructions to throw up in front of clock -----
+
+You get to set two values.  Try the following for each:
+
+| "Enter a number" | "pick a clock size" |
+|:-----:|:-----:|
+| 45 | 311 |
+| 300 | 311 |
+| 356 | 311 |
+| Any number smaller than clock size| Any Number |
+| Some number larger than clock size | Any Number |
+| Some number smaller than clock size| A *huge* number |
+| Some number larger than clock size | A *huge* number |
+
+**Questions**
+* What’s going on?
+* Can you predict or calculate the result?
+	* 24 MOD 817234
+    * 24 MOD 23
+    * 15 MOD 4
+
+
+--- Move to after - depends on instructions I can put up ----
+
+
+What’s the point? Modulo as a One-Way Function
+
+
+Using the modulo operation as a one-way function is one of the key ingredients behind the “real math” that makes public key cryptography possible. So now, instead of using cups and beans, let’s see how we can use modulo along with multiplication to make public and private keys that are difficult to crack, and have Bob and Alice send secret messages to each other over public channels.
+MARKDOWN
