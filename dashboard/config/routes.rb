@@ -318,7 +318,7 @@ Dashboard::Application.routes.draw do
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
 
-        get :workshop_survey, action: 'aggregate_workshop_score', controller: 'workshop_survey_report'
+        get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
       end
       resources :district_report, only: :index
       resources :workshop_organizer_report, only: :index

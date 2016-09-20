@@ -22,7 +22,7 @@ class Api::V1::Pd::WorkshopSurveyReportController < Api::V1::Pd::ReportControlle
   ]
 
   # GET /api/v1/pd/workshops/:id/aggregate_workshop_score
-  def aggregate_workshop_score
+  def workshop_survey_report
     survey_report = Hash.new
 
     survey_report[:this_workshop] = get_score_for_workshops([@workshop])
