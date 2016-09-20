@@ -47,11 +47,14 @@
           as
           = link_to build_script_level_path(script_level), build_script_level_path(script_level)
     %br/
+    .project_admin
+- if current_user && current_user.admin?
+  = render layout: 'shared/extra_links' do
     %div.admin-abuse{ :style => "display: none" }
       Abuse score:
       %span.admin-abuse-score
       = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-    .project_admin
+
 :javascript
   window.levelbuilder.ajaxSubmit('.clone_level');
   $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
