@@ -167,12 +167,12 @@ const DataTable = React.createClass({
     });
   },
 
-  getColumnNames() {
+  getColumnNames(records, columns) {
     // Make sure 'id' is the first column.
     let columnNames = ['id'];
 
-    Object.keys(this.props.tableRecords).forEach(id => {
-      const record = JSON.parse(this.props.tableRecords[id]);
+    Object.keys(records).forEach(id => {
+      const record = JSON.parse(records[id]);
       Object.keys(record).forEach(columnName => {
         if (columnNames.indexOf(columnName) === -1) {
           columnNames.push(columnName);
@@ -180,7 +180,7 @@ const DataTable = React.createClass({
       });
     });
 
-    this.state.newColumns.forEach(columnName => {
+    columns.forEach(columnName => {
       if (columnNames.indexOf(columnName) === -1) {
         columnNames.push(columnName);
       }
@@ -190,7 +190,7 @@ const DataTable = React.createClass({
   },
 
   getNextColumnName() {
-    const names = this.getColumnNames();
+    const names = this.getColumnNames(this.props.tableRecords, this.state.newColumns);
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -219,7 +219,7 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    const newColumns = this.getColumnNames();
+    const newColumns = this.getColumnNames(this.props.tableRecords, this.state.newColumns);
     FirebaseStorage.clearTable(
       this.props.tableName,
       () => this.setState({newColumns, editingColumn: null}),
@@ -265,7 +265,7 @@ const DataTable = React.createClass({
   },
 
   render() {
-    let columnNames = this.getColumnNames();
+    let columnNames = this.getColumnNames(this.props.tableRecords, this.state.newColumns);
     let editingColumn = this.state.editingColumn;
 
     // Always show at least one column.
