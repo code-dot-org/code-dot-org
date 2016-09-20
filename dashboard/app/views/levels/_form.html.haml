@@ -1,5 +1,5 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder'
+  %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
 #validation-error.validation-error{style: 'background-color: yellow'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|

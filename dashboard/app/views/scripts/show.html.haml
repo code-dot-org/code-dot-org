@@ -1,5 +1,5 @@
 - content_for(:head) do
-  =javascript_include_tag 'js/plc'
+  %script{src: minifiable_asset_path('js/plc.js')}
 
 = render partial: 'shared/check_admin'
 #landingpage

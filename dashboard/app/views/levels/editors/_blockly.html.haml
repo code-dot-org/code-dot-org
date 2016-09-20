@@ -1,3 +1,20 @@
+- content_for(:head) do
+  = javascript_include_tag 'js/blockly'
+  - if @level.game && @level.game.app
+    = javascript_include_tag "js/en_us/blockly_locale"
+    = javascript_include_tag "js/en_us/common_locale"
+    = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
+    :javascript
+        Blockly.Css.styleSheet_ = goog.cssom.addCssText(Blockly.Css.CONTENT.join("\n")).sheet
+        Blockly.assetUrl = function (path) {
+          return '/assets/' + path;
+        };
+
+        levelbuilder.installBlocks("#{@level.game.app}", Blockly, {
+          skin: {id: "#{@level.skin}"},
+          isK1: "#{@level.try(:isK1)}",
+        });
+
 .field
   = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
@@ -57,39 +74,72 @@
 - else
   .field
     = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-    = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+    .row
+      .span8
+        = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+      #toolbox-preview.span4
     :javascript
-      levelbuilder.initializeCodeMirror('level_toolbox_blocks', 'xml');
+      var toolboxEditor = levelbuilder.initializeCodeMirror('level_toolbox_blocks', 'xml');
+      levelbuilder.initializeBlockPreview(toolboxEditor, $('#toolbox-preview').get(0));
+
 .field
   - if @level.game.uses_droplet?
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
+  .row
+    .span8
+      = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
+    #start-preview.span4
   :javascript
-    levelbuilder.initializeCodeMirror('level_start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    var startEditor = levelbuilder.initializeCodeMirror('level_start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    if (#{!@level.game.uses_droplet?}) {
+      levelbuilder.initializeBlockPreview(startEditor, $('#start-preview').get(0));
+    }
+
 .field
   - if @level.game.uses_droplet?
     = f.label :required_blocks, 'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-  = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
+  .row
+    .span8
+      = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
+    #required-preview.span4
   :javascript
-    levelbuilder.initializeCodeMirror('level_required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    var requiredEditor = levelbuilder.initializeCodeMirror('level_required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    if (#{!@level.game.uses_droplet?}) {
+      levelbuilder.initializeBlockPreview(requiredEditor, $('#required-preview').get(0));
+    }
+
 .field
   - if @level.game.uses_droplet?
     = f.label :recommended_blocks, 'Edit Recommended Blocks'
   - else
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
-  = f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
+  .row
+    .span8
+      = f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
+    #recommended-preview.span4
   :javascript
-    levelbuilder.initializeCodeMirror('level_recommended_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    var recommendedEditor = levelbuilder.initializeCodeMirror('level_recommended_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    if (#{!@level.game.uses_droplet?}) {
+      levelbuilder.initializeBlockPreview(recommendedEditor, $('#recommended-preview').get(0));
+    }
+
 - unless @level.game.uses_droplet?
   .field
     = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-    = f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
+  .row
+    .span8
+      = f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
+    #initialization-preview.span4
     :javascript
-      levelbuilder.initializeCodeMirror('level_initialization_blocks', 'xml');
+      var initializationEditor = levelbuilder.initializeCodeMirror('level_initialization_blocks', 'xml');
+      if (#{!@level.game.uses_droplet?}) {
+        levelbuilder.initializeBlockPreview(initializationEditor, $('#initialization-preview').get(0));
+      }
+
 .field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
@@ -145,9 +195,15 @@
       = f.label :solution_blocks, 'Edit Solution Blocks'
     - else
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-    = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
+    .row
+      .span8
+        = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
+      #solution-preview.span4
     :javascript
-      levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+      var solutionEditor = levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+      if (#{!@level.game.uses_droplet?}) {
+        levelbuilder.initializeBlockPreview(solutionEditor, $('#solution-preview').get(0));
+      }
 -if @level.game.uses_droplet?
   .field
     = f.label :palette_category_at_start
