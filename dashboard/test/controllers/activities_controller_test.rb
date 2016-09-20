@@ -384,36 +384,42 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone should save to gallery when passing an impressive level" do
-    [true, false].each do |async_activity_writes|
-      Gatekeeper.set('async_activity_writes', value: async_activity_writes)
+    _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
+      async_activity_writes: false
+    )
+  end
 
-      # do all the logging
-      @controller.expects :log_milestone
-      @controller.expects :slog
+  test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
+    _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
+      async_activity_writes: true
+    )
+  end
 
-      expect_s3_upload
+  def _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(async_activity_writes:)
+    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
-      assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(
-            save_to_gallery: 'true', image: Base64.encode64(@good_image)
-          )
-          @fake_queue.handle_pending_messages if async_activity_writes
-        end
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    expect_s3_upload
+
+    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
+      assert_difference('@user.reload.total_lines', 20) do # update total lines
+        post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@good_image))
+        @fake_queue.handle_pending_messages if async_activity_writes
       end
-
-      assert_response :success
-
-      expected_response = build_expected_response(
-        level_source: "http://test.host/c/#{assigns(:level_source).id}"
-      )
-      assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-      # created gallery activity and activity for user
-      assert_equal @user, Activity.last.user
-      assert_equal @user, GalleryActivity.last.user
-      assert_equal Activity.last, GalleryActivity.last.activity
     end
+
+    assert_response :success
+
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
+    # csoreated gallery activity and activity for user
+    assert_equal @user, Activity.last.user
+    assert_equal @user, GalleryActivity.last.user
+    assert_equal Activity.last, GalleryActivity.last.activity
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
