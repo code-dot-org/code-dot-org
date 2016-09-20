@@ -11,11 +11,10 @@ import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-import { changeView } from '../redux/data';
+import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../color';
 import { connect } from 'react-redux';
-import applabMsg from '@cdo/applab/locale';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -64,6 +63,7 @@ const DataTable = React.createClass({
     view: React.PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
+    onShowWarning: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired
   },
 
@@ -231,6 +231,29 @@ const DataTable = React.createClass({
     this.setState({showDebugView});
   },
 
+  coerceColumn(columnName, columnType) {
+    this.setState({
+      editingColumn: null,
+      pendingColumn: columnName,
+    });
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      FirebaseStorage.coerceColumn(
+        this.props.tableName,
+        columnName,
+        columnType,
+        () => this.resetColumnState(this.state.newColumns),
+        msg => {
+          if (String(msg).includes('Not all values in column')) {
+            this.props.onShowWarning(msg);
+          } else {
+            console.warn(msg);
+          }
+        }
+      );
+    }, 0);
+  },
+
   getTableJson() {
     const records = [];
     // Cast Array to Object
@@ -304,6 +327,7 @@ const DataTable = React.createClass({
                 columnNames.map(columnName => (
                   <ColumnHeader
                     key={columnName}
+                    coerceColumn={this.coerceColumn}
                     columnName={columnName}
                     columnNames={columnNames}
                     deleteColumn={this.deleteColumn}
@@ -362,6 +386,9 @@ export default connect(state => ({
   tableRecords: state.data.tableRecords || {},
   tableName: state.data.tableName || ''
 }), dispatch => ({
+  onShowWarning(warningMsg, warningTitle) {
+    dispatch(showWarning(warningMsg, warningTitle));
+  },
   onViewChange(view) {
     dispatch(changeView(view));
   }
