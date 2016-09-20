@@ -127,8 +127,9 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
-  # Provides a JSON summary of a particular stage
-  def summary
+  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # build lesson plans
+  def summary_for_lesson_plans
     require_levelbuilder_mode
     authorize! :read, ScriptLevel
 
@@ -140,32 +141,7 @@ class ScriptLevelsController < ApplicationController
       stage = script.stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
     end
 
-    render json: {
-      stageName: stage.name,
-      lockable: stage.lockable? ? true : false,
-      levels: stage.script_levels.map do |script_level|
-        level = script_level.level
-        level_json = {
-          id: script_level.id,
-          position: script_level.position,
-          named_level: script_level.named_level?,
-          path: build_script_level_path(script_level),
-          level_id: level.id,
-          type: level.class.to_s,
-          name: level.name
-        }
-
-        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
-          level_json[key] = level.properties[key] if level.properties[key]
-        end
-        if level.video_key
-          level_json[:video_youtube] = level.specified_autoplay_video.youtube_url
-          level_json[:video_download] = level.specified_autoplay_video.download
-        end
-
-        level_json
-      end
-    }
+    render json: stage.summary_for_lesson_plans
   end
 
   private
