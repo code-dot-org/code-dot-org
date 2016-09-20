@@ -141,7 +141,7 @@ Dashboard::Application.routes.draw do
     get 'hidden_stages', to: 'script_levels#hidden'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
-    get 'instructions', to: 'script_levels#instructions'
+    get 'instructions', to: 'scripts#instructions'
 
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
