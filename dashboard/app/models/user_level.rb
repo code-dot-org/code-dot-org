@@ -109,12 +109,14 @@ class UserLevel < ActiveRecord::Base
   end
 
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
-    user_level = UserLevel.find_by(user_id: user_id, level_id: level_id, script_id: script_id)
+    user_level = UserLevel.find_or_initialize_by(
+      user_id: user_id,
+      level_id: level_id,
+      script_id: script_id
+    )
 
     # no need to create a level if it's just going to be locked
-    return if !user_level && locked
-
-    user_level ||= UserLevel.create(user_id: user_id, level_id: level_id, script_id: script_id)
+    return if !user_level.persisted? && locked
 
     user_level.update!(
       submitted: locked || readonly_answers,
