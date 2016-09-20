@@ -2,6 +2,7 @@
  * @overview Component for adding a new column to the specified table.
  */
 
+import ColumnMenu from './ColumnMenu';
 import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
@@ -86,6 +87,10 @@ const ColumnHeader = React.createClass({
     this.setState({isDialogOpen: false});
   },
 
+  handleDelete() {
+    this.setState({isDialogOpen: true});
+  },
+
   handleConfirmDelete() {
     this.setState({isDialogOpen: false});
     this.props.deleteColumn(this.props.columnName);
@@ -133,47 +138,6 @@ const ColumnHeader = React.createClass({
     return this.props.columnName === newName || !this.props.columnNames.includes(newName);
   },
 
-  getDropdownMenu(isEditable) {
-    const menuStyle = {
-      visibility: isEditable ? null : 'hidden',
-    };
-    /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
-    return (
-      <span className="dropdown pull-right" style={menuStyle}>
-        <a className="dropdown-toggle" data-toggle="dropdown">
-          <FontAwesome icon="cog" style={styles.icon}/>
-        </a>
-        <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
-          <li style={{cursor: 'pointer'}}>
-            <a onClick={this.handleRename}>
-              Rename
-            </a>
-          </li>
-          <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.setState({isDialogOpen: true})}>
-              Delete
-            </a>
-          </li>
-          <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.coerceColumn('string')}>
-              Convert to string
-            </a>
-          </li>
-          <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.coerceColumn('number')}>
-              Convert to number
-            </a>
-          </li>
-          <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.coerceColumn('boolean')}>
-              Convert to boolean
-            </a>
-          </li>
-        </ul>
-      </span>
-    );
-  },
-
   render() {
     const containerStyle = [styles.container, {
       display: this.props.isEditing ? 'none' : null,
@@ -193,7 +157,12 @@ const ColumnHeader = React.createClass({
             {
               this.props.isPending ?
                 <FontAwesome icon="spinner" className="fa-spin" style={styles.icon}/> :
-                this.getDropdownMenu(this.props.isEditable)
+                <ColumnMenu
+                  coerceColumn={this.coerceColumn}
+                  handleDelete={this.handleDelete}
+                  handleRename={this.handleRename}
+                  isEditable={this.props.isEditable}
+                />
             }
 
           </div>
