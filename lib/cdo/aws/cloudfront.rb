@@ -264,7 +264,8 @@ module AWS
             quantity: 0 # required
           },
         },
-        web_acl_id: ''
+        web_acl_id: '',
+        http_version: 'http2'
       }.tap do |cf|
         cf[:caller_reference] = reference || Digest::MD5.hexdigest(Marshal.dump(config)) # required
       end
@@ -367,6 +368,9 @@ module AWS
           headers: {
             quantity: headers.length, # required
             items: headers.empty? ? nil : headers,
+          },
+          query_string_cache_keys: {
+            quantity: 0
           },
         },
         trusted_signers: {# required

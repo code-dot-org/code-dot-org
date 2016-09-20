@@ -1,5 +1,57 @@
 import { expect } from '../../util/configuredChai';
-import { castValue, displayableValue, editableValue } from '@cdo/apps/applab/dataBrowser/dataUtils';
+import { castValue, displayableValue, editableValue, isNumber, isBoolean, toBoolean } from '@cdo/apps/applab/dataBrowser/dataUtils';
+
+describe('isNumber', () => {
+  it('detects valid numerical values', () => {
+    expect(isNumber(1)).to.be.true;
+    expect(isNumber('2')).to.be.true;
+    expect(isNumber(0.3)).to.be.true;
+    expect(isNumber('0.4')).to.be.true;
+    expect(isNumber(1e5)).to.be.true;
+    expect(isNumber('1e6')).to.be.true;
+  });
+  it('detects invalid numerical values', () => {
+    expect(isNumber('123abc')).to.be.false;
+    expect(isNumber('foo')).to.be.false;
+    expect(isNumber(null)).to.be.false;
+    expect(isNumber(false)).to.be.false;
+    expect(isNumber(undefined)).to.be.false;
+    expect(isNumber(NaN)).to.be.false;
+    expect(isNumber('NaN')).to.be.false;
+  });
+});
+
+describe('isBoolean', () => {
+  it('detects valid boolean values', () => {
+    expect(isBoolean(false)).to.be.true;
+    expect(isBoolean(true)).to.be.true;
+    expect(isBoolean('false')).to.be.true;
+    expect(isBoolean('true')).to.be.true;
+  });
+  it('detects invalid boolean values', () => {
+    expect(isBoolean(0)).to.be.false;
+    expect(isBoolean(null)).to.be.false;
+    expect(isBoolean('')).to.be.false;
+    expect(isBoolean('foo')).to.be.false;
+  });
+});
+
+describe('toBoolean', () => {
+  it('recognizes valid boolean values', () => {
+    expect(toBoolean(false)).to.be.false;
+    expect(toBoolean(true)).to.be.true;
+    expect(toBoolean('false')).to.be.false;
+    expect(toBoolean('true')).to.be.true;
+  });
+  it('throws on invalid boolean values', done => {
+    try {
+      toBoolean('foo');
+    } catch (e) {
+      expect(e.message).to.contain('Unable to convert to boolean');
+      done();
+    }
+  });
+});
 
 describe('castValue', () => {
   it('converts boolean strings to booleans', () => {
