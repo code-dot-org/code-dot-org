@@ -1,6 +1,6 @@
 /* global Applab */
 
-import { castValue } from './dataBrowser/dataUtils';
+import { castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { enforceTableCount, updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
@@ -491,6 +491,76 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
     })
     .then(recordsData => recordsRef.set(recordsData))
     .then(onSuccess, onError);
+};
+
+/**
+ * Types which a column can be coerced to.
+ * @enum {string}
+ */
+const ColumnType = {
+  STRING: 'string',
+  NUMBER: 'number',
+  BOOLEAN: 'boolean'
+};
+
+/**
+ * Modifies the record[columnName] to type columnType, if the field can be converted
+ * to that type. Returns whether or not the field was converted.
+ * @param {Object} records Javascript object representing the record.
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @returns {boolean} Whether the field was converted.
+ */
+
+function coerceRecord(record, columnName, columnType) {
+  const value = record[columnName];
+  if (typeof value === 'undefined') {
+    return true;
+  }
+  switch (columnType) {
+    case (ColumnType.STRING):
+      record[columnName] = String(value);
+      return true;
+    case (ColumnType.NUMBER):
+      if (isNumber(value)) {
+        record[columnName] = parseFloat(value);
+        return true;
+      }
+      return false;
+    case (ColumnType.BOOLEAN):
+      if (isBoolean(value)) {
+        record[columnName] = toBoolean(value);
+        return true;
+      }
+      return false;
+    default:
+      throw new Error(`Unexpected column type ${columnType}`);
+  }
+}
+
+/**
+ *
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @param onSuccess
+ * @param onError
+ */
+FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {
+  const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value').then(snapshot => {
+    const recordsData = snapshot.val() || {};
+    let allConverted = true;
+    Object.keys(recordsData).forEach(recordId => {
+      const record = JSON.parse(recordsData[recordId]);
+      allConverted = allConverted && coerceRecord(record, columnName, columnType);
+      recordsData[recordId] = JSON.stringify(record);
+    });
+    if (!allConverted) {
+      onError(`Not all values in column "${columnName}" could be converted to type "${columnType}".`);
+    }
+    return recordsRef.set(recordsData);
+  }).then(onSuccess, onError);
 };
 
 /**

@@ -321,6 +321,163 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  describe('coerceColumn', () => {
+    it('converts anything to a string', done => {
+      FirebaseStorage.createRecord('mytable', {foo: 1}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "one"}, () => {
+          FirebaseStorage.createRecord('mytable', {foo: "1"}, () => {
+            FirebaseStorage.createRecord('mytable', {foo: null}, () => {
+              FirebaseStorage.createRecord('mytable', {foo: undefined}, () => {
+                FirebaseStorage.createRecord('mytable', {foo: false}, () => {
+                  doCoerce();
+                }, error => {throw error;});
+              }, error => {throw error;});
+            }, error => {throw error;});
+          }, error => {throw error;});
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'string', validate, error => {throw error;});
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":"1","id":1}',
+            2:'{"foo":"one","id":2}',
+            3:'{"foo":"1","id":3}',
+            4:'{"foo":"null","id":4}',
+            // undefined fields are not included in the record during creation and should
+            // not get converted to "undefined".
+            5:'{"id":5}',
+            6:'{"foo":"false","id":6}',
+          });
+          done();
+        });
+      }
+    });
+
+    it('converts valid booleans', done => {
+      FirebaseStorage.createRecord('mytable', {foo: true}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "true"}, () => {
+          FirebaseStorage.createRecord('mytable', {foo: false}, () => {
+            FirebaseStorage.createRecord('mytable', {foo: "false"}, () => {
+                  doCoerce();
+            }, error => {throw error;});
+          }, error => {throw error;});
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'boolean', validate, error => {throw error;});
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":true,"id":1}',
+            2:'{"foo":true,"id":2}',
+            3:'{"foo":false,"id":3}',
+            4:'{"foo":false,"id":4}',
+          });
+          done();
+        });
+      }
+    });
+
+    it('converts valid numbers', done => {
+      FirebaseStorage.createRecord('mytable', {foo: 1}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "2"}, () => {
+          FirebaseStorage.createRecord('mytable', {foo: "1e3"}, () => {
+            FirebaseStorage.createRecord('mytable', {foo: "0.4"}, () => {
+              doCoerce();
+            }, error => {throw error;});
+          }, error => {throw error;});
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'number', validate, error => {throw error;});
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":1,"id":1}',
+            2:'{"foo":2,"id":2}',
+            3:'{"foo":1000,"id":3}',
+            4:'{"foo":0.4,"id":4}',
+          });
+          done();
+        });
+      }
+    });
+
+    it('warns on invalid booleans', done => {
+      FirebaseStorage.createRecord('mytable', {foo: true}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "bar"}, () => {
+          doCoerce();
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'boolean', validate, validateError);
+      }
+
+      let onErrorCalled = false;
+      function validateError(msg) {
+        expect(msg).to.equal('Not all values in column "foo" could be converted to type "boolean".');
+        onErrorCalled = true;
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":true,"id":1}',
+            2:'{"foo":"bar","id":2}',
+          });
+          expect(onErrorCalled).to.be.true;
+          done();
+        });
+      }
+    });
+
+    it('warns on invalid numbers', done => {
+      FirebaseStorage.createRecord('mytable', {foo: 1}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "2xyz"}, () => {
+          doCoerce();
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'number', validate, validateError);
+      }
+
+      let onErrorCalled = false;
+      function validateError(msg) {
+        expect(msg).to.equal('Not all values in column "foo" could be converted to type "number".');
+        onErrorCalled = true;
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":1,"id":1}',
+            2:'{"foo":"2xyz","id":2}',
+          });
+          expect(onErrorCalled).to.be.true;
+          done();
+        });
+      }
+    });
+  });
+
   describe('populateTable', () => {
     const EXISTING_TABLE_DATA = {
       cities: {
