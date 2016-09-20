@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
@@ -202,7 +203,7 @@ module ApplicationHelper
   end
 
   def minifiable_asset_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
+    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs || params[:pretty_sharedjs]
     asset_path(path)
   end
 
