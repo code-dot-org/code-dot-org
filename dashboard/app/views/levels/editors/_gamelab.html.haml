@@ -5,7 +5,7 @@
       padding: 0.2em;
       font-weight: bold;
     }
-  = javascript_include_tag 'js/levelbuilder_gamelab'
+  %script{src: minifiable_asset_path('js/levelbuilder_gamelab.js')}
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
   = boolean_check_box f, :text_mode_at_start
