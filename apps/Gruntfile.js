@@ -344,8 +344,8 @@ module.exports = function (grunt) {
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
     return [app, './src/' + app + '/main.js'];
-  }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
-            [['applab-api', './src/applab/api-entry.js']]
+  }).concat(
+    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
   var codeStudioEntries = {
     'code-studio': './src/code-studio/code-studio.js',
