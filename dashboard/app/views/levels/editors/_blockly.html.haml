@@ -133,7 +133,7 @@
   .row
     .span8
       = f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
-    #initialization-preview.span34
+    #initialization-preview.span4
     :javascript
       var initializationEditor = levelbuilder.initializeCodeMirror('level_initialization_blocks', 'xml');
       if (#{!@level.game.uses_droplet?}) {
@@ -195,9 +195,15 @@
       = f.label :solution_blocks, 'Edit Solution Blocks'
     - else
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-    = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
+    .row
+      .span8
+        = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
+      #solution-preview.span4
     :javascript
-      levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+      var solutionEditor = levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+      if (#{!@level.game.uses_droplet?}) {
+        levelbuilder.initializeBlockPreview(solutionEditor, $('#solution-preview').get(0));
+      }
 -if @level.game.uses_droplet?
   .field
     = f.label :palette_category_at_start
