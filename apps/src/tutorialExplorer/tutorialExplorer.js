@@ -77,7 +77,6 @@ const TutorialExplorer = React.createClass({
         )}
 
         <TutorialSet
-          style={{display: "none"}}
           tutorials={this.props.tutorials}
           filters={this.state.filters}
           locale={this.props.locale}
