@@ -42,7 +42,7 @@ class UserScript < ActiveRecord::Base
       ScriptCompletion.all.
         select{ |sc| sc.script_name == script.name }.
         map(&:script_levels).flatten.
-        each{ |sl| user.track_level_progress_async(script_level: sl, new_result: ActivityConstants::BEST_PASS_RESULT, submitted: false, level_source_id: nil, pairings: nil) }
+        each{ |sl| user.track_level_progress_async(script_level: sl, new_result: ActivityConstants::BEST_PASS_RESULT, submitted: false, level_source_id: nil, pairing_user_ids: nil) }
     end
   end
 end

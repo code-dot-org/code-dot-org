@@ -160,7 +160,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == "true",
         level_source_id: @level_source.try(:id),
         level: @level,
-        pairings: pairings
+        pairing_user_ids: pairing_user_ids
       )
     end
 
