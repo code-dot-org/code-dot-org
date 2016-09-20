@@ -370,6 +370,34 @@ module.exports = function (grunt) {
     'initApp/initApp': './src/code-studio/initApp/initApp.js'
   };
 
+  var otherEntries = {
+    plc: './src/code-studio/plc/plc.js',
+
+
+    // Build embedVideo.js in its own step (skipping factor-bundle) so that
+    // we don't have to include the large code-studio-common file in the
+    // embedded video page, keeping it fairly lightweight.
+    // (I wonder how much more we could slim it down by removing jQuery!)
+    // @see embed.html.haml
+    embedVideo: './src/code-studio/embedVideo.js',
+
+    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in an iframe.
+    embedBlocks: './src/code-studio/embedBlocks.js',
+
+    // tutorialExplorer for code.org/learn 2016 edition.
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
+
+    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
+
+    pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
+
+    publicKeyCryptography: './src/publicKeyCryptography/main.js',
+
+    brambleHost: './src/weblab/brambleHost.js',
+  };
+
   // Create a config for each of our bundles
   function createConfig(options) {
     var minify = options.minify;
@@ -381,33 +409,7 @@ module.exports = function (grunt) {
         {},
         appsEntries,
         codeStudioEntries,
-        {
-          plc: './src/code-studio/plc/plc.js',
-
-
-          // Build embedVideo.js in its own step (skipping factor-bundle) so that
-          // we don't have to include the large code-studio-common file in the
-          // embedded video page, keeping it fairly lightweight.
-          // (I wonder how much more we could slim it down by removing jQuery!)
-          // @see embed.html.haml
-          embedVideo: './src/code-studio/embedVideo.js',
-
-          // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-          // in a bundle to minimize the amound of stuff we need when loading blocks
-          // in an iframe.
-          embedBlocks: './src/code-studio/embedBlocks.js',
-
-          // tutorialExplorer for code.org/learn 2016 edition.
-          tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
-          makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
-
-          pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
-
-          publicKeyCryptography: './src/publicKeyCryptography/main.js',
-
-          brambleHost: './src/weblab/brambleHost.js',
-        }
+        otherEntries
       ),
       externals: [
         {
