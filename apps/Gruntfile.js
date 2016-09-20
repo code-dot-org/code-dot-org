@@ -186,12 +186,8 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/droplet',
-          src: ['droplet-full' + dotMinIfNotDev + '.js'],
+          src: ['droplet-full*.js'],
           dest: 'build/package/js/droplet/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
@@ -202,32 +198,20 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/tooltipster',
-          src: ['jquery.tooltipster' + dotMinIfNotDev + '.js'],
+          src: ['*.js'],
           dest: 'build/package/js/tooltipster/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
           cwd: 'lib/marked',
-          src: ['marked' + dotMinIfNotDev + '.js'],
+          src: ['marked*.js'],
           dest: 'build/package/js/marked/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
           cwd: 'lib/phaser',
-          src: ['phaser' + dotMinIfNotDev + '.js'],
+          src: ['*.js'],
           dest: 'build/package/js/phaser/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
@@ -238,15 +222,8 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/fileupload',
-          src: [
-            'jquery.fileupload' + dotMinIfNotDev + '.js',
-            'jquery.iframe-transport' + dotMinIfNotDev + '.js'
-          ],
+          src: ['*.js'],
           dest: 'build/package/js/fileupload/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
