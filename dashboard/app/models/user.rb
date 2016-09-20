@@ -504,12 +504,16 @@ class User < ActiveRecord::Base
 
   # returns if all user levels for this script have been cached
   def user_levels_cached_for_script?(script_id)
-    @user_level_cache_by_script[script_id].nil? ? false : true
+    @user_level_cache_by_script.try(:[], script_id).nil? ? false : true
   end
 
   # returns specified user level from cache, if present
   def user_level_from_cache(script_id, level_id)
     @user_level_cache_by_script.try(:[], script_id).try(:[], level_id)
+  end
+
+  def clear_user_level_cache
+    @user_level_cache_by_script = nil
   end
 
   def user_levels_by_level(script)
@@ -532,8 +536,7 @@ class User < ActiveRecord::Base
 
     # Do a database query to get the user_level. We deliberately do not try to further cache this
     # result.
-    user_levels.find_by(script_id: script_level.script_id,
-      level_id: level.id)
+    user_levels.find_by(script_id: script_level.script_id, level_id: level.id)
   end
 
   def user_level_locked?(script_level, level)

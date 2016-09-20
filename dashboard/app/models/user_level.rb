@@ -100,7 +100,7 @@ class UserLevel < ActiveRecord::Base
 
   # clear the per-request cache when user levels are saved or updated
   def clear_user_level_cache
-    user.clear_user_level_cache unless user.nil
+    user.clear_user_level_cache
   end
 
   def has_autolocked?(stage)

@@ -274,7 +274,7 @@ class ScriptLevelsController < ApplicationController
     @stage = @script_level.stage
 
     if current_user
-      # Precache all user_levels for this script to avoid duplicate database dips over the course of generating this page.
+      # Precache all user_levels for this script to minimize database dips over the course of generating the page this controller is used on.
       current_user.cached_user_levels_by_script(@script_level.script_id)
     end
     load_level_source
