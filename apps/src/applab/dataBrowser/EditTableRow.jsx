@@ -98,7 +98,7 @@ const EditTableRow = React.createClass({
                 (this.state.isEditing && columnName !== 'id') ?
                   <input
                     style={dataStyles.input}
-                    value={this.state.newInput[columnName]}
+                    value={this.state.newInput[columnName] || ''}
                     onChange={event => this.handleChange(columnName, event)}
                     onKeyUp={this.handleKeyUp}
                   /> :

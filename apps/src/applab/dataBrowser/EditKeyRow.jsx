@@ -82,7 +82,7 @@ const EditKeyRow = React.createClass({
           {this.state.isEditing ?
             <input
               style={dataStyles.input}
-              value={this.state.newValue}
+              value={this.state.newValue || ''}
               onChange={this.handleChange}
               onKeyUp={this.handleKeyUp}
             /> :
