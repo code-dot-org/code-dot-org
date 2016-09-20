@@ -1,0 +1,7 @@
+.field
+  = f.label :texts, 'Encrypted texts in JSON array format. Each text should have both a title and a message, e.g.:'
+  %div
+    %pre{:style => '-webkit-user-select: text'}= "[\n  {\"title\": \"Sample Message (easy)\", \"message\": \"Srryvat zl jnl guebhtu gur qnexarff.\"},\n  {\"title\": \"Sample Message (hard)\", \"message\": \"Npd ulk vy krg lycrpdkgj epctopkgda un krg lynparvuypebg gyj un krg ogakgdy aqvdpb pds un krg Mpbpfi bvga p aspbb lydgmpdjgj igbbuo aly.\"}\n]"
+  = f.text_area :texts, placeholder: '[]', rows: 4, value: @level.properties['texts']
+  :javascript
+    levelbuilder.initializeCodeMirror('level_texts', 'javascript');
