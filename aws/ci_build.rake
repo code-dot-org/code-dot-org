@@ -303,6 +303,7 @@ task :dashboard_unit_tests do
       ENV['UNIT_TEST'] = '1'
       RakeUtils.bundle_exec 'rails', 'test'
       ENV.delete 'UNIT_TEST'
+      RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end
