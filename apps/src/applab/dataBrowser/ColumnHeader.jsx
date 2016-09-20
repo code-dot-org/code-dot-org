@@ -33,6 +33,7 @@ const styles = {
 
 const ColumnHeader = React.createClass({
   propTypes: {
+    coerceColumn: React.PropTypes.func.isRequired,
     columnName: React.PropTypes.string.isRequired,
     columnNames: React.PropTypes.array.isRequired,
     deleteColumn: React.PropTypes.func.isRequired,
@@ -122,6 +123,10 @@ const ColumnHeader = React.createClass({
     }
   },
 
+  coerceColumn(type) {
+    this.props.coerceColumn(this.props.columnName, type);
+  },
+
   isInputValid() {
     // The current name is always valid.
     const newName = this.state.newName;
@@ -147,6 +152,21 @@ const ColumnHeader = React.createClass({
           <li style={{cursor: 'pointer'}}>
             <a onClick={() => this.setState({isDialogOpen: true})}>
               Delete
+            </a>
+          </li>
+          <li style={{cursor: 'pointer'}}>
+            <a onClick={() => this.coerceColumn('string')}>
+              Convert to string
+            </a>
+          </li>
+          <li style={{cursor: 'pointer'}}>
+            <a onClick={() => this.coerceColumn('number')}>
+              Convert to number
+            </a>
+          </li>
+          <li style={{cursor: 'pointer'}}>
+            <a onClick={() => this.coerceColumn('boolean')}>
+              Convert to boolean
             </a>
           </li>
         </ul>
