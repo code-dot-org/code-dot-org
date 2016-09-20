@@ -90,6 +90,13 @@ var GameLab = function () {
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
+
+  /** Expose for levelbuilder */
+  window.printSerializedAnimationList = () => {
+    this.getSerializedAnimationList(list => {
+      console.log(JSON.stringify(list, null, 2));
+    });
+  };
 };
 
 module.exports = GameLab;
