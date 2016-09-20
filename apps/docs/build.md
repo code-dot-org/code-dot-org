@@ -6,7 +6,7 @@ can be configured for different needs.
 
 ## FAQ
 
-**Why do we bundle javascript files? What are the goals?**
+### Why do we bundle javascript files? What are the goals?
 
 Fundamentally, the purpose of bundling is to speed up page load times by
 decreasing the number of files that the browser has to download for the page to
@@ -15,7 +15,8 @@ javascript files needed to run any given web page. By bundling these files
 together (via concatenation) we reduce the number of javascript files the
 browser needs to download to less than 5.
 
-**What is our strategy for bundling?**
+### What is our strategy for bundling?
+
 code.org is a very complex application with a lot of moving parts. Bundling is
 done in a way that balances performance with maintaining our own sanity as
 developers.
@@ -87,14 +88,14 @@ for various pages. They contain code which isn't used anywhere else and is
 really only for one specific page. So in theory, even the heaviest pages should
 only require downloading 4 different javascript files.
 
-**When should I create a new bundle?**
+### When should I create a new bundle?
 
 The only time you should create a new bundle is when you are creating a new
 rails page at a new url. If you are creating lots and lots of these pages, then
 it _might_ be reasonable to create a new common chunk bundle, but this should be
 considered carefully before being implemented.
 
-**How do I create a new bundle?**
+### How do I create a new bundle?
 
 Creating a new bundle is easy, but you need to think about what that bundle's
 dependencies will be. Here are the different options:
