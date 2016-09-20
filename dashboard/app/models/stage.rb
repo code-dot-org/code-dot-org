@@ -127,6 +127,37 @@ class Stage < ActiveRecord::Base
     stage_summary.freeze
   end
 
+  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # build lesson plans
+  def summary_for_lesson_plans
+    {
+      stageName: localized_name,
+      lockable: lockable?,
+      levels: script_levels.map do |script_level|
+        level = script_level.level
+        level_json = {
+          id: script_level.id,
+          position: script_level.position,
+          named_level: script_level.named_level?,
+          path: script_level.path,
+          level_id: level.id,
+          type: level.class.to_s,
+          name: level.name
+        }
+
+        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
+          level_json[key] = level.properties[key] if level.properties[key]
+        end
+        if level.video_key
+          level_json[:video_youtube] = level.specified_autoplay_video.youtube_url
+          level_json[:video_download] = level.specified_autoplay_video.download
+        end
+
+        level_json
+      end
+    }
+  end
+
   def lockable_state(students)
     return unless self.lockable?
 
