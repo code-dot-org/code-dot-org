@@ -29,7 +29,8 @@ Dashboard::Application.configure do
   config.public_file_server.headers = { 'Cache-Control' => "public, max-age=86400, s-maxage=43200" }
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # webpack handles js compression for us
+  # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.

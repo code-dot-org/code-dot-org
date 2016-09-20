@@ -27,7 +27,8 @@ Dashboard::Application.configure do
 
   unless ci_test
     # Compress JavaScripts and CSS.
-    config.assets.js_compressor = :uglifier
+    # webpack handles js compression for us
+    # config.assets.js_compressor = :uglifier
     # config.assets.css_compressor = :sass
 
     # Do not fallback to assets pipeline if a precompiled asset is missed.

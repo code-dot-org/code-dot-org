@@ -127,6 +127,23 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
+  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # build lesson plans
+  def summary_for_lesson_plans
+    require_levelbuilder_mode
+    authorize! :read, ScriptLevel
+
+    script = Script.get_from_cache(params[:script_id])
+
+    if params[:stage_position]
+      stage = script.stages.select{|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+    else
+      stage = script.stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+    end
+
+    render json: stage.summary_for_lesson_plans
+  end
+
   private
 
   # Configure http caching for the given script. Caching is disabled unless the

@@ -1,7 +1,7 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
-  = javascript_include_tag 'js/levelbuilder'
+  %script{src: minifiable_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
 - unless @level.is_a? DSLDefined

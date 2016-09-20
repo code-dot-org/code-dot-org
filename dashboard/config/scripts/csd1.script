@@ -1,25 +1,26 @@
 title 'CSD Unit 1 - Problem Solving: Computers and Logic'
-description 'Unit 1 of CS Discoveries'
+description 'In this unit you will explore many different strategies to help solve problems and learn a structured process to help you approach all kinds of problems. In the second half of the unit you will learn how computers help to solve problems and use this knowledge to propose a technological solution to a problem of your choosing.'
 description_short 'Problem Solving'
 login_required 'true'
+hidden 'false'
 
 stage 'Intro to Problem Solving'
-level 'CSD-U1-SFLP Intro to Problem Solving'
+named_level 'Unit 1 Lesson 1 Overview'
 
 stage 'The Problem Solving Process'
-level 'CSD-U1-SFLP The Problem Solving Process'
+named_level 'Unit 1 Lesson 2 Overview'
 
 stage 'Exploring Problem Solving'
-level 'CSD-U1-SFLP Exploring Problem Solving'
+named_level 'Unit 1 Lesson 3 Overview'
 
 stage 'What is a Computer?'
-level 'CSD-U1-SFLP What is a Computer?'
+named_level 'Unit 1 Lesson 4 Overview'
 
 stage 'Representing Information'
-level 'CSD-U1-SFLP Representing Information'
+named_level 'Unit 1 Lesson 5 Overview'
 
 stage 'Processing with Bits'
-level 'CSD-U1-SFLP Processing Bits'
+named_level 'Unit 1 Lesson 6 Overview'
 level 'CSD U1 - PixFilter 1x1 intro'
 level 'CSD U1 - PixFilter Filter Intro'
 level 'CSD U1 - PixFilter Mushroom'
@@ -29,14 +30,18 @@ level 'CSD U1 - PixFilter UnFilter'
 level 'CSD U1 - PixFilter FreePlay'
 
 stage 'Human vs Computer Processing'
-level 'CSD-U1-SFLP Human vs. Computer Processing'
+named_level 'Unit 1 Lesson 7 Overview'
 
 stage 'Processing with Apps'
-level 'CSD-U1-SFLP Processing with Apps'
+named_level 'Unit 1 Lesson 8 Overview'
+level 'CSD U1 Input Output Intro'
+level 'CSD U1 Input Output C1'
+level 'CSD U1 Input Output C2'
+level 'CSD U1 Input Output C3'
+level 'CSD U1 Input Output C4'
 
 stage 'Project: Apps and Problem Solving'
-level 'CSD-U1-SFLP Project Apps and Problem Solving'
-
+named_level 'Unit 1 Lesson 9 Overview'
 
 # Graveyard
 stage 'Human vs. Computer Processing'
