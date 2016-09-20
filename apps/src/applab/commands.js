@@ -52,17 +52,6 @@ function outputError(errorString) {
   errorHandler.outputError(errorString, ErrorLevel.ERROR, line);
 }
 
-/**
- * Returns an error handler which prints warnings to the applab console,
- * with line numbers which are accurate even for async callbacks.
- * @returns {function(*)}
- */
-function getAsyncErrorHandler() {
-  const line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  return errorString => {
-    errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
-  };
-}
 
 /**
  * @param value
@@ -1502,7 +1491,7 @@ applabCommands.createRecord = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = errorHandler.handleError.bind(this, opts);
   Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
@@ -1518,7 +1507,7 @@ applabCommands.getKeyValue = function (opts) {
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = errorHandler.handleError.bind(this, opts);
   Applab.storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
@@ -1552,7 +1541,7 @@ applabCommands.setKeyValue = function (opts) {
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = errorHandler.handleError.bind(this, opts);
   Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
@@ -1594,7 +1583,7 @@ applabCommands.readRecords = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = errorHandler.handleError.bind(this, opts);
   Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
@@ -1624,7 +1613,7 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = errorHandler.handleError.bind(this, opts);
   Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1654,7 +1643,7 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = errorHandler.handleError.bind(this, opts);
   Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1668,7 +1657,8 @@ applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
   apiValidateType(opts, 'onRecordEvent', 'includeAll', opts.includeAll, 'boolean', OPTIONAL);
-  Applab.storage.onRecordEvent(opts.table, opts.onRecord, getAsyncErrorHandler(), opts.includeAll);
+  var onError = errorHandler.handleError.bind(this, opts);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, outputWarning, onError, opts.includeAll);
 };
 
 applabCommands.getUserId = function (opts) {
