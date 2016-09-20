@@ -518,7 +518,6 @@ body.embedded_iframe {
 
 
 $default-modal-width: 640px;
-$hint-bgcolor: #eee;
 
 .modal {
   a:hover:not(.btn) {
@@ -538,22 +537,6 @@ $hint-bgcolor: #eee;
       margin-top: -100px;
       float: left;
       position: relative;
-    }
-
-    .hint {
-      padding: 15px 15px 15px 40px;
-      background-color: $hint-bgcolor;
-      border-radius: 10px;
-    }
-    .hintInner {
-      padding: 15px;
-      background-color: $white;
-      border-radius: 10px;
-    }
-
-    img {
-      border-radius: 10px;
-      mix-blend-mode: multiply;
     }
   }
 }
