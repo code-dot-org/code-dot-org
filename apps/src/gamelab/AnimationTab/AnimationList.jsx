@@ -40,6 +40,7 @@ const AnimationList = React.createClass({
               animationKey={key}
               animationProps={this.props.animationList.propsByKey[key]}
               isSelected={key === this.props.selectedAnimation}
+              animationList={this.props.animationList}
             />
           )}
           <NewListItem
