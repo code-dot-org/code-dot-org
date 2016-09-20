@@ -305,5 +305,6 @@
   "whenRun": "futtatáskor",
   "workspaceHeaderShort": "Munkaterület: ",
   "yes": "Igen",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

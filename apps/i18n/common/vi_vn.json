@@ -305,5 +305,6 @@
   "whenRun": "Khi chạy",
   "workspaceHeaderShort": "Không gian làm việc:",
   "yes": "Đồng ý",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

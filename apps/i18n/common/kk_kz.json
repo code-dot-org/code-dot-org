@@ -305,5 +305,6 @@
   "whenRun": "қосу кезінде",
   "workspaceHeaderShort": "Жұмыс аумағы: ",
   "yes": "Иә",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

@@ -1,5 +1,5 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder'
+  %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
 - if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
   = render layout: 'shared/extra_links' do

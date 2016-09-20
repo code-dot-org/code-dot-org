@@ -305,5 +305,6 @@
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radni prostor: ",
   "yes": "Da",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

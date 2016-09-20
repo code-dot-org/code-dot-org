@@ -305,5 +305,6 @@
   "whenRun": "當按下\"執行\"時",
   "workspaceHeaderShort": "工作區:",
   "yes": "是",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

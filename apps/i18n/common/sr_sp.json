@@ -305,5 +305,6 @@
   "whenRun": "Када кренеш",
   "workspaceHeaderShort": "Радни простор: ",
   "yes": "Да",
-  "assessmentSettings": "Assessment Settings"
+  "assessmentSettings": "Assessment Settings",
+  "lockAssessment": "Lock assessment"
 }

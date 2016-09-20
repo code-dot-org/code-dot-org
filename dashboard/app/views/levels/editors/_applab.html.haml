@@ -1,5 +1,5 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder_applab'
+  %script{src: minifiable_asset_path('js/levelbuilder_applab.js')}
 
 .field
   = f.label :slider_speed, 'Slider speed'

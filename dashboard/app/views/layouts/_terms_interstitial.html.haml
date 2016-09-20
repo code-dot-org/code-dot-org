@@ -37,4 +37,4 @@
         %a#later-link.dismiss-link{href: '#'}= t('terms_interstitial.later')
       .clear
 
-= javascript_include_tag 'js/termsInterstitial'
+%script{src: minifiable_asset_path('js/termsInterstitial.js')}
