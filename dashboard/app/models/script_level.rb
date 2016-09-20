@@ -166,6 +166,10 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.size
   end
 
+  def path
+    build_script_level_path(self)
+  end
+
   def summarize
     if level.unplugged?
       kind = 'unplugged'

@@ -27,7 +27,7 @@ const FilterGroup = React.createClass({
 
   render() {
     return (
-      <div style={styles.filterGroupOuter}>
+      <div style={styles.filterGroupOuter} className="col-mobile-50">
         <div style={styles.filterGroupText}>
           {this.props.text}
         </div>
