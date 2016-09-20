@@ -19,7 +19,7 @@ const EditKeyRow = React.createClass({
       isDeleting: false,
       isEditing: false,
       isSaving: false,
-      newValue: undefined
+      newValue: ''
     };
   },
 
@@ -32,13 +32,13 @@ const EditKeyRow = React.createClass({
   },
 
   handleChange(event) {
-    this.setState({newValue: castValue(event.target.value)});
+    this.setState({newValue: event.target.value});
   },
 
   handleEdit() {
     this.setState({
       isEditing: true,
-      newValue: this.props.value
+      newValue: editableValue(this.props.value)
     });
   },
 
@@ -46,7 +46,7 @@ const EditKeyRow = React.createClass({
     this.setState({isSaving: true});
     FirebaseStorage.setKeyValue(
       this.props.keyName,
-      this.state.newValue,
+      castValue(this.state.newValue),
       this.resetState,
       msg => console.warn(msg));
   },
@@ -82,7 +82,7 @@ const EditKeyRow = React.createClass({
           {this.state.isEditing ?
             <input
               style={dataStyles.input}
-              value={editableValue(this.state.newValue)}
+              value={this.state.newValue}
               onChange={this.handleChange}
               onKeyUp={this.handleKeyUp}
             /> :
