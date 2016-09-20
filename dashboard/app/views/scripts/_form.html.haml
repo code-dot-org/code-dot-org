@@ -21,18 +21,18 @@
     %td
       %h4 Levels by name:
       %ul
-        - Naturally.sort_by(Level.where.not(user_id: nil), :name).each do |level|
+        - Naturally.sort_by(Level.where.not(user_id: nil).select(:id, :name), :name).each do |level|
           %li.level_name
             = "'#{level.name}'"
-            = link_to edit_level_path(level) do
+            %a{href: edit_level_path(level)}
               %i.fa.fa-pencil-square-o
     %td
       %h4 Most recently updated levels:
       %ul
-        - Level.where.not(user_id: nil).order('updated_at desc').each do |level|
+        - Level.where.not(user_id: nil).order('updated_at desc').select(:id, :name).each do |level|
           %li.level_name
             = "'#{level.name}'"
-            = link_to edit_level_path(level) do
+            %a{href: edit_level_path(level)}
               %i.fa.fa-pencil-square-o
 
 - if @show_all_instructions
