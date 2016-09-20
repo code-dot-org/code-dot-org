@@ -26,7 +26,8 @@ const EditTableRow = React.createClass({
       isDeleting: false,
       isEditing: false,
       isSaving: false,
-      newRecord: {}
+      // An object whose keys are column names and values are the raw user input.
+      newInput: {}
     };
   },
 
@@ -38,17 +39,18 @@ const EditTableRow = React.createClass({
   },
 
   handleChange(columnName, event) {
-    const newRecord = Object.assign({}, this.state.newRecord, {
-      [columnName]: castValue(event.target.value)
+    const newInput = Object.assign({}, this.state.newInput, {
+      [columnName]: event.target.value
     });
-    this.setState({ newRecord });
+    this.setState({ newInput });
   },
 
   handleSave() {
     this.setState({isSaving: true});
+    const newRecord = _.mapValues(this.state.newInput, castValue);
     FirebaseStorage.updateRecord(
       this.props.tableName,
-      this.state.newRecord,
+      newRecord,
       this.resetState,
       msg => console.warn(msg)
     );
@@ -64,7 +66,7 @@ const EditTableRow = React.createClass({
   handleEdit() {
     this.setState({
       isEditing: true,
-      newRecord: this.props.record
+      newInput: _.mapValues(this.props.record, editableValue),
     });
   },
 
@@ -96,7 +98,7 @@ const EditTableRow = React.createClass({
                 (this.state.isEditing && columnName !== 'id') ?
                   <input
                     style={dataStyles.input}
-                    value={editableValue(this.state.newRecord[columnName])}
+                    value={this.state.newInput[columnName]}
                     onChange={event => this.handleChange(columnName, event)}
                     onKeyUp={this.handleKeyUp}
                   /> :
