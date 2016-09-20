@@ -52,7 +52,7 @@ const AddKeyRow = React.createClass({
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
             placeholder="enter text"
-            value={this.state.key}
+            value={this.state.key || ''}
           />
         </td>
         <td style={dataStyles.cell}>
@@ -61,7 +61,7 @@ const AddKeyRow = React.createClass({
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
             placeholder="enter text"
-            value={this.state.value}
+            value={this.state.value || ''}
           />
         </td>
         <td style={dataStyles.addButtonCell}>
