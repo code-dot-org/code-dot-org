@@ -22,8 +22,8 @@ class PuzzleRating < ActiveRecord::Base
   belongs_to :script
   belongs_to :level
 
-  validates :script, presence: true, unless: Proc.new{|rating| Script.get_from_cache(rating.script_id).present?}
-  validates :level, presence: true, unless: Proc.new{|rating| Script.cache_find_level(rating.level_id).present?}
+  validates :script, :presence => true
+  validates :level, :presence => true
   validates :rating, :numericality => { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 1 }
 
   validates_uniqueness_of :user_id, :scope => [:script_id, :level_id], :allow_nil => true
