@@ -319,6 +319,8 @@ Dashboard::Application.routes.draw do
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
+
+        get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
       end
       resources :district_report, only: :index
       resources :workshop_organizer_report, only: :index
