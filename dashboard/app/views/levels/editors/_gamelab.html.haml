@@ -71,6 +71,11 @@
   = f.label :start_animations, 'Starting animation list JSON'
   %p
     This should be equivalent to the animation JSON created by the animation tab.
+
+  %p
+    You can generate this by getting the animation tab into the desired state,
+    opening the developer console, and running <tt>printSerializedAnimationList()</tt>;
+    or, you can compose it by hand.
     Here is an example.
   %pre
     :preserve
