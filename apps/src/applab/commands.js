@@ -1674,7 +1674,7 @@ applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
   apiValidateType(opts, 'onRecordEvent', 'includeAll', opts.includeAll, 'boolean', OPTIONAL);
-  Applab.storage.onRecordEvent(opts.table, opts.onRecord, outputWarning, getErrorHandler(), opts.includeAll);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, getErrorHandler(), opts.includeAll);
 };
 
 applabCommands.getUserId = function (opts) {
