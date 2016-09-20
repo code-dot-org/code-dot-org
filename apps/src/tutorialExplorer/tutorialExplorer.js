@@ -50,6 +50,10 @@ const TutorialExplorer = React.createClass({
     this.setState(newState.toJS());
   },
 
+  isLocaleEnglish() {
+    return this.props.locale.substring(0,2) === "en";
+  },
+
   render() {
     return (
       <div>
@@ -58,7 +62,22 @@ const TutorialExplorer = React.createClass({
           onUserInput={this.handleUserInput}
           selection={this.state.filters}
         />
+
+        {!this.isLocaleEnglish() && (
+          <div>
+            <h1>Tutorials in your language</h1>
+            <TutorialSet
+              tutorials={this.props.tutorials}
+              filters={this.state.filters}
+              locale={this.props.locale}
+              specificLocale={true}
+            />
+            <h1>Tutorials in many languages</h1>
+          </div>
+        )}
+
         <TutorialSet
+          style={{display: "none"}}
           tutorials={this.props.tutorials}
           filters={this.state.filters}
           locale={this.props.locale}
