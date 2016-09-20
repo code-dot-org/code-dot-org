@@ -173,7 +173,6 @@ var levels = module.exports = {
     startBlocks: startBlocks(1, 7),
     requiredBlocks: [
       [drawTurnRestricted(90)],
-      [MOVE_FORWARD_INLINE],
       [repeat(4)],
       [MOVE_BACKWARD_INLINE, MOVE_FORWARD_INLINE]
     ],
