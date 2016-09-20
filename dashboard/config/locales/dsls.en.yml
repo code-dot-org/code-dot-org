@@ -1637,7 +1637,6 @@ en:
       Unit 2 Lesson 9 Overview: {}
       Unit 3 Survey 2: {}
       Welcome to TeacherCon!: {}
-      What is ASCII=?: {}
       What is ASCII?: {}
       What is HTML?: {}
       Why Teach Number Systems?: {}
@@ -3790,8 +3789,6 @@ en:
         IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
         ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
         : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
-        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
-        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
       CSPFinal_Question_4_original:
         'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
         'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
