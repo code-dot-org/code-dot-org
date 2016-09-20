@@ -77,7 +77,7 @@ const EditKeyRow = React.createClass({
   render() {
     return (
       <tr style={dataStyles.row}>
-        <td style={dataStyles.cell}>{this.props.keyName}</td>
+        <td style={dataStyles.cell}>{JSON.stringify(this.props.keyName)}</td>
         <td style={dataStyles.cell}>
           {this.state.isEditing ?
             <input
