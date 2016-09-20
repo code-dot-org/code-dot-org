@@ -860,7 +860,7 @@ class User < ActiveRecord::Base
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairings:)
+  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     level_id = level.id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(
@@ -878,7 +878,7 @@ class User < ActiveRecord::Base
       'new_result' => new_result,
       'level_source_id' => level_source_id,
       'submitted' => submitted,
-      'pairing_user_ids' => pairings ? pairings.map(&:id) : nil
+      'pairing_user_ids' => pairing_user_ids
     }
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
@@ -1059,7 +1059,8 @@ class User < ActiveRecord::Base
 
   def should_see_inline_answer?(script_level)
     script = script_level.try(:script)
-    authorized_teacher? && !script.try(:professional_course?) || (script_level &&
-      UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
+
+    (authorized_teacher? && !script.try(:professional_course?)) ||
+      (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 end

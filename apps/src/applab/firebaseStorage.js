@@ -1,9 +1,9 @@
 /* global Applab */
 
-import { castValue } from './dataBrowser/dataUtils';
+import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
-import { enforceTableCount, updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
+import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -241,6 +241,11 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
 };
 
 /**
+ * @type {Array.<string>} List of tables we are listening to.
+ */
+let listenedTables = [];
+
+/**
  * Listens to tableName for any changes to the data it contains, and calls
  * onRecord with the record and eventType as follows:
  * - for 'create' events, returns the new record
@@ -249,10 +254,13 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
  * @param {string} tableName Table to listen to.
  * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
+ * @param {function (string)} onWarning Callback to call with an warning to show to the user.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
+ * @param {boolean} includeAll Optional Whether to include child_added events for records
+ * which were in the table before onRecordEvent was called. Default: false.
  */
-FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
+FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onError, includeAll) {
   if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
@@ -260,25 +268,38 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
     onError('Error listening for record events: missing required parameter "tableName"', 400);
     return;
   }
+  if (listenedTables.includes(tableName)) {
+    onWarning(`onRecordEvent was already called for table "${tableName}". To avoid ` +
+    'unexpected behavior in your program, you should only call onRecordEvent once ' +
+    'per table, and use if/else statements to handle the different event types.');
+  }
+  listenedTables.push(tableName);
 
+  getLastRecordId(tableName).then(lastId => {
+    const recordsRef = getRecordsRef(Applab.channelId, tableName);
+
+    recordsRef.on('child_added', childSnapshot => {
+      const record = JSON.parse(childSnapshot.val());
   let recordsRef = getRecordsRef(Applab.channelId, tableName);
-  // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
+      if (includeAll || (record.id > lastId)) {
+        onRecord(record, 'create');
+      }
+    });
 
-  recordsRef.on('child_added', childSnapshot => {
-    onRecord(JSON.parse(childSnapshot.val()), 'create');
-  });
+    recordsRef.on('child_changed', childSnapshot => {
+      onRecord(JSON.parse(childSnapshot.val()), 'update');
+    });
 
-  recordsRef.on('child_changed', childSnapshot => {
-    onRecord(JSON.parse(childSnapshot.val()), 'update');
-  });
+    recordsRef.on('child_removed', oldChildSnapshot => {
+      var record = JSON.parse(oldChildSnapshot.val());
+      onRecord({id: record.id}, 'delete');
+    });
 
-  recordsRef.on('child_removed', oldChildSnapshot => {
-    var record = JSON.parse(oldChildSnapshot.val());
-    onRecord({id: record.id}, 'delete');
   });
 };
 
 FirebaseStorage.resetRecordListener = function () {
+  listenedTables = [];
   getDatabase(Applab.channelId).off();
 };
 
@@ -491,6 +512,66 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
     })
     .then(recordsData => recordsRef.set(recordsData))
     .then(onSuccess, onError);
+};
+
+/**
+ * Modifies the record[columnName] to type columnType, if the field can be converted
+ * to that type. Returns whether or not the field was converted.
+ * @param {Object} records Javascript object representing the record.
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @returns {boolean} Whether the field was converted.
+ */
+
+function coerceRecord(record, columnName, columnType) {
+  const value = record[columnName];
+  if (typeof value === 'undefined') {
+    return true;
+  }
+  switch (columnType) {
+    case (ColumnType.STRING):
+      record[columnName] = String(value);
+      return true;
+    case (ColumnType.NUMBER):
+      if (isNumber(value)) {
+        record[columnName] = parseFloat(value);
+        return true;
+      }
+      return false;
+    case (ColumnType.BOOLEAN):
+      if (isBoolean(value)) {
+        record[columnName] = toBoolean(value);
+        return true;
+      }
+      return false;
+    default:
+      throw new Error(`Unexpected column type ${columnType}`);
+  }
+}
+
+/**
+ *
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @param onSuccess
+ * @param onError
+ */
+FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {
+  const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value').then(snapshot => {
+    const recordsData = snapshot.val() || {};
+    let allConverted = true;
+    Object.keys(recordsData).forEach(recordId => {
+      const record = JSON.parse(recordsData[recordId]);
+      allConverted = allConverted && coerceRecord(record, columnName, columnType);
+      recordsData[recordId] = JSON.stringify(record);
+    });
+    if (!allConverted) {
+      onError(`Not all values in column "${columnName}" could be converted to type "${columnType}".`);
+    }
+    return recordsRef.set(recordsData);
+  }).then(onSuccess, onError);
 };
 
 /**

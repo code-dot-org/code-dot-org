@@ -59,8 +59,8 @@ const Tutorial = React.createClass({
               onClick={this.tutorialClicked}
             >
               <img
-                src={this.props.item.image}
-                style={{width: '100%', height: 180}}
+                src={this.props.item.image.replace("/images/", "/images/fill-520x390/")}
+                style={{width: '100%'}}
               />
               <div style={styles.tutorialName}>
                 {this.props.item.name}

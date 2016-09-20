@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:34:03.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Priority of CSS Rules\r\n\r\nAll of the rules are on one page, and in CSS, style-rules are followed from bottom to top. \r\n\r\nExample:\r\n\r\np{\r\n  text-transform: lowercase;\r\n}\r\np{\r\n  text-transform: uppercase;\r\n}\r\n\r\nsample.html\r\n&lt;p&gt; Hello World&lt;/p&gt;\r\n\r\nHello world\r\n\r\nThis would make the text of any paragraph in any linked HTML page into lowercase letters. The second paragraph selector rule overwrites the first one.\r\n\r\n# Do This\r\n\r\nLet’s say we wanted the h1, Crazy Houses to be red\r\nAdd the following style rule to style.css\r\n\r\n<pre>\r\nh1{\r\n  color: red\r\n}\r\n</pre>\r\n\r\nNow there are two rules for all headers on this site, one turns them red and the other turns them dodger blue. Since the rule to turn them red is after the dodger-blue rule, the red style gets applied.",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
