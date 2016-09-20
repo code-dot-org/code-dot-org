@@ -235,6 +235,6 @@ class ApplicationController < ActionController::Base
   #   current user.
   def pairing_user_ids
     # TODO(asher): Determine whether we need to guard against it being nil.
-    session[:pairings].nil ? [] : session[:pairings]
+    session[:pairings].nil? ? [] : session[:pairings]
   end
 end
