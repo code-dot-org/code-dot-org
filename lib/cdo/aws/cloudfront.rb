@@ -369,6 +369,9 @@ module AWS
             quantity: headers.length, # required
             items: headers.empty? ? nil : headers,
           },
+          query_string_cache_keys: {
+            quantity: 0
+          },
         },
         trusted_signers: {# required
           enabled: false, # required
