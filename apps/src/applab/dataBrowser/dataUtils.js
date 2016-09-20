@@ -43,16 +43,14 @@ export function toBoolean(val) {
  * @returns {string|number|boolean}
  */
 export function castValue(val) {
-  if (val === 'true' || val === true) {
-    return true;
+  try {
+    return JSON.parse(val);
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      return val;
+    }
+    throw new Error(`Unexpected error parsing JSON: ${e}`);
   }
-  if (val === 'false' || val === false ) {
-    return false;
-  }
-  if (isNumber(val)) {
-    return parseFloat(val);
-  }
-  return val;
 }
 
 /**
@@ -64,7 +62,18 @@ export function editableValue(val) {
   if (val === null || val === undefined) {
     return '';
   }
-  return String(val);
+  if (typeof val === 'string') {
+    try {
+      JSON.parse(val);
+    } catch (e) {
+      // The value is a string which is not parseable as JSON (e.g. 'foo' but not 'true'
+      // or '1'). Therefore, it is safe to return it without stringifying it, and
+      // calling castValue on the result will return the original input.
+      return val;
+    }
+  }
+
+  return JSON.stringify(val);
 }
 
 /**
