@@ -2,7 +2,7 @@ import React from 'react';
 import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
-import gamelabMsg from '../locale';
+import gamelabMsg from '@cdo/gamelab/locale';
 import styles from './styles';
 import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
     handleUploadComplete, handleUploadError } from './animationPickerModule';
