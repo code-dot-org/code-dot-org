@@ -1,7 +1,10 @@
 /**
  * @file Main entry point for scripts used on all level editing pages.
  */
-var _ = require('lodash');
+import _ from 'lodash';
+import codemirror from 'codemirror';
+import marked from 'marked';
+import stylelessRenderer from '../StylelessRenderer';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
@@ -21,6 +24,7 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.
-window.CodeMirror = require('codemirror');
+window.CodeMirror = codemirror;
 // TODO: Remove when global `marked` is no longer required.
-window.marked = require('../MarkdownRenderer');
+window.marked = marked;
+window.stylelessRenderer = stylelessRenderer;

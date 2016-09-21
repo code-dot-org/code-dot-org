@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import processMarkdown from './MarkdownRenderer';
+import processMarkdown from 'marked';
+import stylelessRenderer from './StylelessRenderer';
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
 

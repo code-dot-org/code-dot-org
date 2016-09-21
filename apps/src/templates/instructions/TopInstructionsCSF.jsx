@@ -4,6 +4,8 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import processMarkdown from 'marked';
+import stylelessRenderer from '../../StylelessRenderer';
 import { connect } from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
@@ -12,7 +14,6 @@ var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var processMarkdown = require('../../MarkdownRenderer');
 
 var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
@@ -472,14 +473,15 @@ var TopInstructions = React.createClass({
       this.props.isMinecraft && craftStyles.main
     ];
 
-    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
-      this.props.shortInstructions : this.props.longInstructions);
+    const markdown = (this.props.collapsed || !this.props.longInstructions) ?
+      this.props.shortInstructions : this.props.longInstructions;
+    const renderedMarkdown = processMarkdown(markdown, {renderer: stylelessRenderer});
     const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
-    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
-      this.props.shortInstructions2) : undefined;
+    const instructions2 = this.props.shortInstructions2 ?
+      processMarkdown(this.props.shortInstructions2, {renderer: stylelessRenderer}) : undefined;
 
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
