@@ -34,6 +34,9 @@ class UserPermission < ActiveRecord::Base
   # Also makes the account satisfy authorized_teacher?.
   LEVELBUILDER = 'levelbuilder'
 
+  # Grants access to reseting (to 0) the abuse score for projects.
+  RESET_ABUSE = 'reset_abuse'
+
   # Grants access to managing professional development workshops and
   # professional development workshop attendance.
   WORKSHOP_ORGANIZER = 'workshop_organizer'

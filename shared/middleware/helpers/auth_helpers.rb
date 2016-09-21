@@ -23,6 +23,17 @@ def admin?
   current_user && !!current_user[:admin]
 end
 
+# @param [String] permission - Name of the permission we're interested in
+# @returns [Boolean] true if the current user has the specified dashboard permission
+def has_permission?(permission)
+  return false unless current_user
+
+  @user_permissions ||= {}
+  return @user_permissions[permission] unless @user_permissions[permission].nil?
+  result = DASHBOARD_DB[:user_permissions].where(user_id: current_user_id, permission: permission).any?
+  @user_permissions[permission] = result
+end
+
 # @param [Integer] section_id
 # @returns [Boolean] true iff the current user is the owner of the given section.
 #          Note: NOT always true for admins.
