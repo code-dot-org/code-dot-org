@@ -4,7 +4,7 @@
 import _ from 'lodash';
 import codemirror from 'codemirror';
 import marked from 'marked';
-import stylelessRenderer from '../StylelessRenderer';
+import renderer from '../StylelessRenderer';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
@@ -27,4 +27,4 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 window.CodeMirror = codemirror;
 // TODO: Remove when global `marked` is no longer required.
 window.marked = marked;
-window.stylelessRenderer = stylelessRenderer;
+window.renderer = renderer;

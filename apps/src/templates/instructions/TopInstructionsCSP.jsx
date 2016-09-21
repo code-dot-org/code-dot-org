@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import processMarkdown from 'marked';
-import stylelessRenderer from '../../StylelessRenderer';
+import renderer from '../../StylelessRenderer';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 var color = require('../../color');
@@ -200,7 +200,7 @@ var TopInstructions = React.createClass({
               <Instructions
                 ref="instructions"
                 renderedMarkdown={processMarkdown(this.props.markdown,
-                    {renderer: stylelessRenderer})}
+                    { renderer })}
                 onResize={this.adjustMaxNeededHeight}
                 inTopPane
               />}
