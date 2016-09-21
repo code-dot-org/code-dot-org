@@ -233,6 +233,26 @@
         "y": 207
       }
     },
+    "cactus": {
+      "name": "cactus",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 117,
+        "y": 160
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "FaQFQFbMk6E9o1QFp68JJ1a.RWArQGL9",
+      "sourceUrl": "/api/v1/animation-library/FaQFQFbMk6E9o1QFp68JJ1a.RWArQGL9/cactus.png",
+      "sourceSize": {
+        "x": 117,
+        "y": 160
+      }
+    },
     "cloud": {
       "name": "cloud",
       "aliases": [
@@ -385,6 +405,606 @@
         "y": 158
       }
     },
+    "grass1": {
+      "name": "grass1",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 58,
+        "y": 57
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "H_Zg7qIZuBUiUoZzyc6dt3hbnBRyg_Sh",
+      "sourceUrl": "/api/v1/animation-library/H_Zg7qIZuBUiUoZzyc6dt3hbnBRyg_Sh/grass1.png",
+      "sourceSize": {
+        "x": 58,
+        "y": 57
+      }
+    },
+    "grass2": {
+      "name": "grass2",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 82,
+        "y": 70
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "QLla_mTrb.zWA.hivS2cQzMGM2r9zipv",
+      "sourceUrl": "/api/v1/animation-library/QLla_mTrb.zWA.hivS2cQzMGM2r9zipv/grass2.png",
+      "sourceSize": {
+        "x": 82,
+        "y": 70
+      }
+    },
+    "grass_brown1": {
+      "name": "grass_brown1",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 58,
+        "y": 57
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": ".IbJcmyd38aRuOlrMfhdZkAoJptyXRUr",
+      "sourceUrl": "/api/v1/animation-library/.IbJcmyd38aRuOlrMfhdZkAoJptyXRUr/grass_brown1.png",
+      "sourceSize": {
+        "x": 58,
+        "y": 57
+      }
+    },
+    "grass_brown2": {
+      "name": "grass_brown2",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 82,
+        "y": 70
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "m7Uh3Pb6mYkKWj1sodlftk.c0f0YwxQ4",
+      "sourceUrl": "/api/v1/animation-library/m7Uh3Pb6mYkKWj1sodlftk.c0f0YwxQ4/grass_brown2.png",
+      "sourceSize": {
+        "x": 82,
+        "y": 70
+      }
+    },
+    "ground_cake": {
+      "name": "ground_cake",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "EEhEHTAMzbeq2iRtC4FU1LbJHlyIZ.zI",
+      "sourceUrl": "/api/v1/animation-library/EEhEHTAMzbeq2iRtC4FU1LbJHlyIZ.zI/ground_cake.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_cake_broken": {
+      "name": "ground_cake_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Gg.3k9Jeyeup01aOMiLjyDwaat7Ej1va",
+      "sourceUrl": "/api/v1/animation-library/Gg.3k9Jeyeup01aOMiLjyDwaat7Ej1va/ground_cake_broken.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_cake_small": {
+      "name": "ground_cake_small",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 201,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "IYiXOIP5CHhfKEH.fYp113FteXYYZNd.",
+      "sourceUrl": "/api/v1/animation-library/IYiXOIP5CHhfKEH.fYp113FteXYYZNd./ground_cake_small.png",
+      "sourceSize": {
+        "x": 201,
+        "y": 100
+      }
+    },
+    "ground_cake_small_broken": {
+      "name": "ground_cake_small_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "g4e5gm6YiL06uMzKjSZ0iyWkj1dn1Fo8",
+      "sourceUrl": "/api/v1/animation-library/g4e5gm6YiL06uMzKjSZ0iyWkj1dn1Fo8/ground_cake_small_broken.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_grass": {
+      "name": "ground_grass",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "4CGMEe0JQlpJGYB5vs2T9LnuZwYR8wm6",
+      "sourceUrl": "/api/v1/animation-library/4CGMEe0JQlpJGYB5vs2T9LnuZwYR8wm6/ground_grass.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_grass_broken": {
+      "name": "ground_grass_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "TqnVHNje5qyaEXnKZT6dxqb41_xkuYJn",
+      "sourceUrl": "/api/v1/animation-library/TqnVHNje5qyaEXnKZT6dxqb41_xkuYJn/ground_grass_broken.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_grass_small": {
+      "name": "ground_grass_small",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 201,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "KscWlgZh1QjKRE6RHc6NmFPjhXGQrBQq",
+      "sourceUrl": "/api/v1/animation-library/KscWlgZh1QjKRE6RHc6NmFPjhXGQrBQq/ground_grass_small.png",
+      "sourceSize": {
+        "x": 201,
+        "y": 100
+      }
+    },
+    "ground_grass_small_broken": {
+      "name": "ground_grass_small_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3ftYf1Xg0hrgLXzpQk3VXpD0JPq69Vuv",
+      "sourceUrl": "/api/v1/animation-library/3ftYf1Xg0hrgLXzpQk3VXpD0JPq69Vuv/ground_grass_small_broken.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_sand": {
+      "name": "ground_sand",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "dcWuKd2b35TgZ17UbIGOpQUwDTr7HQQq",
+      "sourceUrl": "/api/v1/animation-library/dcWuKd2b35TgZ17UbIGOpQUwDTr7HQQq/ground_sand.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_sand_broken": {
+      "name": "ground_sand_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "cfHYovrzB8ofE8GDxFc_mQu27ytLWrKd",
+      "sourceUrl": "/api/v1/animation-library/cfHYovrzB8ofE8GDxFc_mQu27ytLWrKd/ground_sand_broken.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_sand_small": {
+      "name": "ground_sand_small",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 201,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "lPyIPNLFspR02Irh13mtKuscpAgGBZYt",
+      "sourceUrl": "/api/v1/animation-library/lPyIPNLFspR02Irh13mtKuscpAgGBZYt/ground_sand_small.png",
+      "sourceSize": {
+        "x": 201,
+        "y": 100
+      }
+    },
+    "ground_sand_small_broken": {
+      "name": "ground_sand_small_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "rSl8OtjaFct17jG5VumVG7xMbGNlmRce",
+      "sourceUrl": "/api/v1/animation-library/rSl8OtjaFct17jG5VumVG7xMbGNlmRce/ground_sand_small_broken.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_snow": {
+      "name": "ground_snow",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "CCURMjC6yl9mgkEldeW9jHHx6otf5OMZ",
+      "sourceUrl": "/api/v1/animation-library/CCURMjC6yl9mgkEldeW9jHHx6otf5OMZ/ground_snow.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_snow_broken": {
+      "name": "ground_snow_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "yNW0arlImHLnDLkCvHUOepztoJ3G.M97",
+      "sourceUrl": "/api/v1/animation-library/yNW0arlImHLnDLkCvHUOepztoJ3G.M97/ground_snow_broken.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_snow_small": {
+      "name": "ground_snow_small",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 201,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "B0NLHi95RykT6G5JvMBLQIllxa5fzpXG",
+      "sourceUrl": "/api/v1/animation-library/B0NLHi95RykT6G5JvMBLQIllxa5fzpXG/ground_snow_small.png",
+      "sourceSize": {
+        "x": 201,
+        "y": 100
+      }
+    },
+    "ground_snow_small_broken": {
+      "name": "ground_snow_small_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "XoHqvs9_W9oizLAZtQY.8tjcZ4y_d2BL",
+      "sourceUrl": "/api/v1/animation-library/XoHqvs9_W9oizLAZtQY.8tjcZ4y_d2BL/ground_snow_small_broken.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_stone": {
+      "name": "ground_stone",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "a2ClEr_Er0KQHZnuG1c5hegoLA3BoSLq",
+      "sourceUrl": "/api/v1/animation-library/a2ClEr_Er0KQHZnuG1c5hegoLA3BoSLq/ground_stone.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_stone_broken": {
+      "name": "ground_stone_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "FXmyf3Ve6kD9y79jA4.cWirAOMDpHqO8",
+      "sourceUrl": "/api/v1/animation-library/FXmyf3Ve6kD9y79jA4.cWirAOMDpHqO8/ground_stone_broken.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_stone_small": {
+      "name": "ground_stone_small",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "RhQ_WQEeQmbvQYGpqXdQQnNIO6E5DnW0",
+      "sourceUrl": "/api/v1/animation-library/RhQ_WQEeQmbvQYGpqXdQQnNIO6E5DnW0/ground_stone_small.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_stone_small_broken": {
+      "name": "ground_stone_small_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HU7lQRVB1gDvt3WBrPQ1ojC9n5cYZBIZ",
+      "sourceUrl": "/api/v1/animation-library/HU7lQRVB1gDvt3WBrPQ1ojC9n5cYZBIZ/ground_stone_small_broken.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_wood": {
+      "name": "ground_wood",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "C5wQj7CxjnG5QkLmsDKq.9pQGfA6Lq6_",
+      "sourceUrl": "/api/v1/animation-library/C5wQj7CxjnG5QkLmsDKq.9pQGfA6Lq6_/ground_wood.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_wood_broken": {
+      "name": "ground_wood_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 380,
+        "y": 94
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "uG5mCMYjZ3VLn3bfXQJK0sU2UyncJeEH",
+      "sourceUrl": "/api/v1/animation-library/uG5mCMYjZ3VLn3bfXQJK0sU2UyncJeEH/ground_wood_broken.png",
+      "sourceSize": {
+        "x": 380,
+        "y": 94
+      }
+    },
+    "ground_wood_small": {
+      "name": "ground_wood_small",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "iV.qTEFeQEhXidVHERGlXfKl1rIgM2ex",
+      "sourceUrl": "/api/v1/animation-library/iV.qTEFeQEhXidVHERGlXfKl1rIgM2ex/ground_wood_small.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "ground_wood_small_broken": {
+      "name": "ground_wood_small_broken",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 100
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "6CZLxiJFudtR8MZAext_pqH7W7_rtAoh",
+      "sourceUrl": "/api/v1/animation-library/6CZLxiJFudtR8MZAext_pqH7W7_rtAoh/ground_wood_small_broken.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 100
+      }
+    },
+    "mushroom_brown": {
+      "name": "mushroom_brown",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 81,
+        "y": 85
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "gKcyrDxQ5fsV01A8w0A5PfcC7EIVzs8m",
+      "sourceUrl": "/api/v1/animation-library/gKcyrDxQ5fsV01A8w0A5PfcC7EIVzs8m/mushroom_brown.png",
+      "sourceSize": {
+        "x": 81,
+        "y": 85
+      }
+    },
+    "mushroom_red": {
+      "name": "mushroom_red",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 81,
+        "y": 99
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "cBZ__A5yFN.P0fPRyNbN_r.It8IMYrze",
+      "sourceUrl": "/api/v1/animation-library/cBZ__A5yFN.P0fPRyNbN_r.It8IMYrze/mushroom_red.png",
+      "sourceSize": {
+        "x": 81,
+        "y": 99
+      }
+    },
     "platform": {
       "name": "platform",
       "aliases": [
@@ -516,6 +1136,86 @@
       "sourceSize": {
         "x": 90,
         "y": 155
+      }
+    },
+    "spike_bottom": {
+      "name": "spike_bottom",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 51,
+        "y": 87
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": ".IyRgXEkC_Ei3JQQpUMRgNdXDhm4BDBP",
+      "sourceUrl": "/api/v1/animation-library/.IyRgXEkC_Ei3JQQpUMRgNdXDhm4BDBP/spike_bottom.png",
+      "sourceSize": {
+        "x": 51,
+        "y": 87
+      }
+    },
+    "spike_top": {
+      "name": "spike_top",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 51,
+        "y": 87
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "dPuX_KR2cfML4E9ZeA_ZJs0Nym2ttF25",
+      "sourceUrl": "/api/v1/animation-library/dPuX_KR2cfML4E9ZeA_ZJs0Nym2ttF25/spike_top.png",
+      "sourceSize": {
+        "x": 51,
+        "y": 87
+      }
+    },
+    "spikes_bottom": {
+      "name": "spikes_bottom",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 95,
+        "y": 53
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "jDb_onK2ka_KE6C4srBVtL58Nl3fRrRg",
+      "sourceUrl": "/api/v1/animation-library/jDb_onK2ka_KE6C4srBVtL58Nl3fRrRg/spikes_bottom.png",
+      "sourceSize": {
+        "x": 95,
+        "y": 53
+      }
+    },
+    "spikes_top": {
+      "name": "spikes_top",
+      "aliases": [
+        "jumper",
+        "environment",
+        "scenery"
+      ],
+      "frameSize": {
+        "x": 95,
+        "y": 53
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fNzuTBNnumDBwwDFLjE2pOB59lxR3YX.",
+      "sourceUrl": "/api/v1/animation-library/fNzuTBNnumDBwwDFLjE2pOB59lxR3YX./spikes_top.png",
+      "sourceSize": {
+        "x": 95,
+        "y": 53
       }
     },
     "springMan_hurt": {
@@ -729,6 +1429,7 @@
       "bunny1_stand",
       "bunny1_walk1",
       "bunny1_walk2",
+      "cactus",
       "cloud",
       "flyMan_fly",
       "flyMan_jump",
@@ -736,12 +1437,46 @@
       "flyMan_still_fly",
       "flyMan_still_jump",
       "flyMan_still_stand",
+      "grass1",
+      "grass2",
+      "grass_brown1",
+      "grass_brown2",
+      "ground_cake",
+      "ground_cake_broken",
+      "ground_cake_small",
+      "ground_cake_small_broken",
+      "ground_grass",
+      "ground_grass_broken",
+      "ground_grass_small",
+      "ground_grass_small_broken",
+      "ground_sand",
+      "ground_sand_broken",
+      "ground_sand_small",
+      "ground_sand_small_broken",
+      "ground_snow",
+      "ground_snow_broken",
+      "ground_snow_small",
+      "ground_snow_small_broken",
+      "ground_stone",
+      "ground_stone_broken",
+      "ground_stone_small",
+      "ground_stone_small_broken",
+      "ground_wood",
+      "ground_wood_broken",
+      "ground_wood_small",
+      "ground_wood_small_broken",
+      "mushroom_brown",
+      "mushroom_red",
       "spikeBall1",
       "spikeBall_2",
       "spikeMan_jump",
       "spikeMan_stand",
       "spikeMan_walk1",
       "spikeMan_walk2",
+      "spike_bottom",
+      "spike_top",
+      "spikes_bottom",
+      "spikes_top",
       "springMan_hurt",
       "springMan_stand",
       "sun1",
@@ -766,6 +1501,83 @@
     ],
     "bunny1_walk2": [
       "bunny1_walk2"
+    ],
+    "cactus": [
+      "cactus"
+    ],
+    "environment": [
+      "cactus",
+      "grass1",
+      "grass2",
+      "grass_brown1",
+      "grass_brown2",
+      "ground_cake",
+      "ground_cake_broken",
+      "ground_cake_small",
+      "ground_cake_small_broken",
+      "ground_grass",
+      "ground_grass_broken",
+      "ground_grass_small",
+      "ground_grass_small_broken",
+      "ground_sand",
+      "ground_sand_broken",
+      "ground_sand_small",
+      "ground_sand_small_broken",
+      "ground_snow",
+      "ground_snow_broken",
+      "ground_snow_small",
+      "ground_snow_small_broken",
+      "ground_stone",
+      "ground_stone_broken",
+      "ground_stone_small",
+      "ground_stone_small_broken",
+      "ground_wood",
+      "ground_wood_broken",
+      "ground_wood_small",
+      "ground_wood_small_broken",
+      "mushroom_brown",
+      "mushroom_red",
+      "spike_bottom",
+      "spike_top",
+      "spikes_bottom",
+      "spikes_top"
+    ],
+    "scenery": [
+      "cactus",
+      "grass1",
+      "grass2",
+      "grass_brown1",
+      "grass_brown2",
+      "ground_cake",
+      "ground_cake_broken",
+      "ground_cake_small",
+      "ground_cake_small_broken",
+      "ground_grass",
+      "ground_grass_broken",
+      "ground_grass_small",
+      "ground_grass_small_broken",
+      "ground_sand",
+      "ground_sand_broken",
+      "ground_sand_small",
+      "ground_sand_small_broken",
+      "ground_snow",
+      "ground_snow_broken",
+      "ground_snow_small",
+      "ground_snow_small_broken",
+      "ground_stone",
+      "ground_stone_broken",
+      "ground_stone_small",
+      "ground_stone_small_broken",
+      "ground_wood",
+      "ground_wood_broken",
+      "ground_wood_small",
+      "ground_wood_small_broken",
+      "mushroom_brown",
+      "mushroom_red",
+      "spike_bottom",
+      "spike_top",
+      "spikes_bottom",
+      "spikes_top"
     ],
     "cloud": [
       "cloud"
@@ -815,6 +1627,96 @@
     "ghost_standing": [
       "ghost_standing"
     ],
+    "grass1": [
+      "grass1"
+    ],
+    "grass2": [
+      "grass2"
+    ],
+    "grass_brown1": [
+      "grass_brown1"
+    ],
+    "grass_brown2": [
+      "grass_brown2"
+    ],
+    "ground_cake": [
+      "ground_cake"
+    ],
+    "ground_cake_broken": [
+      "ground_cake_broken"
+    ],
+    "ground_cake_small": [
+      "ground_cake_small"
+    ],
+    "ground_cake_small_broken": [
+      "ground_cake_small_broken"
+    ],
+    "ground_grass": [
+      "ground_grass"
+    ],
+    "ground_grass_broken": [
+      "ground_grass_broken"
+    ],
+    "ground_grass_small": [
+      "ground_grass_small"
+    ],
+    "ground_grass_small_broken": [
+      "ground_grass_small_broken"
+    ],
+    "ground_sand": [
+      "ground_sand"
+    ],
+    "ground_sand_broken": [
+      "ground_sand_broken"
+    ],
+    "ground_sand_small": [
+      "ground_sand_small"
+    ],
+    "ground_sand_small_broken": [
+      "ground_sand_small_broken"
+    ],
+    "ground_snow": [
+      "ground_snow"
+    ],
+    "ground_snow_broken": [
+      "ground_snow_broken"
+    ],
+    "ground_snow_small": [
+      "ground_snow_small"
+    ],
+    "ground_snow_small_broken": [
+      "ground_snow_small_broken"
+    ],
+    "ground_stone": [
+      "ground_stone"
+    ],
+    "ground_stone_broken": [
+      "ground_stone_broken"
+    ],
+    "ground_stone_small": [
+      "ground_stone_small"
+    ],
+    "ground_stone_small_broken": [
+      "ground_stone_small_broken"
+    ],
+    "ground_wood": [
+      "ground_wood"
+    ],
+    "ground_wood_broken": [
+      "ground_wood_broken"
+    ],
+    "ground_wood_small": [
+      "ground_wood_small"
+    ],
+    "ground_wood_small_broken": [
+      "ground_wood_small_broken"
+    ],
+    "mushroom_brown": [
+      "mushroom_brown"
+    ],
+    "mushroom_red": [
+      "mushroom_red"
+    ],
     "platform": [
       "platform"
     ],
@@ -835,6 +1737,18 @@
     ],
     "spikeMan_walk2": [
       "spikeMan_walk2"
+    ],
+    "spike_bottom": [
+      "spike_bottom"
+    ],
+    "spike_top": [
+      "spike_top"
+    ],
+    "spikes_bottom": [
+      "spikes_bottom"
+    ],
+    "spikes_top": [
+      "spikes_top"
     ],
     "springMan_hurt": [
       "springMan_hurt"
