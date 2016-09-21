@@ -15,7 +15,7 @@
     localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
 
     $('#markdown-instructions-preview')
-      .html(marked(editor.getValue()))
+      .html(marked(editor.getValue(), {renderer: stylelessRenderer}))
       .children('details').details();
   }, true);
 
@@ -25,5 +25,5 @@
   }
 
   $('#markdown-instructions-preview')
-      .html(marked(mdEditor.getValue()))
+      .html(marked(mdEditor.getValue(), {renderer: stylelessRenderer}))
       .children('details').details();
