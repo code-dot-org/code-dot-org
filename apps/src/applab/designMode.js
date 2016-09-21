@@ -280,7 +280,7 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
-    case 'screen-image':
+    case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
       // We stretch the image to fit the element
@@ -288,12 +288,18 @@ designMode.updateProperty = function (element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ?
-        assetPrefix.renderIconToString(value, element) :
-        assetPrefix.fixPath(encodeURIComponent(value));
+      let url;
+      if (ICON_PREFIX_REGEX.test(value)) {
+        url = assetPrefix.renderIconToString(value, element);
+      } else {
+        const screenImage = new Image();
+        screenImage.src = assetPrefix.fixPath(value);
+        url = screenImage.src;
+      }
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
+    }
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
