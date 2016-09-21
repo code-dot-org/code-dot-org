@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Body Element\r\n\r\nBody element\r\n\r\nbackground-color\r\n\r\n# Do This\r\n\r\n* Add body element around all the content\r\n* Use a selector for the body element to set the background color of the page to something other than white",
+    "markdown_instructions": "# Body Element\r\n\r\nIn order to style the text of the paragraphs on the last level you had to start using a tag to mark the paragraph. It is good convention to always put text inside paragraph tags.\r\n\r\nWhat if you wanted to put a background color on the whole page? Is there a way to style all the content on the page.\r\n\r\nA couple lessons ago we learned about the head element which contains all the metadata about the HTML document. There is an equivilant element that is used to hold all the content of the web page. It is the `<body>` element.\r\n\r\nIn order to set the background color of any element you can use the `background-color` property.  The style rule for the body would look like this:\r\n\r\n<pre>\r\nbody {\r\n\tbackground-color:aqua;\r\n}\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Add `<body>` element around all the content (anything that is not inside the `<head>` element should be inside the `<body>`element).\r\n* Use a selector for the body element to set the background color of the page to something other than white",
     "project_template_level_name": "CSDU2 - Guinness Template"
   },
   "published": true,

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" Need to create a project for students to work on\"\r\n    }\r\n  ]\r\n}"
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!-- Cat face image students will need: https://static.pexels.com/photos/115011/cat-face-close-view-115011.jpeg --> \\n<!DOCTYPE html> \\n<html> \\n \\n    <h1> Dogs vs Cats </h1> \\n \\n    <h3>Dogs</h3> \\n  <img src=\\\"https://upload.wikimedia.org/wikipedia/commons/5/55/Dog_Jump.jpg\\\" \\n      alt=\\\"dog jumping\\\"/> \\n \\n  <h3>Cats</h3> \\n \\n</html>\"\r\n    }\r\n  ]\r\n}"
   },
   "published": true,
   "notes": "",
