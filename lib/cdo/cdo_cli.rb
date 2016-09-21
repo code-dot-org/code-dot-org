@@ -1,6 +1,10 @@
 #
 # Code.org command-line script utility methods
 #
+# Please keep this file's dependencies light - it's designed to be used in
+# script utilities that themselves have very few dependencies so that they load
+# and run very fast.  Thanks!
+#
 module CdoCli
   # Terminal style utilities for fashionable output
   def stylize(text, color_code)
