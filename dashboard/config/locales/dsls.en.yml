@@ -149,6 +149,7 @@ en:
       Binary as an Encoding Scheme: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Creating Debugging Strat: {}
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
@@ -3655,6 +3656,7 @@ en:
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
+        Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
         Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
         Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
       CSPFinal_Question_10:
