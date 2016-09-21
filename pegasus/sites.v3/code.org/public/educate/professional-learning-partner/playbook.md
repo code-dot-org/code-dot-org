@@ -4,7 +4,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
-<%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Find archives of Code.org email communications, templates for your own communications, and branding guidelines.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/communications"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Archives of Code.org emails, communication templates, and branding guidelines.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/communications"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Community Building', description_t: "Explore resources and ideas for building a strong, interconnected CS community in your region.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/community"), button_s: "Learn more"} %>
 
@@ -12,7 +12,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Curriculum Guides', description_t: "Links to the homepage and curriculum guide for each of Code.org’s K-12 course offerings", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/curriculum"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Facilitator Support', description_t: "All of the supports you need to onboard confident, competent facilitators including a workshop one-pager, example contract, and payment information.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/facilitator-support"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Facilitator Support', description_t: "All of the supports you need to onboard facilitators including a workshop one-pager, example contract, and payment information.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/facilitator-support"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'FAQ', description_t: "Can't find what you're looking for? Check the FAQ.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/faq"), button_s: "Learn more"} %>
 
