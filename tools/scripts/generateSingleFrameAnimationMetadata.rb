@@ -35,6 +35,7 @@ class MetadataBuilder
         metadata = {}
         metadata['name'] = basename
         metadata['aliases'] = @options[:aliases] || []
+        metadata['frameCount'] = 1
         metadata['frameSize'] = PngUtils.dimensions_from_png(png_file.read)
         metadata['looping'] = false
         metadata['frameDelay'] = 2
