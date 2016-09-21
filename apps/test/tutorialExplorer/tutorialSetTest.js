@@ -2,7 +2,6 @@
 
 var assert = require('assert');
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
-import ReactTestUtils from 'react-addons-test-utils';
 var chai = require('chai');
 
 chai.should();
