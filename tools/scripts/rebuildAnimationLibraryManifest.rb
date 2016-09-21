@@ -97,12 +97,13 @@ class ManifestBuilder
 
     info "Building alias map..."
     alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size) unless @options[:quiet]
-    alias_map = {}
+    alias_map = Hash.new {|h, k| h[k] = []}
     animation_metadata_by_name.each do |name, metadata|
-      aliases = [name] + (metadata['aliases'] || [])
+      aliases = [name]
+      aliases += metadata['aliases'] unless metadata['aliases'].nil?
       aliases.each do |aliaz|
         # Push name into target array, deduplicate, and sort
-        alias_map[aliaz] = ((alias_map[aliaz] || []) + [name]).uniq.sort
+        alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
       end
       alias_progress_bar.increment unless @options[:quiet]
     end
