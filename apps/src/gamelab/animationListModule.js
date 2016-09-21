@@ -173,7 +173,7 @@ function compareNumbers(a, b) {
 /**
  * Given a name and an animationList, determine if the name is unique.
  */
-function isNameUnique(name, animationList) {
+export function isNameUnique(name, animationList) {
   for (let animation in animationList) {
     if (animationList[animation].name === name) {
       return false;
@@ -200,7 +200,6 @@ function generateAnimationName(baseName, animationList) {
     }
   }
   unavailableNumbers.sort(compareNumbers);
-  console.log(unavailableNumbers);
   let availableNumber = 1;
   for (let i = 0; i < unavailableNumbers.length; i++) {
     if (availableNumber === unavailableNumbers[i]) {

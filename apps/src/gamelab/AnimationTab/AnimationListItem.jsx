@@ -4,7 +4,8 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as PropTypes from '../PropTypes';
-import {setAnimationName, cloneAnimation, deleteAnimation, setAnimationFrameDelay, setAnimationLooping} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation,setAnimationFrameDelay, setAnimationLooping,
+  isNameUnique} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -81,7 +82,6 @@ const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
     animationKey: PropTypes.AnimationKey.isRequired,
-    animationProps: PropTypes.AnimationProps.isRequired,
     animationList: PropTypes.AnimationList.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
@@ -96,8 +96,8 @@ const AnimationListItem = React.createClass({
 
   getInitialState: function () {
     return {
-      frameDelay: this.props.animationProps.frameDelay,
-      name: this.props.animationProps.name,
+      frameDelay: this.props.animationList.propsByKey[this.props.animationKey].frameDelay,
+      name: this.props.animationList.propsByKey[this.props.animationKey].name,
       isNameValid: true
     };
   },
@@ -106,14 +106,14 @@ const AnimationListItem = React.createClass({
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
-    this.setState({frameDelay: nextProps.animationProps.frameDelay});
+    this.setState({frameDelay: nextProps.animationList.propsByKey[this.props.animationKey].frameDelay});
     if (this.props.isSelected && !nextProps.isSelected) {
-      this.setState({name: this.props.animationProps.name, isNameValid: true});
+      this.setState({name: this.props.animationList.propsByKey[this.props.animationKey].name, isNameValid: true});
     }
   },
 
   componentWillMount() {
-    this.setState({frameDelay: this.props.animationProps.frameDelay});
+    this.setState({frameDelay: this.props.animationList.propsByKey[this.props.animationKey].frameDelay});
     this.debouncedFrameDelay = _.debounce(() => {
       const latestFrameDelay = this.state.frameDelay;
       this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
@@ -138,20 +138,10 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationLooping(this.props.animationKey, looping);
   },
 
-  //Given a name and an animationList, determine if the name is unique.
-  isNameUnique(name, animationList) {
-    for (let animation in animationList) {
-      if (animationList[animation].name === name) {
-        return false;
-      }
-    }
-    return true;
-  },
-
   onNameChange(event) {
     const newName = event.target.value;
     this.setState({name: newName});
-    if (this.isNameUnique(newName, this.props.animationList.propsByKey)) {
+    if (isNameUnique(newName, this.props.animationList.propsByKey)) {
       this.setState({isNameValid: true});
       this.props.setAnimationName(this.props.animationKey, newName);
     } else {
@@ -249,7 +239,11 @@ const AnimationListItem = React.createClass({
         <div style={arrowStyle}></div>
         <ListItemThumbnail
           ref="thumbnail"
-          animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}
+          animationProps={
+            Object.assign({},
+            this.props.animationList.propsByKey[this.props.animationKey],
+            {frameDelay: this.state.frameDelay})
+          }
           isSelected={this.props.isSelected}
         />
         {animationName}
@@ -259,7 +253,7 @@ const AnimationListItem = React.createClass({
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation}
             onLoopingChanged={this.setAnimationLooping}
-            looping={this.props.animationProps.looping}
+            looping={this.props.animationList.propsByKey[this.props.animationKey].looping}
             frameDelay={this.convertFrameDelayToLockedValues(this.state.frameDelay)}
           />}
       </div>
