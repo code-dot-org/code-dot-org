@@ -288,7 +288,9 @@ designMode.updateProperty = function (element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ? assetPrefix.renderIconToString(value, element) : assetPrefix.fixPath(value);
+      var url = ICON_PREFIX_REGEX.test(value) ?
+        assetPrefix.renderIconToString(value, element) :
+        assetPrefix.fixPath(encodeURIComponent(value));
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
