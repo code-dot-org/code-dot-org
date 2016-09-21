@@ -739,6 +739,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.42.0)
   ruby-prof
+  ruby-progressbar
   sass-rails!
   scss_lint
   sdoc

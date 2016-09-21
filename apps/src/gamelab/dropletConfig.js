@@ -1,6 +1,6 @@
 /* global dashboard */
 
-var msg = require('./locale');
+var msg = require('@cdo/gamelab/locale');
 var api = require('./apiJavascript.js');
 var consoleApi = require('../consoleApi');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
