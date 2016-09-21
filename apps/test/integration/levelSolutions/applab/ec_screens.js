@@ -564,6 +564,47 @@ module.exports = {
     },
 
     {
+      description: "add a background with spaces",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        var designModeButton = document.getElementById('designModeButton');
+
+        $("#design_screen1").click();
+
+        validatePropertyRow(0, 'id', 'screen1', assert);
+
+        // take advantage of the fact that we expose the filesystem via
+        var assetUrl = '/base/static/flappy promo.png';
+        var encodedAssetUrl = '/base/static/flappy%20promo.png';
+        var imageInput = $("#design-properties input").eq(2)[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        var screenElement = document.getElementById('design_screen1');
+        assert.include(screenElement.style.backgroundImage, encodedAssetUrl);
+
+        assert.equal(screenElement.style.backgroundSize, '320px 450px', 'image stretched');
+
+        // make sure dimensions didn't change
+        assert.equal(screenElement.style.width, '320px');
+        assert.equal(screenElement.style.height, '450px');
+
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "screen dropdown",
       editCode: true,
       xml: '',
