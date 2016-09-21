@@ -25,14 +25,16 @@ class MetadataBuilder
   end
 
   def build_single_frame_metadatas(files)
+    unique_files = files.uniq
+
     # Load each file and generate a metadata file for it
-    Parallel.each(files.uniq, progress: !@options[:quiet] && !@options[:verbose]) do |filename|
+    Parallel.map(unique_files) do |filename|
       dirname = File.dirname(filename)
       basename = File.basename(filename, '.png')
       File.open(filename) do |png_file|
         metadata = {}
         metadata['name'] = basename
-        metadata['aliases'] = []
+        metadata['aliases'] = @options[:aliases] || []
         metadata['frameSize'] = PngUtils.dimensions_from_png(png_file.read)
         metadata['looping'] = false
         metadata['frameDelay'] = 2
@@ -44,6 +46,7 @@ class MetadataBuilder
         end
       end
     end
+    info "Generated metadata for #{unique_files.size} files"
   end
 
   def verbose(s)
@@ -74,6 +77,10 @@ cli_parser = OptionParser.new do |opts|
 
     Options:
   HELP
+
+  opts.on("--aliases one,two,...", Array, "Search aliases to include in metadata for ALL processed files") do |list|
+    options[:aliases] = list
+  end
 
   opts.on('-q', '--quiet', 'Only log warnings and errors') do
     options[:quiet] = true
