@@ -4,11 +4,11 @@ import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   beforeEach(() => {
-    window.Applab = Object.assign({}, window.Applab, {
+    window.Applab = {
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
-    });
+    };
     getDatabase(Applab.channelId).autoFlush();
     return getConfigRef().set({
       limits: {

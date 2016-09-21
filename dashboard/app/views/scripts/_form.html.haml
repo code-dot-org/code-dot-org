@@ -1,20 +1,34 @@
-= form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
-  - if @script && @script.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@script.errors.count, 'error')
-        prohibited this script from being saved:
+%table
+  %tr
+    %td(style='vertical-align: top;')
+      = form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
+        - if @script && @script.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(@script.errors.count, 'error')
+              prohibited this script from being saved:
+            %ul
+              - @script.errors.full_messages.each do |msg|
+                %li= msg
+        .field
+          = f.label :name
+          = f.text_field :name
+        .script_text
+          - rows = @script_file ? @script_file.lines.count + 10 : 5
+          = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
+        .actions
+          = f.submit
+    %td(style='vertical-align: top;padding-left: 20px')
+      %h4 Most recently updated levels:
       %ul
-        - @script.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :name
-    = f.text_field :name
-  .script_text
-    - rows = @script_file ? @script_file.lines.count + 10 : 5
-    = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
-  .actions
-    = f.submit
+        - Level.where.not(user_id: nil).order('updated_at desc').select(:id, :name).take(25).each do |level|
+          %li.level_name
+            = "'#{level.name}'"
+            %a{href: edit_level_path(level)}
+              %i.fa.fa-pencil-square-o
+      = link_to levels_path do
+        see all levels...
+
 - if @show_all_instructions
   - @script.stages.each do |stage|
     %br
