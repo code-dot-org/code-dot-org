@@ -7,9 +7,17 @@ module CdoCli
     "\e[#{color_code}m#{text}\e[0m"
   end
 
-  def bold(text); stylize(text, 1); end
-  def dim(text); stylize(text, 2); end
-  def underline(text); stylize(text, 4); end
+  def bold(text)
+    stylize(text, 1)
+  end
+
+  def dim(text)
+    stylize(text, 2)
+  end
+
+  def underline(text)
+    stylize(text, 4)
+  end
 end
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
