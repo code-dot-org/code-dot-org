@@ -64,7 +64,9 @@ class ManifestBuilder
     # extra S3 request to get version IDs or image dimensions.
     info "Building animation metadata..."
     metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
-    animation_metadata_by_name = Hash[Parallel.map(animations_by_name) do |name, objects|
+    animation_metadata_by_name = Hash[Parallel.map(animations_by_name, finish: lambda do |_, _, _|
+      metadata_progress_bar.increment unless @options[:verbose] || @options[:quiet]
+    end) do |name, objects|
       # TODO: Validate that every JSON is paired with a PNG and vice-versa
       # Actually download the JSON from S3
       json_response = objects['json'].get
@@ -88,7 +90,6 @@ class ManifestBuilder
 #{JSON.pretty_generate metadata}
       EOS
 
-      metadata_progress_bar.increment unless @options[:verbose] || @options[:quiet]
       [name, metadata]
     end]
     metadata_progress_bar.finish unless @options[:verbose] || @options[:quiet]
