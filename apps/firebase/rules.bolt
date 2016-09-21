@@ -46,6 +46,10 @@ path /v3/channels/{channelId}/counters/limits/60 {
   }
 }
 
+path /v3/channels/{channelId}/metadata is Metadata {
+  write() { isLoggedIn() }
+}
+
 path /v3/channels/{channelId}/storage is Storage {
   write() { isLoggedIn() }
 }
@@ -79,6 +83,20 @@ type RateLimitCounters {
 type RateLimitCounter {
   lastResetTime: Number | Null
   writeCount: Number | Null
+}
+
+// metadata
+
+type Metadata {
+  tables: TableMetadata
+}
+
+type TableMetadata {
+  columns: Columns[]
+}
+
+type Columns {
+  exists: Boolean
 }
 
 // storage
