@@ -52,6 +52,7 @@ const styles = {
 const DataTable = React.createClass({
   propTypes: {
     // from redux state
+    tableColumns: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     tableName: React.PropTypes.string.isRequired,
     // "if all of the keys are integers, and more than half of the keys between 0 and
     // the maximum key in the object have non-empty values, then Firebase will render
@@ -362,6 +363,7 @@ const DataTable = React.createClass({
 
 export default connect(state => ({
   view: state.data.view,
+  tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || {},
   tableName: state.data.tableName || ''
 }), dispatch => ({
