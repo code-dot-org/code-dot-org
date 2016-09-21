@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
-import stylelessRenderer from '../../StylelessRenderer';
+import renderer from '../../StylelessRenderer';
 import { connect } from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
@@ -475,13 +475,13 @@ var TopInstructions = React.createClass({
 
     const markdown = (this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions;
-    const renderedMarkdown = processMarkdown(markdown, {renderer: stylelessRenderer});
+    const renderedMarkdown = processMarkdown(markdown, { renderer });
     const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
-      processMarkdown(this.props.shortInstructions2, {renderer: stylelessRenderer}) : undefined;
+      processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
 
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
