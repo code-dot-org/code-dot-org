@@ -26,8 +26,8 @@ require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'
 include CdoCli
 
-DEFAULT_S3_BUCKET = 'cdo-animation-library'
-DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'
+DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
+DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'.freeze
 
 class ManifestBuilder
   def initialize(options)
