@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Welcome to Web Lab!\r\n\r\nHTML is a language to express content on the web. HTML stands for Hypertext Markup Language. This means you are just using special sets of characters to define the content of a website.\r\n\r\nThe platform you are in is called Web Lab. It lets you write HTML on one side of the screen and see the results on the other.\r\n\r\n# Do This\r\n\r\n* Use the Inspector Tool to find where the HTML code for “Welcome to Web Lab” appears.\r\n* Try to change the text from \"Welcome to Web Lab\" to something different.\r\n* Try typing something else on the page and see what happens.",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<h1> Welcome to Web Lab!</h1> \\n  <!--You can type in this section to create amazing web pages! Try typing below this line -->  \\n \"\r\n    }\r\n  ]\r\n}"
+    "markdown_instructions": "# Adding Content\r\n\r\nBy typing in the editor area you can add text to your web page.\r\n\r\n# Do This\r\n\r\n* Write a paragraph about your favorite animal\r\n* Write another paragraph about your least favorite animal.\r\n* Above both paragraphs try adding a header that says \"Animals\"",
+    "project_template_level_name": "CSDU2 - Paragraphs and headers Template"
   },
   "published": true,
   "notes": "",
