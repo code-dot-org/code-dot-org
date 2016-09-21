@@ -183,10 +183,9 @@ function isNameUnique(name, animationList) {
 }
 
 /**
- * Given a baseName and a state, provide a unique name
+ * Given a baseName and a animationList, provide a unique name
  */
-function generateAnimationName(baseName, getState) {
-  const animationList = getState().animationList.propsByKey;
+function generateAnimationName(baseName, animationList) {
   let unavailableNumbers = [];
   for (let animation in animationList) {
     let existingName = animationList[animation].name;
@@ -280,7 +279,7 @@ export function addBlankAnimation() {
       type: ADD_ANIMATION,
       key,
       props: {
-        name: generateAnimationName('animation', getState), // TODO: Better generated name?
+        name: generateAnimationName('animation', getState().animationList.propsByKey),
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
@@ -316,7 +315,7 @@ export function addAnimation(key, props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
-    let name = generateAnimationName(props.name, getState);
+    let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
@@ -337,7 +336,7 @@ export function addLibraryAnimation(props) {
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
-    let name = generateAnimationName(props.name, getState);
+    let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
     dashboard.project.projectChanged();
   };
@@ -382,7 +381,7 @@ export function cloneAnimation(key) {
  * @returns {{type: ActionType, key: string, name: string}}
  */
 export function setAnimationName(key, name) {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch({
       type: SET_ANIMATION_NAME,
       key,

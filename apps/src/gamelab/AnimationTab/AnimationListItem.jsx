@@ -138,9 +138,7 @@ const AnimationListItem = React.createClass({
     this.props.setAnimationLooping(this.props.animationKey, looping);
   },
 
-  /**
-   * Given a name and an animationList, determine if the name is unique.
-   */
+  //Given a name and an animationList, determine if the name is unique.
   isNameUnique(name, animationList) {
     for (let animation in animationList) {
       if (animationList[animation].name === name) {
@@ -220,7 +218,7 @@ const AnimationListItem = React.createClass({
   },
 
   render() {
-    const name = this.props.animationProps.name;
+    const name = this.state.name;
     var animationName;
     if (this.props.isSelected) {
       let inValidNameStyle = this.state.isNameValid ? {} : {backgroundColor: '#ffcccc'};
@@ -229,13 +227,13 @@ const AnimationListItem = React.createClass({
           <input
             type="text"
             style={[styles.nameInput, inValidNameStyle]}
-            value={this.state.name}
+            value={name}
             onChange={this.onNameChange}
           />
         </div>
       );
     } else {
-      animationName = <div style={styles.nameLabel}>{this.state.name}</div>;
+      animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
     var tileStyle = [
