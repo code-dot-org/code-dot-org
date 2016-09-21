@@ -15,6 +15,7 @@ import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../color';
 import { connect } from 'react-redux';
+import { getColumnNames } from '../firebaseMetadata';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -167,30 +168,8 @@ const DataTable = React.createClass({
     });
   },
 
-  getColumnNames(records, columns) {
-    // Make sure 'id' is the first column.
-    let columnNames = ['id'];
-
-    Object.keys(records).forEach(id => {
-      const record = JSON.parse(records[id]);
-      Object.keys(record).forEach(columnName => {
-        if (columnNames.indexOf(columnName) === -1) {
-          columnNames.push(columnName);
-        }
-      });
-    });
-
-    columns.forEach(columnName => {
-      if (columnNames.indexOf(columnName) === -1) {
-        columnNames.push(columnName);
-      }
-    });
-
-    return columnNames;
-  },
-
   getNextColumnName() {
-    const names = this.getColumnNames(this.props.tableRecords, this.state.newColumns);
+    const names = getColumnNames(this.props.tableRecords, this.state.newColumns);
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -219,7 +198,7 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    const newColumns = this.getColumnNames(this.props.tableRecords, this.state.newColumns);
+    const newColumns = getColumnNames(this.props.tableRecords, this.state.newColumns);
     FirebaseStorage.clearTable(
       this.props.tableName,
       () => this.setState({newColumns, editingColumn: null}),
@@ -265,7 +244,7 @@ const DataTable = React.createClass({
   },
 
   render() {
-    let columnNames = this.getColumnNames(this.props.tableRecords, this.state.newColumns);
+    let columnNames = getColumnNames(this.props.tableRecords, this.state.newColumns);
     let editingColumn = this.state.editingColumn;
 
     // Always show at least one column.
