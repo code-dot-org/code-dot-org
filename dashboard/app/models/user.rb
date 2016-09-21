@@ -893,7 +893,7 @@ class User < ActiveRecord::Base
   # The synchronous handler for the track_level_progress helper.
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
-    new_level_perfected = false
+    new_csf_level_perfected = false
 
     user_level = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -903,8 +903,9 @@ class User < ActiveRecord::Base
 
       new_level_completed = true if !user_level.passing? &&
         Activity.passing?(new_result)
-      new_level_perfected = true if !user_level.perfect? &&
+      new_csf_level_perfected = true if !user_level.perfect? &&
         new_result == 100 &&
+        Script.get_from_cache(script_id).csf? &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty? &&
@@ -954,7 +955,7 @@ class User < ActiveRecord::Base
       User.track_script_progress(user_id, script_id)
     end
 
-    if new_level_perfected && pairing_user_ids.blank? && !is_navigator
+    if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
     user_level
