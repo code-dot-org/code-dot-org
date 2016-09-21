@@ -3,7 +3,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 
-ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'
+ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains
