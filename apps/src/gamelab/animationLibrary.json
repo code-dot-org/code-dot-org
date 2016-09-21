@@ -112,6 +112,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "MGlAkMv5jwkBrWRqxaawNAUUxbAu_4q5",
       "sourceUrl": "/api/v1/animation-library/MGlAkMv5jwkBrWRqxaawNAUUxbAu_4q5/bronze_1.png",
       "sourceSize": {
@@ -131,6 +132,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "rmVin83DTg9uyruY.Kp1L1dHGbCLfUuZ",
       "sourceUrl": "/api/v1/animation-library/rmVin83DTg9uyruY.Kp1L1dHGbCLfUuZ/bronze_2.png",
       "sourceSize": {
@@ -150,6 +152,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "momuHkKZjtcZqgzYM1Up3tT1.eA6EFrL",
       "sourceUrl": "/api/v1/animation-library/momuHkKZjtcZqgzYM1Up3tT1.eA6EFrL/bronze_3.png",
       "sourceSize": {
@@ -169,6 +172,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "EiGoc4oIjmAngiXKxijPHSMxHpPQxBFE",
       "sourceUrl": "/api/v1/animation-library/EiGoc4oIjmAngiXKxijPHSMxHpPQxBFE/bronze_4.png",
       "sourceSize": {
@@ -188,6 +192,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "sO6yFODWUwslO.ibKqMySyXWHuK51vX4",
       "sourceUrl": "/api/v1/animation-library/sO6yFODWUwslO.ibKqMySyXWHuK51vX4/bubble.png",
       "sourceSize": {
@@ -479,6 +484,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "FaQFQFbMk6E9o1QFp68JJ1a.RWArQGL9",
       "sourceUrl": "/api/v1/animation-library/FaQFQFbMk6E9o1QFp68JJ1a.RWArQGL9/cactus.png",
       "sourceSize": {
@@ -498,6 +504,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "yaVPzORNMY13za5KuW4NeLGBR0wM0cth",
       "sourceUrl": "/api/v1/animation-library/yaVPzORNMY13za5KuW4NeLGBR0wM0cth/carrot.png",
       "sourceSize": {
@@ -517,6 +524,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "wehwerZFlhQ7ycxugoJnU8qcn6GCorTu",
       "sourceUrl": "/api/v1/animation-library/wehwerZFlhQ7ycxugoJnU8qcn6GCorTu/carrot_gold.png",
       "sourceSize": {
@@ -536,6 +544,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "iRqx9eDA8YFNu8U.20wL_oB8IinH4l6q",
       "sourceUrl": "/api/v1/animation-library/iRqx9eDA8YFNu8U.20wL_oB8IinH4l6q/carrots.png",
       "sourceSize": {
@@ -555,6 +564,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "OzJeHyO3hblclcE5CNwc3Pd0vno7VnrD",
       "sourceUrl": "/api/v1/animation-library/OzJeHyO3hblclcE5CNwc3Pd0vno7VnrD/cloud.png",
       "sourceSize": {
@@ -574,6 +584,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "sF0GSLUu5dWG24q5nAhbwkoYJAXeJbEk",
       "sourceUrl": "/api/v1/animation-library/sF0GSLUu5dWG24q5nAhbwkoYJAXeJbEk/coin_bronze.png",
       "sourceSize": {
@@ -593,6 +604,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "jnWPw1JtY0d2pW6UPTzp51XLROU2PieY",
       "sourceUrl": "/api/v1/animation-library/jnWPw1JtY0d2pW6UPTzp51XLROU2PieY/coin_gold.png",
       "sourceSize": {
@@ -612,6 +624,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "D5N4R1W7uIKRfA7TyV5UFGw8Xs_wwwvZ",
       "sourceUrl": "/api/v1/animation-library/D5N4R1W7uIKRfA7TyV5UFGw8Xs_wwwvZ/coin_silver.png",
       "sourceSize": {
@@ -631,6 +644,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "u0VF1dhss5.vwEVP988Bo6nIAW47QT4g",
       "sourceUrl": "/api/v1/animation-library/u0VF1dhss5.vwEVP988Bo6nIAW47QT4g/flyMan_fly.png",
       "sourceSize": {
@@ -650,6 +664,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "sL_rs4Q3xggmqncDTE0tS7UY2YZfAu2W",
       "sourceUrl": "/api/v1/animation-library/sL_rs4Q3xggmqncDTE0tS7UY2YZfAu2W/flyMan_jump.png",
       "sourceSize": {
@@ -669,6 +684,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "Ut5u3ubOFOl4B8NsVnz2PtwuiLBarLJ4",
       "sourceUrl": "/api/v1/animation-library/Ut5u3ubOFOl4B8NsVnz2PtwuiLBarLJ4/flyMan_stand.png",
       "sourceSize": {
@@ -688,6 +704,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "vdqtOIOrI2zF6Wv0ZySS2OVQ980c6poQ",
       "sourceUrl": "/api/v1/animation-library/vdqtOIOrI2zF6Wv0ZySS2OVQ980c6poQ/flyMan_still_fly.png",
       "sourceSize": {
@@ -707,6 +724,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "U12gb6qx1CZfCNVTgtdzA_brtwMcA_rd",
       "sourceUrl": "/api/v1/animation-library/U12gb6qx1CZfCNVTgtdzA_brtwMcA_rd/flyMan_still_jump.png",
       "sourceSize": {
@@ -726,6 +744,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "gWIx122fh3LNoT9leEDN4AcWAh.kEBpT",
       "sourceUrl": "/api/v1/animation-library/gWIx122fh3LNoT9leEDN4AcWAh.kEBpT/flyMan_still_stand.png",
       "sourceSize": {
@@ -764,6 +783,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "U151FHjNrpX73SUYqr8wSqRSYP1PHATu",
       "sourceUrl": "/api/v1/animation-library/U151FHjNrpX73SUYqr8wSqRSYP1PHATu/gold_1.png",
       "sourceSize": {
@@ -783,6 +803,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "whnYAH853zlnMzIIN4xRdX3zF2543aM1",
       "sourceUrl": "/api/v1/animation-library/whnYAH853zlnMzIIN4xRdX3zF2543aM1/gold_2.png",
       "sourceSize": {
@@ -802,6 +823,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "yQfnvP5bDTQBKsvBIJqfv1FgsPHBlWED",
       "sourceUrl": "/api/v1/animation-library/yQfnvP5bDTQBKsvBIJqfv1FgsPHBlWED/gold_3.png",
       "sourceSize": {
@@ -821,6 +843,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "n5Uae1UNM0NyFL26pbUpdr4tJkUgcd6t",
       "sourceUrl": "/api/v1/animation-library/n5Uae1UNM0NyFL26pbUpdr4tJkUgcd6t/gold_4.png",
       "sourceSize": {
@@ -841,6 +864,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "H_Zg7qIZuBUiUoZzyc6dt3hbnBRyg_Sh",
       "sourceUrl": "/api/v1/animation-library/H_Zg7qIZuBUiUoZzyc6dt3hbnBRyg_Sh/grass1.png",
       "sourceSize": {
@@ -861,6 +885,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "QLla_mTrb.zWA.hivS2cQzMGM2r9zipv",
       "sourceUrl": "/api/v1/animation-library/QLla_mTrb.zWA.hivS2cQzMGM2r9zipv/grass2.png",
       "sourceSize": {
@@ -881,6 +906,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": ".IbJcmyd38aRuOlrMfhdZkAoJptyXRUr",
       "sourceUrl": "/api/v1/animation-library/.IbJcmyd38aRuOlrMfhdZkAoJptyXRUr/grass_brown1.png",
       "sourceSize": {
@@ -901,6 +927,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "m7Uh3Pb6mYkKWj1sodlftk.c0f0YwxQ4",
       "sourceUrl": "/api/v1/animation-library/m7Uh3Pb6mYkKWj1sodlftk.c0f0YwxQ4/grass_brown2.png",
       "sourceSize": {
@@ -921,6 +948,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "EEhEHTAMzbeq2iRtC4FU1LbJHlyIZ.zI",
       "sourceUrl": "/api/v1/animation-library/EEhEHTAMzbeq2iRtC4FU1LbJHlyIZ.zI/ground_cake.png",
       "sourceSize": {
@@ -941,6 +969,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "Gg.3k9Jeyeup01aOMiLjyDwaat7Ej1va",
       "sourceUrl": "/api/v1/animation-library/Gg.3k9Jeyeup01aOMiLjyDwaat7Ej1va/ground_cake_broken.png",
       "sourceSize": {
@@ -961,6 +990,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "IYiXOIP5CHhfKEH.fYp113FteXYYZNd.",
       "sourceUrl": "/api/v1/animation-library/IYiXOIP5CHhfKEH.fYp113FteXYYZNd./ground_cake_small.png",
       "sourceSize": {
@@ -981,6 +1011,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "g4e5gm6YiL06uMzKjSZ0iyWkj1dn1Fo8",
       "sourceUrl": "/api/v1/animation-library/g4e5gm6YiL06uMzKjSZ0iyWkj1dn1Fo8/ground_cake_small_broken.png",
       "sourceSize": {
@@ -1001,6 +1032,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "4CGMEe0JQlpJGYB5vs2T9LnuZwYR8wm6",
       "sourceUrl": "/api/v1/animation-library/4CGMEe0JQlpJGYB5vs2T9LnuZwYR8wm6/ground_grass.png",
       "sourceSize": {
@@ -1021,6 +1053,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "TqnVHNje5qyaEXnKZT6dxqb41_xkuYJn",
       "sourceUrl": "/api/v1/animation-library/TqnVHNje5qyaEXnKZT6dxqb41_xkuYJn/ground_grass_broken.png",
       "sourceSize": {
@@ -1041,6 +1074,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "KscWlgZh1QjKRE6RHc6NmFPjhXGQrBQq",
       "sourceUrl": "/api/v1/animation-library/KscWlgZh1QjKRE6RHc6NmFPjhXGQrBQq/ground_grass_small.png",
       "sourceSize": {
@@ -1061,6 +1095,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "3ftYf1Xg0hrgLXzpQk3VXpD0JPq69Vuv",
       "sourceUrl": "/api/v1/animation-library/3ftYf1Xg0hrgLXzpQk3VXpD0JPq69Vuv/ground_grass_small_broken.png",
       "sourceSize": {
@@ -1081,6 +1116,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "dcWuKd2b35TgZ17UbIGOpQUwDTr7HQQq",
       "sourceUrl": "/api/v1/animation-library/dcWuKd2b35TgZ17UbIGOpQUwDTr7HQQq/ground_sand.png",
       "sourceSize": {
@@ -1101,6 +1137,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "cfHYovrzB8ofE8GDxFc_mQu27ytLWrKd",
       "sourceUrl": "/api/v1/animation-library/cfHYovrzB8ofE8GDxFc_mQu27ytLWrKd/ground_sand_broken.png",
       "sourceSize": {
@@ -1121,6 +1158,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "lPyIPNLFspR02Irh13mtKuscpAgGBZYt",
       "sourceUrl": "/api/v1/animation-library/lPyIPNLFspR02Irh13mtKuscpAgGBZYt/ground_sand_small.png",
       "sourceSize": {
@@ -1141,6 +1179,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "rSl8OtjaFct17jG5VumVG7xMbGNlmRce",
       "sourceUrl": "/api/v1/animation-library/rSl8OtjaFct17jG5VumVG7xMbGNlmRce/ground_sand_small_broken.png",
       "sourceSize": {
@@ -1161,6 +1200,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "CCURMjC6yl9mgkEldeW9jHHx6otf5OMZ",
       "sourceUrl": "/api/v1/animation-library/CCURMjC6yl9mgkEldeW9jHHx6otf5OMZ/ground_snow.png",
       "sourceSize": {
@@ -1181,6 +1221,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "yNW0arlImHLnDLkCvHUOepztoJ3G.M97",
       "sourceUrl": "/api/v1/animation-library/yNW0arlImHLnDLkCvHUOepztoJ3G.M97/ground_snow_broken.png",
       "sourceSize": {
@@ -1201,6 +1242,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "B0NLHi95RykT6G5JvMBLQIllxa5fzpXG",
       "sourceUrl": "/api/v1/animation-library/B0NLHi95RykT6G5JvMBLQIllxa5fzpXG/ground_snow_small.png",
       "sourceSize": {
@@ -1221,6 +1263,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "XoHqvs9_W9oizLAZtQY.8tjcZ4y_d2BL",
       "sourceUrl": "/api/v1/animation-library/XoHqvs9_W9oizLAZtQY.8tjcZ4y_d2BL/ground_snow_small_broken.png",
       "sourceSize": {
@@ -1241,6 +1284,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "a2ClEr_Er0KQHZnuG1c5hegoLA3BoSLq",
       "sourceUrl": "/api/v1/animation-library/a2ClEr_Er0KQHZnuG1c5hegoLA3BoSLq/ground_stone.png",
       "sourceSize": {
@@ -1261,6 +1305,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "FXmyf3Ve6kD9y79jA4.cWirAOMDpHqO8",
       "sourceUrl": "/api/v1/animation-library/FXmyf3Ve6kD9y79jA4.cWirAOMDpHqO8/ground_stone_broken.png",
       "sourceSize": {
@@ -1281,6 +1326,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "RhQ_WQEeQmbvQYGpqXdQQnNIO6E5DnW0",
       "sourceUrl": "/api/v1/animation-library/RhQ_WQEeQmbvQYGpqXdQQnNIO6E5DnW0/ground_stone_small.png",
       "sourceSize": {
@@ -1301,6 +1347,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "HU7lQRVB1gDvt3WBrPQ1ojC9n5cYZBIZ",
       "sourceUrl": "/api/v1/animation-library/HU7lQRVB1gDvt3WBrPQ1ojC9n5cYZBIZ/ground_stone_small_broken.png",
       "sourceSize": {
@@ -1321,6 +1368,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "C5wQj7CxjnG5QkLmsDKq.9pQGfA6Lq6_",
       "sourceUrl": "/api/v1/animation-library/C5wQj7CxjnG5QkLmsDKq.9pQGfA6Lq6_/ground_wood.png",
       "sourceSize": {
@@ -1341,6 +1389,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "uG5mCMYjZ3VLn3bfXQJK0sU2UyncJeEH",
       "sourceUrl": "/api/v1/animation-library/uG5mCMYjZ3VLn3bfXQJK0sU2UyncJeEH/ground_wood_broken.png",
       "sourceSize": {
@@ -1361,6 +1410,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "iV.qTEFeQEhXidVHERGlXfKl1rIgM2ex",
       "sourceUrl": "/api/v1/animation-library/iV.qTEFeQEhXidVHERGlXfKl1rIgM2ex/ground_wood_small.png",
       "sourceSize": {
@@ -1381,6 +1431,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "6CZLxiJFudtR8MZAext_pqH7W7_rtAoh",
       "sourceUrl": "/api/v1/animation-library/6CZLxiJFudtR8MZAext_pqH7W7_rtAoh/ground_wood_small_broken.png",
       "sourceSize": {
@@ -1400,6 +1451,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "qzXuVmfL_uvIsznwxwOKSlA.3TCvdLek",
       "sourceUrl": "/api/v1/animation-library/qzXuVmfL_uvIsznwxwOKSlA.3TCvdLek/jetpack.png",
       "sourceSize": {
@@ -1419,6 +1471,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "PJZTbmKOrB3aYsDsnR_iFznCZ9CVNr5K",
       "sourceUrl": "/api/v1/animation-library/PJZTbmKOrB3aYsDsnR_iFznCZ9CVNr5K/jetpack_item.png",
       "sourceSize": {
@@ -1438,6 +1491,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "Sr7sdpVi311Bg3xkvRK.FG_WZGaFM08Z",
       "sourceUrl": "/api/v1/animation-library/Sr7sdpVi311Bg3xkvRK.FG_WZGaFM08Z/lifes.png",
       "sourceSize": {
@@ -1458,6 +1512,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "gKcyrDxQ5fsV01A8w0A5PfcC7EIVzs8m",
       "sourceUrl": "/api/v1/animation-library/gKcyrDxQ5fsV01A8w0A5PfcC7EIVzs8m/mushroom_brown.png",
       "sourceSize": {
@@ -1478,6 +1533,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "cBZ__A5yFN.P0fPRyNbN_r.It8IMYrze",
       "sourceUrl": "/api/v1/animation-library/cBZ__A5yFN.P0fPRyNbN_r.It8IMYrze/mushroom_red.png",
       "sourceSize": {
@@ -1516,6 +1572,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "pE8zehInngxiFHr7VmwDVhj4vNTsXC5p",
       "sourceUrl": "/api/v1/animation-library/pE8zehInngxiFHr7VmwDVhj4vNTsXC5p/portal_orange.png",
       "sourceSize": {
@@ -1535,6 +1592,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "ZLxV6usUQ3ppmC.2xW.euAostIxsyo.K",
       "sourceUrl": "/api/v1/animation-library/ZLxV6usUQ3ppmC.2xW.euAostIxsyo.K/portal_yellow.png",
       "sourceSize": {
@@ -1554,6 +1612,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "cgroo_8f7avArfrnsDJcF7.uHvueWxk.",
       "sourceUrl": "/api/v1/animation-library/cgroo_8f7avArfrnsDJcF7.uHvueWxk./powerup_bubble.png",
       "sourceSize": {
@@ -1573,6 +1632,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "SULSscVT.eZu4YqTPYlO0y8sS4dlhx4a",
       "sourceUrl": "/api/v1/animation-library/SULSscVT.eZu4YqTPYlO0y8sS4dlhx4a/powerup_bunny.png",
       "sourceSize": {
@@ -1592,6 +1652,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "HKh3CR5y_Ed.blgyMzNptjZzUvyqzuzQ",
       "sourceUrl": "/api/v1/animation-library/HKh3CR5y_Ed.blgyMzNptjZzUvyqzuzQ/powerup_empty.png",
       "sourceSize": {
@@ -1611,6 +1672,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "g52LUCfWwmWhOAN4Cvv3EAuqeIM4eujE",
       "sourceUrl": "/api/v1/animation-library/g52LUCfWwmWhOAN4Cvv3EAuqeIM4eujE/powerup_jetpack.png",
       "sourceSize": {
@@ -1630,6 +1692,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": ".w2XUQH2o8YvKmW07Xa7jJFApChJQRr8",
       "sourceUrl": "/api/v1/animation-library/.w2XUQH2o8YvKmW07Xa7jJFApChJQRr8/powerup_wings.png",
       "sourceSize": {
@@ -1649,6 +1712,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "v3k5FKg.9OVKCWXhBqwSFpmGT8GPkKig",
       "sourceUrl": "/api/v1/animation-library/v3k5FKg.9OVKCWXhBqwSFpmGT8GPkKig/silver_1.png",
       "sourceSize": {
@@ -1668,6 +1732,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "unzWMfIvi0qg9wn.FhxpSVnVmyZSMxmT",
       "sourceUrl": "/api/v1/animation-library/unzWMfIvi0qg9wn.FhxpSVnVmyZSMxmT/silver_2.png",
       "sourceSize": {
@@ -1687,6 +1752,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "bQv8mStPOZbv05t6g2Pf3dTUsXdN3Sd0",
       "sourceUrl": "/api/v1/animation-library/bQv8mStPOZbv05t6g2Pf3dTUsXdN3Sd0/silver_3.png",
       "sourceSize": {
@@ -1706,6 +1772,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "ilrBbr5h2WxNu5k4dZ1c0NYhwpvNis25",
       "sourceUrl": "/api/v1/animation-library/ilrBbr5h2WxNu5k4dZ1c0NYhwpvNis25/silver_4.png",
       "sourceSize": {
@@ -1725,6 +1792,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P",
       "sourceUrl": "/api/v1/animation-library/DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P/spikeBall1.png",
       "sourceSize": {
@@ -1744,6 +1812,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq",
       "sourceUrl": "/api/v1/animation-library/V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq/spikeBall_2.png",
       "sourceSize": {
@@ -1763,6 +1832,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "kw59PEzh3gz.StnlnEKgFk_am57kCPWY",
       "sourceUrl": "/api/v1/animation-library/kw59PEzh3gz.StnlnEKgFk_am57kCPWY/spikeMan_jump.png",
       "sourceSize": {
@@ -1782,6 +1852,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "mDMtxjt8chUdFTPwRt.pdtdoZ5.p7WOY",
       "sourceUrl": "/api/v1/animation-library/mDMtxjt8chUdFTPwRt.pdtdoZ5.p7WOY/spikeMan_stand.png",
       "sourceSize": {
@@ -1801,6 +1872,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo",
       "sourceUrl": "/api/v1/animation-library/NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo/spikeMan_walk1.png",
       "sourceSize": {
@@ -1820,6 +1892,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK",
       "sourceUrl": "/api/v1/animation-library/rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK/spikeMan_walk2.png",
       "sourceSize": {
@@ -1840,6 +1913,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": ".IyRgXEkC_Ei3JQQpUMRgNdXDhm4BDBP",
       "sourceUrl": "/api/v1/animation-library/.IyRgXEkC_Ei3JQQpUMRgNdXDhm4BDBP/spike_bottom.png",
       "sourceSize": {
@@ -1860,6 +1934,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "dPuX_KR2cfML4E9ZeA_ZJs0Nym2ttF25",
       "sourceUrl": "/api/v1/animation-library/dPuX_KR2cfML4E9ZeA_ZJs0Nym2ttF25/spike_top.png",
       "sourceSize": {
@@ -1880,6 +1955,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "jDb_onK2ka_KE6C4srBVtL58Nl3fRrRg",
       "sourceUrl": "/api/v1/animation-library/jDb_onK2ka_KE6C4srBVtL58Nl3fRrRg/spikes_bottom.png",
       "sourceSize": {
@@ -1900,6 +1976,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "fNzuTBNnumDBwwDFLjE2pOB59lxR3YX.",
       "sourceUrl": "/api/v1/animation-library/fNzuTBNnumDBwwDFLjE2pOB59lxR3YX./spikes_top.png",
       "sourceSize": {
@@ -1919,6 +1996,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "jPao0AMB4MMCok8b4cokH1u8Cm2u31Lc",
       "sourceUrl": "/api/v1/animation-library/jPao0AMB4MMCok8b4cokH1u8Cm2u31Lc/spring.png",
       "sourceSize": {
@@ -1938,6 +2016,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "7CW1GRCw4svULMdElwNYTmUZO1.SNEs_",
       "sourceUrl": "/api/v1/animation-library/7CW1GRCw4svULMdElwNYTmUZO1.SNEs_/springMan_hurt.png",
       "sourceSize": {
@@ -1957,6 +2036,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "S0RneF9WzPTnqU8SfqlQN80GmSoAaPpu",
       "sourceUrl": "/api/v1/animation-library/S0RneF9WzPTnqU8SfqlQN80GmSoAaPpu/springMan_stand.png",
       "sourceSize": {
@@ -1976,6 +2056,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "RntZa_xngXW6.erAZ0gwjJH7ZNWXNWc9",
       "sourceUrl": "/api/v1/animation-library/RntZa_xngXW6.erAZ0gwjJH7ZNWXNWc9/spring_in.png",
       "sourceSize": {
@@ -1995,6 +2076,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "gaR65V.H52cBCD0U6AiGr8V3HsuCAfYl",
       "sourceUrl": "/api/v1/animation-library/gaR65V.H52cBCD0U6AiGr8V3HsuCAfYl/spring_out.png",
       "sourceSize": {
@@ -2014,6 +2096,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u",
       "sourceUrl": "/api/v1/animation-library/Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u/sun1.png",
       "sourceSize": {
@@ -2033,6 +2116,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "f9uKdGsJGQCaK0zgcVbep9yHewv..b_6",
       "sourceUrl": "/api/v1/animation-library/f9uKdGsJGQCaK0zgcVbep9yHewv..b_6/sun2.png",
       "sourceSize": {
@@ -2052,6 +2136,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX",
       "sourceUrl": "/api/v1/animation-library/HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX/wingMan1.png",
       "sourceSize": {
@@ -2071,6 +2156,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "P.3VrBPCevphdqgZcIJdrEfSB9teU4yV",
       "sourceUrl": "/api/v1/animation-library/P.3VrBPCevphdqgZcIJdrEfSB9teU4yV/wingMan2.png",
       "sourceSize": {
@@ -2090,6 +2176,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ",
       "sourceUrl": "/api/v1/animation-library/WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ/wingMan3.png",
       "sourceSize": {
@@ -2109,6 +2196,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2",
       "sourceUrl": "/api/v1/animation-library/O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2/wingMan4.png",
       "sourceSize": {
@@ -2128,6 +2216,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "axjL357_sG9vML._lVBRMVkhLPcefxLW",
       "sourceUrl": "/api/v1/animation-library/axjL357_sG9vML._lVBRMVkhLPcefxLW/wingMan5.png",
       "sourceSize": {
@@ -2147,6 +2236,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "sUCHhAoda1a5c8Nw4R4V3IzPAVTC4u7N",
       "sourceUrl": "/api/v1/animation-library/sUCHhAoda1a5c8Nw4R4V3IzPAVTC4u7N/wing_left.png",
       "sourceSize": {
@@ -2166,6 +2256,7 @@
       },
       "looping": false,
       "frameDelay": 2,
+      "frameCount": 1,
       "version": "sa88Fj34FoXMZtn0.21hIz1B371uDwZR",
       "sourceUrl": "/api/v1/animation-library/sa88Fj34FoXMZtn0.21hIz1B371uDwZR/wing_right.png",
       "sourceSize": {

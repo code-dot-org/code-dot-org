@@ -72,6 +72,10 @@ class ManifestBuilder
       # Actually download the JSON from S3
       json_response = objects['json'].get
       metadata = JSON.parse(json_response.body.read)
+
+      # If no frameCount information is present, it's probably a single frame
+      metadata['frameCount'] ||= 1
+
       # TODO: Validate metadata, ensure it has everything it needs
       # Record target version in the metadata, so environments (and projects)
       # consistently reference the version they originally imported.
