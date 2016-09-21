@@ -233,6 +233,139 @@
         "y": 207
       }
     },
+    "cloud": {
+      "name": "cloud",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 260,
+        "y": 134
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "OzJeHyO3hblclcE5CNwc3Pd0vno7VnrD",
+      "sourceUrl": "/api/v1/animation-library/OzJeHyO3hblclcE5CNwc3Pd0vno7VnrD/cloud.png",
+      "sourceSize": {
+        "x": 260,
+        "y": 134
+      }
+    },
+    "flyMan_fly": {
+      "name": "flyMan_fly",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 122,
+        "y": 139
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "u0VF1dhss5.vwEVP988Bo6nIAW47QT4g",
+      "sourceUrl": "/api/v1/animation-library/u0VF1dhss5.vwEVP988Bo6nIAW47QT4g/flyMan_fly.png",
+      "sourceSize": {
+        "x": 122,
+        "y": 139
+      }
+    },
+    "flyMan_jump": {
+      "name": "flyMan_jump",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 122,
+        "y": 135
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "sL_rs4Q3xggmqncDTE0tS7UY2YZfAu2W",
+      "sourceUrl": "/api/v1/animation-library/sL_rs4Q3xggmqncDTE0tS7UY2YZfAu2W/flyMan_jump.png",
+      "sourceSize": {
+        "x": 122,
+        "y": 135
+      }
+    },
+    "flyMan_stand": {
+      "name": "flyMan_stand",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 122,
+        "y": 139
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Ut5u3ubOFOl4B8NsVnz2PtwuiLBarLJ4",
+      "sourceUrl": "/api/v1/animation-library/Ut5u3ubOFOl4B8NsVnz2PtwuiLBarLJ4/flyMan_stand.png",
+      "sourceSize": {
+        "x": 122,
+        "y": 139
+      }
+    },
+    "flyMan_still_fly": {
+      "name": "flyMan_still_fly",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 132
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "vdqtOIOrI2zF6Wv0ZySS2OVQ980c6poQ",
+      "sourceUrl": "/api/v1/animation-library/vdqtOIOrI2zF6Wv0ZySS2OVQ980c6poQ/flyMan_still_fly.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 132
+      }
+    },
+    "flyMan_still_jump": {
+      "name": "flyMan_still_jump",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "U12gb6qx1CZfCNVTgtdzA_brtwMcA_rd",
+      "sourceUrl": "/api/v1/animation-library/U12gb6qx1CZfCNVTgtdzA_brtwMcA_rd/flyMan_still_jump.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 128
+      }
+    },
+    "flyMan_still_stand": {
+      "name": "flyMan_still_stand",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 132
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "gWIx122fh3LNoT9leEDN4AcWAh.kEBpT",
+      "sourceUrl": "/api/v1/animation-library/gWIx122fh3LNoT9leEDN4AcWAh.kEBpT/flyMan_still_stand.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 132
+      }
+    },
     "ghost_standing": {
       "name": "ghost_standing",
       "aliases": [
@@ -269,6 +402,291 @@
       "sourceSize": {
         "x": 200,
         "y": 219
+      }
+    },
+    "spikeBall1": {
+      "name": "spikeBall1",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 142,
+        "y": 148
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P",
+      "sourceUrl": "/api/v1/animation-library/DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P/spikeBall1.png",
+      "sourceSize": {
+        "x": 142,
+        "y": 148
+      }
+    },
+    "spikeBall_2": {
+      "name": "spikeBall_2",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 148,
+        "y": 141
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq",
+      "sourceUrl": "/api/v1/animation-library/V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq/spikeBall_2.png",
+      "sourceSize": {
+        "x": 148,
+        "y": 141
+      }
+    },
+    "spikeMan_jump": {
+      "name": "spikeMan_jump",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 114,
+        "y": 155
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "kw59PEzh3gz.StnlnEKgFk_am57kCPWY",
+      "sourceUrl": "/api/v1/animation-library/kw59PEzh3gz.StnlnEKgFk_am57kCPWY/spikeMan_jump.png",
+      "sourceSize": {
+        "x": 114,
+        "y": 155
+      }
+    },
+    "spikeMan_stand": {
+      "name": "spikeMan_stand",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 90,
+        "y": 155
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "mDMtxjt8chUdFTPwRt.pdtdoZ5.p7WOY",
+      "sourceUrl": "/api/v1/animation-library/mDMtxjt8chUdFTPwRt.pdtdoZ5.p7WOY/spikeMan_stand.png",
+      "sourceSize": {
+        "x": 90,
+        "y": 155
+      }
+    },
+    "spikeMan_walk1": {
+      "name": "spikeMan_walk1",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 159
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo",
+      "sourceUrl": "/api/v1/animation-library/NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo/spikeMan_walk1.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 159
+      }
+    },
+    "spikeMan_walk2": {
+      "name": "spikeMan_walk2",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 90,
+        "y": 155
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK",
+      "sourceUrl": "/api/v1/animation-library/rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK/spikeMan_walk2.png",
+      "sourceSize": {
+        "x": 90,
+        "y": 155
+      }
+    },
+    "springMan_hurt": {
+      "name": "springMan_hurt",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 110,
+        "y": 141
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "7CW1GRCw4svULMdElwNYTmUZO1.SNEs_",
+      "sourceUrl": "/api/v1/animation-library/7CW1GRCw4svULMdElwNYTmUZO1.SNEs_/springMan_hurt.png",
+      "sourceSize": {
+        "x": 110,
+        "y": 141
+      }
+    },
+    "springMan_stand": {
+      "name": "springMan_stand",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 110,
+        "y": 141
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "S0RneF9WzPTnqU8SfqlQN80GmSoAaPpu",
+      "sourceUrl": "/api/v1/animation-library/S0RneF9WzPTnqU8SfqlQN80GmSoAaPpu/springMan_stand.png",
+      "sourceSize": {
+        "x": 110,
+        "y": 141
+      }
+    },
+    "sun1": {
+      "name": "sun1",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 142,
+        "y": 148
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u",
+      "sourceUrl": "/api/v1/animation-library/Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u/sun1.png",
+      "sourceSize": {
+        "x": 142,
+        "y": 148
+      }
+    },
+    "sun2": {
+      "name": "sun2",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 148,
+        "y": 142
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "f9uKdGsJGQCaK0zgcVbep9yHewv..b_6",
+      "sourceUrl": "/api/v1/animation-library/f9uKdGsJGQCaK0zgcVbep9yHewv..b_6/sun2.png",
+      "sourceSize": {
+        "x": 148,
+        "y": 142
+      }
+    },
+    "wingMan1": {
+      "name": "wingMan1",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 174,
+        "y": 126
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX",
+      "sourceUrl": "/api/v1/animation-library/HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX/wingMan1.png",
+      "sourceSize": {
+        "x": 174,
+        "y": 126
+      }
+    },
+    "wingMan2": {
+      "name": "wingMan2",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 206,
+        "y": 107
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "P.3VrBPCevphdqgZcIJdrEfSB9teU4yV",
+      "sourceUrl": "/api/v1/animation-library/P.3VrBPCevphdqgZcIJdrEfSB9teU4yV/wingMan2.png",
+      "sourceSize": {
+        "x": 206,
+        "y": 107
+      }
+    },
+    "wingMan3": {
+      "name": "wingMan3",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 216,
+        "y": 101
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ",
+      "sourceUrl": "/api/v1/animation-library/WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ/wingMan3.png",
+      "sourceSize": {
+        "x": 216,
+        "y": 101
+      }
+    },
+    "wingMan4": {
+      "name": "wingMan4",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 216,
+        "y": 101
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2",
+      "sourceUrl": "/api/v1/animation-library/O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2/wingMan4.png",
+      "sourceSize": {
+        "x": 216,
+        "y": 101
+      }
+    },
+    "wingMan5": {
+      "name": "wingMan5",
+      "aliases": [
+        "jumper",
+        "enemy"
+      ],
+      "frameSize": {
+        "x": 182,
+        "y": 123
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "axjL357_sG9vML._lVBRMVkhLPcefxLW",
+      "sourceUrl": "/api/v1/animation-library/axjL357_sG9vML._lVBRMVkhLPcefxLW/wingMan5.png",
+      "sourceSize": {
+        "x": 182,
+        "y": 123
       }
     }
   },
@@ -310,7 +728,29 @@
       "bunny1_ready",
       "bunny1_stand",
       "bunny1_walk1",
-      "bunny1_walk2"
+      "bunny1_walk2",
+      "cloud",
+      "flyMan_fly",
+      "flyMan_jump",
+      "flyMan_stand",
+      "flyMan_still_fly",
+      "flyMan_still_jump",
+      "flyMan_still_stand",
+      "spikeBall1",
+      "spikeBall_2",
+      "spikeMan_jump",
+      "spikeMan_stand",
+      "spikeMan_walk1",
+      "spikeMan_walk2",
+      "springMan_hurt",
+      "springMan_stand",
+      "sun1",
+      "sun2",
+      "wingMan1",
+      "wingMan2",
+      "wingMan3",
+      "wingMan4",
+      "wingMan5"
     ],
     "bunny1_jump": [
       "bunny1_jump"
@@ -327,11 +767,101 @@
     "bunny1_walk2": [
       "bunny1_walk2"
     ],
+    "cloud": [
+      "cloud"
+    ],
+    "enemy": [
+      "cloud",
+      "flyMan_fly",
+      "flyMan_jump",
+      "flyMan_stand",
+      "flyMan_still_fly",
+      "flyMan_still_jump",
+      "flyMan_still_stand",
+      "spikeBall1",
+      "spikeBall_2",
+      "spikeMan_jump",
+      "spikeMan_stand",
+      "spikeMan_walk1",
+      "spikeMan_walk2",
+      "springMan_hurt",
+      "springMan_stand",
+      "sun1",
+      "sun2",
+      "wingMan1",
+      "wingMan2",
+      "wingMan3",
+      "wingMan4",
+      "wingMan5"
+    ],
+    "flyMan_fly": [
+      "flyMan_fly"
+    ],
+    "flyMan_jump": [
+      "flyMan_jump"
+    ],
+    "flyMan_stand": [
+      "flyMan_stand"
+    ],
+    "flyMan_still_fly": [
+      "flyMan_still_fly"
+    ],
+    "flyMan_still_jump": [
+      "flyMan_still_jump"
+    ],
+    "flyMan_still_stand": [
+      "flyMan_still_stand"
+    ],
     "ghost_standing": [
       "ghost_standing"
     ],
     "platform": [
       "platform"
+    ],
+    "spikeBall1": [
+      "spikeBall1"
+    ],
+    "spikeBall_2": [
+      "spikeBall_2"
+    ],
+    "spikeMan_jump": [
+      "spikeMan_jump"
+    ],
+    "spikeMan_stand": [
+      "spikeMan_stand"
+    ],
+    "spikeMan_walk1": [
+      "spikeMan_walk1"
+    ],
+    "spikeMan_walk2": [
+      "spikeMan_walk2"
+    ],
+    "springMan_hurt": [
+      "springMan_hurt"
+    ],
+    "springMan_stand": [
+      "springMan_stand"
+    ],
+    "sun1": [
+      "sun1"
+    ],
+    "sun2": [
+      "sun2"
+    ],
+    "wingMan1": [
+      "wingMan1"
+    ],
+    "wingMan2": [
+      "wingMan2"
+    ],
+    "wingMan3": [
+      "wingMan3"
+    ],
+    "wingMan4": [
+      "wingMan4"
+    ],
+    "wingMan5": [
+      "wingMan5"
     ]
   }
 }
