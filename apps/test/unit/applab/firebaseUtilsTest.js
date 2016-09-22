@@ -20,6 +20,15 @@ describe('firebaseUtils', () => {
       }
     });
 
+    it('rejects empty strings', done => {
+      try {
+        validateFirebaseKey('');
+      } catch (e) {
+        expect(e.message.toLowerCase()).to.contain('empty');
+        done();
+      }
+    });
+
     it('rejects forbidden symbols', done => {
       try {
         validateFirebaseKey('a.b');

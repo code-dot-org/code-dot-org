@@ -98,12 +98,16 @@ const ILLEGAL_CHARACTERS = '.$#[]/';
  * @throws with a helpful message if the key is invalid.
  */
 export function validateFirebaseKey(key) {
+  if (key.length === 0) {
+    throw new Error('The name must not be empty.');
+  }
   if (key.length > 768) {
     throw new Error(`The name "${key}" is too long.`);
   }
   for (let i = 0; i < key.length; i++) {
     if (ILLEGAL_CHARACTERS.includes(key.charAt(i))) {
-      throw new Error(`The name "${key}" contains an illegal character "${key.charAt(i)}".`);
+      throw new Error(`The name "${key}" contains an illegal character "${key.charAt(i)}".` +
+      ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.');
     }
     if (key.charCodeAt(i) < 32 || key.charCodeAt(i) === 127) {
       throw new Error(`The name ${key} contains an illegal character code ${key.charCodeAt(i)}`);
