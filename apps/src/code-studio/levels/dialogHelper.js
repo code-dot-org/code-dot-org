@@ -10,13 +10,6 @@ import ReactDOM from 'react-dom';
  * submit button interactions.
  */
 
-window.dashboard = window.dashboard || {};
-window.dashboard.dialog = {
-  showStartOverDialog: showStartOverDialog,
-  showInstructionsDialog: showInstructionsDialog,
-  processResults: processResults
-};
-
 var dialogType = null;
 var adjustedScroll = false;
 
@@ -106,11 +99,11 @@ function showDialog(type, callback) {
   }
 }
 
-function showStartOverDialog(callback) {
+export function showStartOverDialog(callback) {
   showDialog('startover', callback);
 }
 
-function showInstructionsDialog() {
+export function showInstructionsDialog() {
   showDialog('instructions', null);
   $('details').details();
 }
@@ -174,7 +167,7 @@ $(document).on('click', '.submitButton', function () {
 // TODO(dave): move this logic into appOptions.onAttempt for levels of type
 // external (including pixelation), multi, match, free_response, level_group,
 // and any others which render 'levels/dialog'.
-function processResults(onComplete, beforeHook) {
+export function processResults(onComplete, beforeHook) {
   if (beforeHook) {
     beforeHook(sendResultsCompletion);
   } else {
