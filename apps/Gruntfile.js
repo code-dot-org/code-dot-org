@@ -426,7 +426,7 @@ module.exports = function (grunt) {
           minChunks: 2
         }),
         new webpack.optimize.CommonsChunkPlugin({
-          name: 'minimal',
+          name: 'essential',
           minChunks: 2,
           chunks: [
             'plc',
