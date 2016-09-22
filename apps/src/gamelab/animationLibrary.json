@@ -5,6 +5,44 @@
     "See tools/scripts/rebuildAnimationLibraryManifest.rb for more information."
   ],
   "metadata": {
+    "apple": {
+      "name": "apple",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "UP4HdZEz8ZvhBZU0_YgHQQHNNo5flTFL",
+      "sourceUrl": "/api/v1/animation-library/UP4HdZEz8ZvhBZU0_YgHQQHNNo5flTFL/apple.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "arrow": {
+      "name": "arrow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "PRlxpIXQ.JrAibJaf_4JbFB4AsMlwzVO",
+      "sourceUrl": "/api/v1/animation-library/PRlxpIXQ.JrAibJaf_4JbFB4AsMlwzVO/arrow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "asterisk_circle": {
       "name": "asterisk_circle",
       "aliases": [
@@ -79,6 +117,177 @@
       "sourceSize": {
         "x": 432,
         "y": 432
+      }
+    },
+    "axe_bronze": {
+      "name": "axe_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "DGP9l76sbLCnZwTSDPbkuszrbUx9kFIB",
+      "sourceUrl": "/api/v1/animation-library/DGP9l76sbLCnZwTSDPbkuszrbUx9kFIB/axe_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_diamond": {
+      "name": "axe_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "f7KFTKaoW4pPVkJXQ8WZn73lx4Zd23zb",
+      "sourceUrl": "/api/v1/animation-library/f7KFTKaoW4pPVkJXQ8WZn73lx4Zd23zb/axe_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_gold": {
+      "name": "axe_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "7NlTST8oLws9RQjl2KBCrT8uVwzXJClS",
+      "sourceUrl": "/api/v1/animation-library/7NlTST8oLws9RQjl2KBCrT8uVwzXJClS/axe_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_iron": {
+      "name": "axe_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "qJjf_nBlbv3h_Xi5qx8av8hmb2HmnSOq",
+      "sourceUrl": "/api/v1/animation-library/qJjf_nBlbv3h_Xi5qx8av8hmb2HmnSOq/axe_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "axe_silver": {
+      "name": "axe_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "weVIjQ2af2TPMJ6KS.q1jrXJfKHP66nG",
+      "sourceUrl": "/api/v1/animation-library/weVIjQ2af2TPMJ6KS.q1jrXJfKHP66nG/axe_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "boat": {
+      "name": "boat",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "EM0dwJbOskjFN8wOBS4HQltNDwdlNrIe",
+      "sourceUrl": "/api/v1/animation-library/EM0dwJbOskjFN8wOBS4HQltNDwdlNrIe/boat.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "bow": {
+      "name": "bow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "X0KHXswDd.K7UMNfa7UZKRz_wrmdvTfP",
+      "sourceUrl": "/api/v1/animation-library/X0KHXswDd.K7UMNfa7UZKRz_wrmdvTfP/bow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "bowArrow": {
+      "name": "bowArrow",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SfdM9jO3mzzTaS7YPghbofDskgJ_sgxL",
+      "sourceUrl": "/api/v1/animation-library/SfdM9jO3mzzTaS7YPghbofDskgJ_sgxL/bowArrow.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "bowl": {
+      "name": "bowl",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "kUS06Qpxis6DytTAUlIJD9iplRlBJ_6S",
+      "sourceUrl": "/api/v1/animation-library/kUS06Qpxis6DytTAUlIJD9iplRlBJ_6S/bowl.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "box": {
@@ -630,6 +839,158 @@
       "sourceSize": {
         "x": 61,
         "y": 61
+      }
+    },
+    "fish": {
+      "name": "fish",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3HOrxU9dUD4p3TM0EhGBH86visfi9zgw",
+      "sourceUrl": "/api/v1/animation-library/3HOrxU9dUD4p3TM0EhGBH86visfi9zgw/fish.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fish_cooked": {
+      "name": "fish_cooked",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "GcgAjdlq.5cS0ObW3Z5sAGUqR3IvWjFg",
+      "sourceUrl": "/api/v1/animation-library/GcgAjdlq.5cS0ObW3Z5sAGUqR3IvWjFg/fish_cooked.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "fishingPole": {
+      "name": "fishingPole",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "YYN2a57hXiGsem_9eKn3J8ysFQTzRwWG",
+      "sourceUrl": "/api/v1/animation-library/YYN2a57hXiGsem_9eKn3J8ysFQTzRwWG/fishingPole.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_bronze": {
+      "name": "flail_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "BbitMXmTfM.pRBHafR8hDzV0TYzcBOM9",
+      "sourceUrl": "/api/v1/animation-library/BbitMXmTfM.pRBHafR8hDzV0TYzcBOM9/flail_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_diamond": {
+      "name": "flail_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "iB_qshaQw0kd1ZsigAe_pF7PxgPxuH8l",
+      "sourceUrl": "/api/v1/animation-library/iB_qshaQw0kd1ZsigAe_pF7PxgPxuH8l/flail_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_gold": {
+      "name": "flail_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "gf0.Vq384PLFyA_nw4KinlepIOtIjg.D",
+      "sourceUrl": "/api/v1/animation-library/gf0.Vq384PLFyA_nw4KinlepIOtIjg.D/flail_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_iron": {
+      "name": "flail_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "sXJD_KQUPwP_F_fcXcIzjGuYrBI1KQ6m",
+      "sourceUrl": "/api/v1/animation-library/sXJD_KQUPwP_F_fcXcIzjGuYrBI1KQ6m/flail_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "flail_silver": {
+      "name": "flail_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "z8wxfXorFHHKofc6VS.frCwL6nNTLoRv",
+      "sourceUrl": "/api/v1/animation-library/z8wxfXorFHHKofc6VS.frCwL6nNTLoRv/flail_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "flyMan_fly": {
@@ -1439,6 +1800,196 @@
         "y": 100
       }
     },
+    "hammer_bronze": {
+      "name": "hammer_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "UGILI_oNaJ5S5iKQJRDlpH_GFOhcswq9",
+      "sourceUrl": "/api/v1/animation-library/UGILI_oNaJ5S5iKQJRDlpH_GFOhcswq9/hammer_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_diamond": {
+      "name": "hammer_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "qE3NU3H6OOwbDKe7iagXBFvnEf5mG7qP",
+      "sourceUrl": "/api/v1/animation-library/qE3NU3H6OOwbDKe7iagXBFvnEf5mG7qP/hammer_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_gold": {
+      "name": "hammer_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fwYAlBqBPrlAKi_TQv_QIY21zOK6Mo3q",
+      "sourceUrl": "/api/v1/animation-library/fwYAlBqBPrlAKi_TQv_QIY21zOK6Mo3q/hammer_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_iron": {
+      "name": "hammer_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "3zwQrCC3nBEVU0b7ePAecMsAM0BAn8LQ",
+      "sourceUrl": "/api/v1/animation-library/3zwQrCC3nBEVU0b7ePAecMsAM0BAn8LQ/hammer_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hammer_silver": {
+      "name": "hammer_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "H8dNYTUgjxk7fz54zf5LKv_Fl_AGj.f1",
+      "sourceUrl": "/api/v1/animation-library/H8dNYTUgjxk7fz54zf5LKv_Fl_AGj.f1/hammer_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_bronze": {
+      "name": "hoe_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "YgVw7MX0fbKK4oOJ8.CkqF_Q3JCoT0cA",
+      "sourceUrl": "/api/v1/animation-library/YgVw7MX0fbKK4oOJ8.CkqF_Q3JCoT0cA/hoe_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_diamond": {
+      "name": "hoe_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "jnOmTAjVnq5TV5xxcx4Svc4KuKf_GMih",
+      "sourceUrl": "/api/v1/animation-library/jnOmTAjVnq5TV5xxcx4Svc4KuKf_GMih/hoe_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_gold": {
+      "name": "hoe_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "LJhUiZDm_txkR5dXjSlYLd8q0GztTS98",
+      "sourceUrl": "/api/v1/animation-library/LJhUiZDm_txkR5dXjSlYLd8q0GztTS98/hoe_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_iron": {
+      "name": "hoe_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SiUsXa_bxlAiQOcAGICdmpiK9Jgs3p4K",
+      "sourceUrl": "/api/v1/animation-library/SiUsXa_bxlAiQOcAGICdmpiK9Jgs3p4K/hoe_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "hoe_silver": {
+      "name": "hoe_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "KG2QzB411spLKWVpKXxY_mmi2P0MHEvT",
+      "sourceUrl": "/api/v1/animation-library/KG2QzB411spLKWVpKXxY_mmi2P0MHEvT/hoe_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "jetpack": {
       "name": "jetpack",
       "aliases": [
@@ -1499,6 +2050,25 @@
         "y": 71
       }
     },
+    "minecart": {
+      "name": "minecart",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "VdMpguY6.wZ1JVMPxzeTrTZUTszwGmTJ",
+      "sourceUrl": "/api/v1/animation-library/VdMpguY6.wZ1JVMPxzeTrTZUTszwGmTJ/minecart.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "mushroom_brown": {
       "name": "mushroom_brown",
       "aliases": [
@@ -1539,6 +2109,253 @@
       "sourceSize": {
         "x": 81,
         "y": 99
+      }
+    },
+    "ore_coal": {
+      "name": "ore_coal",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HdVcf5FTdKWUK4sIRNrLVHldGn8ZrTTX",
+      "sourceUrl": "/api/v1/animation-library/HdVcf5FTdKWUK4sIRNrLVHldGn8ZrTTX/ore_coal.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_diamond": {
+      "name": "ore_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fuISHiqbR7WY3H.k0_tIJ83NzUCZoAZb",
+      "sourceUrl": "/api/v1/animation-library/fuISHiqbR7WY3H.k0_tIJ83NzUCZoAZb/ore_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_emerald": {
+      "name": "ore_emerald",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "DzlxcjonPSUo5xJqRN13SjrJmip2APYw",
+      "sourceUrl": "/api/v1/animation-library/DzlxcjonPSUo5xJqRN13SjrJmip2APYw/ore_emerald.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_gold": {
+      "name": "ore_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "8eFSM9MgqHIpOoJS1ZktwS8zwJdNeVIi",
+      "sourceUrl": "/api/v1/animation-library/8eFSM9MgqHIpOoJS1ZktwS8zwJdNeVIi/ore_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_iron": {
+      "name": "ore_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "XOKIt_UMV_hJLjzLxniAnFuJk8XqbklE",
+      "sourceUrl": "/api/v1/animation-library/XOKIt_UMV_hJLjzLxniAnFuJk8XqbklE/ore_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_ironAlt": {
+      "name": "ore_ironAlt",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "HOpD4DP34p_1PrmKNSHNkHtF._1.uM9S",
+      "sourceUrl": "/api/v1/animation-library/HOpD4DP34p_1PrmKNSHNkHtF._1.uM9S/ore_ironAlt.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_ruby": {
+      "name": "ore_ruby",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "WIKuw7dZGXSbRjfCgenMGItyr5sJfk9J",
+      "sourceUrl": "/api/v1/animation-library/WIKuw7dZGXSbRjfCgenMGItyr5sJfk9J/ore_ruby.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "ore_silver": {
+      "name": "ore_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "pnr7o0unNPVKkR6zQBHEziae4nvjqLoz",
+      "sourceUrl": "/api/v1/animation-library/pnr7o0unNPVKkR6zQBHEziae4nvjqLoz/ore_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_bronze": {
+      "name": "pick_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "UnI4yrr1Kas6RNnDhjSgJMChuLEA4qze",
+      "sourceUrl": "/api/v1/animation-library/UnI4yrr1Kas6RNnDhjSgJMChuLEA4qze/pick_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_diamond": {
+      "name": "pick_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "LmKPfZd_03LF0uZorsX_NrWbubIy_TxK",
+      "sourceUrl": "/api/v1/animation-library/LmKPfZd_03LF0uZorsX_NrWbubIy_TxK/pick_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_gold": {
+      "name": "pick_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "SRuiblUQRVmypp36jomswM155nUsRLLj",
+      "sourceUrl": "/api/v1/animation-library/SRuiblUQRVmypp36jomswM155nUsRLLj/pick_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_iron": {
+      "name": "pick_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "6oDBdANSa.HXxZnjmVXNSH_F.3A7ZvOq",
+      "sourceUrl": "/api/v1/animation-library/6oDBdANSa.HXxZnjmVXNSH_F.3A7ZvOq/pick_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "pick_silver": {
+      "name": "pick_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "k0K5_f6jrf10o6jAEviBkHIWwb.PQg6z",
+      "sourceUrl": "/api/v1/animation-library/k0K5_f6jrf10o6jAEviBkHIWwb.PQg6z/pick_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "platform": {
@@ -1698,6 +2515,120 @@
       "sourceSize": {
         "x": 71,
         "y": 70
+      }
+    },
+    "seed": {
+      "name": "seed",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Y.Ae581MxGmZtH4HVUohocXDLit6At38",
+      "sourceUrl": "/api/v1/animation-library/Y.Ae581MxGmZtH4HVUohocXDLit6At38/seed.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_bronze": {
+      "name": "shovel_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "bWmI1TOx9DyKwij2LtovX6KlPr7aJblD",
+      "sourceUrl": "/api/v1/animation-library/bWmI1TOx9DyKwij2LtovX6KlPr7aJblD/shovel_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_diamond": {
+      "name": "shovel_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "rV1Fe3gTJWr0B95FzMKbeN.By5FF_Cny",
+      "sourceUrl": "/api/v1/animation-library/rV1Fe3gTJWr0B95FzMKbeN.By5FF_Cny/shovel_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_gold": {
+      "name": "shovel_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "bm.TlaUJlCrf.crZjVzh0_3w7nmQebP3",
+      "sourceUrl": "/api/v1/animation-library/bm.TlaUJlCrf.crZjVzh0_3w7nmQebP3/shovel_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_iron": {
+      "name": "shovel_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "jPzlqu2KNXArQDhEQG_T.c.6yT_oHAEc",
+      "sourceUrl": "/api/v1/animation-library/jPzlqu2KNXArQDhEQG_T.c.6yT_oHAEc/shovel_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "shovel_silver": {
+      "name": "shovel_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "QPNZ59d6X.DhYSH8XGvHPvdxM0B6x.Kr",
+      "sourceUrl": "/api/v1/animation-library/QPNZ59d6X.DhYSH8XGvHPvdxM0B6x.Kr/shovel_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "silver_1": {
@@ -2084,6 +3015,25 @@
         "y": 110
       }
     },
+    "stew": {
+      "name": "stew",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": ".Gvd2fYyxezPpvnuiz40ASnk8wgZLGvD",
+      "sourceUrl": "/api/v1/animation-library/.Gvd2fYyxezPpvnuiz40ASnk8wgZLGvD/stew.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
     "sun1": {
       "name": "sun1",
       "aliases": [
@@ -2122,6 +3072,120 @@
       "sourceSize": {
         "x": 148,
         "y": 142
+      }
+    },
+    "sword_bronze": {
+      "name": "sword_bronze",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "TiLowm5T4tThkeilgLpQznnO0eRNLHrH",
+      "sourceUrl": "/api/v1/animation-library/TiLowm5T4tThkeilgLpQznnO0eRNLHrH/sword_bronze.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_diamond": {
+      "name": "sword_diamond",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "mq9LgNXlgmDduTcWgQuSppZAL_8uhgCI",
+      "sourceUrl": "/api/v1/animation-library/mq9LgNXlgmDduTcWgQuSppZAL_8uhgCI/sword_diamond.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_gold": {
+      "name": "sword_gold",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "d.aAXwix28BcBq4GbYWcQpoanHXuU2yc",
+      "sourceUrl": "/api/v1/animation-library/d.aAXwix28BcBq4GbYWcQpoanHXuU2yc/sword_gold.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_iron": {
+      "name": "sword_iron",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": ".qi9arsPsvUxdpWjWa78zS2HoqVH_h5k",
+      "sourceUrl": "/api/v1/animation-library/.qi9arsPsvUxdpWjWa78zS2HoqVH_h5k/sword_iron.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "sword_silver": {
+      "name": "sword_silver",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "2EJ79j06lb9chtUWyULVOukOVZXiQtpM",
+      "sourceUrl": "/api/v1/animation-library/2EJ79j06lb9chtUWyULVOukOVZXiQtpM/sword_silver.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
+    },
+    "wheat": {
+      "name": "wheat",
+      "aliases": [
+
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": false,
+      "frameDelay": 2,
+      "version": "kkSRI5Z1bDl.kp5g5OSJR7mUxc2QdGju",
+      "sourceUrl": "/api/v1/animation-library/kkSRI5Z1bDl.kp5g5OSJR7mUxc2QdGju/wheat.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
       }
     },
     "wingMan1": {
@@ -2266,6 +3330,12 @@
     }
   },
   "aliases": {
+    "apple": [
+      "apple"
+    ],
+    "arrow": [
+      "arrow"
+    ],
     "asterisk_circle": [
       "asterisk_circle"
     ],
@@ -2287,6 +3357,33 @@
     ],
     "asterisk_stretching": [
       "asterisk_stretching"
+    ],
+    "axe_bronze": [
+      "axe_bronze"
+    ],
+    "axe_diamond": [
+      "axe_diamond"
+    ],
+    "axe_gold": [
+      "axe_gold"
+    ],
+    "axe_iron": [
+      "axe_iron"
+    ],
+    "axe_silver": [
+      "axe_silver"
+    ],
+    "boat": [
+      "boat"
+    ],
+    "bow": [
+      "bow"
+    ],
+    "bowArrow": [
+      "bowArrow"
+    ],
+    "bowl": [
+      "bowl"
     ],
     "box": [
       "box"
@@ -2640,6 +3737,30 @@
     "coin_silver": [
       "coin_silver"
     ],
+    "fish": [
+      "fish"
+    ],
+    "fish_cooked": [
+      "fish_cooked"
+    ],
+    "fishingPole": [
+      "fishingPole"
+    ],
+    "flail_bronze": [
+      "flail_bronze"
+    ],
+    "flail_diamond": [
+      "flail_diamond"
+    ],
+    "flail_gold": [
+      "flail_gold"
+    ],
+    "flail_iron": [
+      "flail_iron"
+    ],
+    "flail_silver": [
+      "flail_silver"
+    ],
     "flyMan_fly": [
       "flyMan_fly"
     ],
@@ -2757,6 +3878,36 @@
     "ground_wood_small_broken": [
       "ground_wood_small_broken"
     ],
+    "hammer_bronze": [
+      "hammer_bronze"
+    ],
+    "hammer_diamond": [
+      "hammer_diamond"
+    ],
+    "hammer_gold": [
+      "hammer_gold"
+    ],
+    "hammer_iron": [
+      "hammer_iron"
+    ],
+    "hammer_silver": [
+      "hammer_silver"
+    ],
+    "hoe_bronze": [
+      "hoe_bronze"
+    ],
+    "hoe_diamond": [
+      "hoe_diamond"
+    ],
+    "hoe_gold": [
+      "hoe_gold"
+    ],
+    "hoe_iron": [
+      "hoe_iron"
+    ],
+    "hoe_silver": [
+      "hoe_silver"
+    ],
     "jetpack": [
       "jetpack"
     ],
@@ -2766,11 +3917,53 @@
     "lifes": [
       "lifes"
     ],
+    "minecart": [
+      "minecart"
+    ],
     "mushroom_brown": [
       "mushroom_brown"
     ],
     "mushroom_red": [
       "mushroom_red"
+    ],
+    "ore_coal": [
+      "ore_coal"
+    ],
+    "ore_diamond": [
+      "ore_diamond"
+    ],
+    "ore_emerald": [
+      "ore_emerald"
+    ],
+    "ore_gold": [
+      "ore_gold"
+    ],
+    "ore_iron": [
+      "ore_iron"
+    ],
+    "ore_ironAlt": [
+      "ore_ironAlt"
+    ],
+    "ore_ruby": [
+      "ore_ruby"
+    ],
+    "ore_silver": [
+      "ore_silver"
+    ],
+    "pick_bronze": [
+      "pick_bronze"
+    ],
+    "pick_diamond": [
+      "pick_diamond"
+    ],
+    "pick_gold": [
+      "pick_gold"
+    ],
+    "pick_iron": [
+      "pick_iron"
+    ],
+    "pick_silver": [
+      "pick_silver"
     ],
     "platform": [
       "platform"
@@ -2795,6 +3988,24 @@
     ],
     "powerup_wings": [
       "powerup_wings"
+    ],
+    "seed": [
+      "seed"
+    ],
+    "shovel_bronze": [
+      "shovel_bronze"
+    ],
+    "shovel_diamond": [
+      "shovel_diamond"
+    ],
+    "shovel_gold": [
+      "shovel_gold"
+    ],
+    "shovel_iron": [
+      "shovel_iron"
+    ],
+    "shovel_silver": [
+      "shovel_silver"
     ],
     "silver_1": [
       "silver_1"
@@ -2853,11 +4064,32 @@
     "spring_out": [
       "spring_out"
     ],
+    "stew": [
+      "stew"
+    ],
     "sun1": [
       "sun1"
     ],
     "sun2": [
       "sun2"
+    ],
+    "sword_bronze": [
+      "sword_bronze"
+    ],
+    "sword_diamond": [
+      "sword_diamond"
+    ],
+    "sword_gold": [
+      "sword_gold"
+    ],
+    "sword_iron": [
+      "sword_iron"
+    ],
+    "sword_silver": [
+      "sword_silver"
+    ],
+    "wheat": [
+      "wheat"
     ],
     "wingMan1": [
       "wingMan1"
