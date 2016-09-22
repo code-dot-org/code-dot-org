@@ -40,6 +40,7 @@ class ManifestBuilder
   # See end of file for possible options, parsed from command line
   #
   def rebuild_animation_library_manifest
+    warnings = []
     animations_by_name = {}
 
     # Connect to S3 and get a listing of all objects in the animation library bucket
@@ -52,12 +53,14 @@ class ManifestBuilder
         #{bold object_summary.key}
           #{object_summary.last_modified} | #{object_summary.size}
       EOS
-      # Push into animations collection
+      # Push into animations collection if unique
       animations_by_name[animation_name] ||= {}
-      animations_by_name[animation_name][extension] = object_summary
+      if animations_by_name[animation_name][extension].nil?
+        animations_by_name[animation_name][extension] = object_summary
+      else
+        warnings.push "Encountered multiple objects with key #{object_summary.key} - only using the first one."
+      end
     end
-
-    # TODO: Validate that keys are unique
 
     info "Found #{animations_by_name.size} animations."
 
@@ -131,6 +134,9 @@ class ManifestBuilder
           'aliases': alias_map
       }))
     end
+
+    warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
+
     info <<-EOS.unindent
       Manifest written to #{DEFAULT_OUTPUT_FILE}.
 
