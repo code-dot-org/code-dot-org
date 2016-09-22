@@ -34,23 +34,29 @@ const TutorialSet = React.createClass({
      *
      * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
      *   strings, each of which is a list of tags separated by commas, no spaces.
-     * @param {object} filterProps - Object containing filter properties.  Each is
-     *   an array of strings.
+     * @param {object} filterProps - Object containing filter properties.
+     * @param {string} filterProps.locale - The current locale.
+     * @param {bool} filterProps.specificLocale - Whether we filter to only allow
+     *   through tutorials matching the current locale.
+     * @param {object} filterProps.filters - Contains arrays of strings identifying
+     *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
+      const { locale, specificLocale, filters } = filterProps;
+
       return tutorials.filter(tutorial => {
         // First check that the tutorial language doesn't exclude it immediately.
         // If the tags contain some languages, and we don't have a match, then
         // hide the tutorial.
         if (tutorial.languages_supported) {
           const languageTags = tutorial.languages_supported.split(',');
-          const currentLocale = filterProps.locale;
+          const currentLocale = locale;
           if (languageTags.length > 0 &&
             !languageTags.includes(currentLocale) &&
             !languageTags.includes(currentLocale.substring(0,2))) {
             return false;
           }
-        } else if (filterProps.specificLocale) {
+        } else if (specificLocale) {
           // If the tutorial doesn't have language tags, but we're only looking
           // for specific matches to our current locale, then don't show this
           // tutorial.  i.e. don't let non-locale-specific tutorials through.
@@ -60,14 +66,14 @@ const TutorialSet = React.createClass({
         // If we miss any filter group, then we don't show the tutorial.
         let filterGroupMiss = false;
 
-        for (const filterGroupName in filterProps.filters) {
+        for (const filterGroupName in filters) {
 
           const tutorialTags = tutorial["tags_" + filterGroupName];
           if (tutorialTags && tutorialTags.length > 0) {
             const tutorialTagsSplit = tutorialTags.split(',');
 
             // Now check all the filter group's tags.
-            const filterGroup = filterProps.filters[filterGroupName];
+            const filterGroup = filters[filterGroupName];
 
             // For this filter group, we've not yet found a matching tag between
             // user selected otions and tutorial tags.
