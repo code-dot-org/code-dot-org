@@ -455,15 +455,20 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
+    // Minecraft should never show the button
     if (this.props.isMinecraft) {
       return false;
     }
 
-    if (this.shouldIgnoreShortInstructions()) {
-      return false;
+    // if we have "extra" (non-instruction) content, we should always
+    // give the option of collapsing it
+    if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
+      return true;
     }
 
-    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+    // Otherwise, only show the button if we have two versions of
+    // instruction we want to toggle between
+    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
   },
 
   shouldIgnoreShortInstructions() {
