@@ -333,6 +333,33 @@ class ScriptTest < ActiveSupport::TestCase
       Script.cache_find_script_level(script_level.id).level
   end
 
+  test 'cache_find_level_concept_difficulty uses cache' do
+    level = Script.find_by_name('20-hour').script_levels.third.level
+    expected = level.level_concept_difficulty
+
+    populate_cache_and_disconnect_db
+
+    assert_equal expected,
+      Script.cache_find_level_concept_difficulty(level.id)
+  end
+
+  test 'cache_find_level_concept_difficulty returns nil on bad level_id' do
+    bad_level_id = Level.last.id + 1
+
+    populate_cache_and_disconnect_db
+
+    assert_equal nil, Script.cache_find_level_concept_difficulty(bad_level_id)
+  end
+
+  test 'cache_find_level_concept_difficulty returns nil on non-CSF level ID' do
+    level = Script.find_by_name('cspunit1').script_levels.third.level
+
+    populate_cache_and_disconnect_db
+
+    assert_equal nil,
+      Script.cache_find_level_concept_difficulty(level.id)
+  end
+
   test 'get_without_cache raises exception for bad id' do
     bad_id = Script.last.id + 1
 
