@@ -7,6 +7,11 @@ import {
   processResults
 } from  './dialogHelper';
 
+/**
+ * This file injects some of our dialog related methods onto the dashboard namespace
+ * and does some handling of submit button interactions.
+ */
+
 window.dashboard = window.dashboard || {};
 // These are placed on the dashboard namespace, as they are still used by some
 // files in dashboard/public
