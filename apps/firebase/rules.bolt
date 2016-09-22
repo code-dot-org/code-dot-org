@@ -88,7 +88,7 @@ type RateLimitCounter {
 // metadata
 
 type Metadata {
-  tables: TableMetadata
+  tables: TableMetadata[]
 }
 
 type TableMetadata {

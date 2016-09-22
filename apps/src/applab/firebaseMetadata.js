@@ -51,7 +51,7 @@ export function getColumnsFromMetadata(tableName) {
 function addColumnNamesToMetadata(tableName, columnNames) {
   const columnsData = {};
   columnNames.forEach(columnName => {
-    columnsData[`${columnName}/exists`] = true;
+    columnsData[columnName] = {exists: true};
   });
   const columnsRef = getColumnsRef(tableName);
   return columnsRef.update(columnsData);

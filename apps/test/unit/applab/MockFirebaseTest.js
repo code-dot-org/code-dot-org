@@ -68,6 +68,30 @@ describe('MockFirebase', () => {
       it('resolves promises', done => {
         firebase.update({foo: 'bar'}).then(done);
       });
+
+      it('preserves existing data', done => {
+        firebase.set({foo: 1})
+          .then(() => firebase.update({bar: 2}))
+          .then(() => firebase.once('value'))
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({foo:1, bar:2});
+            done();
+          });
+      });
+
+      it('incorrectly redundantly adds deeply nested keys', done => {
+        firebase.update({'foo/bar': 1})
+          .then(() => firebase.once('value'))
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({
+              foo: {bar: 1},
+              // This key's presence is incorrect, and makes it hard to test
+              // features which do sparse updates to deeply nested keys.
+              'foo/bar': 1,
+            });
+            done();
+          });
+      });
     });
 
     describe('transaction', () => {
