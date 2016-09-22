@@ -1,16 +1,17 @@
 var gmap;
 var gmap_loc;
 
-$(function() {
+$(function () {
   selectize = $('#class-search-facets select').selectize({
     plugins: ['fast_click']
   });
 
+  setFacetDefaults();
+
   $("#location").geocomplete()
-    .bind("geocode:result", function(event, result){
+    .bind("geocode:result", function (event, result) {
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
-      resetFacets();
       submitForm();
     });
 
@@ -18,7 +19,7 @@ $(function() {
   $("#gmap").sticky({topSpacing:0});
 
   // Trigger query when a facet is changed.
-  $('#class-search-facets').find('select').change(function() {
+  $('#class-search-facets').find('select').change(function () {
     submitForm();
   });
 });
@@ -42,7 +43,7 @@ function submitForm() {
 function getLatLng(address) {
   var geocoder = new google.maps.Geocoder();
 
-  geocoder.geocode({'address': address}, function(results, status) {
+  geocoder.geocode({'address': address}, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       loc = results[0].geometry.location;
       gmap_loc = loc.d + ',' + loc.e;
@@ -60,7 +61,7 @@ function getParams(form_data) {
     value: gmap_loc
   });
 
-  $.each(form_data, function(key, field) {
+  $.each(form_data, function (key, field) {
     if (field.value != '' && field.name != 'location') {
       params.push(field);
     }
@@ -70,7 +71,7 @@ function getParams(form_data) {
 }
 
 function sendQuery(params) {
-  $.post('/forms/ClassSubmission/query', $.param(params), function(response){
+  $.post('/forms/ClassSubmission/query', $.param(params), function (response) {
     var results = JSON.parse(response); // Convert the JSON string to a JavaScript object.
     var locations = getLocations(results);
     updateResults(locations);
@@ -80,7 +81,6 @@ function sendQuery(params) {
 
 function updateResults(locations) {
   if (locations.length > 0) {
-    $('#class-search-facets').show();
     $('#controls').html('');
   } else {
     displayNoResults();
@@ -93,11 +93,11 @@ function updateResults(locations) {
 function getLocations(results) {
   var locations = [];
 
-  if(results.response){
+  if (results.response) {
     var places = results.response.docs; // The actual places that were returned by Solr.
     var places_count = places.length;
 
-    for(var i = 0; i < places_count; i++){
+    for (var i = 0; i < places_count; i++) {
       var index = i;
       var coordinates = places[i].location_p.split(',');
       var lat = coordinates[0];
@@ -121,9 +121,15 @@ function getLocations(results) {
   return locations;
 }
 
-function resetFacets() {
-  $.each(selectize, function(key, select) {
-    select.selectize.clear();
+function setFacetDefaults() {
+  $.each(selectize, function (key, select) {
+    // Class format dropdown selects out of school by default
+    // and all other dropdowns are cleared
+    if (selectize[key].id == "class-format-category") {
+      select.selectize.setValue('out_of_school');
+    } else {
+      select.selectize.clear();
+    }
     select.selectize.refreshOptions(false);
   });
 }
@@ -143,23 +149,11 @@ function updateFacets(results) {
 
 function displayNoResults() {
   $('#controls').html('<p>No results were found.</p>');
-
-  // Hide the facets by default.
-  $('#class-search-facets').hide();
-
-  // If a facet has a value, show the facets.
-  var form_data = $('#class-search-form').serializeArray();
-  $.each(form_data, function(key, field) {
-    if (field.name != 'location' && field.value) {
-      $('#class-search-facets').show();
-    }
-  });
 }
 
 function displayQueryError() {
-  $('#class-search-facets').hide();
   $('#class-search-results').hide();
-  $('#class-search-error').html('<p>An error occurred. Please try your search again.</p>').show();
+  $('#class-search-error').html('<p>Sorry, please try again. First, search by location. Then, narrow your search with the filters.</p>').show();
 }
 
 function loadMap(locations) {
@@ -178,12 +172,12 @@ function loadMap(locations) {
     },
     controls_type: 'list',
     controls_on_map: false
-  }
+  };
 
   if (locations.length > 0) {
     map_options.force_generate_controls = true;
     map_options.locations = locations;
-    map_options.afterOpenInfowindow = function(index, location, marker) {
+    map_options.afterOpenInfowindow = function (index, location, marker) {
       setDetailsTrigger(index, location, marker);
     };
   }
@@ -215,7 +209,7 @@ function compileHTML(index, location) {
   }
 
   if (location.school_level_ss) {
-    $.each(location.school_level_ss, function(key, field) {
+    $.each(location.school_level_ss, function (key, field) {
       location.school_level_ss[key] = i18n('level_' + field);
     });
 
@@ -228,7 +222,7 @@ function compileHTML(index, location) {
     lines.push(line);
   }
 
-  $.each(lines, function(key, field) {
+  $.each(lines, function (key, field) {
     html+= '<div>' + field + '</div>';
   });
 
@@ -241,7 +235,7 @@ function compileHTML(index, location) {
 
 function setDetailsTrigger(index, location, marker) {
   var details_trigger = '.location-details-trigger';
-  $('#gmap').on('click', details_trigger, function() {
+  $('#gmap').on('click', details_trigger, function () {
     $(details_trigger).colorbox({inline:true, width:"50%", open:true});
   });
 }
@@ -291,7 +285,7 @@ function compileDetails(index, location, lines) {
     lines.push(line);
   }
 
-  $.each(lines, function(key, field) {
+  $.each(lines, function (key, field) {
     html += '<div>' + field + '</div>';
   });
 
