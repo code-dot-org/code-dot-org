@@ -95,7 +95,7 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        if rack_env?(:development) && CDO.skip_seed_all
+        if (rack_env?(:development) || ENV['CI']) && CDO.skip_seed_all
           HipChat.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n"\
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n"\
               "see changes to: videos, concepts, levels, scripts, prize providers, \n "\
