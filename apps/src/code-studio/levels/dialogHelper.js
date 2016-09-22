@@ -4,7 +4,6 @@ import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
 
-
 /*
  * This file contains general logic for displaying modal dialogs and handling
  * submit button interactions.
@@ -12,43 +11,6 @@ import ReactDOM from 'react-dom';
 
 var dialogType = null;
 var adjustedScroll = false;
-
-$(document).ready(function () {
-  if (appOptions.dialog.preTitle) {
-    window.setTimeout(function () {
-      showDialog("pre");
-    }, 1000);
-  }
-});
-
-// Are we read-only?  This can be because we're a teacher OR because an answer
-// has been previously submitted.
-if (appOptions.readonlyWorkspace) {
-  // hide the Submit button.
-  $('.submitButton').hide();
-
-  // Are we a student viewing their own previously-submitted work?
-  if (appOptions.submitted) {
-    // show the Unsubmit button.
-    $('.unsubmitButton').show();
-  }
-
-  // Set the entire page background to be light grey.
-  $('.full_container').addClass('submitted_readonly');
-}
-
-// Unsubmit button should only be available when this is a standalone level.
-$('.unsubmitButton').click(function () {
-  showDialog('unsubmit', function () {
-    $.post(window.appOptions.unsubmitUrl,
-      {"_method": 'PUT', user_level: {submitted: false}},
-      function () {
-        // Just reload so that the progress in the header is shown correctly.
-        location.reload();
-      }
-    );
-  });
-});
 
 function dialogHidden() {
   var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
@@ -68,7 +30,7 @@ function dialogHidden() {
   }
 }
 
-function showDialog(type, callback) {
+export function showDialog(type, callback) {
   dialogType = type;
 
   // Use our prefabricated dialog content.
@@ -127,34 +89,6 @@ function adjustScroll() {
   adjustedScroll = true;
 }
 
-// TODO(dave): Dashboard shouldn't be reaching into the internal implementation of
-// individual levels. Instead levels should call appOptions.onAttempt.
-$(document).on('click', '.submitButton', function () {
-  var submitButton = $('.submitButton');
-  if (submitButton.attr('disabled')) {
-    return;
-  }
-
-  var result = getResult();
-  var showConfirmationDialog = result.showConfirmationDialog || false;
-  if (showConfirmationDialog) {
-    showDialog(showConfirmationDialog, function () {
-      processResults(onComplete, result.beforeProcessResultsHook);
-    });
-  } else {
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
-
-    var onComplete = function (willRedirect) {
-      if (!willRedirect) {
-        $('.submitButton').attr('disabled', false);
-      }
-    };
-
-    processResults(onComplete, result.beforeProcessResultsHook);
-  }
-});
-
 /**
  * Process the solution to the puzzle submitted by the user.
  * @param {function(boolean)} onComplete Optional callback function to call when
@@ -174,7 +108,7 @@ export function processResults(onComplete, beforeHook) {
     sendResultsCompletion();
   }
   function sendResultsCompletion() {
-    var results = getResult();
+    var results = window.getResult();
     var response = results.response;
     var result = results.result;
     var errorType = results.errorType;
