@@ -21,7 +21,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "en-us"
     };
 
-    const filtered = tutorials.filter(TutorialSet.filterFn, {props: props});
+    const filtered = TutorialSet.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, tutorials.length);
   });
@@ -34,7 +34,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "en-us"
     };
 
-    const filtered = tutorials.filter(TutorialSet.filterFn, {props: props});
+    const filtered = TutorialSet.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 1);
     assert.equal(filtered[0].name, "tut2");
@@ -49,7 +49,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "en-us"
     };
 
-    const filtered = tutorials.filter(TutorialSet.filterFn, {props: props});
+    const filtered = TutorialSet.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 1);
     assert.equal(filtered[0].name, "tut5");
@@ -63,7 +63,7 @@ describe("TutorialSet filterFn tests", function () {
       locale: "gr-gr"
     };
 
-    const filtered = tutorials.filter(TutorialSet.filterFn, {props: props});
+    const filtered = TutorialSet.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 3);
     assert.equal(filtered[0].name, "tut1");
@@ -79,7 +79,7 @@ describe("TutorialSet filterFn tests", function () {
       specificLocale: true
     };
 
-    const filtered = tutorials.filter(TutorialSet.filterFn, {props: props});
+    const filtered = TutorialSet.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 2);
     assert.equal(filtered[0].name, "tut3");
