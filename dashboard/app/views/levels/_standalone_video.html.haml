@@ -1,10 +1,12 @@
 :javascript
-  function getResult() {
-    return {
-      response: 'ok',
-      result: true
-    };
-  }
+  window.dashboard.codeStudioLevels.registerGetResult(
+    function getResult() {
+      return {
+        response: 'ok',
+        result: true
+      };
+    }
+  );
 
 .standalone-video
   - video = @level.specified_autoplay_video
