@@ -68,6 +68,30 @@ describe('MockFirebase', () => {
       it('resolves promises', done => {
         firebase.update({foo: 'bar'}).then(done);
       });
+
+      it('preserves existing data', done => {
+        firebase.set({foo: 1})
+          .then(() => firebase.update({bar: 2}))
+          .then(() => firebase.once('value'))
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({foo:1, bar:2});
+            done();
+          });
+      });
+
+      it('incorrectly redundantly adds deeply nested keys', done => {
+        firebase.update({'foo/bar': 1})
+          .then(() => firebase.once('value'))
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({
+              foo: {bar: 1},
+              // This key's presence is incorrect, and makes it hard to test
+              // features which do sparse updates to deeply nested keys.
+              'foo/bar': 1,
+            });
+            done();
+          });
+      });
     });
 
     describe('transaction', () => {
@@ -93,6 +117,20 @@ describe('MockFirebase', () => {
             done();
           });
         });
+      });
+    });
+
+    describe('push', () => {
+      it('adds ordered references', done => {
+        firebase.push().set("foo")
+          .then(() => firebase.push().set("bar"))
+          .then(() => firebase.push().set("baz"))
+          .then(() => firebase.once('value'))
+          .then(snapshot => {
+            const data = snapshot.val();
+            expect(Object.keys(data).map(key => data[key]).join(',')).to.equal('foo,bar,baz');
+            done();
+          });
       });
     });
   });
