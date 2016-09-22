@@ -119,6 +119,20 @@ describe('MockFirebase', () => {
         });
       });
     });
+
+    describe('push', () => {
+      it('adds ordered references', done => {
+        firebase.push().set("foo")
+          .then(() => firebase.push().set("bar"))
+          .then(() => firebase.push().set("baz"))
+          .then(() => firebase.once('value'))
+          .then(snapshot => {
+            const data = snapshot.val();
+            expect(Object.keys(data).map(key => data[key]).join(',')).to.equal('foo,bar,baz');
+            done();
+          });
+      });
+    });
   });
 
   describe('when invoked via firebaseUtils', () => {

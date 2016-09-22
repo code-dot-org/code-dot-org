@@ -4,7 +4,7 @@ import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBro
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
-import {  addMissingColumns, getColumnsRef } from './firebaseMetadata';
+import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -461,7 +461,7 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
 };
 
 FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {
-  getColumnsRef(tableName).child(`${columnName}/exists`).set(true).then(onSuccess, onError);
+  return addColumnName(tableName, columnName).then(onSuccess, onError);
 };
 
 /**
@@ -485,7 +485,7 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
-    .then(() => getColumnsRef(tableName).child(columnName).set(null))
+    .then(() => deleteColumnName(tableName, columnName))
     .then(onSuccess, onError);
 };
 
@@ -517,15 +517,7 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
-    .then(() => {
-      return getColumnsRef(tableName).transaction(columns => {
-        if (columns) {
-          delete columns[oldName];
-          columns[newName] = {exists: true};
-        }
-        return columns;
-      });
-    })
+    .then(() => renameColumnName(tableName, oldName, newName))
     .then(onSuccess, onError);
 };
 
