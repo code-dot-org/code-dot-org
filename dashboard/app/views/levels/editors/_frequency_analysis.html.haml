@@ -1,9 +1,11 @@
 .field
   = f.label :cipher
+  %p If level is to be used only for a single type of cipher, set that here to disable select features specific to the other kind of cipher.
   = f.select :cipher, options_for_select(@level.class.ciphers, @level.cipher)
 
 .field
-  = f.label :texts, 'Encrypted texts in JSON array format. Each text should have both a title and a message, e.g.:'
+  = f.label :texts
+  %p Encrypted texts in JSON array format. Each text should have both a title and a message, e.g.:
   %div
     %pre{:style => '-webkit-user-select: text'}= "[\n  {\"title\": \"Sample Message (easy)\", \"message\": \"Srryvat zl jnl guebhtu gur qnexarff.\"},\n  {\"title\": \"Sample Message (hard)\", \"message\": \"Npd ulk vy krg lycrpdkgj epctopkgda un krg lynparvuypebg gyj un krg ogakgdy aqvdpb pds un krg Mpbpfi bvga p aspbb lydgmpdjgj igbbuo aly.\"}\n]"
   = f.text_area :texts, placeholder: '[]', rows: 4, value: @level.properties['texts']
