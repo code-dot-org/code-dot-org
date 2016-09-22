@@ -5,17 +5,16 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import { showInstructionsDialog } from './dialogHelper';
+import { registerGetResult } from './codeStudioLevels';
 
 function setupWidgetLevel() {
   window.script_path = location.pathname;
   apps.setupApp(appOptions);
   appOptions.showInstructionsWrapper(showInstructionsDialog);
-  window.getResult = function () {
-    return {
-      response: 'ok',
-      result: true
-    };
-  };
+  registerGetResult(() => ({
+    response: 'ok',
+    result: true
+  }));
   window.options = appOptions.level;
 }
 
