@@ -5,8 +5,7 @@ import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
 
 /*
- * This file contains general logic for displaying modal dialogs and handling
- * submit button interactions.
+ * This file contains general logic for displaying modal dialogs
  */
 
 var dialogType = null;

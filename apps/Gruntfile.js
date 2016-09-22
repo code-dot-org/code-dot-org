@@ -366,7 +366,7 @@ module.exports = function (grunt) {
     'levels/multi': ['./src/code-studio/levels/multi.js'],
     'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
     'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
-    'levels/dialogHelperEntry': './src/code-studio/levels/dialogHelperEntry.js',
+    'levels/simpleLevelsEntry': './src/code-studio/levels/simpleLevelsEntry.js',
     'initApp/initApp': './src/code-studio/initApp/initApp.js'
   };
 
