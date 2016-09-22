@@ -4,6 +4,7 @@ import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBro
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
+import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -340,6 +341,7 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
   tableRef.set(null)
     .then(() => countersRef.set(null))
+    .then(() => getColumnsRef(tableName).set(null))
     .then(onSuccess, onError);
 };
 
@@ -458,6 +460,10 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   });
 };
 
+FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {
+  return addColumnName(tableName, columnName).then(onSuccess, onError);
+};
+
 /**
  * Delete every instance of the specified column name currently in the table.
  * @param {string} tableName
@@ -479,6 +485,7 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(() => deleteColumnName(tableName, columnName))
     .then(onSuccess, onError);
 };
 
@@ -510,6 +517,7 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(() => renameColumnName(tableName, oldName, newName))
     .then(onSuccess, onError);
 };
 
@@ -631,7 +639,8 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getDatabase(Applab.channelId).child(
     `storage/tables/${tableName}/records`);
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
-  return recordsRef.set(recordsData)
+  return getColumnsRef(tableName).set(null)
+    .then(() => recordsRef.set(recordsData))
     .then(() => {
       // Work around security rule validation checks.
       return countersRef.set(null);
@@ -641,7 +650,7 @@ function overwriteTableData(tableName, recordsData) {
         lastId: count,
         rowCount: count,
       });
-    });
+    }).then(() => addMissingColumns(tableName));
 }
 
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {

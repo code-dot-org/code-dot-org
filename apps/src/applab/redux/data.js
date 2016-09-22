@@ -9,6 +9,7 @@ import { DataView } from '../constants';
 const ADD_TABLE_NAME = 'data/ADD_TABLE_NAME';
 const CHANGE_VIEW = 'data/CHANGE_VIEW';
 const DELETE_TABLE_NAME = 'data/DELETE_TABLE_NAME';
+const UPDATE_TABLE_COLUMNS = 'data/UPDATE_TABLE_COLUMNS';
 const UPDATE_TABLE_RECORDS = 'data/UPDATE_TABLE_RECORDS';
 const UPDATE_KEY_VALUE_DATA = 'data/UPDATE_KEY_VALUE_DATA';
 const SHOW_WARNING = 'data/SHOW_WARNING';
@@ -18,6 +19,7 @@ const DataState = Record({
   view: DataView.OVERVIEW,
   tableListMap: {},
   tableName: '',
+  tableColumns: [],
   tableRecords: {},
   keyValueData: {},
   warningTitle: '',
@@ -47,6 +49,11 @@ export default function (state = initialState, action) {
     }
     case UPDATE_KEY_VALUE_DATA:
       return state.set('keyValueData', action.keyValueData);
+    case UPDATE_TABLE_COLUMNS:
+      if (state.tableName === action.tableName) {
+        return state.set('tableColumns', action.tableColumns);
+      }
+      return state;
     case UPDATE_TABLE_RECORDS:
       if (state.tableName === action.tableName) {
         return state.set('tableRecords', action.tableRecords);
@@ -95,6 +102,12 @@ export const deleteTableName = tableName => ({
 export const updateKeyValueData = keyValueData => ({
   type: UPDATE_KEY_VALUE_DATA,
   keyValueData
+});
+
+export const updateTableColumns = (tableName, tableColumns) => ({
+  type: UPDATE_TABLE_COLUMNS,
+  tableName,
+  tableColumns
 });
 
 export const updateTableRecords = (tableName, tableRecords) => ({
