@@ -2,24 +2,17 @@
 
 var assert = require('assert');
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
-var chai = require('chai');
-
-chai.should();
 
 describe("TutorialSet filterFn tests", function () {
-  let tutorials;
-
-  beforeEach(function () {
-    tutorials = [
-      {name: "tut1", languages_supported: null, tags_platform: "browser,ipad", tags_subject: "english,history"},
-      {name: "tut2", languages_supported: "en,fr", tags_platform: "browser,ipad,mac", tags_subject: "english,history"},
-      {name: "tut3", languages_supported: "en,fr,gr", tags_platform: "browser,ipad", tags_subject: "english,history"},
-      {name: "tut4", languages_supported: "en,fr,gr-gr", tags_platform: "browser,ipad", tags_subject: "english,history"},
-      {name: "tut5", languages_supported: "en,fr", tags_platform: "browser,ipad,iphone", tags_subject: "english,history,science"},
-      {name: "tut6", languages_supported: "en,fr", tags_platform: "browser,ipad,iphone", tags_subject: "english,history"},
-      {name: "tut7", languages_supported: "en,fr", tags_platform: "browser,ipad", tags_subject: "english,history,science"},
-    ];
-  });
+  const tutorials = [
+    {name: "tut1", languages_supported: null, tags_platform: "browser,ipad", tags_subject: "english,history"},
+    {name: "tut2", languages_supported: "en,fr", tags_platform: "browser,ipad,mac", tags_subject: "english,history"},
+    {name: "tut3", languages_supported: "en,fr,gr", tags_platform: "browser,ipad", tags_subject: "english,history"},
+    {name: "tut4", languages_supported: "en,fr,gr-gr", tags_platform: "browser,ipad", tags_subject: "english,history"},
+    {name: "tut5", languages_supported: "en,fr", tags_platform: "browser,ipad,iphone", tags_subject: "english,history,science"},
+    {name: "tut6", languages_supported: "en,fr", tags_platform: "browser,ipad,iphone", tags_subject: "english,history"},
+    {name: "tut7", languages_supported: "en,fr", tags_platform: "browser,ipad", tags_subject: "english,history,science"},
+  ];
 
   it("no filter", function () {
     const props = {
