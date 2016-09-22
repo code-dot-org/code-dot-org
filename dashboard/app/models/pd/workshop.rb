@@ -162,7 +162,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
-    "Workshop #{start_time} at #{location_name}"
+    course_subject = subject ? "#{course} #{subject}" : course
+
+    # Limit the friendly name to 255 chars so it can be used as Section.name (which is itself limited) in #start!
+    "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
   end
 
   # Puts workshop in 'In Progress' state, creates a section and returns the section.
@@ -187,19 +190,26 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def state
-    case
-      when self.started_at.nil?
-        STATE_NOT_STARTED
-      when self.ended_at.nil?
-        STATE_IN_PROGRESS
-      else
-        STATE_ENDED
+    if self.started_at.nil?
+      STATE_NOT_STARTED
+    elsif self.ended_at.nil?
+      STATE_IN_PROGRESS
+    else
+      STATE_ENDED
     end
   end
 
   def year
     return nil if sessions.empty?
     sessions.order(:start).first.start.strftime('%Y')
+  end
+
+  def self.start_on_or_before(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
+  end
+
+  def self.start_on_or_after(date)
+    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
   end
 
   def self.start_in_days(days)

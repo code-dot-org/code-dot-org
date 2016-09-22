@@ -24,15 +24,13 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 <div style="clear: both;"></div>
 
 <br/>
+**[Working at Code.org](#info)**
 
 **We are currently hiring for:**
 
 
 - **Fundraising**
  	- [Major Gifts Manager](#donor)
-- **Product**
-	- [Senior Software Engineer](#senior)
-	- [Software Engineer](#software)
 - **Professional Learning & Community**
 	- [Program Manager, Teacher Development](#teacherpm)
 	- [Program Coordinator](#coord)
@@ -40,11 +38,11 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
  	- [Curriculum Team Intern](#edintern)
  	- [State Policy Intern](#advintern)	
 
-**[Working at Code.org](#info)**
-
-**Don't see a good fit? Drop us a line and a resume and let us know why you want to work for us and what you would bring to our team.**
+**Don't see a good fit? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 
 ## <a name="donor"href="#donor">Major Gifts Manager (Seattle, WA)</a>
 
@@ -80,48 +78,6 @@ A minimum of 5 years of relevant experience is required.
 A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-
-## <a name="senior" href="#senior">Senior Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-As Senior Software Engineer at Code.org, you’ll be a key contributor in delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Passion for our mission of #CSForAll
-- Bachelor’s degree with a major in Computer Science
-- 5+ years as a software engineer
-- Ability to make senior level engineering contributions including a high level of output, tackling the hardest problems, and being a guiding voice on the team 
-- Experience shipping significant features in commercial software products 
-- Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="software" href="#software">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Passion for our mission of #CSForAll
-- Bachelor’s degree with a major in Computer Science
-- 3+ years as a software engineer
-- Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

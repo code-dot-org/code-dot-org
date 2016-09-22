@@ -126,6 +126,7 @@ en:
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
+      'Addressing in the Game of Battleship ': {}
       AlgPD Break:
         Before you move on...: Before you move on...
       Algo How Routers Learn Student Lesson Introduction:
@@ -145,12 +146,27 @@ en:
       Begin planning your project:
         description here: description here
         title: title
+      Binary as an Encoding Scheme: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Creating Debugging Strat: {}
+      CSD Design Instructions Site: {}
+      CSD Hobbies Example: {}
+      CSD L04 Wrap Up Debug Example: {}
+      CSD Recipe Stop: {}
       CSD U1 Input Output C1:
         Challenge 1: Challenge 1
         description here: description here
       CSD U1 Input Output C2:
+        description here: description here
+        title: title
+      CSD U1 Input Output C3:
+        description here: description here
+        title: title
+      CSD U1 Input Output C4:
+        description here: description here
+        title: title
+      CSD U1 Input Output Intro:
         description here: description here
         title: title
       CSD U3 - Booleans - 1: {}
@@ -187,7 +203,17 @@ en:
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
+      CSD-U1-SFLP Exploring Problem Solving: {}
+      CSD-U1-SFLP Human vs. Computer Processing: {}
+      CSD-U1-SFLP Intro to Problem Solving: {}
+      CSD-U1-SFLP Processing Bits: {}
+      CSD-U1-SFLP Processing with Apps: {}
+      CSD-U1-SFLP Project Apps and Problem Solving: {}
+      CSD-U1-SFLP Representing Information: {}
+      CSD-U1-SFLP The Problem Solving Process: {}
+      CSD-U1-SFLP What is a Computer?: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
@@ -195,7 +221,17 @@ en:
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
+      CSDU2 IP Fair Use:
+        Fair Use: Fair Use
+        description here: description here
+      CSDU2 L07 SFLP: {}
+      CSDU2 images stop level: {}
       CSDU2- home page examples: {}
+      CSDU2L01 SFLP:
+        description here: description here
+        title: title
+      CSDU2L02 SFLP: {}
+      CSDU2L04 - Stop: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -392,6 +428,15 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Digital Footprint Chirpr johnsnow:
+        Chirpr - @johnsnow: Chirpr - @johnsnow
+      Digital Footprint Chirpr solmoon: {}
+      Digital Footprint FaceSpace John:
+        FaceSpace - John T: FaceSpace - John T
+      Digital Footprint FaceSpace Soleil: {}
+      Digital Footprint instantframe:
+        instantframe - johnsnow: instantframe - johnsnow
+      Digital Footprint instantframe moonbeam: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -618,6 +663,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD-unit2 What is the Challenge: {}
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
       ECSPD1 Code Studio:
@@ -777,7 +823,11 @@ en:
       GoodBadVisualizations_v2:
         description here: description here
         title: title
+      Hobbies Page Example: {}
       Hour of Code test content: {}
+      How Secure Is Your Password?:
+        description here: description here
+        title: title
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
         description here: description here
@@ -789,10 +839,21 @@ en:
         description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      Introduction to Unit 1: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      Lesson 1.10 Overview: {}
+      Lesson 1.11 Overview: {}
+      Lesson 1.12 Overview: {}
+      Lesson 1.13 Overview: {}
+      Lesson 1.2 Overview: {}
+      Lesson 1.3 Overview: {}
       Lesson 1.4 Overview: {}
+      Lesson 1.5 Overview: {}
+      Lesson 1.6 Overview: {}
+      Lesson 1.7 Overview: {}
+      Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
       Making Pivot Tables Part 1 - The Basics: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
@@ -1027,6 +1088,8 @@ en:
       PDSci commitment:
         CS in Science PD commitments: CS in Science PD commitments
         overview of program commitments: overview of program commitments
+      PLC- check your progress: {}
+      Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
@@ -1059,9 +1122,11 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Practice Performance Tasks in Unit 1: {}
       Prepare for your presentation:
         description here: description here
         title: title
+      Rating Websites: {}
       SFLP - Web - Describing Webpages: {}
       SFLP - Web - Designing Code for Computers: {}
       SFLP - Web - Designing Webpages: {}
@@ -1072,14 +1137,20 @@ en:
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
+      'Sending Numbers: The Big Picture': {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: External Style Sheets': {}
+      'Stop: Hobbies Page': {}
+      'Stop: Images': {}
+      'Stop: Validator': {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
       TeacherCon Agenda: {}
+      Teaching with the Internet Simulator: {}
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -1407,6 +1478,12 @@ en:
         description here: description here
         title: title
       U4 Inspirational Data Video: {}
+      U4 caesar cipher interstitial:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      U4 how to crack substitution cipher:
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       U4L01 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1439,6 +1516,9 @@ en:
         description here: description here
         title: title
       U4L07 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L08 - mod clock instructions:
         description here: description here
         title: title
       U4L08 Student Lesson Introduction:
@@ -1507,6 +1587,9 @@ en:
       U4L24 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L5 random subst challenge page:
+        description here: description here
+        title: title
       U5 - Create PT - Student Introduction:
         description here: description here
         title: title
@@ -1537,8 +1620,40 @@ en:
       U6 - updateRecord - Student Introduction:
         description here: description here
         title: title
+      Understanding Communication Protocols: {}
+      Unit 1 Lesson 1 Overview: {}
+      Unit 1 Lesson 2 Overview: {}
+      Unit 1 Lesson 3 Overview: {}
+      Unit 1 Lesson 4 Overview: {}
+      Unit 1 Lesson 5 Overview: {}
+      Unit 1 Lesson 6 Overview: {}
+      Unit 1 Lesson 7 Overview: {}
+      Unit 1 Lesson 8 Overview: {}
+      Unit 1 Lesson 9 Overview: {}
+      Unit 1 Overview: {}
+      Unit 1 Teaching Philosophy and Commentary: {}
+      Unit 2 Lesson 1 Overview: {}
+      Unit 2 Lesson 10 Overview: {}
+      Unit 2 Lesson 11 Overview: {}
+      Unit 2 Lesson 12 Overview: {}
+      Unit 2 Lesson 13 Overview: {}
+      Unit 2 Lesson 14 Overview: {}
+      Unit 2 Lesson 15 Overview: {}
+      Unit 2 Lesson 16 Overview: {}
+      Unit 2 Lesson 17 Overview: {}
+      Unit 2 Lesson 2 Overview: {}
+      Unit 2 Lesson 3 Overview: {}
+      Unit 2 Lesson 4 Overview: {}
+      Unit 2 Lesson 5 Overview: {}
+      Unit 2 Lesson 6 Overview: {}
+      Unit 2 Lesson 7 Overview: {}
+      Unit 2 Lesson 8 Overview: {}
+      Unit 2 Lesson 9 Overview: {}
       Unit 3 Survey 2: {}
       Welcome to TeacherCon!: {}
+      What is ASCII?: {}
+      What is HTML?: {}
+      Why Teach Number Systems?: {}
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
@@ -1622,6 +1737,9 @@ en:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
       grade1_unplugged_behavingInLab: {}
+      grade2_maze_intro1:
+        description here: description here
+        title: title
       grade2_unplugged_bigEvent: {}
       grade2_unplugged_buildAblock:
         Build a Block: Build a Block
@@ -1962,9 +2080,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -2066,6 +2181,11 @@ en:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: description here
+        title: title
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: Cracking the Code
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -2273,6 +2393,17 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD validator Matching:
+        "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
+        "&lt;head&gt;": "&lt;head&gt;"
+        "&lt;html&gt;": "&lt;html&gt;"
+        "&lt;title&gt;": "&lt;title&gt;"
+        Defines high level information about web page: Defines high level information about web page
+        'Matching: Web Page Fundamentals': 'Matching: Web Page Fundamentals'
+        Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.: Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2716,35 +2847,35 @@ en:
         Node: Node
         Weight: Weight
       U2L14 Assessment:
-        'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Terminology Matching: Terminology Matching
+        Vigenère Cipher: Vigenère Cipher
+        a problem that cannot be solved in a reasonable amount of time: a problem that cannot be solved in a reasonable amount of time
         another term for encrypted message: another term for encrypted message
-        character frequency: character frequency
         cipher: cipher
         decrypt: decrypt
         encrypt: encrypt
-        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
-        heuristic: heuristic
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently per character: encryption that shifts the alphabet differently per character
         random substitution cipher: random substitution cipher
-        technique used to find an approximate solution: technique used to find an approximate solution
-        the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L14 Assessment4:
-        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
-        'Assessment: Question 5': 'Assessment: Question 5'
-        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
-        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
         ? |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         : |-
-          Given the original plaintext: “SECRET MESSAGE SHHHH”
-          Match the encryption method to the output:
+          Given the original plaintext: “AAAABBBBCCCCDDDD”
+          Match the encryption method that must have been used to produce the ciphertext:
         Random Substitution Cipher: Random Substitution Cipher
-        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
+        SECRFULF_UGEUHWN: SECRFULF_UGEUHWN
+        SSSSFFFFXXXXTTTT: SSSSFFFFXXXXTTTT
+        TTTTUUUUVVVVWWWW: TTTTUUUUVVVVWWWW
+        The Caesar Cipher: The Caesar Cipher
         Vigenere Cipher: Vigenere Cipher
+        Which encryption technique?: Which encryption technique?
       U2L17 - Vocabulary matching:
         " <br>Brute force": " <br>Brute force"
         "<br>Computationally hard": "<br>Computationally hard"
@@ -3368,6 +3499,24 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CSD Header Size Prediction:
+        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
+      CSD Headers Prediction:
+        ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
+        Option 1: Option 1
+        'Option 2 ': 'Option 2 '
+        Option 3: Option 3
+        Option 4: Option 4
+      CSD Prediction Header Size:
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -3507,7 +3656,7 @@ en:
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
-        Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
+        Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
         Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
       CSPFinal_Question_10:
         I and II only: I and II only
@@ -3655,8 +3804,8 @@ en:
         32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
         IPv4 proved unreliable in some cases where network redundancy could not be ensured: IPv4 proved unreliable in some cases where network redundancy could not be ensured
         IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
-        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
-        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
       CSPFinal_Question_4_original:
         'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
         'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
@@ -4682,10 +4831,10 @@ en:
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
-        'Assessment: Question 1': 'Assessment: Question 1'
-        Long keys create exponential growth possibilities.: Long keys create exponential growth possibilities.
         One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
         The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        The key length is variable and potentially very long: The key length is variable and potentially very long
+        Vigenere Cipher: Vigenere Cipher
         Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
       U2L15 Assessment3:
         'Assessment: Question 3': 'Assessment: Question 3'
@@ -5860,6 +6009,12 @@ en:
         Neutral: Neutral
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      test me:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -5869,10 +6024,14 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        Answer 1: Answer 1
-        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
-        Make a prediction and hit run: Make a prediction and hit run
-        Question: Question
+        "<!DOCTYPE html>": "<!DOCTYPE html>"
+        "<head>": "<head>"
+        "<html>": "<html>"
+        "<title>": "<title>"
+        Defines high level information about web page: Defines high level information about web page
+        Shows the name of the page in a new tab: Shows the name of the page in a new tab
+        Starts and ends the HTML document: Starts and ends the HTML document
+        Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

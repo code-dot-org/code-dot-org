@@ -27,18 +27,15 @@ This lesson introduces css, Cascading Style Sheets.  If you are new to CSS you w
 
 #### Supplies
 
-* [http://www.w3schools.com/tags/ref\_colorpicker.asp](http://www.w3schools.com/tags/ref_colorpicker.asp)
-* [http://www.georgebenainous.com/web](http://www.georgebenainous.com/web) (html/css-basic markup)
-* [http://learn.shayhowe.com/html-css/getting-to-know-css/](http://learn.shayhowe.com/html-css/getting-to-know-css/) (css basics)
-* Intro to CSS: [http://www.w3schools.com/css/css\_intro.asp](http://www.w3schools.com/css/css_intro.asp)
-* CSS syntax: [http://www.w3schools.com/css/css\_syntax.asp](http://www.w3schools.com/css/css_syntax.asp)
-* Khan Academy - [https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-css/p/css-basics](https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-css/p/css-basics) (css basics)
-* CodeCademy - [https://www.codecademy.com/courses/web-beginner-en-TlhFi/0/2?curriculum\_id=50579fb998b470000202dc8b](https://www.codecademy.com/courses/web-beginner-en-TlhFi/0/2?curriculum_id=50579fb998b470000202dc8b) (css basics)
-* HTML Dog - [http://htmldog.com/guides/css/](http://htmldog.com/guides/css/)
-* JSFiddle - [https://jsfiddle.net/](https://jsfiddle.net/)
+* [color pickers](http://www.w3schools.com/tags/ref\_colorpicker.asp)
+* [html/css-basic markup](http://www.georgebenainous.com/web)
+* [css basics](http://learn.shayhowe.com/html-css/getting-to-know-css/)
+* [Intro to CSS](http://www.w3schools.com/css/css\_intro.asp)
+* [CSS syntax](http://www.w3schools.com/css/css\_syntax.asp)
+* [Khan Academy - CSS Basics](https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-css/p/css-basics)
+* [CodeCademy - css basics](https://www.codecademy.com/courses/web-beginner-en-TlhFi/0/2?curriculum\_id=50579fb998b470000202dc8b)
+* [JSFiddle](https://jsfiddle.net/)
 
-Click "Continue" below to move on to the next stage.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

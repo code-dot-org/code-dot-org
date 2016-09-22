@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Distribute downloaded translations from i18n/locales
-# back to blockly-core, apps, pegasus, and dashboard.
+# back to blockly, apps, pegasus, and dashboard.
 
 set -e
 
@@ -21,7 +21,7 @@ for locale in $locales; do
   if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
     ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $loc_dir/base.yml $orig_dir/$locale.yml
   else
-    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $loc_dir/base.yml $orig_dir/$locale.yml
+    ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/base.yml $loc_dir/base.yml $orig_dir/$locale.yml
   fi
   perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/$locale.yml
 
@@ -55,7 +55,7 @@ for locale in $locales; do
 
 
   ### Blockly Core
-  orig_dir=blockly-core/i18n/locales/$locale
+  orig_dir=apps/node_modules/@code-dot-org/blockly/i18n/locales/$locale
   loc_dir=i18n/locales/$locale/blockly-core
   en_dir=i18n/locales/source/blockly-core
   mkdir -p $orig_dir

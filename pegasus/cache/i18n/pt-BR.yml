@@ -98,7 +98,7 @@
   view_course: Ver curso
   view_unit: Ver unidade
   make_app: Crie um aplicativo
-  congrats_guest_speaker_title: Encontre um orador convidado para sua sala de aula
+  congrats_guest_speaker_title: Convide um orador para a sua sala de aula
   congrats_guest_speaker_desc: Agora que os seus alunos acabaram um curso de programação,
     considere celebrar e relacionar o curso com coisas que eles podem construir no
     mundo real através de um palestrante convidado à sua turma. Você pode usar o nosso
@@ -386,9 +386,11 @@
   homepage_banner_congress: Líderes da América estão chamando o Congresso para financiar
     a ciência da computação K-12.
   homepage_banner_congress_link: Adicionar suporte
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Estamos fazendo uma mudança importante de como apoiamos
+    a privacidade do aluno.
+  homepage_banner_emailprivacy_link: Leia mais
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Faça uma Hora do Código
@@ -486,14 +488,13 @@
   mc_platformtext: Navegadores modernos, smartphones, tablets
   mc_specs: Muitos idiomas | Navegadores modernos e tablets | De 6 a 106 anos de idade
   minecraft_subtitle: Hora do Código Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Antes de começar, assista um desses vídeos inspiradores
+  speak_another_language: Fala outra língua?
+  help_translate: Ajude-nos a traduzir.
+  no_internet: Não tem Internet?
+  download_offline: Faça download da versão off-line.
   are_you_teacher: Você é um professor?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Reveja o plano de aula e outros recursos do professor.
   volunteer_engineer_submission_title: Inspire alunos e voluntários
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores
     vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro
@@ -697,6 +698,7 @@
   dashboard_action_remove_confirm: Excluir?
   dashboard_action_done: Feito
   dashboard_action_required: obrigatório
+  dashboard_action_print_certificates: Impressão de certificados
   dashboard_assessments_view: 'Ver avaliações em:'
   dashboard_assessments_none: Não há avaliações
   dashboard_assessments_none_part2: Se você está lecionando no ensino fundamental
@@ -706,8 +708,8 @@
     selecione o curso no menu acima e você verá as respostas dos seus alunos aqui.
   dashboard_assessments_summaries: Sumários
   dashboard_assessments_answers: Todas as respostas
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Pesquisas
+  dashboard_percent: Porcentagem
   dashboard_filter_by_stage: 'Filtrar por estágio:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Baixar o CSV
@@ -723,7 +725,7 @@
   dashboard_navigation_view_progress: Progresso
   dashboard_navigation_view_text_responses: Respostas de texto
   dashboard_navigation_view_assessments: Avaliações
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Avaliações/Pesquisas
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
@@ -913,11 +915,14 @@
   dashboard_faq: Tire suas dúvidas
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
-  dashboard_announce_message: "<b>22 de abril de 2016</b> - Atividades offline são
-    partes vitais do processo de aprendizagem, mas os professores nos disseram que
-    encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você
-    pode encontrar todos os recursos offline numa página só. Associar as lições com
-    qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -931,11 +936,20 @@
     uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação
     de ciência de computador K-12.
   dashboard_announce_petition_button: Adicione o seu nome
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Fique por dentro dos novos recursos e atualizações em nosso
+    blog de professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas
+    novidades.</a>
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Experimente agora
   learn_sign_up_description: Cadastre-se para participar da Hora do Código durante
     a Semana da Educação em Ciência da Computação
@@ -1819,7 +1833,7 @@
   sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
     às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
     melhoram habilidades de matemática e ciências.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Esconder esse aviso
   compatibility_unsupported_browser: Seu navegador não é suportado. Por favor atualize
     seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos
     nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas
@@ -1832,12 +1846,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.

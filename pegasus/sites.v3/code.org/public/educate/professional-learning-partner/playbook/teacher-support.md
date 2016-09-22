@@ -58,6 +58,10 @@ These forums are program specific and are a great way for teachers to help each 
 [Code.org FAQ](/educate/pd/15-16/faq)<br/>
 This FAQ from previous workshops should NOT be used to answer your teacher's questions, but can provide you with a great example of how to set up your own FAQ for your teachers' specific needs. 
 
+[CSP Teacher Dashboard Walkthrough](https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be)
+This video helps CSP teachers create sections and move students between sections as needed. 
+
+
 [**Back to the top**](#top)
 <br/>
 

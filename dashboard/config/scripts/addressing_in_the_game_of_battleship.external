@@ -1,0 +1,16 @@
+name 'Addressing in the Game of Battleship '
+markdown <<MARKDOWN
+# Addressing in the Game of Battleship 
+Information sent across the internet includes both the address of the source that it came from and the destination that it is going to.  This information, known as the IP (Internet Protocol) address of sender and receiver is essential to route and process the data being sent.  For more information on how the IP protocol works, please review the video The Internet: IP Addresses and DNS.
+
+In accordance with the ABC-CBV teaching philosophy, students are not initially introduced to IP addresses at the beginning of this lesson.  Instead, they participate in a simulation - playing a modified game of battleship - in order to help them discover why addresses are so important.  In this lesson we chose to use a game to model internet traffic.  This both engages students in the learning process and provides a framework in which they need to communicate with opponents.  While there are many games that could have been chosen, we decided upon battleship because players must ask their opponent for information, and she will reply based on the board in front of her.  This is analogous to a computer requesting access to information on a web page from a server, and that server responding with the desired information. 
+
+## Modifications to Game Play
+The version of battleship that students will play in class has been modified for two reasons: to support the flow of the class and to add additional challenges that parallel those encountered when designing the internet. While the traditional game of battleship is played on a 10x10 board with five ships, students will be playing on a 3x3 board with a single ship.  This allows them to play the game without losing sight of the objective of the lesson.  The second change, which is perhaps the most challenging part of the simulation, is that students are not playing a single game of battleship; they are playing two unique games simultaneously.  This feature emphasizes the need for addressing.  Students quickly realize that confusion emerges when they speak to one another without calling out specifically who they are talking to.  Many messages are getting ‘sent’ within a group at the same time, and without some protocol for addressing one another information frequently gets lost. This is accentuated when students try to complete this protocol using the internet simulator in broadcast mode.  When used in ‘broadcast’ mode, there is truly no way to know who a message came from or who it’s intended for, thus motivating the need for an addressing protocol.  
+
+## Connection to the Real World
+This mirrors how information is requested on the internet; computers broadcast their requests for information to all other devices.  To determine which other device should respond with the requested information, we use the Internet Protocol so that messages are directed to the appropriate location and the receiver knows where to send a response. Figuring out how to overcome these challenges in their battleship protocols gives students a better understanding of the requirements for the Internet Protocol.  
+
+
+
+MARKDOWN

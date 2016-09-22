@@ -45,7 +45,7 @@ module GitUtils
   end
 
   def self.circle_commit_message
-    `git log --format=%B -n 1 -1`.strip
+    `git log --format=%B -n 1 $CIRCLE_SHA1`.strip
   end
 
   def self.get_latest_commit_merged_branch
@@ -77,7 +77,7 @@ module GitUtils
 
   def self.circle_pr_branch_base_no_origin
     pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
-    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
+    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}?access_token=#{ENV['GITHUB_PULBLIC_OAUTH2_TOKEN']}").read)
     pr_json['base']['ref']
   rescue => _
     nil

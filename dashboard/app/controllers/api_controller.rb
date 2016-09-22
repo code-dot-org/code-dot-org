@@ -350,7 +350,7 @@ class ApiController < ApplicationController
   end
 
   def load_script
-    @script = Script.find(params[:script_id]) if params[:script_id].present?
+    @script = Script.get_from_cache(params[:script_id]) if params[:script_id].present?
     @script ||= @section.script || Script.twenty_hour_script
   end
 end

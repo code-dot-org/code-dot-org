@@ -12,74 +12,50 @@ Look at the possible information that you can input to your app, and decide whic
 
 Once you have the information that you need as input, decide what your app will output.
 
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the phone</summary>
-<div style="margin: 3px 15px;">
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Sensor Input</summary>
-<div style="margin: 3px 15px;">
-Here are some phone sensors that your program can use to get input.
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Date (Clock)</summary>
-September 5
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Location (GPS)</summary>
-A, 3
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Light Sensor</summary>
-Very bright
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Motion Sensor</summary>
-Not moving
-</details>
-</div>
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">User Input</summary>
-<div style="margin: 3px 15px;">
-Here is some information that the user can input.
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Birthday</summary>
-January 7
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Holiday</summary>
-St. Patrick's Day</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Favorite Flavor of Ice Cream</summary>
-Neopolitan
-</details>
-</div>
-</details>
-</div>
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">Input from the Internet</summary>
-<div style="margin: 3px 15px;">
-Here is some information that the program can get from the Internet.
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Date of Halloween</summary>
-October 31
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Temperature Anywhere in the World</summary>
-Shanghai: 77F<br />
-Adelaide: 54F<br />
-Paris: 75F<br />
-Cairo: 79F<br />
-Buenos Aires: 52F<br />
-Boston: 66F<br />
-Vancouver: 63F<br />
-Guam: 84F<br />
-</details>
-<details>
-<summary style="margin: 3px 0px; padding: 5px; font-weight:bold; font-size: 14px; background-color: #5d6770; color: white;">The Most Popular Song This Week</summary>
-"Closer"
-</details>
-</div>	
-</details>
+## Input from Phone Sensors
 
+Sensor | Input Information
+------|--------
+**Date (Clock)** | September 5
+**Location (GPS)** | N 41&deg; 15' 1" ; W 101&deg; 18' 32"
+**Light Sensor** | Very bright
+**Motion Sensor** | Not moving
+
+
+## User Input
+
+User Prompt | User Information
+------|--------
+**Birthday** | January 7
+**Favorite Holiday** | St. Patrick's Day
+**Favorite Flavor of Ice Cream** | Neopolitan
+
+## Input from the Internet
+
+Request | Information
+------|--------
+**The Date of Halloween** | October 31
+  |  
+**The Temperature Anywhere in the World** | Shanghai: 77F
+ | Adelaide: 54F
+ | Paris: 75F
+ | Cairo: 79F
+ | Buenos Aires: 52F
+ | Boston: 66F
+ | Vancouver: 63F
+ | Guam: 84F
+**The Most Popular Song This Week** | "Closer"
+
+## App Improvement
+
+The advanced version will tell the user how many days there are until Halloween.
+
+Do you need any new inputs to the advanced program?  If so, what are they?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students should note that the app only needs to pieces of information to work: the current date and the date of Halloween.  The current date, in this activity, comes from the clock, but students may note that it's possible to get the date from the Internet as well.  The date of Halloween, in this activity, comes from the Internet, but students may note that this information could also be stored in the phone, because it doesn't change between uses of the app.
+
+For the improved version of the app, the inputs are the same (current date and the date of Halloween), but the students must process the information differently.  Rather than simply check whether the two dates are the same, students will need to calculate the numbers of days between them.
 MARKDOWN

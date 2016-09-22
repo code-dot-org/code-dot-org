@@ -28,7 +28,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(applab calc eval gamelab netsim)
+  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
 
   Languages.get_locale.each do |prop|
     if prop[:locale_s] != 'en-US'
@@ -59,7 +59,7 @@ def cleanup_portuguese_codes
 end
 
 def rebuild_blockly_js_files
-  exec "blockly-core/i18n/codeorg-messages.sh"
+  exec "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
 end
 
 push_out_translated_files

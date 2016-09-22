@@ -18,59 +18,43 @@ import experiments from '@cdo/apps/experiments';
  */
 
 const styles = {
-  container: {
-    marginBottom: 5,
-    marginLeft: 5
-  },
   main: {
     display: 'inline-block',
     backgroundColor: color.lightest_cyan,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: color.cyan,
-    borderRadius: 10,
     borderStyle: 'solid',
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    maxWidth: '90%',
-    whiteSpace: 'nowrap'
+    borderTopRightRadius: 5,
+    borderBottomRightRadius: 5,
+    width: 240,
+    textAlign: 'center',
+    height: '100%',
   },
-  lessonPlan: {
-    ':hover': {
-      cursor: 'pointer',
-      textDecoration: 'underline',
-    },
-    marginTop: 5,
-    marginBottom: 5,
-    display: 'inline-block'
+  inner: {
+    marginTop: 20,
+    marginBottom: 20
   },
+  lessonPlanButton: progressStyles.blueButton,
   lessonPlanText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
     marginLeft: 10
-  },
-  toggle: {
-    marginLeft: 15,
-    marginTop: 5,
-    display: 'inline-block',
-    verticalAlign: 'top',
-  },
-  dotIcon: progressStyles.dotIcon
+  }
 };
 
-const TeacherStageInfo = React.createClass({
+const TeacherStageInfo = Radium(React.createClass({
   propTypes: {
     stage: stageShape,
 
     // redux provided
+    hiddenStagesInitialized: React.PropTypes.bool.isRequired,
     hiddenStageMap: React.PropTypes.object.isRequired,
+    scriptName: React.PropTypes.string.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
     toggleHidden: React.PropTypes.func.isRequired
   },
 
   onClickHiddenToggle(value) {
-    this.props.toggleHidden(this.props.stage.id, value === 'hidden');
+    this.props.toggleHidden(this.props.scriptName,
+      this.props.stage.id, value === 'hidden');
   },
 
   clickLessonPlan() {
@@ -78,8 +62,8 @@ const TeacherStageInfo = React.createClass({
   },
 
   render() {
-    const { stage, hiddenStageMap, hasNoSections } = this.props;
-    const isHidden = hiddenStageMap[stage.id];
+    const { stage, hiddenStageMap, hasNoSections, hiddenStagesInitialized } = this.props;
+    const isHidden = hiddenStagesInitialized && hiddenStageMap[stage.id];
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
     const lockable = stage.lockable && !hasNoSections;
@@ -88,38 +72,41 @@ const TeacherStageInfo = React.createClass({
     }
 
     return (
-      <div style={styles.container}>
-        <div style={styles.main}>
+      <div style={styles.main}>
+        <div style={styles.inner}>
           {lessonPlanUrl &&
-            <span style={styles.lessonPlan} onClick={this.clickLessonPlan}>
-              <FontAwesome icon="file-text" style={styles.dotIcon}/>
+            <button style={styles.lessonPlanButton} onClick={this.clickLessonPlan}>
+              <FontAwesome icon="file-text"/>
               <span style={styles.lessonPlanText}>
                 {dashboard.i18n.t('view_lesson_plan')}
               </span>
-            </span>
+            </button>
           }
           {lockable && <StageLock stage={stage}/>}
-          {experiments.isEnabled('hiddenStages') && <div style={styles.toggle}>
-            <HiddenStageToggle
-              hidden={isHidden}
-              onChange={this.onClickHiddenToggle}
-            />
-          </div>
+          {experiments.isEnabled('hiddenStages') && hiddenStagesInitialized &&
+            <div>
+              <HiddenStageToggle
+                hidden={!!isHidden}
+                onChange={this.onClickHiddenToggle}
+              />
+            </div>
           }
         </div>
       </div>
     );
   }
-});
+}));
 
 export default connect(state => {
   return {
+    hiddenStagesInitialized: state.hiddenStage.initialized,
     hiddenStageMap: state.hiddenStage,
+    scriptName: state.progress.scriptName,
     hasNoSections: state.stageLock.sectionsLoaded &&
       Object.keys(state.stageLock.sections).length === 0
     };
 }, dispatch => ({
-  toggleHidden(stageId, hidden) {
-    dispatch(toggleHidden(stageId, hidden));
+  toggleHidden(scriptName, stageId, hidden) {
+    dispatch(toggleHidden(scriptName, stageId, hidden));
   }
-}))(Radium(TeacherStageInfo));
+}))(TeacherStageInfo);
