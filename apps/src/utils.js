@@ -642,3 +642,38 @@ export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
       return containerHeight;
   }
 }
+
+/**
+ * Calculate the Levenshtein distance between two strings
+ * @param {string} a
+ * @param {string} b
+ * @return {number} distance
+ */
+export function levenshtein(a, b) {
+  if (!a || !b) {
+    return (a || b).length;
+  }
+
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+    if (i === 0) {
+      continue;
+    }
+
+    for (let j = 0; j <= a.length; j++) {
+      matrix[0][j] = j;
+      if (j === 0) {
+        continue;
+      }
+
+      matrix[i][j] = b.charAt(i - 1) === a.charAt(j - 1) ? matrix[i - 1][j - 1] : Math.min(
+        matrix[i - 1][j - 1] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j] + 1
+      );
+    }
+  }
+
+  return matrix[b.length][a.length];
+}

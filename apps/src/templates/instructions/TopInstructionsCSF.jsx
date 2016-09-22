@@ -36,6 +36,10 @@ import {
   shouldDisplayChatTips
 } from './utils';
 
+import {
+  levenshtein
+} from '../../utils';
+
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -454,7 +458,24 @@ var TopInstructions = React.createClass({
     if (this.props.isMinecraft) {
       return false;
     }
+
+    if (this.shouldIgnoreShortInstructions()) {
+      return false;
+    }
+
     return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+  },
+
+  shouldIgnoreShortInstructions() {
+    // if short instructions and long instructions have a Levenshtein
+    // Edit Distance of less than or equal to 10, ignore short
+    // instructions and only show long.
+    let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
+    return dist <= 10;
+  },
+
+  shouldDisplayShortInstructions() {
+    return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
   render: function () {
@@ -472,9 +493,11 @@ var TopInstructions = React.createClass({
       this.props.isMinecraft && craftStyles.main
     ];
 
-    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
-      this.props.shortInstructions : this.props.longInstructions);
-    const acapelaSrc =(this.props.collapsed || !this.props.longInstructions) ?
+    const renderedMarkdown = processMarkdown(this.shouldDisplayShortInstructions() ?
+      this.props.shortInstructions : this.props.longInstructions
+    );
+
+    const acapelaSrc = this.shouldDisplayShortInstructions() ?
       this.props.acapelaInstructionsSrc : this.props.acapelaMarkdownInstructionsSrc;
 
     // Only used by star wars levels
