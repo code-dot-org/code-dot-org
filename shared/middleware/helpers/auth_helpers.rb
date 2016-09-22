@@ -28,10 +28,10 @@ end
 def has_permission?(permission)
   return false unless current_user
 
-  @user_permissions ||= {}
-  return @user_permissions[permission] unless @user_permissions[permission].nil?
-  result = DASHBOARD_DB[:user_permissions].where(user_id: current_user_id, permission: permission).any?
-  @user_permissions[permission] = result
+  if @user_permissions.nil?
+    @user_permissions = DASHBOARD_DB[:user_permissions].where(user_id: current_user_id).pluck(:permission)
+  end
+  @user_permissions.include? permission
 end
 
 # @param [Integer] section_id
