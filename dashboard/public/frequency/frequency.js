@@ -87,6 +87,9 @@ var BarGraph = function (options) {
     left: 40
   };
 
+  this.isCaesarCipher = options.cipher === 'caesar';
+  this.isSubstitutionCipher = options.cipher === 'substitution';
+
   /** @type {D3.selection} */
   this.container = d3.select(options.chart_container.get(0));
 
@@ -169,6 +172,13 @@ var BarGraph = function (options) {
   if (this.message) {
     this.setMessage(this.message);
   }
+
+  if (this.isCaesarCipher) {
+    this.assignAllSubstitutions();
+    $('.nav-tabs a[href="#random"]').hide();
+  } else if (this.isSubstitutionCipher) {
+    $('.nav-tabs a[href="#random"]').tab('show');
+  }
 };
 
 /**
@@ -179,7 +189,6 @@ var BarGraph = function (options) {
  * @returns {number} comparator
  */
 BarGraph.alphabeticSort = function (a, b) {
-  //return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
   return (a.letter.charCodeAt() - b.letter.charCodeAt());
 };
 
@@ -665,11 +674,13 @@ BarGraph.prototype.refreshDragBehavior = function () {
  */
 BarGraph.prototype.buildSVG = function () {
 
-  this.svg.append('g')
-    .append('text')
-    .text("Letter Frequencies")
-    .attr("dy", "1em")
-    .style("font-size", "17.5px");
+  if (!this.isCaesarCipher) {
+    this.svg.append('g')
+      .append('text')
+      .text("Letter Frequencies")
+      .attr("dy", "1em")
+      .style("font-size", "17.5px");
+  }
 
   var legend = this.svg.selectAll(".legend")
     .data([{
@@ -750,31 +761,33 @@ BarGraph.prototype.buildSVG = function () {
       return d.substitution.letter;
     });
 
-  this.graph.append("g")
-    .attr("class", "y top axis")
-    .call(this.yTopAxis)
-    .append("text")
-    .attr({
-      "transform": "rotate(-90)",
-      "y": 6,
-      "dy": ".71em",
-      "class": "graphlabel"
-    })
-    .text("Frequency");
+  if (!this.isCaesarCipher) {
+    this.graph.append("g")
+      .attr("class", "y top axis")
+      .call(this.yTopAxis)
+      .append("text")
+      .attr({
+        "transform": "rotate(-90)",
+        "y": 6,
+        "dy": ".71em",
+        "class": "graphlabel"
+      })
+      .text("Frequency");
 
-  this.graph.append("g")
-    .attr("class", "y bottom axis")
-    .attr("transform", "translate(0," + (this.getHeight() + 90) + ")")
-    .call(this.yBottomAxis)
-    .append("text")
-    .style("text-anchor", "start")
-    .attr({
-      "transform": "rotate(-90) translate(-" + this.getHeight() + ",0)",
-      "y": 6,
-      "dy": ".71em",
-      "class": "graphlabel"
-    })
-    .text("Frequency");
+    this.graph.append("g")
+      .attr("class", "y bottom axis")
+      .attr("transform", "translate(0," + (this.getHeight() + 90) + ")")
+      .call(this.yBottomAxis)
+      .append("text")
+      .style("text-anchor", "start")
+      .attr({
+        "transform": "rotate(-90) translate(-" + this.getHeight() + ",0)",
+        "y": 6,
+        "dy": ".71em",
+        "class": "graphlabel"
+      })
+      .text("Frequency");
+  }
 
   this.graph.select(".x.axis")
     .append("text")
@@ -796,15 +809,17 @@ BarGraph.prototype.buildSVG = function () {
     })
     .text("Maps to:");
 
-  this.graph.append("g")
-    .attr("class", "topbars")
-    .selectAll(".letter")
-    .data(this.getZippedData())
-    .enter().append("g")
-    .attr("class", "letter")
-    .attr("transform", function (d) {
-      return "translate(" + this.substitutionLetterScale(d.substitution.letter) + "," + this.getHeight() + ") scale(1, -1)";
-    }.bind(this));
+  if (!this.isCaesarCipher) {
+    this.graph.append("g")
+      .attr("class", "topbars")
+      .selectAll(".letter")
+      .data(this.getZippedData())
+      .enter().append("g")
+      .attr("class", "letter")
+      .attr("transform", function (d) {
+        return "translate(" + this.substitutionLetterScale(d.substitution.letter) + "," + this.getHeight() + ") scale(1, -1)";
+      }.bind(this));
+  }
 
   this.getTopBars().selectAll("rect")
     .data(function (d) {
@@ -819,15 +834,17 @@ BarGraph.prototype.buildSVG = function () {
       return this.frequencyTopScale(i);
     }.bind(this));
 
-  this.graph.append("g")
-    .attr("class", "bottombars")
-    .selectAll(".letter")
-    .data(this.message_data)
-    .enter().append("g")
-    .attr("class", "letter")
-    .attr("transform", function (d) {
-      return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight() + 90) + ")";
-    }.bind(this));
+  if (!this.isCaesarCipher) {
+    this.graph.append("g")
+      .attr("class", "bottombars")
+      .selectAll(".letter")
+      .data(this.message_data)
+      .enter().append("g")
+      .attr("class", "letter")
+      .attr("transform", function (d) {
+        return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight() + 90) + ")";
+      }.bind(this));
+  }
 
   this.getBottomBars().selectAll("rect")
     .data(function (d) {
@@ -1056,6 +1073,7 @@ BarGraph.prototype.resizeBottomBars = function (data) {
 };
 
 $(document).ready(function () {
+
   var texts = JSON.parse(options.texts || "[]");
   if (texts.length < 1) {
     texts = DEFAULT_TEXTS;
@@ -1063,6 +1081,7 @@ $(document).ready(function () {
 
   var bg = new BarGraph({
     message: texts[0].message,
+    cipher: options.cipher,
     text_output: $("#output"),
     chart_container: $("#d3chart")
   });
