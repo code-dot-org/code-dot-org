@@ -30,7 +30,7 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
   override:
-    - sudo apt-get install libicu-dev enscript
+    - sudo apt-get install libicu-dev enscript moreutils
     - bundle install --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
@@ -56,12 +56,12 @@ dependencies:
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_pegasus: \"localhost.code.org:3000\"" >> locals.yml ;; esac'
     # For install and build, increase default 10 minute timeout to 14 minutes (840s)
     # Run rake install
-    - bundle exec rake install:
+    - bundle exec rake install | ts '[%Y-%m-%d %H:%M:%S]':
         environment:
           RAKE_VERBOSE: true
         timeout: 840
     # Run rake build (twice in case of intermittent test failures within rake build)
-    - for i in 1 2; do bundle exec rake build && break; done:
+    - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done:
         timeout: 840
 database:
   override:
