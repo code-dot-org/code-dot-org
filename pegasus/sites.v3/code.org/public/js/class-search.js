@@ -123,8 +123,8 @@ function getLocations(results) {
 
 function setFacetDefaults() {
   $.each(selectize, function (key, select) {
-    // Class format dropdown selects out of school by default
-    // and all other dropdowns are cleared
+    // Class format dropdown selects "Out of school" by default
+    // and all other dropdowns are cleared.
     if (selectize[key].id == "class-format-category") {
       select.selectize.setValue('out_of_school');
     } else {
@@ -136,15 +136,6 @@ function setFacetDefaults() {
 
 function updateFacets(results) {
   var facet_fields = results.facet_counts.facet_fields;
-
-  // Clear the options from the select fields.
-//  $.each(selectize, function(key, select) {
-//    select.selectize.clearOptions();
-//  });
-//
-//  $.each(facet_fields, function(key, value) {
-//    var options = [];
-//  });
 }
 
 function displayNoResults() {
