@@ -11,6 +11,7 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 require 'net_sim_api'
+require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -53,6 +54,7 @@ module Dashboard
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
+    config.middleware.insert_after NetSimApi, AnimationLibraryApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
@@ -97,6 +99,7 @@ module Dashboard
 
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
+    config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')

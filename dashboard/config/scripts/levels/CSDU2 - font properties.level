@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-17T23:46:16.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Font Properties\r\nThe way text looks is called a font.\r\n\r\n## font-family\r\nThere are 5 fonts that will look the same across any browser:\r\n\r\n* serif\r\n* sans-serif\r\n* monospace\r\n* cursive\r\n* fantasy\r\n\r\nWe will focus on using those font families to start.\r\n\r\n## font-size\r\nThere are many values that can be assigned to font-size. Pixels are the easiest to understand.\r\nA pixel is one tiny square on the screen. So when something is 14px that means its 14 pixels tall.\r\n\r\nWhen more than one style is defined in a style rule,it’s helpful (but not necessary) to separate the selector and opening curly bracket, the rules and the closing curly bracket.\r\n\r\nFor more details on font properties go to <a href=\"http://www.w3schools.com/cssref/pr_font_font-size.asp\">W3 Schools - Font Size</a> or <a href=\"http://www.w3schools.com/cssref/pr_font_font-family.asp\"> W3 Schools - Font Family</a>.\r\n\r\n<pre>\r\np {\r\ntext-decoration: underline;\r\ncolor: green;\r\n}\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Add a font-family property to h1 with a value of “cursive”\r\n* Change the size of the text in all the header tags.",
+    "project_template_level_name": "CSDU2 - Guinness Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

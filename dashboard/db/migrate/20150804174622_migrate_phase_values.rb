@@ -1,4 +1,4 @@
-class MigratePhaseValues < ActiveRecord::Migration
+class MigratePhaseValues < ActiveRecord::Migration[4.2]
   PHASES = {
       1 => 'Phase 1',
       2 => 'Phase 2',

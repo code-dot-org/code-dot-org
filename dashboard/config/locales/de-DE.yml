@@ -4,6 +4,14 @@
       not_saved: 'Bitte korrigiere die folgenden Fehler:'
       too_young: Dieser Inhalt ist altersbeschränkt und für jüngere Schüler nicht
         verfügbar
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -82,21 +90,11 @@
   signup_form:
     student_count: "%{count} Schüler haben sich bereits angemeldet."
     teacher_count: "%{count} Lehrer haben sich bereits angemeldet."
-    overview_student: Melde Dich an, um Deinen Fortschritt zu speichern. Deine E-Mail
-      wird hauptsächlich zum Anmelden und Zurücksetzen des Passworts verwendet. Weitere
-      Informationen findest du in unseren  <a href="http://code.org/privacy">Datenschutzrichtlinien</a>.
-    overview_teacher: Registrieren Sie sich, um Ihren Schülern die ersten Schritte
-      in der Informatik  zu vermitteln.<p/>Sie können Schüler hinzufügen und ihren
-      Lernfortschritt verfolgen.
-    no_signup_message: Du kannst <a target="_blank" href="http://learn.code.org">die
-      verschiedenen Level und Aufgaben</a> durchsuchen, aber um Deinen Fortschritt
-      zu speichern, musst Du dich anmelden.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Siehe Lehrer-Handbuch
-    teacher_pitch: Lehrer-Registrierung für Code.org
-    teacher_title: Registrierung für Lehrer
-    student_pitch: Schüler-Registrierung für Code.org
-    student_title: Registrierung für Schüler
-    signup_title: Registrieren für Code.org
+    title: Sign up for Code.org
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
     address_placeholder: Adresse, Ort, Bundesland, PLZ
@@ -125,9 +123,11 @@
     user_type_label: Kontentyp
     user_type_teacher: Lehrer
     user_type_student: Schüler
+    field_is_required: ist erforderlich
+    accept_terms: You must agree to create an account
   signin_form:
     title: Hast du bereits einen Account? Anmelden
-    login: E-Mail oder Benutzername
+    login: E-Mail
     password: Passwort
     remember: Merken
     submit: Anmelden
@@ -146,8 +146,10 @@
   password:
     reset_form:
       title: Passwort vergessen?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: E-Mail-Adresse
-      submit: Sende mir Anweisungen, um das Passwort zurückzusetzen
+      submit: Absenden
     change_form:
       title: "Ändere dein Passwort"
       new_password: Neues Passwort
@@ -331,13 +333,14 @@
       answer_viewer: Antwortenansicht
       student: Schüler
       viewing_solution: Lösung anzeigen
-      try_it_yourself: Probieren Sie es selbst
+      try_it_yourself: Versuche es selbst
       section: Lerngruppe
       example: Lösungsbeispiel
       example_with_number: Lösungsbeispiel %{solution_number}
       submitted_on: 'Eingereicht am:'
       unsubmit: Zurücknehmen
       worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine E-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -350,7 +353,7 @@
     delete_text: Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen Ihres Accounts löscht nicht
       die Accounts Ihrer Schüler.'
-    delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
+    delete_confirm: Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -411,11 +414,14 @@
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
     print_certificate: Zertifikat drucken
     announcement_title: Ankündigungen
-    announcement_message: "<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme
-      an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden
-      Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros
-      sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4.
-      Januar eingesendet werden, werden voraussichtlich verspätet beantwortet."
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -722,6 +728,34 @@
       zu bieten. Dafür müssen wir vorhandene Benutzer bitten, ihr Alter hier einzugeben.<br/>Selbstverständlich
       gibt Code.org diese Informationen nicht an Drittparteien weiter.
     sign_out: Solltest du dein Alter nicht angeben wollen, kannst du dich <a href="%{url}">abmelden</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: AGBs
+    privacy: Datenschutzerklärung
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Drucken
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Tut uns leid, jüngere Benutzer dürfen sich für unsere
     Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a>
     durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu
@@ -899,3 +933,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

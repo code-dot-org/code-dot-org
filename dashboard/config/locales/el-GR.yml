@@ -4,6 +4,14 @@
       not_saved: "Παρακαλώ διόρθωσε τα ακόλουθα σφάλματα:"
       too_young: "Αυτό το περιεχόμενο έχει ηλικιακούς περιορισμούς σε ισχύ και δεν
         είναι διαθέσιμο για τους νεότερους μαθητές"
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -83,22 +91,11 @@
   signup_form:
     student_count: "%{count} μαθητές έχουν ήδη εγγραφεί."
     teacher_count: "%{count} καθηγητές έχουν ήδη εγγραφεί."
-    overview_student: Δημιουργήστε λογαριασμό για να βλέπετε την πρόοδό σας. Το email
-      σας χρησιμοποιείται κυρίως για να σας επιτρέπει να συνδέεστε και για την ανάκτηση
-      του κωδικού. Για περισσότερες πληροφορίες δείτε την <a href="http://code.org/privacy">Πολιτική
-      Απορρήτου</a>.
-    overview_teacher: "Διδάξτε την επιστήμη των υπολογιστών στην τάξη σας, με την
-      εγγραφή σας.<p/>Θα μπορείτε να προσθέσετε τους μαθητές σας και να παρακολουθείτε
-      την πρόοδό τους."
-    no_signup_message: Μπορείτε να <a target="_blank" href="http://learn.code.org">
-      περιηγηθείτε στα διάφορα στάδια και παζλ</a>, αλλά θα πρέπει να εγγραφείτε για
-      να αποθηκεύσετε την πρόοδό σας.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: "Δείτε τον οδηγό εκπαιδευτικού"
-    teacher_pitch: "Εγγραφή δασκάλου στο Code.org"
-    teacher_title: "Εγγραφή Δασκάλου"
-    student_pitch: "Εγγραφή μαθητή στο Code.org"
-    student_title: "Εγγραφή μαθητή"
-    signup_title: Sign up for Code.org
+    title: Sign up for Code.org
     school_name: "Όνομα Σχολείου (προαιρετικά)"
     school_address: "Διεύθυνση Σχολείου (προαιρετικά)"
     address_placeholder: "διεύθυνση, πόλη, περιοχή, ΤΚ"
@@ -128,9 +125,11 @@
     user_type_label: "Τύπος λογαριασμού"
     user_type_teacher: "Καθηγητής"
     user_type_student: "φοιτητής/μαθητής"
+    field_is_required: "απαιτείται"
+    accept_terms: You must agree to create an account
   signin_form:
     title: "Έχετε ήδη λογαριασμό; Συνδεθείτε"
-    login: Email ή όνομα χρήστη
+    login: "Ηλεκτρονικό ταχυδρομείο"
     password: "Κωδικός πρόσβασης"
     remember: "Να με θυμάσαι"
     submit: "Σύνδεση"
@@ -149,8 +148,10 @@
   password:
     reset_form:
       title: "Ξέχασες τον κωδικό σου;"
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: "Διεύθυνση email"
-      submit: "Στείλε μου οδηγίες μηδενισμού του κωδικού"
+      submit: "Υποβολή"
     change_form:
       title: "Αλλαγή κωδικού"
       new_password: "Νέος κωδικός"
@@ -344,6 +345,7 @@
       submitted_on: "Υποβλήθηκε στις %{date}"
       unsubmit: "Ανακλήθηκε"
       worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: "Η διεύθυνση email δεν έχει επιβεβαιωθεί:"
     email_confirm_needed_required: "Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
@@ -420,12 +422,14 @@
       παρακάτω"
     print_certificate: "Εκτύπωση πιστοποιητικού"
     announcement_title: "Ανακοινώσεις"
-    announcement_message: Θέλετε να μας βοηθήσετε να δοκιμάσουμε μια νέα λειτουργία;
-      Γνωρίζουμε ότι είναι σημαντικό να ενθαρρύνουμε τους μαθητές να επαναλαμβάνουν
-      και να πειραματίζονται, έτσι θα προσθέσουμε μια λειτουργία με "αχρησιμοποίητο
-      κώδικα" για να επιτρέψουμε στους μαθητές να εκτελέσουν τον κωδικά τους, ακόμα
-      και όταν υπάρχουν μη προσαρτημένα μπλοκ. Καλωσορίζουμε τα σχόλιά σας πριν κυκλοφορήσουμε
-      δημόσια την νέα λειτουργία.
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
@@ -737,6 +741,34 @@
       η code.org ποτέ δεν θα νοικιάσει, πωλήσει η μοιράσει αυτή την πληροφορία με
       τρίτους."
     sign_out: Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε να <a href="%{url}">αποσυνδεθείτε</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: "Όροι"
+    privacy: "Πολιτική Aπορρήτου"
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: "Εκτύπωσε"
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε
     στον ιστότοπο υποστήριξης. Μπορείτε να περιηγηθείτε στο <a href="http://support.code.org">support.code.org</a>
     χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει
@@ -916,3 +948,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

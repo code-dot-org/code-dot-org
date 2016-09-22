@@ -1,4 +1,4 @@
-class CreateUserScripts < ActiveRecord::Migration
+class CreateUserScripts < ActiveRecord::Migration[4.2]
   def change
     create_table :user_scripts do |t|
       t.integer :user_id, null: false

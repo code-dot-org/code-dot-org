@@ -2,7 +2,9 @@ is:
   errors:
     messages:
       not_saved: 'Vinsamlegast leiðréttu eftirfarandi villur:'
-      too_young: Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum
+      too_young: Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum.
+      teacher_must_accept_terms: 'Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum. Biddu kennarann þinn að samþykkja Þjónustuskilmálana svo þú fáir aðgang að þessu efni. Kennarinn þinn getur gert þetta með því að skrá sig inn í Kóðastúdíóið og smella á hnappinn "Sjá uppfærða skilmála" ofarlega á heimasíðu Kóðastúdíósins.'
+      pair_programmer: Þú ert nú í félagaforritun með nemanda sem hefur ekki aðgang að þessu efni. Til að fá aðgang þarft þú að hætta í félagaforritun og reyna svo aftur.
   activerecord:
     errors:
       messages:
@@ -23,13 +25,13 @@ is:
           future: má ekki vera í framtíð
   hello: Halló heimur
   welcome_back: 'Velkomin/n aftur, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Námsáætlun þín í faginu
+  see_your_learning_plan: Skoða námsáætlun þína
   submit: Senda inn
   unsubmit: Afturkalla innsendingu
   previous_page: Fyrri síða
   next_page: Næsta síða
-  next_resource: Next resource
+  next_resource: Næstu tilföng
   done_with_module: Done with this Learning Module
   cancel: Hætta við
   okay: Allt í lagi
@@ -79,15 +81,9 @@ is:
   signup_form:
     student_count: '%{count} nemendur hafa þegar skráð sig.'
     teacher_count: '%{count} kennarar hafa þegar skráð sig.'
-    overview_student: 'Skráðu þig sem notandi til að geyma vinnu þína. Netfangið þitt er aðallega notað til að þú getir skráð þig inn og til að endurheimta aðgangsorð. Nánari upplýsingar má fá í <a href="http://code.org/privacy">persónuverndarstefnu</a> okkar.'
-    overview_teacher: 'Kenndu tölvunarfræði í skólastofunni með því að skrá þig sem notanda.<p/>Þú getur svo bætt nemendum þínum við og fylgst með vinnu þeirra.'
-    no_signup_message: 'Þú getur <a target="_blank" href="http://learn.code.org">skoðað hina ýmsu áfanga og þrautir</a>, en þú verður að skrá þig til að geta vistað árangur þinn.'
+    overview: 'Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.'
     teacher_educator_guide: Sjá leiðarvísi kennara
-    teacher_pitch: Skráning kennara fyrir Code.org
-    teacher_title: Nýskráning kennara
-    student_pitch: Skráning nemenda fyrir Code.org
-    student_title: Innskráning nemenda
-    signup_title: Nýskrá á Code.org
+    title: Nýskrá á Code.org
     school_name: Nafn skóla (valfrjálst)
     school_address: Heimilisfang skóla (valfrjálst)
     address_placeholder: götuheiti, borg, fylki, póstfang
@@ -103,15 +99,17 @@ is:
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
-    student_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a> Code.org. Ef ég er yngri en 13 ára, staðfesti ég með því að senda inn þetta form að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu Code.org.<br/>Ef notendur eru yngri en 13 ára, eru netföng þeirra ekki geymd á þann hátt að hægt sé að hafa samband við þá."
-    teacher_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a> Code.org."
+    student_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a> Code.org. Ef ég er yngri en 13 ára, staðfest ég með því að senda inn þetta form að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu Code.org.<br/><br/>Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig.
     user_type_label: Tegund aðgangs
     user_type_teacher: Kennari
     user_type_student: nemandi
+    field_is_required: er nauðsynlegt
+    accept_terms: You must agree to create an account
   signin_form:
     title: Þegar skráð(ur)? Skrá inn
-    login: Netfang eða notandanafn
+    login: Netfang
     password: Lykilorð
     remember: Muna eftir mér
     submit: Innskráning
@@ -125,13 +123,14 @@ is:
     picture: Finndu nú leynimyndina þína
     words: Sláðu nú inn leyniorðin þín
     login: Innskráning
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Innskráning tókst ekki. Reyndu aftur.
+    pair_programming: Ég er með félaga við tölvuna
   password:
     reset_form:
       title: Gleymdir þú lykilorðinu þínu ?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: Netfang
-      submit: Fá leiðbeiningar um endurstillingu lykilorðs
+      submit: Senda inn
     change_form:
       title: Breyta lykilorði
       new_password: Nýtt lykilorð
@@ -247,12 +246,12 @@ is:
       prizes: Verðlaun
       logout: Skrá út
       signin: Innskráning
-      signup: Skráning
+      signup: Create an account
       already_registered: Þegar skráð/ur?
       pair_programming: Félagaforritun
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Félagar
+      driver: Ökumaður
+      navigator: Leiðsögumaður
     popup:
       progress_for_user: 'Framvinda %{name}'
       progress: Framvinda þín
@@ -278,7 +277,7 @@ is:
     user_not_found: Kennarinn fannst ekki.
     student_teacher_disassociated: 'Þú hefur fjarlægt %{teacher_name} sem kennara þinn.'
     panel:
-      answer_viewer: Skoða svör
+      answer_viewer: Kennaraborðið
       student: nemandi
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
@@ -287,7 +286,8 @@ is:
       example_with_number: 'Dæmi %{solution_number} um lausn'
       submitted_on: 'Sent inn dags. %{date}'
       unsubmit: Afturkalla innsendingu
-      worked_with: Worked With
+      worked_with: vann með
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -346,24 +346,25 @@ is:
     choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
     announcement_title: Tilkynningar
-    announcement_message: 'Viltu hjálpa okkur að prófa nýjan eiginleika? Við vitum að það er mikilvægt að hvetja nemendur til að endurtaka og gera tilraunir og þess vegna ætlum við að bæta við eiginleikanum "ónotaður kóði" svo að nemendur geti keyrt kóða þó að það séu ótengdir kubbar. Við viljum gjarnan fá endurgjöf frá þér áður en við setjum þennan eiginleika í almenna notkun.'
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Læra meira
     announcement_try_now_button: Prófa núna
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
-    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    announcement_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill gefa öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar, 28 fylkisstjórar og forstjórar stærstu fyrirtækja í Bandaríkjunum ritað opið bréf sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði í grunnskólum.
+    announcement_petition_button: Bættu nafni þínu við
+    announcement_all: "Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>"
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: 'Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast færðu inn annan kóða fyrir hóp.'
+    section_code_not_entered: Vinsamlegast tilgreindu current_section_code.
+    section_code_cant_be_current_section: Núgildandi hópur getur ekki verið sami og nýi hópurinn.
+    current_section_dne: 'Því miður er hópurinn %{current_section_code} ekki til. Vinsamlegast færðu inn annan kóða fyrir hóp.'
+    students_not_yours: Þú getur ekki fært nemendur úr hópi sem ekki tilheyrir þér.
+    stay_enrolled_not_entered: Vinsamlegast tilgreindu stay_enrolled_in_current_section.
+    student_ids_not_entered: Vinsamlegast tilgreindu student_ids.
+    student_not_found: Einn eða fleiri nemendur fundust ekki.
+    all_students_must_be_in_current_section: Allir nemendurnir verða að vera skráðir í hópinn þinn.
+    already_enrolled_in_new_section: Þú getur ekki fært þessa nemendur vegna þess að þessi kennari er þegar með þá í öðrum hópi.
   share:
     title: Lærðu í Kóðastúdíóinu
     description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
@@ -414,7 +415,7 @@ is:
     download: Hala niður myndband
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      unsupported_message: "Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að eitthvað virki ekki."
       link: Læra meira
   slow_loading: Þetta tekur lengur en venjulega...
   try_reloading: Reyndu að endurhlaða síðunni
@@ -492,7 +493,7 @@ is:
     picture_count: 'Undanfarna <b>%{days}</b> daga hafa nemendur teiknað <b>%{count}</b> myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar til að sjá hvernig forritin virka.'
     activity_count: 'Undanfarna <b>%{days}</b> daga hafa nemendur búið til <b>%{count}</b> forrit og myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar og skjásýnin til að sjá forritin virka.'
     want_to_make_your_own: Viltu búa til þitt eigið?
-    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
+    how_to_save: 'Á síðasta borði þessa kennsluefnis þarf að smella á "Ljúka" og "Vista" til að vista verkefnið í safninu.'
     more: 'Meira &rarr;'
     caption_by_name_age: 'höfundur %{name}, %{age} ára'
     caption_time_ago: 'fyrir %{time_ago}'
@@ -526,7 +527,7 @@ is:
     wrong_body: Takk fyrir að senda inn svar
     correct_title: Takk fyrir
     correct_body: Takk fyrir að senda inn svar
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
+    hide_survey_last_answer: Þessi könnun er nafnlaus. Þú getur séð samanteknar niðurstöður á stjórnborði kennara. Athugaðu að niðurstöður sjást ekki nema a.m.k. fimm nemendur hafi svarað.
   level_group-submittable:
     wrong_title: Takk fyrir
     wrong_body: Takk fyrir að senda inn svar
@@ -537,7 +538,7 @@ is:
     submit-incomplete-title: Sendu inn efni til mats
     submit-incomplete-body: Þú átt eftir að klára nokkrar spurningar. Þú getur ekki farið inn í verkefni og breytt þeim eftir að skil hafa verið staðfest. Ertu viss um þetta?
     submit-complete-title: Sendu inn efni til mats
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-body: Þú getur ekki breytt matinu eftir að þú skilar því. Ertu viss?
   match:
     wrong_title: Ófullnægjandi lausn
     wrong_body: Lausnin sem þú gafst er ekki fullnægjandi. Vinsamlegast reyndu aftur!
@@ -572,6 +573,19 @@ is:
     header: Uppfæra reikningsupplýsingar
     message: 'Við erum að uppfæra gögn okkar til að geta veitt þér enn betri persónuvernd. Til að geta það þurfum við að biðja núverandi notendur að gefa upp aldur sinn hér.<br/>Sem fyrr mun code.org aldrei leigja, selja eða deila þessum upplýsingum með nokkrum þriðja aðila.'
     sign_out: 'Viljir þú ekki gefa upp aldur getur þú <a href="%{url}">skráð þig út</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Skilmálar
+    privacy: Persónuvernd
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Prenta
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
   progress:
     not_started: ekki byrjað
@@ -598,10 +612,10 @@ is:
     share: Deila leik
     share_title: Deila verkefninu
     share_copy_link: 'Afrita tengilinn:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Þú getur límt innfellingarkóðann í HTML síðu til að sýna verkefnið á vefsíðu.
+    share_u13_warning: Spurðu kennarann áður en þú deilir. Deildu aðeins með öðrum í skólanum þínum.
+    embed: Innfella
+    advanced_share: Sýna ítarlegri valkosti
     close: Loka
     more: Meira
     name: Nafn
@@ -623,7 +637,7 @@ is:
     edit_project: Breyta verkefni
     abuse:
       tos: "Þetta verkefni hefur verið tilkynnt fyrir brot á <a href='http://code.org/tos'>Þjónustuskilmálum</a> Code.org og þess vegna er ekki hægt að deila því."
-      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Þetta verkefni inniheldur upplýsingar sem ekki er hægt að deila með öðrum. Vinsamlegast hafðu samband við eiganda appsins um að lagfæra innihald þess.
       contact_us: "Ef þú telur þetta vera rangt, hafðu þá <a href='https://code.org/contact'>samband við okkur.</a>"
       go_to_code_studio: Fara í Kóðastúdíó
       report_abuse_form:
@@ -644,17 +658,17 @@ is:
         acknowledge: 'Með því að senda inn þessar upplýsingar, staðfestir þú að þær megi nota í samræmi við %{link_start_privacy}Persónuverndarstefnu%{link_end} og %{link_start_tos}Þjónustuskilmála%{link_end}'
   peer_review:
     accepted:
-      name: Accepted
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      name: Samþykkt
+      description: '<strong>Já</strong>, þetta innlegg <strong>uppfyllir</strong> kröfurnar'
     rejected:
-      name: Rejected
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      name: Hafnað
+      description: '<strong>Nei</strong>, þetta innlegg <strong>uppfyllir ekki</strong> kröfurnar'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: Fá álit
+      description: Ég vil að leiðbeinandi gefi álit á þessu innleggi
+    instructor_feedback: Álit leiðbeinanda
+    peer_feedback: Álit samnemenda
+    outdated: Þessi umsögn átti við áður innsenda útgáfu
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -669,35 +683,35 @@ is:
       no_icons_found: Engin tákn fundust
     playzone:
       artist_description: Teiknaðu flottar myndir og mynstur með listamanninum!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Ný teikning
+      continue_button: Fara á næsta stig
       playlab_description: Búðu til sögu eða leik með Leikjasmiðju!
-      playlab_title: New App
-      primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Nýtt app
+      primary_header: 'Til hamingju! Þú hefur lokið %{stageName}!'
+      projects_description: Fara aftur í eitt af verkefnum þínum.
+      projects_title: Opna verkefni
+      secondary_header: Spurðu kennarann hvað á að gera næst
   flex_category:
     required: Yfirlit
-    content: Content
-    practice: Teaching Practices
-    peer_review: Peer Review
+    content: Innihald
+    practice: Kennsluaðferðir
+    peer_review: Álit samnemenda
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
-    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: Afsal ábyrgðar
+    leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org sér ekki um.
+    disclaimer_text: "Þetta vefsvæði kann að hafa persónuverndarstefnu sem er frábrugðin þeirri hjá Code.org. Við höfum valið þetta efni frá þriðja aðila vegna þess að við teljum að það sé gagnlegt fyrir þig. Þó að við berum ekki beina ábyrgð á innihaldi þessa vefsvæðis, getur þú <a href='%{support_url}'>haft samband</a> ef þér finnst efnið ótilhlýðilegt eða ef tengillinn er ekki lengur virkur."
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    title: Niðurhal fyrir Klukkustund kóðunar
+    capsule_title: Ert þú með internettengingu?
+    capsule_desc: 'Nota vefappið <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: Án internets?
+    instructions: 'Leiðbeiningar fyrir kennara: Ef þú ert með lélegt internetsamband getur þú hlaðið niður kennsluefninu fyrir Klukkustund kóðunar og sett það upp fyrir notkun án tengingar. Veldu tungumálið og stýrikerfið og sæktu það til að setja upp á öllum tölvum sem þú ætlar að nota. Þú getur hlaðið niður á USB kubb og sett svo upp á öllum tölvum. Athugaðu að nemendur munu ekki geta skráð sig í Kóðastúdíóið, vistað framvindu sína eða prentað skírteini. Kennarar geta prentað skírteini fyrirfram  <a href="%{url}">hér</a>.'
+    minecraft_name: Klukkustund kóðunar með Minecraft
+    starwars_blocks_name: 'Star Wars: Gerð Vetrarbrautar með Kóða (kubbar)'
+    starwars_javascript_name: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
+    download_message: 'Hlaða niður %{app_name} til að nota án tengingar (136MB)'
+    download_in_english: 'Hlaða niður á ensku:'
+    download_in_spanish: 'Hlaða niður á spænsku:'
     windows: Windows
     mac: Mac OS X
   plc:
@@ -709,3 +723,6 @@ is:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

@@ -1,5 +1,5 @@
 - content_for(:head) do
-  =javascript_include_tag 'js/plc'
+  %script{src: minifiable_asset_path('js/plc.js')}
 .peer-review
   - reviewed = !!@peer_review.status
 
@@ -20,7 +20,7 @@
     %p Please review the peer submission in the grey box below.
 
   .submitted_readonly{style: 'padding: 8px;'}
-    %script{src: asset_path('js/initApp/initApp.js')}
+    %script{src: minifiable_asset_path('js/initApp/initApp.js')}
     :javascript
       var appOptions = #{app_options.to_json};
     = render partial: 'levels/free_response', locals: {in_level_group: true}

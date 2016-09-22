@@ -133,7 +133,7 @@ Overall, match level is based on the research areas aligning with your own organ
 - General Fundraising Websites: 
   * [Foundation Center](http://foundationcenter.org/findfunders/fundingsources/fdo.html)
   * [The Chronicle of Philanthropy](https://philanthropy.com/)
-  * [GrantSpace](http://grantspace.org/skills/find-foundation-corporate-donors)
+  * [GrantSpace](http://grantspace.org)
   * [Charity Navigator](http://www.charitynavigator.org/)
   
 [**Back to the top**](#top)

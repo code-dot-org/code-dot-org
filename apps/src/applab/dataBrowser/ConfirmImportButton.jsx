@@ -1,4 +1,5 @@
 import Dialog from '../../templates/Dialog';
+import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import Radium from 'radium';
 import applabMsg from '@cdo/applab/locale';
@@ -12,7 +13,8 @@ const ConfirmImportButton = React.createClass({
 
   getInitialState() {
     return {
-      isConfirmDialogOpen: false
+      isConfirmDialogOpen: false,
+      isImporting: false,
     };
   },
 
@@ -22,7 +24,10 @@ const ConfirmImportButton = React.createClass({
   },
 
   handleConfirm() {
-    this.setState({isConfirmDialogOpen: false});
+    this.setState({
+      isConfirmDialogOpen: false,
+      isImporting: true,
+    });
     this.uploadFile();
   },
 
@@ -30,11 +35,17 @@ const ConfirmImportButton = React.createClass({
     const file = this.importFileInput.files[0];
     const reader = new FileReader();
     reader.onload = e => {
-      this.props.importCsv(e.target.result);
+      // It is safe to pass a callback to be called by DataTable, because this component
+      // will always live as long as DataTable.
+      this.props.importCsv(e.target.result, this.handleImportComplete);
       // Make sure we get another change event if the same file is selected again.
       this.importFileInput.value = "";
     };
     reader.readAsText(file);
+  },
+
+  handleImportComplete() {
+    this.setState(this.getInitialState());
   },
 
   handleSelectImportFile() {
@@ -65,12 +76,13 @@ const ConfirmImportButton = React.createClass({
           onConfirm={this.handleConfirm}
           title="Overwrite existing data"
         />
-        <button
+        <PendingButton
+          isPending={this.state.isImporting}
           onClick={() => this.importFileInput.click()}
+          pendingText="Importing..."
           style={dataStyles.whiteButton}
-        >
-          Import csv
-        </button>
+          text="Import csv"
+        />
       </span>
     );
   }

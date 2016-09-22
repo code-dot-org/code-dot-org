@@ -273,6 +273,8 @@ bg-BG:
   homepage_banner_congress_link: Дайте своята подкрепа
   homepage_banner_emailprivacy: Направихме важна промяна към подобравяне поверителността на ученическите данни.
   homepage_banner_emailprivacy_link: Прочети още
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Научете повече
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
   homepage_slot_text_link_hoc: Опитайте Hour of Code
@@ -491,6 +493,7 @@ bg-BG:
   dashboard_action_remove_confirm: Премахване?
   dashboard_action_done: Готово
   dashboard_action_required: изисквания
+  dashboard_action_print_certificates: Печат на сертификати
   dashboard_assessments_view: 'Виж оценките в:'
   dashboard_assessments_none: Няма оценки
   dashboard_assessments_none_part2: Ако вие преподавате в курс, имаме нужда от оценъчни въпроси, налични като част от Code Studio, за да помогнете на учениците си да се подготвят за AP теста. За да използвате тези оценки, първо трябва да добавите класа си в системата и след това да изберете курса от падащото меню по-горе. Така и вие ще можете да видите отговорите на вашите ученици тук.
@@ -660,15 +663,19 @@ bg-BG:
   dashboard_faq: Често задавани въпроси
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: Съобщения
-  dashboard_announce_message: '<b>22 април 2016</b> - Дейностите без компютър са важна част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите всички ресурси без компютър на една целева страница. Свържете уроците с всеки Кн клас, или използвайте самостоятелно като независим курс.'
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Научете повече
   dashboard_announce_try_now_button: Опитайте сега
   dashboard_announce_petition: Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование.
   dashboard_announce_petition_button: Добавете името си
-  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+  dashboard_announce_all: "Получавайте информация за нови функции и актуализации на нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните съобщения.</a>"
   code_hoc_coming: 'Часът на кода е тук - декември 8-14!'
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Научете повече
   learn_sign_up_description: Регистрирайте се, за да участвате в Hour of Code по време на CS образователната седмица
   learn_sign_up_button: Регистрирайте се

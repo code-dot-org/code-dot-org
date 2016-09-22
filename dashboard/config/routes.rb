@@ -138,6 +138,10 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
+    get 'hidden_stages', to: 'script_levels#hidden'
+    post 'toggle_hidden', to: 'script_levels#toggle_hidden'
+
+    get 'instructions', to: 'scripts#instructions'
 
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
@@ -147,6 +151,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
+      get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
@@ -157,6 +162,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/lockable/yyy/puzzle/zzz
     resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
+      get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
@@ -315,6 +321,8 @@ Dashboard::Application.routes.draw do
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
         get :attendance, action: 'show', controller: 'workshop_attendance'
         patch :attendance, action: 'update', controller: 'workshop_attendance'
+
+        get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
       end
       resources :district_report, only: :index
       resources :workshop_organizer_report, only: :index

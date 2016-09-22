@@ -1149,16 +1149,19 @@ en:
         done, use your new function to calculate cube(7)."
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and
         you need to track the cost of making each cookie, the money paid, and the
-        total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite
+        total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\n\r\nWrite
         the function cost, which takes in the number of cookies you intend to sell,
-        and returns the cost of making those cookies."
+        and returns the cost of making those cookies.\r\n\r\nTest your function by
+        calculating the cost of 42 cookies"
       Calc Design Recipe 3_instruction: "Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
-        to buy those cookies (each cookie is sold at $1.50)."
+        to buy those cookies (each cookie is sold at $1.50).\r\n\r\nTest your function
+        by calculating the sales for 135 cookies"
       Calc Design Recipe 4_instruction: "Using the two functions we just wrote, write
         the function profit, which takes in the number of cookies you sold, and gives
         you back the total profit you make from selling your cookies, accounting for
-        the cost of baking them."
+        the cost of baking them.\r\n\r\nTest your function by calculating the total
+        profit for 15 cookies."
       Calc Free Play_instruction: "Free Play: Write functions and algorithms of your
         own design!"
       Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract
@@ -1827,8 +1830,8 @@ en:
       Course 4 Play Labs For Loops 1_instruction: "Let's make the dog speak every
         number from 1 to 100. Use a `for` loop and the counter block to speak the
         counter variable each time the loop is run."
-      Course 4 Play Labs For Loops 2_instruction: "This time, let's try counting
-        only the odd numbers from 1 to 101."
+      Course 4 Play Labs For Loops 2_instruction: "This time, help Olive the Cat
+        count only the odd numbers from 1 to 101."
       Course 4 Play Labs For Loops 3_instruction: "If we count by larger numbers,
         we count even higher in the same amount of time. Try making Pirate Pegleg
         count from 10 up to 1000, adding 10 at a time."
@@ -1941,31 +1944,33 @@ en:
         another to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then
         another to get me to the pig."
-      course2_playlab_stage17_1_instruction: "Can you make this dog say \"hello world\"?"
-      course2_playlab_stage17_10_instruction: "Can you add blocks to change the background
-        and the speed of Waddles, and then move him with the arrows until you score?"
+      course2_playlab_stage17_1_instruction: "Can you make Jorge the Dog (actor 1)
+        say \"Hi\"?"
+      course2_playlab_stage17_10_instruction: "Add blocks to the `when run` event
+        to change the background and the speed of Waddles.\r\n\r\nPlay the game and
+        move Waddles with the arrows until you score."
       course2_playlab_stage17_11_instruction: "Create your own story. When you're
         done, click Finish to let friends try your story on their phones."
-      course2_playlab_stage17_2_instruction: "Can you make the dog say something
-        and then have the cat say something afterwards?"
-      course2_playlab_stage17_3_instruction: "Can you write a program to make this
-        dog move to the cat?"
+      course2_playlab_stage17_2_instruction: "Can you make Jorge (actor 1) say something,
+        then have Olive the Cat (actor 2) say something?"
+      course2_playlab_stage17_3_instruction: "Can you write a program to make Jorge
+        (actor 1) move toward Olive the Cat?"
       course2_playlab_stage17_4_instruction: "Can you write a program that makes
-        the dog move to the cat, and have the cat say \"hello\" when the dog reaches
-        him?"
-      course2_playlab_stage17_5_instruction: "Can you write a program to make the
-        octopus say \"hello\" when it is clicked?"
-      course2_playlab_stage17_6_instruction: "Can you write a program to make Waddles
-        move around using the up / down / left /right keys to hit all of the targets?"
-      course2_playlab_stage17_7_instruction: "The \"repeat forever\" block allows
-        you to run code continuously. Can you attach blocks to move this dinosaur
-        up and down repeatedly?"
-      course2_playlab_stage17_8_instruction: "Can you have Waddles say \"Ouch!\"
-        and play a \"hit\" sound if he runs into the dinosaur, and then move him with
-        the arrows to make that happen?"
+        Jorge (actor 1) move to Olive the Cat, and have Olive say \"Hello\" when Jorge
+        reaches her?"
+      course2_playlab_stage17_5_instruction: "Can you write a program to make Octavia
+        say \"Hi\" when she is clicked?"
+      course2_playlab_stage17_6_instruction: "Now, write a program to make Waddles
+        move around using the up / down / left /right keys to hit all of the targets!"
+      course2_playlab_stage17_7_instruction: "The `repeat forever` block allows you
+        to run code over and over forever. Can you attach blocks to move Chomp the
+        Dino (actor 2) up and down forever?"
+      course2_playlab_stage17_8_instruction: "Can you have Waddles (actor 1) say
+        \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're
+        done, play the game to make that happen."
       course2_playlab_stage17_9_instruction: "Can you add a block to score a point
-        when Waddles runs into the octopus, and then move him with the arrows until
-        you score?"
+        when Waddles runs into Octavia (actor 3)? \r\nPlay the game and move Waddles
+        with the arrows until you score!"
       course3_playlab_stage16_1_instruction: "Can you make this dog say \"hello world\"?"
       course3_playlab_stage16_2_instruction: "Can you make the dog say something
         and then have the cat say something afterwards?"
@@ -1995,6 +2000,8 @@ en:
         and the speed of Waddles, and then move him with the arrows until you score?"
       course3_playlab_stage17_7_instruction: "Create your own story. When you're
         done, click Finish to let friends try your story on their phones."
+      Crack a Caesar Cipher_instruction: "Instructions"
+      Crack Random Substitution_instruction: "Instructions"
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -2458,6 +2465,28 @@ en:
         you see how it was made?"
       'Grade 4 Example PlayLab Project #2_instruction': "Take a look at this project.  Do
         you see how it was made?"
+      grade1_adventurer_loops1_instruction: "Four piles of gold!  Collect all four."
+      grade1_adventurer_loops10_instruction: "Help me get all of the gold from this
+        cave."
+      grade1_adventurer_loops2_instruction: "How can Laurel collect all five piles
+        of gold using only one `move forward` block?"
+      grade1_adventurer_loops3_instruction: "Can you fix Laurel's path to get all
+        of this gold?"
+      grade1_adventurer_loops4_instruction: "Add to the code from the last puzzle
+        to get all of the gold. "
+      grade1_adventurer_loops5_instruction: "What should you add to this code to
+        get all of the gold?"
+      grade1_adventurer_loops6_instruction: "Write the code to get all of this gold."
+      grade1_adventurer_loops7_challenge_instruction: "Challenge: The gold goes all
+        the way down these stairs!  Write the code to help me get it all."
+      grade1_adventurer_loops8_challenge_instruction: "Challenge: Try this staircase
+        now! It has an extra spike at the end you'll have to climb."
+      grade1_adventurer_loops9_instruction: "Help me get the gold from this deep
+        valley."
+      grade1_adventurer_loopsFP_instruction: "Eureka!  Collect as much gold as you
+        can!"
+      grade1_adventurer_loopsPre_instruction: "This is Laurel the Adventurer!  Can
+        you move her around and get gold?"
       grade1_artist_loops1_instruction: "The Artist is trying to draw a line six
         times, but can't get it right.  Can you help?"
       grade1_artist_loops2_instruction: "Help the artist draw a line 7 times to make
@@ -2497,20 +2526,31 @@ en:
         me to the pig!"
       grade1_maze_sequence9_instruction: "Go around the TNT to get me to the pig!
         "
-      grade1_maze_sequenceA_instruction: "Move me around the TNT to get to the pig."
+      grade1_maze_sequenceA_instruction: "Challenge: Move me around the TNT to get
+        to the pig."
       grade1_maze_sequenceB_instruction: "Fix the bugs to get the bird to the pig."
       grade1_maze_sequenceC_instruction: "It's all you!  Get the bird to the pig."
-      grade1_maze_sequenceD_instruction: "It's a pig party!  Get those pigs! "
+      grade1_maze_sequenceD_instruction: "Now head any which way to get that pig!"
       grade1_playlab_events1_instruction: "This game is called \"Play Lab\".  See
         if you can figure out what each block does."
+      grade1_playlab_events1a_instruction: "Make your robot say \"Hello!\" when the
+        button is clicked."
       grade1_playlab_events2_instruction: "This program makes Robin fly.  Can you
         get her to vanish when you click her?"
+      grade1_playlab_events2a_instruction: "Edit the code so that when the second
+        bird is clicked, your program plays a sound!"
       grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you
         make the robot jump when you press the up button?\r\n"
+      grade1_playlab_events3a_instruction: "When the third bird is clicked, the background
+        should change to a city. Can you add code to make this happen?"
       grade1_playlab_events4_instruction: "Add a block to make Robin vanish when
         she collides with the robot."
+      grade1_playlab_events4a_instruction: "Add code to make something happen when
+        the fourth bird is clicked. Be creative!"
       grade1_playlab_events5_instruction: "Add a block to the 'when run' event
         that starts the dragon flying."
+      grade1_playlab_events5a_instruction: "About My Robot Project! Write code so
+        that clicking on each bird shows a new fact about your robot."
       grade1_playlab_events6_instruction: "Add a block to the 'when actor 1 clicked'
         event that makes the dragon return to the middle of the screen."
       grade1_playlab_events7_instruction: "Add a block so that when you push the
@@ -2543,8 +2583,8 @@ en:
       grade2_CaringForNewPet_4_instruction: "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
       grade2_CaringForNewPet_5_instruction: "Get me to the pig!"
-      grade2_CaringForNewPet_6_instruction: "Guide me to the green evilness! (Watch
-        out for TNT)"
+      grade2_CaringForNewPet_6_instruction: "Challenge: Guide me to the green evilness!
+        (Watch out for TNT)"
       grade2_CaringForNewPet_7D_instruction: "This code has a lot of bugs, you'll
         need to both remove and add blocks to get me to the pig."
       grade2_MakeDogTag_1_instruction: "Hi, I'm an artist. You can write code to
@@ -2568,6 +2608,10 @@ en:
       grade2_MakeDogTag_9_instruction: "Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
         times instead of 8."
+      grade2_maze_debuggingFP_instruction: "Now, help me sneak up on the pig any
+        way you want to!"
+      grade2_maze_debuggingPre_instruction: "Play with these blocks to see what they
+        make the bird do!"
       grade2_PuppyLoops_1_instruction: "Can you get me to the pig using 5 of the
         same kind of blocks?"
       grade2_PuppyLoops_10_instruction: "My teacher says that I should finish what
@@ -2721,8 +2765,8 @@ en:
       grade3_Debugging_11_instruction: "Assessment:  Now it's time to show what
         you know!\r\n\r\nFix the error(s) to collect all of the nectar and make all
         of the honey."
-      grade3_Debugging_2_instruction: "Can you find the problem here?\r\nFix the
-        error(s) to collect all of the nectar."
+      grade3_Debugging_2_instruction: "These blocks are really bugging me!\r\n\r\nFix
+        the error(s) to collect all of the nectar."
       grade3_Debugging_3_instruction: "Ooh, this one stings!\r\n\r\nFix the error(s)
         to collect all of the nectar."
       grade3_Debugging_4_instruction: "These blocks are really bugging me. Fix the
@@ -2740,8 +2784,8 @@ en:
         nectar and make all of the honey."
       grade3_Debugging_TeacherIDo_instruction: "These blocks are really bugging me.
         Fix the error(s) to collect all of the nectar and make all of the honey."
-      grade3_Loops_1_instruction: "Hi, I'm a bee. Can you help me collect the nectar
-        from these flowers? "
+      grade3_Loops_1_instruction: "Can you help me collect the nectar from these
+        flowers? "
       grade3_Loops_10_instruction: "Such a busy bee!\r\n\r\nHelp bee collect all
         of the nectar and make all of the honey with the fewest blocks possible."
       grade3_Loops_11_instruction: "The shape of this path is different than the
@@ -2765,6 +2809,58 @@ en:
         at each honeycomb using the fewest blocks possible."
       grade3_Loops_TeacherIDo_instruction: "Those flowers look tasty!\r\n\r\nCollect
         nectar from each of the flowers using the fewest blocks possible."
+      grade3_maze_Loop1_instruction: "Assessment:  Get me to the sunflower using
+        only 5 blocks! "
+      grade3_maze_loops1_instruction: "Assessment:  Get me to the sunflower using
+        only 5 blocks! "
+      grade3_maze_loops2_instruction: "Get me to the sunflower using the fewest blocks
+        possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down
+        on the amount of code you need."
+      grade3_maze_loops3_instruction: "Let's take this to another level! \r\nUse
+        loops to get me to the sunflower with the fewest loops possible."
+      grade3_maze_loops4_instruction: "Get me to the sunflower using the fewest number
+        of blocks possible!"
+      grade3_maze_loops5_instruction: "Get me to the sunflower using the fewest blocks
+        possible!"
+      grade3_maze_nestedLoops1_instruction: "Can you get me to the pig using 5 of
+        the same kind of blocks?"
+      grade3_maze_nestedLoops2_instruction: "Can you get to the pig by creating a
+        loop that uses only one `move forward` block inside of a `repeat`?"
+      grade3_maze_nestedLoops3_instruction: "Get me to the pig! You can only use
+        one move forward block this time"
+      grade3_maze_nestedLoops4_instruction: "In this puzzle, two `repeat` loops will
+        help you get to the pig with the fewest number of blocks!"
+      grade3_playLab_buildGame_1_instruction: "There is a new block in this lesson,
+        the `random integer` block. It is used to choose a random number. Write a
+        program where the robot says a random number between 1 and 100!"
+      grade3_playLab_buildGame_2_instruction: "We have already created a random integer,
+        \"j\", which is either 1 or 0. Now, we need to use it to decide whether our
+        card is red or black. Add a second if statement to the code under `when run`
+        to complete this code."
+      grade3_playLab_buildGame_3_instruction: "There are 13 different card values
+        in a deck of cards, so we'll need to have 13 options. Under the empty `when
+        run` block, add a line that sets the placeholder \"i\" to a random integer
+        between 1 and 13."
+      grade3_playLab_buildGame_4_instruction: "In a deck of cards, a card with value
+        1 isn't actually called a \"1\", there's a special name. Write an if statement
+        that checks if the random number is a 1, then tell the computer that the value
+        of that card is \"Ace\"."
+      grade3_playLab_buildGame_5_instruction: "We can just call the cards from 2
+        to 10 by their numbers, so add an if statement that checks whether the number
+        generated is within those numbers, then sets the card value to the number
+        generated."
+      grade3_playLab_buildGame_6_instruction: "There are three more cards with special
+        names in the deck. Add to your code so that a card number 11 is called a \"Jack\",
+        a 12 is a \"Queen\" and a 13 is a \"King\""
+      grade3_playLab_buildGame_7_instruction: "You already know what color your card
+        is, but what suit is it? Add code to the conditional statement \"if card is
+        Red\" to choose hearts or diamonds."
+      grade3_playLab_buildGame_8_instruction: "Add the second part of the code to
+        choose a suit, copying what you made for a Red card."
+      grade3_playLab_buildGame_final_instruction: "Final stage for playlab conditionals
+        level (could hide entire function so that students just work with point scoring)"
+      grade3_playLab_buildGame_final2_instruction: "Here's all of your code to choose
+        a card - try adding some other fun features!"
       grade3_robotFarmer_ConditionalsIntro_1_instruction: "Hi, I'm a farmer. I need
         your help to flatten the field on my farm so it's ready for planting. Move
         me to the pile of dirt and use the \"remove\" block to remove it."
@@ -2814,26 +2910,46 @@ en:
         grow at random intervals. For the graphic, think about the Minecraft way of
         growing wheat (green, has multiple heights showing growth, then yellow for
         ripe)."
-      grade3_RunningFarm_10_instruction: "I want to collect as much wheat and carrots
-        as I can. Can you help me? How many crops do you think we can collect? I bet
-        using loops would really help us out!"
+      grade3_RunningFarm_10_instruction: "This is another debugging to make sure
+        the students understand the difference between the IF block and While loop.
+        Start off all crops as ripe with at least 1 item, with growth after Run."
       grade3_RunningFarm_2_instruction: "NOTES: have wheat and potatoes interspersed
-        through row. Potatoes should be fully grown, with some randomly showing more
-        than 1 potato per spot.\r\n\r\n"
-      grade3_RunningFarm_3_instruction: "Can you help me plant at least 24 crops
-        in this field? I bet using loops would really help us out!"
-      grade3_RunningFarm_4_instruction: "Can you help me collect all the wheat in
-        this field? I think the best way would be to use loops!"
-      grade3_RunningFarm_5_instruction: "Can you help me collect all the wheat and
-        carrots in this field? I think the best way would be to use loops!"
-      grade3_RunningFarm_6_instruction: "Can you help me collect at least 24 crops
-        from this field? I bet using loops would really help us out!"
-      grade3_RunningFarm_7_instruction: "Can you help me collect all the wheat and
-        carrots in this field? I think the best way would be to use loops!"
-      grade3_RunningFarm_8_instruction: "Can you help me collect at least 24 crops
-        from this field? I bet using loops would really help us out!"
-      grade3_RunningFarm_9_instruction: "Can you help me plant and then collect 14
-        bundles of wheat in this field? I think the best way would be to use loops!"
+        throughout the row. Potatoes should be fully grown, with some randomly showing
+        more than 1 potato per spot. This is different from the previous puzzle because
+        students will have to use the drop down menu on the IF block to select potatoes
+        instead of harvesting wheat.\r\n\r\n"
+      grade3_RunningFarm_3_instruction: "This will look essentially the same as the
+        previous puzzle. There should be two crops randomly planted in the row. Each
+        plant should start at a random growth stage and grow when the user runs their
+        algorithm. Students are using the while loop and hopefully understand that
+        it's better at picking all the crops of one type."
+      grade3_RunningFarm_4_instruction: "Since students started this course using
+        events, we wanted to include them into this culminating stage. We will only
+        use them in a few stages then move on. This puzzle should randomly populate
+        the entire column with wheat and potatoes. The puzzle should also start with
+        the following event blocks: up arrow, down arrow, and space bar. Attached
+        to the space bar should be a collect block."
+      grade3_RunningFarm_5_instruction: "This puzzle should randomly populate the
+        entire row with wheat and potatoes. The puzzle should also start with the
+        following event blocks: up arrow, down arrow, and space bar. Can we check
+        to make sure students are using while loop?"
+      grade3_RunningFarm_6_instruction: "This puzzle should randomly populate the
+        entire field with wheat and potatoes. The puzzle should also start with the
+        following event blocks: up arrow, down arrow, left arrow, right arrow, and
+        space bar. Can we check to make sure students are using while loop?"
+      grade3_RunningFarm_7_instruction: "Have wheat and potatoes planted randomly
+        at various growth stages. I just wanted a quick debugging puzzles in here
+        to transition away from events"
+      grade3_RunningFarm_8_instruction: "Have wheat and potatoes planted randomly
+        at various growth stages. Now we introduce multiple while loops (stacked)
+        nested inside a loop. The two while loops in the solution represent different
+        while loops (while there is potato and while there is wheat)"
+      grade3_RunningFarm_9_instruction: "Add Weeds element. Weeds start out in random
+        spots in the field and spread more and more rapidly as time goes on.. This
+        puzzle is the culminating game-like puzzle. Students should have the event
+        blocks (up, down, left, right, spacebar) available in the toolbox to use if
+        they want. The entire field should be planted randomly with mostly wheat,
+        potatoes, and a few weeds."
       grade3_RunningFarm_TeacherIDo_instruction: "Teacher I Do: Show students how
         they can use loops and conditionals to plant and harvest 2 rows of crops."
       grade3_RunningFarm_TeacherIDo2_instruction: "Teacher I Do: Show students how
@@ -2868,13 +2984,16 @@ en:
         give your image a beautiful background color! This creation will be saved
         to your Projects dashboard so that you can easily edit it any time!"
       grade4_artist_functions1_instruction: "\"Me zombie artist. Me love drawing!\"  \r\n\r\nHelp
-        the zombie draw square glasses.  \r\n\r\nThe bridge between the glasses is
-        25 pixels shorter than the width of the squares, which is 100 pixels."
+        the zombie draw glasses using squares with sides of 100 pixels.  \r\n\r\nThe
+        bridge between the glasses is 75 pixels long."
       grade4_artist_functions2_instruction: "Functions let you define new blocks!
         \r\n\r\nWe've moved the blocks needed for drawing a square into a function
         called `draw a square`. This time, use the `draw a square` function to create
         the glasses. \r\n\r\nThe squares are 75 pixels apart."
       grade4_artist_functions_challenge_instruction: "Use the suggested functions
+        to draw four rows of hexagons. Notice how our even numbered rows are shifted
+        to the right?"
+      grade4_artist_functions_challenge2_instruction: "Use the suggested functions
         to draw four rows of hexagons. Notice how our even numbered rows are shifted
         to the right?"
       grade4_artist_functions_freeplay_instruction: "You are on your own now! Try
@@ -2971,8 +3090,8 @@ en:
         nectar from the flowers? You can only collect nectar from flowers, but you
         can check any space to see if there is a flower."
       grade4_bee_conditionals_new2a_instruction: "Make all of the honey. It's actually
-        more efficient to check each space for a honey comb, even when you know are
-        empty."
+        more efficient to check each space for a honey comb, even when you know some
+        are empty."
       grade4_bee_conditionals_new3a_instruction: "Collect all of the nectar or make
         all the honey. You can only collect nectar from flowers and make honey from
         honeycombs. Check any space to see if there is a flower or honeycomb."
@@ -3000,10 +3119,37 @@ en:
         there is a honeycomb)."
       grade4_bee_functions_instruction: "Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole."
+      grade4_bee_functions1_instruction: "Collect all the nectar from each flower."
+      grade4_bee_functions10_instruction: "Assessment: Use the given function to
+        collect nectar from each flower."
+      grade4_bee_functions11_instruction: "Assessment: Create a function to turn,
+        move forward and make 3 honey, then return the bee to where it started and
+        turn back."
+      grade4_bee_functions2_instruction: "Functions are blocks of code that perform
+        a task. Use the \"get 2 nectar\" function to collect the nectar from each
+        flower."
+      grade4_bee_functions3_instruction: "Functions are blocks of code that perform
+        a task.  \r\n\r\nUse the `get 5` function to get 5 nectars at a time."
+      grade4_bee_functions4_instruction: "The `move and get nectar` function turns
+        the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse
+        the function to collect all of the nectar."
+      grade4_bee_functions5_instruction: "This puzzle will be deleted!"
+      grade4_bee_functions6_instruction: "Now write the function to collect nectar
+        from the three flowers."
+      grade4_bee_functions7_instruction: "Create a function and call it to collect
+        nectar at each flower and make honey at each honeycomb."
+      grade4_bee_functions8_instruction: "Create your own function that goes down
+        a path, gets nectar, makes honey, and then returns the bee to the top of the
+        path. Then collect all the nectar and make all the honey!"
+      grade4_bee_functions9_instruction: "Red flowers can have an unknown amount
+        of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects
+        all of the nectar from each flower."
       grade4_bee_nestedLoops0_instruction: "Use a loop to collect all of the nectar."
       grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.
         Use a nested loop. "
       grade4_bee_nestedLoops2_instruction: "Can you determine the missing blocks?"
+      grade4_bee_nestedLoops2a_instruction: "Can you create a nested loop to collect
+        all of the nectar?"
       grade4_bee_nestedLoops3_instruction: "Collect all of the nectar by creating
         a nested loop."
       grade4_bee_nestedLoops4_instruction: "Collect all of the nectar from each flower
@@ -3018,10 +3164,22 @@ en:
         given parameters."
       grade4_farmer_functions1_instruction: "Have we met before? I'm the farmer!
         Please help me remove this pile and fill this hole."
+      grade4_farmer_functions2_instruction: "Take the code you just wrote it and
+        use it to define a new function. Call the function twice to complete the puzzle."
+      grade4_farmer_functions3_instruction: "Try using a couple of repeat blocks
+        within your function definition."
+      grade4_farmer_functions4_instruction: "Swap out your repeat loops for more
+        versatile while loops."
+      grade4_farmer_functions5_instruction: "Things are going to start getting trickier,
+        but don't give up! You can use the same while loops to check both spaces
+        in each pass."
+      grade4_farmer_functions6_instruction: "The paths are a different length. You
+        can use a different type of while loop to keep the pattern going as long as
+        you need to."
       grade4_frozen_freeplay_instruction: "You've officially become a master artist!
         Create a winter wonderland."
-      grade4_frozen_functions0_instruction: "A circle is a special shape. Can you
-        figure out what number to replace the question marks with to draw a circle?"
+      grade4_frozen_functions0_instruction: "Can you figure out what number to replace
+        the question marks with to draw a circle?"
       grade4_frozen_functions1_instruction: "Use the new “draw a circle” function
         to create 10 overlapping circles. Don't forget to jump forward between circles."
       grade4_frozen_functions1a_instruction: "Use the new “Create a circle” block
@@ -3090,15 +3248,30 @@ en:
         at each honeycomb using the fewest blocks possible."
       grade4_review_bee3_instruction: "Such a busy bee!\r\n\r\nHelp bee collect all
         of the nectar and make all of the honey with the fewest blocks possible."
-      grade4_scaffolded_project1_instruction: "Add some basics actions to get your
-        project started. Trying add a few actors, then have them move around or say
-        things."
-      grade4_scaffolded_project2_instruction: "Now let's make your project more
-        interactive! Add some events so that you can control your actors or respond
-        to collisions. Add and remove points!"
-      grade4_scaffolded_project3_instruction: "Try adding a function to your project.
-        There are several pre-made functions for your use or you can write your own!"
-      grade4_scaffolded_project4_instruction: "Finally, let's add conditionals."
+      grade4_scaffolded_project1_instruction: "It is amazing how much you have learned!
+        Let's put them together to make a game, step by step."
+      grade4_scaffolded_project2_instruction: "Now let's get things moving! Use
+        these event handlers and actions to make your hero move.\r\n\r\nWe've added
+        these blocks to your tool box to help you.\r\n"
+      grade4_scaffolded_project3_instruction: "Now that your game has a hero, it's
+        time to start adding other actors and assigning them behaviors. \r\n\r\nAdd
+        two or more additional actors to your game and make them move. Do you want
+        to have an actor patrol back and forth? Try using a these new blocks to bring
+        these other components of your game to life!"
+      grade4_scaffolded_project4_instruction: "Just getting the actors moving is
+        a great step, but we need to program some interactions to make this really
+        feel like a game. A simple way to do this is to add or remove points when
+        actors collide with projectiles or each other. Find some interesting ways
+        to change the score in your game."
+      grade4_scaffolded_project4a_instruction: "Just getting the actors moving is
+        a great step, but we need to program some interactions to make this really
+        feel like a game. A simple way to do this is to add or remove points when
+        actors collide with projectiles or each other. Find some interesting ways
+        to change the score in your game."
+      grade4_scaffolded_project5_instruction: "Now spend some time making sure the
+        game works the way you want. Try including a way to win or lose your game."
+      grade4_scaffolded_project6_instruction: "You've finished! Now you can play
+        your game or share it with your friends and classmates!"
       grade5_artist_binary1_instruction: "Binary is a way of representing information
         using only two options.  Here, we're going to use the options \"off\" (represented
         by the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've
@@ -3248,7 +3421,7 @@ en:
         using the same concepts from the last puzzle - what should you set the \"sides\"
         variable to in order to draw this picture made of squares?"
       grade5_artist_variables_new1_instruction: "Here is a program that will create
-        an array of shapes. Modify it so that it creates the design we need."
+        an image. There are a few things that are wrong with it."
       grade5_artist_variables_octagons13_instruction: "When a shape has lots of sides,
         each side needs to be shorter if you want the whole pattern to fit on the
         screen. \r\nLet's recreate the algorithm for this amazing pattern, but instead
@@ -3379,6 +3552,10 @@ en:
         to send Dog back to the top-left ONLY if Dog touches any of the other actors."
       grade5_playlab_variables14_instruction: "It's free play time! Have fun with
         all the blocks in your tool box. "
+      grade5_playlab_variables1ask_instruction: "This time, when you press 'run',
+        you will see a 'prompt' asking you for a number. This number will be stored
+        in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how
+        this program is written!"
       grade5_playlab_variables2_instruction: "The race in that last puzzle wasn't
         very fair! Change the `dog_speed` variable to make sure you can collect more
         flags than Cat. The first to collect 10 flags wins!"
@@ -3397,6 +3574,10 @@ en:
         event to trigger an update to your score. You can increment your variable
         by setting \"points = points + 1.\" Get your score up to 10 (going one at
         a time!) to pass the level."
+      grade5_playlab_variables6ask_instruction: "This time, you need 100 points to
+        win!  Don't worry though, you can choose how many points you earn each time
+        you score a hit!\r\nTry adding the `ask` block and changing the number 1 out
+        for the variable `value`."
       grade5_playlab_variables7_instruction: "Nice, now let's make sure this game
         isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
         Cat (actor 2), you should lose a point. Start with 10 points so it's not
@@ -3429,8 +3610,29 @@ en:
         Try to touch all of the flags!"
       grade5_prompt_test_instruction: "Variables aren't always numbers. What if
         you wanted to store a word or text? Experiment with the new `ask` block."
-      gradek_adventurer_loops1_instruction: "This is Laurel the Adventurer!  Can
-        you move her around and get gold?"
+      gradek_adventurer_loops1_instruction: "Three piles of gold!  Collect all three."
+      gradek_adventurer_loops10_instruction: "Help me get all of the gold from this
+        cave."
+      gradek_adventurer_loops2_instruction: "How can Laurel collect all five piles
+        of gold using only one --> block?"
+      gradek_adventurer_loops3_instruction: "Can you fix Laurel's path to get all
+        of this gold?"
+      gradek_adventurer_loops4_instruction: "Use what you learned to get all of the
+        coins."
+      gradek_adventurer_loops4a_instruction: "Add to this code to collect all of
+        the coins."
+      gradek_adventurer_loops5_instruction: "What should you add to this code to
+        get all of the gold?"
+      gradek_adventurer_loops6_instruction: "Write the code to get all of this gold."
+      gradek_adventurer_loops7_instruction: "Write the code to get all of this gold."
+      gradek_adventurer_loops7_challenge_instruction: "Challenge: The gold goes all
+        the way up these stairs!  Write the code to help me get it all."
+      gradek_adventurer_loops8_instruction: "Help me get the gold from this deep
+        valley."
+      gradek_adventurer_loops9_instruction: "Help me get all of the gold from this
+        cave."
+      gradek_adventurer_loopsFP_instruction: "Eureka!  Collect as much gold as you
+        can!"
       gradek_adventurer_loopsPre_instruction: "This is Laurel the Adventurer!  Can
         you move her around and get gold?"
       gradek_artist_loops1_instruction: "Help the artist draw this line two times
@@ -3445,7 +3647,8 @@ en:
       gradek_artist_loops6_instruction: "Use the `repeat` loop to add waves to the
         water."
       gradek_artist_loops7_instruction: "We need a ladder up to the boat."
-      gradek_artist_loops8_instruction: "The stairs are broken.  Help me fix them."
+      gradek_artist_loops8_instruction: "Challenge: The stairs are broken.  Help
+        me fix them."
       gradek_artist_loops9_instruction: "Time to head back to land. Help me put down
         stones so I don't fall in!"
       gradek_artist_loopsA_instruction: "Help me build steps to watch the ship sail
@@ -3454,9 +3657,40 @@ en:
         what you think he saw."
       gradek_artist_loopsPre_instruction: "This is a new type of puzzle called \"Artist\".
         Play with the level and draw something fun."
+      gradek_playlab_events1_instruction: "Make your robot say \"Hello!\" when the
+        button is clicked."
+      gradek_playlab_events1a_instruction: "Add a block so that when you click the
+        \"up\" button, Olive the Cat walks up."
+      gradek_playlab_events2_instruction: "Edit the code so that when the second
+        bird is clicked, your program plays a sound!"
+      gradek_playlab_events2a_instruction: "Add a block so that when you click \"down\"
+        Olive the Cat walks down."
+      gradek_playlab_events3_instruction: "When the third bird is clicked, the background
+        should change to a city. Can you add code to make this happen?"
+      gradek_playlab_events3a_instruction: "When the third bird is clicked, the background
+        should change to a city. Can you add code to make this happen?"
+      gradek_playlab_events3b_instruction: "Add a button so that Olive the Cat moves
+        right when you click the \"right\" button."
+      gradek_playlab_events4_instruction: "Add code to make something happen when
+        the fourth bird is clicked. Be creative!"
+      gradek_playlab_events4a_instruction: "Add a block so that Olive the Cat moves
+        left when you click the \"left\" button."
+      gradek_playlab_events5_instruction: "About My Robot Project! Write code so
+        that clicking on each bird shows a new fact about your robot."
+      gradek_playlab_events5a_instruction: "About My Robot Project! Write code so
+        that clicking on each bird shows a new fact about your robot."
+      gradek_playlab_eventsA_instruction: "Now, have the actor change to a random
+        size AND have it play a random sound when you click the center button."
+      gradek_playlab_eventsFP_instruction: "Add anything you want to this game.  Can
+        you make Olive the Cat disappear when you click on her?"
+      gradek_playlab_eventsPre_instruction: "This is a Play Lab level.  Move blocks
+        to the workspace and see what happens!"
       gradeK_sequence_4_instruction: "Try this one yourself from the beginning."
       Guess The Number_instruction: "Build whatever you want. This is an example
         of a number-guessing game!"
+      Harvesting_instruction: "Uh oh, I lost my map and can't remember what I planted.
+        Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
+        code to pick all the crops, no matter what they are?"
       Infinity_catch_instruction: "Can you make Elsa (\"actor 2\") catch up with
         Anna by using the arrow keys?"
       Infinity_finale_instruction: "Create anything you like and share it!"
@@ -3508,13 +3742,13 @@ en:
       'Internet Simulator: Sending Binary Messages 1_instruction': "Develop, document,
         and test a protocol that allows you to use Internet Simulator to relay a message.
         See the worksheet for more detailed instructions.  "
-      'Internet Simulator: sending binary messages_instruction': "Develop, document,
+      'Internet Simulator: Sending Binary Messages_instruction': "Develop, document,
         and test a protocol that allows you to use Internet Simulator to relay a message.
         See the worksheet for more detailed instructions.  "
-      'Internet Simulator: sending numbers_instruction': "With your partner, develop
+      'Internet Simulator: Sending Numbers_instruction': "With your partner, develop
         a protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!"
-      'Internet Simulator: sending text_instruction': "Work with a partner or in
+      'Internet Simulator: Sending Text_instruction': "Work with a partner or in
         a small team to develop a protocol that allows you to send formatted text.
         See the worksheet handed out by your teacher for more detailed instructions!"
       jessie-test_instruction: "Lots of instructions"
@@ -3674,7 +3908,8 @@ en:
       K-1 Maze Sequence Assessment 2_instruction: "Move one way, then another to
         get me to the pig."
       K2.0 sequence 1_instruction: "A bug! Fix the code to get me to the pig."
-      K2.0 sequence 10_instruction: "Move me around the TNT to get to the pig."
+      K2.0 sequence 10_instruction: "Challenge: Move me around the TNT to get to
+        the pig."
       K2.0 sequence 12_instruction: "Let's get that pig! "
       K2.0 sequence 2_instruction: "Fix the code to get me to the pig!"
       K2.0 sequence 3_instruction: "Something is not quite right. REMOVE a block
@@ -3685,14 +3920,15 @@ en:
       K2.0 sequence 5_instruction: "Move one way, then another to get me to the pig!"
       K2.0 sequence 6_instruction: "Figure out what is missing and then add blocks
         to get me to the pig!"
-      K2.0 sequence 7_instruction: "Debug this level by changing a block to get me
-        to the pig!"
+      K2.0 sequence 7_instruction: "Solve this level and get me to the pig!"
       K2.0 sequence 8_instruction: "Debug this level by adding blocks to get me to
         the pig!"
-      K2.0 sequence 9_instruction: "Go around the TNT to get me to the pig! "
-      K2.0 sequence FP_instruction: "It's a pig party!  Get those pigs! "
-      K2.0 sequence pre_instruction: "Play with these blocks to see what they make
-        the bird do!"
+      K2.0 sequence 9_instruction: "Challenge: Go around the TNT to get me to the
+        pig! "
+      K2.0 sequence FP_instruction: "Now figure out how to get the pig any way you
+        can!"
+      K2.0 sequence pre_instruction: "Play with these blocks to see if you can get
+        me to the pig!"
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she
         can using just 4 blocks?"
@@ -4129,6 +4365,8 @@ en:
         the door of your house."
       Overworld Shear Sheep_instruction: "Sheep-shearing time! Use the “shear” command
         to gather wool from both sheep."
+      Pattern Bee 1_instruction: "What a strange field of goodies! I wonder if there's
+        a pattern here..."
       PDAlg 13-16 Sam Extension Puzzle_instruction: "Add a second parameter to \"onscreen?\"
         for Sam's y coordinate and update the function so it keeps him safe on all
         four sides."
@@ -4251,6 +4489,8 @@ en:
         to see the next image which is even more sophisticated, but easier to understand."
       Pizza on a Plate_instruction: "Project Idea: Create a picture of something
         familiar from the real world. This requires persistence and planning!"
+      Planning Farmer_instruction: "What a strange field of goodies! I wonder if
+        there's a pattern here..."
       Play Lab Rocket 1_instruction: "A rocket blasts off, traveling at 15 meters
         per second... press \"Run\" to see how this word problem looks as an animation."
       Play Lab Rocket 2_instruction: "We've started the Design Recipe for rocket-height
@@ -4464,6 +4704,8 @@ en:
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern."
+      The Vigenere Cipher Widget_instruction: "Instructions"
+      The Vigenere Cipher_instruction: "Instructions"
       Total Artist Clone Me_instruction: "Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
         with the pen width to see how different your drawings look!"
@@ -5745,6 +5987,7 @@ en:
         (Click to see full instructions)"
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: "Create an
         event handler for the \"Delete\" button you created. (Click to see full instructions)"
+      U4 vigenere cipher 2_instruction: "Instructions"
       U4L02 - Objects - createObject_instruction: "Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) "
@@ -5816,6 +6059,8 @@ en:
       Unicorn Tag_instruction: "Take a look at this project.  Do you see how it was
         made?"
       Vigenere_instruction: "Test"
+      weird_playLab_instruction: "About My Robot Project! Write code so that clicking
+        on each bird shows a new fact about your robot."
       WhileAdventure_instruction: "Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?"
       'Widget: Black and White Pixelation_instruction': "Now make your own image!

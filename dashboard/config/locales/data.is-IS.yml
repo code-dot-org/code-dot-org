@@ -607,8 +607,8 @@
         C2_zuck_repeat_loop: Lykkjur völundarhúss
         C2_artist_loops: Listamaður - lykkjur
         C2_artist_debugging: Villuleit listamanns
-        C2_bee_loops: Lykkjur býflugu
-        C2_bee_debugging: Villuleit býflugu
+        C2_bee_loops: Býfluga - lykkjur
+        C2_bee_debugging: Býfluga - villuleit
         C2_bee_conditionals: Skilyrði býflugu
         C2_playlab_createstory: Leikjasmiðja - búa til sögu
         C2_graph_paper: Forritun rúðublaða
@@ -618,7 +618,7 @@
         C2_paper_airplanes: Pappírsflaugar
         C2_digital_footprint: Stafræna fótsporið þitt
         C2_digital_footprint_v2: Stafræna fótsporið þitt
-        C3_maze_level_4: Lykkjur völundarhúss
+        C3_maze_level_4: Völundarhús - lykkjur
         C3_artist_intro: Kynning á listamanni
         C3_artist_functions: Listamaður - föll
         C3_bee_functions: Býfluga - föll

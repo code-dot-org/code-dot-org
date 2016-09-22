@@ -43,7 +43,6 @@ def load_configuration
     'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
-    'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_code_studio'           => false,
@@ -93,6 +92,8 @@ def load_configuration
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'firebase_name'               => nil,
+    'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
     'firebase_max_table_count'    => 10,
@@ -334,10 +335,6 @@ end
 
 def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
-end
-
-def blockly_core_dir(*dirs)
-  deploy_dir('blockly-core', *dirs)
 end
 
 def cookbooks_dir(*dirs)

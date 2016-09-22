@@ -7,8 +7,11 @@
     -# on non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
+  - elsif rack_env != :production && request.params["lock-hero"]
+    -# for UI tests just lock to the first hero image
+    - heroes_arranged = heroes[0, 1]
   - else
-    -# 
+    -#
       The order alternates person & stat.  Person alternates non-celeb and
       celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
       celeb, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat,

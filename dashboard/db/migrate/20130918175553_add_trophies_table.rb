@@ -1,4 +1,4 @@
-class AddTrophiesTable < ActiveRecord::Migration
+class AddTrophiesTable < ActiveRecord::Migration[4.2]
   def change
     create_table :trophies do |t|
       t.string :name

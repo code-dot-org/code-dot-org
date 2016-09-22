@@ -4,11 +4,11 @@ import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   beforeEach(() => {
-    window.Applab = Object.assign({}, window.Applab, {
+    window.Applab = {
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
-    });
+    };
     getDatabase(Applab.channelId).autoFlush();
     return getConfigRef().set({
       limits: {
@@ -321,6 +321,163 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  describe('coerceColumn', () => {
+    it('converts anything to a string', done => {
+      FirebaseStorage.createRecord('mytable', {foo: 1}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "one"}, () => {
+          FirebaseStorage.createRecord('mytable', {foo: "1"}, () => {
+            FirebaseStorage.createRecord('mytable', {foo: null}, () => {
+              FirebaseStorage.createRecord('mytable', {foo: undefined}, () => {
+                FirebaseStorage.createRecord('mytable', {foo: false}, () => {
+                  doCoerce();
+                }, error => {throw error;});
+              }, error => {throw error;});
+            }, error => {throw error;});
+          }, error => {throw error;});
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'string', validate, error => {throw error;});
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":"1","id":1}',
+            2:'{"foo":"one","id":2}',
+            3:'{"foo":"1","id":3}',
+            4:'{"foo":"null","id":4}',
+            // undefined fields are not included in the record during creation and should
+            // not get converted to "undefined".
+            5:'{"id":5}',
+            6:'{"foo":"false","id":6}',
+          });
+          done();
+        });
+      }
+    });
+
+    it('converts valid booleans', done => {
+      FirebaseStorage.createRecord('mytable', {foo: true}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "true"}, () => {
+          FirebaseStorage.createRecord('mytable', {foo: false}, () => {
+            FirebaseStorage.createRecord('mytable', {foo: "false"}, () => {
+                  doCoerce();
+            }, error => {throw error;});
+          }, error => {throw error;});
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'boolean', validate, error => {throw error;});
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":true,"id":1}',
+            2:'{"foo":true,"id":2}',
+            3:'{"foo":false,"id":3}',
+            4:'{"foo":false,"id":4}',
+          });
+          done();
+        });
+      }
+    });
+
+    it('converts valid numbers', done => {
+      FirebaseStorage.createRecord('mytable', {foo: 1}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "2"}, () => {
+          FirebaseStorage.createRecord('mytable', {foo: "1e3"}, () => {
+            FirebaseStorage.createRecord('mytable', {foo: "0.4"}, () => {
+              doCoerce();
+            }, error => {throw error;});
+          }, error => {throw error;});
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'number', validate, error => {throw error;});
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":1,"id":1}',
+            2:'{"foo":2,"id":2}',
+            3:'{"foo":1000,"id":3}',
+            4:'{"foo":0.4,"id":4}',
+          });
+          done();
+        });
+      }
+    });
+
+    it('warns on invalid booleans', done => {
+      FirebaseStorage.createRecord('mytable', {foo: true}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "bar"}, () => {
+          doCoerce();
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'boolean', validate, validateError);
+      }
+
+      let onErrorCalled = false;
+      function validateError(msg) {
+        expect(msg).to.equal('Not all values in column "foo" could be converted to type "boolean".');
+        onErrorCalled = true;
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":true,"id":1}',
+            2:'{"foo":"bar","id":2}',
+          });
+          expect(onErrorCalled).to.be.true;
+          done();
+        });
+      }
+    });
+
+    it('warns on invalid numbers', done => {
+      FirebaseStorage.createRecord('mytable', {foo: 1}, () => {
+        FirebaseStorage.createRecord('mytable', {foo: "2xyz"}, () => {
+          doCoerce();
+        }, error => {throw error;});
+      }, error => {throw error;});
+
+      function doCoerce() {
+        FirebaseStorage.coerceColumn('mytable', 'foo', 'number', validate, validateError);
+      }
+
+      let onErrorCalled = false;
+      function validateError(msg) {
+        expect(msg).to.equal('Not all values in column "foo" could be converted to type "number".');
+        onErrorCalled = true;
+      }
+
+      function validate() {
+        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        recordsRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.deep.equal({
+            1:'{"foo":1,"id":1}',
+            2:'{"foo":"2xyz","id":2}',
+          });
+          expect(onErrorCalled).to.be.true;
+          done();
+        });
+      }
+    });
+  });
+
   describe('populateTable', () => {
     const EXISTING_TABLE_DATA = {
       cities: {
@@ -438,5 +595,94 @@ describe('FirebaseStorage', () => {
             error => {throw error;});
         });
     });
+  });
+
+  describe('importCsv', () => {
+    const csvData =
+      'id,name,age,male\n' +
+      '4,alice,7,false\n' +
+      '5,bob,8,true\n' +
+      '6,charlie,9,true\n';
+
+    const expectedTableData = {
+      1: '{"id":1,"name":"alice","age":7,"male":false}',
+      2: '{"id":2,"name":"bob","age":8,"male":true}',
+      3: '{"id":3,"name":"charlie","age":9,"male":true}'
+    };
+
+    it('imports a valid csv', done => {
+      FirebaseStorage.importCsv(
+        'mytable',
+        csvData,
+        validateTableData,
+        error => {throw error;});
+
+      function validateTableData() {
+        const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+        rowCountRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.equal(3);
+          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          return recordsRef.once('value');
+        }).then(snapshot => {
+          expect(snapshot.val()).to.deep.equal(expectedTableData);
+          done();
+        });
+      }
+    });
+
+    it('overwrites existing data', done => {
+      FirebaseStorage.createRecord(
+        'mytable',
+        {name:"eve", age:11, male:false},
+        doImport,
+        error => {throw error;});
+
+      function doImport() {
+        FirebaseStorage.importCsv(
+        'mytable',
+        csvData,
+        validateTableData,
+        error => {throw error;});
+      }
+
+      function validateTableData() {
+        const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+        rowCountRef.once('value').then(snapshot => {
+          expect(snapshot.val()).to.equal(3);
+          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          return recordsRef.once('value');
+        }).then(snapshot => {
+          expect(snapshot.val()).to.deep.equal(expectedTableData);
+          done();
+        });
+      }
+    });
+
+    it('rejects long inputs', done => {
+      const name150 = 'abcdefghij'.repeat(15);
+      expect(name150.length).to.equal(150);
+      const longCsvData = `name\n${name150}\n`;
+      FirebaseStorage.importCsv(
+        'mytable',
+        longCsvData,
+        () => { throw 'expected import to fail on large record'; },
+        error => {
+          expect(error).to.contain('one of of the records is too large');
+          done();
+        });
+    });
+
+    it('rejects too many rows', done => {
+      const longCsvData = 'name\n' + 'bob\n'.repeat(25);
+      FirebaseStorage.importCsv(
+        'mytable',
+        longCsvData,
+        () => { throw 'expected import to fail on large table'; },
+        error => {
+          expect(error).to.contain('the data is too large');
+          done();
+        });
+    });
+
   });
 });

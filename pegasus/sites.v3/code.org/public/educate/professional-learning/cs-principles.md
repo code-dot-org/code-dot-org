@@ -7,9 +7,9 @@ nav: plc_csp_nav
 <iframe width="600" height="337" src="https://www.youtube.com/embed/HoKRZRI9IDk" frameborder="0" allowfullscreen></iframe>
 <br />
 
-The Code.org Computer Science Principles (CSP) Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CSP course. This program is designed to prepare educators to provide high quality instruction, based on the [CSP curriculum](/educate/csp), tools and approach to students in their classrooms. 
+The Code.org Computer Science Principles (CSP) Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CSP course. This program is designed to prepare educators to provide high quality instruction based on the [CSP curriculum](/educate/csp), tools and approach to students in their classrooms. 
 
-## What does a Code.org CSP Educator do?
+## What does a Code.org CSP educator do?
 If accepted into the Code.org CSP Professional Learning Program, you will:
 
 - Join a nationwide community of educators working to change the face of CS education 
@@ -22,7 +22,7 @@ The program has two components:
 
 - **Code.org TeacherCon** - An intensive, hands-on, in-person workshop providing foundational experiences with CS and the Code.org suite of tools. The week-long workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
 - **Continuing Professional Development** - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
-  - The in-person meetings are run by local facilitators and are focused on continuing to build pedagogical strategies while also exploring the essential elements of this course, such as: using the AP performance tasks in your course, teaching new content and units, and keeping the classroom environment equitable and engaging for all students.
+  - The in-person meetings are run by local facilitators. They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continuing to build pedagogical strategies.
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
 
 
@@ -33,9 +33,9 @@ The program has two components:
 Code.org TeacherCon: (June-August)
 
   - 5 days (30 hours) in person. Choose from three dates:
-	  - June 20-24 in Atlanta, GA
-	  - July 18-22 in Salt Lake City, UT
-	  - August 8-12 in Chicago, IL
+	  - June 18-23 in TBD location
+	  - July 16-21 in TBD location
+	  - July 30-Aug 4 in TBD location
 
 Continuing Professional Development: (September - June)
 
@@ -43,7 +43,7 @@ Continuing Professional Development: (September - June)
   - 20 hours online, self-paced
 
 
-## <a name="participate"></a>Who can Participate?
+## <a name="participate"></a>Who can participate?
 
 The CSP Educator Development Program is open to teachers who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2017-18 school year by having a slot on their school's master schedule. 
 

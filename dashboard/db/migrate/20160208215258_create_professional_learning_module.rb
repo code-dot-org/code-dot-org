@@ -1,4 +1,4 @@
-class CreateProfessionalLearningModule < ActiveRecord::Migration
+class CreateProfessionalLearningModule < ActiveRecord::Migration[4.2]
   def change
     create_table :professional_learning_modules do |t|
       t.string :name

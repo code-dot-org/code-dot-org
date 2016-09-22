@@ -11,11 +11,19 @@ const studioApp = require('../../StudioApp').singleton;
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
 var USER_INPUT_DELAY = 1500;
 
-var PropertyRow = React.createClass({
+var ImagePickerPropertyRow = React.createClass({
   propTypes: {
     initialValue: React.PropTypes.string.isRequired,
     handleChange: React.PropTypes.func,
     desc: React.PropTypes.node,
+  },
+
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
   },
 
   getInitialState: function () {
@@ -58,7 +66,12 @@ var PropertyRow = React.createClass({
 
   changeImage: function (filename) {
     this.props.handleChange(filename);
-    this.setState({value: filename});
+    // Because we delay the call to this function via setTimeout, we must be sure not
+    // to call setState after the component is unmounted, or React will warn and
+    // tests will fail.
+    if (this.isMounted_) {
+      this.setState({value: filename});
+    }
   },
 
   render: function () {
@@ -81,4 +94,4 @@ var PropertyRow = React.createClass({
   }
 });
 
-module.exports = PropertyRow;
+module.exports = ImagePickerPropertyRow;

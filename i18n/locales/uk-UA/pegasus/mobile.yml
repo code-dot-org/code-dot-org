@@ -312,6 +312,8 @@ uk-UA:
   homepage_banner_congress_link: Підтримайте
   homepage_banner_emailprivacy: Ми вносимо важливі зміни у підтриманні конфіденційності учнів.
   homepage_banner_emailprivacy_link: Докладніше
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Дізнайтеся більше
   homepage_slot_text_title_hoc: Година коду
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
   homepage_slot_text_link_hoc: Спробуйте годину коду
@@ -533,6 +535,7 @@ uk-UA:
   dashboard_action_remove_confirm: Видалити?
   dashboard_action_done: Готово
   dashboard_action_required: необхідні
+  dashboard_action_print_certificates: Друкувати сертифікати
   dashboard_assessments_view: 'Перегляд оцінок в:'
   dashboard_assessments_none: 'Більшість вчителів оцінюють прогрес своїх учнів, користуючись закладкою "Перегляд прогресу". Якщо потрібно ставити додаткові оцінки, можна скористатись рекомендованими запитаннями та областями у планах уроків. Це робиться за межами Студії коду.'
   dashboard_assessments_none_part2: Якщо ви викладате курс у середній чи старшій школі, у нас підготовані питання в межах Студії коду, щоб допомогти вашим учням підготуватись до тесту АР. Щоб скористатись цими питаннями, призначте курс для свого класу, тоді оберіть цей курс з випадного меню вгорі та перегляньте відповіді учнів.
@@ -702,7 +705,8 @@ uk-UA:
   dashboard_faq: Запитання й відповіді
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
-  dashboard_announce_message: 'Хочете допомогти нам протестувати нові функції? Ми знаємо, що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж оприлюднити цю функцію.'
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Дізнайтеся більше
   dashboard_announce_try_now_button: Спробувати
@@ -711,6 +715,9 @@ uk-UA:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'Година коду вже тут - 8-14 грудня!'
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Спробувати зараз
   learn_sign_up_description: Зареєструйтесь для участі в Годині коду протягом тижня інформатики
   learn_sign_up_button: Реєстрація

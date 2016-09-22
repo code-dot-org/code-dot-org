@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-21T17:45:07.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Adding Content Part 2\r\n\r\nLet's add some headers to the document.\r\n\r\n# Do This\r\n\r\n* Add a \"Favorite Animal\" title above your paragraph about your favorite animal.\r\n* Add a \"Favorite Way to Travel\" title above your paragraph about your favorite way to travel (car, plane, train, etc.).",
+    "project_template_level_name": "CSDU2 - Paragraphs and headers Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

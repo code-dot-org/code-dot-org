@@ -35,16 +35,14 @@ var styles = {
   addButton: {
     color: color.light_gray,
     fontSize: 60,
-    marginTop: '-50%'
+    marginTop: '-32px'
   },
   animationName: {
-    marginLeft: 4,
-    marginRight: 4,
     marginTop: 4,
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    fontStyle: 'italic'
+    color: color.light_gray
   }
 };
 

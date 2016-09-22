@@ -20,15 +20,18 @@ const styles = {
     borderColor: color.lighter_gray,
     borderRadius: 5,
     background: color.lightest_gray,
-    display: 'table',
-    padding: 10,
-    width: '100%'
+    width: '100%',
+    display: 'table'
   },
-  hiddenStage: {
+  teacherRow: {
+    margin: '14px 0'
+  },
+  hiddenRow: {
     display: 'none'
   },
-  transparentStage: {
-    opacity: 0.5,
+  teacherHiddenRow: {
+    background: 'white',
+    borderStyle: 'dashed'
   },
   focusAreaRow: {
     height: 110,
@@ -41,7 +44,7 @@ const styles = {
     display: 'table-cell',
     width: 200,
     verticalAlign: 'middle',
-    paddingRight: 10
+    padding: 10
   },
   ribbonWrapper: {
     position: 'absolute',
@@ -73,6 +76,16 @@ const styles = {
   changeFocusAreaIcon: {
     fontSize: '1.2em',
     marginRight: 6
+  },
+  stageProgress: {
+    display: 'table-cell',
+    padding: 10,
+    verticalAlign: 'middle'
+  },
+  teacherInfo: {
+    display: 'table-cell',
+    verticalAlign: 'top',
+    width: 240,
   }
 };
 
@@ -105,8 +118,9 @@ const CourseProgressRow = React.createClass({
           styles.row,
           this.props.professionalLearningCourse && {background: color.white},
           this.props.isFocusArea && styles.focusAreaRow,
-          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenStage,
-          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.transparentStage
+          this.props.isHidden && this.props.viewAs === ViewType.Student && styles.hiddenRow,
+          this.props.isHidden && this.props.viewAs === ViewType.Teacher && styles.teacherHiddenRow,
+          this.props.viewAs === ViewType.Teacher && styles.teacherRow
         ]}
       >
         {this.props.isFocusArea && [
@@ -125,16 +139,18 @@ const CourseProgressRow = React.createClass({
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
         </div>
-        <div>
-          {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
-            <TeacherStageInfo stage={stage}/>
-          }
+        <div style={styles.stageProgress}>
           <StageProgress
             stageId={stage.id}
             levels={stage.levels}
             courseOverviewPage={true}
           />
         </div>
+        {this.props.showTeacherInfo && this.props.viewAs === ViewType.Teacher &&
+          <div style={styles.teacherInfo}>
+            <TeacherStageInfo stage={stage}/>
+          </div>
+        }
       </div>
     );
   }
