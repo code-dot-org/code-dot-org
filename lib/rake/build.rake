@@ -31,7 +31,7 @@ namespace :build do
       end
 
       HipChat.log 'Building <b>apps</b>...'
-      npm_target = rack_env?(:development) ? 'build' : 'build:dist'
+      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
     end
   end
