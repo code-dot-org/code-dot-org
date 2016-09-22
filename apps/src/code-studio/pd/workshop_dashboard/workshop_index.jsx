@@ -5,6 +5,7 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import WorkshopTableLoader from './components/workshop_table_loader';
+import SurveyResults from './survey_results.jsx'
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
@@ -20,6 +21,7 @@ const WorkshopIndex = React.createClass({
     return (
       <div>
         <h1>Your Workshops</h1>
+        <SurveyResults/>
         <p>
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
             New Workshop
