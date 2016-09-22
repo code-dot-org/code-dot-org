@@ -88,7 +88,7 @@ var BarGraph = function (options) {
   };
 
   this.isCaesarCipher = options.cipher === 'caesar';
-  this.isSubstitutionCipher = options.ciper === 'substitution';
+  this.isSubstitutionCipher = options.cipher === 'substitution';
 
   /** @type {D3.selection} */
   this.container = d3.select(options.chart_container.get(0));
