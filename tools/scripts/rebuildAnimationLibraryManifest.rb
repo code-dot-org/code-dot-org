@@ -69,9 +69,18 @@ class ManifestBuilder
     info "Building animation metadata..."
     metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
     animation_metadata_by_name = Hash[Parallel.map(animations_by_name, finish: lambda do |_, _, _|
-      metadata_progress_bar.increment unless @options[:verbose] || @options[:quiet]
+      metadata_progress_bar.increment unless metadata_progress_bar.nil?
     end) do |name, objects|
-      # TODO: Validate that every JSON is paired with a PNG and vice-versa
+
+      # Drop this animation if it is missing its JSON or PNG components
+      if objects['json'].nil?
+        warnings.push "Animation #{animation_name} does not have a JSON file and was skipped."
+        return nil
+      elsif objects['png'].nil?
+        warnings.push "Animation #{animation_name} does not have a PNG file and was skipped."
+        return nil
+      end
+
       # Actually download the JSON from S3
       json_response = objects['json'].get
       metadata = JSON.parse(json_response.body.read)
@@ -100,7 +109,7 @@ class ManifestBuilder
 
       [name, metadata]
     end]
-    metadata_progress_bar.finish unless @options[:verbose] || @options[:quiet]
+    metadata_progress_bar.finish unless metadata_progress_bar.nil?
 
     info "Metadata built for #{animation_metadata_by_name.size} animations."
 
