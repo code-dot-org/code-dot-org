@@ -15,7 +15,7 @@ import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../color';
 import { connect } from 'react-redux';
-import { getColumnNames } from '../firebaseMetadata';
+import { getColumnNamesFromRecords } from '../firebaseMetadata';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -161,8 +161,25 @@ const DataTable = React.createClass({
     });
   },
 
+  /**
+   * @param {Array} records Array of JSON-encoded records.
+   * @param {string} columns Array of column names.
+   */
+  getColumnNames(records, columns) {
+    // Make sure 'id' is the first column.
+    const columnNames = getColumnNamesFromRecords(records);
+
+    columns.forEach(columnName => {
+      if (columnNames.indexOf(columnName) === -1) {
+        columnNames.push(columnName);
+      }
+    });
+
+    return columnNames;
+  },
+
   getNextColumnName() {
-    const names = getColumnNames(this.props.tableRecords, this.props.tableColumns);
+    const names = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -236,7 +253,7 @@ const DataTable = React.createClass({
   },
 
   render() {
-    let columnNames = getColumnNames(this.props.tableRecords, this.props.tableColumns);
+    let columnNames = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let editingColumn = this.state.editingColumn;
 
     // Always show at least one column.
