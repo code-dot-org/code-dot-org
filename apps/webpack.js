@@ -37,7 +37,7 @@ var baseConfig = {
         ],
         loader: "babel",
         query: {
-          cacheDirectory: true,
+          cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           sourceMaps: true,
           compact: false,
         }
