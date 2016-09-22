@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Assigning User Input to Variables\r\n<img src=\"https://images.code.org/bad81f7d5e514a1d727e51aab52aac10-image-1445552999503.gif\" style=\"width: 350px; float:right\">\r\nThe <code>promptNum</code> command appears in the variables toolbox because it's typically used as a way to get a value from the user that you want to hold on to while the program runs.\r\n\r\n`promptNum` is similar to `randomNumber` in that it is a function whose return value *evaluates to a number*. The difference here is that <code>promptNum</code> pops up an input dialog box and waits for the user to type a number.  Once they do and hit \"OK\" the number they typed is returned and we can store it in a variable to use in our programs.",
+    "markdown_instructions": "# Assigning User Input to Variables\r\n<img src=\"https://images.code.org/bad81f7d5e514a1d727e51aab52aac10-image-1445552999503.gif\" style=\"width: 350px; float:right\">\r\nThe `promptNum` command appears in the variables toolbox because it's typically used as a way to get a value from the user that you want to hold on to while the program runs.\r\n\r\n`promptNum` is similar to `randomNumber` in that it is a function whose return value *evaluates to a number*. The difference here is that `promptNum` pops up an input dialog box and waits for the user to type a number.  Once they do and hit \"OK\" the number they typed is returned and we can store it in a variable to use in our programs.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
