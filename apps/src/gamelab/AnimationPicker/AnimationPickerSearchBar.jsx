@@ -50,10 +50,24 @@ var styles = {
 };
 
 var AnimationPickerSearchBar = React.createClass({
+  propTypes: {
+    value: React.PropTypes.string.isRequired,
+    onChange: React.PropTypes.func.isRequired
+  },
+
+  onChange(evt) {
+    this.props.onChange(evt.target.value);
+  },
+
   render: function () {
     return (
       <div>
-        <input style={styles.input} placeholder="Search for images" />
+        <input
+          style={styles.input}
+          placeholder="Search for images"
+          value={this.props.value}
+          onChange={this.onChange}
+        />
         <button style={styles.button}><i className="fa fa-search"></i></button>
       </div>
     );

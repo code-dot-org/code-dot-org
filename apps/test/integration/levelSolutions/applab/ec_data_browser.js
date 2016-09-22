@@ -106,12 +106,16 @@ module.exports = {
               // add new column
               ReactTestUtils.Simulate.click($('#addColumnButton')[0]);
               setTimeout(() => {
+                let tableNames = dataTable.find('th .test-tableNameDiv').get().map(div => div.innerHTML);
+                assert.equal(tableNames.join(','), 'id,firstname,column2', 'column order correct before column2 renamed');
                 const column2NameInput = dataTable.find('th > input[value="column2"]');
                 assert.equal(column2NameInput.is(':visible'), true, 'column2 name input is visible');
                 ReactTestUtils.Simulate.change(column2NameInput[0], { target: { value: 'age' } });
                 ReactTestUtils.Simulate.keyUp(column2NameInput[0], enterKeyEvent);
                 setTimeout(() => {
                   assert.equal(dataTable.find('th > div:contains(age)').is(':visible'), true, 'column1 renamed to age');
+                  tableNames = dataTable.find('th .test-tableNameDiv').get().map(div => div.innerHTML);
+                  assert.equal(tableNames.join(','), 'id,firstname,age', 'column order correct after column2 renamed');
 
                   // add new row
                   const addRow = $('#dataTable').find('tr:contains(Add Row)');
