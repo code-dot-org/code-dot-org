@@ -216,6 +216,37 @@ export default {
     },
 
     {
+      description: "Firebase warnings include line numbers",
+      editCode: true,
+      useFirebase: true,
+      xml:`
+        var value = '';
+        for (var i = 0; i < 12; i++) {
+          value += '0123456789';
+        }
+        setKeyValue('key1', value, function () {
+          console.log('set key1');
+        });`,
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 100, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // Error text includes line number
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(String(debugOutput.textContent).startsWith('WARNING: Line: 6:'), true,
+          `log message contains warning with line number: ${debugOutput.textContent}`);
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "Data block palette without firebase",
       editCode: true,
       xml:``,

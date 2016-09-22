@@ -1,4 +1,4 @@
-var msg = require('./locale');
+var msg = require('@cdo/gamelab/locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;

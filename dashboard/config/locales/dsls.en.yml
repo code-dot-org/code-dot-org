@@ -149,6 +149,7 @@ en:
       Binary as an Encoding Scheme: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD Creating Debugging Strat: {}
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
@@ -1087,6 +1088,7 @@ en:
       PDSci commitment:
         CS in Science PD commitments: CS in Science PD commitments
         overview of program commitments: overview of program commitments
+      PLC- check your progress: {}
       Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
@@ -1516,6 +1518,9 @@ en:
       U4L07 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L08 - mod clock instructions:
+        description here: description here
+        title: title
       U4L08 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1616,6 +1621,15 @@ en:
         description here: description here
         title: title
       Understanding Communication Protocols: {}
+      Unit 1 Lesson 1 Overview: {}
+      Unit 1 Lesson 2 Overview: {}
+      Unit 1 Lesson 3 Overview: {}
+      Unit 1 Lesson 4 Overview: {}
+      Unit 1 Lesson 5 Overview: {}
+      Unit 1 Lesson 6 Overview: {}
+      Unit 1 Lesson 7 Overview: {}
+      Unit 1 Lesson 8 Overview: {}
+      Unit 1 Lesson 9 Overview: {}
       Unit 1 Overview: {}
       Unit 1 Teaching Philosophy and Commentary: {}
       Unit 2 Lesson 1 Overview: {}
@@ -1637,7 +1651,6 @@ en:
       Unit 2 Lesson 9 Overview: {}
       Unit 3 Survey 2: {}
       Welcome to TeacherCon!: {}
-      What is ASCII=?: {}
       What is ASCII?: {}
       What is HTML?: {}
       Why Teach Number Systems?: {}
@@ -1724,6 +1737,9 @@ en:
         PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
         The Great Tower Topple: The Great Tower Topple
       grade1_unplugged_behavingInLab: {}
+      grade2_maze_intro1:
+        description here: description here
+        title: title
       grade2_unplugged_bigEvent: {}
       grade2_unplugged_buildAblock:
         Build a Block: Build a Block
@@ -3640,7 +3656,7 @@ en:
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
-        Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
+        Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
         Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
       CSPFinal_Question_10:
         I and II only: I and II only
@@ -3790,8 +3806,6 @@ en:
         IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
         ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
         : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
-        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
-        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 64-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
       CSPFinal_Question_4_original:
         'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
         'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'

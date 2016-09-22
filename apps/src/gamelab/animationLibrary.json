@@ -1,0 +1,337 @@
+{
+  "//": [
+    "Animation Library Manifest",
+    "GENERATED FILE: DO NOT MODIFY DIRECTLY",
+    "See tools/scripts/rebuildAnimationLibraryManifest.rb for more information."
+  ],
+  "metadata": {
+    "asterisk_circle": {
+      "name": "asterisk_circle",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 132,
+        "y": 126
+      },
+      "frameCount": 9,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "392jYP3kyaZjdyAJeZ9Mc2DBKm.iOE0m",
+      "sourceUrl": "/api/v1/animation-library/392jYP3kyaZjdyAJeZ9Mc2DBKm.iOE0m/asterisk_circle.png",
+      "sourceSize": {
+        "x": 396,
+        "y": 378
+      }
+    },
+    "asterisk_explode": {
+      "name": "asterisk_explode",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 171,
+        "y": 158
+      },
+      "frameCount": 11,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "BHA4WPmE52PjXKwtkb_2mQyFj5sd6Iyr",
+      "sourceUrl": "/api/v1/animation-library/BHA4WPmE52PjXKwtkb_2mQyFj5sd6Iyr/asterisk_explode.png",
+      "sourceSize": {
+        "x": 684,
+        "y": 474
+      }
+    },
+    "asterisk_normal": {
+      "name": "asterisk_normal",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 132,
+        "y": 126
+      },
+      "frameCount": 3,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "jFUWP0rasB.wZ0bsPLr8IcPgNl0feI0d",
+      "sourceUrl": "/api/v1/animation-library/jFUWP0rasB.wZ0bsPLr8IcPgNl0feI0d/asterisk_normal.png",
+      "sourceSize": {
+        "x": 396,
+        "y": 126
+      }
+    },
+    "asterisk_stretching": {
+      "name": "asterisk_stretching",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 144,
+        "y": 144
+      },
+      "frameCount": 8,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "79x0SO_sD9sBgCoZJxNIXGJwNhUuijZP",
+      "sourceUrl": "/api/v1/animation-library/79x0SO_sD9sBgCoZJxNIXGJwNhUuijZP/asterisk_stretching.png",
+      "sourceSize": {
+        "x": 432,
+        "y": 432
+      }
+    },
+    "box": {
+      "name": "box",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 66,
+        "y": 118
+      },
+      "frameCount": 3,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "Y4JZe0kz5HgrQEkM2FzLujXxqRJLuPFg",
+      "sourceUrl": "/api/v1/animation-library/Y4JZe0kz5HgrQEkM2FzLujXxqRJLuPFg/box.png",
+      "sourceSize": {
+        "x": 198,
+        "y": 118
+      }
+    },
+    "bubbly": {
+      "name": "bubbly",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 82,
+        "y": 130
+      },
+      "frameCount": 4,
+      "looping": true,
+      "frameDelay": 4,
+      "version": "NON__6_syACb5bq6crhXqh1yArHBcy5O",
+      "sourceUrl": "/api/v1/animation-library/NON__6_syACb5bq6crhXqh1yArHBcy5O/bubbly.png",
+      "sourceSize": {
+        "x": 82,
+        "y": 520
+      }
+    },
+    "bunny1_hurt": {
+      "name": "bunny1_hurt",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 150,
+        "y": 174
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "NxqzDhUroICD2hoNjtcp66vJftM1UNOB",
+      "sourceUrl": "/api/v1/animation-library/NxqzDhUroICD2hoNjtcp66vJftM1UNOB/bunny1_hurt.png",
+      "sourceSize": {
+        "x": 150,
+        "y": 174
+      }
+    },
+    "bunny1_jump": {
+      "name": "bunny1_jump",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 150,
+        "y": 181
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "c6MHZzWKhi9EDFjottMRSXar_64_7olE",
+      "sourceUrl": "/api/v1/animation-library/c6MHZzWKhi9EDFjottMRSXar_64_7olE/bunny1_jump.png",
+      "sourceSize": {
+        "x": 150,
+        "y": 181
+      }
+    },
+    "bunny1_ready": {
+      "name": "bunny1_ready",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 191
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "bHuAAcEnoZi32fMO4YotvbwsYJXVDxlp",
+      "sourceUrl": "/api/v1/animation-library/bHuAAcEnoZi32fMO4YotvbwsYJXVDxlp/bunny1_ready.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 191
+      }
+    },
+    "bunny1_stand": {
+      "name": "bunny1_stand",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 201
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "fiS3z042HzgVG4_tW.7DkMHXthq_gTd1",
+      "sourceUrl": "/api/v1/animation-library/fiS3z042HzgVG4_tW.7DkMHXthq_gTd1/bunny1_stand.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 201
+      }
+    },
+    "bunny1_walk1": {
+      "name": "bunny1_walk1",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 201
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "homcthRNfapnn_m1rpoSxAYz.EbovQOZ",
+      "sourceUrl": "/api/v1/animation-library/homcthRNfapnn_m1rpoSxAYz.EbovQOZ/bunny1_walk1.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 201
+      }
+    },
+    "bunny1_walk2": {
+      "name": "bunny1_walk2",
+      "aliases": [
+        "jumper"
+      ],
+      "frameSize": {
+        "x": 120,
+        "y": 207
+      },
+      "frameCount": 1,
+      "looping": false,
+      "frameDelay": 2,
+      "version": "Fda2FKgUXm1D3onUruFgxV17ozDgTY.1",
+      "sourceUrl": "/api/v1/animation-library/Fda2FKgUXm1D3onUruFgxV17ozDgTY.1/bunny1_walk2.png",
+      "sourceSize": {
+        "x": 120,
+        "y": 207
+      }
+    },
+    "ghost_standing": {
+      "name": "ghost_standing",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 72,
+        "y": 158
+      },
+      "frameCount": 7,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "bsPQ1dVzEpXey4z7U34gVs_aJ4CmMlyr",
+      "sourceUrl": "/api/v1/animation-library/bsPQ1dVzEpXey4z7U34gVs_aJ4CmMlyr/ghost_standing.png",
+      "sourceSize": {
+        "x": 504,
+        "y": 158
+      }
+    },
+    "platform": {
+      "name": "platform",
+      "aliases": [
+        "p5.play"
+      ],
+      "frameSize": {
+        "x": 200,
+        "y": 73
+      },
+      "frameCount": 3,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "nZXoIMRM6WfMyEV_Azq7Kw4_5MDE7JUp",
+      "sourceUrl": "/api/v1/animation-library/nZXoIMRM6WfMyEV_Azq7Kw4_5MDE7JUp/platform.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 219
+      }
+    }
+  },
+  "aliases": {
+    "asterisk_circle": [
+      "asterisk_circle"
+    ],
+    "p5.play": [
+      "asterisk_circle",
+      "asterisk_explode",
+      "asterisk_normal",
+      "asterisk_stretching",
+      "box",
+      "bubbly",
+      "ghost_standing",
+      "platform"
+    ],
+    "asterisk_explode": [
+      "asterisk_explode"
+    ],
+    "asterisk_normal": [
+      "asterisk_normal"
+    ],
+    "asterisk_stretching": [
+      "asterisk_stretching"
+    ],
+    "box": [
+      "box"
+    ],
+    "bubbly": [
+      "bubbly"
+    ],
+    "bunny1_hurt": [
+      "bunny1_hurt"
+    ],
+    "jumper": [
+      "bunny1_hurt",
+      "bunny1_jump",
+      "bunny1_ready",
+      "bunny1_stand",
+      "bunny1_walk1",
+      "bunny1_walk2"
+    ],
+    "bunny1_jump": [
+      "bunny1_jump"
+    ],
+    "bunny1_ready": [
+      "bunny1_ready"
+    ],
+    "bunny1_stand": [
+      "bunny1_stand"
+    ],
+    "bunny1_walk1": [
+      "bunny1_walk1"
+    ],
+    "bunny1_walk2": [
+      "bunny1_walk2"
+    ],
+    "ghost_standing": [
+      "ghost_standing"
+    ],
+    "platform": [
+      "platform"
+    ]
+  }
+}

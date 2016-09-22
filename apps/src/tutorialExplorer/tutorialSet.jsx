@@ -10,7 +10,8 @@ const TutorialSet = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    locale: React.PropTypes.string.isRequired
+    locale: React.PropTypes.string.isRequired,
+    specificLocale: React.PropTypes.bool
   },
 
   /**
@@ -23,6 +24,11 @@ const TutorialSet = React.createClass({
    * e.g. If the user chooses two platforms, then at least one of the platforms
    * must match a platform tag on the tutorial.
    * A similar check for language is done first.
+   * In the case that this.props.specificLocale is true, we do something slightly
+   * different.  We don't show tutorials that don't have any language tags, and we
+   * reject tutorials that don't have the current locale explicitly listed.  This
+   * allows us to return a set of tutorials that have explicit support for the
+   * current locale.
    *
    * @param {object} tutorial - Single tutorial, containing a variety of
    *   strings, each of which is a list of tags separated by commas, no spaces.
@@ -40,6 +46,11 @@ const TutorialSet = React.createClass({
         !languageTags.includes(currentLocale.substring(0,2))) {
         return false;
       }
+    } else if (this.props.specificLocale) {
+      // If the tutorial doesn't have language tags, but we're only looking
+      // for specific matches to our current locale, then don't show this
+      // tutorial.  i.e. don't let non-locale-specific tutorials through.
+      return false;
     }
 
     // If we miss any filter group, then we don't show the tutorial.

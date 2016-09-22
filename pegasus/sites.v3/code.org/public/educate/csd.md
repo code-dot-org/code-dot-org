@@ -6,7 +6,7 @@ nav: educate_nav
 # Our newest course: CS Discoveries #
 
 ## <a name="what"></a>What is CS Discoveries?
-CS Discoveries is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
+CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
 <img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
 
