@@ -215,7 +215,7 @@ class User < ActiveRecord::Base
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order 'id desc'}
+  has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
   has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
@@ -832,10 +832,8 @@ class User < ActiveRecord::Base
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
-    unless level_concept_difficulty
-      return
-    end
+    level_concept_difficulty = LevelConceptDifficulty.find_by_level_id(level_id)
+    return unless level_concept_difficulty
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
@@ -893,7 +891,7 @@ class User < ActiveRecord::Base
   # The synchronous handler for the track_level_progress helper.
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
-    new_level_perfected = false
+    new_csf_level_perfected = false
 
     user_level = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -903,8 +901,9 @@ class User < ActiveRecord::Base
 
       new_level_completed = true if !user_level.passing? &&
         Activity.passing?(new_result)
-      new_level_perfected = true if !user_level.perfect? &&
+      new_csf_level_perfected = true if !user_level.perfect? &&
         new_result == 100 &&
+        Script.get_from_cache(script_id).csf? &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty? &&
@@ -954,7 +953,7 @@ class User < ActiveRecord::Base
       User.track_script_progress(user_id, script_id)
     end
 
-    if new_level_perfected && pairing_user_ids.blank? && !is_navigator
+    if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
     user_level

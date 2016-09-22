@@ -161,6 +161,7 @@
     "time-grunt": "^1.3.0",
     "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#c88a3793cf7953090f78fa36f0e991abdcd756da",
     "uglify-js": "2.4.24",
+    "unminified-webpack-plugin": "^1.1.0",
     "video.js": "4.5.2",
     "webpack": "1.13.1",
     "webpack-dev-server": "^1.14.1",

@@ -2,7 +2,7 @@ name 'CSPFinal_Question_1'
 layout 'wrap'
 right 'Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.'
 wrong 'Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent'
-wrong 'Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.'
+wrong 'Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.'
 wrong 'Remove a bit from <code>studentID</code> to make room for incoming students'
 
 markdown <<MARKDOWN
