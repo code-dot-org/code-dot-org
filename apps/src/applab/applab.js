@@ -26,7 +26,7 @@ var dropletConfig = require('./dropletConfig');
 var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
 var FirebaseStorage = require('./firebaseStorage');
-import { getColumnsRef, addMissingColumns } from './firebaseMetadata';
+import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
 var constants = require('../constants');
 var experiments = require('../experiments');
@@ -1241,6 +1241,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   // only unlistening from 'value' events here.
   storageRef.child('keys').off('value');
   storageRef.child(`tables/${oldTableName}/records`).off('value');
+  getColumnsRef(oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
@@ -1254,8 +1255,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
       // a column shortly after it was explicitly renamed or deleted.
       addMissingColumns(newTableName);
 
-      getColumnsRef(newTableName).on('value', snapshot => {
-        const columnNames = Object.keys(snapshot.val() || {});
+      onColumnNames(newTableName, columnNames => {
         studioApp.reduxStore.dispatch(updateTableColumns(newTableName, columnNames));
       });
 
