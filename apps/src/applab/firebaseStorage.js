@@ -4,7 +4,7 @@ import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBro
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
-import {  getColumnsRef } from './firebaseMetadata';
+import {  addMissingColumns, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -341,6 +341,7 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
   tableRef.set(null)
     .then(() => countersRef.set(null))
+    .then(() => getColumnsRef(tableName).set(null))
     .then(onSuccess, onError);
 };
 
@@ -518,9 +519,9 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
     .then(recordsData => recordsRef.set(recordsData))
     .then(() => {
       return getColumnsRef(tableName).transaction(columns => {
-        if (columns && columns[oldName] && !columns[newName]) {
-          columns[newName] = columns[oldName];
+        if (columns) {
           delete columns[oldName];
+          columns[newName] = {exists: true};
         }
         return columns;
       });
@@ -646,7 +647,8 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getDatabase(Applab.channelId).child(
     `storage/tables/${tableName}/records`);
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
-  return recordsRef.set(recordsData)
+  return getColumnsRef(tableName).set(null)
+    .then(() => recordsRef.set(recordsData))
     .then(() => {
       // Work around security rule validation checks.
       return countersRef.set(null);
@@ -656,7 +658,7 @@ function overwriteTableData(tableName, recordsData) {
         lastId: count,
         rowCount: count,
       });
-    });
+    }).then(() => addMissingColumns(tableName));
 }
 
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {

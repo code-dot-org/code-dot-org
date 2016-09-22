@@ -71,7 +71,6 @@ const DataTable = React.createClass({
 
   getInitialState() {
     return {
-      newColumns: [],
       editingColumn: null,
       pendingAdd: false,
       // The old name of the column currently being renamed or deleted.
@@ -89,15 +88,23 @@ const DataTable = React.createClass({
 
   addColumn() {
     const columnName = this.getNextColumnName();
-    const newColumns = this.state.newColumns.concat(columnName);
     this.setState({pendingAdd: true});
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      this.setState({
-        newColumns,
-        editingColumn: columnName,
-        pendingAdd: false,
-      });
+      FirebaseStorage.addColumn(
+        this.props.tableName,
+        columnName,
+        () => {
+          this.setState({
+            editingColumn: columnName,
+            pendingAdd: false,
+          });
+        },
+        msg => {
+          console.warn(msg);
+          this.resetColumnState();
+        }
+      );
     }, 0);
   },
 
@@ -105,16 +112,15 @@ const DataTable = React.createClass({
     this.setState({
       pendingColumn: columnToRemove,
     });
-    const newColumns = this.state.newColumns.filter(column => column !== columnToRemove);
     // Show the spinner icon before updating the data.
     setTimeout(() => {
       FirebaseStorage.deleteColumn(
         this.props.tableName,
         columnToRemove,
-        () => this.resetColumnState(newColumns),
+        this.resetColumnState,
         error => {
           console.warn(error);
-          this.resetColumnState(newColumns);
+          this.resetColumnState();
         }
       );
     }, 0);
@@ -128,49 +134,35 @@ const DataTable = React.createClass({
   },
 
   renameColumn(oldName, newName) {
-    let newColumns = this.state.newColumns.map(
-      curName => (curName === oldName ? newName : curName)
-    );
-    // Append the new name if the old name was not found.
-    if (newColumns.indexOf(newName) === -1) {
-      newColumns.push(newName);
-    }
-
-    if (oldName === newName) {
-      this.setState({
-        newColumns,
-        editingColumn: null,
-      });
-    } else {
-      this.setState({
-        editingColumn: null,
-        pendingColumn: oldName,
-      });
-      // Show the spinner icon before updating the data.
-      setTimeout(() => {
-        FirebaseStorage.renameColumn(
-          this.props.tableName,
-          oldName,
-          newName,
-          () => this.resetColumnState(newColumns),
-          error => {
-            console.warn(error);
-            this.resetColumnState(newColumns);
-          }
-        );
-      }, 0);
-    }
+    this.setState({
+      editingColumn: null,
+      pendingColumn: oldName,
+    });
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      FirebaseStorage.renameColumn(
+        this.props.tableName,
+        oldName,
+        newName,
+        this.resetColumnState,
+        error => {
+          console.warn(error);
+          this.resetColumnState();
+        }
+      );
+    }, 0);
   },
 
-  resetColumnState(newColumns) {
+  resetColumnState() {
     this.setState({
-      newColumns,
-      pendingColumn: null
+      editingColumn: null,
+      pendingAdd: false,
+      pendingColumn: null,
     });
   },
 
   getNextColumnName() {
-    const names = getColumnNames(this.props.tableRecords, this.state.newColumns);
+    const names = getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -199,10 +191,9 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    const newColumns = getColumnNames(this.props.tableRecords, this.state.newColumns);
     FirebaseStorage.clearTable(
       this.props.tableName,
-      () => this.setState({newColumns, editingColumn: null}),
+      () => {},
       msg => console.warn(msg));
   },
 
@@ -222,7 +213,7 @@ const DataTable = React.createClass({
         this.props.tableName,
         columnName,
         columnType,
-        () => this.resetColumnState(this.state.newColumns),
+        this.resetColumnState,
         msg => {
           if (String(msg).includes('Not all values in column')) {
             this.props.onShowWarning(msg);
@@ -245,7 +236,7 @@ const DataTable = React.createClass({
   },
 
   render() {
-    let columnNames = getColumnNames(this.props.tableRecords, this.state.newColumns);
+    let columnNames = getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let editingColumn = this.state.editingColumn;
 
     // Always show at least one column.
