@@ -1,9 +1,10 @@
 /* global Applab */
 
-import { castValue } from './dataBrowser/dataUtils';
+import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import { loadConfig, getDatabase } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
+import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -254,13 +255,12 @@ let listenedTables = [];
  * @param {string} tableName Table to listen to.
  * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
- * @param {function (string)} onWarning Callback to call with an warning to show to the user.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  * @param {boolean} includeAll Optional Whether to include child_added events for records
  * which were in the table before onRecordEvent was called. Default: false.
  */
-FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onError, includeAll) {
+FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeAll) {
   if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
@@ -269,7 +269,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onWarning, onErro
     return;
   }
   if (listenedTables.includes(tableName)) {
-    onWarning(`onRecordEvent was already called for table "${tableName}". To avoid ` +
+    onError(`onRecordEvent was already called for table "${tableName}". To avoid ` +
     'unexpected behavior in your program, you should only call onRecordEvent once ' +
     'per table, and use if/else statements to handle the different event types.');
   }
@@ -341,6 +341,7 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
   tableRef.set(null)
     .then(() => countersRef.set(null))
+    .then(() => getColumnsRef(tableName).set(null))
     .then(onSuccess, onError);
 };
 
@@ -459,6 +460,10 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   });
 };
 
+FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {
+  return addColumnName(tableName, columnName).then(onSuccess, onError);
+};
+
 /**
  * Delete every instance of the specified column name currently in the table.
  * @param {string} tableName
@@ -480,6 +485,7 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(() => deleteColumnName(tableName, columnName))
     .then(onSuccess, onError);
 };
 
@@ -511,7 +517,68 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(() => renameColumnName(tableName, oldName, newName))
     .then(onSuccess, onError);
+};
+
+/**
+ * Modifies the record[columnName] to type columnType, if the field can be converted
+ * to that type. Returns whether or not the field was converted.
+ * @param {Object} records Javascript object representing the record.
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @returns {boolean} Whether the field was converted.
+ */
+
+function coerceRecord(record, columnName, columnType) {
+  const value = record[columnName];
+  if (typeof value === 'undefined') {
+    return true;
+  }
+  switch (columnType) {
+    case (ColumnType.STRING):
+      record[columnName] = String(value);
+      return true;
+    case (ColumnType.NUMBER):
+      if (isNumber(value)) {
+        record[columnName] = parseFloat(value);
+        return true;
+      }
+      return false;
+    case (ColumnType.BOOLEAN):
+      if (isBoolean(value)) {
+        record[columnName] = toBoolean(value);
+        return true;
+      }
+      return false;
+    default:
+      throw new Error(`Unexpected column type ${columnType}`);
+  }
+}
+
+/**
+ *
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @param onSuccess
+ * @param onError
+ */
+FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {
+  const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value').then(snapshot => {
+    const recordsData = snapshot.val() || {};
+    let allConverted = true;
+    Object.keys(recordsData).forEach(recordId => {
+      const record = JSON.parse(recordsData[recordId]);
+      allConverted = allConverted && coerceRecord(record, columnName, columnType);
+      recordsData[recordId] = JSON.stringify(record);
+    });
+    if (!allConverted) {
+      onError(`Not all values in column "${columnName}" could be converted to type "${columnType}".`);
+    }
+    return recordsRef.set(recordsData);
+  }).then(onSuccess, onError);
 };
 
 /**
@@ -572,7 +639,8 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getDatabase(Applab.channelId).child(
     `storage/tables/${tableName}/records`);
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
-  return recordsRef.set(recordsData)
+  return getColumnsRef(tableName).set(null)
+    .then(() => recordsRef.set(recordsData))
     .then(() => {
       // Work around security rule validation checks.
       return countersRef.set(null);
@@ -582,7 +650,7 @@ function overwriteTableData(tableName, recordsData) {
         lastId: count,
         rowCount: count,
       });
-    });
+    }).then(() => addMissingColumns(tableName));
 }
 
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {
