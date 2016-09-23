@@ -77,13 +77,14 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
  */
 function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
   const limitRef = getDatabase(Applab.channelId).child(`counters/limits/${interval}`);
+  const intervalMs = Number(interval) * 1000;
   return limitRef.transaction(limitData => {
     limitData = limitData || {};
     limitData.lastResetTime = limitData.lastResetTime || 0;
     limitData.writeCount = (limitData.writeCount || 0) + 1;
     if (limitData.writeCount <= maxWriteCount) {
       return limitData;
-    } else if (limitData.lastResetTime + interval * 1000 < currentTimeMs) {
+    } else if (limitData.lastResetTime + intervalMs < currentTimeMs) {
       // The maximum number of writes has been exceeded in more than `interval` seconds.
       // Reset the counters.
       limitData.writeCount = 1;
@@ -97,7 +98,7 @@ function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
   }).then(transactionData => {
     if (!transactionData.committed) {
       const lastResetTimeMs = transactionData.snapshot.child('lastResetTime').val();
-      const nextResetTimeMs = lastResetTimeMs + interval * 1000;
+      const nextResetTimeMs = lastResetTimeMs + intervalMs;
       const timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
       Applab.showRateLimitAlert();
       return Promise.reject(`rate limit exceeded. please wait ${timeRemaining} seconds before retrying.`);
