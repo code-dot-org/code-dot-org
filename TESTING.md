@@ -28,11 +28,11 @@ Controlling tests:
 
 * CI can be skipped for a given commit by including the text `[ci skip]` in the commit message
 * By default, tests are only run for sub-projects which have been changed in your given branch. You can force-run all tests for a given commit by including the text `[test all]` in your commit message.
-* UI tests (currently for Chrome only) can be run by including the message `[test ui]` in your commit message
+* UI tests are run automatically. They can be disabled for a given run by including `[skip ui]` in your commit message
 * Tests can be re-run with the "Rebuild" button on CircleCI.
 * Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
 
-If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run UI tests [test ui]"`
+If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run all tests [test all]"`
 
 Contributor pull requests do not build by default, but can be triggered to build by a GitHub organization team member. Note that the given PR should be scanned to ensure there is no malicious code and that no secrets would be displayed in test output.
 
@@ -50,19 +50,18 @@ Worth noting:
 * `rake test:changed:apps` - runs apps tests if sub-project folder has changed
 
 ### Apps Tests
-`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory.
+`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.
 
-You can also run these steps individually with `npm run lint`, `npm run test:unit` and `npm run test:integration`.
+It's also possible to run a subset of tests:
 
-To run a subset of tests, you can run 
-`grunt [test|unitTest|integrationTest] --grep "Interesting Test Name"` - Run all tests with a given string in the description
-`grunt [test|unitTest|integrationTest] --grep filename` - Run all tests in a given filename. Filename doesn't have to be the full path to the file, just the filename is sufficient
-You can append `--fast` if you don't want to test turtle/maze levels and want the tests to go faster (integration tests only)
+* `npm run lint`
+* `npm run test:unit`
+* `npm run test:integration`
+* `npm run test:entry -- --entry ./test/unit/gridUtilsTest.js`
 
-Use the `--entry` option for fastest iteration.
-`grunt unitTest --entry ./test/utilityTests.js` - Only bundle what's needed to run the tests in utilityTests.js; should take seconds.
+To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 
-You can expect a full test run to take about 5-10 minutes.
+See [the apps readme](./apps/README.md) for more details.
 
 ### Konacha Tests
 `cd dashboard && bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.

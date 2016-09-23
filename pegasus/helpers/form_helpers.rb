@@ -156,6 +156,14 @@ def insert_form(kind, data, options={})
     row[:id] = DB[:forms].insert(row)
   end
 
+  form_geos_row = {
+    form_id: row[:id],
+    created_at: timestamp,
+    updated_at: timestamp,
+    ip_address: request.ip
+  }
+  DB[:form_geos].insert(form_geos_row)
+
   row
 end
 

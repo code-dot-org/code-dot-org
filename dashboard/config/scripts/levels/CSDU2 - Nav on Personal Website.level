@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:10:43.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Navigation on Personal Website\r\n\r\nLearned about \r\nLinks\r\nDiv\r\nMultiple pages in one project\r\n\r\n# Do This\r\n\r\nPersonal Home Page is Back\r\nAdd html files for each of the Hobbies Page, Recipe Page, and About Me page\r\nCopy the code for each page over into the files\r\nAdd 4 link elements to your page(one for each page- one for the home page)\r\nConnect the links to each of their respective pages\r\nPut the header all in a div\r\nStyle the div on all the pages\r\nadd the header and style to all the pages\r\nFinish styling your home page",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

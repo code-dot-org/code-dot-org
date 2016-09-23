@@ -7,6 +7,7 @@ import progressStyles from './progressStyles';
 import { LockStatus, saveLockDialog } from '../../stageLockRedux';
 import color from '../../../color';
 import commonMsg from '@cdo/locale';
+import SectionSelector from './SectionSelector';
 
 const styles = {
   main: {
@@ -15,8 +16,10 @@ const styles = {
     marginLeft: 20,
     marginRight: 20,
     color: color.charcoal,
-    maxHeight: 600,
-    overflowY: 'scroll'
+    whiteSpace: 'normal',
+    // maxHeight provided in render method based on window size
+    overflowY: 'scroll',
+    textAlign: 'left'
   },
   title: {
     color: color.teal,
@@ -139,13 +142,19 @@ const StageLockDialog = React.createClass({
   },
 
   render() {
+    const responsiveHeight = {
+      maxHeight: window.innerHeight * 0.8 - 100
+    };
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
       >
-        <div style={styles.main}>
-          <div style={styles.title}>{commonMsg.assessmentSteps()}</div>
+        <div style={[styles.main, responsiveHeight]}>
+          <div>
+            <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+            <SectionSelector/>
+          </div>
           <table>
             <tbody>
               <tr>

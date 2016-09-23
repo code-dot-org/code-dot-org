@@ -46,6 +46,10 @@ path /v3/channels/{channelId}/counters/limits/60 {
   }
 }
 
+path /v3/channels/{channelId}/metadata is Metadata {
+  write() { isLoggedIn() }
+}
+
 path /v3/channels/{channelId}/storage is Storage {
   write() { isLoggedIn() }
 }
@@ -66,7 +70,7 @@ type TableCounter {
   rowCount: Number | Null
 
   validate() {
-    orZero(this.lastId) >= orZero(prior(this).lastId) &&
+    orZero(this.lastId) >= valueOr(prior(this).lastId, -1) &&
     orZero(this.rowCount) >= 0 && orZero(this.rowCount) <= root.v3.config.channels.maxTableRows
   }
 }
@@ -79,6 +83,20 @@ type RateLimitCounters {
 type RateLimitCounter {
   lastResetTime: Number | Null
   writeCount: Number | Null
+}
+
+// metadata
+
+type Metadata {
+  tables: TableMetadata[]
+}
+
+type TableMetadata {
+  columns: Column[]
+}
+
+type Column {
+  columnName: String
 }
 
 // storage

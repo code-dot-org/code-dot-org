@@ -7,9 +7,9 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
-import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import { getStore } from './redux';
-import { authorizeLockable, setSections } from './stageLockRedux';
+import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
+import { getHiddenStages } from './hiddenStageRedux';
 import {
   SUBMITTED_RESULT,
   LOCKED_RESULT,
@@ -23,17 +23,21 @@ import {
   updateFocusArea,
   showTeacherInfo
 } from './progressRedux';
+import { renderTeacherPanel } from './teacher';
 
 var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
     currentLevelId, saveAnswersBeforeNavigation) {
-  const store = initializeStoreWithProgress({
+  const store = getStore();
+
+  initializeStoreWithProgress(store, {
     name: scriptName,
     stages: [stageData]
   }, currentLevelId, saveAnswersBeforeNavigation);
 
-  store.dispatch(mergeProgress(_.mapValues(progressData.levels, level => level.result)));
+  store.dispatch(mergeProgress(_.mapValues(progressData.levels,
+    level => level.submitted ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
@@ -54,8 +58,14 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
  *   dropdown vs. the course progress page
  */
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  const store = initializeStoreWithProgress(scriptData, currentLevelId);
+  const store = getStore();
+  initializeStoreWithProgress(store, scriptData, currentLevelId);
+
   var mountPoint = document.createElement('div');
+
+  if (scriptData.hideable_stages) {
+    store.dispatch(getHiddenStages(scriptData.name));
+  }
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
@@ -71,6 +81,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && !currentLevelId) {
       store.dispatch(showTeacherInfo());
+      store.dispatch(setViewType(ViewType.Teacher));
       renderTeacherPanel(store, scriptData.id);
     }
 
@@ -89,7 +100,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
         if (level.status === LevelStatus.locked) {
           return LOCKED_RESULT;
         }
-        if (level.readonly_answers) {
+        if (level.submitted || level.readonly_answers) {
           return SUBMITTED_RESULT;
         }
 
@@ -109,49 +120,20 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 };
 
 /**
- * Query the server for progress of all students in section, and render this to
- * our teacher panel.
- */
-function renderTeacherPanel(store, scriptId) {
-  const div = document.createElement('div');
-  div.setAttribute('id', 'teacher-panel-container');
-  $.ajax(
-    '/api/lock_status',
-    {
-      data: {
-        user_id: clientState.queryParams('user_id'),
-        script_id: scriptId
-      }
-    }
-  ).done(data => {
-    store.dispatch(setSections(data));
-  });
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <ScriptTeacherPanel/>
-    </Provider>,
-    div
-  );
-  document.body.appendChild(div);
-}
-
-/**
- * Creates a redux store with our initial progress
+ * Initializes our redux store with initial progress
+ * @param {object} store - Our redux store
  * @param scriptData
  * @param currentLevelId
  * @param saveAnswersBeforeNavigation
- * @returns {object} The created redux store
  */
-function initializeStoreWithProgress(scriptData, currentLevelId,
+function initializeStoreWithProgress(store, scriptData, currentLevelId,
     saveAnswersBeforeNavigation = false) {
-  const store = getStore();
-
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages,
+    scriptName: scriptData.name,
     peerReviewsRequired: scriptData.peerReviewsRequired,
   }));
 
@@ -168,6 +150,4 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
       clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
     });
   }
-
-  return store;
 }

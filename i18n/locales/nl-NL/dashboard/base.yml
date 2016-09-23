@@ -2,7 +2,9 @@ nl:
   errors:
     messages:
       not_saved: 'Corrigeer de volgende fouten:'
-      too_young: Deze pagina is niet geschikt voor jongere studenten
+      too_young: Deze inhoud heeft leeftijd restricties en is niet beschikbaar voor jongere studenten.
+      teacher_must_accept_terms: 'Deze inhoud heeft leeftijd restricties en is niet beschikbaar voor jongere studenten. Vraag je leraar om de laatste service bepalingen te accepteren en jou zo toegang te geven tot de inhoud. Je leraar kan dit doen door in te loggen in de Code Studio en de knop " Review updates terms" aan te klikken bovenaan de Code Studio homepage.'
+      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
   activerecord:
     errors:
       messages:
@@ -79,15 +81,9 @@ nl:
   signup_form:
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
     teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
-    overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt voornamelijk gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid </a>.'
-    overview_teacher: 'Geef les in Informatica in je klaslokaal, maak een gebruikersnaam aan. <p/> Je kunt je leerlingen toevoegen en hun voortgang zien.'
-    no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
+    overview: 'Maak een account aan om je vorderingen te volgen of je klad te managen.<a href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
     teacher_educator_guide: Kijk in de lerarengids
-    teacher_pitch: Code.org-aanmelding als leerkracht
-    teacher_title: Inschrijven voor leraren
-    student_pitch: Code.org-aanmelding als leerling
-    student_title: Registreren als leerling
-    signup_title: Meld u aan voor Code.org
+    title: Log in voor Code.org
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
     address_placeholder: adres, stad, provincie, postcode
@@ -103,15 +99,17 @@ nl:
     valid_password: Geldig wachtwoord!
     invalid_password: Wachtwoord moet ten minste 6 tekens lang zijn
     mismatch_password: De twee wachtwoorden komen niet overeen
-    student_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruikersvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor gebruikers onder de 13 jaar, worden e-mailadressen niet opgeslagen in een vorm die het mogelijk maakt om contact met hen op te nemen."
-    teacher_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruikersvoorwaarden</a>."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie.
     user_type_label: Account type
     user_type_teacher: Leerkracht
     user_type_student: Leerling
+    field_is_required: is vereist
+    accept_terms: You must agree to create an account
   signin_form:
     title: Heb je al een account? Log in
-    login: Email of gebruikersnaam
+    login: Email
     password: Wachtwoord
     remember: Onthoud me
     submit: Aanmelden
@@ -130,8 +128,9 @@ nl:
   password:
     reset_form:
       title: Wachtwoord vergeten?
+      instructions: "Enter your email address below and we'll send you password reset instructions."
       email: Email-adres
-      submit: Stuur me uitleg over wachtwoord resetten
+      submit: Insturen
     change_form:
       title: Wijzig je wachtwoord
       new_password: Nieuw wachtwoord
@@ -247,7 +246,7 @@ nl:
       prizes: Prijzen
       logout: Uitloggen
       signin: Aanmelden
-      signup: Meld je aan
+      signup: Create an account
       already_registered: Al aangemeld?
       pair_programming: Programmeren in Tweetallen
       team: Team
@@ -278,7 +277,7 @@ nl:
     user_not_found: De leerkracht is niet gevonden.
     student_teacher_disassociated: 'Je hebt %{teacher_name} verwijderd als jouw leerkracht.'
     panel:
-      answer_viewer: Antwoord Viewer
+      answer_viewer: Teacher Panel
       student: Leerling
       viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
@@ -288,6 +287,7 @@ nl:
       submitted_on: 'Ingeleverd op %{date}'
       unsubmit: Intrekken
       worked_with: Worked With
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -346,7 +346,8 @@ nl:
     choose_next_course: Probeer een Code Studio cursus door er hier onder één te kiezen
     print_certificate: print certificaat
     announcement_title: Aankondigingen
-    announcement_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+    announcement_message_fall2016_features: |-
+      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Leer meer
     announcement_try_now_button: Probeer nu
@@ -572,6 +573,19 @@ nl:
     header: Update Account Informatie
     message: 'We zijn bezig onze ervaring te verbeteren zodat je privacy nog beter wordt gewaarborgd. Hiervoor moeten we bestaande gebruikers vragen hier hun leeftijd in te vullen.<br/>Zoals altijd zal code.org deze informatie nooit uitlenen, verkopen of delen met anderen.'
     sign_out: 'Als je je leeftijd niet wilt geven kun je <a href="%{url}">uitloggen</a>.'
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: Gebruiksvoorwaarden
+    privacy: Privacybeleid
+    privacy_notice: Privacy Notice
+    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept: Accept
+    print: Afdrukken
+    later: Later
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    review_terms: Review updated terms
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
   progress:
     not_started: niet gestart
@@ -669,13 +683,13 @@ nl:
       no_icons_found: Geen iconen gevonden
     playzone:
       artist_description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
-      artist_title: New Drawing
+      artist_title: Nieuwe tekening
       continue_button: Go on to the next Stage
       playlab_description: Maak een verhaal of een spel met Speel Lab!
-      playlab_title: New App
+      playlab_title: Nieuwe App
       primary_header: 'Congratulations! You finished %{stageName}!'
       projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
+      projects_title: Een project openen
       secondary_header: Ask your teacher what to do next
   flex_category:
     required: Overzicht
@@ -690,7 +704,7 @@ nl:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
     capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
+    instructions_headline: Geen Internet?
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
     minecraft_name: Minecraft Hour Of Code
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
@@ -709,3 +723,6 @@ nl:
       choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
       other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_course_overview: Go to unit overview

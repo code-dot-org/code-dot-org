@@ -4,13 +4,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
-var HINT_REQUEST_PLACEMENT = {
-  NONE: 0,  // This value must not be changed.
-  LEFT: 1,  // Hint request button is on left.
-  RIGHT: 2  // Hint request button is on right.
-};
-
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];

@@ -1,15 +1,13 @@
 /** @file Textbox that only allows positive integer values, used in crypto widget */
 import React from 'react';
-
-const style = {
-  width: 100,
-  margin: '0 5px'
-};
+import color from '../color';
 
 const IntegerTextbox = React.createClass({
   propTypes: {
+    className: React.PropTypes.string,
     value: React.PropTypes.number,
     disabled: React.PropTypes.bool,
+    color: React.PropTypes.string,
     onChange: React.PropTypes.func.isRequired
   },
 
@@ -19,12 +17,24 @@ const IntegerTextbox = React.createClass({
   },
 
   render() {
-    let {value, disabled} = this.props;
+    let {className, value, disabled, color: backgroundColor} = this.props;
     if (!Number.isInteger(value)) {
       value = '';
     }
+
+    const style = {
+      width: 75,
+      paddingLeft: 8,
+      margin: '0 5px',
+      backgroundColor: backgroundColor || 'white',
+      borderColor: color.light_gray,
+      borderStyle: 'solid',
+      borderWidth: 1
+    };
+
     return (
       <input
+        className={className}
         style={style}
         value={value}
         disabled={disabled}

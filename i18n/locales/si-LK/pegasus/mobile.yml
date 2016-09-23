@@ -4,94 +4,94 @@ si-LK:
   "yes": ඔව්
   "no": නැහැ
   select_language: කරුණාකර ඔබේ භාෂාව තෝරා ගන්න
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
+  upgrade_ie_message: Internet Explorer සහ 10 සඳහා Code.org සහාය ළඟදීම ඉවත්කරනු ඇත. කරුණාකර නවීන අන්තර්ජාල බ්‍රව්සරයක් භාවිතා කරන්න.
+  upgrade_ie_message_csedweek: Internet Explorer 8, 9, සහ 10 සඳහා CSEdWeek.org සහාය ළඟදීම ඉවත්කරනු ඇත. කරුණාකර නවීන අන්තර්ජාල බ්‍රව්සරයක් භාවිතා කරන්න.
+  upgrade_ie_link: වැඩිදුර ඉගෙන ගන්න
   en: පරිගණක විද්‍යාව
   computer_science_edweek: පරිඝණක විද්‍යා අධ්‍යාපන සතිය
   csedweek_dates: දෙසැම්බර් 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න.</a>'
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: කාටත් ඉගෙනගන්න පුළුවන්.
   learn_now: දැන් ඉගෙනගන්න
-  petition_message: සියලු පාසල්වල සියලු සිසුන් සඳහා පරිගණක විද්‍යාව ඉගෙනීමට අවස්ථාවන් තිබිය යුතුය
+  petition_message: සෑම පාසලකම සිටින සියලුම සිසුවෙකුටම පරිගණක විද්‍යාව ඉගෙනීමට අවස්ථාවක් තිබිය යුතුය
   petition_sign_message: 'ඔබ එකගනම්, ඔබගේ නම ඇතුලත් කරන්න. අනිත් # සමග එකතුවෙන්න.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'තවත් # දෙනෙකු සම්බන්ධ වන්න'
+  petition_sign_message_support: 'අපට සහාය පළකිරීමට ඔබේ නම අත්සන් කරන්න. තවත් # ක් දෙනා සමග එක් වන්න.'
+  petition_join_others: 'තවත් # කට එක්වන්න'
   name: නම
   email: විද්‍යුත් තැපැල
-  zipcode: ZIP code or country
+  zipcode: ZIP කේතය හෝ රට
   submit: යොමුකරන්න
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
-  og_title: Every child deserves opportunity
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
-  hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
+  og_title: සෑම දරුවෙකුටම අවස්ථාව ලැබිය යුතුය
+  og_description: පරිගණක විද්‍යාව හැදෑරීමේ අවස්තාව, සෑම පාසලකම සිටින සෑම දරුවෙකුටම ලැබිය යුතු වේ. එය සෑමදෙයක්ම වෙනස් කරමින් පවතී.
+  hoc2014_heading: '<a href="http://hourofcode.com">Hour of Code</a> samaga ekwanna<br/>දෙසැම්බර් 8 - 14, 2014<br/>'
   hoc2014_students: සිසුන්
   hoc2014_try: එය උත්සහ කරන්න
   hoc2014_teachers: ගුරුවරුන්
-  hoc2014_host: Host it
+  hoc2014_host: එයට සත්කාරකත්වය දෙන්න
   hoc2014_everyone: හැමකෙනෙක්ම
   hoc2014_support: 'එයට සහය වන්න &#x25BE;'
   hoc2014_whatishoc: Hour of Code යනු කුමක්ද?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_header: '# CSEdWeek / ලොව පුරා Hour of Code වැඩසටහන්'
+  csedweek_map_signup: ඔබේ උළෙල ලියාපදින්චි කරන්න
   csedweek_map_search_placeholder: Hour of Code සිදුවීම් සොයන්න
   csedweek_map_search_search: සොයන්න
   csedweek_map_search_reset: යලි පිහිටුවන්න
   csedweek_map_legend_title: පුරාවෘත්තය
   csedweek_map_legend_event: Hour of Code සිදුවීම්
-  csedweek_map_legend_cs_tech_jam: Special Event
+  csedweek_map_legend_cs_tech_jam: විශෙශ උත්සවය
   cded_sign_up: Sign up
   cded_try_it: එය උත්සහ කරන්න
   try_now: දැන් අත්හදා බලන්න
   california_heading: පරිගණක විද්‍යාව ඉගැන්වීම සඳහා ඔබ පාසලෙන් උපදෙස් පතන්න
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
-  california_button: වැඩි දුර දැනගන්න
+  california_button: තවත් දැනගන්න
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
   view_english_site: ඉංග්‍රීසි අඩවිය බලන්න
-  non_english_tutorials: 'Tutorials translated into multiple languages:'
-  write_your_first_program: Write your first computer program
+  non_english_tutorials: 'භාශා රැසකට පරිවර්තනය කරන ලද නිබන්ධන:'
+  write_your_first_program: ඔබේ පළමු පරිගණක වැඩසටහන ලියන්න
   learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms.
   all_ages: සියලුම වයස්
   beginner: නවකයා
-  n_participants: '# participants'
+  n_participants: '#සහබාගිවන්නන්'
   go: යන්න
   thank_you_: ස්තුතියි!
   congratulations: සුභපැතුම්!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: සුභ පැතුම්! පළමු පාඨමාලාව සම්පූර්ණයි.
+  congratulations_on_completing_course2: සුභ පැතුම්! දෙවන පාඨමාලාව සම්පූර්ණයි.
+  congratulations_on_completing_course3: සුභ පැතුම්! තෙවන පාඨමාලාව සම්පූර්ණයි
+  congratulations_on_completing_course4: සුභ පැතුම්! සිව්වන පාඨමාලාව සම්පූර්ණයි
+  congratulations_on_completing_accelerated: ත්වරක පාඨමාලාව සම්පූර්ණ කලාට සුභ පැතුම්
   congrats_next_tutorials_title: ඊළඟට මෙම නිබන්ධන උත්සාහ කරන්න
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
-  get_a_certificate_of_achievement: Get a certificate of achievement
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  get_a_certificate_of_achievement: ජයග්රහණය සහතික ලබා ගන්න
+  view_course: පාඨමාලාව බලන්න
+  view_unit: පාඩම බලන්න
+  make_app: App එකක් හදන්න
+  congrats_guest_speaker_title: ඔබේ පන්ති කාමරය සඳහා ආරාධිත කථිකයෙකු සොයා ගන්න
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_guest_speaker_cta: ආරාධිත දේශකයෙක් සොයන්න
   congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_gradelevel_kto8: ශ්‍රේනිය K-8
+  third_party_gradelevel_kto2: ශ්‍රේනිය K-2
+  third_party_gradelevel_2to8: ශ්‍රේනිය 2-8
+  third_party_gradelevel_4to12: ශ්‍රේනිය 4-12
+  third_party_gradelevel_5to12: ශ්‍රේනිය 5-12
+  third_party_gradelevel_6plus: ශ්‍රේනිය 6+
+  third_party_gradelevel_8plus: ශ්‍රේනිය 8+
+  third_party_platform_all: 'වේදිකාව: වෙබය, iPad සහ ඇන්ඩ්‍රොයිඩ්'
+  third_party_platform_mobile: 'වේදිකාව: iPad සහ ඇන්ඩ්‍රොයිඩ්'
+  third_party_platform_web: 'වේදිකාව: වෙබය'
+  third_party_price_varies: 'මිල: සැලසුම් වෙනස් වේ'
+  third_party_price_free: 'මිල: නොමිලේ'
+  third_party_price_299: 'මිල: $2.99/බාගැනීම'
+  third_party_price_individual: 'තනි පුද්ගල මිල: නොමිලේ ට්රයල් සහ $25 බැගින් මාසිකව'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
@@ -100,8 +100,8 @@ si-LK:
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Visit Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_curriculum: Scratch විෂය මලාව බා ගන්න
+  third_party_scratch_btn_forum: Scratch අධ්යාපක සංසදය
   third_party_scratch_btn_site: Visit Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
@@ -112,22 +112,22 @@ si-LK:
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_site: App Inventor 2 වෙත පිවිසෙන්න
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: Intro CS Learn More for Schools
-  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
-  third_party_curriculum: Curriculum
-  third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
-  third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
+  third_party_codecademy_desc: 'අපි පහළ සිට අධ්යාපනය නැවත සකස් කරමින් පවතී. අන්තර්ගජාලය සියල්ලම පාහේ අලුතින් සිතා අැත - වාණිජ, සමාජ ජාල, සෞඛ්ය, සහ තවත් බොහෝ දේ. අපි ලෝකයට අවශ්ය ප්රථම සමිපූර්ණයෙන්ම අන්තර්ගජාලයෙන් බිහි වූ අධ්යාපනයක් ගොඩනගමින් සිටිමු.'
+  third_party_codecademy_btn_curriculum: Codecademy විෂයමාලා බාගන්න
+  third_party_codecademy_btn_site: Codecademy වෙත පිවිසෙන්න
+  third_party_organization: සංවිධානය
+  third_party_curriculum: '	විෂයමාලාව'
+  third_party_pricing: මිලකරනය
+  third_party_cost_free: ගුරුවරුන් සහ සිසුන් සඳහා නොමීලේ
+  third_party_cost_5permonth: පන්තියකට මාසෙටම ඩොලර් 5යි
+  third_party_cost_299: $2.99/බාගැනීම
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_5_4to8: 4-8 ශ්රේණි සදහා ආසන්න වශයෙන් පාඩම් 5ක්
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -154,47 +154,49 @@ si-LK:
   gender: ලිංගභේදය
   boys: පිරිමි
   girls: ගැහැණු
-  give_my_hour: 'Give my Hour to:'
-  girls_team: "Girls' Team"
-  boys_team: "Boys' Team"
+  give_my_hour: 'මගේ පැය දෙන්න:'
+  girls_team: බාලිකා කන්ඩායම
+  boys_team: බාලක කන්ඩායම
   tell_the_world: ලොවට කියන්න!
-  thanks_for_voting: Thanks for voting!
-  share_on_facebook: Share on Facebook
-  share_on_twitter: Share on Twitter
+  thanks_for_voting: ඡන්ද පකාශ කලාට ස්තූතියි!
+  share_on_facebook: ෆේස්බුක් මත බෙදාගන්න
+  share_on_twitter: ට්විටර් මත බෙදාගන්න
   beyond_an_hour: Beyond an Hour of Code
   get_started: ආරම්භ කරන්න
   i_agree: මම එකඟයි
   participant_select: '- තෝරන්න -'
   participant_student: ශිෂ්‍යයා
   participant_parent: දෙමව්පියා
-  participant_educator: Educator
+  participant_educator: අධ්‍යාපකයා
   participant_engineer: මෘදුකාංග ඉංජිනේරු
   participant_other: ඉහත කිසිවක් නොවේ
-  print_all: Print all
-  print_ice_art: Print your ice art
+  print_all: සියල්ල මුද්‍රණය
+  print_ice_art: ඔබේ අයිස් කලා මුද්රණය කරන්න
   create_art_with_zombie: or make advanced art with zombie
-  i_am_a: I am a
+  i_am_a: මම
   never_spam: "We'll never spam you"
-  enter_country: Enter country if outside the United States
+  enter_country: එක්සත් ජනපදයෙන් පිටත නම් රට ඇතුල් කරන්න
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
-  petition_thankyou: Thank you for signing the petition
+  petition_thankyou: මෙම පෙත්සමට අත්සන් කළ ඔබට ස්තුතියි
   continue_learning_header: Continue learning beyond an Hour
-  continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
+  continue_learning_body: විධි ගොඩක් තියෙනවා. ඔබට සමඟ අන්තර්ජාලයෙන්, හෝ පළාත් පාසලක දී, හෝ ගිම්හාන කඳවුරක දී ඉගෙන ගත හැක.
   learn_next_level: Try another Code Studio course
-  learn_online: Try other courses online
-  learn_classes: Find local classes
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  learn_online: තවත් පාඨමාලා සබැඳිව උත්සාහ කරන්න
+  learn_classes: දේශීය පන්තියක් සොයාගන්න
+  hoc_is_here: පරිගණක විද්යාව ඉගෙන ගන්න. එය සෑම දෙයක්ම වෙනස් කරමින් පවතී. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
-  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
-  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
-  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
-  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
-  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
-  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
-  learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond an Hour
-  what_gender: What gender are you?
+  just_did_course1: 'මම දැන් 1 පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg'
+  just_did_course2: 'මම දැන් 2 පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg'
+  just_did_course3: 'මම දැන් 3 පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg'
+  just_did_course4: 'මම දැන් 4 පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg'
+  just_did_accelerated: 'මම දැන් කඩිනම් පාඨමාලාව නිම කරා - එය පරීක්ෂා කර බලන්න! @codeorg'
+  twitter_teach_cs: |
+    පුද්ගලයින් 10 දෙනෙකු ගෙන් 9 දෙනෙකු පාසල් තුල පරිගණක විද්යාව ඉගැන්විය යුතු බවට එකඟ වේ.
+    http://youtu.be/nKIu9yen5nc. https://code.org/ වෙත පිවිසෙන්නග.
+  learn_hoc: පැයක කේතයක් ඉගෙන ගන්න
+  beyond_hoc: පෑයෙන් ඔබ්බට
+  what_gender: ඔබේ ලිංගභේදය කවරක් ද?
   girl: ගැහැණු ළමයා
   boy: පිරිමි ළමයා
   help_recruit_coders: Help us recruit more coders to your team!
@@ -213,18 +215,18 @@ si-LK:
   studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
-  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_title: පැයක කේතය
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Made for teachers
+  studiobar_teacher_title: ගුරුවරුන් වෙනුවෙන්ම
   studiobar_teacher_body: Introduce Code Studio in your classroom
   studiobar_frozen_title: පැයේ කේතය
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_donate_title: පරිත්යාග කරන්න
+  studiobar_donate_body: ඔබ පරිත්යාග කරන සෑම ඩොලරයකටම එක දරුවෙක් ඉගෙනුම ලබයි
+  studiobar_shop_title: සාප්පුව
+  studiobar_shop_body: ඒකාකෘතික බව බිඳින්න. ආඩම්බරයෙන් අපේ ලාංඡනය පළඳින්න.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
@@ -238,13 +240,13 @@ si-LK:
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;අපගේ දැරියන් ඇතුළු &mdash; අපගේ ළමුන්ට &mdash;
+    පරිගණක විද්‍යාව හැදෑරීමට අවස්ථාව අවශ්‍යයි.&rdquo;
+    ෂර්ලි, ෆේස්බුක් COO
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;පරිගණක විද්‍යාවට ලොව හොඳම
+    අවස්ථා අගුළු හැරිය හැක.&rdquo;
+    සත්‍යා, මයික්‍රෝසොෆ්ට් CEO
   homepage_hero_text_bosh: |
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
@@ -254,9 +256,9 @@ si-LK:
     Not to mention, it's just plain fun.&rdquo;
     Luna, 7th grade
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;මා කෙදිනකවත් මගේ ළමයින් ඉගෙනීම ගැන
+    මෙතරම් උනන්දුවක් දක්වනවා දැක නැත.&rdquo;
+    මයිකල්, ගුරුවරයෙක්
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
@@ -277,133 +279,135 @@ si-LK:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
+  homepage_hero_text_stat_loc: ගැහැනු ළමයින් මිලියන 2.5ක් කේත ස්ටූඩියෝව ඉගෙනීමට ලියාපදිංචිව සිටී
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
-  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_hoc: පැයක කේතය
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: අපගේ සියලු නිබන්ධන
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: සාප්පුව
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_num_served: '# කට මෙහෙවර කරයි'
+  homepage_action_text_join_us: අප හා එක් වන්න
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: එය උත්සහ කරන්න
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_volunteers: තාක්ෂණික ස්වේච්ඡා සේවකයින් අවශ්යයි
+  homepage_action_text_codevideo: වීඩියෝව නරඹන්න
+  homepage_action_text_teachervideo: වීඩියෝව නරඹන්න
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: Start learning
-  homepage_action_text_signpetition: Sign the petition
+  homepage_action_text_learn: ඉගෙනීම අරඹන්න
+  homepage_action_text_signpetition: මෙම පෙත්සම අත්සන් කරන්න
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
+  homepage_diversity_pledge: විවිධත්වයේ සහතිකය ගන්න
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: වැඩිදුර ඉගෙන ගන්න
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Learn more
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
-  homepage_banner_20k_teachers_link: Learn more
+  homepage_banner_privacy_link: වැඩිදුර ඉගෙන ගන්න
+  homepage_banner_20k_teachers: ගුරුවරුන් 20,000 පුහුණු වී, දැන් පන්ති කාමර තුල පරිගණක විද්යාව උගන්වති.
+  homepage_banner_20k_teachers_link: වැඩිදුර ඉගෙන ගන්න
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: ඔබේ සහාය එක් කරන්න
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: වැඩිදුර කියවන්න
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: වැඩිදුර ඉගෙන ගන්න
   homepage_slot_text_title_hoc: පැයේ කේතය
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
-  homepage_slot_text_link_hoc: Hour of Code උත්සාහ කරන්න
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_blurb_hoc: කාටත් ඉගෙන ගන්න පුළුවන්. අදම ආරම්භ කරන්න
+  homepage_slot_text_link_hoc: පැයේ කේතය උත්සාහ කරන්න
+  homepage_slot_text_link_host: පැයේ කේතයකට සත්කාර කරන්න
+  homepage_slot_text_link_hocserved: '# කට මෙහෙවර කරයි'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: සිසුන්
   homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_elementary: Elementary school
-  homepage_slot_text_link_middle: Middle school
-  homepage_slot_text_link_high: High school
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_students_courses: අපගේ පාඨමාලා ගවේෂණය කරන්න
+  homepage_slot_text_link_codestudio: කේත ස්ටූඩියෝව උත්සාහ කරන්න
+  homepage_slot_text_link_local: දේශීය පන්තියක් සොයාගන්න
+  homepage_slot_text_link_othercourses: අනෙකුත් සබැඳි පාඨමාලා
+  homepage_slot_text_title_educators: අධ්යාපනඥයින්
+  homepage_slot_text_blurb_educators: ඔබේ සිසුන්ට උගන්වන්න
+  homepage_slot_text_link_elementary: මූලික පාසල
+  homepage_slot_text_link_middle: මධ්‍යම පාසල
+  homepage_slot_text_link_high: උසස් පාසල
+  homepage_slot_text_link_k5: ශ්රේණි K-5 සඳහා වන පාඨමාලා
+  homepage_slot_text_link_fullcurriculum: අපේ පූර්ණ විෂය මාලාව බලන්න
+  homepage_slot_text_link_pd: වෘත්තිමය සංවර්ධනය
+  homepage_slot_text_title_advocates: අභිදේශකයන්
   homepage_slot_text_blurb_advocates: Support diversity in computing
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
+  homepage_slot_text_link_stats: සංඛාන බලන්න
+  homepage_slot_text_link_buy: සම්බන්ධ වන්න
+  homepage_slot_text_link_donate: පරිත්යාගයක් කරන්න
+  homepage_slot_text_link_shop: ටී-ෂර්ට්, තොප්පි, සහ තවත්
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
-  homepage_donors_donate: Donate
-  contact_form_topic_student: "I'm a student"
-  contact_form_topic_parent: "I'm a parent"
-  contact_form_topic_teacher: "I'm a teacher/educator"
-  contact_form_topic_outside_us: "I'm outside the U.S."
-  contact_form_topic_contribution: Charitable contribution
-  contact_form_topic_partner: "I'd like to partner"
+  homepage_header_donors: Code.org එහි අනුග්‍රාහකයින්ට තුති පුදයි
+  homepage_donors_seall: සියල්ල බලන්න
+  homepage_donors_donate: පරිත්යාග කරන්න
+  contact_form_topic_student: මම ශිෂ්යයෙක්
+  contact_form_topic_parent: මම දෙමාපියෙක්
+  contact_form_topic_teacher: මම ගුරුවරයෙකු / අධ්යාපනඥයෙකු
+  contact_form_topic_outside_us: මම එක්සත් ජනපදයෙන් පිටත ඉන්නේ.
+  contact_form_topic_contribution: පුණ්ය දායකත්වය
+  contact_form_topic_partner: මම සහයෝගය දක්වන්න කැමතියි
   contact_form_topic_other: වෙනත්
   contact_form_label_topic: මාතෘකාව
   contact_form_label_email: ඔබේ ඊතැපෑල ලිපිනය
   contact_form_label_message: පණිවිඩය
   contact_form_label_submit: පණිවිඩය යවන්න
-  class_submission_in_school: In school
+  class_submission_in_school: පාසලේ
   class_submission_in_school_daily_programming_course: Daily programming course
   class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
+  class_submission_in_school_full_university_cs_curriculum: පූර්ණ විශ්ව විද්යාල CS විෂය මාලාව
   class_submission_in_school_robotics_club: Robotics club
   class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes (math, science, etc)
   class_submission_in_school_summer_school_cs_program: Summer school CS program
   class_submission_in_school_exploring_computer_science: Exploring Computer Science
   class_submission_in_school_other: Other in school
   class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
+  class_submission_out_of_school_summer_camp: ගිම්හාන කඳවුර
+  class_submission_out_of_school_afterschool_program: පාසලෙන් පසුව පැවැත්වෙන වැඩසටහන
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
   class_submission_out_of_school_other: Other out of school
-  class_submission_online: Online
+  class_submission_online: අන්තර්ජාලය හරහා
   class_submission_online_programming_class: Online programming class
   class_submission_online_teacher_resource: Online teacher resource
-  class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
-  class_submission_level_vocational: Vocational
-  class_submission_languages_other: Other language(s)
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  class_submission_online_other: වෙනත් අන්තර්ජාලයේ ඇති
+  class_submission_level_preschool: පෙර පාසල
+  class_submission_level_elementary: මූලික
+  class_submission_level_middle_school: මධ්‍යම පාසල
+  class_submission_level_high_school: උසස් පාසල
+  class_submission_level_college: විද්යාලය
+  class_submission_level_vocational: වෘත්තිමය
+  class_submission_languages_other: වෙනත් භාශා
+  inspirational_videos_more: 'භූමිකා ආදර්ශන සහ කීර්තිමත් පුද්ගලයින්ගේ තවත් <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ප්‍රබෝධමත් කරවන වීඩියෝ</a>'
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: පැරණි
   playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: හිම යුගය
   starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: JavaScript
+  starwars_javascript_title: ජාවා ස්ක්‍රිප්ට්
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
   starwars_blocks_title: ආකෘති
   starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
+  starwars_blocks_specs: භාෂා බොහෝමයක් | නවීන බ්‍රව්සර්, ස්මාර්ට් ෆෝන්, ටැබ්ලට් | වයස 6-106
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6-106
+  mc_longdescription: මෙම මයින්ක්‍රාෆ්ට් ලෝකය හරහා දුෂ්කර වූ ක්‍රියාවක් මත ස්ටීව් හෝ ඇලෙක්ස් රැඟෙන යාමට කේත කොටස් භාවිතා කරන්න.
+  mc_shortdescription: මෙම මයින්ක්‍රාෆ්ට් ලෝකය හරහා දුෂ්කර වූ ක්‍රියාවක් මත ස්ටීව් හෝ ඇලෙක්ස් රැඟෙන යාමට කේත කොටස් භාවිතා කරන්න.
+  mc_gradelevel: වයස 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
+  mc_specs: භාෂා බොහෝමයක් | නවීන බ්‍රව්සර් සහ ටැබ්ලට් | වයස 6-106
   minecraft_subtitle: Minecraft Hour of Code
-  watch_inspirational_videos: Before you get started, watch one of these inspirational videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: "Don't have Internet?"
+  watch_inspirational_videos: ඔබ ආරම්භ කිරීමට පෙර, මෙම ප්‍රබෝධමත් කරවන වීඩියෝ එකක් බලන්න
+  speak_another_language: තවත් භාෂාවක් කතා කරනවා ද?
+  help_translate: පරිවර්තනයෙන් අපට සහාය වන්න.
+  no_internet: අන්තර්ජාල පහසුකම් නොමැති ද?
   download_offline: Download the offline version.
   are_you_teacher: ඔබ ගුරුවරයෙක් ද?
   review_lesson_plan: Review the lesson plan and other teacher resources.
@@ -415,22 +419,22 @@ si-LK:
     Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_intro_links: 'Are you a teacher looking for volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: ඔබගේ තොරතුරු යාවත්කාලීන කරන්න
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: නම
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_name_placeholder: සම්පුර්න නම
+  volunteer_engineer_submission_field_company: සමාගම (හෝ විශ්ව විද්යාලය)
+  volunteer_engineer_submission_field_company_placeholder: සමාගම (හෝ විශ්ව විද්යාලය)
+  volunteer_engineer_submission_field_experience_level: අත්දැකීම් මට්ටම
+  volunteer_engineer_submission_field_location: ස්ථානය
   volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
+  volunteer_engineer_submission_field_location_placeholder: ZIP කේතය, නගරය සහ රාජ්ය/රටක්, හෝ වීදි ලිපිනය
   volunteer_engineer_submission_field_location_flexibility: I can volunteer by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering year-round
-  volunteer_engineer_submission_field_time_commitment: Time commitment
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_checkbox_after_hoc: මම වසර පුරා ස්වෙච්ඡා සේවයට උනන්දුවෙන් සිටිමි
+  volunteer_engineer_submission_field_time_commitment: කැප කරන ලද කාලය
+  volunteer_engineer_submission_field_linkedin: LinkedIn ගිනුම
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook ගිනුම
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: විස්තරය
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience or technical background and how you would like to participate as a volunteer for local teachers.
@@ -443,56 +447,56 @@ si-LK:
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: යොමුකරන්න
   volunteer_engineer_submission_thankyou: 'Thank you for signing up to volunteer. Teachers will be using <a href="%{url}">this map</a> to search for and contact volunteers like you.'
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
+  volunteer_engineer_submission_commitment_uncertain: අනියත
+  volunteer_engineer_submission_commitment_one_hr_per_week: සතියකට පැයක්
+  volunteer_engineer_submission_commitment_three_hrs_per_week: සතියකට පැය 3ක්
+  volunteer_engineer_submission_commitment_five_hrs_per_week: සතියකට පැය 5ක්
   volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
+  volunteer_engineer_submission_commitment_annually: වසරකට දෙතුන් වතාවක්
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
-  volunteer_engineer_submission_commitment_more: More
+  volunteer_engineer_submission_commitment_more: තවදුරටත්
   volunteer_engineer_submission_location_flexibility_onsite: visiting on-site at a school (1-2 hours in a classroom or a school assembly)
   volunteer_engineer_submission_location_flexibility_remote: 'having a Q&A with students remotely (via short video conference)'
   volunteer_engineer_submission_location_flexibility_curriculum: contributing to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_unspecified: සඳහන් කර නොමැති
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: University computer science student
   volunteer_engineer_submission_experience_software_professional: මෘදුකාංග ඉංජිනේරු
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: සැතපුම් 5
+  volunteer_engineer_submission_distance_16: සැතපුම් 10
+  volunteer_engineer_submission_distance_24: සැතපුම් 15
+  volunteer_engineer_submission_distance_32: සැතපුම් 20
+  volunteer_engineer_submission_num_volunteers_5: ස්වෙච්ඡා සේවකයින් 5
+  volunteer_engineer_submission_num_volunteers_10: ස්වේච්ඡා සේවකයන් 10
+  volunteer_engineer_submission_num_volunteers_25: ස්වේච්ඡා සේවකයන් 25
+  volunteer_engineer_submission_num_volunteers_50: ස්වේච්ඡා සේවකයන් 50
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: වයස
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
+  dashboard_landing_video: මෙම වීඩියෝව නරඹන්න
   dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
+  dashboard_landing_view_as_student: මෙම වෙබ් අඩවිය සිසුවෙකු ලෙස බලන්න
+  dashboard_landing_students_title: ඔබේ සිසුන්
   dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: K-5 Educator Resources (in English only)
+  dashboard_landing_news_title: K-5 අධ්‍යාපක සම්පත් (ඉංග්‍රීසි බසින් පමණි)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
+  dashboard_landing_useful_links: වෙනත් ප්‍රයෝජනවත් තැන්
   dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
-  dashboard_landing_print_certificates: Print certificates for students who finish this course
+  dashboard_landing_print_certificates: පාඨමාලාව අවසන් කල සිසුන් සඳහා සහතිකපත් මුද්‍රණය කරන්න
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
+  dashboard_landing_smart_hints: අපට Code.org නිබන්ධන සඳහා ස්මාර්ට් ඉඟි එකතු කිරීමට උදව් කරන්න
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
+  dashboard_landing_progress_title: ප්‍රධාන පන්තියේ ප්‍රගතිය
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
   dashboard_landing_print_progress: Print progress
-  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_title: දැනට ඇති පාඨමාලා
   dashboard_landing_available_courses: Here are the courses currently available for you and your students.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
@@ -519,59 +523,60 @@ si-LK:
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
   dashboard_action_edit: සංස්කරණය කරන්න
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: සුරකින්න
+  dashboard_action_save_all: සියලුම දේ සුරකින්න
   dashboard_action_cancel: අවලංගු කරන්න
-  dashboard_action_delete: Delete
+  dashboard_action_delete: මකාදමන්න
   dashboard_action_delete_yes: ඔව්
   dashboard_action_delete_no: නැහැ
-  dashboard_action_confirm: Delete?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
-  dashboard_action_done: Done
-  dashboard_action_required: required
+  dashboard_action_confirm: මකන්න?
+  dashboard_action_remove: අහක් කරන්න
+  dashboard_action_remove_confirm: අහක් කරන්න?
+  dashboard_action_done: හරි
+  dashboard_action_required: අවශ්‍යයි
+  dashboard_action_print_certificates: සහතික මුද්‍රණය කරන්න
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_summaries: ඇගයීම් වල සාරාංශය
   dashboard_assessments_answers: All assessment answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: සමීක්ශණ
+  dashboard_percent: ප්‍රතිශතය
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_all: සියළු
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_home_page: ගුරුවරයාගේ මුල් පිටුව
   dashboard_navigation_section_student_progress: Student Accounts and Progress
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: ඔබේ පාඨමාලාවේ ප්‍රගතිය
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: Support
+  dashboard_navigation_section_community: සහාය
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: Progress
   dashboard_navigation_view_text_responses: Text Responses
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: ඇගයීම්
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
-  dashboard_navigation_add_students: Add Students
+  dashboard_navigation_add_students: ශිෂ්‍යයින් ඇතුලත්කරන්න
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: Stats
+  dashboard_navigation_view_stats: සංඛ්‍යාන
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_progress_not_started: not started
+  dashboard_progress_not_started: ආරම්භ වී නැත
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
+  dashboard_progress_not_completed: අසම්පූර්ණ
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_completed_perfect: සාර්ථකව සම්පූර්ණ කර ඇත
   dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: ඉදිරිපත් කලා
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: යුගල වශයෙන් ක්‍රමලේඛනය
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
-  dashboard_sections_new_section: New section
+  dashboard_sections_new_section: නව කොටසක්
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: අංශය
   dashboard_sections_table_secret: Login Type
@@ -580,81 +585,81 @@ si-LK:
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: සිසුන්
   dashboard_sections_table_code: අංශ කේතය
-  dashboard_sections_name: Section Name
+  dashboard_sections_name: කොටසේ නම
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
   dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_sections_close: Close
+  dashboard_sections_switch_section: 'කොටසින් කොටසට මාරු වෙන්න:'
+  dashboard_sections_close: වසන්න
   dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Teacher
+  dashboard_sections_other_section: වෙනත් ගුරුවරයෙක්
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
   dashboard_sections_move_students: Move students
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
+  dashboard_students_add_student: සිසුවෙක් එක් කරන්න
+  dashboard_students_add_students: සිසුන් පිරිසක් ඇතුලත් කරන්න
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: සිසුවාගේ නම
   dashboard_students_name: නම
   dashboard_students_progress: Progress
   dashboard_students_age: වයස
   dashboard_students_gender: ලිංගභේදය
   dashboard_students_male: පිරිමි
   dashboard_students_female: ගැහැණු
-  dashboard_students_secret: Secret
+  dashboard_students_secret: රහසිගත
   dashboard_students_password: මුර පදය
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
+  dashboard_students_completed_levels: සම්පූර්ණ කර ඇති මට්ටම්
+  dashboard_students_total_lines: කේත පේලි
+  dashboard_students_show_secret: රහස පෙන්වන්න
   dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
+  dashboard_students_reset_secret: රහස තිබූ පරිදිම සකසන්න
+  dashboard_students_reset_password: මුර පදය නැවත සකස් කරන්න
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: රහස් පින්තූරය
   dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: රහස් පදය
   dashboard_students_secret_word: 'This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: Print this page
-  dashboard_students_url: URL
+  dashboard_students_print_page: මෙම පිටුව මුද්‍රණය කරන්න
+  dashboard_students_url: වෙබ් ලිපිනය
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_k5_title: K-5 අධ්‍යාපක සම්පත්
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_lesson_plans: පාඩම් සැලැස්ම
   dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-4
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_course1: 'පාඨමාලා අංක 1:'
+  dashboard_course2: 'පාඨමාලා අංක 2:'
+  dashboard_course3: 'පාඨමාලා අංක 3:'
   dashboard_course4: 'Course 4: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
-  dashboard_curriculum: Curriculum
+  dashboard_curriculum: '	විෂයමාලාව'
   dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_overview: Overview
+  dashboard_overview: විශ්ලේෂණය
   dashboard_sequence: පටිපාටිය
-  dashboard_framework: Framework
-  dashboard_standards: Standards
+  dashboard_framework: රාමුව
+  dashboard_standards: සම්මතයන්
   dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
+  dashboard_glossary: '	පදමාලාව'
   dashboard_classroom_strategies: Classroom strategies for teachers
   dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_puzzle_solving: 'ප්‍රහේලිකා විසඳීම:'
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
@@ -663,52 +668,56 @@ si-LK:
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: වෙනත්
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: වචනය
+  dashboard_login_picture: පින්තූරය
   dashboard_login_none: විද්‍යුත් තැපැල
-  dashboard_new_password: new password
+  dashboard_new_password: නව මුරපදය
   dashboard_stage: අදියර
   dashboard_puzzle: ප්‍රහේලිකාව
-  dashboard_question: Question
-  dashboard_response: Response
-  dashboard_correctness: Correctness
+  dashboard_question: ප්‍රශ්නය
+  dashboard_response: ප්‍රතිචාරය
+  dashboard_correctness: නිරවද්‍යතාවය
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: නිවැරදියි
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
+  dashboard_correctness_incorrect: වැරදියි
+  dashboard_submission_submitted: ඉදිරිපත් කරන ලදි
   dashboard_submission_in_progress: In progress
-  dashboard_status: Status
+  dashboard_status: තත්වය
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
   dashboard_multi_correct_percent: '% multiple choice correct'
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_teacher: ගුරු වරයා
   dashboard_student: ශිෂ්‍යයා
-  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_email_question: සියලුම සිසුන්ට වලංගු විද්යුත්-තැපැල් ලිපිනයක් තිබෙිද?
   dashboard_sections_account_creation_question: "Who creates the student's account?"
   dashboard_sections_password_question: 'What do students use as a "password"?'
   dashboard_sections_picture_account_creation: A picture assigned by Code.org
   dashboard_sections_word_account_creation: A pair of simple words assigned by Code.org
   dashboard_sections_sign_in_question: Where do students sign-in?
   dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
-  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_sign_in_main: 'http://code.org සහ "පුරන්න" ක්ලික් කරන්න'
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
-  dashboard_faq: Frequently Asked Questions
+  dashboard_faq: නිතර අසන ප්රශ්න
   dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_message: '<b>An important change to how we support student privacy</b><br/>We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools.'
+  dashboard_announcements: නිවේදන
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
-  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_learn_more_button: වැඩිදුර ඉගෙන ගන්න
   dashboard_announce_try_now_button: දැන් අත්හදා බලන්න
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: ඔබේ නම එක් කරන්න
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: දැන් අත්හදා බලන්න
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: Sign up
@@ -716,8 +725,8 @@ si-LK:
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_educator_resources_button: අධ්‍යාපක සම්පත්
+  learn_are_you_educator: 'ඔබ අධ්‍යාපකයෙක් ද? <a href="http://hourofcode.com/resources/how-to">පැයේ කේතයක් උගන්වන හැටි</a> ඉගෙන ගන්න'
   learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
   learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
   learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
@@ -735,7 +744,7 @@ si-LK:
   carousel_heading_domestic: Partner tutorials available in English
   carousel_heading_beginners: Partner tutorials for Grades K-8
   carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Partner tutorials that teach JavaScript
+  carousel_heading_javascript: ජාවාස්ක්‍රිප්ට් උගන්වන සහකරු නිබන්ධන
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Partner tutorial apps for phones and tablets
@@ -744,7 +753,7 @@ si-LK:
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
+  carousel_heading_webpages: වෙබ් පිටු සකසන්න පුරුදු වන්න
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
@@ -753,11 +762,11 @@ si-LK:
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
-  participants: participants
-  teachers_notes: "Teacher's Notes"
+  participants: සහභාගි වන්නන්
+  teachers_notes: ගුරුවරයාගේ තුණ්ඩු
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: Previous
-  next: Next
+  previous: පෙරට
+  next: ඊළඟ
   older_systems: Partner tutorials that work on older systems
   older_systems_subheading: 'These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a>'
   mobile_devices: Partner tutorials for mobile devices
@@ -772,10 +781,10 @@ si-LK:
   khanhe_name: An introduction to JavaScript
   khanfr_name: An introduction to JavaScript
   khanpl_name: An introduction to JavaScript
-  tynker_name: Build your own game
+  tynker_name: ඔබේම ගේම් එකක් හදන්න
   scratch_name: Get creative with coding
   lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
+  thinkersmith_name: මගේ රොබෝ මිතුරන්
   condcards_name: Conditionals with Cards
   lightbotintl_name: Lightbot
   codehs_name: Learn to Code With Karel the Dog
@@ -803,102 +812,102 @@ si-LK:
   hourofcode_name: Classic Maze
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: කලාකරු
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  csfirst_name: CS පලමුවෙන්
+  boxisland_name: හතරැස් දූපත
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
   course1_name: පාඨමාලා අංක 1
   course2_name: Course 2
-  course3_name: Course 3
+  course3_name: පාඨමාලාව 3
   course4_name: Course 4
-  accelerated_name: Accelerated Course
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
+  accelerated_name: කඩිනම් පාඨමාලා
+  cspunit1_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+  cspunit2_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+  cspunit3_name: '(old) Unit 3: Programming'
+  cspunit4_name: '(old) Unit 4: Data'
+  cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csp1_name: 'Unit 1: The Internet'
+  csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  cspassessment_name: 'Full Test - 50 questions'
+  cspassessment_name: 'පූර්ණ පරීක්ෂණය - 50 ප්රශ්න'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-  20-hour_name: Accelerated Course
+  20-hour_name: කඩිනම් පාඨමාලා
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
   classicmaze_name: Classic Maze
-  iceage_name: Ice Age
-  minecraft_name: Minecraft
+  iceage_name: හිම යුගය
+  minecraft_name: මයින්ක්‍රාෆ්ට්
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: ගණිත
   hoc_category_name: පැයේ කේතය
-  csf_category_name: CS Fundamentals
+  csf_category_name: පරිගණක විද්‍යාවේ මූලිකාංග
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
   applab_name: මෘදුකාංග විද්‍යාගාරය
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: වයස් 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
-  codeorg_gradelevel: Ages 4-104
-  codeintl_gradelevel: Ages 4-104
+  codeorg_gradelevel: වයස 4-104
+  codeintl_gradelevel: වයස 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middle school +
-  khanes_gradelevel: Middle school +
-  khanpt_gradelevel: Middle school +
-  khanhe_gradelevel: Middle school +
-  khanfr_gradelevel: Middle school +
-  khanpl_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khan_gradelevel: මධ්‍යම පාසල +
+  khanes_gradelevel: මධ්‍යම පාසල +
+  khanpt_gradelevel: මධ්‍යම පාසල +
+  khanhe_gradelevel: මධ්‍යම පාසල +
+  khanfr_gradelevel: මධ්‍යම පාසල +
+  khanpl_gradelevel: මධ්‍යම පාසල +
+  tynker_gradelevel: වයස 5-13
+  scratch_gradelevel: වයස 8+
   lightbot_gradelevel: සියලුම වයස්
   thinkersmith_gradelevel: සියලුම වයස්
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: වයස 8-12
   lightbotintl_gradelevel: සියලුම වයස්
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
-  codecombat_gradelevel: Middle school +
-  codemonkey_gradelevel: Middle school +
-  codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
-  robomind_gradelevel: Ages 8-13
-  groklearning_gradelevel: Middle school +
-  quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
-  tynkerapp_gradelevel: Ages 5-13
-  robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 6-106
-  bitsbox_gradelevel: Elementary
-  makeschool_gradelevel: High school
-  touchdevelop_gradelevel: High school
-  appinventor_gradelevel: Middle school +
+  codehs_gradelevel: උසස් පාසල
+  codecademy_gradelevel: උසස් පාසල
+  codecombat_gradelevel: මධ්‍යම පාසල +
+  codemonkey_gradelevel: මධ්‍යම පාසල +
+  codeavengers_gradelevel: මධ්‍යම පාසල +
+  processing_gradelevel: උසස් පාසල
+  robomind_gradelevel: වයස 8-13
+  groklearning_gradelevel: මධ්‍යම පාසල +
+  quorum_gradelevel: මධ්‍යම පාසල +
+  codespark_gradelevel: මූලික
+  kodable_gradelevel: මූලික
+  tynkerapp_gradelevel: වයස 5-13
+  robomindnl_gradelevel: වයස 8-13
+  flappy_gradelevel: වයස 6-106
+  bitsbox_gradelevel: මූලික
+  makeschool_gradelevel: උසස් පාසල
+  touchdevelop_gradelevel: උසස් පාසල
+  appinventor_gradelevel: මධ්‍යම පාසල +
   blockly_gradelevel: සියලුම වයස්
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  hourofcode_gradelevel: Ages 6-106
-  frozen_gradelevel: Ages 8-108
-  starwars_gradelevel: Ages 6-106
-  playlab_gradelevel: Ages 6-14
-  infinity_gradelevel: Ages 6-14
-  artist_gradelevel: Ages 8-108
-  monstercoding_gradelevel: Ages 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: Elementary
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
-  course1_gradelevel: Ages 4-6
+  thinkersmith2_gradelevel: වයස 8+
+  kodableunplugged_gradelevel: වයස 8-13
+  projguts_gradelevel: වයස 10-13
+  hourofcode_gradelevel: වයස 6-106
+  frozen_gradelevel: වයස 8-108
+  starwars_gradelevel: වයස 6-106
+  playlab_gradelevel: වයස 6-14
+  infinity_gradelevel: වයස 6-14
+  artist_gradelevel: වයස 8-108
+  monstercoding_gradelevel: වයස 5-13
+  allcancode_gradelevel: වයස 5-10
+  csfirst_gradelevel: වයස 9-14
+  boxisland_gradelevel: මූලික
+  codesters_gradelevel: වයස 12-14
+  texasinstruments_gradelevel: වයස 13-16
+  teacherled_gradelevel: වයස 5+
+  course1_gradelevel: වයස් 4-6
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18
@@ -1065,7 +1074,7 @@ si-LK:
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
   pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
+  hacketyhack_beyond_name: රූබි ඉගෙන ගන්න
   robomind_beyond_name: Program a virtual robot
   makeschool_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hour of Code
@@ -1080,7 +1089,7 @@ si-LK:
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
+  w3schools_beyond_name: HTML ඉගෙන ගන්න
   codeavengers_beyond_name: Learn to Code Websites
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
@@ -1091,47 +1100,47 @@ si-LK:
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
-  khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  codeorg_beyond_gradelevel: වයස 4-104
+  khan_beyond_gradelevel: මධ්‍යම පාසල +
+  tynker_beyond_gradelevel: වයස 5-13
+  scratch_beyond_gradelevel: වයස 8+
   lightbot_beyond_gradelevel: සියලුම වයස්
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
-  hopscotch_beyond_gradelevel: Middle school +
-  pocketcode_beyond_gradelevel: Middle school +
-  groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
-  robomind_beyond_gradelevel: Ages 8-13
-  makeschool_beyond_gradelevel: High school
-  appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
-  udemy_beyond_gradelevel: High school +
-  lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
-  codeavengers_beyond_gradelevel: Middle school +
-  mozilla_beyond_gradelevel: Ages 12+
-  codecombat_beyond_gradelevel: Middle school +
-  codea_beyond_gradelevel: High school +
-  lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
-  arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
-  alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
+  codecademy_beyond_gradelevel: උසස් පාසල
+  kodable_beyond_gradelevel: මූලික
+  scratchjr_beyond_gradelevel: මූලික
+  hopscotch_beyond_gradelevel: මධ්‍යම පාසල +
+  pocketcode_beyond_gradelevel: මධ්‍යම පාසල +
+  groklearning_beyond_gradelevel: මධ්‍යම පාසල +
+  hacketyhack_beyond_gradelevel: උසස් පාසල
+  robomind_beyond_gradelevel: වයස 8-13
+  makeschool_beyond_gradelevel: උසස් පාසල
+  appinventor_beyond_gradelevel: මධ්‍යම පාසල +
+  touchdevelop_beyond_gradelevel: උසස් පාසල
+  codehs_beyond_gradelevel: උසස් පාසල
+  udemy_beyond_gradelevel: උසස් පාසල +
+  lynda_beyond_gradelevel: උසස් පාසල +
+  edx_beyond_gradelevel: විශ්ව විද්‍යාලය
+  coursera_beyond_gradelevel: විශ්ව විද්‍යාලය
+  udacity_beyond_gradelevel: විශ්ව විද්‍යාලය
+  teachingtree_beyond_gradelevel: විශ්ව විද්‍යාලය
+  kodu_beyond_gradelevel: වයස 8+
+  cargobot_beyond_gradelevel: වයස 8+
+  kidsruby_beyond_gradelevel: වයස 12+
+  w3schools_beyond_gradelevel: වයස 12+
+  codeavengers_beyond_gradelevel: මධ්‍යම පාසල +
+  mozilla_beyond_gradelevel: වයස 12+
+  codecombat_beyond_gradelevel: මධ්‍යම පාසල +
+  codea_beyond_gradelevel: උසස් පාසල +
+  lego_beyond_gradelevel: මධ්‍යම පාසල +
+  finch_beyond_gradelevel: වයස 8+
+  arduino_beyond_gradelevel: උසස් පාසල +
+  processing_beyond_gradelevel: උසස් පාසල
+  alice_beyond_gradelevel: මධ්‍යම පාසල +
+  sphero_beyond_gradelevel: වයස 8+
   codeorg_beyond_platformtext: Modern browsers, tablets
   khan_beyond_platformtext: Modern Web browsers
   tynker_beyond_platformtext: Modern web browsers ($$ required)
-  scratch_beyond_platformtext: Any browser
+  scratch_beyond_platformtext: ඕනෑම වෙබ් බ්‍රව්සරයක්
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
@@ -1147,9 +1156,9 @@ si-LK:
   codehs_beyond_platformtext: Modern browsers ($$ required)
   udemy_beyond_platformtext: Web based
   lynda_beyond_platformtext: Web based ($$ required)
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
+  edx_beyond_platformtext: අලුත්ම වෙබ් බ්‍රව්සර් මෘදුකාංග
+  coursera_beyond_platformtext: අලුත්ම වෙබ් බ්‍රව්සර් මෘදුකාංග
+  udacity_beyond_platformtext: අලුත්ම වෙබ් බ්‍රව්සර් මෘදුකාංග
   teachingtree_beyond_platformtext: Web based
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
@@ -1185,13 +1194,13 @@ si-LK:
   udemy_beyond_shortdescription: Dozens of online programming courses
   lynda_beyond_shortdescription: Dozens of online programming courses
   edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: Start with CS101
-  udacity_beyond_shortdescription: Start with CS101
+  coursera_beyond_shortdescription: CS101 වලින් පටන්ගන්න
+  udacity_beyond_shortdescription: CS101 වලින් පටන්ගන්න
   teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
   kodu_beyond_shortdescription: Design a 3D game world
   cargobot_beyond_shortdescription: Program a robot arm on your iPad
   kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
+  w3schools_beyond_shortdescription: වෙබ් අඩවි සදන්න ඉගෙන ගන්න
   codeavengers_beyond_shortdescription: Learn to code games and websites
   mozilla_beyond_shortdescription: Create and share web pages
   codecombat_beyond_shortdescription: Play a game and learn JavaScript to win

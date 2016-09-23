@@ -1,0 +1,17 @@
+name 'sciPD2Part4_S1_L3'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# What's next? 
+
+
+<br>
+<br>
+
+Now you're going to dive into a Mystery Model and make some observations, inferences, and predictions.  All of this will be done while thinking in terms of agent-based modeling and complex adaptive systems (CAS).  Click "Continue" to go ahead to the next stage and get started!
+
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -37,10 +37,4 @@ class RakeUtilsTest < Minitest::Test
     assert !RakeUtils.glob_matches_file_path?('**.jsx', 'nested/folder/file.js')
     assert !RakeUtils.glob_matches_file_path?('**.js', 'nested/folder/file.jsx')
   end
-
-  def test_glob_folder_wide_changes
-    assert RakeUtils.glob_matches_file_path?('blockly-core/*', 'blockly-core/test.js')
-    assert !RakeUtils.glob_matches_file_path?('blockly-core/*', 'blockly-core/nested/test.js')
-    assert RakeUtils.glob_matches_file_path?('blockly-core/**/*', 'blockly-core/nested/test.js')
-  end
 end

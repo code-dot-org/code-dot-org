@@ -25,11 +25,12 @@ Dashboard::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
-  config.serve_static_files = true
-  config.static_cache_control = "public, max-age=3600, s-maxage=1800"
+  config.public_file_server.enabled = true
+  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=3600, s-maxage=1800" }
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # webpack handles js compression for us
+  # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.

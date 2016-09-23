@@ -6,6 +6,7 @@ AllCops:
   Exclude:
     - 'apps/**/*'
     - 'dashboard/db/schema.rb'
+    - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
@@ -69,6 +70,9 @@ Style/IdenticalConditionalBranches:
   Enabled: false
 
 Style/IfInsideElse:
+  Enabled: false
+
+Style/NumericPredicate:
   Enabled: false
 
 Style/RedundantReturn:

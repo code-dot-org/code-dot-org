@@ -59,6 +59,16 @@ const styles = {
     textAlign: 'center',
     border: 'none',
     borderRadius: 9
+  },
+  rightArrow: {
+    width: 0,
+    height: 0,
+    borderTop: '10px solid transparent',
+    borderBottom: '10px solid transparent',
+    borderLeft: '10px solid ' + color.purple,
+    position: 'absolute',
+    right: '-10px',
+    top: 80
   }
 };
 
@@ -202,8 +212,11 @@ const AnimationListItem = React.createClass({
         this.props.style
     ];
 
+    var arrowStyle = [this.props.isSelected && styles.rightArrow];
+
     return (
       <div style={tileStyle} onClick={this.onSelect}>
+        <div style={arrowStyle}></div>
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={Object.assign({}, this.props.animationProps, {frameDelay: this.state.frameDelay})}

@@ -31,7 +31,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   test "previewing evaluation already triggers enrollments" do
     Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_1, @module_practice_1])
 
-    get :preview_assignments, script_id: @course_unit.script.name
+    get :preview_assignments, params: {script_id: @course_unit.script.name}
     assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end
 
@@ -49,7 +49,8 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
       [@module_content_1, @module_content_2],
       [@module_practice_1, @module_practice_2],
     ].each do |content_module, practice_module|
-      post :confirm_assignments, script_id: @course_unit.script.name, content_module: content_module, practice_module: practice_module
+      params = {script_id: @course_unit.script.name, content_module: content_module, practice_module: practice_module}
+      post :confirm_assignments, params: params.compact
       assert_redirected_to script_preview_assignments_path(@course_unit.script)
       assert_equal [@module_required], @unit_assignment.plc_module_assignments.map(&:plc_learning_module)
     end

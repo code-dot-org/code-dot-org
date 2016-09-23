@@ -115,8 +115,8 @@ var loadLevel = function () {
   Bounce.BALL_Y_OFFSET = skin.ballYOffset;
   Bounce.PADDLE_Y_OFFSET = skin.paddleYOffset;
   // Height and width of the goal and obstacles.
-  Bounce.MARKER_HEIGHT = 43;
-  Bounce.MARKER_WIDTH = 50;
+  Bounce.MARKER_HEIGHT = skin.markerHeight;
+  Bounce.MARKER_WIDTH = skin.markerWidth;
 
   Bounce.MAZE_WIDTH = Bounce.SQUARE_SIZE * Bounce.COLS;
   Bounce.MAZE_HEIGHT = Bounce.SQUARE_SIZE * Bounce.ROWS;
@@ -1059,25 +1059,26 @@ Bounce.execute = function () {
   Bounce.waitingForReport = false;
   Bounce.response = null;
 
-  // Mapping of event handler hooks (e.g. Bounce.whenLeft) to the name of the
-  // block that should generate the corresponding code.
+  // Map event handler hooks (e.g. Bounce.whenLeft) to the generated code.
+  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
   const events = {
-    whenWallCollided: 'bounce_whenWallCollided',
-    whenBallInGoal: 'bounce_whenBallInGoal',
-    whenBallMissesPaddle: 'bounce_whenBallMissesPaddle',
-    whenPaddleCollided: 'bounce_whenPaddleCollided',
-    whenLeft: 'bounce_whenLeft',
-    whenRight: 'bounce_whenRight',
-    whenUp: 'bounce_whenUp',
-    whenDown: 'bounce_whenDown',
-    whenGameStarts: 'when_run'
+    whenWallCollided: {code: generator('bounce_whenWallCollided')},
+    whenBallInGoal: {code: generator('bounce_whenBallInGoal')},
+    whenBallMissesPaddle: {code: generator('bounce_whenBallMissesPaddle')},
+    whenPaddleCollided: {code: generator('bounce_whenPaddleCollided')},
+    whenLeft: {code: generator('bounce_whenLeft')},
+    whenRight: {code: generator('bounce_whenRight')},
+    whenUp: {code: generator('bounce_whenUp')},
+    whenDown: {code: generator('bounce_whenDown')},
+    whenGameStarts: {code: generator('when_run')}
   };
 
   studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp.reset(false);
 
-  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
-  Object.assign(Bounce, codegen.evalWithEvents({Bounce: api}, events, generator));
+  codegen.evalWithEvents({Bounce: api}, events).forEach(hook => {
+    Bounce[hook.name] = hook.func;
+  });
 
   Bounce.tickCount = 0;
   Bounce.intervalId = window.setInterval(Bounce.onTick, Bounce.scale.stepSpeed);

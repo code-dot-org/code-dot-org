@@ -273,6 +273,8 @@ es-MX:
   homepage_banner_congress_link: Añadir su apoyo
   homepage_banner_emailprivacy: We’re making an important change to how we support student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
+  homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -491,6 +493,7 @@ es-MX:
   dashboard_action_remove_confirm: ¿Eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: 'Mayoría de los maestros medir el progreso de sus estudiantes usando la pestaña de "Ver avances". Si usted está interesado en dar a sus estudiantes evaluaciones adicionales, usted puede encontrar preguntas recomendadas y áreas en los planes de lección. Estos son realizados fuera de estudio código.'
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar estas evaluaciones, primero asigne el curso a su clase y luego escoge el curso desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
@@ -660,7 +663,8 @@ es-MX:
   dashboard_faq: Preguntas frecuentes
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message_fall2016_features: |-
+    We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
   dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Aprende más
   dashboard_announce_try_now_button: Probar ahora
@@ -669,6 +673,9 @@ es-MX:
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hour of Code durante la Semana de Educación en Ciencias de la Computación
   learn_sign_up_button: Registrarse

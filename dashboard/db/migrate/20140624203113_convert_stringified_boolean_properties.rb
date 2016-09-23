@@ -1,4 +1,4 @@
-class ConvertStringifiedBooleanProperties < ActiveRecord::Migration
+class ConvertStringifiedBooleanProperties < ActiveRecord::Migration[4.2]
   def change
     Level.all.each do |level|
       next unless level.is_a? Blockly

@@ -90,10 +90,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def exit_survey(workshop, teacher, enrollment)
     # In case the workshop is reprocessed, do not send duplicate exit surveys.
     if enrollment.survey_sent_at
-      CDO.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{enrollment.id}"
+      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{enrollment.id}"
       return
     end
-    enrollment.update!(survey_sent_at: Time.zone.now)
+    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
+    enrollment.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
 
     @workshop = workshop
     @teacher = teacher

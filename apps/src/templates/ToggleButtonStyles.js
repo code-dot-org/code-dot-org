@@ -6,14 +6,22 @@ module.exports = {
   buttonStyle: {
     display: 'inline-block',
     verticalAlign: 'top',
-    border: '1px solid ' + color.light_gray,
+    borderStyle: 'solid',
+    borderColor: color.light_gray,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
     margin: '0 0 8px 0',
     padding: '2px 6px',
     fontSize: 14
   },
   toggleButtonStyle: {
     borderRightWidth: '0 !important',
-    borderRadius: 0
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
+    borderBottomLeftRadius: 0,
   },
   firstButtonStyle: {
     borderBottomLeftRadius: 4,
@@ -25,12 +33,12 @@ module.exports = {
     borderTopRightRadius: 4
   },
   activeStyle: {
-    backgroundColor: '#ffa000',
-    color: '#fff',
+    backgroundColor: color.orange,
+    color: color.white,
     boxShadow: '2px 2px 5px ' + color.shadow + ' inset'
   },
   inactiveStyle: {
-    backgroundColor: '#fff',
+    backgroundColor: color.white,
     color: color.light_gray,
     boxShadow: '0px 1px 5px ' + color.shadow
   },

@@ -12,7 +12,8 @@ class CloudfrontProxyTest < ActiveSupport::TestCase
            'REMOTE_IP' => '54.240.158.170'}
 
     # http://api.rubyonrails.org/classes/ActionDispatch/RemoteIp/GetIp.html
-    get_ip = ActionDispatch::RemoteIp::GetIp.new(env, remote_ip)
+    req = ActionDispatch::Request.new env
+    get_ip = ActionDispatch::RemoteIp::GetIp.new(req, remote_ip.check_ip, remote_ip.proxies)
     assert_equal '50.243.106.93', get_ip.calculate_ip
   end
 end

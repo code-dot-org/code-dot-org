@@ -273,6 +273,8 @@
   homepage_banner_congress_link: crwdns56703:0crwdne56703:0
   homepage_banner_emailprivacy: crwdns57908:0crwdne57908:0
   homepage_banner_emailprivacy_link: crwdns57909:0crwdne57909:0
+  homepage_banner_40k_teachers: crwdns60159:0crwdne60159:0
+  homepage_banner_40k_teachers_link: crwdns60160:0crwdne60160:0
   homepage_slot_text_title_hoc: crwdns35767:0crwdne35767:0
   homepage_slot_text_blurb_hoc: crwdns35768:0crwdne35768:0
   homepage_slot_text_link_hoc: crwdns35769:0crwdne35769:0
@@ -490,6 +492,7 @@
   dashboard_action_remove_confirm: crwdns27795:0crwdne27795:0
   dashboard_action_done: crwdns7793:0crwdne7793:0
   dashboard_action_required: crwdns7794:0crwdne7794:0
+  dashboard_action_print_certificates: crwdns58278:0crwdne58278:0
   dashboard_assessments_view: crwdns56489:0crwdne56489:0
   dashboard_assessments_none: crwdns56490:0crwdne56490:0
   dashboard_assessments_none_part2: crwdns56924:0crwdne56924:0
@@ -659,7 +662,7 @@
   dashboard_faq: crwdns23313:0crwdne23313:0
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
-  dashboard_announce_message: crwdns57071:0crwdne57071:0
+  dashboard_announce_message_fall2016_features: 'crwdns58393:0%{pp_url}crwdnd58393:0%{csp_widgets_url}crwdnd58393:0%{unused_code_url}crwdne58393:0'
   dashboard_announce_csp_widgets_message: crwdns57874:0crwdne57874:0
   dashboard_announce_learn_more_button: crwdns57875:0crwdne57875:0
   dashboard_announce_try_now_button: crwdns57876:0crwdne57876:0
@@ -668,6 +671,9 @@
   dashboard_announce_all: 'crwdns58242:0%{teacher_blog_url}crwdne58242:0'
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
+  host_an_hour: crwdns60161:0crwdne60161:0
+  learn_banner_title: crwdns60162:0crwdne60162:0
+  learn_banner_desc: 'crwdns60163:0%{how_to_url}crwdnd60163:0%{videos_url}crwdne60163:0'
   learn_more: crwdns23316:0crwdne23316:0
   learn_sign_up_description: crwdns48533:0crwdne48533:0
   learn_sign_up_button: crwdns48534:0crwdne48534:0

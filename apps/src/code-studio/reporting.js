@@ -111,10 +111,10 @@ reporting.cancelReport = function () {
 };
 
 function getFallbackResponse(report) {
-  if (!report.fallbackResponse) {
+  var fallbackResponse = maybeParse(report.fallbackResponse);
+  if (!fallbackResponse) {
     return null;
   }
-  var fallbackResponse = maybeParse(report.fallbackResponse);
   return report.pass ? fallbackResponse.success : fallbackResponse.failure;
 }
 

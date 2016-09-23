@@ -1,5 +1,14 @@
 name 'unique level name here'
-title 'Make a prediction and hit run'
-description 'Given the following program, match the user input with the expected output:'
-question 'Question'
-answer 'Answer 1'
+question 'Defines high level information about web page'
+answer '<head>'
+question 'Starts and ends the HTML document'
+answer '<html>'
+question 'Shows the name of the page in a new tab' 
+answer '<title>'
+question 'Tells the computer that this document is an HTML file'
+answer '<!DOCTYPE html>'
+
+
+markdown <<MARKDOWN
+Match the HTML elements which are fundamentals of web pages to their purpose.
+MARKDOWN

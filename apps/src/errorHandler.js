@@ -45,18 +45,8 @@ function outputError(warning, level, lineNum) {
   }
 }
 
-function handleError(opts, message, status) {
-  if (opts.onError) {
-    opts.onError.call(null, message, status);
-  } else {
-    logMethod(message);
-  }
-}
-
-
 module.exports = {
   ErrorLevel: ErrorLevel,
   outputError: outputError,
-  handleError: handleError,
   setLogMethod: setLogMethod
 };

@@ -180,12 +180,25 @@ def query_all_emails_at_domain(domain)
   puts "Emails at #{domain}"
 
   {}.tap do |results|
-    DB[:contacts].where(Sequel.ilike(:email,"%@#{domain}")).distinct.select(:name, :email).each do |contact|
+    DB[:contacts].where(Sequel.ilike(:email, "%@#{domain}")).distinct.select(:name, :email).each do |contact|
       contact[:international] = false
       email = contact[:email]
       results[email] = contact unless UNSUBSCRIBERS[email] || ALL[email] # don't override duplicates
     end
 
     ALL.merge! results
+  end
+end
+
+# Accepts a hash of SOLR queries in the form: {query_name: query}
+# Executes each query in order, and returns the resulting contacts, merged and deduped.
+def query_from_list(queries)
+  {}.tap do |contacts|
+    # query_subscribed_contacts dedupes by rejecting duplicate emails.
+    queries.each do |query_name, query|
+      new_contacts = query_subscribed_contacts(q: query)
+      puts "#{query_name}: #{new_contacts.count} contacts"
+      contacts.merge! new_contacts
+    end
   end
 end

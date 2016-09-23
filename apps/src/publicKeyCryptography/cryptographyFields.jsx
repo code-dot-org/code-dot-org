@@ -1,9 +1,10 @@
 /** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
 import React from 'react';
+import classNames from 'classnames';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
-import {LINE_HEIGHT} from './style';
+import {LINE_HEIGHT, COLORS} from './style';
 
 const BUTTON_VERTICAL_PADDING = 6;
 const BUTTON_HORIZONTAL_PADDING = 12;
@@ -23,7 +24,13 @@ const style = {
  */
 export function PrivateKeyDropdown(props) {
   const {publicModulus, ...rest} = props;
-  return <IntegerDropdown options={privateKeyList(publicModulus)} {...rest}/>;
+  return (
+    <IntegerDropdown
+      className="private-key-dropdown"
+      options={privateKeyList(publicModulus)}
+      style={{backgroundColor: COLORS.privateKey}}
+      {...rest}
+    />);
 }
 PrivateKeyDropdown.propTypes = {
   publicModulus: React.PropTypes.number,
@@ -36,7 +43,13 @@ PrivateKeyDropdown.propTypes = {
  * numbers in the range [3..10000).  Used by all three characters.
  */
 export function PublicModulusDropdown(props) {
-  return <IntegerDropdown options={primesInRange(3, 10000)} {...props}/>;
+  return (
+    <IntegerDropdown
+      className="public-modulus-dropdown"
+      options={primesInRange(3, 10000)}
+      style={{backgroundColor: COLORS.publicModulus}}
+      {...props}
+    />);
 }
 PublicModulusDropdown.propTypes = {
   value: React.PropTypes.number,
@@ -50,7 +63,13 @@ PublicModulusDropdown.propTypes = {
  */
 export function SecretNumberDropdown(props) {
   const {publicModulus, ...rest} = props;
-  return <IntegerDropdown options={_.range(0, publicModulus)} {...rest}/>;
+  return (
+    <IntegerDropdown
+      className="secret-number-dropdown"
+      options={_.range(0, publicModulus)}
+      style={{backgroundColor: COLORS.secretNumber}}
+      {...rest}
+    />);
 }
 SecretNumberDropdown.propTypes = {
   publicModulus: React.PropTypes.number,
@@ -63,16 +82,51 @@ SecretNumberDropdown.propTypes = {
  * Used by Alice and Bob.
  */
 export function GoButton(props) {
+  const {className, ...rest} = props;
   return (
     <button
-      className="primary"
+      className={classNames('primary', className)}
       style={style.GoButton}
-      {...props}
+      {...rest}
     >
       Go
     </button>);
 }
 GoButton.propTypes = {
+  className: React.PropTypes.string,
   onClick: React.PropTypes.func.isRequired,
   disabled: React.PropTypes.bool
 };
+
+function Keyword(props) {
+  const keywordStyle = {
+    backgroundColor: props.color,
+    fontWeight: 'bold',
+    padding: 3
+  };
+  return <span style={keywordStyle}>{props.children}</span>;
+}
+Keyword.propTypes = {
+  color: React.PropTypes.string.isRequired,
+  children: React.PropTypes.string.isRequired
+};
+
+export function KeywordPublicModulus() {
+  return <Keyword color={COLORS.publicModulus}>public modulus</Keyword>;
+}
+
+export function KeywordPublicKey() {
+  return <Keyword color={COLORS.publicKey}>public key</Keyword>;
+}
+
+export function KeywordPrivateKey() {
+  return <Keyword color={COLORS.privateKey}>private key</Keyword>;
+}
+
+export function KeywordPublicNumber() {
+  return <Keyword color={COLORS.publicNumber}>public number</Keyword>;
+}
+
+export function KeywordSecretNumber() {
+  return <Keyword color={COLORS.secretNumber}>secret number</Keyword>;
+}

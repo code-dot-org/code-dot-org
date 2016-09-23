@@ -30,7 +30,6 @@ class ScriptLevel < ActiveRecord::Base
   has_and_belongs_to_many :levels
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
-  acts_as_list scope: :stage
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
@@ -136,12 +135,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    if assessment
-      if level.properties["pages"] && level.properties["pages"].length > 1
-        return true
-      end
-    end
-    false
+    return false unless assessment
+    level.properties["pages"] ? level.properties["pages"].length > 1 : false
   end
 
   def anonymous?
@@ -149,7 +144,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def name
-    I18n.t("data.script.name.#{script.name}.#{stage.name}")
+    stage.localized_name
   end
 
   def report_bug_url(request)
@@ -171,6 +166,10 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.size
   end
 
+  def path
+    build_script_level_path(self)
+  end
+
   def summarize
     if level.unplugged?
       kind = 'unplugged'
@@ -185,7 +184,7 @@ class ScriptLevel < ActiveRecord::Base
     ids = level_ids
 
     levels.each do |l|
-      ids << l.contained_levels.map(&:id)
+      ids.concat(l.contained_levels.map(&:id))
     end
 
     summary = {

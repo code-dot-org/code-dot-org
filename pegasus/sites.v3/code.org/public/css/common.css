@@ -6,6 +6,10 @@
   padding: 10px;
 }
 
+.soft-padding {
+  padding: 10px;
+}
+
 .course-carousel {
   opacity: 0.4;
 }

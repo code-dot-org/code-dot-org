@@ -18,7 +18,7 @@ If accepted into the Code.org CS in Science Professional Learning Program, you w
 ## <a name="components"></a>How does it work?
 The Code.org CS in Science professional learning program is built around development and curriculum that flow together seamlessly, representing a cohesive set of resources that empower teachers to deliver the course with confidence. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and accompanying development for the introduction of CS concepts into science classrooms within the context of modeling and simulation.  
 
-The goal of this professional learning program is to help teachers to introduce CS practices and concepts within the context of life, physical, and earth sciences. Many of the supports, including videos, curriculum, and the standards crosswalk (both CSTA and NGSS) are available from the [CS in Science homepage](/curriculum/science).
+The goal of this professional learning program is to help teachers to introduce CS practices and concepts within the context of life, physical, and earth sciences. Many of the supports, including videos, curriculum, and the standards crosswalk (both CSTA and NGSS) are available from the [CS in Science homepage](<%= CDO.code_org_url('/curriculum/science') %>).
 
 
 [<button>Apply now</button>](/educate/professional-learning/cs-in-science-apply)

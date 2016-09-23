@@ -4,6 +4,14 @@
       not_saved: 'Corrija os seguintes erros:'
       too_young: Este conteúdo tem restrições de idade e não está disponível para
         os alunos mais jovens
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -25,7 +33,7 @@
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   your_professional_learning_plan: Seu plano de aprendizagem profissional
-  see_your_learning_plan: Ver o seu plano de aprendizagem
+  see_your_learning_plan: Veja seu plano de aprendizagem
   submit: Enviar
   unsubmit: Cancelar envio
   previous_page: Página anterior
@@ -34,13 +42,13 @@
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
-  heading_x_of_y: "%{heading} (página %{y} de %{x})"
+  heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
       placeholder: Código da seção (ABCDEF)
-      instructions: Por favor insira o código compartilhado com você por seu professor.
-        É um código de 6 letras como "ABCDEF".
+      instructions: Insira o código que seu professor compartilhou com você. É um
+        código de 6 letras, como "ABCDEF".
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -84,21 +92,11 @@
   signup_form:
     student_count: "%{count} alunos já se registraram."
     teacher_count: "%{count} professores já se registraram."
-    overview_student: Crie uma conta para acompanhar seu progresso. Seu e-mail é usado
-      principalmente para permitir que você faça logon e para a recuperação de senha.
-      Para obter mais informações, consulte nossa <a href="http://code.org/privacy">Política
-      de privacidade</a>.
-    overview_teacher: Cadastre-se e ensine ciência da computação em sua sala de aula.<p/>
-      Você poderá adicionar alunos e acompanhar o progresso deles.
-    no_signup_message: Você pode <a target="_blank" href="http://learn.code.org">
-      consultar as várias fases e desafios</a>, mas você precisa se cadastrar para
-      salvar seu progresso.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Consultar o guia do professor
-    teacher_pitch: Cadastro de professor na Code.org
-    teacher_title: Cadastro de professores
-    student_pitch: Cadastro de aluno na Code.org
-    student_title: Cadastro de alunos
-    signup_title: Cadastre-se no Code.org
+    title: Sign up for Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -126,9 +124,11 @@
     user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Estudante
+    field_is_required: "é obrigatório"
+    accept_terms: You must agree to create an account
   signin_form:
     title: Já tem uma conta? Entre
-    login: Email ou nome de usuário
+    login: E-mail
     password: Senha
     remember: Lembrar de mim
     submit: Entrar
@@ -142,13 +142,15 @@
     picture: Agora encontre sua foto secreta
     words: Agora digite suas palavras secretas
     login: Entrar
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Login incorreto, tente novamente
+    pair_programming: Estou trabalhando em parceria no computador
   password:
     reset_form:
       title: Esqueceu sua senha?
+      instructions: Enter your email address below and we'll send you password reset
+        instructions.
       email: Endereço de email
-      submit: Me envie instruções de redefinição de senha
+      submit: Enviar
     change_form:
       title: Alterar senha
       new_password: Nova senha
@@ -282,10 +284,10 @@
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
       free_play:
-        playlab: Crie um aplicativo Play Lab
-        artist: Desenhe alguma coisa
+        playlab: Criar um aplicativo do Laboratório
+        artist: Desenhar algo
         calculate: Calculate Something
-        applab: Crie um aplicativo Play Lab
+        applab: Criar um aplicativo do Laboratório
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -298,9 +300,9 @@
       signup: Inscreva-se
       already_registered: Já se cadastrou?
       pair_programming: Programação em duplas
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Equipe
+      driver: Líder
+      navigator: Navegador
     popup:
       progress_for_user: progresso de %{name}'s
       progress: Seu progresso
@@ -327,7 +329,7 @@
     user_not_found: Esse professor não pôde ser encontrado.
     student_teacher_disassociated: Você removeu %{teacher_name} como seu professor.
     panel:
-      answer_viewer: Visualizador de resposta
+      answer_viewer: Painel do professor
       student: Estudante
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
@@ -336,7 +338,8 @@
       example_with_number: Solução do Exemplo %{solution_number}
       submitted_on: 'Enviado em:'
       unsubmit: Cancelar envio
-      worked_with: Worked With
+      worked_with: Trabalhou com
+      update_lock_settings: Update lock settings here.
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -410,43 +413,48 @@
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
     announcement_title: Anúncios
-    announcement_message: "<b>22 de abril de 2016</b> - Atividades offline são partes
-      vitais do processo de aprendizagem, mas os professores nos disseram que encontrar
-      todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode
-      encontrar todos os recursos offline numa página só. Associar as lições com qualquer
-      aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Saiba mais
     announcement_try_now_button: Experimente agora
-    announcement_petition: Como professor, você está liderando o caminho em um movimento
-      para dar a cada aluno em todas as escolas a oportunidade de aprender informática.
-      Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes
-      de educação, 28 governadores e maiores empresas de CEOs da América se uniram
-      em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de
-      ciência de computador K-12.
-    announcement_petition_button: Adicione o seu nome
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_petition: Como professor, você está abrindo as portas de um movimento
+      que dará a cada aluno de todas as escolas a oportunidade de aprender ciência
+      da computação. Agora chegou a hora de seus representantes ouvirem o que você
+      tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes
+      das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo
+      que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola
+      ao Ensino médio.
+    announcement_petition_button: Adicione seu nome
+    announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
+      blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
+      últimas novidades.</a>
   move_students:
-    new_section_dne: Desculpe, mas não existe secção %{new_section_code}. Por favor
-      insira um código de seção diferente.
-    section_code_not_entered: Forneça por favor current_section_code.
-    section_code_cant_be_current_section: A seção atual não pode ser o mesmo que a
-      nova seção.
-    current_section_dne: Desculpe, mas a seção %{current_section_code} não existe.
-      Por favor insira um código de seção diferente.
-    students_not_yours: Você não pode mover os alunos de uma seção que não pertence
+    new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
+      seção.
+    section_code_not_entered: Forneça o current_section_code.
+    section_code_cant_be_current_section: A seção atual não pode ser igual à nova
+      seção.
+    current_section_dne: A seção %{current_section_code} não existe. Insira outro
+      código de seção.
+    students_not_yours: Não é possível mover alunos de uma seção que não pertence
       a você.
-    stay_enrolled_not_entered: Por favor, forneça stay_enrolled_in_current_section.
-    student_ids_not_entered: Por favor, forneça students_ids.
-    student_not_found: Um ou mais alunos não podem ser encontrados.
-    all_students_must_be_in_current_section: Todos os alunos, atualmente, devem estar
-      inscrito em sua seção.
-    already_enrolled_in_new_section: Você não pode mover estes estudantes porque este
-      professor já os tem em outra seção.
+    stay_enrolled_not_entered: Forneça stay_enrolled_in_current_section.
+    student_ids_not_entered: Forneça students_ids.
+    student_not_found: Não foi possível encontrar um ou mais alunos.
+    all_students_must_be_in_current_section: Todos os alunos devem estar inscritos
+      em sua seção atualmente.
+    already_enrolled_in_new_section: Não é possível mover esses alunos porque eles
+      já estão em outra seção deste professor.
   share:
     title: Aprenda no Code Studio
     description: Qualquer pessoa pode aprender ciência da computação. Crie jogos,
@@ -661,9 +669,9 @@
     wrong_body: Obrigado por enviar uma resposta
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: Este questionário é anônimo. Por favor visite o painel
+      de controle do professor para ver os resultados. Observe que estes só estarão
+      visíveis se pelo menos cinco alunos enviarem suas respostas.
   level_group-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar uma resposta
@@ -718,6 +726,34 @@
       sua idade.<br/>Como sempre, a code.org nunca vai locar, vender ou compartilhar
       essa informação com terceiros.
     sign_out: Se você não quer informar sua idade, você pode <a href="%{url}">sair</a>.
+  terms_interstitial:
+    title: Updated Terms of Service and Privacy Policy
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Termos de Serviço
+    privacy: Política de Privacidade
+    privacy_notice: Privacy Notice
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Accept
+    print: Imprimir
+    later: Later
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Desculpe, usuários mais jovens não podem se inscrever
     em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a>
     sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em
@@ -749,8 +785,8 @@
     share_copy_link: 'Copie o link:'
     share_embed_description: Você pode colar o código embed em uma página HTML para
       exibir o projeto em uma página da Web.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_u13_warning: Pergunte ao seu professor antes de compartilhar. Somente compartilhe
+      com colegas de sua escola.
     embed: Incorporar
     advanced_share: Mostrar opções avançadas
     close: Fechar
@@ -779,8 +815,8 @@
     abuse:
       tos: Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos
         de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas.
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Este projeto tem informações que não podem ser compartilhadas.
+        Por favor, entre em contato com o dono do app para corrigir o seu conteúdo.
       contact_us: Se você acha que isso é um erro, <a href='https://code.org/contact'>contate-nos.</a>
       go_to_code_studio: Ir para o Code Studio
       report_abuse_form:
@@ -832,8 +868,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Procure por um ícone...
-      no_icons_found: Nenhum ícone foi encontrado
+      search_placeholder_text: Procurar um ícone...
+      no_icons_found: Nenhum ícone encontrado
     playzone:
       artist_description: Faça desenhos e figuras legais com o Artista!
       artist_title: Novo Desenho
@@ -848,16 +884,16 @@
     required: Visão geral
     content: Conteúdo
     practice: Professor de práticas
-    peer_review: Peer Review
+    peer_review: Revisão em grupo
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    disclaimer: Alerta
+    leaving_domain: Você está saindo do nosso domínio para um endereço não controlado
+      pela Code.org.
+    disclaimer_text: Este site pode ter políticas de privacidade diferentes do Code.org.
+      Nós indicamos sites de terceiros porque acreditamos que eles possam ser úteis
+      para você. Portanto nós não somos diretamente responsáveis pelo conteúdo dos
+      mesmos, por favor <a href='%{support_url}'> contate o nosso suporte</a> caso
+      tenha alguma objeção ou se os links não estiverem disponíveis.
   hoc_download:
     title: Downloads do Hour of Code
     capsule_title: Você tem Internet?
@@ -891,3 +927,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

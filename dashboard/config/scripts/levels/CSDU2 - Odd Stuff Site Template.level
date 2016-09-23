@@ -1,0 +1,15 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:04:29.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n <html> \\n <head> \\n <title>OSS</title> \\n <style> \\n body { \\n font-family: sans-serif; \\n background-color: lightgray; \\n } \\n img { \\n border: solid dodgerblue 10px; \\n height: 200px; \\n } \\n h1 { \\n color:dodgerblue; \\n } \\n </style> \\n </head> \\n \\n <body> \\n <h1>The Odd Stuff Site</h1> \\n <h2>The world is a strange and wonderful place</h2> \\n <img src=\\\"img/huh.gif\\\" alt=\\\"confused-stick-figure-with-huh?-text\\\"/> \\n </body> \\n </html> \\n\"\r\n    }\r\n  ]\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

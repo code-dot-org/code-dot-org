@@ -4,10 +4,10 @@
   'yes': Kyllä
   'no': Ei
   select_language: Valitse kieli
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org poistaa pian tuen Internet Explorer 8, 9 ja 10 -selaimiin.
+    Ole hyvä ja päivitä uusimpaan selaimeen.
+  upgrade_ie_message_csedweek: CSEdWeek.org poistaa pian tuen Internet Explorer 8,
+    9 ja 10 -selaimiin. Ole hyvä ja päivitä uusimpaan selaimeen.
   upgrade_ie_link: Lue lisää
   en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
@@ -35,7 +35,7 @@
     ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
   og_title: Jokainen lapsi ansaitsee mahdollisuuden
   og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
-    tietotekniikkaa.
+    tietotekniikkaa. Se muuttaa kaiken.
   hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
     joulukuuta 2014<br/>
   hoc2014_students: Oppilaat
@@ -53,7 +53,7 @@
   csedweek_map_legend_title: Kartan selite
   csedweek_map_legend_event: Koodaustunti
   csedweek_map_legend_cs_tech_jam: Tietojenkäsittelytieteen opetusviikko
-  cded_sign_up: Luo käyttäjätunnus
+  cded_sign_up: Rekisteröidy
   cded_try_it: Kokeile
   try_now: Kokeile nyt
   california_heading: Pyydä kouluasi opettamaan tietojenkäsittelytiedettä
@@ -82,58 +82,58 @@
   congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
     <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
     johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_course1: Onnittelut! Läpäisit kurssin 1
+  congratulations_on_completing_course2: Onnittelut! Läpäisit kurssin 2
+  congratulations_on_completing_course3: Onnittelut! Läpäisit kurssin 3
+  congratulations_on_completing_course4: Onnittelut! Läpäisit kurssin 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
     tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
   get_a_certificate_of_achievement: Hanki todistus suorituksesta
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  view_course: Näytä kurssi
+  view_unit: Näytä yksikkö
+  make_app: Tee sovellus
+  congrats_guest_speaker_title: Löydä vieraileva puhuja oppitunnille
+  congrats_guest_speaker_desc: Nyt kun opiskelijat ovat suorittaneet tietotekniikkakurssin,
+    suosittelemme juhlistamaan sitä ja yhdistämään asioita reaalimaailman kutsumalla
+    vierailevan puhujan luokkahuoneeseen. Voit käyttää vapaaehtoisten karttaa ottaaksesi
+    yhteyttä paikallisiin vapaaehtoisiin, jotka voisivat vierailla oppitunneilla tai
+    etsiä minkä tahansa kaupungin opiskelijoita tai teknisen alan ammattilaisia, jotka
+    ovat valmiita innostamaan opiskelijoita etänä, video chat-keskustelun kautta.
+  congrats_guest_speaker_cta: Etsi vieraileva puhuja
+  congrats_third_party_title: Käytä uusia taitojasi näissä sovelluksissa ja sivuistoissa
+  third_party_gradelevel_kto8: Luokka-asteet päiväkoti - 8. -luokka
+  third_party_gradelevel_kto2: Esiopetus – alkuopetus
+  third_party_gradelevel_2to8: Perusopetus luokat 2-8
+  third_party_gradelevel_4to12: Perusopetus luokat 4-9 ja toinen aste
+  third_party_gradelevel_5to12: Perusopetus luokat 5-9 ja toinen aste
+  third_party_gradelevel_6plus: Kuudesluokkalaisista alkaen
+  third_party_gradelevel_8plus: Kahdeksasluokkalaisista alkaen
+  third_party_platform_all: 'Käyttöalustat: Web, iPad & Android'
+  third_party_platform_mobile: 'Käyttöalustat: iPad & Android'
+  third_party_platform_web: 'Käyttöalusta: Web'
+  third_party_price_varies: 'Hinta: Suunnitelmat vaihtelevat'
+  third_party_price_free: 'Hinta: Ilmainen'
+  third_party_price_299: 'Hinta: $2.99/ lataus'
+  third_party_price_individual: 'Erillinen hinta: Ilmainen kokeiluversio & $25/ kuukaudessa'
+  third_party_price_school: 'Koulun hinta: Vapaat suunnitelmat & Pro on $2500 +'
+  third_party_tynker_desc: Tynker luovana alustana auttaa lapsia kehittämään tietokoneellista
+    ajattelua ja ohjelmointitaitoja hauskalla, intuitiivisella ja kekseliääällä tavalla.
+    Meidän innovatiivinen visuaalinen ohjelmointikielemme, vuorovaikutteisen vaiheittaiset
+    kurssit ja pelipohjainen ohjelmointi antaa helpon Johdatuksen ohjelmointiin ja
+    kannustaa lapsia innovoimaan ja luomaan.
+  third_party_tynker_btn_curriculum: Kokeile Tynkerin alkeistason opetussuunnitelmaa
+  third_party_tynker_btn_site: Vieraile Tynkerin sivuilla
+  third_party_scratchjr_desc: Scratch Jr. on johdanto ohjelmointikieliin, joka mahdollistaa
+    pienten lasten ( 5-7 - vuotiaat) vuorovaikutteisten tarinoiden ja pelejen luomisen.
+    Lapset kokoavat yhteen graafiisen ohjelmoinnin lohkoja, jotta merkit liikkuvat,
+    hyppäävät, tanssivat ja laulavat. Lapset voivat muokata hahmoaan hahmoeditorilla,
+    lisätä omia ääniä ja ääniä, jopa lisätä valokuvia itsestään - siten ohjelmoida
+    hahmonsa lohkojen avulla eloon.
+  third_party_scratchjr_btn_curriculum: Lataa Scratch Jr. opetussuunnitelma
+  third_party_scratchjr_btn_site: Vieraile Scratch Jr. -sivustolla.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
@@ -346,7 +346,7 @@
   homepage_action_text_hoc: Koodaustunti jokaiselle opiskelijalle.
   homepage_action_text_num_served: "# käyttäjää"
   homepage_action_text_join_us: Liity joukkoomme
-  homepage_action_text_sign_up: Luo käyttäjätunnus
+  homepage_action_text_sign_up: Rekisteröidy
   homepage_action_text_try_it: Kokeile
   homepage_action_text_volunteers: Teknisiä vapaaehtoistyöntekijöitä tarvitaan
   homepage_action_text_codevideo: Katso video
@@ -373,6 +373,8 @@
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
   homepage_banner_emailprivacy_link: Read more
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Lue lisää
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
@@ -665,6 +667,7 @@
   dashboard_action_remove_confirm: Poista?
   dashboard_action_done: Valmis
   dashboard_action_required: vaaditaan
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -869,10 +872,14 @@
   dashboard_faq: Usein kysyttyjä kysymyksiä
   dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
   dashboard_announcements: Ilmoituksia
-  dashboard_announce_message: Want to help us test a new feature? We know it’s important
-    to encourage students to iterate and experiment, so we'll be adding an "unused
-    code" feature to allow students to run their code even when there are unattached
-    blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
+    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+    students' progress</a> even if they're pair programming on one device. You can
+    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+    from our CS Principles course in <i>any</i> classroom. And your students can <a
+    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+    to encourage experimentation! Check out all our new features and let us know what
+    you think.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -889,10 +896,18 @@
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Lisätietoja
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: Luo käyttäjätunnus
+  learn_sign_up_button: Rekisteröidy
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Näytä tämä inspiroiva video luokallesi
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1009,11 +1024,11 @@
   course3_name: Kurssi 3
   course4_name: Kurssi 4
   accelerated_name: Nopeutettu kurssi
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
@@ -1737,4 +1752,3 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
-  dashboard_action_print_certificates: Print certificates

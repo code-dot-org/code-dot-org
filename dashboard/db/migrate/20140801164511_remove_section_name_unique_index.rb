@@ -1,4 +1,4 @@
-class RemoveSectionNameUniqueIndex < ActiveRecord::Migration
+class RemoveSectionNameUniqueIndex < ActiveRecord::Migration[4.2]
   def up
     remove_index :sections, [:user_id, :name]
     add_index :sections, :user_id

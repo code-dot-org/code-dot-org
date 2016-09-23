@@ -1,4 +1,4 @@
-class CreateUserLevels < ActiveRecord::Migration
+class CreateUserLevels < ActiveRecord::Migration[4.2]
   def change
     create_table :user_levels do |t|
       t.references :user, null: false
@@ -9,13 +9,13 @@ class CreateUserLevels < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :user_levels, [:user_id,:level_id], unique: true
+    add_index :user_levels, [:user_id, :level_id], unique: true
 
     # add some columns/keys to activities
     add_column :activities, :stars, :integer
     add_column :activities, :attempt, :integer
     add_column :activities, :time, :integer
 
-    add_index :activities, [:user_id,:level_id]
+    add_index :activities, [:user_id, :level_id]
   end
 end

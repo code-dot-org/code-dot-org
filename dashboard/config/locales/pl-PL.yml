@@ -2,7 +2,16 @@
   errors:
     messages:
       not_saved: 'Proszę poprawić następujące błędy:'
-      too_young: Te materiały nie są dostępne dla młodszych uczniów
+      too_young: Ta zawartość ma przypisane ograniczenia wiekowe i nie jest dostępna
+        dla młodszych uczniów.
+      teacher_must_accept_terms: This content has age restrictions in place and is
+        not available for younger students. Ask your teacher to accept the updated
+        Terms of Service to give you access to this content. Your teacher can do this
+        by logging into Code Studio and clicking the "Review updated terms" button
+        near the top of the Code Studio homepage.
+      pair_programmer: You are currently pair programming with a student who does
+        not have access to this content. To access this content, stop pair programming
+        and try again.
   activerecord:
     errors:
       messages:
@@ -81,20 +90,11 @@
   signup_form:
     student_count: "%{count} uczniów już się zarejestrowało."
     teacher_count: "%{count} nauczycieli już się zarejestrowało."
-    overview_student: Zarejestruj się na konto, aby śledzić swoje postępy. Twój e-mail
-      służy przede wszystkim do logowania i do odzyskiwania hasła. Aby uzyskać więcej
-      informacji, zobacz naszą <a href="http://code.org/privacy"> Politykę prywatności</a>.
-    overview_teacher: Ucz informatyki w swojej klasie rejestrując się na konto. <p/>
-      Będziesz mógł dodać swoich uczniów i śledzić ich postępy.
-    no_signup_message: Możesz <a target="_blank" href="http://learn.code.org"> przeglądać
-      różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zachować swoje
-      wyniki.
+    overview: Sign up for an account to track your progress or manage your classroom.
+      <a href="/">You can browse the various stages and puzzles</a> without an account,
+      but you will need to sign up to save your progress and projects.
     teacher_educator_guide: Patrz podręcznik nauczyciela
-    teacher_pitch: Rejestracja do Code.org dla nauczycieli
-    teacher_title: Rejestracja nauczyciela
-    student_pitch: Rejestracja w Code.org dla uczniów
-    student_title: Rejestracja ucznia
-    signup_title: Zarejestruj się w Code.org
+    title: Zarejestruj się w Code.org
     school_name: Nazwa szkoły (opcjonalnie)
     school_address: Adres szkoły (opcjonalnie)
     address_placeholder: adres, miasto, województwo, kod pocztowy
@@ -122,6 +122,8 @@
     user_type_label: Typ konta
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
+    field_is_required: jest wymagane
+    accept_terms: Musisz wyrazić zgodę aby utworzyć konto
   signin_form:
     title: Masz już konto? Zaloguj się
     login: E-mail lub nazwa użytkownika
@@ -143,8 +145,10 @@
   password:
     reset_form:
       title: Nie pamiętasz hasła?
+      instructions: Wpisz poniżej swój adres e-mail a my wyślemy Ci instrukcje resetowania
+        hasła.
       email: Adres e-mail
-      submit: Wyślij mi instrukcje resetowania hasła
+      submit: Wyślij
     change_form:
       title: Zmień swoje hasło
       new_password: Nowe hasło
@@ -291,7 +295,7 @@
       prizes: Nagrody
       logout: Wyloguj się
       signin: Zaloguj się
-      signup: Zarejestruj się
+      signup: Załóż konto
       already_registered: Czy jesteś Już zarejestrowany?
       pair_programming: Programowanie w parach
       team: Zespół
@@ -332,6 +336,7 @@
       submitted_on: Przesłane dnia %{date}
       unsubmit: Nieprzesłane
       worked_with: Pracował/a z
+      update_lock_settings: Tutaj zaktualizujesz ustawienia blokady.
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -403,42 +408,46 @@
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
     announcement_title: Ogłoszenia
-    announcement_message: "<b>Ważna zmiana w tym jak obsługujemy prywatność uczniów</b>
-      <br/> Ogłaszamy okres miesiąca, aby przejrzeć zmiany w naszej polityce prywatności
-      i aby przekazać swoją opinię. Największą zmianą jest przeprojektowanie logowania,
-      które pozwala nam usunąć wszystkie adresy e-mail dla kont studenta Code Studi.
-      Inna duża zmiana obejmuje dostęp do naszych narzędzi do tworzenia aplikacji."
+    announcement_message_fall2016_features: We spent the summer turning your feedback
+      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
+      students' progress</a> even if they're pair programming on one device. You can
+      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
+      from our CS Principles course in <i>any</i> classroom. And your students can
+      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
+      to encourage experimentation! Check out all our new features and let us know
+      what you think.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Ucz się więcej
     announcement_try_now_button: Spróbuj teraz
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition: Jako nauczyciel prowadzisz drogę w ruchu, aby dać każdemu
+      uczniowi w każdej szkole możliwość nauki informatyki. Nadszedł czas, aby poinformować
+      swoich przedstawicieli żeby usłyszeli od Ciebie. W tym tygodniu liderów edukacji,
+      28 Prezesów i dyrektorów w Ameryce największych firm połączonych ze sobą w liście
+      otwartym pytaniem, Kongres USA do funduszu Edukacja informatyczna k-12.
     announcement_petition_button: Dodaj swoje imię
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_all: Na bieżąco z nowymi funkcjami i aktualizacje na naszym blogu
+      nauczycieli. <a href='%{teacher_blog_url}' target='_blank'> Zobacz poprzednie
+      ogłoszenia.</a>
   move_students:
     new_section_dne: Przepraszamy, sekcja %{new_section_code} nie istnieje. Wprowadź
       inny kod sekcji.
-    section_code_not_entered: Please provide current_section_code.
+    section_code_not_entered: Proszę podać current_section_code.
     section_code_cant_be_current_section: Bieżąca sekcja nie może być taka sama, jak
       nowa sekcja.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
+    current_section_dne: Przepraszamy, sekcja %{current_section_code} nie istnieje.
+      Wprowadź inny kod sekcji.
+    students_not_yours: Nie można przenieść studentów z sekcji, które nie należą do
+      Ciebie.
+    stay_enrolled_not_entered: Proszę podać stay_enrolled_in_current_section.
+    student_ids_not_entered: Proszę podać student_ids.
     student_not_found: Nie można odnaleźć jednego lub więcej uczniów.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    all_students_must_be_in_current_section: Wszyscy uczniowie muszą być obecnie włączeni
+      w sekcji.
+    already_enrolled_in_new_section: Nie można przenieść tych studentów, bo ten nauczyciel
+      ma ich już w innym dziale.
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
@@ -513,10 +522,10 @@
     download: Pobierz wideo
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić
+        przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'> jednego
+        z naszych obsługiwanych przeglądarek</a>. Możesz wyświetlić stronę, ale nie
+        oczekuj w pełni działającej.
       link: Ucz się więcej
   slow_loading: To trwa dłużej niż zwykle...
   try_reloading: Spróbuj odświeżyć stronę
@@ -611,8 +620,8 @@
       aplikacje i obrazki pisząc własne programy komputerowe. Klikaj na obrazkach
       i zrzutach z ekranu, aby zobaczyć każdy program w akcji.
     want_to_make_your_own: Chcesz zrobić własną?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: Na ostatni poziom tych samouczków, kliknij przycisk "Zakończ" i "Zapisz",
+      aby zapisać swoją pracę w galerii.
     more: Więcej &rarr;
     caption_by_name_age: przez %{name}, w wieku %{age}
     caption_time_ago: "%{time_ago} temu"
@@ -649,9 +658,9 @@
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
     correct_body: Dziękujemy za wysłanie odpowiedzi.
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: Ankieta jest anonimowa.  Odwiedź panel nauczyciela dla
+      agregacji wyników.  Należy zauważyć, że wyniki są tylko widoczne, jeśli co najmniej
+      pięciu studentów dodano ankiety.
   level_group-submittable:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
@@ -707,6 +716,34 @@
       lub udostępnia tych informacji osobom trzecim.
     sign_out: Jeśli nie chcesz podać swojego wieku, to możesz się <a href="%{url}">
       wylogować</a>.
+  terms_interstitial:
+    title: Zaktualizowano warunki usług i politykę prywatności
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
+      The changes are effective as of August 24, 2016.  The biggest change: we will
+      <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_instructions: You'll need to accept these new terms for students under the
+      age of 13 in your classroom to have full access to all the latest features in
+      Code Studio.  When registering an account for a student under 13, you will be
+      asked to confirm that your school has parental consent for the collection of
+      the student’s personal information for the use and benefit of the school, including
+      educational programs such as Code Studio.
+    tos: Regulamin
+    privacy: Polityka prywatności
+    privacy_notice: Polityka poprawności
+    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept: Akceptuj
+    print: Drukuj
+    later: Poźniej
+    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
+      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
+      Please read these carefully before accepting them. Note that our tools teaching
+      JavaScript may be unavailable to your students before explicitly accepting the
+      updated terms.
+    review_terms: Review updated terms
   zendesk_too_young_message: Przepraszamy, młodsi użytkownicy nie mogą logować się
     na naszej stronie pomocy. Możesz przejrzeć <a href="http://support.code.org">
     support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela,
@@ -736,11 +773,11 @@
     share: Udostępnij
     share_title: Udostępnij swój projekt
     share_copy_link: 'Skopiuj odnośnik/link:'
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
-    embed: Embed
+    share_embed_description: Można wkleić kod do strony HTML do wyświetlania projektu
+      sieci Web.
+    share_u13_warning: Poprosić nauczyciela przed udostępnieniem. Tylko podzielić
+      się z innymi w Twojej szkole.
+    embed: Osadź
     advanced_share: Pokaż opcje zaawansowane
     close: Zamknij
     more: Więcej
@@ -768,8 +805,9 @@
     abuse:
       tos: Zgłoszono, że ten projekt narusza <a href='http://code.org/tos'> Warunki
         korzystania</a> z Code.org i nie może być udostępniony innym.
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Ten projekt zawiera informacje, które nie mogą być współużytkowane
+        z innymi. Skontaktuj się z właścicielem aplikacji naprawić zawartość swojej
+        aplikacji.
       contact_us: Jeśli uważasz to za błąd, to prosimy <a href='https://code.org/contact'>
         skontaktować się z nami.</a>
       go_to_code_studio: Przejdź do Code Studio
@@ -798,18 +836,18 @@
   peer_review:
     accepted:
       name: Zaakceptowane
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      description: "<strong>Tak</strong>, ten zgłoszenie <strong>spełnia</strong>
+        wymagania"
     rejected:
       name: Odrzucone
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      description: "<strong>No</strong>, ten zgłoszenie <strong>nie spełnia</strong>
+        wymagań"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: Przekazany
+      description: Chciałbym aby instruktor przejrzał te zgłoszenie
+    instructor_feedback: Opinie instruktora
+    peer_feedback: Wzajemne opinie
+    outdated: Ta opinia została dodana do wcześniej zgłoszonych wersji
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -836,35 +874,35 @@
   flex_category:
     required: Streszczenie
     content: Treści
-    practice: Teacher Practices
-    peer_review: Peer Review
+    practice: Metody nauczania
+    peer_review: Recenzja naukowa
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    disclaimer: Uwaga
+    leaving_domain: Opuszczasz tę domenę do witryny, która nie jest obsługiwana przez
+      Code.org.
+    disclaimer_text: Ta witryna może mieć zasady prywatności, które różnią się od
+      Code.org's. Wybraliśmy te zasoby stron trzecich, ponieważ uważamy, że będą przydatne
+      dla Ciebie. Chociaż nie jesteśmy bezpośrednio odpowiedzialny za zawartość tej
+      strony, proszę <a href='%{support_url}'> skontaktować się z obsługą</a> Jeśli
+      znajdziesz treści obraźliwe, lub jeśli strony związane jest już dostępny.
   hoc_download:
     title: Pobieranie godziny kodowania
     capsule_title: Czy masz połączenie z Internetem?
     capsule_desc: Skorzystaj z sieciowej aplikacji online <a href="%{url}">%{app_name}</a>.
     instructions_headline: Nie masz Internetu?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    instructions: 'Instrukcje dla nauczycieli: Jeśli masz niską jakość usług internetowych,
+      te tutoriale godzinę kodowania są dostępne do pobrania i zainstalowania w trybie
+      offline. Wybierz swój język i platformy, Pobierz i zainstaluj go na wszystkich
+      komputerach w Twojej klasie. Może chcesz użyć dysku USB raz pobrać i zainstalować
+      na wszystkich komputerach. Uwaga: studenci nie będzie w stanie zalogować się
+      do strony, zapisz postępy lub wydrukuj świadectwa. Nauczyciele mogą drukować
+      certyfikaty przed czasem <a href="%{url}"> tutaj</a>.'
+    minecraft_name: Godzina Kodowania z Minecraft
+    starwars_blocks_name: 'Star Wars: Budowanie galaktyki z kodem (bloki)'
+    starwars_javascript_name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - JavaScript'
+    download_message: Pobierz %{app_name} do użycia w trybie offline (136MB)
+    download_in_english: 'Pobierz w języku angielskim:'
+    download_in_spanish: 'Pobierz w języku hiszpańskim:'
     windows: Windows
     mac: Mac OS X
   plc:
@@ -880,3 +918,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  locked_stage: The contents of this stage are not visible because this stage is currently
+    locked. Your teacher can unlock this stage when it is time to work on it or review
+    your answers.
+  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
+    which lesson you should be on.
+  return_course_overview: Go to unit overview

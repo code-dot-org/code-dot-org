@@ -11,26 +11,30 @@ import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
-import { changeView } from '../redux/data';
+import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../color';
 import { connect } from 'react-redux';
-import applabMsg from '@cdo/applab/locale';
+import { getColumnNamesFromRecords } from '../firebaseMetadata';
 
-const MAX_TABLE_WIDTH = 970;
+const MIN_TABLE_WIDTH = 600;
 
 const styles = {
   addColumnHeader: [dataStyles.headerCell, {
     width: 19,
   }],
   container: {
-    maxWidth: MAX_TABLE_WIDTH,
+    flexDirection: 'column',
     height: '100%',
-    overflowY: 'scroll',
+    minWidth: MIN_TABLE_WIDTH,
+    maxWidth: '100%',
   },
   table: {
-    clear: 'both',
-    width: '100%'
+    minWidth: MIN_TABLE_WIDTH,
+  },
+  tableWrapper: {
+    flexGrow: 1,
+    overflow: 'scroll',
   },
   plusIcon: {
     alignItems: 'center',
@@ -48,6 +52,7 @@ const styles = {
 const DataTable = React.createClass({
   propTypes: {
     // from redux state
+    tableColumns: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     tableName: React.PropTypes.string.isRequired,
     // "if all of the keys are integers, and more than half of the keys between 0 and
     // the maximum key in the object have non-empty values, then Firebase will render
@@ -60,13 +65,16 @@ const DataTable = React.createClass({
     view: React.PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
+    onShowWarning: React.PropTypes.func.isRequired,
     onViewChange: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
     return {
-      newColumns: [],
       editingColumn: null,
+      pendingAdd: false,
+      // The old name of the column currently being renamed or deleted.
+      pendingColumn: null,
       showDebugView: false,
     };
   },
@@ -80,24 +88,42 @@ const DataTable = React.createClass({
 
   addColumn() {
     const columnName = this.getNextColumnName();
-    this.setState({
-      newColumns: this.state.newColumns.concat(columnName),
-      editingColumn: columnName,
-    });
+    this.setState({pendingAdd: true});
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      FirebaseStorage.addColumn(
+        this.props.tableName,
+        columnName,
+        () => {
+          this.setState({
+            editingColumn: columnName,
+            pendingAdd: false,
+          });
+        },
+        msg => {
+          console.warn(msg);
+          this.resetColumnState();
+        }
+      );
+    }, 0);
   },
 
   deleteColumn(columnToRemove) {
-    if (confirm('Are you sure you want to delete this entire column? You cannot undo this action.')) {
-      this.setState({
-        newColumns: this.state.newColumns.filter(column => column !== columnToRemove)
-      });
+    this.setState({
+      pendingColumn: columnToRemove,
+    });
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
       FirebaseStorage.deleteColumn(
         this.props.tableName,
         columnToRemove,
-        () => {},
-        error => console.warn(error)
+        this.resetColumnState,
+        error => {
+          console.warn(error);
+          this.resetColumnState();
+        }
       );
-    }
+    }, 0);
   },
 
   /**
@@ -108,42 +134,42 @@ const DataTable = React.createClass({
   },
 
   renameColumn(oldName, newName) {
-    let newColumns = this.state.newColumns.map(
-      curName => (curName === oldName ? newName : curName)
-    );
-    // Append the new name if the old name was not found.
-    if (newColumns.indexOf(newName) === -1) {
-      newColumns.push(newName);
-    }
     this.setState({
-      newColumns,
-      editingColumn: null
+      editingColumn: null,
+      pendingColumn: oldName,
     });
-    if (oldName !== newName) {
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
       FirebaseStorage.renameColumn(
         this.props.tableName,
         oldName,
         newName,
-        () => {},
-        error => console.warn(error)
+        this.resetColumnState,
+        error => {
+          console.warn(error);
+          this.resetColumnState();
+        }
       );
-    }
+    }, 0);
   },
 
-  getColumnNames() {
-    // Make sure 'id' is the first column.
-    let columnNames = ['id'];
-
-    Object.keys(this.props.tableRecords).forEach(id => {
-      const record = JSON.parse(this.props.tableRecords[id]);
-      Object.keys(record).forEach(columnName => {
-        if (columnNames.indexOf(columnName) === -1) {
-          columnNames.push(columnName);
-        }
-      });
+  resetColumnState() {
+    this.setState({
+      editingColumn: null,
+      pendingAdd: false,
+      pendingColumn: null,
     });
+  },
 
-    this.state.newColumns.forEach(columnName => {
+  /**
+   * @param {Array} records Array of JSON-encoded records.
+   * @param {string} columns Array of column names.
+   */
+  getColumnNames(records, columns) {
+    // Make sure 'id' is the first column.
+    const columnNames = getColumnNamesFromRecords(records);
+
+    columns.forEach(columnName => {
       if (columnNames.indexOf(columnName) === -1) {
         columnNames.push(columnName);
       }
@@ -153,7 +179,7 @@ const DataTable = React.createClass({
   },
 
   getNextColumnName() {
-    const names = this.getColumnNames();
+    const names = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -161,12 +187,18 @@ const DataTable = React.createClass({
     return `column${i}`;
   },
 
-  importCsv(csvData) {
+  importCsv(csvData, onComplete) {
     FirebaseStorage.importCsv(
       this.props.tableName,
       csvData,
-      () => this.setState(this.getInitialState()),
-      msg => console.warn(msg));
+      () => {
+        this.setState(this.getInitialState());
+        onComplete();
+      },
+      msg => {
+        console.warn(msg);
+        onComplete();
+      });
   },
 
   exportCsv() {
@@ -176,18 +208,38 @@ const DataTable = React.createClass({
 
   /** Delete all rows, but preserve the columns. */
   clearTable() {
-    if (confirm(applabMsg.confirmClearTable())) {
-      const newColumns = this.getColumnNames();
-      FirebaseStorage.deleteTable(
-        this.props.tableName,
-        () => this.setState({newColumns, editingColumn: null}),
-        msg => console.warn(msg));
-    }
+    FirebaseStorage.clearTable(
+      this.props.tableName,
+      () => {},
+      msg => console.warn(msg));
   },
 
   toggleDebugView() {
     const showDebugView = !this.state.showDebugView;
     this.setState({showDebugView});
+  },
+
+  coerceColumn(columnName, columnType) {
+    this.setState({
+      editingColumn: null,
+      pendingColumn: columnName,
+    });
+    // Show the spinner icon before updating the data.
+    setTimeout(() => {
+      FirebaseStorage.coerceColumn(
+        this.props.tableName,
+        columnName,
+        columnType,
+        this.resetColumnState,
+        msg => {
+          if (String(msg).includes('Not all values in column')) {
+            this.props.onShowWarning(msg);
+          } else {
+            console.warn(msg);
+          }
+        }
+      );
+    }, 0);
   },
 
   getTableJson() {
@@ -201,18 +253,18 @@ const DataTable = React.createClass({
   },
 
   render() {
-    let columnNames = this.getColumnNames();
+    let columnNames = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
     let editingColumn = this.state.editingColumn;
 
-    // Always show at least one column for empty tables.
-    if (Object.keys(this.props.tableRecords).length === 0 && columnNames.length === 1) {
+    // Always show at least one column.
+    if (columnNames.length === 1) {
       editingColumn = this.getNextColumnName();
       columnNames.push(editingColumn);
     }
 
     const visible = (DataView.TABLE === this.props.view);
     const containerStyle = [styles.container, {
-      display: visible ? 'block' : 'none',
+      display: visible ? '' : 'none',
     }];
     const tableDataStyle = [styles.table, {
       display: this.state.showDebugView ? 'none' : ''
@@ -221,7 +273,7 @@ const DataTable = React.createClass({
       display: this.state.showDebugView ? '' : 'none',
   }];
     return (
-      <div id="dataTable" style={containerStyle}>
+      <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
@@ -234,7 +286,7 @@ const DataTable = React.createClass({
           </span>
           <span style={dataStyles.debugLink}>
             <a
-              id="tableDebugLink"
+              id="uitest-tableDebugLink"
               style={dataStyles.link}
               onClick={() => this.toggleDebugView()}
             >
@@ -255,45 +307,63 @@ const DataTable = React.createClass({
           {this.getTableJson()}
         </div>
 
-        <table style={tableDataStyle}>
-          <tbody>
-          <tr>
+        <div style={styles.tableWrapper}>
+          <table style={tableDataStyle}>
+            <tbody>
+            <tr>
+              {
+                columnNames.map(columnName => (
+                  <ColumnHeader
+                    key={columnName}
+                    coerceColumn={this.coerceColumn}
+                    columnName={columnName}
+                    columnNames={columnNames}
+                    deleteColumn={this.deleteColumn}
+                    editColumn={this.editColumn}
+                    /* hide gear icon if an operation is pending on another column */
+                    isEditable={
+                      columnName !== 'id' &&
+                      !(this.state.pendingColumn && this.state.pendingColumn !== columnName) &&
+                      !this.state.pendingAdd
+                    }
+                    isEditing={editingColumn === columnName}
+                    isPending={this.state.pendingColumn === columnName}
+                    renameColumn={this.renameColumn}
+                  />
+                ))
+              }
+              <th style={styles.addColumnHeader}>
+                {
+                  this.state.pendingAdd ?
+                    <FontAwesome icon="spinner" className="fa-spin"/> :
+                    <FontAwesome
+                      id="addColumnButton"
+                      icon="plus"
+                      style={styles.plusIcon}
+                      onClick={this.addColumn}
+                    />
+                }
+              </th>
+              <th style={dataStyles.headerCell}>
+                Actions
+              </th>
+            </tr>
+
+            <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
+
             {
-              columnNames.map(columnName => (
-                <ColumnHeader
-                  key={columnName}
-                  columnName={columnName}
+              Object.keys(this.props.tableRecords).map(id => (
+                <EditTableRow
                   columnNames={columnNames}
-                  deleteColumn={this.deleteColumn}
-                  editColumn={this.editColumn}
-                  isEditable={columnName !== 'id'}
-                  isEditing={editingColumn === columnName}
-                  renameColumn={this.renameColumn}
+                  tableName={this.props.tableName}
+                  record={JSON.parse(this.props.tableRecords[id])}
+                  key={id}
                 />
               ))
             }
-            <th style={styles.addColumnHeader}>
-              <FontAwesome icon="plus" style={styles.plusIcon} onClick={this.addColumn}/>
-            </th>
-            <th style={dataStyles.headerCell}>
-              Actions
-            </th>
-          </tr>
-
-          <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
-
-          {
-            Object.keys(this.props.tableRecords).map(id => (
-              <EditTableRow
-                columnNames={columnNames}
-                tableName={this.props.tableName}
-                record={JSON.parse(this.props.tableRecords[id])}
-                key={id}
-              />
-            ))
-          }
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
@@ -301,9 +371,13 @@ const DataTable = React.createClass({
 
 export default connect(state => ({
   view: state.data.view,
+  tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || {},
   tableName: state.data.tableName || ''
 }), dispatch => ({
+  onShowWarning(warningMsg, warningTitle) {
+    dispatch(showWarning(warningMsg, warningTitle));
+  },
   onViewChange(view) {
     dispatch(changeView(view));
   }

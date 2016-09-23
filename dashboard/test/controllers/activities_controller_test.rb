@@ -385,16 +385,17 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone should save to gallery when passing an impressive level" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: false)
+      async_activity_writes: false
+    )
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: true)
+      async_activity_writes: true
+    )
   end
 
-  def  _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes:)
+  def _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(async_activity_writes:)
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging
@@ -753,6 +754,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_raises(ActiveRecord::RecordNotUnique) do
       post :milestone, @milestone_params
     end
+  end
+
+  test "logged in milestone with undefined submitted" do
+    post :milestone, @milestone_params.merge(submitted: 'undefined')
+    assert_response :success
+
+    assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
   end
 
   test "Milestone with milestone posts disabled returns 503 status" do
@@ -1171,7 +1179,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 
-  test "milestone fails to update locked level" do
+  test "milestone fails to update locked/readonly level" do
     teacher = create(:teacher)
 
     # make them an authorized_teacher
@@ -1226,6 +1234,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert user_level.locked?(stage)
 
     # milestone post should also fail when we have an existing user_level that is locked
+    post :milestone, milestone_params
+    assert_response 403
+
+    user_level.delete
+    # explicity create a user_level that is readonly_answers
+    create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, milestone_params
     assert_response 403
   end

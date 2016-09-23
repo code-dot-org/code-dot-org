@@ -1,9 +1,10 @@
 /* global Applab */
 
-import { castValue } from './dataBrowser/dataUtils';
+import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { loadConfig, getDatabase } from './firebaseUtils';
-import { updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
+import { loadConfig, getDatabase, validateFirebaseKey } from './firebaseUtils';
+import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
+import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnRefByName, getColumnsRef } from './firebaseMetadata';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -50,18 +51,23 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  *    http status.
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  const keyRef = getKeysRef(Applab.channelId).child(key);
-  // Store the value as a string representing a JSON value. For compatibility with parsers
+  // Store the value as a string representing a JSON value, or delete the key if the
+  // value is undefined. For compatibility with parsers
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
   // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
-  const jsonValue = JSON.stringify(value);
+  const jsonValue = (value === undefined) ? null : JSON.stringify(value);
 
   loadConfig().then(config => {
-    if (jsonValue.length > config.maxPropertySize) {
+    try {
+      validateFirebaseKey(key);
+    } catch (e) {
+      return Promise.reject(`The key is invalid. ${e.message}`);
+    }
+    if (jsonValue && jsonValue.length > config.maxPropertySize) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
-  }).then(() => keyRef.set(jsonValue)).then(onSuccess, onError);
+  }).then(() => getKeysRef(Applab.channelId).child(key).set(jsonValue)).then(onSuccess, onError);
 };
 
 /**
@@ -100,9 +106,10 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   // Assign a unique id for the new record.
   const updateNextId = true;
 
-  // Validate the length of the record before updating table counters, so that the
+  // Validate the table name and record before updating table counters, so that the
   // row count does not become inaccurate if the record is too large.
   validateRecord(record)
+    .then(() => validateTableName(tableName))
     .then(() => incrementRateLimitCounters())
     .then(() => updateTableCounters(tableName, 1, updateNextId))
     .then(nextId => {
@@ -123,6 +130,15 @@ function matchesSearch(record, searchParams) {
     matches = matches && (record[key] === searchParams[key]);
   });
   return matches;
+}
+
+function validateTableName(tableName) {
+  try {
+    validateFirebaseKey(tableName);
+    return Promise.resolve();
+  } catch (e) {
+    return Promise.reject(`The table name is invalid. ${e.message}`);
+  }
 }
 
 function validateRecord(record, hasId) {
@@ -240,6 +256,11 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
 };
 
 /**
+ * @type {Array.<string>} List of tables we are listening to.
+ */
+let listenedTables = [];
+
+/**
  * Listens to tableName for any changes to the data it contains, and calls
  * onRecord with the record and eventType as follows:
  * - for 'create' events, returns the new record
@@ -250,8 +271,10 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
  * a change occurs with the record object (described above) and event type.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
+ * @param {boolean} includeAll Optional Whether to include child_added events for records
+ * which were in the table before onRecordEvent was called. Default: false.
  */
-FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
+FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeAll) {
   if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
@@ -259,26 +282,66 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
     onError('Error listening for record events: missing required parameter "tableName"', 400);
     return;
   }
+  if (listenedTables.includes(tableName)) {
+    onError(`onRecordEvent was already called for table "${tableName}". To avoid ` +
+    'unexpected behavior in your program, you should only call onRecordEvent once ' +
+    'per table, and use if/else statements to handle the different event types.');
+  }
+  listenedTables.push(tableName);
 
+  getLastRecordId(tableName).then(lastId => {
+    const recordsRef = getRecordsRef(Applab.channelId, tableName);
+
+    recordsRef.on('child_added', childSnapshot => {
+      const record = JSON.parse(childSnapshot.val());
   let recordsRef = getRecordsRef(Applab.channelId, tableName);
-  // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
+      if (includeAll || (record.id > lastId)) {
+        onRecord(record, 'create');
+      }
+    });
 
-  recordsRef.on('child_added', childSnapshot => {
-    onRecord(JSON.parse(childSnapshot.val()), 'create');
-  });
+    recordsRef.on('child_changed', childSnapshot => {
+      onRecord(JSON.parse(childSnapshot.val()), 'update');
+    });
 
-  recordsRef.on('child_changed', childSnapshot => {
-    onRecord(JSON.parse(childSnapshot.val()), 'update');
-  });
+    recordsRef.on('child_removed', oldChildSnapshot => {
+      var record = JSON.parse(oldChildSnapshot.val());
+      onRecord({id: record.id}, 'delete');
+    });
 
-  recordsRef.on('child_removed', oldChildSnapshot => {
-    var record = JSON.parse(oldChildSnapshot.val());
-    onRecord({id: record.id}, 'delete');
   });
 };
 
 FirebaseStorage.resetRecordListener = function () {
+  listenedTables = [];
   getDatabase(Applab.channelId).off();
+};
+
+/**
+ * Adds an entry for the table in Firebase under counters/tables, making the table
+ * show up in the data browser and also count toward the table count limit.
+ * @param {string} tableName
+ * @param {function()} onSuccess
+ * @param {function(string)} onError
+ */
+FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
+  return validateTableName(tableName).then(incrementRateLimitCounters).then(loadConfig).then(config => {
+    return enforceTableCount(config, tableName);
+  }).then(() => {
+    const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+    countersRef.transaction(countersData => {
+      if (countersData === null) {
+        return {lastId: 0, rowCount: 0};
+      }
+      return countersData;
+    }).then(transactionData => {
+      const {committed} = transactionData;
+      if (!committed) {
+        return Promise.reject(`Unexpected error creating table "${tableName}"`);
+      }
+      return Promise.resolve();
+    });
+  }).then(onSuccess, onError);
 };
 
 /**
@@ -292,7 +355,23 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
   tableRef.set(null)
     .then(() => countersRef.set(null))
+    .then(() => getColumnsRef(tableName).set(null))
     .then(onSuccess, onError);
+};
+
+/**
+ * Delete all the rows from a table.
+ * @param {string} tableName
+ * @param {function ()} onSuccess
+ * @param {function (string)} onError
+ */
+FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
+  const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
+  tableRef.set(null).then(() => {
+    const rowCountRef = getDatabase(Applab.channelId)
+      .child(`counters/tables/${tableName}/rowCount`);
+    return rowCountRef.set(0);
+  }).then(onSuccess, onError);
 };
 
 /**
@@ -395,6 +474,10 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   });
 };
 
+FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {
+  return addColumnName(tableName, columnName).then(onSuccess, onError);
+};
+
 /**
  * Delete every instance of the specified column name currently in the table.
  * @param {string} tableName
@@ -416,6 +499,7 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(() => deleteColumnName(tableName, columnName))
     .then(onSuccess, onError);
 };
 
@@ -447,7 +531,68 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
       return recordsData;
     })
     .then(recordsData => recordsRef.set(recordsData))
+    .then(() => renameColumnName(tableName, oldName, newName))
     .then(onSuccess, onError);
+};
+
+/**
+ * Modifies the record[columnName] to type columnType, if the field can be converted
+ * to that type. Returns whether or not the field was converted.
+ * @param {Object} records Javascript object representing the record.
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @returns {boolean} Whether the field was converted.
+ */
+
+function coerceRecord(record, columnName, columnType) {
+  const value = record[columnName];
+  if (typeof value === 'undefined') {
+    return true;
+  }
+  switch (columnType) {
+    case (ColumnType.STRING):
+      record[columnName] = String(value);
+      return true;
+    case (ColumnType.NUMBER):
+      if (isNumber(value)) {
+        record[columnName] = parseFloat(value);
+        return true;
+      }
+      return false;
+    case (ColumnType.BOOLEAN):
+      if (isBoolean(value)) {
+        record[columnName] = toBoolean(value);
+        return true;
+      }
+      return false;
+    default:
+      throw new Error(`Unexpected column type ${columnType}`);
+  }
+}
+
+/**
+ *
+ * @param {string} tableName
+ * @param {string} columnName
+ * @param {ColumnType} columnType The type to convert the column to.
+ * @param onSuccess
+ * @param onError
+ */
+FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {
+  const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  recordsRef.once('value').then(snapshot => {
+    const recordsData = snapshot.val() || {};
+    let allConverted = true;
+    Object.keys(recordsData).forEach(recordId => {
+      const record = JSON.parse(recordsData[recordId]);
+      allConverted = allConverted && coerceRecord(record, columnName, columnType);
+      recordsData[recordId] = JSON.stringify(record);
+    });
+    if (!allConverted) {
+      onError(`Not all values in column "${columnName}" could be converted to type "${columnType}".`);
+    }
+    return recordsRef.set(recordsData);
+  }).then(onSuccess, onError);
 };
 
 /**
@@ -508,7 +653,8 @@ function overwriteTableData(tableName, recordsData) {
   const recordsRef = getDatabase(Applab.channelId).child(
     `storage/tables/${tableName}/records`);
   const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
-  return recordsRef.set(recordsData)
+  return getColumnsRef(tableName).set(null)
+    .then(() => recordsRef.set(recordsData))
     .then(() => {
       // Work around security rule validation checks.
       return countersRef.set(null);
@@ -518,7 +664,7 @@ function overwriteTableData(tableName, recordsData) {
         lastId: count,
         rowCount: count,
       });
-    });
+    }).then(() => addMissingColumns(tableName));
 }
 
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {

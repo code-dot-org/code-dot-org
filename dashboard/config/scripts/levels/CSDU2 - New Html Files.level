@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T00:46:14.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Adding New HTML files\r\n\r\nUp until now you have only made single web pages which are not connected to any other web pages. In order to make a website you need multiple web pages linked together.  To get you started you are going to be making an Odd Stuff Site which will include your Weird Houses page, A Weird Signs Page, and the Guinness Book of World Records page. \r\n\r\nSo far all of the html files you have been called index.html .  index.html is used in Web Lab to mark the home page. When the site loads it loads the index.html file first. Any other pages you make will need to be named something different. Names of html files should be descriptive of what page they are. \r\n\r\nAny other pages you want will have to be added to your project by clicking the plus and adding a new html file. \r\n\r\n# Do This\r\n\r\nThere is a starting home page for this website provided for you.\r\n\r\nAdd two new html files\r\nOne for Weird Houses\r\nOne for Guinness\r\nSigns\r\nCopy your code from Weird Houses into the html file\r\nCopy your code from Guinness into the html file\r\nCopy your code from Signs into the html file\r\n",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
