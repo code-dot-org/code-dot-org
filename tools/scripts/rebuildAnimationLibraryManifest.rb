@@ -68,22 +68,46 @@ class ManifestBuilder
     # extra S3 request to get version IDs or image dimensions.
     info "Building animation metadata..."
     metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
-    animation_metadata_by_name = Hash[Parallel.map(animations_by_name, finish: lambda do |_, _, _|
+    animation_metadata_by_name = {}
+    Parallel.map(animations_by_name.keys, finish: lambda do |name, _, result|
+      # This lambda runs synchronously after each entry is done processing - it's
+      # used to collect up results and warnings to the original process/thread.
+      if result.is_a? Hash
+        animation_metadata_by_name[name] = result
+      else
+        warnings.push result
+      end
       metadata_progress_bar.increment unless metadata_progress_bar.nil?
-    end) do |name, objects|
+    end) do |name|
+      # This is the parallel block.  This block should return a string to
+      # generate a warning and skip the animation, and a metadata Hash in
+      # the success case.
+      objects = animations_by_name[name]
 
       # Drop this animation if it is missing its JSON or PNG components
       if objects['json'].nil?
-        warnings.push "Animation #{animation_name} does not have a JSON file and was skipped."
-        return nil
+        next "Animation #{name} does not have a JSON file and was skipped."
       elsif objects['png'].nil?
-        warnings.push "Animation #{animation_name} does not have a PNG file and was skipped."
-        return nil
+        next "Animation #{name} does not have a PNG file and was skipped."
       end
 
       # Actually download the JSON from S3
-      json_response = objects['json'].get
-      metadata = JSON.parse(json_response.body.read)
+      begin
+        json_response = objects['json'].get
+        metadata = JSON.parse(json_response.body.read)
+      rescue Aws::Errors::ServiceError => service_error
+        next <<-WARN
+There was an error retrieving #{name}.json from S3:
+#{service_error}
+The animation has been skipped.
+        WARN
+      rescue JSON::JSONError => json_error
+        next <<-WARN
+There was an error parsing #{name}.json:
+#{json_error}
+The animation ha been skipped.
+        WARN
+      end
 
       # If no frameCount information is present, it's probably a single frame
       metadata['frameCount'] ||= 1
@@ -107,8 +131,8 @@ class ManifestBuilder
 #{JSON.pretty_generate metadata}
       EOS
 
-      [name, metadata]
-    end]
+      metadata
+    end
     metadata_progress_bar.finish unless metadata_progress_bar.nil?
 
     info "Metadata built for #{animation_metadata_by_name.size} animations."
@@ -139,8 +163,8 @@ class ManifestBuilder
               'GENERATED FILE: DO NOT MODIFY DIRECTLY',
               'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
           ],
-          'metadata': animation_metadata_by_name,
-          'aliases': alias_map
+          'metadata': animation_metadata_by_name.sort.to_h,
+          'aliases': alias_map.sort.to_h
       }))
     end
 
