@@ -52,21 +52,7 @@ class ManifestBuilder
     info "Metadata built for #{animation_metadata_by_name.size} animations."
 
     info "Building alias map..."
-    alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size) unless @options[:quiet]
-    alias_map = Hash.new {|h, k| h[k] = []}
-    animation_metadata_by_name.each do |name, metadata|
-      aliases = [name]
-      aliases += metadata['aliases'] unless metadata['aliases'].nil?
-      aliases.each do |aliaz|
-        # Push name into target array, deduplicate, and sort
-        alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
-      end
-      alias_progress_bar.increment unless @options[:quiet]
-    end
-    alias_progress_bar.finish unless @options[:quiet]
-
-    alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
-
+    alias_map = build_alias_map(animation_metadata_by_name)
     info "Mapped #{alias_map.size} aliases."
 
     # Write result to file
@@ -201,6 +187,24 @@ The animation ha been skipped.
     end
     metadata_progress_bar.finish unless metadata_progress_bar.nil?
     animation_metadata_by_name
+  end
+
+  # Given a metadata map, build the alias map
+  def build_alias_map(animation_metadata_by_name)
+    alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size) unless @options[:quiet]
+    alias_map = Hash.new {|h, k| h[k] = []}
+    animation_metadata_by_name.each do |name, metadata|
+      aliases = [name]
+      aliases += metadata['aliases'] unless metadata['aliases'].nil?
+      aliases.each do |aliaz|
+        # Push name into target array, deduplicate, and sort
+        alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
+      end
+      alias_progress_bar.increment unless @options[:quiet]
+    end
+    alias_progress_bar.finish unless @options[:quiet]
+    alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
+    alias_map
   end
 
   def verbose(s)
