@@ -3487,42 +3487,23 @@
         "y": 128
       }
     },
-    "spikeBall1": {
-      "name": "spikeBall1",
+    "spikeBall": {
+      "name": "Spike Ball",
       "aliases": [
 
       ],
-      "frameCount": 1,
+      "frameCount": 2,
       "frameSize": {
-        "x": 142,
-        "y": 148
+        "x": 150,
+        "y": 150
       },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P",
-      "sourceUrl": "/api/v1/animation-library/DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P/spikeBall1.png",
+      "looping": true,
+      "frameDelay": 10,
+      "version": "3cQWIoS6tKN4R4rrhSKFeo_6hLpqrm6L",
+      "sourceUrl": "/api/v1/animation-library/3cQWIoS6tKN4R4rrhSKFeo_6hLpqrm6L/spikeBall.png",
       "sourceSize": {
-        "x": 142,
-        "y": 148
-      }
-    },
-    "spikeBall_2": {
-      "name": "spikeBall_2",
-      "aliases": [
-
-      ],
-      "frameCount": 1,
-      "frameSize": {
-        "x": 148,
-        "y": 141
-      },
-      "looping": false,
-      "frameDelay": 2,
-      "version": "V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq",
-      "sourceUrl": "/api/v1/animation-library/V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq/spikeBall_2.png",
-      "sourceSize": {
-        "x": 148,
-        "y": 141
+        "x": 300,
+        "y": 150
       }
     },
     "spikeMan_jump": {
@@ -5343,11 +5324,8 @@
     "snow": [
       "snow"
     ],
-    "spikeBall1": [
-      "spikeBall1"
-    ],
-    "spikeBall_2": [
-      "spikeBall_2"
+    "spikeBall": [
+      "spikeBall"
     ],
     "spikeMan_jump": [
       "spikeMan_jump"
