@@ -350,16 +350,15 @@
     "bronze_1": {
       "name": "bronze_1",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 84,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "MGlAkMv5jwkBrWRqxaawNAUUxbAu_4q5",
       "sourceUrl": "/api/v1/animation-library/MGlAkMv5jwkBrWRqxaawNAUUxbAu_4q5/bronze_1.png",
       "sourceSize": {
@@ -370,16 +369,15 @@
     "bronze_2": {
       "name": "bronze_2",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 66,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "rmVin83DTg9uyruY.Kp1L1dHGbCLfUuZ",
       "sourceUrl": "/api/v1/animation-library/rmVin83DTg9uyruY.Kp1L1dHGbCLfUuZ/bronze_2.png",
       "sourceSize": {
@@ -390,16 +388,15 @@
     "bronze_3": {
       "name": "bronze_3",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 50,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "momuHkKZjtcZqgzYM1Up3tT1.eA6EFrL",
       "sourceUrl": "/api/v1/animation-library/momuHkKZjtcZqgzYM1Up3tT1.eA6EFrL/bronze_3.png",
       "sourceSize": {
@@ -410,16 +407,15 @@
     "bronze_4": {
       "name": "bronze_4",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 14,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "EiGoc4oIjmAngiXKxijPHSMxHpPQxBFE",
       "sourceUrl": "/api/v1/animation-library/EiGoc4oIjmAngiXKxijPHSMxHpPQxBFE/bronze_4.png",
       "sourceSize": {
@@ -430,16 +426,15 @@
     "bubble": {
       "name": "bubble",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 211,
         "y": 215
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "sO6yFODWUwslO.ibKqMySyXWHuK51vX4",
       "sourceUrl": "/api/v1/animation-library/sO6yFODWUwslO.ibKqMySyXWHuK51vX4/bubble.png",
       "sourceSize": {
@@ -721,17 +716,15 @@
     "cactus": {
       "name": "cactus",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 117,
         "y": 160
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "FaQFQFbMk6E9o1QFp68JJ1a.RWArQGL9",
       "sourceUrl": "/api/v1/animation-library/FaQFQFbMk6E9o1QFp68JJ1a.RWArQGL9/cactus.png",
       "sourceSize": {
@@ -799,16 +792,15 @@
     "carrot": {
       "name": "carrot",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 78,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "yaVPzORNMY13za5KuW4NeLGBR0wM0cth",
       "sourceUrl": "/api/v1/animation-library/yaVPzORNMY13za5KuW4NeLGBR0wM0cth/carrot.png",
       "sourceSize": {
@@ -819,16 +811,15 @@
     "carrot_gold": {
       "name": "carrot_gold",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 78,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "wehwerZFlhQ7ycxugoJnU8qcn6GCorTu",
       "sourceUrl": "/api/v1/animation-library/wehwerZFlhQ7ycxugoJnU8qcn6GCorTu/carrot_gold.png",
       "sourceSize": {
@@ -839,16 +830,15 @@
     "carrots": {
       "name": "carrots",
       "aliases": [
-        "jumper",
-        "hud"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 54,
         "y": 49
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "iRqx9eDA8YFNu8U.20wL_oB8IinH4l6q",
       "sourceUrl": "/api/v1/animation-library/iRqx9eDA8YFNu8U.20wL_oB8IinH4l6q/carrots.png",
       "sourceSize": {
@@ -859,16 +849,15 @@
     "cloud": {
       "name": "cloud",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 260,
         "y": 134
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "OzJeHyO3hblclcE5CNwc3Pd0vno7VnrD",
       "sourceUrl": "/api/v1/animation-library/OzJeHyO3hblclcE5CNwc3Pd0vno7VnrD/cloud.png",
       "sourceSize": {
@@ -879,16 +868,15 @@
     "coin_bronze": {
       "name": "coin_bronze",
       "aliases": [
-        "jumper",
-        "hud"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 60,
         "y": 61
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "sF0GSLUu5dWG24q5nAhbwkoYJAXeJbEk",
       "sourceUrl": "/api/v1/animation-library/sF0GSLUu5dWG24q5nAhbwkoYJAXeJbEk/coin_bronze.png",
       "sourceSize": {
@@ -899,16 +887,15 @@
     "coin_gold": {
       "name": "coin_gold",
       "aliases": [
-        "jumper",
-        "hud"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 61,
         "y": 61
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "jnWPw1JtY0d2pW6UPTzp51XLROU2PieY",
       "sourceUrl": "/api/v1/animation-library/jnWPw1JtY0d2pW6UPTzp51XLROU2PieY/coin_gold.png",
       "sourceSize": {
@@ -919,16 +906,15 @@
     "coin_silver": {
       "name": "coin_silver",
       "aliases": [
-        "jumper",
-        "hud"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 61,
         "y": 61
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "D5N4R1W7uIKRfA7TyV5UFGw8Xs_wwwvZ",
       "sourceUrl": "/api/v1/animation-library/D5N4R1W7uIKRfA7TyV5UFGw8Xs_wwwvZ/coin_silver.png",
       "sourceSize": {
@@ -1281,16 +1267,15 @@
     "flyMan_fly": {
       "name": "flyMan_fly",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 122,
         "y": 139
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "u0VF1dhss5.vwEVP988Bo6nIAW47QT4g",
       "sourceUrl": "/api/v1/animation-library/u0VF1dhss5.vwEVP988Bo6nIAW47QT4g/flyMan_fly.png",
       "sourceSize": {
@@ -1301,16 +1286,15 @@
     "flyMan_jump": {
       "name": "flyMan_jump",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 122,
         "y": 135
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "sL_rs4Q3xggmqncDTE0tS7UY2YZfAu2W",
       "sourceUrl": "/api/v1/animation-library/sL_rs4Q3xggmqncDTE0tS7UY2YZfAu2W/flyMan_jump.png",
       "sourceSize": {
@@ -1321,16 +1305,15 @@
     "flyMan_stand": {
       "name": "flyMan_stand",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 122,
         "y": 139
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "Ut5u3ubOFOl4B8NsVnz2PtwuiLBarLJ4",
       "sourceUrl": "/api/v1/animation-library/Ut5u3ubOFOl4B8NsVnz2PtwuiLBarLJ4/flyMan_stand.png",
       "sourceSize": {
@@ -1341,16 +1324,15 @@
     "flyMan_still_fly": {
       "name": "flyMan_still_fly",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 120,
         "y": 132
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "vdqtOIOrI2zF6Wv0ZySS2OVQ980c6poQ",
       "sourceUrl": "/api/v1/animation-library/vdqtOIOrI2zF6Wv0ZySS2OVQ980c6poQ/flyMan_still_fly.png",
       "sourceSize": {
@@ -1361,16 +1343,15 @@
     "flyMan_still_jump": {
       "name": "flyMan_still_jump",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 120,
         "y": 128
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "U12gb6qx1CZfCNVTgtdzA_brtwMcA_rd",
       "sourceUrl": "/api/v1/animation-library/U12gb6qx1CZfCNVTgtdzA_brtwMcA_rd/flyMan_still_jump.png",
       "sourceSize": {
@@ -1381,16 +1362,15 @@
     "flyMan_still_stand": {
       "name": "flyMan_still_stand",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 120,
         "y": 132
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "gWIx122fh3LNoT9leEDN4AcWAh.kEBpT",
       "sourceUrl": "/api/v1/animation-library/gWIx122fh3LNoT9leEDN4AcWAh.kEBpT/flyMan_still_stand.png",
       "sourceSize": {
@@ -1458,16 +1438,15 @@
     "gold_1": {
       "name": "gold_1",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 84,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "U151FHjNrpX73SUYqr8wSqRSYP1PHATu",
       "sourceUrl": "/api/v1/animation-library/U151FHjNrpX73SUYqr8wSqRSYP1PHATu/gold_1.png",
       "sourceSize": {
@@ -1478,16 +1457,15 @@
     "gold_2": {
       "name": "gold_2",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 66,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "whnYAH853zlnMzIIN4xRdX3zF2543aM1",
       "sourceUrl": "/api/v1/animation-library/whnYAH853zlnMzIIN4xRdX3zF2543aM1/gold_2.png",
       "sourceSize": {
@@ -1498,16 +1476,15 @@
     "gold_3": {
       "name": "gold_3",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 50,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "yQfnvP5bDTQBKsvBIJqfv1FgsPHBlWED",
       "sourceUrl": "/api/v1/animation-library/yQfnvP5bDTQBKsvBIJqfv1FgsPHBlWED/gold_3.png",
       "sourceSize": {
@@ -1518,16 +1495,15 @@
     "gold_4": {
       "name": "gold_4",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 15,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "n5Uae1UNM0NyFL26pbUpdr4tJkUgcd6t",
       "sourceUrl": "/api/v1/animation-library/n5Uae1UNM0NyFL26pbUpdr4tJkUgcd6t/gold_4.png",
       "sourceSize": {
@@ -1542,8 +1518,8 @@
       ],
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 128
+        "x": 58,
+        "y": 57
       },
       "looping": false,
       "frameDelay": 2,
@@ -1561,8 +1537,8 @@
       ],
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 128
+        "x": 82,
+        "y": 70
       },
       "looping": false,
       "frameDelay": 2,
@@ -1633,17 +1609,15 @@
     "grass_brown1": {
       "name": "grass_brown1",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 58,
         "y": 57
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": ".IbJcmyd38aRuOlrMfhdZkAoJptyXRUr",
       "sourceUrl": "/api/v1/animation-library/.IbJcmyd38aRuOlrMfhdZkAoJptyXRUr/grass_brown1.png",
       "sourceSize": {
@@ -1654,17 +1628,15 @@
     "grass_brown2": {
       "name": "grass_brown2",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 82,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "m7Uh3Pb6mYkKWj1sodlftk.c0f0YwxQ4",
       "sourceUrl": "/api/v1/animation-library/m7Uh3Pb6mYkKWj1sodlftk.c0f0YwxQ4/grass_brown2.png",
       "sourceSize": {
@@ -1846,17 +1818,15 @@
     "ground_cake": {
       "name": "ground_cake",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "EEhEHTAMzbeq2iRtC4FU1LbJHlyIZ.zI",
       "sourceUrl": "/api/v1/animation-library/EEhEHTAMzbeq2iRtC4FU1LbJHlyIZ.zI/ground_cake.png",
       "sourceSize": {
@@ -1867,17 +1837,15 @@
     "ground_cake_broken": {
       "name": "ground_cake_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "Gg.3k9Jeyeup01aOMiLjyDwaat7Ej1va",
       "sourceUrl": "/api/v1/animation-library/Gg.3k9Jeyeup01aOMiLjyDwaat7Ej1va/ground_cake_broken.png",
       "sourceSize": {
@@ -1888,17 +1856,15 @@
     "ground_cake_small": {
       "name": "ground_cake_small",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 201,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "IYiXOIP5CHhfKEH.fYp113FteXYYZNd.",
       "sourceUrl": "/api/v1/animation-library/IYiXOIP5CHhfKEH.fYp113FteXYYZNd./ground_cake_small.png",
       "sourceSize": {
@@ -1909,17 +1875,15 @@
     "ground_cake_small_broken": {
       "name": "ground_cake_small_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "g4e5gm6YiL06uMzKjSZ0iyWkj1dn1Fo8",
       "sourceUrl": "/api/v1/animation-library/g4e5gm6YiL06uMzKjSZ0iyWkj1dn1Fo8/ground_cake_small_broken.png",
       "sourceSize": {
@@ -1930,17 +1894,15 @@
     "ground_grass": {
       "name": "ground_grass",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "4CGMEe0JQlpJGYB5vs2T9LnuZwYR8wm6",
       "sourceUrl": "/api/v1/animation-library/4CGMEe0JQlpJGYB5vs2T9LnuZwYR8wm6/ground_grass.png",
       "sourceSize": {
@@ -1951,17 +1913,15 @@
     "ground_grass_broken": {
       "name": "ground_grass_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "TqnVHNje5qyaEXnKZT6dxqb41_xkuYJn",
       "sourceUrl": "/api/v1/animation-library/TqnVHNje5qyaEXnKZT6dxqb41_xkuYJn/ground_grass_broken.png",
       "sourceSize": {
@@ -1972,17 +1932,15 @@
     "ground_grass_small": {
       "name": "ground_grass_small",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 201,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "KscWlgZh1QjKRE6RHc6NmFPjhXGQrBQq",
       "sourceUrl": "/api/v1/animation-library/KscWlgZh1QjKRE6RHc6NmFPjhXGQrBQq/ground_grass_small.png",
       "sourceSize": {
@@ -1993,17 +1951,15 @@
     "ground_grass_small_broken": {
       "name": "ground_grass_small_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "3ftYf1Xg0hrgLXzpQk3VXpD0JPq69Vuv",
       "sourceUrl": "/api/v1/animation-library/3ftYf1Xg0hrgLXzpQk3VXpD0JPq69Vuv/ground_grass_small_broken.png",
       "sourceSize": {
@@ -2014,17 +1970,15 @@
     "ground_sand": {
       "name": "ground_sand",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "dcWuKd2b35TgZ17UbIGOpQUwDTr7HQQq",
       "sourceUrl": "/api/v1/animation-library/dcWuKd2b35TgZ17UbIGOpQUwDTr7HQQq/ground_sand.png",
       "sourceSize": {
@@ -2035,17 +1989,15 @@
     "ground_sand_broken": {
       "name": "ground_sand_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "cfHYovrzB8ofE8GDxFc_mQu27ytLWrKd",
       "sourceUrl": "/api/v1/animation-library/cfHYovrzB8ofE8GDxFc_mQu27ytLWrKd/ground_sand_broken.png",
       "sourceSize": {
@@ -2056,17 +2008,15 @@
     "ground_sand_small": {
       "name": "ground_sand_small",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 201,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "lPyIPNLFspR02Irh13mtKuscpAgGBZYt",
       "sourceUrl": "/api/v1/animation-library/lPyIPNLFspR02Irh13mtKuscpAgGBZYt/ground_sand_small.png",
       "sourceSize": {
@@ -2077,17 +2027,15 @@
     "ground_sand_small_broken": {
       "name": "ground_sand_small_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "rSl8OtjaFct17jG5VumVG7xMbGNlmRce",
       "sourceUrl": "/api/v1/animation-library/rSl8OtjaFct17jG5VumVG7xMbGNlmRce/ground_sand_small_broken.png",
       "sourceSize": {
@@ -2098,17 +2046,15 @@
     "ground_snow": {
       "name": "ground_snow",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "CCURMjC6yl9mgkEldeW9jHHx6otf5OMZ",
       "sourceUrl": "/api/v1/animation-library/CCURMjC6yl9mgkEldeW9jHHx6otf5OMZ/ground_snow.png",
       "sourceSize": {
@@ -2119,17 +2065,15 @@
     "ground_snow_broken": {
       "name": "ground_snow_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "yNW0arlImHLnDLkCvHUOepztoJ3G.M97",
       "sourceUrl": "/api/v1/animation-library/yNW0arlImHLnDLkCvHUOepztoJ3G.M97/ground_snow_broken.png",
       "sourceSize": {
@@ -2140,17 +2084,15 @@
     "ground_snow_small": {
       "name": "ground_snow_small",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 201,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "B0NLHi95RykT6G5JvMBLQIllxa5fzpXG",
       "sourceUrl": "/api/v1/animation-library/B0NLHi95RykT6G5JvMBLQIllxa5fzpXG/ground_snow_small.png",
       "sourceSize": {
@@ -2161,17 +2103,15 @@
     "ground_snow_small_broken": {
       "name": "ground_snow_small_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "XoHqvs9_W9oizLAZtQY.8tjcZ4y_d2BL",
       "sourceUrl": "/api/v1/animation-library/XoHqvs9_W9oizLAZtQY.8tjcZ4y_d2BL/ground_snow_small_broken.png",
       "sourceSize": {
@@ -2182,17 +2122,15 @@
     "ground_stone": {
       "name": "ground_stone",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "a2ClEr_Er0KQHZnuG1c5hegoLA3BoSLq",
       "sourceUrl": "/api/v1/animation-library/a2ClEr_Er0KQHZnuG1c5hegoLA3BoSLq/ground_stone.png",
       "sourceSize": {
@@ -2203,17 +2141,15 @@
     "ground_stone_broken": {
       "name": "ground_stone_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "FXmyf3Ve6kD9y79jA4.cWirAOMDpHqO8",
       "sourceUrl": "/api/v1/animation-library/FXmyf3Ve6kD9y79jA4.cWirAOMDpHqO8/ground_stone_broken.png",
       "sourceSize": {
@@ -2224,17 +2160,15 @@
     "ground_stone_small": {
       "name": "ground_stone_small",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "RhQ_WQEeQmbvQYGpqXdQQnNIO6E5DnW0",
       "sourceUrl": "/api/v1/animation-library/RhQ_WQEeQmbvQYGpqXdQQnNIO6E5DnW0/ground_stone_small.png",
       "sourceSize": {
@@ -2245,17 +2179,15 @@
     "ground_stone_small_broken": {
       "name": "ground_stone_small_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "HU7lQRVB1gDvt3WBrPQ1ojC9n5cYZBIZ",
       "sourceUrl": "/api/v1/animation-library/HU7lQRVB1gDvt3WBrPQ1ojC9n5cYZBIZ/ground_stone_small_broken.png",
       "sourceSize": {
@@ -2266,17 +2198,15 @@
     "ground_wood": {
       "name": "ground_wood",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "C5wQj7CxjnG5QkLmsDKq.9pQGfA6Lq6_",
       "sourceUrl": "/api/v1/animation-library/C5wQj7CxjnG5QkLmsDKq.9pQGfA6Lq6_/ground_wood.png",
       "sourceSize": {
@@ -2287,17 +2217,15 @@
     "ground_wood_broken": {
       "name": "ground_wood_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 380,
         "y": 94
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "uG5mCMYjZ3VLn3bfXQJK0sU2UyncJeEH",
       "sourceUrl": "/api/v1/animation-library/uG5mCMYjZ3VLn3bfXQJK0sU2UyncJeEH/ground_wood_broken.png",
       "sourceSize": {
@@ -2308,17 +2236,15 @@
     "ground_wood_small": {
       "name": "ground_wood_small",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "iV.qTEFeQEhXidVHERGlXfKl1rIgM2ex",
       "sourceUrl": "/api/v1/animation-library/iV.qTEFeQEhXidVHERGlXfKl1rIgM2ex/ground_wood_small.png",
       "sourceSize": {
@@ -2329,17 +2255,15 @@
     "ground_wood_small_broken": {
       "name": "ground_wood_small_broken",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 200,
         "y": 100
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "6CZLxiJFudtR8MZAext_pqH7W7_rtAoh",
       "sourceUrl": "/api/v1/animation-library/6CZLxiJFudtR8MZAext_pqH7W7_rtAoh/ground_wood_small_broken.png",
       "sourceSize": {
@@ -2559,16 +2483,15 @@
     "jetpack": {
       "name": "jetpack",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 133,
         "y": 160
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "qzXuVmfL_uvIsznwxwOKSlA.3TCvdLek",
       "sourceUrl": "/api/v1/animation-library/qzXuVmfL_uvIsznwxwOKSlA.3TCvdLek/jetpack.png",
       "sourceSize": {
@@ -2579,16 +2502,15 @@
     "jetpack_item": {
       "name": "jetpack_item",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 65,
         "y": 77
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "PJZTbmKOrB3aYsDsnR_iFznCZ9CVNr5K",
       "sourceUrl": "/api/v1/animation-library/PJZTbmKOrB3aYsDsnR_iFznCZ9CVNr5K/jetpack_item.png",
       "sourceSize": {
@@ -2694,16 +2616,15 @@
     "lifes": {
       "name": "lifes",
       "aliases": [
-        "jumper",
-        "hud"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 52,
         "y": 71
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "Sr7sdpVi311Bg3xkvRK.FG_WZGaFM08Z",
       "sourceUrl": "/api/v1/animation-library/Sr7sdpVi311Bg3xkvRK.FG_WZGaFM08Z/lifes.png",
       "sourceSize": {
@@ -2737,8 +2658,8 @@
       ],
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 128
+        "x": 81,
+        "y": 85
       },
       "looping": false,
       "frameDelay": 2,
@@ -2756,8 +2677,8 @@
       ],
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 128
+        "x": 81,
+        "y": 99
       },
       "looping": false,
       "frameDelay": 2,
@@ -3075,16 +2996,15 @@
     "portal_orange": {
       "name": "portal_orange",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 230,
         "y": 82
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "pE8zehInngxiFHr7VmwDVhj4vNTsXC5p",
       "sourceUrl": "/api/v1/animation-library/pE8zehInngxiFHr7VmwDVhj4vNTsXC5p/portal_orange.png",
       "sourceSize": {
@@ -3095,16 +3015,15 @@
     "portal_yellow": {
       "name": "portal_yellow",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 230,
         "y": 82
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "ZLxV6usUQ3ppmC.2xW.euAostIxsyo.K",
       "sourceUrl": "/api/v1/animation-library/ZLxV6usUQ3ppmC.2xW.euAostIxsyo.K/portal_yellow.png",
       "sourceSize": {
@@ -3115,16 +3034,15 @@
     "powerup_bubble": {
       "name": "powerup_bubble",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 71,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "cgroo_8f7avArfrnsDJcF7.uHvueWxk.",
       "sourceUrl": "/api/v1/animation-library/cgroo_8f7avArfrnsDJcF7.uHvueWxk./powerup_bubble.png",
       "sourceSize": {
@@ -3135,16 +3053,15 @@
     "powerup_bunny": {
       "name": "powerup_bunny",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 71,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "SULSscVT.eZu4YqTPYlO0y8sS4dlhx4a",
       "sourceUrl": "/api/v1/animation-library/SULSscVT.eZu4YqTPYlO0y8sS4dlhx4a/powerup_bunny.png",
       "sourceSize": {
@@ -3155,16 +3072,15 @@
     "powerup_empty": {
       "name": "powerup_empty",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 71,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "HKh3CR5y_Ed.blgyMzNptjZzUvyqzuzQ",
       "sourceUrl": "/api/v1/animation-library/HKh3CR5y_Ed.blgyMzNptjZzUvyqzuzQ/powerup_empty.png",
       "sourceSize": {
@@ -3175,16 +3091,15 @@
     "powerup_jetpack": {
       "name": "powerup_jetpack",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 71,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "g52LUCfWwmWhOAN4Cvv3EAuqeIM4eujE",
       "sourceUrl": "/api/v1/animation-library/g52LUCfWwmWhOAN4Cvv3EAuqeIM4eujE/powerup_jetpack.png",
       "sourceSize": {
@@ -3195,16 +3110,15 @@
     "powerup_wings": {
       "name": "powerup_wings",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 71,
         "y": 70
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": ".w2XUQH2o8YvKmW07Xa7jJFApChJQRr8",
       "sourceUrl": "/api/v1/animation-library/.w2XUQH2o8YvKmW07Xa7jJFApChJQRr8/powerup_wings.png",
       "sourceSize": {
@@ -3481,16 +3395,15 @@
     "silver_1": {
       "name": "silver_1",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 84,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "v3k5FKg.9OVKCWXhBqwSFpmGT8GPkKig",
       "sourceUrl": "/api/v1/animation-library/v3k5FKg.9OVKCWXhBqwSFpmGT8GPkKig/silver_1.png",
       "sourceSize": {
@@ -3501,16 +3414,15 @@
     "silver_2": {
       "name": "silver_2",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 66,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "unzWMfIvi0qg9wn.FhxpSVnVmyZSMxmT",
       "sourceUrl": "/api/v1/animation-library/unzWMfIvi0qg9wn.FhxpSVnVmyZSMxmT/silver_2.png",
       "sourceSize": {
@@ -3521,16 +3433,15 @@
     "silver_3": {
       "name": "silver_3",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 50,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "bQv8mStPOZbv05t6g2Pf3dTUsXdN3Sd0",
       "sourceUrl": "/api/v1/animation-library/bQv8mStPOZbv05t6g2Pf3dTUsXdN3Sd0/silver_3.png",
       "sourceSize": {
@@ -3541,16 +3452,15 @@
     "silver_4": {
       "name": "silver_4",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 14,
         "y": 84
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "ilrBbr5h2WxNu5k4dZ1c0NYhwpvNis25",
       "sourceUrl": "/api/v1/animation-library/ilrBbr5h2WxNu5k4dZ1c0NYhwpvNis25/silver_4.png",
       "sourceSize": {
@@ -3580,16 +3490,15 @@
     "spikeBall1": {
       "name": "spikeBall1",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 142,
         "y": 148
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P",
       "sourceUrl": "/api/v1/animation-library/DTfByiJH3EIy6ZZoc1VPreAzg.qRIG8P/spikeBall1.png",
       "sourceSize": {
@@ -3600,16 +3509,15 @@
     "spikeBall_2": {
       "name": "spikeBall_2",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 148,
         "y": 141
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq",
       "sourceUrl": "/api/v1/animation-library/V9zjo5y.rhqmW5HRuPVm9skU6PcbnPjq/spikeBall_2.png",
       "sourceSize": {
@@ -3620,16 +3528,15 @@
     "spikeMan_jump": {
       "name": "spikeMan_jump",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 114,
         "y": 155
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "kw59PEzh3gz.StnlnEKgFk_am57kCPWY",
       "sourceUrl": "/api/v1/animation-library/kw59PEzh3gz.StnlnEKgFk_am57kCPWY/spikeMan_jump.png",
       "sourceSize": {
@@ -3640,16 +3547,15 @@
     "spikeMan_stand": {
       "name": "spikeMan_stand",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 90,
         "y": 155
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "mDMtxjt8chUdFTPwRt.pdtdoZ5.p7WOY",
       "sourceUrl": "/api/v1/animation-library/mDMtxjt8chUdFTPwRt.pdtdoZ5.p7WOY/spikeMan_stand.png",
       "sourceSize": {
@@ -3660,16 +3566,15 @@
     "spikeMan_walk1": {
       "name": "spikeMan_walk1",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 120,
         "y": 159
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo",
       "sourceUrl": "/api/v1/animation-library/NO32oFDp3Q5Z5aa8xWwrJlcS7FsvojSo/spikeMan_walk1.png",
       "sourceSize": {
@@ -3680,16 +3585,15 @@
     "spikeMan_walk2": {
       "name": "spikeMan_walk2",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 90,
         "y": 155
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK",
       "sourceUrl": "/api/v1/animation-library/rr4uYSJzKHOIvX9g5XRAuxE14qYyMdcK/spikeMan_walk2.png",
       "sourceSize": {
@@ -3700,17 +3604,15 @@
     "spike_bottom": {
       "name": "spike_bottom",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 51,
         "y": 87
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": ".IyRgXEkC_Ei3JQQpUMRgNdXDhm4BDBP",
       "sourceUrl": "/api/v1/animation-library/.IyRgXEkC_Ei3JQQpUMRgNdXDhm4BDBP/spike_bottom.png",
       "sourceSize": {
@@ -3721,17 +3623,15 @@
     "spike_top": {
       "name": "spike_top",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 51,
         "y": 87
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "dPuX_KR2cfML4E9ZeA_ZJs0Nym2ttF25",
       "sourceUrl": "/api/v1/animation-library/dPuX_KR2cfML4E9ZeA_ZJs0Nym2ttF25/spike_top.png",
       "sourceSize": {
@@ -3742,17 +3642,15 @@
     "spikes_bottom": {
       "name": "spikes_bottom",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 95,
         "y": 53
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "jDb_onK2ka_KE6C4srBVtL58Nl3fRrRg",
       "sourceUrl": "/api/v1/animation-library/jDb_onK2ka_KE6C4srBVtL58Nl3fRrRg/spikes_bottom.png",
       "sourceSize": {
@@ -3763,17 +3661,15 @@
     "spikes_top": {
       "name": "spikes_top",
       "aliases": [
-        "jumper",
-        "environment",
-        "scenery"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 95,
         "y": 53
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "fNzuTBNnumDBwwDFLjE2pOB59lxR3YX.",
       "sourceUrl": "/api/v1/animation-library/fNzuTBNnumDBwwDFLjE2pOB59lxR3YX./spikes_top.png",
       "sourceSize": {
@@ -3784,16 +3680,15 @@
     "spring": {
       "name": "spring",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 145,
         "y": 77
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "jPao0AMB4MMCok8b4cokH1u8Cm2u31Lc",
       "sourceUrl": "/api/v1/animation-library/jPao0AMB4MMCok8b4cokH1u8Cm2u31Lc/spring.png",
       "sourceSize": {
@@ -3804,16 +3699,15 @@
     "springMan_hurt": {
       "name": "springMan_hurt",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 110,
         "y": 141
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "7CW1GRCw4svULMdElwNYTmUZO1.SNEs_",
       "sourceUrl": "/api/v1/animation-library/7CW1GRCw4svULMdElwNYTmUZO1.SNEs_/springMan_hurt.png",
       "sourceSize": {
@@ -3824,16 +3718,15 @@
     "springMan_stand": {
       "name": "springMan_stand",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 110,
         "y": 141
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "S0RneF9WzPTnqU8SfqlQN80GmSoAaPpu",
       "sourceUrl": "/api/v1/animation-library/S0RneF9WzPTnqU8SfqlQN80GmSoAaPpu/springMan_stand.png",
       "sourceSize": {
@@ -3844,16 +3737,15 @@
     "spring_in": {
       "name": "spring_in",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 145,
         "y": 57
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "RntZa_xngXW6.erAZ0gwjJH7ZNWXNWc9",
       "sourceUrl": "/api/v1/animation-library/RntZa_xngXW6.erAZ0gwjJH7ZNWXNWc9/spring_in.png",
       "sourceSize": {
@@ -3864,16 +3756,15 @@
     "spring_out": {
       "name": "spring_out",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 145,
         "y": 110
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "gaR65V.H52cBCD0U6AiGr8V3HsuCAfYl",
       "sourceUrl": "/api/v1/animation-library/gaR65V.H52cBCD0U6AiGr8V3HsuCAfYl/spring_out.png",
       "sourceSize": {
@@ -4226,16 +4117,15 @@
     "sun1": {
       "name": "sun1",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 142,
         "y": 148
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u",
       "sourceUrl": "/api/v1/animation-library/Hd6WXWOyBDQGIU1EeOl5Y7NyEhzf779u/sun1.png",
       "sourceSize": {
@@ -4246,16 +4136,15 @@
     "sun2": {
       "name": "sun2",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 148,
         "y": 142
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "f9uKdGsJGQCaK0zgcVbep9yHewv..b_6",
       "sourceUrl": "/api/v1/animation-library/f9uKdGsJGQCaK0zgcVbep9yHewv..b_6/sun2.png",
       "sourceSize": {
@@ -4684,16 +4573,15 @@
     "wingMan1": {
       "name": "wingMan1",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 174,
         "y": 126
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX",
       "sourceUrl": "/api/v1/animation-library/HyHfpuTpoXxDj3PaviA.xL.6ApyWVLBX/wingMan1.png",
       "sourceSize": {
@@ -4704,16 +4592,15 @@
     "wingMan2": {
       "name": "wingMan2",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 206,
         "y": 107
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "P.3VrBPCevphdqgZcIJdrEfSB9teU4yV",
       "sourceUrl": "/api/v1/animation-library/P.3VrBPCevphdqgZcIJdrEfSB9teU4yV/wingMan2.png",
       "sourceSize": {
@@ -4724,16 +4611,15 @@
     "wingMan3": {
       "name": "wingMan3",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 216,
         "y": 101
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ",
       "sourceUrl": "/api/v1/animation-library/WHz5INgtfBrw_d_wr33.2X6l1W89m5UZ/wingMan3.png",
       "sourceSize": {
@@ -4744,16 +4630,15 @@
     "wingMan4": {
       "name": "wingMan4",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 216,
         "y": 101
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2",
       "sourceUrl": "/api/v1/animation-library/O_ADBESrn.ft4ULHa6YZBhHKY69pqsF2/wingMan4.png",
       "sourceSize": {
@@ -4764,16 +4649,15 @@
     "wingMan5": {
       "name": "wingMan5",
       "aliases": [
-        "jumper",
-        "enemy"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 182,
         "y": 123
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "axjL357_sG9vML._lVBRMVkhLPcefxLW",
       "sourceUrl": "/api/v1/animation-library/axjL357_sG9vML._lVBRMVkhLPcefxLW/wingMan5.png",
       "sourceSize": {
@@ -4784,16 +4668,15 @@
     "wing_left": {
       "name": "wing_left",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 85,
         "y": 74
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "sUCHhAoda1a5c8Nw4R4V3IzPAVTC4u7N",
       "sourceUrl": "/api/v1/animation-library/sUCHhAoda1a5c8Nw4R4V3IzPAVTC4u7N/wing_left.png",
       "sourceSize": {
@@ -4804,16 +4687,15 @@
     "wing_right": {
       "name": "wing_right",
       "aliases": [
-        "jumper",
-        "item"
+
       ],
+      "frameCount": 1,
       "frameSize": {
         "x": 85,
         "y": 74
       },
       "looping": false,
       "frameDelay": 2,
-      "frameCount": 1,
       "version": "sa88Fj34FoXMZtn0.21hIz1B371uDwZR",
       "sourceUrl": "/api/v1/animation-library/sa88Fj34FoXMZtn0.21hIz1B371uDwZR/wing_right.png",
       "sourceSize": {
@@ -4870,16 +4752,6 @@
     "asterisk_circle": [
       "asterisk_circle"
     ],
-    "p5.play": [
-      "asterisk_circle",
-      "asterisk_explode",
-      "asterisk_normal",
-      "asterisk_stretching",
-      "box",
-      "bubbly",
-      "ghost_standing",
-      "platform"
-    ],
     "asterisk_explode": [
       "asterisk_explode"
     ],
@@ -4928,138 +4800,6 @@
     "bronze_1": [
       "bronze_1"
     ],
-    "jumper": [
-      "bronze_1",
-      "bronze_2",
-      "bronze_3",
-      "bronze_4",
-      "bubble",
-      "bunny1_hurt",
-      "bunny1_jump",
-      "bunny1_ready",
-      "bunny1_stand",
-      "bunny1_walk1",
-      "bunny1_walk2",
-      "bunny2_hurt",
-      "bunny2_jump",
-      "bunny2_ready",
-      "bunny2_stand",
-      "bunny2_walk1",
-      "bunny2_walk2",
-      "cactus",
-      "carrot",
-      "carrot_gold",
-      "carrots",
-      "cloud",
-      "coin_bronze",
-      "coin_gold",
-      "coin_silver",
-      "flyMan_fly",
-      "flyMan_jump",
-      "flyMan_stand",
-      "flyMan_still_fly",
-      "flyMan_still_jump",
-      "flyMan_still_stand",
-      "gold_1",
-      "gold_2",
-      "gold_3",
-      "gold_4",
-      "grass_brown1",
-      "grass_brown2",
-      "ground_cake",
-      "ground_cake_broken",
-      "ground_cake_small",
-      "ground_cake_small_broken",
-      "ground_grass",
-      "ground_grass_broken",
-      "ground_grass_small",
-      "ground_grass_small_broken",
-      "ground_sand",
-      "ground_sand_broken",
-      "ground_sand_small",
-      "ground_sand_small_broken",
-      "ground_snow",
-      "ground_snow_broken",
-      "ground_snow_small",
-      "ground_snow_small_broken",
-      "ground_stone",
-      "ground_stone_broken",
-      "ground_stone_small",
-      "ground_stone_small_broken",
-      "ground_wood",
-      "ground_wood_broken",
-      "ground_wood_small",
-      "ground_wood_small_broken",
-      "jetpack",
-      "jetpack_item",
-      "lifes",
-      "portal_orange",
-      "portal_yellow",
-      "powerup_bubble",
-      "powerup_bunny",
-      "powerup_empty",
-      "powerup_jetpack",
-      "powerup_wings",
-      "silver_1",
-      "silver_2",
-      "silver_3",
-      "silver_4",
-      "spikeBall1",
-      "spikeBall_2",
-      "spikeMan_jump",
-      "spikeMan_stand",
-      "spikeMan_walk1",
-      "spikeMan_walk2",
-      "spike_bottom",
-      "spike_top",
-      "spikes_bottom",
-      "spikes_top",
-      "spring",
-      "springMan_hurt",
-      "springMan_stand",
-      "spring_in",
-      "spring_out",
-      "sun1",
-      "sun2",
-      "wingMan1",
-      "wingMan2",
-      "wingMan3",
-      "wingMan4",
-      "wingMan5",
-      "wing_left",
-      "wing_right"
-    ],
-    "item": [
-      "bronze_1",
-      "bronze_2",
-      "bronze_3",
-      "bronze_4",
-      "bubble",
-      "carrot",
-      "carrot_gold",
-      "gold_1",
-      "gold_2",
-      "gold_3",
-      "gold_4",
-      "jetpack",
-      "jetpack_item",
-      "portal_orange",
-      "portal_yellow",
-      "powerup_bubble",
-      "powerup_bunny",
-      "powerup_empty",
-      "powerup_jetpack",
-      "powerup_wings",
-      "silver_1",
-      "silver_2",
-      "silver_3",
-      "silver_4",
-      "spring",
-      "spring_in",
-      "spring_out",
-      "wing_left",
-      "wing_right"
-    ],
     "bronze_2": [
       "bronze_2"
     ],
@@ -5069,6 +4809,14 @@
     "bronze_4": [
       "bronze_4"
     ],
+    "brown": [
+      "bunny1_hurt",
+      "bunny1_jump",
+      "bunny1_ready",
+      "bunny1_stand",
+      "bunny1_walk1",
+      "bunny1_walk2"
+    ],
     "bubble": [
       "bubble"
     ],
@@ -5077,28 +4825,6 @@
     ],
     "bunny1_hurt": [
       "bunny1_hurt"
-    ],
-    "player": [
-      "bunny1_hurt",
-      "bunny1_jump",
-      "bunny1_ready",
-      "bunny1_stand",
-      "bunny1_walk1",
-      "bunny1_walk2",
-      "bunny2_hurt",
-      "bunny2_jump",
-      "bunny2_ready",
-      "bunny2_stand",
-      "bunny2_walk1",
-      "bunny2_walk2"
-    ],
-    "brown": [
-      "bunny1_hurt",
-      "bunny1_jump",
-      "bunny1_ready",
-      "bunny1_stand",
-      "bunny1_walk1",
-      "bunny1_walk2"
     ],
     "bunny1_jump": [
       "bunny1_jump"
@@ -5118,14 +4844,6 @@
     "bunny2_hurt": [
       "bunny2_hurt"
     ],
-    "purple": [
-      "bunny2_hurt",
-      "bunny2_jump",
-      "bunny2_ready",
-      "bunny2_stand",
-      "bunny2_walk1",
-      "bunny2_walk2"
-    ],
     "bunny2_jump": [
       "bunny2_jump"
     ],
@@ -5143,72 +4861,6 @@
     ],
     "cactus": [
       "cactus"
-    ],
-    "environment": [
-      "cactus",
-      "grass_brown1",
-      "grass_brown2",
-      "ground_cake",
-      "ground_cake_broken",
-      "ground_cake_small",
-      "ground_cake_small_broken",
-      "ground_grass",
-      "ground_grass_broken",
-      "ground_grass_small",
-      "ground_grass_small_broken",
-      "ground_sand",
-      "ground_sand_broken",
-      "ground_sand_small",
-      "ground_sand_small_broken",
-      "ground_snow",
-      "ground_snow_broken",
-      "ground_snow_small",
-      "ground_snow_small_broken",
-      "ground_stone",
-      "ground_stone_broken",
-      "ground_stone_small",
-      "ground_stone_small_broken",
-      "ground_wood",
-      "ground_wood_broken",
-      "ground_wood_small",
-      "ground_wood_small_broken",
-      "spike_bottom",
-      "spike_top",
-      "spikes_bottom",
-      "spikes_top"
-    ],
-    "scenery": [
-      "cactus",
-      "grass_brown1",
-      "grass_brown2",
-      "ground_cake",
-      "ground_cake_broken",
-      "ground_cake_small",
-      "ground_cake_small_broken",
-      "ground_grass",
-      "ground_grass_broken",
-      "ground_grass_small",
-      "ground_grass_small_broken",
-      "ground_sand",
-      "ground_sand_broken",
-      "ground_sand_small",
-      "ground_sand_small_broken",
-      "ground_snow",
-      "ground_snow_broken",
-      "ground_snow_small",
-      "ground_snow_small_broken",
-      "ground_stone",
-      "ground_stone_broken",
-      "ground_stone_small",
-      "ground_stone_small_broken",
-      "ground_wood",
-      "ground_wood_broken",
-      "ground_wood_small",
-      "ground_wood_small_broken",
-      "spike_bottom",
-      "spike_top",
-      "spikes_bottom",
-      "spikes_top"
     ],
     "cactus_inside": [
       "cactus_inside"
@@ -5228,39 +4880,8 @@
     "carrots": [
       "carrots"
     ],
-    "hud": [
-      "carrots",
-      "coin_bronze",
-      "coin_gold",
-      "coin_silver",
-      "lifes"
-    ],
     "cloud": [
       "cloud"
-    ],
-    "enemy": [
-      "cloud",
-      "flyMan_fly",
-      "flyMan_jump",
-      "flyMan_stand",
-      "flyMan_still_fly",
-      "flyMan_still_jump",
-      "flyMan_still_stand",
-      "spikeBall1",
-      "spikeBall_2",
-      "spikeMan_jump",
-      "spikeMan_stand",
-      "spikeMan_walk1",
-      "spikeMan_walk2",
-      "springMan_hurt",
-      "springMan_stand",
-      "sun1",
-      "sun2",
-      "wingMan1",
-      "wingMan2",
-      "wingMan3",
-      "wingMan4",
-      "wingMan5"
     ],
     "coin_bronze": [
       "coin_bronze"
@@ -5523,6 +5144,20 @@
     "jetpack_item": [
       "jetpack_item"
     ],
+    "jumper": [
+      "bunny1_hurt",
+      "bunny1_jump",
+      "bunny1_ready",
+      "bunny1_stand",
+      "bunny1_walk1",
+      "bunny1_walk2",
+      "bunny2_hurt",
+      "bunny2_jump",
+      "bunny2_ready",
+      "bunny2_stand",
+      "bunny2_walk1",
+      "bunny2_walk2"
+    ],
     "lava": [
       "lava"
     ],
@@ -5580,6 +5215,16 @@
     "oven": [
       "oven"
     ],
+    "p5.play": [
+      "asterisk_circle",
+      "asterisk_explode",
+      "asterisk_normal",
+      "asterisk_stretching",
+      "box",
+      "bubbly",
+      "ghost_standing",
+      "platform"
+    ],
     "pick_bronze": [
       "pick_bronze"
     ],
@@ -5597,6 +5242,20 @@
     ],
     "platform": [
       "platform"
+    ],
+    "player": [
+      "bunny1_hurt",
+      "bunny1_jump",
+      "bunny1_ready",
+      "bunny1_stand",
+      "bunny1_walk1",
+      "bunny1_walk2",
+      "bunny2_hurt",
+      "bunny2_jump",
+      "bunny2_ready",
+      "bunny2_stand",
+      "bunny2_walk1",
+      "bunny2_walk2"
     ],
     "portal_orange": [
       "portal_orange"
@@ -5618,6 +5277,14 @@
     ],
     "powerup_wings": [
       "powerup_wings"
+    ],
+    "purple": [
+      "bunny2_hurt",
+      "bunny2_jump",
+      "bunny2_ready",
+      "bunny2_stand",
+      "bunny2_walk1",
+      "bunny2_walk2"
     ],
     "redsand": [
       "redsand"
