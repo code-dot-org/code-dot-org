@@ -33,6 +33,7 @@ DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'.freeze
 class ManifestBuilder
   def initialize(options)
     @options = options
+    @warnings = []
   end
 
   #
@@ -40,83 +41,18 @@ class ManifestBuilder
   # See end of file for possible options, parsed from command line
   #
   def rebuild_animation_library_manifest
-    animations_by_name = {}
-
     # Connect to S3 and get a listing of all objects in the animation library bucket
-    info 'Reading object list from S3...'
     bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    bucket.objects.each do |object_summary|
-      animation_name = object_summary.key[/^[^.]+/]
-      extension = object_summary.key[/(?<=\.)\w+$/]
-      verbose <<-EOS.unindent
-        #{bold object_summary.key}
-          #{object_summary.last_modified} | #{object_summary.size}
-      EOS
-      # Push into animations collection
-      animations_by_name[animation_name] ||= {}
-      animations_by_name[animation_name][extension] = object_summary
-    end
+    animation_objects = get_animation_objects(bucket)
+    info "Found #{animation_objects.size} animations."
 
-    # TODO: Validate that keys are unique
-
-    info "Found #{animations_by_name.size} animations."
-
-    # Parallelize metadata construction because some objects will require an
-    # extra S3 request to get version IDs or image dimensions.
+    # Convert the set of objects into a big metadata map
     info "Building animation metadata..."
-    metadata_progress_bar = ProgressBar.create(total: animations_by_name.size) unless @options[:verbose] || @options[:quiet]
-    animation_metadata_by_name = Hash[Parallel.map(animations_by_name, finish: lambda do |_, _, _|
-      metadata_progress_bar.increment unless @options[:verbose] || @options[:quiet]
-    end) do |name, objects|
-      # TODO: Validate that every JSON is paired with a PNG and vice-versa
-      # Actually download the JSON from S3
-      json_response = objects['json'].get
-      metadata = JSON.parse(json_response.body.read)
-
-      # If no frameCount information is present, it's probably a single frame
-      metadata['frameCount'] ||= 1
-
-      # TODO: Validate metadata, ensure it has everything it needs
-      # Record target version in the metadata, so environments (and projects)
-      # consistently reference the version they originally imported.
-      metadata['version'] = objects['png'].object.version_id
-
-      # Generate appropriate sourceUrl pointing to the animation library API
-      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
-
-      # Populate sourceSize if not already present
-      unless metadata.key?('sourceSize')
-        png_body = objects['png'].object.get.body.read
-        metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
-      end
-
-      verbose <<-EOS
-#{bold name} @ #{metadata['version']}
-#{JSON.pretty_generate metadata}
-      EOS
-
-      [name, metadata]
-    end]
-    metadata_progress_bar.finish unless @options[:verbose] || @options[:quiet]
-
-    info "Metadata built for #{animation_metadata_by_name.size} animations."
+    animation_metadata = build_animation_metadata(animation_objects)
+    info "Metadata built for #{animation_metadata.size} animations."
 
     info "Building alias map..."
-    alias_progress_bar = ProgressBar.create(total: animation_metadata_by_name.size) unless @options[:quiet]
-    alias_map = Hash.new {|h, k| h[k] = []}
-    animation_metadata_by_name.each do |name, metadata|
-      aliases = [name]
-      aliases += metadata['aliases'] unless metadata['aliases'].nil?
-      aliases.each do |aliaz|
-        # Push name into target array, deduplicate, and sort
-        alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
-      end
-      alias_progress_bar.increment unless @options[:quiet]
-    end
-    alias_progress_bar.finish unless @options[:quiet]
-
-    alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
-
+    alias_map = build_alias_map(animation_metadata)
     info "Mapped #{alias_map.size} aliases."
 
     # Write result to file
@@ -127,10 +63,13 @@ class ManifestBuilder
               'GENERATED FILE: DO NOT MODIFY DIRECTLY',
               'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
           ],
-          'metadata': animation_metadata_by_name,
-          'aliases': alias_map
+          'metadata': animation_metadata.sort.to_h,
+          'aliases': alias_map.sort.to_h
       }))
     end
+
+    @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
+
     info <<-EOS.unindent
       Manifest written to #{DEFAULT_OUTPUT_FILE}.
 
@@ -150,6 +89,127 @@ class ManifestBuilder
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
     EOS
+  end
+
+  # Given an S3 bucket, return map of animation file objects:
+  # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
+  def get_animation_objects(bucket)
+    animations_by_name = {}
+    bucket.objects.each do |object_summary|
+      animation_name = object_summary.key[/^[^.]+/]
+      extension = object_summary.key[/(?<=\.)\w+$/]
+      verbose <<-EOS.unindent
+        #{bold object_summary.key}
+        #{object_summary.last_modified} | #{object_summary.size}
+      EOS
+      # Push into animations collection if unique
+      animations_by_name[animation_name] ||= {}
+      if animations_by_name[animation_name][extension].nil?
+        animations_by_name[animation_name][extension] = object_summary
+      else
+        @warnings.push "Encountered multiple objects with key #{object_summary.key} - only using the first one."
+      end
+    end
+    animations_by_name
+  end
+
+  # Given a map of S3 objects for animations, build up an animation
+  # metadata map.
+  def build_animation_metadata(animation_objects)
+    metadata_progress_bar = ProgressBar.create(total: animation_objects.size) unless @options[:verbose] || @options[:quiet]
+    animation_metadata_by_name = {}
+
+    # Parallelize metadata construction because some objects will require an
+    # extra S3 request to get version IDs or image dimensions.
+    Parallel.map(animation_objects.keys, finish: lambda do |name, _, result|
+      # This lambda runs synchronously after each entry is done processing - it's
+      # used to collect up results and warnings to the original process/thread.
+      if result.is_a? Hash
+        animation_metadata_by_name[name] = result
+      else
+        @warnings.push result
+      end
+      metadata_progress_bar.increment unless metadata_progress_bar.nil?
+    end) do |name|
+      # This is the parallel block.  This block should return a string to
+      # generate a warning and skip the animation, and a metadata Hash in
+      # the success case.
+      objects = animation_objects[name]
+
+      # Drop this animation if it is missing its JSON or PNG components
+      if objects['json'].nil?
+        next "Animation #{name} does not have a JSON file and was skipped."
+      elsif objects['png'].nil?
+        next "Animation #{name} does not have a PNG file and was skipped."
+      end
+
+      # Actually download the JSON from S3
+      begin
+        json_response = objects['json'].get
+        metadata = JSON.parse(json_response.body.read)
+      rescue Aws::Errors::ServiceError => service_error
+        next <<-WARN
+There was an error retrieving #{name}.json from S3:
+#{service_error}
+The animation has been skipped.
+        WARN
+      rescue JSON::JSONError => json_error
+        next <<-WARN
+There was an error parsing #{name}.json:
+#{json_error}
+The animation ha been skipped.
+        WARN
+      end
+
+      # Verify that the parsed metadata contains all expected fields
+      next "Animation #{name} is missing the 'name' attribute." unless metadata['name'].is_a?(String)
+      next "Animation #{name} is missing the 'frameCount' attribute." unless metadata['frameCount'].is_a?(Integer)
+      next "Animation #{name} is missing the 'frameSize' attribute." unless metadata['frameSize'].is_a?(Hash)
+      next "Animation #{name} is missing the 'frameSize.x' attribute." unless metadata['frameSize']['x'].is_a?(Integer)
+      next "Animation #{name} is missing the 'frameSize.y' attribute." unless metadata['frameSize']['y'].is_a?(Integer)
+      next "Animation #{name} is missing the 'looping' attribute." unless [TrueClass, FalseClass].include? metadata['looping'].class
+      next "Animation #{name} is missing the 'frameDelay' attribute." unless metadata['frameDelay'].is_a?(Integer)
+
+      # Record target version in the metadata, so environments (and projects)
+      # consistently reference the version they originally imported.
+      metadata['version'] = objects['png'].object.version_id
+
+      # Generate appropriate sourceUrl pointing to the animation library API
+      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
+
+      # Populate sourceSize if not already present
+      unless metadata.key?('sourceSize')
+        png_body = objects['png'].object.get.body.read
+        metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
+      end
+
+      verbose <<-EOS
+#{bold name} @ #{metadata['version']}
+#{JSON.pretty_generate metadata}
+      EOS
+
+      metadata
+    end
+    metadata_progress_bar.finish unless metadata_progress_bar.nil?
+    animation_metadata_by_name
+  end
+
+  # Given a metadata map, build the alias map
+  def build_alias_map(animation_metadata)
+    alias_progress_bar = ProgressBar.create(total: animation_metadata.size) unless @options[:quiet]
+    alias_map = Hash.new {|h, k| h[k] = []}
+    animation_metadata.each do |name, metadata|
+      aliases = [name]
+      aliases += metadata['aliases'] unless metadata['aliases'].nil?
+      aliases.each do |aliaz|
+        # Push name into target array, deduplicate, and sort
+        alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
+      end
+      alias_progress_bar.increment unless @options[:quiet]
+    end
+    alias_progress_bar.finish unless @options[:quiet]
+    alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
+    alias_map
   end
 
   def verbose(s)
