@@ -1043,6 +1043,7 @@ en:
       grade2_CaringForNewPet_5_instruction: crwdns57467:0crwdne57467:0
       grade2_CaringForNewPet_6_instruction: crwdns57468:0crwdne57468:0
       grade2_CaringForNewPet_7D_instruction: crwdns58081:0crwdne58081:0
+      grade2_collector_pre1_instruction: crwdns67412:0crwdne67412:0
       grade2_MakeDogTag_1_instruction: crwdns57469:0crwdne57469:0
       grade2_MakeDogTag_10_instruction: crwdns57470:0crwdne57470:0
       grade2_MakeDogTag_2_instruction: crwdns57471:0crwdne57471:0
@@ -1055,6 +1056,11 @@ en:
       grade2_MakeDogTag_9_instruction: crwdns57478:0crwdne57478:0
       grade2_maze_debuggingFP_instruction: crwdns58293:0crwdne58293:0
       grade2_maze_debuggingPre_instruction: crwdns58294:0crwdne58294:0
+      grade2_maze_intro10_instruction: crwdns67413:0crwdne67413:0
+      grade2_maze_intro6_instruction: crwdns67414:0crwdne67414:0
+      grade2_maze_intro7_instruction: crwdns67415:0crwdne67415:0
+      grade2_maze_intro8_instruction: crwdns67416:0crwdne67416:0
+      grade2_maze_intro9_instruction: crwdns67417:0crwdne67417:0
       grade2_PuppyLoops_1_instruction: crwdns57479:0crwdne57479:0
       grade2_PuppyLoops_10_instruction: crwdns57480:0crwdne57480:0
       grade2_PuppyLoops_2_instruction: crwdns57481:0crwdne57481:0

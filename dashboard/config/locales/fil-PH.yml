@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Pakiwasto ang mga sumusunod na error:'
-      too_young: Ang nilalaman na ito ay may mga paghihigpit sa edad sa lugar at ay
-        hindi magagamit para sa mga batang mag-aaral
+      too_young: May limitadong edad ito at hindi pwedeng ibigay sa nakababatang mga
+        estudyante.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this

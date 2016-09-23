@@ -8,6 +8,10 @@ import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const AddKeyRow = React.createClass({
+  propTypes: {
+    onShowWarning: React.PropTypes.func.isRequired,
+  },
+
   getInitialState() {
     return {
       isAdding: false,
@@ -31,7 +35,14 @@ const AddKeyRow = React.createClass({
         this.state.key,
         castValue(this.state.value),
         () => this.setState(this.getInitialState()),
-        msg => console.warn(msg));
+        msg => {
+          if (msg.includes('The key is invalid')) {
+            this.props.onShowWarning(msg);
+          } else {
+            console.warn(msg);
+          }
+          this.setState(this.getInitialState());
+        });
     }
   },
 

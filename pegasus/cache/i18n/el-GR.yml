@@ -4,10 +4,11 @@
   'yes': "Ναι"
   'no': "Όχι"
   select_language: "Παρακαλώ επιλέξτε τη γλώσσα σας"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: "Το Code.org θα αποσύρει σύντομα την υποστήριξη για Internet
+    Explorer 8, 9 και 10. Παρακαλούμε αναβαθμίστε σε ένα σύγχρονο πρόγραμμα περιήγησης."
+  upgrade_ie_message_csedweek: "Το CSEdWeek.org θα αποσύρει σύντομα την υποστήριξη
+    για Internet Explorer 8, 9 και 10. Παρακαλούμε αναβαθμίστε σε ένα σύγχρονο πρόγραμμα
+    περιήγησης."
   upgrade_ie_link: "Μάθετε περισσότερα"
   en: "Επιστήμη των Υπολογιστών"
   computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
