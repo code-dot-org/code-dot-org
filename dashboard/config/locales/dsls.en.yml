@@ -974,9 +974,6 @@ en:
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
       'Overview: Balancing Teachers and Tools': {}
-      'Overview: Balancing Teachers and Tools- Teachercon':
-        description here: description here
-        title: title
       'Overview: Capturing Student Learning': {}
       'Overview: Discovery Learning': {}
       'Overview: Group Work and Peer Learning': {}
@@ -1713,7 +1710,6 @@ en:
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
-      'What''s inside and how is it organized? ': {}
       Why Teach Number Systems?: {}
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
@@ -2272,7 +2268,6 @@ en:
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
         Unit 1 Self Assessment: {}
-        Unit 1 Self-Assessment: {}
         brendan test survey: {}
     match:
       2-3 Big Event Match 1:
