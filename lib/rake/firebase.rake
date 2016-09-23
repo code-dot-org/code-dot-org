@@ -51,6 +51,9 @@ namespace :firebase do
     end
   end
 
+  desc 'Compile and upload firebase rules.'
+  task :rules => [:compile_rules, :upload_rules]
+
   task :all => [:compile_rules, :upload_rules, :set_config]
 end
 
